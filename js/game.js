@@ -869,16 +869,70 @@ const UI = {
 
   squad() {
     const s = Game.state, p = s.player;
-    const roster = Game.teamRoster(s.clubId).slice();
-    roster.push({ n: Player.fullName(p) + ' (SEN)', pos: p.position, r: Player.overall(p), age: p.age, me: true });
-    const order = { GK: 0, DF: 1, MF: 2, FW: 3 };
-    roster.sort((a, b) => order[a.pos] - order[b.pos] || b.r - a.r);
+    const club = Game.club();
+    const me = { n: Player.fullName(p), pos: p.position, r: Player.overall(p), age: p.age, me: true, num: p.shirt };
+    const roster = Game.teamRoster(s.clubId).map((x, i) => Object.assign({ num: x.num || ((i * 7) % 30) + 2 }, x));
+    const all = roster.concat([me]);
     const posL = { GK: 'Kaleci', DF: 'Defans', MF: 'Orta Saha', FW: 'Forvet' };
-    return `<div class="card">
-      <div class="card-h"><span>${UI.shirt(Game.club())} ${U.esc(Game.teamName())}</span><small class="muted">Takım gücü ${Game.teamRating(s.clubId)}</small></div>
-      <table class="tbl"><tr><th class="l">Oyuncu</th><th>Mevki</th><th>Yaş</th><th>Güç</th></tr>
-      ${roster.map((x) => `<tr class="${x.me ? 'hl' : ''}"><td class="l">${x.star ? '⭐ ' : ''}${U.esc(x.n)}</td><td>${posL[x.pos]}</td><td>${x.age || '-'}</td><td><b class="${UI.statColor(x.r)}">${x.r}</b></td></tr>`).join('')}
-      </table></div>`;
+    const posS = { GK: 'KL', DF: 'DF', MF: 'OS', FW: 'FV' };
+    // İlk 11: 4-3-3, her mevkide en güçlüler (sen ilk 11 adayıysan dahil)
+    const role = Game.roleFor(Player.overall(p, true), Game.teamRating(s.clubId), Game.isYouth(), true);
+    const need = { GK: 1, DF: 4, MF: 3, FW: 3 };
+    const xi = {};
+    Object.keys(need).forEach((k) => {
+      let pool = roster.filter((x) => x.pos === k).sort((x, y) => y.r - x.r);
+      if (k === p.position && role === 'starter') pool = [me].concat(pool);
+      xi[k] = pool.slice(0, need[k]);
+    });
+    const inXi = new Set(Object.values(xi).flat());
+    const bench = all.filter((x) => !inXi.has(x)).sort((x, y) => ({ GK: 0, DF: 1, MF: 2, FW: 3 }[x.pos] - { GK: 0, DF: 1, MF: 2, FW: 3 }[y.pos]) || y.r - x.r);
+    const rows = { FW: 18, MF: 42, DF: 66, GK: 88 };
+    const chip = (x, left, top) => `
+      <div class="pp ${x.me ? 'me' : ''}" style="left:${left}%;top:${top}%">
+        <div class="pp-shirt">${UI.shirt(club, 'big')}<i>${x.num}</i></div>
+        <b>${U.esc(x.me ? 'SEN' : x.n.split(' ').slice(-1)[0])}</b>
+        <span class="${UI.statColor(x.r)}">${x.r}</span>
+      </div>`;
+    let pitch = '';
+    Object.keys(xi).forEach((k) => {
+      const list = xi[k];
+      list.forEach((x, i) => { pitch += chip(x, ((i + 1) / (list.length + 1)) * 100, rows[k]); });
+    });
+    const sorted = all.slice().sort((x, y) => y.r - x.r);
+    const myRank = sorted.indexOf(me) + 1;
+    const avg = (arr) => Math.round(arr.reduce((t, x) => t + x.r, 0) / Math.max(1, arr.length));
+    const lineAvg = (k) => avg(all.filter((x) => x.pos === k));
+    const tbl = World.sortedTable(Game.league());
+    const pos = tbl.findIndex((r) => r.id === s.clubId) + 1;
+    const top = sorted.filter((x) => !x.me)[0];
+    return `
+      <section class="card sq-head" style="--c1:${club.c1};--c2:${club.c2}">
+        <div class="sq-id">${UI.shirt(club, 'big')}<div><h2>${U.esc(Game.teamName())}</h2><small>${U.esc(Game.leagueName())}</small></div></div>
+        <div class="sq-stats">
+          <div><span>Takım gücü</span><b>${Game.teamRating(s.clubId)}</b></div>
+          <div><span>Lig sırası</span><b>${pos}.</b></div>
+          <div><span>Kadrodaki yerin</span><b>${myRank}/${all.length}</b></div>
+          <div><span>Durumun</span><b class="role-${role}">${{ starter: "İlk 11", bench: 'Yedek', out: 'Kadro dışı' }[role]}</b></div>
+        </div>
+        <div class="sq-lines">${['FW', 'MF', 'DF', 'GK'].map((k) => `<div><span>${posL[k]}</span>${UI.bar(lineAvg(k), UI.statColor(lineAvg(k)))}<b>${lineAvg(k)}</b></div>`).join('')}</div>
+        ${top ? `<p class="muted sq-note">Takımın en iyisi: <b>${U.esc(top.n)}</b> (${top.r})${top.star ? ' · yıldız oyuncu' : ''}</p>` : ''}
+      </section>
+      <div class="grid2 sq-grid">
+        <section class="card">
+          <div class="card-h"><span>${Icon('squad')} Muhtemel İlk 11</span><small class="muted">4-3-3</small></div>
+          <div class="formation">${pitch}</div>
+        </section>
+        <section class="card">
+          <div class="card-h"><span>${Icon('team')} Yedekler ve Rotasyon</span><small class="muted">${bench.length} oyuncu</small></div>
+          <div class="bench">${bench.map((x) => `
+            <div class="bc ${x.me ? 'me' : ''}">
+              <div class="pp-shirt">${UI.shirt(club, 'big')}<i>${x.num}</i></div>
+              <div class="bc-t"><b>${U.esc(x.me ? x.n + ' (SEN)' : x.n)}</b><small>${posL[x.pos]} · ${x.age || '-'} yaş${x.star ? ' · yıldız' : ''}</small></div>
+              <span class="pos">${posS[x.pos]}</span>
+              <b class="rt ${UI.statColor(x.r)}">${x.r}</b>
+            </div>`).join('')}</div>
+        </section>
+      </div>`;
   },
 
   shop() {
