@@ -18,14 +18,14 @@ const MOMENT_TITLES = {
 };
 
 const MOMENT_DESC = {
-  open: 'Top ayağında! Kaleye şut çek ya da boştaki takım arkadaşına pas ver. Rakipler üstüne geliyor, çabuk ol!',
-  close: 'Rakibi geçtin, kaleciyle karşı karşıyasın!',
-  deep: 'Geride topu aldın. Hücumdaki bir takım arkadaşına isabetli bir pas gönder.',
-  freekick: 'Barajın üstünden ya da yanından falsolu bir vuruşla kaleyi bul.',
-  penalty: 'Penaltı noktasındasın. Kaleciyi yanılt!',
-  dribble: 'Önündeki rakibi geçmek için doğru anda hamle yap.',
-  tackle: 'Rakip forvet topla sana geliyor. Zamanlamayı tuttur ve topu kap!',
-  header: 'Korner atılıyor. Doğru anda yüksel ve topa kafayı vur!',
+  open: 'Top ayağında! Kaleye kaydırarak şut çek ya da boştaki arkadaşına dokunarak pas ver. Rakipler üstüne geliyor, çabuk ol!',
+  close: 'Rakibi geçtin, kaleciyle karşı karşıyasın! Köşeye kaydır.',
+  deep: 'Geride topu aldın. Hücumdaki bir arkadaşına dokunarak pas ver ya da kaydırarak uzun top at.',
+  freekick: 'Kavisli kaydırarak barajın yanından dolandır ya da Yarım Yükseklik ile üstünden aşırt.',
+  penalty: 'Penaltı noktasındasın. Köşelerden birine kaydır, kaleciyi yanılt!',
+  dribble: 'Halka yeşil bölgeye girdiğinde dokun ve rakipleri tek tek geç.',
+  tackle: 'Rakip forvet topla geliyor. Halka yeşile girince dokun; sarı bölge faul demek.',
+  header: 'Korner atılıyor. Halka yeşile girince dokun ve topa kafayı vur!',
 };
 
 const Match = {
@@ -293,7 +293,7 @@ const Match = {
       } else if (type === 'dribble') {
         M.statsUsed.add('dribbling'); M.statsUsed.add('pace');
         const r = await playTiming('dribble', 'dribble', {
-          title: 'Çalım at!', desc: 'İmleç yeşil alandayken bas. Her başarılı basış bir rakibi geçirir.',
+          title: 'Çalım at!', icon: '💨', desc: 'İmleç yeşil alandayken bas. Her başarılı basış bir rakibi geçirir.',
           rounds: skill > 0.6 ? 3 : 2, button: 'ÇALIM!', okText: 'RAKİPLERİ GEÇTİN!', partialText: 'Top ayağından açıldı...', failText: 'TOPU KAPTIRDIN!',
         }, 0.3);
         if (r === 'success') {
@@ -309,7 +309,7 @@ const Match = {
       } else if (type === 'tackle') {
         M.statsUsed.add('defending'); M.statsUsed.add('physical');
         const r = await playTiming('tackle', 'tackle', {
-          title: 'Topu kap!', desc: 'Yeşil alan temiz müdahale, sarı alan faul demek. Doğru anda bas!',
+          title: 'Topu kap!', icon: '🛡️', desc: 'Yeşil alan temiz müdahale, sarı alan faul demek. Doğru anda bas!',
           button: 'MÜDAHALE!', okText: 'TERTEMİZ MÜDAHALE!', partialText: 'FAUL!', failText: 'RAKİP SENİ GEÇTİ!',
         }, 0.6);
         if (r === 'success') {
@@ -336,7 +336,7 @@ const Match = {
       } else if (type === 'header') {
         M.statsUsed.add('heading');
         const r = await playTiming('header', 'header', {
-          title: 'Kafayı vur!', desc: 'Top havada! Doğru anda yüksel.',
+          title: 'Kafayı vur!', icon: '⚽', desc: 'Top havada! Doğru anda yüksel.',
           button: 'KAFA!', okText: 'MÜKEMMEL ZAMANLAMA!', partialText: 'Topa iyi temas edemedin', failText: 'Topu kaçırdın',
         }, 0);
         if (r === 'success') {

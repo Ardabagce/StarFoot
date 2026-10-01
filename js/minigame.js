@@ -86,43 +86,106 @@ const Scenes = {
   },
 };
 
+
+// Vuruş tipleri (yükseklik)
+const LIFTS = [
+  { k: 'low', l: 'Yerden', d: 'Sert ve alçak', v: 0 },
+  { k: 'mid', l: 'Yarım Yükseklik', d: 'Savunmanın üstünden', v: 0.24 },
+  { k: 'chip', l: 'Aşırtma', d: 'Kalecinin üstünden', v: 0.6 },
+];
+
+// Topun fiziği: hem gerçek vuruşta hem de nişan önizlemesinde kullanılır
+const BallPhys = {
+  step(b, dt) {
+    const hs = Math.hypot(b.vx, b.vy);
+    if (hs > 3) {
+      const lx = b.vy / hs, ly = -b.vx / hs;
+      const f = b.z > 0.05 ? 1 : 0.45;
+      b.vx += lx * b.spin * f * dt;
+      b.vy += ly * b.spin * f * dt;
+    }
+    if (b.z > 0 || b.vz > 0) {
+      b.vz -= 9.8 * dt;
+      b.vx *= 1 - 0.1 * dt; b.vy *= 1 - 0.1 * dt;
+    } else {
+      const ns = Math.max(0, hs - 3.2 * dt);
+      if (hs > 0) { b.vx *= ns / hs; b.vy *= ns / hs; }
+      b.spin *= 1 - 1.5 * dt;
+    }
+    b.x += b.vx * dt; b.y += b.vy * dt; b.z += b.vz * dt;
+    if (b.z < 0) { b.z = 0; b.vz = b.vz < -1.5 ? -b.vz * 0.4 : 0; }
+    return hs;
+  },
+  launch(b, ang, speed, lift, spin) {
+    const theta = lift * 0.62;
+    b.vx = Math.cos(ang) * speed * Math.cos(theta);
+    b.vy = Math.sin(ang) * speed * Math.cos(theta);
+    b.vz = speed * Math.sin(theta);
+    b.spin = spin;
+  },
+};
+
 const MiniGame = {
-  // Canvas sahnesini oynatır. Promise<{outcome, mate?}>
+  seen: 0,
+
+  // Kaydırarak şut / dokunarak pas sahnesi. Promise<{outcome, mate?}>
   play(host, scene, o) {
     return new Promise((resolve) => {
-      const W = PITCH.W * PITCH.PX, H = (PITCH.Y1 - PITCH.Y0) * PITCH.PX;
+      // Kamera: top, kale ve oyuncuları kapsayan bölgeye yakınlaş
+      const narrow = (host.clientWidth || 800) < 600;
+      const pts = [scene.ball, ...scene.defenders, ...scene.mates, { x: -6, y: 0 }, { x: 6, y: 0 }];
+      let vx0 = Math.min(...pts.map((e) => e.x)) - 4, vx1 = Math.max(...pts.map((e) => e.x)) + 4;
+      const VY0 = PITCH.Y0, vy1 = Math.min(PITCH.Y1, Math.max(14, Math.max(...pts.map((e) => e.y)) + 4));
+      const minW = Math.max(narrow ? 20 : 30, (vy1 - VY0) * (narrow ? 0.75 : 1.25));
+      if (vx1 - vx0 < minW) { const c = (vx0 + vx1) / 2; vx0 = c - minW / 2; vx1 = c + minW / 2; }
+      if (vx0 < -PITCH.W / 2) { vx1 += -PITCH.W / 2 - vx0; vx0 = -PITCH.W / 2; }
+      if (vx1 > PITCH.W / 2) { vx0 -= vx1 - PITCH.W / 2; vx1 = PITCH.W / 2; }
+      vx0 = Math.max(vx0, -PITCH.W / 2);
+      const W = 780;
+      const PX = W / (vx1 - vx0);
+      const H = Math.round((vy1 - VY0) * PX);
+      const k = U.clamp(PX / 15, 1, 2.2); // oyuncu/top boyut çarpanı
+      const defLift = scene.type === 'freekick' ? 1 : 0;
       host.innerHTML = `
         <div class="mg">
-          <canvas class="mg-canvas" width="${W}" height="${H}"></canvas>
-          <div class="mg-controls">
-            <label>Falso <span class="mg-val" data-v="curve">Düz</span>
-              <input type="range" min="-100" max="100" value="0" step="5" data-k="curve"></label>
-            <label>Yükseklik <span class="mg-val" data-v="lift">Yerden</span>
-              <input type="range" min="0" max="100" value="${scene.type === 'freekick' ? 35 : 0}" step="5" data-k="lift"></label>
+          <div class="mg-stage">
+            <canvas class="mg-canvas" width="${W}" height="${H}"></canvas>
           </div>
-          <div class="mg-help">Topun arkasına doğru <b>sürükle</b> (sapan gibi) ve <b>bırak</b>. Ok ne kadar uzunsa vuruş o kadar sert. Kaleye şut çek ya da takım arkadaşına pas ver.</div>
+          <div class="mg-bar">
+            <div class="mg-lift" role="group" aria-label="Vuruş tipi">
+              ${LIFTS.map((l, i) => `<button type="button" data-lift="${i}" class="${i === defLift ? 'on' : ''}"><b>${l.l}</b><small>${l.d}</small></button>`).join('')}
+            </div>
+          </div>
+          <div class="mg-help">
+            <span><i>☝️</i> Topu hedefe doğru <b>kaydır</b></span>
+            <span><i>↪️</i> Kavisli çizersen <b>falso</b></span>
+            ${scene.mates.length ? '<span><i>👆</i> Pas için arkadaşına <b>dokun</b></span>' : ''}
+          </div>
         </div>`;
       const cv = host.querySelector('canvas');
       const ctx = cv.getContext('2d');
-      const curveIn = host.querySelector('[data-k=curve]');
-      const liftIn = host.querySelector('[data-k=lift]');
-      const lbl = (k) => host.querySelector(`[data-v=${k}]`);
-      const upd = () => {
-        const c = +curveIn.value;
-        lbl('curve').textContent = c === 0 ? 'Düz' : c < 0 ? `◀ Sola ${-c}` : `Sağa ${c} ▶`;
-        const l = +liftIn.value;
-        lbl('lift').textContent = l === 0 ? 'Yerden' : l < 40 ? `Alçak ${l}` : `Yüksek ${l}`;
+      let liftIdx = defLift;
+      const liftBtns = U.$$('[data-lift]', host);
+      const setLift = (i) => {
+        if (phase !== 'aim') return;
+        liftIdx = i;
+        liftBtns.forEach((b, j) => b.classList.toggle('on', j === i));
       };
-      curveIn.oninput = liftIn.oninput = upd;
-      upd();
+      liftBtns.forEach((b) => (b.onclick = () => setLift(+b.dataset.lift)));
+      const onKey = (e) => {
+        if (['Digit1', 'Digit2', 'Digit3'].includes(e.code)) setLift(+e.code.slice(-1) - 1);
+      };
+      document.addEventListener('keydown', onKey);
 
       const st = o.stats;
       const s = o.skill;
-      const cond = o.cond; // 0.6 .. 1.2 (yüksek = daha hatalı)
+      const cond = o.cond; // ~0.75 .. 1.15 (yüksek = daha hatalı)
       const maxSpeed = 20 + st.shooting * 0.12 + (scene.type === 'penalty' ? 2 : 0);
       const curveMax = 2 + st.technique * 0.075;
       const angSigma = ((1 - st.technique / 100) * 4.2 + 0.4) * cond * Math.PI / 180;
-      const passBonus = st.passing / 100;
+      const passSigma = ((1 - st.passing / 100) * 3.2 + 0.3) * cond * Math.PI / 180;
+      const previewFrac = U.clamp(0.42 + st.technique / 170, 0.45, 1);
+      const POWER_M = 15; // tam güç için gereken kaydırma (metre)
 
       const ball = { x: scene.ball.x, y: scene.ball.y, z: 0, vx: 0, vy: 0, vz: 0, spin: 0 };
       const shooter = { x: scene.ball.x, y: scene.ball.y + 1.3 };
@@ -138,54 +201,125 @@ const MiniGame = {
       const dDelay = 0.22 - 0.1 * s;
 
       let phase = 'aim';
-      let t = 0, kickT = 0;
-      MiniGame.dbg = { ball, keeper, defs, mates, scene, W, H };
-      let drag = null;
-      let result = null, resultText = '', resultColor = '#fff', endT = 0;
+      let t = 0, kickT = 0, endT = 0;
+      let gesture = null; // { pts:[[cx,cy]], world:[{x,y}] }
+      let preview = null; // { pts, power, curve }
+      let passTarget = null;
+      let result = null, resultText = '', resultColor = '#fff';
+      let slowmo = 1;
+      let particles = [];
+      let netShake = 0;
       let last = performance.now();
       let raf = 0;
+      const showHint = MiniGame.seen++ < 3;
+      MiniGame.dbg = { ball, keeper, defs, mates, scene, W, H, vx0, VY0, PX };
 
-      const tx = (x) => (x + PITCH.W / 2) * PITCH.PX;
-      const ty = (y, z = 0) => (y - PITCH.Y0) * PITCH.PX - z * PITCH.PX * 0.8;
-
+      const tx = (x) => (x - vx0) * PX;
+      const ty = (y, z = 0) => (y - VY0) * PX - z * PX * 0.8;
+      const toWorld = (cx, cy) => ({ x: cx / PX + vx0, y: cy / PX + VY0 });
+      let fs = 1; // ekrandaki yazı ölçeği
       const toCanvas = (e) => {
         const r = cv.getBoundingClientRect();
         return [((e.clientX - r.left) / r.width) * W, ((e.clientY - r.top) / r.height) * H];
       };
 
+      // Kaydırma hareketinden vuruş parametreleri
+      const params = (world) => {
+        const a = world[0], b = world[world.length - 1];
+        const cx = b.x - a.x, cy = b.y - a.y;
+        const L = Math.hypot(cx, cy);
+        if (L < 0.9) return null;
+        let dmax = 0;
+        for (const p of world) {
+          const d = (cx * (p.y - a.y) - cy * (p.x - a.x)) / L;
+          if (Math.abs(d) > Math.abs(dmax)) dmax = d;
+        }
+        const curve = U.clamp((dmax / L) * 3.2, -1, 1);
+        const power = U.clamp(L / POWER_M, 0.15, 1);
+        const spin = curve * curveMax;
+        // Kaydırma yönü hedeftir: falsonun yana kaydırmasını telafi edecek şekilde top dışa doğru çıkar
+        const chord = Math.atan2(cy, cx);
+        const dirY = Math.sin(chord);
+        const dist = dirY < -0.15 ? Math.min(ball.y / -dirY, 40) : 20;
+        const speed = power * maxSpeed;
+        const comp = U.clamp((0.55 * spin * dist) / (speed * speed), -0.5, 0.5);
+        return { ang: chord + comp, power, curve, spin };
+      };
+
+      const simulate = (pr) => {
+        const b = { x: ball.x, y: ball.y, z: 0, vx: 0, vy: 0, vz: 0, spin: 0 };
+        BallPhys.launch(b, pr.ang, pr.power * maxSpeed, LIFTS[liftIdx].v, pr.spin);
+        const pts = [];
+        for (let i = 0; i < 180; i++) {
+          for (let k = 0; k < 4; k++) BallPhys.step(b, 1 / 240);
+          pts.push([b.x, b.y, b.z]);
+          if (b.y < -0.5 || Math.abs(b.x) > 26 || b.y > 34) break;
+          if (Math.hypot(b.vx, b.vy) < 0.5 && b.z === 0) break;
+        }
+        return pts;
+      };
+
+      const mateAt = (w) => mates.find((m) => Math.hypot(m.x - w.x, m.y - w.y) < 2.2);
+
       cv.addEventListener('pointerdown', (e) => {
         if (phase !== 'aim') return;
         cv.setPointerCapture(e.pointerId);
         const p = toCanvas(e);
-        drag = { sx: p[0], sy: p[1], cx: p[0], cy: p[1] };
+        gesture = { pts: [p], world: [toWorld(p[0], p[1])], t0: performance.now() };
+        preview = null;
         e.preventDefault();
       });
       cv.addEventListener('pointermove', (e) => {
-        if (!drag) return;
+        if (!gesture) return;
         const p = toCanvas(e);
-        drag.cx = p[0]; drag.cy = p[1];
+        const lp = gesture.pts[gesture.pts.length - 1];
+        if (Math.hypot(p[0] - lp[0], p[1] - lp[1]) < 3) return;
+        gesture.pts.push(p);
+        gesture.world.push(toWorld(p[0], p[1]));
+        const pr = params(gesture.world);
+        preview = pr ? Object.assign(pr, { pts: simulate(pr) }) : null;
         e.preventDefault();
       });
-      const release = (e) => {
-        if (!drag || phase !== 'aim') return;
-        const dx = drag.sx - drag.cx, dy = drag.sy - drag.cy;
-        const len = Math.hypot(dx, dy);
-        drag = null;
-        if (len < 14) return;
-        kick(Math.atan2(dy, dx), Math.min(1, len / 190));
-      };
-      cv.addEventListener('pointerup', release);
-      cv.addEventListener('pointercancel', () => (drag = null));
+      cv.addEventListener('pointerup', (e) => {
+        if (!gesture || phase !== 'aim') return;
+        const g = gesture;
+        gesture = null;
+        const p0 = g.pts[0], p1 = g.pts[g.pts.length - 1];
+        const moved = Math.hypot(p1[0] - p0[0], p1[1] - p0[1]);
+        if (moved < 12) {
+          const m = mateAt(g.world[0]);
+          if (m) return passTo(m);
+          preview = null;
+          return;
+        }
+        const pr = params(g.world);
+        preview = null;
+        if (pr) kick(pr.ang, pr.power, pr.spin, false);
+      });
+      cv.addEventListener('pointercancel', () => { gesture = null; preview = null; });
 
-      function kick(ang, power) {
-        const a = ang + U.gauss() * angSigma * (0.6 + 0.5 * power);
-        const lift = +liftIn.value / 100;
-        let sp = power * maxSpeed * (1 + U.gauss() * 0.04 * cond);
-        const theta = lift * 0.62 * (1 + U.gauss() * 0.05 * cond);
-        ball.vx = Math.cos(a) * sp * Math.cos(theta);
-        ball.vy = Math.sin(a) * sp * Math.cos(theta);
-        ball.vz = sp * Math.sin(theta);
-        ball.spin = (-(+curveIn.value) / 100) * curveMax * (1 + U.gauss() * 0.1 * cond);
+      function passTo(m) {
+        // ileriye doğru hafif önden pas
+        const tgx = m.x, tgy = m.y - 0.6;
+        const D = Math.hypot(tgx - ball.x, tgy - ball.y);
+        const lift = LIFTS[liftIdx].v;
+        let speed;
+        if (lift === 0) speed = Math.sqrt(9.5 * 9.5 + 2 * 3.2 * D);
+        else {
+          // havadan pas: menzile göre hız
+          const th = lift * 0.62;
+          speed = Math.sqrt((D * 9.8) / Math.max(0.2, Math.sin(2 * th))) * 0.92;
+        }
+        speed = Math.min(speed, maxSpeed);
+        passTarget = m;
+        kick(Math.atan2(tgy - ball.y, tgx - ball.x), speed / maxSpeed, 0, true);
+      }
+
+      function kick(ang, power, spin, isPass) {
+        const sig = isPass ? passSigma : angSigma * (0.6 + 0.5 * power);
+        const a = ang + U.gauss() * sig;
+        const sp = power * maxSpeed * (1 + U.gauss() * 0.04 * cond);
+        BallPhys.launch(ball, a, sp, LIFTS[liftIdx].v * (1 + U.gauss() * 0.05 * cond), spin * (1 + U.gauss() * 0.1 * cond));
         phase = 'fly';
         kickT = t;
         if (keeper.pen) {
@@ -195,7 +329,7 @@ const MiniGame = {
           keeper.speed = 4.5 + 2.2 * s;
           keeper.reach = 0.8 + 0.35 * s;
         }
-        curveIn.disabled = liftIn.disabled = true;
+        host.querySelector('.mg-lift').classList.add('locked');
       }
 
       function finish(outcome, text, color, extra) {
@@ -205,12 +339,20 @@ const MiniGame = {
         resultColor = color;
         phase = 'done';
         endT = t;
+        slowmo = 1;
+        if (outcome === 'goal') {
+          netShake = 1;
+          const cols = [o.ownColor, o.ownColor2, '#ffffff', '#ffd166'];
+          for (let i = 0; i < 70; i++) {
+            particles.push({ x: tx(ball.x), y: ty(0, 1.2), vx: U.rand(-260, 260), vy: U.rand(-380, -60), c: U.pick(cols), r: U.rand(2, 5), life: U.rand(1, 1.8) });
+          }
+          try { if (navigator.vibrate) navigator.vibrate(120); } catch (e) { /* yok */ }
+        }
       }
 
       function step(dt) {
         t += dt;
         if (phase === 'aim') {
-          // baskı yapan rakipler yaklaşır
           if (scene.creep) {
             defs.forEach((d) => {
               if (!d.presser) return;
@@ -220,40 +362,18 @@ const MiniGame = {
             });
           }
           if (t > scene.timeLimit) finish('lost', scene.creep ? 'TOPU KAPTIRDIN!' : 'SÜRE DOLDU!', '#ff6b6b');
-          // kaleci pozisyon alır
           keeper.x += (U.clamp(ball.x * 0.15, -2, 2) - keeper.x) * Math.min(1, dt * 2);
           return;
         }
         if (phase !== 'fly') return;
         const ft = t - kickT;
         const prevY = ball.y;
-        // falso
-        const hs = Math.hypot(ball.vx, ball.vy);
-        if (hs > 3) {
-          const lx = ball.vy / hs, ly = -ball.vx / hs;
-          const f = ball.z > 0.05 ? 1 : 0.45;
-          ball.vx += lx * ball.spin * f * dt;
-          ball.vy += ly * ball.spin * f * dt;
-        }
-        if (ball.z > 0 || ball.vz > 0) {
-          ball.vz -= 9.8 * dt;
-          ball.vx *= 1 - 0.1 * dt; ball.vy *= 1 - 0.1 * dt;
-        } else {
-          const ns = Math.max(0, hs - 3.2 * dt);
-          if (hs > 0) { ball.vx *= ns / hs; ball.vy *= ns / hs; }
-          ball.spin *= 1 - 1.5 * dt;
-        }
-        ball.x += ball.vx * dt; ball.y += ball.vy * dt; ball.z += ball.vz * dt;
-        if (ball.z < 0) {
-          ball.z = 0;
-          ball.vz = ball.vz < -1.5 ? -ball.vz * 0.4 : 0;
-        }
+        const hs = BallPhys.step(ball, dt);
 
         // kaleci
         if (ft > keeper.delay) {
-          let target = keeper.tx;
           if (!keeper.pen) {
-            target = keeper.x;
+            let target = keeper.x;
             if (ball.vy < -0.5) target = ball.x + ball.vx * ((ball.y - keeper.y) / -ball.vy);
             keeper.tx = U.clamp(target, -4.2, 4.2);
           }
@@ -267,32 +387,33 @@ const MiniGame = {
           const dx = px - d.x, dy = py - d.y, dist = Math.hypot(dx, dy);
           if (dist > 0.05) { d.x += (dx / dist) * dSpeed * dt; d.y += (dy / dist) * dSpeed * dt; }
         });
+        // pası bekleyen arkadaş topa doğru hareketlenir
+        if (passTarget) {
+          const m = passTarget;
+          const dx = ball.x - m.x, dy = ball.y - m.y, dist = Math.hypot(dx, dy);
+          if (dist < 8 && dist > 0.05) { m.x += (dx / dist) * 2.6 * dt; m.y += (dy / dist) * 2.6 * dt; }
+        }
 
-        // çarpışmalar
         for (const d of defs) {
           if (Math.hypot(ball.x - d.x, ball.y - d.y) < 0.62 && ball.z < d.h) {
             return finish('blocked', d.wall ? 'BARAJA ÇARPTI!' : 'RAKİP ARAYA GİRDİ!', '#ff6b6b');
           }
         }
         for (const m of mates) {
-          const rr = 1.15 + passBonus * 0.5;
+          const rr = 1.15 + (st.passing / 100) * 0.5 + (m === passTarget ? 0.3 : 0);
           if (Math.hypot(ball.x - m.x, ball.y - m.y) < rr && ball.z < 1.9 && hs < 31) {
             return finish('received', `PAS ${m.name.toUpperCase()}'A ULAŞTI!`, '#7cf0a0', { mate: m.name, mateY: m.y, mateX: m.x });
           }
         }
-        // kaleci kurtarışı
         const reach = keeper.reach + (ball.y < 5 ? keeper.dive : 0);
         if (prevY >= keeper.y && ball.y < keeper.y) {
           const maxZ = 2.25 + 0.35 * s;
           const r = ball.z > 1.7 ? reach * 0.8 : reach;
-          if (Math.abs(ball.x - keeper.x) < r && ball.z < maxZ) {
-            return finish('saved', 'KALECİ KURTARDI!', '#ffd166');
-          }
+          if (Math.abs(ball.x - keeper.x) < r && ball.z < maxZ) return finish('saved', 'KALECİ KURTARDI!', '#ffd166');
         }
         if (ball.y < 6 && ball.y > keeper.y && Math.hypot(ball.x - keeper.x, ball.y - keeper.y) < 1.0 && ball.z < 2.3 && hs < 9) {
           return finish(scene.mates.length ? 'claimed' : 'saved', 'KALECİ TOPU TOPLADI', '#ffd166');
         }
-        // gol çizgisi
         if (ball.y <= 0) {
           const ax = Math.abs(ball.x);
           if (ax < PITCH.GOAL_W - 0.11 && ball.z < PITCH.BAR - 0.11) return finish('goal', 'GOOOL!', '#7cf0a0');
@@ -304,58 +425,149 @@ const MiniGame = {
         if (Math.abs(ball.x) > 26 || ball.y > 34) return finish('miss', 'TOP OYUN ALANI DIŞINDA', '#ff6b6b');
         if (hs < 0.4 && ball.z === 0) return finish('lost', 'TOP RAKİBE GEÇTİ', '#ff6b6b');
         if (ft > 5) return finish('lost', 'TOP RAKİBE GEÇTİ', '#ff6b6b');
+        // gole yaklaşırken ağır çekim
+        slowmo = ball.y < 7 && ball.vy < 0 && Math.abs(ball.x) < 9 && !passTarget ? 0.38 : 1;
       }
 
-      function drawPlayer(x, y, fill, stroke, label) {
+      function drawPlayer(x, y, fill, stroke, label, ring) {
         const sx = tx(x), sy = ty(y);
         ctx.fillStyle = 'rgba(0,0,0,0.25)';
-        ctx.beginPath(); ctx.ellipse(sx, sy + 3, 9, 4, 0, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.ellipse(sx, sy + 3 * k, 10 * k, 4.5 * k, 0, 0, Math.PI * 2); ctx.fill();
+        if (ring) {
+          const pr = (14 + Math.sin(t * 6) * 2.5) * k;
+          ctx.strokeStyle = 'rgba(124,240,160,0.9)'; ctx.lineWidth = 2.5;
+          ctx.beginPath(); ctx.arc(sx, sy - 6 * k, pr, 0, Math.PI * 2); ctx.stroke();
+        }
         ctx.fillStyle = fill; ctx.strokeStyle = stroke; ctx.lineWidth = 2.5;
-        ctx.beginPath(); ctx.arc(sx, sy - 6, 8, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+        ctx.beginPath(); ctx.arc(sx, sy - 6 * k, 8.5 * k, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
         if (label) {
-          ctx.font = 'bold 11px system-ui, sans-serif';
+          ctx.font = `600 ${Math.round(11 * fs)}px system-ui, sans-serif`;
           ctx.textAlign = 'center';
-          ctx.fillStyle = 'rgba(0,0,0,0.55)';
-          const w = ctx.measureText(label).width + 8;
-          ctx.fillRect(sx - w / 2, sy - 30, w, 15);
+          const w = ctx.measureText(label).width + 10 * fs;
+          const ly = sy - 16 * k - 18 * fs;
+          ctx.fillStyle = 'rgba(8,14,24,0.72)';
+          roundRect(sx - w / 2, ly, w, 17 * fs, 8.5 * fs); ctx.fill();
           ctx.fillStyle = '#fff';
-          ctx.fillText(label, sx, sy - 19);
+          ctx.fillText(label, sx, ly + 12.5 * fs);
         }
       }
 
-      function draw() {
-        // çim
-        for (let y = PITCH.Y0; y < PITCH.Y1; y += 3) {
-          ctx.fillStyle = Math.floor((y + 30) / 3) % 2 ? '#2f8a3e' : '#349645';
-          ctx.fillRect(0, ty(y), W, 3 * PITCH.PX + 1);
+      function pill(text) {
+        ctx.font = `600 ${Math.round(13 * fs)}px system-ui, sans-serif`;
+        const w = ctx.measureText(text).width + 20 * fs, h = 24 * fs;
+        ctx.fillStyle = 'rgba(8,14,24,0.72)';
+        roundRect(W / 2 - w / 2, H - h - 10 * fs, w, h, h / 2); ctx.fill();
+        ctx.fillStyle = '#fff'; ctx.textAlign = 'center';
+        ctx.fillText(text, W / 2, H - 10 * fs - h * 0.3);
+      }
+
+      function roundRect(x, y, w, h, r) {
+        ctx.beginPath();
+        ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r);
+        ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath();
+      }
+
+      function drawPitch() {
+        for (let y = PITCH.Y0; y < vy1; y += 3) {
+          ctx.fillStyle = Math.floor((y + 30) / 3) % 2 ? '#2d8540' : '#33924a';
+          ctx.fillRect(0, ty(y), W, 3 * PX + 1);
         }
+        const vg = ctx.createRadialGradient(W / 2, H * 0.45, H * 0.2, W / 2, H * 0.5, H * 0.95);
+        vg.addColorStop(0, 'rgba(0,0,0,0)'); vg.addColorStop(1, 'rgba(0,0,0,0.28)');
+        ctx.fillStyle = vg; ctx.fillRect(0, 0, W, H);
         ctx.strokeStyle = 'rgba(255,255,255,0.85)';
         ctx.lineWidth = 2;
         ctx.beginPath();
         ctx.moveTo(0, ty(0)); ctx.lineTo(W, ty(0));
-        ctx.rect(tx(-20.16), ty(0), 40.32 * PITCH.PX, 16.5 * PITCH.PX);
-        ctx.rect(tx(-9.16), ty(0), 18.32 * PITCH.PX, 5.5 * PITCH.PX);
+        ctx.rect(tx(-20.16), ty(0), 40.32 * PX, 16.5 * PX);
+        ctx.rect(tx(-9.16), ty(0), 18.32 * PX, 5.5 * PX);
         ctx.stroke();
         ctx.beginPath();
-        ctx.arc(tx(0), ty(11), 9.15 * PITCH.PX, Math.asin(5.5 / 9.15), Math.PI - Math.asin(5.5 / 9.15));
+        ctx.arc(tx(0), ty(11), 9.15 * PX, Math.asin(5.5 / 9.15), Math.PI - Math.asin(5.5 / 9.15));
         ctx.stroke();
         ctx.fillStyle = '#fff';
         ctx.beginPath(); ctx.arc(tx(0), ty(11), 2.5, 0, Math.PI * 2); ctx.fill();
         // file
-        ctx.fillStyle = 'rgba(255,255,255,0.15)';
-        ctx.fillRect(tx(-3.66), ty(-2, 0), 7.32 * PITCH.PX, 2 * PITCH.PX);
+        const sh = netShake > 0 ? Math.sin(t * 60) * 3 * netShake : 0;
+        ctx.fillStyle = 'rgba(255,255,255,0.14)';
+        ctx.fillRect(tx(-3.66), ty(-2) + sh, 7.32 * PX, ty(0) - ty(-2));
         ctx.strokeStyle = 'rgba(255,255,255,0.35)'; ctx.lineWidth = 1;
-        for (let x = -3.66; x <= 3.66; x += 0.6) { ctx.beginPath(); ctx.moveTo(tx(x), ty(-2)); ctx.lineTo(tx(x), ty(0, PITCH.BAR)); ctx.stroke(); }
+        for (let x = -3.66; x <= 3.67; x += 0.5) { ctx.beginPath(); ctx.moveTo(tx(x), ty(-2) + sh); ctx.lineTo(tx(x), ty(0, PITCH.BAR)); ctx.stroke(); }
+        for (let y = -2; y < 0; y += 0.5) { ctx.beginPath(); ctx.moveTo(tx(-3.66), ty(y) + sh); ctx.lineTo(tx(3.66), ty(y) + sh); ctx.stroke(); }
+      }
 
-        // gölgeler ve oyuncular (y sırasına göre)
+      function drawPreview() {
+        if (!preview || !preview.pts.length) return;
+        const pts = preview.pts;
+        const n = Math.max(2, Math.floor(pts.length * previewFrac));
+        const col = preview.power > 0.85 ? '255,120,90' : preview.power > 0.55 ? '255,214,102' : '124,240,160';
+        // yer gölgesi
+        ctx.strokeStyle = 'rgba(0,0,0,0.18)'; ctx.lineWidth = 3; ctx.setLineDash([2, 6]);
+        ctx.beginPath(); ctx.moveTo(tx(ball.x), ty(ball.y));
+        for (let i = 0; i < n; i++) ctx.lineTo(tx(pts[i][0]), ty(pts[i][1]));
+        ctx.stroke(); ctx.setLineDash([]);
+        for (let i = 0; i < n; i += 3) {
+          const a = 1 - (i / n) * 0.75;
+          ctx.fillStyle = `rgba(${col},${a})`;
+          ctx.beginPath(); ctx.arc(tx(pts[i][0]), ty(pts[i][1], pts[i][2]), 3.2 - (i / n) * 1.4, 0, Math.PI * 2); ctx.fill();
+        }
+        const e = pts[n - 1];
+        ctx.strokeStyle = `rgba(${col},0.9)`; ctx.lineWidth = 2;
+        ctx.beginPath(); ctx.arc(tx(e[0]), ty(e[1], e[2]), 7, 0, Math.PI * 2); ctx.stroke();
+      }
+
+      function drawHud() {
+        // süre çubuğu (üstte)
+        if (phase === 'aim') {
+          const rem = U.clamp(1 - t / scene.timeLimit, 0, 1);
+          ctx.fillStyle = 'rgba(8,14,24,0.55)'; ctx.fillRect(0, 0, W, 6 * fs);
+          ctx.fillStyle = rem > 0.35 ? '#7cf0a0' : '#ff6b6b'; ctx.fillRect(0, 0, W * rem, 6 * fs);
+        }
+        // güç halkası
+        if (phase === 'aim' && preview) {
+          const bx = tx(ball.x), by = ty(ball.y);
+          ctx.lineWidth = 5; ctx.lineCap = 'round';
+          ctx.strokeStyle = 'rgba(8,14,24,0.5)';
+          ctx.beginPath(); ctx.arc(bx, by, 20 * k, 0, Math.PI * 2); ctx.stroke();
+          ctx.strokeStyle = preview.power > 0.85 ? '#ff785a' : preview.power > 0.55 ? '#ffd666' : '#7cf0a0';
+          ctx.beginPath(); ctx.arc(bx, by, 20 * k, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * preview.power); ctx.stroke();
+          ctx.lineCap = 'butt';
+          const c = preview.curve;
+          const info = `Güç %${Math.round(preview.power * 100)}  •  ${Math.abs(c) < 0.12 ? 'Düz' : c > 0 ? 'Falso ◀' : 'Falso ▶'}  •  ${LIFTS[liftIdx].l}`;
+          pill(info);
+        }
+        // parmak izi
+        if (gesture && gesture.pts.length > 1) {
+          ctx.strokeStyle = 'rgba(255,255,255,0.55)'; ctx.lineWidth = 6; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+          ctx.beginPath(); ctx.moveTo(gesture.pts[0][0], gesture.pts[0][1]);
+          gesture.pts.forEach((p) => ctx.lineTo(p[0], p[1]));
+          ctx.stroke(); ctx.lineCap = 'butt';
+        }
+        // ilk anlarda yol gösterici ipucu
+        if (showHint && phase === 'aim' && !gesture && !preview) {
+          const k = (t % 1.6) / 1.6;
+          const bx = tx(ball.x), by = ty(ball.y);
+          const gx = tx(U.clamp(ball.x * 0.3, -2.5, 2.5)), gy = ty(1);
+          const hx = bx + (gx - bx) * k * 0.6, hy = by + (gy - by) * k * 0.6;
+          ctx.globalAlpha = 1 - k;
+          ctx.font = `${Math.round(28 * fs)}px system-ui, sans-serif`; ctx.textAlign = 'center';
+          ctx.fillText('👆', hx, hy + 30 * fs);
+          ctx.globalAlpha = 1;
+          pill(scene.mates.length ? 'Kaleye kaydır ya da arkadaşına dokun' : 'Kaleye doğru kaydır');
+        }
+      }
+
+      function draw(dt) {
+        fs = U.clamp(W / (cv.clientWidth || W), 1, 2.4);
+        drawPitch();
+        if (phase === 'aim') drawPreview();
         const ents = [];
         ents.push({ y: keeper.y, d: () => drawPlayer(keeper.x, keeper.y, '#f4d03f', '#222', null) });
         defs.forEach((d) => ents.push({ y: d.y, d: () => drawPlayer(d.x, d.y, o.oppColor, o.oppColor2, null) }));
-        mates.forEach((m) => ents.push({ y: m.y, d: () => drawPlayer(m.x, m.y, o.ownColor, o.ownColor2, m.name.split(' ').slice(-1)[0]) }));
+        mates.forEach((m) => ents.push({ y: m.y, d: () => drawPlayer(m.x, m.y, o.ownColor, o.ownColor2, m.name.split(' ').slice(-1)[0], phase === 'aim') }));
         if (phase === 'aim' || t - kickT < 0.4) ents.push({ y: shooter.y, d: () => drawPlayer(shooter.x, shooter.y, o.ownColor, '#fff', 'SEN') });
         ents.sort((a, b) => a.y - b.y).forEach((e) => e.d());
 
-        // kale çerçevesi
         ctx.strokeStyle = '#fff'; ctx.lineWidth = 4;
         ctx.beginPath();
         ctx.moveTo(tx(-3.66), ty(0)); ctx.lineTo(tx(-3.66), ty(0, PITCH.BAR));
@@ -364,64 +576,63 @@ const MiniGame = {
 
         // top
         ctx.fillStyle = 'rgba(0,0,0,0.3)';
-        ctx.beginPath(); ctx.ellipse(tx(ball.x), ty(ball.y), 5, 2.5, 0, 0, Math.PI * 2); ctx.fill();
-        const br = 5 + ball.z * 0.6;
+        ctx.beginPath(); ctx.ellipse(tx(ball.x), ty(ball.y), 5.5 * k, 2.5 * k, 0, 0, Math.PI * 2); ctx.fill();
+        const br = (5.5 + ball.z * 0.6) * k;
+        const bx = tx(ball.x), by = ty(ball.y, ball.z);
         ctx.fillStyle = '#fff'; ctx.strokeStyle = '#111'; ctx.lineWidth = 1.5;
-        ctx.beginPath(); ctx.arc(tx(ball.x), ty(ball.y, ball.z), br, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+        ctx.beginPath(); ctx.arc(bx, by, br, 0, Math.PI * 2); ctx.fill(); ctx.stroke();
+        ctx.fillStyle = '#222';
+        ctx.beginPath(); ctx.arc(bx + Math.cos(t * 9) * br * 0.35, by + Math.sin(t * 9) * br * 0.35, br * 0.32, 0, Math.PI * 2); ctx.fill();
 
-        // nişan oku
-        if (phase === 'aim' && drag) {
-          const dx = drag.sx - drag.cx, dy = drag.sy - drag.cy;
-          const len = Math.hypot(dx, dy);
-          const pw = Math.min(1, len / 190);
-          if (len > 6) {
-            const a = Math.atan2(dy, dx);
-            const L = 40 + pw * 160;
-            const bx = tx(ball.x), by = ty(ball.y);
-            const ex = bx + Math.cos(a) * L, ey = by + Math.sin(a) * L;
-            const c = +curveIn.value / 100;
-            const mx = (bx + ex) / 2 + Math.sin(a) * c * L * 0.25, my = (by + ey) / 2 - Math.cos(a) * c * L * 0.25;
-            const col = `hsl(${120 - pw * 120}, 90%, 55%)`;
-            ctx.strokeStyle = col; ctx.lineWidth = 5; ctx.lineCap = 'round';
-            ctx.beginPath(); ctx.moveTo(bx, by); ctx.quadraticCurveTo(mx, my, ex, ey); ctx.stroke();
-            const ha = Math.atan2(ey - my, ex - mx);
-            ctx.fillStyle = col;
-            ctx.beginPath();
-            ctx.moveTo(ex + Math.cos(ha) * 10, ey + Math.sin(ha) * 10);
-            ctx.lineTo(ex + Math.cos(ha + 2.4) * 12, ey + Math.sin(ha + 2.4) * 12);
-            ctx.lineTo(ex + Math.cos(ha - 2.4) * 12, ey + Math.sin(ha - 2.4) * 12);
-            ctx.fill();
-            ctx.font = 'bold 13px system-ui, sans-serif'; ctx.textAlign = 'left';
-            ctx.fillStyle = '#fff';
-            ctx.fillText(`Güç %${Math.round(pw * 100)}`, 12, H - 14);
-          }
-        }
-        // süre çubuğu
-        if (phase === 'aim') {
-          const rem = U.clamp(1 - t / scene.timeLimit, 0, 1);
-          ctx.fillStyle = 'rgba(0,0,0,0.4)'; ctx.fillRect(W - 170, H - 24, 158, 12);
-          ctx.fillStyle = rem > 0.35 ? '#7cf0a0' : '#ff6b6b'; ctx.fillRect(W - 170, H - 24, 158 * rem, 12);
-          ctx.font = '11px system-ui, sans-serif'; ctx.fillStyle = '#fff'; ctx.textAlign = 'right';
-          ctx.fillText(scene.creep ? 'Rakip baskısı' : 'Süre', W - 175, H - 14);
-        }
+        drawHud();
+
+        // konfeti
+        particles.forEach((p) => {
+          p.vy += 520 * dt; p.x += p.vx * dt; p.y += p.vy * dt; p.life -= dt;
+          ctx.globalAlpha = U.clamp(p.life, 0, 1);
+          ctx.fillStyle = p.c; ctx.fillRect(p.x, p.y, p.r, p.r * 1.6);
+        });
+        ctx.globalAlpha = 1;
+        particles = particles.filter((p) => p.life > 0);
+
         if (phase === 'done') {
-          ctx.fillStyle = 'rgba(0,0,0,0.45)';
-          ctx.fillRect(0, H / 2 - 40, W, 80);
-          ctx.font = 'bold 40px system-ui, sans-serif'; ctx.textAlign = 'center';
+          const k = U.clamp((t - endT) / 0.25, 0, 1);
+          const scale = 0.6 + 0.4 * (1 - Math.pow(1 - k, 3)) + (k >= 1 ? Math.sin((t - endT) * 5) * 0.02 : 0);
+          ctx.fillStyle = `rgba(8,14,24,${0.5 * k})`;
+          ctx.fillRect(0, H / 2 - 46 * fs, W, 92 * fs);
+          ctx.save();
+          ctx.translate(W / 2, H / 2);
+          ctx.scale(scale, scale);
+          ctx.font = `900 ${Math.round(Math.min(46 * fs, 90))}px system-ui, sans-serif`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+          ctx.lineWidth = 6; ctx.strokeStyle = 'rgba(0,0,0,0.5)';
+          ctx.strokeText(resultText, 0, 0);
           ctx.fillStyle = resultColor;
-          ctx.fillText(resultText, W / 2, H / 2 + 14);
+          ctx.fillText(resultText, 0, 0);
+          ctx.restore();
+          ctx.textBaseline = 'alphabetic';
+        }
+        if (slowmo < 1) {
+          ctx.strokeStyle = 'rgba(255,255,255,0.25)'; ctx.lineWidth = 10;
+          ctx.strokeRect(0, 0, W, H);
         }
       }
 
+      function cleanup() {
+        cancelAnimationFrame(raf);
+        document.removeEventListener('keydown', onKey);
+      }
+
       function loop(now) {
-        let dt = Math.min(0.05, (now - last) / 1000);
+        const rdt = Math.min(0.05, (now - last) / 1000);
         last = now;
+        const dt = rdt * slowmo;
         const n = Math.ceil(dt / (1 / 240));
         for (let i = 0; i < n && phase !== 'done'; i++) step(dt / n);
-        if (phase === 'done') t += dt;
-        draw();
-        if (phase === 'done' && t - endT > 1.5) {
-          cancelAnimationFrame(raf);
+        if (phase === 'done') t += rdt;
+        netShake = Math.max(0, netShake - rdt * 1.2);
+        draw(rdt);
+        if (phase === 'done' && t - endT > (result.outcome === 'goal' ? 1.9 : 1.4)) {
+          cleanup();
           resolve(result);
           return;
         }
@@ -430,97 +641,147 @@ const MiniGame = {
       raf = requestAnimationFrame(loop);
 
       MiniGame._abort = () => {
-        cancelAnimationFrame(raf);
+        cleanup();
         phase = 'done';
         resolve({ outcome: 'auto' });
       };
     });
   },
 
-  // Zamanlama barı: top kapma, çalım, kafa vuruşu
+  // Zamanlama anı: halka küçülür, hedef çembere oturduğu anda dokun
   timing(host, o) {
     return new Promise((resolve) => {
       const rounds = o.rounds || 1;
-      let round = 0;
+      const W = 640, H = 300;
       host.innerHTML = `
-        <div class="tb">
-          <div class="tb-title">${U.esc(o.title)}</div>
-          <div class="tb-desc">${U.esc(o.desc)}</div>
-          <div class="tb-rounds"></div>
-          <div class="tb-bar"><div class="tb-y"></div><div class="tb-g"></div><div class="tb-m"></div></div>
-          <button class="btn btn-big tb-btn">${U.esc(o.button || 'ŞİMDİ!')}</button>
-          <div class="tb-res"></div>
+        <div class="tg" tabindex="0">
+          <canvas class="tg-canvas" width="${W}" height="${H}"></canvas>
+          <div class="tg-foot"><b>${U.esc(o.button || 'Dokun')}</b> • Halka yeşil bölgeye girince ekrana dokun ya da <kbd>Boşluk</kbd> tuşuna bas</div>
         </div>`;
-      const bar = host.querySelector('.tb-bar');
-      const g = host.querySelector('.tb-g'), y = host.querySelector('.tb-y'), m = host.querySelector('.tb-m');
-      const res = host.querySelector('.tb-res');
-      const roundsEl = host.querySelector('.tb-rounds');
-      const btn = host.querySelector('.tb-btn');
-      let pos = 0, dir = 1, center = 0.5, done = false, raf = 0, last = performance.now(), waiting = false;
-      let partial = false;
+      const box = host.querySelector('.tg');
+      const cv = host.querySelector('canvas');
+      const ctx = cv.getContext('2d');
+      const r0 = 38;
+      const R = r0 * 3.4;
+      const D = 1.55 / o.speed; // halkanın hedefe varma süresi
+      const v = (R - r0) / D;
+      const g = U.clamp(o.green * 130, 6, 42);
+      const yw = Math.max(6, o.yellow * 130);
+      const icon = o.icon || '⚽';
+      let round = 0, partial = false, done = false, raf = 0, last = performance.now();
+      let rt = 0, cx = W / 2, cy = H / 2, state = 'run', msg = '', msgCol = '#fff', msgT = 0, flash = 0;
 
       const setup = () => {
-        center = U.rand(0.25, 0.75);
-        g.style.left = (center - o.green / 2) * 100 + '%';
-        g.style.width = o.green * 100 + '%';
-        y.style.left = (center - o.green / 2 - o.yellow) * 100 + '%';
-        y.style.width = (o.green + o.yellow * 2) * 100 + '%';
-        pos = U.chance(0.5) ? 0 : 1; dir = pos ? -1 : 1;
-        roundsEl.innerHTML = rounds > 1 ? Array.from({ length: rounds }, (_, i) => `<span class="dot ${i < round ? 'ok' : ''}"></span>`).join('') : '';
-        waiting = false;
+        rt = 0; state = 'run';
+        cx = U.rand(W * 0.3, W * 0.7); cy = U.rand(H * 0.42, H * 0.62);
+      };
+      const ringR = () => R - v * rt;
+
+      const draw = () => {
+        // saha zemini
+        for (let i = 0; i < 8; i++) {
+          ctx.fillStyle = i % 2 ? '#2d8540' : '#33924a';
+          ctx.fillRect(0, (H / 8) * i, W, H / 8 + 1);
+        }
+        const vg = ctx.createRadialGradient(cx, cy, 20, cx, cy, W * 0.7);
+        vg.addColorStop(0, 'rgba(0,0,0,0)'); vg.addColorStop(1, 'rgba(0,0,0,0.45)');
+        ctx.fillStyle = vg; ctx.fillRect(0, 0, W, H);
+        // başlık
+        ctx.textAlign = 'center';
+        ctx.fillStyle = '#fff'; ctx.font = '900 24px system-ui, sans-serif';
+        ctx.fillText(o.title, W / 2, 36);
+        // tur noktaları
+        if (rounds > 1) {
+          for (let i = 0; i < rounds; i++) {
+            ctx.beginPath(); ctx.arc(W / 2 + (i - (rounds - 1) / 2) * 22, 58, 6, 0, Math.PI * 2);
+            ctx.fillStyle = i < round ? '#7cf0a0' : 'rgba(8,14,24,0.5)'; ctx.fill();
+            ctx.strokeStyle = 'rgba(255,255,255,0.6)'; ctx.lineWidth = 1.5; ctx.stroke();
+          }
+        }
+        // tolerans bantları
+        ctx.lineWidth = yw;
+        ctx.strokeStyle = 'rgba(255,209,102,0.55)';
+        ctx.beginPath(); ctx.arc(cx, cy, r0 + g + yw / 2, 0, Math.PI * 2); ctx.stroke();
+        if (r0 - g - yw / 2 > 4) { ctx.beginPath(); ctx.arc(cx, cy, r0 - g - yw / 2, 0, Math.PI * 2); ctx.stroke(); }
+        ctx.lineWidth = g * 2;
+        ctx.strokeStyle = 'rgba(124,240,160,0.65)';
+        ctx.beginPath(); ctx.arc(cx, cy, r0, 0, Math.PI * 2); ctx.stroke();
+        ctx.lineWidth = 2; ctx.strokeStyle = '#fff';
+        ctx.beginPath(); ctx.arc(cx, cy, r0, 0, Math.PI * 2); ctx.stroke();
+        ctx.font = '30px system-ui, sans-serif'; ctx.textBaseline = 'middle';
+        ctx.fillText(icon, cx, cy + 2);
+        ctx.textBaseline = 'alphabetic';
+        // küçülen halka
+        if (state === 'run') {
+          const r = ringR();
+          if (r > 0) {
+            const inG = Math.abs(r - r0) <= g;
+            ctx.lineWidth = 5; ctx.strokeStyle = inG ? '#7cf0a0' : '#ffffff';
+            ctx.beginPath(); ctx.arc(cx, cy, r, 0, Math.PI * 2); ctx.stroke();
+          }
+        }
+        if (flash > 0) { ctx.fillStyle = `rgba(255,255,255,${flash * 0.35})`; ctx.fillRect(0, 0, W, H); }
+        if (msg) {
+          const k = U.clamp(msgT / 0.2, 0, 1);
+          ctx.save(); ctx.translate(W / 2, H - 34); ctx.scale(0.7 + 0.3 * k, 0.7 + 0.3 * k);
+          ctx.font = '900 30px system-ui, sans-serif'; ctx.textAlign = 'center';
+          ctx.lineWidth = 5; ctx.strokeStyle = 'rgba(0,0,0,0.5)'; ctx.strokeText(msg, 0, 0);
+          ctx.fillStyle = msgCol; ctx.fillText(msg, 0, 0);
+          ctx.restore();
+        }
+      };
+
+      const say = (m, c) => { msg = m; msgCol = c; msgT = 0; };
+      const end = (r) => {
+        done = true;
+        setTimeout(() => { cleanup(); resolve({ result: r }); }, 1000);
+      };
+      const press = () => {
+        if (done || state !== 'run') return;
+        const d = ringR() - r0;
+        flash = 1;
+        if (Math.abs(d) <= g) {
+          round++;
+          if (round >= rounds) { say(o.okText || 'BAŞARILI!', '#7cf0a0'); state = 'hit'; return end(partial ? 'partial' : 'success'); }
+          say(U.pick(['Harika!', 'Mükemmel!', 'Devam!']), '#7cf0a0');
+          state = 'hit';
+          setTimeout(setup, 420);
+        } else if (Math.abs(d) <= g + yw) {
+          say(o.partialText || 'Yarım kaldı...', '#ffd166');
+          state = 'hit';
+          if (o.partialEnds !== false) return end('partial');
+          partial = true; round++;
+          if (round >= rounds) return end('partial');
+          setTimeout(setup, 420);
+        } else {
+          say(d > 0 ? 'ERKEN!' : 'GEÇ!', '#ff6b6b');
+          state = 'hit';
+          setTimeout(() => say(o.failText || 'BAŞARISIZ!', '#ff6b6b'), 350);
+          end('fail');
+        }
       };
       const loop = (now) => {
         const dt = Math.min(0.05, (now - last) / 1000);
         last = now;
-        if (!waiting) {
-          pos += dir * o.speed * dt;
-          if (pos > 1) { pos = 1; dir = -1; }
-          if (pos < 0) { pos = 0; dir = 1; }
-          m.style.left = pos * 100 + '%';
+        if (state === 'run' && !done) {
+          rt += dt;
+          if (ringR() < r0 - g - yw) { state = 'hit'; say('GEÇ KALDIN!', '#ff6b6b'); end('fail'); }
         }
-        if (!done) raf = requestAnimationFrame(loop);
-      };
-      const end = (r) => {
-        done = true;
-        cancelAnimationFrame(raf);
-        document.removeEventListener('keydown', key);
-        setTimeout(() => resolve({ result: r }), 1100);
-      };
-      const press = () => {
-        if (done || waiting) return;
-        const d = Math.abs(pos - center);
-        if (d <= o.green / 2) {
-          round++;
-          res.textContent = round >= rounds ? (o.okText || 'BAŞARILI!') : 'Güzel! Devam...';
-          res.className = 'tb-res ok';
-          if (round >= rounds) { roundsEl.innerHTML = Array.from({ length: rounds }, () => '<span class="dot ok"></span>').join(''); return end(partial ? 'partial' : 'success'); }
-          waiting = true;
-          setTimeout(setup, 450);
-        } else if (d <= o.green / 2 + o.yellow) {
-          res.textContent = o.partialText || 'Yarım kaldı...';
-          res.className = 'tb-res mid';
-          if (o.partialEnds !== false) return end('partial');
-          partial = true; round++;
-          if (round >= rounds) return end('partial');
-          waiting = true;
-          setTimeout(setup, 450);
-        } else {
-          res.textContent = o.failText || 'BAŞARISIZ!';
-          res.className = 'tb-res bad';
-          end('fail');
-        }
+        msgT += dt;
+        flash = Math.max(0, flash - dt * 4);
+        draw();
+        raf = requestAnimationFrame(loop);
       };
       const key = (e) => { if (e.code === 'Space' || e.code === 'Enter') { e.preventDefault(); press(); } };
-      btn.onclick = press;
-      bar.onpointerdown = press;
+      const cleanup = () => { cancelAnimationFrame(raf); document.removeEventListener('keydown', key); };
+      box.addEventListener('pointerdown', (e) => { e.preventDefault(); press(); });
       document.addEventListener('keydown', key);
       setup();
       raf = requestAnimationFrame(loop);
       MiniGame._abort = () => {
         if (done) return;
         done = true;
-        cancelAnimationFrame(raf);
-        document.removeEventListener('keydown', key);
+        cleanup();
         resolve({ result: 'auto' });
       };
     });

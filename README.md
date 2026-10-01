@@ -23,8 +23,11 @@ Oyun otomatik olarak tarayıcının `localStorage` alanına kaydedilir.
 - **9 stat:** Hız, Şut, Pas, Top Sürme, Teknik, Kafa, Savunma, Güç, Dayanıklılık. Mevkine göre (Forvet / Orta Saha / Defans) genel gücün hesaplanır.
 - **Haftalık aksiyonlar (haftada 3 hak):** antrenman, yoğun antrenman, özel hoca, dinlenme, takım arkadaşlarıyla vakit geçirme, hocayla konuşma, taraftarlarla etkileşim.
 - **Maçlar:** Maç dakika dakika simüle edilir. Kritik anlarda oyun durur ve sen oynarsın:
-  - **Şut / pas sahnesi:** Topun arkasına doğru sürükle ve bırak (sapan gibi). Ok uzadıkça vuruş sertleşir. Falso ve yükseklik ayarlanabilir. Kaleci, savunmacılar, baraj ve takım arkadaşların fiziksel olarak hareket eder. Statların vuruş gücünü, isabetini ve falsoyu belirler.
-  - **Zamanlama anları:** çalım, top kapma ve kafa vuruşu. İlgili statın yüksekse yeşil alan genişler.
+  - **Şut:** Parmağını (ya da fareyi) topu göndermek istediğin yere doğru **kaydır**. Kaydırma ne kadar uzunsa vuruş o kadar sert olur. Yolu **kavisli** çizersen top falso alır ve kavisle hedefe döner (Score! Hero / Soccer Hero tarzı). Kaydırırken topun izleyeceği yol önizlenir; Teknik statın yükseldikçe önizleme uzar.
+  - **Pas:** Takım arkadaşına **dokun**; top isabetli bir pasla ona gider (isabet Pas statına bağlı).
+  - **Vuruş tipi:** Yerden, Yarım Yükseklik veya Aşırtma (klavyede 1 / 2 / 3).
+  - Gole yaklaşan şutlarda ağır çekim, gollerde konfeti efekti var.
+  - **Zamanlama anları (çalım, top kapma, kafa vuruşu):** Küçülen halka yeşil bölgeye girdiğinde ekranın herhangi bir yerine dokun ya da Boşluk tuşuna bas. İlgili statın yüksekse yeşil bölge genişler.
   - Her an **Otomatik** çözülebilir ya da maçın tamamı simüle edilebilir.
 - **Reyting, maçın adamı, gol/asist istatistikleri** ve sezon sonu ödülleri (şampiyonluk, gol krallığı, sezonun oyuncusu, Altın Top...).
 - **İlişkiler:** Hoca (ilk 11 şansı), takım arkadaşları ve taraftarlar.
