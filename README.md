@@ -17,6 +17,10 @@ python3 -m http.server 8000
 
 Oyun otomatik olarak tarayıcının `localStorage` alanına kaydedilir.
 
+### Telefona uygulama olarak kurma (PWA)
+
+Oyunu bir web sunucusundan (ör. GitHub Pages) açıp tarayıcı menüsünden **Ana ekrana ekle** dersen tam ekran bir uygulama gibi çalışır ve internet olmadan da açılır. Çift dokunma ve kıstırma ile yakınlaşma kapalıdır.
+
 ## Özellikler
 
 - **Kariyer:** 8 yaşında U10 takımında başlarsın. Sırasıyla U12, U14, U16 ve U19 takımlarında oynarsın. 17-18 yaşında profesyonel sözleşme imzalar, 33 yaşından sonra istediğin zaman emekli olabilirsin.
@@ -29,6 +33,8 @@ Oyun otomatik olarak tarayıcının `localStorage` alanına kaydedilir.
   - Gole yaklaşan şutlarda ağır çekim, gollerde konfeti efekti var.
   - **Zamanlama anları (çalım, top kapma, kafa vuruşu):** Küçülen halka yeşil bölgeye girdiğinde ekranın herhangi bir yerine dokun ya da Boşluk tuşuna bas. İlgili statın yüksekse yeşil bölge genişler.
   - Her an **Otomatik** çözülebilir ya da maçın tamamı simüle edilebilir.
+  - Pozisyon geldiğinde saha **tam ekran** açılır; kamera ekran oranına göre topa ve kaleye yakınlaşır. Oyuncular kulüplerinin formalarıyla (çizgili, yarım, düz…) görünür ve koşma/vuruş animasyonları vardır.
+  - **Zorluk seviyeyle artar:** U10'da kaleci yavaş, savunma az ve nişan yardımı güçlüdür; U12 → U19 → Anadolu Ligi → Yıldızlar Ligi → Avrupa ligleri → Milli takım sırasıyla kaleci, savunma ve isabet zorlaşır.
 - **Reyting, maçın adamı, gol/asist istatistikleri** ve sezon sonu ödülleri (şampiyonluk, gol krallığı, sezonun oyuncusu, Altın Top...).
 - **İlişkiler:** Hoca (ilk 11 şansı), takım arkadaşları ve taraftarlar.
 - **Enerji, moral, ün ve sakatlıklar.**

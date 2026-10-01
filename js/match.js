@@ -40,7 +40,10 @@ const Match = {
     const opp = ctx.side === 'home' ? ctx.away : ctx.home;
     const ovr = Player.overall(p, true);
     const st = Player.effStats(p);
-    const skill = U.clamp(0.5 + (opp.rating - ovr) / 45, 0.08, 0.92);
+    // Zorluk: seviye (yaş grubu / lig) arttıkça artar, rakip-oyuncu farkı da etkiler
+    const skill = U.clamp((ctx.levelBase != null ? ctx.levelBase : 0.4) + (opp.rating - ovr) / 70, 0.03, 0.88);
+    const kits = Sprites.kits(own, opp);
+    const narrow = () => window.innerWidth / window.innerHeight < 0.9;
     const cond = 1.25 - 0.35 * (p.energy / 100) - 0.15 * (p.morale / 100);
 
     // Katılım
@@ -84,9 +87,9 @@ const Match = {
         <div class="mt-top">
           <div class="mt-comp">${U.esc(ctx.compName)}</div>
           <div class="mt-board">
-            <div class="mt-team"><span class="kit" style="background:${ctx.home.c1};border-color:${ctx.home.c2}"></span>${U.esc(ctx.home.name)}</div>
-            <div class="mt-score"><span id="mt-hs">0</span> - <span id="mt-as">0</span></div>
-            <div class="mt-team right">${U.esc(ctx.away.name)}<span class="kit" style="background:${ctx.away.c1};border-color:${ctx.away.c2}"></span></div>
+            <div class="mt-team">${UI.shirt(ctx.home, 'big')}<span>${U.esc(ctx.home.name)}</span></div>
+            <div class="mt-score"><span id="mt-hs">0</span><i></i><span id="mt-as">0</span></div>
+            <div class="mt-team right"><span>${U.esc(ctx.away.name)}</span>${UI.shirt(ctx.away, 'big')}</div>
           </div>
           <div class="mt-time"><span id="mt-min">0'</span><div class="mt-prog"><div id="mt-bar"></div></div></div>
         </div>
@@ -104,14 +107,15 @@ const Match = {
               <div class="seg" id="mt-speed">
                 <button data-s="1" class="on">1x</button><button data-s="2">2x</button><button data-s="4">4x</button>
               </div>
-              <button class="btn btn-ghost" id="mt-sim">⏩ Maçı Simüle Et</button>
+              <button class="btn btn-ghost" id="mt-sim">${Icon('fast')} Maçı Simüle Et</button>
             </div>
           </div>
         </div>
         <div class="mt-moment hidden" id="mt-moment">
           <div class="mm-head">
-            <div><div class="mm-title" id="mm-title"></div><div class="mm-desc" id="mm-desc"></div></div>
-            <button class="btn btn-ghost" id="mm-auto">🤖 Otomatik</button>
+            <div class="mm-min" id="mm-min"></div>
+            <div class="mm-tt"><div class="mm-title" id="mm-title"></div><div class="mm-desc" id="mm-desc"></div></div>
+            <button class="btn btn-ghost" id="mm-auto">${Icon('robot')}<span>Otomatik</span></button>
           </div>
           <div id="mm-host"></div>
         </div>
@@ -122,7 +126,8 @@ const Match = {
       M.feed.push(txt);
       const d = document.createElement('div');
       d.className = 'fd ' + cls;
-      d.innerHTML = txt;
+      const tag = { 'goal own': 'GOL', 'goal opp': 'GOL', info: 'BİLGİ', bad: 'KART' }[cls];
+      d.innerHTML = (tag ? `<em class="ft">${tag}</em>` : '') + U.plain(txt);
       const f = $('mt-feed');
       f.prepend(d);
     };
@@ -220,7 +225,7 @@ const Match = {
 
     const autoCanvas = (type) => {
       const k = type === 'deep' ? 'pass' : type === 'freekick' ? 'freekick' : type === 'penalty' ? 'penalty' : 'shot';
-      const rel = (Player.skillFor(p, k) - opp.rating) / 20 - (cond - 0.8);
+      const rel = (Player.skillFor(p, k) - opp.rating) / 20 - (cond - 0.8) - (skill - 0.4) * 1.2;
       if (type === 'penalty') return { outcome: U.chance(U.sigmoid(rel * 0.5 + 1.2)) ? 'goal' : U.pick(['saved', 'miss']) };
       if (type === 'freekick') return { outcome: U.chance(U.sigmoid(rel - 2)) ? 'goal' : U.pick(['saved', 'blocked', 'miss']) };
       const passPref = type === 'deep' ? 0.9 : p.position === 'FW' ? 0.3 : 0.55;
@@ -239,9 +244,10 @@ const Match = {
     const timingCfg = (k, extra) => {
       const rel = Player.skillFor(p, k) - opp.rating;
       return Object.assign({
-        green: U.clamp(0.14 + rel / 220, 0.05, 0.32),
+        green: U.clamp(0.15 + rel / 220 + (0.45 - skill) * 0.16, 0.06, 0.36),
         yellow: 0.07,
-        speed: (0.85 + 0.7 * skill) * Math.sqrt(cond / 0.8),
+        speed: (0.75 + 0.75 * skill) * Math.sqrt(cond / 0.8),
+        kits, number: p.shirt,
       }, extra);
     };
     const autoTiming = (k, bonus = 0) => {
@@ -253,7 +259,8 @@ const Match = {
 
     const showMoment = (type) => {
       $('mt-moment').classList.remove('hidden');
-      $('mm-title').textContent = `${MOMENT_TITLES[type]}  ${M.min}'`;
+      $('mm-min').textContent = `${M.min}'`;
+      $('mm-title').textContent = U.plain(MOMENT_TITLES[type]);
       $('mm-desc').textContent = MOMENT_DESC[type];
     };
     const hideMoment = () => { $('mt-moment').classList.add('hidden'); $('mm-host').innerHTML = ''; MiniGame._abort = null; };
@@ -263,11 +270,8 @@ const Match = {
       showMoment(type);
       let auto = false;
       $('mm-auto').onclick = () => { auto = true; if (MiniGame._abort) MiniGame._abort(); };
-      const scene = Scenes.make(type, { skill, mates: mateNames, position: p.position, pace: st.pace });
-      const r = await MiniGame.play($('mm-host'), scene, {
-        stats: st, skill, cond,
-        ownColor: own.c1, ownColor2: own.c2, oppColor: opp.c1, oppColor2: opp.c2,
-      });
+      const scene = Scenes.make(type, { skill, mates: mateNames, position: p.position, pace: st.pace, narrow: narrow() });
+      const r = await MiniGame.play($('mm-host'), scene, { stats: st, skill, cond, kits, number: p.shirt });
       hideMoment();
       if (auto || r.outcome === 'auto') return autoCanvas(type);
       return r;
@@ -293,8 +297,8 @@ const Match = {
       } else if (type === 'dribble') {
         M.statsUsed.add('dribbling'); M.statsUsed.add('pace');
         const r = await playTiming('dribble', 'dribble', {
-          title: 'Çalım at!', icon: '💨', desc: 'İmleç yeşil alandayken bas. Her başarılı basış bir rakibi geçirir.',
-          rounds: skill > 0.6 ? 3 : 2, button: 'ÇALIM!', okText: 'RAKİPLERİ GEÇTİN!', partialText: 'Top ayağından açıldı...', failText: 'TOPU KAPTIRDIN!',
+          title: 'Çalım at!', kind: 'dribble', desc: 'İmleç yeşil alandayken bas. Her başarılı basış bir rakibi geçirir.',
+          rounds: skill < 0.25 ? 1 : skill < 0.6 ? 2 : 3, button: 'ÇALIM!', okText: 'RAKİPLERİ GEÇTİN!', partialText: 'Top ayağından açıldı...', failText: 'TOPU KAPTIRDIN!',
         }, 0.3);
         if (r === 'success') {
           rate(0.3);
@@ -309,7 +313,7 @@ const Match = {
       } else if (type === 'tackle') {
         M.statsUsed.add('defending'); M.statsUsed.add('physical');
         const r = await playTiming('tackle', 'tackle', {
-          title: 'Topu kap!', icon: '🛡️', desc: 'Yeşil alan temiz müdahale, sarı alan faul demek. Doğru anda bas!',
+          title: 'Topu kap!', kind: 'tackle', desc: 'Yeşil alan temiz müdahale, sarı alan faul demek. Doğru anda bas!',
           button: 'MÜDAHALE!', okText: 'TERTEMİZ MÜDAHALE!', partialText: 'FAUL!', failText: 'RAKİP SENİ GEÇTİ!',
         }, 0.6);
         if (r === 'success') {
@@ -336,7 +340,7 @@ const Match = {
       } else if (type === 'header') {
         M.statsUsed.add('heading');
         const r = await playTiming('header', 'header', {
-          title: 'Kafayı vur!', icon: '⚽', desc: 'Top havada! Doğru anda yüksel.',
+          title: 'Kafayı vur!', kind: 'header', desc: 'Top havada! Doğru anda yüksel.',
           button: 'KAFA!', okText: 'MÜKEMMEL ZAMANLAMA!', partialText: 'Topa iyi temas edemedin', failText: 'Topu kaçırdın',
         }, 0);
         if (r === 'success') {
@@ -430,7 +434,8 @@ const Match = {
       };
       const resTxt = { W: 'GALİBİYET', D: 'BERABERLİK', L: 'MAĞLUBİYET' }[res];
       $('mt-moment').classList.remove('hidden');
-      $('mm-title').textContent = `🏁 Maç Sonu — ${resTxt}`;
+      $('mm-min').textContent = 'MS';
+      $('mm-title').textContent = `Maç Sonu · ${resTxt}`;
       $('mm-desc').textContent = `${ctx.home.name} ${M.hs} - ${M.as} ${ctx.away.name}`;
       $('mm-auto').style.display = 'none';
       $('mm-host').innerHTML = `
@@ -449,6 +454,7 @@ const Match = {
           ` : '<div class="ms-none">Bu maçta forma giymedin.</div>'}
           <button class="btn btn-big" id="ms-done">Devam</button>
         </div>`;
+      UI.strip($('mm-host'));
       $('ms-done').onclick = () => {
         ov.classList.add('hidden');
         ov.innerHTML = '';

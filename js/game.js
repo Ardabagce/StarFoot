@@ -58,7 +58,7 @@ const Game = {
   },
   toast(msg, type = '') {
     const box = document.getElementById('toasts');
-    const d = U.el(`<div class="toast ${type}">${msg}</div>`);
+    const d = U.el(`<div class="toast ${type}">${U.plain(msg)}</div>`);
     box.appendChild(d);
     while (box.children.length > 4) box.firstChild.remove();
     setTimeout(() => d.classList.add('out'), 2600);
@@ -217,6 +217,14 @@ const Game = {
   },
 
   // ---------- Maç ----------
+  // Mini oyun zorluğu: yaş grubu ve lig seviyesiyle artar
+  levelBase(intl) {
+    if (intl) return 0.55;
+    if (Game.isYouth()) return { U10: 0.08, U12: 0.15, U14: 0.22, U16: 0.29, U19: 0.35 }[Game.state.youth.group] || 0.3;
+    const lg = Game.club().league;
+    return lg === 'TR2' ? 0.38 : lg === 'TR1' ? 0.45 : 0.52;
+  },
+
   roleFor(ovr, teamR, youth, preview = false) {
     const p = Game.p;
     const margin = ovr - teamR + (p.rel.coach - 50) / 8 + (p.energy < 35 ? -3 : 0);
@@ -240,6 +248,7 @@ const Game = {
       home: mk(fx.home), away: mk(fx.away),
       side: fx.home === s.clubId ? 'home' : 'away',
       compName: `${Game.leagueName()} • ${s.season.round + 1}. Hafta`,
+      levelBase: Game.levelBase(false),
     };
     const ovr = Player.overall(p, true);
     if (p.injuryWeeks > 0) {
@@ -283,7 +292,8 @@ const Game = {
     const oppT = { id: oppNat.code, name: oppNat.name, rating: oppNat.rating, c1: '#1d3c8f', c2: '#ffffff', roster: mkRoster(oppNat) };
     const ctx = {
       home: home ? ownT : oppT, away: home ? oppT : ownT, side: home ? 'home' : 'away',
-      compName: `Milli Maç • ${nat.flag} ${nat.name} - ${oppNat.flag} ${oppNat.name}`,
+      compName: `Milli Maç • ${nat.name} - ${oppNat.name}`,
+      levelBase: Game.levelBase(true),
     };
     ctx.role = p.injuryWeeks > 0 ? 'out' : Game.roleFor(Player.overall(p, true), nat.rating, false);
     if (ctx.role === 'out' && p.injuryWeeks === 0) ctx.role = 'bench';
@@ -605,6 +615,7 @@ const Game = {
         <ul class="trophies">${p.trophies.map((x) => `<li>${U.esc(x)}</li>`).join('') || '<li>Ödül yok</li>'}</ul>
         <button class="btn btn-big" onclick="location.reload()">Ana Menü</button>
       </div>`;
+    UI.strip(el);
     Game.show('end');
   },
 
@@ -612,25 +623,59 @@ const Game = {
   render() {
     const s = Game.state, p = s.player;
     document.getElementById('hdr-info').innerHTML = `
-      <span>${U.esc(Game.teamName())}</span>
-      <span>${s.season.year} • ${Math.min(s.season.round + 1, ROUNDS)}. Hafta</span>
-      <span class="money">${U.money(p.money)}</span>`;
+      <span class="hi-club">${UI.shirt(Game.club())}${U.esc(Game.teamName())}</span>
+      <span class="hi-week">${s.season.year} · <b>${Math.min(s.season.round + 1, ROUNDS)}</b>/${ROUNDS}. HAFTA</span>
+      <span class="hi-money">${U.money(p.money)}</span>`;
     U.$$('#tabs button').forEach((b) => b.classList.toggle('on', b.dataset.tab === Game.tab));
     document.getElementById('side').innerHTML = UI.playerCard();
+    UI.drawFigure();
     const main = document.getElementById('main');
     main.innerHTML = UI[Game.tab]();
+    UI.strip(main);
     UI.bind(main);
   },
 };
 
 // ---------- Ekranlar ----------
 const UI = {
+  // Metin düğümlerindeki emojileri temizler
+  strip(root) {
+    const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    const nodes = [];
+    while (w.nextNode()) nodes.push(w.currentNode);
+    nodes.forEach((n) => { const t = U.plain(n.nodeValue); if (t !== n.nodeValue) n.nodeValue = t; });
+  },
+
   bar(v, cls = '') {
     return `<div class="bar ${cls}"><div style="width:${U.clamp(v, 0, 100)}%"></div></div>`;
   },
 
   statColor(v) {
     return v >= 80 ? 'c-elite' : v >= 65 ? 'c-good' : v >= 45 ? 'c-mid' : v >= 25 ? 'c-low' : 'c-poor';
+  },
+
+  // Kulüp renkleriyle küçük forma ikonu
+  shirt(club, cls = '') {
+    const pat = (typeof KIT_PATTERNS !== 'undefined' && KIT_PATTERNS[club.id]) || 'plain';
+    const id = 'sh' + Math.random().toString(36).slice(2, 8);
+    let fill = '';
+    if (pat === 'stripes') fill = `<rect x="7" y="0" width="3" height="24" fill="${club.c2}"/><rect x="14" y="0" width="3" height="24" fill="${club.c2}"/>`;
+    else if (pat === 'halves') fill = `<rect x="12" y="0" width="12" height="24" fill="${club.c2}"/>`;
+    else if (pat === 'hoops') fill = `<rect x="0" y="9" width="24" height="3" fill="${club.c2}"/><rect x="0" y="15" width="24" height="3" fill="${club.c2}"/>`;
+    else if (pat === 'band') fill = `<rect x="10" y="0" width="4" height="24" fill="${club.c2}"/>`;
+    else fill = `<rect x="0" y="3" width="5" height="7" fill="${club.c2}"/><rect x="19" y="3" width="5" height="7" fill="${club.c2}"/>`;
+    const path = 'M8 2l4 2 4-2 6 3-2 6-3-1v12H7V10l-3 1-2-6z';
+    return `<svg class="shirt ${cls}" viewBox="0 0 24 24" aria-hidden="true"><defs><clipPath id="${id}"><path d="${path}"/></clipPath></defs><g clip-path="url(#${id})"><rect width="24" height="24" fill="${club.c1}"/>${fill}</g><path d="${path}" fill="none" stroke="rgba(0,0,0,.45)" stroke-width="1"/></svg>`;
+  },
+
+  drawFigure() {
+    const cv = document.querySelector('.pc-fig');
+    if (!cv || typeof Sprites === 'undefined') return;
+    const ctx = cv.getContext('2d');
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    cv.width = 120 * dpr; cv.height = 150 * dpr;
+    const kit = Sprites.kit(Game.club(), false);
+    Sprites.figure(ctx, 60 * dpr, 140 * dpr, 118 * dpr, { kit, look: Sprites.look(7), facing: 'down', t: 0 });
   },
 
   playerCard() {
@@ -640,38 +685,41 @@ const UI = {
     const exp = expectedAtAge(p.age);
     const club = Game.club();
     const stars = Math.round(U.clamp((p.potential - 75) / 4.5, 1, 5));
+    const meter = (ic, l, v, cls) => `<div class="mt-row">${Icon(ic)}<span>${l}</span>${UI.bar(v, cls)}<b>${Math.round(v)}</b></div>`;
     return `
       <div class="pc">
-        <div class="pc-top" style="--c1:${club.c1};--c2:${club.c2}">
-          <div class="pc-shirt"><span>${p.shirt}</span></div>
-          <div>
-            <div class="pc-name">${U.esc(Player.fullName(p))}</div>
-            <div class="pc-sub">${p.age} yaş • ${POSITIONS[p.position].l} • ${Game.nation().flag}</div>
+        <div class="pc-hero" style="--c1:${club.c1};--c2:${club.c2}">
+          <canvas class="pc-fig" aria-hidden="true"></canvas>
+          <div class="pc-id">
+            <div class="pc-num">${p.shirt}</div>
+            <div class="pc-name">${U.esc(p.name)} <b>${U.esc(p.surname)}</b></div>
+            <div class="pc-sub">${p.age} YAŞ · ${POSITIONS[p.position].l.toUpperCase()} · ${Game.nation().code}</div>
             <div class="pc-sub">${U.esc(Game.teamName())}</div>
           </div>
-          <div class="pc-ovr ${UI.statColor(ovr)}">${ovr}${ovrI > ovr ? `<small>+${ovrI - ovr}</small>` : ''}</div>
+          <div class="pc-ovr ${UI.statColor(ovr)}"><b>${ovr}</b><span>GÜÇ${ovrI > ovr ? ` +${ovrI - ovr}` : ''}</span></div>
         </div>
-        ${p.injuryWeeks ? `<div class="pc-inj">🤕 Sakat: ${p.injuryWeeks} hafta</div>` : ''}
-        ${Game.isYouth() ? `<div class="pc-hint">Yaş ortalaması: ${Math.round(exp)} • ${ovr >= exp + 8 ? 'Yaşıtlarından çok üstünsün! 🔥' : ovr >= exp ? 'Yaşıtlarından iyisin 👍' : 'Yaşıtlarının gerisindesin'}</div>` : ''}
-        <div class="pc-pot">Potansiyel: ${'★'.repeat(stars)}${'☆'.repeat(5 - stars)}</div>
+        ${p.injuryWeeks ? `<div class="pc-inj">${Icon('injury')} Sakat · ${p.injuryWeeks} hafta</div>` : ''}
+        <div class="pc-meta">
+          <span class="pot">${'★'.repeat(stars)}<i>${'★'.repeat(5 - stars)}</i> potansiyel</span>
+          ${Game.isYouth() ? `<span class="${ovr >= exp ? 'up' : 'down'}">Yaş ort. ${Math.round(exp)} · ${ovr >= exp + 8 ? 'çok üstündesin' : ovr >= exp ? 'üstündesin' : 'gerisindesin'}</span>` : ''}
+        </div>
         <div class="pc-stats">
           ${STATS.map((st) => {
             const v = p.stats[st.k];
-            return `<div class="ps" title="${U.esc(st.d)}"><span>${st.l}</span>${UI.bar(v, UI.statColor(v))}<b class="${UI.statColor(v)}">${Math.floor(v)}</b></div>`;
+            return `<div class="ps" title="${U.esc(st.d)}"><b class="${UI.statColor(v)}">${Math.floor(v)}</b><span>${st.l}</span>${UI.bar(v, UI.statColor(v))}</div>`;
           }).join('')}
         </div>
         <div class="pc-sec">Durum</div>
-        <div class="ps"><span>⚡ Enerji</span>${UI.bar(p.energy, 'c-energy')}<b>${Math.round(p.energy)}</b></div>
-        <div class="ps"><span>😊 Moral</span>${UI.bar(p.morale, 'c-morale')}<b>${Math.round(p.morale)}</b></div>
-        <div class="ps"><span>🌟 Ün</span>${UI.bar(p.fame, 'c-fame')}<b>${Math.round(p.fame)}</b></div>
+        ${meter('bolt', 'Enerji', p.energy, 'c-energy')}
+        ${meter('smile', 'Moral', p.morale, 'c-morale')}
+        ${meter('star', 'Ün', p.fame, 'c-fame')}
         <div class="pc-sec">İlişkiler</div>
-        <div class="ps"><span>🧑‍🏫 Hoca</span>${UI.bar(p.rel.coach, 'c-rel')}<b>${Math.round(p.rel.coach)}</b></div>
-        <div class="ps"><span>🤝 Takım</span>${UI.bar(p.rel.team, 'c-rel')}<b>${Math.round(p.rel.team)}</b></div>
-        <div class="ps"><span>📣 Taraftar</span>${UI.bar(p.rel.fans, 'c-rel')}<b>${Math.round(p.rel.fans)}</b></div>
-        <div class="pc-sec">Sözleşme</div>
-        <div class="pc-contract">${Game.isYouth()
-          ? `Altyapı oyuncusu • Harçlık ${U.money(Game.weeklyIncome())}/hafta`
-          : `${U.money(s.contract.wage)}/hafta • ${s.contract.years} yıl kaldı`}</div>
+        ${meter('whistle', 'Hoca', p.rel.coach, 'c-rel')}
+        ${meter('team', 'Takım', p.rel.team, 'c-rel')}
+        ${meter('fans', 'Taraftar', p.rel.fans, 'c-rel')}
+        <div class="pc-contract">${Icon('contract')}<span>${Game.isYouth()
+          ? `Altyapı oyuncusu · Harçlık <b>${U.money(Game.weeklyIncome())}</b>/hafta`
+          : `<b>${U.money(s.contract.wage)}</b>/hafta · ${s.contract.years} yıl kaldı`}</span></div>
       </div>`;
   },
 
@@ -679,66 +727,67 @@ const UI = {
     const s = Game.state, p = s.player;
     const fx = Game.nextFixture();
     let next = '';
+    const crest = (name, club, sub) => `<div class="nm-team">${club ? UI.shirt(club, 'big') : `<span class="nat">${sub}</span>`}<b>${U.esc(name)}</b></div>`;
     if (s.pendingIntl) {
       const n = Game.nation(), o = NATIONS.find((x) => x.code === s.pendingIntl);
-      next = `<div class="nm-teams">${n.flag} ${U.esc(n.name)} <span>vs</span> ${o.flag} ${U.esc(o.name)}</div>
-        <div class="nm-meta">Milli Maç • Rakip gücü ${o.rating} • Yıldızlar: ${U.esc(o.stars.slice(0, 2).join(', '))}</div>`;
+      next = `<div class="nm-vs">${crest(n.name, null, n.code)}<span class="vs">VS</span>${crest(o.name, null, o.code)}</div>
+        <div class="nm-meta">MİLLİ MAÇ · Rakip gücü ${o.rating} · Yıldızlar: ${U.esc(o.stars.slice(0, 2).join(', '))}</div>`;
     } else if (fx) {
       const opp = fx.home === s.clubId ? fx.away : fx.home;
       const oppC = Game.club(opp);
       const tbl = World.sortedTable(Game.league());
       const oppPos = tbl.findIndex((r) => r.id === opp) + 1;
       const star = !Game.isYouth() && (oppC.roster.find((x) => x.star) || null);
-      next = `<div class="nm-teams">${U.esc(Game.teamName(fx.home))} <span>vs</span> ${U.esc(Game.teamName(fx.away))}</div>
-        <div class="nm-meta">${U.esc(Game.leagueName())} • ${s.season.round + 1}. Hafta • ${fx.home === s.clubId ? 'İç saha' : 'Deplasman'}</div>
-        <div class="nm-meta">Rakip: ${oppPos}. sırada • Güç ${Game.teamRating(opp)} (Takımın: ${Game.teamRating(s.clubId)})${star ? ` • Yıldızı: ${U.esc(star.n)}` : ''}</div>`;
+      next = `<div class="nm-vs">${crest(Game.teamName(fx.home), Game.club(fx.home))}<span class="vs">VS</span>${crest(Game.teamName(fx.away), Game.club(fx.away))}</div>
+        <div class="nm-meta">${U.esc(Game.leagueName())} · ${s.season.round + 1}. HAFTA · ${fx.home === s.clubId ? 'İÇ SAHA' : 'DEPLASMAN'}</div>
+        <div class="nm-meta">Rakip ${oppPos}. sırada · Güç ${Game.teamRating(opp)} / Senin takımın ${Game.teamRating(s.clubId)}${star ? ` · Yıldızı: ${U.esc(star.n)}` : ''}</div>`;
     }
     const ovr = Player.overall(p, true);
-    const role = p.injuryWeeks ? 'Sakat' : { starter: "Muhtemelen ilk 11'de", bench: 'Muhtemelen yedek', out: 'Kadroya girmesi zor' }[Game.roleFor(ovr, s.pendingIntl ? Game.nation().rating : Game.teamRating(s.clubId), Game.isYouth() && !s.pendingIntl, true)];
+    const roleK = p.injuryWeeks ? 'inj' : Game.roleFor(ovr, s.pendingIntl ? Game.nation().rating : Game.teamRating(s.clubId), Game.isYouth() && !s.pendingIntl, true);
+    const role = { inj: 'Sakatsın, bu maçta oynayamazsın', starter: "Muhtemelen ilk 11'desin", bench: 'Muhtemelen yedeksin', out: 'Kadroya girmen zor' }[roleK];
     const acts = [
-      ['train', '🏃', 'Antrenman', '-12 enerji'],
-      ['intense', '🔥', 'Yoğun Antrenman', '-24 enerji • x1.8 gelişim • sakatlık riski'],
-      ['coach', '👨‍🏫', 'Özel Hoca', `${U.money(Game.coachCost())} • x2.3 gelişim`],
-      ['rest', '😴', 'Dinlen', '+20 enerji'],
-      ['team', '🍕', 'Takımla Takıl', 'Takım ilişkisi +'],
-      ['talk', '🗣️', 'Hocayla Konuş', s.week.coachTalk ? 'Bu hafta konuştun' : 'Hoca ilişkisi +'],
-      ['fans', '📱', 'Taraftarlarla Etkileşim', 'Taraftar +, ün +'],
+      ['train', 'train', 'Antrenman', '−12 enerji'],
+      ['intense', 'fire', 'Yoğun Antrenman', '−24 enerji · ×1.8 gelişim'],
+      ['coach', 'coach', 'Özel Hoca', `${U.money(Game.coachCost())} · ×2.3 gelişim`],
+      ['rest', 'rest', 'Dinlen', '+20 enerji'],
+      ['team', 'team', 'Takımla Takıl', 'Takım ilişkisi artar'],
+      ['talk', 'talk', 'Hocayla Konuş', s.week.coachTalk ? 'Bu hafta konuştun' : 'Hoca ilişkisi artar'],
+      ['fans', 'phone', 'Taraftarlar', 'Taraftar ve ün artar'],
     ];
     return `
       <div class="grid2">
-        <div class="card">
-          <div class="card-h">Bu Hafta <span class="ap">${'●'.repeat(s.ap)}${'○'.repeat(3 - s.ap)}</span></div>
-          <div class="lbl">Antrenman odağı</div>
-          <div class="chips">${STATS.map((st) => `<button class="chip ${s.trainFocus === st.k ? 'on' : ''}" data-focus="${st.k}">${st.l} <b>${Math.floor(p.stats[st.k])}</b></button>`).join('')}</div>
-          <div class="acts">${acts.map(([k, i, l, d]) => `<button class="act" data-act="${k}" ${s.ap <= 0 ? 'disabled' : ''}><span class="ai">${i}</span><span><b>${l}</b><small>${d}</small></span></button>`).join('')}</div>
-        </div>
-        <div class="card next">
-          <div class="card-h">Sıradaki Maç</div>
+        <section class="card next">
+          <div class="card-h"><span>${Icon('whistle')} Maç Günü</span><span class="tag role-${roleK}">${role}</span></div>
           ${next}
-          <div class="nm-role">${role}</div>
-          ${p.energy < 40 ? '<div class="warn">⚠️ Enerjin düşük! Performansın düşecek, sakatlık riski artacak.</div>' : ''}
-          <button class="btn btn-big" data-go="match">⚽ Maça Çık</button>
-          ${s.ap > 0 ? `<div class="hint">Kullanılmamış ${s.ap} aksiyon hakkın var.</div>` : ''}
-        </div>
+          ${p.energy < 40 ? `<div class="warn">${Icon('bolt')} Enerjin düşük. Performansın düşer, sakatlık riski artar.</div>` : ''}
+          <button class="btn btn-play" data-go="match">${Icon('play')} Maça Çık</button>
+          ${s.ap > 0 ? `<div class="hint">Bu hafta ${s.ap} aksiyon hakkın daha var.</div>` : ''}
+        </section>
+        <section class="card">
+          <div class="card-h"><span>${Icon('train')} Haftalık Plan</span><span class="ap">${Array.from({ length: 3 }, (_, i) => `<i class="${i < s.ap ? 'on' : ''}"></i>`).join('')}</span></div>
+          <div class="lbl">Antrenman odağı</div>
+          <div class="chips">${STATS.map((st) => `<button class="chip ${s.trainFocus === st.k ? 'on' : ''}" data-focus="${st.k}">${st.l}<b>${Math.floor(p.stats[st.k])}</b></button>`).join('')}</div>
+          <div class="acts">${acts.map(([k, ic, l, d]) => `<button class="act" data-act="${k}" ${s.ap <= 0 ? 'disabled' : ''}>${Icon(ic)}<span><b>${l}</b><small>${d}</small></span></button>`).join('')}</div>
+        </section>
       </div>
       ${s.offers.length ? `
-      <div class="card">
-        <div class="card-h">📨 Transfer Teklifleri</div>
+      <section class="card">
+        <div class="card-h"><span>${Icon('mail')} Transfer Teklifleri</span></div>
         ${s.offers.map((o, i) => UI.offerRow(o, i, 'mid')).join('')}
         <button class="btn btn-ghost" data-reject="1">Teklifleri Reddet</button>
-      </div>` : ''}
-      <div class="card">
-        <div class="card-h">📰 Haberler</div>
-        <div class="news">${s.news.slice(0, 14).map((n) => `<div class="nw ${n.type}"><small>${n.w}</small>${n.t}</div>`).join('')}</div>
-      </div>`;
+      </section>` : ''}
+      <section class="card">
+        <div class="card-h"><span>${Icon('news')} Haberler</span></div>
+        <div class="news">${s.news.slice(0, 14).map((n) => `<div class="nw ${n.type}"><small>${n.w}</small><span>${n.t}</span></div>`).join('')}</div>
+      </section>`;
   },
 
   offerRow(o, i, ctx) {
     const c = Game.club(o.clubId);
     const lg = LEAGUES.find((l) => l.id === c.league);
     return `<div class="offer">
-      <span class="kit" style="background:${c.c1};border-color:${c.c2}"></span>
-      <div class="of-info"><b>${U.esc(c.name)}</b>${o.own ? ' <em>(mevcut kulübün)</em>' : ''}<small>${lg.flag} ${U.esc(lg.name)} • Güç ${c.rating}</small></div>
+      ${UI.shirt(c, 'big')}
+      <div class="of-info"><b>${U.esc(c.name)}</b>${o.own ? ' <em>mevcut kulübün</em>' : ''}<small>${U.esc(lg.name)} · Güç ${c.rating}</small></div>
       <div class="of-terms">${o.youth ? `<b>Altyapı transferi</b><small>Daha iyi tesisler</small>` : `<b>${U.money(o.wage)}/hafta</b><small>${o.years} yıl</small>`}</div>
       <button class="btn" data-offer="${i}" data-ctx="${ctx}">${o.own ? 'İmzala' : 'Kabul Et'}</button>
     </div>`;
@@ -759,12 +808,12 @@ const UI = {
     }).join('');
     return `
       <div class="card">
-        <div class="card-h">${U.esc(Game.leagueName())} — Puan Durumu</div>
+        <div class="card-h"><span>${Icon('table')} ${U.esc(Game.leagueName())}</span><small class="muted">Puan durumu</small></div>
         ${UI.table(tbl, name, s.clubId)}
       </div>
       <div class="grid2">
-        <div class="card"><div class="card-h">Fikstürün</div><table class="tbl fx">${fixtures}</table></div>
-        <div class="card"><div class="card-h">Gol Krallığı</div>${UI.scorers(lg, name)}</div>
+        <div class="card"><div class="card-h"><span>${Icon('whistle')} Fikstürün</span></div><div class="tscroll"><table class="tbl fx">${fixtures}</table></div></div>
+        <div class="card"><div class="card-h"><span>${Icon('ball')} Gol Krallığı</span></div>${UI.scorers(lg, name)}</div>
       </div>`;
   },
 
@@ -789,7 +838,7 @@ const UI = {
     roster.sort((a, b) => order[a.pos] - order[b.pos] || b.r - a.r);
     const posL = { GK: 'Kaleci', DF: 'Defans', MF: 'Orta Saha', FW: 'Forvet' };
     return `<div class="card">
-      <div class="card-h">${U.esc(Game.teamName())} Kadrosu <small class="muted">Takım gücü ${Game.teamRating(s.clubId)}</small></div>
+      <div class="card-h"><span>${UI.shirt(Game.club())} ${U.esc(Game.teamName())}</span><small class="muted">Takım gücü ${Game.teamRating(s.clubId)}</small></div>
       <table class="tbl"><tr><th class="l">Oyuncu</th><th>Mevki</th><th>Yaş</th><th>Güç</th></tr>
       ${roster.map((x) => `<tr class="${x.me ? 'hl' : ''}"><td class="l">${x.star ? '⭐ ' : ''}${U.esc(x.n)}</td><td>${posL[x.pos]}</td><td>${x.age || '-'}</td><td><b class="${UI.statColor(x.r)}">${x.r}</b></td></tr>`).join('')}
       </table></div>`;
@@ -800,11 +849,11 @@ const UI = {
     const cats = [['boots', 'Kramponlar', 'Maçlarda statlarına bonus verir (en iyisi geçerli).'], ['gear', 'Antrenman Ekipmanı', 'Antrenmandan aldığın gelişimi artırır (en iyisi geçerli).'], ['food', 'Beslenme', 'Haftalık enerji yenilenmesini artırır (en iyisi geçerli).'], ['life', 'Yaşam Tarzı', 'Her hafta moral verir, ünü artırır (hepsi birikir).']];
     return cats.map(([c, t, d]) => `
       <div class="card">
-        <div class="card-h">${t}<small class="muted"> ${d}</small></div>
+        <div class="card-h"><span>${Icon(c === 'boots' ? 'boot' : c)} ${t}</span><small class="muted">${d}</small></div>
         <div class="shop">${ITEMS.filter((i) => i.cat === c).map((it) => {
           const own = p.items.includes(it.id);
           return `<div class="item ${own ? 'own' : ''}">
-            <div class="it-i">${it.icon}</div>
+            <div class="it-i">${Icon(c === 'boots' ? 'boot' : c)}</div>
             <div class="it-t"><b>${U.esc(it.name)}</b><small>${U.esc(it.desc)}</small></div>
             ${own ? '<span class="tag">Sende var</span>' : `<button class="btn" data-buy="${it.id}" ${p.money < it.price ? 'disabled' : ''}>${U.money(it.price)}</button>`}
           </div>`;
@@ -817,7 +866,7 @@ const UI = {
     const hist = p.history.slice().reverse();
     return `
       <div class="card">
-        <div class="card-h">Kariyer Özeti</div>
+        <div class="card-h"><span>${Icon('career')} Kariyer Özeti</span></div>
         <div class="ms-grid big">
           <div><span>Maç</span><b>${t.apps}</b></div>
           <div><span>Gol</span><b>${t.goals}</b></div>
@@ -828,22 +877,22 @@ const UI = {
         </div>
       </div>
       <div class="card">
-        <div class="card-h">Sezonlar</div>
+        <div class="card-h"><span>${Icon('table')} Sezonlar</span></div>
         <table class="tbl"><tr><th>Sezon</th><th>Yaş</th><th class="l">Takım</th><th>Sıra</th><th>Maç</th><th>Gol</th><th>Asist</th><th>Ort.</th><th>Güç</th></tr>
         ${hist.map((h) => `<tr><td>${h.year}</td><td>${h.age}</td><td class="l">${U.esc(h.club)}<small class="muted"> ${U.esc(h.league)}</small></td><td>${h.pos}</td><td>${h.apps}</td><td>${h.goals}</td><td>${h.assists}</td><td>${h.avg ? h.avg.toFixed(2) : '-'}</td><td>${h.ovr}</td></tr>`).join('') || '<tr><td colspan="9" class="muted">İlk sezonun devam ediyor.</td></tr>'}
         </table>
       </div>
       <div class="card">
-        <div class="card-h">🏆 Kupalar ve Ödüller</div>
+        <div class="card-h"><span>${Icon('career')} Kupalar ve Ödüller</span></div>
         <ul class="trophies">${p.trophies.slice().reverse().map((x) => `<li>${U.esc(x)}</li>`).join('') || '<li class="muted">Henüz ödülün yok. Çalışmaya devam!</li>'}</ul>
       </div>
       <div class="card">
-        <div class="card-h">⚙️ Ayarlar</div>
+        <div class="card-h"><span>${Icon('save')} Oyun</span></div>
         <div class="row-btns">
-          <button class="btn btn-ghost" data-sys="save">💾 Kaydet</button>
-          <button class="btn btn-ghost" data-sys="menu">🏠 Ana Menü</button>
-          ${p.age >= 33 ? '<button class="btn btn-ghost" data-sys="retire">👋 Emekli Ol</button>' : ''}
-          <button class="btn btn-danger" data-sys="delete">🗑️ Kariyeri Sil</button>
+          <button class="btn btn-ghost" data-sys="save">${Icon('save')} Kaydet</button>
+          <button class="btn btn-ghost" data-sys="menu">${Icon('exit')} Ana Menü</button>
+          ${p.age >= 33 ? `<button class="btn btn-ghost" data-sys="retire">${Icon('wave')} Emekli Ol</button>` : ''}
+          <button class="btn btn-danger" data-sys="delete">${Icon('trash')} Kariyeri Sil</button>
         </div>
       </div>`;
   },
@@ -855,17 +904,17 @@ const UI = {
     const name = (id) => s.world.clubs[id].name;
     return `
       <div class="card">
-        <div class="card-h">Dünya Futbolu</div>
-        <div class="chips">${LEAGUES.map((l) => `<button class="chip ${l.id === sel ? 'on' : ''}" data-wl="${l.id}">${l.flag} ${U.esc(l.name)}</button>`).join('')}</div>
+        <div class="card-h"><span>${Icon('globe')} Dünya Futbolu</span></div>
+        <div class="chips">${LEAGUES.map((l) => `<button class="chip ${l.id === sel ? 'on' : ''}" data-wl="${l.id}">${U.esc(l.name)}</button>`).join('')}</div>
       </div>
       <div class="grid2">
-        <div class="card"><div class="card-h">Puan Durumu</div>${UI.table(World.sortedTable(lg), name, Game.isYouth() ? null : s.clubId)}</div>
-        <div class="card"><div class="card-h">Gol Krallığı</div>${UI.scorers(lg, name)}</div>
+        <div class="card"><div class="card-h"><span>${Icon('table')} Puan Durumu</span></div>${UI.table(World.sortedTable(lg), name, Game.isYouth() ? null : s.clubId)}</div>
+        <div class="card"><div class="card-h"><span>${Icon('ball')} Gol Krallığı</span></div>${UI.scorers(lg, name)}</div>
       </div>
       <div class="card">
-        <div class="card-h">Milli Takımlar</div>
+        <div class="card-h"><span>${Icon('shield')} Milli Takımlar</span></div>
         <table class="tbl"><tr><th class="l">Ülke</th><th>Güç</th><th class="l">Yıldızlar</th></tr>
-        ${NATIONS.slice().sort((a, b) => b.rating - a.rating).map((n) => `<tr class="${n.code === s.player.nation ? 'hl' : ''}"><td class="l">${n.flag} ${U.esc(n.name)}</td><td>${n.rating}</td><td class="l"><small>${U.esc(n.stars.join(', '))}</small></td></tr>`).join('')}
+        ${NATIONS.slice().sort((a, b) => b.rating - a.rating).map((n) => `<tr class="${n.code === s.player.nation ? 'hl' : ''}"><td class="l"><span class="code">${n.code}</span> ${U.esc(n.name)}</td><td>${n.rating}</td><td class="l"><small>${U.esc(n.stars.join(', '))}</small></td></tr>`).join('')}
         </table>
       </div>`;
   },
@@ -891,7 +940,7 @@ const UI = {
       p.money -= it.price;
       p.items.push(it.id);
       if (it.fame) Player.addFame(p, it.fame);
-      Game.toast(`${it.icon} ${it.name} satın alındı!`, 'good');
+      Game.toast(`${it.name} satın alındı`, 'good');
       Game.save();
       Game.render();
     }));
@@ -919,6 +968,7 @@ Game.modal = function (html, buttons, opts = {}) {
     };
     box.appendChild(el);
   });
+  UI.strip(m);
   m.classList.remove('hidden');
   return m;
 };
@@ -1101,15 +1151,15 @@ const Create = {
     Game.show('create');
     const el = document.getElementById('create');
     const clubOpts = LEAGUES.filter((l) => l.id.startsWith('TR')).map((l) => `<optgroup label="${l.name}">${CLUB_LIST.filter((c) => c[3] === l.id).map((c) => `<option value="${c[0]}">${c[1]} (Akademi ${'★'.repeat(Math.round(U.clamp((c[4] - 45) / 9, 1, 5)))})</option>`).join('')}</optgroup>`).join('')
-      + LEAGUES.filter((l) => !l.id.startsWith('TR')).map((l) => `<optgroup label="${l.flag} ${l.name}">${CLUB_LIST.filter((c) => c[3] === l.id).map((c) => `<option value="${c[0]}">${c[1]}</option>`).join('')}</optgroup>`).join('');
+      + LEAGUES.filter((l) => !l.id.startsWith('TR')).map((l) => `<optgroup label="${l.name}">${CLUB_LIST.filter((c) => c[3] === l.id).map((c) => `<option value="${c[0]}">${c[1]}</option>`).join('')}</optgroup>`).join('');
     el.innerHTML = `
-      <div class="cr-card">
+      <div class="cr-card card">
         <h1>Yeni Kariyer</h1>
         <p class="muted">8 yaşında bir çocuksun ve futbolcu olma hayalinin peşindesin.</p>
         <div class="cr-grid">
           <label>Adın<input id="cr-name" maxlength="16" placeholder="Örn: Emre"></label>
           <label>Soyadın<input id="cr-sur" maxlength="18" placeholder="Örn: Yıldız"></label>
-          <label>Uyruğun<select id="cr-nat">${NATIONS.map((n) => `<option value="${n.code}">${n.flag} ${n.name}</option>`).join('')}</select></label>
+          <label>Uyruğun<select id="cr-nat">${NATIONS.map((n) => `<option value="${n.code}">${n.name}</option>`).join('')}</select></label>
           <label>Ayak<select id="cr-foot"><option value="R">Sağ</option><option value="L">Sol</option></select></label>
           <label class="full">Altyapısına katılacağın kulüp<select id="cr-club">${clubOpts}</select>
             <small class="muted">Büyük kulüplerin tesisleri daha iyidir (daha hızlı gelişim) ama rakipler de daha güçlüdür.</small></label>
