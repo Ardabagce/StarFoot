@@ -158,7 +158,11 @@ const Player = {
     return changes;
   },
 
-  addRel(p, key, v) { p.rel[key] = U.clamp(p.rel[key] + v, 0, 100); },
+  // Yüksek ilişkiye ulaşmak giderek zorlaşır
+  addRel(p, key, v) {
+    if (v > 0) v *= U.clamp((100 - p.rel[key]) / 45, 0.12, 1);
+    p.rel[key] = U.clamp(p.rel[key] + v, 0, 100);
+  },
   addMorale(p, v) { p.morale = U.clamp(p.morale + v, 0, 100); },
   addEnergy(p, v) { p.energy = U.clamp(p.energy + v, 0, 100); },
   addFame(p, v) { p.fame = U.clamp(p.fame + v, 0, 100); },

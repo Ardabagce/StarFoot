@@ -796,3 +796,174 @@ const MiniGame = {
     });
   },
 };
+
+// ---------- Yeni mini oyunlar: kontra atak sprinti ve verkaç ----------
+Object.assign(MiniGame, {
+  // Hızlı hızlı dokunarak rakibinle topa doğru yarış
+  sprint(host, o) {
+    return new Promise((resolve) => {
+      host.innerHTML = `
+        <div class="tg">
+          <div class="tg-stage"><canvas class="tg-canvas"></canvas></div>
+          <div class="tg-foot"><b>Hızlı hızlı dokun</b> · rakibinden önce topa ulaş · <kbd>Boşluk</kbd></div>
+        </div>`;
+      const box = host.querySelector('.tg');
+      const stage = host.querySelector('.tg-stage');
+      const cv = host.querySelector('canvas');
+      const ctx = cv.getContext('2d');
+      let W, H, dpr;
+      const layout = () => {
+        const cw = Math.max(200, stage.clientWidth), ch = Math.max(200, stage.clientHeight);
+        dpr = Math.min(2, window.devicePixelRatio || 1);
+        W = Math.round(cw * dpr); H = Math.round(ch * dpr);
+        cv.width = W; cv.height = H; cv.style.width = cw + 'px'; cv.style.height = ch + 'px';
+      };
+      layout();
+      window.addEventListener('resize', layout);
+      const L = 28;
+      const vmax = 6 + (o.pace || 30) / 15;
+      const oppV = (4.5 + o.skill * 2.6) * U.rand(0.95, 1.05);
+      const me = { y: 0, v: 0, run: 0 }, op = { y: 0, v: 0, run: 1 };
+      let t = 0, done = false, raf = 0, last = performance.now(), msg = '', msgCol = '#fff', taps = 0;
+      const lookMe = Sprites.look(7), lookOp = Sprites.look(19);
+      const tap = () => { if (done || t < 0.6) return; taps++; me.v = Math.min(vmax, me.v + 1.6); };
+      const finish = (ok) => {
+        done = true;
+        msg = ok ? 'TOPA SEN ULAŞTIN!' : 'RAKİP DAHA HIZLIYDI';
+        msgCol = ok ? '#7cf0a0' : '#ff6b6b';
+        setTimeout(() => { cleanup(); resolve({ result: ok ? 'success' : 'fail' }); }, 1100);
+      };
+      const draw = () => {
+        const top = H * 0.16, bot = H * 0.9;
+        const yOf = (d) => bot - (d / L) * (bot - top);
+        for (let i = 0; i < 12; i++) { ctx.fillStyle = i % 2 ? '#2f8c45' : '#38994d'; ctx.fillRect(0, (H / 12) * i, W, H / 12 + 1); }
+        ctx.strokeStyle = 'rgba(255,255,255,0.85)'; ctx.lineWidth = 3 * dpr;
+        ctx.beginPath(); ctx.moveTo(W * 0.12, top); ctx.lineTo(W * 0.88, top); ctx.stroke();
+        ctx.setLineDash([10 * dpr, 10 * dpr]); ctx.strokeStyle = 'rgba(255,255,255,0.3)';
+        ctx.beginPath(); ctx.moveTo(W / 2, top); ctx.lineTo(W / 2, bot); ctx.stroke(); ctx.setLineDash([]);
+        Sprites.ball(ctx, W / 2, top - 12 * dpr, 12 * dpr, t * 2);
+        const fh = Math.min(H * 0.2, W * 0.22);
+        Sprites.figure(ctx, W * 0.66, yOf(op.y), fh, { kit: o.kits.opp, look: lookOp, facing: 'up', run: op.run, speed: 0.9, t });
+        Sprites.figure(ctx, W * 0.34, yOf(me.y), fh, { kit: o.kits.own, look: lookMe, facing: 'up', number: o.number, run: me.run, speed: U.clamp(me.v / 5, 0.2, 1), label: 'SEN', labelScale: dpr, labelColor: 'rgba(214,40,57,0.92)', t });
+        ctx.textAlign = 'center'; ctx.fillStyle = '#fff';
+        ctx.font = `italic 800 ${Math.round(30 * dpr)}px "Saira Condensed", "Arial Narrow", sans-serif`;
+        ctx.fillText(t < 0.6 ? 'HAZIR...' : done ? msg : 'KOŞ!', W / 2, H * 0.08 + 12 * dpr);
+        // hız göstergesi
+        const bw = W * 0.5, bx = W * 0.25, by = H * 0.95;
+        ctx.fillStyle = 'rgba(10,16,32,0.6)'; ctx.fillRect(bx, by, bw, 10 * dpr);
+        ctx.fillStyle = me.v > oppV ? '#7cf0a0' : '#ffcf3f'; ctx.fillRect(bx, by, bw * (me.v / vmax), 10 * dpr);
+        if (done) { ctx.fillStyle = msgCol; ctx.font = `italic 800 ${Math.round(34 * dpr)}px "Saira Condensed", "Arial Narrow", sans-serif`; ctx.fillText(msg, W / 2, H * 0.55); }
+      };
+      const loop = (now) => {
+        const dt = Math.min(0.05, (now - last) / 1000);
+        last = now;
+        t += dt;
+        if (!done && t > 0.6) {
+          me.v = Math.max(0, me.v - 1.6 * dt);
+          op.v = Math.min(oppV, op.v + 4 * dt);
+          me.y += me.v * dt; op.y += op.v * dt;
+          me.run += me.v * dt * 1.6; op.run += op.v * dt * 1.6;
+          if (me.y >= L || op.y >= L) finish(me.y >= op.y);
+          if (t > 12) finish(me.y > op.y);
+        }
+        draw();
+        raf = requestAnimationFrame(loop);
+      };
+      const key = (e) => { if (e.code === 'Space' || e.code === 'Enter') { e.preventDefault(); tap(); } };
+      const cleanup = () => { cancelAnimationFrame(raf); document.removeEventListener('keydown', key); window.removeEventListener('resize', layout); };
+      box.addEventListener('pointerdown', (e) => { e.preventDefault(); tap(); });
+      document.addEventListener('keydown', key);
+      raf = requestAnimationFrame(loop);
+      MiniGame._abort = () => { if (done) return; done = true; cleanup(); resolve({ result: 'auto' }); };
+    });
+  },
+
+  // Verkaç: beliren takım arkadaşlarına sırayla, süre bitmeden dokun
+  onetwo(host, o) {
+    return new Promise((resolve) => {
+      host.innerHTML = `
+        <div class="tg">
+          <div class="tg-stage"><canvas class="tg-canvas"></canvas></div>
+          <div class="tg-foot"><b>Parlayan arkadaşına dokun</b> · süre dolmadan pası ver</div>
+        </div>`;
+      const stage = host.querySelector('.tg-stage');
+      const cv = host.querySelector('canvas');
+      const ctx = cv.getContext('2d');
+      let W, H, dpr;
+      const layout = () => {
+        const cw = Math.max(200, stage.clientWidth), ch = Math.max(200, stage.clientHeight);
+        dpr = Math.min(2, window.devicePixelRatio || 1);
+        W = Math.round(cw * dpr); H = Math.round(ch * dpr);
+        cv.width = W; cv.height = H; cv.style.width = cw + 'px'; cv.style.height = ch + 'px';
+      };
+      layout();
+      window.addEventListener('resize', layout);
+      const rounds = 3;
+      const win = U.clamp(1.5 - 0.7 * o.skill + (o.passing || 30) / 200, 0.75, 1.8);
+      let hits = 0, t = 0, rt = 0, done = false, raf = 0, last = performance.now(), msg = '', msgCol = '#fff';
+      const meP = { x: 0.5, y: 0.82 };
+      let tgt = null, ballFrom = meP, ballTo = meP, ballT = 1;
+      const names = U.shuffle(o.mates || ['Arkadaş']);
+      const looks = [Sprites.look(31), Sprites.look(36), Sprites.look(41)];
+      const spawn = () => {
+        const prev = tgt || meP;
+        let x, y;
+        do { x = U.rand(0.15, 0.85); y = U.rand(0.25, 0.7); } while (Math.hypot(x - prev.x, y - prev.y) < 0.3);
+        tgt = { x, y, name: names[hits % names.length].split(' ').slice(-1)[0].toUpperCase(), look: looks[hits % 3] };
+        rt = 0;
+      };
+      const end = (r, m, c) => {
+        done = true; msg = m; msgCol = c;
+        setTimeout(() => { cleanup(); resolve({ result: r }); }, 1000);
+      };
+      const press = (e) => {
+        if (done || !tgt) return;
+        const r = cv.getBoundingClientRect();
+        const px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
+        const d = Math.hypot((px - tgt.x) * W, (py - tgt.y) * H);
+        if (d < Math.max(70 * dpr, H * 0.11)) {
+          hits++;
+          ballFrom = ballTo;
+          ballTo = { x: tgt.x, y: tgt.y };
+          ballT = 0;
+          if (hits >= rounds) { tgt = null; return end('success', 'MÜKEMMEL VERKAÇ!', '#7cf0a0'); }
+          spawn();
+        }
+      };
+      const draw = () => {
+        for (let i = 0; i < 10; i++) { ctx.fillStyle = i % 2 ? '#2f8c45' : '#38994d'; ctx.fillRect(0, (H / 10) * i, W, H / 10 + 1); }
+        const fh = Math.min(H * 0.17, W * 0.2);
+        Sprites.figure(ctx, meP.x * W, meP.y * H + fh * 0.4, fh, { kit: o.kits.own, look: Sprites.look(7), facing: 'up', number: o.number, label: 'SEN', labelScale: dpr, labelColor: 'rgba(214,40,57,0.92)', t });
+        if (tgt) {
+          const k = 1 - rt / win;
+          Sprites.figure(ctx, tgt.x * W, tgt.y * H + fh * 0.4, fh, { kit: o.kits.own, look: tgt.look, facing: 'up', number: 7 + hits, label: tgt.name, labelScale: dpr, ring: 'rgba(124,240,160,0.95)', t });
+          ctx.strokeStyle = k > 0.35 ? '#7cf0a0' : '#ff6b6b'; ctx.lineWidth = 6 * dpr;
+          ctx.beginPath(); ctx.arc(tgt.x * W, tgt.y * H - fh * 0.2, fh * 0.75, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * k); ctx.stroke();
+        }
+        {
+          const e = ballT;
+          Sprites.ball(ctx, (ballFrom.x + (ballTo.x - ballFrom.x) * e) * W, (ballFrom.y + (ballTo.y - ballFrom.y) * e) * H + fh * 0.38, 9 * dpr, t * 8);
+        }
+        ctx.textAlign = 'center'; ctx.fillStyle = '#fff';
+        ctx.font = `italic 800 ${Math.round(30 * dpr)}px "Saira Condensed", "Arial Narrow", sans-serif`;
+        ctx.fillText(`VERKAÇ  ${hits}/${rounds}`, W / 2, H * 0.08 + 12 * dpr);
+        if (done) { ctx.fillStyle = msgCol; ctx.font = `italic 800 ${Math.round(34 * dpr)}px "Saira Condensed", "Arial Narrow", sans-serif`; ctx.fillText(msg, W / 2, H * 0.5); }
+      };
+      const loop = (now) => {
+        const dt = Math.min(0.05, (now - last) / 1000);
+        last = now; t += dt; ballT = Math.min(1, ballT + dt * 3);
+        if (!done && tgt) {
+          rt += dt;
+          if (rt > win) { tgt = null; end(hits >= 2 ? 'partial' : 'fail', hits >= 2 ? 'PAS ARAYA GİTTİ' : 'TOPU KAPTIRDIN', '#ff6b6b'); }
+        }
+        draw();
+        raf = requestAnimationFrame(loop);
+      };
+      const cleanup = () => { cancelAnimationFrame(raf); window.removeEventListener('resize', layout); };
+      cv.addEventListener('pointerdown', (e) => { e.preventDefault(); press(e); });
+      setTimeout(spawn, 500);
+      raf = requestAnimationFrame(loop);
+      MiniGame._abort = () => { if (done) return; done = true; cleanup(); resolve({ result: 'auto' }); };
+    });
+  },
+});

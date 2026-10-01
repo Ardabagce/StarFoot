@@ -130,6 +130,7 @@ const Game = {
     const s = Game.state;
     if (s.seasonEnd) return SeasonEnd.show();
     if (s.pendingEvent) return Events.show();
+    if (s.pendingLoot) return Loot.show();
   },
 
   // ---------- Haftalık aksiyonlar ----------
@@ -204,6 +205,12 @@ const Game = {
     s.ap--;
     Game.save();
     Game.render();
+  },
+
+  estGain(intensity) {
+    const p = Game.p;
+    const val = p.stats[Game.state.trainFocus];
+    return 0.55 * intensity * Player.ageMult(p.age) * Player.growthFactor(p, val) * (0.75 + 0.5 * (p.morale / 100)) * Game.facility() * Player.trainMult(p);
   },
 
   coachCost() { return Game.isYouth() ? 300 + (Game.p.age - 8) * 50 : Math.max(2000, Math.round(Game.weeklyIncome() * 0.25)); },
@@ -325,15 +332,19 @@ const Game = {
       if (sum.motm) p.totals.motm++;
 
       const r = sum.rating;
-      Player.addRel(p, 'coach', (r - 6.3) * 4);
-      Player.addRel(p, 'team', (sum.res === 'W' ? 2 : sum.res === 'L' ? -1 : 0.5) + sum.assists);
-      Player.addRel(p, 'fans', sum.goals * 2 + (r - 6.5) * 3);
+      const rk = youth ? 0.55 : 1;
+      if (sum.goals >= 3) { p.flags = p.flags || {}; p.flags.hattrick = true; }
+      Player.addRel(p, 'coach', (r - 6.4) * 3 * rk);
+      Player.addRel(p, 'team', ((sum.res === 'W' ? 1.5 : sum.res === 'L' ? -1 : 0.3) + sum.assists * 0.8) * rk);
+      Player.addRel(p, 'fans', (sum.goals * 1.5 + (r - 6.6) * 2.5) * rk);
+      Loot.roll(comp === 'intl' ? null : r);
       const fameGain = (sum.goals * 0.45 + sum.assists * 0.25 + (r >= 8 ? 0.5 : 0) + (sum.motm ? 0.5 : 0)) * fameMult;
       if (youth) p.fame = Math.max(p.fame, Math.min(p.fame + fameGain, 4 + (p.age - 8) * 1.5));
       else Player.addFame(p, fameGain);
       Player.addMorale(p, (sum.res === 'W' ? 4 : sum.res === 'L' ? -4 : 0) + (r - 6.5) * 2);
       const stam = p.stats.stamina;
       Player.addEnergy(p, -(15 + (sum.minutes / 90) * 25) * (1.3 - stam / 150));
+      Player.addEnergy(p, sum.energySave || 0);
       Player.matchXp(p, sum.statsUsed.length ? sum.statsUsed : ['stamina']);
       Player.matchXp(p, ['stamina']);
       if (U.chance(Player.injuryChance(p, 0.025) * (sum.minutes / 90))) Game.injure(U.randi(1, 6), 'Maçta');
@@ -380,8 +391,9 @@ const Game = {
       if (p.injuryWeeks === 0) Game.news('💪 Sakatlığın geçti, tekrar sahalara dönebilirsin!', 'good');
     }
     // hoca ilişkisi zamanla ortalamaya döner
-    p.rel.coach += (50 - p.rel.coach) * 0.02;
-    p.rel.fans += (35 - p.rel.fans) * 0.01;
+    p.rel.coach += (50 - p.rel.coach) * 0.03;
+    p.rel.team += (50 - p.rel.team) * 0.02;
+    p.rel.fans += (35 - p.rel.fans) * 0.02;
     if (!Game.isYouth()) Player.addFame(p, -0.08);
 
     if (!intl) {
@@ -402,7 +414,8 @@ const Game = {
         return Game.endSeason();
       }
     }
-    if (!s.pendingEvent && U.chance(0.33)) Events.roll();
+    if (!s.pendingEvent && U.chance(0.4)) Events.roll();
+    Ach.check();
     Game.save();
     Game.render();
     Game.checkPending();
@@ -627,10 +640,11 @@ const Game = {
       <span class="hi-week">${s.season.year} · <b>${Math.min(s.season.round + 1, ROUNDS)}</b>/${ROUNDS}. HAFTA</span>
       <span class="hi-money">${U.money(p.money)}</span>`;
     U.$$('#tabs button').forEach((b) => b.classList.toggle('on', b.dataset.tab === Game.tab));
-    document.getElementById('side').innerHTML = UI.playerCard();
-    UI.drawFigure();
+    document.getElementById('status').innerHTML = UI.status();
+    document.getElementById('side').innerHTML = Game.tab === 'player' ? '' : UI.playerCard();
     const main = document.getElementById('main');
     main.innerHTML = UI[Game.tab]();
+    UI.drawFigure();
     UI.strip(main);
     UI.bind(main);
   },
@@ -643,8 +657,22 @@ const UI = {
     const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
     const nodes = [];
     while (w.nextNode()) nodes.push(w.currentNode);
-    nodes.forEach((n) => { const t = U.plain(n.nodeValue); if (t !== n.nodeValue) n.nodeValue = t; });
+    const emo = /[\p{Extended_Pictographic}\u{1F1E6}-\u{1F1FF}]/u;
+    nodes.forEach((n) => { if (emo.test(n.nodeValue)) n.nodeValue = U.plain(n.nodeValue); });
   },
+
+  // Her sekmede görünen durum şeridi
+  status() {
+    const s = Game.state, p = s.player;
+    const lvl = (v) => (v < 30 ? 'low' : v < 55 ? 'mid' : 'ok');
+    return `
+      <div class="st-cell st-${lvl(p.energy)}">${Icon('bolt')}<div><span>Enerji</span>${UI.bar(p.energy, 'c-energy')}</div><b>${Math.round(p.energy)}</b></div>
+      <div class="st-cell st-${lvl(p.morale)}">${Icon('smile')}<div><span>Moral</span>${UI.bar(p.morale, 'c-morale')}</div><b>${Math.round(p.morale)}</b></div>
+      <div class="st-cell ${p.injuryWeeks ? 'st-low' : 'st-ok'}">${Icon('injury')}<div><span>Sağlık</span><em>${p.injuryWeeks ? `Sakat · ${p.injuryWeeks} hf` : 'Sağlam'}</em></div></div>
+      <div class="st-cell st-ap"><div><span>Hafta hakkı</span><i class="ap">${Array.from({ length: 3 }, (_, i) => `<i class="${i < s.ap ? 'on' : ''}"></i>`).join('')}</i></div><b>${s.ap}/3</b></div>`;
+  },
+
+  player() { return UI.playerCard(); },
 
   bar(v, cls = '') {
     return `<div class="bar ${cls}"><div style="width:${U.clamp(v, 0, 100)}%"></div></div>`;
@@ -745,14 +773,16 @@ const UI = {
     const ovr = Player.overall(p, true);
     const roleK = p.injuryWeeks ? 'inj' : Game.roleFor(ovr, s.pendingIntl ? Game.nation().rating : Game.teamRating(s.clubId), Game.isYouth() && !s.pendingIntl, true);
     const role = { inj: 'Sakatsın, bu maçta oynayamazsın', starter: "Muhtemelen ilk 11'desin", bench: 'Muhtemelen yedeksin', out: 'Kadroya girmen zor' }[roleK];
+    const focusL = STATS.find((x) => x.k === s.trainFocus).l;
+    const keyTxt = '★ mevkin için önemli';
     const acts = [
-      ['train', 'train', 'Antrenman', '−12 enerji'],
-      ['intense', 'fire', 'Yoğun Antrenman', '−24 enerji · ×1.8 gelişim'],
-      ['coach', 'coach', 'Özel Hoca', `${U.money(Game.coachCost())} · ×2.3 gelişim`],
-      ['rest', 'rest', 'Dinlen', '+20 enerji'],
-      ['team', 'team', 'Takımla Takıl', 'Takım ilişkisi artar'],
-      ['talk', 'talk', 'Hocayla Konuş', s.week.coachTalk ? 'Bu hafta konuştun' : 'Hoca ilişkisi artar'],
-      ['fans', 'phone', 'Taraftarlar', 'Taraftar ve ün artar'],
+      ['train', 'train', 'Antrenman', 'Normal gelişim', '−12 enerji'],
+      ['intense', 'fire', 'Yoğun Antrenman', '×1.8 gelişim · sakatlık riski', '−24 enerji'],
+      ['coach', 'coach', 'Özel Hoca', '×2.3 gelişim', U.money(Game.coachCost())],
+      ['rest', 'rest', 'Dinlen', 'Moral de artar', '+20 enerji'],
+      ['team', 'team', 'Takımla Takıl', 'Takım ilişkisi artar', '−5 enerji'],
+      ['talk', 'talk', 'Hocayla Konuş', s.week.coachTalk ? 'Bu hafta konuştun' : 'Hoca ilişkisi artar', ''],
+      ['fans', 'phone', 'Taraftarlar', 'Taraftar ve ün artar', '−3 enerji'],
     ];
     return `
       <div class="grid2">
@@ -763,11 +793,18 @@ const UI = {
           <button class="btn btn-play" data-go="match">${Icon('play')} Maça Çık</button>
           ${s.ap > 0 ? `<div class="hint">Bu hafta ${s.ap} aksiyon hakkın daha var.</div>` : ''}
         </section>
-        <section class="card">
-          <div class="card-h"><span>${Icon('train')} Haftalık Plan</span><span class="ap">${Array.from({ length: 3 }, (_, i) => `<i class="${i < s.ap ? 'on' : ''}"></i>`).join('')}</span></div>
-          <div class="lbl">Antrenman odağı</div>
-          <div class="chips">${STATS.map((st) => `<button class="chip ${s.trainFocus === st.k ? 'on' : ''}" data-focus="${st.k}">${st.l}<b>${Math.floor(p.stats[st.k])}</b></button>`).join('')}</div>
-          <div class="acts">${acts.map(([k, ic, l, d]) => `<button class="act" data-act="${k}" ${s.ap <= 0 ? 'disabled' : ''}>${Icon(ic)}<span><b>${l}</b><small>${d}</small></span></button>`).join('')}</div>
+        <section class="card plan">
+          <div class="card-h"><span>${Icon('train')} Haftalık Plan</span><span class="ap-pill ${s.ap ? '' : 'done'}">${s.ap ? `${s.ap} hak kaldı` : 'Hakların bitti · maça çık'}</span></div>
+          <div class="lbl">Antrenman odağı <small>${keyTxt}</small></div>
+          <div class="focus" role="radiogroup" aria-label="Antrenman odağı">${STATS.map((st) => {
+            const v = p.stats[st.k];
+            const key = (POSITIONS[p.position].w[st.k] || 0) >= 0.12;
+            return `<button class="fc ${s.trainFocus === st.k ? 'on' : ''} ${key ? 'key' : ''}" data-focus="${st.k}" role="radio" aria-checked="${s.trainFocus === st.k}">
+              <span>${st.l}${key ? '<i>★</i>' : ''}</span><b class="${UI.statColor(v)}">${Math.floor(v)}</b>${UI.bar(v, UI.statColor(v))}
+            </button>`;
+          }).join('')}</div>
+          <div class="focus-info">${Icon('train')}<span><b>${focusL}</b> çalışırsan tahmini gelişim: antrenman <b>+${Game.estGain(1).toFixed(2)}</b> · yoğun <b>+${Game.estGain(1.8).toFixed(2)}</b> · özel hoca <b>+${Game.estGain(2.3).toFixed(2)}</b></span></div>
+          <div class="acts">${acts.map(([k, ic, l, d, cost]) => `<button class="act" data-act="${k}" ${s.ap <= 0 ? 'disabled' : ''}>${Icon(ic)}<span><b>${l}</b><small>${d}</small></span>${cost ? `<em class="cost ${cost.startsWith('−') ? 'neg' : ''}">${cost}</em>` : ''}</button>`).join('')}</div>
         </section>
       </div>
       ${s.offers.length ? `
@@ -846,19 +883,42 @@ const UI = {
 
   shop() {
     const p = Game.p;
-    const cats = [['boots', 'Kramponlar', 'Maçlarda statlarına bonus verir (en iyisi geçerli).'], ['gear', 'Antrenman Ekipmanı', 'Antrenmandan aldığın gelişimi artırır (en iyisi geçerli).'], ['food', 'Beslenme', 'Haftalık enerji yenilenmesini artırır (en iyisi geçerli).'], ['life', 'Yaşam Tarzı', 'Her hafta moral verir, ünü artırır (hepsi birikir).']];
-    return cats.map(([c, t, d]) => `
-      <div class="card">
-        <div class="card-h"><span>${Icon(c === 'boots' ? 'boot' : c)} ${t}</span><small class="muted">${d}</small></div>
-        <div class="shop">${ITEMS.filter((i) => i.cat === c).map((it) => {
+    const ageBand = p.age <= 12 ? 'Çocuk' : p.age <= 17 ? 'Genç' : 'Profesyonel';
+    const cats = [['boots', 'boot', 'Kramponlar', 'Maçlarda statlarına bonus verir (en iyisi geçerli).'], ['gear', 'gear', 'Antrenman Ekipmanı', 'Antrenmandan aldığın gelişimi artırır (en iyisi geçerli).'], ['food', 'food', 'Beslenme', 'Haftalık enerji yenilenmesini artırır (en iyisi geçerli).'], ['life', 'life', 'Yaşam Tarzı', 'Her hafta moral verir, ünü artırır (hepsi birikir).']];
+    const cons = CONSUMABLES.filter((c) => Shop.available(c)).map((c) => {
+      const used = Shop.usedThisSeason(c);
+      const price = Shop.price(c);
+      return `<div class="item use">
+        <div class="it-i">${Icon(c.id === 'drink' ? 'bolt' : c.id === 'physio' ? 'injury' : c.id === 'massage' ? 'rest' : 'train')}</div>
+        <div class="it-t"><b>${U.esc(c.name)}</b><small>${U.esc(c.desc)}</small></div>
+        ${used ? '<span class="tag">Bu sezon kullandın</span>' : `<button class="btn" data-use="${c.id}" ${p.money < price ? 'disabled' : ''}>${U.money(price)}</button>`}
+      </div>`;
+    }).join('');
+    const sec = cats.map(([c, ic, t, d]) => {
+      const list = ITEMS.filter((i) => i.cat === c && (p.items.includes(i.id) || (p.age >= i.minAge && (!i.maxAge || p.age <= i.maxAge))));
+      const next = ITEMS.filter((i) => i.cat === c && i.minAge > p.age && !p.items.includes(i.id)).sort((x, y) => x.minAge - y.minAge)[0];
+      return `
+      <section class="card">
+        <div class="card-h"><span>${Icon(ic)} ${t}</span><small class="muted">${d}</small></div>
+        <div class="shop">${list.map((it) => {
           const own = p.items.includes(it.id);
           return `<div class="item ${own ? 'own' : ''}">
-            <div class="it-i">${Icon(c === 'boots' ? 'boot' : c)}</div>
+            <div class="it-i">${Icon(ic)}</div>
             <div class="it-t"><b>${U.esc(it.name)}</b><small>${U.esc(it.desc)}</small></div>
             ${own ? '<span class="tag">Sende var</span>' : `<button class="btn" data-buy="${it.id}" ${p.money < it.price ? 'disabled' : ''}>${U.money(it.price)}</button>`}
           </div>`;
-        }).join('')}</div>
-      </div>`).join('');
+        }).join('')}
+        ${next ? `<div class="item locked"><div class="it-i">${Icon(ic)}</div><div class="it-t"><b>${U.esc(next.name)}</b><small>${next.minAge} yaşında açılır</small></div><span class="tag">Kilitli</span></div>` : ''}
+        </div>
+      </section>`;
+    }).join('');
+    return `
+      <section class="card shop-head">
+        <div class="card-h"><span>${Icon('shop')} Mağaza</span><span class="tag">${ageBand} reyonu · ${p.age} yaş</span></div>
+        <p class="muted">Yaşın büyüdükçe mağazada yeni eşyalar açılır. Tek kullanımlık ürünler anında etki eder.</p>
+        <div class="lbl">Tek kullanımlık</div>
+        <div class="shop">${cons}</div>
+      </section>${sec}`;
   },
 
   career() {
@@ -882,10 +942,21 @@ const UI = {
         ${hist.map((h) => `<tr><td>${h.year}</td><td>${h.age}</td><td class="l">${U.esc(h.club)}<small class="muted"> ${U.esc(h.league)}</small></td><td>${h.pos}</td><td>${h.apps}</td><td>${h.goals}</td><td>${h.assists}</td><td>${h.avg ? h.avg.toFixed(2) : '-'}</td><td>${h.ovr}</td></tr>`).join('') || '<tr><td colspan="9" class="muted">İlk sezonun devam ediyor.</td></tr>'}
         </table>
       </div>
-      <div class="card">
-        <div class="card-h"><span>${Icon('career')} Kupalar ve Ödüller</span></div>
-        <ul class="trophies">${p.trophies.slice().reverse().map((x) => `<li>${U.esc(x)}</li>`).join('') || '<li class="muted">Henüz ödülün yok. Çalışmaya devam!</li>'}</ul>
-      </div>
+      <section class="card">
+        <div class="card-h"><span>${Icon('career')} Kupa Vitrini</span><small class="muted">${p.trophies.length} kupa ve ödül</small></div>
+        <div class="cabinet">${p.trophies.length ? p.trophies.slice().reverse().map((x) => {
+          const [yr, ...rest] = U.plain(x).split(':');
+          const txt = rest.join(':').trim();
+          return `<div class="trophy">${Trophy.svg(Trophy.kind(txt))}<b>${U.esc(txt.replace(/\s*\(\d+\)$/, ''))}</b><small>${U.esc(yr)}</small></div>`;
+        }).join('') : '<div class="cab-empty">Vitrin şimdilik boş. İlk kupan burada parlayacak.</div>'}</div>
+      </section>
+      <section class="card">
+        <div class="card-h"><span>${Icon('star')} Madalyalar</span><small class="muted">${Object.keys(p.ach || {}).length}/${ACHIEVEMENTS.length}</small></div>
+        <div class="medals">${ACHIEVEMENTS.map((a) => {
+          const y = (p.ach || {})[a.id];
+          return `<div class="medal ${y ? 'got' : ''}" title="${U.esc(a.desc)}">${Trophy.medal(a.tier, !!y)}<b>${U.esc(a.name)}</b><small>${y ? y : U.esc(a.desc)}</small></div>`;
+        }).join('')}</div>
+      </section>
       <div class="card">
         <div class="card-h"><span>${Icon('save')} Oyun</span></div>
         <div class="row-btns">
@@ -940,10 +1011,12 @@ const UI = {
       p.money -= it.price;
       p.items.push(it.id);
       if (it.fame) Player.addFame(p, it.fame);
+      Ach.check();
       Game.toast(`${it.name} satın alındı`, 'good');
       Game.save();
       Game.render();
     }));
+    U.$$('[data-use]', root).forEach((b) => (b.onclick = () => Shop.use(b.dataset.use)));
     U.$$('[data-wl]', root).forEach((b) => (b.onclick = () => { UI.worldLeague = b.dataset.wl; Game.render(); }));
     U.$$('[data-sys]', root).forEach((b) => (b.onclick = () => {
       const k = b.dataset.sys;
@@ -1135,6 +1208,7 @@ const Events = {
         Game.save();
         Game.render();
         Game.toast(res, 'good');
+        Game.checkPending();
       },
     })));
   },

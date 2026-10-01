@@ -42,7 +42,12 @@ Oyunu bir web sunucusundan (ör. GitHub Pages) açıp tarayıcı menüsünden **
 - **Transferler:** altyapılar arası transfer, profesyonel sözleşme, ara transfer dönemi ve sezon sonu teklifleri.
 - **7 lig ve 70 kulüp:** Türkiye (2 lig, küme düşme/çıkma ile), İngiltere, İspanya, Almanya, İtalya ve Fransa.
 - **Milli takım:** Yeterince iyiysen milli maçlara çağrılırsın.
-- **Mağaza:** krampon, antrenman ekipmanı, beslenme ve yaşam tarzı eşyaları.
+- **Mağaza:** Yaşa göre değişen reyonlar (çocukken futbolcu kartı albümü, idolünün forması, bahçe kalesi; gençken spor salonu, scooter; profesyonelken lüks saat, araba, villa, yat). Enerji içeceği, masaj, fizyoterapi, yaz kampı ve yıldız futbolcu kliniği gibi tek kullanımlık ürünler.
+- **Kupa vitrini ve madalyalar:** Kazandığın kupalar raflarda sergilenir; ilk gol, hat-trick, 100 maç, milli forma, ilk milyon gibi 17 madalya.
+- **Sürprizler:** İyi maçlardan sonra bronz/gümüş/altın sürpriz paketler, cüzdan bulma, idol kampı, viral gol, yardım maçı gibi yeni olaylar.
+- **Devre arası:** Hocayla taktik konuşmak, takımı ateşlemek, toparlanmak ya da rakip kaleciyi incelemek; yedekteysen ısınıp hocaya görünmek.
+- **Yeni mini oyunlar:** Kontra atak sprinti (hızlı hızlı dokun) ve verkaç (parlayan arkadaşına süre dolmadan dokun).
+- **Durum şeridi:** Enerji, moral ve sağlık her sekmede üstte görünür; telefonda oyuncu kartı ayrı bir sekmededir.
 
 ## Dosya yapısı
 

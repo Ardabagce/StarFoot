@@ -1,9 +1,9 @@
 // Maç motoru: dakika dakika simülasyon + oyuncunun kritik anları
 
 const MOMENT_WEIGHTS = {
-  FW: { open: 45, dribble: 22, header: 14, freekick: 8, penalty: 5, tackle: 6 },
-  MF: { open: 34, dribble: 15, deep: 16, tackle: 20, freekick: 10, header: 5 },
-  DF: { tackle: 50, deep: 25, header: 15, open: 5, freekick: 5 },
+  FW: { open: 40, dribble: 18, header: 12, freekick: 7, penalty: 5, tackle: 5, sprint: 9, onetwo: 7 },
+  MF: { open: 30, dribble: 13, deep: 15, tackle: 17, freekick: 9, header: 4, onetwo: 12, sprint: 5 },
+  DF: { tackle: 46, deep: 23, header: 14, open: 4, freekick: 4, sprint: 9 },
 };
 
 const MOMENT_TITLES = {
@@ -15,6 +15,8 @@ const MOMENT_TITLES = {
   dribble: '💨 Çalım Fırsatı',
   tackle: '🛡️ Rakip Atakta!',
   header: '🤾 Korner - Hava Topu',
+  sprint: 'Kontra Atak!',
+  onetwo: 'Verkaç Fırsatı',
 };
 
 const MOMENT_DESC = {
@@ -26,6 +28,8 @@ const MOMENT_DESC = {
   dribble: 'Halka yeşil bölgeye girdiğinde dokun ve rakipleri tek tek geç.',
   tackle: 'Rakip forvet topla geliyor. Halka yeşile girince dokun; sarı bölge faul demek.',
   header: 'Korner atılıyor. Halka yeşile girince dokun ve topa kafayı vur!',
+  sprint: 'Top boşta! Hızlı hızlı dokunarak rakibinden önce topa ulaş.',
+  onetwo: 'Kısa paslarla savunmayı aç: parlayan arkadaşına süre dolmadan dokun.',
 };
 
 const Match = {
@@ -41,10 +45,10 @@ const Match = {
     const ovr = Player.overall(p, true);
     const st = Player.effStats(p);
     // Zorluk: seviye (yaş grubu / lig) arttıkça artar, rakip-oyuncu farkı da etkiler
-    const skill = U.clamp((ctx.levelBase != null ? ctx.levelBase : 0.4) + (opp.rating - ovr) / 70, 0.03, 0.88);
+    let skill = U.clamp((ctx.levelBase != null ? ctx.levelBase : 0.4) + (opp.rating - ovr) / 70, 0.03, 0.88);
     const kits = Sprites.kits(own, opp);
     const narrow = () => window.innerWidth / window.innerHeight < 0.9;
-    const cond = 1.25 - 0.35 * (p.energy / 100) - 0.15 * (p.morale / 100);
+    let cond = 1.25 - 0.35 * (p.energy / 100) - 0.15 * (p.morale / 100);
 
     // Katılım
     let enterMin = null, leaveMin = null;
@@ -54,25 +58,31 @@ const Match = {
 
     // Anlar
     const moments = [];
+    let hadPen = false;
+    const addMoments = (n, from, to) => {
+      const taken = new Set(moments.map((x) => x.min));
+      for (let i = 0, tries = 0; i < n && tries < 200; tries++) {
+        const m = U.randi(from, to);
+        if (taken.has(m) || m === 45) continue;
+        taken.add(m);
+        const w = MOMENT_WEIGHTS[p.position];
+        const type = U.weighted(Object.keys(w), (k) => (k === 'penalty' && hadPen ? 0 : w[k]));
+        if (type === 'penalty') hadPen = true;
+        moments.push({ min: m, type });
+        i++;
+      }
+      moments.sort((a, b) => a.min - b.min);
+    };
     if (enterMin) {
       const span = 90 - enterMin + 1;
       const base = { FW: 5, MF: 5, DF: 4 }[p.position];
-      const n = Math.max(1, Math.round((base + U.randi(-1, 1)) * span / 90));
-      const mins = new Set();
-      while (mins.size < n) mins.add(U.randi(enterMin, 89));
-      let hadPen = false;
-      [...mins].sort((a, b) => a - b).forEach((m) => {
-        const w = MOMENT_WEIGHTS[p.position];
-        let type = U.weighted(Object.keys(w), (k) => (k === 'penalty' && hadPen ? 0 : w[k]));
-        if (type === 'penalty') hadPen = true;
-        moments.push({ min: m, type });
-      });
+      addMoments(Math.max(1, Math.round((base + U.randi(-1, 1)) * span / 90)), enterMin, 89);
     }
 
     const M = {
       min: 0, hs: 0, as: 0, rating: 6.0, goals: 0, assists: 0, yellow: 0, red: false,
       feed: [], speed: 1, instant: false, statsUsed: new Set(), shots: 0, keyPasses: 0, tackles: 0,
-      ownScorers: [], oppScorers: [],
+      ownScorers: [], oppScorers: [], teamBoost: 0, energySave: 0,
     };
     const isHome = ctx.side === 'home';
     const addOwn = () => (isHome ? M.hs++ : M.as++);
@@ -150,8 +160,8 @@ const Match = {
     else feed('📋 Teknik direktör seni bu maçın kadrosuna almadı.', 'info');
     feed(`🏟️ ${U.esc(ctx.home.name)} - ${U.esc(ctx.away.name)} maçı başladı!`);
 
-    const homeR = () => ctx.home.rating + (isHome && onPitch() ? (ovr - ctx.home.rating) * 0.08 : 0);
-    const awayR = () => ctx.away.rating + (!isHome && onPitch() ? (ovr - ctx.away.rating) * 0.08 : 0);
+    const homeR = () => ctx.home.rating + (isHome ? M.teamBoost : 0) + (isHome && onPitch() ? (ovr - ctx.home.rating) * 0.08 : 0);
+    const awayR = () => ctx.away.rating + (!isHome ? M.teamBoost : 0) + (!isHome && onPitch() ? (ovr - ctx.away.rating) * 0.08 : 0);
 
     const pickOwn = () => World.pickScorer(own.roster);
     const pickOpp = () => World.pickScorer(opp.roster);
@@ -288,8 +298,93 @@ const Match = {
       return r.result;
     };
 
+    const playMini = async (type, fn, k, bonus, extra) => {
+      if (M.instant) return autoTiming(k, bonus);
+      showMoment(type);
+      let auto = false;
+      $('mm-auto').onclick = () => { auto = true; if (MiniGame._abort) MiniGame._abort(); };
+      const r = await MiniGame[fn]($('mm-host'), Object.assign({ skill, kits, number: p.shirt, pace: st.pace, passing: st.passing, mates: mateNames, cond }, extra));
+      hideMoment();
+      if (auto || r.result === 'auto') return autoTiming(k, bonus);
+      return r.result;
+    };
+
+    // Devre arası: oyuncunun ikinci yarı için seçimi
+    const halfTime = () => new Promise((res) => {
+      const benchWait = enterMin === null || enterMin > 45;
+      if (M.instant || M.red || ctx.role === 'out' || p.injuryWeeks > 0 || (leaveMin !== null)) return res();
+      const opts = benchWait
+        ? [
+          ['warm', 'fire', 'Isın ve hocaya görün', 'İkinci yarıda oyuna girme şansın artar'],
+          ['cheer', 'fans', 'Takımı destekle', 'Takım ilişkisi artar, takım biraz güçlenir'],
+          ['sit', 'rest', 'Yedek kulübesinde bekle', 'Enerjini korursun'],
+        ]
+        : [
+          ['tactic', 'whistle', 'Hocayla taktik konuş', 'İkinci yarıda daha çok pozisyon gelir'],
+          ['motivate', 'fans', 'Takımı ateşle', 'Takım ikinci yarıda daha güçlü oynar'],
+          ['recover', 'bolt', 'Soyunma odasında toparlan', 'Vuruşların daha isabetli olur, enerji korunur'],
+          ['scout', 'shield', 'Rakip kaleciyi incele', 'Kaleci ve savunma biraz daha kolaylaşır'],
+        ];
+      $('mt-moment').classList.remove('hidden');
+      $('mm-min').textContent = 'İY';
+      $('mm-title').textContent = 'Devre Arası';
+      $('mm-desc').textContent = 'İkinci yarı için ne yapacağını seç.';
+      $('mm-auto').style.display = 'none';
+      $('mm-host').innerHTML = `
+        <div class="ht">
+          <h3>Devre Arası</h3>
+          <div class="ht-score">${U.esc(ctx.home.name)} ${M.hs} - ${M.as} ${U.esc(ctx.away.name)}${onPitch() ? ` · Reytingin ${M.rating.toFixed(1)}` : ''}</div>
+          <div class="ht-opts">${opts.map(([k, ic, l, d]) => `<button class="act" data-ht="${k}">${Icon(ic)}<span><b>${l}</b><small>${d}</small></span></button>`).join('')}</div>
+        </div>`;
+      U.$$('[data-ht]', $('mm-host')).forEach((b) => (b.onclick = () => {
+        const k = b.dataset.ht;
+        if (k === 'tactic') { addMoments(U.randi(1, 2), 47, 88); Player.addRel(p, 'coach', 1.5); feed(`<b>45'</b> ${U.esc(pname)} hocayla taktik konuştu. İkinci yarıda daha çok topla buluşacak.`, 'info'); }
+        if (k === 'motivate') { M.teamBoost = 3; Player.addRel(p, 'team', 1.5); feed(`<b>45'</b> ${U.esc(pname)} soyunma odasında takımı ateşledi!`, 'info'); }
+        if (k === 'recover') { cond = Math.max(0.7, cond - 0.1); M.energySave = 8; feed(`<b>45'</b> ${U.esc(pname)} devre arasında toparlandı.`, 'info'); }
+        if (k === 'scout') { skill = Math.max(0.02, skill - 0.07); feed(`<b>45'</b> ${U.esc(pname)} rakip kalecinin zayıf yönlerini inceledi.`, 'info'); }
+        if (k === 'warm') {
+          if (U.chance(0.65)) { enterMin = U.randi(46, 62); addMoments(Math.max(1, Math.round(({ FW: 5, MF: 5, DF: 4 }[p.position]) * (90 - enterMin) / 90)), enterMin, 89); feed(`<b>45'</b> Hoca ısınmanı beğendi, ikinci yarıda oyuna gireceksin!`, 'info'); }
+          else feed(`<b>45'</b> Isındın ama hoca şimdilik değişiklik düşünmüyor.`, 'info');
+        }
+        if (k === 'cheer') { M.teamBoost = 1.5; Player.addRel(p, 'team', 2.5); feed(`<b>45'</b> Kenardan takımını coşkuyla destekledin.`, 'info'); }
+        if (k === 'sit') { M.energySave = 5; }
+        $('mt-moment').classList.add('hidden');
+        $('mm-host').innerHTML = '';
+        $('mm-auto').style.display = '';
+        res();
+      }));
+    });
+
     const resolveMoment = async (mo) => {
       const type = mo.type;
+      if (type === 'sprint') {
+        M.statsUsed.add('pace');
+        const r = await playMini('sprint', 'sprint', 'dribble', 0.3);
+        if (p.position === 'DF') {
+          if (r === 'success') { M.tackles++; rate(0.45); feed(`<b>${M.min}'</b> ${U.esc(pname)} müthiş bir geri koşuyla rakibe yetişti ve topu kaptı!`); }
+          else { rate(-0.3); feed(`<b>${M.min}'</b> Rakip kontra atakta ${U.esc(pname)}'den hızlı çıktı!`); if (U.chance(0.3 + skill * 0.15)) oppGoal(); }
+        } else if (r === 'success') {
+          rate(0.3);
+          feed(`<b>${M.min}'</b> ${U.esc(pname)} kontra atakta rakibini geride bıraktı!`);
+          canvasOutcome('close', await playCanvas('close'));
+        } else { rate(-0.15); feed(`<b>${M.min}'</b> Kontra atakta rakip topa önce ulaştı.`); }
+        refresh();
+        return;
+      }
+      if (type === 'onetwo') {
+        M.statsUsed.add('passing');
+        const r = await playMini('onetwo', 'onetwo', 'pass', 0.4);
+        if (r === 'success') {
+          rate(0.35); M.keyPasses++;
+          feed(`<b>${M.min}'</b> ${U.esc(pname)} şık bir verkaçla savunmayı yardı!`);
+          canvasOutcome('close', await playCanvas('close'));
+        } else if (r === 'partial') {
+          feed(`<b>${M.min}'</b> Pas trafiği yarıda kaldı ama top hâlâ sende.`);
+          canvasOutcome('open', await playCanvas('open'));
+        } else { rate(-0.2); feed(`<b>${M.min}'</b> Verkaç denemesi rakibe takıldı.`); }
+        refresh();
+        return;
+      }
       if (['open', 'deep', 'freekick', 'penalty'].includes(type)) {
         if (type === 'penalty') feed(`⚪ <b>${M.min}'</b> Penaltı! Topun başına ${U.esc(pname)} geçiyor...`, 'info');
         if (type === 'freekick') feed(`🎯 <b>${M.min}'</b> Tehlikeli bölgede serbest vuruş. ${U.esc(pname)} topun başında.`, 'info');
@@ -397,7 +492,7 @@ const Match = {
         if (!onPitch()) break;
         await resolveMoment(mo);
       }
-      if (M.min === 45) feed('⏸️ İlk yarı sona erdi.', 'info');
+      if (M.min === 45) { feed('İlk yarı sona erdi.', 'info'); await halfTime(); }
       refresh();
       busy = false;
       if (M.min >= 90) {
@@ -428,7 +523,7 @@ const Match = {
       feed(`🏁 Maç sona erdi: ${U.esc(ctx.home.name)} ${M.hs} - ${M.as} ${U.esc(ctx.away.name)}`, 'info');
       refresh();
       const summary = {
-        gf, ga, res, hs: M.hs, as: M.as, played, minutes: Math.max(0, minutes), rating: played ? rating : null,
+        gf, ga, res, hs: M.hs, as: M.as, played, energySave: M.energySave, minutes: Math.max(0, minutes), rating: played ? rating : null,
         goals: M.goals, assists: M.assists, yellow: M.yellow, red: M.red, motm,
         ownScorers: M.ownScorers, oppScorers: M.oppScorers, statsUsed: [...M.statsUsed],
       };
