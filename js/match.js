@@ -183,10 +183,13 @@ const Match = {
     // ---- An çözümleme ----
     const mateNames = own.roster.filter((x) => x.pos !== 'GK').map((x) => x.n);
 
-    const mateConvert = (mateName, mateY) => {
+    const mateChance = (mateY) => {
       const dist = mateY != null ? mateY : 14;
-      const pr = U.clamp(0.62 - dist * 0.018 + (own.rating - opp.rating) / 120, 0.06, 0.66);
-      if (U.chance(pr)) {
+      return U.clamp(0.62 - dist * 0.018 + (own.rating - opp.rating) / 120, 0.06, 0.66);
+    };
+    const mateConvert = (mateName, mateY, forced) => {
+      const goal = forced != null ? forced : U.chance(mateChance(mateY));
+      if (goal) {
         M.assists++;
         M.keyPasses++;
         rate(0.8);
@@ -211,7 +214,7 @@ const Match = {
         ownGoal(pname, null, msg);
       } else if (o === 'received') {
         M.statsUsed.add('passing');
-        mateConvert(r.mate, r.mateY);
+        mateConvert(r.mate, r.mateY, r.mateGoal);
       } else if (o === 'saved') {
         M.shots++; rate(-0.05);
         feed(`🧤 <b>${M.min}'</b> ${U.esc(pname)} vurdu, kaleci kurtardı.`);
@@ -281,7 +284,7 @@ const Match = {
       let auto = false;
       $('mm-auto').onclick = () => { auto = true; if (MiniGame._abort) MiniGame._abort(); };
       const scene = Scenes.make(type, { skill, mates: mateNames, position: p.position, pace: st.pace, narrow: narrow() });
-      const r = await MiniGame.play($('mm-host'), scene, { stats: st, skill, cond, kits, number: p.shirt });
+      const r = await MiniGame.play($('mm-host'), scene, { stats: st, skill, cond, kits, number: p.shirt, mateChance });
       hideMoment();
       if (auto || r.outcome === 'auto') return autoCanvas(type);
       return r;

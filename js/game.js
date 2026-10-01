@@ -197,8 +197,10 @@ const Game = {
       case 'fans': {
         Player.addEnergy(p, -3);
         Player.addRel(p, 'fans', U.randi(2, 4));
-        Player.addFame(p, Game.isYouth() ? 0.1 : 0.4);
-        Game.toast('📱 Taraftarlarla etkileşim: Taraftar ilişkisi arttı', 'good');
+        Player.addFame(p, Game.isYouth() ? 0.15 : 0.4);
+        const cap = U.pick(['Antrenman sonrası mutluluk.', 'Bugün de çalıştık. Hedef büyük!', 'Yeni kramponlarla ilk gün.', 'Hafta sonu maçı için hazırız.', 'Sabah koşusu tamam.', 'Taraftarımıza selam olsun!']);
+        Social.post('daily', cap, 1);
+        Game.toast('Sosyal medyada paylaşım yaptın: takipçilerin arttı', 'good');
         break;
       }
     }
@@ -371,6 +373,7 @@ const Game = {
       if (p.injuryWeeks === 0) Player.addRel(p, 'coach', 0.5);
       Game.news(`${teamTxt}, ${oppName} karşısında ${sum.gf}-${sum.ga} ${resTxt}. (Forma giymedin)`, sum.res === 'W' ? 'good' : sum.res === 'L' ? 'bad' : '');
     }
+    Social.afterMatch(sum, teamTxt);
     if (comp === 'intl' && sum.played) Game.news(`🇹🇷 Milli formayla ${p.intl.caps}. maçına çıktın!`, 'good');
   },
 
@@ -415,6 +418,8 @@ const Game = {
       }
     }
     if (!s.pendingEvent && U.chance(0.4)) Events.roll();
+    Social.week();
+    if (!intl && U.chance(0.7)) WorldNews.roll();
     Ach.check();
     Game.save();
     Game.render();
@@ -467,6 +472,7 @@ const Game = {
     Game.joinClub(o.clubId, o.wage, o.years);
     s.offers = [];
     Game.news(`✍️ ${old}'dan ${Game.club().name}'a transfer oldun! Haftalık maaş: ${U.money(o.wage)}`, 'good');
+    Social.post('transfer', `Yeni bir sayfa: ${Game.club().name}! Heyecanlıyım.`, 1.8);
     Game.toast(`✍️ ${Game.club().name} ile sözleşme imzaladın!`, 'good');
     Game.save();
     Game.render();
@@ -502,6 +508,7 @@ const Game = {
     if (!youth && lgFame >= 1.3 && pos <= 3 && ss.apps >= 12 && (ss.goals + ss.assists >= 32 || avg >= 8.3) && ovr >= 87 && p.fame >= 75 && U.chance(0.75)) trophies.push('🥇 Altın Top (Yılın Futbolcusu)');
     trophies.forEach((t) => p.trophies.push(`${s.season.year}: ${t}`));
     trophies.forEach(() => Player.addFame(p, youth ? 0.5 : 3));
+    if (trophies.length) Social.post('trophy', `${U.plain(trophies[0])}! Bu kupa hepimizin.`, 2);
 
     p.history.push({
       year: s.season.year, age: p.age, club: Game.teamName(), league: compName, pos,
@@ -577,6 +584,7 @@ const Game = {
           Game.news(wasYouth ? `🎉 ${Game.club().name} A takımıyla ilk profesyonel sözleşmeni imzaladın! Haftalık ${U.money(choice.wage)}` : `✍️ ${Game.club().name} ile sözleşmeni ${choice.years} yıl uzattın.`, 'good');
         } else {
           Game.joinClub(choice.clubId, choice.wage, choice.years);
+          Social.post('transfer', `Yeni kulübüm ${Game.club().name}. Hedef şampiyonluk!`, 1.8);
           Game.news(`✍️ ${Game.club().name} ile ${choice.years} yıllık profesyonel sözleşme imzaladın! Haftalık ${U.money(choice.wage)}`, 'good');
         }
       }
@@ -645,6 +653,7 @@ const Game = {
     const main = document.getElementById('main');
     main.innerHTML = UI[Game.tab]();
     UI.drawFigure();
+    Social.drawAvatar();
     UI.strip(main);
     UI.bind(main);
   },
@@ -672,7 +681,7 @@ const UI = {
       <div class="st-cell st-ap"><div><span>Hafta hakkı</span><i class="ap">${Array.from({ length: 3 }, (_, i) => `<i class="${i < s.ap ? 'on' : ''}"></i>`).join('')}</i></div><b>${s.ap}/3</b></div>`;
   },
 
-  player() { return UI.playerCard(); },
+  player() { return UI.playerCard() + Social.render(true); },
 
   bar(v, cls = '') {
     return `<div class="bar ${cls}"><div style="width:${U.clamp(v, 0, 100)}%"></div></div>`;
@@ -782,7 +791,7 @@ const UI = {
       ['rest', 'rest', 'Dinlen', 'Moral de artar', '+20 enerji'],
       ['team', 'team', 'Takımla Takıl', 'Takım ilişkisi artar', '−5 enerji'],
       ['talk', 'talk', 'Hocayla Konuş', s.week.coachTalk ? 'Bu hafta konuştun' : 'Hoca ilişkisi artar', ''],
-      ['fans', 'phone', 'Taraftarlar', 'Taraftar ve ün artar', '−3 enerji'],
+      ['fans', 'phone', 'Sosyal Medya', 'Paylaşım yap, takipçi kazan', '−3 enerji'],
     ];
     return `
       <div class="grid2">
@@ -813,9 +822,10 @@ const UI = {
         ${s.offers.map((o, i) => UI.offerRow(o, i, 'mid')).join('')}
         <button class="btn btn-ghost" data-reject="1">Teklifleri Reddet</button>
       </section>` : ''}
+      ${Social.render(false)}
       <section class="card">
         <div class="card-h"><span>${Icon('news')} Haberler</span></div>
-        <div class="news">${s.news.slice(0, 14).map((n) => `<div class="nw ${n.type}"><small>${n.w}</small><span>${n.t}</span></div>`).join('')}</div>
+        <div class="news">${s.news.slice(0, 16).map((n) => `<div class="nw ${n.type}"><small>${n.type === 'world' ? 'DÜNYA' : n.w}</small><span>${n.t}</span></div>`).join('')}</div>
       </section>`;
   },
 
@@ -835,22 +845,68 @@ const UI = {
     const lg = Game.league();
     const tbl = World.sortedTable(lg);
     const name = (id) => Game.teamName(id);
-    const myRes = lg.results.filter((r) => r.h === s.clubId || r.a === s.clubId);
+    const clubOf = (id) => s.world.clubs[id];
+    const myRes = lg.results.filter((r) => r.h === s.clubId || r.a === s.clubId).sort((x, y) => x.round - y.round);
+    const res = (r, id) => { const gf = r.h === id ? r.hs : r.as, ga = r.h === id ? r.as : r.hs; return gf > ga ? 'W' : gf < ga ? 'L' : 'D'; };
+    const form = (id) => lg.results.filter((r) => r.h === id || r.a === id).sort((x, y) => x.round - y.round).slice(-5).map((r) => res(r, id));
+    const pill = (k) => `<i class="fm fm-${k}">${{ W: 'G', D: 'B', L: 'M' }[k]}</i>`;
+    const pos = tbl.findIndex((r) => r.id === s.clubId) + 1;
+    const me = tbl[pos - 1];
+    const leader = tbl[0];
+    const relegate = !Game.isYouth() && Game.club().league === 'TR1';
+    const promote = !Game.isYouth() && Game.club().league === 'TR2';
+    const zone = (i) => (i === 0 ? 'z-champ' : promote && i < 2 ? 'z-up' : relegate && i >= tbl.length - 2 ? 'z-down' : '');
+    const nextFx = Game.nextFixture();
+    const gap = leader.id === s.clubId ? (tbl[1] ? me.pts - tbl[1].pts : 0) : leader.pts - me.pts;
     const fixtures = lg.fixtures.map((round, i) => {
       const f = round.find(([h, a]) => h === s.clubId || a === s.clubId);
       if (!f) return '';
       const r = myRes.find((x) => x.round === i);
-      const res = r ? (() => { const gf = r.h === s.clubId ? r.hs : r.as, ga = r.h === s.clubId ? r.as : r.hs; return `<b class="${gf > ga ? 'w' : gf < ga ? 'l' : 'd'}">${r.hs}-${r.as}</b>`; })() : '<span class="muted">-</span>';
-      return `<tr class="${i === s.season.round ? 'cur' : ''}"><td>${i + 1}</td><td>${U.esc(name(f[0]))}</td><td>${res}</td><td>${U.esc(name(f[1]))}</td></tr>`;
+      const k = r ? res(r, s.clubId) : null;
+      return `<div class="mc ${i === s.season.round ? 'cur' : ''} ${r ? 'played' : ''}">
+        <span class="wk">${i + 1}</span>
+        <div class="mc-t h"><span class="nm-l">${U.esc(name(f[0]))}</span><span class="nm-s">${U.esc(clubOf(f[0]).short)}</span>${UI.shirt(clubOf(f[0]))}</div>
+        <div class="mc-s ${k ? 'r-' + k : ''}">${r ? `${r.hs} - ${r.as}` : i === s.season.round ? 'SIRADA' : '-'}</div>
+        <div class="mc-t">${UI.shirt(clubOf(f[1]))}<span class="nm-l">${U.esc(name(f[1]))}</span><span class="nm-s">${U.esc(clubOf(f[1]).short)}</span></div>
+      </div>`;
     }).join('');
+    const scorers = World.topScorers(lg, 10);
+    const meName = Player.fullName(Game.p);
+    const maxG = scorers.length ? scorers[0].g : 1;
+    const nextOpp = nextFx ? (nextFx.home === s.clubId ? nextFx.away : nextFx.home) : null;
     return `
-      <div class="card">
-        <div class="card-h"><span>${Icon('table')} ${U.esc(Game.leagueName())}</span><small class="muted">Puan durumu</small></div>
-        ${UI.table(tbl, name, s.clubId)}
-      </div>
+      <section class="card lg-head" style="--c1:${Game.club().c1}">
+        <div class="sq-id">${Icon('table')}<div><h2>${U.esc(Game.leagueName())}</h2><small>${s.season.year} sezonu · ${Math.min(s.season.round + 1, ROUNDS)}. hafta / ${ROUNDS}</small></div></div>
+        <div class="sq-stats">
+          <div><span>Sıran</span><b>${pos}.</b></div>
+          <div><span>Puan</span><b>${me.pts}</b></div>
+          <div><span>${leader.id === s.clubId ? 'Farkın (2. ile)' : 'Lidere fark'}</span><b>${leader.id === s.clubId ? '+' : '−'}${Math.abs(gap)}</b></div>
+          <div><span>Son 5 maç</span><b class="form">${form(s.clubId).map(pill).join('') || '<small class="muted">—</small>'}</b></div>
+        </div>
+        ${nextOpp ? `<p class="muted sq-note">Sıradaki rakip: <b>${U.esc(name(nextOpp))}</b> (${tbl.findIndex((r) => r.id === nextOpp) + 1}. sırada)</p>` : ''}
+      </section>
+      <section class="card">
+        <div class="card-h"><span>${Icon('table')} Puan Durumu</span><small class="lg-legend"><i class="z-champ"></i>Şampiyonluk${promote ? '<i class="z-up"></i>Üst lig' : ''}${relegate ? '<i class="z-down"></i>Küme düşme' : ''}</small></div>
+        <div class="tscroll"><table class="tbl lgt">
+          <tr><th>#</th><th class="l">Takım</th><th>O</th><th>G</th><th>B</th><th>M</th><th class="hide-s">A</th><th class="hide-s">Y</th><th>AV</th><th class="hide-s">Form</th><th>P</th></tr>
+          ${tbl.map((r, i) => `<tr class="${r.id === s.clubId ? 'hl' : ''} ${zone(i)}">
+            <td><span class="rk">${i + 1}</span></td>
+            <td class="l"><span class="tm">${UI.shirt(clubOf(r.id))}${U.esc(name(r.id))}</span></td>
+            <td>${r.p}</td><td>${r.w}</td><td>${r.d}</td><td>${r.l}</td><td class="hide-s">${r.gf}</td><td class="hide-s">${r.ga}</td>
+            <td class="${r.gf - r.ga > 0 ? 'pos' : r.gf - r.ga < 0 ? 'neg' : ''}">${r.gf - r.ga > 0 ? '+' : ''}${r.gf - r.ga}</td>
+            <td class="hide-s"><span class="form">${form(r.id).map(pill).join('')}</span></td>
+            <td><b class="pts">${r.pts}</b></td>
+          </tr>`).join('')}
+        </table></div>
+      </section>
       <div class="grid2">
-        <div class="card"><div class="card-h"><span>${Icon('whistle')} Fikstürün</span></div><div class="tscroll"><table class="tbl fx">${fixtures}</table></div></div>
-        <div class="card"><div class="card-h"><span>${Icon('ball')} Gol Krallığı</span></div>${UI.scorers(lg, name)}</div>
+        <section class="card"><div class="card-h"><span>${Icon('whistle')} Fikstürün</span><small class="muted">${myRes.length}/${ROUNDS} oynandı</small></div><div class="fixtures">${fixtures}</div></section>
+        <section class="card"><div class="card-h"><span>${Icon('ball')} Gol Krallığı</span></div>
+          ${scorers.length ? `<div class="scorers">${scorers.map((x, i) => `<div class="scr ${x.name === meName ? 'me' : ''}">
+            <span class="rk">${i + 1}</span>${UI.shirt(clubOf(x.club))}
+            <div class="scr-t"><b>${U.esc(x.name)}</b><small>${U.esc(name(x.club))}</small>${UI.bar((x.g / maxG) * 100, 'c-mid')}</div>
+            <b class="g">${x.g}</b></div>`).join('')}</div>` : '<p class="muted">Henüz gol atılmadı.</p>'}
+        </section>
       </div>`;
   },
 
@@ -1064,6 +1120,7 @@ const UI = {
       if (p.money < it.price) return;
       p.money -= it.price;
       p.items.push(it.id);
+      if (it.cat === 'life' && it.price >= 1000) Social.post('life', `Kendime küçük bir hediye: ${it.name}.`, 1.2);
       if (it.fame) Player.addFame(p, it.fame);
       Ach.check();
       Game.toast(`${it.name} satın alındı`, 'good');

@@ -367,7 +367,7 @@ const MiniGame = {
         phase = 'done';
         endT = t;
         slowmo = 1;
-        if (outcome === 'goal') {
+        if (outcome === 'goal' || (extra && extra.mateGoal)) {
           netShake = 1; flash = 1;
           const cols = [kits.own.shirt, kits.own.alt, '#ffffff', '#ffcf3f'];
           for (let i = 0; i < 90; i++) {
@@ -375,6 +375,59 @@ const MiniGame = {
           }
           try { if (navigator.vibrate) navigator.vibrate([60, 40, 120]); } catch (e) { /* yok */ }
         }
+      }
+
+      // Pas ulaştıktan sonra arkadaşın şutu: önce topu kontrol eder, sonra vurur
+      let mateShot = null;
+      function startMateShot(m) {
+        const pr = o.mateChance ? o.mateChance(m.y) : 0.4;
+        const goal = U.chance(pr);
+        mateShot = { m, goal, miss: !goal && U.chance(0.35), t0: t, kickT: -9 };
+        passTarget = null;
+        ball.vx = ball.vy = ball.vz = 0; ball.z = 0; ball.spin = 0;
+        ball.x = m.x + 0.35; ball.y = m.y - 0.55;
+        phase = 'mate';
+        slowmo = 1;
+      }
+      function mateStep(dt) {
+        t += 0;
+        const ms = mateShot;
+        if (phase === 'mate') {
+          keeper.x += (U.clamp(ball.x * 0.18, -2.2, 2.2) - keeper.x) * Math.min(1, dt * 3);
+          defs.forEach((d) => {
+            if (d.wall) return;
+            const dx = ball.x - d.x, dy = ball.y - d.y, dist = Math.hypot(dx, dy);
+            if (dist > 1.6) { d.x += (dx / dist) * 1.5 * dt; d.y += (dy / dist) * 1.5 * dt; }
+          });
+          [...defs, keeper].forEach((e) => moveEnt(e, dt));
+          if (t - ms.t0 > 0.75) {
+            const side = keeper.x > ball.x * 0.18 ? -1 : 1;
+            ms.tx = ms.goal ? side * U.rand(2.4, 3.1) : ms.miss ? (U.chance(0.5) ? 1 : -1) * U.rand(4.4, 5.6) : keeper.x + U.rand(-0.3, 0.3);
+            const ang = Math.atan2(-ball.y, ms.tx - ball.x);
+            BallPhys.launch(ball, ang, 25, ms.miss ? 0.12 : 0.05, 0);
+            ms.kickT = t;
+            keeper.tx = ms.goal ? keeper.x + Math.sign(ms.tx - keeper.x) * 1.1 : ms.tx;
+            phase = 'mfly';
+          }
+          return;
+        }
+        const prevY = ball.y;
+        const hs = BallPhys.step(ball, dt);
+        ball.rot += hs * dt * 1.6;
+        if (t - ms.kickT > 0.12) {
+          const d = keeper.tx - keeper.x;
+          keeper.x += Math.sign(d) * Math.min(Math.abs(d), (ms.goal ? 2.2 : 5) * dt);
+          if (ball.y < 7) keeper.diveAmt = Math.min(1, keeper.diveAmt + dt * 5);
+        }
+        [...defs, ...mates, keeper].forEach((e) => moveEnt(e, dt));
+        slowmo = ball.y < 7 && Math.abs(ball.x) < 9 ? 0.4 : 1;
+        const extra = { mate: ms.m.name, mateY: ms.m.y, mateX: ms.m.x, mateGoal: ms.goal };
+        if (!ms.goal && !ms.miss && prevY >= keeper.y && ball.y < keeper.y + 0.05) return finish('received', 'KALECİ KURTARDI', '#ffd166', extra);
+        if (ball.y <= 0) {
+          if (ms.goal) return finish('received', 'ASİST! GOOOL!', '#7cf0a0', extra);
+          return finish('received', 'AUTA GİTTİ', '#ff6b6b', extra);
+        }
+        if (t - ms.kickT > 3) return finish('received', 'KALECİ KURTARDI', '#ffd166', extra);
       }
 
       const moveEnt = (e, dt) => {
@@ -400,6 +453,7 @@ const MiniGame = {
           [...defs, keeper].forEach((e) => moveEnt(e, dt));
           return;
         }
+        if (phase === 'mate' || phase === 'mfly') return mateStep(dt);
         if (phase !== 'fly') return;
         const ft = t - kickT;
         const prevY = ball.y;
@@ -437,7 +491,7 @@ const MiniGame = {
         for (const m of mates) {
           const rr = 1.2 + (st.passing / 100) * 0.5 + (m === passTarget ? 0.35 : 0);
           if (Math.hypot(ball.x - m.x, ball.y - m.y) < rr && ball.z < 1.9 && hs < 31) {
-            return finish('received', 'PAS ULAŞTI', '#7cf0a0', { mate: m.name, mateY: m.y, mateX: m.x });
+            return startMateShot(m);
           }
         }
         const reach = keeper.reach + (ball.y < 5 ? keeper.dive : 0);
@@ -517,6 +571,7 @@ const MiniGame = {
           const c = preview.curve;
           pill(`GÜÇ ${Math.round(preview.power * 100)}   ·   ${Math.abs(c) < 0.12 ? 'DÜZ' : c > 0 ? '◀ FALSO' : 'FALSO ▶'}   ·   ${LIFTS[liftIdx].l.toUpperCase()}`);
         }
+        if (phase === 'mate' && mateShot) pill(`PAS ULAŞTI · ${mateShot.m.name.split(' ').slice(-1)[0].toUpperCase()} VURUYOR...`);
         if (gesture && gesture.pts.length > 1) {
           ctx.strokeStyle = 'rgba(255,255,255,0.6)'; ctx.lineWidth = 7 * fs; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
           ctx.beginPath(); ctx.moveTo(gesture.pts[0][0], gesture.pts[0][1]);
@@ -549,7 +604,7 @@ const MiniGame = {
         ents.push({ y: 0, d: () => Sprites.frame(ctx, tx, ty, PX) });
         ents.push({ y: keeper.y, d: () => Sprites.figure(ctx, tx(keeper.x), ty(keeper.y), h, { kit: kits.gk, look: keeper.look, facing: 'down', run: keeper.run, speed: keeper.spd, gloves: true, dive: keeper.diveAmt, t }) });
         defs.forEach((d) => ents.push({ y: d.y, d: () => Sprites.figure(ctx, tx(d.x), ty(d.y), h * (d.wall ? 1.02 : 1), { kit: kits.opp, look: d.look, facing: 'down', run: d.run, speed: d.spd, dive: d.wall && phase !== 'aim' ? 0.5 : 0, t }) }));
-        mates.forEach((m) => ents.push({ y: m.y, d: () => Sprites.figure(ctx, tx(m.x), ty(m.y), h, { kit: kits.own, look: m.look, facing: 'up', run: m.run, speed: m.spd, number: m.num, label: lab(m.name.split(' ').slice(-1)[0].toUpperCase()), labelScale: dpr, ring: phase === 'aim' ? 'rgba(124,240,160,0.95)' : null, t }) }));
+        mates.forEach((m) => ents.push({ y: m.y, d: () => Sprites.figure(ctx, tx(m.x), ty(m.y), h, { kit: kits.own, look: m.look, facing: 'up', run: m.run, speed: m.spd, number: m.num, kick: mateShot && mateShot.m === m && t - mateShot.kickT < 0.35 ? (t - mateShot.kickT) / 0.35 : 0, label: lab(m.name.split(' ').slice(-1)[0].toUpperCase()), labelScale: dpr, ring: phase === 'aim' ? 'rgba(124,240,160,0.95)' : null, t }) }));
         const kickA = phase !== 'aim' && t - kickT < 0.35 ? (t - kickT) / 0.35 : 0;
         ents.push({ y: shooter.y, d: () => Sprites.figure(ctx, tx(shooter.x), ty(shooter.y), h, { kit: kits.own, look: shooter.look, facing: 'up', number: shooter.num, kick: kickA, label: lab('SEN'), labelScale: dpr, labelColor: 'rgba(214,40,57,0.92)', t }) });
         ents.push({
@@ -617,7 +672,7 @@ const MiniGame = {
         netShake = Math.max(0, netShake - rdt * 1.1);
         flash = Math.max(0, flash - rdt * 3);
         draw(rdt);
-        if (phase === 'done' && t - endT > (result.outcome === 'goal' ? 2.0 : 1.4)) {
+        if (phase === 'done' && t - endT > (result.outcome === 'goal' || result.mateGoal ? 2.0 : 1.5)) {
           cleanup();
           resolve(result);
           return;

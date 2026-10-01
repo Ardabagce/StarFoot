@@ -35,6 +35,7 @@ const ICON_PATHS = {
   news: '<path d="M4 5h13v14H6a2 2 0 0 1-2-2z"/><path d="M17 9h3v8a2 2 0 0 1-2 2M8 9h5M8 13h5M8 16h3"/>',
   robot: '<rect x="5" y="8" width="14" height="11" rx="2"/><path d="M12 4v4M9 13h.01M15 13h.01M9.5 16h5"/>',
   fast: '<path d="M4 6l8 6-8 6zM12 6l8 6-8 6z"/>',
+  heart: '<path d="M12 20s-7-4.4-9-9a4.6 4.6 0 0 1 8.2-4.2L12 8l.8-1.2A4.6 4.6 0 0 1 21 11c-2 4.6-9 9-9 9z"/>',
   close: '<path d="M6 6l12 12M18 6L6 18"/>',
 };
 

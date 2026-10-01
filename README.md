@@ -47,6 +47,10 @@ Oyunu bir web sunucusundan (ör. GitHub Pages) açıp tarayıcı menüsünden **
 - **Sürprizler:** İyi maçlardan sonra bronz/gümüş/altın sürpriz paketler, cüzdan bulma, idol kampı, viral gol, yardım maçı gibi yeni olaylar.
 - **Devre arası:** Hocayla taktik konuşmak, takımı ateşlemek, toparlanmak ya da rakip kaleciyi incelemek; yedekteysen ısınıp hocaya görünmek.
 - **Yeni mini oyunlar:** Kontra atak sprinti (hızlı hızlı dokun) ve verkaç (parlayan arkadaşına süre dolmadan dokun).
+- **Asist animasyonu:** Pas arkadaşına ulaşınca arkadaşın topu kontrol edip şut çeker; gol olursa ASİST yazar.
+- **Sosyal medya:** Ününe göre büyüyen takipçi sayısı, gol, kupa, transfer ve eşya paylaşımları, beğeniler ve taraftar yorumları.
+- **Dünyadan haberler:** Gerçek maç sonuçlarından ve ara ara mizahi dille yazılmış, kendini tekrar etmeyen haberler.
+- **Lig sekmesi:** Sıra, puan, lidere fark ve son 5 maç formu; formalı puan tablosu, şampiyonluk/küme bölgeleri, maç kartlı fikstür ve gol krallığı.
 - **Durum şeridi:** Enerji, moral ve sağlık her sekmede üstte görünür; telefonda oyuncu kartı ayrı bir sekmededir.
 
 ## Dosya yapısı
