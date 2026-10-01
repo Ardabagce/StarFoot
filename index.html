@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StarFoot</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Başlık ekranı -->
+  <section id="title" class="screen title-screen">
+    <div class="title-card">
+      <div class="title-logo">⭐ StarFoot</div>
+      <div class="title-sub">8 yaşında altyapıda başla, efsane ol.</div>
+      <div class="title-btns">
+        <button class="btn btn-big hidden" id="btn-continue">Devam Et</button>
+        <button class="btn btn-big" id="btn-new">Yeni Kariyer</button>
+      </div>
+      <div class="title-note">Tüm kulüp ve oyuncu isimleri kurgusaldır.</div>
+    </div>
+  </section>
+
+  <!-- Karakter oluşturma -->
+  <section id="create" class="screen hidden"></section>
+
+  <!-- Ana oyun -->
+  <section id="hub" class="screen hidden">
+    <header class="hdr">
+      <div class="logo" id="logo">⭐ StarFoot</div>
+      <div class="hdr-info" id="hdr-info"></div>
+    </header>
+    <nav id="tabs" class="tabs">
+      <button data-tab="home">🏠 Ana Sayfa</button>
+      <button data-tab="league">📊 Lig</button>
+      <button data-tab="squad">👥 Kadro</button>
+      <button data-tab="shop">🛒 Mağaza</button>
+      <button data-tab="career">📜 Kariyer</button>
+      <button data-tab="world">🌍 Dünya</button>
+    </nav>
+    <div class="layout">
+      <aside id="side"></aside>
+      <main id="main"></main>
+    </div>
+  </section>
+
+  <!-- Kariyer sonu -->
+  <section id="end" class="screen hidden"></section>
+
+  <div id="match" class="overlay hidden"></div>
+  <div id="modal" class="modal hidden"></div>
+  <div id="toasts"></div>
+
+  <script src="js/util.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/league.js"></script>
+  <script src="js/minigame.js"></script>
+  <script src="js/match.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>

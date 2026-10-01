@@ -1,0 +1,203 @@
+// StarFoot - oyun verileri
+// Tüm kulüp ve oyuncu isimleri lisans gerektirmemesi için gerçek isimlere
+// benzeyen kurgusal isimlerdir.
+
+const NATIONS = [
+  { code: 'TUR', name: 'Türkiye', rating: 79, flag: '🇹🇷', stars: ['Arda Güner', 'Kenan Yıldırım', 'Hakan Çalıkoğlu', 'Ferdi Kadıköylü', 'Barış Alper Yılmazer', 'Orkun Kökçe'] },
+  { code: 'ARG', name: 'Arjantin', rating: 87, flag: '🇦🇷', stars: ['Lionel Mezzi', 'Lautaro Martines', 'Julian Alvarres', 'Enzo Fernandas', 'Alexis Mak Alister'] },
+  { code: 'FRA', name: 'Fransa', rating: 87, flag: '🇫🇷', stars: ['Kylian Mbappo', 'Ousmane Dembelo', 'Michael Olize', 'William Salibo', 'Aurelien Çuameni'] },
+  { code: 'ESP', name: 'İspanya', rating: 88, flag: '🇪🇸', stars: ['Lamin Yamel', 'Pedry', 'Rodry', 'Nico Wiliams', 'Dani Olmó'] },
+  { code: 'ENG', name: 'İngiltere', rating: 86, flag: '🏴', stars: ['Harry Kain', 'Jude Bellinger', 'Bukayo Saki', 'Declan Raiz', 'Cole Palmar'] },
+  { code: 'BRA', name: 'Brezilya', rating: 85, flag: '🇧🇷', stars: ['Vinicio Junho', 'Neymor', 'Rafinya', 'Rodrigo Goez', 'Bruno Gimaraes'] },
+  { code: 'POR', name: 'Portekiz', rating: 85, flag: '🇵🇹', stars: ['Cristiano Ronalda', 'Bruno Fernandas', 'Vitinya', 'Ruben Diyas', 'Rafael Leau'] },
+  { code: 'GER', name: 'Almanya', rating: 84, flag: '🇩🇪', stars: ['Jamal Musiola', 'Florian Wirtzer', 'Joshua Kimmih', 'Antonio Rüdinger'] },
+  { code: 'NED', name: 'Hollanda', rating: 83, flag: '🇳🇱', stars: ['Virgil van Dyck', 'Frenkie de Jongh', 'Cody Gakpa', 'Ryan Gravenberh'] },
+  { code: 'ITA', name: 'İtalya', rating: 82, flag: '🇮🇹', stars: ['Nicolo Barello', 'Alessandro Bastonni', 'Sandro Tonelli', 'Gianluigi Donnaruma'] },
+  { code: 'BEL', name: 'Belçika', rating: 81, flag: '🇧🇪', stars: ['Kevin De Braune', 'Romelu Lukako', 'Jeremi Doko', 'Thibaut Courtoy'] },
+  { code: 'CRO', name: 'Hırvatistan', rating: 80, flag: '🇭🇷', stars: ['Luka Modrac', 'Josko Gvardiyol', 'Mateo Kovaçiç'] },
+  { code: 'NOR', name: 'Norveç', rating: 79, flag: '🇳🇴', stars: ['Erling Halland', 'Martin Ödegard'] },
+  { code: 'EGY', name: 'Mısır', rating: 75, flag: '🇪🇬', stars: ['Mohamed Saleh', 'Omar Marmuş'] },
+  { code: 'POL', name: 'Polonya', rating: 76, flag: '🇵🇱', stars: ['Robert Lewandovsky', 'Piotr Zielinsky'] },
+  { code: 'GEO', name: 'Gürcistan', rating: 74, flag: '🇬🇪', stars: ['Khviça Kvaratskelya', 'Giorgi Mamardaşvili'] },
+  { code: 'AZE', name: 'Azerbaycan', rating: 64, flag: '🇦🇿', stars: ['Ramil Şeydayev'] },
+];
+
+const LEAGUES = [
+  { id: 'TR1', name: 'Yıldızlar Ligi', country: 'Türkiye', flag: '🇹🇷', level: 1, fame: 1.0 },
+  { id: 'TR2', name: 'Anadolu Ligi', country: 'Türkiye', flag: '🇹🇷', level: 2, fame: 0.5 },
+  { id: 'ENG', name: 'Britanya Premier Ligi', country: 'İngiltere', flag: '🏴', level: 1, fame: 1.6 },
+  { id: 'ESP', name: 'İberya Ligi', country: 'İspanya', flag: '🇪🇸', level: 1, fame: 1.5 },
+  { id: 'GER', name: 'Germen Ligi', country: 'Almanya', flag: '🇩🇪', level: 1, fame: 1.4 },
+  { id: 'ITA', name: 'Çizme Ligi', country: 'İtalya', flag: '🇮🇹', level: 1, fame: 1.4 },
+  { id: 'FRA', name: 'Gal Ligi', country: 'Fransa', flag: '🇫🇷', level: 1, fame: 1.3 },
+];
+
+// [id, isim, kısa, lig, güç, renk1, renk2, ülke kodu (isim havuzu)]
+const CLUB_LIST = [
+  // Türkiye - Yıldızlar Ligi
+  ['GAL', 'Galata Aslanları', 'GAL', 'TR1', 80, '#c8102e', '#fdb913', 'TR'],
+  ['FNK', 'Fenerköy SK', 'FNK', 'TR1', 79, '#00205b', '#ffed00', 'TR'],
+  ['BJK', 'Beşiktepe JK', 'BTJ', 'TR1', 76, '#111111', '#ffffff', 'TR'],
+  ['TRB', 'Trabzon Fırtınası', 'TRF', 'TR1', 73, '#7a1a33', '#5cb8e6', 'TR'],
+  ['BSK', 'Başakkent FK', 'BŞK', 'TR1', 70, '#f26522', '#1d2c5e', 'TR'],
+  ['SAM', 'Samsun Karadeniz', 'SAM', 'TR1', 67, '#e30613', '#ffffff', 'TR'],
+  ['GOZ', 'Körfez İzmir SK', 'KİZ', 'TR1', 66, '#ffd500', '#d4021d', 'TR'],
+  ['KON', 'Konya Kartalları', 'KON', 'TR1', 64, '#007a33', '#ffffff', 'TR'],
+  ['KAY', 'Kayseri Erciyes', 'KAY', 'TR1', 62, '#ffcc00', '#e30613', 'TR'],
+  ['ANT', 'Antalya Akdeniz', 'ANT', 'TR1', 61, '#e30613', '#ffffff', 'TR'],
+  // Türkiye - Anadolu Ligi
+  ['BUR', 'Bursa Timsahları', 'BUR', 'TR2', 58, '#00843d', '#ffffff', 'TR'],
+  ['SIV', 'Sivas Yiğitleri', 'SİV', 'TR2', 57, '#e30613', '#ffffff', 'TR'],
+  ['ANK', 'Ankara Başkent', 'ANK', 'TR2', 56, '#1d2c5e', '#e30613', 'TR'],
+  ['ADA', 'Adana Pamukçular', 'ADA', 'TR2', 55, '#0067b1', '#ffffff', 'TR'],
+  ['ESK', 'Eskişehir Şimşekleri', 'ESK', 'TR2', 54, '#e30613', '#000000', 'TR'],
+  ['MAN', 'Manisa Gediz', 'MAN', 'TR2', 52, '#000000', '#ffffff', 'TR'],
+  ['DEN', 'Denizli Horozları', 'DEN', 'TR2', 51, '#000000', '#ffffff', 'TR'],
+  ['MAL', 'Malatya Kayısıspor', 'MLT', 'TR2', 50, '#ffcc00', '#000000', 'TR'],
+  ['HAT', 'Hatay Defne SK', 'HAT', 'TR2', 50, '#7a1a33', '#ffffff', 'TR'],
+  ['ORD', 'Ordu Fındıkspor', 'ORD', 'TR2', 48, '#5b2c83', '#ffffff', 'TR'],
+  // İngiltere
+  ['MCS', 'Manchester Sky', 'MSK', 'ENG', 86, '#6cabdd', '#1c2c5b', 'EN'],
+  ['LIV', 'Liverpul FC', 'LİV', 'ENG', 86, '#c8102e', '#00b2a9', 'EN'],
+  ['ARS', 'Arsenol FC', 'ARS', 'ENG', 85, '#ef0107', '#ffffff', 'EN'],
+  ['CHE', 'Chelsy FC', 'CHE', 'ENG', 81, '#034694', '#ffffff', 'EN'],
+  ['MUN', 'Manchester Kızılları', 'MKZ', 'ENG', 79, '#da291c', '#000000', 'EN'],
+  ['NEW', 'Newcastel Saksağanları', 'NEW', 'ENG', 79, '#241f20', '#ffffff', 'EN'],
+  ['TOT', 'Tottenhem Horozları', 'TOT', 'ENG', 77, '#ffffff', '#132257', 'EN'],
+  ['AVL', 'Aston Vela', 'AVL', 'ENG', 77, '#670e36', '#95bfe5', 'EN'],
+  ['BHA', 'Brighten Martıları', 'BRİ', 'ENG', 75, '#0057b8', '#ffffff', 'EN'],
+  ['WHU', 'West Hem Çekiçleri', 'WHM', 'ENG', 73, '#7a263a', '#1bb1e7', 'EN'],
+  // İspanya
+  ['RMA', 'Real Madrigal', 'RMG', 'ESP', 88, '#ffffff', '#febe10', 'ES'],
+  ['BAR', 'Barcelova FC', 'BRC', 'ESP', 87, '#a50044', '#004d98', 'ES'],
+  ['ATM', 'Atletiko Madrid', 'ATM', 'ESP', 82, '#cb3524', '#ffffff', 'ES'],
+  ['ATH', 'Bask Bilbao', 'BİL', 'ESP', 77, '#ee2523', '#ffffff', 'ES'],
+  ['VIL', 'Sarı Denizaltılar', 'SDZ', 'ESP', 76, '#ffe667', '#005187', 'ES'],
+  ['RSO', 'Real Sosyedad', 'RSO', 'ESP', 75, '#0067b1', '#ffffff', 'ES'],
+  ['BET', 'Betis Sevilya', 'BET', 'ESP', 75, '#00954c', '#ffffff', 'ES'],
+  ['SEV', 'Sevilya FC', 'SEV', 'ESP', 73, '#ffffff', '#d81e05', 'ES'],
+  ['VAL', 'Valensiya Yarasaları', 'VAL', 'ESP', 72, '#ffffff', '#ee3524', 'ES'],
+  ['GIR', 'Jirona FC', 'JİR', 'ESP', 72, '#cd2534', '#ffffff', 'ES'],
+  // Almanya
+  ['BAY', 'Bavaria München', 'BAV', 'GER', 88, '#dc052d', '#0066b2', 'DE'],
+  ['LEV', 'Leverkuzen 04', 'LEV', 'GER', 81, '#e32221', '#000000', 'DE'],
+  ['BVB', 'Borusya Dortburg', 'DOR', 'GER', 82, '#fde100', '#000000', 'DE'],
+  ['RBL', 'Leipzik Boğaları', 'LEİ', 'GER', 79, '#dd0741', '#ffffff', 'DE'],
+  ['VFB', 'Stutgard Kızılları', 'STU', 'GER', 76, '#ffffff', '#e32219', 'DE'],
+  ['SGE', 'Frankfurt Kartalları', 'FRA', 'GER', 76, '#e1000f', '#000000', 'DE'],
+  ['WOB', 'Wolfsburk Kurtları', 'WOL', 'GER', 73, '#65b32e', '#ffffff', 'DE'],
+  ['SCF', 'Freiburk SK', 'FRE', 'GER', 73, '#000000', '#e2001a', 'DE'],
+  ['BMG', 'Gladbah Tayları', 'GLA', 'GER', 72, '#ffffff', '#000000', 'DE'],
+  ['TSG', 'Hoffenhaym 1899', 'HOF', 'GER', 72, '#1c63b7', '#ffffff', 'DE'],
+  // İtalya
+  ['INT', 'Inter Milanello', 'İNT', 'ITA', 86, '#0068a8', '#000000', 'IT'],
+  ['NAP', 'Napoli Vezüv', 'NAP', 'ITA', 83, '#12a0d7', '#ffffff', 'IT'],
+  ['JUV', 'Juventa Torino', 'JUV', 'ITA', 82, '#ffffff', '#000000', 'IT'],
+  ['MIL', 'Milano Rossoneri', 'MİL', 'ITA', 81, '#fb090b', '#000000', 'IT'],
+  ['ATA', 'Bergamo Tanrıçaları', 'BER', 'ITA', 80, '#1e71b8', '#000000', 'IT'],
+  ['ROM', 'Roma Kurtları', 'ROM', 'ITA', 78, '#8e1f2f', '#f0bc42', 'IT'],
+  ['LAZ', 'Lazio Kartalları', 'LAZ', 'ITA', 77, '#87d8f7', '#ffffff', 'IT'],
+  ['FIO', 'Floransa Morları', 'FLO', 'ITA', 76, '#482e92', '#ffffff', 'IT'],
+  ['BOL', 'Bolonya FC', 'BOL', 'ITA', 75, '#1a2f48', '#a21c26', 'IT'],
+  ['TOR', 'Torino Boğaları', 'TOB', 'ITA', 72, '#8a1e03', '#ffffff', 'IT'],
+  // Fransa
+  ['PSG', 'Paris Saint-Gilles', 'PSG', 'FRA', 87, '#004170', '#da291c', 'FR'],
+  ['OM', 'Marsilya Olimpik', 'MAR', 'FRA', 79, '#2faee0', '#ffffff', 'FR'],
+  ['ASM', 'Monako Prensleri', 'MON', 'FRA', 79, '#e7182e', '#ffffff', 'FR'],
+  ['LIL', 'Lil Dogları', 'LİL', 'FRA', 77, '#e01e13', '#20325f', 'FR'],
+  ['OL', 'Lyon Aslanları', 'LYO', 'FRA', 76, '#ffffff', '#1d4994', 'FR'],
+  ['RCL', 'Lens Kırmızıları', 'LEN', 'FRA', 75, '#ffe300', '#e30613', 'FR'],
+  ['NIC', 'Nis Kartalları', 'NİS', 'FRA', 74, '#000000', '#e2001a', 'FR'],
+  ['REN', 'Ren Stadı FK', 'REN', 'FRA', 74, '#e13327', '#000000', 'FR'],
+  ['STR', 'Strazburk Elzas', 'STR', 'FRA', 72, '#009fe3', '#ffffff', 'FR'],
+  ['NAN', 'Nant Kanaryaları', 'NAN', 'FRA', 71, '#fcd405', '#00843d', 'FR'],
+];
+
+// Ünlü oyuncuların lisans gerektirmeyen benzer isimleri: [isim, mevki, güç, ülke]
+const STARS = {
+  GAL: [['Victor Osimen', 'FW', 84, 'NGA'], ['Mauro İkardo', 'FW', 79, 'ARG'], ['Leroy Sanel', 'FW', 80, 'GER'], ['Barış Alper Yılmazer', 'FW', 79, 'TUR'], ['Uğurcan Çakar', 'GK', 80, 'TUR'], ['Lucas Torrera', 'MF', 79, 'URU'], ['Gabriel Sarro', 'MF', 78, 'BRA'], ['Davinson Sançez', 'DF', 78, 'COL'], ['Abdülkerim Bardakoğlu', 'DF', 77, 'TUR']],
+  FNK: [['Edersen', 'GK', 84, 'BRA'], ['Milan Skrinar', 'DF', 81, 'SVK'], ['Marko Asensyo', 'MF', 80, 'ESP'], ['Fredo Rodriges', 'MF', 78, 'BRA'], ['Kerem Aktürkler', 'FW', 79, 'TUR'], ['Yusuf En-Nesri', 'FW', 79, 'MAR'], ['Sebastian Şimanski', 'MF', 78, 'POL'], ['Çağlar Söyüncan', 'DF', 77, 'TUR'], ['İsmail Yüksekdağ', 'MF', 76, 'TUR'], ['Mert Müldüroğlu', 'DF', 76, 'TUR']],
+  BJK: [['Orkun Kökçe', 'MF', 80, 'TUR'], ['Rafa Silvas', 'FW', 77, 'POR'], ['Ciro İmmobilo', 'FW', 77, 'ITA'], ['Gedson Fernandas', 'MF', 78, 'POR'], ['Ersin Destancı', 'GK', 74, 'TUR']],
+  TRB: [['Paul Onuaçu', 'FW', 77, 'NGA'], ['Ernest Muçi', 'FW', 74, 'ALB']],
+  BSK: [['Kristof Piontek', 'FW', 76, 'POL']],
+  MCS: [['Erling Halland', 'FW', 91, 'NOR'], ['Rodry', 'MF', 89, 'ESP'], ['Phil Foder', 'MF', 85, 'ENG'], ['Ruben Diyas', 'DF', 86, 'POR'], ['Bernardo Silvo', 'MF', 85, 'POR'], ['Josko Gvardiyol', 'DF', 85, 'CRO'], ['Jeremi Doko', 'FW', 83, 'BEL'], ['Gianluigi Donnaruma', 'GK', 88, 'ITA'], ['Omar Marmuş', 'FW', 83, 'EGY']],
+  LIV: [['Mohamed Saleh', 'FW', 89, 'EGY'], ['Virgil van Dyck', 'DF', 88, 'NED'], ['Alisson Bekker', 'GK', 88, 'BRA'], ['Florian Wirtzer', 'MF', 87, 'GER'], ['Alexis Mak Alister', 'MF', 86, 'ARG'], ['Ryan Gravenberh', 'MF', 85, 'NED'], ['Cody Gakpa', 'FW', 83, 'NED'], ['Dominik Szoboszlo', 'MF', 84, 'HUN'], ['Alexander İsakk', 'FW', 86, 'SWE']],
+  ARS: [['Bukayo Saki', 'FW', 88, 'ENG'], ['Martin Ödegard', 'MF', 87, 'NOR'], ['Declan Raiz', 'MF', 87, 'ENG'], ['William Salibo', 'DF', 87, 'FRA'], ['Gabriel Magalhes', 'DF', 86, 'BRA'], ['David Raja', 'GK', 86, 'ESP'], ['Viktor Gyökeros', 'FW', 85, 'SWE']],
+  CHE: [['Cole Palmar', 'MF', 87, 'ENG'], ['Enzo Fernandas', 'MF', 85, 'ARG'], ['Moises Kaiçedo', 'MF', 85, 'ECU'], ['Joao Pedra', 'FW', 82, 'BRA']],
+  MUN: [['Bruno Fernandas', 'MF', 86, 'POR'], ['Bryan Mbömo', 'FW', 83, 'CMR'], ['Matheus Kunya', 'FW', 83, 'BRA'], ['Benjamin Şeşko', 'FW', 82, 'SVN']],
+  NEW: [['Bruno Gimaraes', 'MF', 85, 'BRA'], ['Anthony Gordan', 'FW', 83, 'ENG'], ['Sandro Tonelli', 'MF', 84, 'ITA']],
+  TOT: [['James Medison', 'MF', 83, 'ENG'], ['Cristian Romerro', 'DF', 85, 'ARG'], ['Dominic Solanky', 'FW', 80, 'ENG']],
+  AVL: [['Ollie Watkinz', 'FW', 83, 'ENG'], ['Emiliano Martines', 'GK', 85, 'ARG']],
+  BHA: [['Ferdi Kadıköylü', 'DF', 79, 'TUR']],
+  RMA: [['Kylian Mbappo', 'FW', 91, 'FRA'], ['Vinicio Junho', 'FW', 89, 'BRA'], ['Jude Bellinger', 'MF', 89, 'ENG'], ['Federico Valverdo', 'MF', 87, 'URU'], ['Thibaut Courtoy', 'GK', 89, 'BEL'], ['Antonio Rüdinger', 'DF', 85, 'GER'], ['Arda Güner', 'MF', 85, 'TUR'], ['Aurelien Çuameni', 'MF', 84, 'FRA'], ['Trent Aleksandır-Arnot', 'DF', 85, 'ENG'], ['Rodrigo Goez', 'FW', 84, 'BRA']],
+  BAR: [['Lamin Yamel', 'FW', 90, 'ESP'], ['Robert Lewandovsky', 'FW', 86, 'POL'], ['Pedry', 'MF', 88, 'ESP'], ['Rafinya', 'FW', 87, 'BRA'], ['Frenkie de Jongh', 'MF', 85, 'NED'], ['Gavy', 'MF', 83, 'ESP'], ['Ronald Arauco', 'DF', 84, 'URU'], ['Pau Kubarsi', 'DF', 84, 'ESP'], ['Dani Olmó', 'MF', 84, 'ESP']],
+  ATM: [['Antoine Grizmann', 'FW', 85, 'FRA'], ['Julian Alvarres', 'FW', 86, 'ARG'], ['Jan Oblek', 'GK', 87, 'SVN'], ['Koky', 'MF', 82, 'ESP']],
+  ATH: [['Nico Wiliams', 'FW', 85, 'ESP'], ['Unai Simón', 'GK', 84, 'ESP']],
+  BAY: [['Harry Kain', 'FW', 90, 'ENG'], ['Jamal Musiola', 'MF', 88, 'GER'], ['Joshua Kimmih', 'MF', 87, 'GER'], ['Manuel Neuler', 'GK', 85, 'GER'], ['Michael Olize', 'FW', 86, 'FRA'], ['Luis Diyaz', 'FW', 85, 'COL'], ['Dayot Upamekano', 'DF', 84, 'FRA'], ['Alfonso Daviz', 'DF', 84, 'CAN']],
+  LEV: [['Patrik Şik', 'FW', 80, 'CZE'], ['Piero Hinkapie', 'DF', 81, 'ECU']],
+  BVB: [['Serhou Girassi', 'FW', 85, 'GUI'], ['Niko Şlotterbek', 'DF', 84, 'GER'], ['Julian Brandit', 'MF', 83, 'GER'], ['Gregor Kobell', 'GK', 86, 'SUI']],
+  INT: [['Lautaro Martines', 'FW', 88, 'ARG'], ['Hakan Çalıkoğlu', 'MF', 85, 'TUR'], ['Nicolo Barello', 'MF', 86, 'ITA'], ['Alessandro Bastonni', 'DF', 86, 'ITA'], ['Marcus Türam', 'FW', 84, 'FRA'], ['Yann Sommar', 'GK', 84, 'SUI']],
+  JUV: [['Kenan Yıldırım', 'FW', 84, 'TUR'], ['Dusan Vlahoviç', 'FW', 83, 'SRB'], ['Gleison Bremmer', 'DF', 84, 'BRA'], ['Teun Koopmeinars', 'MF', 82, 'NED']],
+  MIL: [['Rafael Leau', 'FW', 85, 'POR'], ['Christian Pulişik', 'FW', 84, 'USA'], ['Mike Menyan', 'GK', 86, 'FRA'], ['Luka Modrac', 'MF', 84, 'CRO']],
+  NAP: [['Kevin De Braune', 'MF', 86, 'BEL'], ['Scott MacTominey', 'MF', 84, 'SCO'], ['Romelu Lukako', 'FW', 82, 'BEL'], ['Giovanni Di Lorenso', 'DF', 83, 'ITA'], ['Stanislav Lobotko', 'MF', 83, 'SVK']],
+  ROM: [['Paulo Dibalo', 'FW', 83, 'ARG'], ['Lorenzo Pellegrino', 'MF', 80, 'ITA']],
+  ATA: [['Ademola Lukmen', 'FW', 84, 'NGA']],
+  LAZ: [['Mattia Zakkagni', 'FW', 80, 'ITA']],
+  PSG: [['Ousmane Dembelo', 'FW', 90, 'FRA'], ['Vitinya', 'MF', 88, 'POR'], ['Achraf Hakimo', 'DF', 88, 'MAR'], ['Marquinyos', 'DF', 85, 'BRA'], ['Khviça Kvaratskelya', 'FW', 88, 'GEO'], ['Desire Duey', 'FW', 85, 'FRA'], ['Joao Nevez', 'MF', 87, 'POR'], ['Nuno Mendez', 'DF', 87, 'POR']],
+  OM: [['Mason Greenvud', 'FW', 84, 'ENG'], ['Pierre-Emerik Obameyong', 'FW', 80, 'GAB']],
+  ASM: [['Ansu Fatih', 'FW', 78, 'ESP'], ['Takumi Minamono', 'MF', 80, 'JPN']],
+};
+
+const NAME_POOLS = {
+  TR: {
+    f: ['Ahmet', 'Mehmet', 'Mustafa', 'Emre', 'Burak', 'Can', 'Cem', 'Onur', 'Kaan', 'Efe', 'Yusuf', 'Eren', 'Berk', 'Mert', 'Alper', 'Serkan', 'Hakan', 'Volkan', 'Oğuz', 'Tolga', 'Umut', 'Arda', 'Kerem', 'Deniz', 'Ozan', 'Furkan', 'Enes', 'Batuhan', 'Halil', 'İbrahim', 'Salih', 'Selim', 'Barış', 'Doruk', 'Görkem', 'Yiğit', 'Emir', 'Ege', 'Çağan', 'Taha'],
+    l: ['Yılmaz', 'Kaya', 'Demir', 'Şahin', 'Çelik', 'Yıldız', 'Aydın', 'Öztürk', 'Arslan', 'Doğan', 'Kılıç', 'Aslan', 'Çetin', 'Kara', 'Koç', 'Kurt', 'Özdemir', 'Polat', 'Erdem', 'Güneş', 'Aksoy', 'Tekin', 'Bulut', 'Ünal', 'Korkmaz', 'Özkan', 'Turan', 'Taş', 'Avcı', 'Sarı', 'Bozkurt', 'Uysal', 'Karaca', 'Toprak', 'Yalçın', 'Ateş', 'Duman', 'Akın', 'Sönmez', 'Erol'],
+  },
+  EN: {
+    f: ['Jack', 'Harry', 'Oliver', 'George', 'Charlie', 'Jacob', 'Thomas', 'James', 'William', 'Lewis', 'Ben', 'Sam', 'Joe', 'Ryan', 'Kyle', 'Callum', 'Mason', 'Reece', 'Jordan', 'Luke'],
+    l: ['Smith', 'Jones', 'Taylor', 'Brown', 'Williams', 'Wilson', 'Johnson', 'Davies', 'Robinson', 'Wright', 'Thompson', 'Evans', 'Walker', 'White', 'Roberts', 'Green', 'Hall', 'Wood', 'Clarke', 'Hughes'],
+  },
+  ES: {
+    f: ['Pablo', 'Sergio', 'Alejandro', 'Javier', 'Diego', 'Carlos', 'Álvaro', 'Iker', 'Hugo', 'Adrián', 'Marcos', 'Raúl', 'Dani', 'Unai', 'Mikel', 'Jorge', 'Víctor', 'Rubén', 'Iván', 'Pau'],
+    l: ['García', 'Martínez', 'López', 'Sánchez', 'Pérez', 'Gómez', 'Ruiz', 'Hernández', 'Díaz', 'Moreno', 'Muñoz', 'Romero', 'Navarro', 'Torres', 'Domínguez', 'Vázquez', 'Ramos', 'Gil', 'Serrano', 'Molina'],
+  },
+  DE: {
+    f: ['Lukas', 'Leon', 'Jonas', 'Finn', 'Felix', 'Maximilian', 'Niklas', 'Tim', 'Jan', 'Paul', 'Moritz', 'Florian', 'Julian', 'Kai', 'Timo', 'Marco', 'Dennis', 'Tobias', 'Fabian', 'Nico'],
+    l: ['Müller', 'Schmidt', 'Schneider', 'Fischer', 'Weber', 'Meyer', 'Wagner', 'Becker', 'Schulz', 'Hoffmann', 'Koch', 'Richter', 'Klein', 'Wolf', 'Schröder', 'Neumann', 'Braun', 'Zimmermann', 'Krüger', 'Hartmann'],
+  },
+  IT: {
+    f: ['Marco', 'Luca', 'Alessandro', 'Andrea', 'Matteo', 'Lorenzo', 'Davide', 'Simone', 'Federico', 'Riccardo', 'Giacomo', 'Nicolò', 'Stefano', 'Gianluca', 'Filippo', 'Tommaso', 'Pietro', 'Daniele', 'Emanuele', 'Mattia'],
+    l: ['Rossi', 'Russo', 'Ferrari', 'Esposito', 'Bianchi', 'Romano', 'Colombo', 'Ricci', 'Marino', 'Greco', 'Bruno', 'Gallo', 'Conti', 'De Luca', 'Mancini', 'Costa', 'Giordano', 'Rizzo', 'Lombardi', 'Moretti'],
+  },
+  FR: {
+    f: ['Lucas', 'Hugo', 'Théo', 'Nathan', 'Mathis', 'Enzo', 'Louis', 'Gabriel', 'Jules', 'Arthur', 'Raphaël', 'Maxime', 'Antoine', 'Yanis', 'Rayan', 'Ibrahima', 'Moussa', 'Mamadou', 'Adrien', 'Bastien'],
+    l: ['Martin', 'Bernard', 'Dubois', 'Thomas', 'Robert', 'Richard', 'Petit', 'Durand', 'Leroy', 'Moreau', 'Simon', 'Laurent', 'Lefebvre', 'Michel', 'Fournier', 'Girard', 'Bonnet', 'Dupont', 'Lambert', 'Fontaine'],
+  },
+  XX: {
+    f: ['Lucas', 'Gabriel', 'Mateus', 'Rafael', 'Thiago', 'Bruno', 'Kofi', 'Samuel', 'Ibrahim', 'Youssef', 'Amadou', 'Emmanuel', 'Viktor', 'Nikola', 'Luka', 'Andrej', 'Takumi', 'Min-jae', 'Ola', 'Sander'],
+    l: ['Silva', 'Santos', 'Oliveira', 'Souza', 'Pereira', 'Mensah', 'Diallo', 'Traoré', 'Koné', 'Mendy', 'Petrović', 'Jovanović', 'Kovač', 'Novak', 'Sato', 'Kim', 'Andersen', 'Larsen', 'Nielsen', 'Hansen'],
+  },
+};
+
+// Mağaza eşyaları
+// cat: boots (maç bonusu), gear (antrenman çarpanı), food (haftalık enerji), life (moral/ün)
+const ITEMS = [
+  { id: 'boot1', cat: 'boots', name: 'Mahalle Kramponu', icon: '👟', price: 400, bonus: { shooting: 1, technique: 1 }, desc: 'Şut +1, Teknik +1 (maçlarda)' },
+  { id: 'boot2', cat: 'boots', name: 'Kulüp Kramponu', icon: '👟', price: 6000, bonus: { shooting: 2, technique: 2, pace: 1 }, desc: 'Şut +2, Teknik +2, Hız +1' },
+  { id: 'boot3', cat: 'boots', name: 'Pro Krampon', icon: '👟', price: 90000, bonus: { shooting: 3, technique: 3, pace: 2 }, desc: 'Şut +3, Teknik +3, Hız +2' },
+  { id: 'boot4', cat: 'boots', name: 'Altın Krampon', icon: '🥇', price: 1500000, bonus: { shooting: 5, technique: 4, pace: 3, passing: 2 }, desc: 'Şut +5, Teknik +4, Hız +3, Pas +2' },
+  { id: 'gear1', cat: 'gear', name: 'Antrenman Topu', icon: '⚽', price: 250, mult: 1.1, desc: 'Antrenman kazancı +%10' },
+  { id: 'gear2', cat: 'gear', name: 'Koni ve Huni Seti', icon: '🚧', price: 3000, mult: 1.18, desc: 'Antrenman kazancı +%18' },
+  { id: 'gear3', cat: 'gear', name: 'Ev Spor Salonu', icon: '🏋️', price: 120000, mult: 1.3, desc: 'Antrenman kazancı +%30' },
+  { id: 'gear4', cat: 'gear', name: 'Kişisel Performans Merkezi', icon: '🏟️', price: 3000000, mult: 1.45, desc: 'Antrenman kazancı +%45' },
+  { id: 'food1', cat: 'food', name: 'Sporcu Beslenmesi Kitabı', icon: '📘', price: 300, regen: 5, desc: 'Haftalık enerji yenilenmesi +5' },
+  { id: 'food2', cat: 'food', name: 'Blender ve Protein', icon: '🥤', price: 4000, regen: 9, desc: 'Haftalık enerji yenilenmesi +9' },
+  { id: 'food3', cat: 'food', name: 'Diyetisyen', icon: '🥗', price: 150000, regen: 14, desc: 'Haftalık enerji yenilenmesi +14' },
+  { id: 'food4', cat: 'food', name: 'Kişisel Şef', icon: '👨‍🍳', price: 1200000, regen: 20, desc: 'Haftalık enerji yenilenmesi +20' },
+  { id: 'life1', cat: 'life', name: 'Bisiklet', icon: '🚲', price: 1500, morale: 1, fame: 0, desc: 'Her hafta moral +1' },
+  { id: 'life2', cat: 'life', name: 'Oyun Konsolu', icon: '🎮', price: 9000, morale: 1, fame: 0, desc: 'Her hafta moral +1' },
+  { id: 'life3', cat: 'life', name: 'Akıllı Telefon', icon: '📱', price: 25000, morale: 1, fame: 1, desc: 'Her hafta moral +1, Ün +1' },
+  { id: 'life4', cat: 'life', name: 'Spor Araba', icon: '🏎️', price: 4500000, morale: 2, fame: 5, desc: 'Her hafta moral +2, Ün +5' },
+  { id: 'life5', cat: 'life', name: 'Deniz Manzaralı Villa', icon: '🏡', price: 25000000, morale: 3, fame: 8, desc: 'Her hafta moral +3, Ün +8' },
+  { id: 'life6', cat: 'life', name: 'Lüks Yat', icon: '🛥️', price: 90000000, morale: 3, fame: 12, desc: 'Her hafta moral +3, Ün +12' },
+];
