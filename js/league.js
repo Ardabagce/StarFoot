@@ -6,9 +6,11 @@ const World = {
     return `${U.pick(p.f)} ${U.pick(p.l)}`;
   },
 
-  genRoster(club) {
+  genRoster(club, year) {
     const roster = [];
-    const stars = STARS[club.id] || [];
+    // Günümüz kadrolarındaki tanınmış isimler yalnızca 2020 sonrası başlangıçlarda
+    const legendNames = new Set(LEGENDS.map((x) => x[0]));
+    const stars = (year >= 2020 ? STARS[club.id] || [] : []).filter((x) => !legendNames.has(x[0]));
     stars.forEach(([n, pos, r, nat]) => roster.push({ n, pos, r, nat, age: U.randi(22, 32), star: true }));
     const need = { GK: 2, DF: 6, MF: 6, FW: 4 };
     roster.forEach((pl) => (need[pl.pos] = Math.max(0, need[pl.pos] - 1)));
@@ -27,14 +29,15 @@ const World = {
     return roster;
   },
 
-  create() {
+  create(year = 2026) {
     const clubs = {};
     CLUB_LIST.forEach(([id, name, short, league, rating, c1, c2, pool]) => {
       const club = { id, name, short, league, rating, c1, c2, pool };
-      club.roster = World.genRoster(club);
+      club.roster = World.genRoster(club, year);
       clubs[id] = club;
     });
-    const world = { clubs, leagues: {} };
+    const world = { clubs, leagues: {}, year };
+    Legends.init(world, year);
     LEAGUES.forEach((l) => {
       world.leagues[l.id] = World.newLeagueSeason(Object.values(clubs).filter((c) => c.league === l.id).map((c) => c.id));
     });
@@ -131,8 +134,8 @@ const World = {
   endSeason(world) {
     const tr1 = World.sortedTable(world.leagues.TR1);
     const tr2 = World.sortedTable(world.leagues.TR2);
-    const down = tr1.slice(-2).map((r) => r.id);
-    const up = tr2.slice(0, 2).map((r) => r.id);
+    const down = tr1.slice(-3).map((r) => r.id);
+    const up = tr2.slice(0, 3).map((r) => r.id);
     down.forEach((id) => (world.clubs[id].league = 'TR2'));
     up.forEach((id) => (world.clubs[id].league = 'TR1'));
     // Güç kayması: başarılı takımlar biraz güçlenir
@@ -147,8 +150,9 @@ const World = {
         c.roster.forEach((pl) => {
           pl.age++;
           if (!pl.star) pl.r = Math.round(U.clamp(c.rating + U.randi(-9, 3), 35, 92));
+          else if (pl.lid == null && pl.age >= 31) pl.r = Math.max(50, pl.r - U.randi(1, 3));
         });
-        c.roster = c.roster.filter((pl) => pl.star || pl.age < 35 || U.chance(0.5));
+        c.roster = c.roster.filter((pl) => pl.lid != null || pl.age < 35 || U.chance(0.4));
         const need = { GK: 2, DF: 6, MF: 6, FW: 4 };
         c.roster.forEach((pl) => (need[pl.pos] = Math.max(0, need[pl.pos] - 1)));
         for (const pos in need) for (let i = 0; i < need[pos]; i++) {

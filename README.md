@@ -23,7 +23,13 @@ Oyunu bir web sunucusundan (ör. GitHub Pages) açıp tarayıcı menüsünden **
 
 ## Özellikler
 
-- **Kariyer:** 8 yaşında U10 takımında başlarsın. Sırasıyla U12, U14, U16 ve U19 takımlarında oynarsın. 17-18 yaşında profesyonel sözleşme imzalar, 33 yaşından sonra istediğin zaman emekli olabilirsin.
+- **5 kariyer slotu:** Aynı anda 5 farklı kariyer; istediğini silebilirsin.
+- **Başlangıç yılı ve yaşı:** 1980'den 2026'ya kadar istediğin yılda, 8-18 yaş arasında başlarsın. 8-12 yaşında başlarsan ilk maçın bir **sokak maçı** olur; performansına göre scout seni bir altyapıya götürür.
+- **Dönem yıldızları:** Seçtiğin yılın kurgusal yıldızları sahadadır (1980'ler: Maradoni, Platinni, van Bastın... 2000'ler: Ronaldinyo, Anri... bugün: Mbappo, Halland, Yamel...). Oyuncular yaşlanır, emekli olur, gençler sırası gelince profesyonel olur; liste bittikten sonra yeni nesil yıldızlar üretilir. Emeklilikler, yeni yıldızlar ve büyük transferler haberlerde ve sosyal medya gündeminde çıkar.
+- **Kariyer:** U10, U12, U14, U16 ve U19 takımlarında oynarsın. 17-18 yaşında profesyonel sözleşme imzalar, 33 yaşından sonra istediğin zaman emekli olabilirsin.
+- **20 takımlı ligler:** Tüm ligler 20 takım, 38 hafta. Türkiye'de 3 takım düşer, 3 takım çıkar.
+- **Avrupa kupaları:** Her sezon Avrupa Şampiyonlar Kupası ve Avrupa Federasyon Kupası (16 takım, tek maç eleme). Kulübün katılırsa maçlarını sen oynarsın.
+- **Dünya Kupası ve Avrupa Şampiyonası:** Gerçek takvimle (Dünya Kupası 1986, 1990... 2026, 2030; Avrupa Şampiyonası 1984, 1988... 2024, 2028) sezon sonunda oynanır. Milli takıma çağrılırsan maçlarına çıkarsın.
 - **9 stat:** Hız, Şut, Pas, Top Sürme, Teknik, Kafa, Savunma, Güç, Dayanıklılık. Mevkine göre (Forvet / Orta Saha / Defans) genel gücün hesaplanır.
 - **Haftalık aksiyonlar (haftada 3 hak):** antrenman, yoğun antrenman, özel hoca, dinlenme, takım arkadaşlarıyla vakit geçirme, hocayla konuşma, taraftarlarla etkileşim.
 - **Maçlar:** Maç dakika dakika simüle edilir. Kritik anlarda oyun durur ve sen oynarsın:
@@ -40,7 +46,7 @@ Oyunu bir web sunucusundan (ör. GitHub Pages) açıp tarayıcı menüsünden **
 - **Enerji, moral, ün ve sakatlıklar.**
 - **Rastgele olaylar:** parti daveti, röportaj, sınav haftası, sponsorluk teklifleri...
 - **Transferler:** altyapılar arası transfer, profesyonel sözleşme, ara transfer dönemi ve sezon sonu teklifleri.
-- **7 lig ve 70 kulüp:** Türkiye (2 lig, küme düşme/çıkma ile), İngiltere, İspanya, Almanya, İtalya ve Fransa.
+- **7 lig ve 140 kulüp:** Türkiye (2 lig, küme düşme/çıkma ile), İngiltere, İspanya, Almanya, İtalya ve Fransa.
 - **Milli takım:** Yeterince iyiysen milli maçlara çağrılırsın.
 - **Mağaza:** Yaşa göre değişen reyonlar (çocukken futbolcu kartı albümü, idolünün forması, bahçe kalesi; gençken spor salonu, scooter; profesyonelken lüks saat, araba, villa, yat). Enerji içeceği, masaj, fizyoterapi, yaz kampı ve yıldız futbolcu kliniği gibi tek kullanımlık ürünler.
 - **Kupa vitrini ve madalyalar:** Kazandığın kupalar raflarda sergilenir; ilk gol, hat-trick, 100 maç, milli forma, ilk milyon gibi 17 madalya.
@@ -62,6 +68,8 @@ js/util.js       Yardımcı fonksiyonlar
 js/data.js       Ülkeler, ligler, kulüpler, kurgusal yıldızlar, isim havuzları, mağaza
 js/player.js     Statlar, genel güç, antrenman, yaşlanma
 js/league.js     Kadrolar, fikstür, lig simülasyonu, altyapı ligleri
+js/legends.js    Dönem yıldızları, yaşlanma, emeklilik, yeni nesil
+js/cups.js       Avrupa kupaları, Dünya Kupası, Avrupa Şampiyonası
 js/minigame.js   Şut/pas fizik sahnesi ve zamanlama barı
 js/match.js      Maç motoru
 js/game.js       Kariyer akışı, ekranlar, olaylar, sezon sonu

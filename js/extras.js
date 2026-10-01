@@ -162,7 +162,7 @@ const Loot = {
 Events.list.push(
   {
     id: 'idolcamp', cond: (p) => p.age <= 16,
-    text: () => 'Lionel Mezzi, şehrine gelip bir futbol okulu kampı düzenliyor. Seni de davet ettiler!',
+    text: () => `${Legends.idol(Game.state.world)}, şehrine gelip bir futbol okulu kampı düzenliyor. Seni de davet ettiler!`,
     opts: [
       { t: 'Kampa katıl', fx: (p) => { const a = Player.train(p, 'technique', 2, 1.1), b = Player.train(p, 'dribbling', 2, 1.1); Player.addEnergy(p, -15); Player.addMorale(p, 8); return `Hayatının günü! Teknik +${a.toFixed(1)}, Top Sürme +${b.toFixed(1)}`; } },
       { t: 'Katılamam', fx: () => 'Belki bir dahaki sefere.' },
@@ -204,7 +204,7 @@ Events.list.push(
   },
   {
     id: 'ballraffle', cond: () => true,
-    text: () => 'Kulübün çekilişinden Erling Halland imzalı bir top kazandın!',
+    text: () => `Kulübün çekilişinden ${Legends.idol(Game.state.world)} imzalı bir top kazandın!`,
     opts: [
       { t: 'Sat', fx: (p) => { const a = Game.isYouth() ? 800 : Math.round(Game.weeklyIncome() * 0.6); p.money += a; return `${U.money(a)} kazandın.`; } },
       { t: 'Odama koy', fx: (p) => { Player.addMorale(p, 8); return 'Her baktığında motive oluyorsun. Moral +8'; } },
@@ -228,7 +228,7 @@ Events.list.push(
   },
   {
     id: 'allstar', cond: (p) => !Game.isYouth() && p.fame >= 30,
-    text: () => 'Cristiano Ronalda ve Neymor\'un da oynayacağı bir yardım maçına davet edildin!',
+    text: () => { const a = Legends.active(Game.state.world).sort((x, y) => y.r - x.r); return `${a[0] ? a[0].n : 'Dünya yıldızları'}${a[1] ? ' ve ' + a[1].n : ''} gibi yıldızların oynayacağı bir yardım maçına davet edildin!`; },
     opts: [
       { t: 'Katıl', fx: (p) => { Player.addFame(p, 4); Player.addRel(p, 'fans', 6); Player.addMorale(p, 8); Player.addEnergy(p, -15); return 'Efsanelerle aynı sahayı paylaştın!'; } },
       { t: 'Dinlenmeyi seç', fx: (p) => { Player.addEnergy(p, 5); return 'Bir sonraki maça odaklandın.'; } },
@@ -262,6 +262,16 @@ const Social = {
     if (n >= 1e6) return (n / 1e6).toFixed(n >= 1e7 ? 0 : 1).replace('.', ',') + ' Mn';
     if (n >= 1e3) return (n / 1e3).toFixed(n >= 1e4 ? 0 : 1).replace('.', ',') + ' B';
     return String(n);
+  },
+  // Dünya gündemi: yıldızların veda, ilk maç ve transfer paylaşımları
+  trend(x) {
+    const so = Social.ensure(Game.p);
+    so.trends = so.trends || [];
+    const handle = '@' + x.L.n.toLowerCase().replace(/[^a-zçğıöşü]/g, '').replace(/ç/g, 'c').replace(/ğ/g, 'g').replace(/ı/g, 'i').replace(/ö/g, 'o').replace(/ş/g, 's').replace(/ü/g, 'u');
+    const text = { retire: 'Teşekkürler futbol. Her şey için minnettarım. Şimdi yeni bir sayfa.', debut: 'İlk profesyonel sözleşmemi imzaladım! Hayaller gerçek oluyor.', transfer: 'Yeni maceraya hazırım. Yeni formam çok yakıştı mı?' }[x.kind];
+    const likes = Math.round(Math.exp(x.L.peak * 0.19) * U.rand(0.6, 1.4));
+    so.trends.unshift({ u: handle, n: x.L.n, kind: x.kind, text, likes, y: Game.state.season.year + 1 });
+    so.trends = so.trends.slice(0, 8);
   },
   week() {
     const p = Game.p, so = Social.ensure(p);
@@ -302,6 +312,7 @@ const Social = {
             <div><b>${Social.fmt(likes)}</b><span>Beğeni</span></div>
           </div>
         </div>
+        ${(so.trends || []).length ? `<div class="lbl">Gündem</div><div class="so-trends">${so.trends.slice(0, full ? 6 : 2).map((x) => `<div class="so-tr ${x.kind}"><b>${U.esc(x.u)}</b><span>${U.esc(x.text)}</span><small>${Icon('heart')}${Social.fmt(x.likes)} · ${x.y}</small></div>`).join('')}</div><div class="lbl">Paylaşımların</div>` : ''}
         ${posts.length ? `<div class="so-posts">${posts.map((x) => `
           <article class="so-post ${x.kind}">
             <div class="so-img">${Icon(icon[x.kind] || 'phone')}</div>
@@ -331,11 +342,14 @@ const Social = {
 // ---------- Dünyadan haberler (tekrar etmeyen, ara ara mizahi) ----------
 const WorldNews = {
   star() {
-    const ids = Object.keys(STARS);
-    const id = U.pick(ids);
-    const st = U.pick(STARS[id]);
-    return { n: st[0], club: Game.state.world.clubs[id] ? Game.state.world.clubs[id].name : '' };
+    const w = Game.state.world;
+    const act = Legends.active(w);
+    if (act.length) { const a = U.pick(act); return { n: a.n, club: (w.clubs[a.L.club] || {}).name || '' }; }
+    const c = U.pick(Object.values(w.clubs).filter((x) => x.rating >= 75));
+    const pl = c.roster.slice().sort((a, b) => b.r - a.r)[0];
+    return { n: pl.n, club: c.name };
   },
+  live(name) { return Game.state.world.legends && Game.state.world.legends.some((L) => L.n === name && L.state === 'active'); },
   bigClub() { return U.pick(Object.values(Game.state.world.clubs).filter((c) => c.rating >= 78)).name; },
   anyClub() { return U.pick(Object.values(Game.state.world.clubs)).name; },
   lastResults() {
@@ -351,8 +365,8 @@ const WorldNews = {
     { id: 'radar', f: (W) => { const a = W.star(); return `${W.bigClub()}, ${a.n} için harekete geçti! Menajeri: "Telefonum o kadar çok çalıyor ki şarjım yetmiyor."`; } },
     { id: 'rewatch', f: (W) => { const a = W.star(); return `${a.n}, son golünü 47 kez izlediğini itiraf etti: "48. izleyişte daha da güzeldi."`; } },
     { id: 'president', f: (W) => `${W.anyClub()} başkanı transfer dönemi için konuştu: "Kasada para var, sadece anahtarı bulamadık."` },
-    { id: 'mezzi', f: () => 'Lionel Mezzi bu sezon maç başına ortalama 4 çalım atıyor. Rakip defanslar ortak bir terapiste gidiyor.' },
-    { id: 'ronalda', f: () => 'Cristiano Ronalda yeni antrenman videosu paylaştı. Karın kaslarının ayrı bir hesap açacağı konuşuluyor.' },
+    { id: 'mezzi', f: (W) => !W.live('Lionel Mezzi') ? null : 'Lionel Mezzi bu sezon maç başına ortalama 4 çalım atıyor. Rakip defanslar ortak bir terapiste gidiyor.' },
+    { id: 'ronalda', f: (W) => !W.live('Cristiano Ronalda') ? null : 'Cristiano Ronalda yeni antrenman videosu paylaştı. Karın kaslarının ayrı bir hesap açacağı konuşuluyor.' },
     { id: 'lace', f: (W) => `${W.anyClub()} kalecisi bağcığını bağlarken gol yedi. Açıklaması kısa: "Bağcık bizim değildi."` },
     { id: 'watch', f: (W) => { const a = W.star(); return `${a.n} bu hafta maçta ${U.randi(12, 14)},${U.randi(1, 9)} km koştu. Akıllı saati "lütfen dur" uyarısı verdi.`; } },
     { id: 'emoji', f: (W) => { const a = W.star(), b = W.star(); return a.n === b.n ? null : `${a.n} ile ${b.n} arasında sosyal medyada "kim daha hızlı" tartışması çıktı. Yarış önerisi geldi.`; } },
@@ -361,8 +375,8 @@ const WorldNews = {
     { id: 'cat', f: (W) => { const a = W.star(); return `${a.n} hafif sakatlandı. Evde kedisine çalım atmaya çalışırken halıya takılmış.`; } },
     { id: 'mom', f: (W) => { const a = W.star(); return `${a.n} sahadayken annesi tribünde 90 dakika boyunca hakeme itiraz etti. Hakem: "Ben bile ikna oldum."`; } },
     { id: 'var', f: (W) => `${W.anyClub()} maçında VAR incelemesi 9 dakika sürdü. Seyirciler bu sürede çay demledi.` },
-    { id: 'halland', f: () => 'Erling Halland kahvaltıda 14 yumurta yediğini açıkladı. Tavuk çiftlikleri vardiya ekledi.' },
-    { id: 'yamel', f: () => 'Lamin Yamel ödevini yetiştirdikten sonra hat-trick yaptı. Öğretmeni ek puan verdi.' },
+    { id: 'halland', f: (W) => !W.live('Erling Halland') ? null : 'Erling Halland kahvaltıda 14 yumurta yediğini açıkladı. Tavuk çiftlikleri vardiya ekledi.' },
+    { id: 'yamel', f: (W) => !W.live('Lamin Yamel') ? null : 'Lamin Yamel ödevini yetiştirdikten sonra hat-trick yaptı. Öğretmeni ek puan verdi.' },
     { id: 'bigwin', f: (W) => { const r = W.lastResults().sort((a, b) => Math.abs(b.hs - b.as) - Math.abs(a.hs - a.as))[0]; if (!r || Math.abs(r.hs - r.as) < 3) return null; const c = Game.state.world.clubs; const win = r.hs > r.as ? c[r.h].name : c[r.a].name, lose = r.hs > r.as ? c[r.a].name : c[r.h].name; return `${r.lg}'nde haftanın farkı: ${win}, ${lose} karşısında ${Math.max(r.hs, r.as)}-${Math.min(r.hs, r.as)} kazandı. Kaybeden teknik direktör: "Çim çok kaygandı."`; } },
     { id: 'upset', f: (W) => { const c = Game.state.world.clubs; const r = W.lastResults().find((x) => (x.hs > x.as && c[x.a].rating - c[x.h].rating >= 8) || (x.as > x.hs && c[x.h].rating - c[x.a].rating >= 8)); if (!r) return null; const win = r.hs > r.as ? c[r.h].name : c[r.a].name, lose = r.hs > r.as ? c[r.a].name : c[r.h].name; return `Haftanın sürprizi ${r.lg}'nden: ${win}, favori rakibi ${lose} karşısında ${Math.max(r.hs, r.as)}-${Math.min(r.hs, r.as)} kazandı.`; } },
     { id: 'leader', f: () => { const l = U.pick(LEAGUES); const t = World.sortedTable(Game.state.world.leagues[l.id])[0]; if (!t || !t.p) return null; return `${l.name}'nde zirvede ${Game.state.world.clubs[t.id].name} var (${t.pts} puan). Rakipleri takvim yaprağı koparmaktan çekinir oldu.`; } },

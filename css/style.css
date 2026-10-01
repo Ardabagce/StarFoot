@@ -260,7 +260,7 @@ input, select {
 .nw.bad small { color: #ff8f86; }
 
 .offer { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border: 1px solid var(--line); margin-bottom: 8px; background: rgba(5, 11, 29, .4); }
-.of-info { flex: 1; min-width: 0; }
+.of-info { flex: 1 1 140px; min-width: 0; }
 .of-info em { color: var(--flood); font-style: normal; font-size: 12px; margin-left: 4px; }
 .of-info small, .of-terms small { display: block; color: var(--muted); }
 .of-terms { text-align: right; }
@@ -442,6 +442,7 @@ kbd { background: var(--panel-2); border: 1px solid var(--line); padding: 0 5px;
   .ms-grid { grid-template-columns: repeat(2, 1fr); }
   .tbl { font-size: 13px; }
   .offer { flex-wrap: wrap; }
+  .offer > .btn { flex: 1 1 100%; }
   .nm-team b { font-size: 16px; }
 }
 
@@ -685,6 +686,51 @@ kbd { background: var(--panel-2); border: 1px solid var(--line); padding: 0 5px;
   .so-stats b { font-size: 18px; }
   .so-avatar { width: 58px; height: 58px; }
 }
+
+/* ---------- Kariyer slotları ---------- */
+.slots { display: flex; flex-direction: column; gap: 8px; }
+.slot { display: grid; grid-template-columns: 34px 1fr auto auto; align-items: center; gap: 10px; background: rgba(5, 11, 29, .78); border: 1px solid var(--line); padding: 8px 10px; }
+.slot.empty { grid-template-columns: 34px 1fr auto; opacity: .92; }
+.sl-n { font-family: var(--display); font-weight: 800; font-size: 26px; color: var(--flood); text-align: center; }
+.sl-t { min-width: 0; }
+.sl-t b { display: block; font-size: 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sl-t small { color: var(--muted); }
+.slot .btn { min-height: 40px; padding: 8px 14px; font-size: 15px; }
+.slot .btn-play { clip-path: polygon(6px 0, 100% 0, calc(100% - 6px) 100%, 0 100%); min-height: 40px; padding: 8px 16px; font-size: 16px; }
+.sl-del { width: 40px; padding: 0; }
+.title-card { max-width: 520px; }
+
+/* ---------- Sosyal gündem ---------- */
+.so-trends { display: flex; flex-direction: column; gap: 6px; margin-bottom: 4px; }
+.so-tr { display: grid; grid-template-columns: 1fr auto; gap: 2px 10px; padding: 8px 10px; background: rgba(5, 11, 29, .45); border-left: 3px solid var(--sky); }
+.so-tr.retire { border-left-color: var(--flood); }
+.so-tr b { color: var(--sky); font-size: 13px; }
+.so-tr span { grid-column: 1 / -1; font-size: 14px; }
+.so-tr small { grid-row: 1; grid-column: 2; display: inline-flex; align-items: center; gap: 4px; color: #ff6f8a; font-weight: 700; }
+.so-tr small .ic { width: 13px; height: 13px; fill: currentColor; }
+
+/* ---------- Kupalar ---------- */
+.cups { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 10px; }
+.cup { background: rgba(5, 11, 29, .45); border: 1px solid var(--line); padding: 10px; min-width: 0; }
+.cup-h { display: flex; flex-direction: column; margin-bottom: 8px; }
+.cup-h b { font-family: var(--display); font-weight: 800; font-size: 18px; text-transform: uppercase; color: var(--flood); }
+.cup-h small { color: var(--muted); }
+.cup-list { display: flex; flex-direction: column; gap: 3px; }
+.cm { display: grid; grid-template-columns: 1fr auto 1fr; gap: 8px; font-size: 13px; padding: 4px 6px; }
+.cm span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--muted); }
+.cm span:first-child { text-align: right; }
+.cm span.w { color: var(--chalk); font-weight: 700; }
+.cm b { font-family: var(--display); font-weight: 800; }
+.cm.me { background: rgba(255, 207, 63, .12); }
+.cup-teams { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 10px; font-size: 13px; }
+.cup-teams span { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cup-teams span.me { color: var(--flood); font-weight: 700; }
+.cup-teams .shirt { width: 16px; height: 16px; }
+.cup-in { margin: 8px 0 0; color: var(--flood); font-size: 13px; }
+.cup-hist { display: flex; flex-direction: column; gap: 3px; }
+.cup-hist div { display: grid; grid-template-columns: 46px 1fr auto; gap: 8px; font-size: 13px; padding: 4px 0; border-bottom: 1px solid var(--line); }
+.cup-hist small { font-family: var(--display); font-weight: 800; color: var(--flood); }
+.cup-hist span { color: var(--muted); }
 
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }

@@ -32,21 +32,26 @@ function ageGroupName(age) {
 }
 
 const Player = {
+  // 38 haftalık sezona göre antrenman katsayısı
+  TRAIN_K: 0.3,
   create(opts) {
     const stats = {};
-    STATS.forEach((s) => (stats[s.k] = 12 + (opts.alloc[s.k] || 0)));
+    const age = opts.age || 8;
+    // Büyük yaşta başlayan oyuncu yaşıtları seviyesinde başlar
+    const base = Math.max(12, Math.round(expectedAtAge(age) - 6));
+    STATS.forEach((s) => (stats[s.k] = base + (opts.alloc[s.k] || 0)));
     return {
       name: opts.name,
       surname: opts.surname,
       nation: opts.nation,
       position: opts.position,
       foot: opts.foot,
-      age: 8,
+      age,
       stats,
       potential: U.randi(80, 96),
       energy: 100,
       morale: 70,
-      money: 200,
+      money: 200 + (age - 8) * 150,
       fame: 0,
       injuryWeeks: 0,
       rel: { coach: 50, team: 50, fans: 30 },
@@ -120,7 +125,7 @@ const Player = {
   train(p, statKey, intensity, facility) {
     const val = p.stats[statKey];
     const moraleF = 0.75 + 0.5 * (p.morale / 100);
-    const gain = 0.55 * intensity * Player.ageMult(p.age) * Player.growthFactor(p, val) * moraleF * facility * Player.trainMult(p) * U.rand(0.7, 1.3);
+    const gain = Player.TRAIN_K * intensity * Player.ageMult(p.age) * Player.growthFactor(p, val) * moraleF * facility * Player.trainMult(p) * U.rand(0.7, 1.3);
     p.stats[statKey] = U.clamp(val + gain, 1, 99);
     return gain;
   },
@@ -129,7 +134,7 @@ const Player = {
   matchXp(p, keys) {
     for (const k of keys) {
       const val = p.stats[k];
-      p.stats[k] = U.clamp(val + 0.12 * Player.ageMult(p.age) * Player.growthFactor(p, val), 1, 99);
+      p.stats[k] = U.clamp(val + 0.065 * Player.ageMult(p.age) * Player.growthFactor(p, val), 1, 99);
     }
   },
 
