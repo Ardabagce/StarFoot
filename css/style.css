@@ -12,6 +12,7 @@
   --bad: #ff6b6b;
   --info: #5dade2;
   --radius: 12px;
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -114,7 +115,7 @@ input, select {
 .hdr {
   display: flex; align-items: center; justify-content: space-between; gap: 10px;
   padding: 10px 16px; background: var(--bg2); border-bottom: 1px solid var(--line);
-  position: sticky; top: 0; z-index: 5; flex-wrap: wrap;
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; flex-wrap: wrap;
 }
 .logo { font-size: 20px; font-weight: 900; cursor: pointer; }
 .hdr-info { display: flex; gap: 16px; color: var(--muted); flex-wrap: wrap; }
