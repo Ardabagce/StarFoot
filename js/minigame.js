@@ -28,11 +28,12 @@ const Scenes = {
     }
 
     if (type === 'freekick') {
-      const dist = U.rand(18, 26);
+      const dist = U.rand(17, 25);
       const ang = U.rand(-0.5, 0.5) * (o.narrow ? 0.6 : 1);
       sc.ball = { x: Math.sin(ang) * dist, y: Math.cos(ang) * dist };
       const dx = -sc.ball.x / dist, dy = -sc.ball.y / dist;
-      const n = 2 + (dist < 22 ? 1 : 0) + (s > 0.35 ? 1 : 0) + (s > 0.65 ? 1 : 0);
+      const n = 2 + (dist < 21 ? 1 : 0) + (s > 0.45 ? 1 : 0) + (s > 0.7 ? 1 : 0);
+      sc.dist = dist;
       const cx = sc.ball.x + dx * 9.15, cy = sc.ball.y + dy * 9.15;
       const px = -dy, py = dx;
       const shift = (sc.ball.x > 0 ? 1 : -1) * 0.5;
@@ -79,6 +80,17 @@ const Scenes = {
     if (type === 'open' && U.chance(0.12 + 0.5 * s)) {
       const p = place(() => [U.rand(-6, 6), U.rand(4, 9)], 2);
       if (p) sc.defenders.push({ x: p[0], y: p[1], h: 1.9 });
+    }
+    // Ofsayt çizgisi: kaleye en yakın saha oyuncusu (kaleci son adam sayılır)
+    if (type === 'open' || type === 'deep') {
+      if (!sc.defenders.some((d) => d.y < sc.ball.y - 3)) {
+        const p = place(() => [U.rand(-8, 8), U.rand(6, Math.max(7, sc.ball.y - 6))], 2);
+        if (p) sc.defenders.push({ x: p[0], y: p[1], h: 1.9 });
+      }
+      const line = Math.min(...sc.defenders.map((d) => d.y), sc.ball.y);
+      // çoğu arkadaş çizgide durur, bazen biri ofsayta düşer
+      sc.mates.forEach((m) => { if (m.y < line && U.chance(0.7)) m.y = Math.min(sc.ball.y - 1.5, line + U.rand(0.3, 1.6)); });
+      sc.offside = line;
     }
     sc.keeper.x = U.clamp(sc.ball.x * 0.15, -2, 2);
     sc.timeLimit = (type === 'close' ? 5 : 6.5) + (o.pace || 50) / 40 - s * 1.5;
@@ -162,8 +174,11 @@ const MiniGame = {
       const st = o.stats;
       const s = o.skill;
       const cond = o.cond;
-      const maxSpeed = 21 + st.shooting * 0.12 + (scene.type === 'penalty' ? 2 : 0);
-      const curveMax = 2.2 + st.technique * 0.075;
+      const isFK = scene.type === 'freekick';
+      // Uzak frikiklerde daha güçlü vuruş ve daha çok falso
+      const fkFar = isFK ? U.clamp(((scene.dist || 20) - 17) / 8, 0, 1) : 0;
+      const maxSpeed = 21 + st.shooting * 0.12 + (scene.type === 'penalty' ? 2 : 0) + (isFK ? 3 + fkFar * 3 : 0);
+      const curveMax = (2.2 + st.technique * 0.075) * (isFK ? 1.3 : 1);
       const angSigma = ((1 - st.technique / 100) * 2.8 + 0.3) * cond * (0.55 + 0.8 * s) * Math.PI / 180;
       const passSigma = ((1 - st.passing / 100) * 2.4 + 0.25) * cond * (0.6 + 0.6 * s) * Math.PI / 180;
       const assist = U.clamp(0.75 - s, 0, 0.6); // nişan yardımı (düşük seviyelerde güçlü)
@@ -175,7 +190,7 @@ const MiniGame = {
       const shooter = mk({ x: scene.ball.x - 0.6, y: scene.ball.y + 0.7 }, 7, { num: o.number || 10 });
       const kp = scene.keeper;
       const keeper = mk({ x: kp.x, y: kp.y }, 3, {
-        delay: 0.34 - 0.2 * s, speed: 1.6 + 3.0 * s, reach: 0.5 + 0.55 * s, dive: 0.2 + 0.6 * s,
+        delay: 0.34 - 0.2 * s + fkFar * 0.12, speed: (1.6 + 3.0 * s) * (1 - fkFar * 0.25), reach: (0.5 + 0.55 * s) * (1 - fkFar * 0.15), dive: 0.2 + 0.6 * s,
         tx: kp.x, pen: scene.type === 'penalty', diveAmt: 0,
       });
       const defs = scene.defenders.map((d, i) => mk(d, 11 + i * 3));
@@ -302,7 +317,9 @@ const MiniGame = {
         if (phase !== 'aim') return;
         cv.setPointerCapture(e.pointerId);
         const p = toCanvas(e);
-        gesture = { pts: [p], world: [toWorld(p[0], p[1])] };
+        const w0 = toWorld(p[0], p[1]);
+        // Kaptan: arkadaşına basılı tutup sürükleyerek yerini değiştirir
+        gesture = { pts: [p], world: [w0], mate: o.captain ? mateAt(w0) : null, drag: false };
         preview = null;
         e.preventDefault();
       });
@@ -311,6 +328,19 @@ const MiniGame = {
         const p = toCanvas(e);
         const lp = gesture.pts[gesture.pts.length - 1];
         if (Math.hypot(p[0] - lp[0], p[1] - lp[1]) < 3 * dpr) return;
+        if (gesture.mate) {
+          const g0 = gesture.pts[0];
+          if (!gesture.drag && Math.hypot(p[0] - g0[0], p[1] - g0[1]) > 14 * dpr) gesture.drag = true;
+          if (gesture.drag) {
+            const m = gesture.mate, w = toWorld(p[0], p[1]);
+            if (m.ox == null) { m.ox = m.x; m.oy = m.y; }
+            m.x = U.clamp(U.clamp(w.x, m.ox - 8, m.ox + 8), -20, 20);
+            m.y = U.clamp(U.clamp(w.y + 0.6, m.oy - 8, m.oy + 8), 2, 33);
+            preview = null;
+            e.preventDefault();
+            return;
+          }
+        }
         gesture.pts.push(p);
         gesture.world.push(toWorld(p[0], p[1]));
         refreshPreview();
@@ -320,6 +350,7 @@ const MiniGame = {
         if (!gesture || phase !== 'aim') return;
         const g = gesture;
         gesture = null;
+        if (g.drag) { preview = null; return; }
         const p0 = g.pts[0], p1 = g.pts[g.pts.length - 1];
         if (Math.hypot(p1[0] - p0[0], p1[1] - p0[1]) < 12 * dpr) {
           const m = mateAt(g.world[0]);
@@ -334,25 +365,31 @@ const MiniGame = {
       cv.addEventListener('pointercancel', () => { gesture = null; preview = null; });
 
       function passTo(m) {
+        // Ofsayt: pas anında son savunmacının gerisinde ve topun önündeyse
+        if (scene.offside != null && m.y < scene.offside - 0.15 && m.y < ball.y) {
+          m.offside = true;
+          return finish('offside', 'OFSAYT!', '#ffcf3f', { mate: m.name });
+        }
         const tgx = m.x, tgy = m.y - 0.6;
         const D = Math.hypot(tgx - ball.x, tgy - ball.y);
-        const lift = LIFTS[liftIdx].v;
+        // pasta yükseklik: yarım = orta yay, aşırtma = savunmanın üstünden yüksek yay
+        const lift = [0, 0.8, 1.25][liftIdx];
         let speed;
         if (lift === 0) speed = Math.sqrt(9.5 * 9.5 + 2 * 3.2 * D);
         else {
           const th = lift * 0.62;
-          speed = Math.sqrt((D * 9.8) / Math.max(0.2, Math.sin(2 * th))) * 0.92;
+          speed = Math.sqrt((D * 9.8) / Math.max(0.2, Math.sin(2 * th))) * 0.95;
         }
         speed = Math.min(speed, maxSpeed);
         passTarget = m;
-        kick(Math.atan2(tgy - ball.y, tgx - ball.x), speed / maxSpeed, 0, true);
+        kick(Math.atan2(tgy - ball.y, tgx - ball.x), speed / maxSpeed, 0, true, lift);
       }
 
-      function kick(ang, power, spin, isPass) {
+      function kick(ang, power, spin, isPass, liftV) {
         const sig = isPass ? passSigma : angSigma * (0.6 + 0.5 * power);
         const a = ang + U.gauss() * sig;
         const sp = power * maxSpeed * (1 + U.gauss() * 0.035 * cond);
-        BallPhys.launch(ball, a, sp, LIFTS[liftIdx].v * (1 + U.gauss() * 0.05 * cond), spin * (1 + U.gauss() * 0.08 * cond));
+        BallPhys.launch(ball, a, sp, (liftV != null ? liftV : LIFTS[liftIdx].v) * (1 + U.gauss() * 0.05 * cond), spin * (1 + U.gauss() * 0.08 * cond));
         phase = 'fly';
         kickT = t;
         if (keeper.pen) {
@@ -424,7 +461,10 @@ const MiniGame = {
         if (t - ms.kickT > 0.12) {
           const d = keeper.tx - keeper.x;
           keeper.x += Math.sign(d) * Math.min(Math.abs(d), (ms.goal ? 2.2 : 5) * dt);
-          if (ball.y < 7) keeper.diveAmt = Math.min(1, keeper.diveAmt + dt * 5);
+          if (ball.y < 7) {
+            if (!keeper.diveAmt) keeper.diveDir = Math.sign(ms.tx - keeper.x) || 1;
+            keeper.diveAmt = Math.min(1, keeper.diveAmt + dt * 5);
+          }
         }
         [...defs, ...mates, keeper].forEach((e) => moveEnt(e, dt));
         slowmo = ball.y < 7 && Math.abs(ball.x) < 9 ? 0.4 : 1;
@@ -474,8 +514,12 @@ const MiniGame = {
             keeper.tx = U.clamp(target, -4.2, 4.2);
           }
           const d = keeper.tx - keeper.x;
-          keeper.x += Math.sign(d) * Math.min(Math.abs(d), keeper.speed * dt);
-          if (ball.y < 7 && Math.abs(d) > 0.6) keeper.diveAmt = Math.min(1, Math.abs(keeper.diveAmt) + dt * 5);
+          const lunge = keeper.diveAmt > 0.3 ? 1.35 : 1;
+          keeper.x += Math.sign(d) * Math.min(Math.abs(d), keeper.speed * lunge * dt);
+          if (ball.y < 8 && (Math.abs(d) > 0.45 || (ball.z > 1.4 && Math.abs(ball.x - keeper.x) > 0.3))) {
+            if (!keeper.diveAmt) keeper.diveDir = Math.sign(ball.x - keeper.x) || 1;
+            keeper.diveAmt = Math.min(1, keeper.diveAmt + dt * 5.5);
+          }
         }
         defs.forEach((d) => {
           if (d.wall || ft < dDelay) return;
@@ -544,19 +588,26 @@ const MiniGame = {
         if (!preview || !preview.pts.length) return;
         const pts = preview.pts;
         const n = Math.max(2, Math.floor(pts.length * previewFrac));
-        const col = preview.power > 0.85 ? '255,120,90' : preview.power > 0.55 ? '255,207,63' : '124,240,160';
-        ctx.strokeStyle = 'rgba(0,0,0,0.22)'; ctx.lineWidth = 3 * dpr; ctx.setLineDash([3 * dpr, 7 * dpr]);
+        // her zeminde görünsün: koyu gölge + beyaz çekirdek
+        ctx.lineCap = 'round';
+        ctx.strokeStyle = 'rgba(5,11,29,0.55)'; ctx.lineWidth = 7 * dpr;
         ctx.beginPath(); ctx.moveTo(tx(ball.x), ty(ball.y));
-        for (let i = 0; i < n; i++) ctx.lineTo(tx(pts[i][0]), ty(pts[i][1]));
-        ctx.stroke(); ctx.setLineDash([]);
-        for (let i = 0; i < n; i += 3) {
-          const a = 1 - (i / n) * 0.7;
-          ctx.fillStyle = `rgba(${col},${a})`;
-          ctx.beginPath(); ctx.arc(tx(pts[i][0]), ty(pts[i][1], pts[i][2]), (4 - (i / n) * 1.8) * dpr, 0, Math.PI * 2); ctx.fill();
-        }
+        for (let i = 0; i < n; i++) ctx.lineTo(tx(pts[i][0]), ty(pts[i][1], pts[i][2]));
+        ctx.stroke();
+        ctx.strokeStyle = 'rgba(255,255,255,0.95)'; ctx.lineWidth = 3 * dpr; ctx.setLineDash([2 * dpr, 9 * dpr]);
+        ctx.beginPath(); ctx.moveTo(tx(ball.x), ty(ball.y));
+        for (let i = 0; i < n; i++) ctx.lineTo(tx(pts[i][0]), ty(pts[i][1], pts[i][2]));
+        ctx.stroke(); ctx.setLineDash([]); ctx.lineCap = 'butt';
         const e = pts[n - 1];
-        ctx.strokeStyle = `rgba(${col},0.95)`; ctx.lineWidth = 2.5 * dpr;
-        ctx.beginPath(); ctx.arc(tx(e[0]), ty(e[1], e[2]), 9 * dpr, 0, Math.PI * 2); ctx.stroke();
+        const ex = tx(e[0]), ey = ty(e[1], e[2]), r = 11 * dpr;
+        ctx.strokeStyle = 'rgba(5,11,29,0.8)'; ctx.lineWidth = 6 * dpr;
+        ctx.beginPath(); ctx.arc(ex, ey, r, 0, Math.PI * 2); ctx.stroke();
+        ctx.strokeStyle = '#ff3df0'; ctx.lineWidth = 3 * dpr;
+        ctx.beginPath(); ctx.arc(ex, ey, r, 0, Math.PI * 2); ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(ex - r * 1.7, ey); ctx.lineTo(ex - r * 0.6, ey); ctx.moveTo(ex + r * 0.6, ey); ctx.lineTo(ex + r * 1.7, ey);
+        ctx.moveTo(ex, ey - r * 1.7); ctx.lineTo(ex, ey - r * 0.6); ctx.moveTo(ex, ey + r * 0.6); ctx.lineTo(ex, ey + r * 1.7);
+        ctx.stroke();
       }
 
       function drawHud() {
@@ -576,7 +627,7 @@ const MiniGame = {
           ctx.beginPath(); ctx.arc(bx, by, R, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * preview.power); ctx.stroke();
           ctx.lineCap = 'butt';
           const c = preview.curve;
-          pill(`GÜÇ ${Math.round(preview.power * 100)}   ·   ${Math.abs(c) < 0.12 ? 'DÜZ' : c > 0 ? '◀ FALSO' : 'FALSO ▶'}   ·   ${LIFTS[liftIdx].l.toUpperCase()}`);
+          pill(`GÜÇ ${Math.round(preview.power * 100)}   ·   ${Math.abs(c) < 0.12 ? 'DÜZ' : c > 0 ? '◀ FALSO' : 'FALSO ▶'}   ·   ${LIFTS[liftIdx].l.toUpperCase()}${isFK ? `   ·   ${Math.round(scene.dist)} M` : ''}`);
         }
         if (phase === 'mate' && mateShot) pill(`PAS ULAŞTI · ${mateShot.m.name.split(' ').slice(-1)[0].toUpperCase()} VURUYOR...`);
         if (gesture && gesture.pts.length > 1) {
@@ -594,7 +645,9 @@ const MiniGame = {
           ctx.beginPath(); ctx.arc(g1[0], g1[1], 16 * fs, 0, Math.PI * 2); ctx.stroke();
           ctx.lineCap = 'butt';
         }
-        if (showHint && phase === 'aim' && !gesture && !preview) {
+        if (o.captain && phase === 'aim' && !gesture && !preview && t < 3.5 && scene.mates.length) {
+          pill('KAPTANSIN: ARKADAŞINI BASILI TUTUP SÜRÜKLE');
+        } else if (showHint && phase === 'aim' && !gesture && !preview) {
           const k = (t % 1.6) / 1.6;
           const bx = tx(ball.x), by = ty(ball.y);
           const gx = tx(U.clamp(ball.x * 0.3, -2.5, 2.5)), gy = ty(1);
@@ -613,12 +666,32 @@ const MiniGame = {
         ctx.drawImage(bg, 0, 0);
         const sh = netShake > 0 ? Math.sin(t * 50) * 6 * dpr * netShake : 0;
         Sprites.net(ctx, tx, ty, PX, sh);
+        if (scene.offside != null && (phase === 'aim' || (result && result.outcome === 'offside'))) {
+          // TV tarzı ofsayt çizgisi
+          const oy = ty(scene.offside);
+          ctx.strokeStyle = result && result.outcome === 'offside' ? 'rgba(255,207,63,0.95)' : 'rgba(120,200,255,0.55)';
+          ctx.lineWidth = 2.5 * dpr; ctx.setLineDash([12 * dpr, 8 * dpr]);
+          ctx.beginPath(); ctx.moveTo(0, oy); ctx.lineTo(W, oy); ctx.stroke(); ctx.setLineDash([]);
+          ctx.font = `700 ${Math.round(11 * dpr)}px "Barlow Semi Condensed", sans-serif`;
+          ctx.fillStyle = 'rgba(120,200,255,0.9)'; ctx.textAlign = 'left';
+          ctx.fillText('OFSAYT ÇİZGİSİ', 8 * dpr, oy - 5 * dpr);
+        }
         if (phase === 'aim') drawPreview();
         const h = FIG();
         const lab = (txt) => (phase === 'aim' ? txt : null);
         const ents = [];
         ents.push({ y: 0, d: () => Sprites.frame(ctx, tx, ty, PX) });
-        ents.push({ y: keeper.y, d: () => Sprites.figure(ctx, tx(keeper.x), ty(keeper.y), h, { kit: kits.gk, look: keeper.look, facing: 'down', run: keeper.run, speed: keeper.spd, gloves: true, dive: keeper.diveAmt, t }) });
+        ents.push({ y: keeper.y, d: () => {
+          const kd = keeper.diveAmt || 0;
+          if (kd < 0.02) return Sprites.figure(ctx, tx(keeper.x), ty(keeper.y), h, { kit: kits.gk, look: keeper.look, facing: 'down', run: keeper.run, speed: keeper.spd, gloves: true, t });
+          // uçuş: vücut topa doğru yatar, kollar uzanır, kaleci yerden kesilir
+          const high = ball.z > 1.3;
+          ctx.save();
+          ctx.translate(tx(keeper.x), ty(keeper.y) - kd * h * (high ? 0.32 : 0.12));
+          ctx.rotate((keeper.diveDir || 1) * kd * (high ? 1.05 : 1.35));
+          Sprites.figure(ctx, 0, 0, h, { kit: kits.gk, look: keeper.look, facing: 'down', gloves: true, dive: 1, t });
+          ctx.restore();
+        } });
         defs.forEach((d) => ents.push({ y: d.y, d: () => Sprites.figure(ctx, tx(d.x), ty(d.y), h * (d.wall ? 1.02 : 1), { kit: kits.opp, look: d.look, facing: 'down', run: d.run, speed: d.spd, dive: d.wall && phase !== 'aim' ? 0.5 : 0, t }) }));
         mates.forEach((m) => ents.push({ y: m.y, d: () => Sprites.figure(ctx, tx(m.x), ty(m.y), h, { kit: kits.own, look: m.look, facing: 'up', run: m.run, speed: m.spd, number: m.num, kick: mateShot && mateShot.m === m && t - mateShot.kickT < 0.35 ? (t - mateShot.kickT) / 0.35 : 0, label: lab(m.name.split(' ').slice(-1)[0].toUpperCase()), labelScale: dpr, ring: phase === 'aim' ? 'rgba(124,240,160,0.95)' : null, t }) }));
         const kickA = phase !== 'aim' && t - kickT < 0.35 ? (t - kickT) / 0.35 : 0;
@@ -944,6 +1017,186 @@ Object.assign(MiniGame, {
       const cleanup = () => { cancelAnimationFrame(raf); document.removeEventListener('keydown', key); window.removeEventListener('resize', layout); };
       box.addEventListener('pointerdown', (e) => { e.preventDefault(); tap(); });
       document.addEventListener('keydown', key);
+      raf = requestAnimationFrame(loop);
+      MiniGame._abort = () => { if (done) return; done = true; cleanup(); resolve({ result: 'auto' }); };
+    });
+  },
+
+  // Ortak tuval kurulumu (dokunma tabanlı mini oyunlar)
+  _canvas(host, foot) {
+    host.innerHTML = `
+      <div class="tg">
+        <div class="tg-stage"><canvas class="tg-canvas"></canvas></div>
+        <div class="tg-foot">${foot}</div>
+      </div>`;
+    const g = { box: host.querySelector('.tg'), stage: host.querySelector('.tg-stage'), cv: host.querySelector('canvas') };
+    g.ctx = g.cv.getContext('2d');
+    g.layout = () => {
+      const cw = Math.max(200, g.stage.clientWidth), ch = Math.max(200, g.stage.clientHeight);
+      g.dpr = Math.min(2, window.devicePixelRatio || 1);
+      g.W = Math.round(cw * g.dpr); g.H = Math.round(ch * g.dpr);
+      g.cv.width = g.W; g.cv.height = g.H; g.cv.style.width = cw + 'px'; g.cv.style.height = ch + 'px';
+    };
+    g.layout();
+    window.addEventListener('resize', g.layout);
+    g.grass = () => { for (let i = 0; i < 12; i++) { g.ctx.fillStyle = i % 2 ? '#2f8c45' : '#38994d'; g.ctx.fillRect(0, (g.H / 12) * i, g.W, g.H / 12 + 1); } };
+    g.text = (txt, y, size, col = '#fff') => {
+      const c = g.ctx;
+      c.textAlign = 'center'; c.fillStyle = col;
+      c.font = `italic 800 ${Math.round(size * g.dpr)}px "Saira Condensed", "Arial Narrow", sans-serif`;
+      c.lineWidth = 4 * g.dpr; c.strokeStyle = 'rgba(5,11,29,0.7)'; c.strokeText(txt, g.W / 2, y); c.fillText(txt, g.W / 2, y);
+    };
+    return g;
+  },
+
+  // Top sektirme: top ayağa inerken (yeşil bölge) dokun, yere düşürme
+  juggle(host, o) {
+    return new Promise((resolve) => {
+      const g = MiniGame._canvas(host, '<b>Top yeşil bölgeye inince dokun</b> · erken dokunursan ritmin bozulur · <kbd>Boşluk</kbd>');
+      const { ctx } = g;
+      const GOAL = 10;
+      const tech = o.technique || 40;
+      const grav = 12 + o.skill * 5;
+      const zone = U.clamp(0.16 + tech / 500 - o.skill * 0.05, 0.12, 0.34); // bölgenin yüksekliği (0-1)
+      const ball = { h: 0.9, v: 0, x: 0 };
+      let t = 0, done = false, raf = 0, last = performance.now(), touches = 0, best = 0, streak = 0, lives = 3, cool = 0, kick = 0, msg = '', msgT = 0, msgCol = '#fff';
+      const look = Sprites.look(7);
+      const say = (m, c) => { msg = m; msgCol = c; msgT = 0.8; };
+      const tap = () => {
+        if (done || t < 0.5 || cool > 0) return;
+        if (ball.h <= zone && ball.v <= 0) {
+          const perfect = ball.h < zone * 0.5;
+          touches++; streak++; best = Math.max(best, streak);
+          ball.v = 4.8 + U.rand(0, 0.5); ball.x = U.clamp(ball.x + U.rand(-0.12, 0.12), -0.3, 0.3);
+          kick = 0.3;
+          say(perfect ? 'MÜKEMMEL!' : 'İYİ', perfect ? '#7cf0a0' : '#fff');
+          if (touches >= GOAL) finish();
+        } else {
+          cool = 0.35;
+          say('ERKEN!', '#ffcf3f');
+        }
+      };
+      const finish = () => {
+        if (done) return;
+        done = true;
+        const r = touches >= GOAL ? 'success' : touches >= GOAL / 2 ? 'partial' : 'fail';
+        say(r === 'success' ? `${touches} SEKTİRME!` : r === 'partial' ? `${touches} sektirme, fena değil` : 'TOP YERE DÜŞTÜ', r === 'fail' ? '#ff6b6b' : '#7cf0a0');
+        msgT = 9;
+        setTimeout(() => { cleanup(); resolve({ result: r }); }, 1200);
+      };
+      const draw = () => {
+        const { W, H, dpr } = g;
+        g.grass();
+        const fh = Math.min(H * 0.34, W * 0.42);
+        const footY = H * 0.86, topY = H * 0.14;
+        const yOf = (h) => footY - fh * 0.12 - h * (footY - fh * 0.12 - topY);
+        // bölge
+        ctx.fillStyle = 'rgba(124,240,160,0.18)';
+        ctx.fillRect(W * 0.2, yOf(zone), W * 0.6, yOf(0) - yOf(zone));
+        ctx.strokeStyle = 'rgba(124,240,160,0.9)'; ctx.lineWidth = 2 * dpr; ctx.setLineDash([8 * dpr, 6 * dpr]);
+        ctx.beginPath(); ctx.moveTo(W * 0.2, yOf(zone)); ctx.lineTo(W * 0.8, yOf(zone)); ctx.stroke(); ctx.setLineDash([]);
+        Sprites.figure(ctx, W / 2, footY, fh, { kit: o.kits.own, look, facing: 'down', number: o.number, kick: kick > 0 ? 1 - kick / 0.3 : 0, t });
+        const bx = W / 2 + ball.x * W * 0.3 + fh * 0.12, by = yOf(ball.h);
+        ctx.fillStyle = 'rgba(0,0,0,0.25)'; ctx.beginPath(); ctx.ellipse(bx, footY, 12 * dpr, 4 * dpr, 0, 0, Math.PI * 2); ctx.fill();
+        Sprites.ball(ctx, bx, by, Math.max(10 * dpr, fh * 0.07), t * 5);
+        g.text(`${touches} / ${GOAL}`, H * 0.08, 34);
+        ctx.font = `700 ${Math.round(15 * dpr)}px "Barlow Semi Condensed", sans-serif`; ctx.fillStyle = '#fff'; ctx.textAlign = 'right';
+        ctx.fillText('♥'.repeat(lives) + '♡'.repeat(3 - lives), W - 14 * dpr, H * 0.08);
+        if (msgT > 0) g.text(msg, H * 0.5, 30, msgCol);
+        if (t < 0.5) g.text('HAZIR...', H * 0.5, 34);
+      };
+      const loop = (now) => {
+        const dt = Math.min(0.05, (now - last) / 1000);
+        last = now; t += dt;
+        cool = Math.max(0, cool - dt); kick = Math.max(0, kick - dt); msgT = Math.max(0, msgT - dt);
+        if (!done && t > 0.5) {
+          ball.v -= grav * dt * 0.5;
+          ball.h += ball.v * dt * 0.5;
+          if (ball.h < -0.02) {
+            lives--; streak = 0;
+            say('DÜŞTÜ!', '#ff6b6b');
+            if (lives <= 0) finish();
+            else { ball.h = 0.9; ball.v = 0; }
+          }
+          if (t > 30) finish();
+        }
+        draw();
+        raf = requestAnimationFrame(loop);
+      };
+      const key = (e) => { if (e.code === 'Space' || e.code === 'Enter') { e.preventDefault(); tap(); } };
+      const cleanup = () => { cancelAnimationFrame(raf); document.removeEventListener('keydown', key); window.removeEventListener('resize', g.layout); };
+      g.box.addEventListener('pointerdown', (e) => { e.preventDefault(); tap(); });
+      document.addEventListener('keydown', key);
+      raf = requestAnimationFrame(loop);
+      MiniGame._abort = () => { if (done) return; done = true; cleanup(); resolve({ result: 'auto' }); };
+    });
+  },
+
+  // Omuz omuza: basılı tut, güç dolsun; yeşil bantta bırak ve rakibi it
+  shoulder(host, o) {
+    return new Promise((resolve) => {
+      const g = MiniGame._canvas(host, '<b>Basılı tut</b>, güç dolarken <b>yeşil bantta bırak</b> · <kbd>Boşluk</kbd>');
+      const { ctx } = g;
+      const ROUNDS = 3;
+      const phys = o.physical || 40;
+      const bandW = U.clamp(0.14 + phys / 600 - o.skill * 0.05, 0.1, 0.28);
+      const fill = 0.9 + o.skill * 0.7; // saniyede dolma hızı
+      let round = 0, wins = 0, power = 0, holding = false, band = 0, t = 0, done = false, raf = 0, last = performance.now();
+      let push = 0, pushDir = 0, msg = '', msgCol = '#fff', msgT = 0, wait = 0.6;
+      const lookMe = Sprites.look(7), lookOp = Sprites.look(23);
+      const newBand = () => { band = U.rand(0.45, 0.92 - bandW); power = 0; };
+      newBand();
+      const say = (m, c) => { msg = m; msgCol = c; msgT = 0.9; };
+      const down = () => { if (done || wait > 0) return; holding = true; };
+      const up = () => {
+        if (!holding || done) return;
+        holding = false;
+        const ok = power >= band && power <= band + bandW;
+        if (ok) { wins++; pushDir = 1; say('RAKİBİ İTTİN!', '#7cf0a0'); }
+        else { pushDir = -1; say(power < band ? 'ZAYIF KALDI' : 'DENGENİ KAYBETTİN', '#ff6b6b'); }
+        push = 0.6; round++; wait = 0.9;
+        if (round >= ROUNDS) {
+          done = true;
+          const r = wins >= 3 ? 'success' : wins >= 2 ? 'partial' : 'fail';
+          setTimeout(() => { cleanup(); resolve({ result: r }); }, 1100);
+        }
+      };
+      const draw = () => {
+        const { W, H, dpr } = g;
+        g.grass();
+        const fh = Math.min(H * 0.3, W * 0.3);
+        const cx = W / 2, fy = H * 0.66;
+        const off = push > 0 ? pushDir * (1 - Math.abs(push - 0.3) / 0.3) * W * 0.06 : 0;
+        const lean = holding ? power * W * 0.02 : 0;
+        Sprites.figure(ctx, cx + fh * 0.28 + off + lean * 0.3, fy, fh, { kit: o.kits.opp, look: lookOp, facing: 'up', run: t * 2, speed: 0.4, t });
+        Sprites.figure(ctx, cx - fh * 0.28 + lean, fy, fh, { kit: o.kits.own, look: lookMe, facing: 'up', number: o.number, run: t * 2, speed: 0.4, label: 'SEN', labelScale: dpr, labelColor: 'rgba(214,40,57,0.92)', t });
+        Sprites.ball(ctx, cx, fy - fh * 1.25, 11 * dpr, t * 2);
+        // güç barı
+        const bx = W * 0.12, bw = W * 0.76, by = H * 0.84, bh = 22 * dpr;
+        ctx.fillStyle = 'rgba(10,16,32,0.75)'; ctx.fillRect(bx, by, bw, bh);
+        ctx.fillStyle = 'rgba(124,240,160,0.85)'; ctx.fillRect(bx + bw * band, by, bw * bandW, bh);
+        ctx.fillStyle = power > band + bandW ? '#ff6b6b' : '#ffcf3f'; ctx.fillRect(bx, by + bh * 0.3, bw * Math.min(1, power), bh * 0.4);
+        ctx.strokeStyle = '#fff'; ctx.lineWidth = 2 * dpr; ctx.strokeRect(bx, by, bw, bh);
+        g.text(`OMUZ ${Math.min(round + 1, ROUNDS)} / ${ROUNDS} · ${wins} KAZANDIN`, H * 0.08, 28);
+        if (msgT > 0) g.text(msg, H * 0.3, 32, msgCol);
+        else if (!done && wait <= 0 && !holding) g.text('BASILI TUT', H * 0.3, 28, '#ffcf3f');
+      };
+      const loop = (now) => {
+        const dt = Math.min(0.05, (now - last) / 1000);
+        last = now; t += dt;
+        wait = Math.max(0, wait - dt); push = Math.max(0, push - dt); msgT = Math.max(0, msgT - dt);
+        if (wait <= 0 && !holding && power > 0 && !done && push <= 0) newBand();
+        if (holding) { power += fill * dt; if (power > 1.08) up(); }
+        draw();
+        raf = requestAnimationFrame(loop);
+      };
+      const kd = (e) => { if ((e.code === 'Space' || e.code === 'Enter') && !e.repeat) { e.preventDefault(); down(); } };
+      const ku = (e) => { if (e.code === 'Space' || e.code === 'Enter') { e.preventDefault(); up(); } };
+      const pu = () => up();
+      const cleanup = () => { cancelAnimationFrame(raf); document.removeEventListener('keydown', kd); document.removeEventListener('keyup', ku); window.removeEventListener('pointerup', pu); window.removeEventListener('resize', g.layout); };
+      g.box.addEventListener('pointerdown', (e) => { e.preventDefault(); down(); });
+      window.addEventListener('pointerup', pu);
+      document.addEventListener('keydown', kd); document.addEventListener('keyup', ku);
       raf = requestAnimationFrame(loop);
       MiniGame._abort = () => { if (done) return; done = true; cleanup(); resolve({ result: 'auto' }); };
     });

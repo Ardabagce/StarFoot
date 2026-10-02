@@ -1,25 +1,78 @@
 // Madalyalar, kupa vitrini, tek kullanımlık ürünler, sürpriz paketler ve ek olaylar
 
 // ---------- Madalyalar (başarımlar) ----------
-const ACHIEVEMENTS = [
-  { id: 'debut', name: 'İlk Maç', desc: 'İlk resmi maçına çıktın', tier: 'bronze', check: (p) => p.totals.apps >= 1 },
-  { id: 'goal1', name: 'İlk Gol', desc: 'Kariyerinin ilk golünü attın', tier: 'bronze', check: (p) => p.totals.goals >= 1 },
-  { id: 'motm1', name: 'Maçın Adamı', desc: 'İlk kez maçın adamı seçildin', tier: 'bronze', check: (p) => p.totals.motm >= 1 },
-  { id: 'hat', name: 'Hat-trick', desc: 'Bir maçta 3 gol attın', tier: 'silver', check: (p) => (p.flags || {}).hattrick },
-  { id: 'goal50', name: '50 Gol', desc: 'Kariyerinde 50 gole ulaştın', tier: 'silver', check: (p) => p.totals.goals >= 50 },
-  { id: 'assist50', name: 'Pas Ustası', desc: '50 asist yaptın', tier: 'silver', check: (p) => p.totals.assists >= 50 },
-  { id: 'apps100', name: '100 Maç', desc: '100 maçta forma giydin', tier: 'silver', check: (p) => p.totals.apps >= 100 },
-  { id: 'pro', name: 'Profesyonel', desc: 'İlk profesyonel sözleşmeni imzaladın', tier: 'silver', check: () => !Game.isYouth() },
-  { id: 'cap1', name: 'Milli Forma', desc: 'Milli takımda forma giydin', tier: 'silver', check: (p) => p.intl.caps >= 1 },
-  { id: 'trophy1', name: 'İlk Kupa', desc: 'İlk şampiyonluğunu yaşadın', tier: 'silver', check: (p) => p.trophies.some((t) => /Şampiyon/.test(t)) },
-  { id: 'abroad', name: 'Gurbetçi', desc: 'Yurt dışında bir kulübe transfer oldun', tier: 'silver', check: () => !Game.isYouth() && !Game.club().league.startsWith('TR') },
-  { id: 'goal150', name: '150 Gol', desc: 'Kariyerinde 150 gole ulaştın', tier: 'gold', check: (p) => p.totals.goals >= 150 },
-  { id: 'ovr80', name: 'Dünya Yıldızı', desc: 'Genel gücün 80\'e ulaştı', tier: 'gold', check: (p) => Player.overall(p) >= 80 },
-  { id: 'million', name: 'İlk Milyon', desc: 'Hesabında 1 milyon ₺ birikti', tier: 'gold', check: (p) => p.money >= 1e6 },
-  { id: 'fame75', name: 'Herkes Seni Tanıyor', desc: 'Ünün 75\'e ulaştı', tier: 'gold', check: (p) => p.fame >= 75 },
-  { id: 'cap50', name: 'Milli Takım Efsanesi', desc: '50 milli maça çıktın', tier: 'gold', check: (p) => p.intl.caps >= 50 },
-  { id: 'ballon', name: 'Altın Top', desc: 'Yılın futbolcusu seçildin', tier: 'gold', check: (p) => p.trophies.some((t) => /Altın Top/.test(t)) },
+// Kategoriler: eşik listelerinden otomatik üretilir; eski kayıtlarla uyum için bazı kimlikler korunur
+const ACH_CATS = [
+  { id: 'goal', l: 'Gol' }, { id: 'assist', l: 'Asist' }, { id: 'apps', l: 'Maç' }, { id: 'match', l: 'Maç Performansı' },
+  { id: 'special', l: 'Özel Goller' }, { id: 'trophy', l: 'Kupalar ve Ödüller' }, { id: 'intl', l: 'Milli Takım' },
+  { id: 'career', l: 'Kariyer' }, { id: 'skill', l: 'Yetenek' }, { id: 'fame', l: 'Ün ve Sosyal Medya' }, { id: 'life', l: 'Yaşam' },
 ];
+const ACHIEVEMENTS = (() => {
+  const list = [];
+  const tier = (i, n) => (i < n / 3 ? 'bronze' : i < (2 * n) / 3 ? 'silver' : 'gold');
+  const ladder = (cat, key, steps, name, desc, get, ids = {}) => steps.forEach((v, i) => list.push({
+    id: ids[v] || `${key}${v}`, cat, tier: tier(i, steps.length), name: name(v), desc: desc(v), check: (p) => get(p) >= v,
+  }));
+  const fmt = (n) => (n >= 1e6 ? `${n / 1e6} milyon` : n >= 1000 ? `${n / 1000} bin` : `${n}`);
+  const tr = (re) => (p) => p.trophies.filter((t) => re.test(t)).length;
+  const b = (p) => p.best || {};
+  const gt = (p) => p.gt || {};
+
+  ladder('goal', 'g', [1, 10, 25, 50, 100, 150, 200, 300], (v) => (v === 1 ? 'İlk Gol' : `${v} Gol`), (v) => (v === 1 ? 'Kariyerinin ilk golünü attın' : `Kariyerinde ${v} gole ulaştın`), (p) => p.totals.goals, { 1: 'goal1', 50: 'goal50', 150: 'goal150' });
+  ladder('assist', 'a', [1, 10, 25, 50, 100, 200], (v) => (v === 1 ? 'İlk Asist' : v === 50 ? 'Pas Ustası' : `${v} Asist`), (v) => `Kariyerinde ${v} asist yaptın`, (p) => p.totals.assists, { 50: 'assist50' });
+  ladder('apps', 'm', [1, 25, 50, 100, 200, 300], (v) => (v === 1 ? 'İlk Maç' : `${v} Maç`), (v) => (v === 1 ? 'İlk resmi maçına çıktın' : `${v} maçta forma giydin`), (p) => p.totals.apps, { 1: 'debut', 100: 'apps100' });
+  ladder('match', 'motm', [1, 5, 10, 25, 50], (v) => (v === 1 ? 'Maçın Adamı' : `${v}× Maçın Adamı`), (v) => (v === 1 ? 'İlk kez maçın adamı seçildin' : `${v} kez maçın adamı seçildin`), (p) => p.totals.motm, { 1: 'motm1' });
+  list.push(
+    { id: 'hat', cat: 'match', tier: 'silver', name: 'Hat-trick', desc: 'Bir maçta 3 gol attın', check: (p) => (p.flags || {}).hattrick || b(p).g >= 3 },
+    { id: 'poker', cat: 'match', tier: 'gold', name: 'Poker', desc: 'Bir maçta 4 gol attın', check: (p) => b(p).g >= 4 },
+    { id: 'five', cat: 'match', tier: 'gold', name: 'Beşlik', desc: 'Bir maçta 5 gol attın', check: (p) => b(p).g >= 5 },
+    { id: 'ast3', cat: 'match', tier: 'silver', name: 'Pas Şov', desc: 'Bir maçta 3 asist yaptın', check: (p) => b(p).a >= 3 },
+    { id: 'ga4', cat: 'match', tier: 'gold', name: 'Tek Kişilik Ordu', desc: 'Bir maçta 4 gole katkı (gol + asist)', check: (p) => b(p).ga >= 4 },
+    { id: 'r9', cat: 'match', tier: 'silver', name: 'Kusursuza Yakın', desc: 'Bir maçta 9.0 reyting aldın', check: (p) => b(p).r >= 9 },
+    { id: 'r10', cat: 'match', tier: 'gold', name: 'Mükemmel 10', desc: 'Bir maçta 10 reyting aldın', check: (p) => b(p).r >= 10 },
+  );
+  ladder('match', 'streak', [3, 5], (v) => `${v} Maç Üst Üste Gol`, (v) => `Arka arkaya ${v} maçta gol attın`, (p) => b(p).streak || 0);
+  ladder('special', 'fk', [1, 5, 15], (v) => (v === 1 ? 'Frikik Golü' : `${v} Frikik Golü`), (v) => `Frikikten ${v} gol attın`, (p) => gt(p).freekick || 0);
+  ladder('special', 'pen', [1, 10], (v) => (v === 1 ? 'Penaltı Golü' : `${v} Penaltı Golü`), (v) => `Penaltıdan ${v} gol attın`, (p) => gt(p).penalty || 0);
+  ladder('special', 'hd', [1, 10], (v) => (v === 1 ? 'Kafa Golü' : `${v} Kafa Golü`), (v) => `Kafayla ${v} gol attın`, (p) => gt(p).header || 0);
+  ladder('special', 'bg', [1], () => 'Avrupa Gecesi', () => 'Avrupa kupalarında gol attın', (p) => gt(p).cup || 0);
+  ladder('trophy', 'tr', [1, 3, 5, 10, 20], (v) => (v === 1 ? 'İlk Kupa' : `${v} Kupa ve Ödül`), (v) => (v === 1 ? 'İlk kupanı ya da ödülünü kazandın' : `Vitrininde ${v} kupa ve ödül var`), (p) => p.trophies.length, { 1: 'trophy1' });
+  list.push(
+    { id: 'league1', cat: 'trophy', tier: 'silver', name: 'Lig Şampiyonu', desc: 'Profesyonel ligde şampiyon oldun', check: (p) => p.trophies.some((t) => /Lig Şampiyonu|Ligi Şampiyonu|League Şampiyonu|Liga Şampiyonu|Serie A Şampiyonu|Bundesliga Şampiyonu|Ligue 1 Şampiyonu/.test(t)) || p.trophies.some((t) => /Şampiyonu/.test(t) && !/U1\d|U\d|Kupa|Şampiyonası/.test(t)) },
+    { id: 'youthcup', cat: 'trophy', tier: 'bronze', name: 'Altyapı Şampiyonu', desc: 'Altyapı liginde şampiyon oldun', check: (p) => p.trophies.some((t) => /U\d+.*Şampiyonu/.test(t)) },
+    { id: 'ucl', cat: 'trophy', tier: 'gold', name: 'Avrupa\'nın En İyisi', desc: 'Avrupa Şampiyonlar Kupası\'nı kazandın', check: (p) => p.trophies.some((t) => /Şampiyonlar Kupası/.test(t)) },
+    { id: 'uel', cat: 'trophy', tier: 'silver', name: 'Federasyon Kupası', desc: 'Avrupa Federasyon Kupası\'nı kazandın', check: (p) => p.trophies.some((t) => /Federasyon Kupası/.test(t)) },
+    { id: 'wc', cat: 'trophy', tier: 'gold', name: 'Dünya Şampiyonu', desc: 'Dünya Kupası\'nı kazandın', check: (p) => p.trophies.some((t) => /Dünya Kupası Şampiyonu/.test(t)) },
+    { id: 'euro', cat: 'trophy', tier: 'gold', name: 'Avrupa Şampiyonu', desc: 'Avrupa Şampiyonası\'nı kazandın', check: (p) => p.trophies.some((t) => /Avrupa Şampiyonası Şampiyonu/.test(t)) },
+    { id: 'boot', cat: 'trophy', tier: 'silver', name: 'Gol Kralı', desc: 'Bir sezon gol krallığını kazandın', check: (p) => tr(/Gol Kralı/)(p) >= 1 },
+    { id: 'boot3', cat: 'trophy', tier: 'gold', name: 'Seri Gol Kralı', desc: '3 kez gol kralı oldun', check: (p) => tr(/Gol Kralı/)(p) >= 3 },
+    { id: 'poty', cat: 'trophy', tier: 'silver', name: 'Sezonun Oyuncusu', desc: 'Ligde sezonun oyuncusu seçildin', check: (p) => tr(/Sezonun Oyuncusu/)(p) >= 1 },
+    { id: 'young', cat: 'trophy', tier: 'silver', name: 'Yılın Genci', desc: 'Yılın genç oyuncusu seçildin', check: (p) => tr(/Genç Oyuncu/)(p) >= 1 },
+    { id: 'ybest', cat: 'trophy', tier: 'bronze', name: 'Altyapı Yıldızı', desc: 'Altyapı liginin en iyi oyuncusu oldun', check: (p) => tr(/En İyi Oyuncu/)(p) >= 1 },
+    { id: 'ballon', cat: 'trophy', tier: 'gold', name: 'Altın Top', desc: 'Yılın futbolcusu seçildin', check: (p) => tr(/Altın Top/)(p) >= 1 },
+    { id: 'ballon3', cat: 'trophy', tier: 'gold', name: 'Efsane', desc: '3 kez Altın Top kazandın', check: (p) => tr(/Altın Top/)(p) >= 3 },
+  );
+  ladder('intl', 'cap', [1, 10, 25, 50, 100], (v) => (v === 1 ? 'Milli Forma' : v === 50 ? 'Milli Takım Efsanesi' : `${v} Milli Maç`), (v) => (v === 1 ? 'Milli takımda forma giydin' : `${v} milli maça çıktın`), (p) => p.intl.caps, { 1: 'cap1', 50: 'cap50' });
+  ladder('intl', 'ig', [1, 10, 25, 50], (v) => (v === 1 ? 'Milli Gol' : `${v} Milli Gol`), (v) => `Milli takımda ${v} gol attın`, (p) => p.intl.goals);
+  list.push(
+    { id: 'pro', cat: 'career', tier: 'silver', name: 'Profesyonel', desc: 'İlk profesyonel sözleşmeni imzaladın', check: () => !Game.isYouth() },
+    { id: 'abroad', cat: 'career', tier: 'silver', name: 'Gurbetçi', desc: 'Yurt dışında bir kulübe transfer oldun', check: () => !Game.isYouth() && !Game.inStreet() && !Game.club().league.startsWith('TR') },
+    { id: 'captain', cat: 'career', tier: 'silver', name: 'Pazubant', desc: 'Takım kaptanı seçildin', check: (p) => (p.captaincies || 0) >= 1 },
+    { id: 'captain2', cat: 'career', tier: 'gold', name: 'Doğuştan Lider', desc: 'İki farklı takımda kaptan oldun', check: (p) => (p.captaincies || 0) >= 2 },
+    { id: 'clubs3', cat: 'career', tier: 'bronze', name: 'Göçebe', desc: '3 farklı takımda oynadın', check: (p) => new Set(p.history.map((h) => h.club.replace(/ U\d+$/, ''))).size >= 3 },
+    { id: 'clubs5', cat: 'career', tier: 'silver', name: 'Valiz Hazır', desc: '5 farklı takımda oynadın', check: (p) => new Set(p.history.map((h) => h.club.replace(/ U\d+$/, ''))).size >= 5 },
+    { id: 'age35', cat: 'career', tier: 'silver', name: 'Yaş Sadece Sayı', desc: '35 yaşında hâlâ sahadasın', check: (p) => p.age >= 35 && !Game.isYouth() },
+    { id: 'age38', cat: 'career', tier: 'gold', name: 'Bitmeyen Enerji', desc: '38 yaşında hâlâ sahadasın', check: (p) => p.age >= 38 && !Game.isYouth() },
+  );
+  ladder('career', 'sz', [5, 10, 15], (v) => `${v} Sezon`, (v) => `${v} sezon futbol oynadın`, (p) => p.history.length);
+  ladder('skill', 'ovr', [60, 70, 80, 85, 90], (v) => (v === 80 ? 'Dünya Yıldızı' : `Genel Güç ${v}`), (v) => `Genel gücün ${v}'e ulaştı`, (p) => Player.overall(p), { 80: 'ovr80' });
+  STATS.filter((st) => ['pace', 'shooting', 'passing', 'dribbling', 'defending'].includes(st.k)).forEach((st) => list.push({ id: `st_${st.k}`, cat: 'skill', tier: 'gold', name: `${st.l} Ustası`, desc: `${st.l} statın 90'a ulaştı`, check: (p) => p.stats[st.k] >= 90 }));
+  ladder('fame', 'fame', [10, 25, 50, 75], (v) => (v === 75 ? 'Herkes Seni Tanıyor' : `Ün ${v}`), (v) => `Ünün ${v}'e ulaştı`, (p) => p.fame, { 75: 'fame75' });
+  ladder('fame', 'fol', [1000, 10000, 100000, 1000000], (v) => `${fmt(v)} Takipçi`, (v) => `Sosyal medyada ${fmt(v)} takipçiye ulaştın`, (p) => (p.social ? p.social.followers : 0));
+  ladder('life', 'money', [10000, 100000, 1000000, 10000000], (v) => (v === 1e6 ? 'İlk Milyon' : `${fmt(v)} ₺`), (v) => `Hesabında ${fmt(v)} ₺ birikti`, (p) => p.money, { 1000000: 'million' });
+  ladder('life', 'items', [1, 5, 10], (v) => (v === 1 ? 'İlk Alışveriş' : `${v} Eşya`), (v) => `${v} eşyaya sahip oldun`, (p) => p.items.length);
+  return list;
+})();
 
 const Ach = {
   check() {
@@ -58,9 +111,10 @@ const Trophy = {
       boot: `<path d="M14 40c0-5 3-8 8-8h6l4-18h8l2 18 10 4c3 1 3 4 3 6v4H14z" fill="${gold}"/><path d="M18 48v3M24 48v3M30 48v3M36 48v3M42 48v3" stroke="#3a2a14" stroke-width="2"/>`,
       ball: `<circle cx="32" cy="26" r="17" fill="${gold}"/><path d="M32 17l7 5-3 8h-8l-3-8z" fill="#8a6410"/><rect x="28" y="43" width="8" height="8" fill="${gold}"/>`,
       young: `<circle cx="32" cy="28" r="14" fill="url(#ts)"/><path d="M26 6l6 10 6-10" fill="none" stroke="#2f6fd6" stroke-width="5"/><path d="M32 22c-4 0-6 3-6 6M32 22c4 0 6 3 6 6M32 22v12" stroke="#2f8c45" stroke-width="3" fill="none"/>`,
+      motm: `<path d="M32 4l7.6 15.4 17 2.5-12.3 12 2.9 16.9L32 42.8l-15.2 8 2.9-16.9-12.3-12 17-2.5z" fill="${gold}" stroke="#8a6410" stroke-width="1.5"/><path d="M32 14l4 8.2 9 1.3-6.5 6.4 1.5 9L32 34.6l-8 4.3 1.5-9-6.5-6.4 9-1.3z" fill="rgba(138,100,16,.35)"/>`,
       star: `<path d="M26 4l6 10 6-10" fill="none" stroke="#c8102e" stroke-width="5"/><circle cx="32" cy="30" r="15" fill="${gold}"/><path d="M32 20l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" fill="#8a6410"/>`,
     };
-    return `<svg viewBox="0 0 64 64" aria-hidden="true">${defs}${shapes[kind]}${kind === 'young' || kind === 'star' ? '' : base}</svg>`;
+    return `<svg viewBox="0 0 64 64" aria-hidden="true">${defs}${shapes[kind]}${kind === 'young' || kind === 'star' ? '' : kind === 'motm' ? '<rect x="26" y="50" width="12" height="6" fill="#5a4020"/><rect x="20" y="56" width="24" height="6" fill="#3a2a14"/>' : base}</svg>`;
   },
   medal(tier, earned) {
     const col = { bronze: ['#8a4b1f', '#e0995a'], silver: ['#7d8794', '#eef3f8'], gold: ['#a77a0a', '#ffe27a'] }[tier];
@@ -81,7 +135,7 @@ const Shop = {
   },
   usedThisSeason(c) {
     const u = Game.p.used || {};
-    return (c.id === 'camp' || c.id === 'clinic') && u[c.id] === Game.state.season.year;
+    return ['camp', 'clinic', 'analysis'].includes(c.id) && u[c.id] === Game.state.season.year;
   },
   use(id) {
     const p = Game.p, s = Game.state;
@@ -92,6 +146,10 @@ const Shop = {
     let msg = '';
     if (id === 'drink') { Player.addEnergy(p, 25); msg = 'Enerji +25'; }
     if (id === 'massage') { Player.addEnergy(p, 15); Player.addMorale(p, 6); msg = 'Enerji +15, moral +6'; }
+    if (id === 'nap') { Player.addEnergy(p, 20); Player.addMorale(p, 3); msg = 'Enerji +20, moral +3'; }
+    if (id === 'mental') { Player.addMorale(p, 15); msg = 'Moral +15'; }
+    if (id === 'meet') { Player.addRel(p, 'fans', 8); Player.addFame(p, Game.isYouth() ? 0.3 : 1); msg = 'Taraftarlar seni çok sevdi'; }
+    if (id === 'analysis') { msg = ['technique', 'passing'].map((k) => `${STATS.find((x) => x.k === k).l} +${Player.train(p, k, 2.2, 1).toFixed(1)}`).join(', '); }
     if (id === 'physio') {
       if (!p.injuryWeeks) return Game.toast('Sakat değilsin, fizyoterapiye gerek yok.', 'bad');
       p.injuryWeeks = Math.max(0, p.injuryWeeks - 2);
@@ -148,6 +206,89 @@ const Loot = {
   },
   // Eski kayıtlardaki bekleyen paketleri temizler
   show() { Game.state.pendingLoot = null; },
+};
+
+// ---------- Reklam ----------
+// Gerçek bir reklam sağlayıcısı (AdSense / AdMob vb.) bağlanana kadar 5 saniyelik temsili reklam gösterilir.
+// Sağlayıcı bağlamak için window.StarfootAds = { show: () => Promise<boolean> } tanımlamak yeterli.
+const Ads = {
+  show() {
+    if (window.StarfootAds && typeof window.StarfootAds.show === 'function') {
+      return Promise.resolve(window.StarfootAds.show()).then((ok) => !!ok).catch(() => false);
+    }
+    return new Promise((resolve) => {
+      const el = document.createElement('div');
+      el.className = 'ad-ov';
+      let left = 5;
+      el.innerHTML = `<div class="ad-box"><div class="ad-tag">REKLAM</div><div class="ad-art"><b>ANADOLU ENERJİ</b><span>Maç günü enerjin hep tam!</span></div><div class="ad-cnt">Ödülün <b id="ad-n">${left}</b> sn sonra hazır</div><button class="btn btn-ghost" id="ad-x" disabled>Kapat</button></div>`;
+      document.body.appendChild(el);
+      const n = el.querySelector('#ad-n'), x = el.querySelector('#ad-x');
+      const iv = setInterval(() => {
+        left--;
+        if (left > 0) { n.textContent = left; return; }
+        clearInterval(iv);
+        el.querySelector('.ad-cnt').textContent = 'Ödülün hazır!';
+        x.disabled = false; x.textContent = 'Ödülü Al'; x.classList.remove('btn-ghost');
+      }, 1000);
+      x.onclick = () => { if (x.disabled) return; el.remove(); resolve(true); };
+    });
+  },
+};
+
+// ---------- Hediye paketi: reklam izlersen x2-x3, izlemezsen x1 ----------
+const Gift = {
+  roll(rating) {
+    const s = Game.state;
+    if (rating == null || Game.inStreet() || s.pendingGift) return;
+    const ch = rating >= 8 ? 0.3 : rating >= 7 ? 0.14 : 0.05;
+    if (!U.chance(ch)) return;
+    const kinds = ['money', 'energy', 'stat', 'morale'];
+    s.pendingGift = { kind: U.pick(kinds), stat: U.pick(STATS).k, mult: U.pick([2, 2, 3]) };
+  },
+  base(g) {
+    const p = Game.p;
+    const money = Game.isYouth() ? 120 + (p.age - 8) * 40 : Math.round(Game.weeklyIncome() * 0.25 / 10) * 10;
+    return { money, energy: 15, stat: 0.6, morale: 6 }[g.kind];
+  },
+  label(g, m) {
+    const v = Gift.base(g) * m;
+    const st = STATS.find((x) => x.k === g.stat).l;
+    return { money: U.money(v), energy: `+${v} enerji`, stat: `${st} +${v.toFixed(1)}`, morale: `+${v} moral ve ün` }[g.kind];
+  },
+  apply(g, m) {
+    const p = Game.p;
+    const v = Gift.base(g) * m;
+    if (g.kind === 'money') p.money += v;
+    else if (g.kind === 'energy') Player.addEnergy(p, v);
+    else if (g.kind === 'stat') p.stats[g.stat] = U.clamp(p.stats[g.stat] + v, 1, 99);
+    else { Player.addMorale(p, v); Player.addFame(p, 0.2 * m); }
+    return Gift.label(g, m);
+  },
+  show() {
+    const s = Game.state, g = s.pendingGift;
+    const icon = { money: 'coin', energy: 'bolt', stat: 'train', morale: 'star' }[g.kind];
+    const finish = (m) => {
+      const res = Gift.apply(g, m);
+      s.pendingGift = null;
+      Game.save(); Game.render();
+      Game.toast(`Hediye paketi: ${res}${m > 1 ? ` (x${m})` : ''}`, 'good');
+      Game.checkPending();
+    };
+    Game.modal(`
+      <div class="gift">
+        <div class="ev-tag">Hediye Paketi</div>
+        <div class="gift-box"><i></i>${Icon(icon)}</div>
+        <h3>Sana bir hediye var!</h3>
+        <p class="muted">Paketi hemen açabilir ya da kısa bir reklam izleyip ödülünü <b>x${g.mult}</b> yapabilirsin.</p>
+        <div class="gift-opts">
+          <div class="gift-opt"><span>Normal</span><b>${Gift.label(g, 1)}</b></div>
+          <div class="gift-opt hot"><span>Reklamla x${g.mult}</span><b>${Gift.label(g, g.mult)}</b></div>
+        </div>
+      </div>`, [
+      { t: `${Icon('play')} Reklam İzle · x${g.mult}`, cls: 'btn-big', fn: () => Ads.show().then((ok) => finish(ok ? g.mult : 1)) },
+      { t: 'Normal Aç (x1)', cls: 'btn-ghost', fn: () => finish(1) },
+    ]);
+  },
 };
 
 // ---------- Kulüpteki gerçek oyunculardan mentorlar ----------

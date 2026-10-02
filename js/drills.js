@@ -2,12 +2,12 @@
 
 const DRILLS = {
   shooting: { t: 'Bitiricilik Çalışması', d: 'Ceza sahasında 3 şut. Geriye çekip bırak, köşelere vur.', kind: 'shots', scenes: ['close', 'close', 'penalty'] },
-  technique: { t: 'Frikik Çalışması', d: 'Barajın üstünden 3 frikik. Geriye kavisli çekersen top falso alır.', kind: 'shots', scenes: ['freekick', 'freekick', 'freekick'] },
+  technique: { t: 'Top Sektirme', d: 'Topu yere düşürmeden 10 kez sektir. Top yeşil bölgeye inince dokun.', kind: 'mini', fn: 'juggle', k: 'dribble' },
   passing: { t: 'Pas Çalışması', d: 'Verkaç istasyonu: parlayan arkadaşına süre dolmadan pas ver.', kind: 'mini', fn: 'onetwo', k: 'pass' },
   dribbling: { t: 'Slalom Çalışması', d: 'Hunilerin ve rakiplerin arasından geç. Halka yeşildeyken dokun.', kind: 'timing', tk: 'dribble', k: 'dribble', cfg: { title: 'Çalım at!', button: 'ÇALIM!', okText: 'MÜKEMMEL!', partialText: 'Fena değil', failText: 'Huniye takıldın', rounds: 3 } },
   heading: { t: 'Kafa Vuruşu Çalışması', d: 'Hoca ortalar yapıyor. Doğru anda yüksel.', kind: 'timing', tk: 'header', k: 'header', cfg: { title: 'Kafayı vur!', button: 'KAFA!', okText: 'TAM ZAMANINDA!', partialText: 'Biraz erken', failText: 'Kaçtı', rounds: 2 } },
   defending: { t: 'İkili Mücadele', d: 'Hücum oyuncusunu durdur. Yeşil alan temiz müdahale.', kind: 'timing', tk: 'tackle', k: 'tackle', cfg: { title: 'Topu kap!', button: 'MÜDAHALE!', okText: 'TERTEMİZ!', partialText: 'Faul olurdu', failText: 'Geçildin', rounds: 2 } },
-  physical: { t: 'Omuz Omuza', d: 'Güç istasyonu: doğru anda omuz ver.', kind: 'timing', tk: 'tackle', k: 'tackle', cfg: { title: 'Omuz ver!', button: 'GÜÇ!', okText: 'DUVAR GİBİSİN!', partialText: 'Dengeni kaybettin', failText: 'Yere düştün', rounds: 2 } },
+  physical: { t: 'Omuz Omuza', d: 'Basılı tut, güç dolsun; yeşil bantta bırakıp rakibi it.', kind: 'mini', fn: 'shoulder', k: 'tackle' },
   pace: { t: 'Sürat Koşusu', d: 'Rakibinden önce topa ulaş: hızlı hızlı dokun.', kind: 'mini', fn: 'sprint', k: 'dribble' },
   stamina: { t: 'Mekik Koşusu', d: 'Yorulsan da tempoyu düşürme: hızlı hızlı dokun.', kind: 'mini', fn: 'sprint', k: 'dribble' },
 };
@@ -28,13 +28,13 @@ const Drill = {
   },
 
   // Bir antrenman çalışması oynatır. Sonuç: { q, auto }
-  async run(focus) {
+  async run(focus, opts = {}) {
     const s = Game.state, p = s.player;
     const D = DRILLS[focus] || DRILLS.shooting;
     const el = Drill.host();
     el.innerHTML = `
       <div class="mm-head">
-        <div class="mm-min dr-tag">ANTRENMAN</div>
+        <div class="mm-min dr-tag">${opts.tag || 'ANTRENMAN'}</div>
         <div class="mm-tt"><div class="mm-title">${D.t}</div><div class="mm-desc" id="dr-desc">${D.d}</div></div>
         <button class="btn btn-ghost" id="dr-skip">${Icon('fast')}<span>Atla</span></button>
       </div>
@@ -76,7 +76,7 @@ const Drill = {
         const r = await MiniGame.timing(hostEl, cfg);
         if (r.result === 'auto') auto = true; else q = score[r.result] ?? 0.3;
       } else {
-        const r = await MiniGame[D.fn](hostEl, { skill, kits, number: p.shirt, pace: st.pace, passing: st.passing, mates, cond });
+        const r = await MiniGame[D.fn](hostEl, { skill, kits, number: p.shirt, pace: st.pace, passing: st.passing, technique: st.technique, physical: st.physical, mates, cond });
         if (r.result === 'auto') auto = true; else q = score[r.result] ?? 0.3;
       }
     } catch (e) {

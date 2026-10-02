@@ -42,7 +42,7 @@
     // tribün
     const standTop = H * 0.3, standBot = H * 0.55;
     c.fillStyle = '#0d1a3a'; c.fillRect(0, standTop, W, standBot - standTop);
-    const cols = ['#ffcf3f', '#e8e1d0', '#c8102e', '#2a6fdb', '#ffffff'];
+    const cols = ['#ffcf3f', '#e8e1d0', '#8fa6d8', '#2a6fdb', '#ffffff'];
     const step = 9 * dpr;
     for (let y = standTop + step; y < standBot - 4; y += step) {
       for (let x = (Math.floor(y / step) % 2) * step / 2; x < W; x += step) {
@@ -75,12 +75,6 @@
     const lg = c.createLinearGradient(0, 0, W * 0.65, 0);
     lg.addColorStop(0, 'rgba(5,11,29,0.82)'); lg.addColorStop(1, 'rgba(5,11,29,0)');
     c.fillStyle = lg; c.fillRect(0, 0, W, H);
-    // oyuncu
-    const fh = Math.min(H * 0.32, 260 * dpr);
-    const fx = W * (w > 700 ? 0.74 : 0.5), fy = H * 0.94;
-    const kit = { shirt: '#c8102e', alt: '#ffcf3f', pattern: 'halves', shorts: '#ffffff', socks: '#c8102e' };
-    Sprites.figure(c, fx, fy, fh, { kit, look: Sprites.look(7), facing: 'down', kick: 0.45, t: 0 });
-    Sprites.ball(c, fx + fh * 0.32, fy - fh * 0.32, fh * 0.07, 0.6);
   };
   window.addEventListener('load', drawTitle);
   window.addEventListener('resize', () => { if (!document.getElementById('title').classList.contains('hidden')) drawTitle(); });

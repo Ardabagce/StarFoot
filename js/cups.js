@@ -98,6 +98,7 @@ const Cups = {
     const ctx = {
       home: mk(h), away: mk(a), side: h === s.clubId ? 'home' : 'away',
       compName: `${cup.name} · ${stageName}`, levelBase: Game.levelBase(false) + 0.04,
+      captain: Captain.is(),
     };
     const p = s.player;
     ctx.role = p.injuryWeeks > 0 ? 'out' : Game.roleFor(Player.overall(p, true), s.world.clubs[s.clubId].rating, false);

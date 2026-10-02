@@ -139,13 +139,12 @@ const Game = {
     const year = opts.year || 2026;
     const world = World.create(year);
     const player = Player.create(opts);
-    const street = player.age <= 12;
-    if (street) {
-      // Mahalle takımı: henüz bir kulübü yok
-      const exp = Math.round(expectedAtAge(player.age));
-      world.clubs.STREET = { id: 'STREET', name: 'Bizim Sokak', short: 'SOK', league: 'NONE', rating: exp, c1: '#e8e1d0', c2: '#2b2b2b', pool: 'TR', roster: Youth.roster({ pool: 'TR' }, exp, player.age) };
-    }
-    const clubId = street ? 'STREET' : opts.clubId;
+    // Kimse kulübünü seçmez: 8-12 yaş mahalle maçıyla, 13+ yaş seçmelerle scoutların gözüne girer
+    const street = true;
+    const trials = player.age >= 13;
+    const exp = Math.round(expectedAtAge(player.age));
+    world.clubs.STREET = { id: 'STREET', name: trials ? 'Seçme Kampı' : 'Bizim Sokak', short: trials ? 'SEÇ' : 'SOK', league: 'NONE', rating: exp, c1: trials ? '#ff7a1a' : '#e8e1d0', c2: '#2b2b2b', pool: 'TR', roster: Youth.roster({ pool: 'TR' }, exp, player.age) };
+    const clubId = 'STREET';
     Game.state = {
       v: 2,
       player,
@@ -154,7 +153,7 @@ const Game = {
       contract: { type: 'youth', clubId, wage: 0, years: 0 },
       season: { year, round: 0, stats: Game.blankSeason(), intlDone: [] },
       youth: street ? null : Youth.create(world, clubId, player.age),
-      street: street ? { done: false } : null,
+      street: { done: false, trials },
       startYear: year,
       difficulty: opts.difficulty || 'normal',
       ap: 3,
@@ -167,19 +166,18 @@ const Game = {
       seasonEnd: null,
     };
     Cups.setup(Game.state);
-    if (street) {
+    if (!trials) {
       Game.news(`${opts.name} ${player.age} yaşında, ${year} yılında mahallede top koşturan bir çocuk. Bugün mahalleler arası maç var ve kenarda bir scout izliyor!`, 'good');
     } else {
-      Game.news(`${opts.name}, ${Game.club().name} altyapısına katıldı! ${year} yılı, ${player.age} yaşında yeni bir serüven başlıyor.`, 'good');
-      Game.news(`${Game.state.youth.group} takımında ilk sezonuna hazırlan. Antrenman yap, maçlarda kendini göster!`);
+      Game.news(`${opts.name} ${player.age} yaşında, ${year} yılında altyapı seçmelerine katılıyor. Tribünde farklı kulüplerin scoutları not alıyor!`, 'good');
     }
     Game.save();
     Game.enterHub();
     Game.modal(`
       <h2>Hoş geldin, ${U.esc(opts.name)}!</h2>
-      <p>${year} yılındayız. ${street
+      <p>${year} yılındayız. ${!trials
         ? `${player.age} yaşındasın ve henüz bir kulübün yok. İlk maçın <b>mahalle maçı</b>: iyi oynarsan kenardaki <b>scout</b> seni bir altyapıya götürür!`
-        : `${player.age} yaşındasın ve <b>${U.esc(Game.club().name)}</b> altyapısında ilk gününü yaşıyorsun.`}</p>
+        : `${player.age} yaşındasın ve henüz bir kulübün yok. <b>Altyapı seçmelerinde</b> 3 istasyonda kendini göstereceksin. Ne kadar iyi olursan o kadar büyük kulüpler teklif yapar!`}</p>
       <ul class="tips">
         <li>Her hafta <b>3 aksiyon hakkın</b> var: antrenman, dinlenme, takım arkadaşlarıyla vakit geçirme...</li>
         <li>Maçlarda kritik anlar gelince oyun durur: parmağını topun tersine <b>geriye çekip bırakarak</b> şut çeker (sapan gibi), arkadaşına <b>dokunarak</b> pas verirsin.</li>
@@ -205,15 +203,22 @@ const Game = {
     Player.addEnergy(p, -15);
     Player.addMorale(p, sum.res === 'W' ? 8 : 2);
     if (sum.goals) Social.post('goal', `Mahalle maçında ${sum.goals} gol! Kenarda bir scout vardı...`, 1);
-    // scout teklifleri: performansa göre kulüp seviyesi
+    Game.scoutOffers(perf, r);
+  },
+
+  // Performansa göre scout teklifleri (mahalle maçı ve seçmeler)
+  scoutOffers(perf, r) {
+    const s = Game.state, p = s.player;
+    const trials = s.street.trials;
     const natLg = { TUR: 'TR', ENG: 'ENG', ESP: 'ESP', GER: 'GER', ITA: 'ITA', FRA: 'FRA' }[p.nation] || 'TR';
     const clubs = Object.values(s.world.clubs).filter((c) => c.league !== 'NONE' && c.league.startsWith(natLg));
     const sorted = clubs.sort((a, b) => b.rating - a.rating);
+    const who = trials ? 'Scoutlar' : 'Scout';
     let pool, n, msg;
-    if (perf >= 8.2) { pool = sorted.slice(0, 5); n = 3; msg = 'Muhteşem oynadın! Scout hemen telefona sarıldı; büyük kulüplerin altyapıları seni istiyor.'; }
-    else if (perf >= 7.2) { pool = sorted.slice(3, 14); n = 3; msg = 'Scout performansından çok etkilendi. Birkaç kulübün altyapısı seni denemek istiyor.'; }
-    else if (perf >= 6.3) { pool = sorted.slice(10, 26); n = 2; msg = 'Fena değildi! Scout seni orta seviye kulüplere önerdi.'; }
-    else { pool = sorted.slice(-10); n = 1; msg = 'Scout pek etkilenmedi ama küçük bir kulüp sana yine de şans vermek istiyor.'; }
+    if (perf >= 8.2) { pool = sorted.slice(0, 5); n = 3; msg = trials ? 'Seçmelerin yıldızı sendin! Büyük kulüplerin scoutları seni almak için sıraya girdi.' : 'Muhteşem oynadın! Scout hemen telefona sarıldı; büyük kulüplerin altyapıları seni istiyor.'; }
+    else if (perf >= 7.2) { pool = sorted.slice(3, 14); n = 3; msg = `${who} performansından çok etkilendi. Birkaç kulübün altyapısı seni istiyor.`; }
+    else if (perf >= 6.3) { pool = sorted.slice(10, 26); n = 2; msg = `Fena değildi! ${who} seni orta seviye kulüplere önerdi.`; }
+    else { pool = sorted.slice(-10); n = 1; msg = `${who} pek etkilenmedi ama küçük bir kulüp sana yine de şans vermek istiyor.`; }
     const offers = U.shuffle(pool).slice(0, n).sort((a, b) => b.rating - a.rating);
     s.street.offers = offers.map((c) => c.id);
     s.street.msg = msg;
@@ -222,12 +227,29 @@ const Game = {
     Game.streetOffers();
   },
 
+  // Seçmeler: mevkiye göre 3 istasyon, ortalama başarı teklifleri belirler
+  async playTrials() {
+    const s = Game.state, p = s.player;
+    const stations = { FW: ['shooting', 'pace', 'dribbling'], MF: ['passing', 'technique', 'dribbling'], DF: ['defending', 'physical', 'heading'] }[p.position] || ['shooting', 'passing', 'pace'];
+    const res = [];
+    for (let i = 0; i < stations.length; i++) {
+      const r = await Drill.run(stations[i], { tag: `SEÇME ${i + 1}/3` });
+      res.push(r.q);
+    }
+    const q = res.reduce((a, b) => a + b, 0) / res.length;
+    const rel = (Player.overall(p) - expectedAtAge(p.age)) / 8;
+    const r = U.clamp(5.4 + q * 3.4 + rel, 4.5, 9.8);
+    Player.addEnergy(p, -12);
+    Player.addMorale(p, q > 0.6 ? 8 : 2);
+    Game.scoutOffers(r, r);
+  },
+
   streetOffers() {
     const s = Game.state;
     const st = s.street;
     const m = Game.modal(`
-      <div class="ev-tag">Scout raporu</div>
-      <h2>Maç bitti · Reytingin ${st.rating.toFixed(1)}</h2>
+      <div class="ev-tag">${st.trials ? 'Seçme raporu' : 'Scout raporu'}</div>
+      <h2>${st.trials ? 'Seçmeler bitti · Puanın' : 'Maç bitti · Reytingin'} ${st.rating.toFixed(1)}</h2>
       <p>${st.msg}</p>
       <div class="offers">${st.offers.map((id, i) => {
         const c = s.world.clubs[id];
@@ -241,7 +263,7 @@ const Game = {
       s.contract = { type: 'youth', clubId: id, wage: 0, years: 0 };
       delete s.world.clubs.STREET;
       s.youth = Youth.create(s.world, id, s.player.age);
-      Game.news(`${s.player.name}, scout sayesinde ${Game.club().name} altyapısına katıldı! ${s.youth.group} takımında sezon başlıyor.`, 'good');
+      Game.news(`${s.player.name}, ${st.trials ? 'seçmelerdeki performansıyla' : 'scout sayesinde'} ${Game.club().name} altyapısına katıldı! ${s.youth.group} takımında sezon başlıyor.`, 'good');
       Social.post('transfer', `Artık ${Game.club().name} altyapısındayım! Hayalim gerçek oluyor.`, 1.5);
       Game.save();
       Game.tab = 'home';
@@ -263,6 +285,7 @@ const Game = {
     if (s.seasonEnd) return SeasonEnd.show();
     if (s.pendingEvent) return Events.show();
     if (s.pendingLoot) return Loot.show();
+    if (s.pendingGift) return Gift.show();
   },
 
   // ---------- Haftalık aksiyonlar ----------
@@ -404,7 +427,7 @@ const Game = {
 
   async playNext() {
     const s = Game.state, p = s.player;
-    if (Game.inStreet()) return s.street.offers ? Game.streetOffers() : Game.playStreet();
+    if (Game.inStreet()) return s.street.offers ? Game.streetOffers() : s.street.trials ? Game.playTrials() : Game.playStreet();
     if (s.pendingCup) return Cups.playMine(s);
     if (s.pendingIntl) return Game.playIntl();
     const fx = Game.nextFixture();
@@ -419,6 +442,7 @@ const Game = {
       side: fx.home === s.clubId ? 'home' : 'away',
       compName: `${Game.leagueName()} • ${s.season.round + 1}. Hafta`,
       levelBase: Game.levelBase(false),
+      captain: Captain.is(),
     };
     const ovr = Player.overall(p, true);
     if (p.injuryWeeks > 0) {
@@ -497,10 +521,24 @@ const Game = {
       const r = sum.rating;
       const rk = youth ? 0.55 : 1;
       if (sum.goals >= 3) { p.flags = p.flags || {}; p.flags.hattrick = true; }
+      // başarımlar için rekorlar ve gol türleri
+      const best = p.best = p.best || { g: 0, a: 0, ga: 0, r: 0, run: 0, streak: 0 };
+      best.g = Math.max(best.g, sum.goals); best.a = Math.max(best.a, sum.assists); best.ga = Math.max(best.ga, sum.goals + sum.assists);
+      best.r = Math.max(best.r, sum.rating || 0);
+      best.run = sum.goals ? (best.run || 0) + 1 : 0; best.streak = Math.max(best.streak || 0, best.run);
+      const gt = p.gt = p.gt || {};
+      Object.entries(sum.goalTypes || {}).forEach(([k, v]) => (gt[k] = (gt[k] || 0) + v));
+      if (comp === 'cup' && sum.goals) gt.cup = (gt.cup || 0) + sum.goals;
+      if (sum.motm) {
+        p.motmAwards = p.motmAwards || [];
+        p.motmAwards.push({ y: s.season.year, opp: oppName, r: sum.rating, g: sum.goals, a: sum.assists, c: comp });
+        if (p.motmAwards.length > 60) p.motmAwards.shift();
+      }
       Player.addRel(p, 'coach', (r - 6.4) * 3 * rk);
       Player.addRel(p, 'team', ((sum.res === 'W' ? 1.5 : sum.res === 'L' ? -1 : 0.3) + sum.assists * 0.8) * rk);
       Player.addRel(p, 'fans', (sum.goals * 1.5 + (r - 6.6) * 2.5) * rk);
       Loot.roll(comp === 'intl' ? null : r);
+      Gift.roll(comp === 'intl' ? null : r);
       const fameGain = (sum.goals * 0.45 + sum.assists * 0.25 + (r >= 8 ? 0.5 : 0) + (sum.motm ? 0.5 : 0)) * fameMult;
       if (youth) p.fame = Math.max(p.fame, Math.min(p.fame + fameGain, 4 + (p.age - 8) * 1.5));
       else Player.addFame(p, fameGain);
@@ -535,6 +573,7 @@ const Game = {
       Game.news(`${teamTxt}, ${oppName} karşısında ${sum.gf}-${sum.ga} ${resTxt}. (Forma giymedin)`, sum.res === 'W' ? 'good' : sum.res === 'L' ? 'bad' : '');
     }
     Social.afterMatch(sum, teamTxt);
+    if (comp !== 'intl') Captain.afterMatch(sum.played);
     if (comp === 'intl' && sum.played) Game.news(`🇹🇷 Milli formayla ${p.intl.caps}. maçına çıktın!`, 'good');
   },
 
@@ -827,7 +866,7 @@ const Game = {
     document.getElementById('hdr-info').innerHTML = `
       <span class="hi-club">${UI.shirt(Game.club())}${U.esc(Game.teamName())}</span>
       <span class="hi-week">${s.season.year} · <b>${Math.min(s.season.round + 1, Game.rounds())}</b>/${Game.rounds()}. HAFTA</span>
-      <span class="hi-money">${U.money(p.money)}</span>`;
+      <span class="hi-money"><i class="hm-coin">${Icon('coin')}</i><span class="hm-t"><small>Bakiye</small><b>${U.money(p.money)}</b></span>${Game.weeklyIncome() > 0 ? `<em class="hm-inc">+${U.money(Game.weeklyIncome())}<small>/hf</small></em>` : ''}</span>`;
     U.$$('#tabs button').forEach((b) => b.classList.toggle('on', b.dataset.tab === Game.tab));
     document.getElementById('status').innerHTML = UI.status();
     document.getElementById('side').innerHTML = Game.tab === 'player' ? '' : UI.playerCard();
@@ -844,6 +883,34 @@ const Game = {
 const UI = {
   // Uzun listeler sayfa içinde ayrı kaydırma yerine aç/kapa ile gösterilir
   more: {},
+  // Gazete görünümlü haberler
+  paper() {
+    const s = Game.state;
+    const all = s.news.slice(0, UI.more.news ? 40 : 9);
+    if (!all.length) return '';
+    const kicker = (n) => (n.type === 'world' ? 'Dünya' : /transfer|imza|sözleşme/i.test(n.t) ? 'Transfer' : /madalya|kupa|Şampiyon|ödül/i.test(n.t) ? 'Ödül' : n.type === 'bad' ? 'Gündem' : n.type === 'good' ? 'Kulüp' : 'Haber');
+    const leadI = Math.max(0, all.findIndex((n) => n.type !== 'world'));
+    const lead = all[leadI];
+    const rest = all.filter((_, i) => i !== leadI);
+    const headline = (t) => {
+      const plain = U.plain(t.replace(/<[^>]+>/g, ''));
+      const cut = plain.search(/[.!?](\s|$)/);
+      return cut > 20 && cut < 90 ? [plain.slice(0, cut + 1), plain.slice(cut + 1).trim()] : [plain, ''];
+    };
+    const [h1, sub] = headline(lead.t);
+    const no = (s.season.year - (s.startYear || s.season.year)) * 40 + s.season.round + 1;
+    return `<section class="card paper">
+      <div class="pp-mast">
+        <div class="pp-top"><span>${s.season.year} · ${Math.min(s.season.round + 1, Game.rounds())}. Hafta</span><span>Sayı ${no}</span></div>
+        <h2>StarFoot Gazetesi</h2>
+        <div class="pp-sub">Futbolun nabzı · Kulüpten dünyaya</div>
+      </div>
+      <article class="pp-lead"><span class="pp-k">${kicker(lead)}</span><h3>${U.esc(h1)}</h3>${sub ? `<p>${U.esc(sub)}</p>` : ''}<small>${lead.w || ''}</small></article>
+      <div class="pp-cols">${rest.map((n) => `<article class="pp-item ${n.type}"><span class="pp-k">${kicker(n)}</span><p>${n.t}</p><small>${n.type === 'world' ? 'Dünya Servisi' : n.w || ''}</small></article>`).join('')}</div>
+      ${s.news.length > 9 ? UI.moreBtn('news', 'Tüm haberler') : ''}
+    </section>`;
+  },
+
   moreBtn(k, label) {
     return `<button type="button" class="btn btn-ghost more-btn" data-more="${k}">${UI.more[k] ? 'Daha az göster' : label}</button>`;
   },
@@ -956,7 +1023,10 @@ const UI = {
       const opp = cup.alive[k % 2 === 0 ? k + 1 : k - 1];
       next = `<div class="nm-vs"><div class="nm-team">${UI.shirt(Game.club(), 'big')}<b>${U.esc(Game.club().name)}</b></div><span class="vs">VS</span><div class="nm-team">${UI.shirt(Game.club(opp), 'big')}<b>${U.esc(Game.club(opp).name)}</b></div></div>
         <div class="nm-meta">${U.esc(cup.name.toUpperCase())} · ${STAGE_NAMES[cup.alive.length].toUpperCase()} · Tek maç, kaybeden elenir</div>`;
-    } else     if (Game.inStreet()) {
+    } else if (Game.inStreet() && s.street.trials) {
+      next = `<div class="nm-vs"><div class="nm-team">${UI.shirt(Game.club(), 'big')}<b>Seçme Günü</b></div></div>
+        <div class="nm-meta">ALTYAPI SEÇMELERİ · 3 istasyon: ${({ FW: 'bitiricilik, sürat, slalom', MF: 'pas, top sektirme, slalom', DF: 'ikili mücadele, omuz omuza, kafa' })[p.position] || ''}. Tribünde kulüplerin scoutları var!</div>`;
+    } else if (Game.inStreet()) {
       next = `<div class="nm-vs"><div class="nm-team">${UI.shirt(Game.club(), 'big')}<b>Bizim Sokak</b></div><span class="vs">VS</span><div class="nm-team">${UI.shirt({ id: 'ARK', c1: '#2a6fdb', c2: '#ffffff' }, 'big')}<b>Arka Sokak</b></div></div>
         <div class="nm-meta">MAHALLE MAÇI · Kenarda bir scout izliyor. İyi oynarsan seni bir altyapıya götürecek!</div>`;
     }
@@ -995,11 +1065,11 @@ const UI = {
           <div class="card-h"><span>${Icon('whistle')} Maç Günü</span><span class="tag role-${roleK}">${role}</span></div>
           ${next}
           ${p.energy < 40 ? `<div class="warn">${Icon('bolt')} Enerjin düşük. Performansın düşer, sakatlık riski artar.</div>` : ''}
-          <button class="btn btn-play" data-go="match">${Icon('play')} Maça Çık</button>
+          <button class="btn btn-play" data-go="match">${Icon('play')} ${Game.inStreet() && s.street.trials ? 'Seçmelere Katıl' : 'Maça Çık'}</button>
           ${s.ap > 0 ? `<div class="hint">Bu hafta ${s.ap} aksiyon hakkın daha var.</div>` : ''}
         </section>
         <section class="card plan">
-          <div class="card-h"><span>${Icon('train')} Haftalık Plan</span><span class="ap-pill ${s.ap ? '' : 'done'}">${s.ap ? `${s.ap} hak kaldı` : 'Hakların bitti · maça çık'}</span></div>
+          <div class="card-h"><span>${Icon('train')} Haftalık Plan</span><span class="ap-pips ${s.ap ? '' : 'done'}" title="Aksiyon hakkı">${[0, 1, 2].map((i) => `<i class="${i < s.ap ? 'on' : ''}"></i>`).join('')}<b>${s.ap ? `${s.ap} hak` : 'Maç günü'}</b></span></div>
           <div class="lbl">Antrenman odağı <small>${keyTxt}</small></div>
           <div class="focus" role="radiogroup" aria-label="Antrenman odağı">${STATS.map((st) => {
             const v = p.stats[st.k];
@@ -1008,9 +1078,20 @@ const UI = {
               <span>${st.l}${key ? '<i>★</i>' : ''}</span><b class="${UI.statColor(v)}">${Math.floor(v)}</b>${UI.bar(v, UI.statColor(v))}
             </button>`;
           }).join('')}</div>
-          <div class="focus-info">${Icon('train')}<span><b>${focusL}</b> çalışırsan tahmini gelişim: antrenman <b>+${Game.estGain(1).toFixed(2)}</b> · yoğun <b>+${Game.estGain(1.8).toFixed(2)}</b> · özel hoca <b>+${Game.estGain(2.3).toFixed(2)}</b></span></div>
           <label class="drill-tg"><input type="checkbox" id="drill-tg" ${s.drills !== false ? 'checked' : ''}><span><b>Antrenman mini oyunları</b><small>Odak statına göre çalışma oynanır. İyi oynarsan gelişim ×1,5'e kadar çıkar.</small></span></label>
-          <div class="acts">${acts.map(([k, ic, l, d, cost]) => `<button class="act" data-act="${k}" ${s.ap <= 0 ? 'disabled' : ''}>${Icon(ic)}<span><b>${l}</b><small>${d}</small></span>${cost ? `<em class="cost ${cost.startsWith('−') ? 'neg' : ''}">${cost}</em>` : ''}</button>`).join('')}</div>
+          <div class="lbl">Antrenman <small>${focusL} odaklı · tahmini gelişim</small></div>
+          <div class="tr-row">${acts.slice(0, 3).map(([k, ic, l, d, cost], i) => `<button class="tr-card tr-${k}" data-act="${k}" ${s.ap <= 0 ? 'disabled' : ''}>
+            <span class="tr-ic">${Icon(ic)}</span>
+            <b>${l}</b>
+            <span class="tr-int" aria-label="Yoğunluk">${[0, 1, 2].map((j) => `<i class="${j <= i ? 'on' : ''}"></i>`).join('')}</span>
+            <span class="tr-gain">+${Game.estGain([1, 1.8, 2.3][i]).toFixed(2)}</span>
+            <em class="tr-cost ${cost.startsWith('−') ? 'neg' : ''}">${cost}</em>
+            <small>${d}</small>
+          </button>`).join('')}</div>
+          <div class="lbl">Aktiviteler</div>
+          <div class="ac-row">${acts.slice(3).map(([k, ic, l, d, cost]) => `<button class="ac-tile ac-${k}" data-act="${k}" ${s.ap <= 0 ? 'disabled' : ''}>
+            <span class="ac-ic">${Icon(ic)}</span><span class="ac-t"><b>${l}</b><small>${d}</small></span>${cost ? `<em class="${cost.startsWith('−') ? 'neg' : ''}">${cost}</em>` : ''}
+          </button>`).join('')}</div>
         </section>
       </div>
       ${s.offers.length ? `
@@ -1020,11 +1101,7 @@ const UI = {
         <button class="btn btn-ghost" data-reject="1">Teklifleri Reddet</button>
       </section>` : ''}
       ${Social.render(false)}
-      <section class="card">
-        <div class="card-h"><span>${Icon('news')} Haberler</span></div>
-        <div class="news">${s.news.slice(0, UI.more.news ? 40 : 8).map((n) => `<div class="nw ${n.type}"><small>${n.type === 'world' ? 'DÜNYA' : n.w}</small><span>${n.t}</span></div>`).join('')}</div>
-        ${s.news.length > 8 ? UI.moreBtn('news', 'Tüm haberler') : ''}
-      </section>`;
+${UI.paper()}`;
   },
 
   offerRow(o, i, ctx) {
@@ -1149,7 +1226,7 @@ const UI = {
     const chip = (x, left, top) => `
       <div class="pp ${x.me ? 'me' : ''}" style="left:${left}%;top:${top}%">
         <div class="pp-shirt">${UI.shirt(club, 'big')}<i>${x.num}</i></div>
-        <b>${U.esc(x.me ? 'SEN' : x.n.split(' ').slice(-1)[0])}</b>
+        <b>${U.esc(x.me ? 'SEN' : x.n.split(' ').slice(-1)[0])}${x.me && Captain.is() ? ' <i class="armband sm">C</i>' : ''}</b>
         <span class="${UI.statColor(x.r)}">${x.r}</span>
       </div>`;
     let pitch = '';
@@ -1176,6 +1253,7 @@ const UI = {
         <div class="sq-lines">${['FW', 'MF', 'DF', 'GK'].map((k) => `<div><span>${posL[k]}</span>${UI.bar(lineAvg(k), UI.statColor(lineAvg(k)))}<b>${lineAvg(k)}</b></div>`).join('')}</div>
         ${top ? `<p class="muted sq-note">Takımın en iyisi: <b>${U.esc(top.n)}</b> (${top.r})${top.star ? ' · yıldız oyuncu' : ''}</p>` : ''}
       </section>
+      ${Captain.card()}
       <div class="grid2 sq-grid">
         <section class="card">
           <div class="card-h"><span>${Icon('squad')} Muhtemel İlk 11</span><small class="muted">4-3-3</small></div>
@@ -1197,41 +1275,50 @@ const UI = {
   shop() {
     const p = Game.p;
     const ageBand = p.age <= 12 ? 'Çocuk' : p.age <= 17 ? 'Genç' : 'Profesyonel';
-    const cats = [['boots', 'boot', 'Kramponlar', 'Maçlarda statlarına bonus verir (en iyisi geçerli).'], ['gear', 'gear', 'Antrenman Ekipmanı', 'Antrenmandan aldığın gelişimi artırır (en iyisi geçerli).'], ['food', 'food', 'Beslenme', 'Haftalık enerji yenilenmesini artırır (en iyisi geçerli).'], ['life', 'life', 'Yaşam Tarzı', 'Her hafta moral verir, ünü artırır (hepsi birikir).']];
+    const open = UI.shopOpen || (UI.shopOpen = { cons: true });
+    const cats = [
+      ['boots', 'boot', 'Kramponlar', 'Maçta statlarına bonus (en iyisi geçerli)'],
+      ['gear', 'gear', 'Antrenman Ekipmanı', 'Antrenman gelişimini artırır (en iyisi geçerli)'],
+      ['food', 'food', 'Beslenme', 'Haftalık enerji yenilenmesi (en iyisi geçerli)'],
+      ['life', 'smile', 'Hobi ve Eğlence', 'Her hafta moral (hepsi birikir)'],
+      ['ride', 'fast', 'Ulaşım', 'Moral ve ün (hepsi birikir)'],
+      ['style', 'star', 'Stil ve Lüks', 'Ün ağırlıklı (hepsi birikir)'],
+    ];
+    const card = (art, color, name, desc, right, cls = '') => `
+      <div class="sh-item ${cls}">
+        <div class="sh-art">${ShopArt.svg(art, color)}</div>
+        <div class="sh-t"><b>${U.esc(name)}</b><small>${U.esc(desc)}</small></div>
+        <div class="sh-act">${right}</div>
+      </div>`;
     const cons = CONSUMABLES.filter((c) => Shop.available(c)).map((c) => {
       const used = Shop.usedThisSeason(c);
       const price = Shop.price(c);
-      return `<div class="item use">
-        <div class="it-i">${Icon(c.id === 'drink' ? 'bolt' : c.id === 'physio' ? 'injury' : c.id === 'massage' ? 'rest' : 'train')}</div>
-        <div class="it-t"><b>${U.esc(c.name)}</b><small>${U.esc(c.desc)}</small></div>
-        ${used ? '<span class="tag">Bu sezon kullandın</span>' : `<button class="btn" data-use="${c.id}" ${p.money < price ? 'disabled' : ''}>${U.money(price)}</button>`}
-      </div>`;
+      return card(c.art, '#4fb3ff', c.name, c.desc, used ? '<span class="tag">Bu sezon kullandın</span>' : `<button class="btn btn-buy" data-use="${c.id}" ${p.money < price ? 'disabled' : ''}>${U.money(price)}</button>`);
     }).join('');
+    const group = (id, ic, t, d, body, count) => `
+      <details class="shop-cat" data-cat="${id}" ${open[id] ? 'open' : ''}>
+        <summary>${Icon(ic)}<span class="sc-t"><b>${t}</b><small>${d}</small></span><span class="sc-n">${count}</span>${Icon('chevron', 'sc-chev')}</summary>
+        <div class="sh-grid">${body}</div>
+      </details>`;
     const sec = cats.map(([c, ic, t, d]) => {
       const list = ITEMS.filter((i) => i.cat === c && (p.items.includes(i.id) || (p.age >= i.minAge && (!i.maxAge || p.age <= i.maxAge))));
-      const next = ITEMS.filter((i) => i.cat === c && i.minAge > p.age && !p.items.includes(i.id)).sort((x, y) => x.minAge - y.minAge)[0];
-      return `
-      <section class="card">
-        <div class="card-h"><span>${Icon(ic)} ${t}</span><small class="muted">${d}</small></div>
-        <div class="shop">${list.map((it) => {
-          const own = p.items.includes(it.id);
-          return `<div class="item ${own ? 'own' : ''}">
-            <div class="it-i">${Icon(ic)}</div>
-            <div class="it-t"><b>${U.esc(it.name)}</b><small>${U.esc(it.desc)}</small></div>
-            ${own ? '<span class="tag">Sende var</span>' : `<button class="btn" data-buy="${it.id}" ${p.money < it.price ? 'disabled' : ''}>${U.money(it.price)}</button>`}
-          </div>`;
-        }).join('')}
-        ${next ? `<div class="item locked"><div class="it-i">${Icon(ic)}</div><div class="it-t"><b>${U.esc(next.name)}</b><small>${next.minAge} yaşında açılır</small></div><span class="tag">Kilitli</span></div>` : ''}
-        </div>
-      </section>`;
+      const locked = ITEMS.filter((i) => i.cat === c && i.minAge > p.age && !p.items.includes(i.id)).sort((x, y) => x.minAge - y.minAge).slice(0, 2);
+      if (!list.length && !locked.length) return '';
+      const owned = list.filter((i) => p.items.includes(i.id)).length;
+      const body = list.map((it) => {
+        const own = p.items.includes(it.id);
+        return card(it.art, ShopArt.tierColor(it.price), it.name, it.desc, own ? `<span class="tag own">${Icon('star')} Sende</span>` : `<button class="btn btn-buy" data-buy="${it.id}" ${p.money < it.price ? 'disabled' : ''}>${U.money(it.price)}</button>`, own ? 'own' : '');
+      }).join('') + locked.map((it) => card(it.art, '#5d6878', it.name, `${it.minAge} yaşında açılır`, `<span class="tag">${U.money(it.price)}</span>`, 'locked')).join('');
+      return group(c, ic, t, d, body, `${owned}/${list.length}`);
     }).join('');
     return `
       <section class="card shop-head">
         <div class="card-h"><span>${Icon('shop')} Mağaza</span><span class="tag">${ageBand} reyonu · ${p.age} yaş</span></div>
-        <p class="muted">Yaşın büyüdükçe mağazada yeni eşyalar açılır. Tek kullanımlık ürünler anında etki eder.</p>
-        <div class="lbl">Tek kullanımlık</div>
-        <div class="shop">${cons}</div>
-      </section>${sec}`;
+        <div class="shop-wallet">${Icon('wallet')}<span><small>Bakiyen</small><b>${U.money(p.money)}</b></span><span><small>Eşyaların</small><b>${p.items.length}</b></span></div>
+        <p class="muted">Yaşın büyüdükçe yeni ürünler açılır. Kategoriye dokunarak aç ya da kapat.</p>
+      </section>
+      ${group('cons', 'bolt', 'Tek Kullanımlık', 'Anında etki eder', cons, CONSUMABLES.filter((c) => Shop.available(c)).length)}
+      ${sec}`;
   },
 
   career() {
@@ -1264,10 +1351,20 @@ const UI = {
         }).join('') : '<div class="cab-empty">Vitrin şimdilik boş. İlk kupan burada parlayacak.</div>'}</div>
       </section>
       <section class="card">
-        <div class="card-h"><span>${Icon('star')} Madalyalar</span><small class="muted">${Object.keys(p.ach || {}).length}/${ACHIEVEMENTS.length}</small></div>
-        <div class="medals">${ACHIEVEMENTS.map((a) => {
-          const y = (p.ach || {})[a.id];
-          return `<div class="medal ${y ? 'got' : ''}" title="${U.esc(a.desc)}">${Trophy.medal(a.tier, !!y)}<b>${U.esc(a.name)}</b><small>${y ? y : U.esc(a.desc)}</small></div>`;
+        <div class="card-h"><span>${Icon('star')} Maçın Adamı Ödülleri</span><small class="muted">${p.totals.motm} ödül</small></div>
+        ${(p.motmAwards || []).length ? `<div class="motm-shelf">${p.motmAwards.slice(-12).reverse().map((m) => `<div class="motm-mini">${Trophy.svg('motm')}<b>${m.r.toFixed(1)}</b><small>${m.y} · ${U.esc(m.opp)}</small><small>${m.g} gol · ${m.a} asist</small></div>`).join('')}</div>` : '<div class="cab-empty">Maçın adamı seçildiğinde yıldız kupan burada sergilenir.</div>'}
+      </section>
+      <section class="card">
+        <div class="card-h"><span>${Icon('star')} Başarımlar</span><small class="muted">${Object.keys(p.ach || {}).length}/${ACHIEVEMENTS.length}</small></div>
+        ${UI.bar((Object.keys(p.ach || {}).length / ACHIEVEMENTS.length) * 100, 'c-mid')}
+        <div class="ach-cats">${ACH_CATS.map((c) => {
+          const list = ACHIEVEMENTS.filter((a) => a.cat === c.id);
+          const got = list.filter((a) => (p.ach || {})[a.id]).length;
+          return `<details class="ach-cat"><summary><b>${c.l}</b><span class="muted">${got}/${list.length}</span><i class="ach-prog"><i style="width:${(got / list.length) * 100}%"></i></i></summary>
+            <div class="medals">${list.map((a) => {
+              const y = (p.ach || {})[a.id];
+              return `<div class="medal ${y ? 'got' : ''}" title="${U.esc(a.desc)}">${Trophy.medal(a.tier, !!y)}<b>${U.esc(a.name)}</b><small>${y ? y : U.esc(a.desc)}</small></div>`;
+            }).join('')}</div></details>`;
         }).join('')}</div>
       </section>
       <div class="card">
@@ -1284,7 +1381,7 @@ const UI = {
 
   world() {
     const s = Game.state;
-    const sel = UI.worldLeague || Game.club().league;
+    const sel = UI.worldLeague || (s.world.leagues[Game.club().league] ? Game.club().league : 'TR1');
     const lg = s.world.leagues[sel];
     const name = (id) => s.world.clubs[id].name;
     return `
@@ -1331,7 +1428,7 @@ const UI = {
       if (p.money < it.price) return;
       p.money -= it.price;
       p.items.push(it.id);
-      if (it.cat === 'life' && it.price >= 1000) Social.post('life', `Kendime küçük bir hediye: ${it.name}.`, 1.2);
+      if (['life', 'ride', 'style'].includes(it.cat) && it.price >= 1000) Social.post('life', `Kendime küçük bir hediye: ${it.name}.`, 1.2);
       if (it.fame) Player.addFame(p, it.fame);
       Ach.check();
       Game.toast(`${it.name} satın alındı`, 'good');
@@ -1340,6 +1437,7 @@ const UI = {
     }));
     U.$$('[data-setdiff]', root).forEach((b) => (b.onclick = () => { Game.state.difficulty = b.dataset.setdiff; Game.save(); Game.toast(`Zorluk: ${DIFFS[b.dataset.setdiff].l}`, 'good'); Game.render(); }));
     U.$$('[data-use]', root).forEach((b) => (b.onclick = () => Shop.use(b.dataset.use)));
+    U.$$('details.shop-cat', root).forEach((d) => d.addEventListener('toggle', () => { (UI.shopOpen = UI.shopOpen || {})[d.dataset.cat] = d.open; }));
     U.$$('[data-wl]', root).forEach((b) => (b.onclick = () => { UI.worldLeague = b.dataset.wl; Game.render(); }));
     U.$$('[data-sys]', root).forEach((b) => (b.onclick = () => {
       const k = b.dataset.sys;
@@ -1553,12 +1651,10 @@ const Create = {
     STATS.forEach((s) => (Create.alloc[s.k] = 0));
     Game.show('create');
     const el = document.getElementById('create');
-    const clubOpts = LEAGUES.filter((l) => l.id.startsWith('TR')).map((l) => `<optgroup label="${l.name}">${CLUB_LIST.filter((c) => c[3] === l.id).map((c) => `<option value="${c[0]}">${c[1]} (Akademi ${'★'.repeat(Math.round(U.clamp((c[4] - 45) / 9, 1, 5)))})</option>`).join('')}</optgroup>`).join('')
-      + LEAGUES.filter((l) => !l.id.startsWith('TR')).map((l) => `<optgroup label="${l.name}">${CLUB_LIST.filter((c) => c[3] === l.id).map((c) => `<option value="${c[0]}">${c[1]}</option>`).join('')}</optgroup>`).join('');
     el.innerHTML = `
       <div class="cr-card card">
         <h1>Yeni Kariyer</h1>
-        <p class="muted">Futbolcu olma hayalinin peşindesin. Hangi yılda ve kaç yaşında başlayacağını seç.</p>
+        <p class="muted">Futbolcu olma hayalinin peşindesin. Hangi yılda ve kaç yaşında başlayacağını seç. Kulübünü sen seçmezsin: scoutlar seni keşfeder.</p>
         <div class="cr-grid">
           <label>Adın<input id="cr-name" maxlength="16" placeholder="Örn: Emre"></label>
           <label>Soyadın<input id="cr-sur" maxlength="18" placeholder="Örn: Yıldız"></label>
@@ -1568,8 +1664,6 @@ const Create = {
             <small class="muted">O dönemin yıldızlarıyla oynarsın</small></label>
           <label>Başlangıç yaşı<select id="cr-age">${Array.from({ length: 11 }, (_, i) => 8 + i).map((a) => `<option value="${a}">${a} yaş</option>`).join('')}</select>
             <small class="muted" id="cr-age-note"></small></label>
-          <label class="full" id="cr-club-wrap">Altyapısına katılacağın kulüp<select id="cr-club">${clubOpts}</select>
-            <small class="muted">Büyük kulüplerin tesisleri daha iyidir (daha hızlı gelişim) ama rakipler de daha güçlüdür.</small></label>
         </div>
         <div class="lbl">Zorluk</div>
         <div class="seg big" id="cr-diff">
@@ -1601,8 +1695,8 @@ const Create = {
     const ageSel = document.getElementById('cr-age');
     const updAge = () => {
       const a = +ageSel.value;
-      document.getElementById('cr-club-wrap').classList.toggle('hidden', a <= 12);
-      document.getElementById('cr-age-note').textContent = a <= 12 ? 'İlk maçın bir sokak maçı; scout seni izleyecek' : a >= 17 ? 'U19 takımında başlarsın, A takım kapıda' : `${ageGroupName(a)} takımında başlarsın`;
+      document.getElementById('cr-age-note').textContent = a <= 12 ? 'İlk maçın bir mahalle maçı; scout seni izleyecek' : `Altyapı seçmelerine katılırsın (${ageGroupName(a)}); kulübünü scoutlar belirler`;
+      Create.drawStats();
     };
     ageSel.onchange = updAge;
     updAge();
@@ -1611,21 +1705,27 @@ const Create = {
       const surname = document.getElementById('cr-sur').value.trim() || 'Yıldız';
       Game.newCareer({
         name, surname, nation: document.getElementById('cr-nat').value, foot: document.getElementById('cr-foot').value,
-        position: Create.pos, clubId: document.getElementById('cr-club').value, alloc: Create.alloc, difficulty: Create.diff,
+        position: Create.pos, alloc: Create.alloc, difficulty: Create.diff,
         year: +document.getElementById('cr-year').value, age: +document.getElementById('cr-age').value,
       });
     };
     Create.drawStats();
   },
+  // Oyuncunun başlayacağı yaşa göre taban stat (Player.create ile aynı)
+  base() {
+    const el = document.getElementById('cr-age');
+    const age = el ? +el.value : 8;
+    return Math.max(12, Math.round(expectedAtAge(age) - 6));
+  },
   left() { return Create.points - Object.values(Create.alloc).reduce((a, b) => a + b, 0); },
   drawStats() {
     const w = POSITIONS[Create.pos].w;
-    document.getElementById('cr-pts').textContent = `(${Create.left()} puan kaldı)`;
+    document.getElementById('cr-pts').textContent = `(${Create.left()} puan kaldı · ${document.getElementById('cr-age').value} yaşındaki bir çocuğun ortalaması ${Create.base()})`;
     document.getElementById('cr-stats').innerHTML = STATS.map((s) => `
       <div class="cs ${w[s.k] >= 0.12 ? 'key' : ''}">
         <span title="${U.esc(s.d)}">${s.l}${w[s.k] >= 0.12 ? ' ★' : ''}</span>
         <button data-d="-1" data-k="${s.k}">−</button>
-        <b>${12 + Create.alloc[s.k]}</b>
+        <b>${Create.base() + Create.alloc[s.k]}</b>
         <button data-d="1" data-k="${s.k}">+</button>
       </div>`).join('');
     U.$$('#cr-stats button').forEach((b) => (b.onclick = () => {

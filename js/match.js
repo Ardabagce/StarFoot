@@ -20,7 +20,7 @@ const MOMENT_TITLES = {
 };
 
 const MOMENT_DESC = {
-  open: 'Top ayağında! Parmağını geriye çekip bırakarak şut çek ya da boştaki arkadaşına dokunarak pas ver. Rakipler üstüne geliyor, çabuk ol!',
+  open: 'Top ayağında! Parmağını geriye çekip bırakarak şut çek ya da arkadaşına dokunarak pas ver. Ofsayt çizgisinin gerisindeki arkadaşa pas verme! Rakipler üstüne geliyor, çabuk ol!',
   close: 'Rakibi geçtin, kaleciyle karşı karşıyasın! Geriye çek, köşeye nişan al ve bırak.',
   deep: 'Geride topu aldın. Hücumdaki bir arkadaşına dokunarak pas ver ya da geriye çekip bırakarak uzun top at.',
   freekick: 'Geriye kavisli çekerek barajın yanından dolandır ya da Yarım Yükseklik ile üstünden aşırt.',
@@ -82,7 +82,7 @@ const Match = {
     const M = {
       min: 0, hs: 0, as: 0, rating: 6.0, goals: 0, assists: 0, yellow: 0, red: false,
       feed: [], speed: 1, instant: false, statsUsed: new Set(), shots: 0, keyPasses: 0, tackles: 0,
-      ownScorers: [], oppScorers: [], teamBoost: 0, energySave: 0,
+      ownScorers: [], oppScorers: [], teamBoost: 0, energySave: 0, gt: {},
     };
     const isHome = ctx.side === 'home';
     const addOwn = () => (isHome ? M.hs++ : M.as++);
@@ -206,6 +206,7 @@ const Match = {
       M.statsUsed.add(type === 'deep' ? 'passing' : 'shooting'); M.statsUsed.add('technique');
       if (o === 'goal') {
         M.goals++; M.shots++;
+        M.gt[type] = (M.gt[type] || 0) + 1;
         rate(type === 'penalty' ? 0.7 : type === 'freekick' ? 1.4 : 1.15);
         const msg = {
           penalty: `${U.esc(pname)} penaltıyı soğukkanlılıkla gole çevirdi!`,
@@ -227,6 +228,9 @@ const Match = {
       } else if (o === 'blocked') {
         rate(-0.15);
         feed(`🧱 <b>${M.min}'</b> ${U.esc(pname)}'in vuruşu rakibe çarptı.`);
+      } else if (o === 'offside') {
+        rate(-0.1);
+        feed(`🚩 <b>${M.min}'</b> ${U.esc(pname)} pası verdi ama ${U.esc((r.mate || 'arkadaşı').split(' ').slice(-1)[0])} ofsayttaydı. Yan hakem bayrağı kaldırdı.`);
       } else if (o === 'claimed') {
         rate(-0.1);
         feed(`🧤 <b>${M.min}'</b> Kaleci araya girip topu kontrol etti.`);
@@ -240,7 +244,7 @@ const Match = {
       const k = type === 'deep' ? 'pass' : type === 'freekick' ? 'freekick' : type === 'penalty' ? 'penalty' : 'shot';
       const rel = (Player.skillFor(p, k) - opp.rating) / 20 - (cond - 0.8) - (skill - 0.4) * 1.2;
       if (type === 'penalty') return { outcome: U.chance(U.sigmoid(rel * 0.5 + 1.2)) ? 'goal' : U.pick(['saved', 'miss']) };
-      if (type === 'freekick') return { outcome: U.chance(U.sigmoid(rel - 2)) ? 'goal' : U.pick(['saved', 'blocked', 'miss']) };
+      if (type === 'freekick') return { outcome: U.chance(U.sigmoid(rel - 1.4)) ? 'goal' : U.pick(['saved', 'blocked', 'miss']) };
       const passPref = type === 'deep' ? 0.9 : p.position === 'FW' ? 0.3 : 0.55;
       if (U.chance(passPref)) {
         const prel = (Player.skillFor(p, 'pass') - opp.rating) / 15;
@@ -284,7 +288,7 @@ const Match = {
       let auto = false;
       $('mm-auto').onclick = () => { auto = true; if (MiniGame._abort) MiniGame._abort(); };
       const scene = Scenes.make(type, { skill, mates: mateNames, position: p.position, pace: st.pace, narrow: narrow() });
-      const r = await MiniGame.play($('mm-host'), scene, { stats: st, skill, cond, kits, number: p.shirt, mateChance });
+      const r = await MiniGame.play($('mm-host'), scene, { stats: st, skill, cond, kits, number: p.shirt, mateChance, captain: !!ctx.captain });
       hideMoment();
       if (auto || r.outcome === 'auto') return autoCanvas(type);
       return r;
@@ -445,6 +449,7 @@ const Match = {
           const pg = U.clamp(U.sigmoid((Player.skillFor(p, 'header') - opp.rating) / 12 - 0.2), 0.15, 0.72);
           if (U.chance(pg)) {
             M.goals++; rate(1.1);
+            M.gt.header = (M.gt.header || 0) + 1;
             ownGoal(pname, null, `${U.esc(pname)} yükseldi ve kafayla ağları buldu!`);
           } else { rate(0.1); feed(`🧤 <b>${M.min}'</b> ${U.esc(pname)}'in kafa vuruşunu kaleci son anda çıkardı.`); }
         } else if (r === 'partial') {
@@ -528,7 +533,7 @@ const Match = {
       const summary = {
         gf, ga, res, hs: M.hs, as: M.as, played, energySave: M.energySave, minutes: Math.max(0, minutes), rating: played ? rating : null,
         goals: M.goals, assists: M.assists, yellow: M.yellow, red: M.red, motm,
-        ownScorers: M.ownScorers, oppScorers: M.oppScorers, statsUsed: [...M.statsUsed],
+        ownScorers: M.ownScorers, oppScorers: M.oppScorers, statsUsed: [...M.statsUsed], goalTypes: M.gt,
       };
       const resTxt = { W: 'GALİBİYET', D: 'BERABERLİK', L: 'MAĞLUBİYET' }[res];
       $('mt-moment').classList.remove('hidden');
@@ -548,7 +553,14 @@ const Match = {
             <div><span>Kilit Pas</span><b>${M.keyPasses}</b></div>
             <div><span>Top Kapma</span><b>${M.tackles}</b></div>
           </div>
-          ${motm ? '<div class="ms-motm">⭐ MAÇIN ADAMI SEÇİLDİN!</div>' : ''}
+          ${motm ? `<div class="motm-card">
+            <div class="motm-rays"></div>
+            <div class="motm-trophy">${Trophy.svg('motm')}</div>
+            <div class="motm-tag">Maçın Adamı</div>
+            <div class="motm-name">${U.esc(pname)}</div>
+            <div class="motm-sub">${M.goals} gol · ${M.assists} asist · reyting ${rating.toFixed(1)}</div>
+            <small>Ödül vitrinine eklendi · kariyerindeki ${p.totals.motm + 1}. ödül</small>
+          </div>` : ''}
           ` : '<div class="ms-none">Bu maçta forma giymedin.</div>'}
           <button class="btn btn-big" id="ms-done">Devam</button>
         </div>`;

@@ -37,6 +37,10 @@ const ICON_PATHS = {
   fast: '<path d="M4 6l8 6-8 6zM12 6l8 6-8 6z"/>',
   heart: '<path d="M12 20s-7-4.4-9-9a4.6 4.6 0 0 1 8.2-4.2L12 8l.8-1.2A4.6 4.6 0 0 1 21 11c-2 4.6-9 9-9 9z"/>',
   close: '<path d="M6 6l12 12M18 6L6 18"/>',
+  coin: '<circle cx="12" cy="12" r="8.5"/><path d="M10 7.5v9M10 9.5l5-1.5M10 12.5l5-1.5M10 16.5c3 0 5-1.5 5-4"/>',
+  gift: '<rect x="3.5" y="9" width="17" height="11" rx="1"/><path d="M2.5 9h19M12 9v11M12 9c-2-4-6-4-6-1.5S10 9 12 9c2 0 6 1 6-1.5S14 5 12 9"/>',
+  wallet: '<path d="M4 7h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h11"/><circle cx="16" cy="13.5" r="1.2"/>',
+  chevron: '<path d="M6 9l6 6 6-6"/>',
 };
 
 const Icon = (name, cls = '') =>
