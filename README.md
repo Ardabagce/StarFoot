@@ -29,6 +29,7 @@ Oyunu bir web sunucusundan (ör. GitHub Pages) açıp tarayıcı menüsünden **
 - **Dönem yıldızları (dünya):** Seçtiğin yılın kurgusal yıldızları sahadadır (1980'ler: Maradoni, Platinni, van Bastın... 2000'ler: Ronaldinyo, Anri... bugün: Mbappo, Halland, Yamel...). Oyuncular yaşlanır, emekli olur, gençler sırası gelince profesyonel olur; liste bittikten sonra yeni nesil yıldızlar üretilir. Emeklilikler, yeni yıldızlar ve büyük transferler haberlerde ve sosyal medya gündeminde çıkar.
 - **Kariyer:** U10, U12, U14, U16 ve U19 takımlarında oynarsın. 17-18 yaşında profesyonel sözleşme imzalar, 33 yaşından sonra istediğin zaman emekli olabilirsin.
 - **20 takımlı ligler:** Tüm ligler 20 takım, 38 hafta. Türkiye'de 3 takım düşer, 3 takım çıkar.
+- **Avrupa Gelişim Ligi (U19):** U19 takımındayken kulübün Avrupa'nın en güçlü altyapılarıyla 16 takımlı eleme turnuvasında yarışır; maçları sen oynarsın.
 - **Ülke kupaları:** Her ülkenin kendi kupası var (Türkiye Kupası 32 takım, İngiltere Kupası, Kral Kupası, Almanya, İtalya ve Fransa kupaları 16 takım). Tek maç eleme, Avrupa kupalarıyla çakışmayan takvim.
 - **Avrupa kupaları:** Her sezon Avrupa Şampiyonlar Kupası ve Avrupa Federasyon Kupası (16 takım, tek maç eleme). Kulübün katılırsa maçlarını sen oynarsın.
 - **Dünya Kupası ve Avrupa Şampiyonası:** Gerçek takvimle (Dünya Kupası 1986, 1990... 2026, 2030; Avrupa Şampiyonası 1984, 1988... 2024, 2028) sezon sonunda oynanır. Milli takıma çağrılırsan maçlarına çıkarsın.
@@ -39,6 +40,7 @@ Oyunu bir web sunucusundan (ör. GitHub Pages) açıp tarayıcı menüsünden **
   - **Pas:** Takım arkadaşına **dokun**; top isabetli bir pasla ona gider (isabet Pas statına bağlı). **Aşırtma** seçiliyse pas yüksek bir yayla savunmanın üstünden geçer.
   - **Ofsayt:** Sahada ofsayt çizgisi gösterilir. Son savunmacının gerisindeki arkadaşına pas verirsen yan hakem bayrağı kaldırır.
   - **Kaleci:** Şutlara doğru havalanarak uçar, iki eliyle topa uzanır ve yere iner.
+  - **Çalım:** Rakip üstüne koşar ve bir tarafa hamle yapar; tam o anda ekranın sol/sağına dokunarak ya da kaydırarak topu ters tarafa çekersin. Erken davranırsan rakip okur.
   - **Kafa vuruşu:** Kornerden gelen topa doğru anda yükselirsin; kale ağzında gidip gelen nişangah neredeyse oraya vurursun. Kötü zamanlamada savunmacı önce davranır.
   - **Frikik:** Uzak frikiklerde vuruş daha güçlü, falso daha fazla; mesafe ekranda yazar.
   - **Vuruş tipi:** Yerden, Yarım Yükseklik veya Aşırtma (klavyede 1 / 2 / 3).
@@ -67,7 +69,7 @@ Oyunu bir web sunucusundan (ör. GitHub Pages) açıp tarayıcı menüsünden **
 - **Maçın oyuncusu:** Seçildiğinde defne yapraklı, konfetili, formalı premium bir ödül ekranı açılır; yıldız kupaların Kariyer sekmesindeki vitrinde sergilenir.
 - **105 başarım:** Gol, asist, maç, özel goller, kupalar, milli takım, kariyer, yetenek, ün ve yaşam kategorilerinde.
 - **Gerçekçi sürprizler:** Altyapıdayken A takımın yıldızları (dönemin gerçek oyuncularından esinlenen isimler) antrenmanını izlemeye gelir ve sana mevkisine göre bir şey öğretir; kulübün emekli efsaneleri tesisleri ziyaret eder, A takım hocası seni profesyonellerle antrenmana çağırır. Profesyonelken kaptanla ekstra çalışma, tecrübeli oyuncudan tavsiye, fizyoterapist programı gibi olaylar olur. Çok iyi maçlardan sonra başkandan prim ya da A takım antrenmanı daveti gelir.
-- **Antrenman mini oyunları:** Antrenman, yoğun antrenman ve özel hocada odak statına göre bir çalışma oynanır: Şut → bitiricilik (3 şut), Teknik → top sektirme, Pas → verkaç istasyonu, Top Sürme → slalom, Kafa → korner kafa vuruşu (zamanlama + nişangah), Savunma → ikili mücadele, Güç → omuz omuza (basılı tut, yeşil bantta bırak), Hız → sürat koşusu, Dayanıklılık → tempo koşusu (hız ibresini yeşil bantta tut). İyi oynarsan gelişim ×1,5'e kadar çıkar; atlayabilir ya da tamamen kapatabilirsin.
+- **Antrenman mini oyunları:** Antrenman, yoğun antrenman ve özel hocada odak statına göre bir çalışma oynanır: Şut → bitiricilik (3 şut), Teknik → top sektirme, Pas → verkaç istasyonu, Top Sürme → çalım (rakibin hamlesine göre topu ters tarafa çek), Kafa → korner kafa vuruşu (zamanlama + nişangah), Savunma → ikili mücadele, Güç → omuz omuza (basılı tut, yeşil bantta bırak), Hız → sürat koşusu, Dayanıklılık → tempo koşusu (hız ibresini yeşil bantta tut). İyi oynarsan gelişim ×1,5'e kadar çıkar; atlayabilir ya da tamamen kapatabilirsin.
 - **Zorluk:** Kolay, Orta ve Zor. Kariyer sekmesinden sonradan da değiştirilebilir.
 - **Devre arası:** Hocayla taktik konuşmak, takımı ateşlemek, toparlanmak ya da rakip kaleciyi incelemek; yedekteysen ısınıp hocaya görünmek.
 - **Yeni mini oyunlar:** Kontra atak sprinti (hızlı hızlı dokun) ve verkaç (parlayan arkadaşına süre dolmadan dokun).

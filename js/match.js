@@ -25,9 +25,9 @@ const MOMENT_DESC = {
   deep: 'Geride topu aldın. Hücumdaki bir arkadaşına dokunarak pas ver ya da geriye çekip bırakarak uzun top at.',
   freekick: 'Geriye kavisli çekerek barajın yanından dolandır ya da Yarım Yükseklik ile üstünden aşırt.',
   penalty: 'Penaltı noktasındasın. Geriye çek, bir köşeye nişan al ve bırak!',
-  dribble: 'Halka yeşil bölgeye girdiğinde dokun ve rakipleri tek tek geç.',
+  dribble: 'Rakip üstüne geliyor! Bir tarafa hamle yaptığı an topu ters tarafa çek (ekranın sol/sağına dokun ya da kaydır).',
   tackle: 'Rakip forvet topla geliyor. Halka yeşile girince dokun; sarı bölge faul demek.',
-  header: 'Korner atılıyor. Halka yeşile girince dokun ve topa kafayı vur!',
+  header: 'Korner! Top kafana gelirken dokun; kale ağzında gezen nişangah neredeyse oraya vurursun.',
   sprint: 'Top boşta! Hızlı hızlı dokunarak rakibinden önce topa ulaş.',
   onetwo: 'Kısa paslarla savunmayı aç: parlayan arkadaşına süre dolmadan dokun.',
 };
@@ -431,10 +431,7 @@ const Match = {
         canvasOutcome(type, await playCanvas(type));
       } else if (type === 'dribble') {
         M.statsUsed.add('dribbling'); M.statsUsed.add('pace');
-        const r = await playTiming('dribble', 'dribble', {
-          title: 'Çalım at!', kind: 'dribble', desc: 'İmleç yeşil alandayken bas. Her başarılı basış bir rakibi geçirir.',
-          rounds: skill < 0.25 ? 1 : skill < 0.6 ? 2 : 3, button: 'ÇALIM!', okText: 'RAKİPLERİ GEÇTİN!', partialText: 'Top ayağından açıldı...', failText: 'TOPU KAPTIRDIN!',
-        }, 0.3);
+        const r = await playMini('dribble', 'dribble', 'dribble', 0.3, { rounds: skill < 0.25 ? 1 : skill < 0.6 ? 2 : 3, dribbling: st.dribbling });
         if (r === 'success') {
           rate(0.3);
           feed(`💨 <b>${M.min}'</b> ${U.esc(pname)} rakiplerini çalımlarla geçti!`);
@@ -602,15 +599,17 @@ const Match = {
             <small>Ödül vitrinine eklendi · kariyerindeki ${p.totals.motm + 1}. ödül</small>
           </div>` : ''}
           ${played ? `
-          <div class="ms-rating ${rating >= 7.5 ? 'good' : rating < 6 ? 'bad' : ''}">${rating.toFixed(1)}</div>
-          <div class="ms-grid">
-            <div><span>Süre</span><b>${summary.minutes}'</b></div>
-            <div><span>Gol</span><b>${M.goals}</b></div>
-            <div><span>Asist</span><b>${M.assists}</b></div>
-            <div><span>Şut</span><b>${M.shots}</b></div>
-            <div><span>Kilit Pas</span><b>${M.keyPasses}</b></div>
-            <div><span>Top Kapma</span><b>${M.tackles}</b></div>
-            <div class="wide"><span>Enerji</span><b>${Math.round(M.e0)} → ${Math.round(M.energy)} <small class="neg">−${Math.round(M.e0 - M.energy)}</small></b></div>
+          <div class="ms-hero">
+            <div class="ms-ring ${rating >= 7.5 ? 'hi' : rating < 6 ? 'lo' : 'mid'}" style="--p:${Math.round(rating * 10)}"><b>${rating.toFixed(1)}</b><small>Reyting</small></div>
+            <div class="ms-res res-${res}"><span>${resTxt}</span><b>${M.hs} - ${M.as}</b><small>${U.esc(ctx.home.name)} · ${U.esc(ctx.away.name)}</small></div>
+          </div>
+          <div class="ms-stats">
+            ${[['whistle', 'Süre', `${summary.minutes}'`, 0], ['ball', 'Gol', M.goals, M.goals], ['boot', 'Asist', M.assists, M.assists], ['fire', 'Şut', M.shots, 0], ['team', 'Kilit Pas', M.keyPasses, M.keyPasses], ['shield', 'Top Kapma', M.tackles, M.tackles]]
+              .map(([ic, l, v, hl]) => `<div class="mst ${hl ? 'hl' : ''}"><i>${Icon(ic)}</i><b>${v}</b><span>${l}</span></div>`).join('')}
+          </div>
+          <div class="ms-energy">
+            <div class="mse-h"><span>${Icon('bolt')} Enerji</span><b>${Math.round(M.e0)} → ${Math.round(M.energy)} <small>−${Math.round(M.e0 - M.energy)}</small></b></div>
+            <div class="mse-bar"><i class="was" style="width:${M.e0}%"></i><i class="now ${M.energy < 30 ? 'lo' : M.energy < 55 ? 'mid' : ''}" style="width:${M.energy}%"></i></div>
           </div>
 
           ` : '<div class="ms-none">Bu maçta forma giymedin.</div>'}

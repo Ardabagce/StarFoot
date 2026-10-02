@@ -263,6 +263,7 @@ const Game = {
       s.contract = { type: 'youth', clubId: id, wage: 0, years: 0 };
       delete s.world.clubs.STREET;
       s.youth = Youth.create(s.world, id, s.player.age);
+      Cups.setupYouth(s);
       Game.news(`${s.player.name}, ${st.trials ? 'seçmelerdeki performansıyla' : 'scout sayesinde'} ${Game.club().name} altyapısına katıldı! ${s.youth.group} takımında sezon başlıyor.`, 'good');
       Social.post('transfer', `Artık ${Game.club().name} altyapısındayım! Hayalim gerçek oluyor.`, 1.5);
       Game.save();
@@ -1073,8 +1074,8 @@ const UI = {
       const cup = s.cups[s.pendingCup];
       const k = cup.alive.indexOf(s.clubId);
       const opp = cup.alive[k % 2 === 0 ? k + 1 : k - 1];
-      next = `<div class="nm-vs"><div class="nm-team">${UI.shirt(Game.club(), 'big')}<b>${U.esc(Game.club().name)}</b></div><span class="vs">VS</span><div class="nm-team">${UI.shirt(Game.club(opp), 'big')}<b>${U.esc(Game.club(opp).name)}</b></div></div>
-        <div class="nm-meta">${U.esc(cup.name.toUpperCase())} · ${STAGE_NAMES[cup.alive.length].toUpperCase()} · Tek maç, kaybeden elenir</div>`;
+      next = `<div class="nm-vs"><div class="nm-team">${UI.shirt(Game.club(), 'big')}<b>${U.esc(Game.club().name)}${cup.youth ? ' U19' : ''}</b></div><span class="vs">VS</span><div class="nm-team">${UI.shirt(Game.club(opp), 'big')}<b>${U.esc(Game.club(opp).name)}${cup.youth ? ' U19' : ''}</b></div></div>
+        <div class="nm-meta">${U.esc(cup.name.toLocaleUpperCase('tr'))} · ${STAGE_NAMES[cup.alive.length].toLocaleUpperCase('tr')} · Tek maç, kaybeden elenir</div>`;
     } else if (Game.inStreet() && s.street.trials) {
       next = `<div class="nm-vs"><div class="nm-team">${UI.shirt(Game.club(), 'big')}<b>Seçme Günü</b></div></div>
         <div class="nm-meta">ALTYAPI SEÇMELERİ · 3 istasyon: ${({ FW: 'bitiricilik, sürat, slalom', MF: 'pas, top sektirme, slalom', DF: 'ikili mücadele, omuz omuza, kafa' })[p.position] || ''}. Tribünde kulüplerin scoutları var!</div>`;

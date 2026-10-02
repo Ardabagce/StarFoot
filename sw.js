@@ -1,5 +1,5 @@
 // StarFoot service worker: oyun dosyalarını önbelleğe alır, çevrimdışı oynanabilir
-const CACHE = 'starfoot-v12';
+const CACHE = 'starfoot-v13';
 const ASSETS = [
   './', './index.html', './manifest.webmanifest', './css/style.css',
   './js/util.js', './js/icons.js', './js/data.js', './js/player.js', './js/league.js', './js/legends.js', './js/cups.js',

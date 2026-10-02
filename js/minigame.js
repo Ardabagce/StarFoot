@@ -226,6 +226,9 @@ const MiniGame = {
         let x0 = Math.min(...pts.map((e) => e.x)) - mx, x1 = Math.max(...pts.map((e) => e.x)) + mx;
         let y0 = -4.6, y1 = Math.max(...pts.map((e) => e.y)) + 3;
         const A = cw / ch;
+        // kaleye yakın sahnelerde kamera fazla yaklaşmasın: en az bu kadar saha görünür
+        y1 = Math.max(y1, y0 + (A < 0.9 ? 28 : 24));
+        if (x1 - x0 < 18) { const c = (x0 + x1) / 2; x0 = c - 9; x1 = c + 9; }
         if ((x1 - x0) / (y1 - y0) < A) {
           const w = (y1 - y0) * A, c = (x0 + x1) / 2;
           x0 = c - w / 2; x1 = c + w / 2;
@@ -1073,6 +1076,133 @@ Object.assign(MiniGame, {
       c.lineWidth = 4 * g.dpr; c.strokeStyle = 'rgba(5,11,29,0.7)'; c.strokeText(txt, g.W / 2, y); c.fillText(txt, g.W / 2, y);
     };
     return g;
+  },
+
+  // Çalım: rakip üstüne gelir ve bir tarafa hamle yapar; o anda topu ters tarafa çek (sola/sağa dokun ya da kaydır)
+  dribble(host, o) {
+    return new Promise((resolve) => {
+      const g = MiniGame._canvas(host, 'Rakip bir tarafa <b>hamle yapınca</b> topu <b>ters tarafa çek</b> · ekranın sol/sağına dokun ya da kaydır · <kbd>←</kbd> <kbd>→</kbd>');
+      const { ctx } = g;
+      const rounds = o.rounds || 2;
+      const drib = o.dribbling || 40;
+      const win = U.clamp(0.42 + drib / 350 - o.skill * 0.22, 0.25, 0.75); // hamleden sonra tepki süresi
+      const closing = 6.5 + o.skill * 3.5; // rakibin yaklaşma hızı (m/sn)
+      const me = { x: 0, tx: 0, run: 0 };
+      let t = 0, done = false, raf = 0, last = performance.now(), beaten = 0, scroll = 0, msg = '', msgCol = '#fff', msgT = 0;
+      const lookMe = Sprites.look(7);
+      const mkDef = (i) => ({ d: 11 + i * 0.5, x: me.tx + U.rand(-0.4, 0.4), side: U.pick([-1, 1]), state: 'come', lt: 0, look: Sprites.look(41 + i * 7) });
+      let def = mkDef(0);
+      const say = (m, c) => { msg = m; msgCol = c; msgT = 0.9; };
+      const end = (res, text, col) => { done = true; say(text, col); msgT = 9; setTimeout(() => { cleanup(); resolve({ result: res }); }, 1200); };
+      const move = (dir) => {
+        if (done || t < 0.5 || !def || def.state === 'beaten' || def.state === 'won') return;
+        if (def.state === 'come') {
+          if (def.d < 7) { // erken hamle: rakip okur
+            def.state = 'won'; me.tx = U.clamp(me.tx + dir * 1.6, -2.6, 2.6); def.x = me.tx;
+            return beaten ? end('partial', 'ERKEN DAVRANDIN, TOP KAÇTI', '#ffcf3f') : end('fail', 'RAKİP HAMLENİ OKUDU', '#ff6b6b');
+          }
+          return;
+        }
+        // hamle sırasında: ters tarafa çekmek gerekiyor
+        if (dir === -def.side) {
+          def.state = 'beaten'; beaten++;
+          me.tx = U.clamp(me.tx + dir * 1.8, -2.6, 2.6);
+          say(U.pick(['ÇALIM!', 'GEÇTİN!', 'NEFİS!']), '#7cf0a0');
+        } else {
+          def.state = 'won'; me.tx = U.clamp(me.tx + dir * 1.8, -2.6, 2.6);
+          beaten ? end('partial', 'TOPU KAPTIRDIN', '#ffcf3f') : end('fail', 'RAKİBİN AYAĞINA ÇEKTİN', '#ff6b6b');
+        }
+      };
+      const draw = () => {
+        const { W, H, dpr } = g;
+        const M = H / 15; // metre başına piksel
+        // kayan saha
+        for (let i = -1; i < 16; i++) {
+          const y = ((i * M * 2 + (scroll * M) % (M * 2)) + M * 2) - M * 2;
+          ctx.fillStyle = i % 2 ? '#2f8c45' : '#38994d'; ctx.fillRect(0, y, W, M * 2 + 1);
+        }
+        ctx.strokeStyle = 'rgba(255,255,255,0.5)'; ctx.lineWidth = 2 * dpr;
+        const ly = ((scroll * M) % (M * 10));
+        ctx.beginPath(); ctx.moveTo(0, ly); ctx.lineTo(W, ly); ctx.stroke();
+        const cx = W / 2, sx = (x) => cx + x * M * 1.2;
+        const py = H * 0.78, fh = Math.min(H * 0.17, W * 0.24);
+        // rakip
+        if (def) {
+          const dy = py - def.d * M;
+          let dx = def.x, lean = 0;
+          if (def.state === 'lunge' || def.state === 'won') { const k = U.clamp((t - def.lt) / win, 0, 1); dx = def.x + def.side * k * 1.4; lean = def.side * k; }
+          if (def.state === 'beaten') { const k = U.clamp((t - def.lt) / 0.4, 0, 1); dx = def.x + def.side * (1.4 + k * 0.6); lean = def.side * (1 - k * 0.3); }
+          ctx.save(); ctx.translate(sx(dx), dy); ctx.rotate(lean * 0.35);
+          Sprites.figure(ctx, 0, 0, fh, { kit: o.kits.opp, look: def.look, facing: 'down', run: t * 9, speed: def.state === 'come' ? 0.9 : 0.4, t });
+          ctx.restore();
+          if (def.state === 'lunge') {
+            // hamle uyarısı: rakibin gittiği taraf kırmızı, kaçman gereken taraf yeşil ok
+            const ay = dy - fh * 1.15;
+            ctx.fillStyle = 'rgba(255,90,80,0.9)'; ctx.font = `800 ${Math.round(26 * dpr)}px "Saira Condensed", sans-serif`; ctx.textAlign = 'center';
+            ctx.fillText('!', sx(dx), ay);
+            const gx = sx(me.x) - def.side * W * 0.22;
+            ctx.fillStyle = 'rgba(124,240,160,0.95)';
+            ctx.beginPath(); ctx.moveTo(gx - def.side * 26 * dpr, py - fh * 0.5); ctx.lineTo(gx, py - fh * 0.5 - 18 * dpr); ctx.lineTo(gx, py - fh * 0.5 + 18 * dpr); ctx.closePath(); ctx.fill();
+            // kalan süre halkası
+            const k = 1 - U.clamp((t - def.lt) / win, 0, 1);
+            ctx.strokeStyle = '#ffcf3f'; ctx.lineWidth = 4 * dpr;
+            ctx.beginPath(); ctx.arc(sx(me.x), py - fh * 0.5, fh * 0.75, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * k); ctx.stroke();
+          }
+        }
+        // oyuncu ve top
+        const bx = sx(me.x) + (me.tx - me.x) * M * 0.6;
+        Sprites.figure(ctx, sx(me.x), py, fh, { kit: o.kits.own, look: lookMe, facing: 'up', number: o.number, run: me.run, speed: 0.9, label: 'SEN', labelScale: dpr, labelColor: 'rgba(214,40,57,0.92)', t });
+        Sprites.ball(ctx, bx + fh * 0.12, py - fh * 0.1, Math.max(6 * dpr, fh * 0.06), me.run);
+        g.text(`${beaten} / ${rounds} RAKİP`, H * 0.07, 26);
+        if (msgT > 0) g.text(msg, H * 0.42, 34, msgCol);
+        else if (t < 0.5) g.text('TOP SENDE!', H * 0.42, 32);
+      };
+      const loop = (now) => {
+        const dt = Math.min(0.05, (now - last) / 1000);
+        last = now; t += dt;
+        msgT = Math.max(0, msgT - dt);
+        me.x += (me.tx - me.x) * Math.min(1, dt * 10);
+        if (!done && t > 0.5) {
+          scroll += dt * 4; me.run += dt * 9;
+          if (def) {
+            if (def.state === 'come') {
+              def.d -= closing * dt;
+              def.x += (me.x - def.x) * Math.min(1, dt * 2);
+              if (def.d <= 3.2) { def.state = 'lunge'; def.lt = t; }
+            } else if (def.state === 'lunge') {
+              def.d -= closing * 0.35 * dt;
+              if (t - def.lt > win) { def.state = 'won'; beaten ? end('partial', 'TOPU KAPTIRDIN', '#ffcf3f') : end('fail', 'RAKİP TOPU ALDI', '#ff6b6b'); }
+            } else if (def.state === 'beaten') {
+              def.d -= closing * dt;
+              if (def.d < -2) {
+                if (beaten >= rounds) { def = null; end('success', 'HEPSİNİ GEÇTİN!', '#7cf0a0'); } else def = mkDef(beaten);
+              }
+            }
+          }
+        }
+        draw();
+        raf = requestAnimationFrame(loop);
+      };
+      let down = null;
+      const pd = (e) => { e.preventDefault(); down = { x: e.clientX }; };
+      const pu = (e) => {
+        if (!down) return;
+        const dx = e.clientX - down.x;
+        const r = g.cv.getBoundingClientRect();
+        const dir = Math.abs(dx) > 18 ? Math.sign(dx) : (e.clientX < r.left + r.width / 2 ? -1 : 1);
+        down = null; move(dir);
+      };
+      const key = (e) => {
+        if (e.code === 'ArrowLeft' || e.code === 'KeyA') { e.preventDefault(); move(-1); }
+        if (e.code === 'ArrowRight' || e.code === 'KeyD') { e.preventDefault(); move(1); }
+      };
+      const cleanup = () => { cancelAnimationFrame(raf); document.removeEventListener('keydown', key); g.box.removeEventListener('pointerup', pu); window.removeEventListener('resize', g.layout); };
+      g.box.addEventListener('pointerdown', pd);
+      g.box.addEventListener('pointerup', pu);
+      document.addEventListener('keydown', key);
+      raf = requestAnimationFrame(loop);
+      MiniGame._abort = () => { if (done) return; done = true; cleanup(); resolve({ result: 'auto' }); };
+    });
   },
 
   // Kafa vuruşu: köşeden gelen ortaya doğru anda yüksel; nişangah kale ağzında gidip gelir,

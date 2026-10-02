@@ -1061,3 +1061,37 @@ kbd { background: var(--panel-2); border: 1px solid var(--line); padding: 0 5px;
 /* Maç sonu ekranı uzun olabilir: kaydırılabilir */
 #mm-host:has(.ms) { overflow-y: auto; -webkit-overflow-scrolling: touch; }
 @media (max-width: 560px) { .ms { padding: 16px; } .ms-rating { font-size: 60px; } }
+
+/* Maç sonu istatistikleri (premium) */
+.ms { background: linear-gradient(165deg, #16285e, #0b1533 70%); border: 1px solid rgba(255, 207, 63, .3); box-shadow: 0 18px 44px rgba(0, 0, 0, .45), inset 0 1px 0 rgba(255, 255, 255, .06); position: relative; }
+.ms::before { content: ""; position: absolute; inset: 0 0 auto; height: 3px; background: linear-gradient(90deg, var(--flood), #ff7a1a, #ff3d6e); }
+.ms-hero { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; text-align: left; }
+.ms-ring { --c: var(--flood); flex: none; width: 104px; height: 104px; border-radius: 50%; display: grid; place-content: center; text-align: center; background: radial-gradient(closest-side, #0e1a42 79%, transparent 80% 100%), conic-gradient(var(--c) calc(var(--p) * 1%), rgba(255, 255, 255, .1) 0); box-shadow: 0 0 24px color-mix(in srgb, var(--c) 35%, transparent); }
+.ms-ring.hi { --c: #2fbf71; } .ms-ring.lo { --c: #ff6f64; }
+.ms-ring b { font-family: var(--display); font-weight: 800; font-size: 38px; line-height: 1; color: var(--c); }
+.ms-ring small { font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.ms-res { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.ms-res span { align-self: flex-start; font-size: 11px; font-weight: 800; letter-spacing: .14em; padding: 2px 8px; background: rgba(255, 255, 255, .1); }
+.ms-res.res-W span { background: #1f9d55; } .ms-res.res-L span { background: #c0392b; } .ms-res.res-D span { background: #c79a12; color: #0a1530; }
+.ms-res b { font-family: var(--display); font-weight: 800; font-size: 40px; line-height: 1.05; }
+.ms-res small { color: var(--muted); font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ms-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.mst { position: relative; display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 12px 6px 10px; border-radius: 12px; background: linear-gradient(180deg, rgba(255, 255, 255, .07), rgba(255, 255, 255, .02)); border: 1px solid rgba(255, 255, 255, .08); }
+.mst i { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: rgba(79, 179, 255, .15); }
+.mst i .ic { width: 17px; height: 17px; color: #8cc9ff; }
+.mst b { font-family: var(--display); font-weight: 800; font-size: 28px; line-height: 1.05; font-variant-numeric: tabular-nums; }
+.mst span { font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.mst.hl { border-color: rgba(255, 207, 63, .55); background: linear-gradient(180deg, rgba(255, 207, 63, .18), rgba(255, 207, 63, .03)); box-shadow: 0 6px 18px rgba(255, 207, 63, .12); }
+.mst.hl i { background: rgba(255, 207, 63, .2); } .mst.hl i .ic { color: var(--flood); } .mst.hl b { color: #ffe27a; }
+.ms-energy { margin: 10px 0 6px; padding: 10px 12px; border-radius: 12px; background: rgba(255, 255, 255, .04); border: 1px solid rgba(255, 255, 255, .08); text-align: left; }
+.mse-h { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+.mse-h span { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.mse-h .ic { width: 15px; height: 15px; color: var(--flood); }
+.mse-h b { font-family: var(--display); font-size: 20px; }
+.mse-h small { color: #ff8f86; font-size: 14px; }
+.mse-bar { position: relative; height: 10px; border-radius: 999px; background: rgba(255, 255, 255, .08); overflow: hidden; }
+.mse-bar i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 999px; }
+.mse-bar i.was { background: rgba(255, 111, 100, .35); }
+.mse-bar i.now { background: linear-gradient(90deg, #2fbf71, #7ee0a8); }
+.mse-bar i.now.mid { background: linear-gradient(90deg, #d9a400, #ffcf3f); } .mse-bar i.now.lo { background: linear-gradient(90deg, #c0392b, #ff6f64); }
+@media (max-width: 560px) { .ms-ring { width: 86px; height: 86px; } .ms-ring b { font-size: 30px; } .ms-res b { font-size: 32px; } .mst b { font-size: 24px; } }
