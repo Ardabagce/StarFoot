@@ -48,6 +48,14 @@ const Match = {
     let skill = U.clamp((ctx.levelBase != null ? ctx.levelBase : 0.4) + (opp.rating - ovr) / 70, 0.03, 0.88);
     const kits = Sprites.kits(own, opp);
     const narrow = () => window.innerWidth / window.innerHeight < 0.9;
+    // Hava durumu ve maç topu
+    const weather = ctx.weather = ctx.weather || Weather.pick(ctx, state);
+    Weather.apply(weather);
+    Sprites.curBall = Balls.forMatch(ctx, weather, state.season.year);
+    const sb = SCOREBOARDS[ctx.lg] || SCOREBOARDS.youth;
+    // Enerji maç boyunca canlı düşer; kondisyon anlık enerjiye göre hesaplanır
+    let condAdj = 0;
+    const calcCond = () => 1.25 - 0.35 * (M.energy / 100) - 0.15 * (p.morale / 100) + condAdj;
     let cond = 1.25 - 0.35 * (p.energy / 100) - 0.15 * (p.morale / 100);
 
     // Katılım
@@ -83,7 +91,9 @@ const Match = {
       min: 0, hs: 0, as: 0, rating: 6.0, goals: 0, assists: 0, yellow: 0, red: false,
       feed: [], speed: 1, instant: false, statsUsed: new Set(), shots: 0, keyPasses: 0, tackles: 0,
       ownScorers: [], oppScorers: [], teamBoost: 0, energySave: 0, gt: {},
+      energy: p.energy, e0: p.energy, tiredWarn: false,
     };
+    const drain = (v) => { M.energy = Math.max(0, M.energy - v); cond = calcCond(); };
     const isHome = ctx.side === 'home';
     const addOwn = () => (isHome ? M.hs++ : M.as++);
     const addOpp = () => (isHome ? M.as++ : M.hs++);
@@ -95,7 +105,7 @@ const Match = {
     ov.innerHTML = `
       <div class="mt-wrap">
         <div class="mt-top">
-          <div class="mt-comp">${U.esc(ctx.compName)}</div>
+          <div class="mt-comp">${U.esc(ctx.compName)} <span class="mt-wx wx-${weather.id}">${U.esc(Weather.label(weather))}</span></div>
           <div class="mt-board">
             <div class="mt-team">${UI.shirt(ctx.home, 'big')}<span>${U.esc(ctx.home.name)}</span></div>
             <div class="mt-score"><span id="mt-hs">0</span><i></i><span id="mt-as">0</span></div>
@@ -107,11 +117,21 @@ const Match = {
           <div class="mt-feed" id="mt-feed"></div>
           <div class="mt-side">
             <div class="mt-me">
-              <div class="mt-me-name">${U.esc(pname)}</div>
-              <div class="mt-me-row"><span>Durum</span><b id="mt-status"></b></div>
-              <div class="mt-me-row"><span>Reyting</span><b id="mt-rating">-</b></div>
-              <div class="mt-me-row"><span>Gol / Asist</span><b id="mt-ga">0 / 0</b></div>
-              <div class="mt-me-row"><span>Enerji</span><b>${Math.round(p.energy)}</b></div>
+              <div class="me-id">
+                <div class="me-num" style="--c1:${own.c1};--c2:${own.c2}">${p.shirt}</div>
+                <div class="me-nm"><b>${U.esc(pname)}</b><small>${POSITIONS[p.position].l}${ctx.captain ? ' · <i class="armband sm">C</i> Kaptan' : ''}</small></div>
+                <div class="me-rt" id="mt-rating">-</div>
+              </div>
+              <div class="me-st" id="mt-status"></div>
+              <div class="me-chips">
+                <div><span>Gol</span><b id="mt-g">0</b></div>
+                <div><span>Asist</span><b id="mt-a">0</b></div>
+                <div><span>Şut</span><b id="mt-sh">0</b></div>
+              </div>
+              <div class="me-en">
+                <div class="me-en-h"><span>${Icon('bolt')} Enerji</span><b id="mt-en">${Math.round(p.energy)}</b></div>
+                <div class="me-en-bar"><i id="mt-enb" style="width:${p.energy}%"></i></div>
+              </div>
             </div>
             <div class="mt-ctrl">
               <div class="seg" id="mt-speed">
@@ -128,6 +148,7 @@ const Match = {
             <button class="btn btn-ghost" id="mm-auto">${Icon('robot')}<span>Otomatik</span></button>
           </div>
           <div id="mm-host"></div>
+          <div class="mm-sb" id="mm-sb" style="--sb1:${sb.c1};--sb2:${sb.c2}"></div>
         </div>
       </div>`;
 
@@ -145,8 +166,14 @@ const Match = {
       $('mt-hs').textContent = M.hs; $('mt-as').textContent = M.as;
       $('mt-min').textContent = Math.min(90, M.min) + "'";
       $('mt-bar').style.width = Math.min(100, (M.min / 90) * 100) + '%';
-      $('mt-rating').textContent = enterMin && M.min >= enterMin ? M.rating.toFixed(1) : '-';
-      $('mt-ga').textContent = `${M.goals} / ${M.assists}`;
+      const rt = enterMin && M.min >= enterMin ? M.rating : null;
+      $('mt-rating').textContent = rt != null ? rt.toFixed(1) : '-';
+      $('mt-rating').className = 'me-rt ' + (rt == null ? '' : rt >= 7.5 ? 'hi' : rt < 6 ? 'lo' : 'mid');
+      $('mt-g').textContent = M.goals; $('mt-a').textContent = M.assists; $('mt-sh').textContent = M.shots;
+      const en = Math.round(M.energy);
+      $('mt-en').textContent = en;
+      $('mt-enb').style.width = en + '%';
+      $('mt-enb').className = en < 30 ? 'lo' : en < 55 ? 'mid' : '';
       $('mt-status').textContent = M.red ? 'Kırmızı kart' : leaveMin !== null && M.min >= leaveMin ? 'Oyundan çıktı' : onPitch() ? 'Sahada' : enterMin ? 'Yedek kulübesinde' : ctx.role === 'out' ? 'Kadro dışı' : 'Yedek kulübesinde';
     };
     U.$$('#mt-speed button').forEach((b) => (b.onclick = () => {
@@ -159,6 +186,7 @@ const Match = {
     else if (ctx.role === 'bench') feed('📋 Bugün yedek kulübesinde başlıyorsun.', 'info');
     else feed('📋 Teknik direktör seni bu maçın kadrosuna almadı.', 'info');
     feed(`🏟️ ${U.esc(ctx.home.name)} - ${U.esc(ctx.away.name)} maçı başladı!`);
+    if (weather.note) feed(`🌦️ Hava: ${U.esc(Weather.label(weather))}. ${weather.note}`, 'info');
 
     const homeR = () => ctx.home.rating + (isHome ? M.teamBoost : 0) + (isHome && onPitch() ? (ovr - ctx.home.rating) * 0.08 : 0);
     const awayR = () => ctx.away.rating + (!isHome ? M.teamBoost : 0) + (!isHome && onPitch() ? (ovr - ctx.away.rating) * 0.08 : 0);
@@ -276,6 +304,7 @@ const Match = {
 
     const showMoment = (type) => {
       $('mt-moment').classList.remove('hidden');
+      $('mm-sb').innerHTML = `<span class="sb-tag">${sb.tag}</span><span class="sb-t">${U.esc(ctx.home.short || ctx.home.name.slice(0, 3)).toUpperCase()}</span><span class="sb-s">${M.hs}-${M.as}</span><span class="sb-t">${U.esc(ctx.away.short || ctx.away.name.slice(0, 3)).toUpperCase()}</span><span class="sb-m">${M.min}'</span>`;
       $('mm-min').textContent = `${M.min}'`;
       $('mm-title').textContent = U.plain(MOMENT_TITLES[type]);
       $('mm-desc').textContent = MOMENT_DESC[type];
@@ -288,7 +317,7 @@ const Match = {
       let auto = false;
       $('mm-auto').onclick = () => { auto = true; if (MiniGame._abort) MiniGame._abort(); };
       const scene = Scenes.make(type, { skill, mates: mateNames, position: p.position, pace: st.pace, narrow: narrow() });
-      const r = await MiniGame.play($('mm-host'), scene, { stats: st, skill, cond, kits, number: p.shirt, mateChance, captain: !!ctx.captain });
+      const r = await MiniGame.play($('mm-host'), scene, { stats: st, skill, cond, kits, number: p.shirt, mateChance, captain: !!ctx.captain, weather });
       hideMoment();
       if (auto || r.outcome === 'auto') return autoCanvas(type);
       return r;
@@ -347,14 +376,14 @@ const Match = {
         const k = b.dataset.ht;
         if (k === 'tactic') { addMoments(U.randi(1, 2), 47, 88); Player.addRel(p, 'coach', 1.5); feed(`<b>45'</b> ${U.esc(pname)} hocayla taktik konuştu. İkinci yarıda daha çok topla buluşacak.`, 'info'); }
         if (k === 'motivate') { M.teamBoost = 3; Player.addRel(p, 'team', 1.5); feed(`<b>45'</b> ${U.esc(pname)} soyunma odasında takımı ateşledi!`, 'info'); }
-        if (k === 'recover') { cond = Math.max(0.7, cond - 0.1); M.energySave = 8; feed(`<b>45'</b> ${U.esc(pname)} devre arasında toparlandı.`, 'info'); }
+        if (k === 'recover') { condAdj -= 0.1; M.energy = Math.min(100, M.energy + 8); cond = calcCond(); feed(`<b>45'</b> ${U.esc(pname)} devre arasında toparlandı.`, 'info'); }
         if (k === 'scout') { skill = Math.max(0.02, skill - 0.07); feed(`<b>45'</b> ${U.esc(pname)} rakip kalecinin zayıf yönlerini inceledi.`, 'info'); }
         if (k === 'warm') {
           if (U.chance(0.65)) { enterMin = U.randi(46, 62); addMoments(Math.max(1, Math.round(({ FW: 5, MF: 5, DF: 4 }[p.position]) * (90 - enterMin) / 90)), enterMin, 89); feed(`<b>45'</b> Hoca ısınmanı beğendi, ikinci yarıda oyuna gireceksin!`, 'info'); }
           else feed(`<b>45'</b> Isındın ama hoca şimdilik değişiklik düşünmüyor.`, 'info');
         }
         if (k === 'cheer') { M.teamBoost = 1.5; Player.addRel(p, 'team', 2.5); feed(`<b>45'</b> Kenardan takımını coşkuyla destekledin.`, 'info'); }
-        if (k === 'sit') { M.energySave = 5; }
+        if (k === 'sit') { M.energy = Math.min(100, M.energy + 5); }
         $('mt-moment').classList.add('hidden');
         $('mm-host').innerHTML = '';
         $('mm-auto').style.display = '';
@@ -366,6 +395,7 @@ const Match = {
       const type = mo.type;
       if (type === 'sprint') {
         M.statsUsed.add('pace');
+        drain(2.5);
         const r = await playMini('sprint', 'sprint', 'dribble', 0.3);
         if (p.position === 'DF') {
           if (r === 'success') { M.tackles++; rate(0.45); feed(`<b>${M.min}'</b> ${U.esc(pname)} müthiş bir geri koşuyla rakibe yetişti ve topu kaptı!`); }
@@ -414,6 +444,7 @@ const Match = {
         }
       } else if (type === 'tackle') {
         M.statsUsed.add('defending'); M.statsUsed.add('physical');
+        drain(1.2);
         const r = await playTiming('tackle', 'tackle', {
           title: 'Topu kap!', kind: 'tackle', desc: 'Yeşil alan temiz müdahale, sarı alan faul demek. Doğru anda bas!',
           button: 'MÜDAHALE!', okText: 'TERTEMİZ MÜDAHALE!', partialText: 'FAUL!', failText: 'RAKİP SENİ GEÇTİ!',
@@ -470,12 +501,16 @@ const Match = {
       if (busy) return;
       busy = true;
       M.min++;
+      if (onPitch()) {
+        drain((40 / 90) * (1.3 - stamina / 150));
+        if (M.energy < 30 && !M.tiredWarn) { M.tiredWarn = true; feed(`🥵 <b>${M.min}'</b> ${U.esc(pname)} yorulmaya başladı. Vuruşların isabeti düşüyor.`, 'info'); }
+      }
       if (M.min === enterMin && enterMin > 1) {
         feed(`🔁 <b>${M.min}'</b> Oyuna giriyorsun! Hoca sana güveniyor.`, 'info');
       }
       // oyundan çıkma (kötü performans/yorgunluk)
       if (onPitch() && M.min === 70 && leaveMin === null && enterMin === 1) {
-        const tired = p.energy < 45 || stamina < 25;
+        const tired = M.energy < 35 || stamina < 25;
         if (M.rating < 5.6 || (tired && U.chance(0.5))) {
           leaveMin = 71;
           feed(`🔁 <b>${M.min}'</b> ${U.esc(pname)} oyundan alındı.`, 'info');
@@ -531,12 +566,13 @@ const Match = {
       feed(`🏁 Maç sona erdi: ${U.esc(ctx.home.name)} ${M.hs} - ${M.as} ${U.esc(ctx.away.name)}`, 'info');
       refresh();
       const summary = {
-        gf, ga, res, hs: M.hs, as: M.as, played, energySave: M.energySave, minutes: Math.max(0, minutes), rating: played ? rating : null,
+        gf, ga, res, hs: M.hs, as: M.as, played, energySave: 0, energyStart: M.e0, energyEnd: M.energy, minutes: Math.max(0, minutes), rating: played ? rating : null,
         goals: M.goals, assists: M.assists, yellow: M.yellow, red: M.red, motm,
         ownScorers: M.ownScorers, oppScorers: M.oppScorers, statsUsed: [...M.statsUsed], goalTypes: M.gt,
       };
       const resTxt = { W: 'GALİBİYET', D: 'BERABERLİK', L: 'MAĞLUBİYET' }[res];
       $('mt-moment').classList.remove('hidden');
+      $('mm-sb').innerHTML = '';
       $('mm-min').textContent = 'MS';
       $('mm-title').textContent = `Maç Sonu · ${resTxt}`;
       $('mm-desc').textContent = `${ctx.home.name} ${M.hs} - ${M.as} ${ctx.away.name}`;
@@ -552,6 +588,7 @@ const Match = {
             <div><span>Şut</span><b>${M.shots}</b></div>
             <div><span>Kilit Pas</span><b>${M.keyPasses}</b></div>
             <div><span>Top Kapma</span><b>${M.tackles}</b></div>
+            <div class="wide"><span>Enerji</span><b>${Math.round(M.e0)} → ${Math.round(M.energy)} <small class="neg">−${Math.round(M.e0 - M.energy)}</small></b></div>
           </div>
           ${motm ? `<div class="motm-card">
             <div class="motm-rays"></div>
@@ -568,6 +605,8 @@ const Match = {
       $('ms-done').onclick = () => {
         ov.classList.add('hidden');
         ov.innerHTML = '';
+        Weather.reset();
+        Sprites.curBall = null;
         resolve(summary);
       };
     };

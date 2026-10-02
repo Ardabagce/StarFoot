@@ -16,6 +16,30 @@ const GK_KITS = [
   { shirt: '#7b3fe4', alt: '#f5f5f5', pattern: 'plain', shorts: '#2a1650', socks: '#7b3fe4' },
 ];
 
+// Top tasarımları
+const BALL_STYLES = {
+  classic: { name: 'Klasik', base: '#fbfbfb', panel: '#1b1d22', pattern: 'classic' },
+  retro: { name: 'Deri Top', base: '#a8652f', base2: '#6b3a16', panel: '#5a3012', accent: '#e8d5b0', pattern: 'retro' },
+  winter: { name: 'Kış Topu', base: '#ff8a1f', panel: '#1b1d22', pattern: 'classic' },
+  tr: { name: 'Türkiye Ligi', base: '#fbfbfb', panel: '#d61f2c', accent: '#1b1d22', pattern: 'swirl' },
+  eng: { name: 'İngiltere Ligi', base: '#fbfbfb', panel: '#5a1e8a', accent: '#00d2ff', pattern: 'stripe' },
+  esp: { name: 'İspanya Ligi', base: '#fbfbfb', panel: '#ff6b1a', accent: '#1b1d22', pattern: 'swirl' },
+  ger: { name: 'Almanya Ligi', base: '#fbfbfb', panel: '#d2001f', accent: '#1b1d22', pattern: 'stripe' },
+  ita: { name: 'İtalya Ligi', base: '#fbfbfb', panel: '#0a5ad6', accent: '#16a34a', pattern: 'swirl' },
+  fra: { name: 'Fransa Ligi', base: '#fbfbfb', panel: '#0b2a6b', accent: '#e11d48', pattern: 'stripe' },
+  ucl: { name: 'Şampiyonlar Kupası', base: '#fbfbfb', panel: '#0b1f4d', pattern: 'star' },
+  uel: { name: 'Federasyon Kupası', base: '#fbfbfb', panel: '#f97316', pattern: 'star' },
+  wc: { name: 'Dünya Kupası', base: '#fbfbfb', panel: '#c8a227', accent: '#1b1d22', pattern: 'swirl' },
+  euro: { name: 'Avrupa Şampiyonası', base: '#fbfbfb', panel: '#1d4ed8', accent: '#e11d48', pattern: 'swirl' },
+  // mağaza kozmetikleri
+  neon: { name: 'Neon Top', base: '#e6ff3a', panel: '#111111', pattern: 'classic' },
+  gold: { name: 'Altın Top', base: '#ffe27a', base2: '#b8860b', panel: '#fff7d6', pattern: 'star' },
+  fire: { name: 'Ateş Topu', base: '#ffb02e', base2: '#e11d48', panel: '#7a0a0a', pattern: 'flame' },
+  ice: { name: 'Buz Topu', base: '#e0f7ff', base2: '#7dd3fc', panel: '#0369a1', pattern: 'flame' },
+  galaxy: { name: 'Galaksi Topu', base: '#3b0764', base2: '#0b1f4d', panel: '#f0abfc', pattern: 'star' },
+  street: { name: 'Sokak Topu', base: '#fbfbfb', panel: '#16a34a', accent: '#1b1d22', pattern: 'stripe' },
+};
+
 const Sprites = {
   hexRgb(h) {
     const n = parseInt(h.replace('#', ''), 16);
@@ -205,24 +229,79 @@ const Sprites = {
     ctx.fillText(text, x, y - hh * 0.28);
   },
 
-  ball(ctx, x, y, r, rot) {
-    ctx.fillStyle = '#fbfbfb';
-    ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
+  // Top tasarımları: lig toplarında ve mağazadaki kozmetik toplarda kullanılır
+  ball(ctx, x, y, r, rot, style) {
+    const B = style || Sprites.curBall || BALL_STYLES.classic;
     ctx.save();
-    ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.clip();
-    ctx.fillStyle = '#1b1d22';
-    for (let i = 0; i < 5; i++) {
-      const a = rot + (i * Math.PI * 2) / 5;
-      const px = x + Math.cos(a) * r * 0.75, py = y + Math.sin(a) * r * 0.75;
-      Sprites.poly(ctx, px, py, r * 0.32, 5, a);
+    ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2);
+    if (B.base2) {
+      const bg = ctx.createLinearGradient(x - r, y - r, x + r, y + r);
+      bg.addColorStop(0, B.base); bg.addColorStop(1, B.base2);
+      ctx.fillStyle = bg;
+    } else ctx.fillStyle = B.base;
+    ctx.fill();
+    ctx.clip();
+    const pat = B.pattern;
+    if (pat === 'classic' || pat === 'retro') {
+      ctx.fillStyle = B.panel;
+      for (let i = 0; i < 5; i++) {
+        const a = rot + (i * Math.PI * 2) / 5;
+        Sprites.poly(ctx, x + Math.cos(a) * r * 0.75, y + Math.sin(a) * r * 0.75, r * 0.32, 5, a);
+      }
+      Sprites.poly(ctx, x + Math.cos(rot * 1.3) * r * 0.1, y + Math.sin(rot * 1.3) * r * 0.1, r * 0.34, 5, rot);
+      if (pat === 'retro') {
+        ctx.strokeStyle = B.accent; ctx.lineWidth = Math.max(1, r * 0.08);
+        for (let i = 0; i < 3; i++) { const a = rot + i * 2.1; ctx.beginPath(); ctx.moveTo(x + Math.cos(a) * r, y + Math.sin(a) * r); ctx.lineTo(x - Math.cos(a) * r, y - Math.sin(a) * r); ctx.stroke(); }
+      }
+    } else if (pat === 'swirl') {
+      for (let i = 0; i < 3; i++) {
+        const a = rot + (i * Math.PI * 2) / 3;
+        ctx.fillStyle = i % 2 ? B.accent : B.panel;
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        ctx.quadraticCurveTo(x + Math.cos(a + 0.6) * r * 1.2, y + Math.sin(a + 0.6) * r * 1.2, x + Math.cos(a + 1.1) * r, y + Math.sin(a + 1.1) * r);
+        ctx.lineTo(x + Math.cos(a + 1.5) * r, y + Math.sin(a + 1.5) * r);
+        ctx.quadraticCurveTo(x + Math.cos(a + 0.9) * r * 0.5, y + Math.sin(a + 0.9) * r * 0.5, x, y);
+        ctx.fill();
+      }
+    } else if (pat === 'stripe') {
+      ctx.save(); ctx.translate(x, y); ctx.rotate(rot);
+      ctx.fillStyle = B.panel; ctx.fillRect(-r, -r * 0.28, r * 2, r * 0.56);
+      ctx.fillStyle = B.accent; ctx.fillRect(-r, -r * 0.08, r * 2, r * 0.16);
+      ctx.restore();
+    } else if (pat === 'star') {
+      ctx.fillStyle = B.panel;
+      for (let i = 0; i < 4; i++) {
+        const a = rot + (i * Math.PI) / 2;
+        Sprites.star(ctx, x + Math.cos(a) * r * 0.6, y + Math.sin(a) * r * 0.6, r * 0.32, a);
+      }
+      Sprites.star(ctx, x, y, r * 0.3, rot);
+    } else if (pat === 'flame') {
+      ctx.fillStyle = B.panel;
+      for (let i = 0; i < 4; i++) {
+        const a = rot + (i * Math.PI) / 2;
+        ctx.beginPath();
+        ctx.moveTo(x + Math.cos(a) * r, y + Math.sin(a) * r);
+        ctx.quadraticCurveTo(x + Math.cos(a + 0.9) * r * 0.2, y + Math.sin(a + 0.9) * r * 0.2, x + Math.cos(a + 1.4) * r, y + Math.sin(a + 1.4) * r);
+        ctx.quadraticCurveTo(x + Math.cos(a + 0.7) * r * 0.6, y + Math.sin(a + 0.7) * r * 0.6, x + Math.cos(a) * r, y + Math.sin(a) * r);
+        ctx.fill();
+      }
     }
-    Sprites.poly(ctx, x + Math.cos(rot * 1.3) * r * 0.1, y + Math.sin(rot * 1.3) * r * 0.1, r * 0.34, 5, rot);
     const g = ctx.createRadialGradient(x - r * 0.4, y - r * 0.4, r * 0.1, x, y, r * 1.1);
     g.addColorStop(0, 'rgba(255,255,255,0.5)'); g.addColorStop(1, 'rgba(0,0,0,0.35)');
     ctx.fillStyle = g; ctx.fillRect(x - r, y - r, r * 2, r * 2);
     ctx.restore();
-    ctx.strokeStyle = 'rgba(0,0,0,0.5)'; ctx.lineWidth = Math.max(1, r * 0.12);
+    ctx.strokeStyle = 'rgba(0,0,0,0.55)'; ctx.lineWidth = Math.max(1, r * 0.12);
     ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.stroke();
+  },
+
+  star(ctx, x, y, r, a) {
+    ctx.beginPath();
+    for (let i = 0; i < 10; i++) {
+      const t = a + (i * Math.PI) / 5, rr = i % 2 ? r * 0.45 : r;
+      i ? ctx.lineTo(x + Math.cos(t) * rr, y + Math.sin(t) * rr) : ctx.moveTo(x + Math.cos(t) * rr, y + Math.sin(t) * rr);
+    }
+    ctx.closePath(); ctx.fill();
   },
 
   poly(ctx, x, y, r, n, a) {

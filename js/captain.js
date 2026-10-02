@@ -72,3 +72,88 @@ const Captain = {
     </section>`;
   },
 };
+
+// Forma numarası talebi: hoca performansa, ilişkiye ve numaranın sahibine göre karar verir
+const Shirt = {
+  // Kadrodaki numaraları kalıcı hale getirir ve numara → oyuncu eşlemesi döner
+  map() {
+    const s = Game.state;
+    const roster = Game.teamRoster(s.clubId) || [];
+    const used = new Set([s.player.shirt]);
+    roster.forEach((x, i) => {
+      if (!x.num) {
+        let n = ((i * 7) % 30) + 2;
+        while (used.has(n)) n = (n % 98) + 1;
+        x.num = n;
+      }
+      used.add(x.num);
+    });
+    const m = {};
+    roster.forEach((x) => (m[x.num] = x));
+    return m;
+  },
+
+  canAsk() {
+    const s = Game.state;
+    return !Game.inStreet() && s.player.numReq !== `${s.season.year}-${s.clubId}`;
+  },
+
+  ask(n) {
+    const s = Game.state, p = s.player;
+    n = +n;
+    if (!(n >= 1 && n <= 99) || n === p.shirt) return;
+    const holder = Shirt.map()[n];
+    const ovr = Player.overall(p);
+    const teamR = Game.teamRating(s.clubId);
+    const c = Captain.ensure();
+    let score = (ovr - teamR) / 4 + (p.rel.coach - 50) / 10 + (p.rel.team - 50) / 15 + p.fame / 25 + Math.min(3, c.apps / 10) + (Captain.is() ? 2 : 0);
+    const ss = s.season.stats;
+    if (ss.apps >= 3) score += (ss.ratingSum / ss.apps - 6.8) * 1.5;
+    let need = -1;
+    if (holder) need = 1.5 + (holder.r - ovr) / 3 + (holder.star ? 2 : 0);
+    if ([10, 7, 9].includes(n)) need += 1;
+    if (n === 1 && p.position !== 'GK') need += 3; // 1 numara kalecilerindir
+    p.numReq = `${s.season.year}-${s.clubId}`;
+    const ok = score >= need;
+    const coach = 'Teknik direktör';
+    let msg;
+    if (ok) {
+      const old = p.shirt;
+      p.shirt = n;
+      if (holder) holder.num = old;
+      Player.addMorale(p, 6);
+      msg = holder
+        ? `${coach}: "${n} numara artık senin. ${holder.n} senin ${old} numaranı alacak; performansınla bunu hak ettin."`
+        : `${coach}: "Tamam, ${n} numara senin. Formayı terlet!"`;
+      Game.news(`Forma numaran değişti: artık ${n} numarayı giyiyorsun.`, 'good');
+      Social.post('daily', `Yeni numara, yeni hedefler: ${n}!`, 1.3);
+    } else {
+      Player.addMorale(p, -3);
+      msg = holder
+        ? `${coach}: "${n} numara şu an ${holder.n}'da. ${holder.star ? 'O takımın yıldızı. ' : ''}Önce sahada daha çok kendini göster, gelecek sezon tekrar konuşuruz."`
+        : `${coach}: "Şimdilik ${p.shirt} numarayla devam. Performansın artınca tekrar konuşalım."`;
+    }
+    Game.save();
+    Game.modal(`<div class="ev-tag">${ok ? 'Talep onaylandı' : 'Talep reddedildi'}</div><div class="num-big ${ok ? 'ok' : 'no'}">${ok ? n : p.shirt}</div><p>${U.esc(msg)}</p>`, [{ t: 'Tamam', fn: () => Game.render() }]);
+  },
+
+  card() {
+    const s = Game.state, p = s.player;
+    if (Game.inStreet()) return '';
+    const m = Shirt.map();
+    const can = Shirt.canAsk();
+    const opts = Array.from({ length: 99 }, (_, i) => i + 1).filter((n) => n !== p.shirt)
+      .map((n) => `<option value="${n}">${n}${m[n] ? ` · ${U.esc(m[n].n)}${m[n].star ? ' ★' : ''}` : ' · boş'}</option>`).join('');
+    return `<section class="card num-card">
+      <div class="card-h"><span>${Icon('contract')} Forma Numarası</span><small class="muted">Sezonda bir talep</small></div>
+      <div class="num-row">
+        <div class="num-big">${p.shirt}</div>
+        <div class="num-form">
+          <select id="num-sel" ${can ? '' : 'disabled'}>${opts}</select>
+          <button class="btn" id="num-ask" ${can ? '' : 'disabled'}>Talep Et</button>
+          <small class="muted">${can ? 'Hoca performansına, ilişkine ve numaranın şu anki sahibine bakarak karar verir. 10, 9 ve 7 gibi numaralar daha zordur.' : 'Bu sezon talebini ilettin. Gelecek sezon tekrar deneyebilirsin.'}</small>
+        </div>
+      </div>
+    </section>`;
+  },
+};

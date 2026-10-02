@@ -40,6 +40,8 @@ const Drill = {
       </div>
       <div class="dr-host" id="dr-host"></div>`;
     el.classList.remove('hidden');
+    Weather.reset();
+    Sprites.curBall = Balls.forTraining();
     const hostEl = el.querySelector('#dr-host');
     let auto = false;
     el.querySelector('#dr-skip').onclick = () => { auto = true; if (MiniGame._abort) MiniGame._abort(); };
@@ -91,6 +93,7 @@ const Drill = {
 
   close() {
     MiniGame._abort = null;
+    Sprites.curBall = null;
     const el = document.getElementById('drill');
     if (el) { el.classList.add('hidden'); el.innerHTML = ''; }
   },

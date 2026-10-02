@@ -321,6 +321,14 @@ const ITEMS = [
   { id: 'life3', cat: 'style', art: 'phone', name: 'Akıllı Telefon', price: 25000, minAge: 13, morale: 1, fame: 1, desc: 'Her hafta moral +1, Ün +1' },
   { id: 'shades', cat: 'style', art: 'glasses', name: 'Tasarım Güneş Gözlüğü', price: 60000, minAge: 16, morale: 1, fame: 2, desc: 'Her hafta moral +1, Ün +2' },
   { id: 'watch', cat: 'style', art: 'watch', name: 'Lüks Saat', price: 400000, minAge: 18, morale: 1, fame: 3, desc: 'Her hafta moral +1, Ün +3' },
+  // Kozmetik toplar (maçta ve antrenmanda kullanılan top)
+  { id: 'ball_street', cat: 'balls', skin: 'street', name: 'Sokak Topu', price: 300, minAge: 8, desc: 'Yeşil şeritli, mahalle havası' },
+  { id: 'ball_neon', cat: 'balls', skin: 'neon', name: 'Neon Top', price: 2000, minAge: 8, desc: 'Gece maçlarında parlayan sarı' },
+  { id: 'ball_retro', cat: 'balls', skin: 'retro', name: 'Nostaljik Deri Top', price: 5000, minAge: 8, desc: 'Eski zamanların dikişli deri topu' },
+  { id: 'ball_ice', cat: 'balls', skin: 'ice', name: 'Buz Topu', price: 9000, minAge: 10, desc: 'Buz mavisi alev desenli' },
+  { id: 'ball_fire', cat: 'balls', skin: 'fire', name: 'Ateş Topu', price: 18000, minAge: 10, desc: 'Turuncu-kırmızı alevler' },
+  { id: 'ball_galaxy', cat: 'balls', skin: 'galaxy', name: 'Galaksi Topu', price: 90000, minAge: 14, desc: 'Mor uzay ve yıldızlar' },
+  { id: 'ball_gold', cat: 'balls', skin: 'gold', name: 'Altın Top', price: 750000, minAge: 17, desc: 'Gerçek bir yıldızın topu' },
   { id: 'life5', cat: 'style', art: 'villa', name: 'Deniz Manzaralı Villa', price: 25000000, minAge: 20, morale: 3, fame: 8, desc: 'Her hafta moral +3, Ün +8' },
 ];
 

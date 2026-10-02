@@ -195,7 +195,7 @@ const Game = {
     const away = { id: 'ARK', name: 'Arka Sokak', short: 'ARK', rating: exp + U.randi(-1, 2), c1: '#2a6fdb', c2: '#ffffff', roster: Youth.roster({ pool: 'TR' }, exp, p.age) };
     const ctx = {
       home: { id: 'STREET', name: home.name, short: 'SOK', rating: home.rating, c1: home.c1, c2: home.c2, roster: home.roster },
-      away, side: 'home', role: 'starter', compName: 'Mahalleler Arası Sokak Maçı · Scout izliyor', levelBase: Math.max(0, 0.03 + Game.diff().lvl),
+      away, side: 'home', role: 'starter', compName: 'Mahalleler Arası Sokak Maçı · Scout izliyor', levelBase: Math.max(0, 0.03 + Game.diff().lvl), lg: 'street',
     };
     const sum = await Match.run(ctx, s);
     const r = sum.rating || 6;
@@ -443,6 +443,7 @@ const Game = {
       compName: `${Game.leagueName()} • ${s.season.round + 1}. Hafta`,
       levelBase: Game.levelBase(false),
       captain: Captain.is(),
+      lg: youth ? 'youth' : Game.club().league,
     };
     const ovr = Player.overall(p, true);
     if (p.injuryWeeks > 0) {
@@ -487,7 +488,7 @@ const Game = {
     const ctx = {
       home: home ? ownT : oppT, away: home ? oppT : ownT, side: home ? 'home' : 'away',
       compName: `Milli Maç • ${nat.name} - ${oppNat.name}`,
-      levelBase: Game.levelBase(true),
+      levelBase: Game.levelBase(true), lg: 'intl',
     };
     ctx.role = p.injuryWeeks > 0 ? 'out' : Game.roleFor(Player.overall(p, true), nat.rating, false);
     if (ctx.role === 'out' && p.injuryWeeks === 0) ctx.role = 'bench';
@@ -543,9 +544,12 @@ const Game = {
       if (youth) p.fame = Math.max(p.fame, Math.min(p.fame + fameGain, 4 + (p.age - 8) * 1.5));
       else Player.addFame(p, fameGain);
       Player.addMorale(p, (sum.res === 'W' ? 4 : sum.res === 'L' ? -4 : 0) + (r - 6.5) * 2);
-      const stam = p.stats.stamina;
-      Player.addEnergy(p, -(15 + (sum.minutes / 90) * 25) * (1.3 - stam / 150));
-      Player.addEnergy(p, sum.energySave || 0);
+      if (sum.energyEnd != null) p.energy = U.clamp(sum.energyEnd, 0, 100);
+      else {
+        const stam = p.stats.stamina;
+        Player.addEnergy(p, -(15 + (sum.minutes / 90) * 25) * (1.3 - stam / 150));
+        Player.addEnergy(p, sum.energySave || 0);
+      }
       Player.matchXp(p, sum.statsUsed.length ? sum.statsUsed : ['stamina']);
       Player.matchXp(p, ['stamina']);
       if (U.chance(Player.injuryChance(p, 0.025) * (sum.minutes / 90))) Game.injure(U.randi(1, 6), 'Maçta');
@@ -1207,7 +1211,8 @@ ${UI.paper()}`;
     if (Game.inStreet()) return `<section class="card"><div class="card-h"><span>${Icon('squad')} Henüz bir kulübün yok</span></div><p class="muted">Önce mahalle maçında kendini göster. Scout seni bir altyapıya götürünce takımın ve ligin burada görünecek.</p></section>`;
     const club = Game.club();
     const me = { n: Player.fullName(p), pos: p.position, r: Player.overall(p), age: p.age, me: true, num: p.shirt };
-    const roster = Game.teamRoster(s.clubId).map((x, i) => Object.assign({ num: x.num || ((i * 7) % 30) + 2 }, x));
+    Shirt.map();
+    const roster = Game.teamRoster(s.clubId).slice();
     const all = roster.concat([me]);
     const posL = { GK: 'Kaleci', DF: 'Defans', MF: 'Orta Saha', FW: 'Forvet' };
     const posS = { GK: 'KL', DF: 'DF', MF: 'OS', FW: 'FV' };
@@ -1253,7 +1258,7 @@ ${UI.paper()}`;
         <div class="sq-lines">${['FW', 'MF', 'DF', 'GK'].map((k) => `<div><span>${posL[k]}</span>${UI.bar(lineAvg(k), UI.statColor(lineAvg(k)))}<b>${lineAvg(k)}</b></div>`).join('')}</div>
         ${top ? `<p class="muted sq-note">Takımın en iyisi: <b>${U.esc(top.n)}</b> (${top.r})${top.star ? ' · yıldız oyuncu' : ''}</p>` : ''}
       </section>
-      ${Captain.card()}
+      <div class="grid2">${Captain.card()}${Shirt.card()}</div>
       <div class="grid2 sq-grid">
         <section class="card">
           <div class="card-h"><span>${Icon('squad')} Muhtemel İlk 11</span><small class="muted">4-3-3</small></div>
@@ -1283,10 +1288,11 @@ ${UI.paper()}`;
       ['life', 'smile', 'Hobi ve Eğlence', 'Her hafta moral (hepsi birikir)'],
       ['ride', 'fast', 'Ulaşım', 'Moral ve ün (hepsi birikir)'],
       ['style', 'star', 'Stil ve Lüks', 'Ün ağırlıklı (hepsi birikir)'],
+      ['balls', 'ball', 'Kozmetik Toplar', 'Maçta ve antrenmanda kullandığın top'],
     ];
-    const card = (art, color, name, desc, right, cls = '') => `
+    const card = (art, color, name, desc, right, cls = '', skin) => `
       <div class="sh-item ${cls}">
-        <div class="sh-art">${ShopArt.svg(art, color)}</div>
+        <div class="sh-art">${skin ? `<img class="ball-thumb" alt="" src="${Balls.thumb(BALL_STYLES[skin], 96)}">` : ShopArt.svg(art, color)}</div>
         <div class="sh-t"><b>${U.esc(name)}</b><small>${U.esc(desc)}</small></div>
         <div class="sh-act">${right}</div>
       </div>`;
@@ -1305,10 +1311,12 @@ ${UI.paper()}`;
       const locked = ITEMS.filter((i) => i.cat === c && i.minAge > p.age && !p.items.includes(i.id)).sort((x, y) => x.minAge - y.minAge).slice(0, 2);
       if (!list.length && !locked.length) return '';
       const owned = list.filter((i) => p.items.includes(i.id)).length;
-      const body = list.map((it) => {
+      const body = (c === 'balls' ? card(null, null, 'Lig Topu', 'Her ligin ve turnuvanın kendi topu', !p.ballSkin ? `<span class="tag own">${Icon('star')} Kullanılıyor</span>` : '<button class="btn btn-ghost btn-buy" data-ball="">Kullan</button>', !p.ballSkin ? 'own' : '', 'tr') : '') + list.map((it) => {
         const own = p.items.includes(it.id);
-        return card(it.art, ShopArt.tierColor(it.price), it.name, it.desc, own ? `<span class="tag own">${Icon('star')} Sende</span>` : `<button class="btn btn-buy" data-buy="${it.id}" ${p.money < it.price ? 'disabled' : ''}>${U.money(it.price)}</button>`, own ? 'own' : '');
-      }).join('') + locked.map((it) => card(it.art, '#5d6878', it.name, `${it.minAge} yaşında açılır`, `<span class="tag">${U.money(it.price)}</span>`, 'locked')).join('');
+        let right = own ? `<span class="tag own">${Icon('star')} Sende</span>` : `<button class="btn btn-buy" data-buy="${it.id}" ${p.money < it.price ? 'disabled' : ''}>${U.money(it.price)}</button>`;
+        if (own && it.skin) right = p.ballSkin === it.skin ? `<span class="tag own">${Icon('star')} Kullanılıyor</span>` : `<button class="btn btn-ghost btn-buy" data-ball="${it.skin}">Kullan</button>`;
+        return card(it.art, ShopArt.tierColor(it.price), it.name, it.desc, right, own ? 'own' : '', it.skin);
+      }).join('') + locked.map((it) => card(it.art, '#5d6878', it.name, `${it.minAge} yaşında açılır`, `<span class="tag">${U.money(it.price)}</span>`, 'locked', it.skin)).join('');
       return group(c, ic, t, d, body, `${owned}/${list.length}`);
     }).join('');
     return `
@@ -1428,6 +1436,7 @@ ${UI.paper()}`;
       if (p.money < it.price) return;
       p.money -= it.price;
       p.items.push(it.id);
+      if (it.skin) p.ballSkin = it.skin;
       if (['life', 'ride', 'style'].includes(it.cat) && it.price >= 1000) Social.post('life', `Kendime küçük bir hediye: ${it.name}.`, 1.2);
       if (it.fame) Player.addFame(p, it.fame);
       Ach.check();
@@ -1437,6 +1446,13 @@ ${UI.paper()}`;
     }));
     U.$$('[data-setdiff]', root).forEach((b) => (b.onclick = () => { Game.state.difficulty = b.dataset.setdiff; Game.save(); Game.toast(`Zorluk: ${DIFFS[b.dataset.setdiff].l}`, 'good'); Game.render(); }));
     U.$$('[data-use]', root).forEach((b) => (b.onclick = () => Shop.use(b.dataset.use)));
+    const nAsk = root.querySelector('#num-ask');
+    if (nAsk) nAsk.onclick = () => Shirt.ask(root.querySelector('#num-sel').value);
+    U.$$('[data-ball]', root).forEach((b) => (b.onclick = () => {
+      Game.p.ballSkin = b.dataset.ball || null;
+      Game.toast(Game.p.ballSkin ? `${BALL_STYLES[Game.p.ballSkin].name} artık maçlarda kullanılıyor` : 'Lig topları kullanılıyor', 'good');
+      Game.save(); Game.render();
+    }));
     U.$$('details.shop-cat', root).forEach((d) => d.addEventListener('toggle', () => { (UI.shopOpen = UI.shopOpen || {})[d.dataset.cat] = d.open; }));
     U.$$('[data-wl]', root).forEach((b) => (b.onclick = () => { UI.worldLeague = b.dataset.wl; Game.render(); }));
     U.$$('[data-sys]', root).forEach((b) => (b.onclick = () => {

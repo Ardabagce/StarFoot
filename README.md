@@ -55,6 +55,11 @@ Oyunu bir web sunucusundan (ör. GitHub Pages) açıp tarayıcı menüsünden **
 - **Mağaza:** Görselli ürün kartları ve açılıp kapanan kategoriler (kramponlar, ekipman, beslenme, hobi, ulaşım, stil ve lüks, tek kullanımlık). Yaşa göre değişen reyonlar (çocukken futbolcu kartı albümü, idolünün forması, bahçe kalesi; gençken spor salonu, scooter; profesyonelken lüks saat, araba, villa, yat). Enerji içeceği, masaj, fizyoterapi, yaz kampı ve yıldız futbolcu kliniği gibi tek kullanımlık ürünler.
 - **Kupa vitrini ve madalyalar:** Kazandığın kupalar raflarda sergilenir; ilk gol, hat-trick, 100 maç, milli forma, ilk milyon gibi 17 madalya.
 - **Hediye paketi:** Arada bir hediye paketi çıkar. Kısa bir reklam izlersen ödül x2 ya da x3 olur, izlemezsen x1 alırsın. (Şimdilik temsili reklam gösterilir; gerçek bir reklam sağlayıcısı `window.StarfootAds` ile bağlanabilir.)
+- **Hava durumu:** Her maçın havası var (açık, yağmurlu, karlı, sisli, rüzgarlı). Yağmurda top kayar, karda çabuk durur (turuncu kış topu), rüzgarda havadaki top sürüklenir, siste vuruş önizlemesi kısalır.
+- **Toplar:** Her ligin ve turnuvanın kendi top tasarımı var (eski yıllarda klasik/deri top). Mağazadan neon, ateş, buz, galaksi, altın gibi kozmetik toplar alıp maçta ve antrenmanda kullanabilirsin.
+- **Canlı enerji:** Enerji maç boyunca dakika dakika düşer; yorgunluk vuruş isabetini etkiler. Maç sonunda başlangıç ve bitiş enerjisi gösterilir.
+- **Maç ekranı:** Premium oyuncu paneli (numara, reyting, gol/asist/şut, enerji çubuğu) ve pozisyon gelince lige özel TV skorbordu.
+- **Forma numarası:** Kadro sekmesinden sezonda bir kez numara talep edebilirsin; hoca performansına, ilişkine ve numaranın sahibine göre onaylar ya da reddeder.
 - **Kaptanlık:** Kadro sekmesinde kaptanlık hedefleri (maç sayısı, yaş, hoca ve takım ilişkisi, genel güç, reyting) görünür. Hepsini tamamlayınca kaptan olursun; kaptanken maçta arkadaşını basılı tutup sürükleyerek yerleştirebilirsin.
 - **Maçın adamı:** Seçildiğinde özel bir ödül ekranı açılır; yıldız kupaların Kariyer sekmesindeki vitrinde sergilenir.
 - **105 başarım:** Gol, asist, maç, özel goller, kupalar, milli takım, kariyer, yetenek, ün ve yaşam kategorilerinde.
@@ -85,7 +90,8 @@ js/cups.js       Avrupa kupaları, Dünya Kupası, Avrupa Şampiyonası
 js/minigame.js   Şut/pas fizik sahnesi ve zamanlama barı
 js/drills.js     Antrenman mini oyunları
 js/shopart.js    Mağaza ürün çizimleri
-js/captain.js    Kaptanlık hedefleri
+js/captain.js    Kaptanlık hedefleri ve forma numarası
+js/weather.js    Hava durumu, maç topları, lig skorbordları
 js/extras.js     Madalyalar, mağaza, olaylar, mentorlar, sosyal medya, dünya haberleri
 js/match.js      Maç motoru
 js/game.js       Kariyer akışı, ekranlar, olaylar, sezon sonu

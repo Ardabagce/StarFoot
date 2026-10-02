@@ -107,8 +107,11 @@ const LIFTS = [
 ];
 
 // Topun fiziği: hem gerçek vuruşta hem de nişan önizlemesinde kullanılır
+// env: hava durumuna göre zemin sürtünmesi ve rüzgar (m/s², +x sağa)
 const BallPhys = {
+  env: { fric: 1, wind: 0 },
   step(b, dt) {
+    const E = BallPhys.env;
     const hs = Math.hypot(b.vx, b.vy);
     if (hs > 3) {
       const lx = b.vy / hs, ly = -b.vx / hs;
@@ -119,8 +122,9 @@ const BallPhys = {
     if (b.z > 0 || b.vz > 0) {
       b.vz -= 9.8 * dt;
       b.vx *= 1 - 0.1 * dt; b.vy *= 1 - 0.1 * dt;
+      b.vx += E.wind * dt;
     } else {
-      const ns = Math.max(0, hs - 3.2 * dt);
+      const ns = Math.max(0, hs - 3.2 * E.fric * dt);
       if (hs > 0) { b.vx *= ns / hs; b.vy *= ns / hs; }
       b.spin *= 1 - 1.5 * dt;
     }
@@ -179,10 +183,11 @@ const MiniGame = {
       const fkFar = isFK ? U.clamp(((scene.dist || 20) - 17) / 8, 0, 1) : 0;
       const maxSpeed = 21 + st.shooting * 0.12 + (scene.type === 'penalty' ? 2 : 0) + (isFK ? 3 + fkFar * 3 : 0);
       const curveMax = (2.2 + st.technique * 0.075) * (isFK ? 1.3 : 1);
-      const angSigma = ((1 - st.technique / 100) * 2.8 + 0.3) * cond * (0.55 + 0.8 * s) * Math.PI / 180;
+      const wx = o.weather || null;
+      const angSigma = ((1 - st.technique / 100) * 2.8 + 0.3) * cond * (0.55 + 0.8 * s) * Math.PI / 180 * (wx ? wx.sigma : 1);
       const passSigma = ((1 - st.passing / 100) * 2.4 + 0.25) * cond * (0.6 + 0.6 * s) * Math.PI / 180;
       const assist = U.clamp(0.75 - s, 0, 0.6); // nişan yardımı (düşük seviyelerde güçlü)
-      const previewFrac = U.clamp(0.65 + st.technique / 200 + assist * 0.4, 0.65, 1);
+      const previewFrac = U.clamp(0.65 + st.technique / 200 + assist * 0.4, 0.65, 1) * (wx && wx.vis ? 1 - wx.vis * 0.5 : 1);
       const POWER_M = 14;
 
       const ball = { x: scene.ball.x, y: scene.ball.y, z: 0, vx: 0, vy: 0, vz: 0, spin: 0, rot: 0 };
@@ -698,13 +703,21 @@ const MiniGame = {
         ents.push({ y: shooter.y, d: () => Sprites.figure(ctx, tx(shooter.x), ty(shooter.y), h, { kit: kits.own, look: shooter.look, facing: 'up', number: shooter.num, kick: kickA, label: lab('SEN'), labelScale: dpr, labelColor: 'rgba(214,40,57,0.92)', t }) });
         ents.push({
           y: ball.y + 0.01, d: () => {
-            const br = Math.max(4 * dpr, 0.22 * PX * 1.5) * (1 + ball.z * 0.05);
+            const br = Math.max(3.5 * dpr, 0.22 * PX) * (1 + ball.z * 0.05);
             ctx.fillStyle = 'rgba(0,0,0,0.3)';
             ctx.beginPath(); ctx.ellipse(tx(ball.x) + ball.z * PX * 0.15, ty(ball.y), br * 1.1, br * 0.45, 0, 0, Math.PI * 2); ctx.fill();
             Sprites.ball(ctx, tx(ball.x), ty(ball.y, ball.z) - br * 0.8, br, ball.rot);
           },
         });
         ents.sort((a, b) => a.y - b.y).forEach((e) => e.d());
+        Weather.draw(ctx, wx, W, H, dpr, t);
+        if (wx && wx.kmh && phase === 'aim') {
+          // rüzgar göstergesi
+          const x0 = W - 96 * dpr, y0 = 18 * dpr;
+          ctx.fillStyle = 'rgba(10,16,32,0.7)'; ctx.fillRect(x0, y0, 86 * dpr, 26 * dpr);
+          ctx.fillStyle = '#fff'; ctx.font = `700 ${Math.round(12 * dpr)}px "Barlow Semi Condensed", sans-serif`; ctx.textAlign = 'center';
+          ctx.fillText(`${wx.dir > 0 ? '➜' : '⬅'} ${wx.kmh} km/s`, x0 + 43 * dpr, y0 + 17 * dpr);
+        }
 
         drawHud();
 
@@ -840,7 +853,7 @@ const MiniGame = {
           Sprites.figure(ctx, cx + 26 * U0, cy - fh * 0.15, fh, op);
           Sprites.figure(ctx, cx - 30 * U0, cy + fh * 0.75, fh, me);
         }
-        Sprites.ball(ctx, cx, ry + (o.kind === 'header' ? Math.sin(T * 3) * 4 * U0 : 0), 10 * U0, T * 5);
+        Sprites.ball(ctx, cx, ry + (o.kind === 'header' ? Math.sin(T * 3) * 4 * U0 : 0), 7.5 * U0, T * 5);
         ctx.textAlign = 'center';
         ctx.fillStyle = '#fff';
         ctx.font = `italic 800 ${Math.round(30 * U0)}px "Saira Condensed", "Arial Narrow", sans-serif`;
@@ -985,7 +998,7 @@ Object.assign(MiniGame, {
         ctx.beginPath(); ctx.moveTo(W * 0.12, top); ctx.lineTo(W * 0.88, top); ctx.stroke();
         ctx.setLineDash([10 * dpr, 10 * dpr]); ctx.strokeStyle = 'rgba(255,255,255,0.3)';
         ctx.beginPath(); ctx.moveTo(W / 2, top); ctx.lineTo(W / 2, bot); ctx.stroke(); ctx.setLineDash([]);
-        Sprites.ball(ctx, W / 2, top - 12 * dpr, 12 * dpr, t * 2);
+        Sprites.ball(ctx, W / 2, top - 10 * dpr, 9 * dpr, t * 2);
         const fh = Math.min(H * 0.2, W * 0.22);
         Sprites.figure(ctx, W * 0.66, yOf(op.y), fh, { kit: o.kits.opp, look: lookOp, facing: 'up', run: op.run, speed: 0.9, t });
         Sprites.figure(ctx, W * 0.34, yOf(me.y), fh, { kit: o.kits.own, look: lookMe, facing: 'up', number: o.number, run: me.run, speed: U.clamp(me.v / 5, 0.2, 1), label: 'SEN', labelScale: dpr, labelColor: 'rgba(214,40,57,0.92)', t });
@@ -1098,7 +1111,7 @@ Object.assign(MiniGame, {
         Sprites.figure(ctx, W / 2, footY, fh, { kit: o.kits.own, look, facing: 'down', number: o.number, kick: kick > 0 ? 1 - kick / 0.3 : 0, t });
         const bx = W / 2 + ball.x * W * 0.3 + fh * 0.12, by = yOf(ball.h);
         ctx.fillStyle = 'rgba(0,0,0,0.25)'; ctx.beginPath(); ctx.ellipse(bx, footY, 12 * dpr, 4 * dpr, 0, 0, Math.PI * 2); ctx.fill();
-        Sprites.ball(ctx, bx, by, Math.max(10 * dpr, fh * 0.07), t * 5);
+        Sprites.ball(ctx, bx, by, Math.max(8 * dpr, fh * 0.055), t * 5);
         g.text(`${touches} / ${GOAL}`, H * 0.08, 34);
         ctx.font = `700 ${Math.round(15 * dpr)}px "Barlow Semi Condensed", sans-serif`; ctx.fillStyle = '#fff'; ctx.textAlign = 'right';
         ctx.fillText('♥'.repeat(lives) + '♡'.repeat(3 - lives), W - 14 * dpr, H * 0.08);
@@ -1170,7 +1183,7 @@ Object.assign(MiniGame, {
         const lean = holding ? power * W * 0.02 : 0;
         Sprites.figure(ctx, cx + fh * 0.28 + off + lean * 0.3, fy, fh, { kit: o.kits.opp, look: lookOp, facing: 'up', run: t * 2, speed: 0.4, t });
         Sprites.figure(ctx, cx - fh * 0.28 + lean, fy, fh, { kit: o.kits.own, look: lookMe, facing: 'up', number: o.number, run: t * 2, speed: 0.4, label: 'SEN', labelScale: dpr, labelColor: 'rgba(214,40,57,0.92)', t });
-        Sprites.ball(ctx, cx, fy - fh * 1.25, 11 * dpr, t * 2);
+        Sprites.ball(ctx, cx, fy - fh * 1.25, 9 * dpr, t * 2);
         // güç barı
         const bx = W * 0.12, bw = W * 0.76, by = H * 0.84, bh = 22 * dpr;
         ctx.fillStyle = 'rgba(10,16,32,0.75)'; ctx.fillRect(bx, by, bw, bh);
@@ -1266,7 +1279,7 @@ Object.assign(MiniGame, {
         }
         {
           const e = ballT;
-          Sprites.ball(ctx, (ballFrom.x + (ballTo.x - ballFrom.x) * e) * W, (ballFrom.y + (ballTo.y - ballFrom.y) * e) * H + fh * 0.38, 9 * dpr, t * 8);
+          Sprites.ball(ctx, (ballFrom.x + (ballTo.x - ballFrom.x) * e) * W, (ballFrom.y + (ballTo.y - ballFrom.y) * e) * H + fh * 0.38, 7 * dpr, t * 8);
         }
         ctx.textAlign = 'center'; ctx.fillStyle = '#fff';
         ctx.font = `italic 800 ${Math.round(30 * dpr)}px "Saira Condensed", "Arial Narrow", sans-serif`;
