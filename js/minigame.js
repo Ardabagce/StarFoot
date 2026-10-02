@@ -465,10 +465,13 @@ const MiniGame = {
         ball.rot += hs * dt * 1.6;
         if (t - ms.kickT > 0.12) {
           const d = keeper.tx - keeper.x;
-          keeper.x += Math.sign(d) * Math.min(Math.abs(d), (ms.goal ? 2.2 : 5) * dt);
-          if (ball.y < 7) {
-            if (!keeper.diveAmt) keeper.diveDir = Math.sign(ms.tx - keeper.x) || 1;
-            keeper.diveAmt = Math.min(1, keeper.diveAmt + dt * 5);
+          const since = keeper.diveT0 != null ? t - keeper.diveT0 : -1;
+          if (since < 0.5) keeper.x += Math.sign(d) * Math.min(Math.abs(d), (ms.goal ? 2.6 : 5) * dt);
+          if (ball.y < 7 && keeper.diveT0 == null) {
+            keeper.diveDir = Math.sign(ms.tx - keeper.x) || 1;
+            keeper.diveT0 = t;
+            keeper.diveHigh = ball.z > 1.2;
+            keeper.diveAmt = 1;
           }
         }
         [...defs, ...mates, keeper].forEach((e) => moveEnt(e, dt));
@@ -519,12 +522,16 @@ const MiniGame = {
             keeper.tx = U.clamp(target, -4.2, 4.2);
           }
           const d = keeper.tx - keeper.x;
-          const lunge = keeper.diveAmt > 0.3 ? 1.35 : 1;
-          keeper.x += Math.sign(d) * Math.min(Math.abs(d), keeper.speed * lunge * dt);
-          if (ball.y < 8 && (Math.abs(d) > 0.45 || (ball.z > 1.4 && Math.abs(ball.x - keeper.x) > 0.3))) {
-            if (!keeper.diveAmt) keeper.diveDir = Math.sign(ball.x - keeper.x) || 1;
-            keeper.diveAmt = Math.min(1, keeper.diveAmt + dt * 5.5);
+          // uçuş: hızlı sıçrama, yere inince kayma yok
+          const since = keeper.diveT0 != null ? t - keeper.diveT0 : -1;
+          const lunge = since >= 0 ? 1.8 : 1;
+          if (since < 0.5) keeper.x += Math.sign(d) * Math.min(Math.abs(d), keeper.speed * lunge * dt);
+          if (ball.y < 8 && keeper.diveT0 == null && (Math.abs(d) > 0.45 || (ball.z > 1.4 && Math.abs(ball.x - keeper.x) > 0.3))) {
+            keeper.diveDir = Math.sign(ball.x - keeper.x) || 1;
+            keeper.diveT0 = t;
+            keeper.diveHigh = ball.z > 1.2;
           }
+          if (keeper.diveT0 != null) keeper.diveAmt = 1;
         }
         defs.forEach((d) => {
           if (d.wall || ft < dDelay) return;
@@ -687,14 +694,20 @@ const MiniGame = {
         const ents = [];
         ents.push({ y: 0, d: () => Sprites.frame(ctx, tx, ty, PX) });
         ents.push({ y: keeper.y, d: () => {
-          const kd = keeper.diveAmt || 0;
-          if (kd < 0.02) return Sprites.figure(ctx, tx(keeper.x), ty(keeper.y), h, { kit: kits.gk, look: keeper.look, facing: 'down', run: keeper.run, speed: keeper.spd, gloves: true, t });
-          // uçuş: vücut topa doğru yatar, kollar uzanır, kaleci yerden kesilir
-          const high = ball.z > 1.3;
+          if (keeper.diveT0 == null) return Sprites.figure(ctx, tx(keeper.x), ty(keeper.y), h, { kit: kits.gk, look: keeper.look, facing: 'down', run: keeper.run, speed: keeper.spd, gloves: true, t });
+          // Uçuş: kalçadan dönerek havalanır, kollar topa uzanır, yay çizip yere iner
+          const since = Math.max(0, t - keeper.diveT0);
+          const prog = U.clamp(since / 0.5, 0, 1);
+          const air = Math.sin(prog * Math.PI) * (keeper.diveHigh ? 0.62 : 0.4);
+          const rot = (keeper.diveDir || 1) * Math.min(1, since / 0.16) * (keeper.diveHigh ? 1.05 : 1.3);
+          const gx = tx(keeper.x), gy = ty(keeper.y);
+          // gölge yerde kalır
+          ctx.fillStyle = 'rgba(0,0,0,0.25)';
+          ctx.beginPath(); ctx.ellipse(gx, gy, h * 0.42, h * 0.08, 0, 0, Math.PI * 2); ctx.fill();
           ctx.save();
-          ctx.translate(tx(keeper.x), ty(keeper.y) - kd * h * (high ? 0.32 : 0.12));
-          ctx.rotate((keeper.diveDir || 1) * kd * (high ? 1.05 : 1.35));
-          Sprites.figure(ctx, 0, 0, h, { kit: kits.gk, look: keeper.look, facing: 'down', gloves: true, dive: 1, t });
+          ctx.translate(gx, gy - h * 0.5 * Math.cos(rot) - air * h);
+          ctx.rotate(rot);
+          Sprites.figure(ctx, 0, h * 0.5, h, { kit: kits.gk, look: keeper.look, facing: 'down', gloves: true, dive: 1, noShadow: true, t });
           ctx.restore();
         } });
         defs.forEach((d) => ents.push({ y: d.y, d: () => Sprites.figure(ctx, tx(d.x), ty(d.y), h * (d.wall ? 1.02 : 1), { kit: kits.opp, look: d.look, facing: 'down', run: d.run, speed: d.spd, dive: d.wall && phase !== 'aim' ? 0.5 : 0, t }) }));
@@ -1060,6 +1073,191 @@ Object.assign(MiniGame, {
       c.lineWidth = 4 * g.dpr; c.strokeStyle = 'rgba(5,11,29,0.7)'; c.strokeText(txt, g.W / 2, y); c.fillText(txt, g.W / 2, y);
     };
     return g;
+  },
+
+  // Kafa vuruşu: köşeden gelen ortaya doğru anda yüksel; nişangah kale ağzında gidip gelir,
+  // dokunduğun anda nişangahın olduğu yere vurursun. Zamanlama + yön birlikte.
+  header(host, o) {
+    return new Promise((resolve) => {
+      const g = MiniGame._canvas(host, '<b>Top kafana gelirken dokun</b> · nişangah kale ağzında nerdeyse oraya vurursun · <kbd>Boşluk</kbd>');
+      const { ctx } = g;
+      const head = o.heading || 40, phys = o.physical || 40;
+      const flight = U.clamp(1.55 - o.skill * 0.35, 1.1, 1.6);
+      const win = U.clamp(0.09 + head / 900 - o.skill * 0.03, 0.06, 0.18); // mükemmel zamanlama penceresi (sn)
+      const side = U.pick([-1, 1]);
+      const keeperX = U.rand(-0.25, 0.25);
+      let t = 0, done = false, raf = 0, last = performance.now(), tapT = null, aimAt = 0, shot = null, msg = '', msgCol = '#fff';
+      const sweep = 1.1 + o.skill * 0.9;
+      const aim = () => Math.sin(t * sweep * 2.2) * 0.95; // -1..1 kale ağzı
+      const lookMe = Sprites.look(7), lookDef = Sprites.look(29), lookGk = Sprites.look(3);
+      const finish = (res, text, col) => {
+        done = true; msg = text; msgCol = col;
+        setTimeout(() => { cleanup(); resolve({ result: res }); }, 1300);
+      };
+      const tap = () => {
+        if (done || tapT != null || t < 0.35) return;
+        tapT = t; aimAt = aim();
+        const err = Math.abs(tapT - flight);
+        const timing = err < win ? 'perfect' : err < win * 2.3 ? 'good' : 'miss';
+        // ikili mücadele: kötü zamanlamada savunmacı kazanabilir
+        const duel = timing === 'miss' ? false : U.chance(U.clamp(0.75 + (phys - 50) / 200 + (timing === 'perfect' ? 0.15 : 0) - o.skill * 0.15, 0.35, 0.97));
+        if (timing === 'miss' || !duel) {
+          shot = { miss: true };
+          return finish('fail', timing === 'miss' ? (tapT < flight ? 'ERKEN YÜKSELDİN' : 'GEÇ KALDIN') : 'SAVUNMA ÖNCE DAVRANDI', '#ff6b6b');
+        }
+        const spread = timing === 'perfect' ? 0.05 : 0.2;
+        const tx = U.clamp(aimAt + U.rand(-spread, spread), -1.3, 1.3);
+        const reach = 0.32 + o.skill * 0.25;
+        const saved = Math.abs(tx - keeperX) < reach;
+        const wide = Math.abs(tx) > 1;
+        shot = { tx, t0: t, saved, wide };
+        setTimeout(() => {
+          if (wide) finish('partial', 'AZ FARKLA DIŞARIDA', '#ffcf3f');
+          else if (saved) finish('partial', 'KALECİ ÇIKARDI', '#ffcf3f');
+          else finish('success', 'KAFAYLA GOL!', '#7cf0a0');
+        }, 650);
+      };
+      const draw = () => {
+        const { W, H, dpr } = g;
+        g.grass();
+        const gw = Math.min(W * 0.7, H * 0.55), gx0 = W / 2 - gw / 2, gy = H * 0.16;
+        // kale
+        ctx.strokeStyle = '#fff'; ctx.lineWidth = 4 * dpr;
+        ctx.strokeRect(gx0, gy - gw * 0.16, gw, gw * 0.16);
+        ctx.strokeStyle = 'rgba(255,255,255,0.35)'; ctx.lineWidth = 1 * dpr;
+        for (let i = 1; i < 12; i++) { ctx.beginPath(); ctx.moveTo(gx0 + (gw / 12) * i, gy - gw * 0.16); ctx.lineTo(gx0 + (gw / 12) * i, gy); ctx.stroke(); }
+        ctx.strokeStyle = 'rgba(255,255,255,0.8)'; ctx.lineWidth = 2 * dpr;
+        ctx.beginPath(); ctx.moveTo(0, gy); ctx.lineTo(W, gy); ctx.stroke();
+        ctx.strokeRect(W / 2 - gw * 0.85, gy, gw * 1.7, H * 0.36);
+        const fh = Math.min(H * 0.17, W * 0.2);
+        const toGoal = (v) => W / 2 + v * gw / 2;
+        // kaleci
+        let kx = toGoal(keeperX);
+        let kd = 0;
+        if (shot && !shot.miss) { const k = U.clamp((t - shot.t0) / 0.35, 0, 1); kd = k; kx = toGoal(keeperX + (shot.saved ? (shot.tx - keeperX) : Math.sign(shot.tx - keeperX) * 0.25) * k); }
+        if (kd > 0.05) {
+          ctx.save(); ctx.translate(kx, gy + fh * 0.6 - fh * 0.5 * Math.cos(kd * 1.2) - Math.sin(kd * Math.PI) * fh * 0.25); ctx.rotate(Math.sign(shot.tx - keeperX || 1) * kd * 1.2);
+          Sprites.figure(ctx, 0, fh * 0.5, fh, { kit: o.kits.gk, look: lookGk, facing: 'down', gloves: true, dive: 1, noShadow: true, t });
+          ctx.restore();
+        } else Sprites.figure(ctx, kx, gy + fh * 0.6, fh, { kit: o.kits.gk, look: lookGk, facing: 'down', gloves: true, t });
+        // nişangah
+        if (!shot) {
+          const ax = toGoal(aim());
+          ctx.strokeStyle = 'rgba(5,11,29,0.8)'; ctx.lineWidth = 6 * dpr;
+          ctx.beginPath(); ctx.arc(ax, gy - gw * 0.08, 12 * dpr, 0, Math.PI * 2); ctx.stroke();
+          ctx.strokeStyle = '#ff3df0'; ctx.lineWidth = 3 * dpr;
+          ctx.beginPath(); ctx.arc(ax, gy - gw * 0.08, 12 * dpr, 0, Math.PI * 2); ctx.stroke();
+        }
+        // oyuncu ve savunmacı
+        const px = W / 2, py = H * 0.68;
+        const jump = tapT != null && !(shot && shot.miss && tapT < flight - win * 2.3) ? Math.sin(U.clamp((t - tapT) / 0.6, 0, 1) * Math.PI) * fh * 0.35 : 0;
+        Sprites.figure(ctx, px + fh * 0.42, py + fh * 0.1, fh, { kit: o.kits.opp, look: lookDef, facing: 'up', t, run: t * 3, speed: 0.3 });
+        Sprites.figure(ctx, px, py - jump, fh, { kit: o.kits.own, look: lookMe, facing: 'up', number: o.number, label: 'SEN', labelScale: dpr, labelColor: 'rgba(214,40,57,0.92)', t });
+        // top: köşeden kavisli orta, gölgesi yerde
+        const headY = py - fh * 0.95 - jump;
+        let bx, by, bz;
+        if (!shot || shot.miss) {
+          const k = Math.min(t / flight, 1.4);
+          const sx = side > 0 ? W * 1.02 : -W * 0.02, sy = gy + 8 * dpr;
+          bx = sx + (px - sx) * k; by = sy + (py - sy) * k; bz = Math.sin(Math.min(k, 1) * Math.PI) * fh * 1.4 + fh * 0.95 * Math.min(k, 1);
+          if (k > 1) { bx = px + (px - sx) * (k - 1); by = py + (py - sy) * (k - 1); bz = fh * 0.95 * (1 - (k - 1) * 2); }
+          if (!shot && k >= 1.35) { shot = { miss: true }; finish('fail', 'TOPU KAÇIRDIN', '#ff6b6b'); }
+        } else {
+          const k = U.clamp((t - shot.t0) / 0.5, 0, 1);
+          const ex = toGoal(shot.tx), ey = gy - gw * 0.08;
+          bx = px + (ex - px) * k; by = headY + fh * 0.95 + (ey - headY - fh * 0.95) * k; bz = fh * 0.95 * (1 - k) + jump * (1 - k);
+          if (shot.saved && k >= 0.85) { bx = kx; }
+        }
+        ctx.fillStyle = 'rgba(0,0,0,0.25)'; ctx.beginPath(); ctx.ellipse(bx, by, 9 * dpr, 3.5 * dpr, 0, 0, Math.PI * 2); ctx.fill();
+        Sprites.ball(ctx, bx, by - bz, 8 * dpr, t * 6);
+        // zamanlama halkası (top kafaya yaklaşınca daralır)
+        if (!tapT && !done) {
+          const k = U.clamp(1 - Math.abs(t - flight) / 0.9, 0, 1);
+          ctx.strokeStyle = Math.abs(t - flight) < win ? '#7cf0a0' : 'rgba(255,255,255,0.55)';
+          ctx.lineWidth = 3 * dpr;
+          ctx.beginPath(); ctx.arc(px, headY, (14 + (1 - k) * 40) * dpr, 0, Math.PI * 2); ctx.stroke();
+        }
+        if (done) g.text(msg, H * 0.5, 34, msgCol);
+        else if (t < 0.35) g.text('KORNER!', H * 0.5, 34);
+      };
+      const loop = (now) => {
+        const dt = Math.min(0.05, (now - last) / 1000);
+        last = now; t += dt;
+        draw();
+        raf = requestAnimationFrame(loop);
+      };
+      const key = (e) => { if (e.code === 'Space' || e.code === 'Enter') { e.preventDefault(); tap(); } };
+      const cleanup = () => { cancelAnimationFrame(raf); document.removeEventListener('keydown', key); window.removeEventListener('resize', g.layout); };
+      g.box.addEventListener('pointerdown', (e) => { e.preventDefault(); tap(); });
+      document.addEventListener('keydown', key);
+      raf = requestAnimationFrame(loop);
+      MiniGame._abort = () => { if (done) return; done = true; cleanup(); resolve({ result: 'auto' }); };
+    });
+  },
+
+  // Tempo koşusu (dayanıklılık): basılı tutunca hızlanırsın; hız ibresini hareket eden yeşil bantta tut
+  tempo(host, o) {
+    return new Promise((resolve) => {
+      const g = MiniGame._canvas(host, '<b>Basılı tut: hızlan</b>, bırak: yavaşla · ibreyi yeşil bantta tut · <kbd>Boşluk</kbd>');
+      const { ctx } = g;
+      const DUR = 12;
+      const stam = o.stamina || 40;
+      const band = U.clamp(0.16 + stam / 700 - o.skill * 0.04, 0.12, 0.28);
+      let t = 0, done = false, raf = 0, last = performance.now(), pace = 0.3, hold = false, inBand = 0, target = 0.45, tgtGoal = 0.45, nextShift = 2, dist = 0;
+      const look = Sprites.look(7);
+      const finish = () => {
+        done = true;
+        const q = inBand / DUR;
+        setTimeout(() => { cleanup(); resolve({ result: q >= 0.7 ? 'success' : q >= 0.45 ? 'partial' : 'fail' }); }, 1200);
+      };
+      const draw = () => {
+        const { W, H, dpr } = g;
+        // pist
+        ctx.fillStyle = '#b5482f'; ctx.fillRect(0, 0, W, H);
+        ctx.strokeStyle = 'rgba(255,255,255,0.65)'; ctx.lineWidth = 2 * dpr;
+        for (let i = 1; i < 6; i++) { const y = H * 0.18 + i * H * 0.1; ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke(); }
+        const off = (dist * 60 * dpr) % (W / 4);
+        ctx.fillStyle = 'rgba(255,255,255,0.8)';
+        for (let x = -off; x < W; x += W / 4) ctx.fillRect(x, H * 0.18, 4 * dpr, H * 0.5);
+        const fh = Math.min(H * 0.24, W * 0.3);
+        Sprites.figure(ctx, W * 0.42, H * 0.6, fh, { kit: o.kits.own, look, facing: 'down', number: o.number, run: dist * 6, speed: U.clamp(pace * 1.4, 0.2, 1), t });
+        // tempo göstergesi
+        const bx = W * 0.08, bw = W * 0.84, by = H * 0.8, bh = 26 * dpr;
+        ctx.fillStyle = 'rgba(10,16,32,0.8)'; ctx.fillRect(bx, by, bw, bh);
+        ctx.fillStyle = 'rgba(124,240,160,0.85)'; ctx.fillRect(bx + bw * (target - band / 2), by, bw * band, bh);
+        const nx = bx + bw * pace;
+        ctx.fillStyle = Math.abs(pace - target) < band / 2 ? '#fff' : '#ffcf3f';
+        ctx.fillRect(nx - 3 * dpr, by - 8 * dpr, 6 * dpr, bh + 16 * dpr);
+        ctx.strokeStyle = '#fff'; ctx.lineWidth = 2 * dpr; ctx.strokeRect(bx, by, bw, bh);
+        ctx.font = `700 ${Math.round(12 * dpr)}px "Barlow Semi Condensed", sans-serif`; ctx.fillStyle = '#fff';
+        ctx.textAlign = 'left'; ctx.fillText('YAVAŞ', bx, by + bh + 16 * dpr); ctx.textAlign = 'right'; ctx.fillText('SÜRAT', bx + bw, by + bh + 16 * dpr);
+        g.text(done ? `Tempoda: %${Math.round((inBand / DUR) * 100)}` : t < 0.6 ? 'HAZIR...' : `${Math.max(0, DUR - t + 0.6).toFixed(1)} sn`, H * 0.1, 30, done ? '#7cf0a0' : '#fff');
+      };
+      const loop = (now) => {
+        const dt = Math.min(0.05, (now - last) / 1000);
+        last = now; t += dt;
+        if (!done && t > 0.6) {
+          pace = U.clamp(pace + (hold ? 0.55 : -0.42) * dt, 0, 1);
+          dist += pace * dt * 2;
+          nextShift -= dt;
+          if (nextShift <= 0) { tgtGoal = U.rand(0.2, 0.85); nextShift = U.rand(1.6, 2.6) - o.skill * 0.6; }
+          target += (tgtGoal - target) * Math.min(1, dt * 1.6);
+          if (Math.abs(pace - target) < band / 2) inBand += dt;
+          if (t > DUR + 0.6) finish();
+        }
+        draw();
+        raf = requestAnimationFrame(loop);
+      };
+      const kd = (e) => { if ((e.code === 'Space' || e.code === 'Enter') && !e.repeat) { e.preventDefault(); hold = true; } };
+      const ku = (e) => { if (e.code === 'Space' || e.code === 'Enter') { e.preventDefault(); hold = false; } };
+      const pu = () => { hold = false; };
+      const cleanup = () => { cancelAnimationFrame(raf); document.removeEventListener('keydown', kd); document.removeEventListener('keyup', ku); window.removeEventListener('pointerup', pu); window.removeEventListener('resize', g.layout); };
+      g.box.addEventListener('pointerdown', (e) => { e.preventDefault(); hold = true; });
+      window.addEventListener('pointerup', pu);
+      document.addEventListener('keydown', kd); document.addEventListener('keyup', ku);
+      raf = requestAnimationFrame(loop);
+      MiniGame._abort = () => { if (done) return; done = true; cleanup(); resolve({ result: 'auto' }); };
+    });
   },
 
   // Top sektirme: top ayağa inerken (yeşil bölge) dokun, yere düşürme

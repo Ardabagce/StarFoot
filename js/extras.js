@@ -41,6 +41,8 @@ const ACHIEVEMENTS = (() => {
     { id: 'league1', cat: 'trophy', tier: 'silver', name: 'Lig Şampiyonu', desc: 'Profesyonel ligde şampiyon oldun', check: (p) => p.trophies.some((t) => /Lig Şampiyonu|Ligi Şampiyonu|League Şampiyonu|Liga Şampiyonu|Serie A Şampiyonu|Bundesliga Şampiyonu|Ligue 1 Şampiyonu/.test(t)) || p.trophies.some((t) => /Şampiyonu/.test(t) && !/U1\d|U\d|Kupa|Şampiyonası/.test(t)) },
     { id: 'youthcup', cat: 'trophy', tier: 'bronze', name: 'Altyapı Şampiyonu', desc: 'Altyapı liginde şampiyon oldun', check: (p) => p.trophies.some((t) => /U\d+.*Şampiyonu/.test(t)) },
     { id: 'ucl', cat: 'trophy', tier: 'gold', name: 'Avrupa\'nın En İyisi', desc: 'Avrupa Şampiyonlar Kupası\'nı kazandın', check: (p) => p.trophies.some((t) => /Şampiyonlar Kupası/.test(t)) },
+    { id: 'domcup', cat: 'trophy', tier: 'silver', name: 'Kupa Şampiyonu', desc: 'Ülkenin kupasını kazandın', check: (p) => p.trophies.some((t) => /(Türkiye|İngiltere|Kral|Almanya|İtalya|Fransa) Kupası Şampiyonu/.test(t)) },
+    { id: 'double', cat: 'trophy', tier: 'gold', name: 'Çifte Kupa', desc: 'Aynı sezon hem ligi hem ülke kupasını kazandın', check: (p) => { const by = {}; p.trophies.forEach((t) => { const y = t.split(':')[0]; by[y] = by[y] || {}; if (/(Türkiye|İngiltere|Kral|Almanya|İtalya|Fransa) Kupası Şampiyonu/.test(t)) by[y].c = 1; else if (/Şampiyonu/.test(t) && !/U\d|Kupa|Şampiyonası/.test(t)) by[y].l = 1; }); return Object.values(by).some((x) => x.c && x.l); } },
     { id: 'uel', cat: 'trophy', tier: 'silver', name: 'Federasyon Kupası', desc: 'Avrupa Federasyon Kupası\'nı kazandın', check: (p) => p.trophies.some((t) => /Federasyon Kupası/.test(t)) },
     { id: 'wc', cat: 'trophy', tier: 'gold', name: 'Dünya Şampiyonu', desc: 'Dünya Kupası\'nı kazandın', check: (p) => p.trophies.some((t) => /Dünya Kupası Şampiyonu/.test(t)) },
     { id: 'euro', cat: 'trophy', tier: 'gold', name: 'Avrupa Şampiyonu', desc: 'Avrupa Şampiyonası\'nı kazandın', check: (p) => p.trophies.some((t) => /Avrupa Şampiyonası Şampiyonu/.test(t)) },
@@ -524,29 +526,37 @@ const Social = {
     const p = Game.p, so = Social.ensure(p);
     const likes = so.posts.reduce((t, x) => t + x.likes, 0);
     const icon = { goal: 'ball', motm: 'star', trophy: 'career', transfer: 'contract', life: 'life', daily: 'phone' };
-    const posts = so.posts.slice(0, full ? 8 : 2);
+    const verified = p.fame >= 35;
+    const club = Game.inStreet() ? null : Game.club();
+    const bio = `${POSITIONS[p.position].l}${club ? ` · ${Game.teamName()}` : ''} · #${p.shirt}`;
+    const lead = so.posts[0];
+    const grid = so.posts.slice(lead ? 1 : 0, full ? 10 : 7);
+    const initials = (n) => n.replace('@', '').slice(0, 2).toUpperCase();
     return `
       <section class="card social">
-        <div class="card-h"><span>${Icon('phone')} Sosyal Medya</span><small class="muted">${U.esc(so.handle)}</small></div>
-        <div class="so-head">
-          <canvas class="so-avatar" aria-hidden="true"></canvas>
-          <div class="so-stats">
-            <div><b>${so.posts.length}</b><span>Gönderi</span></div>
-            <div><b>${Social.fmt(so.followers)}</b><span>Takipçi</span></div>
-            <div><b>${Social.fmt(so.following)}</b><span>Takip</span></div>
-            <div><b>${Social.fmt(likes)}</b><span>Beğeni</span></div>
+        <div class="so-top">
+          <div class="so-ring"><canvas class="so-avatar" aria-hidden="true"></canvas></div>
+          <div class="so-id">
+            <div class="so-handle">${U.esc(so.handle)}${verified ? `<i class="so-ver" title="Onaylı hesap">✓</i>` : ''}</div>
+            <div class="so-name">${U.esc(Player.fullName(p))}</div>
+            <div class="so-bio">${U.esc(bio)}</div>
           </div>
         </div>
-        ${(so.trends || []).length ? `<div class="lbl">Gündem</div><div class="so-trends">${so.trends.slice(0, full ? 6 : 2).map((x) => `<div class="so-tr ${x.kind}"><b>${U.esc(x.u)}</b><span>${U.esc(x.text)}</span><small>${Icon('heart')}${Social.fmt(x.likes)} · ${x.y}</small></div>`).join('')}</div><div class="lbl">Paylaşımların</div>` : ''}
-        ${posts.length ? `<div class="so-posts">${posts.map((x) => `
-          <article class="so-post ${x.kind}">
-            <div class="so-img">${Icon(icon[x.kind] || 'phone')}</div>
-            <div class="so-body">
-              <p>${U.esc(x.text)}</p>
-              <div class="so-meta"><span class="heart">${Icon('heart')}${Social.fmt(x.likes)} beğeni</span><small>${x.w}</small></div>
-              ${x.comments.map((c) => `<div class="so-c"><b>${U.esc(c.u)}</b> ${U.esc(c.t)}</div>`).join('')}
-            </div>
-          </article>`).join('')}</div>` : '<p class="muted">Henüz paylaşım yok. Gol at ya da haftalık planda "Sosyal Medya" ile paylaşım yap.</p>'}
+        <div class="so-stats">
+          <div><b>${so.posts.length}</b><span>Gönderi</span></div>
+          <div class="hl"><b>${Social.fmt(so.followers)}</b><span>Takipçi</span></div>
+          <div><b>${Social.fmt(so.following)}</b><span>Takip</span></div>
+          <div><b>${Social.fmt(likes)}</b><span>Beğeni</span></div>
+        </div>
+        ${(so.trends || []).length ? `<div class="so-stories">${so.trends.slice(0, 8).map((x) => `<div class="so-story ${x.kind}" title="${U.esc(x.text)}"><i>${U.esc(initials(x.u))}</i><small>${U.esc(x.n.split(' ').slice(-1)[0])}</small></div>`).join('')}</div>` : ''}
+        ${lead ? `<article class="so-feature ${lead.kind}">
+          <div class="so-fhead"><span class="so-mini"></span><b>${U.esc(so.handle)}</b><small>${lead.w}</small></div>
+          <div class="so-fimg">${Icon(icon[lead.kind] || 'phone')}<span>${U.esc(lead.text)}</span></div>
+          <div class="so-factions"><span class="heart">${Icon('heart')}<b>${Social.fmt(lead.likes)}</b> beğeni</span><span>${lead.comments.length} yorum</span></div>
+          ${lead.comments.map((c) => `<div class="so-c"><b>${U.esc(c.u)}</b> ${U.esc(c.t)}</div>`).join('')}
+        </article>` : '<p class="muted">Henüz paylaşım yok. Gol at ya da haftalık planda "Sosyal Medya" ile paylaşım yap.</p>'}
+        ${grid.length ? `<div class="so-grid">${grid.map((x) => `<div class="so-tile ${x.kind}" title="${U.esc(x.text)}">${Icon(icon[x.kind] || 'phone')}<span class="so-tl">${Icon('heart')}${Social.fmt(x.likes)}</span></div>`).join('')}</div>` : ''}
+        ${full && (so.trends || []).length ? `<div class="lbl">Gündem</div><div class="so-trends">${so.trends.slice(0, 6).map((x) => `<div class="so-tr ${x.kind}"><b>${U.esc(x.u)}</b><span>${U.esc(x.text)}</span><small>${Icon('heart')}${Social.fmt(x.likes)} · ${x.y}</small></div>`).join('')}</div>` : ''}
       </section>`;
   },
   drawAvatar() {
@@ -554,7 +564,7 @@ const Social = {
       const dpr = Math.min(2, window.devicePixelRatio || 1);
       cv.width = 72 * dpr; cv.height = 72 * dpr;
       const c = cv.getContext('2d');
-      const club = Game.club();
+      const club = Game.club() || { c1: '#2a6fdb', c2: '#fff', id: 'X' };
       c.fillStyle = club.c1; c.beginPath(); c.arc(36 * dpr, 36 * dpr, 36 * dpr, 0, Math.PI * 2); c.fill();
       c.save(); c.beginPath(); c.arc(36 * dpr, 36 * dpr, 33 * dpr, 0, Math.PI * 2); c.clip();
       c.fillStyle = '#16244f'; c.fillRect(0, 0, 72 * dpr, 72 * dpr);

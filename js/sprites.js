@@ -96,8 +96,10 @@ const Sprites = {
     const W = h * 0.36;
 
     // gölge
-    ctx.fillStyle = 'rgba(0,0,0,0.28)';
-    ctx.beginPath(); ctx.ellipse(sx + h * 0.06, sy + h * 0.02, h * 0.24, h * 0.07, 0, 0, Math.PI * 2); ctx.fill();
+    if (!o.noShadow) {
+      ctx.fillStyle = 'rgba(0,0,0,0.28)';
+      ctx.beginPath(); ctx.ellipse(sx + h * 0.06, sy + h * 0.02, h * 0.24, h * 0.07, 0, 0, Math.PI * 2); ctx.fill();
+    }
 
     if (o.ring) {
       ctx.strokeStyle = o.ring; ctx.lineWidth = Math.max(2, h * 0.04);
@@ -144,12 +146,14 @@ const Sprites = {
       const aw = h * 0.085, L = h * 0.32;
       ctx.fillStyle = look.skin; ctx.fillRect(-aw / 2, 0, aw, L);
       ctx.fillStyle = kit.shirt; ctx.fillRect(-aw / 2 - 1, 0, aw + 2, L * 0.38);
-      if (o.gloves) { ctx.fillStyle = '#f0f0f0'; ctx.fillRect(-aw / 2 - 1, L * 0.85, aw + 2, L * 0.2); }
+      if (o.gloves) { ctx.fillStyle = '#f0f0f0'; const gw = o.dive ? aw * 1.7 : aw + 2; ctx.beginPath(); ctx.ellipse(0, L * 0.98, gw / 2, L * (o.dive ? 0.16 : 0.11), 0, 0, Math.PI * 2); ctx.fill(); }
       ctx.restore();
     };
     const armsUp = o.dive || 0;
-    drawArm(-1, armsUp ? -2.2 * armsUp : sw);
-    drawArm(1, armsUp ? 2.2 * armsUp : -sw);
+    if (!armsUp) {
+      drawArm(-1, sw);
+      drawArm(1, -sw);
+    }
 
     // gövde (forma)
     const top = shY, bot = hipY - h * 0.06;
@@ -213,6 +217,20 @@ const Sprites = {
       ctx.fillRect(sx + hr * 0.24, hy + hr * 0.05, hr * 0.18, hr * 0.14);
     }
 
+    // kaleci uçuşu: iki kol başın üstünden topa uzanır (gövdenin önünde çizilir)
+    if (armsUp) {
+      const arm = (side) => {
+        ctx.save();
+        ctx.translate(sx + side * W * 0.42, shY + h * 0.03);
+        ctx.rotate(side * -(Math.PI - 0.28));
+        const aw = h * 0.085, L = h * 0.36;
+        ctx.fillStyle = look.skin; ctx.fillRect(-aw / 2, 0, aw, L);
+        ctx.fillStyle = kit.shirt; ctx.fillRect(-aw / 2 - 1, 0, aw + 2, L * 0.4);
+        if (o.gloves) { ctx.fillStyle = '#f4f4f4'; ctx.beginPath(); ctx.ellipse(0, L, aw * 0.95, aw * 1.05, 0, 0, Math.PI * 2); ctx.fill(); ctx.strokeStyle = 'rgba(0,0,0,0.35)'; ctx.lineWidth = Math.max(1, h * 0.012); ctx.stroke(); }
+        ctx.restore();
+      };
+      arm(-1); arm(1);
+    }
     if (o.label) Sprites.tag(ctx, sx, hy - hr * 1.6, o.label, o.labelScale || 1, o.labelColor);
   },
 

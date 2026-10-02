@@ -29,6 +29,7 @@ Oyunu bir web sunucusundan (ör. GitHub Pages) açıp tarayıcı menüsünden **
 - **Dönem yıldızları (dünya):** Seçtiğin yılın kurgusal yıldızları sahadadır (1980'ler: Maradoni, Platinni, van Bastın... 2000'ler: Ronaldinyo, Anri... bugün: Mbappo, Halland, Yamel...). Oyuncular yaşlanır, emekli olur, gençler sırası gelince profesyonel olur; liste bittikten sonra yeni nesil yıldızlar üretilir. Emeklilikler, yeni yıldızlar ve büyük transferler haberlerde ve sosyal medya gündeminde çıkar.
 - **Kariyer:** U10, U12, U14, U16 ve U19 takımlarında oynarsın. 17-18 yaşında profesyonel sözleşme imzalar, 33 yaşından sonra istediğin zaman emekli olabilirsin.
 - **20 takımlı ligler:** Tüm ligler 20 takım, 38 hafta. Türkiye'de 3 takım düşer, 3 takım çıkar.
+- **Ülke kupaları:** Her ülkenin kendi kupası var (Türkiye Kupası 32 takım, İngiltere Kupası, Kral Kupası, Almanya, İtalya ve Fransa kupaları 16 takım). Tek maç eleme, Avrupa kupalarıyla çakışmayan takvim.
 - **Avrupa kupaları:** Her sezon Avrupa Şampiyonlar Kupası ve Avrupa Federasyon Kupası (16 takım, tek maç eleme). Kulübün katılırsa maçlarını sen oynarsın.
 - **Dünya Kupası ve Avrupa Şampiyonası:** Gerçek takvimle (Dünya Kupası 1986, 1990... 2026, 2030; Avrupa Şampiyonası 1984, 1988... 2024, 2028) sezon sonunda oynanır. Milli takıma çağrılırsan maçlarına çıkarsın.
 - **9 stat:** Hız, Şut, Pas, Top Sürme, Teknik, Kafa, Savunma, Güç, Dayanıklılık. Mevkine göre (Forvet / Orta Saha / Defans) genel gücün hesaplanır.
@@ -37,7 +38,8 @@ Oyunu bir web sunucusundan (ör. GitHub Pages) açıp tarayıcı menüsünden **
   - **Şut (sapan gibi):** Parmağını (ya da fareyi) ekranda bir yere koy ve topun gitmesini istediğin yönün **tersine geri çek**, sonra bırak. Ne kadar geri çekersen vuruş o kadar sert olur. Geri çekerken yolu **kavisli** çizersen top falso alır. Parmağın topun arkasında kaldığı için topun izleyeceği yol ve hedef halkası net görünür; Teknik statın yükseldikçe önizleme uzar.
   - **Pas:** Takım arkadaşına **dokun**; top isabetli bir pasla ona gider (isabet Pas statına bağlı). **Aşırtma** seçiliyse pas yüksek bir yayla savunmanın üstünden geçer.
   - **Ofsayt:** Sahada ofsayt çizgisi gösterilir. Son savunmacının gerisindeki arkadaşına pas verirsen yan hakem bayrağı kaldırır.
-  - **Kaleci:** Şutlara doğru uçar, köşelere uzanır, yüksek toplara sıçrar.
+  - **Kaleci:** Şutlara doğru havalanarak uçar, iki eliyle topa uzanır ve yere iner.
+  - **Kafa vuruşu:** Kornerden gelen topa doğru anda yükselirsin; kale ağzında gidip gelen nişangah neredeyse oraya vurursun. Kötü zamanlamada savunmacı önce davranır.
   - **Frikik:** Uzak frikiklerde vuruş daha güçlü, falso daha fazla; mesafe ekranda yazar.
   - **Vuruş tipi:** Yerden, Yarım Yükseklik veya Aşırtma (klavyede 1 / 2 / 3).
   - Gole yaklaşan şutlarda ağır çekim, gollerde konfeti efekti var.
@@ -57,19 +59,20 @@ Oyunu bir web sunucusundan (ör. GitHub Pages) açıp tarayıcı menüsünden **
 - **Hediye paketi:** Arada bir hediye paketi çıkar. Kısa bir reklam izlersen ödül x2 ya da x3 olur, izlemezsen x1 alırsın. (Şimdilik temsili reklam gösterilir; gerçek bir reklam sağlayıcısı `window.StarfootAds` ile bağlanabilir.)
 - **Hava durumu:** Her maçın havası var (açık, yağmurlu, karlı, sisli, rüzgarlı). Yağmurda top kayar, karda çabuk durur (turuncu kış topu), rüzgarda havadaki top sürüklenir, siste vuruş önizlemesi kısalır.
 - **Toplar:** Her ligin ve turnuvanın kendi top tasarımı var (eski yıllarda klasik/deri top). Mağazadan neon, ateş, buz, galaksi, altın gibi kozmetik toplar alıp maçta ve antrenmanda kullanabilirsin.
+- **Maç sonrası rapor:** Hoca, takım ve taraftar ilişkin; reytinge, gol, asist, kilit pas, top kapma, kart ve sonuca göre değişir. Ana sayfadaki rapor kartında hoca/takım/taraftar/takipçi/ün/moral değişimini ve nedenlerini görürsün.
 - **Canlı enerji:** Enerji maç boyunca dakika dakika düşer; yorgunluk vuruş isabetini etkiler. Maç sonunda başlangıç ve bitiş enerjisi gösterilir.
 - **Maç ekranı:** Premium oyuncu paneli (numara, reyting, gol/asist/şut, enerji çubuğu) ve pozisyon gelince lige özel TV skorbordu.
 - **Forma numarası:** Kadro sekmesinden sezonda bir kez numara talep edebilirsin; hoca performansına, ilişkine ve numaranın sahibine göre onaylar ya da reddeder.
 - **Kaptanlık:** Kadro sekmesinde kaptanlık hedefleri (maç sayısı, yaş, hoca ve takım ilişkisi, genel güç, reyting) görünür. Hepsini tamamlayınca kaptan olursun; kaptanken maçta arkadaşını basılı tutup sürükleyerek yerleştirebilirsin.
-- **Maçın adamı:** Seçildiğinde özel bir ödül ekranı açılır; yıldız kupaların Kariyer sekmesindeki vitrinde sergilenir.
+- **Maçın oyuncusu:** Seçildiğinde defne yapraklı, konfetili, formalı premium bir ödül ekranı açılır; yıldız kupaların Kariyer sekmesindeki vitrinde sergilenir.
 - **105 başarım:** Gol, asist, maç, özel goller, kupalar, milli takım, kariyer, yetenek, ün ve yaşam kategorilerinde.
 - **Gerçekçi sürprizler:** Altyapıdayken A takımın yıldızları (dönemin gerçek oyuncularından esinlenen isimler) antrenmanını izlemeye gelir ve sana mevkisine göre bir şey öğretir; kulübün emekli efsaneleri tesisleri ziyaret eder, A takım hocası seni profesyonellerle antrenmana çağırır. Profesyonelken kaptanla ekstra çalışma, tecrübeli oyuncudan tavsiye, fizyoterapist programı gibi olaylar olur. Çok iyi maçlardan sonra başkandan prim ya da A takım antrenmanı daveti gelir.
-- **Antrenman mini oyunları:** Antrenman, yoğun antrenman ve özel hocada odak statına göre bir çalışma oynanır: Şut → bitiricilik (3 şut), Teknik → top sektirme, Pas → verkaç istasyonu, Top Sürme → slalom, Kafa → orta karşılama, Savunma → ikili mücadele, Güç → omuz omuza (basılı tut, yeşil bantta bırak), Hız/Dayanıklılık → sürat koşusu. İyi oynarsan gelişim ×1,5'e kadar çıkar; atlayabilir ya da tamamen kapatabilirsin.
+- **Antrenman mini oyunları:** Antrenman, yoğun antrenman ve özel hocada odak statına göre bir çalışma oynanır: Şut → bitiricilik (3 şut), Teknik → top sektirme, Pas → verkaç istasyonu, Top Sürme → slalom, Kafa → korner kafa vuruşu (zamanlama + nişangah), Savunma → ikili mücadele, Güç → omuz omuza (basılı tut, yeşil bantta bırak), Hız → sürat koşusu, Dayanıklılık → tempo koşusu (hız ibresini yeşil bantta tut). İyi oynarsan gelişim ×1,5'e kadar çıkar; atlayabilir ya da tamamen kapatabilirsin.
 - **Zorluk:** Kolay, Orta ve Zor. Kariyer sekmesinden sonradan da değiştirilebilir.
 - **Devre arası:** Hocayla taktik konuşmak, takımı ateşlemek, toparlanmak ya da rakip kaleciyi incelemek; yedekteysen ısınıp hocaya görünmek.
 - **Yeni mini oyunlar:** Kontra atak sprinti (hızlı hızlı dokun) ve verkaç (parlayan arkadaşına süre dolmadan dokun).
 - **Asist animasyonu:** Pas arkadaşına ulaşınca arkadaşın topu kontrol edip şut çeker; gol olursa ASİST yazar.
-- **Sosyal medya:** Ününe göre büyüyen takipçi sayısı, gol, kupa, transfer ve eşya paylaşımları, beğeniler ve taraftar yorumları.
+- **Sosyal medya:** Instagram tarzı profil (hikaye halkası, onaylı rozet, öne çıkan gönderi, gönderi ızgarası, gündem hikayeleri). Ününe göre büyüyen takipçi sayısı, gol, kupa, transfer ve eşya paylaşımları, beğeniler ve taraftar yorumları.
 - **Gazete:** Haberler gazete sayfası görünümünde; manşet, köşe yazıları ve dünya servisi.
 - **Dünyadan haberler:** Gerçek maç sonuçlarından ve ara ara mizahi dille yazılmış, kendini tekrar etmeyen haberler.
 - **Lig sekmesi:** Sıra, puan, lidere fark ve son 5 maç formu; formalı puan tablosu, şampiyonluk/küme bölgeleri, maç kartlı fikstür ve gol krallığı.

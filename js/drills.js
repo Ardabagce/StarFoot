@@ -5,11 +5,11 @@ const DRILLS = {
   technique: { t: 'Top Sektirme', d: 'Topu yere düşürmeden 10 kez sektir. Top yeşil bölgeye inince dokun.', kind: 'mini', fn: 'juggle', k: 'dribble' },
   passing: { t: 'Pas Çalışması', d: 'Verkaç istasyonu: parlayan arkadaşına süre dolmadan pas ver.', kind: 'mini', fn: 'onetwo', k: 'pass' },
   dribbling: { t: 'Slalom Çalışması', d: 'Hunilerin ve rakiplerin arasından geç. Halka yeşildeyken dokun.', kind: 'timing', tk: 'dribble', k: 'dribble', cfg: { title: 'Çalım at!', button: 'ÇALIM!', okText: 'MÜKEMMEL!', partialText: 'Fena değil', failText: 'Huniye takıldın', rounds: 3 } },
-  heading: { t: 'Kafa Vuruşu Çalışması', d: 'Hoca ortalar yapıyor. Doğru anda yüksel.', kind: 'timing', tk: 'header', k: 'header', cfg: { title: 'Kafayı vur!', button: 'KAFA!', okText: 'TAM ZAMANINDA!', partialText: 'Biraz erken', failText: 'Kaçtı', rounds: 2 } },
+  heading: { t: 'Kafa Vuruşu Çalışması', d: 'Hoca kornerden orta açıyor. Top kafana gelirken dokun; nişangah neredeyse oraya vurursun.', kind: 'mini', fn: 'header', k: 'header' },
   defending: { t: 'İkili Mücadele', d: 'Hücum oyuncusunu durdur. Yeşil alan temiz müdahale.', kind: 'timing', tk: 'tackle', k: 'tackle', cfg: { title: 'Topu kap!', button: 'MÜDAHALE!', okText: 'TERTEMİZ!', partialText: 'Faul olurdu', failText: 'Geçildin', rounds: 2 } },
   physical: { t: 'Omuz Omuza', d: 'Basılı tut, güç dolsun; yeşil bantta bırakıp rakibi it.', kind: 'mini', fn: 'shoulder', k: 'tackle' },
   pace: { t: 'Sürat Koşusu', d: 'Rakibinden önce topa ulaş: hızlı hızlı dokun.', kind: 'mini', fn: 'sprint', k: 'dribble' },
-  stamina: { t: 'Mekik Koşusu', d: 'Yorulsan da tempoyu düşürme: hızlı hızlı dokun.', kind: 'mini', fn: 'sprint', k: 'dribble' },
+  stamina: { t: 'Tempo Koşusu', d: 'Basılı tutarak hızlan, bırakarak yavaşla. Hız ibresini 12 saniye boyunca yeşil bantta tut.', kind: 'mini', fn: 'tempo', k: 'dribble' },
 };
 
 const Drill = {
@@ -78,7 +78,7 @@ const Drill = {
         const r = await MiniGame.timing(hostEl, cfg);
         if (r.result === 'auto') auto = true; else q = score[r.result] ?? 0.3;
       } else {
-        const r = await MiniGame[D.fn](hostEl, { skill, kits, number: p.shirt, pace: st.pace, passing: st.passing, technique: st.technique, physical: st.physical, mates, cond });
+        const r = await MiniGame[D.fn](hostEl, { skill, kits, number: p.shirt, pace: st.pace, passing: st.passing, technique: st.technique, physical: st.physical, heading: st.heading, stamina: st.stamina, mates, cond });
         if (r.result === 'auto') auto = true; else q = score[r.result] ?? 0.3;
       }
     } catch (e) {

@@ -508,6 +508,10 @@ const Game = {
     const resTxt = { W: 'kazandı', D: 'berabere kaldı', L: 'kaybetti' }[sum.res];
     const teamTxt = comp === 'intl' ? Game.nation().name : Game.teamName();
 
+    // maç sonrası rapor için önceki değerler
+    const so0 = Social.ensure(p);
+    const before = { coach: p.rel.coach, team: p.rel.team, fans: p.rel.fans, fol: so0.followers, fame: p.fame, morale: p.morale, money: p.money };
+    const why = [];
     if (sum.played) {
       if (comp === 'intl') {
         p.intl.caps++; p.intl.goals += sum.goals;
@@ -535,9 +539,25 @@ const Game = {
         p.motmAwards.push({ y: s.season.year, opp: oppName, r: sum.rating, g: sum.goals, a: sum.assists, c: comp });
         if (p.motmAwards.length > 60) p.motmAwards.shift();
       }
-      Player.addRel(p, 'coach', (r - 6.4) * 3 * rk);
-      Player.addRel(p, 'team', ((sum.res === 'W' ? 1.5 : sum.res === 'L' ? -1 : 0.3) + sum.assists * 0.8) * rk);
-      Player.addRel(p, 'fans', (sum.goals * 1.5 + (r - 6.6) * 2.5) * rk);
+      // ilişkiler: performansa ve sahada yaptıklarına göre
+      const defMind = p.position !== 'FW' ? (sum.tackles || 0) * 0.5 : 0;
+      const coachD = ((r - 6.4) * 3 + defMind + (sum.motm ? 1.5 : 0) - (sum.yellow ? 1 : 0)) * rk;
+      const teamD = ((sum.res === 'W' ? 1.5 : sum.res === 'L' ? -1 : 0.3) + sum.assists * 1 + (sum.keyPasses || 0) * 0.4 + sum.goals * 0.4 - (sum.red ? 3 : 0)) * rk;
+      const fansD = (sum.goals * 1.5 + (r - 6.6) * 2.5 + (sum.motm ? 2 : 0) + (sum.res === 'W' ? 0.5 : 0) - (sum.red ? 3 : 0)) * rk;
+      Player.addRel(p, 'coach', coachD);
+      Player.addRel(p, 'team', teamD);
+      Player.addRel(p, 'fans', fansD);
+      if (r >= 7.5) why.push(`Reyting ${r.toFixed(1)}: hoca memnun`); else if (r < 6) why.push(`Reyting ${r.toFixed(1)}: hoca hayal kırıklığında`);
+      if (sum.goals) why.push(`${sum.goals} gol: taraftar coştu`);
+      if (sum.assists) why.push(`${sum.assists} asist: takım arkadaşların minnettar`);
+      if (sum.keyPasses) why.push(`${sum.keyPasses} kilit pas`);
+      if (defMind >= 1) why.push(`${sum.tackles} top kapma: hoca savunma katkını beğendi`);
+      if (sum.motm) why.push('Maçın adamı');
+      if (sum.red) why.push('Kırmızı kart: takım ve taraftar kırgın');
+      else if (sum.yellow) why.push('Sarı kart');
+      // takipçi: maçtaki performans sosyal medyaya yansır
+      const folGain = Math.round(so0.followers * ((youth ? 0.002 : 0.004) + sum.goals * 0.012 + sum.assists * 0.005 + (sum.motm ? 0.018 : 0) + (r >= 8 ? 0.01 : r < 6 ? -0.006 : 0)));
+      so0.followers = Math.max(10, so0.followers + folGain);
       Loot.roll(comp === 'intl' ? null : r);
       Gift.roll(comp === 'intl' ? null : r);
       const fameGain = (sum.goals * 0.45 + sum.assists * 0.25 + (r >= 8 ? 0.5 : 0) + (sum.motm ? 0.5 : 0)) * fameMult;
@@ -578,6 +598,14 @@ const Game = {
     }
     Social.afterMatch(sum, teamTxt);
     if (comp !== 'intl') Captain.afterMatch(sum.played);
+    const so1 = Social.ensure(p);
+    if (!sum.played) why.push(p.injuryWeeks ? 'Sakatlık nedeniyle oynamadın' : 'Forma giymedin');
+    s.lastReport = {
+      w: `${s.season.year} H${s.season.round + 1}`, opp: oppName, team: teamTxt, gf: sum.gf, ga: sum.ga, res: sum.res, rating: sum.played ? sum.rating : null,
+      goals: sum.goals, assists: sum.assists, motm: sum.motm,
+      d: { coach: p.rel.coach - before.coach, team: p.rel.team - before.team, fans: p.rel.fans - before.fans, fol: so1.followers - before.fol, fame: p.fame - before.fame, morale: p.morale - before.morale, money: p.money - before.money },
+      why,
+    };
     if (comp === 'intl' && sum.played) Game.news(`🇹🇷 Milli formayla ${p.intl.caps}. maçına çıktın!`, 'good');
   },
 
@@ -887,6 +915,26 @@ const Game = {
 const UI = {
   // Uzun listeler sayfa içinde ayrı kaydırma yerine aç/kapa ile gösterilir
   more: {},
+  // Son maçın raporu: ilişkiler, takipçi ve ün değişimi
+  report() {
+    const s = Game.state, r = s.lastReport;
+    if (!r) return '';
+    const sign = (v, f = (x) => x.toFixed(1)) => (v > 0.05 ? '+' : v < -0.05 ? '−' : '±') + f(Math.abs(v));
+    const chip = (ic, l, v, fmt, big) => `<div class="rp-chip ${v > 0.05 ? 'up' : v < -0.05 ? 'down' : ''} ${big ? 'big' : ''}">${Icon(ic)}<span>${l}</span><b>${sign(v, fmt)}</b></div>`;
+    return `<section class="card report res-${r.res}">
+      <div class="card-h"><span>${Icon('whistle')} Maç Sonrası</span><small class="muted">${r.w}</small></div>
+      <div class="rp-top">
+        <div class="rp-score"><small>${U.esc(r.team)}</small><b>${r.gf} - ${r.ga}</b><small>${U.esc(r.opp)}</small></div>
+        ${r.rating != null ? `<div class="rp-rt ${r.rating >= 7.5 ? 'hi' : r.rating < 6 ? 'lo' : 'mid'}"><small>Reyting</small><b>${r.rating.toFixed(1)}</b>${r.motm ? '<i>Maçın Adamı</i>' : ''}</div>` : ''}
+      </div>
+      <div class="rp-chips">
+        ${chip('whistle', 'Hoca', r.d.coach)}${chip('team', 'Takım', r.d.team)}${chip('fans', 'Taraftar', r.d.fans)}
+        ${chip('phone', 'Takipçi', r.d.fol, (x) => Social.fmt(Math.round(x)), true)}${chip('star', 'Ün', r.d.fame)}${chip('smile', 'Moral', r.d.morale, (x) => Math.round(x))}
+      </div>
+      ${r.why.length ? `<div class="rp-why">${r.why.map((x) => `<span>${U.esc(x)}</span>`).join('')}</div>` : ''}
+    </section>`;
+  },
+
   // Gazete görünümlü haberler
   paper() {
     const s = Game.state;
@@ -1064,6 +1112,7 @@ const UI = {
       ['fans', 'phone', 'Sosyal Medya', 'Paylaşım yap, takipçi kazan', '−3 enerji'],
     ];
     return `
+      ${UI.report()}
       <div class="grid2">
         <section class="card next">
           <div class="card-h"><span>${Icon('whistle')} Maç Günü</span><span class="tag role-${roleK}">${role}</span></div>

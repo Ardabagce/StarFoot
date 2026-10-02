@@ -7,7 +7,17 @@ const NAT_COLORS = {
   NOR: ['#c8102e', '#1d2c5e'], EGY: ['#c8102e', '#ffffff'], POL: ['#ffffff', '#c8102e'], GEO: ['#ffffff', '#c8102e'], AZE: ['#0092bc', '#c8102e'],
 };
 const EURO_NATIONS = ['TUR', 'FRA', 'ESP', 'ENG', 'POR', 'GER', 'NED', 'ITA', 'BEL', 'CRO', 'NOR', 'POL', 'GEO', 'AZE'];
-const STAGE_NAMES = { 16: 'Son 16', 8: 'Çeyrek Final', 4: 'Yarı Final', 2: 'Final' };
+const STAGE_NAMES = { 32: 'Son 32', 16: 'Son 16', 8: 'Çeyrek Final', 4: 'Yarı Final', 2: 'Final' };
+// Ülke kupaları: Avrupa kupası haftalarıyla çakışmayan takvim
+const DOM_CUPS = [
+  { id: 'cupTR', country: 'TR', leagues: ['TR1', 'TR2'], name: 'Türkiye Kupası', size: 32, fame: 1.2 },
+  { id: 'cupENG', country: 'ENG', leagues: ['ENG'], name: 'İngiltere Kupası', size: 16, fame: 1.4 },
+  { id: 'cupESP', country: 'ESP', leagues: ['ESP'], name: 'Kral Kupası', size: 16, fame: 1.4 },
+  { id: 'cupGER', country: 'GER', leagues: ['GER'], name: 'Almanya Kupası', size: 16, fame: 1.3 },
+  { id: 'cupITA', country: 'ITA', leagues: ['ITA'], name: 'İtalya Kupası', size: 16, fame: 1.3 },
+  { id: 'cupFRA', country: 'FRA', leagues: ['FRA'], name: 'Fransa Kupası', size: 16, fame: 1.2 },
+];
+const countryOf = (lid) => (lid && lid.startsWith('TR') ? 'TR' : lid);
 
 const Cups = {
   // ---------- Avrupa kulüp kupaları ----------
@@ -30,9 +40,21 @@ const Cups = {
       });
       s.cups[d.id] = { id: d.id, name: d.name, alive: U.shuffle(teams), stage: 0, log: [], winner: null };
     });
+    // ülke kupaları: güçlüler garanti, kalan yerler kura ile
+    DOM_CUPS.forEach((d) => {
+      const pool = Object.values(w.clubs).filter((c) => d.leagues.includes(c.league)).sort((a, b) => b.rating - a.rating);
+      const size = Math.min(d.size, 1 << Math.floor(Math.log2(pool.length)));
+      const seeded = pool.slice(0, Math.round(size * 0.6));
+      const rest = U.shuffle(pool.slice(seeded.length)).slice(0, size - seeded.length);
+      const teams = seeded.concat(rest).map((c) => c.id);
+      const fr = size === 32 ? [0.13, 0.32, 0.53, 0.74, 0.95] : [0.32, 0.53, 0.74, 0.95];
+      s.cups[d.id] = { id: d.id, name: d.name, dom: true, country: d.country, fr, alive: U.shuffle(teams), stage: 0, log: [], winner: null };
+    });
   },
 
-  weeks(n) { return [0.2, 0.42, 0.63, 0.84].map((f) => Math.round(n * f)); },
+  weeks(n, cup) { return ((cup && cup.fr) || [0.2, 0.42, 0.63, 0.84]).map((f) => Math.round(n * f)); },
+
+  myCountry(s) { const c = s.world.clubs[s.clubId]; return c ? countryOf(c.league) : null; },
 
   myCup(s) {
     if (!s.cups || Game.isYouth()) return null;
@@ -65,12 +87,15 @@ const Cups = {
     const stageName = STAGE_NAMES[cup.alive.length];
     cup.alive = next;
     cup.stage++;
+    const near = !cup.dom || cup.country === Cups.myCountry(s);
     if (next.length === 1) {
       cup.winner = next[0];
-      s.cupHistory = s.cupHistory || [];
-      s.cupHistory.unshift({ year: s.season.year, comp: cup.name, winner: w.clubs[next[0]].name });
+      if (near) {
+        s.cupHistory = s.cupHistory || [];
+        s.cupHistory.unshift({ year: s.season.year, comp: cup.name, winner: w.clubs[next[0]].name });
+      }
       Game.news(`${cup.name} finali: ${lines[0]}. Kupa ${w.clubs[next[0]].name} müzesine gidiyor!`, 'world');
-    } else if (!mine) {
+    } else if (!mine && near) {
       Game.news(`${cup.name} ${stageName}: ${lines.slice(0, 3).join(' · ')}${lines.length > 3 ? ' ...' : ''}`, 'world');
     }
     return { stageName };
@@ -79,9 +104,10 @@ const Cups = {
   // Haftalık kontrol: bu hafta kupa turu var mı?
   week(s, r) {
     if (!s.cups) return;
-    const wk = Cups.weeks(Game.rounds());
     Object.values(s.cups).forEach((cup) => {
+      const wk = Cups.weeks(Game.rounds(), cup);
       if (cup.winner || wk[cup.stage] !== r) return;
+      if (s.pendingCup && cup.alive.includes(s.clubId)) { Cups.playStage(s, cup, null); return; }
       if (!Game.isYouth() && cup.alive.includes(s.clubId)) s.pendingCup = cup.id;
       else Cups.playStage(s, cup, null);
     });
@@ -97,8 +123,8 @@ const Cups = {
     const mk = (id) => { const c = s.world.clubs[id]; return { id, name: c.name, short: c.short, rating: c.rating, c1: c.c1, c2: c.c2, roster: c.roster }; };
     const ctx = {
       home: mk(h), away: mk(a), side: h === s.clubId ? 'home' : 'away',
-      compName: `${cup.name} · ${stageName}`, levelBase: Game.levelBase(false) + 0.04,
-      captain: Captain.is(), lg: cup.id,
+      compName: `${cup.name} · ${stageName}`, levelBase: Game.levelBase(false) + (cup.dom ? 0.01 : 0.04),
+      captain: Captain.is(), lg: cup.dom ? s.world.clubs[s.clubId].league : cup.id, sbTag: cup.dom ? cup.name.toLocaleUpperCase('tr') : null,
     };
     const p = s.player;
     ctx.role = p.injuryWeeks > 0 ? 'out' : Game.roleFor(Player.overall(p, true), s.world.clubs[s.clubId].rating, false);
@@ -116,8 +142,8 @@ const Cups = {
     else Game.news(`${cup.name} ${stageName}: ${weWon ? 'tur atladık!' : 'kupaya veda ettik.'}`, weWon ? 'good' : 'bad');
     if (cup.winner === s.clubId) {
       p.trophies.push(`${s.season.year}: 🏆 ${cup.name} Şampiyonu`);
-      Player.addFame(p, 6);
-      Social.post('trophy', `${cup.name} bizim! Avrupa'nın zirvesindeyiz.`, 3);
+      Player.addFame(p, cup.dom ? 3 : 6);
+      Social.post('trophy', cup.dom ? `${cup.name} bizim! Bu kupa taraftarımıza armağan.` : `${cup.name} bizim! Avrupa'nın zirvesindeyiz.`, cup.dom ? 2.2 : 3);
     }
     s.pendingCup = null;
     Game.advanceWeek(true);
@@ -245,8 +271,8 @@ const Cups = {
     const tourNext = [0, 1, 2, 3].map((k) => s.season.year + k).find((y) => Cups.tourType(y));
     const hist = (s.cupHistory || []).slice(0, 8);
     return `<section class="card">
-      <div class="card-h"><span>${Icon('career')} Avrupa Kupaları</span><small class="muted">Sıradaki milli turnuva: ${tourNext} ${Cups.tourType(tourNext) === 'wc' ? 'Dünya Kupası' : 'Avrupa Şampiyonası'}</small></div>
-      <div class="cups">${Object.values(s.cups).map(block).join('')}</div>
+      <div class="card-h"><span>${Icon('career')} Kupalar</span><small class="muted">Sıradaki milli turnuva: ${tourNext} ${Cups.tourType(tourNext) === 'wc' ? 'Dünya Kupası' : 'Avrupa Şampiyonası'}</small></div>
+      <div class="cups">${Object.values(s.cups).filter((c) => !c.dom || c.country === Cups.myCountry(s)).map(block).join('')}</div>
       ${hist.length ? `<div class="lbl">Geçmiş şampiyonlar</div><div class="cup-hist">${hist.map((h) => `<div><small>${h.year}</small><span>${U.esc(h.comp)}</span><b>${U.esc(h.winner)}</b></div>`).join('')}</div>` : ''}
     </section>`;
   },

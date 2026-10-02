@@ -52,7 +52,7 @@ const Match = {
     const weather = ctx.weather = ctx.weather || Weather.pick(ctx, state);
     Weather.apply(weather);
     Sprites.curBall = Balls.forMatch(ctx, weather, state.season.year);
-    const sb = SCOREBOARDS[ctx.lg] || SCOREBOARDS.youth;
+    const sb = Object.assign({}, SCOREBOARDS[ctx.lg] || SCOREBOARDS.youth, ctx.sbTag ? { tag: ctx.sbTag } : {});
     // Enerji maç boyunca canlı düşer; kondisyon anlık enerjiye göre hesaplanır
     let condAdj = 0;
     const calcCond = () => 1.25 - 0.35 * (M.energy / 100) - 0.15 * (p.morale / 100) + condAdj;
@@ -309,7 +309,7 @@ const Match = {
       $('mm-title').textContent = U.plain(MOMENT_TITLES[type]);
       $('mm-desc').textContent = MOMENT_DESC[type];
     };
-    const hideMoment = () => { $('mt-moment').classList.add('hidden'); $('mm-host').innerHTML = ''; MiniGame._abort = null; };
+    const hideMoment = () => { $('mt-moment').classList.add('hidden'); $('mm-host').innerHTML = ''; $('mm-host').style.overflowY = ''; MiniGame._abort = null; };
 
     const playCanvas = async (type) => {
       if (M.instant) return autoCanvas(type);
@@ -334,14 +334,17 @@ const Match = {
       return r.result;
     };
 
+    let lastAuto = false;
+    const autoUsed = () => lastAuto;
     const playMini = async (type, fn, k, bonus, extra) => {
-      if (M.instant) return autoTiming(k, bonus);
+      if (M.instant) { lastAuto = true; return autoTiming(k, bonus); }
       showMoment(type);
       let auto = false;
       $('mm-auto').onclick = () => { auto = true; if (MiniGame._abort) MiniGame._abort(); };
+      lastAuto = false;
       const r = await MiniGame[fn]($('mm-host'), Object.assign({ skill, kits, number: p.shirt, pace: st.pace, passing: st.passing, mates: mateNames, cond }, extra));
       hideMoment();
-      if (auto || r.result === 'auto') return autoTiming(k, bonus);
+      if (auto || r.result === 'auto') { lastAuto = true; return autoTiming(k, bonus); }
       return r.result;
     };
 
@@ -472,12 +475,11 @@ const Match = {
         }
       } else if (type === 'header') {
         M.statsUsed.add('heading');
-        const r = await playTiming('header', 'header', {
-          title: 'Kafayı vur!', kind: 'header', desc: 'Top havada! Doğru anda yüksel.',
-          button: 'KAFA!', okText: 'MÜKEMMEL ZAMANLAMA!', partialText: 'Topa iyi temas edemedin', failText: 'Topu kaçırdın',
-        }, 0);
+        const viaGame = !M.instant;
+        const r = await playMini('header', 'header', 'header', 0, { heading: st.heading, physical: st.physical });
         if (r === 'success') {
-          const pg = U.clamp(U.sigmoid((Player.skillFor(p, 'header') - opp.rating) / 12 - 0.2), 0.15, 0.72);
+          // mini oyunda başarı zaten gol demek; otomatikte olasılıkla
+          const pg = viaGame && !autoUsed() ? 1 : U.clamp(U.sigmoid((Player.skillFor(p, 'header') - opp.rating) / 12 - 0.2), 0.15, 0.72);
           if (U.chance(pg)) {
             M.goals++; rate(1.1);
             M.gt.header = (M.gt.header || 0) + 1;
@@ -568,7 +570,7 @@ const Match = {
       const summary = {
         gf, ga, res, hs: M.hs, as: M.as, played, energySave: 0, energyStart: M.e0, energyEnd: M.energy, minutes: Math.max(0, minutes), rating: played ? rating : null,
         goals: M.goals, assists: M.assists, yellow: M.yellow, red: M.red, motm,
-        ownScorers: M.ownScorers, oppScorers: M.oppScorers, statsUsed: [...M.statsUsed], goalTypes: M.gt,
+        ownScorers: M.ownScorers, oppScorers: M.oppScorers, statsUsed: [...M.statsUsed], goalTypes: M.gt, shots: M.shots, keyPasses: M.keyPasses, tackles: M.tackles,
       };
       const resTxt = { W: 'GALİBİYET', D: 'BERABERLİK', L: 'MAĞLUBİYET' }[res];
       $('mt-moment').classList.remove('hidden');
@@ -579,6 +581,26 @@ const Match = {
       $('mm-auto').style.display = 'none';
       $('mm-host').innerHTML = `
         <div class="ms">
+          ${motm ? `<div class="motm-card" style="--c1:${own.c1};--c2:${own.c2}">
+            <div class="motm-rays"></div>
+            <div class="motm-confetti">${Array.from({ length: 24 }, (_, i) => `<i style="--x:${(i * 37) % 100}%;--d:${(i % 7) * 0.35}s;--c:${['#ffcf3f', '#ffffff', own.c1, '#ff7a1a'][i % 4]}"></i>`).join('')}</div>
+            <div class="motm-kicker">${U.esc(ctx.compName)}</div>
+            <div class="motm-title">Maçın Oyuncusu</div>
+            <div class="motm-stage">
+              <svg class="motm-laurel" viewBox="0 0 120 120" aria-hidden="true">${Array.from({ length: 7 }, (_, i) => { const a = 200 + i * 18, r = 50, x = 60 + Math.cos(a * Math.PI / 180) * r, y = 62 + Math.sin(a * Math.PI / 180) * r; return `<ellipse cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" rx="9" ry="4" transform="rotate(${a + 60} ${x.toFixed(1)} ${y.toFixed(1)})" fill="#e3b341"/><ellipse cx="${(120 - x).toFixed(1)}" cy="${y.toFixed(1)}" rx="9" ry="4" transform="rotate(${-(a + 60)} ${(120 - x).toFixed(1)} ${y.toFixed(1)})" fill="#e3b341"/>`; }).join('')}</svg>
+              <canvas class="motm-av" width="200" height="200"></canvas>
+              <div class="motm-trophy">${Trophy.svg('motm')}</div>
+            </div>
+            <div class="motm-name">${U.esc(pname)}</div>
+            <div class="motm-club"><span>${U.esc(own.name)}</span></div>
+            <div class="motm-stats">
+              <div><b>${rating.toFixed(1)}</b><span>Reyting</span></div>
+              <div><b>${M.goals}</b><span>Gol</span></div>
+              <div><b>${M.assists}</b><span>Asist</span></div>
+              <div><b>${M.shots}</b><span>Şut</span></div>
+            </div>
+            <small>Ödül vitrinine eklendi · kariyerindeki ${p.totals.motm + 1}. ödül</small>
+          </div>` : ''}
           ${played ? `
           <div class="ms-rating ${rating >= 7.5 ? 'good' : rating < 6 ? 'bad' : ''}">${rating.toFixed(1)}</div>
           <div class="ms-grid">
@@ -590,18 +612,17 @@ const Match = {
             <div><span>Top Kapma</span><b>${M.tackles}</b></div>
             <div class="wide"><span>Enerji</span><b>${Math.round(M.e0)} → ${Math.round(M.energy)} <small class="neg">−${Math.round(M.e0 - M.energy)}</small></b></div>
           </div>
-          ${motm ? `<div class="motm-card">
-            <div class="motm-rays"></div>
-            <div class="motm-trophy">${Trophy.svg('motm')}</div>
-            <div class="motm-tag">Maçın Adamı</div>
-            <div class="motm-name">${U.esc(pname)}</div>
-            <div class="motm-sub">${M.goals} gol · ${M.assists} asist · reyting ${rating.toFixed(1)}</div>
-            <small>Ödül vitrinine eklendi · kariyerindeki ${p.totals.motm + 1}. ödül</small>
-          </div>` : ''}
+
           ` : '<div class="ms-none">Bu maçta forma giymedin.</div>'}
           <button class="btn btn-big" id="ms-done">Devam</button>
         </div>`;
       UI.strip($('mm-host'));
+      $('mm-host').style.overflowY = 'auto';
+      const av = document.querySelector('.motm-av');
+      if (av) {
+        const c = av.getContext('2d');
+        Sprites.figure(c, 100, 190, 170, { kit: kits.own, look: Sprites.look(7), facing: 'down', number: p.shirt, t: 0 });
+      }
       $('ms-done').onclick = () => {
         ov.classList.add('hidden');
         ov.innerHTML = '';
