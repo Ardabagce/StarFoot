@@ -350,6 +350,9 @@ const Game = {
         mult = Drill.mult(r.q);
         note = r.auto ? '' : ` · ${Drill.grade(r.q)}`;
       }
+    } catch (e) {
+      console.error(e);
+      Drill.close();
     } finally {
       Game._training = false;
     }
@@ -384,6 +387,7 @@ const Game = {
 
   levelBaseRaw(intl) {
     if (intl) return 0.55;
+    if (Game.inStreet() || (Game.isYouth() && !Game.state.youth)) return 0.06;
     if (Game.isYouth()) return { U10: 0.08, U12: 0.15, U14: 0.22, U16: 0.29, U19: 0.35 }[Game.state.youth.group] || 0.3;
     const lg = Game.club().league;
     return lg === 'TR2' ? 0.38 : lg === 'TR1' ? 0.45 : 0.52;

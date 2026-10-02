@@ -44,18 +44,17 @@ const Drill = {
     let auto = false;
     el.querySelector('#dr-skip').onclick = () => { auto = true; if (MiniGame._abort) MiniGame._abort(); };
 
-    const st = Player.effStats(p);
-    const skill = U.clamp(Game.levelBase(false) - 0.06, 0.03, 0.8);
-    const own = s.world.clubs[s.clubId] || { id: 'X', c1: '#1f6feb', c2: '#ffffff' };
-    const bibs = { id: 'BIB', c1: '#ff7a1a', c2: '#ff7a1a' };
-    const kits = Sprites.kits(own, bibs);
-    const mates = (Game.teamRoster(s.clubId) || []).filter((x) => x.pos !== 'GK').map((x) => x.n);
-    const cond = 1.25 - 0.35 * (p.energy / 100) - 0.15 * (p.morale / 100);
-    const narrow = window.innerWidth / window.innerHeight < 0.9;
-    const score = { success: 1, partial: 0.5, fail: 0.15 };
     let q = 0.5, played = false;
-
+    const score = { success: 1, partial: 0.5, fail: 0.15 };
     try {
+      const st = Player.effStats(p);
+      const skill = U.clamp(Game.levelBase(false) - 0.06, 0.03, 0.8);
+      const own = s.world.clubs[s.clubId] || { id: 'X', c1: '#1f6feb', c2: '#ffffff' };
+      const bibs = { id: 'BIB', c1: '#ff7a1a', c2: '#ff7a1a' };
+      const kits = Sprites.kits(own, bibs);
+      const mates = (Game.teamRoster(s.clubId) || []).filter((x) => x.pos !== 'GK').map((x) => x.n);
+      const cond = 1.25 - 0.35 * (p.energy / 100) - 0.15 * (p.morale / 100);
+      const narrow = window.innerWidth / window.innerHeight < 0.9;
       if (D.kind === 'shots') {
         let sum = 0;
         for (let i = 0; i < D.scenes.length && !auto; i++) {
@@ -84,12 +83,16 @@ const Drill = {
       console.error(e);
       auto = true;
     }
-    MiniGame._abort = null;
-    el.classList.add('hidden');
-    el.innerHTML = '';
+    Drill.close();
     // Atlanan çalışma ortalama sayılır
     if (auto && !played) q = 0.45;
     return { q: U.clamp(q, 0, 1), auto: auto && !played };
+  },
+
+  close() {
+    MiniGame._abort = null;
+    const el = document.getElementById('drill');
+    if (el) { el.classList.add('hidden'); el.innerHTML = ''; }
   },
 
   grade(q) {
