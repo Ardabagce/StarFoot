@@ -20,11 +20,11 @@ const MOMENT_TITLES = {
 };
 
 const MOMENT_DESC = {
-  open: 'Top ayağında! Kaleye kaydırarak şut çek ya da boştaki arkadaşına dokunarak pas ver. Rakipler üstüne geliyor, çabuk ol!',
-  close: 'Rakibi geçtin, kaleciyle karşı karşıyasın! Köşeye kaydır.',
-  deep: 'Geride topu aldın. Hücumdaki bir arkadaşına dokunarak pas ver ya da kaydırarak uzun top at.',
-  freekick: 'Kavisli kaydırarak barajın yanından dolandır ya da Yarım Yükseklik ile üstünden aşırt.',
-  penalty: 'Penaltı noktasındasın. Köşelerden birine kaydır, kaleciyi yanılt!',
+  open: 'Top ayağında! Parmağını geriye çekip bırakarak şut çek ya da boştaki arkadaşına dokunarak pas ver. Rakipler üstüne geliyor, çabuk ol!',
+  close: 'Rakibi geçtin, kaleciyle karşı karşıyasın! Geriye çek, köşeye nişan al ve bırak.',
+  deep: 'Geride topu aldın. Hücumdaki bir arkadaşına dokunarak pas ver ya da geriye çekip bırakarak uzun top at.',
+  freekick: 'Geriye kavisli çekerek barajın yanından dolandır ya da Yarım Yükseklik ile üstünden aşırt.',
+  penalty: 'Penaltı noktasındasın. Geriye çek, bir köşeye nişan al ve bırak!',
   dribble: 'Halka yeşil bölgeye girdiğinde dokun ve rakipleri tek tek geç.',
   tackle: 'Rakip forvet topla geliyor. Halka yeşile girince dokun; sarı bölge faul demek.',
   header: 'Korner atılıyor. Halka yeşile girince dokun ve topa kafayı vur!',

@@ -167,7 +167,7 @@ const MiniGame = {
       const angSigma = ((1 - st.technique / 100) * 2.8 + 0.3) * cond * (0.55 + 0.8 * s) * Math.PI / 180;
       const passSigma = ((1 - st.passing / 100) * 2.4 + 0.25) * cond * (0.6 + 0.6 * s) * Math.PI / 180;
       const assist = U.clamp(0.75 - s, 0, 0.6); // nişan yardımı (düşük seviyelerde güçlü)
-      const previewFrac = U.clamp(0.5 + st.technique / 160 + assist * 0.4, 0.5, 1);
+      const previewFrac = U.clamp(0.65 + st.technique / 200 + assist * 0.4, 0.65, 1);
       const POWER_M = 14;
 
       const ball = { x: scene.ball.x, y: scene.ball.y, z: 0, vx: 0, vy: 0, vz: 0, spin: 0, rot: 0 };
@@ -232,19 +232,26 @@ const MiniGame = {
         return [((e.clientX - r.left) / r.width) * W, ((e.clientY - r.top) / r.height) * H];
       };
 
-      // Kaydırma hareketinden vuruş parametreleri
-      const params = (world) => {
-        const a = world[0], b = world[world.length - 1];
+      // Sapan tarzı nişan: parmak geriye çekilir, top ters yöne gider.
+      // Çekme uzunluğu gücü, çekilen yolun kavisi falsoyu belirler.
+      const PULL_MAX = () => 0.42 * Math.min(W, H);
+      const params = (g) => {
+        const s0 = g.pts[0], s1 = g.pts[g.pts.length - 1];
+        const Lpx = Math.hypot(s1[0] - s0[0], s1[1] - s0[1]);
+        if (Lpx < 14 * dpr) return null;
+        const a = g.world[0];
+        const world = g.world.map((p) => ({ x: 2 * a.x - p.x, y: 2 * a.y - p.y }));
+        const b = world[world.length - 1];
         const cx = b.x - a.x, cy = b.y - a.y;
         const L = Math.hypot(cx, cy);
-        if (L < 0.8) return null;
+        if (L < 0.05) return null;
         let dmax = 0;
         for (const p of world) {
           const d = (cx * (p.y - a.y) - cy * (p.x - a.x)) / L;
           if (Math.abs(d) > Math.abs(dmax)) dmax = d;
         }
         const curve = U.clamp((dmax / L) * 3.2, -1, 1);
-        const power = U.clamp(L / POWER_M, 0.15, 1);
+        const power = U.clamp(Lpx / PULL_MAX(), 0.15, 1);
         const spin = curve * curveMax;
         const chord = Math.atan2(cy, cx);
         const dirY = Math.sin(chord);
@@ -281,7 +288,7 @@ const MiniGame = {
       };
 
       const refreshPreview = () => {
-        const pr = gesture && params(gesture.world);
+        const pr = gesture && params(gesture);
         preview = pr ? Object.assign(pr, { pts: simulate(pr) }) : null;
       };
 
@@ -320,7 +327,7 @@ const MiniGame = {
           if (m) passTo(m);
           return;
         }
-        const pr = params(g.world);
+        const pr = params(g);
         preview = null;
         if (pr) kick(assistAngle(pr.ang), pr.power, pr.spin, false);
       });
@@ -573,23 +580,32 @@ const MiniGame = {
         }
         if (phase === 'mate' && mateShot) pill(`PAS ULAŞTI · ${mateShot.m.name.split(' ').slice(-1)[0].toUpperCase()} VURUYOR...`);
         if (gesture && gesture.pts.length > 1) {
-          ctx.strokeStyle = 'rgba(255,255,255,0.6)'; ctx.lineWidth = 7 * fs; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
-          ctx.beginPath(); ctx.moveTo(gesture.pts[0][0], gesture.pts[0][1]);
+          // çekilen yol (soluk) ve başlangıç noktasından parmağa gerilen lastik
+          const g0 = gesture.pts[0], g1 = gesture.pts[gesture.pts.length - 1];
+          ctx.strokeStyle = 'rgba(255,255,255,0.28)'; ctx.lineWidth = 5 * fs; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+          ctx.beginPath(); ctx.moveTo(g0[0], g0[1]);
           gesture.pts.forEach((p) => ctx.lineTo(p[0], p[1]));
-          ctx.stroke(); ctx.lineCap = 'butt';
+          ctx.stroke();
+          ctx.strokeStyle = 'rgba(255,255,255,0.75)'; ctx.lineWidth = 3 * fs; ctx.setLineDash([6 * fs, 6 * fs]);
+          ctx.beginPath(); ctx.moveTo(g0[0], g0[1]); ctx.lineTo(g1[0], g1[1]); ctx.stroke(); ctx.setLineDash([]);
+          ctx.fillStyle = 'rgba(255,255,255,0.9)';
+          ctx.beginPath(); ctx.arc(g0[0], g0[1], 7 * fs, 0, Math.PI * 2); ctx.fill();
+          ctx.strokeStyle = 'rgba(255,255,255,0.9)'; ctx.lineWidth = 3 * fs;
+          ctx.beginPath(); ctx.arc(g1[0], g1[1], 16 * fs, 0, Math.PI * 2); ctx.stroke();
+          ctx.lineCap = 'butt';
         }
         if (showHint && phase === 'aim' && !gesture && !preview) {
           const k = (t % 1.6) / 1.6;
           const bx = tx(ball.x), by = ty(ball.y);
           const gx = tx(U.clamp(ball.x * 0.3, -2.5, 2.5)), gy = ty(1);
-          const hx = bx + (gx - bx) * k * 0.55, hy = by + (gy - by) * k * 0.55;
+          const hx = bx - (gx - bx) * k * 0.35, hy = by - (gy - by) * k * 0.35;
           ctx.globalAlpha = 1 - k;
           ctx.strokeStyle = 'rgba(255,255,255,0.6)'; ctx.lineWidth = 5 * fs;
           ctx.beginPath(); ctx.moveTo(bx, by); ctx.lineTo(hx, hy); ctx.stroke();
           ctx.fillStyle = '#fff';
           ctx.beginPath(); ctx.arc(hx, hy, 14 * fs, 0, Math.PI * 2); ctx.fill();
           ctx.globalAlpha = 1;
-          pill(scene.mates.length ? 'KALEYE KAYDIR  ·  PAS İÇİN ARKADAŞINA DOKUN' : 'KALEYE DOĞRU KAYDIR');
+          pill(scene.mates.length ? 'GERİ ÇEK VE BIRAK: ŞUT  ·  DOKUN: PAS' : 'GERİ ÇEK VE BIRAK: ŞUT');
         }
       }
 

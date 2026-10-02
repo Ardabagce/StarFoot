@@ -1,8 +1,8 @@
 // Antrenman mini oyunları: odak statına göre kısa bir çalışma oynanır, başarı gelişimi etkiler
 
 const DRILLS = {
-  shooting: { t: 'Bitiricilik Çalışması', d: 'Ceza sahasında 3 şut. Kaydırarak köşelere vur.', kind: 'shots', scenes: ['close', 'close', 'penalty'] },
-  technique: { t: 'Frikik Çalışması', d: 'Barajın üstünden 3 frikik. Yolu kavisli çizersen top falso alır.', kind: 'shots', scenes: ['freekick', 'freekick', 'freekick'] },
+  shooting: { t: 'Bitiricilik Çalışması', d: 'Ceza sahasında 3 şut. Geriye çekip bırak, köşelere vur.', kind: 'shots', scenes: ['close', 'close', 'penalty'] },
+  technique: { t: 'Frikik Çalışması', d: 'Barajın üstünden 3 frikik. Geriye kavisli çekersen top falso alır.', kind: 'shots', scenes: ['freekick', 'freekick', 'freekick'] },
   passing: { t: 'Pas Çalışması', d: 'Verkaç istasyonu: parlayan arkadaşına süre dolmadan pas ver.', kind: 'mini', fn: 'onetwo', k: 'pass' },
   dribbling: { t: 'Slalom Çalışması', d: 'Hunilerin ve rakiplerin arasından geç. Halka yeşildeyken dokun.', kind: 'timing', tk: 'dribble', k: 'dribble', cfg: { title: 'Çalım at!', button: 'ÇALIM!', okText: 'MÜKEMMEL!', partialText: 'Fena değil', failText: 'Huniye takıldın', rounds: 3 } },
   heading: { t: 'Kafa Vuruşu Çalışması', d: 'Hoca ortalar yapıyor. Doğru anda yüksel.', kind: 'timing', tk: 'header', k: 'header', cfg: { title: 'Kafayı vur!', button: 'KAFA!', okText: 'TAM ZAMANINDA!', partialText: 'Biraz erken', failText: 'Kaçtı', rounds: 2 } },

@@ -182,7 +182,7 @@ const Game = {
         : `${player.age} yaşındasın ve <b>${U.esc(Game.club().name)}</b> altyapısında ilk gününü yaşıyorsun.`}</p>
       <ul class="tips">
         <li>Her hafta <b>3 aksiyon hakkın</b> var: antrenman, dinlenme, takım arkadaşlarıyla vakit geçirme...</li>
-        <li>Maçlarda kritik anlar gelince oyun durur: topu hedefe doğru <b>kaydırarak</b> şut çeker, arkadaşına <b>dokunarak</b> pas verirsin.</li>
+        <li>Maçlarda kritik anlar gelince oyun durur: parmağını topun tersine <b>geriye çekip bırakarak</b> şut çeker (sapan gibi), arkadaşına <b>dokunarak</b> pas verirsin.</li>
         <li>Statların ne kadar yüksekse vuruşların o kadar sert ve isabetli olur.</li>
         <li>Hocayla ilişkin iyi olursa ilk 11'de oynarsın. Enerjin düşükse performansın düşer.</li>
         <li>18 yaşına geldiğinde profesyonel sözleşme imzalayıp A takıma çıkarsın.</li>
@@ -838,6 +838,11 @@ const Game = {
 
 // ---------- Ekranlar ----------
 const UI = {
+  // Uzun listeler sayfa içinde ayrı kaydırma yerine aç/kapa ile gösterilir
+  more: {},
+  moreBtn(k, label) {
+    return `<button type="button" class="btn btn-ghost more-btn" data-more="${k}">${UI.more[k] ? 'Daha az göster' : label}</button>`;
+  },
   // Metin düğümlerindeki emojileri temizler
   strip(root) {
     const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
@@ -1013,7 +1018,8 @@ const UI = {
       ${Social.render(false)}
       <section class="card">
         <div class="card-h"><span>${Icon('news')} Haberler</span></div>
-        <div class="news">${s.news.slice(0, 16).map((n) => `<div class="nw ${n.type}"><small>${n.type === 'world' ? 'DÜNYA' : n.w}</small><span>${n.t}</span></div>`).join('')}</div>
+        <div class="news">${s.news.slice(0, UI.more.news ? 40 : 8).map((n) => `<div class="nw ${n.type}"><small>${n.type === 'world' ? 'DÜNYA' : n.w}</small><span>${n.t}</span></div>`).join('')}</div>
+        ${s.news.length > 8 ? UI.moreBtn('news', 'Tüm haberler') : ''}
       </section>`;
   },
 
@@ -1047,9 +1053,11 @@ const UI = {
     const zone = (i) => (i === 0 ? 'z-champ' : promote && i < 3 ? 'z-up' : relegate && i >= tbl.length - 3 ? 'z-down' : '');
     const nextFx = Game.nextFixture();
     const gap = leader.id === s.clubId ? (tbl[1] ? me.pts - tbl[1].pts : 0) : leader.pts - me.pts;
+    const fxFrom = Math.max(0, Math.min(s.season.round - 3, Game.rounds() - 8));
     const fixtures = lg.fixtures.map((round, i) => {
       const f = round.find(([h, a]) => h === s.clubId || a === s.clubId);
       if (!f) return '';
+      if (!UI.more.fix && (i < fxFrom || i >= fxFrom + 8)) return '';
       const r = myRes.find((x) => x.round === i);
       const k = r ? res(r, s.clubId) : null;
       return `<div class="mc ${i === s.season.round ? 'cur' : ''} ${r ? 'played' : ''}">
@@ -1090,7 +1098,7 @@ const UI = {
         </table></div>
       </section>
       <div class="grid2">
-        <section class="card"><div class="card-h"><span>${Icon('whistle')} Fikstürün</span><small class="muted">${myRes.length}/${Game.rounds()} oynandı</small></div><div class="fixtures">${fixtures}</div></section>
+        <section class="card"><div class="card-h"><span>${Icon('whistle')} Fikstürün</span><small class="muted">${myRes.length}/${Game.rounds()} oynandı</small></div><div class="fixtures">${fixtures}</div>${UI.moreBtn('fix', 'Tüm fikstür')}</section>
         <section class="card"><div class="card-h"><span>${Icon('ball')} Gol Krallığı</span></div>
           ${scorers.length ? `<div class="scorers">${scorers.map((x, i) => `<div class="scr ${x.name === meName ? 'me' : ''}">
             <span class="rk">${i + 1}</span>${UI.shirt(clubOf(x.club))}
@@ -1299,6 +1307,7 @@ const UI = {
   bind(root) {
     U.$$('[data-focus]', root).forEach((b) => (b.onclick = () => { Game.state.trainFocus = b.dataset.focus; Game.render(); }));
     U.$$('[data-act]', root).forEach((b) => (b.onclick = () => Game.act(b.dataset.act)));
+    U.$$('[data-more]', root).forEach((b) => (b.onclick = () => { UI.more[b.dataset.more] = !UI.more[b.dataset.more]; Game.render(); }));
     const dtg = root.querySelector('#drill-tg');
     if (dtg) dtg.onchange = () => { Game.state.drills = dtg.checked; Game.save(); };
     U.$$('[data-go=match]', root).forEach((b) => (b.onclick = () => {

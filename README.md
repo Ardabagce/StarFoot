@@ -34,7 +34,7 @@ Oyunu bir web sunucusundan (ör. GitHub Pages) açıp tarayıcı menüsünden **
 - **9 stat:** Hız, Şut, Pas, Top Sürme, Teknik, Kafa, Savunma, Güç, Dayanıklılık. Mevkine göre (Forvet / Orta Saha / Defans) genel gücün hesaplanır.
 - **Haftalık aksiyonlar (haftada 3 hak):** antrenman, yoğun antrenman, özel hoca, dinlenme, takım arkadaşlarıyla vakit geçirme, hocayla konuşma, taraftarlarla etkileşim.
 - **Maçlar:** Maç dakika dakika simüle edilir. Kritik anlarda oyun durur ve sen oynarsın:
-  - **Şut:** Parmağını (ya da fareyi) topu göndermek istediğin yere doğru **kaydır**. Kaydırma ne kadar uzunsa vuruş o kadar sert olur. Yolu **kavisli** çizersen top falso alır ve kavisle hedefe döner (Score! Hero / Soccer Hero tarzı). Kaydırırken topun izleyeceği yol önizlenir; Teknik statın yükseldikçe önizleme uzar.
+  - **Şut (sapan gibi):** Parmağını (ya da fareyi) ekranda bir yere koy ve topun gitmesini istediğin yönün **tersine geri çek**, sonra bırak. Ne kadar geri çekersen vuruş o kadar sert olur. Geri çekerken yolu **kavisli** çizersen top falso alır. Parmağın topun arkasında kaldığı için topun izleyeceği yol ve hedef halkası net görünür; Teknik statın yükseldikçe önizleme uzar.
   - **Pas:** Takım arkadaşına **dokun**; top isabetli bir pasla ona gider (isabet Pas statına bağlı).
   - **Vuruş tipi:** Yerden, Yarım Yükseklik veya Aşırtma (klavyede 1 / 2 / 3).
   - Gole yaklaşan şutlarda ağır çekim, gollerde konfeti efekti var.
@@ -60,6 +60,7 @@ Oyunu bir web sunucusundan (ör. GitHub Pages) açıp tarayıcı menüsünden **
 - **Sosyal medya:** Ününe göre büyüyen takipçi sayısı, gol, kupa, transfer ve eşya paylaşımları, beğeniler ve taraftar yorumları.
 - **Dünyadan haberler:** Gerçek maç sonuçlarından ve ara ara mizahi dille yazılmış, kendini tekrar etmeyen haberler.
 - **Lig sekmesi:** Sıra, puan, lidere fark ve son 5 maç formu; formalı puan tablosu, şampiyonluk/küme bölgeleri, maç kartlı fikstür ve gol krallığı.
+- **Tek kaydırma:** Sayfalarda iç içe kaydırma alanı yok. Uzun haber ve fikstür listeleri "Tüm haberler" / "Tüm fikstür" düğmesiyle açılır, tablolar telefon ekranına sığar.
 - **Durum şeridi:** Enerji, moral ve sağlık her sekmede üstte görünür; telefonda oyuncu kartı ayrı bir sekmededir.
 
 ## Dosya yapısı
