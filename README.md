@@ -25,7 +25,8 @@ Oyunu bir web sunucusundan (ör. GitHub Pages) açıp tarayıcı menüsünden **
 
 - **5 kariyer slotu:** Aynı anda 5 farklı kariyer; istediğini silebilirsin.
 - **Başlangıç yılı ve yaşı:** 1980'den 2026'ya kadar istediğin yılda, 8-18 yaş arasında başlarsın. 8-12 yaşında başlarsan ilk maçın bir **sokak maçı** olur; performansına göre scout seni bir altyapıya götürür.
-- **Dönem yıldızları:** Seçtiğin yılın kurgusal yıldızları sahadadır (1980'ler: Maradoni, Platinni, van Bastın... 2000'ler: Ronaldinyo, Anri... bugün: Mbappo, Halland, Yamel...). Oyuncular yaşlanır, emekli olur, gençler sırası gelince profesyonel olur; liste bittikten sonra yeni nesil yıldızlar üretilir. Emeklilikler, yeni yıldızlar ve büyük transferler haberlerde ve sosyal medya gündeminde çıkar.
+- **Dönem yıldızları:** Milli takımlar ve Türkiye ligi de döneme göre değişir (ör. 1980'lerde Tanju Çolakoğulları, 1990'larda Hakan Şükürlü). Hırvatistan gibi ülkeler kuruldukları yıldan sonra çıkar.
+- **Dönem yıldızları (dünya):** Seçtiğin yılın kurgusal yıldızları sahadadır (1980'ler: Maradoni, Platinni, van Bastın... 2000'ler: Ronaldinyo, Anri... bugün: Mbappo, Halland, Yamel...). Oyuncular yaşlanır, emekli olur, gençler sırası gelince profesyonel olur; liste bittikten sonra yeni nesil yıldızlar üretilir. Emeklilikler, yeni yıldızlar ve büyük transferler haberlerde ve sosyal medya gündeminde çıkar.
 - **Kariyer:** U10, U12, U14, U16 ve U19 takımlarında oynarsın. 17-18 yaşında profesyonel sözleşme imzalar, 33 yaşından sonra istediğin zaman emekli olabilirsin.
 - **20 takımlı ligler:** Tüm ligler 20 takım, 38 hafta. Türkiye'de 3 takım düşer, 3 takım çıkar.
 - **Avrupa kupaları:** Her sezon Avrupa Şampiyonlar Kupası ve Avrupa Federasyon Kupası (16 takım, tek maç eleme). Kulübün katılırsa maçlarını sen oynarsın.
@@ -50,7 +51,9 @@ Oyunu bir web sunucusundan (ör. GitHub Pages) açıp tarayıcı menüsünden **
 - **Milli takım:** Yeterince iyiysen milli maçlara çağrılırsın.
 - **Mağaza:** Yaşa göre değişen reyonlar (çocukken futbolcu kartı albümü, idolünün forması, bahçe kalesi; gençken spor salonu, scooter; profesyonelken lüks saat, araba, villa, yat). Enerji içeceği, masaj, fizyoterapi, yaz kampı ve yıldız futbolcu kliniği gibi tek kullanımlık ürünler.
 - **Kupa vitrini ve madalyalar:** Kazandığın kupalar raflarda sergilenir; ilk gol, hat-trick, 100 maç, milli forma, ilk milyon gibi 17 madalya.
-- **Sürprizler:** İyi maçlardan sonra bronz/gümüş/altın sürpriz paketler, cüzdan bulma, idol kampı, viral gol, yardım maçı gibi yeni olaylar.
+- **Gerçekçi sürprizler:** Altyapıdayken A takımın yıldızları (dönemin gerçek oyuncularından esinlenen isimler) antrenmanını izlemeye gelir ve sana mevkisine göre bir şey öğretir; kulübün emekli efsaneleri tesisleri ziyaret eder, A takım hocası seni profesyonellerle antrenmana çağırır. Profesyonelken kaptanla ekstra çalışma, tecrübeli oyuncudan tavsiye, fizyoterapist programı gibi olaylar olur. Çok iyi maçlardan sonra başkandan prim ya da A takım antrenmanı daveti gelir.
+- **Antrenman mini oyunları:** Antrenman, yoğun antrenman ve özel hocada odak statına göre bir çalışma oynanır: Şut → bitiricilik (3 şut), Teknik → frikik, Pas → verkaç istasyonu, Top Sürme → slalom, Kafa → orta karşılama, Savunma/Güç → ikili mücadele, Hız/Dayanıklılık → sürat koşusu. İyi oynarsan gelişim ×1,5'e kadar çıkar; atlayabilir ya da tamamen kapatabilirsin.
+- **Zorluk:** Kolay, Orta ve Zor. Kariyer sekmesinden sonradan da değiştirilebilir.
 - **Devre arası:** Hocayla taktik konuşmak, takımı ateşlemek, toparlanmak ya da rakip kaleciyi incelemek; yedekteysen ısınıp hocaya görünmek.
 - **Yeni mini oyunlar:** Kontra atak sprinti (hızlı hızlı dokun) ve verkaç (parlayan arkadaşına süre dolmadan dokun).
 - **Asist animasyonu:** Pas arkadaşına ulaşınca arkadaşın topu kontrol edip şut çeker; gol olursa ASİST yazar.
@@ -71,6 +74,8 @@ js/league.js     Kadrolar, fikstür, lig simülasyonu, altyapı ligleri
 js/legends.js    Dönem yıldızları, yaşlanma, emeklilik, yeni nesil
 js/cups.js       Avrupa kupaları, Dünya Kupası, Avrupa Şampiyonası
 js/minigame.js   Şut/pas fizik sahnesi ve zamanlama barı
+js/drills.js     Antrenman mini oyunları
+js/extras.js     Madalyalar, mağaza, olaylar, mentorlar, sosyal medya, dünya haberleri
 js/match.js      Maç motoru
 js/game.js       Kariyer akışı, ekranlar, olaylar, sezon sonu
 ```

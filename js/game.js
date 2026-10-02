@@ -1,6 +1,12 @@
 // Oyun durumu, kariyer akışı ve arayüz
 
 const SAVE_KEY = 'starfoot_save_v1';
+// Zorluk seviyeleri: mini oyun zorluğu, antrenman kazancı, hocanın tercihleri
+const DIFFS = {
+  easy: { l: 'Kolay', d: 'Kaleciler ve savunma daha zayıf, nişan yardımı güçlü, antrenmanda daha hızlı gelişirsin.', lvl: -0.12, train: 1.2, coach: 3 },
+  normal: { l: 'Orta', d: 'Dengeli bir kariyer deneyimi.', lvl: 0, train: 1, coach: 0 },
+  hard: { l: 'Zor', d: 'Kaleciler refleksli, savunma sert, gelişim yavaş. Gerçek bir meydan okuma.', lvl: 0.1, train: 0.85, coach: -3 },
+};
 
 const Game = {
   state: null,
@@ -49,15 +55,29 @@ const Game = {
   },
   teamRating(id) { return Game.isYouth() && !Game.inStreet() ? Game.state.youth.strength[id] : Game.state.world.clubs[id].rating; },
   teamRoster(id) { return Game.isYouth() && !Game.inStreet() ? Game.state.youth.rosters[id] : Game.state.world.clubs[id].roster; },
-  nation() { return NATIONS.find((n) => n.code === Game.p.nation) || NATIONS[0]; },
+  // Döneme göre milli takım (güç ve varlık yıla bağlı)
+  nat(code) {
+    const n = NATIONS.find((x) => x.code === code);
+    if (!n) return null;
+    const year = Game.state ? Game.state.season.year : 2026;
+    const era = NAT_ERA[code];
+    const dec = Math.min(2020, Math.floor(year / 10) * 10);
+    return Object.assign({}, n, { rating: era && era[dec] != null ? era[dec] : n.rating });
+  },
+  nations() {
+    const year = Game.state.season.year;
+    return NATIONS.filter((n) => !NAT_FROM[n.code] || year >= NAT_FROM[n.code]).map((n) => Game.nat(n.code));
+  },
+  nation() { return Game.nat(Game.p.nation) || Game.nat('TUR'); },
   // O dönemin milli yıldızları
   natStars(code) {
     const act = Legends.active(Game.state.world, code).sort((a, b) => b.r - a.r).slice(0, 5).map((x) => x.n);
     if (act.length >= 2) return act;
     const n = NATIONS.find((x) => x.code === code);
-    return act.concat(Game.state.season.year >= 2020 && n ? n.stars : []).slice(0, 5);
+    return act.concat(Game.state.season.year >= 2022 && n ? n.stars.filter((x) => !act.includes(x)) : []).slice(0, 5);
   },
-  facility() { return 0.9 + 0.35 * U.clamp((Game.club().rating - 48) / 40, 0, 1); },
+  facility() { return (0.9 + 0.35 * U.clamp((Game.club().rating - 48) / 40, 0, 1)) * Game.diff().train; },
+  diff() { return DIFFS[(Game.state && Game.state.difficulty) || 'normal']; },
   weeklyIncome() {
     const c = Game.state.contract;
     return c.type === 'youth' ? 100 + (Game.p.age - 8) * 40 : c.wage;
@@ -136,6 +156,7 @@ const Game = {
       youth: street ? null : Youth.create(world, clubId, player.age),
       street: street ? { done: false } : null,
       startYear: year,
+      difficulty: opts.difficulty || 'normal',
       ap: 3,
       week: { coachTalk: false },
       trainFocus: POSITIONS[opts.position] ? Object.keys(POSITIONS[opts.position].w)[0] : 'shooting',
@@ -176,7 +197,7 @@ const Game = {
     const away = { id: 'ARK', name: 'Arka Sokak', short: 'ARK', rating: exp + U.randi(-1, 2), c1: '#2a6fdb', c2: '#ffffff', roster: Youth.roster({ pool: 'TR' }, exp, p.age) };
     const ctx = {
       home: { id: 'STREET', name: home.name, short: 'SOK', rating: home.rating, c1: home.c1, c2: home.c2, roster: home.roster },
-      away, side: 'home', role: 'starter', compName: 'Mahalleler Arası Sokak Maçı · Scout izliyor', levelBase: 0.03,
+      away, side: 'home', role: 'starter', compName: 'Mahalleler Arası Sokak Maçı · Scout izliyor', levelBase: Math.max(0, 0.03 + Game.diff().lvl),
     };
     const sum = await Match.run(ctx, s);
     const r = sum.rating || 6;
@@ -257,18 +278,15 @@ const Game = {
         if (injured) return Game.toast('Sakatken antrenman yapamazsın.', 'bad');
         if (p.energy < 12) return Game.toast('Antrenman için enerjin yetersiz.', 'bad');
         Player.addEnergy(p, -12);
-        const g = Player.train(p, focus, 1, Game.facility());
-        Game.toast(`🏃 Antrenman: ${fmt(g)}`, 'good');
-        break;
+        return Game.trainSession(1, 'Antrenman');
       }
       case 'intense': {
         if (injured) return Game.toast('Sakatken antrenman yapamazsın.', 'bad');
         if (p.energy < 24) return Game.toast('Yoğun antrenman için enerjin yetersiz.', 'bad');
         Player.addEnergy(p, -24);
-        const g = Player.train(p, focus, 1.8, Game.facility());
-        Game.toast(`🔥 Yoğun antrenman: ${fmt(g)}`, 'good');
-        if (U.chance(Player.injuryChance(p, 0.035))) Game.injure(U.randi(1, 3), 'yoğun antrenmanda');
-        break;
+        return Game.trainSession(1.8, 'Yoğun antrenman', () => {
+          if (U.chance(Player.injuryChance(p, 0.035))) Game.injure(U.randi(1, 3), 'yoğun antrenmanda');
+        });
       }
       case 'coach': {
         if (injured) return Game.toast('Sakatken antrenman yapamazsın.', 'bad');
@@ -277,9 +295,7 @@ const Game = {
         if (p.energy < 14) return Game.toast('Enerjin yetersiz.', 'bad');
         p.money -= cost;
         Player.addEnergy(p, -14);
-        const g = Player.train(p, focus, 2.3, Game.facility());
-        Game.toast(`👨‍🏫 Özel hoca: ${fmt(g)}`, 'good');
-        break;
+        return Game.trainSession(2.3, 'Özel hoca');
       }
       case 'rest': {
         Player.addEnergy(p, 20);
@@ -320,6 +336,30 @@ const Game = {
     Game.render();
   },
 
+  // Antrenman: açıksa odak statına uygun mini oyun oynanır, başarı gelişimi belirler
+  async trainSession(intensity, label, after) {
+    const s = Game.state, p = s.player, focus = s.trainFocus;
+    if (Game._training) return;
+    Game._training = true;
+    s.ap--;
+    Game.save();
+    let mult = 1, note = '';
+    try {
+      if (s.drills !== false) {
+        const r = await Drill.run(focus);
+        mult = Drill.mult(r.q);
+        note = r.auto ? '' : ` · ${Drill.grade(r.q)}`;
+      }
+    } finally {
+      Game._training = false;
+    }
+    const g = Player.train(p, focus, intensity * mult, Game.facility());
+    Game.toast(`${label}: +${g.toFixed(2)} ${STATS.find((x) => x.k === focus).l}${note}`, 'good');
+    if (after) after();
+    Game.save();
+    Game.render();
+  },
+
   estGain(intensity) {
     const p = Game.p;
     const val = p.stats[Game.state.trainFocus];
@@ -339,6 +379,10 @@ const Game = {
   // ---------- Maç ----------
   // Mini oyun zorluğu: yaş grubu ve lig seviyesiyle artar
   levelBase(intl) {
+    return Math.max(0.02, Game.levelBaseRaw(intl) + Game.diff().lvl);
+  },
+
+  levelBaseRaw(intl) {
     if (intl) return 0.55;
     if (Game.isYouth()) return { U10: 0.08, U12: 0.15, U14: 0.22, U16: 0.29, U19: 0.35 }[Game.state.youth.group] || 0.3;
     const lg = Game.club().league;
@@ -347,7 +391,7 @@ const Game = {
 
   roleFor(ovr, teamR, youth, preview = false) {
     const p = Game.p;
-    const margin = ovr - teamR + (p.rel.coach - 50) / 8 + (p.energy < 35 ? -3 : 0);
+    const margin = ovr - teamR + (p.rel.coach - 50) / 8 + (p.energy < 35 ? -3 : 0) + Game.diff().coach;
     if (youth) return margin >= -6 ? 'starter' : 'bench';
     if (margin >= -3) return 'starter';
     if (margin >= -12) return 'bench';
@@ -402,7 +446,7 @@ const Game = {
     const s = Game.state, p = s.player;
     const nat = Game.nation();
     const opp = s.pendingIntl;
-    const oppNat = NATIONS.find((n) => n.code === opp);
+    const oppNat = Game.nat(opp);
     const mkRoster = (n) => {
       const r = Game.natStars(n.code).map((name, i) => ({ n: name, pos: i < 2 ? 'FW' : 'MF', r: n.rating + 3 }));
       while (r.length < 14) r.push({ n: World.genName(n.code === 'TUR' ? 'TR' : 'XX'), pos: U.pick(['DF', 'MF', 'DF', 'FW']), r: n.rating - 3 });
@@ -531,7 +575,7 @@ const Game = {
         return Game.endSeason();
       }
     }
-    if (!s.pendingEvent && U.chance(0.4)) Events.roll();
+    if (!s.pendingEvent && U.chance(0.2)) Events.roll();
     Social.week();
     if (!intl && U.chance(0.7)) WorldNews.roll();
     Ach.check();
@@ -546,7 +590,7 @@ const Game = {
     const ovr = Player.overall(p, true);
     const need = nat.rating - 7 - (p.fame > 40 ? 2 : 0);
     if (p.age >= 17 && ovr >= need && p.injuryWeeks === 0) {
-      const opp = U.pick(NATIONS.filter((n) => n.code !== nat.code));
+      const opp = U.pick(Game.nations().filter((n) => n.code !== nat.code));
       s.pendingIntl = opp.code;
       Game.news(`${nat.flag} MİLLİ TAKIMA ÇAĞRILDIN! ${opp.flag} ${opp.name} maçı seni bekliyor.`, 'good');
       Game.toast(`${nat.flag} Milli takıma çağrıldın!`, 'good');
@@ -909,7 +953,7 @@ const UI = {
     }
     const crest = (name, club, sub) => `<div class="nm-team">${club ? UI.shirt(club, 'big') : `<span class="nat">${sub}</span>`}<b>${U.esc(name)}</b></div>`;
     if (s.pendingIntl) {
-      const n = Game.nation(), o = NATIONS.find((x) => x.code === s.pendingIntl);
+      const n = Game.nation(), o = Game.nat(s.pendingIntl);
       next = `<div class="nm-vs">${crest(n.name, null, n.code)}<span class="vs">VS</span>${crest(o.name, null, o.code)}</div>
         <div class="nm-meta">MİLLİ MAÇ · Rakip gücü ${o.rating} · Yıldızlar: ${U.esc(Game.natStars(o.code).slice(0, 2).join(', ') || '—')}</div>`;
     } else if (fx) {
@@ -956,6 +1000,7 @@ const UI = {
             </button>`;
           }).join('')}</div>
           <div class="focus-info">${Icon('train')}<span><b>${focusL}</b> çalışırsan tahmini gelişim: antrenman <b>+${Game.estGain(1).toFixed(2)}</b> · yoğun <b>+${Game.estGain(1.8).toFixed(2)}</b> · özel hoca <b>+${Game.estGain(2.3).toFixed(2)}</b></span></div>
+          <label class="drill-tg"><input type="checkbox" id="drill-tg" ${s.drills !== false ? 'checked' : ''}><span><b>Antrenman mini oyunları</b><small>Odak statına göre çalışma oynanır. İyi oynarsan gelişim ×1,5'e kadar çıkar.</small></span></label>
           <div class="acts">${acts.map(([k, ic, l, d, cost]) => `<button class="act" data-act="${k}" ${s.ap <= 0 ? 'disabled' : ''}>${Icon(ic)}<span><b>${l}</b><small>${d}</small></span>${cost ? `<em class="cost ${cost.startsWith('−') ? 'neg' : ''}">${cost}</em>` : ''}</button>`).join('')}</div>
         </section>
       </div>
@@ -1216,6 +1261,7 @@ const UI = {
       <div class="card">
         <div class="card-h"><span>${Icon('save')} Oyun</span></div>
         <div class="row-btns">
+          <div class="diff-row"><span class="muted">Zorluk</span><div class="seg">${Object.entries(DIFFS).map(([k, v]) => `<button data-setdiff="${k}" class="${k === (Game.state.difficulty || 'normal') ? 'on' : ''}">${v.l}</button>`).join('')}</div></div>
           <button class="btn btn-ghost" data-sys="save">${Icon('save')} Kaydet</button>
           <button class="btn btn-ghost" data-sys="menu">${Icon('exit')} Ana Menü</button>
           ${p.age >= 33 ? `<button class="btn btn-ghost" data-sys="retire">${Icon('wave')} Emekli Ol</button>` : ''}
@@ -1245,7 +1291,7 @@ const UI = {
       <div class="card">
         <div class="card-h"><span>${Icon('shield')} Milli Takımlar</span></div>
         <table class="tbl"><tr><th class="l">Ülke</th><th>Güç</th><th class="l">Yıldızlar</th></tr>
-        ${NATIONS.slice().sort((a, b) => b.rating - a.rating).map((n) => `<tr class="${n.code === s.player.nation ? 'hl' : ''}"><td class="l"><span class="code">${n.code}</span> ${U.esc(n.name)}</td><td>${n.rating}</td><td class="l"><small>${U.esc(n.stars.join(', '))}</small></td></tr>`).join('')}
+        ${Game.nations().sort((a, b) => b.rating - a.rating).map((n) => `<tr class="${n.code === s.player.nation ? 'hl' : ''}"><td class="l"><span class="code">${n.code}</span> ${U.esc(n.name)}</td><td>${n.rating}</td><td class="l"><small>${U.esc(Game.natStars(n.code).join(', ') || '—')}</small></td></tr>`).join('')}
         </table>
       </div>`;
   },
@@ -1253,6 +1299,8 @@ const UI = {
   bind(root) {
     U.$$('[data-focus]', root).forEach((b) => (b.onclick = () => { Game.state.trainFocus = b.dataset.focus; Game.render(); }));
     U.$$('[data-act]', root).forEach((b) => (b.onclick = () => Game.act(b.dataset.act)));
+    const dtg = root.querySelector('#drill-tg');
+    if (dtg) dtg.onchange = () => { Game.state.drills = dtg.checked; Game.save(); };
     U.$$('[data-go=match]', root).forEach((b) => (b.onclick = () => {
       const s = Game.state;
       if (s.ap > 0) {
@@ -1277,6 +1325,7 @@ const UI = {
       Game.save();
       Game.render();
     }));
+    U.$$('[data-setdiff]', root).forEach((b) => (b.onclick = () => { Game.state.difficulty = b.dataset.setdiff; Game.save(); Game.toast(`Zorluk: ${DIFFS[b.dataset.setdiff].l}`, 'good'); Game.render(); }));
     U.$$('[data-use]', root).forEach((b) => (b.onclick = () => Shop.use(b.dataset.use)));
     U.$$('[data-wl]', root).forEach((b) => (b.onclick = () => { UI.worldLeague = b.dataset.wl; Game.render(); }));
     U.$$('[data-sys]', root).forEach((b) => (b.onclick = () => {
@@ -1449,17 +1498,22 @@ const Events = {
     return Events._amt;
   },
 
+  reset() { Events._mate = null; Events._amt = null; Events._senior = null; Events._legend = null; Events._tip = null; },
+
   roll() {
     const p = Game.p;
-    const ev = U.pick(Events.list.filter((e) => e.cond(p)));
+    Events.reset();
+    const pool = Events.list.filter((e) => e.cond(p));
+    const ev = pool.length ? U.weighted(pool, (e) => e.w || 1) : null;
     if (ev) Game.state.pendingEvent = ev.id;
+    Events.reset();
   },
 
   show() {
     const s = Game.state;
     const ev = Events.list.find((e) => e.id === s.pendingEvent);
     if (!ev) { s.pendingEvent = null; return; }
-    Events._mate = null; Events._amt = null;
+    Events.reset();
     const text = ev.text();
     Game.modal(`<div class="ev-tag">Olay</div><h3>${U.esc(text)}</h3>`, ev.opts.map((o) => ({
       t: o.t,
@@ -1480,6 +1534,7 @@ const Create = {
   alloc: {},
   points: 20,
   pos: 'FW',
+  diff: 'normal',
   open() {
     Create.alloc = {};
     STATS.forEach((s) => (Create.alloc[s.k] = 0));
@@ -1503,6 +1558,11 @@ const Create = {
           <label class="full" id="cr-club-wrap">Altyapısına katılacağın kulüp<select id="cr-club">${clubOpts}</select>
             <small class="muted">Büyük kulüplerin tesisleri daha iyidir (daha hızlı gelişim) ama rakipler de daha güçlüdür.</small></label>
         </div>
+        <div class="lbl">Zorluk</div>
+        <div class="seg big" id="cr-diff">
+          ${Object.entries(DIFFS).map(([k, v]) => `<button data-diff="${k}" class="${k === Create.diff ? 'on' : ''}"><b>${v.l}</b></button>`).join('')}
+        </div>
+        <small class="muted cr-diff-note" id="cr-diff-note">${DIFFS[Create.diff].d}</small>
         <div class="lbl">Mevki</div>
         <div class="seg big" id="cr-pos">
           ${Object.entries(POSITIONS).map(([k, v]) => `<button data-pos="${k}" class="${k === Create.pos ? 'on' : ''}">${v.l}</button>`).join('')}
@@ -1514,6 +1574,11 @@ const Create = {
           <button class="btn btn-big" id="cr-go">Kariyere Başla</button>
         </div>
       </div>`;
+    U.$$('#cr-diff button').forEach((b) => (b.onclick = () => {
+      Create.diff = b.dataset.diff;
+      U.$$('#cr-diff button').forEach((x) => x.classList.toggle('on', x === b));
+      document.getElementById('cr-diff-note').textContent = DIFFS[Create.diff].d;
+    }));
     U.$$('#cr-pos button').forEach((b) => (b.onclick = () => {
       Create.pos = b.dataset.pos;
       U.$$('#cr-pos button').forEach((x) => x.classList.toggle('on', x === b));
@@ -1533,7 +1598,7 @@ const Create = {
       const surname = document.getElementById('cr-sur').value.trim() || 'Yıldız';
       Game.newCareer({
         name, surname, nation: document.getElementById('cr-nat').value, foot: document.getElementById('cr-foot').value,
-        position: Create.pos, clubId: document.getElementById('cr-club').value, alloc: Create.alloc,
+        position: Create.pos, clubId: document.getElementById('cr-club').value, alloc: Create.alloc, difficulty: Create.diff,
         year: +document.getElementById('cr-year').value, age: +document.getElementById('cr-age').value,
       });
     };

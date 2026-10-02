@@ -130,7 +130,7 @@ const Cups = {
   },
 
   natTeam(code) {
-    const n = NATIONS.find((x) => x.code === code);
+    const n = Game.nat(code);
     const col = NAT_COLORS[code] || ['#1d3c8f', '#ffffff'];
     const stars = Game.natStars(code);
     const roster = stars.map((name, i) => ({ n: name, pos: i < 2 ? 'FW' : 'MF', r: n.rating + 3 }));
@@ -141,8 +141,9 @@ const Cups = {
   startTournament(s) {
     const type = Cups.tourType(s.season.year);
     const name = type === 'wc' ? `${s.season.year} Dünya Kupası` : `${s.season.year} Avrupa Şampiyonası`;
-    let pool = type === 'wc' ? NATIONS.slice() : NATIONS.filter((n) => EURO_NATIONS.includes(n.code));
-    const size = type === 'wc' ? 16 : 8;
+    let pool = type === 'wc' ? Game.nations() : Game.nations().filter((n) => EURO_NATIONS.includes(n.code));
+    let size = type === 'wc' ? 16 : 8;
+    while (size > pool.length) size /= 2;
     // güce göre ama biraz sürprizle seçilir
     pool = pool.map((n) => ({ n, k: n.rating + U.rand(-6, 6) })).sort((a, b) => b.k - a.k).map((x) => x.n.code).slice(0, size);
     const p = s.player;
@@ -157,7 +158,7 @@ const Cups = {
     const lines = [];
     for (let i = 0; i < t.alive.length; i += 2) {
       const h = t.alive[i], a = t.alive[i + 1];
-      const nh = NATIONS.find((x) => x.code === h), na = NATIONS.find((x) => x.code === a);
+      const nh = Game.nat(h), na = Game.nat(a);
       const r = mine && mine.h === h && mine.a === a ? mine.r : Cups.tie(nh.rating - 2, na.rating);
       next.push(r.win === 0 ? h : a);
       lines.push(`${nh.name} ${r.a}-${r.b} ${na.name}${r.pens ? ' (pen.)' : ''}`);
@@ -184,7 +185,7 @@ const Cups = {
         const j = i % 2 === 0 ? i + 1 : i - 1;
         const h = t.alive[Math.min(i, j)], a = t.alive[Math.max(i, j)];
         const oppCode = h === nat.code ? a : h;
-        const opp = NATIONS.find((x) => x.code === oppCode);
+        const opp = Game.nat(oppCode);
         const stageName = STAGE_NAMES[t.alive.length];
         await Cups.ask(`<div class="ev-tag">${t.name}</div><h2>${stageName}</h2><p><b>${nat.name}</b> vs <b>${opp.name}</b> · Rakibin yıldızları: ${U.esc(Game.natStars(oppCode).slice(0, 2).join(', ') || '—')}</p>`, 'Maça Çık');
         const ctx = { home: Cups.natTeam(h), away: Cups.natTeam(a), side: h === nat.code ? 'home' : 'away', compName: `${t.name} · ${stageName}`, levelBase: Game.levelBase(true) + 0.03 };
@@ -204,7 +205,7 @@ const Cups = {
         Game.news(`${t.name} ${res.stageName}: ${res.lines.slice(0, 4).join(' · ')}`, 'world');
       }
     }
-    const champ = NATIONS.find((x) => x.code === t.alive[0]);
+    const champ = Game.nat(t.alive[0]);
     s.cupHistory = s.cupHistory || [];
     s.cupHistory.unshift({ year: s.season.year, comp: t.name.replace(/^\d+ /, ''), winner: champ.name });
     Game.news(`${t.name} şampiyonu: ${champ.name}!`, 'world');

@@ -114,54 +114,103 @@ const Shop = {
   },
 };
 
-// ---------- Sürpriz paket (iyi maçlardan sonra) ----------
+// ---------- Maç sonrası gerçekçi ödüller (kutu yok) ----------
 const Loot = {
   roll(rating) {
-    if (rating == null) return;
-    const p = Game.p;
-    const chance = rating >= 8 ? 0.6 : rating >= 7.2 ? 0.3 : 0.08;
-    if (!U.chance(chance)) return;
-    Game.state.pendingLoot = { tier: rating >= 8.5 ? 'gold' : rating >= 7.5 ? 'silver' : 'bronze' };
-  },
-  show() {
+    if (rating == null || Game.inStreet()) return;
     const s = Game.state, p = s.player;
-    const L = s.pendingLoot;
-    const tierName = { gold: 'Altın', silver: 'Gümüş', bronze: 'Bronz' }[L.tier];
-    const mult = { gold: 3, silver: 2, bronze: 1 }[L.tier];
-    const m = Game.modal(`
-      <div class="loot">
-        <div class="ev-tag">Sürpriz</div>
-        <h3>${tierName} Sürpriz Paket</h3>
-        <p>Harika oyunun sana bir hediye kazandırdı. Açmak için pakete dokun.</p>
-        <button type="button" class="loot-box ${L.tier}" id="loot-open" aria-label="Paketi aç"><span></span></button>
-        <div class="loot-res" id="loot-res"></div>
-      </div>`, [{ t: 'Kapat', cls: 'btn-ghost' }]);
-    const btn = m.querySelector('#loot-open');
-    btn.onclick = () => {
-      if (btn.classList.contains('open')) return;
-      btn.classList.add('open');
-      const scale = Game.isYouth() ? 60 + (p.age - 8) * 30 : Game.weeklyIncome() * 0.35;
-      const prizes = [
-        () => { const a = Math.round(scale * mult * U.rand(1, 2) / 10) * 10; p.money += a; return `${U.money(a)} para`; },
-        () => { Player.addEnergy(p, 20 * mult); return `+${20 * mult} enerji`; },
-        () => { const k = U.pick(STATS).k; const g = Player.train(p, k, 1.5 * mult, 1); return `${STATS.find((x) => x.k === k).l} +${g.toFixed(2)}`; },
-        () => { Player.addMorale(p, 8 * mult); Player.addFame(p, 0.5 * mult); return `+${8 * mult} moral, ün artışı`; },
+    const chance = rating >= 8.5 ? 0.35 : rating >= 8 ? 0.18 : 0;
+    if (!U.chance(chance)) return;
+    if (Game.isYouth()) {
+      const opts = [
+        () => {
+          // A takım hocası seni bir antrenmana çağırır
+          const k = s.trainFocus;
+          const g = Player.train(p, k, 1.6, Game.facility());
+          Player.addRel(p, 'coach', 2);
+          return `A takım teknik direktörü maçını izledi ve seni bu hafta bir A takım antrenmanına çağırdı. ${STATS.find((x) => x.k === k).l} +${g.toFixed(2)}`;
+        },
+        () => {
+          Player.addMorale(p, 6); Player.addFame(p, 0.6);
+          return 'Yerel gazete performansını "altyapının parlayan yıldızı" başlığıyla yazdı. Ailen gazeteyi çerçeveletti.';
+        },
       ];
-      const res = U.pick(prizes)();
-      s.pendingLoot = null;
-      setTimeout(() => {
-        m.querySelector('#loot-res').innerHTML = `<b>${res}</b>`;
-        Game.save();
-        Game.render();
-      }, 650);
-    };
+      const t = U.pick(opts)();
+      Game.news(t, 'good');
+      Game.toast(t, 'good');
+    } else {
+      const a = Math.round(Game.weeklyIncome() * U.rand(0.25, 0.5) / 100) * 100;
+      p.money += a;
+      const t = `Kulüp başkanı soyunma odasına gelip performansın için ${U.money(a)} prim verdi.`;
+      Game.news(t, 'good');
+      Game.toast(t, 'good');
+    }
+  },
+  // Eski kayıtlardaki bekleyen paketleri temizler
+  show() { Game.state.pendingLoot = null; },
+};
+
+// ---------- Kulüpteki gerçek oyunculardan mentorlar ----------
+const POS_TR = { FW: 'Forvet', MF: 'Orta Saha', DF: 'Defans', GK: 'Kaleci' };
+const Mentors = {
+  TIPS: {
+    FW: [
+      { say: 'Şut atarken kaleciye değil, boş köşeye bak. Topu oraya yerleştir.', k: ['shooting', 'technique'] },
+      { say: 'Defansın arkasına koşuyu pas çıkmadan bir saniye önce başlat.', k: ['pace', 'shooting'] },
+      { say: 'Kafa vururken gözlerini kapatma, alnının ortasıyla vur.', k: ['heading', 'shooting'] },
+    ],
+    MF: [
+      { say: 'Topu almadan önce omzunun üstünden bak. İyi pas ilk dokunuştan başlar.', k: ['passing', 'technique'] },
+      { say: 'Topu ayağında fazla tutma. Pas ver, sonra boşa koş.', k: ['passing', 'stamina'] },
+      { say: 'Dar alanda vücudunu topla rakip arasına koy.', k: ['dribbling', 'technique'] },
+    ],
+    DF: [
+      { say: 'Topa değil, rakibin kalçasına bak. Kalça nereye dönerse oraya gider.', k: ['defending', 'pace'] },
+      { say: 'Hava topunda rakibinden önce zıpla, kollarını denge için kullan.', k: ['heading', 'physical'] },
+      { say: 'Kayarak müdahale son çaredir. Ayakta kal, sabırlı ol.', k: ['defending', 'physical'] },
+    ],
+    GK: [
+      { say: 'Kalecilerin en sevmediği şut yere vuran, köşeye giden şuttur.', k: ['shooting', 'technique'] },
+      { say: 'Kaleciyi oyuna sokmadan önce bakışınla kandır.', k: ['technique', 'dribbling'] },
+    ],
+  },
+  tip(pos) {
+    if (!Events._tip) Events._tip = U.pick(Mentors.TIPS[pos] || Mentors.TIPS.MF);
+    return Events._tip;
+  },
+  // A takımın tanınmış oyuncusu (önce dönem yıldızları, sonra en yüksek reytingli oyuncu)
+  senior() {
+    if (Events._senior) return Events._senior;
+    const s = Game.state, c = s.world.clubs[s.clubId];
+    if (!c || !c.roster || !c.roster.length) return null;
+    const me = Player.fullName(s.player);
+    const pool = c.roster.filter((x) => x.n !== me && (x.age || 25) >= 22);
+    if (!pool.length) return null;
+    const stars = pool.filter((x) => x.star);
+    const same = (stars.length ? stars : pool).filter((x) => x.pos === s.player.position);
+    const list = (same.length && U.chance(0.6) ? same : stars.length ? stars : pool).slice().sort((a, b) => b.r - a.r);
+    return (Events._senior = U.pick(list.slice(0, 3)));
+  },
+  // Kulüpte forma giymiş, artık emekli bir efsane
+  oldLegend() {
+    if (Events._legend) return Events._legend;
+    const s = Game.state, w = s.world;
+    if (!w.legends) return null;
+    const L = U.pick(w.legends.filter((x) => x.state === 'retired' && x.club === s.clubId));
+    return L ? (Events._legend = L) : null;
+  },
+  veteran() {
+    const s = Game.state, c = s.world.clubs[s.clubId];
+    if (!c) return null;
+    const v = c.roster.filter((x) => (x.age || 0) >= 31).sort((a, b) => b.age - a.age)[0];
+    return v || null;
   },
 };
 
 // ---------- Ek rastgele olaylar ----------
 Events.list.push(
   {
-    id: 'idolcamp', cond: (p) => p.age <= 16,
+    id: 'idolcamp', w: 0.4, cond: (p) => p.age <= 16,
     text: () => `${Legends.idol(Game.state.world)}, şehrine gelip bir futbol okulu kampı düzenliyor. Seni de davet ettiler!`,
     opts: [
       { t: 'Kampa katıl', fx: (p) => { const a = Player.train(p, 'technique', 2, 1.1), b = Player.train(p, 'dribbling', 2, 1.1); Player.addEnergy(p, -15); Player.addMorale(p, 8); return `Hayatının günü! Teknik +${a.toFixed(1)}, Top Sürme +${b.toFixed(1)}`; } },
@@ -169,7 +218,7 @@ Events.list.push(
     ],
   },
   {
-    id: 'wallet', cond: () => true,
+    id: 'wallet', w: 0.25, cond: () => true,
     text: () => 'Antrenman dönüşü yolda içi para dolu bir cüzdan buldun.',
     opts: [
       { t: 'Sahibine götür', fx: (p) => { Player.addRel(p, 'fans', 4); Player.addMorale(p, 5); Player.addFame(p, 0.5); if (U.chance(0.45)) { const a = Game.isYouth() ? 300 : Math.round(Game.weeklyIncome() * 0.3); p.money += a; return `Sahibi çok sevindi ve sana ${U.money(a)} ödül verdi!`; } return 'Dürüstlüğün haberlere çıktı, taraftarlar seni sevdi.'; } },
@@ -177,7 +226,7 @@ Events.list.push(
     ],
   },
   {
-    id: 'birthday', cond: () => Game.state.season.round <= 2,
+    id: 'birthday', w: 0.5, cond: () => Game.state.season.round <= 2,
     text: () => 'Doğum günün kutlu olsun! Ailen ve arkadaşların sana sürpriz parti hazırladı.',
     opts: [{ t: 'Hediyeleri aç', fx: (p) => { const a = Game.isYouth() ? 250 + p.age * 30 : Math.round(Game.weeklyIncome() * 0.5); p.money += a; Player.addMorale(p, 10); return `Moral +10 ve ${U.money(a)} harçlık!`; } }],
   },
@@ -190,26 +239,12 @@ Events.list.push(
     ],
   },
   {
-    id: 'viral', cond: (p) => p.fame >= 4,
+    id: 'viral', w: 0.4, cond: (p) => p.fame >= 4,
     text: () => 'Antrenmanda attığın röveşata golü sosyal medyada viral oldu!',
     opts: [{ t: 'Paylaşımları izle', fx: (p) => { Player.addFame(p, 2); Player.addRel(p, 'fans', 5); Player.addMorale(p, 5); return 'Ünün ve taraftar desteğin arttı.'; } }],
   },
-  {
-    id: 'mentor', cond: () => true,
-    text: () => `Takımın kaptanı ${Events.mate()} sana mentorluk yapmayı teklif ediyor.`,
-    opts: [
-      { t: 'Kabul et', fx: (p) => { const k = U.pick(['passing', 'technique', 'defending', 'heading']); const g = Player.train(p, k, 1.4, 1); Player.addRel(p, 'team', 4); Player.addEnergy(p, -6); return `${STATS.find((x) => x.k === k).l} +${g.toFixed(2)}, takım ilişkisi arttı.`; } },
-      { t: 'Gerek yok', fx: (p) => { Player.addRel(p, 'team', -2); return 'Kaptan biraz bozuldu.'; } },
-    ],
-  },
-  {
-    id: 'ballraffle', cond: () => true,
-    text: () => `Kulübün çekilişinden ${Legends.idol(Game.state.world)} imzalı bir top kazandın!`,
-    opts: [
-      { t: 'Sat', fx: (p) => { const a = Game.isYouth() ? 800 : Math.round(Game.weeklyIncome() * 0.6); p.money += a; return `${U.money(a)} kazandın.`; } },
-      { t: 'Odama koy', fx: (p) => { Player.addMorale(p, 8); return 'Her baktığında motive oluyorsun. Moral +8'; } },
-    ],
-  },
+
+
   {
     id: 'rain', cond: () => true,
     text: () => 'Bugünkü antrenman sağanak yağmur altında yapılacak.',
@@ -227,11 +262,60 @@ Events.list.push(
     ],
   },
   {
-    id: 'allstar', cond: (p) => !Game.isYouth() && p.fame >= 30,
+    id: 'allstar', w: 0.5, cond: (p) => !Game.isYouth() && p.fame >= 30,
     text: () => { const a = Legends.active(Game.state.world).sort((x, y) => y.r - x.r); return `${a[0] ? a[0].n : 'Dünya yıldızları'}${a[1] ? ' ve ' + a[1].n : ''} gibi yıldızların oynayacağı bir yardım maçına davet edildin!`; },
     opts: [
       { t: 'Katıl', fx: (p) => { Player.addFame(p, 4); Player.addRel(p, 'fans', 6); Player.addMorale(p, 8); Player.addEnergy(p, -15); return 'Efsanelerle aynı sahayı paylaştın!'; } },
       { t: 'Dinlenmeyi seç', fx: (p) => { Player.addEnergy(p, 5); return 'Bir sonraki maça odaklandın.'; } },
+    ],
+  },
+  // ---- Kulübün gerçek oyuncularıyla gelişim anları ----
+  {
+    id: 'senior_tip', w: 3, cond: (p) => Game.isYouth() && !Game.inStreet() && p.age >= 10 && !!Mentors.senior(),
+    text: () => { const m = Mentors.senior(); const t = Mentors.tip(m.pos); return `A takımın ${m.star ? 'yıldızı' : 'tecrübeli oyuncusu'} ${m.n} (${POS_TR[m.pos] || 'Oyuncu'}) altyapı antrenmanını izlemeye geldi. Antrenmandan sonra yanına geldi: "${t.say}"`; },
+    opts: [
+      { t: 'Dikkatle dinle ve uygula', fx: (p) => { const m = Mentors.senior(); const t = Mentors.tip(m.pos); const res = t.k.map((k) => `${STATS.find((x) => x.k === k).l} +${Player.train(p, k, m.star ? 2 : 1.5, Game.facility()).toFixed(2)}`); Player.addMorale(p, 6); Player.addEnergy(p, -6); Game.news(`${m.n} altyapıda sana özel ders verdi. ${res.join(', ')}`, 'good'); return `${m.n} ile çalıştın: ${res.join(', ')}`; } },
+      { t: 'Teşekkür edip forma iste', fx: (p) => { const m = Mentors.senior(); Player.addMorale(p, 10); return `${m.n} formasını imzalayıp sana verdi. Moral +10`; } },
+    ],
+  },
+  {
+    id: 'legend_visit', w: 1.5, cond: () => Game.isYouth() && !Game.inStreet() && !!Mentors.oldLegend(),
+    text: () => { const L = Mentors.oldLegend(); return `Kulübün efsanesi ${L.n} altyapı tesislerini ziyaret etti ve gençlere bir antrenman yaptırdı. Seni ayrıca kenara çekti.`; },
+    opts: [
+      { t: 'Ondan bir şey öğren', fx: (p) => { const L = Mentors.oldLegend(); const t = Mentors.tip(L.pos); const k = t.k[0]; const g = Player.train(p, k, 2, Game.facility()); Player.addMorale(p, 8); return `"${t.say}" ${STATS.find((x) => x.k === k).l} +${g.toFixed(2)}`; } },
+      { t: 'Hatıra fotoğrafı çek', fx: (p) => { const L = Mentors.oldLegend(); Player.addMorale(p, 6); Player.addFame(p, 0.4); Social.post('daily', `Efsane ${L.n} ile. Bir gün ben de...`, 1.4); return 'Fotoğrafın sosyal medyada çok beğenildi.'; } },
+    ],
+  },
+  {
+    id: 'u_promo', w: 1, cond: (p) => Game.isYouth() && !Game.inStreet() && p.age >= 15 && Player.overall(p) >= expectedAtAge(p.age) + 4,
+    text: () => 'A takım teknik direktörü seni bu hafta profesyonellerle antrenmana çıkarmak istiyor. Tempo çok yüksek olacak.',
+    opts: [
+      { t: 'Hazırım', fx: (p) => { const k = Game.state.trainFocus; const g = Player.train(p, k, 2.2, Game.facility()); Player.addEnergy(p, -16); Player.addRel(p, 'coach', 3); if (U.chance(Player.injuryChance(p, 0.03))) Game.injure(1, 'A takım antrenmanında'); return `Profesyonellerin temposuna ayak uydurdun. ${STATS.find((x) => x.k === k).l} +${g.toFixed(2)}`; } },
+      { t: 'Henüz erken', fx: (p) => { Player.addEnergy(p, 4); return 'Altyapıda çalışmaya devam ettin.'; } },
+    ],
+  },
+  {
+    id: 'captain_fk', w: 2, cond: () => !Game.isYouth() && !!Mentors.senior(),
+    text: () => { const m = Mentors.senior(); return `Takımın ${m.star ? 'yıldızı' : 'kaptanı'} ${m.n} antrenman bitince seni yanına çağırdı: "Hadi, biraz ekstra çalışalım."`; },
+    opts: [
+      { t: 'Kal ve çalış', fx: (p) => { const m = Mentors.senior(); const t = Mentors.tip(m.pos); const k = U.pick(t.k); const g = Player.train(p, k, 1.6, Game.facility()); Player.addRel(p, 'team', 4); Player.addEnergy(p, -10); return `${m.n}: "${t.say}" ${STATS.find((x) => x.k === k).l} +${g.toFixed(2)}`; } },
+      { t: 'Bugün yorgunum', fx: (p) => { Player.addEnergy(p, 4); Player.addRel(p, 'team', -1); return 'Başka bir gün çalışırsınız.'; } },
+    ],
+  },
+  {
+    id: 'veteran', w: 1.5, cond: (p) => !Game.isYouth() && p.age <= 22 && !!Mentors.veteran(),
+    text: () => { const v = Mentors.veteran(); return `Takımın en tecrübeli oyuncusu ${v.n} (${v.age}) yemekte yanına oturdu ve profesyonellik üzerine konuştu.`; },
+    opts: [
+      { t: 'Tavsiyelerini dinle', fx: (p) => { const g = Player.train(p, 'stamina', 1.2, 1); Player.addMorale(p, 5); Player.addRel(p, 'team', 3); return `Beslenme ve uyku düzenini değiştirdin. Dayanıklılık +${g.toFixed(2)}`; } },
+      { t: 'Kibarca dinle', fx: (p) => { Player.addRel(p, 'team', 1); return 'Sohbet keyifliydi.'; } },
+    ],
+  },
+  {
+    id: 'physio', w: 1, cond: (p) => !Game.inStreet() && p.energy < 70,
+    text: () => 'Kulübün fizyoterapisti hareketlerini inceledi ve sana özel bir esneme programı hazırladı.',
+    opts: [
+      { t: 'Programı uygula', fx: (p) => { const g = Player.train(p, 'physical', 1, 1); Player.addEnergy(p, 8); return `Kendini daha hafif hissediyorsun. Enerji +8, Güç +${g.toFixed(2)}`; } },
+      { t: 'Gerek yok', fx: () => 'Programı dosyaya kaldırdın.' },
     ],
   },
 );
