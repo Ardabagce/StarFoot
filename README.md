@@ -28,10 +28,10 @@ Oyunu bir web sunucusundan (ör. GitHub Pages) açıp tarayıcı menüsünden **
 - **Dönem yıldızları:** Milli takımlar ve Türkiye ligi de döneme göre değişir (ör. 1980'lerde Tanju Çolakoğulları, 1990'larda Hakan Şükürlü). Hırvatistan gibi ülkeler kuruldukları yıldan sonra çıkar.
 - **Dönem yıldızları (dünya):** Seçtiğin yılın kurgusal yıldızları sahadadır (1980'ler: Maradoni, Platinni, van Bastın... 2000'ler: Ronaldinyo, Anri... bugün: Mbappo, Halland, Yamel...). Oyuncular yaşlanır, emekli olur, gençler sırası gelince profesyonel olur; liste bittikten sonra yeni nesil yıldızlar üretilir. Emeklilikler, yeni yıldızlar ve büyük transferler haberlerde ve sosyal medya gündeminde çıkar.
 - **Kariyer:** U10, U12, U14, U16 ve U19 takımlarında oynarsın. 17-18 yaşında profesyonel sözleşme imzalar, 33 yaşından sonra istediğin zaman emekli olabilirsin.
-- **20 takımlı ligler:** Tüm ligler 20 takım, 38 hafta. Türkiye'de 3 takım düşer, 3 takım çıkar.
+- **20 takımlı ligler:** Tüm ligler 20 takım, 38 hafta.
 - **Avrupa Gelişim Ligi (U19):** U19 takımındayken kulübün Avrupa'nın en güçlü altyapılarıyla 16 takımlı eleme turnuvasında yarışır; maçları sen oynarsın.
 - **Ülke kupaları:** Her ülkenin kendi kupası var (Türkiye Kupası 32 takım, İngiltere Kupası, Kral Kupası, Almanya, İtalya ve Fransa kupaları 16 takım). Tek maç eleme, Avrupa kupalarıyla çakışmayan takvim.
-- **Avrupa kupaları:** Her sezon Avrupa Şampiyonlar Kupası ve Avrupa Federasyon Kupası (16 takım, tek maç eleme). Kulübün katılırsa maçlarını sen oynarsın.
+- **Avrupa kupaları:** Her sezon Şampiyonlar, Federasyon ve Konferans kupaları (16'şar takım, tek maç eleme). Kulübün katılırsa maçlarını sen oynarsın.
 - **Dünya Kupası ve Avrupa Şampiyonası:** Gerçek takvimle (Dünya Kupası 1986, 1990... 2026, 2030; Avrupa Şampiyonası 1984, 1988... 2024, 2028) sezon sonunda oynanır. Milli takıma çağrılırsan maçlarına çıkarsın.
 - **9 stat:** Hız, Şut, Pas, Top Sürme, Teknik, Kafa, Savunma, Güç, Dayanıklılık. Mevkine göre (Forvet / Orta Saha / Defans) genel gücün hesaplanır.
 - **Haftalık aksiyonlar (haftada 3 hak):** antrenman, yoğun antrenman, özel hoca, dinlenme, takım arkadaşlarıyla vakit geçirme, hocayla konuşma, taraftarlarla etkileşim.
@@ -54,7 +54,11 @@ Oyunu bir web sunucusundan (ör. GitHub Pages) açıp tarayıcı menüsünden **
 - **Enerji, moral, ün ve sakatlıklar.**
 - **Rastgele olaylar:** parti daveti, röportaj, sınav haftası, sponsorluk teklifleri...
 - **Transferler:** altyapılar arası transfer, profesyonel sözleşme, ara transfer dönemi ve sezon sonu teklifleri.
-- **7 lig ve 140 kulüp:** Türkiye (2 lig, küme düşme/çıkma ile), İngiltere, İspanya, Almanya, İtalya ve Fransa.
+- **16 lig ve 320 kulüp:** Türkiye, İngiltere, İspanya, Almanya, İtalya ve Fransa'da birer üst ve alt lig (her sezon 3 takım düşer, 3 takım çıkar); ayrıca Hollanda, Portekiz, Brezilya ve Arjantin ligleri.
+- **Avrupa'ya katılım:** Lig sırası gelecek sezonun kupasını belirler (ör. İngiltere'de 1-3 Şampiyonlar, 4-5 Federasyon, 6-7 Konferans Kupası). Puan tablosunda bölgeler renkli gösterilir. Brezilya ve Arjantin kulüpleri Güney Amerika Kupası'nda yarışır.
+- **Sezon sonu ödül töreni:** Lig sıran madalyayla, kazandığın kupa ve ödüller tek tek ekranda belirir; Avrupa bileti ve sıralama primi gösterilir.
+- **Transfer teklifleri:** Kulüp gücü ile senin gücünü karşılaştıran, maaş değişimi, süre, beklenen rol ve kulübün Avrupa durumunu gösteren kartlar.
+- **Kariyer geçmişi:** Devam eden sezon canlı satır olarak görünür; her sezonun yanında o sezon kazandığın kupa ve ödüller yazar.
 - **Milli takım:** Yeterince iyiysen milli maçlara çağrılırsın.
 - **Mağaza:** Görselli ürün kartları ve açılıp kapanan kategoriler (kramponlar, ekipman, beslenme, hobi, ulaşım, stil ve lüks, tek kullanımlık). Yaşa göre değişen reyonlar (çocukken futbolcu kartı albümü, idolünün forması, bahçe kalesi; gençken spor salonu, scooter; profesyonelken lüks saat, araba, villa, yat). Enerji içeceği, masaj, fizyoterapi, yaz kampı ve yıldız futbolcu kliniği gibi tek kullanımlık ürünler.
 - **Kupa vitrini ve madalyalar:** Kazandığın kupalar raflarda sergilenir; ilk gol, hat-trick, 100 maç, milli forma, ilk milyon gibi 17 madalya.

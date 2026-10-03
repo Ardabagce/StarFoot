@@ -14,8 +14,8 @@ const Weather = {
     const round = state && state.season ? state.season.round : 10;
     const winter = round >= 12 && round <= 26;
     const lg = ctx.lg || '';
-    const north = ['ENG', 'GER', 'TR1', 'TR2', 'youth', 'ucl', 'uel'].includes(lg);
-    const summer = ['wc', 'euro', 'intl', 'street'].includes(lg);
+    const north = ['ENG', 'ENG2', 'GER', 'GER2', 'TR1', 'TR2', 'NED', 'youth', 'ucl', 'uel', 'uecl'].includes(lg);
+    const summer = ['wc', 'euro', 'intl', 'street', 'BRA', 'ARG', 'csa'].includes(lg);
     const w = {
       clear: summer ? 70 : 50,
       rain: (lg === 'ENG' ? 28 : 18) + (winter ? 6 : 0),
@@ -94,7 +94,7 @@ const Balls = {
     const lg = ctx.lg || '';
     if (lg === 'street') return BALL_STYLES.street;
     if (year < 1993 && !['ucl', 'uel', 'wc', 'euro'].includes(lg)) return year < 1986 ? BALL_STYLES.retro : BALL_STYLES.classic;
-    const map = { TR1: 'tr', TR2: 'tr', ENG: 'eng', ESP: 'esp', GER: 'ger', ITA: 'ita', FRA: 'fra', ucl: 'ucl', uel: 'uel', wc: 'wc', euro: 'euro', youth: 'classic', intl: 'classic' };
+    const map = { TR1: 'tr', TR2: 'tr', ENG: 'eng', ENG2: 'eng', ESP: 'esp', ESP2: 'esp', GER: 'ger', GER2: 'ger', ITA: 'ita', ITA2: 'ita', FRA: 'fra', FRA2: 'fra', NED: 'ned', POR: 'por', BRA: 'bra', ARG: 'arg', ucl: 'ucl', uel: 'uel', uecl: 'uecl', csa: 'csa', wc: 'wc', euro: 'euro', youth: 'classic', intl: 'classic' };
     return BALL_STYLES[map[lg] || 'classic'];
   },
   forTraining() {
@@ -114,6 +114,17 @@ const Balls = {
 const SCOREBOARDS = {
   TR1: { tag: 'SÜPER LİG', c1: '#e30a17', c2: '#ffffff' },
   TR2: { tag: '1. LİG', c1: '#0b4ea2', c2: '#ffffff' },
+  ENG2: { tag: 'ŞAMPİYONLUK', c1: '#1f2a44', c2: '#ffcf3f' },
+  ESP2: { tag: 'LALİGA 2', c1: '#c8102e', c2: '#ffffff' },
+  GER2: { tag: '2. BUNDESLİGA', c1: '#7a0a0a', c2: '#ffffff' },
+  ITA2: { tag: 'SERİE B', c1: '#0b7a3e', c2: '#ffffff' },
+  FRA2: { tag: 'LİGUE 2', c1: '#f36f21', c2: '#091c3e' },
+  NED: { tag: 'LALE LİGİ', c1: '#f36f21', c2: '#ffffff' },
+  POR: { tag: 'ATLANTİK', c1: '#006a44', c2: '#ffcf3f' },
+  BRA: { tag: 'SAMBA LİGİ', c1: '#009c3b', c2: '#ffdf00' },
+  ARG: { tag: 'TANGO LİGİ', c1: '#75aadb', c2: '#ffffff' },
+  uecl: { tag: 'KONFERANS', c1: '#0b7a3e', c2: '#ffffff' },
+  csa: { tag: 'GÜNEY AMERİKA', c1: '#1f2a44', c2: '#ffcf3f' },
   ENG: { tag: 'PREMIER', c1: '#3d0a5b', c2: '#00ff85' },
   ESP: { tag: 'LA LİGA', c1: '#ff4b1f', c2: '#ffffff' },
   GER: { tag: 'BUNDESLİGA', c1: '#d20515', c2: '#ffffff' },

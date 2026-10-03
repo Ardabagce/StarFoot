@@ -180,7 +180,7 @@ const Match = {
       M.speed = +b.dataset.s;
       U.$$('#mt-speed button').forEach((x) => x.classList.toggle('on', x === b));
     }));
-    $('mt-sim').onclick = () => { M.instant = true; if (MiniGame._abort) MiniGame._abort(); };
+    $('mt-sim').onclick = () => { M.instant = true; if (MiniGame._abort) MiniGame._abort(); if (M.htSkip) M.htSkip(); };
 
     if (ctx.role === 'starter') feed(`📋 İlk 11'desin! Formanın sırtında ${p.shirt} numara.`, 'info');
     else if (ctx.role === 'bench') feed('📋 Bugün yedek kulübesinde başlıyorsun.', 'info');
@@ -390,8 +390,11 @@ const Match = {
         $('mt-moment').classList.add('hidden');
         $('mm-host').innerHTML = '';
         $('mm-auto').style.display = '';
+        M.htSkip = null;
         res();
       }));
+      // maç simüle edilirse devre arası seçimi beklenmez
+      M.htSkip = () => { M.htSkip = null; $('mt-moment').classList.add('hidden'); $('mm-host').innerHTML = ''; $('mm-auto').style.display = ''; res(); };
     });
 
     const resolveMoment = async (mo) => {

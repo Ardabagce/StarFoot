@@ -1095,3 +1095,73 @@ kbd { background: var(--panel-2); border: 1px solid var(--line); padding: 0 5px;
 .mse-bar i.now { background: linear-gradient(90deg, #2fbf71, #7ee0a8); }
 .mse-bar i.now.mid { background: linear-gradient(90deg, #d9a400, #ffcf3f); } .mse-bar i.now.lo { background: linear-gradient(90deg, #c0392b, #ff6f64); }
 @media (max-width: 560px) { .ms-ring { width: 86px; height: 86px; } .ms-ring b { font-size: 30px; } .ms-res b { font-size: 32px; } .mst b { font-size: 24px; } }
+.lgt tr.z-ucl .rk { background: #2f6fd6; color: #fff; } .lgt tr.z-uel .rk { background: #f36f21; color: #fff; } .lgt tr.z-uecl .rk { background: #0b7a3e; color: #fff; } .lgt tr.z-csa .rk { background: #8b5cf6; color: #fff; }
+.lgt tr.z-ucl td:first-child { box-shadow: inset 3px 0 0 #2f6fd6; } .lgt tr.z-uel td:first-child { box-shadow: inset 3px 0 0 #f36f21; } .lgt tr.z-uecl td:first-child { box-shadow: inset 3px 0 0 #0b7a3e; } .lgt tr.z-csa td:first-child { box-shadow: inset 3px 0 0 #8b5cf6; }
+.lg-legend i.z-ucl { background: #2f6fd6; } .lg-legend i.z-uel { background: #f36f21; } .lg-legend i.z-uecl { background: #0b7a3e; } .lg-legend i.z-csa { background: #8b5cf6; }
+.lg-legend { flex-wrap: wrap; row-gap: 2px; }
+
+/* Transfer teklif kartları */
+.offers { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; margin: 10px 0; }
+.ofc { position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 10px; padding: 14px; text-align: left; border-radius: 14px; border: 1px solid rgba(255, 255, 255, .1); background: linear-gradient(160deg, color-mix(in srgb, var(--c1) 28%, #0e1a42), #0b1533 70%); box-shadow: 0 10px 26px rgba(0, 0, 0, .35); }
+.ofc.own { border-color: rgba(255, 207, 63, .6); }
+.ofc-band { position: absolute; inset: 0 0 auto; height: 4px; background: linear-gradient(90deg, var(--c1), var(--c2)); }
+.ofc-head { display: flex; align-items: center; gap: 10px; }
+.ofc-id { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+.ofc-id b { font-family: var(--display); font-weight: 800; font-size: 19px; text-transform: uppercase; line-height: 1.05; }
+.ofc-id small { color: var(--muted); font-size: 12px; }
+.ofc-tag { flex: none; font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: 3px 7px; border-radius: 999px; background: var(--flood); color: #0a1530; }
+.ofc-tag.eu { color: #fff; }
+.ofc-tag.z-ucl { background: #2f6fd6; } .ofc-tag.z-uel { background: #f36f21; } .ofc-tag.z-uecl { background: #0b7a3e; } .ofc-tag.z-csa { background: #8b5cf6; }
+.ofc-bars { display: grid; gap: 5px; }
+.ofc-bars div { display: grid; grid-template-columns: 86px 1fr 26px; align-items: center; gap: 8px; font-size: 12px; color: var(--muted); }
+.ofc-bars em { height: 7px; border-radius: 999px; background: rgba(255, 255, 255, .08); overflow: hidden; }
+.ofc-bars em i { display: block; height: 100%; background: linear-gradient(90deg, var(--c1), var(--c2)); border-radius: 999px; }
+.ofc-bars em.me i { background: linear-gradient(90deg, #2fbf71, #7ee0a8); }
+.ofc-bars b { color: var(--chalk); text-align: right; font-variant-numeric: tabular-nums; }
+.ofc-terms { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.ofc-terms div { padding: 7px 9px; border-radius: 10px; background: rgba(255, 255, 255, .05); display: flex; flex-direction: column; }
+.ofc-terms div:last-child { grid-column: 1 / -1; }
+.ofc-terms span { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.ofc-terms b { font-family: var(--display); font-size: 17px; }
+.ofc-terms small.up { color: #46e08f; font-weight: 700; } .ofc-terms small.down { color: #ff8f86; font-weight: 700; }
+.ofc-btn { width: 100%; margin: 0; }
+
+/* Sezon sonu ödül töreni */
+.ceremony { position: relative; overflow: hidden; margin: -4px -4px 12px; padding: 18px 14px 14px; text-align: center; border-radius: 14px; border: 1px solid rgba(255, 215, 110, .5); background: radial-gradient(ellipse at 50% 15%, rgba(255, 207, 63, .3), transparent 55%), linear-gradient(170deg, #231a06, #0d1330 60%); }
+.cer-rays { position: absolute; inset: -60%; background: repeating-conic-gradient(from 0deg at 50% 30%, rgba(255, 226, 122, .08) 0 8deg, transparent 8deg 18deg); animation: motmSpin 20s linear infinite; pointer-events: none; }
+.cer-kicker { position: relative; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: #d8c9a8; }
+.cer-title { position: relative; margin: 4px 0 10px; font-family: var(--display); font-weight: 800; font-style: italic; font-size: 30px; text-transform: uppercase; background: linear-gradient(180deg, #fff6c8, #ffcf3f 55%, #b8860b); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.cer-pos { position: relative; display: inline-flex; flex-direction: column; align-items: center; justify-content: center; width: 92px; height: 92px; border-radius: 50%; background: rgba(255, 255, 255, .08); border: 3px solid rgba(255, 255, 255, .25); }
+.cer-pos b { font-family: var(--display); font-weight: 800; font-size: 36px; line-height: 1; }
+.cer-pos span { font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.cer-pos.gold { background: radial-gradient(circle at 35% 30%, #fff2b0, #ffcf3f 50%, #b8860b); border-color: #ffe27a; color: #3a2a00; box-shadow: 0 0 26px rgba(255, 207, 63, .5); }
+.cer-pos.silver { background: radial-gradient(circle at 35% 30%, #ffffff, #c8d1dc 50%, #7d8794); border-color: #eef3f8; color: #1d2433; }
+.cer-pos.bronze { background: radial-gradient(circle at 35% 30%, #ffd6b0, #e0995a 50%, #8a4b1f); border-color: #f0b98a; color: #2a1404; }
+.cer-pos.gold span, .cer-pos.silver span, .cer-pos.bronze span { color: inherit; opacity: .8; }
+.cer-tag { position: relative; display: inline-block; margin: 8px 6px 0; padding: 3px 10px; font-size: 12px; font-weight: 800; border-radius: 999px; }
+.cer-tag.up { background: #1f9d55; } .cer-tag.down { background: #c0392b; }
+.cer-ticket { position: relative; display: inline-flex; align-items: center; gap: 10px; margin: 10px auto 0; padding: 8px 14px; border-radius: 12px; background: #2f6fd6; color: #fff; text-align: left; animation: motmIn .6s .2s both; }
+.cer-ticket.z-uel { background: #f36f21; } .cer-ticket.z-uecl { background: #0b7a3e; } .cer-ticket.z-csa { background: #8b5cf6; }
+.cer-ticket .ic { width: 24px; height: 24px; }
+.cer-ticket small { display: block; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; opacity: .85; }
+.cer-ticket b { font-family: var(--display); font-size: 17px; }
+.cer-awards { position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 8px; margin-top: 12px; }
+.cer-aw { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 10px 6px; border-radius: 12px; background: rgba(255, 255, 255, .06); border: 1px solid rgba(255, 215, 110, .35); animation: motmIn .6s both; }
+.cer-aw svg { width: 56px; height: 56px; filter: drop-shadow(0 6px 12px rgba(255, 207, 63, .5)); }
+.cer-aw b { font-size: 12px; line-height: 1.25; }
+.cer-none { position: relative; margin: 12px 0 0; }
+.cer-prize { position: relative; display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; font-size: 13px; color: #d8c9a8; }
+.cer-prize .ic { width: 16px; height: 16px; color: var(--flood); }
+.cer-prize b { color: var(--flood); }
+.se-stats { margin-bottom: 10px; }
+/* Kariyer tablosu */
+.tbl tr.cur td { background: rgba(79, 179, 255, .1); }
+.live-dot { display: block; font-size: 9px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: #ff6f64; }
+.hist-tro { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 3px; }
+.hist-tro span { font-size: 10px; padding: 1px 6px; border-radius: 999px; background: rgba(255, 207, 63, .16); color: #ffe27a; }
+.hist-tro span.eu { background: rgba(47, 111, 214, .25); color: #b9d4ff; }
+.ofc-id .ofc-tag { align-self: flex-start; margin-top: 4px; }
+.ofc-id b { overflow-wrap: anywhere; }
+.ofc-terms b[class^="role-"] { background: none; padding: 0; color: #7ee0a8; }
+.ofc-terms b.role-bench { color: var(--flood); } .ofc-terms b.role-out { color: #ff8f86; }
+.ofc-btn { font-size: 18px; min-height: 48px; padding: 8px 12px; }

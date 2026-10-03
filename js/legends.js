@@ -272,8 +272,9 @@ const Legends = {
 
   homeClub(world, L) {
     if (world.clubs[L.club]) return L.club;
-    const lg = { TUR: 'TR1', ENG: 'ENG', ESP: 'ESP', GER: 'GER', ITA: 'ITA', FRA: 'FRA' }[L.nat];
-    const pool = Object.values(world.clubs).filter((c) => (lg ? c.league === lg : c.league !== 'TR2') && c.rating >= 74);
+    const lg = { TUR: 'TR1', ENG: 'ENG', ESP: 'ESP', GER: 'GER', ITA: 'ITA', FRA: 'FRA', NED: 'NED', POR: 'POR', BRA: 'BRA', ARG: 'ARG' }[L.nat];
+    const top = (c) => (LEAGUES.find((l) => l.id === c.league) || {}).level === 1;
+    const pool = Object.values(world.clubs).filter((c) => (lg ? c.league === lg : top(c)) && c.rating >= 74);
     return (U.pick(pool) || Object.values(world.clubs)[0]).id;
   },
 

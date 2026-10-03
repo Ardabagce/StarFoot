@@ -132,12 +132,16 @@ const World = {
 
   // Sezon sonu: küme düşme, güç değişimi, kadro yenileme
   endSeason(world) {
-    const tr1 = World.sortedTable(world.leagues.TR1);
-    const tr2 = World.sortedTable(world.leagues.TR2);
-    const down = tr1.slice(-3).map((r) => r.id);
-    const up = tr2.slice(0, 3).map((r) => r.id);
-    down.forEach((id) => (world.clubs[id].league = 'TR2'));
-    up.forEach((id) => (world.clubs[id].league = 'TR1'));
+    // her ülkede üst ligin son 3'ü düşer, alt ligin ilk 3'ü çıkar
+    const down = [], up = [];
+    Object.entries(LEAGUE_DOWN).forEach(([hi, lo]) => {
+      if (!world.leagues[hi] || !world.leagues[lo]) return;
+      const d = World.sortedTable(world.leagues[hi]).slice(-3).map((r) => r.id);
+      const u = World.sortedTable(world.leagues[lo]).slice(0, 3).map((r) => r.id);
+      d.forEach((id) => (world.clubs[id].league = lo));
+      u.forEach((id) => (world.clubs[id].league = hi));
+      down.push(...d); up.push(...u);
+    });
     // Güç kayması: başarılı takımlar biraz güçlenir
     LEAGUES.forEach((l) => {
       const tbl = World.sortedTable(world.leagues[l.id]);
@@ -164,6 +168,26 @@ const World = {
       world.leagues[l.id] = World.newLeagueSeason(Object.values(world.clubs).filter((c) => c.league === l.id).map((c) => c.id));
     });
     return { down, up };
+  },
+
+  // Eski kayıtlarda olmayan yeni ligleri ve kulüpleri ekler (sezon ortasındaysa geçmiş haftaları simüle eder)
+  ensureLeagues(world, year, round) {
+    let added = false;
+    CLUB_LIST.forEach(([id, name, short, league, rating, c1, c2, pool]) => {
+      if (world.clubs[id]) return;
+      const club = { id, name, short, league, rating, c1, c2, pool };
+      club.roster = World.genRoster(club, year);
+      world.clubs[id] = club;
+      added = true;
+    });
+    LEAGUES.forEach((l) => {
+      if (world.leagues[l.id]) return;
+      const lg = World.newLeagueSeason(Object.values(world.clubs).filter((c) => c.league === l.id).map((c) => c.id));
+      world.leagues[l.id] = lg;
+      for (let r = 0; r < (round || 0) && r < lg.fixtures.length; r++) World.simRound(lg, r, (id) => world.clubs[id].roster, (id) => world.clubs[id].rating, []);
+      added = true;
+    });
+    return added;
   },
 
   teamAvg(club) {
