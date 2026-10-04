@@ -283,7 +283,7 @@ const Cups = {
       captain: Captain.is(), lg: cup.youth ? 'ucl' : cup.dom ? s.world.clubs[s.clubId].league : cup.id, sbTag: cup.youth ? 'GELİŞİM LİGİ' : cup.dom ? cup.name.toLocaleUpperCase('tr') : null,
     };
     const p = s.player;
-    ctx.role = p.injuryWeeks > 0 ? 'out' : cup.youth ? Game.roleFor(Player.overall(p, true), cup.str[s.clubId], true) : Game.roleFor(Player.overall(p, true), s.world.clubs[s.clubId].rating, false);
+    ctx.role = p.injuryWeeks > 0 || Life.banned() ? 'out' : cup.youth ? Game.roleFor(Player.overall(p, true), cup.str[s.clubId], true) : Game.roleFor(Player.overall(p, true), s.world.clubs[s.clubId].rating, false);
     ctx.subChance = 0.6;
     const sum = await Match.run(ctx, s);
     let win = sum.hs > sum.as ? 0 : sum.as > sum.hs ? 1 : null, pens = null;
@@ -342,8 +342,13 @@ const Cups = {
       pool = pool.map((n) => ({ n, k: n.rating + U.rand(-6, 6) })).sort((a, b) => b.k - a.k).map((x) => x.n.code).slice(0, size);
     }
     const p = s.player;
+    // çifte vatandaş henüz seçim yapmadıysa turnuvada olan ve onu çağıran ülke seçilir (kalıcı)
+    if (!p.natLocked && p.parents && p.parents.f !== p.parents.m) {
+      const opt = Game.eligibleNats().map((c) => Game.nat(c)).find((n) => n && pool.includes(n.code) && Player.overall(p, true) >= n.rating - 7 - (p.fame > 40 ? 2 : 0));
+      if (opt && p.age >= 17 && !Life.banned() && p.injuryWeeks === 0) { p.nation = opt.code; p.natLocked = true; Game.news(`${opt.name} milli takımını seçtin: turnuva kadrosundasın!`, 'good'); }
+    }
     const nat = Game.nation();
-    const called = p.age >= 17 && p.injuryWeeks === 0 && pool.includes(nat.code) && Player.overall(p, true) >= nat.rating - 7 - (p.fame > 40 ? 2 : 0);
+    const called = p.age >= 17 && p.injuryWeeks === 0 && !Life.banned() && pool.includes(nat.code) && Player.overall(p, true) >= nat.rating - 7 - (p.fame > 40 ? 2 : 0);
     s.tournament = { type, name, alive: U.shuffle(pool), called, inPool: pool.includes(nat.code), done: false, myGoals: 0, teams: pool.slice(), elim: {} };
   },
 

@@ -44,6 +44,7 @@ const Player = {
       name: opts.name,
       surname: opts.surname,
       nation: opts.nation,
+      parents: { f: opts.nation, m: opts.mother || opts.nation },
       position: opts.position,
       foot: opts.foot,
       age,

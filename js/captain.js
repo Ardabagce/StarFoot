@@ -93,6 +93,33 @@ const Shirt = {
     return m;
   },
 
+  // Yeni kulübe gelince: büyük yıldız değilsen 1-11 ve ikonik numaralar hemen verilmez
+  onJoin() {
+    const s = Game.state, p = s.player;
+    const roster = Game.teamRoster(s.clubId) || [];
+    const ovr = Player.overall(p, true), teamR = Game.teamRating(s.clubId);
+    const big = p.fame >= 45 || ovr >= teamR + 7;
+    const want = p.shirt;
+    const used = new Set();
+    roster.forEach((x, i) => {
+      if (!x.num) { let n = ((i * 7) % 30) + 2; while (used.has(n)) n = (n % 98) + 1; x.num = n; }
+      used.add(x.num);
+    });
+    const holder = roster.find((x) => x.num === want);
+    let num;
+    if (big && (!holder || (!holder.star && holder.r < ovr))) {
+      num = want;
+      if (holder) { let n = 30; while (used.has(n) || n === want) n++; holder.num = n; }
+    } else {
+      const free = Array.from({ length: 28 }, (_, i) => i + 13).filter((n) => !used.has(n));
+      num = free.length ? U.pick(free) : want;
+    }
+    p.shirt = num;
+    p.numReq = null;
+    if (num !== want) Game.news(`Yeni kulübünde ${num} numaralı formayı giyeceksin. ${want} numara için sahada kendini kanıtlayıp talepte bulunabilirsin.`, '');
+    else Game.news(`Yıldız transferi! ${want} numaralı formanı yeni kulübünde de giyeceksin.`, 'good');
+  },
+
   canAsk() {
     const s = Game.state;
     return !Game.inStreet() && s.player.numReq !== `${s.season.year}-${s.clubId}`;

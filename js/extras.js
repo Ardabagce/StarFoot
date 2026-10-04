@@ -482,6 +482,7 @@ const SOCIAL_COMMENTS = {
   motm: ['Maçın adamı değil maçın kralı', 'Hoca bunu her maç oynat', 'Reyting değil roket', 'Bugün sahada tek kişi vardı'],
   trophy: ['Vitrine bir kupa daha!', 'Şampiyon olan kim? Biziz!', 'Bu daha başlangıç', 'Gözlerim doldu valla'],
   transfer: ['Yeni takımına hayırlı olsun', 'Eski takım üzgün yeni takım mutlu', 'Formanı şimdiden aldım', 'Bonservis kaç ya?'],
+  sponsor: ['Reklam ama yakışmış', 'Ben de aldım bundan', 'Para kokuyor', 'Marka doğru adamı seçmiş', 'İndirim kodu var mı?'],
   life: ['Bu araba benim maaşımdan pahalı', 'Bir tur atalım mı?', 'Hak ettin kardeşim', 'Zenginlik yakışmış'],
   daily: ['Antrenmanda bile karizma', 'Takip edene takip', 'Bu selfie maç kazandırır', 'Saç modeli efsane', 'Beni de antrenmana götür', 'Annemle beraber hayranız'],
 };
@@ -531,7 +532,7 @@ const Social = {
       id: so.seq, seed: U.randi(1, 2e9), kind, scene, text, likes, comments, nc: Math.max(2, Math.round(likes * U.rand(0.01, 0.03))),
       w: `${s.season.year} H${s.season.round + 1}`, y: s.season.year, r: s.season.round,
       cid: opts.c1 ? null : club && club.id, c1: opts.c1 || (club && club.c1), c2: opts.c2 || (club && club.c2), short: opts.short || (club && club.short), num: p.shirt,
-      loc: opts.loc || SocialArt.locFor(scene, club),
+      loc: opts.loc || SocialArt.locFor(scene, club), brand: opts.brand,
     });
     so.posts = so.posts.slice(0, 15);
     so.followers += Math.round(likes * 0.03 * boost);
@@ -686,6 +687,26 @@ const WorldNews = {
     { id: 'referee', f: (W) => `${W.anyClub()} maçının hakemi kartlarını soyunma odasında unuttu. Sarı kartı "zihinden" gösterdi.` },
     { id: 'drone', f: (W) => `${W.anyClub()} antrenmanını izleyen dron, kaleci tarafından yumrukla uzaklaştırıldı. Kaleci: "Refleks."` },
   ],
+  // Haftanın yıldız haberi: dönemin en iyilerinden birinin son maçı
+  starStory() {
+    const s = Game.state, w = s.world;
+    const top = Legends.active(w).sort((a, b) => b.r - a.r).slice(0, 14);
+    const res = WorldNews.lastResults();
+    const cand = U.shuffle(top).map((x) => { const r = res.find((q) => q.h === x.L.club || q.a === x.L.club); return r ? { x, r } : null; }).find(Boolean);
+    if (!cand) return;
+    const { x, r } = cand;
+    const home = r.h === x.L.club;
+    const gf = home ? r.hs : r.as, ga = home ? r.as : r.hs;
+    const club = w.clubs[x.L.club], opp = w.clubs[home ? r.a : r.h];
+    if (!club || !opp) return;
+    let t;
+    if (gf > ga && gf >= 3) t = `${x.n} şov yaptı! ${club.name}, ${opp.name} karşısında ${gf}-${ga} kazandı; yıldız oyuncu ${Math.min(gf, U.randi(2, 3))} golle maça damga vurdu.`;
+    else if (gf > ga) t = `${x.n} yine sahnede! ${club.name}, ${opp.name} engelini ${gf}-${ga} aştı; galibiyet golü ondan geldi.`;
+    else if (gf === ga) t = `${x.n} kilidi açamadı. ${club.name} ile ${opp.name} ${gf}-${ga} berabere kaldı.`;
+    else t = `Şok sonuç: ${x.n}'li ${club.name} kayıp! ${opp.name} karşısında ${gf}-${ga} yenilen ekipte yıldız oyuncu eleştirilerin hedefinde.`;
+    Game.news(t, 'world', { star: { n: x.n, club: club.id } });
+  },
+
   roll() {
     const s = Game.state;
     s.newsUsed = s.newsUsed || [];

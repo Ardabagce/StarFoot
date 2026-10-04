@@ -19,6 +19,7 @@ const SocialArt = {
   // Gönderinin sahnesi metne ve türe göre belirlenir
   sceneFor(kind, text) {
     const t = text || '';
+    if (kind === 'sponsor') return 'sponsor';
     if (kind === 'goal') return /Mahalle/.test(t) ? 'street' : 'goal';
     if (kind === 'motm') return 'motm';
     if (kind === 'trophy') return /kaptan/i.test(t) ? 'captain' : /Gelecek sezon/.test(t) ? 'europe' : 'trophy';
@@ -288,7 +289,7 @@ const SocialArt = {
     const club = (post.cid && Game.state.world.clubs[post.cid]) || (Game.inStreet() ? null : Game.club());
     const P = { c1: post.c1 || (club ? club.c1 : '#2a6fdb'), c2: post.c2 || (club ? club.c2 : '#ffffff'), short: post.short || (club ? club.short : '') };
     const kit = post.cid || club ? Sprites.kit({ id: post.cid || (club && club.id), c1: P.c1, c2: P.c2 }, false) : { shirt: P.c1, alt: P.c2, pattern: 'plain', shorts: P.c2, socks: P.c1 };
-    const look = Sprites.look(7);
+    const look = Sprites.look(post.lookSeed || 7);
     const num = post.num || p.shirt;
     const scene = post.scene || SocialArt.sceneFor(post.kind, post.text);
     const fig = (sx, sy, h, o) => SocialArt.lit(c, (l) => Sprites.figure(l, sx, sy, h, Object.assign({ kit, look, facing: 'down', noShadow: true, t: 0 }, o)));
@@ -324,6 +325,25 @@ const SocialArt = {
       if (scene === 'captain') { c.fillStyle = '#ffd84a'; c.fillRect(W * 0.5 - H * 0.2, H * 0.52, H * 0.075, H * 0.035); }
     } else if (scene === 'number') {
       fig(W * 0.5, H * 1.2, H * 0.95, { facing: 'up', number: num });
+    } else if (scene === 'sponsor') {
+      // reklam çekimi: marka duvarı, ürünle poz
+      SocialArt.backdrop(c, W, H, P, (P.short || 'MARKA').toLocaleUpperCase('tr'));
+      SocialArt.glow(c, W * 0.15, H * 0.2, W * 0.4, 'rgba(255,255,255,0.7)');
+      const cas = SocialArt.casual(r, P);
+      const h = H * 0.8, sx = W * 0.45, sy = H * 1.08;
+      SocialArt.lit(c, (l) => Sprites.figure(l, sx, sy, h, { kit: cas, look, facing: 'down', noShadow: true, t: 0, armA: 0.5 }));
+      const px = sx + h * 0.32, py = sy - h * 0.62;
+      c.save(); c.shadowColor = 'rgba(0,0,0,0.4)'; c.shadowBlur = 16;
+      const b = post.brand;
+      if (b === 'boot') { c.fillStyle = P.c1; c.beginPath(); c.ellipse(px, py, h * 0.11, h * 0.04, -0.2, 0, Math.PI * 2); c.fill(); c.fillStyle = P.c2; c.fillRect(px - h * 0.05, py - h * 0.02, h * 0.1, h * 0.012); }
+      else if (b === 'drink') { c.fillStyle = P.c1; c.fillRect(px - h * 0.03, py - h * 0.08, h * 0.06, h * 0.14); c.fillStyle = P.c2; c.fillRect(px - h * 0.03, py - h * 0.03, h * 0.06, h * 0.03); }
+      else if (b === 'watch') { c.fillStyle = '#c9a063'; c.beginPath(); c.arc(px, py, h * 0.045, 0, Math.PI * 2); c.fill(); c.fillStyle = '#111'; c.beginPath(); c.arc(px, py, h * 0.032, 0, Math.PI * 2); c.fill(); }
+      else if (b === 'car') { SocialArt.car(c, W * 0.52, H * 0.98, W * 0.46, P.c1); }
+      else { c.fillStyle = '#111'; c.fillRect(px - h * 0.035, py - h * 0.065, h * 0.07, h * 0.13); c.fillStyle = P.c2; c.fillRect(px - h * 0.028, py - h * 0.055, h * 0.056, h * 0.1); }
+      c.restore();
+      c.font = `800 ${Math.round(H * 0.05)}px "Saira Condensed", sans-serif`; c.textAlign = 'right'; c.fillStyle = P.c1;
+      c.fillText((P.short || '').toLocaleUpperCase('tr'), W * 0.95, H * 0.1); c.textAlign = 'left';
+      tone = 'none';
     } else if (scene === 'motm' || scene === 'transfer') {
       SocialArt.backdrop(c, W, H, P, scene === 'motm' ? 'MAÇIN OYUNCUSU' : (P.short || 'STARFOOT'));
       // fotoğrafçı flaşları

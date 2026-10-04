@@ -101,9 +101,9 @@ const Game = {
     const f = fx.find(([h, a]) => h === Game.state.clubId || a === Game.state.clubId);
     return f ? { home: f[0], away: f[1] } : null;
   },
-  news(txt, type = '') {
+  news(txt, type = '', extra) {
     const s = Game.state;
-    s.news.unshift({ t: txt, type, w: `${s.season.year} H${s.season.round + 1}` });
+    s.news.unshift(Object.assign({ t: txt, type, w: `${s.season.year} H${s.season.round + 1}` }, extra || {}));
     s.news = s.news.slice(0, 40);
   },
   toast(msg, type = '') {
@@ -457,9 +457,9 @@ const Game = {
       lg: youth ? 'youth' : Game.club().league,
     };
     const ovr = Player.overall(p, true);
-    if (p.injuryWeeks > 0) {
+    if (p.injuryWeeks > 0 || Life.banned()) {
       ctx.role = 'out';
-      Game.toast('Sakat olduğun için bu maçta oynayamıyorsun.', 'bad');
+      Game.toast(Life.banned() ? 'FIFA cezalı olduğun için bu maçta oynayamıyorsun.' : 'Sakat olduğun için bu maçta oynayamıyorsun.', 'bad');
     } else {
       ctx.role = Game.roleFor(ovr, Game.teamRating(s.clubId), youth);
       ctx.subChance = youth ? 0.85 : 0.6;
@@ -613,7 +613,7 @@ const Game = {
       if (sum.assists) line += ` • 🎯 ${sum.assists} asist`;
       if (sum.motm) line += ' • ⭐ Maçın adamı';
       Game.news(line, sum.res === 'W' ? 'good' : sum.res === 'L' ? 'bad' : '');
-      if (bonus > 0) Game.news(`💰 Maç primi: ${U.money(bonus)}`);
+      if (bonus > 0) Game.news(`Maç primi: ${U.money(bonus)}`, 'me');
     } else {
       Player.addMorale(p, -3);
       if (p.injuryWeeks === 0) Player.addRel(p, 'coach', 0.5);
@@ -654,6 +654,7 @@ const Game = {
     p.rel.fans += (35 - p.rel.fans) * 0.02;
     if (!Game.isYouth()) Player.addFame(p, -0.08);
 
+    if (!intl && typeof Life !== 'undefined') Life.week(s);
     if (!intl) {
       const r = s.season.round;
       // milli takım
@@ -668,18 +669,46 @@ const Game = {
     if (!s.pendingEvent && U.chance(0.2)) Events.roll();
     Social.week();
     if (!intl && U.chance(0.7)) WorldNews.roll();
+    if (!intl && !Game.inStreet()) WorldNews.starStory();
     Ach.check();
     Game.save();
     Game.render();
     Game.checkPending();
   },
 
+  // Oynayabileceği milli takımlar (anne-baba memleketi; ilk resmi davetten sonra kilitlenir)
+  eligibleNats() {
+    const p = Game.p;
+    if (p.natLocked || !p.parents || p.parents.f === p.parents.m) return [p.nation];
+    return [p.parents.f, p.parents.m];
+  },
+
   checkCallup() {
     const s = Game.state, p = s.player;
-    const nat = Game.nation();
     const ovr = Player.overall(p, true);
-    const need = nat.rating - 7 - (p.fame > 40 ? 2 : 0);
-    if (p.age >= 17 && ovr >= need && p.injuryWeeks === 0) {
+    if (p.age < 17 || p.injuryWeeks > 0 || Life.banned()) return;
+    const needOf = (n) => n.rating - 7 - (p.fame > 40 ? 2 : 0);
+    const want = Game.eligibleNats().map((c) => Game.nat(c)).filter((n) => n && ovr >= needOf(n));
+    if (!want.length) return;
+    const call = (code) => {
+      p.nation = code; p.natLocked = true;
+      Game.callup(code);
+      Game.save(); Game.render();
+    };
+    if (!p.natLocked && Game.eligibleNats().length > 1) {
+      // iki ülkeden de davet: seçim kalıcıdır
+      const btns = want.map((n) => ({ t: `${n.name} formasını seç`, fn: () => call(n.code) }));
+      btns.push({ t: 'Şimdilik bekle', cls: 'btn-ghost', fn: () => Game.news('Milli takım davetini şimdilik bekletiyorsun.', '') });
+      Game.modal(`<div class="ev-tag">Milli Takım Daveti</div><h3>${want.length > 1 ? 'İki ülke de seni istiyor!' : `${want[0].name} seni çağırdı`}</h3><p>${want.length > 1 ? `Hem baba memleketin ${U.esc(Game.nat(p.parents.f).name)} hem anne memleketin ${U.esc(Game.nat(p.parents.m).name)} milli takımı seni kadroya davet etti.` : `Anne-baba memleketlerinden ${U.esc(want[0].name)} seni kadroya çağırdı.`} Bir ülkeyi seçersen artık diğeri için oynayamazsın.</p>`, btns);
+      return;
+    }
+    Game.callup(want[0].code);
+  },
+
+  callup(code) {
+    const s = Game.state, p = s.player;
+    const nat = Game.nat(code);
+    {
       const opp = U.pick(Game.nations().filter((n) => n.code !== nat.code));
       s.pendingIntl = opp.code;
       Game.news(`${nat.flag} MİLLİ TAKIMA ÇAĞRILDIN! ${opp.flag} ${opp.name} maçı seni bekliyor.`, 'good');
@@ -719,7 +748,7 @@ const Game = {
     const free = mandatory && !Game.isYouth();
     return picks.map((c) => ({
       clubId: c.id,
-      wage: Math.round(Game.wageFor(c.rating, ovr) * ((typeof LEAGUE_PAY !== 'undefined' && LEAGUE_PAY[c.league]) || 1) / 100) * 100,
+      wage: Math.round(Game.wageFor(c.rating, ovr) * ((typeof LEAGUE_PAY !== 'undefined' && LEAGUE_PAY[c.league]) || 1) * (1 + Life.mgrQ() * 0.06) / 100) * 100,
       years: U.randi(2, 5),
       fee: free ? 0 : Math.round((Game.isYouth() ? val * U.rand(0.1, 0.2) : val * U.rand(0.85, 1.3) * (1 + (s.contract.years || 0) * 0.05)) / 50000) * 50000,
       feeType: free ? 'free' : Game.isYouth() ? 'youth' : 'fee',
@@ -739,7 +768,7 @@ const Game = {
     const ss = Game.state.season.stats;
     const avg = ss.apps ? ss.ratingSum / ss.apps : 6.6;
     const bonus = avg >= 7.4 ? 2 : avg >= 6.9 ? 1 : avg < 6.2 && ss.apps > 3 ? -1 : 0;
-    return U.clamp(U.randi(lo, hi) + bonus, 0, 5);
+    return U.clamp(U.randi(lo, hi) + bonus + Life.mgrQ(), 0, 6);
   },
 
   transferWeek(r) {
@@ -800,6 +829,7 @@ const Game = {
     s.clubId = id;
     s.contract = { type: 'pro', clubId: id, wage, years };
     p.rel.coach = 50; p.rel.team = 45; p.rel.fans = Math.max(25, p.rel.fans * 0.5);
+    Shirt.onJoin();
   },
 
   // ---------- Sezon sonu ----------
@@ -1005,13 +1035,23 @@ const Game = {
       <span class="hi-club">${UI.shirt(Game.club())}${U.esc(Game.teamName())}</span>
       <span class="hi-week">${s.season.year} · <b>${Math.min(s.season.round + 1, Game.rounds())}</b>/${Game.rounds()}. HAFTA</span>
       <span class="hi-money"><i class="hm-coin">${Icon('coin')}</i><span class="hm-t"><small>Bakiye</small><b>${U.money(p.money)}</b></span>${Game.weeklyIncome() > 0 ? `<em class="hm-inc">+${U.money(Game.weeklyIncome())}<small>/hf</small></em>` : ''}</span>`;
+    // eski sekme adları yeni yapıya taşınır
+    const alias = { player: 'profile', career: 'profile', world: 'league', shop: 'life' };
+    if (alias[Game.tab]) {
+      if (Game.tab === 'world') UI.lgView = 'world';
+      if (Game.tab === 'shop') UI.lifeView = 'shop';
+      if (Game.tab === 'career') UI.profView = 'career';
+      if (Game.tab === 'player') UI.profView = 'profile';
+      Game.tab = alias[Game.tab];
+    }
     U.$$('#tabs button').forEach((b) => b.classList.toggle('on', b.dataset.tab === Game.tab));
     document.getElementById('status').innerHTML = UI.status();
-    document.getElementById('side').innerHTML = Game.tab === 'player' ? '' : UI.playerCard();
+    document.getElementById('side').innerHTML = Game.tab === 'profile' ? '' : UI.playerCard();
     const main = document.getElementById('main');
     main.innerHTML = UI[Game.tab]();
     UI.drawFigure();
     Social.drawAvatar();
+    UI.paintPaper();
     UI.strip(main);
     UI.bind(main);
   },
@@ -1052,31 +1092,88 @@ const UI = {
   },
 
   // Gazete görünümlü haberler
+  // Kişisel bildirimler (prim, bahis, kumarhane, sponsor bitişi): gazeteden ayrı
+  inbox() {
+    const s = Game.state;
+    const me = s.news.filter((n) => n.type === 'me').slice(0, 5);
+    if (!me.length) return '';
+    return `<section class="card inbox"><div class="card-h"><span>${Icon('wallet')} Bildirimler</span></div>
+      <ul>${me.map((n) => `<li><span>${U.esc(U.plain(n.t))}</span><small>${n.w || ''}</small></li>`).join('')}</ul></section>`;
+  },
+
   paper() {
     const s = Game.state;
-    const all = s.news.slice(0, UI.more.news ? 40 : 9);
-    if (!all.length) return '';
-    const kicker = (n) => (n.type === 'world' ? 'Dünya' : /transfer|imza|sözleşme/i.test(n.t) ? 'Transfer' : /madalya|kupa|Şampiyon|ödül/i.test(n.t) ? 'Ödül' : n.type === 'bad' ? 'Gündem' : n.type === 'good' ? 'Kulüp' : 'Haber');
-    const leadI = Math.max(0, all.findIndex((n) => n.type !== 'world'));
-    const lead = all[leadI];
-    const rest = all.filter((_, i) => i !== leadI);
-    const headline = (t) => {
-      const plain = U.plain(t.replace(/<[^>]+>/g, ''));
-      const cut = plain.search(/[.!?](\s|$)/);
-      return cut > 20 && cut < 90 ? [plain.slice(0, cut + 1), plain.slice(cut + 1).trim()] : [plain, ''];
+    const items = s.news.filter((n) => n.type !== 'me' && !/Maç primi/.test(n.t));
+    if (!items.length) return '';
+    const kicker = (n) => (n.star ? 'Yıldızlar' : n.type === 'world' ? (/Magazin/.test(n.t) ? 'Magazin' : 'Dünya') : /transfer|imza|sözleşme/i.test(n.t) ? 'Transfer' : /madalya|kupa|Şampiyon|ödül/i.test(n.t) ? 'Ödül' : /FIFA|ceza/i.test(n.t) ? 'Son Dakika' : /karşısında|kazandı|kaybetti|berabere/.test(n.t) ? 'Maç' : n.type === 'bad' ? 'Gündem' : 'Kulüp');
+    const big = /ŞAMPİYON|Şampiyon|transfer oldun|MİLLİ TAKIMA|Hat-trick|FIFA|evlendi|sözleşme imzaladın/;
+    const top = items.slice(0, 8);
+    const lead = top.find((n) => n.type !== 'world' && big.test(n.t)) || top.find((n) => n.star) || items[0];
+    const rest = items.filter((n) => n !== lead).slice(0, UI.more.news ? 30 : 6);
+    const clean = (t) => U.plain(t.replace(/<[^>]+>/g, ''));
+    const split = (t) => {
+      const plain = clean(t);
+      const cut = plain.search(/[.!?:](\s|$)/);
+      return cut > 14 && cut < 95 ? [plain.slice(0, cut + 1), plain.slice(cut + 1).trim()] : [plain, ''];
     };
-    const [h1, sub] = headline(lead.t);
+    const [h1, sub] = split(lead.t);
+    UI.paperLead = lead;
     const no = (s.season.year - (s.startYear || s.season.year)) * 40 + s.season.round + 1;
+    // kısa kısa: kendi liginin son hafta sonuçları
+    const lg = Game.isYouth() || Game.inStreet() ? null : Game.league();
+    const lastR = lg ? Math.max(0, ...lg.results.map((r) => r.round)) : 0;
+    const briefs = lg ? lg.results.filter((r) => r.round === lastR).slice(0, 7) : [];
+    const sn = (id) => U.esc((s.world.clubs[id] || {}).short || id);
+    const tbl = lg ? World.sortedTable(lg).slice(0, 5) : [];
+    const sc = lg ? World.topScorers(lg, 1)[0] : null;
+    const cap = lead.star ? `${lead.star.n} · ${(s.world.clubs[lead.star.club] || {}).name || ''}` : Player.fullName(s.player);
     return `<section class="card paper">
       <div class="pp-mast">
         <div class="pp-top"><span>${s.season.year} · ${Math.min(s.season.round + 1, Game.rounds())}. Hafta</span><span>Sayı ${no}</span></div>
         <h2>StarFoot Gazetesi</h2>
         <div class="pp-sub">Futbolun nabzı · Kulüpten dünyaya</div>
       </div>
-      <article class="pp-lead"><span class="pp-k">${kicker(lead)}</span><h3>${U.esc(h1)}</h3>${sub ? `<p>${U.esc(sub)}</p>` : ''}<small>${lead.w || ''}</small></article>
-      <div class="pp-cols">${rest.map((n) => `<article class="pp-item ${n.type}"><span class="pp-k">${kicker(n)}</span><p>${n.t}</p><small>${n.type === 'world' ? 'Dünya Servisi' : n.w || ''}</small></article>`).join('')}</div>
-      ${s.news.length > 9 ? UI.moreBtn('news', 'Tüm haberler') : ''}
+      <div class="pp-front">
+        <article class="pp-lead">
+          <figure class="pp-fig"><canvas class="pp-photo" aria-hidden="true"></canvas><figcaption>${U.esc(cap)} · Foto: StarFoot Ajans</figcaption></figure>
+          <span class="pp-k">${kicker(lead)}</span><h3>${U.esc(h1)}</h3>${sub ? `<p>${U.esc(sub)}</p>` : ''}<small>${lead.w || ''}</small>
+        </article>
+        ${lg ? `<aside class="pp-side">
+          ${briefs.length ? `<div class="pp-box"><h4>Kısa Kısa · ${lastR + 1}. Hafta</h4><ul>${briefs.map((r) => `<li><span>${sn(r.h)}</span><b>${r.hs}-${r.as}</b><span>${sn(r.a)}</span></li>`).join('')}</ul></div>` : ''}
+          <div class="pp-box"><h4>Zirve</h4><ol>${tbl.map((r) => `<li class="${r.id === s.clubId ? 'me' : ''}"><span>${sn(r.id)}</span><b>${r.pts}</b></li>`).join('')}</ol>${sc ? `<p class="pp-sc">Gol kralı: <b>${U.esc(sc.name)}</b> (${sc.g})</p>` : ''}</div>
+        </aside>` : ''}
+      </div>
+      <div class="pp-cols">${rest.map((n) => { const [a, b] = split(n.t); return `<article class="pp-item ${n.type}"><span class="pp-k">${kicker(n)}</span><h5>${U.esc(a)}</h5>${b ? `<p>${U.esc(b)}</p>` : ''}<small>${n.type === 'world' ? 'StarFoot Dünya Servisi' : n.w || ''}</small></article>`; }).join('')}</div>
+      ${items.length > 7 ? UI.moreBtn('news', 'Tüm haberler') : ''}
     </section>`;
+  },
+
+  // Manşet fotoğrafı (yıldız haberi ya da senin haberin)
+  paintPaper() {
+    const cv = document.querySelector('.pp-photo');
+    const lead = UI.paperLead;
+    if (!cv || !lead || typeof SocialArt === 'undefined') return;
+    const s = Game.state;
+    let hsh = 0; for (const ch of lead.t) hsh = (hsh * 31 + ch.charCodeAt(0)) >>> 0;
+    let post;
+    if (lead.star) {
+      const c = s.world.clubs[lead.star.club] || Game.club();
+      let ls = 0; for (const ch of lead.star.n) ls = (ls * 31 + ch.charCodeAt(0)) % 9973;
+      const scene = /kaybetti|kayıp|açamadı|kurtaramadı/.test(lead.t) ? 'europe' : 'goal';
+      post = { id: 'np' + hsh, seed: hsh, kind: 'goal', scene, cid: c.id, c1: c.c1, c2: c.c2, short: c.short, num: 7 + (ls % 5), lookSeed: ls + 1 };
+    } else {
+      const c = Game.club() || { c1: '#c8102e', c2: '#fff', short: '' };
+      const scene = /ŞAMPİYON|Şampiyon/.test(lead.t) ? 'trophy' : /transfer|imza/i.test(lead.t) ? 'transfer' : /MİLLİ/.test(lead.t) ? 'camp' : /FIFA|ceza/.test(lead.t) ? 'studio' : 'goal';
+      post = { id: 'np' + hsh, seed: hsh, kind: 'goal', scene, cid: c.id, c1: c.c1, c2: c.c2, short: c.short, num: s.player.shirt };
+    }
+    const img = SocialArt.get(post);
+    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    const w = cv.clientWidth || 300, h = Math.round(w * 0.62);
+    cv.width = w * dpr; cv.height = h * dpr;
+    const sy = SocialArt.H * 0.12, shh = SocialArt.W * 0.62;
+    const g = cv.getContext('2d');
+    g.filter = 'grayscale(0.35) contrast(1.05)';
+    g.drawImage(img, 0, sy, SocialArt.W, shh, 0, 0, cv.width, cv.height);
   },
 
   moreBtn(k, label) {
@@ -1103,6 +1200,18 @@ const UI = {
   },
 
   player() { return UI.playerCard() + UI.celebCard() + Social.render(true); },
+
+  // Profil: oyuncu kartı, sosyal medya ve kariyer tek sekmede
+  profile() {
+    const nav = UI.viewNav('profView', [['profile', 'star', 'Profil'], ['career', 'career', 'Kariyer']]);
+    return nav + ((UI.profView || 'profile') === 'career' ? UI.career() : UI.player());
+  },
+
+  // Yaşam: aile, ilişkiler, menajer, sponsorlar, gece hayatı ve mağaza
+  life() {
+    const nav = UI.viewNav('lifeView', [['life', 'heart', 'Yaşam'], ['shop', 'shop', 'Mağaza']]);
+    return nav + ((UI.lifeView || 'life') === 'shop' ? UI.shop() : Life.screen());
+  },
 
   // Gol sevinci seçimi: kariyer golleriyle yenileri açılır
   celebCard() {
@@ -1283,6 +1392,7 @@ const UI = {
         <button class="btn btn-ghost" data-reject="1">Teklifleri Reddet</button>
       </section>` : ''}
       ${Social.render(false)}
+      ${UI.inbox()}
 ${UI.paper()}`;
   },
 
@@ -1321,7 +1431,9 @@ ${UI.paper()}`;
 
   league() {
     const s = Game.state;
-    if (Game.inStreet()) return `<section class="card"><div class="card-h"><span>${Icon('squad')} Henüz bir kulübün yok</span></div><p class="muted">Önce mahalle maçında kendini göster. Scout seni bir altyapıya götürünce takımın ve ligin burada görünecek.</p></section>`;
+    const nav = UI.viewNav('lgView', [['table', 'table', 'Puan'], ['fix', 'whistle', 'Fikstür'], ['kings', 'ball', 'Krallık'], ['cups', 'career', 'Kupalar'], ['world', 'globe', 'Dünya']]);
+    if (UI.lgView === 'world') return nav + UI.world();
+    if (Game.inStreet()) return nav.replace(/data-vnav="lgView:(table|fix|kings|cups)"/g, 'disabled') + `<section class="card"><div class="card-h"><span>${Icon('squad')} Henüz bir kulübün yok</span></div><p class="muted">Önce mahalle maçında kendini göster. Scout seni bir altyapıya götürünce takımın ve ligin burada görünecek.</p></section>`;
     const lg = Game.league();
     const tbl = World.sortedTable(lg);
     const name = (id) => Game.teamName(id);
@@ -1377,7 +1489,7 @@ ${UI.paper()}`;
         </div>
         ${nextOpp ? `<p class="muted sq-note">Sıradaki rakip: <b>${U.esc(name(nextOpp))}</b> (${tbl.findIndex((r) => r.id === nextOpp) + 1}. sırada)</p>` : ''}
       </section>
-      ${UI.viewNav('lgView', [['table', 'table', 'Puan Durumu'], ['fix', 'whistle', 'Fikstür'], ['kings', 'ball', 'Krallıklar'], ['cups', 'career', 'Kupalar']])}
+      ${nav}
       ${view === 'cups' ? Cups.screen(s) : ''}
       ${view === 'kings' ? UI.kings(lg, name, clubOf, Game.leagueName()) : ''}
       ${view === 'table' ? `<section class="card">
@@ -1479,7 +1591,7 @@ ${UI.paper()}`;
     const lineAvg = (k) => avg(all.filter((x) => x.pos === k));
     const tbl = World.sortedTable(Game.league());
     const pos = tbl.findIndex((r) => r.id === s.clubId) + 1;
-    const top = sorted.filter((x) => !x.me)[0];
+    const top = sorted[0];
     return `
       <section class="card sq-head" style="--c1:${club.c1};--c2:${club.c2}">
         <div class="sq-id">${UI.shirt(club, 'big')}<div><h2>${U.esc(Game.teamName())}</h2><small>${U.esc(Game.leagueName())}</small></div></div>
@@ -1490,7 +1602,7 @@ ${UI.paper()}`;
           <div><span>Durumun</span><b class="role-${role}">${{ starter: "İlk 11", bench: 'Yedek', out: 'Kadro dışı' }[role]}</b></div>
         </div>
         <div class="sq-lines">${['FW', 'MF', 'DF', 'GK'].map((k) => `<div><span>${posL[k]}</span>${UI.bar(lineAvg(k), UI.statColor(lineAvg(k)))}<b>${lineAvg(k)}</b></div>`).join('')}</div>
-        ${top ? `<p class="muted sq-note">Takımın en iyisi: <b>${U.esc(top.n)}</b> (${top.r})${top.star ? ' · yıldız oyuncu' : ''}</p>` : ''}
+        ${top ? `<p class="muted sq-note">Takımın en iyisi: <b>${top.me ? `Sen (${U.esc(top.n)})` : U.esc(top.n)}</b> (${top.r})${top.star ? ' · yıldız oyuncu' : ''}</p>` : ''}
       </section>
       <div class="grid2">${Captain.card()}${Shirt.card()}</div>
       <div class="grid2 sq-grid">
@@ -1654,8 +1766,21 @@ ${UI.paper()}`;
       ${UI.wView === 'stars' ? `
       <section class="card">
         <div class="card-h"><span>${Icon('star')} Dönemin Yıldızları</span><small class="muted">${s.season.year}</small></div>
-        <div class="scorers">${Legends.active(s.world).sort((a, b) => b.r - a.r).slice(0, 20).map((x, i) => `<div class="scr"><span class="rk">${i + 1}</span>${UI.shirt(s.world.clubs[x.L.club] || Game.club())}<div class="scr-t"><b>${U.esc(x.n)}</b><small>${U.esc((s.world.clubs[x.L.club] || {}).name || '')} · ${x.age} yaş · ${{ GK: 'Kaleci', DF: 'Defans', MF: 'Orta Saha', FW: 'Forvet' }[x.pos]}</small></div><b class="g">${x.r}</b></div>`).join('')}</div>
+        <div class="scorers">${UI.topPlayers(25).map((x, i) => `<div class="scr ${x.me ? 'me' : ''}"><span class="rk">${i + 1}</span>${UI.shirt(s.world.clubs[x.club] || Game.club())}<div class="scr-t"><b>${U.esc(x.n)}${x.me ? ' (sen)' : ''}</b><small>${U.esc((s.world.clubs[x.club] || {}).name || '')} · ${x.age} yaş · ${{ GK: 'Kaleci', DF: 'Defans', MF: 'Orta Saha', FW: 'Forvet' }[x.pos]}</small></div><b class="g">${x.r}</b></div>`).join('')}</div>
       </section>` : ''}`;
+  },
+
+  // Dönemin en iyileri: efsaneler, kulüp kadrolarındaki en güçlü oyuncular ve sen
+  topPlayers(n) {
+    const s = Game.state, w = s.world;
+    const out = Legends.active(w).map((x) => ({ n: x.n, r: x.r, club: x.L.club, age: x.age, pos: x.pos }));
+    const seen = new Set(out.map((x) => x.n));
+    Object.values(w.clubs).forEach((c) => {
+      if (!LEAGUES.find((l) => l.id === c.league)) return;
+      (c.roster || []).forEach((pl) => { if (pl.r >= 76 && !seen.has(pl.n)) { seen.add(pl.n); out.push({ n: pl.n, r: pl.r, club: c.id, age: pl.age, pos: pl.pos }); } });
+    });
+    if (!Game.inStreet() && !Game.isYouth()) out.push({ n: Player.fullName(s.player), r: Player.overall(s.player), club: s.clubId, age: s.player.age, pos: s.player.position, me: true });
+    return out.sort((a, b) => b.r - a.r).slice(0, n);
   },
 
   // Lig seçici: varsayılan kapalı, ülkelere göre gruplu
@@ -1670,6 +1795,7 @@ ${UI.paper()}`;
   },
 
   bind(root) {
+    if (typeof Life !== 'undefined') Life.bind(root);
     U.$$('[data-focus]', root).forEach((b) => (b.onclick = () => { Game.state.trainFocus = b.dataset.focus; Game.render(); }));
     U.$$('[data-act]', root).forEach((b) => (b.onclick = () => Game.act(b.dataset.act)));
     U.$$('[data-more]', root).forEach((b) => (b.onclick = () => { UI.more[b.dataset.more] = !UI.more[b.dataset.more]; Game.render(); }));
@@ -1943,7 +2069,9 @@ const Create = {
         <div class="cr-grid">
           <label>Adın<input id="cr-name" maxlength="16" placeholder="Örn: Emre"></label>
           <label>Soyadın<input id="cr-sur" maxlength="18" placeholder="Örn: Yıldız"></label>
-          <label>Uyruğun<select id="cr-nat">${NATIONS.map((n) => `<option value="${n.code}">${n.name}</option>`).join('')}</select></label>
+          <label>Baba memleketi<select id="cr-nat">${NATIONS.map((n) => `<option value="${n.code}">${n.name}</option>`).join('')}</select></label>
+          <label>Anne memleketi<select id="cr-mom">${NATIONS.map((n) => `<option value="${n.code}">${n.name}</option>`).join('')}</select>
+            <small class="muted">Farklıysa iki milli takımdan da davet alabilirsin</small></label>
           <label>Ayak<select id="cr-foot"><option value="R">Sağ</option><option value="L">Sol</option></select></label>
           <label>Başlangıç yılı<select id="cr-year">${Array.from({ length: 2026 - 1980 + 1 }, (_, i) => 2026 - i).map((y) => `<option value="${y}">${y}</option>`).join('')}</select>
             <small class="muted">O dönemin yıldızlarıyla oynarsın</small></label>
@@ -1989,7 +2117,7 @@ const Create = {
       const name = document.getElementById('cr-name').value.trim() || 'Emre';
       const surname = document.getElementById('cr-sur').value.trim() || 'Yıldız';
       Game.newCareer({
-        name, surname, nation: document.getElementById('cr-nat').value, foot: document.getElementById('cr-foot').value,
+        name, surname, nation: document.getElementById('cr-nat').value, mother: (document.getElementById('cr-mom') || {}).value, foot: document.getElementById('cr-foot').value,
         position: Create.pos, alloc: Create.alloc, difficulty: Create.diff,
         year: +document.getElementById('cr-year').value, age: +document.getElementById('cr-age').value,
       });
