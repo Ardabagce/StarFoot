@@ -517,7 +517,10 @@ const Social = {
   week() {
     const p = Game.p, so = Social.ensure(p);
     const tgt = Social.target(p);
-    so.followers = Math.max(10, Math.round(so.followers + (tgt - so.followers) * 0.22 + so.followers * U.rand(-0.004, 0.01)));
+    // ünün altındaysan hızla yetişir; üstündeysen çok yavaş erir (maç kazanımları kalıcı olsun)
+    const f = so.followers;
+    const drift = f < tgt ? (tgt - f) * 0.15 : -(f - tgt) * 0.015;
+    so.followers = Math.max(10, Math.round(f + drift + f * U.rand(-0.002, 0.006)));
   },
   post(kind, text, boost = 1, opts = {}) {
     const p = Game.p, so = Social.ensure(p), s = Game.state;

@@ -283,6 +283,16 @@ const Life = {
     L.bets = keep;
   },
 
+  // Merkezde bekleyen sponsorluk teklifleri (Yaşam sekmesine gitmeden görünsün)
+  homeCard() {
+    const p = Game.p, L = p.life;
+    if (!L || !L.offers || !L.offers.length) return '';
+    return `<section class="card sp-home">
+      <div class="card-h"><span>${Icon('coin')} Sponsorluk Teklifi</span><small class="muted">${L.offers.length} marka seni istiyor</small></div>
+      <div class="lf-sps">${L.offers.map((o, i) => `<div class="lf-sp offer" style="--b1:${o.c1};--b2:${o.c2}"><i>${U.esc(o.name.slice(0, 2).toUpperCase())}</i><div><b>${U.esc(o.name)}</b><small>${o.l} · ${o.seasons} sezon · haftalık ${U.money(o.weekly)}</small></div><span class="lf-sp-b"><button class="btn" data-sp-ok="${i}">Kabul</button><button class="btn btn-ghost" data-sp-no="${i}">Reddet</button></span></div>`).join('')}</div>
+    </section>`;
+  },
+
   // ---------- ekran ----------
   screen() {
     const s = Game.state, p = s.player, L = Life.ensure(p);

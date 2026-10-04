@@ -1526,3 +1526,6 @@ kbd { background: var(--panel-2); border: 1px solid var(--line); padding: 0 5px;
 .lf-acts .act .ic { flex: none; }
 .lf-orig { font-size: 13px; margin: 0 0 10px; }
 .lf-orig b { color: var(--chalk); }
+.tabs button.badge { position: relative; }
+.tabs button.badge::after { content: ""; position: absolute; top: 6px; left: calc(50% + 10px); width: 9px; height: 9px; border-radius: 50%; background: #ff3d6e; box-shadow: 0 0 0 2px #050b1d; }
+.sp-home { border-color: rgba(255, 207, 63, .45); }

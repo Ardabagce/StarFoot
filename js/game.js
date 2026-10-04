@@ -626,6 +626,7 @@ const Game = {
     s.lastReport = {
       w: `${s.season.year} H${s.season.round + 1}`, opp: oppName, team: teamTxt, gf: sum.gf, ga: sum.ga, res: sum.res, rating: sum.played ? sum.rating : null,
       goals: sum.goals, assists: sum.assists, motm: sum.motm,
+      fol0: before.fol,
       d: { coach: p.rel.coach - before.coach, team: p.rel.team - before.team, fans: p.rel.fans - before.fans, fol: so1.followers - before.fol, fame: p.fame - before.fame, morale: p.morale - before.morale, money: p.money - before.money },
       why,
     };
@@ -668,6 +669,8 @@ const Game = {
     }
     if (!s.pendingEvent && U.chance(0.2)) Events.roll();
     Social.week();
+    // maç raporundaki takipçi farkı, haftalık değişim dahil gerçek farkı göstersin
+    if (s.lastReport && s.lastReport.fol0 != null && !s.lastReport.folDone) { s.lastReport.d.fol = Social.ensure(p).followers - s.lastReport.fol0; s.lastReport.folDone = true; }
     if (!intl && U.chance(0.7)) WorldNews.roll();
     if (!intl && !Game.inStreet()) WorldNews.starStory();
     Ach.check();
@@ -1045,6 +1048,8 @@ const Game = {
       Game.tab = alias[Game.tab];
     }
     U.$$('#tabs button').forEach((b) => b.classList.toggle('on', b.dataset.tab === Game.tab));
+    const lt = document.querySelector('#tabs [data-tab="life"]');
+    if (lt) lt.classList.toggle('badge', !!(p.life && p.life.offers && p.life.offers.length));
     document.getElementById('status').innerHTML = UI.status();
     document.getElementById('side').innerHTML = Game.tab === 'profile' ? '' : UI.playerCard();
     const main = document.getElementById('main');
@@ -1385,6 +1390,7 @@ const UI = {
           </button>`).join('')}</div>
         </section>
       </div>
+      ${typeof Life !== 'undefined' ? Life.homeCard() : ''}
       ${s.offers.length ? `
       <section class="card">
         <div class="card-h"><span>${Icon('mail')} Transfer Teklifleri</span>${Game.tWindow(s.season.round) ? `<span class="tw-tag">${Game.tWindow(s.season.round).name} · ${Game.tWindow(s.season.round).to - s.season.round + 1} hafta kaldı</span>` : ''}</div>

@@ -160,7 +160,7 @@ const MiniGame = {
       const ctx = cv.getContext('2d');
       let liftIdx = defLift;
       let phase = 'aim';
-      let gesture = null, preview = null, passTarget = null;
+      let gesture = null, preview = null, passTarget = null, offAtKick = new Set();
       const liftBtns = U.$$('[data-lift]', host);
       const setLift = (i) => {
         if (phase !== 'aim') return;
@@ -394,6 +394,8 @@ const MiniGame = {
       }
 
       function kick(ang, power, spin, isPass, liftV) {
+        // vuruş anında ofsayttaki arkadaşlar: top onlara ulaşırsa ofsayt (dokunarak pas vermesen de)
+        offAtKick = scene.offside != null ? new Set(mates.filter((m) => m.y < scene.offside - 0.15 && m.y < ball.y)) : new Set();
         const sig = isPass ? passSigma : angSigma * (0.6 + 0.5 * power);
         const a = ang + U.gauss() * sig;
         const sp = power * maxSpeed * (1 + U.gauss() * 0.035 * cond);
@@ -557,6 +559,7 @@ const MiniGame = {
         for (const m of mates) {
           const rr = 1.2 + (st.passing / 100) * 0.5 + (m === passTarget ? 0.35 : 0);
           if (Math.hypot(ball.x - m.x, ball.y - m.y) < rr && ball.z < 1.9 && hs < 31) {
+            if (offAtKick.has(m)) { m.offside = true; return finish('offside', 'OFSAYT!', '#ffcf3f', { mate: m.name }); }
             return startMateShot(m);
           }
         }
