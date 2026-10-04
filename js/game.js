@@ -218,7 +218,7 @@ const Game = {
   scoutOffers(perf, r) {
     const s = Game.state, p = s.player;
     const trials = s.street.trials;
-    const natLg = { TUR: 'TR', ENG: 'ENG', ESP: 'ESP', GER: 'GER', ITA: 'ITA', FRA: 'FRA', NED: 'NED', POR: 'POR', BRA: 'BRA', ARG: 'ARG' }[p.nation] || 'TR';
+    const natLg = { TUR: 'TR', ENG: 'ENG', ESP: 'ESP', GER: 'GER', ITA: 'ITA', FRA: 'FRA', NED: 'NED', POR: 'POR', BRA: 'BRA', ARG: 'ARG', BEL: 'BEL', SCO: 'SCO', USA: 'USA', MEX: 'MEX', KSA: 'KSA', JPN: 'JPN' }[p.nation] || 'TR';
     const clubs = Object.values(s.world.clubs).filter((c) => c.league !== 'NONE' && c.league.startsWith(natLg));
     const sorted = clubs.sort((a, b) => b.rating - a.rating);
     const who = trials ? 'Scoutlar' : 'Scout';
@@ -658,15 +658,7 @@ const Game = {
       const r = s.season.round;
       // milli takım
       if (Game.intlWeeks().includes(r)) Game.checkCallup();
-      // ara transfer dönemi
-      if (r === Math.floor(Game.rounds() / 2) && !Game.isYouth()) {
-        const offers = Game.makeOffers(U.randi(0, 2), false);
-        if (offers.length) {
-          s.offers = offers;
-          Game.news(`📨 Ara transfer döneminde ${offers.length} teklif aldın! Ana sayfadan inceleyebilirsin.`, 'good');
-        }
-      }
-      if (r === Math.floor(Game.rounds() / 2) + 3) s.offers = [];
+      Game.transferWeek(r);
       if (!Game.inStreet()) Cups.week(s, r);
       if (r >= Game.rounds()) {
         Game.save();
@@ -697,37 +689,84 @@ const Game = {
     }
   },
 
-  makeOffers(n, mandatory) {
+  makeOffers(n, mandatory, exclude = []) {
     const s = Game.state, p = s.player;
     const ovr = Player.overall(p, true);
     const cur = s.clubId;
-    let cands = Object.values(s.world.clubs).filter((c) => {
-      if (c.id === cur) return false;
+    const ok = (c, lo, hi) => {
+      if (c.id === cur || exclude.includes(c.id) || !LEAGUES.find((l) => l.id === c.league)) return false;
       const lf = LEAGUES.find((l) => l.id === c.league).fame;
       if (lf > 1.05 && p.fame < 12 && ovr < c.rating - 1) return false;
-      return c.rating >= ovr - 10 && c.rating <= ovr + 5 + p.fame / 15;
-    });
+      return c.rating >= ovr - lo && c.rating <= ovr + hi + p.fame / 15;
+    };
+    let cands = Object.values(s.world.clubs).filter((c) => ok(c, 10, 5));
+    // az aday varsa aralığı genişlet (farklı ülkelerden de teklif gelsin)
+    if (cands.length < n * 3) cands = Object.values(s.world.clubs).filter((c) => ok(c, 15, 8));
     if (mandatory && cands.length < 2) {
       cands = Object.values(s.world.clubs).filter((c) => c.id !== cur).sort((a, b) => Math.abs(a.rating - ovr) - Math.abs(b.rating - ovr)).slice(0, 4);
     }
-    cands = U.shuffle(cands).sort((a, b) => b.rating - a.rating);
-    const picks = U.shuffle(cands.slice(0, Math.max(n * 2, 3))).slice(0, n).sort((a, b) => b.rating - a.rating);
+    // aynı ligden en fazla iki teklif; güçlü kulüpler biraz daha olası
+    const picks = [];
+    const perLg = {};
+    U.shuffle(cands).sort((a, b) => (b.rating + U.rand(0, 8)) - (a.rating + U.rand(0, 8))).forEach((c) => {
+      if (picks.length >= n || (perLg[c.league] || 0) >= 2) return;
+      perLg[c.league] = (perLg[c.league] || 0) + 1;
+      picks.push(c);
+    });
+    picks.sort((a, b) => b.rating - a.rating);
     // bonservis: sözleşmesi biten serbest, altyapıdan çıkan için yetiştirme bedeli
     const val = Game.marketValue(p, ovr);
     const free = mandatory && !Game.isYouth();
     return picks.map((c) => ({
       clubId: c.id,
-      wage: Game.wageFor(c.rating, ovr),
+      wage: Math.round(Game.wageFor(c.rating, ovr) * ((typeof LEAGUE_PAY !== 'undefined' && LEAGUE_PAY[c.league]) || 1) / 100) * 100,
       years: U.randi(2, 5),
       fee: free ? 0 : Math.round((Game.isYouth() ? val * U.rand(0.1, 0.2) : val * U.rand(0.85, 1.3) * (1 + (s.contract.years || 0) * 0.05)) / 50000) * 50000,
       feeType: free ? 'free' : Game.isYouth() ? 'youth' : 'fee',
     }));
   },
 
+  // Transfer dönemleri: yaz (sezonun ilk haftaları) ve kış (devre arası)
+  tWindow(r) {
+    const n = Game.rounds(), mid = Math.floor(n / 2);
+    if (r >= 1 && r <= 4) return { id: 'yaz', name: 'Yaz Transfer Dönemi', from: 1, to: 4 };
+    if (r >= mid && r <= mid + 3) return { id: 'kis', name: 'Kış Transfer Dönemi', from: mid, to: mid + 3 };
+    return null;
+  },
+
+  // Formuna göre kaç teklif gelir
+  offerCount(lo, hi) {
+    const ss = Game.state.season.stats;
+    const avg = ss.apps ? ss.ratingSum / ss.apps : 6.6;
+    const bonus = avg >= 7.4 ? 2 : avg >= 6.9 ? 1 : avg < 6.2 && ss.apps > 3 ? -1 : 0;
+    return U.clamp(U.randi(lo, hi) + bonus, 0, 5);
+  },
+
+  transferWeek(r) {
+    const s = Game.state;
+    if (Game.isYouth() || Game.inStreet()) return;
+    const w = Game.tWindow(r), prev = Game.tWindow(r - 1);
+    if (!w) {
+      if (prev && s.offers.length) { s.offers = []; Game.news(`${prev.name} kapandı. Bekleyen teklifler geçersiz oldu.`, ''); }
+      return;
+    }
+    if (s.moved && s.moved.y === s.season.year && s.moved.w === w.id) return;
+    if (r === w.from) {
+      const offers = Game.makeOffers(Game.offerCount(2, 4), false);
+      s.offers = offers;
+      Game.news(offers.length ? `📨 ${w.name} açıldı! ${offers.length} kulüp seni istiyor. Teklifler ${w.to - r + 1} hafta geçerli.` : `${w.name} açıldı. Şimdilik teklif yok; iyi oynarsan kapı çalınabilir.`, offers.length ? 'good' : '');
+    } else if (s.offers.length < 5 && U.chance(0.4)) {
+      const more = Game.makeOffers(1, false, s.offers.map((o) => o.clubId));
+      if (more.length) { s.offers.push(more[0]); Game.news(`📨 Yeni teklif: ${Game.club(more[0].clubId).name} de transfer yarışına girdi!`, 'good'); }
+    }
+  },
+
   acceptOffer(i) {
     const s = Game.state;
     const o = s.offers[i];
     if (!o) return;
+    const w = Game.tWindow(s.season.round);
+    s.moved = { y: s.season.year, w: w ? w.id : 'x' };
     const old = Game.club().name;
     Game.joinClub(o.clubId, o.wage, o.years);
     Game.recordTransfer(old, o);
@@ -842,7 +881,7 @@ const Game = {
       }
       if (p.age >= 18) {
         mandatory = true;
-        offers = Game.makeOffers(3, true).map((o) => Object.assign(o, { pro: true }));
+        offers = Game.makeOffers(U.randi(3, 4), true).map((o) => Object.assign(o, { pro: true }));
         if (!ownOffer) msg.push('Altyapı dönemin bitti. Profesyonel kariyerine başlamak için bir kulüp seçmelisin.');
       } else if (p.age < 17 && ovrAfter >= expectedAtAge(p.age) + 6) {
         const bigger = Object.values(s.world.clubs).filter((c) => c.rating > own.rating + 3 && (c.league.startsWith('TR') || (p.age >= 14 && ovrAfter >= expectedAtAge(p.age) + 12)));
@@ -859,10 +898,10 @@ const Game = {
         if (p.rel.coach >= 35 && ovrAfter >= own.rating - 12) {
           ownOffer = { clubId: own.id, wage: Game.wageFor(own.rating, ovrAfter), years: U.randi(1, 4), own: true, pro: true };
         }
-        offers = Game.makeOffers(3, true).map((o) => Object.assign(o, { pro: true }));
+        offers = Game.makeOffers(Math.max(3, Game.offerCount(2, 4)), true).map((o) => Object.assign(o, { pro: true }));
         msg.push('Sözleşmen sona erdi! Yeni bir sözleşme imzalamalısın.');
       } else {
-        offers = Game.makeOffers(U.randi(0, 3), false).map((o) => Object.assign(o, { pro: true }));
+        offers = Game.makeOffers(Game.offerCount(2, 4), false).map((o) => Object.assign(o, { pro: true }));
         if (offers.length) msg.push(`Sözleşmenin bitmesine ${s.contract.years} yıl var. Gelen teklifleri değerlendirebilirsin.`);
       }
     }
@@ -875,7 +914,9 @@ const Game = {
       prevLeague, canRetire: p.age >= 33, forceRetire: p.age >= 40 || (p.age >= 34 && ovrAfter < 50),
     };
     Game.save();
-    SeasonEnd.show();
+    // lig şampiyonluğunda önce kupa kaldırma töreni
+    if (pos === 1 && typeof Celebrate !== 'undefined') Celebrate.champion(`${compName} Şampiyonu`, Game.teamName()).then(() => SeasonEnd.show());
+    else SeasonEnd.show();
   },
 
   startNewSeason(choice) {
@@ -897,6 +938,7 @@ const Game = {
           const old = Game.club().name;
           Game.joinClub(choice.clubId, choice.wage, choice.years);
           Game.recordTransfer(old, choice);
+          s.moved = { y: se.year + 1, w: 'yaz' };
           Social.post('transfer', `Yeni kulübüm ${Game.club().name}. Hedef şampiyonluk!`, 1.8);
           Game.news(`✍️ ${Game.club().name} ile ${choice.years} yıllık profesyonel sözleşme imzaladın (${Game.feeText(choice)})! Haftalık ${U.money(choice.wage)}`, 'good');
         }
@@ -1060,7 +1102,19 @@ const UI = {
       <div class="st-cell st-ap"><div><span>Hafta hakkı</span><i class="ap">${Array.from({ length: 3 }, (_, i) => `<i class="${i < s.ap ? 'on' : ''}"></i>`).join('')}</i></div><b>${s.ap}/3</b></div>`;
   },
 
-  player() { return UI.playerCard() + Social.render(true); },
+  player() { return UI.playerCard() + UI.celebCard() + Social.render(true); },
+
+  // Gol sevinci seçimi: kariyer golleriyle yenileri açılır
+  celebCard() {
+    const p = Game.p, cur = p.celeb || 'arms';
+    return `<section class="card celeb">
+      <div class="card-h"><span>${Icon('fire')} Gol Sevincin</span><small class="muted">${p.totals.goals} kariyer golü</small></div>
+      <div class="cb-grid">${CELEBRATIONS.concat([{ id: 'random', name: 'Rastgele', desc: 'Açık sevinçlerden biri', goals: 0 }]).map((c) => {
+        const lock = p.totals.goals < c.goals;
+        return `<button class="cb ${cur === c.id ? 'on' : ''} ${lock ? 'lock' : ''}" data-celeb="${c.id}" ${lock ? 'disabled' : ''}><b>${c.name}</b><small>${lock ? `${c.goals} golde açılır` : c.desc}</small></button>`;
+      }).join('')}</div>
+    </section>`;
+  },
 
   bar(v, cls = '') {
     return `<div class="bar ${cls}"><div style="width:${U.clamp(v, 0, 100)}%"></div></div>`;
@@ -1224,7 +1278,7 @@ const UI = {
       </div>
       ${s.offers.length ? `
       <section class="card">
-        <div class="card-h"><span>${Icon('mail')} Transfer Teklifleri</span></div>
+        <div class="card-h"><span>${Icon('mail')} Transfer Teklifleri</span>${Game.tWindow(s.season.round) ? `<span class="tw-tag">${Game.tWindow(s.season.round).name} · ${Game.tWindow(s.season.round).to - s.season.round + 1} hafta kaldı</span>` : ''}</div>
         <div class="offers">${s.offers.map((o, i) => UI.offerRow(o, i, 'mid')).join('')}</div>
         <button class="btn btn-ghost" data-reject="1">Teklifleri Reddet</button>
       </section>` : ''}
@@ -1327,7 +1381,7 @@ ${UI.paper()}`;
       ${view === 'cups' ? Cups.screen(s) : ''}
       ${view === 'kings' ? UI.kings(lg, name, clubOf, Game.leagueName()) : ''}
       ${view === 'table' ? `<section class="card">
-        <div class="card-h"><span>${Icon('table')} Puan Durumu</span><small class="lg-legend"><i class="z-champ"></i>Şampiyonluk${zonesUsed.has('ucl') ? '<i class="z-ucl"></i>Şampiyonlar K.' : ''}${zonesUsed.has('uel') ? '<i class="z-uel"></i>Federasyon K.' : ''}${zonesUsed.has('uecl') ? '<i class="z-uecl"></i>Konferans K.' : ''}${zonesUsed.has('csa') ? '<i class="z-csa"></i>G. Amerika K.' : ''}${promote ? '<i class="z-up"></i>Üst lig' : ''}${relegate ? '<i class="z-down"></i>Küme düşme' : ''}</small></div>
+        <div class="card-h"><span>${Icon('table')} Puan Durumu</span><small class="lg-legend"><i class="z-champ"></i>Şampiyonluk${zonesUsed.has('ucl') ? '<i class="z-ucl"></i>Şampiyonlar K.' : ''}${zonesUsed.has('uel') ? '<i class="z-uel"></i>Federasyon K.' : ''}${zonesUsed.has('uecl') ? '<i class="z-uecl"></i>Konferans K.' : ''}${zonesUsed.has('csa') ? '<i class="z-csa"></i>G. Amerika K.' : ''}${zonesUsed.has('ccc') ? '<i class="z-ccc"></i>K. Amerika K.' : ''}${zonesUsed.has('acl') ? '<i class="z-acl"></i>Asya K.' : ''}${promote ? '<i class="z-up"></i>Üst lig' : ''}${relegate ? '<i class="z-down"></i>Küme düşme' : ''}</small></div>
         <div class="tscroll"><table class="tbl lgt">
           <tr><th>#</th><th class="l">Takım</th><th>O</th><th>G</th><th>B</th><th>M</th><th class="hide-s">A</th><th class="hide-s">Y</th><th>AV</th><th class="hide-s">Form</th><th>P</th></tr>
           ${tbl.map((r, i) => `<tr class="${r.id === s.clubId ? 'hl' : ''} ${zone(i)}">
@@ -1630,6 +1684,7 @@ ${UI.paper()}`;
         ]);
       } else Game.playNext();
     }));
+    U.$$('[data-celeb]', root).forEach((b) => (b.onclick = () => { Game.p.celeb = b.dataset.celeb; Game.save(); Game.toast('Gol sevincin seçildi', 'good'); Game.render(); }));
     U.$$('[data-post]', root).forEach((b) => (b.onclick = () => Social.open(b.dataset.post)));
     U.$$('[data-offer]', root).forEach((b) => (b.onclick = () => Game.acceptOffer(+b.dataset.offer)));
     U.$$('[data-reject]', root).forEach((b) => (b.onclick = () => { Game.state.offers = []; Game.save(); Game.render(); }));

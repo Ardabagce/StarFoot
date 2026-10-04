@@ -5,6 +5,7 @@ const KIT_PATTERNS = {
   BAR: 'stripes', JUV: 'stripes', INT: 'stripes', MIL: 'stripes', ATM: 'stripes', ATH: 'stripes',
   BET: 'stripes', NEW: 'stripes', BOL: 'halves', PSG: 'band', ASM: 'halves', VFB: 'band', SGE: 'plain',
   ESK: 'stripes', SIV: 'stripes', DEN: 'stripes', MAN: 'stripes', SAM: 'band', KAY: 'stripes', TOR: 'plain',
+  CLT: 'hoops', CLB: 'stripes', MTY: 'stripes', ATS: 'stripes', UAN: 'plain', CHA: 'stripes', SKC: 'plain',
   RCL: 'stripes', NIC: 'stripes', BRE: 'plain', SEV: 'band', VAL: 'band', BVB: 'plain', NAP: 'plain', BMG: 'hoops',
 };
 
@@ -90,9 +91,16 @@ const Sprites = {
     return { own: a, opp: b, gk };
   },
 
+  // Görünüm: açık ve buğday tenler daha sık; saç modeli, saç rengi ve sakal çeşitli
   look(seed) {
-    const r = (n) => Math.abs(Math.sin(seed * 9301 + n * 49297)) % 1;
-    return { skin: SKINS[Math.floor(r(1) * SKINS.length)], hair: HAIRS[Math.floor(r(2) * HAIRS.length)], bald: r(3) < 0.08 };
+    // eşit dağılımlı hash (|sin| uçlarda yığılıyordu, koyu ten fazla çıkıyordu)
+    const r = (n) => { const v = Math.sin(seed * 12.9898 + n * 78.233) * 43758.5453; return v - Math.floor(v); };
+    const pickW = (x, w) => { let s = w.reduce((a, b) => a + b, 0) * x; for (let i = 0; i < w.length; i++) { s -= w[i]; if (s <= 0) return i; } return w.length - 1; };
+    const si = pickW(r(1), [30, 27, 18, 11, 8, 6]);
+    const hi = si >= 3 ? pickW(r(2), [55, 15, 5, 0, 0, 25]) : pickW(r(2), [24, 26, 20, 12, 10, 8]);
+    const styles = ['short', 'buzz', 'side', 'long', 'curly', 'mohawk', 'bun', 'bald'];
+    const st = styles[pickW(r(3), si >= 3 ? [16, 24, 6, 4, 30, 8, 6, 6] : [28, 18, 16, 10, 8, 6, 6, 8])];
+    return { skin: SKINS[si], hair: HAIRS[hi], style: st, bald: st === 'bald', beard: r(4) < 0.28 };
   },
 
   // İnsan figürü. (sx, sy) ayakların ekran noktası, h ekrandaki boy (px)
@@ -154,7 +162,7 @@ const Sprites = {
     const drawArm = (side, swing) => {
       ctx.save();
       ctx.translate(sx + side * W * 0.52, shY + h * 0.03);
-      ctx.rotate(side * 0.12 + swing * 0.5);
+      ctx.rotate(side * 0.12 - side * (o.armA || 0) + swing * 0.5);
       const aw = h * 0.085, L = h * 0.32;
       ctx.fillStyle = look.skin; ctx.fillRect(-aw / 2, 0, aw, L);
       ctx.fillStyle = kit.shirt; ctx.fillRect(-aw / 2 - 1, 0, aw + 2, L * 0.38);
@@ -220,10 +228,27 @@ const Sprites = {
     ctx.beginPath(); ctx.arc(sx, hy, hr, 0, Math.PI * 2); ctx.fill();
     if (!look.bald) {
       ctx.fillStyle = look.hair;
+      const style = look.style || 'short';
       ctx.beginPath();
-      if (up) ctx.arc(sx, hy - hr * 0.05, hr * 1.02, 0, Math.PI * 2);
-      else ctx.arc(sx, hy - hr * 0.3, hr * 0.98, Math.PI * 1.05, Math.PI * 1.95);
+      if (style === 'mohawk') {
+        if (up) { ctx.arc(sx, hy - hr * 0.05, hr * 1.02, 0, Math.PI * 2); ctx.fill(); ctx.fillStyle = look.skin; ctx.globalAlpha = 0.55; ctx.beginPath(); ctx.arc(sx, hy, hr * 0.98, 0, Math.PI * 2); ctx.fill(); ctx.globalAlpha = 1; ctx.fillStyle = look.hair; ctx.beginPath(); }
+        ctx.rect(sx - hr * 0.2, hy - hr * 1.3, hr * 0.4, up ? hr * 2.0 : hr * 0.75);
+      } else if (style === 'buzz') {
+        if (up) ctx.arc(sx, hy - hr * 0.05, hr * 1.0, 0, Math.PI * 2);
+        else ctx.arc(sx, hy - hr * 0.12, hr * 0.94, Math.PI * 1.12, Math.PI * 1.88);
+        ctx.globalAlpha = 0.85;
+      } else if (style === 'curly') {
+        ctx.arc(sx, hy - hr * 0.25, hr * 1.12, up ? 0 : Math.PI * 1.0, up ? Math.PI * 2 : Math.PI * 2);
+        for (let k = 0; k < 7; k++) { const a = Math.PI * (1.05 + k * 0.15); ctx.moveTo(sx + Math.cos(a) * hr * 1.05, hy - hr * 0.25 + Math.sin(a) * hr * 1.05); ctx.arc(sx + Math.cos(a) * hr * 1.05, hy - hr * 0.25 + Math.sin(a) * hr * 1.05, hr * 0.3, 0, Math.PI * 2); }
+      } else {
+        if (up) ctx.arc(sx, hy - hr * 0.05, hr * 1.02, 0, Math.PI * 2);
+        else if (style === 'side') { ctx.moveTo(sx - hr * 1.02, hy - hr * 0.05); ctx.arc(sx, hy - hr * 0.3, hr * 1.0, Math.PI * 1.0, Math.PI * 1.98); ctx.lineTo(sx - hr * 0.2, hy - hr * 0.55); }
+        else ctx.arc(sx, hy - hr * 0.3, hr * 0.98, Math.PI * 1.05, Math.PI * 1.95);
+        if (style === 'long') { ctx.rect(sx - hr * 1.08, hy - hr * 0.45, hr * 0.34, hr * 1.55); ctx.rect(sx + hr * 0.74, hy - hr * 0.45, hr * 0.34, hr * 1.55); if (up) ctx.rect(sx - hr * 0.9, hy, hr * 1.8, hr * 1.2); }
+        if (style === 'bun') { ctx.moveTo(sx + hr * 0.45, hy - hr * 1.15); ctx.arc(sx, hy - hr * 1.15, hr * 0.45, 0, Math.PI * 2); }
+      }
       ctx.fill();
+      ctx.globalAlpha = 1;
       // arkadan bakışta ense ve kulaklar görünür
       if (up && h > 60) {
         ctx.fillStyle = look.skin;
@@ -236,6 +261,12 @@ const Sprites = {
       ctx.fillStyle = '#1a1a1a';
       ctx.fillRect(sx - hr * 0.42, hy + hr * 0.05, hr * 0.18, hr * 0.14);
       ctx.fillRect(sx + hr * 0.24, hy + hr * 0.05, hr * 0.18, hr * 0.14);
+      if (look.beard && h > 30) {
+        ctx.fillStyle = look.hair; ctx.globalAlpha = 0.8;
+        ctx.beginPath(); ctx.arc(sx, hy + hr * 0.12, hr * 0.92, Math.PI * 0.08, Math.PI * 0.92);
+        ctx.lineTo(sx - hr * 0.5, hy + hr * 0.45); ctx.quadraticCurveTo(sx, hy + hr * 0.62, sx + hr * 0.5, hy + hr * 0.45); ctx.closePath(); ctx.fill();
+        ctx.globalAlpha = 1;
+      }
     }
 
     // kaleci uçuşu: iki kol başın üstünden topa uzanır (gövdenin önünde çizilir)

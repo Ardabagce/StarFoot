@@ -1103,6 +1103,10 @@ kbd { background: var(--panel-2); border: 1px solid var(--line); padding: 0 5px;
 @media (max-width: 560px) { .ms-ring { width: 86px; height: 86px; } .ms-ring b { font-size: 30px; } .ms-res b { font-size: 32px; } .mst b { font-size: 24px; } }
 .lgt tr.z-ucl .rk { background: #2f6fd6; color: #fff; } .lgt tr.z-uel .rk { background: #f36f21; color: #fff; } .lgt tr.z-uecl .rk { background: #0b7a3e; color: #fff; } .lgt tr.z-csa .rk { background: #8b5cf6; color: #fff; }
 .lgt tr.z-ucl td:first-child { box-shadow: inset 3px 0 0 #2f6fd6; } .lgt tr.z-uel td:first-child { box-shadow: inset 3px 0 0 #f36f21; } .lgt tr.z-uecl td:first-child { box-shadow: inset 3px 0 0 #0b7a3e; } .lgt tr.z-csa td:first-child { box-shadow: inset 3px 0 0 #8b5cf6; }
+.lg-legend i.z-ccc { background: #0e7490; } .lg-legend i.z-acl { background: #a21caf; }
+.lgt tr.z-ccc .rk { background: #0e7490; color: #fff; } .lgt tr.z-acl .rk { background: #a21caf; color: #fff; }
+.lgt tr.z-ccc td:first-child { box-shadow: inset 3px 0 0 #0e7490; } .lgt tr.z-acl td:first-child { box-shadow: inset 3px 0 0 #a21caf; }
+.ofc-tag.z-ccc { background: #0e7490; } .ofc-tag.z-acl { background: #a21caf; }
 .lg-legend i.z-ucl { background: #2f6fd6; } .lg-legend i.z-uel { background: #f36f21; } .lg-legend i.z-uecl { background: #0b7a3e; } .lg-legend i.z-csa { background: #8b5cf6; }
 .lg-legend { flex-wrap: wrap; row-gap: 2px; }
 
@@ -1376,3 +1380,20 @@ kbd { background: var(--panel-2); border: 1px solid var(--line); padding: 0 5px;
 .ig-home .ig-top { padding-bottom: 6px; }
 .ig-modal { margin: -6px -4px 6px; border-radius: 10px; overflow: hidden; border: 1px solid #262626; max-height: 72vh; overflow-y: auto; background: #000; color: #f5f5f5; font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
 @media (min-width: 900px) { .ig-home .ig-post { max-width: 470px; margin: 0 auto; } }
+.tw-tag { font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; background: rgba(70, 224, 143, .15); color: #9ff0c3; border: 1px solid rgba(70, 224, 143, .35); white-space: nowrap; }
+
+/* --- Gol sevinci ve şampiyonluk töreni --- */
+.celeb-cv { display: block; width: 100%; height: 100%; cursor: pointer; }
+.cb-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 8px; }
+.cb { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; padding: 10px 12px; border-radius: 12px; border: 1px solid var(--line); background: rgba(5, 11, 29, .45); color: var(--chalk); text-align: left; font-family: inherit; cursor: pointer; }
+.cb b { font-family: var(--display); font-size: 17px; letter-spacing: .02em; }
+.cb small { color: var(--muted); font-size: 12px; line-height: 1.25; }
+.cb.on { border-color: var(--flood); background: linear-gradient(180deg, rgba(255, 207, 63, .18), rgba(255, 207, 63, .04)); }
+.cb.on b { color: #ffe27a; }
+.cb.lock { opacity: .5; cursor: default; }
+.cer-trophy { position: fixed; inset: 0; z-index: 400; display: flex; flex-direction: column; background: #02040b; }
+.ct-host { flex: 1; min-height: 0; }
+.ct-foot { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 12px 16px calc(16px + env(safe-area-inset-bottom, 0px)); background: linear-gradient(180deg, rgba(2, 4, 11, 0), #02040b 30%); }
+.ct-foot b { font-family: var(--display); font-size: 24px; letter-spacing: .04em; text-transform: uppercase; color: #ffe27a; text-align: center; }
+.ct-foot small { color: var(--muted); margin-bottom: 6px; }
+.ct-foot .btn { min-width: 220px; }

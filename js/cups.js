@@ -4,7 +4,7 @@ const NAT_COLORS = {
   TUR: ['#c8102e', '#ffffff'], ARG: ['#75aadb', '#ffffff'], FRA: ['#1d2c5e', '#ffffff'], ESP: ['#c8102e', '#ffcc00'],
   ENG: ['#ffffff', '#1d2c5e'], BRA: ['#ffdf00', '#009639'], POR: ['#8e1b1b', '#006600'], GER: ['#ffffff', '#111111'],
   NED: ['#f36c21', '#ffffff'], ITA: ['#1f4fa3', '#ffffff'], BEL: ['#c8102e', '#111111'], CRO: ['#ffffff', '#c8102e'],
-  NOR: ['#c8102e', '#1d2c5e'], EGY: ['#c8102e', '#ffffff'], POL: ['#ffffff', '#c8102e'], GEO: ['#ffffff', '#c8102e'], AZE: ['#0092bc', '#c8102e'],
+  NOR: ['#c8102e', '#1d2c5e'], USA: ['#1d2c5e', '#ffffff'], MEX: ['#006847', '#ffffff'], JPN: ['#0b2a7a', '#ffffff'], KSA: ['#006c35', '#ffffff'], SCO: ['#0b2a5a', '#ffffff'], EGY: ['#c8102e', '#ffffff'], POL: ['#ffffff', '#c8102e'], GEO: ['#ffffff', '#c8102e'], AZE: ['#0092bc', '#c8102e'],
 };
 const EURO_NATIONS = ['TUR', 'FRA', 'ESP', 'ENG', 'POR', 'GER', 'NED', 'ITA', 'BEL', 'CRO', 'NOR', 'POL', 'GEO', 'AZE'];
 const STAGE_NAMES = { 32: 'Son 32', 16: 'Son 16', 8: 'Çeyrek Final', 4: 'Yarı Final', 2: 'Final' };
@@ -20,19 +20,27 @@ const DOM_CUPS = [
   { id: 'cupPOR', country: 'POR', leagues: ['POR'], name: 'Portekiz Kupası', size: 16, fame: 1.0 },
   { id: 'cupBRA', country: 'BRA', leagues: ['BRA'], name: 'Brezilya Kupası', size: 16, fame: 1.1 },
   { id: 'cupARG', country: 'ARG', leagues: ['ARG'], name: 'Arjantin Kupası', size: 16, fame: 1.0 },
+  { id: 'cupBEL', country: 'BEL', leagues: ['BEL'], name: 'Belçika Kupası', size: 16, fame: 0.9 },
+  { id: 'cupSCO', country: 'SCO', leagues: ['SCO'], name: 'İskoçya Kupası', size: 8, fame: 0.8 },
+  { id: 'cupUSA', country: 'USA', leagues: ['USA'], name: 'ABD Açık Kupası', size: 16, fame: 0.9 },
+  { id: 'cupMEX', country: 'MEX', leagues: ['MEX'], name: 'Meksika Kupası', size: 16, fame: 0.9 },
+  { id: 'cupKSA', country: 'KSA', leagues: ['KSA'], name: 'Suudi Kral Kupası', size: 16, fame: 1.0 },
+  { id: 'cupJPN', country: 'JPN', leagues: ['JPN'], name: 'İmparator Kupası', size: 16, fame: 0.8 },
 ];
 const countryOf = (lid) => LEAGUE_CC[lid] || lid;
-const regionOf = (lid) => (['BRA', 'ARG'].includes(countryOf(lid)) ? 'sa' : 'eu');
+const regionOf = (lid) => ({ BRA: 'sa', ARG: 'sa', USA: 'na', MEX: 'na', KSA: 'as', JPN: 'as' }[countryOf(lid)] || 'eu');
 
 const Cups = {
   // ---------- Avrupa kulüp kupaları ----------
   // Lig sıralamasına göre katılım: Şampiyonlar → Federasyon → Konferans (ör. İngiltere'de ilk 7)
   defs: [
     // Şampiyonlar ve Federasyon: 32 takımlı lig aşaması (8 maç) → play-off → son 16 (güncel format)
-    { id: 'ucl', name: 'Avrupa Şampiyonlar Kupası', fame: 2.2, region: 'eu', swiss: true, quota: { ENG: 5, ESP: 5, ITA: 5, GER: 4, FRA: 4, POR: 3, NED: 3, TR1: 3 } },
-    { id: 'uel', name: 'Avrupa Federasyon Kupası', fame: 1.5, region: 'eu', swiss: true, quota: { ENG: 4, ESP: 4, ITA: 4, GER: 4, FRA: 4, POR: 4, NED: 4, TR1: 4 } },
+    { id: 'ucl', name: 'Avrupa Şampiyonlar Kupası', fame: 2.2, region: 'eu', swiss: true, quota: { ENG: 5, ESP: 5, ITA: 4, GER: 4, FRA: 4, POR: 3, NED: 3, TR1: 2, BEL: 1, SCO: 1 } },
+    { id: 'uel', name: 'Avrupa Federasyon Kupası', fame: 1.5, region: 'eu', swiss: true, quota: { ENG: 4, ESP: 4, ITA: 4, GER: 4, FRA: 4, POR: 3, NED: 3, TR1: 3, BEL: 2, SCO: 1 } },
     { id: 'uecl', name: 'Avrupa Konferans Kupası', fame: 1.1, region: 'eu', quota: { ENG: 2, ESP: 2, ITA: 2, GER: 2, FRA: 2, POR: 2, NED: 2, TR1: 2 } },
     { id: 'csa', name: 'Güney Amerika Kupası', fame: 1.4, region: 'sa', quota: { BRA: 8, ARG: 8 } },
+    { id: 'ccc', name: 'Kuzey Amerika Kupası', fame: 1.1, region: 'na', quota: { USA: 8, MEX: 8 } },
+    { id: 'acl', name: 'Asya Şampiyonlar Kupası', fame: 1.2, region: 'as', quota: { KSA: 8, JPN: 8 } },
   ],
   // Kulübün lig sırasına göre gelecek sezon hangi kupaya gideceği
   qualifies(lid, pos) {
@@ -295,9 +303,10 @@ const Cups = {
     if (cup.winner === s.clubId) {
       p.trophies.push(`${s.season.year}: 🏆 ${cup.name} Şampiyonu`);
       Player.addFame(p, cup.youth ? 1.5 : cup.dom ? 3 : 6);
-      Social.post('trophy', cup.youth ? `${cup.name} şampiyonuyuz! Avrupa'nın en iyi altyapısı bizde.` : cup.dom ? `${cup.name} bizim! Bu kupa taraftarımıza armağan.` : cup.region === 'sa' ? `${cup.name} bizim! Kıtanın zirvesindeyiz.` : `${cup.name} bizim! Avrupa'nın zirvesindeyiz.`, cup.dom ? 2.2 : 3);
+      Social.post('trophy', cup.youth ? `${cup.name} şampiyonuyuz! Avrupa'nın en iyi altyapısı bizde.` : cup.dom ? `${cup.name} bizim! Bu kupa taraftarımıza armağan.` : cup.region && cup.region !== 'eu' ? `${cup.name} bizim! Kıtanın zirvesindeyiz.` : `${cup.name} bizim! Avrupa'nın zirvesindeyiz.`, cup.dom ? 2.2 : 3);
     }
     s.pendingCup = null;
+    if (cup.winner === s.clubId && typeof Celebrate !== 'undefined') await Celebrate.champion(`${cup.name} Şampiyonu`, Game.teamName());
     Game.advanceWeek(true);
   },
 
@@ -401,6 +410,7 @@ const Cups = {
       p.trophies.push(`${s.season.year}: 🏆 ${Cups.tourName(t.type)} Şampiyonu`);
       Player.addFame(p, t.type === 'wc' ? 15 : t.type === 'nl' ? 5 : 9);
       Social.post('trophy', `${t.name} ŞAMPİYONUYUZ! Bu kupa tüm ülkemizin.`, 6, Social.natOpts());
+      if (typeof Celebrate !== 'undefined') await Celebrate.champion(`${Cups.tourName(t.type)} Şampiyonu`, nat.name, true);
     }
     t.done = true;
     Nations.afterTournament(s, t, champ.code);

@@ -319,6 +319,22 @@ const Match = {
       $('mm-title').textContent = U.plain(MOMENT_TITLES[type]);
       $('mm-desc').textContent = MOMENT_DESC[type];
     };
+    // Kendi golünden sonra seçtiğin gol sevinci (dokununca geçilir)
+    const celebrate = async () => {
+      if (M.instant || typeof Celebrate === 'undefined') return;
+      $('mt-moment').classList.remove('hidden');
+      updateSB();
+      $('mm-min').textContent = `${M.min}'`;
+      $('mm-title').textContent = 'GOL!';
+      $('mm-desc').textContent = 'Sevinç zamanı! Geçmek için dokun.';
+      $('mm-auto').style.display = 'none';
+      try {
+        await Celebrate.goal($('mm-host'), { kit: kits.own, c1: own.c1, c2: own.c2, short: own.short, number: p.shirt, type: Celebrate.pick(p), name: pname, min: M.min, score: `${M.hs}-${M.as}` });
+      } catch (e) { console.error(e); }
+      $('mm-auto').style.display = '';
+      $('mm-host').onclick = null;
+      hideMoment();
+    };
     const hideMoment = () => { $('mt-moment').classList.add('hidden'); $('mm-host').innerHTML = ''; $('mm-host').style.overflowY = ''; MiniGame._abort = null; };
 
     const playCanvas = async (type) => {
@@ -330,6 +346,7 @@ const Match = {
       const r = await MiniGame.play($('mm-host'), scene, { stats: st, skill, cond, kits, number: p.shirt, mateChance, captain: !!ctx.captain, weather });
       hideMoment();
       if (auto || r.outcome === 'auto') return autoCanvas(type);
+      if (r.outcome === 'goal') M.liveGoal = true;
       return r;
     };
 
@@ -493,6 +510,7 @@ const Match = {
           const pg = viaGame && !autoUsed() ? 1 : U.clamp(U.sigmoid((Player.skillFor(p, 'header') - opp.rating) / 12 - 0.2), 0.15, 0.72);
           if (U.chance(pg)) {
             M.goals++; rate(1.1);
+            if (viaGame && !autoUsed()) M.liveGoal = true;
             M.gt.header = (M.gt.header || 0) + 1;
             ownGoal(pname, null, `${U.esc(pname)} yükseldi ve kafayla ağları buldu!`);
           } else { rate(0.1); feed(`🧤 <b>${M.min}'</b> ${U.esc(pname)}'in kafa vuruşunu kaleci son anda çıkardı.`); }
@@ -547,6 +565,7 @@ const Match = {
       for (const mo of moments.filter((x) => x.min === M.min)) {
         if (!onPitch()) break;
         await resolveMoment(mo);
+        if (M.liveGoal) { M.liveGoal = false; await celebrate(); }
       }
       if (M.min === 45) { feed('İlk yarı sona erdi.', 'info'); await halfTime(); }
       refresh();

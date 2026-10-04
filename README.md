@@ -56,9 +56,10 @@ Oyunu bir web sunucusundan (ör. GitHub Pages) açıp tarayıcı menüsünden **
 - **Enerji, moral, ün ve sakatlıklar.**
 - **Rastgele olaylar:** parti daveti, röportaj, sınav haftası, sponsorluk teklifleri...
 - **Transferler:** altyapılar arası transfer, profesyonel sözleşme, ara transfer dönemi ve sezon sonu teklifleri.
-- **16 lig ve 320 kulüp:** Türkiye, İngiltere, İspanya, Almanya, İtalya ve Fransa'da birer üst ve alt lig (her sezon 3 takım düşer, 3 takım çıkar); ayrıca Hollanda, Portekiz, Brezilya ve Arjantin ligleri.
+- **22 lig ve 420 kulüp:** Türkiye, İngiltere, İspanya, Almanya, İtalya ve Fransa'da birer üst ve alt lig (her sezon 3 takım düşer, 3 takım çıkar); ayrıca Hollanda, Portekiz, Belçika, İskoçya, Brezilya, Arjantin, ABD, Meksika, Suudi Arabistan ve Japonya ligleri. Suudi ve ABD kulüpleri daha yüksek maaş öder. Kuzey Amerika Kupası (ABD, Meksika) ve Asya Şampiyonlar Kupası (Suudi Arabistan, Japonya) eklendi; her ülkenin kendi kupası var.
 - **Avrupa'ya katılım:** Lig sırası gelecek sezonun kupasını belirler (ör. İngiltere'de 1-3 Şampiyonlar, 4-5 Federasyon, 6-7 Konferans Kupası). Puan tablosunda bölgeler renkli gösterilir. Brezilya ve Arjantin kulüpleri Güney Amerika Kupası'nda yarışır.
 - **Sezon sonu ödül töreni:** Lig sıran madalyayla, kazandığın kupa ve ödüller tek tek ekranda belirir; Avrupa bileti ve sıralama primi gösterilir.
+- **Transfer dönemleri:** Yaz (sezonun ilk haftaları) ve kış (devre arası) transfer dönemlerinde formuna göre 2-4 kulüp teklif yapar, dönem boyunca yeni teklifler gelebilir; dönem kapanınca teklifler geçersiz olur. Sezon sonunda da birden çok kulüpten teklif gelir.
 - **Transfer teklifleri:** Kulüp gücü ile senin gücünü karşılaştıran, maaş değişimi, süre, bonservis bedeli (sözleşmesi bitende serbest, altyapıdan çıkarken yetiştirme bedeli), beklenen rol ve kulübün Avrupa durumunu gösteren kartlar. Kariyer ekranında piyasa değerin, rekor bonservisin ve sezon kartlarında transferlerin görünür.
 - **Kariyer geçmişi:** Devam eden sezon canlı satır olarak görünür; her sezonun yanında o sezon kazandığın kupa ve ödüller yazar.
 - **Milli takım:** Yeterince iyiysen milli maçlara çağrılırsın.
@@ -80,6 +81,9 @@ Oyunu bir web sunucusundan (ör. GitHub Pages) açıp tarayıcı menüsünden **
 - **Devre arası:** Hocayla taktik konuşmak, takımı ateşlemek, toparlanmak ya da rakip kaleciyi incelemek; yedekteysen ısınıp hocaya görünmek.
 - **Yeni mini oyunlar:** Kontra atak sprinti (hızlı hızlı dokun) ve verkaç (parlayan arkadaşına süre dolmadan dokun).
 - **Asist animasyonu:** Pas arkadaşına ulaşınca arkadaşın topu kontrol edip şut çeker; gol olursa ASİST yazar.
+- **Gol sevinçleri:** Kendi golünden sonra seçtiğin sevinç canlandırılır: kollar havada, diz kayması, uçak, kalp, köşe dansı, tribüne koşu, zıpla-dön, ters takla (bazıları kariyer golleriyle açılır). Takım arkadaşları koşup sana katılır.
+- **Şampiyonluk töreni:** Lig, kupa ya da milli turnuva kazanınca takımınla sahnede kupayı kaldırırsın; konfeti, havai fişek ve flaşlar.
+- **Oyuncu çeşitliliği:** Farklı ten renkleri dengeli dağılır; kısa, kazınmış, yana taralı, uzun, kıvırcık, mohikan, topuz saç ve sakal.
 - **Sosyal medya:** Instagram düzeninde profil (hikâye halkası, onaylı rozet, öne çıkanlar, 3'lü gönderi ızgarası, dokununca açılan gönderi) ve ana sayfada akış kartı (konum, beğenme, yorumlar, zaman). Gönderi görselleri fotoğraf gibi çizilir: gece stadyumunda gol sevinci, konfetili kupa kaldırma, basın duvarı önünde atkıyla transfer, maçın oyuncusu röportajı, antrenman sahası, efsaneyle hatıra fotoğrafı, gün batımında araba, yat, villa, stüdyo; alan derinliği, renk filtresi, vinyet ve gren efektiyle. Ününe göre büyüyen takipçi sayısı, gol, kupa, transfer ve eşya paylaşımları, beğeniler ve taraftar yorumları.
 - **Gazete:** Haberler gazete sayfası görünümünde; manşet, köşe yazıları ve dünya servisi.
 - **Dünyadan haberler:** Gerçek maç sonuçlarından ve ara ara mizahi dille yazılmış, kendini tekrar etmeyen haberler.
@@ -99,6 +103,7 @@ js/league.js     Kadrolar, fikstür, lig simülasyonu, altyapı ligleri
 js/legends.js    Dönem yıldızları, yaşlanma, emeklilik, yeni nesil
 js/cups.js       Avrupa kupaları, Dünya Kupası, Avrupa Şampiyonası
 js/socialart.js  Sosyal medya gönderi görselleri ve Instagram ikonları
+js/celebrate.js  Gol sevinci animasyonları ve şampiyonluk kupa kaldırma töreni
 js/minigame.js   Şut/pas fizik sahnesi ve zamanlama barı
 js/drills.js     Antrenman mini oyunları
 js/shopart.js    Mağaza ürün çizimleri

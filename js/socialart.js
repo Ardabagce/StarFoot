@@ -39,7 +39,7 @@ const SocialArt = {
   },
 
   locFor(scene, club) {
-    const cityByCC = { TR: 'İstanbul', ENG: 'Londra', ESP: 'Madrid', GER: 'Münih', ITA: 'Milano', FRA: 'Paris', NED: 'Amsterdam', POR: 'Lizbon', BRA: 'Rio de Janeiro', ARG: 'Buenos Aires' };
+    const cityByCC = { TR: 'İstanbul', ENG: 'Londra', ESP: 'Madrid', GER: 'Münih', ITA: 'Milano', FRA: 'Paris', NED: 'Amsterdam', POR: 'Lizbon', BRA: 'Rio de Janeiro', ARG: 'Buenos Aires', BEL: 'Brüksel', SCO: 'Glazgov', USA: 'Maymi', MEX: 'Mexiko', KSA: 'Riyad', JPN: 'Tokyo' };
     const city = club ? cityByCC[LEAGUE_CC[club.league]] || 'İstanbul' : 'Mahalle';
     const n = club ? club.name : '';
     return {

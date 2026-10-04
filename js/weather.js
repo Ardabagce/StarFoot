@@ -14,8 +14,8 @@ const Weather = {
     const round = state && state.season ? state.season.round : 10;
     const winter = round >= 12 && round <= 26;
     const lg = ctx.lg || '';
-    const north = ['ENG', 'ENG2', 'GER', 'GER2', 'TR1', 'TR2', 'NED', 'youth', 'ucl', 'uel', 'uecl'].includes(lg);
-    const summer = ['wc', 'euro', 'intl', 'street', 'BRA', 'ARG', 'csa'].includes(lg);
+    const north = ['ENG', 'ENG2', 'GER', 'GER2', 'TR1', 'TR2', 'NED', 'BEL', 'SCO', 'youth', 'ucl', 'uel', 'uecl'].includes(lg);
+    const summer = ['wc', 'euro', 'intl', 'street', 'BRA', 'ARG', 'csa', 'KSA', 'MEX', 'ccc', 'acl'].includes(lg);
     const w = {
       clear: summer ? 70 : 50,
       rain: (lg === 'ENG' ? 28 : 18) + (winter ? 6 : 0),
@@ -94,7 +94,7 @@ const Balls = {
     const lg = ctx.lg || '';
     if (lg === 'street') return BALL_STYLES.street;
     if (year < 1993 && !['ucl', 'uel', 'wc', 'euro'].includes(lg)) return year < 1986 ? BALL_STYLES.retro : BALL_STYLES.classic;
-    const map = { TR1: 'tr', TR2: 'tr', ENG: 'eng', ENG2: 'eng', ESP: 'esp', ESP2: 'esp', GER: 'ger', GER2: 'ger', ITA: 'ita', ITA2: 'ita', FRA: 'fra', FRA2: 'fra', NED: 'ned', POR: 'por', BRA: 'bra', ARG: 'arg', ucl: 'ucl', uel: 'uel', uecl: 'uecl', csa: 'csa', wc: 'wc', euro: 'euro', youth: 'classic', intl: 'classic' };
+    const map = { TR1: 'tr', TR2: 'tr', ENG: 'eng', ENG2: 'eng', ESP: 'esp', ESP2: 'esp', GER: 'ger', GER2: 'ger', ITA: 'ita', ITA2: 'ita', FRA: 'fra', FRA2: 'fra', NED: 'ned', POR: 'por', BRA: 'bra', ARG: 'arg', BEL: 'ned', SCO: 'eng', USA: 'eng', MEX: 'arg', KSA: 'wc', JPN: 'ita', ccc: 'csa', acl: 'wc', ucl: 'ucl', uel: 'uel', uecl: 'uecl', csa: 'csa', wc: 'wc', euro: 'euro', youth: 'classic', intl: 'classic' };
     return BALL_STYLES[map[lg] || 'classic'];
   },
   forTraining() {
@@ -125,6 +125,14 @@ const SCOREBOARDS = {
   ARG: { tag: 'TANGO LİGİ', c1: '#75aadb', c2: '#ffffff' },
   uecl: { tag: 'KONFERANS', c1: '#0b7a3e', c2: '#ffffff' },
   csa: { tag: 'GÜNEY AMERİKA', c1: '#1f2a44', c2: '#ffcf3f' },
+  ccc: { tag: 'KUZEY AMERİKA', c1: '#0b1f4d', c2: '#ffffff' },
+  acl: { tag: 'ASYA ŞAMPİYONLAR', c1: '#5b2c83', c2: '#ffcf3f' },
+  BEL: { tag: 'FLAMAN LİGİ', c1: '#1d1d1b', c2: '#ffd200' },
+  SCO: { tag: 'DAĞLILAR LİGİ', c1: '#0b2a5a', c2: '#ffffff' },
+  USA: { tag: 'YILDIZLI LİG', c1: '#0b1f4d', c2: '#e31b23' },
+  MEX: { tag: 'AZTEK LİGİ', c1: '#006847', c2: '#ffffff' },
+  KSA: { tag: 'ÇÖL LİGİ', c1: '#006c35', c2: '#ffffff' },
+  JPN: { tag: 'GÜNEŞ LİGİ', c1: '#ffffff', c2: '#bc002d' },
   ENG: { tag: 'PREMIER', c1: '#3d0a5b', c2: '#00ff85' },
   ESP: { tag: 'LA LİGA', c1: '#ff4b1f', c2: '#ffffff' },
   GER: { tag: 'BUNDESLİGA', c1: '#d20515', c2: '#ffffff' },
