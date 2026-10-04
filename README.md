@@ -80,7 +80,7 @@ Oyunu bir web sunucusundan (ör. GitHub Pages) açıp tarayıcı menüsünden **
 - **Devre arası:** Hocayla taktik konuşmak, takımı ateşlemek, toparlanmak ya da rakip kaleciyi incelemek; yedekteysen ısınıp hocaya görünmek.
 - **Yeni mini oyunlar:** Kontra atak sprinti (hızlı hızlı dokun) ve verkaç (parlayan arkadaşına süre dolmadan dokun).
 - **Asist animasyonu:** Pas arkadaşına ulaşınca arkadaşın topu kontrol edip şut çeker; gol olursa ASİST yazar.
-- **Sosyal medya:** Instagram tarzı profil (hikaye halkası, onaylı rozet, öne çıkan gönderi, gönderi ızgarası, gündem hikayeleri). Ününe göre büyüyen takipçi sayısı, gol, kupa, transfer ve eşya paylaşımları, beğeniler ve taraftar yorumları.
+- **Sosyal medya:** Instagram düzeninde profil (hikâye halkası, onaylı rozet, öne çıkanlar, 3'lü gönderi ızgarası, dokununca açılan gönderi) ve ana sayfada akış kartı (konum, beğenme, yorumlar, zaman). Gönderi görselleri fotoğraf gibi çizilir: gece stadyumunda gol sevinci, konfetili kupa kaldırma, basın duvarı önünde atkıyla transfer, maçın oyuncusu röportajı, antrenman sahası, efsaneyle hatıra fotoğrafı, gün batımında araba, yat, villa, stüdyo; alan derinliği, renk filtresi, vinyet ve gren efektiyle. Ününe göre büyüyen takipçi sayısı, gol, kupa, transfer ve eşya paylaşımları, beğeniler ve taraftar yorumları.
 - **Gazete:** Haberler gazete sayfası görünümünde; manşet, köşe yazıları ve dünya servisi.
 - **Dünyadan haberler:** Gerçek maç sonuçlarından ve ara ara mizahi dille yazılmış, kendini tekrar etmeyen haberler.
 - **Lig sekmesi:** Sıra, puan, lidere fark ve son 5 maç formu; formalı puan tablosu, şampiyonluk/küme bölgeleri, maç kartlı fikstür ve gol krallığı.
@@ -98,6 +98,7 @@ js/player.js     Statlar, genel güç, antrenman, yaşlanma
 js/league.js     Kadrolar, fikstür, lig simülasyonu, altyapı ligleri
 js/legends.js    Dönem yıldızları, yaşlanma, emeklilik, yeni nesil
 js/cups.js       Avrupa kupaları, Dünya Kupası, Avrupa Şampiyonası
+js/socialart.js  Sosyal medya gönderi görselleri ve Instagram ikonları
 js/minigame.js   Şut/pas fizik sahnesi ve zamanlama barı
 js/drills.js     Antrenman mini oyunları
 js/shopart.js    Mağaza ürün çizimleri

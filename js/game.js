@@ -1630,6 +1630,7 @@ ${UI.paper()}`;
         ]);
       } else Game.playNext();
     }));
+    U.$$('[data-post]', root).forEach((b) => (b.onclick = () => Social.open(b.dataset.post)));
     U.$$('[data-offer]', root).forEach((b) => (b.onclick = () => Game.acceptOffer(+b.dataset.offer)));
     U.$$('[data-reject]', root).forEach((b) => (b.onclick = () => { Game.state.offers = []; Game.save(); Game.render(); }));
     U.$$('[data-buy]', root).forEach((b) => (b.onclick = () => {

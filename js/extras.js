@@ -516,15 +516,44 @@ const Social = {
     const tgt = Social.target(p);
     so.followers = Math.max(10, Math.round(so.followers + (tgt - so.followers) * 0.22 + so.followers * U.rand(-0.004, 0.01)));
   },
-  post(kind, text, boost = 1) {
+  post(kind, text, boost = 1, opts = {}) {
     const p = Game.p, so = Social.ensure(p), s = Game.state;
     const likes = Math.round(so.followers * U.rand(0.05, 0.12) * boost) + U.randi(1, 9);
     const pool = SOCIAL_COMMENTS[kind] || SOCIAL_COMMENTS.daily;
     const fans = ['futbolsever', 'tribunsesi', 'golkrali', 'altyapi_avcisi', 'mahallemizin_yildizi', 'sahakenari', 'cimbomkalbim', 'kanarya1907', 'kartalgozu', 'taraftar_ayse', 'deden_gururlu'];
     const comments = U.shuffle(pool).slice(0, 2).map((c) => ({ u: U.pick(fans) + U.randi(1, 99), t: c }));
-    so.posts.unshift({ kind, text, likes, comments, w: `${s.season.year} H${s.season.round + 1}` });
-    so.posts = so.posts.slice(0, 12);
+    const club = Game.inStreet() ? null : Game.club();
+    const scene = SocialArt.sceneFor(kind, text);
+    so.seq = (so.seq || 0) + 1;
+    so.posts.unshift({
+      id: so.seq, seed: U.randi(1, 2e9), kind, scene, text, likes, comments, nc: Math.max(2, Math.round(likes * U.rand(0.01, 0.03))),
+      w: `${s.season.year} H${s.season.round + 1}`, y: s.season.year, r: s.season.round,
+      cid: opts.c1 ? null : club && club.id, c1: opts.c1 || (club && club.c1), c2: opts.c2 || (club && club.c2), short: opts.short || (club && club.short), num: p.shirt,
+      loc: opts.loc || SocialArt.locFor(scene, club),
+    });
+    so.posts = so.posts.slice(0, 15);
     so.followers += Math.round(likes * 0.03 * boost);
+  },
+  natOpts() {
+    const code = Game.p.nation;
+    const col = NAT_COLORS[code] || ['#c8102e', '#ffffff'];
+    return { c1: col[0], c2: col[1], short: code, loc: 'Milli Takım' };
+  },
+  // Eski kayıtlardaki gönderilere kimlik ve görsel bilgisi
+  migrate(so) {
+    so.posts.forEach((x) => {
+      if (x.id == null) { so.seq = (so.seq || 0) + 1; x.id = 1000 + so.seq; }
+      if (x.seed == null) x.seed = x.id * 7919 + 13;
+      if (!x.scene) x.scene = SocialArt.sceneFor(x.kind, x.text);
+      if (x.nc == null) x.nc = Math.max(2, Math.round(x.likes * 0.02));
+    });
+  },
+  ago(x) {
+    const s = Game.state;
+    if (x.y == null) return x.w;
+    if (x.y !== s.season.year) return `${x.y}`;
+    const d = s.season.round - x.r;
+    return d <= 0 ? 'BU HAFTA' : `${d} HAFTA ÖNCE`;
   },
   afterMatch(sum, teamName) {
     if (!sum.played) return;
@@ -533,55 +562,78 @@ const Social = {
     else if (sum.motm) Social.post('motm', `Maçın adamı ödülü takımımın. Birlikte daha güçlüyüz.`, 1.4);
     else if (sum.assists > 0 && U.chance(0.5)) Social.post('goal', `Asist de en az gol kadar güzel. Arkadaşımı tebrik ederim.`, 1.1);
   },
+  // Instagram tarzı gönderi (akış kartı)
+  postCard(x, so, verified) {
+    return `<article class="ig-post">
+      <header class="ig-ph"><span class="ig-pav"><canvas class="so-avatar sm" aria-hidden="true"></canvas></span>
+        <span class="ig-pid"><b>${U.esc(so.handle.replace('@', ''))}${verified ? IG.verified() : ''}</b><small>${U.esc(x.loc || '')}</small></span>${IG.more()}</header>
+      <div class="ig-media"><canvas data-pid="${x.id}" aria-label="${U.esc(x.text)}"></canvas></div>
+      <div class="ig-acts">${IG.heart(true)}${IG.comment()}${IG.send()}<span class="sp"></span>${IG.save()}</div>
+      <div class="ig-likes">${Social.fmt(x.likes)} beğenme</div>
+      <div class="ig-cap"><b>${U.esc(so.handle.replace('@', ''))}</b> ${U.esc(x.text)}</div>
+      <div class="ig-all">${x.nc} yorumun tümünü gör</div>
+      ${x.comments.map((c) => `<div class="ig-cm"><b>${U.esc(c.u)}</b> ${U.esc(c.t)}${IG.heart(false)}</div>`).join('')}
+      <time class="ig-time">${Social.ago(x)}</time>
+    </article>`;
+  },
+
   render(full) {
     const p = Game.p, so = Social.ensure(p);
-    const likes = so.posts.reduce((t, x) => t + x.likes, 0);
-    const icon = { goal: 'ball', motm: 'star', trophy: 'career', transfer: 'contract', life: 'life', daily: 'phone' };
+    Social.migrate(so);
     const verified = p.fame >= 35;
     const club = Game.inStreet() ? null : Game.club();
-    const bio = `${POSITIONS[p.position].l}${club ? ` · ${Game.teamName()}` : ''} · #${p.shirt}`;
     const lead = so.posts[0];
-    const grid = so.posts.slice(lead ? 1 : 0, full ? 10 : 7);
-    const initials = (n) => n.replace('@', '').slice(0, 2).toUpperCase();
+    if (!full) {
+      return `<section class="card ig ig-home">
+        <div class="ig-top"><b>${U.esc(so.handle.replace('@', ''))}${verified ? IG.verified() : ''}</b><small>${Social.fmt(so.followers)} takipçi</small></div>
+        ${lead ? Social.postCard(lead, so, verified) : '<p class="muted">Henüz paylaşım yok. Gol at ya da haftalık planda "Sosyal Medya" ile paylaşım yap.</p>'}
+      </section>`;
+    }
+    const cat = Game.inStreet() ? 'Mahalle futbolcusu' : Game.isYouth() ? 'Genç futbolcu' : 'Sporcu';
+    const bio = `${POSITIONS[p.position].l}${club ? ` · ${Game.teamName()}` : ''} · #${p.shirt}`;
+    const tr = (so.trends || []).slice(0, 8);
     return `
-      <section class="card social">
-        <div class="so-top">
-          <div class="so-ring"><canvas class="so-avatar" aria-hidden="true"></canvas></div>
-          <div class="so-id">
-            <div class="so-handle">${U.esc(so.handle)}${verified ? `<i class="so-ver" title="Onaylı hesap">✓</i>` : ''}</div>
-            <div class="so-name">${U.esc(Player.fullName(p))}</div>
-            <div class="so-bio">${U.esc(bio)}</div>
+      <section class="card ig">
+        <div class="ig-top"><b>${U.esc(so.handle.replace('@', ''))}${verified ? IG.verified() : ''}</b></div>
+        <div class="ig-prof">
+          <div class="ig-ring"><canvas class="so-avatar" aria-hidden="true"></canvas></div>
+          <div class="ig-nums">
+            <div><b>${so.posts.length}</b><span>gönderi</span></div>
+            <div><b>${Social.fmt(so.followers)}</b><span>takipçi</span></div>
+            <div><b>${Social.fmt(so.following)}</b><span>takip</span></div>
           </div>
         </div>
-        <div class="so-stats">
-          <div><b>${so.posts.length}</b><span>Gönderi</span></div>
-          <div class="hl"><b>${Social.fmt(so.followers)}</b><span>Takipçi</span></div>
-          <div><b>${Social.fmt(so.following)}</b><span>Takip</span></div>
-          <div><b>${Social.fmt(likes)}</b><span>Beğeni</span></div>
-        </div>
-        ${(so.trends || []).length ? `<div class="so-stories">${so.trends.slice(0, 8).map((x) => `<div class="so-story ${x.kind}" title="${U.esc(x.text)}"><i>${U.esc(initials(x.u))}</i><small>${U.esc(x.n.split(' ').slice(-1)[0])}</small></div>`).join('')}</div>` : ''}
-        ${lead ? `<article class="so-feature ${lead.kind}">
-          <div class="so-fhead"><span class="so-mini"></span><b>${U.esc(so.handle)}</b><small>${lead.w}</small></div>
-          <div class="so-fimg">${Icon(icon[lead.kind] || 'phone')}<span>${U.esc(lead.text)}</span></div>
-          <div class="so-factions"><span class="heart">${Icon('heart')}<b>${Social.fmt(lead.likes)}</b> beğeni</span><span>${lead.comments.length} yorum</span></div>
-          ${lead.comments.map((c) => `<div class="so-c"><b>${U.esc(c.u)}</b> ${U.esc(c.t)}</div>`).join('')}
-        </article>` : '<p class="muted">Henüz paylaşım yok. Gol at ya da haftalık planda "Sosyal Medya" ile paylaşım yap.</p>'}
-        ${grid.length ? `<div class="so-grid">${grid.map((x) => `<div class="so-tile ${x.kind}" title="${U.esc(x.text)}">${Icon(icon[x.kind] || 'phone')}<span class="so-tl">${Icon('heart')}${Social.fmt(x.likes)}</span></div>`).join('')}</div>` : ''}
-        ${full && (so.trends || []).length ? `<div class="lbl">Gündem</div><div class="so-trends">${so.trends.slice(0, 6).map((x) => `<div class="so-tr ${x.kind}"><b>${U.esc(x.u)}</b><span>${U.esc(x.text)}</span><small>${Icon('heart')}${Social.fmt(x.likes)} · ${x.y}</small></div>`).join('')}</div>` : ''}
+        <div class="ig-bio"><b>${U.esc(Player.fullName(p))}</b><small>${cat}</small><span>${U.esc(bio)}</span></div>
+        <div class="ig-btns"><span>Profili düzenle</span><span>Profili paylaş</span></div>
+        ${tr.length ? `<div class="ig-hl">${tr.map((x) => `<div class="ig-st ${x.kind}" data-trend="${U.esc(x.n)}"><i><canvas data-story="${U.esc(x.n)}"></canvas></i><small>${U.esc(x.n.split(' ').slice(-1)[0])}</small></div>`).join('')}</div>` : ''}
+        <div class="ig-tabs"><span class="on">${IG.grid()}</span><span>${IG.reels()}</span><span>${IG.tag()}</span></div>
+        ${so.posts.length ? `<div class="ig-grid">${so.posts.slice(0, 12).map((x) => `<button class="ig-tile" data-post="${x.id}" aria-label="${U.esc(x.text)}"><canvas data-pid="${x.id}" data-crop="1"></canvas>${x.kind === 'trophy' || x.kind === 'transfer' ? `<span class="ig-badge">${IG.multi()}</span>` : ''}<span class="ig-hov">${IG.heart(true)}${Social.fmt(x.likes)}</span></button>`).join('')}</div>` : '<p class="muted">Henüz paylaşım yok.</p>'}
+        ${tr.length ? `<div class="lbl">Gündem</div><div class="so-trends">${tr.slice(0, 6).map((x) => `<div class="so-tr ${x.kind}"><b>${U.esc(x.u)}</b><span>${U.esc(x.text)}</span><small>${Icon('heart')}${Social.fmt(x.likes)} · ${x.y}</small></div>`).join('')}</div>` : ''}
       </section>`;
   },
-  drawAvatar() {
-    U.$$('.so-avatar').forEach((cv) => {
+
+  // Izgaradaki gönderiye dokununca tam gönderi açılır
+  open(id) {
+    const p = Game.p, so = Social.ensure(p);
+    const x = so.posts.find((q) => String(q.id) === String(id));
+    if (!x) return;
+    const m = Game.modal(`<div class="ig ig-modal">${Social.postCard(x, so, p.fame >= 35)}</div>`, [{ t: 'Kapat', cls: 'btn-ghost' }]);
+    Social.drawAvatar(m);
+  },
+
+  drawAvatar(root) {
+    U.$$('.so-avatar', root || document).forEach((cv) => {
       const dpr = Math.min(2, window.devicePixelRatio || 1);
       cv.width = 72 * dpr; cv.height = 72 * dpr;
       const c = cv.getContext('2d');
       const club = Game.club() || { c1: '#2a6fdb', c2: '#fff', id: 'X' };
-      c.fillStyle = club.c1; c.beginPath(); c.arc(36 * dpr, 36 * dpr, 36 * dpr, 0, Math.PI * 2); c.fill();
-      c.save(); c.beginPath(); c.arc(36 * dpr, 36 * dpr, 33 * dpr, 0, Math.PI * 2); c.clip();
-      c.fillStyle = '#16244f'; c.fillRect(0, 0, 72 * dpr, 72 * dpr);
-      Sprites.figure(c, 36 * dpr, 120 * dpr, 115 * dpr, { kit: Sprites.kit(club, false), look: Sprites.look(7), facing: 'down', t: 0 });
-      c.restore();
+      const g = c.createLinearGradient(0, 0, 0, 72 * dpr);
+      g.addColorStop(0, Sprites.shade(club.c1, -0.3)); g.addColorStop(1, '#0b1020');
+      c.fillStyle = g; c.fillRect(0, 0, 72 * dpr, 72 * dpr);
+      SocialArt.glow(c, 50 * dpr, 14 * dpr, 40 * dpr, 'rgba(255,240,210,0.35)');
+      Sprites.figure(c, 36 * dpr, 128 * dpr, 118 * dpr, { kit: Sprites.kit(club, false), look: Sprites.look(7), facing: 'down', noShadow: true, t: 0 });
     });
+    SocialArt.paint(root);
   },
 };
 

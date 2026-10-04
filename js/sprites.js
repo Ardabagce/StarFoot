@@ -224,6 +224,13 @@ const Sprites = {
       if (up) ctx.arc(sx, hy - hr * 0.05, hr * 1.02, 0, Math.PI * 2);
       else ctx.arc(sx, hy - hr * 0.3, hr * 0.98, Math.PI * 1.05, Math.PI * 1.95);
       ctx.fill();
+      // arkadan bakışta ense ve kulaklar görünür
+      if (up && h > 60) {
+        ctx.fillStyle = look.skin;
+        ctx.beginPath(); ctx.ellipse(sx, hy + hr * 0.9, hr * 0.36, hr * 0.16, 0, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.ellipse(sx - hr * 1.0, hy + hr * 0.1, hr * 0.16, hr * 0.26, 0, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.ellipse(sx + hr * 1.0, hy + hr * 0.1, hr * 0.16, hr * 0.26, 0, 0, Math.PI * 2); ctx.fill();
+      }
     }
     if (!up) {
       ctx.fillStyle = '#1a1a1a';

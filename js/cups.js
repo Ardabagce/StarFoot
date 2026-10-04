@@ -363,7 +363,7 @@ const Cups = {
     const p = s.player;
     Game.news(`${t.name} başladı! ${t.called ? `${nat.name} kadrosundasın.` : t.inPool ? `${nat.name} turnuvada ama kadroya çağrılmadın.` : `${nat.name} turnuvaya katılamadı.`}`, t.called ? 'good' : '');
     if (t.called) {
-      Social.post('daily', `${t.name} için milli takım kampındayım. Ay-yıldızlı forma için her şeyimi vereceğim!`, 1.6);
+      Social.post('daily', `${t.name} için milli takım kampındayım. Ay-yıldızlı forma için her şeyimi vereceğim!`, 1.6, Social.natOpts());
       await Cups.ask(`<div class="ev-tag">Milli turnuva</div><h2>${t.name}</h2><p><b>${nat.name}</b> kadrosuna çağrıldın! Turnuvada ${t.alive.length} takım var; eleme usulüyle oynanacak.</p>`, 'Turnuvaya Başla');
     }
     while (t.alive.length > 1) {
@@ -400,7 +400,7 @@ const Cups = {
     if (t.called && champ.code === nat.code) {
       p.trophies.push(`${s.season.year}: 🏆 ${Cups.tourName(t.type)} Şampiyonu`);
       Player.addFame(p, t.type === 'wc' ? 15 : t.type === 'nl' ? 5 : 9);
-      Social.post('trophy', `${t.name} ŞAMPİYONUYUZ! Bu kupa tüm ülkemizin.`, 6);
+      Social.post('trophy', `${t.name} ŞAMPİYONUYUZ! Bu kupa tüm ülkemizin.`, 6, Social.natOpts());
     }
     t.done = true;
     Nations.afterTournament(s, t, champ.code);
