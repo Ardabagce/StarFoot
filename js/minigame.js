@@ -198,7 +198,7 @@ const MiniGame = {
         delay: 0.34 - 0.2 * s + fkFar * 0.12, speed: (1.6 + 3.0 * s) * (1 - fkFar * 0.25), reach: (0.5 + 0.55 * s) * (1 - fkFar * 0.15), dive: 0.2 + 0.6 * s,
         tx: kp.x, pen: scene.type === 'penalty', diveAmt: 0,
       });
-      const defs = scene.defenders.map((d, i) => mk(d, 11 + i * 3));
+      const defs = scene.defenders.map((d, i) => mk(d, 11 + i * 3, { num: [4, 5, 6, 3, 2, 8, 14, 22][i % 8] }));
       const mates = scene.mates.map((m, i) => mk(m, 31 + i * 5));
       const dSpeed = 0.8 + 2.4 * s;
       const dDelay = 0.26 - 0.12 * s;
@@ -697,7 +697,7 @@ const MiniGame = {
         const ents = [];
         ents.push({ y: 0, d: () => Sprites.frame(ctx, tx, ty, PX) });
         ents.push({ y: keeper.y, d: () => {
-          if (keeper.diveT0 == null) return Sprites.figure(ctx, tx(keeper.x), ty(keeper.y), h, { kit: kits.gk, look: keeper.look, facing: 'down', run: keeper.run, speed: keeper.spd, gloves: true, t });
+          if (keeper.diveT0 == null) return Sprites.figure(ctx, tx(keeper.x), ty(keeper.y), h, { kit: kits.gk, look: keeper.look, facing: 'down', number: 1, run: keeper.run, speed: keeper.spd, gloves: true, t });
           // Uçuş: kalçadan dönerek havalanır, kollar topa uzanır, yay çizip yere iner
           const since = Math.max(0, t - keeper.diveT0);
           const prog = U.clamp(since / 0.5, 0, 1);
@@ -713,7 +713,7 @@ const MiniGame = {
           Sprites.figure(ctx, 0, h * 0.5, h, { kit: kits.gk, look: keeper.look, facing: 'down', gloves: true, dive: 1, noShadow: true, t });
           ctx.restore();
         } });
-        defs.forEach((d) => ents.push({ y: d.y, d: () => Sprites.figure(ctx, tx(d.x), ty(d.y), h * (d.wall ? 1.02 : 1), { kit: kits.opp, look: d.look, facing: 'down', run: d.run, speed: d.spd, dive: d.wall && phase !== 'aim' ? 0.5 : 0, t }) }));
+        defs.forEach((d) => ents.push({ y: d.y, d: () => Sprites.figure(ctx, tx(d.x), ty(d.y), h * (d.wall ? 1.02 : 1), { kit: kits.opp, look: d.look, facing: 'down', number: d.num, run: d.run, speed: d.spd, dive: d.wall && phase !== 'aim' ? 0.5 : 0, t }) }));
         mates.forEach((m) => ents.push({ y: m.y, d: () => Sprites.figure(ctx, tx(m.x), ty(m.y), h, { kit: kits.own, look: m.look, facing: 'up', run: m.run, speed: m.spd, number: m.num, kick: mateShot && mateShot.m === m && t - mateShot.kickT < 0.35 ? (t - mateShot.kickT) / 0.35 : 0, label: lab(m.name.split(' ').slice(-1)[0].toUpperCase()), labelScale: dpr, ring: phase === 'aim' ? 'rgba(124,240,160,0.95)' : null, t }) }));
         const kickA = phase !== 'aim' && t - kickT < 0.35 ? (t - kickT) / 0.35 : 0;
         ents.push({ y: shooter.y, d: () => Sprites.figure(ctx, tx(shooter.x), ty(shooter.y), h, { kit: kits.own, look: shooter.look, facing: 'up', number: shooter.num, kick: kickA, label: lab('SEN'), labelScale: dpr, labelColor: 'rgba(214,40,57,0.92)', t }) });
@@ -856,7 +856,7 @@ const MiniGame = {
         const cx = W / 2 + ox * W, cy = H * 0.5;
         const fh = Math.min(92 * U0, H * 0.3);
         const me = { kit: kits.own, look: lookMe, facing: 'up', number: o.number || 10, run: T * 9, speed: 0.6, t: T };
-        const op = { kit: kits.opp, look: lookOpp, facing: 'down', run: T * 9 + 1, speed: 0.6, t: T };
+        const op = { kit: kits.opp, look: lookOpp, facing: 'down', number: 5, run: T * 9 + 1, speed: 0.6, t: T };
         let ry;
         ry = cy;
         if (o.kind === 'header') {
@@ -1016,7 +1016,7 @@ Object.assign(MiniGame, {
         ctx.beginPath(); ctx.moveTo(W / 2, top); ctx.lineTo(W / 2, bot); ctx.stroke(); ctx.setLineDash([]);
         Sprites.ball(ctx, W / 2, top - 10 * dpr, 9 * dpr, t * 2);
         const fh = Math.min(H * 0.2, W * 0.22);
-        Sprites.figure(ctx, W * 0.66, yOf(op.y), fh, { kit: o.kits.opp, look: lookOp, facing: 'up', run: op.run, speed: 0.9, t });
+        Sprites.figure(ctx, W * 0.66, yOf(op.y), fh, { kit: o.kits.opp, look: lookOp, facing: 'up', number: 3, run: op.run, speed: 0.9, t });
         Sprites.figure(ctx, W * 0.34, yOf(me.y), fh, { kit: o.kits.own, look: lookMe, facing: 'up', number: o.number, run: me.run, speed: U.clamp(me.v / 5, 0.2, 1), label: 'SEN', labelScale: dpr, labelColor: 'rgba(214,40,57,0.92)', t });
         ctx.textAlign = 'center'; ctx.fillStyle = '#fff';
         ctx.font = `italic 800 ${Math.round(30 * dpr)}px "Saira Condensed", "Arial Narrow", sans-serif`;
@@ -1090,7 +1090,7 @@ Object.assign(MiniGame, {
       const me = { x: 0, tx: 0, run: 0 };
       let t = 0, done = false, raf = 0, last = performance.now(), beaten = 0, scroll = 0, msg = '', msgCol = '#fff', msgT = 0;
       const lookMe = Sprites.look(7);
-      const mkDef = (i) => ({ d: 11 + i * 0.5, x: me.tx + U.rand(-0.4, 0.4), side: U.pick([-1, 1]), state: 'come', lt: 0, look: Sprites.look(41 + i * 7) });
+      const mkDef = (i) => ({ num: [4, 6, 15, 23][i % 4], d: 11 + i * 0.5, x: me.tx + U.rand(-0.4, 0.4), side: U.pick([-1, 1]), state: 'come', lt: 0, look: Sprites.look(41 + i * 7) });
       let def = mkDef(0);
       const say = (m, c) => { msg = m; msgCol = c; msgT = 0.9; };
       const end = (res, text, col) => { done = true; say(text, col); msgT = 9; setTimeout(() => { cleanup(); resolve({ result: res }); }, 1200); };
@@ -1133,7 +1133,7 @@ Object.assign(MiniGame, {
           if (def.state === 'lunge' || def.state === 'won') { const k = U.clamp((t - def.lt) / win, 0, 1); dx = def.x + def.side * k * 1.4; lean = def.side * k; }
           if (def.state === 'beaten') { const k = U.clamp((t - def.lt) / 0.4, 0, 1); dx = def.x + def.side * (1.4 + k * 0.6); lean = def.side * (1 - k * 0.3); }
           ctx.save(); ctx.translate(sx(dx), dy); ctx.rotate(lean * 0.35);
-          Sprites.figure(ctx, 0, 0, fh, { kit: o.kits.opp, look: def.look, facing: 'down', run: t * 9, speed: def.state === 'come' ? 0.9 : 0.4, t });
+          Sprites.figure(ctx, 0, 0, fh, { kit: o.kits.opp, look: def.look, facing: 'down', number: def.num, run: t * 9, speed: def.state === 'come' ? 0.9 : 0.4, t });
           ctx.restore();
           if (def.state === 'lunge') {
             // hamle uyarısı: rakibin gittiği taraf kırmızı, kaçman gereken taraf yeşil ok
@@ -1269,7 +1269,7 @@ Object.assign(MiniGame, {
           ctx.save(); ctx.translate(kx, gy + fh * 0.6 - fh * 0.5 * Math.cos(kd * 1.2) - Math.sin(kd * Math.PI) * fh * 0.25); ctx.rotate(Math.sign(shot.tx - keeperX || 1) * kd * 1.2);
           Sprites.figure(ctx, 0, fh * 0.5, fh, { kit: o.kits.gk, look: lookGk, facing: 'down', gloves: true, dive: 1, noShadow: true, t });
           ctx.restore();
-        } else Sprites.figure(ctx, kx, gy + fh * 0.6, fh, { kit: o.kits.gk, look: lookGk, facing: 'down', gloves: true, t });
+        } else Sprites.figure(ctx, kx, gy + fh * 0.6, fh, { kit: o.kits.gk, look: lookGk, facing: 'down', number: 1, gloves: true, t });
         // nişangah
         if (!shot) {
           const ax = toGoal(aim());
@@ -1281,7 +1281,7 @@ Object.assign(MiniGame, {
         // oyuncu ve savunmacı
         const px = W / 2, py = H * 0.68;
         const jump = tapT != null && !(shot && shot.miss && tapT < flight - win * 2.3) ? Math.sin(U.clamp((t - tapT) / 0.6, 0, 1) * Math.PI) * fh * 0.35 : 0;
-        Sprites.figure(ctx, px + fh * 0.42, py + fh * 0.1, fh, { kit: o.kits.opp, look: lookDef, facing: 'up', t, run: t * 3, speed: 0.3 });
+        Sprites.figure(ctx, px + fh * 0.42, py + fh * 0.1, fh, { kit: o.kits.opp, look: lookDef, facing: 'up', number: 5, t, run: t * 3, speed: 0.3 });
         Sprites.figure(ctx, px, py - jump, fh, { kit: o.kits.own, look: lookMe, facing: 'up', number: o.number, label: 'SEN', labelScale: dpr, labelColor: 'rgba(214,40,57,0.92)', t });
         // top: köşeden kavisli orta, gölgesi yerde
         const headY = py - fh * 0.95 - jump;
@@ -1509,7 +1509,7 @@ Object.assign(MiniGame, {
         const cx = W / 2, fy = H * 0.66;
         const off = push > 0 ? pushDir * (1 - Math.abs(push - 0.3) / 0.3) * W * 0.06 : 0;
         const lean = holding ? power * W * 0.02 : 0;
-        Sprites.figure(ctx, cx + fh * 0.28 + off + lean * 0.3, fy, fh, { kit: o.kits.opp, look: lookOp, facing: 'up', run: t * 2, speed: 0.4, t });
+        Sprites.figure(ctx, cx + fh * 0.28 + off + lean * 0.3, fy, fh, { kit: o.kits.opp, look: lookOp, facing: 'up', number: 4, run: t * 2, speed: 0.4, t });
         Sprites.figure(ctx, cx - fh * 0.28 + lean, fy, fh, { kit: o.kits.own, look: lookMe, facing: 'up', number: o.number, run: t * 2, speed: 0.4, label: 'SEN', labelScale: dpr, labelColor: 'rgba(214,40,57,0.92)', t });
         Sprites.ball(ctx, cx, fy - fh * 1.25, 9 * dpr, t * 2);
         // güç barı

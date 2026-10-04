@@ -35,6 +35,12 @@ const U = {
     }
     return items[items.length - 1];
   },
+  // Rengin parlaklığı (0-1), yazı rengi seçmek için
+  lum(hex) {
+    const h = hex.replace('#', '');
+    const v = h.length === 3 ? h.split('').map((c) => parseInt(c + c, 16)) : [0, 2, 4].map((i) => parseInt(h.slice(i, i + 2), 16));
+    return (0.299 * v[0] + 0.587 * v[1] + 0.114 * v[2]) / 255;
+  },
   money(n) {
     n = Math.round(n);
     const abs = Math.abs(n);

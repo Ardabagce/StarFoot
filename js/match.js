@@ -302,9 +302,19 @@ const Match = {
       return r < ps ? 'success' : r < ps + (1 - ps) * 0.4 ? 'partial' : 'fail';
     };
 
+    // TV skorbordu: lig etiketi, forma renkli takım kısaltmaları, skor ve canlı dakika
+    const updateSB = (label) => {
+      const ab = (t) => U.esc((t.short || t.name.slice(0, 3)).toLocaleUpperCase('tr'));
+      const kit = (t) => `<i style="--k1:${t.c1};--k2:${t.c2}"></i>`;
+      $('mm-sb').innerHTML = `<span class="sb-tag">${sb.tag}</span>
+        <span class="sb-t">${kit(ctx.home)}${ab(ctx.home)}</span>
+        <span class="sb-s"><b>${M.hs}</b><em></em><b>${M.as}</b></span>
+        <span class="sb-t">${ab(ctx.away)}${kit(ctx.away)}</span>
+        <span class="sb-m">${label ? '' : '<i class="live"></i>'}${label || `${Math.min(90, M.min)}'`}</span>`;
+    };
     const showMoment = (type) => {
       $('mt-moment').classList.remove('hidden');
-      $('mm-sb').innerHTML = `<span class="sb-tag">${sb.tag}</span><span class="sb-t">${U.esc(ctx.home.short || ctx.home.name.slice(0, 3)).toUpperCase()}</span><span class="sb-s">${M.hs}-${M.as}</span><span class="sb-t">${U.esc(ctx.away.short || ctx.away.name.slice(0, 3)).toUpperCase()}</span><span class="sb-m">${M.min}'</span>`;
+      updateSB();
       $('mm-min').textContent = `${M.min}'`;
       $('mm-title').textContent = U.plain(MOMENT_TITLES[type]);
       $('mm-desc').textContent = MOMENT_DESC[type];
@@ -365,6 +375,7 @@ const Match = {
           ['scout', 'shield', 'Rakip kaleciyi incele', 'Kaleci ve savunma biraz daha kolaylaşır'],
         ];
       $('mt-moment').classList.remove('hidden');
+      updateSB('DA');
       $('mm-min').textContent = 'İY';
       $('mm-title').textContent = 'Devre Arası';
       $('mm-desc').textContent = 'İkinci yarı için ne yapacağını seç.';

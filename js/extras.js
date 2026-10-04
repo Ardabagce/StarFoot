@@ -49,6 +49,7 @@ const ACHIEVEMENTS = (() => {
     { id: 'double', cat: 'trophy', tier: 'gold', name: 'Çifte Kupa', desc: 'Aynı sezon hem ligi hem ülke kupasını kazandın', check: (p) => { const by = {}; p.trophies.forEach((t) => { const y = t.split(':')[0]; by[y] = by[y] || {}; if (/(Türkiye|İngiltere|Kral|Almanya|İtalya|Fransa|Hollanda|Portekiz|Brezilya|Arjantin) Kupası Şampiyonu/.test(t)) by[y].c = 1; else if (/Şampiyonu/.test(t) && !/U\d|Kupa|Şampiyonası/.test(t)) by[y].l = 1; }); return Object.values(by).some((x) => x.c && x.l); } },
     { id: 'uel', cat: 'trophy', tier: 'silver', name: 'Federasyon Kupası', desc: 'Avrupa Federasyon Kupası\'nı kazandın', check: (p) => p.trophies.some((t) => /Federasyon Kupası/.test(t)) },
     { id: 'wc', cat: 'trophy', tier: 'gold', name: 'Dünya Şampiyonu', desc: 'Dünya Kupası\'nı kazandın', check: (p) => p.trophies.some((t) => /Dünya Kupası Şampiyonu/.test(t)) },
+    { id: 'nl', cat: 'trophy', tier: 'silver', name: 'Uluslar Ligi', desc: 'Uluslar Ligi Finalleri\'ni kazandın', check: (p) => p.trophies.some((t) => /Uluslar Ligi/.test(t)) },
     { id: 'euro', cat: 'trophy', tier: 'gold', name: 'Avrupa Şampiyonu', desc: 'Avrupa Şampiyonası\'nı kazandın', check: (p) => p.trophies.some((t) => /Avrupa Şampiyonası Şampiyonu/.test(t)) },
     { id: 'boot', cat: 'trophy', tier: 'silver', name: 'Gol Kralı', desc: 'Bir sezon gol krallığını kazandın', check: (p) => tr(/Gol Kralı/)(p) >= 1 },
     { id: 'boot3', cat: 'trophy', tier: 'gold', name: 'Seri Gol Kralı', desc: '3 kez gol kralı oldun', check: (p) => tr(/Gol Kralı/)(p) >= 3 },
@@ -141,7 +142,7 @@ const Shop = {
   },
   usedThisSeason(c) {
     const u = Game.p.used || {};
-    return ['camp', 'clinic', 'analysis'].includes(c.id) && u[c.id] === Game.state.season.year;
+    return ['camp', 'clinic', 'analysis', 'yoga', 'heading'].includes(c.id) && u[c.id] === Game.state.season.year;
   },
   use(id) {
     const p = Game.p, s = Game.state;
@@ -156,6 +157,12 @@ const Shop = {
     if (id === 'mental') { Player.addMorale(p, 15); msg = 'Moral +15'; }
     if (id === 'meet') { Player.addRel(p, 'fans', 8); Player.addFame(p, Game.isYouth() ? 0.3 : 1); msg = 'Taraftarlar seni çok sevdi'; }
     if (id === 'analysis') { msg = ['technique', 'passing'].map((k) => `${STATS.find((x) => x.k === k).l} +${Player.train(p, k, 2.2, 1).toFixed(1)}`).join(', '); }
+    if (id === 'ice') { Player.addEnergy(p, 12); Player.addMorale(p, 2); msg = 'Enerji +12, kasların tazelendi'; }
+    if (id === 'spa') { Player.addEnergy(p, 10); Player.addMorale(p, 10); msg = 'Enerji +10, moral +10'; }
+    if (id === 'family') { Player.addMorale(p, 12); msg = 'Ailen çok mutlu oldu. Moral +12'; }
+    if (id === 'shoot') { Player.addFame(p, Game.isYouth() ? 0.4 : 1.5); Social.post('life', 'Yeni çekimden kareler. Sizce hangisi?', 1.6); msg = 'Fotoğraflar sosyal medyada çok beğenildi'; }
+    if (id === 'yoga') { msg = ['stamina', 'physical'].map((k) => `${STATS.find((x) => x.k === k).l} +${Player.train(p, k, 2.2, 1).toFixed(1)}`).join(', '); }
+    if (id === 'heading') { msg = ['heading', 'defending'].map((k) => `${STATS.find((x) => x.k === k).l} +${Player.train(p, k, 2.2, 1).toFixed(1)}`).join(', '); }
     if (id === 'physio') {
       if (!p.injuryWeeks) return Game.toast('Sakat değilsin, fizyoterapiye gerek yok.', 'bad');
       p.injuryWeeks = Math.max(0, p.injuryWeeks - 2);

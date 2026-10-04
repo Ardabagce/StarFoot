@@ -497,7 +497,7 @@ const NAME_POOLS = {
 // cat: boots (maç bonusu), gear (antrenman çarpanı), food (haftalık enerji), life (moral/ün)
 // minAge / maxAge: mağazada hangi yaşlarda satıldığı (satın alınan eşya etkisini korur)
 const ITEMS = [
-  // Kramponlar (maçta stat bonusu; en iyisi geçerli)
+  // Kramponlar (maçta stat bonusu; en pahalısı giyilir ve 30-40 maçta eskir)
   { id: 'boot0', cat: 'boots', art: 'boot', name: 'Cırtlı Çocuk Kramponu', price: 150, minAge: 8, maxAge: 11, bonus: { technique: 1 }, desc: 'Teknik +1 (maçlarda)' },
   { id: 'boot1', cat: 'boots', art: 'boot', name: 'Mahalle Kramponu', price: 400, minAge: 8, maxAge: 15, bonus: { shooting: 1, technique: 1 }, desc: 'Şut +1, Teknik +1' },
   { id: 'futsal', cat: 'boots', art: 'boot', name: 'Futsal Ayakkabısı', price: 1200, minAge: 10, maxAge: 16, bonus: { dribbling: 2, technique: 1 }, desc: 'Top Sürme +2, Teknik +1' },
@@ -505,6 +505,12 @@ const ITEMS = [
   { id: 'bootspd', cat: 'boots', art: 'boot', name: 'Hafif Sürat Kramponu', price: 30000, minAge: 15, bonus: { pace: 3, dribbling: 2, shooting: 1 }, desc: 'Hız +3, Top Sürme +2, Şut +1' },
   { id: 'boot3', cat: 'boots', art: 'boot', name: 'Pro Krampon', price: 90000, minAge: 16, bonus: { shooting: 3, technique: 3, pace: 2 }, desc: 'Şut +3, Teknik +3, Hız +2' },
   { id: 'bootctl', cat: 'boots', art: 'boot', name: 'Kontrol Kramponu', price: 400000, minAge: 18, bonus: { passing: 4, technique: 4, shooting: 2 }, desc: 'Pas +4, Teknik +4, Şut +2' },
+  { id: 'bootmud', cat: 'boots', art: 'boot', name: 'Çamur Kramponu (Uzun Krampon)', price: 2500, minAge: 11, bonus: { physical: 2, defending: 1 }, desc: 'Güç +2, Savunma +1' },
+  { id: 'bootsock', cat: 'boots', art: 'boot', name: 'Çorap Bilekli Krampon', price: 15000, minAge: 14, bonus: { dribbling: 3, technique: 2 }, desc: 'Top Sürme +3, Teknik +2' },
+  { id: 'bootdef', cat: 'boots', art: 'boot', name: 'Savunmacı Kramponu', price: 55000, minAge: 16, bonus: { defending: 4, physical: 2, heading: 2 }, desc: 'Savunma +4, Güç +2, Kafa +2' },
+  { id: 'bootaero', cat: 'boots', art: 'boot', name: 'Aerodinamik Krampon', price: 220000, minAge: 17, bonus: { pace: 4, dribbling: 3, stamina: 2 }, desc: 'Hız +4, Top Sürme +3, Dayanıklılık +2' },
+  { id: 'bootsig', cat: 'boots', art: 'boot', name: 'İmzalı Yıldız Kramponu', price: 800000, minAge: 19, bonus: { shooting: 5, dribbling: 4, technique: 3 }, desc: 'Şut +5, Top Sürme +4, Teknik +3' },
+  { id: 'bootcarbon', cat: 'boots', art: 'boot', name: 'Karbon Elit Krampon', price: 5000000, minAge: 21, bonus: { shooting: 6, technique: 5, pace: 4, passing: 3, dribbling: 3 }, desc: 'Şut +6, Teknik +5, Hız +4, Pas +3, Top Sürme +3' },
   { id: 'boot4', cat: 'boots', art: 'boot', name: 'Altın Krampon', price: 1500000, minAge: 19, bonus: { shooting: 5, technique: 4, pace: 3, passing: 2 }, desc: 'Şut +5, Teknik +4, Hız +3, Pas +2' },
   // Antrenman ekipmanı (antrenman kazancı; en iyisi geçerli)
   { id: 'gear1', cat: 'gear', art: 'ball', name: 'Antrenman Topu', price: 250, minAge: 8, maxAge: 14, mult: 1.1, desc: 'Antrenman kazancı +%10' },
@@ -514,6 +520,11 @@ const ITEMS = [
   { id: 'gym', cat: 'gear', art: 'dumbbell', name: 'Spor Salonu Üyeliği', price: 9000, minAge: 14, mult: 1.24, desc: 'Antrenman kazancı +%24' },
   { id: 'vidsoft', cat: 'gear', art: 'video', name: 'Video Analiz Programı', price: 40000, minAge: 16, mult: 1.27, desc: 'Antrenman kazancı +%27' },
   { id: 'gear3', cat: 'gear', art: 'gym', name: 'Ev Spor Salonu', price: 120000, minAge: 17, mult: 1.3, desc: 'Antrenman kazancı +%30' },
+  { id: 'ladder', cat: 'gear', art: 'cones', name: 'Çeviklik Merdiveni', price: 1200, minAge: 9, mult: 1.12, desc: 'Antrenman kazancı +%12' },
+  { id: 'rebounder', cat: 'gear', art: 'goal', name: 'Pas Duvarı (Rebounder)', price: 18000, minAge: 13, mult: 1.25, desc: 'Antrenman kazancı +%25' },
+  { id: 'gpsvest', cat: 'gear', art: 'video', name: 'GPS Performans Yeleği', price: 70000, minAge: 16, mult: 1.28, desc: 'Antrenman kazancı +%28' },
+  { id: 'cryo', cat: 'gear', art: 'physio', name: 'Kriyoterapi Kabini', price: 600000, minAge: 19, mult: 1.36, desc: 'Antrenman kazancı +%36' },
+  { id: 'pteam', cat: 'gear', art: 'center', name: 'Kişisel Antrenör Ekibi', price: 12000000, minAge: 22, mult: 1.55, desc: 'Antrenman kazancı +%55' },
   { id: 'gear4', cat: 'gear', art: 'center', name: 'Kişisel Performans Merkezi', price: 3000000, minAge: 20, mult: 1.45, desc: 'Antrenman kazancı +%45' },
   // Beslenme (haftalık enerji; en iyisi geçerli)
   { id: 'food1', cat: 'food', art: 'book', name: 'Sporcu Beslenmesi Kitabı', price: 300, minAge: 8, regen: 5, desc: 'Haftalık enerji yenilenmesi +5' },
@@ -521,6 +532,9 @@ const ITEMS = [
   { id: 'food2', cat: 'food', art: 'blender', name: 'Blender ve Protein', price: 4000, minAge: 13, regen: 9, desc: 'Haftalık enerji yenilenmesi +9' },
   { id: 'vitamin', cat: 'food', art: 'vitamins', name: 'Vitamin ve Mineral Seti', price: 20000, minAge: 15, regen: 11, desc: 'Haftalık enerji yenilenmesi +11' },
   { id: 'food3', cat: 'food', art: 'apple', name: 'Diyetisyen', price: 150000, minAge: 17, regen: 14, desc: 'Haftalık enerji yenilenmesi +14' },
+  { id: 'shakes', cat: 'food', art: 'blender', name: 'Aylık Smoothie Paketi', price: 2000, minAge: 10, regen: 8, desc: 'Haftalık enerji yenilenmesi +8' },
+  { id: 'mealprep', cat: 'food', art: 'apple', name: 'Hazır Sporcu Menüsü', price: 50000, minAge: 16, regen: 12, desc: 'Haftalık enerji yenilenmesi +12' },
+  { id: 'sleeplab', cat: 'food', art: 'sleep', name: 'Uyku Koçu ve Akıllı Yatak', price: 450000, minAge: 18, regen: 16, desc: 'Haftalık enerji yenilenmesi +16' },
   { id: 'food4', cat: 'food', art: 'chef', name: 'Kişisel Şef', price: 1200000, minAge: 20, regen: 20, desc: 'Haftalık enerji yenilenmesi +20' },
   // Hobi ve eğlence (moral; hepsi birikir)
   { id: 'cards', cat: 'life', art: 'cards', name: 'Futbolcu Kartı Albümü', price: 150, minAge: 8, maxAge: 12, morale: 1, fame: 0, desc: 'Her hafta moral +1' },
@@ -531,7 +545,17 @@ const ITEMS = [
   { id: 'phones', cat: 'life', art: 'headphones', name: 'Kablosuz Kulaklık', price: 3500, minAge: 13, morale: 1, fame: 0, desc: 'Her hafta moral +1' },
   { id: 'life2', cat: 'life', art: 'console', name: 'Oyun Konsolu', price: 9000, minAge: 11, morale: 1, fame: 0, desc: 'Her hafta moral +1' },
   { id: 'drone', cat: 'life', art: 'drone', name: 'Kameralı Drone', price: 18000, minAge: 14, morale: 1, fame: 1, desc: 'Her hafta moral +1, Ün +1' },
+  { id: 'books', cat: 'life', art: 'book', name: 'Futbol Efsaneleri Kitap Seti', price: 400, minAge: 9, morale: 1, fame: 0, desc: 'Her hafta moral +1' },
+  { id: 'pet', cat: 'life', art: 'fans', name: 'Yavru Köpek', price: 6000, minAge: 10, morale: 2, fame: 0, desc: 'Her hafta moral +2' },
+  { id: 'vr', cat: 'life', art: 'console', name: 'Sanal Gerçeklik Gözlüğü', price: 12000, minAge: 13, morale: 1, fame: 0, desc: 'Her hafta moral +1' },
+  { id: 'studio', cat: 'life', art: 'headphones', name: 'Ev Müzik Stüdyosu', price: 80000, minAge: 17, morale: 1, fame: 1, desc: 'Her hafta moral +1, Ün +1' },
+  { id: 'podcast', cat: 'life', art: 'phone', name: 'Kendi Podcast Kanalın', price: 150000, minAge: 18, morale: 1, fame: 2, desc: 'Her hafta moral +1, Ün +2' },
+  { id: 'charity', cat: 'life', art: 'fans', name: 'Futbol Okulu Vakfı', price: 2000000, minAge: 21, morale: 2, fame: 5, desc: 'Çocuklar için ücretsiz okul. Her hafta moral +2, Ün +5' },
   // Ulaşım (moral + ün; hepsi birikir)
+  { id: 'ebike', cat: 'ride', art: 'bike', name: 'Elektrikli Bisiklet', price: 6000, minAge: 14, morale: 1, fame: 0, desc: 'Her hafta moral +1' },
+  { id: 'hatch', cat: 'ride', art: 'car', name: 'İlk Araban (Hatchback)', price: 60000, minAge: 18, morale: 1, fame: 1, desc: 'Her hafta moral +1, Ün +1' },
+  { id: 'suv', cat: 'ride', art: 'car', name: 'Lüks SUV', price: 900000, minAge: 19, morale: 1, fame: 3, desc: 'Her hafta moral +1, Ün +3' },
+  { id: 'classic', cat: 'ride', art: 'car', name: 'Klasik Koleksiyon Arabası', price: 15000000, minAge: 22, morale: 2, fame: 7, desc: 'Her hafta moral +2, Ün +7' },
   { id: 'scooter', cat: 'ride', art: 'scooter', name: 'Elektrikli Scooter', price: 14000, minAge: 15, morale: 1, fame: 0, desc: 'Her hafta moral +1' },
   { id: 'moto', cat: 'ride', art: 'moto', name: 'Motosiklet', price: 250000, minAge: 18, morale: 1, fame: 2, desc: 'Her hafta moral +1, Ün +2' },
   { id: 'life4', cat: 'ride', art: 'car', name: 'Spor Araba', price: 4500000, minAge: 18, morale: 2, fame: 5, desc: 'Her hafta moral +2, Ün +5' },
@@ -541,6 +565,11 @@ const ITEMS = [
   { id: 'life3', cat: 'style', art: 'phone', name: 'Akıllı Telefon', price: 25000, minAge: 13, morale: 1, fame: 1, desc: 'Her hafta moral +1, Ün +1' },
   { id: 'shades', cat: 'style', art: 'glasses', name: 'Tasarım Güneş Gözlüğü', price: 60000, minAge: 16, morale: 1, fame: 2, desc: 'Her hafta moral +1, Ün +2' },
   { id: 'watch', cat: 'style', art: 'watch', name: 'Lüks Saat', price: 400000, minAge: 18, morale: 1, fame: 3, desc: 'Her hafta moral +1, Ün +3' },
+  { id: 'sneakers', cat: 'style', art: 'jersey', name: 'Sınırlı Seri Spor Ayakkabı', price: 8000, minAge: 13, morale: 1, fame: 1, desc: 'Her hafta moral +1, Ün +1' },
+  { id: 'chain', cat: 'style', art: 'watch', name: 'Altın Kolye', price: 150000, minAge: 18, morale: 1, fame: 2, desc: 'Her hafta moral +1, Ün +2' },
+  { id: 'suit', cat: 'style', art: 'jersey', name: 'Terzi Dikimi Takım Elbise', price: 900000, minAge: 19, morale: 1, fame: 4, desc: 'Her hafta moral +1, Ün +4' },
+  { id: 'penthouse', cat: 'style', art: 'villa', name: 'Şehir Merkezinde Çatı Katı', price: 8000000, minAge: 20, morale: 2, fame: 6, desc: 'Her hafta moral +2, Ün +6' },
+  { id: 'island', cat: 'style', art: 'yacht', name: 'Özel Ada', price: 400000000, minAge: 27, morale: 5, fame: 25, desc: 'Her hafta moral +5, Ün +25' },
   // Kozmetik toplar (maçta ve antrenmanda kullanılan top)
   { id: 'ball_street', cat: 'balls', skin: 'street', name: 'Sokak Topu', price: 300, minAge: 8, desc: 'Yeşil şeritli, mahalle havası' },
   { id: 'ball_neon', cat: 'balls', skin: 'neon', name: 'Neon Top', price: 2000, minAge: 8, desc: 'Gece maçlarında parlayan sarı' },
@@ -548,6 +577,12 @@ const ITEMS = [
   { id: 'ball_ice', cat: 'balls', skin: 'ice', name: 'Buz Topu', price: 9000, minAge: 10, desc: 'Buz mavisi alev desenli' },
   { id: 'ball_fire', cat: 'balls', skin: 'fire', name: 'Ateş Topu', price: 18000, minAge: 10, desc: 'Turuncu-kırmızı alevler' },
   { id: 'ball_galaxy', cat: 'balls', skin: 'galaxy', name: 'Galaksi Topu', price: 90000, minAge: 14, desc: 'Mor uzay ve yıldızlar' },
+  { id: 'ball_camo', cat: 'balls', skin: 'camo', name: 'Kamuflaj Top', price: 4000, minAge: 9, desc: 'Haki yeşil desen' },
+  { id: 'ball_pink', cat: 'balls', skin: 'pink', name: 'Pembe Şimşek', price: 7000, minAge: 9, desc: 'Pembe-beyaz şimşek desenli' },
+  { id: 'ball_night', cat: 'balls', skin: 'night', name: 'Gece Mavisi', price: 25000, minAge: 12, desc: 'Lacivert ve gümüş yıldızlar' },
+  { id: 'ball_lava', cat: 'balls', skin: 'lava', name: 'Lav Topu', price: 60000, minAge: 13, desc: 'Siyah zemin, turuncu çatlaklar' },
+  { id: 'ball_rainbow', cat: 'balls', skin: 'rainbow', name: 'Gökkuşağı Top', price: 150000, minAge: 14, desc: 'Her panel ayrı renk' },
+  { id: 'ball_diamond', cat: 'balls', skin: 'diamond', name: 'Elmas Top', price: 5000000, minAge: 20, desc: 'Işıl ışıl buz beyazı' },
   { id: 'ball_gold', cat: 'balls', skin: 'gold', name: 'Altın Top', price: 750000, minAge: 17, desc: 'Gerçek bir yıldızın topu' },
   { id: 'life5', cat: 'style', art: 'villa', name: 'Deniz Manzaralı Villa', price: 25000000, minAge: 20, morale: 3, fame: 8, desc: 'Her hafta moral +3, Ün +8' },
 ];
@@ -562,5 +597,11 @@ const CONSUMABLES = [
   { id: 'meet', art: 'fans', name: 'Taraftar Buluşması', base: 700, desc: 'Taraftar ilişkisi +8, ün artar', minAge: 14 },
   { id: 'analysis', art: 'video', name: 'Video Analiz Seansı', base: 900, desc: 'Teknik ve Pas gelişir (sezonda bir kez)', minAge: 13 },
   { id: 'camp', art: 'camp', name: 'Yaz Futbol Kampı', base: 1500, desc: 'Rastgele 3 stata büyük gelişim (sezonda bir kez)', minAge: 8, maxAge: 17 },
+  { id: 'ice', art: 'physio', name: 'Buz Banyosu', base: 120, desc: '+12 enerji, +2 moral', minAge: 14 },
+  { id: 'spa', art: 'massage', name: 'Spa Günü', base: 350, desc: '+10 enerji, +10 moral', minAge: 16 },
+  { id: 'family', art: 'fans', name: 'Ailene Hediye', base: 600, desc: 'Moral +12', minAge: 10 },
+  { id: 'shoot', art: 'phone', name: 'Profesyonel Fotoğraf Çekimi', base: 800, desc: 'Takipçi ve ün kazanırsın', minAge: 15 },
+  { id: 'yoga', art: 'brain', name: 'Yoga ve Esneme Dersi', base: 300, desc: 'Dayanıklılık ve Güç gelişir (sezonda bir kez)', minAge: 12 },
+  { id: 'heading', art: 'goal', name: 'Kafa Vuruşu Özel Dersi', base: 700, desc: 'Kafa ve Savunma gelişir (sezonda bir kez)', minAge: 12 },
   { id: 'clinic', art: 'clinic', name: 'Yıldız Futbolcu Kliniği', base: 4000, desc: 'Antrenman odağındaki stata büyük gelişim (sezonda bir kez)', minAge: 12 },
 ];

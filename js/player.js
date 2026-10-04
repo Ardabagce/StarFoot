@@ -77,11 +77,41 @@ const Player = {
 
   effStats(p) {
     const st = Object.assign({}, p.stats);
+    const boot = Player.activeBoot(p);
     for (const id of p.items) {
       const it = ITEMS.find((i) => i.id === id);
-      if (it && it.bonus) for (const k in it.bonus) st[k] = Math.min(99, st[k] + it.bonus[k]);
+      if (!it || !it.bonus || (it.cat === 'boots' && it !== boot)) continue;
+      for (const k in it.bonus) st[k] = Math.min(99, st[k] + it.bonus[k]);
     }
     return st;
+  },
+
+  // Aynı anda tek krampon giyilir: elindekilerin en iyisi
+  activeBoot(p) {
+    let best = null;
+    for (const id of p.items) {
+      const it = ITEMS.find((i) => i.id === id);
+      if (it && it.cat === 'boots' && (!best || it.price > best.price)) best = it;
+    }
+    return best;
+  },
+
+  // Krampon ömrü (maç sayısı); eski kayıtlarda ilk okumada belirlenir
+  bootLife(p, id) {
+    p.wear = p.wear || {};
+    if (p.wear[id] == null) p.wear[id] = U.randi(30, 40);
+    return p.wear[id];
+  },
+
+  // Oynanan maç sonrası giyilen krampon aşınır; biterse çantadan çıkar
+  wearBoot(p) {
+    const b = Player.activeBoot(p);
+    if (!b) return null;
+    const left = Player.bootLife(p, b.id) - 1;
+    if (left > 0) { p.wear[b.id] = left; return left === 5 ? { warn: b } : null; }
+    p.items = p.items.filter((x) => x !== b.id);
+    delete p.wear[b.id];
+    return { gone: b };
   },
 
   bestItem(p, cat, field) {

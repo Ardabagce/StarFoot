@@ -28,9 +28,10 @@ const Cups = {
   // ---------- Avrupa kulüp kupaları ----------
   // Lig sıralamasına göre katılım: Şampiyonlar → Federasyon → Konferans (ör. İngiltere'de ilk 7)
   defs: [
-    { id: 'ucl', name: 'Avrupa Şampiyonlar Kupası', fame: 2.2, region: 'eu', quota: { ENG: 3, ESP: 3, GER: 3, ITA: 2, FRA: 2, TR1: 1, NED: 1, POR: 1 } },
-    { id: 'uel', name: 'Avrupa Federasyon Kupası', fame: 1.5, region: 'eu', quota: { ENG: 2, ESP: 2, GER: 2, ITA: 2, FRA: 2, TR1: 2, NED: 2, POR: 2 } },
-    { id: 'uecl', name: 'Avrupa Konferans Kupası', fame: 1.1, region: 'eu', quota: { ENG: 2, ESP: 2, GER: 2, ITA: 2, FRA: 2, TR1: 2, NED: 2, POR: 2 } },
+    // Şampiyonlar ve Federasyon: 32 takımlı lig aşaması (8 maç) → play-off → son 16 (güncel format)
+    { id: 'ucl', name: 'Avrupa Şampiyonlar Kupası', fame: 2.2, region: 'eu', swiss: true, quota: { ENG: 5, ESP: 5, ITA: 5, GER: 4, FRA: 4, POR: 3, NED: 3, TR1: 3 } },
+    { id: 'uel', name: 'Avrupa Federasyon Kupası', fame: 1.5, region: 'eu', swiss: true, quota: { ENG: 4, ESP: 4, ITA: 4, GER: 4, FRA: 4, POR: 4, NED: 4, TR1: 4 } },
+    { id: 'uecl', name: 'Avrupa Konferans Kupası', fame: 1.1, region: 'eu', quota: { ENG: 2, ESP: 2, ITA: 2, GER: 2, FRA: 2, POR: 2, NED: 2, TR1: 2 } },
     { id: 'csa', name: 'Güney Amerika Kupası', fame: 1.4, region: 'sa', quota: { BRA: 8, ARG: 8 } },
   ],
   // Kulübün lig sırasına göre gelecek sezon hangi kupaya gideceği
@@ -57,6 +58,7 @@ const Cups = {
         order.filter((id) => w.clubs[id] && w.clubs[id].league === lid && !taken.has(id)).slice(0, q).forEach((id) => { teams.push(id); taken.add(id); });
       });
       if (teams.length < 2) return;
+      if (d.swiss && teams.length === 32) { s.cups[d.id] = Cups.newSwiss(d, teams); return; }
       const size = 1 << Math.floor(Math.log2(teams.length));
       s.cups[d.id] = { id: d.id, name: d.name, region: d.region, alive: U.shuffle(teams.slice(0, size)), stage: 0, log: [], winner: null };
     });
@@ -91,6 +93,101 @@ const Cups = {
     Game.news(`${Game.club().name} U19 takımı bu sezon Avrupa Gelişim Ligi'nde! Avrupa'nın en iyi altyapılarıyla eşleşeceksin.`, 'good');
   },
 
+  // Lig aşaması: herkes 8 farklı rakiple oynar (çember yöntemi), tek tablo
+  newSwiss(d, teams) {
+    const t = U.shuffle(teams.slice());
+    const n = t.length, fx = [];
+    for (let r = 0; r < 8; r++) {
+      const round = [];
+      for (let i = 0; i < n / 2; i++) {
+        const a = i === 0 ? t[0] : t[1 + ((i - 1 + r) % (n - 1))];
+        const b = t[1 + ((n - 1 - i - 1 + r) % (n - 1))];
+        round.push((r + i) % 2 ? [b, a] : [a, b]);
+      }
+      fx.push(round);
+    }
+    const table = {};
+    t.forEach((id) => (table[id] = { p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, pts: 0 }));
+    return {
+      id: d.id, name: d.name, region: d.region, fmt: 'swiss', phase: 'league', teams: t, table, fx, md: 0, direct: [], out: [],
+      fr: [0.05, 0.11, 0.18, 0.24, 0.29, 0.35, 0.4, 0.46, 0.58, 0.66, 0.79, 0.87, 0.97], alive: [], stage: 0, log: [], winner: null,
+    };
+  },
+
+  swissTable(cup) {
+    return Object.entries(cup.table).map(([id, r]) => Object.assign({ id }, r)).sort((x, y) => y.pts - x.pts || (y.gf - y.ga) - (x.gf - x.ga) || y.gf - x.gf);
+  },
+
+  // Kupada kulübün bu turdaki rakibi ve tur adı
+  opponent(s, cup) {
+    const me = s.clubId;
+    if (cup.fmt === 'swiss' && cup.phase === 'league') {
+      const f = (cup.fx[cup.md] || []).find(([h, a]) => h === me || a === me);
+      return f ? { h: f[0], a: f[1], opp: f[0] === me ? f[1] : f[0], stage: `Lig Aşaması · ${cup.md + 1}. Maç` } : null;
+    }
+    const i = cup.alive.indexOf(me);
+    if (i < 0) return null;
+    const j = i % 2 === 0 ? i + 1 : i - 1;
+    return { h: cup.alive[Math.min(i, j)], a: cup.alive[Math.max(i, j)], opp: cup.alive[j], stage: cup.phase === 'po' ? 'Play-off' : STAGE_NAMES[cup.alive.length] };
+  },
+
+  inCup(s, cup) {
+    return cup.fmt === 'swiss' && cup.phase === 'league' ? cup.teams.includes(s.clubId) : cup.alive.includes(s.clubId);
+  },
+
+  // Lig aşamasında bir maç günü
+  leagueDay(s, cup, mine) {
+    const w = s.world;
+    (cup.fx[cup.md] || []).forEach(([h, a]) => {
+      let hs, as;
+      if (mine && mine.h === h && mine.a === a) { hs = mine.r.a; as = mine.r.b; }
+      else [hs, as] = World.simScore(w.clubs[h].rating + 1.5, w.clubs[a].rating);
+      World.record(cup, h, a, hs, as);
+      Cups.goals(s, cup, h, a, hs, as, mine);
+      cup.log.push({ stage: `md${cup.md + 1}`, h, a, hs, as, w: hs > as ? h : as > hs ? a : null });
+    });
+    cup.md++; cup.stage++;
+    if (cup.md >= 8) {
+      const tbl = Cups.swissTable(cup).map((r) => r.id);
+      cup.direct = tbl.slice(0, 8);
+      const po = tbl.slice(8, 24);
+      cup.out = tbl.slice(24);
+      cup.alive = [];
+      for (let i = 0; i < 8; i++) cup.alive.push(po[i], po[15 - i]);
+      cup.phase = 'po';
+      const me = s.clubId;
+      const near = !cup.region || cup.region === regionOf(w.clubs[me] ? w.clubs[me].league : 'TR1');
+      if (cup.direct.includes(me)) Game.news(`${cup.name} lig aşamasını ${tbl.indexOf(me) + 1}. bitirdik: doğrudan son 16'dayız!`, 'good');
+      else if (po.includes(me)) Game.news(`${cup.name} lig aşamasını ${tbl.indexOf(me) + 1}. bitirdik: play-off oynayacağız.`, '');
+      else if (cup.out.includes(me)) Game.news(`${cup.name} lig aşamasında ${tbl.indexOf(me) + 1}. olduk ve elendik.`, 'bad');
+      else if (near) Game.news(`${cup.name} lig aşaması tamamlandı. Lider: ${w.clubs[tbl[0]].name}.`, 'world');
+    }
+  },
+
+  // Kupa gol/asist krallığı: oyuncunun maçında kendi gol ve asistleri işlenir
+  goals(s, cup, h, a, hs, as, mine) {
+    cup.scorers = cup.scorers || {};
+    const ros = (id) => (cup.youth ? cup.ros[id] : s.world.clubs[id] && s.world.clubs[id].roster) || [];
+    const isMine = mine && mine.h === h && mine.a === a && mine.sum;
+    [[h, hs], [a, as]].forEach(([id, n]) => {
+      let left = n;
+      if (isMine && id === s.clubId) {
+        const me = Player.fullName(s.player);
+        const g = Math.min(left, mine.sum.goals || 0);
+        for (let i = 0; i < g; i++) World.addScorer(cup, me, id);
+        for (let i = 0; i < Math.min(n - g, mine.sum.assists || 0); i++) World.addAssist(cup, me, id);
+        left -= g;
+      }
+      for (let i = 0; i < left; i++) World.goalWithAssist(cup, ros(id), id);
+    });
+  },
+
+  // Kupa turu: lig aşaması günü ya da eleme turu
+  advance(s, cup, mine) {
+    if (cup.fmt === 'swiss' && cup.phase === 'league') return Cups.leagueDay(s, cup, mine);
+    return Cups.playStage(s, cup, mine);
+  },
+
   weeks(n, cup) { return ((cup && cup.fr) || [0.2, 0.42, 0.63, 0.84]).map((f) => Math.round(n * f)); },
 
   myCountry(s) { const c = s.world.clubs[s.clubId]; return c ? countryOf(c.league) : null; },
@@ -120,11 +217,19 @@ const Cups = {
       else r = cup.youth ? Cups.tie(cup.str[h], cup.str[a]) : Cups.tie(w.clubs[h].rating, w.clubs[a].rating);
       const winner = r.win === 0 ? h : a;
       next.push(winner);
+      Cups.goals(s, cup, h, a, r.a, r.b, mine && h === mine.h && a === mine.a ? mine : null);
       cup.log.push({ stage: cup.alive.length, h, a, hs: r.a, as: r.b, pens: r.pens, w: winner });
       lines.push(`${w.clubs[h].name} ${r.a}-${r.b} ${w.clubs[a].name}${r.pens ? ' (pen.)' : ''}`);
     }
-    const stageName = STAGE_NAMES[cup.alive.length];
-    cup.alive = next;
+    const stageName = cup.phase === 'po' ? 'Play-off' : STAGE_NAMES[cup.alive.length];
+    if (cup.phase === 'po') {
+      cup.log.slice(-next.length).forEach((m) => (m.stage = 'po'));
+      // play-off kazananları lig aşamasının ilk 8'iyle eşleşir
+      const al = [];
+      for (let i = 0; i < 8; i++) al.push(cup.direct[i], next[7 - i] || next[i]);
+      cup.alive = al;
+      cup.phase = 'ko';
+    } else cup.alive = next;
     cup.stage++;
     const myLg = s.world.clubs[s.clubId] ? s.world.clubs[s.clubId].league : 'TR1';
     const near = cup.dom ? cup.country === Cups.myCountry(s) : (cup.youth || !cup.region || cup.region === regionOf(myLg));
@@ -147,20 +252,22 @@ const Cups = {
     Object.values(s.cups).forEach((cup) => {
       const wk = Cups.weeks(Game.rounds(), cup);
       if (cup.winner || wk[cup.stage] !== r) return;
-      if (s.pendingCup && cup.alive.includes(s.clubId)) { Cups.playStage(s, cup, null); return; }
+      const inIt = Cups.inCup(s, cup);
+      if (s.pendingCup && inIt) { Cups.advance(s, cup, null); return; }
       const eligible = cup.youth ? Game.isYouth() : !Game.isYouth();
-      if (eligible && cup.alive.includes(s.clubId)) s.pendingCup = cup.id;
-      else Cups.playStage(s, cup, null);
+      if (eligible && inIt) s.pendingCup = cup.id;
+      else Cups.advance(s, cup, null);
     });
   },
 
   // Oyuncunun kupa maçı
   async playMine(s) {
     const cup = s.cups[s.pendingCup];
-    const i = cup.alive.indexOf(s.clubId);
-    const j = i % 2 === 0 ? i + 1 : i - 1;
-    const h = cup.alive[Math.min(i, j)], a = cup.alive[Math.max(i, j)];
-    const stageName = STAGE_NAMES[cup.alive.length];
+    const op = Cups.opponent(s, cup);
+    if (!op) { s.pendingCup = null; return Game.advanceWeek(true); }
+    const { h, a } = op;
+    const stageName = op.stage;
+    const leaguePhase = cup.fmt === 'swiss' && cup.phase === 'league';
     const mk = (id) => { const c = s.world.clubs[id]; return cup.youth ? { id, name: `${c.name} U19`, short: c.short, rating: cup.str[id], c1: c.c1, c2: c.c2, roster: cup.ros[id] } : { id, name: c.name, short: c.short, rating: c.rating, c1: c.c1, c2: c.c2, roster: c.roster }; };
     const ctx = {
       home: mk(h), away: mk(a), side: h === s.clubId ? 'home' : 'away',
@@ -172,14 +279,18 @@ const Cups = {
     ctx.subChance = 0.6;
     const sum = await Match.run(ctx, s);
     let win = sum.hs > sum.as ? 0 : sum.as > sum.hs ? 1 : null, pens = null;
-    if (win === null) {
+    if (win === null && !leaguePhase) {
       pens = true;
       win = U.chance(0.5 + (ctx.side === 'home' ? 1 : -1) * (ctx.home.rating - ctx.away.rating) / 80) ? 0 : 1;
     }
     Game.applyMatch(sum, ctx, 'cup');
     const weWon = (win === 0) === (ctx.side === 'home');
-    Cups.playStage(s, cup, { h, a, r: { a: sum.hs, b: sum.as, win, pens } });
-    if (pens) Game.news(`${cup.name} ${stageName} maçı penaltılara gitti: ${weWon ? 'penaltılarla tur atladık!' : 'penaltılarla elendik.'}`, weWon ? 'good' : 'bad');
+    Cups.advance(s, cup, { h, a, sum, r: { a: sum.hs, b: sum.as, win, pens } });
+    if (leaguePhase) {
+      const gf = ctx.side === 'home' ? sum.hs : sum.as, ga = ctx.side === 'home' ? sum.as : sum.hs;
+      const rank = Cups.swissTable(cup).findIndex((r) => r.id === s.clubId) + 1;
+      Game.news(`${cup.name} ${stageName}: ${gf}-${ga} ${gf > ga ? 'galibiyet' : gf < ga ? 'mağlubiyet' : 'beraberlik'}. Lig aşamasında ${rank}. sıradayız.`, gf > ga ? 'good' : gf < ga ? 'bad' : '');
+    } else if (pens) Game.news(`${cup.name} ${stageName} maçı penaltılara gitti: ${weWon ? 'penaltılarla tur atladık!' : 'penaltılarla elendik.'}`, weWon ? 'good' : 'bad');
     else Game.news(`${cup.name} ${stageName}: ${weWon ? 'tur atladık!' : 'kupaya veda ettik.'}`, weWon ? 'good' : 'bad');
     if (cup.winner === s.clubId) {
       p.trophies.push(`${s.season.year}: 🏆 ${cup.name} Şampiyonu`);
@@ -194,6 +305,7 @@ const Cups = {
   tourType(year) {
     if (year % 4 === 2) return 'wc';
     if (year % 4 === 0 && year >= 1984) return 'euro';
+    if (year % 2 === 1 && year >= 2019) return 'nl';
     return null;
   },
 
@@ -208,16 +320,22 @@ const Cups = {
 
   startTournament(s) {
     const type = Cups.tourType(s.season.year);
-    const name = type === 'wc' ? `${s.season.year} Dünya Kupası` : `${s.season.year} Avrupa Şampiyonası`;
+    const name = `${s.season.year} ${Cups.tourName(type)}`;
     let pool = type === 'wc' ? Game.nations() : Game.nations().filter((n) => EURO_NATIONS.includes(n.code));
-    let size = type === 'wc' ? 16 : 8;
+    let size = type === 'wc' ? 16 : type === 'nl' ? 4 : 8;
     while (size > pool.length) size /= 2;
-    // güce göre ama biraz sürprizle seçilir
-    pool = pool.map((n) => ({ n, k: n.rating + U.rand(-6, 6) })).sort((a, b) => b.k - a.k).map((x) => x.n.code).slice(0, size);
+    if (type === 'nl') {
+      // Uluslar Ligi: sıralamadaki en iyi 4 Avrupa takımı finallerde
+      const rk = Nations.ranking(s).map((x) => x.code);
+      pool = pool.map((n) => n.code).sort((a, b) => rk.indexOf(a) - rk.indexOf(b)).slice(0, size);
+    } else {
+      // güce göre ama biraz sürprizle seçilir
+      pool = pool.map((n) => ({ n, k: n.rating + U.rand(-6, 6) })).sort((a, b) => b.k - a.k).map((x) => x.n.code).slice(0, size);
+    }
     const p = s.player;
     const nat = Game.nation();
     const called = p.age >= 17 && p.injuryWeeks === 0 && pool.includes(nat.code) && Player.overall(p, true) >= nat.rating - 7 - (p.fame > 40 ? 2 : 0);
-    s.tournament = { type, name, alive: U.shuffle(pool), called, inPool: pool.includes(nat.code), done: false, myGoals: 0 };
+    s.tournament = { type, name, alive: U.shuffle(pool), called, inPool: pool.includes(nat.code), done: false, myGoals: 0, teams: pool.slice(), elim: {} };
   },
 
   simTourStage(s, mine) {
@@ -229,6 +347,8 @@ const Cups = {
       const nh = Game.nat(h), na = Game.nat(a);
       const r = mine && mine.h === h && mine.a === a ? mine.r : Cups.tie(nh.rating - 2, na.rating);
       next.push(r.win === 0 ? h : a);
+      t.elim = t.elim || {};
+      t.elim[r.win === 0 ? a : h] = t.alive.length;
       lines.push(`${nh.name} ${r.a}-${r.b} ${na.name}${r.pens ? ' (pen.)' : ''}`);
     }
     const stageName = STAGE_NAMES[t.alive.length];
@@ -278,11 +398,12 @@ const Cups = {
     s.cupHistory.unshift({ year: s.season.year, comp: t.name.replace(/^\d+ /, ''), winner: champ.name });
     Game.news(`${t.name} şampiyonu: ${champ.name}!`, 'world');
     if (t.called && champ.code === nat.code) {
-      p.trophies.push(`${s.season.year}: 🏆 ${t.type === 'wc' ? 'Dünya Kupası' : 'Avrupa Şampiyonası'} Şampiyonu`);
-      Player.addFame(p, t.type === 'wc' ? 15 : 9);
+      p.trophies.push(`${s.season.year}: 🏆 ${Cups.tourName(t.type)} Şampiyonu`);
+      Player.addFame(p, t.type === 'wc' ? 15 : t.type === 'nl' ? 5 : 9);
       Social.post('trophy', `${t.name} ŞAMPİYONUYUZ! Bu kupa tüm ülkemizin.`, 6);
     }
     t.done = true;
+    Nations.afterTournament(s, t, champ.code);
     Game.save();
     await Cups.ask(`<div class="ev-tag">${t.name}</div><h2>Şampiyon: ${champ.name}</h2><p>${t.called ? (champ.code === nat.code ? 'Tarih yazdın! Kupayı kaldıran takımın parçasıydın.' : `Turnuvada ${t.myGoals} gol attın. Bir dahaki sefere!`) : 'Turnuvayı televizyondan izledin.'}</p>`, 'Sezon Sonuna Geç');
   },
@@ -291,30 +412,124 @@ const Cups = {
     return new Promise((res) => Game.modal(html, [{ t: btn, cls: 'btn-big', fn: res }]));
   },
 
-  // Lig sekmesindeki kupa kartı
-  render(s) {
-    if (!s.cups) return '';
+  // Lig sekmesindeki kupa ekranı: kupa seçici, lig aşaması tablosu, maçlarım, eleme turları
+  screen(s) {
+    if (!s.cups) return '<section class="card"><p class="muted">Bu sezon kupa yok.</p></section>';
     const w = s.world;
-    const name = (id) => (w.clubs[id] ? w.clubs[id].name : id);
-    const block = (cup) => {
-      const stages = {};
-      cup.log.forEach((m) => { (stages[m.stage] = stages[m.stage] || []).push(m); });
-      const keys = Object.keys(stages).map(Number).sort((a, b) => b - a);
-      const last = keys.length ? stages[keys[0]] : null;
-      const mine = cup.alive.includes(s.clubId) || cup.log.some((m) => m.h === s.clubId || m.a === s.clubId);
-      return `<div class="cup">
-        <div class="cup-h"><b>${U.esc(cup.name)}</b><small>${cup.winner ? `Şampiyon: ${U.esc(name(cup.winner))}` : `${STAGE_NAMES[cup.alive.length] || ''} · ${cup.alive.length} takım kaldı`}</small></div>
-        ${last ? `<div class="cup-list">${last.map((m) => `<div class="cm ${m.h === s.clubId || m.a === s.clubId ? 'me' : ''}"><span class="${m.w === m.h ? 'w' : ''}">${U.esc(name(m.h))}</span><b>${m.hs}-${m.as}${m.pens ? 'p' : ''}</b><span class="${m.w === m.a ? 'w' : ''}">${U.esc(name(m.a))}</span></div>`).join('')}</div>`
-          : `<div class="cup-teams">${cup.alive.map((id) => `<span class="${id === s.clubId ? 'me' : ''}">${UI.shirt(w.clubs[id])}${U.esc(name(id))}</span>`).join('')}</div>`}
-        ${mine && !cup.winner && cup.alive.includes(s.clubId) ? '<p class="cup-in">Kulübün bu kupada yarışıyor.</p>' : ''}
-      </div>`;
-    };
+    const name = (id) => (w.clubs[id] ? w.clubs[id].name : id) + (s.cups[UI.cupSel] && s.cups[UI.cupSel].youth ? ' U19' : '');
+    const myLg = w.clubs[s.clubId] ? w.clubs[s.clubId].league : 'TR1';
+    const list = Object.values(s.cups).filter((c) => (c.dom ? c.country === Cups.myCountry(s) : c.youth || !c.region || c.region === regionOf(myLg)));
+    const mineFirst = list.slice().sort((a, b) => (Cups.everIn(s, b) ? 1 : 0) - (Cups.everIn(s, a) ? 1 : 0));
+    let sel = s.cups[UI.cupSel] && list.includes(s.cups[UI.cupSel]) ? s.cups[UI.cupSel] : mineFirst[0];
+    if (!sel) return '<section class="card"><p class="muted">Bu sezon kupa yok.</p></section>';
+    UI.cupSel = sel.id;
+    const nm = (id) => (w.clubs[id] ? w.clubs[id].name : id) + (sel.youth ? ' U19' : '');
+    const shirt = (id) => UI.shirt(w.clubs[id] || Game.club());
+    const res = (m) => `<div class="cm2 ${m.h === s.clubId || m.a === s.clubId ? 'me' : ''}"><span class="t h ${m.w === m.h ? 'w' : ''}"><em>${U.esc(nm(m.h))}</em>${shirt(m.h)}</span><b>${m.hs}-${m.as}${m.pens ? '<small>p</small>' : ''}</b><span class="t a ${m.w === m.a ? 'w' : ''}">${shirt(m.a)}<em>${U.esc(nm(m.a))}</em></span></div>`;
+    const status = sel.winner ? `Şampiyon: <b>${U.esc(nm(sel.winner))}</b>` : sel.fmt === 'swiss' && sel.phase === 'league' ? `Lig aşaması · ${sel.md}/8 maç oynandı` : `${sel.phase === 'po' ? 'Play-off' : STAGE_NAMES[sel.alive.length] || ''} · ${sel.alive.length} takım`;
+    let body = '';
+    if (sel.fmt === 'swiss') {
+      const tbl = Cups.swissTable(sel);
+      body += `<div class="lbl">Lig aşaması <small>İlk 8 son 16 · 9-24 play-off · 25-32 elenir</small></div>
+        <div class="tscroll"><table class="tbl lgt sw">
+          <tr><th>#</th><th class="l">Takım</th><th>O</th><th>AV</th><th>P</th></tr>
+          ${tbl.map((r, i) => `<tr class="${r.id === s.clubId ? 'hl' : ''} ${i < 8 ? 'z-r16' : i < 24 ? 'z-po' : 'z-out'}"><td><span class="rk">${i + 1}</span></td><td class="l"><span class="tm">${shirt(r.id)}${U.esc(nm(r.id))}</span></td><td>${r.p}</td><td class="${r.gf - r.ga > 0 ? 'pos' : r.gf - r.ga < 0 ? 'neg' : ''}">${r.gf - r.ga > 0 ? '+' : ''}${r.gf - r.ga}</td><td><b class="pts">${r.pts}</b></td></tr>`).join('')}
+        </table></div>`;
+      if (sel.teams.includes(s.clubId)) {
+        body += `<div class="lbl">Lig aşaması maçların</div><div class="cup-my">${sel.fx.map((round, k) => {
+          const f = round.find(([h, a]) => h === s.clubId || a === s.clubId);
+          if (!f) return '';
+          const m = sel.log.find((x) => x.stage === `md${k + 1}` && x.h === f[0] && x.a === f[1]);
+          return m ? res(m) : `<div class="cm2 next"><span class="t h"><em>${U.esc(nm(f[0]))}</em>${shirt(f[0])}</span><b>${k}. maç</b><span class="t a">${shirt(f[1])}<em>${U.esc(nm(f[1]))}</em></span></div>`.replace(`${k}. maç`, `${k + 1}. maç`);
+        }).join('')}</div>`;
+      }
+    }
+    // eleme turları
+    const stages = [];
+    const order = ['po', 32, 16, 8, 4, 2];
+    order.forEach((st) => {
+      const ms = sel.log.filter((m) => m.stage === st);
+      if (ms.length) stages.push([st === 'po' ? 'Play-off' : STAGE_NAMES[st], ms]);
+    });
+    if (stages.length) body += stages.map(([t, ms]) => `<div class="lbl">${t}</div><div class="cup-ko">${ms.map(res).join('')}</div>`).join('');
+    else if (sel.fmt !== 'swiss') body += `<div class="lbl">Eşleşmeler</div><div class="cup-ko">${Array.from({ length: sel.alive.length / 2 }, (_, i) => `<div class="cm2 next ${sel.alive[i * 2] === s.clubId || sel.alive[i * 2 + 1] === s.clubId ? 'me' : ''}"><span class="t h"><em>${U.esc(nm(sel.alive[i * 2]))}</em>${shirt(sel.alive[i * 2])}</span><b>vs</b><span class="t a">${shirt(sel.alive[i * 2 + 1])}<em>${U.esc(nm(sel.alive[i * 2 + 1]))}</em></span></div>`).join('')}</div>`;
     const tourNext = [0, 1, 2, 3].map((k) => s.season.year + k).find((y) => Cups.tourType(y));
     const hist = (s.cupHistory || []).slice(0, 8);
-    return `<section class="card">
-      <div class="card-h"><span>${Icon('career')} Kupalar</span><small class="muted">Sıradaki milli turnuva: ${tourNext} ${Cups.tourType(tourNext) === 'wc' ? 'Dünya Kupası' : 'Avrupa Şampiyonası'}</small></div>
-      <div class="cups">${Object.values(s.cups).filter((c) => (c.dom ? c.country === Cups.myCountry(s) : c.youth || !c.region || c.region === regionOf(s.world.clubs[s.clubId] ? s.world.clubs[s.clubId].league : 'TR1'))).map(block).join('')}</div>
+    return `<section class="card cupscr">
+      <div class="cup-sel">${list.map((c) => `<button class="${c === sel ? 'on' : ''} ${Cups.everIn(s, c) ? 'mine' : ''}" data-cupsel="${c.id}">${U.esc(c.name.replace('Avrupa ', ''))}</button>`).join('')}</div>
+      <div class="cup-hd"><h3>${U.esc(sel.name)}</h3><small>${status}</small></div>
+      ${body}
+    </section>
+    ${sel.scorers && Object.keys(sel.scorers).length ? UI.kings(sel, nm, (id) => w.clubs[id] || Game.club(), sel.name) : ''}
+    <section class="card">
       ${hist.length ? `<div class="lbl">Geçmiş şampiyonlar</div><div class="cup-hist">${hist.map((h) => `<div><small>${h.year}</small><span>${U.esc(h.comp)}</span><b>${U.esc(h.winner)}</b></div>`).join('')}</div>` : ''}
+      ${tourNext ? `<p class="muted">Sıradaki milli turnuva: ${tourNext} ${Cups.tourName(Cups.tourType(tourNext))}</p>` : ''}
     </section>`;
+  },
+
+  everIn(s, cup) {
+    return (cup.teams || []).includes(s.clubId) || cup.alive.includes(s.clubId) || cup.log.some((m) => m.h === s.clubId || m.a === s.clubId);
+  },
+
+  tourName(t) { return { wc: 'Dünya Kupası', euro: 'Avrupa Şampiyonası', nl: 'Uluslar Ligi Finalleri' }[t] || ''; },
+};
+
+// Milli takım sıralaması: güç + turnuva başarısı + milli maç sonuçları (puanlar yavaşça güce döner)
+const Nations = {
+  ensure(s) {
+    s.natPts = s.natPts || {};
+    Game.nations().forEach((n) => { if (s.natPts[n.code] == null) s.natPts[n.code] = Math.round(n.rating * 20 + U.randi(-25, 25)); });
+    return s.natPts;
+  },
+  ranking(s) {
+    const pts = Nations.ensure(s);
+    return Game.nations().map((n) => ({ code: n.code, name: n.name, rating: n.rating, pts: Math.round(pts[n.code]) })).sort((a, b) => b.pts - a.pts);
+  },
+  add(s, code, v) { const pts = Nations.ensure(s); pts[code] = (pts[code] || 0) + v; },
+  afterTournament(s, t, champ) {
+    const bonus = { wc: [130, 80, 50, 25, 10], euro: [100, 60, 35, 18, 8], nl: [60, 35, 20, 10, 5] }[t.type] || [50, 30, 15, 8, 4];
+    (t.teams || []).forEach((c) => {
+      const el = (t.elim || {})[c];
+      const v = c === champ ? bonus[0] : el === 2 ? bonus[1] : el === 4 ? bonus[2] : el === 8 ? bonus[3] : bonus[4];
+      Nations.add(s, c, v);
+    });
+  },
+  // sezon sonu: puanlar güce doğru biraz geri döner, sıralama değişimi için eski sıra saklanır
+  season(s) {
+    const pts = Nations.ensure(s);
+    s.natPrevRank = {};
+    Nations.ranking(s).forEach((r, i) => (s.natPrevRank[r.code] = i + 1));
+    Game.nations().forEach((n) => { pts[n.code] = pts[n.code] * 0.85 + n.rating * 20 * 0.15; });
+  },
+  screen(s) {
+    const rk = Nations.ranking(s);
+    const prev = s.natPrevRank || {};
+    const me = s.player.nation;
+    const ty = [0, 1, 2, 3, 4].map((k) => s.season.year + k).map((y) => ({ y, t: Cups.tourType(y) })).filter((x) => x.t);
+    const hist = (s.cupHistory || []).filter((h) => /Dünya Kupası|Avrupa Şampiyonası|Uluslar Ligi/.test(h.comp)).slice(0, 10);
+    const p = s.player;
+    return `<section class="card nat-rank">
+      <div class="card-h"><span>${Icon('shield')} Milli Takım Sıralaması</span><small class="muted">${s.season.year}</small></div>
+      <div class="nr-list">${rk.map((r, i) => {
+        const d = prev[r.code] ? prev[r.code] - (i + 1) : 0;
+        return `<div class="nr-row ${r.code === me ? 'me' : ''} ${i < 3 ? 'top' + (i + 1) : ''}">
+          <span class="nr-rk">${i + 1}</span><span class="nr-mv ${d > 0 ? 'up' : d < 0 ? 'down' : ''}">${d > 0 ? '▲' + d : d < 0 ? '▼' + -d : '–'}</span>
+          <span class="nr-code" style="--n1:${(NAT_COLORS[r.code] || ['#1d3c8f'])[0]};--n2:${(NAT_COLORS[r.code] || ['#1d3c8f', '#fff'])[1]};--nt:${U.lum((NAT_COLORS[r.code] || ['#1d3c8f'])[0]) > 0.6 ? '#0a1530' : '#fff'}">${r.code}</span>
+          <span class="nr-t"><b>${U.esc(r.name)}</b><small>${U.esc(Game.natStars(r.code).slice(0, 2).join(', ') || '—')}</small></span>
+          <span class="nr-p"><b>${r.pts}</b><small>puan</small></span></div>`;
+      }).join('')}</div>
+    </section>
+    <div class="grid2">
+      <section class="card">
+        <div class="card-h"><span>${Icon('career')} Turnuva Takvimi</span></div>
+        <div class="tour-cal">${ty.map((x) => `<div class="tc ${x.t}"><b>${x.y}</b><span>${Cups.tourName(x.t)}</span><small>${x.t === 'nl' ? 'Sıralamadaki en iyi 4 Avrupa takımı' : x.t === 'wc' ? '16 ülke, eleme' : '8 Avrupa ülkesi, eleme'}</small></div>`).join('')}</div>
+        <div class="lbl">Senin milli kariyerin</div>
+        <div class="ms-stats"><div class="mst"><i>${Icon('shield')}</i><b>${p.intl.caps}</b><span>Maç</span></div><div class="mst"><i>${Icon('ball')}</i><b>${p.intl.goals}</b><span>Gol</span></div><div class="mst"><i>${Icon('table')}</i><b>${rk.findIndex((r) => r.code === me) + 1 || '-'}</b><span>Ülke sırası</span></div></div>
+      </section>
+      <section class="card">
+        <div class="card-h"><span>${Icon('star')} Geçmiş Şampiyonlar</span></div>
+        ${hist.length ? `<div class="cup-hist">${hist.map((h) => `<div><small>${h.year}</small><span>${U.esc(h.comp)}</span><b>${U.esc(h.winner)}</b></div>`).join('')}</div>` : '<p class="muted">Kariyerinde henüz milli turnuva oynanmadı.</p>'}
+      </section>
+    </div>`;
   },
 };

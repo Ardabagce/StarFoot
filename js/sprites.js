@@ -43,6 +43,12 @@ const BALL_STYLES = {
   fire: { name: 'Ateş Topu', base: '#ffb02e', base2: '#e11d48', panel: '#7a0a0a', pattern: 'flame' },
   ice: { name: 'Buz Topu', base: '#e0f7ff', base2: '#7dd3fc', panel: '#0369a1', pattern: 'flame' },
   galaxy: { name: 'Galaksi Topu', base: '#3b0764', base2: '#0b1f4d', panel: '#f0abfc', pattern: 'star' },
+  camo: { name: 'Kamuflaj Top', base: '#6b7b3a', base2: '#3f4a22', panel: '#2a3116', accent: '#a3a86b', pattern: 'swirl' },
+  pink: { name: 'Pembe Şimşek', base: '#fbfbfb', panel: '#ff4fa3', accent: '#7a1050', pattern: 'stripe' },
+  night: { name: 'Gece Mavisi', base: '#14213d', base2: '#0b1226', panel: '#c0c8d8', pattern: 'star' },
+  lava: { name: 'Lav Topu', base: '#1b1b1f', base2: '#3a0a0a', panel: '#ff6a00', pattern: 'flame' },
+  rainbow: { name: 'Gökkuşağı Top', base: '#ffffff', panel: '#e11d48', accent: '#2563eb', pattern: 'swirl' },
+  diamond: { name: 'Elmas Top', base: '#f0fbff', base2: '#bfe9ff', panel: '#7dd3fc', accent: '#ffffff', pattern: 'star' },
   street: { name: 'Sokak Topu', base: '#fbfbfb', panel: '#16a34a', accent: '#1b1d22', pattern: 'stripe' },
 };
 
@@ -190,14 +196,16 @@ const Sprites = {
     ctx.restore();
 
     // numara (sırtta) ya da arma (önde)
-    if (up && o.number != null && h > 26) {
-      ctx.font = `800 ${Math.round(h * 0.17)}px "Saira Condensed", "Arial Narrow", sans-serif`;
+    if (o.number != null && h > 26) {
+      // sırtta büyük numara; önden bakışta göğüste küçük numara
+      const nx = up ? sx : sx + W * 0.2, ny = top + (bot - top) * (up ? 0.48 : 0.3);
+      ctx.font = `800 ${Math.round(h * (up ? 0.17 : 0.09))}px "Saira Condensed", "Arial Narrow", sans-serif`;
       ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
       ctx.lineWidth = Math.max(1, h * 0.02); ctx.strokeStyle = 'rgba(0,0,0,0.35)';
       const nc = kit.pattern === 'plain' ? kit.alt : '#ffffff';
-      ctx.strokeText(String(o.number), sx, top + (bot - top) * 0.48);
+      ctx.strokeText(String(o.number), nx, ny);
       ctx.fillStyle = Sprites.colorDist(nc, kit.shirt) < 80 ? '#ffffff' : nc;
-      ctx.fillText(String(o.number), sx, top + (bot - top) * 0.48);
+      ctx.fillText(String(o.number), nx, ny);
       ctx.textBaseline = 'alphabetic';
     } else if (!up) {
       ctx.fillStyle = kit.alt;

@@ -84,11 +84,6 @@ const World = {
     return U.weighted(roster, (pl) => w[pl.pos] * Math.pow(pl.r / 70, 3));
   },
 
-  pickAssister(roster, scorer) {
-    const w = { FW: 1.5, MF: 3, DF: 1, GK: 0.05 };
-    return U.weighted(roster.filter((p) => p !== scorer), (pl) => w[pl.pos] * Math.pow(pl.r / 70, 2));
-  },
-
   record(league, h, a, hs, as) {
     const th = league.table[h], ta = league.table[a];
     th.p++; ta.p++;
@@ -103,6 +98,25 @@ const World = {
     league.scorers[key] = (league.scorers[key] || 0) + 1;
   },
 
+  addAssist(league, name, clubId) {
+    league.assists = league.assists || {};
+    const key = name + '|' + clubId;
+    league.assists[key] = (league.assists[key] || 0) + 1;
+  },
+
+  // Asist yapan: orta saha ve forvetler öncelikli, golü atan hariç
+  pickAssister(roster, scorer) {
+    const pool = (roster || []).filter((x) => x.n !== scorer && x.pos !== 'GK');
+    if (!pool.length) return null;
+    return U.weighted(pool, (x) => ({ MF: 3, FW: 2, DF: 1 }[x.pos] || 1) * (x.r / 60));
+  },
+
+  goalWithAssist(league, roster, clubId) {
+    const sc = World.pickScorer(roster);
+    World.addScorer(league, sc.n, clubId);
+    if (U.chance(0.72)) { const a = World.pickAssister(roster, sc.n); if (a) World.addAssist(league, a.n, clubId); }
+  },
+
   // Ligin bir haftasını oynatır (skip: oyuncunun oynayacağı maç)
   simRound(lg, round, rosters, ratingFn, skip) {
     const fx = lg.fixtures[round];
@@ -112,8 +126,8 @@ const World = {
       const [hs, as] = World.simScore(ratingFn(h), ratingFn(a));
       World.record(lg, h, a, hs, as);
       lg.results.push({ round, h, a, hs, as });
-      for (let i = 0; i < hs; i++) World.addScorer(lg, World.pickScorer(rosters(h)).n, h);
-      for (let i = 0; i < as; i++) World.addScorer(lg, World.pickScorer(rosters(a)).n, a);
+      for (let i = 0; i < hs; i++) World.goalWithAssist(lg, rosters(h), h);
+      for (let i = 0; i < as; i++) World.goalWithAssist(lg, rosters(a), a);
     });
   },
 
@@ -123,8 +137,15 @@ const World = {
       .sort((x, y) => y.pts - x.pts || (y.gf - y.ga) - (x.gf - x.ga) || y.gf - x.gf);
   },
 
+  topAssists(lg, n = 10) {
+    return Object.entries(lg.assists || {})
+      .map(([k, g]) => { const [name, club] = k.split('|'); return { name, club, g }; })
+      .sort((a, b) => b.g - a.g)
+      .slice(0, n);
+  },
+
   topScorers(lg, n = 10) {
-    return Object.entries(lg.scorers)
+    return Object.entries(lg.scorers || {})
       .map(([k, g]) => { const [name, club] = k.split('|'); return { name, club, g }; })
       .sort((a, b) => b.g - a.g)
       .slice(0, n);
