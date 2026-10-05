@@ -21,7 +21,7 @@ defaults:
     shell: bash  # -eo pipefail: borudaki hata adımı düşürür
 jobs:
   build:
-    runs-on: macos-15
+    runs-on: macos-26
     env:
       P8: ${{ secrets.APPSTORE_API_KEY_P8 }}
       KEY_ID: ${{ secrets.APPSTORE_KEY_ID }}
@@ -32,9 +32,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Xcode
+      - name: Xcode 26 (App Store iOS 26 SDK şartı)
         run: |
-          sudo xcode-select -s "$(ls -d /Applications/Xcode_16*.app | sort -V | tail -1)" || true
+          ls -d /Applications/Xcode*.app
+          X=$(ls -d /Applications/Xcode_26*.app 2>/dev/null | grep -vi beta | sort -V | tail -1)
+          [ -z "$X" ] && X=$(ls -d /Applications/Xcode_26*.app 2>/dev/null | sort -V | tail -1)
+          if [ -z "$X" ]; then echo "::error::Bu sunucuda Xcode 26 yok"; exit 1; fi
+          sudo xcode-select -s "$X"
           xcodebuild -version
       - name: Bağımlılıklar ve web dosyaları
         working-directory: app
