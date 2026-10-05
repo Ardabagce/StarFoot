@@ -12,7 +12,7 @@ const AD_CONFIG = {
   energyReward: 25,        // "Reklam izle, enerji kazan" ödülü (haftada bir)
   // iPhone (App Store) için ayrı AdMob birimleri. Boşken iOS'ta test reklamları gösterilir.
   ios: {
-    rewarded: '',
+    rewarded: 'ca-app-pub-7675764460364294/5931404906', // Ödüllü geçiş
     rewardedFormat: 'rewardedInterstitial',
     interstitial: '',
   },

@@ -52,7 +52,7 @@ TestFlight › *Dahili Test* grubuna kendini ekle, iPhone'a **TestFlight** uygul
 ### 7. AdMob iOS reklamları
 1. AdMob › *Uygulamalar* › **Uygulama ekle** › **iOS** › "Uygulamanız App Store'da mı?" **Hayır** › ad `StarFoot`.
 2. Bir **Ödüllü geçiş** reklam birimi (ve istersen bir **Geçiş** birimi) oluştur.
-3. Uygulama kimliğini (`~` içerir) ve birim kimliklerini bana gönder: `Info.plist` › `GADApplicationIdentifier` ve `js/ads-config.js` › `ios` alanlarına yerleştiririm. O zamana kadar iOS'ta **test reklamları** gösterilir.
+3. ✅ Yerleştirildi: uygulama kimliği `ca-app-pub-7675764460364294~6258707961` (`Info.plist`), ödüllü geçiş birimi `ca-app-pub-7675764460364294/5931404906` (`js/ads-config.js` › `ios`). Maç sonu geçiş reklamı için ayrı bir **Geçiş** birimi oluşturursan `ios.interstitial` alanına eklenir.
 4. Yayından sonra AdMob'da iOS uygulamasını App Store kaydına bağla.
 
 ### 8. App Store Connect formları

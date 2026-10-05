@@ -61,9 +61,9 @@
 	<false/>
 	<key>NSUserTrackingUsageDescription</key>
 	<string>Your data is used to show you more relevant ads and keep StarFoot free. / Verilerin, sana daha uygun reklamlar göstermek ve StarFoot'u ücretsiz tutmak için kullanılır.</string>
-	<!-- AdMob iOS UYGULAMA kimliği. Şu an Google'ın TEST kimliği; AdMob'da iOS uygulaması oluşturunca değiştir. -->
+	<!-- AdMob iOS UYGULAMA kimliği (reklam birimi değil) -->
 	<key>GADApplicationIdentifier</key>
-	<string>ca-app-pub-3940256099942544~1458002511</string>
+	<string>ca-app-pub-7675764460364294~6258707961</string>
 	<key>SKAdNetworkItems</key>
 	<array>
 		<dict><key>SKAdNetworkIdentifier</key><string>cstr6suwn9.skadnetwork</string></dict>
