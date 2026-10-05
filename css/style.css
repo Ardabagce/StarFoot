@@ -1565,3 +1565,10 @@ kbd { background: var(--panel-2); border: 1px solid var(--line); padding: 0 5px;
 .lang-sw button.on { background: var(--flood); color: #0a1530; }
 .title-foot { margin-top: 10px; font-size: 12px; }
 .title-foot a { color: var(--muted); text-decoration: underline; }
+
+/* Haftalık ödüllü reklam: enerji */
+.ad-energy { display: flex; align-items: center; gap: 12px; width: 100%; margin: 4px 0 14px; padding: 10px 14px; border-radius: 12px; cursor: pointer; text-align: left; color: var(--chalk); background: linear-gradient(90deg, rgba(56, 189, 248, .18), rgba(56, 189, 248, .04)); border: 1px solid rgba(56, 189, 248, .45); font: inherit; }
+.ad-energy svg { width: 22px; height: 22px; flex: none; color: #38bdf8; }
+.ad-energy b { display: block; font-size: 15px; }
+.ad-energy small { color: var(--muted); font-size: 12px; }
+.ad-energy:disabled { opacity: .55; }

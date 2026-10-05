@@ -664,7 +664,9 @@ const Match = {
         ov.innerHTML = '';
         Weather.reset();
         Sprites.curBall = null;
-        resolve(summary);
+        // Android'de belirli aralıklarla maç sonu geçiş reklamı
+        const ad = window.StarfootAds && window.StarfootAds.afterMatch ? window.StarfootAds.afterMatch() : null;
+        Promise.resolve(ad).catch(() => {}).then(() => resolve(summary));
       };
     };
 

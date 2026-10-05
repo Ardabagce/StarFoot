@@ -12,7 +12,9 @@
   document.addEventListener('touchmove', (e) => { if (e.touches && e.touches.length > 1) e.preventDefault(); }, { passive: false });
 
   // Çevrimdışı oynanabilsin diye service worker (yalnızca http/https altında)
-  if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
+  // Android uygulamasında (Capacitor) dosyalar zaten cihazda: service worker gerekmez
+  const native = !!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
+  if (!native && 'serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('sw.js').catch(() => { /* desteklenmiyor */ });
     });

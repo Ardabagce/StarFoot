@@ -1,3 +1,5 @@
 tools/
 store/make.js
 store/*.svg
+app/
+.github/

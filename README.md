@@ -25,9 +25,9 @@ Oyunu bir web sunucusundan (ör. GitHub Pages) açıp tarayıcı menüsünden **
 
 Oyun **Türkçe** ve **İngilizce** oynanır. İlk açılışta telefonun diline göre seçilir; başlık ekranındaki **TR / EN** düğmesinden ya da *Profil › Kariyer › Oyun* kartındaki **Dil / Language** seçiminden değiştirilir. Kodda metinler Türkçe yazılır; İngilizce seçiliyse `js/i18n.js` ekrana çıkan metni (sayfa, canvas çizimleri, başlıklar) `js/lang-en.js` sözlüğüyle çevirir. Kayıtlar dilden bağımsızdır. Sözlüğü güncellemek için: `tools/i18n/README.md`.
 
-## Google Play
+## Google Play (Android uygulaması)
 
-Oyun Google Play'e TWA (Trusted Web Activity) olarak çıkacak şekilde hazırlandı: manifest, maskable ikonlar, gizlilik politikası (`privacy.html`), `.well-known/assetlinks.json`, mağaza görselleri ve metinleri (`store/`). Adım adım yapılacaklar: **[GOOGLE_PLAY.md](GOOGLE_PLAY.md)**.
+Android uygulaması `app/` klasöründe (Capacitor). Reklamlar Google **AdMob** ile gösterilir: isteğe bağlı ödüllü reklamlar (hediye paketi ×2-×3, haftalık +25 enerji) ve birkaç maçta bir maç sonu geçiş reklamı. Ayarlar `js/ads-config.js` dosyasında; web sürümünde gerçek reklam yoktur. Uygulama GitHub Actions ile otomatik derlenir (`.github/workflows/android.yml`). Yayınlama adımları: **[GOOGLE_PLAY.md](GOOGLE_PLAY.md)**.
 
 ## Özellikler
 

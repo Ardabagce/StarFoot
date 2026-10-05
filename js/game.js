@@ -1194,6 +1194,15 @@ const UI = {
     nodes.forEach((n) => { if (emo.test(n.nodeValue)) n.nodeValue = U.plain(n.nodeValue); });
   },
 
+  // Haftada bir: reklam izle, enerji kazan
+  adEnergy() {
+    const s = Game.state, p = s.player;
+    const wk = `${s.season.year}-${s.season.round}`;
+    if (Game.inStreet() || p.energy >= 85 || s.adEnergy === wk) return '';
+    const v = (typeof AD_CONFIG !== 'undefined' && AD_CONFIG.energyReward) || 25;
+    return `<button class="ad-energy" data-adenergy>${Icon('play')}<span><b>Reklam izle · +${v} enerji</b><small>Haftada bir kez</small></span></button>`;
+  },
+
   // Her sekmede görünen durum şeridi
   status() {
     const s = Game.state, p = s.player;
@@ -1371,6 +1380,7 @@ const UI = {
         </section>
         <section class="card plan">
           <div class="card-h"><span>${Icon('train')} Haftalık Plan</span><span class="ap-pips ${s.ap ? '' : 'done'}" title="Aksiyon hakkı">${[0, 1, 2].map((i) => `<i class="${i < s.ap ? 'on' : ''}"></i>`).join('')}<b>${s.ap ? `${s.ap} hak` : 'Maç günü'}</b></span></div>
+          ${UI.adEnergy()}
           <div class="lbl">Antrenman odağı <small>${keyTxt}</small></div>
           <div class="focus" role="radiogroup" aria-label="Antrenman odağı">${STATS.map((st) => {
             const v = p.stats[st.k];
@@ -1799,6 +1809,7 @@ ${UI.paper()}`;
         <div class="row-btns">
           <div class="diff-row"><span class="muted">Zorluk</span><div class="seg">${Object.entries(DIFFS).map(([k, v]) => `<button data-setdiff="${k}" class="${k === (Game.state.difficulty || 'normal') ? 'on' : ''}">${v.l}</button>`).join('')}</div></div>
           <div class="diff-row"><span class="muted">Dil / Language</span><div class="seg" data-noi18n><button data-setlang="tr" class="${I18N.lang === 'tr' ? 'on' : ''}">Türkçe</button><button data-setlang="en" class="${I18N.lang === 'en' ? 'on' : ''}">English</button></div></div>
+          ${window.StarfootAds && window.StarfootAds.privacyRequired && window.StarfootAds.privacyRequired() ? `<button class="btn btn-ghost" data-adprivacy>${Icon('shield')} Reklam gizlilik seçenekleri</button>` : ''}
           <button class="btn btn-ghost" data-sys="save">${Icon('save')} Kaydet</button>
           <button class="btn btn-ghost" data-sys="menu">${Icon('exit')} Ana Menü</button>
           ${p.age >= 33 ? `<button class="btn btn-ghost" data-sys="retire">${Icon('wave')} Emekli Ol</button>` : ''}
@@ -1903,6 +1914,20 @@ ${UI.paper()}`;
     U.$$('[data-vnav]', root).forEach((b) => (b.onclick = () => { const [k, v] = b.dataset.vnav.split(':'); UI[k] = v; Game.render(); }));
     U.$$('[data-king]', root).forEach((b) => (b.onclick = () => { UI.kingTab = b.dataset.king; Game.render(); }));
     U.$$('[data-cupsel]', root).forEach((b) => (b.onclick = () => { UI.cupSel = b.dataset.cupsel; Game.render(); }));
+    U.$$('[data-adenergy]', root).forEach((b) => (b.onclick = () => {
+      b.disabled = true;
+      Ads.show().then((ok) => {
+        const s = Game.state;
+        if (ok) {
+          const v = (typeof AD_CONFIG !== 'undefined' && AD_CONFIG.energyReward) || 25;
+          s.adEnergy = `${s.season.year}-${s.season.round}`;
+          Player.addEnergy(Game.p, v); Game.save();
+          Game.toast(`+${v} enerji`, 'good');
+        }
+        Game.render();
+      });
+    }));
+    U.$$('[data-adprivacy]', root).forEach((b) => (b.onclick = () => window.StarfootAds.privacyOptions()));
     U.$$('[data-setlang]', root).forEach((b) => (b.onclick = () => { if (b.dataset.setlang !== I18N.lang) { Game.save(); I18N.set(b.dataset.setlang); } }));
     U.$$('[data-sys]', root).forEach((b) => (b.onclick = () => {
       const k = b.dataset.sys;

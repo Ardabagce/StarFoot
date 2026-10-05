@@ -1,0 +1,9 @@
+{
+  "appId": "com.ardabagce.starfoot",
+  "appName": "StarFoot",
+  "webDir": "www",
+  "android": {
+    "backgroundColor": "#0a1530",
+    "allowMixedContent": false
+  }
+}

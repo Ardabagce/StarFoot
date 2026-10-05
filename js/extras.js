@@ -224,8 +224,8 @@ const Loot = {
 };
 
 // ---------- Reklam ----------
-// Gerçek bir reklam sağlayıcısı (AdSense / AdMob vb.) bağlanana kadar 5 saniyelik temsili reklam gösterilir.
-// Sağlayıcı bağlamak için window.StarfootAds = { show: () => Promise<boolean> } tanımlamak yeterli.
+// Android uygulamasında js/admob.js gerçek AdMob reklamını gösterir (window.StarfootAds).
+// Web sürümünde 5 saniyelik temsili reklam ekranı gösterilir.
 const Ads = {
   show() {
     if (window.StarfootAds && typeof window.StarfootAds.show === 'function') {
