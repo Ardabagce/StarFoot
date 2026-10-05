@@ -1253,33 +1253,50 @@ Object.assign(MiniGame, {
       const draw = () => {
         const { W, H, dpr } = g;
         g.grass();
-        const gw = Math.min(W * 0.7, H * 0.55), gx0 = W / 2 - gw / 2, gy = H * 0.16;
-        // kale
-        ctx.strokeStyle = '#fff'; ctx.lineWidth = 4 * dpr;
-        ctx.strokeRect(gx0, gy - gw * 0.16, gw, gw * 0.16);
-        ctx.strokeStyle = 'rgba(255,255,255,0.35)'; ctx.lineWidth = 1 * dpr;
-        for (let i = 1; i < 12; i++) { ctx.beginPath(); ctx.moveTo(gx0 + (gw / 12) * i, gy - gw * 0.16); ctx.lineTo(gx0 + (gw / 12) * i, gy); ctx.stroke(); }
+        const fh = Math.min(H * 0.17, W * 0.2);
+        // gerçek oran (7,32 x 2,44 m): kale kaleciden belirgin yüksek
+        const gw = Math.min(W * 0.66, H * 0.46), gh = Math.max(gw * 0.36, fh * 1.25);
+        const gx0 = W / 2 - gw / 2, gy = gh + H * 0.06, dep = gh * 0.28;
+        // ağ: arka çerçeve perspektifle içeride ve yukarıda
+        const bx0 = gx0 + gw * 0.06, bw = gw * 0.88, by0 = gy - dep * 0.35, btop = gy - gh - dep * 0.6;
+        ctx.fillStyle = 'rgba(255,255,255,0.07)';
+        ctx.beginPath(); ctx.moveTo(gx0, gy); ctx.lineTo(gx0, gy - gh); ctx.lineTo(gx0 + gw, gy - gh); ctx.lineTo(gx0 + gw, gy); ctx.lineTo(bx0 + bw, by0); ctx.lineTo(bx0 + bw, btop); ctx.lineTo(bx0, btop); ctx.lineTo(bx0, by0); ctx.closePath(); ctx.fill();
+        ctx.strokeStyle = 'rgba(255,255,255,0.3)'; ctx.lineWidth = 1 * dpr;
+        for (let i = 0; i <= 14; i++) { const x = bx0 + (bw / 14) * i; ctx.beginPath(); ctx.moveTo(x, btop); ctx.lineTo(x, by0); ctx.stroke(); }
+        for (let j = 0; j <= 6; j++) { const y = btop + ((by0 - btop) / 6) * j; ctx.beginPath(); ctx.moveTo(bx0, y); ctx.lineTo(bx0 + bw, y); ctx.stroke(); }
+        // yan ağlar ve tavan ağı
+        [[gx0, bx0], [gx0 + gw, bx0 + bw]].forEach(([fx, bx]) => {
+          for (let j = 0; j <= 6; j++) { const k = j / 6; ctx.beginPath(); ctx.moveTo(fx, gy - gh + gh * k); ctx.lineTo(bx, btop + (by0 - btop) * k); ctx.stroke(); }
+        });
+        for (let i = 0; i <= 8; i++) { const k = i / 8; ctx.beginPath(); ctx.moveTo(gx0 + gw * k, gy - gh); ctx.lineTo(bx0 + bw * k, btop); ctx.stroke(); }
+        // kale çizgisi ve ceza sahası
         ctx.strokeStyle = 'rgba(255,255,255,0.8)'; ctx.lineWidth = 2 * dpr;
         ctx.beginPath(); ctx.moveTo(0, gy); ctx.lineTo(W, gy); ctx.stroke();
         ctx.strokeRect(W / 2 - gw * 0.85, gy, gw * 1.7, H * 0.36);
-        const fh = Math.min(H * 0.17, W * 0.2);
+        // direkler ve üst direk (gölgeli, kalın)
+        const pw = Math.max(4, gw * 0.022);
+        ctx.fillStyle = 'rgba(0,0,0,0.25)'; ctx.fillRect(gx0 - pw / 2 + 3 * dpr, gy - gh + 3 * dpr, pw, gh); ctx.fillRect(gx0 + gw - pw / 2 + 3 * dpr, gy - gh + 3 * dpr, pw, gh);
+        ctx.fillStyle = '#f7f7f2';
+        ctx.fillRect(gx0 - pw / 2, gy - gh - pw / 2, pw, gh + pw / 2);
+        ctx.fillRect(gx0 + gw - pw / 2, gy - gh - pw / 2, pw, gh + pw / 2);
+        ctx.fillRect(gx0 - pw / 2, gy - gh - pw / 2, gw + pw, pw);
         const toGoal = (v) => W / 2 + v * gw / 2;
         // kaleci
         let kx = toGoal(keeperX);
         let kd = 0;
         if (shot && !shot.miss) { const k = U.clamp((t - shot.t0) / 0.35, 0, 1); kd = k; kx = toGoal(keeperX + (shot.saved ? (shot.tx - keeperX) : Math.sign(shot.tx - keeperX) * 0.25) * k); }
         if (kd > 0.05) {
-          ctx.save(); ctx.translate(kx, gy + fh * 0.6 - fh * 0.5 * Math.cos(kd * 1.2) - Math.sin(kd * Math.PI) * fh * 0.25); ctx.rotate(Math.sign(shot.tx - keeperX || 1) * kd * 1.2);
+          ctx.save(); ctx.translate(kx, gy + fh * 0.08 - fh * 0.5 * Math.cos(kd * 1.2) - Math.sin(kd * Math.PI) * fh * 0.25); ctx.rotate(Math.sign(shot.tx - keeperX || 1) * kd * 1.2);
           Sprites.figure(ctx, 0, fh * 0.5, fh, { kit: o.kits.gk, look: lookGk, facing: 'down', gloves: true, dive: 1, noShadow: true, t });
           ctx.restore();
-        } else Sprites.figure(ctx, kx, gy + fh * 0.6, fh, { kit: o.kits.gk, look: lookGk, facing: 'down', number: 1, gloves: true, t });
+        } else Sprites.figure(ctx, kx, gy + fh * 0.08, fh, { kit: o.kits.gk, look: lookGk, facing: 'down', number: 1, gloves: true, t });
         // nişangah
         if (!shot) {
           const ax = toGoal(aim());
           ctx.strokeStyle = 'rgba(5,11,29,0.8)'; ctx.lineWidth = 6 * dpr;
-          ctx.beginPath(); ctx.arc(ax, gy - gw * 0.08, 12 * dpr, 0, Math.PI * 2); ctx.stroke();
+          ctx.beginPath(); ctx.arc(ax, gy - gh * 0.55, 12 * dpr, 0, Math.PI * 2); ctx.stroke();
           ctx.strokeStyle = '#ff3df0'; ctx.lineWidth = 3 * dpr;
-          ctx.beginPath(); ctx.arc(ax, gy - gw * 0.08, 12 * dpr, 0, Math.PI * 2); ctx.stroke();
+          ctx.beginPath(); ctx.arc(ax, gy - gh * 0.55, 12 * dpr, 0, Math.PI * 2); ctx.stroke();
         }
         // oyuncu ve savunmacı
         const px = W / 2, py = H * 0.68;
@@ -1297,7 +1314,7 @@ Object.assign(MiniGame, {
           if (!shot && k >= 1.35) { shot = { miss: true }; finish('fail', 'TOPU KAÇIRDIN', '#ff6b6b'); }
         } else {
           const k = U.clamp((t - shot.t0) / 0.5, 0, 1);
-          const ex = toGoal(shot.tx), ey = gy - gw * 0.08;
+          const ex = toGoal(shot.tx), ey = gy - gh * 0.55;
           bx = px + (ex - px) * k; by = headY + fh * 0.95 + (ey - headY - fh * 0.95) * k; bz = fh * 0.95 * (1 - k) + jump * (1 - k);
           if (shot.saved && k >= 0.85) { bx = kx; }
         }
