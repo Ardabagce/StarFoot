@@ -280,7 +280,7 @@ const Cups = {
     const ctx = {
       home: mk(h), away: mk(a), side: h === s.clubId ? 'home' : 'away',
       compName: `${cup.name} · ${stageName}`, levelBase: Game.levelBase(false) + (cup.youth ? 0.05 : cup.dom ? 0.01 : 0.04),
-      captain: Captain.is(), lg: cup.youth ? 'ucl' : cup.dom ? s.world.clubs[s.clubId].league : cup.id, sbTag: cup.youth ? 'GELİŞİM LİGİ' : cup.dom ? cup.name.toLocaleUpperCase('tr') : null,
+      captain: Captain.is(), theme: cup.youth ? 'ygl' : cup.dom ? 'dom' : cup.id, lg: cup.youth ? 'ucl' : cup.dom ? s.world.clubs[s.clubId].league : cup.id, sbTag: cup.youth ? 'GELİŞİM LİGİ' : cup.dom ? cup.name.toLocaleUpperCase('tr') : null,
     };
     const p = s.player;
     ctx.role = p.injuryWeeks > 0 || Life.banned() ? 'out' : cup.youth ? Game.roleFor(Player.overall(p, true), cup.str[s.clubId], true) : Game.roleFor(Player.overall(p, true), s.world.clubs[s.clubId].rating, false);
@@ -390,7 +390,7 @@ const Cups = {
         const opp = Game.nat(oppCode);
         const stageName = STAGE_NAMES[t.alive.length];
         await Cups.ask(`<div class="ev-tag">${t.name}</div><h2>${stageName}</h2><p><b>${nat.name}</b> vs <b>${opp.name}</b> · Rakibin yıldızları: ${U.esc(Game.natStars(oppCode).slice(0, 2).join(', ') || '—')}</p>`, 'Maça Çık');
-        const ctx = { home: Cups.natTeam(h), away: Cups.natTeam(a), side: h === nat.code ? 'home' : 'away', compName: `${t.name} · ${stageName}`, levelBase: Game.levelBase(true) + 0.03, lg: t.type };
+        const ctx = { home: Cups.natTeam(h), away: Cups.natTeam(a), side: h === nat.code ? 'home' : 'away', compName: `${t.name} · ${stageName}`, levelBase: Game.levelBase(true) + 0.03, lg: t.type, theme: t.type };
         ctx.role = p.injuryWeeks > 0 ? 'out' : Game.roleFor(Player.overall(p, true), nat.rating, false);
         if (ctx.role === 'out' && p.injuryWeeks === 0) ctx.role = 'bench';
         ctx.subChance = 0.7;

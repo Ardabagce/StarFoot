@@ -1529,3 +1529,32 @@ kbd { background: var(--panel-2); border: 1px solid var(--line); padding: 0 5px;
 .tabs button.badge { position: relative; }
 .tabs button.badge::after { content: ""; position: absolute; top: 6px; left: calc(50% + 10px); width: 9px; height: 9px; border-radius: 50%; background: #ff3d6e; box-shadow: 0 0 0 2px #050b1d; }
 .sp-home { border-color: rgba(255, 207, 63, .45); }
+
+/* --- Fikstürde kupa maçları --- */
+.mc.cupfx { grid-template-rows: auto auto; background: linear-gradient(90deg, color-mix(in srgb, var(--ct2) 45%, transparent), rgba(5, 11, 29, .5)); border-color: color-mix(in srgb, var(--cta) 45%, transparent); }
+.mc.cupfx .wk.ck { display: grid; place-items: center; height: 22px; border-radius: 5px; font-size: 10px; background: var(--ct1); color: var(--cta); box-shadow: inset 0 0 0 1px var(--cta); }
+.mc.cupfx .mc-cup { grid-column: 2 / -1; text-align: center; font-size: 11px; color: var(--cta); letter-spacing: .04em; margin-top: -2px; }
+.mc.cupfx.cur { border-color: var(--cta); box-shadow: 0 0 0 1px var(--cta); }
+.mc.cupfx.cur .mc-s { background: var(--cta); color: #0a1530; }
+
+/* --- Turnuva teması: Maç Günü kartı ve maç ekranı --- */
+.themed { --ct-stars: radial-gradient(1.6px 1.6px at 12% 18%, #fff 50%, transparent 52%), radial-gradient(1.2px 1.2px at 32% 64%, #fff 50%, transparent 52%), radial-gradient(1.8px 1.8px at 58% 28%, #fff 50%, transparent 52%), radial-gradient(1.1px 1.1px at 78% 72%, #fff 50%, transparent 52%), radial-gradient(1.4px 1.4px at 90% 12%, #fff 50%, transparent 52%), radial-gradient(1px 1px at 46% 88%, #fff 50%, transparent 52%); }
+.card.next.themed { position: relative; overflow: hidden; color: #fff; border-color: color-mix(in srgb, var(--cta) 55%, transparent);
+  background: radial-gradient(ellipse at 85% -10%, color-mix(in srgb, var(--cta) 30%, transparent), transparent 55%), linear-gradient(160deg, var(--ct2), var(--ct1) 75%); }
+.card.next.themed.fx-stars { background: var(--ct-stars), radial-gradient(ellipse at 85% -10%, color-mix(in srgb, var(--cta) 30%, transparent), transparent 55%), linear-gradient(160deg, var(--ct2), var(--ct1) 75%); background-size: 160px 160px, auto, auto; animation: ctTwinkle 6s linear infinite; }
+.card.next.themed.fx-gold { background: radial-gradient(ellipse at 50% -20%, rgba(255, 207, 63, .35), transparent 60%), repeating-linear-gradient(115deg, rgba(255, 207, 63, .07) 0 14px, transparent 14px 28px), linear-gradient(160deg, var(--ct2), var(--ct1) 75%); }
+.card.next.themed.fx-rays { background: repeating-conic-gradient(from 0deg at 100% 0%, rgba(255, 255, 255, .05) 0 6deg, transparent 6deg 12deg), linear-gradient(160deg, var(--ct2), var(--ct1) 75%); }
+@keyframes ctTwinkle { 0% { background-position: 0 0, 0 0, 0 0; } 100% { background-position: 160px 80px, 0 0, 0 0; } }
+.card.next.themed .card-h > span:first-child .ic { color: var(--cta); }
+.card.next.themed .nm-meta { color: color-mix(in srgb, var(--cta) 70%, #fff); }
+.card.next.themed .btn-play { background: linear-gradient(180deg, color-mix(in srgb, var(--cta) 85%, #fff), var(--cta)); color: #0a1530; box-shadow: 0 6px 22px color-mix(in srgb, var(--cta) 45%, transparent); }
+.ct-badge { display: inline-flex; align-items: center; gap: 8px; margin: -2px 0 10px; padding: 5px 12px; border-radius: 999px; font-family: var(--display); font-weight: 800; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--cta); background: rgba(0, 0, 0, .3); border: 1px solid color-mix(in srgb, var(--cta) 55%, transparent); }
+.ct-star { display: inline-block; width: 16px; height: 16px; background: var(--cta); clip-path: polygon(50% 0, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); }
+.overlay.themed { background: radial-gradient(ellipse at 50% -10%, color-mix(in srgb, var(--ct2) 85%, transparent), transparent 60%), var(--ct1); }
+.overlay.themed.fx-stars { background: var(--ct-stars), radial-gradient(ellipse at 50% -10%, color-mix(in srgb, var(--ct2) 85%, transparent), transparent 60%), var(--ct1); background-size: 180px 180px, auto, auto; background-attachment: fixed; }
+.overlay.themed.fx-gold { background: radial-gradient(ellipse at 50% -10%, rgba(255, 207, 63, .3), transparent 55%), repeating-linear-gradient(115deg, rgba(255, 207, 63, .05) 0 16px, transparent 16px 32px), var(--ct1); }
+.overlay.themed .mt-top { background: linear-gradient(180deg, color-mix(in srgb, var(--ct2) 70%, #000), var(--ct1)); border-color: color-mix(in srgb, var(--cta) 55%, transparent); box-shadow: 0 0 24px color-mix(in srgb, var(--cta) 20%, transparent); }
+.overlay.themed .mt-comp { color: var(--cta); border-bottom-color: color-mix(in srgb, var(--cta) 35%, transparent); font-weight: 700; }
+.overlay.themed .mt-score { color: #fff; }
+.overlay.themed #mt-bar { background: var(--cta); }
+.overlay.themed .mt-me, .overlay.themed .mt-feed { border-color: color-mix(in srgb, var(--cta) 30%, transparent); }

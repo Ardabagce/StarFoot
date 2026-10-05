@@ -102,6 +102,10 @@ const Match = {
     // UI
     const ov = document.getElementById('match');
     ov.classList.remove('hidden');
+    // turnuva teması (Şampiyonlar Kupası yıldızlı vb.)
+    const theme = ctx.theme ? CompTheme.get(ctx.theme, ctx.side === 'home' ? ctx.home.id : ctx.away.id) : null;
+    ov.className = `overlay ${CompTheme.cls(theme)}`;
+    ov.setAttribute('style', CompTheme.vars(theme));
     ov.innerHTML = `
       <div class="mt-wrap">
         <div class="mt-top">

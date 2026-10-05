@@ -110,6 +110,34 @@ const Balls = {
   },
 };
 
+// Turnuva temaları: Maç Günü kartı ve maç ekranı (renk + desen)
+const COMP_THEMES = {
+  ucl: { c1: '#071538', c2: '#1d3c8f', a: '#c0d6ff', fx: 'stars', l: 'Şampiyonlar Kupası Gecesi' },
+  uel: { c1: '#1b1d22', c2: '#7a2e08', a: '#ff8a3d', fx: 'rays', l: 'Federasyon Kupası Gecesi' },
+  uecl: { c1: '#05261a', c2: '#0b7a3e', a: '#5ee39a', fx: 'rays', l: 'Konferans Kupası Gecesi' },
+  csa: { c1: '#141b30', c2: '#6b5414', a: '#ffcf3f', fx: 'stars', l: 'Güney Amerika Kupası' },
+  ccc: { c1: '#081a33', c2: '#0e7490', a: '#67e8f9', fx: 'stars', l: 'Kuzey Amerika Kupası' },
+  acl: { c1: '#1c0b2e', c2: '#6b21a8', a: '#e9b8ff', fx: 'stars', l: 'Asya Şampiyonlar Kupası' },
+  ygl: { c1: '#160b33', c2: '#4c1d95', a: '#c4b5fd', fx: 'stars', l: 'Avrupa Gelişim Ligi' },
+  dom: { c1: '#2a0a10', c2: '#8a1328', a: '#ffd166', fx: 'rays', l: 'Kupa Maçı' },
+  wc: { c1: '#2e0812', c2: '#7a1a2e', a: '#ffcf3f', fx: 'gold', l: 'Dünya Kupası' },
+  euro: { c1: '#071a4a', c2: '#1d4ed8', a: '#93c5fd', fx: 'rays', l: 'Avrupa Şampiyonası' },
+  nl: { c1: '#04201d', c2: '#0f766e', a: '#5eead4', fx: 'rays', l: 'Uluslar Ligi Finalleri' },
+};
+const CompTheme = {
+  // milli maçta ülke renkleri kullanılır
+  get(key, nat) {
+    if (key === 'intl') {
+      const col = (typeof NAT_COLORS !== 'undefined' && NAT_COLORS[nat]) || ['#c8102e', '#ffffff'];
+      const dark = Sprites.colorDist(col[0], '#ffffff') < 60 ? col[1] : col[0];
+      return { c1: '#060b1c', c2: dark, a: Sprites.colorDist(col[1], '#000000') < 80 ? '#ffffff' : col[1], fx: 'rays', l: 'Milli Maç' };
+    }
+    return COMP_THEMES[key] || null;
+  },
+  vars(t) { return t ? `--ct1:${t.c1};--ct2:${t.c2};--cta:${t.a}` : ''; },
+  cls(t) { return t ? `themed fx-${t.fx}` : ''; },
+};
+
 // Lige özel skorbord renkleri
 const SCOREBOARDS = {
   TR1: { tag: 'SÜPER LİG', c1: '#e30a17', c2: '#ffffff' },

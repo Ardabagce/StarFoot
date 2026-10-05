@@ -506,7 +506,7 @@ const Game = {
     const ctx = {
       home: home ? ownT : oppT, away: home ? oppT : ownT, side: home ? 'home' : 'away',
       compName: `Milli Maç • ${nat.name} - ${oppNat.name}`,
-      levelBase: Game.levelBase(true), lg: 'intl',
+      levelBase: Game.levelBase(true), lg: 'intl', theme: 'intl',
     };
     ctx.role = p.injuryWeeks > 0 ? 'out' : Game.roleFor(Player.overall(p, true), nat.rating, false);
     if (ctx.role === 'out' && p.injuryWeeks === 0) ctx.role = 'bench';
@@ -1330,7 +1330,7 @@ const UI = {
       const n = Game.nation(), o = Game.nat(s.pendingIntl);
       next = `<div class="nm-vs">${crest(n.name, null, n.code)}<span class="vs">VS</span>${crest(o.name, null, o.code)}</div>
         <div class="nm-meta">MİLLİ MAÇ · Rakip gücü ${o.rating} · Yıldızlar: ${U.esc(Game.natStars(o.code).slice(0, 2).join(', ') || '—')}</div>`;
-    } else if (fx) {
+    } else if (fx && !next) {
       const opp = fx.home === s.clubId ? fx.away : fx.home;
       const oppC = Game.club(opp);
       const tbl = World.sortedTable(Game.league());
@@ -1340,6 +1340,9 @@ const UI = {
         <div class="nm-meta">${U.esc(Game.leagueName())} · ${s.season.round + 1}. HAFTA · ${fx.home === s.clubId ? 'İÇ SAHA' : 'DEPLASMAN'}</div>
         <div class="nm-meta">Rakip ${oppPos}. sırada · Güç ${Game.teamRating(opp)} / Senin takımın ${Game.teamRating(s.clubId)}${star ? ` · Yıldızı: ${U.esc(star.n)}` : ''}</div>`;
     }
+    let nTheme = null;
+    if (s.pendingIntl) nTheme = CompTheme.get('intl', p.nation);
+    else if (s.pendingCup && s.cups && s.cups[s.pendingCup]) { const c = s.cups[s.pendingCup]; nTheme = CompTheme.get(c.youth ? 'ygl' : c.dom ? 'dom' : c.id); }
     const ovr = Player.overall(p, true);
     const roleK = p.injuryWeeks ? 'inj' : Game.roleFor(ovr, s.pendingIntl ? Game.nation().rating : Game.teamRating(s.clubId), Game.isYouth() && !s.pendingIntl, true);
     const role = { inj: 'Sakatsın, bu maçta oynayamazsın', starter: "Muhtemelen ilk 11'desin", bench: 'Muhtemelen yedeksin', out: 'Kadroya girmen zor' }[roleK];
@@ -1357,8 +1360,9 @@ const UI = {
     return `
       ${UI.report()}
       <div class="grid2">
-        <section class="card next">
+        <section class="card next ${CompTheme.cls(nTheme)}" style="${CompTheme.vars(nTheme)}">
           <div class="card-h"><span>${Icon('whistle')} Maç Günü</span><span class="tag role-${roleK}">${role}</span></div>
+          ${nTheme ? `<div class="ct-badge">${nTheme.fx === 'stars' ? '<i class="ct-star"></i>' : ''}${U.esc(nTheme.l)}</div>` : ''}
           ${next}
           ${p.energy < 40 ? `<div class="warn">${Icon('bolt')} Enerjin düşük. Performansın düşer, sakatlık riski artar.</div>` : ''}
           <button class="btn btn-play" data-go="match">${Icon('play')} ${Game.inStreet() && s.street.trials ? 'Seçmelere Katıl' : 'Maça Çık'}</button>
@@ -1467,18 +1471,12 @@ ${UI.paper()}`;
     const nextFx = Game.nextFixture();
     const gap = leader.id === s.clubId ? (tbl[1] ? me.pts - tbl[1].pts : 0) : leader.pts - me.pts;
     const fxFrom = Math.max(0, Math.min(s.season.round - 3, Game.rounds() - 8));
+    const cupRows = UI.cupFixtures();
     const fixtures = lg.fixtures.map((round, i) => {
       const f = round.find(([h, a]) => h === s.clubId || a === s.clubId);
       if (!f) return '';
       if (!UI.more.fix && (i < fxFrom || i >= fxFrom + 8)) return '';
-      const r = myRes.find((x) => x.round === i);
-      const k = r ? res(r, s.clubId) : null;
-      return `<div class="mc ${i === s.season.round ? 'cur' : ''} ${r ? 'played' : ''}">
-        <span class="wk">${i + 1}</span>
-        <div class="mc-t h"><span class="nm-l">${U.esc(name(f[0]))}</span><span class="nm-s">${U.esc(clubOf(f[0]).short)}</span>${UI.shirt(clubOf(f[0]))}</div>
-        <div class="mc-s ${k ? 'r-' + k : ''}">${r ? `${r.hs} - ${r.as}` : i === s.season.round ? 'SIRADA' : '-'}</div>
-        <div class="mc-t">${UI.shirt(clubOf(f[1]))}<span class="nm-l">${U.esc(name(f[1]))}</span><span class="nm-s">${U.esc(clubOf(f[1]).short)}</span></div>
-      </div>`;
+      return (cupRows[i] || []).join('') + UI.fxRow(round, i, f, myRes, res, name, clubOf);
     }).join('');
     const scorers = World.topScorers(lg, 10);
     const meName = Player.fullName(Game.p);
@@ -1513,6 +1511,59 @@ ${UI.paper()}`;
         </table></div>
       </section>` : ''}
       ${view === 'fix' ? `<section class="card"><div class="card-h"><span>${Icon('whistle')} Fikstürün</span><small class="muted">${myRes.length}/${Game.rounds()} oynandı</small></div><div class="fixtures">${fixtures}</div>${UI.moreBtn('fix', 'Tüm fikstür')}</section>` : ''}`;
+  },
+
+  // Lig fikstür satırı
+  fxRow(round, i, f, myRes, res, name, clubOf) {
+    const s = Game.state;
+    const r = myRes.find((x) => x.round === i);
+    const k = r ? res(r, s.clubId) : null;
+    return `<div class="mc ${i === s.season.round ? 'cur' : ''} ${r ? 'played' : ''}">
+        <span class="wk">${i + 1}</span>
+        <div class="mc-t h"><span class="nm-l">${U.esc(name(f[0]))}</span><span class="nm-s">${U.esc(clubOf(f[0]).short)}</span>${UI.shirt(clubOf(f[0]))}</div>
+        <div class="mc-s ${k ? 'r-' + k : ''}">${r ? `${r.hs} - ${r.as}` : i === s.season.round ? (s.pendingCup ? 'SONRA' : 'SIRADA') : '-'}</div>
+        <div class="mc-t">${UI.shirt(clubOf(f[1]))}<span class="nm-l">${U.esc(name(f[1]))}</span><span class="nm-s">${U.esc(clubOf(f[1]).short)}</span></div>
+      </div>`;
+  },
+
+  // Avrupa ve ülke kupası maçların: oynandığı haftanın lig maçından önce gösterilir
+  cupFixtures() {
+    const s = Game.state, me = s.clubId, out = {};
+    if (!s.cups || Game.inStreet()) return out;
+    const w = s.world;
+    const nm = (cup, id) => (w.clubs[id] ? w.clubs[id].name : id) + (cup.youth ? ' U19' : '');
+    const sh = (id) => (w.clubs[id] ? w.clubs[id].short : id);
+    const abbr = (cup) => ({ ucl: 'ŞK', uel: 'FK', uecl: 'KK', csa: 'GA', ccc: 'KA', acl: 'AŞ', ygl: 'U19' }[cup.id] || 'KUP');
+    const swissIdx = (st) => (typeof st === 'string' && st.startsWith('md') ? +st.slice(2) - 1 : st === 'po' ? 8 : 9 + Math.round(Math.log2(16 / st)));
+    Object.values(s.cups).forEach((cup) => {
+      if (!!cup.youth !== Game.isYouth() || !Cups.everIn(s, cup)) return;
+      const wk = Cups.weeks(Game.rounds(), cup);
+      const th = CompTheme.get(cup.youth ? 'ygl' : cup.dom ? 'dom' : cup.id);
+      const row = (idx, h, a, score, kls, stage) => {
+        const at = wk[idx];
+        if (at == null) return;
+        (out[at] = out[at] || []).push(`<div class="mc cupfx ${kls}" style="${CompTheme.vars(th)}">
+          <span class="wk ck">${abbr(cup)}</span>
+          <div class="mc-t h"><span class="nm-l">${U.esc(nm(cup, h))}</span><span class="nm-s">${U.esc(sh(h))}</span>${UI.shirt(w.clubs[h] || Game.club())}</div>
+          <div class="mc-s ${kls}">${score}</div>
+          <div class="mc-t">${UI.shirt(w.clubs[a] || Game.club())}<span class="nm-l">${U.esc(nm(cup, a))}</span><span class="nm-s">${U.esc(sh(a))}</span></div>
+          <small class="mc-cup">${U.esc(cup.name.replace('Avrupa ', ''))} · ${U.esc(stage)}</small>
+        </div>`);
+      };
+      const mine = cup.log.filter((m) => m.h === me || m.a === me);
+      mine.forEach((m, i) => {
+        const idx = cup.fmt === 'swiss' ? swissIdx(m.stage) : i;
+        const gf = m.h === me ? m.hs : m.as, ga = m.h === me ? m.as : m.hs;
+        const k = m.w ? (m.w === me ? 'W' : 'L') : gf > ga ? 'W' : gf < ga ? 'L' : 'D';
+        const stage = typeof m.stage === 'string' && m.stage.startsWith('md') ? `Lig aşaması ${m.stage.slice(2)}. maç` : m.stage === 'po' ? 'Play-off' : STAGE_NAMES[m.stage] || '';
+        row(idx, m.h, m.a, `${m.hs} - ${m.as}${m.pens ? ' (p)' : ''}`, `played r-${k}`, stage);
+      });
+      if (!cup.winner && Cups.inCup(s, cup)) {
+        const op = Cups.opponent(s, cup);
+        if (op) row(cup.stage, op.h, op.a, s.pendingCup === cup.id ? 'SIRADA' : '-', s.pendingCup === cup.id ? 'cur' : '', op.stage);
+      }
+    });
+    return out;
   },
 
   // Sekme içi görünüm seçici (premium segment)
