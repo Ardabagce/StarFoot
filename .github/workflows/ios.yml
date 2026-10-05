@@ -16,6 +16,9 @@ on:
       - 'css/**'
       - 'index.html'
       - '.github/workflows/ios.yml'
+defaults:
+  run:
+    shell: bash  # -eo pipefail: borudaki hata adımı düşürür
 jobs:
   build:
     runs-on: macos-15
