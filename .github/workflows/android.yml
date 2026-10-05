@@ -48,7 +48,11 @@ jobs:
           printf 'storeFile=%s\nstorePassword=%s\nkeyAlias=%s\nkeyPassword=%s\n' "$RUNNER_TEMP/upload.jks" "$KS_PASS" "$KEY_ALIAS" "$KEY_PASS" > keystore.properties
       - name: Derle
         working-directory: app/android
+        env:
+          VERSION_CODE: ${{ github.run_number }}
         run: |
+          export VERSION_CODE=$((100 + VERSION_CODE))
+          echo "Sürüm kodu: $VERSION_CODE"
           chmod +x gradlew
           ./gradlew --no-daemon assembleDebug bundleRelease
       - name: İmzayı doğrula
