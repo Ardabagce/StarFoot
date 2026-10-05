@@ -1,18 +1,27 @@
 {
-  "name": "StarFoot",
+  "id": "/",
+  "name": "StarFoot: Football Career",
   "short_name": "StarFoot",
-  "description": "8 yaşında altyapıda başlayan futbol kariyer oyunu",
-  "lang": "tr",
-  "start_url": "./index.html",
-  "scope": "./",
+  "description": "Football career game: start in the academy, play the key moments, become a legend. / Futbol kariyer oyunu: altyapıdan efsaneliğe.",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
-  "orientation": "any",
+  "orientation": "portrait",
   "background_color": "#0a1530",
   "theme_color": "#0a1530",
+  "categories": ["games", "sports"],
   "icons": [
-    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
-    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml" }
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ],
+  "screenshots": [
+    { "src": "store/screens/en-2-home.png", "sizes": "1080x1920", "type": "image/png", "form_factor": "narrow", "label": "Match day" },
+    { "src": "store/screens/en-6-match.png", "sizes": "1080x1920", "type": "image/png", "form_factor": "narrow", "label": "Live match" },
+    { "src": "store/screens/en-4-life.png", "sizes": "1080x1920", "type": "image/png", "form_factor": "narrow", "label": "Life off the pitch" }
   ]
 }

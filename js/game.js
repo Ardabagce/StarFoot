@@ -140,6 +140,7 @@ const Game = {
         { t: 'Sil', cls: 'btn-danger', fn: () => { Game.wipe(i); Game.init(); } },
       ]);
     }));
+    U.$$('#lang-sw [data-lang]').forEach((b) => { b.classList.toggle('on', b.dataset.lang === I18N.lang); b.onclick = () => { if (b.dataset.lang !== I18N.lang) I18N.set(b.dataset.lang); }; });
     Game.show('title');
   },
 
@@ -272,7 +273,7 @@ const Game = {
       delete s.world.clubs.STREET;
       s.youth = Youth.create(s.world, id, s.player.age);
       Cups.setupYouth(s);
-      Game.news(`${s.player.name}, ${st.trials ? 'seçmelerdeki performansıyla' : 'scout sayesinde'} ${Game.club().name} altyapısına katıldı! ${s.youth.group} takımında sezon başlıyor.`, 'good');
+      Game.news(st.trials ? `${s.player.name}, seçmelerdeki performansıyla ${Game.club().name} altyapısına katıldı! ${s.youth.group} takımında sezon başlıyor.` : `${s.player.name}, scout sayesinde ${Game.club().name} altyapısına katıldı! ${s.youth.group} takımında sezon başlıyor.`, 'good');
       Social.post('transfer', `Artık ${Game.club().name} altyapısındayım! Hayalim gerçek oluyor.`, 1.5);
       Game.save();
       Game.tab = 'home';
@@ -910,7 +911,7 @@ const Game = {
       const own = Game.club();
       if (p.age >= 17 && ovrAfter >= own.rating - 12) {
         ownOffer = { clubId: own.id, wage: Game.wageFor(own.rating, ovrAfter), years: 3, own: true, pro: true };
-        msg.push(`${own.name} sana <b>A takım profesyonel sözleşmesi</b> teklif ediyor!`);
+        msg.push(`<b>${own.name} sana A takım profesyonel sözleşmesi teklif ediyor!</b>`);
       }
       if (p.age >= 18) {
         mandatory = true;
@@ -1036,7 +1037,7 @@ const Game = {
     const s = Game.state, p = s.player;
     document.getElementById('hdr-info').innerHTML = `
       <span class="hi-club">${UI.shirt(Game.club())}${U.esc(Game.teamName())}</span>
-      <span class="hi-week">${s.season.year} · <b>${Math.min(s.season.round + 1, Game.rounds())}</b>/${Game.rounds()}. HAFTA</span>
+      <span class="hi-week">${s.season.year} · ${I18N.lang === 'en' ? 'WEEK ' : ''}<b>${Math.min(s.season.round + 1, Game.rounds())}</b>/${Game.rounds()}${I18N.lang === 'en' ? '' : '. HAFTA'}</span>
       <span class="hi-money"><i class="hm-coin">${Icon('coin')}</i><span class="hm-t"><small>Bakiye</small><b>${U.money(p.money)}</b></span>${Game.weeklyIncome() > 0 ? `<em class="hm-inc">+${U.money(Game.weeklyIncome())}<small>/hf</small></em>` : ''}</span>`;
     // eski sekme adları yeni yapıya taşınır
     const alias = { player: 'profile', career: 'profile', world: 'league', shop: 'life' };
@@ -1117,7 +1118,7 @@ const UI = {
     const rest = items.filter((n) => n !== lead).slice(0, UI.more.news ? 30 : 6);
     const clean = (t) => U.plain(t.replace(/<[^>]+>/g, ''));
     const split = (t) => {
-      const plain = clean(t);
+      const plain = I18N.t(clean(t));
       const cut = plain.search(/[.!?:](\s|$)/);
       return cut > 14 && cut < 95 ? [plain.slice(0, cut + 1), plain.slice(cut + 1).trim()] : [plain, ''];
     };
@@ -1797,6 +1798,7 @@ ${UI.paper()}`;
         <div class="card-h"><span>${Icon('save')} Oyun</span></div>
         <div class="row-btns">
           <div class="diff-row"><span class="muted">Zorluk</span><div class="seg">${Object.entries(DIFFS).map(([k, v]) => `<button data-setdiff="${k}" class="${k === (Game.state.difficulty || 'normal') ? 'on' : ''}">${v.l}</button>`).join('')}</div></div>
+          <div class="diff-row"><span class="muted">Dil / Language</span><div class="seg" data-noi18n><button data-setlang="tr" class="${I18N.lang === 'tr' ? 'on' : ''}">Türkçe</button><button data-setlang="en" class="${I18N.lang === 'en' ? 'on' : ''}">English</button></div></div>
           <button class="btn btn-ghost" data-sys="save">${Icon('save')} Kaydet</button>
           <button class="btn btn-ghost" data-sys="menu">${Icon('exit')} Ana Menü</button>
           ${p.age >= 33 ? `<button class="btn btn-ghost" data-sys="retire">${Icon('wave')} Emekli Ol</button>` : ''}
@@ -1901,6 +1903,7 @@ ${UI.paper()}`;
     U.$$('[data-vnav]', root).forEach((b) => (b.onclick = () => { const [k, v] = b.dataset.vnav.split(':'); UI[k] = v; Game.render(); }));
     U.$$('[data-king]', root).forEach((b) => (b.onclick = () => { UI.kingTab = b.dataset.king; Game.render(); }));
     U.$$('[data-cupsel]', root).forEach((b) => (b.onclick = () => { UI.cupSel = b.dataset.cupsel; Game.render(); }));
+    U.$$('[data-setlang]', root).forEach((b) => (b.onclick = () => { if (b.dataset.setlang !== I18N.lang) { Game.save(); I18N.set(b.dataset.setlang); } }));
     U.$$('[data-sys]', root).forEach((b) => (b.onclick = () => {
       const k = b.dataset.sys;
       if (k === 'save') { Game.save(); Game.toast('💾 Kaydedildi', 'good'); }

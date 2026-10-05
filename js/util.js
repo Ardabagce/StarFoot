@@ -45,6 +45,12 @@ const U = {
     n = Math.round(n);
     const abs = Math.abs(n);
     let s;
+    if (typeof I18N !== 'undefined' && I18N.lang === 'en') {
+      if (abs >= 1e9) s = (n / 1e9).toFixed(2) + 'B';
+      else if (abs >= 1e6) s = (n / 1e6).toFixed(2) + 'M';
+      else s = n.toLocaleString('en-US');
+      return '₺' + s;
+    }
     if (abs >= 1e9) s = (n / 1e9).toFixed(2).replace('.', ',') + ' Mr';
     else if (abs >= 1e6) s = (n / 1e6).toFixed(2).replace('.', ',') + ' Mn';
     else s = n.toLocaleString('tr-TR');

@@ -1,10 +1,10 @@
 // StarFoot service worker: oyun dosyalarını önbelleğe alır, çevrimdışı oynanabilir
-const CACHE = 'starfoot-v21';
+const CACHE = 'starfoot-v22';
 const ASSETS = [
   './', './index.html', './manifest.webmanifest', './css/style.css',
-  './js/util.js', './js/icons.js', './js/data.js', './js/player.js', './js/league.js', './js/legends.js', './js/cups.js',
+  './js/util.js', './js/lang-en.js', './js/i18n.js', './js/icons.js', './js/data.js', './js/player.js', './js/league.js', './js/legends.js', './js/cups.js',
   './js/sprites.js', './js/shopart.js', './js/weather.js', './js/minigame.js', './js/drills.js', './js/match.js', './js/game.js', './js/extras.js', './js/socialart.js', './js/celebrate.js', './js/life.js', './js/captain.js', './js/app.js',
-  './icons/icon.svg', './icons/icon-192.png', './icons/icon-512.png',
+  './privacy.html', './icons/icon.svg', './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-192.png', './icons/icon-maskable-512.png',
 ];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)).then(() => self.skipWaiting()));

@@ -21,6 +21,14 @@ Oyun otomatik olarak tarayıcının `localStorage` alanına kaydedilir.
 
 Oyunu bir web sunucusundan (ör. GitHub Pages) açıp tarayıcı menüsünden **Ana ekrana ekle** dersen tam ekran bir uygulama gibi çalışır ve internet olmadan da açılır. Çift dokunma ve kıstırma ile yakınlaşma kapalıdır.
 
+## Dil / Language
+
+Oyun **Türkçe** ve **İngilizce** oynanır. İlk açılışta telefonun diline göre seçilir; başlık ekranındaki **TR / EN** düğmesinden ya da *Profil › Kariyer › Oyun* kartındaki **Dil / Language** seçiminden değiştirilir. Kodda metinler Türkçe yazılır; İngilizce seçiliyse `js/i18n.js` ekrana çıkan metni (sayfa, canvas çizimleri, başlıklar) `js/lang-en.js` sözlüğüyle çevirir. Kayıtlar dilden bağımsızdır. Sözlüğü güncellemek için: `tools/i18n/README.md`.
+
+## Google Play
+
+Oyun Google Play'e TWA (Trusted Web Activity) olarak çıkacak şekilde hazırlandı: manifest, maskable ikonlar, gizlilik politikası (`privacy.html`), `.well-known/assetlinks.json`, mağaza görselleri ve metinleri (`store/`). Adım adım yapılacaklar: **[GOOGLE_PLAY.md](GOOGLE_PLAY.md)**.
+
 ## Özellikler
 
 - **5 kariyer slotu:** Aynı anda 5 farklı kariyer; istediğini silebilirsin.
