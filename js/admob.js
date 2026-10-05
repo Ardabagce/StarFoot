@@ -4,18 +4,21 @@
   const Cap = window.Capacitor;
   if (!Cap || !Cap.isNativePlatform || !Cap.isNativePlatform() || !Cap.Plugins || !Cap.Plugins.AdMob) return;
   const AdMob = Cap.Plugins.AdMob;
-  const TEST = { rewarded: 'ca-app-pub-3940256099942544/5224354917', interstitial: 'ca-app-pub-3940256099942544/1033173712' };
   const cfg = typeof AD_CONFIG !== 'undefined' ? AD_CONFIG : {};
-  const unit = (k) => (cfg.testing || !cfg[k] ? TEST[k] : cfg[k]);
   const testing = !!cfg.testing || !cfg.rewarded;
+  const rwi = cfg.rewardedFormat === 'rewardedInterstitial';
+  const TEST = { rewarded: rwi ? 'ca-app-pub-3940256099942544/5354046379' : 'ca-app-pub-3940256099942544/5224354917', interstitial: 'ca-app-pub-3940256099942544/1033173712' };
+  // Test modunda Google'ın test birimleri; gerçek modda boş birim kapalıdır
+  const unit = (k) => (testing ? TEST[k] : cfg[k] || '');
   const st = { ready: false, canAds: false, privacy: false, rw: false, it: false, matches: 0, lastIt: 0 };
 
   const prepRewarded = () => {
-    if (!st.canAds || st.rw) return Promise.resolve(st.rw);
-    return AdMob.prepareRewardVideoAd({ adId: unit('rewarded'), isTesting: testing }).then(() => (st.rw = true)).catch(() => (st.rw = false));
+    if (!st.canAds || st.rw || !unit('rewarded')) return Promise.resolve(st.rw);
+    const prep = rwi ? AdMob.prepareRewardInterstitialAd : AdMob.prepareRewardVideoAd;
+    return prep.call(AdMob, { adId: unit('rewarded'), isTesting: testing }).then(() => (st.rw = true)).catch(() => (st.rw = false));
   };
   const prepInter = () => {
-    if (!st.canAds || st.it || !cfg.interstitialEvery) return Promise.resolve(st.it);
+    if (!st.canAds || st.it || !cfg.interstitialEvery || !unit('interstitial')) return Promise.resolve(st.it);
     return AdMob.prepareInterstitial({ adId: unit('interstitial'), isTesting: testing }).then(() => (st.it = true)).catch(() => (st.it = false));
   };
   const withTimeout = (p, ms) => Promise.race([p, new Promise((r) => setTimeout(() => r(false), ms))]);
@@ -45,7 +48,7 @@
       if (!st.rw) { if (typeof Game !== 'undefined') Game.toast(I18N.lang === 'en' ? 'No ad available right now. Try again later.' : 'Şu an reklam yok. Biraz sonra tekrar dene.', 'bad'); return false; }
       st.rw = false;
       try {
-        const item = await AdMob.showRewardVideoAd();
+        const item = await (rwi ? AdMob.showRewardInterstitialAd() : AdMob.showRewardVideoAd());
         return !!item;
       } catch (e) {
         return false;
@@ -55,7 +58,7 @@
     },
     // Maç sonu geçiş reklamı (sıklık sınırlı)
     async afterMatch() {
-      if (!cfg.interstitialEvery || !st.canAds) return;
+      if (!cfg.interstitialEvery || !st.canAds || !unit('interstitial')) return;
       st.matches++;
       const now = Date.now() / 1000;
       if (st.matches % cfg.interstitialEvery !== 0 || now - st.lastIt < (cfg.interstitialGapSec || 0)) return;

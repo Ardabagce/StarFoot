@@ -92,9 +92,10 @@ Her yeni sürümde `app/android/app/build.gradle` içindeki `versionCode`'u 1 ar
 4. Yayından sonra AdMob'da uygulamayı Play girişine bağla ve `app-ads.txt` durumunun **Doğrulandı** olduğunu kontrol et (birkaç gün sürebilir).
 
 ## Gerçek reklamlara geçiş kontrol listesi
-- [ ] `strings.xml` → `admob_app_id` gerçek uygulama kimliği
-- [ ] `js/ads-config.js` → `rewarded`, `interstitial` gerçek birim kimlikleri ve `testing: false`
-- [ ] `app-ads.txt` → yayıncı kimliği yazılı, `#` kaldırıldı
+- [x] `strings.xml` → `admob_app_id` gerçek uygulama kimliği (`ca-app-pub-7675764460364294~8796496538`)
+- [x] `js/ads-config.js` → ödüllü geçiş birimi (`.../1053737887`, `rewardedFormat: 'rewardedInterstitial'`), `testing: false`
+- [ ] `js/ads-config.js` → `interstitial` (Geçiş) birimi: AdMob'da oluşturulunca eklenecek; boşken maç sonu geçiş reklamı kapalı
+- [x] `app-ads.txt` → `pub-7675764460364294`
 - [ ] AdMob'da GDPR ve ABD eyalet mesajları yayınlandı
 - [ ] `versionCode` artırıldı, yeni AAB derlendi
 
