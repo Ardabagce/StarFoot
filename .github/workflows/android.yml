@@ -51,6 +51,18 @@ jobs:
         run: |
           chmod +x gradlew
           ./gradlew --no-daemon assembleDebug bundleRelease
+      - name: İmzayı doğrula
+        working-directory: app/android/app/build/outputs/bundle/release
+        run: |
+          AAB=$(ls *.aab)
+          if jarsigner -verify "$AAB" | grep -q "jar verified"; then
+            echo "İMZALI: $AAB"
+            jarsigner -verify -verbose -certs "$AAB" | grep -m1 -o "X.509, [^]]*"
+            unzip -p "$AAB" 'META-INF/*.RSA' 'META-INF/*.EC' 'META-INF/*.DSA' 2>/dev/null | keytool -printcert | grep -E "Owner|SHA256:" | head -2
+          else
+            echo "İMZASIZ: $AAB (ANDROID_KEYSTORE_* sırlarını kontrol et)"
+            if [ -f ../../../../../keystore.properties ]; then exit 1; fi
+          fi
       - uses: actions/upload-artifact@v4
         with:
           name: starfoot-debug-apk
