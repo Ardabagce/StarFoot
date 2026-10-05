@@ -4,10 +4,14 @@
   const Cap = window.Capacitor;
   if (!Cap || !Cap.isNativePlatform || !Cap.isNativePlatform() || !Cap.Plugins || !Cap.Plugins.AdMob) return;
   const AdMob = Cap.Plugins.AdMob;
-  const cfg = typeof AD_CONFIG !== 'undefined' ? AD_CONFIG : {};
+  const ios = Cap.getPlatform && Cap.getPlatform() === 'ios';
+  const base = typeof AD_CONFIG !== 'undefined' ? AD_CONFIG : {};
+  const cfg = Object.assign({}, base, ios ? base.ios || {} : {});
   const testing = !!cfg.testing || !cfg.rewarded;
   const rwi = cfg.rewardedFormat === 'rewardedInterstitial';
-  const TEST = { rewarded: rwi ? 'ca-app-pub-3940256099942544/5354046379' : 'ca-app-pub-3940256099942544/5224354917', interstitial: 'ca-app-pub-3940256099942544/1033173712' };
+  const TEST = ios
+    ? { rewarded: rwi ? 'ca-app-pub-3940256099942544/6978759866' : 'ca-app-pub-3940256099942544/1712485313', interstitial: 'ca-app-pub-3940256099942544/4411468910' }
+    : { rewarded: rwi ? 'ca-app-pub-3940256099942544/5354046379' : 'ca-app-pub-3940256099942544/5224354917', interstitial: 'ca-app-pub-3940256099942544/1033173712' };
   // Test modunda Google'ın test birimleri; gerçek modda boş birim kapalıdır
   const unit = (k) => (testing ? TEST[k] : cfg[k] || '');
   const st = { ready: false, canAds: false, privacy: false, rw: false, it: false, matches: 0, lastIt: 0 };
@@ -31,6 +35,13 @@
       if (!info.canRequestAds && info.isConsentFormAvailable && info.status === 'REQUIRED') info = await AdMob.showConsentForm();
       st.canAds = !!info.canRequestAds;
       st.privacy = info.privacyOptionsRequirementStatus === 'REQUIRED';
+      // iOS: Apple'ın izleme izni (App Tracking Transparency) penceresi
+      if (ios && AdMob.trackingAuthorizationStatus) {
+        try {
+          const t = await AdMob.trackingAuthorizationStatus();
+          if (t && t.status === 'notDetermined') await AdMob.requestTrackingAuthorization();
+        } catch (e) { /* desteklenmiyor */ }
+      }
     } catch (e) {
       st.canAds = true; // onay hizmetine ulaşılamadı: SDK kendi kurallarıyla devam eder
     }

@@ -6,3 +6,4 @@ app/
 store/premium/raw/
 store/premium/fonts/
 store/premium/*.js
+APP_STORE.md

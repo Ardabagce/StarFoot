@@ -1,0 +1,76 @@
+# iPhone uygulamasını (Capacitor + AdMob) derler ve TestFlight'a yükler.
+# Gereken depo sırları (Settings › Secrets and variables › Actions):
+#   APPSTORE_API_KEY_P8   App Store Connect API anahtarının .p8 dosyasının TÜM içeriği
+#   APPSTORE_KEY_ID       Anahtarın Key ID'si (ör. ABC123DEFG)
+#   APPSTORE_ISSUER_ID    Issuer ID (App Store Connect › Kullanıcılar ve Erişim › Entegrasyonlar)
+#   APPLE_TEAM_ID         10 haneli Team ID (developer.apple.com › Account › Membership details)
+# Sırlar yoksa yalnızca derlenebilirlik kontrolü yapılır (simülatör derlemesi).
+name: iOS
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'app/ios/**'
+      - 'app/capacitor.config.json'
+      - 'js/**'
+      - 'css/**'
+      - 'index.html'
+      - '.github/workflows/ios.yml'
+jobs:
+  build:
+    runs-on: macos-15
+    env:
+      P8: ${{ secrets.APPSTORE_API_KEY_P8 }}
+      KEY_ID: ${{ secrets.APPSTORE_KEY_ID }}
+      ISSUER_ID: ${{ secrets.APPSTORE_ISSUER_ID }}
+      TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Xcode
+        run: |
+          sudo xcode-select -s "$(ls -d /Applications/Xcode_16*.app | sort -V | tail -1)" || true
+          xcodebuild -version
+      - name: Bağımlılıklar ve web dosyaları
+        working-directory: app
+        run: |
+          npm ci
+          node copy-web.js
+          npx cap sync ios
+      - name: Derlenebilirlik kontrolü (imzasız, simülatör)
+        if: env.P8 == '' || env.TEAM_ID == ''
+        working-directory: app/ios/App
+        run: |
+          echo "::warning::App Store sırları eksik; yalnızca derleme kontrolü yapılıyor, TestFlight'a yüklenmeyecek."
+          xcodebuild -project App.xcodeproj -scheme App -configuration Debug -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO build | tail -20
+      - name: API anahtarı
+        if: env.P8 != '' && env.TEAM_ID != ''
+        run: |
+          mkdir -p "$RUNNER_TEMP/keys"
+          printf '%s\n' "$P8" > "$RUNNER_TEMP/keys/AuthKey_$KEY_ID.p8"
+      - name: Arşivle (imzalı)
+        if: env.P8 != '' && env.TEAM_ID != ''
+        working-directory: app/ios/App
+        run: |
+          BUILD=$((100 + ${{ github.run_number }}))
+          echo "Derleme numarası: $BUILD"
+          xcodebuild -project App.xcodeproj -scheme App -configuration Release \
+            -destination 'generic/platform=iOS' -archivePath "$RUNNER_TEMP/App.xcarchive" \
+            DEVELOPMENT_TEAM="$TEAM_ID" CODE_SIGN_STYLE=Automatic CURRENT_PROJECT_VERSION=$BUILD \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$RUNNER_TEMP/keys/AuthKey_$KEY_ID.p8" \
+            -authenticationKeyID "$KEY_ID" -authenticationKeyIssuerID "$ISSUER_ID" \
+            archive | tail -30
+      - name: TestFlight'a yükle
+        if: env.P8 != '' && env.TEAM_ID != ''
+        working-directory: app/ios
+        run: |
+          sed "s/TEAM_ID/$TEAM_ID/" ExportOptions.plist > "$RUNNER_TEMP/ExportOptions.plist"
+          xcodebuild -exportArchive -archivePath "$RUNNER_TEMP/App.xcarchive" \
+            -exportOptionsPlist "$RUNNER_TEMP/ExportOptions.plist" -exportPath "$RUNNER_TEMP/out" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$RUNNER_TEMP/keys/AuthKey_$KEY_ID.p8" \
+            -authenticationKeyID "$KEY_ID" -authenticationKeyIssuerID "$ISSUER_ID"
+          echo "Yüklendi. App Store Connect › TestFlight'ta birkaç dakika içinde görünür."

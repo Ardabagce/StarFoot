@@ -29,6 +29,10 @@ Oyun **Türkçe** ve **İngilizce** oynanır. İlk açılışta telefonun diline
 
 Android uygulaması `app/` klasöründe (Capacitor). Reklamlar Google **AdMob** ile gösterilir: isteğe bağlı ödüllü reklamlar (hediye paketi ×2-×3, haftalık +25 enerji) ve birkaç maçta bir maç sonu geçiş reklamı. Ayarlar `js/ads-config.js` dosyasında; web sürümünde gerçek reklam yoktur. Uygulama GitHub Actions ile otomatik derlenir (`.github/workflows/android.yml`). Yayınlama adımları: **[GOOGLE_PLAY.md](GOOGLE_PLAY.md)**.
 
+## App Store (iPhone uygulaması)
+
+iPhone uygulaması `app/ios/` klasöründe (Capacitor, AdMob + izleme izni). GitHub Actions › **iOS** iş akışı Mac sunucusunda derleyip TestFlight'a yükler. Adımlar: **[APP_STORE.md](APP_STORE.md)**.
+
 ## Özellikler
 
 - **5 kariyer slotu:** Aynı anda 5 farklı kariyer; istediğini silebilirsin.

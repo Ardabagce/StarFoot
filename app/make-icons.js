@@ -29,6 +29,14 @@ const page = (inner, w, h, bg = 'transparent') => `<!doctype html><html><body st
       await render(page(logo, W, H, '#0a1530'), W, H, path.join(RES, `drawable-${o}-${d}/splash.png`));
     }
   }
+  // iOS: 1024 uygulama simgesi (köşesiz kare, şeffaflık yok) ve 2732 açılış ekranı
+  const IOS = path.join(__dirname, 'ios/App/App/Assets.xcassets');
+  if (fs.existsSync(IOS)) {
+    const sq = svg('icon.svg').replace(' rx="112"', '').replace('<svg ', '<svg width="100%" height="100%" style="display:block" ');
+    await render(page(sq, 1024, 1024, '#0a1530'), 1024, 1024, path.join(IOS, 'AppIcon.appiconset/AppIcon-512@2x.png'));
+    const Z = 2732, logo = `<div style="display:flex;align-items:center;justify-content:center;flex-direction:column;width:${Z}px;height:${Z}px;font:italic 900 ${Z * 0.07}px/1 'Arial Black',Arial,sans-serif;color:#f3f1ea"><div style="width:${Z * 0.16}px;height:${Z * 0.16}px;margin-bottom:${Z * 0.025}px">${full}</div><div>STAR<span style="color:#ffcf3f">FOOT</span></div></div>`;
+    for (const n of ['splash-2732x2732.png', 'splash-2732x2732-1.png', 'splash-2732x2732-2.png']) await render(page(logo, Z, Z, '#0a1530'), Z, Z, path.join(IOS, 'Splash.imageset', n));
+  }
   await render(page(`<div style="display:flex;align-items:center;justify-content:center;width:480px;height:320px;font:italic 900 64px 'Arial Black',Arial;color:#f3f1ea">STAR<span style="color:#ffcf3f">FOOT</span></div>`, 480, 320, '#0a1530'), 480, 320, path.join(RES, 'drawable/splash.png'));
   await b.close();
   console.log('ikonlar ve açılış ekranları üretildi');

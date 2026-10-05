@@ -13,8 +13,8 @@ const POSTERS = [
   },
   {
     id: 'matchday', accent: '#8fb8ff', glow: 'rgba(120,170,255,.5)', tilt: 3, stars: true,
-    tr: { tag: 'LİGLER VE KUPALAR', h1: 'DEVLERİN', h2: 'SAHNESİNE ÇIK', sub: 'Şampiyonlar Kupası, Dünya Kupası ve 16 ülkenin ligleri.', chips: [['400+ kulüp', 'right', 1000], ['16 ülke ligi', 'left', 1460]] },
-    en: { tag: 'LEAGUES & CUPS', h1: 'STEP ONTO', h2: 'THE BIG STAGE', sub: 'Champions Cup, World Cup and leagues from 16 countries.', chips: [['400+ clubs', 'right', 1000], ['16 national leagues', 'left', 1460]] },
+    tr: { tag: 'LİGLER VE KUPALAR', h1: 'DEVLERİN', h2: 'SAHNESİNE ÇIK', sub: 'Şampiyonlar Kupası, Dünya Kupası ve 16 ülkenin ligleri.', chips: [['400+ kulüp', 'right', 1180], ['16 ülke ligi', 'left', 1500]] },
+    en: { tag: 'LEAGUES & CUPS', h1: 'STEP ONTO', h2: 'THE BIG STAGE', sub: 'Champions Cup, World Cup and leagues from 16 countries.', chips: [['400+ clubs', 'right', 1180], ['16 national leagues', 'left', 1500]] },
   },
   {
     id: 'summary', accent: '#ffd36b', glow: 'rgba(255,190,60,.5)', tilt: -3,
@@ -36,7 +36,7 @@ const POSTERS = [
 const fontCss = [['Saira Condensed', 'saira-condensed', [800, 900]], ['Barlow Semi Condensed', 'barlow-semi-condensed', [500, 600, 700]]]
   .flatMap(([fam, f, ws]) => ws.flatMap((w) => ['latin', 'latin-ext'].map((s) => `@font-face{font-family:'${fam}';font-weight:${w};src:url('${F}/${f}-${s}-${w}-normal.woff2') format('woff2');}`))).join('\n');
 
-const html = (p, l, img) => {
+const html = (p, l, img, F = { H: 1920, pw: 600, top: 640, shift: 0 }) => {
   const t = p[l];
   const conf = p.confetti ? Array.from({ length: 90 }, (_, i) => {
     const x = (i * 137) % 1080, y = (i * 263) % 1500, r = (i * 47) % 180, c = ['#ffcf3f', '#ffffff', '#ff5a5a', '#ffb02e'][i % 4];
@@ -44,11 +44,11 @@ const html = (p, l, img) => {
     return `<i style="left:${x}px;top:${y}px;transform:rotate(${r}deg);background:${c};opacity:${0.35 + (i % 5) * 0.1}"></i>`;
   }).join('') : '';
   const stars = p.stars ? Array.from({ length: 60 }, (_, i) => `<b style="left:${(i * 173) % 1080}px;top:${(i * 311) % 1300}px;opacity:${0.3 + (i % 6) * 0.1};transform:scale(${0.5 + (i % 4) * 0.3})"></b>`).join('') : '';
-  const chips = t.chips.map(([txt, side, y], i) => `<div class="chip ${side}" style="top:${y}px"><span class="dot"></span>${txt}</div>`).join('');
+  const chips = t.chips.map(([txt, side, y], i) => `<div class="chip ${side}" style="top:${y + F.shift}px"><span class="dot"></span>${txt}</div>`).join('');
   return `<!doctype html><html><head><meta charset="utf-8"><style>
 ${fontCss}
 *{margin:0;padding:0;box-sizing:border-box}
-body{width:1080px;height:1920px;overflow:hidden;position:relative;font-family:'Barlow Semi Condensed',sans-serif;color:#fff;
+body{width:1080px;height:${F.H}px;overflow:hidden;position:relative;font-family:'Barlow Semi Condensed',sans-serif;color:#fff;
   background:radial-gradient(120% 70% at 50% 8%, #1b3a8a 0%, #0d1f4f 38%, #070f2a 70%, #040817 100%)}
 .beam{position:absolute;top:-200px;width:520px;height:1500px;background:linear-gradient(180deg,rgba(255,244,214,.20),rgba(255,244,214,0) 70%);filter:blur(18px);transform-origin:top center}
 .beam.l{left:-120px;transform:rotate(-24deg)} .beam.r{right:-120px;transform:rotate(24deg)}
@@ -56,7 +56,7 @@ body{width:1080px;height:1920px;overflow:hidden;position:relative;font-family:'B
   repeating-linear-gradient(90deg,rgba(60,170,90,.16) 0 90px,rgba(60,170,90,.08) 90px 180px);
   transform:perspective(900px) rotateX(58deg);transform-origin:bottom;border-top:4px solid rgba(255,255,255,.18);
   -webkit-mask:linear-gradient(0deg,#000 40%,transparent)}
-.halo{position:absolute;left:50%;top:1180px;width:980px;height:980px;margin-left:-490px;margin-top:-490px;border-radius:50%;background:radial-gradient(circle,${p.glow} 0%,transparent 62%)}
+.halo{position:absolute;left:50%;top:${F.top + 540}px;width:980px;height:980px;margin-left:-490px;margin-top:-490px;border-radius:50%;background:radial-gradient(circle,${p.glow} 0%,transparent 62%)}
 .stars b{position:absolute;width:10px;height:10px;background:#fff;clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)}
 .conf i{position:absolute;width:14px;height:26px;border-radius:2px}
 header{position:absolute;left:0;right:0;top:92px;text-align:center;padding:0 70px}
@@ -68,7 +68,7 @@ h1{font-family:'Saira Condensed';font-weight:900;font-style:italic;text-transfor
 h1 .a{display:block;font-size:${t.h1.length > 11 ? 112 : 126}px;color:#fff;text-shadow:0 6px 30px rgba(0,0,0,.45)}
 h1 .b{display:block;font-size:${t.h2.length > 13 ? 104 : 126}px;background:linear-gradient(180deg,#fff3c2 0%,${p.accent} 55%,#e39a12 100%);-webkit-background-clip:text;color:transparent;filter:drop-shadow(0 8px 24px rgba(0,0,0,.45))}
 .sub{margin:26px auto 0;max-width:860px;font-size:37px;font-weight:500;line-height:1.3;color:#cdd7f4}
-.phone{position:absolute;left:50%;top:640px;width:600px;height:1231px;margin-left:-300px;border-radius:72px;padding:16px;
+.phone{position:absolute;left:50%;top:${F.top}px;width:${F.pw}px;height:${Math.round(F.pw * 2400 / 1170)}px;margin-left:-${F.pw / 2}px;border-radius:72px;padding:16px;
   background:linear-gradient(145deg,#2a3555,#0b1020 40%,#1d2742);box-shadow:0 0 0 3px rgba(255,255,255,.08),0 50px 120px rgba(0,0,0,.65),0 0 140px ${p.glow};
   transform:rotate(${p.tilt}deg)}
 .phone .scr{width:100%;height:100%;border-radius:58px;overflow:hidden;background:#000;position:relative}
@@ -94,18 +94,32 @@ ${chips}
 
 (async () => {
   const b = await chromium.launch();
-  const pg = await b.newPage({ viewport: { width: 1080, height: 1920 } });
-  for (const l of ['tr', 'en']) {
-    for (const [i, p] of POSTERS.entries()) {
-      const tmp = path.join(D, '_tmp.html');
-      require('fs').writeFileSync(tmp, html(p, l, 'raw/' + `${l}-${p.id}.png`));
-      await pg.goto('file://' + tmp, { waitUntil: 'load' });
-      await pg.evaluate(() => document.fonts.ready);
-      await pg.waitForTimeout(200);
-      await pg.screenshot({ path: path.join(D, `${l}-${i + 1}-${p.id}.png`) });
+  const fs = require('fs');
+  // Google Play: 1080x1920 · App Store (iPhone 6.7"/6.9"): 1290x2796
+  const FORMATS = [
+    { dir: '', W: 1080, H: 1920, F: { H: 1920, pw: 600, top: 640, shift: 0 } },
+    { dir: 'ios', W: 1290, H: 2796, F: { H: 2341, pw: 720, top: 700, shift: 230 } },
+  ];
+  for (const fm of FORMATS) {
+    const pg = await b.newPage({ viewport: { width: 1080, height: fm.F.H }, deviceScaleFactor: fm.W / 1080 });
+    const outDir = path.join(D, fm.dir);
+    fs.mkdirSync(outDir, { recursive: true });
+    for (const l of ['tr', 'en']) {
+      for (const [i, p] of POSTERS.entries()) {
+        const tmp = path.join(D, '_tmp.html');
+        fs.writeFileSync(tmp, html(p, l, 'raw/' + `${l}-${p.id}.png`, fm.F));
+        await pg.goto('file://' + tmp, { waitUntil: 'load' });
+        await pg.evaluate(() => document.fonts.ready);
+        await pg.waitForTimeout(200);
+        const out = path.join(outDir, `${l}-${i + 1}-${p.id}.png`);
+        await pg.screenshot({ path: out, clip: { x: 0, y: 0, width: 1080, height: fm.H / (fm.W / 1080) } });
+        // Tam ölçü ve şeffaflıksız (App Store bunu ister); ImageMagick varsa
+        try { require('child_process').execSync(`convert "${out}" -resize ${fm.W}x${fm.H}! -background "#0a1530" -alpha remove -alpha off "${out}"`); } catch (e) { /* convert yok */ }
+      }
     }
+    await pg.close();
   }
-  require('fs').unlinkSync(path.join(D, '_tmp.html'));
+  fs.unlinkSync(path.join(D, '_tmp.html'));
   await b.close();
   console.log('ok');
 })();

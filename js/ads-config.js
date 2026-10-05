@@ -10,4 +10,10 @@ const AD_CONFIG = {
   interstitialEvery: 3,    // Kaç maçta bir geçiş reklamı (0 = hiç)
   interstitialGapSec: 180, // İki geçiş reklamı arasında en az kaç saniye
   energyReward: 25,        // "Reklam izle, enerji kazan" ödülü (haftada bir)
+  // iPhone (App Store) için ayrı AdMob birimleri. Boşken iOS'ta test reklamları gösterilir.
+  ios: {
+    rewarded: '',
+    rewardedFormat: 'rewardedInterstitial',
+    interstitial: '',
+  },
 };
