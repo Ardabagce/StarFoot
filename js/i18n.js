@@ -4,41 +4,60 @@ const I18N = {
   lang: 'tr',
   memo: new Map(),
   outs: new Set(),
+  rev: new Map(),
   init() {
     let l = null;
     try { l = localStorage.getItem('starfoot_lang'); } catch (e) { /* yok */ }
     if (!l) l = /^tr\b/i.test(navigator.language || '') ? 'tr' : 'en';
     I18N.lang = l === 'en' && typeof LANG_EN !== 'undefined' ? 'en' : 'tr';
     document.documentElement.lang = I18N.lang;
-    if (I18N.lang !== 'en') return;
-    I18N.exact = new Map(Object.entries(LANG_EN.exact));
-    I18N.pats = LANG_EN.pats.map(([k, v]) => {
-      const lits = k.split('{}');
-      // "{}-{}" skor kalıbı: iki tarafı da sayı
-      const re = new RegExp('^' + lits.map((s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('(.+?)').replace(/\(\.\+\?\)-\(\.\+\?\)/g, '(\\d+)-(\\d+)') + '$', 's');
-      const hint = lits.reduce((a, b) => (b.length > a.length ? b : a), '');
-      return { re, v, hint };
-    });
-    // Birleştirmeyle oluşan cümle parçaları ("…'na katılma hakkı kazandık!" gibi)
-    I18N.tails = []; I18N.heads = [];
-    I18N.exact.forEach((v, k) => {
-      if (k.length < 4) return;
-      if (/^[a-zçğışöü'’,.:;!?)\-]/.test(k)) I18N.tails.push(k);
-      if (/[:(\-–—]$/.test(k)) I18N.heads.push(k);
-    });
-    I18N.tails.sort((a, b) => b.length - a.length);
-    I18N.heads.sort((a, b) => b.length - a.length);
-    I18N.patchCanvas();
-    document.title = 'StarFoot';
-    const go = () => {
-      I18N.apply(document.body);
-      new MutationObserver(I18N.onMut).observe(document.body, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ['title', 'aria-label', 'placeholder'] });
-    };
-    if (document.body) go(); else document.addEventListener('DOMContentLoaded', go);
+    if (I18N.lang === 'en') I18N.enable();
   },
+  // Sözlüğü, canvas yamasını ve gözlemciyi bir kez kurar; sonra sayfadaki metni çevirir
+  enable() {
+    if (!I18N.ready) {
+      I18N.ready = true;
+      I18N.exact = new Map(Object.entries(LANG_EN.exact));
+      I18N.pats = LANG_EN.pats.map(([k, v]) => {
+        const lits = k.split('{}');
+        // "{}-{}" skor kalıbı: iki tarafı da sayı
+        const re = new RegExp('^' + lits.map((s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('(.+?)').replace(/\(\.\+\?\)-\(\.\+\?\)/g, '(\\d+)-(\\d+)') + '$', 's');
+        const hint = lits.reduce((a, b) => (b.length > a.length ? b : a), '');
+        return { re, v, hint };
+      });
+      // Birleştirmeyle oluşan cümle parçaları ("…'na katılma hakkı kazandık!" gibi)
+      I18N.tails = []; I18N.heads = [];
+      I18N.exact.forEach((v, k) => {
+        if (k.length < 4) return;
+        if (/^[a-zçğışöü'’,.:;!?)\-]/.test(k)) I18N.tails.push(k);
+        if (/[:(\-–—]$/.test(k)) I18N.heads.push(k);
+      });
+      I18N.tails.sort((a, b) => b.length - a.length);
+      I18N.heads.sort((a, b) => b.length - a.length);
+      I18N.patchCanvas();
+      const watch = () => new MutationObserver(I18N.onMut).observe(document.body, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ['title', 'aria-label', 'placeholder'] });
+      if (document.body) watch(); else document.addEventListener('DOMContentLoaded', watch);
+    }
+    document.title = 'StarFoot';
+    if (document.body) I18N.apply(document.body); else document.addEventListener('DOMContentLoaded', () => I18N.apply(document.body));
+  },
+  // Sayfayı yenilemeden dil değiştirir (iOS uygulamasında yenileme sorun çıkarıyordu)
   set(l) {
     try { localStorage.setItem('starfoot_lang', l); } catch (e) { /* yok */ }
-    location.reload();
+    if (l === I18N.lang) return;
+    if (l === 'en' && typeof LANG_EN !== 'undefined') { I18N.lang = 'en'; I18N.enable(); } else { I18N.lang = 'tr'; I18N.restore(document.body); }
+    document.documentElement.lang = I18N.lang;
+    if (typeof I18N.onChange === 'function') I18N.onChange(I18N.lang);
+  },
+  // İngilizceye çevrilmiş metinleri Türkçe asıllarına döndürür
+  restore(root) {
+    if (!root) return;
+    const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT | NodeFilter.SHOW_ELEMENT);
+    let n;
+    while ((n = w.nextNode())) {
+      if (n.nodeType === 3) { const o = I18N.rev.get(n.nodeValue); if (o !== undefined) n.nodeValue = o; }
+      else for (const a of ['title', 'aria-label', 'placeholder']) { const v = n.getAttribute(a); if (v && I18N.rev.has(v)) n.setAttribute(a, I18N.rev.get(v)); }
+    }
   },
   // Tek bir metni çevirir (önce birebir, sonra kalıp, sonra parçalara bölerek)
   t(s) {
@@ -54,6 +73,7 @@ const I18N = {
     if (I18N.memo.size > 20000) { I18N.memo.clear(); I18N.outs.clear(); }
     I18N.memo.set(s, out);
     I18N.outs.add(out);
+    if (out !== s) { if (I18N.rev.size > 30000) I18N.rev.clear(); I18N.rev.set(out, s); }
     return out;
   },
   tr(s, d) {
@@ -170,6 +190,7 @@ const I18N = {
     }
   },
   onMut(list) {
+    if (I18N.lang !== 'en') return;
     for (const m of list) {
       if (m.type === 'characterData') I18N.node(m.target);
       else if (m.type === 'attributes') I18N.attrs(m.target);

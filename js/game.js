@@ -107,6 +107,7 @@ const Game = {
     s.news = s.news.slice(0, 40);
   },
   toast(msg, type = '') {
+    Notifs.push(msg, type);
     const box = document.getElementById('toasts');
     const d = U.el(`<div class="toast ${type}">${U.plain(msg)}</div>`);
     box.appendChild(d);
@@ -412,6 +413,8 @@ const Game = {
     Player.addMorale(p, -6);
     Game.news(`🤕 ${where} sakatlandın. ${weeks} hafta sahalardan uzak kalacaksın.`, 'bad');
     Game.toast(`🤕 Sakatlandın! (${weeks} hafta)`, 'bad');
+    // İpucu: mağazadaki fizyoterapi seansı sakatlığı kısaltır
+    setTimeout(() => Game.toast('Yaşam › Mağaza\'dan Fizyoterapi Seansı alırsan sakatlığın 2 hafta kısalır.', 'info'), 900);
   },
 
   // ---------- Maç ----------
@@ -1026,7 +1029,7 @@ const Game = {
         </div>
         <h3>Kupalar ve Ödüller</h3>
         <ul class="trophies">${p.trophies.map((x) => `<li>${U.esc(x)}</li>`).join('') || '<li>Ödül yok</li>'}</ul>
-        <button class="btn btn-big" onclick="location.reload()">Ana Menü</button>
+        <button class="btn btn-big" onclick="Game.toMenu()">Ana Menü</button>
       </div>`;
     UI.strip(el);
     Game.show('end');
@@ -1035,6 +1038,7 @@ const Game = {
   // ---------- Arayüz ----------
   render() {
     const s = Game.state, p = s.player;
+    Notifs.badge();
     document.getElementById('hdr-info').innerHTML = `
       <span class="hi-club">${UI.shirt(Game.club())}${U.esc(Game.teamName())}</span>
       <span class="hi-week">${s.season.year} · ${I18N.lang === 'en' ? 'WEEK ' : ''}<b>${Math.min(s.season.round + 1, Game.rounds())}</b>/${Game.rounds()}${I18N.lang === 'en' ? '' : '. HAFTA'}</span>
@@ -1192,6 +1196,17 @@ const UI = {
     while (w.nextNode()) nodes.push(w.currentNode);
     const emo = /[\p{Extended_Pictographic}\u{1F1E6}-\u{1F1FF}]/u;
     nodes.forEach((n) => { if (emo.test(n.nodeValue)) n.nodeValue = U.plain(n.nodeValue); });
+  },
+
+  // Sakatken: fizyoterapi önerisi ve tek dokunuşla satın alma
+  physioTip() {
+    const p = Game.p;
+    if (!p.injuryWeeks || typeof CONSUMABLES === 'undefined') return '';
+    const c = CONSUMABLES.find((x) => x.id === 'physio');
+    if (!c || !Shop.available(c)) return '';
+    const used = Shop.usedThisSeason(c), price = Shop.price(c);
+    return `<div class="physio-tip">${Icon('injury')}<span><b>Sakatsın · ${p.injuryWeeks} hafta</b><small>Fizyoterapi Seansı sakatlığı 2 hafta kısaltır.</small></span>
+      ${used ? '<em>Bu sezon kullandın</em>' : `<button class="btn btn-buy" data-physio ${p.money < price ? 'disabled' : ''}>${U.money(price)}</button>`}</div>`;
   },
 
   // Haftada bir: reklam izle, enerji kazan
@@ -1375,6 +1390,7 @@ const UI = {
           ${nTheme ? `<div class="ct-badge">${nTheme.fx === 'stars' ? '<i class="ct-star"></i>' : ''}${U.esc(nTheme.l)}</div>` : ''}
           ${next}
           ${p.energy < 40 ? `<div class="warn">${Icon('bolt')} Enerjin düşük. Performansın düşer, sakatlık riski artar.</div>` : ''}
+          ${UI.physioTip()}
           <button class="btn btn-play" data-go="match">${Icon('play')} ${Game.inStreet() && s.street.trials ? 'Seçmelere Katıl' : 'Maça Çık'}</button>
           ${s.ap > 0 ? `<div class="hint">Bu hafta ${s.ap} aksiyon hakkın daha var.</div>` : ''}
         </section>
@@ -1914,6 +1930,7 @@ ${UI.paper()}`;
     U.$$('[data-vnav]', root).forEach((b) => (b.onclick = () => { const [k, v] = b.dataset.vnav.split(':'); UI[k] = v; Game.render(); }));
     U.$$('[data-king]', root).forEach((b) => (b.onclick = () => { UI.kingTab = b.dataset.king; Game.render(); }));
     U.$$('[data-cupsel]', root).forEach((b) => (b.onclick = () => { UI.cupSel = b.dataset.cupsel; Game.render(); }));
+    U.$$('[data-physio]', root).forEach((b) => (b.onclick = () => { Shop.use('physio'); Game.render(); }));
     U.$$('[data-adenergy]', root).forEach((b) => (b.onclick = () => {
       b.disabled = true;
       Ads.show().then((ok) => {
@@ -1932,9 +1949,9 @@ ${UI.paper()}`;
     U.$$('[data-sys]', root).forEach((b) => (b.onclick = () => {
       const k = b.dataset.sys;
       if (k === 'save') { Game.save(); Game.toast('💾 Kaydedildi', 'good'); }
-      if (k === 'menu') { Game.save(); location.reload(); }
+      if (k === 'menu') Game.toMenu();
       if (k === 'retire') Game.modal('<h3>Emekli olmak istediğine emin misin?</h3><p>Kariyerin sona erecek.</p>', [{ t: 'Vazgeç', cls: 'btn-ghost' }, { t: 'Emekli Ol', fn: () => Game.retire() }]);
-      if (k === 'delete') Game.modal('<h3>Kariyer silinsin mi?</h3><p>Bu işlem geri alınamaz.</p>', [{ t: 'Vazgeç', cls: 'btn-ghost' }, { t: 'Sil', cls: 'btn-danger', fn: () => { Game.wipe(); location.reload(); } }]);
+      if (k === 'delete') Game.modal('<h3>Kariyer silinsin mi?</h3><p>Bu işlem geri alınamaz.</p>', [{ t: 'Vazgeç', cls: 'btn-ghost' }, { t: 'Sil', cls: 'btn-danger', fn: () => { Game.wipe(); Game.state = null; Game.toMenu(); } }]);
     }));
   },
 };
@@ -2142,72 +2159,119 @@ const Create = {
   points: 20,
   pos: 'FW',
   diff: 'normal',
+  foot: 'R',
+  POS_INFO: {
+    FW: { ic: 'ball', num: 9, d: 'Gol atar, şutlarla maçın kaderini belirler.' },
+    MF: { ic: 'team', num: 8, d: 'Oyunu kurar, pas ve asistlerle parlar.' },
+    DF: { ic: 'shield', num: 4, d: 'Savunmanın lideri; top kapar, kafa toplarında söz sahibi.' },
+  },
   open() {
     Create.alloc = {};
     STATS.forEach((s) => (Create.alloc[s.k] = 0));
     Game.show('create');
+    window.scrollTo(0, 0);
     const el = document.getElementById('create');
+    const natOpts = NATIONS.map((n) => `<option value="${n.code}">${n.name}</option>`).join('');
     el.innerHTML = `
-      <div class="cr-card card">
-        <h1>Yeni Kariyer</h1>
-        <p class="muted">Futbolcu olma hayalinin peşindesin. Hangi yılda ve kaç yaşında başlayacağını seç. Kulübünü sen seçmezsin: scoutlar seni keşfeder.</p>
-        <div class="cr-grid">
-          <label>Adın<input id="cr-name" maxlength="16" placeholder="Örn: Emre"></label>
-          <label>Soyadın<input id="cr-sur" maxlength="18" placeholder="Örn: Yıldız"></label>
-          <label>Baba memleketi<select id="cr-nat">${NATIONS.map((n) => `<option value="${n.code}">${n.name}</option>`).join('')}</select></label>
-          <label>Anne memleketi<select id="cr-mom">${NATIONS.map((n) => `<option value="${n.code}">${n.name}</option>`).join('')}</select>
-            <small class="muted">Farklıysa iki milli takımdan da davet alabilirsin</small></label>
-          <label>Ayak<select id="cr-foot"><option value="R">Sağ</option><option value="L">Sol</option></select></label>
-          <label>Başlangıç yılı<select id="cr-year">${Array.from({ length: 2026 - 1980 + 1 }, (_, i) => 2026 - i).map((y) => `<option value="${y}">${y}</option>`).join('')}</select>
-            <small class="muted">O dönemin yıldızlarıyla oynarsın</small></label>
-          <label>Başlangıç yaşı<select id="cr-age">${Array.from({ length: 11 }, (_, i) => 8 + i).map((a) => `<option value="${a}">${a} yaş</option>`).join('')}</select>
-            <small class="muted" id="cr-age-note"></small></label>
-        </div>
-        <div class="lbl">Zorluk</div>
-        <div class="seg big" id="cr-diff">
-          ${Object.entries(DIFFS).map(([k, v]) => `<button data-diff="${k}" class="${k === Create.diff ? 'on' : ''}"><b>${v.l}</b></button>`).join('')}
-        </div>
-        <small class="muted cr-diff-note" id="cr-diff-note">${DIFFS[Create.diff].d}</small>
-        <div class="lbl">Mevki</div>
-        <div class="seg big" id="cr-pos">
-          ${Object.entries(POSITIONS).map(([k, v]) => `<button data-pos="${k}" class="${k === Create.pos ? 'on' : ''}">${v.l}</button>`).join('')}
-        </div>
-        <div class="lbl">Yetenek puanlarını dağıt <b id="cr-pts"></b></div>
-        <div class="cr-stats" id="cr-stats"></div>
-        <div class="row-btns">
-          <button class="btn btn-ghost" id="cr-back">Geri</button>
-          <button class="btn btn-big" id="cr-go">Kariyere Başla</button>
+      <div class="cr-wrap">
+        <header class="cr-hero">
+          <div class="cr-hero-bg" aria-hidden="true"><i></i><i></i></div>
+          <div class="cr-hero-t">
+            <span class="cr-kicker">Kariyer modu</span>
+            <h1>Yeni <span>Kariyer</span></h1>
+            <p>Mahalle maçından Dünya Kupası finaline. Hikâyeni yaz, scoutların gözüne gir, efsane ol.</p>
+          </div>
+        </header>
+        <div class="cr-layout">
+          <aside class="cr-pv">
+            <div class="cr-card-fx">
+              <div class="pv-top"><b class="pv-ovr" id="pv-ovr">--</b><span class="pv-pos" id="pv-pos"></span><span class="pv-flag" id="pv-flag"></span></div>
+              <canvas id="pv-art" width="300" height="300" aria-hidden="true"></canvas>
+              <div class="pv-name" id="pv-name">EMRE YILDIZ</div>
+              <div class="pv-meta" id="pv-meta"></div>
+            </div>
+          </aside>
+          <div class="cr-steps">
+            <section class="cr-step">
+              <div class="cr-step-h"><i>1</i><div><b>Kimliğin</b><small>Formanın arkasında yazacak isim</small></div></div>
+              <div class="cr-row2">
+                <label class="cr-f"><span>Adın</span><input id="cr-name" maxlength="16" placeholder="Örn: Emre" autocomplete="off"></label>
+                <label class="cr-f"><span>Soyadın</span><input id="cr-sur" maxlength="18" placeholder="Örn: Yıldız" autocomplete="off"></label>
+              </div>
+            </section>
+            <section class="cr-step">
+              <div class="cr-step-h"><i>2</i><div><b>Kökenin</b><small>Farklıysa iki milli takımdan da davet alabilirsin</small></div></div>
+              <div class="cr-row2">
+                <label class="cr-f"><span>Baba memleketi</span><select id="cr-nat">${natOpts}</select></label>
+                <label class="cr-f"><span>Anne memleketi</span><select id="cr-mom">${natOpts}</select></label>
+              </div>
+            </section>
+            <section class="cr-step">
+              <div class="cr-step-h"><i>3</i><div><b>Başlangıç</b><small id="cr-era">O dönemin yıldızlarıyla oynarsın</small></div></div>
+              <div class="cr-row2">
+                <label class="cr-f"><span>Başlangıç yılı</span><select id="cr-year">${Array.from({ length: 2026 - 1980 + 1 }, (_, i) => 2026 - i).map((y) => `<option value="${y}">${y}</option>`).join('')}</select></label>
+                <label class="cr-f"><span>Başlangıç yaşı</span><select id="cr-age">${Array.from({ length: 11 }, (_, i) => 8 + i).map((a) => `<option value="${a}">${a} yaş</option>`).join('')}</select></label>
+              </div>
+              <p class="cr-note" id="cr-age-note"></p>
+              <div class="cr-f"><span>Kullandığın ayak</span>
+                <div class="cr-toggle" id="cr-foot">${[['L', 'Sol'], ['R', 'Sağ']].map(([k, l]) => `<button type="button" data-foot="${k}" class="${k === Create.foot ? 'on' : ''}">${l}</button>`).join('')}</div>
+              </div>
+            </section>
+            <section class="cr-step">
+              <div class="cr-step-h"><i>4</i><div><b>Mevkin</b><small>Antrenmanda öne çıkan yetenekleri belirler</small></div></div>
+              <div class="cr-cards" id="cr-pos">
+                ${Object.entries(POSITIONS).map(([k, v]) => `<button type="button" data-pos="${k}" class="cr-opt ${k === Create.pos ? 'on' : ''}">${Icon(Create.POS_INFO[k].ic)}<b>${v.l}</b><small>${Create.POS_INFO[k].d}</small></button>`).join('')}
+              </div>
+            </section>
+            <section class="cr-step">
+              <div class="cr-step-h"><i>5</i><div><b>Zorluk</b><small>İstediğin zaman Kariyer sekmesinden değiştirebilirsin</small></div></div>
+              <div class="cr-cards" id="cr-diff">
+                ${Object.entries(DIFFS).map(([k, v]) => `<button type="button" data-diff="${k}" class="cr-opt d-${k} ${k === Create.diff ? 'on' : ''}"><b>${v.l}</b><small>${v.d}</small></button>`).join('')}
+              </div>
+            </section>
+            <section class="cr-step">
+              <div class="cr-step-h"><i>6</i><div><b>Yeteneklerin</b><small id="cr-pts-note"></small></div><span class="cr-pts" id="cr-pts"></span></div>
+              <div class="cr-stats" id="cr-stats"></div>
+            </section>
+            <div class="cr-cta">
+              <button class="btn btn-ghost" id="cr-back">Geri</button>
+              <button class="btn btn-big" id="cr-go">${Icon('play')} Kariyere Başla</button>
+            </div>
+          </div>
         </div>
       </div>`;
-    U.$$('#cr-diff button').forEach((b) => (b.onclick = () => {
-      Create.diff = b.dataset.diff;
-      U.$$('#cr-diff button').forEach((x) => x.classList.toggle('on', x === b));
-      document.getElementById('cr-diff-note').textContent = DIFFS[Create.diff].d;
+    const pick = (sel, attr, fn) => U.$$(`${sel} [data-${attr}]`).forEach((b) => (b.onclick = () => {
+      U.$$(`${sel} [data-${attr}]`).forEach((x) => x.classList.toggle('on', x === b));
+      fn(b.dataset[attr]);
     }));
-    U.$$('#cr-pos button').forEach((b) => (b.onclick = () => {
-      Create.pos = b.dataset.pos;
-      U.$$('#cr-pos button').forEach((x) => x.classList.toggle('on', x === b));
-      Create.drawStats();
-    }));
+    pick('#cr-diff', 'diff', (v) => { Create.diff = v; });
+    pick('#cr-pos', 'pos', (v) => { Create.pos = v; Create.drawStats(); });
+    pick('#cr-foot', 'foot', (v) => { Create.foot = v; Create.preview(); });
     document.getElementById('cr-back').onclick = () => Game.init();
-    const ageSel = document.getElementById('cr-age');
+    ['cr-name', 'cr-sur'].forEach((id) => (document.getElementById(id).oninput = () => Create.preview()));
+    ['cr-nat', 'cr-mom'].forEach((id) => (document.getElementById(id).onchange = () => Create.preview()));
+    const ageSel = document.getElementById('cr-age'), yearSel = document.getElementById('cr-year');
     const updAge = () => {
       const a = +ageSel.value;
       document.getElementById('cr-age-note').textContent = a <= 12 ? 'İlk maçın bir mahalle maçı; scout seni izleyecek' : `Altyapı seçmelerine katılırsın (${ageGroupName(a)}); kulübünü scoutlar belirler`;
       Create.drawStats();
     };
-    ageSel.onchange = updAge;
-    updAge();
+    const updYear = () => {
+      const y = +yearSel.value;
+      document.getElementById('cr-era').textContent = y < 1990 ? '80\'ler: efsanelerin dönemi' : y < 2000 ? '90\'lar: Avrupa\'nın altın yılları' : y < 2010 ? '2000\'ler: yıldızlar çağı' : y < 2020 ? '2010\'lar: modern futbol' : 'Bugünün yıldızlarıyla oynarsın';
+      Create.preview();
+    };
+    ageSel.onchange = updAge; yearSel.onchange = updYear;
+    updAge(); updYear();
     document.getElementById('cr-go').onclick = () => {
       const name = document.getElementById('cr-name').value.trim() || 'Emre';
       const surname = document.getElementById('cr-sur').value.trim() || 'Yıldız';
       Game.newCareer({
-        name, surname, nation: document.getElementById('cr-nat').value, mother: (document.getElementById('cr-mom') || {}).value, foot: document.getElementById('cr-foot').value,
+        name, surname, nation: document.getElementById('cr-nat').value, mother: document.getElementById('cr-mom').value, foot: Create.foot,
         position: Create.pos, alloc: Create.alloc, difficulty: Create.diff,
-        year: +document.getElementById('cr-year').value, age: +document.getElementById('cr-age').value,
+        year: +yearSel.value, age: +ageSel.value,
       });
     };
-    Create.drawStats();
   },
   // Oyuncunun başlayacağı yaşa göre taban stat (Player.create ile aynı)
   base() {
@@ -2216,16 +2280,48 @@ const Create = {
     return Math.max(12, Math.round(expectedAtAge(age) - 6));
   },
   left() { return Create.points - Object.values(Create.alloc).reduce((a, b) => a + b, 0); },
+  ovr() {
+    const w = POSITIONS[Create.pos].w, b = Create.base();
+    let t = 0, sw = 0;
+    Object.entries(w).forEach(([k, x]) => { t += (b + Create.alloc[k]) * x; sw += x; });
+    return Math.round(t / sw);
+  },
+  // Canlı oyuncu kartı
+  preview() {
+    const g = (id) => document.getElementById(id);
+    if (!g('pv-art')) return;
+    const name = (g('cr-name').value.trim() || (I18N.lang === 'en' ? 'Alex' : 'Emre'));
+    const sur = (g('cr-sur').value.trim() || (I18N.lang === 'en' ? 'Stone' : 'Yıldız'));
+    const nat = g('cr-nat').value, mom = g('cr-mom').value;
+    const natName = (c) => (NATIONS.find((n) => n.code === c) || {}).name || c;
+    g('pv-name').textContent = `${name} ${sur}`.toLocaleUpperCase(I18N.lang === 'en' ? 'en' : 'tr');
+    g('pv-ovr').textContent = Create.ovr();
+    g('pv-pos').textContent = POSITIONS[Create.pos].short;
+    g('pv-flag').textContent = nat === mom ? natName(nat) : `${natName(nat)} / ${natName(mom)}`;
+    g('pv-meta').innerHTML = `<span>${g('cr-age').value} yaş</span><span>${Create.foot === 'L' ? 'Sol ayak' : 'Sağ ayak'}</span><span>${g('cr-year').value}</span>`;
+    const cv = g('pv-art'), c = cv.getContext('2d');
+    c.clearRect(0, 0, cv.width, cv.height);
+    const cols = (typeof NAT_COLORS !== 'undefined' && NAT_COLORS[nat]) || ['#c8102e', '#ffffff'];
+    const kit = Sprites.kits({ id: 'NAT' + nat, c1: cols[0], c2: cols[1] }, { id: 'X', c1: '#111', c2: '#fff' }).own;
+    let seed = 0; for (const ch of name + sur) seed = (seed * 31 + ch.charCodeAt(0)) % 9973;
+    Sprites.figure(c, 150, 286, 250, { kit, look: Sprites.look(seed + 1), facing: 'down', number: Create.POS_INFO[Create.pos].num, t: 0, noShadow: false });
+  },
   drawStats() {
-    const w = POSITIONS[Create.pos].w;
-    document.getElementById('cr-pts').textContent = `(${Create.left()} puan kaldı · ${document.getElementById('cr-age').value} yaşındaki bir çocuğun ortalaması ${Create.base()})`;
-    document.getElementById('cr-stats').innerHTML = STATS.map((s) => `
-      <div class="cs ${w[s.k] >= 0.12 ? 'key' : ''}">
-        <span title="${U.esc(s.d)}">${s.l}${w[s.k] >= 0.12 ? ' ★' : ''}</span>
-        <button data-d="-1" data-k="${s.k}">−</button>
-        <b>${Create.base() + Create.alloc[s.k]}</b>
-        <button data-d="1" data-k="${s.k}">+</button>
-      </div>`).join('');
+    const w = POSITIONS[Create.pos].w, base = Create.base();
+    const left = Create.left();
+    document.getElementById('cr-pts').innerHTML = `<b>${left}</b><small>puan</small>`;
+    document.getElementById('cr-pts').classList.toggle('done', left === 0);
+    document.getElementById('cr-pts-note').textContent = `${document.getElementById('cr-age').value} yaşındaki bir çocuğun ortalaması ${base} · ★ mevkin için önemli`;
+    document.getElementById('cr-stats').innerHTML = STATS.map((s) => {
+      const v = base + Create.alloc[s.k], key = w[s.k] >= 0.12;
+      return `<div class="cs ${key ? 'key' : ''}">
+        <span class="cs-l" title="${U.esc(s.d)}">${s.l}${key ? ' <i>★</i>' : ''}</span>
+        <div class="cs-bar"><i style="width:${Math.min(100, v)}%"></i><em style="width:${Create.alloc[s.k] * 1}%;left:${base}%"></em></div>
+        <button type="button" data-d="-1" data-k="${s.k}" ${Create.alloc[s.k] <= 0 ? 'disabled' : ''}>−</button>
+        <b>${v}</b>
+        <button type="button" data-d="1" data-k="${s.k}" ${Create.alloc[s.k] >= 8 || left <= 0 ? 'disabled' : ''}>+</button>
+      </div>`;
+    }).join('');
     U.$$('#cr-stats button').forEach((b) => (b.onclick = () => {
       const k = b.dataset.k, d = +b.dataset.d;
       const v = Create.alloc[k] + d;
@@ -2233,11 +2329,59 @@ const Create = {
       Create.alloc[k] = v;
       Create.drawStats();
     }));
+    Create.preview();
   },
+};
+
+// Ana menüye dönüş: sayfayı yenilemeden (iOS uygulamasında yenileme siyah ekran bırakıyordu)
+Game.toMenu = function () {
+  if (Game.state) Game.save();
+  ['match', 'modal'].forEach((id) => { const e = document.getElementById(id); if (e) e.classList.add('hidden'); });
+  Game.init();
+  window.scrollTo(0, 0);
+  window.dispatchEvent(new Event('resize'));
+};
+// ---------- Bildirim merkezi: kısa süreli bildirimlerin geçmişi ----------
+const Notifs = {
+  push(msg, type) {
+    const s = Game.state;
+    if (!s) return;
+    s.notifs = s.notifs || [];
+    s.notifs.unshift({ t: U.plain(String(msg)), type: type || '', w: `${s.season.year} · ${Math.min(s.season.round + 1, Game.rounds())}. Hafta` });
+    s.notifs = s.notifs.slice(0, 60);
+    s.notifUnread = Math.min(99, (s.notifUnread || 0) + 1);
+    Notifs.badge();
+  },
+  badge() {
+    const n = document.getElementById('notif-n');
+    if (!n) return;
+    const c = (Game.state && Game.state.notifUnread) || 0;
+    n.textContent = c > 9 ? '9+' : c;
+    n.classList.toggle('hidden', !c);
+  },
+  open() {
+    const s = Game.state;
+    if (!s) return;
+    const list = s.notifs || [];
+    s.notifUnread = 0; Notifs.badge(); Game.save();
+    Game.modal(`<div class="nf-head"><h3>Bildirimler</h3><small class="muted">Son ${list.length} bildirim</small></div>
+      <div class="nf-list">${list.length ? list.map((x) => `<div class="nf-item ${x.type}"><i></i><span>${U.esc(x.t)}</span><small>${U.esc(x.w)}</small></div>`).join('') : '<p class="muted">Henüz bildirim yok.</p>'}</div>`,
+    [...(list.length ? [{ t: 'Temizle', cls: 'btn-ghost', fn: () => { s.notifs = []; Game.save(); } }] : []), { t: 'Kapat' }]);
+  },
+};
+
+// Dil değişince açık ekranı yeniden çiz
+I18N.onChange = () => {
+  const vis = (id) => !document.getElementById(id).classList.contains('hidden');
+  if (Game.state && vis('hub')) Game.render();
+  else if (vis('create')) Create.open();
+  else if (!Game.state) Game.init();
+  window.dispatchEvent(new Event('resize'));
 };
 
 window.addEventListener('DOMContentLoaded', () => {
   U.$$('#tabs button').forEach((b) => (b.onclick = () => { Game.tab = b.dataset.tab; Game.render(); window.scrollTo(0, 0); }));
   document.getElementById('logo').onclick = () => { if (Game.state) { Game.tab = 'home'; Game.render(); } };
+  document.getElementById('notif-btn').onclick = () => Notifs.open();
   Game.init();
 });
