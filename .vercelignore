@@ -3,3 +3,6 @@ store/make.js
 store/*.svg
 app/
 .github/
+store/premium/raw/
+store/premium/fonts/
+store/premium/*.js
