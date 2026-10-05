@@ -1041,7 +1041,7 @@ const Game = {
     Notifs.badge();
     document.getElementById('hdr-info').innerHTML = `
       <span class="hi-club">${UI.shirt(Game.club())}${U.esc(Game.teamName())}</span>
-      <span class="hi-week">${s.season.year} · ${I18N.lang === 'en' ? 'WEEK ' : ''}<b>${Math.min(s.season.round + 1, Game.rounds())}</b>/${Game.rounds()}${I18N.lang === 'en' ? '' : '. HAFTA'}</span>
+      <span class="hi-week"><em>${s.season.year}</em><em>HAFTA</em><b>${Math.min(s.season.round + 1, Game.rounds())}<small>/${Game.rounds()}</small></b></span>
       <span class="hi-money"><i class="hm-coin">${Icon('coin')}</i><span class="hm-t"><small>Bakiye</small><b>${U.money(p.money)}</b></span>${Game.weeklyIncome() > 0 ? `<em class="hm-inc">+${U.money(Game.weeklyIncome())}<small>/hf</small></em>` : ''}</span>`;
     // eski sekme adları yeni yapıya taşınır
     const alias = { player: 'profile', career: 'profile', world: 'league', shop: 'life' };
