@@ -1726,3 +1726,7 @@ button, .btn, a, [data-act], [data-tab] { touch-action: manipulation; -webkit-ta
 .plan .ac-tile em { grid-area: cost; justify-self: start; align-self: start; margin: 0; border-radius: 6px; padding: 2px 7px; }
 .plan .ac-tile:not(:has(em)) { grid-template-areas: 'ic t' 'ic t'; }
 .plan .ac-tile:not(:has(em)) .ac-t { align-self: center; }
+/* Fikstür: rakibi henüz belli olmayan kupa turları */
+.mc.cupfx.tbd { opacity: .62; border-style: dashed; }
+.mc.cupfx.tbd .mc-cup { color: var(--muted); }
+.tbd-shirt { display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; border: 1px dashed var(--muted); color: var(--muted); font-size: 12px; font-weight: 800; }

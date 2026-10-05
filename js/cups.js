@@ -37,10 +37,11 @@ const Cups = {
     // Şampiyonlar ve Federasyon: 32 takımlı lig aşaması (8 maç) → play-off → son 16 (güncel format)
     { id: 'ucl', name: 'Avrupa Şampiyonlar Kupası', fame: 2.2, region: 'eu', swiss: true, quota: { ENG: 5, ESP: 5, ITA: 4, GER: 4, FRA: 4, POR: 3, NED: 3, TR1: 2, BEL: 1, SCO: 1 } },
     { id: 'uel', name: 'Avrupa Federasyon Kupası', fame: 1.5, region: 'eu', swiss: true, quota: { ENG: 4, ESP: 4, ITA: 4, GER: 4, FRA: 4, POR: 3, NED: 3, TR1: 3, BEL: 2, SCO: 1 } },
-    { id: 'uecl', name: 'Avrupa Konferans Kupası', fame: 1.1, region: 'eu', quota: { ENG: 2, ESP: 2, ITA: 2, GER: 2, FRA: 2, POR: 2, NED: 2, TR1: 2 } },
-    { id: 'csa', name: 'Güney Amerika Kupası', fame: 1.4, region: 'sa', quota: { BRA: 8, ARG: 8 } },
-    { id: 'ccc', name: 'Kuzey Amerika Kupası', fame: 1.1, region: 'na', quota: { USA: 8, MEX: 8 } },
-    { id: 'acl', name: 'Asya Şampiyonlar Kupası', fame: 1.2, region: 'as', quota: { KSA: 8, JPN: 8 } },
+    { id: 'uecl', name: 'Avrupa Konferans Kupası', fame: 1.1, region: 'eu', swiss: true, quota: { ENG: 3, ESP: 3, ITA: 3, GER: 3, FRA: 3, POR: 3, NED: 4, TR1: 4, BEL: 3, SCO: 3 } },
+    // Diğer kıtalar: 16 takımlı lig aşaması (6 maç) → ilk 8 çeyrek finale
+    { id: 'csa', name: 'Güney Amerika Kupası', fame: 1.4, region: 'sa', swiss: true, quota: { BRA: 8, ARG: 8 } },
+    { id: 'ccc', name: 'Kuzey Amerika Kupası', fame: 1.1, region: 'na', swiss: true, quota: { USA: 8, MEX: 8 } },
+    { id: 'acl', name: 'Asya Şampiyonlar Kupası', fame: 1.2, region: 'as', swiss: true, quota: { KSA: 8, JPN: 8 } },
   ],
   // Kulübün lig sırasına göre gelecek sezon hangi kupaya gideceği
   qualifies(lid, pos) {
@@ -65,8 +66,16 @@ const Cups = {
         const order = (s.lastTables && s.lastTables[lid]) || Object.values(w.clubs).filter((c) => c.league === lid).sort((a, b) => b.rating - a.rating).map((c) => c.id);
         order.filter((id) => w.clubs[id] && w.clubs[id].league === lid && !taken.has(id)).slice(0, q).forEach((id) => { teams.push(id); taken.add(id); });
       });
+      // eksik kalan yerler aynı liglerin en güçlü boştaki kulüpleriyle doldurulur (32 ya da 16 takım)
+      if (d.swiss) {
+        const want = Object.values(d.quota).reduce((a, b) => a + b, 0) >= 32 ? 32 : 16;
+        if (teams.length < want) {
+          Object.values(w.clubs).filter((c) => d.quota[c.league] && !taken.has(c.id)).sort((a, b) => b.rating - a.rating)
+            .slice(0, want - teams.length).forEach((c) => { teams.push(c.id); taken.add(c.id); });
+        }
+        if (teams.length === 32 || teams.length === 16) { s.cups[d.id] = Cups.newSwiss(d, teams); return; }
+      }
       if (teams.length < 2) return;
-      if (d.swiss && teams.length === 32) { s.cups[d.id] = Cups.newSwiss(d, teams); return; }
       const size = 1 << Math.floor(Math.log2(teams.length));
       s.cups[d.id] = { id: d.id, name: d.name, region: d.region, alive: U.shuffle(teams.slice(0, size)), stage: 0, log: [], winner: null };
     });
@@ -101,11 +110,11 @@ const Cups = {
     Game.news(`${Game.club().name} U19 takımı bu sezon Avrupa Gelişim Ligi'nde! Avrupa'nın en iyi altyapılarıyla eşleşeceksin.`, 'good');
   },
 
-  // Lig aşaması: herkes 8 farklı rakiple oynar (çember yöntemi), tek tablo
+  // Lig aşaması: herkes 8 (16 takımlıda 6) farklı rakiple oynar (çember yöntemi), tek tablo
   newSwiss(d, teams) {
     const t = U.shuffle(teams.slice());
-    const n = t.length, fx = [];
-    for (let r = 0; r < 8; r++) {
+    const n = t.length, fx = [], mds = n >= 32 ? 8 : 6;
+    for (let r = 0; r < mds; r++) {
       const round = [];
       for (let i = 0; i < n / 2; i++) {
         const a = i === 0 ? t[0] : t[1 + ((i - 1 + r) % (n - 1))];
@@ -117,8 +126,9 @@ const Cups = {
     const table = {};
     t.forEach((id) => (table[id] = { p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, pts: 0 }));
     return {
-      id: d.id, name: d.name, region: d.region, fmt: 'swiss', phase: 'league', teams: t, table, fx, md: 0, direct: [], out: [],
-      fr: [0.05, 0.11, 0.18, 0.24, 0.29, 0.35, 0.4, 0.46, 0.58, 0.66, 0.79, 0.87, 0.97], alive: [], stage: 0, log: [], winner: null,
+      id: d.id, name: d.name, region: d.region, fmt: 'swiss', phase: 'league', teams: t, table, fx, md: 0, mds, direct: [], out: [],
+      fr: mds === 8 ? [0.05, 0.11, 0.18, 0.24, 0.29, 0.35, 0.4, 0.46, 0.58, 0.66, 0.79, 0.87, 0.97] : [0.05, 0.11, 0.18, 0.24, 0.29, 0.35, 0.58, 0.79, 0.97],
+      alive: [], stage: 0, log: [], winner: null,
     };
   },
 
@@ -155,7 +165,18 @@ const Cups = {
       cup.log.push({ stage: `md${cup.md + 1}`, h, a, hs, as, w: hs > as ? h : as > hs ? a : null });
     });
     cup.md++; cup.stage++;
-    if (cup.md >= 8) {
+    const mds = cup.mds || 8;
+    if (cup.md >= mds && mds < 8) {
+      // 16 takımlı: ilk 8 çeyrek finale (1-8, 2-7 …), kalanlar elenir
+      const tbl = Cups.swissTable(cup).map((r) => r.id);
+      cup.direct = tbl.slice(0, 8); cup.out = tbl.slice(8);
+      cup.alive = [];
+      for (let i = 0; i < 4; i++) cup.alive.push(tbl[i], tbl[7 - i]);
+      cup.phase = 'ko';
+      const me = s.clubId, rk = tbl.indexOf(me) + 1;
+      if (cup.direct.includes(me)) Game.news(`${cup.name} lig aşamasını ${rk}. bitirdik: çeyrek finaldeyiz!`, 'good');
+      else if (rk > 0) Game.news(`${cup.name} lig aşamasında ${rk}. olduk ve elendik.`, 'bad');
+    } else if (cup.md >= mds) {
       const tbl = Cups.swissTable(cup).map((r) => r.id);
       cup.direct = tbl.slice(0, 8);
       const po = tbl.slice(8, 24);
@@ -261,18 +282,30 @@ const Cups = {
       const wk = Cups.weeks(Game.rounds(), cup);
       if (cup.winner || wk[cup.stage] !== r) return;
       const inIt = Cups.inCup(s, cup);
-      if (s.pendingCup && inIt) { Cups.advance(s, cup, null); return; }
       const eligible = cup.youth ? Game.isYouth() : !Game.isYouth();
-      if (eligible && inIt) s.pendingCup = cup.id;
-      else Cups.advance(s, cup, null);
+      if (eligible && inIt) {
+        // aynı haftaya iki kupa maçı düşerse ikincisi sıraya alınır, atlanmaz
+        if (s.pendingCup && s.pendingCup !== cup.id) { s.cupQueue = (s.cupQueue || []).filter((x) => x !== cup.id).concat(cup.id); return; }
+        s.pendingCup = cup.id;
+      } else Cups.advance(s, cup, null);
     });
+  },
+
+  // Sıradaki kupa maçı (aynı haftaya düşen ikinci kupa)
+  nextQueued(s) {
+    while (s.cupQueue && s.cupQueue.length) {
+      const id = s.cupQueue.shift();
+      const c = s.cups && s.cups[id];
+      if (c && !c.winner && Cups.inCup(s, c)) { s.pendingCup = id; return true; }
+    }
+    return false;
   },
 
   // Oyuncunun kupa maçı
   async playMine(s) {
     const cup = s.cups[s.pendingCup];
     const op = Cups.opponent(s, cup);
-    if (!op) { s.pendingCup = null; return Game.advanceWeek(true); }
+    if (!op) { s.pendingCup = null; if (Cups.nextQueued(s)) { Game.save(); return Game.render(); } return Game.advanceWeek(true); }
     const { h, a } = op;
     const stageName = op.stage;
     const leaguePhase = cup.fmt === 'swiss' && cup.phase === 'league';
@@ -307,6 +340,7 @@ const Cups = {
     }
     s.pendingCup = null;
     if (cup.winner === s.clubId && typeof Celebrate !== 'undefined') await Celebrate.champion(`${cup.name} Şampiyonu`, Game.teamName());
+    if (Cups.nextQueued(s)) { Game.save(); Game.render(); return; }
     Game.advanceWeek(true);
   },
 
@@ -441,14 +475,14 @@ const Cups = {
     const nm = (id) => (w.clubs[id] ? w.clubs[id].name : id) + (sel.youth ? ' U19' : '');
     const shirt = (id) => UI.shirt(w.clubs[id] || Game.club());
     const res = (m) => `<div class="cm2 ${m.h === s.clubId || m.a === s.clubId ? 'me' : ''}"><span class="t h ${m.w === m.h ? 'w' : ''}"><em>${U.esc(nm(m.h))}</em>${shirt(m.h)}</span><b>${m.hs}-${m.as}${m.pens ? '<small>p</small>' : ''}</b><span class="t a ${m.w === m.a ? 'w' : ''}">${shirt(m.a)}<em>${U.esc(nm(m.a))}</em></span></div>`;
-    const status = sel.winner ? `Şampiyon: <b>${U.esc(nm(sel.winner))}</b>` : sel.fmt === 'swiss' && sel.phase === 'league' ? `Lig aşaması · ${sel.md}/8 maç oynandı` : `${sel.phase === 'po' ? 'Play-off' : STAGE_NAMES[sel.alive.length] || ''} · ${sel.alive.length} takım`;
+    const status = sel.winner ? `Şampiyon: <b>${U.esc(nm(sel.winner))}</b>` : sel.fmt === 'swiss' && sel.phase === 'league' ? `Lig aşaması · ${sel.md}/${sel.mds || 8} maç oynandı` : `${sel.phase === 'po' ? 'Play-off' : STAGE_NAMES[sel.alive.length] || ''} · ${sel.alive.length} takım`;
     let body = '';
     if (sel.fmt === 'swiss') {
       const tbl = Cups.swissTable(sel);
-      body += `<div class="lbl">Lig aşaması <small>İlk 8 son 16 · 9-24 play-off · 25-32 elenir</small></div>
+      body += `<div class="lbl">Lig aşaması <small>${(sel.mds || 8) === 8 ? 'İlk 8 son 16 · 9-24 play-off · 25-32 elenir' : 'İlk 8 çeyrek final · 9-16 elenir'}</small></div>
         <div class="tscroll"><table class="tbl lgt sw">
           <tr><th>#</th><th class="l">Takım</th><th>O</th><th>AV</th><th>P</th></tr>
-          ${tbl.map((r, i) => `<tr class="${r.id === s.clubId ? 'hl' : ''} ${i < 8 ? 'z-r16' : i < 24 ? 'z-po' : 'z-out'}"><td><span class="rk">${i + 1}</span></td><td class="l"><span class="tm">${shirt(r.id)}${U.esc(nm(r.id))}</span></td><td>${r.p}</td><td class="${r.gf - r.ga > 0 ? 'pos' : r.gf - r.ga < 0 ? 'neg' : ''}">${r.gf - r.ga > 0 ? '+' : ''}${r.gf - r.ga}</td><td><b class="pts">${r.pts}</b></td></tr>`).join('')}
+          ${tbl.map((r, i) => `<tr class="${r.id === s.clubId ? 'hl' : ''} ${i < 8 ? 'z-r16' : i < 24 && (sel.mds || 8) === 8 ? 'z-po' : 'z-out'}"><td><span class="rk">${i + 1}</span></td><td class="l"><span class="tm">${shirt(r.id)}${U.esc(nm(r.id))}</span></td><td>${r.p}</td><td class="${r.gf - r.ga > 0 ? 'pos' : r.gf - r.ga < 0 ? 'neg' : ''}">${r.gf - r.ga > 0 ? '+' : ''}${r.gf - r.ga}</td><td><b class="pts">${r.pts}</b></td></tr>`).join('')}
         </table></div>`;
       if (sel.teams.includes(s.clubId)) {
         body += `<div class="lbl">Lig aşaması maçların</div><div class="cup-my">${sel.fx.map((round, k) => {

@@ -812,6 +812,13 @@ const Game = {
     Game.toast(`✍️ ${Game.club().name} ile sözleşme imzaladın!`, 'good');
     Game.save();
     Game.render();
+    if (typeof Welcome !== 'undefined') Welcome.show({ club: Game.club(), wage: o.wage, years: o.years, feeText: Game.feeShort(o), number: s.player.shirt });
+  },
+
+  // Tören ekranı için kısa bonservis metni
+  feeShort(o) {
+    if (!o || o.feeType === 'free' || !o.fee) return 'Bonservissiz';
+    return `${o.feeType === 'youth' ? 'Yetiştirme bedeli' : 'Bonservis'} ${U.money(o.fee)}`;
   },
 
   feeText(o) {
@@ -959,6 +966,7 @@ const Game = {
   startNewSeason(choice) {
     const s = Game.state, p = s.player;
     const se = s.seasonEnd;
+    let welcome = null;
     if (choice) {
       if (choice.youth) {
         const old = Game.club().name;
@@ -975,6 +983,7 @@ const Game = {
           const old = Game.club().name;
           Game.joinClub(choice.clubId, choice.wage, choice.years);
           Game.recordTransfer(old, choice);
+          welcome = { club: Game.club(), wage: choice.wage, years: choice.years, feeText: Game.feeShort(choice), number: p.shirt };
           s.moved = { y: se.year + 1, w: 'yaz' };
           Social.post('transfer', `Yeni kulübüm ${Game.club().name}. Hedef şampiyonluk!`, 1.8);
           Game.news(`✍️ ${Game.club().name} ile ${choice.years} yıllık profesyonel sözleşme imzaladın (${Game.feeText(choice)})! Haftalık ${U.money(choice.wage)}`, 'good');
@@ -994,7 +1003,7 @@ const Game = {
     s.seasonEnd = null;
     s.offers = [];
     s.pendingIntl = null;
-    s.pendingCup = null;
+    s.pendingCup = null; s.cupQueue = null;
     s.tournament = null;
     Cups.setup(s);
     s.ap = 3;
@@ -1002,6 +1011,7 @@ const Game = {
     Game.save();
     Game.tab = 'home';
     Game.render();
+    if (welcome && typeof Welcome !== 'undefined') Welcome.show(welcome);
   },
 
   retire() {
@@ -1561,33 +1571,58 @@ ${UI.paper()}`;
     const nm = (cup, id) => (w.clubs[id] ? w.clubs[id].name : id) + (cup.youth ? ' U19' : '');
     const sh = (id) => (w.clubs[id] ? w.clubs[id].short : id);
     const abbr = (cup) => ({ ucl: 'ŞK', uel: 'FK', uecl: 'KK', csa: 'GA', ccc: 'KA', acl: 'AŞ', ygl: 'U19' }[cup.id] || 'KUP');
-    const swissIdx = (st) => (typeof st === 'string' && st.startsWith('md') ? +st.slice(2) - 1 : st === 'po' ? 8 : 9 + Math.round(Math.log2(16 / st)));
     Object.values(s.cups).forEach((cup) => {
       if (!!cup.youth !== Game.isYouth() || !Cups.everIn(s, cup)) return;
       const wk = Cups.weeks(Game.rounds(), cup);
       const th = CompTheme.get(cup.youth ? 'ygl' : cup.dom ? 'dom' : cup.id);
+      const swiss = cup.fmt === 'swiss', mds = cup.mds || 8;
+      // eleme turlarının adları (lig aşamasından sonra)
+      const koNames = swiss ? (mds === 8 ? ['Play-off', 'Son 16', 'Çeyrek Final', 'Yarı Final', 'Final'] : ['Çeyrek Final', 'Yarı Final', 'Final']) : null;
+      const swissIdx = (st) => (typeof st === 'string' && st.startsWith('md') ? +st.slice(2) - 1 : st === 'po' ? 8 : mds === 8 ? 9 + Math.round(Math.log2(16 / st)) : 6 + Math.round(Math.log2(8 / st)));
       const row = (idx, h, a, score, kls, stage) => {
         const at = wk[idx];
         if (at == null) return;
+        const team = (id) => (id ? `<span class="nm-l">${U.esc(nm(cup, id))}</span><span class="nm-s">${U.esc(sh(id))}</span>` : '<span class="nm-l">Kura</span><span class="nm-s">?</span>');
+        const shirt = (id) => (id ? UI.shirt(w.clubs[id] || Game.club()) : '<span class="tbd-shirt">?</span>');
         (out[at] = out[at] || []).push(`<div class="mc cupfx ${kls}" style="${CompTheme.vars(th)}">
           <span class="wk ck">${abbr(cup)}</span>
-          <div class="mc-t h"><span class="nm-l">${U.esc(nm(cup, h))}</span><span class="nm-s">${U.esc(sh(h))}</span>${UI.shirt(w.clubs[h] || Game.club())}</div>
+          <div class="mc-t h">${team(h)}${shirt(h)}</div>
           <div class="mc-s ${kls}">${score}</div>
-          <div class="mc-t">${UI.shirt(w.clubs[a] || Game.club())}<span class="nm-l">${U.esc(nm(cup, a))}</span><span class="nm-s">${U.esc(sh(a))}</span></div>
+          <div class="mc-t">${shirt(a)}${team(a)}</div>
           <small class="mc-cup">${U.esc(cup.name.replace('Avrupa ', ''))} · ${U.esc(stage)}</small>
         </div>`);
       };
       const mine = cup.log.filter((m) => m.h === me || m.a === me);
       mine.forEach((m, i) => {
-        const idx = cup.fmt === 'swiss' ? swissIdx(m.stage) : i;
+        const idx = swiss ? swissIdx(m.stage) : i;
         const gf = m.h === me ? m.hs : m.as, ga = m.h === me ? m.as : m.hs;
         const k = m.w ? (m.w === me ? 'W' : 'L') : gf > ga ? 'W' : gf < ga ? 'L' : 'D';
         const stage = typeof m.stage === 'string' && m.stage.startsWith('md') ? `Lig aşaması ${m.stage.slice(2)}. maç` : m.stage === 'po' ? 'Play-off' : STAGE_NAMES[m.stage] || '';
         row(idx, m.h, m.a, `${m.hs} - ${m.as}${m.pens ? ' (p)' : ''}`, `played r-${k}`, stage);
       });
-      if (!cup.winner && Cups.inCup(s, cup)) {
+      if (cup.winner) return;
+      const waitR16 = swiss && cup.phase === 'po' && cup.direct.includes(me);
+      if (!Cups.inCup(s, cup) && !waitR16) return;
+      const cur = s.pendingCup === cup.id;
+      let from;
+      if (waitR16) from = cup.stage + 1;
+      else if (swiss && cup.phase === 'league') {
+        // lig aşamasının kalan bütün maçları baştan belli
+        for (let k = cup.md; k < mds; k++) {
+          const f = (cup.fx[k] || []).find(([h, a]) => h === me || a === me);
+          if (f) row(k, f[0], f[1], cur && k === cup.md ? 'SIRADA' : '-', cur && k === cup.md ? 'cur' : 'next', `Lig aşaması ${k + 1}. maç`);
+        }
+        from = mds;
+      } else {
         const op = Cups.opponent(s, cup);
-        if (op) row(cup.stage, op.h, op.a, s.pendingCup === cup.id ? 'SIRADA' : '-', s.pendingCup === cup.id ? 'cur' : '', op.stage);
+        if (op) row(cup.stage, op.h, op.a, cur ? 'SIRADA' : '-', cur ? 'cur' : 'next', op.stage);
+        from = cup.stage + 1;
+      }
+      // sonraki eleme turları: rakip henüz belli değil
+      for (let idx = from; idx < wk.length; idx++) {
+        const stage = swiss ? koNames[idx - mds] : STAGE_NAMES[cup.alive.length >> (idx - cup.stage)];
+        if (!stage) continue;
+        row(idx, me, null, '-', 'tbd', `${stage} · tur atlarsan`);
       }
     });
     return out;
