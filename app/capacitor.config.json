@@ -1,5 +1,5 @@
 {
-  "appId": "com.ardabagce.starfoot",
+  "appId": "app.vercel.starfoot.twa",
   "appName": "StarFoot",
   "webDir": "www",
   "android": {

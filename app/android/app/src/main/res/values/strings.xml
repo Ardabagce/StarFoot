@@ -2,8 +2,8 @@
 <resources>
     <string name="app_name">StarFoot</string>
     <string name="title_activity_main">StarFoot</string>
-    <string name="package_name">com.ardabagce.starfoot</string>
-    <string name="custom_url_scheme">com.ardabagce.starfoot</string>
+    <string name="package_name">app.vercel.starfoot.twa</string>
+    <string name="custom_url_scheme">app.vercel.starfoot.twa</string>
     <!-- AdMob UYGULAMA kimliği (reklam birimi değil) -->
     <string name="admob_app_id">ca-app-pub-7675764460364294~8796496538</string>
 </resources>

@@ -6,7 +6,7 @@ StarFoot Android'e **Capacitor** ile paketlenir: oyunun dosyaları uygulamanın 
 
 | Ne | Nerede |
 | --- | --- |
-| Android projesi (paket adı `com.ardabagce.starfoot`, dikey ekran, ikonlar, açılış ekranı) | `app/android/` |
+| Android projesi (paket adı `app.vercel.starfoot.twa`, dikey ekran, ikonlar, açılış ekranı) | `app/android/` |
 | AdMob eklentisi, uygulama kimliği yeri (`admob_app_id`) | `app/android/app/src/main/res/values/strings.xml` |
 | Reklam ayarları (reklam birimi kimlikleri, test modu, sıklık) | `js/ads-config.js` |
 | Reklam köprüsü: GDPR onay formu, ödüllü ve geçiş reklamları | `js/admob.js` |
