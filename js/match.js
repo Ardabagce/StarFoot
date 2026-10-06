@@ -346,13 +346,29 @@ const Match = {
       showMoment(type);
       let auto = false;
       $('mm-auto').onclick = () => { auto = true; if (MiniGame._abort) MiniGame._abort(); };
-      const scene = Scenes.make(type, { skill, mates: mateNames, position: p.position, pace: st.pace, narrow: narrow() });
-      const r = await MiniGame.play($('mm-host'), scene, { stats: st, skill, cond, kits, number: p.shirt, mateChance, captain: !!ctx.captain, weather });
+      const mkScene = () => Scenes.make(type, { skill, mates: mateNames, position: p.position, pace: st.pace, narrow: narrow() });
+      const opts = { stats: st, skill, cond, kits, number: p.shirt, mateChance, captain: !!ctx.captain, weather };
+      let r = await MiniGame.play($('mm-host'), mkScene(), opts);
+      // Ödüllü reklam: kaçan şutu bir kez daha oyna (maç başına bir kez teklif edilir)
+      if (!auto && ['saved', 'post', 'bar', 'miss', 'blocked'].includes(r.outcome) && !M.retryOffered) {
+        M.retryOffered = true;
+        if (await askRetry()) r = await MiniGame.play($('mm-host'), mkScene(), opts);
+      }
       hideMoment();
       if (auto || r.outcome === 'auto') return autoCanvas(type);
       if (r.outcome === 'goal') M.liveGoal = true;
       return r;
     };
+
+    const askRetry = () => new Promise((res) => {
+      const host = $('mm-host');
+      host.innerHTML = `<div class="retry-ad"><b>Kaçırdın!</b><p>Reklam izle, bu anı bir kez daha oyna.</p>
+        <button class="btn btn-play" data-retry="1">${Icon('play')} Reklam izle · Tekrar dene</button>
+        <button class="btn btn-ghost" data-retry="0">Devam et</button><small>Maç başına bir kez</small></div>`;
+      $('mm-auto').onclick = () => res(false);
+      host.querySelector('[data-retry="0"]').onclick = () => res(false);
+      host.querySelector('[data-retry="1"]').onclick = (e) => { e.currentTarget.disabled = true; Ads.show().then((ok) => res(!!ok)); };
+    });
 
     const playTiming = async (type, k, cfg, bonus) => {
       if (M.instant) return autoTiming(k, bonus);

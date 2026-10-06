@@ -410,6 +410,7 @@ const Game = {
   injure(weeks, where) {
     const p = Game.p;
     p.injuryWeeks = Math.max(p.injuryWeeks, weeks);
+    p.injAdUsed = false;
     Player.addMorale(p, -6);
     Game.news(`🤕 ${where} sakatlandın. ${weeks} hafta sahalardan uzak kalacaksın.`, 'bad');
     Game.toast(`🤕 Sakatlandın! (${weeks} hafta)`, 'bad');
@@ -1234,6 +1235,20 @@ const UI = {
       ${used ? '<em>Bu sezon kullandın</em>' : `<button class="btn btn-buy" data-physio ${p.money < price ? 'disabled' : ''}>${U.money(price)}</button>`}</div>`;
   },
 
+  // Ödüllü reklam: sakatlığı 1 hafta kısalt (her sakatlıkta bir kez)
+  adInjury() {
+    const p = Game.p;
+    if (!p.injuryWeeks || p.injAdUsed || Game.inStreet()) return '';
+    return `<button class="ad-energy" data-adreward="injury">${Icon('play')}<span><b>Reklam izle · Sakatlık −1 hafta</b><small>Her sakatlıkta bir kez</small></span></button>`;
+  },
+
+  // Ödüllü reklam: aksiyon hakkı bitince +1 hak (haftada bir)
+  adAp() {
+    const s = Game.state;
+    if (s.ap > 0 || Game.inStreet() || s.adAp === `${s.season.year}-${s.season.round}`) return '';
+    return `<button class="ad-energy" data-adreward="ap">${Icon('play')}<span><b>Reklam izle · +1 aksiyon hakkı</b><small>Haftada bir kez</small></span></button>`;
+  },
+
   // Haftada bir: reklam izle, enerji kazan
   adEnergy() {
     const s = Game.state, p = s.player;
@@ -1416,11 +1431,13 @@ const UI = {
           ${next}
           ${p.energy < 40 ? `<div class="warn">${Icon('bolt')} Enerjin düşük. Performansın düşer, sakatlık riski artar.</div>` : ''}
           ${UI.physioTip()}
+          ${UI.adInjury()}
           <button class="btn btn-play" data-go="match">${Icon('play')} ${Game.inStreet() && s.street.trials ? 'Seçmelere Katıl' : 'Maça Çık'}</button>
           ${s.ap > 0 ? `<div class="hint">Bu hafta ${s.ap} aksiyon hakkın daha var.</div>` : ''}
         </section>
         <section class="card plan">
           <div class="card-h"><span>${Icon('train')} Haftalık Plan</span><span class="ap-pips ${s.ap ? '' : 'done'}" title="Aksiyon hakkı">${[0, 1, 2].map((i) => `<i class="${i < s.ap ? 'on' : ''}"></i>`).join('')}<b>${s.ap ? `${s.ap} hak` : 'Maç günü'}</b></span></div>
+          ${UI.adAp()}
           ${UI.adEnergy()}
           <div class="lbl">Antrenman odağı <small>${keyTxt}</small></div>
           <div class="focus" role="radiogroup" aria-label="Antrenman odağı">${STATS.map((st) => {
@@ -1991,6 +2008,25 @@ ${UI.paper()}`;
           Player.addEnergy(Game.p, v); Game.save();
           Game.toast(`+${v} enerji`, 'good');
         }
+        Game.render();
+      });
+    }));
+    U.$$('[data-adreward]', root).forEach((b) => (b.onclick = () => {
+      b.disabled = true;
+      const kind = b.dataset.adreward;
+      Ads.show().then((ok) => {
+        const s = Game.state, p = Game.p;
+        if (ok && kind === 'ap') {
+          s.adAp = `${s.season.year}-${s.season.round}`;
+          s.ap = Math.min(3, s.ap + 1);
+          Game.toast('+1 aksiyon hakkı', 'good');
+        } else if (ok && kind === 'injury' && p.injuryWeeks > 0) {
+          p.injAdUsed = true;
+          p.injuryWeeks = Math.max(0, p.injuryWeeks - 1);
+          if (p.injuryWeeks === 0) Game.news('💪 Sakatlığın geçti, tekrar sahalara dönebilirsin!', 'good');
+          Game.toast(p.injuryWeeks ? `Sakatlık kısaldı: ${p.injuryWeeks} hafta kaldı` : 'Sakatlığın geçti!', 'good');
+        }
+        if (ok) Game.save();
         Game.render();
       });
     }));

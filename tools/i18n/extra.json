@@ -145,5 +145,16 @@
 "İMZALAR ATILDI!": "IT'S OFFICIAL!",
 "FALSO": "CURL",
 "◀ FALSO": "◀ CURL",
-"FALSO ▶": "CURL ▶"
+"FALSO ▶": "CURL ▶",
+"Kaçırdın!": "Missed it!",
+"Reklam izle, bu anı bir kez daha oyna.": "Watch an ad to replay this moment once more.",
+"Reklam izle · Tekrar dene": "Watch ad · Try again",
+"Devam et": "Continue",
+"Maç başına bir kez": "Once per match",
+"Reklam izle · Sakatlık −1 hafta": "Watch ad · Injury −1 week",
+"Her sakatlıkta bir kez": "Once per injury",
+"Reklam izle · +1 aksiyon hakkı": "Watch ad · +1 action point",
+"+1 aksiyon hakkı": "+1 action point",
+"Sakatlık kısaldı: {} hafta kaldı": "Injury shortened: {} weeks left",
+"Sakatlığın geçti!": "You've recovered!"
 }
