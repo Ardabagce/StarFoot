@@ -22,7 +22,7 @@
     return prep.call(AdMob, { adId: unit('rewarded'), isTesting: testing }).then(() => (st.rw = true)).catch(() => (st.rw = false));
   };
   const prepInter = () => {
-    if (!st.canAds || st.it || !cfg.interstitialEvery || !unit('interstitial')) return Promise.resolve(st.it);
+    if (!st.canAds || st.it || !unit('interstitial')) return Promise.resolve(st.it);
     return AdMob.prepareInterstitial({ adId: unit('interstitial'), isTesting: testing }).then(() => (st.it = true)).catch(() => (st.it = false));
   };
   const withTimeout = (p, ms) => Promise.race([p, new Promise((r) => setTimeout(() => r(false), ms))]);
@@ -77,6 +77,15 @@
       st.it = false;
       try { await AdMob.showInterstitial(); st.lastIt = Date.now() / 1000; } catch (e) { /* gösterilemedi */ }
       prepInter();
+    },
+    // Sezon başı / sezon ortası geçiş reklamı (oyun Game.seasonAd ile en fazla sezonda 2 kez çağırır)
+    async interstitial() {
+      if (!st.ready || !st.canAds || !unit('interstitial')) return false;
+      if (Date.now() / 1000 - st.lastIt < (cfg.interstitialGapSec || 0)) return false;
+      if (!st.it) await withTimeout(prepInter(), 4000);
+      if (!st.it) return false;
+      st.it = false;
+      try { await AdMob.showInterstitial(); st.lastIt = Date.now() / 1000; return true; } catch (e) { return false; } finally { prepInter(); }
     },
     // Ayarlarda "Reklam gizlilik seçenekleri" düğmesi gerekiyor mu?
     privacyRequired: () => st.privacy,

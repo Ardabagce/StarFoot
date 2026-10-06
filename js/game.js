@@ -666,6 +666,7 @@ const Game = {
       if (Game.intlWeeks().includes(r)) Game.checkCallup();
       Game.transferWeek(r);
       if (!Game.inStreet()) Cups.week(s, r);
+      if (r === Math.floor(Game.rounds() / 2)) setTimeout(() => Game.seasonAd('midSeason'), 400);
       if (r >= Game.rounds()) {
         Game.save();
         return Game.endSeason();
@@ -1011,7 +1012,21 @@ const Game = {
     Game.save();
     Game.tab = 'home';
     Game.render();
-    if (welcome && typeof Welcome !== 'undefined') Welcome.show(welcome);
+    const shown = welcome && typeof Welcome !== 'undefined' ? Welcome.show(welcome) : Promise.resolve();
+    shown.then(() => Game.seasonAd('seasonStart'));
+  },
+
+  // Geçiş reklamı: yalnız sezon başında ve sezon ortasında birer kez (kariyerin ilk sezonunda hiç)
+  seasonAd(kind) {
+    const s = Game.state, A = window.StarfootAds;
+    const at = (typeof AD_CONFIG !== 'undefined' && AD_CONFIG.interstitialAt) || {};
+    if (!s || !A || typeof A.interstitial !== 'function' || !at[kind] || Game.inStreet()) return Promise.resolve(false);
+    if (!at.firstSeason && s.season.year === (s.startYear || s.season.year)) return Promise.resolve(false);
+    s.adSeen = s.adSeen && s.adSeen.y === s.season.year ? s.adSeen : { y: s.season.year };
+    if (s.adSeen[kind]) return Promise.resolve(false);
+    s.adSeen[kind] = true;
+    Game.save();
+    return Promise.resolve(A.interstitial()).catch(() => false);
   },
 
   retire() {

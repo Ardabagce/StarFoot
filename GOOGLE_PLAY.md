@@ -94,7 +94,7 @@ Her yeni sürümde `app/android/app/build.gradle` içindeki `versionCode`'u 1 ar
 ## Gerçek reklamlara geçiş kontrol listesi
 - [x] `strings.xml` → `admob_app_id` gerçek uygulama kimliği (`ca-app-pub-7675764460364294~8796496538`)
 - [x] `js/ads-config.js` → ödüllü geçiş birimi (`.../1053737887`, `rewardedFormat: 'rewardedInterstitial'`), `testing: false`
-- [ ] `js/ads-config.js` → `interstitial` (Geçiş) birimi: AdMob'da oluşturulunca eklenecek; boşken maç sonu geçiş reklamı kapalı
+- [ ] `js/ads-config.js` → Android `interstitial` (Geçiş) birimi; iOS birimi eklendi. Geçiş reklamı yalnız sezon başında ve ortasında birer kez (ilk sezonda hiç)
 - [x] `app-ads.txt` → `pub-7675764460364294`
 - [ ] AdMob'da GDPR ve ABD eyalet mesajları yayınlandı
 - [ ] `versionCode` artırıldı, yeni AAB derlendi

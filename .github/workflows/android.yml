@@ -62,10 +62,11 @@ jobs:
         working-directory: app/android/app/build/outputs/bundle/release
         run: |
           AAB=$(ls *.aab)
-          if jarsigner -verify "$AAB" | grep -q "jar verified"; then
+          if jarsigner -verify "$AAB" 2>&1 | grep "jar verified" >/dev/null; then
             echo "İMZALI: $AAB"
-            jarsigner -verify -verbose -certs "$AAB" | grep -m1 -o "X.509, [^]]*"
-            unzip -p "$AAB" 'META-INF/*.RSA' 'META-INF/*.EC' 'META-INF/*.DSA' 2>/dev/null | keytool -printcert | grep -E "Owner|SHA256:" | head -2
+            # yalnız bilgi satırları: unzip bulamadığı sertifika türü için 11 döndürür, adımı düşürmesin
+            jarsigner -verify -verbose -certs "$AAB" | grep -m1 -o "X.509, [^]]*" || true
+            unzip -p "$AAB" 'META-INF/*.RSA' 'META-INF/*.EC' 'META-INF/*.DSA' 2>/dev/null | keytool -printcert | grep -E "Owner|SHA256:" | head -2 || true
           else
             echo "İMZASIZ: $AAB (ANDROID_KEYSTORE_* sırlarını kontrol et)"
             if [ -f ../../../../../keystore.properties ]; then exit 1; fi
