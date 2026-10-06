@@ -23,7 +23,7 @@ const I18N = {
         // "{}-{}" skor kalıbı: iki tarafı da sayı
         const re = new RegExp('^' + lits.map((s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('(.+?)').replace(/\(\.\+\?\)-\(\.\+\?\)/g, '(\\d+)-(\\d+)') + '$', 's');
         const hint = lits.reduce((a, b) => (b.length > a.length ? b : a), '');
-        return { re, v, hint };
+        return { re, v, hint, adj: k.includes('{}{}') };
       });
       // Birleştirmeyle oluşan cümle parçaları ("…'na katılma hakkı kazandık!" gibi)
       I18N.tails = []; I18N.heads = [];
@@ -82,6 +82,8 @@ const I18N = {
     if (ex !== undefined) return ex;
     for (const p of I18N.pats) {
       if (p.hint && !s.includes(p.hint)) continue;
+      // yan yana "{}{}" ayraçlı metinde parçayı yanlış böler ("YER"+"DEN"); ayraçla bölme daha doğru çalışır
+      if (p.adj && s.includes(' · ')) continue;
       const mm = p.re.exec(s);
       // Ayraç içeren yakalama büyük olasılıkla yanlış eşleşmedir ("Başlık · cümle")
       if (!mm || mm.slice(1).some((x) => x.includes(' · '))) continue;
