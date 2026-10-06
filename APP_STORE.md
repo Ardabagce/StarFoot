@@ -87,3 +87,20 @@ Oyunu güncelleyip push ettiğinde **iOS** iş akışı otomatik çalışır ve 
    - İnceleme için ekran görüntüsü: Yaşam › Mağaza'daki Premium kartı. İnceleme notu: `Premium card is in Life › Shop and Profile › Game. Restore button is under the purchase button.`
 3. 1.0.3 sürümünü gönderirken sürüm sayfasındaki **Uygulama İçi Satın Almalar** bölümünden `starfoot_premium` ürününü sürüme ekle (ilk ürün sürümle birlikte incelenir).
 4. Test: TestFlight derlemesinde satın alma ücretsiz "Sandbox" olarak çalışır.
+
+## Ürün sayfası başlığı, arama sonucu görseli ve iPhone Duo (iOS 27)
+Hazır dosyalar `store/premium/` altında:
+
+| Alan (App Store Connect) | Ölçü | Dosya |
+| --- | --- | --- |
+| Ürün sayfası başlığı (Product page header) · görsel | 21:9, 3840×1646 | `header/tr-header.jpg`, `header/en-header.jpg` |
+| Ürün sayfası başlığı · video (8 sn döngü, sessiz) | 21:9, 3840×1646, 30 fps | `header/tr-header.mp4`, `header/en-header.mp4` |
+| Arama sonucu görseli (Search results) · görsel | 3:2, 1920×1280 | `header/tr-search.jpg`, `header/en-search.jpg` |
+| Arama sonucu · video (8 sn döngü) | 3:2, 1920×1280, 30 fps | `header/tr-search.mp4`, `header/en-search.mp4` |
+| iPhone Duo dış ekran ekran görüntüleri | 1398×2034 | `duo-outer/tr-*.jpg`, `duo-outer/en-*.jpg` |
+| iPhone Duo iç ekran ekran görüntüleri | 2007×2853 | `duo-inner/tr-*.jpg`, `duo-inner/en-*.jpg` |
+
+- Yükleme: Uygulama › Dağıtım › sürüm sayfası › **Ürün Sayfası Bilgileri** ya da **Varlık Kitaplığı (Asset Library)**. Başlık ve arama görseli sürümden bağımsız da onaya gönderilebilir.
+- Başlık ve arama görselleri yalnız iOS 27 ve sonrası kullanan kullanıcılara gösterilir.
+- iPhone Duo ekran görüntüleri şimdilik isteğe bağlı; Apple'a göre Nisan 2027'den itibaren zorunlu olacak.
+- Yeniden üretmek: `node store/premium/header.js` (başlık/arama), `node store/premium/compose.js duo` (Duo ekranları).

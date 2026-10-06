@@ -8,8 +8,9 @@ const fontCss = [['Saira Condensed', 'saira-condensed', [600, 800, 900]], ['Barl
   .flatMap(([fam, f, ws]) => ws.flatMap((w) => ['latin', 'latin-ext'].map((sub) => `@font-face{font-family:'${fam}';font-weight:${w};font-style:normal;src:url('${FD}/${f}-${sub}-${w}-normal.woff2') format('woff2');}`))).join('');
 const VW = 390, VH = 693, DPR = 1080 / 390;
 
-async function open(b, lang, seed = 7) {
-  const pg = await b.newPage({ viewport: { width: VW, height: VH }, deviceScaleFactor: DPR, hasTouch: false, isMobile: false });
+async function open(b, lang, seed = 7, size) {
+  const sz = size || { w: VW, h: VH, dpr: DPR };
+  const pg = await b.newPage({ viewport: { width: sz.w, height: sz.h }, deviceScaleFactor: sz.dpr, hasTouch: false, isMobile: false });
   pg.errs = []; pg.on('pageerror', (e) => pg.errs.push(e.message));
   await pg.clock.install();
   // tekrarlanabilir sahneler için sabit tohumlu rastgele sayı

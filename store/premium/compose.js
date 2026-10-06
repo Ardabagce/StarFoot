@@ -44,7 +44,7 @@ const html = (p, l, img, F = { H: 1920, pw: 600, top: 640, shift: 0 }) => {
     return `<i style="left:${x}px;top:${y}px;transform:rotate(${r}deg);background:${c};opacity:${0.35 + (i % 5) * 0.1}"></i>`;
   }).join('') : '';
   const stars = p.stars ? Array.from({ length: 60 }, (_, i) => `<b style="left:${(i * 173) % 1080}px;top:${(i * 311) % 1300}px;opacity:${0.3 + (i % 6) * 0.1};transform:scale(${0.5 + (i % 4) * 0.3})"></b>`).join('') : '';
-  const chips = t.chips.map(([txt, side, y], i) => `<div class="chip ${side}" style="top:${y + F.shift}px"><span class="dot"></span>${txt}</div>`).join('');
+  const chips = t.chips.map(([txt, side, y], i) => `<div class="chip ${side}" style="top:${Math.round(F.top + (y - 640) * (F.cs || 1) + F.shift)}px"><span class="dot"></span>${txt}</div>`).join('');
   return `<!doctype html><html><head><meta charset="utf-8"><style>
 ${fontCss}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -67,7 +67,7 @@ header{position:absolute;left:0;right:0;top:92px;text-align:center;padding:0 70p
 h1{font-family:'Saira Condensed';font-weight:900;font-style:italic;text-transform:uppercase;line-height:.92;margin-top:26px;letter-spacing:-.005em;transform:skewX(-6deg)}
 h1 .a{display:block;font-size:${t.h1.length > 11 ? 112 : 126}px;color:#fff;text-shadow:0 6px 30px rgba(0,0,0,.45)}
 h1 .b{display:block;font-size:${t.h2.length > 13 ? 104 : 126}px;background:linear-gradient(180deg,#fff3c2 0%,${p.accent} 55%,#e39a12 100%);-webkit-background-clip:text;color:transparent;filter:drop-shadow(0 8px 24px rgba(0,0,0,.45))}
-.sub{margin:26px auto 0;max-width:860px;font-size:37px;font-weight:500;line-height:1.3;color:#cdd7f4}
+.sub{margin:26px auto 0;max-width:${F.subW || 860}px;font-size:${F.subFs || 37}px;font-weight:500;line-height:1.3;color:#cdd7f4}
 .phone{position:absolute;left:50%;top:${F.top}px;width:${F.pw}px;height:${Math.round(F.pw * 2400 / 1170)}px;margin-left:-${F.pw / 2}px;border-radius:72px;padding:16px;
   background:linear-gradient(145deg,#2a3555,#0b1020 40%,#1d2742);box-shadow:0 0 0 3px rgba(255,255,255,.08),0 50px 120px rgba(0,0,0,.65),0 0 140px ${p.glow};
   transform:rotate(${p.tilt}deg)}
@@ -99,7 +99,11 @@ ${chips}
   const FORMATS = [
     { dir: '', W: 1080, H: 1920, F: { H: 1920, pw: 600, top: 640, shift: 0 } },
     { dir: 'ios', W: 1290, H: 2796, F: { H: 2341, pw: 720, top: 700, shift: 230 } },
+    // iPhone Duo (katlanabilir): dış ekran 1398x2034, iç ekran 2007x2853
+    { dir: 'duo-outer', W: 1398, H: 2034, F: { H: 1571, pw: 470, top: 590, shift: 0, cs: 0.78, subFs: 31, subW: 960 }, jpg: true },
+    { dir: 'duo-inner', W: 2007, H: 2853, F: { H: 1535, pw: 455, top: 590, shift: 0, cs: 0.76, subFs: 31, subW: 960 }, jpg: true },
   ];
+  if (process.argv[2] === 'duo') FORMATS.splice(0, 2);
   for (const fm of FORMATS) {
     const pg = await b.newPage({ viewport: { width: 1080, height: fm.F.H }, deviceScaleFactor: fm.W / 1080 });
     const outDir = path.join(D, fm.dir);
@@ -115,6 +119,7 @@ ${chips}
         await pg.screenshot({ path: out, clip: { x: 0, y: 0, width: 1080, height: fm.H / (fm.W / 1080) } });
         // Tam ölçü ve şeffaflıksız (App Store bunu ister); ImageMagick varsa
         try { require('child_process').execSync(`convert "${out}" -resize ${fm.W}x${fm.H}! -background "#0a1530" -alpha remove -alpha off "${out}"`); } catch (e) { /* convert yok */ }
+        if (fm.jpg) { try { require('child_process').execSync(`convert "${out}" -quality 92 "${out.replace(/\.png$/, '.jpg')}" && rm "${out}"`); } catch (e) { /* yok */ } }
       }
     }
     await pg.close();
