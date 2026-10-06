@@ -1022,6 +1022,7 @@ const Game = {
     const s = Game.state, A = window.StarfootAds;
     const at = (typeof AD_CONFIG !== 'undefined' && AD_CONFIG.interstitialAt) || {};
     if (!s || !A || typeof A.interstitial !== 'function' || !at[kind] || Game.inStreet()) return Promise.resolve(false);
+    if (typeof Premium !== 'undefined' && Premium.active) return Promise.resolve(false);
     if (!at.firstSeason && s.season.year === (s.startYear || s.season.year)) return Promise.resolve(false);
     s.adSeen = s.adSeen && s.adSeen.y === s.season.year ? s.adSeen : { y: s.season.year };
     if (s.adSeen[kind]) return Promise.resolve(false);
@@ -1239,14 +1240,14 @@ const UI = {
   adInjury() {
     const p = Game.p;
     if (!p.injuryWeeks || p.injAdUsed || Game.inStreet()) return '';
-    return `<button class="ad-energy" data-adreward="injury">${Icon('play')}<span><b>Reklam izle · Sakatlık −1 hafta</b><small>Her sakatlıkta bir kez</small></span></button>`;
+    return `<button class="ad-energy" data-adreward="injury">${Icon('play')}<span><b>${typeof Premium !== 'undefined' ? Premium.lbl() : 'Reklam izle'} · Sakatlık −1 hafta</b><small>Her sakatlıkta bir kez</small></span></button>`;
   },
 
   // Ödüllü reklam: aksiyon hakkı bitince +1 hak (haftada bir)
   adAp() {
     const s = Game.state;
     if (s.ap > 0 || Game.inStreet() || s.adAp === `${s.season.year}-${s.season.round}`) return '';
-    return `<button class="ad-energy" data-adreward="ap">${Icon('play')}<span><b>Reklam izle · +1 aksiyon hakkı</b><small>Haftada bir kez</small></span></button>`;
+    return `<button class="ad-energy" data-adreward="ap">${Icon('play')}<span><b>${typeof Premium !== 'undefined' ? Premium.lbl() : 'Reklam izle'} · +1 aksiyon hakkı</b><small>Haftada bir kez</small></span></button>`;
   },
 
   // Haftada bir: reklam izle, enerji kazan
@@ -1255,7 +1256,7 @@ const UI = {
     const wk = `${s.season.year}-${s.season.round}`;
     if (Game.inStreet() || p.energy >= 85 || s.adEnergy === wk) return '';
     const v = (typeof AD_CONFIG !== 'undefined' && AD_CONFIG.energyReward) || 25;
-    return `<button class="ad-energy" data-adenergy>${Icon('play')}<span><b>Reklam izle · +${v} enerji</b><small>Haftada bir kez</small></span></button>`;
+    return `<button class="ad-energy" data-adenergy>${Icon('play')}<span><b>${typeof Premium !== 'undefined' ? Premium.lbl() : 'Reklam izle'} · +${v} enerji</b><small>Haftada bir kez</small></span></button>`;
   },
 
   // Her sekmede görünen durum şeridi
@@ -1822,7 +1823,7 @@ ${UI.paper()}`;
       }).join('') + locked.map((it) => card(it.art, '#5d6878', it.name, `${it.minAge} yaşında açılır`, `<span class="tag">${U.money(it.price)}</span>`, 'locked', it.skin)).join('');
       return group(c, ic, t, d, body, `${owned}/${list.length}`);
     }).join('');
-    return `
+    return `${typeof Premium !== 'undefined' ? Premium.card() : ''}
       <section class="card shop-head">
         <div class="card-h"><span>${Icon('shop')} Mağaza</span><span class="tag">${ageBand} reyonu · ${p.age} yaş</span></div>
         <div class="shop-wallet">${Icon('wallet')}<span><small>Bakiyen</small><b>${U.money(p.money)}</b></span><span><small>Eşyaların</small><b>${p.items.length}</b></span></div>
@@ -1889,6 +1890,7 @@ ${UI.paper()}`;
       </section>
       <div class="card">
         <div class="card-h"><span>${Icon('save')} Oyun</span></div>
+        ${typeof Premium !== 'undefined' ? Premium.card().replace('class="card prem', 'class="prem-in prem') : ''}
         <div class="row-btns">
           <div class="diff-row"><span class="muted">Zorluk</span><div class="seg">${Object.entries(DIFFS).map(([k, v]) => `<button data-setdiff="${k}" class="${k === (Game.state.difficulty || 'normal') ? 'on' : ''}">${v.l}</button>`).join('')}</div></div>
           <div class="diff-row"><span class="muted">Dil / Language</span><div class="seg" data-noi18n><button data-setlang="tr" class="${I18N.lang === 'tr' ? 'on' : ''}">Türkçe</button><button data-setlang="en" class="${I18N.lang === 'en' ? 'on' : ''}">English</button></div></div>
@@ -2011,6 +2013,8 @@ ${UI.paper()}`;
         Game.render();
       });
     }));
+    U.$$('[data-prem-buy]', root).forEach((b) => (b.onclick = () => { b.disabled = true; Premium.buy(); }));
+    U.$$('[data-prem-restore]', root).forEach((b) => (b.onclick = () => { b.disabled = true; Premium.restore(); }));
     U.$$('[data-adreward]', root).forEach((b) => (b.onclick = () => {
       b.disabled = true;
       const kind = b.dataset.adreward;

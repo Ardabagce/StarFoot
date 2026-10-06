@@ -103,3 +103,9 @@ Her yeni sürümde `app/android/app/build.gradle` içindeki `versionCode`'u 1 ar
 - **Gerçek isimlere benzeyen isimler:** Bazı kulüp ve oyuncu adları gerçeğe çok yakın (ör. *Kylian Mbappo*, *Liverpul FC*). Şikâyet olursa Google uygulamayı kaldırabilir; istersen isimleri biraz daha uzaklaştırırız.
 - **Simüle kumar + reklam:** Yaş derecelendirmesi yükselir; AdMob'da reklam içerik sınırı "Teen" olarak ayarlı (`js/admob.js`).
 - **Geçersiz trafik:** Kendi reklamlarına tıklama, arkadaşlarından tıklamalarını isteme.
+
+## StarFoot Premium (uygulama içi satın alma)
+1. Play Console › **Kurulum › Ödeme profili**: satıcı hesabını oluştur (banka bilgileri).
+2. Uygulamaya yeni bir AAB yüklenmiş olmalı (BILLING izni eklentiden gelir).
+3. **Para kazanma › Ürünler › Uygulama içi ürünler** › **Ürün oluştur**: Ürün kimliği **`starfoot_premium`**, ad `StarFoot Premium`, açıklama `Geçiş reklamlarını kaldırır, ödülleri reklamsız verir.`, fiyat **99,99 ₺** › **Etkinleştir**.
+4. Test: Play Console › Ayarlar › **Lisans testi** listesine kendi Gmail adresini ekle; kapalı test sürümünde ücretsiz test satın alması yapabilirsin.

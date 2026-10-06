@@ -300,7 +300,7 @@ const Gift = {
           <div class="gift-opt hot"><span>Reklamla x${g.mult}</span><b>${Gift.label(g, g.mult)}</b></div>
         </div>
       </div>`, [
-      { t: `${Icon('play')} Reklam İzle · x${g.mult}`, cls: 'btn-big', fn: () => Ads.show().then((ok) => finish(ok ? g.mult : 1)) },
+      { t: `${Icon('play')} ${typeof Premium !== 'undefined' && Premium.active ? '⭐ Premium' : 'Reklam İzle'} · x${g.mult}`, cls: 'btn-big', fn: () => Ads.show().then((ok) => finish(ok ? g.mult : 1)) },
       { t: 'Normal Aç (x1)', cls: 'btn-ghost', fn: () => finish(1) },
     ]);
   },

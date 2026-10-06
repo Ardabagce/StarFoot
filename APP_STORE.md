@@ -77,3 +77,13 @@ Oyunu güncelleyip push ettiğinde **iOS** iş akışı otomatik çalışır ve 
 - **Gerçek isimlere benzeyen isimler (Kılavuz 5.2):** Apple bu konuda Google'dan daha katıdır. Ret gelirse kulüp/oyuncu adlarını biraz daha kurgusal yapabiliriz.
 - **Simüle kumar (Kılavuz 5.3 / yaş derecelendirmesi):** Gerçek para yok, bu yüzden izinli; yaş derecelendirmesinde doğru işaretlemek şart.
 - **ATT (Kılavuz 5.1.2):** İzin penceresi reklam isteğinden önce çıkıyor; izin metni Info.plist'te. Kullanıcı reddederse reklamlar kişiselleştirilmeden gösterilir.
+
+## StarFoot Premium (uygulama içi satın alma) — 1.0.3 ile
+1. App Store Connect › **İş (Business)** › **Ücretli Uygulamalar Sözleşmesi**'ni imzala; banka ve vergi bilgilerini doldur (durumu "Etkin" olmalı).
+2. Uygulama › **Para Kazanma › Uygulama İçi Satın Almalar** › **+** › Tür: **Tüketilemez (Non-Consumable)**
+   - Referans adı: `StarFoot Premium` · Ürün kimliği: **`starfoot_premium`** (kodla birebir aynı olmalı)
+   - Fiyat: **99,99 ₺** fiyat basamağı (diğer ülkeler otomatik)
+   - Yerelleştirme TR: Görünen ad `StarFoot Premium`, açıklama `Geçiş reklamlarını kaldırır, ödülleri reklamsız verir.` · EN: `Removes interstitial ads and grants rewards without ads.`
+   - İnceleme için ekran görüntüsü: Yaşam › Mağaza'daki Premium kartı. İnceleme notu: `Premium card is in Life › Shop and Profile › Game. Restore button is under the purchase button.`
+3. 1.0.3 sürümünü gönderirken sürüm sayfasındaki **Uygulama İçi Satın Almalar** bölümünden `starfoot_premium` ürününü sürüme ekle (ilk ürün sürümle birlikte incelenir).
+4. Test: TestFlight derlemesinde satın alma ücretsiz "Sandbox" olarak çalışır.

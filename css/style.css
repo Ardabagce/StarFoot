@@ -1736,3 +1736,16 @@ button, .btn, a, [data-act], [data-tab] { touch-action: manipulation; -webkit-ta
 .retry-ad p { color: var(--chalk); margin-bottom: 4px; }
 .retry-ad small { color: var(--muted); }
 .retry-ad .btn { font-size: 18px; white-space: nowrap; padding-left: 12px; padding-right: 12px; }
+/* StarFoot Premium kartı */
+.prem { position: relative; overflow: hidden; border-color: rgba(255, 207, 63, .45); background: linear-gradient(150deg, rgba(255, 207, 63, .16), rgba(20, 34, 79, .9) 45%, rgba(8, 15, 38, .95)); }
+.prem::after { content: ''; position: absolute; right: -60px; top: -60px; width: 180px; height: 180px; border-radius: 50%; background: radial-gradient(circle, rgba(255, 207, 63, .3), transparent 70%); pointer-events: none; }
+.prem-h { display: flex; align-items: center; gap: 12px; }
+.prem-h > i { font-style: normal; font-size: 30px; filter: drop-shadow(0 0 12px rgba(255, 207, 63, .7)); }
+.prem-h b { display: block; font-family: var(--display); font-style: italic; font-size: 22px; color: #ffcf3f; letter-spacing: .02em; }
+.prem-h small { color: var(--muted); }
+.prem-l { margin: 12px 0 14px; padding-left: 20px; display: grid; gap: 6px; color: var(--chalk); font-size: 14px; }
+.prem-l b { color: #ffcf3f; }
+.prem .btn { width: 100%; }
+.prem .prem-restore { margin-top: 8px; font-size: 13px; }
+.prem.on { padding-top: 14px; padding-bottom: 14px; }
+.prem-in { margin: 0 0 12px; padding: 14px; border-radius: 12px; border: 1px solid rgba(255, 207, 63, .45); }

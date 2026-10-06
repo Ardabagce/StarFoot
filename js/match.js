@@ -362,8 +362,8 @@ const Match = {
 
     const askRetry = () => new Promise((res) => {
       const host = $('mm-host');
-      host.innerHTML = `<div class="retry-ad"><b>Kaçırdın!</b><p>Reklam izle, bu anı bir kez daha oyna.</p>
-        <button class="btn btn-play" data-retry="1">${Icon('play')} Reklam izle · Tekrar dene</button>
+      host.innerHTML = `<div class="retry-ad"><b>Kaçırdın!</b><p>${typeof Premium !== 'undefined' && Premium.active ? 'Premium ile bu anı bir kez daha oyna.' : 'Reklam izle, bu anı bir kez daha oyna.'}</p>
+        <button class="btn btn-play" data-retry="1">${Icon('play')} ${typeof Premium !== 'undefined' ? Premium.lbl() : 'Reklam izle'} · Tekrar dene</button>
         <button class="btn btn-ghost" data-retry="0">Devam et</button><small>Maç başına bir kez</small></div>`;
       $('mm-auto').onclick = () => res(false);
       host.querySelector('[data-retry="0"]').onclick = () => res(false);
