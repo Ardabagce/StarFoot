@@ -1274,8 +1274,9 @@ const UI = {
 
   // Profil: oyuncu kartı, sosyal medya ve kariyer tek sekmede
   profile() {
-    const nav = UI.viewNav('profView', [['profile', 'star', 'Profil'], ['career', 'career', 'Kariyer']]);
-    return nav + ((UI.profView || 'profile') === 'career' ? UI.career() : UI.player());
+    const nav = UI.viewNav('profView', [['profile', 'star', 'Profil'], ['career', 'career', 'Kariyer'], ['settings', 'cog', 'Ayarlar']]);
+    const v = UI.profView || 'profile';
+    return nav + (v === 'career' ? UI.career() : v === 'settings' ? UI.settings() : UI.player());
   },
 
   // Yaşam: aile, ilişkiler, menajer, sponsorlar, gece hayatı ve mağaza
@@ -1448,7 +1449,6 @@ const UI = {
               <span>${st.l}${key ? '<i>★</i>' : ''}</span><b class="${UI.statColor(v)}">${Math.floor(v)}</b>${UI.bar(v, UI.statColor(v))}
             </button>`;
           }).join('')}</div>
-          <label class="drill-tg"><input type="checkbox" id="drill-tg" ${s.drills !== false ? 'checked' : ''}><span><b>Antrenman mini oyunları</b><small>Odak statına göre çalışma oynanır. İyi oynarsan gelişim ×1,5'e kadar çıkar.</small></span></label>
           <div class="lbl">Antrenman <small>${focusL} odaklı · tahmini gelişim</small></div>
           <div class="tr-row">${acts.slice(0, 3).map(([k, ic, l, d, cost], i) => `<button class="tr-card tr-${k}" data-act="${k}" ${s.ap <= 0 ? 'disabled' : ''}>
             <span class="tr-ic">${Icon(ic)}</span>
@@ -1888,19 +1888,42 @@ ${UI.paper()}`;
             }).join('')}</div></details>`;
         }).join('')}</div>
       </section>
-      <div class="card">
-        <div class="card-h"><span>${Icon('save')} Oyun</span></div>
-        ${typeof Premium !== 'undefined' ? Premium.card().replace('class="card prem', 'class="prem-in prem') : ''}
-        <div class="row-btns">
-          <div class="diff-row"><span class="muted">Zorluk</span><div class="seg">${Object.entries(DIFFS).map(([k, v]) => `<button data-setdiff="${k}" class="${k === (Game.state.difficulty || 'normal') ? 'on' : ''}">${v.l}</button>`).join('')}</div></div>
-          <div class="diff-row"><span class="muted">Dil / Language</span><div class="seg" data-noi18n><button data-setlang="tr" class="${I18N.lang === 'tr' ? 'on' : ''}">Türkçe</button><button data-setlang="en" class="${I18N.lang === 'en' ? 'on' : ''}">English</button></div></div>
+`;
+  },
+
+  // Profil › Ayarlar: dil, zorluk, oynanış, Premium, gizlilik, oyun yönetimi
+  settings() {
+    const s = Game.state, p = s.player;
+    const row = (label, sub, ctrl) => `<div class="set-row"><span><b>${label}</b>${sub ? `<small>${sub}</small>` : ''}</span>${ctrl}</div>`;
+    const appVer = (window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform()) ? 'StarFoot 1.0.3' : 'StarFoot (web)';
+    return `
+      ${typeof Premium !== 'undefined' ? Premium.card() : ''}
+      <section class="card settings">
+        <div class="card-h"><span>${Icon('cog')} Genel</span></div>
+        ${row('Dil / Language', '', `<div class="seg" data-noi18n><button data-setlang="tr" class="${I18N.lang === 'tr' ? 'on' : ''}">Türkçe</button><button lang="en" data-setlang="en" class="${I18N.lang === 'en' ? 'on' : ''}">English</button></div>`)}
+        ${row('Zorluk', DIFFS[s.difficulty || 'normal'].d, `<div class="seg">${Object.entries(DIFFS).map(([k, v]) => `<button data-setdiff="${k}" class="${k === (s.difficulty || 'normal') ? 'on' : ''}">${v.l}</button>`).join('')}</div>`)}
+      </section>
+      <section class="card settings">
+        <div class="card-h"><span>${Icon('train')} Oynanış</span></div>
+        <label class="drill-tg"><input type="checkbox" id="drill-tg" ${s.drills !== false ? 'checked' : ''}><span><b>Antrenman mini oyunları</b><small>Odak statına göre çalışma oynanır. İyi oynarsan gelişim ×1,5'e kadar çıkar.</small></span></label>
+      </section>
+      <section class="card settings">
+        <div class="card-h"><span>${Icon('shield')} Gizlilik</span></div>
+        <div class="set-links">
           ${window.StarfootAds && window.StarfootAds.privacyRequired && window.StarfootAds.privacyRequired() ? `<button class="btn btn-ghost" data-adprivacy>${Icon('shield')} Reklam gizlilik seçenekleri</button>` : ''}
-          <button class="btn btn-ghost" data-sys="save">${Icon('save')} Kaydet</button>
+          <a class="btn btn-ghost" href="https://starfoot.vercel.app/privacy.html" target="_blank" rel="noopener">Gizlilik Politikası</a>
+          <a class="btn btn-ghost" href="mailto:ardabagce@gmail.com?subject=StarFoot">Destek: ardabagce@gmail.com</a>
+        </div>
+      </section>
+      <section class="card settings">
+        <div class="card-h"><span>${Icon('save')} Kariyer</span><small class="muted">Oyun her hafta otomatik kaydedilir</small></div>
+        <div class="row-btns">
           <button class="btn btn-ghost" data-sys="menu">${Icon('exit')} Ana Menü</button>
           ${p.age >= 33 ? `<button class="btn btn-ghost" data-sys="retire">${Icon('wave')} Emekli Ol</button>` : ''}
           <button class="btn btn-danger" data-sys="delete">${Icon('trash')} Kariyeri Sil</button>
         </div>
-      </div>`;
+        <p class="set-ver">${appVer}</p>
+      </section>`;
   },
 
   world() {
@@ -2258,6 +2281,8 @@ const Create = {
   open() {
     Create.alloc = {};
     STATS.forEach((s) => (Create.alloc[s.k] = 0));
+    Create.manual = false;
+    Create.auto();
     Game.show('create');
     window.scrollTo(0, 0);
     const el = document.getElementById('create');
@@ -2321,6 +2346,7 @@ const Create = {
             </section>
             <section class="cr-step">
               <div class="cr-step-h"><i>6</i><div><b>Yeteneklerin</b><small id="cr-pts-note"></small></div><span class="cr-pts" id="cr-pts"></span></div>
+              <div class="cr-auto"><button type="button" class="btn btn-ghost" id="cr-auto">${Icon('bolt')} Otomatik dağıt</button><button type="button" class="btn btn-ghost" id="cr-reset">Sıfırla</button></div>
               <div class="cr-stats" id="cr-stats"></div>
             </section>
             <div class="cr-cta">
@@ -2335,7 +2361,7 @@ const Create = {
       fn(b.dataset[attr]);
     }));
     pick('#cr-diff', 'diff', (v) => { Create.diff = v; });
-    pick('#cr-pos', 'pos', (v) => { Create.pos = v; Create.drawStats(); });
+    pick('#cr-pos', 'pos', (v) => { Create.pos = v; if (!Create.manual) Create.auto(); Create.drawStats(); });
     pick('#cr-foot', 'foot', (v) => { Create.foot = v; Create.preview(); });
     document.getElementById('cr-back').onclick = () => Game.init();
     ['cr-name', 'cr-sur'].forEach((id) => (document.getElementById(id).oninput = () => Create.preview()));
@@ -2370,6 +2396,19 @@ const Create = {
     return Math.max(12, Math.round(expectedAtAge(age) - 6));
   },
   left() { return Create.points - Object.values(Create.alloc).reduce((a, b) => a + b, 0); },
+  // Puanları mevkinin önemli yeteneklerine göre otomatik dağıtır (her yetenekte en fazla 8)
+  auto() {
+    const w = POSITIONS[Create.pos].w;
+    STATS.forEach((st) => (Create.alloc[st.k] = 0));
+    const ks = STATS.map((st) => st.k).sort((a, b) => (w[b] || 0) - (w[a] || 0));
+    const sum = ks.reduce((a, k) => a + (w[k] || 0), 0) || 1;
+    ks.forEach((k) => (Create.alloc[k] = Math.min(8, Math.floor(Create.points * (w[k] || 0) / sum))));
+    for (let i = 0; Create.left() > 0 && i < 200; i++) {
+      const k = ks[i % ks.length];
+      if (Create.alloc[k] < 8 && (w[k] || 0) > 0) Create.alloc[k]++;
+      else if (i >= ks.length && Create.alloc[k] < 8) Create.alloc[k]++;
+    }
+  },
   ovr() {
     const w = POSITIONS[Create.pos].w, b = Create.base();
     let t = 0, sw = 0;
@@ -2417,8 +2456,12 @@ const Create = {
       const v = Create.alloc[k] + d;
       if (v < 0 || v > 8 || (d > 0 && Create.left() <= 0)) return;
       Create.alloc[k] = v;
+      Create.manual = true;
       Create.drawStats();
     }));
+    const au = document.getElementById('cr-auto'), rs = document.getElementById('cr-reset');
+    if (au) au.onclick = () => { Create.manual = false; Create.auto(); Create.drawStats(); };
+    if (rs) rs.onclick = () => { Create.manual = true; STATS.forEach((st) => (Create.alloc[st.k] = 0)); Create.drawStats(); };
     Create.preview();
   },
 };

@@ -8,10 +8,15 @@ const I18N = {
   init() {
     let l = null;
     try { l = localStorage.getItem('starfoot_lang'); } catch (e) { /* yok */ }
-    if (!l) l = /^tr\b/i.test(navigator.language || '') ? 'tr' : 'en';
+    // Seçim yoksa telefonun dili: Türkçe cihazda Türkçe, diğer tüm dillerde İngilizce
+    if (!l) l = I18N.deviceLang();
     I18N.lang = l === 'en' && typeof LANG_EN !== 'undefined' ? 'en' : 'tr';
     document.documentElement.lang = I18N.lang;
     if (I18N.lang === 'en') I18N.enable();
+  },
+  deviceLang() {
+    const list = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || '']).filter(Boolean);
+    return /^tr\b/i.test(list[0] || '') ? 'tr' : 'en';
   },
   // Sözlüğü, canvas yamasını ve gözlemciyi bir kez kurar; sonra sayfadaki metni çevirir
   enable() {

@@ -850,7 +850,7 @@ const MiniGame = {
       const draw = () => {
         const G = geo();
         for (let i = 0; i < 10; i++) {
-          ctx.fillStyle = i % 2 ? '#2f8c45' : '#38994d';
+          ctx.fillStyle = Sprites.stripe(i);
           ctx.fillRect(0, (H / 10) * i, W, H / 10 + 1);
         }
         const vg = ctx.createRadialGradient(W / 2, H / 2, 20, W / 2, H / 2, Math.max(W, H) * 0.7);
@@ -1012,7 +1012,7 @@ Object.assign(MiniGame, {
       const draw = () => {
         const top = H * 0.16, bot = H * 0.9;
         const yOf = (d) => bot - (d / L) * (bot - top);
-        for (let i = 0; i < 12; i++) { ctx.fillStyle = i % 2 ? '#2f8c45' : '#38994d'; ctx.fillRect(0, (H / 12) * i, W, H / 12 + 1); }
+        for (let i = 0; i < 12; i++) { ctx.fillStyle = Sprites.stripe(i); ctx.fillRect(0, (H / 12) * i, W, H / 12 + 1); }
         ctx.strokeStyle = 'rgba(255,255,255,0.85)'; ctx.lineWidth = 3 * dpr;
         ctx.beginPath(); ctx.moveTo(W * 0.12, top); ctx.lineTo(W * 0.88, top); ctx.stroke();
         ctx.setLineDash([10 * dpr, 10 * dpr]); ctx.strokeStyle = 'rgba(255,255,255,0.3)';
@@ -1071,7 +1071,7 @@ Object.assign(MiniGame, {
     };
     g.layout();
     window.addEventListener('resize', g.layout);
-    g.grass = () => { for (let i = 0; i < 12; i++) { g.ctx.fillStyle = i % 2 ? '#2f8c45' : '#38994d'; g.ctx.fillRect(0, (g.H / 12) * i, g.W, g.H / 12 + 1); } };
+    g.grass = () => { for (let i = 0; i < 12; i++) { g.ctx.fillStyle = Sprites.stripe(i); g.ctx.fillRect(0, (g.H / 12) * i, g.W, g.H / 12 + 1); } };
     g.text = (txt, y, size, col = '#fff') => {
       const c = g.ctx;
       c.textAlign = 'center'; c.fillStyle = col;
@@ -1122,7 +1122,7 @@ Object.assign(MiniGame, {
         // kayan saha
         for (let i = -1; i < 16; i++) {
           const y = ((i * M * 2 + (scroll * M) % (M * 2)) + M * 2) - M * 2;
-          ctx.fillStyle = i % 2 ? '#2f8c45' : '#38994d'; ctx.fillRect(0, y, W, M * 2 + 1);
+          ctx.fillStyle = Sprites.stripe(i); ctx.fillRect(0, y, W, M * 2 + 1);
         }
         ctx.strokeStyle = 'rgba(255,255,255,0.5)'; ctx.lineWidth = 2 * dpr;
         const ly = ((scroll * M) % (M * 10));
@@ -1616,7 +1616,7 @@ Object.assign(MiniGame, {
         }
       };
       const draw = () => {
-        for (let i = 0; i < 10; i++) { ctx.fillStyle = i % 2 ? '#2f8c45' : '#38994d'; ctx.fillRect(0, (H / 10) * i, W, H / 10 + 1); }
+        for (let i = 0; i < 10; i++) { ctx.fillStyle = Sprites.stripe(i); ctx.fillRect(0, (H / 10) * i, W, H / 10 + 1); }
         const fh = Math.min(H * 0.17, W * 0.2);
         Sprites.figure(ctx, meP.x * W, meP.y * H + fh * 0.4, fh, { kit: o.kits.own, look: Sprites.look(7), facing: 'up', number: o.number, label: 'SEN', labelScale: dpr, labelColor: 'rgba(214,40,57,0.92)', t });
         if (tgt) {

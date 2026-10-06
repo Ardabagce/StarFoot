@@ -32,7 +32,10 @@ const Celebrate = {
     cv.width = W; cv.height = H;
     const bg = document.createElement('canvas'); bg.width = W; bg.height = H;
     const r = SocialArt.rng(U.randi(1, 1e9));
-    SocialArt.blurred(bg.getContext('2d'), W, H, 2 * dpr, (b) => SocialArt.stadium(b, W, H, r, P, day));
+    SocialArt.blurred(bg.getContext('2d'), W, H, 2 * dpr, (b) => {
+      if (Sprites.surface === 'sand') { Sprites.sand(b, W, H); Sprites.street(b, W, H * 0.55, 16 * dpr); }
+      else SocialArt.stadium(b, W, H, r, P, day);
+    });
     return { cv, c: cv.getContext('2d'), W, H, dpr, bg };
   },
 

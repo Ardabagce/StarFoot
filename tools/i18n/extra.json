@@ -173,5 +173,15 @@
 "Bu hesapta Premium satın alımı bulunamadı.": "No Premium purchase was found on this account.",
 "Geri yükleme yapılamadı. İnternet bağlantını kontrol et.": "Restore failed. Check your internet connection.",
 "Premium ile bu anı bir kez daha oyna.": "Replay this moment once more with Premium.",
-"⭐ Premium": "⭐ Premium"
+"⭐ Premium": "⭐ Premium",
+"Otomatik dağıt": "Auto-assign",
+"Sıfırla": "Reset",
+"Ayarlar": "Settings",
+"Genel": "General",
+"Oynanış": "Gameplay",
+"Gizlilik": "Privacy",
+"Oyun her hafta otomatik kaydedilir": "The game saves automatically every week",
+"Destek: {}": "Support: {}",
+"Kısa bir su molası, maç devam ediyor.": "Quick water break, the match goes on.",
+"StarFoot (web)": "StarFoot (web)"
 }

@@ -46,7 +46,10 @@ const Match = {
     const st = Player.effStats(p);
     // Zorluk: seviye (yaş grubu / lig) arttıkça artar, rakip-oyuncu farkı da etkiler
     let skill = U.clamp((ctx.levelBase != null ? ctx.levelBase : 0.4) + (opp.rating - ovr) / 70, 0.03, 0.88);
-    const kits = Sprites.kits(own, opp);
+    const street = ctx.lg === 'street';
+    // Mahalle maçı: kum saha, herkes kendi kıyafetiyle
+    const kits = street ? Sprites.streetKits() : Sprites.kits(own, opp);
+    Sprites.surface = street ? 'sand' : null;
     const narrow = () => window.innerWidth / window.innerHeight < 0.9;
     // Hava durumu ve maç topu
     const weather = ctx.weather = ctx.weather || Weather.pick(ctx, state);
@@ -346,7 +349,8 @@ const Match = {
       showMoment(type);
       let auto = false;
       $('mm-auto').onclick = () => { auto = true; if (MiniGame._abort) MiniGame._abort(); };
-      const mkScene = () => Scenes.make(type, { skill, mates: mateNames, position: p.position, pace: st.pace, narrow: narrow() });
+      // mahalle maçında ofsayt yok
+      const mkScene = () => { const sc = Scenes.make(type, { skill, mates: mateNames, position: p.position, pace: st.pace, narrow: narrow() }); if (street) sc.offside = null; return sc; };
       const opts = { stats: st, skill, cond, kits, number: p.shirt, mateChance, captain: !!ctx.captain, weather };
       let r = await MiniGame.play($('mm-host'), mkScene(), opts);
       // Ödüllü reklam: kaçan şutu bir kez daha oyna (maç başına bir kez teklif edilir)
@@ -398,7 +402,7 @@ const Match = {
     // Devre arası: oyuncunun ikinci yarı için seçimi
     const halfTime = () => new Promise((res) => {
       const benchWait = enterMin === null || enterMin > 45;
-      if (M.instant || M.red || ctx.role === 'out' || p.injuryWeeks > 0 || (leaveMin !== null)) return res();
+      if (street || M.instant || M.red || ctx.role === 'out' || p.injuryWeeks > 0 || (leaveMin !== null)) return res();
       const opts = benchWait
         ? [
           ['warm', 'fire', 'Isın ve hocaya görün', 'İkinci yarıda oyuna girme şansın artar'],
@@ -587,7 +591,7 @@ const Match = {
         await resolveMoment(mo);
         if (M.liveGoal) { M.liveGoal = false; await celebrate(); }
       }
-      if (M.min === 45) { feed('İlk yarı sona erdi.', 'info'); await halfTime(); }
+      if (M.min === 45) { feed(street ? 'Kısa bir su molası, maç devam ediyor.' : 'İlk yarı sona erdi.', 'info'); await halfTime(); }
       refresh();
       busy = false;
       if (M.min >= 90) {
@@ -680,6 +684,7 @@ const Match = {
         ov.innerHTML = '';
         Weather.reset();
         Sprites.curBall = null;
+        Sprites.surface = null;
         // Android'de belirli aralıklarla maç sonu geçiş reklamı
         const ad = window.StarfootAds && window.StarfootAds.afterMatch ? window.StarfootAds.afterMatch() : null;
         Promise.resolve(ad).catch(() => {}).then(() => resolve(summary));

@@ -1749,3 +1749,18 @@ button, .btn, a, [data-act], [data-tab] { touch-action: manipulation; -webkit-ta
 .prem .prem-restore { margin-top: 8px; font-size: 13px; }
 .prem.on { padding-top: 14px; padding-bottom: 14px; }
 .prem-in { margin: 0 0 12px; padding: 14px; border-radius: 12px; border: 1px solid rgba(255, 207, 63, .45); }
+/* Kariyer oluşturma: otomatik dağıt / sıfırla */
+.cr-auto { display: flex; gap: 8px; margin: 4px 0 12px; }
+.cr-auto .btn { flex: 1; padding: 10px 12px; font-size: 14px; }
+.cr-auto .btn:first-child { flex: 2; border-color: rgba(255, 207, 63, .5); color: #ffcf3f; }
+/* Profil › Ayarlar */
+.settings .set-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 0; border-top: 1px solid rgba(255, 255, 255, .07); }
+.settings .set-row:first-of-type { border-top: 0; }
+.settings .set-row > span { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.settings .set-row small { color: var(--muted); font-size: 12px; line-height: 1.35; }
+.settings .set-row .seg { flex-shrink: 0; }
+@media (max-width: 480px) { .settings .set-row { flex-direction: column; align-items: stretch; } .settings .set-row .seg { display: flex; } .settings .set-row .seg button { flex: 1; } }
+.settings .set-links { display: grid; gap: 8px; }
+.settings .set-links .btn { text-align: center; text-decoration: none; }
+.settings .set-ver { margin-top: 12px; text-align: center; font-size: 12px; color: var(--muted); }
+.settings .card-h small { font-size: 12px; }

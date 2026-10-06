@@ -81,6 +81,18 @@ const Sprites = {
     return { shirt: c1, alt: c2, pattern, shorts: pattern === 'plain' ? c2 : darkShorts, socks: c1 };
   },
 
+  // Mahalle maçı kıyafetleri: bizim taraf sıcak, rakipler soğuk renklerde (ayırt edilsin)
+  streetKits() {
+    const mk = (shirt, shorts, alt) => ({ shirt, alt: alt || shirt, pattern: 'plain', shorts, socks: '#eeeeee' });
+    const own = [mk('#e63946', '#1d2433'), mk('#f4a261', '#3a4a6b'), mk('#ffd166', '#1d2433'), mk('#f1faee', '#2b2d42', '#e63946'), mk('#d62828', '#6c757d'), mk('#ff7b00', '#22223b'), mk('#ffffff', '#3d405b', '#f4a261')];
+    const opp = [mk('#1d3557', '#adb5bd'), mk('#457b9d', '#1d2433'), mk('#2a9d8f', '#f1faee'), mk('#6c757d', '#1d2433'), mk('#5a189a', '#adb5bd'), mk('#212529', '#495057'), mk('#00b4d8', '#1d3557')];
+    return {
+      own: Object.assign({}, own[0], { variants: own }),
+      opp: Object.assign({}, opp[0], { variants: opp }),
+      gk: mk('#3a5a40', '#1d2433'),
+    };
+  },
+
   // Ev sahibi ile çakışıyorsa deplasman formasını seç
   kits(own, opp) {
     const a = Sprites.kit(own, false);
@@ -105,7 +117,15 @@ const Sprites = {
 
   // İnsan figürü. (sx, sy) ayakların ekran noktası, h ekrandaki boy (px)
   figure(ctx, sx, sy, h, o) {
-    const kit = o.kit;
+    // Mahalle maçı: herkes farklı kıyafette (kit.variants), forma numarası yok
+    let kit = o.kit;
+    if (kit && kit.variants) {
+      const v = kit.variants;
+      let k = o.number != null ? o.number : 0;
+      if (o.look && o.look.skin) k += o.look.skin.charCodeAt(2) + (o.look.style || '').length;
+      kit = v[Math.abs(k) % v.length];
+      if (o.number != null) o = Object.assign({}, o, { number: null });
+    }
     const look = o.look || { skin: SKINS[1], hair: HAIRS[0] };
     const up = o.facing === 'up';
     const run = o.run || 0; // koşu fazı (radyan)
@@ -384,13 +404,44 @@ const Sprites = {
   },
 
   // Çim zemini: tx/ty dünya→ekran dönüşümleri, PX metre başına piksel
+  // Zemin: çim şeritleri; mahalle maçında (surface = 'sand') kum/toprak saha
+  surface: null,
+  stripe(i) {
+    if (Sprites.surface === 'sand') return i % 2 ? '#c49a5f' : '#caa266';
+    return i % 2 ? '#2f8c45' : '#38994d';
+  },
+  sand(ctx, W, H) {
+    ctx.fillStyle = '#c69d61'; ctx.fillRect(0, 0, W, H);
+    // koyu ve açık lekeler, ayak izleri, çakıl taşları
+    for (let i = 0; i < 26; i++) {
+      const x = Math.random() * W, y = Math.random() * H, r = 20 + Math.random() * 90;
+      const g = ctx.createRadialGradient(x, y, 0, x, y, r);
+      const c = Math.random() < 0.5 ? '150,110,60' : '226,196,140';
+      g.addColorStop(0, `rgba(${c},0.35)`); g.addColorStop(1, `rgba(${c},0)`);
+      ctx.fillStyle = g; ctx.fillRect(x - r, y - r, r * 2, r * 2);
+    }
+    const n = Math.round((W * H) / 500);
+    for (let i = 0; i < n; i++) {
+      const v = Math.random();
+      ctx.fillStyle = v < 0.45 ? 'rgba(110,78,40,0.22)' : v < 0.9 ? 'rgba(255,240,205,0.18)' : 'rgba(90,90,90,0.5)';
+      const s = v < 0.9 ? 2 : 3 + Math.random() * 3;
+      ctx.fillRect(Math.random() * W, Math.random() * H, s, s);
+    }
+  },
   grass(ctx, W, H, tx, ty, PX, view) {
+    if (Sprites.surface === 'sand') {
+      Sprites.sand(ctx, W, H);
+      ctx.fillStyle = 'rgba(90,60,30,0.25)';
+      if (view.x0 < -26) ctx.fillRect(0, 0, tx(-26.5), H);
+      if (view.x1 > 26) ctx.fillRect(tx(26.5), 0, W - tx(26.5), H);
+      return;
+    }
     ctx.fillStyle = '#1f6b34';
     ctx.fillRect(0, 0, W, H);
     // biçilmiş çim şeritleri
     for (let y = Math.floor(view.y0 / 5) * 5; y < view.y1; y += 5) {
       const i = Math.round(y / 5);
-      ctx.fillStyle = i % 2 ? '#2f8c45' : '#38994d';
+      ctx.fillStyle = Sprites.stripe(i);
       ctx.fillRect(0, ty(y), W, 5 * PX + 1);
     }
     for (let x = Math.floor(view.x0 / 6) * 6; x < view.x1; x += 6) {
@@ -412,6 +463,7 @@ const Sprites = {
   stands(ctx, W, tx, ty, PX, view, fs) {
     const boardY = ty(-3.2), boardH = 0.9 * PX;
     if (view.y0 > -3.2) return;
+    if (Sprites.surface === 'sand') return Sprites.street(ctx, W, boardY, PX);
     // tribün
     const top = 0, bottom = boardY - boardH;
     if (bottom > top) {
@@ -446,7 +498,55 @@ const Sprites = {
     ctx.fillStyle = 'rgba(0,0,0,0.25)'; ctx.fillRect(0, boardY, W, 0.25 * PX);
   },
 
+  // Mahalle: kalenin arkasında apartmanlar ve boyalı duvar
+  street(ctx, W, wallY, PX) {
+    const sky = ctx.createLinearGradient(0, 0, 0, wallY);
+    sky.addColorStop(0, '#7fb2df'); sky.addColorStop(1, '#cfe2f0');
+    ctx.fillStyle = sky; ctx.fillRect(0, 0, W, wallY);
+    const cols = ['#d9c7a7', '#c98f6a', '#e7dcc6', '#b7a58a', '#d6b48c', '#a9b7b8'];
+    let x = -Math.random() * 40;
+    while (x < W) {
+      const w = PX * (6 + Math.random() * 6), h = wallY * (0.45 + Math.random() * 0.5);
+      const top = wallY - h;
+      ctx.fillStyle = cols[(Math.random() * cols.length) | 0]; ctx.fillRect(x, top, w - 2, h);
+      ctx.fillStyle = 'rgba(0,0,0,0.12)'; ctx.fillRect(x + w - 6, top, 4, h);
+      const ww = Math.max(4, PX * 0.9), wh = Math.max(5, PX * 1.1);
+      for (let yy = top + wh * 0.6; yy < wallY - wh * 2; yy += wh * 2) {
+        for (let xx = x + ww * 0.7; xx < x + w - ww * 1.5; xx += ww * 2) {
+          ctx.fillStyle = Math.random() < 0.25 ? '#ffe7a8' : '#4b5d73'; ctx.fillRect(xx, yy, ww, wh);
+          if (Math.random() < 0.18) { ctx.fillStyle = '#8a6a4a'; ctx.fillRect(xx - 2, yy + wh, ww + 4, 3); }
+        }
+      }
+      x += w;
+    }
+    // çamaşır ipi
+    ctx.strokeStyle = 'rgba(40,40,40,0.5)'; ctx.lineWidth = 1.5;
+    ctx.beginPath(); ctx.moveTo(W * 0.15, wallY * 0.35); ctx.quadraticCurveTo(W * 0.32, wallY * 0.45, W * 0.5, wallY * 0.36); ctx.stroke();
+    ['#e63946', '#f1faee', '#457b9d', '#ffb703'].forEach((c, i) => { ctx.fillStyle = c; ctx.fillRect(W * (0.2 + i * 0.07), wallY * (0.38 + (i % 2) * 0.02), PX * 0.8, PX * 1.1); });
+    // boyalı duvar
+    const wh = Math.max(10, PX * 1.6);
+    ctx.fillStyle = '#9aa1a6'; ctx.fillRect(0, wallY - wh, W, wh);
+    ['#e76f51', '#2a9d8f', '#e9c46a', '#264653', '#f4a261'].forEach((c, i) => {
+      ctx.fillStyle = c; ctx.globalAlpha = 0.75;
+      ctx.beginPath(); ctx.ellipse(W * (0.1 + i * 0.2), wallY - wh * 0.5, PX * 2.4, wh * 0.32, (i - 2) * 0.2, 0, Math.PI * 2); ctx.fill();
+    });
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = 'rgba(0,0,0,0.2)'; ctx.fillRect(0, wallY, W, 0.25 * PX);
+  },
+
   lines(ctx, tx, ty, PX) {
+    if (Sprites.surface === 'sand') {
+      // tebeşirle çizilmiş silik kale alanı
+      ctx.strokeStyle = 'rgba(255,250,235,0.45)';
+      ctx.lineWidth = Math.max(2, PX * 0.1);
+      ctx.setLineDash([PX * 0.9, PX * 0.35]);
+      ctx.beginPath();
+      ctx.moveTo(tx(-22), ty(0)); ctx.lineTo(tx(22), ty(0));
+      ctx.rect(tx(-9), ty(0), 18 * PX, 8 * PX);
+      ctx.stroke();
+      ctx.setLineDash([]);
+      return;
+    }
     ctx.strokeStyle = 'rgba(255,255,255,0.88)';
     ctx.lineWidth = Math.max(2, PX * 0.12);
     ctx.beginPath();
@@ -494,7 +594,7 @@ const Sprites = {
     ctx.lineCap = 'round';
     ctx.strokeStyle = 'rgba(0,0,0,0.25)'; ctx.lineWidth = lw;
     ctx.beginPath(); ctx.moveTo(tx(-3.66) + lw, ty(0) + lw * 0.3); ctx.lineTo(tx(3.66) + lw, ty(0) + lw * 0.3); ctx.stroke();
-    ctx.strokeStyle = '#ffffff'; ctx.lineWidth = lw;
+    ctx.strokeStyle = Sprites.surface === 'sand' ? '#b9c0c4' : '#ffffff'; ctx.lineWidth = lw;
     ctx.beginPath();
     ctx.moveTo(tx(-3.66), ty(0)); ctx.lineTo(tx(-3.66), ty(0, 2.44));
     ctx.lineTo(tx(3.66), ty(0, 2.44)); ctx.lineTo(tx(3.66), ty(0));
