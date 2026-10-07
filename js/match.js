@@ -105,9 +105,10 @@ const Match = {
     // UI
     const ov = document.getElementById('match');
     ov.classList.remove('hidden');
+    if (typeof Sfx !== 'undefined') { Sfx.crowd(true, street); Sfx.play('whistleLong'); }
     // turnuva teması (Şampiyonlar Kupası yıldızlı vb.)
     const theme = ctx.theme ? CompTheme.get(ctx.theme, ctx.side === 'home' ? ctx.home.id : ctx.away.id) : null;
-    ov.className = `overlay ${CompTheme.cls(theme)}`;
+    ov.className = `overlay ${CompTheme.cls(theme)} ${ctx.derby ? 'derby' : ''} ${ctx.final ? 'final' : ''}`;
     ov.setAttribute('style', CompTheme.vars(theme));
     ov.innerHTML = `
       <div class="mt-wrap">
@@ -206,12 +207,14 @@ const Match = {
     const ownGoal = (scorerName, assistName, txt) => {
       addOwn();
       M.ownScorers.push(scorerName);
+      if (!M.instant && typeof Sfx !== 'undefined') { Sfx.play(street ? 'cheer' : 'roar'); Sfx.buzz('heavy'); }
       feed(`⚽ <b>${M.min}'</b> GOL! ${txt || `${U.esc(scorerName)} golü attı.`} <span class="sc">${M.hs}-${M.as}</span>`, 'goal own');
     };
     const oppGoal = (txt) => {
       const sc = pickOpp();
       addOpp();
       M.oppScorers.push(sc.n);
+      if (!M.instant && typeof Sfx !== 'undefined') { Sfx.play('groan'); Sfx.buzz('warning'); }
       feed(`🥅 <b>${M.min}'</b> Gol ${U.esc(opp.name)}'dan. ${txt || `Golü ${U.esc(sc.n)} attı.`} <span class="sc">${M.hs}-${M.as}</span>`, 'goal opp');
     };
 
@@ -241,6 +244,7 @@ const Match = {
       M.statsUsed.add(type === 'deep' ? 'passing' : 'shooting'); M.statsUsed.add('technique');
       if (o === 'goal') {
         M.goals++; M.shots++;
+        if (M.drama) { M.lateGoal = true; M.drama = false; }
         M.gt[type] = (M.gt[type] || 0) + 1;
         rate(type === 'penalty' ? 0.7 : type === 'freekick' ? 1.4 : 1.15);
         const msg = {
@@ -321,10 +325,11 @@ const Match = {
     };
     const showMoment = (type) => {
       $('mt-moment').classList.remove('hidden');
+      $('mt-moment').classList.toggle('drama', !!M.drama);
       updateSB();
       $('mm-min').textContent = `${M.min}'`;
-      $('mm-title').textContent = U.plain(MOMENT_TITLES[type]);
-      $('mm-desc').textContent = MOMENT_DESC[type];
+      $('mm-title').textContent = M.drama ? 'SON DAKİKA!' : U.plain(MOMENT_TITLES[type]);
+      $('mm-desc').textContent = M.drama ? 'Son şans! Bu vuruş maçın kaderini belirleyebilir.' : MOMENT_DESC[type];
     };
     // Kendi golünden sonra seçtiğin gol sevinci (dokununca geçilir)
     const celebrate = async () => {
@@ -336,13 +341,14 @@ const Match = {
       $('mm-desc').textContent = 'Sevinç zamanı! Geçmek için dokun.';
       $('mm-auto').style.display = 'none';
       try {
+        if (typeof Sfx !== 'undefined') Sfx.play('cheer');
         await Celebrate.goal($('mm-host'), { kit: kits.own, c1: own.c1, c2: own.c2, short: own.short, number: p.shirt, type: Celebrate.pick(p), name: pname, min: M.min, score: `${M.hs}-${M.as}` });
       } catch (e) { console.error(e); }
       $('mm-auto').style.display = '';
       $('mm-host').onclick = null;
       hideMoment();
     };
-    const hideMoment = () => { $('mt-moment').classList.add('hidden'); $('mm-host').innerHTML = ''; $('mm-host').style.overflowY = ''; MiniGame._abort = null; };
+    const hideMoment = () => { $('mt-moment').classList.add('hidden'); $('mt-moment').classList.remove('drama'); $('mm-host').innerHTML = ''; $('mm-host').style.overflowY = ''; MiniGame._abort = null; };
 
     const playCanvas = async (type) => {
       if (M.instant) return autoCanvas(type);
@@ -451,6 +457,11 @@ const Match = {
 
     const resolveMoment = async (mo) => {
       const type = mo.type;
+      M.drama = !!mo.drama;
+      if (M.drama) {
+        feed(`⏱️ <b>${M.min}'</b> SON DAKİKALAR! Skoru değiştirecek son şans ${U.esc(pname)}'de...`, 'info');
+        if (typeof Sfx !== 'undefined') { Sfx.play('heart'); Sfx.buzz('warning'); }
+      }
       if (type === 'sprint') {
         M.statsUsed.add('pace');
         drain(2.5);
@@ -586,9 +597,16 @@ const Match = {
         oppGoal();
         if (onPitch() && p.position !== 'FW') rate(-0.12);
       }
+      // Son dakika dramı: berabere ya da bir farkla gerideyken son şans anı
+      if (M.min === 85 && !M.dramaDone && onPitch() && !M.instant && !street) {
+        M.dramaDone = true;
+        const gf = isHome ? M.hs : M.as, ga = isHome ? M.as : M.hs;
+        if ((gf === ga || ga - gf === 1) && !moments.some((x) => x.min > 85)) moments.push({ min: U.randi(87, 90), type: U.chance(0.25) ? 'freekick' : 'open', drama: true });
+      }
       for (const mo of moments.filter((x) => x.min === M.min)) {
         if (!onPitch()) break;
         await resolveMoment(mo);
+        M.drama = false;
         if (M.liveGoal) { M.liveGoal = false; await celebrate(); }
       }
       if (M.min === 45) { feed(street ? 'Kısa bir su molası, maç devam ediyor.' : 'İlk yarı sona erdi.', 'info'); await halfTime(); }
@@ -623,7 +641,7 @@ const Match = {
       refresh();
       const summary = {
         gf, ga, res, hs: M.hs, as: M.as, played, energySave: 0, energyStart: M.e0, energyEnd: M.energy, minutes: Math.max(0, minutes), rating: played ? rating : null,
-        goals: M.goals, assists: M.assists, yellow: M.yellow, red: M.red, motm,
+        goals: M.goals, assists: M.assists, yellow: M.yellow, red: M.red, motm, lateGoal: !!M.lateGoal,
         ownScorers: M.ownScorers, oppScorers: M.oppScorers, statsUsed: [...M.statsUsed], goalTypes: M.gt, shots: M.shots, keyPasses: M.keyPasses, tackles: M.tackles,
       };
       const resTxt = { W: 'GALİBİYET', D: 'BERABERLİK', L: 'MAĞLUBİYET' }[res];
@@ -679,6 +697,7 @@ const Match = {
         const c = av.getContext('2d');
         Sprites.figure(c, 100, 190, 170, { kit: kits.own, look: Sprites.look(7), facing: 'down', number: p.shirt, t: 0 });
       }
+      if (typeof Sfx !== 'undefined') { Sfx.play('whistleEnd'); setTimeout(() => Sfx.crowd(false), 1600); if (res === 'W') Sfx.buzz('success'); }
       $('ms-done').onclick = () => {
         ov.classList.add('hidden');
         ov.innerHTML = '';

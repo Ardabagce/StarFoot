@@ -284,6 +284,7 @@ const Gift = {
     const icon = { money: 'coin', energy: 'bolt', stat: 'train', morale: 'star' }[g.kind];
     const finish = (m) => {
       const res = Gift.apply(g, m);
+      if (typeof Sfx !== 'undefined') { Sfx.play('coin'); Sfx.buzz('success'); }
       s.pendingGift = null;
       Game.save(); Game.render();
       Game.toast(`Hediye paketi: ${res}${m > 1 ? ` (x${m})` : ''}`, 'good');

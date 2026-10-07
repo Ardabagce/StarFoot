@@ -172,6 +172,7 @@ const Celebrate = {
       let t = 0, last = performance.now(), raf, burst = false;
       const close = () => { cancelAnimationFrame(raf); el.remove(); resolve(); };
       el.querySelector('button').onclick = close;
+      if (typeof Sfx !== 'undefined') { setTimeout(() => { Sfx.play('fanfare'); Sfx.play('roar'); Sfx.buzz('success'); }, 1400); }
       const frame = (now) => {
         const dt = Math.min(0.05, (now - last) / 1000); t += dt; last = now;
         c.drawImage(bg, 0, 0);
@@ -463,10 +464,11 @@ const Welcome = {
         }
       };
       setFoot();
-      const close = () => { cancelAnimationFrame(raf); el.remove(); resolve(); };
+      if (typeof Sfx !== 'undefined') { Sfx.crowd(true); Sfx.play('cheer'); }
+      const close = () => { cancelAnimationFrame(raf); el.remove(); if (typeof Sfx !== 'undefined') Sfx.crowd(false); resolve(); };
       btn.onclick = () => {
         if (step === 0) { step = 1; t = 0; setFoot(); return; }
-        if (signT < 0) { signT = t; setFoot(); btn.disabled = true; setTimeout(() => { btn.disabled = false; }, 1800); return; }
+        if (signT < 0) { signT = t; setFoot(); btn.disabled = true; if (typeof Sfx !== 'undefined') { [1300, 1500, 1750, 2100].forEach((d) => setTimeout(() => Sfx.play('shutter'), d)); setTimeout(() => { Sfx.play('cheer'); Sfx.buzz('success'); }, 1400); } setTimeout(() => { btn.disabled = false; }, 1800); return; }
         close();
       };
       const frame = (now) => {

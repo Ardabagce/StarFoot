@@ -318,6 +318,7 @@ const Cups = {
     const p = s.player;
     ctx.role = p.injuryWeeks > 0 || Life.banned() ? 'out' : cup.youth ? Game.roleFor(Player.overall(p, true), cup.str[s.clubId], true) : Game.roleFor(Player.overall(p, true), s.world.clubs[s.clubId].rating, false);
     ctx.subChance = 0.6;
+    if (typeof Big !== 'undefined' && !cup.youth) await Big.prepare(ctx, leaguePhase ? null : stageName);
     const sum = await Match.run(ctx, s);
     let win = sum.hs > sum.as ? 0 : sum.as > sum.hs ? 1 : null, pens = null;
     if (win === null && !leaguePhase) {

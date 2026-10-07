@@ -182,6 +182,7 @@ const Game = {
       Game.news(`${opts.name} ${player.age} yaşında, ${year} yılında altyapı seçmelerine katılıyor. Tribünde farklı kulüplerin scoutları not alıyor!`, 'good');
     }
     Game.save();
+    Game._fresh = true;
     Game.enterHub();
     Game.modal(`
       <h2>Hoş geldin, ${U.esc(opts.name)}!</h2>
@@ -291,6 +292,9 @@ const Game = {
     Game.tab = 'home';
     Game.render();
     Game.checkPending();
+    // yeni kariyerde hoş geldin penceresiyle çakışmasın; günlük ödül sonraki girişte
+    if (typeof Daily !== 'undefined' && !Game._fresh) setTimeout(() => { if (Game.state && !document.getElementById('hub').classList.contains('hidden')) Daily.check(); }, 450);
+    Game._fresh = false;
   },
 
   checkPending() {
@@ -469,6 +473,7 @@ const Game = {
       ctx.role = Game.roleFor(ovr, Game.teamRating(s.clubId), youth);
       ctx.subChance = youth ? 0.85 : 0.6;
     }
+    if (typeof Big !== 'undefined') await Big.prepare(ctx);
     const sum = await Match.run(ctx, s);
     Game.applyMatch(sum, ctx, 'league');
     // ligin geri kalanı
@@ -528,7 +533,7 @@ const Game = {
     const s = Game.state, p = s.player;
     const youth = Game.isYouth() && comp !== 'intl';
     const lg = LEAGUES.find((l) => l.id === Game.club().league);
-    const fameMult = comp === 'intl' ? 2 : youth ? 0.15 : comp === 'cup' ? lg.fame * 1.6 : lg.fame;
+    const fameMult = (comp === 'intl' ? 2 : youth ? 0.15 : comp === 'cup' ? lg.fame * 1.6 : lg.fame) * (ctx.derby || ctx.final ? 1.5 : 1);
     const oppName = ctx.side === 'home' ? ctx.away.name : ctx.home.name;
     const resTxt = { W: 'kazandı', D: 'berabere kaldı', L: 'kaybetti' }[sum.res];
     const teamTxt = comp === 'intl' ? Game.nation().name : Game.teamName();
@@ -624,6 +629,20 @@ const Game = {
       if (p.injuryWeeks === 0) Player.addRel(p, 'coach', 0.5);
       Game.news(`${teamTxt}, ${oppName} karşısında ${sum.gf}-${sum.ga} ${resTxt}. (Forma giymedin)`, sum.res === 'W' ? 'good' : sum.res === 'L' ? 'bad' : '');
     }
+    // derbi, basın toplantısı sözleri ve son dakika golü
+    if (ctx.derby && sum.res === 'W') { Player.addRel(p, 'fans', 4); Game.news(`🔥 ${ctx.derby} bizim! Şehir bu gece senin adını konuşuyor.`, 'good'); }
+    else if (ctx.derby && sum.res === 'L') { Player.addMorale(p, -4); Game.news(`${ctx.derby} kaybedildi. Taraftar öfkeli.`, 'bad'); }
+    if (ctx.pressBold && sum.played) {
+      if (sum.res === 'W') { Player.addFame(p, 1); Game.news('🎙️ Basın toplantısındaki iddialı sözlerinin arkasında durdun!', 'good'); }
+      else if (sum.res === 'L') { Player.addRel(p, 'fans', -6); Game.news('🎙️ Maç öncesi iddialı sözlerin ters tepti, taraftar tepkili.', 'bad'); }
+    }
+    if (sum.lateGoal && sum.played) {
+      Player.addFame(p, 1.2 * (lg ? lg.fame : 1)); Player.addRel(p, 'fans', 5);
+      p.flags = p.flags || {}; p.flags.lateGoal = (p.flags.lateGoal || 0) + 1;
+      Game.news(`⏱️ SON DAKİKA! ${Player.fullName(p)} maçın son anlarında sahneye çıktı!`, 'good');
+      Social.post('goal', 'Son dakika! Bu his paha biçilemez.', 1.6);
+    }
+    if (typeof Missions !== 'undefined') Missions.afterMatch(sum);
     Social.afterMatch(sum, teamTxt);
     if (comp !== 'intl') Captain.afterMatch(sum.played);
     const so1 = Social.ensure(p);
@@ -1437,6 +1456,7 @@ const UI = {
           <button class="btn btn-play" data-go="match">${Icon('play')} ${Game.inStreet() && s.street.trials ? 'Seçmelere Katıl' : 'Maça Çık'}</button>
           ${s.ap > 0 ? `<div class="hint">Bu hafta ${s.ap} aksiyon hakkın daha var.</div>` : ''}
         </section>
+        ${typeof Missions !== 'undefined' ? Missions.card() : ''}
         <section class="card plan">
           <div class="card-h"><span>${Icon('train')} Haftalık Plan</span><span class="ap-pips ${s.ap ? '' : 'done'}" title="Aksiyon hakkı">${[0, 1, 2].map((i) => `<i class="${i < s.ap ? 'on' : ''}"></i>`).join('')}<b>${s.ap ? `${s.ap} hak` : 'Maç günü'}</b></span></div>
           ${UI.adAp()}
@@ -1906,6 +1926,9 @@ ${UI.paper()}`;
       <section class="card settings">
         <div class="card-h"><span>${Icon('train')} Oynanış</span></div>
         <label class="drill-tg"><input type="checkbox" id="drill-tg" ${s.drills !== false ? 'checked' : ''}><span><b>Antrenman mini oyunları</b><small>Odak statına göre çalışma oynanır. İyi oynarsan gelişim ×1,5'e kadar çıkar.</small></span></label>
+        <label class="drill-tg"><input type="checkbox" id="sfx-tg" ${typeof Sfx !== 'undefined' && Sfx.on ? 'checked' : ''}><span><b>Ses efektleri</b><small>Tribün, düdük, vuruş ve gol sesleri.</small></span></label>
+        ${typeof Notify !== 'undefined' && Notify.plugin() ? `<label class="drill-tg"><input type="checkbox" id="notif-tg" ${Notify.on() ? 'checked' : ''}><span><b>Bildirimler</b><small>Günlük ödül ve enerji hatırlatmaları.</small></span></label>` : ''}
+        <label class="drill-tg"><input type="checkbox" id="hap-tg" ${typeof Sfx !== 'undefined' && Sfx.hap ? 'checked' : ''}><span><b>Titreşim</b><small>Golde, vuruşta ve kritik anlarda telefon titrer.</small></span></label>
       </section>
       <section class="card settings">
         <div class="card-h"><span>${Icon('shield')} Gizlilik</span></div>
@@ -1979,6 +2002,9 @@ ${UI.paper()}`;
     U.$$('[data-more]', root).forEach((b) => (b.onclick = () => { UI.more[b.dataset.more] = !UI.more[b.dataset.more]; Game.render(); }));
     const dtg = root.querySelector('#drill-tg');
     if (dtg) dtg.onchange = () => { Game.state.drills = dtg.checked; Game.save(); };
+    const stg = root.querySelector('#sfx-tg'), htg = root.querySelector('#hap-tg');
+    if (stg) stg.onchange = () => { Sfx.setOn(stg.checked); if (stg.checked) Sfx.play('whistle'); };
+    if (htg) htg.onchange = () => { Sfx.setHap(htg.checked); if (htg.checked) Sfx.buzz('medium'); };
     U.$$('[data-go=match]', root).forEach((b) => (b.onclick = () => {
       const s = Game.state;
       if (s.ap > 0) {
@@ -2036,6 +2062,9 @@ ${UI.paper()}`;
         Game.render();
       });
     }));
+    U.$$('[data-mission-claim]', root).forEach((b) => (b.onclick = () => Missions.claim()));
+    const ntg = root.querySelector('#notif-tg');
+    if (ntg) ntg.onchange = () => Notify.setOn(ntg.checked);
     U.$$('[data-prem-buy]', root).forEach((b) => (b.onclick = () => { b.disabled = true; Premium.buy(); }));
     U.$$('[data-prem-restore]', root).forEach((b) => (b.onclick = () => { b.disabled = true; Premium.restore(); }));
     U.$$('[data-adreward]', root).forEach((b) => (b.onclick = () => {

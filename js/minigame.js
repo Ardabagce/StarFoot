@@ -394,6 +394,7 @@ const MiniGame = {
       }
 
       function kick(ang, power, spin, isPass, liftV) {
+        if (typeof Sfx !== 'undefined') { Sfx.play('kick'); Sfx.buzz(isPass ? 'light' : 'medium'); }
         // vuruş anında ofsayttaki arkadaşlar: top onlara ulaşırsa ofsayt (dokunarak pas vermesen de)
         offAtKick = scene.offside != null ? new Set(mates.filter((m) => m.y < scene.offside - 0.15 && m.y < ball.y)) : new Set();
         const sig = isPass ? passSigma : angSigma * (0.6 + 0.5 * power);
@@ -421,6 +422,12 @@ const MiniGame = {
         phase = 'done';
         endT = t;
         slowmo = 1;
+        if (typeof Sfx !== 'undefined') {
+          if (outcome === 'goal') Sfx.play('net');
+          else if (outcome === 'saved') Sfx.play('save');
+          else if (outcome === 'post' || outcome === 'bar') { Sfx.play('post'); Sfx.play('ooh'); Sfx.buzz('medium'); }
+          else if (outcome === 'miss') Sfx.play('ooh');
+        }
         if (outcome === 'goal' || (extra && extra.mateGoal)) {
           netShake = 1; flash = 1;
           const cols = [kits.own.shirt, kits.own.alt, '#ffffff', '#ffcf3f'];
