@@ -424,5 +424,21 @@
 "Efsane Puanı": "Legend Score",
 "sezon sonu": "season end",
 "{} sezonu": "{} season",
-"sezonu": "season"
+"sezonu": "season",
+"Son maç": "Last match",
+"Son maç{}": "Last match{}",
+"aynı lig · aynı mevki": "same league · same position",
+"Yaşıtların": "Your Peers",
+"{} Yaşıtların": "{} Your Peers",
+"Yaşıtların arasında": "Among your peers you're",
+"({} oyuncu)": "({} players)",
+"{}–{} yaş · üst ligler": "ages {}–{} · top leagues",
+"{}–{} yaş · 2. lig seviyesi": "ages {}–{} · second tier",
+"üst ligler": "top leagues",
+"2. lig seviyesi": "second tier",
+"👀 {} rakibi {}'da senin yaşında, senin mevkinde bir yıldız adayı var: {}. Basın ikinizi şimdiden kıyaslıyor. Ezeli rakibin bu!": "👀 {} rivals {} have a prospect your age, in your position: {}. The press is already comparing you. Meet your rival!",
+"👀 Ligdeki rakip {}'da senin yaşında, senin mevkinde bir yıldız adayı var: {}. Basın ikinizi şimdiden kıyaslıyor. Ezeli rakibin bu!": "👀 League rivals {} have a prospect your age, in your position: {}. The press is already comparing you. Meet your rival!",
+"📉 Ezeli rakibin {} skor katkında seni geçti ({} - {})!": "📉 Your rival {} has overtaken you in goal contributions ({} - {})!",
+"✈️ Ezeli rakibin {} de senin ligine geldi: {}!": "✈️ Your rival {} has followed you to your league: {}!",
+"MVP": "MVP"
 }

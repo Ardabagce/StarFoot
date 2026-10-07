@@ -268,39 +268,51 @@ document.addEventListener('visibilitychange', () => { if (document.hidden) Notif
 // ---------- Ezeli rakip ----------
 const RIVAL_NATS = [['BRA', 'BR'], ['ARG', 'AR'], ['FRA', 'FR'], ['ESP', 'ES'], ['ENG', 'EN'], ['POR', 'PT'], ['GER', 'DE'], ['ITA', 'IT'], ['NED', 'NL'], ['TUR', 'TR']];
 const Rival = {
+  // rakip senin liginden: varsa derbi rakibi kulüpten, yoksa güç olarak yakın bir takımdan
+  pickClub() {
+    const s = Game.state, me = Game.club();
+    const same = Object.values(s.world.clubs).filter((c) => c.league === me.league && c.id !== s.clubId);
+    if (!same.length) return null;
+    const der = same.filter((c) => Big.derby(c.id, s.clubId));
+    if (der.length) return U.pick(der);
+    const near = same.filter((c) => Math.abs(c.rating - me.rating) <= 5);
+    return U.pick(near.length ? near : same.sort((a, b) => Math.abs(a.rating - me.rating) - Math.abs(b.rating - me.rating)).slice(0, 3));
+  },
   ensure() {
     const s = Game.state;
     if (!s || Game.inStreet()) return null;
-    if (s.rival) return s.rival;
-    const p = s.player;
-    const [nat, pool] = U.pick(RIVAL_NATS.filter(([n]) => n !== p.nation));
+    if (s.rival) {
+      // eski kayıtlar: başka ülkedeki rakip senin ligine taşınır
+      if (!s.rival.v2) { const c = Rival.pickClub(); if (c) s.rival.club = c.id; s.rival.v2 = true; s.rival.form = 1; }
+      return s.rival;
+    }
+    const p = s.player, club = Rival.pickClub();
+    if (!club) return null;
+    const [nat, pool] = U.chance(0.5) ? [p.nation, (RIVAL_NATS.find(([n]) => n === p.nation) || [0, 'XX'])[1]] : U.pick(RIVAL_NATS.filter(([n]) => n !== p.nation));
     const ovr = Math.round(Player.overall(p) + U.randi(-1, 3));
-    const clubs = Object.values(s.world.clubs).filter((c) => c.league !== 'NONE' && c.id !== s.clubId && LEAGUES.find((l) => l.id === c.league && l.level === 1));
-    const myR = Game.club().rating;
-    const club = U.pick(clubs.filter((c) => Math.abs(c.rating - myR) <= 6).concat(clubs.slice(0, 1)));
-    s.rival = { name: NAME_POOLS[pool] ? World.genName(pool) : World.genName('XX'), nat, pos: p.position, age: p.age, ovr, club: club.id, look: U.randi(20, 900), season: { g: 0, a: 0, apps: 0 }, totals: { g: 0, a: 0, apps: 0, titles: 0, ballon: 0 }, passed: false };
-    Game.news(`👀 Aynı yaşta, aynı mevkide bir yıldız adayı daha var: ${s.rival.name} (${Game.nat(nat).name}). Basın ikinizi şimdiden kıyaslamaya başladı. Ezeli rakibin bu!`, 'me');
+    s.rival = { name: NAME_POOLS[pool] ? World.genName(pool) : World.genName('XX'), nat, pos: p.position, age: p.age, ovr, club: club.id, look: U.randi(20, 900), season: { g: 0, a: 0, apps: 0 }, totals: { g: 0, a: 0, apps: 0, titles: 0, ballon: 0 }, passed: false, v2: true, form: U.rand(0.9, 1.1) };
+    const der = Big.derby(club.id, s.clubId);
+    Game.news(`👀 ${der ? `${der} rakibi ${club.name}'da` : `Ligdeki rakip ${club.name}'da`} senin yaşında, senin mevkinde bir yıldız adayı var: ${s.rival.name}. Basın ikinizi şimdiden kıyaslıyor. Ezeli rakibin bu!`, 'me');
     return s.rival;
   },
   club() { const s = Game.state, r = s.rival; return r && s.world.clubs[r.club]; },
-  // her hafta rakibin maçı simüle edilir
+  // her hafta rakibin maçı: üretimi senin sezon performansına yakın tutulur, yarış hep çekişmeli kalır
   week() {
     const s = Game.state, r = Rival.ensure();
     if (!r) return;
-    const c = Rival.club();
-    const youth = r.age < 18;
-    const lam = { FW: 0.22, MF: 0.1, DF: 0.04 }[r.pos] * (youth ? 0.9 : 1) * U.clamp(1 + (r.ovr - (c ? c.rating : 70)) / 25, 0.4, 1.8);
-    const lamA = { FW: 0.12, MF: 0.16, DF: 0.06 }[r.pos] * U.clamp(1 + (r.ovr - (c ? c.rating : 70)) / 30, 0.5, 1.6);
-    const pois = (l) => { let k = 0, t = Math.exp(-l), pp = 1; do { k++; pp *= Math.random(); } while (pp > t); return k - 1; };
-    const g = pois(lam * 2.2), a = pois(lamA * 1.6);
+    const ss = s.season.stats;
+    const base = { FW: [0.42, 0.18], MF: [0.18, 0.27], DF: [0.06, 0.08] }[r.pos] || [0.3, 0.2];
+    const k = U.clamp(1 + (r.ovr - Player.overall(s.player)) / 20, 0.75, 1.25) * (r.form || 1);
+    const myG = ss.apps >= 3 ? ss.goals / ss.apps : base[0], myA = ss.apps >= 3 ? ss.assists / ss.apps : base[1];
+    const lamG = U.clamp((0.3 * base[0] + 0.75 * myG) * k, 0.03, 1.6), lamA = U.clamp((0.3 * base[1] + 0.75 * myA) * k, 0.03, 1.1);
+    const pois = (l) => { let n = 0, t = Math.exp(-l), pp = 1; do { n++; pp *= Math.random(); } while (pp > t); return n - 1; };
+    const g = pois(lamG), a = pois(lamA);
     r.season.apps++; r.season.g += g; r.season.a += a;
     r.totals.apps++; r.totals.g += g; r.totals.a += a;
     if (g >= 3) Game.news(`📰 Ezeli rakibin ${r.name} hat-trick yaptı! Gazeteler "${Player.fullName(s.player)} cevap verebilecek mi?" diye soruyor.`, 'world');
-    const ss = s.season.stats;
-    if (!r.passed && ss.goals + ss.assists > r.season.g + r.season.a && s.season.round > 5) {
-      r.passed = true;
-      Game.news(`📈 Bu sezon skor katkında ezeli rakibin ${r.name}'i geçtin!`, 'good');
-    }
+    const mine = ss.goals + ss.assists, his = r.season.g + r.season.a;
+    if (!r.passed && mine > his && s.season.round > 5) { r.passed = true; Game.news(`📈 Bu sezon skor katkında ezeli rakibin ${r.name}'i geçtin!`, 'good'); }
+    else if (r.passed && his > mine + 1) { r.passed = false; Game.news(`📉 Ezeli rakibin ${r.name} skor katkında seni geçti (${his} - ${mine})!`, 'bad'); }
   },
   // sezon sonu: gelişim, transfer, sezon karşılaştırması
   season() {
@@ -310,12 +322,18 @@ const Rival = {
     const mine = ss.goals + ss.assists, his = r.season.g + r.season.a;
     Game.news(mine >= his ? `🏁 Sezonu ezeli rakibin ${r.name}'in önünde bitirdin (${mine} - ${his} skor katkısı).` : `🏁 Ezeli rakibin ${r.name} bu sezon önde bitirdi (${his} - ${mine}). Seneye intikam!`, mine >= his ? 'good' : 'bad');
     r.age++;
-    r.ovr = U.clamp(r.ovr + (r.age < 21 ? U.randi(2, 5) : r.age < 25 ? U.randi(1, 3) : r.age < 30 ? U.randi(-1, 1) : -U.randi(1, 3)), 30, 94);
-    const c = Rival.club();
-    if (c && r.ovr > c.rating + 4) {
-      // gücüne yakın, mevcut kulübünden büyük bir kulüp
-      const big = Object.values(s.world.clubs).filter((x) => x.league !== 'NONE' && x.rating > c.rating && x.rating <= r.ovr + 2 && x.id !== s.clubId).sort((a, b) => b.rating - a.rating);
-      const to = big[Math.min(big.length - 1, U.randi(0, 3))];
+    // gelişimi seninkine yakın: güç farkı açılmaz
+    const myO = Player.overall(s.player);
+    r.ovr = U.clamp(Math.round(r.ovr + (myO - r.ovr) * 0.5 + U.randi(-1, 2)), 30, 94);
+    r.form = U.rand(0.9, 1.12);
+    const c = Rival.club(), me = Game.club();
+    // sen başka bir lige geçtiysen rakip de peşinden gelir
+    if (c && me && c.league !== me.league) {
+      const to = Rival.pickClub();
+      if (to) { r.club = to.id; Game.news(`✈️ Ezeli rakibin ${r.name} de senin ligine geldi: ${to.name}!`, 'world'); }
+    } else if (c && r.ovr > c.rating + 5) {
+      const big = Object.values(s.world.clubs).filter((x) => x.league === c.league && x.rating > c.rating && x.id !== s.clubId).sort((a, b) => b.rating - a.rating);
+      const to = big[Math.min(big.length - 1, U.randi(0, 2))];
       if (to) { r.club = to.id; Game.news(`✈️ Ezeli rakibin ${r.name}, ${to.name}'a transfer oldu!`, 'world'); }
     }
     r.season = { g: 0, a: 0, apps: 0 };
@@ -326,17 +344,66 @@ const Rival = {
     if (!r) return '';
     const c = Rival.club() || Game.club(), p = s.player, ss = s.season.stats;
     const myO = Player.overall(p), bar = (a, b) => `<i class="rv-bar"><i style="width:${(a / Math.max(1, a + b)) * 100}%"></i></i>`;
-    const rank = typeof Ballon !== 'undefined' ? Ballon.myRank() : 0;
+    const der = Big.derby(c.id, s.clubId);
     return `<section class="card rival">
-      <div class="card-h"><span>${Icon('fire')} Ezeli Rakibin</span>${rank ? `<span class="rv-bal">Altın Top: ${rank}.</span>` : ''}</div>
+      <div class="card-h"><span>${Icon('fire')} Ezeli Rakibin</span><small class="muted">${der ? U.esc(der) : 'aynı lig · aynı mevki'}</small></div>
       <div class="rv-top">
         <div class="rv-p me"><b>${U.esc(p.surname)}</b><small>${U.esc(Game.teamName())}</small><em>${myO}</em></div>
         <span class="rv-vs">VS</span>
-        <div class="rv-p">${UI.shirt(c)}<b>${U.esc(r.name.split(' ').slice(-1)[0])}</b><small>${U.esc(c.name)} · ${Game.nat(r.nat).code}</small><em>${r.ovr}</em></div>
+        <div class="rv-p">${UI.shirt(c)}<b>${U.esc(r.name.split(' ').slice(-1)[0])}</b><small>${U.esc(c.name)} · ${r.age} yaş</small><em>${r.ovr}</em></div>
       </div>
       <div class="rv-row"><span>${ss.goals}</span><label>Sezon golü</label><span>${r.season.g}</span></div>${bar(ss.goals, r.season.g)}
       <div class="rv-row"><span>${ss.assists}</span><label>Sezon asisti</label><span>${r.season.a}</span></div>${bar(ss.assists, r.season.a)}
       <div class="rv-row"><span>${p.totals.goals}</span><label>Kariyer golü</label><span>${r.totals.g}</span></div>${bar(p.totals.goals, r.totals.g)}
+    </section>`;
+  },
+};
+
+// ---------- Yaşıtların: benzer seviyedeki liglerde ±1 yaş, aynı mevki ----------
+const Peers = {
+  list() {
+    const s = Game.state, p = s.player, me = Game.club();
+    if (!s || Game.inStreet() || Game.isYouth() || !me) return [];
+    const myL = LEAGUES.find((l) => l.id === me.league);
+    if (!myL) return [];
+    const leagues = LEAGUES.filter((l) => l.level === myL.level);
+    const pick = (posOnly) => {
+      const out = [];
+      leagues.forEach((L) => {
+        const lg = s.world.leagues[L.id];
+        if (!lg) return;
+        const ages = {};
+        Object.values(s.world.clubs).forEach((c) => { if (c.league === L.id) (c.roster || []).forEach((pl) => (ages[pl.n + '|' + c.id] = pl)); });
+        const as = lg.assists || {}, sc = lg.scorers || {};
+        new Set(Object.keys(sc).concat(Object.keys(as))).forEach((k) => {
+          const pl = ages[k];
+          if (!pl || Math.abs(pl.age - p.age) > 1 || (posOnly && pl.pos !== p.position)) return;
+          const [n, club] = k.split('|');
+          if (n === Player.fullName(p)) return;
+          out.push({ n, club, age: pl.age, g: sc[k] || 0, a: as[k] || 0, lg: L.id });
+        });
+      });
+      return out;
+    };
+    let list = pick(true);
+    if (list.length < 6) list = pick(false);
+    const ss = s.season.stats;
+    list.push({ n: Player.fullName(p), club: s.clubId, age: p.age, g: ss.goals, a: ss.assists, me: true, lg: me.league });
+    const r = s.rival;
+    if (r && Math.abs(r.age - p.age) <= 1 && !list.some((x) => x.n === r.name)) list.push({ n: r.name, club: r.club, age: r.age, g: r.season.g, a: r.season.a, rival: true });
+    return list.sort((a, b) => (b.g + b.a) - (a.g + a.a) || b.g - a.g);
+  },
+  card() {
+    const s = Game.state, L = Peers.list();
+    if (L.length < 3) return '';
+    const mi = L.findIndex((x) => x.me);
+    const rows = L.slice(0, 5);
+    if (mi >= 5) rows.push(L[mi]);
+    const lvl = (LEAGUES.find((l) => l.id === Game.club().league) || {}).level === 2 ? '2. lig seviyesi' : 'üst ligler';
+    return `<section class="card peers">
+      <div class="card-h"><span>${Icon('team')} Yaşıtların</span><small class="muted">${s.player.age - 1}–${s.player.age + 1} yaş · ${lvl}</small></div>
+      <p class="pr-sum">Yaşıtların arasında <b>${mi + 1}.</b> sıradasın <small>(${L.length} oyuncu)</small></p>
+      <div class="scorers">${rows.map((x) => `<div class="scr ${x.me ? 'me' : ''} ${x.rival ? 'rv' : ''}"><span class="rk">${L.indexOf(x) + 1}</span>${UI.shirt(s.world.clubs[x.club] || Game.club())}<div class="scr-t"><b>${U.esc(x.n)}${x.me ? ' (sen)' : x.rival ? ' (ezeli rakip)' : ''}</b><small>${U.esc((s.world.clubs[x.club] || {}).name || '')} · ${x.age} yaş</small></div><b class="g">${x.g}<small>+${x.a}</small></b></div>`).join('')}</div>
     </section>`;
   },
 };

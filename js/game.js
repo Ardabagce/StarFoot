@@ -652,6 +652,8 @@ const Game = {
       Social.post('goal', 'Son dakika! Bu his paha biçilemez.', 1.6);
     }
     if (typeof Missions !== 'undefined') { Missions.afterMatch(sum); Traits.afterMatch(sum, ctx); Records.afterMatch(sum, comp); }
+    // ezeli rakip de senin her kulüp maçında oynar (lig + kupa), istatistikler denk kalır
+    if (comp !== 'intl' && !Game.inStreet() && typeof Rival !== 'undefined') Rival.week();
     Social.afterMatch(sum, teamTxt);
     if (comp !== 'intl') Captain.afterMatch(sum.played);
     const so1 = Social.ensure(p);
@@ -695,7 +697,6 @@ const Game = {
       if (Game.intlWeeks().includes(r)) Game.checkCallup();
       Game.transferWeek(r);
       if (!Game.inStreet()) Cups.week(s, r);
-      if (!Game.inStreet() && typeof Rival !== 'undefined') Rival.week();
       if (r === Math.floor(Game.rounds() / 2)) setTimeout(() => Game.seasonAd('midSeason'), 400);
       if (r >= Game.rounds()) {
         Game.save();
@@ -1156,19 +1157,17 @@ const UI = {
   report() {
     const s = Game.state, r = s.lastReport;
     if (!r) return '';
-    const sign = (v, f = (x) => x.toFixed(1)) => (v > 0.05 ? '+' : v < -0.05 ? '−' : '±') + f(Math.abs(v));
-    const chip = (ic, l, v, fmt, big) => `<div class="rp-chip ${v > 0.05 ? 'up' : v < -0.05 ? 'down' : ''} ${big ? 'big' : ''}">${Icon(ic)}<span>${l}</span><b>${sign(v, fmt)}</b></div>`;
-    return `<section class="card report res-${r.res}">
-      <div class="card-h"><span>${Icon('whistle')} Maç Sonrası</span><small class="muted">${r.w}</small></div>
-      <div class="rp-top">
-        <div class="rp-score"><small>${U.esc(r.team)}</small><b>${r.gf} - ${r.ga}</b><small>${U.esc(r.opp)}</small></div>
-        ${r.rating != null ? `<div class="rp-rt ${r.rating >= 7.5 ? 'hi' : r.rating < 6 ? 'lo' : 'mid'}"><small>Reyting</small><b>${r.rating.toFixed(1)}</b>${r.motm ? '<i>Maçın Adamı</i>' : ''}</div>` : ''}
+    const sign = (v, f = (x) => x.toFixed(1)) => (v > 0.05 ? '+' : '−') + f(Math.abs(v));
+    const chips = [['Hoca', r.d.coach], ['Takım', r.d.team], ['Taraftar', r.d.fans], ['Takipçi', r.d.fol, (x) => Social.fmt(Math.round(x))], ['Ün', r.d.fame], ['Moral', r.d.morale, (x) => Math.round(x)]]
+      .filter(([, v]) => Math.abs(v) > 0.05)
+      .map(([l, v, f]) => `<span class="${v > 0 ? 'up' : 'down'}">${l} <b>${sign(v, f)}</b></span>`).join('');
+    return `<section class="card report mini res-${r.res}">
+      <div class="rpm">
+        <span class="rpm-k">Son maç<small>${r.w}</small></span>
+        <span class="rpm-s"><b>${r.gf} - ${r.ga}</b><small>${U.esc(r.opp)}</small></span>
+        ${r.rating != null ? `<span class="rp-rt ${r.rating >= 7.5 ? 'hi' : r.rating < 6 ? 'lo' : 'mid'}"><b>${r.rating.toFixed(1)}</b>${r.motm ? '<i>MVP</i>' : ''}</span>` : ''}
       </div>
-      <div class="rp-chips">
-        ${chip('whistle', 'Hoca', r.d.coach)}${chip('team', 'Takım', r.d.team)}${chip('fans', 'Taraftar', r.d.fans)}
-        ${chip('phone', 'Takipçi', r.d.fol, (x) => Social.fmt(Math.round(x)), true)}${chip('star', 'Ün', r.d.fame)}${chip('smile', 'Moral', r.d.morale, (x) => Math.round(x))}
-      </div>
-      ${r.why.length ? `<div class="rp-why">${r.why.map((x) => `<span>${U.esc(x)}</span>`).join('')}</div>` : ''}
+      ${chips ? `<div class="rpm-chips">${chips}</div>` : ''}
     </section>`;
   },
 
@@ -1470,7 +1469,6 @@ const UI = {
       ['fans', 'phone', 'Sosyal Medya', 'Paylaşım yap, takipçi kazan', '−3 enerji'],
     ];
     return `
-      ${UI.report()}
       <div class="grid2">
         <section class="card next ${CompTheme.cls(nTheme)}" style="${CompTheme.vars(nTheme)}">
           <div class="card-h"><span>${Icon('whistle')} Maç Günü</span><span class="tag role-${roleK}">${role}</span></div>
@@ -1482,8 +1480,9 @@ const UI = {
           <button class="btn btn-play" data-go="match">${Icon('play')} ${Game.inStreet() && s.street.trials ? 'Seçmelere Katıl' : 'Maça Çık'}</button>
           ${s.ap > 0 ? `<div class="hint">Bu hafta ${s.ap} aksiyon hakkın daha var.</div>` : ''}
         </section>
+        ${UI.report()}
         ${typeof Scenario !== 'undefined' ? Scenario.card() : ''}
-        ${typeof Missions !== 'undefined' ? Missions.card() + Rival.card() : ''}
+        ${typeof Missions !== 'undefined' ? Missions.card() : ''}
         <section class="card plan">
           <div class="card-h"><span>${Icon('train')} Haftalık Plan</span><span class="ap-pips ${s.ap ? '' : 'done'}" title="Aksiyon hakkı">${[0, 1, 2].map((i) => `<i class="${i < s.ap ? 'on' : ''}"></i>`).join('')}<b>${s.ap ? `${s.ap} hak` : 'Maç günü'}</b></span></div>
           ${UI.adAp()}
@@ -1883,7 +1882,7 @@ ${UI.paper()}`;
   career() {
     const p = Game.p, t = p.totals;
     const hist = p.history.slice().reverse();
-    return `${typeof Traits !== 'undefined' ? Traits.card() + Records.card() : ''}
+    return `${typeof Traits !== 'undefined' ? Rival.card() + Peers.card() + Traits.card() + Records.card() : ''}
       <div class="card">
         <div class="card-h"><span>${Icon('career')} Kariyer Özeti</span></div>
         <div class="ms-grid big">

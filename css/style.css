@@ -1876,3 +1876,22 @@ button, .btn, a, [data-act], [data-tab] { touch-action: manipulation; -webkit-ta
 .sh-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .sh-btns .btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; }
 .scn-r > i:empty { display: none; }
+/* Maç sonrası: küçük şerit */
+.report.mini { padding: 10px 14px; }
+.rpm { display: flex; align-items: center; gap: 12px; }
+.rpm-k { display: flex; flex-direction: column; font-family: var(--display); font-weight: 800; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.rpm-k small { font-family: var(--body); font-weight: 500; font-size: 11px; letter-spacing: 0; text-transform: none; }
+.rpm-s { flex: 1; display: flex; align-items: baseline; gap: 8px; min-width: 0; }
+.rpm-s b { font-family: var(--display); font-weight: 800; font-size: 24px; white-space: nowrap; }
+.rpm-s small { font-size: 13px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.report.mini .rp-rt { padding: 4px 10px; }
+.report.mini .rp-rt b { font-size: 20px; }
+.rpm-chips { display: flex; flex-wrap: wrap; gap: 4px 10px; margin-top: 6px; font-size: 12px; color: var(--muted); }
+.rpm-chips b { font-variant-numeric: tabular-nums; }
+.rpm-chips .up b { color: #46e08f; } .rpm-chips .down b { color: #ff6f64; }
+/* Yaşıtların */
+.pr-sum { margin: 0 0 8px; font-size: 14px; }
+.pr-sum b { color: var(--flood); font-size: 18px; }
+.pr-sum small { color: var(--muted); }
+.peers .scr.rv b { color: #ff8a8a; }
+.peers .g small { font-size: 12px; color: var(--muted); margin-left: 2px; }
