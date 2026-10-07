@@ -356,8 +356,9 @@ const Match = {
       let auto = false;
       $('mm-auto').onclick = () => { auto = true; if (MiniGame._abort) MiniGame._abort(); };
       // mahalle maçında ofsayt yok
-      const mkScene = () => { const sc = Scenes.make(type, { skill, mates: mateNames, position: p.position, pace: st.pace, narrow: narrow() }); if (street) sc.offside = null; return sc; };
-      const opts = { stats: st, skill, cond, kits, number: p.shirt, mateChance, captain: !!ctx.captain, weather };
+      const sk = typeof Traits !== 'undefined' ? Traits.adj(skill, type, ctx, M) : skill;
+      const mkScene = () => { const sc = Scenes.make(type, { skill: sk, mates: mateNames, position: p.position, pace: st.pace, narrow: narrow() }); if (street) sc.offside = null; return sc; };
+      const opts = { stats: st, skill: sk, cond, kits, number: p.shirt, mateChance, captain: !!ctx.captain, weather };
       let r = await MiniGame.play($('mm-host'), mkScene(), opts);
       // Ödüllü reklam: kaçan şutu bir kez daha oyna (maç başına bir kez teklif edilir)
       if (!auto && ['saved', 'post', 'bar', 'miss', 'blocked'].includes(r.outcome) && !M.retryOffered) {
@@ -399,7 +400,7 @@ const Match = {
       let auto = false;
       $('mm-auto').onclick = () => { auto = true; if (MiniGame._abort) MiniGame._abort(); };
       lastAuto = false;
-      const r = await MiniGame[fn]($('mm-host'), Object.assign({ skill, kits, number: p.shirt, pace: st.pace, passing: st.passing, mates: mateNames, cond }, extra));
+      const r = await MiniGame[fn]($('mm-host'), Object.assign({ skill: typeof Traits !== 'undefined' ? Traits.adj(skill, type, ctx, M) : skill, kits, number: p.shirt, pace: st.pace, passing: st.passing, mates: mateNames, cond }, extra));
       hideMoment();
       if (auto || r.result === 'auto') { lastAuto = true; return autoTiming(k, bonus); }
       return r.result;
@@ -500,6 +501,7 @@ const Match = {
         const r = await playMini('dribble', 'dribble', 'dribble', 0.3, { rounds: skill < 0.25 ? 1 : skill < 0.6 ? 2 : 3, dribbling: st.dribbling });
         if (r === 'success') {
           rate(0.3);
+          M.dribbles = (M.dribbles || 0) + 1;
           feed(`💨 <b>${M.min}'</b> ${U.esc(pname)} rakiplerini çalımlarla geçti!`);
           canvasOutcome('close', await playCanvas('close'));
         } else if (r === 'partial') {
@@ -641,7 +643,7 @@ const Match = {
       refresh();
       const summary = {
         gf, ga, res, hs: M.hs, as: M.as, played, energySave: 0, energyStart: M.e0, energyEnd: M.energy, minutes: Math.max(0, minutes), rating: played ? rating : null,
-        goals: M.goals, assists: M.assists, yellow: M.yellow, red: M.red, motm, lateGoal: !!M.lateGoal,
+        goals: M.goals, assists: M.assists, yellow: M.yellow, red: M.red, motm, lateGoal: !!M.lateGoal, dribbles: M.dribbles || 0,
         ownScorers: M.ownScorers, oppScorers: M.oppScorers, statsUsed: [...M.statsUsed], goalTypes: M.gt, shots: M.shots, keyPasses: M.keyPasses, tackles: M.tackles,
       };
       const resTxt = { W: 'GALİBİYET', D: 'BERABERLİK', L: 'MAĞLUBİYET' }[res];

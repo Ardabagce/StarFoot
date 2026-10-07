@@ -131,7 +131,15 @@ const Game = {
       return `<div class="slot"><span class="sl-n">${i + 1}</span><div class="sl-t"><b>${U.esc(d.player.name + ' ' + d.player.surname)}</b><small>${d.player.age} yaş · ${U.esc(club ? club.name : '')} · ${d.season.year}</small></div>
         <button class="btn btn-play" data-cont="${i}">Devam</button><button class="btn btn-ghost sl-del" data-del="${i}" aria-label="Kariyeri sil">${Icon('trash')}</button></div>`;
     }).join('');
-    U.$$('[data-new]', box).forEach((b) => (b.onclick = () => { Game.slot = +b.dataset.new; Create.open(); }));
+    U.$$('[data-new]', box).forEach((b) => (b.onclick = () => { Game.slot = +b.dataset.new; Create.heir = null; Create.open(); }));
+    const tx = document.getElementById('title-x');
+    if (tx && typeof Legacy !== 'undefined') {
+      const nb = Object.keys(Scenario.badges()).length;
+      tx.innerHTML = `<button class="btn btn-ghost" id="t-scn">🎯 Senaryolar${nb ? ` <em>${nb}/${SCEN.length}</em>` : ''}</button><button class="btn btn-ghost" id="t-hof">🏛️ Efsaneler Salonu${Legacy.list().length ? ` <em>${Legacy.list().length}</em>` : ''}</button>`;
+      UI.strip(tx);
+      document.getElementById('t-scn').onclick = () => Scenario.menu();
+      document.getElementById('t-hof').onclick = () => Legacy.show();
+    }
     U.$$('[data-cont]', box).forEach((b) => (b.onclick = () => { Game.slot = +b.dataset.cont; Game.state = Game.load(); Game.enterHub(); }));
     U.$$('[data-del]', box).forEach((b) => (b.onclick = () => {
       const i = +b.dataset.del;
@@ -176,6 +184,7 @@ const Game = {
       seasonEnd: null,
     };
     Cups.setup(Game.state);
+    if (opts.heir && typeof Legacy !== 'undefined') Legacy.apply(Game.state, opts.heir);
     if (!trials) {
       Game.news(`${opts.name} ${player.age} yaşında, ${year} yılında mahallede top koşturan bir çocuk. Bugün mahalleler arası maç var ve kenarda bir scout izliyor!`, 'good');
     } else {
@@ -642,7 +651,7 @@ const Game = {
       Game.news(`⏱️ SON DAKİKA! ${Player.fullName(p)} maçın son anlarında sahneye çıktı!`, 'good');
       Social.post('goal', 'Son dakika! Bu his paha biçilemez.', 1.6);
     }
-    if (typeof Missions !== 'undefined') Missions.afterMatch(sum);
+    if (typeof Missions !== 'undefined') { Missions.afterMatch(sum); Traits.afterMatch(sum, ctx); Records.afterMatch(sum, comp); }
     Social.afterMatch(sum, teamTxt);
     if (comp !== 'intl') Captain.afterMatch(sum.played);
     const so1 = Social.ensure(p);
@@ -686,6 +695,7 @@ const Game = {
       if (Game.intlWeeks().includes(r)) Game.checkCallup();
       Game.transferWeek(r);
       if (!Game.inStreet()) Cups.week(s, r);
+      if (!Game.inStreet() && typeof Rival !== 'undefined') Rival.week();
       if (r === Math.floor(Game.rounds() / 2)) setTimeout(() => Game.seasonAd('midSeason'), 400);
       if (r >= Game.rounds()) {
         Game.save();
@@ -878,6 +888,8 @@ const Game = {
       Cups.runTournament(s).then(() => Game.endSeason());
       return;
     }
+    // sezon sonu zaten hesaplandıysa (tören sürerken tekrar tetiklenirse) yeniden işleme
+    if (s.seasonEnd && s.seasonEnd.year === s.season.year) return;
     s.lastTables = {};
     LEAGUES.forEach((l) => { s.lastTables[l.id] = World.sortedTable(s.world.leagues[l.id]).map((r) => r.id); });
     Nations.season(s);
@@ -925,6 +937,8 @@ const Game = {
 
     // dünya
     const prevLeague = Game.club().league;
+    // Altın Top sıralaması lig istatistikleri sıfırlanmadan önce dondurulur
+    if (typeof Ballon !== 'undefined') { s.ballonFinal = null; s.ballonFinal = Ballon.ranking(); }
     const rel = World.endSeason(s.world);
     // dönem yıldızları: yaşlanma, emeklilik, yeni yetenekler, transferler
     const lnews = Legends.season(s.world, s.season.year + 1);
@@ -980,11 +994,14 @@ const Game = {
     };
     Game.save();
     // lig şampiyonluğunda önce kupa kaldırma töreni
-    if (pos === 1 && typeof Celebrate !== 'undefined') Celebrate.champion(`${compName} Şampiyonu`, Game.teamName()).then(() => SeasonEnd.show());
-    else SeasonEnd.show();
+    // sezon sonu sırası: şampiyonluk töreni → Altın Top → ezeli rakip özeti → sezon sonu ekranı
+    const after = () => (typeof Ballon !== 'undefined' ? Ballon.ceremony() : Promise.resolve()).catch(() => {}).then(() => (typeof Scenario !== 'undefined' ? Scenario.result() : null)).catch(() => {}).then(() => { if (typeof Rival !== 'undefined') Rival.season(); Game.save(); SeasonEnd.show(); });
+    if (pos === 1 && typeof Celebrate !== 'undefined') Celebrate.champion(`${compName} Şampiyonu`, Game.teamName()).then(after);
+    else after();
   },
 
   startNewSeason(choice) {
+    if (Game.state) Game.state.ballonFinal = null;
     const s = Game.state, p = s.player;
     const se = s.seasonEnd;
     let welcome = null;
@@ -1052,10 +1069,14 @@ const Game = {
 
   retire() {
     const s = Game.state, p = s.player;
+    const hasL = typeof Legacy !== 'undefined';
+    const heir = hasL ? Legacy.heirOf(s) : null;
+    const hof = hasL ? Legacy.record(s) : null;
+    const shareCv = hasL ? ShareCard.player() : null;
     Game.wipe();
     const t = p.totals;
     const avg = t.apps ? (t.ratingSum / t.apps).toFixed(2) : '-';
-    const legend = Math.round(t.goals * 1 + t.assists * 0.6 + p.trophies.length * 8 + p.intl.caps * 1.5 + p.fame * 2);
+    const legend = hasL ? Legacy.score(p) : Math.round(t.goals * 1 + t.assists * 0.6 + p.trophies.length * 8 + p.intl.caps * 1.5 + p.fame * 2);
     const title = legend > 900 ? 'Efsane' : legend > 500 ? 'Süperstar' : legend > 250 ? 'Saygın Profesyonel' : legend > 100 ? 'Emektar Futbolcu' : 'Sıradan Bir Kariyer';
     const el = document.getElementById('end');
     el.innerHTML = `
@@ -1075,8 +1096,12 @@ const Game = {
         </div>
         <h3>Kupalar ve Ödüller</h3>
         <ul class="trophies">${p.trophies.map((x) => `<li>${U.esc(x)}</li>`).join('') || '<li>Ödül yok</li>'}</ul>
-        <button class="btn btn-big" onclick="Game.toMenu()">Ana Menü</button>
+        ${hof ? `<div class="hof-rank">🏛️ Efsaneler Salonu'nda <b>${hof.rank}.</b> sıradasın</div>` : ''}
+        ${heir ? `<div class="heir"><b>👶 Oğlunla devam et</b><small>${U.esc(heir.surname)} ailesinin ${heir.gen}. nesli · Miras: +${heir.stat} tüm yetenekler, ${heir.fame} ün${heir.money ? `, ${U.money(heir.money)}` : ''}</small><button class="btn" id="end-heir">Yeni Nesil</button></div>` : ''}
+        <div class="end-btns">${shareCv ? `<button class="btn btn-ghost" id="end-share">${Icon('share')} Paylaş</button>` : ''}<button class="btn btn-big" onclick="Game.toMenu()">Ana Menü</button></div>
       </div>`;
+    if (heir) el.querySelector('#end-heir').onclick = () => Legacy.continueWith(heir);
+    if (shareCv) el.querySelector('#end-share').onclick = () => ShareCard.preview(shareCv, ShareCard.text());
     UI.strip(el);
     Game.show('end');
   },
@@ -1368,6 +1393,7 @@ const UI = {
           </div>
           <div class="pc-ovr ${UI.statColor(ovr)}"><b>${ovr}</b><span>GÜÇ${ovrI > ovr ? ` +${ovrI - ovr}` : ''}</span></div>
         </div>
+        ${typeof ShareCard !== 'undefined' ? `<button class="btn btn-ghost sh-btn" data-share="player">${Icon('share')} Oyuncu kartını paylaş</button>` : ''}
         ${p.injuryWeeks ? `<div class="pc-inj">${Icon('injury')} Sakat · ${p.injuryWeeks} hafta</div>` : ''}
         <div class="pc-meta">
           <span class="pot">${'★'.repeat(stars)}<i>${'★'.repeat(5 - stars)}</i> potansiyel</span>
@@ -1456,7 +1482,8 @@ const UI = {
           <button class="btn btn-play" data-go="match">${Icon('play')} ${Game.inStreet() && s.street.trials ? 'Seçmelere Katıl' : 'Maça Çık'}</button>
           ${s.ap > 0 ? `<div class="hint">Bu hafta ${s.ap} aksiyon hakkın daha var.</div>` : ''}
         </section>
-        ${typeof Missions !== 'undefined' ? Missions.card() : ''}
+        ${typeof Scenario !== 'undefined' ? Scenario.card() : ''}
+        ${typeof Missions !== 'undefined' ? Missions.card() + Rival.card() : ''}
         <section class="card plan">
           <div class="card-h"><span>${Icon('train')} Haftalık Plan</span><span class="ap-pips ${s.ap ? '' : 'done'}" title="Aksiyon hakkı">${[0, 1, 2].map((i) => `<i class="${i < s.ap ? 'on' : ''}"></i>`).join('')}<b>${s.ap ? `${s.ap} hak` : 'Maç günü'}</b></span></div>
           ${UI.adAp()}
@@ -1856,7 +1883,7 @@ ${UI.paper()}`;
   career() {
     const p = Game.p, t = p.totals;
     const hist = p.history.slice().reverse();
-    return `
+    return `${typeof Traits !== 'undefined' ? Traits.card() + Records.card() : ''}
       <div class="card">
         <div class="card-h"><span>${Icon('career')} Kariyer Özeti</span></div>
         <div class="ms-grid big">
@@ -1964,7 +1991,7 @@ ${UI.paper()}`;
         ${UI.kings(lg, name, (id) => s.world.clubs[id], selL.name)}
       </div>` : ''}
       ${UI.wView === 'nations' ? Nations.screen(s) : ''}
-      ${UI.wView === 'stars' ? `
+      ${UI.wView === 'stars' ? `${typeof Ballon !== 'undefined' ? Ballon.card() : ''}
       <section class="card">
         <div class="card-h"><span>${Icon('star')} Dönemin Yıldızları</span><small class="muted">${s.season.year}</small></div>
         <div class="scorers">${UI.topPlayers(25).map((x, i) => `<div class="scr ${x.me ? 'me' : ''}"><span class="rk">${i + 1}</span>${UI.shirt(s.world.clubs[x.club] || Game.club())}<div class="scr-t"><b>${U.esc(x.n)}${x.me ? ' (sen)' : ''}</b><small>${U.esc((s.world.clubs[x.club] || {}).name || '')} · ${x.age} yaş · ${{ GK: 'Kaleci', DF: 'Defans', MF: 'Orta Saha', FW: 'Forvet' }[x.pos]}</small></div><b class="g">${x.r}</b></div>`).join('')}</div>
@@ -2063,6 +2090,7 @@ ${UI.paper()}`;
       });
     }));
     U.$$('[data-mission-claim]', root).forEach((b) => (b.onclick = () => Missions.claim()));
+    U.$$('[data-share="player"]', root).forEach((b) => (b.onclick = () => ShareCard.preview(ShareCard.player(), ShareCard.text())));
     const ntg = root.querySelector('#notif-tg');
     if (ntg) ntg.onchange = () => Notify.setOn(ntg.checked);
     U.$$('[data-prem-buy]', root).forEach((b) => (b.onclick = () => { b.disabled = true; Premium.buy(); }));
@@ -2146,11 +2174,13 @@ const SeasonEnd = {
       <p>🎂 Artık <b>${p.age}</b> yaşındasın! ${ch ? 'Doğal gelişim:' : ''}</p>
       <div class="chgs">${ch}</div>
       ${se.msg.map((m) => `<p class="se-msg">${m}</p>`).join('')}
-      ${se.offers.length ? `<div class="offers">${se.offers.map((o, i) => UI.offerRow(o, i, 'end')).join('')}</div>` : ''}`;
+      ${se.offers.length ? `<div class="offers">${se.offers.map((o, i) => UI.offerRow(o, i, 'end')).join('')}</div>` : ''}
+      ${typeof ShareCard !== 'undefined' ? `<button class="btn btn-ghost sh-btn" data-share="season">${Icon('share')} Sezon kartını paylaş</button>` : ''}`;
     const btns = [];
     if (!se.mandatory) btns.push({ t: se.offers.length ? (Game.isYouth() ? 'Altyapıda Devam Et' : 'Kulübümde Kal') : 'Yeni Sezona Başla', fn: () => Game.startNewSeason(null) });
     if (se.canRetire) btns.push({ t: '👋 Emekli Ol', cls: 'btn-ghost', fn: () => Game.retire() });
     const m = Game.modal(html, btns, { wide: true });
+    U.$$('[data-share="season"]', m).forEach((b) => (b.onclick = () => ShareCard.preview(ShareCard.season(), ShareCard.text())));
     U.$$('[data-offer]', m).forEach((b) => (b.onclick = () => {
       const o = se.offers[+b.dataset.offer];
       m.classList.add('hidden'); m.innerHTML = '';
@@ -2408,14 +2438,27 @@ const Create = {
     };
     ageSel.onchange = updAge; yearSel.onchange = updYear;
     updAge(); updYear();
+    const H = Create.heir;
+    if (H) {
+      const sur = document.getElementById('cr-sur');
+      sur.value = H.surname; sur.readOnly = true;
+      document.getElementById('cr-nat').value = H.nation; document.getElementById('cr-mom').value = H.mother;
+      if (yearSel.querySelector(`option[value="${H.year}"]`)) yearSel.value = H.year;
+      const pb = el.querySelector(`#cr-pos [data-pos="${H.position}"]`); if (pb) pb.click();
+      const fb = el.querySelector(`#cr-foot [data-foot="${H.foot}"]`); if (fb) fb.click();
+      el.querySelector('.cr-hero-t').insertAdjacentHTML('beforeend', `<div class="heir-tag">👶 ${H.gen}. nesil · Baban ${U.esc(H.father)} · Miras: +${H.stat} tüm yetenekler, ${H.fame} ün</div>`);
+      UI.strip(el.querySelector('.heir-tag'));
+      updYear();
+    }
     document.getElementById('cr-go').onclick = () => {
       const name = document.getElementById('cr-name').value.trim() || 'Emre';
       const surname = document.getElementById('cr-sur').value.trim() || 'Yıldız';
       Game.newCareer({
         name, surname, nation: document.getElementById('cr-nat').value, mother: document.getElementById('cr-mom').value, foot: Create.foot,
         position: Create.pos, alloc: Create.alloc, difficulty: Create.diff,
-        year: +yearSel.value, age: +ageSel.value,
+        year: +yearSel.value, age: +ageSel.value, heir: Create.heir || null,
       });
+      Create.heir = null;
     };
   },
   // Oyuncunun başlayacağı yaşa göre taban stat (Player.create ile aynı)

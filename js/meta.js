@@ -264,3 +264,274 @@ const Notify = {
   },
 };
 document.addEventListener('visibilitychange', () => { if (document.hidden) Notify.schedule(); else Notify.cancel(); });
+
+// ---------- Ezeli rakip ----------
+const RIVAL_NATS = [['BRA', 'BR'], ['ARG', 'AR'], ['FRA', 'FR'], ['ESP', 'ES'], ['ENG', 'EN'], ['POR', 'PT'], ['GER', 'DE'], ['ITA', 'IT'], ['NED', 'NL'], ['TUR', 'TR']];
+const Rival = {
+  ensure() {
+    const s = Game.state;
+    if (!s || Game.inStreet()) return null;
+    if (s.rival) return s.rival;
+    const p = s.player;
+    const [nat, pool] = U.pick(RIVAL_NATS.filter(([n]) => n !== p.nation));
+    const ovr = Math.round(Player.overall(p) + U.randi(-1, 3));
+    const clubs = Object.values(s.world.clubs).filter((c) => c.league !== 'NONE' && c.id !== s.clubId && LEAGUES.find((l) => l.id === c.league && l.level === 1));
+    const myR = Game.club().rating;
+    const club = U.pick(clubs.filter((c) => Math.abs(c.rating - myR) <= 6).concat(clubs.slice(0, 1)));
+    s.rival = { name: NAME_POOLS[pool] ? World.genName(pool) : World.genName('XX'), nat, pos: p.position, age: p.age, ovr, club: club.id, look: U.randi(20, 900), season: { g: 0, a: 0, apps: 0 }, totals: { g: 0, a: 0, apps: 0, titles: 0, ballon: 0 }, passed: false };
+    Game.news(`👀 Aynı yaşta, aynı mevkide bir yıldız adayı daha var: ${s.rival.name} (${Game.nat(nat).name}). Basın ikinizi şimdiden kıyaslamaya başladı. Ezeli rakibin bu!`, 'me');
+    return s.rival;
+  },
+  club() { const s = Game.state, r = s.rival; return r && s.world.clubs[r.club]; },
+  // her hafta rakibin maçı simüle edilir
+  week() {
+    const s = Game.state, r = Rival.ensure();
+    if (!r) return;
+    const c = Rival.club();
+    const youth = r.age < 18;
+    const lam = { FW: 0.22, MF: 0.1, DF: 0.04 }[r.pos] * (youth ? 0.9 : 1) * U.clamp(1 + (r.ovr - (c ? c.rating : 70)) / 25, 0.4, 1.8);
+    const lamA = { FW: 0.12, MF: 0.16, DF: 0.06 }[r.pos] * U.clamp(1 + (r.ovr - (c ? c.rating : 70)) / 30, 0.5, 1.6);
+    const pois = (l) => { let k = 0, t = Math.exp(-l), pp = 1; do { k++; pp *= Math.random(); } while (pp > t); return k - 1; };
+    const g = pois(lam * 2.2), a = pois(lamA * 1.6);
+    r.season.apps++; r.season.g += g; r.season.a += a;
+    r.totals.apps++; r.totals.g += g; r.totals.a += a;
+    if (g >= 3) Game.news(`📰 Ezeli rakibin ${r.name} hat-trick yaptı! Gazeteler "${Player.fullName(s.player)} cevap verebilecek mi?" diye soruyor.`, 'world');
+    const ss = s.season.stats;
+    if (!r.passed && ss.goals + ss.assists > r.season.g + r.season.a && s.season.round > 5) {
+      r.passed = true;
+      Game.news(`📈 Bu sezon skor katkında ezeli rakibin ${r.name}'i geçtin!`, 'good');
+    }
+  },
+  // sezon sonu: gelişim, transfer, sezon karşılaştırması
+  season() {
+    const s = Game.state, r = s.rival;
+    if (!r) return;
+    const ss = s.season.stats;
+    const mine = ss.goals + ss.assists, his = r.season.g + r.season.a;
+    Game.news(mine >= his ? `🏁 Sezonu ezeli rakibin ${r.name}'in önünde bitirdin (${mine} - ${his} skor katkısı).` : `🏁 Ezeli rakibin ${r.name} bu sezon önde bitirdi (${his} - ${mine}). Seneye intikam!`, mine >= his ? 'good' : 'bad');
+    r.age++;
+    r.ovr = U.clamp(r.ovr + (r.age < 21 ? U.randi(2, 5) : r.age < 25 ? U.randi(1, 3) : r.age < 30 ? U.randi(-1, 1) : -U.randi(1, 3)), 30, 94);
+    const c = Rival.club();
+    if (c && r.ovr > c.rating + 4) {
+      // gücüne yakın, mevcut kulübünden büyük bir kulüp
+      const big = Object.values(s.world.clubs).filter((x) => x.league !== 'NONE' && x.rating > c.rating && x.rating <= r.ovr + 2 && x.id !== s.clubId).sort((a, b) => b.rating - a.rating);
+      const to = big[Math.min(big.length - 1, U.randi(0, 3))];
+      if (to) { r.club = to.id; Game.news(`✈️ Ezeli rakibin ${r.name}, ${to.name}'a transfer oldu!`, 'world'); }
+    }
+    r.season = { g: 0, a: 0, apps: 0 };
+    r.passed = false;
+  },
+  card() {
+    const s = Game.state, r = Rival.ensure();
+    if (!r) return '';
+    const c = Rival.club() || Game.club(), p = s.player, ss = s.season.stats;
+    const myO = Player.overall(p), bar = (a, b) => `<i class="rv-bar"><i style="width:${(a / Math.max(1, a + b)) * 100}%"></i></i>`;
+    const rank = typeof Ballon !== 'undefined' ? Ballon.myRank() : 0;
+    return `<section class="card rival">
+      <div class="card-h"><span>${Icon('fire')} Ezeli Rakibin</span>${rank ? `<span class="rv-bal">Altın Top: ${rank}.</span>` : ''}</div>
+      <div class="rv-top">
+        <div class="rv-p me"><b>${U.esc(p.surname)}</b><small>${U.esc(Game.teamName())}</small><em>${myO}</em></div>
+        <span class="rv-vs">VS</span>
+        <div class="rv-p">${UI.shirt(c)}<b>${U.esc(r.name.split(' ').slice(-1)[0])}</b><small>${U.esc(c.name)} · ${Game.nat(r.nat).code}</small><em>${r.ovr}</em></div>
+      </div>
+      <div class="rv-row"><span>${ss.goals}</span><label>Sezon golü</label><span>${r.season.g}</span></div>${bar(ss.goals, r.season.g)}
+      <div class="rv-row"><span>${ss.assists}</span><label>Sezon asisti</label><span>${r.season.a}</span></div>${bar(ss.assists, r.season.a)}
+      <div class="rv-row"><span>${p.totals.goals}</span><label>Kariyer golü</label><span>${r.totals.g}</span></div>${bar(p.totals.goals, r.totals.g)}
+    </section>`;
+  },
+};
+
+// ---------- Altın Top ----------
+const BALLON_LEAGUES = ['ENG', 'ESP', 'GER', 'ITA', 'FRA', 'TR1', 'POR', 'NED', 'BRA', 'ARG', 'KSA', 'USA'];
+const Ballon = {
+  // sezon içi canlı sıralama: gol, asist, kulüp gücü ve lig ağırlığı
+  ranking() {
+    const s = Game.state;
+    if (!s || Game.inStreet()) return [];
+    if (s.ballonFinal) return s.ballonFinal;
+    const list = [];
+    BALLON_LEAGUES.forEach((lid) => {
+      const lg = s.world.leagues[lid], L = LEAGUES.find((l) => l.id === lid);
+      if (!lg || !L) return;
+      const as = {};
+      World.topAssists(lg, 30).forEach((x) => (as[x.name + '|' + x.club] = x.g));
+      World.topScorers(lg, 6).forEach((x) => {
+        const c = s.world.clubs[x.club];
+        if (!c || x.name === Player.fullName(s.player)) return;
+        const pts = x.g * 1 + (as[x.name + '|' + x.club] || 0) * 0.6 + (c.rating - 70) * 0.25 + L.fame * 4;
+        list.push({ n: x.name, club: x.club, g: x.g, a: as[x.name + '|' + x.club] || 0, pts });
+      });
+    });
+    const p = s.player, ss = s.season.stats, L = LEAGUES.find((l) => l.id === Game.club().league) || { fame: 1 };
+    if (!Game.isYouth()) {
+      const avg = ss.apps ? ss.ratingSum / ss.apps : 6;
+      list.push({ n: Player.fullName(p), club: s.clubId, g: ss.goals, a: ss.assists, me: true, pts: ss.goals + ss.assists * 0.6 + (Game.club().rating - 70) * 0.25 + L.fame * 4 + (avg - 6.8) * 4 + (p.position === 'DF' ? ss.apps * 0.25 : 0) });
+    }
+    const r = s.rival;
+    if (r && r.age >= 17) {
+      const c = s.world.clubs[r.club], RL = c && LEAGUES.find((l) => l.id === c.league);
+      if (c) list.push({ n: r.name, club: r.club, g: r.season.g, a: r.season.a, rival: true, pts: r.season.g + r.season.a * 0.6 + (c.rating - 70) * 0.25 + (RL ? RL.fame : 1) * 4 + (r.ovr - 75) * 0.3 });
+    }
+    return list.sort((a, b) => b.pts - a.pts).slice(0, 30);
+  },
+  myRank() { const i = Ballon.ranking().findIndex((x) => x.me); return i >= 0 && i < 30 ? i + 1 : 0; },
+  card() {
+    const s = Game.state, top = Ballon.ranking();
+    if (!top.length) return '';
+    const mi = top.findIndex((x) => x.me);
+    const rows = top.slice(0, 10);
+    if (mi >= 10) rows.push(top[mi]);
+    return `<section class="card ballon">
+      <div class="card-h"><span>${Icon('star')} Altın Top Yarışı</span><small class="muted">${s.season.year} · ${s.ballonFinal ? 'final' : 'canlı'}</small></div>
+      <div class="scorers">${rows.map((x) => `<div class="scr ${x.me ? 'me' : ''} ${x.rival ? 'rv' : ''}"><span class="rk">${top.indexOf(x) + 1}</span>${UI.shirt(s.world.clubs[x.club] || Game.club())}<div class="scr-t"><b>${U.esc(x.n)}${x.me ? ' (sen)' : x.rival ? ' (ezeli rakip)' : ''}</b><small>${U.esc((s.world.clubs[x.club] || {}).name || '')} · ${x.g} gol · ${x.a} asist</small></div><b class="g">${Math.round(x.pts)}</b></div>`).join('')}</div>
+    </section>`;
+  },
+  // sezon sonu töreni
+  async ceremony() {
+    const s = Game.state, p = s.player;
+    if (!s || Game.isYouth() || Game.inStreet() || p.age < 17) return;
+    const top = Ballon.ranking();
+    if (!top.length) return;
+    const win = top[0], mi = top.findIndex((x) => x.me);
+    s.ballonHist = s.ballonHist || [];
+    s.ballonHist.unshift({ y: s.season.year, w: win.n, me: mi + 1 });
+    if (win.rival && s.rival) s.rival.totals.ballon++;
+    if (win.me) {
+      p.trophies.push(`${s.season.year}: 🏅 Altın Top`);
+      p.ballon = (p.ballon || 0) + 1;
+      Player.addFame(p, 10);
+      Social.post('trophy', 'ALTIN TOP! Dünyanın en iyisi seçildim. Bu ödül takım arkadaşlarımın, ailemin ve taraftarımızın.', 6);
+      Game.news(`🏅 ${s.season.year} Altın Top ${Player.fullName(p)}'in! Dünyanın en iyi futbolcusu seçildin!`, 'good');
+      const c = Game.club();
+      if (typeof Celebrate !== 'undefined') await Celebrate.trophy({ big: 'ALTIN TOP!', title: `${s.season.year} Altın Top`, sub: 'Dünyanın en iyi futbolcusu', c1: c.c1, c2: c.c2, short: c.short, kit: Sprites.kit(c, false), number: p.shirt, year: Player.fullName(p) });
+      return;
+    }
+    Game.news(`🏅 ${s.season.year} Altın Top: ${win.n}${win.rival ? ' (ezeli rakibin!)' : ''}. ${mi >= 0 ? `Sen ${mi + 1}. oldun.` : ''}`, win.rival ? 'bad' : 'world');
+    if (mi >= 0 && mi < 10) {
+      await new Promise((res) => Game.modal(`<div class="ev-tag">Altın Top ${s.season.year}</div><h2>🏅 ${U.esc(win.n)}</h2>
+        <ol class="bal-top">${top.slice(0, 3).map((x) => `<li class="${x.me ? 'me' : ''}">${U.esc(x.n)}<small>${U.esc((s.world.clubs[x.club] || {}).name || '')}</small></li>`).join('')}</ol>
+        <p>${mi < 3 ? `Kürsüdesin: <b>${mi + 1}.</b> oldun!` : `Bu yıl <b>${mi + 1}.</b> oldun. Hedef zirve!`}</p>`, [{ t: 'Devam', fn: res }]));
+    }
+  },
+};
+
+// ---------- Özel yetenekler ----------
+const TRAITS = [
+  { id: 'fin', name: 'Bitirici', d: 'Açık oyun ve yakın mesafe şutlarında daha isabetlisin.', need: (p) => p.totals.goals >= 60, prog: (p) => [p.totals.goals, 60], types: ['open', 'close'] },
+  { id: 'fk', name: 'Frikik Ustası', d: 'Frikiklerde kaleci daha zor uzanır, vuruşun daha isabetli.', need: (p) => ((p.gt || {}).freekick || 0) >= 6, prog: (p) => [(p.gt || {}).freekick || 0, 6], types: ['freekick'] },
+  { id: 'pen', name: 'Penaltı Ustası', d: 'Penaltılarda kaleciyi kolay avlarsın.', need: (p) => ((p.gt || {}).penalty || 0) >= 6, prog: (p) => [(p.gt || {}).penalty || 0, 6], types: ['penalty'] },
+  { id: 'head', name: 'Hava Hakimi', d: 'Kafa toplarında daha güçlüsün.', need: (p) => ((p.gt || {}).header || 0) >= 10, prog: (p) => [(p.gt || {}).header || 0, 10], types: ['header'] },
+  { id: 'play', name: 'Oyun Kurucu', d: 'Pas ve verkaç anlarında daha başarılısın.', need: (p) => p.totals.assists >= 40, prog: (p) => [p.totals.assists, 40], types: ['deep', 'onetwo'] },
+  { id: 'drib', name: 'Çalım Sihirbazı', d: 'Çalım anlarında rakipler seni zor durdurur.', need: (p) => (p.flags && p.flags.dribbles || 0) >= 30, prog: (p) => [(p.flags && p.flags.dribbles) || 0, 30], types: ['dribble', 'sprint'] },
+  { id: 'wall', name: 'Duvar', d: 'Top kapma anlarında daha başarılısın.', need: (p) => (p.flags && p.flags.tackles || 0) >= 60, prog: (p) => [(p.flags && p.flags.tackles) || 0, 60], types: ['tackle'] },
+  { id: 'iron', name: 'Demir Adam', d: 'Sakatlanma riskin %35 daha az.', need: (p) => p.totals.apps >= 150, prog: (p) => [p.totals.apps, 150], types: [] },
+  { id: 'big', name: 'Büyük Maç Oyuncusu', d: 'Derbi ve finallerde her an biraz daha kolay.', need: (p) => (p.flags && p.flags.bigGoals || 0) >= 5, prog: (p) => [(p.flags && p.flags.bigGoals) || 0, 5], types: [] },
+  { id: 'clutch', name: 'Son Dakika Canavarı', d: 'Son dakika anlarında daha soğukkanlısın.', need: (p) => (p.flags && p.flags.lateGoal || 0) >= 3, prog: (p) => [(p.flags && p.flags.lateGoal) || 0, 3], types: [] },
+];
+const Traits = {
+  has(id) { const p = Game.state && Game.state.player; return !!(p && p.traits && p.traits.includes(id)); },
+  // an zorluğunu yeteneğe göre azaltır (düşük = kolay)
+  adj(skill, type, ctx, M) {
+    let d = 0;
+    TRAITS.forEach((t) => { if (Traits.has(t.id) && t.types.includes(type)) d += 0.07; });
+    if (Traits.has('big') && ctx && (ctx.derby || ctx.final)) d += 0.04;
+    if (Traits.has('clutch') && M && M.drama) d += 0.06;
+    return U.clamp(skill - d, 0.02, 0.9);
+  },
+  afterMatch(sum, ctx) {
+    const s = Game.state, p = s.player;
+    if (!sum.played) return;
+    p.flags = p.flags || {};
+    p.flags.tackles = (p.flags.tackles || 0) + (sum.tackles || 0);
+    p.flags.dribbles = (p.flags.dribbles || 0) + (sum.dribbles || 0);
+    if ((ctx.derby || ctx.final) && sum.goals) p.flags.bigGoals = (p.flags.bigGoals || 0) + sum.goals;
+    p.traits = p.traits || [];
+    TRAITS.forEach((t) => {
+      if (p.traits.includes(t.id) || !t.need(p)) return;
+      p.traits.push(t.id);
+      Game.news(`✨ Yeni özel yetenek: ${t.name}! ${t.d}`, 'good');
+      setTimeout(() => {
+        if (typeof Sfx !== 'undefined') { Sfx.play('fanfare'); Sfx.buzz('success'); }
+        Game.toast(`✨ Yeni özel yetenek: ${t.name}`, 'good');
+      }, 600);
+    });
+  },
+  card() {
+    const p = Game.state.player, own = p.traits || [];
+    return `<section class="card traits">
+      <div class="card-h"><span>${Icon('star')} Özel Yetenekler</span><small class="muted">${own.length}/${TRAITS.length}</small></div>
+      <div class="tr-list">${TRAITS.map((t) => {
+        const ok = own.includes(t.id), [v, n] = t.prog(p);
+        return `<div class="trt ${ok ? 'got' : ''}"><span class="tic">${ok ? '★' : '☆'}</span><span class="ttx"><b>${t.name}</b><small>${t.d}</small></span>${ok ? '' : `<em>${Math.min(v, n)}/${n}</em>`}</div>`;
+      }).join('')}</div>
+    </section>`;
+  },
+};
+// Demir Adam: sakatlanma riski azalır
+(function () {
+  const ic = Player.injuryChance;
+  Player.injuryChance = function (p, base) { return ic.call(this, p, base) * (p.traits && p.traits.includes('iron') ? 0.65 : 1); };
+})();
+
+// ---------- Rekorlar ----------
+const Records = {
+  seedName(id, pool) {
+    let h = 0; for (const ch of id) h = (h * 31 + ch.charCodeAt(0)) % 9973;
+    const P = NAME_POOLS[pool] || NAME_POOLS.XX;
+    return `${P.f[h % P.f.length]} ${P.l[(h * 7) % P.l.length]}`;
+  },
+  club(id) {
+    const s = Game.state, c = s.world.clubs[id];
+    s.records = s.records || { club: {}, lg: {} };
+    if (!s.records.club[id]) s.records.club[id] = { g: Math.round(70 + Math.max(0, c.rating - 50) * 6), holder: Records.seedName(id, c.pool || 'XX') };
+    return s.records.club[id];
+  },
+  league(lid) {
+    const s = Game.state, L = LEAGUES.find((l) => l.id === lid) || { fame: 1, level: 1 };
+    s.records = s.records || { club: {}, lg: {} };
+    if (!s.records.lg[lid]) s.records.lg[lid] = { g: Math.round(26 + L.fame * 6 - (L.level - 1) * 3), holder: Records.seedName(lid + 'R', 'XX'), y: s.season.year - U.randi(3, 30) };
+    return s.records.lg[lid];
+  },
+  afterMatch(sum, comp) {
+    const s = Game.state, p = s.player;
+    if (!sum.played || comp === 'intl' || Game.inStreet() || Game.isYouth()) return;
+    p.clubGoals = p.clubGoals || {};
+    p.clubGoals[s.clubId] = (p.clubGoals[s.clubId] || 0) + (sum.goals || 0);
+    p.recNote = p.recNote || {};
+    const cr = Records.club(s.clubId), mine = p.clubGoals[s.clubId];
+    const left = cr.g - mine;
+    if (cr.holder !== Player.fullName(p)) {
+      if (left <= 0) Records.broken(`${Game.club().name} tarihinin en golcü oyuncusu`, `${cr.holder}'in ${cr.g} gollük rekorunu geride bıraktın!`, () => { cr.g = mine; cr.holder = Player.fullName(p); });
+      else [10, 5, 1].forEach((k) => { const key = `c${s.clubId}${k}`; if (left <= k && !p.recNote[key]) { p.recNote[key] = 1; Game.news(`📊 ${Game.club().name}'ın tüm zamanların golcüsü olmana ${left} gol kaldı! (Rekor: ${cr.holder}, ${cr.g})`, 'me'); } });
+    } else cr.g = Math.max(cr.g, mine);
+    const lid = Game.club().league, lr = Records.league(lid), sg = s.season.stats.goals;
+    if (lr.holder !== Player.fullName(p) || lr.y !== s.season.year) {
+      if (sg > lr.g) Records.broken(`${Game.leagueName()} tek sezon gol rekoru`, `${lr.holder}'in ${lr.g} gollük sezon rekorunu kırdın!`, () => { lr.g = sg; lr.holder = Player.fullName(p); lr.y = s.season.year; });
+      else { const k2 = `l${s.season.year}`; if (lr.g - sg <= 3 && lr.g - sg > 0 && !p.recNote[k2]) { p.recNote[k2] = 1; Game.news(`📊 Lig sezon gol rekoruna ${lr.g - sg} gol kaldı! (${lr.holder}, ${lr.g})`, 'me'); } }
+    } else lr.g = Math.max(lr.g, sg);
+  },
+  broken(title, txt, apply) {
+    const p = Game.state.player;
+    apply();
+    p.trophies.push(`${Game.state.season.year}: 📊 Rekor: ${title}`);
+    Player.addFame(p, 3);
+    Game.news(`📊 REKOR! ${txt}`, 'good');
+    Social.post('trophy', `Rekor! ${title}. Bu tarih hepimizin.`, 2.5);
+    setTimeout(() => {
+      if (typeof Sfx !== 'undefined') { Sfx.play('fanfare'); Sfx.play('roar'); Sfx.buzz('success'); }
+      Game.modal(`<div class="ev-tag">Rekor Kırıldı</div><h2>📊 ${U.esc(title)}</h2><p>${U.esc(txt)}</p>`, [{ t: 'Muhteşem!', cls: 'btn-big' }]);
+    }, 800);
+  },
+  card() {
+    const s = Game.state, p = s.player;
+    if (Game.inStreet() || Game.isYouth()) return '';
+    const cr = Records.club(s.clubId), lr = Records.league(Game.club().league);
+    const mine = (p.clubGoals || {})[s.clubId] || 0, sg = s.season.stats.goals;
+    const row = (l, a, b, who) => `<div class="rec"><div class="rec-h"><b>${l}</b><small>${U.esc(who)}</small></div>${UI.bar(Math.min(100, (a / Math.max(1, b)) * 100), a >= b ? 'c-fame' : 'c-mid')}<div class="rec-v"><span>Sen: ${a}</span><span>Rekor: ${b}</span></div></div>`;
+    return `<section class="card records">
+      <div class="card-h"><span>${Icon('career')} Rekor Takibi</span></div>
+      ${row(`${Game.club().name} tüm zamanlar golcüsü`, mine, cr.g, cr.holder)}
+      ${row(`${Game.leagueName()} sezon gol rekoru`, sg, lr.g, `${lr.holder}${lr.y ? ` (${lr.y})` : ''}`)}
+    </section>`;
+  },
+};

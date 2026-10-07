@@ -157,7 +157,7 @@ const Celebrate = {
     return new Promise((resolve) => {
       const el = document.createElement('div');
       el.className = 'cer-trophy';
-      el.innerHTML = `<div class="ct-host"></div><div class="ct-foot"><b>${U.esc(o.title || 'ŞAMPİYON')}</b><small>${U.esc(o.sub || '')}</small><button class="btn btn-big">Devam</button></div>`;
+      el.innerHTML = `<div class="ct-host"></div><div class="ct-foot"><b>${U.esc(o.title || 'ŞAMPİYON')}</b><small>${U.esc(o.sub || '')}</small><div class="ct-btns">${typeof ShareCard !== 'undefined' && Game.state ? `<button class="btn btn-ghost ct-share">${Icon('share')} Paylaş</button>` : ''}<button class="btn btn-big ct-go">Devam</button></div></div>`;
       document.body.appendChild(el);
       const host = el.querySelector('.ct-host');
       const P = { c1: o.c1 || '#c8102e', c2: o.c2 || '#ffffff', short: o.short || '' };
@@ -171,7 +171,9 @@ const Celebrate = {
       const cols = ['#ffd84a', '#ffffff', P.c1, P.c2, '#ffb02e'];
       let t = 0, last = performance.now(), raf, burst = false;
       const close = () => { cancelAnimationFrame(raf); el.remove(); resolve(); };
-      el.querySelector('button').onclick = close;
+      el.querySelector('.ct-go').onclick = close;
+      const shb = el.querySelector('.ct-share');
+      if (shb) shb.onclick = () => ShareCard.preview(ShareCard.trophy(o.big || o.title || 'ŞAMPİYON', o.title && o.big ? o.title : (o.sub || '')), ShareCard.text());
       if (typeof Sfx !== 'undefined') { setTimeout(() => { Sfx.play('fanfare'); Sfx.play('roar'); Sfx.buzz('success'); }, 1400); }
       const frame = (now) => {
         const dt = Math.min(0.05, (now - last) / 1000); t += dt; last = now;

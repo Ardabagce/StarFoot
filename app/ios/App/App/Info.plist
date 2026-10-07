@@ -64,6 +64,8 @@
 	<true/>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>StarFoot saves the career cards you choose to share to your photo library. / StarFoot, paylaşmak istediğin kariyer kartlarını fotoğraf arşivine kaydeder.</string>
 	<key>NSUserTrackingUsageDescription</key>
 	<string>Your data is used to show you more relevant ads and keep StarFoot free. / Verilerin, sana daha uygun reklamlar göstermek ve StarFoot'u ücretsiz tutmak için kullanılır.</string>
 	<!-- AdMob iOS UYGULAMA kimliği (reklam birimi değil) -->
