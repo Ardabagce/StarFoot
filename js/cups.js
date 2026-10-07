@@ -4,9 +4,9 @@ const NAT_COLORS = {
   TUR: ['#c8102e', '#ffffff'], ARG: ['#75aadb', '#ffffff'], FRA: ['#1d2c5e', '#ffffff'], ESP: ['#c8102e', '#ffcc00'],
   ENG: ['#ffffff', '#1d2c5e'], BRA: ['#ffdf00', '#009639'], POR: ['#8e1b1b', '#006600'], GER: ['#ffffff', '#111111'],
   NED: ['#f36c21', '#ffffff'], ITA: ['#1f4fa3', '#ffffff'], BEL: ['#c8102e', '#111111'], CRO: ['#ffffff', '#c8102e'],
-  NOR: ['#c8102e', '#1d2c5e'], USA: ['#1d2c5e', '#ffffff'], MEX: ['#006847', '#ffffff'], JPN: ['#0b2a7a', '#ffffff'], KSA: ['#006c35', '#ffffff'], SCO: ['#0b2a5a', '#ffffff'], EGY: ['#c8102e', '#ffffff'], POL: ['#ffffff', '#c8102e'], GEO: ['#ffffff', '#c8102e'], AZE: ['#0092bc', '#c8102e'],
+  NOR: ['#c8102e', '#1d2c5e'], USA: ['#1d2c5e', '#ffffff'], MEX: ['#006847', '#ffffff'], JPN: ['#0b2a7a', '#ffffff'], KSA: ['#006c35', '#ffffff'], SCO: ['#0b2a5a', '#ffffff'], AUT: ['#c8102e', '#ffffff'], SUI: ['#c8102e', '#ffffff'], GRE: ['#0d5eaf', '#ffffff'], DEN: ['#c8102e', '#ffffff'], CZE: ['#ffffff', '#c8102e'], UKR: ['#ffd500', '#005bbb'], EGY: ['#c8102e', '#ffffff'], POL: ['#ffffff', '#c8102e'], GEO: ['#ffffff', '#c8102e'], AZE: ['#0092bc', '#c8102e'],
 };
-const EURO_NATIONS = ['TUR', 'FRA', 'ESP', 'ENG', 'POR', 'GER', 'NED', 'ITA', 'BEL', 'CRO', 'NOR', 'POL', 'GEO', 'AZE'];
+const EURO_NATIONS = ['TUR', 'FRA', 'ESP', 'ENG', 'POR', 'GER', 'NED', 'ITA', 'BEL', 'CRO', 'NOR', 'POL', 'GEO', 'AZE', 'SCO', 'AUT', 'SUI', 'GRE', 'DEN', 'CZE', 'UKR'];
 const STAGE_NAMES = { 32: 'Son 32', 16: 'Son 16', 8: 'Çeyrek Final', 4: 'Yarı Final', 2: 'Final' };
 // Ülke kupaları: Avrupa kupası haftalarıyla çakışmayan takvim
 const DOM_CUPS = [
@@ -22,6 +22,14 @@ const DOM_CUPS = [
   { id: 'cupARG', country: 'ARG', leagues: ['ARG'], name: 'Arjantin Kupası', size: 16, fame: 1.0 },
   { id: 'cupBEL', country: 'BEL', leagues: ['BEL'], name: 'Belçika Kupası', size: 16, fame: 0.9 },
   { id: 'cupSCO', country: 'SCO', leagues: ['SCO'], name: 'İskoçya Kupası', size: 8, fame: 0.8 },
+  { id: 'cupAUT', country: 'AUT', leagues: ['AUT'], name: 'Avusturya Kupası', size: 8, fame: 0.7 },
+  { id: 'cupSUI', country: 'SUI', leagues: ['SUI'], name: 'İsviçre Kupası', size: 8, fame: 0.7 },
+  { id: 'cupGRE', country: 'GRE', leagues: ['GRE'], name: 'Yunanistan Kupası', size: 8, fame: 0.7 },
+  { id: 'cupDEN', country: 'DEN', leagues: ['DEN'], name: 'Danimarka Kupası', size: 8, fame: 0.7 },
+  { id: 'cupCRO', country: 'CRO', leagues: ['CRO'], name: 'Hırvatistan Kupası', size: 8, fame: 0.7 },
+  { id: 'cupCZE', country: 'CZE', leagues: ['CZE'], name: 'Çekya Kupası', size: 8, fame: 0.7 },
+  { id: 'cupPOL', country: 'POL', leagues: ['POL'], name: 'Polonya Kupası', size: 8, fame: 0.7 },
+  { id: 'cupUKR', country: 'UKR', leagues: ['UKR'], name: 'Ukrayna Kupası', size: 8, fame: 0.7 },
   { id: 'cupUSA', country: 'USA', leagues: ['USA'], name: 'ABD Açık Kupası', size: 16, fame: 0.9 },
   { id: 'cupMEX', country: 'MEX', leagues: ['MEX'], name: 'Meksika Kupası', size: 16, fame: 0.9 },
   { id: 'cupKSA', country: 'KSA', leagues: ['KSA'], name: 'Suudi Kral Kupası', size: 16, fame: 1.0 },
@@ -35,9 +43,9 @@ const Cups = {
   // Lig sıralamasına göre katılım: Şampiyonlar → Federasyon → Konferans (ör. İngiltere'de ilk 7)
   defs: [
     // Şampiyonlar ve Federasyon: 32 takımlı lig aşaması (8 maç) → play-off → son 16 (güncel format)
-    { id: 'ucl', name: 'Avrupa Şampiyonlar Kupası', fame: 2.2, region: 'eu', swiss: true, quota: { ENG: 5, ESP: 5, ITA: 4, GER: 4, FRA: 4, POR: 3, NED: 3, TR1: 2, BEL: 1, SCO: 1 } },
-    { id: 'uel', name: 'Avrupa Federasyon Kupası', fame: 1.5, region: 'eu', swiss: true, quota: { ENG: 4, ESP: 4, ITA: 4, GER: 4, FRA: 4, POR: 3, NED: 3, TR1: 3, BEL: 2, SCO: 1 } },
-    { id: 'uecl', name: 'Avrupa Konferans Kupası', fame: 1.1, region: 'eu', swiss: true, quota: { ENG: 3, ESP: 3, ITA: 3, GER: 3, FRA: 3, POR: 3, NED: 4, TR1: 4, BEL: 3, SCO: 3 } },
+    { id: 'ucl', name: 'Avrupa Şampiyonlar Kupası', fame: 2.2, region: 'eu', swiss: true, quota: { ENG: 4, ESP: 4, ITA: 4, GER: 4, FRA: 3, POR: 2, NED: 2, TR1: 2, BEL: 1, SCO: 1, AUT: 1, SUI: 1, GRE: 1, DEN: 1, CZE: 1 } },
+    { id: 'uel', name: 'Avrupa Federasyon Kupası', fame: 1.5, region: 'eu', swiss: true, quota: { ENG: 2, ESP: 2, ITA: 2, GER: 2, FRA: 2, POR: 2, NED: 2, TR1: 2, BEL: 2, SCO: 1, AUT: 2, SUI: 2, GRE: 2, DEN: 1, CZE: 1, CRO: 2, UKR: 2, POL: 1 } },
+    { id: 'uecl', name: 'Avrupa Konferans Kupası', fame: 1.1, region: 'eu', swiss: true, quota: { ENG: 1, ESP: 1, ITA: 1, GER: 1, FRA: 1, POR: 2, NED: 2, TR1: 2, BEL: 2, SCO: 2, AUT: 2, SUI: 2, GRE: 2, DEN: 2, CZE: 2, CRO: 2, UKR: 2, POL: 3 } },
     // Diğer kıtalar: 16 takımlı lig aşaması (6 maç) → ilk 8 çeyrek finale
     { id: 'csa', name: 'Güney Amerika Kupası', fame: 1.4, region: 'sa', swiss: true, quota: { BRA: 8, ARG: 8 } },
     { id: 'ccc', name: 'Kuzey Amerika Kupası', fame: 1.1, region: 'na', swiss: true, quota: { USA: 8, MEX: 8 } },

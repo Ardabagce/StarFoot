@@ -1895,3 +1895,41 @@ button, .btn, a, [data-act], [data-tab] { touch-action: manipulation; -webkit-ta
 .pr-sum small { color: var(--muted); }
 .peers .scr.rv b { color: #ff8a8a; }
 .peers .g small { font-size: 12px; color: var(--muted); margin-left: 2px; }
+/* Mağaza: sekmeler, bölümler, çanta */
+.sh-tabs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; margin-top: 10px; }
+.sh-tabs button { display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 8px 2px; background: rgba(255, 255, 255, .04); border: 1px solid var(--line); color: var(--muted); font: 600 11px var(--body); cursor: pointer; }
+.sh-tabs button .ic { width: 20px; height: 20px; }
+.sh-tabs button.on { color: var(--flood-ink); background: var(--flood); border-color: var(--flood); }
+.shop-body { padding-top: 6px; }
+.shop-body .sh-grid { padding: 0; }
+.sh-sec + .sh-sec { margin-top: 16px; }
+.sh-sec-h { display: flex; align-items: center; gap: 10px; margin: 6px 0 10px; }
+.sh-sec-h > .ic { width: 22px; height: 22px; color: var(--flood); flex: none; }
+.sh-sec-h span { flex: 1; display: flex; flex-direction: column; }
+.sh-sec-h b { font-family: var(--display); font-size: 18px; text-transform: uppercase; font-style: italic; }
+.sh-sec-h small { font-size: 12px; color: var(--muted); }
+.sh-sec-h em { font-style: normal; font-size: 12px; font-weight: 700; color: var(--muted); }
+.bag-item { display: grid; grid-template-columns: 64px 1fr; gap: 6px 12px; padding: 12px; border: 1px solid var(--line); background: rgba(255, 255, 255, .03); margin-bottom: 10px; }
+.bag-item .sh-art { height: 64px; }
+.bag-item .sh-art svg { width: 54px; height: 54px; }
+.bag-t { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.bag-t b { font-size: 15px; }
+.bag-t small { font-size: 12px; color: var(--muted); }
+.bag-pips { display: flex; align-items: center; gap: 3px; margin-top: 6px; flex-wrap: wrap; }
+.bag-pips i { width: 12px; height: 12px; border-radius: 3px; background: rgba(255, 255, 255, .1); }
+.bag-pips i.on { background: var(--sky); box-shadow: 0 0 6px rgba(79, 179, 255, .6); }
+.bag-pips em { font-style: normal; font-size: 12px; font-weight: 800; margin-left: 6px; }
+.bag-act { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); gap: 6px; }
+.bag-act .btn { min-height: 38px; padding: 6px; font-size: 13px; }
+.bag-note { font-size: 12px; margin: 4px 0 0; }
+.stockbar { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 12px; }
+.stk { display: flex; flex-direction: column; border: 1px solid var(--line); background: rgba(255, 255, 255, .04); }
+.stk-use { flex: 1; display: grid; grid-template-columns: auto 1fr; grid-template-rows: auto auto; column-gap: 8px; align-items: center; text-align: left; padding: 8px 10px; background: none; border: 0; color: var(--chalk); font: inherit; cursor: pointer; min-width: 0; }
+.stk-use .ic { grid-row: 1 / 3; width: 22px; height: 22px; color: var(--sky); }
+.stk-use span { font-size: 12px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.stk-use b { font-family: var(--display); font-size: 18px; }
+.stk-use:disabled { opacity: .5; cursor: default; }
+.stk-use:not(:disabled):active { background: rgba(79, 179, 255, .12); }
+.stk-buy { border: 0; border-top: 1px solid var(--line); background: rgba(255, 207, 63, .1); color: var(--flood); font: 700 12px var(--body); padding: 7px 8px; cursor: pointer; }
+.stk-buy:disabled { opacity: .4; cursor: default; }
+.bal-how { margin: -2px 0 10px; font-size: 12px; color: var(--muted); } .bal-how b { color: var(--chalk); }

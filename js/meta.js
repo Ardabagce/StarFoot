@@ -411,7 +411,9 @@ const Peers = {
 // ---------- Altın Top ----------
 const BALLON_LEAGUES = ['ENG', 'ESP', 'GER', 'ITA', 'FRA', 'TR1', 'POR', 'NED', 'BRA', 'ARG', 'KSA', 'USA'];
 const Ballon = {
-  // sezon içi canlı sıralama: gol, asist, kulüp gücü ve lig ağırlığı
+  // Puan = gol×3 + asist×2 + lig seviyesi (0-5) + takım gücü (0-3) [+ maç reytingi, yalnız sen ve rakip için ölçülür]
+  // Lig/takım etkisi bir golden azdır: daha çok gol atan neredeyse her zaman öndedir
+  extra(c, L) { return U.clamp((L ? L.fame : 1) * 3, 0, 5) + U.clamp((c.rating - 65) * 0.15, 0, 3); },
   ranking() {
     const s = Game.state;
     if (!s || Game.inStreet()) return [];
@@ -425,21 +427,21 @@ const Ballon = {
       World.topScorers(lg, 6).forEach((x) => {
         const c = s.world.clubs[x.club];
         if (!c || x.name === Player.fullName(s.player)) return;
-        const pts = x.g * 1 + (as[x.name + '|' + x.club] || 0) * 0.6 + (c.rating - 70) * 0.25 + L.fame * 4;
+        const pts = x.g * 3 + (as[x.name + '|' + x.club] || 0) * 2 + Ballon.extra(c, L);
         list.push({ n: x.name, club: x.club, g: x.g, a: as[x.name + '|' + x.club] || 0, pts });
       });
     });
     const p = s.player, ss = s.season.stats, L = LEAGUES.find((l) => l.id === Game.club().league) || { fame: 1 };
     if (!Game.isYouth()) {
       const avg = ss.apps ? ss.ratingSum / ss.apps : 6;
-      list.push({ n: Player.fullName(p), club: s.clubId, g: ss.goals, a: ss.assists, me: true, pts: ss.goals + ss.assists * 0.6 + (Game.club().rating - 70) * 0.25 + L.fame * 4 + (avg - 6.8) * 4 + (p.position === 'DF' ? ss.apps * 0.25 : 0) });
+      list.push({ n: Player.fullName(p), club: s.clubId, g: ss.goals, a: ss.assists, me: true, pts: ss.goals * 3 + ss.assists * 2 + Ballon.extra(Game.club(), L) + U.clamp((avg - 7) * 4, -3, 4) + (p.position === 'DF' ? ss.apps * 0.4 : 0) });
     }
     const r = s.rival;
     if (r && r.age >= 17) {
       const c = s.world.clubs[r.club], RL = c && LEAGUES.find((l) => l.id === c.league);
-      if (c) list.push({ n: r.name, club: r.club, g: r.season.g, a: r.season.a, rival: true, pts: r.season.g + r.season.a * 0.6 + (c.rating - 70) * 0.25 + (RL ? RL.fame : 1) * 4 + (r.ovr - 75) * 0.3 });
+      if (c) list.push({ n: r.name, club: r.club, g: r.season.g, a: r.season.a, rival: true, pts: r.season.g * 3 + r.season.a * 2 + Ballon.extra(c, RL) });
     }
-    return list.sort((a, b) => b.pts - a.pts).slice(0, 30);
+    return list.sort((a, b) => b.pts - a.pts || b.g - a.g).slice(0, 30);
   },
   myRank() { const i = Ballon.ranking().findIndex((x) => x.me); return i >= 0 && i < 30 ? i + 1 : 0; },
   card() {
@@ -450,6 +452,7 @@ const Ballon = {
     if (mi >= 10) rows.push(top[mi]);
     return `<section class="card ballon">
       <div class="card-h"><span>${Icon('star')} Altın Top Yarışı</span><small class="muted">${s.season.year} · ${s.ballonFinal ? 'final' : 'canlı'}</small></div>
+      <p class="bal-how">Puan: <b>gol ×3</b> + <b>asist ×2</b> + lig ve takım seviyesi (en fazla 8). Senin puanına maç reytingin de eklenir.</p>
       <div class="scorers">${rows.map((x) => `<div class="scr ${x.me ? 'me' : ''} ${x.rival ? 'rv' : ''}"><span class="rk">${top.indexOf(x) + 1}</span>${UI.shirt(s.world.clubs[x.club] || Game.club())}<div class="scr-t"><b>${U.esc(x.n)}${x.me ? ' (sen)' : x.rival ? ' (ezeli rakip)' : ''}</b><small>${U.esc((s.world.clubs[x.club] || {}).name || '')} · ${x.g} gol · ${x.a} asist</small></div><b class="g">${Math.round(x.pts)}</b></div>`).join('')}</div>
     </section>`;
   },

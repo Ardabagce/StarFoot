@@ -41,20 +41,39 @@ const U = {
     const v = h.length === 3 ? h.split('').map((c) => parseInt(c + c, 16)) : [0, 2, 4].map((i) => parseInt(h.slice(i, i + 2), 16));
     return (0.299 * v[0] + 0.587 * v[1] + 0.114 * v[2]) / 255;
   },
+  // Para birimi: oyun içi tutarlar TL'dir; ekranda telefonun bölgesine göre ₺ / $ / € / £ gösterilir
+  CUR: { TRY: { sym: '₺', rate: 1 }, USD: { sym: '$', rate: 1 / 42 }, EUR: { sym: '€', rate: 1 / 48 }, GBP: { sym: '£', rate: 1 / 56 } },
+  curAuto() {
+    const loc = (typeof navigator !== 'undefined' && ((navigator.languages && navigator.languages[0]) || navigator.language)) || 'tr-TR';
+    const [lang, reg] = loc.replace('_', '-').split('-').map((x) => (x || '').toUpperCase());
+    const EZ = ['DE', 'FR', 'ES', 'IT', 'NL', 'PT', 'BE', 'AT', 'IE', 'FI', 'GR', 'SK', 'SI', 'EE', 'LV', 'LT', 'LU', 'MT', 'CY', 'HR'];
+    if (reg === 'TR' || (!reg && lang === 'TR')) return 'TRY';
+    if (reg === 'GB') return 'GBP';
+    if (EZ.includes(reg) || (!reg && ['DE', 'FR', 'ES', 'IT', 'NL', 'PT', 'EL', 'FI'].includes(lang))) return 'EUR';
+    if (lang === 'TR') return 'TRY';
+    return 'USD';
+  },
+  cur() {
+    let c = null;
+    try { c = localStorage.getItem('starfoot_cur'); } catch (e) { /* yok */ }
+    return U.CUR[c] ? c : U.curAuto();
+  },
   money(n) {
-    n = Math.round(n);
-    const abs = Math.abs(n);
+    const code = U.cur(), C = U.CUR[code];
+    const en = typeof I18N !== 'undefined' && I18N.lang === 'en';
+    const v = n * C.rate, abs = Math.abs(v);
+    const dec = code !== 'TRY' && abs < 10 && abs > 0 ? 2 : 0;
     let s;
-    if (typeof I18N !== 'undefined' && I18N.lang === 'en') {
-      if (abs >= 1e9) s = (n / 1e9).toFixed(2) + 'B';
-      else if (abs >= 1e6) s = (n / 1e6).toFixed(2) + 'M';
-      else s = n.toLocaleString('en-US');
-      return '₺' + s;
+    if (en) {
+      if (abs >= 1e9) s = (v / 1e9).toFixed(2) + 'B';
+      else if (abs >= 1e6) s = (v / 1e6).toFixed(2) + 'M';
+      else s = (dec ? v : Math.round(v)).toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+      return (v < 0 ? '-' : '') + C.sym + s.replace('-', '');
     }
-    if (abs >= 1e9) s = (n / 1e9).toFixed(2).replace('.', ',') + ' Mr';
-    else if (abs >= 1e6) s = (n / 1e6).toFixed(2).replace('.', ',') + ' Mn';
-    else s = n.toLocaleString('tr-TR');
-    return s + ' ₺';
+    if (abs >= 1e9) s = (v / 1e9).toFixed(2).replace('.', ',') + ' Mr';
+    else if (abs >= 1e6) s = (v / 1e6).toFixed(2).replace('.', ',') + ' Mn';
+    else s = (dec ? v : Math.round(v)).toLocaleString('tr-TR', { minimumFractionDigits: dec, maximumFractionDigits: dec });
+    return s + ' ' + C.sym;
   },
   // Emojileri ve bayrakları metinden ayıklar (arayüz kendi ikonlarını kullanır)
   plain(s) {

@@ -78,7 +78,7 @@ const ACHIEVEMENTS = (() => {
   STATS.filter((st) => ['pace', 'shooting', 'passing', 'dribbling', 'defending'].includes(st.k)).forEach((st) => list.push({ id: `st_${st.k}`, cat: 'skill', tier: 'gold', name: `${st.l} Ustası`, desc: `${st.l} statın 90'a ulaştı`, check: (p) => p.stats[st.k] >= 90 }));
   ladder('fame', 'fame', [10, 25, 50, 75], (v) => (v === 75 ? 'Herkes Seni Tanıyor' : `Ün ${v}`), (v) => `Ünün ${v}'e ulaştı`, (p) => p.fame, { 75: 'fame75' });
   ladder('fame', 'fol', [1000, 10000, 100000, 1000000], (v) => `${fmt(v)} Takipçi`, (v) => `Sosyal medyada ${fmt(v)} takipçiye ulaştın`, (p) => (p.social ? p.social.followers : 0));
-  ladder('life', 'money', [10000, 100000, 1000000, 10000000], (v) => (v === 1e6 ? 'İlk Milyon' : `${fmt(v)} ₺`), (v) => `Hesabında ${fmt(v)} ₺ birikti`, (p) => p.money, { 1000000: 'million' });
+  ladder('life', 'money', [10000, 100000, 1000000, 10000000], (v) => (v === 1e6 ? 'İlk Milyon' : U.money(v)), (v) => `Hesabında ${U.money(v)} birikti`, (p) => p.money, { 1000000: 'million' });
   ladder('life', 'items', [1, 5, 10], (v) => (v === 1 ? 'İlk Alışveriş' : `${v} Eşya`), (v) => `${v} eşyaya sahip oldun`, (p) => p.items.length);
   return list;
 })();
@@ -146,12 +146,51 @@ const Shop = {
     const u = Game.p.used || {};
     return ['camp', 'clinic', 'analysis', 'yoga', 'heading'].includes(c.id) && u[c.id] === Game.state.season.year;
   },
+  // Stoklanabilen ürünler: çantada en fazla bu kadar taşınır
+  STOCK: { drink: 10, physio: 5 },
+  stock(id) { return (Game.p.stock || {})[id] || 0; },
+  buyStock(id, n = 1) {
+    const p = Game.p, c = CONSUMABLES.find((x) => x.id === id), max = Shop.STOCK[id];
+    const k = Math.min(n, max - Shop.stock(id));
+    if (k <= 0) return Game.toast(`Çantan dolu (en fazla ${max}).`, 'bad');
+    const cost = Shop.price(c) * k;
+    if (p.money < cost) return Game.toast('Yeterli paran yok.', 'bad');
+    p.money -= cost;
+    p.stock = p.stock || {};
+    p.stock[id] = Shop.stock(id) + k;
+    if (typeof Sfx !== 'undefined') Sfx.play('coin');
+    Game.toast(`${c.name} ×${k} çantana eklendi (${p.stock[id]}/${max})`, 'good');
+    Game.save();
+    Game.render();
+  },
+  useStock(id) {
+    const p = Game.p, c = CONSUMABLES.find((x) => x.id === id);
+    if (Shop.stock(id) < 1) return Game.toast('Çantanda yok. Mağazadan stok alabilirsin.', 'bad');
+    const msg = Shop.effect(id);
+    if (msg == null) return;
+    p.stock[id]--;
+    Game.toast(`${c.name}: ${msg} · ${p.stock[id]} kaldı`, 'good');
+    Game.save();
+    Game.render();
+  },
   use(id) {
     const p = Game.p, s = Game.state;
     const c = CONSUMABLES.find((x) => x.id === id);
     const price = Shop.price(c);
     if (p.money < price) return Game.toast('Yeterli paran yok.', 'bad');
     if (Shop.usedThisSeason(c)) return Game.toast('Bunu bu sezon zaten kullandın.', 'bad');
+    const msg = Shop.effect(id);
+    if (msg == null) return;
+    p.money -= price;
+    p.used = p.used || {};
+    p.used[id] = s.season.year;
+    Game.toast(`${c.name}: ${msg}`, 'good');
+    Game.save();
+    Game.render();
+  },
+  // ürünün etkisi; uygulanamazsa null döner
+  effect(id) {
+    const p = Game.p, s = Game.state;
     let msg = '';
     if (id === 'drink') { Player.addEnergy(p, 25); msg = 'Enerji +25'; }
     if (id === 'massage') { Player.addEnergy(p, 15); Player.addMorale(p, 6); msg = 'Enerji +15, moral +6'; }
@@ -166,7 +205,7 @@ const Shop = {
     if (id === 'yoga') { msg = ['stamina', 'physical'].map((k) => `${STATS.find((x) => x.k === k).l} +${Player.train(p, k, 2.2, 1).toFixed(1)}`).join(', '); }
     if (id === 'heading') { msg = ['heading', 'defending'].map((k) => `${STATS.find((x) => x.k === k).l} +${Player.train(p, k, 2.2, 1).toFixed(1)}`).join(', '); }
     if (id === 'physio') {
-      if (!p.injuryWeeks) return Game.toast('Sakat değilsin, fizyoterapiye gerek yok.', 'bad');
+      if (!p.injuryWeeks) { Game.toast('Sakat değilsin, fizyoterapiye gerek yok.', 'bad'); return null; }
       p.injuryWeeks = Math.max(0, p.injuryWeeks - 2);
       msg = p.injuryWeeks ? `Sakatlık ${p.injuryWeeks} haftaya indi` : 'Sakatlığın tamamen geçti';
     }
@@ -178,12 +217,7 @@ const Shop = {
       const k = s.trainFocus;
       msg = `${STATS.find((x) => x.k === k).l} +${Player.train(p, k, 5, 1.15).toFixed(1)}`;
     }
-    p.money -= price;
-    p.used = p.used || {};
-    p.used[id] = s.season.year;
-    Game.toast(`${c.name}: ${msg}`, 'good');
-    Game.save();
-    Game.render();
+    return msg;
   },
 };
 

@@ -15,13 +15,24 @@ const Game = {
   // ---------- Kaydet / Yükle (5 kariyer slotu) ----------
   slot: 0,
   key(i) { return 'starfoot_slot_' + i; },
+  // Kadrolar sütun biçiminde saklanır (anahtar adları tekrar etmez): kayıt boyutu ~%35 küçülür
+  packRoster(k, v) {
+    if (k !== 'roster' || !Array.isArray(v) || !v.length || typeof v[0] !== 'object') return v;
+    const keys = [];
+    v.forEach((o) => Object.keys(o).forEach((x) => { if (!keys.includes(x)) keys.push(x); }));
+    return { _k: keys, _v: v.map((o) => keys.map((x) => (o[x] === undefined ? null : o[x]))) };
+  },
+  unpackRoster(k, v) {
+    if (k !== 'roster' || !v || !v._k) return v;
+    return v._v.map((row) => { const o = {}; v._k.forEach((x, i) => { if (row[i] !== null) o[x] = row[i]; }); return o; });
+  },
   save() {
-    try { localStorage.setItem(Game.key(Game.slot), JSON.stringify(Game.state)); } catch (e) { /* depolama yok */ }
+    try { localStorage.setItem(Game.key(Game.slot), JSON.stringify(Game.state, Game.packRoster)); } catch (e) { /* depolama yok */ }
   },
   load(i = Game.slot) {
     try {
       const raw = localStorage.getItem(Game.key(i));
-      return raw ? JSON.parse(raw) : null;
+      return raw ? JSON.parse(raw, Game.unpackRoster) : null;
     } catch (e) { return null; }
   },
   wipe(i = Game.slot) { try { localStorage.removeItem(Game.key(i)); } catch (e) { /* yok */ } },
@@ -230,7 +241,7 @@ const Game = {
   scoutOffers(perf, r) {
     const s = Game.state, p = s.player;
     const trials = s.street.trials;
-    const natLg = { TUR: 'TR', ENG: 'ENG', ESP: 'ESP', GER: 'GER', ITA: 'ITA', FRA: 'FRA', NED: 'NED', POR: 'POR', BRA: 'BRA', ARG: 'ARG', BEL: 'BEL', SCO: 'SCO', USA: 'USA', MEX: 'MEX', KSA: 'KSA', JPN: 'JPN' }[p.nation] || 'TR';
+    const natLg = { TUR: 'TR', ENG: 'ENG', ESP: 'ESP', GER: 'GER', ITA: 'ITA', FRA: 'FRA', NED: 'NED', POR: 'POR', BRA: 'BRA', ARG: 'ARG', BEL: 'BEL', SCO: 'SCO', USA: 'USA', MEX: 'MEX', KSA: 'KSA', JPN: 'JPN', AUT: 'AUT', SUI: 'SUI', GRE: 'GRE', DEN: 'DEN', CRO: 'CRO', CZE: 'CZE', POL: 'POL', UKR: 'UKR' }[p.nation] || 'TR';
     const clubs = Object.values(s.world.clubs).filter((c) => c.league !== 'NONE' && c.league.startsWith(natLg));
     const sorted = clubs.sort((a, b) => b.rating - a.rating);
     const who = trials ? 'Scoutlar' : 'Scout';
@@ -428,7 +439,7 @@ const Game = {
     Game.news(`🤕 ${where} sakatlandın. ${weeks} hafta sahalardan uzak kalacaksın.`, 'bad');
     Game.toast(`🤕 Sakatlandın! (${weeks} hafta)`, 'bad');
     // İpucu: mağazadaki fizyoterapi seansı sakatlığı kısaltır
-    setTimeout(() => Game.toast('Yaşam › Mağaza\'dan Fizyoterapi Seansı alırsan sakatlığın 2 hafta kısalır.', 'info'), 900);
+    setTimeout(() => Game.toast('Fizyoterapi Seansı sakatlığı 2 hafta kısaltır. Mağazadan stok alıp Haftalık Plan\'daki çantandan kullanabilirsin.', 'info'), 900);
   },
 
   // ---------- Maç ----------
@@ -513,27 +524,29 @@ const Game = {
     const nat = Game.nation();
     const opp = s.pendingIntl;
     const oppNat = Game.nat(opp);
+    const cat = Game.intlCat(), off = Game.catOffset(cat), sfx = cat ? ' ' + cat : '';
     const mkRoster = (n) => {
-      const r = Game.natStars(n.code).map((name, i) => ({ n: name, pos: i < 2 ? 'FW' : 'MF', r: n.rating + 3 }));
-      while (r.length < 14) r.push({ n: World.genName(n.code === 'TUR' ? 'TR' : 'XX'), pos: U.pick(['DF', 'MF', 'DF', 'FW']), r: n.rating - 3 });
+      const r = cat ? [] : Game.natStars(n.code).map((name, i) => ({ n: name, pos: i < 2 ? 'FW' : 'MF', r: n.rating + 3 }));
+      while (r.length < 14) r.push({ n: World.genName(n.code === 'TUR' ? 'TR' : 'XX'), pos: U.pick(['DF', 'MF', 'DF', 'FW']), r: n.rating - 3 - off });
       return r;
     };
     const ownRoster = mkRoster(nat).filter((x) => x.n !== Player.fullName(p));
     const home = U.chance(0.5);
-    const ownT = { id: nat.code, name: nat.name, rating: nat.rating, c1: '#c8102e', c2: '#ffffff', roster: ownRoster };
-    const oppT = { id: oppNat.code, name: oppNat.name, rating: oppNat.rating, c1: '#1d3c8f', c2: '#ffffff', roster: mkRoster(oppNat) };
+    const ownT = { id: nat.code, name: nat.name + sfx, rating: nat.rating - off, c1: '#c8102e', c2: '#ffffff', roster: ownRoster };
+    const oppT = { id: oppNat.code, name: oppNat.name + sfx, rating: oppNat.rating - off, c1: '#1d3c8f', c2: '#ffffff', roster: mkRoster(oppNat) };
     const ctx = {
       home: home ? ownT : oppT, away: home ? oppT : ownT, side: home ? 'home' : 'away',
-      compName: `Milli Maç • ${nat.name} - ${oppNat.name}`,
-      levelBase: Game.levelBase(true), lg: 'intl', theme: 'intl',
+      compName: `${cat ? `${cat} Milli Maç` : 'Milli Maç'} • ${nat.name} - ${oppNat.name}`,
+      levelBase: Game.levelBase(true) - (cat ? 0.02 : 0), lg: 'intl', theme: 'intl', intlCat: cat,
     };
-    ctx.role = p.injuryWeeks > 0 ? 'out' : Game.roleFor(Player.overall(p, true), nat.rating, false);
+    ctx.role = p.injuryWeeks > 0 ? 'out' : Game.roleFor(Player.overall(p, true), nat.rating - off, false);
     if (ctx.role === 'out' && p.injuryWeeks === 0) ctx.role = 'bench';
     ctx.subChance = 0.7;
     const sum = await Match.run(ctx, s);
     s.pendingIntl = null;
-    // milli maç sonucu sıralamaya yansır
-    { const gf = ctx.side === 'home' ? sum.hs : sum.as, ga = ctx.side === 'home' ? sum.as : sum.hs; const d = gf > ga ? 12 : gf < ga ? -8 : 3; Nations.add(s, nat.code, d); Nations.add(s, oppNat.code, -d); }
+    s.pendingIntlCat = null;
+    // milli maç sonucu sıralamaya yansır (yalnız A takım)
+    if (!cat) { const gf = ctx.side === 'home' ? sum.hs : sum.as, ga = ctx.side === 'home' ? sum.as : sum.hs; const d = gf > ga ? 12 : gf < ga ? -8 : 3; Nations.add(s, nat.code, d); Nations.add(s, oppNat.code, -d); }
     Game.applyMatch(sum, ctx, 'intl');
     Game.advanceWeek(true);
   },
@@ -542,17 +555,21 @@ const Game = {
     const s = Game.state, p = s.player;
     const youth = Game.isYouth() && comp !== 'intl';
     const lg = LEAGUES.find((l) => l.id === Game.club().league);
-    const fameMult = (comp === 'intl' ? 2 : youth ? 0.15 : comp === 'cup' ? lg.fame * 1.6 : lg.fame) * (ctx.derby || ctx.final ? 1.5 : 1);
+    const fameMult = (comp === 'intl' ? (ctx.intlCat ? 0.6 : 2) : youth ? 0.15 : comp === 'cup' ? lg.fame * 1.6 : lg.fame) * (ctx.derby || ctx.final ? 1.5 : 1);
     const oppName = ctx.side === 'home' ? ctx.away.name : ctx.home.name;
     const resTxt = { W: 'kazandı', D: 'berabere kaldı', L: 'kaybetti' }[sum.res];
-    const teamTxt = comp === 'intl' ? Game.nation().name : Game.teamName();
+    const teamTxt = comp === 'intl' ? Game.nation().name + (ctx.intlCat ? ' ' + ctx.intlCat : '') : Game.teamName();
 
     // maç sonrası rapor için önceki değerler
     const so0 = Social.ensure(p);
     const before = { coach: p.rel.coach, team: p.rel.team, fans: p.rel.fans, fol: so0.followers, fame: p.fame, morale: p.morale, money: p.money };
     const why = [];
     if (sum.played) {
-      if (comp === 'intl') {
+      if (comp === 'intl' && ctx.intlCat) {
+        p.intlY = p.intlY || {};
+        const y = (p.intlY[ctx.intlCat] = p.intlY[ctx.intlCat] || { caps: 0, goals: 0 });
+        y.caps++; y.goals += sum.goals;
+      } else if (comp === 'intl') {
         p.intl.caps++; p.intl.goals += sum.goals;
       } else {
         const ss = s.season.stats;
@@ -722,13 +739,35 @@ const Game = {
     return [p.parents.f, p.parents.m];
   },
 
+  // Genç milli takımlar: U19 (16-18 yaş) ve U21 (19-21 yaş); A takım daveti önceliklidir
+  intlCat() { return Game.state.pendingIntlCat || null; },
+  catOffset(cat) { return cat === 'U19' ? 17 : cat === 'U21' ? 10 : 0; },
+  checkYouthCallup() {
+    const s = Game.state, p = s.player;
+    if (p.age < 16 || p.age > 21 || p.injuryWeeks > 0 || Game.inStreet()) return;
+    const ovr = Player.overall(p, true);
+    const cat = p.age <= 18 ? 'U19' : 'U21';
+    const code = p.natLocked ? p.nation : (Game.eligibleNats().find((c) => c === p.nation) || p.nation);
+    const nat = Game.nat(code);
+    if (!nat) return;
+    const need = cat === 'U19' ? Math.max(expectedAtAge(p.age) + 5, nat.rating - 22) : nat.rating - 14;
+    if (ovr < need) return;
+    const opp = U.pick(Game.nations().filter((n) => n.code !== nat.code));
+    s.pendingIntl = opp.code;
+    s.pendingIntlCat = cat;
+    Game.news(`${nat.flag} ${nat.name} ${cat} milli takımına çağrıldın! ${opp.flag} ${opp.name} ${cat} maçı seni bekliyor.`, 'good');
+    Game.toast(`${nat.flag} ${cat} milli takımına çağrıldın!`, 'good');
+    Player.addMorale(p, 5);
+    Player.addFame(p, 0.5);
+  },
   checkCallup() {
     const s = Game.state, p = s.player;
     const ovr = Player.overall(p, true);
-    if (p.age < 17 || p.injuryWeeks > 0 || Life.banned()) return;
+    if (p.injuryWeeks > 0 || Life.banned()) return;
+    if (p.age < 17) return Game.checkYouthCallup();
     const needOf = (n) => n.rating - 7 - (p.fame > 40 ? 2 : 0);
     const want = Game.eligibleNats().map((c) => Game.nat(c)).filter((n) => n && ovr >= needOf(n));
-    if (!want.length) return;
+    if (!want.length) return Game.checkYouthCallup();
     const call = (code) => {
       p.nation = code; p.natLocked = true;
       Game.callup(code);
@@ -750,6 +789,7 @@ const Game = {
     {
       const opp = U.pick(Game.nations().filter((n) => n.code !== nat.code));
       s.pendingIntl = opp.code;
+      s.pendingIntlCat = null;
       Game.news(`${nat.flag} MİLLİ TAKIMA ÇAĞRILDIN! ${opp.flag} ${opp.name} maçı seni bekliyor.`, 'good');
       Game.toast(`${nat.flag} Milli takıma çağrıldın!`, 'good');
       Player.addMorale(p, 8);
@@ -1041,7 +1081,7 @@ const Game = {
     }
     s.seasonEnd = null;
     s.offers = [];
-    s.pendingIntl = null;
+    s.pendingIntl = null; s.pendingIntlCat = null;
     s.pendingCup = null; s.cupQueue = null;
     s.tournament = null;
     Cups.setup(s);
@@ -1091,7 +1131,7 @@ const Game = {
           <div><span>Gol</span><b>${t.goals}</b></div>
           <div><span>Asist</span><b>${t.assists}</b></div>
           <div><span>Ort. Reyting</span><b>${avg}</b></div>
-          <div><span>Milli Maç</span><b>${p.intl.caps} (${p.intl.goals} gol)</b></div>
+          <div><span>Milli Maç</span><b>${p.intl.caps} (${p.intl.goals} gol)</b></div>${['U21', 'U19'].filter((c) => p.intlY && p.intlY[c]).map((c) => `<div><span>${c} Milli Maç</span><b>${p.intlY[c].caps} (${p.intlY[c].goals} gol)</b></div>`).join('')}
           <div><span>Servet</span><b>${U.money(p.money)}</b></div>
           <div><span>Efsane Puanı</span><b>${legend}</b></div>
         </div>
@@ -1274,9 +1314,9 @@ const UI = {
     if (!p.injuryWeeks || typeof CONSUMABLES === 'undefined') return '';
     const c = CONSUMABLES.find((x) => x.id === 'physio');
     if (!c || !Shop.available(c)) return '';
-    const used = Shop.usedThisSeason(c), price = Shop.price(c);
+    const price = Shop.price(c), n = Shop.stock('physio');
     return `<div class="physio-tip">${Icon('injury')}<span><b>Sakatsın · ${p.injuryWeeks} hafta</b><small>Fizyoterapi Seansı sakatlığı 2 hafta kısaltır.</small></span>
-      ${used ? '<em>Bu sezon kullandın</em>' : `<button class="btn btn-buy" data-physio ${p.money < price ? 'disabled' : ''}>${U.money(price)}</button>`}</div>`;
+      ${n ? `<button class="btn btn-buy" data-stuse="physio">Kullan · ${n} stok</button>` : `<button class="btn btn-buy" data-physio ${p.money < price ? 'disabled' : ''}>${U.money(price)}</button>`}</div>`;
   },
 
   // Ödüllü reklam: sakatlığı 1 hafta kısalt (her sakatlıkta bir kez)
@@ -1438,9 +1478,9 @@ const UI = {
     }
     const crest = (name, club, sub) => `<div class="nm-team">${club ? UI.shirt(club, 'big') : `<span class="nat">${sub}</span>`}<b>${U.esc(name)}</b></div>`;
     if (s.pendingIntl) {
-      const n = Game.nation(), o = Game.nat(s.pendingIntl);
-      next = `<div class="nm-vs">${crest(n.name, null, n.code)}<span class="vs">VS</span>${crest(o.name, null, o.code)}</div>
-        <div class="nm-meta">MİLLİ MAÇ · Rakip gücü ${o.rating} · Yıldızlar: ${U.esc(Game.natStars(o.code).slice(0, 2).join(', ') || '—')}</div>`;
+      const n = Game.nation(), o = Game.nat(s.pendingIntl), cat = Game.intlCat(), sx = cat ? ' ' + cat : '';
+      next = `<div class="nm-vs">${crest(n.name + sx, null, n.code)}<span class="vs">VS</span>${crest(o.name + sx, null, o.code)}</div>
+        <div class="nm-meta">${cat ? `${cat} MİLLİ MAÇ · Rakip gücü ${o.rating - Game.catOffset(cat)} · Geleceğin yıldızları sahada` : `MİLLİ MAÇ · Rakip gücü ${o.rating} · Yıldızlar: ${U.esc(Game.natStars(o.code).slice(0, 2).join(', ') || '—')}`}</div>`;
     } else if (fx && !next) {
       const opp = fx.home === s.clubId ? fx.away : fx.home;
       const oppC = Game.club(opp);
@@ -1452,10 +1492,10 @@ const UI = {
         <div class="nm-meta">Rakip ${oppPos}. sırada · Güç ${Game.teamRating(opp)} / Senin takımın ${Game.teamRating(s.clubId)}${star ? ` · Yıldızı: ${U.esc(star.n)}` : ''}</div>`;
     }
     let nTheme = null;
-    if (s.pendingIntl) nTheme = CompTheme.get('intl', p.nation);
+    if (s.pendingIntl) { nTheme = CompTheme.get('intl', p.nation); if (Game.intlCat() && nTheme) nTheme = Object.assign({}, nTheme, { l: `${nTheme.l} ${Game.intlCat()}` }); }
     else if (s.pendingCup && s.cups && s.cups[s.pendingCup]) { const c = s.cups[s.pendingCup]; nTheme = CompTheme.get(c.youth ? 'ygl' : c.dom ? 'dom' : c.id); }
     const ovr = Player.overall(p, true);
-    const roleK = p.injuryWeeks ? 'inj' : Game.roleFor(ovr, s.pendingIntl ? Game.nation().rating : Game.teamRating(s.clubId), Game.isYouth() && !s.pendingIntl, true);
+    const roleK = p.injuryWeeks ? 'inj' : Game.roleFor(ovr, s.pendingIntl ? Game.nation().rating - Game.catOffset(Game.intlCat()) : Game.teamRating(s.clubId), Game.isYouth() && !s.pendingIntl, true);
     const role = { inj: 'Sakatsın, bu maçta oynayamazsın', starter: "Muhtemelen ilk 11'desin", bench: 'Muhtemelen yedeksin', out: 'Kadroya girmen zor' }[roleK];
     const focusL = STATS.find((x) => x.k === s.trainFocus).l;
     const keyTxt = '★ mevkin için önemli';
@@ -1487,6 +1527,7 @@ const UI = {
           <div class="card-h"><span>${Icon('train')} Haftalık Plan</span><span class="ap-pips ${s.ap ? '' : 'done'}" title="Aksiyon hakkı">${[0, 1, 2].map((i) => `<i class="${i < s.ap ? 'on' : ''}"></i>`).join('')}<b>${s.ap ? `${s.ap} hak` : 'Maç günü'}</b></span></div>
           ${UI.adAp()}
           ${UI.adEnergy()}
+          ${UI.stockBar()}
           <div class="lbl">Antrenman odağı <small>${keyTxt}</small></div>
           <div class="focus" role="radiogroup" aria-label="Antrenman odağı">${STATS.map((st) => {
             const v = p.stats[st.k];
@@ -1824,33 +1865,24 @@ ${UI.paper()}`;
   shop() {
     const p = Game.p;
     const ageBand = p.age <= 12 ? 'Çocuk' : p.age <= 17 ? 'Genç' : 'Profesyonel';
-    const open = UI.shopOpen || (UI.shopOpen = { cons: true });
-    const cats = [
-      ['boots', 'boot', 'Kramponlar', 'Tek krampon giyilir (en iyisi) · 30-40 maçta eskir'],
-      ['gear', 'gear', 'Antrenman Ekipmanı', 'Antrenman gelişimini artırır (en iyisi geçerli)'],
-      ['food', 'food', 'Beslenme', 'Haftalık enerji yenilenmesi (en iyisi geçerli)'],
-      ['life', 'smile', 'Hobi ve Eğlence', 'Her hafta moral (hepsi birikir)'],
-      ['ride', 'fast', 'Ulaşım', 'Moral ve ün (hepsi birikir)'],
-      ['style', 'star', 'Stil ve Lüks', 'Ün ağırlıklı (hepsi birikir)'],
-      ['balls', 'ball', 'Kozmetik Toplar', 'Maçta ve antrenmanda kullandığın top'],
-    ];
+    const tab = UI.shopTab || 'bag';
+    const cats = {
+      boots: ['boot', 'Kramponlar', 'Tek krampon giyilir (en iyisi) · 30-40 maçta eskir'],
+      gear: ['gear', 'Antrenman Ekipmanı', 'Antrenman gelişimini artırır (en iyisi geçerli)'],
+      food: ['food', 'Beslenme', 'Haftalık enerji yenilenmesi (en iyisi geçerli)'],
+      life: ['smile', 'Hobi ve Eğlence', 'Her hafta moral (hepsi birikir)'],
+      ride: ['fast', 'Ulaşım', 'Moral ve ün (hepsi birikir)'],
+      style: ['star', 'Stil ve Lüks', 'Ün ağırlıklı (hepsi birikir)'],
+      balls: ['ball', 'Kozmetik Toplar', 'Maçta ve antrenmanda kullandığın top'],
+    };
+    const tabs = [['bag', 'bolt', 'Çanta'], ['cons', 'heart', 'Bakım'], ['kit', 'boot', 'Ekipman'], ['lux', 'star', 'Yaşam Tarzı'], ['balls', 'ball', 'Toplar']];
     const card = (art, color, name, desc, right, cls = '', skin) => `
       <div class="sh-item ${cls}">
         <div class="sh-art">${skin ? `<img class="ball-thumb" alt="" src="${Balls.thumb(BALL_STYLES[skin], 96)}">` : ShopArt.svg(art, color)}</div>
         <div class="sh-t"><b>${U.esc(name)}</b><small>${U.esc(desc)}</small></div>
         <div class="sh-act">${right}</div>
       </div>`;
-    const cons = CONSUMABLES.filter((c) => Shop.available(c)).map((c) => {
-      const used = Shop.usedThisSeason(c);
-      const price = Shop.price(c);
-      return card(c.art, '#4fb3ff', c.name, c.desc, used ? '<span class="tag">Bu sezon kullandın</span>' : `<button class="btn btn-buy" data-use="${c.id}" ${p.money < price ? 'disabled' : ''}>${U.money(price)}</button>`);
-    }).join('');
-    const group = (id, ic, t, d, body, count) => `
-      <details class="shop-cat" data-cat="${id}" ${open[id] ? 'open' : ''}>
-        <summary>${Icon(ic)}<span class="sc-t"><b>${t}</b><small>${d}</small></span><span class="sc-n">${count}</span>${Icon('chevron', 'sc-chev')}</summary>
-        <div class="sh-grid">${body}</div>
-      </details>`;
-    const sec = cats.map(([c, ic, t, d]) => {
+    const itemsOf = (c) => {
       const list = ITEMS.filter((i) => i.cat === c && (p.items.includes(i.id) || (p.age >= i.minAge && (!i.maxAge || p.age <= i.maxAge)))).sort((a, b) => a.price - b.price);
       const locked = ITEMS.filter((i) => i.cat === c && i.minAge > p.age && !p.items.includes(i.id)).sort((x, y) => x.minAge - y.minAge).slice(0, 2);
       if (!list.length && !locked.length) return '';
@@ -1867,16 +1899,60 @@ ${UI.paper()}`;
         if (own && it.skin) right = p.ballSkin === it.skin ? `<span class="tag own">${Icon('star')} Kullanılıyor</span>` : `<button class="btn btn-ghost btn-buy" data-ball="${it.skin}">Kullan</button>`;
         return card(it.art, ShopArt.tierColor(it.price), it.name, desc, right, own ? 'own' : '', it.skin);
       }).join('') + locked.map((it) => card(it.art, '#5d6878', it.name, `${it.minAge} yaşında açılır`, `<span class="tag">${U.money(it.price)}</span>`, 'locked', it.skin)).join('');
-      return group(c, ic, t, d, body, `${owned}/${list.length}`);
-    }).join('');
+      const [ic, tt, d] = cats[c];
+      return `<div class="sh-sec"><div class="sh-sec-h">${Icon(ic)}<span><b>${tt}</b><small>${d}</small></span><em>${owned}/${list.length}</em></div><div class="sh-grid">${body}</div></div>`;
+    };
+    let body = '';
+    if (tab === 'bag') {
+      body = Object.keys(Shop.STOCK).map((id) => {
+        const c = CONSUMABLES.find((x) => x.id === id);
+        if (!c || !Shop.available(c)) return '';
+        const n = Shop.stock(id), max = Shop.STOCK[id], price = Shop.price(c), room = max - n;
+        const fill = Math.min(room, 5);
+        const canUse = n > 0 && (id !== 'physio' || p.injuryWeeks > 0);
+        return `<div class="bag-item">
+          <div class="sh-art">${ShopArt.svg(c.art, '#4fb3ff')}</div>
+          <div class="bag-t"><b>${U.esc(c.name)}</b><small>${U.esc(c.desc)}</small>
+            <div class="bag-pips">${Array.from({ length: max }, (_, i) => `<i class="${i < n ? 'on' : ''}"></i>`).join('')}<em>${n}/${max}</em></div></div>
+          <div class="bag-act">
+            <button class="btn btn-buy" data-stbuy="${id}:1" ${room < 1 || p.money < price ? 'disabled' : ''}>+1 · ${U.money(price)}</button>
+            ${fill > 1 ? `<button class="btn btn-ghost btn-buy" data-stbuy="${id}:${fill}" ${p.money < price * fill ? 'disabled' : ''}>+${fill} · ${U.money(price * fill)}</button>` : ''}
+            <button class="btn btn-ghost btn-buy" data-stuse="${id}" ${canUse ? '' : 'disabled'}>Kullan</button>
+          </div>
+        </div>`;
+      }).join('') + '<p class="muted bag-note">Çantandaki ürünleri Merkez › Haftalık Plan\'dan mağazaya gelmeden kullanabilirsin.</p>';
+    } else if (tab === 'cons') {
+      body = `<div class="sh-grid">${CONSUMABLES.filter((c) => Shop.available(c) && !Shop.STOCK[c.id]).map((c) => {
+        const used = Shop.usedThisSeason(c), price = Shop.price(c);
+        return card(c.art, '#4fb3ff', c.name, c.desc, used ? '<span class="tag">Bu sezon kullandın</span>' : `<button class="btn btn-buy" data-use="${c.id}" ${p.money < price ? 'disabled' : ''}>${U.money(price)}</button>`);
+      }).join('')}</div>`;
+    } else if (tab === 'kit') body = ['boots', 'gear', 'food'].map(itemsOf).join('');
+    else if (tab === 'lux') body = ['life', 'ride', 'style'].map(itemsOf).join('');
+    else body = itemsOf('balls');
     return `${typeof Premium !== 'undefined' ? Premium.card() : ''}
       <section class="card shop-head">
         <div class="card-h"><span>${Icon('shop')} Mağaza</span><span class="tag">${ageBand} reyonu · ${p.age} yaş</span></div>
-        <div class="shop-wallet">${Icon('wallet')}<span><small>Bakiyen</small><b>${U.money(p.money)}</b></span><span><small>Eşyaların</small><b>${p.items.length}</b></span></div>
-        <p class="muted">Yaşın büyüdükçe yeni ürünler açılır. Kategoriye dokunarak aç ya da kapat.</p>
+        <div class="shop-wallet">${Icon('wallet')}<span><small>Bakiyen</small><b>${U.money(p.money)}</b></span><span><small>Eşyaların</small><b>${p.items.length}</b></span><span><small>Çanta</small><b>${Shop.stock('drink')} + ${Shop.stock('physio')}</b></span></div>
+        <nav class="sh-tabs">${tabs.map(([k, ic, l]) => `<button class="${k === tab ? 'on' : ''}" data-shtab="${k}">${Icon(ic)}<span>${l}</span></button>`).join('')}</nav>
       </section>
-      ${group('cons', 'bolt', 'Tek Kullanımlık', 'Anında etki eder', cons, CONSUMABLES.filter((c) => Shop.available(c)).length)}
-      ${sec}`;
+      <section class="card shop-body">${body || '<p class="muted">Bu reyonda şimdilik ürün yok.</p>'}</section>`;
+  },
+
+  // Haftalık plandaki çanta: stoklu ürünleri mağazaya gitmeden kullan
+  stockBar() {
+    const p = Game.p;
+    if (typeof Shop === 'undefined' || Game.inStreet()) return '';
+    const item = (id, ic, label) => {
+      const c = CONSUMABLES.find((x) => x.id === id);
+      if (!c || !Shop.available(c)) return '';
+      const n = Shop.stock(id), price = Shop.price(c);
+      const canUse = n > 0 && (id !== 'physio' || p.injuryWeeks > 0);
+      return `<div class="stk">
+        <button class="stk-use" data-stuse="${id}" ${canUse ? '' : 'disabled'}>${Icon(ic)}<span>${label}</span><b>${n}/${Shop.STOCK[id]}</b></button>
+        <button class="stk-buy" data-stbuy="${id}:1" ${n >= Shop.STOCK[id] || p.money < price ? 'disabled' : ''} aria-label="Satın al">+1 Al · ${U.money(price)}</button>
+      </div>`;
+    };
+    return `<div class="lbl">Çantan <small>dokun ve kullan</small></div><div class="stockbar">${item('drink', 'bolt', 'Enerji İçeceği')}${item('physio', 'injury', 'Fizyoterapi')}</div>`;
   },
 
   career() {
@@ -1891,7 +1967,7 @@ ${UI.paper()}`;
           <div><span>Asist</span><b>${t.assists}</b></div>
           <div><span>Ort. Reyting</span><b>${t.apps ? (t.ratingSum / t.apps).toFixed(2) : '-'}</b></div>
           <div><span>Maçın Adamı</span><b>${t.motm}</b></div>
-          <div><span>Milli Maç</span><b>${p.intl.caps} (${p.intl.goals} gol)</b></div>
+          <div><span>Milli Maç</span><b>${p.intl.caps} (${p.intl.goals} gol)</b></div>${['U21', 'U19'].filter((c) => p.intlY && p.intlY[c]).map((c) => `<div><span>${c} Milli Maç</span><b>${p.intlY[c].caps} (${p.intlY[c].goals} gol)</b></div>`).join('')}
           ${Game.inStreet() ? '' : `<div><span>Piyasa Değeri</span><b>${U.money(Game.marketValue(p))}</b></div>`}
           ${p.best && p.best.fee ? `<div><span>Rekor Bonservis</span><b>${U.money(p.best.fee)}</b></div>` : ''}
         </div>
@@ -1946,6 +2022,7 @@ ${UI.paper()}`;
       ${typeof Premium !== 'undefined' ? Premium.card() : ''}
       <section class="card settings">
         <div class="card-h"><span>${Icon('cog')} Genel</span></div>
+        ${row('Para birimi', `Otomatik: telefonun bölgesine göre (${U.CUR[U.curAuto()].sym})`, `<div class="seg" data-noi18n>${[['', 'Oto'], ['TRY', '₺'], ['USD', '$'], ['EUR', '€'], ['GBP', '£']].map(([k, l]) => { let cur = ''; try { cur = localStorage.getItem('starfoot_cur') || ''; } catch (e) { /* yok */ } return `<button data-setcur="${k}" class="${cur === k ? 'on' : ''}">${l}</button>`; }).join('')}</div>`)}
         ${row('Dil / Language', '', `<div class="seg" data-noi18n><button data-setlang="tr" class="${I18N.lang === 'tr' ? 'on' : ''}">Türkçe</button><button lang="en" data-setlang="en" class="${I18N.lang === 'en' ? 'on' : ''}">English</button></div>`)}
         ${row('Zorluk', DIFFS[s.difficulty || 'normal'].d, `<div class="seg">${Object.entries(DIFFS).map(([k, v]) => `<button data-setdiff="${k}" class="${k === (s.difficulty || 'normal') ? 'on' : ''}">${v.l}</button>`).join('')}</div>`)}
       </section>
@@ -2061,6 +2138,9 @@ ${UI.paper()}`;
     }));
     U.$$('[data-setdiff]', root).forEach((b) => (b.onclick = () => { Game.state.difficulty = b.dataset.setdiff; Game.save(); Game.toast(`Zorluk: ${DIFFS[b.dataset.setdiff].l}`, 'good'); Game.render(); }));
     U.$$('[data-use]', root).forEach((b) => (b.onclick = () => Shop.use(b.dataset.use)));
+    U.$$('[data-stbuy]', root).forEach((b) => (b.onclick = () => { const [id, n] = b.dataset.stbuy.split(':'); Shop.buyStock(id, +n || 1); }));
+    U.$$('[data-stuse]', root).forEach((b) => (b.onclick = () => Shop.useStock(b.dataset.stuse)));
+    U.$$('[data-shtab]', root).forEach((b) => (b.onclick = () => { UI.shopTab = b.dataset.shtab; Game.render(); }));
     const nAsk = root.querySelector('#num-ask');
     if (nAsk) nAsk.onclick = () => Shirt.ask(root.querySelector('#num-sel').value);
     U.$$('[data-ball]', root).forEach((b) => (b.onclick = () => {
@@ -2114,6 +2194,7 @@ ${UI.paper()}`;
       });
     }));
     U.$$('[data-adprivacy]', root).forEach((b) => (b.onclick = () => window.StarfootAds.privacyOptions()));
+    U.$$('[data-setcur]', root).forEach((b) => (b.onclick = () => { try { if (b.dataset.setcur) localStorage.setItem('starfoot_cur', b.dataset.setcur); else localStorage.removeItem('starfoot_cur'); } catch (e) { /* yok */ } Game.render(); }));
     U.$$('[data-setlang]', root).forEach((b) => (b.onclick = () => { if (b.dataset.setlang !== I18N.lang) { Game.save(); I18N.set(b.dataset.setlang); } }));
     U.$$('[data-sys]', root).forEach((b) => (b.onclick = () => {
       const k = b.dataset.sys;

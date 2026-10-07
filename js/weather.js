@@ -14,7 +14,7 @@ const Weather = {
     const round = state && state.season ? state.season.round : 10;
     const winter = round >= 12 && round <= 26;
     const lg = ctx.lg || '';
-    const north = ['ENG', 'ENG2', 'GER', 'GER2', 'TR1', 'TR2', 'NED', 'BEL', 'SCO', 'youth', 'ucl', 'uel', 'uecl'].includes(lg);
+    const north = ['ENG', 'ENG2', 'GER', 'GER2', 'TR1', 'TR2', 'NED', 'BEL', 'SCO', 'AUT', 'SUI', 'DEN', 'CZE', 'POL', 'UKR', 'youth', 'ucl', 'uel', 'uecl'].includes(lg);
     const summer = ['wc', 'euro', 'intl', 'street', 'BRA', 'ARG', 'csa', 'KSA', 'MEX', 'ccc', 'acl'].includes(lg);
     const w = {
       clear: summer ? 70 : 50,
@@ -157,6 +157,14 @@ const SCOREBOARDS = {
   acl: { tag: 'ASYA ŞAMPİYONLAR', c1: '#5b2c83', c2: '#ffcf3f' },
   BEL: { tag: 'FLAMAN LİGİ', c1: '#1d1d1b', c2: '#ffd200' },
   SCO: { tag: 'DAĞLILAR LİGİ', c1: '#0b2a5a', c2: '#ffffff' },
+  AUT: { tag: 'ALP LİGİ', c1: '#c8102e', c2: '#ffffff' },
+  SUI: { tag: 'ALPLER SÜPER LİG', c1: '#1b1d22', c2: '#e30613' },
+  GRE: { tag: 'EGE LİGİ', c1: '#0d5eaf', c2: '#ffffff' },
+  DEN: { tag: 'VİKİNG LİGİ', c1: '#c8102e', c2: '#ffffff' },
+  CRO: { tag: 'ADRİYATİK', c1: '#171796', c2: '#ffffff' },
+  CZE: { tag: 'BOHEMYA LİGİ', c1: '#11457e', c2: '#ffffff' },
+  POL: { tag: 'VİSTÜL LİGİ', c1: '#1b1d22', c2: '#dc143c' },
+  UKR: { tag: 'BOZKIR LİGİ', c1: '#005bbb', c2: '#ffd500' },
   USA: { tag: 'YILDIZLI LİG', c1: '#0b1f4d', c2: '#e31b23' },
   MEX: { tag: 'AZTEK LİGİ', c1: '#006847', c2: '#ffffff' },
   KSA: { tag: 'ÇÖL LİGİ', c1: '#006c35', c2: '#ffffff' },
