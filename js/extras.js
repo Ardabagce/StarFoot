@@ -528,10 +528,23 @@ const Social = {
       const base = (p.name + p.surname).toLowerCase().replace(/[^a-zçğıöşü]/g, '').replace(/ç/g, 'c').replace(/ğ/g, 'g').replace(/ı/g, 'i').replace(/ö/g, 'o').replace(/ş/g, 's').replace(/ü/g, 'u');
       p.social = { handle: '@' + base + p.shirt, followers: 40 + U.randi(0, 60), following: U.randi(80, 260), posts: [] };
     }
+    // eski kayıtlardaki gerçek dışı takipçi sayıları ünün izin verdiği tavana çekilir
+    if (Game.state && p.social.followers > Social.cap(p)) p.social.followers = Social.cap(p);
     return p.social;
   },
+  // Takipçi tavanı hedefin 1,6 katı
+  cap(p) { return Math.round(Social.target(p) * 1.6); },
+  // mevcut takipçi hedefe yaklaştıkça yeni takipçi kazanmak zorlaşır
+  room(p) { const f = p.social ? p.social.followers : 0; return U.clamp(1.5 - f / Math.max(1, Social.target(p)), 0, 1); },
+  // Takipçi hedefi: ün ve ligin görünürlüğü belirler; 200 binin üstü kariyer birikimiyle açılır
+  // (profesyonel sezon, kupa, Altın Top). Örn. 2 sezonluk genç yıldız ≈ 10-20 Mn, uzun kariyerli efsane ≈ 100 Mn+
   target(p) {
-    return Math.round(120 * Math.exp(p.fame * 0.145) * (Game.isYouth() ? 0.7 : 1));
+    const lg = !Game.state || Game.inStreet() || Game.isYouth() ? null : LEAGUES.find((l) => l.id === Game.club().league);
+    const vis = lg ? U.clamp(0.7 + lg.fame * 0.25, 0.8, 1.1) : 0.7;
+    const base = 120 * Math.exp(Math.min(p.fame, 100) * 0.135) * vis;
+    const pro = (p.history || []).filter((h) => h.age >= 17 && h.apps > 0).length;
+    const legacy = U.clamp(0.04 + pro * 0.05 + (p.trophies || []).length * 0.01 + (p.ballon || 0) * 0.08, 0.04, 1);
+    return Math.round(Math.min(base, 2e5) + Math.max(0, base - 2e5) * legacy);
   },
   fmt(n) {
     n = Math.round(n);
@@ -554,8 +567,8 @@ const Social = {
     const tgt = Social.target(p);
     // ünün altındaysan hızla yetişir; üstündeysen çok yavaş erir (maç kazanımları kalıcı olsun)
     const f = so.followers;
-    const drift = f < tgt ? (tgt - f) * 0.15 : -(f - tgt) * 0.015;
-    so.followers = Math.max(10, Math.round(f + drift + f * U.rand(-0.002, 0.006)));
+    const drift = f < tgt ? (tgt - f) * 0.08 : -(f - tgt) * 0.05;
+    so.followers = U.clamp(Math.round(f + drift + f * U.rand(-0.002, 0.003)), 10, Social.cap(p));
   },
   post(kind, text, boost = 1, opts = {}) {
     const p = Game.p, so = Social.ensure(p), s = Game.state;
@@ -573,7 +586,7 @@ const Social = {
       loc: opts.loc || SocialArt.locFor(scene, club), brand: opts.brand,
     });
     so.posts = so.posts.slice(0, 15);
-    so.followers += Math.round(likes * 0.03 * boost);
+    so.followers = Math.min(Social.cap(p), so.followers + Math.round(likes * 0.03 * boost * Social.room(p)));
   },
   natOpts() {
     const code = Game.p.nation;

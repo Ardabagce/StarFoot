@@ -615,8 +615,9 @@ const Game = {
       if (sum.red) why.push('Kırmızı kart: takım ve taraftar kırgın');
       else if (sum.yellow) why.push('Sarı kart');
       // takipçi: maçtaki performans sosyal medyaya yansır
-      const folGain = Math.round(so0.followers * ((youth ? 0.002 : 0.004) + sum.goals * 0.012 + sum.assists * 0.005 + (sum.motm ? 0.018 : 0) + (r >= 8 ? 0.01 : r < 6 ? -0.006 : 0)));
-      so0.followers = Math.max(10, so0.followers + folGain);
+      const perf = (youth ? 0.002 : 0.004) + sum.goals * 0.012 + sum.assists * 0.005 + (sum.motm ? 0.018 : 0) + (r >= 8 ? 0.01 : r < 6 ? -0.006 : 0);
+      const folGain = Math.round(so0.followers * perf * (perf > 0 ? Social.room(p) : 1));
+      so0.followers = U.clamp(so0.followers + folGain, 10, Social.cap(p));
       Loot.roll(comp === 'intl' ? null : r);
       Gift.roll(comp === 'intl' ? null : r);
       const fameGain = (sum.goals * 0.45 + sum.assists * 0.25 + (r >= 8 ? 0.5 : 0) + (sum.motm ? 0.5 : 0)) * fameMult;

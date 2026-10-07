@@ -1933,3 +1933,10 @@ button, .btn, a, [data-act], [data-tab] { touch-action: manipulation; -webkit-ta
 .stk-buy { border: 0; border-top: 1px solid var(--line); background: rgba(255, 207, 63, .1); color: var(--flood); font: 700 12px var(--body); padding: 7px 8px; cursor: pointer; }
 .stk-buy:disabled { opacity: .4; cursor: default; }
 .bal-how { margin: -2px 0 10px; font-size: 12px; color: var(--muted); } .bal-how b { color: var(--chalk); }
+/* Görevler tamamlandı: küçük şerit */
+.missions.done { padding: 10px 14px; }
+.ms-mini { display: flex; align-items: center; gap: 12px; }
+.ms-mini > i { width: 26px; height: 26px; flex: none; border-radius: 50%; background: #2fbf71; color: #fff; display: grid; place-items: center; font-style: normal; font-weight: 900; }
+.ms-mini span { flex: 1; display: flex; flex-direction: column; }
+.ms-mini b { font-size: 14px; }
+.ms-mini small { font-size: 12px; color: var(--muted); }

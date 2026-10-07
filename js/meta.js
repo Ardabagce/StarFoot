@@ -207,6 +207,9 @@ const Missions = {
     const s = Game.state;
     if (!s || Game.inStreet()) return '';
     const d = Missions.get(), all = Missions.done(), st = Daily.streak();
+    if (d.claimed) {
+      return `<section class="card missions done"><div class="ms-mini"><i>✓</i><span><b>Günün görevleri tamamlandı</b><small>Yarın yeni görevler gelecek</small></span>${st ? `<span class="ms-streak">🔥 ${st} gün</span>` : ''}</div></section>`;
+    }
     return `<section class="card missions">
       <div class="card-h"><span>${Icon('star')} Günün Görevleri</span>${st ? `<span class="ms-streak">🔥 ${st} gün</span>` : ''}</div>
       ${d.list.map((x) => {
