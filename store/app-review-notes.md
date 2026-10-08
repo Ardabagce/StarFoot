@@ -105,3 +105,19 @@ Attached is a screen recording on a physical iPhone showing:
 3. The user flow after the request (the main menu and starting a new career).
 
 The new build has been submitted for review with this version. Thank you!
+
+---
+
+## 1.0.3 gönderimi: App Review Information › Notes (İngilizce, kopyala-yapıştır)
+
+StarFoot is a single-player football career game. No account or login is required; all game data is stored on the device.
+
+App Tracking Transparency: On first launch the ATT permission request is shown about one second after the app opens, before the Google Mobile Ads SDK is initialized and before any data that could be used for tracking is collected. A screen recording on a physical iPhone is attached.
+
+Ads: Google AdMob. Rewarded ads are optional (the player chooses to watch one for an in-game reward). Interstitial ads appear at most twice per season (season start and mid-season), never in the player's first season.
+
+In-app purchase: "StarFoot Premium" (product ID starfoot_premium, non-consumable). It removes interstitial ads and grants rewarded-ad rewards without watching ads. Find it under Life › Shop (top card) or Profile › Settings. A "Restore Purchases" button is next to it.
+
+Simulated gambling: The Life tab contains an optional fictional casino and sports betting section, available only to players aged 18+ in the game. It uses in-game currency only; no real money can be wagered, in-game currency cannot be bought, and nothing can be cashed out.
+
+All club, league and player names are fictional parodies; no real club logos, kits or likenesses are used.

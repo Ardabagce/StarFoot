@@ -17,14 +17,21 @@ const Premium = {
     return (list || []).some((t) => t && t.productIdentifier === PREMIUM_ID && !/pending|refund|revok/i.test(String(t.purchaseState || '')));
   },
   // Açılışta fiyatı ve önceki satın alımı mağazadan okur (yeniden kurulumda Premium kendiliğinden geri gelir)
-  async init() {
+  // Ürün bilgisini (yerel fiyatıyla) mağazadan yükler; başarısız olursa false
+  async loadProduct() {
     const P = Premium.plugin();
-    if (!P) return;
+    if (!P) return false;
     try {
       const r = await P.getProducts({ productIdentifiers: [PREMIUM_ID], productType: 'inapp' });
       const pr = r && r.products && r.products[0];
-      if (pr && pr.priceString) Premium.price = pr.priceString;
-    } catch (e) { /* ürün henüz mağazada yok */ }
+      if (pr) { Premium.price = pr.priceString || Premium.price; Premium.loaded = true; }
+    } catch (e) { /* ürün henüz mağazada yok ya da bağlantı yok */ }
+    return !!Premium.loaded;
+  },
+  async init() {
+    const P = Premium.plugin();
+    if (!P) return;
+    if (!(await Premium.loadProduct())) setTimeout(() => Premium.loadProduct().then((ok) => { if (ok && Game.state) Game.render(); }), 8000);
     try {
       const r = await P.getPurchases({ productType: 'inapp' });
       if (Premium.owned(r && r.purchases)) Premium.set(true);
@@ -36,7 +43,13 @@ const Premium = {
     if (!P || Premium.busy) return;
     Premium.busy = true;
     try {
-      const t = await P.purchaseProduct({ productIdentifier: PREMIUM_ID, productType: 'inapp' });
+      // satın almadan önce ürün yüklenmediyse yeniden dene (StoreKit ürünü tanımadan satın alma başlatılamaz)
+      if (!Premium.loaded && !(await Premium.loadProduct())) {
+        Game.toast('Mağazaya şu an ulaşılamıyor. İnternet bağlantını kontrol edip tekrar dene.', 'bad');
+        Premium.busy = false;
+        return;
+      }
+      const t = await P.purchaseProduct({ productIdentifier: PREMIUM_ID, productType: 'inapp', quantity: 1 });
       if (t) { Premium.set(true); Game.toast('⭐ Premium aktif! Desteğin için teşekkürler.', 'good'); }
     } catch (e) {
       if (!/cancel/i.test(String((e && (e.message || e.code)) || e))) Game.toast('Satın alma tamamlanamadı. Biraz sonra tekrar dene.', 'bad');
