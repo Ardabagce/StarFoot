@@ -21,4 +21,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
         SceneDelegateProxy.shared.scene(scene, continue: userActivity)
     }
+
+    // Sahne tabanlı yaşam döngüsünde uygulama etkinleşince ATT izni burada istenir
+    func sceneDidBecomeActive(_ scene: UIScene) {
+        AppDelegate.requestTrackingIfNeeded()
+    }
 }

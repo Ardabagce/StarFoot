@@ -27,21 +27,44 @@
   };
   const withTimeout = (p, ms) => Promise.race([p, new Promise((r) => setTimeout(() => r(false), ms))]);
 
+  // iOS: Apple'ın izleme izni (App Tracking Transparency) penceresi.
+  // Reklam SDK'sı başlamadan ve hiçbir veri toplanmadan ÖNCE, uygulama ekranda ve etkinken istenir.
+  // iOS, uygulama tam etkin olmadan gelen isteği sessizce yok sayar; bu yüzden kısa bir bekleme yapılır
+  // ve durum hâlâ belirsizse uygulama öne geldiğinde bir kez daha denenir.
+  const att = async () => {
+    if (!ios || !AdMob.trackingAuthorizationStatus) return;
+    const ask = async () => {
+      try {
+        const t = await AdMob.trackingAuthorizationStatus();
+        if (t && t.status === 'notDetermined') await AdMob.requestTrackingAuthorization();
+        const t2 = await AdMob.trackingAuthorizationStatus();
+        return !(t2 && t2.status === 'notDetermined');
+      } catch (e) { return true; }
+    };
+    const visible = () => new Promise((r) => {
+      if (document.visibilityState === 'visible') return r();
+      const on = () => { if (document.visibilityState === 'visible') { document.removeEventListener('visibilitychange', on); r(); } };
+      document.addEventListener('visibilitychange', on);
+    });
+    await visible();
+    await new Promise((r) => setTimeout(r, 900));
+    if (await ask()) return;
+    // ilk istek yok sayıldıysa: uygulama yeniden öne geldiğinde ya da 2 sn sonra tekrar dene
+    await new Promise((r) => setTimeout(r, 2000));
+    await visible();
+    await ask();
+  };
   const init = async () => {
+    await att();
     try {
       await AdMob.initialize({ initializeForTesting: testing, maxAdContentRating: 'Teen' });
+    } catch (e) { /* SDK başlatılamadı */ }
+    try {
       // GDPR / ABD eyalet yasaları: Google UMP onay formu (AdMob › Gizlilik ve mesajlar'da oluşturulur)
       let info = await AdMob.requestConsentInfo();
       if (!info.canRequestAds && info.isConsentFormAvailable && info.status === 'REQUIRED') info = await AdMob.showConsentForm();
       st.canAds = !!info.canRequestAds;
       st.privacy = info.privacyOptionsRequirementStatus === 'REQUIRED';
-      // iOS: Apple'ın izleme izni (App Tracking Transparency) penceresi
-      if (ios && AdMob.trackingAuthorizationStatus) {
-        try {
-          const t = await AdMob.trackingAuthorizationStatus();
-          if (t && t.status === 'notDetermined') await AdMob.requestTrackingAuthorization();
-        } catch (e) { /* desteklenmiyor */ }
-      }
     } catch (e) {
       st.canAds = true; // onay hizmetine ulaşılamadı: SDK kendi kurallarıyla devam eder
     }

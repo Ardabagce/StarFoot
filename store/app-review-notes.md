@@ -73,3 +73,35 @@ Privacy policy: https://starfoot.vercel.app/privacy.html
    - Ana menüye dön ve bir kariyer kaydını **çöp kutusu** simgesiyle sil (hesap silme yerine geçen akış).
 4. Kaydı durdur; video Fotoğraflar'a kaydedilir. Uzunsa Fotoğraflar'da kırp.
 5. App Store Connect'teki mesaja ek olarak yükle (iPhone'dan Safari ile appstoreconnect.apple.com açıp ekleyebilirsin; dosya çok büyükse bilgisayardan yükle).
+
+---
+
+## Guideline 2.1 – App Tracking Transparency (8 Ekim 2026, build 1.0.2 (108))
+
+### Ne düzeltildi
+- ATT izni artık uygulama etkinleşir etkinleşmez, **reklam SDK'sı başlamadan ve hiçbir veri toplanmadan önce** isteniyor (`SceneDelegate.sceneDidBecomeActive` → ana iş parçacığında `ATTrackingManager.requestTrackingAuthorization`).
+- Önceki sürümde istek, Google onay (UMP) sorgusundan sonra aynı hata bloğunda yapılıyordu; UMP sorgusu hata verdiğinde pencere hiç açılmıyordu. Ayrıca sahne tabanlı yaşam döngüsünde `applicationDidBecomeActive` çağrılmadığı için yerel istek de yoktu.
+- JS tarafı (`js/admob.js`) ATT yanıtlanana kadar AdMob'u başlatmıyor.
+
+### Ekran kaydı (fiziksel iPhone ile)
+1. Ayarlar › Gizlilik ve Güvenlik › İzleme › **"Uygulamaların İzleme İsteğinde Bulunmasına İzin Ver" AÇIK** olmalı (kapalıysa pencere hiçbir uygulamada çıkmaz).
+2. StarFoot'u telefondan **sil**, TestFlight'tan yeni build'i (109 ve üstü) kur.
+3. Kontrol Merkezi › Ekran Kaydı'nı başlat.
+4. Uygulamayı aç → yaklaşık 1 saniye içinde **"StarFoot'un sizi diğer şirketlerin uygulamaları ve web siteleri genelinde izlemesine izin verilsin mi?"** penceresi çıkar.
+5. "İzin Ver" ya da "Uygulamadan İzleme İsteğinde Bulunmamasını İste"ye bas → (AB'deysen Google onay formu) → oyunun ana menüsü → Yeni Kariyer ile birkaç saniye oyna.
+6. Kaydı durdur; videoyu App Review mesajına yanıt olarak ve **App Review Information › Notes / Attachment** alanına ekle.
+
+### Apple'a yanıt (İngilizce, kopyala-yapıştır)
+
+Hello,
+
+Thank you for the review. We found and fixed the issue: the App Tracking Transparency request was made after an ad-consent check, and on some devices that check failed before the request was shown.
+
+In the new build, the ATT permission request is presented as soon as the app becomes active on first launch, on the main thread, before the Google Mobile Ads SDK is initialized and before any data that could be used for tracking is collected. Ads are only initialized after the user responds to the ATT prompt.
+
+Attached is a screen recording on a physical iPhone showing:
+1. A fresh install of the app,
+2. The App Tracking Transparency permission request appearing immediately on first launch, before any tracking data is collected,
+3. The user flow after the request (the main menu and starting a new career).
+
+The new build has been submitted for review with this version. Thank you!

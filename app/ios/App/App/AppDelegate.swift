@@ -1,5 +1,6 @@
 import UIKit
 import Capacitor
+import AppTrackingTransparency
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -27,6 +28,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        AppDelegate.requestTrackingIfNeeded()
+    }
+
+    // App Tracking Transparency: uygulama etkin olduğunda, reklam SDK'sı başlamadan önce ana iş parçacığında istenir.
+    // iOS etkin olmayan uygulamadan gelen isteği yok saydığı için kısa bir gecikmeyle çağrılır.
+    static func requestTrackingIfNeeded() {
+        if #available(iOS 14, *) {
+            guard ATTrackingManager.trackingAuthorizationStatus == .notDetermined else { return }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) {
+                guard UIApplication.shared.applicationState == .active,
+                      ATTrackingManager.trackingAuthorizationStatus == .notDetermined else { return }
+                ATTrackingManager.requestTrackingAuthorization { _ in }
+            }
+        }
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
