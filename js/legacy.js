@@ -276,3 +276,23 @@ const ShareCard = {
   },
   text() { return I18N.lang === 'en' ? 'My StarFoot career ⚽ #StarFoot' : 'StarFoot kariyerim ⚽ #StarFoot'; },
 };
+
+// ---------- Gizlilik politikası: uygulama içinde açılır ----------
+// iPhone/Android uygulamasında target=_blank bağlantılar yeni pencere açamaz; politika bir katmanda gösterilir.
+const PrivacyView = {
+  open() {
+    if (document.querySelector('.pv-ov')) return;
+    const el = document.createElement('div');
+    el.className = 'pv-ov';
+    el.innerHTML = `<div class="pv-box"><div class="pv-bar"><b>${I18N.lang === 'en' ? 'Privacy Policy' : 'Gizlilik Politikası'}</b><button class="btn btn-ghost" data-x>${I18N.lang === 'en' ? 'Close' : 'Kapat'}</button></div><iframe src="privacy.html${I18N.lang === 'en' ? '#en' : ''}" title="Privacy Policy"></iframe></div>`;
+    el.setAttribute('data-noi18n', '');
+    document.body.appendChild(el);
+    el.querySelector('[data-x]').onclick = () => el.remove();
+  },
+};
+document.addEventListener('click', (e) => {
+  const a = e.target.closest && e.target.closest('[data-privacy]');
+  if (!a) return;
+  e.preventDefault();
+  PrivacyView.open();
+});

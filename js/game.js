@@ -2038,7 +2038,7 @@ ${UI.paper()}`;
         <div class="card-h"><span>${Icon('shield')} Gizlilik</span></div>
         <div class="set-links">
           ${window.StarfootAds && window.StarfootAds.privacyRequired && window.StarfootAds.privacyRequired() ? `<button class="btn btn-ghost" data-adprivacy>${Icon('shield')} Reklam gizlilik seçenekleri</button>` : ''}
-          <a class="btn btn-ghost" href="https://starfoot.vercel.app/privacy.html" target="_blank" rel="noopener">Gizlilik Politikası</a>
+          <a class="btn btn-ghost" href="privacy.html" data-privacy>Gizlilik Politikası</a>
           <a class="btn btn-ghost" href="mailto:ardabagce@gmail.com?subject=StarFoot">Destek: ardabagce@gmail.com</a>
         </div>
       </section>
