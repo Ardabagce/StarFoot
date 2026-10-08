@@ -1947,3 +1947,4 @@ button, .btn, a, [data-act], [data-tab] { touch-action: manipulation; -webkit-ta
 .pv-bar b { font-family: var(--display); font-size: 18px; text-transform: uppercase; }
 .pv-bar .btn { min-height: 36px; padding: 6px 14px; }
 .pv-box iframe { flex: 1; width: 100%; border: 0; background: #0a1530; }
+.prem-err { margin: 8px 0 0; font-size: 12px; color: #ff8f86; text-align: center; }

@@ -24,8 +24,9 @@ const Premium = {
     try {
       const r = await P.getProducts({ productIdentifiers: [PREMIUM_ID], productType: 'inapp' });
       const pr = r && r.products && r.products[0];
-      if (pr) { Premium.price = pr.priceString || Premium.price; Premium.loaded = true; }
-    } catch (e) { /* ürün henüz mağazada yok ya da bağlantı yok */ }
+      if (pr) { Premium.price = pr.priceString || Premium.price; Premium.loaded = true; Premium.err = ''; }
+      else Premium.err = 'empty';
+    } catch (e) { Premium.err = String((e && (e.message || e.code)) || e).slice(0, 80); /* bağlantı yok */ }
     return !!Premium.loaded;
   },
   async init() {
@@ -88,6 +89,7 @@ const Premium = {
       </ul>
       <button class="btn btn-play" data-prem-buy>${Icon('star')} Premium al${Premium.price ? ` · ${U.esc(Premium.price)}` : ''}</button>
       <button class="btn btn-ghost prem-restore" data-prem-restore>Satın alımları geri yükle</button>
+      ${!Premium.loaded && Premium.err ? `<p class="prem-err">${Premium.err === 'empty' ? 'Ürün bilgisi App Store\'dan alınamadı (ürün bulunamadı).' : `Mağazaya ulaşılamadı: ${U.esc(Premium.err)}`}</p>` : ''}
     </section>`;
   },
 };
