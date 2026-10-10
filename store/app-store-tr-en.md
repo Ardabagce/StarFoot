@@ -21,6 +21,6 @@ Karakter sınırları: Ad 30 · Alt başlık 30 · Tanıtım metni 170 · Anahta
 ## Diğer alanlar
 - **Kategori:** Oyunlar › Spor (ikincil: Simülasyon)
 - **Telif hakkı:** © 2026 Arda Bağçe
-- **Destek URL'si:** https://starfoot.bagce.app/privacy.html
-- **Pazarlama URL'si:** https://starfoot.bagce.app
-- **Gizlilik politikası URL'si:** https://starfoot.bagce.app/privacy.html
+- **Destek URL'si:** https://starfoot.bagce.dev/privacy.html
+- **Pazarlama URL'si:** https://starfoot.bagce.dev
+- **Gizlilik politikası URL'si:** https://starfoot.bagce.dev/privacy.html
