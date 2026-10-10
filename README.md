@@ -95,7 +95,7 @@ iPhone uygulaması `app/ios/` klasöründe (Capacitor, AdMob + izleme izni). Git
 - **Asist animasyonu:** Pas arkadaşına ulaşınca arkadaşın topu kontrol edip şut çeker; gol olursa ASİST yazar.
 - **Anne-baba memleketi:** Kariyer başında baba ve anne memleketini seçersin. Farklıysa iki milli takımdan da davet alabilirsin; bir ülkeyi seçince karar kalıcıdır.
 - **Yaşam sekmesi:** Ailenle vakit geçir, biriyle tanış, sevgilinle buluş, ilişki güçlenince evlilik teklif et (ayrılık da olabilir). Aile ve ilişki moralini etkiler; doğum günü, tatil, kıskançlık gibi olaylar çıkar.
-- **18 yaş üstü:** Gece hayatı (moral artar, enerji düşer, paparazzi riski), kumarhanede blackjack, rulet ve at yarışı. Maçlara bahis oynanabilir ama yasaktır: her bahis FIFA'nın dikkatini çeker, kendi maçına oynamak çok risklidir; yakalanırsan soruşturma, uzun süreli men, para cezası ve sponsor kaybı.
+- **18 yaş üstü:** Gece hayatı (moral artar, enerji düşer, paparazzi riski).
 - **Menajer ve sponsorluk:** 16 yaşından sonra menajer tutabilirsin (gelirinden pay alır; daha çok teklif, daha yüksek maaş, daha iyi sponsor bulur). Markalar ününe göre sponsorluk teklif eder; haftalık gelir ve sosyal medyada reklam paylaşımları.
 - **Sekmeler:** Merkez, Lig (Dünya dahil), Kadro, Yaşam (Mağaza dahil) ve profil fotoğraflı Profil (Kariyer dahil).
 - **Gazete:** Dünya yıldızlarından manşet ve fotoğraf, kısa kısa hafta sonuçları, zirve tablosu ve gol kralı; prim gibi kişisel bildirimler gazeteden ayrı bir kutuda.
@@ -122,7 +122,7 @@ js/legends.js    Dönem yıldızları, yaşlanma, emeklilik, yeni nesil
 js/cups.js       Avrupa kupaları, Dünya Kupası, Avrupa Şampiyonası
 js/socialart.js  Sosyal medya gönderi görselleri ve Instagram ikonları
 js/celebrate.js  Gol sevinci animasyonları ve şampiyonluk kupa kaldırma töreni
-js/life.js       Yaşam: aile, ilişkiler, gece hayatı, kumarhane, bahis, menajer, sponsorluk
+js/life.js       Yaşam: aile, ilişkiler, gece hayatı, menajer, sponsorluk
 js/minigame.js   Şut/pas fizik sahnesi ve zamanlama barı
 js/drills.js     Antrenman mini oyunları
 js/shopart.js    Mağaza ürün çizimleri

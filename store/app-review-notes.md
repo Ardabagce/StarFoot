@@ -33,7 +33,7 @@ No login, credentials or sample files are needed.
 - Google AdMob (Google Mobile Ads SDK) — rewarded/interstitial advertising.
 - Google User Messaging Platform (part of the AdMob SDK) — consent form for users in regions that require it (EEA/UK, US states).
 - Apple App Tracking Transparency — permission request before personalised ads.
-The app has no backend server, no authentication service, no payment processor, no analytics SDK and no AI service. Game data never leaves the device. The privacy policy is hosted at https://starfoot.vercel.app/privacy.html.
+The app has no backend server, no authentication service, no payment processor, no analytics SDK and no AI service. Game data never leaves the device. The privacy policy is hosted at https://starfoot.bagce.app/privacy.html.
 
 **5. Regional differences**
 The app functions identically in all regions. The only differences are: the interface language follows the device language (Turkish or English, switchable in the app), and the Google consent form is shown only in regions where it is legally required.
@@ -51,8 +51,8 @@ Arda Bağçe
 StarFoot is a single-player, offline football career game for adult football fans (17+). No account, no login, no In-App Purchases, no user-generated content (the in-game social feed is simulated). Saves are stored locally and can be deleted from Main menu › trash icon on the save slot.
 How to test: launch › "New Career" › enter any name › "Start Career" › play or skip the trials › Home: Weekly Plan, "Play Match" (or "Simulate Match"). League tab: table, fixtures, cups. Life tab: shop/lifestyle. Language switch (TR/EN) at the top right of the main menu.
 External services: Google AdMob + Google UMP consent (ads), Apple ATT. No backend, no analytics, no AI, no payments. Works the same in all regions (UI language follows the device; consent form only where required).
-All clubs/players/leagues are fictional or parody names; no official logos, kits or likenesses. Casino/betting features are simulated with virtual currency only; no real-money gambling.
-Privacy policy: https://starfoot.vercel.app/privacy.html
+All clubs/players/leagues are fictional or parody names; no official logos, kits or likenesses. with virtual currency only; no real-money gambling.
+Privacy policy: https://starfoot.bagce.app/privacy.html
 
 ---
 
@@ -118,6 +118,6 @@ Ads: Google AdMob. Rewarded ads are optional (the player chooses to watch one fo
 
 In-app purchases: This version has no in-app purchases.
 
-Simulated gambling: The Life tab contains an optional fictional casino and sports betting section, available only to players aged 18+ in the game. It uses in-game currency only; no real money can be wagered, in-game currency cannot be bought, and nothing can be cashed out.
+Simulated gambling: None. The casino and sports-betting sections from earlier builds have been removed completely; the app contains no simulated gambling.
 
 All club, league and player names are fictional parodies; no real club logos, kits or likenesses are used.

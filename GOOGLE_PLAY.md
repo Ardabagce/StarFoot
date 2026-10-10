@@ -11,8 +11,8 @@ StarFoot Android'e **Capacitor** ile paketlenir: oyunun dosyaları uygulamanın 
 | Reklam ayarları (reklam birimi kimlikleri, test modu, sıklık) | `js/ads-config.js` |
 | Reklam köprüsü: GDPR onay formu, ödüllü ve geçiş reklamları | `js/admob.js` |
 | Otomatik derleme (APK + AAB) | `.github/workflows/android.yml` → GitHub › Actions |
-| Gizlilik politikası (TR + EN, AdMob bölümü dahil) | `privacy.html` → <https://starfoot.vercel.app/privacy.html> |
-| app-ads.txt (yayıncı kimliği sende doldurulacak) | `app-ads.txt` → <https://starfoot.vercel.app/app-ads.txt> |
+| Gizlilik politikası (TR + EN, AdMob bölümü dahil) | `privacy.html` → <https://starfoot.bagce.app/privacy.html> |
+| app-ads.txt (yayıncı kimliği sende doldurulacak) | `app-ads.txt` → <https://starfoot.bagce.app/app-ads.txt> |
 | Mağaza ikonu, öne çıkan görsel, ekran görüntüleri, mağaza metinleri | `store/` |
 
 ### Oyundaki reklamlar
@@ -36,7 +36,7 @@ StarFoot Android'e **Capacitor** ile paketlenir: oyunun dosyaları uygulamanın 
    - **Ödüllü** (Rewarded): adı `odullu`, ödül 1 adet.
    - **Geçiş** (Interstitial): adı `gecis`.
    Her birinin kimliğini kopyala (`ca-app-pub-XXXXXXXXXXXXXXXX/ZZZZZZZZZZ`, içinde **/** var).
-5. **Gizlilik ve mesajlar** bölümünde **GDPR** (Avrupa) mesajı ve **ABD eyalet yasaları** mesajı oluştur ve yayınla. Gizlilik politikası adresi: `https://starfoot.vercel.app/privacy.html`.
+5. **Gizlilik ve mesajlar** bölümünde **GDPR** (Avrupa) mesajı ve **ABD eyalet yasaları** mesajı oluştur ve yayınla. Gizlilik politikası adresi: `https://starfoot.bagce.app/privacy.html`.
 6. Bu üç kimliği ve yayıncı kimliğini (`pub-XXXXXXXXXXXXXXXX`, AdMob › Ayarlar › Hesap bilgileri) bana gönder; ben yerleştireyim. İstersen kendin de yapabilirsin:
    - `app/android/app/src/main/res/values/strings.xml` → `admob_app_id` = uygulama kimliği
    - `js/ads-config.js` → `rewarded`, `interstitial` = birim kimlikleri, `testing: false`
@@ -68,7 +68,7 @@ Her yeni sürümde `app/android/app/build.gradle` içindeki `versionCode`'u 1 ar
 1. **Uygulama oluştur** → `StarFoot: Futbol Kariyeri`, varsayılan dil Türkçe, **Oyun**, **Ücretsiz**.
 2. **Ana mağaza girişi:** `store/listing-tr.md` ve İngilizce çeviri için `store/listing-en.md`; ikon `store/icon-512.png`; öne çıkan görsel `store/feature-graphic-tr.png` / `-en.png`; ekran görüntüleri `store/screens/`.
 3. **Uygulama içeriği** formları:
-   - **Gizlilik politikası:** `https://starfoot.vercel.app/privacy.html`
+   - **Gizlilik politikası:** `https://starfoot.bagce.app/privacy.html`
    - **Reklamlar:** **Evet, uygulamam reklam içeriyor.**
    - **Reklam kimliği:** **Evet, kullanılıyor** → amaç: *Reklam veya pazarlama* (ve *Analiz*).
    - **Uygulama erişimi:** Tüm işlevler kısıtlamasız.
@@ -83,7 +83,7 @@ Her yeni sürümde `app/android/app/build.gradle` içindeki `versionCode`'u 1 ar
      - **Cihaz veya diğer kimlikler** (reklam kimliği): toplanıyor ve paylaşılıyor, amaç: Reklam, Analiz, Dolandırıcılık önleme.
      - Hepsi için "isteğe bağlı mı?" → **Hayır** (reklam SDK'sı otomatik toplar).
      - Ayrıntı: <https://developers.google.com/admob/android/privacy/play-data-disclosure>
-4. **Mağaza ayarları:** Web sitesi olarak `https://starfoot.vercel.app` gir (app-ads.txt bu adreste aranır), iletişim e-postası `ardabagce@gmail.com`.
+4. **Mağaza ayarları:** Web sitesi olarak `https://starfoot.bagce.app` gir (app-ads.txt bu adreste aranır), iletişim e-postası `ardabagce@gmail.com`.
 
 ### 6. Test ve yayın
 1. **Test › Kapalı test** → yeni sürüm → AAB'yi yükle, **Play Uygulama İmzalama**'yı kabul et.

@@ -1213,7 +1213,7 @@ const UI = {
   },
 
   // Gazete görünümlü haberler
-  // Kişisel bildirimler (prim, bahis, kumarhane, sponsor bitişi): gazeteden ayrı
+  // Kişisel bildirimler (prim, sponsor bitişi): gazeteden ayrı
   inbox() {
     const s = Game.state;
     const me = s.news.filter((n) => n.type === 'me').slice(0, 5);

@@ -40,7 +40,7 @@ StarFoot, maçların kritik anlarını senin oynadığın bir futbol kariyer oyu
 • İnternet olmadan da oynanır
 • Türkçe ve İngilizce
 
-Not: Tüm kulüp ve oyuncu isimleri kurgusaldır. Oyundaki kumarhane ve bahis bölümleri tamamen kurgusaldır; gerçek para kullanılmaz ve gerçek ödül kazanılmaz.
+Not: Tüm kulüp ve oyuncu isimleri kurgusaldır.
 
 **Kategori:** Oyun › Spor
 **Etiketler:** Futbol, Spor menajerliği, Kariyer, Tek oyunculu, Çevrimdışı

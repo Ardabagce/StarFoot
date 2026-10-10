@@ -14,7 +14,7 @@ iPhone uygulaması `app/ios/` klasöründe (Capacitor). Android ile aynı oyun d
 | Ekran görüntüleri 1290×2796 (5 TR + 5 EN) | `store/premium/ios/` |
 | Ad, alt başlık, tanıtım metni, anahtar kelimeler | `store/app-store-tr-en.md` |
 | Açıklama metinleri | `store/listing-tr.md`, `store/listing-en.md` |
-| Gizlilik politikası (ATT bölümü dahil) | https://starfoot.vercel.app/privacy.html |
+| Gizlilik politikası (ATT bölümü dahil) | https://starfoot.bagce.app/privacy.html |
 
 ## Senin yapacakların (sırayla)
 

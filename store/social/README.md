@@ -23,7 +23,7 @@ Yeniden üretmek için: `node store/social/clips.js tr <klasör>`, ardından `no
 📲 App Store'da ücretsiz, link aşağıda 👇
 ```
 
-- **Bağlantı:** Oyun yayınlanınca App Store linki. O zamana kadar `https://starfoot.vercel.app`
+- **Bağlantı:** Oyun yayınlanınca App Store linki. O zamana kadar `https://starfoot.bagce.app`
 - **Öne çıkanlar (highlights):** `Oyun`, `Goller`, `Transfer`, `Kupalar`, `Güncelleme`
 
 İngilizce biyografi istersen:

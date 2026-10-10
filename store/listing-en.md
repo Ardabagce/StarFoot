@@ -40,7 +40,7 @@ StarFoot is a football career game where you play the key moments of every match
 • Plays offline
 • English and Turkish
 
-Note: All club and player names are fictional. The casino and betting sections are entirely fictional; no real money is used and no real prizes can be won.
+Note: All club and player names are fictional.
 
 **Category:** Game › Sports
 **Tags:** Football, Soccer, Sports management, Career, Single player, Offline
