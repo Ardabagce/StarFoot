@@ -121,3 +121,15 @@ In-app purchases: This version has no in-app purchases.
 Simulated gambling: None. The casino and sports-betting sections from earlier builds have been removed completely; the app contains no simulated gambling.
 
 All club, league and player names are fictional parodies; no real club logos, kits or likenesses are used.
+
+---
+
+## 1.0.4 gönderimi: ürün sayfası başlığı ve arama sonucu görselleri
+
+Oyunda değişiklik yok; yalnızca sürüm numarası 1.0.4 oldu. Bu sürümle ürün sayfasına başlık (3840×1646) ve arama sonucu (1920×1280) görselleri eklenir: `store/premium/header/`.
+
+**What's New (TR):** Küçük iyileştirmeler ve hata düzeltmeleri.
+
+**What's New (EN):** Minor improvements and bug fixes.
+
+**App Review Information › Notes:** 1.0.3 notları aynen geçerli (Premium yok, simüle kumar yok, ATT ilk açılışta reklam SDK'sından önce).
