@@ -1,0 +1,416 @@
+2644|👀 La rivale di campionato {} ha un talento della tua età, nel tuo ruolo: {}. La stampa vi sta già confrontando. Conosci il tuo rivale!
+2645|La rivale di campionato {} ha un talento della tua età, nel tuo ruolo: {}. La stampa vi sta già confrontando. Conosci il tuo rivale!
+2646|👀 C'è un altro talento della tua età nel tuo ruolo: {} ({}). La stampa vi sta già confrontando. Conosci il tuo rivale!
+2647|👀 La rivale {} {} ha un talento della tua età, nel tuo ruolo: {}. La stampa vi sta già confrontando. Conosci il tuo rivale!
+2648|C'è un altro talento della tua età nel tuo ruolo: {} ({}). La stampa vi sta già confrontando. Conosci il tuo rivale!
+2649|La rivale {} {} ha un talento della tua età, nel tuo ruolo: {}. La stampa vi sta già confrontando. Conosci il tuo rivale!
+2650|rivale {} ha un talento della tua età, nel tuo ruolo: {}. La stampa vi sta già confrontando. Conosci il tuo rivale!
+2651|{} ha {} anni, siamo nel {}, un ragazzino che gioca a calcio per strada. Oggi c'è una partita tra quartieri e un osservatore sta guardando!
+2652|ha {} anni, siamo nel {}, un ragazzino che gioca a calcio per strada. Oggi c'è una partita tra quartieri e un osservatore sta guardando!
+2653|La leggenda del club {} ha visitato l'accademia e diretto un allenamento per i giovani. Ti ha anche preso da parte.
+2654|Sei stato giudicato colpevole di scommesse illegali. Hai pagato una multa di {}{}. Durante la squalifica non puoi giocare nessuna partita.
+2655|Nel nuovo club indosserai il numero {}. Dimostra il tuo valore in campo per chiedere il numero {}.
+2656|Punterai {}. I calciatori non possono scommettere; la FIFA può indagare e infliggere una lunga squalifica.
+2657|Sei stato nominato capitano del {}! La fascia è tua. In partita puoi trascinare i compagni in posizione.
+2658|SENTENZA FIFA: {} squalificato per {} settimane e multato di {} per scommesse illegali!{}
+2659|{} ha {} anni, siamo nel {}. Partecipa ai provini di un'accademia. Gli osservatori di diversi club prendono appunti!
+2660|ha {} anni, siamo nel {}. Partecipa ai provini di un'accademia. Gli osservatori di diversi club prendono appunti!
+2661|La mascotte del {} ha segnato 3 rigori su 3 all'intervallo. I tifosi la vogliono in rosa.
+2662|Il tuo nuovo agente è {}. Prenderà il {}% dei tuoi guadagni e in cambio troverà offerte e sponsor migliori.
+2663|Mentre {} giocava, sua madre ha discusso con l'arbitro per 90 minuti. Arbitro: "Persino io ci sono cascato."
+2664|Hai {} anni e il tuo corpo non regge più il calcio ad alto livello. È ora di chiudere la carriera.
+2665|L'allenatore della prima squadra ha visto la tua partita e ti ha invitato a un allenamento con la prima squadra questa settimana. {} +{}
+2666|L'U19 del {} gioca la Lega Europea di Sviluppo in questa stagione! Affronterai le migliori accademie d'Europa.
+2667|Vittoria più larga della settimana in {}: {} ha battuto {} {}-{}. Allenatore sconfitto: "L'erba era troppo scivolosa."
+2668|{}: "Il numero {} ora appartiene a {}. {}Prima fatti vedere di più in campo, ne riparliamo la prossima stagione."
+2669|Il giocatore più esperto della squadra, {} ({}), si è seduto con te a cena e ti ha parlato di professionalità.
+2670|{} si è presentato all'allenamento con un nuovo taglio ed è diventato virale. I tifosi del {} sono divisi.
+2671|Sorpresa: il {} di {} perde! La stella finisce sotto accusa nella squadra battuta dal {} {}-{}.
+2672|Un drone che filmava l'allenamento del {} è stato respinto di pugno dal portiere. Portiere: "Riflesso."
+2673|La stella della prima squadra {} {} ({}) è venuta a vedere l'allenamento dell'accademia. Poi è venuto da te: "{}"
+2674|{}, figlio della leggenda {}, scende in campo! Tutti si chiedono se seguirà le orme del padre.
+2675|La leggenda del club {} ha visitato l'accademia e diretto un allenamento per i giovani.
+2676|{} e {} hanno lanciato sui social un dibattito su "chi è più veloce". È stata proposta una gara.
+2677|{} si è mosso per {}! Il suo agente: "Il telefono squilla così tanto che la batteria non regge."
+2678|Con {} {} arrivato a {} follower, il barbiere di quartiere dice "è un mio cliente".
+2679|Il presidente del {} sul mercato: "I soldi in cassaforte ci sono, è la chiave che non troviamo."
+2680|e {} hanno lanciato sui social un dibattito su "chi è più veloce". È stata proposta una gara.
+2681|L'arbitro della partita del {} ha dimenticato i cartellini nello spogliatoio. Ha mostrato un giallo "mentalmente".
+2682|📰 Il tuo rivale {} ha segnato una tripletta! I giornali si chiedono: "{} saprà rispondere?"
+2683|{} è venuto all'allenamento in pigiama. Mister: "Almeno i colori erano quelli del club."
+2684|{} ({}) ha esordito da professionista con il {}. Forse è nata una nuova stella.
+2685|({}) ha esordito da professionista con il {}. Forse è nata una nuova stella.
+2686|Il tuo rivale {} ha segnato una tripletta! I giornali si chiedono: "{} saprà rispondere?"
+2687|Il tuo compagno {} {} ti ha chiamato dopo l'allenamento: "Dai, facciamo un po' di lavoro extra."
+2688|Il portiere del {} ha subito gol mentre si allacciava le scarpe. La sua spiegazione: "I lacci non erano nostri."
+2689|{} guida la corsa alla scarpa d'oro della {2} con {1} gol. I portieri lo sognano di notte.
+2690|{}: "Il numero {} ora è tuo. {} prenderà il tuo numero {}; te lo sei meritato con le tue prestazioni."
+2691|{} si è ritirato dal calcio a {}. Il suo post d'addio ha raccolto in fretta milioni di like.
+2692|Sia il paese di tuo padre, {}, sia quello di tua madre, {}, ti hanno convocato in nazionale.
+2693|{} si è guadagnato un posto nell'accademia del {} con il suo provino! La stagione inizia con la squadra {}.
+2694|Prenderà il {}% dei tuoi guadagni e in cambio troverà offerte e sponsor migliori.
+2695|Una foto con un tifoso è diventata virale. {} vuole una spiegazione.
+2696|Il {} guida la {} con {} punti. I rivali hanno paura di girare la pagina del calendario.
+2697|{} ha ammesso di aver rivisto il suo ultimo gol 47 volte: "La 48ª era ancora più bella."
+2698|Sono in ritiro con la nazionale {}. Darò tutto per questa maglia!
+2699|{} ha dato spettacolo! Il {} ha battuto il {} {}-{}; la stella ha segnato {} gol e si è presa la scena.
+2700|Voci: {} ha fatto inserire nel nuovo contratto una clausola "gelato dopo ogni gol".
+2701|ha dato spettacolo! Il {} ha battuto il {} {}-{}; la stella ha segnato {} gol e si è presa la scena.
+2702|👀 La rivale di campionato {} ha un talento della tua età, nel tuo ruolo: {}.
+2703|{} ha subito un piccolo infortunio. È inciampato sul tappeto mentre cercava di dribblare il suo gatto a casa.
+2704|Il controllo VAR nella partita del {} è durato 9 minuti. Nel frattempo i tifosi hanno preparato il tè.
+2705|{} viene nella tua città per una scuola calcio estiva. Sei invitato!
+2706|Il tuo compagno {} festeggia il compleanno stasera. Sei invitato.
+2707|Interpellato su un trasferimento, {} è stato breve: "Ora penso solo al pranzo."
+2708|La rivale di campionato {} ha un talento della tua età, nel tuo ruolo: {}.
+2709|La FIFA ha aperto un'indagine per scommesse illegali su {}! Le accuse sono gravi.
+2710|Ti restano {} anni di contratto. Puoi valutare le offerte.
+2711|{} ({}) ti offre una sponsorizzazione! Controlla nella scheda Vita.
+2712|{} non è rimasto molto colpito, ma un piccolo club vuole comunque darti una possibilità.
+2713|{} è rimasto molto colpito dalla tua prestazione. Diverse accademie ti vogliono.
+2714|Un drone che filmava l'allenamento del {} è stato respinto di pugno dal portiere.
+2715|({}) ti offre una sponsorizzazione! Controlla nella scheda Vita.
+2716|{}: "Per ora tieni il numero {}. Ne riparliamo quando la tua forma migliora."
+2717|{}Prima fatti vedere di più in campo, ne riparliamo la prossima stagione."
+2718|PROVINI DELL'ACCADEMIA · 3 stazioni: {}. Gli osservatori dei club sono in tribuna!
+2719|rosa! Il torneo ha {} squadre; si gioca a eliminazione diretta.
+2720|{} ha corso {},{} km nella partita di questa settimana. Il suo smartwatch ha detto "per favore fermati".
+2721|Essere capitano del {} è un onore. Continuerò a meritarmi questa fascia.
+2722|👀 La rivale {} {} ha un talento della tua età, nel tuo ruolo: {}.
+2723|ha corso {},{} km nella partita di questa settimana. Il suo smartwatch ha detto "per favore fermati".
+2724|La stella finisce sotto accusa nella squadra battuta dal {} {}-{}.
+2725|{} è entrato nell'accademia del {} grazie a un osservatore! La stagione inizia con la squadra {}.
+2726|Il presidente del club è venuto nello spogliatoio e ti ha dato un premio di {} per la tua prestazione.
+2727|La rivale {} {} ha un talento della tua età, nel tuo ruolo: {}.
+2728|Colpo di mercato! Nel nuovo club continuerai a indossare il numero {}.
+2729|Mentre {} giocava, sua madre ha discusso con l'arbitro per 90 minuti.
+2730|rivale {} ha un talento della tua età, nel tuo ruolo: {}.
+2731|Tripletta! Una notte indimenticabile con la maglia del {}. Il pallone me lo porto a casa.
+2732|{} ha parlato di tattica con il mister. Nel secondo tempo toccherà più palloni.
+2733|{} si è presentato all'allenamento con un nuovo taglio ed è diventato virale.
+2734|{} e {} hanno lanciato sui social un dibattito su "chi è più veloce".
+2735|Sorpresa della settimana in {}: il {} ha battuto i favoriti del {} {}-{}.
+2736|e {} hanno lanciato sui social un dibattito su "chi è più veloce".
+2737|Il {} ha battuto il {} {}-{}; la stella ha segnato {} gol e si è presa la scena.
+2738|🏁 Hai chiuso la stagione davanti al tuo rivale {} ({} - {} contributi a gol).
+2739|Un marchio sportivo vuole un contratto di sponsorizzazione con te: {}
+2740|{} di nuovo in forma! Il {} ha superato il {} {}-{}; il gol vittoria è arrivato da lui.
+2741|🎉 Hai firmato il tuo primo contratto da professionista con la prima squadra del {}! Settimanale {}
+2742|Dimostra il tuo valore in campo per chiedere il numero {}.
+2743|🏁 Il tuo rivale {} ha chiuso davanti in questa stagione ({} - {}). Rivincita l'anno prossimo!
+2744|L'allenatore del {} ha detto "Per noi è una partita come le altre". Come rispondi?
+2745|Parteciperai ai provini di un'accademia ({}); gli osservatori decidono il tuo club
+2746|{} è consumato e non può più essere usato. Puoi comprare un nuovo paio nel negozio.
+2747|Tu e {} vi siete lasciati. La stampa di gossip lo sapeva già.
+2748|di nuovo in forma! Il {} ha superato il {} {}-{}; il gol vittoria è arrivato da lui.
+2749|Sei stato invitato a una partita di beneficenza con stelle come {}{}!
+2750|Hai chiuso la stagione davanti al tuo rivale {} ({} - {} contributi a gol).
+2751|{} è aperto. Ancora nessuna offerta; gioca bene e qualcuno potrebbe bussare.
+2752|✍️ Hai firmato un contratto da professionista di {1} anni con il {0} ({2})! Settimanale {3}
+2753|Hai firmato il tuo primo contratto da professionista con la prima squadra del {}! Settimanale {}
+2754|Hai {} anni e il tuo corpo non regge più il calcio ad alto livello.
+2755|Il tuo rivale {} ha chiuso davanti in questa stagione ({} - {}). Rivincita l'anno prossimo!
+2756|📊 {}: a {} gol dal diventare il miglior marcatore di sempre! (Record: {}, {})
+2757|👀 C'è un altro talento della tua età nel tuo ruolo: {} ({}).
+2758|Ma i paparazzi ti hanno beccato; {} era furiosa quando ha visto la notizia.
+2759|Un giocatore di {} anni ha in media {} · ★ chiave per il tuo ruolo
+2760|{}: a {} gol dal diventare il miglior marcatore di sempre! (Record: {}, {})
+2761|{} La tua energia è bassa. La prestazione cala e il rischio infortuni aumenta.
+2762|Gli osservatori del {} hanno riempito i taccuini sul giovane talento {} {}.
+2763|Hai firmato una sponsorizzazione di {1} stagioni con {0}: {2} a settimana.
+2764|{} ha servito il passaggio ma {} era in fuorigioco. Il guardalinee ha alzato la bandierina.
+2765|{}{} · più offerte, stipendi più alti, sponsor migliori
+2766|Hai firmato un contratto da professionista di {1} anni con il {0} ({2})! Settimanale {3}
+2767|📨 {} è aperto! {} club ti vogliono. Le offerte valgono {} settimane.
+2768|C'è un altro talento della tua età nel tuo ruolo: {} ({}).
+2769|Dicono che la difesa del {} ti fermerà. Cosa rispondi?
+2770|Gossip: {} avvistato al casinò. I tifosi non sono contenti.
+2771|osservatori hanno riempito i taccuini sul giovane talento {} {}.
+2772|ha servito il passaggio ma {} era in fuorigioco. Il guardalinee ha alzato la bandierina.
+2773|{} prenderà il tuo numero {}; te lo sei meritato con le tue prestazioni."
+2774|Un giocatore di {} anni ha in media {} · chiave per il tuo ruolo
+2775|{} è aperto! {} club ti vogliono. Le offerte valgono {} settimane.
+2776|prenderà il tuo numero {}; te lo sei meritato con le tue prestazioni."
+2777|🏅 Il Pallone d'Oro {} va a {}! Sei il miglior calciatore del mondo!
+2778|{} INTERNAZIONALE · Valutazione avversaria {} · In mostra le stelle di domani
+2779|Si dice che un osservatore del {} segua le tue partite!
+2780|{} è rientrato benissimo e ha recuperato palla!
+2781|è aperto! {} club ti vogliono. Le offerte valgono {} settimane.
+2782|La FIFA ha aperto un'indagine per scommesse illegali su {}!
+2783|INTERNAZIONALE · Valutazione avversaria {} · In mostra le stelle di domani
+2784|Hai cambiato dieta e ritmo del sonno. Resistenza +{}
+2785|Il tuo compagno {} festeggia il compleanno stasera.
+2786|{} ha {} anni, siamo nel {}, un ragazzino che gioca a calcio per strada.
+2787|Il Pallone d'Oro {} va a {}! Sei il miglior calciatore del mondo!
+2788|{} Se scegli un paese non potrai più giocare per l'altro.
+2789|ha {} anni, siamo nel {}, un ragazzino che gioca a calcio per strada.
+2790|🎉 Hai firmato il tuo primo contratto da professionista con la prima squadra del {}!
+2791|Il {} ti offre un contratto da professionista in prima squadra!
+2792|{} si è guadagnato un posto nell'accademia del {} con il suo provino!
+2793|{0} Sei stato convocato nella nazionale {2} di {1}! Ti aspetta la partita {3} {4} {5}.
+2794|{} e {} si sono sposati! Il mondo del calcio festeggia la coppia felice.
+2795|{} è entrato nell'accademia del {} {}! La stagione inizia con la squadra {}.
+2796|La stella della prima squadra {} {} ({}) è venuta a vedere l'allenamento dell'accademia.
+2797|L'arbitro della partita del {} ha dimenticato i cartellini nello spogliatoio.
+2798|{} ha {} anni e partecipa ai provini dell'accademia a {}.
+2799|Colpo di mercato: {} passa dal {} al {}.
+2800|({} punti rimasti · un giocatore di {} anni ha in media {})
+2801|Il tuo numero di maglia è cambiato: ora indossi il {}.
+2802|Ti senti più leggero. Energia +8, Forza +{}
+2803|Gossip: {} avvistato in discoteca nella settimana della partita!
+2804|Il tuo rivale in rosa {} ti ha punzecchiato sulla stampa.
+2805|Hai conosciuto {}! Fa la {}. Il primo appuntamento è andato alla grande.
+2806|e {} si sono sposati! Il mondo del calcio festeggia la coppia felice.
+2807|🤕 Ti sei infortunato: {}. Starai fuori {} settimane.
+2808|{} viene nella tua città per una scuola calcio estiva.
+2809|Hai firmato il tuo primo contratto da professionista con la prima squadra del {}!
+2810|ha {} anni e partecipa ai provini dell'accademia a {}.
+2811|Obiettivo dello scenario mancato: {}. La tua carriera continua.
+2812|📈 Hai superato il tuo rivale {} nei contributi a gol di questa stagione!
+2813|Generazione {1} della famiglia {0} · Eredità: +{2} a tutte le abilità, {3} di fama{4}
+2814|{}Accedi ogni giorno – al giorno 7 ti aspetta un grande forziere!
+2815|{}, uno dei paesi d'origine dei tuoi genitori, ti ha convocato.
+2816|Niente male! {} ti ha segnalato a club di media classifica.
+2817|Abbiamo chiuso la stagione al {}° posto: {} di premio successo dal club!
+2818|Abbiamo chiuso {1}° nella fase campionato della {0}: dritti agli ottavi!
+2819|{} campioni! La migliore accademia d'Europa è nostra.
+2820|I giornali si chiedono: "{} saprà rispondere?"
+2821|📉 Il tuo rivale {} ti ha superato nei contributi a gol ({} - {})!
+2822|{} gol nella partita di strada! C'era un osservatore a bordo campo...
+2823|Punizione da zona pericolosa. {} si posiziona sul pallone.
+2824|Abbiamo chiuso {1}° nella fase campionato della {0}: giocheremo il play-off.
+2825|Ti sei infortunato: {}. Starai fuori {} settimane.
+2826|Hai firmato un contratto da professionista di {1} anni con il {0} ({2})!
+2827|{} ({}) ha esordito da professionista con il {}.
+2828|Hai superato il tuo rivale {} nei contributi a gol di questa stagione!
+2829|Hai {} anni e non hai ancora un club. La tua prima partita
+2830|{} si sta stancando. La precisione dei tiri cala.
+2831|Nel nuovo club continuerai a indossare il numero {}.
+2832|Il torneo ha {} squadre; si gioca a eliminazione diretta.
+2833|La mascotte del {} ha segnato 3 rigori su 3 all'intervallo.
+2834|Il {} ha superato il {} {}-{}; il gol vittoria è arrivato da lui.
+2835|({}) ha esordito da professionista con il {}.
+2836|Il tuo rivale {} ti ha superato nei contributi a gol ({} - {})!
+2837|Ora sono nell'accademia del {}! Il mio sogno si sta avverando.
+2838|{} SEI STATO CONVOCATO IN NAZIONALE! {} {} ti aspetta.
+2839|Hai scelto la nazionale {}: sei nella rosa per il torneo!
+2840|✍️ Sei passato dall'accademia del {} a quella del {}!
+2841|Abbiamo chiuso la fase campionato della {} al {}° posto: siamo ai quarti!
+2842|🎁 Il premio giornaliero è pronto! Giorno {} – non perdere la serie.
+2843|🏁 Il tuo rivale {} ha chiuso davanti in questa stagione ({} - {}).
+2844|Dicono che la difesa del {} ti fermerà.
+2845|SEI STATO CONVOCATO IN NAZIONALE! {} {} ti aspetta.
+2846|Aggiunto alla bacheca · premio n. {} della tua carriera
+2847|L'U19 del {} gioca la Lega Europea di Sviluppo in questa stagione!
+2848|Vittoria più larga della settimana in {}: {} ha battuto {} {}-{}.
+2849|{} la prossima stagione! Questi tifosi se lo meritano.
+2850|Hai tenuto il ritmo dei professionisti. {} +{}
+2851|Ultime 5 partite per {}: le scarpe si stanno consumando.
+2852|{} vuole organizzare una vacanza durante la sosta per le nazionali.
+2853|Nel nuovo club indosserai il numero {}.
+2854|Il premio giornaliero è pronto! Giorno {} – non perdere la serie.
+2855|Il tuo rivale {} ha chiuso davanti in questa stagione ({} - {}).
+2856|{} è chiuso. Le offerte in sospeso sono scadute.
+2857|Sei passato dall'accademia del {} a quella del {}!
+2858|✍️ Sei passato dal {} al {} {}! Stipendio settimanale: {}
+2859|📨 Nuova offerta: il {} entra nella corsa al trasferimento!
+2860|L'allenatore del {} ha detto "Per noi è una partita come le altre".
+2861|✈️ Il tuo rivale {} ti ha seguito nel tuo campionato: {}!
+2862|L'avversario ha superato {} ed è entrato in zona pericolosa!
+2863|{} ha autografato la sua maglia e te l'ha regalata. Morale +10
+2864|{} ha studiato i punti deboli del portiere avversario.
+2865|{}! Ripagherò questa fiducia in campo.
+2866|Il portiere ha negato il colpo di testa di {} all'ultimo istante.
+2867|📋 Sei nella formazione titolare! Il numero {} sulle spalle.
+2868|📊 A {} gol dal record stagionale del campionato! ({}, {})
+2869|Il giorno più bello della mia vita. {}, sono così felice che tu sia qui.
+2870|Su un gran passaggio di {}, {} l'ha messa in rete!
+2871|{}: "OK, il numero {} è tuo. Fai sudare la maglia!"
+2872|Nuova offerta: il {} entra nella corsa al trasferimento!
+2873|Il mister ha ammirato la tua determinazione. Resistenza +{}
+2874|Hai segnato {} gol nel torneo. Alla prossima!
+2875|{} ha detto "Mi serve un po' più di tempo".
+2876|{} non è riuscito a sbloccarlo. {} e {} hanno pareggiato {}-{}.
+2877|{} ha trasformato il rigore con freddezza!
+2878|{} contrasti: al mister è piaciuto il tuo lavoro difensivo
+2879|Secondo giallo, CARTELLINO ROSSO! {} viene espulso.
+2880|Sei passato dal {} al {} {}! Stipendio settimanale: {}
+2881|Sei nella formazione titolare! Il numero {} sulle spalle.
+2882|{} è entrato nell'accademia del {} grazie a un osservatore!
+2883|A {} gol dal record stagionale del campionato! ({}, {})
+2884|Il tuo rivale {} ti ha seguito nel tuo campionato: {}!
+2885|Il proprietario era felicissimo e ti ha dato un premio di {}!
+2886|{} ha detto "Sì!" La data del matrimonio è fissata.
+2887|non è riuscito a sbloccarlo. {} e {} hanno pareggiato {}-{}.
+2888|{} ha lasciato sul posto il suo uomo in contropiede!
+2889|{} ha preso un giallo per un intervento duro.
+2890|📅 La stagione {} è iniziata. Ora sei nella squadra {}!
+2891|Il portiere del {} ha subito gol mentre si allacciava le scarpe.
+2892|Il controllo VAR nella partita del {} è durato 9 minuti.
+2893|{0} guida la corsa alla scarpa d'oro della {2} con {1} gol.
+2894|🎁 Forziere missione: {} · +20 energia · +0,6 {}
+2895|🎯 Scenario completato: {}! Hai ottenuto un distintivo.
+2896|Gossip: {} avvistato insieme a {} {}!
+2897|Avversario {}° · Forza {} / La tua squadra {}{}
+2898|{} è nostra! Questo trofeo è per i nostri tifosi.
+2899|Bel passaggio di {}, {} ha tirato ma niente gol.
+2900|Hai battuto il record di {} di {} gol!
+2901|Automatico: in base alla regione del telefono ({})
+2902|Il giorno della tua vita! Tecnica +{}, Dribbling +{}
+2903|INTERNAZIONALE · Forza avversaria {} · Stelle: {}
+2904|L'avversario è stato più veloce di {} in contropiede!
+2905|Niente batte il calcio di strada! Dribbling +{}
+2906|{} ha recuperato palla con un contrasto perfetto!
+2907|Hai {} anni e non hai ancora un club.
+2908|{} CAMPIONI! Questo trofeo appartiene a tutto il paese.
+2909|La stagione {} è iniziata. Ora sei nella squadra {}!
+2910|✈️ Il tuo rivale {} si è trasferito al {}!
+2911|Forziere missione: {} · +20 energia · +0,6 {}
+2912|Scenario completato: {}! Hai ottenuto un distintivo.
+2913|{} assist: i tuoi compagni ti ringraziano
+2914|🗣️ Hai parlato con il mister: rapporto col mister +{}
+2915|{} tifosi del {} sono venuti ad accoglierti!
+2916|La tua sponsorizzazione con {} è terminata.
+2917|Abbiamo chiuso {1}° nella fase campionato della {0} e siamo eliminati.
+2918|{} sono al torneo, ma tu non sei stato convocato.
+2919|Colpo di testa di {} di poco a lato.
+2920|Poi è venuto da te: "{}"
+2921|{} ti ha segnalato a club di media classifica.
+2922|Gossip: {} avvistato al casinò.
+2923|{} tifosi sono venuti ad accoglierti!
+2924|Hai battuto il record stagionale di {} di {} gol!
+2925|Ti restano {} azioni questa settimana.
+2926|Finale di {}: {}. Il trofeo va al museo del {}!
+2927|{} ha gonfiato la rete con un tiro splendido!
+2928|{} ha caricato la squadra nello spogliatoio!
+2929|{} si è alzato in cielo e l'ha messa di testa!
+2930|{} {}: {}-{} {}. Siamo {}° nella fase campionato.
+2931|{} ha bucato la difesa con un elegante uno-due!
+2932|{} {2}-{3} {4} contro il {1}. (Non hai giocato)
+2933|🇹🇷 Hai collezionato la presenza numero {} con la nazionale!
+2934|{} ({}) ti offre una sponsorizzazione!
+2935|Starai fuori {} settimane.
+2936|Le tue parole hanno provocato la reazione di {}.
+2937|Il tuo rivale {} si è trasferito al {}!
+2938|📰 Il tuo rivale {} ha segnato una tripletta!
+2939|Rigore! {} si presenta sul dischetto...
+2940|Voto {}: il mister è deluso
+2941|Hai raggiunto {} follower sui social
+2942|Il mio nuovo club è il {}. Puntiamo al titolo!
+2943|{} ti ha dato una lezione privata in accademia. {}
+2944|{} è nostra! Siamo i migliori d'Europa.
+2945|finale: {}. Il trofeo va al museo del {}!
+2946|Fase campionato della {} completata. In testa: {}.
+2947|{}: {}-{} {}. Siamo {}° nella fase campionato.
+2948|Hai parlato con il mister: rapporto col mister +{}
+2949|PROVINI DELL'ACCADEMIA · 3 stazioni: {}.
+2950|({}) ti offre una sponsorizzazione!
+2951|Pareggio ({}). La tua puntata è stata restituita.
+2952|Il verdetto sarà annunciato entro {} settimane.
+2953|ti ha dato una lezione privata in accademia. {}
+2954|fase campionato completata. In testa: {}.
+2955|✍️ Hai prolungato il contratto con il {} di {} anni.
+2956|{} ti ha dato una lezione privata in accademia.
+2957|{} ha autografato la sua maglia e te l'ha regalata.
+2958|Il tuo rivale {} ha segnato una tripletta!
+2959|Siete favoriti contro il {}?
+2960|Un nuovo capitolo: {}! Che emozione.
+2961|Hai collezionato la presenza numero {} con la nazionale!
+2962|Una notte indimenticabile con la maglia del {}.
+2963|Ti restano {} anni di contratto.
+2964|{} è rimasto molto colpito dalla tua prestazione.
+2965|Hai posato per la stampa con la maglia del {}.
+2966|Infortunio accorciato: mancano {} settimane
+2967|Con la leggenda {}. Un giorno sarò...
+2968|{} è nostra! Siamo i migliori del continente.
+2969|{} ha segnato una splendida punizione!
+2970|{} ha saltato gli avversari in dribbling!
+2971|{} ha tentato il dribbling, la palla è uscita in rimessa laterale.
+2972|{} ha perso palla tentando il dribbling.
+2973|Sono in ritiro con la nazionale {}.
+2974|Il {} ha perso. I tifosi sono furiosi.
+2975|Nuovo numero, nuovi obiettivi: {}!
+2976|Hai prolungato il contratto con il {} di {} anni.
+2977|{} è consumato e non può più essere usato.
+2978|{} ha servito il passaggio ma {} era in fuorigioco.
+2979|{}: "Per ora tieni il numero {}.
+2980|Record! {}. Questa storia appartiene a tutti noi.
+2981|Miglior marcatore di sempre del {}
+2982|Hai segnato in {} partite di fila
+2983|Fase campionato · {}/8 partite giocate
+2984|{} trofei e premi nella tua bacheca
+2985|{} ora viene usato in partita
+2986|{} {2}-{3} {4} contro il {1}. Il tuo voto:
+2987|{} è venuto all'allenamento in pigiama.
+2988|Essere capitano del {} è un onore.
+2989|ha servito il passaggio ma {} era in fuorigioco.
+2990|{} si è ritirato dal calcio a {}.
+2991|{}, figlio della leggenda {}, scende in campo!
+2992|{0} Convocato nella nazionale {1}!
+2993|+{}, ma la tua coscienza non è pulita.
+2994|Un piccolo regalo per me: {}.
+2995|Il {} si è riorganizzato all'intervallo.
+2996|✍️ Hai firmato un contratto con il {}!
+2997|{} ha corso {},{} km nella partita di questa settimana.
+2998|Tu e {} vi siete lasciati.
+2999|Siamo {}° nella fase campionato.
+3000|✍️ Sei passato dal {} al {} {}!
+3001|La stagione inizia con la squadra {}.
+3002|Convocato nella nazionale {}!
+3003|{} ha lasciato il portiere senza scampo!
+3004|{} {} è andata ai rigori: {}
+3005|Ti servono {} per un allenatore privato.
+3006|ha corso {},{} km nella partita di questa settimana.
+3007|Il {} guida la {} con {} punti.
+3008|Il numero {} sulle spalle.
+3009|Obiettivo dello scenario mancato: {}.
+3010|, {} ha annullato la sponsorizzazione
+3011|Hai fornito {} assist in carriera
+3012|Hai raggiunto {} gol in carriera
+3013|Prossimo torneo internazionale: {} {}
+3014|{} +{}, ma la tua famiglia è arrabbiata con te.
+3015|Sei stato migliore in campo {} volte
+3016|Focus {} · crescita stimata
+3017|{} l'ha messa all'angolino!
+3018|{} è andata ai rigori: {}
+3019|Il tiro di {} ha colpito un difensore.
+3020|Fama +3 e un gettone di presenza di {}.
+3021|I tifosi del {} sono divisi.
+3022|Le offerte valgono {} settimane.
+3023|Provini finiti · Il tuo punteggio {}
+3024|La tua borsa è piena (max {}).
+3025|Tua madre si è commossa. ({})
+3026|Hai segnato {} gol in nazionale
+3027|PASSAGGIO RICEVUTO · {} TIRA...
+3028|+{}, ma la tua famiglia è arrabbiata con te.
+3029|{} Sei stato convocato!
+3030|{} ha annullato la sponsorizzazione.
+3031|{} ha tirato, il portiere ha parato.
+3032|Chiudere {} significa la prossima stagione
+3033|Hai firmato un contratto con il {}!
+3034|{} si presenta sul dischetto...
+3035|{} SEI STATO CONVOCATO IN NAZIONALE!
+3036|{} ha parlato di tattica con il mister.
+3037|Fase campionato della {} completata.
+3038|{} è entrato nell'accademia del {} {}!
+3039|{}: "OK, il numero {} è tuo.
+3040|Sei passato dal {} al {} {}!
+3041|Grande forziere: {} + 1 statistica
+3042|✨ Nuovo tratto: {}! {}
+3043|🎙️ Conferenza stampa: "{}"{}
+3044|età {}–{} · seconda divisione
+3045|Scommessa piazzata: {} · quota {}
+3046|Squalifica FIFA: {} settimane
+3047|Vince il banco: {} - {}. -{}
+3048|Ranking delle nazionali {}
+3049|Ti sei separato da {}.
+3050|{} · Foto: StarFoot Agency
+3051|🤕 Infortunato! ({} settimane)
+3052|Ora sono nell'accademia del {}!
+3053|Il trofeo va al museo del {}!
+3054|Sei stato nominato capitano del {}!
+3055|{} e {} hanno pareggiato {}-{}.
+3056|{} si è mosso per {}!
+3057|{}: "Il numero {} ora è tuo.
+3058|Partita finita · Il tuo voto {}
+3059|Guarda una pubblicità · +{} energia

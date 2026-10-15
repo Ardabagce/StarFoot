@@ -1,0 +1,416 @@
+2644|👀 Rival liga {} punya pemain muda seusiamu di posisimu: {}. Media sudah membandingkan kalian. Kenali rivalmu!
+2645|Rival liga {} punya pemain muda seusiamu di posisimu: {}. Media sudah membandingkan kalian. Kenali rivalmu!
+2646|👀 Ada pemain muda lain seusiamu di posisimu: {} ({}). Media sudah membandingkan kalian. Kenali rivalmu!
+2647|👀 Rival {} {} punya pemain muda seusiamu di posisimu: {}. Media sudah membandingkan kalian. Kenali rivalmu!
+2648|Ada pemain muda lain seusiamu di posisimu: {} ({}). Media sudah membandingkan kalian. Kenali rivalmu!
+2649|Rival {} {} punya pemain muda seusiamu di posisimu: {}. Media sudah membandingkan kalian. Kenali rivalmu!
+2650|rival {} punya pemain muda seusiamu di posisimu: {}. Media sudah membandingkan kalian. Kenali rivalmu!
+2651|{} berusia {} tahun dan sekarang tahun {}, seorang anak yang bermain bola di jalanan. Hari ini ada pertandingan antarkampung dan pencari bakat menonton!
+2652|berusia {} tahun dan sekarang tahun {}, seorang anak yang bermain bola di jalanan. Hari ini ada pertandingan antarkampung dan pencari bakat menonton!
+2653|Legenda klub {} mengunjungi akademi dan memimpin sesi untuk para pemain muda. Ia juga mengajakmu bicara empat mata.
+2654|Kamu dinyatakan bersalah atas taruhan ilegal. Kamu membayar denda {}{}. Kamu tidak bisa bermain selama masa larangan.
+2655|Kamu akan memakai nomor {} di klub barumu. Buktikan dirimu di lapangan untuk meminta nomor {}.
+2656|Kamu akan bertaruh {}. Pesepak bola tidak boleh bertaruh; FIFA bisa menyelidiki dan menjatuhkan larangan panjang.
+2657|Kamu ditunjuk sebagai kapten {}! Ban kapten milikmu. Dalam pertandingan kamu bisa menggeser rekan setim ke posisinya.
+2658|PUTUSAN FIFA: {} dilarang bermain {} minggu dan didenda {} karena taruhan ilegal!{}
+2659|{} berusia {} tahun dan sekarang tahun {}. Ia mengikuti seleksi akademi. Pencari bakat dari beberapa klub mencatat!
+2660|berusia {} tahun dan sekarang tahun {}. Ia mengikuti seleksi akademi. Pencari bakat dari beberapa klub mencatat!
+2661|Maskot {} mencetak 3 dari 3 penalti saat turun minum. Suporter ingin ia masuk skuad.
+2662|Agen barumu adalah {}. Ia akan mengambil {}% penghasilanmu dan sebagai gantinya mencarikan tawaran dan sponsor yang lebih baik.
+2663|Saat {} bermain, ibunya berdebat dengan wasit selama 90 menit. Wasit: "Bahkan aku pun tertipu."
+2664|Kamu berusia {} dan tubuhmu tak sanggup lagi bermain di level atas. Sudah waktunya mengakhiri kariermu.
+2665|Pelatih tim utama menonton pertandinganmu dan mengundangmu ke sesi tim utama minggu ini. {} +{}
+2666|U19 {} bermain di Liga Pengembangan Eropa musim ini! Kamu akan menghadapi akademi-akademi terbaik Eropa.
+2667|Kemenangan terbesar minggu ini di {}: {} mengalahkan {} {}-{}. Pelatih yang kalah: "Rumputnya terlalu licin."
+2668|{}: "Nomor {} saat ini milik {}. {}Tunjukkan lebih banyak di lapangan dulu, kita bicara lagi musim depan."
+2669|Pemain paling berpengalaman di tim, {} ({}), duduk bersamamu saat makan malam dan berbicara tentang profesionalisme.
+2670|{} datang ke latihan dengan potongan rambut baru dan menjadi viral. Suporter {} terbelah.
+2671|Hasil mengejutkan: {} milik {} kalah! Sang bintang dikritik setelah timnya dikalahkan {} {}-{}.
+2672|Drone yang merekam latihan {} ditinju jauh oleh kiper. Kiper: "Refleks."
+2673|Bintang tim utama {} {} ({}) datang menonton sesi akademi. Setelahnya ia menghampirimu: "{}"
+2674|{}, putra legenda {}, turun ke lapangan! Semua bertanya-tanya apakah ia akan mengikuti jejak ayahnya.
+2675|Legenda klub {} mengunjungi akademi dan memimpin sesi untuk para pemain muda.
+2676|{} dan {} memulai debat "siapa yang lebih cepat" di media sosial. Sebuah adu lari diusulkan.
+2677|{} bergerak untuk mendapatkan {}! Agennya: "Teleponku berdering terus sampai baterainya tak kuat."
+2678|Setelah {} {} mencapai {} pengikut, tukang cukur setempat bilang "dia pelangganku".
+2679|Presiden {} soal bursa transfer: "Uangnya ada di brankas, kami hanya tidak menemukan kuncinya."
+2680|dan {} memulai debat "siapa yang lebih cepat" di media sosial. Sebuah adu lari diusulkan.
+2681|Wasit pertandingan {} lupa membawa kartunya dari ruang ganti. Ia memberi kartu kuning "dalam hati".
+2682|📰 Rivalmu {} mencetak hat-trick! Koran bertanya: "Bisakah {} menjawab?"
+2683|{} datang ke latihan memakai piyama. Pelatih: "Setidaknya warnanya cocok dengan klub."
+2684|{} ({}) melakoni debut profesionalnya untuk {}. Bintang baru mungkin telah lahir.
+2685|({}) melakoni debut profesionalnya untuk {}. Bintang baru mungkin telah lahir.
+2686|Rivalmu {} mencetak hat-trick! Koran bertanya: "Bisakah {} menjawab?"
+2687|Rekan setimmu {} {} memanggilmu setelah latihan: "Ayo, kita latihan tambahan."
+2688|Kiper {} kebobolan saat mengikat tali sepatunya. Penjelasannya: "Tali sepatunya bukan milik kami."
+2689|{} memimpin perburuan sepatu emas {2} dengan {1} gol. Para kiper melihatnya dalam mimpi.
+2690|{}: "Nomor {} sekarang milikmu. {} akan memakai nomormu {}; kamu pantas mendapatkannya lewat penampilanmu."
+2691|{} pensiun dari sepak bola di usia {}. Unggahan perpisahannya cepat mendapat jutaan suka.
+2692|Tanah air ayahmu {} dan tanah air ibumu {} sama-sama memanggilmu ke timnas mereka.
+2693|{} mendapat tempat di akademi {} berkat penampilannya di seleksi! Musim dimulai bersama tim {}.
+2694|Ia akan mengambil {}% penghasilanmu dan sebagai gantinya mencarikan tawaran dan sponsor yang lebih baik.
+2695|Foto dengan seorang fan menjadi viral. {} meminta penjelasan.
+2696|{} memimpin {} dengan {} poin. Para rival takut membalik halaman kalender.
+2697|{} mengaku menonton gol terakhirnya 47 kali: "Yang ke-48 malah lebih indah."
+2698|Aku sedang di pemusatan latihan timnas {}. Aku akan memberikan segalanya untuk jersey ini!
+2699|{} tampil memukau! {} mengalahkan {} {}-{}; sang bintang mencetak {} gol dan mencuri perhatian.
+2700|Rumor: {} memasukkan klausul "es krim setiap selesai mencetak gol" ke kontrak barunya.
+2701|tampil memukau! {} mengalahkan {} {}-{}; sang bintang mencetak {} gol dan mencuri perhatian.
+2702|👀 Rival liga {} punya pemain muda seusiamu di posisimu: {}.
+2703|{} mengalami cedera ringan. Ia tersandung karpet saat mencoba mendribel kucingnya di rumah.
+2704|Pengecekan VAR di pertandingan {} memakan waktu 9 menit. Sementara itu suporter sempat menyeduh teh.
+2705|{} datang ke kotamu untuk mengadakan kamp sekolah sepak bola. Kamu diundang!
+2706|Rekan setimmu {} merayakan ulang tahun malam ini. Kamu diundang.
+2707|Ditanya soal transfer, {} menjawab singkat: "Yang kupikirkan sekarang cuma makan siang."
+2708|Rival liga {} punya pemain muda seusiamu di posisimu: {}.
+2709|FIFA membuka penyelidikan taruhan ilegal terhadap {}! Tuduhannya serius.
+2710|Kontrakmu tersisa {} tahun. Kamu bisa menimbang tawaran-tawaran.
+2711|{} ({}) menawarkan sponsor kepadamu! Cek di tab Kehidupan.
+2712|{} tidak terlalu terkesan, tapi sebuah klub kecil tetap ingin memberimu kesempatan.
+2713|{} sangat terkesan dengan penampilanmu. Beberapa akademi menginginkanmu.
+2714|Drone yang merekam latihan {} ditinju jauh oleh kiper.
+2715|({}) menawarkan sponsor kepadamu! Cek di tab Kehidupan.
+2716|{}: "Pakai nomor {} dulu untuk sekarang. Kita bicara lagi saat performamu membaik."
+2717|{}Tunjukkan lebih banyak di lapangan dulu, kita bicara lagi musim depan."
+2718|SELEKSI AKADEMI · 3 pos: {}. Pencari bakat klub ada di tribun!
+2719|skuad! Turnamen diikuti {} tim; menggunakan sistem gugur.
+2720|{} berlari {},{} km di pertandingan minggu ini. Jam pintarnya berkata "tolong berhenti".
+2721|Menjadi kapten {} adalah kehormatan. Aku akan terus layak memakai ban ini.
+2722|👀 Rival {} {} punya pemain muda seusiamu di posisimu: {}.
+2723|berlari {},{} km di pertandingan minggu ini. Jam pintarnya berkata "tolong berhenti".
+2724|Sang bintang dikritik setelah timnya dikalahkan {} {}-{}.
+2725|{} bergabung dengan akademi {} berkat pencari bakat! Musim dimulai bersama tim {}.
+2726|Presiden klub datang ke ruang ganti dan memberimu bonus {} atas penampilanmu.
+2727|Rival {} {} punya pemain muda seusiamu di posisimu: {}.
+2728|Rekrutan bintang! Kamu tetap memakai nomor {} di klub barumu.
+2729|Saat {} bermain, ibunya berdebat dengan wasit selama 90 menit.
+2730|rival {} punya pemain muda seusiamu di posisimu: {}.
+2731|Hat-trick! Malam tak terlupakan dengan jersey {}. Bolanya aku bawa pulang.
+2732|{} berdiskusi taktik dengan pelatih. Ia akan lebih banyak menyentuh bola di babak kedua.
+2733|{} datang ke latihan dengan potongan rambut baru dan menjadi viral.
+2734|{} dan {} memulai debat "siapa yang lebih cepat" di media sosial.
+2735|Kejutan minggu ini di {}: {} mengalahkan favorit {} {}-{}.
+2736|dan {} memulai debat "siapa yang lebih cepat" di media sosial.
+2737|{} mengalahkan {} {}-{}; sang bintang mencetak {} gol dan mencuri perhatian.
+2738|🏁 Kamu mengakhiri musim di atas rivalmu {} ({} - {} kontribusi gol).
+2739|Sebuah merek olahraga ingin kontrak sponsor denganmu: {}
+2740|{} kembali bersinar! {} menyingkirkan {} {}-{}; gol kemenangan datang darinya.
+2741|🎉 Kamu menandatangani kontrak profesional pertamamu dengan tim utama {}! Mingguan {}
+2742|Buktikan dirimu di lapangan untuk meminta nomor {}.
+2743|🏁 Rivalmu {} unggul musim ini ({} - {}). Balas dendam tahun depan!
+2744|Pelatih {} berkata "Bagi kami ini hanya pertandingan biasa". Bagaimana kamu menanggapinya?
+2745|Kamu akan mengikuti seleksi akademi ({}); pencari bakat yang menentukan klubmu
+2746|{} sudah aus dan tidak bisa dipakai lagi. Kamu bisa membeli pasangan baru di toko.
+2747|Kamu dan {} putus. Media gosip sudah tahu duluan.
+2748|kembali bersinar! {} menyingkirkan {} {}-{}; gol kemenangan datang darinya.
+2749|Kamu diundang ke pertandingan amal bersama bintang seperti {}{}!
+2750|Kamu mengakhiri musim di atas rivalmu {} ({} - {} kontribusi gol).
+2751|{} dibuka. Belum ada tawaran; bermainlah bagus dan mungkin ada yang mengetuk pintu.
+2752|✍️ Kamu menandatangani kontrak profesional {1} tahun dengan {0} ({2})! Mingguan {3}
+2753|Kamu menandatangani kontrak profesional pertamamu dengan tim utama {}! Mingguan {}
+2754|Kamu berusia {} dan tubuhmu tak sanggup lagi bermain di level atas.
+2755|Rivalmu {} unggul musim ini ({} - {}). Balas dendam tahun depan!
+2756|📊 {}: {} gol lagi untuk menjadi pencetak gol terbanyak sepanjang masa! (Rekor: {}, {})
+2757|👀 Ada pemain muda lain seusiamu di posisimu: {} ({}).
+2758|Tapi paparazi memergokimu; {} marah besar saat melihat beritanya.
+2759|Pemain berusia {} tahun rata-rata {} · ★ kunci untuk posisimu
+2760|{}: {} gol lagi untuk menjadi pencetak gol terbanyak sepanjang masa! (Rekor: {}, {})
+2761|{} Energimu rendah. Performamu turun dan risiko cedera meningkat.
+2762|Pencari bakat {} memenuhi buku catatan mereka tentang talenta muda {} {}.
+2763|Kamu menandatangani kontrak sponsor {1} musim dengan {0}: {2} per minggu.
+2764|{} mengirim umpan tapi {} offside. Hakim garis mengangkat benderanya.
+2765|{}{} · lebih banyak tawaran, gaji lebih tinggi, sponsor lebih baik
+2766|Kamu menandatangani kontrak profesional {1} tahun dengan {0} ({2})! Mingguan {3}
+2767|📨 {} dibuka! {} klub menginginkanmu. Tawaran berlaku {} minggu.
+2768|Ada pemain muda lain seusiamu di posisimu: {} ({}).
+2769|Katanya pertahanan {} akan menghentikanmu. Apa jawabanmu?
+2770|Gosip: {} terlihat di kasino. Para suporter tidak senang.
+2771|pencari bakat memenuhi buku catatan mereka tentang talenta muda {} {}.
+2772|mengirim umpan tapi {} offside. Hakim garis mengangkat benderanya.
+2773|{} akan memakai nomormu {}; kamu pantas mendapatkannya lewat penampilanmu."
+2774|Pemain berusia {} tahun rata-rata {} · kunci untuk posisimu
+2775|{} dibuka! {} klub menginginkanmu. Tawaran berlaku {} minggu.
+2776|akan memakai nomormu {}; kamu pantas mendapatkannya lewat penampilanmu."
+2777|🏅 Ballon d'Or {} jatuh ke tangan {}! Kamu pesepak bola terbaik di dunia!
+2778|{} INTERNASIONAL · Rating lawan {} · Bintang masa depan unjuk gigi
+2779|Kabarnya ada pencari bakat yang menonton pertandinganmu untuk {}!
+2780|{} turun membantu dengan luar biasa dan merebut bola!
+2781|dibuka! {} klub menginginkanmu. Tawaran berlaku {} minggu.
+2782|FIFA membuka penyelidikan taruhan ilegal terhadap {}!
+2783|INTERNASIONAL · Rating lawan {} · Bintang masa depan unjuk gigi
+2784|Kamu mengubah pola makan dan tidurmu. Stamina +{}
+2785|Rekan setimmu {} merayakan ulang tahun malam ini.
+2786|{} berusia {} tahun dan sekarang tahun {}, seorang anak yang bermain bola di jalanan.
+2787|Ballon d'Or {} jatuh ke tangan {}! Kamu pesepak bola terbaik di dunia!
+2788|{} Jika kamu memilih satu negara, kamu tidak bisa lagi bermain untuk yang lain.
+2789|berusia {} tahun dan sekarang tahun {}, seorang anak yang bermain bola di jalanan.
+2790|🎉 Kamu menandatangani kontrak profesional pertamamu dengan tim utama {}!
+2791|{} menawarimu kontrak profesional tim utama!
+2792|{} mendapat tempat di akademi {} berkat penampilannya di seleksi!
+2793|{0} Kamu dipanggil ke timnas {2} {1}! Pertandingan {3} {4} {5} menantimu.
+2794|{} dan {} menikah! Dunia sepak bola merayakan pasangan bahagia itu.
+2795|{} bergabung dengan akademi {} {}! Musim dimulai bersama tim {}.
+2796|Bintang tim utama {} {} ({}) datang menonton sesi akademi.
+2797|Wasit pertandingan {} lupa membawa kartunya dari ruang ganti.
+2798|{} berusia {} dan mengikuti seleksi akademi di {}.
+2799|Transfer besar: {} pindah dari {} ke {}.
+2800|({} poin tersisa · pemain berusia {} tahun rata-rata {})
+2801|Nomor punggungmu berubah: sekarang kamu memakai {}.
+2802|Kamu merasa lebih ringan. Energi +8, Kekuatan +{}
+2803|Gosip: {} terlihat di klub malam pada minggu pertandingan!
+2804|Rivalmu di skuad, {}, menyindirmu di media.
+2805|Kamu bertemu {}! Ia seorang {}. Kencan pertama berjalan lancar.
+2806|dan {} menikah! Dunia sepak bola merayakan pasangan bahagia itu.
+2807|🤕 Kamu cedera {}. Kamu akan absen {} minggu.
+2808|{} datang ke kotamu untuk mengadakan kamp sekolah sepak bola.
+2809|Kamu menandatangani kontrak profesional pertamamu dengan tim utama {}!
+2810|berusia {} dan mengikuti seleksi akademi di {}.
+2811|Target skenario gagal: {}. Kariermu berlanjut.
+2812|📈 Kamu menyalip rivalmu {} dalam kontribusi gol musim ini!
+2813|Generasi {1} keluarga {0} · Warisan: +{2} semua kemampuan, {3} ketenaran{4}
+2814|{}Masuk setiap hari – peti besar menanti di hari ke-7!
+2815|{}, salah satu tanah air orang tuamu, memanggilmu.
+2816|Lumayan! {} merekomendasikanmu ke klub-klub papan tengah.
+2817|Kami menutup musim di peringkat {}: bonus sukses {} dari klub!
+2818|Kami finis ke-{1} di fase liga {0}: langsung ke babak 16 besar!
+2819|{} juara! Akademi terbaik Eropa milik kita.
+2820|Koran bertanya: "Bisakah {} menjawab?"
+2821|📉 Rivalmu {} menyalipmu dalam kontribusi gol ({} - {})!
+2822|{} gol di pertandingan jalanan! Ada pencari bakat di pinggir lapangan...
+2823|Tendangan bebas di area berbahaya. {} berdiri di depan bola.
+2824|Kami finis ke-{1} di fase liga {0}: kami akan bermain di play-off.
+2825|Kamu cedera {}. Kamu akan absen {} minggu.
+2826|Kamu menandatangani kontrak profesional {1} tahun dengan {0} ({2})!
+2827|{} ({}) melakoni debut profesionalnya untuk {}.
+2828|Kamu menyalip rivalmu {} dalam kontribusi gol musim ini!
+2829|Kamu berusia {} dan belum punya klub. Pertandingan pertamamu
+2830|{} mulai lelah. Akurasi tembakan menurun.
+2831|Kamu tetap memakai nomor {} di klub barumu.
+2832|Turnamen diikuti {} tim; menggunakan sistem gugur.
+2833|Maskot {} mencetak 3 dari 3 penalti saat turun minum.
+2834|{} menyingkirkan {} {}-{}; gol kemenangan datang darinya.
+2835|({}) melakoni debut profesionalnya untuk {}.
+2836|Rivalmu {} menyalipmu dalam kontribusi gol ({} - {})!
+2837|Sekarang aku di akademi {}! Mimpiku menjadi kenyataan.
+2838|{} KAMU DIPANGGIL KE TIMNAS! {} {} menantimu.
+2839|Kamu memilih timnas {}: kamu masuk skuad turnamen!
+2840|✍️ Kamu pindah dari akademi {} ke akademi {}!
+2841|Kami menutup fase liga {} di peringkat {}: kami lolos ke perempat final!
+2842|🎁 Hadiah harianmu sudah siap! Hari ke-{} – jangan putuskan rentetanmu.
+2843|🏁 Rivalmu {} unggul musim ini ({} - {}).
+2844|Katanya pertahanan {} akan menghentikanmu.
+2845|KAMU DIPANGGIL KE TIMNAS! {} {} menantimu.
+2846|Ditambahkan ke lemari trofi · penghargaan ke-{} dalam kariermu
+2847|U19 {} bermain di Liga Pengembangan Eropa musim ini!
+2848|Kemenangan terbesar minggu ini di {}: {} mengalahkan {} {}-{}.
+2849|{} musim depan! Para suporter ini pantas mendapatkannya.
+2850|Kamu mampu mengikuti tempo para pemain pro. {} +{}
+2851|5 pertandingan terakhir untuk {}: sepatunya mulai aus.
+2852|{} ingin merencanakan liburan saat jeda internasional.
+2853|Kamu akan memakai nomor {} di klub barumu.
+2854|Hadiah harianmu sudah siap! Hari ke-{} – jangan putuskan rentetanmu.
+2855|Rivalmu {} unggul musim ini ({} - {}).
+2856|{} ditutup. Tawaran yang tertunda sudah kedaluwarsa.
+2857|Kamu pindah dari akademi {} ke akademi {}!
+2858|✍️ Kamu pindah dari {} ke {} {}! Gaji mingguan: {}
+2859|📨 Tawaran baru: {} ikut dalam perburuan transfer!
+2860|Pelatih {} berkata "Bagi kami ini hanya pertandingan biasa".
+2861|✈️ Rivalmu {} mengikutimu ke ligamu: {}!
+2862|Lawan melewati {} dan masuk ke area berbahaya!
+2863|{} menandatangani jerseynya dan memberikannya kepadamu. Moral +10
+2864|{} mempelajari kelemahan kiper lawan.
+2865|{}! Aku akan membalas kepercayaan ini di lapangan.
+2866|Kiper menggagalkan sundulan {} di detik terakhir.
+2867|📋 Kamu masuk starting XI! Nomor {} di punggungmu.
+2868|📊 {} gol lagi menuju rekor semusim liga! ({}, {})
+2869|Hari terbaik dalam hidupku. {}, aku sangat senang kamu di sini.
+2870|Dari umpan apik {}, {} menceploskan bola ke gawang!
+2871|{}: "Oke, nomor {} milikmu. Buat jersey ini berkeringat!"
+2872|Tawaran baru: {} ikut dalam perburuan transfer!
+2873|Pelatih mengagumi tekadmu. Stamina +{}
+2874|Kamu mencetak {} gol di turnamen. Lain kali!
+2875|{} berkata "Aku butuh sedikit waktu lagi".
+2876|{} tidak bisa membukanya. {} dan {} bermain imbang {}-{}.
+2877|{} mengeksekusi penalti dengan tenang!
+2878|{} tekel: pelatih menyukai kerja bertahanmu
+2879|Kuning kedua, KARTU MERAH! {} diusir keluar lapangan.
+2880|Kamu pindah dari {} ke {} {}! Gaji mingguan: {}
+2881|Kamu masuk starting XI! Nomor {} di punggungmu.
+2882|{} bergabung dengan akademi {} berkat pencari bakat!
+2883|{} gol lagi menuju rekor semusim liga! ({}, {})
+2884|Rivalmu {} mengikutimu ke ligamu: {}!
+2885|Pemilik klub sangat senang dan memberimu hadiah {}!
+2886|{} berkata "Ya!" Tanggal pernikahan sudah ditetapkan.
+2887|tidak bisa membukanya. {} dan {} bermain imbang {}-{}.
+2888|{} meninggalkan lawannya dalam serangan balik!
+2889|{} mendapat kartu kuning karena tekel keras.
+2890|📅 Musim {} telah dimulai. Sekarang kamu di tim {}!
+2891|Kiper {} kebobolan saat mengikat tali sepatunya.
+2892|Pengecekan VAR di pertandingan {} memakan waktu 9 menit.
+2893|{0} memimpin perburuan sepatu emas {2} dengan {1} gol.
+2894|🎁 Peti misi: {} · +20 energi · +0,6 {}
+2895|🎯 Skenario selesai: {}! Kamu mendapat lencana.
+2896|Gosip: {} terlihat bersama {} {}!
+2897|Lawan peringkat {} · Kekuatan {} / Timmu {}{}
+2898|{} milik kita! Trofi ini untuk para suporter kita.
+2899|Umpan bagus dari {}, {} menembak tapi tidak gol.
+2900|Kamu memecahkan rekor {} gol milik {}!
+2901|Otomatis: berdasarkan wilayah ponselmu ({})
+2902|Hari terindah dalam hidupmu! Teknik +{}, Dribel +{}
+2903|INTERNASIONAL · Kekuatan lawan {} · Bintang: {}
+2904|Lawan lebih cepat daripada {} dalam serangan balik!
+2905|Tak ada yang mengalahkan sepak bola jalanan! Dribel +{}
+2906|{} merebut bola dengan tekel sempurna!
+2907|Kamu berusia {} dan belum punya klub.
+2908|{} JUARA! Trofi ini milik seluruh negeri.
+2909|Musim {} telah dimulai. Sekarang kamu di tim {}!
+2910|✈️ Rivalmu {} pindah ke {}!
+2911|Peti misi: {} · +20 energi · +0,6 {}
+2912|Skenario selesai: {}! Kamu mendapat lencana.
+2913|{} assist: rekan setimmu berterima kasih
+2914|🗣️ Kamu berbicara dengan pelatih: ikatan dengan pelatih +{}
+2915|{} suporter {} datang menyambutmu!
+2916|Kontrak sponsormu dengan {} telah berakhir.
+2917|Kami finis ke-{1} di fase liga {0} dan tersingkir.
+2918|{} ada di turnamen, tapi kamu tidak dipanggil.
+2919|Sundulan {} tipis melebar.
+2920|Setelahnya ia menghampirimu: "{}"
+2921|{} merekomendasikanmu ke klub-klub papan tengah.
+2922|Gosip: {} terlihat di kasino.
+2923|{} suporter datang menyambutmu!
+2924|Kamu memecahkan rekor semusim {} dengan {} gol!
+2925|Kamu masih punya {} aksi minggu ini.
+2926|Final {}: {}. Trofinya masuk museum {}!
+2927|{} menggetarkan jaring dengan tembakan brilian!
+2928|{} membakar semangat tim di ruang ganti!
+2929|{} melompat tinggi dan menyundulnya masuk!
+2930|{} {}: {}-{} {}. Kami peringkat {} di fase liga.
+2931|{} menembus pertahanan dengan umpan satu-dua yang apik!
+2932|{} {2}-{3} {4} melawan {1}. (Kamu tidak bermain)
+2933|🇹🇷 Kamu meraih caps ke-{} untuk negaramu!
+2934|{} ({}) menawarkan sponsor kepadamu!
+2935|Kamu akan absen {} minggu.
+2936|Kata-katamu memancing reaksi dari {}.
+2937|Rivalmu {} pindah ke {}!
+2938|📰 Rivalmu {} mencetak hat-trick!
+2939|Penalti! {} maju...
+2940|Nilai {}: pelatih kecewa
+2941|Kamu mencapai {} pengikut di media sosial
+2942|Klub baruku adalah {}. Mengincar gelar!
+2943|{} memberimu les privat di akademi. {}
+2944|{} milik kita! Kita yang terbaik di Eropa.
+2945|final: {}. Trofinya masuk museum {}!
+2946|Fase liga {} selesai. Pemimpin: {}.
+2947|{}: {}-{} {}. Kami peringkat {} di fase liga.
+2948|Kamu berbicara dengan pelatih: ikatan dengan pelatih +{}
+2949|SELEKSI AKADEMI · 3 pos: {}.
+2950|({}) menawarkan sponsor kepadamu!
+2951|Seri ({}). Taruhanmu dikembalikan.
+2952|Putusan akan diumumkan dalam {} minggu.
+2953|memberimu les privat di akademi. {}
+2954|fase liga selesai. Pemimpin: {}.
+2955|✍️ Kamu memperpanjang kontrak dengan {} selama {} tahun.
+2956|{} memberimu les privat di akademi.
+2957|{} menandatangani jerseynya dan memberikannya kepadamu.
+2958|Rivalmu {} mencetak hat-trick!
+2959|Apakah kalian favorit melawan {}?
+2960|Babak baru: {}! Sangat bersemangat.
+2961|Kamu meraih caps ke-{} untuk negaramu!
+2962|Malam tak terlupakan dengan jersey {}.
+2963|Kontrakmu tersisa {} tahun.
+2964|{} sangat terkesan dengan penampilanmu.
+2965|Kamu berpose untuk media dengan jersey {}.
+2966|Cedera dipersingkat: tersisa {} minggu
+2967|Bersama legenda {}. Suatu hari aku akan menjadi...
+2968|{} milik kita! Kita yang terbaik di benua ini.
+2969|{} mencetak gol tendangan bebas yang indah!
+2970|{} melewati para lawannya dengan dribel!
+2971|{} mencoba dribel, bola keluar untuk lemparan ke dalam.
+2972|{} kehilangan bola saat mencoba dribel.
+2973|Aku sedang di pemusatan latihan timnas {}.
+2974|{} kalah. Para suporter marah besar.
+2975|Nomor baru, target baru: {}!
+2976|Kamu memperpanjang kontrak dengan {} selama {} tahun.
+2977|{} sudah aus dan tidak bisa dipakai lagi.
+2978|{} mengirim umpan tapi {} offside.
+2979|{}: "Pakai nomor {} dulu untuk sekarang.
+2980|Rekor! {}. Sejarah ini milik kita semua.
+2981|Pencetak gol terbanyak sepanjang masa {}
+2982|Kamu mencetak gol dalam {} pertandingan beruntun
+2983|Fase liga · {}/8 pertandingan dimainkan
+2984|{} trofi dan penghargaan di lemarimu
+2985|{} sekarang dipakai dalam pertandingan
+2986|{} {2}-{3} {4} melawan {1}. Nilaimu:
+2987|{} datang ke latihan memakai piyama.
+2988|Menjadi kapten {} adalah kehormatan.
+2989|mengirim umpan tapi {} offside.
+2990|{} pensiun dari sepak bola di usia {}.
+2991|{}, putra legenda {}, turun ke lapangan!
+2992|{0} Dipanggil ke timnas {1}!
+2993|+{} tapi hati nuranimu tidak tenang.
+2994|Hadiah kecil untuk diriku sendiri: {}.
+2995|{} berbenah saat turun minum.
+2996|✍️ Kamu menandatangani kontrak dengan {}!
+2997|{} berlari {},{} km di pertandingan minggu ini.
+2998|Kamu dan {} putus.
+2999|Kami peringkat {} di fase liga.
+3000|✍️ Kamu pindah dari {} ke {} {}!
+3001|Musim dimulai bersama tim {}.
+3002|Dipanggil ke timnas {}!
+3003|{} membuat kiper tak berdaya!
+3004|{} {} berlanjut ke adu penalti: {}
+3005|Kamu butuh {} untuk pelatih pribadi.
+3006|berlari {},{} km di pertandingan minggu ini.
+3007|{} memimpin {} dengan {} poin.
+3008|Nomor {} di punggungmu.
+3009|Target skenario gagal: {}.
+3010|, {} membatalkan sponsor
+3011|Kamu membuat {} assist sepanjang karier
+3012|Kamu mencapai {} gol sepanjang karier
+3013|Turnamen internasional berikutnya: {} {}
+3014|{} +{} tapi keluargamu kesal padamu.
+3015|Kamu menjadi pemain terbaik pertandingan {} kali
+3016|Fokus {} · perkiraan perkembangan
+3017|{} menempatkannya di pojok!
+3018|{} berlanjut ke adu penalti: {}
+3019|Tembakan {} membentur bek.
+3020|Ketenaran +3 dan honor tampil {}.
+3021|Suporter {} terbelah.
+3022|Tawaran berlaku {} minggu.
+3023|Seleksi selesai · Skormu {}
+3024|Tasmu penuh (maks {}).
+3025|Ibumu terharu. ({})
+3026|Kamu mencetak {} gol internasional
+3027|UMPAN DITERIMA · {} MENEMBAK...
+3028|+{} tapi keluargamu kesal padamu.
+3029|{} Kamu dipanggil!
+3030|{} membatalkan sponsor.
+3031|{} menembak, kiper menyelamatkan.
+3032|Finis {} berarti musim depan
+3033|Kamu menandatangani kontrak dengan {}!
+3034|{} maju...
+3035|{} KAMU DIPANGGIL KE TIMNAS!
+3036|{} berdiskusi taktik dengan pelatih.
+3037|Fase liga {} selesai.
+3038|{} bergabung dengan akademi {} {}!
+3039|{}: "Oke, nomor {} milikmu.
+3040|Kamu pindah dari {} ke {} {}!
+3041|Peti besar: {} + 1 statistik
+3042|✨ Sifat baru: {}! {}
+3043|🎙️ Konferensi pers: "{}"{}
+3044|usia {}–{} · kasta kedua
+3045|Taruhan dipasang: {} · odds {}
+3046|Larangan FIFA: {} minggu
+3047|Bandar menang: {} - {}. -{}
+3048|Peringkat Timnas {}
+3049|Kamu berpisah dengan {}.
+3050|{} · Foto: StarFoot Agency
+3051|🤕 Cedera! ({} minggu)
+3052|Sekarang aku di akademi {}!
+3053|Trofinya masuk museum {}!
+3054|Kamu ditunjuk sebagai kapten {}!
+3055|{} dan {} bermain imbang {}-{}.
+3056|{} bergerak untuk mendapatkan {}!
+3057|{}: "Nomor {} sekarang milikmu.
+3058|Pertandingan selesai · Nilaimu {}
+3059|Tonton iklan · +{} energi
