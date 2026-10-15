@@ -4,6 +4,7 @@ const { chromium, open, record } = require('./rec');
 const path = require('path');
 const lang = process.argv[2] || 'tr';
 const OUT = process.argv[3] || path.join(__dirname, 'work', lang);
+const KIND = process.env.MOMENT || 'freekick';
 const hideFoot = () => { const st = document.createElement('style'); st.textContent = '.ct-foot{display:none!important}'; document.head.appendChild(st); };
 
 async function career(pg) {
@@ -21,6 +22,7 @@ async function career(pg) {
 (async () => {
   const b = await chromium.launch();
 
+  if (process.argv[4] !== 'moment') {
   // Altın Top töreni (kısa videolar için). "node clips.js tr <klasör> ballon" yalnız bunu kaydeder.
   {
     const pg = await open(b, lang);
@@ -30,25 +32,27 @@ async function career(pg) {
     await pg.close();
     if (process.argv[4] === 'ballon') { await b.close(); return; }
   }
+  }
 
   // 1) Maç anı: şut, gol ve oyundaki gol sevinci (sabit tohum; nişan noktaları bu tohuma göre)
   {
     const pg = await open(b, lang);
     await career(pg);
-    await pg.evaluate(() => { if (typeof Press !== 'undefined') Press.ask = () => Promise.resolve(); Object.keys(MOMENT_WEIGHTS.FW).forEach((k) => (MOMENT_WEIGHTS.FW[k] = k === 'open' ? 1 : 0)); Game.roleFor = () => 'starter'; Game.state.ap = 0; Game.playNext(); });
+    await pg.evaluate((kind) => { if (typeof Press !== 'undefined') Press.ask = () => Promise.resolve(); Object.keys(MOMENT_WEIGHTS.FW).forEach((k) => (MOMENT_WEIGHTS.FW[k] = k === (kind) ? 1 : 0)); Game.roleFor = () => 'starter'; Game.state.ap = 0; Game.playNext(); }, KIND);
     for (let i = 0; i < 400; i++) {
       await pg.clock.runFor(250);
       const st = await pg.evaluate(() => { const ht = document.querySelector('[data-ht]'); if (ht) { ht.click(); return 'ht'; } const m = document.getElementById('mt-moment'); return m && !m.classList.contains('hidden') && m.querySelector('.mg-canvas') ? 'mom' : ''; });
       if (st === 'mom') break;
     }
     await pg.clock.runFor(300);
-    const acts = {}, x0 = 225, y0 = 480, dx = -10, dy = 140;
+    const acts = {}, x0 = 225, y0 = 480, dx = +(process.env.DX || -36), dy = +(process.env.DY || 140);
     acts[14] = async () => { await pg.mouse.move(x0, y0); await pg.mouse.down(); };
     for (let k = 1; k <= 12; k++) acts[14 + k] = async () => { await pg.mouse.move(x0 + dx * k / 12, y0 + dy * k / 12); };
     acts[30] = async () => { await pg.mouse.up(); };
     await record(pg, path.join(OUT, 'moment'), 6.5, acts);
     console.log('moment', await pg.evaluate(() => (document.getElementById('mt-hs') || {}).innerText + '-' + (document.getElementById('mt-as') || {}).innerText), pg.errs);
     await pg.close();
+    if (process.argv[4] === 'moment') { await b.close(); return; }
   }
 
   const pg = await open(b, lang);

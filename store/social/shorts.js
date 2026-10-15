@@ -13,14 +13,14 @@ const ICON = path.join(__dirname, '../../app/ios/App/App/Assets.xcassets/AppIcon
 // Her video: kanca (ilk 2 sn), sahneler [klasör, başlangıç karesi, kare sayısı, alt yazı] ve kapanış çağrısı
 const V = {
   tr: [
-    { id: 'son-dakika', hook: ['SKOR 1-1, SON DAKİKA', 'ŞUTU SEN ÇEKİYORSUN'], segs: [['moment', 0, 78, 'H'], ['moment', 78, 96, 'GOL! <em>SEVİNCİNİ SEÇ</em>'], ['trophy', 0, 90, 'VE KUPA <em>SENİN</em>']], cta: 'Sen olsan atar mıydın? 👇' },
+    { id: 'frikik', hook: ['FRİKİK SENDE', 'BARAJI GEÇEBİLİR MİSİN?'], segs: [['moment', 0, 78, 'H'], ['moment', 78, 96, 'GOL! <em>SEVİNCİNİ SEÇ</em>'], ['trophy', 0, 90, 'VE KUPA <em>SENİN</em>']], cta: 'Sen kaç denemede atarsın? 👇' },
     { id: 'transfer', hook: ['17 YAŞINDA', 'DEV KULÜBE TRANSFER'], segs: [['airport', 0, 60, 'H'], ['airport', 60, 66, 'TARAFTAR SENİ <em>HAVALİMANINDA KARŞILIYOR</em>'], ['signing', 0, 102, 'İMZAYI AT, <em>10 NUMARAYI AL</em>']], cta: 'Hangi kulübe gitmek isterdin? 👇' },
     { id: 'kupa', hook: ['MAHALLE MAÇINDAN', 'ŞAMPİYONLAR KUPASI\'NA'], segs: [['matchday', 0, 75, 'H'], ['moment', 42, 78, 'FİNALDE <em>GOLÜ SEN AT</em>'], ['trophy', 0, 102, 'KUPAYI <em>HAVAYA KALDIR</em>']], cta: 'Kaç sezonda şampiyon olursun? 👇' },
     { id: 'altin-top', hook: ['21 YAŞINDA', 'ALTIN TOP KAZANDIM'], segs: [['ballon', 0, 60, 'H'], ['ballon', 60, 48, 'DÜNYANIN <em>EN İYİSİ OL</em>'], ['moment', 42, 78, 'HER KRİTİK ANI <em>SEN OYNA</em>']], cta: 'Senin rekorun kaç gol? 👇' },
     { id: 'meydan-okuma', hook: ['BU OYUNDA', 'KAÇ SEZONDA EFSANE OLURSUN?'], segs: [['moment', 0, 78, 'H'], ['moment', 78, 60, 'GOLÜ AT, <em>SEVİNCİNİ SEÇ</em>'], ['airport', 20, 70, 'TRANSFER OL, <em>YILDIZ OL</em>'], ['trophy', 0, 80, 'KUPAYI <em>KALDIR</em>']], cta: 'Rekorunu yorumlara yaz 👇' },
   ],
   en: [
-    { id: 'last-minute', hook: ['1-1, LAST MINUTE', 'YOU TAKE THE SHOT'], segs: [['moment', 0, 78, 'H'], ['moment', 78, 96, 'GOAL! <em>PICK YOUR CELEBRATION</em>'], ['trophy', 0, 90, 'AND THE CUP <em>IS YOURS</em>']], cta: 'Would you score it? 👇' },
+    { id: 'free-kick', hook: ['YOUR FREE KICK', 'CAN YOU BEAT THE WALL?'], segs: [['moment', 0, 78, 'H'], ['moment', 78, 96, 'GOAL! <em>PICK YOUR CELEBRATION</em>'], ['trophy', 0, 90, 'AND THE CUP <em>IS YOURS</em>']], cta: 'How many tries would you need? 👇' },
     { id: 'transfer', hook: ['17 YEARS OLD', 'TRANSFER TO A GIANT'], segs: [['airport', 0, 60, 'H'], ['airport', 60, 66, 'FANS GREET YOU <em>AT THE AIRPORT</em>'], ['signing', 0, 102, 'SIGN & <em>TAKE THE NO. 10</em>']], cta: 'Which club would you join? 👇' },
     { id: 'cup', hook: ['FROM STREET FOOTBALL', 'TO THE CHAMPIONS CUP'], segs: [['matchday', 0, 75, 'H'], ['moment', 42, 78, 'SCORE <em>IN THE FINAL</em>'], ['trophy', 0, 102, 'LIFT <em>THE TROPHY</em>']], cta: 'How many seasons to win it? 👇' },
     { id: 'ballon', hook: ['21 YEARS OLD', 'I WON THE BALLON D\'OR'], segs: [['ballon', 0, 60, 'H'], ['ballon', 60, 48, 'BE THE <em>BEST IN THE WORLD</em>'], ['moment', 42, 78, 'PLAY EVERY <em>BIG MOMENT</em>']], cta: 'What\'s your goal record? 👇' },

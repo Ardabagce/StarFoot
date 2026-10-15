@@ -73,3 +73,22 @@ From the streets to the Champions Cup ⚽🏆 Write your own football career. St
 - **Transfer serisi:** "Mahalleden Real Madrid'e 1. bölüm": her gün bir sezon.
 - **Güncellemeler:** Her yeni özelliği 10 sn'lik bir videoyla göster.
 - Haftada 3–4 video, aynı saatlerde (akşam 19:00–22:00) paylaş. İlk saatlerde gelen yorumlara cevap ver.
+
+## Kısa videolar (TikTok · Reels · Shorts)
+
+Üretmek: `node store/social/clips.js <dil> <work>` (frikik golü için `DX=-36`, varsayılan) ve `node store/social/shorts.js <dil> <work> <çıktı>`.
+Her video 9–12 sn, 1080x1920, sessiz. **Müziği platformun içinden ekle** (trend sesler erişimi artırır, telif sorunu olmaz).
+
+| # | Dosya | Açıklama metni (TR) | Caption (EN) |
+| --- | --- | --- | --- |
+| 1 | `tr-1-frikik` / `en-1-free-kick` | Barajın üstünden… GOOOL! ⚽ Sen kaç denemede atarsın? | Over the wall… GOAL! ⚽ How many tries would you need? |
+| 2 | `*-2-transfer` | 17 yaşında dev kulübe transfer, havalimanında 9.000 taraftar 🛫 Hangi kulübe giderdin? | Transferred to a giant at 17, 9,000 fans at the airport 🛫 Which club would you join? |
+| 3 | `tr-3-kupa` / `en-3-cup` | Mahalle maçından Şampiyonlar Kupası'na 🏆 Kaç sezonda şampiyon olursun? | From street football to the Champions Cup 🏆 How many seasons would it take you? |
+| 4 | `tr-4-altin-top` / `en-4-ballon` | 21 yaşında Altın Top 🥇 Senin rekorun kaç gol? | Ballon d'Or at 21 🥇 What's your goal record? |
+| 5 | `tr-5-meydan-okuma` / `en-5-challenge` | Bu oyunda kaç sezonda efsane olursun? Rekorunu yaz 👇 | How fast can you become a legend? Drop your record 👇 |
+
+**Etiketler (TR):** `#starfoot #futbol #futboloyunu #mobiloyun #kariyermodu #frikik #galatasaray #fenerbahçe #beşiktaş #oyun`
+**Hashtags (EN):** `#starfoot #football #soccer #mobilegame #careermode #freekick #soccergame #indiegame #gaming`
+
+**Paylaşım düzeni:** Günde 1 video, akşam 19:00–22:00 arası. Aynı videoyu TikTok, Instagram Reels, YouTube Shorts ve Facebook Reels'e yükle. 5 video bitince sırayı tekrar et; en çok izleneni Spark Ads ile öne çıkar.
+**İlk yorum:** "Oyun App Store'da ücretsiz, link profilde 🔗" (TikTok'ta 1.000 takipçiden önce profile link konamaz; o zamana kadar "App Store'da StarFoot ara" yaz).
