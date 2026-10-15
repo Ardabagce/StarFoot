@@ -92,6 +92,11 @@ async function recAll() {
     await record(pg, dir(2, 'b2'), 1.7, up);
     await pg.evaluate(() => { Game.joinClub('RMA', 9e6, 5); Game.p.age = 24; window.scrollTo(0, 0); Welcome.show({ club: Game.club(), wage: 9e6, years: 5, feeText: 'Bonservis 95 Mn $', number: 10 }); });
     await record(pg, dir(2, 'c1'), 1.8);
+    await pg.evaluate(() => document.querySelectorAll('.wel').forEach((e) => e.remove()));
+    const cele = (big, c1, c2) => pg.evaluate(([big, c1, c2]) => { const c = Game.club(); Celebrate.trophy({ big, title: '', sub: '', c1: c1 || c.c1, c2: c2 || c.c2, short: c.short, kit: Sprites.kit(c, false), number: 10 }); }, [big, c1, c2]);
+    await record(pg, dir(2, 'c2'), 1.7, { 0: () => cele('ŞAMPİYON!') });
+    await pg.evaluate(() => document.querySelectorAll('.cer-trophy').forEach((e) => e.remove()));
+    await record(pg, dir(2, 'c3'), 2.6, { 0: () => cele('ALTIN TOP!', '#b8860b', '#ffe08a') });
     console.log('2', pg.errs); await pg.close();
   }
 
@@ -184,7 +189,7 @@ const V = [
       ['SIKI ÇALIŞMA + <em>DOĞRU KARARLAR</em> 💪', 'StarFoot\'ta alt ligde başladım. Doğru kararlar verdim, antrenmanı hiç aksatmadım.'],
       ['24 YAŞ → <em>DÜNYA STARI!</em> 🏆', '6. sezonda Şampiyonlar Kupası\'nı kaldırdım ve Altın Top\'u kazandım.'],
     ],
-    segs: [[S(2, 'a'), 0, 90, 0], [S(2, 'b1'), 0, 54, 1], [S(2, 'b2'), 0, 51, 1], [W('moment'), 22, 96, 1], [S(2, 'c1'), 0, 54, 2], [W('trophy'), 0, 48, 2], [W('ballon'), 0, 78, 2]],
+    segs: [[S(2, 'a'), 0, 90, 0], [S(2, 'b1'), 0, 54, 1], [S(2, 'b2'), 0, 51, 1], [W('moment'), 22, 96, 1], [S(2, 'c1'), 0, 54, 2], [S(2, 'c2'), 0, 48, 2], [S(2, 'c3'), 0, 78, 2]],
     end: { tag: 'APP STORE\'DA ÜCRETSİZ! 📲', cta: 'Kendi efsaneni yaratmaya hazırsan, StarFoot App Store\'da ücretsiz!' },
     sfx: [['boom', 0], ['whoosh', 3.0], ['whoosh', 4.8], ['whoosh', 6.5], ['boom', 7.6], ['whoosh', 9.7], ['chime', 11.5], ['boom', 13.1], ['chime', 15.7]],
   },
@@ -235,10 +240,10 @@ const overlay = (title, sub) => `<!doctype html><html><head><meta charset="utf-8
 // ses efektleri: tamamı burada sentezlenir (telif yok)
 const SFX = {
   boom: `aevalsrc='0.95*sin(2*PI*(42+90*exp(-t*14))*t)*exp(-t*3.2)+0.25*sin(2*PI*84*t)*exp(-t*9)':s=44100:d=1.4`,
-  cash: `aevalsrc='0.32*(sin(2*PI*1975*t)+0.7*sin(2*PI*2637*t))*exp(-t*7)*(t>0.09)+0.3*(sin(2*PI*1568*t))*exp(-t*12)':s=44100:d=0.9`,
-  fail: `aevalsrc='0.28*sgn(sin(2*PI*(220-60*t)*t))*exp(-t*2.6)*(t<0.32 || t>0.38)':s=44100:d=0.75`,
+  cash: `aevalsrc='0.32*(sin(2*PI*1975*t)+0.7*sin(2*PI*2637*t))*exp(-t*7)*gt(t,0.09)+0.3*(sin(2*PI*1568*t))*exp(-t*12)':s=44100:d=0.9`,
+  fail: `aevalsrc='0.28*sgn(sin(2*PI*(220-60*t)*t))*exp(-t*2.6)*(lt(t,0.32)+gt(t,0.38))':s=44100:d=0.75`,
   whoosh: `anoisesrc=d=0.45:c=pink:a=0.5:r=44100,bandpass=f=1400:w=1800,afade=in:d=0.22,afade=out:st=0.22:d=0.23`,
-  chime: `aevalsrc='0.22*(sin(2*PI*1047*t)*exp(-t*3)+sin(2*PI*1319*t)*exp(-(t-0.12)*3)*(t>0.12)+sin(2*PI*1568*t)*exp(-(t-0.24)*3)*(t>0.24)+sin(2*PI*2093*t)*exp(-(t-0.36)*2.5)*(t>0.36))':s=44100:d=1.8`,
+  chime: `aevalsrc='0.22*(sin(2*PI*1047*t)*exp(-t*3)+sin(2*PI*1319*t)*exp(-(t-0.12)*3)*gt(t,0.12)+sin(2*PI*1568*t)*exp(-(t-0.24)*3)*gt(t,0.24)+sin(2*PI*2093*t)*exp(-(t-0.36)*2.5)*gt(t,0.36))':s=44100:d=1.8`,
 };
 
 async function make() {
