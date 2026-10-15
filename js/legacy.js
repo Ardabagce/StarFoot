@@ -85,9 +85,9 @@ const Scenario = {
   ask(id) {
     const slot = Legacy.freeSlot();
     if (slot < 0) return Game.modal('<h3>Boş slot yok</h3><p>Senaryo başlatmak için önce ana menüden bir kariyeri silmelisin.</p>');
-    const x = Scenario.def(id), en = I18N.lang === 'en';
+    const x = Scenario.def(id), dn = I18N.defName();
     const m = Game.modal(`<div class="ev-tag">${x.ic} ${x.name}</div><h2>Oyuncunun adı</h2><p>${x.d}</p>
-      <div class="cr-row2"><label class="cr-f"><span>Adın</span><input id="sc-name" maxlength="16" value="${en ? 'Alex' : 'Emre'}" autocomplete="off"></label><label class="cr-f"><span>Soyadın</span><input id="sc-sur" maxlength="18" value="${en ? 'Stone' : 'Yıldız'}" autocomplete="off"></label></div>`,
+      <div class="cr-row2"><label class="cr-f"><span>Adın</span><input id="sc-name" maxlength="16" value="${dn[0]}" autocomplete="off"></label><label class="cr-f"><span>Soyadın</span><input id="sc-sur" maxlength="18" value="${dn[1]}" autocomplete="off"></label></div>`,
     [{ t: 'Vazgeç', cls: 'btn-ghost' }, { t: 'Başla', keep: true, fn: () => {
       const n = (document.getElementById('sc-name').value.trim() || 'Emre').slice(0, 16), sn = (document.getElementById('sc-sur').value.trim() || 'Yıldız').slice(0, 18);
       m.classList.add('hidden'); m.innerHTML = '';
@@ -96,8 +96,8 @@ const Scenario = {
     } }]);
   },
   start(id, name, surname) {
-    const x = Scenario.def(id), en = I18N.lang === 'en';
-    const nation = en ? 'ENG' : 'TUR', lgId = en ? 'ENG' : 'TR1';
+    const x = Scenario.def(id);
+    const nation = I18N.home(), lgId = nation === 'TUR' ? 'TR1' : nation;
     Create.heir = null;
     Game.newCareer({ name, surname, nation, mother: nation, foot: 'R', position: x.pos, alloc: {}, difficulty: 'normal', year: 2026, age: x.age });
     const s = Game.state, p = s.player;
@@ -172,7 +172,7 @@ const ShareCard = {
     c.textAlign = 'left'; c.fillStyle = '#fff'; c.font = 'italic 900 64px "Saira Condensed", sans-serif';
     c.fillText('STAR', 64, 110); const w1 = c.measureText('STAR').width; c.fillStyle = '#ffc93a'; c.fillText('FOOT', 64 + w1, 110);
     c.textAlign = 'right'; c.fillStyle = 'rgba(255,255,255,.75)'; c.font = '700 34px "Saira Condensed", sans-serif';
-    c.fillText(kicker.toLocaleUpperCase(I18N.lang === 'en' ? 'en' : 'tr'), W - 64, 104);
+    c.fillText(kicker.toLocaleUpperCase(I18N.lang), W - 64, 104);
     return { cv, c, W, H, s, p, club };
   },
   figure(o, x, y, h) {
@@ -182,7 +182,7 @@ const ShareCard = {
   nameBlock(o, y) {
     const { c, W, p } = o;
     c.textAlign = 'center'; c.fillStyle = '#fff'; c.font = '900 92px "Saira Condensed", sans-serif';
-    c.fillText(Player.fullName(p).toLocaleUpperCase(I18N.lang === 'en' ? 'en' : 'tr'), W / 2, y);
+    c.fillText(Player.fullName(p).toLocaleUpperCase(I18N.lang), W / 2, y);
     c.fillStyle = 'rgba(255,255,255,.75)'; c.font = '600 38px "Saira Condensed", sans-serif';
     c.fillText(`${Game.teamName()} · ${p.age} yaş · ${POSITIONS[p.position].l}`, W / 2, y + 56);
   },
@@ -193,7 +193,7 @@ const ShareCard = {
       c.fillStyle = 'rgba(255,255,255,.08)'; ShareCard.rr(c, x, y, bw, 150, 22); c.fill();
       c.strokeStyle = 'rgba(255,255,255,.14)'; c.lineWidth = 2; c.stroke();
       c.textAlign = 'center'; c.fillStyle = '#ffc93a'; c.font = '900 72px "Saira Condensed", sans-serif'; c.fillText(String(v), x + bw / 2, y + 86);
-      c.fillStyle = 'rgba(255,255,255,.7)'; c.font = '700 28px "Saira Condensed", sans-serif'; c.fillText(String(l).toLocaleUpperCase(I18N.lang === 'en' ? 'en' : 'tr'), x + bw / 2, y + 128);
+      c.fillStyle = 'rgba(255,255,255,.7)'; c.font = '700 28px "Saira Condensed", sans-serif'; c.fillText(String(l).toLocaleUpperCase(I18N.lang), x + bw / 2, y + 128);
     });
   },
   foot(o) {
@@ -239,7 +239,7 @@ const ShareCard = {
     SocialArt.trophyCup(c, W / 2, 380, 120);
     ShareCard.figure(o, W / 2, 800, 380);
     c.textAlign = 'center'; c.fillStyle = '#ffc93a'; c.font = '900 96px "Saira Condensed", sans-serif';
-    c.fillText(String(title).toLocaleUpperCase(I18N.lang === 'en' ? 'en' : 'tr'), W / 2, 930);
+    c.fillText(String(title).toLocaleUpperCase(I18N.lang), W / 2, 930);
     c.fillStyle = '#fff'; c.font = '700 44px "Saira Condensed", sans-serif'; c.fillText(sub || '', W / 2, 995);
     ShareCard.nameBlock(o, 1110);
     ShareCard.foot(o);
@@ -280,7 +280,7 @@ const ShareCard = {
     return C && C.getPlatform && C.getPlatform() === 'ios' ? 'https://apps.apple.com/app/id6819292902' : 'https://starfoot.bagce.dev';
   },
   text() {
-    return (I18N.lang === 'en' ? 'My StarFoot career ⚽ Can you beat it? #StarFoot #football' : 'StarFoot kariyerim ⚽ Geçebilir misin? #StarFoot #futbol') + '\n' + ShareCard.link();
+    return I18N.t('StarFoot kariyerim ⚽ Geçebilir misin? #StarFoot #futbol') + '\n' + ShareCard.link();
   },
 };
 
@@ -291,7 +291,7 @@ const PrivacyView = {
     if (document.querySelector('.pv-ov')) return;
     const el = document.createElement('div');
     el.className = 'pv-ov';
-    el.innerHTML = `<div class="pv-box"><div class="pv-bar"><b>${I18N.lang === 'en' ? 'Privacy Policy' : 'Gizlilik Politikası'}</b><button class="btn btn-ghost" data-x>${I18N.lang === 'en' ? 'Close' : 'Kapat'}</button></div><iframe src="privacy.html${I18N.lang === 'en' ? '#en' : ''}" title="Privacy Policy"></iframe></div>`;
+    el.innerHTML = `<div class="pv-box"><div class="pv-bar"><b>${I18N.t('Gizlilik Politikası')}</b><button class="btn btn-ghost" data-x>${I18N.t('Kapat')}</button></div><iframe src="privacy.html${I18N.lang !== 'tr' ? '#en' : ''}" title="Privacy Policy"></iframe></div>`;
     el.setAttribute('data-noi18n', '');
     document.body.appendChild(el);
     el.querySelector('[data-x]').onclick = () => el.remove();

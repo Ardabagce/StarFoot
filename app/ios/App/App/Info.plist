@@ -10,6 +10,8 @@
 	<array>
 		<string>en</string>
 		<string>tr</string>
+		<string>es</string>
+		<string>pt</string>
 	</array>
 	<key>CFBundleDisplayName</key>
         <string>StarFoot</string>

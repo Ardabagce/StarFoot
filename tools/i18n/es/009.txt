@@ -1,0 +1,2 @@
+3468|Fuerza {} / Tu equipo {}
+3469|Rival {}.º

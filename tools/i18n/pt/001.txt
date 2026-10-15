@@ -1,0 +1,349 @@
+300|Clássico de Sevilha
+301|Assistências na temporada
+302|Gols na temporada
+303|Marque 15 gols nesta temporada
+304|Evite o rebaixamento nesta temporada
+305|Herói do último minuto
+306|A última dança
+307|Mais frio sob pressão nos minutos finais.
+308|Último minuto! Essa sensação não tem preço.
+309|Último minuto!
+310|Essa sensação não tem preço.
+311|Última chance! Este chute pode decidir o jogo.
+312|Última chance!
+313|Este chute pode decidir o jogo.
+314|Minha carreira no StarFoot ⚽ #StarFoot
+315|Minha carreira no StarFoot #StarFoot
+316|Fácil falar, difícil fazer.
+317|Superclássico
+318|Comum? Vamos ver no domingo!
+319|Comum?
+320|Vamos ver no domingo!
+321|Vou fazer o que o time precisar.
+322|Leve seu time para a Europa
+323|Melhor em desarmes.
+324|Clássico de Turim
+325|Estamos aqui para avançar.
+326|Todas as suas carreiras
+327|Nova geração
+328|Sem comentários
+329|Estrela em ascensão
+330|Mago do drible
+331|Os adversários têm dificuldade para parar seus dribles.
+332|Conclua três missões e abra o baú
+333|Ousado
+334|Clássico de Istambul
+335|Derby d'Italia
+336|Eles têm uma boa defesa, estamos preparados.
+337|⚡ Sua energia está cheia! O plano semanal e o jogo estão esperando.
+338|Sua energia está cheia! O plano semanal e o jogo estão esperando.
+339|⚡ Sua energia está cheia!
+340|Sua energia está cheia!
+341|O plano semanal e o jogo estão esperando.
+342|⚽ Seu time está esperando. Continue sua carreira de onde parou!
+343|Seu time está esperando. Continue sua carreira de onde parou!
+344|⚽ Seu time está esperando.
+345|Seu time está esperando.
+346|Continue sua carreira de onde parou!
+347|🎁 Sua recompensa diária está pronta!
+348|Sua recompensa diária está pronta!
+349|🎙️ Você bancou suas palavras ousadas da coletiva!
+350|Você bancou suas palavras ousadas da coletiva!
+351|🎙️ Suas palavras ousadas antes do jogo saíram pela culatra, a torcida está chateada.
+352|Suas palavras ousadas antes do jogo saíram pela culatra, a torcida está chateada.
+353|Você ganhou um emblema.
+354|🎯 Cenários
+355|Cenários
+356|Revanche no ano que vem!
+357|Você é o melhor jogador do mundo!
+358|🏛️ Hall da Fama
+359|Hall da Fama
+360|🏛️ No Hall da Fama você está em
+361|No Hall da Fama você está em
+363|A imprensa já está comparando vocês.
+364|Conheça seu rival!
+365|👶 Continuar com seu filho
+366|Continuar com seu filho
+367|📊 RECORDE!
+368|RECORDE!
+369|dias
+370|Como você responde?
+371|O que você diz?
+372|Corrida pela Bola de Ouro
+373|Seu rival
+374|Missões diárias
+375|Compartilhar card do jogador
+376|Compartilhar card da temporada
+377|Em busca do recorde
+378|Características
+379|Cenário
+380|Resultado do cenário
+381|perdido. A torcida está furiosa.
+382|perdido.
+383|A torcida está furiosa.
+384|recorde de gols da temporada
+385|recorde de gols numa temporada
+386|maior artilheiro da história
+387|· Coletiva de imprensa
+388|lugar!
+389|lugar. Mire no topo!
+390|lugar.
+391|Mire no topo!
+392|o emblema é seu. Você pode continuar sua carreira o quanto quiser.
+393|o emblema é seu.
+394|Você pode continuar sua carreira o quanto quiser.
+395|ÚLTIMO MINUTO!
+396|Resumo da carreira
+397|ao vivo
+398|final
+399|Efeitos sonoros
+400|Vibração
+401|Lenda
+402|Superestrela
+403|Profissional respeitado
+404|Jogador veterano
+405|Uma carreira comum
+406|Pontuação de lenda
+407|fim da temporada
+408|temporada
+409|Último jogo
+410|mesma liga · mesma posição
+411|Seus contemporâneos
+412|Entre seus contemporâneos você está em
+413|ligas top
+414|segunda divisão
+415|MVP
+416|Liga Alpina
+417|Superliga dos Alpes
+418|Liga Egeia
+419|Liga Viking
+420|Liga Adriática
+421|Liga Boêmia
+422|Liga do Vístula
+423|Liga da Estepe
+424|LIGA ALPINA
+425|SUPERLIGA DOS ALPES
+426|LIGA EGEIA
+427|LIGA VIKING
+428|ADRIÁTICA
+429|LIGA BOÊMIA
+430|LIGA DO VÍSTULA
+431|LIGA DA ESTEPE
+432|Áustria
+433|Suíça
+434|Grécia
+435|Dinamarca
+436|Tchéquia
+437|Ucrânia
+438|Copa da Áustria
+439|Copa da Suíça
+440|Copa da Grécia
+441|Copa da Dinamarca
+442|Copa da Croácia
+443|Copa da Tchéquia
+444|Copa da Polônia
+445|Copa da Ucrânia
+446|Bolsa
+447|Sua bolsa
+448|Cuidados
+449|Equipamento
+450|Estilo de vida
+451|Bolas
+452|Auto
+453|Moeda
+454|Ainda não há nada nesta seção.
+455|Fisio
+456|toque para usar
+457|Usar
+458|Não está na sua bolsa. Você pode estocar na loja.
+459|Não está na sua bolsa.
+460|Você pode estocar na loja.
+461|Use os itens da bolsa em Início › Plano semanal sem precisar ir à loja.
+462|Uma sessão de fisio reduz uma lesão em 2 semanas. Estoque na loja e use da sua bolsa no Plano semanal.
+463|Estoque na loja e use da sua bolsa no Plano semanal.
+464|Internacional
+465|Jogos pelo sub-19
+466|Jogos pelo sub-21
+467|Pontos:
+468|gol ×3
+469|assistência ×2
+470|+ nível da liga e do time (máx. 8). Suas notas nos jogos somam à sua pontuação.
+471|+ nível da liga e do time (máx. 8).
+472|Suas notas nos jogos somam à sua pontuação.
+473|Missões de hoje concluídas
+474|Novas missões chegam amanhã
+475|Não foi possível acessar a App Store agora. Verifique sua conexão e tente de novo.
+476|Não foi possível acessar a App Store agora.
+477|Verifique sua conexão e tente de novo.
+478|Não foi possível carregar as informações do produto da App Store (produto não encontrado).
+479|Ver anúncio · Dobre seu bicho
+480|⭐ Premium · Dobre seu bicho
+481|Premium · Dobre seu bicho
+482|— nos classificamos!
+483|(Assistência)
+484|(VOCÊ)
+485|(pênaltis)
+486|(você)
+487|+10 energia, +10 moral
+488|+12 energia, +2 moral
+489|+15 energia, +6 moral
+490|+20 energia
+491|+20 energia, +3 moral
+492|, ao soltar: desacelere · mantenha o ponteiro na faixa verde ·
+493|, enquanto a força carrega
+494|/semana
+495|/sem
+496|LEAGUE ONE
+497|depois dos 16 anos
+498|16 seleções, mata-mata
+499|Aos 18 você pode assinar um contrato profissional e subir para o time principal.
+500|depois dos 18 anos
+501|2. BUNDESLIGA
+502|2ª divisão
+503|3 ações
+504|Você jogou por 3 clubes diferentes
+505|Você vai se mostrar em 3 estações. Quanto melhor for, maiores os clubes que farão ofertas!
+506|Você ganhou a Bola de Ouro 3 vezes
+507|Você foi artilheiro 3 vezes
+508|Ainda jogando aos 35
+509|Ainda jogando aos 38
+510|Você jogou por 5 clubes diferentes
+511|8 seleções europeias, mata-mata
+512|: jogue bem e o olheiro na lateral
+513|No treino do time principal
+514|contrato profissional no time principal
+515|O técnico do time principal quer que você treine com os profissionais esta semana. O ritmo vai ser altíssimo.
+516|US Open Cup
+517|BASE
+518|ANATOLIA ENERGY
+519|TREINO
+520|INTERCEPTADO
+521|CAMPEÕES DA ÁSIA
+522|ASSISTÊNCIA! GOOOL!
+523|ATLÂNTICA
+524|LATERAL
+525|POR POUCO
+526|LIGA ASTECA
+527|Nome
+528|Aero Sound
+529|Chuteiras aerodinâmicas
+530|Ahmet "Raposa" Bulut
+531|Família
+532|O vínculo familiar e a moral sobem
+533|Sua família adorou. Moral +12
+534|Presente para a família
+535|Um jantar ótimo com a família.
+536|Passar tempo com a família
+537|Mediterrâneo
+538|Atividades
+539|Smartphone
+540|Alemanha
+541|Copa da Alemanha
+542|Liga alemã
+543|Estrela da base
+544|Seus anos de base acabaram. Escolha um clube para começar sua carreira profissional.
+545|Você venceu a liga de base
+546|Você foi o melhor jogador da liga de base
+547|Jogador da base · Ajuda de custo
+548|Na peneira da base
+549|Transferência da base
+550|Campeão da base
+551|Ficar na base
+552|Você continuou trabalhando na base.
+553|Entrar na base
+554|Corrente de ouro
+555|Chuteiras de ouro
+556|Bola de Ouro
+557|Pó de ouro
+558|Mas os paparazzi te flagraram de madrugada. O técnico não gostou.
+559|Menu principal
+560|Liga da Anatólia
+561|Assinar
+562|Terra natal da sua mãe
+563|Eu e minha mãe somos torcedores
+564|Sua mãe ficou feliz em ouvir sua voz.
+565|Nada como a comida da mãe!
+566|Treino
+567|Roupa de treino
+568|Bola de treino
+569|Voltando do treino você achou uma carteira cheia de dinheiro.
+570|Aumenta os ganhos de treino (vale o melhor)
+571|Energia insuficiente para treinar.
+572|Ganhos de treino +10%
+573|Ganhos de treino +12%
+574|Ganhos de treino +14%
+575|Ganhos de treino +18%
+576|Ganhos de treino +24%
+577|Ganhos de treino +25%
+578|Ganhos de treino +27%
+579|Ganhos de treino +28%
+580|Ganhos de treino +30%
+581|Ganhos de treino +36%
+582|Ganhos de treino +45%
+583|Ganhos de treino +55%
+584|Ganhos de treino +8%
+585|Minigames de treino
+586|Grande impulso no seu atributo de foco (uma vez por temporada)
+587|Felicidade pós-treino.
+588|Foco no treino
+589|Seu gol de bicicleta no treino viralizou!
+590|Estilo até no treino
+591|Você torceu levemente o tornozelo no treino.
+592|+25 de energia na hora
+593|Efeito imediato
+594|As coisas esfriaram entre vocês.
+595|Argentina
+596|Copa Argentina
+597|Liga argentina
+598|Amigo
+599|Seus amigos querem que você jogue videogame a noite toda.
+600|Assistências
+601|Líderes em assistências
+602|Uma assistência é tão doce quanto um gol. Parabéns ao meu companheiro.
+603|Ásia
+604|C. Asiática
+605|Copa dos Campeões da Ásia
+606|Você venceu a Copa dos Campeões da Ásia
+607|O topo da Ásia
+608|Corrida de cavalos
+609|Bola de fogo
+610|Pular
+611|Pular corda
+612|Liga Atlântica
+613|Europa
+614|Vaga europeia
+615|Copa da Federação Europeia
+616|Você venceu a Copa da Federação Europeia
+617|Noite europeia
+618|Liga Europeia de Desenvolvimento
+619|Liga Europeia de Desenvolvimento (sub-19)
+620|Você venceu a Liga Europeia de Desenvolvimento (sub-19)
+621|Copa da Conferência Europeia
+622|Você venceu a Copa da Conferência Europeia
+623|Você marcou em competição europeia
+624|Eurocopa
+625|Você venceu a Eurocopa
+626|Copa dos Campeões da Europa
+627|Você venceu a Copa dos Campeões da Europa
+628|Campeão europeu
+629|O melhor da Europa
+630|Jovens da Europa
+631|Pé
+632|Pacote mensal de smoothies
+633|Você venceu a liga e a copa nacional na mesma temporada
+634|Você já tem um patrocinador desse tipo.
+635|Sair
+636|O término foi difícil, mas você está seguindo em frente.
+637|Azerbaijão
+638|Liga Asteca
+639|Uma das suas comemorações desbloqueadas
+640|Conversar abertamente
+641|A rede está balançando! Obrigado pelo apoio.
+642|Cavadinha
+643|NA BARREIRA
+644|SEGURE
+645|SUCESSO!
+646|FALHOU
+647|EMPATE
+648|BOSPHORUS BANK
+649|ESTA SEMANA

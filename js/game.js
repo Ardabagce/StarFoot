@@ -160,7 +160,15 @@ const Game = {
         { t: 'Sil', cls: 'btn-danger', fn: () => { Game.wipe(i); Game.init(); } },
       ]);
     }));
-    U.$$('#lang-sw [data-lang]').forEach((b) => { b.classList.toggle('on', b.dataset.lang === I18N.lang); b.onclick = () => { if (b.dataset.lang !== I18N.lang) I18N.set(b.dataset.lang); }; });
+    // dil menüsü: tek düğme, dokununca diller listesi
+    const lb = document.getElementById('lang-btn'), lm = document.getElementById('lang-menu');
+    if (lb && lm) {
+      lb.querySelector('b').textContent = I18N.lang.toUpperCase();
+      lm.innerHTML = Object.entries(I18N.LANGS).map(([k, n]) => `<button data-lang="${k}" class="${k === I18N.lang ? 'on' : ''}">${n}</button>`).join('');
+      lb.onclick = (e) => { e.stopPropagation(); lm.classList.toggle('hidden'); };
+      U.$$('[data-lang]', lm).forEach((b) => (b.onclick = () => { lm.classList.add('hidden'); if (b.dataset.lang !== I18N.lang) I18N.set(b.dataset.lang); }));
+      document.addEventListener('click', () => lm.classList.add('hidden'), { once: true });
+    }
     Game.show('title');
   },
 
@@ -2028,7 +2036,7 @@ ${UI.paper()}`;
       <section class="card settings">
         <div class="card-h"><span>${Icon('cog')} Genel</span></div>
         ${row('Para birimi', `Otomatik: telefonun bölgesine göre (${U.CUR[U.curAuto()].sym})`, `<div class="seg" data-noi18n>${[['', 'Oto'], ['TRY', '₺'], ['USD', '$'], ['EUR', '€'], ['GBP', '£']].map(([k, l]) => { let cur = ''; try { cur = localStorage.getItem('starfoot_cur') || ''; } catch (e) { /* yok */ } return `<button data-setcur="${k}" class="${cur === k ? 'on' : ''}">${l}</button>`; }).join('')}</div>`)}
-        ${row('Dil / Language', '', `<div class="seg" data-noi18n><button data-setlang="tr" class="${I18N.lang === 'tr' ? 'on' : ''}">Türkçe</button><button lang="en" data-setlang="en" class="${I18N.lang === 'en' ? 'on' : ''}">English</button></div>`)}
+        ${row('Dil / Language', '', `<select class="lang-sel" data-setlang data-noi18n>${Object.entries(I18N.LANGS).map(([k, n]) => `<option value="${k}"${k === I18N.lang ? ' selected' : ''}>${n}</option>`).join('')}</select>`)}
         ${row('Zorluk', DIFFS[s.difficulty || 'normal'].d, `<div class="seg">${Object.entries(DIFFS).map(([k, v]) => `<button data-setdiff="${k}" class="${k === (s.difficulty || 'normal') ? 'on' : ''}">${v.l}</button>`).join('')}</div>`)}
       </section>
       <section class="card settings">
@@ -2213,7 +2221,7 @@ ${UI.paper()}`;
     }));
     U.$$('[data-adprivacy]', root).forEach((b) => (b.onclick = () => window.StarfootAds.privacyOptions()));
     U.$$('[data-setcur]', root).forEach((b) => (b.onclick = () => { try { if (b.dataset.setcur) localStorage.setItem('starfoot_cur', b.dataset.setcur); else localStorage.removeItem('starfoot_cur'); } catch (e) { /* yok */ } Game.render(); }));
-    U.$$('[data-setlang]', root).forEach((b) => (b.onclick = () => { if (b.dataset.setlang !== I18N.lang) { Game.save(); I18N.set(b.dataset.setlang); } }));
+    U.$$('select[data-setlang]', root).forEach((b) => (b.onchange = () => { if (b.value !== I18N.lang) { Game.save(); I18N.set(b.value); } }));
     U.$$('[data-sys]', root).forEach((b) => (b.onclick = () => {
       const k = b.dataset.sys;
       if (k === 'save') { Game.save(); Game.toast('💾 Kaydedildi', 'good'); }
@@ -2523,6 +2531,9 @@ const Create = {
     document.getElementById('cr-back').onclick = () => Game.init();
     ['cr-name', 'cr-sur'].forEach((id) => (document.getElementById(id).oninput = () => Create.preview()));
     ['cr-nat', 'cr-mom'].forEach((id) => (document.getElementById(id).onchange = () => Create.preview()));
+    // varsayılan memleket: oyunun diline göre (Türkçede Türkiye, İspanyolcada İspanya…)
+    const hm = I18N.home();
+    if (NATIONS.some((n) => n.code === hm)) ['cr-nat', 'cr-mom'].forEach((id) => (document.getElementById(id).value = hm));
     const ageSel = document.getElementById('cr-age'), yearSel = document.getElementById('cr-year');
     const updAge = () => {
       const a = +ageSel.value;
@@ -2589,11 +2600,11 @@ const Create = {
   preview() {
     const g = (id) => document.getElementById(id);
     if (!g('pv-art')) return;
-    const name = (g('cr-name').value.trim() || (I18N.lang === 'en' ? 'Alex' : 'Emre'));
-    const sur = (g('cr-sur').value.trim() || (I18N.lang === 'en' ? 'Stone' : 'Yıldız'));
+    const name = (g('cr-name').value.trim() || I18N.defName()[0]);
+    const sur = (g('cr-sur').value.trim() || I18N.defName()[1]);
     const nat = g('cr-nat').value, mom = g('cr-mom').value;
     const natName = (c) => (NATIONS.find((n) => n.code === c) || {}).name || c;
-    g('pv-name').textContent = `${name} ${sur}`.toLocaleUpperCase(I18N.lang === 'en' ? 'en' : 'tr');
+    g('pv-name').textContent = `${name} ${sur}`.toLocaleUpperCase(I18N.lang);
     g('pv-ovr').textContent = Create.ovr();
     g('pv-pos').textContent = POSITIONS[Create.pos].short;
     g('pv-flag').textContent = nat === mom ? natName(nat) : `${natName(nat)} / ${natName(mom)}`;

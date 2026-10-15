@@ -1,0 +1,350 @@
+1700|converteu o pênalti com calma!
+1701|ficou muito impressionado com seu desempenho. Várias bases te querem.
+1702|estudou os pontos fracos do goleiro adversário.
+1703|driblou os adversários!
+1704|comprado
+1705|embaixadinhas, nada mal
+1706|te ligou
+1707|levou amarelo por uma entrada dura.
+1708|motivou o time no vestiário!
+1709|cancelou o patrocínio.
+1710|desarmes: o técnico gostou do seu trabalho defensivo
+1711|perdeu a bola.
+1712|colocou no ângulo!
+1713|estão no torneio, mas você não foi convocado.
+1714|não se classificou para o torneio.
+1715|chutou e o goleiro defendeu.
+1716|está cansando. A precisão do chute está caindo.
+1717|subiu alto e cabeceou para o gol!
+1718|anos
+1719|· dura 30-40 jogos
+1720|· Foto: Agência StarFoot
+1721|tentou um drible e a bola saiu pela lateral.
+1722|perdeu a bola tentando driblar.
+1723|prêmios
+1724|Cantinho das apostas
+1725|CAMPEÕES! Este troféu é do país inteiro.
+1726|Vencedor
+1727|campeões! A melhor base da Europa é nossa.
+1728|furou a defesa com uma tabela de luxo!
+1729|· 2ª divisão
+1730|· Terra natal da sua mãe:
+1731|· Hoje à noite
+1732|· Sua escolha de seleção:
+1733|· livre
+1734|· toque ou deslize esquerda/direita na tela ·
+1735|· tocar cedo demais faz você perder o ritmo ·
+1736|· casado
+1737|· o alvo se move pelo gol; você mira mais ou menos ali ·
+1738|· chegue na bola antes do adversário ·
+1739|· passe antes que o tempo acabe
+1740|· estrela
+1741|· jogador estrela
+1742|· Pode jogar pelas duas seleções
+1743|DRIBLE!
+1744|Treino de drible
+1745|Trabalhamos e vencemos. E ainda tem bônus por gol.
+1746|Chuteiras para lama (travas longas)
+1747|Escada de agilidade
+1748|Quartas de final
+1749|Par
+1750|Dobro
+1751|Liga B da Bota
+1752|Liga da Bota
+1753|Criança
+1754|Uma escolinha gratuita para crianças. Moral +2, Fama +5 toda semana
+1755|A alegria das crianças também te fez bem.
+1756|Você se divertiu muito, mas não dormiu.
+1757|Chuteiras de cano alto
+1758|LIGA DO DESERTO
+1759|Liga do Deserto
+1760|Prêmio
+1761|Cerimônia de premiação
+1762|Sem prêmio
+1763|Resgatar recompensa
+1764|Sua recompensa
+1765|Sua recompensa está pronta!
+1766|Primeiro mostre seu futebol no jogo de rua. Quando um olheiro te levar para uma base, seu time e sua liga aparecem aqui.
+1767|Primeiro a escola e o futebol!
+1768|Ilha particular
+1769|Gols especiais
+1770|Treinador particular
+1771|Jatinho particular
+1772|Treinador particular
+1773|×1,8 de evolução · risco de lesão
+1774|×2,3 de evolução
+1775|TRAVESSÃO!
+1776|Posição da seleção
+1777|Você venceu a copa do seu país
+1778|Fama
+1779|Foco na fama (todos somam)
+1780|Fama e redes sociais
+1781|Um DJ famoso estava tocando, você dançou até o amanhecer!
+1782|Sua fama e sua moral aumentam suas chances
+1783|Sua fama e o apoio da torcida cresceram.
+1784|Acesso
+1785|Subimos de divisão!
+1786|você está bem acima
+1787|professor
+1788|no travessão
+1789|você está acima
+1790|Liga Ibérica 2
+1791|Liga Ibérica
+1792|A camisa do seu ídolo
+1793|Você foi capitão em dois clubes diferentes
+1794|Os dois países te querem!
+1795|Duelos
+1796|Duelos, resistência a lesões.
+1797|Escolha o que fazer no segundo tempo.
+1798|Mais chances no segundo tempo
+1799|Mais chance de entrar no segundo tempo
+1800|Relacionamento
+1801|O relacionamento se fortalece e a moral sobe
+1802|Relacionamentos
+1803|Time titular
+1804|Candidato a titular
+1805|Os 8 primeiros às oitavas · do 9º ao 24º play-off · do 25º ao 32º fora
+1806|Primeira compra
+1807|Seu primeiro carro (hatch)
+1808|Primeira assistência
+1809|Primeiro gol
+1810|Primeiro troféu
+1811|Primeiro jogo
+1812|Primeiro milhão
+1813|Você ganhou seu primeiro troféu ou prêmio
+1814|Seu primeiro jogo é na rua; um olheiro vai estar assistindo
+1815|Assinei meu primeiro contrato profissional! Os sonhos estão se realizando.
+1816|Você assinou seu primeiro contrato profissional
+1817|Você jogou sua primeira partida oficial
+1818|Intervalo.
+1819|Copa do Imperador
+1820|Chuteiras de craque autografadas
+1821|Tem cupom de desconto?
+1822|Inglaterra
+1823|Copa da Inglaterra
+1824|Liga inglesa
+1825|Escócia
+1826|Copa da Escócia
+1827|Espanha
+1828|Liga espanhola
+1829|Istambul
+1830|Itália
+1831|Copa da Itália
+1832|Liga italiana
+1833|Boa sessão
+1834|CASA
+1835|CAMPEÃO
+1836|CAMPEÕES!
+1837|CAMPEÕES
+1838|TÍTULO
+1839|Quem é campeão? Somos nós!
+1840|Campeão:
+1841|C. dos Campeões
+1842|Copa dos Campeões
+1843|Noite de Copa dos Campeões
+1844|Você teve sorte, nenhum problema.
+1845|Cobertura no centro
+1846|Uma ótima noite na balada mais badalada da cidade!
+1847|Esperar por enquanto
+1848|Sem ofertas por enquanto. Jogando bem e com a fama crescendo, as marcas vão ligar.
+1849|Já vi aquele golaço 40 vezes
+1850|Finalização
+1851|Finalização +1, Técnica +1
+1852|Finalização +2, Técnica +2, Velocidade +1
+1853|Finalização +3, Técnica +3, Velocidade +2
+1854|Finalização +5, Técnica +4, Velocidade +3, Passe +2
+1855|Finalização +5, Drible +4, Técnica +3
+1856|Finalização +6, Técnica +5, Velocidade +4, Passe +3, Drible +3
+1857|Ao chutar, olhe para o canto vazio, não para o goleiro. Coloque ali.
+1858|Define a força e a precisão máximas dos seus chutes.
+1859|cantor
+1860|chuta (como um estilingue), para o seu companheiro
+1861|• ⭐ Melhor em campo
+1862|• Melhor em campo
+1863|−12 de energia
+1864|−24 de energia
+1865|−3 de energia
+1866|−5 de energia
+1867|★ essencial para sua posição
+1868|essencial para sua posição
+1869|⚡ Chance de ataque
+1870|Chance de ataque
+1871|⚪ Pênalti!
+1872|Pênalti!
+1873|⚽ Ir ao treino
+1874|Ir ao treino
+1875|✍️ Ir
+1876|Ir
+1877|❌ Recusar
+1878|❤️ Entrar
+1879|Melhor jogador da liga
+1880|🌱 Melhor jogador jovem do ano
+1881|🍕 Você passou um tempo com os companheiros: o vínculo com o time cresceu
+1882|Você passou um tempo com os companheiros: o vínculo com o time cresceu
+1883|🎂 Agora você tem
+1884|Agora você tem
+1885|🎉 Ir à festa
+1886|Ir à festa
+1887|🎮 Entrar
+1888|🎯 Na área!
+1889|Na área!
+1890|🎯 Cobrança de falta
+1891|Cobrança de falta
+1892|🏁 Fim da carreira
+1893|Fim da carreira
+1894|🏠 Ficar em casa
+1895|🏠 Ir para casa
+1896|Ir para casa
+1897|👋 Aposentar-se
+1898|👋 Hora de dizer adeus
+1899|Hora de dizer adeus
+1900|💨 Chance de drible
+1901|Chance de drible
+1902|💪 Ficar e treinar
+1903|💪 Sua lesão sarou, você pode voltar a campo!
+1904|Sua lesão sarou, você pode voltar a campo!
+1905|💾 Salvo
+1906|Salvo
+1907|📈 Seu clube subiu de divisão!
+1908|Seu clube subiu de divisão!
+1909|📉 Seu clube foi rebaixado na temporada passada.
+1910|Seu clube foi rebaixado na temporada passada.
+1911|📋 Você começa no banco hoje.
+1912|Você começa no banco hoje.
+1913|📋 O técnico te deixou fora da lista para este jogo.
+1914|O técnico te deixou fora da lista para este jogo.
+1915|📚 Estudar
+1916|Estudar
+1917|🔥 Vou mostrar meu valor
+1918|Vou mostrar meu valor
+1919|🗯️ Rebater
+1920|Rebater
+1921|😊 Valeu, vô!
+1922|Valeu, vô!
+1923|😎 Contar vantagem
+1924|Contar vantagem
+1925|😤 Continuar
+1926|😴 Você descansou: Energia +20
+1927|Você descansou: Energia +20
+1928|😴 Dormir cedo
+1929|Dormir cedo
+1930|🙁 Não ir
+1931|Não ir
+1932|🙁 Não entrar
+1933|Não entrar
+1934|🙂 Ser humilde
+1935|Ser humilde
+1936|🙅 Recusar
+1937|🛡️ Ataque adversário!
+1938|Ataque adversário!
+1939|🟥 Você levou vermelho. O técnico não gostou.
+1940|Você levou vermelho. O técnico não gostou.
+1941|🤐 Ignorar
+1942|Ignorar
+1943|🤝 Aceitar
+1944|🤾 Escanteio - Bola aérea
+1945|Escanteio - Bola aérea
+1946|🥇 Bola de Ouro (Jogador do ano)
+1947|Bola de Ouro (Jogador do ano)
+1948|🧊 Descansar
+1949|🧭 Armação
+1950|Armação
+1951|SEMANA
+1952|Você vai se mostrar em 3 estações.
+1953|Quanto melhor for, maiores os clubes que farão ofertas!
+1954|O técnico do time principal viu seu jogo e te convidou para um treino com o time principal esta semana.
+1955|O técnico do time principal quer que você treine com os profissionais esta semana.
+1956|O ritmo vai ser altíssimo.
+1957|Olheiros de clubes estão na arquibancada!
+1958|ASSISTÊNCIA!
+1959|Sua família adorou.
+1960|Seus anos de base acabaram.
+1961|Escolha um clube para começar sua carreira profissional.
+1962|Mas os paparazzi te flagraram de madrugada.
+1963|O técnico não gostou.
+1964|Meu sonho está se realizando.
+1965|Uma assistência é tão doce quanto um gol.
+1966|Parabéns ao meu companheiro.
+1967|A rede está balançando!
+1968|Aposta:
+1969|Segure para acelerar, solte para desacelerar.
+1970|Mantenha o ponteiro de velocidade na faixa verde por 12 segundos.
+1971|Sua aposta foi devolvida.
+1972|Você mudou sua dieta e sua rotina de sono.
+1973|Uma foto com um torcedor viralizou.
+1974|quer uma explicação.
+1975|Uma marca esportiva quer fechar patrocínio com você:
+1976|É aniversário da sua mãe esta semana.
+1977|O que você vai fazer?
+1978|Vá jogar a partida!
+1979|Você não conheceu ninguém esta semana.
+1980|Vamos encher a estante na próxima temporada!
+1981|Você já fez seu pedido nesta temporada.
+1982|Tente de novo na próxima temporada.
+1983|Mais um dia de trabalho.
+1984|Grandes metas!
+1985|3 chutes na área.
+1986|Puxe para trás e solte, mire nos cantos.
+1987|Cristiano Ronalda postou um novo vídeo de treino.
+1988|Dizem que o tanquinho dele vai ganhar conta própria.
+1989|Feliz aniversário!
+1990|Sua família e seus amigos fizeram uma festa surpresa.
+1991|A camisa do maior astro da época.
+1992|Um dia eu vou ser...
+1993|Erling Halland revelou que come 14 ovos no café da manhã.
+1994|As granjas criaram um turno da noite.
+1995|Sua suspensão da FIFA acabou.
+1996|Você pode voltar a campo.
+1997|As acusações são graves.
+1998|Falta dentro da área!
+1999|Nada mal!
+2000|te recomendou para clubes de nível médio.
+2001|Você persegue o sonho de virar jogador.
+2002|Escolha o ano e a idade em que começa.
+2003|Você não escolhe o clube: os olheiros te descobrem.
+2004|Jogadores não podem apostar.
+2005|Cada aposta chama a atenção da FIFA; apostar no seu próprio jogo é muito arriscado.
+2006|Se for pego, você enfrenta uma longa suspensão, multa e perde os patrocinadores.
+2007|S.
+2008|C. América
+2009|Vida noturna.
+2010|Segunda-feira de volta ao treino!
+2011|Essa torcida merece.
+2012|Geral
+2013|Você roubou a bola lá atrás.
+2014|Toque num companheiro na frente para passar, ou puxe e solte para um lançamento.
+2015|Fiz meu gol e levamos os 3 pontos.
+2016|Vamos para o próximo!
+2017|Que noite!
+2018|Seu vínculo com os companheiros ficou mais forte.
+2019|Vou levar a bola para casa.
+2020|Comece a carreira de jogador dos seus sonhos.
+2021|Vire lenda.
+2022|O melhor dia da minha vida.
+2023|O dia da sua vida!
+2024|Você ainda não é visto como pronto para o time principal.
+2025|Prove-se por mais uma temporada no sub-19!
+2026|Marque um gol ou poste em "Redes sociais" no plano semanal.
+2027|O técnico admirou sua determinação.
+2028|O técnico ficou impressionado!
+2029|O técnico cruza do escanteio.
+2030|Toque quando a bola chegar na sua cabeça; você mira mais ou menos onde está o alvo.
+2031|O técnico decide pela sua fase, pela relação de vocês e por quem usa o número hoje.
+2032|Números como 10, 9 e 7 são mais difíceis.
+2033|Com um bom vínculo com o técnico você é titular.
+2034|Pouca energia piora seu desempenho.
+2035|Pare o atacante.
+2036|A zona verde é um desarme limpo.
+2037|N.
+2038|Goleiros atentos, defesa dura, evolução lenta.
+2039|Um desafio de verdade.
+2040|Flagrado pelas câmeras!
+2041|A torcida ficou decepcionada.
+2042|A bola para rápido na neve.
+2043|A bola laranja de inverno está em jogo.
+2044|O carrinho é o último recurso.
+2045|Fique de pé, tenha paciência.
+2046|Você ganhou!
+2047|Você se sente mais leve.
+2048|Escanteio!
+2049|Toque quando a bola chegar na sua cabeça; você mira mais ou menos no alvo em movimento.

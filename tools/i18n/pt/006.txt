@@ -1,0 +1,189 @@
+2050|Crupiê
+2051|Chegue mais perto de 21 que a banca.
+2052|Blackjack paga 3:2 e a banca para no 17.
+2053|Ele também te chamou para conversar.
+2054|Lamin Yamel fez hat-trick depois de terminar a lição de casa.
+2055|O professor deu ponto extra.
+2056|Lionel Mezzi tem média de 4 dribles por jogo nesta temporada.
+2057|As defesas rivais dividem um terapeuta.
+2058|JOGO NA RUA · Um olheiro está assistindo da lateral.
+2059|Jogue bem e ele te leva para uma base!
+2060|A torcida não está feliz.
+2061|Tinha um olheiro na lateral...
+2062|Você virou manchete!
+2063|A torcida adorou, mas o técnico não gostou.
+2064|Fim de jogo ·
+2065|Bicho do jogo:
+2066|O prêmio de melhor em campo é do meu time.
+2067|Mais fortes juntos.
+2068|Você jogou demais!
+2069|O olheiro pegou o telefone na hora; as bases dos grandes clubes te querem.
+2070|Um treino baseado no seu atributo de foco.
+2071|Jogue bem e a evolução vai até ×1,5.
+2072|Semana de provas na escola!
+2073|Sua família quer que você estude esta semana.
+2074|Você vai entrar!
+2075|O técnico confia em você.
+2076|Você está na marca do pênalti.
+2077|Puxe para trás, mire num canto e solte!
+2078|Seu desempenho chamou atenção!
+2079|As bases de clubes maiores te querem.
+2080|Você acompanhou o ritmo dos profissionais.
+2081|Você passou pelo marcador, cara a cara com o goleiro!
+2082|Puxe para trás, mire num canto e solte.
+2083|O atacante vem com a bola.
+2084|Toque quando o anel ficar verde; amarelo é falta.
+2085|Ele vem para cima de você!
+2086|Assim que ele cair para um lado, puxe a bola para o outro (toque ou deslize esquerda/direita).
+2087|Os zagueiros vêm para cima.
+2088|Assim que eles se jogarem, puxe a bola para o outro lado (toque ou deslize esquerda/direita).
+2089|Edição
+2090|Você ·
+2091|Hora de comemorar!
+2092|Toque para pular.
+2093|Você foi a estrela da peneira!
+2094|Olheiros de grandes clubes fizeram fila para te contratar.
+2095|Nada como futebol de rua!
+2096|Seu contrato acabou!
+2097|Você precisa assinar um novo.
+2098|Você pode avaliar as ofertas.
+2099|Você foi convidado.
+2100|Você fez história!
+2101|Você fez parte do time que levantou o troféu.
+2102|Falta em zona perigosa.
+2103|se posiciona na bola.
+2104|Obrigado, futebol.
+2105|Grato por tudo.
+2106|Agora começa um novo capítulo.
+2107|Bola no pé!
+2108|Puxe para trás e solte para chutar, ou toque num companheiro para passar.
+2109|Não passe para um companheiro além da linha do impedimento!
+2110|Os zagueiros estão chegando, seja rápido!
+2111|Bola dividida!
+2112|Toque rápido para chegar antes do adversário.
+2113|Olhe para o quadril dele, não para a bola.
+2114|Para onde o quadril virar, ele vai.
+2115|Olhe por cima do ombro antes de receber.
+2116|Um bom passe começa no primeiro toque.
+2117|Não segure demais a bola.
+2118|Passe e depois corra para o espaço.
+2119|Faça 10 embaixadinhas.
+2120|Toque quando a bola cair na zona verde.
+2121|Na próxima!
+2122|Você vira capitão depois de um jogo em que cumpre todas as metas.
+2123|Como capitão você arrasta os companheiros para a posição.
+2124|Por enquanto a estante está vazia.
+2125|Seu primeiro troféu vai brilhar aqui.
+2126|Você foi considerado culpado por apostas ilegais.
+2127|Você não pode jogar nenhuma partida durante a suspensão.
+2128|Novos itens são liberados conforme você fica mais velho.
+2129|Toque numa categoria para abrir ou fechar.
+2130|Que ansiedade boa.
+2131|Rumo ao título!
+2132|Pronto para uma nova aventura.
+2133|A camisa nova ficou boa em mim?
+2134|a torcida está dividida.
+2135|Fotos do novo ensaio.
+2136|Qual é a sua favorita?
+2137|O jornal local escreveu sobre seu desempenho com a manchete "a estrela brilhante da base".
+2138|Sua família emoldurou.
+2139|A zona verde é um desarme limpo, a amarela é falta.
+2140|Aperte no momento certo!
+2141|Contratação de peso!
+2142|Dificuldade:
+2143|ações sobrando.
+2144|Se você jogar a partida, elas serão perdidas.
+2145|convocação!
+2146|a carreira será apagada para sempre.
+2147|você pode mandar ele para qualquer lugar.
+2148|Toque para passar.
+2149|anos!
+2150|Veja na aba Vida.
+2151|Sua energia está baixa.
+2152|Seu desempenho cai e o risco de lesão aumenta.
+2153|VOCÊ FOI CONVOCADO PARA A SELEÇÃO!
+2154|O sub-19 está na Liga Europeia de Desenvolvimento nesta temporada!
+2155|Você vai enfrentar as melhores bases da Europa.
+2156|te deu uma aula particular na base.
+2157|chegou ao treino de pijama.
+2158|O técnico: "Pelo menos as cores combinavam com o clube".
+2159|O goleiro: "Reflexo".
+2160|está aberta.
+2161|Ainda sem ofertas; jogue bem e alguém pode bater na porta.
+2162|começou!
+2163|é nossa!
+2164|Somos os melhores da Europa.
+2165|Este troféu é para a nossa torcida.
+2166|Somos os melhores do continente.
+2167|O relógio inteligente dele disse "por favor, pare".
+2168|está gasta e não pode mais ser usada.
+2169|Você pode comprar um par novo na loja.
+2170|autografou a camisa e te deu de presente.
+2171|Moral +10
+2172|sofreu uma lesão leve.
+2173|Tropeçou no tapete tentando driblar o gato em casa.
+2174|conversou sobre tática com o técnico.
+2175|Vai receber mais a bola no segundo tempo.
+2176|O primeiro encontro foi ótimo.
+2177|A imprensa de fofoca já sabia.
+2178|Um desafio de corrida foi proposto.
+2179|O mundo do futebol celebra o casal feliz.
+2180|Vou dar tudo por esta camisa!
+2181|A explicação dele: "Os cadarços não eram nossos".
+2182|fechou.
+2183|As ofertas pendentes expiraram.
+2184|A braçadeira é sua.
+2185|Nos jogos você pode arrastar os companheiros para a posição.
+2186|Vou continuar merecendo esta braçadeira.
+2187|não conseguiu liberar.
+2188|fase de liga concluída.
+2189|A torcida quer ele na lista.
+2190|Enquanto isso a torcida preparou um chá.
+2191|Ele mostrou um amarelo "mentalmente".
+2192|O bandeirinha levantou a bandeira.
+2193|ficou muito impressionado com seu desempenho.
+2194|Várias bases te querem.
+2195|O árbitro: "Até eu acreditei".
+2196|Jogadores não podem apostar; a FIFA pode investigar e aplicar uma longa suspensão.
+2197|Seu primeiro jogo
+2198|Chegou a hora de encerrar sua carreira.
+2199|voltou a brilhar!
+2200|está cansando.
+2201|A precisão do chute está caindo.
+2202|Hoje tem jogo entre bairros e um olheiro está assistindo!
+2203|Este troféu é do país inteiro.
+2204|campeões!
+2205|A melhor base da Europa é nossa.
+2206|deu show!
+2207|Vou retribuir essa confiança em campo.
+2208|Este troféu é de todos nós.
+2209|O técnico derrotado: "O gramado estava escorregadio demais".
+2210|Os rivais têm medo de virar a página do calendário.
+2211|O empresário dele: "Meu telefone toca tanto que a bateria não aguenta".
+2212|Você foi convidado!
+2213|Faça a camisa suar!"
+2214|Voltamos a conversar quando sua fase melhorar".
+2215|· Estrelas do adversário:
+2216|· Sua nota
+2217|· Estrela:
+2218|Trabalhamos e vencemos.
+2219|E ainda tem bônus por gol.
+2220|Uma escolinha gratuita para crianças.
+2221|Primeiro mostre seu futebol no jogo de rua.
+2222|Quando um olheiro te levar para uma base, seu time e sua liga aparecem aqui.
+2223|Segundo amarelo, CARTÃO VERMELHO!
+2224|foi expulso.
+2225|Assinei meu primeiro contrato profissional!
+2226|Os sonhos estão se realizando.
+2227|Quem é campeão?
+2228|Somos nós!
+2229|Sem ofertas por enquanto.
+2230|Jogando bem e com a fama crescendo, as marcas vão ligar.
+2231|Ao chutar, olhe para o canto vazio, não para o goleiro.
+2232|Coloque ali.
+2233|📋 Você está no time titular!
+2234|Você está no time titular!
+2235|está aberta!
+2236|clubes te querem.
+2237|🟥 Você levou vermelho.
+2238|Você levou vermelho.

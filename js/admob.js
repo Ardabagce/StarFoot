@@ -79,7 +79,7 @@
       if (!st.ready) await withTimeout(new Promise((r) => { const iv = setInterval(() => { if (st.ready) { clearInterval(iv); r(true); } }, 200); }), 6000);
       if (!st.canAds) return false;
       if (!st.rw) await withTimeout(prepRewarded(), 8000);
-      if (!st.rw) { if (typeof Game !== 'undefined') Game.toast(I18N.lang === 'en' ? 'No ad available right now. Try again later.' : 'Şu an reklam yok. Biraz sonra tekrar dene.', 'bad'); return false; }
+      if (!st.rw) { if (typeof Game !== 'undefined') Game.toast(I18N.t('Şu an reklam yok. Biraz sonra tekrar dene.'), 'bad'); return false; }
       st.rw = false;
       try {
         const item = await (rwi ? AdMob.showRewardInterstitialAd() : AdMob.showRewardVideoAd());

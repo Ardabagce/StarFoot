@@ -1,0 +1,2 @@
+3468|Força {} / Seu time {}
+3469|Adversário {}º

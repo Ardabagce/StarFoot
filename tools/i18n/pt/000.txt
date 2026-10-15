@@ -1,0 +1,300 @@
+0|Política de privacidade
+1|gol
+2|Mudar de liga
+3|livre
+4|ex.: Lucas
+5|ex.: Estrela
+6|Pontos de ação
+7|Foco do treino
+8|Intensidade
+9|Tipo de chute
+10|Apagar carreira
+11|VOCÊ
+12|INFO
+13|CARTA
+14|INT
+15|RETO
+16|LENTO
+17|RÁPIDO
+18|BOM
+19|DEPOIS
+20|PRÓXIMO
+21|EUA
+22|MARCA
+23|Título
+24|Peneira encerrada · Sua pontuação
+25|Fim de jogo · Sua nota
+26|disse "Sim!"
+27|A data do casamento foi marcada.
+28|Olheiros de vários clubes estão anotando tudo na arquibancada!
+29|Os goleiros sonham com ele nos pesadelos.
+30|Sua nota:
+31|Nossa Rua
+32|Rua de Trás
+33|Centro de Peneira
+34|Idioma
+35|Uma nova estrela pode estar nascendo.
+36|A postagem de despedida recebeu milhões de curtidas em pouco tempo.
+37|Artilheiro
+38|Primeira vez
+39|Final
+40|Play-offs
+41|Fase de liga
+42|PEN
+43|RUA
+44|TRÁ
+45|está te oferecendo um contrato profissional no time principal!
+46|Eleito o melhor em campo pela primeira vez
+47|Play-offs:
+48|restantes
+49|RESTANTES
+50|Destaque:
+51|km/h de vento
+52|km/h
+53|perdeu
+54|venceu
+55|Finais da Liga das Nações
+56|Uma vez por semana
+57|Opções de privacidade de anúncios
+58|Nenhum anúncio disponível agora. Tente mais tarde.
+59|Nenhum anúncio disponível agora.
+60|Tente mais tarde.
+61|publicações
+62|seguindo
+63|Notificações
+64|Nenhuma notificação ainda.
+65|Limpar
+66|Fechar
+67|Compre uma Sessão de Fisioterapia em Vida › Loja para reduzir sua lesão em 2 semanas.
+68|Uma Sessão de Fisioterapia reduz sua lesão em 2 semanas.
+69|Usado nesta temporada
+70|Modo carreira
+71|Nova
+72|Carreira
+73|Do futebol de rua à final da Copa do Mundo. Escreva sua história, chame a atenção dos olheiros e vire lenda.
+74|Do futebol de rua à final da Copa do Mundo.
+75|Escreva sua história, chame a atenção dos olheiros e vire lenda.
+76|Sua identidade
+77|O nome nas costas da sua camisa
+78|Suas raízes
+79|Se forem diferentes, as duas seleções podem te convocar
+80|Ponto de partida
+81|Pé preferido
+82|Sua posição
+83|Define quais atributos importam mais no treino
+84|Você pode mudar quando quiser na aba Carreira
+85|Seus atributos
+86|Marca gols e decide jogos com seus chutes.
+87|Comanda o jogo e brilha com passes e assistências.
+88|Lidera a defesa; desarma e domina o jogo aéreo.
+89|Anos 80: a era das lendas
+90|Anos 90: os anos dourados da Europa
+91|Anos 2000: a era das estrelas
+92|Anos 2010: o futebol moderno
+93|Jogue ao lado das estrelas de hoje
+94|pts
+95|Pé esquerdo
+96|Pé direito
+97|Iniciar carreira
+98|Esquerda
+99|Direita
+100|ATA
+101|MC
+102|Empate
+103|· se você avançar
+104|Os 8 primeiros vão às quartas · do 9º ao 16º são eliminados
+105|✈ DESEMBARQUE
+106|DESEMBARQUE
+107|POUSOU
+108|TORCEDORES
+109|estavam te esperando
+110|Recepção no aeroporto
+111|Para a assinatura
+112|Cerimônia de assinatura
+113|Transferência livre
+114|Assinar o contrato
+115|Começar no clube
+116|É OFICIAL!
+117|EFEITO
+118|◀ EFEITO
+119|EFEITO ▶
+120|Você errou!
+121|Assista a um anúncio para jogar este lance mais uma vez.
+122|Ver anúncio · Tentar de novo
+123|Continuar
+124|Uma vez por jogo
+125|Ver anúncio · Lesão −1 semana
+126|Uma vez por lesão
+127|Ver anúncio · +1 ponto de ação
+128|+1 ponto de ação
+129|Você se recuperou!
+130|StarFoot Premium
+131|Premium ativo
+132|Sem anúncios intersticiais · recompensas sem anúncios
+133|Compra única · vale para todas as suas carreiras
+134|Os anúncios intersticiais são removidos por completo
+135|Pacote de presente ×2/×3, +1 ponto de ação, energia, lesão −1 semana e recompensas de "tentar de novo"
+136|sem assistir anúncios
+137|Obter Premium
+138|Restaurar compras
+139|⭐ Premium ativo! Obrigado pelo apoio.
+140|Premium ativo! Obrigado pelo apoio.
+141|⭐ Premium ativo!
+142|Premium ativo!
+143|Obrigado pelo apoio.
+144|Não foi possível concluir a compra. Tente mais tarde.
+145|Não foi possível concluir a compra.
+146|⭐ Premium restaurado.
+147|Premium restaurado.
+148|Nenhuma compra Premium encontrada nesta conta.
+149|Falha ao restaurar. Verifique sua conexão com a internet.
+150|Falha ao restaurar.
+151|Verifique sua conexão com a internet.
+152|Jogue este lance mais uma vez com o Premium.
+153|⭐ Premium
+154|Distribuir automaticamente
+155|Redefinir
+156|Configurações
+157|Geral
+158|Jogabilidade
+159|Privacidade
+160|O jogo salva automaticamente toda semana
+161|Pausa rápida para hidratação, o jogo continua.
+162|StarFoot (web)
+163|(seu rival!)
+164|(rival)
+165|+1 atributo de foco
+166|+15 de moral
+167|Você tem 18 anos e é sua primeira temporada profissional num clube de meio de tabela. Todos esperam gols de você.
+168|Você tem 18 anos e é sua primeira temporada profissional num clube de meio de tabela.
+169|Todos esperam gols de você.
+170|Você tem 33 anos e esta pode ser sua última temporada no gigante da liga. Coroe sua carreira com um título.
+171|Você tem 33 anos e esta pode ser sua última temporada no gigante da liga.
+172|Coroe sua carreira com um título.
+173|Tire nota 7,5 ou mais
+174|BOLA DE OURO! Eleito o melhor do mundo. Isto é dos meus companheiros, da minha família e da nossa torcida.
+175|BOLA DE OURO!
+176|Eleito o melhor do mundo.
+177|Isto é dos meus companheiros, da minha família e da nossa torcida.
+178|Dê uma assistência
+179|Meus maiores jogos ainda estão por vir, eu sou assim.
+180|Sonho europeu
+181|Mais preciso em chutes de jogo aberto e de perto.
+182|Você volta de uma lesão grave, o técnico não confia em você e sua moral está baixa. Prove que todos estão errados.
+183|Você volta de uma lesão grave, o técnico não confia em você e sua moral está baixa.
+184|Prove que todos estão errados.
+185|A pressão nos deixa mais fortes.
+186|A pressão é deles, nós somos os favoritos.
+187|Coletiva de imprensa
+188|Você conseguiu! 🏅
+189|Você conseguiu!
+190|Começar
+191|Clássico belga
+192|Faça uma atividade (descanso, time, técnico, redes sociais)
+193|Vença um jogo
+194|Jogue uma partida
+195|Finalizador
+196|Nenhum espaço livre para carreira. Você pode apagar uma carreira no menu principal.
+197|Nenhum espaço livre para carreira.
+198|Você pode apagar uma carreira no menu principal.
+199|Sem espaço livre
+200|Eu vou decidir este clássico.
+201|Quero muito este troféu.
+202|A volta por cima
+203|Jogador de decisão
+204|Der Klassiker
+205|O que a torcida espera de você na semana do clássico?
+206|Cada lance fica um pouco mais fácil em clássicos e finais.
+207|Homem de ferro
+208|A muralha
+209|O melhor jogador do mundo
+210|Todos se perguntam se ele seguirá os passos do pai.
+211|El Clásico
+212|Claro, a diferença é enorme.
+213|Você sente a pressão no mata-mata?
+214|Pelo menos 20 jogos e média 7,0+
+215|Sim, hoje à noite vamos fazer história.
+216|Final · Coletiva de imprensa
+217|Como você se sente antes da final?
+218|Clássico francês
+219|Nas faltas o goleiro tem dificuldade para alcançar e seu chute é mais preciso.
+220|Não existe favorito no futebol.
+221|Clássico Old Firm
+222|Marque um gol
+223|Eles esperam gols, e eu vou marcar.
+224|Abra o baú de missões
+225|Imagem baixada.
+226|Recompensa diária
+227|Lembretes de recompensa diária e energia.
+228|Ameaça aérea
+229|Comece de uma situação pronta, bata a meta até o fim da temporada e ganhe o emblema.
+230|Você não bateu a meta, mas sua história não acabou. Continue sua carreira ou tente o cenário de novo.
+231|Você não bateu a meta, mas sua história não acabou.
+232|Continue sua carreira ou tente o cenário de novo.
+233|Todo jogo importa, passo a passo.
+234|Você é o capitão de um clube modesto que nunca jogou na Europa. A torcida só tem um sonho.
+235|Você é o capitão de um clube modesto que nunca jogou na Europa.
+236|A torcida só tem um sonho.
+237|Clássico holandês
+238|Duelo de gigantes holandês
+239|Clássico japonês
+240|Mais forte no jogo aéreo.
+241|Clássico do Mar Negro
+242|Gols na carreira
+243|Este é o maior jogo da sua carreira?
+244|Acreditamos em nós.
+245|Confiante
+246|Ninguém me para!
+247|Troféu
+248|A taça já é nossa, só vamos levantá-la.
+249|O salvador
+250|Clássico do norte de Londres
+251|Clássico do norte
+252|Você está no pódio:
+253|Clássico intercontinental
+254|Vença a liga
+255|Você chegou ao time mais fraco da liga como atacante estrela de 28 anos. Salve-o do rebaixamento.
+256|Você chegou ao time mais fraco da liga como atacante estrela de 28 anos.
+257|Salve-o do rebaixamento.
+258|Clássico de Lisboa
+259|Clássico de Londres
+260|Clássico de Los Angeles
+261|Clássico de Madri
+262|Clássico de Manchester
+263|Desarme 3 vezes nas partidas
+264|Chute 3 vezes no total nas partidas
+265|Clássico mexicano
+266|Clássico de Merseyside
+267|Desafios
+268|Clássico de Milão
+269|Incrível!
+270|Não foi desta vez...
+271|Vamos esmagá-los no campo deles!
+272|Armador
+273|Card do jogador
+274|Nome do jogador
+275|Clássico de Paris
+276|Melhor em passes e tabelas.
+277|Clássico paulista
+278|Compartilhar
+279|Mestre dos pênaltis
+280|Você vence os goleiros com facilidade na marca da cal.
+281|Clássico português
+282|Recorde quebrado
+283|Recorde!
+284|Esta história é de todos nós.
+285|Clássico de Riad
+286|Clássico de Roma
+287|Vamos conversar em campo, nós os respeitamos.
+288|35% menos risco de lesão.
+289|Calmo
+290|Estou calmo, focado no plano.
+291|O salão está vazio. Termine uma carreira com a aposentadoria para conquistar seu lugar aqui.
+292|O salão está vazio.
+293|Termine uma carreira com a aposentadoria para conquistar seu lugar aqui.
+294|Baú resgatado. Novas missões amanhã!
+295|Baú resgatado.
+296|Novas missões amanhã!
+297|Para começar um cenário, primeiro apague uma carreira no menu principal.
+298|Sua carreira continua.
+299|Sua sequência foi quebrada, recomeçando.

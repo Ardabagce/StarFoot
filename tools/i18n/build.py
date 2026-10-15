@@ -77,13 +77,50 @@ keep = sorted(k for k in exact if k in nameset)
 for k in keep: exact.pop(k)
 # Kısa anahtarların BÜYÜK HARF hali
 def up_tr(s): return s.replace('i', 'İ').replace('ı', 'I').upper()
-upper = {}
-for k, v in list(exact.items()):
-    if len(k) <= 40 and '{' not in k:
-        uk = up_tr(k)
-        if uk != k and uk not in exact: upper[uk] = v.upper()
-for k, v in upper.items(): exact.setdefault(k, v)
 plist = sorted(pats.items(), key=lambda kv: -len(re.sub(r'\{\}', '', kv[0])))
-out = '// Otomatik üretildi (tools/i18n/build.py): Türkçe → İngilizce sözlük\nconst LANG_EN = ' + json.dumps({'exact': exact, 'pats': plist}, ensure_ascii=False, separators=(',', ':')) + ';\n'
-open(ROOT + 'js/lang-en.js', 'w').write(out)
-print(len(exact), 'exact', len(plist), 'patterns', nclub, 'clubs', len(keep), 'name-collisions', keep[:30], len(out)//1024, 'KB')
+
+# İngilizce kaynak listesi: diğer diller İngilizceden çevrilir (src_en.json sırası sabittir, yeni metin sona eklenir)
+SRC = D + 'src_en.json'
+src = json.load(open(SRC)) if os.path.exists(SRC) else []
+seen = set(src)
+for v in list(exact.values()) + [v for _, v in plist]:
+    if v not in seen: src.append(v); seen.add(v)
+json.dump(src, open(SRC, 'w'), ensure_ascii=False, indent=0)
+
+PH = re.compile(r'\{\d*\}')
+def load_lang(code):
+    # tools/i18n/<dil>/*.txt satırları: "sıra|çeviri" (sıra = src_en.json içindeki yeri)
+    m, bad = {}, 0
+    d = D + code + '/'
+    if not os.path.isdir(d): return m, bad
+    for f in sorted(os.listdir(d)):
+        if not f.endswith('.txt'): continue
+        for line in open(d + f, encoding='utf-8'):
+            line = line.rstrip('\n')
+            if '|' not in line: continue
+            i, t = line.split('|', 1)
+            if not i.strip().isdigit(): continue
+            i = int(i)
+            if i >= len(src): continue
+            en = src[i]
+            # yer tutucular birebir korunmalı; bozuksa İngilizce kalır
+            if sorted(PH.findall(en)) != sorted(PH.findall(t)) or not t.strip(): bad += 1; continue
+            m[en] = t.strip()
+    return m, bad
+
+LANGS = ['en', 'es', 'pt', 'de', 'fr', 'it', 'id']
+for code in LANGS:
+    T, bad = ({}, 0) if code == 'en' else load_lang(code)
+    tr_ = (lambda v: v) if code == 'en' else (lambda v: T.get(v, v))
+    ex = {k: tr_(v) for k, v in exact.items()}
+    for k, v in list(exact.items()):
+        if len(k) <= 40 and '{' not in k:
+            uk = up_tr(k)
+            if uk != k and uk not in ex: ex[uk] = tr_(v).upper()
+    pl = [(k, tr_(v)) for k, v in plist]
+    var = 'LANG_' + code.upper()
+    out = f'// Otomatik üretildi (tools/i18n/build.py): Türkçe → {code} sözlük\nvar {var} = ' + json.dumps({'exact': ex, 'pats': pl}, ensure_ascii=False, separators=(',', ':')) + f';\n(window.LANGS = window.LANGS || {{}}).{code} = {var};\n'
+    open(ROOT + f'js/lang-{code}.js', 'w').write(out)
+    done = sum(1 for v in src if v in T)
+    print(code, len(ex), 'exact', len(pl), 'patterns', f'{done}/{len(src)} çevrildi' if code != 'en' else '', f'{bad} bozuk' if bad else '', len(out)//1024, 'KB')
+print(nclub, 'clubs', len(keep), 'name-collisions', keep[:30])

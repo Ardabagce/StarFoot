@@ -1,29 +1,52 @@
-// Dil desteği: oyun metinleri Türkçe yazılır, İngilizce seçiliyse ekrana çıkarken çevrilir.
+// Dil desteği: oyun metinleri Türkçe yazılır, başka dil seçiliyse ekrana çıkarken çevrilir.
 // Kayıtlar ve oyun mantığı Türkçe kalır; yalnız görünen metin (DOM, canvas, başlıklar) değişir.
 const I18N = {
   lang: 'tr',
+  // Desteklenen diller: Türkçe asıl metin, diğerleri js/lang-<kod>.js sözlüğüyle çevrilir
+  LANGS: { tr: 'Türkçe', en: 'English', es: 'Español', pt: 'Português', de: 'Deutsch', fr: 'Français', it: 'Italiano', id: 'Bahasa Indonesia' },
   memo: new Map(),
   outs: new Set(),
   rev: new Map(),
-  init() {
+  dict() { return (window.LANGS || {})[I18N.lang]; },
+  // Kayıtlı seçim yoksa telefonun dili; desteklenmeyen dillerde İngilizce
+  pick() {
     let l = null;
     try { l = localStorage.getItem('starfoot_lang'); } catch (e) { /* yok */ }
-    // Seçim yoksa telefonun dili: Türkçe cihazda Türkçe, diğer tüm dillerde İngilizce
-    if (!l) l = I18N.deviceLang();
-    I18N.lang = l === 'en' && typeof LANG_EN !== 'undefined' ? 'en' : 'tr';
-    document.documentElement.lang = I18N.lang;
-    if (I18N.lang === 'en') I18N.enable();
+    return l && I18N.LANGS[l] ? l : I18N.deviceLang();
   },
+  init() {
+    const l = I18N.pick();
+    if (l === 'tr' || (window.LANGS && window.LANGS[l])) return I18N.boot(l);
+    // sözlük henüz yüklenmedi: sayfa ayrıştırılırken eşzamanlı yükle, ardından başlat
+    if (document.readyState === 'loading') {
+      document.write(`<script src="js/lang-${l}.js"><\/script><script>I18N.boot(${JSON.stringify(l)})<\/script>`);
+    } else I18N.load(l).then(() => I18N.boot(l), () => I18N.boot('en'));
+  },
+  boot(l) {
+    I18N.lang = l !== 'tr' && window.LANGS && window.LANGS[l] ? l : (l !== 'tr' && window.LANGS && window.LANGS.en ? 'en' : 'tr');
+    document.documentElement.lang = I18N.lang;
+    if (I18N.lang !== 'tr') I18N.enable();
+  },
+  load(l) {
+    if (window.LANGS && window.LANGS[l]) return Promise.resolve();
+    return new Promise((res, rej) => { const sc = document.createElement('script'); sc.src = `js/lang-${l}.js`; sc.onload = res; sc.onerror = rej; document.head.appendChild(sc); });
+  },
+  // dile göre varsayılan oyuncu adı ve ülke (senaryolar, kariyer oluşturma)
+  defName() { return { tr: ['Emre', 'Yıldız'], en: ['Alex', 'Stone'], es: ['Diego', 'Romero'], pt: ['Lucas', 'Silva'], de: ['Lukas', 'Becker'], fr: ['Hugo', 'Martin'], it: ['Marco', 'Rossi'], id: ['Rizky', 'Pratama'] }[I18N.lang] || ['Alex', 'Stone']; },
+  home() { return { tr: 'TUR', en: 'ENG', es: 'ESP', pt: 'BRA', de: 'GER', fr: 'FRA', it: 'ITA', id: 'ENG' }[I18N.lang] || 'ENG'; },
   deviceLang() {
     const list = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || '']).filter(Boolean);
-    return /^tr\b/i.test(list[0] || '') ? 'tr' : 'en';
+    for (const x of list) { const c = String(x).slice(0, 2).toLowerCase(); if (I18N.LANGS[c]) return c; if (c === 'in') return 'id'; }
+    return 'en';
   },
-  // Sözlüğü, canvas yamasını ve gözlemciyi bir kez kurar; sonra sayfadaki metni çevirir
+  // Sözlüğü, canvas yamasını ve gözlemciyi kurar (dil değişince sözlük yenilenir); sonra sayfadaki metni çevirir
   enable() {
-    if (!I18N.ready) {
-      I18N.ready = true;
-      I18N.exact = new Map(Object.entries(LANG_EN.exact));
-      I18N.pats = LANG_EN.pats.map(([k, v]) => {
+    const D = I18N.dict();
+    if (I18N.built !== I18N.lang) {
+      I18N.built = I18N.lang;
+      I18N.memo.clear(); I18N.outs.clear();
+      I18N.exact = new Map(Object.entries(D.exact));
+      I18N.pats = D.pats.map(([k, v]) => {
         const lits = k.split('{}');
         // "{}-{}" skor kalıbı: iki tarafı da sayı
         const re = new RegExp('^' + lits.map((s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('(.+?)').replace(/\(\.\+\?\)-\(\.\+\?\)/g, '(\\d+)-(\\d+)') + '$', 's');
@@ -39,6 +62,9 @@ const I18N = {
       });
       I18N.tails.sort((a, b) => b.length - a.length);
       I18N.heads.sort((a, b) => b.length - a.length);
+    }
+    if (!I18N.ready) {
+      I18N.ready = true;
       I18N.patchCanvas();
       const watch = () => new MutationObserver(I18N.onMut).observe(document.body, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: ['title', 'aria-label', 'placeholder'] });
       if (document.body) watch(); else document.addEventListener('DOMContentLoaded', watch);
@@ -48,13 +74,20 @@ const I18N = {
   },
   // Sayfayı yenilemeden dil değiştirir (iOS uygulamasında yenileme sorun çıkarıyordu)
   set(l) {
+    if (!I18N.LANGS[l]) l = 'en';
     try { localStorage.setItem('starfoot_lang', l); } catch (e) { /* yok */ }
-    if (l === I18N.lang) return;
-    if (l === 'en' && typeof LANG_EN !== 'undefined') { I18N.lang = 'en'; I18N.enable(); } else { I18N.lang = 'tr'; I18N.restore(document.body); }
-    document.documentElement.lang = I18N.lang;
-    if (typeof I18N.onChange === 'function') I18N.onChange(I18N.lang);
+    if (l === I18N.lang) return Promise.resolve();
+    // önce sayfadaki çevrilmiş metinleri Türkçe asıllarına döndür
+    // gözlemci, sözlük yüklenirken eski dile geri çevirmesin diye geçici olarak Türkçeye dön
+    if (I18N.lang !== 'tr') { I18N.restore(document.body); I18N.lang = 'tr'; }
+    const done = () => {
+      document.documentElement.lang = I18N.lang;
+      if (typeof I18N.onChange === 'function') I18N.onChange(I18N.lang);
+    };
+    if (l === 'tr') { I18N.lang = 'tr'; done(); return Promise.resolve(); }
+    return I18N.load(l).then(() => { I18N.lang = l; I18N.enable(); done(); }, () => { I18N.lang = 'en'; I18N.enable(); done(); });
   },
-  // İngilizceye çevrilmiş metinleri Türkçe asıllarına döndürür
+  // Çevrilmiş metinleri Türkçe asıllarına döndürür
   restore(root) {
     if (!root) return;
     const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT | NodeFilter.SHOW_ELEMENT);
@@ -66,7 +99,7 @@ const I18N = {
   },
   // Tek bir metni çevirir (önce birebir, sonra kalıp, sonra parçalara bölerek)
   t(s) {
-    if (I18N.lang !== 'en' || s == null) return s;
+    if (I18N.lang === 'tr' || s == null) return s;
     s = String(s);
     if (!s || I18N.outs.has(s)) return s;
     const hit = I18N.memo.get(s);
@@ -163,6 +196,7 @@ const I18N = {
   },
   // 1th → 1st, 2th → 2nd …
   ord(s) {
+    if (I18N.lang !== 'en') return s;
     return s.replace(/\b(\d+)th\b/g, (_, n) => {
       const v = +n % 100, e = +n % 10;
       return n + (v >= 11 && v <= 13 ? 'th' : e === 1 ? 'st' : e === 2 ? 'nd' : e === 3 ? 'rd' : 'th');
@@ -185,7 +219,7 @@ const I18N = {
     }
   },
   apply(root) {
-    if (I18N.lang !== 'en' || !root) return;
+    if (I18N.lang === 'tr' || !root) return;
     if (root.nodeType === 3) return I18N.node(root);
     if (root.nodeType !== 1 && root.nodeType !== 11) return;
     if (root.nodeType === 1) { if (I18N.skip(root)) return; I18N.attrs(root); }
@@ -197,7 +231,7 @@ const I18N = {
     }
   },
   onMut(list) {
-    if (I18N.lang !== 'en') return;
+    if (I18N.lang === 'tr') return;
     for (const m of list) {
       if (m.type === 'characterData') I18N.node(m.target);
       else if (m.type === 'attributes') I18N.attrs(m.target);

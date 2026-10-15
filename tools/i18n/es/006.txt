@@ -1,0 +1,189 @@
+2050|Crupier
+2051|Acércate a 21 más que la banca.
+2052|El blackjack paga 3:2 y la banca se planta en 17.
+2053|También te llamó aparte.
+2054|Lamin Yamel marcó un hat-trick después de terminar los deberes.
+2055|Su profesor le subió la nota.
+2056|Lionel Mezzi promedia 4 regates por partido esta temporada.
+2057|Las defensas rivales comparten psicólogo.
+2058|PARTIDO EN LA CALLE · Un ojeador mira desde la banda.
+2059|¡Juega bien y te llevará a una cantera!
+2060|La afición no está contenta.
+2061|Había un ojeador en la banda...
+2062|¡Saliste en los titulares!
+2063|A la afición le encantó, pero el entrenador no está contento.
+2064|Final ·
+2065|Prima del partido:
+2066|El premio al jugador del partido es de mi equipo.
+2067|Más fuertes juntos.
+2068|¡Jugaste de maravilla!
+2069|El ojeador llamó por teléfono enseguida; las canteras de grandes clubes te quieren.
+2070|Un ejercicio según tu atributo de enfoque.
+2071|Juega bien y el progreso sube hasta ×1,5.
+2072|¡Semana de exámenes en el colegio!
+2073|Tu familia quiere que estudies esta semana.
+2074|¡Entras al campo!
+2075|El entrenador confía en ti.
+2076|Estás en el punto de penalti.
+2077|¡Tira atrás, apunta a una esquina y suelta!
+2078|¡Tu actuación llamó la atención!
+2079|Las canteras de clubes más grandes te quieren.
+2080|Aguantaste el ritmo de los profesionales.
+2081|¡Superaste a tu marcador, mano a mano con el portero!
+2082|Tira atrás, apunta a una esquina y suelta.
+2083|El delantero viene con el balón.
+2084|Toca cuando el anillo se ponga verde; amarillo es falta.
+2085|¡Viene a por ti!
+2086|En cuanto se incline hacia un lado, arrastra el balón al otro (toca o desliza izquierda/derecha).
+2087|Los defensas van a por ti.
+2088|En cuanto se lancen, arrastra el balón al otro lado (toca o desliza izquierda/derecha).
+2089|Número
+2090|Tú ·
+2091|¡Hora de celebrar!
+2092|Toca para saltar.
+2093|¡Fuiste la estrella de las pruebas!
+2094|Ojeadores de grandes clubes hicieron cola para ficharte.
+2095|¡Nada como el fútbol de la calle!
+2096|¡Tu contrato ha terminado!
+2097|Tienes que firmar uno nuevo.
+2098|Puedes estudiar las ofertas.
+2099|Estás invitado.
+2100|¡Hiciste historia!
+2101|Formaste parte del equipo que levantó el trofeo.
+2102|Falta en zona peligrosa.
+2103|se coloca ante el balón.
+2104|Gracias, fútbol.
+2105|Agradecido por todo.
+2106|Ahora empieza un nuevo capítulo.
+2107|¡Balón en los pies!
+2108|Tira atrás y suelta para disparar, o toca a un compañero para pasar.
+2109|¡No pases a un compañero más allá de la línea del fuera de juego!
+2110|Los defensas se acercan, ¡sé rápido!
+2111|¡Balón suelto!
+2112|Toca rápido para llegar antes que tu rival.
+2113|Mira sus caderas, no el balón.
+2114|Hacia donde giren las caderas, irá él.
+2115|Mira por encima del hombro antes de recibir.
+2116|Un buen pase empieza con el primer control.
+2117|No retengas el balón demasiado.
+2118|Pasa y luego busca el espacio.
+2119|Da 10 toques sin que caiga el balón.
+2120|Toca cuando caiga en la zona verde.
+2121|¡La próxima vez!
+2122|Te conviertes en capitán tras un partido en el que cumples todos los objetivos.
+2123|Como capitán arrastras a tus compañeros a su posición.
+2124|De momento la vitrina está vacía.
+2125|Tu primer trofeo brillará aquí.
+2126|Te declararon culpable de apuestas ilegales.
+2127|No puedes jugar ningún partido durante la sanción.
+2128|Se desbloquean objetos nuevos a medida que creces.
+2129|Toca una categoría para abrirla o cerrarla.
+2130|Qué emoción.
+2131|¡A por el título!
+2132|Listo para una nueva aventura.
+2133|¿Me queda bien la nueva camiseta?
+2134|la afición está dividida.
+2135|Fotos de la nueva sesión.
+2136|¿Cuál es tu favorita?
+2137|El periódico local escribió sobre tu actuación con el titular "la estrella brillante de la cantera".
+2138|Tu familia lo enmarcó.
+2139|La zona verde es una entrada limpia y la amarilla, falta.
+2140|¡Pulsa en el momento justo!
+2141|¡Fichaje estrella!
+2142|Dificultad:
+2143|acciones sin usar.
+2144|Si juegas el partido, se perderán.
+2145|¡convocatoria!
+2146|la carrera se borrará para siempre.
+2147|puedes mandarlo a cualquier sitio.
+2148|Toca para pasar.
+2149|¡años!
+2150|Míralo en la pestaña Vida.
+2151|Tienes poca energía.
+2152|Tu rendimiento baja y aumenta el riesgo de lesión.
+2153|¡TE HAN CONVOCADO CON LA SELECCIÓN!
+2154|¡El sub-19 juega la Liga Europea de Desarrollo esta temporada!
+2155|Te enfrentarás a las mejores canteras de Europa.
+2156|te dio una clase particular en la cantera.
+2157|llegó al entrenamiento en pijama.
+2158|El entrenador: "Al menos los colores combinaban con el club".
+2159|El portero: "Reflejos".
+2160|está abierto.
+2161|Aún no hay ofertas; juega bien y alguien llamará a tu puerta.
+2162|¡ha comenzado!
+2163|¡es nuestra!
+2164|Somos los mejores de Europa.
+2165|Este trofeo es para nuestra afición.
+2166|Somos los mejores del continente.
+2167|Su reloj inteligente le dijo "por favor, para".
+2168|está desgastado y ya no se puede usar.
+2169|Puedes comprar un par nuevo en la tienda.
+2170|firmó su camiseta y te la regaló.
+2171|Moral +10
+2172|sufrió una lesión leve.
+2173|Tropezó con la alfombra intentando regatear a su gato en casa.
+2174|habló de táctica con el entrenador.
+2175|Tendrá más balón en la segunda parte.
+2176|La primera cita fue genial.
+2177|La prensa rosa ya lo sabía.
+2178|Se ha propuesto una carrera.
+2179|El mundo del fútbol celebra a la feliz pareja.
+2180|¡Lo daré todo por esta camiseta!
+2181|Su explicación: "Los cordones no eran nuestros".
+2182|se ha cerrado.
+2183|Las ofertas pendientes caducaron.
+2184|El brazalete es tuyo.
+2185|En los partidos puedes arrastrar a tus compañeros a su posición.
+2186|Seguiré ganándome este brazalete.
+2187|no pudo desbloquearlo.
+2188|fase de liga completada.
+2189|La afición lo quiere en la convocatoria.
+2190|Mientras tanto la afición preparó té.
+2191|Sacó una amarilla "mentalmente".
+2192|El juez de línea levantó la bandera.
+2193|quedó muy impresionado con tu actuación.
+2194|Varias canteras te quieren.
+2195|El árbitro: "Hasta yo me lo creí".
+2196|Los futbolistas no pueden apostar; la FIFA puede investigar e imponer una larga sanción.
+2197|Tu primer partido
+2198|Ha llegado la hora de terminar tu carrera.
+2199|¡otra vez a tope!
+2200|se está cansando.
+2201|La precisión del tiro baja.
+2202|¡Hoy hay un partido entre barrios y un ojeador está mirando!
+2203|Este trofeo es de todo el país.
+2204|¡campeones!
+2205|La mejor cantera de Europa es nuestra.
+2206|¡dio un espectáculo!
+2207|Devolveré esta confianza en el campo.
+2208|Este trofeo es de todos nosotros.
+2209|El entrenador perdedor: "El césped estaba demasiado resbaladizo".
+2210|Los rivales tienen miedo de pasar la página del calendario.
+2211|Su agente: "Me suena tanto el teléfono que la batería no aguanta".
+2212|¡Estás invitado!
+2213|¡Haz sudar la camiseta!"
+2214|Volveremos a hablar cuando mejore tu forma".
+2215|· Estrellas del rival:
+2216|· Tu valoración
+2217|· Estrella:
+2218|Trabajamos y ganamos.
+2219|Y encima, prima por gol.
+2220|Una escuela gratuita para niños.
+2221|Primero demuestra lo que vales en el partido de la calle.
+2222|Cuando un ojeador te lleve a una cantera, tu equipo y tu liga aparecerán aquí.
+2223|¡Segunda amarilla, TARJETA ROJA!
+2224|es expulsado.
+2225|¡Firmé mi primer contrato profesional!
+2226|Los sueños se cumplen.
+2227|¿Quiénes son los campeones?
+2228|¡Nosotros!
+2229|Por ahora no hay ofertas.
+2230|Si juegas bien y crece tu fama, las marcas llamarán.
+2231|Al disparar, mira la esquina libre, no al portero.
+2232|Colócala ahí.
+2233|📋 ¡Estás en el once inicial!
+2234|¡Estás en el once inicial!
+2235|¡está abierto!
+2236|clubes te quieren.
+2237|🟥 Te sacaron la roja.
+2238|Te sacaron la roja.

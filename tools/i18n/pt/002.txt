@@ -1,0 +1,350 @@
+650|BUNDESLIGA
+651|Terra natal do seu pai
+652|Terra natal do seu pai:
+653|Seu pai ficou um pouco magoado.
+654|Seu pai quer ver seu jogo da arquibancada esta semana.
+655|Seu pai vai assistir orgulhoso da arquibancada!
+656|Vocês assistiram juntos aos jogos antigos do seu pai.
+657|Fazer a aposta
+658|Gol do quintal
+659|Saldo
+660|Seu saldo
+661|Segure
+662|Segure para carregar a força; solte na faixa verde para empurrar o adversário.
+663|Segure: acelerar
+664|Segure para acelerar, solte para desacelerar. Mantenha o ponteiro de velocidade na faixa verde por 12 segundos.
+665|Vocês vão treinar juntos outro dia.
+666|Idade inicial
+667|Ano inicial
+668|Vamos!
+669|Quem sabe da próxima vez.
+670|Bélgica
+671|Copa da Bélgica
+672|Eu falei isso há séculos
+673|Também comprei um
+674|Me leva pro treino também
+675|Nutrição
+676|Fut 5
+677|Arruma um ingresso pra ele
+678|Escolha um cavalo; se ele vencer, paga a cotação.
+679|Você descansou um dia e a dor passou. (1 ação usada)
+680|Você tirou nota 10 num jogo
+681|Você deu 3 assistências num jogo
+682|Você marcou 3 gols num jogo
+683|Você marcou 4 gols num jogo
+684|4 participações em gols num jogo (gols + assistências)
+685|Você marcou 5 gols num jogo
+686|Você tirou nota 9,0 num jogo
+687|Você ganhou a Chuteira de Ouro de uma temporada
+688|Escolha uma aposta e gire a roleta.
+689|Você focou no próximo jogo.
+690|Um jornalista esportivo quer te entrevistar.
+691|Bora dar uma volta?
+692|Uma ONG te convida para um festival de futebol infantil.
+693|Bicicleta
+694|Treino de finalização
+695|Energia infinita
+696|Blackjack, roleta, corrida de cavalos
+697|Liquidificador e proteína
+698|Valor da transferência
+699|Quanto custou a transferência?
+700|Príncipe da estepe
+701|Livre
+702|Espaço
+703|Brasil
+704|Copa do Brasil
+705|Liga brasileira
+706|Premier League Britânica
+707|Championship Britânica
+708|Bruxelas
+709|Este carro custa mais que meu salário
+710|Isso é só o começo
+711|Este gol é para a nossa família.
+712|É aniversário da sua mãe esta semana. O que você vai fazer?
+713|Você já conversou com o técnico esta semana.
+714|Você não tem mais ações esta semana.
+715|Você não tem mais ações esta semana. Vá jogar a partida!
+716|Você não conheceu ninguém esta semana. Quem sabe da próxima vez.
+717|Conversou esta semana
+718|Não usado esta semana
+719|Esta semana não
+720|Isso não pode ser desfeito.
+721|Você já apostou neste jogo.
+722|Você não jogou esta partida.
+723|Esta selfie ganha jogos
+724|Nenhuma copa nesta temporada.
+725|Nenhum troféu nesta temporada. Vamos encher a estante na próxima!
+726|Você já fez seu pedido nesta temporada. Tente de novo na próxima.
+727|Esse moleque vai ser o próximo Mezzi
+728|Nunca treino sem isso! #publi
+729|Mais um dia de trabalho. Grandes metas!
+730|Hoje só tinha um homem em campo
+731|Estou cansado hoje
+732|O treino de hoje vai ser debaixo de chuva forte.
+733|Você já usou isso nesta temporada.
+734|Sua torção no tornozelo piorou,
+735|Banho de gelo
+736|Bola de gelo
+737|Azul-gelo com chamas
+738|Você não pode jogar até o fim da suspensão.
+739|3 chutes na área. Puxe para trás e solte, mire nos cantos.
+740|Cristiano Ronalda postou um novo vídeo de treino. Dizem que o tanquinho dele vai ganhar conta própria.
+741|Ficar com a carteira
+742|Chuteiras infantis de velcro
+743|LIGA DAS TERRAS ALTAS
+744|VOCÊ PERDEU O EQUILÍBRIO
+745|FORA
+746|CONTINUE!
+747|Ver menos
+748|Melhor
+749|Em espaços curtos, coloque o corpo entre a bola e o adversário.
+750|Você não compareceu.
+751|Resistência
+752|Melhora Resistência e Força (uma vez por temporada)
+753|Liga das Terras Altas
+754|Seu avô mandou uma mesada pelo seu sucesso no futebol!
+755|Zagueiro
+756|Comece a corrida nas costas da defesa um segundo antes do passe.
+757|Uma experiência de carreira equilibrada.
+758|Mansão com vista para o mar
+759|Bola de couro
+760|Os detalhes fazem a diferença. #patrocinado
+761|Intervalo
+762|Atenção:
+763|Ouvir com atenção e aplicar
+764|Descansar
+765|Preciso descansar
+766|Escolher descansar
+767|Você acordou descansado.
+768|Nutricionista
+769|Deslizar de joelhos
+770|Evolução natural:
+771|Feliz aniversário! Sua família e seus amigos fizeram uma festa surpresa.
+772|Líder nato
+773|Arquibancada
+774|Status
+775|Seu status
+776|COPA DO MUNDO
+777|CAIU!
+778|A camisa do maior astro da época. Moral +1 toda semana
+779|Mundo
+780|Copa do Mundo
+781|Você venceu a Copa do Mundo
+782|Estrela mundial
+783|Estrelas mundiais
+784|Campeão do mundo
+785|Sua honestidade virou notícia e a torcida te adorou.
+786|NA TRAVE!
+787|CEDO DEMAIS, A BOLA PASSOU
+788|VOCÊ PULOU CEDO DEMAIS
+789|CEDO DEMAIS!
+790|Você dividiu o campo com lendas!
+791|Bicicleta elétrica
+792|Patinete elétrico
+793|Bola de diamante
+794|Aposentar-se
+795|Tem certeza de que quer se aposentar?
+796|Tem certeza?
+797|Energia
+798|Energia +10, moral +10
+799|Energia +12, músculos renovados
+800|Energia +15, moral +6
+801|Energia +20, moral +3
+802|Energia +25
+803|Energético
+804|Energia insuficiente.
+805|Você poupou energia.
+806|Você poupa energia
+807|Você dormiu cedo, mas seus amigos ficaram um pouco chateados.
+808|Erling Halland revelou que come 14 ovos no café da manhã. As granjas criaram um turno da noite.
+809|Clube antigo triste, clube novo feliz
+810|A bola de couro costurada de antigamente
+811|Estúdio de música em casa
+812|Academia em casa
+813|Ficar em casa
+814|Você foi para casa; o técnico ficou um pouco decepcionado.
+815|Pedir em casamento
+816|Sua esposa
+817|Tabela de jogos
+818|Seus itens
+819|FALTA!
+820|FEDERAÇÃO
+821|Comitê Disciplinar da FIFA
+822|Você está suspenso pela FIFA e não pode jogar esta partida.
+823|Sua suspensão da FIFA acabou. Você pode voltar a campo.
+824|Investigação da FIFA em andamento
+825|LIGA FLAMENGA
+826|Controle do efeito e precisão do chute.
+827|Sua vantagem (sobre o 2º)
+828|Falta dentro da área! Pênalti!
+829|Isso seria falta
+830|C. da Federação
+831|Copa da Federação
+832|Noite de Copa da Federação
+833|Sessão de fisioterapia
+834|Liga Flamenga
+835|Não jogou
+836|Me dá sua camisa, mano
+837|Já comprei sua camisa
+838|Atacante
+839|As fotos receberam muitas curtidas
+840|Sua foto recebeu muitas curtidas.
+841|França
+842|Copa da França
+843|Liga francesa
+844|Gol de falta
+845|Coleção de livros de lendas do futebol
+846|Fundação Escola de Futebol
+847|Álbum de figurinhas de futebol
+848|Você persegue o sonho de virar jogador. Escolha o ano e a idade em que começa. Você não escolhe o clube: os olheiros te descobrem.
+849|Jogadores não podem apostar. Cada aposta chama a atenção da FIFA; apostar no seu próprio jogo é muito arriscado. Se for pego, você enfrenta uma longa suspensão, multa e perde os patrocinadores.
+850|O pulso do futebol · Do clube para o mundo
+851|Tênis de futsal
+852|Tempestade
+853|C. Sul-Americana
+854|GALATA TELECOM
+855|VITÓRIA
+856|LIGA DE DESENVOLVIMENTO
+857|PUXE E SOLTE: CHUTE
+858|PUXE E SOLTE: CHUTE · TOQUE: PASSE
+859|TARDE DEMAIS
+860|ATRASADO!
+861|VOCÊ PASSOU!
+862|GOL!
+863|GOOOL!
+864|Colete de desempenho GPS
+865|Liga Gaulesa 2
+866|Liga Gaulesa
+867|Bola Galáxia
+868|Azul meia-noite
+869|Estrela noturna
+870|Vida noturna
+871|A vida noturna é para maiores de 18.
+872|Vida noturna. Segunda-feira de volta ao treino!
+873|Amarelo que brilha nos jogos noturnos
+874|Próxima temporada
+875|Juvenil
+876|Jovem jogador
+877|Não precisa
+878|Voltar
+879|Você roubou a bola lá atrás. Toque num companheiro na frente para passar, ou puxe e solte para um lançamento.
+880|Contorne a barreira puxando para trás com curva, ou passe por cima com Meia altura.
+881|Liga Germânica 2
+882|Liga Germânica
+883|A bola de uma verdadeira estrela
+884|Superado
+885|Deixar pra lá
+886|Campeões anteriores
+887|Violão
+888|Usando
+889|Glasgow
+890|Gols
+891|Artilheiros
+892|Artilheiro:
+893|A máquina de gols está ligada
+894|Comemoração de gol escolhida
+895|Fiz meu gol e levamos os 3 pontos. Vamos para o próximo!
+896|Expatriado
+897|AMÉRICA DO SUL
+898|LIGA DO SOL
+899|Bola arco-íris
+900|Estou emocionado
+901|Nômade
+902|Em alta
+903|Copa Sul-Americana
+904|Você venceu a Copa Sul-Americana
+905|Liga do Sol
+906|Geórgia
+907|Força
+908|Força +2, Defesa +1
+909|ÓTIMO!
+910|PREPARADO...
+911|VOCÊ PASSOU POR TODOS!
+912|Chuteiras velocidade da luz
+913|Ações semanais
+914|Pronto para o jogo do fim de semana.
+915|Cesta de frutas semanal
+916|Recuperação semanal de energia (vale a melhor)
+917|Recuperação semanal de energia +11
+918|Recuperação semanal de energia +12
+919|Recuperação semanal de energia +14
+920|Recuperação semanal de energia +16
+921|Recuperação semanal de energia +20
+922|Recuperação semanal de energia +5
+923|Recuperação semanal de energia +7
+924|Recuperação semanal de energia +8
+925|Recuperação semanal de energia +9
+926|Salário semanal
+927|Você mereceu, mano
+928|Camuflado verde-cáqui
+929|Anel
+930|Que noite! Seu vínculo com os companheiros ficou mais forte.
+931|Tirar uma foto de lembrança
+932|Pule antes do adversário nas cabeçadas e use os braços para se equilibrar.
+933|Gire no ar e caia de braços abertos.
+934|Dê um mortal para trás e caia de pé.
+935|As bolas pelo alto são desviadas pelo vento.
+936|Comece a carreira de jogador dos seus sonhos. Vire lenda.
+937|Refeições prontas para atletas
+938|Estou pronto
+939|Pacote de presente
+940|Abrir os presentes
+941|Você ainda não é visto como pronto para o time principal. Prove-se por mais uma temporada no sub-19!
+942|Cedo demais
+943|Ainda sem gols.
+944|Ainda sem publicações.
+945|Ainda sem publicações. Marque um gol ou poste em "Redes sociais" no plano semanal.
+946|1 ação cada
+947|Toda semana
+948|Moral semanal (todos somam)
+949|Moral +1 toda semana
+950|Moral +1, Fama +1 toda semana
+951|Moral +1, Fama +2 toda semana
+952|Moral +1, Fama +3 toda semana
+953|Moral +1, Fama +4 toda semana
+954|Moral +2 toda semana
+955|Moral +2, Fama +5 toda semana
+956|Moral +2, Fama +6 toda semana
+957|Moral +2, Fama +7 toda semana
+958|Moral +3, Fama +12 toda semana
+959|Moral +3, Fama +8 toda semana
+960|Moral +4, Fama +18 toda semana
+961|Moral +5, Fama +25 toda semana
+962|Cada liga e torneio tem sua própria bola
+963|Cada gomo de uma cor
+964|Todo mundo te conhece
+965|Hobbies e diversão
+966|Técnico
+967|O técnico quer um trabalho extra com você depois do treino.
+968|Professor, escala ele em todo jogo
+969|Vínculo com o técnico 75
+970|O vínculo com o técnico sobe
+971|O técnico cruza do escanteio. Toque quando a bola chegar na sua cabeça; você mira mais ou menos onde está o alvo.
+972|O técnico decide pela sua fase, pela relação de vocês e por quem usa o número hoje. Números como 10, 9 e 7 são mais difíceis.
+973|Se seu vínculo com o técnico ou com o time cair abaixo de 40, você perde a braçadeira.
+974|O técnico gostou do seu aquecimento, você entra no segundo tempo!
+975|Falar com o técnico
+976|Com um bom vínculo com o técnico você é titular. Pouca energia piora seu desempenho.
+977|Conversar sobre tática com o técnico
+978|Sua relação com o técnico e o time desandou; você perdeu a braçadeira de capitão.
+979|Holanda
+980|Copa da Holanda
+981|Liga holandesa
+982|Pare o atacante. A zona verde é um desarme limpo.
+983|Croácia
+984|Velocidade
+985|Velocidade +3, Drible +2, Finalização +1
+986|Velocidade +4, Drible +3, Resistência +2
+987|Toque rápido
+988|A bola escorrega mais no gramado molhado e os chutes ficam um pouco menos precisos.
+989|Aquecer e chamar atenção
+990|Você aqueceu, mas o técnico ainda não pensa em mexer.
+991|Branco gelo brilhante
+992|Japão
+993|C. Norte-Americana
+994|GOL DE CABEÇA!
+995|O GOLEIRO DEFENDEU
+996|O GOLEIRO SEGUROU
+997|O GOLEIRO ESPALMOU
+998|VOCÊ É O CAPITÃO: SEGURE E ARRASTE UM COMPANHEIRO
+999|EAGLE INSURANCE

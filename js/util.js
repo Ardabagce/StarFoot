@@ -60,7 +60,7 @@ const U = {
   },
   money(n) {
     const code = U.cur(), C = U.CUR[code];
-    const en = typeof I18N !== 'undefined' && I18N.lang === 'en';
+    const en = typeof I18N !== 'undefined' && I18N.lang !== 'tr';
     const v = n * C.rate, abs = Math.abs(v);
     const dec = code !== 'TRY' && abs < 10 && abs > 0 ? 2 : 0;
     let s;

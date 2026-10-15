@@ -1,0 +1,350 @@
+1000|CONFERÊNCIA
+1001|ESCANTEIO!
+1002|CORRA!
+1003|AMÉRICA DO NORTE
+1004|Fones sem fio
+1005|Aceitar
+1006|Elenco
+1007|Fora da lista
+1008|Sua posição no elenco
+1009|Difícil entrar na lista
+1010|Cabeceio
+1011|Gol de cabeça
+1012|Treino de cabeceio
+1013|Aula particular de cabeceio
+1014|Melhora Cabeceio e Defesa (uma vez por temporada)
+1015|Não feche os olhos ao cabecear, acerte com o meio da testa.
+1016|Cabeçadas e bolas aéreas.
+1017|Ficar e treinar
+1018|Goleiro
+1019|O goleiro saiu e segurou a bola.
+1020|Goleiro e defesa ficam um pouco mais fáceis
+1021|Goleiros atentos, defesa dura, evolução lenta. Um desafio de verdade.
+1022|Goleiros e defesas mais fracos, ajuda de mira forte, evolução mais rápida no treino.
+1023|Os goleiros odeiam chutes rasteiros no canto.
+1024|Nosso goleiro pegou o pênalti!
+1025|Por cima do goleiro
+1026|Azar, goleiro
+1027|Engane o goleiro com o olhar antes de chutar.
+1028|Estilo de vida de qualidade. #publi
+1029|Coração
+1030|Flagrado pelas câmeras! A torcida ficou decepcionada.
+1031|Drone com câmera
+1032|Corra para a câmera, saúde a torcida.
+1033|Ir para a concentração
+1034|Bola camuflada
+1035|Capitão
+1036|Você é o capitão!
+1037|Rumo à braçadeira
+1038|Raio negro
+1039|Chuteiras Carbon Elite
+1040|A bola para rápido na neve. A bola laranja de inverno está em jogo.
+1041|Você jogou bola na rua com seu irmão.
+1042|Apagar a carreira?
+1043|Sua carreira vai terminar.
+1044|Ainda não há torneios internacionais na sua carreira.
+1045|Você marcou seu primeiro gol na carreira
+1046|Com neve
+1047|Pedir
+1048|Dar as cartas
+1049|Entrar
+1050|Não posso
+1051|O carrinho é o último recurso. Fique de pé, tenha paciência.
+1052|Num gramado escorregadio
+1053|Skate
+1054|Você incentivou o time do banco.
+1055|Seu próprio canal de podcast
+1056|Ouvir educadamente
+1057|Passe decisivo
+1058|Equipe de treino pessoal
+1059|Centro de alto rendimento pessoal
+1060|Chef particular
+1061|Clássica
+1062|Carro clássico de colecionador
+1063|Clássica: corra, abra os braços e abrace os companheiros.
+1064|Fácil
+1065|Braços para cima
+1066|Braços bem abertos, inclinando de um lado para o outro enquanto corre.
+1067|C. Conferência
+1068|Copa da Conferência
+1069|Noite de Copa da Conferência
+1070|Glória na Conferência
+1071|Kit de cones e estacas
+1072|Contra-ataque!
+1073|O adversário chegou antes na bola no contra-ataque.
+1074|Chuteiras de controle
+1075|Vocês conversaram e resolveram.
+1076|A defesa afastou o escanteio.
+1077|Escanteio! Toque quando a bola chegar na sua cabeça; você mira mais ou menos no alvo em movimento.
+1078|Bolas cosméticas
+1079|Copa do Rei
+1080|Rei!
+1081|Líderes
+1082|Chuteiras
+1083|Câmara de crioterapia
+1084|Chegue mais perto de 21 que a banca. Blackjack paga 3:2 e a banca para no 17.
+1085|Ficar no meu clube
+1086|O fisio do clube estudou seus movimentos e montou um plano de alongamento pessoal.
+1087|Clube
+1088|Chuteiras do clube
+1089|Força do clube
+1090|Cassino
+1091|O cassino é para maiores de 18.
+1092|Sair do cassino
+1093|Jogo de copa
+1094|Campeão da copa
+1095|Copas
+1096|Troféus e prêmios
+1097|Você ficou sóbrio, mas o técnico anotou.
+1098|Quase perfeito
+1099|Copa da América do Norte
+1100|Você venceu a Copa da América do Norte
+1101|Rei do norte
+1102|Dança na bandeirinha
+1103|Deslizando no gramado até a bandeirinha de escanteio.
+1104|Uma dança ao lado da bandeirinha de escanteio.
+1105|Rebaixamento
+1106|Fomos rebaixados
+1107|Vermelho
+1108|Cartão vermelho
+1109|Cartão vermelho: time e torcida chateados
+1110|Abra a defesa com passes curtos: toque no companheiro iluminado antes que o tempo acabe.
+1111|Rei do continente
+1112|Bola de inverno
+1113|Janela de transferências de inverno
+1114|LA LIGA
+1115|LIGA DAS TULIPAS
+1116|LALIGA 2
+1117|Azul-marinho com estrelas prateadas
+1118|Liga das Tulipas
+1119|Lamin Yamel fez hat-trick depois de terminar a lição de casa. O professor deu ponto extra.
+1120|Bola de lava
+1121|Distância para o líder
+1122|Liga
+1123|Bola da liga
+1124|Fase de liga
+1125|Seus jogos da fase de liga
+1126|Classificação da liga
+1127|Posição na liga
+1128|Bolas de liga em uso
+1129|Campeão da liga
+1130|Você foi eleito o jogador da temporada da liga
+1131|Ligas
+1132|Lionel Mezzi tem média de 4 dribles por jogo nesta temporada. As defesas rivais dividem um terapeuta.
+1133|Lisboa
+1134|Londres
+1135|SUV de luxo
+1136|Relógio de luxo
+1137|Iate de luxo
+1138|LIGUE 1
+1139|LIGUE 2
+1140|RUA
+1141|JOGO NA RUA · Um olheiro está assistindo da lateral. Jogue bem e ele te leva para uma base!
+1142|MELHOR EM CAMPO
+1143|DERROTA
+1144|Infelizmente a lesão piorou.
+1145|Salário
+1146|Fofoca
+1147|Bairro
+1148|Chuteiras de rua
+1149|Jogos na rua
+1150|Jogador de rua
+1151|Campinho de rua
+1152|A molecada está jogando no bairro e quer que você entre.
+1153|Jogo na rua · Um olheiro está assistindo
+1154|Você virou manchete! A torcida adorou, mas o técnico não gostou.
+1155|A marca escolheu o cara certo
+1156|Miami
+1157|Partida
+1158|Desempenho na partida
+1159|Dia de jogo
+1160|Energia cheia em todo dia de jogo!
+1161|Jogar partida
+1162|Ir para o jogo?
+1163|Quando chegam os lances decisivos o jogo pausa: coloque o dedo do lado oposto à bola
+1164|Na partida
+1165|Energia gasta em jogos e condicionamento.
+1166|Quando surge uma chance no jogo, para o seu companheiro
+1167|A bola que você usa em jogos e treinos
+1168|Melhor em campo
+1169|Melhor em campo
+1170|Melhor em campo
+1171|Não é o melhor em campo, é o rei do jogo
+1172|Quando você for eleito o melhor em campo, seu troféu estrela aparece aqui.
+1173|O prêmio de melhor em campo é do meu time. Mais fortes juntos.
+1174|Loja
+1175|México
+1176|Copa do México
+1177|Comissão do empresário
+1178|Um empresário fica com parte da sua renda; em troca traz mais ofertas de transferência, aumenta seu salário e arruma patrocinadores.
+1179|Coach mental
+1180|Início
+1181|Seu clube atual
+1182|Posição
+1183|Cidade do México
+1184|Milão
+1185|Camisa da seleção
+1186|Gol pela seleção
+1187|Seleção
+1188|Convocação para a seleção
+1189|Lenda da seleção
+1190|Convocação da seleção
+1191|Seleções
+1192|Por enquanto você deixa a convocação em espera.
+1193|Você jogou pela seleção
+1194|Torneio internacional
+1195|M
+1196|Espaço roxo e estrelas
+1197|Moral
+1198|Moral +10, energia -18 · risco de paparazzi
+1199|Moral +12
+1200|Moral +15
+1201|A moral também sobe
+1202|Moral e fama (todos somam)
+1203|Motivação lá em cima!
+1204|Moto
+1205|Você provavelmente será titular
+1206|Você provavelmente ficará no banco
+1207|Você jogou demais! O olheiro pegou o telefone na hora; as bases dos grandes clubes te querem.
+1208|DESARME!
+1209|TABELA PERFEITA!
+1210|PERFEITO!
+1211|10 perfeito
+1212|Sessão excelente
+1213|Munique
+1214|INTERNACIONAL
+1215|Egito
+1216|SENSACIONAL!
+1217|Bola neon
+1218|Por sorte o chute foi para fora.
+1219|Abrir normal (x1)
+1220|Evolução normal
+1221|Noruega
+1222|Bola de couro vintage
+1223|Nova Mobile
+1224|Você vai jogar com as estrelas daquela época
+1225|Ele é a estrela do time.
+1226|LINHA DO IMPEDIMENTO
+1227|IMPEDIMENTO!
+1228|Um treino baseado no seu atributo de foco. Jogue bem e a evolução vai até ×1,5.
+1229|Você focou no futebol.
+1230|Semana de provas na escola! Sua família quer que você estude esta semana.
+1231|Evento
+1232|Você agiu com maturidade e o técnico percebeu.
+1233|Ombro a ombro
+1234|Aprender algo com ele
+1235|Média
+1236|Nota média
+1237|Médio
+1238|Meio-campista
+1239|Sessão média
+1240|Jogar
+1241|Videogame
+1242|Você vai entrar! O técnico confia em você.
+1243|Jogador
+1244|Substituído
+1245|PASSE INTERCEPTADO
+1246|Você pode abrir o pacote agora ou ver um anúncio curto para
+1247|Cheiro de dinheiro
+1248|Você ficou sem dinheiro
+1249|Toque no companheiro iluminado
+1250|Passe
+1251|Passe +4, Técnica +4, Finalização +2
+1252|Parede de passe (rebote)
+1253|Mestre do passe
+1254|A troca de passes se desfez, mas a bola ainda é sua.
+1255|Treino de passe
+1256|Show de passes
+1257|Precisão e força do passe.
+1258|Poste algo e ganhe seguidores
+1259|Ver as publicações
+1260|Braçadeira
+1261|Raio rosa
+1262|Raios rosa e branco
+1263|Gol de pênalti
+1264|Você está na marca do pênalti. Puxe para trás, mire num canto e solte!
+1265|Gol da marca da cal.
+1266|Seu desempenho chamou atenção! As bases de clubes maiores te querem.
+1267|Valor de mercado
+1268|Polônia
+1269|Um programa esportivo popular quer você como convidado ao vivo.
+1270|Portugal
+1271|Taça de Portugal
+1272|Liga portuguesa
+1273|Chuteiras profissionais
+1274|Profissional
+1275|Ensaio fotográfico profissional
+1276|Você venceu um título de liga profissional
+1277|Perfil
+1278|Editar perfil
+1279|Compartilhar perfil
+1280|Ir ao programa
+1281|Você engavetou o plano.
+1282|Seguir o plano
+1283|Pontos
+1284|Jogou valendo pontos na liga
+1285|VOCÊ AFASTOU ELE!
+1286|DIRETO NOS PÉS DELE
+1287|O ADVERSÁRIO FOI MAIS RÁPIDO
+1288|ELE LEU SUA JOGADA
+1289|ELE PASSOU POR VOCÊ!
+1290|O ADVERSÁRIO GANHOU A BOLA
+1291|ANÚNCIO
+1292|Sucesso em passar por adversários.
+1293|Você passou pelo marcador, cara a cara com o goleiro! Puxe para trás, mire num canto e solte.
+1294|Chegue na bola antes do adversário: toque rápido.
+1295|O adversário para um lado
+1296|A defesa ainda está te procurando
+1297|O atacante vem com a bola. Toque quando o anel ficar verde; amarelo é falta.
+1298|Estudar o goleiro adversário
+1299|Ele vem para cima de você! Assim que ele cair para um lado, puxe a bola para o outro (toque ou deslize esquerda/direita).
+1300|Aleatório
+1301|Grande impulso em 3 atributos aleatórios (uma vez por temporada)
+1302|Recusar
+1303|É anúncio, mas combina com ele
+1304|Transferência recorde
+1305|Nota
+1306|Isso não é nota, é foguete
+1307|Riad
+1308|Seu papel
+1309|Jogador de rodízio
+1310|Roleta
+1311|Você recusou a entrevista.
+1312|Ventando
+1313|Filho do vento
+1314|LIGA DO SAMBA
+1315|O ZAGUEIRO CHEGOU PRIMEIRO
+1316|SERIE A
+1317|SERIE B
+1318|STARFOOT · ANATOLIA ENERGY · BOSPHORUS BANK ·
+1319|Corrida matinal feita.
+1320|Em campo
+1321|Devolver ao dono
+1322|Você não está lesionado, não precisa de fisio.
+1323|Você está lesionado e não pode jogar esta partida.
+1324|Você não pode treinar lesionado.
+1325|Não jogou por lesão
+1326|Tempo de lesão reduzido em 2 semanas
+1327|Você está totalmente recuperado
+1328|Você está lesionado, não pode jogar esta partida
+1329|Liga do Samba
+1330|Tem um presente para você!
+1331|Óculos de realidade virtual
+1332|Cartão amarelo
+1333|Defesa
+1334|Defesa +4, Força +2, Cabeceio +2
+1335|Chuteiras de zagueiro
+1336|Os zagueiros vêm para cima. Assim que eles se jogarem, puxe a bola para o outro lado (toque ou deslize esquerda/direita).
+1337|Por cima da defesa
+1338|Corte de cabelo lendário
+1339|Em forma
+1340|Saúde
+1341|Relatório do olheiro
+1342|Olheiros
+1343|Sua força
+1344|Sua carreira na seleção
+1345|Livre
+1346|Sequência de gols
+1347|Forte e rasteiro
+1348|Fortuna
+1349|Sua namorada

@@ -1,0 +1,300 @@
+0|Política de privacidad
+1|gol
+2|Cambiar liga
+3|libre
+4|p. ej. Diego
+5|p. ej. Estrella
+6|Puntos de acción
+7|Enfoque de entrenamiento
+8|Intensidad
+9|Tipo de tiro
+10|Borrar carrera
+11|TÚ
+12|INFO
+13|CARTA
+14|DESC
+15|RECTO
+16|LENTO
+17|RÁPIDO
+18|BUENO
+19|DESPUÉS
+20|SIGUIENTE
+21|EE. UU.
+22|MARCA
+23|Título
+24|Pruebas terminadas · Tu puntuación
+25|Partido terminado · Tu valoración
+26|dijo "¡Sí!"
+27|Ya hay fecha para la boda.
+28|¡Ojeadores de varios clubes toman notas en la grada!
+29|Los porteros sueñan con él en sus pesadillas.
+30|Tu valoración:
+31|Nuestra calle
+32|La calle de atrás
+33|Campus de pruebas
+34|Idioma
+35|Puede que esté naciendo una estrella.
+36|Su publicación de despedida recibió millones de "me gusta" en poco tiempo.
+37|Máximo goleador
+38|Primera vez
+39|Final
+40|Play-offs
+41|Fase de liga
+42|PRU
+43|CAL
+44|ATR
+45|te ofrece un contrato profesional con el primer equipo.
+46|Elegido jugador del partido por primera vez
+47|Play-offs:
+48|quedan
+49|QUEDAN
+50|Jugador estrella:
+51|km/h de viento
+52|km/h
+53|perdió
+54|ganó
+55|Finales de la Liga de Naciones
+56|Una vez por semana
+57|Opciones de privacidad de anuncios
+58|No hay anuncios ahora mismo. Inténtalo más tarde.
+59|No hay anuncios ahora mismo.
+60|Inténtalo más tarde.
+61|publicaciones
+62|siguiendo
+63|Notificaciones
+64|Aún no hay notificaciones.
+65|Borrar
+66|Cerrar
+67|Compra una sesión de fisioterapia en Vida › Tienda para reducir tu lesión 2 semanas.
+68|Una sesión de fisioterapia reduce tu lesión 2 semanas.
+69|Usado esta temporada
+70|Modo carrera
+71|Nueva
+72|Carrera
+73|Del fútbol callejero a la final del Mundial. Escribe tu historia, llama la atención de los ojeadores y conviértete en leyenda.
+74|Del fútbol callejero a la final del Mundial.
+75|Escribe tu historia, llama la atención de los ojeadores y conviértete en leyenda.
+76|Tu identidad
+77|El nombre en la espalda de tu camiseta
+78|Tus raíces
+79|Si son distintos, ambas selecciones pueden convocarte
+80|Punto de partida
+81|Pie dominante
+82|Tu posición
+83|Decide qué atributos importan más en el entrenamiento
+84|Puedes cambiarla cuando quieras en la pestaña Carrera
+85|Tus atributos
+86|Marca goles y decide partidos con sus disparos.
+87|Dirige el juego y brilla con pases y asistencias.
+88|Lidera la defensa; recupera balones y domina el juego aéreo.
+89|Los 80: la era de las leyendas
+90|Los 90: los años dorados de Europa
+91|Los 2000: la era de las estrellas
+92|Los 2010: el fútbol moderno
+93|Juega junto a las estrellas de hoy
+94|pts
+95|Pie izquierdo
+96|Pie derecho
+97|Empezar carrera
+98|Izquierda
+99|Derecha
+100|DC
+101|MC
+102|Empate
+103|· si te clasificas
+104|Los 8 primeros pasan a cuartos · del 9 al 16 quedan eliminados
+105|✈ LLEGADAS
+106|LLEGADAS
+107|ATERRIZÓ
+108|AFICIONADOS
+109|te estaban esperando
+110|Bienvenida en el aeropuerto
+111|A la firma
+112|Ceremonia de firma
+113|Traspaso libre
+114|Firmar el contrato
+115|Empezar en el club
+116|¡ES OFICIAL!
+117|EFECTO
+118|◀ EFECTO
+119|EFECTO ▶
+120|¡Fallaste!
+121|Mira un anuncio para repetir este momento una vez más.
+122|Ver anuncio · Reintentar
+123|Continuar
+124|Una vez por partido
+125|Ver anuncio · Lesión −1 semana
+126|Una vez por lesión
+127|Ver anuncio · +1 punto de acción
+128|+1 punto de acción
+129|¡Te has recuperado!
+130|StarFoot Premium
+131|Premium activo
+132|Sin anuncios intersticiales · recompensas sin anuncios
+133|Compra única · válida para todas tus carreras
+134|Los anuncios intersticiales desaparecen por completo
+135|Paquete regalo ×2/×3, +1 punto de acción, energía, lesión −1 semana y recompensas de "reintentar"
+136|sin ver anuncios
+137|Conseguir Premium
+138|Restaurar compras
+139|⭐ ¡Premium activo! Gracias por tu apoyo.
+140|¡Premium activo! Gracias por tu apoyo.
+141|⭐ ¡Premium activo!
+142|¡Premium activo!
+143|Gracias por tu apoyo.
+144|No se pudo completar la compra. Inténtalo más tarde.
+145|No se pudo completar la compra.
+146|⭐ Premium restaurado.
+147|Premium restaurado.
+148|No se encontró ninguna compra Premium en esta cuenta.
+149|Error al restaurar. Comprueba tu conexión a internet.
+150|Error al restaurar.
+151|Comprueba tu conexión a internet.
+152|Repite este momento una vez más con Premium.
+153|⭐ Premium
+154|Asignar automáticamente
+155|Restablecer
+156|Ajustes
+157|General
+158|Juego
+159|Privacidad
+160|El juego se guarda automáticamente cada semana
+161|Pausa rápida para hidratarse, el partido sigue.
+162|StarFoot (web)
+163|(¡tu rival!)
+164|(rival)
+165|+1 atributo de enfoque
+166|+15 de moral
+167|Tienes 18 años y es tu primera temporada profesional en un club de media tabla. Todos esperan goles de ti.
+168|Tienes 18 años y es tu primera temporada profesional en un club de media tabla.
+169|Todos esperan goles de ti.
+170|Tienes 33 años y esta puede ser tu última temporada en el gigante de la liga. Corona tu carrera con un título.
+171|Tienes 33 años y esta puede ser tu última temporada en el gigante de la liga.
+172|Corona tu carrera con un título.
+173|Consigue una valoración de 7,5 o más
+174|¡BALÓN DE ORO! Elegido el mejor del mundo. Esto es de mis compañeros, mi familia y nuestra afición.
+175|¡BALÓN DE ORO!
+176|Elegido el mejor del mundo.
+177|Esto es de mis compañeros, mi familia y nuestra afición.
+178|Da una asistencia
+179|Mis partidos más grandes aún están por llegar, así soy yo.
+180|Sueño europeo
+181|Más preciso en tiros en juego abierto y a corta distancia.
+182|Vuelves de una lesión grave, el entrenador no confía en ti y tu moral está por los suelos. Demuestra a todos que se equivocan.
+183|Vuelves de una lesión grave, el entrenador no confía en ti y tu moral está por los suelos.
+184|Demuestra a todos que se equivocan.
+185|La presión nos hace más fuertes.
+186|La presión es para ellos, somos los favoritos.
+187|Rueda de prensa
+188|¡Lo lograste! 🏅
+189|¡Lo lograste!
+190|Empezar
+191|Clásico belga
+192|Haz una actividad (descanso, equipo, entrenador, redes sociales)
+193|Gana un partido
+194|Juega un partido
+195|Definidor
+196|No hay hueco libre para carreras. Puedes borrar una carrera desde el menú principal.
+197|No hay hueco libre para carreras.
+198|Puedes borrar una carrera desde el menú principal.
+199|No hay hueco libre
+200|Este derbi lo decido yo.
+201|Quiero muchísimo este trofeo.
+202|El gran regreso
+203|Jugador de partidos grandes
+204|Der Klassiker
+205|¿Qué espera la afición de ti en la semana del derbi?
+206|Cada momento es un poco más fácil en derbis y finales.
+207|Hombre de hierro
+208|El muro
+209|El mejor futbolista del mundo
+210|Todos se preguntan si seguirá los pasos de su padre.
+211|El Clásico
+212|Por supuesto, la diferencia es enorme.
+213|¿Sientes la presión en la eliminatoria?
+214|Al menos 20 partidos y una media de 7,0+
+215|Sí, esta noche haremos historia.
+216|Final · Rueda de prensa
+217|¿Cómo te sientes antes de la final?
+218|Cumbre francesa
+219|En los tiros libres al portero le cuesta llegar y tu disparo es más preciso.
+220|En el fútbol no hay favoritos.
+221|Derbi Old Firm
+222|Marca un gol
+223|Esperan goles, y voy a marcar.
+224|Abre el cofre de misiones
+225|Imagen descargada.
+226|Recompensa diaria
+227|Recordatorios de recompensa diaria y energía.
+228|Amenaza aérea
+229|Empieza desde una situación preparada, cumple el objetivo antes de fin de temporada y gana la insignia.
+230|No cumpliste el objetivo, pero tu historia no ha terminado. Sigue tu carrera o vuelve a intentar el escenario.
+231|No cumpliste el objetivo, pero tu historia no ha terminado.
+232|Sigue tu carrera o vuelve a intentar el escenario.
+233|Cada partido importa, paso a paso.
+234|Eres el capitán de un club modesto que nunca ha jugado en Europa. La afición solo tiene un sueño.
+235|Eres el capitán de un club modesto que nunca ha jugado en Europa.
+236|La afición solo tiene un sueño.
+237|Clásico neerlandés
+238|Cumbre neerlandesa
+239|Clásico japonés
+240|Más fuerte por arriba.
+241|Derbi del Mar Negro
+242|Goles en la carrera
+243|¿Es este el partido más grande de tu carrera?
+244|Creemos en nosotros mismos.
+245|Seguro
+246|¡Nadie puede pararme!
+247|Trofeo
+248|La copa ya es nuestra, solo vamos a levantarla.
+249|El salvador
+250|Derbi del norte de Londres
+251|Clásico del norte
+252|Estás en el podio:
+253|Derbi intercontinental
+254|Gana la liga
+255|Llegaste al equipo más débil de la liga como delantero estrella de 28 años. Sálvalo del descenso.
+256|Llegaste al equipo más débil de la liga como delantero estrella de 28 años.
+257|Sálvalo del descenso.
+258|Derbi de Lisboa
+259|Derbi de Londres
+260|Derbi de Los Ángeles
+261|Derbi madrileño
+262|Derbi de Mánchester
+263|Recupera el balón 3 veces en los partidos
+264|Haz 3 tiros en total en los partidos
+265|Clásico mexicano
+266|Derbi de Merseyside
+267|Desafíos
+268|Derbi de Milán
+269|¡Increíble!
+270|Esta vez no...
+271|¡Los aplastaremos en su propio campo!
+272|Creador de juego
+273|Tarjeta de jugador
+274|Nombre del jugador
+275|Derbi de París
+276|Mejor en pases y paredes.
+277|Derbi paulista
+278|Compartir
+279|Maestro del penalti
+280|Superas a los porteros con facilidad desde el punto de penalti.
+281|Clásico portugués
+282|Récord batido
+283|¡Récord!
+284|Esta historia es de todos nosotros.
+285|Derbi de Riad
+286|Derbi de Roma
+287|Hablaremos en el campo, los respetamos.
+288|35% menos riesgo de lesión.
+289|Tranquilo
+290|Estoy tranquilo, centrado en el plan.
+291|El salón está vacío. Termina una carrera con la retirada para ganarte tu sitio aquí.
+292|El salón está vacío.
+293|Termina una carrera con la retirada para ganarte tu sitio aquí.
+294|Cofre reclamado. ¡Nuevas misiones mañana!
+295|Cofre reclamado.
+296|¡Nuevas misiones mañana!
+297|Para empezar un escenario, primero borra una carrera desde el menú principal.
+298|Tu carrera continúa.
+299|Tu racha se rompió, empiezas de nuevo.
