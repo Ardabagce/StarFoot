@@ -8,6 +8,7 @@ const path = require('path');
 const fs = require('fs');
 const { execSync } = require('child_process');
 const MODE = process.argv[2] || 'make';
+const ONLY = process.env.ONLY || '';
 const WORK = process.argv[3] || path.join(__dirname, 'work', 'tr');
 const OUT = process.argv[4] || path.join(__dirname, 'stories');
 const ST = path.join(WORK, 'st');
@@ -50,7 +51,7 @@ async function recAll() {
   const page = async (o) => { const pg = await open(b, 'tr'); await career(pg, o); return pg; };
 
   // ---------- 1: Parayı mı seçtin, kariyeri mi? ----------
-  {
+  if (!ONLY || ONLY === '1') {
     const pg = await page({ club: 'BSK', age: 18, st: 76, wage: 600000 });
     await pg.evaluate(() => { Game.state.offers = [{ clubId: 'NSR', wage: 12100000, years: 4, feeType: 'paid', fee: 900e6 }, { clubId: 'ARS', wage: 970000, years: 5, feeType: 'paid', fee: 700e6 }]; });
     const y0 = await pg.evaluate(() => __go('home', '.ofc'));
@@ -77,12 +78,14 @@ async function recAll() {
   }
 
   // ---------- 2: Sıfırdan Altın Top'a ----------
-  {
-    const pg = await page({ club: 'BUR', age: 17, st: 58, wage: 90000, fame: 2 });
+  if (!ONLY || ONLY === '2') {
+    let pg = await page({ club: 'BUR', age: 17, st: 58, wage: 90000, fame: 2 });
     await pg.evaluate(() => __go('profile'));
     await record(pg, dir(2, 'a'), 3.0, scroll({}, pg, 0, 89, 0, 30));
     const yt = await pg.evaluate(() => __go('home', '.tr-row', 300));
     await record(pg, dir(2, 'b1'), 1.8, { 8: () => pg.evaluate((y) => { document.querySelector('[data-act="intense"]').click(); window.scrollTo(0, y); }, yt) });
+    await pg.close();
+    pg = await page({ club: 'BUR', age: 17, st: 58, wage: 90000, fame: 2 });
     await pg.evaluate(() => __go('profile'));
     const up = {};
     for (let i = 0; i <= 45; i += 3) up[i] = () => pg.evaluate((k) => { const p = Game.p; p.age = 17 + Math.floor(k * 7 / 15); Object.keys(p.stats).forEach((s) => (p.stats[s] = Math.round(58 + 32 * k / 15))); Game.render(); window.scrollTo(0, 0); }, i / 3);
@@ -93,7 +96,7 @@ async function recAll() {
   }
 
   // ---------- 3: Gece kulübü mü, antrenman mı? ----------
-  {
+  if (!ONLY || ONLY === '3') {
     const pg = await page({ club: 'GAL', age: 21, st: 80, wage: 2e6, fame: 35 });
     await pg.evaluate(() => __go('home'));
     await record(pg, dir(3, 'a'), 3.0, { 4: () => pg.evaluate(() => Game.modal('<div class="ev-tag">Olay</div><h3>Yarın derbi var ama arkadaşların seni gece kulübüne çağırıyor.</h3>', [{ t: '🎉 Partiye git', fn: () => {} }, { t: '😴 Erken yat', fn: () => {} }])) });
@@ -114,7 +117,7 @@ async function recAll() {
   }
 
   // ---------- 4: Karmaşık grafik şart değil ----------
-  {
+  if (!ONLY || ONLY === '4') {
     const pg = await page({ club: 'GAL', age: 22, st: 82, wage: 2e6, fame: 60, money: 3e7 });
     await pg.evaluate(() => { const p = Game.p, L = Life.ensure(p); Life.newSponsorOffer(p); Life.newSponsorOffer(p); Game.state.offers = [{ clubId: 'BAR', wage: 6.5e6, years: 5, feeType: 'paid', fee: 1.4e9 }]; Game.state.news = []; });
     const yw = await pg.evaluate(() => __go('home', document.querySelector('.tr-row').closest('.card'), 125));
@@ -129,7 +132,7 @@ async function recAll() {
   }
 
   // ---------- 5: Yerli yapım (kod ekranı + açılış ekranı) ----------
-  {
+  if (!ONLY || ONLY === '5') {
     const src = fs.readFileSync(path.join(ROOT, 'js/game.js'), 'utf8').split('\n');
     const at = src.findIndex((l) => l.startsWith('const Events = {'));
     const code = src.slice(at - 1, at + 70).join('\n');
