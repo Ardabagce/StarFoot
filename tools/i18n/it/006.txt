@@ -1,0 +1,189 @@
+2050|Croupier
+2051|Avvicinati a 21 più del croupier.
+2052|Il blackjack paga 3:2, il croupier sta a 17.
+2053|Ti ha anche preso da parte.
+2054|Lamin Yamel ha segnato una tripletta dopo aver finito i compiti.
+2055|Il suo insegnante gli ha dato punti extra.
+2056|Lionel Mezzi viaggia a 4 dribbling a partita in questa stagione.
+2057|Le difese avversarie condividono uno psicologo.
+2058|PARTITA DI STRADA · Un osservatore guarda da bordo campo.
+2059|Gioca bene e ti porterà in un'accademia!
+2060|I tifosi non sono contenti.
+2061|C'era un osservatore a bordo campo...
+2062|Sei finito sui giornali!
+2063|Ai tifosi è piaciuto, ma il mister non è contento.
+2064|Fine partita ·
+2065|Premio partita:
+2066|Il premio di migliore in campo appartiene alla mia squadra.
+2067|Più forti insieme.
+2068|Hai giocato benissimo!
+2069|L'osservatore si è attaccato subito al telefono; le accademie dei grandi club ti vogliono.
+2070|Un esercizio basato sulla tua statistica di riferimento.
+2071|Gioca bene e la crescita sale fino a ×1,5.
+2072|Settimana di esami a scuola!
+2073|La tua famiglia vuole che tu studi questa settimana.
+2074|Stai per entrare!
+2075|Il mister si fida di te.
+2076|Sei sul dischetto.
+2077|Tira indietro, mira a un angolo e rilascia!
+2078|La tua prestazione si è fatta notare!
+2079|Le accademie di club più grandi ti vogliono.
+2080|Hai tenuto il ritmo dei professionisti.
+2081|Hai saltato l'uomo, solo davanti al portiere!
+2082|Tira indietro, mira a un angolo e rilascia.
+2083|L'attaccante arriva con la palla.
+2084|Tocca quando l'anello diventa verde; giallo significa fallo.
+2085|Ti sta puntando!
+2086|Appena si sbilancia da un lato, sposta la palla dall'altro (tocca o scorri a sinistra/destra).
+2087|I difensori ti stanno puntando.
+2088|Appena si sbilanciano, sposta la palla dall'altro lato (tocca o scorri a sinistra/destra).
+2089|Numero
+2090|Tu ·
+2091|È ora di festeggiare!
+2092|Tocca per saltare.
+2093|Sei stato la star dei provini!
+2094|Gli osservatori dei grandi club hanno fatto la fila per ingaggiarti.
+2095|Niente batte il calcio di strada!
+2096|Il tuo contratto è scaduto!
+2097|Devi firmarne uno nuovo.
+2098|Puoi valutare le offerte.
+2099|Sei invitato.
+2100|Hai fatto la storia!
+2101|Hai fatto parte della squadra che ha alzato il trofeo.
+2102|Punizione da zona pericolosa.
+2103|si posiziona sul pallone.
+2104|Grazie calcio.
+2105|Grato per tutto.
+2106|Ora un nuovo capitolo.
+2107|Palla al piede!
+2108|Tira indietro e rilascia per tirare, o tocca un compagno per passare.
+2109|Non passare a un compagno oltre la linea del fuorigioco!
+2110|I difensori si avvicinano, sii veloce!
+2111|Palla vagante!
+2112|Tocca veloce per arrivarci prima del tuo avversario.
+2113|Guarda i fianchi, non la palla.
+2114|Dove girano i fianchi, lì va.
+2115|Guarda alle spalle prima di ricevere.
+2116|Un buon passaggio inizia dal primo controllo.
+2117|Non tenere palla troppo a lungo.
+2118|Passa, poi buttati nello spazio.
+2119|Palleggia 10 volte senza far cadere la palla.
+2120|Tocca quando cade nella zona verde.
+2121|Alla prossima!
+2122|Diventi capitano dopo una partita in cui completi tutti gli obiettivi.
+2123|Da capitano trascini i compagni in posizione.
+2124|La bacheca per ora è vuota.
+2125|Il tuo primo trofeo brillerà qui.
+2126|Sei stato giudicato colpevole di scommesse illegali.
+2127|Durante la squalifica non puoi giocare nessuna partita.
+2128|Nuovi oggetti si sbloccano crescendo.
+2129|Tocca una categoria per aprirla o chiuderla.
+2130|Che emozione.
+2131|Puntiamo al titolo!
+2132|Pronto per una nuova avventura.
+2133|Mi sta bene la nuova maglia?
+2134|i tifosi sono divisi.
+2135|Scatti dal nuovo servizio fotografico.
+2136|Qual è la tua preferita?
+2137|Il giornale locale ha parlato della tua prestazione con il titolo "la stella nascente dell'accademia".
+2138|La tua famiglia l'ha incorniciato.
+2139|La zona verde è un contrasto pulito, il giallo è fallo.
+2140|Pressa al momento giusto!
+2141|Colpo di mercato!
+2142|Difficoltà:
+2143|azioni rimaste.
+2144|Se giochi la partita, andranno perse.
+2145|rosa!
+2146|carriera verrà eliminata definitivamente.
+2147|puoi mandarlo ovunque.
+2148|Tocca per passare.
+2149|anni!
+2150|Controlla nella scheda Vita.
+2151|La tua energia è bassa.
+2152|La prestazione cala e il rischio infortuni aumenta.
+2153|SEI STATO CONVOCATO IN NAZIONALE!
+2154|L'U19 gioca la Lega Europea di Sviluppo in questa stagione!
+2155|Affronterai le migliori accademie d'Europa.
+2156|ti ha dato una lezione privata in accademia.
+2157|è venuto all'allenamento in pigiama.
+2158|Mister: "Almeno i colori erano quelli del club."
+2159|Portiere: "Riflesso."
+2160|è aperto.
+2161|Ancora nessuna offerta; gioca bene e qualcuno potrebbe bussare.
+2162|è iniziata!
+2163|è nostra!
+2164|Siamo i migliori d'Europa.
+2165|Questo trofeo è per i nostri tifosi.
+2166|Siamo i migliori del continente.
+2167|Il suo smartwatch ha detto "per favore fermati".
+2168|è consumato e non può più essere usato.
+2169|Puoi comprare un nuovo paio nel negozio.
+2170|ha autografato la sua maglia e te l'ha regalata.
+2171|Morale +10
+2172|ha subito un piccolo infortunio.
+2173|È inciampato sul tappeto mentre cercava di dribblare il suo gatto a casa.
+2174|ha parlato di tattica con il mister.
+2175|Nel secondo tempo toccherà più palloni.
+2176|Il primo appuntamento è andato alla grande.
+2177|La stampa di gossip lo sapeva già.
+2178|È stata proposta una gara di corsa.
+2179|Il mondo del calcio festeggia la coppia felice.
+2180|Darò tutto per questa maglia!
+2181|La sua spiegazione: "I lacci non erano nostri."
+2182|è chiuso.
+2183|Le offerte in sospeso sono scadute.
+2184|La fascia è tua.
+2185|In partita puoi trascinare i compagni in posizione.
+2186|Continuerò a meritarmi questa fascia.
+2187|non è riuscito a sbloccarlo.
+2188|fase campionato completata.
+2189|I tifosi lo vogliono in rosa.
+2190|Nel frattempo i tifosi hanno preparato il tè.
+2191|Ha mostrato un giallo "mentalmente".
+2192|Il guardalinee ha alzato la bandierina.
+2193|è rimasto molto colpito dalla tua prestazione.
+2194|Diverse accademie ti vogliono.
+2195|Arbitro: "Persino io ci sono cascato."
+2196|I calciatori non possono scommettere; la FIFA può indagare e infliggere una lunga squalifica.
+2197|La tua prima partita
+2198|È ora di chiudere la carriera.
+2199|di nuovo in forma!
+2200|si sta stancando.
+2201|La precisione dei tiri cala.
+2202|Oggi c'è una partita tra quartieri e un osservatore sta guardando!
+2203|Questo trofeo appartiene a tutto il paese.
+2204|campioni!
+2205|La migliore accademia d'Europa è nostra.
+2206|ha dato spettacolo!
+2207|Ripagherò questa fiducia in campo.
+2208|Questo trofeo appartiene a tutti noi.
+2209|Allenatore sconfitto: "L'erba era troppo scivolosa."
+2210|I rivali hanno paura di girare la pagina del calendario.
+2211|Il suo agente: "Il telefono squilla così tanto che la batteria non regge."
+2212|Sei invitato!
+2213|Fai sudare la maglia!"
+2214|Ne riparliamo quando la tua forma migliora."
+2215|· Stelle avversarie:
+2216|· Il tuo voto
+2217|· Stella:
+2218|Abbiamo lavorato, abbiamo vinto.
+2219|E in più un premio gol.
+2220|Una scuola gratuita per bambini.
+2221|Prima fatti notare nella partita di strada.
+2222|Quando un osservatore ti porterà in un'accademia, qui compariranno la tua squadra e il tuo campionato.
+2223|Secondo giallo, CARTELLINO ROSSO!
+2224|viene espulso.
+2225|Ho firmato il mio primo contratto da professionista!
+2226|I sogni si avverano.
+2227|Chi sono i campioni?
+2228|Siamo noi!
+2229|Nessuna offerta per ora.
+2230|Se giochi bene e la tua fama cresce, i marchi ti chiameranno.
+2231|Quando tiri, guarda l'angolo vuoto, non il portiere.
+2232|Mettila lì.
+2233|📋 Sei nella formazione titolare!
+2234|Sei nella formazione titolare!
+2235|è aperto!
+2236|club ti vogliono.
+2237|🟥 Sei stato espulso.
+2238|Sei stato espulso.

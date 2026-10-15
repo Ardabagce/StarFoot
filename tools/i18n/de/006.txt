@@ -1,0 +1,189 @@
+2050|Croupier
+2051|Komm näher an 21 als der Croupier.
+2052|Blackjack zahlt 3:2, der Croupier bleibt bei 17 stehen.
+2053|Er hat dich auch zur Seite genommen.
+2054|Lamin Yamel schoss einen Hattrick, nachdem er seine Hausaufgaben gemacht hatte.
+2055|Sein Lehrer gab ihm Zusatzpunkte.
+2056|Lionel Mezzi kommt diese Saison auf 4 Dribblings pro Spiel.
+2057|Gegnerische Abwehrreihen teilen sich einen Therapeuten.
+2058|STRASSENSPIEL · Ein Scout schaut von der Seitenlinie zu.
+2059|Spiel gut und er bringt dich in eine Akademie!
+2060|Die Fans sind nicht zufrieden.
+2061|An der Seitenlinie stand ein Scout...
+2062|Du bist in den Schlagzeilen!
+2063|Die Fans fanden es toll, aber der Trainer ist nicht erfreut.
+2064|Abpfiff ·
+2065|Spielprämie:
+2066|Die Auszeichnung zum Spieler des Spiels gehört meinem Team.
+2067|Gemeinsam stärker.
+2068|Du hast brillant gespielt!
+2069|Der Scout griff sofort zum Telefon; Akademien großer Vereine wollen dich.
+2070|Eine Übung auf Basis deines Schwerpunkt-Werts.
+2071|Spiel gut und die Entwicklung steigt auf bis zu ×1,5.
+2072|Prüfungswoche in der Schule!
+2073|Deine Familie möchte, dass du diese Woche lernst.
+2074|Du wirst eingewechselt!
+2075|Der Trainer vertraut dir.
+2076|Du stehst am Elfmeterpunkt.
+2077|Zurückziehen, ins Eck zielen und loslassen!
+2078|Deine Leistung ist aufgefallen!
+2079|Akademien größerer Vereine wollen dich.
+2080|Du hast mit dem Tempo der Profis mitgehalten.
+2081|Du hast deinen Gegenspieler ausgespielt, allein vor dem Torwart!
+2082|Zurückziehen, ins Eck zielen und loslassen.
+2083|Der Stürmer kommt mit dem Ball.
+2084|Tippe, wenn der Ring grün wird; gelb bedeutet Foul.
+2085|Er kommt auf dich zu!
+2086|Sobald er sich für eine Seite entscheidet, zieh den Ball auf die andere (tippe oder wische links/rechts).
+2087|Verteidiger kommen auf dich zu.
+2088|Sobald sie sich festlegen, zieh den Ball auf die andere Seite (tippe oder wische links/rechts).
+2089|Ausgabe
+2090|Du ·
+2091|Zeit zum Jubeln!
+2092|Tippen zum Überspringen.
+2093|Du warst der Star des Probetrainings!
+2094|Scouts großer Vereine standen Schlange, um dich zu verpflichten.
+2095|Nichts geht über Straßenfußball!
+2096|Dein Vertrag ist ausgelaufen!
+2097|Du musst einen neuen unterschreiben.
+2098|Du kannst die Angebote prüfen.
+2099|Du bist eingeladen.
+2100|Du hast Geschichte geschrieben!
+2101|Du warst Teil des Teams, das den Pokal gestemmt hat.
+2102|Freistoß in gefährlicher Position.
+2103|steht am Ball.
+2104|Danke, Fußball.
+2105|Dankbar für alles.
+2106|Jetzt beginnt ein neues Kapitel.
+2107|Ball am Fuß!
+2108|Zurückziehen und loslassen zum Schießen, oder tippe auf einen Mitspieler zum Passen.
+2109|Spiel keinen Mitspieler hinter der Abseitslinie an!
+2110|Die Verteidiger rücken heran, sei schnell!
+2111|Freier Ball!
+2112|Tippe schnell, um ihn vor deinem Gegner zu erreichen.
+2113|Achte auf seine Hüfte, nicht auf den Ball.
+2114|Wohin die Hüfte dreht, dorthin geht er.
+2115|Schau über die Schulter, bevor du den Ball annimmst.
+2116|Ein guter Pass beginnt mit der ersten Ballberührung.
+2117|Halte den Ball nicht zu lange.
+2118|Passen, dann in den freien Raum laufen.
+2119|Halte den Ball 10 Mal hoch.
+2120|Tippe, wenn er in die grüne Zone fällt.
+2121|Nächstes Mal!
+2122|Du wirst Kapitän nach einem Spiel, in dem du alle Ziele erfüllst.
+2123|Als Kapitän ziehst du deine Mitspieler in Position.
+2124|Die Vitrine ist noch leer.
+2125|Dein erster Titel wird hier glänzen.
+2126|Du wurdest wegen illegaler Wetten schuldig gesprochen.
+2127|Während der Sperre kannst du kein Spiel bestreiten.
+2128|Neue Artikel werden freigeschaltet, wenn du älter wirst.
+2129|Tippe auf eine Kategorie, um sie zu öffnen oder zu schließen.
+2130|Total aufgeregt.
+2131|Wir greifen nach dem Titel!
+2132|Bereit für ein neues Abenteuer.
+2133|Steht mir das neue Trikot?
+2134|Fans sind gespalten.
+2135|Bilder vom neuen Shooting.
+2136|Welches ist dein Favorit?
+2137|Die Lokalzeitung schrieb über deine Leistung unter der Schlagzeile „Der Shootingstar der Akademie“.
+2138|Deine Familie hat es eingerahmt.
+2139|Grüne Zone ist ein sauberes Tackling, gelb ist ein Foul.
+2140|Presse im richtigen Moment!
+2141|Star-Transfer!
+2142|Schwierigkeit:
+2143|Aktionen übrig.
+2144|Wenn du das Spiel spielst, verfallen sie.
+2145|Kader!
+2146|Karriere wird endgültig gelöscht.
+2147|kannst du ihn überallhin schicken.
+2148|Tippen zum Passen.
+2149|Jahre alt!
+2150|Schau im Tab „Leben“ nach.
+2151|Deine Energie ist niedrig.
+2152|Deine Leistung sinkt und das Verletzungsrisiko steigt.
+2153|DU WURDEST IN DIE NATIONALMANNSCHAFT BERUFEN!
+2154|Die U19 spielt diese Saison in der Europäischen Entwicklungsliga!
+2155|Du triffst auf die besten Akademien Europas.
+2156|gab dir eine Privatstunde in der Akademie.
+2157|kam im Schlafanzug zum Training.
+2158|Trainer: „Wenigstens passten die Farben zum Verein.“
+2159|Torwart: „Reflex.“
+2160|ist geöffnet.
+2161|Noch keine Angebote; spiel gut, dann klopft vielleicht jemand an.
+2162|hat begonnen!
+2163|gehört uns!
+2164|Wir sind die Besten Europas.
+2165|Dieser Pokal ist für unsere Fans.
+2166|Wir sind die Besten des Kontinents.
+2167|Seine Smartwatch sagte „bitte hör auf“.
+2168|ist abgenutzt und kann nicht mehr verwendet werden.
+2169|Im Shop kannst du ein neues Paar kaufen.
+2170|signierte sein Trikot und schenkte es dir.
+2171|Moral +10
+2172|hat sich leicht verletzt.
+2173|Er stolperte zu Hause über den Teppich, als er seine Katze ausdribbeln wollte.
+2174|sprach mit dem Trainer über Taktik.
+2175|In der zweiten Halbzeit bekommt er mehr Ballkontakte.
+2176|Das erste Date lief super.
+2177|Die Klatschpresse wusste es schon.
+2178|Ein Wettrennen wurde vorgeschlagen.
+2179|Die Fußballwelt feiert das glückliche Paar.
+2180|Für dieses Trikot gebe ich alles!
+2181|Seine Erklärung: „Die Schnürsenkel waren nicht unsere.“
+2182|ist geschlossen.
+2183|Offene Angebote sind verfallen.
+2184|Die Binde gehört dir.
+2185|Im Spiel kannst du Mitspieler in Position ziehen.
+2186|Ich werde mir diese Binde weiter verdienen.
+2187|konnte es nicht freischalten.
+2188|Ligaphase abgeschlossen.
+2189|Die Fans wollen ihn im Kader.
+2190|Die Fans haben in der Zwischenzeit Tee gekocht.
+2191|Er zeigte „gedanklich“ Gelb.
+2192|Der Linienrichter hob die Fahne.
+2193|war von deiner Leistung sehr beeindruckt.
+2194|Mehrere Akademien wollen dich.
+2195|Schiedsrichter: „Sogar ich war überzeugt.“
+2196|Fußballer dürfen nicht wetten; die FIFA kann ermitteln und eine lange Sperre verhängen.
+2197|Dein erstes Spiel
+2198|Es ist Zeit, deine Karriere zu beenden.
+2199|wieder in Topform!
+2200|wird müde.
+2201|Die Schussgenauigkeit sinkt.
+2202|Heute gibt es ein Spiel zwischen den Vierteln und ein Scout schaut zu!
+2203|Dieser Pokal gehört dem ganzen Land.
+2204|Meister!
+2205|Die beste Akademie Europas ist unsere.
+2206|zeigte eine Show!
+2207|Ich werde dieses Vertrauen auf dem Platz zurückzahlen.
+2208|Dieser Pokal gehört uns allen.
+2209|Unterlegener Trainer: „Der Rasen war zu rutschig.“
+2210|Die Rivalen trauen sich nicht, das Kalenderblatt umzublättern.
+2211|Sein Berater: „Mein Telefon klingelt so oft, dass der Akku nicht mitkommt.“
+2212|Du bist eingeladen!
+2213|Lass das Trikot schwitzen!“
+2214|Wir reden wieder, wenn deine Form besser ist.“
+2215|· Stars des Gegners:
+2216|· Deine Bewertung
+2217|· Star:
+2218|Wir haben geackert, wir haben gewonnen.
+2219|Und obendrauf eine Torprämie.
+2220|Eine kostenlose Schule für Kinder.
+2221|Zeig dich zuerst im Straßenspiel.
+2222|Sobald dich ein Scout in eine Akademie holt, erscheinen hier dein Team und deine Liga.
+2223|Zweite Gelbe, ROTE KARTE!
+2224|fliegt vom Platz.
+2225|Ich habe meinen ersten Profivertrag unterschrieben!
+2226|Träume werden wahr.
+2227|Wer wird Meister?
+2228|Wir!
+2229|Noch keine Angebote.
+2230|Wenn du gut spielst und dein Ruhm wächst, melden sich die Marken.
+2231|Schau beim Schuss nicht auf den Torwart, sondern ins leere Eck.
+2232|Platziere ihn dort.
+2233|📋 Du stehst in der Startelf!
+2234|Du stehst in der Startelf!
+2235|ist geöffnet!
+2236|Vereine wollen dich.
+2237|🟥 Du hast Rot gesehen.
+2238|Du hast Rot gesehen.

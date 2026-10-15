@@ -1,0 +1,189 @@
+2050|Bandar
+2051|Dapatkan nilai lebih dekat ke 21 daripada bandar.
+2052|Blackjack membayar 3:2, bandar berhenti di 17.
+2053|Ia juga mengajakmu bicara empat mata.
+2054|Lamin Yamel mencetak hat-trick setelah menyelesaikan PR-nya.
+2055|Gurunya memberinya nilai tambahan.
+2056|Lionel Mezzi rata-rata melakukan 4 dribel per laga musim ini.
+2057|Pertahanan lawan berbagi satu terapis.
+2058|PERTANDINGAN JALANAN · Pencari bakat menonton dari pinggir lapangan.
+2059|Bermainlah bagus dan ia akan membawamu ke akademi!
+2060|Para suporter tidak senang.
+2061|Ada pencari bakat di pinggir lapangan...
+2062|Kamu jadi berita utama!
+2063|Para suporter menyukainya, tapi pelatih tidak senang.
+2064|Waktu Penuh ·
+2065|Bonus pertandingan:
+2066|Penghargaan pemain terbaik pertandingan milik timku.
+2067|Lebih kuat bersama.
+2068|Kamu bermain gemilang!
+2069|Pencari bakat langsung menelepon; akademi klub-klub besar menginginkanmu.
+2070|Latihan berdasarkan statistik fokusmu.
+2071|Bermainlah bagus dan perkembangan naik hingga ×1,5.
+2072|Minggu ujian di sekolah!
+2073|Keluargamu ingin kamu belajar minggu ini.
+2074|Kamu akan masuk!
+2075|Pelatih memercayaimu.
+2076|Kamu berada di titik penalti.
+2077|Tarik ke belakang, bidik pojok, lalu lepaskan!
+2078|Penampilanmu menarik perhatian!
+2079|Akademi klub-klub yang lebih besar menginginkanmu.
+2080|Kamu mampu mengikuti tempo para pemain pro.
+2081|Kamu melewati lawanmu, satu lawan satu dengan kiper!
+2082|Tarik ke belakang, bidik pojok, lalu lepaskan.
+2083|Penyerang datang membawa bola.
+2084|Ketuk saat cincin berubah hijau; kuning berarti pelanggaran.
+2085|Ia datang ke arahmu!
+2086|Begitu ia condong ke satu sisi, tarik bola ke sisi lain (ketuk atau geser kiri/kanan).
+2087|Para bek datang ke arahmu.
+2088|Begitu mereka condong, tarik bola ke sisi lain (ketuk atau geser kiri/kanan).
+2089|Edisi
+2090|Kamu ·
+2091|Saatnya merayakan!
+2092|Ketuk untuk melewati.
+2093|Kamu bintang di seleksi!
+2094|Pencari bakat klub-klub besar mengantre untuk merekrutmu.
+2095|Tak ada yang mengalahkan sepak bola jalanan!
+2096|Kontrakmu telah berakhir!
+2097|Kamu harus menandatangani yang baru.
+2098|Kamu bisa menimbang tawaran-tawaran.
+2099|Kamu diundang.
+2100|Kamu mencetak sejarah!
+2101|Kamu bagian dari tim yang mengangkat trofi.
+2102|Tendangan bebas di area berbahaya.
+2103|berdiri di depan bola.
+2104|Terima kasih, sepak bola.
+2105|Bersyukur atas segalanya.
+2106|Kini babak baru.
+2107|Bola di kakimu!
+2108|Tarik ke belakang dan lepaskan untuk menembak, atau ketuk rekan setim untuk mengoper.
+2109|Jangan mengoper ke rekan setim yang melewati garis offside!
+2110|Para bek mendekat, cepatlah!
+2111|Bola liar!
+2112|Ketuk cepat untuk meraihnya sebelum lawanmu.
+2113|Perhatikan pinggulnya, bukan bolanya.
+2114|Ke mana pinggulnya berputar, ke sana ia pergi.
+2115|Lihat ke belakang bahumu sebelum menerima bola.
+2116|Umpan yang bagus dimulai dari sentuhan pertama.
+2117|Jangan menahan bola terlalu lama.
+2118|Oper, lalu lari ke ruang kosong.
+2119|Jaga bola tetap di udara 10 kali.
+2120|Ketuk saat bola jatuh ke zona hijau.
+2121|Lain kali!
+2122|Kamu menjadi kapten setelah pertandingan di mana kamu menyelesaikan semua target.
+2123|Sebagai kapten, kamu menggeser rekan setim ke posisinya.
+2124|Lemari trofi masih kosong.
+2125|Trofi pertamamu akan bersinar di sini.
+2126|Kamu dinyatakan bersalah atas taruhan ilegal.
+2127|Kamu tidak bisa bermain selama masa larangan.
+2128|Item baru terbuka seiring bertambahnya usia.
+2129|Ketuk kategori untuk membuka atau menutupnya.
+2130|Sangat bersemangat.
+2131|Mengincar gelar!
+2132|Siap untuk petualangan baru.
+2133|Cocok tidak jersey baruku?
+2134|suporter terbelah.
+2135|Foto-foto dari pemotretan baru.
+2136|Mana favoritmu?
+2137|Koran lokal menulis tentang penampilanmu dengan judul "bintang bersinar akademi".
+2138|Keluargamu membingkainya.
+2139|Zona hijau adalah tekel bersih, kuning adalah pelanggaran.
+2140|Tekan di saat yang tepat!
+2141|Rekrutan bintang!
+2142|Tingkat kesulitan:
+2143|aksi tersisa.
+2144|Jika kamu memainkan pertandingan, aksi itu akan hangus.
+2145|skuad!
+2146|karier akan dihapus permanen.
+2147|kamu bisa mengirimnya ke mana saja.
+2148|Ketuk untuk mengoper.
+2149|tahun!
+2150|Cek di tab Kehidupan.
+2151|Energimu rendah.
+2152|Performamu turun dan risiko cedera meningkat.
+2153|KAMU DIPANGGIL KE TIMNAS!
+2154|U19 bermain di Liga Pengembangan Eropa musim ini!
+2155|Kamu akan menghadapi akademi-akademi terbaik Eropa.
+2156|memberimu les privat di akademi.
+2157|datang ke latihan memakai piyama.
+2158|Pelatih: "Setidaknya warnanya cocok dengan klub."
+2159|Kiper: "Refleks."
+2160|dibuka.
+2161|Belum ada tawaran; bermainlah bagus dan mungkin ada yang mengetuk pintu.
+2162|telah dimulai!
+2163|milik kita!
+2164|Kita yang terbaik di Eropa.
+2165|Trofi ini untuk para suporter kita.
+2166|Kita yang terbaik di benua ini.
+2167|Jam pintarnya berkata "tolong berhenti".
+2168|sudah aus dan tidak bisa dipakai lagi.
+2169|Kamu bisa membeli pasangan baru di toko.
+2170|menandatangani jerseynya dan memberikannya kepadamu.
+2171|Moral +10
+2172|mengalami cedera ringan.
+2173|Ia tersandung karpet saat mencoba mendribel kucingnya di rumah.
+2174|berdiskusi taktik dengan pelatih.
+2175|Ia akan lebih banyak menyentuh bola di babak kedua.
+2176|Kencan pertama berjalan lancar.
+2177|Media gosip sudah tahu duluan.
+2178|Sebuah adu lari diusulkan.
+2179|Dunia sepak bola merayakan pasangan bahagia itu.
+2180|Aku akan memberikan segalanya untuk jersey ini!
+2181|Penjelasannya: "Tali sepatunya bukan milik kami."
+2182|ditutup.
+2183|Tawaran yang tertunda sudah kedaluwarsa.
+2184|Ban kapten milikmu.
+2185|Dalam pertandingan kamu bisa menggeser rekan setim ke posisinya.
+2186|Aku akan terus layak memakai ban ini.
+2187|tidak bisa membukanya.
+2188|fase liga selesai.
+2189|Suporter ingin ia masuk skuad.
+2190|Sementara itu suporter sempat menyeduh teh.
+2191|Ia memberi kartu kuning "dalam hati".
+2192|Hakim garis mengangkat benderanya.
+2193|sangat terkesan dengan penampilanmu.
+2194|Beberapa akademi menginginkanmu.
+2195|Wasit: "Bahkan aku pun tertipu."
+2196|Pesepak bola tidak boleh bertaruh; FIFA bisa menyelidiki dan menjatuhkan larangan panjang.
+2197|Pertandingan pertamamu
+2198|Sudah waktunya mengakhiri kariermu.
+2199|kembali bersinar!
+2200|mulai lelah.
+2201|Akurasi tembakan menurun.
+2202|Hari ini ada pertandingan antarkampung dan pencari bakat menonton!
+2203|Trofi ini milik seluruh negeri.
+2204|juara!
+2205|Akademi terbaik Eropa milik kita.
+2206|tampil memukau!
+2207|Aku akan membalas kepercayaan ini di lapangan.
+2208|Trofi ini milik kita semua.
+2209|Pelatih yang kalah: "Rumputnya terlalu licin."
+2210|Para rival takut membalik halaman kalender.
+2211|Agennya: "Teleponku berdering terus sampai baterainya tak kuat."
+2212|Kamu diundang!
+2213|Buat jersey ini berkeringat!"
+2214|Kita bicara lagi saat performamu membaik."
+2215|· Bintang lawan:
+2216|· Nilaimu
+2217|· Bintang:
+2218|Kami bekerja keras, kami menang.
+2219|Plus bonus gol.
+2220|Sekolah gratis untuk anak-anak.
+2221|Tunjukkan dirimu dulu di pertandingan jalanan.
+2222|Setelah pencari bakat membawamu ke akademi, tim dan ligamu akan muncul di sini.
+2223|Kuning kedua, KARTU MERAH!
+2224|diusir keluar lapangan.
+2225|Aku menandatangani kontrak profesional pertamaku!
+2226|Mimpi jadi kenyataan.
+2227|Siapa juaranya?
+2228|Kita!
+2229|Belum ada tawaran.
+2230|Kalau kamu bermain bagus dan makin terkenal, merek akan menelepon.
+2231|Saat menembak, lihat pojok yang kosong, bukan kipernya.
+2232|Arahkan ke sana.
+2233|📋 Kamu masuk starting XI!
+2234|Kamu masuk starting XI!
+2235|dibuka!
+2236|klub menginginkanmu.
+2237|🟥 Kamu mendapat kartu merah.
+2238|Kamu mendapat kartu merah.

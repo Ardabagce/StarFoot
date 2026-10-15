@@ -1,0 +1,189 @@
+2050|Croupier
+2051|Approche-toi plus de 21 que le croupier.
+2052|Le blackjack paie 3:2, le croupier reste à 17.
+2053|Il t'a aussi pris à part.
+2054|Lamin Yamel a signé un triplé après avoir fini ses devoirs.
+2055|Son professeur lui a donné des points bonus.
+2056|Lionel Mezzi tourne à 4 dribbles par match cette saison.
+2057|Les défenses adverses partagent un psy.
+2058|MATCH DE RUE · Un recruteur regarde depuis le bord du terrain.
+2059|Joue bien et il t'emmènera dans un centre de formation !
+2060|Les fans ne sont pas contents.
+2061|Il y avait un recruteur au bord du terrain...
+2062|Tu as fait les gros titres !
+2063|Les fans ont adoré mais le coach n'est pas content.
+2064|Fin du match ·
+2065|Prime de match :
+2066|Le titre d'homme du match revient à mon équipe.
+2067|Plus forts ensemble.
+2068|Tu as joué de façon brillante !
+2069|Le recruteur a immédiatement pris son téléphone ; les centres de formation des grands clubs te veulent.
+2070|Un exercice basé sur ta stat prioritaire.
+2071|Joue bien et la progression monte jusqu'à ×1,5.
+2072|Semaine d'examens à l'école !
+2073|Ta famille veut que tu étudies cette semaine.
+2074|Tu entres en jeu !
+2075|Le coach te fait confiance.
+2076|Tu es au point de penalty.
+2077|Tire en arrière, vise un coin et relâche !
+2078|Ta performance a attiré l'attention !
+2079|Les centres de formation de plus grands clubs te veulent.
+2080|Tu as suivi le rythme des pros.
+2081|Tu as éliminé ton adversaire, seul face au gardien !
+2082|Tire en arrière, vise un coin et relâche.
+2083|L'attaquant arrive avec le ballon.
+2084|Touche quand l'anneau devient vert ; jaune signifie faute.
+2085|Il fonce sur toi !
+2086|Dès qu'il s'engage d'un côté, emmène le ballon de l'autre (touche ou glisse à gauche/droite).
+2087|Des défenseurs foncent sur toi.
+2088|Dès qu'ils s'engagent, emmène le ballon de l'autre côté (touche ou glisse à gauche/droite).
+2089|Numéro
+2090|Toi ·
+2091|C'est l'heure de célébrer !
+2092|Touche pour passer.
+2093|Tu as été la star des essais !
+2094|Les recruteurs des grands clubs ont fait la queue pour te signer.
+2095|Rien ne vaut le foot de rue !
+2096|Ton contrat est terminé !
+2097|Tu dois en signer un nouveau.
+2098|Tu peux étudier les offres.
+2099|Tu es invité.
+2100|Tu es entré dans l'histoire !
+2101|Tu faisais partie de l'équipe qui a soulevé le trophée.
+2102|Coup franc dans une zone dangereuse.
+2103|se place devant le ballon.
+2104|Merci le football.
+2105|Reconnaissant pour tout.
+2106|Place à un nouveau chapitre.
+2107|Ballon au pied !
+2108|Tire en arrière et relâche pour frapper, ou touche un coéquipier pour passer.
+2109|Ne passe pas à un coéquipier au-delà de la ligne de hors-jeu !
+2110|Les défenseurs se rapprochent, fais vite !
+2111|Ballon libre !
+2112|Touche vite pour l'atteindre avant ton adversaire.
+2113|Regarde ses hanches, pas le ballon.
+2114|Là où tournent ses hanches, il va.
+2115|Regarde par-dessus ton épaule avant de recevoir.
+2116|Une bonne passe commence par le contrôle.
+2117|Ne garde pas le ballon trop longtemps.
+2118|Passe, puis cours dans l'espace.
+2119|Fais 10 jongles sans faire tomber le ballon.
+2120|Touche quand il tombe dans la zone verte.
+2121|La prochaine fois !
+2122|Tu deviens capitaine après un match où tu remplis tous les objectifs.
+2123|En tant que capitaine, tu places tes coéquipiers en les faisant glisser.
+2124|La vitrine est vide pour l'instant.
+2125|Ton premier trophée brillera ici.
+2126|Tu as été reconnu coupable de paris illégaux.
+2127|Tu ne peux jouer aucun match pendant la suspension.
+2128|De nouveaux articles se débloquent en vieillissant.
+2129|Touche une catégorie pour l'ouvrir ou la fermer.
+2130|Tellement excité.
+2131|Objectif titre !
+2132|Prêt pour une nouvelle aventure.
+2133|Il me va bien, mon nouveau maillot ?
+2134|les fans sont partagés.
+2135|Photos du nouveau shooting.
+2136|Laquelle est ta préférée ?
+2137|Le journal local a parlé de ta performance sous le titre « la pépite du centre de formation ».
+2138|Ta famille l'a encadré.
+2139|La zone verte est un tacle propre, le jaune une faute.
+2140|Presse au bon moment !
+2141|Recrue star !
+2142|Difficulté :
+2143|actions restantes.
+2144|Si tu joues le match, elles seront perdues.
+2145|effectif !
+2146|carrière sera définitivement supprimée.
+2147|tu peux l'envoyer n'importe où.
+2148|Touche pour passer.
+2149|ans !
+2150|Consulte l'onglet Vie.
+2151|Ton énergie est basse.
+2152|Ta performance baisse et le risque de blessure augmente.
+2153|TU AS ÉTÉ CONVOQUÉ EN ÉQUIPE NATIONALE !
+2154|Les U19 jouent la Ligue européenne de développement cette saison !
+2155|Tu affronteras les meilleurs centres de formation d'Europe.
+2156|t'a donné un cours particulier au centre de formation.
+2157|est venu à l'entraînement en pyjama.
+2158|Coach : « Au moins, les couleurs allaient avec le club. »
+2159|Gardien : « Réflexe. »
+2160|est ouvert.
+2161|Pas encore d'offres ; joue bien et quelqu'un frappera peut-être à la porte.
+2162|a commencé !
+2163|est à nous !
+2164|Nous sommes les meilleurs d'Europe.
+2165|Ce trophée est pour nos fans.
+2166|Nous sommes les meilleurs du continent.
+2167|Sa montre connectée a dit « arrête, s'il te plaît ».
+2168|est usé et ne peut plus être utilisé.
+2169|Tu peux acheter une nouvelle paire en boutique.
+2170|a signé son maillot et te l'a offert.
+2171|Moral +10
+2172|s'est légèrement blessé.
+2173|Il a trébuché sur le tapis en essayant de dribbler son chat à la maison.
+2174|a parlé tactique avec le coach.
+2175|Il touchera plus de ballons en seconde période.
+2176|Le premier rendez-vous s'est super bien passé.
+2177|La presse people était déjà au courant.
+2178|Une course a été proposée.
+2179|Le monde du foot célèbre l'heureux couple.
+2180|Je donnerai tout pour ce maillot !
+2181|Son explication : « Ce n'étaient pas nos lacets. »
+2182|est fermé.
+2183|Les offres en attente ont expiré.
+2184|Le brassard est à toi.
+2185|En match, tu peux faire glisser tes coéquipiers en position.
+2186|Je continuerai à mériter ce brassard.
+2187|n'a pas pu le débloquer.
+2188|phase de ligue terminée.
+2189|Les fans le veulent dans l'effectif.
+2190|Les fans ont fait du thé en attendant.
+2191|Il a sorti un jaune « mentalement ».
+2192|L'arbitre assistant a levé son drapeau.
+2193|a été très impressionné par ta performance.
+2194|Plusieurs centres de formation te veulent.
+2195|Arbitre : « Même moi j'y ai cru. »
+2196|Les footballeurs n'ont pas le droit de parier ; la FIFA peut enquêter et infliger une longue suspension.
+2197|Ton premier match
+2198|Il est temps de mettre fin à ta carrière.
+2199|de nouveau en feu !
+2200|commence à fatiguer.
+2201|La précision des tirs baisse.
+2202|Aujourd'hui il y a un match entre quartiers et un recruteur regarde !
+2203|Ce trophée appartient à tout le pays.
+2204|champions !
+2205|Le meilleur centre de formation d'Europe est à nous.
+2206|a fait le show !
+2207|Je rendrai cette confiance sur le terrain.
+2208|Ce trophée nous appartient à tous.
+2209|Coach battu : « La pelouse était trop glissante. »
+2210|Les rivaux ont peur de tourner la page du calendrier.
+2211|Son agent : « Mon téléphone sonne tellement que la batterie ne suit pas. »
+2212|Tu es invité !
+2213|Fais suer ce maillot ! »
+2214|On en reparlera quand ta forme s'améliorera. »
+2215|· Stars adverses :
+2216|· Ta note
+2217|· Star :
+2218|On a bossé, on a gagné.
+2219|Et une prime de but en plus.
+2220|Une école gratuite pour les enfants.
+2221|Montre-toi d'abord dans le match de rue.
+2222|Quand un recruteur t'emmènera dans un centre de formation, ton équipe et ta ligue apparaîtront ici.
+2223|Deuxième jaune, CARTON ROUGE !
+2224|est expulsé.
+2225|J'ai signé mon premier contrat pro !
+2226|Les rêves deviennent réalité.
+2227|Qui sont les champions ?
+2228|C'est nous !
+2229|Aucune offre pour l'instant.
+2230|Si tu joues bien et que ta célébrité grandit, les marques appelleront.
+2231|Quand tu tires, regarde le coin vide, pas le gardien.
+2232|Place-le là.
+2233|📋 Tu es dans le onze de départ !
+2234|Tu es dans le onze de départ !
+2235|est ouvert !
+2236|clubs te veulent.
+2237|🟥 Tu as pris un carton rouge.
+2238|Tu as pris un carton rouge.

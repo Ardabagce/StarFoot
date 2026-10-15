@@ -1,0 +1,350 @@
+1700|mengeksekusi penalti dengan tenang!
+1701|sangat terkesan dengan penampilanmu. Beberapa akademi menginginkanmu.
+1702|mempelajari kelemahan kiper lawan.
+1703|melewati para lawannya dengan dribel!
+1704|dibeli
+1705|juggling, lumayan
+1706|meneleponmu
+1707|mendapat kartu kuning karena tekel keras.
+1708|membakar semangat tim di ruang ganti!
+1709|membatalkan sponsor.
+1710|tekel: pelatih menyukai kerja bertahanmu
+1711|kehilangan bola.
+1712|menempatkannya di pojok!
+1713|ada di turnamen, tapi kamu tidak dipanggil.
+1714|tidak lolos ke turnamen.
+1715|menembak, kiper menyelamatkan.
+1716|mulai lelah. Akurasi tembakan menurun.
+1717|melompat tinggi dan menyundulnya masuk!
+1718|tahun
+1719|· bertahan 30-40 pertandingan
+1720|· Foto: StarFoot Agency
+1721|mencoba dribel, bola keluar untuk lemparan ke dalam.
+1722|kehilangan bola saat mencoba dribel.
+1723|penghargaan
+1724|Pojok Taruhan
+1725|JUARA! Trofi ini milik seluruh negeri.
+1726|Pemenang
+1727|juara! Akademi terbaik Eropa milik kita.
+1728|menembus pertahanan dengan umpan satu-dua yang apik!
+1729|· kasta ke-2
+1730|· Tanah air ibu:
+1731|· Malam ini
+1732|· Pilihan timnasmu:
+1733|· gratis
+1734|· ketuk atau geser kiri/kanan di layar ·
+1735|· ketuk terlalu cepat dan kamu kehilangan ritme ·
+1736|· menikah
+1737|· target bergerak di gawang; kamu akan membidik kira-kira ke sana ·
+1738|· raih bola sebelum lawanmu ·
+1739|· oper sebelum waktu habis
+1740|· bintang
+1741|· pemain bintang
+1742|· Memenuhi syarat untuk kedua timnas
+1743|DRIBEL!
+1744|Latihan Dribel
+1745|Kami bekerja keras, kami menang. Plus bonus gol.
+1746|Sepatu Lumpur (Pul Panjang)
+1747|Tangga Kelincahan
+1748|Perempat Final
+1749|Seri
+1750|Ganda
+1751|Liga Sepatu B
+1752|Liga Sepatu
+1753|Anak
+1754|Sekolah gratis untuk anak-anak. Moral +2, Ketenaran +5 setiap minggu
+1755|Kebahagiaan anak-anak juga membuatmu senang.
+1756|Kamu sangat bersenang-senang tapi tidak tidur.
+1757|Sepatu Berkerah Kaus Kaki
+1758|LIGA GURUN
+1759|Liga Gurun
+1760|Penghargaan
+1761|Upacara Penghargaan
+1762|Tidak ada penghargaan
+1763|Klaim Hadiah
+1764|Hadiahmu
+1765|Hadiahmu sudah siap!
+1766|Tunjukkan dirimu dulu di pertandingan jalanan. Setelah pencari bakat membawamu ke akademi, tim dan ligamu akan muncul di sini.
+1767|Sekolah dan sepak bola dulu!
+1768|Pulau Pribadi
+1769|Gol Spesial
+1770|Pelatih Pribadi
+1771|Jet Pribadi
+1772|Pelatih pribadi
+1773|×1,8 perkembangan · risiko cedera
+1774|×2,3 perkembangan
+1775|MISTAR!
+1776|Peringkat negara
+1777|Kamu memenangkan piala negaramu
+1778|Ketenaran
+1779|Fokus ketenaran (semua bertumpuk)
+1780|Ketenaran dan Media Sosial
+1781|DJ terkenal sedang tampil, kamu berdansa sampai subuh!
+1782|Ketenaran dan moralmu meningkatkan peluangmu
+1783|Ketenaran dan dukungan suportermu bertambah.
+1784|Promosi
+1785|Kita promosi!
+1786|kamu jauh di atas
+1787|guru
+1788|membentur mistar
+1789|kamu di atas
+1790|Liga Iberia 2
+1791|Liga Iberia
+1792|Jersey Idolamu
+1793|Kamu menjadi kapten di dua klub berbeda
+1794|Kedua negara menginginkanmu!
+1795|Duel
+1796|Duel, ketahanan cedera.
+1797|Pilih apa yang dilakukan di babak kedua.
+1798|Lebih banyak peluang di babak kedua
+1799|Peluang lebih besar masuk di babak kedua
+1800|Hubungan
+1801|Hubungan menguat, moral naik
+1802|Hubungan
+1803|Starting XI
+1804|Kandidat starting XI
+1805|8 besar ke babak 16 besar · 9-24 play-off · 25-32 tersingkir
+1806|Pembelian Pertama
+1807|Mobil Pertamamu (Hatchback)
+1808|Assist Pertama
+1809|Gol Pertama
+1810|Trofi Pertama
+1811|Pertandingan Pertama
+1812|Juta Pertama
+1813|Kamu memenangkan trofi atau penghargaan pertamamu
+1814|Pertandingan pertamamu adalah pertandingan jalanan; pencari bakat akan menonton
+1815|Aku menandatangani kontrak profesional pertamaku! Mimpi jadi kenyataan.
+1816|Kamu menandatangani kontrak profesional pertamamu
+1817|Kamu memainkan pertandingan resmi pertamamu
+1818|Turun minum.
+1819|Piala Kaisar
+1820|Sepatu Bintang Bertanda Tangan
+1821|Punya kode diskon?
+1822|Inggris
+1823|Piala Inggris
+1824|Liga Inggris
+1825|Skotlandia
+1826|Piala Skotlandia
+1827|Spanyol
+1828|Liga Spanyol
+1829|Istanbul
+1830|Italia
+1831|Piala Italia
+1832|Liga Italia
+1833|Sesi bagus
+1834|KANDANG
+1835|JUARA
+1836|JUARA!
+1837|JUARA
+1838|GELAR
+1839|Siapa juaranya? Kita!
+1840|Juara:
+1841|P. Champions
+1842|Piala Champions
+1843|Malam Piala Champions
+1844|Kamu beruntung, tidak ada masalah.
+1845|Penthouse Pusat Kota
+1846|Malam hebat di klub paling hits di kota!
+1847|Tunggu dulu
+1848|Belum ada tawaran. Kalau kamu bermain bagus dan makin terkenal, merek akan menelepon.
+1849|Aku sudah menonton tendangan itu 40 kali
+1850|Tembakan
+1851|Tembakan +1, Teknik +1
+1852|Tembakan +2, Teknik +2, Kecepatan +1
+1853|Tembakan +3, Teknik +3, Kecepatan +2
+1854|Tembakan +5, Teknik +4, Kecepatan +3, Umpan +2
+1855|Tembakan +5, Dribel +4, Teknik +3
+1856|Tembakan +6, Teknik +5, Kecepatan +4, Umpan +3, Dribel +3
+1857|Saat menembak, lihat pojok yang kosong, bukan kipernya. Arahkan ke sana.
+1858|Menentukan kekuatan dan akurasi maksimal tembakanmu.
+1859|penyanyi
+1860|menembak (seperti ketapel), ke rekan setimmu
+1861|• ⭐ Pemain terbaik pertandingan
+1862|• Pemain terbaik pertandingan
+1863|−12 energi
+1864|−24 energi
+1865|−3 energi
+1866|−5 energi
+1867|★ kunci untuk posisimu
+1868|kunci untuk posisimu
+1869|⚡ Peluang Menyerang
+1870|Peluang Menyerang
+1871|⚪ Penalti!
+1872|Penalti!
+1873|⚽ Pergi latihan
+1874|Pergi latihan
+1875|✍️ Ayo
+1876|Ayo
+1877|❌ Tolak
+1878|❤️ Ikut
+1879|Pemain Terbaik Liga
+1880|🌱 Pemain Muda Terbaik Tahun Ini
+1881|🍕 Kamu menghabiskan waktu dengan rekan setim: ikatan tim tumbuh
+1882|Kamu menghabiskan waktu dengan rekan setim: ikatan tim tumbuh
+1883|🎂 Sekarang usiamu
+1884|Sekarang usiamu
+1885|🎉 Pergi ke pesta
+1886|Pergi ke pesta
+1887|🎮 Ikut
+1888|🎯 Di Kotak Penalti!
+1889|Di Kotak Penalti!
+1890|🎯 Tendangan Bebas
+1891|Tendangan Bebas
+1892|🏁 Karier Berakhir
+1893|Karier Berakhir
+1894|🏠 Tetap di rumah
+1895|🏠 Pulang
+1896|Pulang
+1897|👋 Pensiun
+1898|👋 Saatnya Berpamitan
+1899|Saatnya Berpamitan
+1900|💨 Peluang Dribel
+1901|Peluang Dribel
+1902|💪 Tetap dan bekerja
+1903|💪 Cederamu sudah pulih, kamu bisa kembali ke lapangan!
+1904|Cederamu sudah pulih, kamu bisa kembali ke lapangan!
+1905|💾 Tersimpan
+1906|Tersimpan
+1907|📈 Klubmu promosi!
+1908|Klubmu promosi!
+1909|📉 Klubmu terdegradasi musim lalu.
+1910|Klubmu terdegradasi musim lalu.
+1911|📋 Hari ini kamu mulai dari bangku cadangan.
+1912|Hari ini kamu mulai dari bangku cadangan.
+1913|📋 Pelatih tidak memasukkanmu ke skuad untuk pertandingan ini.
+1914|Pelatih tidak memasukkanmu ke skuad untuk pertandingan ini.
+1915|📚 Belajar
+1916|Belajar
+1917|🔥 Aku akan unjuk diri
+1918|Aku akan unjuk diri
+1919|🗯️ Balas
+1920|Balas
+1921|😊 Terima kasih, Kakek!
+1922|Terima kasih, Kakek!
+1923|😎 Sesumbar
+1924|Sesumbar
+1925|😤 Lanjutkan
+1926|😴 Kamu beristirahat: Energi +20
+1927|Kamu beristirahat: Energi +20
+1928|😴 Tidur lebih awal
+1929|Tidur lebih awal
+1930|🙁 Jangan pergi
+1931|Jangan pergi
+1932|🙁 Jangan ikut
+1933|Jangan ikut
+1934|🙂 Tetap rendah hati
+1935|Tetap rendah hati
+1936|🙅 Tolak
+1937|🛡️ Lawan Menyerang!
+1938|Lawan Menyerang!
+1939|🟥 Kamu mendapat kartu merah. Pelatih tidak senang.
+1940|Kamu mendapat kartu merah. Pelatih tidak senang.
+1941|🤐 Abaikan
+1942|Abaikan
+1943|🤝 Terima
+1944|🤾 Sepak Pojok - Bola Atas
+1945|Sepak Pojok - Bola Atas
+1946|🥇 Bola Emas (Pemain Terbaik Tahun Ini)
+1947|Bola Emas (Pemain Terbaik Tahun Ini)
+1948|🧊 Istirahat
+1949|🧭 Pengatur Serangan
+1950|Pengatur Serangan
+1951|MINGGU
+1952|Kamu akan unjuk diri di 3 pos.
+1953|Makin bagus penampilanmu, makin besar klub yang memberi tawaran!
+1954|Pelatih tim utama menonton pertandinganmu dan mengundangmu ke sesi tim utama minggu ini.
+1955|Pelatih tim utama ingin kamu berlatih dengan para pemain pro minggu ini.
+1956|Temponya akan sangat tinggi.
+1957|Pencari bakat klub ada di tribun!
+1958|ASSIST!
+1959|Keluargamu sangat senang.
+1960|Masa akademimu sudah berakhir.
+1961|Pilih klub untuk memulai karier profesionalmu.
+1962|Tapi paparazi memergokimu saat subuh.
+1963|Pelatih tidak senang.
+1964|Mimpiku menjadi kenyataan.
+1965|Assist sama manisnya dengan gol.
+1966|Selamat untuk rekan setimku.
+1967|Jaring bergetar!
+1968|Taruhan:
+1969|Tahan untuk mempercepat, lepas untuk memperlambat.
+1970|Jaga jarum kecepatan di zona hijau selama 12 detik.
+1971|Taruhanmu dikembalikan.
+1972|Kamu mengubah pola makan dan tidurmu.
+1973|Foto dengan seorang fan menjadi viral.
+1974|meminta penjelasan.
+1975|Sebuah merek olahraga ingin kontrak sponsor denganmu:
+1976|Minggu ini ulang tahun ibumu.
+1977|Apa yang akan kamu lakukan?
+1978|Ayo mainkan pertandingannya!
+1979|Kamu tidak bertemu siapa pun minggu ini.
+1980|Musim depan kita isi lemari trofi!
+1981|Kamu sudah mengajukan permintaan musim ini.
+1982|Coba lagi musim depan.
+1983|Satu hari kerja lagi.
+1984|Gol-gol besar!
+1985|3 tembakan di kotak penalti.
+1986|Tarik ke belakang dan lepaskan, bidik pojok gawang.
+1987|Cristiano Ronalda mengunggah video latihan baru.
+1988|Kabarnya otot perutnya akan punya akun sendiri.
+1989|Selamat ulang tahun!
+1990|Keluarga dan teman-temanmu membuat pesta kejutan untukmu.
+1991|Jersey bintang terbesar di eranya.
+1992|Suatu hari aku akan menjadi...
+1993|Erling Halland mengungkapkan ia makan 14 telur untuk sarapan.
+1994|Peternakan ayam menambah sif malam.
+1995|Larangan FIFA-mu sudah berakhir.
+1996|Kamu bisa kembali ke lapangan.
+1997|Tuduhannya serius.
+1998|Pelanggaran di kotak penalti!
+1999|Lumayan!
+2000|merekomendasikanmu ke klub-klub papan tengah.
+2001|Kamu mengejar mimpi menjadi pesepak bola.
+2002|Pilih tahun dan usia awalmu.
+2003|Kamu tidak memilih klubmu: pencari bakat yang menemukanmu.
+2004|Pesepak bola tidak boleh bertaruh.
+2005|Setiap taruhan menarik perhatian FIFA; bertaruh pada pertandinganmu sendiri sangat berisiko.
+2006|Jika ketahuan kamu menghadapi larangan panjang, denda, dan kehilangan sponsor.
+2007|S.
+2008|P. Amerika
+2009|Kehidupan malam.
+2010|Senin kembali latihan!
+2011|Para suporter ini pantas mendapatkannya.
+2012|Keseluruhan
+2013|Kamu merebut bola di belakang.
+2014|Ketuk rekan setim di depan untuk mengoper, atau tarik ke belakang dan lepaskan untuk umpan panjang.
+2015|Mencetak golku, meraih 3 poin.
+2016|Lanjut ke berikutnya!
+2017|Malam yang luar biasa!
+2018|Ikatanmu dengan rekan setim makin kuat.
+2019|Bolanya aku bawa pulang.
+2020|Mulai karier sepak bola impianmu.
+2021|Jadilah legenda.
+2022|Hari terbaik dalam hidupku.
+2023|Hari terindah dalam hidupmu!
+2024|Kamu belum dianggap siap untuk tim utama.
+2025|Buktikan dirimu satu musim lagi di U19!
+2026|Cetak gol atau unggah lewat "Media Sosial" di rencana mingguan.
+2027|Pelatih mengagumi tekadmu.
+2028|Pelatih terkesan!
+2029|Pelatih mengirim umpan dari sepak pojok.
+2030|Ketuk saat bola mencapai kepalamu; kamu akan membidik kira-kira ke arah target.
+2031|Pelatih memutuskan berdasarkan performamu, hubungan kalian, dan pemilik nomor saat ini.
+2032|Nomor seperti 10, 9, dan 7 lebih sulit.
+2033|Dengan hubungan baik dengan pelatih, kamu jadi starter.
+2034|Energi rendah menurunkan performamu.
+2035|Hentikan penyerang.
+2036|Zona hijau adalah tekel bersih.
+2037|N.
+2038|Kiper tangkas, pertahanan kuat, perkembangan lambat.
+2039|Tantangan sejati.
+2040|Tertangkap kamera!
+2041|Para suporter kecewa.
+2042|Bola cepat berhenti di salju.
+2043|Bola musim dingin oranye dimainkan.
+2044|Tekel meluncur adalah pilihan terakhir.
+2045|Tetap berdiri, bersabarlah.
+2046|Kamu menang!
+2047|Kamu merasa lebih ringan.
+2048|Sepak pojok!
+2049|Ketuk saat bola mencapai kepalamu; kamu akan membidik kira-kira ke target yang bergerak.
