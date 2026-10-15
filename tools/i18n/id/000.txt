@@ -1,0 +1,300 @@
+0|Kebijakan Privasi
+1|gol
+2|Ganti liga
+3|bebas
+4|mis. Rizky
+5|mis. Bintang
+6|Poin aksi
+7|Fokus latihan
+8|Intensitas
+9|Jenis tembakan
+10|Hapus karier
+11|KAMU
+12|INFO
+13|KARTU
+14|BABAK I
+15|LURUS
+16|LAMBAT
+17|CEPAT
+18|BAGUS
+19|NANTI
+20|BERIKUTNYA
+21|AS
+22|MEREK
+23|Gelar
+24|Seleksi selesai · Skormu
+25|Pertandingan selesai · Nilaimu
+26|berkata "Ya!"
+27|Tanggal pernikahan sudah ditetapkan.
+28|Pemandu bakat dari beberapa klub mencatat di tribun!
+29|Para kiper melihatnya dalam mimpi buruk mereka.
+30|Nilaimu:
+31|Jalan Kita
+32|Gang Belakang
+33|Kamp Seleksi
+34|Bahasa
+35|Mungkin bintang baru sedang lahir.
+36|Unggahan perpisahannya cepat mendapat jutaan suka.
+37|Pencetak Gol Terbanyak
+38|Pertama kali
+39|Final
+40|Play-off
+41|Fase Liga
+42|SEL
+43|JLN
+44|GNG
+45|menawarimu kontrak profesional tim utama!
+46|Terpilih pemain terbaik pertandingan untuk pertama kali
+47|Play-off:
+48|tersisa
+49|TERSISA
+50|Pemain bintang:
+51|km/j angin
+52|km/j
+53|kalah
+54|menang
+55|Final Nations League
+56|Seminggu sekali
+57|Opsi privasi iklan
+58|Belum ada iklan saat ini. Coba lagi nanti.
+59|Belum ada iklan saat ini.
+60|Coba lagi nanti.
+61|postingan
+62|mengikuti
+63|Notifikasi
+64|Belum ada notifikasi.
+65|Hapus
+66|Tutup
+67|Beli Sesi Fisioterapi di Hidup › Toko untuk memangkas cederamu 2 minggu.
+68|Sesi Fisioterapi memangkas cederamu 2 minggu.
+69|Sudah dipakai musim ini
+70|Mode karier
+71|Baru
+72|Karier
+73|Dari sepak bola jalanan ke final Piala Dunia. Tulis kisahmu, tarik perhatian pemandu bakat, dan jadilah legenda.
+74|Dari sepak bola jalanan ke final Piala Dunia.
+75|Tulis kisahmu, tarik perhatian pemandu bakat, dan jadilah legenda.
+76|Identitasmu
+77|Nama di punggung jersey-mu
+78|Asal-usulmu
+79|Jika berbeda, kedua tim nasional bisa memanggilmu
+80|Titik awal
+81|Kaki dominan
+82|Posisimu
+83|Menentukan atribut mana yang paling penting dalam latihan
+84|Bisa kamu ubah kapan saja di tab Karier
+85|Atributmu
+86|Mencetak gol dan menentukan pertandingan lewat tembakannya.
+87|Mengatur permainan dan bersinar lewat umpan serta assist.
+88|Memimpin pertahanan; merebut bola dan menguasai duel udara.
+89|Era 80-an: masa para legenda
+90|Era 90-an: tahun keemasan Eropa
+91|Era 2000-an: zaman para bintang
+92|Era 2010-an: sepak bola modern
+93|Bermain bersama bintang masa kini
+94|poin
+95|Kaki kiri
+96|Kaki kanan
+97|Mulai Karier
+98|Kiri
+99|Kanan
+100|PD
+101|GT
+102|Seri
+103|· jika kamu lolos
+104|8 besar ke perempat final · peringkat 9-16 tersingkir
+105|✈ KEDATANGAN
+106|KEDATANGAN
+107|MENDARAT
+108|SUPORTER
+109|menunggumu
+110|Sambutan di Bandara
+111|Lanjut ke Penandatanganan
+112|Upacara Penandatanganan
+113|Transfer bebas
+114|Tanda tangani kontrak
+115|Mulai di klub
+116|RESMI!
+117|PLINTIR
+118|◀ PLINTIR
+119|PLINTIR ▶
+120|Gagal!
+121|Tonton iklan untuk memainkan momen ini sekali lagi.
+122|Tonton iklan · Coba lagi
+123|Lanjut
+124|Sekali per pertandingan
+125|Tonton iklan · Cedera −1 minggu
+126|Sekali per cedera
+127|Tonton iklan · +1 poin aksi
+128|+1 poin aksi
+129|Kamu sudah pulih!
+130|StarFoot Premium
+131|Premium aktif
+132|Tanpa iklan interstisial · hadiah tanpa iklan
+133|Sekali beli · berlaku untuk semua kariermu
+134|Iklan interstisial dihapus sepenuhnya
+135|Paket hadiah ×2/×3, +1 poin aksi, energi, cedera −1 minggu, dan hadiah "coba lagi"
+136|tanpa menonton iklan
+137|Dapatkan Premium
+138|Pulihkan pembelian
+139|⭐ Premium aktif! Terima kasih atas dukunganmu.
+140|Premium aktif! Terima kasih atas dukunganmu.
+141|⭐ Premium aktif!
+142|Premium aktif!
+143|Terima kasih atas dukunganmu.
+144|Pembelian tidak dapat diselesaikan. Silakan coba lagi nanti.
+145|Pembelian tidak dapat diselesaikan.
+146|⭐ Premium dipulihkan.
+147|Premium dipulihkan.
+148|Tidak ada pembelian Premium di akun ini.
+149|Pemulihan gagal. Periksa koneksi internetmu.
+150|Pemulihan gagal.
+151|Periksa koneksi internetmu.
+152|Mainkan momen ini sekali lagi dengan Premium.
+153|⭐ Premium
+154|Bagikan otomatis
+155|Atur ulang
+156|Pengaturan
+157|Umum
+158|Permainan
+159|Privasi
+160|Permainan tersimpan otomatis setiap minggu
+161|Jeda minum sebentar, pertandingan berlanjut.
+162|StarFoot (web)
+163|(rivalmu!)
+164|(rival)
+165|+1 atribut fokus
+166|+15 moral
+167|Kamu berusia 18 tahun dan ini musim pro pertamamu di klub papan tengah. Semua orang menunggu golmu.
+168|Kamu berusia 18 tahun dan ini musim pro pertamamu di klub papan tengah.
+169|Semua orang menunggu golmu.
+170|Kamu berusia 33 tahun dan ini mungkin musim terakhirmu di klub raksasa liga. Mahkotai kariermu dengan gelar.
+171|Kamu berusia 33 tahun dan ini mungkin musim terakhirmu di klub raksasa liga.
+172|Mahkotai kariermu dengan gelar.
+173|Dapatkan nilai 7,5 atau lebih
+174|BALLON D'OR! Terpilih sebagai yang terbaik di dunia. Ini untuk rekan setim, keluargaku, dan para suporter kita.
+175|BALLON D'OR!
+176|Terpilih sebagai yang terbaik di dunia.
+177|Ini untuk rekan setim, keluargaku, dan para suporter kita.
+178|Berikan satu assist
+179|Pertandingan terbesarku masih akan datang, begitulah aku.
+180|Mimpi Eropa
+181|Lebih akurat dalam tembakan saat open play dan jarak dekat.
+182|Kamu baru pulih dari cedera parah, pelatih tidak percaya padamu, dan moralmu anjlok. Buktikan semua orang salah.
+183|Kamu baru pulih dari cedera parah, pelatih tidak percaya padamu, dan moralmu anjlok.
+184|Buktikan semua orang salah.
+185|Tekanan membuat kami lebih kuat.
+186|Tekanan ada pada mereka, kami favoritnya.
+187|Konferensi Pers
+188|Kamu berhasil! 🏅
+189|Kamu berhasil!
+190|Mulai
+191|Klasik Belgia
+192|Lakukan aktivitas (istirahat, tim, pelatih, media sosial)
+193|Menangkan pertandingan
+194|Main dalam pertandingan
+195|Penyelesai Peluang
+196|Tidak ada slot karier kosong. Kamu bisa menghapus karier dari menu utama.
+197|Tidak ada slot karier kosong.
+198|Kamu bisa menghapus karier dari menu utama.
+199|Tidak ada slot kosong
+200|Aku yang akan menentukan derbi ini.
+201|Aku sangat menginginkan trofi ini.
+202|Kebangkitan
+203|Pemain Laga Besar
+204|Der Klassiker
+205|Apa yang diharapkan suporter darimu di pekan derbi?
+206|Setiap momen sedikit lebih mudah di derbi dan final.
+207|Manusia Besi
+208|Tembok
+209|Pesepak bola terbaik di dunia
+210|Semua bertanya-tanya apakah ia akan mengikuti jejak ayahnya.
+211|El Clásico
+212|Tentu, selisihnya sangat jauh.
+213|Apakah kamu merasakan tekanan di babak gugur?
+214|Minimal 20 pertandingan dan rata-rata 7,0+
+215|Ya, malam ini kita ukir sejarah.
+216|Final · Konferensi Pers
+217|Bagaimana perasaanmu sebelum final?
+218|Puncak Prancis
+219|Saat tendangan bebas, kiper sulit menjangkau dan tembakanmu lebih akurat.
+220|Tidak ada favorit dalam sepak bola.
+221|Derbi Old Firm
+222|Cetak gol
+223|Mereka menunggu gol, aku akan mencetaknya.
+224|Buka peti misi
+225|Gambar diunduh.
+226|Hadiah Harian
+227|Pengingat hadiah harian dan energi.
+228|Ancaman Udara
+229|Mulai dari situasi yang sudah disiapkan, capai target sebelum akhir musim, dan raih lencananya.
+230|Kamu gagal mencapai target, tapi kisahmu belum selesai. Lanjutkan kariermu atau coba skenario lagi.
+231|Kamu gagal mencapai target, tapi kisahmu belum selesai.
+232|Lanjutkan kariermu atau coba skenario lagi.
+233|Setiap pertandingan penting, selangkah demi selangkah.
+234|Kamu kapten klub sederhana yang belum pernah bermain di Eropa. Para suporter hanya punya satu mimpi.
+235|Kamu kapten klub sederhana yang belum pernah bermain di Eropa.
+236|Para suporter hanya punya satu mimpi.
+237|Klasik Belanda
+238|Puncak Belanda
+239|Klasik Jepang
+240|Lebih kuat dalam duel udara.
+241|Derbi Laut Hitam
+242|Gol karier
+243|Apakah ini pertandingan terbesar dalam kariermu?
+244|Kami percaya pada diri sendiri.
+245|Percaya diri
+246|Tidak ada yang bisa menghentikanku!
+247|Trofi
+248|Piala sudah milik kita, kita tinggal mengangkatnya.
+249|Sang Penyelamat
+250|Derbi London Utara
+251|Klasik Utara
+252|Kamu naik podium:
+253|Derbi Antarbenua
+254|Juarai liga
+255|Kamu bergabung dengan tim terlemah di liga sebagai striker bintang berusia 28 tahun. Selamatkan mereka dari degradasi.
+256|Kamu bergabung dengan tim terlemah di liga sebagai striker bintang berusia 28 tahun.
+257|Selamatkan mereka dari degradasi.
+258|Derbi Lisbon
+259|Derbi London
+260|Derbi Los Angeles
+261|Derbi Madrid
+262|Derbi Manchester
+263|Rebut bola 3 kali dalam pertandingan
+264|Lepaskan total 3 tembakan dalam pertandingan
+265|Klasik Meksiko
+266|Derbi Merseyside
+267|Tantangan
+268|Derbi Milan
+269|Luar biasa!
+270|Belum kali ini...
+271|Kita hancurkan mereka di kandang sendiri!
+272|Pengatur Serangan
+273|Kartu pemain
+274|Nama pemain
+275|Derbi Paris
+276|Lebih baik dalam umpan dan umpan satu-dua.
+277|Derbi Paulista
+278|Bagikan
+279|Raja Penalti
+280|Kamu mudah mengalahkan kiper dari titik penalti.
+281|Klasik Portugal
+282|Rekor Pecah
+283|Rekor!
+284|Sejarah ini milik kita semua.
+285|Derbi Riyadh
+286|Derbi Roma
+287|Kita bicara di lapangan, kami menghormati mereka.
+288|Risiko cedera 35% lebih rendah.
+289|Tenang
+290|Aku tenang, fokus pada rencana.
+291|Galeri masih kosong. Akhiri karier dengan pensiun untuk mendapat tempat di sini.
+292|Galeri masih kosong.
+293|Akhiri karier dengan pensiun untuk mendapat tempat di sini.
+294|Peti sudah diambil. Misi baru besok!
+295|Peti sudah diambil.
+296|Misi baru besok!
+297|Untuk memulai skenario, hapus dulu satu karier dari menu utama.
+298|Kariermu berlanjut.
+299|Rentetanmu terputus, mulai lagi dari awal.

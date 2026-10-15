@@ -1,0 +1,350 @@
+650|BUNDESLIGA
+651|Kampung halaman ayah
+652|Kampung halaman ayah:
+653|Ayahmu sedikit tersinggung.
+654|Ayahmu ingin menonton pertandinganmu dari tribun minggu ini.
+655|Ayahmu akan menonton dengan bangga dari tribun!
+656|Kalian menonton pertandingan lama ayahmu bersama.
+657|Pasang taruhan
+658|Gawang Halaman Belakang
+659|Saldo
+660|Saldomu
+661|Tahan
+662|Tahan untuk mengisi tenaga; lepas di pita hijau untuk mendorong lawan.
+663|Tahan: percepat
+664|Tahan untuk mempercepat, lepas untuk memperlambat. Jaga jarum kecepatan di pita hijau selama 12 detik.
+665|Kalian akan berlatih bersama lain hari.
+666|Usia awal
+667|Tahun awal
+668|Ayo!
+669|Mungkin lain kali.
+670|Belgia
+671|Piala Belgia
+672|Sudah kubilang dari dulu
+673|Aku juga beli satu
+674|Ajak aku latihan juga
+675|Nutrisi
+676|Futsal lima lawan lima
+677|Carikan dia tiket
+678|Pilih seekor kuda; jika menang, kamu dibayar sesuai odds-nya.
+679|Kamu istirahat sehari dan rasa sakitnya hilang. (1 aksi terpakai)
+680|Kamu mendapat nilai 10 dalam satu pertandingan
+681|Kamu membuat 3 assist dalam satu pertandingan
+682|Kamu mencetak 3 gol dalam satu pertandingan
+683|Kamu mencetak 4 gol dalam satu pertandingan
+684|4 kontribusi gol dalam satu pertandingan (gol + assist)
+685|Kamu mencetak 5 gol dalam satu pertandingan
+686|Kamu mendapat nilai 9,0 dalam satu pertandingan
+687|Kamu memenangi Sepatu Emas dalam satu musim
+688|Pilih taruhan dan putar rodanya.
+689|Kamu fokus ke pertandingan berikutnya.
+690|Seorang jurnalis olahraga ingin mewawancaraimu.
+691|Mau jalan-jalan?
+692|Sebuah yayasan amal mengundangmu ke festival sepak bola anak-anak.
+693|Sepeda
+694|Latihan Penyelesaian
+695|Energi Tak Terbatas
+696|Blackjack, roulette, pacuan kuda
+697|Blender dan Protein
+698|Biaya transfer
+699|Berapa biaya transfernya?
+700|Pangeran Stepa
+701|Kosong
+702|Spasi
+703|Brasil
+704|Piala Brasil
+705|Liga Brasil
+706|Premier League Britania
+707|Championship Britania
+708|Brussel
+709|Mobil ini lebih mahal dari gajiku
+710|Ini baru permulaan
+711|Gol ini untuk keluarga kita.
+712|Minggu ini ulang tahun ibumu. Apa yang akan kamu lakukan?
+713|Kamu sudah bicara dengan pelatih minggu ini.
+714|Tidak ada aksi tersisa minggu ini.
+715|Tidak ada aksi tersisa minggu ini. Ayo main!
+716|Kamu tidak bertemu siapa pun minggu ini. Mungkin lain kali.
+717|Sudah bicara minggu ini
+718|Tidak terpakai minggu ini
+719|Bukan minggu ini
+720|Ini tidak bisa dibatalkan.
+721|Kamu sudah bertaruh di pertandingan ini.
+722|Kamu tidak bermain di pertandingan ini.
+723|Swafoto ini memenangkan pertandingan
+724|Tidak ada piala musim ini.
+725|Tidak ada trofi musim ini. Musim depan isi lemarinya!
+726|Kamu sudah mengajukan permintaan musim ini. Coba lagi musim depan.
+727|Anak ini akan jadi Mezzi berikutnya
+728|Aku tak pernah latihan tanpa ini! #iklan
+729|Satu hari kerja lagi. Target besar!
+730|Hari ini cuma ada satu orang di lapangan
+731|Aku capek hari ini
+732|Latihan hari ini akan diguyur hujan deras.
+733|Kamu sudah memakai ini musim ini.
+734|Pergelangan kakimu yang terkilir makin parah,
+735|Mandi Es
+736|Bola Es
+737|Biru es dengan motif api
+738|Kamu tidak boleh bermain sampai skorsing berakhir.
+739|3 tembakan di kotak penalti. Tarik ke belakang lalu lepas, bidik sudut gawang.
+740|Cristiano Ronalda mengunggah video latihan baru. Kabarnya otot perutnya akan punya akun sendiri.
+741|Ambil dompetnya
+742|Sepatu Anak Berperekat
+743|LIGA DATARAN TINGGI
+744|KAMU KEHILANGAN KESEIMBANGAN
+745|TANDANG
+746|TERUSKAN!
+747|Tampilkan lebih sedikit
+748|Lebih baik
+749|Di ruang sempit, posisikan badanmu di antara bola dan lawan.
+750|Kamu tidak hadir.
+751|Stamina
+752|Meningkatkan Stamina dan Kekuatan (sekali per musim)
+753|Liga Dataran Tinggi
+754|Kakekmu mengirimkan uang jajan atas kesuksesan sepak bolamu!
+755|Bek
+756|Mulai lari ke belakang pertahanan sedetik sebelum umpan.
+757|Pengalaman karier yang seimbang.
+758|Vila Pemandangan Laut
+759|Bola Kulit
+760|Detail membuat perbedaan. #sponsor
+761|Turun Minum
+762|Peringatan:
+763|Dengarkan baik-baik dan terapkan
+764|Istirahat
+765|Aku butuh istirahat
+766|Pilih istirahat
+767|Kamu bangun dengan segar.
+768|Ahli Gizi
+769|Selebrasi Lutut
+770|Pertumbuhan alami:
+771|Selamat ulang tahun! Keluarga dan teman-temanmu membuat pesta kejutan.
+772|Pemimpin Sejati
+773|Tribun
+774|Status
+775|Statusmu
+776|PIALA DUNIA
+777|JATUH!
+778|Jersey bintang terbesar di eranya. Moral +1 setiap minggu
+779|Dunia
+780|Piala Dunia
+781|Kamu memenangi Piala Dunia
+782|Bintang Dunia
+783|Bintang dunia
+784|Juara Dunia
+785|Kejujuranmu masuk berita dan suporter jatuh cinta padamu.
+786|TIANG!
+787|TERLALU CEPAT, BOLA SUDAH LEWAT
+788|KAMU MELOMPAT TERLALU CEPAT
+789|TERLALU CEPAT!
+790|Kamu berbagi lapangan dengan para legenda!
+791|Sepeda Listrik
+792|Skuter Listrik
+793|Bola Berlian
+794|Pensiun
+795|Kamu yakin ingin pensiun?
+796|Kamu yakin?
+797|Energi
+798|Energi +10, moral +10
+799|Energi +12, otot segar kembali
+800|Energi +15, moral +6
+801|Energi +20, moral +3
+802|Energi +25
+803|Minuman Energi
+804|Energi tidak cukup.
+805|Kamu menghemat energi.
+806|Kamu menghemat energi
+807|Kamu tidur lebih awal, tapi teman-temanmu agak kesal.
+808|Erling Halland mengaku makan 14 telur saat sarapan. Peternakan ayam menambah shift malam.
+809|Klub lama sedih, klub baru senang
+810|Bola kulit jahitan zaman dulu
+811|Studio Musik Rumah
+812|Gym Rumah
+813|Tetap di rumah
+814|Kamu pulang; pelatih sedikit kecewa.
+815|Lamar
+816|Istrimu
+817|Jadwal
+818|Barang-barangmu
+819|PELANGGARAN!
+820|FEDERASI
+821|Komite Disiplin FIFA
+822|Kamu diskors FIFA dan tidak boleh memainkan pertandingan ini.
+823|Skorsing FIFA-mu sudah berakhir. Kamu bisa kembali ke lapangan.
+824|Investigasi FIFA sedang berjalan
+825|LIGA FLAMANDIA
+826|Kontrol plintiran dan akurasi tembakan.
+827|Keunggulanmu (atas peringkat 2)
+828|Pelanggaran di kotak penalti! Penalti!
+829|Itu bisa jadi pelanggaran
+830|P. Federasi
+831|Piala Federasi
+832|Malam Piala Federasi
+833|Sesi Fisioterapi
+834|Liga Flamandia
+835|Tidak bermain
+836|Kasih jersey-mu, bro
+837|Sudah beli jersey-mu
+838|Penyerang
+839|Fotonya dapat banyak suka
+840|Fotomu dapat banyak suka.
+841|Prancis
+842|Piala Prancis
+843|Liga Prancis
+844|Gol Tendangan Bebas
+845|Seri Buku Legenda Sepak Bola
+846|Yayasan Sekolah Sepak Bola
+847|Album Stiker Sepak Bola
+848|Kamu mengejar mimpi menjadi pesepak bola. Pilih tahun dan usia awalmu. Kamu tidak memilih klub: pemandu bakat yang menemukanmu.
+849|Pesepak bola dilarang bertaruh. Setiap taruhan menarik perhatian FIFA; bertaruh di pertandinganmu sendiri sangat berisiko. Jika ketahuan, kamu menghadapi skorsing panjang, denda, dan kehilangan sponsor.
+850|Denyut sepak bola · Dari klub ke dunia
+851|Sepatu Futsal
+852|Badai
+853|P. Amerika Selatan
+854|GALATA TELECOM
+855|MENANG
+856|LIGA PENGEMBANGAN
+857|TARIK DAN LEPAS: TEMBAK
+858|TARIK DAN LEPAS: TEMBAK · KETUK: UMPAN
+859|TERLAMBAT
+860|TERLAMBAT!
+861|KAMU MELEWATINYA!
+862|GOL!
+863|GOOOL!
+864|Rompi Performa GPS
+865|Liga Gaul 2
+866|Liga Gaul
+867|Bola Galaksi
+868|Biru Tengah Malam
+869|Bintang Malam
+870|Kehidupan Malam
+871|Kehidupan malam untuk usia 18+.
+872|Kehidupan malam. Senin kembali latihan!
+873|Kuning yang bersinar di laga malam
+874|Musim depan
+875|Junior
+876|Pesepak bola muda
+877|Tidak perlu
+878|Kembali
+879|Kamu merebut bola di belakang. Ketuk rekan di depan untuk mengumpan, atau tarik dan lepas untuk umpan panjang.
+880|Lengkungkan bola melewati pagar betis dengan menarik ke belakang, atau cungkil dengan Setengah Tinggi.
+881|Liga Jermanik 2
+882|Liga Jermanik
+883|Bola milik bintang sejati
+884|Terlewati
+885|Abaikan saja
+886|Juara terdahulu
+887|Gitar
+888|Memakai
+889|Glasgow
+890|Gol
+891|Pencetak Gol Terbanyak
+892|Pencetak gol terbanyak:
+893|Mesin gol menyala
+894|Selebrasi gol dipilih
+895|Mencetak gol, dapat 3 poin. Lanjut ke laga berikutnya!
+896|Perantau
+897|AMERIKA SELATAN
+898|LIGA MATAHARI
+899|Bola Pelangi
+900|Aku sampai menangis
+901|Pengembara
+902|Sedang tren
+903|Piala Amerika Selatan
+904|Kamu memenangi Piala Amerika Selatan
+905|Liga Matahari
+906|Georgia
+907|Kekuatan
+908|Kekuatan +2, Bertahan +1
+909|HEBAT!
+910|SIAP...
+911|KAMU MELEWATI SEMUANYA!
+912|Sepatu Secepat Cahaya
+913|Aksi mingguan
+914|Siap untuk laga akhir pekan.
+915|Keranjang Buah Mingguan
+916|Pemulihan energi mingguan (yang terbaik berlaku)
+917|Pemulihan energi mingguan +11
+918|Pemulihan energi mingguan +12
+919|Pemulihan energi mingguan +14
+920|Pemulihan energi mingguan +16
+921|Pemulihan energi mingguan +20
+922|Pemulihan energi mingguan +5
+923|Pemulihan energi mingguan +7
+924|Pemulihan energi mingguan +8
+925|Pemulihan energi mingguan +9
+926|Gaji mingguan
+927|Kamu pantas mendapatkannya, bro
+928|Kamuflase hijau khaki
+929|Cincin
+930|Malam yang luar biasa! Ikatanmu dengan rekan setim makin kuat.
+931|Ambil foto kenangan
+932|Lompatlah lebih dulu dari lawan saat menyundul, gunakan lengan untuk keseimbangan.
+933|Berputar di udara dan mendarat dengan lengan terbuka lebar.
+934|Salto ke belakang di udara lalu mendarat.
+935|Bola di udara terbawa angin.
+936|Mulai karier sepak bola impianmu. Jadilah legenda.
+937|Makanan Siap Saji Atlet
+938|Aku siap
+939|Paket Hadiah
+940|Buka hadiahnya
+941|Kamu belum dianggap siap untuk tim utama. Buktikan dirimu satu musim lagi di U19!
+942|Terlalu cepat
+943|Belum ada gol.
+944|Belum ada postingan.
+945|Belum ada postingan. Cetak gol atau posting lewat "Media Sosial" di rencana mingguan.
+946|masing-masing 1 aksi
+947|Setiap minggu
+948|Moral mingguan (semuanya dijumlahkan)
+949|Moral +1 setiap minggu
+950|Moral +1, Ketenaran +1 setiap minggu
+951|Moral +1, Ketenaran +2 setiap minggu
+952|Moral +1, Ketenaran +3 setiap minggu
+953|Moral +1, Ketenaran +4 setiap minggu
+954|Moral +2 setiap minggu
+955|Moral +2, Ketenaran +5 setiap minggu
+956|Moral +2, Ketenaran +6 setiap minggu
+957|Moral +2, Ketenaran +7 setiap minggu
+958|Moral +3, Ketenaran +12 setiap minggu
+959|Moral +3, Ketenaran +8 setiap minggu
+960|Moral +4, Ketenaran +18 setiap minggu
+961|Moral +5, Ketenaran +25 setiap minggu
+962|Setiap liga dan turnamen punya bola sendiri
+963|Setiap panel berbeda warna
+964|Semua Orang Mengenalmu
+965|Hobi dan Hiburan
+966|Pelatih
+967|Pelatih ingin latihan tambahan denganmu setelah latihan.
+968|Coach, mainkan dia di setiap laga
+969|Ikatan dengan pelatih 75
+970|Ikatan dengan pelatih naik
+971|Pelatih mengirim umpan silang dari pojok. Ketuk saat bola sampai di kepalamu; kamu akan membidik kira-kira ke arah target.
+972|Pelatih memutuskan berdasarkan performamu, hubungan kalian, dan pemilik nomor saat ini. Nomor seperti 10, 9, dan 7 lebih sulit.
+973|Jika ikatanmu dengan pelatih atau tim turun di bawah 40, kamu kehilangan ban kapten.
+974|Pelatih suka pemanasanmu, kamu masuk di babak kedua!
+975|Bicara dengan Pelatih
+976|Dengan ikatan baik dengan pelatih kamu jadi starter. Energi rendah menurunkan performamu.
+977|Diskusi taktik dengan pelatih
+978|Hubunganmu dengan pelatih dan tim rusak; kamu kehilangan ban kapten.
+979|Belanda
+980|Piala Belanda
+981|Liga Belanda
+982|Hentikan penyerang. Zona hijau berarti tekel bersih.
+983|Kroasia
+984|Kecepatan
+985|Kecepatan +3, Dribel +2, Menembak +1
+986|Kecepatan +4, Dribel +3, Stamina +2
+987|Ketuk cepat
+988|Bola lebih licin di lapangan basah, tembakan sedikit kurang akurat.
+989|Pemanasan dan tarik perhatian
+990|Kamu sudah pemanasan, tapi pelatih belum berencana mengganti pemain.
+991|Putih es berkilau
+992|Jepang
+993|P. Amerika Utara
+994|GOL SUNDULAN!
+995|DITEPIS KIPER
+996|DITANGKAP KIPER
+997|DITINJU KIPER
+998|KAMU KAPTEN: TAHAN DAN SERET REKAN SETIM
+999|EAGLE INSURANCE

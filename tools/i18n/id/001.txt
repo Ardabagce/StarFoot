@@ -1,0 +1,349 @@
+300|Derbi Sevilla
+301|Assist musim ini
+302|Gol musim ini
+303|Cetak 15 gol musim ini
+304|Hindari degradasi musim ini
+305|Pahlawan Menit Akhir
+306|Tarian Terakhir
+307|Lebih tenang di bawah tekanan pada menit-menit akhir.
+308|Menit terakhir! Rasanya tak ternilai.
+309|Menit terakhir!
+310|Rasanya tak ternilai.
+311|Kesempatan terakhir! Tembakan ini bisa menentukan pertandingan.
+312|Kesempatan terakhir!
+313|Tembakan ini bisa menentukan pertandingan.
+314|Karier StarFoot-ku ⚽ #StarFoot
+315|Karier StarFoot-ku #StarFoot
+316|Mudah diucapkan, sulit dilakukan.
+317|Superclásico
+318|Biasa saja? Kita lihat hari Minggu!
+319|Biasa saja?
+320|Kita lihat hari Minggu!
+321|Aku akan melakukan apa pun yang dibutuhkan tim.
+322|Bawa timmu ke Eropa
+323|Lebih baik dalam merebut bola.
+324|Derbi Turin
+325|Kami di sini untuk lolos.
+326|Semua kariermu
+327|Generasi Berikutnya
+328|Tanpa komentar
+329|Bintang Muda
+330|Penyihir Dribel
+331|Lawan sulit menghentikan dribelmu.
+332|Selesaikan tiga misi, buka petinya
+333|Berani
+334|Derbi Istanbul
+335|Derby d'Italia
+336|Pertahanan mereka bagus, kami sudah siap.
+337|⚡ Energimu penuh! Rencana mingguan dan pertandingan sudah menunggu.
+338|Energimu penuh! Rencana mingguan dan pertandingan sudah menunggu.
+339|⚡ Energimu penuh!
+340|Energimu penuh!
+341|Rencana mingguan dan pertandingan sudah menunggu.
+342|⚽ Timmu menunggu. Lanjutkan kariermu dari tempat terakhir!
+343|Timmu menunggu. Lanjutkan kariermu dari tempat terakhir!
+344|⚽ Timmu menunggu.
+345|Timmu menunggu.
+346|Lanjutkan kariermu dari tempat terakhir!
+347|🎁 Hadiah harianmu sudah siap!
+348|Hadiah harianmu sudah siap!
+349|🎙️ Kamu membuktikan kata-kata beranimu di konferensi pers!
+350|Kamu membuktikan kata-kata beranimu di konferensi pers!
+351|🎙️ Kata-kata beranimu sebelum laga jadi bumerang, suporter kecewa.
+352|Kata-kata beranimu sebelum laga jadi bumerang, suporter kecewa.
+353|Kamu mendapat lencana.
+354|🎯 Skenario
+355|Skenario
+356|Balas dendam tahun depan!
+357|Kamu pesepak bola terbaik di dunia!
+358|🏛️ Galeri Legenda
+359|Galeri Legenda
+360|🏛️ Di Galeri Legenda kamu berada di
+361|Di Galeri Legenda kamu berada di
+363|Media sudah membandingkan kalian.
+364|Kenali rivalmu!
+365|👶 Lanjutkan dengan putramu
+366|Lanjutkan dengan putramu
+367|📊 REKOR!
+368|REKOR!
+369|hari
+370|Bagaimana kamu menjawab?
+371|Apa yang kamu katakan?
+372|Perburuan Ballon d'Or
+373|Rivalmu
+374|Misi Harian
+375|Bagikan kartu pemain
+376|Bagikan kartu musim
+377|Kejar Rekor
+378|Sifat
+379|Skenario
+380|Hasil skenario
+381|kalah. Suporter marah besar.
+382|kalah.
+383|Suporter marah besar.
+384|rekor gol musim
+385|rekor gol dalam satu musim
+386|pencetak gol terbanyak sepanjang masa
+387|· Konferensi Pers
+388|!
+389|. Bidik puncak!
+390|.
+391|Bidik puncak!
+392|lencananya milikmu. Kamu bisa melanjutkan karier selama yang kamu mau.
+393|lencananya milikmu.
+394|Kamu bisa melanjutkan karier selama yang kamu mau.
+395|MENIT TERAKHIR!
+396|Ringkasan Karier
+397|langsung
+398|final
+399|Efek suara
+400|Getaran
+401|Legenda
+402|Superstar
+403|Profesional Terhormat
+404|Pesepak Bola Veteran
+405|Karier Biasa
+406|Skor Legenda
+407|akhir musim
+408|musim
+409|Pertandingan terakhir
+410|liga sama · posisi sama
+411|Rekan Seangkatan
+412|Di antara rekan seangkatan kamu berada di
+413|liga top
+414|kasta kedua
+415|MVP
+416|Liga Alpen
+417|Liga Super Alpen
+418|Liga Aegea
+419|Liga Viking
+420|Liga Adriatik
+421|Liga Bohemia
+422|Liga Vistula
+423|Liga Stepa
+424|LIGA ALPEN
+425|LIGA SUPER ALPEN
+426|LIGA AEGEA
+427|LIGA VIKING
+428|ADRIATIK
+429|LIGA BOHEMIA
+430|LIGA VISTULA
+431|LIGA STEPA
+432|Austria
+433|Swiss
+434|Yunani
+435|Denmark
+436|Ceko
+437|Ukraina
+438|Piala Austria
+439|Piala Swiss
+440|Piala Yunani
+441|Piala Denmark
+442|Piala Kroasia
+443|Piala Ceko
+444|Piala Polandia
+445|Piala Ukraina
+446|Tas
+447|Tasmu
+448|Perawatan
+449|Perlengkapan
+450|Gaya Hidup
+451|Bola
+452|Otomatis
+453|Mata uang
+454|Belum ada apa-apa di bagian ini.
+455|Fisio
+456|ketuk untuk memakai
+457|Pakai
+458|Tidak ada di tasmu. Kamu bisa menyetok di toko.
+459|Tidak ada di tasmu.
+460|Kamu bisa menyetok di toko.
+461|Pakai barang di tasmu dari Beranda › Rencana Mingguan tanpa ke toko.
+462|Sesi fisio memangkas cedera 2 minggu. Setok di toko dan pakai dari tasmu di Rencana Mingguan.
+463|Setok di toko dan pakai dari tasmu di Rencana Mingguan.
+464|Internasional
+465|Caps U19
+466|Caps U21
+467|Poin:
+468|gol ×3
+469|assist ×2
+470|+ level liga dan tim (maks 8). Nilai pertandinganmu ditambahkan ke skormu.
+471|+ level liga dan tim (maks 8).
+472|Nilai pertandinganmu ditambahkan ke skormu.
+473|Misi hari ini selesai
+474|Misi baru datang besok
+475|App Store tidak dapat dijangkau saat ini. Periksa koneksimu dan coba lagi.
+476|App Store tidak dapat dijangkau saat ini.
+477|Periksa koneksimu dan coba lagi.
+478|Info produk tidak dapat dimuat dari App Store (produk tidak ditemukan).
+479|Tonton iklan · Gandakan bonusmu
+480|⭐ Premium · Gandakan bonusmu
+481|Premium · Gandakan bonusmu
+482|— kita lolos!
+483|(Assist)
+484|(KAMU)
+485|(adu penalti)
+486|(kamu)
+487|+10 energi, +10 moral
+488|+12 energi, +2 moral
+489|+15 energi, +6 moral
+490|+20 energi
+491|+20 energi, +3 moral
+492|, lepas: pelan · jaga jarum di pita hijau ·
+493|, sementara tenaga terisi
+494|/minggu
+495|/mg
+496|LEAGUE ONE
+497|setelah usia 16
+498|16 negara, sistem gugur
+499|Di usia 18 kamu bisa menandatangani kontrak profesional dan bergabung dengan tim utama.
+500|setelah usia 18
+501|2. BUNDESLIGA
+502|kasta ke-2
+503|3 aksi
+504|Kamu bermain untuk 3 klub berbeda
+505|Kamu akan unjuk kemampuan di 3 pos. Makin bagus penampilanmu, makin besar klub yang memberi tawaran!
+506|Kamu memenangi Bola Emas 3 kali
+507|Kamu jadi pencetak gol terbanyak 3 kali
+508|Masih bermain di usia 35
+509|Masih bermain di usia 38
+510|Kamu bermain untuk 5 klub berbeda
+511|8 negara Eropa, sistem gugur
+512|: bermainlah dengan baik dan pemandu bakat di pinggir lapangan
+513|Di latihan tim utama
+514|kontrak profesional tim utama
+515|Pelatih tim utama ingin kamu berlatih bersama para pemain pro minggu ini. Temponya akan sangat tinggi.
+516|US Open Cup
+517|AKADEMI
+518|ANATOLIA ENERGY
+519|LATIHAN
+520|DIPOTONG
+521|JUARA ASIA
+522|ASSIST! GOOOL!
+523|ATLANTIK
+524|KELUAR, LEMPARAN
+525|SEDIKIT MELEBAR
+526|LIGA AZTEK
+527|Nama depan
+528|Aero Sound
+529|Sepatu Aerodinamis
+530|Ahmet "Si Rubah" Bulut
+531|Keluarga
+532|Ikatan keluarga dan moral naik
+533|Keluargamu senang sekali. Moral +12
+534|Hadiah untuk Keluarga
+535|Makan malam yang menyenangkan bersama keluarga.
+536|Habiskan waktu bersama keluarga
+537|Mediterania
+538|Aktivitas
+539|Ponsel pintar
+540|Jerman
+541|Piala Jerman
+542|Liga Jerman
+543|Bintang Akademi
+544|Masa akademimu sudah berakhir. Pilih klub untuk memulai karier profesionalmu.
+545|Kamu menjuarai liga akademi
+546|Kamu pemain terbaik liga akademi
+547|Pemain akademi · Uang saku
+548|Di seleksi akademi
+549|Transfer akademi
+550|Juara Akademi
+551|Tetap di Akademi
+552|Kamu terus berlatih di akademi.
+553|Masuk Akademi
+554|Kalung Emas
+555|Sepatu Emas
+556|Bola Emas
+557|Debu Emas
+558|Tapi paparazi memergokimu saat subuh. Pelatih tidak senang.
+559|Menu Utama
+560|Liga Anatolia
+561|Tanda tangan
+562|Kampung halaman ibu
+563|Aku dan ibuku sama-sama fans
+564|Ibumu senang mendengar suaramu.
+565|Tak ada yang mengalahkan masakan ibu!
+566|Latihan
+567|Pakaian Latihan
+568|Bola Latihan
+569|Saat pulang latihan kamu menemukan dompet penuh uang.
+570|Meningkatkan hasil latihan (yang terbaik berlaku)
+571|Energi tidak cukup untuk berlatih.
+572|Hasil latihan +10%
+573|Hasil latihan +12%
+574|Hasil latihan +14%
+575|Hasil latihan +18%
+576|Hasil latihan +24%
+577|Hasil latihan +25%
+578|Hasil latihan +27%
+579|Hasil latihan +28%
+580|Hasil latihan +30%
+581|Hasil latihan +36%
+582|Hasil latihan +45%
+583|Hasil latihan +55%
+584|Hasil latihan +8%
+585|Mini-game latihan
+586|Dorongan besar untuk atribut fokusmu (sekali per musim)
+587|Bahagia usai latihan.
+588|Fokus latihan
+589|Gol salto-mu saat latihan viral!
+590|Tetap gaya bahkan saat latihan
+591|Pergelangan kakimu sedikit terkilir saat latihan.
+592|Langsung +25 energi
+593|Langsung berlaku
+594|Hubungan kalian jadi dingin.
+595|Argentina
+596|Piala Argentina
+597|Liga Argentina
+598|Teman
+599|Teman-temanmu ingin kamu main game semalaman.
+600|Assist
+601|Raja Assist
+602|Assist sama manisnya dengan gol. Selamat untuk rekan setimku.
+603|Asia
+604|P. Asia
+605|Piala Champions Asia
+606|Kamu memenangi Piala Champions Asia
+607|Puncak Asia
+608|Pacuan Kuda
+609|Bola Api
+610|Lewati
+611|Lompat Tali
+612|Liga Atlantik
+613|Eropa
+614|Tiket Eropa
+615|Piala Federasi Eropa
+616|Kamu memenangi Piala Federasi Eropa
+617|Malam Eropa
+618|Liga Pengembangan Eropa
+619|Liga Pengembangan Eropa (U19)
+620|Kamu memenangi Liga Pengembangan Eropa (U19)
+621|Piala Konferensi Eropa
+622|Kamu memenangi Piala Konferensi Eropa
+623|Kamu mencetak gol di kompetisi Eropa
+624|Kejuaraan Eropa
+625|Kamu memenangi Kejuaraan Eropa
+626|Piala Champions Eropa
+627|Kamu memenangi Piala Champions Eropa
+628|Juara Eropa
+629|Terbaik di Eropa
+630|Bintang Muda Eropa
+631|Kaki
+632|Paket Smoothie Bulanan
+633|Kamu menjuarai liga dan piala nasional di musim yang sama
+634|Kamu sudah punya sponsor jenis itu.
+635|Pergi
+636|Perpisahan itu berat, tapi kamu terus melangkah.
+637|Azerbaijan
+638|Liga Aztek
+639|Salah satu selebrasimu yang sudah terbuka
+640|Bicara terus terang
+641|Jaring bergetar! Terima kasih atas dukungannya.
+642|Cungkil
+643|KENA PAGAR BETIS
+644|TAHAN
+645|BERHASIL!
+646|GAGAL
+647|SERI
+648|BOSPHORUS BANK
+649|MINGGU INI

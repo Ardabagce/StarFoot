@@ -1,0 +1,349 @@
+300|Derby de Séville
+301|Passes décisives de la saison
+302|Buts de la saison
+303|Marque 15 buts cette saison
+304|Évite la relégation cette saison
+305|Héros de la dernière minute
+306|La dernière danse
+307|Plus froid sous pression dans les dernières minutes.
+308|Dernière minute ! Cette sensation n'a pas de prix.
+309|Dernière minute !
+310|Cette sensation n'a pas de prix.
+311|Dernière chance ! Ce tir peut décider du match.
+312|Dernière chance !
+313|Ce tir peut décider du match.
+314|Ma carrière StarFoot ⚽ #StarFoot
+315|Ma carrière StarFoot #StarFoot
+316|Facile à dire, difficile à faire.
+317|Superclásico
+318|Ordinaire ? On verra dimanche !
+319|Ordinaire ?
+320|On verra dimanche !
+321|Je ferai ce dont l'équipe a besoin.
+322|Emmène ton équipe en Europe
+323|Meilleur à la récupération.
+324|Derby de Turin
+325|On est là pour passer.
+326|Toutes tes carrières
+327|Nouvelle génération
+328|Pas de commentaire
+329|Étoile montante
+330|Magicien du dribble
+331|Les adversaires peinent à stopper tes dribbles.
+332|Termine trois missions, ouvre le coffre
+333|Audacieux
+334|Derby d'Istanbul
+335|Derby d'Italia
+336|Ils ont une bonne défense, on est prêts.
+337|⚡ Ton énergie est au max ! Le plan de la semaine et le match t'attendent.
+338|Ton énergie est au max ! Le plan de la semaine et le match t'attendent.
+339|⚡ Ton énergie est au max !
+340|Ton énergie est au max !
+341|Le plan de la semaine et le match t'attendent.
+342|⚽ Ton équipe t'attend. Reprends ta carrière là où tu l'as laissée !
+343|Ton équipe t'attend. Reprends ta carrière là où tu l'as laissée !
+344|⚽ Ton équipe t'attend.
+345|Ton équipe t'attend.
+346|Reprends ta carrière là où tu l'as laissée !
+347|🎁 Ta récompense du jour est prête !
+348|Ta récompense du jour est prête !
+349|🎙️ Tu as assumé tes paroles audacieuses de la conférence de presse !
+350|Tu as assumé tes paroles audacieuses de la conférence de presse !
+351|🎙️ Tes paroles audacieuses d'avant-match se sont retournées contre toi, les supporters sont mécontents.
+352|Tes paroles audacieuses d'avant-match se sont retournées contre toi, les supporters sont mécontents.
+353|Tu as gagné un badge.
+354|🎯 Scénarios
+355|Scénarios
+356|Revanche l'an prochain !
+357|Tu es le meilleur footballeur du monde !
+358|🏛️ Panthéon
+359|Panthéon
+360|🏛️ Au panthéon, tu es
+361|Au panthéon, tu es
+363|La presse vous compare déjà.
+364|Découvre ton rival !
+365|👶 Continuer avec ton fils
+366|Continuer avec ton fils
+367|📊 RECORD !
+368|RECORD !
+369|jours
+370|Comment réponds-tu ?
+371|Que dis-tu ?
+372|Course au Ballon d'Or
+373|Ton rival
+374|Missions du jour
+375|Partager la carte joueur
+376|Partager la carte de saison
+377|Chasse au record
+378|Traits
+379|Scénario
+380|Résultat du scénario
+381|perdu. Les supporters sont furieux.
+382|perdu.
+383|Les supporters sont furieux.
+384|record de buts de la saison
+385|record de buts sur une saison
+386|meilleur buteur de l'histoire
+387|· Conférence de presse
+388|place !
+389|place. Vise le sommet !
+390|place.
+391|Vise le sommet !
+392|le badge est à toi. Tu peux poursuivre ta carrière aussi longtemps que tu veux.
+393|le badge est à toi.
+394|Tu peux poursuivre ta carrière aussi longtemps que tu veux.
+395|DERNIÈRE MINUTE !
+396|Bilan de carrière
+397|en direct
+398|finale
+399|Effets sonores
+400|Vibrations
+401|Légende
+402|Superstar
+403|Professionnel respecté
+404|Footballeur vétéran
+405|Une carrière ordinaire
+406|Score de légende
+407|fin de saison
+408|saison
+409|Dernier match
+410|même ligue · même poste
+411|Tes contemporains
+412|Parmi tes contemporains, tu es
+413|ligues majeures
+414|deuxième division
+415|MVP
+416|Ligue alpine
+417|Super ligue des Alpes
+418|Ligue égéenne
+419|Ligue viking
+420|Ligue adriatique
+421|Ligue de Bohême
+422|Ligue de la Vistule
+423|Ligue des steppes
+424|LIGUE ALPINE
+425|SUPER LIGUE DES ALPES
+426|LIGUE ÉGÉENNE
+427|LIGUE VIKING
+428|ADRIATIQUE
+429|LIGUE DE BOHÊME
+430|LIGUE DE LA VISTULE
+431|LIGUE DES STEPPES
+432|Autriche
+433|Suisse
+434|Grèce
+435|Danemark
+436|Tchéquie
+437|Ukraine
+438|Coupe d'Autriche
+439|Coupe de Suisse
+440|Coupe de Grèce
+441|Coupe du Danemark
+442|Coupe de Croatie
+443|Coupe de Tchéquie
+444|Coupe de Pologne
+445|Coupe d'Ukraine
+446|Sac
+447|Ton sac
+448|Soins
+449|Équipement
+450|Style de vie
+451|Ballons
+452|Auto
+453|Devise
+454|Rien dans cette section pour l'instant.
+455|Kiné
+456|touche pour utiliser
+457|Utiliser
+458|Pas dans ton sac. Tu peux faire le plein à la boutique.
+459|Pas dans ton sac.
+460|Tu peux faire le plein à la boutique.
+461|Utilise les objets de ton sac depuis Accueil › Plan de la semaine sans passer par la boutique.
+462|Une séance de kiné réduit une blessure de 2 semaines. Fais le plein à la boutique et utilise-la depuis ton sac dans le Plan de la semaine.
+463|Fais le plein à la boutique et utilise-la depuis ton sac dans le Plan de la semaine.
+464|International
+465|Sélections U19
+466|Sélections U21
+467|Points :
+468|but ×3
+469|passe décisive ×2
+470|+ niveau de la ligue et de l'équipe (max 8). Tes notes de match s'ajoutent à ton score.
+471|+ niveau de la ligue et de l'équipe (max 8).
+472|Tes notes de match s'ajoutent à ton score.
+473|Missions du jour terminées
+474|De nouvelles missions arrivent demain
+475|Impossible de joindre l'App Store pour le moment. Vérifie ta connexion et réessaie.
+476|Impossible de joindre l'App Store pour le moment.
+477|Vérifie ta connexion et réessaie.
+478|Impossible de charger les infos du produit depuis l'App Store (produit introuvable).
+479|Voir une pub · Double ta prime
+480|⭐ Premium · Double ta prime
+481|Premium · Double ta prime
+482|— on est qualifiés !
+483|(Passe décisive)
+484|(TOI)
+485|(tirs au but)
+486|(toi)
+487|+10 énergie, +10 moral
+488|+12 énergie, +2 moral
+489|+15 énergie, +6 moral
+490|+20 énergie
+491|+20 énergie, +3 moral
+492|, relâche : ralentis · garde l'aiguille dans la zone verte ·
+493|, pendant que la puissance monte
+494|/semaine
+495|/sem.
+496|LEAGUE ONE
+497|après 16 ans
+498|16 nations, élimination directe
+499|À 18 ans, tu peux signer un contrat pro et rejoindre l'équipe première.
+500|après 18 ans
+501|2. BUNDESLIGA
+502|2e division
+503|3 actions
+504|Tu as joué pour 3 clubs différents
+505|Tu vas te montrer sur 3 ateliers. Mieux tu fais, plus les clubs qui t'offrent un contrat sont grands !
+506|Tu as remporté 3 fois le Ballon d'Or
+507|Tu as été 3 fois meilleur buteur
+508|Toujours en activité à 35 ans
+509|Toujours en activité à 38 ans
+510|Tu as joué pour 5 clubs différents
+511|8 nations européennes, élimination directe
+512|: joue bien et le recruteur au bord du terrain
+513|À l'entraînement de l'équipe première
+514|contrat professionnel en équipe première
+515|Le coach de l'équipe première veut que tu t'entraînes avec les pros cette semaine. Le rythme sera très élevé.
+516|US Open Cup
+517|CENTRE DE FORMATION
+518|ANATOLIA ENERGY
+519|ENTRAÎNEMENT
+520|INTERCEPTÉ
+521|CHAMPIONS D'ASIE
+522|PASSE DÉ ! BUUUT !
+523|ATLANTIQUE
+524|EN TOUCHE
+525|JUSTE À CÔTÉ
+526|LIGUE AZTÈQUE
+527|Prénom
+528|Aero Sound
+529|Chaussures aérodynamiques
+530|Ahmet « le Renard » Bulut
+531|Famille
+532|Le lien familial et le moral augmentent
+533|Ta famille était ravie. Moral +12
+534|Cadeau pour ta famille
+535|Un bon dîner en famille.
+536|Passer du temps en famille
+537|Méditerranée
+538|Activités
+539|Smartphone
+540|Allemagne
+541|Coupe d'Allemagne
+542|Championnat allemand
+543|Star du centre de formation
+544|Tes années au centre de formation sont finies. Choisis un club pour lancer ta carrière pro.
+545|Tu as gagné la ligue des jeunes
+546|Tu as été le meilleur joueur de la ligue des jeunes
+547|Joueur du centre · Indemnité
+548|Aux essais du centre de formation
+549|Transfert de centre de formation
+550|Champion des jeunes
+551|Rester au centre de formation
+552|Tu as continué à travailler au centre de formation.
+553|Rejoindre le centre de formation
+554|Chaîne en or
+555|Crampons dorés
+556|Ballon d'Or
+557|Poussière d'or
+558|Mais les paparazzis t'ont surpris à l'aube. Le coach n'est pas content.
+559|Menu principal
+560|Ligue d'Anatolie
+561|Signer
+562|Pays natal de ta mère
+563|Ma mère et moi sommes fans
+564|Ta mère était heureuse d'entendre ta voix.
+565|Rien ne vaut la cuisine de maman !
+566|Entraînement
+567|Tenue d'entraînement
+568|Ballon d'entraînement
+569|En rentrant de l'entraînement, tu as trouvé un portefeuille plein de billets.
+570|Augmente les gains d'entraînement (le meilleur compte)
+571|Pas assez d'énergie pour t'entraîner.
+572|Gains d'entraînement +10 %
+573|Gains d'entraînement +12 %
+574|Gains d'entraînement +14 %
+575|Gains d'entraînement +18 %
+576|Gains d'entraînement +24 %
+577|Gains d'entraînement +25 %
+578|Gains d'entraînement +27 %
+579|Gains d'entraînement +28 %
+580|Gains d'entraînement +30 %
+581|Gains d'entraînement +36 %
+582|Gains d'entraînement +45 %
+583|Gains d'entraînement +55 %
+584|Gains d'entraînement +8 %
+585|Mini-jeux d'entraînement
+586|Gros bonus sur ta caractéristique ciblée (une fois par saison)
+587|Bonheur après l'entraînement.
+588|Se concentrer sur l'entraînement
+589|Ton but en retourné à l'entraînement est devenu viral !
+590|La classe même à l'entraînement
+591|Tu t'es légèrement tordu la cheville à l'entraînement.
+592|+25 d'énergie immédiatement
+593|Effet immédiat
+594|Ça s'est refroidi entre vous.
+595|Argentine
+596|Coupe d'Argentine
+597|Championnat argentin
+598|Ami
+599|Tes amis veulent que tu joues aux jeux vidéo toute la nuit.
+600|Passes décisives
+601|Meilleurs passeurs
+602|Une passe décisive, c'est aussi bon qu'un but. Bravo à mon coéquipier.
+603|Asie
+604|C. d'Asie
+605|Coupe des champions d'Asie
+606|Tu as gagné la Coupe des champions d'Asie
+607|Le sommet de l'Asie
+608|Courses hippiques
+609|Boule de feu
+610|Passer
+611|Corde à sauter
+612|Ligue atlantique
+613|Europe
+614|Ticket européen
+615|Coupe de la Fédération européenne
+616|Tu as gagné la Coupe de la Fédération européenne
+617|Soirée européenne
+618|Ligue européenne de développement
+619|Ligue européenne de développement (U19)
+620|Tu as gagné la Ligue européenne de développement (U19)
+621|Coupe Conférence européenne
+622|Tu as gagné la Coupe Conférence européenne
+623|Tu as marqué en Coupe d'Europe
+624|Championnat d'Europe
+625|Tu as gagné le Championnat d'Europe
+626|Coupe des champions européens
+627|Tu as gagné la Coupe des champions européens
+628|Champion d'Europe
+629|Le meilleur d'Europe
+630|Les jeunes d'Europe
+631|Pied
+632|Pack mensuel de smoothies
+633|Tu as gagné le championnat et la coupe nationale la même saison
+634|Tu as déjà un sponsor de ce type.
+635|Partir
+636|La rupture a été dure, mais tu passes à autre chose.
+637|Azerbaïdjan
+638|Ligue aztèque
+639|Une de tes célébrations débloquées
+640|Parler franchement
+641|Les filets tremblent ! Merci pour votre soutien.
+642|Lob
+643|DANS LE MUR
+644|MAINTIENS
+645|RÉUSSI !
+646|RATÉ
+647|NUL
+648|BOSPHORUS BANK
+649|CETTE SEMAINE

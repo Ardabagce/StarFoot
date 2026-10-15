@@ -1,0 +1,350 @@
+650|BUNDESLIGA
+651|Heimatland des Vaters
+652|Heimatland des Vaters:
+653|Dein Vater ist ein wenig gekränkt.
+654|Dein Vater will dein Spiel diese Woche von der Tribüne aus sehen.
+655|Dein Vater schaut stolz von der Tribüne zu!
+656|Ihr habt zusammen die alten Spiele deines Vaters angesehen.
+657|Wette platzieren
+658|Hinterhoftor
+659|Kontostand
+660|Dein Kontostand
+661|Halten
+662|Halten, um Kraft aufzuladen; im grünen Bereich loslassen, um den Gegner wegzudrücken.
+663|Halten: beschleunigen
+664|Halten zum Beschleunigen, loslassen zum Bremsen. Halte die Tempo-Nadel 12 Sekunden im grünen Bereich.
+665|Ihr trainiert an einem anderen Tag zusammen.
+666|Startalter
+667|Startjahr
+668|Los geht's!
+669|Vielleicht nächstes Mal.
+670|Belgien
+671|Belgischer Pokal
+672|Hab ich schon vor Ewigkeiten gesagt
+673|Hab mir auch einen gekauft
+674|Nimm mich auch mit zum Training
+675|Ernährung
+676|Fünf gegen fünf
+677|Besorg ihm ein Ticket
+678|Wähl ein Pferd; gewinnt es, zahlt es seine Quote.
+679|Du hast einen Tag pausiert und der Schmerz ist weg. (1 Aktion verbraucht)
+680|Du hast in einem Spiel die Note 10 bekommen
+681|Du hast in einem Spiel 3 Vorlagen gegeben
+682|Du hast in einem Spiel 3 Tore geschossen
+683|Du hast in einem Spiel 4 Tore geschossen
+684|4 Torbeteiligungen in einem Spiel (Tore + Vorlagen)
+685|Du hast in einem Spiel 5 Tore geschossen
+686|Du hast in einem Spiel die Note 9,0 bekommen
+687|Du hast in einer Saison den Goldenen Schuh gewonnen
+688|Wähl eine Wette und dreh das Rad.
+689|Du hast dich aufs nächste Spiel konzentriert.
+690|Ein Sportjournalist will dich interviewen.
+691|Lust auf eine Spritztour?
+692|Eine Wohltätigkeitsorganisation lädt dich zu einem Fußballfest für Kinder ein.
+693|Fahrrad
+694|Abschlusstraining
+695|Endlose Energie
+696|Blackjack, Roulette, Pferderennen
+697|Mixer und Protein
+698|Ablösesumme
+699|Wie hoch war die Ablöse?
+700|Steppenprinz
+701|Frei
+702|Leertaste
+703|Brasilien
+704|Brasilianischer Pokal
+705|Brasilianische Liga
+706|Britische Premier League
+707|Britische Championship
+708|Brüssel
+709|Dieses Auto kostet mehr als mein Gehalt
+710|Das ist erst der Anfang
+711|Dieses Tor ist für unsere Familie.
+712|Diese Woche hat deine Mama Geburtstag. Was machst du?
+713|Du hast diese Woche schon mit dem Trainer gesprochen.
+714|Diese Woche keine Aktionen mehr übrig.
+715|Diese Woche keine Aktionen mehr übrig. Auf ins Spiel!
+716|Du hast diese Woche niemanden kennengelernt. Vielleicht nächstes Mal.
+717|Diese Woche gesprochen
+718|Diese Woche ungenutzt
+719|Diese Woche nicht
+720|Das kann nicht rückgängig gemacht werden.
+721|Du hast schon auf dieses Spiel gewettet.
+722|Du hast in diesem Spiel nicht gespielt.
+723|Dieses Selfie gewinnt Spiele
+724|Diese Saison keine Pokale.
+725|Diese Saison keine Trophäen. Nächste Saison kommt was in die Vitrine!
+726|Du hast deine Anfrage diese Saison schon gestellt. Versuch es nächste Saison erneut.
+727|Dieser Junge wird der nächste Mezzi
+728|Ohne das trainiere ich nie! #Werbung
+729|Wieder ein Arbeitstag. Große Ziele!
+730|Heute gab es nur einen Mann auf dem Platz
+731|Ich bin heute müde
+732|Das heutige Training findet bei strömendem Regen statt.
+733|Das hast du diese Saison schon genutzt.
+734|Dein verdrehter Knöchel ist schlimmer geworden,
+735|Eisbad
+736|Eisball
+737|Eisblau mit Flammenmuster
+738|Bis zum Ende der Sperre darfst du keine Spiele bestreiten.
+739|3 Schüsse im Strafraum. Zurückziehen und loslassen, ziel auf die Ecken.
+740|Cristiano Ronalda hat ein neues Trainingsvideo gepostet. Gerüchten zufolge bekommen seine Bauchmuskeln einen eigenen Account.
+741|Brieftasche behalten
+742|Kinderschuhe mit Klettverschluss
+743|HIGHLAND-LIGA
+744|GLEICHGEWICHT VERLOREN
+745|AUSWÄRTS
+746|WEITER SO!
+747|Weniger anzeigen
+748|Besser
+749|Auf engem Raum stellst du den Körper zwischen Ball und Gegner.
+750|Du warst nicht dabei.
+751|Ausdauer
+752|Verbessert Ausdauer und Kraft (einmal pro Saison)
+753|Highland-Liga
+754|Dein Opa hat dir Taschengeld für deine Fußballerfolge geschickt!
+755|Verteidiger
+756|Starte deinen Lauf hinter die Abwehr eine Sekunde vor dem Pass.
+757|Ein ausgewogenes Karriereerlebnis.
+758|Villa mit Meerblick
+759|Lederball
+760|Details machen den Unterschied. #Sponsor
+761|Halbzeit
+762|Achtung:
+763|Genau zuhören und umsetzen
+764|Ausruhen
+765|Ich brauche Ruhe
+766|Ausruhen wählen
+767|Du bist erholt aufgewacht.
+768|Ernährungsberater
+769|Kniegrätsche
+770|Natürliche Entwicklung:
+771|Alles Gute zum Geburtstag! Familie und Freunde haben dir eine Überraschungsparty geschmissen.
+772|Geborener Anführer
+773|Tribüne
+774|Status
+775|Dein Status
+776|WELTMEISTERSCHAFT
+777|GEFALLEN!
+778|Das Trikot des größten Stars der Ära. Moral +1 jede Woche
+779|Welt
+780|Weltmeisterschaft
+781|Du hast die Weltmeisterschaft gewonnen
+782|Weltstar
+783|Weltstars
+784|Weltmeister
+785|Deine Ehrlichkeit kam in die Nachrichten und die Fans liebten dich.
+786|PFOSTEN!
+787|ZU FRÜH, BALL IST WEG
+788|DU BIST ZU FRÜH GESPRUNGEN
+789|ZU FRÜH!
+790|Du hast mit Legenden auf dem Platz gestanden!
+791|E-Bike
+792|E-Scooter
+793|Diamantball
+794|Karriere beenden
+795|Willst du deine Karriere wirklich beenden?
+796|Bist du sicher?
+797|Energie
+798|Energie +10, Moral +10
+799|Energie +12, Muskeln erholt
+800|Energie +15, Moral +6
+801|Energie +20, Moral +3
+802|Energie +25
+803|Energydrink
+804|Nicht genug Energie.
+805|Du hast Energie gespart.
+806|Du sparst Energie
+807|Du bist früh ins Bett gegangen, aber deine Freunde waren etwas sauer.
+808|Erling Halland verriet, dass er 14 Eier zum Frühstück isst. Hühnerfarmen haben eine Nachtschicht eingeführt.
+809|Alter Verein traurig, neuer Verein glücklich
+810|Der genähte Lederball von früher
+811|Heimmusikstudio
+812|Fitnessraum zu Hause
+813|Zu Hause bleiben
+814|Du bist nach Hause gegangen; der Trainer war etwas enttäuscht.
+815|Heiratsantrag machen
+816|Deine Frau
+817|Spielplan
+818|Deine Gegenstände
+819|FOUL!
+820|VERBAND
+821|FIFA-Disziplinarkommission
+822|Du bist von der FIFA gesperrt und darfst dieses Spiel nicht bestreiten.
+823|Deine FIFA-Sperre ist vorbei. Du kannst auf den Platz zurück.
+824|FIFA-Ermittlungen laufen
+825|FLÄMISCHE LIGA
+826|Effetkontrolle und Schusspräzision.
+827|Dein Vorsprung (auf Platz 2)
+828|Foul im Strafraum! Elfmeter!
+829|Das wäre ein Foul
+830|Verbands-P.
+831|Verbandspokal
+832|Verbandspokalnacht
+833|Physiotherapie-Sitzung
+834|Flämische Liga
+835|Nicht gespielt
+836|Gib mir dein Trikot, Bro
+837|Hab dein Trikot schon gekauft
+838|Stürmer
+839|Die Fotos bekamen viele Likes
+840|Dein Foto bekam viele Likes.
+841|Frankreich
+842|Französischer Pokal
+843|Französische Liga
+844|Freistoßtor
+845|Buchreihe Fußballlegenden
+846|Fußballschul-Stiftung
+847|Fußball-Stickeralbum
+848|Du jagst den Traum, Fußballer zu werden. Wähl das Jahr und Alter, in dem du startest. Deinen Verein wählst du nicht: Scouts entdecken dich.
+849|Fußballer dürfen nicht wetten. Jede Wette lenkt die Aufmerksamkeit der FIFA auf dich; auf das eigene Spiel zu wetten ist sehr riskant. Wirst du erwischt, drohen lange Sperre, Geldstrafe und der Verlust deiner Sponsoren.
+850|Der Puls des Fußballs · Vom Verein in die Welt
+851|Hallenschuhe
+852|Sturm
+853|Südamerika-P.
+854|GALATA TELECOM
+855|SIEG
+856|ENTWICKLUNGSLIGA
+857|ZURÜCKZIEHEN UND LOSLASSEN: SCHUSS
+858|ZURÜCKZIEHEN UND LOSLASSEN: SCHUSS · TIPPEN: PASS
+859|ZU SPÄT
+860|ZU SPÄT!
+861|DU BIST VORBEI!
+862|TOR!
+863|TOOOR!
+864|GPS-Leistungsweste
+865|Gallische Liga 2
+866|Gallische Liga
+867|Galaxieball
+868|Mitternachtsblau
+869|Nachtstern
+870|Nachtleben
+871|Nachtleben erst ab 18.
+872|Nachtleben. Montag geht's zurück ins Training!
+873|Gelb, das in Abendspielen leuchtet
+874|Nächste Saison
+875|Jugend
+876|Junger Fußballer
+877|Nicht nötig
+878|Zurück
+879|Du hast den Ball tief erobert. Tipp einen Mitspieler vorne an, um zu passen, oder zieh zurück und lass los für einen langen Ball.
+880|Zirkel den Ball mit Effet um die Mauer oder lupf ihn mit Halbhoch darüber.
+881|Germanische Liga 2
+882|Germanische Liga
+883|Der Ball eines echten Stars
+884|Ausgespielt
+885|Abhaken
+886|Frühere Meister
+887|Gitarre
+888|Trägt
+889|Glasgow
+890|Tore
+891|Torschützen
+892|Torschützenkönig:
+893|Die Tormaschine läuft
+894|Torjubel ausgewählt
+895|Mein Tor geschossen, die 3 Punkte geholt. Auf zum nächsten!
+896|Auswanderer
+897|SÜDAMERIKA
+898|SONNEN-LIGA
+899|Regenbogenball
+900|Mir kommen die Tränen
+901|Nomade
+902|Im Trend
+903|Südamerika-Pokal
+904|Du hast den Südamerika-Pokal gewonnen
+905|Sonnen-Liga
+906|Georgien
+907|Kraft
+908|Kraft +2, Verteidigung +1
+909|STARK!
+910|BEREIT...
+911|DU HAST ALLE AUSGESPIELT!
+912|Lichtgeschwindigkeits-Schuhe
+913|Wöchentliche Aktionen
+914|Bereit fürs Spiel am Wochenende.
+915|Wöchentlicher Obstkorb
+916|Wöchentliche Energieerholung (die beste zählt)
+917|Wöchentliche Energieerholung +11
+918|Wöchentliche Energieerholung +12
+919|Wöchentliche Energieerholung +14
+920|Wöchentliche Energieerholung +16
+921|Wöchentliche Energieerholung +20
+922|Wöchentliche Energieerholung +5
+923|Wöchentliche Energieerholung +7
+924|Wöchentliche Energieerholung +8
+925|Wöchentliche Energieerholung +9
+926|Wochengehalt
+927|Hast du dir verdient, Bro
+928|Khakigrünes Tarnmuster
+929|Ring
+930|Was für eine Nacht! Deine Bindung zu den Mitspielern ist stärker geworden.
+931|Erinnerungsfoto machen
+932|Spring bei Kopfbällen vor deinem Gegner hoch und nutze die Arme für das Gleichgewicht.
+933|Dreh dich in der Luft und lande mit ausgebreiteten Armen.
+934|Rückwärtssalto in der Luft und landen.
+935|Bälle in der Luft werden vom Wind abgelenkt.
+936|Starte die Fußballkarriere deiner Träume. Werde zur Legende.
+937|Fertige Sportlermahlzeiten
+938|Ich bin bereit
+939|Geschenkpaket
+940|Geschenke öffnen
+941|Man hält dich noch nicht für reif für die erste Mannschaft. Beweis dich noch eine Saison in der U19!
+942|Zu früh
+943|Noch keine Tore.
+944|Noch keine Beiträge.
+945|Noch keine Beiträge. Schieß ein Tor oder poste über „Social Media“ im Wochenplan.
+946|je 1 Aktion
+947|Jede Woche
+948|Wöchentliche Moral (alles wird addiert)
+949|Moral +1 jede Woche
+950|Moral +1, Ruhm +1 jede Woche
+951|Moral +1, Ruhm +2 jede Woche
+952|Moral +1, Ruhm +3 jede Woche
+953|Moral +1, Ruhm +4 jede Woche
+954|Moral +2 jede Woche
+955|Moral +2, Ruhm +5 jede Woche
+956|Moral +2, Ruhm +6 jede Woche
+957|Moral +2, Ruhm +7 jede Woche
+958|Moral +3, Ruhm +12 jede Woche
+959|Moral +3, Ruhm +8 jede Woche
+960|Moral +4, Ruhm +18 jede Woche
+961|Moral +5, Ruhm +25 jede Woche
+962|Jede Liga und jedes Turnier hat einen eigenen Ball
+963|Jedes Panel in einer anderen Farbe
+964|Jeder kennt dich
+965|Hobbys und Spaß
+966|Trainer
+967|Der Trainer will nach dem Training eine Extraschicht mit dir.
+968|Trainer, lass ihn jedes Spiel spielen
+969|Bindung zum Trainer 75
+970|Bindung zum Trainer steigt
+971|Der Trainer flankt von der Ecke. Tipp, wenn der Ball deinen Kopf erreicht; du zielst ungefähr dorthin, wo das Ziel ist.
+972|Der Trainer entscheidet nach deiner Form, eurer Beziehung und dem aktuellen Träger der Nummer. Nummern wie 10, 9 und 7 sind schwieriger.
+973|Fällt deine Bindung zum Trainer oder Team unter 40, verlierst du die Binde.
+974|Dem Trainer gefiel dein Aufwärmen, du kommst in der zweiten Halbzeit rein!
+975|Mit dem Trainer reden
+976|Mit guter Bindung zum Trainer spielst du von Beginn an. Wenig Energie schadet deiner Leistung.
+977|Mit dem Trainer über Taktik sprechen
+978|Deine Beziehung zu Trainer und Team ist zerbrochen; du hast die Kapitänsbinde verloren.
+979|Niederlande
+980|Niederländischer Pokal
+981|Niederländische Liga
+982|Stopp den Angreifer. Der grüne Bereich ist ein sauberes Tackling.
+983|Kroatien
+984|Tempo
+985|Tempo +3, Dribbling +2, Schuss +1
+986|Tempo +4, Dribbling +3, Ausdauer +2
+987|Schnell tippen
+988|Der Ball rutscht auf nassem Rasen mehr, Schüsse sind etwas ungenauer.
+989|Aufwärmen und auffallen
+990|Du hast dich aufgewärmt, aber der Trainer plant noch keinen Wechsel.
+991|Funkelndes Eisweiß
+992|Japan
+993|Nordamerika-P.
+994|KOPFBALLTOR!
+995|TORWART PARIERT
+996|TORWART FÄNGT
+997|TORWART FAUSTET
+998|DU BIST KAPITÄN: HALTEN UND MITSPIELER ZIEHEN
+999|EAGLE INSURANCE

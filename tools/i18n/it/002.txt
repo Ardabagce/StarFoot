@@ -1,0 +1,350 @@
+650|BUNDESLIGA
+651|Terra natale del padre
+652|Terra natale del padre:
+653|Tuo padre è un po' offeso.
+654|Tuo padre vuole vedere la tua partita dalla tribuna questa settimana.
+655|Tuo padre guarderà orgoglioso dalla tribuna!
+656|Avete guardato insieme le vecchie partite di tuo padre.
+657|Piazza la scommessa
+658|Porta del cortile
+659|Saldo
+660|Il tuo saldo
+661|Tieni
+662|Tieni premuto per caricare la potenza; rilascia nella fascia verde per spingere via l'avversario.
+663|Tieni: accelera
+664|Tieni premuto per accelerare, rilascia per rallentare. Tieni la lancetta della velocità nella fascia verde per 12 secondi.
+665|Vi allenerete insieme un altro giorno.
+666|Età iniziale
+667|Anno iniziale
+668|Andiamo!
+669|Magari la prossima volta.
+670|Belgio
+671|Coppa del Belgio
+672|L'avevo detto secoli fa
+673|L'ho comprato anch'io
+674|Portami anche a me all'allenamento
+675|Alimentazione
+676|Calcetto
+677|Procuragli un biglietto
+678|Scegli un cavallo; se vince, paga la sua quota.
+679|Hai riposato un giorno e il dolore è passato. (1 azione usata)
+680|Hai preso 10 in pagella in una partita
+681|Hai fatto 3 assist in una partita
+682|Hai segnato 3 gol in una partita
+683|Hai segnato 4 gol in una partita
+684|4 partecipazioni ai gol in una partita (gol + assist)
+685|Hai segnato 5 gol in una partita
+686|Hai preso 9,0 in pagella in una partita
+687|Hai vinto la Scarpa d'Oro di una stagione
+688|Scegli una puntata e gira la ruota.
+689|Ti sei concentrato sulla prossima partita.
+690|Un giornalista sportivo vuole intervistarti.
+691|Ti va di fare un giro?
+692|Un'associazione benefica ti invita a una festa del calcio per bambini.
+693|Bicicletta
+694|Esercizio di finalizzazione
+695|Energia infinita
+696|Blackjack, roulette, corse di cavalli
+697|Frullatore e proteine
+698|Costo del trasferimento
+699|Quanto è costato il trasferimento?
+700|Principe della steppa
+701|Libero
+702|Spazio
+703|Brasile
+704|Coppa del Brasile
+705|Campionato brasiliano
+706|Premier League Britannica
+707|Championship Britannica
+708|Bruxelles
+709|Questa macchina costa più del mio stipendio
+710|Questo è solo l'inizio
+711|Questo gol è per la nostra famiglia.
+712|Questa settimana è il compleanno di tua mamma. Cosa farai?
+713|Hai già parlato con l'allenatore questa settimana.
+714|Non hai più azioni questa settimana.
+715|Non hai più azioni questa settimana. Vai a giocare la partita!
+716|Non hai conosciuto nessuno questa settimana. Magari la prossima volta.
+717|Parlato questa settimana
+718|Non usato questa settimana
+719|Non questa settimana
+720|Non si può annullare.
+721|Hai già scommesso su questa partita.
+722|Non hai giocato questa partita.
+723|Questo selfie vince le partite
+724|Nessuna coppa in questa stagione.
+725|Nessun trofeo in questa stagione. La prossima riempiamo la bacheca!
+726|Hai già fatto la tua richiesta questa stagione. Riprova la prossima.
+727|Questo ragazzo sarà il prossimo Mezzi
+728|Non mi alleno mai senza! #adv
+729|Un altro giorno di lavoro. Grandi obiettivi!
+730|Oggi in campo c'era un solo uomo
+731|Oggi sono stanco
+732|L'allenamento di oggi sarà sotto una pioggia battente.
+733|L'hai già usato in questa stagione.
+734|La tua distorsione alla caviglia è peggiorata,
+735|Bagno nel ghiaccio
+736|Pallone di ghiaccio
+737|Azzurro ghiaccio con fiamme
+738|Non puoi giocare partite finché non finisce la squalifica.
+739|3 tiri in area. Tira indietro e rilascia, mira agli angoli.
+740|Cristiano Ronalda ha pubblicato un nuovo video di allenamento. Si dice che i suoi addominali avranno un account tutto loro.
+741|Tieni il portafoglio
+742|Scarpe da bambino con velcro
+743|LEGA DELLE HIGHLANDS
+744|HAI PERSO L'EQUILIBRIO
+745|TRASFERTA
+746|CONTINUA!
+747|Mostra meno
+748|Meglio
+749|Negli spazi stretti metti il corpo tra la palla e l'avversario.
+750|Non sei andato.
+751|Resistenza
+752|Migliora Resistenza e Forza (una volta per stagione)
+753|Lega delle Highlands
+754|Tuo nonno ti ha mandato una paghetta per i tuoi successi nel calcio!
+755|Difensore
+756|Parti alle spalle della difesa un secondo prima del passaggio.
+757|Un'esperienza di carriera equilibrata.
+758|Villa vista mare
+759|Pallone di cuoio
+760|I dettagli fanno la differenza. #sponsor
+761|Intervallo
+762|Attenzione:
+763|Ascolta con attenzione e applica
+764|Riposa
+765|Ho bisogno di riposo
+766|Scegli di riposare
+767|Ti sei svegliato riposato.
+768|Nutrizionista
+769|Scivolata in ginocchio
+770|Crescita naturale:
+771|Buon compleanno! Famiglia e amici ti hanno organizzato una festa a sorpresa.
+772|Leader nato
+773|Tribuna
+774|Stato
+775|Il tuo stato
+776|MONDIALI
+777|A TERRA!
+778|La maglia della più grande stella dell'epoca. Morale +1 ogni settimana
+779|Mondo
+780|Coppa del Mondo
+781|Hai vinto la Coppa del Mondo
+782|Stella mondiale
+783|Stelle mondiali
+784|Campione del mondo
+785|La tua onestà è finita sui giornali e i tifosi ti hanno adorato.
+786|PALO!
+787|TROPPO PRESTO, LA PALLA È ANDATA
+788|SEI SALTATO TROPPO PRESTO
+789|TROPPO PRESTO!
+790|Hai condiviso il campo con delle leggende!
+791|Bici elettrica
+792|Monopattino elettrico
+793|Pallone di diamante
+794|Ritirati
+795|Sei sicuro di volerti ritirare?
+796|Sei sicuro?
+797|Energia
+798|Energia +10, morale +10
+799|Energia +12, muscoli rigenerati
+800|Energia +15, morale +6
+801|Energia +20, morale +3
+802|Energia +25
+803|Energy drink
+804|Energia insufficiente.
+805|Hai risparmiato energia.
+806|Risparmi energia
+807|Sei andato a letto presto, ma i tuoi amici ci sono rimasti un po' male.
+808|Erling Halland ha rivelato che mangia 14 uova a colazione. Gli allevamenti di galline hanno aggiunto un turno di notte.
+809|Vecchio club triste, nuovo club felice
+810|Il pallone di cuoio cucito di una volta
+811|Studio musicale in casa
+812|Palestra in casa
+813|Resta a casa
+814|Sei tornato a casa; l'allenatore è rimasto un po' deluso.
+815|Fai la proposta
+816|Tua moglie
+817|Calendario
+818|I tuoi oggetti
+819|FALLO!
+820|FEDERAZIONE
+821|Commissione disciplinare FIFA
+822|Sei squalificato dalla FIFA e non puoi giocare questa partita.
+823|La tua squalifica FIFA è finita. Puoi tornare in campo.
+824|Indagine FIFA in corso
+825|LEGA FIAMMINGA
+826|Controllo dell'effetto e precisione del tiro.
+827|Il tuo vantaggio (sul 2°)
+828|Fallo in area! Rigore!
+829|Sarebbe fallo
+830|C. della Federazione
+831|Coppa della Federazione
+832|Notte di Coppa della Federazione
+833|Seduta di fisioterapia
+834|Lega Fiamminga
+835|Non ha giocato
+836|Dammi la tua maglia, fra
+837|Ho già comprato la tua maglia
+838|Attaccante
+839|Le foto hanno ricevuto un sacco di like
+840|La tua foto ha ricevuto un sacco di like.
+841|Francia
+842|Coppa di Francia
+843|Campionato francese
+844|Gol su punizione
+845|Collana di libri sulle leggende del calcio
+846|Fondazione Scuola Calcio
+847|Album di figurine di calcio
+848|Insegui il sogno di diventare calciatore. Scegli l'anno e l'età di partenza. Il club non lo scegli tu: ti scoprono gli osservatori.
+849|I calciatori non possono scommettere. Ogni scommessa attira l'attenzione della FIFA; scommettere sulla propria partita è molto rischioso. Se vieni scoperto rischi una lunga squalifica, una multa e la perdita degli sponsor.
+850|Il polso del calcio · Dal club al mondo
+851|Scarpe da futsal
+852|Tempesta
+853|C. Sudamericana
+854|GALATA TELECOM
+855|VITTORIA
+856|LEGA DI SVILUPPO
+857|TIRA INDIETRO E RILASCIA: TIRO
+858|TIRA INDIETRO E RILASCIA: TIRO · TOCCA: PASSAGGIO
+859|TROPPO TARDI
+860|IN RITARDO!
+861|L'HAI SUPERATO!
+862|GOL!
+863|GOOOL!
+864|Gilet GPS per le prestazioni
+865|Lega Gallica 2
+866|Lega Gallica
+867|Pallone Galassia
+868|Blu notte
+869|Stella della notte
+870|Vita notturna
+871|La vita notturna è per maggiorenni.
+872|Vita notturna. Lunedì di nuovo all'allenamento!
+873|Giallo che brilla nelle partite serali
+874|Prossima stagione
+875|Giovanili
+876|Giovane calciatore
+877|Non serve
+878|Indietro
+879|Hai recuperato palla in basso. Tocca un compagno in avanti per passare, oppure tira indietro e rilascia per un lancio lungo.
+880|Aggira la barriera tirando indietro con effetto, oppure scavalcala con Mezza altezza.
+881|Lega Germanica 2
+882|Lega Germanica
+883|Il pallone di una vera stella
+884|Superato
+885|Lascia correre
+886|Campioni precedenti
+887|Chitarra
+888|Indossa
+889|Glasgow
+890|Gol
+891|Marcatori
+892|Capocannoniere:
+893|La macchina da gol è accesa
+894|Esultanza selezionata
+895|Ho segnato e abbiamo preso i 3 punti. Avanti la prossima!
+896|Espatriato
+897|SUDAMERICA
+898|LEGA DEL SOLE
+899|Pallone arcobaleno
+900|Mi vengono le lacrime
+901|Nomade
+902|Di tendenza
+903|Coppa Sudamericana
+904|Hai vinto la Coppa Sudamericana
+905|Lega del Sole
+906|Georgia
+907|Forza
+908|Forza +2, Difesa +1
+909|OTTIMO!
+910|PRONTO...
+911|LI HAI SUPERATI TUTTI!
+912|Scarpe velocità luce
+913|Azioni settimanali
+914|Pronto per la partita del weekend.
+915|Cesto di frutta settimanale
+916|Recupero settimanale di energia (conta il migliore)
+917|Recupero settimanale di energia +11
+918|Recupero settimanale di energia +12
+919|Recupero settimanale di energia +14
+920|Recupero settimanale di energia +16
+921|Recupero settimanale di energia +20
+922|Recupero settimanale di energia +5
+923|Recupero settimanale di energia +7
+924|Recupero settimanale di energia +8
+925|Recupero settimanale di energia +9
+926|Stipendio settimanale
+927|Te lo sei meritato, fra
+928|Mimetico verde cachi
+929|Anello
+930|Che serata! Il legame con i tuoi compagni si è rafforzato.
+931|Scatta una foto ricordo
+932|Salta prima dell'avversario nei colpi di testa e usa le braccia per l'equilibrio.
+933|Gira in aria e atterra a braccia aperte.
+934|Salto mortale all'indietro e atterraggio.
+935|I palloni alti vengono deviati dal vento.
+936|Inizia la carriera da calciatore dei tuoi sogni. Diventa una leggenda.
+937|Pasti pronti per atleti
+938|Sono pronto
+939|Pacco regalo
+940|Apri i regali
+941|Non ti considerano ancora pronto per la prima squadra. Dimostra il tuo valore un'altra stagione nell'U19!
+942|Troppo presto
+943|Ancora nessun gol.
+944|Ancora nessun post.
+945|Ancora nessun post. Segna un gol o pubblica tramite "Social" nel piano settimanale.
+946|1 azione ciascuno
+947|Ogni settimana
+948|Morale settimanale (si sommano tutti)
+949|Morale +1 ogni settimana
+950|Morale +1, Fama +1 ogni settimana
+951|Morale +1, Fama +2 ogni settimana
+952|Morale +1, Fama +3 ogni settimana
+953|Morale +1, Fama +4 ogni settimana
+954|Morale +2 ogni settimana
+955|Morale +2, Fama +5 ogni settimana
+956|Morale +2, Fama +6 ogni settimana
+957|Morale +2, Fama +7 ogni settimana
+958|Morale +3, Fama +12 ogni settimana
+959|Morale +3, Fama +8 ogni settimana
+960|Morale +4, Fama +18 ogni settimana
+961|Morale +5, Fama +25 ogni settimana
+962|Ogni campionato e torneo ha il suo pallone
+963|Ogni spicchio di un colore diverso
+964|Tutti ti conoscono
+965|Hobby e divertimento
+966|Allenatore
+967|L'allenatore vuole fare un lavoro extra con te dopo l'allenamento.
+968|Mister, fallo giocare ogni partita
+969|Legame con l'allenatore 75
+970|Il legame con l'allenatore sale
+971|L'allenatore crossa dal corner. Tocca quando la palla arriva alla tua testa; mirerai più o meno verso il bersaglio.
+972|L'allenatore decide in base alla tua forma, al vostro rapporto e a chi ha ora il numero. Numeri come il 10, il 9 e il 7 sono più difficili.
+973|Se il legame con l'allenatore o la squadra scende sotto 40, perdi la fascia.
+974|All'allenatore è piaciuto il tuo riscaldamento, entri nel secondo tempo!
+975|Parla con l'allenatore
+976|Con un buon legame con l'allenatore parti titolare. Poca energia peggiora la tua prestazione.
+977|Parla di tattica con l'allenatore
+978|Il tuo rapporto con l'allenatore e la squadra si è rotto; hai perso la fascia da capitano.
+979|Paesi Bassi
+980|Coppa dei Paesi Bassi
+981|Campionato olandese
+982|Ferma l'attaccante. La zona verde è un contrasto pulito.
+983|Croazia
+984|Velocità
+985|Velocità +3, Dribbling +2, Tiro +1
+986|Velocità +4, Dribbling +3, Resistenza +2
+987|Tocca veloce
+988|La palla scivola di più sul campo bagnato, i tiri sono un po' meno precisi.
+989|Riscaldati e fatti notare
+990|Ti sei riscaldato, ma l'allenatore non pensa ancora al cambio.
+991|Bianco ghiaccio scintillante
+992|Giappone
+993|C. Nordamericana
+994|GOL DI TESTA!
+995|PARATA DEL PORTIERE
+996|PRESA DEL PORTIERE
+997|RESPINTA DEL PORTIERE
+998|SEI CAPITANO: TIENI PREMUTO E TRASCINA UN COMPAGNO
+999|EAGLE INSURANCE

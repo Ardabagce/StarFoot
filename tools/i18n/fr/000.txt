@@ -1,0 +1,300 @@
+0|Politique de confidentialité
+1|but
+2|Changer de ligue
+3|libre
+4|ex. : Hugo
+5|ex. : Étoile
+6|Points d'action
+7|Axe d'entraînement
+8|Intensité
+9|Type de tir
+10|Supprimer la carrière
+11|TOI
+12|INFO
+13|CARTON
+14|MT
+15|DROIT
+16|LENT
+17|RAPIDE
+18|BIEN
+19|PLUS TARD
+20|SUIVANT
+21|USA
+22|MARQUE
+23|Titre
+24|Essais terminés · Ton score
+25|Match terminé · Ta note
+26|a dit « Oui ! »
+27|La date du mariage est fixée.
+28|Des recruteurs de plusieurs clubs prennent des notes en tribune !
+29|Les gardiens le voient dans leurs cauchemars.
+30|Ta note :
+31|Notre rue
+32|La ruelle
+33|Camp d'essais
+34|Langue
+35|Une nouvelle star est peut-être en train de naître.
+36|Son message d'adieu a vite récolté des millions de likes.
+37|Meilleur buteur
+38|Première fois
+39|Finale
+40|Barrages
+41|Phase de ligue
+42|ESS
+43|RUE
+44|RLE
+45|te propose un contrat professionnel en équipe première !
+46|Élu homme du match pour la première fois
+47|Barrages :
+48|restants
+49|RESTANTS
+50|Joueur vedette :
+51|km/h de vent
+52|km/h
+53|a perdu
+54|a gagné
+55|Phase finale de la Ligue des nations
+56|Une fois par semaine
+57|Options de confidentialité des pubs
+58|Aucune pub disponible pour le moment. Réessaie plus tard.
+59|Aucune pub disponible pour le moment.
+60|Réessaie plus tard.
+61|publications
+62|abonnements
+63|Notifications
+64|Aucune notification pour l'instant.
+65|Effacer
+66|Fermer
+67|Achète une séance de kiné dans Vie › Boutique pour réduire ta blessure de 2 semaines.
+68|Une séance de kiné réduit ta blessure de 2 semaines.
+69|Utilisé cette saison
+70|Mode carrière
+71|Nouvelle
+72|Carrière
+73|Du foot de rue à la finale de la Coupe du monde. Écris ton histoire, tape dans l'œil des recruteurs et deviens une légende.
+74|Du foot de rue à la finale de la Coupe du monde.
+75|Écris ton histoire, tape dans l'œil des recruteurs et deviens une légende.
+76|Ton identité
+77|Le nom floqué sur ton maillot
+78|Tes racines
+79|S'ils sont différents, les deux sélections peuvent t'appeler
+80|Point de départ
+81|Pied fort
+82|Ton poste
+83|Détermine quelles caractéristiques comptent le plus à l'entraînement
+84|Tu peux le changer à tout moment dans l'onglet Carrière
+85|Tes caractéristiques
+86|Marque des buts et décide des matchs par ses frappes.
+87|Dirige le jeu et brille par ses passes et ses passes décisives.
+88|Commande la défense ; récupère les ballons et domine dans les airs.
+89|Les années 80 : l'ère des légendes
+90|Les années 90 : l'âge d'or de l'Europe
+91|Les années 2000 : l'ère des stars
+92|Les années 2010 : le football moderne
+93|Joue aux côtés des stars d'aujourd'hui
+94|pts
+95|Pied gauche
+96|Pied droit
+97|Lancer la carrière
+98|Gauche
+99|Droite
+100|BU
+101|MC
+102|Nul
+103|· si tu te qualifies
+104|Les 8 premiers vont en quarts · 9e à 16e éliminés
+105|✈ ARRIVÉES
+106|ARRIVÉES
+107|ATTERRI
+108|SUPPORTERS
+109|t'attendaient
+110|Accueil à l'aéroport
+111|Direction la signature
+112|Cérémonie de signature
+113|Transfert libre
+114|Signer le contrat
+115|Commencer au club
+116|C'EST OFFICIEL !
+117|EFFET
+118|◀ EFFET
+119|EFFET ▶
+120|Raté !
+121|Regarde une pub pour rejouer ce moment une fois de plus.
+122|Voir une pub · Réessayer
+123|Continuer
+124|Une fois par match
+125|Voir une pub · Blessure −1 semaine
+126|Une fois par blessure
+127|Voir une pub · +1 point d'action
+128|+1 point d'action
+129|Tu es rétabli !
+130|StarFoot Premium
+131|Premium actif
+132|Pas de pubs interstitielles · récompenses sans pub
+133|Achat unique · valable pour toutes tes carrières
+134|Les pubs interstitielles disparaissent complètement
+135|Pack cadeau ×2/×3, +1 point d'action, énergie, blessure −1 semaine et récompenses « réessayer »
+136|sans regarder de pub
+137|Obtenir Premium
+138|Restaurer les achats
+139|⭐ Premium actif ! Merci pour ton soutien.
+140|Premium actif ! Merci pour ton soutien.
+141|⭐ Premium actif !
+142|Premium actif !
+143|Merci pour ton soutien.
+144|L'achat n'a pas pu aboutir. Réessaie plus tard.
+145|L'achat n'a pas pu aboutir.
+146|⭐ Premium restauré.
+147|Premium restauré.
+148|Aucun achat Premium trouvé sur ce compte.
+149|Échec de la restauration. Vérifie ta connexion internet.
+150|Échec de la restauration.
+151|Vérifie ta connexion internet.
+152|Rejoue ce moment une fois de plus avec Premium.
+153|⭐ Premium
+154|Répartir automatiquement
+155|Réinitialiser
+156|Réglages
+157|Général
+158|Jeu
+159|Confidentialité
+160|Le jeu sauvegarde automatiquement chaque semaine
+161|Petite pause fraîcheur, le match continue.
+162|StarFoot (web)
+163|(ton rival !)
+164|(rival)
+165|+1 caractéristique ciblée
+166|+15 de moral
+167|Tu as 18 ans et c'est ta première saison pro dans un club de milieu de tableau. Tout le monde attend des buts de toi.
+168|Tu as 18 ans et c'est ta première saison pro dans un club de milieu de tableau.
+169|Tout le monde attend des buts de toi.
+170|Tu as 33 ans et c'est peut-être ta dernière saison chez le géant de la ligue. Couronne ta carrière d'un titre.
+171|Tu as 33 ans et c'est peut-être ta dernière saison chez le géant de la ligue.
+172|Couronne ta carrière d'un titre.
+173|Obtiens une note de 7,5 ou plus
+174|BALLON D'OR ! Élu meilleur joueur du monde. C'est pour mes coéquipiers, ma famille et nos supporters.
+175|BALLON D'OR !
+176|Élu meilleur joueur du monde.
+177|C'est pour mes coéquipiers, ma famille et nos supporters.
+178|Fais une passe décisive
+179|Mes plus grands matchs sont encore à venir, c'est moi.
+180|Rêve européen
+181|Plus précis sur les frappes dans le jeu et de près.
+182|Tu reviens d'une grave blessure, le coach ne te fait pas confiance et ton moral est au plus bas. Prouve à tous qu'ils ont tort.
+183|Tu reviens d'une grave blessure, le coach ne te fait pas confiance et ton moral est au plus bas.
+184|Prouve à tous qu'ils ont tort.
+185|La pression nous rend plus forts.
+186|La pression est sur eux, nous sommes les favoris.
+187|Conférence de presse
+188|Tu l'as fait ! 🏅
+189|Tu l'as fait !
+190|Commencer
+191|Classique belge
+192|Fais une activité (repos, équipe, coach, réseaux sociaux)
+193|Gagne un match
+194|Joue un match
+195|Finisseur
+196|Aucun emplacement libre. Tu peux supprimer une carrière depuis le menu principal.
+197|Aucun emplacement libre.
+198|Tu peux supprimer une carrière depuis le menu principal.
+199|Pas d'emplacement libre
+200|C'est moi qui déciderai ce derby.
+201|Je veux vraiment ce trophée.
+202|Le grand retour
+203|Joueur des grands soirs
+204|Der Klassiker
+205|Qu'attendent les supporters de toi la semaine du derby ?
+206|Chaque moment est un peu plus facile dans les derbys et les finales.
+207|L'homme de fer
+208|Le mur
+209|Le meilleur footballeur du monde
+210|Tout le monde se demande s'il suivra les traces de son père.
+211|El Clásico
+212|Bien sûr, l'écart est énorme.
+213|Tu sens la pression en phase à élimination ?
+214|Au moins 20 matchs et 7,0+ de moyenne
+215|Oui, ce soir on écrit l'histoire.
+216|Finale · Conférence de presse
+217|Comment te sens-tu avant la finale ?
+218|Sommet français
+219|Sur coup franc, le gardien a du mal à atteindre le ballon et ta frappe est plus précise.
+220|Il n'y a pas de favori au football.
+221|Derby de l'Old Firm
+222|Marque un but
+223|Ils attendent des buts, je vais marquer.
+224|Ouvre le coffre de missions
+225|Image téléchargée.
+226|Récompense du jour
+227|Rappels de récompense quotidienne et d'énergie.
+228|Menace aérienne
+229|Pars d'une situation prédéfinie, atteins l'objectif avant la fin de saison et gagne le badge.
+230|Tu as manqué l'objectif, mais ton histoire n'est pas finie. Continue ta carrière ou retente le scénario.
+231|Tu as manqué l'objectif, mais ton histoire n'est pas finie.
+232|Continue ta carrière ou retente le scénario.
+233|Chaque match compte, étape par étape.
+234|Tu es le capitaine d'un club modeste qui n'a jamais joué en Europe. Les supporters n'ont qu'un rêve.
+235|Tu es le capitaine d'un club modeste qui n'a jamais joué en Europe.
+236|Les supporters n'ont qu'un rêve.
+237|Classique néerlandais
+238|Sommet néerlandais
+239|Classique japonais
+240|Plus fort dans les airs.
+241|Derby de la mer Noire
+242|Buts en carrière
+243|Est-ce le plus grand match de ta carrière ?
+244|On croit en nous.
+245|Confiant
+246|Personne ne peut m'arrêter !
+247|Trophée
+248|La coupe est déjà à nous, on va juste la soulever.
+249|Le sauveur
+250|Derby du nord de Londres
+251|Classique du Nord
+252|Tu es sur le podium :
+253|Derby intercontinental
+254|Gagne le championnat
+255|Tu as rejoint l'équipe la plus faible de la ligue comme buteur vedette de 28 ans. Sauve-la de la relégation.
+256|Tu as rejoint l'équipe la plus faible de la ligue comme buteur vedette de 28 ans.
+257|Sauve-la de la relégation.
+258|Derby de Lisbonne
+259|Derby de Londres
+260|Derby de Los Angeles
+261|Derby de Madrid
+262|Derby de Manchester
+263|Récupère le ballon 3 fois en match
+264|Tente 3 tirs au total en match
+265|Classique mexicain
+266|Derby du Merseyside
+267|Défis
+268|Derby de Milan
+269|Incroyable !
+270|Pas cette fois...
+271|On va les écraser chez eux !
+272|Meneur de jeu
+273|Carte joueur
+274|Nom du joueur
+275|Derby de Paris
+276|Meilleur dans les passes et les une-deux.
+277|Derby pauliste
+278|Partager
+279|Maître du penalty
+280|Tu bats facilement les gardiens sur penalty.
+281|Classique portugais
+282|Record battu
+283|Record !
+284|Cette histoire nous appartient à tous.
+285|Derby de Riyad
+286|Derby de Rome
+287|On parlera sur le terrain, on les respecte.
+288|Risque de blessure réduit de 35 %.
+289|Calme
+290|Je suis calme, concentré sur le plan.
+291|Le panthéon est vide. Termine une carrière par une retraite pour y gagner ta place.
+292|Le panthéon est vide.
+293|Termine une carrière par une retraite pour y gagner ta place.
+294|Coffre récupéré. Nouvelles missions demain !
+295|Coffre récupéré.
+296|Nouvelles missions demain !
+297|Pour lancer un scénario, supprime d'abord une carrière depuis le menu principal.
+298|Ta carrière continue.
+299|Ta série est rompue, tu repars à zéro.
