@@ -1,0 +1,408 @@
+3060|✨ Nuovo tratto: {}!
+3061|Giorno {} – non perdere la serie.
+3062|🎯 Scenario completato: {}!
+3063|{} Condividi la carta giocatore
+3064|{} ×{} aggiunto alla borsa ({}/{})
+3065|Impossibile raggiungere lo store: {}
+3066|Premio raddoppiato: +{}
+3067|Morale +10 e {} di paghetta!
+3068|Infortunio ridotto a {} settimane
+3069|{} Non hai ancora un club
+3070|{} non si è qualificata per il torneo.
+3071|Il tiro di {} è finito fuori.
+3072|· Stelle avversarie: {}
+3073|🏁 Fine partita: {} {} - {} {}
+3074|📅 La stagione {} è iniziata. {} • {}
+3075|e {} hanno pareggiato {}-{}.
+3076|Sorpresa: il {} di {} perde!
+3077|✨ Nuovo tratto: {}
+3078|Nuovo tratto: {}! {}
+3079|{} Condividi la carta stagionale
+3080|{} record di gol in una stagione
+3081|{} miglior marcatore di sempre
+3082|×{} aggiunto alla borsa ({}/{})
+3083|Scommessa vinta: {} {}-{} {} · +{}
+3084|Scommessa persa: {} {}-{} {} · -{}
+3085|Il tuo valore complessivo ha raggiunto {}
+3086|Hai segnato {} rigori
+3087|Voto {}: il mister è soddisfatto
+3088|{} Premi di migliore in campo
+3089|{} Cambi e rotazione
+3090|Una bella serata con {}.
+3091|{} palleggi, niente male
+3092|Hai giocato {} stagioni di calcio
+3093|{} · {} stagioni · {} a settimana
+3094|🌟 {} Miglior giocatore del campionato
+3095|Infortunato! ({} settimane)
+3096|Tecnica +{}, Dribbling +{}
+3097|{} gol nella partita di strada!
+3098|Hai segnato {} gol nel torneo.
+3099|{} {} ti aspetta.
+3100|{}: "Il numero {} ora appartiene a {}.
+3101|Nuovo tratto: {}!
+3102|Conferenza stampa: "{}"{}
+3103|Scenario completato: {}!
+3104|{} Scenario: {}. Obiettivo: {}.
+3105|Hai segnato {} gol su punizione
+3106|Una vacanza meravigliosa! ({})
+3107|Hai risparmiato {} ₺
+3108|SPALLA {} / {} · HAI VINTO {}
+3109|{} Offerte di trasferimento
+3110|Sono entrato nella famiglia {}! {}
+3111|{} gol: i tifosi sono impazziti
+3112|Stagione {} · settimana {} / {}
+3113|{} · dura 30-40 partite
+3114|· {} stagioni · {} a settimana
+3115|{}! Questo trofeo appartiene a tutti noi.
+3116|Fine partita: {} {} - {} {}
+3117|🏟️ {} - {} è iniziata!
+3118|La stagione {} è iniziata. {} • {}
+3119|Hai pagato una multa di {}{}.
+3120|{} ti aspetta.
+3121|Ora sei nella squadra {}!
+3122|{} club ti vogliono.
+3123|Il numero {} ora è tuo
+3124|Nuovo tratto: {}
+3125|🏛️ Hall of Fame{}
+3126|Scenario: {}. Obiettivo: {}.
+3127|{} · Conferenza stampa
+3128|/settimana · ancora {} anni
+3129|Stasera hai conosciuto {}!
+3130|Complessivo {} (squadra {})
+3131|In breve · Settimana {}
+3132|Fase campionato · Partita {}
+3133|{} Stelle dell'epoca
+3134|{} Albo d'oro
+3135|{} Offerta di sponsorizzazione
+3136|Possiedi {} oggetti
+3137|{} marchi ti vogliono
+3138|Hai giocato {} partite
+3139|La tua statistica {} ha raggiunto 90
+3140|Vedi tutti i {} commenti
+3141|⭐ {} Giocatore della stagione
+3142|{} Miglior giocatore del campionato
+3143|{} vuole una spiegazione.
+3144|Sono entrato nella famiglia {}!
+3145|{} si sta stancando.
+3146|Indennizzo di formazione {}
+3147|età {}–{} · campionati top
+3148|Hai risparmiato {}
+3149|Il mister è rimasto colpito! {} +{}
+3150|Hai segnato {} gol di testa
+3151|{} Centro sportivo
+3152|Hai giocato {} partite in nazionale
+3153|{} ha subito un piccolo infortunio.
+3154|📅 La stagione {} è iniziata.
+3155|{0} {4} {2}-{3} contro il {1}.
+3156|Infortunato · {} settimane
+3157|🏅 Il Pallone d'Oro {} va a {}!
+3158|{} Corsa al Pallone d'Oro
+3159|{} record di gol stagionale
+3160|Hai vinto! {} - {} · +{}
+3161|Partita della fase campionato {}
+3162|{} Serie di gol
+3163|Squalifica di {} settimane
+3164|{} Giocatore della stagione
+3165|{} - {} è iniziata!
+3166|Un nuovo capitolo: {}!
+3167|Contratto di {} anni
+3168|Hall of Fame{}
+3169|{} Missioni giornaliere
+3170|{} Tratti
+3171|{} Nazionale • {} - {}
+3172|{} Probabile formazione
+3173|{} Guarda una pubblicità · x{}
+3174|{} Calendario dei tornei
+3175|{} è stato accreditato sul tuo conto!
+3176|{} è stato sostituito.
+3177|dal {}
+3178|Il tiro di {} è tornato indietro dal {}!
+3179|{}{} · {}% dei tuoi guadagni
+3180|- {} è iniziata!
+3181|{}, sono così felice che tu sia qui.
+3182|Energia +8, Forza +{}
+3183|Il tuo nuovo agente è {}.
+3184|{} non è riuscito a sbloccarlo.
+3185|La stagione {} è iniziata.
+3186|{} · se passi il turno
+3187|✅ Missione completata: {}
+3188|🎁 Premio giornaliero: {}
+3189|Il Pallone d'Oro {} va a {}!
+3190|{} Esito dello scenario
+3191|Nazionale • {} - {}
+3192|Legame familiare +{}
+3193|{} partite con questo club
+3194|Pacchetto regalo: {}{}
+3195|{} Numero di maglia
+3196|{} Simula partita
+3197|Guarda una pubblicità · x{}
+3198|{} Infortunato · {} settimane
+3199|{} si è fatto un po' male.
+3200|{} potrebbe essere pronto
+3201|{} con {}. Rapporto +{}
+3202|Ti sei allenato con {}: {}
+3203|Sei nella rosa del {}.
+3204|{} ha perso palla.
+3205|Si sblocca a {} anni
+3206|{} · mancano {} settimane
+3207|· {} vento a {} km/h
+3208|👟 {} Scarpa d'oro ({})
+3209|{} la prossima stagione!
+3210|{} si posiziona sul pallone.
+3211|{} La tua energia è bassa.
+3212|Stipendio settimanale: {}
+3213|🤕 Ti sei infortunato: {}.
+3214|{} ha detto "Sì!"
+3215|{} Il tuo rivale
+3216|Usa · {} disponibili
+3217|Nuova medaglia: {}
+3218|{} Programma settimanale
+3219|{} Riepilogo carriera
+3220|{} Sponsorizzazioni
+3221|{} azioni
+3222|Scegli la maglia del {}
+3223|{} e {} si sono lasciati.
+3224|con {}. Rapporto +{}
+3225|{} sezione · età {}
+3226|· mancano {} settimane
+3227|{}. Hai perso: -{}
+3228|{}: Vincitore {}
+3229|· {} · dal {}{}
+3230|La tua fama ha raggiunto {}
+3231|Resistenza +{}
+3232|Il mio nuovo club è il {}.
+3233|Hai conosciuto {}!
+3234|{} e {} si sono sposati!
+3235|Punterai {}.
+3236|{} di nuovo in forma!
+3237|{} CAMPIONI!
+3238|{} campioni!
+3239|Ultime {} notifiche
+3240|Passa a Premium · {}
+3241|Missione completata: {}
+3242|Premio giornaliero: {}
+3243|{} Caccia al record
+3244|{}: 🎯 Scenario: {}
+3245|+{} morale e fama
+3246|Benvenuto, {}!
+3247|Cambia campionato {}
+3248|{} Sala stampa
+3249|{} Premio successo
+3250|{} La tua esultanza
+3251|{} Elimina carriera
+3252|{} In uso
+3253|{} Bacheca dei trofei
+3254|{} Trofei e premi
+3255|{} Gol su rigore
+3256|{} gol · {} assist
+3257|Si sblocca a {} gol
+3258|e {} si sono lasciati.
+3259|{} gol in carriera
+3260|{} trofei e premi
+3261|sezione · età {}
+3262|{} acquistato
+3263|{} ti ha chiamato
+3264|Siamo nel {}. {}
+3265|{} · SETTIMANA {} · {}
+3266|{} Angolo scommesse
+3267|Vincitore {}: {}!
+3268|{}! Hai vinto: +{}
+3269|{}. Vince {}! +{}
+3270|{}. Vince {}. -{}
+3271|{}× Migliore in campo
+3272|{} Scarpa d'oro ({})
+3273|e {} si sono sposati!
+3274|Ti sei infortunato: {}.
+3275|vento a {} km/h
+3276|BENVENUTO {}!
+3277|Hai chiuso {}.
+3278|🎯 Scenari{}
+3279|{} ha perso.
+3280|Sballato ({}). -{}
+3281|Età media {} · {}
+3282|anni! {}
+3283|{} Notifiche
+3284|{} Gol su punizione
+3285|{} Dopo la partita
+3286|{} Classifica
+3287|{} ha commesso fallo.
+3288|gol · {} assist
+3289|· SETTIMANA {} · {}
+3290|vincitore: {}!
+3291|· Il tuo voto {}
+3292|🏆 Vincitore {}
+3293|Scarpa d'oro ({})
+3294|Pareggio ({}).
+3295|Con la leggenda {}.
+3296|Siamo nel {}.
+3297|Hai perso: -{}
+3298|{} Scenario: {}.
+3299|{}: Scenario: {}
+3300|{}: 📊 Record: {}
+3301|{} I tuoi coetanei
+3302|{}: {} · mancano {}
+3303|{} ha segnato.
+3304|Ancora nessun {}.
+3305|Casinò: {}{}
+3306|Fine partita · {}
+3307|Premio partita: {}
+3308|Infortunato · {} sett.
+3309|{} Traguardi
+3310|{} SETTIMANE FA
+3311|{} · Accademia {}
+3312|· Stella: {}
+3313|Fama {} richiesta
+3314|Titolo{}{}{}{}{}{}{}{}
+3315|🌦️ Meteo: {}. {}
+3316|Dribbling +{}
+3317|{} ha dato spettacolo!
+3318|Hai vinto: +{}
+3319|Vince {}! +{}
+3320|Vince {}. -{}
+3321|{} viene espulso.
+3322|{} Capocannoniere
+3323|{} Play-off:
+3324|{} · Settimana {}
+3325|Costo del cartellino {}
+3326|Scenari{}
+3327|{} Scenario: {}
+3328|Scenario: {}.
+3329|{} Nazionale
+3330|NAZIONALE {}
+3331|({}° posto)
+3332|Almeno {} anni
+3333|Complessivo {}
+3334|Obiettivo per {}. {}
+3335|POTENZA {} · {} · {}{}
+3336|x{} con pubblicità
+3337|A tempo: {}%
+3338|{} Ritirati
+3339|{} Le tue partite
+3340|{} Gol di testa
+3341|{} Gol in nazionale
+3342|{} PALLEGGI!
+3343|{} Stagione · {}
+3344|{} Campo d'allenamento
+3345|{} ETÀ · {} · {}
+3346|{} è iniziata! {}
+3347|Conosci {}
+3348|{} passaggi chiave
+3349|età {} · {} · {}
+3350|· Accademia {}
+3351|{} · età {} · {}
+3352|Vincitore {}
+3353|{} • Settimana {}
+3354|· {}° posto
+3355|Campione: {}
+3356|• 🎯 {} assist
+3357|Finale di {}: {}.
+3358|vince! +{}
+3359|vince. -{}
+3360|🌦️ Meteo: {}.
+3361|📨 {} è aperto!
+3362|Settimanale {}
+3363|Giocatore stella: {}
+3364|· Settimana {}
+3365|{} TIFOSI
+3366|📊 RECORD! {}
+3367|Scenario: {}
+3368|{}: Record: {}
+3369|({} giocatori)
+3370|{} / {} AVVERSARIO
+3371|{} Menu principale
+3372|{} Questa settimana
+3373|{} Giorno della partita
+3374|{} Stagioni
+3375|Stagione · {}
+3376|{} Stadio
+3377|ETÀ · {} · {}
+3378|è iniziata! {}
+3379|{} · {} squadre
+3380|· età {} · {}
+3381|• Settimana {}
+3382|{}/{} giocate
+3383|Obiettivo per {}.
+3384|{} è iniziata!
+3385|finale: {}.
+3386|Fa la {}.
+3387|{} è chiuso.
+3388|In viaggio verso {}
+3389|+{} energia
+3390|Sostegno: {}
+3391|{} Scenario
+3392|Obiettivo: {}.
+3393|+1 Compra · {}
+3394|/{}. SETTIMANA
+3395|Croupier {}
+3396|Puntata: {}
+3397|PROVA {}/3
+3398|UNO-DUE {}/{}
+3399|Difficoltà: {}
+3400|/ {} AVVERSARIO
+3401|{} La tua vita
+3402|{} Agente
+3403|{} Follower
+3404|{} mi piace
+3405|{} follower
+3406|· {} squadre
+3407|• ⚽ {} gol
+3408|• {} assist
+3409|Meteo: {}. {}
+3410|{} è aperto.
+3411|Rapporto +{}
+3412|In testa: {}.
+3413|{} è aperto!
+3414|{} Finale:
+3415|+{} morale
+3416|Record: {}
+3417|RECORD! {}
+3418|🔥 Giorno {}
+3419|{} Condividi
+3420|Gen. {}
+3421|stagione {}
+3422|Ultima partita{}
+3423|{} ({} gol)
+3424|{} Energia
+3425|{} Salva
+3426|{} Negozio
+3427|{} Maestro
+3428|{} · {} partite
+3429|{} · età {}{}
+3430|settimana {}
+3431|{}/{} gol
+3432|{} è nostra!
+3433|Meteo: {}.
+3434|🔥 {} giorni
+3435|Tu ({})
+3436|Tu · {}
+3437|({} gol)
+3438|{} Assist
+3439|{} Tuoi
+3440|{} {} km/h
+3441|· {} partite
+3442|· età {}{}
+3443|{}/5 partite
+3444|• {} gol
+3445|{} con {}.
+3446|{} km/h
+3447|Tu: {}
+3448|Giorno {}
+3449|{}% di quota
+3450|GOL! {}
+3451|Numero {}
+3452|{} Oggetti
+3453|{} Gioco
+3454|{} premi
+3455|partita {}
+3456|con {}.
+3457|mancano {}
+3458|MANCANO {}
+3459|età {}
+3460|{} giorni
+3461|{} Gol
+3462|{} Partite
+3463|{} anni
+3464|POTENZA{}
+3465|Fama {}
+3466|La mia carriera su StarFoot ⚽ Riesci a battermi? #StarFoot #calcio
+3467|La mia carriera su StarFoot Riesci a battermi? #StarFoot #calcio

@@ -1,0 +1,2 @@
+3468|Stärke {} / Dein Team {}
+3469|Gegner {}.

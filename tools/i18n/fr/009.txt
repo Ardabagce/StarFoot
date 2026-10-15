@@ -1,0 +1,2 @@
+3468|Force {} / Ton équipe {}
+3469|Adversaire {}e

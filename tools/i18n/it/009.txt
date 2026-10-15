@@ -1,0 +1,2 @@
+3468|Forza {} / La tua squadra {}
+3469|Avversario {}°

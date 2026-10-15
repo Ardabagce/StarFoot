@@ -1,0 +1,408 @@
+3060|✨ Sifat baru: {}!
+3061|Hari ke-{} – jangan putuskan rentetanmu.
+3062|🎯 Skenario selesai: {}!
+3063|{} Bagikan kartu pemain
+3064|{} ×{} ditambahkan ke tasmu ({}/{})
+3065|Tidak dapat terhubung ke toko: {}
+3066|Bonus berlipat ganda: +{}
+3067|Moral +10 dan uang saku {}!
+3068|Cedera berkurang menjadi {} minggu
+3069|{} Kamu belum punya klub
+3070|{} tidak lolos ke turnamen.
+3071|Tembakan {} melebar.
+3072|· Bintang lawan: {}
+3073|🏁 Waktu penuh: {} {} - {} {}
+3074|📅 Musim {} telah dimulai. {} • {}
+3075|dan {} bermain imbang {}-{}.
+3076|Hasil mengejutkan: {} milik {} kalah!
+3077|✨ Sifat baru: {}
+3078|Sifat baru: {}! {}
+3079|{} Bagikan kartu musim
+3080|{} rekor gol semusim
+3081|{} pencetak gol terbanyak sepanjang masa
+3082|×{} ditambahkan ke tasmu ({}/{})
+3083|Taruhanmu menang: {} {}-{} {} · +{}
+3084|Taruhanmu kalah: {} {}-{} {} · -{}
+3085|Rating keseluruhanmu mencapai {}
+3086|Kamu mencetak {} penalti
+3087|Nilai {}: pelatih senang
+3088|{} Penghargaan Pemain Terbaik Pertandingan
+3089|{} Pergantian dan Rotasi
+3090|Malam yang indah bersama {}.
+3091|{} juggling, lumayan
+3092|Kamu bermain sepak bola selama {} musim
+3093|{} · {} musim · {} per minggu
+3094|🌟 {} Pemain Terbaik Liga
+3095|Cedera! ({} minggu)
+3096|Teknik +{}, Dribel +{}
+3097|{} gol di pertandingan jalanan!
+3098|Kamu mencetak {} gol di turnamen.
+3099|{} {} menantimu.
+3100|{}: "Nomor {} saat ini milik {}.
+3101|Sifat baru: {}!
+3102|Konferensi pers: "{}"{}
+3103|Skenario selesai: {}!
+3104|{} Skenario: {}. Target: {}.
+3105|Kamu mencetak {} gol tendangan bebas
+3106|Liburan yang menyenangkan! ({})
+3107|Kamu menabung {} ₺
+3108|BAHU {} / {} · KAMU MENANG {}
+3109|{} Tawaran Transfer
+3110|Aku bergabung dengan keluarga {}! {}
+3111|{} gol: suporter menggila
+3112|Musim {} · minggu {} / {}
+3113|{} · bertahan 30-40 pertandingan
+3114|· {} musim · {} per minggu
+3115|{}! Trofi ini milik kita semua.
+3116|Waktu penuh: {} {} - {} {}
+3117|🏟️ {} - {} telah dimulai!
+3118|Musim {} telah dimulai. {} • {}
+3119|Kamu membayar denda {}{}.
+3120|{} menantimu.
+3121|Sekarang kamu di tim {}!
+3122|{} klub menginginkanmu.
+3123|Nomor {} sekarang milikmu
+3124|Sifat baru: {}
+3125|🏛️ Hall of Fame{}
+3126|Skenario: {}. Target: {}.
+3127|{} · Konferensi Pers
+3128|/minggu · tersisa {} tahun
+3129|Kamu bertemu {} malam ini!
+3130|Keseluruhan {} (tim {})
+3131|Kabar Singkat · Minggu {}
+3132|Fase Liga · Pertandingan {}
+3133|{} Bintang Era Ini
+3134|{} Juara Sebelumnya
+3135|{} Tawaran Sponsor
+3136|Kamu memiliki {} item
+3137|{} merek menginginkanmu
+3138|Kamu bermain {} pertandingan
+3139|Statistik {}-mu mencapai 90
+3140|Lihat semua {} komentar
+3141|⭐ {} Pemain Terbaik Musim Ini
+3142|{} Pemain Terbaik Liga
+3143|{} meminta penjelasan.
+3144|Aku bergabung dengan keluarga {}!
+3145|{} mulai lelah.
+3146|Kompensasi pembinaan {}
+3147|usia {}–{} · liga top
+3148|Kamu menabung {}
+3149|Pelatih terkesan! {} +{}
+3150|Kamu mencetak {} gol sundulan
+3151|{} Pusat Latihan
+3152|Kamu bermain {} laga internasional
+3153|{} mengalami cedera ringan.
+3154|📅 Musim {} telah dimulai.
+3155|{0} {4} {2}-{3} melawan {1}.
+3156|Cedera · {} minggu
+3157|🏅 Ballon d'Or {} jatuh ke tangan {}!
+3158|{} Perburuan Ballon d'Or
+3159|{} rekor gol musim
+3160|Kamu menang! {} - {} · +{}
+3161|Pertandingan fase liga {}
+3162|{} Rentetan Gol
+3163|Larangan {} minggu
+3164|{} Pemain Terbaik Musim Ini
+3165|{} - {} telah dimulai!
+3166|Babak baru: {}!
+3167|Kontrak {} tahun
+3168|Hall of Fame{}
+3169|{} Misi Harian
+3170|{} Sifat
+3171|{} Internasional • {} - {}
+3172|{} Perkiraan Susunan Pemain
+3173|{} Tonton Iklan · x{}
+3174|{} Kalender Turnamen
+3175|{} telah masuk ke rekeningmu!
+3176|{} ditarik keluar.
+3177|sejak {}
+3178|Tembakan {} memantul dari {}!
+3179|{}{} · {}% penghasilanmu
+3180|- {} telah dimulai!
+3181|{}, aku sangat senang kamu di sini.
+3182|Energi +8, Kekuatan +{}
+3183|Agen barumu adalah {}.
+3184|{} tidak bisa membukanya.
+3185|Musim {} telah dimulai.
+3186|{} · jika kamu lolos
+3187|✅ Misi selesai: {}
+3188|🎁 Hadiah harian: {}
+3189|Ballon d'Or {} jatuh ke tangan {}!
+3190|{} Hasil Skenario
+3191|Internasional • {} - {}
+3192|Ikatan keluarga +{}
+3193|{} pertandingan untuk klub ini
+3194|Paket hadiah: {}{}
+3195|{} Nomor Punggung
+3196|{} Simulasikan Pertandingan
+3197|Tonton Iklan · x{}
+3198|{} Cedera · {} minggu
+3199|{} sedikit cedera.
+3200|{} mungkin siap
+3201|{} bersama {}. Hubungan +{}
+3202|Kamu berlatih bersama {}: {}
+3203|Kamu masuk skuad {}.
+3204|{} kehilangan bola.
+3205|Terbuka di usia {}
+3206|{} · tersisa {} minggu
+3207|· {} angin {} km/jam
+3208|👟 {} Sepatu Emas ({})
+3209|{} musim depan!
+3210|{} berdiri di depan bola.
+3211|{} Energimu rendah.
+3212|Gaji mingguan: {}
+3213|🤕 Kamu cedera {}.
+3214|{} berkata "Ya!"
+3215|{} Rivalmu
+3216|Pakai · {} tersedia
+3217|Medali baru: {}
+3218|{} Rencana Mingguan
+3219|{} Ringkasan Karier
+3220|{} Sponsor
+3221|{} aksi
+3222|Pilih jersey {}
+3223|{} dan {} putus.
+3224|bersama {}. Hubungan +{}
+3225|{} bagian · usia {}
+3226|· tersisa {} minggu
+3227|{}. Kamu kalah: -{}
+3228|{}: Pemenang {}
+3229|· {} · sejak {}{}
+3230|Ketenaranmu mencapai {}
+3231|Stamina +{}
+3232|Klub baruku adalah {}.
+3233|Kamu bertemu {}!
+3234|{} dan {} menikah!
+3235|Kamu akan bertaruh {}.
+3236|{} kembali bersinar!
+3237|{} JUARA!
+3238|{} juara!
+3239|{} notifikasi terakhir
+3240|Dapatkan Premium · {}
+3241|Misi selesai: {}
+3242|Hadiah harian: {}
+3243|{} Mengejar Rekor
+3244|{}: 🎯 Skenario: {}
+3245|+{} moral dan ketenaran
+3246|Selamat datang, {}!
+3247|Ganti liga {}
+3248|{} Ruang Pers
+3249|{} Bonus sukses
+3250|{} Selebrasi Golmu
+3251|{} Hapus Karier
+3252|{} Sedang dipakai
+3253|{} Lemari Trofi
+3254|{} Trofi dan Penghargaan
+3255|{} Gol Penalti
+3256|{} gol · {} assist
+3257|Terbuka di {} gol
+3258|dan {} putus.
+3259|{} gol sepanjang karier
+3260|{} trofi dan penghargaan
+3261|bagian · usia {}
+3262|{} dibeli
+3263|{} meneleponmu
+3264|Sekarang tahun {}. {}
+3265|{} · MINGGU {} · {}
+3266|{} Pojok Taruhan
+3267|Pemenang {}: {}!
+3268|{}! Kamu menang: +{}
+3269|{}. {} menang! +{}
+3270|{}. {} menang. -{}
+3271|{}× Pemain Terbaik Pertandingan
+3272|{} Sepatu Emas ({})
+3273|dan {} menikah!
+3274|Kamu cedera {}.
+3275|angin {} km/jam
+3276|SELAMAT DATANG {}!
+3277|Kamu finis {}.
+3278|🎯 Skenario{}
+3279|{} kalah.
+3280|Lewat ({}). -{}
+3281|Usia rata-rata {} · {}
+3282|tahun! {}
+3283|{} Notifikasi
+3284|{} Gol Tendangan Bebas
+3285|{} Setelah Pertandingan
+3286|{} Klasemen
+3287|{} melakukan pelanggaran.
+3288|gol · {} assist
+3289|· MINGGU {} · {}
+3290|pemenang: {}!
+3291|· Nilaimu {}
+3292|🏆 Pemenang {}
+3293|Sepatu Emas ({})
+3294|Seri ({}).
+3295|Bersama legenda {}.
+3296|Sekarang tahun {}.
+3297|Kamu kalah: -{}
+3298|{} Skenario: {}.
+3299|{}: Skenario: {}
+3300|{}: 📊 Rekor: {}
+3301|{} Teman Seangkatan
+3302|{}: {} · tersisa {}
+3303|{} mencetak gol.
+3304|Belum ada {}.
+3305|Kasino: {}{}
+3306|Waktu Penuh · {}
+3307|Bonus pertandingan: {}
+3308|Cedera · {} mgg
+3309|{} Pencapaian
+3310|{} MINGGU LALU
+3311|{} · Akademi {}
+3312|· Bintang: {}
+3313|Butuh ketenaran {}
+3314|Gelar{}{}{}{}{}{}{}{}
+3315|🌦️ Cuaca: {}. {}
+3316|Dribel +{}
+3317|{} tampil memukau!
+3318|Kamu menang: +{}
+3319|{} menang! +{}
+3320|{} menang. -{}
+3321|{} diusir keluar lapangan.
+3322|{} Pencetak Gol Terbanyak
+3323|{} Play-off:
+3324|{} · Minggu {}
+3325|Biaya transfer {}
+3326|Skenario{}
+3327|{} Skenario: {}
+3328|Skenario: {}.
+3329|{} Internasional
+3330|INTERNASIONAL {}
+3331|(peringkat {})
+3332|Minimal usia {}
+3333|Keseluruhan {}
+3334|Target untuk {}. {}
+3335|KEKUATAN {} · {} · {}{}
+3336|x{} dengan iklan
+3337|Sesuai tempo: {}%
+3338|{} Pensiun
+3339|{} Jadwalmu
+3340|{} Gol Sundulan
+3341|{} Gol Internasional
+3342|{} JUGGLING!
+3343|{} Musim · {}
+3344|{} Tempat Latihan
+3345|{} USIA · {} · {}
+3346|{} telah dimulai! {}
+3347|Temui {}
+3348|{} umpan kunci
+3349|usia {} · {} · {}
+3350|· Akademi {}
+3351|{} · usia {} · {}
+3352|Pemenang {}
+3353|{} • Minggu {}
+3354|· peringkat {}
+3355|Juara: {}
+3356|• 🎯 {} assist
+3357|Final {}: {}.
+3358|menang! +{}
+3359|menang. -{}
+3360|🌦️ Cuaca: {}.
+3361|📨 {} dibuka!
+3362|Mingguan {}
+3363|Pemain bintang: {}
+3364|· Minggu {}
+3365|{} SUPORTER
+3366|📊 REKOR! {}
+3367|Skenario: {}
+3368|{}: Rekor: {}
+3369|({} pemain)
+3370|{} / {} LAWAN
+3371|{} Menu Utama
+3372|{} Minggu Ini
+3373|{} Hari Pertandingan
+3374|{} Musim
+3375|Musim · {}
+3376|{} Stadion
+3377|USIA · {} · {}
+3378|telah dimulai! {}
+3379|{} · {} tim
+3380|· usia {} · {}
+3381|• Minggu {}
+3382|{}/{} dimainkan
+3383|Target untuk {}.
+3384|{} telah dimulai!
+3385|final: {}.
+3386|Ia seorang {}.
+3387|{} ditutup.
+3388|Menuju {}
+3389|+{} energi
+3390|Dukungan: {}
+3391|{} Skenario
+3392|Target: {}.
+3393|+1 Beli · {}
+3394|/{}. MINGGU
+3395|Bandar {}
+3396|Taruhan: {}
+3397|SELEKSI {}/3
+3398|SATU-DUA {}/{}
+3399|Tingkat kesulitan: {}
+3400|/ {} LAWAN
+3401|{} Hidupmu
+3402|{} Agen
+3403|{} Pengikut
+3404|{} suka
+3405|{} pengikut
+3406|· {} tim
+3407|• ⚽ {} gol
+3408|• {} assist
+3409|Cuaca: {}. {}
+3410|{} dibuka.
+3411|Hubungan +{}
+3412|Pemimpin: {}.
+3413|{} dibuka!
+3414|{} Final:
+3415|+{} moral
+3416|Rekor: {}
+3417|REKOR! {}
+3418|🔥 Hari ke-{}
+3419|{} Bagikan
+3420|Gen {}
+3421|musim {}
+3422|Pertandingan terakhir{}
+3423|{} ({} gol)
+3424|{} Energi
+3425|{} Simpan
+3426|{} Toko
+3427|{} Master
+3428|{} · {} pertandingan
+3429|{} · usia {}{}
+3430|minggu {}
+3431|{}/{} gol
+3432|{} milik kita!
+3433|Cuaca: {}.
+3434|🔥 {} hari
+3435|Kamu ({})
+3436|Kamu · {}
+3437|({} gol)
+3438|{} Assist
+3439|{} Milikmu
+3440|{} {} km/jam
+3441|· {} pertandingan
+3442|· usia {}{}
+3443|{}/5 pertandingan
+3444|• {} gol
+3445|{} bersama {}.
+3446|{} km/jam
+3447|Kamu: {}
+3448|Hari ke-{}
+3449|potongan {}%
+3450|GOL! {}
+3451|Edisi {}
+3452|{} Item
+3453|{} Permainan
+3454|{} penghargaan
+3455|pertandingan {}
+3456|bersama {}.
+3457|tersisa {}
+3458|TERSISA {}
+3459|usia {}
+3460|{} hari
+3461|{} Gol
+3462|{} Pertandingan
+3463|{} tahun
+3464|KEKUATAN{}
+3465|Ketenaran {}
+3466|Karier StarFoot-ku ⚽ Bisa kalahkan? #StarFoot #sepakbola
+3467|Karier StarFoot-ku Bisa kalahkan? #StarFoot #sepakbola
