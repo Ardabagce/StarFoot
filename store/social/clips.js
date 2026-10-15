@@ -21,11 +21,21 @@ async function career(pg) {
 (async () => {
   const b = await chromium.launch();
 
+  // Altın Top töreni (kısa videolar için). "node clips.js tr <klasör> ballon" yalnız bunu kaydeder.
+  {
+    const pg = await open(b, lang);
+    await career(pg);
+    await pg.evaluate(hideFoot);
+    await record(pg, path.join(OUT, 'ballon'), 3.6, { 0: () => pg.evaluate((en) => { const c = Game.club(); Celebrate.trophy({ big: en ? 'BALLON D\'OR!' : 'ALTIN TOP!', title: '', sub: '', c1: '#b8860b', c2: '#ffe08a', short: c.short, kit: Sprites.kit(c, false), number: 10 }); }, lang === 'en') });
+    await pg.close();
+    if (process.argv[4] === 'ballon') { await b.close(); return; }
+  }
+
   // 1) Maç anı: şut, gol ve oyundaki gol sevinci (sabit tohum; nişan noktaları bu tohuma göre)
   {
     const pg = await open(b, lang);
     await career(pg);
-    await pg.evaluate(() => { Object.keys(MOMENT_WEIGHTS.FW).forEach((k) => (MOMENT_WEIGHTS.FW[k] = k === 'open' ? 1 : 0)); Game.roleFor = () => 'starter'; Game.state.ap = 0; Game.playNext(); });
+    await pg.evaluate(() => { if (typeof Press !== 'undefined') Press.ask = () => Promise.resolve(); Object.keys(MOMENT_WEIGHTS.FW).forEach((k) => (MOMENT_WEIGHTS.FW[k] = k === 'open' ? 1 : 0)); Game.roleFor = () => 'starter'; Game.state.ap = 0; Game.playNext(); });
     for (let i = 0; i < 400; i++) {
       await pg.clock.runFor(250);
       const st = await pg.evaluate(() => { const ht = document.querySelector('[data-ht]'); if (ht) { ht.click(); return 'ht'; } const m = document.getElementById('mt-moment'); return m && !m.classList.contains('hidden') && m.querySelector('.mg-canvas') ? 'mom' : ''; });
@@ -37,7 +47,7 @@ async function career(pg) {
     for (let k = 1; k <= 12; k++) acts[14 + k] = async () => { await pg.mouse.move(x0 + dx * k / 12, y0 + dy * k / 12); };
     acts[30] = async () => { await pg.mouse.up(); };
     await record(pg, path.join(OUT, 'moment'), 6.5, acts);
-    console.log('moment', await pg.evaluate(() => document.getElementById('mm-sb').innerText.replace(/\s+/g, ' ')), pg.errs);
+    console.log('moment', await pg.evaluate(() => (document.getElementById('mt-hs') || {}).innerText + '-' + (document.getElementById('mt-as') || {}).innerText), pg.errs);
     await pg.close();
   }
 
