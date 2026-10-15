@@ -1,0 +1,350 @@
+1350|È ora di esultare! Tocca per saltare.
+1351|Stagione finita
+1352|Vai a fine stagione
+1353|Voto medio stagionale 7,0 (min. 5 partite)
+1354|Una richiesta a stagione
+1355|Giocatore della stagione
+1356|Giornata di provini
+1357|Rapporto dei provini
+1358|Partecipa ai provini
+1359|Sei stato la stella dei provini! Gli osservatori dei grandi club hanno fatto la fila per ingaggiarti.
+1360|Elimina
+1361|La nebbia accorcia l'anteprima del tiro.
+1362|Nebbioso
+1363|Nero
+1364|Base nera, crepe arancioni
+1365|Una piacevole chiacchierata.
+1366|Pallone da strada
+1367|Ottavi di finale
+1368|Sedicesimi di finale
+1369|Ultime 5 partite
+1370|Ultim'ora
+1371|Social
+1372|Hai pubblicato sui social: i tuoi follower sono aumentati
+1373|Cognome
+1374|Riorganizzarsi negli spogliatoi
+1375|Giornata alla spa
+1376|Per gli sponsor devi essere un po' più famoso.
+1377|Auto sportiva
+1378|Massaggio sportivo
+1379|Abbonamento in palestra
+1380|Atleta
+1381|Libro di alimentazione sportiva
+1382|Servizio mondiale StarFoot
+1383|Gazzetta StarFoot
+1384|Più alti sono i tuoi attributi, più forti e precisi sono i tuoi tiri.
+1385|Stile e lusso
+1386|Arabia Saudita
+1387|Coppa del Re saudita
+1388|SÜPER LIG
+1389|TEMPO SCADUTO
+1390|Il tuo contratto è scaduto! Devi firmarne uno nuovo.
+1391|Scatto
+1392|Altezza
+1393|Compra un regalo a sorpresa
+1394|SIUUU!
+1395|Gli esami sono andati bene, la tua famiglia è orgogliosa. (1 azione usata)
+1396|Sneaker in edizione limitata
+1397|Posizione
+1398|Prossimo avversario:
+1399|Le prime 4 squadre europee del ranking
+1400|La tua posizione
+1401|LEGA TANGO
+1402|CONTRASTO PULITO!
+1403|PULITO!
+1404|PALLA FUORI
+1405|PALLA PERSA
+1406|LA PALLA È TUA!
+1407|LA PALLA È CADUTA
+1408|SEI ARRIVATO PRIMA TU!
+1409|HAI PERSO PALLA
+1410|HAI MANCATO LA PALLA
+1411|Follow per follow
+1412|Follower
+1413|Guadagni follower e fama
+1414|Squadra
+1415|Sei il capitano della squadra
+1416|Una serata divertente con i compagni.
+1417|Compagno
+1418|Forza della squadra
+1419|La squadra gioca meglio nel secondo tempo
+1420|Legame con la squadra 75
+1421|Il legame con la squadra sale
+1422|Il legame con la squadra sale, la squadra diventa un po' più forte
+1423|Sei stato nominato capitano della squadra
+1424|All'allenatore sono piaciute le tue parole da uomo squadra.
+1425|Esci con la squadra
+1426|Carica la squadra
+1427|Sostieni la squadra
+1428|Il migliore della squadra:
+1429|Ti sei qualificato per l'Europa con la tua squadra
+1430|Richiesta
+1431|Richiesta approvata
+1432|Richiesta respinta
+1433|OK
+1434|Lega Tango
+1435|Tifosi
+1436|Incontro con i tifosi
+1437|Il club dei tifosi organizza una giornata di autografi.
+1438|Legame con i tifosi +8, la fama sale
+1439|I tifosi sono con te, ma nello spogliatoio c'è tensione.
+1440|I tifosi ci sono rimasti un po' male.
+1441|I tifosi ti hanno adorato
+1442|Un saluto ai nostri tifosi!
+1443|Hai fatto la storia! Hai fatto parte della squadra che ha alzato il trofeo.
+1444|Occhiali da sole firmati
+1445|Vai in vacanza
+1446|Ascolta i suoi consigli
+1447|Dispari
+1448|Uomo squadra
+1449|Monouso
+1450|Si indossa un solo paio (il migliore) · si consuma in 30-40 partite
+1451|Partita secca, chi perde è fuori
+1452|Offerta
+1453|Accetta l'offerta
+1454|Hai rifiutato l'offerta.
+1455|Offerte
+1456|Rifiuta le offerte
+1457|Tecnica
+1458|Tecnica +1 (in partita)
+1459|Allenatore
+1460|Migliora Tecnica e Passaggio (una volta per stagione)
+1461|Chiamala
+1462|Corsa a ritmo
+1463|Salto mortale all'indietro
+1464|Abito su misura
+1465|Strutture
+1466|Ringrazialo e chiedigli la maglia
+1467|Grazie, calcio. Grato per tutto. Ora inizia un nuovo capitolo.
+1468|Recupero palla
+1469|Palleggi
+1470|Dribbling
+1471|Dribbling +2, Tecnica +1
+1472|Dribbling +3, Tecnica +2
+1473|Palla al piede! Tira indietro e rilascia per tirare, oppure tocca un compagno per passare. Non passarla a un compagno oltre la linea del fuorigioco! I difensori si avvicinano, sii veloce!
+1474|Palla vagante! Tocca veloce per arrivarci prima dell'avversario.
+1475|Tocca quando la palla arriva alla tua testa
+1476|Contrasti e intercetti.
+1477|Fa guadagnare tempo con la palla e sotto pressione.
+1478|Tocca quando la palla cade nella zona verde
+1479|Guarda i fianchi, non la palla. Dove girano i fianchi, va lui.
+1480|Guarda oltre la spalla prima di ricevere. Un buon passaggio comincia dal primo controllo.
+1481|Non tenere troppo la palla. Passa, poi corri nello spazio.
+1482|Recupera palla!
+1483|Fai 10 palleggi. Tocca quando la palla cade nella zona verde.
+1484|Corri dai tifosi
+1485|Fai un cuore per i tifosi.
+1486|Inizia il torneo
+1487|Hai guardato il torneo in TV.
+1488|Fiamme arancio-rosse
+1489|Tutte le partite
+1490|Tutte le notizie
+1491|Diventi capitano dopo una partita in cui completi tutti gli obiettivi. Da capitano trascini i compagni in posizione.
+1492|Tutti i nomi di club e giocatori sono di fantasia.
+1493|Turchia
+1494|Coppa di Turchia
+1495|Campionato turco
+1496|Trasporti
+1497|Nations League
+1498|Hai vinto le Final Four di Nations League
+1499|Sessione nella capsula del sonno
+1500|Coach del sonno e letto smart
+1501|Aereo
+1502|Valigie pronte
+1503|Annulla
+1504|Occasione di uno-due
+1505|L'uno-due è stato intercettato.
+1506|Stazione uno-due: passa al compagno illuminato prima che scada il tempo.
+1507|Software di analisi video
+1508|Sessione di analisi video
+1509|Kit di vitamine e minerali
+1510|Per ora la bacheca è vuota. Il tuo primo trofeo brillerà qui.
+1511|Un altro trofeo per la bacheca!
+1512|Tiri più precisi, energia risparmiata
+1513|INCOMPIUTO
+1514|STAR COLA
+1515|LEGA DELLE STELLE
+1516|Sei single
+1517|Semifinale
+1518|Mezza altezza
+1519|Scommesse illegali
+1520|Cucciolo
+1521|Camp estivo di calcio
+1522|Mercato estivo
+1523|Piovoso
+1524|Età
+1525|L'età è solo un numero
+1526|Vita
+1527|Nuovi oggetti si sbloccano crescendo. Tocca una categoria per aprirla o chiuderla.
+1528|Riserva
+1529|In panchina
+1530|Aspetta in panchina
+1531|Riserva, in attesa di un'occasione
+1532|Nuova carriera
+1533|Inizia la nuova stagione
+1534|Inizia una nuova carriera
+1535|Conosci qualcuno di nuovo
+1536|Nuova mano
+1537|Primo giorno con le scarpe nuove.
+1538|Pronto per una nuova avventura. Mi sta bene la nuova maglia?
+1539|Nuova medaglia:
+1540|Nuova stagione, nuova collaborazione. #collab
+1541|In bocca al lupo nel nuovo club
+1542|Scatti del nuovo servizio. Qual è il tuo preferito?
+1543|Basso
+1544|Il giornale locale ha parlato della tua prestazione con il titolo "la stella del vivaio". La tua famiglia l'ha incorniciato.
+1545|Talento
+1546|Distribuisci i punti talento
+1547|Soldi insufficienti.
+1548|Indennità di formazione
+1549|La zona verde è un contrasto pulito, il giallo è fallo. Premi al momento giusto!
+1550|Strisce verdi, atmosfera da strada
+1551|Vai comunque
+1552|Corso di yoga e stretching
+1553|Allenamento intenso
+1554|Allenamento intenso
+1555|Energia insufficiente per un allenamento intenso.
+1556|Sei passato a un club estero
+1557|Hai incontrato centinaia di tifosi!
+1558|Allenamento con un campione
+1559|Stelle
+1560|Lega delle Stelle
+1561|Lega Stellata
+1562|Miglior giovane dell'anno
+1563|Sei stato eletto giocatore dell'anno
+1564|Sei stato eletto miglior giovane dell'anno
+1565|TROPPO DEBOLE
+1566|Sessione debole
+1567|La ricchezza ti sta bene
+1568|Alto
+1569|Difficile
+1570|Difficoltà
+1571|Salta e gira
+1572|azioni rimaste. Se giochi la partita, andranno perse.
+1573|amico
+1574|tenendo premuto e trascinando
+1575|ha pareggiato
+1576|finalizzazione, scatto, slalom
+1577|tocca lo schermo quando entra nella zona ·
+1578|energy drink
+1579|tirando indietro e rilasciando
+1580|weekend fuori porta
+1581|quando si sbilancia
+1582|duelli, spalla a spalla, colpi di testa
+1583|capitano
+1584|la carriera verrà eliminata per sempre. Non si può annullare.
+1585|la tua partita
+1586|marchio di scarpe
+1587|marchio di cuffie
+1588|siamo fuori dalla coppa.
+1589|partita in strada
+1590|sconfitta
+1591|stilista
+1592|puoi mandarlo ovunque. Tocca per passare.
+1593|marchio di auto
+1594|passi.
+1595|passaggio, palleggi, slalom
+1596|siamo usciti ai rigori.
+1597|abbiamo passato il turno ai rigori!
+1598|una cena romantica
+1599|marchio di orologi
+1600|una passeggiata sulla spiaggia
+1601|ti porta in un settore giovanile!
+1602|con la sua prestazione ai provini
+1603|s per essere pronto
+1604|alimentazione sportiva
+1605|follower
+1606|giocatore esperto
+1607|fa un'offerta!
+1608|marchio di telefoni
+1609|trascina dall'altra parte
+1610|ha passato il turno
+1611|abbiamo passato il turno!
+1612|è disponibile: allenamento, riposo, tempo con i compagni...
+1613|sviluppatore software
+1614|con indennità di formazione
+1615|verde
+1616|rilascia nella fascia verde
+1617|nell'allenamento intenso
+1618|stella
+1619|ha detto "Ho bisogno di un po' più di tempo".
+1620|ha detto "Sì!" La data delle nozze è fissata.
+1621|Centro sportivo
+1622|Sala stampa
+1623|Premio risultato
+1624|Obiettivi
+1625|Se scegli un paese, non potrai più giocare per l'altro.
+1626|Questa settimana
+1627|Stelle dell'epoca
+1628|La tua energia è bassa. Il rendimento cala e il rischio infortuni sale.
+1629|Oggetti
+1630|Le tue partite
+1631|Numero di maglia
+1632|Campioni precedenti
+1633|La tua esultanza
+1634|SETTIMANE FA
+1635|Piano settimanale
+1636|La tua vita
+1637|Non hai ancora un club
+1638|Elimina carriera
+1639|Salva
+1640|In uso
+1641|Bacheca dei trofei
+1642|Giorno della partita
+1643|Dopo la partita
+1644|Simula la partita
+1645|Premi di migliore in campo
+1646|Agente
+1647|Ranking delle nazionali
+1648|Sei stato convocato!
+1649|Probabile formazione
+1650|Gioco
+1651|Classifica
+1652|PALLEGGI!
+1653|Tuo
+1654|Stagioni
+1655|Offerta di sponsorizzazione
+1656|Sponsorizzazioni
+1657|Stadio
+1658|Campo di allenamento
+1659|Offerte di trasferimento
+1660|Calendario dei tornei
+1661|L'U19 gioca la Lega Europea di Sviluppo in questa stagione! Affronterai i migliori vivai d'Europa.
+1662|Maestro
+1663|Cambi e rotazione
+1664|azioni
+1665|è venuto all'allenamento in pigiama. L'allenatore: "Almeno i colori erano quelli del club".
+1666|ora si usa in partita
+1667|assist: i compagni ti ringraziano
+1668|è aperto. Ancora nessuna offerta; gioca bene e qualcuno potrebbe bussare.
+1669|: il presidente sul mercato: "I soldi in cassaforte ci sono, solo che non troviamo la chiave".
+1670|like
+1671|ci è rimasto un po' male.
+1672|è nostra! Siamo i migliori d'Europa.
+1673|è nostra! Questo trofeo è per i nostri tifosi.
+1674|è nostra! Siamo i migliori del continente.
+1675|si è riorganizzata all'intervallo.
+1676|è consumata e non si può più usare. Puoi comprare un paio nuovo nel negozio.
+1677|ha commesso fallo.
+1678|ha autografato la sua maglia e te l'ha regalata. Morale +10
+1679|ha segnato una splendida punizione!
+1680|gol: i tifosi sono impazziti
+1681|ha segnato.
+1682|ha avuto un piccolo infortunio. È inciampato sul tappeto cercando di dribblare il suo gatto a casa.
+1683|potrebbe essere pronto
+1684|è stato accreditato sul tuo conto!
+1685|ha parlato di tattica con l'allenatore. Nel secondo tempo vedrà più palloni.
+1686|non ha lasciato scampo al portiere!
+1687|è chiuso. Le offerte in sospeso sono scadute.
+1688|gol in carriera
+1689|passaggi chiave
+1690|ha lasciato sul posto il suo uomo in contropiede!
+1691|trofei e premi
+1692|ha recuperato palla con un contrasto perfetto!
+1693|marchi ti vogliono
+1694|vuole organizzare una vacanza durante la sosta per le nazionali.
+1695|è rientrato alla grande e ha recuperato palla!
+1696|ha gonfiato la rete con un tiro splendido!
+1697|focus · crescita stimata
+1698|è stato sostituito.
+1699|non è rimasto molto colpito, ma un piccolo club vuole comunque darti una possibilità.

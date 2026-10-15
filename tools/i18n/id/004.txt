@@ -1,0 +1,350 @@
+1350|Saatnya selebrasi! Ketuk untuk melewati.
+1351|Musim Selesai
+1352|Lompat ke Akhir Musim
+1353|Rata-rata nilai musim 7,0 (min. 5 laga)
+1354|Satu permintaan per musim
+1355|Pemain Terbaik Musim Ini
+1356|Hari Seleksi
+1357|Laporan seleksi
+1358|Ikut Seleksi
+1359|Kamu bintang seleksi! Pemandu bakat klub besar antre untuk merekrutmu.
+1360|Hapus
+1361|Kabut memperpendek pratinjau tembakan.
+1362|Berkabut
+1363|Hitam
+1364|Dasar hitam, retakan oranye
+1365|Obrolan yang menyenangkan.
+1366|Bola Jalanan
+1367|16 Besar
+1368|32 Besar
+1369|5 laga terakhir
+1370|Berita Terkini
+1371|Media Sosial
+1372|Kamu memposting di media sosial: pengikutmu bertambah
+1373|Nama belakang
+1374|Berkumpul lagi di ruang ganti
+1375|Hari Spa
+1376|Kamu perlu sedikit lebih terkenal untuk dapat sponsor.
+1377|Mobil Sport
+1378|Pijat Olahraga
+1379|Keanggotaan Gym
+1380|Atlet
+1381|Buku Nutrisi Olahraga
+1382|Layanan Dunia StarFoot
+1383|Koran StarFoot
+1384|Makin tinggi atributmu, makin keras dan akurat tembakanmu.
+1385|Gaya dan Kemewahan
+1386|Arab Saudi
+1387|Piala Raja Saudi
+1388|SÜPER LIG
+1389|WAKTU HABIS
+1390|Kontrakmu sudah habis! Kamu harus menandatangani yang baru.
+1391|Sprint
+1392|Ketinggian
+1393|Beli hadiah kejutan
+1394|SIUUU!
+1395|Ujianmu lancar, keluargamu bangga. (1 aksi terpakai)
+1396|Sneaker Edisi Terbatas
+1397|Peringkat
+1398|Lawan berikutnya:
+1399|4 tim Eropa teratas di peringkat
+1400|Peringkatmu
+1401|LIGA TANGO
+1402|TEKEL BERSIH!
+1403|BERSIH!
+1404|BOLA KELUAR
+1405|BOLA HILANG
+1406|BOLA MILIKMU!
+1407|BOLA JATUH
+1408|KAMU LEBIH DULU!
+1409|KAMU KEHILANGAN BOLA
+1410|KAMU GAGAL MENJANGKAU BOLA
+1411|Follow balik
+1412|Pengikut
+1413|Kamu mendapat pengikut dan ketenaran
+1414|Tim
+1415|Kamu Kapten Tim
+1416|Malam seru bersama rekan setim.
+1417|Rekan setim
+1418|Kekuatan tim
+1419|Tim bermain lebih kuat di babak kedua
+1420|Ikatan tim 75
+1421|Ikatan tim naik
+1422|Ikatan tim naik, tim sedikit lebih kuat
+1423|Kamu ditunjuk sebagai kapten tim
+1424|Pelatih suka kata-katamu yang mengutamakan tim.
+1425|Nongkrong dengan Tim
+1426|Bakar semangat tim
+1427|Dukung tim
+1428|Terbaik di tim:
+1429|Kamu membawa timmu lolos ke Eropa
+1430|Permintaan
+1431|Permintaan disetujui
+1432|Permintaan ditolak
+1433|OK
+1434|Liga Tango
+1435|Suporter
+1436|Temu Suporter
+1437|Klub suporter mengadakan hari tanda tangan.
+1438|Ikatan suporter +8, ketenaran naik
+1439|Suporter mendukungmu, tapi ruang ganti sedang tegang.
+1440|Suporter sedikit kecewa.
+1441|Suporter mencintaimu
+1442|Salam untuk suporter kita!
+1443|Kamu mengukir sejarah! Kamu bagian dari tim yang mengangkat trofi.
+1444|Kacamata Hitam Desainer
+1445|Pergi berlibur
+1446|Dengarkan nasihatnya
+1447|Ganjil
+1448|Pasukan Satu Orang
+1449|Sekali Pakai
+1450|Hanya satu pasang yang dipakai (yang terbaik) · aus setelah 30-40 laga
+1451|Satu laga, yang kalah tersingkir
+1452|Tawaran
+1453|Terima Tawaran
+1454|Kamu menolak tawaran itu.
+1455|Tawaran
+1456|Tolak Tawaran
+1457|Teknik
+1458|Teknik +1 (dalam pertandingan)
+1459|Pelatih kepala
+1460|Meningkatkan Teknik dan Umpan (sekali per musim)
+1461|Teleponlah dia
+1462|Lari Tempo
+1463|Salto Belakang
+1464|Setelan Jas Khusus
+1465|Fasilitas
+1466|Berterima kasih dan minta jersey-nya
+1467|Terima kasih sepak bola. Bersyukur atas segalanya. Kini babak baru dimulai.
+1468|Merebut Bola
+1469|Juggling
+1470|Dribel
+1471|Dribel +2, Teknik +1
+1472|Dribel +3, Teknik +2
+1473|Bola di kaki! Tarik lalu lepas untuk menembak, atau ketuk rekan untuk mengumpan. Jangan umpan ke rekan yang melewati garis offside! Bek mendekat, cepatlah!
+1474|Bola liar! Ketuk cepat untuk menjangkaunya sebelum lawan.
+1475|Ketuk saat bola sampai di kepalamu
+1476|Tekel dan intersep.
+1477|Memberi waktu saat menguasai bola dan di bawah tekanan.
+1478|Ketuk saat bola jatuh ke zona hijau
+1479|Perhatikan pinggulnya, bukan bolanya. Ke mana pinggulnya berputar, ke sanalah dia pergi.
+1480|Lihat ke belakang bahumu sebelum menerima. Umpan bagus dimulai dari sentuhan pertama.
+1481|Jangan terlalu lama menahan bola. Umpan, lalu lari ke ruang kosong.
+1482|Rebut bola!
+1483|Juggling bola 10 kali. Ketuk saat bola jatuh ke zona hijau.
+1484|Lari ke Suporter
+1485|Buat tanda hati untuk suporter.
+1486|Mulai Turnamen
+1487|Kamu menonton turnamen di TV.
+1488|Api oranye-merah
+1489|Semua jadwal
+1490|Semua berita
+1491|Kamu jadi kapten setelah laga di mana kamu menyelesaikan semua target. Sebagai kapten kamu menyeret rekan setim ke posisinya.
+1492|Semua nama klub dan pemain adalah fiktif.
+1493|Turki
+1494|Piala Turki
+1495|Liga Turki
+1496|Transportasi
+1497|Nations League
+1498|Kamu memenangi Final Nations League
+1499|Sesi Kapsul Tidur Siang
+1500|Pelatih Tidur dan Kasur Pintar
+1501|Pesawat
+1502|Koper Sudah Siap
+1503|Batal
+1504|Peluang Satu-Dua
+1505|Umpan satu-dua dipotong.
+1506|Pos satu-dua: umpan ke rekan yang bersinar sebelum waktu habis.
+1507|Software Analisis Video
+1508|Sesi Analisis Video
+1509|Paket Vitamin dan Mineral
+1510|Lemari trofi masih kosong. Trofi pertamamu akan bersinar di sini.
+1511|Satu trofi lagi untuk lemari!
+1512|Tembakan lebih akurat, energi lebih hemat
+1513|BELUM SELESAI
+1514|STAR COLA
+1515|LIGA BINTANG
+1516|Kamu masih lajang
+1517|Semifinal
+1518|Setengah
+1519|Taruhan ilegal
+1520|Anak anjing
+1521|Kamp Sepak Bola Musim Panas
+1522|Bursa Transfer Musim Panas
+1523|Hujan
+1524|Usia
+1525|Usia Hanyalah Angka
+1526|Hidup
+1527|Barang baru terbuka seiring bertambahnya usia. Ketuk kategori untuk membuka atau menutupnya.
+1528|Cadangan
+1529|Di bangku cadangan
+1530|Tunggu di bangku cadangan
+1531|Cadangan, menunggu kesempatan
+1532|Karier Baru
+1533|Mulai Musim Baru
+1534|Mulai karier baru
+1535|Kenalan dengan orang baru
+1536|Ronde baru
+1537|Hari pertama dengan sepatu baru.
+1538|Siap untuk petualangan baru. Cocok nggak jersey baruku?
+1539|Medali baru:
+1540|Musim baru, kerja sama baru. #kolaborasi
+1541|Semoga sukses di klub barumu
+1542|Foto dari pemotretan baru. Mana favoritmu?
+1543|Rendah
+1544|Koran lokal menulis tentang penampilanmu dengan judul "bintang bersinar akademi". Keluargamu membingkainya.
+1545|Bakat
+1546|Bagikan poin bakat
+1547|Uang tidak cukup.
+1548|Biaya kompensasi
+1549|Zona hijau berarti tekel bersih, kuning berarti pelanggaran. Tekan di saat yang tepat!
+1550|Garis hijau, nuansa jalanan
+1551|Tetap pergi
+1552|Kelas Yoga dan Peregangan
+1553|Latihan Intensif
+1554|Latihan intensif
+1555|Energi tidak cukup untuk latihan intensif.
+1556|Kamu pindah ke klub di luar negeri
+1557|Kamu bertemu ratusan suporter!
+1558|Klinik Bersama Pemain Bintang
+1559|Bintang
+1560|Liga Bintang
+1561|Liga Berbintang
+1562|Pemain Muda Terbaik Tahun Ini
+1563|Kamu terpilih sebagai Pemain Terbaik Tahun Ini
+1564|Kamu terpilih sebagai Pemain Muda Terbaik Tahun Ini
+1565|TERLALU LEMAH
+1566|Sesi lemah
+1567|Kekayaan cocok untukmu
+1568|Tinggi
+1569|Sulit
+1570|Tingkat kesulitan
+1571|Lompat dan Berputar
+1572|aksi tersisa. Jika kamu memainkan pertandingan, aksi itu akan hangus.
+1573|teman
+1574|dengan menahan dan menyeret
+1575|imbang
+1576|penyelesaian, sprint, slalom
+1577|ketuk layar saat masuk zona ·
+1578|minuman energi
+1579|dengan menarik lalu melepas
+1580|liburan akhir pekan
+1581|saat dia condong
+1582|duel, adu bahu, sundulan
+1583|kapten
+1584|karier akan dihapus permanen. Ini tidak bisa dibatalkan.
+1585|pertandinganmu sendiri
+1586|merek sepatu
+1587|merek headphone
+1588|kita tersingkir dari piala.
+1589|laga jalanan
+1590|kekalahan
+1591|desainer mode
+1592|kamu bisa mengirimnya ke mana saja. Ketuk untuk mengumpan.
+1593|merek mobil
+1594|kamu mengumpan.
+1595|umpan, juggling, slalom
+1596|kita tersingkir lewat adu penalti.
+1597|kita lolos lewat adu penalti!
+1598|makan malam romantis
+1599|merek jam tangan
+1600|jalan-jalan di pantai
+1601|membawamu ke akademi!
+1602|berkat penampilannya di seleksi
+1603|d lagi siap
+1604|nutrisi olahraga
+1605|pengikut
+1606|pemain veteran
+1607|mengajukan tawaran!
+1608|merek ponsel
+1609|seret ke arah lain
+1610|lolos
+1611|kita lolos!
+1612|tersedia: latihan, istirahat, waktu bersama rekan setim...
+1613|pengembang software
+1614|dengan biaya kompensasi
+1615|hijau
+1616|lepas di pita hijau
+1617|dalam latihan intensif
+1618|bintang
+1619|berkata "Aku butuh sedikit waktu lagi".
+1620|berkata "Ya!" Tanggal pernikahan sudah ditetapkan.
+1621|Pusat Latihan
+1622|Ruang Pers
+1623|Bonus prestasi
+1624|Pencapaian
+1625|Jika memilih satu negara, kamu tidak bisa lagi bermain untuk negara lain.
+1626|Minggu Ini
+1627|Bintang Era Ini
+1628|Energimu rendah. Performamu turun dan risiko cedera meningkat.
+1629|Barang
+1630|Jadwalmu
+1631|Nomor Punggung
+1632|Juara Terdahulu
+1633|Selebrasi Golmu
+1634|MINGGU LALU
+1635|Rencana Mingguan
+1636|Hidupmu
+1637|Kamu belum punya klub
+1638|Hapus Karier
+1639|Simpan
+1640|Dipakai
+1641|Lemari Trofi
+1642|Hari Pertandingan
+1643|Setelah Pertandingan
+1644|Simulasikan Pertandingan
+1645|Penghargaan Pemain Terbaik
+1646|Agen
+1647|Peringkat Tim Nasional
+1648|Kamu dipanggil!
+1649|Prediksi Starting XI
+1650|Permainan
+1651|Klasemen
+1652|JUGGLING!
+1653|Milikmu
+1654|Musim
+1655|Tawaran Sponsor
+1656|Sponsor
+1657|Stadion
+1658|Tempat Latihan
+1659|Tawaran Transfer
+1660|Kalender Turnamen
+1661|U19 bermain di Liga Pengembangan Eropa musim ini! Kamu akan menghadapi akademi terbaik Eropa.
+1662|Master
+1663|Cadangan dan Rotasi
+1664|aksi
+1665|datang latihan memakai piama. Pelatih: "Setidaknya warnanya cocok dengan klub."
+1666|kini dipakai di pertandingan
+1667|assist: rekan setimmu berterima kasih
+1668|dibuka. Belum ada tawaran; bermainlah bagus dan mungkin ada yang mengetuk pintu.
+1669|: presiden bicara soal bursa transfer: "Ada uang di brankas, kami cuma tidak bisa menemukan kuncinya."
+1670|suka
+1671|sedikit tersinggung.
+1672|milik kita! Kita yang terbaik di Eropa.
+1673|milik kita! Trofi ini untuk suporter kita.
+1674|milik kita! Kita yang terbaik di benua ini.
+1675|berbenah saat turun minum.
+1676|sudah aus dan tidak bisa dipakai lagi. Kamu bisa membeli pasangan baru di toko.
+1677|melakukan pelanggaran.
+1678|menandatangani jersey-nya dan memberikannya padamu. Moral +10
+1679|mencetak gol tendangan bebas yang indah!
+1680|gol: suporter menggila
+1681|mencetak gol.
+1682|mengalami cedera ringan. Dia tersandung karpet saat mencoba mendribel kucingnya di rumah.
+1683|mungkin siap
+1684|sudah masuk ke rekeningmu!
+1685|berdiskusi taktik dengan pelatih. Dia akan lebih banyak menerima bola di babak kedua.
+1686|membuat kiper tak berdaya!
+1687|ditutup. Tawaran yang tertunda kedaluwarsa.
+1688|gol karier
+1689|umpan kunci
+1690|meninggalkan penjaganya saat serangan balik!
+1691|trofi dan penghargaan
+1692|merebut bola dengan tekel sempurna!
+1693|merek menginginkanmu
+1694|ingin merencanakan liburan saat jeda internasional.
+1695|turun bertahan dengan gemilang dan merebut bola!
+1696|menggetarkan jaring dengan tembakan brilian!
+1697|fokus · perkiraan perkembangan
+1698|diganti.
+1699|tidak terlalu terkesan, tapi klub kecil tetap ingin memberimu kesempatan.

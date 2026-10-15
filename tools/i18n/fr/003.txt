@@ -1,0 +1,350 @@
+1000|CONFÉRENCE
+1001|CORNER !
+1002|COURS !
+1003|AMÉRIQUE DU NORD
+1004|Écouteurs sans fil
+1005|Accepter
+1006|Effectif
+1007|Hors du groupe
+1008|Ta place dans l'effectif
+1009|Difficile d'entrer dans le groupe
+1010|Jeu de tête
+1011|But de la tête
+1012|Exercice de jeu de tête
+1013|Cours particulier de jeu de tête
+1014|Améliore Jeu de tête et Défense (une fois par saison)
+1015|Ne ferme pas les yeux sur une tête, frappe avec le milieu du front.
+1016|Têtes et ballons aériens.
+1017|Rester et travailler
+1018|Gardien
+1019|Le gardien est sorti et a capté le ballon.
+1020|Gardien et défense un peu plus faciles
+1021|Gardiens vifs, défense rude, progression lente. Un vrai défi.
+1022|Gardiens et défenses plus faibles, aide à la visée forte, progression plus rapide à l'entraînement.
+1023|Les gardiens détestent les frappes rasantes dans le coin.
+1024|Notre gardien a arrêté le penalty !
+1025|Par-dessus le gardien
+1026|Pas de chance, gardien
+1027|Trompe le gardien avec ton regard avant de frapper.
+1028|Un style de vie de qualité. #pub
+1029|Cœur
+1030|Pris par les caméras ! Les supporters sont déçus.
+1031|Drone caméra
+1032|Cours vers la caméra, salue les supporters.
+1033|Rejoindre le stage
+1034|Ballon camouflage
+1035|Capitaine
+1036|Tu es capitaine !
+1037|En route vers le brassard
+1038|Éclair noir
+1039|Chaussures Carbon Elite
+1040|Le ballon s'arrête vite dans la neige. On joue avec le ballon orange d'hiver.
+1041|Tu as joué au foot dans la rue avec ton frère.
+1042|Supprimer la carrière ?
+1043|Ta carrière va prendre fin.
+1044|Aucun tournoi international dans ta carrière pour l'instant.
+1045|Tu as marqué le premier but de ta carrière
+1046|Neigeux
+1047|Carte
+1048|Distribuer
+1049|Participer
+1050|Je ne peux pas
+1051|Le tacle glissé est le dernier recours. Reste sur tes appuis, sois patient.
+1052|Sur un terrain glissant
+1053|Skateboard
+1054|Tu as encouragé ton équipe depuis le banc.
+1055|Ta propre chaîne de podcast
+1056|Écouter poliment
+1057|Passe clé
+1058|Équipe d'entraînement personnelle
+1059|Centre de performance personnel
+1060|Chef personnel
+1061|Classique
+1062|Voiture de collection classique
+1063|Classique : cours, ouvre les bras, prends tes coéquipiers dans tes bras.
+1064|Facile
+1065|Bras levés
+1066|Bras grands ouverts, penche-toi d'un côté à l'autre en courant.
+1067|C. Conférence
+1068|Coupe Conférence
+1069|Soirée de Coupe Conférence
+1070|Gloire en Conférence
+1071|Kit de plots et piquets
+1072|Contre-attaque !
+1073|L'adversaire est arrivé le premier sur le ballon en contre.
+1074|Chaussures de contrôle
+1075|Vous en avez parlé et vous avez réglé ça.
+1076|Le corner a été dégagé par la défense.
+1077|Corner ! Touche quand le ballon arrive sur ta tête ; tu viseras à peu près la cible mobile.
+1078|Ballons cosmétiques
+1079|Coupe du Roi
+1080|Roi !
+1081|En tête
+1082|Chaussures
+1083|Chambre de cryothérapie
+1084|Approche-toi plus de 21 que le croupier. Le blackjack paie 3:2, le croupier s'arrête à 17.
+1085|Rester dans mon club
+1086|Le kiné du club a étudié tes mouvements et t'a préparé un plan d'étirements personnalisé.
+1087|Club
+1088|Chaussures du club
+1089|Force du club
+1090|Casino
+1091|Le casino est réservé aux 18 ans et plus.
+1092|Quitter le casino
+1093|Match de coupe
+1094|Vainqueur de coupe
+1095|Coupes
+1096|Trophées et récompenses
+1097|Tu es resté sobre, mais le coach l'a noté.
+1098|Presque parfait
+1099|Coupe d'Amérique du Nord
+1100|Tu as gagné la Coupe d'Amérique du Nord
+1101|Maître du Nord
+1102|Danse au poteau de corner
+1103|Glissade sur la pelouse jusqu'au poteau de corner.
+1104|Une danse près du poteau de corner.
+1105|Relégation
+1106|On est relégués
+1107|Rouge
+1108|Carton rouge
+1109|Carton rouge : équipe et supporters mécontents
+1110|Ouvre la défense par des passes courtes : touche le coéquipier en surbrillance avant la fin du temps.
+1111|Roi du continent
+1112|Ballon d'hiver
+1113|Mercato d'hiver
+1114|LA LIGA
+1115|LIGUE DES TULIPES
+1116|LALIGA 2
+1117|Marine et étoiles argentées
+1118|Ligue des tulipes
+1119|Lamin Yamel a signé un triplé après avoir fini ses devoirs. Son prof lui a donné des points bonus.
+1120|Ballon de lave
+1121|Écart avec le leader
+1122|Ligue
+1123|Ballon de la ligue
+1124|Phase de ligue
+1125|Tes matchs de la phase de ligue
+1126|Classement de la ligue
+1127|Position au classement
+1128|Ballons de ligue utilisés
+1129|Champion
+1130|Tu as été élu joueur de la saison de la ligue
+1131|Ligues
+1132|Lionel Mezzi tourne à 4 dribbles par match cette saison. Les défenses adverses partagent un psy.
+1133|Lisbonne
+1134|Londres
+1135|SUV de luxe
+1136|Montre de luxe
+1137|Yacht de luxe
+1138|LIGUE 1
+1139|LIGUE 2
+1140|RUE
+1141|MATCH DE RUE · Un recruteur regarde depuis le bord du terrain. Joue bien et il t'emmènera dans un centre de formation !
+1142|HOMME DU MATCH
+1143|DÉFAITE
+1144|Malheureusement, la blessure s'est aggravée.
+1145|Salaire
+1146|Potins
+1147|Quartier
+1148|Chaussures de rue
+1149|Matchs de rue
+1150|Footballeur de rue
+1151|Terrain de rue
+1152|Des gamins jouent dans le quartier et veulent que tu viennes.
+1153|Match de rue · Un recruteur regarde
+1154|Tu as fait les gros titres ! Les supporters ont adoré, mais le coach n'est pas content.
+1155|La marque a choisi le bon gars
+1156|Miami
+1157|Match
+1158|Performance en match
+1159|Jour de match
+1160|Énergie au max chaque jour de match !
+1161|Jouer le match
+1162|Aller au match ?
+1163|Aux moments clés, le jeu se met en pause : place ton doigt à l'opposé du ballon
+1164|En match
+1165|Énergie utilisée en match et en préparation physique.
+1166|Quand une occasion se présente en match, à ton coéquipier
+1167|Le ballon que tu utilises en match et à l'entraînement
+1168|Homme du match
+1169|Joueur du match
+1170|Homme du match
+1171|Pas l'homme du match, le roi du match
+1172|Quand tu es élu homme du match, ton trophée étoile s'affiche ici.
+1173|Le titre d'homme du match revient à mon équipe. Plus forts ensemble.
+1174|Boutique
+1175|Mexique
+1176|Coupe du Mexique
+1177|Part de l'agent
+1178|Un agent prend une part de tes revenus ; en échange il apporte plus d'offres de transfert, augmente ton salaire et trouve des sponsors.
+1179|Préparateur mental
+1180|Accueil
+1181|Ton club actuel
+1182|Poste
+1183|Mexico
+1184|Milan
+1185|Maillot national
+1186|But international
+1187|Équipe nationale
+1188|Convocation en sélection
+1189|Légende de la sélection
+1190|Rassemblement de la sélection
+1191|Sélections
+1192|Tu mets la convocation en attente pour l'instant.
+1193|Tu as joué pour la sélection
+1194|Tournoi international
+1195|M
+1196|Espace violet et étoiles
+1197|Moral
+1198|Moral +10, énergie -18 · risque de paparazzis
+1199|Moral +12
+1200|Moral +15
+1201|Le moral augmente aussi
+1202|Moral et célébrité (tout se cumule)
+1203|Motivation au plafond !
+1204|Moto
+1205|Tu seras probablement titulaire
+1206|Tu seras probablement sur le banc
+1207|Tu as été brillant ! Le recruteur a pris son téléphone aussitôt ; les centres de formation des grands clubs te veulent.
+1208|TACLE !
+1209|UNE-DEUX PARFAIT !
+1210|PARFAIT !
+1211|10 parfait
+1212|Excellente séance
+1213|Munich
+1214|INTERNATIONAL
+1215|Égypte
+1216|SUPERBE !
+1217|Ballon néon
+1218|Heureusement, la frappe n'était pas cadrée.
+1219|Ouvrir normalement (x1)
+1220|Progression normale
+1221|Norvège
+1222|Ballon en cuir vintage
+1223|Nova Mobile
+1224|Tu joueras avec les stars de cette époque
+1225|C'est la star de l'équipe.
+1226|LIGNE DU HORS-JEU
+1227|HORS-JEU !
+1228|Un exercice basé sur ta caractéristique ciblée. Joue bien et la progression monte jusqu'à ×1,5.
+1229|Tu t'es concentré sur le football.
+1230|Semaine d'examens à l'école ! Ta famille veut que tu révises cette semaine.
+1231|Événement
+1232|Tu as agi avec maturité et le coach l'a remarqué.
+1233|Épaule contre épaule
+1234|Apprendre quelque chose de lui
+1235|Moy.
+1236|Note moy.
+1237|Moyen
+1238|Milieu
+1239|Séance moyenne
+1240|Jouer
+1241|Console de jeux
+1242|Tu entres en jeu ! Le coach te fait confiance.
+1243|Joueur
+1244|Remplacé
+1245|PASSE INTERCEPTÉE
+1246|Tu peux ouvrir le pack maintenant ou regarder une courte pub pour
+1247|Ça sent l'argent
+1248|Tu n'as plus d'argent
+1249|Touche le coéquipier en surbrillance
+1250|Passe
+1251|Passe +4, Technique +4, Frappe +2
+1252|Mur de passes (rebondisseur)
+1253|Maître de la passe
+1254|L'action collective a échoué mais tu as toujours le ballon.
+1255|Exercice de passes
+1256|Festival de passes
+1257|Précision et puissance des passes.
+1258|Publie quelque chose, gagne des abonnés
+1259|Voir les publications
+1260|Brassard
+1261|Éclair rose
+1262|Motif éclair rose et blanc
+1263|But sur penalty
+1264|Tu es au point de penalty. Tire en arrière, vise un coin et relâche !
+1265|But sur penalty.
+1266|Ta performance a tapé dans l'œil ! Les centres de formation de plus grands clubs te veulent.
+1267|Valeur marchande
+1268|Pologne
+1269|Une émission sportive populaire te veut comme invité en direct.
+1270|Portugal
+1271|Coupe du Portugal
+1272|Championnat portugais
+1273|Chaussures pro
+1274|Professionnel
+1275|Shooting photo professionnel
+1276|Tu as remporté un titre de champion professionnel
+1277|Profil
+1278|Modifier le profil
+1279|Partager le profil
+1280|Aller à l'émission
+1281|Tu as mis le plan de côté.
+1282|Suivre le plan
+1283|Points
+1284|A joué pour des points de championnat
+1285|TU L'AS REPOUSSÉ !
+1286|DROIT DANS SES PIEDS
+1287|L'ADVERSAIRE A ÉTÉ PLUS RAPIDE
+1288|IL A LU TON GESTE
+1289|IL T'A PASSÉ !
+1290|L'ADVERSAIRE A GAGNÉ LE BALLON
+1291|PUB
+1292|Réussite pour passer les adversaires.
+1293|Tu as passé ton défenseur, seul face au gardien ! Tire en arrière, vise un coin et relâche.
+1294|Arrive au ballon avant ton adversaire : touche vite.
+1295|L'adversaire d'un côté
+1296|La défense te cherche encore
+1297|L'attaquant arrive avec le ballon. Touche quand l'anneau devient vert ; jaune signifie faute.
+1298|Étudier le gardien adverse
+1299|Il fonce sur toi ! Dès qu'il se décale d'un côté, emmène le ballon de l'autre (touche ou glisse à gauche/droite).
+1300|Aléatoire
+1301|Gros bonus sur 3 caractéristiques au hasard (une fois par saison)
+1302|Refuser
+1303|C'est une pub, mais ça lui va bien
+1304|Transfert record
+1305|Note
+1306|Ce n'est pas une note, c'est une fusée
+1307|Riyad
+1308|Ton rôle
+1309|Joueur de rotation
+1310|Roulette
+1311|Tu as refusé l'interview.
+1312|Venteux
+1313|Fils du vent
+1314|LIGUE SAMBA
+1315|LE DÉFENSEUR EST ARRIVÉ LE PREMIER
+1316|SERIE A
+1317|SERIE B
+1318|STARFOOT · ANATOLIA ENERGY · BOSPHORUS BANK ·
+1319|Footing du matin terminé.
+1320|Sur le terrain
+1321|Le rendre à son propriétaire
+1322|Tu n'es pas blessé, pas besoin de kiné.
+1323|Tu es blessé et ne peux pas jouer ce match.
+1324|Tu ne peux pas t'entraîner blessé.
+1325|N'a pas joué (blessure)
+1326|Durée de blessure réduite de 2 semaines
+1327|Tu es complètement rétabli
+1328|Tu es blessé, tu ne peux pas jouer ce match
+1329|Ligue samba
+1330|Il y a un cadeau pour toi !
+1331|Casque VR
+1332|Carton jaune
+1333|Défense
+1334|Défense +4, Force +2, Jeu de tête +2
+1335|Chaussures de défenseur
+1336|Les défenseurs foncent sur toi. Dès qu'ils s'engagent, emmène le ballon de l'autre côté (touche ou glisse à gauche/droite).
+1337|Par-dessus la défense
+1338|Coupe de cheveux légendaire
+1339|En forme
+1340|Santé
+1341|Rapport du recruteur
+1342|Recruteurs
+1343|Ta force
+1344|Ta carrière internationale
+1345|Libre
+1346|Série de buts
+1347|Fort et ras de terre
+1348|Fortune
+1349|Ta copine

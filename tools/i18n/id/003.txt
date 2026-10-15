@@ -1,0 +1,350 @@
+1000|KONFERENSI
+1001|SEPAK POJOK!
+1002|LARI!
+1003|AMERIKA UTARA
+1004|Headphone Nirkabel
+1005|Terima
+1006|Skuad
+1007|Tidak masuk skuad
+1008|Peringkatmu di skuad
+1009|Sulit masuk skuad
+1010|Sundulan
+1011|Gol Sundulan
+1012|Latihan Sundulan
+1013|Les Privat Sundulan
+1014|Meningkatkan Sundulan dan Bertahan (sekali per musim)
+1015|Jangan pejamkan mata saat menyundul, kenai bola dengan bagian tengah dahi.
+1016|Sundulan dan bola udara.
+1017|Tetap dan berlatih
+1018|Kiper
+1019|Kiper maju dan menangkap bola.
+1020|Kiper dan pertahanan sedikit lebih mudah
+1021|Kiper tangguh, pertahanan keras, perkembangan lambat. Tantangan sesungguhnya.
+1022|Kiper dan pertahanan lebih lemah, bantuan bidik kuat, perkembangan latihan lebih cepat.
+1023|Kiper benci tembakan rendah ke sudut.
+1024|Kiper kita menepis penalti!
+1025|Melewati kiper
+1026|Sial, kiper
+1027|Kelabui kiper dengan tatapanmu sebelum menembak.
+1028|Gaya hidup berkualitas. #iklan
+1029|Hati
+1030|Tertangkap kamera! Suporter kecewa.
+1031|Drone Kamera
+1032|Lari ke kamera, sapa suporter.
+1033|Ikut pemusatan latihan
+1034|Bola Kamuflase
+1035|Kapten
+1036|Kamu kapten!
+1037|Jalan Menuju Kapten
+1038|Petir Hitam
+1039|Sepatu Carbon Elite
+1040|Bola cepat berhenti di salju. Bola musim dingin oranye dipakai.
+1041|Kamu bermain bola di jalan bersama saudaramu.
+1042|Hapus karier?
+1043|Kariermu akan berakhir.
+1044|Belum ada turnamen internasional dalam kariermu.
+1045|Kamu mencetak gol pertama kariermu
+1046|Bersalju
+1047|Tambah
+1048|Bagikan kartu
+1049|Ikut
+1050|Aku tidak bisa
+1051|Tekel meluncur adalah pilihan terakhir. Tetap berdiri, bersabarlah.
+1052|Di lapangan licin
+1053|Skateboard
+1054|Kamu menyemangati timmu dari bangku cadangan.
+1055|Kanal Podcast Sendiri
+1056|Dengarkan dengan sopan
+1057|Umpan Kunci
+1058|Tim Latihan Pribadi
+1059|Pusat Performa Pribadi
+1060|Koki Pribadi
+1061|Klasik
+1062|Mobil Klasik Koleksi
+1063|Klasik: lari, rentangkan tangan, peluk rekan setim.
+1064|Mudah
+1065|Tangan di Atas
+1066|Lengan terbuka lebar, condong ke kiri dan kanan sambil berlari.
+1067|P. Konferensi
+1068|Piala Konferensi
+1069|Malam Piala Konferensi
+1070|Kejayaan Konferensi
+1071|Set Kerucut dan Tiang
+1072|Serangan Balik!
+1073|Lawan lebih dulu sampai ke bola saat serangan balik.
+1074|Sepatu Kontrol
+1075|Kalian membicarakannya dan menyelesaikannya.
+1076|Sepak pojok dihalau pertahanan.
+1077|Sepak pojok! Ketuk saat bola sampai di kepalamu; kamu akan membidik kira-kira ke target yang bergerak.
+1078|Bola Kosmetik
+1079|Piala Raja
+1080|Raja!
+1081|Pemuncak
+1082|Sepatu
+1083|Ruang Krioterapi
+1084|Dekati angka 21 lebih dari bandar. Blackjack dibayar 3:2, bandar berhenti di 17.
+1085|Tetap di klubku
+1086|Fisio klub mempelajari gerakanmu dan membuat rencana peregangan pribadi untukmu.
+1087|Klub
+1088|Sepatu Klub
+1089|Kekuatan klub
+1090|Kasino
+1091|Kasino untuk usia 18+.
+1092|Keluar dari kasino
+1093|Laga Piala
+1094|Juara Piala
+1095|Piala
+1096|Trofi dan Penghargaan
+1097|Kamu tetap sadar, tapi pelatih mencatatnya.
+1098|Nyaris Sempurna
+1099|Piala Amerika Utara
+1100|Kamu memenangi Piala Amerika Utara
+1101|Penguasa Utara
+1102|Tarian di Bendera Pojok
+1103|Meluncur di rumput menuju bendera pojok.
+1104|Menari di dekat bendera pojok.
+1105|Degradasi
+1106|Kita terdegradasi
+1107|Merah
+1108|Kartu merah
+1109|Kartu merah: tim dan suporter kecewa
+1110|Buka pertahanan dengan umpan pendek: ketuk rekan yang bersinar sebelum waktu habis.
+1111|Raja Benua
+1112|Bola Musim Dingin
+1113|Bursa Transfer Musim Dingin
+1114|LA LIGA
+1115|LIGA TULIP
+1116|LALIGA 2
+1117|Biru dongker dengan bintang perak
+1118|Liga Tulip
+1119|Lamin Yamel mencetak hat-trick setelah menyelesaikan PR-nya. Gurunya memberi nilai tambahan.
+1120|Bola Lava
+1121|Selisih dengan pemuncak
+1122|Liga
+1123|Bola Liga
+1124|Fase liga
+1125|Laga fase ligamu
+1126|Klasemen liga
+1127|Posisi di liga
+1128|Bola liga yang dipakai
+1129|Juara Liga
+1130|Kamu terpilih sebagai pemain terbaik musim ini di liga
+1131|Liga
+1132|Lionel Mezzi rata-rata membuat 4 dribel per laga musim ini. Pertahanan lawan berbagi satu terapis.
+1133|Lisbon
+1134|London
+1135|SUV Mewah
+1136|Jam Tangan Mewah
+1137|Kapal Pesiar Mewah
+1138|LIGUE 1
+1139|LIGUE 2
+1140|JALANAN
+1141|LAGA JALANAN · Pemandu bakat menonton dari pinggir lapangan. Bermainlah dengan baik dan dia akan membawamu ke akademi!
+1142|PEMAIN TERBAIK
+1143|KALAH
+1144|Sayangnya cederanya memburuk.
+1145|Gaji
+1146|Gosip
+1147|Lingkungan
+1148|Sepatu Jalanan
+1149|Laga Jalanan
+1150|Pesepak bola jalanan
+1151|Lapangan jalanan
+1152|Anak-anak bermain di lingkungan dan ingin kamu ikut.
+1153|Laga Jalanan · Pemandu bakat sedang menonton
+1154|Kamu jadi berita utama! Suporter suka, tapi pelatih tidak senang.
+1155|Merek memilih orang yang tepat
+1156|Miami
+1157|Pertandingan
+1158|Performa Pertandingan
+1159|Hari pertandingan
+1160|Energi penuh di setiap hari pertandingan!
+1161|Main
+1162|Pergi ke pertandingan?
+1163|Saat momen penting tiba, permainan berhenti sejenak: taruh jarimu di sisi berlawanan dari bola
+1164|Dalam pertandingan
+1165|Energi yang dipakai di pertandingan dan kebugaran.
+1166|Saat peluang datang di pertandingan, ke rekan setimmu
+1167|Bola yang kamu pakai di pertandingan dan latihan
+1168|Pemain Terbaik Pertandingan
+1169|Pemain Terbaik Pertandingan
+1170|Pemain terbaik pertandingan
+1171|Bukan pemain terbaik, tapi raja pertandingan
+1172|Saat kamu terpilih pemain terbaik pertandingan, trofi bintangmu muncul di sini.
+1173|Penghargaan pemain terbaik ini milik timku. Bersama kita lebih kuat.
+1174|Toko
+1175|Meksiko
+1176|Piala Meksiko
+1177|Bagian agen
+1178|Agen mengambil sebagian penghasilanmu; sebagai gantinya ia membawa lebih banyak tawaran transfer, menaikkan gajimu, dan mencarikan sponsor.
+1179|Pelatih Mental
+1180|Beranda
+1181|Klubmu saat ini
+1182|Posisi
+1183|Kota Meksiko
+1184|Milan
+1185|Jersey Timnas
+1186|Gol Internasional
+1187|Tim Nasional
+1188|Panggilan Timnas
+1189|Legenda Timnas
+1190|Pemusatan Latihan Timnas
+1191|Tim Nasional
+1192|Kamu menunda panggilan untuk sementara.
+1193|Kamu bermain untuk tim nasional
+1194|Turnamen internasional
+1195|M
+1196|Luar angkasa ungu dan bintang
+1197|Moral
+1198|Moral +10, energi -18 · risiko paparazi
+1199|Moral +12
+1200|Moral +15
+1201|Moral juga naik
+1202|Moral dan ketenaran (semuanya dijumlahkan)
+1203|Motivasi setinggi langit!
+1204|Motor
+1205|Kamu kemungkinan jadi starter
+1206|Kamu kemungkinan di bangku cadangan
+1207|Kamu bermain luar biasa! Pemandu bakat langsung menelepon; akademi klub besar menginginkanmu.
+1208|TEKEL!
+1209|UMPAN SATU-DUA SEMPURNA!
+1210|SEMPURNA!
+1211|Sempurna 10
+1212|Sesi luar biasa
+1213|München
+1214|INTERNASIONAL
+1215|Mesir
+1216|LUAR BIASA!
+1217|Bola Neon
+1218|Untungnya tembakan itu melenceng.
+1219|Buka Biasa (x1)
+1220|Perkembangan normal
+1221|Norwegia
+1222|Bola Kulit Vintage
+1223|Nova Mobile
+1224|Kamu akan bermain bersama bintang era itu
+1225|Dia bintang tim.
+1226|GARIS OFFSIDE
+1227|OFFSIDE!
+1228|Latihan berdasarkan atribut fokusmu. Bermain bagus dan perkembangan naik hingga ×1,5.
+1229|Kamu fokus pada sepak bola.
+1230|Minggu ujian di sekolah! Keluargamu ingin kamu belajar minggu ini.
+1231|Peristiwa
+1232|Kamu bersikap dewasa dan pelatih memperhatikannya.
+1233|Bahu-membahu
+1234|Belajar sesuatu darinya
+1235|Rata-rata
+1236|Nilai Rata-rata
+1237|Sedang
+1238|Gelandang
+1239|Sesi biasa
+1240|Main
+1241|Konsol Game
+1242|Kamu masuk! Pelatih percaya padamu.
+1243|Pemain
+1244|Diganti
+1245|UMPAN DIPOTONG
+1246|Kamu bisa membuka paket sekarang atau menonton iklan singkat untuk
+1247|Bau uang
+1248|Uangmu habis
+1249|Ketuk rekan yang bersinar
+1250|Umpan
+1251|Umpan +4, Teknik +4, Menembak +2
+1252|Dinding Pantul Umpan
+1253|Master Umpan
+1254|Kombinasi umpan gagal, tapi bola masih di kakimu.
+1255|Latihan Umpan
+1256|Pertunjukan Umpan
+1257|Akurasi dan kekuatan umpan.
+1258|Posting sesuatu, dapatkan pengikut
+1259|Lihat postingan
+1260|Ban kapten
+1261|Petir Merah Muda
+1262|Motif petir merah muda dan putih
+1263|Gol Penalti
+1264|Kamu di titik penalti. Tarik, bidik sudut, lalu lepaskan!
+1265|Gol dari titik penalti.
+1266|Penampilanmu menarik perhatian! Akademi klub yang lebih besar menginginkanmu.
+1267|Nilai Pasar
+1268|Polandia
+1269|Acara olahraga populer ingin kamu jadi bintang tamu siaran langsung.
+1270|Portugal
+1271|Piala Portugal
+1272|Liga Portugal
+1273|Sepatu Pro
+1274|Profesional
+1275|Sesi Foto Profesional
+1276|Kamu memenangi gelar liga profesional
+1277|Profil
+1278|Edit profil
+1279|Bagikan profil
+1280|Datang ke acara
+1281|Kamu menunda rencananya.
+1282|Ikuti rencana
+1283|Poin
+1284|Bermain untuk poin liga
+1285|KAMU MENDORONGNYA!
+1286|LANGSUNG KE KAKINYA
+1287|LAWAN LEBIH CEPAT
+1288|DIA MEMBACA GERAKANMU
+1289|DIA MELEWATIMU!
+1290|LAWAN MEREBUT BOLA
+1291|IKLAN
+1292|Keberhasilan melewati lawan.
+1293|Kamu melewati penjagamu, satu lawan satu dengan kiper! Tarik, bidik sudut, lalu lepaskan.
+1294|Raih bola sebelum lawan: ketuk cepat.
+1295|Lawan ke satu sisi
+1296|Pertahanan masih mencarimu
+1297|Penyerang datang membawa bola. Ketuk saat cincin berubah hijau; kuning berarti pelanggaran.
+1298|Pelajari kiper lawan
+1299|Dia datang ke arahmu! Begitu dia condong ke satu sisi, bawa bola ke sisi lain (ketuk atau geser kiri/kanan).
+1300|Acak
+1301|Dorongan besar untuk 3 atribut acak (sekali per musim)
+1302|Tolak
+1303|Iklan sih, tapi cocok untuknya
+1304|Transfer Rekor
+1305|Nilai
+1306|Itu bukan nilai, itu roket
+1307|Riyadh
+1308|Peranmu
+1309|Pemain rotasi
+1310|Roulette
+1311|Kamu menolak wawancara.
+1312|Berangin
+1313|Putra Angin
+1314|LIGA SAMBA
+1315|BEK LEBIH DULU SAMPAI
+1316|SERIE A
+1317|SERIE B
+1318|STARFOOT · ANATOLIA ENERGY · BOSPHORUS BANK ·
+1319|Lari pagi selesai.
+1320|Di lapangan
+1321|Kembalikan ke pemiliknya
+1322|Kamu tidak cedera, tidak perlu fisio.
+1323|Kamu cedera dan tidak bisa memainkan pertandingan ini.
+1324|Kamu tidak bisa berlatih saat cedera.
+1325|Tidak bermain karena cedera
+1326|Masa cedera berkurang 2 minggu
+1327|Kamu sudah pulih sepenuhnya
+1328|Kamu cedera, tidak bisa memainkan pertandingan ini
+1329|Liga Samba
+1330|Ada hadiah untukmu!
+1331|Headset VR
+1332|Kartu kuning
+1333|Bertahan
+1334|Bertahan +4, Kekuatan +2, Sundulan +2
+1335|Sepatu Bek
+1336|Para bek datang ke arahmu. Begitu mereka condong, bawa bola ke sisi lain (ketuk atau geser kiri/kanan).
+1337|Melewati pertahanan
+1338|Gaya rambut legendaris
+1339|Bugar
+1340|Kesehatan
+1341|Laporan pemandu bakat
+1342|Pemandu bakat
+1343|Kekuatanmu
+1344|Karier internasionalmu
+1345|Bebas
+1346|Rentetan Gol
+1347|Keras dan rendah
+1348|Kekayaan
+1349|Pacarmu

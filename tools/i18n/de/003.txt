@@ -1,0 +1,350 @@
+1000|CONFERENCE
+1001|ECKE!
+1002|LAUF!
+1003|NORDAMERIKA
+1004|Kabellose Kopfhörer
+1005|Annehmen
+1006|Kader
+1007|Nicht im Kader
+1008|Dein Platz im Kader
+1009|Schwer in den Kader zu kommen
+1010|Kopfball
+1011|Kopfballtor
+1012|Kopfballtraining
+1013|Privatstunde Kopfball
+1014|Verbessert Kopfball und Verteidigung (einmal pro Saison)
+1015|Schließ beim Kopfball nicht die Augen, triff den Ball mit der Stirnmitte.
+1016|Kopfbälle und hohe Bälle.
+1017|Bleiben und arbeiten
+1018|Torwart
+1019|Der Torwart kam heraus und fing den Ball.
+1020|Torwart und Abwehr werden etwas leichter
+1021|Starke Torhüter, harte Abwehr, langsame Entwicklung. Eine echte Herausforderung.
+1022|Schwächere Torhüter und Abwehr, starke Zielhilfe, schnellere Entwicklung im Training.
+1023|Torhüter hassen flache Schüsse ins Eck.
+1024|Unser Torwart hat den Elfmeter gehalten!
+1025|Über den Torwart
+1026|Pech, Torwart
+1027|Täusch den Torwart mit den Augen, bevor du schießt.
+1028|Lebensstil mit Qualität. #Werbung
+1029|Herz
+1030|Von der Kamera erwischt! Die Fans sind enttäuscht.
+1031|Kameradrohne
+1032|Lauf zur Kamera, grüß die Fans.
+1033|Ins Trainingslager
+1034|Tarnball
+1035|Kapitän
+1036|Du bist Kapitän!
+1037|Weg zur Kapitänsbinde
+1038|Schwarzer Blitz
+1039|Carbon-Elite-Schuhe
+1040|Im Schnee bleibt der Ball schnell liegen. Es wird mit dem orangen Winterball gespielt.
+1041|Du hast mit deinem Geschwister auf der Straße Fußball gespielt.
+1042|Karriere löschen?
+1043|Deine Karriere endet.
+1044|Noch kein internationales Turnier in deiner Karriere.
+1045|Du hast dein erstes Karrieretor geschossen
+1046|Verschneit
+1047|Karte
+1048|Karten geben
+1049|Mitmachen
+1050|Ich kann nicht
+1051|Eine Grätsche ist das letzte Mittel. Bleib auf den Beinen, sei geduldig.
+1052|Auf rutschigem Rasen
+1053|Skateboard
+1054|Du hast dein Team von der Bank angefeuert.
+1055|Dein eigener Podcast-Kanal
+1056|Höflich zuhören
+1057|Schlüsselpass
+1058|Persönliches Trainerteam
+1059|Persönliches Leistungszentrum
+1060|Privatkoch
+1061|Klassisch
+1062|Klassischer Sammlerwagen
+1063|Klassisch: rennen, Arme ausbreiten, Mitspieler umarmen.
+1064|Leicht
+1065|Arme hoch
+1066|Arme weit ausgebreitet, beim Laufen von Seite zu Seite neigen.
+1067|Conference-P.
+1068|Conference-Pokal
+1069|Conference-Pokalnacht
+1070|Conference-Ruhm
+1071|Hütchen- und Stangenset
+1072|Konter!
+1073|Der Gegner war beim Konter zuerst am Ball.
+1074|Kontrollschuhe
+1075|Ihr habt es ausgesprochen und geklärt.
+1076|Die Ecke wurde von der Abwehr geklärt.
+1077|Ecke! Tipp, wenn der Ball deinen Kopf erreicht; du zielst ungefähr auf das bewegte Ziel.
+1078|Kosmetische Bälle
+1079|Königspokal
+1080|König!
+1081|Spitzenreiter
+1082|Schuhe
+1083|Kältekammer
+1084|Komm näher an 21 als der Dealer. Blackjack zahlt 3:2, der Dealer steht bei 17.
+1085|In meinem Verein bleiben
+1086|Der Vereinsphysio hat deine Bewegungen analysiert und dir einen persönlichen Dehnplan erstellt.
+1087|Verein
+1088|Vereinsschuhe
+1089|Vereinsstärke
+1090|Casino
+1091|Das Casino ist erst ab 18.
+1092|Casino verlassen
+1093|Pokalspiel
+1094|Pokalsieger
+1095|Pokale
+1096|Trophäen und Auszeichnungen
+1097|Du bist nüchtern geblieben, aber der Trainer hat es registriert.
+1098|Fast perfekt
+1099|Nordamerika-Pokal
+1100|Du hast den Nordamerika-Pokal gewonnen
+1101|Herrscher des Nordens
+1102|Eckfahnentanz
+1103|Über den Rasen zur Eckfahne rutschen.
+1104|Ein Tanz an der Eckfahne.
+1105|Abstieg
+1106|Wir sind abgestiegen
+1107|Rot
+1108|Rote Karte
+1109|Rote Karte: Team und Fans verärgert
+1110|Knack die Abwehr mit kurzen Pässen: tipp den leuchtenden Mitspieler an, bevor die Zeit abläuft.
+1111|König des Kontinents
+1112|Winterball
+1113|Winter-Transferfenster
+1114|LA LIGA
+1115|TULPEN-LIGA
+1116|LALIGA 2
+1117|Marine mit Silbersternen
+1118|Tulpen-Liga
+1119|Lamin Yamel schoss einen Hattrick, nachdem er seine Hausaufgaben gemacht hatte. Sein Lehrer gab ihm Extrapunkte.
+1120|Lavaball
+1121|Rückstand auf den Ersten
+1122|Liga
+1123|Ligaball
+1124|Ligaphase
+1125|Deine Spiele der Ligaphase
+1126|Tabelle
+1127|Tabellenplatz
+1128|Verwendete Ligabälle
+1129|Meister
+1130|Du wurdest zum Spieler der Saison der Liga gewählt
+1131|Ligen
+1132|Lionel Mezzi kommt diese Saison auf 4 Dribblings pro Spiel. Gegnerische Abwehrreihen teilen sich einen Therapeuten.
+1133|Lissabon
+1134|London
+1135|Luxus-SUV
+1136|Luxusuhr
+1137|Luxusyacht
+1138|LIGUE 1
+1139|LIGUE 2
+1140|STRASSE
+1141|STRASSENSPIEL · Ein Scout schaut vom Spielfeldrand zu. Spiel gut, dann bringt er dich in eine Akademie!
+1142|SPIELER DES SPIELS
+1143|NIEDERLAGE
+1144|Leider hat sich die Verletzung verschlimmert.
+1145|Gehalt
+1146|Klatsch
+1147|Viertel
+1148|Straßenschuhe
+1149|Straßenspiele
+1150|Straßenfußballer
+1151|Straßenplatz
+1152|Kinder spielen im Viertel und wollen, dass du mitmachst.
+1153|Straßenspiel · Ein Scout schaut zu
+1154|Du bist in den Schlagzeilen! Die Fans fanden's toll, aber der Trainer ist nicht begeistert.
+1155|Die Marke hat den Richtigen gewählt
+1156|Miami
+1157|Spiel
+1158|Spielleistung
+1159|Spieltag
+1160|Volle Energie an jedem Spieltag!
+1161|Spiel starten
+1162|Zum Spiel gehen?
+1163|In entscheidenden Momenten pausiert das Spiel: leg den Finger gegenüber dem Ball an
+1164|Im Spiel
+1165|Energie für Spiele und Fitness.
+1166|Wenn sich im Spiel eine Chance ergibt, zu deinem Mitspieler
+1167|Der Ball, den du in Spiel und Training benutzt
+1168|Spieler des Spiels
+1169|Spieler des Spiels
+1170|Spieler des Spiels
+1171|Nicht Spieler des Spiels, König des Spiels
+1172|Wenn du Spieler des Spiels wirst, erscheint hier deine Sterntrophäe.
+1173|Die Auszeichnung zum Spieler des Spiels gehört meinem Team. Gemeinsam stärker.
+1174|Shop
+1175|Mexiko
+1176|Mexikanischer Pokal
+1177|Anteil des Beraters
+1178|Ein Berater nimmt einen Anteil deines Einkommens; dafür bringt er mehr Wechselangebote, erhöht dein Gehalt und findet Sponsoren.
+1179|Mentalcoach
+1180|Start
+1181|Dein aktueller Verein
+1182|Position
+1183|Mexiko-Stadt
+1184|Mailand
+1185|Nationaltrikot
+1186|Länderspieltor
+1187|Nationalmannschaft
+1188|Nominierung für die Nationalmannschaft
+1189|Legende der Nationalmannschaft
+1190|Lehrgang der Nationalmannschaft
+1191|Nationalmannschaften
+1192|Du legst die Nominierung vorerst auf Eis.
+1193|Du hast für die Nationalmannschaft gespielt
+1194|Internationales Turnier
+1195|M
+1196|Lila Weltall und Sterne
+1197|Moral
+1198|Moral +10, Energie -18 · Paparazzi-Risiko
+1199|Moral +12
+1200|Moral +15
+1201|Auch die Moral steigt
+1202|Moral und Ruhm (alles wird addiert)
+1203|Motivation auf Rekordniveau!
+1204|Motorrad
+1205|Du stehst wahrscheinlich in der Startelf
+1206|Du sitzt wahrscheinlich auf der Bank
+1207|Du hast überragend gespielt! Der Scout hat sofort telefoniert; die Akademien großer Vereine wollen dich.
+1208|TACKLING!
+1209|PERFEKTER DOPPELPASS!
+1210|PERFEKT!
+1211|Perfekte 10
+1212|Ausgezeichnete Einheit
+1213|München
+1214|INTERNATIONAL
+1215|Ägypten
+1216|SUPER!
+1217|Neonball
+1218|Zum Glück ging der Schuss daneben.
+1219|Normal öffnen (x1)
+1220|Normale Entwicklung
+1221|Norwegen
+1222|Vintage-Lederball
+1223|Nova Mobile
+1224|Du spielst mit den Stars dieser Ära
+1225|Er ist der Star des Teams.
+1226|ABSEITSLINIE
+1227|ABSEITS!
+1228|Eine Übung für deinen Schwerpunktwert. Spiel gut, dann steigt die Entwicklung bis ×1,5.
+1229|Du hast dich auf den Fußball konzentriert.
+1230|Prüfungswoche in der Schule! Deine Familie will, dass du diese Woche lernst.
+1231|Ereignis
+1232|Du hast dich reif verhalten und der Trainer hat es bemerkt.
+1233|Schulter an Schulter
+1234|Etwas von ihm lernen
+1235|Ø
+1236|Ø Note
+1237|Mittel
+1238|Mittelfeldspieler
+1239|Durchschnittliche Einheit
+1240|Spielen
+1241|Spielkonsole
+1242|Du wirst eingewechselt! Der Trainer vertraut dir.
+1243|Spieler
+1244|Ausgewechselt
+1245|PASS ABGEFANGEN
+1246|Du kannst das Paket jetzt öffnen oder eine kurze Werbung ansehen, um
+1247|Riecht nach Geld
+1248|Du bist pleite
+1249|Tipp den leuchtenden Mitspieler an
+1250|Passspiel
+1251|Passspiel +4, Technik +4, Schuss +2
+1252|Passwand (Rebounder)
+1253|Passmeister
+1254|Die Passkombination ist gescheitert, aber du hast noch den Ball.
+1255|Passtraining
+1256|Pass-Show
+1257|Passgenauigkeit und -härte.
+1258|Poste etwas und gewinne Follower
+1259|Beiträge ansehen
+1260|Binde
+1261|Pinker Blitz
+1262|Pink-weißes Blitzmuster
+1263|Elfmetertor
+1264|Du stehst am Elfmeterpunkt. Zieh zurück, ziel auf eine Ecke und lass los!
+1265|Tor vom Punkt.
+1266|Deine Leistung ist aufgefallen! Akademien größerer Vereine wollen dich.
+1267|Marktwert
+1268|Polen
+1269|Eine beliebte Sportsendung will dich als Live-Gast.
+1270|Portugal
+1271|Portugiesischer Pokal
+1272|Portugiesische Liga
+1273|Profischuhe
+1274|Profi
+1275|Professionelles Fotoshooting
+1276|Du hast einen Profi-Ligatitel gewonnen
+1277|Profil
+1278|Profil bearbeiten
+1279|Profil teilen
+1280|In die Sendung gehen
+1281|Du hast den Plan auf Eis gelegt.
+1282|Dem Plan folgen
+1283|Punkte
+1284|Um Ligapunkte gespielt
+1285|DU HAST IHN WEGGEDRÜCKT!
+1286|DIREKT IN SEINE FÜSSE
+1287|DER GEGNER WAR SCHNELLER
+1288|ER HAT DEINEN ZUG GELESEN
+1289|ER IST AN DIR VORBEI!
+1290|DER GEGNER HAT DEN BALL ERKÄMPFT
+1291|WERBUNG
+1292|Erfolg beim Ausspielen von Gegnern.
+1293|Du hast deinen Gegenspieler ausgespielt, allein vor dem Torwart! Zieh zurück, ziel auf eine Ecke und lass los.
+1294|Komm vor deinem Gegner an den Ball: schnell tippen.
+1295|Den Gegner auf eine Seite
+1296|Die Abwehr sucht dich noch
+1297|Der Stürmer kommt mit dem Ball. Tipp, wenn der Ring grün wird; gelb bedeutet Foul.
+1298|Den gegnerischen Torwart studieren
+1299|Er kommt auf dich zu! Sobald er sich zu einer Seite festlegt, zieh den Ball zur anderen (tippen oder nach links/rechts wischen).
+1300|Zufällig
+1301|Starker Schub für 3 zufällige Werte (einmal pro Saison)
+1302|Ablehnen
+1303|Ist Werbung, steht ihm aber
+1304|Rekordablöse
+1305|Note
+1306|Das ist keine Note, das ist eine Rakete
+1307|Riad
+1308|Deine Rolle
+1309|Rotationsspieler
+1310|Roulette
+1311|Du hast das Interview abgelehnt.
+1312|Windig
+1313|Sohn des Windes
+1314|SAMBA-LIGA
+1315|DER VERTEIDIGER WAR ZUERST DA
+1316|SERIE A
+1317|SERIE B
+1318|STARFOOT · ANATOLIA ENERGY · BOSPHORUS BANK ·
+1319|Morgenlauf erledigt.
+1320|Auf dem Platz
+1321|Dem Besitzer zurückgeben
+1322|Du bist nicht verletzt, kein Physio nötig.
+1323|Du bist verletzt und kannst dieses Spiel nicht bestreiten.
+1324|Verletzt kannst du nicht trainieren.
+1325|Wegen Verletzung nicht gespielt
+1326|Verletzungsdauer um 2 Wochen verkürzt
+1327|Du bist wieder voll fit
+1328|Du bist verletzt und kannst dieses Spiel nicht bestreiten
+1329|Samba-Liga
+1330|Da ist ein Geschenk für dich!
+1331|VR-Brille
+1332|Gelbe Karte
+1333|Verteidigung
+1334|Verteidigung +4, Kraft +2, Kopfball +2
+1335|Verteidigerschuhe
+1336|Verteidiger kommen auf dich zu. Sobald sie sich festlegen, zieh den Ball zur anderen Seite (tippen oder nach links/rechts wischen).
+1337|Über die Abwehr
+1338|Legendäre Frisur
+1339|Fit
+1340|Gesundheit
+1341|Scoutbericht
+1342|Scouts
+1343|Deine Stärke
+1344|Deine Länderspielkarriere
+1345|Frei
+1346|Torserie
+1347|Hart und flach
+1348|Vermögen
+1349|Deine Freundin
