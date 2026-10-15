@@ -24,3 +24,21 @@ Karakter sınırları: Ad 30 · Alt başlık 30 · Tanıtım metni 170 · Anahta
 - **Destek URL'si:** https://starfoot.bagce.dev/privacy.html
 - **Pazarlama URL'si:** https://starfoot.bagce.dev
 - **Gizlilik politikası URL'si:** https://starfoot.bagce.dev/privacy.html
+
+
+---
+
+## 1.0.5 ASO güncellemesi (arama için)
+
+Kural: Ad ve alt başlıktaki kelimeler zaten aranır; anahtar kelimelerde tekrar etme (boşa yer harcar). Marka/lig adı (FIFA, Süper Lig vb.) kullanma; ret sebebi olur.
+
+### Türkçe
+**Alt başlık (29/30):** Yıldız futbolcu ol, kupayı al
+**Anahtar kelimeler (98/100):** menajer,maç,gol,lig,kupa,şampiyon,transfer,oyuncu,spor,penaltı,frikik,derbi,forvet,saha,top,kaleci
+
+### English (U.S. / U.K.)
+**Subtitle (28/30):** Be a soccer star: play & win
+**Keywords (100/100):** manager,striker,league,cup,goal,transfer,sports,penalty,freekick,academy,legend,player,sim,derby,pro
+
+**What's New (TR):** Maç primini ikiye katlama, paylaşım kartlarında oyun bağlantısı ve küçük iyileştirmeler.
+**What's New (EN):** Double your match bonus, game link on share cards and minor improvements.

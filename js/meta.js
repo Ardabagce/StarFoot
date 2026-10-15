@@ -477,6 +477,7 @@ const Ballon = {
       Game.news(`🏅 ${s.season.year} Altın Top ${Player.fullName(p)}'in! Dünyanın en iyi futbolcusu seçildin!`, 'good');
       const c = Game.club();
       if (typeof Celebrate !== 'undefined') await Celebrate.trophy({ big: 'ALTIN TOP!', title: `${s.season.year} Altın Top`, sub: 'Dünyanın en iyi futbolcusu', c1: c.c1, c2: c.c2, short: c.short, kit: Sprites.kit(c, false), number: p.shirt, year: Player.fullName(p) });
+      if (typeof Review !== 'undefined') Review.maybe();
       return;
     }
     Game.news(`🏅 ${s.season.year} Altın Top: ${win.n}${win.rival ? ' (ezeli rakibin!)' : ''}. ${mi >= 0 ? `Sen ${mi + 1}. oldun.` : ''}`, win.rival ? 'bad' : 'world');

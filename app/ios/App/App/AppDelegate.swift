@@ -1,6 +1,7 @@
 import UIKit
 import Capacitor
 import AppTrackingTransparency
+import StoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -55,5 +56,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                           sessionRole: connectingSceneSession.role)
         config.delegateClass = SceneDelegate.self
         return config
+    }
+}
+
+// Uygulamaya özel Capacitor köprüsü: yerel eklentileri kaydeder.
+class StarfootViewController: CAPBridgeViewController {
+    override open func capacitorDidLoad() {
+        bridge?.registerPluginInstance(StarfootReviewPlugin())
+    }
+}
+
+// Apple'ın "Bu oyunu değerlendir" penceresi (JS: Capacitor.registerPlugin('StarfootReview').request()).
+// Gösterilip gösterilmeyeceğine iOS karar verir; yılda en fazla 3 kez çıkar.
+@objc(StarfootReviewPlugin)
+public class StarfootReviewPlugin: CAPPlugin, CAPBridgedPlugin {
+    public let identifier = "StarfootReviewPlugin"
+    public let jsName = "StarfootReview"
+    public let pluginMethods: [CAPPluginMethod] = [
+        CAPPluginMethod(name: "request", returnType: CAPPluginReturnPromise)
+    ]
+
+    @objc func request(_ call: CAPPluginCall) {
+        DispatchQueue.main.async {
+            let scene = UIApplication.shared.connectedScenes
+                .first { $0.activationState == .foregroundActive } as? UIWindowScene
+            if let scene = scene {
+                if #available(iOS 16.0, *) {
+                    AppStore.requestReview(in: scene)
+                } else {
+                    SKStoreReviewController.requestReview(in: scene)
+                }
+            }
+            call.resolve()
+        }
     }
 }

@@ -238,7 +238,8 @@ const Celebrate = {
       team = { id: p.nation, c1: col[0], c2: col[1], short: p.nation };
     } else team = Game.club() || { id: 'X', c1: '#c8102e', c2: '#ffffff', short: '' };
     const kit = Sprites.kit(team, false);
-    return Celebrate.trophy({ kit, c1: team.c1, c2: team.c2, short: team.short, number: p.shirt, big: 'ŞAMPİYON!', title, sub, year: s.season.year });
+    return Celebrate.trophy({ kit, c1: team.c1, c2: team.c2, short: team.short, number: p.shirt, big: 'ŞAMPİYON!', title, sub, year: s.season.year })
+      .then((r) => { if (typeof Review !== 'undefined') Review.maybe(); return r; });
   },
 };
 

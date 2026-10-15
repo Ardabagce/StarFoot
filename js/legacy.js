@@ -199,7 +199,7 @@ const ShareCard = {
   foot(o) {
     const { c, W, H } = o;
     c.textAlign = 'center'; c.fillStyle = 'rgba(255,255,255,.55)'; c.font = '600 30px "Saira Condensed", sans-serif';
-    c.fillText('StarFoot · App Store & Google Play', W / 2, H - 50);
+    c.fillText('#StarFoot · starfoot.bagce.dev', W / 2, H - 50);
   },
   rr(c, x, y, w, h, r) { c.beginPath(); c.moveTo(x + r, y); c.arcTo(x + w, y, x + w, y + h, r); c.arcTo(x + w, y + h, x, y + h, r); c.arcTo(x, y + h, x, y, r); c.arcTo(x, y, x + w, y, r); c.closePath(); },
   // sezon kartı
@@ -274,7 +274,14 @@ const ShareCard = {
     el.onclick = (e) => { if (e.target === el) el.remove(); };
     return el;
   },
-  text() { return I18N.lang === 'en' ? 'My StarFoot career ⚽ #StarFoot' : 'StarFoot kariyerim ⚽ #StarFoot'; },
+  // paylaşım metni: iPhone'da App Store bağlantısı, diğerlerinde tarayıcıda oynanan sürüm
+  link() {
+    const C = window.Capacitor;
+    return C && C.getPlatform && C.getPlatform() === 'ios' ? 'https://apps.apple.com/app/id6819292902' : 'https://starfoot.bagce.dev';
+  },
+  text() {
+    return (I18N.lang === 'en' ? 'My StarFoot career ⚽ Can you beat it? #StarFoot #football' : 'StarFoot kariyerim ⚽ Geçebilir misin? #StarFoot #futbol') + '\n' + ShareCard.link();
+  },
 };
 
 // ---------- Gizlilik politikası: uygulama içinde açılır ----------

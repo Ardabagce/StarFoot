@@ -257,6 +257,33 @@ const Loot = {
   show() { Game.state.pendingLoot = null; },
 };
 
+// ---------- Mağaza puanı ----------
+// iPhone'da Apple'ın kendi "Bu oyunu değerlendir" penceresi, yalnız mutlu anlarda (kupa, hat-trick, Altın Top) istenir.
+// Apple pencereyi yılda en fazla 3 kez gösterir; biz de ilk günü ve son istekten sonraki 60 günü atlarız.
+const Review = {
+  KEY: 'sf_review',
+  plugin() {
+    const C = window.Capacitor;
+    if (!C || !C.isNativePlatform || !C.isNativePlatform() || C.getPlatform() !== 'ios') return null;
+    try { return C.registerPlugin ? C.registerPlugin('StarfootReview') : C.Plugins.StarfootReview; } catch (e) { return null; }
+  },
+  maybe(delay = 1800) {
+    const pl = Review.plugin();
+    if (!pl) return;
+    let st = {};
+    try { st = JSON.parse(localStorage.getItem(Review.KEY) || '{}'); } catch (e) {}
+    const now = Date.now(), day = 864e5;
+    if (!st.first) { st.first = now; try { localStorage.setItem(Review.KEY, JSON.stringify(st)); } catch (e) {} return; }
+    if (now - st.first < day || (st.last && now - st.last < 60 * day)) return;
+    st.last = now;
+    try { localStorage.setItem(Review.KEY, JSON.stringify(st)); } catch (e) {}
+    setTimeout(() => { try { pl.request().catch(() => {}); } catch (e) {} }, delay);
+  },
+  // ilk açılış zamanını kaydeder (ilk gün istenmez)
+  init() { try { if (!localStorage.getItem(Review.KEY)) localStorage.setItem(Review.KEY, JSON.stringify({ first: Date.now() })); } catch (e) {} },
+};
+Review.init();
+
 // ---------- Reklam ----------
 // Android uygulamasında js/admob.js gerçek AdMob reklamını gösterir (window.StarfootAds).
 // Web sürümünde 5 saniyelik temsili reklam ekranı gösterilir.

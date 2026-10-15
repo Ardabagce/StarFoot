@@ -511,5 +511,8 @@
 "Yarın yeni görevler gelecek": "New missions arrive tomorrow",
 "Mağazaya şu an ulaşılamıyor. İnternet bağlantını kontrol edip tekrar dene.": "Can't reach the App Store right now. Check your connection and try again.",
 "Ürün bilgisi App Store'dan alınamadı (ürün bulunamadı).": "Product info could not be loaded from the App Store (product not found).",
-"Mağazaya ulaşılamadı: {}": "Could not reach the store: {}"
+"Mağazaya ulaşılamadı: {}": "Could not reach the store: {}",
+"Prim 2 katına çıktı: +{}": "Bonus doubled: +{}",
+"Reklam izle · Primi 2 katına çıkar": "Watch ad · Double your bonus",
+"⭐ Premium · Primi 2 katına çıkar": "⭐ Premium · Double your bonus"
 }

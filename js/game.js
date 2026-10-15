@@ -563,6 +563,7 @@ const Game = {
     // maç sonrası rapor için önceki değerler
     const so0 = Social.ensure(p);
     const before = { coach: p.rel.coach, team: p.rel.team, fans: p.rel.fans, fol: so0.followers, fame: p.fame, morale: p.morale, money: p.money };
+    let matchBonus = 0;
     const why = [];
     if (sum.played) {
       if (comp === 'intl' && ctx.intlCat) {
@@ -639,7 +640,7 @@ const Game = {
       if (youth) bonus = sum.goals * 50 + sum.assists * 25;
       else if (comp === 'intl') bonus = 0;
       else bonus = Math.round(s.contract.wage * (sum.goals * 0.1 + sum.assists * 0.05 + (sum.res === 'W' ? 0.15 : 0)));
-      if (bonus > 0) p.money += bonus;
+      if (bonus > 0) { p.money += bonus; matchBonus = bonus; }
       if (sum.red) {
         Player.addRel(p, 'coach', -6);
         Game.news('🟥 Kırmızı kart gördün. Hoca hiç memnun değil.', 'bad');
@@ -651,6 +652,7 @@ const Game = {
       if (sum.motm) line += ' • ⭐ Maçın adamı';
       Game.news(line, sum.res === 'W' ? 'good' : sum.res === 'L' ? 'bad' : '');
       if (bonus > 0) Game.news(`Maç primi: ${U.money(bonus)}`, 'me');
+      if (sum.goals >= 3 && typeof Review !== 'undefined') Review.maybe(2500);
     } else {
       Player.addMorale(p, -3);
       if (p.injuryWeeks === 0) Player.addRel(p, 'coach', 0.5);
@@ -679,6 +681,7 @@ const Game = {
     s.lastReport = {
       w: `${s.season.year} H${s.season.round + 1}`, opp: oppName, team: teamTxt, gf: sum.gf, ga: sum.ga, res: sum.res, rating: sum.played ? sum.rating : null,
       goals: sum.goals, assists: sum.assists, motm: sum.motm,
+      bonus: matchBonus,
       fol0: before.fol,
       d: { coach: p.rel.coach - before.coach, team: p.rel.team - before.team, fans: p.rel.fans - before.fans, fol: so1.followers - before.fol, fame: p.fame - before.fame, morale: p.morale - before.morale, money: p.money - before.money },
       why,
@@ -1209,6 +1212,7 @@ const UI = {
         ${r.rating != null ? `<span class="rp-rt ${r.rating >= 7.5 ? 'hi' : r.rating < 6 ? 'lo' : 'mid'}"><b>${r.rating.toFixed(1)}</b>${r.motm ? '<i>MVP</i>' : ''}</span>` : ''}
       </div>
       ${chips ? `<div class="rpm-chips">${chips}</div>` : ''}
+      ${r.bonus > 0 && !r.bonusX2 ? `<button class="btn btn-play rpm-x2" data-bonusx2>${Icon('play')} ${typeof Premium !== 'undefined' ? Premium.lbl() : 'Reklam izle'} · Primi 2 katına çıkar <b>+${U.money(r.bonus)}</b></button>` : ''}
     </section>`;
   },
 
@@ -2018,7 +2022,7 @@ ${UI.paper()}`;
   settings() {
     const s = Game.state, p = s.player;
     const row = (label, sub, ctrl) => `<div class="set-row"><span><b>${label}</b>${sub ? `<small>${sub}</small>` : ''}</span>${ctrl}</div>`;
-    const appVer = (window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform()) ? 'StarFoot 1.0.4' : 'StarFoot (web)';
+    const appVer = (window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform()) ? 'StarFoot 1.0.5' : 'StarFoot (web)';
     return `
       ${typeof Premium !== 'undefined' ? Premium.card() : ''}
       <section class="card settings">
@@ -2165,6 +2169,19 @@ ${UI.paper()}`;
           s.adEnergy = `${s.season.year}-${s.season.round}`;
           Player.addEnergy(Game.p, v); Game.save();
           Game.toast(`+${v} enerji`, 'good');
+        }
+        Game.render();
+      });
+    }));
+    U.$$('[data-bonusx2]', root).forEach((b) => (b.onclick = () => {
+      b.disabled = true;
+      Ads.show().then((ok) => {
+        const r = Game.state.lastReport;
+        if (ok && r && r.bonus > 0 && !r.bonusX2) {
+          r.bonusX2 = true;
+          Game.p.money += r.bonus;
+          Game.save();
+          Game.toast(`Prim 2 katına çıktı: +${U.money(r.bonus)}`, 'good');
         }
         Game.render();
       });
