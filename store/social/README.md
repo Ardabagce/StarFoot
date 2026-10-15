@@ -87,7 +87,7 @@ Her video 9–12 sn, 1080x1920, sessiz. **Müziği platformun içinden ekle** (t
 | 4 | `tr-4-altin-top` / `en-4-ballon` | 21 yaşında Altın Top 🥇 Senin rekorun kaç gol? | Ballon d'Or at 21 🥇 What's your goal record? |
 | 5 | `tr-5-meydan-okuma` / `en-5-challenge` | Bu oyunda kaç sezonda efsane olursun? Rekorunu yaz 👇 | How fast can you become a legend? Drop your record 👇 |
 
-**Etiketler (TR):** `#starfoot #futbol #futboloyunu #mobiloyun #kariyermodu #frikik #galatasaray #fenerbahçe #beşiktaş #oyun`
+**Etiketler (TR):** `#starfoot #futbol #futboloyunu #mobiloyun #kariyermodu #frikik #oyun #futbolcu`
 **Hashtags (EN):** `#starfoot #football #soccer #mobilegame #careermode #freekick #soccergame #indiegame #gaming`
 
 **Paylaşım düzeni:** Günde 1 video, akşam 19:00–22:00 arası. Aynı videoyu TikTok, Instagram Reels, YouTube Shorts ve Facebook Reels'e yükle. 5 video bitince sırayı tekrar et; en çok izleneni Spark Ads ile öne çıkar.
