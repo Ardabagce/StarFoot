@@ -25,6 +25,10 @@ on:
         description: 'Yalnız oku: hangi kayıtların açılmadığını göster'
         type: boolean
         default: false
+      audit:
+        description: 'Yalnız oku: her dilde hangi alanların dolu olduğunu göster'
+        type: boolean
+        default: false
 jobs:
   metadata:
     runs-on: ubuntu-latest
@@ -46,4 +50,5 @@ jobs:
           [ "${{ inputs.replace_screens }}" = "true" ] && ARGS="$ARGS --replace-screens"
           [ "${{ inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
           [ "${{ inputs.diagnose }}" = "true" ] && ARGS="$ARGS --diagnose"
-          python tools/asc/asc.py $ARGS
+          [ "${{ inputs.audit }}" = "true" ] && ARGS="$ARGS --audit"
+          python -u tools/asc/asc.py $ARGS

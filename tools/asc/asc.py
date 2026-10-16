@@ -183,6 +183,50 @@ def diagnose(asc, app_id):
             print(f"   dil {at['locale']}: {at.get('name')} | {at.get('subtitle')} ({l['id']})")
 
 
+def audit(asc, app_id, meta):
+    # yalnız okur: düzenlenebilir sürümde her dilin hangi alanı dolu, metin dosyadakiyle aynı mı, kaç görsel var
+    vs = asc.get(f'/v1/apps/{app_id}/appStoreVersions', **{'filter[platform]': 'IOS', 'limit': 20})['data']
+    ver = next((v for v in vs if v['attributes']['appStoreState'] in EDITABLE), None)
+    if not ver:
+        sys.exit('Düzenlenebilir sürüm yok')
+    print(f"Sürüm {ver['attributes']['versionString']} {ver['attributes']['appStoreState']}")
+    try:
+        b = asc.get(f"/v1/appStoreVersions/{ver['id']}/build").get('data')
+        print(f"   seçili build: {b['attributes']['version'] if b else 'YOK'}")
+    except RuntimeError as err:
+        print(f'   build okunamadı: {err}')
+    fields = ['description', 'keywords', 'promotionalText', 'whatsNew', 'supportUrl', 'marketingUrl']
+    locs = asc.get(f"/v1/appStoreVersions/{ver['id']}/appStoreVersionLocalizations", limit=50)['data']
+    for l in sorted(locs, key=lambda x: x['attributes']['locale']):
+        at, loc = l['attributes'], l['attributes']['locale']
+        want = meta['locales'].get(loc, {})
+        parts = []
+        for f in fields:
+            v = at.get(f) or ''
+            src = want.get(f) if f in want else meta.get({'supportUrl': 'support_url', 'marketingUrl': 'marketing_url'}.get(f, ''), None)
+            mark = 'BOŞ' if not v else ('=' if src is not None and v == src else ('≠' if src is not None else 'var'))
+            parts.append(f'{f}:{len(v)}{mark}')
+        try:
+            sets = asc.get(f"/v1/appStoreVersionLocalizations/{l['id']}/appScreenshotSets", limit=50)['data']
+            shots = []
+            for st in sets:
+                n = len(asc.get(f"/v1/appScreenshotSets/{st['id']}/appScreenshots", limit=50)['data'])
+                shots.append(f"{st['attributes']['screenshotDisplayType']}={n}")
+            shots = ', '.join(shots) or 'görsel yok'
+        except RuntimeError as err:
+            shots = f'görseller okunamadı ({err})'
+        print(f'• {loc}: ' + ' '.join(parts))
+        print(f'   {shots}')
+    print('Dosyada olup sürümde olmayan diller:', ', '.join(sorted(set(meta['locales']) - {l['attributes']['locale'] for l in locs})) or '-')
+    infos = asc.get(f'/v1/apps/{app_id}/appInfos')['data']
+    for i in infos:
+        st = i['attributes'].get('state') or i['attributes'].get('appStoreState')
+        print(f'Uygulama bilgisi {st}:')
+        for l in sorted(asc.get(f"/v1/appInfos/{i['id']}/appInfoLocalizations", limit=50)['data'], key=lambda x: x['attributes']['locale']):
+            at = l['attributes']
+            print(f"   {at['locale']}: {at.get('name')} | {at.get('subtitle')} | gizlilik: {'var' if at.get('privacyPolicyUrl') else 'BOŞ'}")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--metadata', default=str(ROOT / 'store/asc/metadata.json'))
@@ -191,6 +235,7 @@ def main():
     ap.add_argument('--replace-screens', action='store_true')
     ap.add_argument('--dry-run', action='store_true')
     ap.add_argument('--diagnose', action='store_true')
+    ap.add_argument('--audit', action='store_true')
     a = ap.parse_args()
     meta = json.load(open(a.metadata, encoding='utf-8'))
     asc = ASC(a.dry_run)
@@ -202,6 +247,8 @@ def main():
     print(f"Uygulama: {app['attributes']['name']} ({app['id']}), ana dil: {app['attributes'].get('primaryLocale')}")
     if a.diagnose:
         return diagnose(asc, app['id'])
+    if a.audit:
+        return audit(asc, app['id'], meta)
 
     ver = pick_version(asc, app['id'], a.version)
     info = pick_appinfo(asc, app['id'])
