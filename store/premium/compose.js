@@ -87,7 +87,7 @@ const html = (p, l, img, F = { H: 1920, pw: 600, top: 640, shift: 0 }) => {
 ${fontCss}
 ${arCss}
 *{margin:0;padding:0;box-sizing:border-box}
-${RTL.has(l) ? 'body{direction:rtl} .tag,h1,.logo{letter-spacing:0!important} h1 .a,h1 .b{line-height:1.15}' : ''}
+${RTL.has(l) ? 'header,.chip{direction:rtl} .tag,h1,.logo{letter-spacing:0!important} h1 .a,h1 .b{line-height:1.15}' : ''}
 body{width:1080px;height:${F.H}px;overflow:hidden;position:relative;font-family:'Barlow Semi Condensed',sans-serif;color:#fff;
   background:radial-gradient(120% 70% at 50% 8%, #1b3a8a 0%, #0d1f4f 38%, #070f2a 70%, #040817 100%)}
 .beam{position:absolute;top:-200px;width:520px;height:1500px;background:linear-gradient(180deg,rgba(255,244,214,.20),rgba(255,244,214,0) 70%);filter:blur(18px);transform-origin:top center}
@@ -166,7 +166,7 @@ ${chips}
     }
     await pg.close();
   }
-  fs.unlinkSync(path.join(D, '_tmp.html'));
+  if (!process.env.KEEP) fs.unlinkSync(path.join(D, '_tmp.html'));
   await b.close();
   console.log('ok');
 })();

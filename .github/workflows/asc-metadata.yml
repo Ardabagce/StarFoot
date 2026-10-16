@@ -1,0 +1,49 @@
+# App Store Connect mağaza bilgilerini (tüm diller) store/asc/metadata.json'dan doldurur.
+# iOS derlemesiyle aynı sırları kullanır: APPSTORE_API_KEY_P8, APPSTORE_KEY_ID, APPSTORE_ISSUER_ID
+# Anahtarın App Store Connect'te "Admin" ya da "App Manager" rolü olmalı (mağaza bilgisi düzenlemek için).
+name: App Store bilgileri
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Düzenlenebilir sürüm yoksa oluşturulacak sürüm (ör. 1.0.6)'
+        required: false
+        default: ''
+      screens:
+        description: 'Boş dillere ekran görüntüsü yükle'
+        type: boolean
+        default: true
+      replace_screens:
+        description: 'Mevcut ekran görüntülerini silip yeniden yükle'
+        type: boolean
+        default: false
+      dry_run:
+        description: 'Yalnız göster, değiştirme'
+        type: boolean
+        default: false
+  push:
+    paths:
+      - 'store/asc/metadata.json'
+      - 'tools/asc/asc.py'
+      - '.github/workflows/asc-metadata.yml'
+jobs:
+  metadata:
+    runs-on: ubuntu-latest
+    env:
+      ASC_KEY_P8: ${{ secrets.APPSTORE_API_KEY_P8 }}
+      ASC_KEY_ID: ${{ secrets.APPSTORE_KEY_ID }}
+      ASC_ISSUER_ID: ${{ secrets.APPSTORE_ISSUER_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install 'pyjwt[crypto]==2.10.1' 'requests==2.32.3'
+      - name: Mağaza bilgilerini doldur
+        run: |
+          ARGS=""
+          [ -n "${{ inputs.version }}" ] && ARGS="$ARGS --version ${{ inputs.version }}"
+          [ "${{ inputs.screens }}" != "false" ] && ARGS="$ARGS --screens"
+          [ "${{ inputs.replace_screens }}" = "true" ] && ARGS="$ARGS --replace-screens"
+          [ "${{ inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
+          python tools/asc/asc.py $ARGS
