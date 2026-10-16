@@ -40,6 +40,8 @@
 @font-face{font-family:'Barlow Semi Condensed';font-style:normal;font-weight:800;font-display:swap;src:url('../fonts/cairo-arabic-900-normal.woff2') format('woff2');unicode-range:U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC}
 @font-face{font-family:'Barlow Semi Condensed';font-style:italic;font-weight:800;font-display:swap;src:url('../fonts/cairo-arabic-900-normal.woff2') format('woff2');unicode-range:U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC}
 html[lang=ar] *{letter-spacing:0!important}
+/* sağdan sola: dakika (13') ve skor gibi sayılar kendi içinde soldan sağa kalsın */
+[dir=rtl] #mt-min, [dir=rtl] #mm-min, [dir=rtl] .sb-m, [dir=rtl] .sc, [dir=rtl] #mt-feed b{direction:ltr;unicode-bidi:isolate;display:inline-block}
 /* StarFoot — gece maçı / TV yayını görünümü
    Düzen: masaüstünde solda oyuncu kartı + sağda içerik; telefonda tek sütun ve altta sekme çubuğu. */
 :root {

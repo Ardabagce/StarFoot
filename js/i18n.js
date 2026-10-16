@@ -214,7 +214,8 @@ const I18N = {
     if (!v) return;
     if (!/[A-Za-zÇĞİŞÖÜçğışöü]/.test(v)) {
       // yalnız sayı içeren metin ("+0.44", "−12"): sağdan sola düzende işaret doğru tarafta kalsın
-      if (I18N.rtl() && (/^\s*[+\-−±]\s?\d/.test(v) || /\d\s*['’%]\s*$/.test(v))) n.nodeValue = '\u200e' + v;
+      // (işaret zaten eklendiyse dokunma: değişiklik gözlemciyi yeniden tetikler)
+      if (I18N.rtl() && !v.includes('\u200e') && (/^\s*[+\-−±]\s?\d/.test(v) || /\d\s*['’%]\s*$/.test(v))) n.nodeValue = '\u200e' + v;
       return;
     }
     const t = I18N.t(v);
