@@ -10,34 +10,72 @@ const POSTERS = [
     id: 'moment', accent: '#ffcf3f', glow: 'rgba(255,207,63,.45)', tilt: -3,
     tr: { tag: 'CANLI MAÇ MOTORU', h1: 'KRİTİK ANLARI', h2: 'SEN OYNA', sub: 'Şut, pas, çalım, frikik, penaltı: maçın kaderi senin elinde.', chips: [['Kaydır & vur', 'left', 1040], ['Gerçek zamanlı maç', 'right', 1500]] },
     en: { tag: 'LIVE MATCH ENGINE', h1: 'PLAY THE', h2: 'BIG MOMENTS', sub: 'Shots, passes, dribbles, free kicks, penalties: the match is in your hands.', chips: [['Swipe & shoot', 'left', 1040], ['Real-time matches', 'right', 1500]] },
+    es: { tag: "MOTOR DE PARTIDO EN VIVO", h1: "JUEGA LOS", h2: "MOMENTOS CLAVE", sub: "Disparos, pases, regates, tiros libres, penaltis: el partido está en tus manos.", chips: [["Desliza y dispara", 'left', 1040], ["Partidos en tiempo real", 'right', 1500]] },
+    pt: { tag: "MOTOR DE JOGO AO VIVO", h1: "JOGUE OS", h2: "LANCES DECISIVOS", sub: "Chutes, passes, dribles, faltas, pênaltis: a partida está nas suas mãos.", chips: [["Deslize e chute", 'left', 1040], ["Partidas em tempo real", 'right', 1500]] },
+    de: { tag: "LIVE-SPIELMODUS", h1: "SPIEL DIE", h2: "GROSSEN MOMENTE", sub: "Schüsse, Pässe, Dribblings, Freistöße, Elfmeter: Das Spiel liegt in deiner Hand.", chips: [["Wischen & schießen", 'left', 1040], ["Spiele in Echtzeit", 'right', 1500]] },
+    fr: { tag: "MATCH EN DIRECT", h1: "JOUE LES", h2: "MOMENTS CLÉS", sub: "Frappes, passes, dribbles, coups francs, penalties : le match est entre tes mains.", chips: [["Glisse et frappe", 'left', 1040], ["Matchs en temps réel", 'right', 1500]] },
+    it: { tag: "PARTITA LIVE", h1: "GIOCA I", h2: "MOMENTI DECISIVI", sub: "Tiri, passaggi, dribbling, punizioni, rigori: la partita è nelle tue mani.", chips: [["Scorri e tira", 'left', 1040], ["Partite in tempo reale", 'right', 1500]] },
+    ind: { tag: "LAGA LANGSUNG", h1: "MAINKAN", h2: "MOMEN PENTING", sub: "Tembakan, umpan, dribel, tendangan bebas, penalti: laga ada di tanganmu.", chips: [["Geser & tembak", 'left', 1040], ["Laga real-time", 'right', 1500]] },
+    ar: { tag: "محرك مباريات مباشر", h1: "العب", h2: "اللحظات الحاسمة", sub: "التسديد والتمرير والمراوغة والركلات الحرة وركلات الجزاء: المباراة بين يديك.", chips: [["اسحب وسدد", 'left', 1040], ["مباريات مباشرة", 'right', 1500]] },
   },
   {
     id: 'matchday', accent: '#8fb8ff', glow: 'rgba(120,170,255,.5)', tilt: 3, stars: true,
     tr: { tag: 'LİGLER VE KUPALAR', h1: 'DEVLERİN', h2: 'SAHNESİNE ÇIK', sub: 'Şampiyonlar Kupası, Dünya Kupası ve 16 ülkenin ligleri.', chips: [['400+ kulüp', 'right', 1180], ['16 ülke ligi', 'left', 1500]] },
     en: { tag: 'LEAGUES & CUPS', h1: 'STEP ONTO', h2: 'THE BIG STAGE', sub: 'Champions Cup, World Cup and leagues from 16 countries.', chips: [['400+ clubs', 'right', 1180], ['16 national leagues', 'left', 1500]] },
+    es: { tag: "LIGAS Y COPAS", h1: "SALTA AL", h2: "GRAN ESCENARIO", sub: "Copa de Campeones, Mundial y 30 ligas de todo el mundo.", chips: [["400+ clubes", 'right', 1180], ["30 ligas", 'left', 1500]] },
+    pt: { tag: "LIGAS E COPAS", h1: "SUBA AO", h2: "GRANDE PALCO", sub: "Copa dos Campeões, Copa do Mundo e 30 ligas pelo mundo.", chips: [["400+ clubes", 'right', 1180], ["30 ligas", 'left', 1500]] },
+    de: { tag: "LIGEN & POKALE", h1: "BETRITT DIE", h2: "GROSSE BÜHNE", sub: "Meisterpokal, Weltmeisterschaft und 30 Ligen weltweit.", chips: [["400+ Vereine", 'right', 1180], ["30 Ligen", 'left', 1500]] },
+    fr: { tag: "CHAMPIONNATS & COUPES", h1: "MONTE SUR", h2: "LA GRANDE SCÈNE", sub: "Coupe des Champions, Coupe du monde et 30 championnats.", chips: [["400+ clubs", 'right', 1180], ["30 championnats", 'left', 1500]] },
+    it: { tag: "CAMPIONATI E COPPE", h1: "SALI SUL", h2: "GRANDE PALCO", sub: "Coppa dei Campioni, Mondiali e 30 campionati.", chips: [["400+ club", 'right', 1180], ["30 campionati", 'left', 1500]] },
+    ind: { tag: "LIGA & PIALA", h1: "NAIK KE", h2: "PANGGUNG BESAR", sub: "Piala Champions, Piala Dunia, dan 30 liga dunia.", chips: [["400+ klub", 'right', 1180], ["30 liga", 'left', 1500]] },
+    ar: { tag: "الدوريات والكؤوس", h1: "اصعد إلى", h2: "المسرح الكبير", sub: "كأس الأبطال وكأس العالم و30 دوريًا حول العالم.", chips: [["أكثر من 400 نادٍ", 'right', 1180], ["30 دوريًا", 'left', 1500]] },
   },
   {
     id: 'summary', accent: '#ffd36b', glow: 'rgba(255,190,60,.5)', tilt: -3,
     tr: { tag: 'KARİYER', h1: 'MAÇIN', h2: 'YILDIZI OL', sub: 'Reytingini yükselt, ödülleri topla, efsaneler arasına adını yazdır.', chips: [['Maçın oyuncusu ödülü', 'left', 1080], ['~100 başarım', 'right', 1520]] },
     en: { tag: 'CAREER', h1: 'BE THE', h2: 'MAN OF THE MATCH', sub: 'Raise your rating, collect awards and write your name among the legends.', chips: [['Man of the Match awards', 'left', 1080], ['~100 achievements', 'right', 1520]] },
+    es: { tag: "CARRERA", h1: "SÉ EL", h2: "JUGADOR DEL PARTIDO", sub: "Sube tu valoración, colecciona premios y escribe tu nombre entre las leyendas.", chips: [["Premios al mejor jugador", 'left', 1080], ["~100 logros", 'right', 1520]] },
+    pt: { tag: "CARREIRA", h1: "SEJA O", h2: "CRAQUE DO JOGO", sub: "Suba sua nota, colecione prêmios e escreva seu nome entre as lendas.", chips: [["Prêmios de craque do jogo", 'left', 1080], ["~100 conquistas", 'right', 1520]] },
+    de: { tag: "KARRIERE", h1: "WERDE", h2: "SPIELER DES SPIELS", sub: "Steigere deine Note, sammle Preise und schreib deinen Namen unter die Legenden.", chips: [["Spieler-des-Spiels-Preise", 'left', 1080], ["~100 Erfolge", 'right', 1520]] },
+    fr: { tag: "CARRIÈRE", h1: "DEVIENS", h2: "L'HOMME DU MATCH", sub: "Monte ta note, collectionne les récompenses et inscris ton nom parmi les légendes.", chips: [["Trophées d'homme du match", 'left', 1080], ["~100 succès", 'right', 1520]] },
+    it: { tag: "CARRIERA", h1: "DIVENTA IL", h2: "MIGLIORE IN CAMPO", sub: "Alza il tuo voto, colleziona premi e scrivi il tuo nome tra le leggende.", chips: [["Premi migliore in campo", 'left', 1080], ["~100 traguardi", 'right', 1520]] },
+    ind: { tag: "KARIER", h1: "JADILAH", h2: "PEMAIN TERBAIK", sub: "Naikkan nilaimu, kumpulkan penghargaan, dan tulis namamu di antara legenda.", chips: [["Penghargaan pemain terbaik", 'left', 1080], ["~100 pencapaian", 'right', 1520]] },
+    ar: { tag: "المسيرة", h1: "كن", h2: "رجل المباراة", sub: "ارفع تقييمك واجمع الجوائز واكتب اسمك بين الأساطير.", chips: [["جوائز رجل المباراة", 'left', 1080], ["قرابة 100 إنجاز", 'right', 1520]] },
   },
   {
     id: 'trophy', accent: '#ffcf3f', glow: 'rgba(255,200,60,.55)', tilt: 3, confetti: true,
     tr: { tag: 'ŞAMPİYONLUK', h1: 'KUPAYI', h2: 'HAVAYA KALDIR', sub: 'Ligler, kupalar ve şampiyonluk törenleri seni bekliyor.', chips: [['Kupa töreni', 'right', 1060], ['Gol sevinçleri', 'left', 1500]] },
     en: { tag: 'GLORY', h1: 'LIFT THE', h2: 'TROPHY', sub: 'Leagues, cups and title celebrations are waiting for you.', chips: [['Trophy ceremonies', 'right', 1060], ['Goal celebrations', 'left', 1500]] },
+    es: { tag: "GLORIA", h1: "LEVANTA EL", h2: "TROFEO", sub: "Ligas, copas y celebraciones de títulos te esperan.", chips: [["Ceremonias de trofeos", 'right', 1060], ["Celebraciones de gol", 'left', 1500]] },
+    pt: { tag: "GLÓRIA", h1: "LEVANTE A", h2: "TAÇA", sub: "Ligas, copas e festas de título esperam por você.", chips: [["Cerimônias de taça", 'right', 1060], ["Comemorações de gol", 'left', 1500]] },
+    de: { tag: "RUHM", h1: "STEMM DEN", h2: "POKAL", sub: "Ligen, Pokale und Meisterfeiern warten auf dich.", chips: [["Pokalzeremonien", 'right', 1060], ["Torjubel", 'left', 1500]] },
+    fr: { tag: "GLOIRE", h1: "SOULÈVE LE", h2: "TROPHÉE", sub: "Championnats, coupes et célébrations de titres t'attendent.", chips: [["Cérémonies de trophées", 'right', 1060], ["Célébrations de but", 'left', 1500]] },
+    it: { tag: "GLORIA", h1: "ALZA IL", h2: "TROFEO", sub: "Campionati, coppe e feste per il titolo ti aspettano.", chips: [["Cerimonie del trofeo", 'right', 1060], ["Esultanze", 'left', 1500]] },
+    ind: { tag: "KEJAYAAN", h1: "ANGKAT", h2: "TROFINYA", sub: "Liga, piala, dan perayaan gelar menantimu.", chips: [["Upacara trofi", 'right', 1060], ["Selebrasi gol", 'left', 1500]] },
+    ar: { tag: "المجد", h1: "ارفع", h2: "الكأس", sub: "الدوريات والكؤوس واحتفالات الألقاب بانتظارك.", chips: [["حفلات التتويج", 'right', 1060], ["احتفالات الأهداف", 'left', 1500]] },
   },
   {
     id: 'social', accent: '#ff6fb5', glow: 'rgba(214,80,220,.5)', tilt: -3, ig: true,
     tr: { tag: 'SAHA DIŞI HAYAT', h1: 'SAHA DIŞINDA', h2: 'DA YILDIZ OL', sub: 'Takipçi topla, sponsorluk imzala, transfer tekliflerini değerlendir.', chips: [['Milyonlarca takipçi', 'right', 1040], ['Sponsorluk & menajer', 'left', 1500]] },
     en: { tag: 'LIFE OFF THE PITCH', h1: 'A STAR', h2: 'OFF THE PITCH', sub: 'Grow your followers, sign sponsorships and weigh transfer offers.', chips: [['Millions of followers', 'right', 1040], ['Sponsors & agent', 'left', 1500]] },
+    es: { tag: "VIDA FUERA DEL CAMPO", h1: "UNA ESTRELLA", h2: "FUERA DEL CAMPO", sub: "Gana seguidores, firma patrocinios y valora ofertas de fichaje.", chips: [["Millones de seguidores", 'right', 1040], ["Patrocinios y agente", 'left', 1500]] },
+    pt: { tag: "VIDA FORA DE CAMPO", h1: "UMA ESTRELA", h2: "FORA DE CAMPO", sub: "Ganhe seguidores, feche patrocínios e avalie propostas.", chips: [["Milhões de seguidores", 'right', 1040], ["Patrocínios e empresário", 'left', 1500]] },
+    de: { tag: "LEBEN NEBEN DEM PLATZ", h1: "EIN STAR", h2: "AUCH ABSEITS", sub: "Gewinne Follower, unterschreib Sponsorings und prüfe Transferangebote.", chips: [["Millionen Follower", 'right', 1040], ["Sponsoren & Berater", 'left', 1500]] },
+    fr: { tag: "VIE HORS DU TERRAIN", h1: "UNE STAR", h2: "HORS DU TERRAIN", sub: "Gagne des abonnés, signe des sponsors et étudie les offres de transfert.", chips: [["Des millions d'abonnés", 'right', 1040], ["Sponsors & agent", 'left', 1500]] },
+    it: { tag: "VITA FUORI DAL CAMPO", h1: "UNA STELLA", h2: "FUORI DAL CAMPO", sub: "Conquista follower, firma sponsorizzazioni e valuta le offerte.", chips: [["Milioni di follower", 'right', 1040], ["Sponsor e agente", 'left', 1500]] },
+    ind: { tag: "HIDUP DI LUAR LAPANGAN", h1: "BINTANG", h2: "DI LUAR LAPANGAN", sub: "Kumpulkan pengikut, teken sponsor, dan timbang tawaran transfer.", chips: [["Jutaan pengikut", 'right', 1040], ["Sponsor & agen", 'left', 1500]] },
+    ar: { tag: "الحياة خارج الملعب", h1: "نجم", h2: "خارج الملعب", sub: "اجمع المتابعين ووقّع عقود الرعاية وادرس عروض الانتقال.", chips: [["ملايين المتابعين", 'right', 1040], ["رعاة ووكيل", 'left', 1500]] },
   },
 ];
 
 const fontCss = [['Saira Condensed', 'saira-condensed', [800, 900]], ['Barlow Semi Condensed', 'barlow-semi-condensed', [500, 600, 700]]]
   .flatMap(([fam, f, ws]) => ws.flatMap((w) => ['latin', 'latin-ext'].map((s) => `@font-face{font-family:'${fam}';font-weight:${w};src:url('${F}/${f}-${s}-${w}-normal.woff2') format('woff2');}`))).join('\n');
 
+const RTL = new Set(['ar']);
+const AR_RANGE = 'U+0600-06FF, U+0750-077F, U+08A0-08FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFC';
+const arCss = ['Saira Condensed', 'Barlow Semi Condensed'].flatMap((fam) => [500, 600, 700, 800, 900].map((w) => `@font-face{font-family:'${fam}';font-weight:${w};src:url('file://${path.join(D, '../../fonts')}/cairo-arabic-${w === 500 ? 600 : w === 800 ? 900 : w}-normal.woff2') format('woff2');unicode-range:${AR_RANGE}}`)).join('\n');
 const html = (p, l, img, F = { H: 1920, pw: 600, top: 640, shift: 0 }) => {
-  const t = p[l];
+  const t = p[l === 'id' ? 'ind' : l];
   const conf = p.confetti ? Array.from({ length: 90 }, (_, i) => {
     const x = (i * 137) % 1080, y = (i * 263) % 1500, r = (i * 47) % 180, c = ['#ffcf3f', '#ffffff', '#ff5a5a', '#ffb02e'][i % 4];
     if (y < 640 && x > 120 && x < 960) return ''; // başlığın üstüne binmesin
@@ -47,7 +85,9 @@ const html = (p, l, img, F = { H: 1920, pw: 600, top: 640, shift: 0 }) => {
   const chips = t.chips.map(([txt, side, y], i) => `<div class="chip ${side}" style="top:${Math.round(F.top + (y - 640) * (F.cs || 1) + F.shift)}px"><span class="dot"></span>${txt}</div>`).join('');
   return `<!doctype html><html><head><meta charset="utf-8"><style>
 ${fontCss}
+${arCss}
 *{margin:0;padding:0;box-sizing:border-box}
+${RTL.has(l) ? 'body{direction:rtl} .tag,h1,.logo{letter-spacing:0!important} h1 .a,h1 .b{line-height:1.15}' : ''}
 body{width:1080px;height:${F.H}px;overflow:hidden;position:relative;font-family:'Barlow Semi Condensed',sans-serif;color:#fff;
   background:radial-gradient(120% 70% at 50% 8%, #1b3a8a 0%, #0d1f4f 38%, #070f2a 70%, #040817 100%)}
 .beam{position:absolute;top:-200px;width:520px;height:1500px;background:linear-gradient(180deg,rgba(255,244,214,.20),rgba(255,244,214,0) 70%);filter:blur(18px);transform-origin:top center}
@@ -104,11 +144,13 @@ ${chips}
     { dir: 'duo-inner', W: 2007, H: 2853, F: { H: 1535, pw: 455, top: 590, shift: 0, cs: 0.76, subFs: 31, subW: 960 }, jpg: true },
   ];
   if (process.argv[2] === 'duo') FORMATS.splice(0, 2);
+  const LANGS = (process.env.LANGS || 'tr,en').split(',');
+  if (process.env.LANGS) FORMATS.splice(2);
   for (const fm of FORMATS) {
     const pg = await b.newPage({ viewport: { width: 1080, height: fm.F.H }, deviceScaleFactor: fm.W / 1080 });
     const outDir = path.join(D, fm.dir);
     fs.mkdirSync(outDir, { recursive: true });
-    for (const l of ['tr', 'en']) {
+    for (const l of LANGS) {
       for (const [i, p] of POSTERS.entries()) {
         const tmp = path.join(D, '_tmp.html');
         fs.writeFileSync(tmp, html(p, l, 'raw/' + `${l}-${p.id}.png`, fm.F));

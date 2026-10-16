@@ -5,7 +5,7 @@ const ROOT = path.join(__dirname, '../..');
 const OUT = path.join(__dirname, 'raw');
 (async () => {
   const b = await chromium.launch();
-  for (const l of ['tr', 'en']) {
+  for (const l of (process.env.LANGS || 'tr,en').split(',')) {
     const pg = await b.newPage({ viewport: { width: 390, height: 800 }, deviceScaleFactor: 3, hasTouch: true, isMobile: true });
     const errs = []; pg.on('pageerror', (e) => errs.push(e.message));
     // Oyunun yazı tipleri (internet olmadan da): store/premium/fonts
@@ -17,7 +17,8 @@ const OUT = path.join(__dirname, 'raw');
     await pg.evaluate((l) => { localStorage.clear(); localStorage.setItem('starfoot_lang', l); }, l); await pg.reload();
     await pg.waitForTimeout(400);
     await pg.click('[data-new="0"]');
-    await pg.fill('#cr-name', l === 'en' ? 'Alex' : 'Emre'); await pg.fill('#cr-sur', l === 'en' ? 'Stone' : 'Yıldız');
+    const [fn, sn] = l === 'tr' ? ['Emre', 'Yıldız'] : l === 'en' ? ['Alex', 'Stone'] : await pg.evaluate(() => I18N.defName());
+    await pg.fill('#cr-name', fn); await pg.fill('#cr-sur', sn);
     await pg.selectOption('#cr-age', '17'); await pg.click('#cr-go'); await pg.click('.modal-btns button');
     const setup = () => {
       const s = Game.state; s.street.done = true;
