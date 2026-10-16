@@ -21,11 +21,6 @@ on:
         description: 'Yalnız göster, değiştirme'
         type: boolean
         default: false
-  push:
-    paths:
-      - 'store/asc/metadata.json'
-      - 'tools/asc/asc.py'
-      - '.github/workflows/asc-metadata.yml'
 jobs:
   metadata:
     runs-on: ubuntu-latest
