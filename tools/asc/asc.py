@@ -45,16 +45,22 @@ class ASC:
             print(f'   [deneme] {method} {path} {json.dumps(body, ensure_ascii=False)[:160] if body else ""}')
             return {'data': {'id': 'DRY', 'attributes': {}}}
         # Apple'ın sunucusu zaman zaman bir dakikadan uzun yanıtsız kalıyor: birkaç kez yeniden dene
-        for i in range(4):
+        # Apple'ın sunucusu zaman zaman yanıtsız kalıyor ya da 5xx dönüyor: artan aralıklarla yeniden dene
+        for i in range(6):
+            wait = 15 * (i + 1)
             try:
-                r = requests.request(method, API + path, params=params, json=body, timeout=180,
+                r = requests.request(method, API + path, params=params, json=body, timeout=120,
                                      headers={'Authorization': 'Bearer ' + self.token(), 'Content-Type': 'application/json'})
-                break
             except (requests.Timeout, requests.ConnectionError) as err:
-                if i == 3:
+                if i == 5:
                     raise RuntimeError(f'{method} {path} -> yanıt yok ({err.__class__.__name__})')
-                print(f'   … {method} yanıt vermedi, {10 * (i + 1)} sn sonra yeniden deneniyor')
-                time.sleep(10 * (i + 1))
+                print(f'   … {method} yanıt vermedi, {wait} sn sonra yeniden deneniyor')
+                time.sleep(wait)
+                continue
+            if r.status_code < 500 or i == 5:
+                break
+            print(f'   … {method} sunucu hatası {r.status_code}, {wait} sn sonra yeniden deneniyor')
+            time.sleep(wait)
         if r.status_code >= 400:
             try:
                 errs = r.json().get('errors', [])
@@ -171,9 +177,11 @@ def main():
     print(f"Düzenlenen sürüm: {ver['attributes'].get('versionString', a.version)}")
 
     ex_info = {} if info['id'] == 'DRY' else {x['attributes']['locale']: x['id'] for x in
-                                              asc.get(f"/v1/appInfos/{info['id']}/appInfoLocalizations", limit=50)['data']}
+                                              asc.get(f"/v1/appInfos/{info['id']}/appInfoLocalizations", limit=50,
+                                                    **{'fields[appInfoLocalizations]': 'locale'})['data']}
     ex_ver = {} if ver['id'] == 'DRY' else {x['attributes']['locale']: x['id'] for x in
-                                            asc.get(f"/v1/appStoreVersions/{ver['id']}/appStoreVersionLocalizations", limit=50)['data']}
+                                            asc.get(f"/v1/appStoreVersions/{ver['id']}/appStoreVersionLocalizations", limit=50,
+                                                    **{'fields[appStoreVersionLocalizations]': 'locale'})['data']}
     fails = []
     for loc, e in meta['locales'].items():
         print(f'• {loc}')
