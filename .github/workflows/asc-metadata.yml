@@ -29,6 +29,10 @@ on:
         description: 'Yalnız oku: her dilde hangi alanların dolu olduğunu göster'
         type: boolean
         default: false
+      remove_locales:
+        description: 'Düzenlenen sürümden silinecek diller (ör. it,id,ar-SA)'
+        required: false
+        default: ''
 jobs:
   metadata:
     runs-on: ubuntu-latest
@@ -51,4 +55,5 @@ jobs:
           [ "${{ inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
           [ "${{ inputs.diagnose }}" = "true" ] && ARGS="$ARGS --diagnose"
           [ "${{ inputs.audit }}" = "true" ] && ARGS="$ARGS --audit"
+          [ -n "${{ inputs.remove_locales }}" ] && ARGS="$ARGS --remove-locales ${{ inputs.remove_locales }}"
           python -u tools/asc/asc.py $ARGS

@@ -231,6 +231,26 @@ def audit(asc, app_id, meta):
             print(f"   {at['locale']}: {at.get('name')} | {at.get('subtitle')} | gizlilik: {'var' if at.get('privacyPolicyUrl') else 'BOŞ'}")
 
 
+def remove_locales(asc, app_id, locs):
+    # yalnız düzenlenebilir sürümden ve henüz yayınlanmamış uygulama bilgisinden siler; ana dile dokunmaz
+    vs = asc.get(f'/v1/apps/{app_id}/appStoreVersions', **{'filter[platform]': 'IOS', 'limit': 20})['data']
+    ver = next((v for v in vs if v['attributes']['appStoreState'] in EDITABLE), None)
+    if ver:
+        for l in asc.get(f"/v1/appStoreVersions/{ver['id']}/appStoreVersionLocalizations", limit=50)['data']:
+            if l['attributes']['locale'] in locs:
+                asc.req('DELETE', f"/v1/appStoreVersionLocalizations/{l['id']}", write=True)
+                print(f"   sürüm {ver['attributes']['versionString']}: {l['attributes']['locale']} silindi")
+    live = {'READY_FOR_DISTRIBUTION', 'READY_FOR_SALE', 'REPLACED_WITH_NEW_INFO'}
+    for i in asc.get(f'/v1/apps/{app_id}/appInfos')['data']:
+        if (i['attributes'].get('state') or i['attributes'].get('appStoreState')) in live:
+            continue
+        for l in asc.get(f"/v1/appInfos/{i['id']}/appInfoLocalizations", limit=50)['data']:
+            if l['attributes']['locale'] in locs:
+                asc.req('DELETE', f"/v1/appInfoLocalizations/{l['id']}", write=True)
+                print(f"   uygulama bilgisi: {l['attributes']['locale']} silindi")
+    print('Bitti.')
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--metadata', default=str(ROOT / 'store/asc/metadata.json'))
@@ -240,6 +260,7 @@ def main():
     ap.add_argument('--dry-run', action='store_true')
     ap.add_argument('--diagnose', action='store_true')
     ap.add_argument('--audit', action='store_true')
+    ap.add_argument('--remove-locales', default='')
     a = ap.parse_args()
     meta = json.load(open(a.metadata, encoding='utf-8'))
     asc = ASC(a.dry_run)
@@ -253,6 +274,8 @@ def main():
         return diagnose(asc, app['id'])
     if a.audit:
         return audit(asc, app['id'], meta)
+    if a.remove_locales:
+        return remove_locales(asc, app['id'], [x.strip() for x in a.remove_locales.split(',') if x.strip()])
 
     ver = pick_version(asc, app['id'], a.version)
     info = pick_appinfo(asc, app['id'])
