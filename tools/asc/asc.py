@@ -155,6 +155,34 @@ def upload_shots(asc, vloc_id, loc, replace):
         print(f'      {dtype}: {len(files)} görsel yüklendi ({files[0].name[:3]}…)')
 
 
+def probe(asc, path, **params):
+    # yalnız okur; her isteği bir kez dener ve durum kodunu yazar
+    r = requests.get(API + path, params=params, timeout=120, headers={'Authorization': 'Bearer ' + asc.token()})
+    print(f'   GET {path} -> {r.status_code}')
+    return r.json().get('data', []) if r.status_code < 400 and r.content else []
+
+
+def diagnose(asc, app_id):
+    for v in probe(asc, f'/v1/apps/{app_id}/appStoreVersions', limit=20):
+        print(f"• sürüm {v['attributes']['versionString']} {v['attributes']['appStoreState']} ({v['id']})")
+        locs = probe(asc, f"/v1/appStoreVersions/{v['id']}/appStoreVersionLocalizations", limit=50,
+                     **{'fields[appStoreVersionLocalizations]': 'locale'})
+        if not locs:
+            # liste açılmıyorsa dilleri tek tek dene
+            for i in range(1, 4):
+                probe(asc, f"/v1/appStoreVersions/{v['id']}/appStoreVersionLocalizations", limit=i)
+        for l in locs:
+            print(f"   dil {l['attributes']['locale']} ({l['id']})")
+            probe(asc, f"/v1/appStoreVersionLocalizations/{l['id']}")
+            probe(asc, f"/v1/appStoreVersionLocalizations/{l['id']}/appScreenshotSets")
+        probe(asc, f"/v1/appStoreVersions/{v['id']}/build")
+    for i in probe(asc, f'/v1/apps/{app_id}/appInfos'):
+        print(f"• uygulama bilgisi {i['id']}")
+        for l in probe(asc, f"/v1/appInfos/{i['id']}/appInfoLocalizations", limit=50):
+            at = l['attributes']
+            print(f"   dil {at['locale']}: {at.get('name')} | {at.get('subtitle')} ({l['id']})")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--metadata', default=str(ROOT / 'store/asc/metadata.json'))
@@ -162,6 +190,7 @@ def main():
     ap.add_argument('--screens', action='store_true')
     ap.add_argument('--replace-screens', action='store_true')
     ap.add_argument('--dry-run', action='store_true')
+    ap.add_argument('--diagnose', action='store_true')
     a = ap.parse_args()
     meta = json.load(open(a.metadata, encoding='utf-8'))
     asc = ASC(a.dry_run)
@@ -171,6 +200,8 @@ def main():
         sys.exit(f'{BUNDLE} paket kimlikli uygulama bulunamadı')
     app = apps[0]
     print(f"Uygulama: {app['attributes']['name']} ({app['id']}), ana dil: {app['attributes'].get('primaryLocale')}")
+    if a.diagnose:
+        return diagnose(asc, app['id'])
 
     ver = pick_version(asc, app['id'], a.version)
     info = pick_appinfo(asc, app['id'])

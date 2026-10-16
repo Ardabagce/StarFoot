@@ -21,6 +21,10 @@ on:
         description: 'Yalnız göster, değiştirme'
         type: boolean
         default: false
+      diagnose:
+        description: 'Yalnız oku: hangi kayıtların açılmadığını göster'
+        type: boolean
+        default: false
 jobs:
   metadata:
     runs-on: ubuntu-latest
@@ -41,4 +45,5 @@ jobs:
           [ "${{ inputs.screens }}" != "false" ] && ARGS="$ARGS --screens"
           [ "${{ inputs.replace_screens }}" = "true" ] && ARGS="$ARGS --replace-screens"
           [ "${{ inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
+          [ "${{ inputs.diagnose }}" = "true" ] && ARGS="$ARGS --diagnose"
           python tools/asc/asc.py $ARGS
