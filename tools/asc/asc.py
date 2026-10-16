@@ -127,9 +127,13 @@ def upload_shots(asc, vloc_id, loc, replace):
         s = sets.get(dtype)
         if s:
             cur = asc.get(f"/v1/appScreenshotSets/{s['id']}/appScreenshots", limit=20)['data']
-            if cur and not replace:
+            # yarıda kalmış yükleme (eksik sayı ya da yüklenmemiş/başarısız görsel) varsa seti baştan yükle
+            bad = [c for c in cur if ((c['attributes'].get('assetDeliveryState') or {}).get('state')) in ('AWAITING_UPLOAD', 'FAILED', None)]
+            if cur and not replace and not bad and len(cur) >= len(files):
                 print(f'      {dtype}: {len(cur)} görsel zaten var, atlandı')
                 continue
+            if cur and not replace:
+                print(f'      {dtype}: yarım kalmış ({len(cur)}/{len(files)}, {len(bad)} sorunlu), yeniden yükleniyor')
             for c in cur:
                 asc.req('DELETE', f"/v1/appScreenshots/{c['id']}", write=True)
             set_id = s['id']
