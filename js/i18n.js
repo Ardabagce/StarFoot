@@ -3,10 +3,12 @@
 const I18N = {
   lang: 'tr',
   // Desteklenen diller: Türkçe asıl metin, diğerleri js/lang-<kod>.js sözlüğüyle çevrilir
-  LANGS: { tr: 'Türkçe', en: 'English', es: 'Español', pt: 'Português', de: 'Deutsch', fr: 'Français', it: 'Italiano', id: 'Bahasa Indonesia' },
+  LANGS: { tr: 'Türkçe', en: 'English', es: 'Español', pt: 'Português', de: 'Deutsch', fr: 'Français', it: 'Italiano', id: 'Bahasa Indonesia', ar: 'العربية' },
   memo: new Map(),
   outs: new Set(),
   rev: new Map(),
+  // sağdan sola yazılan diller
+  rtl() { return I18N.lang === 'ar'; },
   dict() { return (window.LANGS || {})[I18N.lang]; },
   // Kayıtlı seçim yoksa telefonun dili; desteklenmeyen dillerde İngilizce
   pick() {
@@ -24,7 +26,7 @@ const I18N = {
   },
   boot(l) {
     I18N.lang = l !== 'tr' && window.LANGS && window.LANGS[l] ? l : (l !== 'tr' && window.LANGS && window.LANGS.en ? 'en' : 'tr');
-    document.documentElement.lang = I18N.lang;
+    document.documentElement.lang = I18N.lang; document.documentElement.dir = I18N.rtl() ? 'rtl' : 'ltr';
     if (I18N.lang !== 'tr') I18N.enable();
   },
   load(l) {
@@ -32,8 +34,8 @@ const I18N = {
     return new Promise((res, rej) => { const sc = document.createElement('script'); sc.src = `js/lang-${l}.js`; sc.onload = res; sc.onerror = rej; document.head.appendChild(sc); });
   },
   // dile göre varsayılan oyuncu adı ve ülke (senaryolar, kariyer oluşturma)
-  defName() { return { tr: ['Emre', 'Yıldız'], en: ['Alex', 'Stone'], es: ['Diego', 'Romero'], pt: ['Lucas', 'Silva'], de: ['Lukas', 'Becker'], fr: ['Hugo', 'Martin'], it: ['Marco', 'Rossi'], id: ['Rizky', 'Pratama'] }[I18N.lang] || ['Alex', 'Stone']; },
-  home() { return { tr: 'TUR', en: 'ENG', es: 'ESP', pt: 'BRA', de: 'GER', fr: 'FRA', it: 'ITA', id: 'ENG' }[I18N.lang] || 'ENG'; },
+  defName() { return { tr: ['Emre', 'Yıldız'], en: ['Alex', 'Stone'], es: ['Diego', 'Romero'], pt: ['Lucas', 'Silva'], de: ['Lukas', 'Becker'], fr: ['Hugo', 'Martin'], it: ['Marco', 'Rossi'], id: ['Rizky', 'Pratama'], ar: ['عمر', 'الحداد'] }[I18N.lang] || ['Alex', 'Stone']; },
+  home() { return { tr: 'TUR', en: 'ENG', es: 'ESP', pt: 'BRA', de: 'GER', fr: 'FRA', it: 'ITA', id: 'ENG', ar: 'KSA' }[I18N.lang] || 'ENG'; },
   deviceLang() {
     const list = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || '']).filter(Boolean);
     for (const x of list) { const c = String(x).slice(0, 2).toLowerCase(); if (I18N.LANGS[c]) return c; if (c === 'in') return 'id'; }
@@ -81,7 +83,7 @@ const I18N = {
     // gözlemci, sözlük yüklenirken eski dile geri çevirmesin diye geçici olarak Türkçeye dön
     if (I18N.lang !== 'tr') { I18N.restore(document.body); I18N.lang = 'tr'; }
     const done = () => {
-      document.documentElement.lang = I18N.lang;
+      document.documentElement.lang = I18N.lang; document.documentElement.dir = I18N.rtl() ? 'rtl' : 'ltr';
       if (typeof I18N.onChange === 'function') I18N.onChange(I18N.lang);
     };
     if (l === 'tr') { I18N.lang = 'tr'; done(); return Promise.resolve(); }
@@ -107,7 +109,9 @@ const I18N = {
     const m = s.match(/^(\s*)([\s\S]*?)(\s*)$/);
     let core = m[2];
     let r = core ? I18N.tr(core.replace(/\s+/g, ' '), 0) : null;
-    const out = r == null ? s : m[1] + I18N.ord(r) + m[3];
+    let out = r == null ? s : m[1] + I18N.ord(r) + m[3];
+    // sağdan sola: baştaki +/− işaretleri sayının sağına kaymasın (soldan sağa işaretiyle sabitle)
+    if (I18N.rtl() && out !== s) out = out.replace(/(^|[\s(·])([+\-−±])(?=\d)/g, '$1\u200e$2');
     if (I18N.memo.size > 20000) { I18N.memo.clear(); I18N.outs.clear(); }
     I18N.memo.set(s, out);
     I18N.outs.add(out);
@@ -207,7 +211,12 @@ const I18N = {
     const p = n.parentNode;
     if (!p || p.nodeType !== 1 || I18N.skip(p)) return;
     const v = n.nodeValue;
-    if (!v || !/[A-Za-zÇĞİŞÖÜçğışöü]/.test(v)) return;
+    if (!v) return;
+    if (!/[A-Za-zÇĞİŞÖÜçğışöü]/.test(v)) {
+      // yalnız sayı içeren metin ("+0.44", "−12"): sağdan sola düzende işaret doğru tarafta kalsın
+      if (I18N.rtl() && (/^\s*[+\-−±]\s?\d/.test(v) || /\d\s*['’%]\s*$/.test(v))) n.nodeValue = '\u200e' + v;
+      return;
+    }
     const t = I18N.t(v);
     if (t !== v) n.nodeValue = t;
   },

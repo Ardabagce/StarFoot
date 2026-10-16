@@ -108,7 +108,7 @@ def load_lang(code):
             m[en] = t.strip()
     return m, bad
 
-LANGS = ['en', 'es', 'pt', 'de', 'fr', 'it', 'id']
+LANGS = ['en', 'es', 'pt', 'de', 'fr', 'it', 'id', 'ar']
 for code in LANGS:
     T, bad = ({}, 0) if code == 'en' else load_lang(code)
     tr_ = (lambda v: v) if code == 'en' else (lambda v: T.get(v, v))
