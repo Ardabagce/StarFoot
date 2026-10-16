@@ -273,6 +273,11 @@ def main():
             print(f'   ad ve alt başlık {how}')
         except RuntimeError as err:
             print(f'   ! ad/alt başlık: {err}'); fails.append(loc)
+        if loc not in ex_ver and ver['id'] != 'DRY':
+            # yeni dilin adı eklenince Apple sürüme boş bir dil kaydı açıyor: onu bul, yeniden oluşturma
+            ex_ver = {x['attributes']['locale']: x['id'] for x in
+                      asc.get(f"/v1/appStoreVersions/{ver['id']}/appStoreVersionLocalizations", limit=50,
+                              **{'fields[appStoreVersionLocalizations]': 'locale'})['data']}
         attrs = {'description': e['description'], 'keywords': e['keywords'], 'promotionalText': e['promotionalText'],
                  'whatsNew': e['whatsNew'], 'supportUrl': meta['support_url'], 'marketingUrl': meta['marketing_url']}
         try:
