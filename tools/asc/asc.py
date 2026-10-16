@@ -44,8 +44,17 @@ class ASC:
         if write and self.dry:
             print(f'   [deneme] {method} {path} {json.dumps(body, ensure_ascii=False)[:160] if body else ""}')
             return {'data': {'id': 'DRY', 'attributes': {}}}
-        r = requests.request(method, API + path, params=params, json=body, timeout=60,
-                             headers={'Authorization': 'Bearer ' + self.token(), 'Content-Type': 'application/json'})
+        # Apple'ın sunucusu zaman zaman bir dakikadan uzun yanıtsız kalıyor: birkaç kez yeniden dene
+        for i in range(4):
+            try:
+                r = requests.request(method, API + path, params=params, json=body, timeout=180,
+                                     headers={'Authorization': 'Bearer ' + self.token(), 'Content-Type': 'application/json'})
+                break
+            except (requests.Timeout, requests.ConnectionError) as err:
+                if i == 3:
+                    raise RuntimeError(f'{method} {path} -> yanıt yok ({err.__class__.__name__})')
+                print(f'   … {method} yanıt vermedi, {10 * (i + 1)} sn sonra yeniden deneniyor')
+                time.sleep(10 * (i + 1))
         if r.status_code >= 400:
             try:
                 errs = r.json().get('errors', [])
@@ -181,7 +190,10 @@ def main():
         except RuntimeError as err:
             if 'whatsNew' in str(err):
                 attrs.pop('whatsNew')
-                vid, how = upsert(asc, 'appStoreVersionLocalizations', 'appStoreVersion', 'appStoreVersions', ver['id'], ex_ver, loc, attrs)
+                try:
+                    vid, how = upsert(asc, 'appStoreVersionLocalizations', 'appStoreVersion', 'appStoreVersions', ver['id'], ex_ver, loc, attrs)
+                except RuntimeError as err2:
+                    print(f'   ! açıklama: {err2}'); fails.append(loc); continue
             else:
                 print(f'   ! açıklama: {err}'); fails.append(loc); continue
         print(f'   açıklama, anahtar kelimeler, tanıtım ve yenilikler {how}')
