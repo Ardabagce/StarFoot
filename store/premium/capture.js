@@ -31,6 +31,7 @@ const OUT = path.join(__dirname, 'raw');
       if (Social.post) { try { ['goal', 'trophy', 'training', 'goal', 'fans', 'goal'].forEach((k) => Social.post(k)); } catch (e) {} }
     };
     await pg.evaluate(setup);
+    await pg.evaluate(() => { if (typeof Press !== 'undefined') Press.ask = () => Promise.resolve(); });
     const shot = async (n, fn, wait = 500) => { if (fn) await pg.evaluate(fn); await pg.evaluate(() => document.querySelectorAll('.toast, #toasts > *').forEach((t) => t.remove())); await pg.waitForTimeout(wait); await pg.screenshot({ path: path.join(OUT, `${l}-${n}.png`) }); };
     // 1) Şampiyonlar Kupası maç günü (yıldızlı tema)
     await shot('matchday', () => {
@@ -42,6 +43,12 @@ const OUT = path.join(__dirname, 'raw');
     let momentDone = false;
     for (let tries = 0; tries < 8; tries++) {
       await pg.evaluate(() => { const s = Game.state; s.ap = 0; s.pendingEvent = null; s.pendingGift = null; s.pendingCup = s.pendingCup || null; Game.p.energy = 100; Game.playNext(); });
+      // araya giren pencereleri (olay, kupa kurası, basın toplantısı) kapat
+      for (let k = 0; k < 60; k++) {
+        if (await pg.evaluate(() => { const m = document.getElementById('mt-sim'); return !!(m && m.offsetParent); })) break;
+        await pg.evaluate(() => { const b = document.querySelector('#modal:not(.hidden) .modal-btns button'); if (b) b.click(); });
+        await pg.waitForTimeout(250);
+      }
       await pg.waitForSelector('#mt-sim', { timeout: 15000 });
       if (!momentDone) {
         let got = false;
