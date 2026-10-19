@@ -1,14 +1,16 @@
 // StarFoot Premium: tek seferlik satın alma (App Store / Google Play).
 // Geçiş reklamlarını kaldırır; ödüllü reklam ödülleri reklam izlemeden verilir. Tüm kariyerlerde geçerli.
 const PREMIUM_ID = 'starfoot_premium';
-// Premium şimdilik kapalı (ilk App Store onayından sonra true yapılıp yeniden açılacak)
-const PREMIUM_ENABLED = false;
+// Premium açık; şimdilik yalnız iPhone'da (Google Play'de ürün tanımlanınca 'android' eklenir)
+const PREMIUM_ENABLED = true;
+const PREMIUM_PLATFORMS = ['ios'];
 const Premium = {
   active: PREMIUM_ENABLED && (() => { try { return localStorage.getItem('starfoot_premium') === '1'; } catch (e) { return false; } })(),
   price: '',
   plugin() {
     const C = window.Capacitor;
-    return C && C.isNativePlatform && C.isNativePlatform() && C.Plugins && C.Plugins.NativePurchases ? C.Plugins.NativePurchases : null;
+    if (!C || !C.isNativePlatform || !C.isNativePlatform() || !PREMIUM_PLATFORMS.includes(C.getPlatform && C.getPlatform())) return null;
+    return C.Plugins && C.Plugins.NativePurchases ? C.Plugins.NativePurchases : null;
   },
   available() { return PREMIUM_ENABLED && !!Premium.plugin(); },
   set(v) {

@@ -12,7 +12,9 @@ const OUT = path.join(__dirname, 'raw');
     const FD = 'file://' + path.join(__dirname, 'fonts');
     const css = [['Saira Condensed', 'saira-condensed', [600, 800, 900]], ['Barlow Semi Condensed', 'barlow-semi-condensed', [400, 500, 600, 700]]]
       .flatMap(([fam, f, ws]) => ws.flatMap((w) => ['latin', 'latin-ext'].map((sub) => `@font-face{font-family:'${fam}';font-weight:${w};font-style:normal;src:url('${FD}/${f}-${sub}-${w}-normal.woff2') format('woff2');}`))).join('');
-    await pg.addInitScript((css) => { document.addEventListener('DOMContentLoaded', () => { const st = document.createElement('style'); st.textContent = css; document.head.appendChild(st); }); }, css);
+    // Japonca: Noto Sans JP (JA_CSS = Google Fonts CSS dosyası; oyunun yazı tipi listesinde zaten var)
+    const ja = l === 'ja' && process.env.JA_CSS ? require('fs').readFileSync(process.env.JA_CSS, 'utf8').replace(/url\((?!['"]?(?:https?|file):)['"]?([^)'"]+)['"]?\)/g, (m, u) => `url(file://${path.join(path.dirname(process.env.JA_CSS), u)})`) : '';
+    await pg.addInitScript((css) => { document.addEventListener('DOMContentLoaded', () => { const st = document.createElement('style'); st.textContent = css; document.head.appendChild(st); }); }, css + ja);
     await pg.goto('file://' + path.join(ROOT, 'index.html'));
     await pg.evaluate((l) => { localStorage.clear(); localStorage.setItem('starfoot_lang', l); }, l); await pg.reload();
     await pg.waitForTimeout(400);

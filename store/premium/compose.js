@@ -17,6 +17,7 @@ const POSTERS = [
     it: { tag: "PARTITA LIVE", h1: "GIOCA I", h2: "MOMENTI DECISIVI", sub: "Tiri, passaggi, dribbling, punizioni, rigori: la partita è nelle tue mani.", chips: [["Scorri e tira", 'left', 1040], ["Partite in tempo reale", 'right', 1500]] },
     ind: { tag: "LAGA LANGSUNG", h1: "MAINKAN", h2: "MOMEN PENTING", sub: "Tembakan, umpan, dribel, tendangan bebas, penalti: laga ada di tanganmu.", chips: [["Geser & tembak", 'left', 1040], ["Laga real-time", 'right', 1500]] },
     ar: { tag: "محرك مباريات مباشر", h1: "العب", h2: "اللحظات الحاسمة", sub: "التسديد والتمرير والمراوغة والركلات الحرة وركلات الجزاء: المباراة بين يديك.", chips: [["اسحب وسدد", 'left', 1040], ["مباريات مباشرة", 'right', 1500]] },
+    ja: { tag: "リアルタイム試合エンジン", h1: "決定的な", h2: "瞬間を操れ", sub: "シュート、パス、ドリブル、FK、PK：試合の行方はあなた次第。", chips: [["引いてシュート", 'left', 1040], ["リアルタイムの試合", 'right', 1500]] },
   },
   {
     id: 'matchday', accent: '#8fb8ff', glow: 'rgba(120,170,255,.5)', tilt: 3, stars: true,
@@ -29,6 +30,7 @@ const POSTERS = [
     it: { tag: "CAMPIONATI E COPPE", h1: "SALI SUL", h2: "GRANDE PALCO", sub: "Coppa dei Campioni, Mondiali e 30 campionati.", chips: [["400+ club", 'right', 1180], ["30 campionati", 'left', 1500]] },
     ind: { tag: "LIGA & PIALA", h1: "NAIK KE", h2: "PANGGUNG BESAR", sub: "Piala Champions, Piala Dunia, dan 30 liga dunia.", chips: [["400+ klub", 'right', 1180], ["30 liga", 'left', 1500]] },
     ar: { tag: "الدوريات والكؤوس", h1: "اصعد إلى", h2: "المسرح الكبير", sub: "كأس الأبطال وكأس العالم و30 دوريًا حول العالم.", chips: [["أكثر من 400 نادٍ", 'right', 1180], ["30 دوريًا", 'left', 1500]] },
+    ja: { tag: "リーグ＆カップ", h1: "大舞台へ", h2: "駆け上がれ", sub: "チャンピオンズカップ、ワールドカップ、世界30リーグ。", chips: [["400以上のクラブ", 'right', 1180], ["30リーグ", 'left', 1500]] },
   },
   {
     id: 'summary', accent: '#ffd36b', glow: 'rgba(255,190,60,.5)', tilt: -3,
@@ -41,6 +43,7 @@ const POSTERS = [
     it: { tag: "CARRIERA", h1: "DIVENTA IL", h2: "MIGLIORE IN CAMPO", sub: "Alza il tuo voto, colleziona premi e scrivi il tuo nome tra le leggende.", chips: [["Premi migliore in campo", 'left', 1080], ["~100 traguardi", 'right', 1520]] },
     ind: { tag: "KARIER", h1: "JADILAH", h2: "PEMAIN TERBAIK", sub: "Naikkan nilaimu, kumpulkan penghargaan, dan tulis namamu di antara legenda.", chips: [["Penghargaan pemain terbaik", 'left', 1080], ["~100 pencapaian", 'right', 1520]] },
     ar: { tag: "المسيرة", h1: "كن", h2: "رجل المباراة", sub: "ارفع تقييمك واجمع الجوائز واكتب اسمك بين الأساطير.", chips: [["جوائز رجل المباراة", 'left', 1080], ["قرابة 100 إنجاز", 'right', 1520]] },
+    ja: { tag: "キャリア", h1: "目指せ", h2: "試合の主役", sub: "評価を上げ、賞を集め、伝説の仲間入りを果たそう。", chips: [["マン・オブ・ザ・マッチ賞", 'left', 1080], ["約100の実績", 'right', 1520]] },
   },
   {
     id: 'trophy', accent: '#ffcf3f', glow: 'rgba(255,200,60,.55)', tilt: 3, confetti: true,
@@ -53,6 +56,7 @@ const POSTERS = [
     it: { tag: "GLORIA", h1: "ALZA IL", h2: "TROFEO", sub: "Campionati, coppe e feste per il titolo ti aspettano.", chips: [["Cerimonie del trofeo", 'right', 1060], ["Esultanze", 'left', 1500]] },
     ind: { tag: "KEJAYAAN", h1: "ANGKAT", h2: "TROFINYA", sub: "Liga, piala, dan perayaan gelar menantimu.", chips: [["Upacara trofi", 'right', 1060], ["Selebrasi gol", 'left', 1500]] },
     ar: { tag: "المجد", h1: "ارفع", h2: "الكأس", sub: "الدوريات والكؤوس واحتفالات الألقاب بانتظارك.", chips: [["حفلات التتويج", 'right', 1060], ["احتفالات الأهداف", 'left', 1500]] },
+    ja: { tag: "栄光", h1: "トロフィーを", h2: "掲げろ", sub: "リーグ、カップ、優勝セレモニーが待っている。", chips: [["優勝セレモニー", 'right', 1060], ["ゴールセレブレーション", 'left', 1500]] },
   },
   {
     id: 'social', accent: '#ff6fb5', glow: 'rgba(214,80,220,.5)', tilt: -3, ig: true,
@@ -65,6 +69,7 @@ const POSTERS = [
     it: { tag: "VITA FUORI DAL CAMPO", h1: "UNA STELLA", h2: "FUORI DAL CAMPO", sub: "Conquista follower, firma sponsorizzazioni e valuta le offerte.", chips: [["Milioni di follower", 'right', 1040], ["Sponsor e agente", 'left', 1500]] },
     ind: { tag: "HIDUP DI LUAR LAPANGAN", h1: "BINTANG", h2: "DI LUAR LAPANGAN", sub: "Kumpulkan pengikut, teken sponsor, dan timbang tawaran transfer.", chips: [["Jutaan pengikut", 'right', 1040], ["Sponsor & agen", 'left', 1500]] },
     ar: { tag: "الحياة خارج الملعب", h1: "نجم", h2: "خارج الملعب", sub: "اجمع المتابعين ووقّع عقود الرعاية وادرس عروض الانتقال.", chips: [["ملايين المتابعين", 'right', 1040], ["رعاة ووكيل", 'left', 1500]] },
+    ja: { tag: "ピッチ外のライフ", h1: "ピッチの外でも", h2: "スターに", sub: "フォロワーを集め、スポンサー契約を結び、移籍オファーを検討しよう。", chips: [["数百万のフォロワー", 'right', 1040], ["スポンサーと代理人", 'left', 1500]] },
   },
 ];
 
@@ -74,6 +79,8 @@ const fontCss = [['Saira Condensed', 'saira-condensed', [800, 900]], ['Barlow Se
 const RTL = new Set(['ar']);
 const AR_RANGE = 'U+0600-06FF, U+0750-077F, U+08A0-08FF, U+200C-200E, U+FB50-FDFF, U+FE70-FEFC';
 const arCss = ['Saira Condensed', 'Barlow Semi Condensed'].flatMap((fam) => [500, 600, 700, 800, 900].map((w) => `@font-face{font-family:'${fam}';font-weight:${w};src:url('file://${path.join(D, '../../fonts')}/cairo-arabic-${w === 500 ? 600 : w === 800 ? 900 : w}-normal.woff2') format('woff2');unicode-range:${AR_RANGE}}`)).join('\n');
+// Japonca: Noto Sans JP (SIL OFL). JA_CSS = Google Fonts CSS dosyası (font yolları dosyaya göre)
+const jaCss = (() => { const f = process.env.JA_CSS; if (!f) return ''; const dir = path.dirname(f); return require('fs').readFileSync(f, 'utf8').replace(/url\((?!['"]?(?:https?|file):)['"]?([^)'"]+)['"]?\)/g, (m, u) => `url(file://${path.join(dir, u)})`) + "\nbody{font-family:'Barlow Semi Condensed','Noto Sans JP',sans-serif} h1,.logo{font-family:'Saira Condensed','Noto Sans JP',sans-serif}"; })();
 const html = (p, l, img, F = { H: 1920, pw: 600, top: 640, shift: 0 }) => {
   const t = p[l === 'id' ? 'ind' : l];
   const conf = p.confetti ? Array.from({ length: 90 }, (_, i) => {
@@ -86,6 +93,8 @@ const html = (p, l, img, F = { H: 1920, pw: 600, top: 640, shift: 0 }) => {
   return `<!doctype html><html><head><meta charset="utf-8"><style>
 ${fontCss}
 ${arCss}
+${l === 'ja' ? jaCss : ''}
+${l === 'ja' ? '.tag{letter-spacing:.08em!important} h1{letter-spacing:0!important;line-height:1.05} .chip{font-size:34px}' : ''}
 *{margin:0;padding:0;box-sizing:border-box}
 ${RTL.has(l) ? 'header,.chip{direction:rtl} .tag,h1,.logo{letter-spacing:0!important} h1 .a,h1 .b{line-height:1.15}' : ''}
 body{width:1080px;height:${F.H}px;overflow:hidden;position:relative;font-family:'Barlow Semi Condensed',sans-serif;color:#fff;

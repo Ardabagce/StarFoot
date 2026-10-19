@@ -3,7 +3,7 @@
 const I18N = {
   lang: 'tr',
   // Desteklenen diller: Türkçe asıl metin, diğerleri js/lang-<kod>.js sözlüğüyle çevrilir
-  LANGS: { tr: 'Türkçe', en: 'English', es: 'Español', pt: 'Português', de: 'Deutsch', fr: 'Français', it: 'Italiano', id: 'Bahasa Indonesia', ar: 'العربية' },
+  LANGS: { tr: 'Türkçe', en: 'English', es: 'Español', pt: 'Português', de: 'Deutsch', fr: 'Français', it: 'Italiano', id: 'Bahasa Indonesia', ar: 'العربية', ja: '日本語' },
   memo: new Map(),
   outs: new Set(),
   rev: new Map(),
@@ -34,8 +34,8 @@ const I18N = {
     return new Promise((res, rej) => { const sc = document.createElement('script'); sc.src = `js/lang-${l}.js`; sc.onload = res; sc.onerror = rej; document.head.appendChild(sc); });
   },
   // dile göre varsayılan oyuncu adı ve ülke (senaryolar, kariyer oluşturma)
-  defName() { return { tr: ['Emre', 'Yıldız'], en: ['Alex', 'Stone'], es: ['Diego', 'Romero'], pt: ['Lucas', 'Silva'], de: ['Lukas', 'Becker'], fr: ['Hugo', 'Martin'], it: ['Marco', 'Rossi'], id: ['Rizky', 'Pratama'], ar: ['عمر', 'الحداد'] }[I18N.lang] || ['Alex', 'Stone']; },
-  home() { return { tr: 'TUR', en: 'ENG', es: 'ESP', pt: 'BRA', de: 'GER', fr: 'FRA', it: 'ITA', id: 'ENG', ar: 'KSA' }[I18N.lang] || 'ENG'; },
+  defName() { return { tr: ['Emre', 'Yıldız'], en: ['Alex', 'Stone'], es: ['Diego', 'Romero'], pt: ['Lucas', 'Silva'], de: ['Lukas', 'Becker'], fr: ['Hugo', 'Martin'], it: ['Marco', 'Rossi'], id: ['Rizky', 'Pratama'], ar: ['عمر', 'الحداد'], ja: ['タクミ', 'ホシノ'] }[I18N.lang] || ['Alex', 'Stone']; },
+  home() { return { tr: 'TUR', en: 'ENG', es: 'ESP', pt: 'BRA', de: 'GER', fr: 'FRA', it: 'ITA', id: 'ENG', ar: 'KSA', ja: 'JPN' }[I18N.lang] || 'ENG'; },
   deviceLang() {
     const list = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || '']).filter(Boolean);
     for (const x of list) { const c = String(x).slice(0, 2).toLowerCase(); if (I18N.LANGS[c]) return c; if (c === 'in') return 'id'; }

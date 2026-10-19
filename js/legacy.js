@@ -89,7 +89,7 @@ const Scenario = {
     const m = Game.modal(`<div class="ev-tag">${x.ic} ${x.name}</div><h2>Oyuncunun adı</h2><p>${x.d}</p>
       <div class="cr-row2"><label class="cr-f"><span>Adın</span><input id="sc-name" maxlength="16" value="${dn[0]}" autocomplete="off"></label><label class="cr-f"><span>Soyadın</span><input id="sc-sur" maxlength="18" value="${dn[1]}" autocomplete="off"></label></div>`,
     [{ t: 'Vazgeç', cls: 'btn-ghost' }, { t: 'Başla', keep: true, fn: () => {
-      const n = (document.getElementById('sc-name').value.trim() || 'Emre').slice(0, 16), sn = (document.getElementById('sc-sur').value.trim() || 'Yıldız').slice(0, 18);
+      const n = (document.getElementById('sc-name').value.trim() || dn[0]).slice(0, 16), sn = (document.getElementById('sc-sur').value.trim() || dn[1]).slice(0, 18);
       m.classList.add('hidden'); m.innerHTML = '';
       Game.slot = slot;
       Scenario.start(id, n, sn);

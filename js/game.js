@@ -2560,8 +2560,8 @@ const Create = {
       updYear();
     }
     document.getElementById('cr-go').onclick = () => {
-      const name = document.getElementById('cr-name').value.trim() || 'Emre';
-      const surname = document.getElementById('cr-sur').value.trim() || 'Yıldız';
+      const name = document.getElementById('cr-name').value.trim() || I18N.defName()[0];
+      const surname = document.getElementById('cr-sur').value.trim() || I18N.defName()[1];
       Game.newCareer({
         name, surname, nation: document.getElementById('cr-nat').value, mother: document.getElementById('cr-mom').value, foot: Create.foot,
         position: Create.pos, alloc: Create.alloc, difficulty: Create.diff,

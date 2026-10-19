@@ -22,7 +22,7 @@ EDITABLE = {'PREPARE_FOR_SUBMISSION', 'DEVELOPER_REJECTED', 'REJECTED', 'METADAT
 SCREENS = {'APP_IPHONE_67': 'store/premium/ios', 'APP_IPHONE_61': 'store/premium/ios-1206x2622'}
 # dil -> görsel dosya öneki (yoksa İngilizce)
 SHOT_PREFIX = {'tr': 'tr', 'es-ES': 'es', 'es-MX': 'es', 'pt-BR': 'pt', 'pt-PT': 'pt', 'de-DE': 'de',
-               'fr-FR': 'fr', 'it': 'it', 'id': 'id', 'ar-SA': 'ar'}
+               'fr-FR': 'fr', 'it': 'it', 'id': 'id', 'ar-SA': 'ar', 'ja': 'ja'}
 
 
 class ASC:
