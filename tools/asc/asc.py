@@ -251,6 +251,47 @@ def remove_locales(asc, app_id, locs):
     print('Bitti.')
 
 
+IAP_ID = 'starfoot_premium'
+
+
+def iap_report(asc, app_id):
+    # yalnız okur: Premium satın alma ürününün durumu, dilleri, fiyatı, inceleme görseli ve ülkeleri
+    def safe(path, **params):
+        try:
+            return asc.get(path, **params)
+        except RuntimeError as err:
+            print(f'   ! {err}')
+            return {}
+    items = safe(f'/v1/apps/{app_id}/inAppPurchasesV2', limit=50).get('data', [])
+    print(f'Satın alma ürünleri: {len(items)}')
+    for it in items:
+        at = it['attributes']
+        print(f"• {at.get('productId')} | {at.get('name')} | tür {at.get('inAppPurchaseType')} | durum {at.get('state')} | aile paylaşımı {at.get('familySharable')}")
+        if at.get('reviewNote'):
+            print(f"   inceleme notu: {at['reviewNote'][:200]}")
+        for l in safe(f"/v2/inAppPurchases/{it['id']}/inAppPurchaseLocalizations", limit=50).get('data', []):
+            la = l['attributes']
+            print(f"   dil {la.get('locale')}: {la.get('name')} | {la.get('description')} | {la.get('state')}")
+        sch = safe(f"/v2/inAppPurchases/{it['id']}/iapPriceSchedule").get('data')
+        if sch:
+            base = safe(f"/v1/inAppPurchasePriceSchedules/{sch['id']}/baseTerritory").get('data')
+            print(f"   fiyat çizelgesi var, ana ülke: {base and base['id']}")
+            mp = safe(f"/v1/inAppPurchasePriceSchedules/{sch['id']}/manualPrices", limit=5, include='inAppPurchasePricePoint,territory')
+            for inc in mp.get('included', []):
+                if inc['type'] == 'inAppPurchasePricePoints':
+                    print(f"   fiyat noktası: {inc['attributes'].get('customerPrice')} (gelir {inc['attributes'].get('proceeds')})")
+        else:
+            print('   fiyat: YOK')
+        shot = safe(f"/v2/inAppPurchases/{it['id']}/appStoreReviewScreenshot").get('data')
+        print(f"   inceleme görseli: {'var (' + str(shot['attributes'].get('assetDeliveryState')) + ')' if shot else 'YOK'}")
+        av = safe(f"/v2/inAppPurchases/{it['id']}/inAppPurchaseAvailability").get('data')
+        if av:
+            n = safe(f"/v1/inAppPurchaseAvailabilities/{av['id']}/availableTerritories", limit=200).get('data', [])
+            print(f"   satıştaki ülke sayısı: {len(n)} · yeni ülkelere otomatik: {av['attributes'].get('availableInNewTerritories')} · Japonya: {'JPN' in [t['id'] for t in n]}")
+        else:
+            print('   ülkeler: YOK')
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--metadata', default=str(ROOT / 'store/asc/metadata.json'))
@@ -261,6 +302,7 @@ def main():
     ap.add_argument('--diagnose', action='store_true')
     ap.add_argument('--audit', action='store_true')
     ap.add_argument('--remove-locales', default='')
+    ap.add_argument('--iap', action='store_true')
     a = ap.parse_args()
     meta = json.load(open(a.metadata, encoding='utf-8'))
     asc = ASC(a.dry_run)
@@ -274,6 +316,8 @@ def main():
         return diagnose(asc, app['id'])
     if a.audit:
         return audit(asc, app['id'], meta)
+    if a.iap:
+        return iap_report(asc, app['id'])
     if a.remove_locales:
         return remove_locales(asc, app['id'], [x.strip() for x in a.remove_locales.split(',') if x.strip()])
 
