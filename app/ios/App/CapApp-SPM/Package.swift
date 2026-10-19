@@ -18,7 +18,8 @@ let package = Package(
         .package(name: "CapacitorHaptics", path: "../../../node_modules/@capacitor/haptics"),
         .package(name: "CapacitorLocalNotifications", path: "../../../node_modules/@capacitor/local-notifications"),
         .package(name: "CapacitorShare", path: "../../../node_modules/@capacitor/share"),
-        .package(name: "CapgoNativePurchases", path: "../../../node_modules/@capgo/native-purchases")
+        .package(name: "CapgoNativePurchases", path: "../../../node_modules/@capgo/native-purchases"),
+        .package(url: "https://github.com/googleads/googleads-mobile-ios-mediation-liftoffmonetize.git", exact: "7.7.800")
     ],
     targets: [
         .target(
@@ -32,7 +33,8 @@ let package = Package(
                 .product(name: "CapacitorHaptics", package: "CapacitorHaptics"),
                 .product(name: "CapacitorLocalNotifications", package: "CapacitorLocalNotifications"),
                 .product(name: "CapacitorShare", package: "CapacitorShare"),
-                .product(name: "CapgoNativePurchases", package: "CapgoNativePurchases")
+                .product(name: "CapgoNativePurchases", package: "CapgoNativePurchases"),
+                .product(name: "LiftoffMonetizeAdapterTarget", package: "googleads-mobile-ios-mediation-liftoffmonetize")
             ]
         )
     ]

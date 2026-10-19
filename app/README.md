@@ -14,7 +14,7 @@ node make-icons.js   # ikon/açılış ekranlarını ../icons'tan yeniden üreti
 - Ayrıntılı yayın rehberi: `../GOOGLE_PLAY.md`
 
 ## iOS
-- `npm run sync` yerine `node copy-web.js && npx cap sync ios`
+- `npm run sync` yerine `node copy-web.js && npx cap sync ios && node spm-extras.js` (Liftoff reklam adaptörünü ekler)
 - Simge/açılış: `node make-icons.js` sonra simgeden şeffaflığı kaldır: `convert ios/App/App/Assets.xcassets/AppIcon.appiconset/AppIcon-512@2x.png -background '#0a1530' -alpha remove -alpha off <aynı dosya>`
 - AdMob iOS uygulama kimliği: `ios/App/App/Info.plist` › `GADApplicationIdentifier`
 - Derleme/TestFlight: `../.github/workflows/ios.yml`, rehber `../APP_STORE.md`

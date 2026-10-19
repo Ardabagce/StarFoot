@@ -46,6 +46,7 @@ jobs:
           npm ci
           node copy-web.js
           npx cap sync ios
+          node spm-extras.js
       - name: Derlenebilirlik kontrolü (imzasız, simülatör)
         if: env.P8 == '' || env.TEAM_ID == ''
         working-directory: app/ios/App
