@@ -30,9 +30,9 @@ on:
         type: boolean
         default: false
       iap:
-        description: 'Yalnız oku: Premium satın alma ürününün durumu'
-        type: boolean
-        default: false
+        description: 'Premium satın alma ürünü: read = yalnız oku, setup = dilleri ve notu doldur'
+        required: false
+        default: ''
       remove_locales:
         description: 'Düzenlenen sürümden silinecek diller (ör. it,id,ar-SA)'
         required: false
@@ -59,6 +59,7 @@ jobs:
           [ "${{ inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
           [ "${{ inputs.diagnose }}" = "true" ] && ARGS="$ARGS --diagnose"
           [ "${{ inputs.audit }}" = "true" ] && ARGS="$ARGS --audit"
-          [ "${{ inputs.iap }}" = "true" ] && ARGS="$ARGS --iap"
+          [ "${{ inputs.iap }}" = "read" ] && ARGS="$ARGS --iap"
+          [ "${{ inputs.iap }}" = "setup" ] && ARGS="$ARGS --iap-setup"
           [ -n "${{ inputs.remove_locales }}" ] && ARGS="$ARGS --remove-locales ${{ inputs.remove_locales }}"
           python -u tools/asc/asc.py $ARGS

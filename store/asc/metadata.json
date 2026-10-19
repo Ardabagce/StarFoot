@@ -109,5 +109,62 @@
    "whatsNew": "لغة جديدة: اليابانية. وصل StarFoot Premium: شراء لمرة واحدة يزيل الإعلانات البينية ويمنحك المكافآت دون مشاهدة إعلانات. إصلاحات وتحسينات.",
    "description": "ابدأ في مباراة شارع، والفت أنظار الكشافين، وارتقِ من الأكاديمية إلى أكبر أندية العالم. اكتب مسيرتك الكروية بنفسك!\n\nStarFoot لعبة مسيرة كرة قدم تلعب فيها أنت اللحظات الحاسمة في كل مباراة. تمضي المباراة دقيقة بدقيقة وتتوقف عندما تصلك الفرصة: التسديدة والتمريرة والمراوغة والركلة الحرة وركلة الجزاء والضربة الرأسية بين يديك.\n\nمسيرتك\n• ابدأ في أي سنة من 1980 حتى اليوم، بعمر من 8 إلى 18 عامًا\n• أبهر الكشافين في مباريات الشارع وتجارب الأكاديميات\n• تدرّج في الأكاديمية ووقّع أول عقد احترافي لك\n• طوّر 9 مهارات بالتدريب والألعاب المصغرة\n\nالدوريات والكؤوس\n• أكثر من 400 نادٍ في 30 دوريًا في أوروبا والأمريكتين وآسيا والشرق الأوسط\n• كؤوس محلية وكؤوس قارية بمرحلة دوري وأدوار إقصائية\n• كأس العالم وبطولة أوروبا ودوري الأمم ومنتخبات الشباب\n• الحذاء الذهبي وسباق جائزة أفضل لاعب في العالم وجوائز نهاية الموسم\n\nالانتقالات\n• ادرس العروض في فترتي الانتقالات الصيفية والشتوية: الراتب ومدة العقد ودورك\n• تعاقد مع وكيل واطلب رقم قميصك المفضل\n\nالحياة خارج الملعب\n• متابعون على وسائل التواصل وعقود رعاية\n• العائلة والعلاقات والحياة الليلية: لكل قرار عواقبه\n• عناوين الصحف والمؤتمرات الصحفية ومنافس يطاردك طوال مسيرتك\n\nوالمزيد\n• احتفالات الأهداف وشارة القيادة ورجل المباراة وقرابة 100 إنجاز\n• السيناريوهات ووضع الأجيال وقاعة المشاهير\n• 5 خانات للمسيرة و3 مستويات صعوبة\n• متوفرة بـ 10 لغات\n\nجميع أسماء الأندية واللاعبين خيالية."
   }
+ },
+ "premium": {
+  "reviewNote": "Non-consumable, one-time purchase. Open Life › Shop (top card) or Profile › Settings and tap \"Get Premium\". It removes interstitial ads and grants rewarded-ad rewards without showing an ad. \"Restore purchases\" is on the same card.",
+  "locales": {
+   "tr": [
+    "StarFoot Premium",
+    "Geçiş reklamları kalkar, ödüller reklamsız gelir"
+   ],
+   "en-US": [
+    "StarFoot Premium",
+    "No interstitial ads, rewards without watching ads"
+   ],
+   "en-GB": [
+    "StarFoot Premium",
+    "No interstitial ads, rewards without watching ads"
+   ],
+   "es-ES": [
+    "StarFoot Premium",
+    "Sin anuncios intersticiales, premios sin ver anuncios"
+   ],
+   "es-MX": [
+    "StarFoot Premium",
+    "Sin anuncios intersticiales, premios sin ver anuncios"
+   ],
+   "pt-BR": [
+    "StarFoot Premium",
+    "Sem anúncios intersticiais, prêmios sem ver anúncios"
+   ],
+   "pt-PT": [
+    "StarFoot Premium",
+    "Sem anúncios intersticiais, prémios sem ver anúncios"
+   ],
+   "de-DE": [
+    "StarFoot Premium",
+    "Keine Zwischenwerbung, Belohnungen ohne Werbung"
+   ],
+   "fr-FR": [
+    "StarFoot Premium",
+    "Sans pubs interstitielles, récompenses sans pub"
+   ],
+   "it": [
+    "StarFoot Premium",
+    "Niente annunci interstitial, premi senza annunci"
+   ],
+   "id": [
+    "StarFoot Premium",
+    "Tanpa iklan interstisial, hadiah tanpa nonton iklan"
+   ],
+   "ar-SA": [
+    "StarFoot Premium",
+    "بلا إعلانات بينية ومكافآت دون مشاهدة إعلانات"
+   ],
+   "ja": [
+    "StarFoot プレミアム",
+    "インタースティシャル広告なし、広告なしで報酬"
+   ]
+  }
  }
 }

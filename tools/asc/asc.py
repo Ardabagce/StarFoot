@@ -254,6 +254,28 @@ def remove_locales(asc, app_id, locs):
 IAP_ID = 'starfoot_premium'
 
 
+def iap_setup(asc, app_id, cfg):
+    # Premium ürününün inceleme notu ve dillerdeki ad/açıklaması (fiyat, ülkeler ve görsel olduğu gibi kalır)
+    items = [x for x in asc.get(f'/v1/apps/{app_id}/inAppPurchasesV2', limit=50)['data'] if x['attributes'].get('productId') == IAP_ID]
+    if not items:
+        sys.exit(f'{IAP_ID} bulunamadı')
+    iid = items[0]['id']
+    if cfg.get('reviewNote'):
+        asc.req('PATCH', f'/v2/inAppPurchases/{iid}', write=True, body={'data': {'type': 'inAppPurchases', 'id': iid, 'attributes': {'reviewNote': cfg['reviewNote']}}})
+        print('inceleme notu güncellendi')
+    ex = {l['attributes']['locale']: l['id'] for l in asc.get(f'/v2/inAppPurchases/{iid}/inAppPurchaseLocalizations', limit=50)['data']}
+    for loc, (name, desc) in (cfg.get('locales') or {}).items():
+        try:
+            if loc in ex:
+                asc.req('PATCH', f'/v1/inAppPurchaseLocalizations/{ex[loc]}', write=True, body={'data': {'type': 'inAppPurchaseLocalizations', 'id': ex[loc], 'attributes': {'name': name, 'description': desc}}})
+                print(f'   {loc}: güncellendi')
+            else:
+                asc.req('POST', '/v1/inAppPurchaseLocalizations', write=True, body={'data': {'type': 'inAppPurchaseLocalizations', 'attributes': {'locale': loc, 'name': name, 'description': desc}, 'relationships': {'inAppPurchaseV2': {'data': {'type': 'inAppPurchases', 'id': iid}}}}})
+                print(f'   {loc}: eklendi')
+        except RuntimeError as err:
+            print(f'   ! {loc}: {err}')
+
+
 def iap_report(asc, app_id):
     # yalnız okur: Premium satın alma ürününün durumu, dilleri, fiyatı, inceleme görseli ve ülkeleri
     def safe(path, **params):
@@ -303,6 +325,7 @@ def main():
     ap.add_argument('--audit', action='store_true')
     ap.add_argument('--remove-locales', default='')
     ap.add_argument('--iap', action='store_true')
+    ap.add_argument('--iap-setup', action='store_true')
     a = ap.parse_args()
     meta = json.load(open(a.metadata, encoding='utf-8'))
     asc = ASC(a.dry_run)
@@ -316,6 +339,9 @@ def main():
         return diagnose(asc, app['id'])
     if a.audit:
         return audit(asc, app['id'], meta)
+    if a.iap_setup:
+        iap_setup(asc, app['id'], meta.get('premium') or {})
+        return iap_report(asc, app['id'])
     if a.iap:
         return iap_report(asc, app['id'])
     if a.remove_locales:
