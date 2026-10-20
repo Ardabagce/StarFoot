@@ -2030,7 +2030,7 @@ ${UI.paper()}`;
   settings() {
     const s = Game.state, p = s.player;
     const row = (label, sub, ctrl) => `<div class="set-row"><span><b>${label}</b>${sub ? `<small>${sub}</small>` : ''}</span>${ctrl}</div>`;
-    const appVer = (window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform()) ? 'StarFoot 1.0.5' : 'StarFoot (web)';
+    const appVer = (window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform()) ? 'StarFoot 1.0.6' : 'StarFoot (web)';
     return `
       ${typeof Premium !== 'undefined' ? Premium.card() : ''}
       <section class="card settings">
