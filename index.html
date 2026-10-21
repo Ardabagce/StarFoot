@@ -39,8 +39,8 @@
     .btn.and { border: 1px solid var(--line); color: var(--mut); background: rgba(255,255,255,.04); cursor: default; }
     .btn.and b { color: var(--txt); }
     .note { font-size: 15px; color: var(--mut); }
-    .phones { display: flex; gap: 14px; justify-content: center; }
-    .phones img { width: 46%; max-width: 270px; height: auto; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 22px; border: 1px solid var(--line); box-shadow: 0 24px 60px rgba(0,0,0,.5); }
+    .phones { display: flex; gap: 14px; justify-content: center; align-items: flex-start; }
+    .phones img { width: 46%; max-width: 270px; height: auto; aspect-ratio: 9 / 16; object-fit: cover; align-self: flex-start; min-height: 0; display: block; border-radius: 22px; border: 1px solid var(--line); box-shadow: 0 24px 60px rgba(0,0,0,.5); }
     .phones img:nth-child(2) { transform: translateY(28px); }
     h2 { font-family: 'Saira Condensed', sans-serif; font-weight: 900; font-style: italic; text-transform: uppercase; font-size: 34px; margin-bottom: 18px; }
     .feats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 56px; }
@@ -48,8 +48,8 @@
     .feat b { display: block; font-size: 20px; margin-bottom: 6px; }
     .feat p { color: var(--mut); font-size: 16px; }
     .feat i { display: block; font-style: normal; font-size: 28px; margin-bottom: 8px; }
-    .shots { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; margin-bottom: 56px; }
-    .shots img { flex: 0 0 auto; width: 220px; height: auto; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 18px; border: 1px solid var(--line); scroll-snap-align: start; }
+    .shots { display: flex; align-items: flex-start; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; margin-bottom: 56px; }
+    .shots img { flex: 0 0 auto; width: 220px; height: auto; aspect-ratio: 9 / 16; object-fit: cover; align-self: flex-start; min-height: 0; display: block; border-radius: 18px; border: 1px solid var(--line); scroll-snap-align: start; }
     .soon { background: linear-gradient(135deg, rgba(255,207,63,.16), rgba(255,207,63,.04)); border: 1px solid rgba(255,207,63,.35); border-radius: 20px; padding: 24px; margin-bottom: 56px; display: flex; gap: 18px; align-items: center; }
     .soon i { font-style: normal; font-size: 40px; }
     .soon > div > b { display: block; font-size: 22px; }
@@ -94,8 +94,8 @@
         <p class="note" data-t="note">Ücretsiz · Tamamen Türkçe · İnternetsiz de oynanır</p>
       </div>
       <div class="phones">
-        <img data-img="1-moment" src="site/tr-1-moment.jpg" alt="Maçta kritik an" width="540" height="960">
-        <img data-img="4-trophy" src="site/tr-4-trophy.jpg" alt="Kupa töreni" width="540" height="960">
+        <img data-img="1-moment" src="site/tr-1-moment.jpg" alt="Maçta kritik an">
+        <img data-img="4-trophy" src="site/tr-4-trophy.jpg" alt="Kupa töreni">
       </div>
     </section>
 
@@ -118,10 +118,10 @@
 
     <h2 data-t="h3">Oyundan kareler</h2>
     <section class="shots">
-      <img data-img="2-matchday" src="site/tr-2-matchday.jpg" alt="" width="540" height="960" loading="lazy">
-      <img data-img="1-moment" src="site/tr-1-moment.jpg" alt="" width="540" height="960" loading="lazy">
-      <img data-img="5-social" src="site/tr-5-social.jpg" alt="" width="540" height="960" loading="lazy">
-      <img data-img="4-trophy" src="site/tr-4-trophy.jpg" alt="" width="540" height="960" loading="lazy">
+      <img data-img="2-matchday" src="site/tr-2-matchday.jpg" alt="" loading="lazy">
+      <img data-img="1-moment" src="site/tr-1-moment.jpg" alt="" loading="lazy">
+      <img data-img="5-social" src="site/tr-5-social.jpg" alt="" loading="lazy">
+      <img data-img="4-trophy" src="site/tr-4-trophy.jpg" alt="" loading="lazy">
     </section>
 
     <footer>
