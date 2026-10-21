@@ -1,0 +1,3 @@
+3534|Le partite scorrono minuto per minuto come una simulazione. Nei momenti chiave il gioco si ferma e la palla arriva a te: quel momento lo giochi tu. Durante la partita scegli il tuo impegno e cambialo quando vuoi: poco impegno risparmia energia, molto impegno porta più occasioni ma ti stanca.
+3536|Impegno
+3537|Energia stimata a fine gara

@@ -1,0 +1,3 @@
+3534|Pertandingan berjalan menit demi menit sebagai simulasi. Di momen penting permainan berhenti dan bola datang padamu: momen itu kamu sendiri yang memainkan. Selama pertandingan pilih usahamu dan ubah kapan saja: usaha rendah menghemat energi, usaha tinggi memberi lebih banyak peluang tapi membuatmu lelah.
+3536|Usaha
+3537|Perkiraan energi di akhir laga

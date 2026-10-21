@@ -8,9 +8,19 @@ const DIFFS = {
   hard: { l: 'Zor', d: 'Kaleciler refleksli, savunma sert, gelişim yavaş. Gerçek bir meydan okuma.', lvl: 0.1, train: 0.85, coach: -3 },
 };
 
+// Maç eforu (maç ekranında seçilir, maç içinde değişebilir): enerji tüketimi ve gelen pozisyon sayısı
+const EFFORTS = {
+  low: { l: 'Az', d: 'Enerjini sonraki maça saklarsın, daha az pozisyon gelir.', drain: 0.6, mom: -2 },
+  mid: { l: 'Orta', d: 'Standart enerji, normal sayıda pozisyon.', drain: 1, mom: 0 },
+  high: { l: 'Çok', d: 'Daha çok pozisyon gelir ama çok yorulursun, sonraki maça az enerjiyle çıkarsın.', drain: 1.45, mom: 2 },
+};
+
 const Game = {
   state: null,
   tab: 'home',
+
+  effortKey() { const s = Game.state; return (s && EFFORTS[s.effort]) ? s.effort : 'mid'; },
+  effort() { return EFFORTS[Game.effortKey()]; },
 
   // ---------- Kaydet / Yükle (5 kariyer slotu) ----------
   slot: 0,
@@ -146,9 +156,10 @@ const Game = {
     const tx = document.getElementById('title-x');
     if (tx && typeof Legacy !== 'undefined') {
       const nb = Object.keys(Scenario.badges()).length;
-      tx.innerHTML = `<button class="btn btn-ghost" id="t-scn">🎯 Senaryolar${nb ? ` <em>${nb}/${SCEN.length}</em>` : ''}</button><button class="btn btn-ghost" id="t-hof">🏛️ Efsaneler Salonu${Legacy.list().length ? ` <em>${Legacy.list().length}</em>` : ''}</button>`;
+      tx.innerHTML = `<button class="btn btn-ghost" id="t-tut">${Icon('whistle')} Nasıl Oynanır</button><button class="btn btn-ghost" id="t-scn">🎯 Senaryolar${nb ? ` <em>${nb}/${SCEN.length}</em>` : ''}</button><button class="btn btn-ghost" id="t-hof">🏛️ Efsaneler Salonu${Legacy.list().length ? ` <em>${Legacy.list().length}</em>` : ''}</button>`;
       UI.strip(tx);
       document.getElementById('t-scn').onclick = () => Scenario.menu();
+      document.getElementById('t-tut').onclick = () => Tutorial.open();
       document.getElementById('t-hof').onclick = () => Legacy.show();
     }
     U.$$('[data-cont]', box).forEach((b) => (b.onclick = () => { Game.slot = +b.dataset.cont; Game.state = Game.load(); Game.enterHub(); }));
@@ -475,6 +486,7 @@ const Game = {
 
   async playNext() {
     const s = Game.state, p = s.player;
+    if (typeof Tutorial !== 'undefined' && Tutorial.shouldOffer()) await Tutorial.offer();
     if (Game.inStreet()) return s.street.offers ? Game.streetOffers() : s.street.trials ? Game.playTrials() : Game.playStreet();
     if (s.pendingCup) return Cups.playMine(s);
     if (s.pendingIntl) return Game.playIntl();
@@ -1710,8 +1722,11 @@ ${UI.paper()}`;
       const th = CompTheme.get(cup.youth ? 'ygl' : cup.dom ? 'dom' : cup.id);
       const swiss = cup.fmt === 'swiss', mds = cup.mds || 8;
       // eleme turlarının adları (lig aşamasından sonra)
-      const koNames = swiss ? (mds === 8 ? ['Play-off', 'Son 16', 'Çeyrek Final', 'Yarı Final', 'Final'] : ['Çeyrek Final', 'Yarı Final', 'Final']) : null;
-      const swissIdx = (st) => (typeof st === 'string' && st.startsWith('md') ? +st.slice(2) - 1 : st === 'po' ? 8 : mds === 8 ? 9 + Math.round(Math.log2(16 / st)) : 6 + Math.round(Math.log2(8 / st)));
+      const koBase = swiss ? (mds === 8 ? ['Play-off', 'Son 16', 'Çeyrek Final', 'Yarı Final', 'Final'] : ['Çeyrek Final', 'Yarı Final', 'Final']) : null;
+      // çift maçlı kupada final dışındaki her eleme turu iki hafta sürer
+      const koNames = !swiss ? null : cup.legs2 ? koBase.flatMap((n) => (n === 'Final' ? [n] : [`${n} · İlk maç`, `${n} · Rövanş`])) : koBase;
+      const koPos = (st) => (st === 'po' ? 0 : mds === 8 ? 1 + Math.round(Math.log2(16 / st)) : Math.round(Math.log2(8 / st)));
+      const swissIdx = (st, leg) => (typeof st === 'string' && st.startsWith('md') ? +st.slice(2) - 1 : mds + (cup.legs2 ? 2 * koPos(st) + ((leg || 1) - 1) : koPos(st)));
       const row = (idx, h, a, score, kls, stage) => {
         const at = wk[idx];
         if (at == null) return;
@@ -1727,18 +1742,19 @@ ${UI.paper()}`;
       };
       const mine = cup.log.filter((m) => m.h === me || m.a === me);
       mine.forEach((m, i) => {
-        const idx = swiss ? swissIdx(m.stage) : i;
+        const idx = swiss ? swissIdx(m.stage, m.leg) : i;
         const gf = m.h === me ? m.hs : m.as, ga = m.h === me ? m.as : m.hs;
         const k = m.w ? (m.w === me ? 'W' : 'L') : gf > ga ? 'W' : gf < ga ? 'L' : 'D';
-        const stage = typeof m.stage === 'string' && m.stage.startsWith('md') ? `Lig aşaması ${m.stage.slice(2)}. maç` : m.stage === 'po' ? 'Play-off' : STAGE_NAMES[m.stage] || '';
-        row(idx, m.h, m.a, `${m.hs} - ${m.as}${m.pens ? ' (p)' : ''}`, `played r-${k}`, stage);
+        const st0 = typeof m.stage === 'string' && m.stage.startsWith('md') ? `Lig aşaması ${m.stage.slice(2)}. maç` : m.stage === 'po' ? 'Play-off' : STAGE_NAMES[m.stage] || '';
+        const stage = m.leg ? `${st0} · ${m.leg === 2 ? `Rövanş · Toplam ${m.agg[0]}-${m.agg[1]}` : 'İlk maç'}` : st0;
+        row(idx, m.h, m.a, `${m.hs} - ${m.as}${m.pens ? ' (p)' : ''}`, `played r-${m.leg === 1 ? (gf > ga ? 'W' : gf < ga ? 'L' : 'D') : k}`, stage);
       });
       if (cup.winner) return;
       const waitR16 = swiss && cup.phase === 'po' && cup.direct.includes(me);
       if (!Cups.inCup(s, cup) && !waitR16) return;
       const cur = s.pendingCup === cup.id;
       let from;
-      if (waitR16) from = cup.stage + 1;
+      if (waitR16) from = cup.legs2 ? mds + 2 : cup.stage + 1;
       else if (swiss && cup.phase === 'league') {
         // lig aşamasının kalan bütün maçları baştan belli
         for (let k = cup.md; k < mds; k++) {
@@ -2030,7 +2046,7 @@ ${UI.paper()}`;
   settings() {
     const s = Game.state, p = s.player;
     const row = (label, sub, ctrl) => `<div class="set-row"><span><b>${label}</b>${sub ? `<small>${sub}</small>` : ''}</span>${ctrl}</div>`;
-    const appVer = (window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform()) ? 'StarFoot 1.0.6' : 'StarFoot (web)';
+    const appVer = (window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform()) ? 'StarFoot 1.0.7' : 'StarFoot (web)';
     return `
       ${typeof Premium !== 'undefined' ? Premium.card() : ''}
       <section class="card settings">
@@ -2051,7 +2067,7 @@ ${UI.paper()}`;
         <div class="set-links">
           ${window.StarfootAds && window.StarfootAds.privacyRequired && window.StarfootAds.privacyRequired() ? `<button class="btn btn-ghost" data-adprivacy>${Icon('shield')} Reklam gizlilik seçenekleri</button>` : ''}
           <a class="btn btn-ghost" href="privacy.html" data-privacy>Gizlilik Politikası</a>
-          <a class="btn btn-ghost" href="mailto:ardabagce@gmail.com?subject=StarFoot">Destek: ardabagce@gmail.com</a>
+          <a class="btn btn-ghost" href="mailto:arda@bagce.dev?subject=StarFoot">Destek: arda@bagce.dev</a>
         </div>
       </section>
       <section class="card settings">

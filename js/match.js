@@ -67,6 +67,10 @@ const Match = {
     else if (ctx.role === 'bench' && U.chance(ctx.subChance || 0.65)) enterMin = U.randi(55, 78);
     const stamina = p.stats.stamina;
 
+    // efor: maç içinde seçilir ve istenince değiştirilir (enerji tüketimi ve bundan sonraki pozisyon sayısı)
+    const EFS = typeof EFFORTS !== 'undefined' ? EFFORTS : { mid: { drain: 1, mom: 0, l: 'Orta' } };
+    let efKey = typeof Game !== 'undefined' && Game.effortKey ? Game.effortKey() : 'mid';
+    const EF = () => EFS[efKey] || EFS.mid;
     // Anlar
     const moments = [];
     let hadPen = false;
@@ -96,7 +100,7 @@ const Match = {
       ownScorers: [], oppScorers: [], teamBoost: 0, energySave: 0, gt: {},
       energy: p.energy, e0: p.energy, tiredWarn: false,
     };
-    const drain = (v) => { M.energy = Math.max(0, M.energy - v); cond = calcCond(); };
+    const drain = (v) => { M.energy = Math.max(0, M.energy - v * EF().drain); cond = calcCond(); };
     const isHome = ctx.side === 'home';
     const addOwn = () => (isHome ? M.hs++ : M.as++);
     const addOpp = () => (isHome ? M.as++ : M.hs++);
@@ -140,6 +144,7 @@ const Match = {
                 <div class="me-en-h"><span>${Icon('bolt')} Enerji</span><b id="mt-en">${Math.round(p.energy)}</b></div>
                 <div class="me-en-bar"><i id="mt-enb" style="width:${p.energy}%"></i></div>
               </div>
+              ${ctx.role !== 'out' && EFS.low ? `<div class="me-ef"><div class="me-ef-h"><span>Efor</span><small>Maç sonu tahmini enerji</small></div><div class="ef-seg" id="mt-eff">${['low', 'mid', 'high'].map((k) => `<button data-e="${k}" class="${k === efKey ? 'on' : ''}"><b>${EFS[k].l}</b><small data-ee="${k}">≈ ${Math.round(p.energy)}</small></button>`).join('')}</div></div>` : ''}
             </div>
             <div class="mt-ctrl">
               <div class="seg" id="mt-speed">
@@ -170,6 +175,20 @@ const Match = {
       const f = $('mt-feed');
       f.prepend(d);
     };
+    // seviyeye göre maç sonu tahmini enerji: kalan dakikalar × dakika başı tüketim + kritik anların ortalama payı
+    const effortEnd = (k) => {
+      const from = Math.max(M.min, enterMin || 91), left = leaveMin !== null ? Math.max(0, leaveMin - from) : Math.max(0, 90 - from);
+      const per = (40 / 90) * (1.3 - stamina / 150) + 0.06;
+      return Math.max(0, Math.round(M.energy - left * per * EFS[k].drain));
+    };
+    const efUi = () => { if (!$('mt-eff')) return; ['low', 'mid', 'high'].forEach((k) => { const e = document.querySelector(`[data-ee="${k}"]`); if (e) e.textContent = `≈ ${effortEnd(k)}`; }); };
+    const setEffort = (k) => {
+      if (k === efKey || !EFS[k]) return;
+      efKey = k; state.effort = k;
+      U.$$('#mt-eff [data-e]').forEach((b) => b.classList.toggle('on', b.dataset.e === k));
+      feed(k === 'high' ? '🔥 Bugün çok efor veriyorsun: daha çok topla buluşacaksın ama çabuk yorulacaksın.' : k === 'low' ? '🧊 Bugün az efor veriyorsun: enerjini sonraki maça saklıyorsun.' : `⚖️ ${EFS.mid.d}`, 'info');
+      efUi();
+    };
     const refresh = () => {
       $('mt-hs').textContent = M.hs; $('mt-as').textContent = M.as;
       $('mt-min').textContent = Math.min(90, M.min) + "'";
@@ -182,12 +201,14 @@ const Match = {
       $('mt-en').textContent = en;
       $('mt-enb').style.width = en + '%';
       $('mt-enb').className = en < 30 ? 'lo' : en < 55 ? 'mid' : '';
+      efUi();
       $('mt-status').textContent = M.red ? 'Kırmızı kart' : leaveMin !== null && M.min >= leaveMin ? 'Oyundan çıktı' : onPitch() ? 'Sahada' : enterMin ? 'Yedek kulübesinde' : ctx.role === 'out' ? 'Kadro dışı' : 'Yedek kulübesinde';
     };
     U.$$('#mt-speed button').forEach((b) => (b.onclick = () => {
       M.speed = +b.dataset.s;
       U.$$('#mt-speed button').forEach((x) => x.classList.toggle('on', x === b));
     }));
+    U.$$('#mt-eff [data-e]').forEach((b) => (b.onclick = () => setEffort(b.dataset.e)));
     $('mt-sim').onclick = () => { M.instant = true; if (MiniGame._abort) MiniGame._abort(); if (M.htSkip) M.htSkip(); };
 
     if (ctx.role === 'starter') feed(`📋 İlk 11'desin! Formanın sırtında ${p.shirt} numara.`, 'info');
@@ -605,8 +626,12 @@ const Match = {
         const gf = isHome ? M.hs : M.as, ga = isHome ? M.as : M.hs;
         if ((gf === ga || ga - gf === 1) && !moments.some((x) => x.min > 85)) moments.push({ min: U.randi(87, 90), type: U.chance(0.25) ? 'freekick' : 'open', drama: true });
       }
+      // efor: çok eforda ara ara ek pozisyon gelir, az eforda bazı pozisyonlar hiç oluşmaz (90 dakikada ortalama ±2)
+      if (onPitch() && M.min < 88 && efKey === 'high' && !moments.some((x) => x.min === M.min + 1) && U.chance(2 / 80)) addMoments(1, M.min + 1, M.min + 1);
       for (const mo of moments.filter((x) => x.min === M.min)) {
         if (!onPitch()) break;
+        if (efKey === 'low' && !mo.drama && U.chance(0.4)) continue;
+        M.momPlayed = (M.momPlayed || 0) + 1;
         await resolveMoment(mo);
         M.drama = false;
         if (M.liveGoal) { M.liveGoal = false; await celebrate(); }
@@ -642,7 +667,7 @@ const Match = {
       feed(`🏁 Maç sona erdi: ${U.esc(ctx.home.name)} ${M.hs} - ${M.as} ${U.esc(ctx.away.name)}`, 'info');
       refresh();
       const summary = {
-        gf, ga, res, hs: M.hs, as: M.as, played, energySave: 0, energyStart: M.e0, energyEnd: M.energy, minutes: Math.max(0, minutes), rating: played ? rating : null,
+        gf, ga, res, hs: M.hs, as: M.as, played, energySave: 0, energyStart: M.e0, energyEnd: M.energy, moments: M.momPlayed || 0, effort: EF().l, minutes: Math.max(0, minutes), rating: played ? rating : null,
         goals: M.goals, assists: M.assists, yellow: M.yellow, red: M.red, motm, lateGoal: !!M.lateGoal, dribbles: M.dribbles || 0,
         ownScorers: M.ownScorers, oppScorers: M.oppScorers, statsUsed: [...M.statsUsed], goalTypes: M.gt, shots: M.shots, keyPasses: M.keyPasses, tackles: M.tackles,
       };

@@ -1,0 +1,9 @@
+3517|Vuelta
+3518|Ida
+3533|Ida {}-{}
+3530|Vuelta · Global {}-{}
+3520|{} {}, ida: {}-{}. La vuelta, en la próxima semana de copa.
+3522|{} {}: {}-{} en el global, ¡pasamos en los penaltis!
+3524|{} {}: {}-{} en el global, caímos en los penaltis.
+3528|{} {}: ¡pasamos con un {}-{} global!
+3526|{} {}: eliminados con un {}-{} global.

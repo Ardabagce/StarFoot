@@ -1,0 +1,36 @@
+1391|Sprint
+1470|Dribbeln
+1543|Wenig
+1850|Schießen
+3472|Wie läuft ein Spiel ab?
+3473|Spiele laufen Minute für Minute als Simulation. In den entscheidenden Momenten hält das Spiel an und der Ball kommt zu dir: diesen Moment spielst du selbst. Wähle vor dem Spiel deinen Einsatz: wenig Einsatz spart Energie, viel Einsatz bringt mehr Chancen, macht dich aber müde.
+3477|Zieh den Finger zurück und lass los: je weiter du ziehst, desto härter der Schuss, und der Ball fliegt in die Gegenrichtung. Wähle unten Flach, Halbhoch oder Lupfer.
+3480|Passen und Angriff
+3481|Doppelpass
+3482|Kopfbälle
+3483|Freistöße
+3484|Elfmeter
+3485|Ball erobern
+3486|Spielanleitung
+3487|Möchtest du vor deinem ersten Spiel ein kurzes Tutorial?
+3488|Lerne in 1-2 Minuten, wie Schüsse, Pässe, Dribblings, Doppelpässe, Kopfbälle und die anderen Schlüsselmomente funktionieren, und probiere jeden aus, wenn du möchtest. Du kannst es jederzeit im Hauptmenü wieder öffnen.
+3491|Ich lerne es selbst
+3492|Tutorial starten
+3493|Alles überspringen
+3494|Ausprobieren
+3495|Nochmal versuchen
+3496|Weiter
+3497|Losspielen
+3498|TRAINING
+3499|Super! Mach es im Spiel genauso.
+3502|Kein Problem! Im Spiel bekommst du eine neue Chance.
+3505|Dein Einsatz im Spiel
+3506|Viel
+3507|Du sparst Energie für das nächste Spiel, bekommst aber weniger Chancen.
+3508|Normaler Energieverbrauch und normale Anzahl an Chancen.
+3509|Du bekommst mehr Chancen, wirst aber schnell müde und gehst mit weniger Energie ins nächste Spiel.
+3510|🔥 Heute gibst du vollen Einsatz: du bist öfter am Ball, wirst aber schnell müde.
+3511|Heute gibst du vollen Einsatz: du bist öfter am Ball, wirst aber schnell müde.
+3512|🧊 Heute gibst du wenig Einsatz: du sparst Energie für das nächste Spiel.
+3513|Heute gibst du wenig Einsatz: du sparst Energie für das nächste Spiel.
+3514|≈ −{} Energie

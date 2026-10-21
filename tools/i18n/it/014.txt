@@ -1,0 +1,9 @@
+3517|Ritorno
+3518|Andata
+3533|Andata {}-{}
+3530|Ritorno · Totale {}-{}
+3520|{} {}, andata: {}-{}. Il ritorno nella prossima settimana di coppa.
+3522|{} {}: {}-{} nel totale, passiamo ai rigori!
+3524|{} {}: {}-{} nel totale, eliminati ai rigori.
+3528|{} {}: passiamo con il {}-{} complessivo!
+3526|{} {}: eliminati con il {}-{} complessivo.

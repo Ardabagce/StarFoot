@@ -1,0 +1,9 @@
+3517|Rückspiel
+3518|Hinspiel
+3533|Hinspiel {}-{}
+3530|Rückspiel · Gesamt {}-{}
+3520|{} {}, Hinspiel: {}-{}. Das Rückspiel folgt in der nächsten Pokalwoche.
+3522|{} {}: {}-{} insgesamt, wir sind im Elfmeterschießen weiter!
+3524|{} {}: {}-{} insgesamt, im Elfmeterschießen ausgeschieden.
+3528|{} {}: mit {}-{} insgesamt weiter!
+3526|{} {}: mit {}-{} insgesamt ausgeschieden.

@@ -83,7 +83,7 @@ Her yeni sürümde `app/android/app/build.gradle` içindeki `versionCode`'u 1 ar
      - **Cihaz veya diğer kimlikler** (reklam kimliği): toplanıyor ve paylaşılıyor, amaç: Reklam, Analiz, Dolandırıcılık önleme.
      - Hepsi için "isteğe bağlı mı?" → **Hayır** (reklam SDK'sı otomatik toplar).
      - Ayrıntı: <https://developers.google.com/admob/android/privacy/play-data-disclosure>
-4. **Mağaza ayarları:** Web sitesi olarak `https://starfoot.bagce.dev` gir (app-ads.txt bu adreste aranır), iletişim e-postası `ardabagce@gmail.com`.
+4. **Mağaza ayarları:** Web sitesi olarak `https://starfoot.bagce.dev` gir (app-ads.txt bu adreste aranır), iletişim e-postası `arda@bagce.dev`.
 
 ### 6. Test ve yayın
 1. **Test › Kapalı test** → yeni sürüm → AAB'yi yükle, **Play Uygulama İmzalama**'yı kabul et.

@@ -1,0 +1,9 @@
+3517|Leg kedua
+3518|Leg pertama
+3533|Leg pertama {}-{}
+3530|Leg kedua · Agregat {}-{}
+3520|{} {} leg pertama: {}-{}. Leg kedua di pekan piala berikutnya.
+3522|{} {}: agregat {}-{}, kami lolos lewat adu penalti!
+3524|{} {}: agregat {}-{}, kami tersingkir lewat adu penalti.
+3528|{} {}: lolos dengan agregat {}-{}!
+3526|{} {}: tersingkir dengan agregat {}-{}.

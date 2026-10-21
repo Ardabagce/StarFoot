@@ -1,0 +1,36 @@
+1391|Lari cepat
+1470|Menggiring bola
+1543|Rendah
+1850|Menembak
+3472|Bagaimana pertandingan berjalan?
+3473|Pertandingan berjalan menit demi menit sebagai simulasi. Di momen penting permainan berhenti dan bola datang padamu: momen itu kamu sendiri yang memainkan. Sebelum pertandingan pilih usahamu: usaha rendah menghemat energi, usaha tinggi memberi lebih banyak peluang tapi membuatmu lelah.
+3477|Tarik jarimu ke belakang lalu lepaskan: semakin jauh kamu tarik, semakin keras tendanganmu, dan bola melaju ke arah berlawanan. Pilih Rendah, Setengah, atau Cungkil di bawah.
+3480|Umpan dan menyerang
+3481|Umpan satu-dua
+3482|Sundulan
+3483|Tendangan bebas
+3484|Penalti
+3485|Merebut bola
+3486|Cara Bermain
+3487|Mau tutorial singkat sebelum pertandingan pertamamu?
+3488|Pelajari dalam 1-2 menit cara kerja tembakan, umpan, giringan, umpan satu-dua, sundulan, dan momen penting lainnya, lalu coba masing-masing jika mau. Kamu bisa membukanya lagi dari menu utama kapan saja.
+3491|Aku belajar sendiri
+3492|Mulai tutorial
+3493|Lewati semua
+3494|Coba
+3495|Coba lagi
+3496|Berikutnya
+3497|Mulai bermain
+3498|LATIHAN
+3499|Hebat! Lakukan hal yang sama di pertandingan.
+3502|Tidak apa-apa! Kamu akan dapat kesempatan lagi di pertandingan.
+3505|Usahamu di pertandingan
+3506|Tinggi
+3507|Kamu menghemat energi untuk pertandingan berikutnya, tapi peluang yang datang lebih sedikit.
+3508|Penggunaan energi standar dan jumlah peluang normal.
+3509|Lebih banyak peluang datang, tapi kamu cepat lelah dan memulai pertandingan berikutnya dengan energi lebih sedikit.
+3510|🔥 Hari ini kamu bermain habis-habisan: lebih sering pegang bola tapi cepat lelah.
+3511|Hari ini kamu bermain habis-habisan: lebih sering pegang bola tapi cepat lelah.
+3512|🧊 Hari ini kamu menghemat tenaga: menyimpan energi untuk pertandingan berikutnya.
+3513|Hari ini kamu menghemat tenaga: menyimpan energi untuk pertandingan berikutnya.
+3514|≈ −{} energi

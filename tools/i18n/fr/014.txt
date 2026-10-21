@@ -1,0 +1,9 @@
+3517|Retour
+3518|Aller
+3533|Aller {}-{}
+3530|Retour · Cumul {}-{}
+3520|{} {}, match aller : {}-{}. Le retour aura lieu lors de la prochaine semaine de coupe.
+3522|{} {} : {}-{} au cumul, qualifiés aux tirs au but !
+3524|{} {} : {}-{} au cumul, éliminés aux tirs au but.
+3528|{} {} : qualifiés {}-{} au cumul !
+3526|{} {} : éliminés {}-{} au cumul.

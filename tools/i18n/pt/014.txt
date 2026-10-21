@@ -1,0 +1,9 @@
+3517|Volta
+3518|Ida
+3533|Ida {}-{}
+3530|Volta · Agregado {}-{}
+3520|{} {}, jogo de ida: {}-{}. A volta é na próxima semana de copa.
+3522|{} {}: {}-{} no agregado, passamos nos pênaltis!
+3524|{} {}: {}-{} no agregado, caímos nos pênaltis.
+3528|{} {}: passamos com {}-{} no agregado!
+3526|{} {}: eliminados por {}-{} no agregado.

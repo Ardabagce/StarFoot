@@ -1,0 +1,36 @@
+1391|Scatto
+1470|Dribblare
+1543|Poco
+1850|Tirare
+3472|Come funziona una partita?
+3473|Le partite scorrono minuto per minuto come una simulazione. Nei momenti chiave il gioco si ferma e la palla arriva a te: quel momento lo giochi tu. Prima della partita scegli il tuo impegno: poco impegno risparmia energia, molto impegno porta più occasioni ma ti stanca.
+3477|Trascina il dito all'indietro e rilascia: più tiri, più forte calci, e la palla va nella direzione opposta. Scegli Basso, Mezza altezza o Pallonetto in basso.
+3480|Passaggio e attacco
+3481|Uno-due
+3482|Colpi di testa
+3483|Punizioni
+3484|Rigori
+3485|Recuperare palla
+3486|Come si gioca
+3487|Vuoi un breve tutorial prima della tua prima partita?
+3488|Impara in 1-2 minuti come funzionano tiri, passaggi, dribbling, uno-due, colpi di testa e gli altri momenti chiave, e prova ciascuno se vuoi. Puoi riaprirlo dal menu principale quando vuoi.
+3491|Imparo da solo
+3492|Inizia il tutorial
+3493|Salta tutto
+3494|Prova
+3495|Riprova
+3496|Avanti
+3497|Inizia a giocare
+3498|ALLENAMENTO
+3499|Ottimo! Fai lo stesso in partita.
+3502|Nessun problema! Avrai un'altra occasione in partita.
+3505|Il tuo impegno in partita
+3506|Molto
+3507|Risparmi energia per la prossima partita, ma avrai meno occasioni.
+3508|Consumo di energia standard e numero normale di occasioni.
+3509|Avrai più occasioni, ma ti stanchi presto e arrivi alla prossima partita con meno energia.
+3510|🔥 Oggi dai il massimo: toccherai più palloni ma ti stancherai presto.
+3511|Oggi dai il massimo: toccherai più palloni ma ti stancherai presto.
+3512|🧊 Oggi risparmi le forze: conservi energia per la prossima partita.
+3513|Oggi risparmi le forze: conservi energia per la prossima partita.
+3514|≈ −{} energia

@@ -1,0 +1,36 @@
+1391|Sprint
+1470|Dribbler
+1543|Faible
+1850|Tirer
+3472|Comment se déroule un match ?
+3473|Les matchs se déroulent minute par minute en simulation. Dans les moments clés, le jeu s'arrête et le ballon arrive vers toi : c'est toi qui joues ce moment. Avant le match, choisis ton effort : peu d'effort économise de l'énergie, beaucoup d'effort apporte plus d'occasions mais te fatigue.
+3477|Tire ton doigt vers l'arrière et relâche : plus tu tires, plus la frappe est forte, et le ballon part dans le sens opposé. Choisis Ras de terre, Mi-hauteur ou Lob en bas.
+3480|Passe et attaque
+3481|Une-deux
+3482|Têtes
+3483|Coups francs
+3484|Penalties
+3485|Récupérer le ballon
+3486|Comment jouer
+3487|Tu veux un petit tutoriel avant ton premier match ?
+3488|Apprends en 1-2 minutes comment fonctionnent les tirs, passes, dribbles, une-deux, têtes et les autres moments clés, et essaie chacun si tu veux. Tu peux le rouvrir depuis le menu principal à tout moment.
+3491|J'apprendrai seul
+3492|Commencer le tutoriel
+3493|Tout passer
+3494|Essayer
+3495|Réessayer
+3496|Suivant
+3497|Commencer à jouer
+3498|ENTRAÎNEMENT
+3499|Super ! Fais pareil en match.
+3502|Pas grave ! Tu auras une autre chance en match.
+3505|Ton effort pendant le match
+3506|Élevé
+3507|Tu gardes de l'énergie pour le prochain match, mais tu auras moins d'occasions.
+3508|Dépense d'énergie standard et nombre d'occasions normal.
+3509|Tu auras plus d'occasions, mais tu te fatigues vite et tu abordes le prochain match avec moins d'énergie.
+3510|🔥 Aujourd'hui tu donnes tout : tu toucheras plus le ballon mais tu te fatigueras vite.
+3511|Aujourd'hui tu donnes tout : tu toucheras plus le ballon mais tu te fatigueras vite.
+3512|🧊 Aujourd'hui tu gères ton effort : tu gardes de l'énergie pour le prochain match.
+3513|Aujourd'hui tu gères ton effort : tu gardes de l'énergie pour le prochain match.
+3514|≈ −{} énergie

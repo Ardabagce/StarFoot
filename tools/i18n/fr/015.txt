@@ -1,0 +1,3 @@
+3534|Les matchs se déroulent minute par minute en simulation. Dans les moments clés, le jeu s'arrête et le ballon arrive vers toi : c'est toi qui joues ce moment. Pendant le match, choisis ton effort et change-le quand tu veux : peu d'effort économise de l'énergie, beaucoup d'effort apporte plus d'occasions mais te fatigue.
+3536|Effort
+3537|Énergie estimée en fin de match

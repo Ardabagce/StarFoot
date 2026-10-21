@@ -1,0 +1,3 @@
+3534|Spiele laufen Minute für Minute als Simulation. In den entscheidenden Momenten hält das Spiel an und der Ball kommt zu dir: diesen Moment spielst du selbst. Wähle während des Spiels deinen Einsatz und ändere ihn jederzeit: wenig Einsatz spart Energie, viel Einsatz bringt mehr Chancen, macht dich aber müde.
+3536|Einsatz
+3537|Geschätzte Energie am Ende

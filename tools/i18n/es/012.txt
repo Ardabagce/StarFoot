@@ -1,0 +1,36 @@
+1391|Carrera
+1470|Regatear
+1543|Poco
+1850|Disparar
+3472|¿Cómo funciona un partido?
+3473|Los partidos avanzan minuto a minuto como una simulación. En los momentos clave el juego se detiene y el balón llega a ti: ese momento lo juegas tú. Antes del partido elige tu esfuerzo: poco esfuerzo ahorra energía, mucho esfuerzo trae más ocasiones pero te cansa.
+3477|Arrastra el dedo hacia atrás y suelta: cuanto más tires, más fuerte golpeas, y el balón sale en la dirección contraria. Elige Raso, Media o Vaselina abajo.
+3480|Pase y ataque
+3481|Pared
+3482|Cabezazos
+3483|Tiros libres
+3484|Penaltis
+3485|Recuperar el balón
+3486|Cómo jugar
+3487|¿Quieres un tutorial corto antes de tu primer partido?
+3488|Aprende en 1-2 minutos cómo funcionan los disparos, pases, regates, paredes, cabezazos y los demás momentos clave, y prueba cada uno si quieres. Puedes volver a abrirlo desde el menú principal cuando quieras.
+3491|Aprenderé solo
+3492|Empezar tutorial
+3493|Saltar todo
+3494|Probar
+3495|Reintentar
+3496|Siguiente
+3497|Empezar a jugar
+3498|PRÁCTICA
+3499|¡Genial! Hazlo igual en los partidos.
+3502|¡No pasa nada! Tendrás otra oportunidad en un partido.
+3505|Tu esfuerzo en el partido
+3506|Mucho
+3507|Guardas energía para el próximo partido, pero tendrás menos ocasiones.
+3508|Gasto de energía normal y número normal de ocasiones.
+3509|Tendrás más ocasiones, pero te cansas rápido y llegas al próximo partido con menos energía.
+3510|🔥 Hoy das mucho esfuerzo: tocarás más el balón, pero te cansarás rápido.
+3511|Hoy das mucho esfuerzo: tocarás más el balón, pero te cansarás rápido.
+3512|🧊 Hoy das poco esfuerzo: guardas energía para el próximo partido.
+3513|Hoy das poco esfuerzo: guardas energía para el próximo partido.
+3514|≈ −{} energía

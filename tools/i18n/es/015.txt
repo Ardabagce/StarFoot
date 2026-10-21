@@ -1,0 +1,3 @@
+3534|Los partidos avanzan minuto a minuto como una simulación. En los momentos clave el juego se detiene y el balón llega a ti: ese momento lo juegas tú. Durante el partido elige tu esfuerzo y cámbialo cuando quieras: poco esfuerzo ahorra energía, mucho esfuerzo trae más ocasiones pero te cansa.
+3536|Esfuerzo
+3537|Energía estimada al final

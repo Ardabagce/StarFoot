@@ -1,0 +1,36 @@
+1391|Arrancada
+1470|Driblar
+1543|Pouco
+1850|Chutar
+3472|Como funciona uma partida?
+3473|As partidas avançam minuto a minuto como uma simulação. Nos momentos decisivos o jogo para e a bola chega até você: esse lance é você quem joga. Antes da partida escolha seu esforço: pouco esforço poupa energia, muito esforço traz mais chances, mas cansa.
+3477|Puxe o dedo para trás e solte: quanto mais puxar, mais forte o chute, e a bola vai no sentido oposto ao que você puxou. Escolha Rasteiro, Meia ou Cavadinha embaixo.
+3480|Passe e ataque
+3481|Tabela
+3482|Cabeceios
+3483|Faltas
+3484|Pênaltis
+3485|Roubar a bola
+3486|Como jogar
+3487|Quer um tutorial rápido antes da sua primeira partida?
+3488|Aprenda em 1-2 minutos como funcionam chutes, passes, dribles, tabelas, cabeceios e os outros lances decisivos, e experimente cada um se quiser. Você pode abrir de novo pelo menu principal quando quiser.
+3491|Vou aprender sozinho
+3492|Começar tutorial
+3493|Pular tudo
+3494|Testar
+3495|Tentar de novo
+3496|Próximo
+3497|Começar a jogar
+3498|TREINO
+3499|Ótimo! Faça igual nas partidas.
+3502|Tudo bem! Você terá outra chance em uma partida.
+3505|Seu esforço na partida
+3506|Muito
+3507|Você poupa energia para a próxima partida, mas terá menos chances.
+3508|Gasto de energia normal e número normal de chances.
+3509|Você terá mais chances, mas cansa rápido e começa a próxima partida com menos energia.
+3510|🔥 Hoje você dá muito esforço: vai pegar mais na bola, mas vai cansar rápido.
+3511|Hoje você dá muito esforço: vai pegar mais na bola, mas vai cansar rápido.
+3512|🧊 Hoje você dá pouco esforço: poupando energia para a próxima partida.
+3513|Hoje você dá pouco esforço: poupando energia para a próxima partida.
+3514|≈ −{} energia

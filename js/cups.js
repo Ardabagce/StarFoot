@@ -135,7 +135,11 @@ const Cups = {
     t.forEach((id) => (table[id] = { p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, pts: 0 }));
     return {
       id: d.id, name: d.name, region: d.region, fmt: 'swiss', phase: 'league', teams: t, table, fx, md: 0, mds, direct: [], out: [],
-      fr: mds === 8 ? [0.05, 0.11, 0.18, 0.24, 0.29, 0.35, 0.4, 0.46, 0.58, 0.66, 0.79, 0.87, 0.97] : [0.05, 0.11, 0.18, 0.24, 0.29, 0.35, 0.58, 0.79, 0.97],
+      // eleme turları (final hariç) iki maçlı: play-off, son 16, çeyrek ve yarı final
+      legs2: true, leg: 1,
+      fr: mds === 8
+        ? [0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.47, 0.51, 0.57, 0.61, 0.69, 0.73, 0.83, 0.87, 0.97]
+        : [0.05, 0.11, 0.18, 0.24, 0.29, 0.35, 0.55, 0.6, 0.76, 0.81, 0.97],
       alive: [], stage: 0, log: [], winner: null,
     };
   },
@@ -154,7 +158,13 @@ const Cups = {
     const i = cup.alive.indexOf(me);
     if (i < 0) return null;
     const j = i % 2 === 0 ? i + 1 : i - 1;
-    return { h: cup.alive[Math.min(i, j)], a: cup.alive[Math.max(i, j)], opp: cup.alive[j], stage: cup.phase === 'po' ? 'Play-off' : STAGE_NAMES[cup.alive.length] };
+    const base = cup.phase === 'po' ? 'Play-off' : STAGE_NAMES[cup.alive.length];
+    if (Cups.twoLeg(cup)) {
+      const B = cup.alive[Math.min(i, j)], W = cup.alive[Math.max(i, j)], leg = cup.leg || 1;
+      const first = leg === 2 && cup.first ? cup.first[Math.min(i, j)] : null;
+      return { h: leg === 1 ? W : B, a: leg === 1 ? B : W, opp: cup.alive[j], base, leg, first, stage: `${base} · ${Cups.legLabel(cup)}` };
+    }
+    return { h: cup.alive[Math.min(i, j)], a: cup.alive[Math.max(i, j)], opp: cup.alive[j], base, stage: base };
   },
 
   inCup(s, cup) {
@@ -225,7 +235,15 @@ const Cups = {
     return Cups.playStage(s, cup, mine);
   },
 
-  weeks(n, cup) { return ((cup && cup.fr) || [0.2, 0.42, 0.63, 0.84]).map((f) => Math.round(n * f)); },
+  weeks(n, cup) {
+    const wk = ((cup && cup.fr) || [0.2, 0.42, 0.63, 0.84]).map((f) => Math.round(n * f));
+    // kısa liglerde iki tur aynı haftaya düşmesin (rövanş en az bir hafta sonra)
+    for (let i = 1; i < wk.length; i++) if (wk[i] <= wk[i - 1]) wk[i] = wk[i - 1] + 1;
+    return wk;
+  },
+  // Bu tur iki maçlı mı (çift maçlı kupada final hariç eleme turları)
+  twoLeg(cup) { return !!cup.legs2 && !(cup.fmt === 'swiss' && cup.phase === 'league') && cup.alive.length > 2; },
+  legLabel(cup) { return (cup.leg || 1) === 2 ? 'Rövanş' : 'İlk maç'; },
 
   myCountry(s) { const c = s.world.clubs[s.clubId]; return c ? countryOf(c.league) : null; },
 
@@ -243,7 +261,48 @@ const Cups = {
   },
 
   // Bir turu oynatır; oyuncunun maçı varsa sonucu verilir
+  // İki maçlı eleme turunun bir ayağı. Rövanşta toplam skor (eşitlikte penaltılar) turu belirler.
+  playLeg(s, cup, mine) {
+    const w = s.world, leg = cup.leg || 1, next = [], lines = [];
+    const base = cup.phase === 'po' ? 'Play-off' : STAGE_NAMES[cup.alive.length];
+    const rt = (id) => (cup.youth ? cup.str[id] : w.clubs[id].rating);
+    if (leg === 1) cup.first = {};
+    for (let i = 0; i < cup.alive.length; i += 2) {
+      const B = cup.alive[i], W = cup.alive[i + 1]; // B: üst sıradaki, rövanşı evinde oynar
+      const h = leg === 1 ? W : B, a = leg === 1 ? B : W;
+      const isMine = !!(mine && mine.h === h && mine.a === a);
+      const [hs, as] = isMine ? [mine.r.a, mine.r.b] : World.simScore(rt(h) + 2, rt(a));
+      Cups.goals(s, cup, h, a, hs, as, isMine ? mine : null);
+      const e = { stage: cup.phase === 'po' ? 'po' : cup.alive.length, leg, h, a, hs, as, w: null };
+      if (leg === 1) cup.first[i] = { hs, as };
+      else {
+        const f = (cup.first && cup.first[i]) || { hs: 0, as: 0 };
+        const gB = hs + f.as, gW = as + f.hs;
+        let win = gB > gW ? B : gW > gB ? W : null;
+        if (!win) { e.pens = true; win = U.chance(U.sigmoid((rt(B) - rt(W)) / 12 + 0.1)) ? B : W; }
+        e.w = win; e.agg = [gB, gW];
+        next.push(win);
+        lines.push(`${w.clubs[B].name} ${gB}-${gW} ${w.clubs[W].name}${e.pens ? ' (pen.)' : ''}`);
+      }
+      cup.log.push(e);
+    }
+    cup.stage++;
+    if (leg === 1) { cup.leg = 2; return { stageName: base, leg }; }
+    cup.leg = 1; cup.first = null;
+    if (cup.phase === 'po') {
+      const al = [];
+      for (let k = 0; k < 8; k++) al.push(cup.direct[k], next[7 - k] || next[k]);
+      cup.alive = al;
+      cup.phase = 'ko';
+    } else cup.alive = next;
+    const myLg = w.clubs[s.clubId] ? w.clubs[s.clubId].league : 'TR1';
+    const near = cup.youth || !cup.region || cup.region === regionOf(myLg);
+    if (!mine && near) Game.news(`${cup.name} ${base}: ${lines.slice(0, 3).join(' · ')}${lines.length > 3 ? ' ...' : ''}`, 'world');
+    return { stageName: base, leg };
+  },
+
   playStage(s, cup, mine) {
+    if (Cups.twoLeg(cup)) return Cups.playLeg(s, cup, mine);
     const w = s.world;
     const next = [];
     const lines = [];
@@ -317,26 +376,37 @@ const Cups = {
     const { h, a } = op;
     const stageName = op.stage;
     const leaguePhase = cup.fmt === 'swiss' && cup.phase === 'league';
+    const two = Cups.twoLeg(cup), leg = cup.leg || 1;
     const mk = (id) => { const c = s.world.clubs[id]; return cup.youth ? { id, name: `${c.name} U19`, short: c.short, rating: cup.str[id], c1: c.c1, c2: c.c2, roster: cup.ros[id] } : { id, name: c.name, short: c.short, rating: c.rating, c1: c.c1, c2: c.c2, roster: c.roster }; };
     const ctx = {
       home: mk(h), away: mk(a), side: h === s.clubId ? 'home' : 'away',
-      compName: `${cup.name} · ${stageName}`, levelBase: Game.levelBase(false) + (cup.youth ? 0.05 : cup.dom ? 0.01 : 0.04),
+      compName: `${cup.name} · ${stageName}${op.first ? ` · İlk maç ${op.first.hs}-${op.first.as}` : ''}`, levelBase: Game.levelBase(false) + (cup.youth ? 0.05 : cup.dom ? 0.01 : 0.04),
       captain: Captain.is(), theme: cup.youth ? 'ygl' : cup.dom ? 'dom' : cup.id, lg: cup.youth ? 'ucl' : cup.dom ? s.world.clubs[s.clubId].league : cup.id, sbTag: cup.youth ? 'GELİŞİM LİGİ' : cup.dom ? cup.name.toLocaleUpperCase('tr') : null,
     };
     const p = s.player;
     ctx.role = p.injuryWeeks > 0 || Life.banned() ? 'out' : cup.youth ? Game.roleFor(Player.overall(p, true), cup.str[s.clubId], true) : Game.roleFor(Player.overall(p, true), s.world.clubs[s.clubId].rating, false);
     ctx.subChance = 0.6;
-    if (typeof Big !== 'undefined' && !cup.youth) await Big.prepare(ctx, leaguePhase ? null : stageName);
+    if (typeof Big !== 'undefined' && !cup.youth) await Big.prepare(ctx, leaguePhase ? null : (op.base || stageName));
     const sum = await Match.run(ctx, s);
     let win = sum.hs > sum.as ? 0 : sum.as > sum.hs ? 1 : null, pens = null;
-    if (win === null && !leaguePhase) {
+    if (win === null && !leaguePhase && !two) {
       pens = true;
       win = U.chance(0.5 + (ctx.side === 'home' ? 1 : -1) * (ctx.home.rating - ctx.away.rating) / 80) ? 0 : 1;
     }
     Game.applyMatch(sum, ctx, 'cup');
-    const weWon = (win === 0) === (ctx.side === 'home');
+    let weWon = (win === 0) === (ctx.side === 'home');
     Cups.advance(s, cup, { h, a, sum, r: { a: sum.hs, b: sum.as, win, pens } });
-    if (leaguePhase) {
+    if (two) {
+      const gf = ctx.side === 'home' ? sum.hs : sum.as, ga = ctx.side === 'home' ? sum.as : sum.hs;
+      const e = cup.log.slice().reverse().find((m) => m.h === h && m.a === a && m.leg === leg) || {};
+      if (leg === 1) Game.news(`${cup.name} ${op.base} ilk maçı: ${gf}-${ga}. Rövanş bir sonraki kupa haftasında.`, gf > ga ? 'good' : gf < ga ? 'bad' : '');
+      else {
+        weWon = e.w === s.clubId;
+        const ag = e.h === s.clubId ? e.agg : [e.agg[1], e.agg[0]];
+        if (e.pens) Game.news(`${cup.name} ${op.base}: toplam skor ${ag[0]}-${ag[1]}, ${weWon ? 'penaltılarla tur atladık!' : 'penaltılarla elendik.'}`, weWon ? 'good' : 'bad');
+        else Game.news(`${cup.name} ${op.base}: toplamda ${ag[0]}-${ag[1]} ile ${weWon ? 'tur atladık!' : 'kupaya veda ettik.'}`, weWon ? 'good' : 'bad');
+      }
+    } else if (leaguePhase) {
       const gf = ctx.side === 'home' ? sum.hs : sum.as, ga = ctx.side === 'home' ? sum.as : sum.hs;
       const rank = Cups.swissTable(cup).findIndex((r) => r.id === s.clubId) + 1;
       Game.news(`${cup.name} ${stageName}: ${gf}-${ga} ${gf > ga ? 'galibiyet' : gf < ga ? 'mağlubiyet' : 'beraberlik'}. Lig aşamasında ${rank}. sıradayız.`, gf > ga ? 'good' : gf < ga ? 'bad' : '');
@@ -483,8 +553,8 @@ const Cups = {
     UI.cupSel = sel.id;
     const nm = (id) => (w.clubs[id] ? w.clubs[id].name : id) + (sel.youth ? ' U19' : '');
     const shirt = (id) => UI.shirt(w.clubs[id] || Game.club());
-    const res = (m) => `<div class="cm2 ${m.h === s.clubId || m.a === s.clubId ? 'me' : ''}"><span class="t h ${m.w === m.h ? 'w' : ''}"><em>${U.esc(nm(m.h))}</em>${shirt(m.h)}</span><b>${m.hs}-${m.as}${m.pens ? '<small>p</small>' : ''}</b><span class="t a ${m.w === m.a ? 'w' : ''}">${shirt(m.a)}<em>${U.esc(nm(m.a))}</em></span></div>`;
-    const status = sel.winner ? `Şampiyon: <b>${U.esc(nm(sel.winner))}</b>` : sel.fmt === 'swiss' && sel.phase === 'league' ? `Lig aşaması · ${sel.md}/${sel.mds || 8} maç oynandı` : `${sel.phase === 'po' ? 'Play-off' : STAGE_NAMES[sel.alive.length] || ''} · ${sel.alive.length} takım`;
+    const res = (m) => `<div class="cm2 ${m.h === s.clubId || m.a === s.clubId ? 'me' : ''}"><span class="t h ${m.w === m.h ? 'w' : ''}"><em>${U.esc(nm(m.h))}</em>${shirt(m.h)}</span><b>${m.hs}-${m.as}${m.pens ? '<small>p</small>' : ''}${m.leg ? `<small class="leg">${m.leg === 2 ? `Rövanş · Toplam ${m.agg[0]}-${m.agg[1]}` : 'İlk maç'}</small>` : ''}</b><span class="t a ${m.w === m.a ? 'w' : ''}">${shirt(m.a)}<em>${U.esc(nm(m.a))}</em></span></div>`;
+    const status = sel.winner ? `Şampiyon: <b>${U.esc(nm(sel.winner))}</b>` : sel.fmt === 'swiss' && sel.phase === 'league' ? `Lig aşaması · ${sel.md}/${sel.mds || 8} maç oynandı` : `${sel.phase === 'po' ? 'Play-off' : STAGE_NAMES[sel.alive.length] || ''} · ${sel.alive.length} takım${Cups.twoLeg(sel) ? ` <em class="leg-tag">${Cups.legLabel(sel)}</em>` : ''}`;
     let body = '';
     if (sel.fmt === 'swiss') {
       const tbl = Cups.swissTable(sel);
