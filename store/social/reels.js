@@ -157,6 +157,18 @@ const V = [
     end: { tag: 'BU HAYALİ GERÇEKLEŞTİR 🇹🇷', cta: 'App Store\'da StarFoot\'u ara, Türkiye\'yi şampiyon yap!' },
     sfx: [['boom', 0], ['chime', 0.3], ['whoosh', 2.5], ['boom', 2.6], ['chime', 6.4]],
   },
+  {
+    id: 'android-duyuru',
+    scenes: [
+      ['ANDROID\'CİLER <em>BURAYA!</em> 🤖', 'StarFoot\'u Android\'de bekleyenler için bir duyurumuz var.'],
+      ['5 EKİM\'DE <em>GÖNDERDİK</em> ✅', 'StarFoot\'u 5 Ekim\'de Google Play\'e gönderdik ve onay bekliyoruz.'],
+      ['ONAY <em>GECİKİYOR</em> ⏳', 'Elimizde olmayan sebeplerden dolayı Google Play\'de yayına çıkış biraz gecikiyor.'],
+      ['BİZ DE <em>SABIRSIZIZ!</em> 🔥', 'Oyun hazır, tek eksik onay. Çıktığı an ilk sizin haberiniz olacak.'],
+    ],
+    segs: [[R('matchday'), 0, 75, 0], [P('moment'), 0, 13, 1], [P('moment'), 12, 1, 1, 72], [F('matchday'), 0, 75, 2], [R('trophy'), 0, 90, 3]],
+    end: { tag: 'TAKİPTE KAL, DUYURUYU KAÇIRMA 🔔', badge: 'ANDROID ÇOK YAKINDA', cta: 'Google Play duyurusu @starfootapp hesabında. iPhone\'da şimdi App Store\'da ücretsiz!' },
+    sfx: [['boom', 0], ['whoosh', 2.5], ['whoosh', 5.3], ['fail', 5.6], ['whoosh', 7.8], ['boom', 7.9], ['chime', 10.9]],
+  },
 ];
 
 const EMO = "'Noto Color Emoji'";
