@@ -14,7 +14,7 @@ on:
       - 'app/capacitor.config.json'
       - 'js/**'
       - 'css/**'
-      - 'index.html'
+      - 'oyna-r8k4tq.html'
       - '.github/workflows/ios.yml'
 defaults:
   run:

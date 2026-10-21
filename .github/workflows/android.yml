@@ -11,7 +11,7 @@ on:
       - 'js/**'
       - 'css/**'
       - 'icons/**'
-      - 'index.html'
+      - 'oyna-r8k4tq.html'
       - 'privacy.html'
       - '.github/workflows/android.yml'
 defaults:

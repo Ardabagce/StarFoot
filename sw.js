@@ -1,7 +1,8 @@
-// StarFoot service worker: oyun dosyalarını önbelleğe alır, çevrimdışı oynanabilir
-const CACHE = 'starfoot-v50';
+// StarFoot service worker: oyun dosyalarını önbelleğe alır, çevrimdışı oynanabilir.
+// Oyun web'de gizli sayfada (oyna-r8k4tq.html); ana sayfa (index.html) yalnız tanıtım sayfası ve önbelleğe alınmaz.
+const CACHE = 'starfoot-v51';
 const ASSETS = [
-  './', './index.html', './manifest.webmanifest', './css/style.css',
+  './oyna-r8k4tq.html', './manifest.webmanifest', './css/style.css',
   './js/util.js', './js/lang-en.js', './js/lang-es.js', './js/lang-pt.js', './js/lang-de.js', './js/lang-fr.js', './js/lang-it.js', './js/lang-id.js', './js/lang-ar.js', './js/lang-ja.js', './fonts/cairo-arabic-400-normal.woff2', './fonts/cairo-arabic-600-normal.woff2', './fonts/cairo-arabic-700-normal.woff2', './fonts/cairo-arabic-900-normal.woff2', './js/i18n.js', './js/ads-config.js', './js/admob.js', './js/icons.js', './js/data.js', './js/player.js', './js/league.js', './js/legends.js', './js/cups.js',
   './js/sprites.js', './js/shopart.js', './js/weather.js', './js/minigame.js', './js/drills.js', './js/match.js', './js/game.js', './js/extras.js', './js/socialart.js', './js/celebrate.js', './js/life.js', './js/captain.js', './js/app.js',
   './privacy.html', './icons/icon.svg', './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-192.png', './icons/icon-maskable-512.png',
@@ -24,6 +25,6 @@ self.addEventListener('fetch', (e) => {
         }
         return res;
       })
-      .catch(() => caches.match(e.request).then((r) => r || caches.match('./index.html'))),
+      .catch(() => caches.match(e.request)),
   );
 });

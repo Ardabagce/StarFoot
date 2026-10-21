@@ -15,7 +15,7 @@ const OUT = path.join(__dirname, 'raw');
     // Japonca: Noto Sans JP (JA_CSS = Google Fonts CSS dosyası; oyunun yazı tipi listesinde zaten var)
     const ja = l === 'ja' && process.env.JA_CSS ? require('fs').readFileSync(process.env.JA_CSS, 'utf8').replace(/url\((?!['"]?(?:https?|file):)['"]?([^)'"]+)['"]?\)/g, (m, u) => `url(file://${path.join(path.dirname(process.env.JA_CSS), u)})`) : '';
     await pg.addInitScript((css) => { document.addEventListener('DOMContentLoaded', () => { const st = document.createElement('style'); st.textContent = css; document.head.appendChild(st); }); }, css + ja);
-    await pg.goto('file://' + path.join(ROOT, 'index.html'));
+    await pg.goto('file://' + path.join(ROOT, 'oyna-r8k4tq.html'));
     await pg.evaluate((l) => { localStorage.clear(); localStorage.setItem('starfoot_lang', l); }, l); await pg.reload();
     await pg.waitForTimeout(400);
     await pg.click('[data-new="0"]');

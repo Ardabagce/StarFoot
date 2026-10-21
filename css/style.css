@@ -1,5 +1,5 @@
 /* Arapça: Cairo (SIL OFL, fonts/Cairo-OFL.txt), oyunun yazı tipi adlarıyla yalnız Arapça harf aralığında.
-   Yalnız index.html'de Google Fonts'tan yüklenen ağırlık/stil kombinasyonları tanımlanır: fazlası, Latin harflerde
+   Yalnız oyna-r8k4tq.html'de Google Fonts'tan yüklenen ağırlık/stil kombinasyonları tanımlanır: fazlası, Latin harflerde
    eksik ağırlığın sentezlenmesini engeller ve Safari sistem yazı tipine düşer. */
 @font-face{font-family:'Barlow Semi Condensed';font-style:normal;font-weight:400;font-display:swap;src:url('../fonts/cairo-arabic-400-normal.woff2') format('woff2');unicode-range:U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC}
 @font-face{font-family:'Barlow Semi Condensed';font-style:normal;font-weight:500;font-display:swap;src:url('../fonts/cairo-arabic-600-normal.woff2') format('woff2');unicode-range:U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891, U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC}

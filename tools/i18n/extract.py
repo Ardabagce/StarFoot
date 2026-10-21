@@ -105,10 +105,10 @@ for f in files:
             if looks_text(t):
                 key = t.replace('\x00', '{}')
                 all_.setdefault(key, set()).add(f.split('/')[-1])
-html = open(ROOT + 'index.html').read()
+html = open(ROOT + 'oyna-r8k4tq.html').read()
 for t in re.split(r'<[^>]*>|\n', re.sub(r'<script.*?</script>|<style.*?</style>', '', html, flags=re.S)):
     t = t.strip()
-    if t and WORD.search(t): all_.setdefault(t, set()).add('index.html')
+    if t and WORD.search(t): all_.setdefault(t, set()).add('oyna-r8k4tq.html')
 keys = sorted(all_)
 json.dump({k: sorted(v) for k, v in all_.items()}, open(D + 'src_strings.json', 'w'), ensure_ascii=False, indent=0)
 tr_like = [k for k in keys if TR.search(k) or re.search(r'\b(ve|ile|bir|için|maç|gol|hafta|sezon|takım|kulüp|lig|sen|bu|da|de)\b', k, re.I)]

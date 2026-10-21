@@ -16,7 +16,7 @@ async function open(b, lang, seed = 7, size) {
   // tekrarlanabilir sahneler için sabit tohumlu rastgele sayı
   await pg.addInitScript((seed) => { let a = seed; Math.random = () => { a |= 0; a = (a + 0x6d2b79f5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }, seed);
   await pg.addInitScript((css) => { document.addEventListener('DOMContentLoaded', () => { const st = document.createElement('style'); st.textContent = css; document.head.appendChild(st); }); }, fontCss);
-  await pg.goto('file://' + path.join(ROOT, 'index.html'));
+  await pg.goto('file://' + path.join(ROOT, 'oyna-r8k4tq.html'));
   await pg.evaluate((l) => { localStorage.clear(); localStorage.setItem('starfoot_lang', l); }, lang); await pg.reload();
   await pg.evaluate(() => document.fonts.ready);
   // saat yalnız runFor ile ilerlesin (gerçek zaman akmasın)

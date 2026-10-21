@@ -14,7 +14,7 @@ const url = (p) => 'file://' + path.join(ROOT, p);
   // 2) Öne çıkan görsel 1024x500 (TR ve EN): başlık sahnesi + logo + oyuncu
   for (const l of ['tr', 'en']) {
     const pg = await b.newPage({ viewport: { width: 1024, height: 500 } });
-    await pg.goto(url('index.html'));
+    await pg.goto(url('oyna-r8k4tq.html'));
     await pg.evaluate((l) => { localStorage.setItem('starfoot_lang', l); }, l); await pg.reload();
     await pg.waitForTimeout(700);
     await pg.evaluate((l) => {
@@ -45,7 +45,7 @@ const url = (p) => 'file://' + path.join(ROOT, p);
   for (const l of ['tr', 'en']) {
     const pg = await b.newPage({ viewport: { width: 360, height: 640 }, deviceScaleFactor: 3, hasTouch: true, isMobile: true });
     const errs = []; pg.on('pageerror', (e) => errs.push(e.message));
-    await pg.goto(url('index.html'));
+    await pg.goto(url('oyna-r8k4tq.html'));
     await pg.evaluate((l) => { localStorage.clear(); localStorage.setItem('starfoot_lang', l); }, l); await pg.reload();
     await pg.waitForTimeout(500);
     const shot = async (n) => { await pg.waitForTimeout(400); await pg.screenshot({ path: path.join(ROOT, `store/screens/${l}-${n}.png`) }); };
