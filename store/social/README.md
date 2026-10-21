@@ -12,7 +12,7 @@ Yeniden üretmek için: `node store/social/clips.js tr <klasör>`, ardından `no
 
 ## Instagram profili
 
-- **Kullanıcı adı önerileri:** `@starfoot.game`, `@starfootgame`, `@starfoot.tr`
+- **Kullanıcı adı:** `@starfootapp` (Instagram ve TikTok)
 - **Ad alanı** (aramada çıkar): `StarFoot ⚽ Futbol Kariyeri`
 - **Kategori:** Profesyonel hesaba geç (ücretsiz) › Kategori: *Video Oyunu*
 - **Biyografi** (150 karakter sınırı içinde):
