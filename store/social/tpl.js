@@ -25,7 +25,7 @@ body{background:radial-gradient(120% 70% at 50% 30%,#1b3a8a 0%,#0d1f4f 40%,#070f
 .t{position:absolute;left:0;right:0;top:990px;font-size:46px;font-weight:600;color:#cdd7f4}
 .tag{position:absolute;left:80px;right:80px;top:1080px;font-family:'Saira Condensed';font-weight:800;font-style:italic;font-size:74px;line-height:1.05;text-transform:uppercase}
 .badge{position:absolute;left:50%;top:1330px;transform:translateX(-50%);padding:26px 54px;border-radius:999px;background:#ffcf3f;color:#0a1530;font-family:'Saira Condensed';font-weight:900;font-size:54px;letter-spacing:.04em;white-space:nowrap;box-shadow:0 20px 60px rgba(255,207,63,.35)}
-.cta{position:absolute;left:0;right:0;top:1470px;font-size:40px;font-weight:600;color:#cdd7f4}
+.cta{position:absolute;left:90px;right:90px;top:1470px;font-size:42px;line-height:1.25;font-weight:600;color:#cdd7f4;white-space:normal;overflow-wrap:break-word}
 </style></head><body><div class="beam l"></div><div class="beam r"></div><div class="pitch"></div>
 <img class="icon" src="${icon}"><div class="logo">STAR<span>FOOT</span></div><div class="t">${e.title}</div><div class="tag">${e.tag}</div><div class="badge">${e.badge}</div><div class="cta">${e.cta}</div></body></html>`;
 

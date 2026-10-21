@@ -46,10 +46,17 @@ const M = {
   // Galata Aslanları - Fenerköy SK (Kıtalararası Derbi)
   'gs-fb': {
     home: 'GAL', away: 'FNK', me: 'FNK', name: ['Emre', 'Yıldız'], shirt: 10, big: 'Kıtalararası Derbi',
-    seed: 1, g: 0,
-    cut: [[0, 66, 'hook']],
+    seed: 2, g: 2,
+    // 4. alan: o kareyi bu kadar kare dondur (skor tabelası çok kısa görünüyor)
+    cut: [[0, 66, 'hook'], [66, 41, 'press'], [107, 18, 'live'], [140, 70, ''], [210, 50, 'goal'], [580, 1, 'come', 42], [1075, 1, 'eq', 54], [1473, 76, 'res']],
     txt: {
-      hook: ['PAZARTESİ <em>DERBİ GÜNÜ! 🦁🐤</em>', 'Galatasaray - Fenerbahçe derbisini StarFoot\'ta önceden oynadık 🔮'],
+      hook: ['PAZARTESİ <em>DERBİ GÜNÜ!</em> 🔥', 'Galatasaray - Fenerbahçe derbisini StarFoot\'ta önceden oynadık 🔮'],
+      press: ['', 'Maç öncesi basın toplantısı: iddialı cevabı seçtim 🎙️🔥'],
+      live: ['DERBİ <em>BAŞLADI!</em> ⚽', 'Kritik anları ben oynuyorum, gerisi dakika dakika simülasyon.'],
+      goal: ['', '2. dakika, penaltı... Soğukkanlı vuruş, GOOOL! 🎯'],
+      come: ['', 'Ama Galata Aslanları geri döndü: 2-1 😱'],
+      eq: ['', '69. dakika... Fenerköy eşitliği buldu: 2-2! 🔥'],
+      res: ['STARFOOT <em>TAHMİNİ: 2-2</em>', 'Pazartesi gerçekte ne olacak? Bakalım tutacak mı... 👀'],
     },
     end: { tag: 'SENİN SKOR TAHMİNİN NE? 👇', cta: 'Yorumlara yaz! Derbiyi kendin oynamak için App Store\'da StarFoot\'u ara.' },
   },
@@ -211,10 +218,12 @@ async function make() {
   await shot(endHtml({ title: 'StarFoot: Futbol Kariyeri', badge: 'APP STORE\'DA ÜCRETSİZ', ...M.end }, 'file://' + ICON), path.join(tmp, 'end.png'), false);
   const parts = [], sfx = [];
   let t = 0;
-  M.cut.forEach(([st, n, key], i) => {
+  M.cut.forEach(([st, n, key, hold], i) => {
     const o = path.join(tmp, `s${i}.mp4`);
     const fade = i > 0 ? 'fade=in:st=0:d=0.15:alpha=1' : 'fade=in:st=0:d=0.01:alpha=1';
-    if (key) execSync(`ffmpeg -loglevel error -y -framerate 30 -start_number ${st} -i "${FR}/f%04d.jpg" -loop 1 -t ${n / 30} -i "${path.join(tmp, `o-${key}.png`)}" -filter_complex "[0]scale=1080:1920,setsar=1[v];[1]format=rgba,${fade}[c];[v][c]overlay=0:0:shortest=1" -frames:v ${n} ${enc} "${o}"`);
+    if (hold) n = hold;
+    const src = hold ? `-loop 1 -t ${n / 30} -i "${FR}/f${String(st).padStart(4, '0')}.jpg"` : `-framerate 30 -start_number ${st} -i "${FR}/f%04d.jpg"`;
+    if (key) execSync(`ffmpeg -loglevel error -y ${src} -loop 1 -t ${n / 30} -i "${path.join(tmp, `o-${key}.png`)}" -filter_complex "[0]scale=1080:1920,setsar=1[v];[1]format=rgba,${fade}[c];[v][c]overlay=0:0:shortest=1" -frames:v ${n} ${enc} "${o}"`);
     else execSync(`ffmpeg -loglevel error -y -framerate 30 -start_number ${st} -i "${FR}/f%04d.jpg" -vf "scale=1080:1920,setsar=1" -frames:v ${n} ${enc} "${o}"`);
     parts.push(o);
     // ses: kesmelerde geçiş, maç başında düdük, an sırasında vuruş, golde tribün
@@ -223,6 +232,7 @@ async function make() {
     if (key === 'live') sfx.push(['whistle', t + 0.1]);
     if (key === '') { sfx.push(['kick', t + (M.big ? 1.5 : 0.3)]); }
     if (key === 'goal') sfx.push(['roar', t - 0.9]);
+    if (key === 'eq') sfx.push(['roar', t + 0.1]);
     if (key === 'res') sfx.push(['whistle', t + 0.05]);
     t += n / 30;
   });

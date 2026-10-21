@@ -43,7 +43,12 @@ async function career(pg) {
     for (let i = 0; i < 400; i++) {
       await pg.clock.runFor(250);
       const st = await pg.evaluate(() => { const ht = document.querySelector('[data-ht]'); if (ht) { ht.click(); return 'ht'; } const m = document.getElementById('mt-moment'); return m && !m.classList.contains('hidden') && m.querySelector('.mg-canvas') ? 'mom' : ''; });
-      if (st === 'mom') break;
+      if (st === 'mom') {
+        // istenen an değilse (ör. penaltıdan önce gelen hücum) atla
+        const ok = KIND !== 'penalty' || await pg.evaluate(() => /PENALTI|PENALTY/i.test(document.getElementById('mt-moment').innerText));
+        if (ok) break;
+        await pg.evaluate(() => { if (MiniGame._abort) MiniGame._abort(); });
+      }
     }
     await pg.clock.runFor(300);
     const acts = {}, x0 = 225, y0 = 480, dx = +(process.env.DX || -36), dy = +(process.env.DY || 140);

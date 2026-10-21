@@ -92,3 +92,19 @@ Her video 9–12 sn, 1080x1920, sessiz. **Müziği platformun içinden ekle** (t
 
 **Paylaşım düzeni:** Günde 1 video, akşam 19:00–22:00 arası. Aynı videoyu TikTok, Instagram Reels, YouTube Shorts ve Facebook Reels'e yükle. 5 video bitince sırayı tekrar et; en çok izleneni Spark Ads ile öne çıkar.
 **İlk yorum:** "Oyun App Store'da ücretsiz, link profilde 🔗" (TikTok'ta 1.000 takipçiden önce profile link konamaz; o zamana kadar "App Store'da StarFoot ara" yaz).
+
+## Instagram Reels serisi (5 gün) + derbi
+
+Üretmek: `CLUB=FNK node clips.js tr $PWD/work/tr-fnk`, `CLUB=RMA ... work/tr-rma`, `CLUB=BJK MOMENT=penalty DX=0 DY=150 ... work/tr-bjk-pen moment`, ardından `node reels.js rec $PWD/work/tr` ve `node reels.js make $PWD/work/tr`. Derbi: `node matchday.js make gs-fb`.
+
+| Gün | Dosya | Açıklama |
+| --- | --- | --- |
+| 1 | `reels/tr-1-nss-ozleyenler.mp4` | NSS'yi özleyenler buraya 👀 Kendi futbolcunu yarat, kariyerini yaz. Tamamen Türkçe, App Store'da ücretsiz ⚽ |
+| 2 | `reels/tr-2-penalti-nereye-vurursun.mp4` | Penaltı senin elinde 😰 Sol mu, sağ mı, orta mı? Cevabını yoruma yaz 👇 |
+| 3 | `reels/tr-3-8-yasindan-altin-topa.mp4` | 8 yaşında mahalle maçından Altın Top'a 🥇 Sen kaç yaşında kazanırsın? |
+| 4 | `reels/tr-4-oyunda-kendi-instagramin.mp4` | Oyunda kendi Instagram'ın var 📱 Golün, kupan, takipçin… Kaç takipçiye ulaşırsın? |
+| 5 | `reels/tr-5-turkiyeyi-sampiyon-yap.mp4` | Ay-yıldızlı formayla Dünya Kupası 🇹🇷🏆 Bu hayali StarFoot'ta gerçekleştir. |
+| Derbi | `matchday/tr-gs-fb.mp4` | Pazartesi derbi var 🔥 StarFoot'ta önceden oynadık: 2-2! Senin skor tahminin ne? 👇 |
+
+Etiketler: `#starfoot #futbol #futboloyunu #mobiloyun #kariyermodu #nss #topeleven #keşfet`
+Derbi için ek: `#galatasaray #fenerbahçe #derbi`

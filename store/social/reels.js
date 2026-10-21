@@ -121,9 +121,9 @@ const V = [
       ['SOL MU? SAĞ MI? <em>ORTA MI?</em> 🤔', 'Cevabını yoruma yaz, sonra izle 👇'],
       ['StarFoot\'ta <em>PENALTIYI SEN ATARSIN</em> 🎯', 'Çek, nişan al, bırak. Gerisi senin soğukkanlılığın.'],
     ],
-    segs: [[P('moment'), 0, 45, 0], [P('moment'), 45, 1, 1, 60], [P('moment'), 46, 130, 2]],
+    segs: [[P('moment'), 0, 13, 0], [P('moment'), 12, 1, 0, 45], [P('moment'), 12, 1, 1, 66], [P('moment'), 13, 110, 2]],
     end: { tag: 'SEN NEREYE VURURDUN? 👇', cta: 'Yoruma yaz! Penaltıyı kendin atmak için App Store\'da StarFoot\'u ara.' },
-    sfx: [['boom', 0], ['whoosh', 1.5], ['whoosh', 3.5], ['boom', 4.6], ['chime', 7.9]],
+    sfx: [['boom', 0], ['whoosh', 1.85], ['whoosh', 4.05], ['boom', 4.95], ['chime', 7.85]],
   },
   {
     id: '8-yasindan-altin-topa',
