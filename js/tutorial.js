@@ -106,11 +106,14 @@ const Tutorial = {
       <div class="dr-host"></div>`;
     document.body.appendChild(el);
     const host = el.querySelector('.dr-host');
-    let skipped = false;
-    el.querySelector('[data-x]').onclick = () => { skipped = true; if (MiniGame._abort) MiniGame._abort(); };
-    Weather.reset();
-    Sprites.curBall = Balls.forTraining();
+    let skipped = false, quit;
+    // Atla her zaman kapatır: mini oyun henüz başlamamış ya da takılmış olsa bile
+    const stop = new Promise((r) => (quit = r));
+    el.querySelector('[data-x]').onclick = () => { skipped = true; if (MiniGame._abort) MiniGame._abort(); quit(); };
+    // Ana menüden açılınca kariyer yüklü değildir: oyuncuya bağlı her şey isteğe bağlı
     const s = Game.state, p = s && s.player;
+    try { Weather.reset(); } catch (e) { /* hava yok */ }
+    try { Sprites.curBall = p ? Balls.forTraining() : null; } catch (e) { Sprites.curBall = null; }
     const st = p ? Player.effStats(p) : { pace: 60, shooting: 60, passing: 60, dribbling: 60, technique: 60, heading: 60, defending: 60, physical: 60, stamina: 60 };
     const own = (s && s.world && s.world.clubs[s.clubId]) || { id: 'X', c1: '#1f6feb', c2: '#ffffff' };
     const kits = Sprites.kits(own, { id: 'BIB', c1: '#ff7a1a', c2: '#ff7a1a' });
@@ -118,7 +121,7 @@ const Tutorial = {
     const skill = 0.12, cond = 0.8, number = p ? p.shirt : 10;
     const narrow = window.innerWidth / window.innerHeight < 0.9;
     let good = false;
-    try {
+    const run = async () => {
       if (P.kind === 'shot') {
         const scene = Scenes.make(P.scene, { skill, mates, position: 'FW', pace: st.pace, narrow });
         scene.offside = P.scene === 'open' ? scene.offside : null;
@@ -131,7 +134,8 @@ const Tutorial = {
         const r = await MiniGame[P.fn](host, { skill, kits, number, pace: st.pace, passing: st.passing, technique: st.technique, physical: st.physical, heading: st.heading, stamina: st.stamina, dribbling: st.dribbling, rounds: P.rounds, mates, cond });
         good = r.result === 'success';
       }
-    } catch (e) { console.error(e); skipped = true; }
+    };
+    try { await Promise.race([run(), stop]); } catch (e) { console.error(e); skipped = true; }
     MiniGame._abort = null;
     Sprites.curBall = null;
     el.remove();
