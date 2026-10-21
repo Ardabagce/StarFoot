@@ -43,6 +43,16 @@ const M = {
     },
     end: { tag: 'SENİN SKOR TAHMİNİN NE? 👇', cta: 'Yorumlara yaz! Derbiyi kendin oynamak için App Store\'da StarFoot\'u ara.' },
   },
+  // Galata Aslanları - Fenerköy SK (Kıtalararası Derbi)
+  'gs-fb': {
+    home: 'GAL', away: 'FNK', me: 'GAL', name: ['Emre', 'Yıldız'], shirt: 10, big: 'Kıtalararası Derbi',
+    seed: 1, g: 0,
+    cut: [[0, 66, 'hook']],
+    txt: {
+      hook: ['PAZARTESİ <em>DERBİ GÜNÜ! 🦁🐤</em>', 'Galatasaray - Fenerbahçe derbisini StarFoot\'ta önceden oynadık 🔮'],
+    },
+    end: { tag: 'SENİN SKOR TAHMİNİN NE? 👇', cta: 'Yorumlara yaz! Derbiyi kendin oynamak için App Store\'da StarFoot\'u ara.' },
+  },
 }[ID];
 if (!M) throw new Error('bilinmeyen maç: ' + ID);
 
