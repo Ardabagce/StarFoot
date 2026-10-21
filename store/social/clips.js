@@ -5,6 +5,7 @@ const path = require('path');
 const lang = process.argv[2] || 'tr';
 const OUT = process.argv[3] || path.join(__dirname, 'work', lang);
 const KIND = process.env.MOMENT || 'freekick';
+const CLUB = process.env.CLUB || 'GAL'; // oyuncunun kulübü
 const hideFoot = () => { const st = document.createElement('style'); st.textContent = '.ct-foot{display:none!important}'; document.head.appendChild(st); };
 
 async function career(pg) {
@@ -12,11 +13,11 @@ async function career(pg) {
   await pg.click('[data-new="0"]');
   await pg.fill('#cr-name', lang === 'en' ? 'Alex' : 'Emre'); await pg.fill('#cr-sur', lang === 'en' ? 'Stone' : 'Yıldız');
   await pg.selectOption('#cr-age', '17'); await pg.click('#cr-go'); await pg.clock.runFor(300); await pg.click('.modal-btns button');
-  await pg.evaluate(() => {
-    const s = Game.state; s.street.done = true; Game.joinClub('GAL', 185000, 4);
+  await pg.evaluate((club) => {
+    const s = Game.state; s.street.done = true; Game.joinClub(club, 185000, 4);
     const p = Game.p; p.age = 24; p.position = 'FW'; Object.keys(p.stats).forEach((k) => (p.stats[k] = 95));
     p.energy = 100; p.morale = 90; p.money = 8.6e6; p.fame = 55; s.ap = 3; p.celeb = 'siu'; p.totals.goals = 80; p.shirt = 10;
-  });
+  }, CLUB);
 }
 
 (async () => {

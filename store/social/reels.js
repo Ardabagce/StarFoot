@@ -1,5 +1,5 @@
 // Instagram Reels serisi (1080x1920, 30 fps, 10-15 sn)
-// 1) node store/social/clips.js tr <work>  ve  MOMENT=penalty DX=0 DY=150 node store/social/clips.js tr <work>-pen moment
+// 1) CLUB=FNK node store/social/clips.js tr <work>-fnk · CLUB=RMA ... <work>-rma · CLUB=BJK MOMENT=penalty DX=0 DY=150 ... <work>-bjk-pen moment
 // 2) node store/social/reels.js rec <work>          (videoya özel oyun sahneleri)
 // 3) node store/social/reels.js make <work> [çıktı] (yazılar, ses efektleri, kapanış)
 const { chromium, open, record, fontCss } = require('./rec');
@@ -69,7 +69,7 @@ async function recAll() {
 
   // ---------- 4: Oyunda kendi Instagram'ın ----------
   if (!ONLY || ONLY === '4') {
-    const pg = await page({ club: 'GAL', age: 22, st: 86, wage: 3e6, fame: 70 });
+    const pg = await page({ club: 'TRB', age: 22, st: 86, wage: 3e6, fame: 70, shirt: 61 });
     await pg.evaluate(() => {
       const p = Game.p; Social.ensure(p); p.social.followers = 120000; Social.target = () => 2e7; Social.cap = () => 3e7;
       ['goal', 'trophy', 'training', 'goal', 'fans', 'goal', 'trophy'].forEach((k) => { try { Social.post(k); } catch (e) { /* yok */ } });
@@ -85,7 +85,7 @@ async function recAll() {
 
   // ---------- 5: Milli takım ve Dünya Kupası ----------
   if (!ONLY || ONLY === '5') {
-    const pg = await page({ club: 'GAL', age: 24, st: 90, wage: 3e6, fame: 70 });
+    const pg = await page({ club: 'BJK', age: 24, st: 90, wage: 3e6, fame: 70 });
     await pg.evaluate(() => { Game.p.nation = 'TUR'; Game.state.news = []; __go('home'); });
     await record(pg, dir(5, 'a'), 2.6, { 6: () => pg.evaluate(() => { Game.news('🇹🇷 MİLLİ TAKIMA ÇAĞRILDIN! Dünya Kupası kadrosuna seçildin.', 'good'); Game.toast('🇹🇷 Milli takıma çağrıldın!', 'good'); Game.render(); window.scrollTo(0, 0); }) });
     await pg.evaluate(() => document.querySelectorAll('#toasts > *').forEach((t) => t.remove()));
@@ -96,8 +96,10 @@ async function recAll() {
 }
 
 // ---------- kurgu ----------
-const W = (d) => path.join(WORK, d); // clips.js klipleri
-const P = (d) => path.join(WORK + '-pen', d); // penaltı klibi
+// clips.js klipleri (kulübe göre ayrı klasörler: CLUB=FNK ... node clips.js tr <work>-fnk)
+const F = (d) => path.join(WORK + '-fnk', d); // Fenerköy SK
+const R = (d) => path.join(WORK + '-rma', d); // Real Madrigal
+const P = (d) => path.join(WORK + '-bjk-pen', d); // Beşiktepe JK, penaltı
 const S = (v, s) => dir(v, s);
 const END = { title: 'StarFoot: Futbol Kariyeri', badge: 'APP STORE\'DA ÜCRETSİZ' };
 const V = [
@@ -108,7 +110,7 @@ const V = [
       ['KRİTİK ANI <em>SEN OYNA</em> ⚽', 'Maçın kilit anlarında şutu, pası, frikiği sen çekiyorsun.'],
       ['TRANSFER, KUPA, <em>EFSANE</em> 🏆', 'Dev kulüplere transfer ol, kupaları kaldır. Hem de tamamen Türkçe.'],
     ],
-    segs: [[W('matchday'), 0, 75, 0], [W('moment'), 22, 120, 1], [W('airport'), 6, 60, 2], [W('trophy'), 0, 84, 2]],
+    segs: [[F('matchday'), 0, 75, 0], [F('moment'), 22, 120, 1], [F('airport'), 6, 60, 2], [F('trophy'), 0, 84, 2]],
     end: { tag: 'NSS SEVENLER BURAYA ⚽👇', cta: 'App Store\'da StarFoot\'u ara, ücretsiz indir!' },
     sfx: [['boom', 0], ['whoosh', 2.5], ['whoosh', 6.5], ['whoosh', 8.5], ['boom', 8.6], ['chime', 11.3]],
   },
@@ -131,7 +133,7 @@ const V = [
       ['ŞAMPİYONLAR KUPASI <em>GECESİ</em> ✨', 'Avrupa\'nın en büyük sahnesinde forma giy.'],
       ['VE <em>ALTIN TOP!</em> 🥇', 'Sen kaç yaşında Altın Top kazanırsın?'],
     ],
-    segs: [[S(3, 'a'), 0, 78, 0], [S(3, 'b'), 0, 78, 1], [W('matchday'), 0, 60, 2], [W('ballon'), 0, 96, 3]],
+    segs: [[S(3, 'a'), 0, 78, 0], [S(3, 'b'), 0, 78, 1], [R('matchday'), 0, 60, 2], [R('ballon'), 0, 96, 3]],
     end: { tag: 'REKORUNU YORUMA YAZ 👇', cta: 'Kendi efsaneni yaz: StarFoot App Store\'da ücretsiz!' },
     sfx: [['boom', 0], ['whoosh', 2.6], ['whoosh', 5.2], ['whoosh', 7.2], ['boom', 7.3], ['chime', 10.5]],
   },
@@ -141,9 +143,9 @@ const V = [
       ['OYUNDA KENDİ <em>INSTAGRAM\'IN</em> VAR 📱', 'Her golün, her kupan sosyal medyada paylaşılıyor.'],
       ['TAKİPÇİN <em>MİLYONLARA</em> ÇIKIYOR 🚀', 'İyi oynadıkça takipçin artıyor, sponsorlar kapını çalıyor.'],
     ],
-    segs: [[S(4, 'a'), 0, 96, 0], [S(4, 'b'), 0, 102, 1], [W('moment'), 40, 75, 1]],
+    segs: [[S(4, 'a'), 0, 96, 0], [S(4, 'b'), 0, 102, 1]],
     end: { tag: 'KAÇ TAKİPÇİYE ULAŞIRSIN? 👇', cta: 'Yoruma yaz! StarFoot App Store\'da ücretsiz.' },
-    sfx: [['boom', 0], ['cash', 2.2], ['whoosh', 3.2], ['whoosh', 6.6], ['chime', 9.1]],
+    sfx: [['boom', 0], ['cash', 2.2], ['whoosh', 3.2], ['chime', 6.6]],
   },
   {
     id: 'turkiyeyi-sampiyon-yap',
@@ -151,9 +153,9 @@ const V = [
       ['🇹🇷 MİLLİ TAKIMA <em>ÇAĞRILDIN!</em>', 'Sezon boyunca parladın, ay-yıldızlı forma seni bekliyor.'],
       ['TÜRKİYE <em>DÜNYA ŞAMPİYONU!</em> 🏆', 'Bu hayali StarFoot\'ta gerçekleştir.'],
     ],
-    segs: [[S(5, 'a'), 0, 78, 0], [W('moment'), 22, 96, 0], [S(5, 'b'), 0, 114, 1]],
+    segs: [[S(5, 'a'), 0, 78, 0], [S(5, 'b'), 0, 114, 1]],
     end: { tag: 'BU HAYALİ GERÇEKLEŞTİR 🇹🇷', cta: 'App Store\'da StarFoot\'u ara, Türkiye\'yi şampiyon yap!' },
-    sfx: [['boom', 0], ['chime', 0.3], ['whoosh', 2.6], ['whoosh', 5.8], ['boom', 5.9], ['chime', 9.6]],
+    sfx: [['boom', 0], ['chime', 0.3], ['whoosh', 2.5], ['boom', 2.6], ['chime', 6.4]],
   },
 ];
 

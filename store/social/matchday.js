@@ -45,7 +45,7 @@ const M = {
   },
   // Galata Aslanları - Fenerköy SK (Kıtalararası Derbi)
   'gs-fb': {
-    home: 'GAL', away: 'FNK', me: 'GAL', name: ['Emre', 'Yıldız'], shirt: 10, big: 'Kıtalararası Derbi',
+    home: 'GAL', away: 'FNK', me: 'FNK', name: ['Emre', 'Yıldız'], shirt: 10, big: 'Kıtalararası Derbi',
     seed: 1, g: 0,
     cut: [[0, 66, 'hook']],
     txt: {
