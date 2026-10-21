@@ -92,6 +92,7 @@
     },
     // Maç sonu geçiş reklamı (sıklık sınırlı)
     async afterMatch() {
+      if (typeof Premium !== 'undefined' && Premium.active) return false; // Premium: geçiş reklamı yok
       if (!cfg.interstitialEvery || !st.canAds || !unit('interstitial')) return;
       st.matches++;
       const now = Date.now() / 1000;
@@ -103,6 +104,7 @@
     },
     // Sezon başı / sezon ortası geçiş reklamı (oyun Game.seasonAd ile en fazla sezonda 2 kez çağırır)
     async interstitial() {
+      if (typeof Premium !== 'undefined' && Premium.active) return false; // Premium: geçiş reklamı yok
       if (!st.ready || !st.canAds || !unit('interstitial')) return false;
       if (Date.now() / 1000 - st.lastIt < (cfg.interstitialGapSec || 0)) return false;
       if (!st.it) await withTimeout(prepInter(), 4000);
