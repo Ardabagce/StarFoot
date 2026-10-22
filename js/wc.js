@@ -150,6 +150,14 @@ const WC = {
     if (!d) return WC.setup();
     Game.slot = WC.KEY;
     Game.state = d;
+    // eski büyük kayıt: yıldızları sabitle, dünyayı küçült
+    if (!d.wc.stars && d.world && d.world.clubs && d.world.clubs[d.clubId]) {
+      const me = Player.fullName(d.player);
+      d.wc.stars = {};
+      WC.pool().forEach((n) => { d.wc.stars[n.code] = (Game.nat(n.code) ? Game.natStars(n.code) : n.stars).filter((x) => x !== me).slice(0, 4); });
+      d.world = WC.slim(d.world, d.clubId);
+      Game.save();
+    }
     WC.enter();
   },
 
@@ -211,6 +219,12 @@ const WC = {
       trainFocus: Object.keys(w)[0], news: [], offers: [], pendingIntl: null, pendingEvent: null, seasonEnd: null,
       wc: WC.blank(o.nat),
     };
+    // Kayıt küçük kalsın: yıldız isimlerini şimdi al, dünyadan yalnız oyuncunun kulübünü tut
+    // (tam dünya ~600 KB; telefonda diğer kariyerlerle birlikte depolama sınırını aşıyordu)
+    const me = Player.fullName(player);
+    Game.state.wc.stars = {};
+    WC.pool().forEach((n) => { Game.state.wc.stars[n.code] = (Game.nat(n.code) ? Game.natStars(n.code) : n.stars).filter((x) => x !== me).slice(0, 4); });
+    Game.state.world = WC.slim(world, club.id);
     Game.news(`${Player.fullName(player)}, ${year} Dünya Kupası için ${nat.name} milli takım kampına davet edildi! 18 yaşındaki genç yetenek ilk kez A takım kampında.`, 'good');
     Game.save();
     WC.enter();
@@ -268,6 +282,10 @@ const WC = {
     UI.wcView = 'day';
     WC.render();
   },
+  slim(world, clubId) {
+    const c = world.clubs[clubId];
+    return { year: world.year, legends: [], clubs: { [clubId]: c }, leagues: {} };
+  },
   askExit() {
     Game.modal('<h3>Ana menüye dönülsün mü?</h3><p>İlerlemen kaydedildi. Dünya Kupası\'na istediğin zaman ana menüden devam edebilirsin.</p>', [{ t: 'Vazgeç', cls: 'btn-ghost' }, { t: 'Ana menü', fn: () => WC.exit() }]);
   },
@@ -281,7 +299,7 @@ const WC = {
     const s = Game.state, n = WC.natOf(code), col = NAT_COLORS[code] || ['#1d3c8f', '#ffffff'];
     s.wc.ros = s.wc.ros || {};
     if (!s.wc.ros[code]) {
-      const stars = (code === s.wc.nat ? Game.natStars(code) : (Game.nat(code) ? Game.natStars(code) : n.stars)).filter((x) => x !== Player.fullName(s.player)).slice(0, 4);
+      const stars = (s.wc.stars && s.wc.stars[code] ? s.wc.stars[code] : (Game.nat(code) ? Game.natStars(code) : n.stars)).filter((x) => x !== Player.fullName(s.player)).slice(0, 4);
       const r = stars.map((name, i) => ({ n: name, pos: i < 2 ? 'FW' : 'MF', r: n.rating + 3 }));
       const pool = WC.poolOf(code);
       const need = ['GK', 'DF', 'DF', 'DF', 'DF', 'MF', 'MF', 'MF', 'FW', 'FW', 'DF', 'MF', 'FW', 'GK'];

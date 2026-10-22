@@ -1,6 +1,6 @@
 // StarFoot service worker: oyun dosyalarını önbelleğe alır, çevrimdışı oynanabilir.
 // Oyun web'de gizli sayfada (oyna-r8k4tq.html); ana sayfa (index.html) yalnız tanıtım sayfası ve önbelleğe alınmaz.
-const CACHE = 'starfoot-v59';
+const CACHE = 'starfoot-v60';
 const ASSETS = [
   './oyna-r8k4tq.html', './manifest.webmanifest', './css/style.css',
   './js/util.js', './js/lang-en.js', './js/lang-es.js', './js/lang-pt.js', './js/lang-de.js', './js/lang-fr.js', './js/lang-it.js', './js/lang-id.js', './js/lang-ar.js', './js/lang-ja.js', './fonts/cairo-arabic-400-normal.woff2', './fonts/cairo-arabic-600-normal.woff2', './fonts/cairo-arabic-700-normal.woff2', './fonts/cairo-arabic-900-normal.woff2', './js/i18n.js', './js/ads-config.js', './js/admob.js', './js/icons.js', './js/data.js', './js/player.js', './js/league.js', './js/legends.js', './js/cups.js',
