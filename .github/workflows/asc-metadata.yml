@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Düzenlenebilir sürüm yoksa oluşturulacak sürüm (ör. 1.0.6)'
+        description: 'Sürüm numarası (ör. 1.0.8): düzenlenebilir sürüm farklıysa ona çevrilir, yoksa oluşturulur'
         required: false
         default: ''
       screens:

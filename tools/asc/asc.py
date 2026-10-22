@@ -80,7 +80,13 @@ def pick_version(asc, app_id, want):
         print(f"   sürüm {v['attributes']['versionString']}: {v['attributes']['appStoreState']}")
     ed = [v for v in vs if v['attributes']['appStoreState'] in EDITABLE]
     if ed:
-        return ed[0]
+        v = ed[0]
+        # hiç yayınlanmamış düzenlenebilir sürüm farklı numaradaysa (ör. geri çekilen 1.0.7), istenen numaraya çevir
+        if want and v['attributes']['versionString'] != want:
+            print(f"   sürüm numarası değişiyor: {v['attributes']['versionString']} -> {want}")
+            v = asc.req('PATCH', f"/v1/appStoreVersions/{v['id']}", write=True, body={'data': {
+                'type': 'appStoreVersions', 'id': v['id'], 'attributes': {'versionString': want}}}).get('data', v)
+        return v
     if not want:
         # uygulamadaki sürüm numarası (Xcode projesi): App Store sürümü bununla aynı olmalı
         m = re.search(r'MARKETING_VERSION = ([\d.]+);', (ROOT / 'app/ios/App/App.xcodeproj/project.pbxproj').read_text())
