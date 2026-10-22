@@ -170,7 +170,7 @@
  "packs": {
   "starfoot_wc": {
    "refName": "World Cup Dream",
-   "price": "2.99",
+   "price": "1.99",
    "screenshot": "store/packs/wc-review.png",
    "reviewNote": "Non-consumable, one-time purchase that unlocks the \"World Cup Dream\" game mode. On the title screen tap the red \"World Cup Dream\" button below the career slots, then \"Buy\". \"Restore purchases\" is in the same window. After purchase the mode opens: pick a country and play the tournament.",
    "locales": {
@@ -230,7 +230,7 @@
   },
   "starfoot_legends": {
    "refName": "In the Footsteps of Legends",
-   "price": "2.99",
+   "price": "1.99",
    "screenshot": "store/packs/legends-review.png",
    "reviewNote": "Non-consumable, one-time purchase that unlocks the \"In the Footsteps of Legends\" game mode (6 fictional careers inspired by football history; all names and clubs are fictional). On the title screen tap the gold \"In the Footsteps of Legends\" button below the career slots, then \"Buy\". \"Restore purchases\" is in the same window.",
    "locales": {
