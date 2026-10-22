@@ -78,7 +78,7 @@ const Game = {
   teamRoster(id) { return Game.isYouth() && !Game.inStreet() ? Game.state.youth.rosters[id] : Game.state.world.clubs[id].roster; },
   // Döneme göre milli takım (güç ve varlık yıla bağlı)
   nat(code) {
-    const n = NATIONS.find((x) => x.code === code);
+    const n = NATIONS.find((x) => x.code === code) || (typeof WC_NATIONS !== 'undefined' ? WC_NATIONS.find((x) => x.code === code) : null);
     if (!n) return null;
     const year = Game.state ? Game.state.season.year : 2026;
     const era = NAT_ERA[code];
@@ -92,10 +92,11 @@ const Game = {
   nation() { return Game.nat(Game.p.nation) || Game.nat('TUR'); },
   // O dönemin milli yıldızları
   natStars(code) {
-    const act = Legends.active(Game.state.world, code).sort((a, b) => b.r - a.r).slice(0, 5).map((x) => x.n);
+    const me = Game.state.player ? Player.fullName(Game.state.player) : '';
+    const act = Legends.active(Game.state.world, code).sort((a, b) => b.r - a.r).slice(0, 5).map((x) => x.n).filter((x) => x !== me);
     if (act.length >= 2) return act;
-    const n = NATIONS.find((x) => x.code === code);
-    return act.concat(Game.state.season.year >= 2022 && n ? n.stars.filter((x) => !act.includes(x)) : []).slice(0, 5);
+    const n = NATIONS.find((x) => x.code === code) || (typeof WC_NATIONS !== 'undefined' ? WC_NATIONS.find((x) => x.code === code) : null);
+    return act.concat(Game.state.season.year >= 2022 && n ? n.stars.filter((x) => !act.includes(x) && x !== me) : []).slice(0, 5);
   },
   facility() { return (0.9 + 0.35 * U.clamp((Game.club().rating - 48) / 40, 0, 1)) * Game.diff().train; },
   diff() { return DIFFS[(Game.state && Game.state.difficulty) || 'normal']; },
@@ -144,6 +145,7 @@ const Game = {
   init() {
     Game.migrate();
     Game.state = null;
+    document.body.classList.remove('wc-mode');
     const box = document.getElementById('slots');
     box.innerHTML = [0, 1, 2, 3, 4].map((i) => {
       const d = Game.load(i);
@@ -156,9 +158,11 @@ const Game = {
     const tx = document.getElementById('title-x');
     if (tx && typeof Legacy !== 'undefined') {
       const nb = Object.keys(Scenario.badges()).length;
-      tx.innerHTML = `<button class="btn btn-ghost" id="t-tut">${Icon('whistle')} Nasıl Oynanır</button><button class="btn btn-ghost" id="t-scn">🎯 Senaryolar${nb ? ` <em>${nb}/${SCEN.length}</em>` : ''}</button><button class="btn btn-ghost" id="t-hof">🏛️ Efsaneler Salonu${Legacy.list().length ? ` <em>${Legacy.list().length}</em>` : ''}</button>`;
+      const pk = typeof Packs !== 'undefined';
+      tx.innerHTML = (pk ? `<div class="t-packs"><button class="btn t-pack wc" id="t-wc">${Icon('star')}<span><b>Dünya Kupası Rüyası</b><small>${Packs.owns('wc') ? 'Yeni mod' : 'Yeni mod · kilitli'}</small></span></button><button class="btn t-pack lp" id="t-lp">${Icon('fire')}<span><b>Efsanelerin İzinde</b><small>${Packs.owns('legends') ? 'Yeni mod' : 'Yeni mod · kilitli'}</small></span></button></div>` : '') + `<button class="btn btn-ghost" id="t-tut">${Icon('whistle')} Nasıl Oynanır</button><button class="btn btn-ghost" id="t-scn">🎯 Senaryolar${nb ? ` <em>${nb}/${SCEN.length}</em>` : ''}</button><button class="btn btn-ghost" id="t-hof">🏛️ Efsaneler Salonu${Legacy.list().length ? ` <em>${Legacy.list().length}</em>` : ''}</button>`;
       UI.strip(tx);
       document.getElementById('t-scn').onclick = () => Scenario.menu();
+      if (pk) { document.getElementById('t-wc').onclick = () => WC.menu(); document.getElementById('t-lp').onclick = () => LPath.menu(); }
       document.getElementById('t-tut').onclick = () => Tutorial.open();
       document.getElementById('t-hof').onclick = () => Legacy.show();
     }
@@ -886,6 +890,7 @@ const Game = {
     if (r === w.from) {
       const offers = Game.makeOffers(Game.offerCount(2, 4), false);
       s.offers = offers;
+      if (typeof LPath !== 'undefined') LPath.windowOpen(w);
       Game.news(offers.length ? `📨 ${w.name} açıldı! ${offers.length} kulüp seni istiyor. Teklifler ${w.to - r + 1} hafta geçerli.` : `${w.name} açıldı. Şimdilik teklif yok; iyi oynarsan kapı çalınabilir.`, offers.length ? 'good' : '');
     } else if (s.offers.length < 5 && U.chance(0.4)) {
       const more = Game.makeOffers(1, false, s.offers.map((o) => o.clubId));
@@ -902,6 +907,7 @@ const Game = {
     const old = Game.club().name;
     Game.joinClub(o.clubId, o.wage, o.years);
     Game.recordTransfer(old, o);
+    if (typeof LPath !== 'undefined') LPath.accepted(o);
     s.offers = [];
     Game.news(`✍️ ${old}'dan ${Game.club().name}'a ${Game.feeText(o)} transfer oldun! Haftalık maaş: ${U.money(o.wage)}`, 'good');
     Social.post('transfer', `Yeni bir sayfa: ${Game.club().name}! Heyecanlıyım.`, 1.8);
@@ -1111,6 +1117,7 @@ const Game = {
     Cups.setup(s);
     s.ap = 3;
     p.energy = 100;
+    if (typeof LPath !== 'undefined') LPath.seasonStart();
     Game.save();
     Game.tab = 'home';
     Game.render();
@@ -1161,6 +1168,7 @@ const Game = {
         </div>
         <h3>Kupalar ve Ödüller</h3>
         <ul class="trophies">${p.trophies.map((x) => `<li>${U.esc(x)}</li>`).join('') || '<li>Ödül yok</li>'}</ul>
+        ${typeof LPath !== 'undefined' ? LPath.endHtml(s) : ''}
         ${hof ? `<div class="hof-rank">🏛️ Efsaneler Salonu'nda <b>${hof.rank}.</b> sıradasın</div>` : ''}
         ${heir ? `<div class="heir"><b>👶 Oğlunla devam et</b><small>${U.esc(heir.surname)} ailesinin ${heir.gen}. nesli · Miras: +${heir.stat} tüm yetenekler, ${heir.fame} ün${heir.money ? `, ${U.money(heir.money)}` : ''}</small><button class="btn" id="end-heir">Yeni Nesil</button></div>` : ''}
         <div class="end-btns">${shareCv ? `<button class="btn btn-ghost" id="end-share">${Icon('share')} Paylaş</button>` : ''}<button class="btn btn-big" onclick="Game.toMenu()">Ana Menü</button></div>
@@ -1174,6 +1182,7 @@ const Game = {
   // ---------- Arayüz ----------
   render() {
     const s = Game.state, p = s.player;
+    if (s.mode === 'wc' && typeof WC !== 'undefined') return WC.render();
     Notifs.badge();
     document.getElementById('hdr-info').innerHTML = `
       <span class="hi-club">${UI.shirt(Game.club())}${U.esc(Game.teamName())}</span>
@@ -1546,7 +1555,7 @@ const UI = {
           ${s.ap > 0 ? `<div class="hint">Bu hafta ${s.ap} aksiyon hakkın daha var.</div>` : ''}
         </section>
         ${UI.report()}
-        ${typeof Scenario !== 'undefined' ? Scenario.card() : ''}
+        ${typeof Scenario !== 'undefined' ? Scenario.card() : ''}${typeof LPath !== 'undefined' ? LPath.card() : ''}
         ${typeof Missions !== 'undefined' ? Missions.card() : ''}
         <section class="card plan">
           <div class="card-h"><span>${Icon('train')} Haftalık Plan</span><span class="ap-pips ${s.ap ? '' : 'done'}" title="Aksiyon hakkı">${[0, 1, 2].map((i) => `<i class="${i < s.ap ? 'on' : ''}"></i>`).join('')}<b>${s.ap ? `${s.ap} hak` : 'Maç günü'}</b></span></div>
@@ -1606,7 +1615,7 @@ ${UI.paper()}`;
       <div class="ofc-head">
         ${UI.shirt(c, 'big')}
         <div class="ofc-id"><b>${U.esc(c.name)}</b><small>${U.esc(lg.name)}${pos ? ` · ${pos}. sırada` : ''}</small>
-          ${o.own ? '<span class="ofc-tag">Mevcut kulübün</span>' : eu ? `<span class="ofc-tag eu z-${eu.id}">${U.esc(eu.name.replace('Avrupa ', ''))} yolunda</span>` : ''}</div>
+          ${o.story ? '<span class="ofc-tag story">Efsane yolu</span>' : ''}${o.own ? '<span class="ofc-tag">Mevcut kulübün</span>' : eu ? `<span class="ofc-tag eu z-${eu.id}">${U.esc(eu.name.replace('Avrupa ', ''))} yolunda</span>` : ''}</div>
       </div>
       <div class="ofc-bars">
         <div><span>Kulüp gücü</span><em>${bar(c.rating)}</em><b>${c.rating}</b></div>
