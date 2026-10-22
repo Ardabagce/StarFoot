@@ -290,13 +290,6 @@
 3880|L'Inter Milanello a fait une offre record.
 3881|Une grave blessure au genou ! Les médecins prévoient une longue convalescence.
 3884|Après ton retour fracassant, le Real Madrigal veut t'ajouter à ses Galactiques.
-3885|Le Taureau
-3886|Tu es né à Adapazarı. Avec ta taille et ton jeu de tête, tu te distingues de tout le monde dans le quartier. Le centre de formation de Sakarya Ağaçları t'a recruté à 13 ans.
-3890|Bursa Timsahları veut te faire passer un cap.
-3891|Une offre de Galata Aslanları ! Prêt à écrire l'histoire avec ce maillot ?
-3894|Après la coupe d'Europe remportée, l'Inter Milanello frappe à ta porte.
-3895|C'est une année de Coupe du monde. Ton pays a une génération dorée et tu en es comme le capitaine.
-3898|Galata Aslanları te rappelle à la maison.
 3899|La Tortue
 3900|Tu as grandi à Bondy, en banlieue parisienne. Les murs de ta chambre sont couverts de posters de tes idoles. Les Monaco Princes t'ont pris dans leur centre de formation à 14 ans : ta vitesse est incroyable.
 3904|Le Paris Saint-Gilles a fait une offre record pour te ramener à la maison.
@@ -348,8 +341,6 @@
 3941|Jours entre les matchs : entraînement, tactique, interviews, événements au stage
 3942|Tirs au but en phase finale : tu tires le tien
 3943|Soulier d'or, Ballon d'or et prix du meilleur jeune joueur
-3944|7 carrières fictives inspirées des légendes du football : commence l'année de leur naissance, dans leur centre de formation et avec leur talent.
-3945|7 histoires de légendes : Argentine, Portugal, Brésil, France et Turquie
 3946|Transferts scénarisés vers les clubs de la légende et tournants
 3947|Un talent spécial dès le départ et des attributs fidèles au style de la légende
 3948|Objectifs basés sur le palmarès de la légende et comparaison à la retraite
@@ -362,4 +353,6 @@
 3957|Remporte le Ballon d'or
 3958|Remporte la Coupe des champions européens
 3959|Remporte la Coupe de la Fédération européenne
+4035|6 histoires de légendes : Argentine, Portugal, Brésil et France
+4036|6 carrières fictives inspirées des légendes du football : commence l'année de leur naissance, dans leur centre de formation et avec leur talent.
 4034|Tes adversaires de groupe :

@@ -290,13 +290,6 @@
 3880|A Inter Milanello fez uma proposta recorde mundial.
 3881|Uma lesão grave no joelho! Os médicos preveem uma longa recuperação.
 3884|Depois da sua volta espetacular, o Real Madrigal quer te juntar aos Galácticos.
-3885|O Touro
-3886|Você nasceu em Adapazarı. Com sua altura e seus cabeceios, se destaca de todos no bairro. A base do Sakarya Ağaçları te contratou aos 13 anos.
-3890|O Bursa Timsahları quer te levar ao próximo nível.
-3891|Proposta do Galata Aslanları! Pronto para fazer história com esta camisa?
-3894|Depois da taça que vocês ganharam na Europa, a Inter Milanello bate à sua porta.
-3895|É ano de Copa do Mundo. Seu país tem uma geração de ouro e você é como o capitão dela.
-3898|O Galata Aslanları te chama de volta para casa.
 3899|A Tartaruga
 3900|Você cresceu em Bondy, no subúrbio de Paris. As paredes do seu quarto estão cheias de pôsteres dos seus ídolos. O Monaco Princes te levou para a base aos 14 anos: sua velocidade é inacreditável.
 3904|O Paris Saint-Gilles fez uma proposta recorde para você voltar para casa.
@@ -348,8 +341,6 @@
 3941|Dias entre os jogos: treinos, tática, entrevistas, acontecimentos na concentração
 3942|Disputas de pênaltis no mata-mata: você bate o seu
 3943|Prêmios Chuteira de Ouro, Bola de Ouro e Melhor Jogador Jovem
-3944|7 carreiras fictícias inspiradas em lendas do futebol: comece no ano em que nasceram, na base delas e com o talento delas.
-3945|7 histórias de lendas: da Argentina, Portugal, Brasil, França e Turquia
 3946|Transferências da história vindas dos clubes da lenda e momentos decisivos
 3947|Uma habilidade especial desde o início e atributos no estilo da lenda
 3948|Objetivos baseados nas conquistas da lenda e comparação na aposentadoria
@@ -362,4 +353,6 @@
 3957|Ganhe a Bola de Ouro
 3958|Ganhe a Taça dos Campeões Europeus
 3959|Ganhe a Taça da Federação Europeia
+4035|6 histórias de lendas: da Argentina, Portugal, Brasil e França
+4036|6 carreiras fictícias inspiradas em lendas do futebol: comece no ano em que nasceram, na base delas e com o talento delas.
 4034|Seus adversários de grupo:

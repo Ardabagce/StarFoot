@@ -290,13 +290,6 @@
 3880|El Inter Milanello hizo una oferta récord mundial.
 3881|¡Una grave lesión de rodilla! Los médicos prevén una larga recuperación.
 3884|Tras tu espectacular regreso, el Real Madrigal quiere sumarte a sus Galácticos.
-3885|El Toro
-3886|Naciste en Adapazarı. Con tu altura y tus remates de cabeza destacas entre todos en el barrio. La cantera del Sakarya Ağaçları te fichó con 13 años.
-3890|El Bursa Timsahları quiere llevarte al siguiente nivel.
-3891|¡Oferta del Galata Aslanları! ¿Listo para hacer historia con esta camiseta?
-3894|Tras la copa que ganasteis en Europa, el Inter Milanello llama a tu puerta.
-3895|Es año de Mundial. Tu país tiene una generación de oro y tú eres como su capitán.
-3898|El Galata Aslanları te llama de vuelta a casa.
 3899|La Tortuga
 3900|Creciste en Bondy, en las afueras de París. Las paredes de tu habitación están llenas de pósteres de tus ídolos. El Monaco Princes te fichó para su academia con 14 años: tu velocidad es increíble.
 3904|El Paris Saint-Gilles hizo una oferta récord para que vuelvas a casa.
@@ -348,8 +341,6 @@
 3941|Días entre partidos: entrenamientos, táctica, entrevistas, sucesos en la concentración
 3942|Tandas de penaltis en eliminatorias: tú tiras el tuyo
 3943|Premios Bota de Oro, Balón de Oro y Mejor Jugador Joven
-3944|7 carreras ficticias inspiradas en leyendas del fútbol: empieza en su año de nacimiento, en su cantera y con su talento.
-3945|7 historias de leyenda: de Argentina, Portugal, Brasil, Francia y Turquía
 3946|Fichajes de la historia desde los clubes de la leyenda y momentos clave
 3947|Una habilidad especial desde el inicio y atributos acordes al estilo de la leyenda
 3948|Objetivos según los logros de la leyenda y comparación al retirarte
@@ -362,4 +353,6 @@
 3957|Gana el Balón de Oro
 3958|Gana la Copa de Campeones de Europa
 3959|Gana la Copa de la Federación Europea
+4035|6 historias de leyenda: de Argentina, Portugal, Brasil y Francia
+4036|6 carreras ficticias inspiradas en leyendas del fútbol: empieza en su año de nacimiento, en su cantera y con su talento.
 4034|Tus rivales de grupo:

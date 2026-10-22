@@ -50,7 +50,6 @@ const LEGENDS = [
   ['Rai Giggz', 'MF', 88, 'XX', 1973, 'MUN'],
   ['Ronaldu Nazario', 'FW', 96, 'BRA', 1976, 'INT'],
   ['Andriy Şevçenko', 'FW', 91, 'XX', 1976, 'MIL'],
-  ['Hakan Şükürlü', 'FW', 87, 'TUR', 1971, 'GAL'],
   ['Rüştü Reçberoğlu', 'GK', 86, 'TUR', 1973, 'FNK'],
   ['Sergen Yalçınkaya', 'MF', 84, 'TUR', 1972, 'BJK'],
   ['Tugay Kerimli', 'MF', 84, 'TUR', 1970, 'GAL'],

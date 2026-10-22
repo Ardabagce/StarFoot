@@ -290,13 +290,6 @@
 3880|Inter Milanello hat ein Weltrekord-Angebot gemacht.
 3881|Eine schwere Knieverletzung! Die Ärzte rechnen mit einer langen Genesung.
 3884|Nach deinem fantastischen Comeback will Real Madrigal dich zu seinen Galácticos holen.
-3885|Der Stier
-3886|Du wurdest in Adapazarı geboren. Mit deiner Größe und deinen Kopfbällen fällst du in der Nachbarschaft auf. Die Akademie von Sakarya Ağaçları holte dich mit 13.
-3890|Bursa Timsahları will dich auf das nächste Level bringen.
-3891|Ein Angebot von Galata Aslanları! Bereit, in diesem Trikot Geschichte zu schreiben?
-3894|Nach dem Europapokal, den ihr gewonnen habt, klopft Inter Milanello an.
-3895|Es ist WM-Jahr. Dein Land hat eine goldene Generation, und du bist so etwas wie ihr Kapitän.
-3898|Galata Aslanları ruft dich zurück nach Hause.
 3899|Die Schildkröte
 3900|Du bist in Bondy, einem Pariser Vorort, aufgewachsen. Die Wände deines Zimmers hängen voller Poster deiner Idole. Monaco Princes holte dich mit 14 in die Akademie: dein Tempo ist unglaublich.
 3904|Paris Saint-Gilles hat ein Rekordangebot gemacht, um dich nach Hause zu holen.
@@ -348,8 +341,6 @@
 3941|Tage zwischen den Spielen: Training, Taktik, Interviews, Ereignisse im Lager
 3942|Elfmeterschießen in der K.-o.-Runde: Du schießt selbst
 3943|Goldener Schuh, Goldener Ball und Auszeichnung als bester junger Spieler
-3944|7 fiktive Karrieren, inspiriert von Fußballlegenden: Starte in ihrem Geburtsjahr, in ihrer Akademie und mit ihrem Talent.
-3945|7 Legendengeschichten: aus Argentinien, Portugal, Brasilien, Frankreich und der Türkei
 3946|Story-Transfers zu den Vereinen der Legende und Wendepunkte
 3947|Eine Spezialfähigkeit von Beginn an und Werte im Stil der Legende
 3948|Ziele nach den Erfolgen der Legende und ein Vergleich beim Karriereende
@@ -362,4 +353,6 @@
 3957|Gewinne den Goldenen Ball
 3958|Gewinne den Europapokal der Landesmeister
 3959|Gewinne den Europäischen Verbandspokal
+4035|6 Legendengeschichten: aus Argentinien, Portugal, Brasilien und Frankreich
+4036|6 fiktive Karrieren, inspiriert von Fußballlegenden: Starte in ihrem Geburtsjahr, in ihrer Akademie und mit ihrem Talent.
 4034|Deine Gruppengegner:

@@ -41,7 +41,9 @@ const Game = {
   },
   load(i = Game.slot) {
     try {
-      const raw = localStorage.getItem(Game.key(i));
+      let raw = localStorage.getItem(Game.key(i));
+      // oyundan çıkarılan isimler eski kayıtlarda da görünmesin
+      if (raw && raw.includes('Hakan \u015e\u00fck\u00fcrl\u00fc')) raw = raw.split('Hakan \u015e\u00fck\u00fcrl\u00fc').join('Haluk Sar\u0131kaya');
       return raw ? JSON.parse(raw, Game.unpackRoster) : null;
     } catch (e) { return null; }
   },

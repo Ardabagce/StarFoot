@@ -78,21 +78,6 @@ const LP_LIST = [
     goals: [['wc', 2], ['ballon', 2], ['league', 2], ['season', 40], ['goals', 350]],
   },
   {
-    id: 'hakan', name: 'Hakan', surname: 'Şükürlü', nick: 'Boğa', nat: 'TUR', pos: 'FW', foot: 'R', by: 1971,
-    year: 1984, age: 13, club: 'SAK', traits: ['head'],
-    shape: { heading: 16, shooting: 12, physical: 10, technique: 2, stamina: 2, pace: -2, dribbling: -4, passing: -2, defending: -10 },
-    intro: 'Adapazarı\'nda doğdun. Uzun boyun ve kafa vuruşlarınla mahallede herkesten farklısın. Sakarya Ağaçları altyapısı seni 13 yaşında kadrosuna kattı.',
-    era: '1984 · Sakarya Ağaçları altyapısı',
-    story: [
-      { y: 1989, move: 'BUR', t: 'Bursa Timsahları seni bir üst seviyeye taşımak istiyor.' },
-      { y: 1992, move: 'GAL', t: 'Galata Aslanları\'ndan teklif! Bu formayla tarih yazmaya hazır mısın?' },
-      { y: 2000, move: 'INT', t: 'Avrupa\'da kazandığınız kupanın ardından Inter Milanello kapında.' },
-      { y: 2002, t: 'Dünya Kupası yılı. Ülkenin dev bir kuşağı var, sen de onun kaptanı gibisin.', fx: (p) => { Player.addMorale(p, 8); Player.addRel(p, 'fans', 6); } },
-      { y: 2003, move: 'GAL', t: 'Galata Aslanları seni evine geri çağırıyor.' },
-    ],
-    goals: [['league', 6], ['uel', 1], ['goals', 300], ['intl', 40]],
-  },
-  {
     id: 'mbappo', name: 'Kylian', surname: 'Mbappo', nick: 'Kaplumbağa', nat: 'FRA', pos: 'FW', foot: 'R', by: 1998,
     year: 2012, age: 14, club: 'ASM', traits: ['fin'],
     shape: { pace: 18, shooting: 12, dribbling: 10, technique: 5, physical: 3, stamina: 2, passing: 0, heading: -6, defending: -14 },
@@ -170,7 +155,7 @@ const LPath = {
     p.traits = x.traits.slice();
     p.fame = 4;
     p.rel.coach = 58;
-    p.shirt = { mezzi: 30, ronalda: 28, ronaldinyo: 10, zidan: 10, nazario: 9, hakan: 9, mbappo: 29 }[id] || p.shirt;
+    p.shirt = { mezzi: 30, ronalda: 28, ronaldinyo: 10, zidan: 10, nazario: 9, mbappo: 29 }[id] || p.shirt;
     s.lpath = { id, seen: [], done: {}, skipped: 0, taken: 0 };
     s.news = [];
     Game.news(`${x.era}: ${x.name} ${x.surname} hikâyesine başladı. "${x.nick}" lakabını hak edecek mi?`, 'good');
