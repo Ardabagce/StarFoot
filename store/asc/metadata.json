@@ -166,5 +166,127 @@
     "インタースティシャル広告なし、広告なしで報酬"
    ]
   }
+ },
+ "packs": {
+  "starfoot_wc": {
+   "refName": "World Cup Dream",
+   "price": "2.99",
+   "screenshot": "store/packs/wc-review.png",
+   "reviewNote": "Non-consumable, one-time purchase that unlocks the \"World Cup Dream\" game mode. On the title screen tap the red \"World Cup Dream\" button below the career slots, then \"Buy\". \"Restore purchases\" is in the same window. After purchase the mode opens: pick a country and play the tournament.",
+   "locales": {
+    "tr": [
+     "Dünya Kupası Rüyası",
+     "Milli takımınla tek bir Dünya Kupası modu"
+    ],
+    "en-US": [
+     "World Cup Dream",
+     "A World Cup-only mode with your nation"
+    ],
+    "en-GB": [
+     "World Cup Dream",
+     "A World Cup-only mode with your nation"
+    ],
+    "es-ES": [
+     "Sueño Mundialista",
+     "Modo Mundial con tu selección"
+    ],
+    "es-MX": [
+     "Sueño Mundialista",
+     "Modo Mundial con tu selección"
+    ],
+    "pt-BR": [
+     "Sonho da Copa",
+     "Modo Copa do Mundo com sua seleção"
+    ],
+    "pt-PT": [
+     "Sonho do Mundial",
+     "Modo Mundial com a tua seleção"
+    ],
+    "de-DE": [
+     "WM-Traum",
+     "WM-Modus mit deiner Nationalmannschaft"
+    ],
+    "fr-FR": [
+     "Rêve de Coupe du monde",
+     "Mode Coupe du monde avec ta sélection"
+    ],
+    "it": [
+     "Sogno Mondiale",
+     "Modalità Mondiale con la tua nazionale"
+    ],
+    "id": [
+     "Mimpi Piala Dunia",
+     "Mode Piala Dunia bersama timnasmu"
+    ],
+    "ar-SA": [
+     "حلم كأس العالم",
+     "وضع كأس العالم مع منتخب بلدك"
+    ],
+    "ja": [
+     "ワールドカップの夢",
+     "代表チームで挑むワールドカップモード"
+    ]
+   }
+  },
+  "starfoot_legends": {
+   "refName": "In the Footsteps of Legends",
+   "price": "2.99",
+   "screenshot": "store/packs/legends-review.png",
+   "reviewNote": "Non-consumable, one-time purchase that unlocks the \"In the Footsteps of Legends\" game mode (7 fictional careers inspired by football history; all names and clubs are fictional). On the title screen tap the gold \"In the Footsteps of Legends\" button below the career slots, then \"Buy\". \"Restore purchases\" is in the same window.",
+   "locales": {
+    "tr": [
+     "Efsanelerin İzinde",
+     "Efsanelerden esinlenen 7 kurgusal kariyer"
+    ],
+    "en-US": [
+     "In the Footsteps of Legends",
+     "7 fictional careers inspired by legends"
+    ],
+    "en-GB": [
+     "In the Footsteps of Legends",
+     "7 fictional careers inspired by legends"
+    ],
+    "es-ES": [
+     "Tras los pasos de leyendas",
+     "7 carreras ficticias inspiradas en leyendas"
+    ],
+    "es-MX": [
+     "Tras los pasos de leyendas",
+     "7 carreras ficticias inspiradas en leyendas"
+    ],
+    "pt-BR": [
+     "Nos passos das lendas",
+     "7 carreiras fictícias inspiradas em lendas"
+    ],
+    "pt-PT": [
+     "Nos passos das lendas",
+     "7 carreiras fictícias inspiradas em lendas"
+    ],
+    "de-DE": [
+     "Auf den Spuren der Legenden",
+     "7 fiktive Karrieren nach großen Legenden"
+    ],
+    "fr-FR": [
+     "Sur les traces des légendes",
+     "7 carrières fictives inspirées des légendes"
+    ],
+    "it": [
+     "Sulle orme delle leggende",
+     "7 carriere di fantasia ispirate alle leggende"
+    ],
+    "id": [
+     "Jejak Para Legenda",
+     "7 karier fiktif terinspirasi para legenda"
+    ],
+    "ar-SA": [
+     "على خطى الأساطير",
+     "7 مسيرات خيالية مستوحاة من الأساطير"
+    ],
+    "ja": [
+     "レジェンドの軌跡",
+     "伝説の選手に着想を得た7つの架空キャリア"
+    ]
+   }
+  }
  }
 }

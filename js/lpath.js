@@ -109,9 +109,9 @@ const LP_LIST = [
 
 // hedef türleri: [metin, ilerleme]
 const LP_GOALS = {
-  ballon: { t: (n) => `${n} kez Altın Top kazan`, v: (p) => p.trophies.filter((t) => /Altın Top/.test(t)).length },
-  ucl: { t: (n) => `${n} kez Avrupa Şampiyonlar Kupası kazan`, v: (p) => p.trophies.filter((t) => /Avrupa Şampiyonlar Kupası Şampiyonu/.test(t)).length },
-  uel: { t: (n) => `${n} kez Avrupa Federasyon Kupası kazan`, v: (p) => p.trophies.filter((t) => /Avrupa Federasyon Kupası Şampiyonu/.test(t)).length },
+  ballon: { t: (n) => (n > 1 ? `${n} kez Altın Top kazan` : 'Altın Top kazan'), v: (p) => p.trophies.filter((t) => /Altın Top/.test(t)).length },
+  ucl: { t: (n) => (n > 1 ? `${n} kez Avrupa Şampiyonlar Kupası kazan` : 'Avrupa Şampiyonlar Kupası kazan'), v: (p) => p.trophies.filter((t) => /Avrupa Şampiyonlar Kupası Şampiyonu/.test(t)).length },
+  uel: { t: (n) => (n > 1 ? `${n} kez Avrupa Federasyon Kupası kazan` : 'Avrupa Federasyon Kupası kazan'), v: (p) => p.trophies.filter((t) => /Avrupa Federasyon Kupası Şampiyonu/.test(t)).length },
   wc: { t: (n) => (n > 1 ? `${n} kez Dünya Kupası kazan` : 'Dünya Kupası kazan'), v: (p) => p.trophies.filter((t) => /Dünya Kupası Şampiyonu/.test(t)).length },
   euro: { t: () => 'Avrupa Şampiyonası kazan', v: (p) => p.trophies.filter((t) => /Avrupa Şampiyonası Şampiyonu/.test(t)).length },
   league: { t: (n) => `${n} lig şampiyonluğu yaşa`, v: (p) => p.trophies.filter((t) => /Lig(i)? Şampiyonu/.test(t) && !/U1\d|U2\d/.test(t)).length },
@@ -134,7 +134,7 @@ const LPath = {
       <p class="muted">Efsanenin doğduğu yılda, onun altyapısında ve onun yetenekleriyle başla. Hikâyesindeki dönüm noktaları seni bekliyor; aynı yoldan mı gideceksin, yoksa kendi efsaneni mi yazacaksın?</p>
       <div class="lp-list">${LP_LIST.map((x) => `<button type="button" class="lp-r ${b[x.id] ? 'got' : ''}" data-lp="${x.id}">
         ${UI.shirt({ id: x.nat, c1: (NAT_COLORS[x.nat] || ['#1d3c8f'])[0], c2: (NAT_COLORS[x.nat] || ['#1d3c8f', '#fff'])[1] }, 'big')}
-        <span><b>${U.esc(x.name + ' ' + x.surname)}</b><em>"${U.esc(x.nick)}" · ${U.esc(natName(x.nat))} · ${POSITIONS[x.pos].l}</em><small>${U.esc(x.era)}</small>${b[x.id] ? `<small class="lp-best">En iyi uyum: ${b[x.id]}%</small>` : ''}</span></button>`).join('')}</div>
+        <span><b>${U.esc(x.name + ' ' + x.surname)}</b><em>${U.esc(x.nick)} · ${U.esc(natName(x.nat))} · ${POSITIONS[x.pos].l}</em><small>${U.esc(x.era)}</small>${b[x.id] ? `<small class="lp-best">En iyi uyum: ${b[x.id]}%</small>` : ''}</span></button>`).join('')}</div>
       <p class="muted lp-note">Tüm isimler ve kulüpler kurgusaldır; gerçek kişilerle bağlantılı değildir.</p>`, [{ t: 'Kapat', cls: 'btn-ghost' }], { wide: true });
     U.$$('[data-lp]', m).forEach((el) => (el.onclick = () => LPath.ask(el.dataset.lp)));
   },
@@ -189,6 +189,9 @@ const LPath = {
     const s = Game.state, x = LPath.cur();
     if (!x) return;
     LPath.check();
+    // efsanevi yetenek: genç yaşta güçlü yanları daha hızlı gelişir
+    const p = s.player;
+    if (p.age <= 24) STATS.forEach((st) => { const sh = x.shape[st.k] || 0; p.stats[st.k] = Math.min(99, p.stats[st.k] + (sh >= 8 ? 2 : sh >= 0 ? 1 : 0)); });
     const ev = x.story.find((e) => e.y === s.season.year && !e.move && !s.lpath.seen.includes(e.y + ':e'));
     if (ev) {
       s.lpath.seen.push(ev.y + ':e');

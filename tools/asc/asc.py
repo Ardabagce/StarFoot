@@ -276,6 +276,98 @@ def iap_setup(asc, app_id, cfg):
             print(f'   ! {loc}: {err}')
 
 
+def pack_setup(asc, app_id, packs):
+    # İçerik paketleri: yoksa oluşturur; ad/açıklama, fiyat, ülkeler ve inceleme görselini tamamlar (tekrar çalıştırılabilir)
+    def safe(path, **params):
+        try:
+            return asc.get(path, **params)
+        except RuntimeError as err:
+            return {'_err': str(err)}
+    items = {x['attributes'].get('productId'): x for x in asc.get(f'/v1/apps/{app_id}/inAppPurchasesV2', limit=50)['data']}
+    terr = None
+    for pid, cfg in packs.items():
+        print(f'• {pid}')
+        if pid in items:
+            iid = items[pid]['id']
+            print(f"   zaten var (durum {items[pid]['attributes'].get('state')})")
+            asc.req('PATCH', f'/v2/inAppPurchases/{iid}', write=True, body={'data': {'type': 'inAppPurchases', 'id': iid, 'attributes': {'reviewNote': cfg['reviewNote']}}})
+        else:
+            iid = asc.req('POST', '/v2/inAppPurchases', write=True, body={'data': {'type': 'inAppPurchases', 'attributes': {
+                'name': cfg['refName'], 'productId': pid, 'inAppPurchaseType': 'NON_CONSUMABLE', 'reviewNote': cfg['reviewNote'], 'familySharable': False},
+                'relationships': {'app': {'data': {'type': 'apps', 'id': app_id}}}}})['data']['id']
+            print('   oluşturuldu')
+        if iid == 'DRY':
+            continue
+        # diller
+        ex = {l['attributes']['locale']: l['id'] for l in asc.get(f'/v2/inAppPurchases/{iid}/inAppPurchaseLocalizations', limit=50)['data']}
+        for loc, (name, desc) in cfg['locales'].items():
+            try:
+                if loc in ex:
+                    asc.req('PATCH', f'/v1/inAppPurchaseLocalizations/{ex[loc]}', write=True, body={'data': {'type': 'inAppPurchaseLocalizations', 'id': ex[loc], 'attributes': {'name': name, 'description': desc}}})
+                else:
+                    asc.req('POST', '/v1/inAppPurchaseLocalizations', write=True, body={'data': {'type': 'inAppPurchaseLocalizations', 'attributes': {'locale': loc, 'name': name, 'description': desc}, 'relationships': {'inAppPurchaseV2': {'data': {'type': 'inAppPurchases', 'id': iid}}}}})
+            except RuntimeError as err:
+                print(f'   ! {loc}: {err}')
+        print(f"   {len(cfg['locales'])} dil tamam")
+        # fiyat (ABD tabanlı, diğer ülkeler Apple'ın eşdeğer fiyatı)
+        sch = safe(f'/v2/inAppPurchases/{iid}/iapPriceSchedule')
+        if not sch.get('data'):
+            pts, nxt = [], f'/v2/inAppPurchases/{iid}/pricePoints'
+            params = {'filter[territory]': 'USA', 'limit': 200}
+            while nxt:
+                r = asc.get(nxt, **params)
+                pts += r['data']
+                nl = (r.get('links') or {}).get('next')
+                nxt, params = (nl.replace(API, ''), {}) if nl else (None, {})
+            pp = next((x for x in pts if x['attributes'].get('customerPrice') == cfg['price']), None)
+            if not pp:
+                print(f"   ! {cfg['price']} USD fiyat noktası bulunamadı")
+            else:
+                asc.req('POST', '/v1/inAppPurchasePriceSchedules', write=True, body={
+                    'data': {'type': 'inAppPurchasePriceSchedules', 'relationships': {
+                        'inAppPurchase': {'data': {'type': 'inAppPurchases', 'id': iid}},
+                        'baseTerritory': {'data': {'type': 'territories', 'id': 'USA'}},
+                        'manualPrices': {'data': [{'type': 'inAppPurchasePrices', 'id': '${p1}'}]}}},
+                    'included': [{'type': 'inAppPurchasePrices', 'id': '${p1}', 'attributes': {'startDate': None},
+                                  'relationships': {'inAppPurchaseV2': {'data': {'type': 'inAppPurchases', 'id': iid}},
+                                                    'inAppPurchasePricePoint': {'data': {'type': 'inAppPurchasePricePoints', 'id': pp['id']}}}}]})
+                print(f"   fiyat: {cfg['price']} USD")
+        else:
+            print('   fiyat zaten var')
+        # satışta olduğu ülkeler: hepsi
+        av = safe(f'/v2/inAppPurchases/{iid}/inAppPurchaseAvailability')
+        if not av.get('data'):
+            if terr is None:
+                terr = [t['id'] for t in asc.get('/v1/territories', limit=200)['data']]
+            asc.req('POST', '/v1/inAppPurchaseAvailabilities', write=True, body={'data': {'type': 'inAppPurchaseAvailabilities',
+                'attributes': {'availableInNewTerritories': True},
+                'relationships': {'inAppPurchase': {'data': {'type': 'inAppPurchases', 'id': iid}},
+                                  'availableTerritories': {'data': [{'type': 'territories', 'id': t} for t in terr]}}}})
+            print(f'   {len(terr)} ülkede satışta')
+        else:
+            print('   ülkeler zaten ayarlı')
+        # inceleme görseli
+        shot = safe(f'/v2/inAppPurchases/{iid}/appStoreReviewScreenshot').get('data')
+        if shot and ((shot['attributes'].get('assetDeliveryState') or {}).get('state')) == 'COMPLETE':
+            print('   inceleme görseli zaten var')
+        else:
+            if shot:
+                asc.req('DELETE', f"/v1/inAppPurchaseAppStoreReviewScreenshots/{shot['id']}", write=True)
+            f = ROOT / cfg['screenshot']
+            blob = f.read_bytes()
+            d = asc.req('POST', '/v1/inAppPurchaseAppStoreReviewScreenshots', write=True, body={'data': {
+                'type': 'inAppPurchaseAppStoreReviewScreenshots', 'attributes': {'fileName': f.name, 'fileSize': len(blob)},
+                'relationships': {'inAppPurchaseV2': {'data': {'type': 'inAppPurchases', 'id': iid}}}}})['data']
+            for op in d['attributes']['uploadOperations']:
+                part = blob[op['offset']:op['offset'] + op['length']]
+                r = requests.request(op['method'], op['url'], data=part, timeout=120, headers={h['name']: h['value'] for h in op.get('requestHeaders', [])})
+                r.raise_for_status()
+            asc.req('PATCH', f"/v1/inAppPurchaseAppStoreReviewScreenshots/{d['id']}", write=True, body={'data': {
+                'type': 'inAppPurchaseAppStoreReviewScreenshots', 'id': d['id'],
+                'attributes': {'uploaded': True, 'sourceFileChecksum': hashlib.md5(blob).hexdigest()}}})
+            print('   inceleme görseli yüklendi')
+
+
 def iap_report(asc, app_id):
     # yalnız okur: Premium satın alma ürününün durumu, dilleri, fiyatı, inceleme görseli ve ülkeleri
     def safe(path, **params):
@@ -326,6 +418,7 @@ def main():
     ap.add_argument('--remove-locales', default='')
     ap.add_argument('--iap', action='store_true')
     ap.add_argument('--iap-setup', action='store_true')
+    ap.add_argument('--packs', action='store_true')
     a = ap.parse_args()
     meta = json.load(open(a.metadata, encoding='utf-8'))
     asc = ASC(a.dry_run)
@@ -341,6 +434,9 @@ def main():
         return audit(asc, app['id'], meta)
     if a.iap_setup:
         iap_setup(asc, app['id'], meta.get('premium') or {})
+        return iap_report(asc, app['id'])
+    if a.packs:
+        pack_setup(asc, app['id'], meta.get('packs') or {})
         return iap_report(asc, app['id'])
     if a.iap:
         return iap_report(asc, app['id'])

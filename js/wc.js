@@ -73,7 +73,7 @@ const WC_ACTS = [
 
 // Kamp ve turnuva olayları
 const WC_EVENTS = [
-  { id: 'captain', t: 'Takım kaptanı {cap} antrenman sonrası yanına geldi: "Ne zaman istersen yanındayım, ilk turnuva herkes için zor."', o: [
+  { id: 'captain', t: 'Takım kaptanı {} antrenman sonrası yanına geldi: "Ne zaman istersen yanındayım, ilk turnuva herkes için zor."', o: [
     { t: 'Tavsiyelerini dinle', fx: (p) => { Player.addRel(p, 'team', 5); Player.addMorale(p, 5); return 'Kaptanla aranızda güçlü bir bağ oluştu.'; } },
     { t: 'Teşekkür et, kendi işine odaklan', fx: (p) => { Player.addRel(p, 'coach', 2); return 'Odaklı tavrın hocanın gözünden kaçmadı.'; } },
   ] },
@@ -89,7 +89,7 @@ const WC_EVENTS = [
     { t: 'Doktora git, bir gün dinlen', fx: (p, s) => { s.wc.injDays = Math.max(s.wc.injDays || 0, 1); Player.addEnergy(p, 8); return 'Doktor bir gün dinlenmeni istedi. Ciddi bir şey yok.'; } },
     { t: 'Önemsiz, devam et', fx: (p, s) => { if (U.chance(0.35)) { s.wc.injDays = 3; return 'Kötü haber: ağrı geçmedi, 3 gün sahalardan uzaksın.'; } Player.addRel(p, 'coach', 2); return 'Dişini sıktın ve antrenmanı tamamladın. Hoca etkilendi.'; } },
   ] },
-  { id: 'star', t: 'Takımın yıldızı {star} serbest vuruş çalışmasına seni de çağırdı.', o: [
+  { id: 'star', t: 'Takımın yıldızı {} serbest vuruş çalışmasına seni de çağırdı.', o: [
     { t: 'Hemen katıl', fx: (p) => { p.stats.technique = Math.min(99, p.stats.technique + 1); p.stats.shooting = Math.min(99, p.stats.shooting + 1); Player.addEnergy(p, -6); return 'Ondan çok şey öğrendin: Teknik +1, Şut +1.'; } },
     { t: 'Yorgunum, başka sefere', fx: (p) => { Player.addEnergy(p, 5); return 'Dinlendin ama güzel bir fırsatı kaçırdın.'; } },
   ] },
@@ -105,7 +105,7 @@ const WC_EVENTS = [
     { t: 'Takım için her şeyi yapacağım', fx: (p) => { Player.addRel(p, 'coach', 6); return 'Hoca gülümsedi: "Tam da bunu duymak istiyordum."'; } },
     { t: 'İlk 11\'de oynamak istiyorum', fx: (p) => { Player.addRel(p, 'coach', U.chance(0.5) ? 4 : -3); Player.addMorale(p, 3); return 'Hoca isteğini not etti. Sahada kanıtlaman gerek.'; } },
   ] },
-  { id: 'rivalstar', t: 'Bir sonraki rakibin yıldızı {opp} röportajında seni hiç tanımadığını söyledi.', o: [
+  { id: 'rivalstar', t: 'Bir sonraki rakibin yıldızı {} röportajında seni hiç tanımadığını söyledi.', o: [
     { t: 'Maçta tanıştırırız', fx: (p) => { Player.addMorale(p, 6); Player.addFame(p, 0.6); return 'Sözlerin manşet oldu. Şimdi sahada kanıtlama zamanı.'; } },
     { t: 'Saygı duyuyorum', fx: (p) => { Player.addRel(p, 'coach', 2); return 'Sakin tavrın takdir topladı.'; } },
   ] },
@@ -215,10 +215,10 @@ const WC = {
     Game.save();
     WC.enter();
     Game.modal(`<div class="ev-tag">${WC.YEAR} Dünya Kupası</div><h2>Kampa hoş geldin!</h2>
-      <p><b>${U.esc(nat.name)}</b> hocası seni ilk kez A takım kampına çağırdı. Turnuvadan önce <b>6 günlük hazırlık kampı</b> ve <b>2 hazırlık maçı</b> var.</p>
+      <p>${U.esc(nat.name)} hocası seni ilk kez A takım kampına çağırdı. Turnuvadan önce 6 günlük hazırlık kampı ve 2 hazırlık maçı var.</p>
       <ul class="tips">
-        <li>Her gün <b>2 aksiyon hakkın</b> var: antrenman, taktik, dinlenme, takımla vakit geçirmek...</li>
-        <li><b>Hoca güveni</b> yüksek ve formun iyiyse ilk 11'de oynarsın. Yedekteysen oyuna sonradan girebilirsin.</li>
+        <li>Her gün 2 aksiyon hakkın var: antrenman, taktik, dinlenme, takımla vakit geçirmek...</li>
+        <li>Hoca güveni yüksek ve formun iyiyse ilk 11'de oynarsın. Yedekteysen oyuna sonradan girebilirsin.</li>
         <li>Enerjini iyi yönet: turnuvada maçlar arası sadece birkaç gün var.</li>
         <li>Grupta iki sarı kart bir maç ceza demek. Eleme turlarında beraberlik penaltılarla biter ve penaltını sen atarsın!</li>
       </ul>`, [{ t: 'Başlayalım!', cls: 'btn-big' }], { wide: true });
@@ -448,7 +448,7 @@ const WC = {
     const e = U.pick(pool);
     used.push(e.id);
     const nx = WC.nextOpp();
-    const txt = e.t.replace('{cap}', WC.team(w.nat).roster[0].n).replace('{star}', WC.team(w.nat).roster[0].n).replace('{opp}', nx ? WC.team(nx).roster[0].n : '');
+    const txt = e.t.replace('{}', e.id === 'rivalstar' ? (nx ? WC.team(nx).roster[0].n : '') : WC.team(w.nat).roster[0].n);
     const m = Game.modal(`<div class="ev-tag">Kamp hayatı</div><p>${U.esc(txt)}</p>`, e.o.map((o) => ({ t: o.t, fn: () => {
       const r = o.fx(p, s);
       Game.toast(r, 'info');
@@ -541,16 +541,16 @@ const WC = {
       w.fx.forEach((gfx, g) => { if (g !== w.myG) gfx[w.md].forEach(([h, a]) => { const r = WC.sim(h, a, false); w.gl.push({ g, h, a, hs: r.hs, as: r.as }); }); });
       w.md++;
       const rk = WC.table(w.myG).findIndex((r) => r.id === w.nat) + 1;
-      Game.news(`${stage}: ${me.name} ${gf}-${ga} ${them.name}. ${WC_GROUPS[w.myG]} Grubu'nda ${rk}. sıradayız.`, gf > ga ? 'good' : gf < ga ? 'bad' : '');
+      Game.news(`Grup maçı: ${me.name} ${gf}-${ga} ${them.name}. ${WC_GROUPS[w.myG]} Grubu'nda ${rk}. sıradayız.`, gf > ga ? 'good' : gf < ga ? 'bad' : '');
     } else {
       let won = gf > ga;
       let pensTxt = '';
       if (gf === ga) {
         const r = await WC.shootout(ctx, sum, me, them);
-        won = r.won; pensTxt = ` (penaltılar ${r.a}-${r.b})`;
+        won = r.won; pensTxt = ` Penaltılarda ${r.a}-${r.b}.`;
       }
       WC.koRound({ h: ctx.home.id, a: ctx.away.id, hs: sum.hs, as: sum.as, win: won ? w.nat : opp, pens: pensTxt ? true : null });
-      Game.news(`${stage}: ${me.name} ${gf}-${ga} ${them.name}${pensTxt}. ${won ? (w.ko.size === 1 ? 'DÜNYA ŞAMPİYONUYUZ!' : 'Tur atladık!') : 'Turnuvaya veda ettik.'}`, won ? 'good' : 'bad');
+      Game.news(`${stage}: ${me.name} ${gf}-${ga} ${them.name}.${pensTxt} ${won ? (w.ko.size === 1 ? 'DÜNYA ŞAMPİYONUYUZ!' : 'Tur atladık!') : 'Turnuvaya veda ettik.'}`, won ? 'good' : 'bad');
       if (!won) { w.elim = stage; w.result = w.log[w.log.length - 1].stage; }
     }
     WC.busy = false;
@@ -568,7 +568,7 @@ const WC = {
     w.yel = 0;
     if (!through) { w.elim = 'Grup Aşaması'; w.result = 'g'; Game.news(`${WC.natOf(w.nat).name} grubu ${pos}. sırada bitirdi ve turnuvaya veda etti.`, 'bad'); Game.save(); return WC.finish(); }
     Game.news(`${WC.natOf(w.nat).name} grubu ${pos}. sırada bitirdi ve Son 32'ye kaldı!`, 'good');
-    Game.modal(`<div class="ev-tag">Grup aşaması bitti</div><h2>Son 32'deyiz!</h2><p><b>${U.esc(WC.natOf(w.nat).name)}</b> grubu <b>${pos}.</b> sırada bitirdi. Rakibimiz: <b>${U.esc(WC.natOf(WC.nextOpp()).name)}</b>.</p><p class="muted">Bundan sonra kaybeden evine döner. Beraberlikte penaltılar!</p>`, [{ t: 'Devam', cls: 'btn-big', fn: () => WC.next() }]);
+    Game.modal(`<div class="ev-tag">Grup aşaması bitti</div><h2>Son 32'deyiz!</h2><p>${U.esc(WC.natOf(w.nat).name)} grubu ${pos}. sırada bitirdi. Rakibimiz: ${U.esc(WC.natOf(WC.nextOpp()).name)}.</p><p class="muted">Bundan sonra kaybeden evine döner. Beraberlikte penaltılar!</p>`, [{ t: 'Devam', cls: 'btn-big', fn: () => WC.next() }]);
   },
   // eleme turu: oyuncunun maçı + diğer eşleşmeler
   koRound(mine) {
@@ -657,13 +657,13 @@ const WC = {
     w.squadRole = role;
     const ovr = Player.overall(p, true), nr = WC.natOf(w.nat).rating;
     const txt = role === 'starter'
-      ? 'Hoca kamptaki performansından çok etkilendi: turnuvaya <b>ilk 11</b>\'de başlayacaksın!'
-      : 'Kadrodasın ama şimdilik <b>yedek</b> kulübesinde başlayacaksın. Oyuna girdiğin her dakikayı değerlendir, hocanın fikrini değiştir!';
+      ? 'Hoca kamptaki performansından çok etkilendi: turnuvaya ilk 11\'de başlayacaksın!'
+      : 'Kadrodasın ama şimdilik yedek kulübesinde başlayacaksın. Oyuna girdiğin her dakikayı değerlendir, hocanın fikrini değiştir!';
     Game.news(`${WC.natOf(w.nat).name} Dünya Kupası kadrosunu açıkladı: ${Player.fullName(p)} 26 kişilik kadroda!`, 'good');
     Social.post('daily', `Dünya Kupası kadrosundayım! Bu formayı giymek bir rüya.`, 2, Social.natOpts ? Social.natOpts() : undefined);
     Game.modal(`<div class="ev-tag">Kadro açıklandı</div><h2>26 kişilik kadrodasın!</h2><p>${txt}</p>
       <div class="ms-stats"><div class="mst"><i>${Icon('star')}</i><b>${ovr}</b><span>Gücün</span></div><div class="mst"><i>${Icon('shield')}</i><b>${nr}</b><span>Takım gücü</span></div><div class="mst"><i>${Icon('coach')}</i><b>${Math.round(p.rel.coach)}</b><span>Hoca güveni</span></div></div>
-      <p class="muted">Grup rakiplerin: ${w.groups[w.myG].filter((c) => c !== w.nat).map((c) => U.esc(WC.natOf(c).name)).join(', ')}</p>`, [{ t: 'Turnuva başlasın!', cls: 'btn-big', fn: () => WC.next() }], { wide: true });
+      <p class="muted">Grup rakiplerin:</p><div class="wc-grp">${w.groups[w.myG].filter((c) => c !== w.nat).map((c) => `<span>${UI.shirt(WC.team(c))}${U.esc(WC.natOf(c).name)}</span>`).join('')}</div>`, [{ t: 'Turnuva başlasın!', cls: 'btn-big', fn: () => WC.next() }], { wide: true });
   },
 
   // ---------- Turnuva sonu ----------
@@ -697,7 +697,7 @@ const WC = {
     WC.render();
     const show = () => {
       Game.modal(`<div class="ev-tag">${WC.YEAR} Dünya Kupası</div><h2>${won ? 'DÜNYA ŞAMPİYONUSUN!' : WC.stageText(result)}</h2>
-        <p>${won ? `<b>${U.esc(WC.natOf(w.nat).name)}</b> dünyanın zirvesinde! 18 yaşında tarih yazdın.` : `Şampiyon: <b>${U.esc(champ ? WC.natOf(champ).name : '-')}</b>. ${U.esc(WC.natOf(w.nat).name)} için yolculuk ${U.esc(WC.stageText(result))} aşamasında bitti.`}</p>
+        <p>${won ? `${U.esc(WC.natOf(w.nat).name)} dünyanın zirvesinde! 18 yaşında tarih yazdın.` : `${U.esc(WC.natOf(w.nat).name)} için yolculuk ${U.esc(WC.stageText(result))} aşamasında bitti.`}</p>${won ? '' : `<p>Şampiyon: <b>${U.esc(champ ? WC.natOf(champ).name : '-')}</b></p>`}
         <div class="ms-stats"><div class="mst"><i>${Icon('shield')}</i><b>${w.stats.apps}</b><span>Maç</span></div><div class="mst"><i>${Icon('ball')}</i><b>${w.stats.goals}</b><span>Gol</span></div><div class="mst"><i>${Icon('boot')}</i><b>${w.stats.assists}</b><span>Asist</span></div><div class="mst"><i>${Icon('star')}</i><b>${avg ? avg.toFixed(1) : '-'}</b><span>Ortalama</span></div></div>
         ${aw.length ? `<div class="lbl">Ödüller</div>${aw.map(([ic, t, d]) => `<div class="wc-aw">${Icon(ic)}<span><b>${t}</b><small>${d}</small></span></div>`).join('')}` : ''}
         <p class="muted">Gol kralı: ${U.esc(top.n || '-')} (${top.g} gol)</p>`, [{ t: 'Ana menü', cls: 'btn-ghost', fn: () => WC.exit() }, { t: 'Yeni turnuva', cls: 'btn-big', fn: () => WC.setup() }], { wide: true });

@@ -1,0 +1,365 @@
+3538|WM-Traum
+3539|Kanada
+3540|Marokko
+3541|Tunesien
+3542|Algerien
+3543|Ghana
+3544|Senegal
+3545|Elfenbeinküste
+3546|Nigeria
+3547|Kamerun
+3548|Südafrika
+3549|Kap Verde
+3550|Uruguay
+3551|Kolumbien
+3552|Ecuador
+3553|Paraguay
+3554|Chile
+3555|Peru
+3556|Iran
+3557|Südkorea
+3558|Australien
+3559|Katar
+3560|Usbekistan
+3561|Jordanien
+3562|Irak
+3563|Neuseeland
+3564|Panama
+3565|Costa Rica
+3566|Jamaika
+3567|Haiti
+3568|Curaçao
+3569|Serbien
+3570|Schweden
+3571|Wales
+3572|Ungarn
+3573|Rumänien
+3574|Slowakei
+3575|Irland
+3576|Slowenien
+3577|Albanien
+3578|Gruppenphase
+3579|Verbessere eine Fähigkeit deiner Wahl mit einem Minispiel. Trainierst du gut, bemerkt es der Trainer.
+3582|Taktikbesprechung
+3583|Lerne den Plan des Trainers: sein Vertrauen wächst und das nächste Spiel wird etwas leichter.
+3584|Du tankst Energie und gönnst deinem Kopf eine Pause.
+3585|Zeit mit dem Team verbringen
+3586|Freunde dich mit den Teamkollegen an: Teamgeist und Moral steigen.
+3587|Ein Interview geben
+3588|Sprich mit der Presse: Mit den richtigen Antworten steigen dein Ruhm und die Liebe der Fans.
+3589|Beschleunigt die Genesung und vertreibt die Müdigkeit.
+3961|Kapitän {} kam nach dem Training zu dir: "Ich bin da, wann immer du mich brauchst. Das erste Turnier ist für jeden schwer."
+1446|Hör auf seinen Rat
+3590|Zwischen dir und dem Kapitän ist eine starke Bindung entstanden.
+3591|Bedanke dich und konzentriere dich auf dich
+3592|Deine konzentrierte Haltung ist dem Trainer nicht entgangen.
+3593|Deine Mutter ruft an: "Die ganze Nachbarschaft schaut dir zu, mein Sohn. Mach uns stolz."
+3596|Lange telefonieren
+3597|Das Gespräch mit deiner Familie hat dir gutgetan.
+3598|Kurz halten, du brauchst Schlaf
+3599|Du bist früh ins Bett und frisch aufgewacht.
+3600|Ein bekannter Experte sagte im TV: "Der Junge ist noch nicht bereit für dieses Turnier." In den sozialen Medien wird diskutiert.
+3601|Nicht antworten, auf dem Platz sprechen
+3602|Du bist ruhig geblieben. Der Trainer mochte deine Reife.
+3605|Eine scharfe Antwort posten
+3606|Die Fans stehen hinter dir, aber der Trainer mochte den Streit nicht.
+3607|Du hast im Training ein hartes Foul abbekommen, dein Knöchel schmerzt.
+3608|Zum Arzt, einen Tag Pause
+3609|Der Arzt verordnet einen Tag Pause. Nichts Ernstes.
+3612|Halb so wild, weitermachen
+3613|Schlechte Nachricht: Der Schmerz bleibt, du fällst 3 Tage aus.
+3614|Du hast die Zähne zusammengebissen und das Training beendet. Der Trainer ist beeindruckt.
+3965|Teamstar {} hat dich zu seinem Freistoßtraining eingeladen.
+3617|Sofort mitmachen
+3618|Du hast viel von ihm gelernt: Technik +1, Schuss +1.
+3619|Bin müde, ein andermal
+3620|Du hast dich erholt, aber eine tolle Chance verpasst.
+3621|Ein paar Teamkollegen wollen sich nachts aus dem Hotel schleichen und die Stadt erkunden. Sie laden dich ein.
+3624|Mitkommen
+3625|Erwischt! Der Trainer ist stinksauer.
+3628|Niemand hat es bemerkt, ihr hattet viel Spaß.
+3629|Im Hotel bleiben
+3630|Du hast dich an die Regeln gehalten. Eine kluge Entscheidung.
+3633|Hunderte Fans haben sich vor dem Hotel versammelt und rufen deinen Namen.
+3634|Runtergehen und Autogramme geben
+3635|Die Fans lieben dich. Du hast neue Follower.
+3638|Aus dem Fenster winken
+3639|Die Fans jubelten, als sie dich sahen.
+3640|Der Trainer rief dich auf sein Zimmer: "Weißt du, was ich von dir erwarte?"
+3641|Ich tue alles für das Team
+3642|Der Trainer lächelte: "Genau das wollte ich hören."
+3643|Ich will in der Startelf stehen
+3644|Der Trainer hat es notiert. Du musst es auf dem Platz beweisen.
+3963|Der Star des nächsten Gegners, {}, sagte im Interview, er kenne dich gar nicht.
+3647|Er lernt mich im Spiel kennen
+3648|Deine Worte machten Schlagzeilen. Jetzt musst du es beweisen.
+3651|Ich respektiere ihn
+3652|Deine ruhige Art kam gut an.
+3653|WM-Titel:
+3654|Deine letzten Turniere
+3655|Du bist 18 und wurdest ins Nationalteam berufen. Zeig dich im Trainingslager, gewinne das Vertrauen des Trainers und führe dein Land zum WM-Titel.
+3658|Neues Turnier
+3659|Neues Turnier starten?
+3660|Dein laufendes WM-Abenteuer wird gelöscht.
+3661|Favoriten
+3662|Starke Teams
+3663|Geheimfavoriten
+3664|Märchenteams
+3665|Wähle dein Land
+3666|Bei einem starken Team ist es schwer, in den Kader zu kommen, bei einem kleinen ist jedes Spiel ein Epos. Du entscheidest.
+3962|{0} wurde für die WM {1} ins Trainingslager von {2} berufen! Das 18-jährige Talent ist erstmals bei der A-Nationalmannschaft.
+3669|Willkommen im Trainingslager!
+3960|Der Trainer von {} hat dich erstmals ins A-Team berufen. Vor dem Turnier gibt es ein 6-tägiges Trainingslager und 2 Testspiele.
+3671|Du hast jeden Tag 2 Aktionen: Training, Taktik, Erholung, Zeit mit dem Team...
+3672|Ist das Vertrauen des Trainers hoch und du in Form, spielst du von Beginn an. Von der Bank kannst du später kommen.
+3675|Teile deine Energie ein: Im Turnier liegen nur wenige Tage zwischen den Spielen.
+3676|Zwei Gelbe in der Gruppenphase bedeuten eine Spielsperre. In der K.-o.-Runde gibt es bei Remis Elfmeterschießen, und du schießt selbst!
+3679|Finalist
+3680|Deine Verletzung ist auskuriert, du trainierst wieder.
+3681|Verletzt kannst du nicht trainieren. Wähle Physio oder Erholung.
+3683|Du bist zu müde zum Trainieren. Erhol dich erst.
+3686|Du kennst jetzt den Plan des Trainers. Das nächste Spiel wird etwas leichter.
+3689|Du hast dich gut erholt.
+3964|Du hattest eine tolle Zeit mit {} und den anderen. Deine Bindung zum Team ist gewachsen.
+3985|Die Behandlung läuft gut. Noch {} Tage.
+3693|Die Behandlung hat gewirkt, du bist bereit für dein Comeback!
+3694|Deine Muskeln sind locker, die Müdigkeit lässt nach.
+3695|Welche Fähigkeit willst du trainieren?
+3696|Du spielst ein Minispiel. Je besser du spielst, desto mehr verbesserst du dich.
+3699|Wie fühlst du dich bei deiner ersten WM?
+3700|Es ist eine Ehre, hier zu sein. Ich will dem Team helfen.
+3701|Ich bin bereit. Bekomme ich die Chance, zeige ich es.
+3702|Das wird mein Turnier!
+3703|Wo siehst du dich im Team?
+3704|Ich spiele, wo der Trainer mich will.
+3705|Ich finde, ich verdiene einen Startplatz.
+3706|Ich bin hier, um der Beste im Team zu sein.
+3707|Was möchtest du den Fans zu Hause sagen?
+3708|Eure Unterstützung bedeutet uns alles.
+3709|Wir werden euch stolz machen.
+3710|Wir holen den Pokal nach Hause, versprochen!
+3711|Interview
+4018|Interview: "{}"
+3712|Leben im Trainingslager
+3713|Testspiel
+4001|Testspiel · {} - {}
+3714|TESTSPIEL
+776|WELTMEISTERSCHAFT
+3715|Du bist gesperrt und kannst in diesem Spiel nicht spielen.
+3973|Du hast dich im Spiel verletzt: {} Tage Pause.
+3716|Rote Karte: Du bist im nächsten Spiel gesperrt.
+3717|Zweite Gelbe Karte: Du bist im nächsten Spiel gesperrt.
+4002|Testspiel: {} {}-{} {}.
+3976|Gruppenspiel: {0} {1}-{2} {3}. Wir sind {5}. in Gruppe {4}.
+4009|Elfmeterschießen {}-{}.
+4033|Spiel {}
+4015|WM {}
+3718|Wir sind weiter!
+3719|Wir sind ausgeschieden.
+3720|WIR SIND WELTMEISTER!
+3969|{} beendete die Gruppe als {}. und ist ausgeschieden.
+3974|{} beendete die Gruppe als {}. und steht in der Runde der letzten 32!
+3721|Gruppenphase beendet
+3722|Wir sind in der Runde der letzten 32!
+3978|{} beendete die Gruppe als {}. Unser Gegner: {}.
+3723|Ab jetzt fährt der Verlierer nach Hause. Bei Remis gibt es Elfmeterschießen!
+3726|Elfmeterschießen
+3727|Das Spiel endete unentschieden. Der Trainer hat dich als 3. Schützen ausgewählt!
+3730|Das Spiel endete unentschieden. Das Elfmeterschießen beginnt...
+4029|{}: TOR!
+4025|{}: Verschossen!
+4030|{}: Tor.
+4026|{}: VERSCHOSSEN!
+3732|Dein Mitspieler
+3733|Du hast getroffen: TOR! Alle reden über deine Nervenstärke.
+3736|Dein Elfmeter ging daneben...
+3737|Dein Elfmeter
+3738|Alle schauen auf dich. Zurückziehen, Ecke wählen und loslassen!
+3741|Der Trainer war von deinem Trainingslager begeistert: Du startest das Turnier in der Startelf!
+3742|Du bist im Kader, startest aber vorerst auf der Bank. Nutze jede Minute und überzeuge den Trainer!
+3966|{} hat den WM-Kader bekanntgegeben: {} ist unter den 26!
+3745|Ich bin im WM-Kader! Dieses Trikot zu tragen ist ein Traum.
+3748|Kader bekanntgegeben
+3749|Du bist unter den 26!
+3750|Deine Stärke
+3751|Teamstärke
+3752|Vertrauen des Trainers
+4007|Deine Gruppengegner: {}
+3753|Das Turnier kann beginnen!
+3754|Goldener Schuh
+3982|Mit {} Toren bist du Torschützenkönig des Turniers!
+3755|Du wurdest zum besten Spieler des Turniers gewählt!
+3756|Bester junger Spieler
+3757|Die Auszeichnung als bester junger Spieler des Turniers gehört dir!
+3758|DU BIST WELTMEISTER!
+3971|{} ist an der Weltspitze! Mit 18 hast du Geschichte geschrieben.
+3984|Für {} endete die Reise in der Runde: {}.
+1840|Weltmeister:
+4005|Torschützenkönig: {} ({} Tore)
+3762|Auszeichnungen
+3763|Auszeichnungen:
+3764|Schnitt
+3765|Hauptmenü
+3766|Trainingslager
+3767|Turnier beendet
+3768|Heute
+3769|Gruppen
+3770|K.-o.-Runde
+3771|Torjäger
+3772|News
+3773|Verletzt
+3774|Gesperrt
+4008|Testspiel {}/2
+3775|Der Trainer plant dich in der Startelf ein.
+3776|Du sitzt auf der Bank: Wirst du eingewechselt, nutze die Chance!
+3777|Du bist verletzt und schaust dieses Spiel von der Tribüne.
+3778|Du bist gesperrt und kannst dieses Spiel nicht bestreiten.
+3986|Gegnerstärke {} · Stars: {}
+3779|Spiel starten
+1159|Spieltag
+3780|Trainingslager vorbei
+3781|Heute gibt der Trainer den WM-Kader bekannt. Zahlt sich deine Arbeit im Trainingslager aus?
+3784|Kader ansehen
+3785|Die letzten Gruppenspiele sind gespielt. Die Teilnehmer der Runde der letzten 32 stehen fest...
+3788|Ergebnisse ansehen
+4022|Trainingslager · Tag {}
+4016|Turniertag {}
+3789|(Testspiel)
+3790|Nächstes Spiel:
+3791|Aktionen übrig:
+4010|Verletzt: {} Tage
+3792|Du bist im nächsten Spiel gesperrt
+3793|Tag beenden
+3794|Nächster Tag
+4031|Gruppe {}
+4011|Gruppe {} · Spiel {}
+3795|ausgelost
+3796|Neueste Meldungen
+3797|Die ersten 2 und die 8 besten Dritten erreichen die Runde der letzten 32
+3798|Die K.-o.-Runde beginnt nach der Gruppenphase. Die 12 Gruppensieger, 12 Zweiten und 8 besten Dritten erreichen die Runde der letzten 32.
+3801|Im Turnier ist noch kein Tor gefallen.
+3802|Noch keine Meldungen.
+3803|Willst du den Tag beenden?
+3804|Nicht genutzte Aktionen verfallen.
+3805|Tag
+3806|TAG
+1182|Position
+631|Fuß
+1033|Ins Trainingslager
+3807|TRAININGSLAGER
+3808|ELFMETER
+3809|18 Jahre
+4028|Nr. {}
+1414|Team
+1243|Spieler
+3810|Neuer Modus
+3811|Neuer Modus · gesperrt
+3812|Auf den Spuren der Legenden
+3813|Legendenweg
+3814|Der kleine Zauberer
+3815|Du wurdest in Rosario geboren. Alle lieben, was du mit dem Ball machst, aber du bist viel kleiner als deine Altersgenossen und brauchst eine Wachstumsbehandlung. Barcelova FC übernahm sie und holte dich mit 13 über den Ozean in seine Akademie.
+4023|Akademie von {}
+3820|Die Wachstumsbehandlung wirkt! In der Akademie reden alle über dich.
+3823|Dein erstes großes Turnier steht bevor. Die legendäre Nummer 10 deines Landes stellte dich als "meinen Erben" vor.
+3826|Der Klub, für den du jahrelang gespielt hast, steckt in der Finanzkrise. Paris Saint-Gilles klopft an: ein neues Abenteuer?
+3829|In den letzten Jahren deiner Karriere kommt ein überraschendes Angebot von der anderen Seite des Ozeans: aus Miami.
+3830|Der Madeira-Sturm
+3831|Du wurdest auf der Insel Madeira geboren. Du warst der Junge, der am meisten trainierte und bei Niederlagen weinte. Mit 12 gingst du allein aufs Festland, in die Akademie von Sporting Lissabon.
+3835|Ein Herzrhythmusproblem trat auf, doch ein kleiner Eingriff behob es. Jetzt kann dich nichts mehr aufhalten.
+3838|Du hast die Abwehr der Manchester Reds im Testspiel zerlegt. Ihr Trainer will dich sofort!
+3841|Real Madrigal will dich für eine Weltrekord-Ablöse. Ist es Zeit für das weiße Trikot?
+3844|Juventa Torino bietet eine neue Herausforderung: Erobere auch Italien.
+3845|Riyadh Nassr klopft mit dem höchsten Gehaltsangebot deiner Karriere an.
+3846|Der lächelnde Zauberer
+3847|Du bist in den Straßen von Porto Alegre, am Strand und in der Halle aufgewachsen. Angeblich hast du mit 13 in einem Spiel 23 Tore erzielt. Die Gremio-Akademie hat dich längst geholt.
+3851|Im Landesfinale hast du die Legende des Landes mit deinen Dribblings tanzen lassen. Ganz Brasilien kennt jetzt deinen Namen.
+3854|Paris Saint-Gilles öffnet dir die Türen nach Europa.
+3855|Barcelova FC will dich als Gesicht seines neuen Projekts. Das Stadion wartet auf dich!
+3858|Angebot von Milano Rossoneri: ein neues Kapitel in Italien.
+3859|Flamengo ruft dich zurück in die Heimat.
+3860|Der Maestro
+3861|Du bist im Marseiller Viertel La Castellane aufgewachsen. Wenn du den Ball am Fuß hast, scheint die Zeit langsamer zu laufen. Eine Akademie an der Südküste entdeckte dich mit 14.
+3865|Bordeaux Girondins will dich auf der Profibühne zum Star machen.
+3866|Juventa Torino hat dich ausgewählt, um Europas bestes Mittelfeld aufzubauen.
+3867|Es ist das Jahr der Heim-WM. Das ganze Land setzt seine Hoffnungen auf dich.
+3870|Real Madrigal klopft für den teuersten Transfer der Welt an.
+3871|Das Phänomen
+3872|In den Vororten von Rio bist du selbst dann zum Training gerannt, wenn das Geld für den Bus fehlte. Cruzeiro Foxes holte dich mit 14 in die Akademie. Dein Tempo und deine Abschlussstärke sind schon legendär.
+3876|Eindhoven Lights will dich nach Europa holen. Du bist erst 18.
+3879|Eine Saison bei Barcelova FC: Alle wollen deine unaufhaltsamen Läufe sehen.
+3880|Inter Milanello hat ein Weltrekord-Angebot gemacht.
+3881|Eine schwere Knieverletzung! Die Ärzte rechnen mit einer langen Genesung.
+3884|Nach deinem fantastischen Comeback will Real Madrigal dich zu seinen Galácticos holen.
+3885|Der Stier
+3886|Du wurdest in Adapazarı geboren. Mit deiner Größe und deinen Kopfbällen fällst du in der Nachbarschaft auf. Die Akademie von Sakarya Ağaçları holte dich mit 13.
+3890|Bursa Timsahları will dich auf das nächste Level bringen.
+3891|Ein Angebot von Galata Aslanları! Bereit, in diesem Trikot Geschichte zu schreiben?
+3894|Nach dem Europapokal, den ihr gewonnen habt, klopft Inter Milanello an.
+3895|Es ist WM-Jahr. Dein Land hat eine goldene Generation, und du bist so etwas wie ihr Kapitän.
+3898|Galata Aslanları ruft dich zurück nach Hause.
+3899|Die Schildkröte
+3900|Du bist in Bondy, einem Pariser Vorort, aufgewachsen. Die Wände deines Zimmers hängen voller Poster deiner Idole. Monaco Princes holte dich mit 14 in die Akademie: dein Tempo ist unglaublich.
+3904|Paris Saint-Gilles hat ein Rekordangebot gemacht, um dich nach Hause zu holen.
+3905|Mit 19 fährst du zur WM. Die Welt wird bald über dein Tempo reden.
+3908|Dein Kindheitstraum Real Madrigal klopft endlich an.
+4000|Gewinne {}-mal den Goldenen Ball
+3980|Gewinne {}-mal den Europapokal der Landesmeister
+3981|Gewinne {}-mal den Europäischen Verbandspokal
+3991|Werde {}-mal Weltmeister
+3909|Werde Weltmeister
+3910|Werde Europameister
+3993|Gewinne {} Meistertitel
+4003|Erziele {} Tore in einer Saison
+4004|Erziele {} Karrieretore
+3994|Gib {} Karriere-Vorlagen
+3997|Erziele {} Länderspieltore
+4012|Beste Übereinstimmung: {}%
+3911|Lebe das Leben einer Legende
+3912|Beginne im Geburtsjahr der Legende, in ihrer Akademie und mit ihrem Talent. Die Wendepunkte ihrer Geschichte warten: Gehst du denselben Weg oder schreibst du deine eigene Legende?
+3915|Alle Namen und Vereine sind fiktiv und stehen in keiner Verbindung zu realen Personen.
+3916|Um eine neue Legendenkarriere zu starten, lösche zuerst eine Karriere im Hauptmenü.
+3917|Ziele der Legende
+3918|Geschichte starten
+3968|{}: {} {} beginnt seine Geschichte. Wird er sich den Spitznamen "{}" verdienen?
+3998|Auf den Spuren der Legenden · {}
+3919|An den Wendepunkten der Geschichte bekommst du dieselben Transferangebote wie die Legende. Nimm an und geh denselben Weg oder geh deinen eigenen.
+3922|Deine Spezialfähigkeit:
+3923|Die Ziele der Legende siehst du im Startbildschirm. Wenn du in Rente gehst, wird deine Karriere mit der Legende verglichen.
+4017|Legendenweg: {}
+3926|Ein Wendepunkt der Geschichte
+3983|Legendenweg: {} Du bist in die Akademie von {} gewechselt.
+4013|{} · Legendenweg
+4014|{} will dich!
+3929|Das Angebot findest du bei den Transferangeboten im Startbildschirm. Nimmst du an, folgst du der Legende; lehnst du ab, schreibst du deine eigene Geschichte.
+3995|Legendenziel erreicht: {}!
+3999|Legendenziel erreicht: {}
+3932|Nächster Wendepunkt:
+4032|Übereinstimmung {}%
+3933|Du bist die Legende selbst geworden!
+3934|Du bist der Legende sehr nahe gekommen.
+3935|Du bist deinen eigenen Weg gegangen, aber hast Spuren hinterlassen.
+3936|Du hast eine ganz andere Geschichte geschrieben.
+4006|Vergleich mit {}
+4024|Übereinstimmung {}% · {}
+3937|Deine gekauften Pakete wurden wiederhergestellt.
+3938|Ein eigener Modus mit eigenem Spielstand, der sich auf eine einzige WM mit der Nationalmannschaft deiner Wahl konzentriert, mit 18.
+3939|Wähle dein Land aus 65 Nationalteams und spiele ein Turnier mit 48 Teams
+3940|Trainingslager, Testspiele und Kaderbekanntgabe
+3941|Tage zwischen den Spielen: Training, Taktik, Interviews, Ereignisse im Lager
+3942|Elfmeterschießen in der K.-o.-Runde: Du schießt selbst
+3943|Goldener Schuh, Goldener Ball und Auszeichnung als bester junger Spieler
+3944|7 fiktive Karrieren, inspiriert von Fußballlegenden: Starte in ihrem Geburtsjahr, in ihrer Akademie und mit ihrem Talent.
+3945|7 Legendengeschichten: aus Argentinien, Portugal, Brasilien, Frankreich und der Türkei
+3946|Story-Transfers zu den Vereinen der Legende und Wendepunkte
+3947|Eine Spezialfähigkeit von Beginn an und Werte im Stil der Legende
+3948|Ziele nach den Erfolgen der Legende und ein Vergleich beim Karriereende
+3949|Kaufen
+4021|Kaufen · {}
+138|Käufe wiederherstellen
+3950|Einmalkauf. Keine Werbung, auf allen deinen Geräten wiederherstellbar.
+3953|Dieser Modus kann in der App-Store-App gekauft werden.
+3989|{} freigeschaltet! Viel Spaß.
+3957|Gewinne den Goldenen Ball
+3958|Gewinne den Europapokal der Landesmeister
+3959|Gewinne den Europäischen Verbandspokal
+4034|Deine Gruppengegner:

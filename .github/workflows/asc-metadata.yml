@@ -30,7 +30,7 @@ on:
         type: boolean
         default: false
       iap:
-        description: 'Premium satın alma ürünü: read = yalnız oku, setup = dilleri ve notu doldur'
+        description: 'Satın alma ürünleri: read = yalnız oku, setup = Premium dilleri ve notu, packs = içerik paketlerini oluştur/tamamla'
         required: false
         default: ''
       remove_locales:
@@ -61,5 +61,6 @@ jobs:
           [ "${{ inputs.audit }}" = "true" ] && ARGS="$ARGS --audit"
           [ "${{ inputs.iap }}" = "read" ] && ARGS="$ARGS --iap"
           [ "${{ inputs.iap }}" = "setup" ] && ARGS="$ARGS --iap-setup"
+          [ "${{ inputs.iap }}" = "packs" ] && ARGS="$ARGS --packs"
           [ -n "${{ inputs.remove_locales }}" ] && ARGS="$ARGS --remove-locales ${{ inputs.remove_locales }}"
           python -u tools/asc/asc.py $ARGS
