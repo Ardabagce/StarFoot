@@ -356,3 +356,5 @@
 4035|6 histoires de légendes : Argentine, Portugal, Brésil et France
 4036|6 carrières fictives inspirées des légendes du football : commence l'année de leur naissance, dans leur centre de formation et avec leur talent.
 4034|Tes adversaires de groupe :
+4037|Revenir au menu principal ?
+4038|Ta progression est sauvegardée. Tu peux reprendre la Coupe du monde depuis le menu principal à tout moment.

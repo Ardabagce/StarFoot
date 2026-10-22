@@ -2722,7 +2722,7 @@ I18N.onChange = () => {
 
 window.addEventListener('DOMContentLoaded', () => {
   U.$$('#tabs button').forEach((b) => (b.onclick = () => { Game.tab = b.dataset.tab; Game.render(); window.scrollTo(0, 0); }));
-  document.getElementById('logo').onclick = () => { if (Game.state) { Game.tab = 'home'; Game.render(); } };
+  document.getElementById('logo').onclick = () => { if (Game.state && Game.state.mode === 'wc' && typeof WC !== 'undefined') return WC.askExit(); if (Game.state) { Game.tab = 'home'; Game.render(); } };
   document.getElementById('notif-btn').onclick = () => Notifs.open();
   Game.init();
 });

@@ -356,3 +356,5 @@
 4035|6 kisah legenda: dari Argentina, Portugal, Brasil, dan Prancis
 4036|6 karier fiktif yang terinspirasi legenda sepak bola: mulai di tahun kelahiran mereka, di akademi mereka, dengan bakat mereka.
 4034|Lawan grupmu:
+4037|Kembali ke menu utama?
+4038|Progresmu tersimpan. Kamu bisa melanjutkan Piala Dunia dari menu utama kapan saja.

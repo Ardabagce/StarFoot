@@ -268,6 +268,9 @@ const WC = {
     UI.wcView = 'day';
     WC.render();
   },
+  askExit() {
+    Game.modal('<h3>Ana menüye dönülsün mü?</h3><p>İlerlemen kaydedildi. Dünya Kupası\'na istediğin zaman ana menüden devam edebilirsin.</p>', [{ t: 'Vazgeç', cls: 'btn-ghost' }, { t: 'Ana menü', fn: () => WC.exit() }]);
+  },
   exit() {
     document.body.classList.remove('wc-mode');
     Game.toMenu();
@@ -781,7 +784,7 @@ const WC = {
     }
     const tbl = w.phase !== 'camp' ? `<section class="card"><div class="card-h"><span>${Icon('table')} ${WC_GROUPS[w.myG]} Grubu</span></div>${WC.tableHtml(w.myG)}</section>` : `<section class="card"><div class="card-h"><span>${Icon('table')} ${WC_GROUPS[w.myG]} Grubu</span><small class="muted">kura çekildi</small></div><div class="wc-grp">${w.groups[w.myG].map((c) => `<span class="${c === w.nat ? 'me' : ''}">${UI.shirt(WC.team(c))}${U.esc(WC.natOf(c).name)} <small>${WC.natOf(c).rating}</small></span>`).join('')}</div></section>`;
     const news = (s.news || []).slice(0, 4);
-    return top + tbl + (news.length ? `<section class="card"><div class="card-h"><span>${Icon('news')} Son haberler</span></div><div class="wc-news">${news.map((n) => `<p class="${n.type || ''}">${n.t}</p>`).join('')}</div></section>` : '');
+    return top + `<div class="wc-side-m">${WC.side()}</div>` + tbl + (news.length ? `<section class="card"><div class="card-h"><span>${Icon('news')} Son haberler</span></div><div class="wc-news">${news.map((n) => `<p class="${n.type || ''}">${n.t}</p>`).join('')}</div></section>` : '');
   },
   tableHtml(g) {
     const w = Game.state.wc;
@@ -826,7 +829,7 @@ const WC = {
       if (k === 'next') { if (Game.state.wc.ap > 0) Game.modal('<h3>Günü bitirmek istiyor musun?</h3><p>Kullanmadığın aksiyon hakların boşa gidecek.</p>', [{ t: 'Vazgeç', cls: 'btn-ghost' }, { t: 'Günü bitir', fn: () => WC.next() }]); else WC.next(); }
       if (k === 'squad') WC.squad();
       if (k === 'gend') WC.groupEnd();
-      if (k === 'menu') WC.exit();
+      if (k === 'menu') { if (Game.state.wc.phase === 'done') WC.exit(); else WC.askExit(); }
       if (k === 'new') WC.setup();
     }));
   },

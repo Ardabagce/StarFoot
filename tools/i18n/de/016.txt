@@ -356,3 +356,5 @@
 4035|6 Legendengeschichten: aus Argentinien, Portugal, Brasilien und Frankreich
 4036|6 fiktive Karrieren, inspiriert von Fußballlegenden: Starte in ihrem Geburtsjahr, in ihrer Akademie und mit ihrem Talent.
 4034|Deine Gruppengegner:
+4037|Zurück zum Hauptmenü?
+4038|Dein Fortschritt ist gespeichert. Du kannst die WM jederzeit im Hauptmenü fortsetzen.

@@ -356,3 +356,5 @@
 4035|6 storie di leggende: da Argentina, Portogallo, Brasile e Francia
 4036|6 carriere di fantasia ispirate alle leggende del calcio: inizia nel loro anno di nascita, nel loro vivaio e con il loro talento.
 4034|I tuoi avversari del girone:
+4037|Tornare al menu principale?
+4038|I tuoi progressi sono salvati. Puoi continuare il Mondiale dal menu principale quando vuoi.

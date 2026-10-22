@@ -356,3 +356,5 @@
 4035|6 historias de leyenda: de Argentina, Portugal, Brasil y Francia
 4036|6 carreras ficticias inspiradas en leyendas del fútbol: empieza en su año de nacimiento, en su cantera y con su talento.
 4034|Tus rivales de grupo:
+4037|¿Volver al menú principal?
+4038|Tu progreso está guardado. Puedes seguir el Mundial desde el menú principal cuando quieras.

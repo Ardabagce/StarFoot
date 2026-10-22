@@ -356,3 +356,5 @@
 4035|6 histórias de lendas: da Argentina, Portugal, Brasil e França
 4036|6 carreiras fictícias inspiradas em lendas do futebol: comece no ano em que nasceram, na base delas e com o talento delas.
 4034|Seus adversários de grupo:
+4037|Voltar ao menu principal?
+4038|Seu progresso foi salvo. Você pode continuar a Copa pelo menu principal quando quiser.
