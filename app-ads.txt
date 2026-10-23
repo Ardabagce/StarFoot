@@ -1,4 +1,6 @@
 google.com, pub-7675764460364294, DIRECT, f08c47fec0942fa0
+# Unity Ads
+unity.com, 18968527430418, DIRECT, 96cabb5fbdde37a7
 # Liftoff (Vungle)
 vungle.com,6ad60742b0b4a336610b467f,DIRECT,c107d686becd2d77
 33across.com,001Pg0000197KcKIAU,RESELLER,bbea06d9c4d2853c

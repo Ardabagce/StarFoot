@@ -1,6 +1,6 @@
 // Adds packages that are not Capacitor plugins to CapApp-SPM/Package.swift.
 // `npx cap sync ios` rewrites that file, so run this right after every sync.
-// Currently: Liftoff Monetize (Vungle) adapter for AdMob mediation.
+// Currently: Liftoff Monetize (Vungle) and Unity Ads adapters for AdMob mediation.
 const fs = require('fs');
 const path = require('path');
 
@@ -9,6 +9,10 @@ const EXTRAS = [
   {
     pkg: '.package(url: "https://github.com/googleads/googleads-mobile-ios-mediation-liftoffmonetize.git", exact: "7.7.800")',
     product: '.product(name: "LiftoffMonetizeAdapterTarget", package: "googleads-mobile-ios-mediation-liftoffmonetize")',
+  },
+  {
+    pkg: '.package(url: "https://github.com/googleads/googleads-mobile-ios-mediation-unity.git", exact: "4.21.000")',
+    product: '.product(name: "UnityAdapterTarget", package: "googleads-mobile-ios-mediation-unity")',
   },
 ];
 
