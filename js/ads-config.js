@@ -5,7 +5,7 @@
 const AD_CONFIG = {
   rewarded: 'ca-app-pub-7675764460364294/1053737887', // Ödüllü reklam birimi
   rewardedFormat: 'rewardedInterstitial', // Birimin türü: 'rewarded' (Ödüllü) ya da 'rewardedInterstitial' (Ödüllü geçiş)
-  interstitial: '',        // Android geçiş reklamı birimi (boşsa Android'de geçiş reklamı yok)
+  interstitial: 'ca-app-pub-7675764460364294/9140416356', // Android geçiş reklamı birimi
   testing: false,          // true: Google'ın test reklamları (geliştirme sırasında)
   interstitialEvery: 0,    // Maç sonu geçiş reklamı kapalı (0); yerine sezonda en fazla 2 kez gösterilir:
   interstitialAt: { seasonStart: true, midSeason: true, firstSeason: false }, // sezon başı, sezon ortası; kariyerin ilk sezonunda hiç
