@@ -142,7 +142,6 @@ const LEGENDS = [
   ['Hasan Şenler', 'FW', 78, 'TUR', 1966, 'TRB'],
   ['Ünal Karamanlı', 'MF', 79, 'TUR', 1966, 'TRB'],
   ['Hakan Ünsallı', 'DF', 82, 'TUR', 1973, 'GAL'],
-  ['Arif Erdemli', 'FW', 82, 'TUR', 1972, 'GAL'],
   ['Suat Kayalı', 'MF', 80, 'TUR', 1967, 'GAL'],
   ['Taffarelo', 'GK', 86, 'BRA', 1966, 'GAL'],
   ['Gheorghe Popesko', 'DF', 85, 'XX', 1967, 'GAL'],
