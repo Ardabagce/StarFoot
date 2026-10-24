@@ -665,4 +665,30 @@ function v3(t) {
 const VIDEOS = { ig: { dur: 13.2, f: v1 }, yas: { dur: 13.9, f: v2 }, penalti: { dur: 12.6, f: v3 } };
 window.VIDEOS = VIDEOS;
 window.frame = (id, t) => { c.save(); c.clearRect(0, 0, W, H); c.fillStyle = '#000'; c.fillRect(0, 0, W, H); VIDEOS[id].f(t); c.restore(); };
-window.ready = () => document.fonts.ready.then(() => new Promise((r) => (icon.complete ? r() : (icon.onload = r))));
+window.ready = () => Promise.all(['600','800','900'].map((w) => document.fonts.load(`${w} 100px "Saira Condensed"`, 'ŞİÇĞÜÖÂ')).concat(['500','600','700'].map((w) => document.fonts.load(`${w} 40px "Barlow Semi Condensed"`, 'ŞİÇĞÜÖ')))).then(() => document.fonts.ready).then(() => new Promise((r) => (icon.complete ? r() : (icon.onload = r))));
+
+// ---------- gerçek görüntülü video için katmanlar (şeffaf PNG) ----------
+// Kanca yazısı: tam görünür halde (giriş/çıkışı ffmpeg yapar)
+window.textLayer = (a, b, y = 300, s1 = 92, s2 = 132) => {
+  c.clearRect(0, 0, W, H);
+  const g = c.createLinearGradient(0, y - 260, 0, y + 280);
+  g.addColorStop(0, 'rgba(0,0,0,0)'); g.addColorStop(0.4, 'rgba(0,0,0,.45)'); g.addColorStop(0.65, 'rgba(0,0,0,.45)'); g.addColorStop(1, 'rgba(0,0,0,0)');
+  c.fillStyle = g; c.fillRect(0, y - 260, W, 540);
+  if (a) txt(a, W / 2, b ? y - s1 * 0.55 : y, b ? s1 : s2, b ? {} : { grad: GOLD });
+  if (b) txt(b, W / 2, y + s2 * 0.45, s2, { grad: GOLD });
+  return cv.toDataURL('image/png');
+};
+// Telefon çerçevesi: ekran bölgesi şeffaf
+window.phoneLayer = () => {
+  c.setTransform(1, 0, 0, 1, 0, 0); c.globalAlpha = 1; c.globalCompositeOperation = 'source-over'; c.shadowBlur = 0;
+  c.clearRect(0, 0, W, H);
+  const { x, y, w, h, r } = PH;
+  c.save(); c.shadowColor = 'rgba(0,0,0,.6)'; c.shadowBlur = 90; c.shadowOffsetY = 40;
+  c.fillStyle = '#0b0b0e'; rr(x - 22, y - 22, w + 44, h + 44, r + 20); c.fill(); c.restore();
+  c.strokeStyle = '#3a3d46'; c.lineWidth = 4; rr(x - 22, y - 22, w + 44, h + 44, r + 20); c.stroke();
+  c.save(); rr(x, y, w, h, r); c.clip(); c.clearRect(x - 2, y - 2, w + 4, h + 4); c.restore();
+  c.fillStyle = '#000'; rr(x + w / 2 - 110, y + 26, 220, 62, 31); c.fill();
+  return cv.toDataURL('image/png');
+};
+window.PHONE = PH;
+VIDEOS.end = { dur: 3.4, f: (t) => endCard(t, 0, 'KARİYERİNİ SEN YAZ', 'Ücretsiz indir, kariyerine başla') };

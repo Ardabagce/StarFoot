@@ -36,3 +36,18 @@ App Store'da ücretsiz, link profilde 🔗
 ```
 
 Kapak görselleri: `*-kapak.jpg` (videonun kanca karesi).
+
+## 4. `gercek-hayal.mp4`: Gerçek görüntülü, "Çocukken hayalin futbolcu olmaktı" (18 sn)
+
+Gerçek futbol görüntüleri (gece sahası, top sektirme, penaltı) → telefonda oyunun penaltı anı → kapanış.
+Yeniden üretmek: Mixkit kliplerini indir (`43490 43483 43501 43494 43495 43479`, `https://assets.mixkit.co/videos/<id>/<id>-720.mp4`), sonra `node store/social/motion/real.js <klasör>`.
+
+**Lisans:** Klipler Mixkit **Stock Video Free License** ile: reklam ve sosyal medya pazarlamasında ticari kullanım serbest, atıf gerekmez. ("Restricted" lisanslı klipler kullanılmadı; onlar yalnızca kişisel kullanım içindir.)
+
+```
+Çocukken hayalin futbolcu olmaktı ⚽ Hâlâ öyle, değil mi?
+O son dakika penaltısını artık sen vuruyorsun. StarFoot'ta mahalleden Altın Top'a kariyerini sen yaz 🏆
+
+App Store'da ücretsiz, link profilde 🔗
+#starfoot #futbol #futboloyunu #hayal #mobiloyun #kariyermodu #penaltı #keşfet
+```
