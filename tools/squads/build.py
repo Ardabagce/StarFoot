@@ -108,19 +108,56 @@ def existing_names():
     return res
 
 
-def match_existing(real, cands):
-    f = fold(short(real))
+def toks(x):
+    return [t for t in re.split(r'[\s\-]+', fold(x)) if t]
+
+
+def ratio(a, b):
+    return difflib.SequenceMatcher(None, a, b).ratio()
+
+
+def name_score(real, c):
+    R, C = toks(translit(short(real))), toks(c)
+    if not R or not C: return 0
+    r = ratio(' '.join(R), ' '.join(C))
+    F = toks(translit(re.sub(r'\s*\(.*?\)', '', real)))  # kısaltılmamış tam ad
+    if len(F) >= 2 and len(C) >= 2 and ratio(F[0], C[0]) >= 0.85:
+        b = C[-1]
+        for a in F[1:]:
+            k = max(4, min(len(a), len(b)) - 1)
+            if a[:k] == b[:k] or ratio(a, b) >= 0.72: r = max(r, 0.9)
+    # tek kelimelik takma adlar: yalnız çok yakınsa (Ronaldo ≠ Ronaldinyo)
+    if len(C) == 1:
+        t = max(ratio(x, C[0]) for x in R)
+        if t >= 0.88: r = max(r, t)
+    if len(R) == 1:
+        t = max(ratio(R[0], x) for x in C)
+        if t >= 0.88: r = max(r, t)
+    return r
+
+
+def match_existing(real, cands, glob=()):
+    """Oyunda zaten var olan isim: önce aynı kulüpte, sonra tüm efsanelerde (daha sıkı)."""
     best, score = None, 0
     for c in cands:
-        fc = fold(c)
-        r = difflib.SequenceMatcher(None, f, fc).ratio()
-        # tek kelimelik takma ad (Edersen, Ronaldinyo): ilk kelimeyle karşılaştır
-        if ' ' not in fc: r = max(r, difflib.SequenceMatcher(None, f.split()[0], fc).ratio() - 0.04)
+        r = name_score(real, c)
         if r > score: best, score = c, r
-    return best if score >= 0.8 else None
+    if score >= 0.85: return best
+    for c in glob:
+        r = name_score(real, c)
+        if r >= 0.9 and r > score: best, score = c, r
+    return best if score >= 0.9 else None
 
 
-def squad(players, yr, exist):
+def spell_end(p, s, e):
+    """Bitişi girilmemiş dönem: sonraki kulübe geçtiği yıl, yoksa yakın tarihliyse güncel, değilse 3 yıl."""
+    if e is not None: return e
+    nxt = [y for y, lab in p.get('moves', []) if y > s]
+    if nxt: return max(s, min(nxt) - 1)
+    return NOW if s >= NOW - 3 else s + 3
+
+
+def squad(players, yr, exist, glob=()):
     pool = []
     for p in players:
         if any(b in fold(p['name']) for b in BANNED): continue
@@ -130,9 +167,7 @@ def squad(players, yr, exist):
         on = False
         for s, e in p['spells']:
             if s is None: continue
-            if e is None:
-                # bitişi girilmemiş: yakın tarihli değilse en fazla 4 yıl say
-                e = NOW if s >= NOW - 6 else s + 4
+            e = spell_end(p, s, e)
             if s <= yr <= e: on = True
         if not on: continue
         pos = pos_of(p['pos'])
@@ -149,8 +184,8 @@ def squad(players, yr, exist):
         if p['id'] not in used: pick.append((sc, pos or 'MF', p)); used.add(p['id'])
     out = []
     for sc, pos, p in pick:
-        ex = match_existing(p['name'], exist)
-        out.append({'pos': pos, 'real': p['name'], 'game': ex or alter(p['name'], p['nat']), 'kept': bool(ex), 'nat': (p['nat'] or ['?'])[0], 'age': yr - p['birth'], 'score': round(sc)})
+        ex = match_existing(p['name'], exist, glob)
+        out.append({'id': p['id'], 'pos': pos, 'real': p['name'], 'game': ex or alter(p['name'], p['nat']), 'kept': bool(ex), 'nat': (p['nat'] or ['?'])[0], 'age': yr - p['birth'], 'score': round(sc)})
     order = {'GK': 0, 'DF': 1, 'MF': 2, 'FW': 3}
     out.sort(key=lambda x: (order.get(x['pos'], 4), -x['score']))
     return out

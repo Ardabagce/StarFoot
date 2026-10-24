@@ -1,5 +1,43 @@
 // Dünya: kulüpler, kadrolar, fikstür, lig simülasyonu
 
+// Gerçek dönem kadroları (js/squads.js): oyuncu kulüpte gerçekten oynadığı yıllarda kadroda olur
+const Squads = {
+  MAX: 20,
+  has(id) { return typeof SQUADS !== 'undefined' && !!SQUADS[id]; },
+  // o yıl kulüpte olan gerçek oyuncular (güce göre, en fazla MAX)
+  active(id, year) {
+    if (!Squads.has(id)) return [];
+    return SQUADS[id].filter(([, , sp, by]) => {
+      const age = year - by;
+      return age >= 17 && age <= 36 && sp.some(([a, b]) => a <= year && (b === 0 || year <= b));
+    }).sort((x, y) => Squads.rating(y, year) - Squads.rating(x, year)).slice(0, Squads.MAX);
+  },
+  rating(e, year) { return typeof legendRating === 'function' ? legendRating(e[5], year - e[3]) : e[5]; },
+  player(e, year) {
+    const [n, pos, , by, nat] = e;
+    return { n, pos, r: Squads.rating(e, year), nat, age: year - by, star: true, sq: 1 };
+  },
+  // Sezon başında: ayrılanlar çıkar, gelenler katılır, güçler yaşa göre güncellenir
+  refresh(c, year) {
+    if (!Squads.has(c.id)) return;
+    const act = Squads.active(c.id, year);
+    const by = new Map(act.map((e) => [e[0], e]));
+    c.roster = c.roster.filter((pl) => !pl.sq || by.has(pl.n));
+    c.roster.forEach((pl) => {
+      const e = pl.sq && by.get(pl.n);
+      if (e) { pl.age = year - e[3]; pl.r = Squads.rating(e, year); }
+    });
+    const have = new Set(c.roster.map((pl) => pl.n));
+    act.forEach((e) => { if (!have.has(e[0])) c.roster.push(Squads.player(e, year)); });
+    // kadro şişmesin: önce rastgele üretilmiş en zayıf oyuncular çıkar
+    while (c.roster.length > 24) {
+      const gen = c.roster.filter((pl) => !pl.star && pl.lid == null).sort((a, b) => a.r - b.r)[0];
+      if (!gen) break;
+      c.roster.splice(c.roster.indexOf(gen), 1);
+    }
+  },
+};
+
 const World = {
   genName(pool) {
     const p = NAME_POOLS[pool] || NAME_POOLS.XX;
@@ -10,7 +48,9 @@ const World = {
     const roster = [];
     // Günümüz kadrolarındaki tanınmış isimler yalnızca 2020 sonrası başlangıçlarda
     const legendNames = new Set(LEGENDS.map((x) => x[0]));
-    const stars = (year >= 2020 ? STARS[club.id] || [] : []).filter((x) => !legendNames.has(x[0]));
+    Squads.active(club.id, year).forEach((e) => { if (!legendNames.has(e[0])) roster.push(Squads.player(e, year)); });
+    const have = new Set(roster.map((pl) => pl.n));
+    const stars = (year >= 2020 ? STARS[club.id] || [] : []).filter((x) => !legendNames.has(x[0]) && !have.has(x[0]));
     stars.forEach(([n, pos, r, nat]) => roster.push({ n, pos, r, nat, age: U.randi(22, 32), star: true }));
     const need = { GK: 2, DF: 6, MF: 6, FW: 4 };
     roster.forEach((pl) => (need[pl.pos] = Math.max(0, need[pl.pos] - 1)));
@@ -152,7 +192,7 @@ const World = {
   },
 
   // Sezon sonu: küme düşme, güç değişimi, kadro yenileme
-  endSeason(world) {
+  endSeason(world, year) {
     // her ülkede üst ligin son 3'ü düşer, alt ligin ilk 3'ü çıkar
     const down = [], up = [];
     Object.entries(LEAGUE_DOWN).forEach(([hi, lo]) => {
@@ -177,7 +217,8 @@ const World = {
           if (!pl.star) pl.r = Math.round(U.clamp(c.rating + U.randi(-9, 3), 35, 92));
           else if (pl.lid == null && pl.age >= 31) pl.r = Math.max(50, pl.r - U.randi(1, 3));
         });
-        c.roster = c.roster.filter((pl) => pl.lid != null || pl.age < 35 || U.chance(0.4));
+        c.roster = c.roster.filter((pl) => pl.sq || pl.lid != null || pl.age < 35 || U.chance(0.4));
+        if (year) Squads.refresh(c, year);
         const need = { GK: 2, DF: 6, MF: 6, FW: 4 };
         c.roster.forEach((pl) => (need[pl.pos] = Math.max(0, need[pl.pos] - 1)));
         for (const pos in need) for (let i = 0; i < need[pos]; i++) {

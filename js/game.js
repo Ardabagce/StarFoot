@@ -1013,7 +1013,7 @@ const Game = {
     const prevLeague = Game.club().league;
     // Altın Top sıralaması lig istatistikleri sıfırlanmadan önce dondurulur
     if (typeof Ballon !== 'undefined') { s.ballonFinal = null; s.ballonFinal = Ballon.ranking(); }
-    const rel = World.endSeason(s.world);
+    const rel = World.endSeason(s.world, s.season.year + 1);
     // dönem yıldızları: yaşlanma, emeklilik, yeni yetenekler, transferler
     const lnews = Legends.season(s.world, s.season.year + 1);
     lnews.sort((a, b) => b.L.peak - a.L.peak).slice(0, 7).forEach((x) => {
