@@ -412,6 +412,34 @@ def iap_report(asc, app_id):
             print('   ülkeler: YOK')
 
 
+def submit_packs(asc, app_id, packs):
+    # Açık inceleme başvurularını gösterir, sonra içerik paketlerini incelemeye gönderir (sürümle birlikte incelenir)
+    try:
+        subs = asc.get('/v1/reviewSubmissions', **{'filter[app]': app_id, 'limit': 10, 'include': 'items'})
+        for s in subs.get('data', []):
+            print(f"   başvuru {s['id']}: {s['attributes'].get('state')} ({s['attributes'].get('submittedDate')})")
+        for it in subs.get('included', []):
+            rel = {k: v.get('data') for k, v in it.get('relationships', {}).items() if v.get('data')}
+            print(f"     öğe {it['id']}: {it['attributes'].get('state')} {list(rel)}")
+    except RuntimeError as err:
+        print(f'   ! başvurular okunamadı: {err}')
+    items = {x['attributes'].get('productId'): x for x in asc.get(f'/v1/apps/{app_id}/inAppPurchasesV2', limit=50)['data']}
+    for pid in packs:
+        it = items.get(pid)
+        if not it:
+            print(f'• {pid}: yok'); continue
+        st = it['attributes'].get('state')
+        print(f'• {pid}: durum {st}')
+        if st != 'READY_TO_SUBMIT':
+            continue
+        try:
+            asc.req('POST', '/v1/inAppPurchaseSubmissions', write=True, body={'data': {'type': 'inAppPurchaseSubmissions',
+                'relationships': {'inAppPurchaseV2': {'data': {'type': 'inAppPurchases', 'id': it['id']}}}}})
+            print('   incelemeye gönderildi')
+        except RuntimeError as err:
+            print(f'   ! gönderilemedi: {err}')
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--metadata', default=str(ROOT / 'store/asc/metadata.json'))
@@ -425,6 +453,7 @@ def main():
     ap.add_argument('--iap', action='store_true')
     ap.add_argument('--iap-setup', action='store_true')
     ap.add_argument('--packs', action='store_true')
+    ap.add_argument('--submit-packs', action='store_true')
     a = ap.parse_args()
     meta = json.load(open(a.metadata, encoding='utf-8'))
     asc = ASC(a.dry_run)
@@ -443,6 +472,9 @@ def main():
         return iap_report(asc, app['id'])
     if a.packs:
         pack_setup(asc, app['id'], meta.get('packs') or {})
+        return iap_report(asc, app['id'])
+    if a.submit_packs:
+        submit_packs(asc, app['id'], meta.get('packs') or {})
         return iap_report(asc, app['id'])
     if a.iap:
         return iap_report(asc, app['id'])
