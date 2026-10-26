@@ -35,6 +35,16 @@ jobs:
       - name: Bağımlılıklar
         working-directory: app
         run: npm ci
+      # Firebase Analytics: GOOGLE_SERVICES_JSON sırrı (Firebase'den indirilen google-services.json içeriği) varsa açılır
+      - name: Firebase (varsa)
+        env:
+          GSJ: ${{ secrets.GOOGLE_SERVICES_JSON }}
+        if: env.GSJ != ''
+        working-directory: app
+        run: |
+          printf '%s' "$GSJ" > android/app/google-services.json
+          node -e "const f='capacitor.config.json',c=require('./'+f);const p=c.android.includePlugins;if(!p.includes('@capacitor-firebase/analytics'))p.push('@capacitor-firebase/analytics');require('fs').writeFileSync(f,JSON.stringify(c,null,2))"
+          echo "Firebase Analytics açık"
       - name: Web dosyalarını uygulamaya kopyala
         working-directory: app
         run: node copy-web.js && npx cap sync android
