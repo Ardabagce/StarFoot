@@ -10,7 +10,6 @@ function createForm() {
     "Testin geçmesi için oyunu 14 gün telefonunda yüklü tutman yeterli. Ücretsiz."
   );
   form.setCollectEmail(false);
-  form.setRequireLogin(false);
   form.setLimitOneResponsePerUser(false);
   form.setShowLinkToRespondAgain(false);
   form.setConfirmationMessage(
@@ -45,7 +44,7 @@ function createForm() {
   var sheet = SpreadsheetApp.create('StarFoot Android Test Kaydı (yanıtlar)');
   form.setDestination(FormApp.DestinationType.SPREADSHEET, sheet.getId());
 
-  Logger.log('Paylaşım linki: ' + form.shortenFormUrl(form.getPublishedUrl()));
+  Logger.log('Paylaşım linki: ' + form.getPublishedUrl());
   Logger.log('Formu düzenle: ' + form.getEditUrl());
   Logger.log('Yanıt tablosu: ' + sheet.getUrl());
 }
