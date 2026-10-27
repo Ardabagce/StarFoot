@@ -80,7 +80,7 @@ const Celebrate = {
       const P = { c1: o.c1 || '#c8102e', c2: o.c2 || '#ffffff', short: o.short || '' };
       const S = Celebrate.stage(host, P, false);
       const { c, W, H, dpr, bg } = S;
-      const kit = o.kit, look = Sprites.look(7);
+      const kit = o.kit, look = Sprites.me();
       const type = o.type || 'arms';
       const D = 3.4;
       const mates = [Sprites.look(3), Sprites.look(11), Sprites.look(22)];
@@ -163,7 +163,7 @@ const Celebrate = {
       const P = { c1: o.c1 || '#c8102e', c2: o.c2 || '#ffffff', short: o.short || '' };
       const S = Celebrate.stage(host, P, false);
       const { c, W, H, dpr, bg } = S;
-      const kit = o.kit, look = Sprites.look(7);
+      const kit = o.kit, look = Sprites.me();
       const ground = H * 0.97, h = Math.min(H * 0.5, W * 0.62);
       const mates = Array.from({ length: 6 }, (_, i) => ({ L: Sprites.look(31 + i * 7), x: (i < 3 ? -1 : 1) * (0.24 + (i % 3) * 0.12), ph: i * 0.7, num: [4, 6, 8, 3, 14, 23][i] }));
       const conf = [];
@@ -253,7 +253,7 @@ const Welcome = {
       const kit = Sprites.kit(club, false);
       const casual = { shirt: '#1b1d22', alt: '#1b1d22', pattern: 'plain', shorts: '#2a3a5c', socks: '#f2f2f2' };
       const suit = { shirt: '#232733', alt: '#232733', pattern: 'plain', shorts: '#232733', socks: '#111' };
-      const look = Sprites.look(7);
+      const look = Sprites.me();
       const sur = (p.surname || p.name || '').toLocaleUpperCase('tr');
       const fans = Math.round((300 + (p.fame || 0) * 120 + Math.max(0, club.rating - 50) * 70) / 50) * 50;
       const el = document.createElement('div');

@@ -289,7 +289,7 @@ const SocialArt = {
     const club = (post.cid && Game.state.world.clubs[post.cid]) || (Game.inStreet() ? null : Game.club());
     const P = { c1: post.c1 || (club ? club.c1 : '#2a6fdb'), c2: post.c2 || (club ? club.c2 : '#ffffff'), short: post.short || (club ? club.short : '') };
     const kit = post.cid || club ? Sprites.kit({ id: post.cid || (club && club.id), c1: P.c1, c2: P.c2 }, false) : { shirt: P.c1, alt: P.c2, pattern: 'plain', shorts: P.c2, socks: P.c1 };
-    const look = Sprites.look(post.lookSeed || 7);
+    const look = post.lookSeed ? Sprites.look(post.lookSeed) : Sprites.me();
     const num = post.num || p.shirt;
     const scene = post.scene || SocialArt.sceneFor(post.kind, post.text);
     const fig = (sx, sy, h, o) => SocialArt.lit(c, (l) => Sprites.figure(l, sx, sy, h, Object.assign({ kit, look, facing: 'down', noShadow: true, t: 0 }, o)));

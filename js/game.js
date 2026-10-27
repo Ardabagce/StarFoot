@@ -885,6 +885,8 @@ const Game = {
   transferWeek(r) {
     const s = Game.state;
     if (Game.isYouth() || Game.inStreet()) return;
+    // Premium transfer talebiyle gelen tekliflerin süresi dolar
+    if (s.offers && s.offers.some((o) => o.exp != null && o.exp < r)) { s.offers = s.offers.filter((o) => o.exp == null || o.exp >= r); if (!s.offers.length) Game.news('Transfer talebinle gelen tekliflerin süresi doldu.', ''); }
     const w = Game.tWindow(r), prev = Game.tWindow(r - 1);
     if (!w) {
       if (prev && s.offers.length) { s.offers = []; Game.news(`${prev.name} kapandı. Bekleyen teklifler geçersiz oldu.`, ''); }
@@ -1175,9 +1177,10 @@ const Game = {
         ${typeof LPath !== 'undefined' ? LPath.endHtml(s) : ''}
         ${hof ? `<div class="hof-rank">🏛️ Efsaneler Salonu'nda <b>${hof.rank}.</b> sıradasın</div>` : ''}
         ${heir ? `<div class="heir"><b>👶 Oğlunla devam et</b><small>${U.esc(heir.surname)} ailesinin ${heir.gen}. nesli · Miras: +${heir.stat} tüm yetenekler, ${heir.fame} ün${heir.money ? `, ${U.money(heir.money)}` : ''}</small><button class="btn" id="end-heir">Yeni Nesil</button></div>` : ''}
-        <div class="end-btns">${shareCv ? `<button class="btn btn-ghost" id="end-share">${Icon('share')} Paylaş</button>` : ''}<button class="btn btn-big" onclick="Game.toMenu()">Ana Menü</button></div>
+        <div class="end-btns">${typeof Star !== 'undefined' ? `<button class="btn btn-ghost" id="end-doc">${Icon('play')} Belgeselin</button>` : ''}${shareCv ? `<button class="btn btn-ghost" id="end-share">${Icon('share')} Paylaş</button>` : ''}<button class="btn btn-big" onclick="Game.toMenu()">Ana Menü</button></div>
       </div>`;
     if (heir) el.querySelector('#end-heir').onclick = () => Legacy.continueWith(heir);
+    if (el.querySelector('#end-doc')) el.querySelector('#end-doc').onclick = () => Star.doc(p, s);
     if (shareCv) el.querySelector('#end-share').onclick = () => ShareCard.preview(shareCv, ShareCard.text());
     UI.strip(el);
     Game.show('end');
@@ -1391,7 +1394,7 @@ const UI = {
       <div class="st-cell st-ap"><div><span>Hafta hakkı</span><i class="ap">${Array.from({ length: 3 }, (_, i) => `<i class="${i < s.ap ? 'on' : ''}"></i>`).join('')}</i></div><b>${s.ap}/3</b></div>`;
   },
 
-  player() { return UI.playerCard() + UI.celebCard() + Social.render(true); },
+  player() { return UI.playerCard() + (typeof Star !== 'undefined' ? Star.hubCard() : '') + UI.celebCard() + Social.render(true); },
 
   // Profil: oyuncu kartı, sosyal medya ve kariyer tek sekmede
   profile() {
@@ -1403,7 +1406,7 @@ const UI = {
   // Yaşam: aile, ilişkiler, menajer, sponsorlar, gece hayatı ve mağaza
   life() {
     const nav = UI.viewNav('lifeView', [['life', 'heart', 'Yaşam'], ['shop', 'shop', 'Mağaza']]);
-    return nav + ((UI.lifeView || 'life') === 'shop' ? UI.shop() : Life.screen());
+    return nav + ((UI.lifeView || 'life') === 'shop' ? UI.shop() : Life.screen() + (typeof Star !== 'undefined' ? Star.luxCard() : ''));
   },
 
   // Gol sevinci seçimi: kariyer golleriyle yenileri açılır
@@ -1447,7 +1450,7 @@ const UI = {
     const dpr = Math.min(2, window.devicePixelRatio || 1);
     cv.width = 120 * dpr; cv.height = 150 * dpr;
     const kit = Sprites.kit(Game.club(), false);
-    Sprites.figure(ctx, 60 * dpr, 140 * dpr, 118 * dpr, { kit, look: Sprites.look(7), facing: 'down', t: 0 });
+    Sprites.figure(ctx, 60 * dpr, 140 * dpr, 118 * dpr, { kit, look: Sprites.me(), facing: 'down', t: 0 });
   },
 
   playerCard() {

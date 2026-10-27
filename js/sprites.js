@@ -115,6 +115,12 @@ const Sprites = {
     return { skin: SKINS[si], hair: HAIRS[hi], style: st, bald: st === 'bald', beard: r(4) < 0.28 };
   },
 
+  // Oyuncunun kendi görünümü (Premium görünüm stüdyosunda değiştirilebilir)
+  me(p) {
+    p = p || (typeof Game !== 'undefined' && Game.p);
+    return (p && p.look) || Sprites.look(7);
+  },
+
   // İnsan figürü. (sx, sy) ayakların ekran noktası, h ekrandaki boy (px)
   figure(ctx, sx, sy, h, o) {
     // Mahalle maçı: herkes farklı kıyafette (kit.variants), forma numarası yok
@@ -157,7 +163,7 @@ const Sprites = {
       ctx.fillStyle = look.skin; ctx.fillRect(-legW / 2, 0, legW, L * 0.45);
       ctx.fillStyle = kit.socks; ctx.fillRect(-legW / 2, L * 0.42, legW, L * 0.5);
       ctx.fillStyle = Sprites.shade(kit.socks, -0.25); ctx.fillRect(-legW / 2, L * 0.42, legW, L * 0.06);
-      ctx.fillStyle = '#16181d';
+      ctx.fillStyle = look.boots || '#16181d';
       ctx.beginPath(); ctx.ellipse(0, L * 0.95, legW * 0.62, legW * 0.42, 0, 0, Math.PI * 2); ctx.fill();
       ctx.restore();
     };

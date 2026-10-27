@@ -647,7 +647,7 @@ const Social = {
   postCard(x, so, verified) {
     return `<article class="ig-post">
       <header class="ig-ph"><span class="ig-pav"><canvas class="so-avatar sm" aria-hidden="true"></canvas></span>
-        <span class="ig-pid"><b>${U.esc(so.handle.replace('@', ''))}${verified ? IG.verified() : ''}</b><small>${U.esc(x.loc || '')}</small></span>${IG.more()}</header>
+        <span class="ig-pid"><b>${U.esc(so.handle.replace('@', ''))}${typeof Star !== 'undefined' ? Star.badge(verified) : verified ? IG.verified() : ''}</b><small>${U.esc(x.loc || '')}</small></span>${IG.more()}</header>
       <div class="ig-media"><canvas data-pid="${x.id}" aria-label="${U.esc(x.text)}"></canvas></div>
       <div class="ig-acts">${IG.heart(true)}${IG.comment()}${IG.send()}<span class="sp"></span>${IG.save()}</div>
       <div class="ig-likes">${Social.fmt(x.likes)} beğenme</div>
@@ -666,7 +666,7 @@ const Social = {
     const lead = so.posts[0];
     if (!full) {
       return `<section class="card ig ig-home">
-        <div class="ig-top"><b>${U.esc(so.handle.replace('@', ''))}${verified ? IG.verified() : ''}</b><small>${Social.fmt(so.followers)} takipçi</small></div>
+        <div class="ig-top"><b>${U.esc(so.handle.replace('@', ''))}${typeof Star !== 'undefined' ? Star.badge(verified) : verified ? IG.verified() : ''}</b><small>${Social.fmt(so.followers)} takipçi</small></div>
         ${lead ? Social.postCard(lead, so, verified) : '<p class="muted">Henüz paylaşım yok. Gol at ya da haftalık planda "Sosyal Medya" ile paylaşım yap.</p>'}
       </section>`;
     }
@@ -675,7 +675,7 @@ const Social = {
     const tr = (so.trends || []).slice(0, 8);
     return `
       <section class="card ig">
-        <div class="ig-top"><b>${U.esc(so.handle.replace('@', ''))}${verified ? IG.verified() : ''}</b></div>
+        <div class="ig-top"><b>${U.esc(so.handle.replace('@', ''))}${typeof Star !== 'undefined' ? Star.badge(verified) : verified ? IG.verified() : ''}</b></div>
         <div class="ig-prof">
           <div class="ig-ring"><canvas class="so-avatar" aria-hidden="true"></canvas></div>
           <div class="ig-nums">
@@ -685,7 +685,7 @@ const Social = {
           </div>
         </div>
         <div class="ig-bio"><b>${U.esc(Player.fullName(p))}</b><small>${cat}</small><span>${U.esc(bio)}</span></div>
-        <div class="ig-btns"><span>Profili düzenle</span><span>Profili paylaş</span></div>
+        <div class="ig-btns"><button data-star="studio">Profili düzenle</button><button data-star="wiki">Starpedia</button></div>
         ${tr.length ? `<div class="ig-hl">${tr.map((x) => `<div class="ig-st ${x.kind}" data-trend="${U.esc(x.n)}"><i><canvas data-story="${U.esc(x.n)}"></canvas></i><small>${U.esc(x.n.split(' ').slice(-1)[0])}</small></div>`).join('')}</div>` : ''}
         <div class="ig-tabs"><span class="on">${IG.grid()}</span><span>${IG.reels()}</span><span>${IG.tag()}</span></div>
         ${so.posts.length ? `<div class="ig-grid">${so.posts.slice(0, 12).map((x) => `<button class="ig-tile" data-post="${x.id}" aria-label="${U.esc(x.text)}"><canvas data-pid="${x.id}" data-crop="1"></canvas>${x.kind === 'trophy' || x.kind === 'transfer' ? `<span class="ig-badge">${IG.multi()}</span>` : ''}<span class="ig-hov">${IG.heart(true)}${Social.fmt(x.likes)}</span></button>`).join('')}</div>` : '<p class="muted">Henüz paylaşım yok.</p>'}
@@ -712,7 +712,7 @@ const Social = {
       g.addColorStop(0, Sprites.shade(club.c1, -0.3)); g.addColorStop(1, '#0b1020');
       c.fillStyle = g; c.fillRect(0, 0, 72 * dpr, 72 * dpr);
       SocialArt.glow(c, 50 * dpr, 14 * dpr, 40 * dpr, 'rgba(255,240,210,0.35)');
-      Sprites.figure(c, 36 * dpr, 128 * dpr, 118 * dpr, { kit: Sprites.kit(club, false), look: Sprites.look(7), facing: 'down', noShadow: true, t: 0 });
+      Sprites.figure(c, 36 * dpr, 128 * dpr, 118 * dpr, { kit: Sprites.kit(club, false), look: Sprites.me(), facing: 'down', noShadow: true, t: 0 });
     });
     SocialArt.paint(root);
   },

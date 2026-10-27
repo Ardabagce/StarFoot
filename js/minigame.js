@@ -192,7 +192,7 @@ const MiniGame = {
 
       const ball = { x: scene.ball.x, y: scene.ball.y, z: 0, vx: 0, vy: 0, vz: 0, spin: 0, rot: 0 };
       const mk = (e, seed, extra) => Object.assign({ px: e.x, py: e.y, run: 0, spd: 0, look: Sprites.look(seed) }, e, extra);
-      const shooter = mk({ x: scene.ball.x - 0.6, y: scene.ball.y + 0.7 }, 7, { num: o.number || 10 });
+      const shooter = mk({ x: scene.ball.x - 0.6, y: scene.ball.y + 0.7 }, 7, { num: o.number || 10, look: Sprites.me() });
       const kp = scene.keeper;
       const keeper = mk({ x: kp.x, y: kp.y }, 3, {
         delay: 0.34 - 0.2 * s + fkFar * 0.12, speed: (1.6 + 3.0 * s) * (1 - fkFar * 0.25), reach: (0.5 + 0.55 * s) * (1 - fkFar * 0.15), dive: 0.2 + 0.6 * s,
@@ -841,7 +841,7 @@ const MiniGame = {
       layout();
       window.addEventListener('resize', layout);
       const kits = o.kits;
-      const lookMe = Sprites.look(7), lookOpp = Sprites.look(13);
+      const lookMe = Sprites.me(), lookOpp = Sprites.look(13);
       const D = 1.7 / o.speed;
       let round = 0, partial = false, done = false, raf = 0, last = performance.now();
       let rt = 0, state = 'run', msg = '', msgCol = '#fff', msgT = 0, flash = 0, T = 0, ox = 0;
@@ -1008,7 +1008,7 @@ Object.assign(MiniGame, {
       const oppV = (4.5 + o.skill * 2.6) * U.rand(0.95, 1.05);
       const me = { y: 0, v: 0, run: 0 }, op = { y: 0, v: 0, run: 1 };
       let t = 0, done = false, raf = 0, last = performance.now(), msg = '', msgCol = '#fff', taps = 0;
-      const lookMe = Sprites.look(7), lookOp = Sprites.look(19);
+      const lookMe = Sprites.me(), lookOp = Sprites.look(19);
       const tap = () => { if (done || t < 0.6) return; taps++; me.v = Math.min(vmax, me.v + 1.6); };
       const finish = (ok) => {
         done = true;
@@ -1099,7 +1099,7 @@ Object.assign(MiniGame, {
       const closing = 6.5 + o.skill * 3.5; // rakibin yaklaşma hızı (m/sn)
       const me = { x: 0, tx: 0, run: 0 };
       let t = 0, done = false, raf = 0, last = performance.now(), beaten = 0, scroll = 0, msg = '', msgCol = '#fff', msgT = 0;
-      const lookMe = Sprites.look(7);
+      const lookMe = Sprites.me();
       const mkDef = (i) => ({ num: [4, 6, 15, 23][i % 4], d: 11 + i * 0.5, x: me.tx + U.rand(-0.4, 0.4), side: U.pick([-1, 1]), state: 'come', lt: 0, look: Sprites.look(41 + i * 7) });
       let def = mkDef(0);
       const say = (m, c) => { msg = m; msgCol = c; msgT = 0.9; };
@@ -1229,7 +1229,7 @@ Object.assign(MiniGame, {
       let t = 0, done = false, raf = 0, last = performance.now(), tapT = null, aimAt = 0, shot = null, msg = '', msgCol = '#fff';
       const sweep = 1.1 + o.skill * 0.9;
       const aim = () => Math.sin(t * sweep * 2.2) * 0.95; // -1..1 kale ağzı
-      const lookMe = Sprites.look(7), lookDef = Sprites.look(29), lookGk = Sprites.look(3);
+      const lookMe = Sprites.me(), lookDef = Sprites.look(29), lookGk = Sprites.look(3);
       const finish = (res, text, col) => {
         done = true; msg = text; msgCol = col;
         setTimeout(() => { cleanup(); resolve({ result: res }); }, 1300);
@@ -1361,7 +1361,7 @@ Object.assign(MiniGame, {
       const stam = o.stamina || 40;
       const band = U.clamp(0.16 + stam / 700 - o.skill * 0.04, 0.12, 0.28);
       let t = 0, done = false, raf = 0, last = performance.now(), pace = 0.3, hold = false, inBand = 0, target = 0.45, tgtGoal = 0.45, nextShift = 2, dist = 0;
-      const look = Sprites.look(7);
+      const look = Sprites.me();
       const finish = () => {
         done = true;
         const q = inBand / DUR;
@@ -1428,7 +1428,7 @@ Object.assign(MiniGame, {
       const zone = U.clamp(0.16 + tech / 500 - o.skill * 0.05, 0.12, 0.34); // bölgenin yüksekliği (0-1)
       const ball = { h: 0.9, v: 0, x: 0 };
       let t = 0, done = false, raf = 0, last = performance.now(), touches = 0, best = 0, streak = 0, lives = 3, cool = 0, kick = 0, msg = '', msgT = 0, msgCol = '#fff';
-      const look = Sprites.look(7);
+      const look = Sprites.me();
       const say = (m, c) => { msg = m; msgCol = c; msgT = 0.8; };
       const tap = () => {
         if (done || t < 0.5 || cool > 0) return;
@@ -1511,7 +1511,7 @@ Object.assign(MiniGame, {
       const fill = 0.9 + o.skill * 0.7; // saniyede dolma hızı
       let round = 0, wins = 0, power = 0, holding = false, band = 0, t = 0, done = false, raf = 0, last = performance.now();
       let push = 0, pushDir = 0, msg = '', msgCol = '#fff', msgT = 0, wait = 0.6;
-      const lookMe = Sprites.look(7), lookOp = Sprites.look(23);
+      const lookMe = Sprites.me(), lookOp = Sprites.look(23);
       const newBand = () => { band = U.rand(0.45, 0.92 - bandW); power = 0; };
       newBand();
       const say = (m, c) => { msg = m; msgCol = c; msgT = 0.9; };
@@ -1625,7 +1625,7 @@ Object.assign(MiniGame, {
       const draw = () => {
         for (let i = 0; i < 10; i++) { ctx.fillStyle = Sprites.stripe(i); ctx.fillRect(0, (H / 10) * i, W, H / 10 + 1); }
         const fh = Math.min(H * 0.17, W * 0.2);
-        Sprites.figure(ctx, meP.x * W, meP.y * H + fh * 0.4, fh, { kit: o.kits.own, look: Sprites.look(7), facing: 'up', number: o.number, label: 'SEN', labelScale: dpr, labelColor: 'rgba(214,40,57,0.92)', t });
+        Sprites.figure(ctx, meP.x * W, meP.y * H + fh * 0.4, fh, { kit: o.kits.own, look: Sprites.me(), facing: 'up', number: o.number, label: 'SEN', labelScale: dpr, labelColor: 'rgba(214,40,57,0.92)', t });
         if (tgt) {
           const k = 1 - rt / win;
           Sprites.figure(ctx, tgt.x * W, tgt.y * H + fh * 0.4, fh, { kit: o.kits.own, look: tgt.look, facing: 'up', number: 7 + hits, label: tgt.name, labelScale: dpr, ring: 'rgba(124,240,160,0.95)', t });

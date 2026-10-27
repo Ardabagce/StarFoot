@@ -177,7 +177,7 @@ const ShareCard = {
   },
   figure(o, x, y, h) {
     const kit = Sprites.kit(o.club, false);
-    Sprites.figure(o.c, x, y, h, { kit, look: Sprites.look(7), facing: 'down', number: o.p.shirt, t: 0 });
+    Sprites.figure(o.c, x, y, h, { kit, look: Sprites.me(o.p), facing: 'down', number: o.p.shirt, t: 0 });
   },
   nameBlock(o, y) {
     const { c, W, p } = o;

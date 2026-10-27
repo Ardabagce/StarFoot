@@ -722,7 +722,7 @@ const Match = {
       const av = document.querySelector('.motm-av');
       if (av) {
         const c = av.getContext('2d');
-        Sprites.figure(c, 100, 190, 170, { kit: kits.own, look: Sprites.look(7), facing: 'down', number: p.shirt, t: 0 });
+        Sprites.figure(c, 100, 190, 170, { kit: kits.own, look: Sprites.me(), facing: 'down', number: p.shirt, t: 0 });
       }
       if (typeof Sfx !== 'undefined') { Sfx.play('whistleEnd'); setTimeout(() => Sfx.crowd(false), 1600); if (res === 'W') Sfx.buzz('success'); }
       $('ms-done').onclick = () => {

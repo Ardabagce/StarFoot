@@ -192,14 +192,14 @@ const Premium = {
   card() {
     if (!Premium.available()) return '';
     if (Premium.active) {
-      return `<section class="card prem on"><div class="prem-h"><i>⭐</i><span><b>Premium aktif</b><small>Geçiş reklamı yok · ödüller reklamsız</small></span></div></section>`;
+      return `<section class="card prem on"><div class="prem-h"><i>⭐</i><span><b>Premium aktif</b><small>Yıldız gibi yaşa: rozet, Starpedia, lüks vitrin, reklamsız</small></span></div></section>`;
     }
     return `<section class="card prem">
-      <div class="prem-h"><i>⭐</i><span><b>StarFoot Premium</b><small>Tek seferlik satın alma · tüm kariyerlerinde geçerli</small></span></div>
-      <ul class="prem-l">
+      <div class="prem-h"><i>⭐</i><span><b>Yıldız gibi yaşa</b><small>StarFoot Premium · tek seferlik satın alma, tüm kariyerlerinde geçerli</small></span></div>
+      ${typeof Star !== 'undefined' ? Star.perksHtml() : `<ul class="prem-l">
         <li>Geçiş reklamları tamamen kalkar</li>
         <li>Hediye paketi ×2/×3, +1 aksiyon hakkı, enerji, sakatlık −1 hafta ve "tekrar dene" ödülleri <b>reklam izlemeden</b></li>
-      </ul>
+      </ul>`}
       <button class="btn btn-play" data-prem-buy>${Icon('star')} Premium al${Premium.price ? ` · ${U.esc(Premium.price)}` : ''}</button>
       <button class="btn btn-ghost prem-restore" data-prem-restore>Satın alımları geri yükle</button>
       ${!Premium.loaded && Premium.err ? `<p class="prem-err">${Premium.err === 'empty' ? 'Ürün bilgisi App Store\'dan alınamadı (ürün bulunamadı).' : `Mağazaya ulaşılamadı: ${U.esc(Premium.err)}`}</p>` : ''}
