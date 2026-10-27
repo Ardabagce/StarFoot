@@ -440,6 +440,25 @@ def submit_packs(asc, app_id, packs):
             print(f'   ! gönderilemedi: {err}')
 
 
+def unsubmit_packs(asc, app_id):
+    # Reddedilen (UNRESOLVED_ISSUES) başvurudaki satın alma ürünü öğelerini çıkarır: ürünlerin adı ve açıklaması
+    # ancak başvurunun dışındayken değiştirilebiliyor. Sürüm öğesine dokunmaz. Ürünler sonra yeniden incelemeye eklenir.
+    import base64
+    subs = asc.get('/v1/reviewSubmissions', **{'filter[app]': app_id, 'filter[state]': 'UNRESOLVED_ISSUES', 'limit': 5, 'include': 'items'})
+    for it in subs.get('included', []):
+        try:
+            kind = base64.urlsafe_b64decode(it['id'] + '=' * (-len(it['id']) % 4)).decode().split('|')[1]
+        except Exception:
+            kind = '?'
+        print(f"   öğe {it['id'][:24]}… tür {kind} durum {it['attributes'].get('state')}")
+        if kind == '17':
+            try:
+                asc.req('DELETE', f"/v1/reviewSubmissionItems/{it['id']}", write=True)
+                print('     başvurudan çıkarıldı')
+            except RuntimeError as err:
+                print(f'     ! çıkarılamadı: {err}')
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--metadata', default=str(ROOT / 'store/asc/metadata.json'))
@@ -454,6 +473,7 @@ def main():
     ap.add_argument('--iap-setup', action='store_true')
     ap.add_argument('--packs', action='store_true')
     ap.add_argument('--submit-packs', action='store_true')
+    ap.add_argument('--unsubmit-packs', action='store_true')
     a = ap.parse_args()
     meta = json.load(open(a.metadata, encoding='utf-8'))
     asc = ASC(a.dry_run)
@@ -472,6 +492,10 @@ def main():
         return iap_report(asc, app['id'])
     if a.packs:
         pack_setup(asc, app['id'], meta.get('packs') or {}, a.replace_screens)
+        return iap_report(asc, app['id'])
+    if a.unsubmit_packs:
+        unsubmit_packs(asc, app['id'])
+        pack_setup(asc, app['id'], meta.get('packs') or {}, True)
         return iap_report(asc, app['id'])
     if a.submit_packs:
         submit_packs(asc, app['id'], meta.get('packs') or {})
