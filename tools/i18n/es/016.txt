@@ -1,4 +1,4 @@
-3538|Sueño Mundialista
+3538|Sueño Campeonato Mundial
 3539|Canadá
 3540|Marruecos
 3541|Túnez
@@ -100,14 +100,14 @@
 3655|Tienes 18 años y te han convocado a la concentración de la selección. Destaca en la pretemporada, gánate la confianza del técnico y lleva a tu país al título mundial.
 3658|Nuevo torneo
 3659|¿Empezar un nuevo torneo?
-3660|Se borrará tu aventura mundialista en curso.
+3660|Se borrará tu aventura en el Campeonato Mundial en curso.
 3661|Favoritos
 3662|Selecciones fuertes
 3663|Tapados
 3664|Cenicientas
 3665|Elige tu país
 3666|En una selección fuerte es difícil entrar en la convocatoria; en una pequeña, cada partido es una epopeya. Tú eliges.
-3962|¡{0} fue convocado a la concentración de {2} para el Mundial {1}! El talento de 18 años está por primera vez con la absoluta.
+3962|¡{0} fue convocado a la concentración de {2} para el Campeonato Mundial {1}! El talento de 18 años está por primera vez con la absoluta.
 3669|¡Bienvenido a la concentración!
 3960|El seleccionador de {} te convocó por primera vez. Antes del torneo hay 6 días de concentración y 2 amistosos.
 3671|Tienes 2 acciones cada día: entrenar, táctica, descanso, tiempo con el equipo...
@@ -126,7 +126,7 @@
 3694|Tus músculos se relajaron y el cansancio bajó.
 3695|¿Qué habilidad quieres trabajar?
 3696|Jugarás un minijuego. Cuanto mejor juegues, más mejorarás.
-3699|¿Qué sientes en tu primer Mundial?
+3699|¿Qué sientes en tu primer Campeonato Mundial?
 3700|Es un honor estar aquí, quiero ayudar al equipo.
 3701|Estoy listo, si me dan la oportunidad lo demostraré.
 3702|¡Este torneo será mi torneo!
@@ -144,7 +144,7 @@
 3713|Amistoso
 4001|Amistoso · {} - {}
 3714|AMISTOSO
-776|MUNDIAL
+776|CAMPEONATO MUNDIAL
 3715|Estás sancionado y no puedes jugar este partido.
 3973|Te lesionaste en el partido: estarás {} días de baja.
 3716|Tarjeta roja: te pierdes el próximo partido por sanción.
@@ -153,7 +153,7 @@
 3976|Partido de grupo: {0} {1}-{2} {3}. Somos {5}.º en el Grupo {4}.
 4009|En los penaltis {}-{}.
 4033|Partido {}
-4015|Mundial {}
+4015|Campeonato Mundial {}
 3718|¡Pasamos de ronda!
 3719|Nos despedimos del torneo.
 3720|¡SOMOS CAMPEONES DEL MUNDO!
@@ -177,8 +177,8 @@
 3738|Todos te miran. ¡Tira hacia atrás, elige la esquina y suelta!
 3741|Al técnico le impresionó mucho tu concentración: ¡empezarás el torneo como titular!
 3742|Estás convocado, pero de momento empezarás en el banquillo. ¡Aprovecha cada minuto y cambia la opinión del técnico!
-3966|{} anunció su lista para el Mundial: ¡{} está entre los 26!
-3745|¡Estoy en la lista del Mundial! Vestir esta camiseta es un sueño.
+3966|{} anunció su lista para el Campeonato Mundial: ¡{} está entre los 26!
+3745|¡Estoy en la lista del Campeonato Mundial! Vestir esta camiseta es un sueño.
 3748|Lista anunciada
 3749|¡Estás entre los 26 convocados!
 3750|Tu media
@@ -186,7 +186,7 @@
 3752|Confianza del técnico
 4007|Tus rivales de grupo: {}
 3753|¡Que empiece el torneo!
-3754|Bota de Oro
+3754|Trofeo de Goleador
 3982|¡Eres el máximo goleador del torneo con {} goles!
 3755|¡Te eligieron mejor jugador del torneo!
 3756|Mejor Jugador Joven
@@ -218,7 +218,7 @@
 3779|Jugar el partido
 1159|Día de partido
 3780|Fin de la concentración
-3781|Hoy el técnico anunciará la lista para el Mundial. ¿Dará frutos tu trabajo en la concentración?
+3781|Hoy el técnico anunciará la lista para el Campeonato Mundial. ¿Dará frutos tu trabajo en la concentración?
 3784|Ver la lista
 3785|Se jugaron los últimos partidos de grupo. Se conocen los clasificados a dieciseisavos...
 3788|Ver resultados
@@ -281,7 +281,7 @@
 3861|Creciste en el barrio de La Castellane, en Marsella. Cuando tienes el balón, el tiempo parece detenerse. Una academia de la costa sur te descubrió con 14 años.
 3865|El Bordeaux Girondins quiere convertirte en estrella del fútbol profesional.
 3866|La Juventa Torino te eligió para construir el mejor centro del campo de Europa.
-3867|Es el año del Mundial que organiza tu país. Todo el país ha puesto sus esperanzas en ti.
+3867|Es el año del Campeonato Mundial que organiza tu país. Todo el país ha puesto sus esperanzas en ti.
 3870|El Real Madrigal llama a tu puerta para el fichaje más caro del mundo.
 3871|El Fenómeno
 3872|En los suburbios de Río corrías al entrenamiento incluso los días en que no tenías para el autobús. El Cruzeiro Foxes te fichó para su academia con 14 años. Tu velocidad y tu definición ya son leyenda.
@@ -293,14 +293,14 @@
 3899|La Tortuga
 3900|Creciste en Bondy, en las afueras de París. Las paredes de tu habitación están llenas de pósteres de tus ídolos. El Monaco Princes te fichó para su academia con 14 años: tu velocidad es increíble.
 3904|El Paris Saint-Gilles hizo una oferta récord para que vuelvas a casa.
-3905|Vas al Mundial con 19 años. El mundo se prepara para hablar de tu velocidad.
+3905|Vas al Campeonato Mundial con 19 años. El mundo se prepara para hablar de tu velocidad.
 3908|El sueño de tu infancia, el Real Madrigal, por fin llama a tu puerta.
-4000|Gana el Balón de Oro {} veces
+4000|Gana la Estrella de Oro {} veces
 3980|Gana la Copa de Campeones de Europa {} veces
 3981|Gana la Copa de la Federación Europea {} veces
-3991|Gana el Mundial {} veces
-3909|Gana el Mundial
-3910|Gana la Eurocopa
+3991|Gana el Campeonato Mundial {} veces
+3909|Gana el Campeonato Mundial
+3910|Gana el Campeonato Europeo
 3993|Gana {} ligas
 4003|Marca {} goles en una temporada
 4004|Marca {} goles en tu carrera
@@ -335,12 +335,12 @@
 4006|Comparación con {}
 4024|Afinidad {}% · {}
 3937|Se restauraron los paquetes que compraste.
-3938|Un modo aparte, con su propia partida guardada, centrado en un único Mundial con la selección que elijas a los 18 años.
+3938|Un modo aparte, con su propia partida guardada, centrado en un único Campeonato Mundial con la selección que elijas a los 18 años.
 3939|Elige tu país entre 65 selecciones y juega un torneo de 48 equipos
 3940|Concentración, amistosos y anuncio de la lista
 3941|Días entre partidos: entrenamientos, táctica, entrevistas, sucesos en la concentración
 3942|Tandas de penaltis en eliminatorias: tú tiras el tuyo
-3943|Premios Bota de Oro, Balón de Oro y Mejor Jugador Joven
+3943|Premios Trofeo de Goleador, Estrella de Oro y Mejor Jugador Joven
 3946|Fichajes de la historia desde los clubes de la leyenda y momentos clave
 3947|Una habilidad especial desde el inicio y atributos acordes al estilo de la leyenda
 3948|Objetivos según los logros de la leyenda y comparación al retirarte
@@ -350,11 +350,11 @@
 3950|Compra única. Sin anuncios, y puedes restaurarla en todos tus dispositivos.
 3953|Este modo se puede comprar en la app de App Store.
 3989|¡{} desbloqueado! Que lo disfrutes.
-3957|Gana el Balón de Oro
+3957|Gana la Estrella de Oro
 3958|Gana la Copa de Campeones de Europa
 3959|Gana la Copa de la Federación Europea
 4035|6 historias de leyenda: de Argentina, Portugal, Brasil y Francia
 4036|6 carreras ficticias inspiradas en leyendas del fútbol: empieza en su año de nacimiento, en su cantera y con su talento.
 4034|Tus rivales de grupo:
 4037|¿Volver al menú principal?
-4038|Tu progreso está guardado. Puedes seguir el Mundial desde el menú principal cuando quieras.
+4038|Tu progreso está guardado. Puedes seguir el Campeonato Mundial desde el menú principal cuando quieras.

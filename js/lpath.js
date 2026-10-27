@@ -57,7 +57,7 @@ const LP_LIST = [
     story: [
       { y: 1992, move: 'BDX', t: 'Bordo Girondenler seni profesyonel sahnede yıldızlaştırmak istiyor.' },
       { y: 1996, move: 'JUV', t: 'Juventa Torino Avrupa\'nın en iyi orta sahasını kurmak için seni seçti.' },
-      { y: 1998, t: 'Ev sahibi olduğunuz Dünya Kupası\'nın yılı. Bütün ülke umudunu sana bağladı.', fx: (p) => { Player.addMorale(p, 10); Player.addFame(p, 3); } },
+      { y: 1998, t: 'Ev sahibi olduğunuz Dünya Şampiyonası\'nın yılı. Bütün ülke umudunu sana bağladı.', fx: (p) => { Player.addMorale(p, 10); Player.addFame(p, 3); } },
       { y: 2001, move: 'RMA', t: 'Real Madrigal dünyanın en pahalı transferi için kapında.' },
     ],
     goals: [['wc', 1], ['euro', 1], ['ucl', 1], ['ballon', 1], ['league', 2]],
@@ -85,7 +85,7 @@ const LP_LIST = [
     era: '2012 · Monako Prensleri altyapısı',
     story: [
       { y: 2017, move: 'PSG', t: 'Paris Saint-Gilles memleketine dönmen için rekor bir teklif yaptı.' },
-      { y: 2018, t: '19 yaşında Dünya Kupası\'na gidiyorsun. Dünya senin hızını konuşmaya hazırlanıyor.', fx: (p) => { Player.addMorale(p, 8); Player.addFame(p, 3); } },
+      { y: 2018, t: '19 yaşında Dünya Şampiyonası\'na gidiyorsun. Dünya senin hızını konuşmaya hazırlanıyor.', fx: (p) => { Player.addMorale(p, 8); Player.addFame(p, 3); } },
       { y: 2024, move: 'RMA', t: 'Çocukluk hayalin Real Madrigal sonunda kapında.' },
     ],
     goals: [['wc', 1], ['ucl', 1], ['ballon', 1], ['league', 5], ['goals', 400]],
@@ -94,11 +94,11 @@ const LP_LIST = [
 
 // hedef türleri: [metin, ilerleme]
 const LP_GOALS = {
-  ballon: { t: (n) => (n > 1 ? `${n} kez Altın Top kazan` : 'Altın Top kazan'), v: (p) => p.trophies.filter((t) => /Altın Top/.test(t)).length },
+  ballon: { t: (n) => (n > 1 ? `${n} kez Altın Yıldız kazan` : 'Altın Yıldız kazan'), v: (p) => p.trophies.filter((t) => /Altın Yıldız/.test(t)).length },
   ucl: { t: (n) => (n > 1 ? `${n} kez Avrupa Şampiyonlar Kupası kazan` : 'Avrupa Şampiyonlar Kupası kazan'), v: (p) => p.trophies.filter((t) => /Avrupa Şampiyonlar Kupası Şampiyonu/.test(t)).length },
   uel: { t: (n) => (n > 1 ? `${n} kez Avrupa Federasyon Kupası kazan` : 'Avrupa Federasyon Kupası kazan'), v: (p) => p.trophies.filter((t) => /Avrupa Federasyon Kupası Şampiyonu/.test(t)).length },
-  wc: { t: (n) => (n > 1 ? `${n} kez Dünya Kupası kazan` : 'Dünya Kupası kazan'), v: (p) => p.trophies.filter((t) => /Dünya Kupası Şampiyonu/.test(t)).length },
-  euro: { t: () => 'Avrupa Şampiyonası kazan', v: (p) => p.trophies.filter((t) => /Avrupa Şampiyonası Şampiyonu/.test(t)).length },
+  wc: { t: (n) => (n > 1 ? `${n} kez Dünya Şampiyonası kazan` : 'Dünya Şampiyonası kazan'), v: (p) => p.trophies.filter((t) => /Dünya Şampiyonası Şampiyonu/.test(t)).length },
+  euro: { t: () => 'Avrupa Milletler Şampiyonası kazan', v: (p) => p.trophies.filter((t) => /Avrupa Milletler Şampiyonası Şampiyonu/.test(t)).length },
   league: { t: (n) => `${n} lig şampiyonluğu yaşa`, v: (p) => p.trophies.filter((t) => /Lig(i)? Şampiyonu/.test(t) && !/U1\d|U2\d/.test(t)).length },
   season: { t: (n) => `Bir sezonda ${n} gol at`, v: (p) => Math.max(0, ...p.history.map((h) => h.goals || 0)) },
   goals: { t: (n) => `Kariyerinde ${n} gol at`, v: (p) => p.totals.goals },

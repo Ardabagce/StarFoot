@@ -35,7 +35,7 @@
 684|4 kontribusi gol dalam satu pertandingan (gol + assist)
 685|Kamu mencetak 5 gol dalam satu pertandingan
 686|Kamu mendapat nilai 9,0 dalam satu pertandingan
-687|Kamu memenangi Sepatu Emas dalam satu musim
+687|Kamu memenangi Trofi Top Skor dalam satu musim
 688|Pilih taruhan dan putar rodanya.
 689|Kamu fokus ke pertandingan berikutnya.
 690|Seorang jurnalis olahraga ingin mewawancaraimu.
@@ -54,8 +54,8 @@
 703|Brasil
 704|Piala Brasil
 705|Liga Brasil
-706|Premier League Britania
-707|Championship Britania
+706|Liga Utama Britania
+707|Liga Kedua Britania
 708|Brussel
 709|Mobil ini lebih mahal dari gajiku
 710|Ini baru permulaan
@@ -124,12 +124,12 @@
 773|Tribun
 774|Status
 775|Statusmu
-776|PIALA DUNIA
+776|KEJUARAAN DUNIA
 777|JATUH!
 778|Jersey bintang terbesar di eranya. Moral +1 setiap minggu
 779|Dunia
-780|Piala Dunia
-781|Kamu memenangi Piala Dunia
+780|Kejuaraan Dunia
+781|Kamu memenangi Kejuaraan Dunia
 782|Bintang Dunia
 783|Bintang dunia
 784|Juara Dunia
@@ -169,10 +169,10 @@
 818|Barang-barangmu
 819|PELANGGARAN!
 820|FEDERASI
-821|Komite Disiplin FIFA
-822|Kamu diskors FIFA dan tidak boleh memainkan pertandingan ini.
-823|Skorsing FIFA-mu sudah berakhir. Kamu bisa kembali ke lapangan.
-824|Investigasi FIFA sedang berjalan
+821|Komite Disiplin federasi
+822|Kamu diskors federasi dan tidak boleh memainkan pertandingan ini.
+823|Skorsing federasi-mu sudah berakhir. Kamu bisa kembali ke lapangan.
+824|Investigasi federasi sedang berjalan
 825|LIGA FLAMANDIA
 826|Kontrol plintiran dan akurasi tembakan.
 827|Keunggulanmu (atas peringkat 2)
@@ -197,7 +197,7 @@
 846|Yayasan Sekolah Sepak Bola
 847|Album Stiker Sepak Bola
 848|Kamu mengejar mimpi menjadi pesepak bola. Pilih tahun dan usia awalmu. Kamu tidak memilih klub: pemandu bakat yang menemukanmu.
-849|Pesepak bola dilarang bertaruh. Setiap taruhan menarik perhatian FIFA; bertaruh di pertandinganmu sendiri sangat berisiko. Jika ketahuan, kamu menghadapi skorsing panjang, denda, dan kehilangan sponsor.
+849|Pesepak bola dilarang bertaruh. Setiap taruhan menarik perhatian federasi; bertaruh di pertandinganmu sendiri sangat berisiko. Jika ketahuan, kamu menghadapi skorsing panjang, denda, dan kehilangan sponsor.
 850|Denyut sepak bola · Dari klub ke dunia
 851|Sepatu Futsal
 852|Badai

@@ -1,4 +1,4 @@
-3538|WM-Traum
+3538|Weltmeisterschaftstraum
 3539|Kanada
 3540|Marokko
 3541|Tunesien
@@ -95,19 +95,19 @@
 3648|Deine Worte machten Schlagzeilen. Jetzt musst du es beweisen.
 3651|Ich respektiere ihn
 3652|Deine ruhige Art kam gut an.
-3653|WM-Titel:
+3653|Weltmeistertitel:
 3654|Deine letzten Turniere
-3655|Du bist 18 und wurdest ins Nationalteam berufen. Zeig dich im Trainingslager, gewinne das Vertrauen des Trainers und führe dein Land zum WM-Titel.
+3655|Du bist 18 und wurdest ins Nationalteam berufen. Zeig dich im Trainingslager, gewinne das Vertrauen des Trainers und führe dein Land zum Weltmeistertitel.
 3658|Neues Turnier
 3659|Neues Turnier starten?
-3660|Dein laufendes WM-Abenteuer wird gelöscht.
+3660|Dein laufendes Weltmeisterschaftsabenteuer wird gelöscht.
 3661|Favoriten
 3662|Starke Teams
 3663|Geheimfavoriten
 3664|Märchenteams
 3665|Wähle dein Land
 3666|Bei einem starken Team ist es schwer, in den Kader zu kommen, bei einem kleinen ist jedes Spiel ein Epos. Du entscheidest.
-3962|{0} wurde für die WM {1} ins Trainingslager von {2} berufen! Das 18-jährige Talent ist erstmals bei der A-Nationalmannschaft.
+3962|{0} wurde für die Weltmeisterschaft {1} ins Trainingslager von {2} berufen! Das 18-jährige Talent ist erstmals bei der A-Nationalmannschaft.
 3669|Willkommen im Trainingslager!
 3960|Der Trainer von {} hat dich erstmals ins A-Team berufen. Vor dem Turnier gibt es ein 6-tägiges Trainingslager und 2 Testspiele.
 3671|Du hast jeden Tag 2 Aktionen: Training, Taktik, Erholung, Zeit mit dem Team...
@@ -126,7 +126,7 @@
 3694|Deine Muskeln sind locker, die Müdigkeit lässt nach.
 3695|Welche Fähigkeit willst du trainieren?
 3696|Du spielst ein Minispiel. Je besser du spielst, desto mehr verbesserst du dich.
-3699|Wie fühlst du dich bei deiner ersten WM?
+3699|Wie fühlst du dich bei deiner ersten Weltmeisterschaft?
 3700|Es ist eine Ehre, hier zu sein. Ich will dem Team helfen.
 3701|Ich bin bereit. Bekomme ich die Chance, zeige ich es.
 3702|Das wird mein Turnier!
@@ -153,7 +153,7 @@
 3976|Gruppenspiel: {0} {1}-{2} {3}. Wir sind {5}. in Gruppe {4}.
 4009|Elfmeterschießen {}-{}.
 4033|Spiel {}
-4015|WM {}
+4015|Weltmeisterschaft {}
 3718|Wir sind weiter!
 3719|Wir sind ausgeschieden.
 3720|WIR SIND WELTMEISTER!
@@ -177,8 +177,8 @@
 3738|Alle schauen auf dich. Zurückziehen, Ecke wählen und loslassen!
 3741|Der Trainer war von deinem Trainingslager begeistert: Du startest das Turnier in der Startelf!
 3742|Du bist im Kader, startest aber vorerst auf der Bank. Nutze jede Minute und überzeuge den Trainer!
-3966|{} hat den WM-Kader bekanntgegeben: {} ist unter den 26!
-3745|Ich bin im WM-Kader! Dieses Trikot zu tragen ist ein Traum.
+3966|{} hat den Weltmeisterschaftskader bekanntgegeben: {} ist unter den 26!
+3745|Ich bin im Weltmeisterschaftskader! Dieses Trikot zu tragen ist ein Traum.
 3748|Kader bekanntgegeben
 3749|Du bist unter den 26!
 3750|Deine Stärke
@@ -186,7 +186,7 @@
 3752|Vertrauen des Trainers
 4007|Deine Gruppengegner: {}
 3753|Das Turnier kann beginnen!
-3754|Goldener Schuh
+3754|Torjägertrophäe
 3982|Mit {} Toren bist du Torschützenkönig des Turniers!
 3755|Du wurdest zum besten Spieler des Turniers gewählt!
 3756|Bester junger Spieler
@@ -218,7 +218,7 @@
 3779|Spiel starten
 1159|Spieltag
 3780|Trainingslager vorbei
-3781|Heute gibt der Trainer den WM-Kader bekannt. Zahlt sich deine Arbeit im Trainingslager aus?
+3781|Heute gibt der Trainer den Weltmeisterschaftskader bekannt. Zahlt sich deine Arbeit im Trainingslager aus?
 3784|Kader ansehen
 3785|Die letzten Gruppenspiele sind gespielt. Die Teilnehmer der Runde der letzten 32 stehen fest...
 3788|Ergebnisse ansehen
@@ -281,7 +281,7 @@
 3861|Du bist im Marseiller Viertel La Castellane aufgewachsen. Wenn du den Ball am Fuß hast, scheint die Zeit langsamer zu laufen. Eine Akademie an der Südküste entdeckte dich mit 14.
 3865|Bordeaux Girondins will dich auf der Profibühne zum Star machen.
 3866|Juventa Torino hat dich ausgewählt, um Europas bestes Mittelfeld aufzubauen.
-3867|Es ist das Jahr der Heim-WM. Das ganze Land setzt seine Hoffnungen auf dich.
+3867|Es ist das Jahr der Heim-Weltmeisterschaft. Das ganze Land setzt seine Hoffnungen auf dich.
 3870|Real Madrigal klopft für den teuersten Transfer der Welt an.
 3871|Das Phänomen
 3872|In den Vororten von Rio bist du selbst dann zum Training gerannt, wenn das Geld für den Bus fehlte. Cruzeiro Foxes holte dich mit 14 in die Akademie. Dein Tempo und deine Abschlussstärke sind schon legendär.
@@ -293,9 +293,9 @@
 3899|Die Schildkröte
 3900|Du bist in Bondy, einem Pariser Vorort, aufgewachsen. Die Wände deines Zimmers hängen voller Poster deiner Idole. Monaco Princes holte dich mit 14 in die Akademie: dein Tempo ist unglaublich.
 3904|Paris Saint-Gilles hat ein Rekordangebot gemacht, um dich nach Hause zu holen.
-3905|Mit 19 fährst du zur WM. Die Welt wird bald über dein Tempo reden.
+3905|Mit 19 fährst du zur Weltmeisterschaft. Die Welt wird bald über dein Tempo reden.
 3908|Dein Kindheitstraum Real Madrigal klopft endlich an.
-4000|Gewinne {}-mal den Goldenen Ball
+4000|Gewinne {}-mal den Goldenen Stern
 3980|Gewinne {}-mal den Europapokal der Landesmeister
 3981|Gewinne {}-mal den Europäischen Verbandspokal
 3991|Werde {}-mal Weltmeister
@@ -335,12 +335,12 @@
 4006|Vergleich mit {}
 4024|Übereinstimmung {}% · {}
 3937|Deine gekauften Pakete wurden wiederhergestellt.
-3938|Ein eigener Modus mit eigenem Spielstand, der sich auf eine einzige WM mit der Nationalmannschaft deiner Wahl konzentriert, mit 18.
+3938|Ein eigener Modus mit eigenem Spielstand, der sich auf eine einzige Weltmeisterschaft mit der Nationalmannschaft deiner Wahl konzentriert, mit 18.
 3939|Wähle dein Land aus 65 Nationalteams und spiele ein Turnier mit 48 Teams
 3940|Trainingslager, Testspiele und Kaderbekanntgabe
 3941|Tage zwischen den Spielen: Training, Taktik, Interviews, Ereignisse im Lager
 3942|Elfmeterschießen in der K.-o.-Runde: Du schießt selbst
-3943|Goldener Schuh, Goldener Ball und Auszeichnung als bester junger Spieler
+3943|Torjägertrophäe, Goldener Stern und Auszeichnung als bester junger Spieler
 3946|Story-Transfers zu den Vereinen der Legende und Wendepunkte
 3947|Eine Spezialfähigkeit von Beginn an und Werte im Stil der Legende
 3948|Ziele nach den Erfolgen der Legende und ein Vergleich beim Karriereende
@@ -350,11 +350,11 @@
 3950|Einmalkauf. Keine Werbung, auf allen deinen Geräten wiederherstellbar.
 3953|Dieser Modus kann in der App-Store-App gekauft werden.
 3989|{} freigeschaltet! Viel Spaß.
-3957|Gewinne den Goldenen Ball
+3957|Gewinne den Goldenen Stern
 3958|Gewinne den Europapokal der Landesmeister
 3959|Gewinne den Europäischen Verbandspokal
 4035|6 Legendengeschichten: aus Argentinien, Portugal, Brasilien und Frankreich
 4036|6 fiktive Karrieren, inspiriert von Fußballlegenden: Starte in ihrem Geburtsjahr, in ihrer Akademie und mit ihrem Talent.
 4034|Deine Gruppengegner:
 4037|Zurück zum Hauptmenü?
-4038|Dein Fortschritt ist gespeichert. Du kannst die WM jederzeit im Hauptmenü fortsetzen.
+4038|Dein Fortschritt ist gespeichert. Du kannst die Weltmeisterschaft jederzeit im Hauptmenü fortsetzen.

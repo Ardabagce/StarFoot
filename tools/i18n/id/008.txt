@@ -95,8 +95,8 @@
 3154|📅 Musim {} telah dimulai.
 3155|{0} {4} {2}-{3} melawan {1}.
 3156|Cedera · {} minggu
-3157|🏅 Ballon d'Or {} jatuh ke tangan {}!
-3158|{} Perburuan Ballon d'Or
+3157|🏅 Bintang Emas {} jatuh ke tangan {}!
+3158|{} Perburuan Bintang Emas
 3159|{} rekor gol musim
 3160|Kamu menang! {} - {} · +{}
 3161|Pertandingan fase liga {}
@@ -127,7 +127,7 @@
 3186|{} · jika kamu lolos
 3187|✅ Misi selesai: {}
 3188|🎁 Hadiah harian: {}
-3189|Ballon d'Or {} jatuh ke tangan {}!
+3189|Bintang Emas {} jatuh ke tangan {}!
 3190|{} Hasil Skenario
 3191|Internasional • {} - {}
 3192|Ikatan keluarga +{}
@@ -146,7 +146,7 @@
 3205|Terbuka di usia {}
 3206|{} · tersisa {} minggu
 3207|· {} angin {} km/jam
-3208|👟 {} Sepatu Emas ({})
+3208|👟 {} Trofi Top Skor ({})
 3209|{} musim depan!
 3210|{} berdiri di depan bola.
 3211|{} Energimu rendah.
@@ -210,7 +210,7 @@
 3269|{}. {} menang! +{}
 3270|{}. {} menang. -{}
 3271|{}× Pemain Terbaik Pertandingan
-3272|{} Sepatu Emas ({})
+3272|{} Trofi Top Skor ({})
 3273|dan {} menikah!
 3274|Kamu cedera {}.
 3275|angin {} km/jam
@@ -231,7 +231,7 @@
 3290|pemenang: {}!
 3291|· Nilaimu {}
 3292|🏆 Pemenang {}
-3293|Sepatu Emas ({})
+3293|Trofi Top Skor ({})
 3294|Seri ({}).
 3295|Bersama legenda {}.
 3296|Sekarang tahun {}.

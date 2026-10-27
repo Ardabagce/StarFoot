@@ -145,8 +145,8 @@
 1494|Coppa di Turchia
 1495|Campionato turco
 1496|Trasporti
-1497|Nations League
-1498|Hai vinto le Final Four di Nations League
+1497|Lega delle Nazionali
+1498|Hai vinto le Final Four della Lega delle Nazionali
 1499|Sessione nella capsula del sonno
 1500|Coach del sonno e letto smart
 1501|Aereo

@@ -1,5 +1,32 @@
 // Yardımcı fonksiyonlar
 const U = {
+  // Lisans nedeniyle değişen turnuva/ödül adları: eski kayıtlarda da yeni adla görünsün (eski adlar kaçışlı)
+  OLD_NAMES: [
+    ['\u0046\u0049\u0046\u0041\u0027\u006e\u0131\u006e', "Federasyonun"],
+    ['\u0046\u0049\u0046\u0041', "Federasyon"],
+    ['\u0044\u00fc\u006e\u0079\u0061\u0020\u004b\u0075\u0070\u0061\u0073\u0131', "Dünya Şampiyonası"],
+    ['\u0044\u00dc\u004e\u0059\u0041\u0020\u004b\u0055\u0050\u0041\u0053\u0049', "DÜNYA ŞAMPİYONASI"],
+    ['\u0041\u0076\u0072\u0075\u0070\u0061\u0020\u015e\u0061\u006d\u0070\u0069\u0079\u006f\u006e\u0061\u0073\u0131', "Avrupa Milletler Şampiyonası"],
+    ['\u0041\u0056\u0052\u0055\u0050\u0041\u0020\u015e\u0041\u004d\u0050\u0130\u0059\u004f\u004e\u0041\u0053\u0049', "AVRUPA MİLLETLER ŞAMPİYONASI"],
+    ['\u0055\u006c\u0075\u0073\u006c\u0061\u0072\u0020\u004c\u0069\u0067\u0069', "Milletler Ligi"],
+    ['\u0041\u0076\u0072\u0075\u0070\u0061\u0020\u004b\u006f\u006e\u0066\u0065\u0072\u0061\u006e\u0073\u0020\u004b\u0075\u0070\u0061\u0073\u0131', "Avrupa Kıta Kupası"],
+    ['\u004b\u006f\u006e\u0066\u0065\u0072\u0061\u006e\u0073\u0020\u004b\u0075\u0070\u0061\u0073\u0131', "Kıta Kupası"],
+    ['\u004b\u006f\u006e\u0066\u0065\u0072\u0061\u006e\u0073\u0020\u004b\u002e', "Kıta K."],
+    ['\u004b\u006f\u006e\u0066\u0065\u0072\u0061\u006e\u0073\u0020\u005a\u0061\u0066\u0065\u0072\u0069', "Kıta Zaferi"],
+    ['\u0041\u006c\u0074\u0131\u006e\u0020\u0054\u006f\u0070\u0027\u0075', "Altın Yıldız'ı"],
+    ['\u0041\u006c\u0074\u0131\u006e\u0020\u0054\u006f\u0070', "Altın Yıldız"],
+    ['\u0041\u004c\u0054\u0049\u004e\u0020\u0054\u004f\u0050', "ALTIN YILDIZ"],
+    ['\u0041\u006c\u0074\u0131\u006e\u0020\u0041\u0079\u0061\u006b\u006b\u0061\u0062\u0131', "Gol Kralı Kupası"],
+    ['\u0042\u0072\u0069\u0074\u0061\u006e\u0079\u0061\u0020\u0050\u0072\u0065\u006d\u0069\u0065\u0072\u0020\u004c\u0069\u0067\u0069', "Britanya Birinci Ligi"],
+    ['\u0042\u0072\u0069\u0074\u0061\u006e\u0079\u0061\u0020\u015e\u0061\u006d\u0070\u0069\u0079\u006f\u006e\u006c\u0075\u006b\u0020\u004c\u0069\u0067\u0069', "Britanya İkinci Ligi"],
+    ['\u0041\u006c\u0070\u006c\u0065\u0072\u0020\u0053\u00fc\u0070\u0065\u0072\u0020\u004c\u0069\u0067\u0069', "Helvetya Ligi"],
+    ['\u00c7\u0069\u007a\u006d\u0065\u0020\u0042\u0020\u004c\u0069\u0067\u0069', "Çizme 2. Ligi"],
+  ],
+  renameOld(raw) {
+    if (!raw || typeof raw !== 'string') return raw;
+    for (const [a, b] of U.OLD_NAMES) if (raw.includes(a)) raw = raw.split(a).join(b);
+    return raw;
+  },
   rand: (a, b) => a + Math.random() * (b - a),
   randi: (a, b) => Math.floor(a + Math.random() * (b - a + 1)),
   pick: (arr) => arr[Math.floor(Math.random() * arr.length)],

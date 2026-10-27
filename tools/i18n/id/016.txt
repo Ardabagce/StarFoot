@@ -1,4 +1,4 @@
-3538|Mimpi Piala Dunia
+3538|Mimpi Kejuaraan Dunia
 3539|Kanada
 3540|Maroko
 3541|Tunisia
@@ -100,14 +100,14 @@
 3655|Kamu berusia 18 tahun dan dipanggil ke pemusatan latihan timnas. Tunjukkan dirimu, raih kepercayaan pelatih, dan bawa negaramu juara dunia.
 3658|Turnamen baru
 3659|Mulai turnamen baru?
-3660|Petualangan Piala Dunia yang sedang berjalan akan dihapus.
+3660|Petualangan Kejuaraan Dunia yang sedang berjalan akan dihapus.
 3661|Favorit
 3662|Tim kuat
 3663|Kuda hitam
 3664|Tim kejutan
 3665|Pilih negaramu
 3666|Di tim kuat sulit masuk skuad, di tim kecil setiap laga adalah kisah epik. Pilihanmu.
-3962|{0} dipanggil ke pemusatan latihan {2} untuk Piala Dunia {1}! Talenta 18 tahun ini pertama kali bersama tim senior.
+3962|{0} dipanggil ke pemusatan latihan {2} untuk Kejuaraan Dunia {1}! Talenta 18 tahun ini pertama kali bersama tim senior.
 3669|Selamat datang di pemusatan latihan!
 3960|Pelatih {} memanggilmu ke tim senior untuk pertama kalinya. Sebelum turnamen ada pemusatan latihan 6 hari dan 2 laga uji coba.
 3671|Kamu punya 2 aksi setiap hari: latihan, taktik, istirahat, waktu bersama tim...
@@ -126,7 +126,7 @@
 3694|Ototmu lebih rileks dan lelahmu berkurang.
 3695|Kemampuan apa yang ingin kamu latih?
 3696|Kamu akan memainkan mini-game. Makin bagus mainmu, makin berkembang kamu.
-3699|Bagaimana perasaanmu di Piala Dunia pertamamu?
+3699|Bagaimana perasaanmu di Kejuaraan Dunia pertamamu?
 3700|Suatu kehormatan berada di sini, aku ingin membantu tim.
 3701|Aku siap, beri kesempatan dan akan kubuktikan.
 3702|Turnamen ini akan jadi milikku!
@@ -144,7 +144,7 @@
 3713|Laga uji coba
 4001|Laga uji coba · {} - {}
 3714|UJI COBA
-776|PIALA DUNIA
+776|KEJUARAAN DUNIA
 3715|Kamu terkena larangan main dan tak bisa tampil di laga ini.
 3973|Kamu cedera di pertandingan: absen {} hari.
 3716|Kartu merah: kamu tak boleh main di laga berikutnya.
@@ -153,7 +153,7 @@
 3976|Laga grup: {0} {1}-{2} {3}. Kita di peringkat {5} Grup {4}.
 4009|Adu penalti {}-{}.
 4033|Laga {}
-4015|Piala Dunia {}
+4015|Kejuaraan Dunia {}
 3718|Kita lolos!
 3719|Kita tersingkir dari turnamen.
 3720|KITA JUARA DUNIA!
@@ -177,8 +177,8 @@
 3738|Semua mata tertuju padamu. Tarik, pilih sudut, lalu lepaskan!
 3741|Pelatih sangat terkesan dengan performamu di kamp: kamu jadi starter di awal turnamen!
 3742|Kamu masuk skuad, tapi untuk sementara mulai dari bangku cadangan. Manfaatkan setiap menit dan ubah pikiran pelatih!
-3966|{} mengumumkan skuad Piala Dunia: {} masuk daftar 26 pemain!
-3745|Aku masuk skuad Piala Dunia! Memakai seragam ini adalah mimpi.
+3966|{} mengumumkan skuad Kejuaraan Dunia: {} masuk daftar 26 pemain!
+3745|Aku masuk skuad Kejuaraan Dunia! Memakai seragam ini adalah mimpi.
 3748|Skuad diumumkan
 3749|Kamu masuk 26 pemain!
 3750|Kekuatanmu
@@ -186,7 +186,7 @@
 3752|Kepercayaan pelatih
 4007|Lawan grupmu: {}
 3753|Turnamen dimulai!
-3754|Sepatu Emas
+3754|Trofi Top Skor
 3982|Kamu top skor turnamen dengan {} gol!
 3755|Kamu terpilih sebagai pemain terbaik turnamen!
 3756|Pemain Muda Terbaik
@@ -218,7 +218,7 @@
 3779|Mainkan laga
 1159|Hari pertandingan
 3780|Kamp selesai
-3781|Hari ini pelatih mengumumkan skuad Piala Dunia. Akankah kerja kerasmu di kamp terbayar?
+3781|Hari ini pelatih mengumumkan skuad Kejuaraan Dunia. Akankah kerja kerasmu di kamp terbayar?
 3784|Lihat skuad
 3785|Laga terakhir semua grup telah dimainkan. Tim yang lolos ke 32 besar mulai jelas...
 3788|Lihat hasil
@@ -281,7 +281,7 @@
 3861|Kamu tumbuh di kawasan La Castellane, Marseille. Saat bola di kakimu, waktu seakan melambat. Sebuah akademi di pesisir selatan menemukanmu di usia 14 tahun.
 3865|Bordeaux Girondins ingin menjadikanmu bintang di panggung profesional.
 3866|Juventa Torino memilihmu untuk membangun lini tengah terbaik Eropa.
-3867|Ini tahun Piala Dunia di negaramu sendiri. Seluruh negeri menggantungkan harapan padamu.
+3867|Ini tahun Kejuaraan Dunia di negaramu sendiri. Seluruh negeri menggantungkan harapan padamu.
 3870|Real Madrigal datang untuk transfer termahal di dunia.
 3871|Sang Fenomena
 3872|Di pinggiran Rio, kamu tetap berlari ke latihan bahkan saat tak punya ongkos bus. Cruzeiro Foxes merekrutmu ke akademi di usia 14 tahun. Kecepatan dan penyelesaianmu sudah melegenda.
@@ -293,13 +293,13 @@
 3899|Si Kura-kura
 3900|Kamu tumbuh di Bondy, pinggiran Paris. Dinding kamarmu penuh poster para idolamu. Monaco Princes merekrutmu ke akademi di usia 14 tahun: kecepatanmu luar biasa.
 3904|Paris Saint-Gilles mengajukan tawaran rekor agar kamu pulang.
-3905|Kamu berangkat ke Piala Dunia di usia 19 tahun. Dunia bersiap membicarakan kecepatanmu.
+3905|Kamu berangkat ke Kejuaraan Dunia di usia 19 tahun. Dunia bersiap membicarakan kecepatanmu.
 3908|Mimpi masa kecilmu, Real Madrigal, akhirnya datang.
-4000|Raih Bola Emas {} kali
+4000|Raih Bintang Emas {} kali
 3980|Raih Piala Champions Eropa {} kali
 3981|Raih Piala Federasi Eropa {} kali
-3991|Juara Piala Dunia {} kali
-3909|Juara Piala Dunia
+3991|Juara Kejuaraan Dunia {} kali
+3909|Juara Kejuaraan Dunia
 3910|Juara Piala Eropa
 3993|Raih {} gelar liga
 4003|Cetak {} gol dalam semusim
@@ -335,12 +335,12 @@
 4006|Perbandingan dengan {}
 4024|Kecocokan {}% · {}
 3937|Paket yang kamu beli telah dipulihkan.
-3938|Mode terpisah dengan simpanan sendiri, fokus pada satu Piala Dunia bersama timnas pilihanmu di usia 18 tahun.
+3938|Mode terpisah dengan simpanan sendiri, fokus pada satu Kejuaraan Dunia bersama timnas pilihanmu di usia 18 tahun.
 3939|Pilih negaramu dari 65 timnas dan main di turnamen 48 tim
 3940|Pemusatan latihan, laga uji coba, dan pengumuman skuad
 3941|Hari di antara laga: latihan, taktik, wawancara, kejadian di kamp
 3942|Adu penalti di babak gugur: kamu menendang sendiri
-3943|Penghargaan Sepatu Emas, Bola Emas, dan Pemain Muda Terbaik
+3943|Penghargaan Trofi Top Skor, Bintang Emas, dan Pemain Muda Terbaik
 3946|Transfer cerita ke klub-klub sang legenda dan titik balik
 3947|Kemampuan spesial sejak awal dan atribut sesuai gaya sang legenda
 3948|Target berdasarkan prestasi sang legenda dan perbandingan saat pensiun
@@ -350,11 +350,11 @@
 3950|Pembelian sekali. Tanpa iklan, bisa dipulihkan di semua perangkatmu.
 3953|Mode ini bisa dibeli di aplikasi App Store.
 3989|{} terbuka! Selamat bersenang-senang.
-3957|Raih Bola Emas
+3957|Raih Bintang Emas
 3958|Raih Piala Champions Eropa
 3959|Raih Piala Federasi Eropa
 4035|6 kisah legenda: dari Argentina, Portugal, Brasil, dan Prancis
 4036|6 karier fiktif yang terinspirasi legenda sepak bola: mulai di tahun kelahiran mereka, di akademi mereka, dengan bakat mereka.
 4034|Lawan grupmu:
 4037|Kembali ke menu utama?
-4038|Progresmu tersimpan. Kamu bisa melanjutkan Piala Dunia dari menu utama kapan saja.
+4038|Progresmu tersimpan. Kamu bisa melanjutkan Kejuaraan Dunia dari menu utama kapan saja.

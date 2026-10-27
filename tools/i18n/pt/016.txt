@@ -100,7 +100,7 @@
 3655|Você tem 18 anos e foi convocado para a seleção. Brilhe na preparação, ganhe a confiança do técnico e leve seu país ao título mundial.
 3658|Novo torneio
 3659|Começar um novo torneio?
-3660|Sua aventura na Copa em andamento será apagada.
+3660|Sua aventura no Campeonato Mundial em andamento será apagada.
 3661|Favoritos
 3662|Seleções fortes
 3663|Azarões
@@ -126,7 +126,7 @@
 3694|Seus músculos relaxaram e o cansaço diminuiu.
 3695|Qual atributo você quer treinar?
 3696|Você vai jogar um minijogo. Quanto melhor jogar, mais vai evoluir.
-3699|O que você sente na sua primeira Copa?
+3699|O que você sente na seu primeiro Campeonato Mundial?
 3700|É uma honra estar aqui, quero ajudar o time.
 3701|Estou pronto, se tiver chance vou mostrar.
 3702|Este torneio vai ser meu!
@@ -144,7 +144,7 @@
 3713|Amistoso
 4001|Amistoso · {} - {}
 3714|AMISTOSO
-776|COPA DO MUNDO
+776|CAMPEONATO MUNDIAL
 3715|Você está suspenso e não pode jogar esta partida.
 3973|Você se lesionou na partida: fica {} dias fora.
 3716|Cartão vermelho: você está suspenso na próxima partida.
@@ -153,7 +153,7 @@
 3976|Jogo do grupo: {0} {1}-{2} {3}. Estamos em {5}º no Grupo {4}.
 4009|Nos pênaltis {}-{}.
 4033|Jogo {}
-4015|Copa do Mundo de {}
+4015|Campeonato Mundial de {}
 3718|Passamos de fase!
 3719|Fomos eliminados do torneio.
 3720|SOMOS CAMPEÕES DO MUNDO!
@@ -186,7 +186,7 @@
 3752|Confiança do técnico
 4007|Seus adversários de grupo: {}
 3753|Que comece o torneio!
-3754|Chuteira de Ouro
+3754|Taça de Artilheiro
 3982|Você é o artilheiro do torneio com {} gols!
 3755|Você foi eleito o melhor jogador do torneio!
 3756|Melhor Jogador Jovem
@@ -281,7 +281,7 @@
 3861|Você cresceu no bairro de La Castellane, em Marselha. Com a bola no pé, o tempo parece desacelerar. Uma academia da costa sul te descobriu aos 14 anos.
 3865|O Bordeaux Girondins quer te transformar em estrela no futebol profissional.
 3866|A Juventa Torino te escolheu para montar o melhor meio-campo da Europa.
-3867|É o ano da Copa do Mundo que seu país sedia. O país inteiro deposita a esperança em você.
+3867|É o ano do Campeonato Mundial que seu país sedia. O país inteiro deposita a esperança em você.
 3870|O Real Madrigal bate à sua porta para a transferência mais cara do mundo.
 3871|O Fenômeno
 3872|Nos subúrbios do Rio, você corria para o treino mesmo nos dias sem dinheiro para o ônibus. O Cruzeiro Foxes te levou para a base aos 14 anos. Sua velocidade e finalização já são lendárias.
@@ -293,14 +293,14 @@
 3899|A Tartaruga
 3900|Você cresceu em Bondy, no subúrbio de Paris. As paredes do seu quarto estão cheias de pôsteres dos seus ídolos. O Monaco Princes te levou para a base aos 14 anos: sua velocidade é inacreditável.
 3904|O Paris Saint-Gilles fez uma proposta recorde para você voltar para casa.
-3905|Você vai à Copa do Mundo aos 19 anos. O mundo se prepara para falar da sua velocidade.
+3905|Você vai à Campeonato Mundial aos 19 anos. O mundo se prepara para falar da sua velocidade.
 3908|Seu sonho de infância, o Real Madrigal, finalmente bate à sua porta.
-4000|Ganhe a Bola de Ouro {} vezes
+4000|Ganhe a Estrela de Ouro {} vezes
 3980|Ganhe a Taça dos Campeões Europeus {} vezes
 3981|Ganhe a Taça da Federação Europeia {} vezes
-3991|Ganhe a Copa do Mundo {} vezes
-3909|Ganhe a Copa do Mundo
-3910|Ganhe a Eurocopa
+3991|Ganhe o Campeonato Mundial {} vezes
+3909|Ganhe o Campeonato Mundial
+3910|Ganhe o Campeonato Europeu
 3993|Conquiste {} títulos de liga
 4003|Faça {} gols numa temporada
 4004|Faça {} gols na carreira
@@ -335,12 +335,12 @@
 4006|Comparação com {}
 4024|Afinidade {}% · {}
 3937|Os pacotes que você comprou foram restaurados.
-3938|Um modo separado, com seu próprio salvamento, focado em uma única Copa do Mundo com a seleção que você escolher aos 18 anos.
+3938|Um modo separado, com seu próprio salvamento, focado em um único Campeonato Mundial com a seleção que você escolher aos 18 anos.
 3939|Escolha seu país entre 65 seleções e jogue um torneio de 48 times
 3940|Preparação, amistosos e anúncio da lista
 3941|Dias entre os jogos: treinos, tática, entrevistas, acontecimentos na concentração
 3942|Disputas de pênaltis no mata-mata: você bate o seu
-3943|Prêmios Chuteira de Ouro, Bola de Ouro e Melhor Jogador Jovem
+3943|Prêmios Taça de Artilheiro, Estrela de Ouro e Melhor Jogador Jovem
 3946|Transferências da história vindas dos clubes da lenda e momentos decisivos
 3947|Uma habilidade especial desde o início e atributos no estilo da lenda
 3948|Objetivos baseados nas conquistas da lenda e comparação na aposentadoria
@@ -350,7 +350,7 @@
 3950|Compra única. Sem anúncios, e você pode restaurar em todos os seus aparelhos.
 3953|Este modo pode ser comprado no app da App Store.
 3989|{} desbloqueado! Divirta-se.
-3957|Ganhe a Bola de Ouro
+3957|Ganhe a Estrela de Ouro
 3958|Ganhe a Taça dos Campeões Europeus
 3959|Ganhe a Taça da Federação Europeia
 4035|6 histórias de lendas: da Argentina, Portugal, Brasil e França

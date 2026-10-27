@@ -49,7 +49,7 @@
 1748|Cuartos de final
 1749|Par
 1750|Doble
-1751|Liga B de la Bota
+1751|Liga 2 de la Bota
 1752|Liga de la Bota
 1753|Niño
 1754|Una escuela gratuita para niños. Moral +2, Fama +5 cada semana
@@ -244,8 +244,8 @@
 1943|🤝 Aceptar
 1944|🤾 Córner - Balón aéreo
 1945|Córner - Balón aéreo
-1946|🥇 Balón de Oro (Jugador del año)
-1947|Balón de Oro (Jugador del año)
+1946|🥇 Estrella de Oro (Jugador del año)
+1947|Estrella de Oro (Jugador del año)
 1948|🧊 Descansar
 1949|🧭 Creación de juego
 1950|Creación de juego
@@ -293,7 +293,7 @@
 1992|Algún día seré...
 1993|Erling Halland reveló que desayuna 14 huevos.
 1994|Las granjas de pollos añadieron un turno de noche.
-1995|Tu sanción de la FIFA terminó.
+1995|Tu sanción de la federación terminó.
 1996|Puedes volver al campo.
 1997|Las acusaciones son graves.
 1998|¡Falta dentro del área!
@@ -303,7 +303,7 @@
 2002|Elige el año y la edad en que empiezas.
 2003|No eliges tu club: los ojeadores te descubren.
 2004|Los futbolistas no pueden apostar.
-2005|Cada apuesta atrae la atención de la FIFA; apostar en tu propio partido es muy arriesgado.
+2005|Cada apuesta atrae la atención de la federación; apostar en tu propio partido es muy arriesgado.
 2006|Si te pillan te enfrentas a una larga sanción, una multa y perder a tus patrocinadores.
 2007|S.
 2008|C. América

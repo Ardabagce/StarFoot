@@ -95,8 +95,8 @@
 3154|📅 La stagione {} è iniziata.
 3155|{0} {4} {2}-{3} contro il {1}.
 3156|Infortunato · {} settimane
-3157|🏅 Il Pallone d'Oro {} va a {}!
-3158|{} Corsa al Pallone d'Oro
+3157|🏅 La Stella d'Oro {} va a {}!
+3158|{} Corsa alla Stella d'Oro
 3159|{} record di gol stagionale
 3160|Hai vinto! {} - {} · +{}
 3161|Partita della fase campionato {}
@@ -127,7 +127,7 @@
 3186|{} · se passi il turno
 3187|✅ Missione completata: {}
 3188|🎁 Premio giornaliero: {}
-3189|Il Pallone d'Oro {} va a {}!
+3189|La Stella d'Oro {} va a {}!
 3190|{} Esito dello scenario
 3191|Nazionale • {} - {}
 3192|Legame familiare +{}
@@ -146,7 +146,7 @@
 3205|Si sblocca a {} anni
 3206|{} · mancano {} settimane
 3207|· {} vento a {} km/h
-3208|👟 {} Scarpa d'oro ({})
+3208|👟 {} Trofeo del capocannoniere ({})
 3209|{} la prossima stagione!
 3210|{} si posiziona sul pallone.
 3211|{} La tua energia è bassa.
@@ -210,7 +210,7 @@
 3269|{}. Vince {}! +{}
 3270|{}. Vince {}. -{}
 3271|{}× Migliore in campo
-3272|{} Scarpa d'oro ({})
+3272|{} Trofeo del capocannoniere ({})
 3273|e {} si sono sposati!
 3274|Ti sei infortunato: {}.
 3275|vento a {} km/h
@@ -231,7 +231,7 @@
 3290|vincitore: {}!
 3291|· Il tuo voto {}
 3292|🏆 Vincitore {}
-3293|Scarpa d'oro ({})
+3293|Trofeo del capocannoniere ({})
 3294|Pareggio ({}).
 3295|Con la leggenda {}.
 3296|Siamo nel {}.

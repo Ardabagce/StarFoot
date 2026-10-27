@@ -145,8 +145,8 @@
 1494|Copa de Turquía
 1495|Liga turca
 1496|Transporte
-1497|Liga de Naciones
-1498|Ganaste las Finales de la Liga de Naciones
+1497|Liga de Selecciones
+1498|Ganaste las Finales de la Liga de Selecciones
 1499|Sesión en cápsula de siesta
 1500|Entrenador del sueño y cama inteligente
 1501|Avión

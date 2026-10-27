@@ -1835,7 +1835,7 @@ button, .btn, a, [data-act], [data-tab] { touch-action: manipulation; -webkit-ta
 .rv-row label { text-align: center; font-size: 12px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .08em; }
 .rv-bar { display: block; height: 6px; border-radius: 3px; background: #ff8a8a55; overflow: hidden; margin-top: 4px; }
 .rv-bar > i { display: block; height: 100%; background: #ffcf3f; }
-/* Altın Top */
+/* Altın Yıldız ödülü */
 .ballon .scr.rv b { color: #ff8a8a; }
 .bal-top { margin: 10px 0 12px 20px; display: grid; gap: 6px; font-weight: 700; }
 .bal-top li small { display: block; font-weight: 500; color: var(--muted); font-size: 12px; }
@@ -2030,7 +2030,7 @@ button, .btn, a, [data-act], [data-tab] { touch-action: manipulation; -webkit-ta
 .t-pack b { font-family: var(--display); font-style: italic; font-size: 15px; text-transform: uppercase; line-height: 1.05; }
 .t-pack small { font-size: 11px; color: rgba(255, 255, 255, .7); }
 
-/* ---------- Dünya Kupası Rüyası ---------- */
+/* ---------- Dünya Şampiyonası Rüyası ---------- */
 .wc-mode #tabs { display: none; }
 .wc-nats { max-height: 42vh; overflow: auto; margin: 6px 0 10px; padding-right: 4px; }
 .wc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 6px; }
@@ -2083,6 +2083,8 @@ button, .btn, a, [data-act], [data-tab] { touch-action: manipulation; -webkit-ta
 .wc-st > div { display: grid; grid-template-columns: 90px 1fr 28px; align-items: center; gap: 8px; font-size: 13px; }
 .wc-st b { text-align: right; }
 .wc-me .btn-ghost { width: 100%; margin-top: 10px; }
+.hi-money.wc-stage { padding-left: 12px; }
+.hi-money.wc-stage small { letter-spacing: .06em; white-space: nowrap; }
 .hi-money.wc-stage b { font-size: 14px; }
 .pso { display: grid; gap: 6px; margin: 10px 0; }
 .pso > div { display: flex; align-items: center; gap: 6px; }

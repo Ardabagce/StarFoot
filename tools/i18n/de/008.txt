@@ -95,8 +95,8 @@
 3154|📅 Die Saison {} hat begonnen.
 3155|{0} {4} {2}-{3} gegen {1}.
 3156|Verletzt · {} Wochen
-3157|🏅 Der Ballon d'Or {} geht an {}!
-3158|{} Rennen um den Ballon d'Or
+3157|🏅 Der Goldene Stern {} geht an {}!
+3158|{} Rennen um den Goldenen Stern
 3159|{} Saison-Torrekord
 3160|Du gewinnst! {} - {} · +{}
 3161|Ligaphase Spiel {}
@@ -127,7 +127,7 @@
 3186|{} · wenn du weiterkommst
 3187|✅ Mission erfüllt: {}
 3188|🎁 Tägliche Belohnung: {}
-3189|Der Ballon d'Or {} geht an {}!
+3189|Der Goldene Stern {} geht an {}!
 3190|{} Szenario-Ergebnis
 3191|Länderspiel • {} - {}
 3192|Familienbindung +{}
@@ -146,7 +146,7 @@
 3205|Freigeschaltet mit {} Jahren
 3206|{} · noch {} Wochen
 3207|· {} {} km/h Wind
-3208|👟 {} Goldener Schuh ({})
+3208|👟 {} Torjägertrophäe ({})
 3209|{} nächste Saison!
 3210|{} steht am Ball.
 3211|{} Deine Energie ist niedrig.
@@ -210,7 +210,7 @@
 3269|{}. {} gewinnt! +{}
 3270|{}. {} gewinnt. -{}
 3271|{}× Spieler des Spiels
-3272|{} Goldener Schuh ({})
+3272|{} Torjägertrophäe ({})
 3273|und {} haben geheiratet!
 3274|Du hast dich verletzt: {}.
 3275|{} km/h Wind
@@ -231,7 +231,7 @@
 3290|Sieger: {}!
 3291|· Deine Note {}
 3292|🏆 {}-Sieger
-3293|Goldener Schuh ({})
+3293|Torjägertrophäe ({})
 3294|Unentschieden ({}).
 3295|Mit Legende {}.
 3296|Wir schreiben {}.

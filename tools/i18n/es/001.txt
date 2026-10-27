@@ -69,7 +69,7 @@
 369|días
 370|¿Cómo respondes?
 371|¿Qué dices?
-372|Carrera por el Balón de Oro
+372|Carrera por la Estrella de Oro
 373|Tu rival
 374|Misiones diarias
 375|Compartir tarjeta de jugador
@@ -114,7 +114,7 @@
 414|segunda categoría
 415|MVP
 416|Liga Alpina
-417|Superliga de los Alpes
+417|Liga Helvética
 418|Liga Egea
 419|Liga Vikinga
 420|Liga Adriática
@@ -122,7 +122,7 @@
 422|Liga del Vístula
 423|Liga de la Estepa
 424|LIGA ALPINA
-425|SUPERLIGA DE LOS ALPES
+425|LIGA HELVÉTICA
 426|LIGA EGEA
 427|LIGA VIKINGA
 428|ADRIÁTICA
@@ -203,7 +203,7 @@
 503|3 acciones
 504|Jugaste en 3 clubes distintos
 505|Te lucirás en 3 estaciones. ¡Cuanto mejor lo hagas, más grandes serán los clubes que te hagan ofertas!
-506|Ganaste el Balón de Oro 3 veces
+506|Ganaste la Estrella de Oro 3 veces
 507|Fuiste máximo goleador 3 veces
 508|Sigues jugando a los 35
 509|Sigues jugando a los 38
@@ -253,7 +253,7 @@
 553|Unirse a la cantera
 554|Cadena de oro
 555|Botas de oro
-556|Balón de Oro
+556|Estrella de Oro
 557|Polvo de oro
 558|Pero los paparazzi te pillaron al amanecer. El entrenador no está contento.
 559|Menú principal
@@ -318,11 +318,11 @@
 618|Liga Europea de Desarrollo
 619|Liga Europea de Desarrollo (sub-19)
 620|Ganaste la Liga Europea de Desarrollo (sub-19)
-621|Copa de la Conferencia Europea
-622|Ganaste la Copa de la Conferencia Europea
+621|Copa Continental Europea
+622|Ganaste la Copa Continental Europea
 623|Marcaste en competición europea
-624|Eurocopa
-625|Ganaste la Eurocopa
+624|Campeonato Europeo
+625|Ganaste el Campeonato Europeo
 626|Copa de Campeones de Europa
 627|Ganaste la Copa de Campeones de Europa
 628|Campeón de Europa

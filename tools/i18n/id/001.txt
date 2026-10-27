@@ -69,7 +69,7 @@
 369|hari
 370|Bagaimana kamu menjawab?
 371|Apa yang kamu katakan?
-372|Perburuan Ballon d'Or
+372|Perburuan Bintang Emas
 373|Rivalmu
 374|Misi Harian
 375|Bagikan kartu pemain
@@ -114,7 +114,7 @@
 414|kasta kedua
 415|MVP
 416|Liga Alpen
-417|Liga Super Alpen
+417|Liga Helvetia
 418|Liga Aegea
 419|Liga Viking
 420|Liga Adriatik
@@ -122,7 +122,7 @@
 422|Liga Vistula
 423|Liga Stepa
 424|LIGA ALPEN
-425|LIGA SUPER ALPEN
+425|LIGA HELVETIA
 426|LIGA AEGEA
 427|LIGA VIKING
 428|ADRIATIK
@@ -203,7 +203,7 @@
 503|3 aksi
 504|Kamu bermain untuk 3 klub berbeda
 505|Kamu akan unjuk kemampuan di 3 pos. Makin bagus penampilanmu, makin besar klub yang memberi tawaran!
-506|Kamu memenangi Bola Emas 3 kali
+506|Kamu memenangi Bintang Emas 3 kali
 507|Kamu jadi pencetak gol terbanyak 3 kali
 508|Masih bermain di usia 35
 509|Masih bermain di usia 38
@@ -253,7 +253,7 @@
 553|Masuk Akademi
 554|Kalung Emas
 555|Sepatu Emas
-556|Bola Emas
+556|Bintang Emas
 557|Debu Emas
 558|Tapi paparazi memergokimu saat subuh. Pelatih tidak senang.
 559|Menu Utama
@@ -318,8 +318,8 @@
 618|Liga Pengembangan Eropa
 619|Liga Pengembangan Eropa (U19)
 620|Kamu memenangi Liga Pengembangan Eropa (U19)
-621|Piala Konferensi Eropa
-622|Kamu memenangi Piala Konferensi Eropa
+621|Piala Kontinental Eropa
+622|Kamu memenangi Piala Kontinental Eropa
 623|Kamu mencetak gol di kompetisi Eropa
 624|Kejuaraan Eropa
 625|Kamu memenangi Kejuaraan Eropa

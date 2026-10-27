@@ -69,7 +69,7 @@
 369|giorni
 370|Come rispondi?
 371|Cosa dici?
-372|Corsa al Pallone d'Oro
+372|Corsa alla Stella d'Oro
 373|Il tuo rivale
 374|Missioni giornaliere
 375|Condividi la card del giocatore
@@ -114,7 +114,7 @@
 414|seconda serie
 415|MVP
 416|Lega Alpina
-417|Superlega delle Alpi
+417|Lega Elvetica
 418|Lega Egea
 419|Lega Vichinga
 420|Lega Adriatica
@@ -122,7 +122,7 @@
 422|Lega della Vistola
 423|Lega della Steppa
 424|LEGA ALPINA
-425|SUPERLEGA DELLE ALPI
+425|LEGA ELVETICA
 426|LEGA EGEA
 427|LEGA VICHINGA
 428|ADRIATICA
@@ -203,7 +203,7 @@
 503|3 azioni
 504|Hai giocato per 3 club diversi
 505|Ti metterai in mostra in 3 stazioni. Meglio fai, più grandi saranno i club che ti faranno offerte!
-506|Hai vinto 3 volte il Pallone d'Oro
+506|Hai vinto 3 volte la Stella d'Oro
 507|Sei stato capocannoniere 3 volte
 508|Ancora in campo a 35 anni
 509|Ancora in campo a 38 anni
@@ -253,7 +253,7 @@
 553|Entra nel settore giovanile
 554|Catena d'oro
 555|Scarpe d'oro
-556|Pallone d'Oro
+556|Stella d'Oro
 557|Polvere d'oro
 558|Ma i paparazzi ti hanno beccato all'alba. L'allenatore non è contento.
 559|Menu principale
@@ -318,8 +318,8 @@
 618|Lega Europea di Sviluppo
 619|Lega Europea di Sviluppo (U19)
 620|Hai vinto la Lega Europea di Sviluppo (U19)
-621|Coppa della Conferenza Europea
-622|Hai vinto la Coppa della Conferenza Europea
+621|Coppa Continentale Europea
+622|Hai vinto la Coppa Continentale Europea
 623|Hai segnato in una coppa europea
 624|Campionato Europeo
 625|Hai vinto il Campionato Europeo

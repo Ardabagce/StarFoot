@@ -10,9 +10,9 @@
 2653|O ídolo do clube {} visitou a base e comandou um treino para os garotos. Ele também te chamou para conversar.
 2654|Você foi considerado culpado por apostas ilegais. Você pagou uma multa de {}{}. Você não pode jogar nenhuma partida durante a suspensão.
 2655|Você vai usar a camisa {} no novo clube. Mostre seu valor em campo para pedir a {}.
-2656|Você vai apostar {}. Jogadores não podem apostar; a FIFA pode investigar e aplicar uma longa suspensão.
+2656|Você vai apostar {}. Jogadores não podem apostar; a federação pode investigar e aplicar uma longa suspensão.
 2657|Você foi nomeado capitão do {}! A braçadeira é sua. Nos jogos você pode arrastar os companheiros para a posição.
-2658|DECISÃO DA FIFA: {} suspenso do futebol por {} semanas e multado em {} por apostas ilegais!{}
+2658|DECISÃO DA federação: {} suspenso do futebol por {} semanas e multado em {} por apostas ilegais!{}
 2659|{} tem {} anos e estamos em {}. Ele está na peneira da base. Olheiros de vários clubes estão anotando tudo!
 2660|tem {} anos e estamos em {}. Ele está na peneira da base. Olheiros de vários clubes estão anotando tudo!
 2661|O mascote do {} acertou 3 de 3 pênaltis no intervalo. A torcida quer ele na lista.
@@ -43,7 +43,7 @@
 2686|Seu rival {} fez hat-trick! Os jornais perguntam: "{} vai responder?"
 2687|Seu companheiro {} {} te chamou depois do treino: "Bora, vamos fazer um trabalho extra".
 2688|O goleiro do {} tomou gol enquanto amarrava a chuteira. A explicação dele: "Os cadarços não eram nossos".
-2689|{} lidera a corrida pela chuteira de ouro da {2} com {1} gols. Os goleiros sonham com ele.
+2689|{} lidera a corrida pela taça de artilheiro da {2} com {1} gols. Os goleiros sonham com ele.
 2690|{}: "A camisa {} agora é sua. {} vai ficar com a sua {}; você mereceu com suas atuações".
 2691|{} se aposentou do futebol aos {}. A postagem de despedida recebeu milhões de curtidas em pouco tempo.
 2692|Tanto a terra natal do seu pai, {}, quanto a da sua mãe, {}, te convocaram para suas seleções.
@@ -63,7 +63,7 @@
 2706|Seu companheiro {} vai dar uma festa de aniversário hoje à noite. Você foi convidado.
 2707|Perguntado sobre transferência, {} foi curto: "Agora só penso no almoço".
 2708|O rival de liga {} tem uma promessa da sua idade e na sua posição: {}.
-2709|A FIFA abriu uma investigação por apostas ilegais contra {}! As acusações são graves.
+2709|A federação abriu uma investigação por apostas ilegais contra {}! As acusações são graves.
 2710|Faltam {} anos de contrato. Você pode avaliar as ofertas.
 2711|{} ({}) está te oferecendo um patrocínio! Veja na aba Vida.
 2712|{} não ficou muito impressionado, mas um clube pequeno ainda quer te dar uma chance.
@@ -131,17 +131,17 @@
 2774|Um jogador de {} anos tem em média {} · essencial para sua posição
 2775|{} está aberta! {} clubes te querem. As ofertas valem por {} semanas.
 2776|vai ficar com a sua {}; você mereceu com suas atuações".
-2777|🏅 A Bola de Ouro {} é de {}! Você é o melhor jogador do mundo!
+2777|🏅 A Estrela de Ouro {} é de {}! Você é o melhor jogador do mundo!
 2778|{} INTERNACIONAL · Nota do adversário {} · As estrelas do amanhã em campo
 2779|Dizem que um olheiro está assistindo seus jogos para o {}!
 2780|{} voltou para marcar de forma brilhante e roubou a bola!
 2781|está aberta! {} clubes te querem. As ofertas valem por {} semanas.
-2782|A FIFA abriu uma investigação por apostas ilegais contra {}!
+2782|A federação abriu uma investigação por apostas ilegais contra {}!
 2783|INTERNACIONAL · Nota do adversário {} · As estrelas do amanhã em campo
 2784|Você mudou sua dieta e sua rotina de sono. Resistência +{}
 2785|Seu companheiro {} vai dar uma festa de aniversário hoje à noite.
 2786|{} tem {} anos e estamos em {}; é um moleque que joga bola na rua.
-2787|A Bola de Ouro {} é de {}! Você é o melhor jogador do mundo!
+2787|A Estrela de Ouro {} é de {}! Você é o melhor jogador do mundo!
 2788|{} Se você escolher um país, não poderá mais jogar pelo outro.
 2789|tem {} anos e estamos em {}; é um moleque que joga bola na rua.
 2790|🎉 Você assinou seu primeiro contrato profissional com o time principal do {}!
@@ -247,7 +247,7 @@
 2890|📅 A temporada {} começou. Agora você está no time {}!
 2891|O goleiro do {} tomou gol enquanto amarrava a chuteira.
 2892|A revisão do VAR no jogo do {} levou 9 minutos.
-2893|{0} lidera a corrida pela chuteira de ouro da {2} com {1} gols.
+2893|{0} lidera a corrida pela taça de artilheiro da {2} com {1} gols.
 2894|🎁 Baú de missões: {} · +20 de energia · +0,6 {}
 2895|🎯 Cenário concluído: {}! Você ganhou um emblema.
 2896|Fofoca: {} visto junto com {} {}!
@@ -400,7 +400,7 @@
 3043|🎙️ Coletiva: "{}"{}
 3044|idades {}–{} · segunda divisão
 3045|Aposta feita: {} · cotação {}
-3046|Suspensão da FIFA: {} semanas
+3046|Suspensão da federação: {} semanas
 3047|A banca vence: {} - {}. -{}
 3048|Ranking de seleções {}
 3049|Você se separou de {}.

@@ -95,8 +95,8 @@
 3154|📅 Ha comenzado la temporada {}.
 3155|{0} {4} {2}-{3} contra el {1}.
 3156|Lesionado · {} semanas
-3157|🏅 ¡El Balón de Oro {} es para {}!
-3158|{} Carrera por el Balón de Oro
+3157|🏅 ¡La Estrella de Oro {} es para {}!
+3158|{} Carrera por la Estrella de Oro
 3159|{} récord de goles de la temporada
 3160|¡Ganas! {} - {} · +{}
 3161|Partido {} de la fase de liga
@@ -127,7 +127,7 @@
 3186|{} · si te clasificas
 3187|✅ Misión completada: {}
 3188|🎁 Recompensa diaria: {}
-3189|¡El Balón de Oro {} es para {}!
+3189|¡La Estrella de Oro {} es para {}!
 3190|{} Resultado del escenario
 3191|Internacional • {} - {}
 3192|Vínculo familiar +{}
@@ -146,7 +146,7 @@
 3205|Se desbloquea a los {} años
 3206|{} · quedan {} semanas
 3207|· {} {} km/h de viento
-3208|👟 {} Bota de Oro ({})
+3208|👟 {} Trofeo de Goleador ({})
 3209|¡{} la próxima temporada!
 3210|{} se coloca ante el balón.
 3211|{} Tienes poca energía.
@@ -210,7 +210,7 @@
 3269|{}. ¡Gana {}! +{}
 3270|{}. Gana {}. -{}
 3271|{}× Jugador del partido
-3272|{} Bota de Oro ({})
+3272|{} Trofeo de Goleador ({})
 3273|y {} se casaron.
 3274|Te lesionaste {}.
 3275|{} km/h de viento
@@ -231,7 +231,7 @@
 3290|ganador: ¡{}!
 3291|· Tu valoración {}
 3292|🏆 Ganador de {}
-3293|Bota de Oro ({})
+3293|Trofeo de Goleador ({})
 3294|Empate ({}).
 3295|Con la leyenda {}.
 3296|Estamos en {}.

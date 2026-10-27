@@ -10,9 +10,9 @@
 2653|La leggenda del club {} ha visitato l'accademia e diretto un allenamento per i giovani. Ti ha anche preso da parte.
 2654|Sei stato giudicato colpevole di scommesse illegali. Hai pagato una multa di {}{}. Durante la squalifica non puoi giocare nessuna partita.
 2655|Nel nuovo club indosserai il numero {}. Dimostra il tuo valore in campo per chiedere il numero {}.
-2656|Punterai {}. I calciatori non possono scommettere; la FIFA può indagare e infliggere una lunga squalifica.
+2656|Punterai {}. I calciatori non possono scommettere; la federazione può indagare e infliggere una lunga squalifica.
 2657|Sei stato nominato capitano del {}! La fascia è tua. In partita puoi trascinare i compagni in posizione.
-2658|SENTENZA FIFA: {} squalificato per {} settimane e multato di {} per scommesse illegali!{}
+2658|SENTENZA federazione: {} squalificato per {} settimane e multato di {} per scommesse illegali!{}
 2659|{} ha {} anni, siamo nel {}. Partecipa ai provini di un'accademia. Gli osservatori di diversi club prendono appunti!
 2660|ha {} anni, siamo nel {}. Partecipa ai provini di un'accademia. Gli osservatori di diversi club prendono appunti!
 2661|La mascotte del {} ha segnato 3 rigori su 3 all'intervallo. I tifosi la vogliono in rosa.
@@ -43,7 +43,7 @@
 2686|Il tuo rivale {} ha segnato una tripletta! I giornali si chiedono: "{} saprà rispondere?"
 2687|Il tuo compagno {} {} ti ha chiamato dopo l'allenamento: "Dai, facciamo un po' di lavoro extra."
 2688|Il portiere del {} ha subito gol mentre si allacciava le scarpe. La sua spiegazione: "I lacci non erano nostri."
-2689|{} guida la corsa alla scarpa d'oro della {2} con {1} gol. I portieri lo sognano di notte.
+2689|{} guida la corsa al trofeo del capocannoniere della {2} con {1} gol. I portieri lo sognano di notte.
 2690|{}: "Il numero {} ora è tuo. {} prenderà il tuo numero {}; te lo sei meritato con le tue prestazioni."
 2691|{} si è ritirato dal calcio a {}. Il suo post d'addio ha raccolto in fretta milioni di like.
 2692|Sia il paese di tuo padre, {}, sia quello di tua madre, {}, ti hanno convocato in nazionale.
@@ -63,7 +63,7 @@
 2706|Il tuo compagno {} festeggia il compleanno stasera. Sei invitato.
 2707|Interpellato su un trasferimento, {} è stato breve: "Ora penso solo al pranzo."
 2708|La rivale di campionato {} ha un talento della tua età, nel tuo ruolo: {}.
-2709|La FIFA ha aperto un'indagine per scommesse illegali su {}! Le accuse sono gravi.
+2709|La federazione ha aperto un'indagine per scommesse illegali su {}! Le accuse sono gravi.
 2710|Ti restano {} anni di contratto. Puoi valutare le offerte.
 2711|{} ({}) ti offre una sponsorizzazione! Controlla nella scheda Vita.
 2712|{} non è rimasto molto colpito, ma un piccolo club vuole comunque darti una possibilità.
@@ -131,17 +131,17 @@
 2774|Un giocatore di {} anni ha in media {} · chiave per il tuo ruolo
 2775|{} è aperto! {} club ti vogliono. Le offerte valgono {} settimane.
 2776|prenderà il tuo numero {}; te lo sei meritato con le tue prestazioni."
-2777|🏅 Il Pallone d'Oro {} va a {}! Sei il miglior calciatore del mondo!
+2777|🏅 La Stella d'Oro {} va a {}! Sei il miglior calciatore del mondo!
 2778|{} INTERNAZIONALE · Valutazione avversaria {} · In mostra le stelle di domani
 2779|Si dice che un osservatore del {} segua le tue partite!
 2780|{} è rientrato benissimo e ha recuperato palla!
 2781|è aperto! {} club ti vogliono. Le offerte valgono {} settimane.
-2782|La FIFA ha aperto un'indagine per scommesse illegali su {}!
+2782|La federazione ha aperto un'indagine per scommesse illegali su {}!
 2783|INTERNAZIONALE · Valutazione avversaria {} · In mostra le stelle di domani
 2784|Hai cambiato dieta e ritmo del sonno. Resistenza +{}
 2785|Il tuo compagno {} festeggia il compleanno stasera.
 2786|{} ha {} anni, siamo nel {}, un ragazzino che gioca a calcio per strada.
-2787|Il Pallone d'Oro {} va a {}! Sei il miglior calciatore del mondo!
+2787|La Stella d'Oro {} va a {}! Sei il miglior calciatore del mondo!
 2788|{} Se scegli un paese non potrai più giocare per l'altro.
 2789|ha {} anni, siamo nel {}, un ragazzino che gioca a calcio per strada.
 2790|🎉 Hai firmato il tuo primo contratto da professionista con la prima squadra del {}!
@@ -247,7 +247,7 @@
 2890|📅 La stagione {} è iniziata. Ora sei nella squadra {}!
 2891|Il portiere del {} ha subito gol mentre si allacciava le scarpe.
 2892|Il controllo VAR nella partita del {} è durato 9 minuti.
-2893|{0} guida la corsa alla scarpa d'oro della {2} con {1} gol.
+2893|{0} guida la corsa al trofeo del capocannoniere della {2} con {1} gol.
 2894|🎁 Forziere missione: {} · +20 energia · +0,6 {}
 2895|🎯 Scenario completato: {}! Hai ottenuto un distintivo.
 2896|Gossip: {} avvistato insieme a {} {}!
@@ -400,7 +400,7 @@
 3043|🎙️ Conferenza stampa: "{}"{}
 3044|età {}–{} · seconda divisione
 3045|Scommessa piazzata: {} · quota {}
-3046|Squalifica FIFA: {} settimane
+3046|Squalifica federale: {} settimane
 3047|Vince il banco: {} - {}. -{}
 3048|Ranking delle nazionali {}
 3049|Ti sei separato da {}.

@@ -10,9 +10,9 @@
 2653|Vereinslegende {} besuchte die Akademie und leitete ein Training für die Jugend. Er hat dich auch zur Seite genommen.
 2654|Du wurdest wegen illegaler Wetten schuldig gesprochen. Du hast {} Strafe gezahlt{}. Während der Sperre kannst du kein Spiel bestreiten.
 2655|Bei deinem neuen Verein trägst du die Nummer {}. Beweise dich auf dem Platz, um die Nummer {} zu beantragen.
-2656|Du setzt {}. Fußballer dürfen nicht wetten; die FIFA kann ermitteln und eine lange Sperre verhängen.
+2656|Du setzt {}. Fußballer dürfen nicht wetten; der Verband kann ermitteln und eine lange Sperre verhängen.
 2657|Du wurdest zum Kapitän von {} ernannt! Die Binde gehört dir. Im Spiel kannst du Mitspieler in Position ziehen.
-2658|FIFA-URTEIL: {} für {} Wochen gesperrt und wegen illegaler Wetten mit {} bestraft!{}
+2658|VERBANDSURTEIL: {} für {} Wochen gesperrt und wegen illegaler Wetten mit {} bestraft!{}
 2659|{} ist {} Jahre alt, wir schreiben {}. Er nimmt am Akademie-Probetraining teil. Scouts mehrerer Vereine machen sich Notizen!
 2660|ist {} Jahre alt, wir schreiben {}. Er nimmt am Akademie-Probetraining teil. Scouts mehrerer Vereine machen sich Notizen!
 2661|Das Maskottchen von {} verwandelte in der Halbzeit 3 von 3 Elfmetern. Die Fans wollen es im Kader.
@@ -63,7 +63,7 @@
 2706|Dein Mitspieler {} feiert heute Abend Geburtstag. Du bist eingeladen.
 2707|Auf einen Transfer angesprochen, fasste sich {} kurz: „Ich denke gerade nur ans Mittagessen.“
 2708|Ligarivale {} haben ein Talent in deinem Alter auf deiner Position: {}.
-2709|Die FIFA hat gegen {} ein Verfahren wegen illegaler Wetten eröffnet! Die Vorwürfe sind schwerwiegend.
+2709|Der Verband hat gegen {} ein Verfahren wegen illegaler Wetten eröffnet! Die Vorwürfe sind schwerwiegend.
 2710|Dein Vertrag läuft noch {} Jahre. Du kannst die Angebote prüfen.
 2711|{} ({}) bietet dir ein Sponsoring an! Schau im Tab „Leben“ nach.
 2712|{} war nicht sehr beeindruckt, aber ein kleiner Verein will dir trotzdem eine Chance geben.
@@ -131,17 +131,17 @@
 2774|Ein {}-Jähriger hat im Schnitt {} · wichtig für deine Position
 2775|{} ist geöffnet! {} Vereine wollen dich. Angebote gelten {} Wochen.
 2776|übernimmt deine Nummer {}; du hast sie dir mit deinen Leistungen verdient.“
-2777|🏅 Der Ballon d'Or {} geht an {}! Du bist der beste Fußballer der Welt!
+2777|🏅 Der Goldene Stern {} geht an {}! Du bist der beste Fußballer der Welt!
 2778|{} LÄNDERSPIEL · Gegnerwertung {} · Die Stars von morgen
 2779|Angeblich beobachtet ein Scout von {} deine Spiele!
 2780|{} arbeitete stark nach hinten und eroberte den Ball!
 2781|ist geöffnet! {} Vereine wollen dich. Angebote gelten {} Wochen.
-2782|Die FIFA hat gegen {} ein Verfahren wegen illegaler Wetten eröffnet!
+2782|Der Verband hat gegen {} ein Verfahren wegen illegaler Wetten eröffnet!
 2783|LÄNDERSPIEL · Gegnerwertung {} · Die Stars von morgen
 2784|Du hast deine Ernährung und deinen Schlafrhythmus umgestellt. Ausdauer +{}
 2785|Dein Mitspieler {} feiert heute Abend Geburtstag.
 2786|{} ist {} Jahre alt, wir schreiben {}, ein Kind, das auf der Straße Fußball spielt.
-2787|Der Ballon d'Or {} geht an {}! Du bist der beste Fußballer der Welt!
+2787|Der Goldene Stern {} geht an {}! Du bist der beste Fußballer der Welt!
 2788|{} Wenn du dich für ein Land entscheidest, kannst du nicht mehr für das andere spielen.
 2789|ist {} Jahre alt, wir schreiben {}, ein Kind, das auf der Straße Fußball spielt.
 2790|🎉 Du hast deinen ersten Profivertrag bei der ersten Mannschaft von {} unterschrieben!
@@ -400,7 +400,7 @@
 3043|🎙️ Pressekonferenz: „{}“{}
 3044|Alter {}–{} · zweite Liga
 3045|Wette platziert: {} · Quote {}
-3046|FIFA-Sperre: {} Wochen
+3046|Verbandssperre: {} Wochen
 3047|Croupier gewinnt: {} - {}. -{}
 3048|{} Nationalmannschafts-Rangliste
 3049|Du hast dich von {} getrennt.

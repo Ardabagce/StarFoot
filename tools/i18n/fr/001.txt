@@ -69,7 +69,7 @@
 369|jours
 370|Comment réponds-tu ?
 371|Que dis-tu ?
-372|Course au Ballon d'Or
+372|Course à l'Étoile d'Or
 373|Ton rival
 374|Missions du jour
 375|Partager la carte joueur
@@ -114,7 +114,7 @@
 414|deuxième division
 415|MVP
 416|Ligue alpine
-417|Super ligue des Alpes
+417|Ligue helvétique
 418|Ligue égéenne
 419|Ligue viking
 420|Ligue adriatique
@@ -122,7 +122,7 @@
 422|Ligue de la Vistule
 423|Ligue des steppes
 424|LIGUE ALPINE
-425|SUPER LIGUE DES ALPES
+425|LIGUE HELVÉTIQUE
 426|LIGUE ÉGÉENNE
 427|LIGUE VIKING
 428|ADRIATIQUE
@@ -203,7 +203,7 @@
 503|3 actions
 504|Tu as joué pour 3 clubs différents
 505|Tu vas te montrer sur 3 ateliers. Mieux tu fais, plus les clubs qui t'offrent un contrat sont grands !
-506|Tu as remporté 3 fois le Ballon d'Or
+506|Tu as remporté 3 fois l'Étoile d'Or
 507|Tu as été 3 fois meilleur buteur
 508|Toujours en activité à 35 ans
 509|Toujours en activité à 38 ans
@@ -253,7 +253,7 @@
 553|Rejoindre le centre de formation
 554|Chaîne en or
 555|Crampons dorés
-556|Ballon d'Or
+556|Étoile d'Or
 557|Poussière d'or
 558|Mais les paparazzis t'ont surpris à l'aube. Le coach n'est pas content.
 559|Menu principal
@@ -318,8 +318,8 @@
 618|Ligue européenne de développement
 619|Ligue européenne de développement (U19)
 620|Tu as gagné la Ligue européenne de développement (U19)
-621|Coupe Conférence européenne
-622|Tu as gagné la Coupe Conférence européenne
+621|Coupe continentale européenne
+622|Tu as gagné la Coupe continentale européenne
 623|Tu as marqué en Coupe d'Europe
 624|Championnat d'Europe
 625|Tu as gagné le Championnat d'Europe

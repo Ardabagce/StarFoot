@@ -1,4 +1,4 @@
-1000|KONFERENSI
+1000|KONTINENTAL
 1001|SEPAK POJOK!
 1002|LARI!
 1003|AMERIKA UTARA
@@ -65,10 +65,10 @@
 1064|Mudah
 1065|Tangan di Atas
 1066|Lengan terbuka lebar, condong ke kiri dan kanan sambil berlari.
-1067|P. Konferensi
-1068|Piala Konferensi
-1069|Malam Piala Konferensi
-1070|Kejayaan Konferensi
+1067|P. Kontinental
+1068|Piala Kontinental
+1069|Malam Piala Kontinental
+1070|Kejayaan Kontinental
 1071|Set Kerucut dan Tiang
 1072|Serangan Balik!
 1073|Lawan lebih dulu sampai ke bola saat serangan balik.

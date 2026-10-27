@@ -10,9 +10,9 @@
 2653|La légende du club {} est venue au centre de formation diriger une séance pour les jeunes. Il t'a aussi pris à part.
 2654|Tu as été reconnu coupable de paris illégaux. Tu as payé une amende de {}{}. Tu ne peux jouer aucun match pendant la suspension.
 2655|Tu porteras le numéro {} dans ton nouveau club. Fais tes preuves sur le terrain pour demander le numéro {}.
-2656|Tu vas miser {}. Les footballeurs n'ont pas le droit de parier ; la FIFA peut enquêter et infliger une longue suspension.
+2656|Tu vas miser {}. Les footballeurs n'ont pas le droit de parier ; la fédération peut enquêter et infliger une longue suspension.
 2657|Tu as été nommé capitaine de {} ! Le brassard est à toi. En match, tu peux faire glisser tes coéquipiers en position.
-2658|DÉCISION FIFA : {} suspendu {} semaines et condamné à {} d'amende pour paris illégaux !{}
+2658|DÉCISION DE LA FÉDÉRATION : {} suspendu {} semaines et condamné à {} d'amende pour paris illégaux !{}
 2659|{} a {} ans, nous sommes en {}. Il participe aux essais d'un centre de formation. Les recruteurs de plusieurs clubs prennent des notes !
 2660|a {} ans, nous sommes en {}. Il participe aux essais d'un centre de formation. Les recruteurs de plusieurs clubs prennent des notes !
 2661|La mascotte de {} a marqué 3 penalties sur 3 à la mi-temps. Les fans la veulent dans l'effectif.
@@ -43,7 +43,7 @@
 2686|Ton rival {} a signé un triplé ! Les journaux demandent : « {} peut-il répondre ? »
 2687|Ton coéquipier {} {} t'a appelé après l'entraînement : « Allez, on fait du travail en plus. »
 2688|Le gardien de {} a encaissé un but en refaisant ses lacets. Son explication : « Ce n'étaient pas nos lacets. »
-2689|{} mène la course au soulier d'or de {2} avec {1} buts. Les gardiens le voient dans leurs rêves.
+2689|{} mène la course au titre de meilleur buteur de {2} avec {1} buts. Les gardiens le voient dans leurs rêves.
 2690|{} : « Le numéro {} est à toi maintenant. {} prendra ton numéro {} ; tu l'as mérité par tes performances. »
 2691|{} a pris sa retraite à {}. Son message d'adieu a vite récolté des millions de likes.
 2692|Le pays natal de ton père, {}, et celui de ta mère, {}, t'ont tous deux convoqué en équipe nationale.
@@ -63,7 +63,7 @@
 2706|Ton coéquipier {} fête son anniversaire ce soir. Tu es invité.
 2707|Interrogé sur un transfert, {} a été bref : « Pour l'instant, je ne pense qu'au déjeuner. »
 2708|Le rival de championnat {} a un espoir de ton âge, à ton poste : {}.
-2709|La FIFA a ouvert une enquête pour paris illégaux visant {} ! Les accusations sont graves.
+2709|La fédération a ouvert une enquête pour paris illégaux visant {} ! Les accusations sont graves.
 2710|Il te reste {} ans de contrat. Tu peux étudier les offres.
 2711|{} ({}) te propose un sponsoring ! Consulte l'onglet Vie.
 2712|{} n'a pas été très impressionné, mais un petit club veut quand même te donner ta chance.
@@ -131,17 +131,17 @@
 2774|Un joueur de {} ans a en moyenne {} · clé pour ton poste
 2775|{} est ouvert ! {} clubs te veulent. Les offres sont valables {} semaines.
 2776|prendra ton numéro {} ; tu l'as mérité par tes performances. »
-2777|🏅 Le Ballon d'Or {} revient à {} ! Tu es le meilleur footballeur du monde !
+2777|🏅 L'Étoile d'Or {} revient à {} ! Tu es le meilleur footballeur du monde !
 2778|{} INTERNATIONAL · Note adverse {} · Les stars de demain en vitrine
 2779|On dit qu'un recruteur suit tes matchs pour {} !
 2780|{} a fait un superbe repli et a récupéré le ballon !
 2781|est ouvert ! {} clubs te veulent. Les offres sont valables {} semaines.
-2782|La FIFA a ouvert une enquête pour paris illégaux visant {} !
+2782|La fédération a ouvert une enquête pour paris illégaux visant {} !
 2783|INTERNATIONAL · Note adverse {} · Les stars de demain en vitrine
 2784|Tu as changé ton alimentation et ton rythme de sommeil. Endurance +{}
 2785|Ton coéquipier {} fête son anniversaire ce soir.
 2786|{} a {} ans, nous sommes en {}, un gamin qui joue au foot dans la rue.
-2787|Le Ballon d'Or {} revient à {} ! Tu es le meilleur footballeur du monde !
+2787|L'Étoile d'Or {} revient à {} ! Tu es le meilleur footballeur du monde !
 2788|{} Si tu choisis un pays, tu ne pourras plus jouer pour l'autre.
 2789|a {} ans, nous sommes en {}, un gamin qui joue au foot dans la rue.
 2790|🎉 Tu as signé ton premier contrat pro avec l'équipe première de {} !
@@ -247,7 +247,7 @@
 2890|📅 La saison {} a commencé. Tu es maintenant dans l'équipe {} !
 2891|Le gardien de {} a encaissé un but en refaisant ses lacets.
 2892|La vérification VAR du match {} a duré 9 minutes.
-2893|{0} mène la course au soulier d'or de {2} avec {1} buts.
+2893|{0} mène la course au titre de meilleur buteur de {2} avec {1} buts.
 2894|🎁 Coffre de mission : {} · +20 énergie · +0,6 {}
 2895|🎯 Scénario terminé : {} ! Tu as gagné un badge.
 2896|Rumeur : {} aperçu avec {} {} !
@@ -400,7 +400,7 @@
 3043|🎙️ Conférence de presse : « {} »{}
 3044|âges {}–{} · deuxième division
 3045|Pari placé : {} · cote {}
-3046|Suspension FIFA : {} semaines
+3046|Suspension fédérale : {} semaines
 3047|Le croupier gagne : {} - {}. -{}
 3048|Classement des équipes nationales {}
 3049|Tu t'es séparé de {}.

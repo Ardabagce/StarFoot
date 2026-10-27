@@ -95,8 +95,8 @@
 3154|📅 La saison {} a commencé.
 3155|{0} {4} {2}-{3} contre {1}.
 3156|Blessé · {} semaines
-3157|🏅 Le Ballon d'Or {} revient à {} !
-3158|{} Course au Ballon d'Or
+3157|🏅 L'Étoile d'Or {} revient à {} !
+3158|{} Course à l'Étoile d'Or
 3159|{} record de buts sur la saison
 3160|Tu gagnes ! {} - {} · +{}
 3161|Match de phase de ligue {}
@@ -127,7 +127,7 @@
 3186|{} · si tu te qualifies
 3187|✅ Mission accomplie : {}
 3188|🎁 Récompense quotidienne : {}
-3189|Le Ballon d'Or {} revient à {} !
+3189|L'Étoile d'Or {} revient à {} !
 3190|{} Résultat du scénario
 3191|International • {} - {}
 3192|Lien familial +{}
@@ -146,7 +146,7 @@
 3205|Débloqué à {} ans
 3206|{} · encore {} semaines
 3207|· {} vent à {} km/h
-3208|👟 {} Soulier d'or ({})
+3208|👟 {} Trophée du buteur ({})
 3209|{} la saison prochaine !
 3210|{} se place devant le ballon.
 3211|{} Ton énergie est basse.
@@ -210,7 +210,7 @@
 3269|{}. {} gagne ! +{}
 3270|{}. {} gagne. -{}
 3271|{}× Homme du match
-3272|{} Soulier d'or ({})
+3272|{} Trophée du buteur ({})
 3273|et {} se sont mariés !
 3274|Tu t'es blessé : {}.
 3275|vent à {} km/h
@@ -231,7 +231,7 @@
 3290|vainqueur : {} !
 3291|· Ta note {}
 3292|🏆 Vainqueur {}
-3293|Soulier d'or ({})
+3293|Trophée du buteur ({})
 3294|Égalité ({}).
 3295|Avec la légende {}.
 3296|Nous sommes en {}.

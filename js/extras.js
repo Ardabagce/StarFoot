@@ -41,7 +41,7 @@ const ACHIEVEMENTS = (() => {
     { id: 'league1', cat: 'trophy', tier: 'silver', name: 'Lig Şampiyonu', desc: 'Profesyonel ligde şampiyon oldun', check: (p) => p.trophies.some((t) => /Lig Şampiyonu|Ligi Şampiyonu|League Şampiyonu|Liga Şampiyonu|Serie A Şampiyonu|Bundesliga Şampiyonu|Ligue 1 Şampiyonu/.test(t)) || p.trophies.some((t) => /Şampiyonu/.test(t) && !/U1\d|U\d|Kupa|Şampiyonası/.test(t)) },
     { id: 'youthcup', cat: 'trophy', tier: 'bronze', name: 'Altyapı Şampiyonu', desc: 'Altyapı liginde şampiyon oldun', check: (p) => p.trophies.some((t) => /U\d+.*Şampiyonu/.test(t)) },
     { id: 'ucl', cat: 'trophy', tier: 'gold', name: 'Avrupa\'nın En İyisi', desc: 'Avrupa Şampiyonlar Kupası\'nı kazandın', check: (p) => p.trophies.some((t) => /Şampiyonlar Kupası/.test(t)) },
-    { id: 'uecl', cat: 'trophy', tier: 'silver', name: 'Konferans Zaferi', desc: 'Avrupa Konferans Kupası\'nı kazandın', check: (p) => p.trophies.some((t) => /Konferans Kupası/.test(t)) },
+    { id: 'uecl', cat: 'trophy', tier: 'silver', name: 'Kıta Zaferi', desc: 'Avrupa Kıta Kupası\'nı kazandın', check: (p) => p.trophies.some((t) => /Kıta Kupası/.test(t)) },
     { id: 'ccc', cat: 'trophy', tier: 'gold', name: 'Kuzeyin Hakimi', desc: 'Kuzey Amerika Kupası\'nı kazandın', check: (p) => p.trophies.some((t) => /Kuzey Amerika Kupası/.test(t)) },
     { id: 'acl', cat: 'trophy', tier: 'gold', name: 'Asya\'nın Zirvesi', desc: 'Asya Şampiyonlar Kupası\'nı kazandın', check: (p) => p.trophies.some((t) => /Asya Şampiyonlar Kupası/.test(t)) },
     { id: 'csa', cat: 'trophy', tier: 'gold', name: 'Kıtanın Kralı', desc: 'Güney Amerika Kupası\'nı kazandın', check: (p) => p.trophies.some((t) => /Güney Amerika Kupası/.test(t)) },
@@ -50,16 +50,16 @@ const ACHIEVEMENTS = (() => {
     { id: 'domcup', cat: 'trophy', tier: 'silver', name: 'Kupa Şampiyonu', desc: 'Ülkenin kupasını kazandın', check: (p) => p.trophies.some((t) => /(Türkiye|İngiltere|Kral|Almanya|İtalya|Fransa|Hollanda|Portekiz|Brezilya|Arjantin|Belçika|İskoçya|Meksika|İmparator|ABD Açık) Kupası Şampiyonu/.test(t)) },
     { id: 'double', cat: 'trophy', tier: 'gold', name: 'Çifte Kupa', desc: 'Aynı sezon hem ligi hem ülke kupasını kazandın', check: (p) => { const by = {}; p.trophies.forEach((t) => { const y = t.split(':')[0]; by[y] = by[y] || {}; if (/(Türkiye|İngiltere|Kral|Almanya|İtalya|Fransa|Hollanda|Portekiz|Brezilya|Arjantin|Belçika|İskoçya|Meksika|İmparator|ABD Açık) Kupası Şampiyonu/.test(t)) by[y].c = 1; else if (/Şampiyonu/.test(t) && !/U\d|Kupa|Şampiyonası/.test(t)) by[y].l = 1; }); return Object.values(by).some((x) => x.c && x.l); } },
     { id: 'uel', cat: 'trophy', tier: 'silver', name: 'Federasyon Kupası', desc: 'Avrupa Federasyon Kupası\'nı kazandın', check: (p) => p.trophies.some((t) => /Federasyon Kupası/.test(t)) },
-    { id: 'wc', cat: 'trophy', tier: 'gold', name: 'Dünya Şampiyonu', desc: 'Dünya Kupası\'nı kazandın', check: (p) => p.trophies.some((t) => /Dünya Kupası Şampiyonu/.test(t)) },
-    { id: 'nl', cat: 'trophy', tier: 'silver', name: 'Uluslar Ligi', desc: 'Uluslar Ligi Finalleri\'ni kazandın', check: (p) => p.trophies.some((t) => /Uluslar Ligi/.test(t)) },
-    { id: 'euro', cat: 'trophy', tier: 'gold', name: 'Avrupa Şampiyonu', desc: 'Avrupa Şampiyonası\'nı kazandın', check: (p) => p.trophies.some((t) => /Avrupa Şampiyonası Şampiyonu/.test(t)) },
+    { id: 'wc', cat: 'trophy', tier: 'gold', name: 'Dünya Şampiyonu', desc: 'Dünya Şampiyonası\'nı kazandın', check: (p) => p.trophies.some((t) => /Dünya Şampiyonası Şampiyonu/.test(t)) },
+    { id: 'nl', cat: 'trophy', tier: 'silver', name: 'Milletler Ligi', desc: 'Milletler Ligi Finalleri\'ni kazandın', check: (p) => p.trophies.some((t) => /Milletler Ligi/.test(t)) },
+    { id: 'euro', cat: 'trophy', tier: 'gold', name: 'Avrupa Şampiyonu', desc: 'Avrupa Milletler Şampiyonası\'nı kazandın', check: (p) => p.trophies.some((t) => /Avrupa Milletler Şampiyonası Şampiyonu/.test(t)) },
     { id: 'boot', cat: 'trophy', tier: 'silver', name: 'Gol Kralı', desc: 'Bir sezon gol krallığını kazandın', check: (p) => tr(/Gol Kralı/)(p) >= 1 },
     { id: 'boot3', cat: 'trophy', tier: 'gold', name: 'Seri Gol Kralı', desc: '3 kez gol kralı oldun', check: (p) => tr(/Gol Kralı/)(p) >= 3 },
     { id: 'poty', cat: 'trophy', tier: 'silver', name: 'Sezonun Oyuncusu', desc: 'Ligde sezonun oyuncusu seçildin', check: (p) => tr(/Sezonun Oyuncusu/)(p) >= 1 },
     { id: 'young', cat: 'trophy', tier: 'silver', name: 'Yılın Genci', desc: 'Yılın genç oyuncusu seçildin', check: (p) => tr(/Genç Oyuncu/)(p) >= 1 },
     { id: 'ybest', cat: 'trophy', tier: 'bronze', name: 'Altyapı Yıldızı', desc: 'Altyapı liginin en iyi oyuncusu oldun', check: (p) => tr(/En İyi Oyuncu/)(p) >= 1 },
-    { id: 'ballon', cat: 'trophy', tier: 'gold', name: 'Altın Top', desc: 'Yılın futbolcusu seçildin', check: (p) => tr(/Altın Top/)(p) >= 1 },
-    { id: 'ballon3', cat: 'trophy', tier: 'gold', name: 'Efsane', desc: '3 kez Altın Top kazandın', check: (p) => tr(/Altın Top/)(p) >= 3 },
+    { id: 'ballon', cat: 'trophy', tier: 'gold', name: 'Altın Yıldız', desc: 'Yılın futbolcusu seçildin', check: (p) => tr(/Altın Yıldız/)(p) >= 1 },
+    { id: 'ballon3', cat: 'trophy', tier: 'gold', name: 'Efsane', desc: '3 kez Altın Yıldız kazandın', check: (p) => tr(/Altın Yıldız/)(p) >= 3 },
   );
   ladder('intl', 'cap', [1, 10, 25, 50, 100], (v) => (v === 1 ? 'Milli Forma' : v === 50 ? 'Milli Takım Efsanesi' : `${v} Milli Maç`), (v) => (v === 1 ? 'Milli takımda forma giydin' : `${v} milli maça çıktın`), (p) => p.intl.caps, { 1: 'cap1', 50: 'cap50' });
   ladder('intl', 'ig', [1, 10, 25, 50], (v) => (v === 1 ? 'Milli Gol' : `${v} Milli Gol`), (v) => `Milli takımda ${v} gol attın`, (p) => p.intl.goals);
@@ -105,7 +105,7 @@ const Ach = {
 // ---------- Kupa vitrini çizimleri ----------
 const Trophy = {
   kind(text) {
-    if (/Altın Top/.test(text)) return 'ball';
+    if (/Altın Yıldız/.test(text)) return 'ball';
     if (/Gol Kralı/.test(text)) return 'boot';
     if (/Şampiyon/.test(text)) return 'cup';
     if (/Genç/.test(text)) return 'young';
@@ -258,7 +258,7 @@ const Loot = {
 };
 
 // ---------- Mağaza puanı ----------
-// iPhone'da Apple'ın kendi "Bu oyunu değerlendir" penceresi, yalnız mutlu anlarda (kupa, hat-trick, Altın Top) istenir.
+// iPhone'da Apple'ın kendi "Bu oyunu değerlendir" penceresi, yalnız mutlu anlarda (kupa, hat-trick, Altın Yıldız) istenir.
 // Apple pencereyi yılda en fazla 3 kez gösterir; biz de ilk günü ve son istekten sonraki 60 günü atlarız.
 const Review = {
   KEY: 'sf_review',
@@ -564,7 +564,7 @@ const Social = {
   // mevcut takipçi hedefe yaklaştıkça yeni takipçi kazanmak zorlaşır
   room(p) { const f = p.social ? p.social.followers : 0; return U.clamp(1.5 - f / Math.max(1, Social.target(p)), 0, 1); },
   // Takipçi hedefi: ün ve ligin görünürlüğü belirler; 200 binin üstü kariyer birikimiyle açılır
-  // (profesyonel sezon, kupa, Altın Top). Örn. 2 sezonluk genç yıldız ≈ 10-20 Mn, uzun kariyerli efsane ≈ 100 Mn+
+  // (profesyonel sezon, kupa, Altın Yıldız). Örn. 2 sezonluk genç yıldız ≈ 10-20 Mn, uzun kariyerli efsane ≈ 100 Mn+
   target(p) {
     const lg = !Game.state || Game.inStreet() || Game.isYouth() ? null : LEAGUES.find((l) => l.id === Game.club().league);
     const vis = lg ? U.clamp(0.7 + lg.fame * 0.25, 0.8, 1.1) : 0.7;

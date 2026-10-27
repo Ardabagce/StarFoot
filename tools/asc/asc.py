@@ -282,7 +282,7 @@ def iap_setup(asc, app_id, cfg):
             print(f'   ! {loc}: {err}')
 
 
-def pack_setup(asc, app_id, packs):
+def pack_setup(asc, app_id, packs, replace_shot=False):
     # İçerik paketleri: yoksa oluşturur; ad/açıklama, fiyat, ülkeler ve inceleme görselini tamamlar (tekrar çalıştırılabilir)
     def safe(path, **params):
         try:
@@ -296,7 +296,7 @@ def pack_setup(asc, app_id, packs):
         if pid in items:
             iid = items[pid]['id']
             print(f"   zaten var (durum {items[pid]['attributes'].get('state')})")
-            asc.req('PATCH', f'/v2/inAppPurchases/{iid}', write=True, body={'data': {'type': 'inAppPurchases', 'id': iid, 'attributes': {'reviewNote': cfg['reviewNote']}}})
+            asc.req('PATCH', f'/v2/inAppPurchases/{iid}', write=True, body={'data': {'type': 'inAppPurchases', 'id': iid, 'attributes': {'name': cfg['refName'], 'reviewNote': cfg['reviewNote']}}})
         else:
             iid = asc.req('POST', '/v2/inAppPurchases', write=True, body={'data': {'type': 'inAppPurchases', 'attributes': {
                 'name': cfg['refName'], 'productId': pid, 'inAppPurchaseType': 'NON_CONSUMABLE', 'reviewNote': cfg['reviewNote'], 'familySharable': False},
@@ -354,7 +354,7 @@ def pack_setup(asc, app_id, packs):
             print('   ülkeler zaten ayarlı')
         # inceleme görseli
         shot = safe(f'/v2/inAppPurchases/{iid}/appStoreReviewScreenshot').get('data')
-        if shot and ((shot['attributes'].get('assetDeliveryState') or {}).get('state')) == 'COMPLETE':
+        if shot and not replace_shot and ((shot['attributes'].get('assetDeliveryState') or {}).get('state')) == 'COMPLETE':
             print('   inceleme görseli zaten var')
         else:
             if shot:
@@ -471,7 +471,7 @@ def main():
         iap_setup(asc, app['id'], meta.get('premium') or {})
         return iap_report(asc, app['id'])
     if a.packs:
-        pack_setup(asc, app['id'], meta.get('packs') or {})
+        pack_setup(asc, app['id'], meta.get('packs') or {}, a.replace_screens)
         return iap_report(asc, app['id'])
     if a.submit_packs:
         submit_packs(asc, app['id'], meta.get('packs') or {})

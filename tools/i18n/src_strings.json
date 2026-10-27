@@ -1676,7 +1676,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Avrupa Konferans Kupası": [
+"Avrupa Kıta Kupası": [
 "cups.js",
 "lang-ar.js",
 "lang-de.js",
@@ -2488,7 +2488,7 @@
 "Sıradaki milli turnuva: {} {}": [
 "cups.js"
 ],
-"Dünya Kupası": [
+"Dünya Şampiyonası": [
 "cups.js",
 "lang-ar.js",
 "lang-de.js",
@@ -2503,7 +2503,7 @@
 "wc.js",
 "weather.js"
 ],
-"Avrupa Şampiyonası": [
+"Avrupa Milletler Şampiyonası": [
 "cups.js",
 "lang-ar.js",
 "lang-de.js",
@@ -2517,7 +2517,7 @@
 "sprites.js",
 "weather.js"
 ],
-"Uluslar Ligi Finalleri": [
+"Milletler Ligi Finalleri": [
 "cups.js",
 "lang-ar.js",
 "lang-de.js",
@@ -3349,7 +3349,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Britanya Premier Ligi": [
+"Britanya Birinci Ligi": [
 "data.js",
 "lang-ar.js",
 "lang-de.js",
@@ -3361,7 +3361,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Britanya Şampiyonluk Ligi": [
+"Britanya İkinci Ligi": [
 "data.js",
 "lang-ar.js",
 "lang-de.js",
@@ -3433,7 +3433,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Çizme B Ligi": [
+"Çizme 2. Ligi": [
 "data.js",
 "lang-ar.js",
 "lang-de.js",
@@ -3601,7 +3601,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Alpler Süper Ligi": [
+"Helvetya Ligi": [
 "data.js",
 "lang-ar.js",
 "lang-de.js",
@@ -15680,7 +15680,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Altın Top": [
+"Altın Yıldız": [
 "data.js",
 "extras.js",
 "lang-ar.js",
@@ -17170,7 +17170,7 @@
 "Avrupa Şampiyonlar Kupası\\'nı kazandın": [
 "extras.js"
 ],
-"Konferans Zaferi": [
+"Kıta Zaferi": [
 "extras.js",
 "lang-ar.js",
 "lang-de.js",
@@ -17182,7 +17182,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Avrupa Konferans Kupası\\'nı kazandın": [
+"Avrupa Kıta Kupası\\'nı kazandın": [
 "extras.js"
 ],
 "Kuzeyin Hakimi": [
@@ -17328,10 +17328,10 @@
 "lang-pt.js",
 "wc.js"
 ],
-"Dünya Kupası\\'nı kazandın": [
+"Dünya Şampiyonası\\'nı kazandın": [
 "extras.js"
 ],
-"Uluslar Ligi": [
+"Milletler Ligi": [
 "extras.js",
 "lang-ar.js",
 "lang-de.js",
@@ -17343,7 +17343,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Uluslar Ligi Finalleri\\'ni kazandın": [
+"Milletler Ligi Finalleri\\'ni kazandın": [
 "extras.js"
 ],
 "Avrupa Şampiyonu": [
@@ -17358,7 +17358,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Avrupa Şampiyonası\\'nı kazandın": [
+"Avrupa Milletler Şampiyonası\\'nı kazandın": [
 "extras.js"
 ],
 "Gol Kralı": [
@@ -17507,7 +17507,7 @@
 "lang-pt.js",
 "legacy.js"
 ],
-"3 kez Altın Top kazandın": [
+"3 kez Altın Yıldız kazandın": [
 "extras.js",
 "lang-ar.js",
 "lang-de.js",
@@ -20734,7 +20734,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Dünya Kupası Rüyası": [
+"Dünya Şampiyonası Rüyası": [
 "game.js",
 "lang-ar.js",
 "lang-de.js",
@@ -21689,7 +21689,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"FIFA cezalı olduğun için bu maçta oynayamıyorsun.": [
+"Federasyon cezalı olduğun için bu maçta oynayamıyorsun.": [
 "game.js",
 "lang-ar.js",
 "lang-de.js",
@@ -22449,7 +22449,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"🥇 Altın Top (Yılın Futbolcusu)": [
+"🥇 Altın Yıldız (Yılın Futbolcusu)": [
 "game.js",
 "lang-ar.js",
 "lang-de.js",
@@ -24614,7 +24614,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Konferans K.": [
+"Kıta K.": [
 "game.js",
 "lang-ar.js",
 "lang-de.js",
@@ -27424,7 +27424,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Mahalle maçından Dünya Kupası finaline. Hikâyeni yaz, scoutların gözüne gir, efsane ol.": [
+"Mahalle maçından Dünya Şampiyonası finaline. Hikâyeni yaz, scoutların gözüne gir, efsane ol.": [
 "game.js",
 "lang-ar.js",
 "lang-de.js",
@@ -28275,7 +28275,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Mahalle maçından Dünya Kupası finaline.": [
+"Mahalle maçından Dünya Şampiyonası finaline.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -28945,7 +28945,7 @@
 "lang-pt.js",
 "meta.js"
 ],
-"ALTIN TOP! Dünyanın en iyisi seçildim. Bu ödül takım arkadaşlarımın, ailemin ve taraftarımızın.": [
+"ALTIN YILDIZ! Dünyanın en iyisi seçildim. Bu ödül takım arkadaşlarımın, ailemin ve taraftarımızın.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -28957,7 +28957,7 @@
 "lang-pt.js",
 "meta.js"
 ],
-"ALTIN TOP!": [
+"ALTIN YILDIZ!": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -31179,7 +31179,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Altın Top Yarışı": [
+"Altın Yıldız Yarışı": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -34174,7 +34174,7 @@
 "lang-pt.js",
 "wc.js"
 ],
-"Devam eden Dünya Kupası macerası silinecek.": [
+"Devam eden Dünya Şampiyonası macerası silinecek.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -34812,7 +34812,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"İlk Dünya Kupası'nda neler hissediyorsun?": [
+"İlk Dünya Şampiyonası'nda neler hissediyorsun?": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -35002,7 +35002,7 @@
 "lang-pt.js",
 "wc.js"
 ],
-"DÜNYA KUPASI": [
+"DÜNYA ŞAMPİYONASI": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -35484,7 +35484,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Dünya Kupası kadrosundayım! Bu formayı giymek bir rüya.": [
+"Dünya Şampiyonası kadrosundayım! Bu formayı giymek bir rüya.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -35496,7 +35496,7 @@
 "lang-pt.js",
 "wc.js"
 ],
-"Dünya Kupası kadrosundayım!": [
+"Dünya Şampiyonası kadrosundayım!": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -35600,7 +35600,7 @@
 "lang-pt.js",
 "wc.js"
 ],
-"Altın Ayakkabı": [
+"Gol Kralı Kupası": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -35939,7 +35939,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Hoca bugün Dünya Kupası kadrosunu açıklayacak. Kampta yaptıkların karşılığını bulacak mı?": [
+"Hoca bugün Dünya Şampiyonası kadrosunu açıklayacak. Kampta yaptıkların karşılığını bulacak mı?": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -35951,7 +35951,7 @@
 "lang-pt.js",
 "wc.js"
 ],
-"Hoca bugün Dünya Kupası kadrosunu açıklayacak.": [
+"Hoca bugün Dünya Şampiyonası kadrosunu açıklayacak.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -37275,7 +37275,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Ev sahibi olduğunuz Dünya Kupası'nın yılı. Bütün ülke umudunu sana bağladı.": [
+"Ev sahibi olduğunuz Dünya Şampiyonası'nın yılı. Bütün ülke umudunu sana bağladı.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -37286,7 +37286,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Ev sahibi olduğunuz Dünya Kupası'nın yılı.": [
+"Ev sahibi olduğunuz Dünya Şampiyonası'nın yılı.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -37678,7 +37678,7 @@
 "lang-pt.js",
 "lpath.js"
 ],
-"19 yaşında Dünya Kupası'na gidiyorsun. Dünya senin hızını konuşmaya hazırlanıyor.": [
+"19 yaşında Dünya Şampiyonası'na gidiyorsun. Dünya senin hızını konuşmaya hazırlanıyor.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -37689,7 +37689,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"19 yaşında Dünya Kupası'na gidiyorsun.": [
+"19 yaşında Dünya Şampiyonası'na gidiyorsun.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -37745,7 +37745,7 @@
 "lang-pt.js",
 "lpath.js"
 ],
-"Dünya Kupası kazan": [
+"Dünya Şampiyonası kazan": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -37757,7 +37757,7 @@
 "lang-pt.js",
 "lpath.js"
 ],
-"Avrupa Şampiyonası kazan": [
+"Avrupa Milletler Şampiyonası kazan": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -38191,7 +38191,7 @@
 "lang-pt.js",
 "premium.js"
 ],
-"18 yaşında seçtiğin milli takımla tek bir Dünya Kupası'na odaklanan, kendi kaydı olan ayrı bir mod.": [
+"18 yaşında seçtiğin milli takımla tek bir Dünya Şampiyonası'na odaklanan, kendi kaydı olan ayrı bir mod.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -38250,7 +38250,7 @@
 "lang-pt.js",
 "premium.js"
 ],
-"Altın Ayakkabı, Altın Top ve En İyi Genç Oyuncu ödülleri": [
+"Gol Kralı Kupası, Altın Yıldız ve En İyi Genç Oyuncu ödülleri": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -38446,7 +38446,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Altın Top kazan": [
+"Altın Yıldız kazan": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -39000,7 +39000,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Avrupa Konferans Kupası'nı kazandın": [
+"Avrupa Kıta Kupası'nı kazandın": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -39011,7 +39011,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Avrupa Şampiyonası'nı kazandın": [
+"Avrupa Milletler Şampiyonası'nı kazandın": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -39610,7 +39610,7 @@
 "lang-pt.js",
 "minigame.js"
 ],
-"Dünya Kupası'nı kazandın": [
+"Dünya Şampiyonası'nı kazandın": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -39740,7 +39740,7 @@
 "lang-pt.js",
 "weather.js"
 ],
-"FIFA Disiplin Kurulu": [
+"Federasyon Disiplin Kurulu": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -39751,7 +39751,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"FIFA cezan sona erdi. Yeniden sahalara dönebilirsin.": [
+"Federasyon cezan sona erdi. Yeniden sahalara dönebilirsin.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -39763,7 +39763,7 @@
 "lang-pt.js",
 "life.js"
 ],
-"FIFA soruşturması sürüyor": [
+"Federasyon soruşturması sürüyor": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -39845,7 +39845,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Futbolcuların bahis oynaması yasaktır. Her bahis FIFA'nın dikkatini çeker; kendi maçına oynamak çok risklidir. Yakalanırsan uzun süreli men cezası, para cezası ve sponsor kaybı yaşarsın.": [
+"Futbolcuların bahis oynaması yasaktır. Her bahis Federasyonun dikkatini çeker; kendi maçına oynamak çok risklidir. Yakalanırsan uzun süreli men cezası, para cezası ve sponsor kaybı yaşarsın.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -40370,7 +40370,7 @@
 "lang-pt.js",
 "sprites.js"
 ],
-"KONFERANS": [
+"KITA": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -40643,7 +40643,7 @@
 "lang-pt.js",
 "sprites.js"
 ],
-"Konferans Kupası": [
+"Kıta Kupası": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -40655,7 +40655,7 @@
 "lang-pt.js",
 "sprites.js"
 ],
-"Konferans Kupası Gecesi": [
+"Kıta Kupası Gecesi": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -42188,7 +42188,7 @@
 "lang-pt.js",
 "sprites.js"
 ],
-"Uluslar Ligi Finalleri'ni kazandın": [
+"Milletler Ligi Finalleri'ni kazandın": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -44289,7 +44289,7 @@
 "lang-pt.js",
 "weather.js"
 ],
-"ŞAMPİYONLUK": [
+"BRİTANYA 2": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -44912,7 +44912,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Altın Top (Yılın Futbolcusu)": [
+"Altın Yıldız (Yılın Futbolcusu)": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -45430,7 +45430,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"FIFA cezan sona erdi.": [
+"Federasyon cezan sona erdi.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -45540,7 +45540,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Her bahis FIFA'nın dikkatini çeker; kendi maçına oynamak çok risklidir.": [
+"Her bahis Federasyonun dikkatini çeker; kendi maçına oynamak çok risklidir.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -47630,7 +47630,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Futbolcuların bahis oynaması yasak; FIFA takibe alabilir ve uzun süreli ceza verebilir.": [
+"Futbolcuların bahis oynaması yasak; Federasyon takibe alabilir ve uzun süreli ceza verebilir.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -52922,7 +52922,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"ULUSLAR LİGİ FİNALLERİ": [
+"MİLLETLER LİGİ FİNALLERİ": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -53087,7 +53087,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"MAHALLE MAÇINDAN DÜNYA KUPASI FİNALİNE.": [
+"MAHALLE MAÇINDAN DÜNYA ŞAMPİYONASI FİNALİNE.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -55618,7 +55618,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"ALTIN TOP YARIŞI": [
+"ALTIN YILDIZ YARIŞI": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -56058,7 +56058,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"ALPLER SÜPER LİGİ": [
+"HELVETYA LİGİ": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -56963,7 +56963,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"DÜNYA KUPASI RÜYASI": [
+"DÜNYA ŞAMPİYONASI RÜYASI": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -59053,7 +59053,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"DÜNYA KUPASI KADROSUNDAYIM!": [
+"DÜNYA ŞAMPİYONASI KADROSUNDAYIM!": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -59163,7 +59163,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"ALTIN AYAKKABI": [
+"GOL KRALI KUPASI": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -60241,7 +60241,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"19 YAŞINDA DÜNYA KUPASI'NA GİDİYORSUN.": [
+"19 YAŞINDA DÜNYA ŞAMPİYONASI'NA GİDİYORSUN.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -60263,7 +60263,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"DÜNYA KUPASI KAZAN": [
+"DÜNYA ŞAMPİYONASI KAZAN": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -60274,7 +60274,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"AVRUPA ŞAMPİYONASI KAZAN": [
+"AVRUPA MİLLETLER ŞAMPİYONASI KAZAN": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -60549,7 +60549,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"ALTIN TOP KAZAN": [
+"ALTIN YILDIZ KAZAN": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -60780,7 +60780,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"3 KEZ ALTIN TOP KAZANDIN": [
+"3 KEZ ALTIN YILDIZ KAZANDIN": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -61198,7 +61198,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"ALTIN TOP": [
+"ALTIN YILDIZ": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -61814,7 +61814,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"AVRUPA KONFERANS KUPASI": [
+"AVRUPA KITA KUPASI": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -61825,7 +61825,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"AVRUPA KONFERANS KUPASI'NI KAZANDIN": [
+"AVRUPA KITA KUPASI'NI KAZANDIN": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -61847,7 +61847,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"AVRUPA ŞAMPİYONASI": [
+"AVRUPA MİLLETLER ŞAMPİYONASI": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -61858,7 +61858,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"AVRUPA ŞAMPİYONASI'NI KAZANDIN": [
+"AVRUPA MİLLETLER ŞAMPİYONASI'NI KAZANDIN": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -63123,7 +63123,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"DÜNYA KUPASI'NI KAZANDIN": [
+"DÜNYA ŞAMPİYONASI'NI KAZANDIN": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -63453,7 +63453,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"FIFA DİSİPLİN KURULU": [
+"Federasyon DİSİPLİN KURULU": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -63464,7 +63464,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"FIFA SORUŞTURMASI SÜRÜYOR": [
+"Federasyon SORUŞTURMASI SÜRÜYOR": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -65444,7 +65444,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"KONFERANS K.": [
+"KITA K.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -65455,7 +65455,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"KONFERANS KUPASI": [
+"KITA KUPASI": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -65466,7 +65466,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"KONFERANS KUPASI GECESİ": [
+"KITA KUPASI GECESİ": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -68926,7 +68926,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"ULUSLAR LİGİ": [
+"MİLLETLER LİGİ": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -68937,7 +68937,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"ULUSLAR LİGİ FİNALLERİ'Nİ KAZANDIN": [
+"MİLLETLER LİGİ FİNALLERİ'Nİ KAZANDIN": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -71151,7 +71151,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"ÇİZME B LİGİ": [
+"ÇİZME 2. LİGİ": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -72977,7 +72977,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"🥇 ALTIN TOP (YILIN FUTBOLCUSU)": [
+"🥇 ALTIN YILDIZ (YILIN FUTBOLCUSU)": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -72988,7 +72988,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"ALTIN TOP (YILIN FUTBOLCUSU)": [
+"ALTIN YILDIZ (YILIN FUTBOLCUSU)": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -73362,7 +73362,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"FIFA CEZAN SONA ERDİ.": [
+"Federasyon CEZAN SONA ERDİ.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -84451,7 +84451,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"{}, {} Dünya Kupası için {} milli takım kampına davet edildi! 18 yaşındaki genç yetenek ilk kez A takım kampında.": [
+"{}, {} Dünya Şampiyonası için {} milli takım kampına davet edildi! 18 yaşındaki genç yetenek ilk kez A takım kampında.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -84474,7 +84474,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"{} yatıracaksın. Futbolcuların bahis oynaması yasak; FIFA takibe alabilir ve uzun süreli ceza verebilir.": [
+"{} yatıracaksın. Futbolcuların bahis oynaması yasak; Federasyon takibe alabilir ve uzun süreli ceza verebilir.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -84854,7 +84854,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"FIFA, {} hakkında yasa dışı bahis soruşturması başlattı! İddialar ciddi.": [
+"Federasyon, {} hakkında yasa dışı bahis soruşturması başlattı! İddialar ciddi.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -85383,7 +85383,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"🏅 {} Altın Top {}'in! Dünyanın en iyi futbolcusu seçildin!": [
+"🏅 {} Altın Yıldız {}'in! Dünyanın en iyi futbolcusu seçildin!": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -85395,7 +85395,7 @@
 "lang-pt.js",
 "meta.js"
 ],
-"{} Dünya Kupası kadrosunu açıkladı: {} 26 kişilik kadroda!": [
+"{} Dünya Şampiyonası kadrosunu açıkladı: {} 26 kişilik kadroda!": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -85430,7 +85430,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"FIFA, {} hakkında yasa dışı bahis soruşturması başlattı!": [
+"Federasyon, {} hakkında yasa dışı bahis soruşturması başlattı!": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -85452,7 +85452,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Dünya Kupası kadrosunu açıkladı: {} 26 kişilik kadroda!": [
+"Dünya Şampiyonası kadrosunu açıkladı: {} 26 kişilik kadroda!": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -85496,7 +85496,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"{} Altın Top {}'in! Dünyanın en iyi futbolcusu seçildin!": [
+"{} Altın Yıldız {}'in! Dünyanın en iyi futbolcusu seçildin!": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -87841,7 +87841,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"{} kez Dünya Kupası kazan": [
+"{} kez Dünya Şampiyonası kazan": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -87875,7 +87875,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"FIFA men cezası: {} hafta": [
+"Federasyon men cezası: {} hafta": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -88321,7 +88321,7 @@
 "lang-pt.js",
 "legacy.js"
 ],
-"{} kez Altın Top kazan": [
+"{} kez Altın Yıldız kazan": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -88699,7 +88699,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"🏅 {} Altın Top {}'in!": [
+"🏅 {} Altın Yıldız {}'in!": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -88710,7 +88710,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"{} Altın Top Yarışı": [
+"{} Altın Yıldız Yarışı": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -88971,7 +88971,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"{} Altın Top {}'in!": [
+"{} Altın Yıldız {}'in!": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -89486,7 +89486,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"{} Dünya Kupası": [
+"{} Dünya Şampiyonası": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -94557,16 +94557,16 @@
 "VERBAND": [
 "lang-de.js"
 ],
-"FIFA-Disziplinarkommission": [
+"Federasyon-Disziplinarkommission": [
 "lang-de.js"
 ],
-"Du bist von der FIFA gesperrt und darfst dieses Spiel nicht bestreiten.": [
+"Du bist von der Federasyon gesperrt und darfst dieses Spiel nicht bestreiten.": [
 "lang-de.js"
 ],
-"Deine FIFA-Sperre ist vorbei. Du kannst auf den Platz zurück.": [
+"Deine Federasyon-Sperre ist vorbei. Du kannst auf den Platz zurück.": [
 "lang-de.js"
 ],
-"FIFA-Ermittlungen laufen": [
+"Federasyon-Ermittlungen laufen": [
 "lang-de.js"
 ],
 "FLÄMISCHE LIGA": [
@@ -94641,7 +94641,7 @@
 "Du jagst den Traum, Fußballer zu werden. Wähl das Jahr und Alter, in dem du startest. Deinen Verein wählst du nicht: Scouts entdecken dich.": [
 "lang-de.js"
 ],
-"Fußballer dürfen nicht wetten. Jede Wette lenkt die Aufmerksamkeit der FIFA auf dich; auf das eigene Spiel zu wetten ist sehr riskant. Wirst du erwischt, drohen lange Sperre, Geldstrafe und der Verlust deiner Sponsoren.": [
+"Fußballer dürfen nicht wetten. Jede Wette lenkt die Aufmerksamkeit der Federasyon auf dich; auf das eigene Spiel zu wetten ist sehr riskant. Wirst du erwischt, drohen lange Sperre, Geldstrafe und der Verlust deiner Sponsoren.": [
 "lang-de.js"
 ],
 "Der Puls des Fußballs · Vom Verein in die Welt": [
@@ -98075,7 +98075,7 @@
 "Hühnerfarmen haben eine Nachtschicht eingeführt.": [
 "lang-de.js"
 ],
-"Deine FIFA-Sperre ist vorbei.": [
+"Deine Federasyon-Sperre ist vorbei.": [
 "lang-de.js"
 ],
 "Du kannst auf den Platz zurückkehren.": [
@@ -98105,7 +98105,7 @@
 "Fußballer dürfen nicht wetten.": [
 "lang-de.js"
 ],
-"Jede Wette zieht die Aufmerksamkeit der FIFA auf sich; auf dein eigenes Spiel zu wetten ist sehr riskant.": [
+"Jede Wette zieht die Aufmerksamkeit der Federasyon auf sich; auf dein eigenes Spiel zu wetten ist sehr riskant.": [
 "lang-de.js"
 ],
 "Wirst du erwischt, drohen eine lange Sperre, eine Geldstrafe und der Verlust deiner Sponsoren.": [
@@ -98671,7 +98671,7 @@
 "Schiedsrichter: „Sogar ich war überzeugt.“": [
 "lang-de.js"
 ],
-"Fußballer dürfen nicht wetten; die FIFA kann ermitteln und eine lange Sperre verhängen.": [
+"Fußballer dürfen nicht wetten; die Federasyon kann ermitteln und eine lange Sperre verhängen.": [
 "lang-de.js"
 ],
 "Dein erstes Spiel": [
@@ -101369,10 +101369,10 @@
 "DEINE GEGENSTÄNDE": [
 "lang-de.js"
 ],
-"FIFA-DISZIPLINARKOMMISSION": [
+"Federasyon-DISZIPLINARKOMMISSION": [
 "lang-de.js"
 ],
-"FIFA-ERMITTLUNGEN LAUFEN": [
+"Federasyon-ERMITTLUNGEN LAUFEN": [
 "lang-de.js"
 ],
 "EFFETKONTROLLE UND SCHUSSPRÄZISION.": [
@@ -104062,7 +104062,7 @@
 "HÜHNERFARMEN HABEN EINE NACHTSCHICHT EINGEFÜHRT.": [
 "lang-de.js"
 ],
-"DEINE FIFA-SPERRE IST VORBEI.": [
+"DEINE Federasyon-SPERRE IST VORBEI.": [
 "lang-de.js"
 ],
 "DU KANNST AUF DEN PLATZ ZURÜCKKEHREN.": [
@@ -104668,7 +104668,7 @@
 "Bei deinem neuen Verein trägst du die Nummer {}. Beweise dich auf dem Platz, um die Nummer {} zu beantragen.": [
 "lang-de.js"
 ],
-"Du setzt {}. Fußballer dürfen nicht wetten; die FIFA kann ermitteln und eine lange Sperre verhängen.": [
+"Du setzt {}. Fußballer dürfen nicht wetten; die Federasyon kann ermitteln und eine lange Sperre verhängen.": [
 "lang-de.js"
 ],
 "Du wurdest zum Kapitän von {} ernannt! Die Binde gehört dir. Im Spiel kannst du Mitspieler in Position ziehen.": [
@@ -104827,7 +104827,7 @@
 "Ligarivale {} haben ein Talent in deinem Alter auf deiner Position: {}.": [
 "lang-de.js"
 ],
-"Die FIFA hat gegen {} ein Verfahren wegen illegaler Wetten eröffnet! Die Vorwürfe sind schwerwiegend.": [
+"Die Federasyon hat gegen {} ein Verfahren wegen illegaler Wetten eröffnet! Die Vorwürfe sind schwerwiegend.": [
 "lang-de.js"
 ],
 "Dein Vertrag läuft noch {} Jahre. Du kannst die Angebote prüfen.": [
@@ -105052,7 +105052,7 @@
 "ist geöffnet! {} Vereine wollen dich. Angebote gelten {} Wochen.": [
 "lang-de.js"
 ],
-"Die FIFA hat gegen {} ein Verfahren wegen illegaler Wetten eröffnet!": [
+"Die Federasyon hat gegen {} ein Verfahren wegen illegaler Wetten eröffnet!": [
 "lang-de.js"
 ],
 "LÄNDERSPIEL · Gegnerwertung {} · Die Stars von morgen": [
@@ -105862,7 +105862,7 @@
 "Werde {}-mal Weltmeister": [
 "lang-de.js"
 ],
-"FIFA-Sperre: {} Wochen": [
+"Federasyon-Sperre: {} Wochen": [
 "lang-de.js"
 ],
 "{} Nationalmannschafts-Rangliste": [
@@ -110398,16 +110398,16 @@
 "FEDERATION": [
 "lang-en.js"
 ],
-"FIFA Disciplinary Committee": [
+"Federasyon Disciplinary Committee": [
 "lang-en.js"
 ],
-"You're banned by FIFA and can't play this match.": [
+"You're banned by Federasyon and can't play this match.": [
 "lang-en.js"
 ],
-"Your FIFA ban is over. You can return to the pitch.": [
+"Your Federasyon ban is over. You can return to the pitch.": [
 "lang-en.js"
 ],
-"FIFA investigation ongoing": [
+"Federasyon investigation ongoing": [
 "lang-en.js"
 ],
 "FLEMISH LEAGUE": [
@@ -110483,7 +110483,7 @@
 "You're chasing the dream of becoming a footballer. Pick the year and age you start. You don't choose your club: scouts discover you.": [
 "lang-en.js"
 ],
-"Footballers are not allowed to bet. Every bet draws FIFA's attention; betting on your own match is very risky. If caught you face a long ban, a fine and losing your sponsors.": [
+"Footballers are not allowed to bet. Every bet draws Federasyon's attention; betting on your own match is very risky. If caught you face a long ban, a fine and losing your sponsors.": [
 "lang-en.js"
 ],
 "The pulse of football · From the club to the world": [
@@ -113644,7 +113644,7 @@
 "Chicken farms added a night shift.": [
 "lang-en.js"
 ],
-"Your FIFA ban is over.": [
+"Your Federasyon ban is over.": [
 "lang-en.js"
 ],
 "You can return to the pitch.": [
@@ -113674,7 +113674,7 @@
 "Footballers are not allowed to bet.": [
 "lang-en.js"
 ],
-"Every bet draws FIFA's attention; betting on your own match is very risky.": [
+"Every bet draws Federasyon's attention; betting on your own match is very risky.": [
 "lang-en.js"
 ],
 "If caught you face a long ban, a fine and losing your sponsors.": [
@@ -114242,7 +114242,7 @@
 "Referee: \\\"Even I was convinced.\\\"": [
 "lang-en.js"
 ],
-"Footballers aren't allowed to bet; FIFA may investigate and hand out a long ban.": [
+"Footballers aren't allowed to bet; Federasyon may investigate and hand out a long ban.": [
 "lang-en.js"
 ],
 "Your first match": [
@@ -116782,10 +116782,10 @@
 "YOUR ITEMS": [
 "lang-en.js"
 ],
-"FIFA DISCIPLINARY COMMITTEE": [
+"Federasyon DISCIPLINARY COMMITTEE": [
 "lang-en.js"
 ],
-"FIFA INVESTIGATION ONGOING": [
+"Federasyon INVESTIGATION ONGOING": [
 "lang-en.js"
 ],
 "CURL CONTROL AND SHOT ACCURACY.": [
@@ -119390,7 +119390,7 @@
 "CHICKEN FARMS ADDED A NIGHT SHIFT.": [
 "lang-en.js"
 ],
-"YOUR FIFA BAN IS OVER.": [
+"YOUR Federasyon BAN IS OVER.": [
 "lang-en.js"
 ],
 "YOU CAN RETURN TO THE PITCH.": [
@@ -119994,7 +119994,7 @@
 "You'll wear number {} at your new club. Prove yourself on the pitch to request number {}.": [
 "lang-en.js"
 ],
-"You'll stake {}. Footballers aren't allowed to bet; FIFA may investigate and hand out a long ban.": [
+"You'll stake {}. Footballers aren't allowed to bet; Federasyon may investigate and hand out a long ban.": [
 "lang-en.js"
 ],
 "You were named {} captain! The armband is yours. In matches you can drag teammates into position.": [
@@ -120153,7 +120153,7 @@
 "League rivals {} have a prospect your age, in your position: {}.": [
 "lang-en.js"
 ],
-"FIFA opened an illegal betting investigation into {}! The allegations are serious.": [
+"Federasyon opened an illegal betting investigation into {}! The allegations are serious.": [
 "lang-en.js"
 ],
 "{} years left on your contract. You can consider the offers.": [
@@ -120378,7 +120378,7 @@
 "is open! {} clubs want you. Offers are valid for {} weeks.": [
 "lang-en.js"
 ],
-"FIFA opened an illegal betting investigation into {}!": [
+"Federasyon opened an illegal betting investigation into {}!": [
 "lang-en.js"
 ],
 "INTERNATIONAL · Opponent rating {} · Tomorrow's stars on show": [
@@ -121188,7 +121188,7 @@
 "Win the World Cup {} times": [
 "lang-en.js"
 ],
-"FIFA ban: {} weeks": [
+"Federasyon ban: {} weeks": [
 "lang-en.js"
 ],
 "{} National Team Ranking": [
@@ -125763,16 +125763,16 @@
 "FEDERACIÓN": [
 "lang-es.js"
 ],
-"Comité Disciplinario de la FIFA": [
+"Comité Disciplinario de la Federasyon": [
 "lang-es.js"
 ],
-"Estás sancionado por la FIFA y no puedes jugar este partido.": [
+"Estás sancionado por la Federasyon y no puedes jugar este partido.": [
 "lang-es.js"
 ],
-"Tu sanción de la FIFA terminó. Puedes volver al campo.": [
+"Tu sanción de la Federasyon terminó. Puedes volver al campo.": [
 "lang-es.js"
 ],
-"Investigación de la FIFA en curso": [
+"Investigación de la Federasyon en curso": [
 "lang-es.js"
 ],
 "LIGA FLAMENCA": [
@@ -125849,7 +125849,7 @@
 "Persigues el sueño de ser futbolista. Elige el año y la edad en que empiezas. No eliges tu club: los ojeadores te descubren.": [
 "lang-es.js"
 ],
-"Los futbolistas no pueden apostar. Cada apuesta atrae la atención de la FIFA; apostar en tu propio partido es muy arriesgado. Si te pillan te enfrentas a una larga sanción, una multa y perder a tus patrocinadores.": [
+"Los futbolistas no pueden apostar. Cada apuesta atrae la atención de la Federasyon; apostar en tu propio partido es muy arriesgado. Si te pillan te enfrentas a una larga sanción, una multa y perder a tus patrocinadores.": [
 "lang-es.js"
 ],
 "El pulso del fútbol · Del club al mundo": [
@@ -129050,7 +129050,7 @@
 "Las granjas de pollos añadieron un turno de noche.": [
 "lang-es.js"
 ],
-"Tu sanción de la FIFA terminó.": [
+"Tu sanción de la Federasyon terminó.": [
 "lang-es.js"
 ],
 "Puedes volver al campo.": [
@@ -129080,7 +129080,7 @@
 "Los futbolistas no pueden apostar.": [
 "lang-es.js"
 ],
-"Cada apuesta atrae la atención de la FIFA; apostar en tu propio partido es muy arriesgado.": [
+"Cada apuesta atrae la atención de la Federasyon; apostar en tu propio partido es muy arriesgado.": [
 "lang-es.js"
 ],
 "Si te pillan te enfrentas a una larga sanción, una multa y perder a tus patrocinadores.": [
@@ -129639,7 +129639,7 @@
 "El árbitro: \\\"Hasta yo me lo creí\\\".": [
 "lang-es.js"
 ],
-"Los futbolistas no pueden apostar; la FIFA puede investigar e imponer una larga sanción.": [
+"Los futbolistas no pueden apostar; la Federasyon puede investigar e imponer una larga sanción.": [
 "lang-es.js"
 ],
 "Tu primer partido": [
@@ -132190,10 +132190,10 @@
 "TUS OBJETOS": [
 "lang-es.js"
 ],
-"COMITÉ DISCIPLINARIO DE LA FIFA": [
+"COMITÉ DISCIPLINARIO DE LA Federasyon": [
 "lang-es.js"
 ],
-"INVESTIGACIÓN DE LA FIFA EN CURSO": [
+"INVESTIGACIÓN DE LA Federasyon EN CURSO": [
 "lang-es.js"
 ],
 "CONTROL DEL EFECTO Y PRECISIÓN DEL DISPARO.": [
@@ -134851,7 +134851,7 @@
 "LAS GRANJAS DE POLLOS AÑADIERON UN TURNO DE NOCHE.": [
 "lang-es.js"
 ],
-"TU SANCIÓN DE LA FIFA TERMINÓ.": [
+"TU SANCIÓN DE LA Federasyon TERMINÓ.": [
 "lang-es.js"
 ],
 "PUEDES VOLVER AL CAMPO.": [
@@ -135449,7 +135449,7 @@
 "Llevarás el dorsal {} en tu nuevo club. Demuéstralo en el campo para pedir el {}.": [
 "lang-es.js"
 ],
-"Vas a apostar {}. Los futbolistas no pueden apostar; la FIFA puede investigar e imponer una larga sanción.": [
+"Vas a apostar {}. Los futbolistas no pueden apostar; la Federasyon puede investigar e imponer una larga sanción.": [
 "lang-es.js"
 ],
 "¡Te nombraron capitán del {}! El brazalete es tuyo. En los partidos puedes arrastrar a tus compañeros a su posición.": [
@@ -135608,7 +135608,7 @@
 "El rival de liga {} tiene una promesa de tu edad y en tu posición: {}.": [
 "lang-es.js"
 ],
-"¡La FIFA abrió una investigación por apuestas ilegales contra {}! Las acusaciones son graves.": [
+"¡La Federasyon abrió una investigación por apuestas ilegales contra {}! Las acusaciones son graves.": [
 "lang-es.js"
 ],
 "Te quedan {} años de contrato. Puedes estudiar las ofertas.": [
@@ -135833,7 +135833,7 @@
 "¡está abierto! {} clubes te quieren. Las ofertas son válidas durante {} semanas.": [
 "lang-es.js"
 ],
-"¡La FIFA abrió una investigación por apuestas ilegales contra {}!": [
+"¡La Federasyon abrió una investigación por apuestas ilegales contra {}!": [
 "lang-es.js"
 ],
 "INTERNACIONAL · Valoración del rival {} · Las estrellas del mañana en escena": [
@@ -136643,7 +136643,7 @@
 "Gana el Mundial {} veces": [
 "lang-es.js"
 ],
-"Sanción de la FIFA: {} semanas": [
+"Sanción de la Federasyon: {} semanas": [
 "lang-es.js"
 ],
 "Ranking de selecciones {}": [
@@ -141133,16 +141133,16 @@
 "FÉDÉRATION": [
 "lang-fr.js"
 ],
-"Commission de discipline de la FIFA": [
+"Commission de discipline de la Federasyon": [
 "lang-fr.js"
 ],
-"Tu es suspendu par la FIFA et ne peux pas jouer ce match.": [
+"Tu es suspendu par la Federasyon et ne peux pas jouer ce match.": [
 "lang-fr.js"
 ],
-"Ta suspension FIFA est terminée. Tu peux revenir sur le terrain.": [
+"Ta suspension Federasyon est terminée. Tu peux revenir sur le terrain.": [
 "lang-fr.js"
 ],
-"Enquête de la FIFA en cours": [
+"Enquête de la Federasyon en cours": [
 "lang-fr.js"
 ],
 "LIGUE FLAMANDE": [
@@ -141214,7 +141214,7 @@
 "Tu poursuis le rêve de devenir footballeur. Choisis l'année et l'âge de départ. Tu ne choisis pas ton club : ce sont les recruteurs qui te découvrent.": [
 "lang-fr.js"
 ],
-"Les footballeurs n'ont pas le droit de parier. Chaque pari attire l'attention de la FIFA ; parier sur ton propre match est très risqué. Si tu te fais prendre, tu risques une longue suspension, une amende et la perte de tes sponsors.": [
+"Les footballeurs n'ont pas le droit de parier. Chaque pari attire l'attention de la Federasyon ; parier sur ton propre match est très risqué. Si tu te fais prendre, tu risques une longue suspension, une amende et la perte de tes sponsors.": [
 "lang-fr.js"
 ],
 "Le pouls du football · Du club au monde": [
@@ -144283,7 +144283,7 @@
 "Les élevages de poulets ont ajouté une équipe de nuit.": [
 "lang-fr.js"
 ],
-"Ta suspension FIFA est terminée.": [
+"Ta suspension Federasyon est terminée.": [
 "lang-fr.js"
 ],
 "Tu peux retourner sur le terrain.": [
@@ -144313,7 +144313,7 @@
 "Les footballeurs n'ont pas le droit de parier.": [
 "lang-fr.js"
 ],
-"Chaque pari attire l'attention de la FIFA ; parier sur ton propre match est très risqué.": [
+"Chaque pari attire l'attention de la Federasyon ; parier sur ton propre match est très risqué.": [
 "lang-fr.js"
 ],
 "Si tu es pris, tu risques une longue suspension, une amende et la perte de tes sponsors.": [
@@ -144871,7 +144871,7 @@
 "Arbitre : « Même moi j'y ai cru. »": [
 "lang-fr.js"
 ],
-"Les footballeurs n'ont pas le droit de parier ; la FIFA peut enquêter et infliger une longue suspension.": [
+"Les footballeurs n'ont pas le droit de parier ; la Federasyon peut enquêter et infliger une longue suspension.": [
 "lang-fr.js"
 ],
 "Ton premier match": [
@@ -147358,10 +147358,10 @@
 "TES OBJETS": [
 "lang-fr.js"
 ],
-"COMMISSION DE DISCIPLINE DE LA FIFA": [
+"COMMISSION DE DISCIPLINE DE LA Federasyon": [
 "lang-fr.js"
 ],
-"ENQUÊTE DE LA FIFA EN COURS": [
+"ENQUÊTE DE LA Federasyon EN COURS": [
 "lang-fr.js"
 ],
 "CONTRÔLE DE L'EFFET ET PRÉCISION DES FRAPPES.": [
@@ -149878,7 +149878,7 @@
 "LES ÉLEVAGES DE POULETS ONT AJOUTÉ UNE ÉQUIPE DE NUIT.": [
 "lang-fr.js"
 ],
-"TA SUSPENSION FIFA EST TERMINÉE.": [
+"TA SUSPENSION Federasyon EST TERMINÉE.": [
 "lang-fr.js"
 ],
 "TU PEUX RETOURNER SUR LE TERRAIN.": [
@@ -150475,7 +150475,7 @@
 "Tu porteras le numéro {} dans ton nouveau club. Fais tes preuves sur le terrain pour demander le numéro {}.": [
 "lang-fr.js"
 ],
-"Tu vas miser {}. Les footballeurs n'ont pas le droit de parier ; la FIFA peut enquêter et infliger une longue suspension.": [
+"Tu vas miser {}. Les footballeurs n'ont pas le droit de parier ; la Federasyon peut enquêter et infliger une longue suspension.": [
 "lang-fr.js"
 ],
 "Tu as été nommé capitaine de {} ! Le brassard est à toi. En match, tu peux faire glisser tes coéquipiers en position.": [
@@ -150634,7 +150634,7 @@
 "Le rival de championnat {} a un espoir de ton âge, à ton poste : {}.": [
 "lang-fr.js"
 ],
-"La FIFA a ouvert une enquête pour paris illégaux visant {} ! Les accusations sont graves.": [
+"La Federasyon a ouvert une enquête pour paris illégaux visant {} ! Les accusations sont graves.": [
 "lang-fr.js"
 ],
 "Il te reste {} ans de contrat. Tu peux étudier les offres.": [
@@ -150859,7 +150859,7 @@
 "est ouvert ! {} clubs te veulent. Les offres sont valables {} semaines.": [
 "lang-fr.js"
 ],
-"La FIFA a ouvert une enquête pour paris illégaux visant {} !": [
+"La Federasyon a ouvert une enquête pour paris illégaux visant {} !": [
 "lang-fr.js"
 ],
 "INTERNATIONAL · Note adverse {} · Les stars de demain en vitrine": [
@@ -151669,7 +151669,7 @@
 "Remporte {} fois la Coupe du monde": [
 "lang-fr.js"
 ],
-"Suspension FIFA : {} semaines": [
+"Suspension Federasyon : {} semaines": [
 "lang-fr.js"
 ],
 "Classement des équipes nationales {}": [
@@ -156000,16 +156000,16 @@
 "FEDERASI": [
 "lang-id.js"
 ],
-"Komite Disiplin FIFA": [
+"Komite Disiplin Federasyon": [
 "lang-id.js"
 ],
-"Kamu diskors FIFA dan tidak boleh memainkan pertandingan ini.": [
+"Kamu diskors Federasyon dan tidak boleh memainkan pertandingan ini.": [
 "lang-id.js"
 ],
-"Skorsing FIFA-mu sudah berakhir. Kamu bisa kembali ke lapangan.": [
+"Skorsing Federasyon-mu sudah berakhir. Kamu bisa kembali ke lapangan.": [
 "lang-id.js"
 ],
-"Investigasi FIFA sedang berjalan": [
+"Investigasi Federasyon sedang berjalan": [
 "lang-id.js"
 ],
 "LIGA FLAMANDIA": [
@@ -156084,7 +156084,7 @@
 "Kamu mengejar mimpi menjadi pesepak bola. Pilih tahun dan usia awalmu. Kamu tidak memilih klub: pemandu bakat yang menemukanmu.": [
 "lang-id.js"
 ],
-"Pesepak bola dilarang bertaruh. Setiap taruhan menarik perhatian FIFA; bertaruh di pertandinganmu sendiri sangat berisiko. Jika ketahuan, kamu menghadapi skorsing panjang, denda, dan kehilangan sponsor.": [
+"Pesepak bola dilarang bertaruh. Setiap taruhan menarik perhatian Federasyon; bertaruh di pertandinganmu sendiri sangat berisiko. Jika ketahuan, kamu menghadapi skorsing panjang, denda, dan kehilangan sponsor.": [
 "lang-id.js"
 ],
 "Denyut sepak bola · Dari klub ke dunia": [
@@ -159109,7 +159109,7 @@
 "Peternakan ayam menambah sif malam.": [
 "lang-id.js"
 ],
-"Larangan FIFA-mu sudah berakhir.": [
+"Larangan Federasyon-mu sudah berakhir.": [
 "lang-id.js"
 ],
 "Kamu bisa kembali ke lapangan.": [
@@ -159139,7 +159139,7 @@
 "Pesepak bola tidak boleh bertaruh.": [
 "lang-id.js"
 ],
-"Setiap taruhan menarik perhatian FIFA; bertaruh pada pertandinganmu sendiri sangat berisiko.": [
+"Setiap taruhan menarik perhatian Federasyon; bertaruh pada pertandinganmu sendiri sangat berisiko.": [
 "lang-id.js"
 ],
 "Jika ketahuan kamu menghadapi larangan panjang, denda, dan kehilangan sponsor.": [
@@ -159697,7 +159697,7 @@
 "Wasit: \\\"Bahkan aku pun tertipu.\\\"": [
 "lang-id.js"
 ],
-"Pesepak bola tidak boleh bertaruh; FIFA bisa menyelidiki dan menjatuhkan larangan panjang.": [
+"Pesepak bola tidak boleh bertaruh; Federasyon bisa menyelidiki dan menjatuhkan larangan panjang.": [
 "lang-id.js"
 ],
 "Pertandingan pertamamu": [
@@ -162119,10 +162119,10 @@
 "BARANG-BARANGMU": [
 "lang-id.js"
 ],
-"KOMITE DISIPLIN FIFA": [
+"KOMITE DISIPLIN Federasyon": [
 "lang-id.js"
 ],
-"INVESTIGASI FIFA SEDANG BERJALAN": [
+"INVESTIGASI Federasyon SEDANG BERJALAN": [
 "lang-id.js"
 ],
 "KONTROL PLINTIRAN DAN AKURASI TEMBAKAN.": [
@@ -164631,7 +164631,7 @@
 "PETERNAKAN AYAM MENAMBAH SIF MALAM.": [
 "lang-id.js"
 ],
-"LARANGAN FIFA-MU SUDAH BERAKHIR.": [
+"LARANGAN Federasyon-MU SUDAH BERAKHIR.": [
 "lang-id.js"
 ],
 "KAMU BISA KEMBALI KE LAPANGAN.": [
@@ -165234,7 +165234,7 @@
 "Kamu akan memakai nomor {} di klub barumu. Buktikan dirimu di lapangan untuk meminta nomor {}.": [
 "lang-id.js"
 ],
-"Kamu akan bertaruh {}. Pesepak bola tidak boleh bertaruh; FIFA bisa menyelidiki dan menjatuhkan larangan panjang.": [
+"Kamu akan bertaruh {}. Pesepak bola tidak boleh bertaruh; Federasyon bisa menyelidiki dan menjatuhkan larangan panjang.": [
 "lang-id.js"
 ],
 "Kamu ditunjuk sebagai kapten {}! Ban kapten milikmu. Dalam pertandingan kamu bisa menggeser rekan setim ke posisinya.": [
@@ -165393,7 +165393,7 @@
 "Rival liga {} punya pemain muda seusiamu di posisimu: {}.": [
 "lang-id.js"
 ],
-"FIFA membuka penyelidikan taruhan ilegal terhadap {}! Tuduhannya serius.": [
+"Federasyon membuka penyelidikan taruhan ilegal terhadap {}! Tuduhannya serius.": [
 "lang-id.js"
 ],
 "Kontrakmu tersisa {} tahun. Kamu bisa menimbang tawaran-tawaran.": [
@@ -165618,7 +165618,7 @@
 "dibuka! {} klub menginginkanmu. Tawaran berlaku {} minggu.": [
 "lang-id.js"
 ],
-"FIFA membuka penyelidikan taruhan ilegal terhadap {}!": [
+"Federasyon membuka penyelidikan taruhan ilegal terhadap {}!": [
 "lang-id.js"
 ],
 "INTERNASIONAL · Rating lawan {} · Bintang masa depan unjuk gigi": [
@@ -166428,7 +166428,7 @@
 "Juara Piala Dunia {} kali": [
 "lang-id.js"
 ],
-"Larangan FIFA: {} minggu": [
+"Larangan Federasyon: {} minggu": [
 "lang-id.js"
 ],
 "Peringkat Timnas {}": [
@@ -170769,16 +170769,16 @@
 "FEDERAZIONE": [
 "lang-it.js"
 ],
-"Commissione disciplinare FIFA": [
+"Commissione disciplinare Federasyon": [
 "lang-it.js"
 ],
-"Sei squalificato dalla FIFA e non puoi giocare questa partita.": [
+"Sei squalificato dalla Federasyon e non puoi giocare questa partita.": [
 "lang-it.js"
 ],
-"La tua squalifica FIFA è finita. Puoi tornare in campo.": [
+"La tua squalifica Federasyon è finita. Puoi tornare in campo.": [
 "lang-it.js"
 ],
-"Indagine FIFA in corso": [
+"Indagine Federasyon in corso": [
 "lang-it.js"
 ],
 "LEGA FIAMMINGA": [
@@ -170850,7 +170850,7 @@
 "Insegui il sogno di diventare calciatore. Scegli l'anno e l'età di partenza. Il club non lo scegli tu: ti scoprono gli osservatori.": [
 "lang-it.js"
 ],
-"I calciatori non possono scommettere. Ogni scommessa attira l'attenzione della FIFA; scommettere sulla propria partita è molto rischioso. Se vieni scoperto rischi una lunga squalifica, una multa e la perdita degli sponsor.": [
+"I calciatori non possono scommettere. Ogni scommessa attira l'attenzione della Federasyon; scommettere sulla propria partita è molto rischioso. Se vieni scoperto rischi una lunga squalifica, una multa e la perdita degli sponsor.": [
 "lang-it.js"
 ],
 "Il polso del calcio · Dal club al mondo": [
@@ -173876,7 +173876,7 @@
 "Gli allevamenti di polli hanno aggiunto un turno di notte.": [
 "lang-it.js"
 ],
-"La tua squalifica FIFA è finita.": [
+"La tua squalifica Federasyon è finita.": [
 "lang-it.js"
 ],
 "Puoi tornare in campo.": [
@@ -173906,7 +173906,7 @@
 "I calciatori non possono scommettere.": [
 "lang-it.js"
 ],
-"Ogni scommessa attira l'attenzione della FIFA; scommettere sulla propria partita è molto rischioso.": [
+"Ogni scommessa attira l'attenzione della Federasyon; scommettere sulla propria partita è molto rischioso.": [
 "lang-it.js"
 ],
 "Se ti beccano rischi una lunga squalifica, una multa e la perdita degli sponsor.": [
@@ -174467,7 +174467,7 @@
 "Arbitro: \\\"Persino io ci sono cascato.\\\"": [
 "lang-it.js"
 ],
-"I calciatori non possono scommettere; la FIFA può indagare e infliggere una lunga squalifica.": [
+"I calciatori non possono scommettere; la Federasyon può indagare e infliggere una lunga squalifica.": [
 "lang-it.js"
 ],
 "La tua prima partita": [
@@ -176885,10 +176885,10 @@
 "I TUOI OGGETTI": [
 "lang-it.js"
 ],
-"COMMISSIONE DISCIPLINARE FIFA": [
+"COMMISSIONE DISCIPLINARE Federasyon": [
 "lang-it.js"
 ],
-"INDAGINE FIFA IN CORSO": [
+"INDAGINE Federasyon IN CORSO": [
 "lang-it.js"
 ],
 "CONTROLLO DELL'EFFETTO E PRECISIONE DEL TIRO.": [
@@ -179391,7 +179391,7 @@
 "GLI ALLEVAMENTI DI POLLI HANNO AGGIUNTO UN TURNO DI NOTTE.": [
 "lang-it.js"
 ],
-"LA TUA SQUALIFICA FIFA È FINITA.": [
+"LA TUA SQUALIFICA Federasyon È FINITA.": [
 "lang-it.js"
 ],
 "PUOI TORNARE IN CAMPO.": [
@@ -179991,7 +179991,7 @@
 "Nel nuovo club indosserai il numero {}. Dimostra il tuo valore in campo per chiedere il numero {}.": [
 "lang-it.js"
 ],
-"Punterai {}. I calciatori non possono scommettere; la FIFA può indagare e infliggere una lunga squalifica.": [
+"Punterai {}. I calciatori non possono scommettere; la Federasyon può indagare e infliggere una lunga squalifica.": [
 "lang-it.js"
 ],
 "Sei stato nominato capitano del {}! La fascia è tua. In partita puoi trascinare i compagni in posizione.": [
@@ -180150,7 +180150,7 @@
 "La rivale di campionato {} ha un talento della tua età, nel tuo ruolo: {}.": [
 "lang-it.js"
 ],
-"La FIFA ha aperto un'indagine per scommesse illegali su {}! Le accuse sono gravi.": [
+"La Federasyon ha aperto un'indagine per scommesse illegali su {}! Le accuse sono gravi.": [
 "lang-it.js"
 ],
 "Ti restano {} anni di contratto. Puoi valutare le offerte.": [
@@ -180375,7 +180375,7 @@
 "è aperto! {} club ti vogliono. Le offerte valgono {} settimane.": [
 "lang-it.js"
 ],
-"La FIFA ha aperto un'indagine per scommesse illegali su {}!": [
+"La Federasyon ha aperto un'indagine per scommesse illegali su {}!": [
 "lang-it.js"
 ],
 "INTERNAZIONALE · Valutazione avversaria {} · In mostra le stelle di domani": [
@@ -181185,7 +181185,7 @@
 "Vinci {} volte i Mondiali": [
 "lang-it.js"
 ],
-"Squalifica FIFA: {} settimane": [
+"Squalifica Federasyon: {} settimane": [
 "lang-it.js"
 ],
 "Ranking delle nazionali {}": [
@@ -182405,22 +182405,22 @@
 "これなしでは練習しない！ #PR": [
 "lang-ja.js"
 ],
-"FIFA規律委員会": [
+"Federasyon規律委員会": [
 "lang-ja.js"
 ],
-"FIFAから出場停止処分を受けているため、この試合には出られない。": [
+"Federasyonから出場停止処分を受けているため、この試合には出られない。": [
 "lang-ja.js"
 ],
-"FIFAの出場停止が明けた。ピッチに戻れる。": [
+"Federasyonの出場停止が明けた。ピッチに戻れる。": [
 "lang-ja.js"
 ],
-"FIFAの調査が進行中": [
+"Federasyonの調査が進行中": [
 "lang-ja.js"
 ],
 "ペナルティエリア内でファウル！PKだ！": [
 "lang-ja.js"
 ],
-"サッカー選手は賭けをしてはいけない。賭けるたびにFIFAの注意を引き、自分の試合に賭けるのは非常に危険だ。見つかれば長期の出場停止、罰金、スポンサーの喪失が待っている。": [
+"サッカー選手は賭けをしてはいけない。賭けるたびにFederasyonの注意を引き、自分の試合に賭けるのは非常に危険だ。見つかれば長期の出場停止、罰金、スポンサーの喪失が待っている。": [
 "lang-ja.js"
 ],
 "GPSパフォーマンスベスト": [
@@ -182492,10 +182492,10 @@
 "PK！": [
 "lang-ja.js"
 ],
-"FIFAの出場停止が明けた。": [
+"Federasyonの出場停止が明けた。": [
 "lang-ja.js"
 ],
-"賭けるたびにFIFAの注意を引き、自分の試合に賭けるのは非常に危険だ。": [
+"賭けるたびにFederasyonの注意を引き、自分の試合に賭けるのは非常に危険だ。": [
 "lang-ja.js"
 ],
 "ゴールを決めるか、週間プランの「SNS」から投稿しよう。": [
@@ -182504,7 +182504,7 @@
 "PKスポットに立った。": [
 "lang-ja.js"
 ],
-"サッカー選手は賭けをしてはいけない。FIFAが調査し、長期の出場停止処分を下すこともある。": [
+"サッカー選手は賭けをしてはいけない。Federasyonが調査し、長期の出場停止処分を下すこともある。": [
 "lang-ja.js"
 ],
 "KM/Hの風": [
@@ -182534,10 +182534,10 @@
 "· 写真：STARFOOT AGENCY": [
 "lang-ja.js"
 ],
-"{}を賭ける。サッカー選手は賭けをしてはいけない。FIFAが調査し、長期の出場停止処分を下すこともある。": [
+"{}を賭ける。サッカー選手は賭けをしてはいけない。Federasyonが調査し、長期の出場停止処分を下すこともある。": [
 "lang-ja.js"
 ],
-"FIFAの裁定：{}に違法賭博で{}週間の出場停止と罰金{}！{}": [
+"Federasyonの裁定：{}に違法賭博で{}週間の出場停止と罰金{}！{}": [
 "lang-ja.js"
 ],
 "{}のマスコットがハーフタイムにPKを3本中3本決めた。サポーターは彼をメンバーに入れてほしがっている。": [
@@ -182552,7 +182552,7 @@
 "{}戦のVAR確認に9分かかった。その間にサポーターはお茶を淹れた。": [
 "lang-ja.js"
 ],
-"FIFAが{}に対する違法賭博の調査を開始！疑惑は深刻だ。": [
+"Federasyonが{}に対する違法賭博の調査を開始！疑惑は深刻だ。": [
 "lang-ja.js"
 ],
 "{}は今週の試合で{},{}km走った。スマートウォッチに「もうやめて」と表示された。": [
@@ -182567,7 +182567,7 @@
 "と{}がSNSで「どっちが速いか」論争を始めた。": [
 "lang-ja.js"
 ],
-"FIFAが{}に対する違法賭博の調査を開始！": [
+"Federasyonが{}に対する違法賭博の調査を開始！": [
 "lang-ja.js"
 ],
 "{}のマスコットがハーフタイムにPKを3本中3本決めた。": [
@@ -182603,7 +182603,7 @@
 "{}はPK戦へ：{}": [
 "lang-ja.js"
 ],
-"FIFAの出場停止：{}週間": [
+"Federasyonの出場停止：{}週間": [
 "lang-ja.js"
 ],
 "{} · 写真：StarFoot Agency": [
@@ -185693,16 +185693,16 @@
 "FEDERAÇÃO": [
 "lang-pt.js"
 ],
-"Comitê Disciplinar da FIFA": [
+"Comitê Disciplinar da Federasyon": [
 "lang-pt.js"
 ],
-"Você está suspenso pela FIFA e não pode jogar esta partida.": [
+"Você está suspenso pela Federasyon e não pode jogar esta partida.": [
 "lang-pt.js"
 ],
-"Sua suspensão da FIFA acabou. Você pode voltar a campo.": [
+"Sua suspensão da Federasyon acabou. Você pode voltar a campo.": [
 "lang-pt.js"
 ],
-"Investigação da FIFA em andamento": [
+"Investigação da Federasyon em andamento": [
 "lang-pt.js"
 ],
 "LIGA FLAMENGA": [
@@ -185774,7 +185774,7 @@
 "Você persegue o sonho de virar jogador. Escolha o ano e a idade em que começa. Você não escolhe o clube: os olheiros te descobrem.": [
 "lang-pt.js"
 ],
-"Jogadores não podem apostar. Cada aposta chama a atenção da FIFA; apostar no seu próprio jogo é muito arriscado. Se for pego, você enfrenta uma longa suspensão, multa e perde os patrocinadores.": [
+"Jogadores não podem apostar. Cada aposta chama a atenção da Federasyon; apostar no seu próprio jogo é muito arriscado. Se for pego, você enfrenta uma longa suspensão, multa e perde os patrocinadores.": [
 "lang-pt.js"
 ],
 "O pulso do futebol · Do clube para o mundo": [
@@ -188744,7 +188744,7 @@
 "As granjas criaram um turno da noite.": [
 "lang-pt.js"
 ],
-"Sua suspensão da FIFA acabou.": [
+"Sua suspensão da Federasyon acabou.": [
 "lang-pt.js"
 ],
 "Você pode voltar a campo.": [
@@ -188774,7 +188774,7 @@
 "Jogadores não podem apostar.": [
 "lang-pt.js"
 ],
-"Cada aposta chama a atenção da FIFA; apostar no seu próprio jogo é muito arriscado.": [
+"Cada aposta chama a atenção da Federasyon; apostar no seu próprio jogo é muito arriscado.": [
 "lang-pt.js"
 ],
 "Se for pego, você enfrenta uma longa suspensão, multa e perde os patrocinadores.": [
@@ -189329,7 +189329,7 @@
 "O árbitro: \\\"Até eu acreditei\\\".": [
 "lang-pt.js"
 ],
-"Jogadores não podem apostar; a FIFA pode investigar e aplicar uma longa suspensão.": [
+"Jogadores não podem apostar; a Federasyon pode investigar e aplicar uma longa suspensão.": [
 "lang-pt.js"
 ],
 "Seu primeiro jogo": [
@@ -191675,10 +191675,10 @@
 "SEUS ITENS": [
 "lang-pt.js"
 ],
-"COMITÊ DISCIPLINAR DA FIFA": [
+"COMITÊ DISCIPLINAR DA Federasyon": [
 "lang-pt.js"
 ],
-"INVESTIGAÇÃO DA FIFA EM ANDAMENTO": [
+"INVESTIGAÇÃO DA Federasyon EM ANDAMENTO": [
 "lang-pt.js"
 ],
 "CONTROLE DO EFEITO E PRECISÃO DO CHUTE.": [
@@ -194117,7 +194117,7 @@
 "AS GRANJAS CRIARAM UM TURNO DA NOITE.": [
 "lang-pt.js"
 ],
-"SUA SUSPENSÃO DA FIFA ACABOU.": [
+"SUA SUSPENSÃO DA Federasyon ACABOU.": [
 "lang-pt.js"
 ],
 "VOCÊ PODE VOLTAR A CAMPO.": [
@@ -194714,7 +194714,7 @@
 "Você vai usar a camisa {} no novo clube. Mostre seu valor em campo para pedir a {}.": [
 "lang-pt.js"
 ],
-"Você vai apostar {}. Jogadores não podem apostar; a FIFA pode investigar e aplicar uma longa suspensão.": [
+"Você vai apostar {}. Jogadores não podem apostar; a Federasyon pode investigar e aplicar uma longa suspensão.": [
 "lang-pt.js"
 ],
 "Você foi nomeado capitão do {}! A braçadeira é sua. Nos jogos você pode arrastar os companheiros para a posição.": [
@@ -194873,7 +194873,7 @@
 "O rival de liga {} tem uma promessa da sua idade e na sua posição: {}.": [
 "lang-pt.js"
 ],
-"A FIFA abriu uma investigação por apostas ilegais contra {}! As acusações são graves.": [
+"A Federasyon abriu uma investigação por apostas ilegais contra {}! As acusações são graves.": [
 "lang-pt.js"
 ],
 "Faltam {} anos de contrato. Você pode avaliar as ofertas.": [
@@ -195098,7 +195098,7 @@
 "está aberta! {} clubes te querem. As ofertas valem por {} semanas.": [
 "lang-pt.js"
 ],
-"A FIFA abriu uma investigação por apostas ilegais contra {}!": [
+"A Federasyon abriu uma investigação por apostas ilegais contra {}!": [
 "lang-pt.js"
 ],
 "INTERNACIONAL · Nota do adversário {} · As estrelas do amanhã em campo": [
@@ -195908,7 +195908,7 @@
 "Ganhe a Copa do Mundo {} vezes": [
 "lang-pt.js"
 ],
-"Suspensão da FIFA: {} semanas": [
+"Suspensão da Federasyon: {} semanas": [
 "lang-pt.js"
 ],
 "Ranking de seleções {}": [
@@ -196973,7 +196973,7 @@
 "FORÇA{}": [
 "lang-pt.js"
 ],
-"· {} Altın Top": [
+"· {} Altın Yıldız": [
 "legacy.js"
 ],
 "{} · {}–{} · {} gol · {} asist · {} kupa{}": [
@@ -197830,7 +197830,7 @@
 "Juventa Torino Avrupa\\'nın en iyi orta sahasını kurmak için seni seçti.": [
 "lpath.js"
 ],
-"Ev sahibi olduğunuz Dünya Kupası\\'nın yılı. Bütün ülke umudunu sana bağladı.": [
+"Ev sahibi olduğunuz Dünya Şampiyonası\\'nın yılı. Bütün ülke umudunu sana bağladı.": [
 "lpath.js"
 ],
 "Ronaldu": [
@@ -197863,7 +197863,7 @@
 "2012 · Monako Prensleri altyapısı": [
 "lpath.js"
 ],
-"19 yaşında Dünya Kupası\\'na gidiyorsun. Dünya senin hızını konuşmaya hazırlanıyor.": [
+"19 yaşında Dünya Şampiyonası\\'na gidiyorsun. Dünya senin hızını konuşmaya hazırlanıyor.": [
 "lpath.js"
 ],
 "{} Bir efsanenin hayatını yaşa": [
@@ -197964,19 +197964,19 @@
 "{} · {} gol · {} asist": [
 "meta.js"
 ],
-"{}: 🏅 Altın Top": [
+"{}: 🏅 Altın Yıldız": [
 "meta.js"
 ],
-"{} Altın Top": [
+"{} Altın Yıldız": [
 "meta.js"
 ],
-"🏅 {} Altın Top: {}{}. {}": [
+"🏅 {} Altın Yıldız: {}{}. {}": [
 "meta.js"
 ],
 "Bu yıl": [
 "meta.js"
 ],
-"Altın Top {}": [
+"Altın Yıldız {}": [
 "meta.js"
 ],
 "Frikik Ustası": [
@@ -198056,7 +198056,7 @@
 "{} Premium al{}": [
 "premium.js"
 ],
-"18 yaşında seçtiğin milli takımla tek bir Dünya Kupası\\'na odaklanan, kendi kaydı olan ayrı bir mod.": [
+"18 yaşında seçtiğin milli takımla tek bir Dünya Şampiyonası\\'na odaklanan, kendi kaydı olan ayrı bir mod.": [
 "premium.js"
 ],
 "6 efsane hikâyesi: Arjantin, Portekiz, Brezilya ve Fransa\\'dan": [
@@ -198887,7 +198887,7 @@
 "{} Dünya şampiyonluğu:": [
 "wc.js"
 ],
-"{} {} Dünya Kupası": [
+"{} {} Dünya Şampiyonası": [
 "wc.js"
 ],
 "{} Devam et": [
@@ -198899,7 +198899,7 @@
 "{} Kampa katıl": [
 "wc.js"
 ],
-"İlk Dünya Kupası\\'nda neler hissediyorsun?": [
+"İlk Dünya Şampiyonası\\'nda neler hissediyorsun?": [
 "wc.js"
 ],
 "İlk 11\\'i hak ettiğimi düşünüyorum.": [
@@ -198908,7 +198908,7 @@
 "Röportaj: \"{}\"": [
 "wc.js"
 ],
-"{} Dünya Kupası · {}": [
+"{} Dünya Şampiyonası · {}": [
 "wc.js"
 ],
 "Kaçtı!": [
@@ -198923,10 +198923,10 @@
 "Hoca kamptaki performansından çok etkilendi: turnuvaya ilk 11\\'de başlayacaksın!": [
 "wc.js"
 ],
-"{}: Dünya Kupası Şampiyonu": [
+"{}: Dünya Şampiyonası Şampiyonu": [
 "wc.js"
 ],
-"Dünya Kupası Şampiyonu": [
+"Dünya Şampiyonası Şampiyonu": [
 "wc.js"
 ],
 "wcView": [
@@ -198992,7 +198992,7 @@
 "--ct1:{};--ct2:{};--cta:{}": [
 "weather.js"
 ],
-"PREMIER": [
+"BRİTANYA": [
 "weather.js"
 ],
 "EURO": [

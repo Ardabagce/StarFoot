@@ -107,7 +107,7 @@
 3664|Cenerentole
 3665|Scegli il tuo paese
 3666|In una squadra forte è difficile entrare in rosa, in una piccola ogni partita è un'epopea. A te la scelta.
-3962|{0} è stato convocato nel ritiro di {2} per i Mondiali {1}! Il talento diciottenne è per la prima volta con la nazionale maggiore.
+3962|{0} è stato convocato nel ritiro di {2} per il Campionato Mondiale {1}! Il talento diciottenne è per la prima volta con la nazionale maggiore.
 3669|Benvenuto in ritiro!
 3960|Il ct di {} ti ha convocato per la prima volta. Prima del torneo ci sono 6 giorni di ritiro e 2 amichevoli.
 3671|Hai 2 azioni al giorno: allenamento, tattica, riposo, tempo con la squadra...
@@ -126,7 +126,7 @@
 3694|I muscoli si sono sciolti e la stanchezza è calata.
 3695|Su quale abilità vuoi lavorare?
 3696|Giocherai un minigioco. Più giochi bene, più migliori.
-3699|Cosa provi al tuo primo Mondiale?
+3699|Cosa provi al tuo primo Campionato Mondiale?
 3700|È un onore essere qui, voglio aiutare la squadra.
 3701|Sono pronto, se avrò l'occasione lo dimostrerò.
 3702|Questo torneo sarà il mio torneo!
@@ -144,7 +144,7 @@
 3713|Amichevole
 4001|Amichevole · {} - {}
 3714|AMICHEVOLE
-776|MONDIALI
+776|CAMPIONATO MONDIALE
 3715|Sei squalificato e non puoi giocare questa partita.
 3973|Ti sei infortunato in partita: starai fuori {} giorni.
 3716|Cartellino rosso: sei squalificato per la prossima partita.
@@ -153,7 +153,7 @@
 3976|Partita del girone: {0} {1}-{2} {3}. Siamo {5}º nel Girone {4}.
 4009|Ai rigori {}-{}.
 4033|Partita {}
-4015|Mondiali {}
+4015|Campionato Mondiale {}
 3718|Siamo passati!
 3719|Siamo fuori dal torneo.
 3720|SIAMO CAMPIONI DEL MONDO!
@@ -177,8 +177,8 @@
 3738|Tutti ti guardano. Tira indietro, scegli l'angolo e rilascia!
 3741|L'allenatore è rimasto colpito dal tuo ritiro: inizierai il torneo da titolare!
 3742|Sei in rosa, ma per ora parti dalla panchina. Sfrutta ogni minuto e fai cambiare idea all'allenatore!
-3966|{} ha annunciato la rosa per i Mondiali: {} è tra i 26!
-3745|Sono nella rosa per i Mondiali! Indossare questa maglia è un sogno.
+3966|{} ha annunciato la rosa per il Campionato Mondiale: {} è tra i 26!
+3745|Sono nella rosa per il Campionato Mondiale! Indossare questa maglia è un sogno.
 3748|Rosa annunciata
 3749|Sei tra i 26 convocati!
 3750|La tua forza
@@ -186,7 +186,7 @@
 3752|Fiducia dell'allenatore
 4007|I tuoi avversari del girone: {}
 3753|Che il torneo abbia inizio!
-3754|Scarpa d'oro
+3754|Trofeo del capocannoniere
 3982|Sei il capocannoniere del torneo con {} gol!
 3755|Sei stato eletto miglior giocatore del torneo!
 3756|Miglior giovane
@@ -218,7 +218,7 @@
 3779|Gioca la partita
 1159|Giorno della partita
 3780|Fine del ritiro
-3781|Oggi l'allenatore annuncerà la rosa per i Mondiali. Il tuo lavoro in ritiro verrà ripagato?
+3781|Oggi l'allenatore annuncerà la rosa per il Campionato Mondiale. Il tuo lavoro in ritiro verrà ripagato?
 3784|Scopri la rosa
 3785|Le ultime partite dei gironi sono state giocate. Si delineano le squadre ai sedicesimi...
 3788|Vedi i risultati
@@ -281,7 +281,7 @@
 3861|Sei cresciuto nel quartiere La Castellane di Marsiglia. Quando hai il pallone tra i piedi, il tempo sembra rallentare. Un'accademia della costa sud ti ha scoperto a 14 anni.
 3865|Il Bordeaux Girondins vuole farti diventare una stella tra i professionisti.
 3866|La Juventa Torino ti ha scelto per costruire il miglior centrocampo d'Europa.
-3867|È l'anno dei Mondiali in casa. Tutto il paese ripone in te le sue speranze.
+3867|È l'anno del Campionato Mondiale in casa. Tutto il paese ripone in te le sue speranze.
 3870|Il Real Madrigal bussa alla tua porta per il trasferimento più costoso del mondo.
 3871|Il Fenomeno
 3872|Nella periferia di Rio correvi agli allenamenti anche nei giorni in cui non avevi i soldi per l'autobus. Il Cruzeiro Foxes ti ha preso nella sua accademia a 14 anni. Velocità e fiuto del gol sono già leggenda.
@@ -293,13 +293,13 @@
 3899|La Tartaruga
 3900|Sei cresciuto a Bondy, periferia di Parigi. Le pareti della tua camera sono piene di poster dei tuoi idoli. Il Monaco Princes ti ha preso nella sua accademia a 14 anni: la tua velocità è incredibile.
 3904|Il Paris Saint-Gilles ha fatto un'offerta record per riportarti a casa.
-3905|Vai ai Mondiali a 19 anni. Il mondo si prepara a parlare della tua velocità.
+3905|Vai al Campionato Mondiale a 19 anni. Il mondo si prepara a parlare della tua velocità.
 3908|Il tuo sogno d'infanzia, il Real Madrigal, bussa finalmente alla tua porta.
-4000|Vinci {} volte il Pallone d'oro
+4000|Vinci {} volte la Stella d'Oro
 3980|Vinci {} volte la Coppa dei Campioni
 3981|Vinci {} volte la Coppa della Federazione Europea
-3991|Vinci {} volte i Mondiali
-3909|Vinci i Mondiali
+3991|Vinci {} volte il Campionato Mondiale
+3909|Vinci il Campionato Mondiale
 3910|Vinci gli Europei
 3993|Vinci {} campionati
 4003|Segna {} gol in una stagione
@@ -335,12 +335,12 @@
 4006|Confronto con {}
 4024|Affinità {}% · {}
 3937|I pacchetti acquistati sono stati ripristinati.
-3938|Una modalità a parte, con il suo salvataggio, dedicata a un unico Mondiale con la nazionale che scegli a 18 anni.
+3938|Una modalità a parte, con il suo salvataggio, dedicata a un unico Campionato Mondiale con la nazionale che scegli a 18 anni.
 3939|Scegli il tuo paese tra 65 nazionali e gioca un torneo a 48 squadre
 3940|Ritiro, amichevoli e annuncio della rosa
 3941|Giorni tra le partite: allenamenti, tattica, interviste, eventi in ritiro
 3942|Rigori nella fase a eliminazione: il tuo lo calci tu
-3943|Scarpa d'oro, Pallone d'oro e premio miglior giovane
+3943|Trofeo del capocannoniere, Stella d'Oro e premio miglior giovane
 3946|Trasferimenti della storia verso i club della leggenda e svolte
 3947|Un'abilità speciale fin dall'inizio e attributi in linea con lo stile della leggenda
 3948|Obiettivi basati sui successi della leggenda e confronto al ritiro
@@ -350,11 +350,11 @@
 3950|Acquisto una tantum. Niente pubblicità, ripristinabile su tutti i tuoi dispositivi.
 3953|Questa modalità si può acquistare nell'app dell'App Store.
 3989|{} sbloccato! Buon divertimento.
-3957|Vinci il Pallone d'oro
+3957|Vinci la Stella d'Oro
 3958|Vinci la Coppa dei Campioni
 3959|Vinci la Coppa della Federazione Europea
 4035|6 storie di leggende: da Argentina, Portogallo, Brasile e Francia
 4036|6 carriere di fantasia ispirate alle leggende del calcio: inizia nel loro anno di nascita, nel loro vivaio e con il loro talento.
 4034|I tuoi avversari del girone:
 4037|Tornare al menu principale?
-4038|I tuoi progressi sono salvati. Puoi continuare il Mondiale dal menu principale quando vuoi.
+4038|I tuoi progressi sono salvati. Puoi continuare il Campionato Mondiale dal menu principale quando vuoi.

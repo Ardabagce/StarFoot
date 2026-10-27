@@ -35,7 +35,7 @@
 684|4 Torbeteiligungen in einem Spiel (Tore + Vorlagen)
 685|Du hast in einem Spiel 5 Tore geschossen
 686|Du hast in einem Spiel die Note 9,0 bekommen
-687|Du hast in einer Saison den Goldenen Schuh gewonnen
+687|Du hast in einer Saison die Torjägertrophäe gewonnen
 688|Wähl eine Wette und dreh das Rad.
 689|Du hast dich aufs nächste Spiel konzentriert.
 690|Ein Sportjournalist will dich interviewen.
@@ -54,8 +54,8 @@
 703|Brasilien
 704|Brasilianischer Pokal
 705|Brasilianische Liga
-706|Britische Premier League
-707|Britische Championship
+706|Britische Erste Liga
+707|Britische Zweite Liga
 708|Brüssel
 709|Dieses Auto kostet mehr als mein Gehalt
 710|Das ist erst der Anfang
@@ -169,10 +169,10 @@
 818|Deine Gegenstände
 819|FOUL!
 820|VERBAND
-821|FIFA-Disziplinarkommission
-822|Du bist von der FIFA gesperrt und darfst dieses Spiel nicht bestreiten.
-823|Deine FIFA-Sperre ist vorbei. Du kannst auf den Platz zurück.
-824|FIFA-Ermittlungen laufen
+821|Disziplinarkommission des Verbands
+822|Du bist von des Verbands gesperrt und darfst dieses Spiel nicht bestreiten.
+823|Deine Verbandssperre ist vorbei. Du kannst auf den Platz zurück.
+824|Verbandsermittlungen laufen
 825|FLÄMISCHE LIGA
 826|Effetkontrolle und Schusspräzision.
 827|Dein Vorsprung (auf Platz 2)
@@ -197,7 +197,7 @@
 846|Fußballschul-Stiftung
 847|Fußball-Stickeralbum
 848|Du jagst den Traum, Fußballer zu werden. Wähl das Jahr und Alter, in dem du startest. Deinen Verein wählst du nicht: Scouts entdecken dich.
-849|Fußballer dürfen nicht wetten. Jede Wette lenkt die Aufmerksamkeit der FIFA auf dich; auf das eigene Spiel zu wetten ist sehr riskant. Wirst du erwischt, drohen lange Sperre, Geldstrafe und der Verlust deiner Sponsoren.
+849|Fußballer dürfen nicht wetten. Jede Wette lenkt die Aufmerksamkeit des Verbands auf dich; auf das eigene Spiel zu wetten ist sehr riskant. Wirst du erwischt, drohen lange Sperre, Geldstrafe und der Verlust deiner Sponsoren.
 850|Der Puls des Fußballs · Vom Verein in die Welt
 851|Hallenschuhe
 852|Sturm

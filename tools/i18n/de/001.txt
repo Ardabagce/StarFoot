@@ -69,7 +69,7 @@
 369|Tage
 370|Wie antwortest du?
 371|Was sagst du?
-372|Rennen um den Ballon d'Or
+372|Rennen um den Goldenen Stern
 373|Dein Rivale
 374|Tägliche Missionen
 375|Spielerkarte teilen
@@ -114,7 +114,7 @@
 414|zweite Liga
 415|MVP
 416|Alpenliga
-417|Alpen-Superliga
+417|Helvetische Liga
 418|Ägäis-Liga
 419|Wikinger-Liga
 420|Adria-Liga
@@ -122,7 +122,7 @@
 422|Weichsel-Liga
 423|Steppenliga
 424|ALPENLIGA
-425|ALPEN-SUPERLIGA
+425|HELVETISCHE LIGA
 426|ÄGÄIS-LIGA
 427|WIKINGER-LIGA
 428|ADRIA
@@ -203,7 +203,7 @@
 503|3 Aktionen
 504|Du hast für 3 verschiedene Vereine gespielt
 505|Du zeigst dich an 3 Stationen. Je besser du bist, desto größer die Vereine, die Angebote machen!
-506|Du hast 3-mal den Goldenen Ball gewonnen
+506|Du hast 3-mal den Goldenen Stern gewonnen
 507|Du warst 3-mal Torschützenkönig
 508|Mit 35 noch aktiv
 509|Mit 38 noch aktiv
@@ -253,7 +253,7 @@
 553|Zum Nachwuchs wechseln
 554|Goldkette
 555|Goldene Schuhe
-556|Goldener Ball
+556|Goldener Stern
 557|Goldstaub
 558|Aber die Paparazzi haben dich im Morgengrauen erwischt. Der Trainer ist nicht begeistert.
 559|Hauptmenü
@@ -318,8 +318,8 @@
 618|Europäische Entwicklungsliga
 619|Europäische Entwicklungsliga (U19)
 620|Du hast die Europäische Entwicklungsliga (U19) gewonnen
-621|Europäischer Conference-Pokal
-622|Du hast den Europäischen Conference-Pokal gewonnen
+621|Europäischer Kontinentalpokal
+622|Du hast den Europäischen Kontinentalpokal gewonnen
 623|Du hast im Europapokal getroffen
 624|Europameisterschaft
 625|Du hast die Europameisterschaft gewonnen

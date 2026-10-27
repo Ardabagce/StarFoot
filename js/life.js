@@ -65,7 +65,7 @@ const Life = {
     // ceza süresi
     if (L.ban > 0) {
       L.ban--;
-      if (L.ban === 0) Game.news('FIFA cezan sona erdi. Yeniden sahalara dönebilirsin.', 'good');
+      if (L.ban === 0) Game.news('Federasyon cezan sona erdi. Yeniden sahalara dönebilirsin.', 'good');
     }
   },
 
@@ -221,7 +221,7 @@ const Life = {
     // durum
     parts.push(`<section class="card lf-head">
       <div class="card-h"><span>${Icon('heart')} Hayatın</span><span class="tag">${s.ap} aksiyon hakkı</span></div>
-      ${L.ban > 0 ? `<div class="lf-ban">${Icon('whistle')}<div><b>FIFA men cezası: ${L.ban} hafta</b><small>Ceza bitene kadar maçlarda forma giyemezsin.</small></div></div>` : ''}
+      ${L.ban > 0 ? `<div class="lf-ban">${Icon('whistle')}<div><b>Federasyon men cezası: ${L.ban} hafta</b><small>Ceza bitene kadar maçlarda forma giyemezsin.</small></div></div>` : ''}
       <div class="lf-rows">
         <div class="lf-row"><span>Aile</span>${bar(p.rel.family, '#46e08f')}<b>${Math.round(p.rel.family)}</b></div>
         <div class="lf-row"><span>${gf ? (gf.married ? 'Eşin' : 'Sevgilin') : 'İlişki'}</span>${gf ? bar(gf.rel, '#ff6f8a') : '<em class="muted">Yalnızsın</em>'}<b>${gf ? Math.round(gf.rel) : ''}</b></div>

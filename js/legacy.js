@@ -28,7 +28,7 @@ const Legacy = {
     const L = Legacy.list();
     const nat = (c) => (NATIONS.find((n) => n.code === c) || {}).name || c;
     Game.modal(`<div class="ev-tag">Tüm kariyerlerin</div><h2>🏛️ Efsaneler Salonu</h2>
-      ${L.length ? `<div class="hof">${L.map((x, i) => `<div class="hof-r ${i < 3 ? 'top' : ''}"><span class="rk">${i + 1}</span><div class="hof-t"><b>${U.esc(x.n)}${x.gen > 1 ? ` <em>${x.gen}. nesil</em>` : ''}</b><small>${U.esc(nat(x.nat))} · ${x.y0}–${x.y1} · ${x.goals} gol · ${x.assists} asist · ${x.tr} kupa${x.ballon ? ` · ${x.ballon} Altın Top` : ''}</small></div><b class="g">${x.sc}</b></div>`).join('')}</div>`
+      ${L.length ? `<div class="hof">${L.map((x, i) => `<div class="hof-r ${i < 3 ? 'top' : ''}"><span class="rk">${i + 1}</span><div class="hof-t"><b>${U.esc(x.n)}${x.gen > 1 ? ` <em>${x.gen}. nesil</em>` : ''}</b><small>${U.esc(nat(x.nat))} · ${x.y0}–${x.y1} · ${x.goals} gol · ${x.assists} asist · ${x.tr} kupa${x.ballon ? ` · ${x.ballon} Altın Yıldız` : ''}</small></div><b class="g">${x.sc}</b></div>`).join('')}</div>`
         : '<p class="muted">Salon henüz boş. Bir kariyeri emeklilikle tamamladığında burada yer alırsın.</p>'}`, [{ t: 'Kapat', cls: 'btn-ghost' }], { wide: true });
   },
   // emeklilik ekranından "oğlunla devam et": soyadı ve köken aynı, babanın mirasından bonus

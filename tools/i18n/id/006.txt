@@ -144,7 +144,7 @@
 2193|sangat terkesan dengan penampilanmu.
 2194|Beberapa akademi menginginkanmu.
 2195|Wasit: "Bahkan aku pun tertipu."
-2196|Pesepak bola tidak boleh bertaruh; FIFA bisa menyelidiki dan menjatuhkan larangan panjang.
+2196|Pesepak bola tidak boleh bertaruh; federasi bisa menyelidiki dan menjatuhkan larangan panjang.
 2197|Pertandingan pertamamu
 2198|Sudah waktunya mengakhiri kariermu.
 2199|kembali bersinar!

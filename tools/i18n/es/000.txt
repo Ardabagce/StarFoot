@@ -53,7 +53,7 @@
 52|km/h
 53|perdió
 54|ganó
-55|Finales de la Liga de Naciones
+55|Finales de la Liga de Selecciones
 56|Una vez por semana
 57|Opciones de privacidad de anuncios
 58|No hay anuncios ahora mismo. Inténtalo más tarde.
@@ -71,8 +71,8 @@
 70|Modo carrera
 71|Nueva
 72|Carrera
-73|Del fútbol callejero a la final del Mundial. Escribe tu historia, llama la atención de los ojeadores y conviértete en leyenda.
-74|Del fútbol callejero a la final del Mundial.
+73|Del fútbol callejero a la final del Campeonato Mundial. Escribe tu historia, llama la atención de los ojeadores y conviértete en leyenda.
+74|Del fútbol callejero a la final del Campeonato Mundial.
 75|Escribe tu historia, llama la atención de los ojeadores y conviértete en leyenda.
 76|Tu identidad
 77|El nombre en la espalda de tu camiseta
@@ -172,8 +172,8 @@
 171|Tienes 33 años y esta puede ser tu última temporada en el gigante de la liga.
 172|Corona tu carrera con un título.
 173|Consigue una valoración de 7,5 o más
-174|¡BALÓN DE ORO! Elegido el mejor del mundo. Esto es de mis compañeros, mi familia y nuestra afición.
-175|¡BALÓN DE ORO!
+174|¡ESTRELLA DE ORO! Elegido el mejor del mundo. Esto es de mis compañeros, mi familia y nuestra afición.
+175|¡ESTRELLA DE ORO!
 176|Elegido el mejor del mundo.
 177|Esto es de mis compañeros, mi familia y nuestra afición.
 178|Da una asistencia

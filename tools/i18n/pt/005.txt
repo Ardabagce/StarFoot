@@ -49,7 +49,7 @@
 1748|Quartas de final
 1749|Par
 1750|Dobro
-1751|Liga B da Bota
+1751|Liga 2 da Bota
 1752|Liga da Bota
 1753|Criança
 1754|Uma escolinha gratuita para crianças. Moral +2, Fama +5 toda semana
@@ -244,8 +244,8 @@
 1943|🤝 Aceitar
 1944|🤾 Escanteio - Bola aérea
 1945|Escanteio - Bola aérea
-1946|🥇 Bola de Ouro (Jogador do ano)
-1947|Bola de Ouro (Jogador do ano)
+1946|🥇 Estrela de Ouro (Jogador do ano)
+1947|Estrela de Ouro (Jogador do ano)
 1948|🧊 Descansar
 1949|🧭 Armação
 1950|Armação
@@ -293,7 +293,7 @@
 1992|Um dia eu vou ser...
 1993|Erling Halland revelou que come 14 ovos no café da manhã.
 1994|As granjas criaram um turno da noite.
-1995|Sua suspensão da FIFA acabou.
+1995|Sua suspensão da federação acabou.
 1996|Você pode voltar a campo.
 1997|As acusações são graves.
 1998|Falta dentro da área!
@@ -303,7 +303,7 @@
 2002|Escolha o ano e a idade em que começa.
 2003|Você não escolhe o clube: os olheiros te descobrem.
 2004|Jogadores não podem apostar.
-2005|Cada aposta chama a atenção da FIFA; apostar no seu próprio jogo é muito arriscado.
+2005|Cada aposta chama a atenção da federação; apostar no seu próprio jogo é muito arriscado.
 2006|Se for pego, você enfrenta uma longa suspensão, multa e perde os patrocinadores.
 2007|S.
 2008|C. América

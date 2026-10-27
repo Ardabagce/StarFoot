@@ -49,7 +49,7 @@
 1748|Quarti di finale
 1749|Pari
 1750|Doppio
-1751|Lega dello Stivale B
+1751|Lega dello Stivale 2
 1752|Lega dello Stivale
 1753|Bambino
 1754|Una scuola gratuita per bambini. Morale +2, Fama +5 ogni settimana
@@ -244,8 +244,8 @@
 1943|🤝 Accetta
 1944|🤾 Calcio d'angolo - Palla alta
 1945|Calcio d'angolo - Palla alta
-1946|🥇 Pallone d'Oro (Giocatore dell'anno)
-1947|Pallone d'Oro (Giocatore dell'anno)
+1946|🥇 Stella d'Oro (Giocatore dell'anno)
+1947|Stella d'Oro (Giocatore dell'anno)
 1948|🧊 Riposa
 1949|🧭 Regia
 1950|Regia
@@ -293,7 +293,7 @@
 1992|Un giorno sarò...
 1993|Erling Halland ha rivelato di mangiare 14 uova a colazione.
 1994|Gli allevamenti di polli hanno aggiunto un turno di notte.
-1995|La tua squalifica FIFA è finita.
+1995|La tua squalifica federale è finita.
 1996|Puoi tornare in campo.
 1997|Le accuse sono gravi.
 1998|Fallo in area!
@@ -303,7 +303,7 @@
 2002|Scegli l'anno e l'età di partenza.
 2003|Non scegli il tuo club: sono gli osservatori a scoprirti.
 2004|I calciatori non possono scommettere.
-2005|Ogni scommessa attira l'attenzione della FIFA; scommettere sulla propria partita è molto rischioso.
+2005|Ogni scommessa attira l'attenzione della federazione; scommettere sulla propria partita è molto rischioso.
 2006|Se ti beccano rischi una lunga squalifica, una multa e la perdita degli sponsor.
 2007|S.
 2008|C. America

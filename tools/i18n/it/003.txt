@@ -1,4 +1,4 @@
-1000|CONFERENCE
+1000|CONTINENTALE
 1001|CALCIO D'ANGOLO!
 1002|CORRI!
 1003|NORDAMERICA
@@ -65,10 +65,10 @@
 1064|Facile
 1065|Braccia in alto
 1066|Braccia larghe, inclinandoti da un lato all'altro mentre corri.
-1067|C. Conference
-1068|Coppa Conference
-1069|Notte di Coppa Conference
-1070|Gloria in Conference
+1067|C. Continentale
+1068|Coppa Continentale
+1069|Notte di Coppa Continentale
+1070|Gloria continentale
 1071|Set di coni e paletti
 1072|Contropiede!
 1073|L'avversario è arrivato prima sulla palla in contropiede.

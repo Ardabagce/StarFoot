@@ -45,6 +45,7 @@ const Game = {
       // oyundan çıkarılan isimler eski kayıtlarda da görünmesin
       if (raw && raw.includes('Hakan \u015e\u00fck\u00fcrl\u00fc')) raw = raw.split('Hakan \u015e\u00fck\u00fcrl\u00fc').join('Haluk Sar\u0131kaya');
       if (raw && raw.includes('\u0041rif Erdemli')) raw = raw.split('\u0041rif Erdemli').join('Kaan Sezerli');
+      raw = U.renameOld(raw);
       return raw ? JSON.parse(raw, Game.unpackRoster) : null;
     } catch (e) { return null; }
   },
@@ -162,7 +163,7 @@ const Game = {
     if (tx && typeof Legacy !== 'undefined') {
       const nb = Object.keys(Scenario.badges()).length;
       const pk = typeof Packs !== 'undefined';
-      tx.innerHTML = (pk ? `<div class="t-packs"><button class="btn t-pack wc" id="t-wc">${Icon('star')}<span><b>Dünya Kupası Rüyası</b><small>${Packs.owns('wc') ? 'Yeni mod' : 'Yeni mod · kilitli'}</small></span></button><button class="btn t-pack lp" id="t-lp">${Icon('fire')}<span><b>Efsanelerin İzinde</b><small>${Packs.owns('legends') ? 'Yeni mod' : 'Yeni mod · kilitli'}</small></span></button></div>` : '') + `<button class="btn btn-ghost" id="t-tut">${Icon('whistle')} Nasıl Oynanır</button><button class="btn btn-ghost" id="t-scn">🎯 Senaryolar${nb ? ` <em>${nb}/${SCEN.length}</em>` : ''}</button><button class="btn btn-ghost" id="t-hof">🏛️ Efsaneler Salonu${Legacy.list().length ? ` <em>${Legacy.list().length}</em>` : ''}</button>`;
+      tx.innerHTML = (pk ? `<div class="t-packs"><button class="btn t-pack wc" id="t-wc">${Icon('star')}<span><b>Dünya Şampiyonası Rüyası</b><small>${Packs.owns('wc') ? 'Yeni mod' : 'Yeni mod · kilitli'}</small></span></button><button class="btn t-pack lp" id="t-lp">${Icon('fire')}<span><b>Efsanelerin İzinde</b><small>${Packs.owns('legends') ? 'Yeni mod' : 'Yeni mod · kilitli'}</small></span></button></div>` : '') + `<button class="btn btn-ghost" id="t-tut">${Icon('whistle')} Nasıl Oynanır</button><button class="btn btn-ghost" id="t-scn">🎯 Senaryolar${nb ? ` <em>${nb}/${SCEN.length}</em>` : ''}</button><button class="btn btn-ghost" id="t-hof">🏛️ Efsaneler Salonu${Legacy.list().length ? ` <em>${Legacy.list().length}</em>` : ''}</button>`;
       UI.strip(tx);
       document.getElementById('t-scn').onclick = () => Scenario.menu();
       if (pk) { document.getElementById('t-wc').onclick = () => WC.menu(); document.getElementById('t-lp').onclick = () => LPath.menu(); }
@@ -515,7 +516,7 @@ const Game = {
     const ovr = Player.overall(p, true);
     if (p.injuryWeeks > 0 || Life.banned()) {
       ctx.role = 'out';
-      Game.toast(Life.banned() ? 'FIFA cezalı olduğun için bu maçta oynayamıyorsun.' : 'Sakat olduğun için bu maçta oynayamıyorsun.', 'bad');
+      Game.toast(Life.banned() ? 'Federasyon cezalı olduğun için bu maçta oynayamıyorsun.' : 'Sakat olduğun için bu maçta oynayamıyorsun.', 'bad');
     } else {
       ctx.role = Game.roleFor(ovr, Game.teamRating(s.clubId), youth);
       ctx.subChance = youth ? 0.85 : 0.6;
@@ -954,7 +955,7 @@ const Game = {
   // ---------- Sezon sonu ----------
   endSeason() {
     const s = Game.state, p = s.player;
-    // Gerçek takvimle milli turnuva (Dünya Kupası / Avrupa Şampiyonası) sezon sonunda oynanır
+    // Gerçek takvimle milli turnuva (Dünya Şampiyonası / Avrupa Milletler Şampiyonası) sezon sonunda oynanır
     if (Cups.tourType(s.season.year) && !(s.tournament && s.tournament.done && s.tournament.year === s.season.year)) {
       Cups.startTournament(s);
       s.tournament.year = s.season.year;
@@ -983,7 +984,7 @@ const Game = {
     if (!youth && p.age <= 21 && avg >= 7.2 && ss.apps >= 10) trophies.push('🌱 Yılın Genç Oyuncusu');
     const ovr = Player.overall(p);
     const lgFame = youth ? 0 : LEAGUES.find((l) => l.id === Game.club().league).fame;
-    if (!youth && lgFame >= 1.3 && pos <= 3 && ss.apps >= 12 && (ss.goals + ss.assists >= 32 || avg >= 8.3) && ovr >= 87 && p.fame >= 75 && U.chance(0.75)) trophies.push('🥇 Altın Top (Yılın Futbolcusu)');
+    if (!youth && lgFame >= 1.3 && pos <= 3 && ss.apps >= 12 && (ss.goals + ss.assists >= 32 || avg >= 8.3) && ovr >= 87 && p.fame >= 75 && U.chance(0.75)) trophies.push('🥇 Altın Yıldız (Yılın Futbolcusu)');
     trophies.forEach((t) => p.trophies.push(`${s.season.year}: ${t}`));
     trophies.forEach(() => Player.addFame(p, youth ? 0.5 : 3));
     // sıralama primi ve Avrupa bileti
@@ -1011,7 +1012,7 @@ const Game = {
 
     // dünya
     const prevLeague = Game.club().league;
-    // Altın Top sıralaması lig istatistikleri sıfırlanmadan önce dondurulur
+    // Altın Yıldız sıralaması lig istatistikleri sıfırlanmadan önce dondurulur
     if (typeof Ballon !== 'undefined') { s.ballonFinal = null; s.ballonFinal = Ballon.ranking(); }
     const rel = World.endSeason(s.world, s.season.year + 1);
     // dönem yıldızları: yaşlanma, emeklilik, yeni yetenekler, transferler
@@ -1068,7 +1069,7 @@ const Game = {
     };
     Game.save();
     // lig şampiyonluğunda önce kupa kaldırma töreni
-    // sezon sonu sırası: şampiyonluk töreni → Altın Top → ezeli rakip özeti → sezon sonu ekranı
+    // sezon sonu sırası: şampiyonluk töreni → Altın Yıldız → ezeli rakip özeti → sezon sonu ekranı
     const after = () => (typeof Ballon !== 'undefined' ? Ballon.ceremony() : Promise.resolve()).catch(() => {}).then(() => (typeof Scenario !== 'undefined' ? Scenario.result() : null)).catch(() => {}).then(() => { if (typeof Rival !== 'undefined') Rival.season(); Game.save(); SeasonEnd.show(); });
     if (pos === 1 && typeof Celebrate !== 'undefined') Celebrate.champion(`${compName} Şampiyonu`, Game.teamName()).then(after);
     else after();
@@ -1262,8 +1263,8 @@ const UI = {
     const s = Game.state;
     const items = s.news.filter((n) => n.type !== 'me' && !/Maç primi/.test(n.t));
     if (!items.length) return '';
-    const kicker = (n) => (n.star ? 'Yıldızlar' : n.type === 'world' ? (/Magazin/.test(n.t) ? 'Magazin' : 'Dünya') : /transfer|imza|sözleşme/i.test(n.t) ? 'Transfer' : /madalya|kupa|Şampiyon|ödül/i.test(n.t) ? 'Ödül' : /FIFA|ceza/i.test(n.t) ? 'Son Dakika' : /karşısında|kazandı|kaybetti|berabere/.test(n.t) ? 'Maç' : n.type === 'bad' ? 'Gündem' : 'Kulüp');
-    const big = /ŞAMPİYON|Şampiyon|transfer oldun|MİLLİ TAKIMA|Hat-trick|FIFA|evlendi|sözleşme imzaladın/;
+    const kicker = (n) => (n.star ? 'Yıldızlar' : n.type === 'world' ? (/Magazin/.test(n.t) ? 'Magazin' : 'Dünya') : /transfer|imza|sözleşme/i.test(n.t) ? 'Transfer' : /madalya|kupa|Şampiyon|ödül/i.test(n.t) ? 'Ödül' : /Federasyon|ceza/i.test(n.t) ? 'Son Dakika' : /karşısında|kazandı|kaybetti|berabere/.test(n.t) ? 'Maç' : n.type === 'bad' ? 'Gündem' : 'Kulüp');
+    const big = /ŞAMPİYON|Şampiyon|transfer oldun|MİLLİ TAKIMA|Hat-trick|Federasyon|evlendi|sözleşme imzaladın/;
     const top = items.slice(0, 8);
     const lead = top.find((n) => n.type !== 'world' && big.test(n.t)) || top.find((n) => n.star) || items[0];
     const rest = items.filter((n) => n !== lead).slice(0, UI.more.news ? 30 : 6);
@@ -1320,7 +1321,7 @@ const UI = {
       post = { id: 'np' + hsh, seed: hsh, kind: 'goal', scene, cid: c.id, c1: c.c1, c2: c.c2, short: c.short, num: 7 + (ls % 5), lookSeed: ls + 1 };
     } else {
       const c = Game.club() || { c1: '#c8102e', c2: '#fff', short: '' };
-      const scene = /ŞAMPİYON|Şampiyon/.test(lead.t) ? 'trophy' : /transfer|imza/i.test(lead.t) ? 'transfer' : /MİLLİ/.test(lead.t) ? 'camp' : /FIFA|ceza/.test(lead.t) ? 'studio' : 'goal';
+      const scene = /ŞAMPİYON|Şampiyon/.test(lead.t) ? 'trophy' : /transfer|imza/i.test(lead.t) ? 'transfer' : /MİLLİ/.test(lead.t) ? 'camp' : /Federasyon|ceza/.test(lead.t) ? 'studio' : 'goal';
       post = { id: 'np' + hsh, seed: hsh, kind: 'goal', scene, cid: c.id, c1: c.c1, c2: c.c2, short: c.short, num: s.player.shirt };
     }
     const img = SocialArt.get(post);
@@ -1691,7 +1692,7 @@ ${UI.paper()}`;
       ${view === 'cups' ? Cups.screen(s) : ''}
       ${view === 'kings' ? UI.kings(lg, name, clubOf, Game.leagueName()) : ''}
       ${view === 'table' ? `<section class="card">
-        <div class="card-h"><span>${Icon('table')} Puan Durumu</span><small class="lg-legend"><i class="z-champ"></i>Şampiyonluk${zonesUsed.has('ucl') ? '<i class="z-ucl"></i>Şampiyonlar K.' : ''}${zonesUsed.has('uel') ? '<i class="z-uel"></i>Federasyon K.' : ''}${zonesUsed.has('uecl') ? '<i class="z-uecl"></i>Konferans K.' : ''}${zonesUsed.has('csa') ? '<i class="z-csa"></i>G. Amerika K.' : ''}${zonesUsed.has('ccc') ? '<i class="z-ccc"></i>K. Amerika K.' : ''}${zonesUsed.has('acl') ? '<i class="z-acl"></i>Asya K.' : ''}${promote ? '<i class="z-up"></i>Üst lig' : ''}${relegate ? '<i class="z-down"></i>Küme düşme' : ''}</small></div>
+        <div class="card-h"><span>${Icon('table')} Puan Durumu</span><small class="lg-legend"><i class="z-champ"></i>Şampiyonluk${zonesUsed.has('ucl') ? '<i class="z-ucl"></i>Şampiyonlar K.' : ''}${zonesUsed.has('uel') ? '<i class="z-uel"></i>Federasyon K.' : ''}${zonesUsed.has('uecl') ? '<i class="z-uecl"></i>Kıta K.' : ''}${zonesUsed.has('csa') ? '<i class="z-csa"></i>G. Amerika K.' : ''}${zonesUsed.has('ccc') ? '<i class="z-ccc"></i>K. Amerika K.' : ''}${zonesUsed.has('acl') ? '<i class="z-acl"></i>Asya K.' : ''}${promote ? '<i class="z-up"></i>Üst lig' : ''}${relegate ? '<i class="z-down"></i>Küme düşme' : ''}</small></div>
         <div class="tscroll"><table class="tbl lgt">
           <tr><th>#</th><th class="l">Takım</th><th>O</th><th>G</th><th>B</th><th>M</th><th class="hide-s">A</th><th class="hide-s">Y</th><th>AV</th><th class="hide-s">Form</th><th>P</th></tr>
           ${tbl.map((r, i) => `<tr class="${r.id === s.clubId ? 'hl' : ''} ${zone(i)}">
@@ -2487,7 +2488,7 @@ const Create = {
           <div class="cr-hero-t">
             <span class="cr-kicker">Kariyer modu</span>
             <h1>Yeni <span>Kariyer</span></h1>
-            <p>Mahalle maçından Dünya Kupası finaline. Hikâyeni yaz, scoutların gözüne gir, efsane ol.</p>
+            <p>Mahalle maçından Dünya Şampiyonası finaline. Hikâyeni yaz, scoutların gözüne gir, efsane ol.</p>
           </div>
         </header>
         <div class="cr-layout">

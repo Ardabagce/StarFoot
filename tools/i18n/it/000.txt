@@ -53,7 +53,7 @@
 52|km/h
 53|ha perso
 54|ha vinto
-55|Final Four di Nations League
+55|Final Four di Lega delle Nazionali
 56|Una volta a settimana
 57|Opzioni privacy pubblicità
 58|Nessuna pubblicità disponibile al momento. Riprova più tardi.
@@ -71,8 +71,8 @@
 70|Modalità carriera
 71|Nuova
 72|Carriera
-73|Dal calcio di strada alla finale dei Mondiali. Scrivi la tua storia, fatti notare dagli osservatori e diventa una leggenda.
-74|Dal calcio di strada alla finale dei Mondiali.
+73|Dal calcio di strada alla finale del Campionato Mondiale. Scrivi la tua storia, fatti notare dagli osservatori e diventa una leggenda.
+74|Dal calcio di strada alla finale del Campionato Mondiale.
 75|Scrivi la tua storia, fatti notare dagli osservatori e diventa una leggenda.
 76|La tua identità
 77|Il nome sulla tua maglia
@@ -172,8 +172,8 @@
 171|Hai 33 anni e questa potrebbe essere la tua ultima stagione nel gigante del campionato.
 172|Corona la tua carriera con un titolo.
 173|Ottieni un voto di 7,5 o più
-174|PALLONE D'ORO! Eletto il migliore al mondo. È dei miei compagni, della mia famiglia e dei nostri tifosi.
-175|PALLONE D'ORO!
+174|STELLA D'ORO! Eletto il migliore al mondo. È dei miei compagni, della mia famiglia e dei nostri tifosi.
+175|STELLA D'ORO!
 176|Eletto il migliore al mondo.
 177|È dei miei compagni, della mia famiglia e dei nostri tifosi.
 178|Fai un assist

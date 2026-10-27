@@ -35,7 +35,7 @@
 684|4 participações em gols num jogo (gols + assistências)
 685|Você marcou 5 gols num jogo
 686|Você tirou nota 9,0 num jogo
-687|Você ganhou a Chuteira de Ouro de uma temporada
+687|Você ganhou a Taça de Artilheiro de uma temporada
 688|Escolha uma aposta e gire a roleta.
 689|Você focou no próximo jogo.
 690|Um jornalista esportivo quer te entrevistar.
@@ -54,8 +54,8 @@
 703|Brasil
 704|Copa do Brasil
 705|Liga brasileira
-706|Premier League Britânica
-707|Championship Britânica
+706|Primeira Liga Britânica
+707|Segunda Liga Britânica
 708|Bruxelas
 709|Este carro custa mais que meu salário
 710|Isso é só o começo
@@ -124,12 +124,12 @@
 773|Arquibancada
 774|Status
 775|Seu status
-776|COPA DO MUNDO
+776|CAMPEONATO MUNDIAL
 777|CAIU!
 778|A camisa do maior astro da época. Moral +1 toda semana
 779|Mundo
-780|Copa do Mundo
-781|Você venceu a Copa do Mundo
+780|Campeonato Mundial
+781|Você venceu o Campeonato Mundial
 782|Estrela mundial
 783|Estrelas mundiais
 784|Campeão do mundo
@@ -169,10 +169,10 @@
 818|Seus itens
 819|FALTA!
 820|FEDERAÇÃO
-821|Comitê Disciplinar da FIFA
-822|Você está suspenso pela FIFA e não pode jogar esta partida.
-823|Sua suspensão da FIFA acabou. Você pode voltar a campo.
-824|Investigação da FIFA em andamento
+821|Comitê Disciplinar da federação
+822|Você está suspenso pela federação e não pode jogar esta partida.
+823|Sua suspensão da federação acabou. Você pode voltar a campo.
+824|Investigação da federação em andamento
 825|LIGA FLAMENGA
 826|Controle do efeito e precisão do chute.
 827|Sua vantagem (sobre o 2º)
@@ -197,7 +197,7 @@
 846|Fundação Escola de Futebol
 847|Álbum de figurinhas de futebol
 848|Você persegue o sonho de virar jogador. Escolha o ano e a idade em que começa. Você não escolhe o clube: os olheiros te descobrem.
-849|Jogadores não podem apostar. Cada aposta chama a atenção da FIFA; apostar no seu próprio jogo é muito arriscado. Se for pego, você enfrenta uma longa suspensão, multa e perde os patrocinadores.
+849|Jogadores não podem apostar. Cada aposta chama a atenção da federação; apostar no seu próprio jogo é muito arriscado. Se for pego, você enfrenta uma longa suspensão, multa e perde os patrocinadores.
 850|O pulso do futebol · Do clube para o mundo
 851|Tênis de futsal
 852|Tempestade

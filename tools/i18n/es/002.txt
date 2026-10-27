@@ -35,7 +35,7 @@
 684|4 participaciones de gol en un partido (goles + asistencias)
 685|Marcaste 5 goles en un partido
 686|Conseguiste un 9,0 de valoración en un partido
-687|Ganaste la Bota de Oro de una temporada
+687|Ganaste el Trofeo de Goleador de una temporada
 688|Elige una apuesta y gira la ruleta.
 689|Te centraste en el próximo partido.
 690|Un periodista deportivo quiere entrevistarte.
@@ -54,8 +54,8 @@
 703|Brasil
 704|Copa de Brasil
 705|Liga brasileña
-706|Premier League Británica
-707|Championship Británica
+706|Primera Liga Británica
+707|Segunda Liga Británica
 708|Bruselas
 709|Este coche cuesta más que mi sueldo
 710|Esto es solo el principio
@@ -124,12 +124,12 @@
 773|Grada
 774|Estado
 775|Tu estado
-776|MUNDIAL
+776|CAMPEONATO MUNDIAL
 777|¡CAYÓ!
 778|La camiseta de la mayor estrella de la época. Moral +1 cada semana
 779|Mundo
-780|Copa del Mundo
-781|Ganaste la Copa del Mundo
+780|Campeonato Mundial
+781|Ganaste el Campeonato Mundial
 782|Estrella mundial
 783|Estrellas mundiales
 784|Campeón del mundo
@@ -169,10 +169,10 @@
 818|Tus objetos
 819|¡FALTA!
 820|FEDERACIÓN
-821|Comité Disciplinario de la FIFA
-822|Estás sancionado por la FIFA y no puedes jugar este partido.
-823|Tu sanción de la FIFA terminó. Puedes volver al campo.
-824|Investigación de la FIFA en curso
+821|Comité Disciplinario de la federación
+822|Estás sancionado por la federación y no puedes jugar este partido.
+823|Tu sanción de la federación terminó. Puedes volver al campo.
+824|Investigación de la federación en curso
 825|LIGA FLAMENCA
 826|Control del efecto y precisión del disparo.
 827|Tu ventaja (sobre el 2.º)
@@ -197,7 +197,7 @@
 846|Fundación Escuela de Fútbol
 847|Álbum de cromos de fútbol
 848|Persigues el sueño de ser futbolista. Elige el año y la edad en que empiezas. No eliges tu club: los ojeadores te descubren.
-849|Los futbolistas no pueden apostar. Cada apuesta atrae la atención de la FIFA; apostar en tu propio partido es muy arriesgado. Si te pillan te enfrentas a una larga sanción, una multa y perder a tus patrocinadores.
+849|Los futbolistas no pueden apostar. Cada apuesta atrae la atención de la federación; apostar en tu propio partido es muy arriesgado. Si te pillan te enfrentas a una larga sanción, una multa y perder a tus patrocinadores.
 850|El pulso del fútbol · Del club al mundo
 851|Zapatillas de fútbol sala
 852|Tormenta

@@ -49,7 +49,7 @@
 1748|Perempat Final
 1749|Seri
 1750|Ganda
-1751|Liga Sepatu B
+1751|Liga Sepatu 2
 1752|Liga Sepatu
 1753|Anak
 1754|Sekolah gratis untuk anak-anak. Moral +2, Ketenaran +5 setiap minggu
@@ -244,8 +244,8 @@
 1943|🤝 Terima
 1944|🤾 Sepak Pojok - Bola Atas
 1945|Sepak Pojok - Bola Atas
-1946|🥇 Bola Emas (Pemain Terbaik Tahun Ini)
-1947|Bola Emas (Pemain Terbaik Tahun Ini)
+1946|🥇 Bintang Emas (Pemain Terbaik Tahun Ini)
+1947|Bintang Emas (Pemain Terbaik Tahun Ini)
 1948|🧊 Istirahat
 1949|🧭 Pengatur Serangan
 1950|Pengatur Serangan
@@ -293,7 +293,7 @@
 1992|Suatu hari aku akan menjadi...
 1993|Erling Halland mengungkapkan ia makan 14 telur untuk sarapan.
 1994|Peternakan ayam menambah sif malam.
-1995|Larangan FIFA-mu sudah berakhir.
+1995|Larangan federasi-mu sudah berakhir.
 1996|Kamu bisa kembali ke lapangan.
 1997|Tuduhannya serius.
 1998|Pelanggaran di kotak penalti!
@@ -303,7 +303,7 @@
 2002|Pilih tahun dan usia awalmu.
 2003|Kamu tidak memilih klubmu: pencari bakat yang menemukanmu.
 2004|Pesepak bola tidak boleh bertaruh.
-2005|Setiap taruhan menarik perhatian FIFA; bertaruh pada pertandinganmu sendiri sangat berisiko.
+2005|Setiap taruhan menarik perhatian federasi; bertaruh pada pertandinganmu sendiri sangat berisiko.
 2006|Jika ketahuan kamu menghadapi larangan panjang, denda, dan kehilangan sponsor.
 2007|S.
 2008|P. Amerika

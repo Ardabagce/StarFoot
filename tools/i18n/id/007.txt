@@ -10,9 +10,9 @@
 2653|Legenda klub {} mengunjungi akademi dan memimpin sesi untuk para pemain muda. Ia juga mengajakmu bicara empat mata.
 2654|Kamu dinyatakan bersalah atas taruhan ilegal. Kamu membayar denda {}{}. Kamu tidak bisa bermain selama masa larangan.
 2655|Kamu akan memakai nomor {} di klub barumu. Buktikan dirimu di lapangan untuk meminta nomor {}.
-2656|Kamu akan bertaruh {}. Pesepak bola tidak boleh bertaruh; FIFA bisa menyelidiki dan menjatuhkan larangan panjang.
+2656|Kamu akan bertaruh {}. Pesepak bola tidak boleh bertaruh; federasi bisa menyelidiki dan menjatuhkan larangan panjang.
 2657|Kamu ditunjuk sebagai kapten {}! Ban kapten milikmu. Dalam pertandingan kamu bisa menggeser rekan setim ke posisinya.
-2658|PUTUSAN FIFA: {} dilarang bermain {} minggu dan didenda {} karena taruhan ilegal!{}
+2658|PUTUSAN federasi: {} dilarang bermain {} minggu dan didenda {} karena taruhan ilegal!{}
 2659|{} berusia {} tahun dan sekarang tahun {}. Ia mengikuti seleksi akademi. Pencari bakat dari beberapa klub mencatat!
 2660|berusia {} tahun dan sekarang tahun {}. Ia mengikuti seleksi akademi. Pencari bakat dari beberapa klub mencatat!
 2661|Maskot {} mencetak 3 dari 3 penalti saat turun minum. Suporter ingin ia masuk skuad.
@@ -43,7 +43,7 @@
 2686|Rivalmu {} mencetak hat-trick! Koran bertanya: "Bisakah {} menjawab?"
 2687|Rekan setimmu {} {} memanggilmu setelah latihan: "Ayo, kita latihan tambahan."
 2688|Kiper {} kebobolan saat mengikat tali sepatunya. Penjelasannya: "Tali sepatunya bukan milik kami."
-2689|{} memimpin perburuan sepatu emas {2} dengan {1} gol. Para kiper melihatnya dalam mimpi.
+2689|{} memimpin perburuan top skor {2} dengan {1} gol. Para kiper melihatnya dalam mimpi.
 2690|{}: "Nomor {} sekarang milikmu. {} akan memakai nomormu {}; kamu pantas mendapatkannya lewat penampilanmu."
 2691|{} pensiun dari sepak bola di usia {}. Unggahan perpisahannya cepat mendapat jutaan suka.
 2692|Tanah air ayahmu {} dan tanah air ibumu {} sama-sama memanggilmu ke timnas mereka.
@@ -63,7 +63,7 @@
 2706|Rekan setimmu {} merayakan ulang tahun malam ini. Kamu diundang.
 2707|Ditanya soal transfer, {} menjawab singkat: "Yang kupikirkan sekarang cuma makan siang."
 2708|Rival liga {} punya pemain muda seusiamu di posisimu: {}.
-2709|FIFA membuka penyelidikan taruhan ilegal terhadap {}! Tuduhannya serius.
+2709|federasi membuka penyelidikan taruhan ilegal terhadap {}! Tuduhannya serius.
 2710|Kontrakmu tersisa {} tahun. Kamu bisa menimbang tawaran-tawaran.
 2711|{} ({}) menawarkan sponsor kepadamu! Cek di tab Kehidupan.
 2712|{} tidak terlalu terkesan, tapi sebuah klub kecil tetap ingin memberimu kesempatan.
@@ -131,17 +131,17 @@
 2774|Pemain berusia {} tahun rata-rata {} · kunci untuk posisimu
 2775|{} dibuka! {} klub menginginkanmu. Tawaran berlaku {} minggu.
 2776|akan memakai nomormu {}; kamu pantas mendapatkannya lewat penampilanmu."
-2777|🏅 Ballon d'Or {} jatuh ke tangan {}! Kamu pesepak bola terbaik di dunia!
+2777|🏅 Bintang Emas {} jatuh ke tangan {}! Kamu pesepak bola terbaik di dunia!
 2778|{} INTERNASIONAL · Rating lawan {} · Bintang masa depan unjuk gigi
 2779|Kabarnya ada pencari bakat yang menonton pertandinganmu untuk {}!
 2780|{} turun membantu dengan luar biasa dan merebut bola!
 2781|dibuka! {} klub menginginkanmu. Tawaran berlaku {} minggu.
-2782|FIFA membuka penyelidikan taruhan ilegal terhadap {}!
+2782|federasi membuka penyelidikan taruhan ilegal terhadap {}!
 2783|INTERNASIONAL · Rating lawan {} · Bintang masa depan unjuk gigi
 2784|Kamu mengubah pola makan dan tidurmu. Stamina +{}
 2785|Rekan setimmu {} merayakan ulang tahun malam ini.
 2786|{} berusia {} tahun dan sekarang tahun {}, seorang anak yang bermain bola di jalanan.
-2787|Ballon d'Or {} jatuh ke tangan {}! Kamu pesepak bola terbaik di dunia!
+2787|Bintang Emas {} jatuh ke tangan {}! Kamu pesepak bola terbaik di dunia!
 2788|{} Jika kamu memilih satu negara, kamu tidak bisa lagi bermain untuk yang lain.
 2789|berusia {} tahun dan sekarang tahun {}, seorang anak yang bermain bola di jalanan.
 2790|🎉 Kamu menandatangani kontrak profesional pertamamu dengan tim utama {}!
@@ -247,7 +247,7 @@
 2890|📅 Musim {} telah dimulai. Sekarang kamu di tim {}!
 2891|Kiper {} kebobolan saat mengikat tali sepatunya.
 2892|Pengecekan VAR di pertandingan {} memakan waktu 9 menit.
-2893|{0} memimpin perburuan sepatu emas {2} dengan {1} gol.
+2893|{0} memimpin perburuan top skor {2} dengan {1} gol.
 2894|🎁 Peti misi: {} · +20 energi · +0,6 {}
 2895|🎯 Skenario selesai: {}! Kamu mendapat lencana.
 2896|Gosip: {} terlihat bersama {} {}!
@@ -400,7 +400,7 @@
 3043|🎙️ Konferensi pers: "{}"{}
 3044|usia {}–{} · kasta kedua
 3045|Taruhan dipasang: {} · odds {}
-3046|Larangan FIFA: {} minggu
+3046|Larangan federasi: {} minggu
 3047|Bandar menang: {} - {}. -{}
 3048|Peringkat Timnas {}
 3049|Kamu berpisah dengan {}.

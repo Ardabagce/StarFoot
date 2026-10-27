@@ -144,7 +144,7 @@
 2193|war von deiner Leistung sehr beeindruckt.
 2194|Mehrere Akademien wollen dich.
 2195|Schiedsrichter: „Sogar ich war überzeugt.“
-2196|Fußballer dürfen nicht wetten; die FIFA kann ermitteln und eine lange Sperre verhängen.
+2196|Fußballer dürfen nicht wetten; der Verband kann ermitteln und eine lange Sperre verhängen.
 2197|Dein erstes Spiel
 2198|Es ist Zeit, deine Karriere zu beenden.
 2199|wieder in Topform!

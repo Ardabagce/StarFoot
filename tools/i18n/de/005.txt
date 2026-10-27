@@ -49,7 +49,7 @@
 1748|Viertelfinale
 1749|Gleich
 1750|Doppelt
-1751|Stiefel-Liga B
+1751|Stiefel-Liga 2
 1752|Stiefel-Liga
 1753|Kind
 1754|Eine kostenlose Schule für Kinder. Moral +2, Ruhm +5 pro Woche
@@ -244,8 +244,8 @@
 1943|🤝 Annehmen
 1944|🤾 Ecke - Kopfball
 1945|Ecke - Kopfball
-1946|🥇 Goldener Ball (Spieler des Jahres)
-1947|Goldener Ball (Spieler des Jahres)
+1946|🥇 Goldener Stern (Spieler des Jahres)
+1947|Goldener Stern (Spieler des Jahres)
 1948|🧊 Ausruhen
 1949|🧭 Spielgestaltung
 1950|Spielgestaltung
@@ -293,7 +293,7 @@
 1992|Eines Tages werde ich...
 1993|Erling Halland verriet, dass er zum Frühstück 14 Eier isst.
 1994|Hühnerfarmen haben eine Nachtschicht eingeführt.
-1995|Deine FIFA-Sperre ist vorbei.
+1995|Deine Verbandssperre ist vorbei.
 1996|Du kannst auf den Platz zurückkehren.
 1997|Die Vorwürfe sind schwerwiegend.
 1998|Foul im Strafraum!
@@ -303,7 +303,7 @@
 2002|Wähle das Jahr und das Alter, mit dem du startest.
 2003|Du wählst deinen Verein nicht aus: Scouts entdecken dich.
 2004|Fußballer dürfen nicht wetten.
-2005|Jede Wette zieht die Aufmerksamkeit der FIFA auf sich; auf dein eigenes Spiel zu wetten ist sehr riskant.
+2005|Jede Wette zieht die Aufmerksamkeit des Verbands auf sich; auf dein eigenes Spiel zu wetten ist sehr riskant.
 2006|Wirst du erwischt, drohen eine lange Sperre, eine Geldstrafe und der Verlust deiner Sponsoren.
 2007|S.
 2008|Amerika-P.

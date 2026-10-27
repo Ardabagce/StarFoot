@@ -1,4 +1,4 @@
-1000|CONFÉRENCE
+1000|CONTINENTALE
 1001|CORNER !
 1002|COURS !
 1003|AMÉRIQUE DU NORD
@@ -65,10 +65,10 @@
 1064|Facile
 1065|Bras levés
 1066|Bras grands ouverts, penche-toi d'un côté à l'autre en courant.
-1067|C. Conférence
-1068|Coupe Conférence
-1069|Soirée de Coupe Conférence
-1070|Gloire en Conférence
+1067|C. continentale
+1068|Coupe continentale
+1069|Soirée de Coupe continentale
+1070|Gloire continentale
 1071|Kit de plots et piquets
 1072|Contre-attaque !
 1073|L'adversaire est arrivé le premier sur le ballon en contre.

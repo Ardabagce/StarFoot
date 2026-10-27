@@ -53,7 +53,7 @@
 52|km/h
 53|a perdu
 54|a gagné
-55|Phase finale de la Ligue des nations
+55|Phase finale de la Ligue des sélections
 56|Une fois par semaine
 57|Options de confidentialité des pubs
 58|Aucune pub disponible pour le moment. Réessaie plus tard.
@@ -71,8 +71,8 @@
 70|Mode carrière
 71|Nouvelle
 72|Carrière
-73|Du foot de rue à la finale de la Coupe du monde. Écris ton histoire, tape dans l'œil des recruteurs et deviens une légende.
-74|Du foot de rue à la finale de la Coupe du monde.
+73|Du foot de rue à la finale du Championnat du monde. Écris ton histoire, tape dans l'œil des recruteurs et deviens une légende.
+74|Du foot de rue à la finale du Championnat du monde.
 75|Écris ton histoire, tape dans l'œil des recruteurs et deviens une légende.
 76|Ton identité
 77|Le nom floqué sur ton maillot
@@ -172,8 +172,8 @@
 171|Tu as 33 ans et c'est peut-être ta dernière saison chez le géant de la ligue.
 172|Couronne ta carrière d'un titre.
 173|Obtiens une note de 7,5 ou plus
-174|BALLON D'OR ! Élu meilleur joueur du monde. C'est pour mes coéquipiers, ma famille et nos supporters.
-175|BALLON D'OR !
+174|ÉTOILE D'OR ! Élu meilleur joueur du monde. C'est pour mes coéquipiers, ma famille et nos supporters.
+175|ÉTOILE D'OR !
 176|Élu meilleur joueur du monde.
 177|C'est pour mes coéquipiers, ma famille et nos supporters.
 178|Fais une passe décisive

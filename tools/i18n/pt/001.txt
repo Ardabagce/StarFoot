@@ -69,7 +69,7 @@
 369|dias
 370|Como você responde?
 371|O que você diz?
-372|Corrida pela Bola de Ouro
+372|Corrida pela Estrela de Ouro
 373|Seu rival
 374|Missões diárias
 375|Compartilhar card do jogador
@@ -114,7 +114,7 @@
 414|segunda divisão
 415|MVP
 416|Liga Alpina
-417|Superliga dos Alpes
+417|Liga Helvética
 418|Liga Egeia
 419|Liga Viking
 420|Liga Adriática
@@ -122,7 +122,7 @@
 422|Liga do Vístula
 423|Liga da Estepe
 424|LIGA ALPINA
-425|SUPERLIGA DOS ALPES
+425|LIGA HELVÉTICA
 426|LIGA EGEIA
 427|LIGA VIKING
 428|ADRIÁTICA
@@ -203,7 +203,7 @@
 503|3 ações
 504|Você jogou por 3 clubes diferentes
 505|Você vai se mostrar em 3 estações. Quanto melhor for, maiores os clubes que farão ofertas!
-506|Você ganhou a Bola de Ouro 3 vezes
+506|Você ganhou a Estrela de Ouro 3 vezes
 507|Você foi artilheiro 3 vezes
 508|Ainda jogando aos 35
 509|Ainda jogando aos 38
@@ -253,7 +253,7 @@
 553|Entrar na base
 554|Corrente de ouro
 555|Chuteiras de ouro
-556|Bola de Ouro
+556|Estrela de Ouro
 557|Pó de ouro
 558|Mas os paparazzi te flagraram de madrugada. O técnico não gostou.
 559|Menu principal
@@ -318,11 +318,11 @@
 618|Liga Europeia de Desenvolvimento
 619|Liga Europeia de Desenvolvimento (sub-19)
 620|Você venceu a Liga Europeia de Desenvolvimento (sub-19)
-621|Copa da Conferência Europeia
-622|Você venceu a Copa da Conferência Europeia
+621|Copa Continental Europeia
+622|Você venceu a Copa Continental Europeia
 623|Você marcou em competição europeia
-624|Eurocopa
-625|Você venceu a Eurocopa
+624|Campeonato Europeu
+625|Você venceu o Campeonato Europeu
 626|Copa dos Campeões da Europa
 627|Você venceu a Copa dos Campeões da Europa
 628|Campeão europeu

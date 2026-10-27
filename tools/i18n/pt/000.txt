@@ -53,7 +53,7 @@
 52|km/h
 53|perdeu
 54|venceu
-55|Finais da Liga das Nações
+55|Finais da Liga das Seleções
 56|Uma vez por semana
 57|Opções de privacidade de anúncios
 58|Nenhum anúncio disponível agora. Tente mais tarde.
@@ -71,8 +71,8 @@
 70|Modo carreira
 71|Nova
 72|Carreira
-73|Do futebol de rua à final da Copa do Mundo. Escreva sua história, chame a atenção dos olheiros e vire lenda.
-74|Do futebol de rua à final da Copa do Mundo.
+73|Do futebol de rua à final do Campeonato Mundial. Escreva sua história, chame a atenção dos olheiros e vire lenda.
+74|Do futebol de rua à final do Campeonato Mundial.
 75|Escreva sua história, chame a atenção dos olheiros e vire lenda.
 76|Sua identidade
 77|O nome nas costas da sua camisa
@@ -172,8 +172,8 @@
 171|Você tem 33 anos e esta pode ser sua última temporada no gigante da liga.
 172|Coroe sua carreira com um título.
 173|Tire nota 7,5 ou mais
-174|BOLA DE OURO! Eleito o melhor do mundo. Isto é dos meus companheiros, da minha família e da nossa torcida.
-175|BOLA DE OURO!
+174|ESTRELA DE OURO! Eleito o melhor do mundo. Isto é dos meus companheiros, da minha família e da nossa torcida.
+175|ESTRELA DE OURO!
 176|Eleito o melhor do mundo.
 177|Isto é dos meus companheiros, da minha família e da nossa torcida.
 178|Dê uma assistência

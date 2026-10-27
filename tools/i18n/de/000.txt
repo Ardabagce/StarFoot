@@ -53,7 +53,7 @@
 52|km/h
 53|verlor
 54|gewann
-55|Finalturnier der Nations League
+55|Finalturnier der Nationalteam-Liga
 56|Einmal pro Woche
 57|Datenschutzoptionen für Werbung
 58|Gerade ist keine Werbung verfügbar. Versuch es später noch einmal.
@@ -71,8 +71,8 @@
 70|Karrieremodus
 71|Neu
 72|Karriere
-73|Vom Straßenfußball bis ins WM-Finale. Schreib deine Geschichte, fall den Scouts auf und werde zur Legende.
-74|Vom Straßenfußball bis ins WM-Finale.
+73|Vom Straßenfußball bis ins Weltmeisterschaftsfinale. Schreib deine Geschichte, fall den Scouts auf und werde zur Legende.
+74|Vom Straßenfußball bis ins Weltmeisterschaftsfinale.
 75|Schreib deine Geschichte, fall den Scouts auf und werde zur Legende.
 76|Deine Identität
 77|Der Name auf deinem Trikot
@@ -172,8 +172,8 @@
 171|Du bist 33 und es könnte deine letzte Saison beim Ligagiganten sein.
 172|Krön deine Karriere mit einem Titel.
 173|Hol eine Note von 7,5 oder besser
-174|BALLON D'OR! Zum Besten der Welt gewählt. Das gehört meinen Mitspielern, meiner Familie und unseren Fans.
-175|BALLON D'OR!
+174|GOLDENER STERN! Zum Besten der Welt gewählt. Das gehört meinen Mitspielern, meiner Familie und unseren Fans.
+175|GOLDENER STERN!
 176|Zum Besten der Welt gewählt.
 177|Das gehört meinen Mitspielern, meiner Familie und unseren Fans.
 178|Gib eine Vorlage

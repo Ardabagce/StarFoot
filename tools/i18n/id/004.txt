@@ -145,8 +145,8 @@
 1494|Piala Turki
 1495|Liga Turki
 1496|Transportasi
-1497|Nations League
-1498|Kamu memenangi Final Nations League
+1497|Liga Tim Nasional
+1498|Kamu memenangi Final Liga Tim Nasional
 1499|Sesi Kapsul Tidur Siang
 1500|Pelatih Tidur dan Kasur Pintar
 1501|Pesawat

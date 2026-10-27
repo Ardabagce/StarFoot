@@ -35,7 +35,7 @@
 684|4 buts ou passes décisives dans un match
 685|Tu as marqué 5 buts dans un match
 686|Tu as obtenu une note de 9,0 en match
-687|Tu as remporté le Soulier d'or sur une saison
+687|Tu as remporté le Trophée du buteur sur une saison
 688|Choisis un pari et fais tourner la roue.
 689|Tu t'es concentré sur le prochain match.
 690|Un journaliste sportif veut t'interviewer.
@@ -54,8 +54,8 @@
 703|Brésil
 704|Coupe du Brésil
 705|Championnat brésilien
-706|Premier League britannique
-707|Championship britannique
+706|Première ligue britannique
+707|Deuxième ligue britannique
 708|Bruxelles
 709|Cette voiture coûte plus que mon salaire
 710|Ce n'est que le début
@@ -124,12 +124,12 @@
 773|Tribune
 774|Statut
 775|Ton statut
-776|COUPE DU MONDE
+776|CHAMPIONNAT DU MONDE
 777|À TERRE !
 778|Le maillot de la plus grande star de l'époque. Moral +1 chaque semaine
 779|Monde
-780|Coupe du monde
-781|Tu as gagné la Coupe du monde
+780|Championnat du monde
+781|Tu as gagné le Championnat du monde
 782|Star mondiale
 783|Stars mondiales
 784|Champion du monde
@@ -169,10 +169,10 @@
 818|Tes objets
 819|FAUTE !
 820|FÉDÉRATION
-821|Commission de discipline de la FIFA
-822|Tu es suspendu par la FIFA et ne peux pas jouer ce match.
-823|Ta suspension FIFA est terminée. Tu peux revenir sur le terrain.
-824|Enquête de la FIFA en cours
+821|Commission de discipline de la fédération
+822|Tu es suspendu par la fédération et ne peux pas jouer ce match.
+823|Ta suspension fédérale est terminée. Tu peux revenir sur le terrain.
+824|Enquête de la fédération en cours
 825|LIGUE FLAMANDE
 826|Contrôle de l'effet et précision des frappes.
 827|Ton avance (sur le 2e)
@@ -197,7 +197,7 @@
 846|Fondation École de football
 847|Album de vignettes de football
 848|Tu poursuis le rêve de devenir footballeur. Choisis l'année et l'âge de départ. Tu ne choisis pas ton club : ce sont les recruteurs qui te découvrent.
-849|Les footballeurs n'ont pas le droit de parier. Chaque pari attire l'attention de la FIFA ; parier sur ton propre match est très risqué. Si tu te fais prendre, tu risques une longue suspension, une amende et la perte de tes sponsors.
+849|Les footballeurs n'ont pas le droit de parier. Chaque pari attire l'attention de la fédération ; parier sur ton propre match est très risqué. Si tu te fais prendre, tu risques une longue suspension, une amende et la perte de tes sponsors.
 850|Le pouls du football · Du club au monde
 851|Chaussures de futsal
 852|Tempête

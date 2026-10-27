@@ -1,5 +1,5 @@
 // Oyuncuyu uzun süre bağlayan sistemler: büyük maçlar (derbi/final), basın toplantısı,
-// günlük seri ve görevler, ezeli rakip, Altın Top, özel yetenekler, rekorlar, nesil modu, senaryolar.
+// günlük seri ve görevler, ezeli rakip, Altın Yıldız, özel yetenekler, rekorlar, nesil modu, senaryolar.
 
 // ---------- Derbiler ----------
 const DERBIES = [
@@ -81,7 +81,7 @@ const Press = {
 // ---------- Ortak yardımcılar ----------
 const Meta = {
   today(off = 0) { const d = new Date(Date.now() + off * 864e5); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; },
-  get(k, def) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : def; } catch (e) { return def; } },
+  get(k, def) { try { const v = U.renameOld(localStorage.getItem(k)); return v ? JSON.parse(v) : def; } catch (e) { return def; } },
   set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* yok */ } },
   // maaşa göre ölçeklenen para ödülü
   cash(mult) {
@@ -411,7 +411,7 @@ const Peers = {
   },
 };
 
-// ---------- Altın Top ----------
+// ---------- Altın Yıldız ----------
 const BALLON_LEAGUES = ['ENG', 'ESP', 'GER', 'ITA', 'FRA', 'TR1', 'POR', 'NED', 'BRA', 'ARG', 'KSA', 'USA'];
 const Ballon = {
   // Puan = gol×3 + asist×2 + lig seviyesi (0-5) + takım gücü (0-3) [+ maç reytingi, yalnız sen ve rakip için ölçülür]
@@ -454,7 +454,7 @@ const Ballon = {
     const rows = top.slice(0, 10);
     if (mi >= 10) rows.push(top[mi]);
     return `<section class="card ballon">
-      <div class="card-h"><span>${Icon('star')} Altın Top Yarışı</span><small class="muted">${s.season.year} · ${s.ballonFinal ? 'final' : 'canlı'}</small></div>
+      <div class="card-h"><span>${Icon('star')} Altın Yıldız Yarışı</span><small class="muted">${s.season.year} · ${s.ballonFinal ? 'final' : 'canlı'}</small></div>
       <p class="bal-how">Puan: <b>gol ×3</b> + <b>asist ×2</b> + lig ve takım seviyesi (en fazla 8). Senin puanına maç reytingin de eklenir.</p>
       <div class="scorers">${rows.map((x) => `<div class="scr ${x.me ? 'me' : ''} ${x.rival ? 'rv' : ''}"><span class="rk">${top.indexOf(x) + 1}</span>${UI.shirt(s.world.clubs[x.club] || Game.club())}<div class="scr-t"><b>${U.esc(x.n)}${x.me ? ' (sen)' : x.rival ? ' (ezeli rakip)' : ''}</b><small>${U.esc((s.world.clubs[x.club] || {}).name || '')} · ${x.g} gol · ${x.a} asist</small></div><b class="g">${Math.round(x.pts)}</b></div>`).join('')}</div>
     </section>`;
@@ -470,19 +470,19 @@ const Ballon = {
     s.ballonHist.unshift({ y: s.season.year, w: win.n, me: mi + 1 });
     if (win.rival && s.rival) s.rival.totals.ballon++;
     if (win.me) {
-      p.trophies.push(`${s.season.year}: 🏅 Altın Top`);
+      p.trophies.push(`${s.season.year}: 🏅 Altın Yıldız`);
       p.ballon = (p.ballon || 0) + 1;
       Player.addFame(p, 10);
-      Social.post('trophy', 'ALTIN TOP! Dünyanın en iyisi seçildim. Bu ödül takım arkadaşlarımın, ailemin ve taraftarımızın.', 6);
-      Game.news(`🏅 ${s.season.year} Altın Top ${Player.fullName(p)}'in! Dünyanın en iyi futbolcusu seçildin!`, 'good');
+      Social.post('trophy', 'ALTIN YILDIZ! Dünyanın en iyisi seçildim. Bu ödül takım arkadaşlarımın, ailemin ve taraftarımızın.', 6);
+      Game.news(`🏅 ${s.season.year} Altın Yıldız ${Player.fullName(p)}'in! Dünyanın en iyi futbolcusu seçildin!`, 'good');
       const c = Game.club();
-      if (typeof Celebrate !== 'undefined') await Celebrate.trophy({ big: 'ALTIN TOP!', title: `${s.season.year} Altın Top`, sub: 'Dünyanın en iyi futbolcusu', c1: c.c1, c2: c.c2, short: c.short, kit: Sprites.kit(c, false), number: p.shirt, year: Player.fullName(p) });
+      if (typeof Celebrate !== 'undefined') await Celebrate.trophy({ big: 'ALTIN YILDIZ!', title: `${s.season.year} Altın Yıldız`, sub: 'Dünyanın en iyi futbolcusu', c1: c.c1, c2: c.c2, short: c.short, kit: Sprites.kit(c, false), number: p.shirt, year: Player.fullName(p) });
       if (typeof Review !== 'undefined') Review.maybe();
       return;
     }
-    Game.news(`🏅 ${s.season.year} Altın Top: ${win.n}${win.rival ? ' (ezeli rakibin!)' : ''}. ${mi >= 0 ? `Sen ${mi + 1}. oldun.` : ''}`, win.rival ? 'bad' : 'world');
+    Game.news(`🏅 ${s.season.year} Altın Yıldız: ${win.n}${win.rival ? ' (ezeli rakibin!)' : ''}. ${mi >= 0 ? `Sen ${mi + 1}. oldun.` : ''}`, win.rival ? 'bad' : 'world');
     if (mi >= 0 && mi < 10) {
-      await new Promise((res) => Game.modal(`<div class="ev-tag">Altın Top ${s.season.year}</div><h2>🏅 ${U.esc(win.n)}</h2>
+      await new Promise((res) => Game.modal(`<div class="ev-tag">Altın Yıldız ${s.season.year}</div><h2>🏅 ${U.esc(win.n)}</h2>
         <ol class="bal-top">${top.slice(0, 3).map((x) => `<li class="${x.me ? 'me' : ''}">${U.esc(x.n)}<small>${U.esc((s.world.clubs[x.club] || {}).name || '')}</small></li>`).join('')}</ol>
         <p>${mi < 3 ? `Kürsüdesin: <b>${mi + 1}.</b> oldun!` : `Bu yıl <b>${mi + 1}.</b> oldun. Hedef zirve!`}</p>`, [{ t: 'Devam', fn: res }]));
     }

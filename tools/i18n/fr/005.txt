@@ -49,7 +49,7 @@
 1748|Quart de finale
 1749|Égal
 1750|Double
-1751|Ligue B de la Botte
+1751|Ligue 2 de la Botte
 1752|Ligue de la Botte
 1753|Enfant
 1754|Une école gratuite pour les enfants. Moral +2, Célébrité +5 chaque semaine
@@ -244,8 +244,8 @@
 1943|🤝 Accepter
 1944|🤾 Corner - Ballon aérien
 1945|Corner - Ballon aérien
-1946|🥇 Ballon d'Or (Joueur de l'année)
-1947|Ballon d'Or (Joueur de l'année)
+1946|🥇 Étoile d'Or (Joueur de l'année)
+1947|Étoile d'Or (Joueur de l'année)
 1948|🧊 Se reposer
 1949|🧭 Construction du jeu
 1950|Construction du jeu
@@ -293,7 +293,7 @@
 1992|Un jour, je serai...
 1993|Erling Halland a révélé qu'il mange 14 œufs au petit-déjeuner.
 1994|Les élevages de poulets ont ajouté une équipe de nuit.
-1995|Ta suspension FIFA est terminée.
+1995|Ta suspension fédérale est terminée.
 1996|Tu peux retourner sur le terrain.
 1997|Les accusations sont graves.
 1998|Faute dans la surface !
@@ -303,7 +303,7 @@
 2002|Choisis l'année et l'âge de départ.
 2003|Tu ne choisis pas ton club : les recruteurs te découvrent.
 2004|Les footballeurs n'ont pas le droit de parier.
-2005|Chaque pari attire l'attention de la FIFA ; parier sur ton propre match est très risqué.
+2005|Chaque pari attire l'attention de la fédération ; parier sur ton propre match est très risqué.
 2006|Si tu es pris, tu risques une longue suspension, une amende et la perte de tes sponsors.
 2007|S.
 2008|C. d'Amérique

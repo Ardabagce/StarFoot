@@ -132,8 +132,8 @@ const Premium = {
 
 // İçerik paketleri: tek seferlik satın alınan oyun modları (App Store)
 const PACKS = {
-  wc: { id: 'starfoot_wc', ic: 'star', t: 'Dünya Kupası Rüyası', d: '18 yaşında seçtiğin milli takımla tek bir Dünya Kupası\'na odaklanan, kendi kaydı olan ayrı bir mod.',
-    f: ['65 milli takım arasından ülkeni seç, 48 takımlı turnuvada oyna', 'Hazırlık kampı, hazırlık maçları ve kadro açıklaması', 'Maçlar arası günler: antrenman, taktik, röportaj, kamp olayları', 'Eleme turlarında penaltı atışları: penaltını sen atarsın', 'Altın Ayakkabı, Altın Top ve En İyi Genç Oyuncu ödülleri'] },
+  wc: { id: 'starfoot_wc', ic: 'star', t: 'Dünya Şampiyonası Rüyası', d: '18 yaşında seçtiğin milli takımla tek bir Dünya Şampiyonası\'na odaklanan, kendi kaydı olan ayrı bir mod.',
+    f: ['65 milli takım arasından ülkeni seç, 48 takımlı turnuvada oyna', 'Hazırlık kampı, hazırlık maçları ve kadro açıklaması', 'Maçlar arası günler: antrenman, taktik, röportaj, kamp olayları', 'Eleme turlarında penaltı atışları: penaltını sen atarsın', 'Gol Kralı Kupası, Altın Yıldız ve En İyi Genç Oyuncu ödülleri'] },
   legends: { id: 'starfoot_legends', ic: 'fire', t: 'Efsanelerin İzinde', d: 'Futbol tarihinin efsanelerinden esinlenen 6 kurgusal kariyer: onların doğduğu yılda, onların altyapısında ve yetenekleriyle başla.',
     f: ['6 efsane hikâyesi: Arjantin, Portekiz, Brezilya ve Fransa\'dan', 'Efsanenin kulüplerinden gelen hikâye transferleri ve dönüm noktaları', 'Başlangıçta özel yetenek ve efsanenin oyun tarzına uygun özellikler', 'Efsanenin başarılarına göre hedefler ve emeklilikte karşılaştırma'] },
 };

@@ -145,8 +145,8 @@
 1494|Türkischer Pokal
 1495|Türkische Liga
 1496|Fortbewegung
-1497|Nations League
-1498|Du hast das Finalturnier der Nations League gewonnen
+1497|Nationalteam-Liga
+1498|Du hast das Finalturnier der Nationalteam-Liga gewonnen
 1499|Sitzung in der Schlafkapsel
 1500|Schlafcoach und smartes Bett
 1501|Flugzeug

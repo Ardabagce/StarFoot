@@ -1,4 +1,4 @@
-1000|CONFERENCE
+1000|KONTINENTAL
 1001|ECKE!
 1002|LAUF!
 1003|NORDAMERIKA
@@ -65,10 +65,10 @@
 1064|Leicht
 1065|Arme hoch
 1066|Arme weit ausgebreitet, beim Laufen von Seite zu Seite neigen.
-1067|Conference-P.
-1068|Conference-Pokal
-1069|Conference-Pokalnacht
-1070|Conference-Ruhm
+1067|Kontinental-P.
+1068|Kontinentalpokal
+1069|Kontinentalpokalnacht
+1070|Kontinental-Ruhm
 1071|Hütchen- und Stangenset
 1072|Konter!
 1073|Der Gegner war beim Konter zuerst am Ball.

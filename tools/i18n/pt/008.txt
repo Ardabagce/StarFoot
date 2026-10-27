@@ -95,8 +95,8 @@
 3154|📅 A temporada {} começou.
 3155|{0} {4} {2}-{3} contra o {1}.
 3156|Lesionado · {} semanas
-3157|🏅 A Bola de Ouro {} é de {}!
-3158|{} Corrida pela Bola de Ouro
+3157|🏅 A Estrela de Ouro {} é de {}!
+3158|{} Corrida pela Estrela de Ouro
 3159|{} recorde de gols da temporada
 3160|Você ganhou! {} - {} · +{}
 3161|Jogo {} da fase de liga
@@ -127,7 +127,7 @@
 3186|{} · se você avançar
 3187|✅ Missão concluída: {}
 3188|🎁 Recompensa diária: {}
-3189|A Bola de Ouro {} é de {}!
+3189|A Estrela de Ouro {} é de {}!
 3190|{} Resultado do cenário
 3191|Internacional • {} - {}
 3192|Vínculo familiar +{}
@@ -146,7 +146,7 @@
 3205|Liberado aos {} anos
 3206|{} · faltam {} semanas
 3207|· {} {} km/h de vento
-3208|👟 {} Chuteira de Ouro ({})
+3208|👟 {} Taça de Artilheiro ({})
 3209|{} na próxima temporada!
 3210|{} se posiciona na bola.
 3211|{} Sua energia está baixa.
@@ -210,7 +210,7 @@
 3269|{}. {} vence! +{}
 3270|{}. {} vence. -{}
 3271|{}× Melhor em campo
-3272|{} Chuteira de Ouro ({})
+3272|{} Taça de Artilheiro ({})
 3273|e {} se casaram!
 3274|Você se lesionou {}.
 3275|{} km/h de vento
@@ -231,7 +231,7 @@
 3290|vencedor: {}!
 3291|· Sua nota {}
 3292|🏆 Vencedor de {}
-3293|Chuteira de Ouro ({})
+3293|Taça de Artilheiro ({})
 3294|Empate ({}).
 3295|Com o ídolo {}.
 3296|Estamos em {}.

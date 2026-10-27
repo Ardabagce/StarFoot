@@ -53,7 +53,7 @@
 52|km/j
 53|kalah
 54|menang
-55|Final Nations League
+55|Final Liga Tim Nasional
 56|Seminggu sekali
 57|Opsi privasi iklan
 58|Belum ada iklan saat ini. Coba lagi nanti.
@@ -71,8 +71,8 @@
 70|Mode karier
 71|Baru
 72|Karier
-73|Dari sepak bola jalanan ke final Piala Dunia. Tulis kisahmu, tarik perhatian pemandu bakat, dan jadilah legenda.
-74|Dari sepak bola jalanan ke final Piala Dunia.
+73|Dari sepak bola jalanan ke final Kejuaraan Dunia. Tulis kisahmu, tarik perhatian pemandu bakat, dan jadilah legenda.
+74|Dari sepak bola jalanan ke final Kejuaraan Dunia.
 75|Tulis kisahmu, tarik perhatian pemandu bakat, dan jadilah legenda.
 76|Identitasmu
 77|Nama di punggung jersey-mu
@@ -172,8 +172,8 @@
 171|Kamu berusia 33 tahun dan ini mungkin musim terakhirmu di klub raksasa liga.
 172|Mahkotai kariermu dengan gelar.
 173|Dapatkan nilai 7,5 atau lebih
-174|BALLON D'OR! Terpilih sebagai yang terbaik di dunia. Ini untuk rekan setim, keluargaku, dan para suporter kita.
-175|BALLON D'OR!
+174|BINTANG EMAS! Terpilih sebagai yang terbaik di dunia. Ini untuk rekan setim, keluargaku, dan para suporter kita.
+175|BINTANG EMAS!
 176|Terpilih sebagai yang terbaik di dunia.
 177|Ini untuk rekan setim, keluargaku, dan para suporter kita.
 178|Berikan satu assist

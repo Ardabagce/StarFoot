@@ -145,8 +145,8 @@
 1494|Coupe de Turquie
 1495|Championnat turc
 1496|Transport
-1497|Ligue des nations
-1498|Tu as gagné la phase finale de la Ligue des nations
+1497|Ligue des sélections
+1498|Tu as gagné la phase finale de la Ligue des sélections
 1499|Séance en capsule de sieste
 1500|Coach du sommeil et lit connecté
 1501|Avion

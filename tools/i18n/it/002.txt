@@ -35,7 +35,7 @@
 684|4 partecipazioni ai gol in una partita (gol + assist)
 685|Hai segnato 5 gol in una partita
 686|Hai preso 9,0 in pagella in una partita
-687|Hai vinto la Scarpa d'Oro di una stagione
+687|Hai vinto il Trofeo del capocannoniere di una stagione
 688|Scegli una puntata e gira la ruota.
 689|Ti sei concentrato sulla prossima partita.
 690|Un giornalista sportivo vuole intervistarti.
@@ -54,8 +54,8 @@
 703|Brasile
 704|Coppa del Brasile
 705|Campionato brasiliano
-706|Premier League Britannica
-707|Championship Britannica
+706|Prima Lega Britannica
+707|Seconda Lega Britannica
 708|Bruxelles
 709|Questa macchina costa più del mio stipendio
 710|Questo è solo l'inizio
@@ -124,12 +124,12 @@
 773|Tribuna
 774|Stato
 775|Il tuo stato
-776|MONDIALI
+776|CAMPIONATO MONDIALE
 777|A TERRA!
 778|La maglia della più grande stella dell'epoca. Morale +1 ogni settimana
 779|Mondo
-780|Coppa del Mondo
-781|Hai vinto la Coppa del Mondo
+780|Campionato Mondiale
+781|Hai vinto il Campionato Mondiale
 782|Stella mondiale
 783|Stelle mondiali
 784|Campione del mondo
@@ -169,10 +169,10 @@
 818|I tuoi oggetti
 819|FALLO!
 820|FEDERAZIONE
-821|Commissione disciplinare FIFA
-822|Sei squalificato dalla FIFA e non puoi giocare questa partita.
-823|La tua squalifica FIFA è finita. Puoi tornare in campo.
-824|Indagine FIFA in corso
+821|Commissione disciplinare federale
+822|Sei squalificato dalla federazione e non puoi giocare questa partita.
+823|La tua squalifica federale è finita. Puoi tornare in campo.
+824|Indagine federazione in corso
 825|LEGA FIAMMINGA
 826|Controllo dell'effetto e precisione del tiro.
 827|Il tuo vantaggio (sul 2°)
@@ -197,7 +197,7 @@
 846|Fondazione Scuola Calcio
 847|Album di figurine di calcio
 848|Insegui il sogno di diventare calciatore. Scegli l'anno e l'età di partenza. Il club non lo scegli tu: ti scoprono gli osservatori.
-849|I calciatori non possono scommettere. Ogni scommessa attira l'attenzione della FIFA; scommettere sulla propria partita è molto rischioso. Se vieni scoperto rischi una lunga squalifica, una multa e la perdita degli sponsor.
+849|I calciatori non possono scommettere. Ogni scommessa attira l'attenzione della federazione; scommettere sulla propria partita è molto rischioso. Se vieni scoperto rischi una lunga squalifica, una multa e la perdita degli sponsor.
 850|Il polso del calcio · Dal club al mondo
 851|Scarpe da futsal
 852|Tempesta

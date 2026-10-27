@@ -1,4 +1,4 @@
-// Avrupa kulüp kupaları ve milli turnuvalar (Dünya Kupası, Avrupa Şampiyonası)
+// Avrupa kulüp kupaları ve milli turnuvalar (Dünya Şampiyonası, Avrupa Milletler Şampiyonası)
 
 const NAT_COLORS = {
   TUR: ['#c8102e', '#ffffff'], ARG: ['#75aadb', '#ffffff'], FRA: ['#1d2c5e', '#ffffff'], ESP: ['#c8102e', '#ffcc00'],
@@ -45,7 +45,7 @@ const Cups = {
     // Şampiyonlar ve Federasyon: 32 takımlı lig aşaması (8 maç) → play-off → son 16 (güncel format)
     { id: 'ucl', name: 'Avrupa Şampiyonlar Kupası', fame: 2.2, region: 'eu', swiss: true, quota: { ENG: 4, ESP: 4, ITA: 4, GER: 4, FRA: 3, POR: 2, NED: 2, TR1: 2, BEL: 1, SCO: 1, AUT: 1, SUI: 1, GRE: 1, DEN: 1, CZE: 1 } },
     { id: 'uel', name: 'Avrupa Federasyon Kupası', fame: 1.5, region: 'eu', swiss: true, quota: { ENG: 2, ESP: 2, ITA: 2, GER: 2, FRA: 2, POR: 2, NED: 2, TR1: 2, BEL: 2, SCO: 1, AUT: 2, SUI: 2, GRE: 2, DEN: 1, CZE: 1, CRO: 2, UKR: 2, POL: 1 } },
-    { id: 'uecl', name: 'Avrupa Konferans Kupası', fame: 1.1, region: 'eu', swiss: true, quota: { ENG: 1, ESP: 1, ITA: 1, GER: 1, FRA: 1, POR: 2, NED: 2, TR1: 2, BEL: 2, SCO: 2, AUT: 2, SUI: 2, GRE: 2, DEN: 2, CZE: 2, CRO: 2, UKR: 2, POL: 3 } },
+    { id: 'uecl', name: 'Avrupa Kıta Kupası', fame: 1.1, region: 'eu', swiss: true, quota: { ENG: 1, ESP: 1, ITA: 1, GER: 1, FRA: 1, POR: 2, NED: 2, TR1: 2, BEL: 2, SCO: 2, AUT: 2, SUI: 2, GRE: 2, DEN: 2, CZE: 2, CRO: 2, UKR: 2, POL: 3 } },
     // Diğer kıtalar: 16 takımlı lig aşaması (6 maç) → ilk 8 çeyrek finale
     { id: 'csa', name: 'Güney Amerika Kupası', fame: 1.4, region: 'sa', swiss: true, quota: { BRA: 8, ARG: 8 } },
     { id: 'ccc', name: 'Kuzey Amerika Kupası', fame: 1.1, region: 'na', swiss: true, quota: { USA: 8, MEX: 8 } },
@@ -447,7 +447,7 @@ const Cups = {
     let size = type === 'wc' ? 16 : type === 'nl' ? 4 : 8;
     while (size > pool.length) size /= 2;
     if (type === 'nl') {
-      // Uluslar Ligi: sıralamadaki en iyi 4 Avrupa takımı finallerde
+      // Milletler Ligi: sıralamadaki en iyi 4 Avrupa takımı finallerde
       const rk = Nations.ranking(s).map((x) => x.code);
       pool = pool.map((n) => n.code).sort((a, b) => rk.indexOf(a) - rk.indexOf(b)).slice(0, size);
     } else {
@@ -599,7 +599,7 @@ const Cups = {
     return (cup.teams || []).includes(s.clubId) || cup.alive.includes(s.clubId) || cup.log.some((m) => m.h === s.clubId || m.a === s.clubId);
   },
 
-  tourName(t) { return { wc: 'Dünya Kupası', euro: 'Avrupa Şampiyonası', nl: 'Uluslar Ligi Finalleri' }[t] || ''; },
+  tourName(t) { return { wc: 'Dünya Şampiyonası', euro: 'Avrupa Milletler Şampiyonası', nl: 'Milletler Ligi Finalleri' }[t] || ''; },
 };
 
 // Milli takım sıralaması: güç + turnuva başarısı + milli maç sonuçları (puanlar yavaşça güce döner)
@@ -634,7 +634,7 @@ const Nations = {
     const prev = s.natPrevRank || {};
     const me = s.player.nation;
     const ty = [0, 1, 2, 3, 4].map((k) => s.season.year + k).map((y) => ({ y, t: Cups.tourType(y) })).filter((x) => x.t);
-    const hist = (s.cupHistory || []).filter((h) => /Dünya Kupası|Avrupa Şampiyonası|Uluslar Ligi/.test(h.comp)).slice(0, 10);
+    const hist = (s.cupHistory || []).filter((h) => /Dünya Şampiyonası|Avrupa Milletler Şampiyonası|Milletler Ligi/.test(h.comp)).slice(0, 10);
     const p = s.player;
     return `<section class="card nat-rank">
       <div class="card-h"><span>${Icon('shield')} Milli Takım Sıralaması</span><small class="muted">${s.season.year}</small></div>

@@ -1,4 +1,4 @@
-1000|CONFERÊNCIA
+1000|CONTINENTAL
 1001|ESCANTEIO!
 1002|CORRA!
 1003|AMÉRICA DO NORTE
@@ -65,10 +65,10 @@
 1064|Fácil
 1065|Braços para cima
 1066|Braços bem abertos, inclinando de um lado para o outro enquanto corre.
-1067|C. Conferência
-1068|Copa da Conferência
-1069|Noite de Copa da Conferência
-1070|Glória na Conferência
+1067|C. Continental
+1068|Copa Continental
+1069|Noite de Copa Continental
+1070|Glória continental
 1071|Kit de cones e estacas
 1072|Contra-ataque!
 1073|O adversário chegou antes na bola no contra-ataque.
