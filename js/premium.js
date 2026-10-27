@@ -4,12 +4,89 @@ const PREMIUM_ID = 'starfoot_premium';
 // Premium açık; şimdilik yalnız iPhone'da (Google Play'de ürün tanımlanınca 'android' eklenir)
 const PREMIUM_ENABLED = true;
 const PREMIUM_PLATFORMS = ['ios'];
+
+// RevenueCat (App Store satın almaları). Herkese açık SDK anahtarı; gizli değildir.
+const RC_KEYS = { ios: 'appl_tpkurfIlsSGEYVvWSdgVWMUUnDt' };
+const RC_ENT = { starfoot_football_career_pro: 'starfoot_premium', wc: 'starfoot_wc', legends: 'starfoot_legends' };
+// Oyunun geri kalanı eski eklentinin (getProducts / getPurchases / purchaseProduct / restorePurchases)
+// biçimini kullanır; bu katman aynı biçimi RevenueCat üzerinden verir.
+const RCStore = {
+  cfg: null, info: null, prods: {},
+  rc() { return window.Capacitor.Plugins.Purchases; },
+  ready() {
+    if (!RCStore.cfg) {
+      RCStore.cfg = (async () => {
+        const R = RCStore.rc();
+        const key = RC_KEYS[window.Capacitor.getPlatform()];
+        if (!key) throw new Error('no key');
+        const c = await R.isConfigured().catch(() => ({ isConfigured: false }));
+        if (!c || !c.isConfigured) await R.configure({ apiKey: key });
+        // RevenueCat'ten önce yapılmış satın almalar bir kez aktarılır (StoreKit 2'de giriş istemez)
+        let synced = false;
+        try { synced = localStorage.getItem('starfoot_rc_synced') === '1'; } catch (e) { /* yok */ }
+        if (!synced) {
+          try { await R.syncPurchases(); localStorage.setItem('starfoot_rc_synced', '1'); } catch (e) { /* sonra yeniden denenir */ }
+        }
+      })();
+      RCStore.cfg.catch(() => { RCStore.cfg = null; });
+    }
+    return RCStore.cfg;
+  },
+  // CustomerInfo -> eski biçimde satın alma listesi
+  list(info) {
+    const out = [];
+    const seen = new Set();
+    ((info && info.nonSubscriptionTransactions) || []).forEach((t) => {
+      if (t && t.productIdentifier && !seen.has(t.productIdentifier)) { seen.add(t.productIdentifier); out.push({ productIdentifier: t.productIdentifier, transactionId: t.transactionIdentifier, purchaseState: 'purchased' }); }
+    });
+    const act = (info && info.entitlements && info.entitlements.active) || {};
+    Object.entries(RC_ENT).forEach(([ent, pid]) => { if (act[ent] && !seen.has(pid)) { seen.add(pid); out.push({ productIdentifier: pid, purchaseState: 'purchased' }); } });
+    return out;
+  },
+  async getProducts({ productIdentifiers }) {
+    await RCStore.ready();
+    const r = await RCStore.rc().getProducts({ productIdentifiers, type: 'NON_SUBSCRIPTION' });
+    const products = ((r && r.products) || []).map((p) => {
+      RCStore.prods[p.identifier] = p;
+      return { identifier: p.identifier, priceString: p.priceString, price: p.price, currencyCode: p.currencyCode, title: p.title };
+    });
+    return { products };
+  },
+  async getPurchases() {
+    await RCStore.ready();
+    const r = await RCStore.rc().getCustomerInfo();
+    RCStore.info = r && r.customerInfo;
+    return { purchases: RCStore.list(RCStore.info) };
+  },
+  async purchaseProduct({ productIdentifier }) {
+    await RCStore.ready();
+    if (!RCStore.prods[productIdentifier]) await RCStore.getProducts({ productIdentifiers: [productIdentifier] });
+    const product = RCStore.prods[productIdentifier];
+    if (!product) throw new Error('product not found');
+    try {
+      const r = await RCStore.rc().purchaseStoreProduct({ product });
+      RCStore.info = r && r.customerInfo;
+      const t = r && r.transaction;
+      return { productIdentifier, transactionId: t && t.transactionIdentifier };
+    } catch (e) {
+      if (e && (e.userCancelled || (e.data && e.data.userCancelled) || String(e.code) === '1' || /cancel/i.test(String(e.message || '')))) throw new Error('cancelled');
+      throw e;
+    }
+  },
+  async restorePurchases() {
+    await RCStore.ready();
+    const r = await RCStore.rc().restorePurchases();
+    RCStore.info = r && r.customerInfo;
+    return { purchases: RCStore.list(RCStore.info) };
+  },
+};
 const Premium = {
   active: PREMIUM_ENABLED && (() => { try { return localStorage.getItem('starfoot_premium') === '1'; } catch (e) { return false; } })(),
   price: '',
   plugin() {
     const C = window.Capacitor;
     if (!C || !C.isNativePlatform || !C.isNativePlatform() || !PREMIUM_PLATFORMS.includes(C.getPlatform && C.getPlatform())) return null;
+    if (C.Plugins && C.Plugins.Purchases) return RCStore;
     return C.Plugins && C.Plugins.NativePurchases ? C.Plugins.NativePurchases : null;
   },
   available() { return PREMIUM_ENABLED && !!Premium.plugin(); },
