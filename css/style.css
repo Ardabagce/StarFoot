@@ -2127,6 +2127,8 @@ button, .btn, a, [data-act], [data-tab] { touch-action: manipulation; -webkit-ta
 .ig-btns button { text-align: center; padding: 7px 0; border-radius: 8px; background: #262626; font-size: 14px; font-weight: 600; color: #f5f5f5; border: 0; font-family: inherit; cursor: pointer; }
 .igv-gold { filter: drop-shadow(0 0 4px rgba(245, 180, 0, .55)); }
 .star-perks li { line-height: 1.35; }
+.star-perks li b { display: block; }
+.star-perks li small { display: block; color: var(--muted, #9aa4b5); font-size: 12.5px; }
 
 .star-hub { border-color: rgba(255, 207, 63, .35); background: linear-gradient(160deg, rgba(255, 207, 63, .10), rgba(20, 34, 79, .85) 55%); }
 .star-hub .st-badge { display: inline-flex; align-items: center; gap: 4px; font-family: var(--display); font-weight: 800; font-size: 13px; color: #ffcf3f; letter-spacing: .04em; }
@@ -2258,3 +2260,25 @@ body.sp-open { overflow: hidden; }
 .doc-tap.r { right: 0; width: 65%; }
 .doc-end { position: absolute; left: 20px; right: 20px; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); z-index: 3; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .doc-end.hidden { display: none; }
+
+/* Premium tadımlık */
+.st-free { position: absolute; top: -9px; right: 10px; font-style: normal; font-size: 10px; font-weight: 800; padding: 2px 7px; border-radius: 99px; background: linear-gradient(135deg, #ffe27a, #f5b400); color: #2a1d00; letter-spacing: .02em; }
+.st-tile.free { border-color: rgba(245, 180, 0, .55); }
+.sp-taste { display: flex; align-items: center; gap: 10px; padding: 9px 14px; background: #fff7d6; border-bottom: 1px solid #f0d77a; color: #3d3000; font: 13px/1.35 -apple-system, system-ui, sans-serif; }
+.sp-taste > svg { width: 18px; height: 18px; flex: none; color: #c98a00; }
+.sp-taste span { flex: 1; }
+.sp-taste b { display: block; }
+.sp-taste .btn { flex: none; padding: 7px 14px; font-size: 13px; background: linear-gradient(135deg, #ffe27a, #f5b400); color: #2a1d00; border: 0; }
+.stu-try { margin: -4px 0 10px; padding: 8px 12px; border-radius: 10px; background: rgba(245, 180, 0, .14); color: #ffd46a; font-size: 13px; }
+.stu-try svg { width: 14px; height: 14px; vertical-align: -2px; }
+
+/* Güncelleme duyurusu */
+.wn h2 { margin: 6px 0 12px; }
+.wn-l { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.wn-l li { display: flex; gap: 10px; align-items: flex-start; padding: 9px 11px; border-radius: 12px; background: rgba(255, 255, 255, .05); }
+.wn-l i { font-style: normal; font-size: 20px; line-height: 1.2; }
+.wn-l b { display: block; }
+.wn-l small { color: var(--muted, #9aa4b5); font-size: 12.5px; line-height: 1.35; }
+.wn-note { margin: 12px 0 0; padding: 10px 12px; border-radius: 12px; background: rgba(245, 180, 0, .14); color: #ffd46a; font-size: 13.5px; }
+.wn-note.ok { background: rgba(48, 209, 88, .14); color: #8af0a8; }
+.wn-note svg { width: 15px; height: 15px; vertical-align: -2px; }

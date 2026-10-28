@@ -15,25 +15,48 @@ const LUX = [
 
 const Star = {
   has() { return typeof Premium !== 'undefined' && Premium.active; },
+  // Ayrıcalıklar yalnız Premium'un satın alınabildiği yerde (iOS) ya da Premium sahiplerine görünür
+  on() { return Star.has() || (typeof Premium !== 'undefined' && Premium.available()) || !!window.SF_PREVIEW; },
 
   // Premium olmayanlara ayrıcalıkların tanıtımı
-  pitch(feat) {
+  pitch(feat, src, after) {
     const can = typeof Premium !== 'undefined' && Premium.available();
+    src = src || 'perks';
+    if (typeof Premium !== 'undefined') Premium.track('premium_view', { source: src });
     const btns = [{ t: 'Kapat', cls: 'btn-ghost' }];
-    if (can) btns.push({ t: `${Icon('star')} Premium al${Premium.price ? ` · ${U.esc(Premium.price)}` : ''}`, cls: 'btn-big', fn: () => Premium.buy() });
+    if (can) btns.push({ t: `${Icon('star')} Premium al${Premium.price ? ` · ${U.esc(Premium.price)}` : ''}`, cls: 'btn-big', fn: () => { Premium.src = src; Premium.buy(); } });
     Game.modal(`<div class="ev-tag">Premium ayrıcalığı</div><h2>${Icon('star')} Yıldız gibi yaşa</h2>
-      ${feat ? `<p><b>${U.esc(feat)}</b> StarFoot Premium'a özel.</p>` : ''}
+      ${after ? `<p>${after}</p>` : feat ? `<p><b>${U.esc(feat)}</b> StarFoot Premium'a özel.</p>` : ''}
       ${Star.perksHtml()}
       <p class="muted">${can ? 'Tek seferlik satın alma, tüm kariyerlerinde geçerli.' : 'StarFoot Premium App Store uygulamasında satın alınabilir.'}</p>`, btns, { wide: true });
   },
 
+  // Tadımlık: Premium olmayan oyuncu Starpedia'yı ve belgeseli bir kez tam açabilir
+  TASTE: 'starfoot_taste',
+  tasted(k) { try { return !!JSON.parse(localStorage.getItem(Star.TASTE) || '{}')[k]; } catch (e) { return true; } },
+  taste(k) {
+    let t = {};
+    try { t = JSON.parse(localStorage.getItem(Star.TASTE) || '{}'); } catch (e) { /* yok */ }
+    t[k] = Date.now();
+    try { localStorage.setItem(Star.TASTE, JSON.stringify(t)); } catch (e) { /* yok */ }
+    if (typeof Premium !== 'undefined') Premium.track('premium_taste', { feature: k });
+  },
+  // Premium yoksa: tadımlık hakkı varsa kullanır (true), yoksa tanıtımı açar (false)
+  gate(k, feat) {
+    if (Star.has()) return 'full';
+    if (!Star.tasted(k)) { Star.taste(k); return 'taste'; }
+    Star.pitch(feat, k);
+    return '';
+  },
+  free(k) { return !Star.has() && !Star.tasted(k); },
+
   perksHtml() {
     return `<ul class="prem-l star-perks">
-      <li><b>Altın onay rozeti</b> ve kendi <b>Starpedia</b> sayfan</li>
-      <li><b>Lüks yaşam vitrini:</b> süper arabalar, villalar, yat ve özel jet</li>
-      <li><b>Transfer talebi:</b> istediğin an kulüplerden teklif iste</li>
-      <li><b>Görünüm stüdyosu</b> ve <b>kariyer belgeseli</b></li>
-      <li><b>Reklamsız:</b> geçiş reklamı yok, ödüller reklam izlemeden</li>
+      <li><b>Altın onay rozeti ve Starpedia</b><small>Kendi ansiklopedi sayfan</small></li>
+      <li><b>Lüks yaşam vitrini</b><small>Süper arabalar, villalar, yat ve özel jet</small></li>
+      <li><b>Transfer talebi</b><small>İstediğin an kulüplerden teklif iste</small></li>
+      <li><b>Görünüm stüdyosu ve kariyer belgeseli</b><small>Tarzını seç, hikâyeni izle</small></li>
+      <li><b>Reklamsız</b><small>Geçiş reklamı yok, ödüller reklam izlemeden</small></li>
     </ul>`;
   },
 
@@ -48,10 +71,13 @@ const Star = {
 
   // Profil sekmesindeki ayrıcalık kartı
   hubCard() {
-    if (!Game.p) return '';
+    if (!Game.p || !Star.on()) return '';
     const on = Star.has();
     const lock = on ? '' : `<i class="st-lock">${Icon('star')}</i>`;
-    const tile = (k, ic, t, d) => `<button class="st-tile ${on ? '' : 'locked'}" data-star="${k}"><span class="st-ic">${Icon(ic)}</span><span class="st-t"><b>${t}</b><small>${d}</small></span>${lock}</button>`;
+    const tile = (k, ic, t, d) => {
+      const fr = k === 'studio' ? !on : (k === 'wiki' || k === 'doc') && Star.free(k);
+      return `<button class="st-tile ${on ? '' : 'locked'} ${fr ? 'free' : ''}" data-star="${k}"><span class="st-ic">${Icon(ic)}</span><span class="st-t"><b>${t}</b><small>${d}</small></span>${fr ? `<i class="st-free">${k === 'studio' ? 'Dene' : '1 kez ücretsiz'}</i>` : lock}</button>`;
+    };
     return `<section class="card star-hub ${on ? 'on' : ''}">
       <div class="card-h"><span>${Icon('star')} Yıldız Ayrıcalıkları</span>${on ? `<span class="st-badge">${Star.gold()} Premium</span>` : '<small class="muted">Premium</small>'}</div>
       <div class="st-grid">
@@ -69,11 +95,13 @@ const Star = {
   BOOTS: ['#16181d', '#f4f4f4', '#ff3b30', '#ffd60a', '#30d158', '#0a84ff', '#ff6ec7', '#f5b400'],
   studio() {
     const p = Game.p;
-    if (!Star.has()) return Star.pitch('Görünüm stüdyosu');
+    const on = Star.has();
+    if (!on && typeof Premium !== 'undefined') Premium.track('premium_taste', { feature: 'studio' });
     const cur = Object.assign({ boots: '#16181d' }, Sprites.me(p));
     const sw = (k, list) => list.map((c) => `<button class="stu-sw ${cur[k] === c ? 'on' : ''}" data-k="${k}" data-v="${c}" style="background:${c}" aria-label="${c}"></button>`).join('');
     const m = Game.modal(`<div class="studio">
       <h2>${Icon('smile')} Görünüm Stüdyosu</h2>
+      ${on ? '' : `<p class="stu-try">${Icon('star')} Dilediğin kadar dene. Kaydetmek Premium'a özel.</p>`}
       <div class="stu-wrap"><canvas class="stu-cv" width="320" height="400"></canvas>
       <div class="stu-opts">
         <div class="lbl">Ten rengi</div><div class="stu-row">${sw('skin', SKINS)}</div>
@@ -84,7 +112,7 @@ const Star = {
       </div></div></div>`, [
       { t: 'Varsayılan', cls: 'btn-ghost', keep: true, fn: () => { Object.assign(cur, Sprites.look(7), { boots: '#16181d' }); sync(); } },
       { t: 'Vazgeç', cls: 'btn-ghost' },
-      { t: 'Kaydet', cls: 'btn-big', fn: () => { p.look = Object.assign({}, cur); if (typeof SocialArt !== 'undefined') SocialArt.cache.clear(); Game.save(); Game.render(); Game.toast('Yeni görünümün kaydedildi.', 'good'); } },
+      { t: on ? 'Kaydet' : `${Icon('star')} Kaydet`, cls: 'btn-big', fn: () => { if (!on) return setTimeout(() => Star.pitch('Görünüm stüdyosu', 'studio', 'Yeni görünümün çok yakıştı! Kaydetmek ve maçlarda, Instagram\'da bu görünümle çıkmak için Premium gerekir.'), 60); p.look = Object.assign({}, cur); if (typeof SocialArt !== 'undefined') SocialArt.cache.clear(); Game.save(); Game.render(); Game.toast('Yeni görünümün kaydedildi.', 'good'); } },
     ], { wide: true });
     const cv = m.querySelector('.stu-cv');
     const draw = () => {
@@ -116,12 +144,12 @@ const Star = {
   // ---------- Transfer talebi ----------
   transferReq() {
     const s = Game.state, p = Game.p;
-    if (!Star.has()) return Star.pitch('Transfer talebi');
+    if (!Star.has()) return Star.pitch('Transfer talebi', 'transfer');
     if (Game.inStreet() || Game.isYouth()) return Game.toast('Transfer talebi profesyonel sözleşmeyle açılır.', 'info');
     const half = s.season.round < Game.rounds() / 2 ? 1 : 2;
     if (s.tReq && s.tReq.y === s.season.year && s.tReq.h === half) return Game.toast('Bu devre için zaten transfer talebinde bulundun.', 'info');
     if (s.offers && s.offers.some((o) => o.req)) return Game.toast('Menajerinin getirdiği teklifler hâlâ masada.', 'info');
-    Game.modal(`<h3>${Icon('mail')} Transfer talebi</h3><p>Menajerin kulüplerle görüşüp sana teklif toplayacak. Teklifler <b>2 hafta</b> geçerli olur.</p><p class="muted">Kulübünden ayrılmak istediğini duyurmak hocanı ve taraftarı biraz kırabilir.</p>`, [
+    Game.modal(`<h3>${Icon('mail')} Transfer talebi</h3><p>Menajerin kulüplerle görüşüp sana teklif toplayacak. Teklifler 2 hafta geçerli olur.</p><p class="muted">Kulübünden ayrılmak istediğini duyurmak hocanı ve taraftarı biraz kırabilir.</p>`, [
       { t: 'Vazgeç', cls: 'btn-ghost' },
       { t: 'Talep et', cls: 'btn-big', fn: () => {
         const offers = Game.makeOffers(Math.max(3, Game.offerCount(3, 5)), false, (s.offers || []).map((o) => o.clubId))
@@ -203,7 +231,7 @@ const Star = {
       if (L.gf) out.push(S(L.gf.married ? `${U.esc(L.gf.name)} ile evlidir.` : `${L.gf.since} yılından beri ${U.esc(L.gf.name)} ile birliktedir.`));
       if (L.sponsors && L.sponsors.length) out.push(S(`${L.sponsors.length} sponsorluk anlaşması bulunmaktadır.`));
       const lux = (p.lux || []).map((id) => (LUX.find((x) => x.id === id) || {}).n).filter(Boolean);
-      if (lux.length) out.push(S(`Koleksiyonunda ${lux.map((x) => U.esc(x.toLocaleLowerCase('tr'))).join(', ')} bulunmaktadır.`));
+      if (lux.length) out.push(`<span>Koleksiyonu:</span> ${lux.map((x) => `<span>${U.esc(x)}</span>`).join(', ')}.`);
       const so = p.social;
       if (so && so.followers) out.push(S(`Sosyal medyada ${Social.fmt(so.followers)} takipçisi vardır.`));
       if (!out.length) out.push(S('Özel hayatını gözlerden uzak yaşamayı tercih etmektedir.'));
@@ -219,7 +247,8 @@ const Star = {
   },
 
   wiki(p, s) {
-    if (!Star.has()) return Star.pitch('Starpedia sayfası');
+    const mode = document.getElementById('spedia') ? (Star.has() ? 'full' : 'taste') : Star.gate('wiki', 'Starpedia sayfası');
+    if (!mode) return;
     const d = Star.data(p, s);
     p = d.p; s = d.s;
     const t = p.totals;
@@ -236,7 +265,7 @@ const Star = {
       return `<h3>${U.esc(g.club)} (${g.from === g.to ? g.from : `${g.from}–${g.to}`})</h3><p>
         ${tr ? `<span>${tr.fee ? `${U.esc(tr.from)} kulübünden ${U.money(tr.fee)} bonservisle transfer oldu.` : `${U.esc(tr.from)} kulübünden bonservissiz olarak katıldı.`}</span> ` : ''}
         <span>${g.n} sezonda ${g.apps} maça çıktı, ${g.goals} gol ve ${g.assists} asist üretti.</span>
-        ${ts.length ? ` <span>Bu dönemde kazandığı başarılar: ${ts.map(U.esc).join(', ')}.</span>` : ''}</p>`;
+        ${ts.length ? ` <span>Bu dönemde kazandığı başarılar:</span> ${ts.map((x) => `<span>${U.esc(x)}</span>`).join(', ')}.` : ''}</p>`;
     }).join('') : '<p><span>Henüz profesyonel kariyerine başlamamıştır.</span></p>';
     const intlSec = intl.length ? `<p>${intl.map(([n, c, g]) => `<span>${n} formasıyla ${c} maçta ${g} gol attı.</span>`).join(' ')}</p>` : '<p><span>Henüz millî takım formasıyla sahaya çıkmamıştır.</span></p>';
     const live = typeof UI !== 'undefined' && UI.liveSeason ? UI.liveSeason() : null;
@@ -255,6 +284,7 @@ const Star = {
     const el = document.createElement('div');
     el.id = 'spedia';
     el.className = 'sp';
+    if (mode === 'taste') el.dataset.taste = '1';
     el.innerHTML = `
       <div class="sp-bar"><button class="sp-x" data-star="wiki-close" aria-label="Kapat">${Icon('close')}</button>
         <div class="sp-logo"><b>STARPEDIA</b><small>Özgür futbol ansiklopedisi</small></div>
@@ -265,7 +295,7 @@ const Star = {
         <div class="sp-tabs"><span class="on">Madde</span><span>Tartışma</span><i></i><span class="on">Oku</span><span>Değiştir</span><span>Geçmiş</span></div>
         <table class="sp-info">
           <caption data-noi18n>${full}</caption>
-          <tr><td colspan="2" class="sp-img"><canvas class="sp-fig" width="300" height="300"></canvas><div class="sp-cap">${full}, ${d.year} yılında${cur ? ` ${U.esc(cur.name)} formasıyla` : ''}</div></td></tr>
+          <tr><td colspan="2" class="sp-img"><canvas class="sp-fig" width="300" height="300"></canvas><div class="sp-cap"><span data-noi18n>${full}</span> · ${d.year}${cur ? ` · ${U.esc(cur.name)}` : ''}</div></td></tr>
           <tr><th colspan="2" class="sp-h">Kişisel bilgiler</th></tr>
           ${infoRows([['Tam adı', `<span data-noi18n>${full}</span>`], ['Doğum tarihi', `${d.birth} <small>(${p.age} yaşında)</small>`], ['Doğum yeri', U.esc(d.nat.name)], ['Boyu', `1,${String(height).slice(1)} m`], ['Mevkii', POSITIONS[p.position].l], ['Ayağı', p.foot === 'L' ? 'Sol' : 'Sağ']])}
           ${cur ? `<tr><th colspan="2" class="sp-h">Kulüp bilgileri</th></tr>${infoRows([['Şu anki takımı', U.esc(Game.teamName())], ['Forma numarası', p.shirt]])}` : ''}
@@ -288,9 +318,15 @@ const Star = {
         <h2 id="sp-records">Rekorlar</h2>${rec ? `<ul>${rec}</ul>` : '<p><span>Rekorlar kariyer ilerledikçe burada yer alır.</span></p>'}
         <h2 id="sp-matches">Önemli maçlar</h2>${matches}
         <div class="sp-doc"><button class="btn" data-star="doc">${Icon('play')} Kariyer belgeselini izle</button></div>
-        <div class="sp-cats"><b>Kategoriler:</b> ${cats.map((c) => `<a data-noi18n>${U.esc(c)}</a>`).join(' | ')}</div>
+        <div class="sp-cats"><b>Kategoriler:</b> ${cats.map((c) => `<a>${U.esc(c)}</a>`).join(' | ')}</div>
         <div class="sp-foot">Bu sayfa en son ${d.year} sezonunda, ${s.season.round + 1}. haftada değiştirildi. İçerik StarFoot evreninde geçer; tüm kişi ve kulüpler kurgusaldır.</div>
       </article>`;
+    if (mode === 'taste') {
+      const tb = document.createElement('div');
+      tb.className = 'sp-taste';
+      tb.innerHTML = `${Icon('star')}<span><b>Ücretsiz önizleme</b> Starpedia sayfanı bir kez görüyorsun. Premium ile her zaman açık.</span><button class="btn" data-star="pitch" data-src="wiki_banner">Premium</button>`;
+      el.insertBefore(tb, el.children[1] || null);
+    }
     document.body.appendChild(el);
     document.body.classList.add('sp-open');
     if (typeof UI !== 'undefined' && UI.strip) UI.strip(el);
@@ -303,12 +339,15 @@ const Star = {
     Sprites.figure(c, 150, 288, 268, { kit: Sprites.kit(club, false), look: Sprites.me(p), facing: 'down', number: p.shirt, t: 0 });
     el.scrollTop = 0;
   },
-  wikiClose() {
+  wikiClose(quiet) {
     const el = document.getElementById('spedia');
+    const taste = el && el.dataset.taste && !quiet;
     if (el) el.remove();
     document.body.classList.remove('sp-open');
+    if (taste) Star.pitch('Starpedia sayfası', 'wiki_taste', 'Starpedia sayfana göz attın! Premium ile sayfan her zaman açık, her sezon kendiliğinden güncellenir ve bölümlerini sen yazabilirsin.');
   },
   wikiEdit(key) {
+    if (!Star.has()) { return Star.pitch('Starpedia sayfası', 'wiki_edit', 'Sayfanı kendin yazmak Premium\'a özel. Premium ile giriş, erken yaşamı, oyun tarzı ve kişisel yaşamı bölümlerini dilediğin gibi yazabilirsin.'); }
     const p = Game.p, d = Star.data();
     p.wiki = p.wiki || {};
     const names = { lead: 'Giriş', early: 'Erken yaşamı', style: 'Oyun tarzı', personal: 'Kişisel yaşamı' };
@@ -328,7 +367,7 @@ const Star = {
   reopen() {
     const el = document.getElementById('spedia');
     const y = el ? el.scrollTop : 0;
-    Star.wikiClose();
+    Star.wikiClose(true);
     Star.wiki();
     const n = document.getElementById('spedia');
     if (n) n.scrollTop = y;
@@ -354,7 +393,8 @@ const Star = {
     return ch;
   },
   doc(p, s) {
-    if (!Star.has()) return Star.pitch('Kariyer belgeseli');
+    const mode = Star.gate('doc', 'Kariyer belgeseli');
+    if (!mode) return;
     p = p || Game.p;
     const ch = Star.chapters(p, s);
     let i = 0, timer = 0;
@@ -368,7 +408,10 @@ const Star = {
       <div class="doc-tap l"></div><div class="doc-tap r"></div>`;
     document.body.appendChild(el);
     const cv = el.querySelector('.doc-cv');
-    const close = () => { clearTimeout(timer); el.remove(); };
+    const close = () => {
+      clearTimeout(timer); el.remove();
+      if (mode === 'taste') Star.pitch('Kariyer belgeseli', 'doc_taste', 'Belgeselin hazır! Premium ile kariyerin ilerledikçe belgeselini istediğin zaman yeniden izleyip paylaşabilirsin.');
+    };
     const show = (k) => {
       i = U.clamp(k, 0, ch.length - 1);
       const x = ch[i];
@@ -410,7 +453,7 @@ const Star = {
   },
   luxCard() {
     const p = Game.p;
-    if (!p || Game.inStreet()) return '';
+    if (!p || Game.inStreet() || !Star.on()) return '';
     const on = Star.has();
     const own = p.lux || [];
     const worth = LUX.filter((x) => own.includes(x.id)).reduce((a, x) => a + x.price, 0);
@@ -427,11 +470,11 @@ const Star = {
   buyLux(id) {
     const p = Game.p, x = LUX.find((q) => q.id === id);
     if (!x) return;
-    if (!Star.has()) return Star.pitch('Lüks yaşam vitrini');
+    if (!Star.has()) return Star.pitch('Lüks yaşam vitrini', 'lux');
     p.lux = p.lux || [];
     if (p.lux.includes(id)) return Game.toast(`${x.n} zaten koleksiyonunda.`, 'info');
     if (p.money < x.price) return Game.toast(`Bunun için ${U.money(x.price - p.money)} daha biriktirmelisin.`, 'bad');
-    Game.modal(`<div class="lux-buy"><span class="lux-art big a-${x.art}">${Star.luxArt(x.art)}</span><h3>${x.n}</h3><p><b>${U.money(x.price)}</b> · Satın aldığında sosyal medyada paylaşırsın.</p></div>`, [
+    Game.modal(`<div class="lux-buy"><span class="lux-art big a-${x.art}">${Star.luxArt(x.art)}</span><h3>${x.n}</h3><p class="lux-price"><b>${U.money(x.price)}</b></p><p class="muted">Satın aldığında sosyal medyada paylaşırsın.</p></div>`, [
       { t: 'Vazgeç', cls: 'btn-ghost' },
       { t: 'Satın al', cls: 'btn-big', fn: () => {
         p.money -= x.price;
@@ -461,5 +504,42 @@ document.addEventListener('click', (e) => {
   else if (k === 'studio') Star.studio();
   else if (k === 'transfer') Star.transferReq();
   else if (k === 'lux') Star.buyLux(b.dataset.id);
-  else if (k === 'pitch') Star.pitch();
+  else if (k === 'pitch') Star.pitch(null, b.dataset.src || 'lux');
 });
+
+// ---------- Güncelleme duyurusu (her sürümde bir kez) ----------
+const APP_VER = '1.0.9';
+const WhatsNew = {
+  KEY: 'starfoot_whatsnew',
+  // Hub'a girişte bir kez gösterir; gösterdiyse true döner. done(): pencere kapanınca çalışır.
+  check(done) {
+    let seen = '';
+    try { seen = localStorage.getItem(WhatsNew.KEY) || ''; } catch (e) { return false; }
+    if (seen === APP_VER || !Game.state || Game.state.seasonEnd) return false;
+    if (!document.getElementById('modal').classList.contains('hidden')) return false;
+    try { localStorage.setItem(WhatsNew.KEY, APP_VER); } catch (e) { /* yok */ }
+    const prem = Star.on(), has = Star.has();
+    const it = (ic, t, d) => `<li><i>${ic}</i><span><b>${t}</b><small>${d}</small></span></li>`;
+    const list = [
+      it('⭐', 'Yıldız transferi', 'Ünlü bir oyuncu olarak yeni takımına gittiğinde artık rotasyon yok: doğrudan ilk 11.'),
+    ].concat(prem ? [
+      it('📖', 'Starpedia', 'Kariyerinin ansiklopedi sayfası: istatistikler, rekorlar, önemli maçlar. Bölümlerini kendin yaz.'),
+      it('🎬', 'Kariyer belgeseli', 'Mahalle maçlarından zirveye, hikâyen bölüm bölüm. İzle ve paylaş.'),
+      it('🏎️', 'Lüks yaşam vitrini', 'Spor araba, villa, yat ve özel jet. Al, Instagram\'da paylaş.'),
+      it('✂️', 'Görünüm stüdyosu', 'Saç, sakal, ten ve krampon rengi. Maçlarda da bu görünümle çık.'),
+      it('📨', 'Transfer talebi', 'Menajerin istediğin an kulüplerden teklif toplasın.'),
+      it('✅', 'Altın onay rozeti', 'Oyun içi Instagram\'da altın tik.'),
+    ] : []).join('');
+    const foot = !prem ? '' : has
+      ? `<p class="wn-note ok">${Icon('star')} Premium'un var: hepsi senin için açık!</p>`
+      : `<p class="wn-note">${Icon('star')} Yeni ayrıcalıklar Premium'a özel. Starpedia sayfanı ve belgeselini bir kez ücretsiz deneyebilirsin.</p>`;
+    const end = () => { if (done) setTimeout(done, 300); };
+    const btns = [{ t: prem ? 'Sonra' : 'Tamam', cls: 'btn-ghost', fn: end }];
+    if (prem) btns.push({ t: has ? `${Icon('news')} Starpedia'mı aç` : `${Icon('news')} Ücretsiz dene`, cls: 'btn-big', fn: () => { if (typeof Premium !== 'undefined') Premium.track('whatsnew_try', { premium: has ? 1 : 0 }); setTimeout(() => Star.wiki(), 60); } });
+    Game.modal(`<div class="wn"><div class="ev-tag">Yeni güncelleme · ${APP_VER}</div>
+      <h2>${prem ? 'Yıldız gibi yaşa ⭐' : 'Yenilikler'}</h2>
+      <ul class="wn-l">${list}</ul>${foot}</div>`, btns, { wide: true });
+    if (typeof Premium !== 'undefined') Premium.track('whatsnew_view', { ver: APP_VER, premium: has ? 1 : 0 });
+    return true;
+  },
+};

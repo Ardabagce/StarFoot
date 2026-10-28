@@ -685,7 +685,7 @@ const Social = {
           </div>
         </div>
         <div class="ig-bio"><b>${U.esc(Player.fullName(p))}</b><small>${cat}</small><span>${U.esc(bio)}</span></div>
-        <div class="ig-btns"><button data-star="studio">Profili düzenle</button><button data-star="wiki">Starpedia</button></div>
+        ${typeof Star !== 'undefined' && Star.on() ? '<div class="ig-btns"><button data-star="studio">Profili düzenle</button><button data-star="wiki">Starpedia</button></div>' : ''}
         ${tr.length ? `<div class="ig-hl">${tr.map((x) => `<div class="ig-st ${x.kind}" data-trend="${U.esc(x.n)}"><i><canvas data-story="${U.esc(x.n)}"></canvas></i><small>${U.esc(x.n.split(' ').slice(-1)[0])}</small></div>`).join('')}</div>` : ''}
         <div class="ig-tabs"><span class="on">${IG.grid()}</span><span>${IG.reels()}</span><span>${IG.tag()}</span></div>
         ${so.posts.length ? `<div class="ig-grid">${so.posts.slice(0, 12).map((x) => `<button class="ig-tile" data-post="${x.id}" aria-label="${U.esc(x.text)}"><canvas data-pid="${x.id}" data-crop="1"></canvas>${x.kind === 'trophy' || x.kind === 'transfer' ? `<span class="ig-badge">${IG.multi()}</span>` : ''}<span class="ig-hov">${IG.heart(true)}${Social.fmt(x.likes)}</span></button>`).join('')}</div>` : '<p class="muted">Henüz paylaşım yok.</p>'}

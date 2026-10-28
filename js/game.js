@@ -340,7 +340,9 @@ const Game = {
     Game.render();
     Game.checkPending();
     // yeni kariyerde hoş geldin penceresiyle çakışmasın; günlük ödül sonraki girişte
-    if (typeof Daily !== 'undefined' && !Game._fresh) setTimeout(() => { if (Game.state && !document.getElementById('hub').classList.contains('hidden')) Daily.check(); }, 450);
+    const daily = () => { if (typeof Daily !== 'undefined' && Game.state && !document.getElementById('hub').classList.contains('hidden')) Daily.check(); };
+    // güncelleme duyurusu önce (bir kez), günlük ödül kapanınca
+    if (!Game._fresh) setTimeout(() => { if (!(typeof WhatsNew !== 'undefined' && Game.state && WhatsNew.check(daily))) daily(); }, 450);
     Game._fresh = false;
   },
 
@@ -483,11 +485,17 @@ const Game = {
     return LEAGUE_DIFF[lg] != null ? LEAGUE_DIFF[lg] : 0.52;
   },
 
+  // Ünlü ve takım seviyesine yakın bir oyuncu, yeni kulübünde de rotasyona girmez: doğrudan ilk 11.
+  isStar(ovr, teamR) {
+    const p = Game.p;
+    return !Game.isYouth() && p.fame >= 40 && ovr >= teamR - 5 && p.energy >= 35 && p.rel.coach >= 25;
+  },
+
   roleFor(ovr, teamR, youth, preview = false) {
     const p = Game.p;
     const margin = ovr - teamR + (p.rel.coach - 50) / 8 + (p.energy < 35 ? -3 : 0) + Game.diff().coach;
     if (youth) return margin >= -6 ? 'starter' : 'bench';
-    if (margin >= -3) return 'starter';
+    if (margin >= -3 || Game.isStar(ovr, teamR)) return 'starter';
     if (margin >= -12) return 'bench';
     return !preview && U.chance(0.3) ? 'bench' : 'out';
   },
@@ -941,7 +949,7 @@ const Game = {
     if (o.fee) {
       p.best = p.best || {};
       p.best.fee = Math.max(p.best.fee || 0, o.fee);
-      if (o.fee >= 20000000) Social.post('transfer', `${U.money(o.fee)}! Bu güvenin karşılığını sahada vereceğim.`, 2.2);
+      if (o.fee >= 20000000) { Social.post('transfer', `${U.money(o.fee)}! Bu güvenin karşılığını sahada vereceğim.`, 2.2); if (typeof Review !== 'undefined') Review.maybe(4000); }
     }
   },
 
@@ -1177,7 +1185,7 @@ const Game = {
         ${typeof LPath !== 'undefined' ? LPath.endHtml(s) : ''}
         ${hof ? `<div class="hof-rank">🏛️ Efsaneler Salonu'nda <b>${hof.rank}.</b> sıradasın</div>` : ''}
         ${heir ? `<div class="heir"><b>👶 Oğlunla devam et</b><small>${U.esc(heir.surname)} ailesinin ${heir.gen}. nesli · Miras: +${heir.stat} tüm yetenekler, ${heir.fame} ün${heir.money ? `, ${U.money(heir.money)}` : ''}</small><button class="btn" id="end-heir">Yeni Nesil</button></div>` : ''}
-        <div class="end-btns">${typeof Star !== 'undefined' ? `<button class="btn btn-ghost" id="end-doc">${Icon('play')} Belgeselin</button>` : ''}${shareCv ? `<button class="btn btn-ghost" id="end-share">${Icon('share')} Paylaş</button>` : ''}<button class="btn btn-big" onclick="Game.toMenu()">Ana Menü</button></div>
+        <div class="end-btns">${typeof Star !== 'undefined' && Star.on() ? `<button class="btn btn-ghost" id="end-doc">${Icon('play')} Belgeselin</button>` : ''}${shareCv ? `<button class="btn btn-ghost" id="end-share">${Icon('share')} Paylaş</button>` : ''}<button class="btn btn-big" onclick="Game.toMenu()">Ana Menü</button></div>
       </div>`;
     if (heir) el.querySelector('#end-heir').onclick = () => Legacy.continueWith(heir);
     if (el.querySelector('#end-doc')) el.querySelector('#end-doc').onclick = () => Star.doc(p, s);
@@ -2058,11 +2066,29 @@ ${UI.paper()}`;
 `;
   },
 
+  // Puan verme ve görüş bildirme: mutsuz oyuncu 1 yıldız yerine bize yazabilsin
+  feedbackCard() {
+    const C = window.Capacitor;
+    const plat = C && C.isNativePlatform && C.isNativePlatform() ? C.getPlatform() : 'web';
+    const rate = plat === 'ios' ? 'https://apps.apple.com/app/id6819292902?action=write-review'
+      : plat === 'android' ? 'https://play.google.com/store/apps/details?id=app.vercel.starfoot.twa' : '';
+    const ver = typeof APP_VER !== 'undefined' ? APP_VER : '';
+    const body = encodeURIComponent(`\n\n---\nStarFoot ${ver} · ${plat} · ${I18N.lang}`);
+    return `<section class="card settings fb-card">
+      <div class="card-h"><span>${Icon('star')} StarFoot'u birlikte büyütelim</span></div>
+      <p class="muted">Oyunu sevdiysen bir puan bırakman bizim için çok değerli. Bir şey eksik ya da hatalıysa önce bize yaz, hemen düzeltelim.</p>
+      <div class="set-links">
+        ${rate ? `<a class="btn btn-play" href="${rate}" target="_blank" rel="noopener" data-fb="rate">${Icon('star')} Puan ver</a>` : ''}
+        <a class="btn btn-ghost" href="mailto:arda@bagce.dev?subject=${encodeURIComponent(`StarFoot görüş (${ver})`)}&body=${body}" data-fb="mail">${Icon('mail')} Öneri / hata bildir</a>
+      </div>
+    </section>`;
+  },
+
   // Profil › Ayarlar: dil, zorluk, oynanış, Premium, gizlilik, oyun yönetimi
   settings() {
     const s = Game.state, p = s.player;
     const row = (label, sub, ctrl) => `<div class="set-row"><span><b>${label}</b>${sub ? `<small>${sub}</small>` : ''}</span>${ctrl}</div>`;
-    const appVer = (window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform()) ? 'StarFoot 1.0.8' : 'StarFoot (web)';
+    const appVer = (window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform()) ? `StarFoot ${typeof APP_VER !== 'undefined' ? APP_VER : ''}` : 'StarFoot (web)';
     return `
       ${typeof Premium !== 'undefined' ? Premium.card() : ''}
       <section class="card settings">
@@ -2078,6 +2104,7 @@ ${UI.paper()}`;
         ${typeof Notify !== 'undefined' && Notify.plugin() ? `<label class="drill-tg"><input type="checkbox" id="notif-tg" ${Notify.on() ? 'checked' : ''}><span><b>Bildirimler</b><small>Günlük ödül ve enerji hatırlatmaları.</small></span></label>` : ''}
         <label class="drill-tg"><input type="checkbox" id="hap-tg" ${typeof Sfx !== 'undefined' && Sfx.hap ? 'checked' : ''}><span><b>Titreşim</b><small>Golde, vuruşta ve kritik anlarda telefon titrer.</small></span></label>
       </section>
+      ${UI.feedbackCard()}
       <section class="card settings">
         <div class="card-h"><span>${Icon('shield')} Gizlilik</span></div>
         <div class="set-links">
@@ -2230,7 +2257,8 @@ ${UI.paper()}`;
     U.$$('[data-share="player"]', root).forEach((b) => (b.onclick = () => ShareCard.preview(ShareCard.player(), ShareCard.text())));
     const ntg = root.querySelector('#notif-tg');
     if (ntg) ntg.onchange = () => Notify.setOn(ntg.checked);
-    U.$$('[data-prem-buy]', root).forEach((b) => (b.onclick = () => { b.disabled = true; Premium.buy(); }));
+    U.$$('[data-fb]', root).forEach((b) => b.addEventListener('click', () => { if (typeof Premium !== 'undefined') Premium.track('feedback_' + b.dataset.fb); }));
+    U.$$('[data-prem-buy]', root).forEach((b) => (b.onclick = () => { b.disabled = true; Premium.src = 'card'; Premium.buy(); }));
     U.$$('[data-prem-restore]', root).forEach((b) => (b.onclick = () => { b.disabled = true; Premium.restore(); }));
     U.$$('[data-adreward]', root).forEach((b) => (b.onclick = () => {
       b.disabled = true;

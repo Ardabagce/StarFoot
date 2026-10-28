@@ -1,0 +1,211 @@
+4045|Hak Istimewa Bintang
+4046|Gratis 1 kali
+4044|Coba
+4047|Penampilan
+4048|Rambut, jenggot, sepatu
+4049|Minta tawaran dari klub
+4050|Halamanmu di ensiklopedia
+4051|Dokumenter
+4052|Kisah kariermu
+4053|Permintaan transfer
+4054|Pembaruan baru
+4055|Hidup bak bintang
+4056|Yang baru
+4057|Transfer bintang
+4058|Saat pindah ke klub baru sebagai pemain terkenal, tidak ada lagi rotasi: langsung jadi starter.
+4059|Halaman ensiklopedia kariermu: statistik, rekor, laga penting. Tulis sendiri bagian-bagiannya.
+4062|Dari main bola di gang hingga puncak, kisahmu bab demi bab. Tonton dan bagikan.
+4065|Etalase mewah
+4066|Etalase Mewah
+4067|Mobil sport, vila, yacht, dan jet pribadi. Beli lalu unggah di Instagram.
+4070|Studio penampilan
+4071|Studio Penampilan
+4072|Rambut, jenggot, warna kulit, dan warna sepatu. Tampil dengan gaya ini juga di laga.
+4075|Agenmu mengumpulkan tawaran klub kapan pun kamu mau.
+4076|Lencana verifikasi emas
+4077|Centang emas di Instagram dalam game.
+4078|Hak istimewa baru khusus Premium. Kamu bisa mencoba halaman Starpedia dan dokumentermu sekali secara gratis.
+4081|Coba gratis
+4082|Nanti
+4083|Kamu punya Premium: semuanya sudah terbuka!
+4084|Buka Starpedia-ku
+4085|Hak istimewa Premium
+4086|Lencana emas dan Starpedia
+4087|Halaman ensiklopedia milikmu
+4088|Mobil super, vila, yacht, dan jet pribadi
+4089|Minta tawaran klub kapan saja
+4090|Studio penampilan dan dokumenter karier
+4091|Pilih gayamu, tonton kisahmu
+4092|Tanpa iklan
+4093|Tanpa iklan interstisial, hadiah tanpa menonton iklan
+4094|khusus untuk StarFoot Premium.
+4095|Sekali beli, berlaku di semua kariermu.
+4096|StarFoot Premium dapat dibeli di aplikasi App Store.
+4097|Menulis halamanmu sendiri adalah hak istimewa Premium. Dengan Premium kamu bebas menulis bagian pembuka, masa kecil, gaya bermain, dan kehidupan pribadi.
+4100|Kamu sudah melihat halaman Starpedia-mu! Dengan Premium halamannya selalu terbuka, diperbarui tiap musim, dan kamu bisa menulis bagian-bagiannya.
+4103|Dokumentermu siap! Dengan Premium kamu bisa menonton ulang dan membagikannya kapan saja seiring kariermu berkembang.
+4106|Penampilan barumu cocok sekali! Untuk menyimpannya dan memakainya di laga serta Instagram, kamu perlu Premium.
+4109|Coba sepuasnya. Menyimpan khusus Premium.
+4112|Warna kulit
+4113|Gaya rambut
+4114|Warna rambut
+4115|Jenggot
+1082|Sepatu
+4116|Bawaan
+4117|Pendek
+4118|Cepak
+4119|Belah samping
+4120|Panjang
+4121|Keriting
+4122|Mohawk
+4123|Cepol
+4124|Botak
+4125|Penampilan barumu tersimpan.
+4126|Permintaan transfer terbuka dengan kontrak profesional.
+4127|Kamu sudah mengajukan permintaan transfer di paruh musim ini.
+4128|Tawaran dari agenmu masih ada di meja.
+4129|Agenmu akan bicara dengan klub dan mengumpulkan tawaran. Tawaran berlaku 2 minggu.
+4132|Mengumumkan ingin pergi bisa sedikit mengecewakan pelatih dan suporter.
+1430|Ajukan
+4133|Belum ada klub yang tertarik saat ini. Jaga performa dan coba lagi.
+4253|Permintaan transfermu sampai ke klub: {} klub mengajukan tawaran! Berlaku 2 minggu.
+4288|{} klub mengajukan tawaran!
+4137|Tawaran dari permintaan transfermu sudah kedaluwarsa.
+4138|Jam kronograf emas
+4139|SUV mewah hitam
+4140|Mobil sport merah
+4141|Vila tepi laut
+4142|Hypercar
+4143|Rumah megah di bukit
+4144|Yacht mewah
+4145|Jet pribadi
+4146|Teman baru di pergelangan ⌚ Waktu itu berharga.
+4148|Mobil baru, perjalanan baru 🚙
+4150|Merah selalu cocok 🏎️ Mobil baru sudah datang!
+4152|Vila baru, awal baru 🏡 Lihat pemandangannya!
+4154|0-100 hanya 2,4 detik ⚡ Bintang baru di garasi.
+4156|Rumah baru bersama keluarga: vila di atas bukit 🏰
+4158|Libur musim di yacht 🛥️ Biru di mana-mana.
+4160|Laga tandang kini pakai jet sendiri ✈️
+4162|Di koleksimu
+4287|{} sudah ada di koleksimu.
+4280|Kamu perlu menabung {} lagi untuk ini.
+4164|Setelah membeli, kamu akan membagikannya di media sosial.
+4275|{} sekarang milikmu! Postinganmu banjir like.
+4168|Ensiklopedia sepak bola bebas
+4169|Dari Starpedia, ensiklopedia sepak bola bebas
+4170|Pratinjau gratis
+4171|Kamu melihat halaman Starpedia-mu sekali. Dengan Premium selalu terbuka.
+4174|Artikel
+4175|Pembicaraan
+4176|Baca
+4177|Sunting
+4178|Riwayat
+4179|Informasi pribadi
+4180|Nama lengkap
+4181|Tanggal lahir
+4298|(usia {})
+4182|Tempat lahir
+4183|Tinggi
+1182|Posisi
+631|Kaki
+4184|Informasi klub
+4185|Tim saat ini
+4186|Nomor
+4187|Karier junior
+4188|Karier senior*
+4189|Tahun
+4190|Karier internasional
+4191|* Hanya laga dan gol liga
+4192|Total
+4256|({0}, {1}) adalah pesepak bola profesional yang bermain sebagai {3} untuk {2}.
+4257|({0}, {1}) adalah pesepak bola muda yang bermain sebagai {3} di akademi {2}.
+4254|({}, {}) adalah pesepak bola muda yang mulai dikenal di laga jalanan.
+4265|Ia mencetak {1} gol dan {2} assist dalam {0} penampilan.
+4260|Ia memenangi {} trofi dan penghargaan individu sepanjang kariernya.
+4309|Ia mencetak {2} gol dalam {1} caps untuk {0}.
+4268|Ia memenangi Bintang Emas {} kali.
+4193|[sunting]
+4194|[sunting pembuka]
+4195|Daftar isi
+4196|Masa kecil
+4197|Karier klub
+4190|Karier internasional
+4198|Gaya bermain
+4199|Kehidupan pribadi
+4200|Statistik karier
+4201|Prestasi
+4202|Rekor
+4203|Laga penting
+4255|Lahir tahun {}. Ia mulai bermain sepak bola di laga jalanan di {}.
+4289|Ibunya berasal dari {}.
+4278|Ia menghabiskan masa juniornya di {}.
+4261|Pada usia {} ia menandatangani kontrak profesional pertamanya dengan {}.
+4308|Bermain sebagai {1}, kaki terkuat: {0}. Kekuatan utamanya: {2} ({3}) dan {4} ({5}).
+4290|Ciri khusus: {}.
+4295|Ia menikah dengan {}.
+4282|Ia menjalin hubungan dengan {1} sejak {0}.
+4279|Ia memiliki {} kontrak sponsor.
+4204|Koleksi:
+4281|Ia memiliki {} pengikut di media sosial.
+4205|Ia lebih suka menjauhkan kehidupan pribadinya dari sorotan.
+4269|Dalam {} musim ia tampil {} kali, mencetak {} gol dan {} assist.
+4276|Ia didatangkan dari {0} dengan biaya {1}.
+4273|Ia bergabung dari {} dengan status bebas transfer.
+4206|Prestasi di periode ini:
+4207|Ia belum memulai karier profesionalnya.
+4284|Bersama {0} ia mencetak {2} gol dalam {1} laga.
+4208|Ia belum pernah membela tim nasional.
+4209|Ia belum memenangi trofi.
+4210|Gol terbanyak dalam semusim:
+4211|Assist terbanyak dalam semusim:
+4212|Rating musim tertinggi:
+4213|Biaya transfer rekor:
+4214|Penghargaan pemain terbaik laga:
+4215|Rekor akan muncul di sini seiring berjalannya karier.
+4216|Tahun
+4217|Lawan
+4218|Laga saat ia menjadi pemain terbaik akan tercantum di sini.
+4297|Kelahiran {}
+4296|Pemain {}
+4296|Pemain {}
+4221|Peraih Bintang Emas
+4222|Kategori:
+4252|Halaman ini terakhir disunting pada musim {}, pekan {}. Konten berlatar semesta StarFoot; semua tokoh dan klub fiktif.
+4224|Tonton dokumenter karier
+4225|Dokumenter karier
+4226|Halaman Starpedia
+4227|Pembuka
+4291|Sunting bagian: {}
+4228|Tulis kisahmu sendiri. Jika dibiarkan kosong, Starpedia menulisnya otomatis.
+4231|Teks otomatis
+4301|BAB {}
+4232|Seorang bintang lahir
+4264|{}. Seorang anak, sebuah bola, dan laga jalanan tanpa akhir.
+4234|Tahun-tahun akademi
+4274|Di akademi {} ia berkembang sedikit demi sedikit setiap hari.
+4235|Kontrak profesional pertama
+4272|Kontrak profesional pertama dengan {1}, di usia {0}.
+4236|Transfer raksasa
+4266|{} membayar {}. Semua mata kini tertuju padanya.
+4238|Musim puncak
+4286|{1} gol dan {2} assist bersama {0}.
+4239|Momen juara
+3260|{} trofi dan penghargaan
+4240|Berseragam timnas
+4277|Mengenakan seragam {} lebih berarti dari apa pun.
+4267|{} kali Bintang Emas. Kisahnya masih diceritakan.
+4242|Dan kisahnya belum berakhir.
+4283|{}: dokumenter karier 🎬 #StarFoot
+4243|Dokumentermu
+1278|Edit profil
+4244|Ayo besarkan StarFoot bersama
+4245|Kalau kamu suka game ini, rating darimu sangat berarti bagi kami. Jika ada yang kurang atau error, tulis ke kami dulu, kami segera perbaiki.
+4248|Saran / laporkan bug
+4249|Beri rating
+4250|Hidup bak bintang: lencana, Starpedia, etalase mewah, tanpa iklan
+4251|sekali beli, berlaku di semua kariermu
+4306|{} laga
+4307|{} gol
+4305|{} assist
+4304|peringkat {}

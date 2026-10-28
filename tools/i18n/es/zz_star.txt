@@ -1,0 +1,211 @@
+4045|Ventajas de estrella
+4046|Gratis 1 vez
+4044|Probar
+4047|Aspecto
+4048|Pelo, barba, botas
+4049|Pide ofertas a los clubes
+4050|Tu página en la enciclopedia
+4051|Documental
+4052|La historia de tu carrera
+4053|Petición de traspaso
+4054|Nueva actualización
+4055|Vive como una estrella
+4056|Novedades
+4057|Fichaje estrella
+4058|Si llegas a un nuevo club siendo un jugador famoso, se acabó la rotación: titular desde el primer día.
+4059|La página enciclopédica de tu carrera: estadísticas, récords, partidos clave. Escribe tú las secciones.
+4062|De los partidos de barrio a la cima, tu historia capítulo a capítulo. Mírala y compártela.
+4065|Escaparate de lujo
+4066|Escaparate de lujo
+4067|Deportivo, villa, yate y jet privado. Cómpralo y compártelo en Instagram.
+4070|Estudio de imagen
+4071|Estudio de imagen
+4072|Pelo, barba, tono de piel y color de botas. Lleva ese look también a los partidos.
+4075|Tu agente consigue ofertas de clubes cuando quieras.
+4076|Insignia dorada de verificado
+4077|Un check dorado en el Instagram del juego.
+4078|Las nuevas ventajas son exclusivas de Premium. Puedes probar gratis una vez tu página de Starpedia y tu documental.
+4081|Probar gratis
+4082|Más tarde
+4083|Tienes Premium: ¡todo está desbloqueado para ti!
+4084|Abrir mi Starpedia
+4085|Ventaja Premium
+4086|Insignia dorada y Starpedia
+4087|Tu propia página de enciclopedia
+4088|Superdeportivos, villas, yate y jet privado
+4089|Pide ofertas a los clubes cuando quieras
+4090|Estudio de imagen y documental de carrera
+4091|Elige tu estilo, mira tu historia
+4092|Sin anuncios
+4093|Sin anuncios intersticiales, recompensas sin ver anuncios
+4094|es exclusivo de StarFoot Premium.
+4095|Compra única, válida en todas tus carreras.
+4096|StarFoot Premium se puede comprar en la app de App Store.
+4097|Escribir tu propia página es una ventaja Premium. Con Premium puedes escribir a tu gusto la introducción, los inicios, el estilo de juego y la vida personal.
+4100|¡Ya has visto tu página de Starpedia! Con Premium siempre está abierta, se actualiza sola cada temporada y puedes escribir sus secciones.
+4103|¡Tu documental está listo! Con Premium puedes volver a verlo y compartirlo cuando quieras a medida que avanza tu carrera.
+4106|¡Tu nuevo look te queda genial! Para guardarlo y lucirlo en los partidos y en Instagram necesitas Premium.
+4109|Prueba todo lo que quieras. Guardar es exclusivo de Premium.
+4112|Tono de piel
+4113|Peinado
+4114|Color de pelo
+4115|Barba
+1082|Botas
+4116|Predeterminado
+4117|Corto
+4118|Rapado
+4119|Raya al lado
+4120|Largo
+4121|Rizado
+4122|Mohicano
+4123|Moño
+4124|Calvo
+4125|Tu nuevo look se ha guardado.
+4126|Las peticiones de traspaso se desbloquean con un contrato profesional.
+4127|Ya has pedido el traspaso en esta mitad de temporada.
+4128|Las ofertas que trajo tu agente siguen sobre la mesa.
+4129|Tu agente hablará con los clubes y te conseguirá ofertas. Las ofertas valen 2 semanas.
+4132|Anunciar que quieres irte puede molestar un poco a tu entrenador y a la afición.
+1430|Pedir
+4133|Ahora mismo ningún club se interesa por ti. Coge algo de forma y vuelve a intentarlo.
+4253|Tu petición de traspaso llegó a los clubes: ¡{} clubes hicieron ofertas! Valen 2 semanas.
+4288|¡{} clubes hicieron ofertas!
+4137|Las ofertas de tu petición de traspaso han caducado.
+4138|Reloj cronógrafo de oro
+4139|SUV de lujo negro
+4140|Deportivo rojo
+4141|Villa con vistas al mar
+4142|Hiperdeportivo
+4143|Mansión en la colina
+4144|Yate de lujo
+4145|Jet privado
+4146|Un nuevo amigo en mi muñeca ⌚ El tiempo vale oro.
+4148|Coche nuevo, nuevos viajes 🚙
+4150|El rojo siempre queda bien 🏎️ ¡Llegó el coche nuevo!
+4152|Nueva villa, nuevo comienzo 🏡 ¡Mirad qué vistas!
+4154|0-100 en solo 2,4 segundos ⚡ Este coche es la nueva estrella del garaje.
+4156|Nuestro nuevo hogar en familia: la villa de la colina 🏰
+4158|Pretemporada en el yate 🛥️ Azul por todas partes.
+4160|A partir de ahora, a los partidos fuera en mi propio jet ✈️
+4162|En tu colección
+4287|{} ya está en tu colección.
+4280|Necesitas ahorrar {} más para esto.
+4164|Al comprarlo, lo compartirás en redes sociales.
+4275|¡{} ya es tuyo! Tu publicación arrasa en likes.
+4168|La enciclopedia libre del fútbol
+4169|De Starpedia, la enciclopedia libre del fútbol
+4170|Vista previa gratis
+4171|Estás viendo tu página de Starpedia una vez. Con Premium, siempre abierta.
+4174|Artículo
+4175|Discusión
+4176|Leer
+4177|Editar
+4178|Historial
+4179|Información personal
+4180|Nombre completo
+4181|Fecha de nacimiento
+4298|({} años)
+4182|Lugar de nacimiento
+4183|Altura
+1182|Posición
+631|Pierna
+4184|Información del club
+4185|Equipo actual
+4186|Dorsal
+4187|Carrera juvenil
+4188|Carrera profesional*
+4189|Años
+4190|Carrera internacional
+4191|* Solo partidos y goles de liga
+4192|Total
+4256|({0}, {1}) es un futbolista profesional que juega de {3} en el {2}.
+4257|({0}, {1}) es un joven futbolista que juega de {3} en la cantera del {2}.
+4254|({}, {}) es un joven futbolista que empieza a hacerse un nombre en los partidos de barrio.
+4265|Ha registrado {1} goles y {2} asistencias en {0} partidos.
+4260|Ha ganado {} títulos y premios individuales en su carrera.
+4309|Ha marcado {2} goles en {1} partidos con {0}.
+4268|Ha ganado la Estrella de Oro {} veces.
+4193|[editar]
+4194|[editar introducción]
+4195|Contenido
+4196|Primeros años
+4197|Trayectoria en clubes
+4190|Carrera internacional
+4198|Estilo de juego
+4199|Vida personal
+4200|Estadísticas
+4201|Palmarés
+4202|Récords
+4203|Partidos destacados
+4255|Nació en {}. Empezó a jugar al fútbol en partidos de barrio en {}.
+4289|Su madre es de origen {}.
+4278|Pasó sus años de cantera en el {}.
+4261|A los {} años firmó su primer contrato profesional con el {}.
+4308|Juega de {1}, pierna hábil: {0}. Sus puntos fuertes: {2} ({3}) y {4} ({5}).
+4290|Rasgos especiales: {}.
+4295|Está casado con {}.
+4282|Mantiene una relación con {1} desde {0}.
+4279|Tiene {} contratos de patrocinio.
+4204|Colección:
+4281|Tiene {} seguidores en redes sociales.
+4205|Prefiere mantener su vida privada lejos de los focos.
+4269|En {} temporadas jugó {} partidos, con {} goles y {} asistencias.
+4276|Llegó procedente del {0} por {1}.
+4273|Llegó libre procedente del {}.
+4206|Títulos en esta etapa:
+4207|Aún no ha comenzado su carrera profesional.
+4284|Con {0} marcó {2} goles en {1} partidos.
+4208|Aún no ha debutado con la selección.
+4209|Aún no ha ganado ningún título.
+4210|Más goles en una temporada:
+4211|Más asistencias en una temporada:
+4212|Mejor nota de temporada:
+4213|Traspaso récord:
+4214|Premios al mejor jugador del partido:
+4215|Los récords aparecerán aquí a medida que avance la carrera.
+4216|Año
+4217|Rival
+4218|Aquí aparecen los partidos en los que fue el mejor jugador.
+4297|Nacidos en {}
+4296|Futbolistas del {}
+4296|{}s
+4221|Ganadores de la Estrella de Oro
+4222|Categorías:
+4252|Esta página se editó por última vez en la temporada {}, jornada {}. El contenido pertenece al universo StarFoot; todas las personas y clubes son ficticios.
+4224|Ver el documental de carrera
+4225|Documental de carrera
+4226|La página de Starpedia
+4227|Introducción
+4291|Editar sección: {}
+4228|Escribe tu propia historia. Si lo dejas vacío, Starpedia lo escribe automáticamente.
+4231|Texto automático
+4301|CAPÍTULO {}
+4232|Nace una estrella
+4264|{}. Un niño, un balón y partidos de barrio sin fin.
+4234|Años de cantera
+4274|En la cantera del {} creció un poco más cada día.
+4235|Primer contrato profesional
+4272|Primer contrato profesional con el {1}, a los {0} años.
+4236|Fichaje galáctico
+4266|El {} pagó {}. Todas las miradas estaban ahora sobre él.
+4238|La temporada cumbre
+4286|{1} goles y {2} asistencias con el {0}.
+4239|Momentos de gloria
+3260|{} títulos y premios
+4240|Con la selección
+4277|Vestir la camiseta de {} lo era todo.
+4267|{} veces Estrella de Oro. Su historia aún se cuenta.
+4242|Y la historia no termina aquí.
+4283|{}: documental de carrera 🎬 #StarFoot
+4243|Tu documental
+1278|Editar perfil
+4244|Hagamos crecer StarFoot juntos
+4245|Si te gusta el juego, una valoración significa mucho para nosotros. Si falta algo o hay un error, escríbenos primero y lo arreglamos enseguida.
+4248|Sugerir / informar de un error
+4249|Valorar
+4250|Vive como una estrella: insignia, Starpedia, escaparate de lujo, sin anuncios
+4251|compra única, válida en todas tus carreras
+4306|{} partidos
+4307|{} goles
+4305|{} asistencias
+4304|{}.º puesto

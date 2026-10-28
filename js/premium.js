@@ -99,7 +99,7 @@ const Premium = {
   },
   // Ürünün sayısal fiyatı ve para birimi (gelir olarak raporlanır)
   money() {
-    const o = { item_id: PREMIUM_ID, item_name: 'StarFoot Premium' };
+    const o = { item_id: PREMIUM_ID, item_name: 'StarFoot Premium', source: Premium.src || 'card' };
     if (Premium.amount > 0) o.value = Premium.amount;
     if (Premium.currency) o.currency = Premium.currency;
     return o;
