@@ -649,7 +649,7 @@ const Social = {
       <header class="ig-ph"><span class="ig-pav"><canvas class="so-avatar sm" aria-hidden="true"></canvas></span>
         <span class="ig-pid"><b>${U.esc(so.handle.replace('@', ''))}${typeof Star !== 'undefined' ? Star.badge(verified) : verified ? IG.verified() : ''}</b><small>${U.esc(x.loc || '')}</small></span>${IG.more()}</header>
       <div class="ig-media"><canvas data-pid="${x.id}" aria-label="${U.esc(x.text)}"></canvas></div>
-      <div class="ig-acts">${IG.heart(true)}${IG.comment()}${IG.send()}<span class="sp"></span>${IG.save()}</div>
+      <div class="ig-acts">${IG.heart(true)}${IG.comment()}${IG.send()}<span class="ig-sp"></span>${IG.save()}</div>
       <div class="ig-likes">${Social.fmt(x.likes)} beğenme</div>
       <div class="ig-cap"><b>${U.esc(so.handle.replace('@', ''))}</b> ${U.esc(x.text)}</div>
       <div class="ig-all">${x.nc} yorumun tümünü gör</div>
