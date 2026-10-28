@@ -1,0 +1,172 @@
+4310|Finito il torneo puoi continuare con lo stesso giocatore al Campionato Mondiale di 4 anni dopo: una carriera in nazionale lunga 4 tornei.
+4521|Album {}/{}
+4311|Entusiasmo nel paese
+4312|Entusiasmo
+4313|Le aspettative nel paese sono basse, quasi nessuno ci crede.
+4314|I tifosi seguono le partite con entusiasmo nei bar e a casa.
+4315|Maxischermi nelle piazze e strade piene di bandiere.
+4316|Tutto il paese è in strada! Tutti parlano di te.
+4499|Entusiasmo alle stelle! Maxischermi in tutto il paese ({}) e strade piene di bandiere.
+4320|Analisi dell'avversario
+4321|Uomo chiave
+4322|Divario di forza
+4323|Forma
+4324|Linea difensiva alta che lascia spazio alle spalle.
+4325|Difesa lenta, vulnerabile agli attacchi rapidi.
+4326|Difende in massa e cerca il contropiede.
+4327|Pericoloso sui calci piazzati, ma si apre quando è stanco.
+4328|Tutto passa dalla loro stella: va fermata.
+4329|Fisico e aggressivo, pressa forte.
+4330|Consiglio del mister:
+4331|Partecipa a una riunione tattica e il mister ti darà il suo consiglio per questa partita.
+4332|La tua tattica
+4333|Attacco
+4334|Equilibrio
+4335|Difesa
+4336|Più occasioni, ma lasci spazi dietro.
+4337|Gioco equilibrato, nessuna sorpresa.
+4338|Subisci meno gol, ma hai meno occasioni in attacco.
+4513|Tattica giusta contro questo avversario: {}. La tua squadra è più forte!
+4340|Il mister ti ha chiamato nella sua stanza e ti ha porto la fascia: "Puoi trascinare questa squadra in campo?"
+4341|Indossa la fascia
+4342|Non sono ancora pronto
+4343|Ora sei il capitano! Lo spogliatoio guarda a te.
+4346|La tua umiltà è stata apprezzata. La fascia resta a un compagno esperto.
+4503|In allenamento hai litigato con {} per un ruolo. Lo spogliatoio è teso.
+4350|Chiedi scusa e fate pace
+4351|Non fare un passo indietro
+4352|Vi siete stretti la mano. Il clima si è calmato.
+4355|Al mister è piaciuta la tua grinta, ma alcuni compagni non ti parlano.
+4356|Ti sei svegliato con il ginocchio gonfio. I medici non sono sicuri.
+4359|Fai gli esami, niente rischi
+4360|Non dirlo a nessuno e gioca
+4361|Un piccolo edema: ti serve un giorno di riposo.
+4362|Tutto a posto! Che sollievo.
+4365|Il dolore è peggiorato: stai fuori 2 giorni.
+4366|Hai stretto i denti e il dolore è passato.
+4367|Un giornale scrive che un grande club è interessato a te. Tutto il ritiro ne parla.
+4370|Il mio unico obiettivo è il torneo
+4371|Sorridi, nessun commento
+4372|Il mister ha citato le tue parole come esempio davanti alla squadra.
+4373|Il tuo nome è di tendenza sui social.
+4374|Un piccolo tifoso in ospedale ti ha scritto: "Segna un gol anche per me."
+4375|Videochiamalo
+4376|Manda una maglia autografata
+4377|Il sorriso del bambino ti ha dato forza.
+4378|È impazzito di gioia quando è arrivata la maglia.
+4379|Il piano tattico è trapelato sui social! Il mister cerca chi l'ha diffuso.
+4382|Resta in silenzio
+4383|Raduna la squadra e ritrova la concentrazione
+4384|La bufera si è placata il giorno dopo.
+4385|La tua leadership ha unito la squadra.
+4498|Il tuo ex compagno {} gioca nella prossima avversaria. Ti ha scritto: "In campo niente sconti!"
+4387|Rispondi con una battuta
+4388|"Ci vediamo in campo"
+4389|Il botta e risposta prepartita ha fatto ridere i social.
+4390|Il tuo messaggio è finito sui titoli.
+4391|Un marchio di scarpini vuole mandarti un paio personalizzato per il torneo.
+1005|Accetta
+4392|Niente distrazioni nel torneo
+4393|I tuoi nuovi scarpini sono stati i più chiacchierati del torneo.
+4394|Al mister è piaciuta la tua professionalità.
+4517|Nuova figurina: {}
+4395|Album di figurine
+4502|{}/{} figurine. Ogni figurina è un obiettivo: brilla nei tornei e completa l'album.
+4397|Esordio
+4398|Gioca la tua prima partita al Campionato Mondiale
+4399|Primo gol
+4400|Segna il tuo primo gol al Campionato Mondiale
+4401|Doppietta
+4402|Segna 2 gol in una partita
+4403|Tripletta
+4404|Segna 3 gol in una partita
+272|Regista
+4405|Fai 2 assist in una partita
+4406|Sii il migliore in campo in una partita del torneo
+4407|Notte perfetta
+4408|Ottieni un voto di 9.0 o più in una partita
+4409|Ammazzagiganti
+4410|Batti una squadra più forte di almeno 8 punti
+4411|Porta blindata
+4412|Vinci senza subire gol da difensore o portiere
+4413|Gol a eliminazione diretta
+4414|Segna nella fase a eliminazione diretta
+4415|Sangue freddo
+4416|Segna il tuo rigore nella lotteria
+4417|Gol in finale
+4418|Segna in una finale del Campionato Mondiale
+4419|Imbattuto
+4420|Chiudi la fase a gironi imbattuto
+4421|Primi nel girone
+4422|Chiudi primo nel girone
+4423|Ultime 8
+4424|Raggiungi i quarti di finale
+4425|Raggiungi la finale
+4426|Campione del mondo
+3909|Vinci il Campionato Mondiale
+4427|Favola
+4428|Raggiungi la semifinale con una nazionale sotto 73
+4429|Capocannoniere
+4430|Diventa capocannoniere del torneo
+4431|Sii eletto miglior giocatore del torneo
+4432|Stella del futuro
+4433|Vinci il premio di miglior giovane
+4434|Bomber
+4435|Segna 5 gol in un torneo
+4436|Indossa la fascia da capitano
+4437|Paese in piedi
+4438|Porta l'entusiasmo nel paese a 100
+4439|Quattro tornei
+4440|Gioca 4 Campionati Mondiali
+4441|Doppio trionfo
+4442|Diventa campione del mondo due volte
+1035|Capitano
+4443|Notte dei premi
+4444|I migliori del torneo vengono chiamati sul palco...
+4445|Top 11 del torneo
+4446|TU!
+4447|Non selezionato
+4448|Ritorno a casa
+4449|Gli eroi sono a casa!
+4450|Accoglienza da eroi
+4496|Centinaia di migliaia all'aeroporto! Avete portato la coppa per le strade di {} sul bus scoperto. Stanotte nessuno dorme.
+4453|Migliaia di tifosi vi hanno accolto con applausi in aeroporto. Niente coppa, ma questa squadra ha fatto sognare un paese.
+4456|I tifosi sono orgogliosi: all'aeroporto vi aspettavano striscioni "A testa alta!".
+4457|Un ritorno tranquillo. La squadra ha lottato bene, ma ci si aspettava di più.
+4460|La delusione è grande. Eppure un piccolo gruppo di tifosi non vi ha lasciati soli in aeroporto.
+4463|Un ritorno silenzioso. Le critiche sono dure, ma questo torneo insegna molto.
+4466|SIAMO CAMPIONI DEL MONDO! Questa coppa è di tutti noi. Grazie!
+4468|Abbiamo dato tutto. Grazie per il sostegno, è solo l'inizio.
+4471|Indossare questa maglia è stato un onore. Torneremo più forti.
+1412|Follower
+4474|Nuove figurine
+4510|{} è in cima al mondo! Hai fatto la storia a {} anni.
+4500|Al prossimo torneo ({}) avrai {} anni. Puoi continuare con lo stesso giocatore.
+4520|Torneo {}
+4516|Continua al {}
+4477|Card del torneo
+4478|Chiudi la carriera
+4479|Riepilogo carriera
+4480|La tua carriera
+4481|Nuova carriera
+4497|{0} è di nuovo nel ritiro di {2} per il Campionato Mondiale {1}! A {3} anni prepara il suo {4}º torneo.
+4482|4 anni dopo...
+4501|Hai {0} anni e sei nel ritiro di {1} per la {2}ª volta. Stavolta tutti si aspettano molto da te.
+4483|Variazione
+4484|Presenze in nazionale
+4485|Fase
+4486|Inizia il ritiro
+4507|Paesi ospitanti: {}. Gli avversari del girone sono stati sorteggiati.
+4488|La tua carriera al Campionato Mondiale
+4489|Il tuo primo torneo è in corso.
+4490|Tornei
+4491|Carriera in nazionale conclusa
+4492|Una leggenda mondiale
+4493|Una leggenda campione del mondo
+4494|Un bomber indimenticabile
+4495|Una colonna della nazionale
+4505|{0} ha giocato {3} partite e segnato {4} gol con {1} in {2} Campionati Mondiali.
+4522|Paesi ospitanti:
+4487|Gli avversari del girone sono stati sorteggiati.
+4523|Carriera in nazionale di 4 tornei con lo stesso giocatore (2026–2038)
+4524|Analisi dell'avversario, scelta tattica e album di 26 figurine obiettivo

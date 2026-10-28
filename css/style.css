@@ -2295,3 +2295,51 @@ html, body { max-width: 100%; }
 @media (max-width: 360px) { .hi-money.wc-stage small { display: none; } .logo { font-size: 21px; } }
 /* Sekme çubukları dar ekranda sığsın (5 sekmeli Dünya Şampiyonası dahil) */
 @media (max-width: 430px) { .vnav { gap: 2px; } .vnav button { flex: 1 1 auto; padding: 9px 5px; letter-spacing: .02em; font-size: 11.5px; } }
+
+/* Dünya Şampiyonası: rakip analizi, taktik, coşku, albüm, ödül gecesi, dönüş */
+.wc-scout { margin: 12px 0; padding: 12px; border-radius: 14px; background: rgba(255, 255, 255, .04); border: 1px solid var(--line); }
+.wc-scout .lbl { margin: 0 0 6px; }
+.wc-scout .lbl + .sc-row { margin-top: 0; }
+.sc-row { display: flex; justify-content: space-between; gap: 12px; padding: 5px 0; border-bottom: 1px dashed rgba(255, 255, 255, .08); font-size: 14px; }
+.sc-row span { color: var(--muted); flex: none; }
+.sc-row b { text-align: right; font-weight: 600; }
+.sc-row b.bad { color: #ff7a6b; } .sc-row b.good { color: #5fe08a; }
+.sc-form { display: inline-flex; gap: 4px; }
+.sc-form i { font-style: normal; width: 22px; height: 22px; border-radius: 6px; display: grid; place-items: center; font-size: 12px; font-weight: 800; color: #0b1020; }
+.sc-form .f-G { background: #5fe08a; } .sc-form .f-B { background: #c9d1e3; } .sc-form .f-M { background: #ff7a6b; }
+.sc-tip { margin: 10px 0; font-size: 13.5px; color: #ffd46a; }
+.sc-tip svg { width: 15px; height: 15px; vertical-align: -3px; }
+.wc-tac { display: flex; gap: 6px; margin: 6px 0; }
+.wc-tac button { flex: 1; padding: 9px 6px; border-radius: 10px; border: 1px solid var(--line); background: rgba(255, 255, 255, .05); color: var(--chalk); font-family: var(--display); font-weight: 800; text-transform: uppercase; letter-spacing: .03em; cursor: pointer; }
+.wc-tac button.on { background: linear-gradient(180deg, #ffd85a, #f2b81f); color: var(--flood-ink); border-color: transparent; }
+.wc-hype .wc-hv { font-family: var(--display); font-size: 24px; color: #ffcf3f; }
+.wc-hype p { margin: 8px 0 0; }
+.wc-mini { display: flex; gap: 8px; margin: 10px 0; }
+.wc-mini .btn { flex: 1; padding-left: 8px; padding-right: 8px; }
+.wc-album { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 8px; margin-top: 10px; }
+.wc-album.mini { grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); }
+.wstk { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; padding: 10px 6px; border-radius: 12px; background: rgba(255, 255, 255, .04); border: 1px dashed rgba(255, 255, 255, .18); color: var(--muted); min-height: 116px; }
+.wstk small { position: absolute; top: 4px; left: 7px; font-size: 10px; opacity: .6; }
+.wstk i { font-style: normal; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: rgba(255, 255, 255, .06); font-weight: 900; font-size: 18px; }
+.wstk i svg { width: 22px; height: 22px; }
+.wstk b { font-size: 13px; line-height: 1.15; color: var(--chalk); }
+.wstk span { font-size: 11px; line-height: 1.25; }
+.wstk.on { border-style: solid; border-color: rgba(255, 207, 63, .55); background: linear-gradient(160deg, rgba(255, 207, 63, .16), rgba(255, 255, 255, .03)); }
+.wstk.on i { background: linear-gradient(135deg, #ffe27a, #f5b400); color: #2a1d00; }
+.wstk.on span { color: var(--muted); }
+.wc-night { display: grid; gap: 8px; margin-top: 10px; }
+.wn-row { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 12px; background: rgba(255, 255, 255, .05); }
+.wn-row > svg { width: 26px; height: 26px; color: #ffcf3f; flex: none; }
+.wn-row span { flex: 1; min-width: 0; }
+.wn-row small { display: block; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .05em; }
+.wn-row b { display: block; overflow-wrap: anywhere; }
+.wn-row em { font-style: normal; font-family: var(--display); font-weight: 900; color: #2a1d00; background: linear-gradient(135deg, #ffe27a, #f5b400); padding: 4px 10px; border-radius: 99px; font-size: 13px; }
+.wn-row.me { background: linear-gradient(160deg, rgba(255, 207, 63, .18), rgba(255, 255, 255, .04)); border: 1px solid rgba(255, 207, 63, .4); }
+.wc-home { text-align: center; }
+.wh-ic { font-size: 54px; line-height: 1; margin: 4px 0 8px; }
+.wc-car { margin-top: 10px; font-size: 13px; }
+.wc-car small { color: var(--muted); }
+.mst b.up { color: #5fe08a; } .mst b.down { color: #ff7a6b; }
+.wc-btns { display: flex; flex-wrap: wrap; gap: 8px; }
+.wc-btns .btn { flex: 1 1 140px; }
+.wc-car td:first-child { white-space: nowrap; }

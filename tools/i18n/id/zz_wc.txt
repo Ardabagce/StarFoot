@@ -1,0 +1,172 @@
+4310|Setelah turnamen selesai, kamu bisa lanjut dengan pemain yang sama ke Kejuaraan Dunia 4 tahun kemudian: karier timnas sepanjang 4 turnamen.
+4521|Album {}/{}
+4311|Euforia di tanah air
+4312|Euforia
+4313|Harapan di tanah air rendah, hampir tak ada yang optimis.
+4314|Suporter menonton laga dengan antusias di kafe dan di rumah.
+4315|Layar raksasa dipasang di alun-alun, jalanan penuh bendera.
+4316|Seluruh negeri tumpah ke jalan! Semua orang membicarakanmu.
+4499|Euforia memuncak! Layar raksasa dipasang di seluruh {} dan jalanan penuh bendera.
+4320|Analisis lawan
+4321|Pemain kunci
+4322|Selisih kekuatan
+4323|Performa
+4324|Garis pertahanan tinggi, ruang di belakang terbuka.
+4325|Pertahanan lambat, rentan serangan cepat.
+4326|Bertahan dengan banyak pemain dan mencari serangan balik.
+4327|Berbahaya lewat bola mati, tapi terbuka saat lelah.
+4328|Semua bergantung pada bintangnya, ia harus dihentikan.
+4329|Fisik dan agresif, menekan dengan keras.
+4330|Saran pelatih:
+4331|Ikuti rapat taktik dan pelatih akan memberi saran untuk laga ini.
+4332|Taktikmu
+4333|Menyerang
+4334|Seimbang
+4335|Bertahan
+4336|Lebih banyak peluang, tapi lini belakang terbuka.
+4337|Permainan seimbang, tanpa kejutan.
+4338|Lebih sedikit kebobolan, tapi peluang menyerang berkurang.
+4513|Taktik yang tepat untuk lawan ini: {}. Timmu lebih kuat!
+4340|Pelatih memanggilmu ke ruangannya dan menyodorkan ban kapten: "Bisakah kamu memimpin tim ini di lapangan?"
+4341|Pakai ban kapten
+4342|Aku belum siap
+4343|Kini kamu kapten tim! Ruang ganti bergantung padamu.
+4346|Kerendahan hatimu dihargai. Ban kapten tetap di rekan yang berpengalaman.
+4503|Kamu bertengkar dengan {} soal posisi saat latihan. Ruang ganti tegang.
+4350|Minta maaf dan berdamai
+4351|Jangan mundur
+4352|Kalian berjabat tangan. Suasana tim mereda.
+4355|Pelatih suka semangatmu, tapi beberapa rekan mendiamkanmu.
+4356|Kamu bangun dengan lutut bengkak. Dokter belum yakin.
+4359|Periksa, jangan ambil risiko
+4360|Diam saja dan main
+4361|Ada sedikit bengkak: kamu perlu istirahat sehari.
+4362|Aman! Lega sekali.
+4365|Nyerinya memburuk: kamu absen 2 hari.
+4366|Kamu menahan sakit, dan nyerinya hilang.
+4367|Sebuah koran menulis klub besar tertarik padamu. Seluruh kamp membicarakannya.
+4370|Fokusku hanya turnamen
+4371|Senyum, tanpa komentar
+4372|Pelatih menjadikan ucapanmu contoh di depan tim.
+4373|Namamu jadi trending di media sosial.
+4374|Seorang suporter cilik yang dirawat di rumah sakit menulis surat: "Cetak satu gol untukku juga."
+4375|Video call dia
+4376|Kirim seragam bertanda tangan
+4377|Senyum anak itu memberimu kekuatan.
+4378|Ia girang bukan main saat seragamnya tiba.
+4379|Rencana taktik tim bocor ke media sosial! Pelatih mencari pembocornya.
+4382|Diam saja
+4383|Kumpulkan tim dan kembalikan fokus
+4384|Badai mereda sehari kemudian.
+4385|Kepemimpinanmu menyatukan tim.
+4498|Mantan rekan setimmu {} bermain di tim lawan berikutnya. Ia mengirim pesan: "Tak ada ampun di lapangan!"
+4387|Balas dengan candaan
+4388|"Sampai jumpa di lapangan"
+4389|Saling ledek sebelum laga bikin media sosial tertawa.
+4390|Pesanmu jadi berita utama.
+4391|Sebuah merek sepatu ingin mengirimimu sepatu desain khusus untuk turnamen.
+1005|Terima
+4392|Jangan ganggu fokus turnamen
+4393|Sepatu barumu jadi perbincangan turnamen.
+4394|Pelatih menyukai profesionalismemu.
+4517|Stiker baru: {}
+4395|Album stiker
+4502|{}/{} stiker. Tiap stiker adalah target: berjaya di turnamen dan lengkapi album.
+4397|Debut
+4398|Main di laga pertamamu di Kejuaraan Dunia
+4399|Gol pertama
+4400|Cetak gol pertamamu di Kejuaraan Dunia
+4401|Dua gol
+4402|Cetak 2 gol dalam satu laga
+4403|Hat-trick
+4404|Cetak 3 gol dalam satu laga
+272|Playmaker
+4405|Buat 2 assist dalam satu laga
+4406|Jadilah pemain terbaik di laga turnamen
+4407|Malam sempurna
+4408|Raih rating 9.0 atau lebih dalam satu laga
+4409|Penakluk raksasa
+4410|Kalahkan tim yang minimal 8 poin lebih kuat
+4411|Gawang terkunci
+4412|Menang tanpa kebobolan sebagai bek atau kiper
+4413|Gol fase gugur
+4414|Cetak gol di fase gugur
+4415|Berdarah dingin
+4416|Cetak penaltimu di adu penalti
+4417|Gol di final
+4418|Cetak gol di final Kejuaraan Dunia
+4419|Tak terkalahkan
+4420|Selesaikan fase grup tanpa kalah
+4421|Juara grup
+4422|Finis di puncak grup
+4423|8 besar
+4424|Capai perempat final
+4425|Capai final
+4426|Juara dunia
+3909|Juarai Kejuaraan Dunia
+4427|Dongeng
+4428|Capai semifinal bersama negara berkekuatan di bawah 73
+4429|Top skor
+4430|Jadilah top skor turnamen
+4431|Jadilah pemain terbaik turnamen
+4432|Bintang masa depan
+4433|Menangi penghargaan pemain muda terbaik
+4434|Mesin gol
+4435|Cetak 5 gol dalam satu turnamen
+4436|Kenakan ban kapten
+4437|Negeri berdiri
+4438|Naikkan euforia di tanah air hingga 100
+4439|Empat turnamen
+4440|Bermain di 4 Kejuaraan Dunia
+4441|Kemenangan ganda
+4442|Jadilah juara dunia dua kali
+1035|Kapten
+4443|Malam penghargaan
+4444|Para pemain terbaik turnamen dipanggil ke panggung...
+4445|Tim terbaik turnamen
+4446|KAMU!
+4447|Tidak terpilih
+4448|Pulang
+4449|Para pahlawan pulang!
+4450|Sambutan pahlawan
+4496|Ratusan ribu orang di bandara! Kalian mengarak trofi keliling {} dengan bus atap terbuka. Malam ini tak ada yang tidur.
+4453|Ribuan suporter menyambut kalian dengan tepuk tangan di bandara. Tanpa trofi, tapi tim ini membangkitkan satu negeri.
+4456|Suporter bangga: spanduk "Tegakkan kepala!" menanti di bandara.
+4457|Kepulangan yang tenang. Tim berjuang baik, tapi harapannya lebih.
+4460|Kekecewaan besar. Meski begitu, sekelompok kecil suporter tetap menyambut kalian di bandara.
+4463|Kepulangan yang sunyi. Kritik pedas, tapi banyak pelajaran dari turnamen ini.
+4466|KITA JUARA DUNIA! Trofi ini milik kita semua. Terima kasih!
+4468|Kami sudah memberi segalanya. Terima kasih atas dukungannya, ini baru permulaan.
+4471|Mengenakan seragam ini adalah kehormatan. Kami akan kembali lebih kuat.
+1412|Pengikut
+4474|Stiker baru
+4510|{} di puncak dunia! Kamu mencetak sejarah di usia {}.
+4500|Di turnamen berikutnya ({}) usiamu {} tahun. Kamu bisa lanjut dengan pemain yang sama.
+4520|Turnamen {}
+4516|Lanjut ke {}
+4477|Kartu turnamen
+4478|Akhiri karier
+4479|Ringkasan karier
+4480|Kariermu
+4481|Karier baru
+4497|{0} kembali ke kamp {2} untuk Kejuaraan Dunia {1}! Pemain {3} tahun ini bersiap untuk turnamen ke-{4}.
+4482|4 tahun kemudian...
+4501|Usiamu {0} tahun dan ini kali ke-{2} kamu di kamp {1}. Kali ini semua berharap banyak padamu.
+4483|Perubahan
+4484|Caps
+4485|Babak
+4486|Mulai kamp
+4507|Tuan rumah: {}. Lawan grupmu sudah diundi.
+4488|Karier Kejuaraan Duniamu
+4489|Turnamen pertamamu sedang berlangsung.
+4490|Turnamen
+4491|Karier timnas berakhir
+4492|Legenda dunia
+4493|Legenda juara dunia
+4494|Pencetak gol tak terlupakan
+4495|Pilar timnas
+4505|{0} tampil {3} kali dan mencetak {4} gol untuk {1} di {2} Kejuaraan Dunia.
+4522|Tuan rumah:
+4487|Lawan grupmu sudah diundi.
+4523|Karier timnas 4 turnamen dengan pemain yang sama (2026–2038)
+4524|Analisis lawan, pilihan taktik, dan album 26 stiker target

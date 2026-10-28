@@ -1,0 +1,172 @@
+4310|Nach dem Turnier kannst du mit demselben Spieler bei der Weltmeisterschaft 4 Jahre später weitermachen: eine Nationalmannschaftskarriere über 4 Turniere.
+4521|Album {}/{}
+4311|Euphorie in der Heimat
+4312|Euphorie
+4313|Die Erwartungen in der Heimat sind gering, kaum jemand ist zuversichtlich.
+4314|Die Fans verfolgen die Spiele gespannt in Cafés und zu Hause.
+4315|Auf den Plätzen stehen Großleinwände, die Straßen sind voller Fahnen.
+4316|Das ganze Land ist auf den Straßen! Alle reden über dich.
+4499|Die Euphorie kennt keine Grenzen! Großleinwände in ganz {}, die Straßen voller Fahnen.
+4320|Gegneranalyse
+4321|Schlüsselspieler
+4322|Stärkeunterschied
+4323|Form
+4324|Hohe Abwehrlinie, dahinter bleibt viel Platz.
+4325|Langsame Abwehr, anfällig für schnelle Angriffe.
+4326|Verteidigt tief und mit vielen Spielern, lauert auf Konter.
+4327|Gefährlich bei Standards, wird aber offen, wenn die Kräfte nachlassen.
+4328|Alles hängt vom Star ab, er muss gestoppt werden.
+4329|Körperbetont und aggressiv, presst stark.
+4330|Tipp des Trainers:
+4331|Besuche eine Taktikbesprechung, dann verrät der Trainer seinen Tipp für dieses Spiel.
+4332|Deine Taktik
+4333|Angriff
+4334|Ausgewogen
+4335|Verteidigung
+4336|Mehr Chancen, aber hinten entstehen Lücken.
+4337|Ausgewogenes Spiel, keine Überraschungen.
+4338|Du kassierst weniger Tore, hast aber vorne weniger Chancen.
+4513|Die richtige Taktik gegen diesen Gegner: {}. Dein Team ist stärker!
+4340|Der Trainer rief dich zu sich und hielt dir die Kapitänsbinde hin: "Kannst du dieses Team auf dem Platz anführen?"
+4341|Binde übernehmen
+4342|Ich bin noch nicht so weit
+4343|Du bist jetzt Kapitän! Die Kabine schaut auf dich.
+4346|Deine Bescheidenheit kam gut an. Die Binde bleibt bei einem erfahrenen Mitspieler.
+4503|Im Training hast du dich mit {} um eine Position gestritten. In der Kabine knistert es.
+4350|Entschuldigen und versöhnen
+4351|Nicht nachgeben
+4352|Ihr habt euch die Hand gegeben. Die Stimmung hat sich beruhigt.
+4355|Der Trainer mag deinen Ehrgeiz, aber manche Mitspieler reden nicht mehr mit dir.
+4356|Du bist mit einem geschwollenen Knie aufgewacht. Die Ärzte sind unsicher.
+4359|Untersuchen lassen, kein Risiko
+4360|Niemandem sagen und spielen
+4361|Ein kleines Ödem: Du brauchst einen Tag Pause.
+4362|Alles in Ordnung! Was für eine Erleichterung.
+4365|Der Schmerz wurde schlimmer: 2 Tage Pause.
+4366|Du hast die Zähne zusammengebissen, der Schmerz ist weg.
+4367|Eine Zeitung berichtet, dass ein großer Klub an dir interessiert ist. Das ganze Camp spricht darüber.
+4370|Mein einziger Fokus ist das Turnier
+4371|Lächeln, kein Kommentar
+4372|Der Trainer hob deine Worte vor dem Team als Vorbild hervor.
+4373|Dein Name trendet in den sozialen Medien.
+4374|Ein kleiner Fan im Krankenhaus hat dir geschrieben: "Schieß auch ein Tor für mich."
+4375|Per Video anrufen
+4376|Signiertes Trikot schicken
+4377|Das Lächeln des Kindes gab dir Kraft.
+4378|Er war überglücklich, als das Trikot ankam.
+4379|Der Taktikplan des Teams ist in den sozialen Medien gelandet! Der Trainer sucht den Maulwurf.
+4382|Schweigen
+4383|Das Team zusammenholen, Fokus zurückbringen
+4384|Nach einem Tag hatte sich der Sturm gelegt.
+4385|Deine Führung hat das Team zusammengeschweißt.
+4498|Dein früherer Mitspieler {} spielt beim nächsten Gegner. Er schrieb dir: "Auf dem Platz keine Gnade!"
+4387|Mit einem Witz antworten
+4388|"Wir sehen uns auf dem Platz"
+4389|Das Geplänkel vor dem Spiel sorgte im Netz für viele Lacher.
+4390|Deine Nachricht landete in den Schlagzeilen.
+4391|Eine Schuhmarke will dir für das Turnier maßgefertigte Schuhe schicken.
+1005|Annehmen
+4392|Keine Ablenkung im Turnier
+4393|Deine neuen Schuhe wurden zum Gesprächsthema des Turniers.
+4394|Der Trainer schätzte deine Professionalität.
+4517|Neuer Sticker: {}
+4395|Stickeralbum
+4502|{}/{} Sticker. Jeder Sticker ist ein Ziel: Sei im Turnier erfolgreich und fülle das Album.
+4397|Debüt
+4398|Bestreite dein erstes WM-Spiel
+4399|Erstes Tor
+4400|Erziele dein erstes WM-Tor
+4401|Doppelpack
+4402|Erziele 2 Tore in einem Spiel
+4403|Hattrick
+4404|Erziele 3 Tore in einem Spiel
+272|Spielmacher
+4405|Gib 2 Vorlagen in einem Spiel
+4406|Werde in einem Turnierspiel Spieler des Spiels
+4407|Perfekter Abend
+4408|Erhalte in einem Spiel eine Note von 9.0 oder besser
+4409|Favoritenschreck
+4410|Schlage ein Team, das mindestens 8 Punkte stärker ist
+4411|Abwehrbollwerk
+4412|Gewinne als Verteidiger oder Torwart ohne Gegentor
+4413|K.-o.-Runden-Tor
+4414|Triff in den K.-o.-Runden
+4415|Eiskalt
+4416|Verwandle deinen Elfmeter im Elfmeterschießen
+4417|Tor im Finale
+4418|Triff in einem WM-Finale
+4419|Ungeschlagen
+4420|Beende die Gruppenphase ohne Niederlage
+4421|Gruppensieger
+4422|Werde Gruppenerster
+4423|Letzte 8
+4424|Erreiche das Viertelfinale
+4425|Erreiche das Finale
+4426|Weltmeister
+3909|Gewinne die Weltmeisterschaft
+4427|Märchen
+4428|Erreiche mit einer Nation unter 73 das Halbfinale
+4429|Torschützenkönig
+4430|Werde Torschützenkönig des Turniers
+4431|Werde zum besten Spieler des Turniers gewählt
+4432|Star von morgen
+4433|Gewinne die Auszeichnung als bester junger Spieler
+4434|Torjäger
+4435|Erziele 5 Tore in einem Turnier
+4436|Trage die Kapitänsbinde
+4437|Ein Land steht Kopf
+4438|Bring die Euphorie in der Heimat auf 100
+4439|Vier Turniere
+4440|Spiele bei 4 Weltmeisterschaften
+4441|Doppelter Triumph
+4442|Werde zweimal Weltmeister
+1035|Kapitän
+4443|Preisverleihung
+4444|Die Besten des Turniers werden auf die Bühne gebeten...
+4445|Elf des Turniers
+4446|DU!
+4447|Nicht gewählt
+4448|Heimkehr
+4449|Die Helden sind zu Hause!
+4450|Heldenempfang
+4496|Hunderttausende am Flughafen! Ihr habt den Pokal im offenen Bus durch die Straßen von {} gefahren. Heute Nacht schläft niemand.
+4453|Tausende Fans empfingen euch am Flughafen mit Applaus. Kein Pokal, aber dieses Team hat ein ganzes Land mitgerissen.
+4456|Die Fans sind stolz: Am Flughafen warteten Banner mit "Kopf hoch!".
+4457|Eine ruhige Rückkehr. Das Team hat gut gekämpft, aber man hatte mehr erwartet.
+4460|Die Enttäuschung ist groß. Trotzdem stand euch eine kleine Gruppe Fans am Flughafen zur Seite.
+4463|Eine stille Rückkehr. Die Kritik ist hart, aber aus diesem Turnier lässt sich viel lernen.
+4466|WIR SIND WELTMEISTER! Dieser Pokal gehört uns allen. Danke!
+4468|Wir haben alles gegeben. Danke für eure Unterstützung, das ist erst der Anfang.
+4471|Dieses Trikot zu tragen war eine Ehre. Wir kommen stärker zurück.
+1412|Follower
+4474|Neue Sticker
+4510|{} ist an der Weltspitze! Mit {} Jahren hast du Geschichte geschrieben.
+4500|Beim nächsten Turnier ({}) bist du {} Jahre alt. Du kannst mit demselben Spieler weitermachen.
+4520|Turnier {}
+4516|Weiter zu {}
+4477|Turnierkarte
+4478|Karriere beenden
+4479|Karriere-Übersicht
+4480|Deine Karriere
+4481|Neue Karriere
+4497|{0} ist für die Weltmeisterschaft {1} wieder im Camp von {2}! Der {3}-Jährige bereitet sich auf sein {4}. Turnier vor.
+4482|4 Jahre später...
+4501|Du bist {0} und zum {2}. Mal im Camp von {1}. Diesmal erwarten alle viel von dir.
+4483|Veränderung
+4484|Länderspiele
+4485|Runde
+4486|Camp starten
+4507|Gastgeber: {}. Deine Gruppengegner wurden ausgelost.
+4488|Deine WM-Karriere
+4489|Dein erstes Turnier läuft noch.
+4490|Turniere
+4491|Nationalmannschaftskarriere beendet
+4492|Eine Weltlegende
+4493|Eine Legende und Weltmeister
+4494|Ein unvergesslicher Torjäger
+4495|Eine Stütze der Nationalmannschaft
+4505|{0} bestritt für {1} bei {2} Weltmeisterschaften {3} Spiele und erzielte {4} Tore.
+4522|Gastgeber:
+4487|Deine Gruppengegner wurden ausgelost.
+4523|Nationalmannschaftskarriere über 4 Turniere mit demselben Spieler (2026–2038)
+4524|Gegneranalyse, Taktikwahl und ein Album mit 26 Ziel-Stickern

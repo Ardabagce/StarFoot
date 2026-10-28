@@ -1,0 +1,172 @@
+4310|Quando o torneio acabar, você pode seguir com o mesmo jogador no Campeonato Mundial 4 anos depois: uma carreira de seleção com 4 torneios.
+4521|Álbum {}/{}
+4311|Euforia no país
+4312|Euforia
+4313|A expectativa no país é baixa; quase ninguém está esperançoso.
+4314|Os torcedores acompanham os jogos animados em bares e em casa.
+4315|Telões nas praças e ruas cheias de bandeiras.
+4316|O país inteiro foi às ruas! Todo mundo fala de você.
+4499|Euforia nas alturas! Telões espalhados por {} e ruas cheias de bandeiras.
+4320|Análise do adversário
+4321|Destaque
+4322|Diferença de força
+4323|Forma
+4324|Linha defensiva alta que deixa espaço nas costas.
+4325|Defesa lenta, vulnerável a ataques rápidos.
+4326|Defende com muitos jogadores e busca o contra-ataque.
+4327|Perigoso na bola parada, mas se abre quando cansa.
+4328|Tudo passa pelo craque deles: é preciso pará-lo.
+4329|Físico e agressivo, pressiona muito.
+4330|Conselho do técnico:
+4331|Vá a uma reunião tática e o técnico dará o conselho para este jogo.
+4332|Sua tática
+4333|Ataque
+4334|Equilíbrio
+4335|Defesa
+4336|Mais chances, mas sobra espaço atrás.
+4337|Jogo equilibrado, sem surpresas.
+4338|Você sofre menos gols, mas tem menos chances no ataque.
+4513|Tática certa contra este adversário: {}. Seu time está mais forte!
+4340|O técnico te chamou na sala e estendeu a braçadeira: "Você consegue carregar este time em campo?"
+4341|Colocar a braçadeira
+4342|Ainda não estou pronto
+4343|Agora você é o capitão! O vestiário olha para você.
+4346|Sua humildade foi elogiada. A braçadeira fica com um companheiro experiente.
+4503|Você discutiu com {} por causa de uma posição no treino. O vestiário está tenso.
+4350|Pedir desculpas e fazer as pazes
+4351|Não recuar
+4352|Vocês apertaram as mãos. O clima no elenco acalmou.
+4355|O técnico gostou da sua garra, mas alguns companheiros não falam com você.
+4356|Você acordou com o joelho inchado. Os médicos não têm certeza.
+4359|Fazer exames, sem riscos
+4360|Não contar a ninguém e jogar
+4361|Apareceu um pequeno edema: você precisa de um dia de descanso.
+4362|Tudo certo! Que alívio.
+4365|A dor piorou: você fica 2 dias fora.
+4366|Você aguentou firme e a dor passou.
+4367|Um jornal publicou que um grande clube está interessado em você. A concentração inteira comenta.
+4370|Meu único foco é o torneio
+4371|Sorrir, sem comentários
+4372|O técnico citou suas palavras como exemplo diante do time.
+4373|Seu nome está em alta nas redes sociais.
+4374|Um pequeno torcedor internado te escreveu uma carta: "Faz um gol por mim também."
+4375|Fazer uma chamada de vídeo
+4376|Enviar uma camisa autografada
+4377|O sorriso do menino te deu força.
+4378|Ele vibrou de alegria ao receber a camisa.
+4379|O plano tático do time vazou nas redes! O técnico procura o responsável.
+4382|Ficar quieto
+4383|Reunir o time e recuperar o foco
+4384|A tempestade passou no dia seguinte.
+4385|Sua liderança uniu o time.
+4498|Seu ex-companheiro {} joga no próximo adversário. Ele te mandou: "Em campo não tem amizade!"
+4387|Responder com uma piada
+4388|"Te vejo em campo"
+4389|A provocação antes do jogo divertiu as redes sociais.
+4390|Sua mensagem virou manchete.
+4391|Uma marca de chuteiras quer te mandar um par personalizado para o torneio.
+1005|Aceitar
+4392|Sem distrações no torneio
+4393|Suas chuteiras novas viraram assunto do torneio.
+4394|O técnico gostou do seu profissionalismo.
+4517|Nova figurinha: {}
+4395|Álbum de figurinhas
+4502|{}/{} figurinhas. Cada figurinha é uma meta: brilhe nos torneios e complete o álbum.
+4397|Estreia
+4398|Jogue sua primeira partida no Campeonato Mundial
+4399|Primeiro gol
+4400|Marque seu primeiro gol no Campeonato Mundial
+4401|Dois gols
+4402|Marque 2 gols em uma partida
+4403|Hat-trick
+4404|Marque 3 gols em uma partida
+272|Armador
+4405|Dê 2 assistências em uma partida
+4406|Seja o melhor em campo em um jogo do torneio
+4407|Noite perfeita
+4408|Tire nota 9.0 ou mais em uma partida
+4409|Matador de gigantes
+4410|Vença um time pelo menos 8 pontos mais forte
+4411|Gol trancado
+4412|Vença sem sofrer gol como zagueiro ou goleiro
+4413|Gol no mata-mata
+4414|Marque no mata-mata
+4415|Sangue frio
+4416|Converta seu pênalti em uma disputa
+4417|Gol na final
+4418|Marque em uma final de Campeonato Mundial
+4419|Invicto
+4420|Termine a fase de grupos invicto
+4421|Líder do grupo
+4422|Termine em primeiro no grupo
+4423|Últimos 8
+4424|Chegue às quartas de final
+4425|Chegue à final
+4426|Campeão mundial
+3909|Vença o Campeonato Mundial
+4427|Conto de fadas
+4428|Chegue à semifinal com uma seleção abaixo de 73
+4429|Artilheiro
+4430|Seja o artilheiro do torneio
+4431|Seja eleito o melhor jogador do torneio
+4432|Estrela do futuro
+4433|Ganhe o prêmio de melhor jogador jovem
+4434|Goleador
+4435|Marque 5 gols em um torneio
+4436|Use a braçadeira de capitão
+4437|O país de pé
+4438|Leve a euforia no país a 100
+4439|Quatro torneios
+4440|Jogue 4 Campeonatos Mundiais
+4441|Bicampeão
+4442|Seja campeão mundial duas vezes
+1035|Capitão
+4443|Noite de premiação
+4444|Os melhores do torneio são chamados ao palco...
+4445|Seleção do torneio
+4446|VOCÊ!
+4447|Não selecionado
+4448|Volta para casa
+4449|Os heróis voltaram!
+4450|Recepção de heróis
+4496|Centenas de milhares no aeroporto! Vocês desfilaram com a taça em ônibus aberto pelas ruas de {}. Ninguém dorme esta noite.
+4453|Milhares de torcedores receberam vocês com aplausos no aeroporto. A taça não veio, mas este time levantou um país.
+4456|A torcida está orgulhosa: faixas de "Cabeça erguida!" esperavam no aeroporto.
+4457|Uma volta tranquila. O time lutou bem, mas se esperava mais.
+4460|A decepção é grande. Mesmo assim, um pequeno grupo de torcedores não abandonou vocês no aeroporto.
+4463|Uma volta silenciosa. As críticas são duras, mas há muitas lições neste torneio.
+4466|SOMOS CAMPEÕES DO MUNDO! Esta taça é de todos nós. Obrigado!
+4468|Demos tudo. Obrigado pelo apoio, isso é só o começo.
+4471|Vestir esta camisa foi uma honra. Voltaremos mais fortes.
+1412|Seguidores
+4474|Figurinhas novas
+4510|{} está no topo do mundo! Você fez história aos {} anos.
+4500|No próximo torneio ({}) você terá {} anos. Pode continuar com o mesmo jogador.
+4520|Torneio de {}
+4516|Seguir para {}
+4477|Card do torneio
+4478|Encerrar carreira
+4479|Resumo da carreira
+4480|Sua carreira
+4481|Nova carreira
+4497|{0} está de volta à concentração de {2} para o Campeonato Mundial de {1}! Aos {3} anos, ele se prepara para o {4}º torneio.
+4482|4 anos depois...
+4501|Você tem {0} anos e está na concentração de {1} pela {2}ª vez. Desta vez todos esperam muito de você.
+4483|Mudança
+4484|Jogos pela seleção
+4485|Fase
+4486|Começar a concentração
+4507|Sede: {}. Seus adversários de grupo já foram sorteados.
+4488|Sua carreira no Campeonato Mundial
+4489|Seu primeiro torneio está em andamento.
+4490|Torneios
+4491|Fim da carreira na seleção
+4492|Uma lenda mundial
+4493|Uma lenda campeã mundial
+4494|Um goleador inesquecível
+4495|Um veterano da seleção
+4505|{0} fez {3} jogos e marcou {4} gols por {1} em {2} Campeonatos Mundiais.
+4522|Sede:
+4487|Seus adversários de grupo já foram sorteados.
+4523|Carreira de seleção com 4 torneios e o mesmo jogador (2026–2038)
+4524|Análise do adversário, escolha tática e álbum de 26 figurinhas com metas

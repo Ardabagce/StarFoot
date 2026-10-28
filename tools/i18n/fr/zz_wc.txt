@@ -1,0 +1,172 @@
+4310|À la fin du tournoi, tu peux continuer avec le même joueur au Championnat du monde 4 ans plus tard : une carrière internationale sur 4 tournois.
+4521|Album {}/{}
+4311|Ferveur au pays
+4312|Ferveur
+4313|Les attentes au pays sont faibles, presque personne n'y croit.
+4314|Les supporters suivent les matchs avec ferveur dans les cafés et à la maison.
+4315|Des écrans géants sont installés sur les places, les rues sont pleines de drapeaux.
+4316|Tout le pays est dans la rue ! Tout le monde parle de toi.
+4499|La ferveur est à son comble ! Écrans géants dans tout le pays ({}) et rues pavoisées.
+4320|Analyse de l'adversaire
+4321|Joueur clé
+4322|Écart de niveau
+4323|Forme
+4324|Ligne défensive haute qui laisse de l'espace dans le dos.
+4325|Défense lente, vulnérable aux attaques rapides.
+4326|Défend en nombre et cherche la contre-attaque.
+4327|Dangereux sur coups de pied arrêtés, mais s'ouvre avec la fatigue.
+4328|Tout passe par leur star : il faut l'arrêter.
+4329|Physique et agressif, presse fort.
+4330|Conseil du coach :
+4331|Assiste à une réunion tactique et le coach te donnera son conseil pour ce match.
+4332|Ta tactique
+4333|Attaque
+4334|Équilibre
+4335|Défense
+4336|Plus d'occasions, mais des espaces derrière.
+4337|Jeu équilibré, pas de surprise.
+4338|Tu encaisses moins, mais tu as moins d'occasions devant.
+4513|La bonne tactique contre cet adversaire : {}. Ton équipe est plus forte !
+4340|Le coach t'a appelé dans son bureau et t'a tendu le brassard : « Peux-tu porter cette équipe sur le terrain ? »
+4341|Prendre le brassard
+4342|Je ne suis pas encore prêt
+4343|Tu es maintenant le capitaine ! Le vestiaire compte sur toi.
+4346|Ton humilité a été appréciée. Le brassard reste à un coéquipier expérimenté.
+4503|Tu t'es disputé avec {} pour une place à l'entraînement. Le vestiaire est tendu.
+4350|S'excuser et faire la paix
+4351|Ne pas reculer
+4352|Vous vous êtes serré la main. L'ambiance s'est apaisée.
+4355|Le coach a aimé ta hargne, mais certains coéquipiers te boudent.
+4356|Tu t'es réveillé avec le genou gonflé. Les médecins ne sont pas sûrs.
+4359|Passer un examen, pas de risque
+4360|Ne rien dire et jouer
+4361|Un petit œdème : il te faut un jour de repos.
+4362|Rien de grave ! Quel soulagement.
+4365|La douleur a empiré : tu es absent 2 jours.
+4366|Tu as serré les dents et la douleur est passée.
+4367|Un journal affirme qu'un grand club s'intéresse à toi. Tout le camp en parle.
+4370|Ma seule priorité, c'est le tournoi
+4371|Sourire, sans commentaire
+4372|Le coach a cité tes mots en exemple devant l'équipe.
+4373|Ton nom est en tendance sur les réseaux.
+4374|Un jeune supporter hospitalisé t'a écrit : « Marque aussi un but pour moi. »
+4375|L'appeler en vidéo
+4376|Envoyer un maillot signé
+4377|Le sourire de l'enfant t'a donné de la force.
+4378|Il était fou de joie en recevant le maillot.
+4379|Le plan tactique a fuité sur les réseaux ! Le coach cherche le coupable.
+4382|Rester discret
+4383|Rassembler l'équipe et recentrer tout le monde
+4384|La tempête est retombée le lendemain.
+4385|Ton leadership a soudé l'équipe.
+4498|Ton ancien coéquipier {} joue chez le prochain adversaire. Il t'a écrit : « Aucune pitié sur le terrain ! »
+4387|Répondre par une blague
+4388|« On se voit sur le terrain »
+4389|La petite joute d'avant-match a beaucoup fait rire les réseaux.
+4390|Ton message a fait les gros titres.
+4391|Une marque de crampons veut t'envoyer une paire personnalisée pour le tournoi.
+1005|Accepter
+4392|Pas de distraction pendant le tournoi
+4393|Tes nouveaux crampons ont fait parler tout le tournoi.
+4394|Le coach a apprécié ton professionnalisme.
+4517|Nouvelle vignette : {}
+4395|Album de vignettes
+4502|{}/{} vignettes. Chaque vignette est un objectif : brille en tournoi et complète l'album.
+4397|Première sélection
+4398|Joue ton premier match de Championnat du monde
+4399|Premier but
+4400|Marque ton premier but en Championnat du monde
+4401|Doublé
+4402|Marque 2 buts dans un match
+4403|Triplé
+4404|Marque 3 buts dans un match
+272|Meneur de jeu
+4405|Délivre 2 passes décisives dans un match
+4406|Sois élu homme du match lors d'un match du tournoi
+4407|Soirée parfaite
+4408|Obtiens une note de 9.0 ou plus dans un match
+4409|Tombeur de géants
+4410|Bats une équipe plus forte d'au moins 8 points
+4411|Cadenas
+4412|Gagne sans encaisser en tant que défenseur ou gardien
+4413|But en phase finale
+4414|Marque en phase à élimination directe
+4415|Sang-froid
+4416|Marque ton tir au but lors d'une séance
+4417|But en finale
+4418|Marque en finale du Championnat du monde
+4419|Invaincu
+4420|Termine la phase de groupes invaincu
+4421|Premier du groupe
+4422|Termine premier de ton groupe
+4423|Les 8 derniers
+4424|Atteins les quarts de finale
+4425|Atteins la finale
+4426|Champion du monde
+3909|Remporte le Championnat du monde
+4427|Conte de fées
+4428|Atteins les demies avec une nation notée sous 73
+4429|Meilleur buteur
+4430|Termine meilleur buteur du tournoi
+4431|Sois élu meilleur joueur du tournoi
+4432|Star de demain
+4433|Remporte le prix du meilleur jeune joueur
+4434|Buteur
+4435|Marque 5 buts en un tournoi
+4436|Porte le brassard de capitaine
+4437|Le pays debout
+4438|Porte la ferveur du pays à 100
+4439|Quatre tournois
+4440|Joue 4 Championnats du monde
+4441|Double triomphe
+4442|Deviens champion du monde deux fois
+1035|Capitaine
+4443|Soirée des trophées
+4444|Les meilleurs du tournoi sont appelés sur scène...
+4445|Équipe type du tournoi
+4446|TOI !
+4447|Non retenu
+4448|Retour au pays
+4449|Les héros sont rentrés !
+4450|Accueil de héros
+4496|Des centaines de milliers de personnes à l'aéroport ! Vous avez paradé avec le trophée dans les rues de {} en bus à impériale. Personne ne dormira cette nuit.
+4453|Des milliers de supporters vous ont applaudis à l'aéroport. Pas de trophée, mais cette équipe a fait vibrer tout un pays.
+4456|Les supporters sont fiers : des banderoles « Tête haute ! » vous attendaient à l'aéroport.
+4457|Un retour discret. L'équipe s'est bien battue, mais on attendait plus.
+4460|La déception est immense. Un petit groupe de supporters vous a tout de même attendus à l'aéroport.
+4463|Un retour silencieux. Les critiques sont dures, mais ce tournoi est riche d'enseignements.
+4466|NOUS SOMMES CHAMPIONS DU MONDE ! Ce trophée est à nous tous. Merci !
+4468|Nous avons tout donné. Merci pour votre soutien, ce n'est que le début.
+4471|Porter ce maillot était un honneur. Nous reviendrons plus forts.
+1412|Abonnés
+4474|Nouvelles vignettes
+4510|{} est sur le toit du monde ! Tu as écrit l'histoire à {} ans.
+4500|Au prochain tournoi ({}), tu auras {} ans. Tu peux continuer avec le même joueur.
+4520|Tournoi {}
+4516|Continuer vers {}
+4477|Carte du tournoi
+4478|Terminer la carrière
+4479|Bilan de carrière
+4480|Ta carrière
+4481|Nouvelle carrière
+4497|{0} est de retour au camp de {2} pour le Championnat du monde {1} ! À {3} ans, il prépare son {4}e tournoi.
+4482|4 ans plus tard...
+4501|Tu as {0} ans et tu rejoins le camp de {1} pour la {2}e fois. Cette fois, tout le monde attend beaucoup de toi.
+4483|Évolution
+4484|Sélections
+4485|Phase
+4486|Commencer le stage
+4507|Pays hôtes : {}. Tes adversaires de groupe ont été tirés au sort.
+4488|Ta carrière en Championnat du monde
+4489|Ton premier tournoi est en cours.
+4490|Tournois
+4491|Fin de la carrière internationale
+4492|Une légende mondiale
+4493|Une légende championne du monde
+4494|Un buteur inoubliable
+4495|Un pilier de la sélection
+4505|{0} a disputé {3} matchs et marqué {4} buts avec {1} en {2} Championnats du monde.
+4522|Pays hôtes :
+4487|Tes adversaires de groupe ont été tirés au sort.
+4523|Carrière internationale sur 4 tournois avec le même joueur (2026–2038)
+4524|Analyse de l'adversaire, choix tactique et album de 26 vignettes-objectifs
