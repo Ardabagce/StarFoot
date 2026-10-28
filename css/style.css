@@ -2177,8 +2177,8 @@ button, .btn, a, [data-act], [data-tab] { touch-action: manipulation; -webkit-ta
 .lux-buy { text-align: center; }
 
 /* Starpedia (Wikipedia benzeri tam ekran sayfa) */
-body.sp-open { overflow: hidden; }
-.sp { position: fixed; inset: 0; z-index: 48; background: #fff; color: #202122; overflow-y: auto; -webkit-overflow-scrolling: touch; font-family: -apple-system, "Helvetica Neue", Arial, "Noto Sans", sans-serif; font-size: 15.5px; line-height: 1.6; }
+body.ov-open { overflow: hidden; }
+.sp { position: fixed; inset: 0; z-index: 48; background: #fff; color: #202122; overflow-y: auto; overscroll-behavior: contain; touch-action: pan-y; font-family: -apple-system, "Helvetica Neue", Arial, "Noto Sans", sans-serif; font-size: 15.5px; line-height: 1.6; }
 .sp-bar { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; gap: 10px; padding: calc(10px + env(safe-area-inset-top, 0px)) 14px 10px; background: #f8f9fa; border-bottom: 1px solid #c8ccd1; }
 .sp-x { width: 36px; height: 36px; border-radius: 50%; border: 0; background: transparent; color: #202122; display: grid; place-items: center; cursor: pointer; }
 .sp-x svg { width: 22px; height: 22px; }

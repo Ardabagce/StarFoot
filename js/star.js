@@ -50,6 +50,27 @@ const Star = {
   },
   free(k) { return !Star.has() && !Star.tasted(k); },
 
+  // Tam ekran katmanlar (Starpedia, belgesel): açarken arka planın kaydırmasını kilitler,
+  // kapatırken katmanı önce gizleyip kaldırır ve oyunu yeniden çizdirir.
+  // iOS WebView'da kaydırılabilir sabit katman doğrudan silinince ekranda beyaz bir iz kalabiliyor.
+  cover(el, cls) {
+    Star._y = window.scrollY || 0;
+    document.body.appendChild(el);
+    document.body.classList.add('ov-open', cls);
+  },
+  uncover(el, cls) {
+    if (el) { el.style.display = 'none'; el.remove(); }
+    document.body.classList.remove(cls);
+    if (!document.querySelector('.sp, .doc')) document.body.classList.remove('ov-open');
+    try { if (Game.state && !document.getElementById('hub').classList.contains('hidden')) Game.render(); } catch (e) { /* çizim yok */ }
+    window.scrollTo(0, Star._y || 0);
+    const h = document.getElementById('hub');
+    if (h) {
+      h.style.opacity = '0.999';
+      requestAnimationFrame(() => requestAnimationFrame(() => { h.style.opacity = ''; }));
+    }
+  },
+
   perksHtml() {
     return `<ul class="prem-l star-perks">
       <li><b>Altın onay rozeti ve Starpedia</b><small>Kendi ansiklopedi sayfan</small></li>
@@ -327,8 +348,7 @@ const Star = {
       tb.innerHTML = `${Icon('star')}<span><b>Ücretsiz önizleme</b> Starpedia sayfanı bir kez görüyorsun. Premium ile her zaman açık.</span><button class="btn" data-star="pitch" data-src="wiki_banner">Premium</button>`;
       el.insertBefore(tb, el.children[1] || null);
     }
-    document.body.appendChild(el);
-    document.body.classList.add('sp-open');
+    Star.cover(el, 'sp-open');
     if (typeof UI !== 'undefined' && UI.strip) UI.strip(el);
     const cv = el.querySelector('.sp-fig');
     const c = cv.getContext('2d');
@@ -342,8 +362,7 @@ const Star = {
   wikiClose(quiet) {
     const el = document.getElementById('spedia');
     const taste = el && el.dataset.taste && !quiet;
-    if (el) el.remove();
-    document.body.classList.remove('sp-open');
+    Star.uncover(el, 'sp-open');
     if (taste) Star.pitch('Starpedia sayfası', 'wiki_taste', 'Starpedia sayfana göz attın! Premium ile sayfan her zaman açık, her sezon kendiliğinden güncellenir ve bölümlerini sen yazabilirsin.');
   },
   wikiEdit(key) {
@@ -406,10 +425,10 @@ const Star = {
       <div class="doc-txt"><small class="doc-k"></small><h2 class="doc-t"></h2><p class="doc-p"></p></div>
       <div class="doc-end hidden"><button class="btn btn-ghost doc-share">${Icon('share')} Paylaş</button><button class="btn btn-big doc-close">Kapat</button></div>
       <div class="doc-tap l"></div><div class="doc-tap r"></div>`;
-    document.body.appendChild(el);
+    Star.cover(el, 'doc-open');
     const cv = el.querySelector('.doc-cv');
     const close = () => {
-      clearTimeout(timer); el.remove();
+      clearTimeout(timer); Star.uncover(el, 'doc-open');
       if (mode === 'taste') Star.pitch('Kariyer belgeseli', 'doc_taste', 'Belgeselin hazır! Premium ile kariyerin ilerledikçe belgeselini istediğin zaman yeniden izleyip paylaşabilirsin.');
     };
     const show = (k) => {
