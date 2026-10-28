@@ -120,3 +120,55 @@ const U = {
   $(sel, root = document) { return root.querySelector(sel); },
   $$(sel, root = document) { return Array.from(root.querySelectorAll(sel)); },
 };
+
+// ---------- Ekran koruması ----------
+// iOS WebView bazen bir pencere ya da tam ekran katman kapanınca alttaki sayfayı yeniden çizmiyor
+// (boş/beyaz ekran). Kapanma anında sayfa zorla yeniden çizilir. Ayrıca beklenmeyen bir hata olursa
+// ekran geri getirilir ve hata Firebase'e kaydedilir.
+const ScreenGuard = {
+  t: 0,
+  repaint() {
+    cancelAnimationFrame(ScreenGuard.t);
+    const els = [document.getElementById('hub'), document.getElementById('title')].filter(Boolean);
+    els.forEach((el) => { el.style.opacity = '0.999'; });
+    void document.body.offsetHeight;
+    ScreenGuard.t = requestAnimationFrame(() => requestAnimationFrame(() => { els.forEach((el) => { el.style.opacity = ''; }); }));
+  },
+  errs: 0,
+  report(msg, src, line) {
+    if (ScreenGuard.errs++ > 8) return;
+    try {
+      const F = window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.FirebaseAnalytics;
+      if (F && F.logEvent) F.logEvent({ name: 'js_error', params: { m: String(msg || '').slice(0, 95), s: String(src || '').split('/').pop().slice(0, 30), l: line || 0 } }).catch(() => {});
+    } catch (e) { /* yok */ }
+  },
+  heal() {
+    try {
+      const vis = Array.from(document.querySelectorAll('.screen')).some((x) => !x.classList.contains('hidden'));
+      if (!vis && typeof Game !== 'undefined') {
+        if (Game.state) { Game.show('hub'); Game.render(); } else if (Game.toMenu) Game.toMenu();
+      }
+      ScreenGuard.repaint();
+    } catch (e) { /* yok */ }
+  },
+  init() {
+    window.addEventListener('error', (e) => { ScreenGuard.report(e.message, e.filename, e.lineno); setTimeout(ScreenGuard.heal, 60); });
+    window.addEventListener('unhandledrejection', (e) => { const r = e.reason; ScreenGuard.report(r && (r.message || r), 'promise', 0); setTimeout(ScreenGuard.heal, 60); });
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) ScreenGuard.repaint(); });
+    const start = () => {
+      const mo = new MutationObserver((list) => {
+        for (const r of list) {
+          if (r.type === 'attributes' && r.target.id === 'modal' && r.target.classList.contains('hidden')) return ScreenGuard.repaint();
+          if (r.type === 'childList' && r.removedNodes.length) {
+            for (const n of r.removedNodes) if (n.nodeType === 1 && n.id !== 'toasts' && !(n.classList && n.classList.contains('toast'))) return ScreenGuard.repaint();
+          }
+        }
+      });
+      mo.observe(document.body, { childList: true });
+      const m = document.getElementById('modal');
+      if (m) mo.observe(m, { attributes: true, attributeFilter: ['class'] });
+    };
+    if (document.body) start(); else document.addEventListener('DOMContentLoaded', start);
+  },
+};
+ScreenGuard.init();

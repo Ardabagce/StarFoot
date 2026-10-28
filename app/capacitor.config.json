@@ -2,6 +2,10 @@
   "appId": "app.vercel.starfoot.twa",
   "appName": "StarFoot",
   "webDir": "www",
+  "backgroundColor": "#0a1530",
+  "ios": {
+    "backgroundColor": "#0a1530"
+  },
   "android": {
     "backgroundColor": "#0a1530",
     "allowMixedContent": false,

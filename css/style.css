@@ -41,7 +41,7 @@ html[lang=ja] *{letter-spacing:0!important;word-break:normal;line-break:strict}
 }
 
 * { box-sizing: border-box; }
-html { touch-action: manipulation; -webkit-text-size-adjust: 100%; }
+html { touch-action: manipulation; -webkit-text-size-adjust: 100%; background: #0a1530; }
 html, body { margin: 0; padding: 0; }
 body {
   background:
@@ -2284,8 +2284,9 @@ body.ov-open { overflow: hidden; }
 .wn-note svg { width: 15px; height: 15px; vertical-align: -2px; }
 
 /* Yatay taşma koruması: hiçbir ekran sayfayı yana kaydırmasın */
-html, body { max-width: 100%; }
-@supports (overflow: clip) { html, body, #hub { overflow-x: clip; } }
+/* Not: html/body'ye overflow kuralı konmaz; iOS WebView'da ekranın yeniden çizilmemesine (beyaz ekran) yol açabiliyor */
+#main, #side { max-width: 100%; }
+.vnav { max-width: 100%; }
 @media (max-width: 760px) {
   .hdr { grid-template-columns: minmax(0, 1fr) auto auto; }
   .hi-money.wc-stage { max-width: 48vw; min-width: 0; }

@@ -141,7 +141,7 @@ const I18N = {
       if (s.includes(sep)) return I18N.join(s.split(sep), sep, d);
     }
     // Cümlelere böl
-    const sent = s.split(/(?<=[.!?…])\s+(?=[A-ZÇĞİŞÖÜ"“0-9])/);
+    const sent = s.replace(/([.!?…])\s+(?=[A-ZÇĞİŞÖÜ"“0-9])/g, '$1\u0001').split('\u0001');
     if (sent.length > 1) return I18N.join(sent, ' ', d);
     // Sondaki "(1/3)" gibi ekler
     const par = s.match(/^(.*\S)(\s*\([^()]*\)|\s+[+−-]?\d+([.,/]\d+)?%?|\s+U\d\d|\s*[:!.]+)$/);
