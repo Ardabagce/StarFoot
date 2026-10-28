@@ -2282,3 +2282,16 @@ body.ov-open { overflow: hidden; }
 .wn-note { margin: 12px 0 0; padding: 10px 12px; border-radius: 12px; background: rgba(245, 180, 0, .14); color: #ffd46a; font-size: 13.5px; }
 .wn-note.ok { background: rgba(48, 209, 88, .14); color: #8af0a8; }
 .wn-note svg { width: 15px; height: 15px; vertical-align: -2px; }
+
+/* Yatay taşma koruması: hiçbir ekran sayfayı yana kaydırmasın */
+html, body { max-width: 100%; }
+@supports (overflow: clip) { html, body, #hub { overflow-x: clip; } }
+@media (max-width: 760px) {
+  .hdr { grid-template-columns: minmax(0, 1fr) auto auto; }
+  .hi-money.wc-stage { max-width: 48vw; min-width: 0; }
+  .hi-money.wc-stage .hm-t { min-width: 0; }
+  .hi-money.wc-stage small, .hi-money.wc-stage b { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+}
+@media (max-width: 360px) { .hi-money.wc-stage small { display: none; } .logo { font-size: 21px; } }
+/* Sekme çubukları dar ekranda sığsın (5 sekmeli Dünya Şampiyonası dahil) */
+@media (max-width: 430px) { .vnav { gap: 2px; } .vnav button { flex: 1 1 auto; padding: 9px 5px; letter-spacing: .02em; font-size: 11.5px; } }
