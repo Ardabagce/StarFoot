@@ -2,6 +2,7 @@ import UIKit
 import Capacitor
 import AppTrackingTransparency
 import StoreKit
+import GameKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -63,6 +64,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 class StarfootViewController: CAPBridgeViewController {
     override open func capacitorDidLoad() {
         bridge?.registerPluginInstance(StarfootReviewPlugin())
+        bridge?.registerPluginInstance(StarfootCloudPlugin())
+        bridge?.registerPluginInstance(StarfootGameCenterPlugin())
     }
 }
 
@@ -89,5 +92,140 @@ public class StarfootReviewPlugin: CAPPlugin, CAPBridgedPlugin {
             }
             call.resolve()
         }
+    }
+}
+
+// iCloud anahtar-değer deposu: kariyer kayıtlarının yedeği (JS: StarfootCloud).
+// Değerler base64 olarak gelir, iCloud'da ham veri (Data) olarak saklanır. Toplam sınır 1 MB.
+@objc(StarfootCloudPlugin)
+public class StarfootCloudPlugin: CAPPlugin, CAPBridgedPlugin {
+    public let identifier = "StarfootCloudPlugin"
+    public let jsName = "StarfootCloud"
+    public let pluginMethods: [CAPPluginMethod] = [
+        CAPPluginMethod(name: "status", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "get", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "set", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "remove", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "list", returnType: CAPPluginReturnPromise)
+    ]
+    private let store = NSUbiquitousKeyValueStore.default
+
+    override public func load() {
+        NotificationCenter.default.addObserver(self, selector: #selector(changed(_:)),
+            name: NSUbiquitousKeyValueStore.didChangeExternallyNotification, object: store)
+        store.synchronize()
+    }
+
+    @objc func changed(_ n: Notification) {
+        let keys = (n.userInfo?[NSUbiquitousKeyValueStoreChangedKeysKey] as? [String]) ?? []
+        let reason = (n.userInfo?[NSUbiquitousKeyValueStoreChangeReasonKey] as? Int) ?? -1
+        notifyListeners("change", data: ["keys": keys, "quota": reason == NSUbiquitousKeyValueStoreQuotaViolationChange])
+    }
+
+    @objc func status(_ call: CAPPluginCall) {
+        call.resolve(["available": FileManager.default.ubiquityIdentityToken != nil])
+    }
+
+    @objc func get(_ call: CAPPluginCall) {
+        guard let key = call.getString("key") else { return call.reject("key") }
+        if let d = store.data(forKey: key) { call.resolve(["data": d.base64EncodedString()]) }
+        else if let s = store.string(forKey: key) { call.resolve(["text": s]) }
+        else { call.resolve([:]) }
+    }
+
+    @objc func set(_ call: CAPPluginCall) {
+        guard let key = call.getString("key") else { return call.reject("key") }
+        if let b = call.getString("data"), let d = Data(base64Encoded: b) { store.set(d, forKey: key) }
+        else if let t = call.getString("text") { store.set(t, forKey: key) }
+        else { return call.reject("value") }
+        store.synchronize()
+        call.resolve()
+    }
+
+    @objc func remove(_ call: CAPPluginCall) {
+        guard let key = call.getString("key") else { return call.reject("key") }
+        store.removeObject(forKey: key)
+        store.synchronize()
+        call.resolve()
+    }
+
+    @objc func list(_ call: CAPPluginCall) {
+        call.resolve(["keys": Array(store.dictionaryRepresentation.keys)])
+    }
+}
+
+// Game Center: giriş, liderlik tabloları ve başarımlar (JS: StarfootGameCenter).
+@objc(StarfootGameCenterPlugin)
+public class StarfootGameCenterPlugin: CAPPlugin, CAPBridgedPlugin, GKGameCenterControllerDelegate {
+    public let identifier = "StarfootGameCenterPlugin"
+    public let jsName = "StarfootGameCenter"
+    public let pluginMethods: [CAPPluginMethod] = [
+        CAPPluginMethod(name: "auth", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "submit", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "achieve", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "show", returnType: CAPPluginReturnPromise)
+    ]
+    private var waiting: [CAPPluginCall] = []
+    private var started = false
+
+    @objc func auth(_ call: CAPPluginCall) {
+        DispatchQueue.main.async {
+            let me = GKLocalPlayer.local
+            if me.isAuthenticated { return call.resolve(["ok": true]) }
+            self.waiting.append(call)
+            if self.started { return }
+            self.started = true
+            me.authenticateHandler = { [weak self] vc, err in
+                guard let self = self else { return }
+                if let vc = vc {
+                    self.bridge?.viewController?.present(vc, animated: true)
+                    return
+                }
+                let ok = GKLocalPlayer.local.isAuthenticated
+                self.waiting.forEach { $0.resolve(["ok": ok, "error": err?.localizedDescription ?? ""]) }
+                self.waiting.removeAll()
+                self.notifyListeners("auth", data: ["ok": ok])
+            }
+        }
+    }
+
+    @objc func submit(_ call: CAPPluginCall) {
+        guard GKLocalPlayer.local.isAuthenticated else { return call.resolve(["ok": false]) }
+        let scores = call.getArray("scores", JSObject.self) ?? []
+        let group = DispatchGroup()
+        for s in scores {
+            guard let id = s["id"] as? String, let v = (s["value"] as? NSNumber)?.intValue else { continue }
+            group.enter()
+            GKLeaderboard.submitScore(v, context: 0, player: GKLocalPlayer.local, leaderboardIDs: [id]) { _ in group.leave() }
+        }
+        group.notify(queue: .main) { call.resolve(["ok": true]) }
+    }
+
+    @objc func achieve(_ call: CAPPluginCall) {
+        guard GKLocalPlayer.local.isAuthenticated else { return call.resolve(["ok": false]) }
+        let ids = call.getArray("ids", String.self) ?? []
+        let list: [GKAchievement] = ids.map {
+            let a = GKAchievement(identifier: $0)
+            a.percentComplete = 100
+            a.showsCompletionBanner = true
+            return a
+        }
+        if list.isEmpty { return call.resolve(["ok": true]) }
+        GKAchievement.report(list) { err in call.resolve(["ok": err == nil]) }
+    }
+
+    @objc func show(_ call: CAPPluginCall) {
+        DispatchQueue.main.async {
+            guard GKLocalPlayer.local.isAuthenticated else { return call.resolve(["ok": false]) }
+            let state: GKGameCenterViewControllerState = call.getString("view") == "achievements" ? .achievements : .leaderboards
+            let vc = GKGameCenterViewController(state: state)
+            vc.gameCenterDelegate = self
+            self.bridge?.viewController?.present(vc, animated: true)
+            call.resolve(["ok": true])
+        }
+    }
+
+    public func gameCenterViewControllerDidFinish(_ vc: GKGameCenterViewController) {
+        vc.dismiss(animated: true)
     }
 }

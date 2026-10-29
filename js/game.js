@@ -2106,6 +2106,7 @@ ${UI.paper()}`;
         ${typeof Notify !== 'undefined' && Notify.plugin() ? `<label class="drill-tg"><input type="checkbox" id="notif-tg" ${Notify.on() ? 'checked' : ''}><span><b>Bildirimler</b><small>Günlük ödül ve enerji hatırlatmaları.</small></span></label>` : ''}
         <label class="drill-tg"><input type="checkbox" id="hap-tg" ${typeof Sfx !== 'undefined' && Sfx.hap ? 'checked' : ''}><span><b>Titreşim</b><small>Golde, vuruşta ve kritik anlarda telefon titrer.</small></span></label>
       </section>
+      ${typeof Cloud !== 'undefined' && (Cloud.pl || GC.pl) ? `<section class="card settings"><div class="card-h"><span>${Icon('save')} Yedek ve Game Center</span></div>${Cloud.card()}${GC.card()}</section>` : ''}
       ${UI.feedbackCard()}
       <section class="card settings">
         <div class="card-h"><span>${Icon('shield')} Gizlilik</span></div>
@@ -2282,6 +2283,7 @@ ${UI.paper()}`;
       });
     }));
     U.$$('[data-adprivacy]', root).forEach((b) => (b.onclick = () => window.StarfootAds.privacyOptions()));
+    if (typeof Cloud !== 'undefined') { Cloud.bind(root); GC.bind(root); }
     U.$$('[data-setcur]', root).forEach((b) => (b.onclick = () => { try { if (b.dataset.setcur) localStorage.setItem('starfoot_cur', b.dataset.setcur); else localStorage.removeItem('starfoot_cur'); } catch (e) { /* yok */ } Game.render(); }));
     U.$$('select[data-setlang]', root).forEach((b) => (b.onchange = () => { if (b.value !== I18N.lang) { Game.save(); I18N.set(b.value); } }));
     U.$$('[data-sys]', root).forEach((b) => (b.onclick = () => {

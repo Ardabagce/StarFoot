@@ -1,0 +1,2302 @@
+{
+ "achievements": [
+  {
+   "id": "sf.ach.goal1",
+   "ref": "İlk Gol",
+   "points": 10,
+   "image": "store/asc/gc/goal1.jpg",
+   "locales": {
+    "tr": {
+     "name": "İlk Gol",
+     "desc": "Kariyerinin ilk golünü attın"
+    },
+    "en-US": {
+     "name": "First Goal",
+     "desc": "You scored your first career goal"
+    },
+    "en-GB": {
+     "name": "First Goal",
+     "desc": "You scored your first career goal"
+    },
+    "es-ES": {
+     "name": "Primer gol",
+     "desc": "Marcaste tu primer gol como profesional"
+    },
+    "es-MX": {
+     "name": "Primer gol",
+     "desc": "Marcaste tu primer gol como profesional"
+    },
+    "pt-BR": {
+     "name": "Primeiro gol",
+     "desc": "Você marcou seu primeiro gol na carreira"
+    },
+    "de-DE": {
+     "name": "Erstes Tor",
+     "desc": "Du hast dein erstes Karrieretor geschossen"
+    },
+    "fr-FR": {
+     "name": "Premier but",
+     "desc": "Tu as marqué le premier but de ta carrière"
+    },
+    "it": {
+     "name": "Primo gol",
+     "desc": "Hai segnato il primo gol della carriera"
+    },
+    "id": {
+     "name": "Gol Pertama",
+     "desc": "Kamu mencetak gol pertama kariermu"
+    },
+    "ar-SA": {
+     "name": "أول هدف",
+     "desc": "سجلت أول هدف في مسيرتك"
+    },
+    "ja": {
+     "name": "初ゴール",
+     "desc": "キャリア初ゴールを決めた"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.g10",
+   "ref": "10 Gol",
+   "points": 10,
+   "image": "store/asc/gc/g10.jpg",
+   "locales": {
+    "tr": {
+     "name": "10 Gol",
+     "desc": "Kariyerinde 10 gole ulaştın"
+    },
+    "en-US": {
+     "name": "10 Goals",
+     "desc": "You reached 10 career goals"
+    },
+    "en-GB": {
+     "name": "10 Goals",
+     "desc": "You reached 10 career goals"
+    },
+    "es-ES": {
+     "name": "10 Goles",
+     "desc": "Llegaste a 10 goles en tu carrera"
+    },
+    "es-MX": {
+     "name": "10 Goles",
+     "desc": "Llegaste a 10 goles en tu carrera"
+    },
+    "pt-BR": {
+     "name": "10 Gols",
+     "desc": "Você chegou a 10 gols na carreira"
+    },
+    "de-DE": {
+     "name": "10 Tore",
+     "desc": "Du hast 10 Karrieretore erreicht"
+    },
+    "fr-FR": {
+     "name": "10 Buts",
+     "desc": "Tu as atteint 10 buts en carrière"
+    },
+    "it": {
+     "name": "10 Gol",
+     "desc": "Hai raggiunto 10 gol in carriera"
+    },
+    "id": {
+     "name": "10 Gol",
+     "desc": "Kamu mencapai 10 gol sepanjang karier"
+    },
+    "ar-SA": {
+     "name": "10 أهداف",
+     "desc": "وصلت إلى 10 هدف في مسيرتك"
+    },
+    "ja": {
+     "name": "10 ゴール",
+     "desc": "キャリア通算10ゴールに到達した"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.goal50",
+   "ref": "50 Gol",
+   "points": 20,
+   "image": "store/asc/gc/goal50.jpg",
+   "locales": {
+    "tr": {
+     "name": "50 Gol",
+     "desc": "Kariyerinde 50 gole ulaştın"
+    },
+    "en-US": {
+     "name": "50 Goals",
+     "desc": "You reached 50 career goals"
+    },
+    "en-GB": {
+     "name": "50 Goals",
+     "desc": "You reached 50 career goals"
+    },
+    "es-ES": {
+     "name": "50 Goles",
+     "desc": "Llegaste a 50 goles en tu carrera"
+    },
+    "es-MX": {
+     "name": "50 Goles",
+     "desc": "Llegaste a 50 goles en tu carrera"
+    },
+    "pt-BR": {
+     "name": "50 Gols",
+     "desc": "Você chegou a 50 gols na carreira"
+    },
+    "de-DE": {
+     "name": "50 Tore",
+     "desc": "Du hast 50 Karrieretore erreicht"
+    },
+    "fr-FR": {
+     "name": "50 Buts",
+     "desc": "Tu as atteint 50 buts en carrière"
+    },
+    "it": {
+     "name": "50 Gol",
+     "desc": "Hai raggiunto 50 gol in carriera"
+    },
+    "id": {
+     "name": "50 Gol",
+     "desc": "Kamu mencapai 50 gol sepanjang karier"
+    },
+    "ar-SA": {
+     "name": "50 أهداف",
+     "desc": "وصلت إلى 50 هدف في مسيرتك"
+    },
+    "ja": {
+     "name": "50 ゴール",
+     "desc": "キャリア通算50ゴールに到達した"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.g100",
+   "ref": "100 Gol",
+   "points": 30,
+   "image": "store/asc/gc/g100.jpg",
+   "locales": {
+    "tr": {
+     "name": "100 Gol",
+     "desc": "Kariyerinde 100 gole ulaştın"
+    },
+    "en-US": {
+     "name": "100 Goals",
+     "desc": "You reached 100 career goals"
+    },
+    "en-GB": {
+     "name": "100 Goals",
+     "desc": "You reached 100 career goals"
+    },
+    "es-ES": {
+     "name": "100 Goles",
+     "desc": "Llegaste a 100 goles en tu carrera"
+    },
+    "es-MX": {
+     "name": "100 Goles",
+     "desc": "Llegaste a 100 goles en tu carrera"
+    },
+    "pt-BR": {
+     "name": "100 Gols",
+     "desc": "Você chegou a 100 gols na carreira"
+    },
+    "de-DE": {
+     "name": "100 Tore",
+     "desc": "Du hast 100 Karrieretore erreicht"
+    },
+    "fr-FR": {
+     "name": "100 Buts",
+     "desc": "Tu as atteint 100 buts en carrière"
+    },
+    "it": {
+     "name": "100 Gol",
+     "desc": "Hai raggiunto 100 gol in carriera"
+    },
+    "id": {
+     "name": "100 Gol",
+     "desc": "Kamu mencapai 100 gol sepanjang karier"
+    },
+    "ar-SA": {
+     "name": "100 أهداف",
+     "desc": "وصلت إلى 100 هدف في مسيرتك"
+    },
+    "ja": {
+     "name": "100 ゴール",
+     "desc": "キャリア通算100ゴールに到達した"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.g200",
+   "ref": "200 Gol",
+   "points": 35,
+   "image": "store/asc/gc/g200.jpg",
+   "locales": {
+    "tr": {
+     "name": "200 Gol",
+     "desc": "Kariyerinde 200 gole ulaştın"
+    },
+    "en-US": {
+     "name": "200 Goals",
+     "desc": "You reached 200 career goals"
+    },
+    "en-GB": {
+     "name": "200 Goals",
+     "desc": "You reached 200 career goals"
+    },
+    "es-ES": {
+     "name": "200 Goles",
+     "desc": "Llegaste a 200 goles en tu carrera"
+    },
+    "es-MX": {
+     "name": "200 Goles",
+     "desc": "Llegaste a 200 goles en tu carrera"
+    },
+    "pt-BR": {
+     "name": "200 Gols",
+     "desc": "Você chegou a 200 gols na carreira"
+    },
+    "de-DE": {
+     "name": "200 Tore",
+     "desc": "Du hast 200 Karrieretore erreicht"
+    },
+    "fr-FR": {
+     "name": "200 Buts",
+     "desc": "Tu as atteint 200 buts en carrière"
+    },
+    "it": {
+     "name": "200 Gol",
+     "desc": "Hai raggiunto 200 gol in carriera"
+    },
+    "id": {
+     "name": "200 Gol",
+     "desc": "Kamu mencapai 200 gol sepanjang karier"
+    },
+    "ar-SA": {
+     "name": "200 أهداف",
+     "desc": "وصلت إلى 200 هدف في مسيرتك"
+    },
+    "ja": {
+     "name": "200 ゴール",
+     "desc": "キャリア通算200ゴールに到達した"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.g300",
+   "ref": "300 Gol",
+   "points": 50,
+   "image": "store/asc/gc/g300.jpg",
+   "locales": {
+    "tr": {
+     "name": "300 Gol",
+     "desc": "Kariyerinde 300 gole ulaştın"
+    },
+    "en-US": {
+     "name": "300 Goals",
+     "desc": "You reached 300 career goals"
+    },
+    "en-GB": {
+     "name": "300 Goals",
+     "desc": "You reached 300 career goals"
+    },
+    "es-ES": {
+     "name": "300 Goles",
+     "desc": "Llegaste a 300 goles en tu carrera"
+    },
+    "es-MX": {
+     "name": "300 Goles",
+     "desc": "Llegaste a 300 goles en tu carrera"
+    },
+    "pt-BR": {
+     "name": "300 Gols",
+     "desc": "Você chegou a 300 gols na carreira"
+    },
+    "de-DE": {
+     "name": "300 Tore",
+     "desc": "Du hast 300 Karrieretore erreicht"
+    },
+    "fr-FR": {
+     "name": "300 Buts",
+     "desc": "Tu as atteint 300 buts en carrière"
+    },
+    "it": {
+     "name": "300 Gol",
+     "desc": "Hai raggiunto 300 gol in carriera"
+    },
+    "id": {
+     "name": "300 Gol",
+     "desc": "Kamu mencapai 300 gol sepanjang karier"
+    },
+    "ar-SA": {
+     "name": "300 أهداف",
+     "desc": "وصلت إلى 300 هدف في مسيرتك"
+    },
+    "ja": {
+     "name": "300 ゴール",
+     "desc": "キャリア通算300ゴールに到達した"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.assist50",
+   "ref": "Pas Ustası",
+   "points": 20,
+   "image": "store/asc/gc/assist50.jpg",
+   "locales": {
+    "tr": {
+     "name": "Pas Ustası",
+     "desc": "Kariyerinde 50 asist yaptın"
+    },
+    "en-US": {
+     "name": "Pass Master",
+     "desc": "You made 50 career assists"
+    },
+    "en-GB": {
+     "name": "Pass Master",
+     "desc": "You made 50 career assists"
+    },
+    "es-ES": {
+     "name": "Maestro del pase",
+     "desc": "Diste 50 asistencias en tu carrera"
+    },
+    "es-MX": {
+     "name": "Maestro del pase",
+     "desc": "Diste 50 asistencias en tu carrera"
+    },
+    "pt-BR": {
+     "name": "Mestre do passe",
+     "desc": "Você deu 50 assistências na carreira"
+    },
+    "de-DE": {
+     "name": "Passmeister",
+     "desc": "Du hast 50 Karriere-Vorlagen gegeben"
+    },
+    "fr-FR": {
+     "name": "Maître de la passe",
+     "desc": "Tu as délivré 50 passes décisives en carrière"
+    },
+    "it": {
+     "name": "Maestro del passaggio",
+     "desc": "Hai fornito 50 assist in carriera"
+    },
+    "id": {
+     "name": "Master Umpan",
+     "desc": "Kamu membuat 50 assist sepanjang karier"
+    },
+    "ar-SA": {
+     "name": "سيد التمرير",
+     "desc": "صنعت 50 أهداف في مسيرتك"
+    },
+    "ja": {
+     "name": "パスマスター",
+     "desc": "キャリア通算50アシストを記録した"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.a100",
+   "ref": "100 Asist",
+   "points": 25,
+   "image": "store/asc/gc/a100.jpg",
+   "locales": {
+    "tr": {
+     "name": "100 Asist",
+     "desc": "Kariyerinde 100 asist yaptın"
+    },
+    "en-US": {
+     "name": "100 Assists",
+     "desc": "You made 100 career assists"
+    },
+    "en-GB": {
+     "name": "100 Assists",
+     "desc": "You made 100 career assists"
+    },
+    "es-ES": {
+     "name": "100 Asistencias",
+     "desc": "Diste 100 asistencias en tu carrera"
+    },
+    "es-MX": {
+     "name": "100 Asistencias",
+     "desc": "Diste 100 asistencias en tu carrera"
+    },
+    "pt-BR": {
+     "name": "100 Assistências",
+     "desc": "Você deu 100 assistências na carreira"
+    },
+    "de-DE": {
+     "name": "100 Vorlagen",
+     "desc": "Du hast 100 Karriere-Vorlagen gegeben"
+    },
+    "fr-FR": {
+     "name": "100 Passes décisives",
+     "desc": "Tu as délivré 100 passes décisives en carrière"
+    },
+    "it": {
+     "name": "100 Assist",
+     "desc": "Hai fornito 100 assist in carriera"
+    },
+    "id": {
+     "name": "100 Assist",
+     "desc": "Kamu membuat 100 assist sepanjang karier"
+    },
+    "ar-SA": {
+     "name": "100 التمريرات الحاسمة",
+     "desc": "صنعت 100 أهداف في مسيرتك"
+    },
+    "ja": {
+     "name": "100 アシスト",
+     "desc": "キャリア通算100アシストを記録した"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.debut",
+   "ref": "İlk Maç",
+   "points": 5,
+   "image": "store/asc/gc/debut.jpg",
+   "locales": {
+    "tr": {
+     "name": "İlk Maç",
+     "desc": "İlk resmi maçına çıktın"
+    },
+    "en-US": {
+     "name": "First Match",
+     "desc": "You played your first official match"
+    },
+    "en-GB": {
+     "name": "First Match",
+     "desc": "You played your first official match"
+    },
+    "es-ES": {
+     "name": "Primer partido",
+     "desc": "Jugaste tu primer partido oficial"
+    },
+    "es-MX": {
+     "name": "Primer partido",
+     "desc": "Jugaste tu primer partido oficial"
+    },
+    "pt-BR": {
+     "name": "Primeiro jogo",
+     "desc": "Você jogou sua primeira partida oficial"
+    },
+    "de-DE": {
+     "name": "Erstes Spiel",
+     "desc": "Du hast dein erstes Pflichtspiel bestritten"
+    },
+    "fr-FR": {
+     "name": "Premier match",
+     "desc": "Tu as joué ton premier match officiel"
+    },
+    "it": {
+     "name": "Prima partita",
+     "desc": "Hai giocato la tua prima partita ufficiale"
+    },
+    "id": {
+     "name": "Pertandingan Pertama",
+     "desc": "Kamu memainkan pertandingan resmi pertamamu"
+    },
+    "ar-SA": {
+     "name": "أول مباراة",
+     "desc": "لعبت أول مباراة رسمية"
+    },
+    "ja": {
+     "name": "初試合",
+     "desc": "初めての公式戦に出場した"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.apps100",
+   "ref": "100 Maç",
+   "points": 20,
+   "image": "store/asc/gc/apps100.jpg",
+   "locales": {
+    "tr": {
+     "name": "100 Maç",
+     "desc": "100 maçta forma giydin"
+    },
+    "en-US": {
+     "name": "100 Matches",
+     "desc": "You played 100 matches"
+    },
+    "en-GB": {
+     "name": "100 Matches",
+     "desc": "You played 100 matches"
+    },
+    "es-ES": {
+     "name": "100 Partidos",
+     "desc": "Jugaste 100 partidos"
+    },
+    "es-MX": {
+     "name": "100 Partidos",
+     "desc": "Jugaste 100 partidos"
+    },
+    "pt-BR": {
+     "name": "100 Jogos",
+     "desc": "Você jogou 100 partidas"
+    },
+    "de-DE": {
+     "name": "100 Spiele",
+     "desc": "Du hast 100 Spiele bestritten"
+    },
+    "fr-FR": {
+     "name": "100 Matchs",
+     "desc": "Tu as joué 100 matchs"
+    },
+    "it": {
+     "name": "100 Partite",
+     "desc": "Hai giocato 100 partite"
+    },
+    "id": {
+     "name": "100 Pertandingan",
+     "desc": "Kamu bermain 100 pertandingan"
+    },
+    "ar-SA": {
+     "name": "100 مباريات",
+     "desc": "لعبت 100 مباراة"
+    },
+    "ja": {
+     "name": "100 試合",
+     "desc": "100試合に出場した"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.m300",
+   "ref": "300 Maç",
+   "points": 30,
+   "image": "store/asc/gc/m300.jpg",
+   "locales": {
+    "tr": {
+     "name": "300 Maç",
+     "desc": "300 maçta forma giydin"
+    },
+    "en-US": {
+     "name": "300 Matches",
+     "desc": "You played 300 matches"
+    },
+    "en-GB": {
+     "name": "300 Matches",
+     "desc": "You played 300 matches"
+    },
+    "es-ES": {
+     "name": "300 Partidos",
+     "desc": "Jugaste 300 partidos"
+    },
+    "es-MX": {
+     "name": "300 Partidos",
+     "desc": "Jugaste 300 partidos"
+    },
+    "pt-BR": {
+     "name": "300 Jogos",
+     "desc": "Você jogou 300 partidas"
+    },
+    "de-DE": {
+     "name": "300 Spiele",
+     "desc": "Du hast 300 Spiele bestritten"
+    },
+    "fr-FR": {
+     "name": "300 Matchs",
+     "desc": "Tu as joué 300 matchs"
+    },
+    "it": {
+     "name": "300 Partite",
+     "desc": "Hai giocato 300 partite"
+    },
+    "id": {
+     "name": "300 Pertandingan",
+     "desc": "Kamu bermain 300 pertandingan"
+    },
+    "ar-SA": {
+     "name": "300 مباريات",
+     "desc": "لعبت 300 مباراة"
+    },
+    "ja": {
+     "name": "300 試合",
+     "desc": "300試合に出場した"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.motm1",
+   "ref": "Maçın Adamı",
+   "points": 10,
+   "image": "store/asc/gc/motm1.jpg",
+   "locales": {
+    "tr": {
+     "name": "Maçın Adamı",
+     "desc": "İlk kez maçın adamı seçildin"
+    },
+    "en-US": {
+     "name": "Man of the Match",
+     "desc": "Named man of the match for the first time"
+    },
+    "en-GB": {
+     "name": "Man of the Match",
+     "desc": "Named man of the match for the first time"
+    },
+    "es-ES": {
+     "name": "Jugador del partido",
+     "desc": "Elegido jugador del partido por primera vez"
+    },
+    "es-MX": {
+     "name": "Jugador del partido",
+     "desc": "Elegido jugador del partido por primera vez"
+    },
+    "pt-BR": {
+     "name": "Melhor em campo",
+     "desc": "Eleito o melhor em campo pela primeira vez"
+    },
+    "de-DE": {
+     "name": "Spieler des Spiels",
+     "desc": "Zum ersten Mal Spieler des Spiels"
+    },
+    "fr-FR": {
+     "name": "Homme du match",
+     "desc": "Élu homme du match pour la première fois"
+    },
+    "it": {
+     "name": "Migliore in campo",
+     "desc": "Eletto migliore in campo per la prima volta"
+    },
+    "id": {
+     "name": "Pemain Terbaik Pertandingan",
+     "desc": "Terpilih pemain terbaik pertandingan untuk pertama kali"
+    },
+    "ar-SA": {
+     "name": "رجل المباراة",
+     "desc": "اختير رجل المباراة لأول مرة"
+    },
+    "ja": {
+     "name": "マン・オブ・ザ・マッチ",
+     "desc": "初めてマン・オブ・ザ・マッチに選ばれた"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.motm25",
+   "ref": "25× Maçın Adamı",
+   "points": 25,
+   "image": "store/asc/gc/motm25.jpg",
+   "locales": {
+    "tr": {
+     "name": "25× Maçın Adamı",
+     "desc": "25 kez maçın adamı seçildin"
+    },
+    "en-US": {
+     "name": "25× Man of the Match",
+     "desc": "You were man of the match 25 times"
+    },
+    "en-GB": {
+     "name": "25× Man of the Match",
+     "desc": "You were man of the match 25 times"
+    },
+    "es-ES": {
+     "name": "25× Jugador del partido",
+     "desc": "Fuiste jugador del partido 25 veces"
+    },
+    "es-MX": {
+     "name": "25× Jugador del partido",
+     "desc": "Fuiste jugador del partido 25 veces"
+    },
+    "pt-BR": {
+     "name": "25× Melhor em campo",
+     "desc": "Você foi o melhor em campo 25 vezes"
+    },
+    "de-DE": {
+     "name": "25× Spieler des Spiels",
+     "desc": "Du warst 25 Mal Spieler des Spiels"
+    },
+    "fr-FR": {
+     "name": "25× Homme du match",
+     "desc": "Tu as été homme du match 25 fois"
+    },
+    "it": {
+     "name": "25× Migliore in campo",
+     "desc": "Sei stato migliore in campo 25 volte"
+    },
+    "id": {
+     "name": "25× Pemain Terbaik Pertandingan",
+     "desc": "Kamu menjadi pemain terbaik pertandingan 25 kali"
+    },
+    "ar-SA": {
+     "name": "25× رجل المباراة",
+     "desc": "كنت رجل المباراة 25 مرات"
+    },
+    "ja": {
+     "name": "25× マン・オブ・ザ・マッチ",
+     "desc": "マン・オブ・ザ・マッチに25回選ばれた"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.hat",
+   "ref": "Hat-trick",
+   "points": 20,
+   "image": "store/asc/gc/hat.jpg",
+   "locales": {
+    "tr": {
+     "name": "Hat-trick",
+     "desc": "Bir maçta 3 gol attın"
+    },
+    "en-US": {
+     "name": "Hat-trick",
+     "desc": "You scored 3 goals in a match"
+    },
+    "en-GB": {
+     "name": "Hat-trick",
+     "desc": "You scored 3 goals in a match"
+    },
+    "es-ES": {
+     "name": "Hat-trick",
+     "desc": "Marcaste 3 goles en un partido"
+    },
+    "es-MX": {
+     "name": "Hat-trick",
+     "desc": "Marcaste 3 goles en un partido"
+    },
+    "pt-BR": {
+     "name": "Hat-trick",
+     "desc": "Você marcou 3 gols num jogo"
+    },
+    "de-DE": {
+     "name": "Hattrick",
+     "desc": "Du hast in einem Spiel 3 Tore geschossen"
+    },
+    "fr-FR": {
+     "name": "Triplé",
+     "desc": "Tu as marqué 3 buts dans un match"
+    },
+    "it": {
+     "name": "Tripletta",
+     "desc": "Hai segnato 3 gol in una partita"
+    },
+    "id": {
+     "name": "Hat-trick",
+     "desc": "Kamu mencetak 3 gol dalam satu pertandingan"
+    },
+    "ar-SA": {
+     "name": "هاتريك",
+     "desc": "سجلت 3 أهداف في مباراة"
+    },
+    "ja": {
+     "name": "ハットトリック",
+     "desc": "1試合で3ゴールを決めた"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.poker",
+   "ref": "Poker",
+   "points": 25,
+   "image": "store/asc/gc/poker.jpg",
+   "locales": {
+    "tr": {
+     "name": "Poker",
+     "desc": "Bir maçta 4 gol attın"
+    },
+    "en-US": {
+     "name": "Poker",
+     "desc": "You scored 4 goals in a match"
+    },
+    "en-GB": {
+     "name": "Poker",
+     "desc": "You scored 4 goals in a match"
+    },
+    "es-ES": {
+     "name": "Poker",
+     "desc": "Marcaste 4 goles en un partido"
+    },
+    "es-MX": {
+     "name": "Poker",
+     "desc": "Marcaste 4 goles en un partido"
+    },
+    "pt-BR": {
+     "name": "Poker",
+     "desc": "Você marcou 4 gols num jogo"
+    },
+    "de-DE": {
+     "name": "Poker",
+     "desc": "Du hast in einem Spiel 4 Tore geschossen"
+    },
+    "fr-FR": {
+     "name": "Poker",
+     "desc": "Tu as marqué 4 buts dans un match"
+    },
+    "it": {
+     "name": "Poker",
+     "desc": "Hai segnato 4 gol in una partita"
+    },
+    "id": {
+     "name": "Poker",
+     "desc": "Kamu mencetak 4 gol dalam satu pertandingan"
+    },
+    "ar-SA": {
+     "name": "Poker",
+     "desc": "سجلت 4 أهداف في مباراة"
+    },
+    "ja": {
+     "name": "Poker",
+     "desc": "1試合で4ゴールを決めた"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.r10",
+   "ref": "Mükemmel 10",
+   "points": 25,
+   "image": "store/asc/gc/r10.jpg",
+   "locales": {
+    "tr": {
+     "name": "Mükemmel 10",
+     "desc": "Bir maçta 10 reyting aldın"
+    },
+    "en-US": {
+     "name": "Perfect 10",
+     "desc": "You got a 10 rating in a match"
+    },
+    "en-GB": {
+     "name": "Perfect 10",
+     "desc": "You got a 10 rating in a match"
+    },
+    "es-ES": {
+     "name": "10 perfecto",
+     "desc": "Conseguiste un 10 de valoración en un partido"
+    },
+    "es-MX": {
+     "name": "10 perfecto",
+     "desc": "Conseguiste un 10 de valoración en un partido"
+    },
+    "pt-BR": {
+     "name": "10 perfeito",
+     "desc": "Você tirou nota 10 num jogo"
+    },
+    "de-DE": {
+     "name": "Perfekte 10",
+     "desc": "Du hast in einem Spiel die Note 10 bekommen"
+    },
+    "fr-FR": {
+     "name": "10 parfait",
+     "desc": "Tu as obtenu une note de 10 en match"
+    },
+    "it": {
+     "name": "10 perfetto",
+     "desc": "Hai preso 10 in pagella in una partita"
+    },
+    "id": {
+     "name": "Sempurna 10",
+     "desc": "Kamu mendapat nilai 10 dalam satu pertandingan"
+    },
+    "ar-SA": {
+     "name": "10 مثالية",
+     "desc": "حصلت على تقييم 10 في مباراة"
+    },
+    "ja": {
+     "name": "パーフェクト10",
+     "desc": "1試合で評価10を獲得した"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.fk1",
+   "ref": "Frikik Golü",
+   "points": 10,
+   "image": "store/asc/gc/fk1.jpg",
+   "locales": {
+    "tr": {
+     "name": "Frikik Golü",
+     "desc": "Frikikten 1 gol attın"
+    },
+    "en-US": {
+     "name": "Free-Kick Goal",
+     "desc": "You scored 1 free-kick goals"
+    },
+    "en-GB": {
+     "name": "Free-Kick Goal",
+     "desc": "You scored 1 free-kick goals"
+    },
+    "es-ES": {
+     "name": "Gol de falta directa",
+     "desc": "Marcaste 1 goles de falta directa"
+    },
+    "es-MX": {
+     "name": "Gol de falta directa",
+     "desc": "Marcaste 1 goles de falta directa"
+    },
+    "pt-BR": {
+     "name": "Gol de falta",
+     "desc": "Você marcou 1 gols de falta"
+    },
+    "de-DE": {
+     "name": "Freistoßtor",
+     "desc": "Du hast 1 Freistoßtore erzielt"
+    },
+    "fr-FR": {
+     "name": "But sur coup franc",
+     "desc": "Tu as marqué 1 buts sur coup franc"
+    },
+    "it": {
+     "name": "Gol su punizione",
+     "desc": "Hai segnato 1 gol su punizione"
+    },
+    "id": {
+     "name": "Gol Tendangan Bebas",
+     "desc": "Kamu mencetak 1 gol tendangan bebas"
+    },
+    "ar-SA": {
+     "name": "هدف من ركلة حرة",
+     "desc": "سجلت 1 أهداف من ركلات حرة"
+    },
+    "ja": {
+     "name": "フリーキックゴール",
+     "desc": "フリーキックで1ゴールを決めた"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.pen1",
+   "ref": "Penaltı Golü",
+   "points": 5,
+   "image": "store/asc/gc/pen1.jpg",
+   "locales": {
+    "tr": {
+     "name": "Penaltı Golü",
+     "desc": "Penaltıdan 1 gol attın"
+    },
+    "en-US": {
+     "name": "Penalty Goal",
+     "desc": "You scored 1 penalties"
+    },
+    "en-GB": {
+     "name": "Penalty Goal",
+     "desc": "You scored 1 penalties"
+    },
+    "es-ES": {
+     "name": "Gol de penalti",
+     "desc": "Marcaste 1 penaltis"
+    },
+    "es-MX": {
+     "name": "Gol de penalti",
+     "desc": "Marcaste 1 penaltis"
+    },
+    "pt-BR": {
+     "name": "Gol de pênalti",
+     "desc": "Você marcou 1 pênaltis"
+    },
+    "de-DE": {
+     "name": "Elfmetertor",
+     "desc": "Du hast 1 Elfmeter verwandelt"
+    },
+    "fr-FR": {
+     "name": "But sur penalty",
+     "desc": "Tu as marqué 1 penalties"
+    },
+    "it": {
+     "name": "Gol su rigore",
+     "desc": "Hai segnato 1 rigori"
+    },
+    "id": {
+     "name": "Gol Penalti",
+     "desc": "Kamu mencetak 1 penalti"
+    },
+    "ar-SA": {
+     "name": "هدف من ركلة جزاء",
+     "desc": "سجلت 1 ركلات جزاء"
+    },
+    "ja": {
+     "name": "PKゴール",
+     "desc": "PKで1ゴールを決めた"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.hd1",
+   "ref": "Kafa Golü",
+   "points": 5,
+   "image": "store/asc/gc/hd1.jpg",
+   "locales": {
+    "tr": {
+     "name": "Kafa Golü",
+     "desc": "Kafayla 1 gol attın"
+    },
+    "en-US": {
+     "name": "Header Goal",
+     "desc": "You scored 1 headers"
+    },
+    "en-GB": {
+     "name": "Header Goal",
+     "desc": "You scored 1 headers"
+    },
+    "es-ES": {
+     "name": "Gol de cabeza",
+     "desc": "Marcaste 1 goles de cabeza"
+    },
+    "es-MX": {
+     "name": "Gol de cabeza",
+     "desc": "Marcaste 1 goles de cabeza"
+    },
+    "pt-BR": {
+     "name": "Gol de cabeça",
+     "desc": "Você marcou 1 gols de cabeça"
+    },
+    "de-DE": {
+     "name": "Kopfballtor",
+     "desc": "Du hast 1 Kopfballtore erzielt"
+    },
+    "fr-FR": {
+     "name": "But de la tête",
+     "desc": "Tu as marqué 1 buts de la tête"
+    },
+    "it": {
+     "name": "Gol di testa",
+     "desc": "Hai segnato 1 gol di testa"
+    },
+    "id": {
+     "name": "Gol Sundulan",
+     "desc": "Kamu mencetak 1 gol sundulan"
+    },
+    "ar-SA": {
+     "name": "هدف برأسية",
+     "desc": "سجلت 1 أهداف بالرأس"
+    },
+    "ja": {
+     "name": "ヘディングゴール",
+     "desc": "ヘディングで1ゴールを決めた"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.trophy1",
+   "ref": "İlk Kupa",
+   "points": 10,
+   "image": "store/asc/gc/trophy1.jpg",
+   "locales": {
+    "tr": {
+     "name": "İlk Kupa",
+     "desc": "İlk kupanı ya da ödülünü kazandın"
+    },
+    "en-US": {
+     "name": "First Trophy",
+     "desc": "You won your first trophy or award"
+    },
+    "en-GB": {
+     "name": "First Trophy",
+     "desc": "You won your first trophy or award"
+    },
+    "es-ES": {
+     "name": "Primer trofeo",
+     "desc": "Ganaste tu primer trofeo o premio"
+    },
+    "es-MX": {
+     "name": "Primer trofeo",
+     "desc": "Ganaste tu primer trofeo o premio"
+    },
+    "pt-BR": {
+     "name": "Primeiro troféu",
+     "desc": "Você ganhou seu primeiro troféu ou prêmio"
+    },
+    "de-DE": {
+     "name": "Erster Titel",
+     "desc": "Du hast deinen ersten Titel oder Preis gewonnen"
+    },
+    "fr-FR": {
+     "name": "Premier trophée",
+     "desc": "Tu as gagné ton premier trophée ou ta première récompense"
+    },
+    "it": {
+     "name": "Primo trofeo",
+     "desc": "Hai vinto il tuo primo trofeo o premio"
+    },
+    "id": {
+     "name": "Trofi Pertama",
+     "desc": "Kamu memenangkan trofi atau penghargaan pertamamu"
+    },
+    "ar-SA": {
+     "name": "أول لقب",
+     "desc": "فزت بأول لقب أو جائزة"
+    },
+    "ja": {
+     "name": "初トロフィー",
+     "desc": "初めてのトロフィーまたは賞を獲得した"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.tr10",
+   "ref": "10 Kupa ve Ödül",
+   "points": 25,
+   "image": "store/asc/gc/tr10.jpg",
+   "locales": {
+    "tr": {
+     "name": "10 Kupa ve Ödül",
+     "desc": "Vitrininde 10 kupa ve ödül var"
+    },
+    "en-US": {
+     "name": "10 Trophies and Awards",
+     "desc": "10 trophies and awards in your cabinet"
+    },
+    "en-GB": {
+     "name": "10 Trophies and Awards",
+     "desc": "10 trophies and awards in your cabinet"
+    },
+    "es-ES": {
+     "name": "10 Trofeos y premios",
+     "desc": "10 trofeos y premios en tu vitrina"
+    },
+    "es-MX": {
+     "name": "10 Trofeos y premios",
+     "desc": "10 trofeos y premios en tu vitrina"
+    },
+    "pt-BR": {
+     "name": "10 Troféus e prêmios",
+     "desc": "10 troféus e prêmios na sua estante"
+    },
+    "de-DE": {
+     "name": "10 Titel und Auszeichnungen",
+     "desc": "10 Titel und Auszeichnungen in deiner Vitrine"
+    },
+    "fr-FR": {
+     "name": "10 Trophées et récompenses",
+     "desc": "10 trophées et récompenses dans ta vitrine"
+    },
+    "it": {
+     "name": "10 Trofei e premi",
+     "desc": "10 trofei e premi nella tua bacheca"
+    },
+    "id": {
+     "name": "10 Trofi dan Penghargaan",
+     "desc": "10 trofi dan penghargaan di lemarimu"
+    },
+    "ar-SA": {
+     "name": "10 الألقاب والجوائز",
+     "desc": "10 ألقاب وجوائز في خزانتك"
+    },
+    "ja": {
+     "name": "10 トロフィーと賞",
+     "desc": "トロフィー棚に10個のトロフィーと賞"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.league1",
+   "ref": "Lig Şampiyonu",
+   "points": 25,
+   "image": "store/asc/gc/league1.jpg",
+   "locales": {
+    "tr": {
+     "name": "Lig Şampiyonu",
+     "desc": "Profesyonel ligde şampiyon oldun"
+    },
+    "en-US": {
+     "name": "League Champion",
+     "desc": "You won a professional league title"
+    },
+    "en-GB": {
+     "name": "League Champion",
+     "desc": "You won a professional league title"
+    },
+    "es-ES": {
+     "name": "Campeón de liga",
+     "desc": "Ganaste un título de liga profesional"
+    },
+    "es-MX": {
+     "name": "Campeón de liga",
+     "desc": "Ganaste un título de liga profesional"
+    },
+    "pt-BR": {
+     "name": "Campeão da liga",
+     "desc": "Você venceu um título de liga profissional"
+    },
+    "de-DE": {
+     "name": "Meister",
+     "desc": "Du hast einen Profi-Ligatitel gewonnen"
+    },
+    "fr-FR": {
+     "name": "Champion",
+     "desc": "Tu as remporté un titre de champion professionnel"
+    },
+    "it": {
+     "name": "Campione",
+     "desc": "Hai vinto un campionato professionistico"
+    },
+    "id": {
+     "name": "Juara Liga",
+     "desc": "Kamu memenangi gelar liga profesional"
+    },
+    "ar-SA": {
+     "name": "بطل الدوري",
+     "desc": "فزت بلقب دوري احترافي"
+    },
+    "ja": {
+     "name": "リーグ王者",
+     "desc": "プロリーグで優勝した"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.domcup",
+   "ref": "Kupa Şampiyonu",
+   "points": 20,
+   "image": "store/asc/gc/domcup.jpg",
+   "locales": {
+    "tr": {
+     "name": "Kupa Şampiyonu",
+     "desc": "Ülkenin kupasını kazandın"
+    },
+    "en-US": {
+     "name": "Cup Winner",
+     "desc": "You won your country's cup"
+    },
+    "en-GB": {
+     "name": "Cup Winner",
+     "desc": "You won your country's cup"
+    },
+    "es-ES": {
+     "name": "Campeón de copa",
+     "desc": "Ganaste la copa de tu país"
+    },
+    "es-MX": {
+     "name": "Campeón de copa",
+     "desc": "Ganaste la copa de tu país"
+    },
+    "pt-BR": {
+     "name": "Campeão da copa",
+     "desc": "Você venceu a copa do seu país"
+    },
+    "de-DE": {
+     "name": "Pokalsieger",
+     "desc": "Du hast den Pokal deines Landes gewonnen"
+    },
+    "fr-FR": {
+     "name": "Vainqueur de coupe",
+     "desc": "Tu as gagné la coupe de ton pays"
+    },
+    "it": {
+     "name": "Vincitore di coppa",
+     "desc": "Hai vinto la coppa del tuo paese"
+    },
+    "id": {
+     "name": "Juara Piala",
+     "desc": "Kamu memenangkan piala negaramu"
+    },
+    "ar-SA": {
+     "name": "بطل الكأس",
+     "desc": "فزت بكأس بلدك"
+    },
+    "ja": {
+     "name": "カップ優勝",
+     "desc": "自国のカップ戦で優勝した"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.ucl",
+   "ref": "Avrupa'nın En İyisi",
+   "points": 50,
+   "image": "store/asc/gc/ucl.jpg",
+   "locales": {
+    "tr": {
+     "name": "Avrupa'nın En İyisi",
+     "desc": "Avrupa Şampiyonlar Kupası'nı kazandın"
+    },
+    "en-US": {
+     "name": "Best in Europe",
+     "desc": "You won the European Champions Cup"
+    },
+    "en-GB": {
+     "name": "Best in Europe",
+     "desc": "You won the European Champions Cup"
+    },
+    "es-ES": {
+     "name": "El mejor de Europa",
+     "desc": "Ganaste la Copa de Campeones de Europa"
+    },
+    "es-MX": {
+     "name": "El mejor de Europa",
+     "desc": "Ganaste la Copa de Campeones de Europa"
+    },
+    "pt-BR": {
+     "name": "O melhor da Europa",
+     "desc": "Você venceu a Copa dos Campeões da Europa"
+    },
+    "de-DE": {
+     "name": "Bester Europas",
+     "desc": "Du hast den Europäischen Meisterpokal gewonnen"
+    },
+    "fr-FR": {
+     "name": "Le meilleur d'Europe",
+     "desc": "Tu as gagné la Coupe des champions européens"
+    },
+    "it": {
+     "name": "Il migliore d'Europa",
+     "desc": "Hai vinto la Coppa dei Campioni d'Europa"
+    },
+    "id": {
+     "name": "Terbaik di Eropa",
+     "desc": "Kamu memenangi Piala Champions Eropa"
+    },
+    "ar-SA": {
+     "name": "الأفضل في أوروبا",
+     "desc": "فزت بكأس أبطال أوروبا"
+    },
+    "ja": {
+     "name": "ヨーロッパ最高",
+     "desc": "ヨーロッパ・チャンピオンズカップで優勝した"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.wc",
+   "ref": "Dünya Şampiyonu",
+   "points": 70,
+   "image": "store/asc/gc/wc.jpg",
+   "locales": {
+    "tr": {
+     "name": "Dünya Şampiyonu",
+     "desc": "Dünya Şampiyonası'nı kazandın"
+    },
+    "en-US": {
+     "name": "World Champion",
+     "desc": "You won the World Championship"
+    },
+    "en-GB": {
+     "name": "World Champion",
+     "desc": "You won the World Championship"
+    },
+    "es-ES": {
+     "name": "Campeón del mundo",
+     "desc": "Ganaste el Campeonato Mundial"
+    },
+    "es-MX": {
+     "name": "Campeón del mundo",
+     "desc": "Ganaste el Campeonato Mundial"
+    },
+    "pt-BR": {
+     "name": "Campeão do mundo",
+     "desc": "Você venceu o Campeonato Mundial"
+    },
+    "de-DE": {
+     "name": "Weltmeister",
+     "desc": "Du hast die Weltmeisterschaft gewonnen"
+    },
+    "fr-FR": {
+     "name": "Champion du monde",
+     "desc": "Tu as gagné le Championnat du monde"
+    },
+    "it": {
+     "name": "Campione del mondo",
+     "desc": "Hai vinto il Campionato Mondiale"
+    },
+    "id": {
+     "name": "Juara Dunia",
+     "desc": "Kamu memenangi Kejuaraan Dunia"
+    },
+    "ar-SA": {
+     "name": "بطل العالم",
+     "desc": "فزت ببطولة العالم"
+    },
+    "ja": {
+     "name": "世界王者",
+     "desc": "世界選手権で優勝した"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.euro",
+   "ref": "Avrupa Şampiyonu",
+   "points": 50,
+   "image": "store/asc/gc/euro.jpg",
+   "locales": {
+    "tr": {
+     "name": "Avrupa Şampiyonu",
+     "desc": "Avrupa Milletler Şampiyonası'nı kazandın"
+    },
+    "en-US": {
+     "name": "European Champion",
+     "desc": "You won the European Nations Championship"
+    },
+    "en-GB": {
+     "name": "European Champion",
+     "desc": "You won the European Nations Championship"
+    },
+    "es-ES": {
+     "name": "Campeón de Europa",
+     "desc": "Ganaste el Campeonato Europeo"
+    },
+    "es-MX": {
+     "name": "Campeón de Europa",
+     "desc": "Ganaste el Campeonato Europeo"
+    },
+    "pt-BR": {
+     "name": "Campeão europeu",
+     "desc": "Você venceu o Campeonato Europeu"
+    },
+    "de-DE": {
+     "name": "Europameister",
+     "desc": "Du hast die Europameisterschaft gewonnen"
+    },
+    "fr-FR": {
+     "name": "Champion d'Europe",
+     "desc": "Tu as gagné le Championnat d'Europe"
+    },
+    "it": {
+     "name": "Campione d'Europa",
+     "desc": "Hai vinto il Campionato Europeo"
+    },
+    "id": {
+     "name": "Juara Eropa",
+     "desc": "Kamu memenangi Kejuaraan Eropa"
+    },
+    "ar-SA": {
+     "name": "بطل أوروبا",
+     "desc": "فزت ببطولة أوروبا"
+    },
+    "ja": {
+     "name": "ヨーロッパ王者",
+     "desc": "欧州選手権で優勝した"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.boot",
+   "ref": "Gol Kralı",
+   "points": 25,
+   "image": "store/asc/gc/boot.jpg",
+   "locales": {
+    "tr": {
+     "name": "Gol Kralı",
+     "desc": "Bir sezon gol krallığını kazandın"
+    },
+    "en-US": {
+     "name": "Top Scorer",
+     "desc": "You won the Top Scorer Trophy for a season"
+    },
+    "en-GB": {
+     "name": "Top Scorer",
+     "desc": "You won the Top Scorer Trophy for a season"
+    },
+    "es-ES": {
+     "name": "Máximo goleador",
+     "desc": "Ganaste el Trofeo de Goleador de una temporada"
+    },
+    "es-MX": {
+     "name": "Máximo goleador",
+     "desc": "Ganaste el Trofeo de Goleador de una temporada"
+    },
+    "pt-BR": {
+     "name": "Artilheiro",
+     "desc": "Você ganhou a Taça de Artilheiro de uma temporada"
+    },
+    "de-DE": {
+     "name": "Torschützenkönig",
+     "desc": "Du hast in einer Saison die Torjägertrophäe gewonnen"
+    },
+    "fr-FR": {
+     "name": "Meilleur buteur",
+     "desc": "Tu as remporté le Trophée du buteur sur une saison"
+    },
+    "it": {
+     "name": "Capocannoniere",
+     "desc": "Hai vinto il Trofeo del capocannoniere di una stagione"
+    },
+    "id": {
+     "name": "Pencetak Gol Terbanyak",
+     "desc": "Kamu memenangi Trofi Top Skor dalam satu musim"
+    },
+    "ar-SA": {
+     "name": "الهداف",
+     "desc": "فزت بجائزة الهداف لموسم"
+    },
+    "ja": {
+     "name": "得点王",
+     "desc": "シーズン得点王に輝いた"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.poty",
+   "ref": "Sezonun Oyuncusu",
+   "points": 25,
+   "image": "store/asc/gc/poty.jpg",
+   "locales": {
+    "tr": {
+     "name": "Sezonun Oyuncusu",
+     "desc": "Ligde sezonun oyuncusu seçildin"
+    },
+    "en-US": {
+     "name": "Player of the Season",
+     "desc": "You were named the league's player of the season"
+    },
+    "en-GB": {
+     "name": "Player of the Season",
+     "desc": "You were named the league's player of the season"
+    },
+    "es-ES": {
+     "name": "Jugador de la temporada",
+     "desc": "Fuiste elegido jugador de la temporada de la liga"
+    },
+    "es-MX": {
+     "name": "Jugador de la temporada",
+     "desc": "Fuiste elegido jugador de la temporada de la liga"
+    },
+    "pt-BR": {
+     "name": "Jogador da temporada",
+     "desc": "Você foi eleito o jogador da temporada da liga"
+    },
+    "de-DE": {
+     "name": "Spieler der Saison",
+     "desc": "Du wurdest zum Spieler der Saison der Liga gewählt"
+    },
+    "fr-FR": {
+     "name": "Joueur de la saison",
+     "desc": "Tu as été élu joueur de la saison de la ligue"
+    },
+    "it": {
+     "name": "Giocatore della stagione",
+     "desc": "Sei stato eletto giocatore della stagione del campionato"
+    },
+    "id": {
+     "name": "Pemain Terbaik Musim Ini",
+     "desc": "Kamu terpilih sebagai pemain terbaik musim ini di liga"
+    },
+    "ar-SA": {
+     "name": "لاعب الموسم",
+     "desc": "اختِرت أفضل لاعب في الدوري لهذا الموسم"
+    },
+    "ja": {
+     "name": "シーズン最優秀選手",
+     "desc": "リーグのシーズン最優秀選手に選ばれた"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.ballon",
+   "ref": "Altın Yıldız",
+   "points": 60,
+   "image": "store/asc/gc/ballon.jpg",
+   "locales": {
+    "tr": {
+     "name": "Altın Yıldız",
+     "desc": "Yılın futbolcusu seçildin"
+    },
+    "en-US": {
+     "name": "Golden Star",
+     "desc": "You were named Player of the Year"
+    },
+    "en-GB": {
+     "name": "Golden Star",
+     "desc": "You were named Player of the Year"
+    },
+    "es-ES": {
+     "name": "Estrella de Oro",
+     "desc": "Te eligieron jugador del año"
+    },
+    "es-MX": {
+     "name": "Estrella de Oro",
+     "desc": "Te eligieron jugador del año"
+    },
+    "pt-BR": {
+     "name": "Estrela de Ouro",
+     "desc": "Você foi eleito o jogador do ano"
+    },
+    "de-DE": {
+     "name": "Goldener Stern",
+     "desc": "Du wurdest zum Spieler des Jahres gewählt"
+    },
+    "fr-FR": {
+     "name": "Étoile d'Or",
+     "desc": "Tu as été élu joueur de l'année"
+    },
+    "it": {
+     "name": "Stella d'Oro",
+     "desc": "Sei stato eletto giocatore dell'anno"
+    },
+    "id": {
+     "name": "Bintang Emas",
+     "desc": "Kamu terpilih sebagai Pemain Terbaik Tahun Ini"
+    },
+    "ar-SA": {
+     "name": "النجمة الذهبية",
+     "desc": "اختِرت لاعب العام"
+    },
+    "ja": {
+     "name": "ゴールデンスター",
+     "desc": "年間最優秀選手に選ばれた"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.ballon3",
+   "ref": "Efsane",
+   "points": 80,
+   "image": "store/asc/gc/ballon3.jpg",
+   "locales": {
+    "tr": {
+     "name": "Efsane",
+     "desc": "3 kez Altın Yıldız kazandın"
+    },
+    "en-US": {
+     "name": "Legend",
+     "desc": "You won the Golden Star 3 times"
+    },
+    "en-GB": {
+     "name": "Legend",
+     "desc": "You won the Golden Star 3 times"
+    },
+    "es-ES": {
+     "name": "Leyenda",
+     "desc": "Ganaste la Estrella de Oro 3 veces"
+    },
+    "es-MX": {
+     "name": "Leyenda",
+     "desc": "Ganaste la Estrella de Oro 3 veces"
+    },
+    "pt-BR": {
+     "name": "Lenda",
+     "desc": "Você ganhou a Estrela de Ouro 3 vezes"
+    },
+    "de-DE": {
+     "name": "Legende",
+     "desc": "Du hast 3-mal den Goldenen Stern gewonnen"
+    },
+    "fr-FR": {
+     "name": "Légende",
+     "desc": "Tu as remporté 3 fois l'Étoile d'Or"
+    },
+    "it": {
+     "name": "Leggenda",
+     "desc": "Hai vinto 3 volte la Stella d'Oro"
+    },
+    "id": {
+     "name": "Legenda",
+     "desc": "Kamu memenangi Bintang Emas 3 kali"
+    },
+    "ar-SA": {
+     "name": "أسطورة",
+     "desc": "فزت بالنجمة الذهبية 3 مرات"
+    },
+    "ja": {
+     "name": "レジェンド",
+     "desc": "ゴールデンスターを3回受賞した"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.cap1",
+   "ref": "Milli Forma",
+   "points": 15,
+   "image": "store/asc/gc/cap1.jpg",
+   "locales": {
+    "tr": {
+     "name": "Milli Forma",
+     "desc": "Milli takımda forma giydin"
+    },
+    "en-US": {
+     "name": "National Shirt",
+     "desc": "You played for the national team"
+    },
+    "en-GB": {
+     "name": "National Shirt",
+     "desc": "You played for the national team"
+    },
+    "es-ES": {
+     "name": "Camiseta de la selección",
+     "desc": "Jugaste con la selección"
+    },
+    "es-MX": {
+     "name": "Camiseta de la selección",
+     "desc": "Jugaste con la selección"
+    },
+    "pt-BR": {
+     "name": "Camisa da seleção",
+     "desc": "Você jogou pela seleção"
+    },
+    "de-DE": {
+     "name": "Nationaltrikot",
+     "desc": "Du hast für die Nationalmannschaft gespielt"
+    },
+    "fr-FR": {
+     "name": "Maillot national",
+     "desc": "Tu as joué pour la sélection"
+    },
+    "it": {
+     "name": "Maglia della nazionale",
+     "desc": "Hai giocato in nazionale"
+    },
+    "id": {
+     "name": "Jersey Timnas",
+     "desc": "Kamu bermain untuk tim nasional"
+    },
+    "ar-SA": {
+     "name": "قميص المنتخب",
+     "desc": "لعبت للمنتخب الوطني"
+    },
+    "ja": {
+     "name": "代表ユニフォーム",
+     "desc": "代表チームでプレーした"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.cap50",
+   "ref": "Milli Takım Efsanesi",
+   "points": 30,
+   "image": "store/asc/gc/cap50.jpg",
+   "locales": {
+    "tr": {
+     "name": "Milli Takım Efsanesi",
+     "desc": "50 milli maça çıktın"
+    },
+    "en-US": {
+     "name": "National Team Legend",
+     "desc": "You played 50 internationals"
+    },
+    "en-GB": {
+     "name": "National Team Legend",
+     "desc": "You played 50 internationals"
+    },
+    "es-ES": {
+     "name": "Leyenda de la selección",
+     "desc": "Jugaste 50 partidos internacionales"
+    },
+    "es-MX": {
+     "name": "Leyenda de la selección",
+     "desc": "Jugaste 50 partidos internacionales"
+    },
+    "pt-BR": {
+     "name": "Lenda da seleção",
+     "desc": "Você jogou 50 partidas pela seleção"
+    },
+    "de-DE": {
+     "name": "Legende der Nationalmannschaft",
+     "desc": "Du hast 50 Länderspiele bestritten"
+    },
+    "fr-FR": {
+     "name": "Légende de la sélection",
+     "desc": "Tu as joué 50 matchs internationaux"
+    },
+    "it": {
+     "name": "Leggenda della nazionale",
+     "desc": "Hai giocato 50 partite in nazionale"
+    },
+    "id": {
+     "name": "Legenda Timnas",
+     "desc": "Kamu bermain 50 laga internasional"
+    },
+    "ar-SA": {
+     "name": "أسطورة المنتخب",
+     "desc": "لعبت 50 مباريات دولية"
+    },
+    "ja": {
+     "name": "代表のレジェンド",
+     "desc": "代表で50試合に出場した"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.pro",
+   "ref": "Profesyonel",
+   "points": 10,
+   "image": "store/asc/gc/pro.jpg",
+   "locales": {
+    "tr": {
+     "name": "Profesyonel",
+     "desc": "İlk profesyonel sözleşmeni imzaladın"
+    },
+    "en-US": {
+     "name": "Professional",
+     "desc": "You signed your first professional contract"
+    },
+    "en-GB": {
+     "name": "Professional",
+     "desc": "You signed your first professional contract"
+    },
+    "es-ES": {
+     "name": "Profesional",
+     "desc": "Firmaste tu primer contrato profesional"
+    },
+    "es-MX": {
+     "name": "Profesional",
+     "desc": "Firmaste tu primer contrato profesional"
+    },
+    "pt-BR": {
+     "name": "Profissional",
+     "desc": "Você assinou seu primeiro contrato profissional"
+    },
+    "de-DE": {
+     "name": "Profi",
+     "desc": "Du hast deinen ersten Profivertrag unterschrieben"
+    },
+    "fr-FR": {
+     "name": "Professionnel",
+     "desc": "Tu as signé ton premier contrat professionnel"
+    },
+    "it": {
+     "name": "Professionista",
+     "desc": "Hai firmato il tuo primo contratto da professionista"
+    },
+    "id": {
+     "name": "Profesional",
+     "desc": "Kamu menandatangani kontrak profesional pertamamu"
+    },
+    "ar-SA": {
+     "name": "محترف",
+     "desc": "وقعت أول عقد احترافي"
+    },
+    "ja": {
+     "name": "プロ",
+     "desc": "初めてのプロ契約にサインした"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.abroad",
+   "ref": "Gurbetçi",
+   "points": 15,
+   "image": "store/asc/gc/abroad.jpg",
+   "locales": {
+    "tr": {
+     "name": "Gurbetçi",
+     "desc": "Yurt dışında bir kulübe transfer oldun"
+    },
+    "en-US": {
+     "name": "Expat",
+     "desc": "You transferred to a club abroad"
+    },
+    "en-GB": {
+     "name": "Expat",
+     "desc": "You transferred to a club abroad"
+    },
+    "es-ES": {
+     "name": "Expatriado",
+     "desc": "Fichaste por un club del extranjero"
+    },
+    "es-MX": {
+     "name": "Expatriado",
+     "desc": "Fichaste por un club del extranjero"
+    },
+    "pt-BR": {
+     "name": "Expatriado",
+     "desc": "Você se transferiu para um clube no exterior"
+    },
+    "de-DE": {
+     "name": "Auswanderer",
+     "desc": "Du bist zu einem Verein im Ausland gewechselt"
+    },
+    "fr-FR": {
+     "name": "Expatrié",
+     "desc": "Tu as rejoint un club à l'étranger"
+    },
+    "it": {
+     "name": "Espatriato",
+     "desc": "Sei passato a un club estero"
+    },
+    "id": {
+     "name": "Perantau",
+     "desc": "Kamu pindah ke klub di luar negeri"
+    },
+    "ar-SA": {
+     "name": "مغترب",
+     "desc": "انتقلت إلى نادٍ في الخارج"
+    },
+    "ja": {
+     "name": "移住者",
+     "desc": "海外のクラブに移籍した"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.captain",
+   "ref": "Pazubant",
+   "points": 20,
+   "image": "store/asc/gc/captain.jpg",
+   "locales": {
+    "tr": {
+     "name": "Pazubant",
+     "desc": "Takım kaptanı seçildin"
+    },
+    "en-US": {
+     "name": "Armband",
+     "desc": "You were named team captain"
+    },
+    "en-GB": {
+     "name": "Armband",
+     "desc": "You were named team captain"
+    },
+    "es-ES": {
+     "name": "Brazalete",
+     "desc": "Te nombraron capitán del equipo"
+    },
+    "es-MX": {
+     "name": "Brazalete",
+     "desc": "Te nombraron capitán del equipo"
+    },
+    "pt-BR": {
+     "name": "Braçadeira",
+     "desc": "Você foi nomeado capitão do time"
+    },
+    "de-DE": {
+     "name": "Binde",
+     "desc": "Du wurdest zum Mannschaftskapitän ernannt"
+    },
+    "fr-FR": {
+     "name": "Brassard",
+     "desc": "Tu as été nommé capitaine de l'équipe"
+    },
+    "it": {
+     "name": "Fascia",
+     "desc": "Sei stato nominato capitano della squadra"
+    },
+    "id": {
+     "name": "Ban kapten",
+     "desc": "Kamu ditunjuk sebagai kapten tim"
+    },
+    "ar-SA": {
+     "name": "الشارة",
+     "desc": "اختِرت قائدًا للفريق"
+    },
+    "ja": {
+     "name": "キャプテンマーク",
+     "desc": "チームキャプテンに任命された"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.ovr80",
+   "ref": "Dünya Yıldızı",
+   "points": 30,
+   "image": "store/asc/gc/ovr80.jpg",
+   "locales": {
+    "tr": {
+     "name": "Dünya Yıldızı",
+     "desc": "Genel gücün 80'e ulaştı"
+    },
+    "en-US": {
+     "name": "World Star",
+     "desc": "Your overall reached 80"
+    },
+    "en-GB": {
+     "name": "World Star",
+     "desc": "Your overall reached 80"
+    },
+    "es-ES": {
+     "name": "Estrella mundial",
+     "desc": "Tu media llegó a 80"
+    },
+    "es-MX": {
+     "name": "Estrella mundial",
+     "desc": "Tu media llegó a 80"
+    },
+    "pt-BR": {
+     "name": "Estrela mundial",
+     "desc": "Seu geral chegou a 80"
+    },
+    "de-DE": {
+     "name": "Weltstar",
+     "desc": "Deine Gesamtwertung hat 80 erreicht"
+    },
+    "fr-FR": {
+     "name": "Star mondiale",
+     "desc": "Ta note globale a atteint 80"
+    },
+    "it": {
+     "name": "Stella mondiale",
+     "desc": "Il tuo valore complessivo ha raggiunto 80"
+    },
+    "id": {
+     "name": "Bintang Dunia",
+     "desc": "Rating keseluruhanmu mencapai 80"
+    },
+    "ar-SA": {
+     "name": "نجم عالمي",
+     "desc": "وصل تقييمك العام إلى 80"
+    },
+    "ja": {
+     "name": "ワールドスター",
+     "desc": "総合が80に到達した"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.ovr90",
+   "ref": "Genel Güç 90",
+   "points": 40,
+   "image": "store/asc/gc/ovr90.jpg",
+   "locales": {
+    "tr": {
+     "name": "Genel Güç 90",
+     "desc": "Genel gücün 90'e ulaştı"
+    },
+    "en-US": {
+     "name": "Overall 90",
+     "desc": "Your overall reached 90"
+    },
+    "en-GB": {
+     "name": "Overall 90",
+     "desc": "Your overall reached 90"
+    },
+    "es-ES": {
+     "name": "Media 90",
+     "desc": "Tu media llegó a 90"
+    },
+    "es-MX": {
+     "name": "Media 90",
+     "desc": "Tu media llegó a 90"
+    },
+    "pt-BR": {
+     "name": "Geral 90",
+     "desc": "Seu geral chegou a 90"
+    },
+    "de-DE": {
+     "name": "Gesamt 90",
+     "desc": "Deine Gesamtwertung hat 90 erreicht"
+    },
+    "fr-FR": {
+     "name": "Global 90",
+     "desc": "Ta note globale a atteint 90"
+    },
+    "it": {
+     "name": "Complessivo 90",
+     "desc": "Il tuo valore complessivo ha raggiunto 90"
+    },
+    "id": {
+     "name": "Keseluruhan 90",
+     "desc": "Rating keseluruhanmu mencapai 90"
+    },
+    "ar-SA": {
+     "name": "الإجمالي 90",
+     "desc": "وصل تقييمك العام إلى 90"
+    },
+    "ja": {
+     "name": "総合 90",
+     "desc": "総合が90に到達した"
+    }
+   }
+  },
+  {
+   "id": "sf.ach.fame75",
+   "ref": "Herkes Seni Tanıyor",
+   "points": 20,
+   "image": "store/asc/gc/fame75.jpg",
+   "locales": {
+    "tr": {
+     "name": "Herkes Seni Tanıyor",
+     "desc": "Ünün 75'e ulaştı"
+    },
+    "en-US": {
+     "name": "Everyone Knows You",
+     "desc": "Your fame reached 75"
+    },
+    "en-GB": {
+     "name": "Everyone Knows You",
+     "desc": "Your fame reached 75"
+    },
+    "es-ES": {
+     "name": "Todo el mundo te conoce",
+     "desc": "Tu fama llegó a 75"
+    },
+    "es-MX": {
+     "name": "Todo el mundo te conoce",
+     "desc": "Tu fama llegó a 75"
+    },
+    "pt-BR": {
+     "name": "Todo mundo te conhece",
+     "desc": "Sua fama chegou a 75"
+    },
+    "de-DE": {
+     "name": "Jeder kennt dich",
+     "desc": "Dein Ruhm hat 75 erreicht"
+    },
+    "fr-FR": {
+     "name": "Tout le monde te connaît",
+     "desc": "Ta célébrité a atteint 75"
+    },
+    "it": {
+     "name": "Tutti ti conoscono",
+     "desc": "La tua fama ha raggiunto 75"
+    },
+    "id": {
+     "name": "Semua Orang Mengenalmu",
+     "desc": "Ketenaranmu mencapai 75"
+    },
+    "ar-SA": {
+     "name": "الجميع يعرفك",
+     "desc": "وصلت شهرتك إلى 75"
+    },
+    "ja": {
+     "name": "誰もがあなたを知っている",
+     "desc": "知名度が75に到達した"
+    }
+   }
+  }
+ ],
+ "leaderboards": [
+  {
+   "id": "sf.lb.goals",
+   "ref": "Kariyer Golleri",
+   "locales": {
+    "tr": {
+     "name": "Kariyer Golleri"
+    },
+    "en-US": {
+     "name": "Career Goals"
+    },
+    "en-GB": {
+     "name": "Career Goals"
+    },
+    "es-ES": {
+     "name": "Goles en la carrera"
+    },
+    "es-MX": {
+     "name": "Goles en la carrera"
+    },
+    "pt-BR": {
+     "name": "Gols na carreira"
+    },
+    "de-DE": {
+     "name": "Karrieretore"
+    },
+    "fr-FR": {
+     "name": "Buts en carrière"
+    },
+    "it": {
+     "name": "Gol in carriera"
+    },
+    "id": {
+     "name": "Gol Karier"
+    },
+    "ar-SA": {
+     "name": "أهداف المسيرة"
+    },
+    "ja": {
+     "name": "通算ゴール"
+    }
+   }
+  },
+  {
+   "id": "sf.lb.trophies",
+   "ref": "Kupa ve Ödüller",
+   "locales": {
+    "tr": {
+     "name": "Kupa ve Ödüller"
+    },
+    "en-US": {
+     "name": "Trophies & Awards"
+    },
+    "en-GB": {
+     "name": "Trophies & Awards"
+    },
+    "es-ES": {
+     "name": "Trofeos y premios"
+    },
+    "es-MX": {
+     "name": "Trofeos y premios"
+    },
+    "pt-BR": {
+     "name": "Troféus e prêmios"
+    },
+    "de-DE": {
+     "name": "Titel & Auszeichnungen"
+    },
+    "fr-FR": {
+     "name": "Trophées et prix"
+    },
+    "it": {
+     "name": "Trofei e premi"
+    },
+    "id": {
+     "name": "Trofi & Penghargaan"
+    },
+    "ar-SA": {
+     "name": "الألقاب والجوائز"
+    },
+    "ja": {
+     "name": "タイトルと個人賞"
+    }
+   }
+  },
+  {
+   "id": "sf.lb.ovr",
+   "ref": "En Yüksek Genel Güç",
+   "locales": {
+    "tr": {
+     "name": "En Yüksek Genel Güç"
+    },
+    "en-US": {
+     "name": "Best Overall Rating"
+    },
+    "en-GB": {
+     "name": "Best Overall Rating"
+    },
+    "es-ES": {
+     "name": "Mejor valoración general"
+    },
+    "es-MX": {
+     "name": "Mejor valoración general"
+    },
+    "pt-BR": {
+     "name": "Melhor geral"
+    },
+    "de-DE": {
+     "name": "Beste Gesamtstärke"
+    },
+    "fr-FR": {
+     "name": "Meilleure note globale"
+    },
+    "it": {
+     "name": "Miglior valutazione"
+    },
+    "id": {
+     "name": "Rating Tertinggi"
+    },
+    "ar-SA": {
+     "name": "أعلى تقييم عام"
+    },
+    "ja": {
+     "name": "最高総合力"
+    }
+   }
+  },
+  {
+   "id": "sf.lb.followers",
+   "ref": "Takipçi",
+   "locales": {
+    "tr": {
+     "name": "Takipçi"
+    },
+    "en-US": {
+     "name": "Followers"
+    },
+    "en-GB": {
+     "name": "Followers"
+    },
+    "es-ES": {
+     "name": "Seguidores"
+    },
+    "es-MX": {
+     "name": "Seguidores"
+    },
+    "pt-BR": {
+     "name": "Seguidores"
+    },
+    "de-DE": {
+     "name": "Follower"
+    },
+    "fr-FR": {
+     "name": "Abonnés"
+    },
+    "it": {
+     "name": "Follower"
+    },
+    "id": {
+     "name": "Pengikut"
+    },
+    "ar-SA": {
+     "name": "المتابعون"
+    },
+    "ja": {
+     "name": "フォロワー"
+    }
+   }
+  }
+ ]
+}

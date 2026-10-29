@@ -37,6 +37,10 @@ on:
         description: 'Uygulama içi etkinlikleri ve öne çıkarılma başvurusunu taslak olarak oluştur (store/asc/events.json)'
         type: boolean
         default: false
+      gamecenter:
+        description: 'Game Center: başarımlar ve liderlik tabloları (store/asc/gamecenter.json)'
+        type: boolean
+        default: false
       remove_locales:
         description: 'Düzenlenen sürümden silinecek diller (ör. it,id,ar-SA)'
         required: false
@@ -64,6 +68,7 @@ jobs:
           [ "${{ inputs.diagnose }}" = "true" ] && ARGS="$ARGS --diagnose"
           [ "${{ inputs.audit }}" = "true" ] && ARGS="$ARGS --audit"
           [ "${{ inputs.events }}" = "true" ] && ARGS="$ARGS --events"
+          [ "${{ inputs.gamecenter }}" = "true" ] && ARGS="$ARGS --gamecenter"
           [ "${{ inputs.iap }}" = "read" ] && ARGS="$ARGS --iap"
           [ "${{ inputs.iap }}" = "setup" ] && ARGS="$ARGS --iap-setup"
           [ "${{ inputs.iap }}" = "packs" ] && ARGS="$ARGS --packs"

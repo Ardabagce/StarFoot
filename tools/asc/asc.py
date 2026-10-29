@@ -569,6 +569,128 @@ def nominate(asc, app_id, cfg, event_ids):
         print(f"• öne çıkarılma başvurusu oluşturuldu (taslak, {d['id']})")
 
 
+def _all(asc, path, **params):
+    out, nxt = [], path
+    params = dict(params, limit=200)
+    while nxt:
+        r = asc.get(nxt, **params)
+        out += r.get('data', [])
+        nxt = (r.get('links') or {}).get('next')
+        if nxt:
+            nxt, params = nxt.replace(API, ''), {}
+    return out
+
+
+def gamecenter_setup(asc, app_id, cfg):
+    """Game Center: uygulamada açar, başarımları (görselli) ve liderlik tablolarını oluşturur/günceller."""
+    fails = []
+    try:
+        det = asc.get(f'/v1/apps/{app_id}/gameCenterDetail').get('data')
+    except RuntimeError as err:
+        if '404' not in str(err):
+            raise
+        det = None
+    if not det:
+        det = asc.req('POST', '/v1/gameCenterDetails', write=True, body={'data': {
+            'type': 'gameCenterDetails', 'relationships': {'app': {'data': {'type': 'apps', 'id': app_id}}}}})['data']
+        print('Game Center açıldı')
+    gid = det['id']
+    print(f'Game Center kaydı: {gid}')
+
+    # ---- başarımlar
+    have = {a['attributes']['vendorIdentifier']: a for a in
+            (_all(asc, f'/v1/gameCenterDetails/{gid}/gameCenterAchievements') if gid != 'DRY' else [])}
+    for a in cfg['achievements']:
+        try:
+            if a['id'] in have:
+                aid = have[a['id']]['id']
+                if have[a['id']]['attributes'].get('points') != a['points']:
+                    asc.req('PATCH', f'/v1/gameCenterAchievements/{aid}', write=True, body={'data': {
+                        'type': 'gameCenterAchievements', 'id': aid, 'attributes': {'points': a['points']}}})
+            else:
+                aid = asc.req('POST', '/v1/gameCenterAchievements', write=True, body={'data': {
+                    'type': 'gameCenterAchievements',
+                    'attributes': {'referenceName': a['ref'][:64], 'vendorIdentifier': a['id'], 'points': a['points'],
+                                   'showBeforeEarned': True, 'repeatable': False},
+                    'relationships': {'gameCenterDetail': {'data': {'type': 'gameCenterDetails', 'id': gid}}}}})['data']['id']
+            locs = {} if aid == 'DRY' else {x['attributes']['locale']: x for x in
+                                            _all(asc, f'/v1/gameCenterAchievements/{aid}/localizations')}
+            img = ROOT / a['image']
+            for loc, t in a['locales'].items():
+                attrs = {'name': t['name'][:30], 'beforeEarnedDescription': t['desc'][:200], 'afterEarnedDescription': t['desc'][:200]}
+                if loc in locs:
+                    lid = locs[loc]['id']
+                    asc.req('PATCH', f'/v1/gameCenterAchievementLocalizations/{lid}', write=True, body={'data': {
+                        'type': 'gameCenterAchievementLocalizations', 'id': lid, 'attributes': attrs}})
+                else:
+                    lid = asc.req('POST', '/v1/gameCenterAchievementLocalizations', write=True, body={'data': {
+                        'type': 'gameCenterAchievementLocalizations', 'attributes': dict(attrs, locale=loc),
+                        'relationships': {'gameCenterAchievement': {'data': {'type': 'gameCenterAchievements', 'id': aid}}}}})['data']['id']
+                has_img = False
+                if lid != 'DRY':
+                    try:
+                        has_img = bool(asc.get(f'/v1/gameCenterAchievementLocalizations/{lid}/gameCenterAchievementImage').get('data'))
+                    except RuntimeError:
+                        has_img = False
+                if not has_img:
+                    _upload_asset(asc, 'gameCenterAchievementImages', 'gameCenterAchievementLocalization',
+                                  'gameCenterAchievementLocalizations', lid, img, {})
+            print(f"• {a['id']} ({a['points']} puan) tamam")
+        except RuntimeError as err:
+            print(f"   ! {a['id']}: {err}"); fails.append(a['id'])
+
+    # ---- liderlik tabloları
+    have = {x['attributes']['vendorIdentifier']: x for x in
+            (_all(asc, f'/v1/gameCenterDetails/{gid}/gameCenterLeaderboards') if gid != 'DRY' else [])}
+    for lb in cfg['leaderboards']:
+        try:
+            if lb['id'] in have:
+                bid = have[lb['id']]['id']
+            else:
+                bid = asc.req('POST', '/v1/gameCenterLeaderboards', write=True, body={'data': {
+                    'type': 'gameCenterLeaderboards',
+                    'attributes': {'referenceName': lb['ref'][:64], 'vendorIdentifier': lb['id'], 'defaultFormatter': 'INTEGER',
+                                   'submissionType': 'BEST_SCORE', 'scoreSortType': 'DESC'},
+                    'relationships': {'gameCenterDetail': {'data': {'type': 'gameCenterDetails', 'id': gid}}}}})['data']['id']
+            locs = {} if bid == 'DRY' else {x['attributes']['locale']: x['id'] for x in
+                                            _all(asc, f'/v1/gameCenterLeaderboards/{bid}/localizations')}
+            for loc, t in lb['locales'].items():
+                if loc in locs:
+                    asc.req('PATCH', f'/v1/gameCenterLeaderboardLocalizations/{locs[loc]}', write=True, body={'data': {
+                        'type': 'gameCenterLeaderboardLocalizations', 'id': locs[loc], 'attributes': {'name': t['name']}}})
+                else:
+                    asc.req('POST', '/v1/gameCenterLeaderboardLocalizations', write=True, body={'data': {
+                        'type': 'gameCenterLeaderboardLocalizations', 'attributes': {'locale': loc, 'name': t['name']},
+                        'relationships': {'gameCenterLeaderboard': {'data': {'type': 'gameCenterLeaderboards', 'id': bid}}}}})
+            print(f"• {lb['id']} tamam")
+        except RuntimeError as err:
+            print(f"   ! {lb['id']}: {err}"); fails.append(lb['id'])
+
+    # ---- düzenlenebilir sürüme Game Center'ı bağla (ilk yayında başarımlar sürümle birlikte incelenir)
+    vs = asc.get(f'/v1/apps/{app_id}/appStoreVersions', **{'filter[platform]': 'IOS', 'limit': 10})['data']
+    ed = [v for v in vs if v['attributes']['appStoreState'] in EDITABLE]
+    if ed:
+        v = ed[0]
+        try:
+            cur = asc.get(f"/v1/appStoreVersions/{v['id']}/gameCenterAppVersion").get('data')
+        except RuntimeError:
+            cur = None
+        if not cur:
+            try:
+                asc.req('POST', '/v1/gameCenterAppVersions', write=True, body={'data': {
+                    'type': 'gameCenterAppVersions', 'attributes': {'enabled': True},
+                    'relationships': {'appStoreVersion': {'data': {'type': 'appStoreVersions', 'id': v['id']}}}}})
+                print(f"Game Center {v['attributes']['versionString']} sürümüne bağlandı")
+            except RuntimeError as err:
+                print(f'   ! sürüme bağlama: {err}')
+        else:
+            print(f"Game Center zaten {v['attributes']['versionString']} sürümüne bağlı")
+    else:
+        print('Düzenlenebilir sürüm yok: Game Center bir sonraki sürüm açıldığında bağlanmalı')
+    if fails:
+        sys.exit('Sorun çıkanlar: ' + ', '.join(fails))
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--metadata', default=str(ROOT / 'store/asc/metadata.json'))
@@ -586,6 +708,7 @@ def main():
     ap.add_argument('--unsubmit-packs', action='store_true')
     ap.add_argument('--events', action='store_true')
     ap.add_argument('--events-file', default=str(ROOT / 'store/asc/events.json'))
+    ap.add_argument('--gamecenter', action='store_true')
     a = ap.parse_args()
     meta = json.load(open(a.metadata, encoding='utf-8'))
     asc = ASC(a.dry_run)
@@ -614,6 +737,8 @@ def main():
         return iap_report(asc, app['id'])
     if a.iap:
         return iap_report(asc, app['id'])
+    if a.gamecenter:
+        return gamecenter_setup(asc, app['id'], json.load(open(ROOT / 'store/asc/gamecenter.json', encoding='utf-8')))
     if a.events:
         cfg = json.load(open(a.events_file, encoding='utf-8'))
         ids = events_setup(asc, app['id'], cfg)

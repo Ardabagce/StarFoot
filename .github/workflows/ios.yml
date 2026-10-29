@@ -12,6 +12,7 @@ on:
     paths:
       - 'app/ios/**'
       - 'app/capacitor.config.json'
+      - 'tools/asc/caps.py'
       - 'js/**'
       - 'css/**'
       - 'oyna-r8k4tq.html'
@@ -58,6 +59,16 @@ jobs:
         run: |
           mkdir -p "$RUNNER_TEMP/keys"
           printf '%s\n' "$P8" > "$RUNNER_TEMP/keys/AuthKey_$KEY_ID.p8"
+      - name: iCloud ve Game Center yetkileri (uygulama kimliği)
+        if: env.P8 != '' && env.TEAM_ID != ''
+        env:
+          ASC_KEY_P8: ${{ secrets.APPSTORE_API_KEY_P8 }}
+          ASC_KEY_ID: ${{ secrets.APPSTORE_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.APPSTORE_ISSUER_ID }}
+        run: |
+          python3 -m venv "$RUNNER_TEMP/py"
+          "$RUNNER_TEMP/py/bin/pip" install -q 'pyjwt[crypto]==2.10.1' 'requests==2.32.3'
+          "$RUNNER_TEMP/py/bin/python" -u tools/asc/caps.py
       - name: Arşivle (imzalı)
         if: env.P8 != '' && env.TEAM_ID != ''
         working-directory: app/ios/App
