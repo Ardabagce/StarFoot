@@ -172,23 +172,50 @@ const SocialArt = {
       }
     }
     c.globalAlpha = 1;
-    // bayraklar / pankart
-    c.fillStyle = P.c1; c.fillRect(W * (0.1 + r() * 0.2), H * 0.39, W * 0.22, H * 0.05);
-    c.fillStyle = P.c2; c.fillRect(W * (0.6 + r() * 0.1), H * 0.4, W * 0.2, H * 0.045);
-    // LED panolar
+    // tribün pankartları: kenarlıklı, dalgalı, üzerinde takım adı
+    const ink = (bgc) => (Sprites.colorDist(bgc, '#ffffff') < 90 ? '#111' : '#fff');
+    const word = String(P.short || P.name || 'STARFOOT').toLocaleUpperCase('tr');
+    const flag = (x, y, w, h, c1, c2) => {
+      c.save(); c.translate(x, y);
+      c.beginPath(); c.moveTo(0, 0);
+      for (let i = 0; i <= 8; i++) c.lineTo((w * i) / 8, Math.sin(i * 0.9 + x) * h * 0.06);
+      for (let i = 8; i >= 0; i--) c.lineTo((w * i) / 8, h + Math.sin(i * 0.9 + x + 1) * h * 0.06);
+      c.closePath(); c.fillStyle = c1; c.fill();
+      c.lineWidth = Math.max(2, h * 0.1); c.strokeStyle = c2; c.stroke();
+      c.font = `900 italic ${Math.round(h * 0.62)}px "Saira Condensed", "Arial Narrow", sans-serif`; c.textAlign = 'center'; c.textBaseline = 'middle';
+      c.fillStyle = ink(c1); c.fillText(word, w / 2, h * 0.54, w * 0.86);
+      c.restore();
+    };
+    flag(W * (0.06 + r() * 0.12), H * 0.385, W * 0.26, H * 0.05, P.c1, P.c2);
+    flag(W * (0.6 + r() * 0.1), H * 0.395, W * 0.24, H * 0.046, P.c2, P.c1);
+    c.textAlign = 'left';
+    // LED panolar: yazılar ölçülerek dizilir (üst üste binmesin)
     const ly = H * 0.555;
     const lg = c.createLinearGradient(0, ly, 0, ly + H * 0.045);
     lg.addColorStop(0, Sprites.shade(P.c1, 0.25)); lg.addColorStop(1, Sprites.shade(P.c1, -0.3));
     c.fillStyle = lg; c.fillRect(0, ly, W, H * 0.045);
-    c.font = `800 ${Math.round(H * 0.028)}px "Saira Condensed", "Arial Narrow", sans-serif`; c.textBaseline = 'middle';
-    c.fillStyle = Sprites.colorDist(P.c1, '#ffffff') < 90 ? '#111' : '#fff';
-    for (let x = -r() * 120; x < W; x += 150) c.fillText(x / 150 % 2 < 1 ? (P.short || 'STARFOOT') : 'STARFOOT', x, ly + H * 0.024);
+    c.fillStyle = P.c2; c.fillRect(0, ly, W, H * 0.004); c.fillRect(0, ly + H * 0.041, W, H * 0.004);
+    c.font = `900 italic ${Math.round(H * 0.028)}px "Saira Condensed", "Arial Narrow", sans-serif`; c.textBaseline = 'middle';
+    const seg = c.measureText(word).width + H * 0.09;
+    for (let x = -r() * seg; x < W; x += seg) {
+      c.fillStyle = ink(P.c1); c.fillText(word, x, ly + H * 0.024);
+      c.fillStyle = P.c2; Sprites.star(c, x + seg - H * 0.045, ly + H * 0.0225, H * 0.011, -Math.PI / 2);
+    }
     // çim: perspektifli biçme şeritleri
     const py = H * 0.6;
     for (let i = 0; i < 9; i++) {
       const y0 = py + (H - py) * Math.pow(i / 9, 1.6), y1 = py + (H - py) * Math.pow((i + 1) / 9, 1.6);
       c.fillStyle = i % 2 ? (day ? '#3c9a45' : '#1f6e34') : (day ? '#348d3e' : '#1a612e');
       c.fillRect(0, y0, W, y1 - y0 + 1);
+    }
+    // gerçek çim dokusu (yüklendiyse)
+    const gt = typeof Sprites !== 'undefined' && Sprites.tile && Sprites.tile();
+    if (gt) {
+      try {
+        const pat = c.createPattern(gt, 'repeat');
+        if (pat.setTransform && typeof DOMMatrix !== 'undefined') pat.setTransform(new DOMMatrix().scale(Math.max(0.6, W / 900)));
+        c.save(); c.globalCompositeOperation = 'overlay'; c.globalAlpha = 0.55; c.fillStyle = pat; c.fillRect(0, py, W, H - py); c.restore();
+      } catch (e) { /* yok */ }
     }
     c.strokeStyle = 'rgba(255,255,255,0.55)'; c.lineWidth = 3;
     c.beginPath(); c.moveTo(0, py + H * 0.07); c.lineTo(W, py + H * 0.05); c.stroke();

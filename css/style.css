@@ -2351,9 +2351,12 @@ div.doc { position: fixed; inset: 0; z-index: 49; background: #000; display: fle
 .mt-radar canvas { width: 100%; height: 124px; display: block; }
 .mt-main .mt-feed { height: calc(62vh - 132px); }
 @media (max-width: 900px) {
-  .mt-main { order: 2; }
-  .mt-radar canvas { height: 96px; }
-  .mt-main .mt-feed { height: 34vh; }
+  /* telefonda: skor tabelası → radar → oyuncu paneli → maç akışı */
+  .mt-main { display: contents; }
+  .mt-radar { order: 0; }
+  .mt-side { order: 1; }
+  .mt-main .mt-feed { order: 2; height: 34vh; }
+  .mt-radar canvas { height: 104px; }
 }
 /* ayarlar düğmesi ve paneli */
 .hdr-l .set-btn { margin-left: -4px; }

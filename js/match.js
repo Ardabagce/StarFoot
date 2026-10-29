@@ -183,7 +183,9 @@ const Match = {
     const hk = isHome ? kits.own : kits.opp, ak = isHome ? kits.opp : kits.own;
     const radar = typeof Radar !== 'undefined' ? Radar.start($('mt-rad'), {
       street, meSide: isHome ? 'H' : 'A', mePos: p.position, num: p.shirt,
-      hc: hk.shirt, hr: hk.shorts, ac: ak.shirt, ar: ak.shorts,
+      hc: hk.shirt, hr: hk.shorts,
+      // renkler birbirine yakınsa deplasman takımı ikinci rengiyle ya da beyaz/lacivertle gösterilir
+      ...(() => { const near = (x, y) => { try { return Sprites.colorDist(x, y) < 140; } catch (e) { return false; } }; let ac = ak.shirt, ar = ak.shorts; if (near(hk.shirt, ac)) { ac = !near(hk.shirt, ak.alt || '#fff') ? ak.alt : (near(hk.shirt, '#f4f4f4') ? '#16264f' : '#f4f4f4'); ar = near(ac, '#111111') ? '#f4f4f4' : '#111111'; } return { ac, ar }; })(),
       hk: isHome ? kits.gk.shirt : '#2b2b2b', ak: isHome ? '#2b2b2b' : kits.gk.shirt,
     }) : null;
     const ownSide = isHome ? 'H' : 'A', oppSide = isHome ? 'A' : 'H';
