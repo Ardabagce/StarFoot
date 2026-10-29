@@ -51,10 +51,14 @@ const Life = {
     p.rel.family = U.clamp(p.rel.family - 0.6, 0, 100);
     if (p.rel.family < 30) Player.addMorale(p, -1);
     else if (p.rel.family > 75) Player.addMorale(p, 0.5);
+    // ayrılık/boşanma sonrası kalp kırıklığı: birkaç hafta moral düşer
+    if (L.heartbreak > 0) { L.heartbreak--; Player.addMorale(p, -2); }
     if (L.gf) {
       L.gf.rel = U.clamp(L.gf.rel - (L.gf.married ? 0.4 : 0.9), 0, 100);
       if (L.gf.rel > 70) Player.addMorale(p, 0.6);
-      if (L.gf.rel < 12 && !L.gf.married) {
+      if (L.gf.rel < 12 && L.gf.married) Life.divorce(p, true);
+      else if (L.gf.rel < 12 && !L.gf.married) {
+        L.heartbreak = 2;
         Game.news(`${L.gf.name} ile yollarınızı ayırdınız. Magazin basını bunu çoktan duydu.`, 'bad');
         Player.addMorale(p, -10);
         L.gf = null; L.exes++;
@@ -67,6 +71,21 @@ const Life = {
       L.ban--;
       if (L.ban === 0) Game.news('Federasyon cezan sona erdi. Yeniden sahalara dönebilirsin.', 'good');
     }
+  },
+
+  // Boşanma: servetin bir kısmı gider, moral ve aile ilişkisi düşer, magazin konuşur. byPartner: eş boşanma davası açtı
+  divorce(p, byPartner) {
+    const L = Life.ensure(p);
+    if (!L.gf || !L.gf.married) return;
+    const name = L.gf.name;
+    const loss = Math.max(0, Math.round(Math.max(0, p.money) * U.rand(0.3, 0.5)));
+    p.money -= loss;
+    Player.addMorale(p, -18);
+    p.rel.family = U.clamp(p.rel.family - 5, 0, 100);
+    L.gf = null; L.exes++; L.divorces = (L.divorces || 0) + 1; L.heartbreak = 4;
+    if (byPartner) Game.news(`${name}, boşanma davası açtı. Evliliğiniz sona erdi; boşanma ${U.money(loss)} değerinde servetine mal oldu.`, 'bad');
+    else Game.news(`${Player.fullName(p)} ile ${name} boşandı. Boşanma ${U.money(loss)} değerinde servetine mal oldu.`, 'bad');
+    return loss;
   },
 
   newSponsorOffer(p) {
@@ -114,6 +133,7 @@ const Life = {
       if (U.chance(0.3)) Social.post('life', `${L.gf.name} ile güzel bir akşam.`, 1.3);
     } else if (kind === 'propose') {
       if (!L.gf || L.gf.married || L.gf.rel < 85) return;
+      if (!Life.adult(p)) return Game.toast('Evlilik için 18 yaşını doldurmalısın.', 'bad');
       if (U.chance(0.85)) {
         L.gf.married = true; L.gf.rel = 100;
         p.rel.family = U.clamp(p.rel.family + 10, 0, 100);
@@ -122,10 +142,15 @@ const Life = {
         Game.news(`${Player.fullName(p)} ile ${L.gf.name} evlendi! Futbol dünyası mutlu çifti kutluyor.`, 'good');
         Social.post('life', `Hayatımın en güzel günü. ${L.gf.name}, iyi ki varsın.`, 2.5);
       } else { L.gf.rel -= 10; Player.addMorale(p, -6); msg = `${L.gf.name} "Biraz daha zamana ihtiyacım var" dedi.`; type = 'bad'; }
+    } else if (kind === 'divorce') {
+      if (!L.gf || !L.gf.married) return;
+      Game.modal(`<h2>${Icon('heart')} Boşan</h2><p>Boşanmak pahalıya patlayabilir: servetinin bir kısmını kaybedebilirsin ve moralin bir süre düşük kalır. Emin misin?</p>`,
+        [{ t: 'Vazgeç', cls: 'btn-ghost' }, { t: 'Boşan', cls: 'btn-big', fn: () => { Life.divorce(p, false); Game.toast('Zor bir dönem. Kafanı toplamak birkaç hafta sürebilir.', 'bad'); Game.save(); Game.render(); } }]);
+      return;
     } else if (kind === 'breakup') {
       if (!L.gf) return;
       Game.news(`${Player.fullName(p)} ile ${L.gf.name} ayrıldı.`, 'world');
-      Player.addMorale(p, -6); L.gf = null; L.exes++;
+      Player.addMorale(p, -6); L.gf = null; L.exes++; L.heartbreak = 2;
       msg = 'Ayrılık zor oldu ama yoluna devam ediyorsun.'; type = '';
       s.ap++;
     } else if (kind === 'night') {
@@ -236,9 +261,10 @@ const Life = {
       <div class="lf-acts">
         ${act('family', 'home', 'Ailenle vakit geçir', 'Aile ilişkisi ve moral artar')}
         ${gf ? act('date', 'heart', `${gf.name} ile buluş`, 'İlişki güçlenir, moral artar') : act('meet', 'heart', 'Yeni biriyle tanış', p.age < 16 ? '16 yaşından sonra' : 'Ünün ve moralin şansını artırır', p.age < 16)}
-        ${gf && !gf.married && gf.rel >= 85 && s.season.year > gf.since ? act('propose', 'star', 'Evlilik teklif et', `${gf.name} hazır olabilir`) : ''}
+        ${gf && !gf.married && gf.rel >= 85 && s.season.year > gf.since && adult ? act('propose', 'star', 'Evlilik teklif et', `${gf.name} hazır olabilir`) : ''}
         ${act('night', 'fire', 'Gece hayatı', adult ? 'Moral +10, enerji -18 · paparazzi riski' : '18 yaşından sonra', !adult)}
         ${gf && !gf.married ? `<button class="btn btn-ghost lf-break" data-life="breakup">Ayrıl</button>` : ''}
+        ${gf && gf.married ? `<button class="btn btn-ghost lf-break" data-life="divorce">Boşan</button>` : ''}
       </div>
     </section>`);
     // menajer
@@ -298,6 +324,22 @@ if (typeof Events !== 'undefined') {
       opts: [
         { t: 'Tatile çık', fx: (p) => { p.life.gf.rel = U.clamp(p.life.gf.rel + 15, 0, 100); Player.addEnergy(p, 15); Player.addMorale(p, 8); const c = Math.max(500, Math.round(Game.weeklyIncome() * 0.4)); p.money -= c; return `Harika bir tatil! (${U.money(c)})`; } },
         { t: 'Antrenmana odaklan', fx: (p) => { p.life.gf.rel = U.clamp(p.life.gf.rel - 10, 0, 100); return `${p.life.gf.name} biraz kırıldı.`; } },
+      ],
+    },
+    {
+      id: 'marriage_crisis', cond: (p) => p.life && p.life.gf && p.life.gf.married && p.life.gf.rel < 40,
+      text: () => `Eşin ${Game.p.life.gf.name} ile aranız iyi değil. Evliliğiniz zor bir dönemden geçiyor.`,
+      opts: [
+        { t: 'Evlilik danışmanına gidin', fx: (p) => { const c = Math.max(500, Math.round(Game.weeklyIncome() * 0.3)); p.money -= c; p.life.gf.rel = U.clamp(p.life.gf.rel + 22, 0, 100); Player.addMorale(p, 4); return `Konuştunuz, aranız düzelmeye başladı. (${U.money(c)})`; } },
+        { t: 'Bir süre ayrı kalın', fx: (p) => { p.life.gf.rel = U.clamp(p.life.gf.rel - 12, 0, 100); Player.addMorale(p, -4); return 'Aranızdaki mesafe büyüdü.'; } },
+      ],
+    },
+    {
+      id: 'gf_leaves', cond: (p) => p.life && p.life.gf && !p.life.gf.married && p.life.gf.rel < 35,
+      text: () => `${Game.p.life.gf.name}, ilişkinizin artık yürümediğini söyledi ve ayrılmak istiyor.`,
+      opts: [
+        { t: 'Bir şans daha iste', fx: (p) => { if (U.chance(0.5)) { p.life.gf.rel = U.clamp(p.life.gf.rel + 15, 0, 100); return 'Bir şans daha verdi ama dikkatli olmalısın.'; } const n = p.life.gf.name; p.life.gf = null; p.life.exes++; p.life.heartbreak = 3; Player.addMorale(p, -10); Game.news(`${Player.fullName(p)} ile ${n} ayrıldı.`, 'world'); return 'Yolunuzu ayırdınız.'; } },
+        { t: 'Ayrılığı kabul et', fx: (p) => { const n = p.life.gf.name; p.life.gf = null; p.life.exes++; p.life.heartbreak = 2; Player.addMorale(p, -6); Game.news(`${Player.fullName(p)} ile ${n} ayrıldı.`, 'world'); return 'Yolunuzu ayırdınız.'; } },
       ],
     },
     {

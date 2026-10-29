@@ -1,0 +1,17 @@
+4525|Tu dois avoir 18 ans pour te marier.
+4526|Divorcer
+4527|Un divorce peut coûter cher : tu pourrais perdre une partie de ta fortune et ton moral restera bas un moment.
+796|Tu es sûr ?
+4539|{} a demandé le divorce. Votre mariage est terminé ; le divorce t'a coûté {} de ta fortune.
+4543|{} et {} ont divorcé. Le divorce a coûté {} de la fortune.
+4528|Une période difficile. Il faudra peut-être quelques semaines pour te remettre.
+4540|Ça ne va pas bien avec ta femme {}. Votre mariage traverse une période difficile.
+4532|Allez voir un conseiller conjugal
+4545|Vous avez parlé et ça commence à s'arranger. ({})
+4533|Prenez un peu de distance
+4534|La distance entre vous s'est creusée.
+4542|{} dit que votre relation ne fonctionne plus et veut rompre.
+4535|Demande une autre chance
+4536|Tu as eu une autre chance, mais fais attention.
+4537|Accepte la rupture
+4538|Vous avez pris des chemins séparés.

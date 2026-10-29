@@ -1,0 +1,17 @@
+4525|Você precisa ter 18 anos para se casar.
+4526|Divorciar-se
+4527|Um divórcio pode sair caro: você pode perder parte da sua fortuna e seu moral ficará baixo por um tempo.
+796|Tem certeza?
+4539|{} pediu o divórcio. Seu casamento acabou; o divórcio custou {} da sua fortuna.
+4543|{} e {} se divorciaram. O divórcio custou {} da fortuna.
+4528|Uma fase difícil. Pode levar algumas semanas para colocar a cabeça no lugar.
+4540|As coisas não vão bem com seu cônjuge {}. Seu casamento passa por uma fase difícil.
+4532|Procurem um terapeuta de casal
+4545|Vocês conversaram e as coisas começaram a melhorar. ({})
+4533|Fiquem um tempo separados
+4534|A distância entre vocês aumentou.
+4542|{} diz que o relacionamento não está mais dando certo e quer terminar.
+4535|Peça mais uma chance
+4536|Você ganhou mais uma chance, mas precisa ter cuidado.
+4537|Aceite o término
+4538|Vocês seguiram caminhos separados.

@@ -1309,5 +1309,22 @@
 "Ev sahibi:": "Hosts:",
 "Grup rakiplerin kura ile belli oldu.": "Your group opponents have been drawn.",
 "Aynı oyuncuyla 4 turnuvalık milli takım kariyeri (2026–2038)": "A 4-tournament international career with the same player (2026–2038)",
-"Rakip analizi, taktik seçimi ve 26 çıkartmalık hedef albümü": "Opponent analysis, tactic choice and a 26-sticker goals album"
+"Rakip analizi, taktik seçimi ve 26 çıkartmalık hedef albümü": "Opponent analysis, tactic choice and a 26-sticker goals album",
+"Evlilik için 18 yaşını doldurmalısın.": "You must be 18 to get married.",
+"Boşan": "Divorce",
+"Boşanmak pahalıya patlayabilir: servetinin bir kısmını kaybedebilirsin ve moralin bir süre düşük kalır.": "A divorce can be costly: you may lose part of your fortune and your morale will stay low for a while.",
+"Emin misin?": "Are you sure?",
+"{}, boşanma davası açtı. Evliliğiniz sona erdi; boşanma {} değerinde servetine mal oldu.": "{} filed for divorce. Your marriage is over; the divorce cost you {} of your fortune.",
+"{} ile {} boşandı. Boşanma {} değerinde servetine mal oldu.": "{} and {} have divorced. The divorce cost {} of the fortune.",
+"Zor bir dönem. Kafanı toplamak birkaç hafta sürebilir.": "A tough time. It may take a few weeks to clear your head.",
+"Eşin {} ile aranız iyi değil. Evliliğiniz zor bir dönemden geçiyor.": "Things are not good with your spouse {}. Your marriage is going through a hard time.",
+"Evlilik danışmanına gidin": "See a marriage counselor",
+"Konuştunuz, aranız düzelmeye başladı. ({})": "You talked, and things are starting to improve. ({})",
+"Bir süre ayrı kalın": "Spend some time apart",
+"Aranızdaki mesafe büyüdü.": "The distance between you has grown.",
+"{}, ilişkinizin artık yürümediğini söyledi ve ayrılmak istiyor.": "{} says your relationship is no longer working and wants to break up.",
+"Bir şans daha iste": "Ask for another chance",
+"Bir şans daha verdi ama dikkatli olmalısın.": "You got another chance, but you need to be careful.",
+"Ayrılığı kabul et": "Accept the breakup",
+"Yolunuzu ayırdınız.": "You went your separate ways."
 }

@@ -1,0 +1,17 @@
+4525|Kamu harus berusia 18 tahun untuk menikah.
+4526|Bercerai
+4527|Perceraian bisa mahal: kamu bisa kehilangan sebagian kekayaan dan moralmu akan rendah untuk sementara.
+796|Kamu yakin?
+4539|{} mengajukan cerai. Pernikahan kalian berakhir; perceraian menghabiskan {} dari kekayaanmu.
+4543|{} dan {} bercerai. Perceraian menghabiskan {} kekayaan.
+4528|Masa yang berat. Butuh beberapa minggu untuk menenangkan pikiran.
+4540|Hubunganmu dengan pasanganmu {} sedang tidak baik. Pernikahan kalian sedang melewati masa sulit.
+4532|Temui konselor pernikahan
+4545|Kalian berbicara dan hubungan mulai membaik. ({})
+4533|Berpisah sementara
+4534|Jarak di antara kalian makin jauh.
+4542|{} bilang hubungan kalian tidak berjalan lagi dan ingin putus.
+4535|Minta satu kesempatan lagi
+4536|Kamu dapat kesempatan lagi, tapi harus berhati-hati.
+4537|Terima perpisahan
+4538|Kalian berpisah jalan.

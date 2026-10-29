@@ -1,0 +1,17 @@
+4525|Du musst 18 sein, um zu heiraten.
+4526|Scheiden lassen
+4527|Eine Scheidung kann teuer werden: Du verlierst womöglich einen Teil deines Vermögens und deine Moral bleibt eine Weile niedrig.
+796|Bist du sicher?
+4539|{} hat die Scheidung eingereicht. Eure Ehe ist vorbei; die Scheidung kostete dich {} deines Vermögens.
+4543|{} und {} haben sich scheiden lassen. Die Scheidung kostete {} des Vermögens.
+4528|Eine schwere Zeit. Es kann ein paar Wochen dauern, bis du den Kopf frei hast.
+4540|Mit deiner Ehefrau {} läuft es nicht gut. Eure Ehe steckt in einer schwierigen Phase.
+4532|Geht zur Eheberatung
+4545|Ihr habt geredet, und es wird langsam besser. ({})
+4533|Eine Weile getrennt leben
+4534|Die Distanz zwischen euch ist gewachsen.
+4542|{} sagt, eure Beziehung funktioniert nicht mehr, und will sich trennen.
+4535|Um eine zweite Chance bitten
+4536|Du bekommst noch eine Chance, aber sei vorsichtig.
+4537|Die Trennung akzeptieren
+4538|Ihr geht getrennte Wege.

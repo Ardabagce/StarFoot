@@ -94,7 +94,7 @@ const Scenes = {
       sc.mates.forEach((m) => { if (m.y < line && U.chance(0.7)) m.y = Math.min(sc.ball.y - 1.5, line + U.rand(0.3, 1.6)); });
       sc.offside = line;
     }
-    sc.keeper.x = U.clamp(sc.ball.x * 0.15, -2, 2);
+    sc.keeper.x = HARD() ? U.clamp(sc.ball.x * 0.24, -2.6, 2.6) : U.clamp(sc.ball.x * 0.15, -2, 2);
     sc.timeLimit = (type === 'close' ? 5 : 6.5) + (o.pace || 50) / 40 - s * 1.5;
     sc.creep = 0.2 + 0.7 * s;
     return sc;
@@ -186,10 +186,10 @@ const MiniGame = {
       const maxSpeed = 21 + st.shooting * 0.12 + (scene.type === 'penalty' ? 2 : 0) + (isFK ? 3 + fkFar * 3 : 0);
       const curveMax = (2.2 + st.technique * 0.075) * (isFK ? 1.3 : 1);
       const wx = o.weather || null;
-      const angSigma = ((1 - st.technique / 100) * 2.8 + 0.3) * cond * (0.55 + 0.8 * s) * Math.PI / 180 * (wx ? wx.sigma : 1);
+      const angSigma = ((1 - st.technique / 100) * 2.8 + 0.3) * cond * (0.55 + 0.8 * s) * Math.PI / 180 * (wx ? wx.sigma : 1) * (HARD() ? 1.2 : 1);
       const passSigma = ((1 - st.passing / 100) * 2.4 + 0.25) * cond * (0.6 + 0.6 * s) * Math.PI / 180;
       const assist = U.clamp(0.75 - s, 0, 0.6); // nişan yardımı (düşük seviyelerde güçlü)
-      const previewFrac = U.clamp(0.65 + st.technique / 200 + assist * 0.4, 0.65, 1) * (wx && wx.vis ? 1 - wx.vis * 0.5 : 1);
+      const previewFrac = U.clamp(0.65 + st.technique / 200 + assist * 0.4, 0.65, 1) * (wx && wx.vis ? 1 - wx.vis * 0.5 : 1) * (HARD() ? 0.85 : 1);
       const POWER_M = 14;
 
       const ball = { x: scene.ball.x, y: scene.ball.y, z: 0, vx: 0, vy: 0, vz: 0, spin: 0, rot: 0 };
@@ -523,7 +523,7 @@ const MiniGame = {
             });
           }
           if (t > scene.timeLimit) finish('lost', scene.creep ? 'TOPU KAPTIRDIN' : 'SÜRE DOLDU', '#ff6b6b');
-          keeper.x += (U.clamp(ball.x * 0.15, -2, 2) - keeper.x) * Math.min(1, dt * 2);
+          keeper.x += (U.clamp(ball.x * (HARD() ? 0.24 : 0.15), HARD() ? -2.6 : -2, HARD() ? 2.6 : 2) - keeper.x) * Math.min(1, dt * (HARD() ? 3 : 2));
           [...defs, keeper].forEach((e) => moveEnt(e, dt));
           return;
         }
@@ -579,13 +579,15 @@ const MiniGame = {
             return startMateShot(m);
           }
         }
-        const reach = keeper.reach + (ball.y < 5 ? keeper.dive : 0);
+        // Zor: kaleci açıyı daha iyi kapatır, köşelere ve yüksek toplara daha iyi uzanır
+        const HD = HARD();
+        const reach = keeper.reach + (ball.y < 5 ? keeper.dive : 0) + (HD ? 0.25 : 0);
         if (prevY >= keeper.y && ball.y < keeper.y) {
-          const maxZ = 2.2 + 0.3 * s;
-          const r = ball.z > 1.7 ? reach * 0.75 : reach;
+          const maxZ = 2.2 + 0.3 * s + (HD ? 0.1 : 0);
+          const r = ball.z > 1.7 ? reach * (HD ? 0.82 : 0.75) : reach;
           if (Math.abs(ball.x - keeper.x) < r && ball.z < maxZ) return finish('saved', 'KALECİ KURTARDI', '#ffd166');
         }
-        if (ball.y < 6 && ball.y > keeper.y && Math.hypot(ball.x - keeper.x, ball.y - keeper.y) < 1.0 && ball.z < 2.3 && hs < 9) {
+        if (ball.y < 6 && ball.y > keeper.y && Math.hypot(ball.x - keeper.x, ball.y - keeper.y) < (HD ? 1.2 : 1.0) && ball.z < 2.3 && hs < (HD ? 10.5 : 9)) {
           return finish(scene.mates.length ? 'claimed' : 'saved', 'KALECİ TOPLADI', '#ffd166');
         }
         if (ball.y <= 0) {
