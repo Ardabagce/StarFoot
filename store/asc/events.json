@@ -82,7 +82,7 @@
   }
  ],
  "nomination": {
-  "name": "StarFoot 1.0.10: iPad, new icon and star life",
+  "name": "StarFoot 1.0.11: iCloud, Game Center, live match radar",
   "type": "APP_ENHANCEMENTS",
   "publishStart": "2026-11-10T17:00:00Z",
   "locales": [
@@ -96,7 +96,8 @@
    "fr-FR",
    "ja"
   ],
-  "description": "StarFoot is a football (soccer) career game made by a solo indie developer: you start in a street match, get spotted by scouts and rise from the academy to the world's biggest clubs, playing the key moments of every match yourself (shots, passes, dribbles, free kicks and penalties). Version 1.0.10 brings native iPad support with a wide three-column layout, a brand-new app icon and the \"Live Like a Star\" features: an encyclopedia page for your career, a chapter-by-chapter career documentary, a luxury showcase and a look studio. The World Championship Dream mode now offers a four-tournament international career (2026 to 2038) with opponent scouting, tactics, a sticker album and an awards night. The game is fully localized in 10 languages, all club and player names are fictional, and two in-app events accompany the update.",
-  "notes": "Solo indie developer from Türkiye. Happy to provide additional assets or a TestFlight build."
+  "description": "StarFoot is a football (soccer) career game by a solo indie developer: start in a street match, get spotted by scouts and rise from the academy to the world's biggest clubs, playing the key moments of every match yourself (shots, passes, dribbles, free kicks, penalties). Version 1.0.11 is our biggest update yet: careers are backed up to iCloud and restored on a new device, 38 Game Center achievements and 4 world leaderboards arrive, and every match gets a live match radar. Real stadium recordings replace synthesized sound, so the crowd roars louder as your fame grows, with optional menu music. Players get new running animations and keepers are tougher on Hard. The game also offers native iPad support and the World Championship Dream mode, a four-tournament international career. It is fully localized in 10 languages, all club and player names are fictional, and two in-app events accompany the update.",
+  "notes": "Solo indie developer from Türkiye. Happy to provide additional assets or a TestFlight build.",
+  "replaces": "StarFoot 1.0.10: iPad, new icon and star life"
  }
 }
