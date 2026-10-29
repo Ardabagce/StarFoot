@@ -18,7 +18,7 @@ def main():
         sys.exit(f'{BUNDLE} uygulama kimliği bulunamadı')
     bid = ids[0]['id']
     have = {c['attributes']['capabilityType'] for c in
-            asc.get(f'/v1/bundleIds/{bid}/bundleIdCapabilities', limit=50)['data']}
+            asc.get(f'/v1/bundleIds/{bid}/bundleIdCapabilities')['data']}
     print('Açık yetkiler:', ', '.join(sorted(have)) or '-')
     for cap, settings in WANT.items():
         if cap in have:
