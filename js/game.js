@@ -342,6 +342,8 @@ const Game = {
     // yeni kariyerde hoş geldin penceresiyle çakışmasın; günlük ödül sonraki girişte
     const daily = () => { if (typeof Daily !== 'undefined' && Game.state && !document.getElementById('hub').classList.contains('hidden')) Daily.check(); };
     // güncelleme duyurusu önce (bir kez), günlük ödül kapanınca
+    // App Store etkinliğinden gelindiyse önce o ekran; duyuru ve günlük ödül sonraki girişte
+    if (typeof DeepLink !== 'undefined' && DeepLink.pending) { setTimeout(DeepLink.run, 450); return; }
     if (!Game._fresh) setTimeout(() => { if (!(typeof WhatsNew !== 'undefined' && Game.state && WhatsNew.check(daily))) daily(); }, 450);
     Game._fresh = false;
   },

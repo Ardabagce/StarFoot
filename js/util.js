@@ -172,3 +172,56 @@ const ScreenGuard = {
   },
 };
 ScreenGuard.init();
+
+// ---------- Derin bağlantılar (App Store etkinlikleri, paylaşımlar) ----------
+// starfoot://star  -> Starpedia (kariyerdeysen hemen, değilsen kariyere girince)
+// starfoot://wc    -> Dünya Şampiyonası Rüyası menüsü
+const DeepLink = {
+  pending: null,
+  key(url) {
+    const m = String(url || '').match(/^starfoot:\/\/([a-z]+)|\/go\/([a-z]+)/i);
+    const k = m && (m[1] || m[2] || '').toLowerCase();
+    return k === 'star' || k === 'wc' ? k : null;
+  },
+  handle(url) {
+    const k = DeepLink.key(url);
+    if (!k) return;
+    DeepLink.pending = k;
+    if (typeof Premium !== 'undefined' && Premium.track) Premium.track('deeplink', { to: k });
+    setTimeout(DeepLink.run, 400);
+  },
+  // Uygun bir ekrandaysak bekleyen bağlantıyı açar; açtıysa true döner
+  run() {
+    const k = DeepLink.pending;
+    if (!k || typeof Game === 'undefined') return false;
+    const vis = (id) => { const e = document.getElementById(id); return e && !e.classList.contains('hidden'); };
+    if (vis('match') || document.body.classList.contains('wc-mode')) return false; // maç ya da turnuva sürerken bölme
+    if (k === 'wc') {
+      if (typeof WC === 'undefined') return false;
+      DeepLink.pending = null;
+      if (Game.state) { Game.save(); Game.init(); }
+      Game.show('title');
+      WC.menu();
+      return true;
+    }
+    if (k === 'star') {
+      if (typeof Star === 'undefined') return false;
+      if (!Game.state || !vis('hub')) {
+        return false; // kariyere girince açılır
+      }
+      DeepLink.pending = null;
+      Star.wiki();
+      return true;
+    }
+    return false;
+  },
+  init() {
+    const App = window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.App;
+    if (!App) return;
+    try {
+      App.addListener('appUrlOpen', (e) => DeepLink.handle(e && e.url));
+      if (App.getLaunchUrl) App.getLaunchUrl().then((r) => r && r.url && DeepLink.handle(r.url)).catch(() => {});
+    } catch (e) { /* eklenti yok */ }
+  },
+};
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', DeepLink.init); else DeepLink.init();

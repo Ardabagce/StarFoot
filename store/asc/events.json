@@ -37,7 +37,8 @@
      "Prueba gratis tu página de Starpedia",
      "La enciclopedia de tu carrera, un documental y una vitrina de lujo. ¡Prueba Starpedia gratis una vez!"
     ]
-   }
+   },
+   "deepLink": "starfoot://star"
   },
   {
    "ref": "World Championship Dream 2026-12",
@@ -76,7 +77,8 @@
      "4 torneos, una carrera: lleva la copa a casa",
      "Elige tu país, analiza rivales, elige tácticas y tira el último penal. Una carrera de 4 torneos, 2026 a 2038."
     ]
-   }
+   },
+   "deepLink": "starfoot://wc"
   }
  ],
  "nomination": {

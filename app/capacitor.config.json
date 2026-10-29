@@ -11,6 +11,7 @@
     "allowMixedContent": false,
     "includePlugins": [
       "@capacitor-community/admob",
+      "@capacitor/app",
       "@capacitor/filesystem",
       "@capacitor/haptics",
       "@capacitor/local-notifications",

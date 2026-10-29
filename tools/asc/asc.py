@@ -484,7 +484,7 @@ def events_setup(asc, app_id, cfg):
     ids = []
     for ev in cfg.get('events', []):
         attrs = {'referenceName': ev['ref'], 'badge': ev['badge'], 'purpose': ev['purpose'], 'priority': ev['priority'],
-                 'primaryLocale': 'tr', 'purchaseRequirement': ev.get('purchase'),
+                 'primaryLocale': 'tr', 'purchaseRequirement': ev.get('purchase'), 'deepLink': ev.get('deepLink'),
                  'territorySchedules': [{'territories': terr, 'publishStart': ev['publishStart'],
                                          'eventStart': ev['eventStart'], 'eventEnd': ev['eventEnd']}]}
         e = cur.get(ev['ref'])
@@ -515,7 +515,16 @@ def events_setup(asc, app_id, cfg):
             else:
                 lid = asc.req('POST', '/v1/appEventLocalizations', write=True, body={'data': {'type': 'appEventLocalizations',
                               'attributes': dict(a, locale=loc), 'relationships': {'appEvent': {'data': {'type': 'appEvents', 'id': eid}}}}})['data']['id']
-            have = set() if lid == 'DRY' else {x['attributes'].get('appEventAssetType') for x in asc.get(f'/v1/appEventLocalizations/{lid}/appEventScreenshots', limit=10)['data']}
+            have = set()
+            if lid != 'DRY':
+                for x in asc.get(f'/v1/appEventLocalizations/{lid}/appEventScreenshots', limit=10)['data']:
+                    st = ((x['attributes'].get('assetDeliveryState') or {}).get('state'))
+                    if st in ('COMPLETE', 'UPLOAD_COMPLETE'):
+                        have.add(x['attributes'].get('appEventAssetType'))
+                    else:  # yarım kalmış ya da başarısız yükleme: sil, yeniden yükle
+                        er = (x['attributes'].get('assetDeliveryState') or {}).get('errors') or []
+                        print(f"   {loc}: {x['attributes'].get('appEventAssetType')} durumu {st} {[e.get('description') or e.get('code') for e in er]}, yeniden yükleniyor")
+                        asc.req('DELETE', f"/v1/appEventScreenshots/{x['id']}", write=True)
             for t, f in (('EVENT_CARD', ev['card']), ('EVENT_DETAILS_PAGE', ev['details'])):
                 if t not in have:
                     _upload_asset(asc, 'appEventScreenshots', 'appEventLocalization', 'appEventLocalizations', lid, ROOT / f, {'appEventAssetType': t})

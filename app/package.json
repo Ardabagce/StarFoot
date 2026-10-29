@@ -2,7 +2,7 @@
   "name": "starfoot-android",
   "private": true,
   "version": "1.0.0",
-  "description": "StarFoot Android uygulamas\u0131 (Capacitor + AdMob)",
+  "description": "StarFoot Android uygulaması (Capacitor + AdMob)",
   "scripts": {
     "web": "node copy-web.js",
     "sync": "node copy-web.js && npx cap sync android",
@@ -12,6 +12,7 @@
     "@capacitor-community/admob": "^8.2.0",
     "@capacitor-firebase/analytics": "^8.5.2",
     "@capacitor/android": "^8.5.2",
+    "@capacitor/app": "8.1.2",
     "@capacitor/core": "^8.5.2",
     "@capacitor/filesystem": "^8.1.4",
     "@capacitor/haptics": "^8.0.2",
