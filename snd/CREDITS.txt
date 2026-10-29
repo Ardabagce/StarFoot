@@ -1,0 +1,2 @@
+menu.mp3: "It Takes A Hero" — Mjorlaja (https://opengameart.org/content/it-takes-a-hero), CC0 1.0 (kamu malı). Ses düzeyi ayarlandı, 96 kbps.
+crowd.mp3, goal.mp3, cheer.mp3: "Free Crowd Cheering Sounds" — Gregor Quendel (https://opengameart.org/content/free-crowd-cheering-sounds), CC-BY 4.0 (https://creativecommons.org/licenses/by/4.0/). Kesildi, tek kanala indirildi, döngü için birleştirildi, ses düzeyi ayarlandı.

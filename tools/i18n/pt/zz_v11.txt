@@ -1,0 +1,26 @@
+4551|Backup e Game Center
+4552|☁️ Backup no iCloud
+4554|O iCloud está desativado neste aparelho. Ative em Ajustes › Conta Apple › iCloud.
+4557|O espaço do iCloud está cheio: suas carreiras jogadas mais recentemente são salvas.
+4578|Último backup: {}
+4558|Suas carreiras são salvas no iCloud automaticamente.
+4559|Fazer backup agora
+4560|☁️ Salvo no iCloud
+4562|Não foi possível fazer o backup agora; tentaremos de novo em breve.
+4563|☁️ Suas carreiras foram restauradas do iCloud
+4565|Você não entrou no Game Center. Ative em Ajustes › Game Center.
+4568|Suas conquistas e pontuações competem com o mundo.
+4569|Sem login. Ajustes do telefone › Game Center.
+4572|Classificação
+4573|Música
+4574|Música de fundo nos menus. Nas partidas, a torcida assume.
+4577|Créditos: sons da torcida Gregor Quendel (CC BY 4.0) · música "It Takes A Hero", Mjorlaja (CC0) · textura de grama ambientCG (CC0)
+4579|Som real de estádio e música
+4580|O barulho da torcida e o grito de gol agora são gravações reais e ficam mais altos com sua fama. Os menus têm música; você pode desligá-la nos Ajustes.
+4583|Radar da partida
+4584|Um campo ao vivo acima do lance a lance: onde está a bola, onde você está e de onde veio o gol.
+4585|Novas animações dos jogadores
+4586|Corrida com joelhos dobrando, braços balançando e jogadores mais realistas.
+4553|Backup no iCloud
+4587|Suas carreiras são salvas automaticamente; mesmo em um celular novo você continua de onde parou.
+4588|38 conquistas e rankings mundiais: gols, troféus, geral e seguidores.

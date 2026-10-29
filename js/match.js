@@ -139,7 +139,7 @@ const Match = {
           <div class="mt-time"><span id="mt-min">0'</span><div class="mt-prog"><div id="mt-bar"></div></div></div>
         </div>
         <div class="mt-body">
-          <div class="mt-feed" id="mt-feed"></div>
+          <div class="mt-main"><div class="mt-radar"><canvas id="mt-rad"></canvas></div><div class="mt-feed" id="mt-feed"></div></div>
           <div class="mt-side">
             <div class="mt-me">
               <div class="me-id">
@@ -179,6 +179,14 @@ const Match = {
       </div>`;
 
     const $ = (id) => document.getElementById(id);
+    // radar: ev sahibi soldan sağa hücum eder
+    const hk = isHome ? kits.own : kits.opp, ak = isHome ? kits.opp : kits.own;
+    const radar = typeof Radar !== 'undefined' ? Radar.start($('mt-rad'), {
+      street, meSide: isHome ? 'H' : 'A', mePos: p.position, num: p.shirt,
+      hc: hk.shirt, hr: hk.shorts, ac: ak.shirt, ar: ak.shorts,
+      hk: isHome ? kits.gk.shirt : '#2b2b2b', ak: isHome ? '#2b2b2b' : kits.gk.shirt,
+    }) : null;
+    const ownSide = isHome ? 'H' : 'A', oppSide = isHome ? 'A' : 'H';
     const feed = (txt, cls = '') => {
       M.feed.push(txt);
       const d = document.createElement('div');
@@ -243,6 +251,7 @@ const Match = {
       M.ownScorers.push(scorerName);
       if (!M.instant && typeof Sfx !== 'undefined') { Sfx.play(street ? 'cheer' : 'roar'); Sfx.buzz('heavy'); }
       feed(`⚽ <b>${M.min}'</b> GOL! ${txt || `${U.esc(scorerName)} golü attı.`} <span class="sc">${M.hs}-${M.as}</span>`, 'goal own');
+      if (radar) radar.goal(ownSide);
     };
     const oppGoal = (txt) => {
       const sc = pickOpp();
@@ -250,6 +259,7 @@ const Match = {
       M.oppScorers.push(sc.n);
       if (!M.instant && typeof Sfx !== 'undefined') { Sfx.play('groan'); Sfx.buzz('warning'); }
       feed(`🥅 <b>${M.min}'</b> Gol ${U.esc(opp.name)}'dan. ${txt || `Golü ${U.esc(sc.n)} attı.`} <span class="sc">${M.hs}-${M.as}</span>`, 'goal opp');
+      if (radar) radar.goal(oppSide);
     };
 
     // ---- An çözümleme ----
@@ -491,6 +501,7 @@ const Match = {
     });
 
     const resolveMoment = async (mo) => {
+      if (radar) radar.moment(mo.type === 'tackle' ? oppSide : ownSide);
       const type = mo.type;
       M.drama = !!mo.drama;
       if (M.drama) {
@@ -620,6 +631,7 @@ const Match = {
           for (let i = moments.length - 1; i >= 0; i--) if (moments[i].min > 70) moments.splice(i, 1);
         }
       }
+      if (radar) { radar.speed = M.speed; radar.minute(homeR(), awayR(), onPitch()); if (!M.instant && U.chance(0.05)) radar.chance(U.chance(0.5 + (homeR() - awayR()) / 80) ? 'H' : 'A'); }
       // arka plan golleri
       const [lh, la] = World.lambdas(homeR(), awayR());
       const ownL = (isHome ? lh : la) / 90 * (onPitch() ? 0.72 : 1);
@@ -678,6 +690,7 @@ const Match = {
       const rating = Math.round(M.rating * 10) / 10;
       const motm = played && rating >= 8.3;
       feed(`🏁 Maç sona erdi: ${U.esc(ctx.home.name)} ${M.hs} - ${M.as} ${U.esc(ctx.away.name)}`, 'info');
+      if (radar) setTimeout(() => radar.stop(), 3000);
       refresh();
       const summary = {
         gf, ga, res, hs: M.hs, as: M.as, played, energySave: 0, energyStart: M.e0, energyEnd: M.energy, moments: M.momPlayed || 0, effort: EF().l, minutes: Math.max(0, minutes), rating: played ? rating : null,

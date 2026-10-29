@@ -2344,3 +2344,14 @@ div.doc { position: fixed; inset: 0; z-index: 49; background: #000; display: fle
 .wc-btns { display: flex; flex-wrap: wrap; gap: 8px; }
 .wc-btns .btn { flex: 1 1 140px; }
 .wc-car td:first-child { white-space: nowrap; }
+.set-credits { font-size: 11px; margin: 10px 2px 0; line-height: 1.4; opacity: .75; }
+/* maç radarı */
+.mt-main { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.mt-radar { border: 1px solid var(--line); background: #1d5a28; line-height: 0; }
+.mt-radar canvas { width: 100%; height: 124px; display: block; }
+.mt-main .mt-feed { height: calc(62vh - 132px); }
+@media (max-width: 900px) {
+  .mt-main { order: 2; }
+  .mt-radar canvas { height: 96px; }
+  .mt-main .mt-feed { height: 34vh; }
+}

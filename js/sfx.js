@@ -3,7 +3,29 @@ const Sfx = {
   on: (() => { try { return localStorage.getItem('starfoot_sfx') !== '0'; } catch (e) { return true; } })(),
   hap: (() => { try { return localStorage.getItem('starfoot_haptics') !== '0'; } catch (e) { return true; } })(),
   ctx: null,
+  mus: (() => { try { return localStorage.getItem('starfoot_music') !== '0'; } catch (e) { return true; } })(),
   setOn(v) { Sfx.on = !!v; try { localStorage.setItem('starfoot_sfx', v ? '1' : '0'); } catch (e) { /* yok */ } if (!v) Sfx.crowd(false); },
+  setMusic(v) { Sfx.mus = !!v; try { localStorage.setItem('starfoot_music', v ? '1' : '0'); } catch (e) { /* yok */ } Music.update(); },
+  // Gerçek kayıtlar (snd/): tribün ortamı, gol coşkusu, alkış. Yüklenemezse sentez sesler kullanılır.
+  buf: {},
+  loadSamples() {
+    if (Sfx._loading || !Sfx.ctx || location.protocol === 'file:') return;
+    Sfx._loading = true;
+    ['crowd', 'goal', 'cheer'].forEach((k) => {
+      fetch(`snd/${k}.mp3`).then((r) => r.arrayBuffer()).then((a) => new Promise((ok, no) => Sfx.ctx.decodeAudioData(a, ok, no)))
+        .then((b) => { Sfx.buf[k] = b; if (k === 'crowd' && Sfx._cr && Sfx._cr.synth) Sfx.crowd(true, Sfx._cr.quiet); }).catch(() => {});
+    });
+  },
+  // tribün yoğunluğu: oyuncunun yıldızlığına ve maçın önemine göre (0 boş, 1 dolu stadyum)
+  lvl() { return typeof Sprites !== 'undefined' && Sprites.atmo ? U.clamp(Sprites.atmo.lvl, 0, 1) : 0.6; },
+  sample(k, vol, rate = 1) {
+    const b = Sfx.buf[k];
+    if (!b) return false;
+    const c = Sfx.ctx, src = c.createBufferSource(), g = c.createGain();
+    src.buffer = b; src.playbackRate.value = rate; g.gain.value = vol;
+    src.connect(g); g.connect(Sfx.out); src.start();
+    return true;
+  },
   setHap(v) { Sfx.hap = !!v; try { localStorage.setItem('starfoot_haptics', v ? '1' : '0'); } catch (e) { /* yok */ } },
 
   // iOS/Android ses bağlamını ancak bir dokunuştan sonra açar
@@ -15,6 +37,8 @@ const Sfx = {
       Sfx.ctx = new AC();
       Sfx.out = Sfx.ctx.createGain(); Sfx.out.gain.value = 0.8; Sfx.out.connect(Sfx.ctx.destination);
     } catch (e) { Sfx.ctx = null; }
+    Sfx.loadSamples();
+    Music.update();
   },
   ready() {
     if (!Sfx.on) return false;
@@ -68,13 +92,14 @@ const Sfx = {
         case 'net': Sfx.burst('highpass', 2500, 1200, 0.5, 0.01, 0.25, 0.35); break;
         case 'post': Sfx.tone('triangle', 920, 880, 0.002, 0.35, 0.7); Sfx.tone('sine', 1380, 1320, 0.002, 0.2, 0.5); break;
         case 'roar':
+          if (Sfx.sample('goal', 0.35 + 0.75 * Sfx.lvl(), 0.97 + Math.random() * 0.06)) break;
           Sfx.burst('bandpass', 500, 900, 0.6, 0.25, 0.55, 2.6);
           Sfx.burst('bandpass', 1200, 1600, 0.8, 0.3, 0.3, 2.2, 0.05);
           break;
         case 'ooh': Sfx.burst('bandpass', 520, 280, 2.2, 0.18, 0.35, 1.1); break;
         case 'groan': Sfx.burst('bandpass', 380, 220, 1.6, 0.12, 0.22, 0.9); break;
         case 'save': Sfx.burst('lowpass', 900, 300, 0.7, 0.003, 0.4, 0.15); Sfx.play('ooh'); break;
-        case 'cheer': Sfx.burst('bandpass', 900, 1300, 0.9, 0.2, 0.32, 1.8); break;
+        case 'cheer': if (Sfx.sample('cheer', 0.5 + 0.5 * Sfx.lvl(), 0.96 + Math.random() * 0.08)) break; Sfx.burst('bandpass', 900, 1300, 0.9, 0.2, 0.32, 1.8); break;
         case 'heart': [0, 0.16, 0.85, 1.01].forEach((d, i) => Sfx.tone('sine', i % 2 ? 50 : 62, 40, 0.01, 0.6, 0.14, d)); break;
         case 'coin': Sfx.tone('square', 1320, 1320, 0.005, 0.08, 0.09); Sfx.tone('square', 1760, 1760, 0.005, 0.08, 0.22, 0.08); break;
         case 'fanfare': [[523, 0], [659, 0.16], [784, 0.32], [1047, 0.5]].forEach(([f, d], i) => { Sfx.tone('sawtooth', f, f, 0.02, 0.07, i === 3 ? 1.1 : 0.22, d); Sfx.tone('sine', f, f, 0.02, 0.1, i === 3 ? 1.2 : 0.25, d); }); break;
@@ -90,11 +115,23 @@ const Sfx = {
     const stop = () => {
       if (!Sfx._cr) return;
       const { src, g } = Sfx._cr; Sfx._cr = null;
+      setTimeout(() => Music.update(), 1200);
       try { g.gain.setTargetAtTime(0.0001, Sfx.ctx.currentTime, 0.4); src.stop(Sfx.ctx.currentTime + 1.5); } catch (e) { /* yok */ }
     };
     if (!onOff) return stop();
     if (!Sfx.ready()) return;
     stop();
+    Music.update(true);
+    if (Sfx.buf.crowd) {
+      try {
+        const c = Sfx.ctx, src = c.createBufferSource(), g = c.createGain();
+        src.buffer = Sfx.buf.crowd; src.loop = true;
+        g.gain.value = 0.0001; g.gain.setTargetAtTime(quiet ? 0.08 : 0.18 + 0.62 * Sfx.lvl(), c.currentTime, 0.8);
+        src.connect(g); g.connect(Sfx.out); src.start(0, Math.random() * 20);
+        Sfx._cr = { src, g, quiet };
+      } catch (e) { /* yok */ }
+      return;
+    }
     try {
       const c = Sfx.ctx;
       const src = c.createBufferSource(); src.buffer = Sfx.noise(); src.loop = true;
@@ -103,7 +140,7 @@ const Sfx = {
       const g = c.createGain(); g.gain.value = 0.0001; g.gain.setTargetAtTime(quiet ? 0.015 : 0.07, c.currentTime, 0.8);
       const lfo = c.createOscillator(), lg = c.createGain(); lfo.frequency.value = 0.18; lg.gain.value = quiet ? 0.005 : 0.025; lfo.connect(lg); lg.connect(g.gain); lfo.start();
       src.connect(f); f.connect(lp); lp.connect(g); g.connect(Sfx.out); src.start();
-      Sfx._cr = { src, g };
+      Sfx._cr = { src, g, quiet, synth: true };
     } catch (e) { /* yok */ }
   },
 
@@ -119,5 +156,32 @@ const Sfx = {
     } catch (e) { /* desteklenmiyor */ }
   },
 };
+
+// Menü müziği (snd/menu.mp3, CC0): akış olarak çalınır, maçta tribün sesi açılınca kısılır.
+const Music = {
+  el: null, node: null, g: null,
+  update(duck) {
+    const want = Sfx.mus && !document.hidden && !(duck || Sfx._cr);
+    if (!want) { if (Music.el) Music.fade(0, () => Music.el.pause()); return; }
+    if (!Sfx.ctx || location.protocol === 'file:') return;
+    try {
+      if (!Music.el) {
+        Music.el = new Audio('snd/menu.mp3'); Music.el.loop = true; Music.el.preload = 'auto';
+        Music.node = Sfx.ctx.createMediaElementSource(Music.el);
+        Music.g = Sfx.ctx.createGain(); Music.g.gain.value = 0.0001;
+        Music.node.connect(Music.g); Music.g.connect(Sfx.ctx.destination);
+      }
+      if (Sfx.ctx.state === 'suspended') Sfx.ctx.resume().catch(() => {});
+      const p = Music.el.play(); if (p && p.catch) p.catch(() => {});
+      Music.fade(0.22);
+    } catch (e) { /* yok */ }
+  },
+  fade(v, done) {
+    if (!Music.g) return done && done();
+    const t = Sfx.ctx.currentTime;
+    Music.g.gain.cancelScheduledValues(t); Music.g.gain.setTargetAtTime(Math.max(0.0001, v), t, 0.5);
+    clearTimeout(Music._t); if (done) Music._t = setTimeout(done, 1600);
+  },
+};
 ['pointerdown', 'touchstart', 'keydown'].forEach((ev) => window.addEventListener(ev, () => Sfx.unlock(), { once: true, passive: true }));
-document.addEventListener('visibilitychange', () => { if (Sfx.ctx) { if (document.hidden) Sfx.ctx.suspend().catch(() => {}); else if (Sfx.on) Sfx.ctx.resume().catch(() => {}); } });
+document.addEventListener('visibilitychange', () => { Music.update(); if (Sfx.ctx) { if (document.hidden) Sfx.ctx.suspend().catch(() => {}); else if (Sfx.on) Sfx.ctx.resume().catch(() => {}); } });

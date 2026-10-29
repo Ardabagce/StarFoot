@@ -5,7 +5,7 @@ const ROOT = path.join(__dirname, '..');
 const OUT = path.join(__dirname, 'www');
 // Oyun web'de gizli sayfada (GAME); uygulamada index.html olarak açılır
 const GAME = 'oyna-r8k4tq.html';
-const items = ['privacy.html', 'manifest.webmanifest', 'css', 'js', 'icons', 'fonts', 'img'];
+const items = ['privacy.html', 'manifest.webmanifest', 'css', 'js', 'icons', 'fonts', 'img', 'snd'];
 fs.rmSync(OUT, { recursive: true, force: true });
 fs.mkdirSync(OUT, { recursive: true });
 fs.copyFileSync(path.join(ROOT, GAME), path.join(OUT, 'index.html'));

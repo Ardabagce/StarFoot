@@ -64,7 +64,14 @@ const Sprites = {
     const x = Sprites.hexRgb(a), y = Sprites.hexRgb(b);
     return Math.hypot(x[0] - y[0], x[1] - y[1], x[2] - y[2]);
   },
+  _sc: new Map(),
+  shadeC(h, f) {
+    const k = h + f; let v = Sprites._sc.get(k);
+    if (!v) { v = Sprites.shade(h, f); if (Sprites._sc.size > 400) Sprites._sc.clear(); Sprites._sc.set(k, v); }
+    return v;
+  },
   shade(h, f) {
+    if (h[0] !== '#') return h;
     const [r, g, b] = Sprites.hexRgb(h);
     const m = (v) => Math.round(U.clamp(f < 0 ? v * (1 + f) : v + (255 - v) * f, 0, 255));
     return `rgb(${m(r)},${m(g)},${m(b)})`;
@@ -154,54 +161,97 @@ const Sprites = {
       ctx.beginPath(); ctx.ellipse(sx, sy, h * 0.32 + Math.sin(o.t * 6) * h * 0.03, h * 0.1, 0, 0, Math.PI * 2); ctx.stroke();
     }
 
-    // bacaklar
-    const legW = h * 0.1;
-    const hipY = by - h * 0.46;
-    const drawLeg = (dx, swing, kickA) => {
-      ctx.save();
-      ctx.translate(sx + dx, hipY);
-      ctx.rotate(kickA || swing * 0.45);
-      const L = h * 0.46;
-      ctx.fillStyle = look.skin; ctx.fillRect(-legW / 2, 0, legW, L * 0.45);
-      ctx.fillStyle = kit.socks; ctx.fillRect(-legW / 2, L * 0.42, legW, L * 0.5);
-      ctx.fillStyle = Sprites.shade(kit.socks, -0.25); ctx.fillRect(-legW / 2, L * 0.42, legW, L * 0.06);
-      ctx.fillStyle = look.boots || '#16181d';
-      ctx.beginPath(); ctx.ellipse(0, L * 0.95, legW * 0.62, legW * 0.42, 0, 0, Math.PI * 2); ctx.fill();
-      ctx.restore();
+    // Uzuv: yuvarlak uçlu kalın çizgi + gölge tarafı (ışık sol üstten)
+    const limb = (x1, y1, x2, y2, w, col, shadeK = -0.2) => {
+      ctx.strokeStyle = col; ctx.lineWidth = w;
+      ctx.beginPath(); ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.stroke();
+      if (h > 80) {
+        const dx = y2 - y1, dy = x1 - x2, L = Math.hypot(dx, dy) || 1, o2 = w * 0.22;
+        ctx.strokeStyle = Sprites.shadeC(col, shadeK); ctx.lineWidth = w * 0.4;
+        ctx.beginPath(); ctx.moveTo(x1 - (dx / L) * o2, y1 - (dy / L) * o2); ctx.lineTo(x2 - (dx / L) * o2, y2 - (dy / L) * o2); ctx.stroke();
+      }
     };
+    ctx.lineCap = 'round';
+
+    // bacaklar: kalça → diz → ayak. Koşarken biri yerden kalkıp bükülür, diğeri basar.
+    const legW = h * 0.105;
+    const hipY = by - h * 0.46;
     const kick = o.kick || 0; // 0..1
-    drawLeg(-W * 0.2, -sw, 0);
-    drawLeg(W * 0.2, sw, kick ? (up ? -1 : 1) * Math.sin(kick * Math.PI) * 1.1 : 0);
+    const drawLeg = (side, phase, kickA) => {
+      const hx = sx + side * W * 0.2, L = h * 0.46;
+      let kx, ky, fx, fy;
+      if (kickA) {
+        const s1 = Math.sin(kickA), c1 = Math.cos(kickA);
+        kx = hx - s1 * L * 0.5; ky = hipY + c1 * L * 0.5;
+        fx = hx - s1 * L * 0.96; fy = hipY + c1 * L * 0.96;
+      } else {
+        const lift = runAmt * Math.max(0, Math.sin(run + phase)); // 0 basıyor, 1 havada
+        const plant = runAmt * Math.max(0, -Math.sin(run + phase));
+        fx = hx + side * (h * 0.012 + plant * h * 0.05 - lift * h * 0.012);
+        fy = sy - bob * (1 - lift) - lift * h * 0.12 + plant * h * 0.006 - h * 0.03;
+        kx = hx + side * (lift * h * 0.05 + plant * h * 0.02 + h * 0.006);
+        ky = hipY + (fy - hipY) * 0.42 + lift * h * 0.02;
+        // makas: arkadan/önden bakınca adım ayakların çaprazlanması gibi görünür
+        const sc2 = -side * sw * h * 0.075; fx += sc2; kx += sc2 * 0.45;
+      }
+      // uyluk (ten), diz, kaval (çorap)
+      limb(hx, hipY, kx, ky, legW * 1.18, look.skin);
+      limb(kx, ky, fx, fy, legW * 0.98, kit.socks);
+      // diz ve çorap ağzı: dizin hemen altı ten, sonra çorap
+      limb(kx, ky, kx + (fx - kx) * 0.05, ky + (fy - ky) * 0.05, legW * 1.04, look.skin);
+      if (h > 80) { ctx.strokeStyle = 'rgba(255,255,255,0.35)'; ctx.lineWidth = Math.max(1, h * 0.008); const cx = kx + (fx - kx) * 0.09, cy = ky + (fy - ky) * 0.09; ctx.beginPath(); ctx.moveTo(cx - legW * 0.45, cy); ctx.lineTo(cx + legW * 0.45, cy); ctx.stroke(); }
+      // krampon: burun hafif dışa dönük
+      ctx.fillStyle = look.boots || '#16181d';
+      ctx.beginPath(); ctx.ellipse(fx + side * legW * 0.08, fy + legW * 0.22, legW * 0.6, legW * 0.4, side * 0.25, 0, Math.PI * 2); ctx.fill();
+      if (h > 40) { ctx.fillStyle = 'rgba(255,255,255,0.22)'; ctx.beginPath(); ctx.ellipse(fx + side * legW * 0.02, fy + legW * 0.08, legW * 0.32, legW * 0.12, side * 0.25, 0, Math.PI * 2); ctx.fill(); }
+    };
+    drawLeg(-1, 0, 0);
+    drawLeg(1, Math.PI, kick ? (up ? -1 : 1) * Math.sin(kick * Math.PI) * 1.1 : 0);
 
     // şort
     ctx.fillStyle = kit.shorts;
     ctx.beginPath();
-    ctx.moveTo(sx - W * 0.47, hipY + h * 0.06);
-    ctx.lineTo(sx - W * 0.5, hipY - h * 0.08);
-    ctx.lineTo(sx + W * 0.5, hipY - h * 0.08);
-    ctx.lineTo(sx + W * 0.47, hipY + h * 0.06);
-    ctx.lineTo(sx + W * 0.04, hipY + h * 0.05);
-    ctx.lineTo(sx, hipY - h * 0.01);
-    ctx.lineTo(sx - W * 0.04, hipY + h * 0.05);
+    ctx.moveTo(sx - W * 0.5, hipY + h * 0.07);
+    ctx.lineTo(sx - W * 0.52, hipY - h * 0.08);
+    ctx.lineTo(sx + W * 0.52, hipY - h * 0.08);
+    ctx.lineTo(sx + W * 0.5, hipY + h * 0.07);
+    ctx.lineTo(sx + W * 0.05, hipY + h * 0.055);
+    ctx.lineTo(sx, hipY - h * 0.005);
+    ctx.lineTo(sx - W * 0.05, hipY + h * 0.055);
     ctx.closePath(); ctx.fill();
+    if (h > 34) { ctx.fillStyle = 'rgba(0,0,0,0.18)'; ctx.fillRect(sx + W * 0.18, hipY - h * 0.08, W * 0.34, h * 0.15); }
 
-    // kollar (gövdenin arkasında kalan kısım)
+    // kollar: omuz → dirsek → el. Koşarken dirsekten bükülü, ileri-geri (arkadan bakınca kısalır)
     const shY = by - h * 0.82;
-    const drawArm = (side, swing) => {
-      ctx.save();
-      ctx.translate(sx + side * W * 0.52, shY + h * 0.03);
-      ctx.rotate(side * 0.12 - side * (o.armA || 0) + swing * 0.5);
-      const aw = h * 0.085, L = h * 0.32;
-      ctx.fillStyle = look.skin; ctx.fillRect(-aw / 2, 0, aw, L);
-      ctx.fillStyle = kit.shirt; ctx.fillRect(-aw / 2 - 1, 0, aw + 2, L * 0.38);
-      if (o.gloves) { ctx.fillStyle = '#f0f0f0'; const gw = o.dive ? aw * 1.7 : aw + 2; ctx.beginPath(); ctx.ellipse(0, L * 0.98, gw / 2, L * (o.dive ? 0.16 : 0.11), 0, 0, Math.PI * 2); ctx.fill(); }
-      ctx.restore();
+    const tilt = sw * h * 0.012;
+    const drawArm = (side, phase) => {
+      const ax = sx + side * W * 0.54, ay = shY + h * 0.05 + side * tilt;
+      const armA = o.armA || 0, raise = U.clamp(armA / 1.6, 0, 1);
+      const f = Math.sin(run + phase) * runAmt; // +: ileri
+      const L1 = h * 0.18, L2 = h * 0.17;
+      const p1 = 0.2 + Math.max(-0.1, armA - 0.12);
+      const k1 = 1 - 0.18 * Math.abs(f) * (1 - raise);
+      const ex = ax + side * Math.sin(p1) * L1, ey = ay + Math.cos(p1) * L1 * k1 - f * h * 0.012;
+      const bend = (0.1 + 0.5 * runAmt) * (1 - raise);
+      const p2 = p1 - bend * 0.45;
+      const k2 = 1 - (0.15 + 0.35 * Math.max(0, f)) * runAmt * (1 - raise);
+      let hx2 = ex + side * Math.sin(p2) * L2 * k2;
+      const hy2 = ey + Math.cos(p2) * L2 * k2 - f * h * 0.025;
+      if (raise < 0.5 && side * (hx2 - sx) < W * 0.56) hx2 = sx + side * W * 0.56; // el gövdenin arkasında kaybolmasın
+      const aw = h * 0.088;
+      limb(ax, ay, ex, ey, aw, look.skin);
+      limb(ex, ey, hx2, hy2, aw * 0.88, look.skin);
+      // kol ağzı (forma)
+      limb(ax, ay, ax + (ex - ax) * 0.55, ay + (ey - ay) * 0.55, aw * 1.25, kit.shirt, -0.15);
+      if (o.gloves) { ctx.fillStyle = '#f0f0f0'; ctx.beginPath(); ctx.ellipse(hx2, hy2, aw * 0.75, aw * 0.85, 0, 0, Math.PI * 2); ctx.fill(); }
+      else { ctx.fillStyle = look.skin; ctx.beginPath(); ctx.arc(hx2, hy2, aw * 0.55, 0, Math.PI * 2); ctx.fill(); }
     };
     const armsUp = o.dive || 0;
     if (!armsUp) {
-      drawArm(-1, sw);
-      drawArm(1, -sw);
+      drawArm(-1, Math.PI);
+      drawArm(1, 0);
     }
+    ctx.lineCap = 'butt';
 
     // gövde (forma)
     const top = shY, bot = hipY - h * 0.06;
@@ -216,6 +266,13 @@ const Sprites = {
     ctx.clip();
     ctx.fillStyle = kit.alt;
     const tw = W * 1.2, x0 = sx - tw / 2;
+    if (h > 30) {
+      // yaka ve kol dikişleri
+      ctx.save(); ctx.fillStyle = kit.pattern === 'plain' ? kit.alt : Sprites.shadeC(kit.shirt, -0.3);
+      if (up) ctx.fillRect(sx - W * 0.2, top - h * 0.02, W * 0.4, h * 0.03);
+      else { ctx.beginPath(); ctx.moveTo(sx - W * 0.2, top - h * 0.01); ctx.lineTo(sx, top + h * 0.06); ctx.lineTo(sx + W * 0.2, top - h * 0.01); ctx.lineTo(sx + W * 0.12, top - h * 0.01); ctx.lineTo(sx, top + h * 0.035); ctx.lineTo(sx - W * 0.12, top - h * 0.01); ctx.fill(); }
+      ctx.restore();
+    }
     if (kit.pattern === 'stripes') {
       for (let i = 0; i < 6; i++) if (i % 2) ctx.fillRect(x0 + (tw / 6) * i, top - h * 0.05, tw / 6, h * 0.5);
     } else if (kit.pattern === 'halves') {
@@ -253,7 +310,9 @@ const Sprites = {
     const hy = top - hr * 0.95;
     ctx.fillStyle = Sprites.shade(look.skin, -0.12); ctx.fillRect(sx - hr * 0.35, top - hr * 0.4, hr * 0.7, hr * 0.5);
     ctx.fillStyle = look.skin;
-    ctx.beginPath(); ctx.arc(sx, hy, hr, 0, Math.PI * 2); ctx.fill();
+    if (!up && h > 40) { ctx.beginPath(); ctx.ellipse(sx - hr * 0.98, hy + hr * 0.08, hr * 0.17, hr * 0.27, 0, 0, Math.PI * 2); ctx.ellipse(sx + hr * 0.98, hy + hr * 0.08, hr * 0.17, hr * 0.27, 0, 0, Math.PI * 2); ctx.fill(); }
+    ctx.beginPath(); ctx.ellipse(sx, hy, hr * 0.96, hr * 1.04, 0, 0, Math.PI * 2); ctx.fill();
+    if (h > 34) { ctx.fillStyle = 'rgba(0,0,0,0.14)'; ctx.beginPath(); ctx.ellipse(sx + hr * 0.3, hy + hr * 0.1, hr * 0.62, hr * 0.92, 0, -Math.PI / 2, Math.PI / 2); ctx.fill(); }
     if (!look.bald) {
       ctx.fillStyle = look.hair;
       const style = look.style || 'short';

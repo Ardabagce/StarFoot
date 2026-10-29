@@ -4,8 +4,8 @@ const CACHE = 'starfoot-v78';
 const ASSETS = [
   './oyna-r8k4tq.html', './manifest.webmanifest', './css/style.css',
   './js/util.js', './js/lang-en.js', './js/lang-es.js', './js/lang-pt.js', './js/lang-de.js', './js/lang-fr.js', './js/lang-it.js', './js/lang-id.js', './js/lang-ar.js', './js/lang-ja.js', './fonts/cairo-arabic-400-normal.woff2', './fonts/cairo-arabic-600-normal.woff2', './fonts/cairo-arabic-700-normal.woff2', './fonts/cairo-arabic-900-normal.woff2', './js/i18n.js', './js/ads-config.js', './js/admob.js', './js/icons.js', './js/data.js', './js/player.js', './js/league.js', './js/legends.js', './js/cups.js',
-  './js/sprites.js', './js/shopart.js', './js/weather.js', './js/minigame.js', './js/drills.js', './js/tutorial.js', './js/match.js', './js/game.js', './js/extras.js', './js/socialart.js', './js/celebrate.js', './js/life.js', './js/captain.js', './js/premium.js', './js/meta.js', './js/legacy.js', './js/wc.js', './js/wcx.js', './js/lpath.js', './js/star.js', './js/cloud.js', './js/app.js',
-  './privacy.html', './img/grass.jpg', './icons/icon.svg', './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-192.png', './icons/icon-maskable-512.png',
+  './js/sprites.js', './js/shopart.js', './js/weather.js', './js/minigame.js', './js/drills.js', './js/tutorial.js', './js/radar.js', './js/match.js', './js/game.js', './js/extras.js', './js/socialart.js', './js/celebrate.js', './js/life.js', './js/captain.js', './js/premium.js', './js/meta.js', './js/legacy.js', './js/wc.js', './js/wcx.js', './js/lpath.js', './js/star.js', './js/cloud.js', './js/app.js',
+  './privacy.html', './img/grass.jpg', './snd/crowd.mp3', './snd/goal.mp3', './snd/cheer.mp3', './snd/menu.mp3', './icons/icon.svg', './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-192.png', './icons/icon-maskable-512.png',
 ];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)).then(() => self.skipWaiting()));

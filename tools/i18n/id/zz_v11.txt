@@ -1,0 +1,26 @@
+4551|Cadangan & Game Center
+4552|☁️ Cadangan iCloud
+4554|iCloud mati di perangkat ini. Nyalakan di Pengaturan › Akun Apple › iCloud.
+4557|Ruang iCloud penuh: karier yang terakhir kamu mainkan yang dicadangkan.
+4578|Cadangan terakhir: {}
+4558|Kariermu dicadangkan ke iCloud secara otomatis.
+4559|Cadangkan sekarang
+4560|☁️ Dicadangkan ke iCloud
+4562|Pencadangan belum bisa dilakukan, akan dicoba lagi sebentar lagi.
+4563|☁️ Kariermu dipulihkan dari iCloud
+4565|Belum masuk ke Game Center. Nyalakan di Pengaturan › Game Center.
+4568|Pencapaian dan skormu bersaing dengan dunia.
+4569|Belum masuk. Pengaturan ponsel › Game Center.
+4572|Peringkat
+4573|Musik
+4574|Musik latar di menu. Saat pertandingan, sorak penonton yang terdengar.
+4577|Kredit: suara penonton Gregor Quendel (CC BY 4.0) · musik "It Takes A Hero", Mjorlaja (CC0) · tekstur rumput ambientCG (CC0)
+4579|Suara stadion asli dan musik
+4580|Riuh tribun dan sorak gol kini rekaman asli dan makin keras seiring ketenaranmu. Menu punya musik; kamu bisa mematikannya di Pengaturan.
+4583|Radar pertandingan
+4584|Lapangan langsung di atas laporan menit demi menit: di mana bola, di mana kamu, dari mana gol datang.
+4585|Animasi pemain baru
+4586|Lari dengan lutut menekuk, ayunan lengan, pemain lebih realistis.
+4553|Cadangan iCloud
+4587|Kariermu dicadangkan otomatis; bahkan di ponsel baru kamu lanjut dari posisi terakhir.
+4588|38 pencapaian dan peringkat dunia: gol, trofi, rating, dan pengikut.

@@ -2103,6 +2103,7 @@ ${UI.paper()}`;
         <div class="card-h"><span>${Icon('train')} Oynanış</span></div>
         <label class="drill-tg"><input type="checkbox" id="drill-tg" ${s.drills !== false ? 'checked' : ''}><span><b>Antrenman mini oyunları</b><small>Odak statına göre çalışma oynanır. İyi oynarsan gelişim ×1,5'e kadar çıkar.</small></span></label>
         <label class="drill-tg"><input type="checkbox" id="sfx-tg" ${typeof Sfx !== 'undefined' && Sfx.on ? 'checked' : ''}><span><b>Ses efektleri</b><small>Tribün, düdük, vuruş ve gol sesleri.</small></span></label>
+        <label class="drill-tg"><input type="checkbox" id="mus-tg" ${typeof Sfx !== 'undefined' && Sfx.mus ? 'checked' : ''}><span><b>Müzik</b><small>Menülerde arka plan müziği. Maçta tribün sesi öne çıkar.</small></span></label>
         ${typeof Notify !== 'undefined' && Notify.plugin() ? `<label class="drill-tg"><input type="checkbox" id="notif-tg" ${Notify.on() ? 'checked' : ''}><span><b>Bildirimler</b><small>Günlük ödül ve enerji hatırlatmaları.</small></span></label>` : ''}
         <label class="drill-tg"><input type="checkbox" id="hap-tg" ${typeof Sfx !== 'undefined' && Sfx.hap ? 'checked' : ''}><span><b>Titreşim</b><small>Golde, vuruşta ve kritik anlarda telefon titrer.</small></span></label>
       </section>
@@ -2115,6 +2116,7 @@ ${UI.paper()}`;
           <a class="btn btn-ghost" href="privacy.html" data-privacy>Gizlilik Politikası</a>
           <a class="btn btn-ghost" href="mailto:arda@bagce.dev?subject=StarFoot">Destek: arda@bagce.dev</a>
         </div>
+        <p class="muted set-credits">Krediler: tribün sesleri Gregor Quendel (CC BY 4.0) · müzik "It Takes A Hero", Mjorlaja (CC0) · çim dokusu ambientCG (CC0)</p>
       </section>
       <section class="card settings">
         <div class="card-h"><span>${Icon('save')} Kariyer</span><small class="muted">Oyun her hafta otomatik kaydedilir</small></div>
@@ -2183,6 +2185,8 @@ ${UI.paper()}`;
     const stg = root.querySelector('#sfx-tg'), htg = root.querySelector('#hap-tg');
     if (stg) stg.onchange = () => { Sfx.setOn(stg.checked); if (stg.checked) Sfx.play('whistle'); };
     if (htg) htg.onchange = () => { Sfx.setHap(htg.checked); if (htg.checked) Sfx.buzz('medium'); };
+    const mtg = root.querySelector('#mus-tg');
+    if (mtg) mtg.onchange = () => Sfx.setMusic(mtg.checked);
     U.$$('[data-go=match]', root).forEach((b) => (b.onclick = () => {
       const s = Game.state;
       if (s.ap > 0) {

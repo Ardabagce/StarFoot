@@ -1,0 +1,26 @@
+4551|Copia de seguridad y Game Center
+4552|☁️ Copia en iCloud
+4554|iCloud está desactivado en este dispositivo. Actívalo en Ajustes › Cuenta de Apple › iCloud.
+4557|El espacio de iCloud está lleno: se guardan tus carreras jugadas más recientemente.
+4578|Última copia: {}
+4558|Tus carreras se guardan en iCloud automáticamente.
+4559|Copiar ahora
+4560|☁️ Guardado en iCloud
+4562|No se pudo hacer la copia ahora; se reintentará en breve.
+4563|☁️ Tus carreras se restauraron desde iCloud
+4565|No has iniciado sesión en Game Center. Actívalo en Ajustes › Game Center.
+4568|Tus logros y puntuaciones compiten con el mundo.
+4569|Sin sesión. Ajustes del teléfono › Game Center.
+4572|Clasificación
+4573|Música
+4574|Música de fondo en los menús. En los partidos manda el público.
+4577|Créditos: sonidos del público Gregor Quendel (CC BY 4.0) · música "It Takes A Hero", Mjorlaja (CC0) · textura de césped ambientCG (CC0)
+4579|Sonido real de estadio y música
+4580|El murmullo de la grada y el rugido del gol ahora son grabaciones reales y suenan más fuerte con tu fama. Los menús tienen música; puedes desactivarla en Ajustes.
+4583|Radar del partido
+4584|Un campo en vivo sobre el minuto a minuto: dónde está el balón, dónde estás tú y de dónde vino el gol.
+4585|Nuevas animaciones de jugadores
+4586|Carrera con flexión de rodillas, brazos que se balancean y futbolistas más realistas.
+4553|Copia en iCloud
+4587|Tus carreras se guardan automáticamente; incluso en un móvil nuevo sigues donde lo dejaste.
+4588|38 logros y clasificaciones mundiales: goles, trofeos, valoración general y seguidores.

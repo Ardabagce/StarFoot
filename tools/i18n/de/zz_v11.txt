@@ -1,0 +1,26 @@
+4551|Backup & Game Center
+4552|☁️ iCloud-Backup
+4554|iCloud ist auf diesem Gerät aus. Aktiviere es unter Einstellungen › Apple Account › iCloud.
+4557|Der iCloud-Platz ist voll: Deine zuletzt gespielten Karrieren werden gesichert.
+4578|Letztes Backup: {}
+4558|Deine Karrieren werden automatisch in iCloud gesichert.
+4559|Jetzt sichern
+4560|☁️ In iCloud gesichert
+4562|Das Backup klappt gerade nicht, es wird gleich erneut versucht.
+4563|☁️ Deine Karrieren wurden aus iCloud wiederhergestellt
+4565|Nicht bei Game Center angemeldet. Aktiviere es unter Einstellungen › Game Center.
+4568|Deine Erfolge und Punkte messen sich mit der Welt.
+4569|Nicht angemeldet. Telefon-Einstellungen › Game Center.
+4572|Bestenliste
+4573|Musik
+4574|Hintergrundmusik in den Menüs. Im Spiel übernimmt das Publikum.
+4577|Credits: Publikumsgeräusche Gregor Quendel (CC BY 4.0) · Musik "It Takes A Hero", Mjorlaja (CC0) · Rasentextur ambientCG (CC0)
+4579|Echter Stadionsound und Musik
+4580|Stadiongemurmel und Torjubel sind jetzt echte Aufnahmen und werden mit deinem Ruhm lauter. In den Menüs läuft Musik; du kannst sie in den Einstellungen ausschalten.
+4583|Spielradar
+4584|Ein Live-Spielfeld über dem Minutenticker: wo der Ball ist, wo du bist, woher das Tor kam.
+4585|Neue Spieleranimationen
+4586|Laufen mit gebeugten Knien, schwingende Arme, realistischere Fußballer.
+4553|iCloud-Backup
+4587|Deine Karrieren werden automatisch gesichert; auch auf einem neuen Handy machst du dort weiter, wo du aufgehört hast.
+4588|38 Erfolge und weltweite Bestenlisten: Tore, Titel, Gesamtstärke und Follower.
