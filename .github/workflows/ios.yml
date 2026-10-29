@@ -58,6 +58,8 @@ jobs:
         run: |
           mkdir -p "$RUNNER_TEMP/keys"
           printf '%s\n' "$P8" > "$RUNNER_TEMP/keys/AuthKey_$KEY_ID.p8"
+      # Arşiv doğrudan dağıtım kimliğiyle imzalanır: her sunucuda yeni geliştirme sertifikası açılmaz
+      # (Apple'ın sertifika sınırı dolunca "maximum number of certificates" hatası veriyordu)
       - name: Arşivle (imzalı)
         if: env.P8 != '' && env.TEAM_ID != ''
         working-directory: app/ios/App
@@ -66,7 +68,7 @@ jobs:
           echo "Derleme numarası: $BUILD"
           xcodebuild -project App.xcodeproj -scheme App -configuration Release \
             -destination 'generic/platform=iOS' -archivePath "$RUNNER_TEMP/App.xcarchive" \
-            DEVELOPMENT_TEAM="$TEAM_ID" CODE_SIGN_STYLE=Automatic CURRENT_PROJECT_VERSION=$BUILD \
+            DEVELOPMENT_TEAM="$TEAM_ID" CODE_SIGN_STYLE=Automatic CODE_SIGN_IDENTITY="Apple Distribution" CURRENT_PROJECT_VERSION=$BUILD \
             -allowProvisioningUpdates \
             -authenticationKeyPath "$RUNNER_TEMP/keys/AuthKey_$KEY_ID.p8" \
             -authenticationKeyID "$KEY_ID" -authenticationKeyIssuerID "$ISSUER_ID" \
