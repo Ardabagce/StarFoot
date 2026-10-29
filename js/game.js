@@ -37,11 +37,27 @@ const Game = {
     return v._v.map((row) => { const o = {}; v._k.forEach((x, i) => { if (row[i] !== null) o[x] = row[i]; }); return o; });
   },
   save() {
-    try { localStorage.setItem(Game.key(Game.slot), JSON.stringify(Game.state, Game.packRoster)); } catch (e) { /* depolama yok */ }
+    try {
+      Store.write(Game.key(Game.slot), JSON.stringify(Game.state, Game.packRoster));
+      // ana menü için küçük özet (büyük kaydı açmadan listelenir)
+      const s = Game.state, p = s && s.player, c = s && s.world && s.world.clubs && s.world.clubs[s.clubId];
+      if (p) Store.put(Game.sumKey(Game.slot), JSON.stringify({ n: p.name + ' ' + p.surname, a: p.age, c: c ? c.name : '', y: s.season ? s.season.year : '' }));
+    } catch (e) { /* depolama yok */ }
+  },
+  sumKey(i) { return 'starfoot_sum_' + i; },
+  // slot özeti: { n: ad soyad, a: yaş, c: kulüp, y: yıl } ya da null
+  summary(i) {
+    try { const j = localStorage.getItem(Game.sumKey(i)); if (j && localStorage.getItem(Game.key(i))) return JSON.parse(j); } catch (e) { /* yok */ }
+    const d = Game.load(i);
+    if (!d || !d.player) return null;
+    const c = d.world && d.world.clubs ? d.world.clubs[d.clubId] : null;
+    const o = { n: d.player.name + ' ' + d.player.surname, a: d.player.age, c: c ? c.name : '', y: d.season ? d.season.year : '' };
+    Store.put(Game.sumKey(i), JSON.stringify(o));
+    return o;
   },
   load(i = Game.slot) {
     try {
-      let raw = localStorage.getItem(Game.key(i));
+      let raw = Store.read(Game.key(i));
       // oyundan çıkarılan isimler eski kayıtlarda da görünmesin
       if (raw && raw.includes('Hakan \u015e\u00fck\u00fcrl\u00fc')) raw = raw.split('Hakan \u015e\u00fck\u00fcrl\u00fc').join('Haluk Sar\u0131kaya');
       if (raw && raw.includes('\u0041rif Erdemli')) raw = raw.split('\u0041rif Erdemli').join('Kaan Sezerli');
@@ -49,7 +65,7 @@ const Game = {
       return raw ? JSON.parse(raw, Game.unpackRoster) : null;
     } catch (e) { return null; }
   },
-  wipe(i = Game.slot) { try { localStorage.removeItem(Game.key(i)); } catch (e) { /* yok */ } },
+  wipe(i = Game.slot) { Store.remove(Game.key(i)); try { localStorage.removeItem(Game.sumKey(i)); } catch (e) { /* yok */ } },
   // Eski tek kayıtlı sürümden geçiş
   migrate() {
     try {
@@ -151,11 +167,12 @@ const Game = {
     Game.state = null;
     document.body.classList.remove('wc-mode');
     const box = document.getElementById('slots');
+    // eski düz kayıtları arka planda sıkıştır (iPhone'da depolama sınırı)
+    Store.migrate([0, 1, 2, 3, 4, 'wc', 'lp', 'legends'].map((x) => Game.key(x)));
     box.innerHTML = [0, 1, 2, 3, 4].map((i) => {
-      const d = Game.load(i);
-      if (!d || !d.player) return `<div class="slot empty"><span class="sl-n">${i + 1}</span><div class="sl-t"><b>Boş slot</b><small>Yeni bir kariyere başla</small></div><button class="btn" data-new="${i}">Yeni Kariyer</button></div>`;
-      const club = d.world.clubs[d.clubId];
-      return `<div class="slot"><span class="sl-n">${i + 1}</span><div class="sl-t"><b>${U.esc(d.player.name + ' ' + d.player.surname)}</b><small>${d.player.age} yaş · ${U.esc(club ? club.name : '')} · ${d.season.year}</small></div>
+      const d = Game.summary(i);
+      if (!d) return `<div class="slot empty"><span class="sl-n">${i + 1}</span><div class="sl-t"><b>Boş slot</b><small>Yeni bir kariyere başla</small></div><button class="btn" data-new="${i}">Yeni Kariyer</button></div>`;
+      return `<div class="slot"><span class="sl-n">${i + 1}</span><div class="sl-t"><b>${U.esc(d.n)}</b><small>${d.a} yaş · ${U.esc(d.c)} · ${d.y}</small></div>
         <button class="btn btn-play" data-cont="${i}">Devam</button><button class="btn btn-ghost sl-del" data-del="${i}" aria-label="Kariyeri sil">${Icon('trash')}</button></div>`;
     }).join('');
     U.$$('[data-new]', box).forEach((b) => (b.onclick = () => { Game.slot = +b.dataset.new; Create.heir = null; Create.open(); }));
@@ -173,8 +190,8 @@ const Game = {
     U.$$('[data-cont]', box).forEach((b) => (b.onclick = () => { Game.slot = +b.dataset.cont; Game.state = Game.load(); Game.enterHub(); }));
     U.$$('[data-del]', box).forEach((b) => (b.onclick = () => {
       const i = +b.dataset.del;
-      const d = Game.load(i);
-      Game.modal(`<h3>Kariyer silinsin mi?</h3><p><b>${U.esc(d.player.name + ' ' + d.player.surname)}</b> kariyeri kalıcı olarak silinecek. Bu işlem geri alınamaz.</p>`, [
+      const d = Game.summary(i) || { n: '' };
+      Game.modal(`<h3>Kariyer silinsin mi?</h3><p><b>${U.esc(d.n)}</b> kariyeri kalıcı olarak silinecek. Bu işlem geri alınamaz.</p>`, [
         { t: 'Vazgeç', cls: 'btn-ghost' },
         { t: 'Sil', cls: 'btn-danger', fn: () => { Game.wipe(i); Game.init(); } },
       ]);
