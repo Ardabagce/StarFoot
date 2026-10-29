@@ -542,10 +542,22 @@ def nominate(asc, app_id, cfg, event_ids):
     if cur:
         nid = cur[0]['id']
         attrs.pop('submitted')
-        asc.req('PATCH', f'/v1/nominations/{nid}', write=True, body={'data': {'type': 'nominations', 'id': nid, 'attributes': attrs, 'relationships': rel}})
+        try:
+            asc.req('PATCH', f'/v1/nominations/{nid}', write=True, body={'data': {'type': 'nominations', 'id': nid, 'attributes': attrs, 'relationships': rel}})
+        except RuntimeError:
+            rel.pop('inAppEvents', None)
+            asc.req('PATCH', f'/v1/nominations/{nid}', write=True, body={'data': {'type': 'nominations', 'id': nid, 'attributes': attrs, 'relationships': rel}})
         print(f'• öne çıkarılma başvurusu güncellendi (taslak, {nid})')
     else:
-        d = asc.req('POST', '/v1/nominations', write=True, body={'data': {'type': 'nominations', 'attributes': attrs, 'relationships': rel}})['data']
+        try:
+            d = asc.req('POST', '/v1/nominations', write=True, body={'data': {'type': 'nominations', 'attributes': attrs, 'relationships': rel}})['data']
+        except RuntimeError as err:
+            # incelenmemiş etkinlikler başvuruya bağlanamıyor: bağlantısız oluştur
+            if 'inAppEvents' not in rel:
+                raise
+            print(f'   etkinlikler bağlanamadı ({err}); başvuru etkinlik bağlantısı olmadan oluşturuluyor')
+            rel.pop('inAppEvents')
+            d = asc.req('POST', '/v1/nominations', write=True, body={'data': {'type': 'nominations', 'attributes': attrs, 'relationships': rel}})['data']
         print(f"• öne çıkarılma başvurusu oluşturuldu (taslak, {d['id']})")
 
 
