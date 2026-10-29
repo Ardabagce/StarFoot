@@ -122,6 +122,7 @@ h1 .b{display:block;font-size:${t.h2.length > 13 ? 104 : 126}px;background:linea
   transform:rotate(${p.tilt}deg)}
 .phone .scr{width:100%;height:100%;border-radius:58px;overflow:hidden;background:#000;position:relative}
 .phone img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.phone.tab{height:${Math.round(F.pw * 1376 / 1032)}px;border-radius:46px;padding:18px} .phone.tab .scr{border-radius:30px}
 .phone .notch{position:absolute;top:22px;left:50%;width:120px;height:34px;margin-left:-60px;border-radius:20px;background:#05070d}
 .chip{position:absolute;z-index:5;display:flex;align-items:center;gap:16px;padding:22px 34px;border-radius:26px;font-weight:700;font-size:38px;white-space:nowrap;
   background:linear-gradient(135deg,rgba(255,255,255,.18),rgba(255,255,255,.06));border:2px solid rgba(255,255,255,.28);backdrop-filter:blur(14px);
@@ -135,7 +136,7 @@ ${p.ig ? `.chip .dot{background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#9
 <div class="stars">${stars}</div><div class="conf">${conf}</div>
 <header><div class="logo">STAR<span>FOOT</span></div><br><div class="tag">${t.tag}</div>
 <h1><span class="a">${t.h1}</span><span class="b">${t.h2}</span></h1><p class="sub">${t.sub}</p></header>
-<div class="phone"><div class="scr"><img src="${img}"></div></div>
+<div class="phone${F.tablet ? ' tab' : ''}"><div class="scr"><img src="${img}"></div></div>
 ${chips}
 <div class="foot"></div>
 </body></html>`;
@@ -153,8 +154,10 @@ ${chips}
     { dir: 'duo-inner', W: 2007, H: 2853, F: { H: 1535, pw: 455, top: 590, shift: 0, cs: 0.76, subFs: 31, subW: 960 }, jpg: true },
   ];
   if (process.argv[2] === 'duo') FORMATS.splice(0, 2);
+  // iPad 13" (2064x2752): node compose.js ipad (önce VIEW=ipad node capture.js)
+  if (process.argv[2] === 'ipad') FORMATS.splice(0, FORMATS.length, { dir: 'ipad', raw: 'raw-ipad', W: 2064, H: 2752, F: { H: 1440, pw: 600, top: 640, shift: 0, cs: 0.5, tablet: true, subW: 940 } });
   const LANGS = (process.env.LANGS || 'tr,en').split(',');
-  if (process.env.LANGS) FORMATS.splice(2);
+  if (process.env.LANGS && process.argv[2] !== 'ipad') FORMATS.splice(2);
   for (const fm of FORMATS) {
     const pg = await b.newPage({ viewport: { width: 1080, height: fm.F.H }, deviceScaleFactor: fm.W / 1080 });
     const outDir = path.join(D, fm.dir);
@@ -162,7 +165,7 @@ ${chips}
     for (const l of LANGS) {
       for (const [i, p] of POSTERS.entries()) {
         const tmp = path.join(D, '_tmp.html');
-        fs.writeFileSync(tmp, html(p, l, 'raw/' + `${l}-${p.id}.png`, fm.F));
+        fs.writeFileSync(tmp, html(p, l, (fm.raw || 'raw') + '/' + `${l}-${p.id}.png`, fm.F));
         await pg.goto('file://' + tmp, { waitUntil: 'load' });
         await pg.evaluate(() => document.fonts.ready);
         await pg.waitForTimeout(200);

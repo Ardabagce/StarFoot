@@ -1,0 +1,100 @@
+{
+ "events": [
+  {
+   "ref": "Live Like a Star 2026-11",
+   "badge": "SPECIAL_EVENT",
+   "purpose": "ATTRACT_NEW_USERS",
+   "priority": "HIGH",
+   "purchase": "NO_COST_ASSOCIATED",
+   "publishStart": "2026-11-05T17:00:00Z",
+   "eventStart": "2026-11-07T17:00:00Z",
+   "eventEnd": "2026-12-05T17:00:00Z",
+   "card": "store/asc/events/star-card.jpg",
+   "details": "store/asc/events/star-details.jpg",
+   "locales": {
+    "tr": [
+     "Yıldız Gibi Yaşa",
+     "Starpedia sayfanı ve belgeselini ücretsiz dene",
+     "Kariyerinin ansiklopedi sayfası, kariyer belgeseli ve lüks yaşam vitrini. Starpedia'yı bir kez ücretsiz dene!"
+    ],
+    "en-US": [
+     "Live Like a Star",
+     "Try your Starpedia page and documentary free",
+     "Your career's encyclopedia page, a career documentary and a luxury showcase. Try Starpedia once for free!"
+    ],
+    "en-GB": [
+     "Live Like a Star",
+     "Try your Starpedia page and documentary free",
+     "Your career's encyclopedia page, a career documentary and a luxury showcase. Try Starpedia once for free!"
+    ],
+    "de-DE": [
+     "Lebe wie ein Star",
+     "Teste deine Starpedia-Seite und Doku gratis",
+     "Die Lexikonseite deiner Karriere, eine Karriere-Doku und eine Luxus-Vitrine. Teste Starpedia einmal gratis!"
+    ],
+    "es-MX": [
+     "Vive como una estrella",
+     "Prueba gratis tu página de Starpedia",
+     "La enciclopedia de tu carrera, un documental y una vitrina de lujo. ¡Prueba Starpedia gratis una vez!"
+    ]
+   }
+  },
+  {
+   "ref": "World Championship Dream 2026-12",
+   "badge": "SPECIAL_EVENT",
+   "purpose": "APPROPRIATE_FOR_ALL_USERS",
+   "priority": "NORMAL",
+   "purchase": "IN_APP_PURCHASE",
+   "publishStart": "2026-11-28T17:00:00Z",
+   "eventStart": "2026-12-06T17:00:00Z",
+   "eventEnd": "2027-01-04T17:00:00Z",
+   "card": "store/asc/events/wc-card.jpg",
+   "details": "store/asc/events/wc-details.jpg",
+   "locales": {
+    "tr": [
+     "Dünya Şampiyonası Rüyası",
+     "4 turnuva, tek kariyer: kupayı ülkene getir",
+     "Ülkeni seç, rakibi analiz et, taktiğini belirle, penaltıda son vuruşu yap. 2026'dan 2038'e 4 turnuva."
+    ],
+    "en-US": [
+     "World Championship Dream",
+     "4 tournaments, one career: bring the cup home",
+     "Pick your nation, scout rivals, choose tactics and take the last penalty. A 4-tournament career, 2026 to 2038."
+    ],
+    "en-GB": [
+     "World Championship Dream",
+     "4 tournaments, one career: bring the cup home",
+     "Pick your nation, scout rivals, choose tactics and take the last penalty. A 4-tournament career, 2026 to 2038."
+    ],
+    "de-DE": [
+     "Weltmeisterschafts-Traum",
+     "4 Turniere, eine Karriere: hol den Pokal",
+     "Wähle dein Land, analysiere Gegner, wähle die Taktik, schieß den letzten Elfmeter. 4 Turniere, 2026 bis 2038."
+    ],
+    "es-MX": [
+     "Sueño del Campeonato Mundial",
+     "4 torneos, una carrera: lleva la copa a casa",
+     "Elige tu país, analiza rivales, elige tácticas y tira el último penal. Una carrera de 4 torneos, 2026 a 2038."
+    ]
+   }
+  }
+ ],
+ "nomination": {
+  "name": "StarFoot 1.0.10: iPad, new icon and star life",
+  "type": "APP_ENHANCEMENTS",
+  "publishStart": "2026-11-10T17:00:00Z",
+  "locales": [
+   "en-US",
+   "en-GB",
+   "tr",
+   "de-DE",
+   "es-MX",
+   "es-ES",
+   "pt-BR",
+   "fr-FR",
+   "ja"
+  ],
+  "description": "StarFoot is a football (soccer) career game made by a solo indie developer: you start in a street match, get spotted by scouts and rise from the academy to the world's biggest clubs, playing the key moments of every match yourself (shots, passes, dribbles, free kicks and penalties). Version 1.0.10 brings native iPad support with a wide three-column layout, a brand-new app icon and the \"Live Like a Star\" features: an encyclopedia page for your career, a chapter-by-chapter career documentary, a luxury showcase and a look studio. The World Championship Dream mode now offers a four-tournament international career (2026 to 2038) with opponent scouting, tactics, a sticker album and an awards night. The game is fully localized in 10 languages, all club and player names are fictional, and two in-app events accompany the update.",
+  "notes": "Solo indie developer from Türkiye. Happy to provide additional assets or a TestFlight build."
+ }
+}

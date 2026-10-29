@@ -33,6 +33,10 @@ on:
         description: 'Satın alma ürünleri: read = yalnız oku, setup = Premium dilleri ve notu, packs = içerik paketlerini oluştur/tamamla, submit = paketleri incelemeye gönder, unsubmit = paketleri reddedilen başvurudan çıkarıp güncelle'
         required: false
         default: ''
+      events:
+        description: 'Uygulama içi etkinlikleri ve öne çıkarılma başvurusunu taslak olarak oluştur (store/asc/events.json)'
+        type: boolean
+        default: false
       remove_locales:
         description: 'Düzenlenen sürümden silinecek diller (ör. it,id,ar-SA)'
         required: false
@@ -59,6 +63,7 @@ jobs:
           [ "${{ inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
           [ "${{ inputs.diagnose }}" = "true" ] && ARGS="$ARGS --diagnose"
           [ "${{ inputs.audit }}" = "true" ] && ARGS="$ARGS --audit"
+          [ "${{ inputs.events }}" = "true" ] && ARGS="$ARGS --events"
           [ "${{ inputs.iap }}" = "read" ] && ARGS="$ARGS --iap"
           [ "${{ inputs.iap }}" = "setup" ] && ARGS="$ARGS --iap-setup"
           [ "${{ inputs.iap }}" = "packs" ] && ARGS="$ARGS --packs"

@@ -527,16 +527,18 @@ document.addEventListener('click', (e) => {
 });
 
 // ---------- Güncelleme duyurusu (her sürümde bir kez) ----------
-const APP_VER = '1.0.9';
+const APP_VER = '1.0.10';
+// Duyuru içeriğinin sürümü: yeni duyuru yazılınca güncellenir (yalnız sürüm atlamak tekrar göstermez)
+const WN_VER = '1.0.9';
 const WhatsNew = {
   KEY: 'starfoot_whatsnew',
   // Hub'a girişte bir kez gösterir; gösterdiyse true döner. done(): pencere kapanınca çalışır.
   check(done) {
     let seen = '';
     try { seen = localStorage.getItem(WhatsNew.KEY) || ''; } catch (e) { return false; }
-    if (seen === APP_VER || !Game.state || Game.state.seasonEnd) return false;
+    if (seen === WN_VER || !Game.state || Game.state.seasonEnd) return false;
     if (!document.getElementById('modal').classList.contains('hidden')) return false;
-    try { localStorage.setItem(WhatsNew.KEY, APP_VER); } catch (e) { /* yok */ }
+    try { localStorage.setItem(WhatsNew.KEY, WN_VER); } catch (e) { /* yok */ }
     const prem = Star.on(), has = Star.has();
     const it = (ic, t, d) => `<li><i>${ic}</i><span><b>${t}</b><small>${d}</small></span></li>`;
     const list = [
@@ -555,10 +557,10 @@ const WhatsNew = {
     const end = () => { if (done) setTimeout(done, 300); };
     const btns = [{ t: prem ? 'Sonra' : 'Tamam', cls: 'btn-ghost', fn: end }];
     if (prem) btns.push({ t: has ? `${Icon('news')} Starpedia'mı aç` : `${Icon('news')} Ücretsiz dene`, cls: 'btn-big', fn: () => { if (typeof Premium !== 'undefined') Premium.track('whatsnew_try', { premium: has ? 1 : 0 }); setTimeout(() => Star.wiki(), 60); } });
-    Game.modal(`<div class="wn"><div class="ev-tag">Yeni güncelleme · ${APP_VER}</div>
+    Game.modal(`<div class="wn"><div class="ev-tag">Yeni güncelleme · ${WN_VER}</div>
       <h2>${prem ? 'Yıldız gibi yaşa ⭐' : 'Yenilikler'}</h2>
       <ul class="wn-l">${list}</ul>${foot}</div>`, btns, { wide: true });
-    if (typeof Premium !== 'undefined') Premium.track('whatsnew_view', { ver: APP_VER, premium: has ? 1 : 0 });
+    if (typeof Premium !== 'undefined') Premium.track('whatsnew_view', { ver: WN_VER, premium: has ? 1 : 0 });
     return true;
   },
 };

@@ -2,11 +2,14 @@
 const { chromium } = require('playwright');
 const path = require('path');
 const ROOT = path.join(__dirname, '../..');
-const OUT = path.join(__dirname, 'raw');
+// VIEW=ipad: iPad 13" (1032x1376 nokta, 2x) için ham ekranlar raw-ipad klasörüne
+const IPAD = process.env.VIEW === 'ipad';
+const OUT = path.join(__dirname, IPAD ? 'raw-ipad' : 'raw');
 (async () => {
+  require('fs').mkdirSync(OUT, { recursive: true });
   const b = await chromium.launch();
   for (const l of (process.env.LANGS || 'tr,en').split(',')) {
-    const pg = await b.newPage({ viewport: { width: 390, height: 800 }, deviceScaleFactor: 3, hasTouch: true, isMobile: true });
+    const pg = await b.newPage(IPAD ? { viewport: { width: 1032, height: 1376 }, deviceScaleFactor: 2, hasTouch: true, isMobile: true } : { viewport: { width: 390, height: 800 }, deviceScaleFactor: 3, hasTouch: true, isMobile: true });
     const errs = []; pg.on('pageerror', (e) => errs.push(e.message));
     // Oyunun yazı tipleri (internet olmadan da): store/premium/fonts
     const FD = 'file://' + path.join(__dirname, 'fonts');

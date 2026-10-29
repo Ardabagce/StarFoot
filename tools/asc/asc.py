@@ -19,7 +19,8 @@ API = 'https://api.appstoreconnect.apple.com'
 ROOT = Path(__file__).resolve().parents[2]
 EDITABLE = {'PREPARE_FOR_SUBMISSION', 'DEVELOPER_REJECTED', 'REJECTED', 'METADATA_REJECTED', 'INVALID_BINARY'}
 # ekran görüntüsü setleri: App Store görüntü türü -> klasör
-SCREENS = {'APP_IPHONE_67': 'store/premium/ios', 'APP_IPHONE_61': 'store/premium/ios-1206x2622'}
+SCREENS = {'APP_IPHONE_67': 'store/premium/ios', 'APP_IPHONE_61': 'store/premium/ios-1206x2622',
+           'APP_IPAD_PRO_3GEN_129': 'store/premium/ipad'}
 # dil -> görsel dosya öneki (yoksa İngilizce)
 SHOT_PREFIX = {'tr': 'tr', 'es-ES': 'es', 'es-MX': 'es', 'pt-BR': 'pt', 'pt-PT': 'pt', 'de-DE': 'de',
                'fr-FR': 'fr', 'it': 'it', 'id': 'id', 'ar-SA': 'ar', 'ja': 'ja'}
@@ -459,6 +460,95 @@ def unsubmit_packs(asc, app_id):
                 print(f'     ! çıkarılamadı: {err}')
 
 
+# ---------- Uygulama içi etkinlikler ve öne çıkarılma başvurusu ----------
+def _upload_asset(asc, kind, rel, rel_type, rel_id, path, extra):
+    blob = path.read_bytes()
+    d = asc.req('POST', f'/v1/{kind}', write=True, body={'data': {
+        'type': kind, 'attributes': dict(extra, fileName=path.name, fileSize=len(blob)),
+        'relationships': {rel: {'data': {'type': rel_type, 'id': rel_id}}}}})['data']
+    if asc.dry:
+        return
+    for op in d['attributes']['uploadOperations']:
+        part = blob[op['offset']:op['offset'] + op['length']]
+        r = requests.request(op['method'], op['url'], data=part, timeout=120,
+                             headers={h['name']: h['value'] for h in op.get('requestHeaders', [])})
+        r.raise_for_status()
+    asc.req('PATCH', f"/v1/{kind}/{d['id']}", write=True, body={'data': {
+        'type': kind, 'id': d['id'], 'attributes': {'uploaded': True}}})
+
+
+def events_setup(asc, app_id, cfg):
+    """events.json'daki etkinlikleri oluşturur/günceller (taslak). İncelemeye gönderme App Store Connect'te."""
+    terr = [t['id'] for t in asc.get('/v1/territories', limit=200)['data']]
+    cur = {e['attributes']['referenceName']: e for e in asc.get(f'/v1/apps/{app_id}/appEvents', limit=50)['data']}
+    ids = []
+    for ev in cfg.get('events', []):
+        attrs = {'referenceName': ev['ref'], 'badge': ev['badge'], 'purpose': ev['purpose'], 'priority': ev['priority'],
+                 'primaryLocale': 'tr', 'purchaseRequirement': ev.get('purchase'),
+                 'territorySchedules': [{'territories': terr, 'publishStart': ev['publishStart'],
+                                         'eventStart': ev['eventStart'], 'eventEnd': ev['eventEnd']}]}
+        e = cur.get(ev['ref'])
+        state = e['attributes'].get('eventState') if e else None
+        print(f"• etkinlik {ev['ref']} ({state or 'yeni'})")
+        if e and state not in (None, 'DRAFT', 'READY_FOR_REVIEW', 'REJECTED'):
+            print('   incelemede ya da yayında, değiştirilmedi'); ids.append(e['id']); continue
+
+        def save(a):
+            if e:
+                return asc.req('PATCH', f"/v1/appEvents/{e['id']}", write=True, body={'data': {'type': 'appEvents', 'id': e['id'], 'attributes': a}})['data']
+            return asc.req('POST', '/v1/appEvents', write=True, body={'data': {'type': 'appEvents', 'attributes': a,
+                           'relationships': {'app': {'data': {'type': 'apps', 'id': app_id}}}}})['data']
+        try:
+            d = save(attrs)
+        except RuntimeError as err:
+            if 'purchaseRequirement' not in str(err):
+                raise
+            print(f'   ! satın alma alanı kabul edilmedi, alan olmadan kaydediliyor: {err}')
+            attrs.pop('purchaseRequirement'); d = save(attrs)
+        eid = e['id'] if e else d['id']; ids.append(eid)
+        locs = {} if eid == 'DRY' else {l['attributes']['locale']: l for l in asc.get(f'/v1/appEvents/{eid}/localizations', limit=50)['data']}
+        for loc, (name, short, long_) in ev['locales'].items():
+            a = {'name': name, 'shortDescription': short, 'longDescription': long_}
+            if loc in locs:
+                lid = locs[loc]['id']
+                asc.req('PATCH', f'/v1/appEventLocalizations/{lid}', write=True, body={'data': {'type': 'appEventLocalizations', 'id': lid, 'attributes': a}})
+            else:
+                lid = asc.req('POST', '/v1/appEventLocalizations', write=True, body={'data': {'type': 'appEventLocalizations',
+                              'attributes': dict(a, locale=loc), 'relationships': {'appEvent': {'data': {'type': 'appEvents', 'id': eid}}}}})['data']['id']
+            have = set() if lid == 'DRY' else {x['attributes'].get('appEventAssetType') for x in asc.get(f'/v1/appEventLocalizations/{lid}/appEventScreenshots', limit=10)['data']}
+            for t, f in (('EVENT_CARD', ev['card']), ('EVENT_DETAILS_PAGE', ev['details'])):
+                if t not in have:
+                    _upload_asset(asc, 'appEventScreenshots', 'appEventLocalization', 'appEventLocalizations', lid, ROOT / f, {'appEventAssetType': t})
+            print(f'   {loc}: metin ve görseller tamam')
+    return ids
+
+
+def nominate(asc, app_id, cfg, event_ids):
+    """Öne çıkarılma başvurusunu TASLAK olarak oluşturur/günceller (gönderme App Store Connect'te tek tık)."""
+    n = cfg.get('nomination')
+    if not n:
+        return
+    attrs = {'name': n['name'], 'type': n['type'], 'description': n['description'], 'submitted': False,
+             'publishStartDate': n['publishStart'], 'deviceFamilies': ['IPHONE', 'IPAD'], 'locales': n['locales'],
+             'hasInAppEvents': bool(event_ids), 'notes': n.get('notes')}
+    rel = {'relatedApps': {'data': [{'type': 'apps', 'id': app_id}]}}
+    if event_ids:
+        rel['inAppEvents'] = {'data': [{'type': 'appEvents', 'id': i} for i in event_ids if i != 'DRY']}
+    try:
+        cur = [x for x in asc.get('/v1/nominations', **{'filter[state]': 'DRAFT', 'filter[relatedApps]': app_id}).get('data', [])
+               if x['attributes'].get('name') == n['name']]
+    except RuntimeError as err:
+        print(f'   (taslaklar okunamadı: {err})'); cur = []
+    if cur:
+        nid = cur[0]['id']
+        attrs.pop('submitted')
+        asc.req('PATCH', f'/v1/nominations/{nid}', write=True, body={'data': {'type': 'nominations', 'id': nid, 'attributes': attrs, 'relationships': rel}})
+        print(f'• öne çıkarılma başvurusu güncellendi (taslak, {nid})')
+    else:
+        d = asc.req('POST', '/v1/nominations', write=True, body={'data': {'type': 'nominations', 'attributes': attrs, 'relationships': rel}})['data']
+        print(f"• öne çıkarılma başvurusu oluşturuldu (taslak, {d['id']})")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--metadata', default=str(ROOT / 'store/asc/metadata.json'))
@@ -474,6 +564,8 @@ def main():
     ap.add_argument('--packs', action='store_true')
     ap.add_argument('--submit-packs', action='store_true')
     ap.add_argument('--unsubmit-packs', action='store_true')
+    ap.add_argument('--events', action='store_true')
+    ap.add_argument('--events-file', default=str(ROOT / 'store/asc/events.json'))
     a = ap.parse_args()
     meta = json.load(open(a.metadata, encoding='utf-8'))
     asc = ASC(a.dry_run)
@@ -502,6 +594,10 @@ def main():
         return iap_report(asc, app['id'])
     if a.iap:
         return iap_report(asc, app['id'])
+    if a.events:
+        cfg = json.load(open(a.events_file, encoding='utf-8'))
+        ids = events_setup(asc, app['id'], cfg)
+        return nominate(asc, app['id'], cfg, ids)
     if a.remove_locales:
         return remove_locales(asc, app['id'], [x.strip() for x in a.remove_locales.split(',') if x.strip()])
 
