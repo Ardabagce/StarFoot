@@ -545,7 +545,7 @@ def nominate(asc, app_id, cfg, event_ids):
         rel['inAppEvents'] = {'data': [{'type': 'appEvents', 'id': i} for i in event_ids if i != 'DRY']}
     try:
         cur = [x for x in asc.get('/v1/nominations', **{'filter[state]': 'DRAFT', 'filter[relatedApps]': app_id}).get('data', [])
-               if x['attributes'].get('name') == n['name']]
+               if x['attributes'].get('name') in (n['name'], n.get('replaces'))]
     except RuntimeError as err:
         print(f'   (taslaklar okunamadı: {err})'); cur = []
     if cur:
