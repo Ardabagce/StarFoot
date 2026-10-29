@@ -24,3 +24,4 @@
 4553|Cadangan iCloud
 4587|Kariermu dicadangkan otomatis; bahkan di ponsel baru kamu lanjut dari posisi terakhir.
 4588|38 pencapaian dan peringkat dunia: gol, trofi, rating, dan pengikut.
+4589|Suara & getaran

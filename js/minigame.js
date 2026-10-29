@@ -430,7 +430,7 @@ const MiniGame = {
         endT = t;
         slowmo = 1;
         if (typeof Sfx !== 'undefined') {
-          if (outcome === 'goal') Sfx.play('net');
+          if (outcome === 'goal') { Sfx.play('net'); setTimeout(() => Sfx.play(Sprites.surface === 'sand' ? 'cheer' : 'roar'), 180); }
           else if (outcome === 'saved') Sfx.play('save');
           else if (outcome === 'post' || outcome === 'bar') { Sfx.play('post'); Sfx.play('ooh'); Sfx.buzz('medium'); }
           else if (outcome === 'miss') Sfx.play('ooh');

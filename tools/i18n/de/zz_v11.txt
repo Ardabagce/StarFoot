@@ -24,3 +24,4 @@
 4553|iCloud-Backup
 4587|Deine Karrieren werden automatisch gesichert; auch auf einem neuen Handy machst du dort weiter, wo du aufgehört hast.
 4588|38 Erfolge und weltweite Bestenlisten: Tore, Titel, Gesamtstärke und Follower.
+4589|Ton & Vibration

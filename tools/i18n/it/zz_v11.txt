@@ -24,3 +24,4 @@
 4553|Backup iCloud
 4587|Le tue carriere vengono salvate in automatico; anche su un nuovo telefono riprendi da dove eri rimasto.
 4588|38 obiettivi e classifiche mondiali: gol, trofei, valutazione e follower.
+4589|Suono e vibrazione

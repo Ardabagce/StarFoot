@@ -1408,9 +1408,9 @@ const UI = {
 
   // Profil: oyuncu kartı, sosyal medya ve kariyer tek sekmede
   profile() {
-    const nav = UI.viewNav('profView', [['profile', 'star', 'Profil'], ['career', 'career', 'Kariyer'], ['settings', 'cog', 'Ayarlar']]);
+    const nav = UI.viewNav('profView', [['profile', 'star', 'Profil'], ['career', 'career', 'Kariyer']]);
     const v = UI.profView || 'profile';
-    return nav + (v === 'career' ? UI.career() : v === 'settings' ? UI.settings() : UI.player());
+    return nav + (v === 'career' ? UI.career() : UI.player());
   },
 
   // Yaşam: aile, ilişkiler, menajer, sponsorlar, gece hayatı ve mağaza
@@ -2092,7 +2092,12 @@ ${UI.paper()}`;
     const row = (label, sub, ctrl) => `<div class="set-row"><span><b>${label}</b>${sub ? `<small>${sub}</small>` : ''}</span>${ctrl}</div>`;
     const appVer = (window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform()) ? `StarFoot ${typeof APP_VER !== 'undefined' ? APP_VER : ''}` : 'StarFoot (web)';
     return `
-      ${typeof Premium !== 'undefined' ? Premium.card() : ''}
+      <section class="card settings">
+        <div class="card-h"><span>${Icon('sound')} Ses ve titreşim</span></div>
+        <label class="drill-tg"><input type="checkbox" id="mus-tg" ${typeof Sfx !== 'undefined' && Sfx.mus ? 'checked' : ''}><span><b>Müzik</b><small>Menülerde arka plan müziği. Maçta tribün sesi öne çıkar.</small></span></label>
+        <label class="drill-tg"><input type="checkbox" id="sfx-tg" ${typeof Sfx !== 'undefined' && Sfx.on ? 'checked' : ''}><span><b>Ses efektleri</b><small>Tribün, düdük, vuruş ve gol sesleri.</small></span></label>
+        <label class="drill-tg"><input type="checkbox" id="hap-tg" ${typeof Sfx !== 'undefined' && Sfx.hap ? 'checked' : ''}><span><b>Titreşim</b><small>Golde, vuruşta ve kritik anlarda telefon titrer.</small></span></label>
+      </section>
       <section class="card settings">
         <div class="card-h"><span>${Icon('cog')} Genel</span></div>
         ${row('Para birimi', `Otomatik: telefonun bölgesine göre (${U.CUR[U.curAuto()].sym})`, `<div class="seg" data-noi18n>${[['', 'Oto'], ['TRY', '₺'], ['USD', '$'], ['EUR', '€'], ['GBP', '£']].map(([k, l]) => { let cur = ''; try { cur = localStorage.getItem('starfoot_cur') || ''; } catch (e) { /* yok */ } return `<button data-setcur="${k}" class="${cur === k ? 'on' : ''}">${l}</button>`; }).join('')}</div>`)}
@@ -2102,12 +2107,17 @@ ${UI.paper()}`;
       <section class="card settings">
         <div class="card-h"><span>${Icon('train')} Oynanış</span></div>
         <label class="drill-tg"><input type="checkbox" id="drill-tg" ${s.drills !== false ? 'checked' : ''}><span><b>Antrenman mini oyunları</b><small>Odak statına göre çalışma oynanır. İyi oynarsan gelişim ×1,5'e kadar çıkar.</small></span></label>
-        <label class="drill-tg"><input type="checkbox" id="sfx-tg" ${typeof Sfx !== 'undefined' && Sfx.on ? 'checked' : ''}><span><b>Ses efektleri</b><small>Tribün, düdük, vuruş ve gol sesleri.</small></span></label>
-        <label class="drill-tg"><input type="checkbox" id="mus-tg" ${typeof Sfx !== 'undefined' && Sfx.mus ? 'checked' : ''}><span><b>Müzik</b><small>Menülerde arka plan müziği. Maçta tribün sesi öne çıkar.</small></span></label>
         ${typeof Notify !== 'undefined' && Notify.plugin() ? `<label class="drill-tg"><input type="checkbox" id="notif-tg" ${Notify.on() ? 'checked' : ''}><span><b>Bildirimler</b><small>Günlük ödül ve enerji hatırlatmaları.</small></span></label>` : ''}
-        <label class="drill-tg"><input type="checkbox" id="hap-tg" ${typeof Sfx !== 'undefined' && Sfx.hap ? 'checked' : ''}><span><b>Titreşim</b><small>Golde, vuruşta ve kritik anlarda telefon titrer.</small></span></label>
       </section>
       ${typeof Cloud !== 'undefined' && (Cloud.pl || GC.pl) ? `<section class="card settings"><div class="card-h"><span>${Icon('save')} Yedek ve Game Center</span></div>${Cloud.card()}${GC.card()}</section>` : ''}
+      <section class="card settings">
+        <div class="card-h"><span>${Icon('save')} Kariyer</span><small class="muted">Oyun her hafta otomatik kaydedilir</small></div>
+        <div class="row-btns">
+          <button class="btn btn-ghost" data-sys="menu">${Icon('exit')} Ana Menü</button>
+          ${p.age >= 33 ? `<button class="btn btn-ghost" data-sys="retire">${Icon('wave')} Emekli Ol</button>` : ''}
+          <button class="btn btn-danger" data-sys="delete">${Icon('trash')} Kariyeri Sil</button>
+        </div>
+      </section>
       ${UI.feedbackCard()}
       <section class="card settings">
         <div class="card-h"><span>${Icon('shield')} Gizlilik</span></div>
@@ -2118,15 +2128,8 @@ ${UI.paper()}`;
         </div>
         <p class="muted set-credits">Krediler: tribün sesleri Gregor Quendel (CC BY 4.0) · müzik "It Takes A Hero", Mjorlaja (CC0) · çim dokusu ambientCG (CC0)</p>
       </section>
-      <section class="card settings">
-        <div class="card-h"><span>${Icon('save')} Kariyer</span><small class="muted">Oyun her hafta otomatik kaydedilir</small></div>
-        <div class="row-btns">
-          <button class="btn btn-ghost" data-sys="menu">${Icon('exit')} Ana Menü</button>
-          ${p.age >= 33 ? `<button class="btn btn-ghost" data-sys="retire">${Icon('wave')} Emekli Ol</button>` : ''}
-          <button class="btn btn-danger" data-sys="delete">${Icon('trash')} Kariyeri Sil</button>
-        </div>
-        <p class="set-ver">${appVer}</p>
-      </section>`;
+      ${typeof Premium !== 'undefined' ? Premium.card() : ''}
+      <p class="set-ver">${appVer}</p>`;
   },
 
   world() {
@@ -2765,5 +2768,55 @@ window.addEventListener('DOMContentLoaded', () => {
   U.$$('#tabs button').forEach((b) => (b.onclick = () => { Game.tab = b.dataset.tab; Game.render(); window.scrollTo(0, 0); }));
   document.getElementById('logo').onclick = () => { if (Game.state && Game.state.mode === 'wc' && typeof WC !== 'undefined') return WC.askExit(); if (Game.state) { Game.tab = 'home'; Game.render(); } };
   document.getElementById('notif-btn').onclick = () => Notifs.open();
+  document.getElementById('set-btn').onclick = () => SetSheet.open();
   Game.init();
 });
+
+// ---------- Ayarlar paneli (üst çubuktaki dişli) ----------
+const SetSheet = {
+  el: null,
+  open() {
+    if (!Game.state) return;
+    if (!SetSheet.el) {
+      const el = document.createElement('div');
+      el.id = 'set-sheet'; el.className = 'set-sheet';
+      el.innerHTML = `<div class="ss-bg" data-ssx></div><div class="ss-panel" role="dialog" aria-label="Ayarlar"><div class="ss-h"><b>${Icon('cog')} Ayarlar</b><button class="ss-x" data-ssx aria-label="Kapat">✕</button></div><div class="ss-body" id="ss-body"></div></div>`;
+      document.body.appendChild(el);
+      el.addEventListener('click', (e) => { if (e.target.closest('[data-ssx]')) SetSheet.close(); });
+      SetSheet.el = el;
+    }
+    SetSheet.fill();
+    document.body.classList.add('ss-on');
+    requestAnimationFrame(() => SetSheet.el.classList.add('on'));
+  },
+  fill() {
+    const body = document.getElementById('ss-body');
+    if (!body) return;
+    const y = body.scrollTop;
+    try { body.innerHTML = UI.settings(); } catch (e) {
+      // kariyer dışı modlarda (ör. Dünya Şampiyonası) yalın ayarlar
+      const tg = (id, on, t, d) => `<label class="drill-tg"><input type="checkbox" id="${id}" ${on ? 'checked' : ''}><span><b>${t}</b><small>${d}</small></span></label>`;
+      body.innerHTML = `<section class="card settings"><div class="card-h"><span>${Icon('sound')} Ses ve titreşim</span></div>
+        ${tg('mus-tg', Sfx.mus, 'Müzik', 'Menülerde arka plan müziği. Maçta tribün sesi öne çıkar.')}${tg('sfx-tg', Sfx.on, 'Ses efektleri', 'Tribün, düdük, vuruş ve gol sesleri.')}${tg('hap-tg', Sfx.hap, 'Titreşim', 'Golde, vuruşta ve kritik anlarda telefon titrer.')}</section>
+        <section class="card settings"><div class="card-h"><span>${Icon('cog')} Genel</span></div><div class="set-row"><span><b>Dil / Language</b></span><select class="lang-sel" data-setlang data-noi18n>${Object.entries(I18N.LANGS).map(([k, n]) => `<option value="${k}"${k === I18N.lang ? ' selected' : ''}>${n}</option>`).join('')}</select></div>
+        <div class="row-btns"><button class="btn btn-ghost" data-sys="menu">${Icon('exit')} Ana Menü</button></div></section>`;
+    }
+    try { UI.bind(body); } catch (e) { /* yalın görünüm */ }
+    // ana menü, emeklilik ve silme önce paneli kapatır
+    U.$$('[data-sys]', body).forEach((b) => { const f = b.onclick; b.onclick = (ev) => { if (b.dataset.sys === 'menu') SetSheet.close(); if (f) f.call(b, ev); }; });
+    body.scrollTop = y;
+  },
+  isOpen() { return !!(SetSheet.el && SetSheet.el.classList.contains('on')); },
+  close() {
+    if (!SetSheet.el) return;
+    SetSheet.el.classList.remove('on');
+    document.body.classList.remove('ss-on');
+  },
+};
+// ayar değişince ekran yeniden çizilir: açık paneli de tazele
+(() => {
+  const r = Game.render;
+  Game.render = function () { const out = r.apply(this, arguments); if (SetSheet.isOpen()) SetSheet.fill(); return out; };
+  const tm = Game.toMenu;
+  if (tm) Game.toMenu = function () { SetSheet.close(); return tm.apply(this, arguments); };
+})();

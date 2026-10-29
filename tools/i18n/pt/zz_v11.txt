@@ -24,3 +24,4 @@
 4553|Backup no iCloud
 4587|Suas carreiras são salvas automaticamente; mesmo em um celular novo você continua de onde parou.
 4588|38 conquistas e rankings mundiais: gols, troféus, geral e seguidores.
+4589|Som e vibração

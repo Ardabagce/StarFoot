@@ -24,3 +24,4 @@
 4553|Sauvegarde iCloud
 4587|Tes carrières sont sauvegardées automatiquement ; même sur un nouveau téléphone, tu reprends là où tu étais.
 4588|38 succès et classements mondiaux : buts, trophées, note globale et abonnés.
+4589|Son et vibration

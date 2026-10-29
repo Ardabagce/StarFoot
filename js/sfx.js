@@ -18,6 +18,13 @@ const Sfx = {
   },
   // tribün yoğunluğu: oyuncunun yıldızlığına ve maçın önemine göre (0 boş, 1 dolu stadyum)
   lvl() { return typeof Sprites !== 'undefined' && Sprites.atmo ? U.clamp(Sprites.atmo.lvl, 0, 1) : 0.6; },
+  // tribün döngüsünü bir süre kıs (gol sesi üst üste binmesin)
+  duck(sec) {
+    const cr = Sfx._cr;
+    if (!cr || cr.synth || !Sfx.ctx) return;
+    const t = Sfx.ctx.currentTime, base = cr.base || 0.3;
+    try { cr.g.gain.cancelScheduledValues(t); cr.g.gain.setTargetAtTime(base * 0.25, t, 0.15); cr.g.gain.setTargetAtTime(base, t + sec, 1.2); } catch (e) { /* yok */ }
+  },
   sample(k, vol, rate = 1) {
     const b = Sfx.buf[k];
     if (!b) return false;
@@ -92,7 +99,10 @@ const Sfx = {
         case 'net': Sfx.burst('highpass', 2500, 1200, 0.5, 0.01, 0.25, 0.35); break;
         case 'post': Sfx.tone('triangle', 920, 880, 0.002, 0.35, 0.7); Sfx.tone('sine', 1380, 1320, 0.002, 0.2, 0.5); break;
         case 'roar':
-          if (Sfx.sample('goal', 0.35 + 0.75 * Sfx.lvl(), 0.97 + Math.random() * 0.06)) break;
+          if (Date.now() - (Sfx._roarT || 0) < 6000) break; // aynı gol için ikinci kez çalma
+          Sfx._roarT = Date.now();
+          // gol coşkusu: kulak tırmalamasın diye ölçülü; tribün uğultusu o sırada kısılır
+          if (Sfx.sample('goal', 0.22 + 0.36 * Sfx.lvl(), 0.97 + Math.random() * 0.06)) { Sfx.duck(5.5); break; }
           Sfx.burst('bandpass', 500, 900, 0.6, 0.25, 0.55, 2.6);
           Sfx.burst('bandpass', 1200, 1600, 0.8, 0.3, 0.3, 2.2, 0.05);
           break;
@@ -126,9 +136,10 @@ const Sfx = {
       try {
         const c = Sfx.ctx, src = c.createBufferSource(), g = c.createGain();
         src.buffer = Sfx.buf.crowd; src.loop = true;
-        g.gain.value = 0.0001; g.gain.setTargetAtTime(quiet ? 0.08 : 0.18 + 0.62 * Sfx.lvl(), c.currentTime, 0.8);
+        const base = quiet ? 0.08 : 0.18 + 0.62 * Sfx.lvl();
+        g.gain.value = 0.0001; g.gain.setTargetAtTime(base, c.currentTime, 0.8);
         src.connect(g); g.connect(Sfx.out); src.start(0, Math.random() * 20);
-        Sfx._cr = { src, g, quiet };
+        Sfx._cr = { src, g, quiet, base };
       } catch (e) { /* yok */ }
       return;
     }

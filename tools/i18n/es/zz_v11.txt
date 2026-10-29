@@ -24,3 +24,4 @@
 4553|Copia en iCloud
 4587|Tus carreras se guardan automáticamente; incluso en un móvil nuevo sigues donde lo dejaste.
 4588|38 logros y clasificaciones mundiales: goles, trofeos, valoración general y seguidores.
+4589|Sonido y vibración

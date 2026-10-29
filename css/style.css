@@ -2355,3 +2355,22 @@ div.doc { position: fixed; inset: 0; z-index: 49; background: #000; display: fle
   .mt-radar canvas { height: 96px; }
   .mt-main .mt-feed { height: 34vh; }
 }
+/* ayarlar düğmesi ve paneli */
+.hdr-l .set-btn { margin-left: -4px; }
+@media (max-width: 760px) {
+  .hdr { grid-template-columns: minmax(0, 1fr) auto auto auto; grid-template-areas: 'logo money bell cog' 'week money bell cog'; column-gap: 8px; }
+  .set-btn { grid-area: cog; width: 40px; height: 40px; }
+  .hdr-l .set-btn { margin-left: 0; }
+}
+.set-sheet { position: fixed; inset: 0; z-index: 900; pointer-events: none; }
+.set-sheet .ss-bg { position: absolute; inset: 0; background: rgba(3, 8, 20, .62); opacity: 0; transition: opacity .22s; }
+.set-sheet .ss-panel { position: absolute; top: 0; right: 0; bottom: 0; width: min(440px, 100%); background: var(--bg, #070f24); border-left: 1px solid var(--line); display: flex; flex-direction: column; transform: translateX(100%); transition: transform .26s cubic-bezier(.2, .8, .2, 1); box-shadow: -18px 0 40px rgba(0, 0, 0, .45); }
+.set-sheet.on { pointer-events: auto; }
+.set-sheet.on .ss-bg { opacity: 1; }
+.set-sheet.on .ss-panel { transform: none; }
+.ss-h { display: flex; align-items: center; justify-content: space-between; padding: calc(12px + env(safe-area-inset-top, 0px)) 16px 12px; border-bottom: 1px solid var(--line); }
+.ss-h b { display: flex; align-items: center; gap: 8px; font-family: var(--display); font-style: italic; font-weight: 800; font-size: 20px; text-transform: uppercase; letter-spacing: .02em; }
+.ss-h b .ic { width: 20px; height: 20px; color: var(--flood, #ffd23f); }
+.ss-x { width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--line); background: rgba(255, 255, 255, .05); color: var(--chalk); font-size: 16px; cursor: pointer; }
+.ss-body { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 12px 14px calc(20px + env(safe-area-inset-bottom, 0px)); display: flex; flex-direction: column; gap: 12px; }
+.ss-body .card { margin: 0; }
