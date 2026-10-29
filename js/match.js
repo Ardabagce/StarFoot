@@ -50,6 +50,19 @@ const Match = {
     // Mahalle maçı: kum saha, herkes kendi kıyafetiyle
     const kits = street ? Sprites.streetKits() : Sprites.kits(own, opp);
     Sprites.surface = street ? 'sand' : null;
+    // Atmosfer: tribün doluluğu, fotoğrafçılar ve pankart oyuncunun ününe, takımına ve maçın önemine göre
+    {
+      const youthM = state.contract && state.contract.type === 'youth' || /\bU(1\d|2[01])\b/.test(ctx.compName || '');
+      const big = ['ucl', 'uel', 'uecl', 'wc', 'euro', 'intl', 'csa', 'acl', 'ccc'].includes(ctx.lg) ? 0.12 : 0;
+      const fame = p.fame || 0;
+      let lvl = street ? 0 : youthM ? 0.12 + (ctx.final ? 0.12 : 0) : U.clamp(0.3 + (own.rating - 55) / 60 + big + (ctx.derby ? 0.15 : 0) + (ctx.final ? 0.2 : 0) + fame / 400, 0.25, 1);
+      const star = !street && !youthM && fame >= 40;
+      Sprites.atmo = {
+        lvl, star, youth: youthM,
+        photogs: street ? 0 : youthM ? (ctx.final ? 1 : 0) : Math.round(U.clamp(1 + fame / 12 + (ctx.final ? 2 : 0) + (ctx.derby ? 1 : 0) + big * 10, 1, 8)),
+        club: own.name || own.short || '',
+      };
+    }
     const narrow = () => window.innerWidth / window.innerHeight < 0.9;
     // Hava durumu ve maç topu
     const weather = ctx.weather = ctx.weather || Weather.pick(ctx, state);

@@ -39,6 +39,58 @@ const Celebrate = {
     return { cv, c: cv.getContext('2d'), W, H, dpr, bg };
   },
 
+  // Ön sıra taraftarları ve dev pankart (gol sevinci): kulüp renkleri, yıldız ve oyuncunun adı
+  fanWall(b, W, H, dpr, P, o) {
+    if (Sprites.surface === 'sand') return [];
+    const ly = H * 0.555, lh = H * 0.045;
+    const g = b.createLinearGradient(0, ly, 0, ly + lh);
+    g.addColorStop(0, Sprites.shade(P.c1, 0.15)); g.addColorStop(1, Sprites.shade(P.c1, -0.3));
+    b.fillStyle = g; b.fillRect(0, ly, W, lh);
+    b.fillStyle = P.c2; b.fillRect(0, ly, W, lh * 0.1); b.fillRect(0, ly + lh * 0.9, W, lh * 0.1);
+    const me = typeof Game !== 'undefined' && Game.p ? Game.p : null;
+    const A = Sprites.atmo || { lvl: 0.8, star: true, club: '' };
+    const label = (A.star ? ((me ? me.surname || me.name : '') + ' ' + (o.number || '')) : (A.club || P.short || 'STARFOOT')).toLocaleUpperCase('tr').trim() || 'STARFOOT';
+    b.font = `900 italic ${Math.round(lh * 0.68)}px "Saira Condensed", "Arial Narrow", sans-serif`;
+    b.textAlign = 'center'; b.textBaseline = 'middle';
+    const seg = b.measureText(label).width + lh * 2.4;
+    for (let x = seg * 0.3; x < W + seg; x += seg) {
+      b.fillStyle = Sprites.colorDist(P.c1, '#ffffff') < 90 ? '#111' : '#fff'; b.fillText(label, x, ly + lh * 0.54);
+      b.fillStyle = P.c2; Sprites.star(b, x + seg / 2, ly + lh * 0.5, lh * 0.3, -Math.PI / 2);
+    }
+    b.textBaseline = 'alphabetic';
+    // ön sıra: pankartın hemen üstünde, iri ve kulüp renklerinde
+    const fans = [], skins = ['#f1c9a5', '#e0ac69', '#c68642', '#8d5524', '#ffdbac'];
+    const cols = [P.c1, P.c1, P.c2, P.c1, '#f2f2f2'];
+    const sz = Math.max(12 * dpr, W * 0.072);
+    for (let row = 0; row < 3; row++) {
+      if (row >= Math.ceil(3 * A.lvl)) break; // az seyircide tek sıra
+      for (let x = (row ? sz * 0.5 : 0) - sz * 0.3; x < W + sz; x += sz * (0.95 + Math.random() * 0.2)) {
+        if (Math.random() > 0.15 + 0.85 * A.lvl) continue;
+        fans.push({ x, y: ly - sz * (1.0 + row * 0.62), sz: sz * (1 - row * 0.16), dim: 1 - row * 0.22, shirt: cols[(Math.random() * cols.length) | 0], skin: skins[(Math.random() * skins.length) | 0], ph: Math.random() * 6, up: Math.random() < 0.7, scarf: Math.random() < 0.3, c2: P.c2, c1: P.c1 });
+      }
+    }
+    return fans.sort((a, b2) => a.y - b2.y);
+  },
+  drawFans(c, fans, t, dpr) {
+    fans.forEach((f) => {
+      const j = Math.max(0, Math.sin(t * 9 + f.ph)) * f.sz * 0.35;
+      const x = f.x, y = f.y - j, s = f.sz;
+      c.globalAlpha = f.dim;
+      if (f.up) {
+        const wv = Math.sin(t * 12 + f.ph) * 0.25;
+        c.strokeStyle = f.shirt; c.lineWidth = s * 0.16; c.lineCap = 'round';
+        c.beginPath(); c.moveTo(x - s * 0.3, y + s * 0.25); c.lineTo(x - s * (0.45 + wv * 0.4), y - s * 0.55);
+        c.moveTo(x + s * 0.3, y + s * 0.25); c.lineTo(x + s * (0.45 - wv * 0.4), y - s * 0.55); c.stroke(); c.lineCap = 'butt';
+        if (f.scarf) { c.fillStyle = f.c1; c.fillRect(x - s * 0.7, y - s * 0.68, s * 1.4, s * 0.2); c.fillStyle = f.c2; for (let q = 0; q < 4; q++) c.fillRect(x - s * 0.7 + q * s * 0.35, y - s * 0.68, s * 0.17, s * 0.2); }
+      }
+      c.fillStyle = f.shirt;
+      c.beginPath(); c.ellipse(x, y + s * 0.42, s * 0.46, s * 0.4, 0, Math.PI, 0); c.fill();
+      c.fillRect(x - s * 0.46, y + s * 0.42, s * 0.92, s * 0.6);
+      c.fillStyle = f.skin; c.beginPath(); c.arc(x, y + s * 0.05, s * 0.24, 0, Math.PI * 2); c.fill();
+    });
+    c.globalAlpha = 1;
+  },
+
   flashes(c, W, H, t, n) {
     for (let i = 0; i < n; i++) {
       const k = Math.floor(t * 9) * 31 + i * 17;
@@ -77,7 +129,8 @@ const Celebrate = {
   // ---------- Gol sevinci ----------
   goal(host, o) {
     return new Promise((resolve) => {
-      const P = { c1: o.c1 || '#c8102e', c2: o.c2 || '#ffffff', short: o.short || '' };
+      const A = Sprites.atmo || { lvl: 0.8, star: true };
+      const P = { c1: o.c1 || '#c8102e', c2: o.c2 || '#ffffff', short: o.short || '', dens: 0.2 + 0.8 * A.lvl };
       const S = Celebrate.stage(host, P, false);
       const { c, W, H, dpr, bg } = S;
       const kit = o.kit, look = Sprites.me();
@@ -85,6 +138,8 @@ const Celebrate = {
       const D = 3.4;
       const mates = [Sprites.look(3), Sprites.look(11), Sprites.look(22)];
       const ground = H * 0.95, h0 = Math.min(H * 0.5, W * 0.9);
+      // Tribün: pankart (oyuncunun adı) arka plana bir kez; ön sıradaki taraftarlar kare kare zıplar
+      const fans = Celebrate.fanWall(bg.getContext('2d'), W, H, dpr, P, o);
       let t = 0, last = performance.now(), done = false, raf;
       const finish = () => { if (done) return; done = true; cancelAnimationFrame(raf); host.innerHTML = ''; resolve(); };
       host.onclick = finish;
@@ -92,7 +147,8 @@ const Celebrate = {
       const frame = (now) => {
         t += Math.min(0.05, (now - last) / 1000); last = now;
         c.drawImage(bg, 0, 0);
-        Celebrate.flashes(c, W, H, t, 3);
+        Celebrate.flashes(c, W, H, t, Math.round(9 * A.lvl));
+        Celebrate.drawFans(c, fans, t, dpr);
         const k = Math.min(1, t / 0.9);
         let x = W * (0.18 + 0.32 * (1 - Math.pow(1 - k, 2))), y = ground, h = h0, rot = 0, sx = 1;
         const f = { kit, look, number: o.number, run: t * 11, speed: t < 0.9 ? 1 : 0 };
@@ -160,7 +216,8 @@ const Celebrate = {
       el.innerHTML = `<div class="ct-host"></div><div class="ct-foot"><b>${U.esc(o.title || 'ŞAMPİYON')}</b><small>${U.esc(o.sub || '')}</small><div class="ct-btns">${typeof ShareCard !== 'undefined' && Game.state ? `<button class="btn btn-ghost ct-share">${Icon('share')} Paylaş</button>` : ''}<button class="btn btn-big ct-go">Devam</button></div></div>`;
       document.body.appendChild(el);
       const host = el.querySelector('.ct-host');
-      const P = { c1: o.c1 || '#c8102e', c2: o.c2 || '#ffffff', short: o.short || '' };
+      const A = Sprites.atmo || { lvl: 0.8, star: true };
+      const P = { c1: o.c1 || '#c8102e', c2: o.c2 || '#ffffff', short: o.short || '', dens: 0.2 + 0.8 * A.lvl };
       const S = Celebrate.stage(host, P, false);
       const { c, W, H, dpr, bg } = S;
       const kit = o.kit, look = Sprites.me();

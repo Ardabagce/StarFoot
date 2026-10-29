@@ -164,6 +164,7 @@ const SocialArt = {
       const sz = 2 + k * 2.6, step = 4.6 + k * 3.4;
       if (Math.abs(y - H * 0.35) < 4) { c.fillStyle = day ? '#2b303c' : '#0b0e16'; c.fillRect(0, y - 2, W, 7); continue; }
       for (let x = (r() * step); x < W; x += step * (0.8 + r() * 0.4)) {
+        if (P.dens != null && r() > P.dens) continue; // seyrek tribün (altyapı maçları)
         c.fillStyle = cols[Math.floor(r() * cols.length)];
         c.globalAlpha = (day ? 0.75 : 0.45) + k * 0.5;
         c.fillRect(x, y + r() * 2, sz, sz * 1.5);

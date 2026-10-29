@@ -224,7 +224,8 @@ const MiniGame = {
         const pts = [scene.ball, ...scene.defenders, ...scene.mates, { x: -4.5, y: -1 }, { x: 4.5, y: -1 }];
         const mx = cw / ch < 0.9 ? 1.8 : 3.5;
         let x0 = Math.min(...pts.map((e) => e.x)) - mx, x1 = Math.max(...pts.map((e) => e.x)) + mx;
-        let y0 = -4.6, y1 = Math.max(...pts.map((e) => e.y)) + 3;
+        // kale arkasındaki tribün ve pankart görünsün diye kamera biraz geriden başlar (mahallede duvar yeterli)
+        let y0 = Sprites.surface === 'sand' ? -4.6 : -6.8, y1 = Math.max(...pts.map((e) => e.y)) + 3;
         const A = cw / ch;
         // kaleye yakın sahnelerde kamera fazla yaklaşmasın: en az bu kadar saha görünür
         y1 = Math.max(y1, y0 + (A < 0.9 ? 28 : 24));
@@ -241,6 +242,8 @@ const MiniGame = {
         bg = document.createElement('canvas');
         bg.width = W; bg.height = H;
         const b = bg.getContext('2d');
+        const me = typeof Game !== 'undefined' && Game.p ? Game.p : null;
+        Sprites.crowd = { c1: kits.own.shirt, c2: kits.own.pattern === 'plain' ? kits.own.alt : kits.own.alt || '#ffffff', name: me ? me.surname || me.name : '', number: o.number || 10 };
         Sprites.grass(b, W, H, tx, ty, PX, view);
         Sprites.stands(b, W, tx, ty, PX, view, dpr);
         Sprites.lines(b, tx, ty, PX);
@@ -689,6 +692,7 @@ const MiniGame = {
 
       function draw(dt) {
         ctx.drawImage(bg, 0, 0);
+        Sprites.standsFx(ctx, t, result && result.outcome === 'goal' ? Math.min(1, (t - endT) * 3) : 0);
         const sh = netShake > 0 ? Math.sin(t * 50) * 6 * dpr * netShake : 0;
         Sprites.net(ctx, tx, ty, PX, sh);
         if (scene.offside != null && (phase === 'aim' || (result && result.outcome === 'offside'))) {
@@ -707,20 +711,39 @@ const MiniGame = {
         const ents = [];
         ents.push({ y: 0, d: () => Sprites.frame(ctx, tx, ty, PX) });
         ents.push({ y: keeper.y, d: () => {
-          if (keeper.diveT0 == null) return Sprites.figure(ctx, tx(keeper.x), ty(keeper.y), h, { kit: kits.gk, look: keeper.look, facing: 'down', number: 1, run: keeper.run, speed: keeper.spd, gloves: true, t });
-          // Uçuş: kalçadan dönerek havalanır, kollar topa uzanır, yay çizip yere iner
-          const since = Math.max(0, t - keeper.diveT0);
-          const prog = U.clamp(since / 0.5, 0, 1);
-          const air = Math.sin(prog * Math.PI) * (keeper.diveHigh ? 0.62 : 0.4);
-          const rot = (keeper.diveDir || 1) * Math.min(1, since / 0.16) * (keeper.diveHigh ? 1.05 : 1.3);
           const gx = tx(keeper.x), gy = ty(keeper.y);
-          // gölge yerde kalır
+          if (keeper.diveT0 == null) {
+            // hazır duruş: dizler hafif kırık, kollar yana açık, parmak ucunda küçük yaylanma
+            const moving = keeper.spd > 0.15;
+            const bob = moving ? 0 : Math.abs(Math.sin(t * 5.5)) * h * 0.018;
+            ctx.fillStyle = 'rgba(0,0,0,0.26)';
+            ctx.beginPath(); ctx.ellipse(gx + h * 0.05, gy + h * 0.02, h * 0.26, h * 0.07, 0, 0, Math.PI * 2); ctx.fill();
+            return Sprites.figure(ctx, gx, gy - bob, h * 0.96, { kit: kits.gk, look: keeper.look, facing: 'down', number: 1, run: keeper.run, speed: moving ? Math.max(keeper.spd, 0.5) : 0, armA: moving ? 0.35 : 0.62 + Math.sin(t * 5.5) * 0.04, gloves: true, noShadow: true, t });
+          }
+          // Uçuş: kısa çömelme ile itiş, kavisli uçuş (gövde topa doğru uzanır), yere iniş ve yerde kalış
+          const since = Math.max(0, t - keeper.diveT0);
+          const dir = keeper.diveDir || 1, high = keeper.diveHigh;
+          const ease = (k) => 1 - Math.pow(1 - k, 3);
+          const push = U.clamp(since / 0.07, 0, 1);                 // itiş
+          const fly = U.clamp((since - 0.05) / 0.4, 0, 1);         // uçuş
+          const land = U.clamp((since - 0.42) / 0.16, 0, 1);       // iniş
+          const rotMax = high ? 1.12 : 1.38;
+          const rot = dir * (ease(fly) * rotMax + land * (1.5 - rotMax));
+          const air = Math.sin(fly * Math.PI) * (high ? 0.68 : 0.36) * (1 - land);
+          const crouch = (1 - fly) * push * 0.06;
+          // gölge yerde kalır, uçuşta küçülür
           ctx.fillStyle = 'rgba(0,0,0,0.25)';
-          ctx.beginPath(); ctx.ellipse(gx, gy, h * 0.42, h * 0.08, 0, 0, Math.PI * 2); ctx.fill();
+          ctx.beginPath(); ctx.ellipse(gx + dir * h * 0.3 * ease(fly), gy, h * (0.34 + 0.18 * ease(fly)) * (1 - air * 0.35), h * 0.08, 0, 0, Math.PI * 2); ctx.fill();
+          // iniş tozu
+          if (land > 0 && land < 1) {
+            ctx.fillStyle = `rgba(225,230,205,${0.32 * (1 - land)})`;
+            for (let k = 0; k < 4; k++) { ctx.beginPath(); ctx.arc(gx + dir * h * (0.1 + k * 0.28), gy - h * 0.02, h * (0.06 + land * 0.12), 0, Math.PI * 2); ctx.fill(); }
+          }
           ctx.save();
-          ctx.translate(gx, gy - h * 0.5 * Math.cos(rot) - air * h);
+          ctx.translate(gx, gy - h * 0.5 * Math.cos(rot) * (1 - land * 0.35) - air * h + crouch * h);
           ctx.rotate(rot);
-          Sprites.figure(ctx, 0, h * 0.5, h, { kit: kits.gk, look: keeper.look, facing: 'down', gloves: true, dive: 1, noShadow: true, t });
+          ctx.scale(1, 1 + 0.07 * Math.sin(fly * Math.PI)); // uçuşta gövde uzar
+          Sprites.figure(ctx, 0, h * 0.5, h, { kit: kits.gk, look: keeper.look, facing: 'down', gloves: true, dive: 1, noShadow: true, kick: fly > 0 && land < 1 ? 0.35 : 0, t });
           ctx.restore();
         } });
         defs.forEach((d) => ents.push({ y: d.y, d: () => Sprites.figure(ctx, tx(d.x), ty(d.y), h * (d.wall ? 1.02 : 1), { kit: kits.opp, look: d.look, facing: 'down', number: d.num, run: d.run, speed: d.spd, dive: d.wall && phase !== 'aim' ? 0.5 : 0, t }) }));

@@ -18,6 +18,8 @@ const GK_KITS = [
 ];
 
 // Top tasarımları
+function rrect(c, x, y, w, h, r) { c.beginPath(); if (c.roundRect) c.roundRect(x, y, w, h, r); else c.rect(x, y, w, h); }
+const skins2 = ['#f1c9a5', '#c68642', '#e0ac69', '#8d5524'];
 const BALL_STYLES = {
   classic: { name: 'Klasik', base: '#fbfbfb', panel: '#1b1d22', pattern: 'classic' },
   retro: { name: 'Deri Top', base: '#a8652f', base2: '#6b3a16', panel: '#5a3012', accent: '#e8d5b0', pattern: 'retro' },
@@ -326,8 +328,56 @@ const Sprites = {
   },
 
   // Top tasarımları: lig toplarında ve mağazadaki kozmetik toplarda kullanılır
+  // Gerçek top deseni: kesik ikosahedron (12 beşgen) küre üzerine izdüşüm; dönüşle paneller akar
+  BALL3D: (() => {
+    const F = (1 + Math.sqrt(5)) / 2, nr = (v) => { const l = Math.hypot(v[0], v[1], v[2]); return [v[0] / l, v[1] / l, v[2] / l]; };
+    const V = [];
+    [[0, 1, F], [0, -1, F], [0, 1, -F], [0, -1, -F]].forEach(([a, b, d]) => V.push([a, b, d], [b, d, a], [d, a, b]));
+    const N = V.map(nr), dot = (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
+    // her beşgen: merkezden komşulara 1/3 noktalar, açıya göre sıralı, kenar başına 3 ara nokta
+    return N.map((c, i) => {
+      const nb = N.map((w, j) => [j, dot(c, w)]).filter(([j, d]) => j !== i && d > 0.4).map(([j]) => j);
+      const pts = nb.map((j) => nr([V[i][0] + (V[j][0] - V[i][0]) / 3, V[i][1] + (V[j][1] - V[i][1]) / 3, V[i][2] + (V[j][2] - V[i][2]) / 3]));
+      const r0 = nr([pts[0][0] - c[0] * dot(pts[0], c), pts[0][1] - c[1] * dot(pts[0], c), pts[0][2] - c[2] * dot(pts[0], c)]);
+      const r1 = [c[1] * r0[2] - c[2] * r0[1], c[2] * r0[0] - c[0] * r0[2], c[0] * r0[1] - c[1] * r0[0]];
+      pts.sort((a, b) => Math.atan2(dot(a, r1), dot(a, r0)) - Math.atan2(dot(b, r1), dot(b, r0)));
+      const ring = [];
+      pts.forEach((p, k) => { const q = pts[(k + 1) % 5]; for (let s = 0; s < 3; s++) { const t = s / 3; ring.push(nr([p[0] + (q[0] - p[0]) * t, p[1] + (q[1] - p[1]) * t, p[2] + (q[2] - p[2]) * t])); } });
+      return { c, ring };
+    });
+  })(),
+  ball3d(ctx, x, y, r, rot, B) {
+    const rx = rot * 0.9, ry = rot * 0.37 + 0.6;
+    const cx = Math.cos(rx), sx = Math.sin(rx), cy = Math.cos(ry), sy = Math.sin(ry);
+    const R = (v) => { const y1 = v[1] * cx - v[2] * sx, z1 = v[1] * sx + v[2] * cx; return [v[0] * cy + z1 * sy, y1, -v[0] * sy + z1 * cy]; };
+    ctx.save();
+    ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.clip();
+    const g = ctx.createRadialGradient(x - r * 0.4, y - r * 0.45, r * 0.05, x, y, r * 1.05);
+    g.addColorStop(0, '#ffffff'); g.addColorStop(0.5, B.base || '#f4f5f8'); g.addColorStop(0.85, '#b9c0cc'); g.addColorStop(1, '#6d7588');
+    ctx.fillStyle = g; ctx.fillRect(x - r, y - r, r * 2, r * 2);
+    ctx.fillStyle = B.panel || '#101421';
+    ctx.beginPath();
+    for (const P of Sprites.BALL3D) {
+      if (R(P.c)[2] < -0.3) continue;
+      P.ring.forEach((v, k) => { const q = R(v), px = x + q[0] * r, py = y + q[1] * r; k ? ctx.lineTo(px, py) : ctx.moveTo(px, py); });
+      ctx.closePath();
+    }
+    ctx.fill();
+    // hacim: kenar karartma ve parlama
+    const v = ctx.createRadialGradient(x - r * 0.2, y - r * 0.25, r * 0.5, x, y, r);
+    v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, 'rgba(10,15,35,0.5)');
+    ctx.fillStyle = v; ctx.fillRect(x - r, y - r, r * 2, r * 2);
+    const h = ctx.createRadialGradient(x - r * 0.42, y - r * 0.48, 0, x - r * 0.42, y - r * 0.48, r * 0.5);
+    h.addColorStop(0, 'rgba(255,255,255,0.8)'); h.addColorStop(1, 'rgba(255,255,255,0)');
+    ctx.fillStyle = h; ctx.fillRect(x - r, y - r, r * 2, r * 2);
+    ctx.restore();
+    ctx.strokeStyle = 'rgba(0,0,0,0.35)'; ctx.lineWidth = Math.max(0.8, r * 0.06);
+    ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.stroke();
+  },
   ball(ctx, x, y, r, rot, style) {
     const B = style || Sprites.curBall || BALL_STYLES.classic;
+    // klasik top yeterince büyükse gerçek desen (küçük boyda eski hızlı çizim)
+    if (B.pattern === 'classic' && r >= 5) return Sprites.ball3d(ctx, x, y, r, rot, B);
     ctx.save();
     ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2);
     if (B.base2) {
@@ -434,6 +484,29 @@ const Sprites = {
       ctx.fillRect(Math.random() * W, Math.random() * H, s, s);
     }
   },
+  // Gerçek çim dokusu (img/grass.jpg, ambientCG Grass005, CC0) + biçilmiş şeritler, ışık ve kale ağzı aşınması.
+  // Arka plan maç anı başında bir kez çizilir (önbellek), kare başına maliyeti yok.
+  grassImg: (() => {
+    if (typeof Image === 'undefined') return null;
+    const im = new Image();
+    im.onload = () => { Sprites.grassTile = null; if (typeof window !== 'undefined') window.dispatchEvent(new Event('resize')); };
+    im.src = 'img/grass.jpg';
+    return im;
+  })(),
+  grassTile: null,
+  // Dokuyu bir kez renklendirip küçük bir döşemeye çevirir (her maçta yeniden işlenmez)
+  tile() {
+    if (Sprites.grassTile) return Sprites.grassTile;
+    const im = Sprites.grassImg;
+    if (!im || !im.complete || !im.naturalWidth) return null;
+    const c = document.createElement('canvas'); c.width = c.height = 256;
+    const x = c.getContext('2d');
+    x.drawImage(im, 0, 0, 256, 256);
+    // stadyum çimi rengine çek: hafif mavi-yeşil, daha az sarı
+    x.globalCompositeOperation = 'multiply'; x.fillStyle = '#8fd39a'; x.fillRect(0, 0, 256, 256);
+    x.globalCompositeOperation = 'source-over';
+    return (Sprites.grassTile = c);
+  },
   grass(ctx, W, H, tx, ty, PX, view) {
     if (Sprites.surface === 'sand') {
       Sprites.sand(ctx, W, H);
@@ -442,66 +515,174 @@ const Sprites = {
       if (view.x1 > 26) ctx.fillRect(tx(26.5), 0, W - tx(26.5), H);
       return;
     }
-    ctx.fillStyle = '#1f6b34';
+    ctx.fillStyle = '#2a7d3d';
     ctx.fillRect(0, 0, W, H);
-    // biçilmiş çim şeritleri
+    const tile = Sprites.tile();
+    if (tile) {
+      const pat = ctx.createPattern(tile, 'repeat');
+      const k = (2.6 * PX) / 256; // bir döşeme yaklaşık 2,6 m
+      if (pat.setTransform && typeof DOMMatrix !== 'undefined') pat.setTransform(new DOMMatrix([k, 0, 0, k * 0.85, tx(0) % (256 * k), 0]));
+      ctx.fillStyle = pat; ctx.fillRect(0, 0, W, H);
+    }
+    // biçilmiş çim şeritleri: yumuşak kenarlı açık/koyu bantlar
     for (let y = Math.floor(view.y0 / 5) * 5; y < view.y1; y += 5) {
-      const i = Math.round(y / 5);
-      ctx.fillStyle = Sprites.stripe(i);
-      ctx.fillRect(0, ty(y), W, 5 * PX + 1);
+      const i = Math.round(y / 5), y0 = ty(y), h = 5 * PX + 1;
+      const g = ctx.createLinearGradient(0, y0, 0, y0 + h);
+      const a = i % 2 ? 'rgba(255,255,240,' : 'rgba(0,30,10,';
+      const m = i % 2 ? 0.07 : 0.12;
+      g.addColorStop(0, a + m * 0.6 + ')'); g.addColorStop(0.5, a + m + ')'); g.addColorStop(1, a + m * 0.6 + ')');
+      ctx.fillStyle = g; ctx.fillRect(0, y0, W, h);
     }
-    for (let x = Math.floor(view.x0 / 6) * 6; x < view.x1; x += 6) {
-      if (Math.round(x / 6) % 2) { ctx.fillStyle = 'rgba(255,255,255,0.035)'; ctx.fillRect(tx(x), 0, 6 * PX, H); }
-    }
-    // doku
-    const n = Math.round((W * H) / 900);
-    for (let i = 0; i < n; i++) {
-      ctx.fillStyle = Math.random() < 0.5 ? 'rgba(0,0,0,0.05)' : 'rgba(255,255,255,0.04)';
-      ctx.fillRect(Math.random() * W, Math.random() * H, 2, 2);
-    }
+    // kale ağzı ve penaltı noktasında aşınma
+    const wear = (x, y, rx, ry, a) => {
+      ctx.save(); ctx.translate(tx(x), ty(y)); ctx.scale(1, ry / rx);
+      const g = ctx.createRadialGradient(0, 0, 0, 0, 0, rx * PX);
+      g.addColorStop(0, `rgba(150,140,85,${a})`); g.addColorStop(0.6, `rgba(150,140,85,${a * 0.45})`); g.addColorStop(1, 'rgba(150,140,85,0)');
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(0, 0, rx * PX, 0, Math.PI * 2); ctx.fill(); ctx.restore();
+    };
+    wear(0, 1.2, 3.4, 1.6, 0.32); wear(-1.6, 0.6, 1.4, 0.8, 0.18); wear(1.7, 0.7, 1.3, 0.8, 0.16); wear(0, 11, 1.0, 0.7, 0.2);
+    // stadyum ışığı: ortası parlak, kenarlar ve uzak taraf hafif koyu
+    const L = ctx.createRadialGradient(W * 0.5, H * 0.55, Math.min(W, H) * 0.15, W * 0.5, H * 0.5, Math.max(W, H) * 0.8);
+    L.addColorStop(0, 'rgba(255,255,230,0.06)'); L.addColorStop(1, 'rgba(0,10,5,0.32)');
+    ctx.fillStyle = L; ctx.fillRect(0, 0, W, H);
     // saha dışı
-    ctx.fillStyle = '#1a5a2c';
+    ctx.fillStyle = 'rgba(8,40,18,0.45)';
     if (view.x0 < -26) ctx.fillRect(0, 0, tx(-26.5), H);
     if (view.x1 > 26) ctx.fillRect(tx(26.5), 0, W - tx(26.5), H);
   },
 
-  // Kalenin arkasındaki reklam panoları ve tribün
+  // Kalenin arkası: kulüp renklerinde taraftar tribünü, oyuncunun adının yazdığı dev pankart ve kale yanında fotoğrafçılar.
+  // Statik kısım arka plana bir kez çizilir; flaşlar ve bayraklar standsFx ile kare kare (az sayıda, ucuz).
+  crowd: null, // { c1, c2, name, number } MiniGame.play ayarlar
+  _fx: null,
   stands(ctx, W, tx, ty, PX, view, fs) {
-    const boardY = ty(-3.2), boardH = 0.9 * PX;
+    const boardY = ty(-3.2), boardH = 1.05 * PX;
+    Sprites._fx = null;
     if (view.y0 > -3.2) return;
     if (Sprites.surface === 'sand') return Sprites.street(ctx, W, boardY, PX);
-    // tribün
+    const C = Sprites.crowd || { c1: '#c8102e', c2: '#fdb913', name: '', number: 10 };
+    const A = Sprites.atmo || { lvl: 0.8, star: true, photogs: 8, club: '' };
+    const seat = Sprites.shade(C.c1, -0.35);
+    const rnd = (() => { let z = 1234567; return () => { z = (z * 16807) % 2147483647; return z / 2147483647; }; })();
+    // tribün zemini
     const top = 0, bottom = boardY - boardH;
     if (bottom > top) {
       const g = ctx.createLinearGradient(0, top, 0, bottom);
-      g.addColorStop(0, '#0d1424'); g.addColorStop(1, '#1d2a44');
+      g.addColorStop(0, '#070b16'); g.addColorStop(1, '#182238');
       ctx.fillStyle = g; ctx.fillRect(0, top, W, bottom - top);
-      const step = Math.max(5, PX * 0.55);
-      const cols = ['#e8e1d0', '#c8102e', '#f4c430', '#2a6fdb', '#ffffff', '#1d2433'];
-      for (let y = bottom - step * 0.6; y > top; y -= step) {
-        for (let x = (Math.floor(y / step) % 2) * step * 0.5; x < W; x += step) {
-          if (Math.random() < 0.12) continue;
-          ctx.fillStyle = cols[(Math.random() * cols.length) | 0];
-          ctx.globalAlpha = 0.55 + 0.4 * ((y - top) / Math.max(1, bottom - top));
-          ctx.beginPath(); ctx.arc(x + Math.random() * 2, y, step * 0.28, 0, Math.PI * 2); ctx.fill();
+      // taraftarlar: uzak sıralar küçük ve koyu; çoğu kulüp renklerinde, bazıları kollar havada ya da atkılı
+      const skins = ['#f1c9a5', '#e0ac69', '#c68642', '#8d5524', '#ffdbac'];
+      const shirts = [C.c1, C.c1, C.c2, C.c1, C.c2, '#f2f2f2', '#1d2433'];
+      const rows = [];
+      let y = bottom - PX * 0.15;
+      while (y > top - PX * 0.4) { const k = U.clamp((y - top) / Math.max(1, bottom - top), 0, 1); const sz = PX * (0.28 + 0.34 * k); rows.push([y, sz, k]); y -= sz * 1.05; }
+      rows.reverse().forEach(([yy, sz, k]) => {
+        const dim = 0.45 + 0.55 * k;
+        for (let x = -sz * rnd(); x < W + sz; x += sz * (0.92 + rnd() * 0.25)) {
+          const shirt = shirts[(rnd() * shirts.length) | 0], up = rnd() < 0.16 * (0.3 + A.lvl), scarf = !up && rnd() < 0.12 * A.lvl;
+          ctx.globalAlpha = dim;
+          if (rnd() > 0.12 + 0.88 * A.lvl) { // boş koltuk
+            ctx.fillStyle = Sprites.shade(seat, -0.15 * (1 - k)); ctx.fillRect(x - sz * 0.36, yy + sz * 0.18, sz * 0.72, sz * 0.5);
+            ctx.fillStyle = Sprites.shade(seat, 0.12); ctx.fillRect(x - sz * 0.36, yy + sz * 0.18, sz * 0.72, sz * 0.12);
+            continue;
+          }
+          ctx.fillStyle = shirt;
+          ctx.beginPath(); ctx.ellipse(x, yy + sz * 0.42, sz * 0.46, sz * 0.42, 0, Math.PI, 0); ctx.fill();
+          ctx.fillRect(x - sz * 0.46, yy + sz * 0.42, sz * 0.92, sz * 0.4);
+          ctx.fillStyle = skins[(rnd() * skins.length) | 0];
+          ctx.beginPath(); ctx.arc(x, yy + sz * 0.05, sz * 0.24, 0, Math.PI * 2); ctx.fill();
+          if (up) { ctx.strokeStyle = shirt; ctx.lineWidth = sz * 0.13; ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(x - sz * 0.32, yy + sz * 0.3); ctx.lineTo(x - sz * 0.45, yy - sz * 0.45); ctx.moveTo(x + sz * 0.32, yy + sz * 0.3); ctx.lineTo(x + sz * 0.45, yy - sz * 0.45); ctx.stroke(); ctx.lineCap = 'butt'; }
+          if (scarf) { ctx.fillStyle = C.c1; ctx.fillRect(x - sz * 0.7, yy - sz * 0.42, sz * 1.4, sz * 0.18); ctx.fillStyle = C.c2; for (let q = 0; q < 4; q++) ctx.fillRect(x - sz * 0.7 + q * sz * 0.35, yy - sz * 0.42, sz * 0.17, sz * 0.18); }
         }
-      }
+      });
       ctx.globalAlpha = 1;
+      // üstte projektör ışığı ve sis
+      const hz = ctx.createLinearGradient(0, top, 0, bottom);
+      hz.addColorStop(0, 'rgba(180,200,255,0.10)'); hz.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.fillStyle = hz; ctx.fillRect(0, top, W, bottom - top);
     }
-    // panolar
-    const ads = [['STARFOOT', '#0f1b3d', '#ffcf3f'], ['ANADOLU ENERJİ', '#c8102e', '#ffffff'], ['KARTAL SİGORTA', '#123c7a', '#ffffff'], ['BOSFOR BANK', '#0b6e4f', '#ffffff'], ['YILDIZ KOLA', '#e30613', '#ffffff'], ['GALATA TELEKOM', '#ffcf3f', '#0f1b3d']];
-    const pw = 9 * PX;
-    let i = 0;
-    for (let x = tx(-60); x < W; x += pw, i++) {
-      const [txt, bg, fg] = ads[((i % ads.length) + ads.length) % ads.length];
-      ctx.fillStyle = bg; ctx.fillRect(x, boardY - boardH, pw - 2, boardH);
-      ctx.fillStyle = fg;
-      ctx.font = `800 ${Math.round(boardH * 0.55)}px "Saira Condensed", "Arial Narrow", sans-serif`;
-      ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-      ctx.fillText(txt, x + pw / 2, boardY - boardH / 2);
-      ctx.textBaseline = 'alphabetic';
+    // dev pankart (reklam yerine): kulüp renkleri, yıldız ve oyuncunun adı
+    const bt = boardY - boardH;
+    const bg = ctx.createLinearGradient(0, bt, 0, boardY);
+    bg.addColorStop(0, Sprites.shade(C.c1, 0.12)); bg.addColorStop(1, Sprites.shade(C.c1, -0.25));
+    ctx.fillStyle = bg; ctx.fillRect(0, bt, W, boardH);
+    ctx.fillStyle = C.c2; ctx.fillRect(0, bt, W, boardH * 0.1); ctx.fillRect(0, boardY - boardH * 0.1, W, boardH * 0.1);
+    const label = (A.star ? ((C.name || '') + ' ' + (C.number || '')) : (A.club || 'STARFOOT')).toLocaleUpperCase('tr').trim() || 'STARFOOT';
+    ctx.font = `900 italic ${Math.round(boardH * 0.6)}px "Saira Condensed", "Arial Narrow", sans-serif`;
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    const seg = ctx.measureText(label).width + boardH * 2.2;
+    for (let x = tx(0) - Math.ceil(tx(0) / seg) * seg; x < W + seg; x += seg) {
+      ctx.fillStyle = '#ffffff'; ctx.fillText(label, x, bt + boardH * 0.53);
+      ctx.fillStyle = C.c2; Sprites.star(ctx, x + seg / 2, bt + boardH * 0.5, boardH * 0.28, -Math.PI / 2);
     }
-    ctx.fillStyle = 'rgba(0,0,0,0.25)'; ctx.fillRect(0, boardY, W, 0.25 * PX);
+    ctx.textBaseline = 'alphabetic';
+    // kumaş kıvrımı
+    for (let x = 0; x < W; x += PX * 2.2) { const g2 = ctx.createLinearGradient(x, 0, x + PX * 2.2, 0); g2.addColorStop(0, 'rgba(0,0,0,0.12)'); g2.addColorStop(0.5, 'rgba(255,255,255,0.06)'); g2.addColorStop(1, 'rgba(0,0,0,0.12)'); ctx.fillStyle = g2; ctx.fillRect(x, bt, PX * 2.2, boardH); }
+    ctx.fillStyle = 'rgba(0,0,0,0.28)'; ctx.fillRect(0, boardY, W, 0.25 * PX);
+    // fotoğrafçılar: kale direklerinin iki yanında, çömelmiş, objektifler sahaya dönük
+    const ph = [];
+    // ününe göre fotoğrafçı sayısı: önce kale yanları, sonra dışa doğru
+    const spots = [-6.4, 6.4, -8.7, 8.6, -10.6, 10.5, -12.5, 12.6].slice(0, A.photogs);
+    spots.forEach((x, i) => {
+      if (x < view.x0 - 1 || x > view.x1 + 1) return;
+      const px = tx(x), py = ty(-2.55 - (i % 2) * 0.25), sz = PX * 0.7;
+      ctx.fillStyle = 'rgba(0,0,0,0.25)'; ctx.beginPath(); ctx.ellipse(px, py + sz * 0.5, sz * 0.55, sz * 0.14, 0, 0, Math.PI * 2); ctx.fill();
+      // çömelmiş gövde (koyu mont) ve turuncu basın yeleği
+      ctx.fillStyle = i % 3 ? '#262a33' : '#3b4150';
+      rrect(ctx, px - sz * 0.42, py - sz * 0.2, sz * 0.84, sz * 0.68, sz * 0.2); ctx.fill();
+      ctx.fillStyle = '#ff8a1e'; rrect(ctx, px - sz * 0.3, py - sz * 0.12, sz * 0.6, sz * 0.42, sz * 0.08); ctx.fill();
+      ctx.fillStyle = 'rgba(255,255,255,0.85)'; ctx.fillRect(px - sz * 0.22, py + sz * 0.02, sz * 0.44, sz * 0.06);
+      // baş ve şapka
+      ctx.fillStyle = skins2[i % skins2.length]; ctx.beginPath(); ctx.arc(px, py - sz * 0.42, sz * 0.2, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = i % 2 ? '#1b1e25' : '#5a2a2a'; ctx.beginPath(); ctx.arc(px, py - sz * 0.47, sz * 0.2, Math.PI, 0); ctx.fill();
+      // fotoğraf makinesi yüzün önünde, uzun objektif sahaya bakıyor
+      ctx.fillStyle = '#121317'; rrect(ctx, px - sz * 0.26, py - sz * 0.4, sz * 0.52, sz * 0.24, sz * 0.05); ctx.fill();
+      ctx.fillStyle = '#2a2c33'; ctx.beginPath(); ctx.arc(px + sz * 0.02, py - sz * 0.2, sz * 0.15, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = '#6f9be0'; ctx.beginPath(); ctx.arc(px + sz * 0.02, py - sz * 0.2, sz * 0.08, 0, Math.PI * 2); ctx.fill();
+      ctx.fillStyle = 'rgba(255,255,255,0.7)'; ctx.beginPath(); ctx.arc(px - sz * 0.01, py - sz * 0.23, sz * 0.025, 0, Math.PI * 2); ctx.fill();
+      ph.push([px, py - sz * 0.05, sz]);
+    });
+    // canlı efektler için konumlar
+    const flags = [];
+    for (let i = 0; i < Math.round(4 * A.lvl - 0.6); i++) flags.push([W * (0.1 + i * 0.27 + rnd() * 0.05), Math.max(PX * 0.3, bt - PX * (1.9 + rnd() * 1.0)), PX * (0.95 + rnd() * 0.4), i % 2]);
+    Sprites._fx = { ph, flags, top: 0, bottom: Math.max(0, bt), W, C, PX, lvl: A.lvl };
+  },
+  // Kare kare: tribünde telefon flaşları, dalgalanan bayraklar, fotoğrafçı flaşları; hype (0..1) gol anında artar
+  standsFx(ctx, t, hype = 0) {
+    const F = Sprites._fx;
+    if (!F || F.bottom < 4) return;
+    const { W, C, PX } = F;
+    // bayraklar
+    F.flags.forEach(([x, y, w, alt], i) => {
+      const h = w * 0.62, amp = w * (0.06 + hype * 0.06);
+      ctx.strokeStyle = '#c9c9c9'; ctx.lineWidth = Math.max(1, PX * 0.05);
+      ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x, y + h * 1.9); ctx.stroke();
+      ctx.beginPath();
+      const N = 8;
+      for (let k = 0; k <= N; k++) { const u = k / N; ctx.lineTo(x + u * w, y + Math.sin(u * 5 - t * (4 + hype * 4) + i) * amp * u); }
+      for (let k = N; k >= 0; k--) { const u = k / N; ctx.lineTo(x + u * w, y + h + Math.sin(u * 5 - t * (4 + hype * 4) + i) * amp * u); }
+      ctx.closePath(); ctx.fillStyle = alt ? C.c2 : C.c1; ctx.fill();
+      ctx.fillStyle = alt ? C.c1 : C.c2; ctx.fillRect(x, y + h * 0.4, w * 0.25, h * 0.2);
+    });
+    // tribün flaşları
+    const n = Math.round((3 + hype * 14) * F.lvl);
+    for (let i = 0; i < n; i++) {
+      const k = Math.floor(t * 7) * 13 + i * 7;
+      const hx = Math.abs(Math.sin(k * 12.9898) * 43758.5453) % 1, hy = Math.abs(Math.sin(k * 78.233) * 12345.678) % 1;
+      const x = hx * W, y = F.top + hy * (F.bottom - F.top), r = PX * (0.25 + hy * 0.3);
+      const g = ctx.createRadialGradient(x, y, 0, x, y, r);
+      g.addColorStop(0, 'rgba(255,255,255,0.95)'); g.addColorStop(1, 'rgba(255,255,255,0)');
+      ctx.fillStyle = g; ctx.fillRect(x - r, y - r, r * 2, r * 2);
+    }
+    // fotoğrafçı flaşları
+    F.ph.forEach(([x, y, sz], i) => {
+      const on = ((Math.floor(t * (2.2 + hype * 6) + i * 1.7)) % 5) === 0;
+      if (!on) return;
+      const r = sz * (1.1 + hype * 0.6);
+      const g = ctx.createRadialGradient(x, y - sz * 0.25, 0, x, y - sz * 0.25, r);
+      g.addColorStop(0, 'rgba(255,255,255,1)'); g.addColorStop(0.25, 'rgba(230,240,255,0.6)'); g.addColorStop(1, 'rgba(230,240,255,0)');
+      ctx.fillStyle = g; ctx.fillRect(x - r, y - sz * 0.25 - r, r * 2, r * 2);
+    });
   },
 
   // Mahalle: kalenin arkasında apartmanlar ve boyalı duvar
@@ -553,8 +734,9 @@ const Sprites = {
       ctx.setLineDash([]);
       return;
     }
-    ctx.strokeStyle = 'rgba(255,255,255,0.88)';
+    ctx.strokeStyle = 'rgba(250,252,245,0.82)';
     ctx.lineWidth = Math.max(2, PX * 0.12);
+    ctx.shadowColor = 'rgba(255,255,255,0.35)'; ctx.shadowBlur = Math.max(1, PX * 0.05);
     ctx.beginPath();
     ctx.moveTo(tx(-26), ty(0)); ctx.lineTo(tx(26), ty(0));
     ctx.moveTo(tx(-26), ty(0)); ctx.lineTo(tx(-26), ty(40));
@@ -569,42 +751,69 @@ const Sprites = {
     ctx.beginPath(); ctx.arc(tx(0), ty(11), Math.max(2, PX * 0.15), 0, Math.PI * 2); ctx.fill();
     // korner yayları
     [-26, 26].forEach((x) => { ctx.beginPath(); ctx.arc(tx(x), ty(0), PX, x < 0 ? 0 : Math.PI / 2, x < 0 ? Math.PI / 2 : Math.PI); ctx.stroke(); });
+    ctx.shadowBlur = 0; ctx.shadowColor = 'transparent';
+    // kalenin çimdeki gölgesi (ışık önden-üstten)
+    ctx.fillStyle = 'rgba(0,20,8,0.22)';
+    ctx.beginPath(); ctx.moveTo(tx(-3.66), ty(0)); ctx.lineTo(tx(3.66), ty(0)); ctx.lineTo(tx(3.9), ty(-1.6)); ctx.lineTo(tx(-3.4), ty(-1.6)); ctx.closePath(); ctx.fill();
   },
 
-  // Kale: arka file + yan file (çerçeve ayrı çizilir)
+  // Kale: arka ve yan fileler (eşkenar dörtgen ağ), file sallanması; çerçeve ayrı çizilir
   net(ctx, tx, ty, PX, shake) {
-    const back = -2, bz = 1.7;
-    const sh = shake || 0;
-    ctx.fillStyle = 'rgba(240,240,240,0.10)';
+    const back = -2, bz = 1.7, sh = shake || 0;
+    const sand = Sprites.surface === 'sand';
+    // file içi hafif gölge (derinlik)
+    const fg = ctx.createLinearGradient(0, ty(0, 2.44), 0, ty(back) + sh);
+    fg.addColorStop(0, 'rgba(10,20,15,0.10)'); fg.addColorStop(1, 'rgba(10,20,15,0.28)');
+    ctx.fillStyle = fg;
     ctx.beginPath();
     ctx.moveTo(tx(-3.66), ty(0, 2.44)); ctx.lineTo(tx(3.66), ty(0, 2.44));
-    ctx.lineTo(tx(3.66), ty(back, bz) + sh); ctx.lineTo(tx(-3.66), ty(back, bz) + sh);
-    ctx.closePath(); ctx.fill();
-    ctx.fillStyle = 'rgba(240,240,240,0.07)';
-    ctx.fillRect(tx(-3.66), ty(back, bz) + sh, 7.32 * PX, ty(back) - ty(back, bz));
-    ctx.strokeStyle = 'rgba(255,255,255,0.38)'; ctx.lineWidth = 1;
-    for (let x = -3.66; x <= 3.67; x += 0.4) {
-      ctx.beginPath(); ctx.moveTo(tx(x), ty(0, 2.44)); ctx.lineTo(tx(x), ty(back, bz) + sh); ctx.lineTo(tx(x), ty(back) + sh * 0.5); ctx.stroke();
+    ctx.lineTo(tx(3.66), ty(back, bz) + sh); ctx.lineTo(tx(3.66), ty(back) + sh * 0.5);
+    ctx.lineTo(tx(-3.66), ty(back) + sh * 0.5); ctx.lineTo(tx(-3.66), ty(back, bz) + sh); ctx.closePath(); ctx.fill();
+    // ağ: tek yolda çizilir (hızlı); çatı ve arka yüz, yan fileler
+    const P = (x, y, z, f) => [tx(x), ty(y, z) + sh * f];
+    const lerp = (a, b, k) => [a[0] + (b[0] - a[0]) * k, a[1] + (b[1] - a[1]) * k];
+    ctx.strokeStyle = sand ? 'rgba(230,230,230,0.30)' : 'rgba(255,255,255,0.42)';
+    ctx.lineWidth = Math.max(1, PX * 0.025);
+    ctx.beginPath();
+    const cols = 18, rows = 6;
+    // arka yüz (üst arka çubuk -> zemin): eşkenar dörtgen için iki yönde çapraz çizgiler
+    const tl = P(-3.66, back, bz, 1), tr = P(3.66, back, bz, 1), bl = P(-3.66, back, 0, 0.5), br = P(3.66, back, 0, 0.5);
+    for (let i = -rows; i <= cols; i++) {
+      for (const dir of [1, -1]) {
+        const a0 = i / cols, a1 = (i + rows * dir) / cols;
+        const p0 = lerp(tl, tr, Math.min(1, Math.max(0, a0))), p1 = lerp(bl, br, Math.min(1, Math.max(0, a1)));
+        if ((a0 < 0 && a1 < 0) || (a0 > 1 && a1 > 1)) continue;
+        ctx.moveTo(p0[0], p0[1]); ctx.lineTo(p1[0], p1[1]);
+      }
     }
-    for (let z = 0; z <= bz; z += 0.4) {
-      ctx.beginPath(); ctx.moveTo(tx(-3.66), ty(back, z) + sh); ctx.lineTo(tx(3.66), ty(back, z) + sh); ctx.stroke();
+    // çatı (direk üstü -> arka üst): enine ve boyuna
+    for (let k = 0; k <= 4; k++) { const f = k / 4, y = back * f, z = 2.44 + (bz - 2.44) * f; const a = P(-3.66, y, z, f), b = P(3.66, y, z, f); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); }
+    for (let x = -3.66; x <= 3.67; x += 0.61) { const a = P(x, 0, 2.44, 0), b = P(x, back, bz, 1); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); }
+    // yan fileler
+    for (const sx of [-3.66, 3.66]) {
+      for (let k = 1; k <= 3; k++) { const f = k / 4; const a = P(sx, back * f, 2.44 + (bz - 2.44) * f, f), b = P(sx, back * f, 0, f * 0.5); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); }
     }
-    for (let f = 0.2; f < 1; f += 0.2) {
-      const y = 0 + (back - 0) * f, z = 2.44 + (bz - 2.44) * f;
-      ctx.beginPath(); ctx.moveTo(tx(-3.66), ty(y, z) + sh * f); ctx.lineTo(tx(3.66), ty(y, z) + sh * f); ctx.stroke();
-    }
+    ctx.stroke();
+    // arka direkler (file taşıyıcıları)
+    ctx.strokeStyle = sand ? 'rgba(170,175,180,0.8)' : 'rgba(225,228,232,0.85)'; ctx.lineWidth = Math.max(1.5, PX * 0.05);
+    ctx.beginPath();
+    for (const sx of [-3.66, 3.66]) { const a = P(sx, 0, 2.44, 0), b = P(sx, back, bz, 1), c = P(sx, back, 0, 0.5); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); ctx.lineTo(c[0], c[1]); }
+    const a2 = P(-3.66, back, bz, 1), b2 = P(3.66, back, bz, 1); ctx.moveTo(a2[0], a2[1]); ctx.lineTo(b2[0], b2[1]);
+    ctx.stroke();
   },
 
+  // Direkler ve üst direk: yuvarlak profil hissi (gölgeli beyaz boru)
   frame(ctx, tx, ty, PX) {
     const lw = Math.max(3, PX * 0.16);
-    ctx.lineCap = 'round';
-    ctx.strokeStyle = 'rgba(0,0,0,0.25)'; ctx.lineWidth = lw;
-    ctx.beginPath(); ctx.moveTo(tx(-3.66) + lw, ty(0) + lw * 0.3); ctx.lineTo(tx(3.66) + lw, ty(0) + lw * 0.3); ctx.stroke();
-    ctx.strokeStyle = Sprites.surface === 'sand' ? '#b9c0c4' : '#ffffff'; ctx.lineWidth = lw;
-    ctx.beginPath();
-    ctx.moveTo(tx(-3.66), ty(0)); ctx.lineTo(tx(-3.66), ty(0, 2.44));
-    ctx.lineTo(tx(3.66), ty(0, 2.44)); ctx.lineTo(tx(3.66), ty(0));
-    ctx.stroke();
-    ctx.lineCap = 'butt';
+    const sand = Sprites.surface === 'sand';
+    ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+    const path = (ox, oy) => { ctx.beginPath(); ctx.moveTo(tx(-3.66) + ox, ty(0) + oy); ctx.lineTo(tx(-3.66) + ox, ty(0, 2.44) + oy); ctx.lineTo(tx(3.66) + ox, ty(0, 2.44) + oy); ctx.lineTo(tx(3.66) + ox, ty(0) + oy); };
+    // gölge
+    ctx.strokeStyle = 'rgba(0,0,0,0.28)'; ctx.lineWidth = lw; path(lw * 0.5, lw * 0.35); ctx.stroke();
+    // boru: koyu kenar, beyaz gövde, parlak çizgi
+    ctx.strokeStyle = sand ? '#8f979c' : '#c9ced6'; ctx.lineWidth = lw * 1.12; path(0, 0); ctx.stroke();
+    ctx.strokeStyle = sand ? '#b9c0c4' : '#ffffff'; ctx.lineWidth = lw * 0.82; path(-lw * 0.08, -lw * 0.06); ctx.stroke();
+    ctx.strokeStyle = 'rgba(255,255,255,0.9)'; ctx.lineWidth = Math.max(1, lw * 0.22); path(-lw * 0.22, -lw * 0.2); ctx.stroke();
+    ctx.lineCap = 'butt'; ctx.lineJoin = 'miter';
   },
 };
