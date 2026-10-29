@@ -620,8 +620,10 @@ def gamecenter_setup(asc, app_id, cfg):
                 attrs = {'name': t['name'][:30], 'beforeEarnedDescription': t['desc'][:200], 'afterEarnedDescription': t['desc'][:200]}
                 if loc in locs:
                     lid = locs[loc]['id']
-                    asc.req('PATCH', f'/v1/gameCenterAchievementLocalizations/{lid}', write=True, body={'data': {
-                        'type': 'gameCenterAchievementLocalizations', 'id': lid, 'attributes': attrs}})
+                    cur = locs[loc]['attributes']
+                    if any(cur.get(k) != v for k, v in attrs.items()):
+                        asc.req('PATCH', f'/v1/gameCenterAchievementLocalizations/{lid}', write=True, body={'data': {
+                            'type': 'gameCenterAchievementLocalizations', 'id': lid, 'attributes': attrs}})
                 else:
                     lid = asc.req('POST', '/v1/gameCenterAchievementLocalizations', write=True, body={'data': {
                         'type': 'gameCenterAchievementLocalizations', 'attributes': dict(attrs, locale=loc),
@@ -633,8 +635,13 @@ def gamecenter_setup(asc, app_id, cfg):
                     except RuntimeError:
                         has_img = False
                 if not has_img:
-                    _upload_asset(asc, 'gameCenterAchievementImages', 'gameCenterAchievementLocalization',
-                                  'gameCenterAchievementLocalizations', lid, img, {})
+                    try:
+                        _upload_asset(asc, 'gameCenterAchievementImages', 'gameCenterAchievementLocalization',
+                                      'gameCenterAchievementLocalizations', lid, img, {})
+                    except RuntimeError as err:
+                        # sunucu hatası sonrası yeniden denemede görsel zaten oluşmuş olabilir
+                        if 'already exists' not in str(err):
+                            raise
             print(f"• {a['id']} ({a['points']} puan) tamam")
         except RuntimeError as err:
             print(f"   ! {a['id']}: {err}"); fails.append(a['id'])
@@ -654,7 +661,11 @@ def gamecenter_setup(asc, app_id, cfg):
                     'relationships': {'gameCenterDetail': {'data': {'type': 'gameCenterDetails', 'id': gid}}}}})['data']['id']
             locs = {} if bid == 'DRY' else {x['attributes']['locale']: x['id'] for x in
                                             _all(asc, f'/v1/gameCenterLeaderboards/{bid}/localizations')}
+            names = {} if bid == 'DRY' else {x['attributes']['locale']: x['attributes'].get('name') for x in
+                                             _all(asc, f'/v1/gameCenterLeaderboards/{bid}/localizations')}
             for loc, t in lb['locales'].items():
+                if loc in locs and names.get(loc) == t['name']:
+                    continue
                 if loc in locs:
                     asc.req('PATCH', f'/v1/gameCenterLeaderboardLocalizations/{locs[loc]}', write=True, body={'data': {
                         'type': 'gameCenterLeaderboardLocalizations', 'id': locs[loc], 'attributes': {'name': t['name']}}})
@@ -668,7 +679,10 @@ def gamecenter_setup(asc, app_id, cfg):
 
     # ---- düzenlenebilir sürüme Game Center'ı bağla (ilk yayında başarımlar sürümle birlikte incelenir)
     vs = asc.get(f'/v1/apps/{app_id}/appStoreVersions', **{'filter[platform]': 'IOS', 'limit': 10})['data']
-    ed = [v for v in vs if v['attributes']['appStoreState'] in EDITABLE]
+    # yalnız Game Center kodunu içeren sürüme (Xcode projesindeki sürüm numarası) bağla
+    m = re.search(r'MARKETING_VERSION = ([\d.]+);', (ROOT / 'app/ios/App/App.xcodeproj/project.pbxproj').read_text())
+    want = m.group(1) if m else ''
+    ed = [v for v in vs if v['attributes']['appStoreState'] in EDITABLE and v['attributes']['versionString'] == want]
     if ed:
         v = ed[0]
         try:
@@ -678,7 +692,7 @@ def gamecenter_setup(asc, app_id, cfg):
         if not cur:
             try:
                 asc.req('POST', '/v1/gameCenterAppVersions', write=True, body={'data': {
-                    'type': 'gameCenterAppVersions', 'attributes': {'enabled': True},
+                    'type': 'gameCenterAppVersions',
                     'relationships': {'appStoreVersion': {'data': {'type': 'appStoreVersions', 'id': v['id']}}}}})
                 print(f"Game Center {v['attributes']['versionString']} sürümüne bağlandı")
             except RuntimeError as err:
@@ -686,7 +700,7 @@ def gamecenter_setup(asc, app_id, cfg):
         else:
             print(f"Game Center zaten {v['attributes']['versionString']} sürümüne bağlı")
     else:
-        print('Düzenlenebilir sürüm yok: Game Center bir sonraki sürüm açıldığında bağlanmalı')
+        print(f'{want} sürümü App Store Connect\'te henüz yok ya da düzenlenemiyor: sürüm açılınca bu adım yeniden çalıştırılmalı')
     if fails:
         sys.exit('Sorun çıkanlar: ' + ', '.join(fails))
 
