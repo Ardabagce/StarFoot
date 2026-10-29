@@ -549,8 +549,7 @@ def nominate(asc, app_id, cfg, event_ids):
     except RuntimeError as err:
         print(f'   (taslaklar okunamadı: {err})'); cur = []
     if cur:
-        nid = cur[0]['id']
-        attrs.pop('submitted')
+        nid = cur[0]['id']  # taslak kalsın: Apple güncellemede submitted alanını şart koşuyor
         try:
             asc.req('PATCH', f'/v1/nominations/{nid}', write=True, body={'data': {'type': 'nominations', 'id': nid, 'attributes': attrs, 'relationships': rel}})
         except RuntimeError:
