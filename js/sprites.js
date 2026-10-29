@@ -489,7 +489,7 @@ const Sprites = {
   grassImg: (() => {
     if (typeof Image === 'undefined') return null;
     const im = new Image();
-    im.onload = () => { Sprites.grassTile = null; if (typeof window !== 'undefined') window.dispatchEvent(new Event('resize')); };
+    im.onload = () => { Sprites.grassTile = null; Sprites._turf = {}; if (typeof window !== 'undefined') window.dispatchEvent(new Event('resize')); };
     im.src = 'img/grass.jpg';
     return im;
   })(),
@@ -506,6 +506,43 @@ const Sprites = {
     x.globalCompositeOperation = 'multiply'; x.fillStyle = '#8fd39a'; x.fillRect(0, 0, 256, 256);
     x.globalCompositeOperation = 'source-over';
     return (Sprites.grassTile = c);
+  },
+  // Mini oyun zemini (dikey bantlı): gerçek çim dokusu + yumuşak biçme şeritleri.
+  // scroll verilmezse sonuç önbellekten çizilir; scroll (piksel) verilirse doku ve şeritler kayar (çalım oyunu).
+  _turf: {},
+  turf(ctx, W, H, n = 12, scroll = null, band = null) {
+    const tile = Sprites.surface === 'sand' ? null : Sprites.tile();
+    const bh = band || H / n;
+    if (!tile) {
+      const off = scroll == null ? 0 : ((scroll % (bh * 2)) + bh * 2) % (bh * 2);
+      for (let i = -2, y = off - bh * 2; y < H; i++, y += bh) { ctx.fillStyle = Sprites.stripe(i); ctx.fillRect(0, y, W, bh + 1); }
+      return;
+    }
+    const paint = (c, off) => {
+      c.fillStyle = '#2a7d3d'; c.fillRect(0, 0, W, H);
+      const pat = c.createPattern(tile, 'repeat'), k = W / 5 / 256;
+      if (pat.setTransform && typeof DOMMatrix !== 'undefined') pat.setTransform(new DOMMatrix([k, 0, 0, k, 0, off % (256 * k)]));
+      c.fillStyle = pat; c.fillRect(0, 0, W, H);
+      const o2 = ((off % (bh * 2)) + bh * 2) % (bh * 2);
+      for (let i = 0, y = o2 - bh * 2; y < H; i++, y += bh) { c.fillStyle = i % 2 ? 'rgba(255,255,240,0.06)' : 'rgba(0,30,10,0.11)'; c.fillRect(0, y, W, bh + 1); }
+    };
+    if (scroll != null) {
+      paint(ctx, scroll);
+      const v = ctx.createLinearGradient(0, 0, W, 0); v.addColorStop(0, 'rgba(0,10,5,0.22)'); v.addColorStop(0.5, 'rgba(0,0,0,0)'); v.addColorStop(1, 'rgba(0,10,5,0.22)');
+      ctx.fillStyle = v; ctx.fillRect(0, 0, W, H);
+      return;
+    }
+    const key = W + 'x' + H + 'n' + n;
+    let b = Sprites._turf[key];
+    if (!b) {
+      b = document.createElement('canvas'); b.width = W; b.height = H;
+      const c = b.getContext('2d'); paint(c, 0);
+      const L = c.createRadialGradient(W / 2, H * 0.55, Math.min(W, H) * 0.15, W / 2, H * 0.5, Math.max(W, H) * 0.8);
+      L.addColorStop(0, 'rgba(255,255,230,0.05)'); L.addColorStop(1, 'rgba(0,10,5,0.3)');
+      c.fillStyle = L; c.fillRect(0, 0, W, H);
+      Sprites._turf = { [key]: b }; // yalnız son boyut saklanır (bellek)
+    }
+    ctx.drawImage(b, 0, 0);
   },
   grass(ctx, W, H, tx, ty, PX, view) {
     if (Sprites.surface === 'sand') {

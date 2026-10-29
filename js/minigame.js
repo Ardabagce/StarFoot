@@ -2,6 +2,8 @@
 
 const PITCH = { W: 52, GOAL_W: 3.66, BAR: 2.44 };
 
+// Zor seviyede kaleci ve rakipler sertleşir (kolay ve orta aynı kalır)
+const HARD = () => typeof Game !== 'undefined' && Game.state && Game.state.difficulty === 'hard';
 const Scenes = {
   // type: open | deep | close | freekick | penalty
   // o.skill: 0 (çok kolay) .. 1 (çok zor), o.narrow: dikey ekran
@@ -195,13 +197,13 @@ const MiniGame = {
       const shooter = mk({ x: scene.ball.x - 0.6, y: scene.ball.y + 0.7 }, 7, { num: o.number || 10, look: Sprites.me() });
       const kp = scene.keeper;
       const keeper = mk({ x: kp.x, y: kp.y }, 3, {
-        delay: 0.34 - 0.2 * s + fkFar * 0.12, speed: (1.6 + 3.0 * s) * (1 - fkFar * 0.25), reach: (0.5 + 0.55 * s) * (1 - fkFar * 0.15), dive: 0.2 + 0.6 * s,
+        delay: (0.34 - 0.2 * s + fkFar * 0.12) * (HARD() ? 0.7 : 1), speed: (1.6 + 3.0 * s) * (1 - fkFar * 0.25) * (HARD() ? 1.22 : 1), reach: (0.5 + 0.55 * s) * (1 - fkFar * 0.15) * (HARD() ? 1.18 : 1), dive: (0.2 + 0.6 * s) * (HARD() ? 1.2 : 1),
         tx: kp.x, pen: scene.type === 'penalty', diveAmt: 0,
       });
       const defs = scene.defenders.map((d, i) => mk(d, 11 + i * 3, { num: [4, 5, 6, 3, 2, 8, 14, 22][i % 8] }));
       const mates = scene.mates.map((m, i) => mk(m, 31 + i * 5));
-      const dSpeed = 0.8 + 2.4 * s;
-      const dDelay = 0.26 - 0.12 * s;
+      const dSpeed = (0.8 + 2.4 * s) * (HARD() ? 1.3 : 1);
+      const dDelay = (0.26 - 0.12 * s) * (HARD() ? 0.65 : 1);
       const kits = o.kits;
 
       let t = 0, kickT = -9, endT = 0;
@@ -407,12 +409,14 @@ const MiniGame = {
         phase = 'fly';
         kickT = t;
         if (keeper.pen) {
-          const side = U.weighted([-1, 0, 1], (v) => (v === 0 ? 0.2 : 0.4));
+          let side = U.weighted([-1, 0, 1], (v) => (v === 0 ? 0.2 : 0.4));
+          // Zor: kaleci vuruşu daha sık doğru okur (topun gideceği tarafa atlar)
+          if (HARD() && ball.vy < -0.5 && U.chance(0.45)) { const px = ball.x + ball.vx * (ball.y / -ball.vy); side = Math.abs(px) < 0.9 ? 0 : Math.sign(px); }
           keeper.tx = side * U.rand(1.6, 3.0);
-          keeper.delay = 0.16;
-          keeper.speed = 2.8 + 2.0 * s;
-          keeper.reach = 0.55 + 0.35 * s;
-          keeper.dive = 0.25 + 0.4 * s;
+          keeper.delay = HARD() ? 0.12 : 0.16;
+          keeper.speed = (2.8 + 2.0 * s) * (HARD() ? 1.15 : 1);
+          keeper.reach = (0.55 + 0.35 * s) * (HARD() ? 1.12 : 1);
+          keeper.dive = (0.25 + 0.4 * s) * (HARD() ? 1.15 : 1);
         }
         host.querySelector('.mg-lift').classList.add('locked');
       }
@@ -881,10 +885,7 @@ const MiniGame = {
 
       const draw = () => {
         const G = geo();
-        for (let i = 0; i < 10; i++) {
-          ctx.fillStyle = Sprites.stripe(i);
-          ctx.fillRect(0, (H / 10) * i, W, H / 10 + 1);
-        }
+        Sprites.turf(ctx, W, H, 10);
         const vg = ctx.createRadialGradient(W / 2, H / 2, 20, W / 2, H / 2, Math.max(W, H) * 0.7);
         vg.addColorStop(0, 'rgba(0,0,0,0)'); vg.addColorStop(1, 'rgba(0,0,0,0.5)');
         ctx.fillStyle = vg; ctx.fillRect(0, 0, W, H);
@@ -1030,7 +1031,7 @@ Object.assign(MiniGame, {
       window.addEventListener('resize', layout);
       const L = 28;
       const vmax = 6 + (o.pace || 30) / 15;
-      const oppV = (4.5 + o.skill * 2.6) * U.rand(0.95, 1.05);
+      const oppV = (4.5 + o.skill * 2.6) * U.rand(0.95, 1.05) * (HARD() ? 1.1 : 1);
       const me = { y: 0, v: 0, run: 0 }, op = { y: 0, v: 0, run: 1 };
       let t = 0, done = false, raf = 0, last = performance.now(), msg = '', msgCol = '#fff', taps = 0;
       const lookMe = Sprites.me(), lookOp = Sprites.look(19);
@@ -1044,7 +1045,7 @@ Object.assign(MiniGame, {
       const draw = () => {
         const top = H * 0.16, bot = H * 0.9;
         const yOf = (d) => bot - (d / L) * (bot - top);
-        for (let i = 0; i < 12; i++) { ctx.fillStyle = Sprites.stripe(i); ctx.fillRect(0, (H / 12) * i, W, H / 12 + 1); }
+        Sprites.turf(ctx, W, H, 12);
         ctx.strokeStyle = 'rgba(255,255,255,0.85)'; ctx.lineWidth = 3 * dpr;
         ctx.beginPath(); ctx.moveTo(W * 0.12, top); ctx.lineTo(W * 0.88, top); ctx.stroke();
         ctx.setLineDash([10 * dpr, 10 * dpr]); ctx.strokeStyle = 'rgba(255,255,255,0.3)';
@@ -1103,34 +1104,8 @@ Object.assign(MiniGame, {
     };
     g.layout();
     window.addEventListener('resize', g.layout);
-    // Zemin: gerçek çim dokusu + yumuşak biçme şeritleri; boyut değişene kadar önbellekten çizilir
-    g.grass = () => {
-      const tile = Sprites.surface === 'sand' ? null : Sprites.tile();
-      const key = g.W + 'x' + g.H + (tile ? 't' : 'f') + (Sprites.surface || '');
-      if (!g._bg || g._bgKey !== key) {
-        const b = g._bg || document.createElement('canvas');
-        b.width = g.W; b.height = g.H;
-        const c = b.getContext('2d');
-        if (!tile) { for (let i = 0; i < 12; i++) { c.fillStyle = Sprites.stripe(i); c.fillRect(0, (g.H / 12) * i, g.W, g.H / 12 + 1); } }
-        else {
-          c.fillStyle = '#2a7d3d'; c.fillRect(0, 0, g.W, g.H);
-          const pat = c.createPattern(tile, 'repeat'), k = g.W / 5 / 256;
-          if (pat.setTransform && typeof DOMMatrix !== 'undefined') pat.setTransform(new DOMMatrix([k, 0, 0, k, 0, 0]));
-          c.fillStyle = pat; c.fillRect(0, 0, g.W, g.H);
-          for (let i = 0; i < 12; i++) {
-            const y0 = (g.H / 12) * i, h = g.H / 12 + 1, gr = c.createLinearGradient(0, y0, 0, y0 + h);
-            const a = i % 2 ? 'rgba(255,255,240,' : 'rgba(0,30,10,', m = i % 2 ? 0.07 : 0.12;
-            gr.addColorStop(0, a + m * 0.6 + ')'); gr.addColorStop(0.5, a + m + ')'); gr.addColorStop(1, a + m * 0.6 + ')');
-            c.fillStyle = gr; c.fillRect(0, y0, g.W, h);
-          }
-          const L = c.createRadialGradient(g.W / 2, g.H * 0.55, Math.min(g.W, g.H) * 0.15, g.W / 2, g.H * 0.5, Math.max(g.W, g.H) * 0.8);
-          L.addColorStop(0, 'rgba(255,255,230,0.05)'); L.addColorStop(1, 'rgba(0,10,5,0.3)');
-          c.fillStyle = L; c.fillRect(0, 0, g.W, g.H);
-        }
-        g._bg = b; g._bgKey = key;
-      }
-      g.ctx.drawImage(g._bg, 0, 0);
-    };
+    // Zemin: gerçek çim dokusu + yumuşak biçme şeritleri (önbellekten)
+    g.grass = () => Sprites.turf(g.ctx, g.W, g.H, 12);
     g.text = (txt, y, size, col = '#fff') => {
       const c = g.ctx;
       c.textAlign = 'center'; c.fillStyle = col;
@@ -1148,7 +1123,7 @@ Object.assign(MiniGame, {
       const rounds = o.rounds || 2;
       const drib = o.dribbling || 40;
       const win = U.clamp(0.42 + drib / 350 - o.skill * 0.22, 0.25, 0.75); // hamleden sonra tepki süresi
-      const closing = 6.5 + o.skill * 3.5; // rakibin yaklaşma hızı (m/sn)
+      const closing = (6.5 + o.skill * 3.5) * (HARD() ? 1.15 : 1); // rakibin yaklaşma hızı (m/sn)
       const me = { x: 0, tx: 0, run: 0 };
       let t = 0, done = false, raf = 0, last = performance.now(), beaten = 0, scroll = 0, msg = '', msgCol = '#fff', msgT = 0;
       const lookMe = Sprites.me();
@@ -1179,10 +1154,7 @@ Object.assign(MiniGame, {
         const { W, H, dpr } = g;
         const M = H / 15; // metre başına piksel
         // kayan saha
-        for (let i = -1; i < 16; i++) {
-          const y = ((i * M * 2 + (scroll * M) % (M * 2)) + M * 2) - M * 2;
-          ctx.fillStyle = Sprites.stripe(i); ctx.fillRect(0, y, W, M * 2 + 1);
-        }
+        Sprites.turf(ctx, W, H, 0, scroll * M, M * 2);
         ctx.strokeStyle = 'rgba(255,255,255,0.5)'; ctx.lineWidth = 2 * dpr;
         const ly = ((scroll * M) % (M * 10));
         ctx.beginPath(); ctx.moveTo(0, ly); ctx.lineTo(W, ly); ctx.stroke();
@@ -1299,7 +1271,7 @@ Object.assign(MiniGame, {
         }
         const spread = timing === 'perfect' ? 0.05 : 0.2;
         const tx = U.clamp(aimAt + U.rand(-spread, spread), -1.3, 1.3);
-        const reach = 0.32 + o.skill * 0.25;
+        const reach = (0.32 + o.skill * 0.25) * (HARD() ? 1.2 : 1);
         const saved = Math.abs(tx - keeperX) < reach;
         const wide = Math.abs(tx) > 1;
         shot = { tx, t0: t, saved, wide };
@@ -1697,7 +1669,7 @@ Object.assign(MiniGame, {
         }
       };
       const draw = () => {
-        for (let i = 0; i < 10; i++) { ctx.fillStyle = Sprites.stripe(i); ctx.fillRect(0, (H / 10) * i, W, H / 10 + 1); }
+        Sprites.turf(ctx, W, H, 10);
         const fh = Math.min(H * 0.17, W * 0.2);
         Sprites.figure(ctx, meP.x * W, meP.y * H + fh * 0.4, fh, { kit: o.kits.own, look: Sprites.me(), facing: 'up', number: o.number, label: 'SEN', labelScale: dpr, labelColor: 'rgba(214,40,57,0.92)', t });
         if (tgt) {
