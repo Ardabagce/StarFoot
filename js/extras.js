@@ -550,10 +550,10 @@ const SOCIAL_COMMENTS = {
 };
 
 const Social = {
+  handleOf(p) { return '@' + (p.name + p.surname).toLowerCase().replace(/[^a-zçğıöşü]/g, '').replace(/ç/g, 'c').replace(/ğ/g, 'g').replace(/ı/g, 'i').replace(/ö/g, 'o').replace(/ş/g, 's').replace(/ü/g, 'u') + p.shirt; },
   ensure(p) {
     if (!p.social) {
-      const base = (p.name + p.surname).toLowerCase().replace(/[^a-zçğıöşü]/g, '').replace(/ç/g, 'c').replace(/ğ/g, 'g').replace(/ı/g, 'i').replace(/ö/g, 'o').replace(/ş/g, 's').replace(/ü/g, 'u');
-      p.social = { handle: '@' + base + p.shirt, followers: 40 + U.randi(0, 60), following: U.randi(80, 260), posts: [] };
+      p.social = { handle: Social.handleOf(p), followers: 40 + U.randi(0, 60), following: U.randi(80, 260), posts: [] };
     }
     // eski kayıtlardaki gerçek dışı takipçi sayıları ünün izin verdiği tavana çekilir
     if (Game.state && p.social.followers > Social.cap(p)) p.social.followers = Social.cap(p);

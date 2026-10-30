@@ -76,3 +76,13 @@
 5373|Bulgarien
 5374|Bosnien und Herzegowina
 5375|TW
+5376|Großes Update: Bau dein eigenes Fußball-Universum! 🚀
+5386|Mit StarFoot {} gibt es den brandneuen Editor!
+5378|Neues Spieluniversum
+5379|Alle Vereins- und Spielernamen sind jetzt dynamischer und origineller.
+5380|Du hast die volle Kontrolle
+5381|Im neuen Editor (über Hauptmenü und Einstellungen) kannst du Vereinsnamen, Kürzel und Spielernamen frei ändern und deine eigene Liga erschaffen!
+5382|Teile deinen Kader
+5383|Importiere und exportiere deine Bearbeitungsdateien und teile sie mit Freunden.
+5384|Viel Spaß!
+5385|Editor öffnen

@@ -76,3 +76,13 @@
 5373|Bulgaria
 5374|Bosnia dan Herzegovina
 5375|PK
+5376|Pembaruan Besar: Bangun Semesta Sepak Bolamu Sendiri! 🚀
+5386|Lewat StarFoot {} kami menambahkan fitur Editor yang baru!
+5378|Semesta Game Diperbarui
+5379|Semua nama klub dan pemain kini lebih dinamis dan orisinal.
+5380|Kendali Penuh di Tanganmu
+5381|Lewat Editor baru (dari Menu Utama dan Pengaturan) kamu bebas mengubah nama dan singkatan klub mana pun serta nama pemain, lalu membuat liga versimu sendiri!
+5382|Bagikan Skuadmu
+5383|Impor dan ekspor file editanmu untuk dibagikan ke teman.
+5384|Selamat bermain!
+5385|Buka Editor

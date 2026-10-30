@@ -539,36 +539,21 @@ const WhatsNew = {
     if (seen === WN_VER || !Game.state || Game.state.seasonEnd) return false;
     if (!document.getElementById('modal').classList.contains('hidden')) return false;
     try { localStorage.setItem(WhatsNew.KEY, WN_VER); } catch (e) { /* yok */ }
-    // 1.0.9 tanıtımını görmemiş Premium açık oyunculara Yıldız gibi yaşa özellikleri de gösterilir
-    const prem = Star.on() && seen !== '1.0.9', has = Star.has();
+    // 1.0.12 duyurusu: Editör
     const it = (ic, t, d) => `<li><i>${ic}</i><span><b>${t}</b><small>${d}</small></span></li>`;
-    const ios = !!(window.Capacitor && window.Capacitor.getPlatform && window.Capacitor.getPlatform() === 'ios');
     const list = [
-      it('✏️', 'Editör', 'Kulüp ve oyuncu isimlerini istediğin gibi değiştir; düzenleme dosyanı arkadaşlarınla paylaş.'),
-      it('🏟️', 'Gerçek stadyum sesi ve müzik', 'Tribün uğultusu ve gol coşkusu artık gerçek kayıt; ününe göre gürleşir. Menülerde müzik var, Ayarlar\'dan kapatabilirsin.'),
-      it('📡', 'Maç radarı', 'Dakika dakika akışın üstünde canlı saha: top nerede, sen neredesin, gol nereden geldi.'),
-      it('🏃', 'Yeni oyuncu animasyonları', 'Dizden bükülen koşu, sallanan kollar, daha gerçekçi futbolcular.'),
-    ].concat(ios ? [
-      it('☁️', 'iCloud yedeği', 'Kariyerlerin otomatik yedeklenir; telefon değiştirsen de kaldığın yerden devam.'),
-      it('🏆', 'Game Center', '38 başarım ve dünya sıralamaları: gol, kupa, genel güç ve takipçi.'),
-    ] : []).concat(prem ? [
-      it('⭐', 'Yıldız transferi', 'Ünlü bir oyuncu olarak yeni takımına gittiğinde artık rotasyon yok: doğrudan ilk 11.'),
-      it('📖', 'Starpedia', 'Kariyerinin ansiklopedi sayfası: istatistikler, rekorlar, önemli maçlar. Bölümlerini kendin yaz.'),
-      it('🎬', 'Kariyer belgeseli', 'Mahalle maçlarından zirveye, hikâyen bölüm bölüm. İzle ve paylaş.'),
-      it('🏎️', 'Lüks yaşam vitrini', 'Spor araba, villa, yat ve özel jet. Al, sosyal medyada paylaş.'),
-      it('✂️', 'Görünüm stüdyosu', 'Saç, sakal, ten ve krampon rengi. Maçlarda da bu görünümle çık.'),
-      it('📨', 'Transfer talebi', 'Menajerin istediğin an kulüplerden teklif toplasın.'),
-      it('✅', 'Altın onay rozeti', 'Oyun içi sosyal medyada altın tik.'),
-    ] : []).join('');
-    const foot = !prem ? '' : has
-      ? `<p class="wn-note ok">${Icon('star')} Premium'un var: hepsi senin için açık!</p>`
-      : `<p class="wn-note">${Icon('star')} Yeni ayrıcalıklar Premium'a özel. Starpedia sayfanı ve belgeselini bir kez ücretsiz deneyebilirsin.</p>`;
+      it('🌍', 'Oyun Evreni Yenilendi', 'Tüm kulüp ve oyuncu isimleri daha dinamik ve özgün bir yapıya kavuşturuldu.'),
+      it('✏️', 'Tam Kontrol Sende', "Artık yeni Editör sayfasından (Ana Menü ve Ayarlar'dan ulaşılabilir) dilediğin kulübün adını, kısaltmasını ve oyuncu isimlerini özgürce düzenleyebilir, kendi özgün ligini oluşturabilirsin!"),
+      it('🤝', 'Kendi Kadronu Paylaş', 'Hazırladığın düzenleme dosyalarını içe/dışa aktararak arkadaşlarınla paylaşabilirsin.'),
+    ].join('');
+    const has = typeof Star !== 'undefined' && Star.has && Star.has();
     const end = () => { if (done) setTimeout(done, 300); };
-    const btns = [{ t: prem ? 'Sonra' : 'Tamam', cls: 'btn-ghost', fn: end }];
-    if (prem) btns.push({ t: has ? `${Icon('news')} Starpedia'mı aç` : `${Icon('news')} Ücretsiz dene`, cls: 'btn-big', fn: () => { if (typeof Premium !== 'undefined') Premium.track('whatsnew_try', { premium: has ? 1 : 0 }); setTimeout(() => Star.wiki(), 60); } });
+    const btns = [{ t: 'Tamam', cls: 'btn-ghost', fn: end }];
+    if (typeof Edit !== 'undefined') btns.push({ t: `${Icon('pen')} Editörü aç`, cls: 'btn-big', fn: () => { end(); setTimeout(() => Edit.open(), 120); } });
     Game.modal(`<div class="wn"><div class="ev-tag">Yeni güncelleme · ${WN_VER}</div>
-      <h2>Yenilikler</h2>
-      <ul class="wn-l">${list}</ul>${foot}</div>`, btns, { wide: true });
+      <h2>Büyük Güncelleme: Kendi Futbol Evrenini Kur! 🚀</h2>
+      <p>StarFoot ${WN_VER} ile oyuna yepyeni Düzenleyici (Editör) özelliğini ekledik!</p>
+      <ul class="wn-l">${list}</ul><p class="wn-note ok">İyi oyunlar!</p></div>`, btns, { wide: true });
     if (typeof Premium !== 'undefined') Premium.track('whatsnew_view', { ver: WN_VER, premium: has ? 1 : 0 });
     return true;
   },

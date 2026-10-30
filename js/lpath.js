@@ -102,6 +102,19 @@ const LP_GOALS = {
 
 const LPath = {
   def(id) { return LP_LIST.find((x) => x.id === id); },
+  // Efsane karakterinin adı editördeki adı izler (kariyer o karakterle başladığı için)
+  syncName(d) {
+    const x = LPath.def(d.lpath.id), p = d.player;
+    if (!x || !p || (p.name === x.name && p.surname === x.surname)) return;
+    const old = `${p.name} ${p.surname}`.trim(), now = `${x.name} ${x.surname}`.trim();
+    const oldHandle = Social.handleOf(p);
+    p.name = x.name; p.surname = x.surname;
+    if (p.social && p.social.handle === oldHandle) p.social.handle = Social.handleOf(p);
+    // haberler ve gönderilerdeki eski ad
+    const swap = (o, k) => { if (typeof o[k] === 'string' && o[k].includes(old)) o[k] = o[k].split(old).join(now); };
+    (d.news || []).forEach((n) => { if (n && typeof n === 'object') swap(n, 't'); });
+    if (p.social && p.social.posts) p.social.posts.forEach((x2) => swap(x2, 'text'));
+  },
   era(x) { const c = CLUB_LIST.find((k) => k[0] === x.club); return `${x.year} · ${c ? c[1] : ''} altyapısı`; },
   cur() { const s = Game.state; return s && s.lpath ? LPath.def(s.lpath.id) : null; },
   badges() { return Meta.get('sf_lp', {}); },

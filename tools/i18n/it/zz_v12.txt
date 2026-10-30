@@ -76,3 +76,13 @@
 5373|Bulgaria
 5374|Bosnia ed Erzegovina
 5375|POR
+5376|Grande aggiornamento: crea il tuo universo calcistico! 🚀
+5386|Con StarFoot {} abbiamo aggiunto il nuovissimo Editor!
+5378|Universo di gioco rinnovato
+5379|Tutti i nomi di club e giocatori hanno ora uno stile più dinamico e originale.
+5380|Il controllo è tutto tuo
+5381|Dal nuovo Editor (nel Menu principale e nelle Impostazioni) puoi modificare liberamente nome e sigla di qualsiasi club e i nomi dei giocatori, e creare il tuo campionato!
+5382|Condividi la tua rosa
+5383|Importa ed esporta i tuoi file di modifica per condividerli con gli amici.
+5384|Buon divertimento!
+5385|Apri Editor

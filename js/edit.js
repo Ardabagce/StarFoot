@@ -29,7 +29,15 @@ const NameFix = {
     NameFix.map = m;
     NameFix.rx = NameRx.build(Object.keys(m));
   },
-  text(t) { if (!t || typeof t !== 'string') return t; NameFix.init(); return NameRx.run(t, NameFix.rx, NameFix.map); },
+  text(t, skip) {
+    if (!t || typeof t !== 'string') return t;
+    NameFix.init();
+    if (skip && NameFix.map[skip] !== undefined) {
+      if (NameFix.skipKey !== skip) { NameFix.skipKey = skip; NameFix.skipRx = NameRx.build(Object.keys(NameFix.map).filter((k) => k !== skip)); }
+      return NameRx.run(t, NameFix.skipRx, NameFix.map);
+    }
+    return NameRx.run(t, NameFix.rx, NameFix.map);
+  },
 };
 
 const Edit = {
@@ -56,6 +64,15 @@ const Edit = {
     Edit.applyData(Edit.get());
   },
   pn(d, n) { return (d.p && d.p[n]) || n; },
+  // temel ad → editördeki ad (eski kayıtlar taşınırken kullanıcının düzenlemeleri de uygulanır)
+  applyEdits(text, skip) {
+    Edit.boot();
+    const d = Edit.get(), m = {};
+    Object.entries(d.p).forEach(([b, n]) => { if (n && n !== b && b !== skip) m[b] = n; });
+    Object.entries(d.c).forEach(([id, v]) => { const b = Edit.base.clubs[id]; if (b && v[0] && v[0] !== b[0]) m[b[0]] = v[0]; });
+    const keys = Object.keys(m);
+    return keys.length ? NameRx.run(text, NameRx.build(keys), m) : text;
+  },
   applyData(d) {
     const B = Edit.base;
     CLUB_LIST.forEach((c) => { const e = d.c[c[0]], b = B.clubs[c[0]]; c[1] = (e && e[0]) || b[0]; c[2] = (e && e[1]) || b[1]; });
@@ -103,6 +120,9 @@ const Edit = {
       let raw = null;
       try { raw = Store.read(k); } catch (e) { /* yok */ }
       if (!raw) continue;
+      const orig = raw;
+      // henüz taşınmamış eski kayıt: önce isim taşıması (Game.load) yapılır
+      if (!/"nf":3/.test(raw)) { try { const dd = Game.load(i); if (dd) raw = JSON.stringify(dd, Game.packRoster); } catch (e) { /* yok */ } }
       await tick();
       const nr = rx ? NameRx.run(raw, rx, map) : raw;
       let out = nr;
@@ -116,7 +136,7 @@ const Edit = {
           out = JSON.stringify(d);
         } catch (e) { /* metin değişimi yeter */ }
       }
-      if (out !== raw) { Store.write(k, out); try { localStorage.removeItem(Game.sumKey(i)); } catch (e) { /* yok */ } }
+      if (out !== orig) { Store.write(k, out); try { localStorage.removeItem(Game.sumKey(i)); } catch (e) { /* yok */ } }
     }
     if (typeof SocialArt !== 'undefined' && SocialArt.cache) SocialArt.cache.clear();
     if (Game.state) Game.state = Game.load(Game.slot);

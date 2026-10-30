@@ -62,10 +62,13 @@ const ONLY = process.env.ONLY ? process.env.ONLY.split(',') : null;
     await pg.evaluate(() => {
       const s = Game.state; s.street.done = true;
       Game.joinClub('GAL', 185000, 4);
+      // mağaza görseli: gerçek bir kulübü çağrıştırmayan kurgusal kulüp kimliği
+      Object.assign(Game.club(), { name: 'Yıldızkent SK', short: 'YLD', c1: '#0e9f8e', c2: '#ffffff' });
+      Game.club().roster.forEach((r) => { if (r.star || r.lid != null) { r.n = World.genName('TR'); delete r.lid; } });
       const p = Game.p; p.age = 24; p.fame = 88;
       Object.keys(p.stats).forEach((k) => (p.stats[k] = 90 + ((k.length * 7) % 8)));
       p.money = 46e6; p.social.followers = 6.4e6; p.totals.goals = 162; p.totals.apps = 231; p.totals.assists = 71; p.totals.motm = 31;
-      p.trophies = ['2031: Süper Lig Şampiyonu', '2032: Avrupa Şampiyonlar Kupası Şampiyonu', '2032: Altın Yıldız', '2032: Gol Kralı', '2033: Türkiye Kupası Şampiyonu', '2033: Süper Lig Şampiyonu', '2033: Sezonun Oyuncusu'];
+      p.trophies = ['2031: Yıldızlar Ligi Şampiyonu', '2032: Avrupa Şampiyonlar Kupası Şampiyonu', '2032: Altın Yıldız', '2032: Gol Kralı', '2033: Türkiye Kupası Şampiyonu', '2033: Yıldızlar Ligi Şampiyonu', '2033: Sezonun Oyuncusu'];
       p.lux = (typeof LUX !== 'undefined' ? LUX.slice(0, 4).map((x) => x.id) : []);
       p.energy = 96; p.morale = 92; s.ap = 3;
       p.intl = Object.assign(p.intl || {}, { caps: 54, goals: 29 });
@@ -93,7 +96,13 @@ const ONLY = process.env.ONLY ? process.env.ONLY.split(',') : null;
           if (st.open) { await pg.evaluate(() => { const a = document.getElementById('mm-auto'); if (a) a.click(); const h = document.querySelector('#mt-moment .btn-big, #ht-go'); if (h && !document.getElementById('mm-auto').offsetParent) h.click(); }); continue; }
           if (st.mn >= 15 && st.mn <= 44) { await pg.evaluate(() => { const s1 = document.querySelector('[data-s="1"]'); if (s1) s1.click(); }); break; }
         }
-        await shot(pg, 'match', 900);
+        // an açık değilken çek (çekim anında yeni bir an açıldıysa kapat ve tekrar dene)
+        for (let k = 0; k < 40; k++) {
+          const open = await pg.evaluate(() => { const m = document.getElementById('mt-moment'); return !!(m && !m.classList.contains('hidden')); });
+          if (!open) { await shot(pg, 'match', 150); const still = await pg.evaluate(() => { const m = document.getElementById('mt-moment'); return !(m && !m.classList.contains('hidden')); }); if (still) break; }
+          await pg.evaluate(() => { const a = document.getElementById('mm-auto'); if (a) a.click(); });
+          await pg.waitForTimeout(400);
+        }
       }
       await pg.evaluate(() => document.getElementById('mt-sim').click());
       await pg.waitForSelector('#ms-done', { timeout: 30000 }).catch(() => {});

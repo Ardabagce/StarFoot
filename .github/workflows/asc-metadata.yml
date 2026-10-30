@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Sürüm numarası (ör. 1.0.8): düzenlenebilir sürüm farklıysa ona çevrilir, yoksa oluşturulur'
+        description: 'Sürüm numarası (ör. 1.0.8): düzenlenebilir sürüm farklıysa ona çevrilir, yoksa oluşturulur. 1.0.12@183 = derleme 183 bağlanır, kademeli yayın açılır ve incelemeye gönderilir'
         required: false
         default: ''
       screens:
@@ -61,7 +61,8 @@ jobs:
       - name: Mağaza bilgilerini doldur
         run: |
           ARGS=""
-          [ -n "${{ inputs.version }}" ] && ARGS="$ARGS --version ${{ inputs.version }}"
+          V="${{ inputs.version }}"
+          if [ -n "$V" ]; then case "$V" in *@*) ARGS="$ARGS --version ${V%@*} --release ${V#*@}";; *) ARGS="$ARGS --version $V";; esac; fi
           [ "${{ inputs.screens }}" != "false" ] && ARGS="$ARGS --screens"
           [ "${{ inputs.replace_screens }}" = "true" ] && ARGS="$ARGS --replace-screens"
           [ "${{ inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"

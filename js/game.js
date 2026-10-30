@@ -67,11 +67,13 @@ const Game = {
       let d = JSON.parse(raw, Game.unpackRoster);
       // 1.0.12: gerçek kişilere benzeyen isimler kurgusal karşılıklarıyla değişti; eski kayıtlar bir kez taşınır
       if (d && (d.nf || 0) < 3 && typeof NameFix !== 'undefined') {
-        d = JSON.parse(NameFix.text(raw), Game.unpackRoster);
+        const own = d.player && !d.lpath ? `${d.player.name} ${d.player.surname}`.trim() : '';
+        d = JSON.parse(Edit.applyEdits(NameFix.text(raw, own), own), Game.unpackRoster);
         const cl = d && d.world && d.world.clubs;
         if (cl) CLUB_LIST.forEach(([id, n, sh]) => { if (cl[id] && cl[id].name === n) cl[id].short = sh; });
         if (d) { Edit.fixPosts(d); d.nf = 3; }
       }
+      if (d && d.lpath && typeof LPath !== 'undefined') LPath.syncName(d);
       return d;
     } catch (e) { return null; }
   },

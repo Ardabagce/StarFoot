@@ -75,6 +75,72 @@ class ASC:
         return self.req('GET', path, params=params)
 
 
+# ---------- Yayın: inceleme bekleyen eski sürümü geri çek, derlemeyi bağla, kademeli yayın, incelemeye gönder ----------
+PENDING = {'WAITING_FOR_REVIEW', 'IN_REVIEW', 'READY_FOR_REVIEW'}
+
+
+def cancel_pending(asc, app_id, want):
+    """Başka numaralı bir sürüm inceleme bekliyorsa başvurusunu geri çeker (sürüm yeniden düzenlenebilir olur)."""
+    import time
+    vs = asc.get(f'/v1/apps/{app_id}/appStoreVersions', **{'filter[platform]': 'IOS', 'limit': 20})['data']
+    pend = [v for v in vs if v['attributes']['appStoreState'] in PENDING and v['attributes']['versionString'] != want]
+    if not pend:
+        return
+    for v in pend:
+        print(f"   {v['attributes']['versionString']} incelemede ({v['attributes']['appStoreState']}): başvuru geri çekiliyor")
+    subs = asc.get('/v1/reviewSubmissions', **{'filter[app]': app_id, 'filter[platform]': 'IOS', 'limit': 10})['data']
+    for sub in subs:
+        if sub['attributes'].get('state') in ('WAITING_FOR_REVIEW', 'IN_REVIEW', 'READY_FOR_REVIEW'):
+            asc.req('PATCH', f"/v1/reviewSubmissions/{sub['id']}", write=True, body={'data': {
+                'type': 'reviewSubmissions', 'id': sub['id'], 'attributes': {'canceled': True}}})
+            print(f"   başvuru {sub['id'][:8]} geri çekildi")
+    for _ in range(24):
+        time.sleep(10)
+        vs = asc.get(f'/v1/apps/{app_id}/appStoreVersions', **{'filter[platform]': 'IOS', 'limit': 20})['data']
+        if not any(v['attributes']['appStoreState'] in PENDING and v['attributes']['versionString'] != want for v in vs):
+            print('   eski sürüm yeniden düzenlenebilir'); return
+    sys.exit('Geri çekilen sürüm hâlâ düzenlenebilir değil; birkaç dakika sonra yeniden çalıştır.')
+
+
+def release(asc, app_id, ver, build_no):
+    """Sürüme derlemeyi bağlar, kademeli yayını açar ve incelemeye gönderir."""
+    vs = ver['attributes'].get('versionString')
+    bl = asc.get('/v1/builds', **{'filter[app]': app_id, 'filter[version]': str(build_no), 'filter[preReleaseVersion.version]': vs, 'limit': 5})['data']
+    if not bl:
+        sys.exit(f'{vs} için {build_no} numaralı derleme bulunamadı (TestFlight işlemesi bitmemiş olabilir).')
+    b = bl[0]
+    st = b['attributes'].get('processingState')
+    print(f"• derleme {build_no}: {st}")
+    if st != 'VALID':
+        sys.exit('Derleme henüz işlenmedi; birkaç dakika sonra yeniden çalıştır.')
+    if b['attributes'].get('usesNonExemptEncryption') is None:
+        asc.req('PATCH', f"/v1/builds/{b['id']}", write=True, body={'data': {'type': 'builds', 'id': b['id'], 'attributes': {'usesNonExemptEncryption': False}}})
+        print('   şifreleme beyanı: standart (muaf)')
+    asc.req('PATCH', f"/v1/appStoreVersions/{ver['id']}/relationships/build", write=True, body={'data': {'type': 'builds', 'id': b['id']}})
+    print('   derleme sürüme bağlandı')
+    try:
+        ph = asc.get(f"/v1/appStoreVersions/{ver['id']}/appStoreVersionPhasedRelease").get('data')
+    except RuntimeError:
+        ph = None
+    if not ph:
+        asc.req('POST', '/v1/appStoreVersionPhasedReleases', write=True, body={'data': {'type': 'appStoreVersionPhasedReleases',
+            'attributes': {'phasedReleaseState': 'ACTIVE'}, 'relationships': {'appStoreVersion': {'data': {'type': 'appStoreVersions', 'id': ver['id']}}}}})
+        print('   kademeli yayın açıldı (7 gün)')
+    else:
+        print('   kademeli yayın zaten açık')
+    subs = asc.get('/v1/reviewSubmissions', **{'filter[app]': app_id, 'filter[platform]': 'IOS', 'filter[state]': 'READY_FOR_REVIEW', 'limit': 5})['data']
+    sub = subs[0] if subs else asc.req('POST', '/v1/reviewSubmissions', write=True, body={'data': {'type': 'reviewSubmissions',
+        'attributes': {'platform': 'IOS'}, 'relationships': {'app': {'data': {'type': 'apps', 'id': app_id}}}}})['data']
+    try:
+        asc.req('POST', '/v1/reviewSubmissionItems', write=True, body={'data': {'type': 'reviewSubmissionItems', 'relationships': {
+            'reviewSubmission': {'data': {'type': 'reviewSubmissions', 'id': sub['id']}},
+            'appStoreVersion': {'data': {'type': 'appStoreVersions', 'id': ver['id']}}}}})
+    except RuntimeError as err:
+        print(f'   (sürüm başvuruda olabilir: {str(err)[:120]})')
+    asc.req('PATCH', f"/v1/reviewSubmissions/{sub['id']}", write=True, body={'data': {'type': 'reviewSubmissions', 'id': sub['id'], 'attributes': {'submitted': True}}})
+    print(f'   {vs} ({build_no}) incelemeye gönderildi')
+
+
 def pick_version(asc, app_id, want):
     vs = asc.get(f'/v1/apps/{app_id}/appStoreVersions', **{'filter[platform]': 'IOS', 'limit': 20})['data']
     for v in vs:
@@ -723,6 +789,7 @@ def main():
     ap.add_argument('--events', action='store_true')
     ap.add_argument('--events-file', default=str(ROOT / 'store/asc/events.json'))
     ap.add_argument('--gamecenter', action='store_true')
+    ap.add_argument('--release', default='')
     a = ap.parse_args()
     meta = json.load(open(a.metadata, encoding='utf-8'))
     asc = ASC(a.dry_run)
@@ -760,6 +827,8 @@ def main():
     if a.remove_locales:
         return remove_locales(asc, app['id'], [x.strip() for x in a.remove_locales.split(',') if x.strip()])
 
+    if a.release:
+        cancel_pending(asc, app['id'], a.version)
     ver = pick_version(asc, app['id'], a.version)
     info = pick_appinfo(asc, app['id'])
     print(f"Düzenlenen sürüm: {ver['attributes'].get('versionString', a.version)}")
@@ -805,6 +874,8 @@ def main():
                 print(f'   ! görseller: {err}'); fails.append(loc)
     if fails:
         sys.exit(f'Sorun çıkan diller: {", ".join(sorted(set(fails)))}')
+    if a.release:
+        release(asc, app['id'], ver, a.release)
     print('Bitti.')
 
 
