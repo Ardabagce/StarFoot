@@ -284,7 +284,7 @@ const Plus = {
   perksHtml(withPremium) {
     return `<ul class="prem-l star-perks plus-perks">
       <li><b>10 kariyer slotu</b><small>5 yerine 10 kariyeri aynı anda sürdür</small></li>
-      <li><b>Geri al</b><small>Her sezon bir kez, kötü giden haftayı geri al</small></li>
+      <li><b>Geri al</b><small>Her sezon bir kez, kötü giden son maçı geri al ve yeniden oyna</small></li>
       <li><b>Hızlı ilerleme</b><small>Seçtiğin haftaya kadar maçları simüle et</small></li>
       <li><b>Detaylı kariyer istatistikleri</b><small>Kafa, penaltı, frikik golleri; hangi takıma kaç gol</small></li>
       <li><b>Kaleci kariyeri</b><small>Kaleci olarak oyna: kurtarışlar, penaltılar, gol yememe</small></li>

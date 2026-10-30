@@ -16,6 +16,8 @@ const POSITIONS = {
   FW: { l: 'Forvet', short: 'FV', w: { shooting: 0.28, pace: 0.17, dribbling: 0.16, technique: 0.13, heading: 0.1, physical: 0.08, passing: 0.05, stamina: 0.03 } },
   MF: { l: 'Orta Saha', short: 'OS', w: { passing: 0.26, technique: 0.18, dribbling: 0.14, stamina: 0.12, shooting: 0.1, defending: 0.1, pace: 0.06, physical: 0.04 } },
   DF: { l: 'Defans', short: 'DF', w: { defending: 0.32, physical: 0.18, heading: 0.14, pace: 0.12, passing: 0.1, stamina: 0.08, technique: 0.06 } },
+  // Kaleci (Premium+): hız = refleks, teknik = top tutma, kafa = hava topu, güç = uçuş
+  GK: { l: 'Kaleci', short: 'KL', w: { pace: 0.22, technique: 0.2, physical: 0.16, heading: 0.14, passing: 0.12, defending: 0.1, stamina: 0.06 } },
 };
 
 // Bir yaştaki ortalama oyuncu gücü (altyapı rakiplerinin ölçeği)
@@ -220,6 +222,7 @@ const Player = {
       case 'header': return s.heading * 0.65 + s.physical * 0.35;
       case 'freekick': return s.shooting * 0.45 + s.technique * 0.55;
       case 'penalty': return s.shooting * 0.6 + s.technique * 0.4;
+      case 'save': return s.pace * 0.4 + s.technique * 0.3 + s.physical * 0.15 + s.heading * 0.15;
       default: return Player.overall(p, true);
     }
   },

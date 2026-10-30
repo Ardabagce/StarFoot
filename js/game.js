@@ -355,7 +355,7 @@ const Game = {
   // Seçmeler: mevkiye göre 3 istasyon, ortalama başarı teklifleri belirler
   async playTrials() {
     const s = Game.state, p = s.player;
-    const stations = { FW: ['shooting', 'pace', 'dribbling'], MF: ['passing', 'technique', 'dribbling'], DF: ['defending', 'physical', 'heading'] }[p.position] || ['shooting', 'passing', 'pace'];
+    const stations = { FW: ['shooting', 'pace', 'dribbling'], MF: ['passing', 'technique', 'dribbling'], DF: ['defending', 'physical', 'heading'], GK: ['pace', 'physical', 'heading'] }[p.position] || ['shooting', 'passing', 'pace'];
     const res = [];
     for (let i = 0; i < stations.length; i++) {
       const r = await Drill.run(stations[i], { tag: `SEÇME ${i + 1}/3` });
@@ -1593,7 +1593,7 @@ const UI = {
         <div class="nm-meta">${U.esc(cup.name.toLocaleUpperCase('tr'))} · ${U.esc(op.stage.toLocaleUpperCase('tr'))} · ${lp ? 'Puan tablosu için oynanır' : 'Tek maç, kaybeden elenir'}</div>`;
     } else if (Game.inStreet() && s.street.trials) {
       next = `<div class="nm-vs"><div class="nm-team">${UI.shirt(Game.club(), 'big')}<b>Seçme Günü</b></div></div>
-        <div class="nm-meta">ALTYAPI SEÇMELERİ · 3 istasyon: ${({ FW: 'bitiricilik, sürat, slalom', MF: 'pas, top sektirme, slalom', DF: 'ikili mücadele, omuz omuza, kafa' })[p.position] || ''}. Tribünde kulüplerin scoutları var!</div>`;
+        <div class="nm-meta">ALTYAPI SEÇMELERİ · 3 istasyon: ${({ FW: 'bitiricilik, sürat, slalom', MF: 'pas, top sektirme, slalom', DF: 'ikili mücadele, omuz omuza, kafa', GK: 'refleks, güç, hava topu' })[p.position] || ''}. Tribünde kulüplerin scoutları var!</div>`;
     } else if (Game.inStreet()) {
       next = `<div class="nm-vs"><div class="nm-team">${UI.shirt(Game.club(), 'big')}<b>Bizim Sokak</b></div><span class="vs">VS</span><div class="nm-team">${UI.shirt({ id: 'ARK', c1: '#2a6fdb', c2: '#ffffff' }, 'big')}<b>Arka Sokak</b></div></div>
         <div class="nm-meta">MAHALLE MAÇI · Kenarda bir scout izliyor. İyi oynarsan seni bir altyapıya götürecek!</div>`;
@@ -2591,6 +2591,7 @@ const Create = {
     FW: { ic: 'ball', num: 9, d: 'Gol atar, şutlarla maçın kaderini belirler.' },
     MF: { ic: 'team', num: 8, d: 'Oyunu kurar, pas ve asistlerle parlar.' },
     DF: { ic: 'shield', num: 4, d: 'Savunmanın lideri; top kapar, kafa toplarında söz sahibi.' },
+    GK: { ic: 'shield', num: 1, d: 'Kalenin bekçisi; kurtarışlar, penaltılar ve gol yememe.' },
   },
   open() {
     Create.alloc = {};
@@ -2649,7 +2650,7 @@ const Create = {
             <section class="cr-step">
               <div class="cr-step-h"><i>4</i><div><b>Mevkin</b><small>Antrenmanda öne çıkan yetenekleri belirler</small></div></div>
               <div class="cr-cards" id="cr-pos">
-                ${Object.entries(POSITIONS).map(([k, v]) => `<button type="button" data-pos="${k}" class="cr-opt ${k === Create.pos ? 'on' : ''}">${Icon(Create.POS_INFO[k].ic)}<b>${v.l}</b><small>${Create.POS_INFO[k].d}</small></button>`).join('')}
+                ${Object.entries(POSITIONS).filter(([k]) => k !== 'GK' || (typeof Plus !== 'undefined' && Plus.on())).map(([k, v]) => `<button type="button" data-pos="${k}" class="cr-opt ${k === Create.pos ? 'on' : ''} ${k === 'GK' && !Plus.has() ? 'plus-lock' : ''}">${Icon(Create.POS_INFO[k].ic)}<b>${v.l}${k === 'GK' && !Plus.has() ? ' <i class="pl-tag">Premium+</i>' : ''}</b><small>${Create.POS_INFO[k].d}</small></button>`).join('')}
               </div>
             </section>
             <section class="cr-step">
@@ -2671,6 +2672,7 @@ const Create = {
         </div>
       </div>`;
     const pick = (sel, attr, fn) => U.$$(`${sel} [data-${attr}]`).forEach((b) => (b.onclick = () => {
+      if (b.classList.contains('plus-lock')) return Plus.pitch('Kaleci kariyeri', 'gk', 'Kaleci olarak oyna: köşelere uçan kurtarışlar, penaltı düelloları, karşı karşıya pozisyonlar ve gol yemeden kapanan maçlar. Kaleci kariyeri Premium+ ile açılır.');
       U.$$(`${sel} [data-${attr}]`).forEach((x) => x.classList.toggle('on', x === b));
       fn(b.dataset[attr]);
     }));

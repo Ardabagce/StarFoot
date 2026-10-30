@@ -182,7 +182,7 @@ const WC = {
         return xs.length ? `<div class="lbl">${tn}</div><div class="wc-grid">${xs.map((n) => `<button type="button" class="wc-nat ${n.code === sel ? 'on' : ''}" data-wcn="${n.code}">${UI.shirt({ id: n.code, c1: (NAT_COLORS[n.code] || ['#1d3c8f'])[0], c2: (NAT_COLORS[n.code] || ['#1d3c8f', '#fff'])[1] })}<b>${U.esc(n.name)}</b><small>${n.rating}</small></button>`).join('')}</div>` : '';
       }).join('')}</div>
       <div class="cr-row2"><label class="cr-f"><span>Adın</span><input id="wc-name" maxlength="16" value="${dn[0]}" autocomplete="off"></label><label class="cr-f"><span>Soyadın</span><input id="wc-sur" maxlength="18" value="${dn[1]}" autocomplete="off"></label></div>
-      <div class="cr-row2"><label class="cr-f"><span>Mevki</span><select id="wc-pos">${Object.entries(POSITIONS).map(([k, v]) => `<option value="${k}">${v.l}</option>`).join('')}</select></label>
+      <div class="cr-row2"><label class="cr-f"><span>Mevki</span><select id="wc-pos">${Object.entries(POSITIONS).filter(([k]) => k !== 'GK' || (typeof Plus !== 'undefined' && Plus.has())).map(([k, v]) => `<option value="${k}">${v.l}</option>`).join('')}</select></label>
       <label class="cr-f"><span>Ayak</span><select id="wc-foot"><option value="R">Sağ</option><option value="L">Sol</option></select></label></div>`,
     [{ t: 'Vazgeç', cls: 'btn-ghost' }, { t: `${Icon('play')} Kampa katıl`, cls: 'btn-big', keep: true, fn: () => {
       const n = (document.getElementById('wc-name').value.trim() || dn[0]).slice(0, 16);

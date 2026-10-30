@@ -161,7 +161,7 @@ const Missions = {
     if (!s) return null;
     if (!s.daily || s.daily.d !== t) {
       const p = s.player;
-      const pool = MISSIONS.filter((m) => (p.position === 'DF' ? !m.att : !m.def));
+      const pool = MISSIONS.filter((m) => (p.position === 'DF' || p.position === 'GK' ? !m.att : !m.def));
       let h = 0; for (const ch of t + p.name) h = (h * 31 + ch.charCodeAt(0)) % 100003;
       const pick = [];
       const arr = pool.slice();

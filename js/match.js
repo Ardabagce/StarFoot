@@ -4,6 +4,7 @@ const MOMENT_WEIGHTS = {
   FW: { open: 40, dribble: 18, header: 12, freekick: 7, penalty: 5, tackle: 5, sprint: 9, onetwo: 7 },
   MF: { open: 30, dribble: 13, deep: 15, tackle: 17, freekick: 9, header: 4, onetwo: 12, sprint: 5 },
   DF: { tackle: 46, deep: 23, header: 14, open: 4, freekick: 4, sprint: 9 },
+  GK: { gk_save: 40, gk_1v1: 18, gk_cross: 17, gk_pen: 5, deep: 12 },
 };
 
 const MOMENT_TITLES = {
@@ -17,6 +18,10 @@ const MOMENT_TITLES = {
   header: '🤾 Korner - Hava Topu',
   sprint: 'Kontra Atak!',
   onetwo: 'Verkaç Fırsatı',
+  gk_save: '🧤 Şut Geliyor!',
+  gk_1v1: '🧤 Karşı Karşıya!',
+  gk_cross: '🧤 Orta Geliyor!',
+  gk_pen: '🧤 Rakip Penaltısı!',
 };
 
 const MOMENT_DESC = {
@@ -30,6 +35,10 @@ const MOMENT_DESC = {
   header: 'Korner! Top kafana gelirken dokun; kale ağzında gezen nişangah neredeyse oraya vurursun.',
   sprint: 'Top boşta! Hızlı hızlı dokunarak rakibinden önce topa ulaş.',
   onetwo: 'Kısa paslarla savunmayı aç: parlayan arkadaşına süre dolmadan dokun.',
+  gk_save: 'Forvet şut çekiyor! Bakışını oku, top ayaktan çıkınca doğru köşeye uç (sol, orta ya da sağa dokun).',
+  gk_1v1: 'Forvet kaleye geliyor. Halka yeşile girince çık ve topu ayağından al; sarı bölge faul ve penaltı demek.',
+  gk_cross: 'Ceza sahasına orta geliyor. Doğru anda çık ve topu havada yakala.',
+  gk_pen: 'Rakip penaltı kullanıyor. Forvetin bakışını oku ve bir köşeye uç!',
 };
 
 const Match = {
@@ -94,8 +103,8 @@ const Match = {
         if (taken.has(m) || m === 45) continue;
         taken.add(m);
         const w = MOMENT_WEIGHTS[p.position];
-        const type = U.weighted(Object.keys(w), (k) => (k === 'penalty' && hadPen ? 0 : w[k]));
-        if (type === 'penalty') hadPen = true;
+        const type = U.weighted(Object.keys(w), (k) => ((k === 'penalty' || k === 'gk_pen') && hadPen ? 0 : w[k]));
+        if (type === 'penalty' || type === 'gk_pen') hadPen = true;
         moments.push({ min: m, type });
         i++;
       }
@@ -103,14 +112,14 @@ const Match = {
     };
     if (enterMin) {
       const span = 90 - enterMin + 1;
-      const base = { FW: 5, MF: 5, DF: 4 }[p.position];
+      const base = { FW: 5, MF: 5, DF: 4, GK: 4 }[p.position];
       addMoments(Math.max(1, Math.round((base + U.randi(-1, 1)) * span / 90)), enterMin, 89);
     }
 
     const M = {
       min: 0, hs: 0, as: 0, rating: 6.0, goals: 0, assists: 0, yellow: 0, red: false,
       feed: [], speed: 1, instant: typeof FF !== 'undefined' && FF.on, statsUsed: new Set(), shots: 0, keyPasses: 0, tackles: 0,
-      ownScorers: [], oppScorers: [], teamBoost: 0, energySave: 0, gt: {},
+      ownScorers: [], oppScorers: [], teamBoost: 0, energySave: 0, gt: {}, saves: 0, penSaves: 0,
       energy: p.energy, e0: p.energy, tiredWarn: false,
     };
     const drain = (v) => { M.energy = Math.max(0, M.energy - v * EF().drain); cond = calcCond(); };
@@ -488,7 +497,7 @@ const Match = {
         if (k === 'recover') { condAdj -= 0.1; M.energy = Math.min(100, M.energy + 8); cond = calcCond(); feed(`<b>45'</b> ${U.esc(pname)} devre arasında toparlandı.`, 'info'); }
         if (k === 'scout') { skill = Math.max(0.02, skill - 0.07); feed(`<b>45'</b> ${U.esc(pname)} rakip kalecinin zayıf yönlerini inceledi.`, 'info'); }
         if (k === 'warm') {
-          if (U.chance(0.65)) { enterMin = U.randi(46, 62); addMoments(Math.max(1, Math.round(({ FW: 5, MF: 5, DF: 4 }[p.position]) * (90 - enterMin) / 90)), enterMin, 89); feed(`<b>45'</b> Hoca ısınmanı beğendi, ikinci yarıda oyuna gireceksin!`, 'info'); }
+          if (U.chance(0.65)) { enterMin = U.randi(46, 62); addMoments(Math.max(1, Math.round(({ FW: 5, MF: 5, DF: 4, GK: 4 }[p.position]) * (90 - enterMin) / 90)), enterMin, 89); feed(`<b>45'</b> Hoca ısınmanı beğendi, ikinci yarıda oyuna gireceksin!`, 'info'); }
           else feed(`<b>45'</b> Isındın ama hoca şimdilik değişiklik düşünmüyor.`, 'info');
         }
         if (k === 'cheer') { M.teamBoost = 1.5; Player.addRel(p, 'team', 2.5); feed(`<b>45'</b> Kenardan takımını coşkuyla destekledin.`, 'info'); }
@@ -537,6 +546,46 @@ const Match = {
           feed(`<b>${M.min}'</b> Pas trafiği yarıda kaldı ama top hâlâ sende.`);
           canvasOutcome('open', await playCanvas('open'));
         } else { rate(-0.2); feed(`<b>${M.min}'</b> Verkaç denemesi rakibe takıldı.`); }
+        refresh();
+        return;
+      }
+      if (type === 'gk_save' || type === 'gk_pen') {
+        M.statsUsed.add('pace'); M.statsUsed.add('technique');
+        const penM = type === 'gk_pen';
+        if (penM) feed(`⚪ <b>${M.min}'</b> Rakip lehine penaltı! ${U.esc(pname)} kalede...`, 'info');
+        const r = await playMini(type, 'keeper', 'save', penM ? -0.9 : 0.15, { mode: penM ? 'pen' : 'shot', reflex: st.pace, handling: st.technique });
+        if (r === 'success') {
+          M.saves++; if (penM) M.penSaves++;
+          rate(penM ? 1.1 : 0.5);
+          feed(penM ? `🧤 <b>${M.min}'</b> ${U.esc(pname)} PENALTIYI KURTARDI!` : `🧤 <b>${M.min}'</b> ${U.esc(pname)} köşeden müthiş bir kurtarış yaptı!`, 'goal own');
+        } else if (r === 'partial') {
+          if (U.chance(0.3)) { rate(-0.3); oppGoal('Dönen topu ağlara gönderdiler.'); } else { M.saves++; rate(0.15); feed(`🧤 <b>${M.min}'</b> ${U.esc(pname)} topu çeldi, savunma uzaklaştırdı.`); }
+        } else { rate(penM ? -0.15 : -0.4); oppGoal(penM ? 'Penaltıdan gol.' : undefined); }
+        refresh();
+        return;
+      }
+      if (type === 'gk_1v1' || type === 'gk_cross') {
+        M.statsUsed.add(type === 'gk_cross' ? 'heading' : 'pace'); M.statsUsed.add('physical');
+        const one = type === 'gk_1v1';
+        const r = await playTiming(type, 'save', one
+          ? { title: 'Karşı karşıya!', kind: 'tackle', desc: 'Forvet topu açtığı an çık. Yeşil alan temiz kurtarış, sarı alan faul demek.', button: 'ÇIK!', okText: 'AYAĞINDAN ALDIN!', partialText: 'FAUL!', failText: 'FORVET SENİ GEÇTİ!' }
+          : { title: 'Ortayı yakala!', kind: 'header', desc: 'Top havadayken doğru anda çık ve yakala. Sarı alanda ancak yumruklayabilirsin.', button: 'YAKALA!', okText: 'TOPU KUCAKLADIN!', partialText: 'YUMRUKLA UZAKLAŞTIRDIN', failText: 'TOPU KAÇIRDIN!' }, 0.1);
+        if (r === 'success') {
+          M.saves++; rate(one ? 0.6 : 0.3);
+          feed(one ? `🧤 <b>${M.min}'</b> ${U.esc(pname)} karşı karşıya pozisyonda forvetin ayağından aldı!` : `🧤 <b>${M.min}'</b> ${U.esc(pname)} ortayı havada güvenle kontrol etti.`);
+        } else if (r === 'partial') {
+          if (one) {
+            rate(-0.2);
+            if (U.chance(0.35)) { M.yellow++; feed(`🟨 <b>${M.min}'</b> ${U.esc(pname)} forveti düşürdü, sarı kart.`, 'bad'); }
+            feed(`😨 <b>${M.min}'</b> Penaltı!`, 'bad');
+            const r2 = await playMini('gk_pen', 'keeper', 'save', -0.9, { mode: 'pen', reflex: st.pace, handling: st.technique });
+            if (r2 === 'success') { M.saves++; M.penSaves++; rate(1.1); feed(`🧤 <b>${M.min}'</b> ${U.esc(pname)} hatasını penaltıyı kurtararak telafi etti!`, 'goal own'); } else oppGoal('Penaltıdan gol.');
+          } else { rate(0.05); feed(`👊 <b>${M.min}'</b> ${U.esc(pname)} ortayı yumrukla uzaklaştırdı.`); }
+        } else {
+          rate(-0.3);
+          if (U.chance(one ? 0.72 : 0.38)) oppGoal(one ? undefined : 'Kafayla gol.');
+          else feed(`😮‍💨 <b>${M.min}'</b> Şans bizden yana: top auta gitti.`);
+        }
         refresh();
         return;
       }
@@ -637,8 +686,10 @@ const Match = {
       if (radar) { radar.speed = M.speed; radar.minute(homeR(), awayR(), onPitch()); if (!M.instant && U.chance(0.05)) radar.chance(U.chance(0.5 + (homeR() - awayR()) / 80) ? 'H' : 'A'); }
       // arka plan golleri
       const [lh, la] = World.lambdas(homeR(), awayR());
-      const ownL = (isHome ? lh : la) / 90 * (onPitch() ? 0.72 : 1);
-      const oppL = (isHome ? la : lh) / 90;
+      const gk = p.position === 'GK';
+      const ownL = (isHome ? lh : la) / 90 * (onPitch() && !gk ? 0.72 : 1);
+      // kaleci sahadaysa: rakip gollerinin bir kısmı anlarda oynanır, gücüne göre bazılarını kendiliğinden kurtarır
+      const oppL = (isHome ? la : lh) / 90 * (onPitch() && gk ? U.clamp(0.72 - (Player.skillFor(p, 'save') - opp.rating) / 160, 0.5, 0.85) : 1);
       if (U.chance(ownL)) {
         const sc = pickOwn();
         ownGoal(sc.n);
@@ -646,7 +697,8 @@ const Match = {
       }
       if (U.chance(oppL)) {
         oppGoal();
-        if (onPitch() && p.position !== 'FW') rate(-0.12);
+        if (onPitch() && p.position === 'GK') rate(-0.3);
+        else if (onPitch() && p.position !== 'FW') rate(-0.12);
       }
       // Son dakika dramı: berabere ya da bir farkla gerideyken son şans anı
       if (M.min === 85 && !M.dramaDone && onPitch() && !M.instant && !street) {
@@ -687,6 +739,7 @@ const Match = {
       if (played) {
         rate(res === 'W' ? 0.3 : res === 'L' ? -0.3 : 0);
         if (p.position === 'DF') rate(ga === 0 ? 0.5 : -0.12 * ga);
+        if (p.position === 'GK') rate(ga === 0 && minutes >= 60 ? 0.8 : -0.1 * ga);
         if (p.position === 'MF' && ga === 0) rate(0.2);
         if (minutes < 30 && M.goals === 0 && M.assists === 0) M.rating = U.clamp(M.rating, 5.5, 7);
       }
@@ -698,7 +751,7 @@ const Match = {
       const summary = {
         gf, ga, res, hs: M.hs, as: M.as, played, energySave: 0, energyStart: M.e0, energyEnd: M.energy, moments: M.momPlayed || 0, effort: EF().l, minutes: Math.max(0, minutes), rating: played ? rating : null,
         goals: M.goals, assists: M.assists, yellow: M.yellow, red: M.red, motm, lateGoal: !!M.lateGoal, dribbles: M.dribbles || 0,
-        ownScorers: M.ownScorers, oppScorers: M.oppScorers, statsUsed: [...M.statsUsed], goalTypes: M.gt, goalMins: M.gmin || [], shots: M.shots, keyPasses: M.keyPasses, tackles: M.tackles,
+        ownScorers: M.ownScorers, oppScorers: M.oppScorers, statsUsed: [...M.statsUsed], goalTypes: M.gt, goalMins: M.gmin || [], saves: M.saves, penSaves: M.penSaves, ga: isHome ? M.as : M.hs, shots: M.shots, keyPasses: M.keyPasses, tackles: M.tackles,
       };
       const resTxt = { W: 'GALİBİYET', D: 'BERABERLİK', L: 'MAĞLUBİYET' }[res];
       $('mt-moment').classList.remove('hidden');
@@ -735,7 +788,7 @@ const Match = {
             <div class="ms-res res-${res}"><span>${resTxt}</span><b>${M.hs} - ${M.as}</b><small>${U.esc(ctx.home.name)} · ${U.esc(ctx.away.name)}</small></div>
           </div>
           <div class="ms-stats">
-            ${[['whistle', 'Süre', `${summary.minutes}'`, 0], ['ball', 'Gol', M.goals, M.goals], ['boot', 'Asist', M.assists, M.assists], ['fire', 'Şut', M.shots, 0], ['team', 'Kilit Pas', M.keyPasses, M.keyPasses], ['shield', 'Top Kapma', M.tackles, M.tackles]]
+            ${(p.position === 'GK' ? [['whistle', 'Süre', `${summary.minutes}'`, 0], ['shield', 'Kurtarış', M.saves, M.saves], ['ball', 'Yenen gol', ga, 0], ['star', 'Penaltı kurtarışı', M.penSaves, M.penSaves], ['team', 'Kilit Pas', M.keyPasses, M.keyPasses], ['boot', 'Asist', M.assists, M.assists]] : [['whistle', 'Süre', `${summary.minutes}'`, 0], ['ball', 'Gol', M.goals, M.goals], ['boot', 'Asist', M.assists, M.assists], ['fire', 'Şut', M.shots, 0], ['team', 'Kilit Pas', M.keyPasses, M.keyPasses], ['shield', 'Top Kapma', M.tackles, M.tackles]])
               .map(([ic, l, v, hl]) => `<div class="mst ${hl ? 'hl' : ''}"><i>${Icon(ic)}</i><b>${v}</b><span>${l}</span></div>`).join('')}
           </div>
           <div class="ms-energy">

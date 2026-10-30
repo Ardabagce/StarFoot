@@ -1241,6 +1241,132 @@ Object.assign(MiniGame, {
     });
   },
 
+  // Kaleci: forvet şut çeker; doğru köşeye uç (sol/sağa dokun ya da kaydır, ortada kalmak için ortaya dokun).
+  // mode 'shot': vuruştan sonra tepki süresi; 'pen': penaltıda tahmin (vuruştan hemen önce de uçabilirsin)
+  keeper(host, o) {
+    return new Promise((resolve) => {
+      const pen = o.mode === 'pen';
+      const g = MiniGame._canvas(host, pen
+        ? 'Penaltı! Forvetin <b>bakışını oku</b>, vuruş anında <b>bir köşeye uç</b> · sol / orta / sağa dokun · <kbd>←</kbd> <kbd>↑</kbd> <kbd>→</kbd>'
+        : 'Şut geliyor! Top ayaktan çıkınca <b>doğru köşeye uç</b> · sol / orta / sağa dokun ya da kaydır · <kbd>←</kbd> <kbd>↑</kbd> <kbd>→</kbd>');
+      const { ctx } = g;
+      const reflex = o.reflex || 40, handling = o.handling || 40;
+      // topun uçuş süresi: refleks arttıkça daha geniş algılanır, rakip güçlüyse kısalır
+      const flight = U.clamp((pen ? 0.5 : 0.62) + reflex / 900 - o.skill * 0.16, pen ? 0.36 : 0.42, 1.0) * (HARD() ? 0.9 : 1);
+      const tKick = U.rand(1.0, 1.6);
+      const side = U.pick([-1, 0, 1, -1, 1]); // köşeler daha sık
+      const high = U.chance(0.4);
+      // ipucu: forvet vuruştan önce gideceği tarafa bakar (yüksek tutuş/refleks daha belirgin ipucu)
+      const hintAt = tKick - U.clamp(0.25 + handling / 600 - o.skill * 0.12, 0.12, 0.45);
+      const lie = !pen && U.chance(0.12 + o.skill * 0.15); // bazen aldatır
+      const hintSide = lie ? (side === 0 ? U.pick([-1, 1]) : -side) : side;
+      let t = 0, done = false, raf = 0, last = performance.now(), dive = null, msg = '', msgCol = '#fff', msgT = 0;
+      const lookMe = Sprites.me(), lookOpp = Sprites.look(63);
+      const say = (m, c) => { msg = m; msgCol = c; msgT = 0.9; };
+      const end = (res, text, col) => { done = true; say(text, col); msgT = 9; setTimeout(() => { cleanup(); resolve({ result: res }); }, 1300); };
+      const act = (dir) => {
+        if (done || dive || t < 0.3) return;
+        dive = { dir, t };
+        if (!pen && t < tKick - 0.05) {
+          // erken uçtun: forvet boş köşeye çevirir
+          return setTimeout(() => !done && end('fail', 'ERKEN UÇTUN, KÖŞEYİ AÇTIN', '#ff6b6b'), Math.max(0, (tKick - t + flight) * 1000));
+        }
+      };
+      const resolveShot = () => {
+        if (done) return;
+        if (!dive) return end('fail', 'GOL! UÇAMADIN', '#ff6b6b');
+        const reactLate = dive.t > tKick + flight * 0.82;
+        if (dive.dir === side) {
+          if (reactLate) return end('partial', 'TOPA DOKUNDUN, DÖNEN TOP!', '#ffcf3f');
+          return end('success', U.pick(['MÜTHİŞ KURTARIŞ!', 'KÖŞEDEN ÇIKARDIN!', 'DEV KALECİ!']), '#7cf0a0');
+        }
+        if (side === 0 && Math.abs(dive.dir) === 1 && U.chance(0.25)) return end('partial', 'AYAKLA ÇIKARDIN!', '#ffcf3f');
+        return end('fail', 'GOL! YANLIŞ KÖŞE', '#ff6b6b');
+      };
+      const draw = () => {
+        const { W, H, dpr } = g;
+        Sprites.turf(ctx, W, H, 12);
+        const cx = W / 2;
+        const gw = Math.min(W * 0.86, H * 0.9), gh = gw * 0.33; // kale ağzı
+        const gy = H * 0.86; // kale çizgisi
+        // ceza sahası çizgileri
+        ctx.strokeStyle = 'rgba(255,255,255,0.55)'; ctx.lineWidth = 2 * dpr;
+        ctx.strokeRect(cx - gw * 0.9, gy - H * 0.42, gw * 1.8, H * 0.42);
+        ctx.strokeRect(cx - gw * 0.55, gy - H * 0.16, gw * 1.1, H * 0.16);
+        ctx.beginPath(); ctx.arc(cx, gy - H * 0.3, 3 * dpr, 0, Math.PI * 2); ctx.fillStyle = '#fff'; ctx.fill();
+        // forvet ve top
+        const sy = pen ? gy - H * 0.3 : gy - H * 0.52 + Math.min(1, t / tKick) * H * 0.12;
+        const fh = Math.min(H * 0.16, W * 0.22);
+        const kicked = t >= tKick;
+        const lean = t >= hintAt && !kicked ? hintSide * 0.25 : 0;
+        ctx.save(); ctx.translate(cx, sy); ctx.rotate(lean);
+        Sprites.figure(ctx, 0, 0, fh, { kit: o.kits.opp, look: lookOpp, facing: 'down', number: 9, run: kicked ? 0 : t * 8, speed: kicked ? 0.2 : 0.7, t });
+        ctx.restore();
+        // ipucu oku (bakış)
+        if (t >= hintAt && !kicked) {
+          ctx.fillStyle = 'rgba(255,207,63,0.85)';
+          const ax = cx + hintSide * fh * 0.7, ay = sy - fh * 1.05;
+          ctx.beginPath(); ctx.moveTo(ax + hintSide * 14 * dpr, ay); ctx.lineTo(ax, ay - 10 * dpr); ctx.lineTo(ax, ay + 10 * dpr); ctx.closePath(); if (hintSide) ctx.fill();
+          if (!hintSide) { ctx.beginPath(); ctx.arc(cx, ay, 6 * dpr, 0, Math.PI * 2); ctx.fill(); }
+        }
+        // kale
+        const tx = cx + side * gw * 0.38, ty = gy - (high ? gh * 0.78 : gh * 0.28);
+        let bx = cx, by = sy - fh * 0.05, br = Math.max(5 * dpr, fh * 0.06);
+        if (kicked) {
+          const k = U.clamp((t - tKick) / flight, 0, 1.15);
+          bx = cx + (tx - cx) * k; by = by + (ty - by) * k; br *= 1 + k * 0.9;
+        }
+        // kaleci: arkası bize dönük, kale çizgisinde
+        const kh = Math.min(H * 0.24, W * 0.3);
+        let kx = cx, ky = gy, rot = 0;
+        if (dive) {
+          const k = U.clamp((t - dive.t) / 0.28, 0, 1);
+          kx = cx + dive.dir * gw * 0.36 * k; ky = gy - (high && dive.dir ? kh * 0.25 * k : 0); rot = dive.dir * k * 1.15;
+        }
+        ctx.save(); ctx.translate(kx, ky); ctx.rotate(rot);
+        Sprites.figure(ctx, 0, 0, kh, { kit: o.kits.gk || o.kits.own, look: lookMe, facing: 'up', number: o.number, run: 0, speed: 0.1, t, label: 'SEN', labelScale: dpr, labelColor: 'rgba(214,40,57,0.92)' });
+        ctx.restore();
+        // direkler ve file (önde)
+        ctx.strokeStyle = 'rgba(255,255,255,0.95)'; ctx.lineWidth = 6 * dpr;
+        ctx.beginPath(); ctx.moveTo(cx - gw / 2, gy + 4 * dpr); ctx.lineTo(cx - gw / 2, gy - gh); ctx.lineTo(cx + gw / 2, gy - gh); ctx.lineTo(cx + gw / 2, gy + 4 * dpr); ctx.stroke();
+        ctx.strokeStyle = 'rgba(255,255,255,0.18)'; ctx.lineWidth = 1 * dpr;
+        for (let i = 1; i < 12; i++) { const x = cx - gw / 2 + (gw / 12) * i; ctx.beginPath(); ctx.moveTo(x, gy); ctx.lineTo(x, gy - gh); ctx.stroke(); }
+        Sprites.ball(ctx, bx, by, br, t * 6);
+        if (msgT > 0) g.text(msg, H * 0.18, 32, msgCol);
+        else if (!kicked) g.text(pen ? 'PENALTI' : 'ŞUT GELİYOR!', H * 0.12, 28);
+      };
+      const loop = (now) => {
+        const dt = Math.min(0.05, (now - last) / 1000);
+        last = now; t += dt; msgT = Math.max(0, msgT - dt);
+        if (!done && t >= tKick + flight) resolveShot();
+        draw();
+        raf = requestAnimationFrame(loop);
+      };
+      let down = null;
+      const pd = (e) => { e.preventDefault(); down = { x: e.clientX, y: e.clientY }; };
+      const pu = (e) => {
+        if (!down) return;
+        const dx = e.clientX - down.x, dy = e.clientY - down.y;
+        const r = g.cv.getBoundingClientRect();
+        let dir;
+        if (Math.abs(dx) > 18 || Math.abs(dy) > 18) dir = Math.abs(dx) > Math.abs(dy) ? Math.sign(dx) : 0;
+        else { const fx = (e.clientX - r.left) / r.width; dir = fx < 0.36 ? -1 : fx > 0.64 ? 1 : 0; }
+        down = null; act(dir);
+      };
+      const key = (e) => {
+        if (e.code === 'ArrowLeft' || e.code === 'KeyA') { e.preventDefault(); act(-1); }
+        if (e.code === 'ArrowRight' || e.code === 'KeyD') { e.preventDefault(); act(1); }
+        if (e.code === 'ArrowUp' || e.code === 'KeyW' || e.code === 'Space') { e.preventDefault(); act(0); }
+      };
+      const cleanup = () => { cancelAnimationFrame(raf); document.removeEventListener('keydown', key); g.box.removeEventListener('pointerup', pu); window.removeEventListener('resize', g.layout); };
+      g.box.addEventListener('pointerdown', pd);
+      g.box.addEventListener('pointerup', pu);
+      document.addEventListener('keydown', key);
+      raf = requestAnimationFrame(loop);
+      MiniGame._abort = () => { if (done) return; done = true; cleanup(); resolve({ result: 'auto' }); };
+    });
+  },
+
   // Kafa vuruşu: köşeden gelen ortaya doğru anda yüksel; nişangah kale ağzında gidip gelir,
   // dokunduğun anda nişangahın olduğu yere vurursun. Zamanlama + yön birlikte.
   header(host, o) {

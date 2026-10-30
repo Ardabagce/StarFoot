@@ -16,6 +16,10 @@ const CStats = {
       c.min += sum.minutes || 0; c.sh += sum.shots || 0; c.kp += sum.keyPasses || 0; c.tk += sum.tackles || 0;
       c.y += sum.yellow ? 1 : 0; c.r += sum.red ? 1 : 0;
       if (g >= 3) c.hat++; else if (g === 2) c.brace++;
+      if (p.position === 'GK') {
+        c.sv = (c.sv || 0) + (sum.saves || 0); c.ps = (c.ps || 0) + (sum.penSaves || 0); c.gc = (c.gc || 0) + (sum.ga || 0);
+        if (!sum.ga && (sum.minutes || 0) >= 60) c.cs = (c.cs || 0) + 1;
+      }
       const hs = ctx.side === 'home' ? c.home : c.away; hs[0]++; hs[1] += g;
       (sum.goalMins || []).forEach((mn) => { c.gm[Math.min(5, Math.floor((Math.max(1, mn) - 1) / 15))]++; });
       const opp = ctx.side === 'home' ? ctx.away : ctx.home;
@@ -59,6 +63,10 @@ const CStats = {
         ${box('Hat-trick', c.hat)}${box('Maçta 2 gol', c.brace)}${box('En çok gol (maç)', (p.best && p.best.g) || 0)}
         ${box('En uzun gol serisi', ((p.best && p.best.streak) || 0) + ' maç')}${best ? box('En golcü sezon', `${best.year} · ${best.goals}`) : ''}${box('Galibiyet / B / M', `${c.w} / ${c.d} / ${c.l}`)}
       </div>
+      ${p.position === 'GK' ? `<div class="cs-sec"><h3>Kalecilik</h3><div class="ms-grid">
+        ${box('Gol yemeden biten maç', c.cs || 0)}${box('Kurtarış', c.sv || 0)}${box('Penaltı kurtarışı', c.ps || 0)}${box('Yenen gol', c.gc || 0)}
+        ${box('Maç başına yenen', f2((c.gc || 0) / Math.max(1, c.m)))}${box('Gol yememe oranı', c.m ? Math.round(((c.cs || 0) / c.m) * 100) + '%' : '-')}
+      </div></div>` : ''}
       <div class="cs-sec"><h3>Gol türleri</h3>${types.length ? types.map(([l, v]) => `<div class="cs-row"><span>${l}</span>${CStats.bar(v, tmax)}<b>${v}</b></div>`).join('') : '<p class="muted">Henüz gol yok.</p>'}</div>
       <div class="cs-sec"><h3>Gol dakikaları</h3><div class="cs-min">${CStats.BUCKETS.map((l, i) => `<div><i style="height:${Math.round((c.gm[i] / gmax) * 100)}%"></i><b>${c.gm[i]}</b><span>${l}</span></div>`).join('')}</div></div>
       ${fav || bogey ? `<div class="cs-pair">${fav ? `<div class="cs-hl good"><small>En sevdiğin rakip</small><b>${U.esc(fav.n)}</b><span>${fav.m} maçta ${fav.g} gol</span></div>` : ''}${bogey ? `<div class="cs-hl bad"><small>Kâbusun</small><b>${U.esc(bogey.n)}</b><span>${bogey.m} maçta ${bogey.l} yenilgi</span></div>` : ''}</div>` : ''}
