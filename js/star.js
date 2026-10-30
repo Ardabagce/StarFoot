@@ -133,7 +133,7 @@ const Star = {
       </div></div></div>`, [
       { t: 'Varsayılan', cls: 'btn-ghost', keep: true, fn: () => { Object.assign(cur, Sprites.look(7), { boots: '#16181d' }); sync(); } },
       { t: 'Vazgeç', cls: 'btn-ghost' },
-      { t: on ? 'Kaydet' : `${Icon('star')} Kaydet`, cls: 'btn-big', fn: () => { if (!on) return setTimeout(() => Star.pitch('Görünüm stüdyosu', 'studio', 'Yeni görünümün çok yakıştı! Kaydetmek ve maçlarda, Instagram\'da bu görünümle çıkmak için Premium gerekir.'), 60); p.look = Object.assign({}, cur); if (typeof SocialArt !== 'undefined') SocialArt.cache.clear(); Game.save(); Game.render(); Game.toast('Yeni görünümün kaydedildi.', 'good'); } },
+      { t: on ? 'Kaydet' : `${Icon('star')} Kaydet`, cls: 'btn-big', fn: () => { if (!on) return setTimeout(() => Star.pitch('Görünüm stüdyosu', 'studio', 'Yeni görünümün çok yakıştı! Kaydetmek ve maçlarda, sosyal medyada bu görünümle çıkmak için Premium gerekir.'), 60); p.look = Object.assign({}, cur); if (typeof SocialArt !== 'undefined') SocialArt.cache.clear(); Game.save(); Game.render(); Game.toast('Yeni görünümün kaydedildi.', 'good'); } },
     ], { wide: true });
     const cv = m.querySelector('.stu-cv');
     const draw = () => {
@@ -527,9 +527,9 @@ document.addEventListener('click', (e) => {
 });
 
 // ---------- Güncelleme duyurusu (her sürümde bir kez) ----------
-const APP_VER = '1.0.11';
+const APP_VER = '1.0.12';
 // Duyuru içeriğinin sürümü: yeni duyuru yazılınca güncellenir (yalnız sürüm atlamak tekrar göstermez)
-const WN_VER = '1.0.11';
+const WN_VER = '1.0.12';
 const WhatsNew = {
   KEY: 'starfoot_whatsnew',
   // Hub'a girişte bir kez gösterir; gösterdiyse true döner. done(): pencere kapanınca çalışır.
@@ -544,6 +544,7 @@ const WhatsNew = {
     const it = (ic, t, d) => `<li><i>${ic}</i><span><b>${t}</b><small>${d}</small></span></li>`;
     const ios = !!(window.Capacitor && window.Capacitor.getPlatform && window.Capacitor.getPlatform() === 'ios');
     const list = [
+      it('✏️', 'Editör', 'Kulüp ve oyuncu isimlerini istediğin gibi değiştir; düzenleme dosyanı arkadaşlarınla paylaş.'),
       it('🏟️', 'Gerçek stadyum sesi ve müzik', 'Tribün uğultusu ve gol coşkusu artık gerçek kayıt; ününe göre gürleşir. Menülerde müzik var, Ayarlar\'dan kapatabilirsin.'),
       it('📡', 'Maç radarı', 'Dakika dakika akışın üstünde canlı saha: top nerede, sen neredesin, gol nereden geldi.'),
       it('🏃', 'Yeni oyuncu animasyonları', 'Dizden bükülen koşu, sallanan kollar, daha gerçekçi futbolcular.'),
@@ -554,10 +555,10 @@ const WhatsNew = {
       it('⭐', 'Yıldız transferi', 'Ünlü bir oyuncu olarak yeni takımına gittiğinde artık rotasyon yok: doğrudan ilk 11.'),
       it('📖', 'Starpedia', 'Kariyerinin ansiklopedi sayfası: istatistikler, rekorlar, önemli maçlar. Bölümlerini kendin yaz.'),
       it('🎬', 'Kariyer belgeseli', 'Mahalle maçlarından zirveye, hikâyen bölüm bölüm. İzle ve paylaş.'),
-      it('🏎️', 'Lüks yaşam vitrini', 'Spor araba, villa, yat ve özel jet. Al, Instagram\'da paylaş.'),
+      it('🏎️', 'Lüks yaşam vitrini', 'Spor araba, villa, yat ve özel jet. Al, sosyal medyada paylaş.'),
       it('✂️', 'Görünüm stüdyosu', 'Saç, sakal, ten ve krampon rengi. Maçlarda da bu görünümle çık.'),
       it('📨', 'Transfer talebi', 'Menajerin istediğin an kulüplerden teklif toplasın.'),
-      it('✅', 'Altın onay rozeti', 'Oyun içi Instagram\'da altın tik.'),
+      it('✅', 'Altın onay rozeti', 'Oyun içi sosyal medyada altın tik.'),
     ] : []).join('');
     const foot = !prem ? '' : has
       ? `<p class="wn-note ok">${Icon('star')} Premium'un var: hepsi senin için açık!</p>`

@@ -1,0 +1,72 @@
+4729|Vivi una carriera leggendaria
+4730|Diventa una stella immaginaria ispirata ai tipi di giocatore leggendari della storia del calcio: inizia nella loro epoca, con il loro talento. Ti aspettano momenti decisivi; seguirai la stessa strada o scriverai la tua leggenda?
+4733|Tempesta dell'Atlantico
+4734|Maestro
+4735|La Bomba
+4736|Il Fulmine
+4851|{} · vivaio del {}
+4737|Sei nato in una piccola città dell'Argentina. Tutti ammirano ciò che fai con il pallone, ma sei più piccolo dei tuoi coetanei. Un grande club oltreoceano ha creduto nel tuo talento e ti ha portato nel suo vivaio a 13 anni.
+4741|Il tuo fisico cresce nel vivaio e ora tutti parlano di te.
+4742|Si avvicina il tuo primo grande torneo. Il CT ti vede come il numero 10 del futuro.
+4744|Il club in cui hai giocato per anni è in crisi finanziaria. Da Parigi arriva una grande offerta: una nuova avventura?
+4746|Negli ultimi anni di carriera arriva un'offerta a sorpresa da oltreoceano.
+4747|Sei nato in una piccola città costiera del Portogallo. Eri il ragazzo che si allenava più di tutti e odiava perdere. A 12 anni sei andato da solo nella capitale, in un grande vivaio.
+4751|Un infortunio ti ha tenuto lontano dal campo per un po' nel vivaio, ma sei tornato più forte. Ora niente può fermarti.
+4753|In un'amichevole hai distrutto la difesa di un colosso inglese. Il loro allenatore ti vuole subito!
+4755|Il club più grande di Spagna ti vuole per una cifra record. È ora di indossare la maglia bianca?
+4757|Una nuova sfida dall'Italia: conquista anche lei.
+4758|L'offerta d'ingaggio più alta della tua carriera arriva dal Medio Oriente.
+4759|Sei cresciuto nel sud del Brasile giocando in strada, in spiaggia e a calcetto. I tuoi dribbling sono sulla bocca di tutto il quartiere. Il grande club della città ti ha già portato nel suo vivaio.
+4763|Nella finale statale hai fatto ballare gli avversari con i tuoi dribbling. Tutto il paese ha imparato il tuo nome.
+4766|Un club di Parigi ti apre le porte dell'Europa.
+4767|Uno dei grandi club spagnoli ti vuole come volto del suo nuovo progetto!
+4768|Offerta da Milano: una nuova pagina in Italia.
+4769|Un grande club della tua terra ti richiama.
+4770|Sei cresciuto nella periferia di una città portuale del sud della Francia. Con il pallone tra i piedi il tempo sembra rallentare. Un vivaio della costa ti ha scoperto a 14 anni.
+4773|Un club della costa atlantica vuole farti diventare una stella tra i professionisti.
+4774|Uno dei club più blasonati d'Italia ti ha scelto per costruire il miglior centrocampo d'Europa.
+4775|Il club più grande di Spagna bussa alla tua porta per un trasferimento record.
+4776|Sei cresciuto nella periferia di una grande città brasiliana senza mai saltare un allenamento. Un club ti ha preso nel suo vivaio a 14 anni. La tua velocità e il tuo fiuto del gol fanno già parlare.
+4780|Un club olandese vuole portarti in Europa. Hai solo 18 anni.
+4782|Offerta dalla Spagna: tutti vogliono vedere le tue corse inarrestabili.
+4783|È arrivata un'offerta record da Milano.
+4784|Un infortunio grave! I medici prevedono un lungo recupero.
+4786|Dopo il tuo ritorno straordinario, il club più grande di Spagna vuole inserirti nella sua rosa piena di stelle.
+4787|Sei cresciuto nella periferia di una grande città. I tuoi sogni sono grandi quanto la tua velocità. Un vivaio della costa meridionale ti ha preso a 14 anni.
+4791|Il club della tua città ha fatto un'offerta record per farti tornare.
+4792|Il club dei tuoi sogni da bambino finalmente bussa alla tua porta.
+4793|Il nuovo look ti sta benissimo! Serve Premium per salvarlo e usarlo nelle partite e sui social.
+4795|Auto sportive, ville, yacht e jet privato. Compra e condividi sui social.
+4797|Spunta dorata sui social del gioco.
+4798|Questo ragazzo diventerà una leggenda
+4837|{} fa in media 4 dribbling a partita in questa stagione. Le difese avversarie condividono lo stesso terapeuta.
+4838|{} ha pubblicato un nuovo video di allenamento. Si dice che i suoi addominali avranno un account tutto loro.
+4839|{} ha rivelato di mangiare 14 uova a colazione. Gli allevamenti hanno aggiunto un turno.
+4840|{} ha segnato una tripletta dopo aver finito i compiti. La prof gli ha dato un punto in più.
+4807|Classico di Spagna
+4808|Classico di Germania
+4809|Derby di Rio
+4810|Editor
+4811|Cambia i nomi di club e giocatori, condividi un file di modifica.
+4812|Apri
+4813|Puoi cambiare i nomi di club e giocatori come vuoi. Le modifiche valgono per le carriere nuove e salvate.
+4816|Club
+4817|Giocatori
+278|Condividi
+1122|Campionato
+4818|Cerca giocatori
+4819|Nessun risultato.
+4850|Mostra altri ({})
+4820|File di modifica
+4836|Al momento sono stati modificati {} club e {} giocatori. Puoi condividere la tua modifica con gli amici o importare il file di qualcun altro.
+4822|Condividi / copia
+4823|Importa
+4824|Incolla qui il file di modifica
+4825|Ripristina tutto
+4826|Modifiche salvate e applicate alle tue carriere.
+4827|Nessuna modifica.
+4828|File di modifica copiato.
+4829|Impossibile leggere il file. Assicurati di aver incollato tutto il testo.
+4841|{} club e {} giocatori caricati. Tocca Salva per applicare.
+4833|Tutti i nomi sono stati ripristinati. Tocca Salva per applicare.
+4835|Cambia i nomi di club e giocatori come vuoi; condividi il tuo file di modifica con gli amici.

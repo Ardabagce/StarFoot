@@ -2377,3 +2377,22 @@ div.doc { position: fixed; inset: 0; z-index: 49; background: #000; display: fle
 .ss-x { width: 38px; height: 38px; border-radius: 50%; border: 1px solid var(--line); background: rgba(255, 255, 255, .05); color: var(--chalk); font-size: 16px; cursor: pointer; }
 .ss-body { flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 12px 14px calc(20px + env(safe-area-inset-bottom, 0px)); display: flex; flex-direction: column; gap: 12px; }
 .ss-body .card { margin: 0; }
+
+/* Editör (kulüp ve oyuncu isimleri) */
+.ed-sheet .ss-panel { width: min(520px, 100%); }
+.ed-foot { display: flex; gap: 10px; padding: 10px 14px calc(12px + env(safe-area-inset-bottom, 0px)); border-top: 1px solid var(--line); }
+.ed-foot .btn { flex: 1; }
+.ed-note { margin: 0; font-size: 13px; }
+.ed-tabs { display: flex; }
+.ed-tabs button { flex: 1; }
+.ed-list { display: flex; flex-direction: column; gap: 6px; }
+.ed-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; padding: 6px; border-radius: 10px; background: rgba(255, 255, 255, .03); border: 1px solid transparent; }
+.ed-row.ch { border-color: rgba(255, 210, 63, .45); }
+.ed-row small { flex-basis: 100%; color: var(--muted, #8fa0c8); font-size: 11.5px; padding-left: 2px; }
+.ed-in { flex: 1; min-width: 0; height: 38px; padding: 0 10px; border-radius: 8px; border: 1px solid var(--line); background: rgba(0, 0, 0, .25); color: var(--chalk, #fff); font: inherit; font-size: 15px; }
+.ed-in.ed-sh { flex: 0 0 64px; text-transform: uppercase; text-align: center; }
+.ed-q { flex: none; width: 100%; }
+.ed-rs { flex: 0 0 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); background: rgba(255, 255, 255, .05); color: var(--chalk, #fff); cursor: pointer; }
+.ed-ta { width: 100%; box-sizing: border-box; min-height: 90px; padding: 10px; border-radius: 10px; border: 1px solid var(--line); background: rgba(0, 0, 0, .25); color: var(--chalk, #fff); font: 12px/1.4 ui-monospace, monospace; resize: vertical; }
+#ed-body > * { flex-shrink: 0; }
+.ed-tabs button { padding: 9px 6px; }

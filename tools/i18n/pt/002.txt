@@ -88,7 +88,7 @@
 737|Azul-gelo com chamas
 738|Você não pode jogar até o fim da suspensão.
 739|3 chutes na área. Puxe para trás e solte, mire nos cantos.
-740|Cristiano Ronalda postou um novo vídeo de treino. Dizem que o tanquinho dele vai ganhar conta própria.
+740|Rafael Santeiro postou um novo vídeo de treino. Dizem que o tanquinho dele vai ganhar conta própria.
 741|Ficar com a carteira
 742|Chuteiras infantis de velcro
 743|LIGA DAS TERRAS ALTAS
@@ -156,7 +156,7 @@
 805|Você poupou energia.
 806|Você poupa energia
 807|Você dormiu cedo, mas seus amigos ficaram um pouco chateados.
-808|Erling Halland revelou que come 14 ovos no café da manhã. As granjas criaram um turno da noite.
+808|Magnus Solestad revelou que come 14 ovos no café da manhã. As granjas criaram um turno da noite.
 809|Clube antigo triste, clube novo feliz
 810|A bola de couro costurada de antigamente
 811|Estúdio de música em casa

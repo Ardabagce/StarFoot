@@ -117,7 +117,7 @@
 1116|LALIGA 2
 1117|Marine mit Silbersternen
 1118|Tulpen-Liga
-1119|Lamin Yamel schoss einen Hattrick, nachdem er seine Hausaufgaben gemacht hatte. Sein Lehrer gab ihm Extrapunkte.
+1119|Rubén Belez schoss einen Hattrick, nachdem er seine Hausaufgaben gemacht hatte. Sein Lehrer gab ihm Extrapunkte.
 1120|Lavaball
 1121|Rückstand auf den Ersten
 1122|Liga
@@ -130,7 +130,7 @@
 1129|Meister
 1130|Du wurdest zum Spieler der Saison der Liga gewählt
 1131|Ligen
-1132|Lionel Mezzi kommt diese Saison auf 4 Dribblings pro Spiel. Gegnerische Abwehrreihen teilen sich einen Therapeuten.
+1132|Mateo Lirandi kommt diese Saison auf 4 Dribblings pro Spiel. Gegnerische Abwehrreihen teilen sich einen Therapeuten.
 1133|Lissabon
 1134|London
 1135|Luxus-SUV

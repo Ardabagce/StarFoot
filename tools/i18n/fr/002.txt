@@ -88,7 +88,7 @@
 737|Bleu glacier à flammes
 738|Tu ne peux pas jouer de match avant la fin de ta suspension.
 739|3 tirs dans la surface. Tire en arrière et relâche, vise les coins.
-740|Cristiano Ronalda a posté une nouvelle vidéo d'entraînement. Selon la rumeur, ses abdos vont avoir leur propre compte.
+740|Rafael Santeiro a posté une nouvelle vidéo d'entraînement. Selon la rumeur, ses abdos vont avoir leur propre compte.
 741|Garder le portefeuille
 742|Chaussures enfant à scratch
 743|LIGUE DES HIGHLANDS
@@ -156,7 +156,7 @@
 805|Tu as économisé ton énergie.
 806|Tu économises ton énergie
 807|Tu t'es couché tôt, mais tes amis étaient un peu vexés.
-808|Erling Halland a révélé qu'il mange 14 œufs au petit-déjeuner. Les élevages de poules ont ajouté une équipe de nuit.
+808|Magnus Solestad a révélé qu'il mange 14 œufs au petit-déjeuner. Les élevages de poules ont ajouté une équipe de nuit.
 809|Ancien club triste, nouveau club ravi
 810|Le ballon en cuir cousu d'antan
 811|Studio de musique à la maison

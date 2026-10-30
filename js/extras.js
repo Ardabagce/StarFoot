@@ -540,7 +540,7 @@ Events.list.push(
 
 // ---------- Sosyal medya (takipçi, paylaşım, beğeni) ----------
 const SOCIAL_COMMENTS = {
-  goal: ['Kral!', 'Bu çocuk ileride Mezzi olur', 'Gol makinesi çalışıyor', 'Kaleciye geçmiş olsun', 'Ben bunu çok önceden söylemiştim', 'Şu vuruşu 40 kez izledim', 'Rakip defans hâlâ seni arıyor', 'Formanı ver abi'],
+  goal: ['Kral!', 'Bu çocuk ileride efsane olur', 'Gol makinesi çalışıyor', 'Kaleciye geçmiş olsun', 'Ben bunu çok önceden söylemiştim', 'Şu vuruşu 40 kez izledim', 'Rakip defans hâlâ seni arıyor', 'Formanı ver abi'],
   motm: ['Maçın adamı değil maçın kralı', 'Hoca bunu her maç oynat', 'Reyting değil roket', 'Bugün sahada tek kişi vardı'],
   trophy: ['Vitrine bir kupa daha!', 'Şampiyon olan kim? Biziz!', 'Bu daha başlangıç', 'Gözlerim doldu valla'],
   transfer: ['Yeni takımına hayırlı olsun', 'Eski takım üzgün yeni takım mutlu', 'Formanı şimdiden aldım', 'Bonservis kaç ya?'],
@@ -723,10 +723,10 @@ const WorldNews = {
   star() {
     const w = Game.state.world;
     const act = Legends.active(w);
-    if (act.length) { const a = U.pick(act); return { n: a.n, club: (w.clubs[a.L.club] || {}).name || '' }; }
+    if (act.length) { const a = U.pick(act); return { n: a.n, club: (w.clubs[a.L.club] || {}).name || '', age: a.age || (a.L.by && Game.state.season ? Game.state.season.year - a.L.by : 0) }; }
     const c = U.pick(Object.values(w.clubs).filter((x) => x.rating >= 75));
     const pl = c.roster.slice().sort((a, b) => b.r - a.r)[0];
-    return { n: pl.n, club: c.name };
+    return { n: pl.n, club: c.name, age: pl.age || 0 };
   },
   live(name) { return Game.state.world.legends && Game.state.world.legends.some((L) => L.n === name && L.state === 'active'); },
   bigClub() { return U.pick(Object.values(Game.state.world.clubs).filter((c) => c.rating >= 78)).name; },
@@ -744,8 +744,8 @@ const WorldNews = {
     { id: 'radar', f: (W) => { const a = W.star(); return `${W.bigClub()}, ${a.n} için harekete geçti! Menajeri: "Telefonum o kadar çok çalıyor ki şarjım yetmiyor."`; } },
     { id: 'rewatch', f: (W) => { const a = W.star(); return `${a.n}, son golünü 47 kez izlediğini itiraf etti: "48. izleyişte daha da güzeldi."`; } },
     { id: 'president', f: (W) => `${W.anyClub()} başkanı transfer dönemi için konuştu: "Kasada para var, sadece anahtarı bulamadık."` },
-    { id: 'mezzi', f: (W) => !W.live('Lionel Mezzi') ? null : 'Lionel Mezzi bu sezon maç başına ortalama 4 çalım atıyor. Rakip defanslar ortak bir terapiste gidiyor.' },
-    { id: 'ronalda', f: (W) => !W.live('Cristiano Ronalda') ? null : 'Cristiano Ronalda yeni antrenman videosu paylaştı. Karın kaslarının ayrı bir hesap açacağı konuşuluyor.' },
+    { id: 'mezzi', f: (W) => { const a = W.star(); return `${a.n} bu sezon maç başına ortalama 4 çalım atıyor. Rakip defanslar ortak bir terapiste gidiyor.`; } },
+    { id: 'ronalda', f: (W) => { const a = W.star(); return `${a.n} yeni antrenman videosu paylaştı. Karın kaslarının ayrı bir hesap açacağı konuşuluyor.`; } },
     { id: 'lace', f: (W) => `${W.anyClub()} kalecisi bağcığını bağlarken gol yedi. Açıklaması kısa: "Bağcık bizim değildi."` },
     { id: 'watch', f: (W) => { const a = W.star(); return `${a.n} bu hafta maçta ${U.randi(12, 14)},${U.randi(1, 9)} km koştu. Akıllı saati "lütfen dur" uyarısı verdi.`; } },
     { id: 'emoji', f: (W) => { const a = W.star(), b = W.star(); return a.n === b.n ? null : `${a.n} ile ${b.n} arasında sosyal medyada "kim daha hızlı" tartışması çıktı. Yarış önerisi geldi.`; } },
@@ -754,8 +754,8 @@ const WorldNews = {
     { id: 'cat', f: (W) => { const a = W.star(); return `${a.n} hafif sakatlandı. Evde kedisine çalım atmaya çalışırken halıya takılmış.`; } },
     { id: 'mom', f: (W) => { const a = W.star(); return `${a.n} sahadayken annesi tribünde 90 dakika boyunca hakeme itiraz etti. Hakem: "Ben bile ikna oldum."`; } },
     { id: 'var', f: (W) => `${W.anyClub()} maçında VAR incelemesi 9 dakika sürdü. Seyirciler bu sürede çay demledi.` },
-    { id: 'halland', f: (W) => !W.live('Erling Halland') ? null : 'Erling Halland kahvaltıda 14 yumurta yediğini açıkladı. Tavuk çiftlikleri vardiya ekledi.' },
-    { id: 'yamel', f: (W) => !W.live('Lamin Yamel') ? null : 'Lamin Yamel ödevini yetiştirdikten sonra hat-trick yaptı. Öğretmeni ek puan verdi.' },
+    { id: 'halland', f: (W) => { const a = W.star(); return `${a.n} kahvaltıda 14 yumurta yediğini açıkladı. Tavuk çiftlikleri vardiya ekledi.`; } },
+    { id: 'yamel', f: (W) => { const a = W.star(); if (!a.age || a.age > 19) return null; return `${a.n} ödevini yetiştirdikten sonra hat-trick yaptı. Öğretmeni ek puan verdi.`; } },
     { id: 'bigwin', f: (W) => { const r = W.lastResults().sort((a, b) => Math.abs(b.hs - b.as) - Math.abs(a.hs - a.as))[0]; if (!r || Math.abs(r.hs - r.as) < 3) return null; const c = Game.state.world.clubs; const win = r.hs > r.as ? c[r.h].name : c[r.a].name, lose = r.hs > r.as ? c[r.a].name : c[r.h].name; return `${r.lg}'nde haftanın farkı: ${win}, ${lose} karşısında ${Math.max(r.hs, r.as)}-${Math.min(r.hs, r.as)} kazandı. Kaybeden teknik direktör: "Çim çok kaygandı."`; } },
     { id: 'upset', f: (W) => { const c = Game.state.world.clubs; const r = W.lastResults().find((x) => (x.hs > x.as && c[x.a].rating - c[x.h].rating >= 8) || (x.as > x.hs && c[x.h].rating - c[x.a].rating >= 8)); if (!r) return null; const win = r.hs > r.as ? c[r.h].name : c[r.a].name, lose = r.hs > r.as ? c[r.a].name : c[r.h].name; return `Haftanın sürprizi ${r.lg}'nden: ${win}, favori rakibi ${lose} karşısında ${Math.max(r.hs, r.as)}-${Math.min(r.hs, r.as)} kazandı.`; } },
     { id: 'leader', f: () => { const l = U.pick(LEAGUES); const t = World.sortedTable(Game.state.world.leagues[l.id])[0]; if (!t || !t.p) return null; return `${l.name}'nde zirvede ${Game.state.world.clubs[t.id].name} var (${t.pts} puan). Rakipleri takvim yaprağı koparmaktan çekinir oldu.`; } },

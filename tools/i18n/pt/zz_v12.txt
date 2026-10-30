@@ -1,0 +1,72 @@
+4729|Viva uma carreira lendária
+4730|Seja uma estrela fictícia inspirada nos tipos de jogador lendários da história do futebol: comece na época dele, com o talento dele. Momentos decisivos esperam por você; vai seguir o mesmo caminho ou escrever sua própria lenda?
+4733|Tempestade Atlântica
+4734|Maestro
+4735|O Bomba
+4736|O Relâmpago
+4851|{} · base do {}
+4737|Você nasceu numa cidade pequena da Argentina. Todos admiram o que você faz com a bola, mas você é menor que os garotos da sua idade. Um grande clube do outro lado do oceano acreditou no seu talento e te levou para a base aos 13 anos.
+4741|Seu físico está se desenvolvendo na base e agora todos falam de você.
+4742|Seu primeiro grande torneio se aproxima. O treinador te vê como o camisa 10 do futuro.
+4744|O clube onde você jogou por anos está em crise financeira. Há uma grande proposta de Paris: uma nova aventura?
+4746|Nos últimos anos da carreira, chega uma proposta surpresa do outro lado do oceano.
+4747|Você nasceu numa pequena cidade litorânea de Portugal. Era o garoto que mais treinava e não suportava perder. Aos 12 anos foi sozinho para a capital, para uma grande academia.
+4751|Uma lesão te afastou dos campos por um tempo na base, mas você voltou mais forte. Agora nada pode te parar.
+4753|Num amistoso você destruiu a defesa de um gigante inglês. O técnico deles te quer agora!
+4755|O maior clube da Espanha te quer por uma transferência recorde. Chegou a hora de vestir a camisa branca?
+4757|Um novo desafio vindo da Itália: conquiste-a também.
+4758|A maior proposta salarial da sua carreira chegou do Oriente Médio.
+4759|Você cresceu no sul do Brasil jogando na rua, na praia e no futsal. Seus dribles são o assunto do bairro. O grande clube da cidade já te levou para a base.
+4763|Na final estadual você fez os rivais dançarem com seus dribles. O país inteiro aprendeu seu nome.
+4766|Um clube de Paris abre as portas da Europa para você.
+4767|Um dos grandes clubes da Espanha te quer como rosto do novo projeto!
+4768|Proposta de Milão: uma nova página na Itália.
+4769|Um grande clube da sua terra está te chamando de volta.
+4770|Você cresceu na periferia de uma cidade portuária no sul da França. Com a bola nos pés, o tempo parece desacelerar. Uma academia do litoral te descobriu aos 14 anos.
+4773|Um clube da costa atlântica quer te transformar em estrela no profissional.
+4774|Um dos clubes mais tradicionais da Itália te escolheu para montar o melhor meio-campo da Europa.
+4775|O maior clube da Espanha está à sua porta para uma transferência recorde.
+4776|Você cresceu na periferia de uma grande cidade do Brasil e nunca faltou a um treino. Um clube te levou para a base aos 14 anos. Sua velocidade e finalização já são assunto.
+4780|Um clube da Holanda quer te levar para a Europa. Você tem só 18 anos.
+4782|Proposta da Espanha: todos querem ver suas arrancadas imparáveis.
+4783|Chegou uma proposta recorde de Milão.
+4784|Uma lesão grave! Os médicos preveem uma longa recuperação.
+4786|Depois do seu retorno espetacular, o maior clube da Espanha quer te colocar no elenco cheio de estrelas.
+4787|Você cresceu na periferia de uma cidade grande. Seus sonhos são do tamanho da sua velocidade. Uma academia do litoral sul te contratou aos 14 anos.
+4791|O clube da sua cidade fez uma proposta recorde para você voltar.
+4792|O clube dos seus sonhos de infância finalmente está à sua porta.
+4793|Seu novo visual ficou ótimo! É preciso Premium para salvar e usá-lo nas partidas e nas redes sociais.
+4795|Carros esportivos, mansões, iates e jatinho. Compre e poste nas redes sociais.
+4797|Selo dourado nas redes sociais do jogo.
+4798|Esse garoto vai virar lenda
+4837|{} tem média de 4 dribles por jogo nesta temporada. As defesas rivais dividem o mesmo terapeuta.
+4838|{} postou um novo vídeo de treino. Dizem que o abdômen dele vai ganhar uma conta própria.
+4839|{} revelou que come 14 ovos no café da manhã. As granjas criaram um turno extra.
+4840|{} fez um hat-trick depois de terminar a lição de casa. A professora deu ponto extra.
+4807|Clássico Espanhol
+4808|Clássico Alemão
+4809|Clássico do Rio
+4810|Editor
+4811|Mude nomes de clubes e jogadores, compartilhe um arquivo de edição.
+4812|Abrir
+4813|Você pode mudar os nomes de clubes e jogadores como quiser. As mudanças aparecem nas carreiras novas e salvas.
+4816|Clubes
+4817|Jogadores
+278|Compartilhar
+1122|Liga
+4818|Buscar jogadores
+4819|Nenhum resultado.
+4850|Mostrar mais ({})
+4820|Arquivo de edição
+4836|No momento, {} clubes e {} jogadores foram alterados. Você pode compartilhar sua edição com amigos ou importar o arquivo de outra pessoa.
+4822|Compartilhar / copiar
+4823|Importar
+4824|Cole o arquivo de edição aqui
+4825|Restaurar tudo
+4826|Mudanças salvas e aplicadas às suas carreiras.
+4827|Nenhuma mudança.
+4828|Arquivo de edição copiado.
+4829|Não foi possível ler o arquivo. Verifique se colou o texto inteiro.
+4841|{} clubes e {} jogadores carregados. Toque em Salvar para aplicar.
+4833|Todos os nomes foram restaurados. Toque em Salvar para aplicar.
+4835|Mude os nomes de clubes e jogadores como quiser; compartilhe seu arquivo de edição com amigos.

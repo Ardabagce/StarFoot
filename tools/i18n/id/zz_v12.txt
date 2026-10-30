@@ -1,0 +1,72 @@
+4729|Jalani karier legendaris
+4730|Jadilah bintang fiktif yang terinspirasi dari tipe pemain legendaris dalam sejarah sepak bola: mulai di eranya, dengan bakatnya. Titik balik menantimu; akankah kamu menempuh jalan yang sama atau menulis legendamu sendiri?
+4733|Badai Atlantik
+4734|Maestro
+4735|Si Bom
+4736|Si Kilat
+4851|{} · akademi {}
+4737|Kamu lahir di sebuah kota kecil di Argentina. Semua kagum dengan aksimu bersama bola, tapi tubuhmu lebih kecil dari teman sebaya. Sebuah klub besar di seberang samudra percaya pada bakatmu dan membawamu ke akademinya di usia 13 tahun.
+4741|Fisikmu berkembang di akademi dan kini semua orang membicarakanmu.
+4742|Turnamen besar pertamamu sudah dekat. Pelatih melihatmu sebagai nomor 10 masa depan.
+4744|Klub yang kamu bela bertahun-tahun sedang krisis keuangan. Ada tawaran besar dari Paris: petualangan baru?
+4746|Di tahun-tahun terakhir kariermu, datang tawaran kejutan dari seberang samudra.
+4747|Kamu lahir di sebuah kota pesisir kecil di Portugal. Kamulah anak yang berlatih paling keras dan tak tahan kalah. Di usia 12 kamu pindah sendirian ke ibu kota, ke akademi besar.
+4751|Cedera sempat membuatmu absen di akademi, tapi kamu kembali lebih kuat. Kini tak ada yang bisa menghentikanmu.
+4753|Di laga uji coba kamu mengobrak-abrik pertahanan raksasa Inggris. Pelatih mereka langsung menginginkanmu!
+4755|Klub terbesar Spanyol menginginkanmu dengan biaya transfer rekor. Saatnya mengenakan seragam putih?
+4757|Tantangan baru dari Italia: taklukkan juga.
+4758|Tawaran gaji terbesar dalam kariermu datang dari Timur Tengah.
+4759|Kamu tumbuh di Brasil selatan, bermain bola di jalan, pantai, dan futsal. Giringanmu jadi buah bibir. Klub besar kota itu sudah merekrutmu ke akademinya.
+4763|Di final negara bagian kamu membuat lawan menari dengan giringanmu. Seluruh negeri mengenal namamu.
+4766|Sebuah klub dari Paris membukakan pintu Eropa untukmu.
+4767|Salah satu klub besar Spanyol menginginkanmu sebagai wajah proyek barunya!
+4768|Tawaran dari Milan: babak baru di Italia.
+4769|Klub besar dari kampung halamanmu memanggilmu pulang.
+4770|Kamu tumbuh di pinggiran kota pelabuhan di Prancis selatan. Saat bola di kakimu, waktu seolah melambat. Sebuah akademi di pesisir menemukanmu di usia 14.
+4773|Sebuah klub di pesisir Atlantik ingin menjadikanmu bintang di level profesional.
+4774|Salah satu klub paling bersejarah di Italia memilihmu untuk membangun lini tengah terbaik Eropa.
+4775|Klub terbesar Spanyol mengetuk pintumu untuk transfer rekor.
+4776|Kamu tumbuh di pinggiran kota besar Brasil dan tak pernah absen latihan. Sebuah klub merekrutmu ke akademinya di usia 14. Kecepatan dan penyelesaianmu sudah jadi perbincangan.
+4780|Sebuah klub dari Belanda ingin membawamu ke Eropa. Usiamu baru 18 tahun.
+4782|Tawaran dari Spanyol: semua ingin melihat larianmu yang tak terbendung.
+4783|Tawaran rekor datang dari Milan.
+4784|Cedera parah! Dokter memperkirakan pemulihan yang lama.
+4786|Setelah comeback hebatmu, klub terbesar Spanyol ingin memasukkanmu ke skuad bertabur bintangnya.
+4787|Kamu tumbuh di pinggiran kota besar. Mimpimu sebesar kecepatanmu. Sebuah akademi di pesisir selatan merekrutmu di usia 14.
+4791|Klub kota asalmu mengajukan tawaran rekor agar kamu pulang.
+4792|Klub impian masa kecilmu akhirnya datang mengetuk pintu.
+4793|Penampilan barumu keren! Perlu Premium untuk menyimpan dan memakainya di pertandingan dan media sosial.
+4795|Mobil sport, vila, kapal pesiar, dan jet pribadi. Beli lalu bagikan di media sosial.
+4797|Centang emas di media sosial dalam game.
+4798|Anak ini bakal jadi legenda
+4837|{} rata-rata 4 giringan per laga musim ini. Para bek lawan berbagi terapis yang sama.
+4838|{} mengunggah video latihan baru. Kabarnya otot perutnya akan punya akun sendiri.
+4839|{} mengaku makan 14 telur saat sarapan. Peternakan ayam menambah sif malam.
+4840|{} mencetak hat-trick setelah menyelesaikan PR. Gurunya memberi nilai tambahan.
+4807|Klasik Spanyol
+4808|Klasik Jerman
+4809|Derbi Rio
+4810|Editor
+4811|Ubah nama klub dan pemain, bagikan file editan.
+4812|Buka
+4813|Kamu bisa mengubah nama klub dan pemain sesukamu. Perubahan muncul di karier baru dan yang tersimpan.
+4816|Klub
+4817|Pemain
+278|Bagikan
+1122|Liga
+4818|Cari pemain
+4819|Tidak ada hasil.
+4850|Tampilkan lebih banyak ({})
+4820|File editan
+4836|Saat ini {} klub dan {} pemain telah diubah. Kamu bisa membagikan editanmu ke teman atau mengimpor file orang lain.
+4822|Bagikan / salin
+4823|Impor
+4824|Tempel file editan di sini
+4825|Kembalikan semua ke awal
+4826|Perubahan disimpan dan diterapkan ke kariermu.
+4827|Tidak ada perubahan.
+4828|File editan disalin.
+4829|File tidak terbaca. Pastikan kamu menempel seluruh teks.
+4841|{} klub dan {} pemain dimuat. Ketuk Simpan untuk menerapkan.
+4833|Semua nama dikembalikan. Ketuk Simpan untuk menerapkan.
+4835|Ubah nama klub dan pemain sesukamu; bagikan file editanmu ke teman.

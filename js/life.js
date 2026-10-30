@@ -12,7 +12,7 @@ const BRANDS = [
   { id: 'fitl', name: 'FitLife', kind: 'drink', l: 'sporcu gıdası', c1: '#2fbf71', c2: '#ffffff', fame: 8, m: 0.7 },
   { id: 'aurm', name: 'Aurum Bank', kind: 'card', l: 'banka', c1: '#0b2a5a', c2: '#ffd84a', fame: 55, m: 2.4 },
 ];
-const MGR_NAMES = ['Ahmet "Tilki" Bulut', 'Jorge Mendoza', 'Mino Rayola', 'Pini Zahavo', 'Kerem Aksoy', 'Federico Pastorelli', 'Volkan Demirel', 'Jonathan Barnet', 'Rafaela Pimenta', 'Selim Kaplan'];
+const MGR_NAMES = ['Ahmet "Tilki" Bulut', 'Jorge Valdés', 'Marco Bellandi', 'Avi Shamir', 'Kerem Aksoy', 'Luca Ferrandi', 'Volkan Karayel', 'Jonathan Price', 'Raquel Moreira', 'Selim Kaplan'];
 const SOCIAL_SPONSOR = ['Bu ürün olmadan antrenmana çıkmıyorum! #reklam', 'Yeni sezona yeni ortaklık. #işbirliği', 'Kalite bir yaşam tarzı. #reklam', 'Detaylar fark yaratır. #sponsor'];
 
 const Life = {

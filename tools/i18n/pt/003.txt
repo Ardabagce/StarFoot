@@ -117,7 +117,7 @@
 1116|LALIGA 2
 1117|Azul-marinho com estrelas prateadas
 1118|Liga das Tulipas
-1119|Lamin Yamel fez hat-trick depois de terminar a lição de casa. O professor deu ponto extra.
+1119|Rubén Belez fez hat-trick depois de terminar a lição de casa. O professor deu ponto extra.
 1120|Bola de lava
 1121|Distância para o líder
 1122|Liga
@@ -130,7 +130,7 @@
 1129|Campeão da liga
 1130|Você foi eleito o jogador da temporada da liga
 1131|Ligas
-1132|Lionel Mezzi tem média de 4 dribles por jogo nesta temporada. As defesas rivais dividem um terapeuta.
+1132|Mateo Lirandi tem média de 4 dribles por jogo nesta temporada. As defesas rivais dividem um terapeuta.
 1133|Lisboa
 1134|Londres
 1135|SUV de luxo

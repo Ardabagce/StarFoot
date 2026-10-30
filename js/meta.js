@@ -5,13 +5,13 @@
 const DERBIES = [
   ['GAL', 'FNK', 'Kıtalararası Derbi'], ['GAL', 'BJK', 'İstanbul Derbisi'], ['FNK', 'BJK', 'İstanbul Derbisi'], ['TRB', 'FNK', 'Karadeniz Derbisi'],
   ['MCS', 'MUN', 'Manchester Derbisi'], ['ARS', 'TOT', 'Kuzey Londra Derbisi'], ['LIV', 'EVE', 'Merseyside Derbisi'], ['LIV', 'MUN', 'Kuzeyin Klasiği'], ['ARS', 'CHE', 'Londra Derbisi'],
-  ['RMA', 'BAR', 'El Klasiko'], ['RMA', 'ATM', 'Madrid Derbisi'], ['BET', 'SEV', 'Sevilya Derbisi'],
-  ['BAY', 'BVB', 'Der Klassiker'],
+  ['RMA', 'BAR', 'İspanya Klasiği'], ['RMA', 'ATM', 'Madrid Derbisi'], ['BET', 'SEV', 'Sevilya Derbisi'],
+  ['BAY', 'BVB', 'Almanya Klasiği'],
   ['INT', 'MIL', 'Milano Derbisi'], ['ROM', 'LAZ', 'Roma Derbisi'], ['JUV', 'INT', 'İtalya Derbisi'], ['JUV', 'TOR', 'Torino Derbisi'],
   ['PSG', 'ASM', 'Fransa Zirvesi'], ['PSG', 'PFC', 'Paris Derbisi'],
   ['AJX', 'FEY', 'Hollanda Klasiği'], ['AJX', 'PSV', 'Hollanda Zirvesi'],
   ['BEN', 'SPL', 'Lizbon Derbisi'], ['BEN', 'FCP', 'Portekiz Klasiği'],
-  ['FLA', 'FLU', 'Fla-Flu'], ['CRN', 'PLM', 'Paulista Derbisi'], ['RIV', 'BJR', 'Süper Klasik'],
+  ['FLA', 'FLU', 'Rio Derbisi'], ['CRN', 'PLM', 'Paulista Derbisi'], ['RIV', 'BJR', 'Süper Klasik'],
   ['CLT', 'RNG', 'Glazgov Derbisi'], ['CLB', 'AND', 'Belçika Klasiği'],
   ['LAG', 'LAF', 'Los Anjeles Derbisi'], ['AME', 'GDL', 'Meksika Klasiği'], ['HIL', 'NSR', 'Riyad Derbisi'], ['URW', 'KSM', 'Japonya Klasiği'],
 ];
@@ -81,7 +81,7 @@ const Press = {
 // ---------- Ortak yardımcılar ----------
 const Meta = {
   today(off = 0) { const d = new Date(Date.now() + off * 864e5); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; },
-  get(k, def) { try { const v = U.renameOld(localStorage.getItem(k)); return v ? JSON.parse(v) : def; } catch (e) { return def; } },
+  get(k, def) { try { const v = U.renameOld(typeof NameFix !== 'undefined' ? NameFix.text(localStorage.getItem(k)) : localStorage.getItem(k)); return v ? JSON.parse(v) : def; } catch (e) { return def; } },
   set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* yok */ } },
   // maaşa göre ölçeklenen para ödülü
   cash(mult) {

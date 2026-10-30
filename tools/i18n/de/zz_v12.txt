@@ -1,0 +1,72 @@
+4729|Erlebe eine legendäre Karriere
+4730|Werde ein fiktiver Star, inspiriert von legendären Spielertypen der Fußballgeschichte: Starte in ihrer Ära, mit ihrem Talent. Wendepunkte warten auf dich; gehst du denselben Weg oder schreibst du deine eigene Legende?
+4733|Atlantiksturm
+4734|Maestro
+4735|Die Bombe
+4736|Der Blitz
+4851|{} · Akademie von {}
+4737|Du bist in einer Kleinstadt in Argentinien geboren. Alle bewundern, was du mit dem Ball machst, aber du bist kleiner als Gleichaltrige. Ein großer Klub jenseits des Ozeans glaubte an dein Talent und holte dich mit 13 in seine Akademie.
+4741|Dein Körper entwickelt sich in der Akademie, und jetzt reden alle über dich.
+4742|Dein erstes großes Turnier naht. Der Trainer sieht in dir die Nummer 10 der Zukunft.
+4744|Dein langjähriger Klub steckt in der Finanzkrise. Ein großes Angebot aus Paris liegt vor: Zeit für ein neues Abenteuer?
+4746|In den letzten Jahren deiner Karriere kommt ein Überraschungsangebot von jenseits des Ozeans.
+4747|Du bist in einem kleinen Küstenort in Portugal geboren. Du warst der Junge, der härter trainierte als alle und nicht verlieren konnte. Mit 12 zogst du allein in die Hauptstadt, in eine große Akademie.
+4751|Eine Verletzung hielt dich in der Akademie eine Weile vom Platz fern, aber du kamst stärker zurück. Jetzt kann dich nichts mehr aufhalten.
+4753|In einem Testspiel hast du die Abwehr eines englischen Spitzenklubs zerlegt. Ihr Trainer will dich sofort!
+4755|Spaniens größter Klub will dich für eine Rekordablöse. Zeit für das weiße Trikot?
+4757|Eine neue Herausforderung aus Italien: Erobere auch das.
+4758|Das größte Gehaltsangebot deiner Karriere kommt aus dem Nahen Osten.
+4759|Du bist im Süden Brasiliens aufgewachsen und hast auf der Straße, am Strand und in der Halle gekickt. Deine Dribblings sind Stadtgespräch. Der große Klub der Stadt hat dich längst in seine Akademie geholt.
+4763|Im Landesfinale hast du deine Gegner mit Dribblings tanzen lassen. Das ganze Land kennt jetzt deinen Namen.
+4766|Ein Klub aus Paris öffnet dir die Tür nach Europa.
+4767|Einer der großen Klubs Spaniens will dich als Gesicht seines neuen Projekts!
+4768|Ein Angebot aus Mailand: ein neues Kapitel in Italien.
+4769|Ein großer Klub aus deiner Heimat ruft dich zurück.
+4770|Du bist am Rand einer Hafenstadt in Südfrankreich aufgewachsen. Wenn du den Ball hast, scheint die Zeit langsamer zu laufen. Eine Akademie an der Küste entdeckte dich mit 14.
+4773|Ein Klub an der Atlantikküste will dich zum Star im Profifußball machen.
+4774|Einer der traditionsreichsten Klubs Italiens hat dich ausgewählt, um Europas bestes Mittelfeld aufzubauen.
+4775|Spaniens größter Klub steht für einen Rekordtransfer vor deiner Tür.
+4776|Du bist in einem Vorort einer brasilianischen Großstadt aufgewachsen und hast kein Training verpasst. Ein Klub holte dich mit 14 in seine Akademie. Dein Tempo und deine Abschlussstärke sind schon Gesprächsthema.
+4780|Ein Klub aus den Niederlanden will dich nach Europa holen. Du bist erst 18.
+4782|Ein Angebot aus Spanien: Alle wollen deine unaufhaltsamen Läufe sehen.
+4783|Ein Rekordangebot aus Mailand ist eingetroffen.
+4784|Eine schwere Verletzung! Die Ärzte rechnen mit einer langen Pause.
+4786|Nach deinem großartigen Comeback will Spaniens größter Klub dich in seinen Starkader holen.
+4787|Du bist in einem Vorort einer Großstadt aufgewachsen. Deine Träume sind so groß wie dein Tempo. Eine Akademie an der Südküste holte dich mit 14.
+4791|Der Klub deiner Heimatstadt hat ein Rekordangebot für deine Rückkehr gemacht.
+4792|Der Klub deiner Kindheitsträume steht endlich vor deiner Tür.
+4793|Dein neuer Look steht dir! Für Speichern und Nutzung in Spielen und in sozialen Medien brauchst du Premium.
+4795|Sportwagen, Villa, Yacht und Privatjet. Kaufen und in sozialen Medien teilen.
+4797|Ein goldener Haken in den Spiel-Netzwerken.
+4798|Der Junge wird eine Legende
+4837|{} schafft in dieser Saison im Schnitt 4 Dribblings pro Spiel. Gegnerische Abwehrreihen teilen sich einen Therapeuten.
+4838|{} hat ein neues Trainingsvideo gepostet. Gerüchten zufolge bekommen seine Bauchmuskeln einen eigenen Account.
+4839|{} verriet, dass er 14 Eier zum Frühstück isst. Hühnerfarmen haben eine Nachtschicht eingeführt.
+4840|{} hat nach den Hausaufgaben einen Hattrick erzielt. Sein Lehrer gab Extrapunkte.
+4807|Spanischer Klassiker
+4808|Deutscher Klassiker
+4809|Rio-Derby
+4810|Editor
+4811|Ändere Vereins- und Spielernamen, teile eine Bearbeitungsdatei.
+4812|Öffnen
+4813|Du kannst Vereins- und Spielernamen nach Belieben ändern. Änderungen gelten für neue und gespeicherte Karrieren.
+4816|Vereine
+4817|Spieler
+278|Teilen
+1122|Liga
+4818|Spieler suchen
+4819|Keine Ergebnisse.
+4850|Mehr anzeigen ({})
+4820|Bearbeitungsdatei
+4836|Aktuell sind {} Vereine und {} Spieler geändert. Du kannst deine Bearbeitung mit Freunden teilen oder die Datei einer anderen Person importieren.
+4822|Teilen / kopieren
+4823|Importieren
+4824|Bearbeitungsdatei hier einfügen
+4825|Alles zurücksetzen
+4826|Änderungen gespeichert und auf deine Karrieren angewendet.
+4827|Keine Änderungen.
+4828|Bearbeitungsdatei kopiert.
+4829|Datei konnte nicht gelesen werden. Achte darauf, den ganzen Text einzufügen.
+4841|{} Vereine und {} Spieler geladen. Tippe auf Speichern, um sie anzuwenden.
+4833|Alle Namen zurückgesetzt. Tippe auf Speichern, um sie anzuwenden.
+4835|Ändere Vereins- und Spielernamen nach Belieben; teile deine Bearbeitungsdatei mit Freunden.

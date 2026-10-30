@@ -88,7 +88,7 @@
 737|Azul hielo con llamas
 738|No puedes jugar partidos hasta que termine la sanción.
 739|3 tiros en el área. Tira hacia atrás y suelta, apunta a las esquinas.
-740|Cristiano Ronalda publicó un nuevo vídeo entrenando. Dicen que sus abdominales tendrán cuenta propia.
+740|Rafael Santeiro publicó un nuevo vídeo entrenando. Dicen que sus abdominales tendrán cuenta propia.
 741|Quedarse la cartera
 742|Botas infantiles con velcro
 743|LIGA DE LAS TIERRAS ALTAS
@@ -156,7 +156,7 @@
 805|Ahorraste energía.
 806|Ahorras energía
 807|Te acostaste pronto, pero tus amigos se molestaron un poco.
-808|Erling Halland reveló que desayuna 14 huevos. Las granjas de pollos añadieron un turno de noche.
+808|Magnus Solestad reveló que desayuna 14 huevos. Las granjas de pollos añadieron un turno de noche.
 809|Club antiguo triste, club nuevo feliz
 810|El balón de cuero cosido de antaño
 811|Estudio de música en casa

@@ -117,7 +117,7 @@
 1116|LALIGA 2
 1117|Azul marino con estrellas plateadas
 1118|Liga de los Tulipanes
-1119|Lamin Yamel marcó un hat-trick después de terminar los deberes. Su profesor le subió la nota.
+1119|Rubén Belez marcó un hat-trick después de terminar los deberes. Su profesor le subió la nota.
 1120|Balón de lava
 1121|Distancia con el líder
 1122|Liga
@@ -130,7 +130,7 @@
 1129|Campeón de liga
 1130|Fuiste elegido jugador de la temporada de la liga
 1131|Ligas
-1132|Lionel Mezzi promedia 4 regates por partido esta temporada. Las defensas rivales comparten psicólogo.
+1132|Mateo Lirandi promedia 4 regates por partido esta temporada. Las defensas rivales comparten psicólogo.
 1133|Lisboa
 1134|Londres
 1135|SUV de lujo

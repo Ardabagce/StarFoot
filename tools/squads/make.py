@@ -106,7 +106,13 @@ def main():
     for code, rows in out.items():
         js.append(f'  {code}: {json.dumps(rows, ensure_ascii=False, separators=(",", ":"))},')
     js.append('};')
-    open(os.path.join(ROOT, 'js', 'squads.js'), 'w', encoding='utf-8').write('\n'.join(js) + '\n')
+    out = '\n'.join(js) + '\n'
+    # gerçek kişilere benzeyen isimler kurgusal karşılıklarıyla değişir (tools/names: extract.js → gen.py → apply.py)
+    nm = os.path.join(ROOT, 'tools', 'names', 'map.json')
+    if os.path.exists(nm):
+        M = json.load(open(nm, encoding='utf-8'))
+        out = re.sub(r'"([^"]+)","(GK|DF|MF|FW)"', lambda m: '"' + M.get(m.group(1), m.group(1)) + '","' + m.group(2) + '"', out)
+    open(os.path.join(ROOT, 'js', 'squads.js'), 'w', encoding='utf-8').write(out)
     print('toplam', total)
 
 

@@ -1,0 +1,72 @@
+4729|Vive una carrera legendaria
+4730|Conviértete en una estrella ficticia inspirada en los tipos de jugador legendarios de la historia del fútbol: empieza en su época y con su talento. Te esperan momentos clave en la historia; ¿seguirás el mismo camino o escribirás tu propia leyenda?
+4733|Tormenta Atlántica
+4734|Maestro
+4735|La Bomba
+4736|El Rayo
+4851|{} · cantera de {}
+4737|Naciste en un pueblo pequeño de Argentina. Todos admiran lo que haces con el balón, pero eres más bajito que los de tu edad. Un gran club al otro lado del océano creyó en tu talento y te llevó a su cantera con 13 años.
+4741|Tu físico se desarrolla en la cantera y ahora todos hablan de ti.
+4742|Se acerca tu primer gran torneo. El seleccionador te ve como el 10 del futuro.
+4744|El club en el que jugaste durante años está en crisis económica. Hay una gran oferta de París: ¿una nueva aventura?
+4746|En los últimos años de tu carrera llega una oferta sorpresa del otro lado del océano.
+4747|Naciste en un pequeño pueblo costero de Portugal. Eras el niño que más entrenaba y no soportaba perder. Con 12 años te fuiste solo a la capital, a una gran cantera.
+4751|Una lesión te apartó un tiempo del campo en la cantera, pero volviste más fuerte. Ya nada puede detenerte.
+4753|En un amistoso destrozaste la defensa de un gigante inglés. ¡Su entrenador te quiere ya!
+4755|El club más grande de España te quiere por un traspaso récord. ¿Ha llegado la hora de vestir de blanco?
+4757|Un nuevo reto desde Italia: conquístala también.
+4758|Ha llegado del Golfo la mayor oferta salarial de tu carrera.
+4759|Creciste en el sur de Brasil jugando en la calle, en la playa y en futsal. Tus regates son la comidilla del barrio. El gran club de la ciudad ya te fichó para su cantera.
+4763|En la final estatal hiciste bailar a tus rivales con tus regates. Todo el país aprendió tu nombre.
+4766|Un club de París te abre las puertas de Europa.
+4767|¡Uno de los grandes clubes de España te quiere como cara de su nuevo proyecto!
+4768|Oferta desde Milán: una nueva página en Italia.
+4769|Un gran club de tu tierra te llama de vuelta.
+4770|Creciste en las afueras de una ciudad portuaria del sur de Francia. Con el balón en los pies, el tiempo parece ir más lento. Una cantera de la costa te descubrió con 14 años.
+4773|Un club de la costa atlántica quiere convertirte en estrella en el fútbol profesional.
+4774|Uno de los clubes más históricos de Italia te eligió para formar el mejor centro del campo de Europa.
+4775|El club más grande de España llama a tu puerta para un traspaso récord.
+4776|Creciste en las afueras de una gran ciudad de Brasil y nunca faltaste a un entrenamiento. Un club te fichó para su cantera con 14 años. Tu velocidad y tu definición ya dan que hablar.
+4780|Un club de los Países Bajos quiere llevarte a Europa. Solo tienes 18 años.
+4782|Oferta desde España: todos quieren ver tus carreras imparables.
+4783|Ha llegado una oferta récord desde Milán.
+4784|¡Una lesión grave! Los médicos prevén una larga recuperación.
+4786|Tras tu espectacular regreso, el club más grande de España quiere sumarte a su plantilla llena de estrellas.
+4787|Creciste en las afueras de una gran ciudad. Tus sueños son tan grandes como tu velocidad. Una cantera de la costa sur te fichó con 14 años.
+4791|El club de tu ciudad hizo una oferta récord para que vuelvas.
+4792|El club de tus sueños de infancia por fin llama a tu puerta.
+4793|¡Tu nuevo look te queda genial! Necesitas Premium para guardarlo y usarlo en los partidos y en redes sociales.
+4795|Deportivos, villas, yates y jet privado. Cómpralos y compártelos en redes sociales.
+4797|Verificado dorado en las redes sociales del juego.
+4798|Este chico será una leyenda
+4837|{} promedia 4 regates por partido esta temporada. Las defensas rivales comparten terapeuta.
+4838|{} publicó un nuevo vídeo de entrenamiento. Se dice que sus abdominales tendrán su propia cuenta.
+4839|{} reveló que desayuna 14 huevos. Las granjas de gallinas añadieron un turno.
+4840|{} hizo un hat-trick después de terminar los deberes. Su profesor le dio puntos extra.
+4807|Clásico de España
+4808|Clásico de Alemania
+4809|Derbi de Río
+4810|Editor
+4811|Cambia nombres de clubes y jugadores, comparte un archivo de edición.
+4812|Abrir
+4813|Puedes cambiar los nombres de clubes y jugadores como quieras. Los cambios aparecen en carreras nuevas y guardadas.
+4816|Clubes
+4817|Jugadores
+278|Compartir
+1122|Liga
+4818|Buscar jugadores
+4819|Sin resultados.
+4850|Mostrar más ({})
+4820|Archivo de edición
+4836|Ahora mismo hay {} clubes y {} jugadores cambiados. Puedes compartir tu edición con amigos o importar el archivo de otra persona.
+4822|Compartir / copiar
+4823|Importar
+4824|Pega aquí el archivo de edición
+4825|Restablecer todo
+4826|Cambios guardados y aplicados a tus carreras.
+4827|Sin cambios.
+4828|Archivo de edición copiado.
+4829|No se pudo leer el archivo. Asegúrate de pegar todo el texto.
+4841|{} clubes y {} jugadores cargados. Toca Guardar para aplicar.
+4833|Todos los nombres se restablecieron. Toca Guardar para aplicar.
+4835|Cambia los nombres de clubes y jugadores a tu gusto; comparte tu archivo de edición con amigos.

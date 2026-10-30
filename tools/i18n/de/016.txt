@@ -257,44 +257,44 @@
 3812|Auf den Spuren der Legenden
 3813|Legendenweg
 3814|Der kleine Zauberer
-3815|Du wurdest in Rosario geboren. Alle lieben, was du mit dem Ball machst, aber du bist viel kleiner als deine Altersgenossen und brauchst eine Wachstumsbehandlung. Barcelova FC übernahm sie und holte dich mit 13 über den Ozean in seine Akademie.
+3815|Du wurdest in Rosario geboren. Alle lieben, was du mit dem Ball machst, aber du bist viel kleiner als deine Altersgenossen und brauchst eine Wachstumsbehandlung. Katalan Mavi-Kırmızıları übernahm sie und holte dich mit 13 über den Ozean in seine Akademie.
 4023|Akademie von {}
 3820|Die Wachstumsbehandlung wirkt! In der Akademie reden alle über dich.
 3823|Dein erstes großes Turnier steht bevor. Die legendäre Nummer 10 deines Landes stellte dich als "meinen Erben" vor.
-3826|Der Klub, für den du jahrelang gespielt hast, steckt in der Finanzkrise. Paris Saint-Gilles klopft an: ein neues Abenteuer?
+3826|Der Klub, für den du jahrelang gespielt hast, steckt in der Finanzkrise. Paris Kırmızı-Mavileri klopft an: ein neues Abenteuer?
 3829|In den letzten Jahren deiner Karriere kommt ein überraschendes Angebot von der anderen Seite des Ozeans: aus Miami.
 3830|Der Madeira-Sturm
 3831|Du wurdest auf der Insel Madeira geboren. Du warst der Junge, der am meisten trainierte und bei Niederlagen weinte. Mit 12 gingst du allein aufs Festland, in die Akademie von Sporting Lissabon.
 3835|Ein Herzrhythmusproblem trat auf, doch ein kleiner Eingriff behob es. Jetzt kann dich nichts mehr aufhalten.
 3838|Du hast die Abwehr der Manchester Reds im Testspiel zerlegt. Ihr Trainer will dich sofort!
-3841|Real Madrigal will dich für eine Weltrekord-Ablöse. Ist es Zeit für das weiße Trikot?
-3844|Juventa Torino bietet eine neue Herausforderung: Erobere auch Italien.
+3841|Madrid Beyazları will dich für eine Weltrekord-Ablöse. Ist es Zeit für das weiße Trikot?
+3844|Torino Zebraları bietet eine neue Herausforderung: Erobere auch Italien.
 3845|Riyadh Nassr klopft mit dem höchsten Gehaltsangebot deiner Karriere an.
 3846|Der lächelnde Zauberer
 3847|Du bist in den Straßen von Porto Alegre, am Strand und in der Halle aufgewachsen. Angeblich hast du mit 13 in einem Spiel 23 Tore erzielt. Die Gremio-Akademie hat dich längst geholt.
 3851|Im Landesfinale hast du die Legende des Landes mit deinen Dribblings tanzen lassen. Ganz Brasilien kennt jetzt deinen Namen.
-3854|Paris Saint-Gilles öffnet dir die Türen nach Europa.
-3855|Barcelova FC will dich als Gesicht seines neuen Projekts. Das Stadion wartet auf dich!
-3858|Angebot von Milano Rossoneri: ein neues Kapitel in Italien.
+3854|Paris Kırmızı-Mavileri öffnet dir die Türen nach Europa.
+3855|Katalan Mavi-Kırmızıları will dich als Gesicht seines neuen Projekts. Das Stadion wartet auf dich!
+3858|Angebot von Milano Kırmızı-Siyahları: ein neues Kapitel in Italien.
 3859|Flamengo ruft dich zurück in die Heimat.
 3860|Der Maestro
 3861|Du bist im Marseiller Viertel La Castellane aufgewachsen. Wenn du den Ball am Fuß hast, scheint die Zeit langsamer zu laufen. Eine Akademie an der Südküste entdeckte dich mit 14.
 3865|Bordeaux Girondins will dich auf der Profibühne zum Star machen.
-3866|Juventa Torino hat dich ausgewählt, um Europas bestes Mittelfeld aufzubauen.
+3866|Torino Zebraları hat dich ausgewählt, um Europas bestes Mittelfeld aufzubauen.
 3867|Es ist das Jahr der Heim-Weltmeisterschaft. Das ganze Land setzt seine Hoffnungen auf dich.
-3870|Real Madrigal klopft für den teuersten Transfer der Welt an.
+3870|Madrid Beyazları klopft für den teuersten Transfer der Welt an.
 3871|Das Phänomen
 3872|In den Vororten von Rio bist du selbst dann zum Training gerannt, wenn das Geld für den Bus fehlte. Cruzeiro Foxes holte dich mit 14 in die Akademie. Dein Tempo und deine Abschlussstärke sind schon legendär.
 3876|Eindhoven Lights will dich nach Europa holen. Du bist erst 18.
-3879|Eine Saison bei Barcelova FC: Alle wollen deine unaufhaltsamen Läufe sehen.
-3880|Inter Milanello hat ein Weltrekord-Angebot gemacht.
+3879|Eine Saison bei Katalan Mavi-Kırmızıları: Alle wollen deine unaufhaltsamen Läufe sehen.
+3880|Milano Mavi-Siyahları hat ein Weltrekord-Angebot gemacht.
 3881|Eine schwere Knieverletzung! Die Ärzte rechnen mit einer langen Genesung.
-3884|Nach deinem fantastischen Comeback will Real Madrigal dich zu seinen Galácticos holen.
+3884|Nach deinem fantastischen Comeback will Madrid Beyazları dich zu seinen Galácticos holen.
 3899|Die Schildkröte
 3900|Du bist in Bondy, einem Pariser Vorort, aufgewachsen. Die Wände deines Zimmers hängen voller Poster deiner Idole. Monaco Princes holte dich mit 14 in die Akademie: dein Tempo ist unglaublich.
-3904|Paris Saint-Gilles hat ein Rekordangebot gemacht, um dich nach Hause zu holen.
+3904|Paris Kırmızı-Mavileri hat ein Rekordangebot gemacht, um dich nach Hause zu holen.
 3905|Mit 19 fährst du zur Weltmeisterschaft. Die Welt wird bald über dein Tempo reden.
-3908|Dein Kindheitstraum Real Madrigal klopft endlich an.
+3908|Dein Kindheitstraum Madrid Beyazları klopft endlich an.
 4000|Gewinne {}-mal den Goldenen Stern
 3980|Gewinne {}-mal den Europapokal der Landesmeister
 3981|Gewinne {}-mal den Europäischen Verbandspokal

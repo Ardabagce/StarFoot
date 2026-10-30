@@ -117,7 +117,7 @@
 1116|LALIGA 2
 1117|Marine et étoiles argentées
 1118|Ligue des tulipes
-1119|Lamin Yamel a signé un triplé après avoir fini ses devoirs. Son prof lui a donné des points bonus.
+1119|Rubén Belez a signé un triplé après avoir fini ses devoirs. Son prof lui a donné des points bonus.
 1120|Ballon de lave
 1121|Écart avec le leader
 1122|Ligue
@@ -130,7 +130,7 @@
 1129|Champion
 1130|Tu as été élu joueur de la saison de la ligue
 1131|Ligues
-1132|Lionel Mezzi tourne à 4 dribbles par match cette saison. Les défenses adverses partagent un psy.
+1132|Mateo Lirandi tourne à 4 dribbles par match cette saison. Les défenses adverses partagent un psy.
 1133|Lisbonne
 1134|Londres
 1135|SUV de luxe

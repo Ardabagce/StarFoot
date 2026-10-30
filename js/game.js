@@ -38,20 +38,21 @@ const Game = {
   },
   save() {
     try {
+      if (Game.state && !Game.state.nf) Game.state.nf = 1;
       Store.write(Game.key(Game.slot), JSON.stringify(Game.state, Game.packRoster));
       // ana menü için küçük özet (büyük kaydı açmadan listelenir)
       const s = Game.state, p = s && s.player, c = s && s.world && s.world.clubs && s.world.clubs[s.clubId];
-      if (p) Store.put(Game.sumKey(Game.slot), JSON.stringify({ n: p.name + ' ' + p.surname, a: p.age, c: c ? c.name : '', y: s.season ? s.season.year : '' }));
+      if (p) Store.put(Game.sumKey(Game.slot), JSON.stringify({ n: p.name + ' ' + p.surname, a: p.age, c: c ? c.name : '', y: s.season ? s.season.year : '', nf: 1 }));
     } catch (e) { /* depolama yok */ }
   },
   sumKey(i) { return 'starfoot_sum_' + i; },
   // slot özeti: { n: ad soyad, a: yaş, c: kulüp, y: yıl } ya da null
   summary(i) {
-    try { const j = localStorage.getItem(Game.sumKey(i)); if (j && localStorage.getItem(Game.key(i))) return JSON.parse(j); } catch (e) { /* yok */ }
+    try { const j = localStorage.getItem(Game.sumKey(i)); if (j && localStorage.getItem(Game.key(i))) { const o = JSON.parse(j); return o.nf || typeof NameFix === 'undefined' ? o : JSON.parse(NameFix.text(j)); } } catch (e) { /* yok */ }
     const d = Game.load(i);
     if (!d || !d.player) return null;
     const c = d.world && d.world.clubs ? d.world.clubs[d.clubId] : null;
-    const o = { n: d.player.name + ' ' + d.player.surname, a: d.player.age, c: c ? c.name : '', y: d.season ? d.season.year : '' };
+    const o = { n: d.player.name + ' ' + d.player.surname, a: d.player.age, c: c ? c.name : '', y: d.season ? d.season.year : '', nf: 1 };
     Store.put(Game.sumKey(i), JSON.stringify(o));
     return o;
   },
@@ -62,7 +63,16 @@ const Game = {
       if (raw && raw.includes('Hakan \u015e\u00fck\u00fcrl\u00fc')) raw = raw.split('Hakan \u015e\u00fck\u00fcrl\u00fc').join('Haluk Sar\u0131kaya');
       if (raw && raw.includes('\u0041rif Erdemli')) raw = raw.split('\u0041rif Erdemli').join('Kaan Sezerli');
       raw = U.renameOld(raw);
-      return raw ? JSON.parse(raw, Game.unpackRoster) : null;
+      if (!raw) return null;
+      let d = JSON.parse(raw, Game.unpackRoster);
+      // 1.0.12: gerçek kişilere benzeyen isimler kurgusal karşılıklarıyla değişti; eski kayıtlar bir kez taşınır
+      if (d && !d.nf && typeof NameFix !== 'undefined') {
+        d = JSON.parse(NameFix.text(raw), Game.unpackRoster);
+        const cl = d && d.world && d.world.clubs;
+        if (cl) CLUB_LIST.forEach(([id, n, sh]) => { if (cl[id] && cl[id].name === n) cl[id].short = sh; });
+        if (d) d.nf = 1;
+      }
+      return d;
     } catch (e) { return null; }
   },
   wipe(i = Game.slot) { Store.remove(Game.key(i)); try { localStorage.removeItem(Game.sumKey(i)); } catch (e) { /* yok */ } },
@@ -180,11 +190,12 @@ const Game = {
     if (tx && typeof Legacy !== 'undefined') {
       const nb = Object.keys(Scenario.badges()).length;
       const pk = typeof Packs !== 'undefined';
-      tx.innerHTML = (pk ? `<div class="t-packs"><button class="btn t-pack wc" id="t-wc">${Icon('star')}<span><b>Dünya Şampiyonası Rüyası</b><small>${Packs.owns('wc') ? 'Yeni mod' : 'Yeni mod · kilitli'}</small></span></button><button class="btn t-pack lp" id="t-lp">${Icon('fire')}<span><b>Efsanelerin İzinde</b><small>${Packs.owns('legends') ? 'Yeni mod' : 'Yeni mod · kilitli'}</small></span></button></div>` : '') + `<button class="btn btn-ghost" id="t-tut">${Icon('whistle')} Nasıl Oynanır</button><button class="btn btn-ghost" id="t-scn">🎯 Senaryolar${nb ? ` <em>${nb}/${SCEN.length}</em>` : ''}</button><button class="btn btn-ghost" id="t-hof">🏛️ Efsaneler Salonu${Legacy.list().length ? ` <em>${Legacy.list().length}</em>` : ''}</button>`;
+      tx.innerHTML = (pk ? `<div class="t-packs"><button class="btn t-pack wc" id="t-wc">${Icon('star')}<span><b>Dünya Şampiyonası Rüyası</b><small>${Packs.owns('wc') ? 'Yeni mod' : 'Yeni mod · kilitli'}</small></span></button><button class="btn t-pack lp" id="t-lp">${Icon('fire')}<span><b>Efsanelerin İzinde</b><small>${Packs.owns('legends') ? 'Yeni mod' : 'Yeni mod · kilitli'}</small></span></button></div>` : '') + `<button class="btn btn-ghost" id="t-tut">${Icon('whistle')} Nasıl Oynanır</button><button class="btn btn-ghost" id="t-edit">${Icon('pen')} Editör</button><button class="btn btn-ghost" id="t-scn">🎯 Senaryolar${nb ? ` <em>${nb}/${SCEN.length}</em>` : ''}</button><button class="btn btn-ghost" id="t-hof">🏛️ Efsaneler Salonu${Legacy.list().length ? ` <em>${Legacy.list().length}</em>` : ''}</button>`;
       UI.strip(tx);
       document.getElementById('t-scn').onclick = () => Scenario.menu();
       if (pk) { document.getElementById('t-wc').onclick = () => WC.menu(); document.getElementById('t-lp').onclick = () => LPath.menu(); }
       document.getElementById('t-tut').onclick = () => Tutorial.open();
+      const te = document.getElementById('t-edit'); if (te) te.onclick = () => (typeof Edit !== 'undefined' ? Edit.open() : null);
       document.getElementById('t-hof').onclick = () => Legacy.show();
     }
     U.$$('[data-cont]', box).forEach((b) => (b.onclick = () => { Game.slot = +b.dataset.cont; Game.state = Game.load(); Game.enterHub(); }));
@@ -2124,6 +2135,7 @@ ${UI.paper()}`;
       <section class="card settings">
         <div class="card-h"><span>${Icon('train')} Oynanış</span></div>
         <label class="drill-tg"><input type="checkbox" id="drill-tg" ${s.drills !== false ? 'checked' : ''}><span><b>Antrenman mini oyunları</b><small>Odak statına göre çalışma oynanır. İyi oynarsan gelişim ×1,5'e kadar çıkar.</small></span></label>
+        ${typeof Edit !== 'undefined' ? row('Editör', 'Kulüp ve oyuncu isimlerini değiştir, düzenleme dosyası paylaş.', `<button class="btn btn-ghost" data-edopen>${Icon('pen')} Aç</button>`) : ''}
         ${typeof Notify !== 'undefined' && Notify.plugin() ? `<label class="drill-tg"><input type="checkbox" id="notif-tg" ${Notify.on() ? 'checked' : ''}><span><b>Bildirimler</b><small>Günlük ödül ve enerji hatırlatmaları.</small></span></label>` : ''}
       </section>
       ${typeof Cloud !== 'undefined' && (Cloud.pl || GC.pl) ? `<section class="card settings"><div class="card-h"><span>${Icon('save')} Yedek ve Game Center</span></div>${Cloud.card()}${GC.card()}</section>` : ''}
@@ -2819,6 +2831,7 @@ const SetSheet = {
         <div class="row-btns"><button class="btn btn-ghost" data-sys="menu">${Icon('exit')} Ana Menü</button></div></section>`;
     }
     try { UI.bind(body); } catch (e) { /* yalın görünüm */ }
+    U.$$('[data-edopen]', body).forEach((b) => (b.onclick = () => { SetSheet.close(); Edit.open(); }));
     // ana menü, emeklilik ve silme önce paneli kapatır
     U.$$('[data-sys]', body).forEach((b) => { const f = b.onclick; b.onclick = (ev) => { if (b.dataset.sys === 'menu') SetSheet.close(); if (f) f.call(b, ev); }; });
     body.scrollTop = y;

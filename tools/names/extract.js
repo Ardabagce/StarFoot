@@ -1,0 +1,20 @@
+// Oyundaki gerçek kişilere dayanan isim listelerini çıkarır: [isim, uyruk, güç, kaynak]
+const fs = require('fs'), path = require('path');
+const R = path.join(__dirname, '../../js/');
+const ld = (f) => eval(fs.readFileSync(R + f, 'utf8').replace(/^const /gm, 'var ').replace(/^let /gm, 'var ') + '\n;0');
+global.window = {}; global.document = { addEventListener() {} };
+const ctx = {};
+eval(fs.readFileSync(R + 'data.js', 'utf8').replace(/^const /gm, 'var '));
+eval(fs.readFileSync(R + 'legends.js', 'utf8').replace(/^const /gm, 'var ').replace(/^(const|var) Legends = [\s\S]*/m, ''));
+eval(fs.readFileSync(R + 'squads.js', 'utf8').replace(/^const /gm, 'var '));
+const wcSrc = fs.readFileSync(R + 'wc.js', 'utf8');
+eval(wcSrc.slice(wcSrc.indexOf('const WC_NATIONS'), wcSrc.indexOf('const WC_POOLS')).replace(/^const /gm, 'var '));
+const out = [];
+NATIONS.forEach((n) => (n.stars || []).forEach((s, i) => out.push([s, n.code, n.rating + 4 - i, 'nat'])));
+Object.entries(STARS).forEach(([c, a]) => a.forEach(([n, pos, r, nat]) => out.push([n, nat, r, 'star'])));
+LEGENDS.forEach(([n, pos, r, nat]) => out.push([n, nat, r, 'legend']));
+Object.entries(SQUADS).forEach(([c, a]) => a.forEach(([n, pos, sp, by, nat, r]) => out.push([n, nat, r, 'squad'])));
+WC_NATIONS.forEach((n) => (n.stars || []).forEach((s, i) => out.push([s, n.code, n.rating + 4 - i, 'wc'])));
+fs.writeFileSync(path.join(__dirname, 'src.json'), JSON.stringify(out));
+const nats = {}; out.forEach((x) => (nats[x[1]] = (nats[x[1]] || 0) + 1));
+console.log(out.length, new Set(out.map((x) => x[0])).size, JSON.stringify(nats));

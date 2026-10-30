@@ -117,7 +117,7 @@
 1116|LALIGA 2
 1117|Blu navy e stelle argentate
 1118|Lega dei Tulipani
-1119|Lamin Yamel ha segnato una tripletta dopo aver finito i compiti. Il suo prof gli ha dato un punto in più.
+1119|Rubén Belez ha segnato una tripletta dopo aver finito i compiti. Il suo prof gli ha dato un punto in più.
 1120|Pallone di lava
 1121|Distacco dalla capolista
 1122|Campionato
@@ -130,7 +130,7 @@
 1129|Campione
 1130|Sei stato eletto giocatore della stagione del campionato
 1131|Campionati
-1132|Lionel Mezzi viaggia a 4 dribbling a partita in questa stagione. Le difese avversarie condividono uno psicologo.
+1132|Mateo Lirandi viaggia a 4 dribbling a partita in questa stagione. Le difese avversarie condividono uno psicologo.
 1133|Lisbona
 1134|Londra
 1135|SUV di lusso
