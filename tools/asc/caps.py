@@ -30,6 +30,27 @@ def main():
             'type': 'bundleIdCapabilities', 'attributes': attrs,
             'relationships': {'bundleId': {'data': {'type': 'bundleIds', 'id': bid}}}}})
         print('Açıldı:', cap)
+    prune_certs(asc)
+
+
+def prune_certs(asc):
+    """Her CI derlemesi geçici bir imza sertifikası üretir; özel anahtarı derleme bitince silinir ve sertifika
+    bir daha kullanılamaz. Sınır dolunca arşivleme düşer. Yalnız API ile (CI'ın) üretilmiş sertifikaları iptal eder;
+    elle oluşturulan (Mac) sertifikalara ve yayındaki uygulamaya dokunmaz."""
+    try:
+        certs = asc.get('/v1/certificates', limit=200)['data']
+    except RuntimeError as err:
+        print('Sertifikalar okunamadı:', err); return
+    for c in certs:
+        a = c['attributes']
+        name = a.get('displayName') or a.get('name') or ''
+        if 'Created via API' not in name:
+            continue
+        try:
+            asc.req('DELETE', f"/v1/certificates/{c['id']}", write=True)
+            print('Geçici CI sertifikası iptal edildi:', a.get('certificateType'), (a.get('expirationDate') or '')[:10])
+        except RuntimeError as err:
+            print('İptal edilemedi:', err)
 
 
 if __name__ == '__main__':
