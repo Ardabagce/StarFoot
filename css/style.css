@@ -2412,3 +2412,7 @@ div.doc { position: fixed; inset: 0; z-index: 49; background: #000; display: fle
 .prem-btn .ic { filter: drop-shadow(0 0 5px rgba(245, 180, 0, .45)); }
 .st-req { width: 100%; margin-top: 6px; color: #f5c84b; }
 @media (max-width: 760px) { .hdr .prem-btn { display: none; } }
+.ss-hr { display: flex; align-items: center; gap: 8px; }
+.ss-prem { display: inline-flex; align-items: center; gap: 6px; height: 34px; padding: 0 14px; border-radius: 17px; border: 1px solid rgba(245, 200, 75, .55); background: linear-gradient(135deg, rgba(255, 214, 90, .22), rgba(201, 138, 0, .18)); color: #ffd65a; font: 800 13px/1 var(--display); font-style: italic; text-transform: uppercase; letter-spacing: .03em; cursor: pointer; }
+.ss-prem .ic { width: 15px; height: 15px; }
+.ss-prem.hidden { display: none; }

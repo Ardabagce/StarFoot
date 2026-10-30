@@ -2838,9 +2838,12 @@ const SetSheet = {
     if (!SetSheet.el) {
       const el = document.createElement('div');
       el.id = 'set-sheet'; el.className = 'set-sheet';
-      el.innerHTML = `<div class="ss-bg" data-ssx></div><div class="ss-panel" role="dialog" aria-label="Ayarlar"><div class="ss-h"><b>${Icon('cog')} Ayarlar</b><button class="ss-x" data-ssx aria-label="Kapat">✕</button></div><div class="ss-body" id="ss-body"></div></div>`;
+      el.innerHTML = `<div class="ss-bg" data-ssx></div><div class="ss-panel" role="dialog" aria-label="Ayarlar"><div class="ss-h"><b>${Icon('cog')} Ayarlar</b><span class="ss-hr"><button class="ss-prem hidden" data-ssprem>${Icon('star')} Premium</button><button class="ss-x" data-ssx aria-label="Kapat">✕</button></span></div><div class="ss-body" id="ss-body"></div></div>`;
       document.body.appendChild(el);
-      el.addEventListener('click', (e) => { if (e.target.closest('[data-ssx]')) SetSheet.close(); });
+      el.addEventListener('click', (e) => {
+        if (e.target.closest('[data-ssx]')) SetSheet.close();
+        else if (e.target.closest('[data-ssprem]')) { SetSheet.close(); Star.pitch(null, 'settings_star'); }
+      });
       SetSheet.el = el;
     }
     SetSheet.fill();
@@ -2850,6 +2853,8 @@ const SetSheet = {
   fill() {
     const body = document.getElementById('ss-body');
     if (!body) return;
+    const pb = SetSheet.el && SetSheet.el.querySelector('.ss-prem');
+    if (pb) pb.classList.toggle('hidden', !(typeof Star !== 'undefined' && Star.canSell()));
     const y = body.scrollTop;
     try { body.innerHTML = UI.settings(); } catch (e) {
       // kariyer dışı modlarda (ör. Dünya Şampiyonası) yalın ayarlar
