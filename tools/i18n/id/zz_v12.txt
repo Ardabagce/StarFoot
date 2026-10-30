@@ -86,3 +86,4 @@
 5383|Impor dan ekspor file editanmu untuk dibagikan ke teman.
 5384|Selamat bermain!
 5385|Buka Editor
+5387|Memuat…

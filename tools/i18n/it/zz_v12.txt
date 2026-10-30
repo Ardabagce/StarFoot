@@ -86,3 +86,4 @@
 5383|Importa ed esporta i tuoi file di modifica per condividerli con gli amici.
 5384|Buon divertimento!
 5385|Apri Editor
+5387|Caricamento…

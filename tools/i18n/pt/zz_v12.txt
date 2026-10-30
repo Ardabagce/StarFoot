@@ -86,3 +86,4 @@
 5383|Importe e exporte seus arquivos de edição para compartilhar com os amigos.
 5384|Bom jogo!
 5385|Abrir Editor
+5387|Carregando…

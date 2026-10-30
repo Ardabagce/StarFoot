@@ -2398,3 +2398,9 @@ div.doc { position: fixed; inset: 0; z-index: 49; background: #000; display: fle
 .ed-tabs button { padding: 9px 6px; }
 .ed-pos { flex: 0 0 34px; height: 34px; display: grid; place-items: center; border-radius: 8px; background: rgba(255, 210, 63, .14); color: var(--flood, #ffd23f); font-size: 12px; font-weight: 800; letter-spacing: .03em; }
 .ed-pr small { padding-left: 40px; }
+/* kayıt açılırken yükleniyor ekranı */
+#busy { position: fixed; inset: 0; z-index: 1200; display: none; place-items: center; background: rgba(3, 8, 20, .72); }
+#busy.on { display: grid; }
+.busy-c { display: flex; flex-direction: column; align-items: center; gap: 14px; color: var(--chalk, #fff); font-family: var(--display); font-style: italic; text-transform: uppercase; letter-spacing: .04em; }
+.busy-s { width: 46px; height: 46px; border-radius: 50%; border: 4px solid rgba(255, 255, 255, .18); border-top-color: var(--flood, #ffd23f); animation: busy-r .8s linear infinite; }
+@keyframes busy-r { to { transform: rotate(360deg); } }

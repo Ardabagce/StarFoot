@@ -9,13 +9,14 @@ const NameRx = {
   build(keys) {
     if (!keys.length) return null;
     const alt = keys.slice().sort((a, b) => b.length - a.length).map(NameRx.esc).join('|');
-    try { return new RegExp('(^|[^\\p{L}\\p{N}_])(' + alt + ')(?![\\p{L}\\p{N}_])', 'gu'); } catch (e) { return new RegExp('(^|[^A-Za-z0-9_\\u00C0-\\u024F])(' + alt + ')(?![A-Za-z0-9_\\u00C0-\\u024F])', 'g'); }
+    // harf sınıfı açıkça yazılır ('u' bayraklı \\p{L} büyük metinlerde çok yavaş)
+    const L = 'A-Za-z0-9_\\u00C0-\\u024F\\u0370-\\u03FF\\u0400-\\u04FF\\u0600-\\u06FF\\u3040-\\u30FF\\u4E00-\\u9FFF';
+    return new RegExp('(^|[^' + L + '])(' + alt + ')(?![' + L + '])', 'g');
   },
   run(text, rx, map) {
     if (!text || !rx) return text;
-    // bitişik eşleşmeler için iki geçiş (ilk geçişte ayırıcı karakter tüketilir)
     const f = (m, pre, name) => pre + (map[name] !== undefined ? map[name] : name);
-    return text.replace(rx, f).replace(rx, f);
+    return text.replace(rx, f);
   },
 };
 

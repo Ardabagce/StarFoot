@@ -64,15 +64,24 @@ const Game = {
       if (raw && raw.includes('\u0041rif Erdemli')) raw = raw.split('\u0041rif Erdemli').join('Kaan Sezerli');
       raw = U.renameOld(raw);
       if (!raw) return null;
-      let d = JSON.parse(raw, Game.unpackRoster);
+      let d;
       // 1.0.12: gerçek kişilere benzeyen isimler kurgusal karşılıklarıyla değişti; eski kayıtlar bir kez taşınır
-      if (d && (d.nf || 0) < 3 && typeof NameFix !== 'undefined') {
-        const own = d.player && !d.lpath ? `${d.player.name} ${d.player.surname}`.trim() : '';
+      // (kayıt tek sefer çözümlenir ve taşınan hali hemen geri yazılır: sonraki açılışlar hızlı)
+      if (!raw.includes('"nf":3') && typeof NameFix !== 'undefined') {
+        let own = '';
+        if (!raw.includes('"lpath":{')) {
+          const at = raw.indexOf('"player":{'), seg = at >= 0 ? raw.slice(at, at + 4000) : '';
+          const mn = /"name":"([^"]*)"/.exec(seg), ms = /"surname":"([^"]*)"/.exec(seg);
+          own = mn && ms ? `${mn[1]} ${ms[1]}`.trim() : '';
+        }
         d = JSON.parse(Edit.applyEdits(NameFix.text(raw, own), own), Game.unpackRoster);
         const cl = d && d.world && d.world.clubs;
         if (cl) CLUB_LIST.forEach(([id, n, sh]) => { if (cl[id] && cl[id].name === n) cl[id].short = sh; });
-        if (d) { Edit.fixPosts(d); d.nf = 3; }
-      }
+        if (d) {
+          Edit.fixPosts(d); d.nf = 3;
+          try { Store.write(Game.key(i), JSON.stringify(d, Game.packRoster)); localStorage.removeItem(Game.sumKey(i)); } catch (e) { /* yok */ }
+        }
+      } else d = JSON.parse(raw, Game.unpackRoster);
       if (d && d.lpath && typeof LPath !== 'undefined') LPath.syncName(d);
       return d;
     } catch (e) { return null; }
@@ -173,6 +182,15 @@ const Game = {
     ['title', 'create', 'hub', 'end'].forEach((s) => document.getElementById(s).classList.toggle('hidden', s !== id));
   },
 
+  // tam ekran yükleniyor göstergesi
+  busy(on) {
+    let el = document.getElementById('busy');
+    if (on) {
+      if (!el) { el = document.createElement('div'); el.id = 'busy'; el.innerHTML = '<div class="busy-c"><i class="busy-s"></i><b>Yükleniyor…</b></div>'; document.body.appendChild(el); }
+      el.classList.add('on');
+    } else if (el) el.classList.remove('on');
+  },
+
   // ---------- Başlangıç ----------
   init() {
     Game.migrate();
@@ -200,7 +218,12 @@ const Game = {
       const te = document.getElementById('t-edit'); if (te) te.onclick = () => (typeof Edit !== 'undefined' ? Edit.open() : null);
       document.getElementById('t-hof').onclick = () => Legacy.show();
     }
-    U.$$('[data-cont]', box).forEach((b) => (b.onclick = () => { Game.slot = +b.dataset.cont; Game.state = Game.load(); Game.enterHub(); }));
+    U.$$('[data-cont]', box).forEach((b) => (b.onclick = () => {
+      Game.slot = +b.dataset.cont;
+      // büyük kayıt açılırken ekran donmuş gibi görünmesin: önce yükleniyor ekranı, sonra kayıt
+      Game.busy(true);
+      setTimeout(() => { try { Game.state = Game.load(); Game.enterHub(); } finally { Game.busy(false); } }, 40);
+    }));
     U.$$('[data-del]', box).forEach((b) => (b.onclick = () => {
       const i = +b.dataset.del;
       const d = Game.summary(i) || { n: '' };
