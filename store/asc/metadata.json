@@ -287,6 +287,126 @@
           "伝説の選手に着想を得た6つの架空キャリア"
         ]
       }
+    },
+    "starfoot_plus": {
+      "refName": "Premium Plus",
+      "price": "3.99",
+      "screenshot": "store/packs/plus-review.png",
+      "reviewNote": "Non-consumable, one-time purchase. Includes everything in StarFoot Premium (starfoot_premium) plus: 10 career slots instead of 5, a once-per-season undo of the last week, fast-forward simulation to a chosen week, detailed career statistics and a goalkeeper career. To test: open a career, tap the gear icon at the top, then the gold \"Premium\" button, then \"Premium+\" (or Profile > Premium card > Premium+). Restore purchases is on the same card.",
+      "locales": {
+        "tr": [
+          "Premium+",
+          "Premium dahil: 10 slot, geri al, kaleci"
+        ],
+        "en-US": [
+          "Premium+",
+          "All Premium + 10 slots, undo, goalkeeper"
+        ],
+        "en-GB": [
+          "Premium+",
+          "All Premium + 10 slots, undo, goalkeeper"
+        ],
+        "es-ES": [
+          "Premium+",
+          "Premium + 10 ranuras, deshacer, portero"
+        ],
+        "es-MX": [
+          "Premium+",
+          "Premium + 10 ranuras, deshacer, portero"
+        ],
+        "pt-BR": [
+          "Premium+",
+          "Premium + 10 slots, desfazer, goleiro"
+        ],
+        "pt-PT": [
+          "Premium+",
+          "Premium + 10 slots, anular, guarda-redes"
+        ],
+        "de-DE": [
+          "Premium+",
+          "Premium + 10 Slots, Rückgängig, Torwart"
+        ],
+        "fr-FR": [
+          "Premium+",
+          "Premium + 10 emplacements, annuler, gardien"
+        ],
+        "it": [
+          "Premium+",
+          "Premium + 10 slot, annulla, portiere"
+        ],
+        "id": [
+          "Premium+",
+          "Premium + 10 slot, urungkan, kiper"
+        ],
+        "ar-SA": [
+          "Premium+",
+          "Premium مع 10 خانات وتراجع وحارس مرمى"
+        ],
+        "ja": [
+          "Premium+",
+          "Premium＋10枠・やり直し・GK"
+        ]
+      }
+    },
+    "starfoot_plus_upg": {
+      "refName": "Premium Plus Upgrade",
+      "price": "1.99",
+      "screenshot": "store/packs/plus-review.png",
+      "reviewNote": "Non-consumable, one-time purchase offered only to users who already own StarFoot Premium (starfoot_premium). It unlocks the same Premium+ features as starfoot_plus at an upgrade price. To test: buy starfoot_premium first, then open Profile > Premium card > \"Upgrade to Premium+\".",
+      "locales": {
+        "tr": [
+          "Premium+ Yükseltme",
+          "Premium'dan Premium+'a yükselt"
+        ],
+        "en-US": [
+          "Premium+ Upgrade",
+          "Upgrade from Premium to Premium+"
+        ],
+        "en-GB": [
+          "Premium+ Upgrade",
+          "Upgrade from Premium to Premium+"
+        ],
+        "es-ES": [
+          "Mejora a Premium+",
+          "Mejora de Premium a Premium+"
+        ],
+        "es-MX": [
+          "Mejora a Premium+",
+          "Mejora de Premium a Premium+"
+        ],
+        "pt-BR": [
+          "Upgrade Premium+",
+          "Upgrade de Premium para Premium+"
+        ],
+        "pt-PT": [
+          "Upgrade Premium+",
+          "Upgrade de Premium para Premium+"
+        ],
+        "de-DE": [
+          "Premium+ Upgrade",
+          "Upgrade von Premium auf Premium+"
+        ],
+        "fr-FR": [
+          "Passage à Premium+",
+          "Passe de Premium à Premium+"
+        ],
+        "it": [
+          "Upgrade a Premium+",
+          "Passa da Premium a Premium+"
+        ],
+        "id": [
+          "Upgrade Premium+",
+          "Upgrade dari Premium ke Premium+"
+        ],
+        "ar-SA": [
+          "ترقية Premium+",
+          "الترقية من Premium إلى Premium+"
+        ],
+        "ja": [
+          "Premium+アップグレード",
+          "PremiumからPremium+へ"
+        ]
+      }
     }
   }
 }

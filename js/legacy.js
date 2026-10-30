@@ -49,7 +49,7 @@ const Legacy = {
   },
   freeSlot(pref) {
     if (pref != null && !Game.load(pref)) return pref;
-    for (let i = 0; i < 5; i++) if (!Game.load(i)) return i;
+    for (let i = 0; i < Game.slotCount(); i++) if (!Game.summary(i)) return i;
     return -1;
   },
   // yeni kariyer oluşturulurken mirası uygular

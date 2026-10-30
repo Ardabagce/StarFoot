@@ -25,6 +25,10 @@ const Game = {
   // ---------- Kaydet / Yükle (5 kariyer slotu) ----------
   slot: 0,
   key(i) { return 'starfoot_slot_' + i; },
+  // kayıt yeri sayısı: herkese 5, Premium+'ta 10 (yedekleme ve taşıma her zaman 10 yere bakar)
+  SLOTS: 10,
+  slotCount() { return typeof Plus !== 'undefined' && Plus.has() ? 10 : 5; },
+  allSlots() { return [...Array(Game.SLOTS).keys()]; },
   // Kadrolar sütun biçiminde saklanır (anahtar adları tekrar etmez): kayıt boyutu ~%35 küçülür
   packRoster(k, v) {
     if (k !== 'roster' || !Array.isArray(v) || !v.length || typeof v[0] !== 'object') return v;
@@ -198,13 +202,18 @@ const Game = {
     document.body.classList.remove('wc-mode');
     const box = document.getElementById('slots');
     // eski düz kayıtları arka planda sıkıştır (iPhone'da depolama sınırı)
-    Store.migrate([0, 1, 2, 3, 4, 'wc', 'lp', 'legends'].map((x) => Game.key(x)));
-    box.innerHTML = [0, 1, 2, 3, 4].map((i) => {
+    Store.migrate([...Game.allSlots(), 'wc', 'lp', 'legends'].map((x) => Game.key(x)));
+    // Premium+ yoksa 6-10. slotlar kilitli tek satır; içinde kayıt olan slot her zaman görünür
+    const nOpen = Game.slotCount();
+    const lockRow = nOpen < Game.SLOTS && typeof Plus !== 'undefined' && Plus.on()
+      ? `<button class="slot slot-lock" data-plus-slots><span class="sl-n">${Icon('star')}</span><div class="sl-t"><b>+5 kariyer slotu</b><small>Premium+ ile 10 kariyeri aynı anda sürdür</small></div><span class="sl-lk">Premium+</span></button>` : '';
+    box.innerHTML = Game.allSlots().filter((i) => i < nOpen || Game.summary(i)).map((i) => {
       const d = Game.summary(i);
       if (!d) return `<div class="slot empty"><span class="sl-n">${i + 1}</span><div class="sl-t"><b>Boş slot</b><small>Yeni bir kariyere başla</small></div><button class="btn" data-new="${i}">Yeni Kariyer</button></div>`;
       return `<div class="slot"><span class="sl-n">${i + 1}</span><div class="sl-t"><b>${U.esc(d.n)}</b><small>${d.a} yaş · ${U.esc(d.c)} · ${d.y}</small></div>
         <button class="btn btn-play" data-cont="${i}">Devam</button><button class="btn btn-ghost sl-del" data-del="${i}" aria-label="Kariyeri sil">${Icon('trash')}</button></div>`;
-    }).join('');
+    }).join('') + lockRow;
+    U.$$('[data-plus-slots]', box).forEach((b) => (b.onclick = () => Plus.pitch('10 kariyer slotu', 'slots')));
     U.$$('[data-new]', box).forEach((b) => (b.onclick = () => { Game.slot = +b.dataset.new; Create.heir = null; Create.open(); }));
     const tx = document.getElementById('title-x');
     if (tx && typeof Legacy !== 'undefined') {
@@ -220,7 +229,7 @@ const Game = {
     }
     // güncelleme duyurusu: oyun açılınca ana ekranda bir kez
     // (yalnız kayıtlı kariyeri olanlara; yeni oyuncu duyuruyu görmez)
-    setTimeout(() => { const t = document.getElementById('title'); if (!Game.state && t && !t.classList.contains('hidden') && typeof WhatsNew !== 'undefined' && [0, 1, 2, 3, 4].some((i) => Game.summary(i))) WhatsNew.check(); }, 700);
+    setTimeout(() => { const t = document.getElementById('title'); if (!Game.state && t && !t.classList.contains('hidden') && typeof WhatsNew !== 'undefined' && Game.allSlots().some((i) => Game.summary(i))) WhatsNew.check(); }, 700);
     U.$$('[data-cont]', box).forEach((b) => (b.onclick = () => {
       Game.slot = +b.dataset.cont;
       // büyük kayıt açılırken ekran donmuş gibi görünmesin: önce yükleniyor ekranı, sonra kayıt
@@ -689,6 +698,7 @@ const Game = {
       best.run = sum.goals ? (best.run || 0) + 1 : 0; best.streak = Math.max(best.streak || 0, best.run);
       const gt = p.gt = p.gt || {};
       Object.entries(sum.goalTypes || {}).forEach(([k, v]) => (gt[k] = (gt[k] || 0) + v));
+      if (typeof CStats !== 'undefined') CStats.record(p, sum, ctx, comp);
       if (comp === 'cup' && sum.goals) gt.cup = (gt.cup || 0) + sum.goals;
       if (sum.motm) {
         p.motmAwards = p.motmAwards || [];
@@ -2074,7 +2084,7 @@ ${UI.paper()}`;
   career() {
     const p = Game.p, t = p.totals;
     const hist = p.history.slice().reverse();
-    return `${typeof Traits !== 'undefined' ? Rival.card() + Peers.card() + Traits.card() + Records.card() : ''}
+    return `${typeof CStats !== 'undefined' ? CStats.card() : ''}${typeof Traits !== 'undefined' ? Rival.card() + Peers.card() + Traits.card() + Records.card() : ''}
       <div class="card">
         <div class="card-h"><span>${Icon('career')} Kariyer Özeti</span></div>
         <div class="ms-grid big">
@@ -2333,6 +2343,7 @@ ${UI.paper()}`;
     U.$$('[data-fb]', root).forEach((b) => b.addEventListener('click', () => { if (typeof Premium !== 'undefined') Premium.track('feedback_' + b.dataset.fb); }));
     U.$$('[data-prem-buy]', root).forEach((b) => (b.onclick = () => { b.disabled = true; Premium.src = 'card'; Premium.buy(); }));
     U.$$('[data-prem-restore]', root).forEach((b) => (b.onclick = () => { b.disabled = true; Premium.restore(); }));
+    U.$$('[data-plus-buy]', root).forEach((b) => (b.onclick = () => { b.disabled = true; Plus.buy('card').then(() => { b.disabled = false; }); }));
     U.$$('[data-adreward]', root).forEach((b) => (b.onclick = () => {
       b.disabled = true;
       const kind = b.dataset.adreward;

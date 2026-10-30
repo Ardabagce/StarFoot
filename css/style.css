@@ -2416,3 +2416,37 @@ div.doc { position: fixed; inset: 0; z-index: 49; background: #000; display: fle
 .ss-prem { display: inline-flex; align-items: center; gap: 6px; height: 34px; padding: 0 14px; border-radius: 17px; border: 1px solid rgba(245, 200, 75, .55); background: linear-gradient(135deg, rgba(255, 214, 90, .22), rgba(201, 138, 0, .18)); color: #ffd65a; font: 800 13px/1 var(--display); font-style: italic; text-transform: uppercase; letter-spacing: .03em; cursor: pointer; }
 .ss-prem .ic { width: 15px; height: 15px; }
 .ss-prem.hidden { display: none; }
+/* Premium+ kilitli slot satırı */
+.slot.slot-lock { width: 100%; text-align: left; cursor: pointer; grid-template-columns: 34px 1fr auto; border-style: dashed; border-color: rgba(245, 200, 75, .5); color: inherit; font: inherit; }
+.slot.slot-lock .sl-n .ic { width: 18px; height: 18px; color: #f5c84b; }
+.slot-lock .sl-lk { font: 800 12px/1 var(--display); font-style: italic; text-transform: uppercase; color: #ffd65a; padding: 6px 10px; border: 1px solid rgba(245, 200, 75, .55); border-radius: 14px; }
+/* Detaylı kariyer istatistikleri */
+.cs-card { display: flex; align-items: center; gap: 12px; width: 100%; text-align: left; cursor: pointer; color: inherit; font: inherit; border-color: rgba(245, 200, 75, .45); }
+.cs-card .cs-ic { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 10px; background: rgba(245, 200, 75, .14); color: #ffd65a; flex-shrink: 0; }
+.cs-card .cs-t2 { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.cs-card .cs-t2 small { color: var(--muted); }
+.cs-card .cs-lk { font: 800 11px/1 var(--display); font-style: italic; text-transform: uppercase; color: #ffd65a; padding: 6px 9px; border: 1px solid rgba(245, 200, 75, .55); border-radius: 12px; }
+.cstats h2 { display: flex; align-items: center; gap: 8px; }
+.cs-sec { margin-top: 16px; }
+.cs-sec h3 { font: 800 14px/1 var(--display); font-style: italic; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 0 0 8px; }
+.cs-row { display: grid; grid-template-columns: 150px 1fr 34px; align-items: center; gap: 8px; margin: 6px 0; font-size: 14px; }
+.cs-row b { text-align: right; }
+.cs-bar { display: block; height: 8px; border-radius: 4px; background: rgba(255, 255, 255, .08); overflow: hidden; }
+.cs-bar > i { display: block; height: 100%; background: linear-gradient(90deg, #f5b400, #ffd65a); border-radius: 4px; }
+.cs-min { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; align-items: end; height: 120px; }
+.cs-min > div { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; gap: 3px; }
+.cs-min > div > i { display: block; width: 70%; min-height: 3px; background: linear-gradient(180deg, #ffd65a, #c98a00); border-radius: 3px 3px 0 0; }
+.cs-min span { font-size: 11px; color: var(--muted); }
+.cs-min b { font-size: 13px; }
+.cs-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 16px; }
+.cs-hl { padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; display: flex; flex-direction: column; gap: 2px; }
+.cs-hl.good { border-color: rgba(48, 209, 88, .45); }
+.cs-hl.bad { border-color: rgba(255, 69, 58, .45); }
+.cs-hl small, .cs-hl span { color: var(--muted); font-size: 12px; }
+.cs-t { width: 100%; border-collapse: collapse; font-size: 13px; }
+.cs-t th { text-align: left; color: var(--muted); font-weight: 600; padding: 4px 6px; border-bottom: 1px solid var(--line); }
+.cs-t td { padding: 6px; border-bottom: 1px solid rgba(255, 255, 255, .05); }
+.cs-t th:not(:first-child), .cs-t td:not(:first-child) { text-align: center; width: 44px; }
+.cs-t td:last-child, .cs-t th:last-child { width: 64px; }
+.cs-note { margin-top: 12px; font-size: 12px; }
+@media (max-width: 420px) { .cs-row { grid-template-columns: 118px 1fr 28px; font-size: 13px; } }

@@ -22,7 +22,7 @@ const Tutorial = {
     if (Tutorial.get()) return;
     let old = false;
     try {
-      for (let i = 0; i < 5 && !old; i++) old = !!localStorage.getItem('starfoot_slot_' + i);
+      for (let i = 0; i < 10 && !old; i++) old = !!localStorage.getItem('starfoot_slot_' + i);
       if (!old) old = !!localStorage.getItem('starfoot_save_v1');
     } catch (e) { old = true; }
     if (old) Tutorial.set('old');

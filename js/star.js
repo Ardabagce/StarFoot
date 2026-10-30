@@ -25,6 +25,7 @@ const Star = {
     if (typeof Premium !== 'undefined') Premium.track('premium_view', { source: src });
     Nudge.seen();
     const btns = [{ t: 'Kapat', cls: 'btn-ghost' }];
+    if (can && typeof Plus !== 'undefined') btns.push({ t: `Premium+${Plus.priceOf('full') ? ` · ${U.esc(Plus.priceOf('full'))}` : ''}`, cls: 'btn-ghost', fn: () => Plus.pitch(null, src + '_plus') });
     if (can) btns.push({ t: `${Icon('star')} Premium al${Premium.price ? ` · ${U.esc(Premium.price)}` : ''}`, cls: 'btn-big', fn: () => { Premium.src = src; Premium.buy(); } });
     Game.modal(`<div class="ev-tag">Premium ayrıcalığı</div><h2>${Icon('star')} Yıldız gibi yaşa</h2>
       ${after ? `<p>${after}</p>` : feat ? `<p><b>${U.esc(feat)}</b> StarFoot Premium'a özel.</p>` : ''}

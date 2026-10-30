@@ -50,16 +50,16 @@ const Cloud = {
     if (!Cloud.ok) { Cloud.note = 'off'; return; }
     // ilk açılışta bu cihazdaki kayıtların zamanı yoksa "şimdi" say (ama buluttaki daha yeni bir kopyayı ezmesin diye 0)
     const t = Cloud.times();
-    for (let i = 0; i < 5; i++) if (t['s' + i] === undefined && localStorage.getItem(Game.key(i))) t['s' + i] = 1;
+    for (let i = 0; i < Game.SLOTS; i++) if (t['s' + i] === undefined && localStorage.getItem(Game.key(i))) t['s' + i] = 1;
     // ayarlar: bu cihazda kariyer varsa eski kurulum (1), yoksa yeni kurulum (0) say; buluttaki kopya yeni kurulumu doldurur
-    if (t.meta === undefined) t.meta = [0, 1, 2, 3, 4].some((i) => localStorage.getItem(Game.key(i))) ? 1 : 0;
+    if (t.meta === undefined) t.meta = Game.allSlots().some((i) => localStorage.getItem(Game.key(i))) ? 1 : 0;
     Cloud.setTimes(t);
     try { Cloud.pl.addListener('change', () => Cloud.pull(true)); } catch (e) { /* yok */ }
     document.addEventListener('visibilitychange', () => { if (document.hidden && Cloud.dirty.size) Cloud.push(); });
     await Cloud.pull(false);
     // bulutta olmayan yerel kayıtları yükle
     const ix = await Cloud.idx();
-    for (let i = 0; i < 5; i++) if (localStorage.getItem(Game.key(i)) && !(ix['s' + i] && !ix['s' + i].del)) Cloud.dirty.add('s' + i);
+    for (let i = 0; i < Game.SLOTS; i++) if (localStorage.getItem(Game.key(i)) && !(ix['s' + i] && !ix['s' + i].del)) Cloud.dirty.add('s' + i);
     if (!ix.meta) Cloud.dirty.add('meta');
     if (Cloud.dirty.size) Cloud.later(1500);
   },
@@ -111,7 +111,7 @@ const Cloud = {
     let okAll = true;
     try {
       const ix = await Cloud.idx(), t = Cloud.times();
-      const keys = force ? ['meta', 0, 1, 2, 3, 4].map((x) => (x === 'meta' ? x : 's' + x)) : [...Cloud.dirty];
+      const keys = force ? ['meta', ...Game.allSlots()].map((x) => (x === 'meta' ? x : 's' + x)) : [...Cloud.dirty];
       Cloud.dirty.clear();
       // önce silinenler ve meta, sonra en son oynanan kariyerden başlayarak
       keys.sort((a, b) => (a === 'meta' ? -1 : b === 'meta' ? 1 : (t[b] || 0) - (t[a] || 0)));

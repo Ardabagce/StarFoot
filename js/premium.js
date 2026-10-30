@@ -7,7 +7,9 @@ const PREMIUM_PLATFORMS = ['ios'];
 
 // RevenueCat (App Store satın almaları). Herkese açık SDK anahtarı; gizli değildir.
 const RC_KEYS = { ios: 'appl_tpkurfIlsSGEYVvWSdgVWMUUnDt' };
-const RC_ENT = { starfoot_football_career_pro: 'starfoot_premium', wc: 'starfoot_wc', legends: 'starfoot_legends' };
+const RC_ENT = { starfoot_football_career_pro: 'starfoot_premium', wc: 'starfoot_wc', legends: 'starfoot_legends', plus: 'starfoot_plus' };
+// Premium+ : 'full' herkese (Premium dahil), 'upg' Premium sahiplerine yükseltme
+const PLUS_IDS = { full: 'starfoot_plus', upg: 'starfoot_plus_upg' };
 // Oyunun geri kalanı eski eklentinin (getProducts / getPurchases / purchaseProduct / restorePurchases)
 // biçimini kullanır; bu katman aynı biçimi RevenueCat üzerinden verir.
 const RCStore = {
@@ -109,7 +111,7 @@ const Premium = {
     try { localStorage.setItem('starfoot_premium', v ? '1' : '0'); } catch (e) { /* yok */ }
   },
   owned(list) {
-    return (list || []).some((t) => t && t.productIdentifier === PREMIUM_ID && !/pending|refund|revok/i.test(String(t.purchaseState || '')));
+    return (list || []).some((t) => t && (t.productIdentifier === PREMIUM_ID || Object.values(PLUS_IDS).includes(t.productIdentifier)) && !/pending|refund|revok/i.test(String(t.purchaseState || '')));
   },
   // Açılışta fiyatı ve önceki satın alımı mağazadan okur (yeniden kurulumda Premium kendiliğinden geri gelir)
   // Ürün bilgisini (yerel fiyatıyla) mağazadan yükler; başarısız olursa false
@@ -135,9 +137,11 @@ const Premium = {
     try {
       const r = await P.getPurchases({ productType: 'inapp' });
       if (Premium.owned(r && r.purchases)) Premium.set(true);
+      if (Plus.owned(r && r.purchases)) Plus.set(true);
       Packs.sync(r && r.purchases);
     } catch (e) { /* yok */ }
     Packs.load();
+    Plus.load();
     if (typeof Game !== 'undefined' && Game.state && !document.getElementById('hub').classList.contains('hidden')) Game.render();
   },
   async buy() {
@@ -177,7 +181,9 @@ const Premium = {
       await P.restorePurchases();
       const r = await P.getPurchases({ productType: 'inapp' });
       const packs = Packs.sync(r && r.purchases);
-      if (Premium.owned(r && r.purchases)) { Premium.set(true); Premium.track('premium_restore'); Game.toast('⭐ Premium geri yüklendi.', 'good'); }
+      const plus = Plus.owned(r && r.purchases);
+      if (plus) Plus.set(true);
+      if (Premium.owned(r && r.purchases)) { Premium.set(true); Premium.track('premium_restore'); Game.toast(plus ? '⭐ Premium+ geri yüklendi.' : '⭐ Premium geri yüklendi.', 'good'); }
       else if (packs) Game.toast('Satın aldığın paketler geri yüklendi.', 'good');
       else Game.toast('Bu hesapta Premium satın alımı bulunamadı.', 'info');
     } catch (e) {
@@ -191,8 +197,13 @@ const Premium = {
   // Mağaza ve Profil'de gösterilen kart (yalnız App Store / Google Play uygulamasında)
   card() {
     if (!Premium.available()) return '';
+    if (Plus.active) {
+      return `<section class="card prem on"><div class="prem-h"><i>⭐</i><span><b>Premium+ aktif</b><small>Tüm Premium ayrıcalıkları, 10 kariyer slotu, geri al, hızlı ilerleme, istatistikler, kaleci kariyeri</small></span></div></section>`;
+    }
     if (Premium.active) {
-      return `<section class="card prem on"><div class="prem-h"><i>⭐</i><span><b>Premium aktif</b><small>Yıldız gibi yaşa: rozet, Starpedia, lüks vitrin, reklamsız</small></span></div></section>`;
+      return `<section class="card prem on"><div class="prem-h"><i>⭐</i><span><b>Premium aktif</b><small>Yıldız gibi yaşa: rozet, Starpedia, lüks vitrin, reklamsız</small></span></div>
+        ${Plus.perksHtml(false)}
+        <button class="btn btn-play" data-plus-buy>${Icon('star')} Premium+'a yükselt${Plus.priceOf() ? ` · ${U.esc(Plus.priceOf())}` : ''}</button></section>`;
     }
     return `<section class="card prem">
       <div class="prem-h"><i>⭐</i><span><b>Yıldız gibi yaşa</b><small>StarFoot Premium · tek seferlik satın alma, tüm kariyerlerinde geçerli</small></span></div>
@@ -201,9 +212,105 @@ const Premium = {
         <li>Hediye paketi ×2/×3, +1 aksiyon hakkı, enerji, sakatlık −1 hafta ve "tekrar dene" ödülleri <b>reklam izlemeden</b></li>
       </ul>`}
       <button class="btn btn-play" data-prem-buy>${Icon('star')} Premium al${Premium.price ? ` · ${U.esc(Premium.price)}` : ''}</button>
+      <button class="btn btn-ghost plus-up" data-plus-buy>${Icon('star')} Premium+ · her şey dahil${Plus.priceOf() ? ` · ${U.esc(Plus.priceOf())}` : ''}</button>
       <button class="btn btn-ghost prem-restore" data-prem-restore>Satın alımları geri yükle</button>
       ${!Premium.loaded && Premium.err ? `<p class="prem-err">${Premium.err === 'empty' ? 'Ürün bilgisi App Store\'dan alınamadı (ürün bulunamadı).' : `Mağazaya ulaşılamadı: ${U.esc(Premium.err)}`}</p>` : ''}
     </section>`;
+  },
+};
+
+// ---------- Premium+ ----------
+// Premium'un tamamı + 10 kariyer slotu, geri al, hızlı ilerleme, detaylı istatistikler, kaleci kariyeri.
+// Premium sahipleri 'upg' ürünüyle daha ucuza yükseltir.
+const Plus = {
+  active: PREMIUM_ENABLED && (() => { try { return localStorage.getItem('starfoot_plus') === '1'; } catch (e) { return false; } })(),
+  prices: {},
+  set(v) {
+    Plus.active = !!v;
+    try { localStorage.setItem('starfoot_plus', v ? '1' : '0'); } catch (e) { /* yok */ }
+    if (v) Premium.set(true);
+  },
+  owned(list) {
+    return (list || []).some((t) => t && Object.values(PLUS_IDS).includes(t.productIdentifier) && !/pending|refund|revok/i.test(String(t.purchaseState || '')));
+  },
+  // Premium+ özellikleri: sahibi ya da (tanıtım için) satın alınabildiği yerde görünür
+  has() { return Plus.active || !!window.SF_PLUS_PREVIEW; },
+  on() { return Plus.has() || Premium.available() || !!window.SF_PREVIEW; },
+  // satılacak ürün: Premium sahibine yükseltme
+  key() { return Premium.active ? 'upg' : 'full'; },
+  priceOf(k) { const x = Plus.prices[k || Plus.key()]; return x ? x.s : ''; },
+  async load() {
+    const P = Premium.plugin();
+    if (!P) return false;
+    try {
+      const r = await P.getProducts({ productIdentifiers: Object.values(PLUS_IDS), productType: 'inapp' });
+      ((r && r.products) || []).forEach((pr) => {
+        const k = Object.keys(PLUS_IDS).find((x) => PLUS_IDS[x] === pr.identifier);
+        if (k) Plus.prices[k] = { s: pr.priceString, n: Number(pr.price) || 0, c: pr.currencyCode || '' };
+      });
+      return true;
+    } catch (e) { return false; }
+  },
+  async buy(src) {
+    const P = Premium.plugin();
+    if (!P || Premium.busy) return false;
+    Premium.busy = true;
+    const k = Plus.key(), id = PLUS_IDS[k];
+    let ok = false;
+    try {
+      if (!Plus.prices[k]) await Plus.load();
+      Premium.track('plus_tap', { item_id: id, source: src || Plus.src || 'card' });
+      const t = await P.purchaseProduct({ productIdentifier: id, productType: 'inapp', quantity: 1 });
+      if (t) {
+        Plus.set(true); ok = true;
+        const pr = Plus.prices[k] || {};
+        const m = { item_id: id, item_name: 'StarFoot Premium+', source: src || Plus.src || 'card' };
+        if (pr.n) m.value = pr.n;
+        if (pr.c) m.currency = pr.c;
+        if (t.transactionId) m.transaction_id = String(t.transactionId);
+        Premium.track('plus_purchase', m);
+        Premium.track('purchase', m);
+        Game.toast('⭐ Premium+ aktif! Desteğin için teşekkürler.', 'good');
+      }
+    } catch (e) {
+      const msg = String((e && (e.message || e.code)) || e);
+      if (/cancel/i.test(msg)) Premium.track('plus_cancel');
+      else { Premium.track('premium_fail', { reason: msg.slice(0, 90), item_id: id }); Game.toast('Satın alma tamamlanamadı. Biraz sonra tekrar dene.', 'bad'); }
+    }
+    Premium.busy = false;
+    if (typeof Game !== 'undefined' && Game.render) { if (Game.state) Game.render(); else if (Game.init) Game.init(); }
+    return ok;
+  },
+  perksHtml(withPremium) {
+    return `<ul class="prem-l star-perks plus-perks">
+      <li><b>10 kariyer slotu</b><small>5 yerine 10 kariyeri aynı anda sürdür</small></li>
+      <li><b>Geri al</b><small>Her sezon bir kez, kötü giden haftayı geri al</small></li>
+      <li><b>Hızlı ilerleme</b><small>Seçtiğin haftaya kadar maçları simüle et</small></li>
+      <li><b>Detaylı kariyer istatistikleri</b><small>Kafa, penaltı, frikik golleri; hangi takıma kaç gol</small></li>
+      <li><b>Kaleci kariyeri</b><small>Kaleci olarak oyna: kurtarışlar, penaltılar, gol yememe</small></li>
+      ${withPremium ? '<li><b>Premium\'un tamamı</b><small>Reklamsız, altın rozet, Starpedia, lüks yaşam, transfer talebi</small></li>' : ''}
+    </ul>`;
+  },
+  // Premium+ tanıtımı (yalnız oyuncu dokununca ya da günlük hatırlatma kuralıyla açılır)
+  pitch(feat, src, after) {
+    const can = Premium.available();
+    src = src || 'plus';
+    Premium.track('plus_view', { source: src });
+    if (typeof Nudge !== 'undefined') Nudge.seen();
+    const up = Premium.active;
+    const pr = Plus.priceOf();
+    const btns = [{ t: 'Kapat', cls: 'btn-ghost' }];
+    if (can) btns.push({ t: `${Icon('star')} ${up ? 'Yükselt' : 'Premium+ al'}${pr ? ` · ${U.esc(pr)}` : ''}`, cls: 'btn-big', fn: () => Plus.buy(src) });
+    Game.modal(`<div class="ev-tag">Premium+</div><h2>${Icon('star')} Premium+</h2>
+      ${after ? `<p>${after}</p>` : feat ? `<p><b>${U.esc(feat)}</b> Premium+'a özel.</p>` : ''}
+      ${Plus.perksHtml(!up)}
+      <p class="muted">${!can ? 'Premium+ App Store uygulamasında satın alınabilir.' : up ? 'Premium sahibi olduğun için yükseltme fiyatı uygulanır. Tek seferlik.' : 'Tek seferlik satın alma, tüm kariyerlerinde geçerli.'}</p>`, btns, { wide: true });
+  },
+  // Premium+ özelliği kapısı: varsa true, yoksa tanıtımı açar
+  gate(feat, src) {
+    if (Plus.has()) return true;
+    Plus.pitch(feat, src);
+    return false;
   },
 };
 

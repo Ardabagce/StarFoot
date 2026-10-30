@@ -251,6 +251,7 @@ const Match = {
     const ownGoal = (scorerName, assistName, txt) => {
       addOwn();
       M.ownScorers.push(scorerName);
+      if (scorerName === pname) (M.gmin = M.gmin || []).push(M.min);
       if (!M.instant && typeof Sfx !== 'undefined') { Sfx.play(street ? 'cheer' : 'roar'); Sfx.buzz('heavy'); }
       feed(`⚽ <b>${M.min}'</b> GOL! ${txt || `${U.esc(scorerName)} golü attı.`} <span class="sc">${M.hs}-${M.as}</span>`, 'goal own');
       if (radar) radar.goal(ownSide);
@@ -697,7 +698,7 @@ const Match = {
       const summary = {
         gf, ga, res, hs: M.hs, as: M.as, played, energySave: 0, energyStart: M.e0, energyEnd: M.energy, moments: M.momPlayed || 0, effort: EF().l, minutes: Math.max(0, minutes), rating: played ? rating : null,
         goals: M.goals, assists: M.assists, yellow: M.yellow, red: M.red, motm, lateGoal: !!M.lateGoal, dribbles: M.dribbles || 0,
-        ownScorers: M.ownScorers, oppScorers: M.oppScorers, statsUsed: [...M.statsUsed], goalTypes: M.gt, shots: M.shots, keyPasses: M.keyPasses, tackles: M.tackles,
+        ownScorers: M.ownScorers, oppScorers: M.oppScorers, statsUsed: [...M.statsUsed], goalTypes: M.gt, goalMins: M.gmin || [], shots: M.shots, keyPasses: M.keyPasses, tackles: M.tackles,
       };
       const resTxt = { W: 'GALİBİYET', D: 'BERABERLİK', L: 'MAĞLUBİYET' }[res];
       $('mt-moment').classList.remove('hidden');
