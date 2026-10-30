@@ -12,12 +12,31 @@ const STATS = [
   { k: 'stamina', l: 'Dayanıklılık', d: 'Maçta harcanan enerji ve kondisyon.' },
 ];
 
+// Kaleci kariyerinde statlar kaleciye özgü adlarla gösterilir (iç anahtarlar aynı kalır)
+const GK_STATS = {
+  pace: ['Refleks', 'Yakın mesafe şutlarına tepki hızı.'],
+  shooting: ['Degaj', 'Uzun vuruşların gücü ve isabeti.'],
+  passing: ['Oyun Kurma', 'Ayakla ve elle oyun başlatma.'],
+  dribbling: ['Bire Bir', 'Karşı karşıya pozisyonlarda doğru anda çıkış.'],
+  technique: ['Top Tutma', 'Şutu sektirmeden kontrol etme.'],
+  heading: ['Hava Topu', 'Ortaları havada yakalama.'],
+  defending: ['Pozisyon Alma', 'Açıyı daraltma ve doğru yerde durma.'],
+  physical: ['Uçuş', 'Köşelere uzanma ve ikili mücadele gücü.'],
+  stamina: ['Dayanıklılık', 'Maç boyunca konsantrasyon ve kondisyon.'],
+};
+STATS.forEach((st) => {
+  const l0 = st.l, d0 = st.d;
+  const gk = () => typeof Game !== 'undefined' && (Game.state ? Game.state.player && Game.state.player.position === 'GK' : typeof Create !== 'undefined' && Create.pos === 'GK' && !document.getElementById('create').classList.contains('hidden'));
+  Object.defineProperty(st, 'l', { get: () => (gk() ? GK_STATS[st.k][0] : l0), enumerable: true });
+  Object.defineProperty(st, 'd', { get: () => (gk() ? GK_STATS[st.k][1] : d0), enumerable: true });
+});
+
 const POSITIONS = {
   FW: { l: 'Forvet', short: 'FV', w: { shooting: 0.28, pace: 0.17, dribbling: 0.16, technique: 0.13, heading: 0.1, physical: 0.08, passing: 0.05, stamina: 0.03 } },
   MF: { l: 'Orta Saha', short: 'OS', w: { passing: 0.26, technique: 0.18, dribbling: 0.14, stamina: 0.12, shooting: 0.1, defending: 0.1, pace: 0.06, physical: 0.04 } },
   DF: { l: 'Defans', short: 'DF', w: { defending: 0.32, physical: 0.18, heading: 0.14, pace: 0.12, passing: 0.1, stamina: 0.08, technique: 0.06 } },
   // Kaleci (Premium+): hız = refleks, teknik = top tutma, kafa = hava topu, güç = uçuş
-  GK: { l: 'Kaleci', short: 'KL', w: { pace: 0.22, technique: 0.2, physical: 0.16, heading: 0.14, passing: 0.12, defending: 0.1, stamina: 0.06 } },
+  GK: { l: 'Kaleci', short: 'KL', w: { pace: 0.2, technique: 0.18, physical: 0.15, heading: 0.13, defending: 0.12, passing: 0.1, dribbling: 0.08, stamina: 0.04 } },
 };
 
 // Bir yaştaki ortalama oyuncu gücü (altyapı rakiplerinin ölçeği)
@@ -222,7 +241,11 @@ const Player = {
       case 'header': return s.heading * 0.65 + s.physical * 0.35;
       case 'freekick': return s.shooting * 0.45 + s.technique * 0.55;
       case 'penalty': return s.shooting * 0.6 + s.technique * 0.4;
-      case 'save': return s.pace * 0.4 + s.technique * 0.3 + s.physical * 0.15 + s.heading * 0.15;
+      case 'save': return s.pace * 0.4 + s.technique * 0.3 + s.physical * 0.3;
+      case 'gk1v1': return s.dribbling * 0.4 + s.defending * 0.35 + s.pace * 0.25;
+      case 'gkair': return s.heading * 0.55 + s.technique * 0.3 + s.physical * 0.15;
+      case 'gkreflex': return s.pace * 0.6 + s.physical * 0.25 + s.technique * 0.15;
+      case 'gkdist': return s.passing * 0.6 + s.shooting * 0.25 + s.technique * 0.15;
       default: return Player.overall(p, true);
     }
   },

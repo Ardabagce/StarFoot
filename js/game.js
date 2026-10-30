@@ -1593,7 +1593,7 @@ const UI = {
         <div class="nm-meta">${U.esc(cup.name.toLocaleUpperCase('tr'))} · ${U.esc(op.stage.toLocaleUpperCase('tr'))} · ${lp ? 'Puan tablosu için oynanır' : 'Tek maç, kaybeden elenir'}</div>`;
     } else if (Game.inStreet() && s.street.trials) {
       next = `<div class="nm-vs"><div class="nm-team">${UI.shirt(Game.club(), 'big')}<b>Seçme Günü</b></div></div>
-        <div class="nm-meta">ALTYAPI SEÇMELERİ · 3 istasyon: ${({ FW: 'bitiricilik, sürat, slalom', MF: 'pas, top sektirme, slalom', DF: 'ikili mücadele, omuz omuza, kafa', GK: 'refleks, güç, hava topu' })[p.position] || ''}. Tribünde kulüplerin scoutları var!</div>`;
+        <div class="nm-meta">ALTYAPI SEÇMELERİ · 3 istasyon: ${({ FW: 'bitiricilik, sürat, slalom', MF: 'pas, top sektirme, slalom', DF: 'ikili mücadele, omuz omuza, kafa', GK: 'refleks, uçuş, hava topu' })[p.position] || ''}. Tribünde kulüplerin scoutları var!</div>`;
     } else if (Game.inStreet()) {
       next = `<div class="nm-vs"><div class="nm-team">${UI.shirt(Game.club(), 'big')}<b>Bizim Sokak</b></div><span class="vs">VS</span><div class="nm-team">${UI.shirt({ id: 'ARK', c1: '#2a6fdb', c2: '#ffffff' }, 'big')}<b>Arka Sokak</b></div></div>
         <div class="nm-meta">MAHALLE MAÇI · Kenarda bir scout izliyor. İyi oynarsan seni bir altyapıya götürecek!</div>`;

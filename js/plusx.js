@@ -60,51 +60,73 @@ document.addEventListener('click', (e) => { if (e.target.closest && e.target.clo
 // Karar gerektiren bir pencere, yeni transfer teklifi ya da sezon sonu gelince durur.
 const FF = {
   on: false, stop: false,
-  TARGETS: [
-    ['eu', 'Sonraki Avrupa maçı', 'Kıta kupası maçına kadar ilerle, o maçı sen oyna'],
-    ['cup', 'Sonraki kupa maçı', 'Kupa ya da Avrupa maçına kadar'],
-    ['derby', 'Sonraki derbi', 'Derbiye kadar ilerle'],
-    ['tw', 'Transfer dönemi', 'Transfer dönemi açılana kadar'],
-    ['w2', '2 hafta', ''], ['w4', '4 hafta', ''], ['w8', '8 hafta', ''],
-    ['season', 'Sezon sonu', 'Son lig maçına kadar'],
-  ],
   PLANS: [
-    ['bal', 'Dengeli', 'Enerjin iyiyse antrenman, düşükse dinlenme'],
-    ['train', 'Antrenman', 'Her hak antrenman (enerji çok düşükse dinlen)'],
-    ['intense', 'Yoğun antrenman', 'Daha hızlı gelişim, daha çok yorgunluk ve sakatlık riski'],
-    ['rest', 'Dinlen', 'Hakları dinlenmeye harca, enerjini yüksek tut'],
+    ['bal', 'Dengeli', 'Enerjin iyiyse antrenman yaparsın, düşükse dinlenirsin.'],
+    ['train', 'Antrenman', 'Her hak antrenmana gider; enerji çok düşükse dinlenirsin.'],
+    ['intense', 'Yoğun', 'Daha hızlı gelişim; daha çok yorgunluk ve sakatlık riski.'],
+    ['rest', 'Dinlen', 'Hakları dinlenmeye harcarsın, enerjin hep yüksek kalır.'],
   ],
   euCup(id) { const c = Game.state.cups && Game.state.cups[id]; return !!(c && !c.dom && !c.youth); },
-  inEu() { const s = Game.state; return Object.values(s.cups || {}).some((c) => c && !c.dom && !c.youth && !c.winner && typeof Cups !== 'undefined' && Cups.inCup(s, c)); },
   button() {
     const s = Game.state;
     if (!s || s.mode === 'wc' || Game.inStreet() || typeof Plus === 'undefined' || !Plus.on()) return '';
     return `<button class="btn btn-ghost ff-btn ${Plus.has() ? '' : 'locked'}" data-ff>⏩ Hızlı ilerle${Plus.has() ? '' : ' <small>Premium+</small>'}</button>`;
   },
+  // kalan lig maçları (bu haftaki maç hariç: o zaten sıradaki maç)
+  fixtures() {
+    const s = Game.state, lg = Game.league(), me = s.clubId;
+    const rank = {};
+    World.sortedTable(lg).forEach((x, i) => (rank[x.id] = i + 1));
+    const out = [];
+    for (let r = s.season.round + 1; r < lg.fixtures.length; r++) {
+      const f = (lg.fixtures[r] || []).find(([h, a]) => h === me || a === me);
+      if (!f) continue;
+      const home = f[0] === me, opp = home ? f[1] : f[0];
+      out.push({ r, opp, home, rank: rank[opp], derby: typeof Big !== 'undefined' && !Game.isYouth() ? Big.derby(f[0], f[1]) : null });
+    }
+    return out;
+  },
   open() {
-    if (!Plus.has()) return Plus.pitch('Hızlı ilerleme', 'ff', 'Önemli maçlara kadar haftaları simüle et: Avrupa gecesine, derbiye ya da transfer dönemine kadar ilerle; aksiyon haklarını nasıl kullanacağını sen seç.');
-    const s = Game.state, p = s.player;
-    const ok = (k) => (k === 'eu' ? FF.inEu() : k === 'derby' ? !Game.isYouth() : true);
-    const tg = FF.TARGETS.filter(([k]) => ok(k));
-    const pick = FF.last && tg.some(([k]) => k === FF.last.t) ? FF.last.t : tg[0][0];
+    if (!Plus.has()) return Plus.pitch('Hızlı ilerleme', 'ff', 'Fikstürden bir maç seç, oraya kadar olan haftalar simüle edilsin; o maçı sen oyna. Atlanan haftalarda aksiyon haklarını nasıl kullanacağını da sen seçersin.');
+    const s = Game.state;
+    const fx = FF.fixtures();
+    if (!fx.length) return Game.toast('Bu sezon atlanacak maç kalmadı.', 'info');
+    const def = (FF.last && fx.find((x) => x.r === FF.last.r)) || fx.find((x) => x.derby) || fx[Math.min(3, fx.length - 1)];
     const plan = (FF.last && FF.last.p) || 'bal';
     const focusL = STATS.find((x) => x.k === s.trainFocus).l;
-    const chips = (list, name, cur) => list.map(([k, l, d]) => `<label class="ff-chip"><input type="radio" name="${name}" value="${k}" ${k === cur ? 'checked' : ''}><span><b>${l}</b>${d ? `<small>${d}</small>` : ''}</span></label>`).join('');
-    const m = Game.modal(`<div class="ff"><h2>⏩ Hızlı ilerle</h2>
-      <div class="lbl">Nereye kadar?</div><div class="ff-grid">${chips(tg, 'fft', pick)}</div>
-      <div class="lbl">Atlanan haftalarda aksiyon hakların <small>antrenman odağı: ${focusL}</small></div><div class="ff-grid">${chips(FF.PLANS, 'ffp', plan)}</div>
-      <p class="muted">Maçlar otomatik oynanır. Karar vermen gereken bir şey olursa (teklif, olay, sezon sonu) ilerleme durur.</p></div>`, [
+    const club = (id) => s.world.clubs[id] || { id, name: id };
+    const rows = fx.map((x) => `<label class="ffx-row ${x.derby ? 'derby' : ''}"><input type="radio" name="ffr" value="${x.r}" ${x.r === def.r ? 'checked' : ''}>
+        <span class="ffx-w"><b>${x.r + 1}</b><small>Hafta</small></span>
+        <span class="ffx-t">${UI.shirt(club(x.opp))}<span class="ffx-n"><b>${U.esc(Game.teamName(x.opp))}</b><small>${x.home ? 'İç saha' : 'Deplasman'}${x.rank ? ` · ${x.rank}. sırada` : ''}</small></span></span>
+        ${x.derby ? `<i class="ffx-tag">${U.esc(x.derby)}</i>` : `<span class="ffx-in">${x.r - s.season.round} hf sonra</span>`}
+      </label>`).join('');
+    const seg = FF.PLANS.map(([k, l]) => `<label class="ffp-seg"><input type="radio" name="ffp" value="${k}" ${k === plan ? 'checked' : ''}><span>${l}</span></label>`).join('');
+    const m = Game.modal(`<div class="ffx">
+      <h2>Hızlı ilerle</h2>
+      <p class="muted ffx-sub">Seçtiğin maça kadar haftalar simüle edilir, o maçı sen oynarsın.</p>
+      <div class="ffx-lbl">Hangi maça kadar?</div>
+      <div class="ffx-list">${rows}</div>
+      <div class="ffx-lbl">Aradaki haftalarda aksiyon hakların <small>Odak: ${U.esc(focusL)}</small></div>
+      <div class="ffp">${seg}</div>
+      <p class="ffp-d" id="ffp-d">${FF.PLANS.find((x) => x[0] === plan)[2]}</p>
+      <div class="ffx-opts">
+        <label class="ffx-tg"><input type="checkbox" id="ff-cup" ${FF.last && FF.last.cup === false ? '' : 'checked'}><span>Kupa ve Avrupa maçlarında dur, onları ben oynayayım</span></label>
+        <label class="ffx-tg"><input type="checkbox" id="ff-off" ${FF.last && FF.last.off === false ? '' : 'checked'}><span>Transfer teklifi gelince dur</span></label>
+      </div>
+    </div>`, [
       { t: 'Vazgeç', cls: 'btn-ghost' },
-      { t: '⏩ Başlat', cls: 'btn-big', fn: () => {} },
+      { t: '⏩ Başlat', cls: 'btn-big', keep: true, fn: () => {
+        const r = +((m.querySelector('input[name="ffr"]:checked') || {}).value ?? def.r);
+        const pl = (m.querySelector('input[name="ffp"]:checked') || {}).value || 'bal';
+        const cup = m.querySelector('#ff-cup').checked, off = m.querySelector('#ff-off').checked;
+        FF.last = { r, p: pl, cup, off };
+        m.classList.add('hidden'); m.innerHTML = '';
+        FF.run({ r, cup, off }, pl);
+      } },
     ], { wide: true });
-    const go = m.querySelector('.modal-btns .btn-big');
-    go.onclick = () => {
-      const t = (m.querySelector('input[name="fft"]:checked') || {}).value || pick;
-      const pl = (m.querySelector('input[name="ffp"]:checked') || {}).value || 'bal';
-      FF.last = { t, p: pl };
-      m.classList.add('hidden'); m.innerHTML = '';
-      FF.run(t, pl);
-    };
+    m.querySelectorAll('input[name="ffp"]').forEach((i) => (i.onchange = () => { m.querySelector('#ffp-d').textContent = FF.PLANS.find((x) => x[0] === i.value)[2]; }));
+    const sel = m.querySelector('input[name="ffr"]:checked');
+    if (sel) sel.closest('.ffx-row').scrollIntoView({ block: 'center' });
   },
   // bir aksiyon hakkını plana göre kullanır
   useAp(plan, tally) {
@@ -123,28 +145,24 @@ const FF = {
     s.ap--;
   },
   // sıradaki maçtan önce durulacak mı
-  why(t, start, weeks) {
+  why(t, start) {
     const s = Game.state;
     if (FF.stop) return 'Durduruldu.';
-    if (s.pendingCup) {
-      if (t === 'cup') return 'Kupa maçı geldi.';
-      if (t === 'eu' && FF.euCup(s.pendingCup)) return 'Avrupa maçı geldi.';
-    }
+    if (s.pendingCup && t.cup) return FF.euCup(s.pendingCup) ? 'Avrupa maçı geldi.' : 'Kupa maçı geldi.';
     if (!s.pendingCup && !s.pendingIntl) {
-      const fx = Game.nextFixture();
-      if (!fx) return 'Sezonun son maçı oynandı.';
-      if (t === 'derby' && typeof Big !== 'undefined' && Big.derby(fx.home, fx.away)) return 'Derbi haftası geldi.';
+      if (!Game.nextFixture()) return 'Sezonun son maçı oynandı.';
+      if (s.season.round >= t.r) return 'Seçtiğin maça geldin.';
     }
-    if (t === 'tw' && Game.tWindow(s.season.round) && !start.tw) return 'Transfer dönemi açıldı.';
-    const n = { w2: 2, w4: 4, w8: 8 }[t];
-    if (n && weeks >= n) return `${n} hafta tamamlandı.`;
-    if ((s.offers || []).length > start.offers) return 'Yeni transfer teklifi geldi.';
+    if (t.off && (s.offers || []).length > start.offers) return 'Yeni transfer teklifi geldi.';
     return '';
   },
   // açık pencere: tek düğmeli bilgi penceresiyse kapatılır, seçim gerekiyorsa ilerleme durur
   modalGate() {
     const m = document.getElementById('modal');
     if (!m || m.classList.contains('hidden')) return 'ok';
+    // hızlı ilerlemede güvenle seçilebilen seçenek (ör. hediye paketini normal aç)
+    const safe = m.querySelector('[data-ffsafe]');
+    if (safe) { safe.closest('button').click(); return 'ok'; }
     const bs = m.querySelectorAll('.modal-btns button');
     const extra = m.querySelectorAll('[data-offer], [data-street], input, select, .ev-opts button, .press-a button');
     if (bs.length <= 1 && !extra.length) { if (bs[0]) bs[0].click(); else { m.classList.add('hidden'); m.innerHTML = ''; } return 'ok'; }
@@ -168,13 +186,13 @@ const FF = {
     const tally = { m: 0, g: 0, a: 0, r: 0, w: 0, d: 0, l: 0, train: 0, rest: 0, gain: 0 };
     const t0 = { g: s0.player.totals.goals, a: s0.player.totals.assists, apps: s0.player.totals.apps, rs: s0.player.totals.ratingSum };
     let weeks = 0, reason = '', lastRound = s0.season.round, guard = 0;
-    Premium.track('plus_ff', { target: t, plan });
+    Premium.track('plus_ff', { weeks: t.r - s0.season.round, plan });
     try {
       while (guard++ < 80) {
         const s = Game.state;
         if (FF.modalGate() === 'stop') { reason = 'Karar vermen gereken bir durum var.'; break; }
         if (s.season.year !== start.y) { reason = 'Yeni sezon başladı.'; break; }
-        reason = FF.why(t, start, weeks);
+        reason = FF.why(t, start);
         if (reason) break;
         FF.ov(`⏩ ${s.season.year} · ${Math.min(s.season.round + 1, Game.rounds())}. hafta simüle ediliyor`);
         while (s.ap > 0) FF.useAp(plan, tally);

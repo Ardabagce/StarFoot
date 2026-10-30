@@ -127,7 +127,9 @@ const Sprites = {
   // Oyuncunun kendi görünümü (Premium görünüm stüdyosunda değiştirilebilir)
   me(p) {
     p = p || (typeof Game !== 'undefined' && Game.p);
-    return (p && p.look) || Sprites.look(7);
+    const L = (p && p.look) || Sprites.look(7);
+    // kaleci: her yerde kaleci forması ve eldiven
+    return p && p.position === 'GK' ? Object.assign({}, L, { gk: true }) : L;
   },
 
   // İnsan figürü. (sx, sy) ayakların ekran noktası, h ekrandaki boy (px)
@@ -142,6 +144,11 @@ const Sprites = {
       if (o.number != null) o = Object.assign({}, o, { number: null });
     }
     const look = o.look || { skin: SKINS[1], hair: HAIRS[0] };
+    // kaleci: takım formasına uymayan kaleci forması, uzun kollu ve eldivenli
+    if (look.gk && kit && !kit.gkKit) {
+      kit = Object.assign({ gkKit: true }, GK_KITS.find((k) => Sprites.colorDist(k.shirt, kit.shirt) > 120) || GK_KITS[0]);
+      o = Object.assign({}, o, { gloves: true, longSleeve: true });
+    }
     const up = o.facing === 'up';
     const run = o.run || 0; // koşu fazı (radyan)
     const runAmt = U.clamp(o.speed || 0, 0, 1);
@@ -239,11 +246,14 @@ const Sprites = {
       const hy2 = ey + Math.cos(p2) * L2 * k2 - f * h * 0.025;
       if (raise < 0.5 && side * (hx2 - sx) < W * 0.56) hx2 = sx + side * W * 0.56; // el gövdenin arkasında kaybolmasın
       const aw = h * 0.088;
-      limb(ax, ay, ex, ey, aw, look.skin);
-      limb(ex, ey, hx2, hy2, aw * 0.88, look.skin);
+      limb(ax, ay, ex, ey, aw, o.longSleeve ? kit.shirt : look.skin);
+      limb(ex, ey, hx2, hy2, aw * 0.88, o.longSleeve ? kit.shirt : look.skin);
       // kol ağzı (forma)
       limb(ax, ay, ax + (ex - ax) * 0.55, ay + (ey - ay) * 0.55, aw * 1.25, kit.shirt, -0.15);
-      if (o.gloves) { ctx.fillStyle = '#f0f0f0'; ctx.beginPath(); ctx.ellipse(hx2, hy2, aw * 0.75, aw * 0.85, 0, 0, Math.PI * 2); ctx.fill(); }
+      if (o.gloves) {
+        ctx.fillStyle = '#f2f2f2'; ctx.beginPath(); ctx.ellipse(hx2, hy2, aw * 0.78, aw * 0.9, 0, 0, Math.PI * 2); ctx.fill();
+        ctx.fillStyle = kit.gkKit ? kit.shirt : '#1b1b1b'; ctx.fillRect(hx2 - aw * 0.6, hy2 - aw * 0.95, aw * 1.2, aw * 0.35); // bilek bandı
+      }
       else { ctx.fillStyle = look.skin; ctx.beginPath(); ctx.arc(hx2, hy2, aw * 0.55, 0, Math.PI * 2); ctx.fill(); }
     };
     const armsUp = o.dive || 0;
@@ -364,7 +374,7 @@ const Sprites = {
         ctx.rotate(side * -(Math.PI - 0.28));
         const aw = h * 0.085, L = h * 0.36;
         ctx.fillStyle = look.skin; ctx.fillRect(-aw / 2, 0, aw, L);
-        ctx.fillStyle = kit.shirt; ctx.fillRect(-aw / 2 - 1, 0, aw + 2, L * 0.4);
+        ctx.fillStyle = kit.shirt; ctx.fillRect(-aw / 2 - 1, 0, aw + 2, L * (o.longSleeve ? 0.92 : 0.4));
         if (o.gloves) { ctx.fillStyle = '#f4f4f4'; ctx.beginPath(); ctx.ellipse(0, L, aw * 0.95, aw * 1.05, 0, 0, Math.PI * 2); ctx.fill(); ctx.strokeStyle = 'rgba(0,0,0,0.35)'; ctx.lineWidth = Math.max(1, h * 0.012); ctx.stroke(); }
         ctx.restore();
       };

@@ -4,7 +4,7 @@ const MOMENT_WEIGHTS = {
   FW: { open: 40, dribble: 18, header: 12, freekick: 7, penalty: 5, tackle: 5, sprint: 9, onetwo: 7 },
   MF: { open: 30, dribble: 13, deep: 15, tackle: 17, freekick: 9, header: 4, onetwo: 12, sprint: 5 },
   DF: { tackle: 46, deep: 23, header: 14, open: 4, freekick: 4, sprint: 9 },
-  GK: { gk_save: 40, gk_1v1: 18, gk_cross: 17, gk_pen: 5, deep: 12 },
+  GK: { gk_save: 42, gk_1v1: 20, gk_cross: 22, gk_reflex: 16 },
 };
 
 const MOMENT_TITLES = {
@@ -22,6 +22,8 @@ const MOMENT_TITLES = {
   gk_1v1: '🧤 Karşı Karşıya!',
   gk_cross: '🧤 Orta Geliyor!',
   gk_pen: '🧤 Rakip Penaltısı!',
+  gk_reflex: '🧤 Kale Ağzında Karambol!',
+  gk_dist: '🧤 Oyunu Başlat',
 };
 
 const MOMENT_DESC = {
@@ -36,8 +38,10 @@ const MOMENT_DESC = {
   sprint: 'Top boşta! Hızlı hızlı dokunarak rakibinden önce topa ulaş.',
   onetwo: 'Kısa paslarla savunmayı aç: parlayan arkadaşına süre dolmadan dokun.',
   gk_save: 'Forvet şut çekiyor! Bakışını oku, top ayaktan çıkınca doğru köşeye uç (sol, orta ya da sağa dokun).',
-  gk_1v1: 'Forvet kaleye geliyor. Halka yeşile girince çık ve topu ayağından al; sarı bölge faul ve penaltı demek.',
-  gk_cross: 'Ceza sahasına orta geliyor. Doğru anda çık ve topu havada yakala.',
+  gk_1v1: 'Forvet topu sürerek geliyor. Topu ayağından fazla açtığı an çık; erken çıkarsan aşırtır, geç kalırsan şut çeker.',
+  gk_cross: 'Kanattan orta geliyor. Basılı tutup topun düşeceği yere git, top ellerine inerken bırak ve yakala.',
+  gk_reflex: 'Kale ağzında karambol! Art arda şutlar geliyor; parlayan tarafa hızla dokun.',
+  gk_dist: 'Top elinde. Boştaki (yeşil halkalı) arkadaşına süre dolmadan at ve hücumu başlat.',
   gk_pen: 'Rakip penaltı kullanıyor. Forvetin bakışını oku ve bir köşeye uç!',
 };
 
@@ -98,6 +102,21 @@ const Match = {
     let hadPen = false;
     const addMoments = (n, from, to) => {
       const taken = new Set(moments.map((x) => x.min));
+      if (p.position === 'GK') {
+        // kaleci: rakibin gol beklentisi kadar pozisyon gelir (rakip golleri yalnız bu anlarda olur), artı 1-2 oyun başlatma
+        const [lh, la] = World.lambdas(ctx.home.rating, ctx.away.rating);
+        const lam = (ctx.side === 'home' ? la : lh) * (to - from + 1) / 90;
+        const nCh = U.clamp(Math.round(lam * 2.0 + U.rand(-0.6, 0.8)), 1, 6);
+        const list = [];
+        for (let i = 0; i < nCh; i++) list.push(U.weighted(Object.keys(MOMENT_WEIGHTS.GK), (k) => MOMENT_WEIGHTS.GK[k]));
+        if (!hadPen && U.chance(0.1 * (to - from + 1) / 90)) { list.push('gk_pen'); hadPen = true; }
+        for (let i = 0, k = U.randi(1, 2); i < k; i++) list.push('gk_dist');
+        list.forEach((type) => {
+          for (let tries = 0; tries < 60; tries++) { const m = U.randi(from, to); if (taken.has(m) || m === 45) continue; taken.add(m); moments.push({ min: m, type }); break; }
+        });
+        moments.sort((a, b) => a.min - b.min);
+        return;
+      }
       for (let i = 0, tries = 0; i < n && tries < 200; tries++) {
         const m = U.randi(from, to);
         if (taken.has(m) || m === 45) continue;
@@ -564,27 +583,51 @@ const Match = {
         refresh();
         return;
       }
-      if (type === 'gk_1v1' || type === 'gk_cross') {
-        M.statsUsed.add(type === 'gk_cross' ? 'heading' : 'pace'); M.statsUsed.add('physical');
-        const one = type === 'gk_1v1';
-        const r = await playTiming(type, 'save', one
-          ? { title: 'Karşı karşıya!', kind: 'tackle', desc: 'Forvet topu açtığı an çık. Yeşil alan temiz kurtarış, sarı alan faul demek.', button: 'ÇIK!', okText: 'AYAĞINDAN ALDIN!', partialText: 'FAUL!', failText: 'FORVET SENİ GEÇTİ!' }
-          : { title: 'Ortayı yakala!', kind: 'header', desc: 'Top havadayken doğru anda çık ve yakala. Sarı alanda ancak yumruklayabilirsin.', button: 'YAKALA!', okText: 'TOPU KUCAKLADIN!', partialText: 'YUMRUKLA UZAKLAŞTIRDIN', failText: 'TOPU KAÇIRDIN!' }, 0.1);
+      if (type === 'gk_1v1') {
+        M.statsUsed.add('dribbling'); M.statsUsed.add('defending');
+        const r = await playMini('gk_1v1', 'gkOne', 'gk1v1', 0, { pos: Player.skillFor(p, 'gk1v1') });
+        if (r === 'success') { M.saves++; rate(0.6); feed(`🧤 <b>${M.min}'</b> ${U.esc(pname)} doğru anda çıktı, topu forvetin ayağından aldı!`, 'goal own'); }
+        else if (r === 'partial') {
+          rate(-0.2);
+          if (U.chance(0.4)) { M.yellow++; feed(`🟨 <b>${M.min}'</b> ${U.esc(pname)} forveti düşürdü, sarı kart.`, 'bad'); }
+          feed(`😨 <b>${M.min}'</b> Penaltı!`, 'bad');
+          const r2 = await playMini('gk_pen', 'keeper', 'save', -0.9, { mode: 'pen', reflex: st.pace, handling: st.technique });
+          if (r2 === 'success') { M.saves++; M.penSaves++; rate(1.1); feed(`🧤 <b>${M.min}'</b> ${U.esc(pname)} hatasını penaltıyı kurtararak telafi etti!`, 'goal own'); } else oppGoal('Penaltıdan gol.');
+        } else { rate(-0.35); if (U.chance(0.85)) oppGoal(); else feed(`😮‍💨 <b>${M.min}'</b> Forvetin vuruşu direkten döndü!`); }
+        refresh();
+        return;
+      }
+      if (type === 'gk_cross') {
+        M.statsUsed.add('heading'); M.statsUsed.add('technique');
+        const r = await playMini('gk_cross', 'gkCross', 'gkair', 0.1, { air: Player.skillFor(p, 'gkair') });
+        if (r === 'success') { M.saves++; rate(0.3); feed(`🧤 <b>${M.min}'</b> ${U.esc(pname)} ortayı havada güvenle yakaladı.`); }
+        else if (r === 'partial') { rate(0.05); if (U.chance(0.15)) { rate(-0.25); oppGoal('Seken topu ağlara gönderdiler.'); } else feed(`👊 <b>${M.min}'</b> ${U.esc(pname)} ortayı yumrukla uzaklaştırdı.`); }
+        else { rate(-0.3); if (U.chance(0.45)) oppGoal('Kafayla gol.'); else feed(`😮‍💨 <b>${M.min}'</b> Kafa vuruşu az farkla auta gitti.`); }
+        refresh();
+        return;
+      }
+      if (type === 'gk_reflex') {
+        M.statsUsed.add('pace'); M.statsUsed.add('physical');
+        const r = await playMini('gk_reflex', 'gkReflex', 'gkreflex', -0.2, { reflex: st.pace });
+        if (r === 'success') { M.saves += 3; rate(0.8); feed(`🧤 <b>${M.min}'</b> ${U.esc(pname)} kale ağzındaki karambolde üç şutu üst üste çıkardı!`, 'goal own'); }
+        else if (r === 'partial') { M.saves++; rate(-0.1); oppGoal('Karambolde gelen golü önleyemedi.'); }
+        else { rate(-0.35); oppGoal('Kale ağzındaki karambolden gol.'); }
+        refresh();
+        return;
+      }
+      if (type === 'gk_dist') {
+        M.statsUsed.add('passing');
+        const r = await playMini('gk_dist', 'gkDist', 'gkdist', 0.4, { passing: st.passing });
         if (r === 'success') {
-          M.saves++; rate(one ? 0.6 : 0.3);
-          feed(one ? `🧤 <b>${M.min}'</b> ${U.esc(pname)} karşı karşıya pozisyonda forvetin ayağından aldı!` : `🧤 <b>${M.min}'</b> ${U.esc(pname)} ortayı havada güvenle kontrol etti.`);
-        } else if (r === 'partial') {
-          if (one) {
-            rate(-0.2);
-            if (U.chance(0.35)) { M.yellow++; feed(`🟨 <b>${M.min}'</b> ${U.esc(pname)} forveti düşürdü, sarı kart.`, 'bad'); }
-            feed(`😨 <b>${M.min}'</b> Penaltı!`, 'bad');
-            const r2 = await playMini('gk_pen', 'keeper', 'save', -0.9, { mode: 'pen', reflex: st.pace, handling: st.technique });
-            if (r2 === 'success') { M.saves++; M.penSaves++; rate(1.1); feed(`🧤 <b>${M.min}'</b> ${U.esc(pname)} hatasını penaltıyı kurtararak telafi etti!`, 'goal own'); } else oppGoal('Penaltıdan gol.');
-          } else { rate(0.05); feed(`👊 <b>${M.min}'</b> ${U.esc(pname)} ortayı yumrukla uzaklaştırdı.`); }
-        } else {
-          rate(-0.3);
-          if (U.chance(one ? 0.72 : 0.38)) oppGoal(one ? undefined : 'Kafayla gol.');
-          else feed(`😮‍💨 <b>${M.min}'</b> Şans bizden yana: top auta gitti.`);
+          M.keyPasses++; rate(0.25); feed(`🧤 <b>${M.min}'</b> ${U.esc(pname)} oyunu hızlı başlattı, takım kontra atağa çıktı.`);
+          if (U.chance(0.12)) { M.assists++; rate(0.6); ownGoal(pickOwn().n, pname, `${U.esc(pname)}'in uzun pasıyla başlayan atak golle bitti!`); }
+        } else if (r === 'partial') feed(`<b>${M.min}'</b> ${U.esc(pname)} topu oyuna soktu, takım topu korudu.`);
+        else {
+          rate(-0.25); feed(`😬 <b>${M.min}'</b> ${U.esc(pname)}'in pası rakipte! Ceza sahası önünde tehlike...`, 'bad');
+          const r2 = await playMini('gk_save', 'keeper', 'save', 0.15, { mode: 'shot', reflex: st.pace, handling: st.technique });
+          if (r2 === 'success') { M.saves++; rate(0.5); feed(`🧤 <b>${M.min}'</b> ${U.esc(pname)} kendi hatasını kurtarışla telafi etti!`, 'goal own'); }
+          else if (r2 === 'partial') { if (U.chance(0.3)) oppGoal('Dönen topu ağlara gönderdiler.'); else { M.saves++; feed(`🧤 <b>${M.min}'</b> ${U.esc(pname)} topu çeldi.`); } }
+          else oppGoal();
         }
         refresh();
         return;
@@ -689,7 +732,7 @@ const Match = {
       const gk = p.position === 'GK';
       const ownL = (isHome ? lh : la) / 90 * (onPitch() && !gk ? 0.72 : 1);
       // kaleci sahadaysa: rakip gollerinin bir kısmı anlarda oynanır, gücüne göre bazılarını kendiliğinden kurtarır
-      const oppL = (isHome ? la : lh) / 90 * (onPitch() && gk ? U.clamp(0.72 - (Player.skillFor(p, 'save') - opp.rating) / 160, 0.5, 0.85) : 1);
+      const oppL = onPitch() && gk ? 0 : (isHome ? la : lh) / 90;
       if (U.chance(ownL)) {
         const sc = pickOwn();
         ownGoal(sc.n);
@@ -704,10 +747,10 @@ const Match = {
       if (M.min === 85 && !M.dramaDone && onPitch() && !M.instant && !street) {
         M.dramaDone = true;
         const gf = isHome ? M.hs : M.as, ga = isHome ? M.as : M.hs;
-        if ((gf === ga || ga - gf === 1) && !moments.some((x) => x.min > 85)) moments.push({ min: U.randi(87, 90), type: U.chance(0.25) ? 'freekick' : 'open', drama: true });
+        if ((gf === ga || ga - gf === 1) && !moments.some((x) => x.min > 85)) moments.push({ min: U.randi(87, 90), type: p.position === 'GK' ? 'gk_save' : U.chance(0.25) ? 'freekick' : 'open', drama: true });
       }
       // efor: çok eforda ara ara ek pozisyon gelir, az eforda bazı pozisyonlar hiç oluşmaz (90 dakikada ortalama ±2)
-      if (onPitch() && M.min < 88 && efKey === 'high' && !moments.some((x) => x.min === M.min + 1) && U.chance(2 / 80)) addMoments(1, M.min + 1, M.min + 1);
+      if (onPitch() && p.position !== 'GK' && M.min < 88 && efKey === 'high' && !moments.some((x) => x.min === M.min + 1) && U.chance(2 / 80)) addMoments(1, M.min + 1, M.min + 1);
       for (const mo of moments.filter((x) => x.min === M.min)) {
         if (!onPitch()) break;
         if (efKey === 'low' && !mo.drama && U.chance(0.4)) continue;

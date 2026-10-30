@@ -12,6 +12,18 @@ const DRILLS = {
   stamina: { t: 'Tempo Koşusu', d: 'Basılı tutarak hızlan, bırakarak yavaşla. Hız ibresini 12 saniye boyunca yeşil bantta tut.', kind: 'mini', fn: 'tempo', k: 'dribble' },
 };
 
+// Kaleci antrenmanları: her kaleci statı kendi kaleci mini oyunuyla çalışılır
+const GK_DRILLS = {
+  pace: { t: 'Refleks Çalışması', d: 'Yakın mesafeden art arda şutlar. Parlayan tarafa hızla dokun.', kind: 'mini', fn: 'gkReflex', k: 'gkreflex', o: (st) => ({ reflex: st.pace }) },
+  physical: { t: 'Uçuş Çalışması', d: 'Hoca köşelere şut çekiyor. Top ayaktan çıkınca doğru köşeye uç.', kind: 'mini', fn: 'keeper', k: 'save', o: (st) => ({ mode: 'shot', reflex: st.pace, handling: st.technique }) },
+  technique: { t: 'Top Tutma ve Penaltı', d: 'Penaltı atışları. Forvetin bakışını oku, bir köşeye uç.', kind: 'mini', fn: 'keeper', k: 'save', o: (st) => ({ mode: 'pen', reflex: st.pace, handling: st.technique }) },
+  heading: { t: 'Hava Topu Çalışması', d: 'Kanatlardan orta. Basılı tutup topun düşeceği yere git, top inerken bırak.', kind: 'mini', fn: 'gkCross', k: 'gkair', o: (st) => ({ air: st.heading }) },
+  dribbling: { t: 'Bire Bir Çalışması', d: 'Forvet üstüne geliyor. Topu ayağından fazla açtığı an çık.', kind: 'mini', fn: 'gkOne', k: 'gk1v1', o: (st) => ({ pos: st.dribbling }) },
+  defending: { t: 'Pozisyon Alma', d: 'Karşı karşıya pozisyonlar: açıyı daralt, doğru anda çık.', kind: 'mini', fn: 'gkOne', k: 'gk1v1', o: (st) => ({ pos: st.defending }) },
+  passing: { t: 'Oyun Kurma', d: 'Top elinde. Boştaki arkadaşına süre dolmadan at.', kind: 'mini', fn: 'gkDist', k: 'gkdist', o: (st) => ({ passing: st.passing }) },
+  shooting: { t: 'Degaj Çalışması', d: 'Uzun oyun başlatma: boştaki arkadaşını bul ve topu ona ulaştır.', kind: 'mini', fn: 'gkDist', k: 'gkdist', o: (st) => ({ passing: st.shooting }) },
+};
+
 const Drill = {
   // Kalite (0-1) → gelişim çarpanı
   mult(q) { return 0.6 + q * 0.9; },
@@ -30,7 +42,7 @@ const Drill = {
   // Bir antrenman çalışması oynatır. Sonuç: { q, auto }
   async run(focus, opts = {}) {
     const s = Game.state, p = s.player;
-    const D = DRILLS[focus] || DRILLS.shooting;
+    const D = (p.position === 'GK' && GK_DRILLS[focus]) || DRILLS[focus] || DRILLS.shooting;
     const el = Drill.host();
     el.innerHTML = `
       <div class="mm-head">
@@ -78,7 +90,7 @@ const Drill = {
         const r = await MiniGame.timing(hostEl, cfg);
         if (r.result === 'auto') auto = true; else q = score[r.result] ?? 0.3;
       } else {
-        const r = await MiniGame[D.fn](hostEl, { skill, kits, number: p.shirt, pace: st.pace, passing: st.passing, technique: st.technique, physical: st.physical, heading: st.heading, stamina: st.stamina, dribbling: st.dribbling, rounds: D.rounds, mates, cond });
+        const r = await MiniGame[D.fn](hostEl, Object.assign({ skill, kits, number: p.shirt, pace: st.pace, passing: st.passing, technique: st.technique, physical: st.physical, heading: st.heading, stamina: st.stamina, dribbling: st.dribbling, rounds: D.rounds, mates, cond }, D.o ? D.o(st) : {}));
         if (r.result === 'auto') auto = true; else q = score[r.result] ?? 0.3;
       }
     } catch (e) {

@@ -1367,6 +1367,237 @@ Object.assign(MiniGame, {
     });
   },
 
+  // ---------- Kaleci mini oyunları: ortak sahne (kalenin arkasından sahaya bakış) ----------
+  _gk(g, o) {
+    const { ctx, W, H, dpr } = g;
+    Sprites.turf(ctx, W, H, 12);
+    const cx = W / 2, gw = Math.min(W * 0.86, H * 0.9), gh = gw * 0.33, gy = H * 0.86;
+    ctx.strokeStyle = 'rgba(255,255,255,0.55)'; ctx.lineWidth = 2 * dpr;
+    ctx.strokeRect(cx - gw * 0.9, gy - H * 0.42, gw * 1.8, H * 0.42);
+    ctx.strokeRect(cx - gw * 0.55, gy - H * 0.16, gw * 1.1, H * 0.16);
+    const kh = Math.min(H * 0.24, W * 0.3);
+    const keeper = (kx, ky, rot, dive) => {
+      ctx.save(); ctx.translate(kx, ky); ctx.rotate(rot || 0);
+      Sprites.figure(ctx, 0, 0, kh, { kit: o.kits.own, look: Sprites.me(), facing: 'up', number: o.number, speed: 0.1, t: 0, dive: dive ? 1 : 0, label: 'SEN', labelScale: dpr, labelColor: 'rgba(214,40,57,0.92)' });
+      ctx.restore();
+    };
+    const goal = () => {
+      ctx.strokeStyle = 'rgba(255,255,255,0.95)'; ctx.lineWidth = 6 * dpr;
+      ctx.beginPath(); ctx.moveTo(cx - gw / 2, gy + 4 * dpr); ctx.lineTo(cx - gw / 2, gy - gh); ctx.lineTo(cx + gw / 2, gy - gh); ctx.lineTo(cx + gw / 2, gy + 4 * dpr); ctx.stroke();
+      ctx.strokeStyle = 'rgba(255,255,255,0.18)'; ctx.lineWidth = 1 * dpr;
+      for (let i = 1; i < 12; i++) { const x = cx - gw / 2 + (gw / 12) * i; ctx.beginPath(); ctx.moveTo(x, gy); ctx.lineTo(x, gy - gh); ctx.stroke(); }
+    };
+    return { cx, gw, gh, gy, kh, keeper, goal, M: H / 34 };
+  },
+  // ortak bitiş/temizlik
+  _gkLoop(g, step, input, resolve) {
+    let raf = 0, last = performance.now(), done = false;
+    const st = { t: 0, msg: '', col: '#fff', msgT: 0 };
+    const finish = (res, text, col) => { if (done) return; done = true; st.msg = text; st.col = col; st.msgT = 9; setTimeout(() => { cleanup(); resolve({ result: res }); }, 1300); };
+    const loop = (now) => {
+      const dt = Math.min(0.05, (now - last) / 1000); last = now; st.t += dt; st.msgT = Math.max(0, st.msgT - dt);
+      step(dt, st, finish, done);
+      if (st.msgT > 0) g.text(st.msg, g.H * 0.18, 32, st.col);
+      raf = requestAnimationFrame(loop);
+    };
+    let down = null;
+    const pd = (e) => { e.preventDefault(); down = { x: e.clientX, y: e.clientY }; if (input.down && !done) input.down(e); };
+    const pm = (e) => { if (input.move && !done) input.move(e); };
+    const pu = (e) => { if (!down) return; const d = down; down = null; if (input.up && !done) input.up(e, d); };
+    const key = (e) => { if (input.key && !done) input.key(e); };
+    const cleanup = () => { cancelAnimationFrame(raf); document.removeEventListener('keydown', key); g.box.removeEventListener('pointerdown', pd); g.box.removeEventListener('pointermove', pm); g.box.removeEventListener('pointerup', pu); window.removeEventListener('resize', g.layout); };
+    g.box.addEventListener('pointerdown', pd); g.box.addEventListener('pointermove', pm); g.box.addEventListener('pointerup', pu);
+    document.addEventListener('keydown', key);
+    raf = requestAnimationFrame(loop);
+    MiniGame._abort = () => { if (done) return; done = true; cleanup(); resolve({ result: 'auto' }); };
+    return st;
+  },
+
+  // Karşı karşıya: forvet topu sürerek geliyor. Topu ayağından fazla açtığı an (sarı halka) çık.
+  // Erken çıkarsan aşırtır, hiç çıkmazsan şut çeker; top ayağındayken yakın mesafede çıkarsan faul olur.
+  gkOne(host, o) {
+    return new Promise((resolve) => {
+      const g = MiniGame._canvas(host, 'Forvet topu ayağından <b>fazla açınca</b> (sarı halka) <b>dokun ve çık</b> · erken çıkma, geç kalma · <kbd>Boşluk</kbd>');
+      const sk = o.skill || 0.4, pos = o.pos || 40;
+      let d = 24, lead = 0.4, heavy = false, touchT = 0, rush = null, ended = false;
+      const speed = (5.2 + sk * 2.4) * (HARD() ? 1.1 : 1);
+      const heavyP = U.clamp(0.32 + pos / 400 - sk * 0.15, 0.2, 0.6);
+      const lookOpp = Sprites.look(71);
+      const go = (finish) => {
+        if (rush || ended) return;
+        rush = { d, lead, t: 0 };
+        if (d > 15) return setTimeout(() => finish(U.chance(0.35) ? 'partial' : 'fail', U.chance(0.35) ? 'AŞIRTMA DİREKTEN DÖNDÜ!' : 'ERKEN ÇIKTIN, AŞIRTTI!', '#ff6b6b'), 500);
+        if (heavy && lead >= 1.4) return setTimeout(() => finish('success', U.pick(['AYAĞINDAN ALDIN!', 'TOPU KUCAKLADIN!', 'MÜKEMMEL ÇIKIŞ!']), '#7cf0a0'), 450);
+        if (d < 6.5) return setTimeout(() => finish('partial', 'FAUL! FORVETİ DÜŞÜRDÜN', '#ffcf3f'), 450);
+        return setTimeout(() => finish('fail', 'ÇALIMLA GEÇTİ!', '#ff6b6b'), 500);
+      };
+      let fin = null;
+      MiniGame._gkLoop(g, (dt, st, finish) => {
+        fin = finish;
+        const G = MiniGame._gk(g, o), { ctx, H, dpr } = g;
+        if (!ended && st.t > 0.4) {
+          if (!rush) d -= speed * dt;
+          touchT -= dt;
+          if (touchT <= 0) { heavy = U.chance(heavyP); lead = heavy ? U.rand(1.8, 2.6) : U.rand(0.6, 1.0); touchT = U.rand(0.55, 0.8); }
+          lead = Math.max(0.35, lead - dt * (heavy ? 1.6 : 1.2));
+          if (lead < 1.2) heavy = false;
+          if (!rush && d <= 5) { ended = true; finish(U.chance(0.2) ? 'partial' : 'fail', U.chance(0.2) ? 'ŞUT DİREKTE!' : 'GOL! ÇIKMADIN', '#ff6b6b'); }
+        }
+        if (rush) rush.t += dt;
+        const yOf = (m) => G.gy - Math.min(m, 30) * G.M * 1.05;
+        const sy = yOf(d), fh = Math.min(H * 0.16, g.W * 0.22) * (1.15 - d / 60);
+        Sprites.figure(ctx, G.cx, sy, fh, { kit: o.kits.opp, look: lookOpp, facing: 'down', number: 9, run: st.t * 9, speed: 0.9, t: st.t });
+        const by = yOf(d - lead), br = Math.max(5 * dpr, fh * 0.07);
+        if (heavy && !rush) { ctx.strokeStyle = '#ffcf3f'; ctx.lineWidth = 3 * dpr; ctx.beginPath(); ctx.arc(G.cx, by, br * 2.6, 0, Math.PI * 2); ctx.stroke(); }
+        Sprites.ball(ctx, G.cx, by, br, st.t * 8);
+        const ky = rush ? G.gy - Math.min(rush.t / 0.4, 1) * (G.gy - by) * 0.85 : G.gy;
+        G.goal(); G.keeper(G.cx, ky, 0, false);
+        if (!rush && st.msgT <= 0) g.text(`MESAFE ${Math.max(0, Math.round(d))} m`, H * 0.1, 26, d > 15 ? '#ff9b8a' : '#fff');
+      }, { up: () => fin && go(fin), key: (e) => { if (e.code === 'Space') { e.preventDefault(); if (fin) go(fin); } } }, resolve);
+    });
+  },
+
+  // Orta: top kanattan geliyor. Basılı tutup kaleciyi düşeceği yere götür, top ellerine inerken bırak ve yakala.
+  gkCross(host, o) {
+    return new Promise((resolve) => {
+      const g = MiniGame._canvas(host, '<b>Basılı tut</b>, kaleciyi topun düşeceği gölgeye götür · top ellerine inerken <b>bırak</b> ve yakala');
+      const air = o.air || 40, sk = o.skill || 0.4;
+      const from = U.pick([-1, 1]);
+      const flight = U.clamp(1.5 - sk * 0.3 + air / 600, 1.1, 1.8);
+      const landX = U.rand(-0.32, 0.32); // kale genişliğine göre
+      const reach = U.clamp(0.11 + air / 900, 0.1, 0.2);
+      let kx = 0, target = null, jump = null, start = 0.5;
+      let fin = null;
+      const at = (st) => U.clamp((st.t - start) / flight, 0, 1.2);
+      const release = () => {
+        if (jump || !fin) return;
+        const st0 = stRef; const k = at(st0);
+        jump = { t: st0.t };
+        const bx = from * 0.95 + (landX - from * 0.95) * Math.min(k, 1);
+        const dx = Math.abs(bx - kx);
+        let res;
+        if (k >= 0.7 && k <= 0.93 && dx < reach) res = ['success', U.pick(['HAVADA YAKALADIN!', 'GÜVENLİ ELLER!']), '#7cf0a0'];
+        else if (k >= 0.6 && k <= 1 && dx < reach * 1.8) res = ['partial', 'YUMRUKLA UZAKLAŞTIRDIN', '#ffcf3f'];
+        else res = ['fail', k < 0.6 ? 'ERKEN ZIPLADIN!' : 'TOPU KAÇIRDIN!', '#ff6b6b'];
+        setTimeout(() => fin(...res), 350);
+      };
+      let stRef = null;
+      MiniGame._gkLoop(g, (dt, st, finish, done) => {
+        fin = finish; stRef = st;
+        const G = MiniGame._gk(g, o), { ctx, H, dpr } = g;
+        if (target != null && !jump) kx += U.clamp(target - kx, -dt * 0.9, dt * 0.9);
+        const k = at(st);
+        if (!jump && k >= 1.1 && !done) finish(U.chance(0.45) ? 'fail' : 'partial', 'TOP KAFAYA GELDİ!', '#ff6b6b');
+        const bxN = from * 0.95 + (landX - from * 0.95) * Math.min(k, 1);
+        const lx = G.cx + landX * G.gw, ly = G.gy - G.gh * 0.25;
+        // düşeceği yer (gölge)
+        ctx.fillStyle = 'rgba(0,0,0,0.28)'; ctx.beginPath(); ctx.ellipse(lx, ly + G.gh * 0.2, 18 * dpr, 7 * dpr, 0, 0, Math.PI * 2); ctx.fill();
+        G.goal();
+        const jk = jump ? Math.min((st.t - jump.t) / 0.25, 1) : 0;
+        G.keeper(G.cx + kx * G.gw, G.gy - jk * G.kh * 0.25, 0, jump ? 1 : 0);
+        // top: yüksekliği parabol
+        const h = Math.sin(Math.PI * Math.min(k, 1)) * H * 0.38 + (1 - Math.min(k, 1)) * H * 0.05;
+        const bx = G.cx + bxN * G.gw, by = ly - h * 0.5 - G.gh * 0.6 * Math.min(k, 1);
+        Sprites.ball(ctx, bx, by, Math.max(6 * dpr, G.kh * 0.07 * (1 + Math.sin(Math.PI * Math.min(k, 1)) * 0.5)), st.t * 7);
+        if (k > 0.68 && k < 0.93 && !jump) { ctx.strokeStyle = '#7cf0a0'; ctx.lineWidth = 3 * dpr; ctx.beginPath(); ctx.arc(bx, by, 22 * dpr, 0, Math.PI * 2); ctx.stroke(); }
+        if (st.msgT <= 0 && k < 0.05) g.text('ORTA GELİYOR!', H * 0.1, 28);
+      }, {
+        down: (e) => { const r = g.cv.getBoundingClientRect(); target = ((e.clientX - r.left) / r.width - 0.5) * (g.W / Math.min(g.W * 0.86, g.H * 0.9)); },
+        move: (e) => { if (target == null) return; const r = g.cv.getBoundingClientRect(); target = U.clamp(((e.clientX - r.left) / r.width - 0.5) * (g.W / Math.min(g.W * 0.86, g.H * 0.9)), -0.5, 0.5); },
+        up: () => release(),
+        key: (e) => { if (e.code === 'ArrowLeft') target = U.clamp((target ?? kx) - 0.12, -0.5, 0.5); if (e.code === 'ArrowRight') target = U.clamp((target ?? kx) + 0.12, -0.5, 0.5); if (e.code === 'Space') { e.preventDefault(); release(); } },
+      }, resolve);
+    });
+  },
+
+  // Yakın mesafe: kale ağzında karambol, art arda 3 şut. Topun gideceği yer bir an parlar; o tarafa dokun.
+  gkReflex(host, o) {
+    return new Promise((resolve) => {
+      const g = MiniGame._canvas(host, 'Kale ağzında karambol! Art arda şutlar geliyor · parlayan tarafa <b>hızla dokun</b> (sol / orta / sağ) · <kbd>←</kbd> <kbd>↑</kbd> <kbd>→</kbd>');
+      const rf = o.reflex || 40, sk = o.skill || 0.4;
+      const flight = U.clamp(0.42 + rf / 700 - sk * 0.12, 0.3, 0.7) * (HARD() ? 0.9 : 1);
+      const shots = 3;
+      let n = 0, side = 0, high = false, shotT = 0.9, dive = null, saved = 0, fin = null, stRef = null, shooter = 1;
+      const atk = [-0.28, 0.04, 0.3], lookA = [Sprites.look(81), Sprites.look(83), Sprites.look(85)];
+      const next = (st) => { side = U.pick([-1, 0, 1]); high = U.chance(0.4); shooter = U.randi(0, 2); shotT = st.t + U.rand(0.5, 0.9); dive = null; };
+      const act = (dir) => { if (!stRef || dive || stRef.t < shotT - 0.25) return; dive = { dir, t: stRef.t }; };
+      MiniGame._gkLoop(g, (dt, st, finish, done) => {
+        fin = finish; stRef = st;
+        const G = MiniGame._gk(g, o), { ctx, H, dpr } = g;
+        if (st.t < 0.05) next(st);
+        const arrive = shotT + flight;
+        if (!done && st.t >= arrive) {
+          if (dive && dive.dir === side) {
+            saved++; n++;
+            if (n >= shots) finish('success', 'ÜÇÜNÜ DE ÇIKARDIN!', '#7cf0a0');
+            else { st.msg = 'KURTARDIN! DÖNEN TOP…'; st.col = '#7cf0a0'; st.msgT = 0.6; next(st); }
+          } else finish(saved ? 'partial' : 'fail', saved ? 'SONUNDA AĞLARDA…' : 'GOL!', '#ff6b6b');
+        }
+        // parlama: şuttan hemen önce
+        const tx = G.cx + side * G.gw * 0.36, ty = G.gy - (high ? G.gh * 0.75 : G.gh * 0.25);
+        if (st.t > shotT - 0.22 && st.t < arrive) { ctx.fillStyle = 'rgba(255,207,63,0.35)'; ctx.beginPath(); ctx.arc(tx, ty, G.gh * 0.32, 0, Math.PI * 2); ctx.fill(); }
+        // kale ağzındaki rakipler; şutu çeken öne eğilir
+        const ay = G.gy - H * 0.26, ah = G.kh * 0.72;
+        atk.forEach((x, i) => Sprites.figure(ctx, G.cx + x * G.gw, ay, ah, { kit: o.kits.opp, look: lookA[i], facing: 'down', number: [9, 10, 7][i], t: st.t, kick: i === shooter && st.t > shotT - 0.15 && st.t < shotT + 0.2 ? 0.6 : 0 }));
+        const ox = G.cx + atk[shooter] * G.gw, oy = ay - ah * 0.04;
+        if (st.t < shotT) Sprites.ball(ctx, ox + ah * 0.12, oy, Math.max(6 * dpr, G.kh * 0.05), 0);
+        G.goal();
+        let kx = G.cx, rot = 0;
+        if (dive) { const k = Math.min((st.t - dive.t) / 0.2, 1); kx = G.cx + dive.dir * G.gw * 0.34 * k; rot = dive.dir * k * 1.1; }
+        G.keeper(kx, G.gy, rot, !!dive);
+        if (st.t >= shotT) { const k = Math.min((st.t - shotT) / flight, 1); Sprites.ball(ctx, ox + (tx - ox) * k, oy + (ty - oy) * k, Math.max(6 * dpr, G.kh * 0.06 * (1 + k)), st.t * 9); }
+        if (st.msgT <= 0) g.text(`ŞUT ${Math.min(n + 1, shots)} / ${shots}`, H * 0.1, 26);
+      }, {
+        up: (e, d) => { const r = g.cv.getBoundingClientRect(); const dx = e.clientX - d.x; let dir; if (Math.abs(dx) > 18) dir = Math.sign(dx); else { const fx = (e.clientX - r.left) / r.width; dir = fx < 0.36 ? -1 : fx > 0.64 ? 1 : 0; } act(dir); },
+        key: (e) => { if (e.code === 'ArrowLeft') act(-1); if (e.code === 'ArrowRight') act(1); if (e.code === 'ArrowUp' || e.code === 'Space') { e.preventDefault(); act(0); } },
+      }, resolve);
+    });
+  },
+
+  // Oyun başlatma: top elinde. Üzerindeki baskı kalkan (yeşil halkalı) takım arkadaşına süre dolmadan at.
+  gkDist(host, o) {
+    return new Promise((resolve) => {
+      const g = MiniGame._canvas(host, 'Top elinde! <b>Yeşil halkalı</b> (boştaki) arkadaşına dokun ve oyunu başlat · kırmızı = markajda · süre dolmadan');
+      const ps = o.passing || 40, sk = o.skill || 0.4;
+      const limit = U.clamp(3.6 + ps / 120 - sk, 2.6, 4.4);
+      const mates = [-0.62, 0, 0.62].map((x, i) => ({ x, y: [0.42, 0.6, 0.45][i], ph: U.rand(0, 6), sp: U.rand(1.2, 2.1) * (1 + sk * 0.4), num: [3, 8, 11][i] }));
+      const free = (m, t) => Math.sin(t * m.sp + m.ph); // >0.45 boş, <-0.1 markajda
+      const lookM = [Sprites.look(21), Sprites.look(33), Sprites.look(45)], lookO = Sprites.look(57);
+      let pick = null, fin = null, stRef = null;
+      const choose = (i) => {
+        if (pick != null || !stRef) return;
+        pick = i; const f = free(mates[i], stRef.t);
+        setTimeout(() => fin(...(f > 0.45 ? ['success', 'HIZLI HÜCUM BAŞLADI!', '#7cf0a0'] : f > -0.1 ? ['partial', 'PAS ULAŞTI AMA BASKI ALTINDA', '#ffcf3f'] : ['fail', 'TOP RAKİPTE!', '#ff6b6b'])), 400);
+      };
+      MiniGame._gkLoop(g, (dt, st, finish, done) => {
+        fin = finish; stRef = st;
+        const G = MiniGame._gk(g, o), { ctx, W, H, dpr } = g;
+        const left = Math.max(0, limit - st.t);
+        if (!done && pick == null && left <= 0) finish('partial', 'UZUN VURDUN, TOP ORTADA', '#ffcf3f');
+        const fh = Math.min(H * 0.12, W * 0.17);
+        mates.forEach((m, i) => {
+          const x = G.cx + m.x * W * 0.62, y = H * m.y, f = free(m, st.t);
+          const ox = x + (f > 0.45 ? 1 : 0.35) * fh * 0.9 * (m.x >= 0 ? 1 : -1), oy = y + fh * 0.05;
+          Sprites.figure(ctx, ox, oy, fh, { kit: o.kits.opp, look: lookO, facing: 'down', number: 5 + i, t: st.t });
+          Sprites.figure(ctx, x, y, fh, { kit: o.kits.own, look: lookM[i], facing: 'down', number: m.num, t: st.t });
+          ctx.strokeStyle = f > 0.45 ? '#7cf0a0' : f > -0.1 ? '#ffcf3f' : '#ff6b6b'; ctx.lineWidth = 3 * dpr;
+          ctx.beginPath(); ctx.ellipse(x, y, fh * 0.42, fh * 0.14, 0, 0, Math.PI * 2); ctx.stroke();
+          m.sx = x; m.sy = y - fh * 0.5; m.r = fh * 0.6;
+        });
+        G.goal(); G.keeper(G.cx, G.gy, 0, false);
+        ctx.fillStyle = 'rgba(255,255,255,0.2)'; ctx.fillRect(W * 0.2, H * 0.08, W * 0.6, 6 * dpr);
+        ctx.fillStyle = left < 1 ? '#ff6b6b' : '#ffcf3f'; ctx.fillRect(W * 0.2, H * 0.08, W * 0.6 * (left / limit), 6 * dpr);
+      }, {
+        up: (e) => {
+          const r = g.cv.getBoundingClientRect(), px = (e.clientX - r.left) * (g.W / r.width), py = (e.clientY - r.top) * (g.H / r.height);
+          let best = -1, bd = 1e9; mates.forEach((m, i) => { const dd = Math.hypot(px - m.sx, py - m.sy); if (dd < bd) { bd = dd; best = i; } });
+          if (best >= 0 && bd < mates[best].r * 2.2) choose(best);
+        },
+        key: (e) => { if (e.code === 'ArrowLeft') choose(0); if (e.code === 'ArrowUp') choose(1); if (e.code === 'ArrowRight') choose(2); },
+      }, resolve);
+    });
+  },
+
   // Kafa vuruşu: köşeden gelen ortaya doğru anda yüksel; nişangah kale ağzında gidip gelir,
   // dokunduğun anda nişangahın olduğu yere vurursun. Zamanlama + yön birlikte.
   header(host, o) {
