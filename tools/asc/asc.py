@@ -131,12 +131,22 @@ def release(asc, app_id, ver, build_no):
     subs = asc.get('/v1/reviewSubmissions', **{'filter[app]': app_id, 'filter[platform]': 'IOS', 'filter[state]': 'READY_FOR_REVIEW', 'limit': 5})['data']
     sub = subs[0] if subs else asc.req('POST', '/v1/reviewSubmissions', write=True, body={'data': {'type': 'reviewSubmissions',
         'attributes': {'platform': 'IOS'}, 'relationships': {'app': {'data': {'type': 'apps', 'id': app_id}}}}})['data']
-    try:
-        asc.req('POST', '/v1/reviewSubmissionItems', write=True, body={'data': {'type': 'reviewSubmissionItems', 'relationships': {
-            'reviewSubmission': {'data': {'type': 'reviewSubmissions', 'id': sub['id']}},
-            'appStoreVersion': {'data': {'type': 'appStoreVersions', 'id': ver['id']}}}}})
-    except RuntimeError as err:
-        print(f'   (sürüm başvuruda olabilir: {str(err)[:120]})')
+    # yeni yüklenen ekran görüntüleri Apple'da işlenirken sürüm eklenemez (409): bekleyip yeniden dene
+    for i in range(16):
+        try:
+            asc.req('POST', '/v1/reviewSubmissionItems', write=True, body={'data': {'type': 'reviewSubmissionItems', 'relationships': {
+                'reviewSubmission': {'data': {'type': 'reviewSubmissions', 'id': sub['id']}},
+                'appStoreVersion': {'data': {'type': 'appStoreVersions', 'id': ver['id']}}}}})
+            break
+        except RuntimeError as err:
+            items = asc.get(f"/v1/reviewSubmissions/{sub['id']}/items").get('data', [])
+            if items:
+                print('   sürüm zaten başvuruda')
+                break
+            print(f'   sürüm henüz eklenemedi ({i + 1}/16): {err}')
+            if i == 15:
+                sys.exit('Sürüm incelemeye eklenemedi; App Store Connect sayfasındaki uyarıyı kontrol et.')
+            time.sleep(45)
     asc.req('PATCH', f"/v1/reviewSubmissions/{sub['id']}", write=True, body={'data': {'type': 'reviewSubmissions', 'id': sub['id'], 'attributes': {'submitted': True}}})
     print(f'   {vs} ({build_no}) incelemeye gönderildi')
 
