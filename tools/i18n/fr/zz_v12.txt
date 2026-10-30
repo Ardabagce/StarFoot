@@ -87,3 +87,10 @@
 5384|Bon jeu !
 5385|Ouvrir l'Éditeur
 5387|Chargement…
+5389|Sans pub et instantané avec Premium
+5390|Demande ton propre transfert
+5388|Badge de vérification doré
+5391|Le badge doré ne brille que chez les vraies stars. Avec Premium ton badge devient doré tout de suite, et ta page Starpedia et ta vie de luxe se débloquent.
+5394|Tu as regardé 3 pubs aujourd'hui. Avec Premium toutes les récompenses arrivent instantanément sans pub, et les pubs interstitielles disparaissent complètement.
+5397|Tu as soulevé les trophées ! Avec Premium ces moments entrent dans ton documentaire et ta page Starpedia, et un badge doré brille sur ton profil.
+5400|Tu es le meilleur du monde ! Avec Premium ton Étoile d'Or entre dans ta page Starpedia et ton documentaire, et la vitrine de luxe se débloque.

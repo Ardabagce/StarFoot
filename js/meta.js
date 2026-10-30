@@ -472,6 +472,7 @@ const Ballon = {
     if (win.me) {
       p.trophies.push(`${s.season.year}: 🏅 Altın Yıldız`);
       p.ballon = (p.ballon || 0) + 1;
+      if (typeof Nudge !== 'undefined') Nudge.later('ballon', 'Dünyanın en iyisi sensin! Premium ile Altın Yıldız\'ın Starpedia sayfana ve belgeseline işlenir; lüks yaşam vitrini de açılır.');
       Player.addFame(p, 10);
       Social.post('trophy', 'ALTIN YILDIZ! Dünyanın en iyisi seçildim. Bu ödül takım arkadaşlarımın, ailemin ve taraftarımızın.', 6);
       Game.news(`🏅 ${s.season.year} Altın Yıldız ${Player.fullName(p)}'in! Dünyanın en iyi futbolcusu seçildin!`, 'good');

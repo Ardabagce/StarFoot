@@ -675,7 +675,7 @@ const Social = {
     const tr = (so.trends || []).slice(0, 8);
     return `
       <section class="card ig">
-        <div class="ig-top"><b>${U.esc(so.handle.replace('@', ''))}${typeof Star !== 'undefined' ? Star.badge(verified) : verified ? IG.verified() : ''}</b></div>
+        <div class="ig-top"><b>${U.esc(so.handle.replace('@', ''))}${typeof Star !== 'undefined' ? Star.badge(verified) + Star.ghost() : verified ? IG.verified() : ''}</b></div>
         <div class="ig-prof">
           <div class="ig-ring"><canvas class="so-avatar" aria-hidden="true"></canvas></div>
           <div class="ig-nums">

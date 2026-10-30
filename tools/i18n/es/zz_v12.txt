@@ -87,3 +87,10 @@
 5384|¡Buen juego!
 5385|Abrir Editor
 5387|Cargando…
+5389|Sin anuncios y al instante con Premium
+5390|Pide tu propio traspaso
+5388|Insignia de verificación dorada
+5391|La insignia dorada solo brilla en las verdaderas estrellas. Con Premium tu insignia se vuelve dorada al instante y se desbloquean tu página de Starpedia y tu vida de lujo.
+5394|Hoy has visto 3 anuncios. Con Premium todas las recompensas llegan al instante sin anuncios y los anuncios intersticiales desaparecen por completo.
+5397|¡Levantaste los trofeos! Con Premium estos momentos quedan en tu documental y en tu página de Starpedia, y una insignia dorada brilla en tu perfil.
+5400|¡Eres el mejor del mundo! Con Premium tu Estrella de Oro queda en tu página de Starpedia y tu documental, y se abre el escaparate de lujo.

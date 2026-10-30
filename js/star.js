@@ -23,6 +23,7 @@ const Star = {
     const can = typeof Premium !== 'undefined' && Premium.available();
     src = src || 'perks';
     if (typeof Premium !== 'undefined') Premium.track('premium_view', { source: src });
+    Nudge.seen();
     const btns = [{ t: 'Kapat', cls: 'btn-ghost' }];
     if (can) btns.push({ t: `${Icon('star')} Premium al${Premium.price ? ` · ${U.esc(Premium.price)}` : ''}`, cls: 'btn-big', fn: () => { Premium.src = src; Premium.buy(); } });
     Game.modal(`<div class="ev-tag">Premium ayrıcalığı</div><h2>${Icon('star')} Yıldız gibi yaşa</h2>
@@ -79,6 +80,25 @@ const Star = {
       <li><b>Görünüm stüdyosu ve kariyer belgeseli</b><small>Tarzını seç, hikâyeni izle</small></li>
       <li><b>Reklamsız</b><small>Geçiş reklamı yok, ödüller reklam izlemeden</small></li>
     </ul>`;
+  },
+
+  // Pasif girişler: yalnız dokununca tanıtım açar, kendiliğinden hiçbir şey göstermez
+  canSell() { return !Star.has() && typeof Premium !== 'undefined' && Premium.available(); },
+  noAds(src) {
+    return Star.canSell() ? `<button class="no-ads" data-star="pitch" data-src="${src}">${Icon('star')} Premium ile reklamsız, anında</button>` : '';
+  },
+  // Kendi Instagram profilinde boş (gri) onay rozeti
+  ghost() {
+    if (!Star.canSell()) return '';
+    return `<button class="ig-ghost" data-star="gold" aria-label="Altın onay rozeti"><svg class="igv" viewBox="0 0 40 40"><path fill="#8e8e93" d="M20 2l4.6 3.4 5.7-.3 1.8 5.4 4.9 3-1.7 5.5 1.7 5.5-4.9 3-1.8 5.4-5.7-.3L20 38l-4.6-3.4-5.7.3-1.8-5.4-4.9-3L4.7 21 3 15.5l4.9-3 1.8-5.4 5.7.3z"/><path d="M13 20.5l4.6 4.6L27.5 15" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>`;
+  },
+  // Üst çubuktaki küçük yıldız
+  topBtn() {
+    const l = document.querySelector('#hub .hdr-l');
+    if (!l) return;
+    let b = document.getElementById('prem-btn');
+    if (!Star.canSell()) { if (b) b.remove(); return; }
+    if (!b) { b = U.el(`<button type="button" class="notif-btn prem-btn" id="prem-btn" data-star="pitch" data-src="topbar" aria-label="Premium">${Icon('star')}</button>`); l.appendChild(b); }
   },
 
   // Oyun içi Instagram rozeti: Premium'da altın, ünlüyken mavi
@@ -510,6 +530,46 @@ const Star = {
   },
 };
 
+// Kendiliğinden açılan Premium hatırlatması: günde en fazla 1 kez, yalnız ana ekranda,
+// başka pencere açık değilken ve o gün oyuncu Premium tanıtımını kendisi görmediyse.
+// Tetikleyiciler: günün 3. ödüllü reklamı, kupa/ödül kazanılan sezon sonu, Altın Yıldız.
+const Nudge = {
+  K: 'starfoot_nudge',
+  pend: null,
+  day() { const d = new Date(); return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`; },
+  get() { try { return JSON.parse(localStorage.getItem(Nudge.K) || '{}') || {}; } catch (e) { return {}; } },
+  put(o) { try { localStorage.setItem(Nudge.K, JSON.stringify(o)); } catch (e) { /* yok */ } },
+  // herhangi bir tanıtım görüldü (oyuncu kendisi açtıysa o gün ayrıca hatırlatma yok)
+  seen() { const o = Nudge.get(); o.s = Nudge.day(); Nudge.put(o); },
+  // ödüllü reklam izlendi
+  ad() {
+    const o = Nudge.get(), d = Nudge.day();
+    if (o.ad !== d) { o.ad = d; o.n = 0; }
+    o.n = (o.n || 0) + 1;
+    Nudge.put(o);
+    if (o.n === 3) Nudge.later('ads3', 'Bugün 3 reklam izledin. Premium ile tüm ödüller reklamsız ve anında gelir, geçiş reklamları da tamamen kalkar.');
+  },
+  later(src, txt) { if (!Nudge.pend) Nudge.pend = { src, txt }; Nudge.tick(); },
+  free() {
+    const hub = document.getElementById('hub'), m = document.getElementById('modal');
+    return hub && !hub.classList.contains('hidden') && (!m || m.classList.contains('hidden')) && !document.body.classList.contains('ov-open') && !document.querySelector('#busy.on, .match-ov, #match:not(.hidden)');
+  },
+  ok() { const o = Nudge.get(), d = Nudge.day(); return Star.canSell() && o.v !== d && o.s !== d; },
+  // ana ekran her çizildiğinde bekleyen hatırlatmayı uygun ana bırakır
+  tick() {
+    if (!Nudge.pend) return;
+    if (!Nudge.ok()) { Nudge.pend = null; return; }
+    clearTimeout(Nudge.t);
+    Nudge.t = setTimeout(() => {
+      const x = Nudge.pend;
+      if (!x || !Nudge.free() || !Nudge.ok()) return;
+      Nudge.pend = null;
+      const o = Nudge.get(); o.v = Nudge.day(); Nudge.put(o);
+      Star.pitch(null, 'nudge_' + x.src, x.txt);
+    }, 1200);
+  },
+};
+
 // Tüm Premium düğmeleri tek yerden
 document.addEventListener('click', (e) => {
   const b = e.target.closest && e.target.closest('[data-star]');
@@ -524,6 +584,7 @@ document.addEventListener('click', (e) => {
   else if (k === 'transfer') Star.transferReq();
   else if (k === 'lux') Star.buyLux(b.dataset.id);
   else if (k === 'pitch') Star.pitch(null, b.dataset.src || 'lux');
+  else if (k === 'gold') Star.pitch('Altın onay rozeti', 'ig_badge', 'Altın onay rozeti yalnız gerçek yıldızların profilinde parlar. Premium ile rozetin hemen altın olur; Starpedia sayfan ve lüks yaşamın da açılır.');
 });
 
 // ---------- Güncelleme duyurusu (her sürümde bir kez) ----------

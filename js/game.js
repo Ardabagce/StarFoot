@@ -1258,6 +1258,7 @@ const Game = {
       <span class="hi-club">${UI.shirt(Game.club())}${U.esc(Game.teamName())}</span>
       <span class="hi-week"><em>${s.season.year}</em><em>HAFTA</em><b>${Math.min(s.season.round + 1, Game.rounds())}<small>/${Game.rounds()}</small></b></span>
       <span class="hi-money"><i class="hm-coin">${Icon('coin')}</i><span class="hm-t"><small>Bakiye</small><b>${U.money(p.money)}</b></span>${Game.weeklyIncome() > 0 ? `<em class="hm-inc">+${U.money(Game.weeklyIncome())}<small>/hf</small></em>` : ''}</span>`;
+    if (typeof Star !== 'undefined') { Star.topBtn(); Nudge.tick(); }
     // eski sekme adları yeni yapıya taşınır
     const alias = { player: 'profile', career: 'profile', world: 'league', shop: 'life' };
     if (alias[Game.tab]) {
@@ -1620,7 +1621,7 @@ const UI = {
           ${next}
           ${p.energy < 40 ? `<div class="warn">${Icon('bolt')} Enerjin düşük. Performansın düşer, sakatlık riski artar.</div>` : ''}
           ${UI.physioTip()}
-          ${UI.adInjury()}
+          ${UI.adInjury()}${UI.adInjury() && typeof Star !== 'undefined' ? Star.noAds('noads_injury') : ''}
           <button class="btn btn-play" data-go="match">${Icon('play')} ${Game.inStreet() && s.street.trials ? 'Seçmelere Katıl' : 'Maça Çık'}</button>
           ${s.ap > 0 ? `<div class="hint">Bu hafta ${s.ap} aksiyon hakkın daha var.</div>` : ''}
         </section>
@@ -1631,6 +1632,7 @@ const UI = {
           <div class="card-h"><span>${Icon('train')} Haftalık Plan</span><span class="ap-pips ${s.ap ? '' : 'done'}" title="Aksiyon hakkı">${[0, 1, 2].map((i) => `<i class="${i < s.ap ? 'on' : ''}"></i>`).join('')}<b>${s.ap ? `${s.ap} hak` : 'Maç günü'}</b></span></div>
           ${UI.adAp()}
           ${UI.adEnergy()}
+          ${(UI.adAp() || UI.adEnergy()) && typeof Star !== 'undefined' ? Star.noAds('noads_plan') : ''}
           ${UI.stockBar()}
           <div class="lbl">Antrenman odağı <small>${keyTxt}</small></div>
           <div class="focus" role="radiogroup" aria-label="Antrenman odağı">${STATS.map((st) => {
@@ -1661,6 +1663,7 @@ const UI = {
         <div class="card-h"><span>${Icon('mail')} Transfer Teklifleri</span>${Game.tWindow(s.season.round) ? `<span class="tw-tag">${Game.tWindow(s.season.round).name} · ${Game.tWindow(s.season.round).to - s.season.round + 1} hafta kaldı</span>` : ''}</div>
         <div class="offers">${s.offers.map((o, i) => UI.offerRow(o, i, 'mid')).join('')}</div>
         <button class="btn btn-ghost" data-reject="1">Teklifleri Reddet</button>
+        ${typeof Star !== 'undefined' && Star.on() && !s.offers.some((o) => o.req) ? `<button class="btn btn-ghost st-req" data-star="transfer">${Icon('star')} Kendi transferini talep et</button>` : ''}
       </section>` : ''}
       ${Social.render(false)}
       ${UI.inbox()}
@@ -2387,6 +2390,7 @@ const SeasonEnd = {
     const ss = se.stats;
     const awards = (se.trophies || []).concat(se.cupWins || []);
     const medal = se.pos <= 3 && !Game.isYouth() ? ['gold', 'silver', 'bronze'][se.pos - 1] : se.pos === 1 ? 'gold' : null;
+    if (awards.length && typeof Nudge !== 'undefined') Nudge.later('trophy', 'Kupalarını kaldırdın! Premium ile bu anlar kariyer belgeseline ve Starpedia sayfana işlenir, profilinde altın onay rozeti parlar.');
     const relTag = se.relegated ? '<div class="cer-tag down">Küme düştük</div>' : se.promoted ? '<div class="cer-tag up">Üst lige yükseldik!</div>' : '';
     const html = `
       <div class="ceremony">

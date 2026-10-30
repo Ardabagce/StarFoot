@@ -87,3 +87,10 @@
 5384|Buon divertimento!
 5385|Apri Editor
 5387|Caricamento…
+5389|Senza pubblicità e subito con Premium
+5390|Richiedi il tuo trasferimento
+5388|Badge di verifica dorato
+5391|Il badge dorato brilla solo sulle vere stelle. Con Premium il tuo badge diventa subito dorato e si sbloccano la tua pagina Starpedia e la vita di lusso.
+5394|Oggi hai guardato 3 pubblicità. Con Premium tutte le ricompense arrivano subito senza pubblicità e quelle a schermo intero spariscono del tutto.
+5397|Hai alzato i trofei! Con Premium questi momenti entrano nel tuo documentario e nella tua pagina Starpedia, e un badge dorato brilla sul tuo profilo.
+5400|Sei il migliore al mondo! Con Premium la tua Stella d'Oro entra nella pagina Starpedia e nel documentario, e si sblocca la vetrina di lusso.

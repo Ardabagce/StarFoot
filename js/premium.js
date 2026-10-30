@@ -284,6 +284,11 @@ const Packs = {
 // Premium'da ödüllü reklam gösterilmez, ödül doğrudan verilir
 if (typeof Ads !== 'undefined') {
   const show = Ads.show;
-  Ads.show = function () { return Premium.active ? Promise.resolve(true) : show.apply(this, arguments); };
+  Ads.show = function () {
+    if (Premium.active) return Promise.resolve(true);
+    const r = show.apply(this, arguments);
+    if (r && r.then && typeof Nudge !== 'undefined') r.then((ok) => { if (ok) Nudge.ad(); }).catch(() => {});
+    return r;
+  };
 }
 if (document.readyState === 'complete') Premium.init(); else window.addEventListener('load', () => Premium.init());

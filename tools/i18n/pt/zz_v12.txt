@@ -87,3 +87,10 @@
 5384|Bom jogo!
 5385|Abrir Editor
 5387|Carregando…
+5389|Sem anúncios e na hora com Premium
+5390|Peça sua própria transferência
+5388|Selo de verificação dourado
+5391|O selo dourado só brilha nas verdadeiras estrelas. Com Premium seu selo fica dourado na hora e sua página na Starpedia e sua vida de luxo são liberadas.
+5394|Você assistiu 3 anúncios hoje. Com Premium todas as recompensas chegam na hora, sem anúncios, e os anúncios intersticiais somem de vez.
+5397|Você levantou as taças! Com Premium esses momentos entram no seu documentário e na sua página da Starpedia, e um selo dourado brilha no seu perfil.
+5400|Você é o melhor do mundo! Com Premium sua Estrela de Ouro entra na sua página da Starpedia e no documentário, e a vitrine de luxo é liberada.

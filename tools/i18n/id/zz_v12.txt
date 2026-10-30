@@ -87,3 +87,10 @@
 5384|Selamat bermain!
 5385|Buka Editor
 5387|Memuat…
+5389|Tanpa iklan dan instan dengan Premium
+5390|Ajukan transfermu sendiri
+5388|Lencana verifikasi emas
+5391|Lencana emas hanya bersinar di profil bintang sejati. Dengan Premium lencanamu langsung jadi emas, halaman Starpedia dan kehidupan mewahmu juga terbuka.
+5394|Hari ini kamu sudah menonton 3 iklan. Dengan Premium semua hadiah langsung didapat tanpa iklan, dan iklan selingan hilang sepenuhnya.
+5397|Kamu mengangkat trofi! Dengan Premium momen ini masuk ke dokumenter kariermu dan halaman Starpedia, dan lencana emas bersinar di profilmu.
+5400|Kamu yang terbaik di dunia! Dengan Premium Bintang Emasmu masuk ke halaman Starpedia dan dokumenter, dan etalase mewah pun terbuka.
