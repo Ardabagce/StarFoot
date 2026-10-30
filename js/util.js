@@ -139,7 +139,28 @@ const ScreenGuard = {
     if (ScreenGuard.errs++ > 8) return;
     try {
       const F = window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.FirebaseAnalytics;
-      if (F && F.logEvent) F.logEvent({ name: 'js_error', params: { m: String(msg || '').slice(0, 95), s: String(src || '').split('/').pop().slice(0, 30), l: line || 0 } }).catch(() => {});
+      if (F && F.logEvent) F.logEvent({ name: 'js_error', params: { m: String(msg || '').slice(0, 95), s: String(src || '').split('/').pop().slice(0, 30), l: line || 0, scr: ScreenGuard.where(), v: typeof APP_VER !== 'undefined' ? APP_VER : '', t: ScreenGuard.tester() ? 1 : 0 } }).catch(() => {});
+    } catch (e) { /* yok */ }
+  },
+  // hatanın olduğu ekran (ör. hub:life, match, drill, title)
+  where() {
+    try {
+      const on = (id) => { const e = document.getElementById(id); return e && !e.classList.contains('hidden'); };
+      if (on('match')) return 'match';
+      if (on('drill')) return 'drill';
+      const m = on('modal') ? '+modal' : '';
+      if (on('hub')) return 'hub:' + (typeof Game !== 'undefined' ? Game.tab : '') + m;
+      const sc = Array.from(document.querySelectorAll('.screen')).find((x) => !x.classList.contains('hidden'));
+      return (sc ? sc.id : 'none') + m;
+    } catch (e) { return '?'; }
+  },
+  // geliştirici cihazı: Ayarlar'daki sürüm yazısına 5 kez dokununca açılır/kapanır (Firebase'de ayırmak için)
+  tester() { try { return localStorage.getItem('starfoot_tester') === '1'; } catch (e) { return false; } },
+  setTester(on) {
+    try { localStorage.setItem('starfoot_tester', on ? '1' : '0'); } catch (e) { /* yok */ }
+    try {
+      const F = window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.FirebaseAnalytics;
+      if (F && F.setUserProperty) F.setUserProperty({ key: 'tester', value: on ? '1' : '0' }).catch(() => {});
     } catch (e) { /* yok */ }
   },
   heal() {
@@ -155,6 +176,18 @@ const ScreenGuard = {
     window.addEventListener('error', (e) => { ScreenGuard.report(e.message, e.filename, e.lineno); setTimeout(ScreenGuard.heal, 60); });
     window.addEventListener('unhandledrejection', (e) => { const r = e.reason; ScreenGuard.report(r && (r.message || r), 'promise', 0); setTimeout(ScreenGuard.heal, 60); });
     document.addEventListener('visibilitychange', () => { if (!document.hidden) ScreenGuard.repaint(); });
+    if (ScreenGuard.tester()) setTimeout(() => ScreenGuard.setTester(true), 3000);
+    // Ayarlar'daki sürüm yazısına 5 hızlı dokunuş: geliştirici cihazı işaretini aç/kapat
+    let taps = 0, tt = 0;
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest || !e.target.closest('.set-ver')) return;
+      clearTimeout(tt); tt = setTimeout(() => { taps = 0; }, 1500);
+      if (++taps < 5) return;
+      taps = 0;
+      const on = !ScreenGuard.tester();
+      ScreenGuard.setTester(on);
+      if (typeof Game !== 'undefined' && Game.toast) Game.toast(on ? 'Geliştirici cihazı: açık (Firebase tester=1)' : 'Geliştirici cihazı: kapalı', 'info');
+    });
     const start = () => {
       const mo = new MutationObserver((list) => {
         for (const r of list) {
