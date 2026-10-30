@@ -132,3 +132,9 @@ js/extras.js     Madalyalar, mağaza, olaylar, mentorlar, sosyal medya, dünya h
 js/match.js      Maç motoru
 js/game.js       Kariyer akışı, ekranlar, olaylar, sezon sonu
 ```
+
+## Premium+ test önizlemesi (yalnız web)
+
+Gizli oyun sayfasının sonuna `#sfplus` eklenince Premium ve Premium+ özellikleri satın almadan açılır
+(10 kariyer slotu, geri al, hızlı ilerleme, detaylı istatistikler, kaleci kariyeri). `#sfplus-off` ile kapanır.
+Uygulamada (iOS/Android) çalışmaz.
