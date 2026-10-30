@@ -94,3 +94,6 @@
 5394|Hoy has visto 3 anuncios. Con Premium todas las recompensas llegan al instante sin anuncios y los anuncios intersticiales desaparecen por completo.
 5397|¡Levantaste los trofeos! Con Premium estos momentos quedan en tu documental y en tu página de Starpedia, y una insignia dorada brilla en tu perfil.
 5400|¡Eres el mejor del mundo! Con Premium tu Estrella de Oro queda en tu página de Starpedia y tu documental, y se abre el escaparate de lujo.
+5403|Novedades
+5406|Notas de la versión {}
+5405|Mostrar

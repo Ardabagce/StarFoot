@@ -9,7 +9,7 @@ const Cloud = {
   LIMIT: 960 * 1024, // Apple sınırı 1 MB; pay bırak
   pl: null, ok: false, busy: false, dirty: new Set(), timer: 0, lastPush: 0, note: '',
   // yedeğe girmeyen anahtarlar: kariyer slotları (ayrı yazılır), cihaza özel olanlar
-  skipMeta: (k) => k.startsWith('starfoot_slot_') || k.startsWith('starfoot_sum_') || k.startsWith('starfoot_cloud') || ['starfoot_rc_synced', 'starfoot_save_v1', 'sf_notif', 'sf_notif_asked', 'sf_review'].includes(k),
+  skipMeta: (k) => k.startsWith('starfoot_slot_') || k.startsWith('starfoot_sum_') || k.startsWith('starfoot_cloud') || ['starfoot_rc_synced', 'starfoot_save_v1', 'starfoot_whatsnew', 'sf_notif', 'sf_notif_asked', 'sf_review'].includes(k),
 
   plugin(name) {
     const C = window.Capacitor;
@@ -84,7 +84,7 @@ const Cloud = {
           const txt = await Cloud.unzip(r.data);
           if (k === 'meta') {
             const o = JSON.parse(txt);
-            Object.entries(o).forEach(([kk, vv]) => { try { Cloud.raw.set.call(localStorage, kk, vv); } catch (er) { /* yok */ } });
+            Object.entries(o).forEach(([kk, vv]) => { if (Cloud.skipMeta(kk)) return; try { Cloud.raw.set.call(localStorage, kk, vv); } catch (er) { /* yok */ } });
           } else {
             JSON.parse(Store.dec(txt)); // bozuk veri yazılmasın (sıkıştırılmış ya da düz kayıt)
             const sk = +k.slice(1);

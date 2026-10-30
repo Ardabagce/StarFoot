@@ -94,3 +94,6 @@
 5394|Você assistiu 3 anúncios hoje. Com Premium todas as recompensas chegam na hora, sem anúncios, e os anúncios intersticiais somem de vez.
 5397|Você levantou as taças! Com Premium esses momentos entram no seu documentário e na sua página da Starpedia, e um selo dourado brilha no seu perfil.
 5400|Você é o melhor do mundo! Com Premium sua Estrela de Ouro entra na sua página da Starpedia e no documentário, e a vitrine de luxo é liberada.
+5403|Novidades
+5406|Notas da versão {}
+5405|Mostrar

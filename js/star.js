@@ -597,9 +597,14 @@ const WhatsNew = {
   check(done) {
     let seen = '';
     try { seen = localStorage.getItem(WhatsNew.KEY) || ''; } catch (e) { return false; }
-    if (seen === WN_VER || !Game.state || Game.state.seasonEnd) return false;
+    if (seen === WN_VER || (Game.state && Game.state.seasonEnd)) return false;
     if (!document.getElementById('modal').classList.contains('hidden')) return false;
     try { localStorage.setItem(WhatsNew.KEY, WN_VER); } catch (e) { /* yok */ }
+    WhatsNew.show(done);
+    return true;
+  },
+  // Duyuruyu gösterir (Ayarlar'dan yeniden açılabilir)
+  show(done) {
     // 1.0.12 duyurusu: Editör
     const it = (ic, t, d) => `<li><i>${ic}</i><span><b>${t}</b><small>${d}</small></span></li>`;
     const list = [
@@ -616,6 +621,5 @@ const WhatsNew = {
       <p>StarFoot ${WN_VER} ile oyuna yepyeni Düzenleyici (Editör) özelliğini ekledik!</p>
       <ul class="wn-l">${list}</ul><p class="wn-note ok">İyi oyunlar!</p></div>`, btns, { wide: true });
     if (typeof Premium !== 'undefined') Premium.track('whatsnew_view', { ver: WN_VER, premium: has ? 1 : 0 });
-    return true;
   },
 };

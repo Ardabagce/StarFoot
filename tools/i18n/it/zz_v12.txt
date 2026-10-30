@@ -94,3 +94,6 @@
 5394|Oggi hai guardato 3 pubblicità. Con Premium tutte le ricompense arrivano subito senza pubblicità e quelle a schermo intero spariscono del tutto.
 5397|Hai alzato i trofei! Con Premium questi momenti entrano nel tuo documentario e nella tua pagina Starpedia, e un badge dorato brilla sul tuo profilo.
 5400|Sei il migliore al mondo! Con Premium la tua Stella d'Oro entra nella pagina Starpedia e nel documentario, e si sblocca la vetrina di lusso.
+5403|Novità
+5406|Note di rilascio {}
+5405|Mostra

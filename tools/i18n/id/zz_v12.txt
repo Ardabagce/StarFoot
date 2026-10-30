@@ -94,3 +94,6 @@
 5394|Hari ini kamu sudah menonton 3 iklan. Dengan Premium semua hadiah langsung didapat tanpa iklan, dan iklan selingan hilang sepenuhnya.
 5397|Kamu mengangkat trofi! Dengan Premium momen ini masuk ke dokumenter kariermu dan halaman Starpedia, dan lencana emas bersinar di profilmu.
 5400|Kamu yang terbaik di dunia! Dengan Premium Bintang Emasmu masuk ke halaman Starpedia dan dokumenter, dan etalase mewah pun terbuka.
+5403|Yang Baru
+5406|Catatan rilis {}
+5405|Tampilkan

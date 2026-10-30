@@ -94,3 +94,6 @@
 5394|Du hast heute 3 Werbungen angesehen. Mit Premium kommen alle Belohnungen sofort und ohne Werbung, und Zwischenwerbung fällt komplett weg.
 5397|Du hast die Pokale gestemmt! Mit Premium landen diese Momente in deiner Karriere-Doku und auf deiner Starpedia-Seite, und ein goldenes Abzeichen leuchtet auf deinem Profil.
 5400|Du bist der Beste der Welt! Mit Premium kommt dein Goldener Stern auf deine Starpedia-Seite und in deine Doku, und die Luxus-Vitrine wird freigeschaltet.
+5403|Neuigkeiten
+5406|Versionshinweise {}
+5405|Anzeigen

@@ -218,6 +218,8 @@ const Game = {
       const te = document.getElementById('t-edit'); if (te) te.onclick = () => (typeof Edit !== 'undefined' ? Edit.open() : null);
       document.getElementById('t-hof').onclick = () => Legacy.show();
     }
+    // güncelleme duyurusu: oyun açılınca ana ekranda bir kez
+    setTimeout(() => { const t = document.getElementById('title'); if (!Game.state && t && !t.classList.contains('hidden') && typeof WhatsNew !== 'undefined') WhatsNew.check(); }, 700);
     U.$$('[data-cont]', box).forEach((b) => (b.onclick = () => {
       Game.slot = +b.dataset.cont;
       // büyük kayıt açılırken ekran donmuş gibi görünmesin: önce yükleniyor ekranı, sonra kayıt
@@ -2164,6 +2166,7 @@ ${UI.paper()}`;
         <div class="card-h"><span>${Icon('train')} Oynanış</span></div>
         <label class="drill-tg"><input type="checkbox" id="drill-tg" ${s.drills !== false ? 'checked' : ''}><span><b>Antrenman mini oyunları</b><small>Odak statına göre çalışma oynanır. İyi oynarsan gelişim ×1,5'e kadar çıkar.</small></span></label>
         ${typeof Edit !== 'undefined' ? row('Editör', 'Kulüp ve oyuncu isimlerini değiştir, düzenleme dosyası paylaş.', `<button class="btn btn-ghost" data-edopen>${Icon('pen')} Aç</button>`) : ''}
+        ${typeof WhatsNew !== 'undefined' ? row('Yenilikler', `${WN_VER} güncelleme notları`, '<button class="btn btn-ghost" data-wnopen>Göster</button>') : ''}
         ${typeof Notify !== 'undefined' && Notify.plugin() ? `<label class="drill-tg"><input type="checkbox" id="notif-tg" ${Notify.on() ? 'checked' : ''}><span><b>Bildirimler</b><small>Günlük ödül ve enerji hatırlatmaları.</small></span></label>` : ''}
       </section>
       ${typeof Cloud !== 'undefined' && (Cloud.pl || GC.pl) ? `<section class="card settings"><div class="card-h"><span>${Icon('save')} Yedek ve Game Center</span></div>${Cloud.card()}${GC.card()}</section>` : ''}
@@ -2866,6 +2869,7 @@ const SetSheet = {
     }
     try { UI.bind(body); } catch (e) { /* yalın görünüm */ }
     U.$$('[data-edopen]', body).forEach((b) => (b.onclick = () => { SetSheet.close(); Edit.open(); }));
+    U.$$('[data-wnopen]', body).forEach((b) => (b.onclick = () => { SetSheet.close(); WhatsNew.show(); }));
     // ana menü, emeklilik ve silme önce paneli kapatır
     U.$$('[data-sys]', body).forEach((b) => { const f = b.onclick; b.onclick = (ev) => { if (b.dataset.sys === 'menu') SetSheet.close(); if (f) f.call(b, ev); }; });
     body.scrollTop = y;
