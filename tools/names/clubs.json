@@ -1,702 +1,2592 @@
 {
+"GAL": [
+"Beyoğlu Rüzgarı",
+"BEY",
+"Beyoğlu Wind"
+],
 "FNK": [
-"Kadıköy Kanaryaları",
-"KDK",
-"Kadıköy Canaries"
+"Kadıköy Fırtınası",
+"KAD",
+"Kadıköy Storm"
 ],
 "BJK": [
-"Dolmabahçe Kartalları",
-"DBK",
-"Dolmabahçe Eagles"
+"Dolmabahçe Gücü",
+"DOL",
+"Dolmabahçe Power"
+],
+"TRB": [
+"Trabzon Yıldızları",
+null,
+"Trabzon Stars"
 ],
 "BSK": [
-"Başakkent Baykuşları",
+"İkitelli Öncüleri",
+"İKİ",
+"İkitelli Pioneers"
+],
+"SAM": [
+"Samsun Akıncıları",
 null,
-"Başakkent Owls"
+"Samsun Raiders"
+],
+"GOZ": [
+"Konak Esintisi",
+null,
+"Konak Breeze"
+],
+"KON": [
+"Konya Zirvesi",
+null,
+"Konya Summit"
+],
+"KAY": [
+"Kayseri Işıkları",
+null,
+"Kayseri Lights"
+],
+"ANT": [
+"Antalya Kanatları",
+null,
+"Antalya Wings"
+],
+"BUR": [
+"Bursa Fırtınası",
+null,
+"Bursa Storm"
+],
+"SIV": [
+"Sivas Rüzgarı",
+null,
+"Sivas Wind"
+],
+"ANK": [
+"Ulus Yıldırımı",
+null,
+"Ulus Thunder"
+],
+"ADA": [
+"Adana Kayaları",
+null,
+"Adana Rocks"
+],
+"ESK": [
+"Eskişehir Yolcuları",
+null,
+"Eskişehir Voyagers"
+],
+"MAN": [
+"Manisa Dalgaları",
+null,
+"Manisa Waves"
+],
+"DEN": [
+"Denizli Akıncıları",
+null,
+"Denizli Raiders"
+],
+"MAL": [
+"Malatya Ateşi",
+null,
+"Malatya Flame"
+],
+"HAT": [
+"Hatay Meteorları",
+null,
+"Hatay Meteors"
+],
+"ORD": [
+"Ordu Öncüleri",
+null,
+"Ordu Pioneers"
+],
+"MCS": [
+"Manchester Yolcuları",
+null,
+"Manchester Voyagers"
 ],
 "LIV": [
-"Mersey Kızılları",
-"MRK",
-"Mersey Reds"
-],
-"EVE": [
-"Mersey Mavileri",
-"MRM",
-"Mersey Blues"
+"Mersey Akıncıları",
+"MER",
+"Mersey Raiders"
 ],
 "ARS": [
-"Highbury Topçuları",
-"HIG",
-"Highbury Gunners"
+"Islington Esintisi",
+"ISL",
+"Islington Breeze"
 ],
 "CHE": [
-"Kensington Mavileri",
+"Kensington Dorukları",
 "KEN",
-"Kensington Blues"
+"Kensington Peaks"
 ],
-"AVL": [
-"Birmingham Aslanları",
-"BRM",
-"Birmingham Lions"
-],
-"FUL": [
-"Batı Londra Beyazları",
-"BLW",
-"West London Whites"
-],
-"NFO": [
-"Notingem Okçuları",
+"MUN": [
+"Trafford Öncüleri",
 null,
-"Nottingham Archers"
+"Trafford Pioneers"
 ],
-"CRY": [
-"Güney Londra Kartalları",
-"GLK",
-"South London Eagles"
-],
-"RMA": [
-"Madrid Beyazları",
-"MDB",
-"Madrid Whites"
-],
-"BAR": [
-"Katalan Mavi-Kırmızıları",
-"KAT",
-"Catalan Blue-Reds"
-],
-"ATM": [
-"Madrid Kızıl-Beyazları",
-"MKB",
-"Madrid Red-Whites"
-],
-"ATH": [
-"Bilbao Aslanları",
-"BIL",
-"Bilbao Lions"
-],
-"RSO": [
-"Donostia Mavi-Beyazları",
-"DON",
-"Donostia Blue-Whites"
-],
-"BET": [
-"Sevilya Yeşil-Beyazları",
-"SYB",
-"Sevilla Green-Whites"
-],
-"SEV": [
-"Sevilya Kırmızı-Beyazları",
-"SKB",
-"Sevilla Red-Whites"
-],
-"GIR": [
-"Jirona Kırmızı-Beyazları",
-"JIR",
-"Girona Red-Whites"
-],
-"CEL": [
-"Vigo Gökmavileri",
-"VIG",
-"Vigo Sky Blues"
-],
-"OSA": [
-"Pamplona Kırmızıları",
-"PAM",
-"Pamplona Reds"
-],
-"RAY": [
-"Vallekas Şimşekleri",
+"NEW": [
+"Tyneside Rüzgarı",
 null,
-"Vallecas Lightning"
-],
-"ESY": [
-"Barselona Papağanları",
-"BPP",
-"Barcelona Parakeets"
-],
-"OVI": [
-"Oviedo Mavileri",
-null,
-"Oviedo Blues"
-],
-"DEP": [
-"Korunya Mavi-Beyazları",
-"KRN",
-"Coruña Blue-Whites"
-],
-"SPG": [
-"Hihon Kırmızı-Beyazları",
-"HIH",
-"Gijón Red-Whites"
-],
-"RSA": [
-"Santander Yeşil-Beyazları",
-"STD",
-"Santander Green-Whites"
-],
-"BAY": [
-"Münih Kızılları",
-"MÜN",
-"Munich Reds"
-],
-"LEV": [
-"Leverkuzen Kırmızı-Siyahları",
-"LEV",
-"Leverkusen Red-Blacks"
-],
-"BVB": [
-"Dortmund Sarı-Siyahları",
-"DOR",
-"Dortmund Yellow-Blacks"
-],
-"TSG": [
-"Hoffenhaym Mavileri",
-"HOF",
-"Hoffenheim Blues"
-],
-"SVW": [
-"Bremen Yeşil-Beyazları",
-"BYB",
-"Bremen Green-Whites"
-],
-"BSC": [
-"Berlin Mavi-Beyazları",
-"BMB",
-"Berlin Blue-Whites"
-],
-"F95": [
-"Düseldorf Kırmızı-Beyazları",
-"DÜS",
-"Düsseldorf Red-Whites"
-],
-"DSC": [
-"Bilefeld Mavileri",
-"BIE",
-"Bielefeld Blues"
-],
-"JRG": [
-"Regensburk Kırmızıları",
-"RGK",
-"Regensburg Reds"
-],
-"INT": [
-"Milano Mavi-Siyahları",
-"MMS",
-"Milano Blue-Blacks"
-],
-"MIL": [
-"Milano Kırmızı-Siyahları",
-"MKS",
-"Milano Red-Blacks"
-],
-"JUV": [
-"Torino Zebraları",
-"ZEB",
-"Torino Zebras"
-],
-"UDI": [
-"Udine Zebraları",
-"UDN",
-"Udine Zebras"
-],
-"GEN": [
-"Cenova Griffonları",
-"CEN",
-"Genova Griffins"
-],
-"CRE": [
-"Kremona Grileri",
-"KRE",
-"Cremona Greys"
-],
-"SMP": [
-"Cenova Denizcileri",
-"CND",
-"Genova Mariners"
-],
-"SAL": [
-"Salerno Denizatları",
-"SLR",
-"Salerno Seahorses"
-],
-"PSG": [
-"Paris Kırmızı-Mavileri",
-"PRS",
-"Paris Red-Blues"
-],
-"OM": [
-"Marsilya Mavi-Beyazları",
-"MRS",
-"Marseille Blue-Whites"
-],
-"RED": [
-"Saint-Ouen Yeşilleri",
-"SOY",
-"Saint-Ouen Greens"
-],
-"AJX": [
-"Amsterdam Kırmızı-Beyazları",
-"AKB",
-"Amsterdam Red-Whites"
-],
-"FEY": [
-"Rotterdam Liman Kulübü",
-"ROT",
-"Rotterdam Harbour Club"
-],
-"GAE": [
-"Deventer Kartalları",
-"DEV",
-"Deventer Eagles"
-],
-"SPR": [
-"Spangen Kırmızı-Beyazları",
-"SPA",
-"Spangen Red-Whites"
-],
-"FSI": [
-"Sittart Sarı-Yeşilleri",
-"SIT",
-"Sittard Yellow-Greens"
-],
-"HER": [
-"Almelo Siyah-Beyazları",
-"ALS",
-"Almelo Black-Whites"
-],
-"WIL": [
-"Tilburg Kırmızı-Beyazları",
-"TIL",
-"Tilburg Red-Whites"
-],
-"RKC": [
-"Valvayk Sarı-Mavileri",
-"VVK",
-"Waalwijk Yellow-Blues"
-],
-"VIT": [
-"Arnem Sarı-Siyahları",
-"ARN",
-"Arnhem Yellow-Blacks"
-],
-"EXC": [
-"Kralingen Kırmızı-Siyahları",
-"KRA",
-"Kralingen Red-Blacks"
-],
-"SPL": [
-"Lizbon Aslanları",
-"LZA",
-"Lisbon Lions"
-],
-"CAS": [
-"Belem Bordoları",
-"BLM",
-"Belém Maroons"
-],
-"GIL": [
-"Barselos Horozları",
-"BHZ",
-"Barcelos Roosters"
-],
-"MOR": [
-"Moreira Yeşilleri",
-null,
-"Moreira Greens"
-],
-"NAS": [
-"Funşal Kırmızı-Beyazları",
-"FUN",
-"Funchal Red-Whites"
-],
-"BOA": [
-"Porto Damalıları",
-"PDM",
-"Porto Checkers"
-],
-"EAM": [
-"Amadora Yıldızları",
-"AMA",
-"Amadora Stars"
-],
-"FAR": [
-"Faro Martıları",
-"FAR",
-"Faro Gulls"
-],
-"FLA": [
-"Rio Kara-Kızılları",
-"RKK",
-"Rio Red-Blacks"
-],
-"PLM": [
-"Pompeia Yeşilleri",
-"POM",
-"Pompeia Greens"
-],
-"CRN": [
-"Paulista Siyah-Beyazları",
-"PSB",
-"Paulista Black-Whites"
-],
-"FLU": [
-"Rio Üç Renkliler",
-"RÜR",
-"Rio Tricolours"
-],
-"GRM": [
-"Porto Alegre Ölümsüzleri",
-"PAÖ",
-"Porto Alegre Immortals"
-],
-"IBR": [
-"Porto Alegre Kırmızıları",
-"PAK",
-"Porto Alegre Reds"
-],
-"CAM": [
-"Belo Horizonte Horozları",
-"BHH",
-"Belo Horizonte Roosters"
-],
-"CRU": [
-"Mineyro Tilkileri",
-"MİN",
-"Mineiro Foxes"
-],
-"VAS": [
-"Rio Denizcileri",
-"RDZ",
-"Rio Mariners"
-],
-"CAP": [
-"Kuritiba Kasırgası",
-"KUR",
-"Curitiba Hurricane"
-],
-"JVD": [
-"Kaksiyas Yeşilleri",
-"KAK",
-"Caxias Greens"
-],
-"VTB": [
-"Salvador Kırmızı-Siyahları",
-"SLV",
-"Salvador Red-Blacks"
-],
-"RIV": [
-"Buenos Aires Milyonerleri",
-"BAM",
-"Buenos Aires Millionaires"
-],
-"BJR": [
-"Riachuelo Mavi-Sarıları",
-"RMS",
-"Riachuelo Blue-Golds"
-],
-"RAC": [
-"Avellaneda Akademisyenleri",
-"AVA",
-"Avellaneda Academics"
-],
-"IND": [
-"Avellaneda Kırmızıları",
-"AVK",
-"Avellaneda Reds"
-],
-"SLO": [
-"Boedo Azizleri",
-"BOE",
-"Boedo Saints"
-],
-"ELP": [
-"La Plata Öğrencileri",
-"LPÖ",
-"La Plata Students"
-],
-"VEL": [
-"Liniers Mavi-Beyazları",
-"LIN",
-"Liniers Blue-Whites"
-],
-"TAL": [
-"Kordoba Atölyecileri",
-"KOA",
-"Córdoba Workshop Men"
-],
-"NOB": [
-"Rosario Kırmızı-Siyahları",
-"RKS",
-"Rosario Red-Blacks"
-],
-"ARJ": [
-"Paternal Kırmızıları",
-"PAT",
-"Paternal Reds"
-],
-"HUR": [
-"Parque Patricios Balonları",
-"PPB",
-"Parque Patricios Balloons"
-],
-"DEF": [
-"Varela Turuncuları",
-"DFV",
-"Varela Oranges"
-],
-"GOD": [
-"Mendoza Tombikleri",
-"MEN",
-"Mendoza Chubbies"
-],
-"PLA": [
-"Vicente Lopez Kalamarları",
-"VLK",
-"Vicente López Squids"
-],
-"BEL": [
-"Kordoba Korsanları",
-"KKR",
-"Córdoba Pirates"
-],
-"UNI": [
-"Santa Fe Kırmızı-Beyazları",
-"SFE",
-"Santa Fe Red-Whites"
-],
-"STL": [
-"Liej Kızılları",
-"LİJ",
-"Liège Reds"
-],
-"CEB": [
-"Brüj Yeşil-Siyahları",
-"BYS",
-"Bruges Green-Blacks"
-],
-"LAG": [
-"Los Anjeles Yıldızları",
-"LAY",
-"Los Angeles Stars"
-],
-"NYB": [
-"Hudson Boğaları",
-"HUD",
-"Hudson Bulls"
-],
-"SEA": [
-"Sietıl Dalgaları",
-"SİE",
-"Seattle Waves"
-],
-"CMB": [
-"Kolombus Sarıları",
-"KLS",
-"Columbus Yellows"
-],
-"PTB": [
-"Portlant Yeşilleri",
-"PTL",
-"Portland Greens"
-],
-"VWC": [
-"Vankuver Mavileri",
-"VKM",
-"Vancouver Blues"
-],
-"HOU": [
-"Hyuston Turuncuları",
-"HYU",
-"Houston Oranges"
-],
-"ATU": [
-"Atlanta Kırmızı-Siyahları",
-"ATL",
-"Atlanta Red-Blacks"
-],
-"PHI": [
-"Filadelfiya Mavileri",
-"FİL",
-"Philadelphia Blues"
-],
-"HIL": [
-"Riyad Mavileri",
-"RYM",
-"Riyadh Blues"
-],
-"NSR": [
-"Riyad Sarıları",
-"RYS",
-"Riyadh Yellows"
-],
-"ITD": [
-"Cidde Kaplanları",
-"CKP",
-"Jeddah Tigers"
-],
-"AHL": [
-"Cidde Yeşilleri",
-"CYE",
-"Jeddah Greens"
-],
-"SHB": [
-"Riyad Beyazları",
-"RYB",
-"Riyadh Whites"
-],
-"CAZ": [
-"Mexiko Makineleri",
-"MXM",
-"Mexico Machines"
-],
-"PUM": [
-"Mexiko Öğrencileri",
-"MXÖ",
-"Mexico Students"
-],
-"ATS": [
-"Guadalahara Tilkileri",
-"GTL",
-"Guadalajara Foxes"
-],
-"VKB": [
-"Kobe Gemicileri",
-"KOB",
-"Kobe Sailors"
-],
-"GOS": [
-"Osaka Mavi-Siyahları",
-"OSK",
-"Osaka Blue-Blacks"
-],
-"URW": [
-"Saitama Kızılları",
-"SAI",
-"Saitama Reds"
-],
-"KWF": [
-"Kavasaki Gökmavileri",
-"KAV",
-"Kawasaki Sky Blues"
-],
-"YBB": [
-"Bern Sarı-Siyahları",
-"BSS",
-"Bern Yellow-Blacks"
-],
-"GCZ": [
-"Zürih Mavi-Beyazları",
-"ZMB",
-"Zurich Blue-Whites"
-],
-"SER": [
-"Cenevre Bordoları",
-"CNV",
-"Geneva Maroons"
-],
-"OLY": [
-"Pire Kırmızı-Beyazları",
-"PİR",
-"Piraeus Red-Whites"
-],
-"ARI": [
-"Selanik Sarıları",
-"SSR",
-"Thessaloniki Yellows"
-],
-"ATR": [
-"Peristeri Mavi-Beyazları",
-"PRT",
-"Peristeri Blue-Whites"
-],
-"SPR2": [
-"Prag Kızılları",
-"PRK",
-"Prague Reds"
-],
-"VPL": [
-"Plzen Kırmızı-Mavileri",
-"PLZ",
-"Plzeň Red-Blues"
-],
-"BAN2": [
-"Ostrava Madencileri",
-null,
-"Ostrava Miners"
-],
-"SLL": [
-"Liberets Mavi-Beyazları",
-"LİB",
-"Liberec Blue-Whites"
-],
-"SIG": [
-"Olomots Mavileri",
-"OLO",
-"Olomouc Blues"
-],
-"LEG2": [
-"Varşova Yeşilleri",
-"VRŞ",
-"Warsaw Greens"
-],
-"RAK": [
-"Çenstohova Kırmızı-Mavileri",
-"ÇEN",
-"Częstochowa Red-Blues"
-],
-"JAG": [
-"Bialistok Sarı-Kırmızıları",
-"BİA",
-"Białystok Yellow-Reds"
-],
-"POG": [
-"Şçeçin Bordo-Mavileri",
-"ŞÇE",
-"Szczecin Maroon-Blues"
-],
-"LGD": [
-"Gdansk Yeşil-Beyazları",
-"GDA",
-"Gdańsk Green-Whites"
-],
-"SLW": [
-"Vrotslav Yeşilleri",
-"VRO",
-"Wrocław Greens"
-],
-"PIA": [
-"Gliviçe Mavi-Kırmızıları",
-"GLİ",
-"Gliwice Blue-Reds"
-],
-"ZAG": [
-"Lubin Madencileri",
-"LUB",
-"Lubin Miners"
-],
-"WID": [
-"Lodz Kırmızıları",
-"LOD",
-"Łódź Reds"
-],
-"DYK": [
-"Kiev Beyaz-Mavileri",
-"KBM",
-"Kyiv White-Blues"
-],
-"VRS": [
-"Rivne Yeşil-Beyazları",
-"RİV",
-"Rivne Green-Whites"
-],
-"OBO": [
-"Kiev Kıyısı",
-"KKY",
-"Kyiv Riverside"
+"Tyneside Wind"
 ],
 "TOT": [
-"Kuzey Londra Horozları",
-"KLH",
-"North London Roosters"
+"Haringey Ufku",
+"HAR",
+"Haringey Horizon"
+],
+"AVL": [
+"Birmingham Işıkları",
+"BİR",
+"Birmingham Lights"
+],
+"BHA": [
+"Brighten Pusulası",
+null,
+"Brighton Compass"
+],
+"WHU": [
+"Stratford Kalesi",
+null,
+"Stratford Fortress"
+],
+"RMA": [
+"Madrid Pusulası",
+"MAD",
+"Madrid Compass"
+],
+"BAR": [
+"Barselona Kanatları",
+"BAR",
+"Barcelona Wings"
+],
+"ATM": [
+"Manzanares Kayaları",
+"MAN",
+"Manzanares Rocks"
+],
+"ATH": [
+"Bilbao Yıldırımı",
+"BİL",
+"Bilbao Thunder"
+],
+"VIL": [
+"Vilyareal Zirvesi",
+null,
+"Villarreal Summit"
+],
+"RSO": [
+"Donostia Gücü",
+"DON",
+"Donostia Power"
+],
+"BET": [
+"Triana Işıkları",
+"TRİ",
+"Triana Lights"
+],
+"SEV": [
+"Sevilya Esintisi",
+"SEV",
+"Sevilla Breeze"
+],
+"VAL": [
+"Valensiya Yıldızları",
+null,
+"Valencia Stars"
+],
+"GIR": [
+"Jirona Yolcuları",
+"JİR",
+"Girona Voyagers"
+],
+"BAY": [
+"Münih Ateşi",
+"MÜN",
+"Munich Flame"
+],
+"LEV": [
+"Leverkuzen Kometleri",
+"LEV",
+"Leverkusen Comets"
+],
+"BVB": [
+"Dortmund Zirvesi",
+"DOR",
+"Dortmund Summit"
+],
+"RBL": [
+"Leipzik Yolcuları",
+null,
+"Leipzig Voyagers"
+],
+"VFB": [
+"Stutgard Ufku",
+null,
+"Stuttgart Horizon"
+],
+"SGE": [
+"Frankfurt Kıvılcımları",
+null,
+"Frankfurt Sparks"
+],
+"WOB": [
+"Wolfsburk Pusulası",
+null,
+"Wolfsburg Compass"
+],
+"SCF": [
+"Freiburk Işıkları",
+null,
+"Freiburg Lights"
+],
+"BMG": [
+"Gladbah Rüzgarı",
+null,
+"Gladbach Wind"
+],
+"TSG": [
+"Hoffenhaym Meteorları",
+"HOF",
+"Hoffenheim Meteors"
+],
+"INT": [
+"Milano Çınarları",
+"MİL",
+"Milan Plane Trees"
+],
+"NAP": [
+"Napoli Kalesi",
+null,
+"Naples Fortress"
+],
+"JUV": [
+"Piemonte Kometleri",
+"PİE",
+"Piedmont Comets"
+],
+"MIL": [
+"Brera Esintisi",
+"BRE",
+"Brera Breeze"
+],
+"ATA": [
+"Bergamo Fırtınası",
+null,
+"Bergamo Storm"
+],
+"ROM": [
+"Roma Akıncıları",
+null,
+"Roma Raiders"
+],
+"LAZ": [
+"Flaminio Zirvesi",
+null,
+"Flaminio Summit"
+],
+"FIO": [
+"Floransa Kıvılcımları",
+null,
+"Florence Sparks"
+],
+"BOL": [
+"Bolonya Kayaları",
+null,
+"Bologna Rocks"
+],
+"TOR": [
+"Torino Öncüleri",
+null,
+"Turin Pioneers"
+],
+"PSG": [
+"Paris Rüzgarı",
+"PAR",
+"Paris Wind"
+],
+"OM": [
+"Marsilya Fırtınası",
+"MAR",
+"Marseille Storm"
+],
+"ASM": [
+"Monako Dorukları",
+null,
+"Monaco Peaks"
+],
+"LIL": [
+"Lil Ufku",
+null,
+"Lil Horizon"
+],
+"OL": [
+"Lyon Işıkları",
+null,
+"Lyon Lights"
+],
+"RCL": [
+"Lens Yıldızları",
+null,
+"Lens Stars"
+],
+"NIC": [
+"Nis Akıncıları",
+null,
+"Nice Raiders"
+],
+"REN": [
+"Ren Esintisi",
+null,
+"Rennes Breeze"
+],
+"STR": [
+"Strazburk Ateşi",
+null,
+"Strasbourg Flame"
+],
+"NAN": [
+"Nant Dalgaları",
+null,
+"Nantes Waves"
+],
+"GAZ": [
+"Gaziantep Kayaları",
+null,
+"Gaziantep Rocks"
+],
+"ALN": [
+"Alanya Dorukları",
+null,
+"Alanya Peaks"
+],
+"RIZ": [
+"Rize Çınarları",
+null,
+"Rize Plane Trees"
+],
+"HAL": [
+"Haliç Yıldırımı",
+null,
+"Golden Horn Thunder"
+],
+"KOC": [
+"Kocaeli Dalgaları",
+null,
+"Kocaeli Waves"
+],
+"FTH": [
+"Fatih Kıvılcımları",
+null,
+"Fatih Sparks"
+],
+"GNC": [
+"Çankaya Kalesi",
+null,
+"Çankaya Fortress"
+],
+"TKD": [
+"Tekirdağ Yolcuları",
+null,
+"Tekirdağ Voyagers"
+],
+"ISP": [
+"Isparta Kometleri",
+null,
+"Isparta Comets"
+],
+"BOD": [
+"Bodrum Ateşi",
+null,
+"Bodrum Flame"
+],
+"SAK": [
+"Sakarya Kanatları",
+null,
+"Sakarya Wings"
+],
+"ERZ": [
+"Erzurum Çınarları",
+null,
+"Erzurum Plane Trees"
+],
+"ZON": [
+"Zonguldak Yıldızları",
+null,
+"Zonguldak Stars"
+],
+"BLU": [
+"Bolu Zirvesi",
+null,
+"Bolu Summit"
+],
+"UMR": [
+"Ümraniye Dorukları",
+null,
+"Ümraniye Peaks"
+],
+"AYD": [
+"Aydın Işıkları",
+null,
+"Aydın Lights"
+],
+"BAL": [
+"Balıkesir Kıvılcımları",
+null,
+"Balıkesir Sparks"
+],
+"VAN": [
+"Van Gücü",
+null,
+"Van Power"
+],
+"TUZ": [
+"Tuzla Kalesi",
+null,
+"Tuzla Fortress"
+],
+"AMS": [
+"Amasya Ufku",
+null,
+"Amasya Horizon"
+],
+"EVE": [
+"Walton Zirvesi",
+"WAL",
+"Walton Summit"
+],
+"NFO": [
+"Notingem Ateşi",
+"NOT",
+"Nottingham Flame"
+],
+"WOL": [
+"Wolverhemton Meteorları",
+null,
+"Wolverhampton Meteors"
+],
+"FUL": [
+"Putney Yıldızları",
+"PUT",
+"Putney Stars"
+],
+"CRY": [
+"Croydon Kometleri",
+"CRO",
+"Croydon Comets"
+],
+"BRE": [
+"Brentfort Dalgaları",
+null,
+"Brentford Waves"
+],
+"BOU": [
+"Bornmut Gücü",
+null,
+"Bournemouth Power"
+],
+"LEE": [
+"Lidz Fırtınası",
+null,
+"Leeds Storm"
+],
+"BUR2": [
+"Burnli Kayaları",
+null,
+"Burnley Rocks"
+],
+"SUN": [
+"Sanderlend Kanatları",
+null,
+"Sunderland Wings"
+],
+"CEL": [
+"Vigo Ufku",
+"VİG",
+"Vigo Horizon"
+],
+"OSA": [
+"Pamplona Akıncıları",
+"PAM",
+"Pamplona Raiders"
+],
+"MLL": [
+"Mayorka Rüzgarı",
+null,
+"Mallorca Wind"
+],
+"RAY": [
+"Vallekas Dalgaları",
+"VLL",
+"Vallekas Waves"
+],
+"GET": [
+"Getafe Meteorları",
+null,
+"Getafe Meteors"
+],
+"ALA": [
+"Vitorya Kometleri",
+null,
+"Vitoria Comets"
+],
+"ESY": [
+"Kornelya Ateşi",
+"KOR",
+"Cornellà Flame"
+],
+"LEV2": [
+"Levante Kalesi",
+null,
+"Levante Fortress"
+],
+"ELC": [
+"Elçe Kıvılcımları",
+null,
+"Elche Sparks"
+],
+"OVI": [
+"Oviedo Öncüleri",
+"OVİ",
+"Oviedo Pioneers"
+],
+"FCU": [
+"Köpenik Fırtınası",
+null,
+"Köpenick Storm"
+],
+"SVW": [
+"Bremen Gücü",
+"BRE",
+"Bremen Power"
+],
+"M05": [
+"Mainz Çınarları",
+null,
+"Mainz Plane Trees"
+],
+"FCA": [
+"Augsburk Akıncıları",
+null,
+"Augsburg Raiders"
+],
+"KOE": [
+"Köln Dorukları",
+null,
+"Köln Peaks"
+],
+"HSV": [
+"Hamburk Yıldızları",
+null,
+"Hamburg Stars"
+],
+"FCH": [
+"Heidenhaym Dalgaları",
+null,
+"Heidenheim Waves"
+],
+"STP": [
+"Altona Esintisi",
+null,
+"Altona Breeze"
+],
+"BOC": [
+"Bohum Kalesi",
+null,
+"Bochum Fortress"
+],
+"KSV": [
+"Kiel Öncüleri",
+null,
+"Kiel Pioneers"
+],
+"COM": [
+"Komo Rüzgarı",
+null,
+"Como Wind"
+],
+"UDI": [
+"Udine Gücü",
+"UDİ",
+"Udine Power"
+],
+"PAR": [
+"Parma Pusulası",
+null,
+"Parma Compass"
+],
+"GEN": [
+"Cenova Dorukları",
+"CEN",
+"Cenova Peaks"
+],
+"CAG": [
+"Kalyari Işıkları",
+null,
+"Cagliari Lights"
+],
+"SAS": [
+"Sassuolo Kanatları",
+null,
+"Sassuolo Wings"
+],
+"LEC": [
+"Lecçe Ufku",
+null,
+"Lecçe Horizon"
+],
+"HVE": [
+"Verona Meteorları",
+null,
+"Verona Meteors"
+],
+"PIS": [
+"Pisa Ateşi",
+null,
+"Pisa Flame"
+],
+"CRE": [
+"Kremona Yıldırımı",
+"KRE",
+"Kremona Thunder"
+],
+"SB29": [
+"Brest Meteorları",
+null,
+"Brest Meteors"
+],
+"TFC": [
+"Tuluz Pusulası",
+null,
+"Toulouse Compass"
+],
+"ASSE": [
+"Sent Etyen Yıldırımı",
+null,
+"Saint Étienne Thunder"
+],
+"AJA": [
+"Oser Gücü",
+null,
+"Auxerre Power"
+],
+"PFC": [
+"Montmartre Çınarları",
+null,
+"Montmartre Plane Trees"
+],
+"SCO": [
+"Anje Kanatları",
+null,
+"Angers Wings"
+],
+"HAC": [
+"Le Havr Kometleri",
+null,
+"Le Havr Comets"
+],
+"FCL": [
+"Loryan Kayaları",
+null,
+"Lorient Rocks"
+],
+"MHSC": [
+"Montpelye Yolcuları",
+null,
+"Montpellier Voyagers"
+],
+"FCM": [
+"Metz Kıvılcımları",
+null,
+"Metz Sparks"
+],
+"NOR": [
+"Norviç Işıkları",
+null,
+"Norwich Lights"
+],
+"MBR": [
+"Midılzbro Kanatları",
+null,
+"Middlesbrough Wings"
+],
+"SHU": [
+"Şefild Kayaları",
+null,
+"Sheffield Rocks"
+],
+"SHW": [
+"Şefild Fırtınası",
+null,
+"Sheffield Storm"
+],
+"WAT": [
+"Watfort Dalgaları",
+null,
+"Watford Waves"
+],
+"STK": [
+"Stok Çınarları",
+null,
+"Stoke Plane Trees"
+],
+"DER": [
+"Darbi Gücü",
+null,
+"Derby Power"
+],
+"BRC": [
+"Bristol Yıldırımı",
+null,
+"Bristol Thunder"
+],
+"COV": [
+"Koventri Meteorları",
+null,
+"Coventry Meteors"
+],
+"HUL": [
+"Hal Esintisi",
+null,
+"Hal Breeze"
+],
+"SWA": [
+"Swonsi Kometleri",
+null,
+"Swansea Comets"
+],
+"CAR": [
+"Kardif Dorukları",
+null,
+"Cardiff Peaks"
+],
+"BLB": [
+"Blekburn Ateşi",
+null,
+"Blackburn Flame"
+],
+"PNE": [
+"Preston Ufku",
+null,
+"Preston Horizon"
+],
+"QPR": [
+"White City Akıncıları",
+null,
+"White City Raiders"
+],
+"MLW": [
+"Milwol Zirvesi",
+null,
+"Millwall Summit"
+],
+"PLY": [
+"Plimut Yolcuları",
+null,
+"Plymouth Voyagers"
+],
+"LUT": [
+"Luton Rüzgarı",
+null,
+"Luton Wind"
+],
+"IPS": [
+"İpswiç Yıldızları",
+null,
+"Ipswich Stars"
+],
+"LEI": [
+"Lester Kıvılcımları",
+null,
+"Leicester Sparks"
+],
+"MLG": [
+"Malaga Meteorları",
+null,
+"Málaga Meteors"
+],
+"ZAR": [
+"Zaragosa Kometleri",
+null,
+"Zaragoza Comets"
+],
+"DEP": [
+"Korunya Gücü",
+"KOR",
+"Coruña Power"
+],
+"SPG": [
+"Hihon Pusulası",
+"HİH",
+"Gijón Compass"
+],
+"ALM": [
+"Almerya Dorukları",
+null,
+"Almería Peaks"
+],
+"CAD": [
+"Kadiz Kalesi",
+null,
+"Cádiz Fortress"
+],
+"GRA": [
+"Granada Dalgaları",
+null,
+"Granada Waves"
+],
+"EIB": [
+"Eybar Akıncıları",
+null,
+"Eibar Raiders"
+],
+"TEN": [
+"Tenerife Kanatları",
+null,
+"Tenerife Wings"
+],
+"HUE": [
+"Ueska Yıldırımı",
+null,
+"Huesca Thunder"
+],
+"BRG": [
+"Burgos Fırtınası",
+null,
+"Burgos Storm"
+],
+"RSA": [
+"Santander Kıvılcımları",
+"SAN",
+"Santander Sparks"
+],
+"ALB": [
+"Albasete Yolcuları",
+null,
+"Albacete Voyagers"
+],
+"MIR": [
+"Mirandes Ateşi",
+null,
+"Mirandes Flame"
+],
+"CRT": [
+"Kartahena Işıkları",
+null,
+"Cartagena Lights"
+],
+"ELD": [
+"Elda Rüzgarı",
+null,
+"Elda Wind"
+],
+"CRD": [
+"Kordoba Yıldızları",
+null,
+"Córdoba Stars"
+],
+"VLD": [
+"Valyadolid Esintisi",
+null,
+"Valladolid Breeze"
+],
+"LPA": [
+"Las Palmas Çınarları",
+null,
+"Las Palmas Plane Trees"
+],
+"LEG": [
+"Leganes Kayaları",
+null,
+"Leganes Rocks"
+],
+"S04": [
+"Gelzenkirhen Akıncıları",
+null,
+"Gelsenkirchen Raiders"
+],
+"BSC": [
+"Berlin Pusulası",
+"BER",
+"Berlin Compass"
+],
+"F95": [
+"Düseldorf Öncüleri",
+"DÜS",
+"Düsseldorf Pioneers"
+],
+"H96": [
+"Hanover Kometleri",
+null,
+"Hanover Comets"
+],
+"FCN": [
+"Nürnberk Rüzgarı",
+null,
+"Nuremberg Wind"
+],
+"KLA": [
+"Kayzerslautern Gücü",
+null,
+"Kaiserslautern Power"
+],
+"KSC": [
+"Karlsrue Kalesi",
+null,
+"Karlsruhe Fortress"
+],
+"SCP": [
+"Paderborn Dalgaları",
+null,
+"Paderborn Waves"
+],
+"SGF": [
+"Fürt Yolcuları",
+null,
+"Fürth Voyagers"
+],
+"MAG": [
+"Magdeburk Çınarları",
+null,
+"Magdeburg Plane Trees"
+],
+"D98": [
+"Darmştat Kıvılcımları",
+null,
+"Darmstadt Sparks"
+],
+"EBS": [
+"Braunşvayg Ufku",
+null,
+"Braunschweig Horizon"
+],
+"ELV": [
+"Elversberk Zirvesi",
+null,
+"Elversberg Summit"
+],
+"PMU": [
+"Münster Meteorları",
+null,
+"Münster Meteors"
+],
+"ULM": [
+"Ulm Fırtınası",
+null,
+"Ulm Storm"
+],
+"JRG": [
+"Regensburk Dorukları",
+"REG",
+"Regensburg Peaks"
+],
+"DSC": [
+"Bilefeld Kanatları",
+"BİL",
+"Bielefeld Wings"
+],
+"ROS": [
+"Rostok Yıldızları",
+null,
+"Rostok Stars"
+],
+"DRE": [
+"Drezden Esintisi",
+null,
+"Dresden Breeze"
+],
+"WIE": [
+"Wiesbaden Işıkları",
+null,
+"Wiesbaden Lights"
+],
+"SMP": [
+"Liguriya Ateşi",
+"LİG",
+"Liguria Flame"
+],
+"PAL": [
+"Palermo Dalgaları",
+null,
+"Palermo Waves"
+],
+"SPZ": [
+"Spezya Rüzgarı",
+null,
+"Spezia Wind"
+],
+"BRI": [
+"Bari Kometleri",
+null,
+"Bari Comets"
+],
+"VEN": [
+"Venedik Kıvılcımları",
+null,
+"Venice Sparks"
+],
+"FRS": [
+"Frozinone Akıncıları",
+null,
+"Frosinone Raiders"
+],
+"EMP": [
+"Empoli Yıldızları",
+null,
+"Empoli Stars"
+],
+"MON": [
+"Monza Dorukları",
+null,
+"Monza Peaks"
+],
+"SAL": [
+"Salerno Yolcuları",
+"SAL",
+"Salerno Voyagers"
+],
+"MOD": [
+"Modena Ufku",
+null,
+"Modena Horizon"
+],
+"CTZ": [
+"Katanzaro Meteorları",
+null,
+"Catanzaro Meteors"
+],
+"BRS": [
+"Breşa Zirvesi",
+null,
+"Brescia Summit"
+],
+"CES": [
+"Çezena Fırtınası",
+null,
+"Cesena Storm"
+],
+"RGG": [
+"Rejyo Esintisi",
+null,
+"Reggio Breeze"
+],
+"SUD": [
+"Südtirol Öncüleri",
+null,
+"Südtirol Pioneers"
+],
+"CIT": [
+"Çittadella Pusulası",
+null,
+"Cittadella Compass"
+],
+"COS": [
+"Kozensa Çınarları",
+null,
+"Cosenza Plane Trees"
+],
+"CRR": [
+"Karrara Kalesi",
+null,
+"Carrara Fortress"
+],
+"JST": [
+"Kastellammare Işıkları",
+null,
+"Castellammare Lights"
+],
+"MNT": [
+"Mantova Gücü",
+null,
+"Mantova Power"
+],
+"BDX": [
+"Bordo Fırtınası",
+null,
+"Bordeaux Storm"
+],
+"CAE": [
+"Kaen Kometleri",
+null,
+"Caen Comets"
+],
+"GUI": [
+"Gengam Kayaları",
+null,
+"Guingamp Rocks"
+],
+"AMI": [
+"Amyen Gücü",
+null,
+"Amiens Power"
+],
+"PAU": [
+"Po Yolcuları",
+null,
+"Po Voyagers"
+],
+"GRE": [
+"Grenobl Dorukları",
+null,
+"Grenoble Peaks"
+],
+"ACA": [
+"Ajaksiyo Rüzgarı",
+null,
+"Ajaccio Wind"
+],
+"BAS": [
+"Bastia Işıkları",
+null,
+"Bastia Lights"
+],
+"ROD": [
+"Rodez Ateşi",
+null,
+"Rodez Flame"
+],
+"TRY": [
+"Trua Esintisi",
+null,
+"Troyes Breeze"
+],
+"CLE": [
+"Klermon Yıldızları",
+null,
+"Clermont Stars"
+],
+"LAV": [
+"Laval Çınarları",
+null,
+"Laval Plane Trees"
+],
+"RED": [
+"Saint-Ouen Dalgaları",
+"SAİ",
+"Saint-Ouen Waves"
+],
+"DUN": [
+"Dünkerk Meteorları",
+null,
+"Dunkirk Meteors"
+],
+"QRM": [
+"Kövilli Kanatları",
+null,
+"Quevilly Wings"
+],
+"NCY": [
+"Nansi Akıncıları",
+null,
+"Nancy Raiders"
+],
+"MTG": [
+"Martig Öncüleri",
+null,
+"Martigues Pioneers"
+],
+"SOC": [
+"Sosho Kıvılcımları",
+null,
+"Sochaux Sparks"
+],
+"VLC": [
+"Valansiyen Yıldırımı",
+null,
+"Valenciennes Thunder"
+],
+"ANN": [
+"Ansi Kalesi",
+null,
+"Annecy Fortress"
+],
+"AJX": [
+"Amsterdam Öncüleri",
+"AMS",
+"Amsterdam Pioneers"
+],
+"PSV": [
+"Eyndhoven Kalesi",
+null,
+"Eindhoven Fortress"
+],
+"FEY": [
+"Rotterdam Ufku",
+"ROT",
+"Rotterdam Horizon"
+],
+"AZA": [
+"Alkmar Yolcuları",
+null,
+"Alkmaar Voyagers"
+],
+"TWE": [
+"Enshede Zirvesi",
+null,
+"Enschede Summit"
+],
+"UTR": [
+"Utreht Kıvılcımları",
+null,
+"Utrecht Sparks"
+],
+"HEE": [
+"Herenven Pusulası",
+null,
+"Heerenveen Compass"
+],
+"NEC": [
+"Nimeyen Yıldızları",
+null,
+"Nijmegen Stars"
+],
+"GAE": [
+"Deventer Meteorları",
+"DEV",
+"Deventer Meteors"
+],
+"SPR": [
+"Spangen Kometleri",
+"SPA",
+"Spangen Comets"
+],
+"GRO": [
+"Groningen Akıncıları",
+null,
+"Groningen Raiders"
+],
+"FSI": [
+"Sittart Gücü",
+"SİT",
+"Sittard Power"
+],
+"PEC": [
+"Zvolle Ateşi",
+null,
+"Zvolle Flame"
+],
+"HER": [
+"Almelo Fırtınası",
+"ALM",
+"Almelo Storm"
+],
+"NAC": [
+"Breda Işıkları",
+null,
+"Breda Lights"
+],
+"WIL": [
+"Tilburg Çınarları",
+"TİL",
+"Tilburg Plane Trees"
+],
+"RKC": [
+"Valvayk Dorukları",
+"VAL",
+"Waalwijk Peaks"
+],
+"VIT": [
+"Arnem Esintisi",
+"ARN",
+"Arnhem Breeze"
+],
+"VOL": [
+"Volendam Rüzgarı",
+null,
+"Volendam Wind"
+],
+"EXC": [
+"Kralingen Kanatları",
+"KRA",
+"Kralingen Wings"
+],
+"BEN": [
+"Lizbon Yıldızları",
+null,
+"Lisbon Stars"
+],
+"FCP": [
+"Porto Dalgaları",
+null,
+"Porto Waves"
+],
+"SPL": [
+"Alvalade Ateşi",
+"ALV",
+"Alvalade Flame"
+],
+"SCB": [
+"Braga Yolcuları",
+null,
+"Braga Voyagers"
+],
+"VGU": [
+"Gimaraeş Kıvılcımları",
+null,
+"Guimarães Sparks"
+],
+"FAM": [
+"Famalikao Rüzgarı",
+null,
+"Famalicão Wind"
+],
+"RAV": [
+"Vila do Konde Öncüleri",
+null,
+"Vila do Conde Pioneers"
+],
+"ARO": [
+"Arouka Kalesi",
+null,
+"Arouca Fortress"
+],
+"EST": [
+"Estoril Ufku",
+null,
+"Estoril Horizon"
+],
+"CAS": [
+"Belem Pusulası",
+"BEL",
+"Belem Compass"
+],
+"GIL": [
+"Barselos Kayaları",
+"BAR",
+"Barselos Rocks"
+],
+"MOR": [
+"Moreira Meteorları",
+"MOR",
+"Moreira Meteors"
+],
+"SNT": [
+"Ponta Delgada Zirvesi",
+null,
+"Ponta Delgada Summit"
+],
+"BOA": [
+"Bessa Kometleri",
+"BES",
+"Bessa Comets"
+],
+"EAM": [
+"Amadora Gücü",
+"AMA",
+"Amadora Power"
+],
+"NAS": [
+"Funşal Fırtınası",
+"FUN",
+"Funşal Storm"
+],
+"AVS": [
+"Vila das Aves Çınarları",
+null,
+"Vila das Aves Plane Trees"
+],
+"FAR": [
+"Faro Akıncıları",
+"FAR",
+"Faro Raiders"
+],
+"TON": [
+"Tondela Dorukları",
+null,
+"Tondela Peaks"
+],
+"ALV": [
+"Alverka Esintisi",
+null,
+"Alverca Breeze"
+],
+"FLA": [
+"Gávea Yıldızları",
+"GVE",
+"Gávea Stars"
+],
+"PLM": [
+"Pompeia Ateşi",
+"POM",
+"Pompeia Flame"
+],
+"SAN": [
+"Santos Yıldırımı",
+null,
+"Santos Thunder"
+],
+"CRN": [
+"Tatuapé Kıvılcımları",
+"TAT",
+"Tatuapé Sparks"
+],
+"SAO": [
+"Morumbi Rüzgarı",
+null,
+"Morumbi Wind"
+],
+"FLU": [
+"Laranjeiras Fırtınası",
+"LAR",
+"Laranjeiras Storm"
+],
+"BOT": [
+"Rio Yolcuları",
+null,
+"Rio Voyagers"
+],
+"GRM": [
+"Porto Alegre Dalgaları",
+"POR",
+"Porto Alegre Waves"
+],
+"IBR": [
+"Guaíba Çınarları",
+"GUA",
+"Guaíba Plane Trees"
+],
+"CAM": [
+"Belo Horizonte Kayaları",
+"BEL",
+"Belo Horizonte Rocks"
+],
+"CRU": [
+"Pampulha Gücü",
+"PAM",
+"Pampulha Power"
+],
+"VAS": [
+"São Cristóvão Akıncıları",
+"SOC",
+"São Cristóvão Raiders"
+],
+"BAH": [
+"Salvador Öncüleri",
+null,
+"Salvador Pioneers"
+],
+"FTZ": [
+"Fortaleza Kalesi",
+null,
+"Fortaleza Fortress"
+],
+"CAP": [
+"Kuritiba Işıkları",
+"KUR",
+"Kuritiba Lights"
+],
+"RBB": [
+"Bragança Ufku",
+null,
+"Bragança Horizon"
+],
+"CEA": [
+"Iracema Dorukları",
+null,
+"Iracema Peaks"
+],
+"JVD": [
+"Kaksiyas Esintisi",
+"KAK",
+"Kaksiyas Breeze"
+],
+"VTB": [
+"Barradas Kanatları",
+"BAR",
+"Barradas Wings"
+],
+"SPT": [
+"Resife Zirvesi",
+null,
+"Recife Summit"
+],
+"RIV": [
+"Núñez Çınarları",
+"NEZ",
+"Núñez Plane Trees"
+],
+"BJR": [
+"Riachuelo Yıldızları",
+"RİA",
+"Riachuelo Stars"
+],
+"RAC": [
+"Avellaneda Pusulası",
+"AVE",
+"Avellaneda Compass"
+],
+"IND": [
+"Gerli Akıncıları",
+"GER",
+"Gerli Raiders"
+],
+"SLO": [
+"Boedo Gücü",
+"BOE",
+"Boedo Power"
+],
+"ELP": [
+"La Plata Öncüleri",
+"LAP",
+"La Plata Pioneers"
+],
+"VEL": [
+"Liniers Kıvılcımları",
+"LİN",
+"Liniers Sparks"
+],
+"TAL": [
+"Kordoba Kayaları",
+"KOR",
+"Córdoba Rocks"
+],
+"LAN": [
+"Lanus Yıldırımı",
+null,
+"Lanus Thunder"
+],
+"NOB": [
+"Rosario Dorukları",
+"ROS",
+"Rosario Peaks"
+],
+"RCE": [
+"Arroyito Yolcuları",
+null,
+"Arroyito Voyagers"
+],
+"ARJ": [
+"Paternal Esintisi",
+"PAT",
+"Paternal Breeze"
+],
+"HUR": [
+"Parque Patricios Ufku",
+"PAR",
+"Parque Patricios Horizon"
+],
+"DEF": [
+"Varela Kometleri",
+"VAR",
+"Varela Comets"
+],
+"GOD": [
+"Mendoza Kalesi",
+"MEN",
+"Mendoza Fortress"
+],
+"BAN": [
+"Banfield Ateşi",
+null,
+"Banfield Flame"
+],
+"PLA": [
+"Vicente Lopez Rüzgarı",
+"VİC",
+"Vicente Lopez Wind"
+],
+"BEL": [
+"Alberdi Dalgaları",
+"ALB",
+"Alberdi Waves"
+],
+"TIG": [
+"Tigre Zirvesi",
+null,
+"Tigre Summit"
+],
+"UNI": [
+"Santa Fe Meteorları",
+"SAN",
+"Santa Fe Meteors"
+],
+"CLB": [
+"Brüj Kanatları",
+null,
+"Bruges Wings"
+],
+"AND": [
+"Anderleht Kayaları",
+null,
+"Anderlecht Rocks"
+],
+"GNK": [
+"Genk Akıncıları",
+null,
+"Genk Raiders"
+],
+"GNT": [
+"Gent Kometleri",
+null,
+"Gent Comets"
+],
+"RAN": [
+"Antverp Gücü",
+null,
+"Antwerp Power"
+],
+"STL": [
+"Liej Öncüleri",
+"LİE",
+"Liège Pioneers"
+],
+"USG": [
+"Sen Jiloz Yıldızları",
+null,
+"Saint Gilloise Stars"
+],
+"CHA": [
+"Şarlöruva Çınarları",
+null,
+"Charleroi Plane Trees"
+],
+"MEC": [
+"Mehelen Fırtınası",
+null,
+"Mechelen Storm"
+],
+"WST": [
+"Vesterlo Esintisi",
+null,
+"Westerlo Breeze"
+],
+"OHL": [
+"Löven Zirvesi",
+null,
+"Leuven Summit"
+],
+"STV": [
+"Sint-Truiden Pusulası",
+null,
+"Sint-Truiden Compass"
+],
+"KVK": [
+"Kortrayk Rüzgarı",
+null,
+"Kortrijk Wind"
+],
+"CEB": [
+"Sent Andris Kalesi",
+"SEN",
+"Saint Andries Fortress"
+],
+"DND": [
+"Dender Yıldırımı",
+null,
+"Dender Thunder"
+],
+"BEE": [
+"Birşot Kıvılcımları",
+null,
+"Beerschot Sparks"
+],
+"CLT": [
+"Parkhead Ufku",
+null,
+"Parkhead Horizon"
+],
+"RNG": [
+"Govan Kıvılcımları",
+null,
+"Govan Sparks"
+],
+"ABD": [
+"Aberdin Kalesi",
+null,
+"Aberdeen Fortress"
+],
+"HRT": [
+"Gorgie Yıldızları",
+null,
+"Gorgie Stars"
+],
+"HIB": [
+"Leith Kanatları",
+null,
+"Leith Wings"
+],
+"DDU": [
+"Dandi Yıldırımı",
+null,
+"Dundee Thunder"
+],
+"KIL": [
+"Kilmarnok Öncüleri",
+null,
+"Kilmarnock Pioneers"
+],
+"MOT": [
+"Motherwel Fırtınası",
+null,
+"Motherwell Storm"
+],
+"SMR": [
+"Peysli Kayaları",
+null,
+"Paisley Rocks"
+],
+"RSC": [
+"Ross Akıncıları",
+null,
+"Ross Raiders"
+],
+"DUF": [
+"Tay Yolcuları",
+null,
+"Tay Voyagers"
+],
+"SJN": [
+"Pert Ateşi",
+null,
+"Perth Flame"
+],
+"MIA": [
+"Maymi Çınarları",
+null,
+"Miami Plane Trees"
+],
+"LAG": [
+"Carson Gücü",
+"CAR",
+"Carson Power"
+],
+"LAF": [
+"Los Anjeles Kometleri",
+null,
+"Los Angeles Comets"
+],
+"SEA": [
+"Sietıl Zirvesi",
+"SİE",
+"Seattle Summit"
+],
+"ATU": [
+"Atlanta Kanatları",
+"ATL",
+"Atlanta Wings"
+],
+"NYB": [
+"Hudson Kayaları",
+"HUD",
+"Hudson Rocks"
+],
+"NYC": [
+"Nevyork Kalesi",
+null,
+"New York Fortress"
+],
+"CMB": [
+"Kolombus Akıncıları",
+"KOL",
+"Columbus Raiders"
+],
+"CIN": [
+"Sinsinati Öncüleri",
+null,
+"Cincinnati Pioneers"
+],
+"PHI": [
+"Filadelfiya Yıldırımı",
+"FİL",
+"Filadelfeia Thunder"
+],
+"PTB": [
+"Portlant Yolcuları",
+"POR",
+"Portland Voyagers"
+],
+"ATX": [
+"Ostin Ateşi",
+null,
+"Austin Flame"
+],
+"NSH": [
+"Neşvil Ufku",
+null,
+"Nashville Horizon"
+],
+"ORL": [
+"Orlando Kıvılcımları",
+null,
+"Orlando Sparks"
+],
+"TRN": [
+"Toronto Pusulası",
+null,
+"Toronto Compass"
+],
+"VWC": [
+"Vankuver Dorukları",
+"VAN",
+"Vancouver Peaks"
+],
+"HOU": [
+"Hyuston Işıkları",
+"HYU",
+"Houston Lights"
+],
+"SKC": [
+"Kanzas Dalgaları",
+null,
+"Kansas Waves"
+],
+"HIL": [
+"Riyad Dalgaları",
+"RİY",
+"Riyadh Waves"
+],
+"NSR": [
+"Necid Ufku",
+"NEC",
+"Najd Horizon"
+],
+"ITD": [
+"Cidde Kayaları",
+"CİD",
+"Jeddah Rocks"
+],
+"AHL": [
+"Hicaz Işıkları",
+"HİC",
+"Hejaz Lights"
+],
+"QAD": [
+"Hubar Rüzgarı",
+null,
+"Khobar Wind"
+],
+"ETT": [
+"Dammam Yıldızları",
+null,
+"Dammam Stars"
+],
+"SHB": [
+"Malaz Kanatları",
+"MAL",
+"Malaz Wings"
+],
+"TAW": [
+"Bureyde Yıldırımı",
+null,
+"Buraidah Thunder"
+],
+"FAH": [
+"Hufuf Kıvılcımları",
+null,
+"Hofuf Sparks"
+],
+"KHL": [
+"Sayhat Ateşi",
+null,
+"Saihat Flame"
+],
+"FEI": [
+"Mecmaa Öncüleri",
+null,
+"Majmaah Pioneers"
+],
+"RYD": [
+"Diriye Kalesi",
+null,
+"Diriyah Fortress"
+],
+"KHO": [
+"Ras Hulud Yolcuları",
+null,
+"Ras Al-Khaleej Voyagers"
+],
+"AKD": [
+"Necran Esintisi",
+null,
+"Najran Breeze"
+],
+"DMK": [
+"Hamis Çınarları",
+null,
+"Khamis Plane Trees"
+],
+"WHD": [
+"Mekke Zirvesi",
+null,
+"Mecca Summit"
+],
+"OKH": [
+"Suveydi Pusulası",
+null,
+"Suwaidi Compass"
+],
+"NJM": [
+"Ras Tannura Kometleri",
+null,
+"Ras Tanura Comets"
+],
+"AME": [
+"Mexiko Kometleri",
+null,
+"Mexico Comets"
+],
+"GDL": [
+"Guadalahara Pusulası",
+null,
+"Guadalajara Compass"
+],
+"CAZ": [
+"Koyoakan Meteorları",
+"KOY",
+"Coyoacán Meteors"
+],
+"UAN": [
+"Nuevo Leon Dorukları",
+null,
+"Nuevo Leon Peaks"
+],
+"MTY": [
+"Monterey Yıldırımı",
+null,
+"Monterrey Thunder"
+],
+"PUM": [
+"Pedregal Kıvılcımları",
+"PED",
+"Pedregal Sparks"
+],
+"TLC": [
+"Toluka Ateşi",
+null,
+"Toluca Flame"
+],
+"LEO": [
+"Leon Rüzgarı",
+null,
+"Leon Wind"
+],
+"PAC": [
+"Paçuka Esintisi",
+null,
+"Pachuca Breeze"
+],
+"SLG": [
+"Torreon Yolcuları",
+null,
+"Torreon Voyagers"
+],
+"ATS": [
+"Zapopan Yıldızları",
+"ZAP",
+"Zapopan Stars"
+],
+"TIJ": [
+"Tihuana Dalgaları",
+null,
+"Tijuana Waves"
+],
+"PUE": [
+"Puebla Kayaları",
+null,
+"Puebla Rocks"
+],
+"QRO": [
+"Keretaro Öncüleri",
+null,
+"Querétaro Pioneers"
+],
+"NCX": [
+"Aguaskalyentes Kalesi",
+null,
+"Aguascalientes Fortress"
+],
+"MAZ": [
+"Mazatlan Ufku",
+null,
+"Mazatlan Horizon"
+],
+"SNL": [
+"San Luis Fırtınası",
+null,
+"San Luis Storm"
+],
+"JUA": [
+"Huarez Gücü",
+null,
+"Juárez Power"
+],
+"KSM": [
+"Kaşima Öncüleri",
+null,
+"Kashima Pioneers"
+],
+"URW": [
+"Saitama Yıldızları",
+"SAİ",
+"Saitama Stars"
+],
+"YFM": [
+"Yokohama Çınarları",
+null,
+"Yokohama Plane Trees"
+],
+"KWF": [
+"Kavasaki Gücü",
+"KAV",
+"Kawasaki Power"
+],
+"VKB": [
+"Kobe Kanatları",
+"KOB",
+"Kobe Wings"
+],
+"SFH": [
+"Hiroşima Meteorları",
+null,
+"Hiroshima Meteors"
+],
+"GOS": [
+"Osaka Kalesi",
+"OSA",
+"Osaka Fortress"
+],
+"COS2": [
+"Sakai Fırtınası",
+null,
+"Sakai Storm"
+],
+"NGE": [
+"Nagoya Ufku",
+null,
+"Nagoya Horizon"
+],
+"FCT": [
+"Tokyo Akıncıları",
+null,
+"Tokyo Raiders"
+],
+"KRE": [
+"Kaşiva Dorukları",
+null,
+"Kashiwa Peaks"
+],
+"CSA": [
+"Sapporo Dalgaları",
+null,
+"Sapporo Waves"
+],
+"SSP": [
+"Şimizu Zirvesi",
+null,
+"Shimizu Summit"
+],
+"AVF": [
+"Fukuoka Kıvılcımları",
+null,
+"Fukuoka Sparks"
+],
+"ANG": [
+"Niigata Esintisi",
+null,
+"Niigata Breeze"
+],
+"KSG": [
+"Kyoto Yıldırımı",
+null,
+"Kyoto Thunder"
+],
+"SHN": [
+"Şonan Yolcuları",
+null,
+"Shonan Voyagers"
+],
+"MCZ": [
+"Matsumoto Işıkları",
+null,
+"Matsumoto Lights"
+],
+"SLZ": [
+"Salzburg Zirvesi",
+null,
+"Salzburg Summit"
+],
+"RPW": [
+"Viyana Kanatları",
+null,
+"Viyana Wings"
+],
+"AWI": [
+"Favoriten Ateşi",
+null,
+"Favoriten Flame"
+],
+"STG": [
+"Graz Kıvılcımları",
+null,
+"Graz Sparks"
+],
+"LSK": [
+"Linz Esintisi",
+null,
+"Linz Breeze"
+],
+"WAC": [
+"Volfsberg Meteorları",
+null,
+"Volfsberg Meteors"
+],
+"HTL": [
+"Tirol Pusulası",
+null,
+"Tirol Compass"
+],
+"HAR": [
+"Hartberg Kayaları",
+null,
+"Hartberg Rocks"
+],
+"ALT": [
+"Altah Rüzgarı",
+null,
+"Altah Wind"
+],
+"BWL": [
+"Urfahr Çınarları",
+null,
+"Urfahr Plane Trees"
+],
+"GAK": [
+"Liebenau Dorukları",
+null,
+"Liebenau Peaks"
+],
+"AKL": [
+"Klagenfurt Yıldırımı",
+null,
+"Klagenfurt Thunder"
+],
+"YBB": [
+"Bern Zirvesi",
+"BER",
+"Bern Summit"
+],
+"BAS2": [
+"Basel Kıvılcımları",
+null,
+"Basel Sparks"
+],
+"SER": [
+"Cenevre Yıldırımı",
+"CEN",
+"Cenevre Thunder"
+],
+"LUG": [
+"Lugano Pusulası",
+null,
+"Lugano Compass"
+],
+"ZUR": [
+"Zürih Kayaları",
+null,
+"Zürih Rocks"
+],
+"GCZ": [
+"Limmat Öncüleri",
+"LİM",
+"Limmat Pioneers"
+],
+"STG2": [
+"Sen Galen Kanatları",
+null,
+"Saint Gallen Wings"
+],
+"LUZ": [
+"Luzern Meteorları",
+null,
+"Luzern Meteors"
+],
+"LSN": [
+"Lozan Ufku",
+null,
+"Lozan Horizon"
+],
+"WIN": [
+"Vintertur Kometleri",
+null,
+"Vintertur Comets"
+],
+"SIO": [
+"Sion Fırtınası",
+null,
+"Sion Storm"
+],
+"THU": [
+"Tun Gücü",
+null,
+"Tun Power"
+],
+"OLY": [
+"Pire Ateşi",
+"PİR",
+"Pire Flame"
+],
+"PAO": [
+"Atina Rüzgarı",
+null,
+"Atina Wind"
+],
+"PAOK": [
+"Selanik Dorukları",
+null,
+"Selanik Peaks"
+],
+"AEK": [
+"Nea Filadelfiya Yıldızları",
+null,
+"Nea Filadelfeia Stars"
+],
+"ARI": [
+"Kalamarya Dalgaları",
+"KAL",
+"Kalamaria Waves"
+],
+"ATR": [
+"Peristeri Kıvılcımları",
+"PER",
+"Peristeri Sparks"
+],
+"OFI": [
+"Girit Yolcuları",
+null,
+"Girit Voyagers"
+],
+"AST": [
+"Trablus Meteorları",
+null,
+"Trablus Meteors"
+],
+"VOL2": [
+"Volos Pusulası",
+null,
+"Volos Compass"
+],
+"PAS": [
+"Yanya Öncüleri",
+null,
+"Yanya Pioneers"
+],
+"LAR": [
+"Larisa Kalesi",
+null,
+"Larisa Fortress"
+],
+"PNT": [
+"Kallitea Ufku",
+null,
+"Kallithea Horizon"
+],
+"LEV3": [
+"Levadya Kometleri",
+null,
+"Levadya Comets"
+],
+"KIF": [
+"Kifisya Akıncıları",
+null,
+"Kifisya Raiders"
+],
+"FCK": [
+"Kopenhag Dorukları",
+null,
+"Kopenhag Peaks"
+],
+"FCM2": [
+"Midtyland Dalgaları",
+null,
+"Midtyland Waves"
+],
+"BIF": [
+"Vestegnen Gücü",
+null,
+"Vestegnen Power"
+],
+"AGF": [
+"Orhus Kalesi",
+null,
+"Orhus Fortress"
+],
+"NOR2": [
+"Nordsyalland Ufku",
+null,
+"Nordsyalland Horizon"
+],
+"RFC": [
+"Randers Çınarları",
+null,
+"Randers Plane Trees"
+],
+"SIL": [
+"Silkeborg Kometleri",
+null,
+"Silkeborg Comets"
+],
+"VFF": [
+"Viborg Akıncıları",
+null,
+"Viborg Raiders"
+],
+"AAB": [
+"Olborg Yolcuları",
+null,
+"Olborg Voyagers"
+],
+"ODB": [
+"Odense Fırtınası",
+null,
+"Odense Storm"
+],
+"SJE": [
+"Sönderjüt Esintisi",
+null,
+"Sönderjüt Breeze"
+],
+"VBK": [
+"Vejle Kıvılcımları",
+null,
+"Vejle Sparks"
+],
+"DZG": [
+"Zagreb Işıkları",
+null,
+"Zagreb Lights"
+],
+"HAJ": [
+"Split Kayaları",
+null,
+"Split Rocks"
+],
+"RIJ": [
+"Riyeka Kıvılcımları",
+null,
+"Riyeka Sparks"
+],
+"OSI": [
+"Osiyek Zirvesi",
+null,
+"Osiyek Summit"
+],
+"LOK": [
+"Treşnyevka Dalgaları",
+null,
+"Trešnjevka Waves"
+],
+"GOR": [
+"Gorica Yolcuları",
+null,
+"Gorica Voyagers"
+],
+"VAR": [
+"Varajdin Kalesi",
+null,
+"Varajdin Fortress"
+],
+"SLB": [
+"Slaven Kanatları",
+null,
+"Slaven Wings"
+],
+"ISK": [
+"İstra Yıldırımı",
+null,
+"İstra Thunder"
+],
+"SIB": [
+"Şibenik Ateşi",
+null,
+"Şibenik Flame"
+],
+"SPR2": [
+"Prag Çınarları",
+"PRA",
+"Prag Plane Trees"
+],
+"SLA": [
+"Vrşovitse Ufku",
+null,
+"Vršovice Horizon"
+],
+"VPL": [
+"Plzen Pusulası",
+"PLZ",
+"Plzen Compass"
+],
+"BAN2": [
+"Ostrava Kanatları",
+"OST",
+"Ostrava Wings"
+],
+"SLO2": [
+"Uherske Hradişte Kayaları",
+null,
+"Uherské Hradiště Rocks"
+],
+"MBO": [
+"Mlada Boleslav Yıldızları",
+null,
+"Mladá Boleslav Stars"
+],
+"SLL": [
+"Liberets Akıncıları",
+"LİB",
+"Liberets Raiders"
+],
+"SIG": [
+"Olomots Zirvesi",
+"OLO",
+"Olomots Summit"
+],
+"BOH": [
+"Vinohradi Yolcuları",
+null,
+"Vinohrady Voyagers"
+],
+"JAB": [
+"Yablonets Fırtınası",
+null,
+"Yablonets Storm"
+],
+"HKR": [
+"Hradets Dorukları",
+null,
+"Hradets Peaks"
+],
+"TEP": [
+"Tepliçe Dalgaları",
+null,
+"Tepliçe Waves"
+],
+"LEG2": [
+"Varşova Ufku",
+"VAR",
+"Varşova Horizon"
+],
+"LPO": [
+"Poznan Esintisi",
+null,
+"Poznan Breeze"
+],
+"RAK": [
+"Çenstohova Gücü",
+"ÇEN",
+"Çenstohova Power"
+],
+"JAG": [
+"Bialistok Zirvesi",
+"BİA",
+"Bialistok Summit"
+],
+"POG": [
+"Şçeçin Yıldızları",
+"ŞÇE",
+"Şçeçin Stars"
+],
+"LGD": [
+"Gdansk Dalgaları",
+"GDA",
+"Gdansk Waves"
+],
+"WIS": [
+"Krakov Kıvılcımları",
+null,
+"Krakov Sparks"
+],
+"CRA": [
+"Podgurze Işıkları",
+null,
+"Podgórze Lights"
+],
+"GZA": [
+"Zabje Çınarları",
+null,
+"Zabje Plane Trees"
+],
+"SLW": [
+"Vrotslav Öncüleri",
+"VRO",
+"Vrotslav Pioneers"
+],
+"PIA": [
+"Gliviçe Kometleri",
+"GLİ",
+"Gliviçe Comets"
+],
+"ZAG": [
+"Lubin Pusulası",
+"LUB",
+"Lubin Compass"
+],
+"WID": [
+"Lodz Kanatları",
+"LOD",
+"Lodz Wings"
+],
+"KOR2": [
+"Kielçe Meteorları",
+null,
+"Kielçe Meteors"
+],
+"SHK": [
+"Donetsk Yıldırımı",
+null,
+"Donetsk Thunder"
+],
+"DYK": [
+"Kiev Zirvesi",
+"KİE",
+"Kiev Summit"
+],
+"DNP": [
+"Dnipro Pusulası",
+null,
+"Dnipro Compass"
+],
+"ZOR": [
+"Luhansk Işıkları",
+null,
+"Luhansk Lights"
+],
+"POL2": [
+"Poltava Kometleri",
+null,
+"Poltava Comets"
+],
+"KRV": [
+"Krivbas Ateşi",
+null,
+"Krivbas Flame"
+],
+"OLX": [
+"Oleksandriya Dalgaları",
+null,
+"Oleksandriya Waves"
+],
+"VRS": [
+"Rivne Rüzgarı",
+"RİV",
+"Rivne Wind"
+],
+"KOL": [
+"Kovalivka Yolcuları",
+null,
+"Kovalivka Voyagers"
+],
+"RUK": [
+"Lviv Akıncıları",
+null,
+"Lviv Raiders"
+],
+"OBO": [
+"Podil Kanatları",
+"POD",
+"Podil Wings"
+],
+"KAR": [
+"Galiçya Meteorları",
+null,
+"Galicia Meteors"
 ]
 }

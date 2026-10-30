@@ -1,0 +1,702 @@
+{
+"FNK": [
+"Kadıköy Kanaryaları",
+"KDK",
+"Kadıköy Canaries"
+],
+"BJK": [
+"Dolmabahçe Kartalları",
+"DBK",
+"Dolmabahçe Eagles"
+],
+"BSK": [
+"Başakkent Baykuşları",
+null,
+"Başakkent Owls"
+],
+"LIV": [
+"Mersey Kızılları",
+"MRK",
+"Mersey Reds"
+],
+"EVE": [
+"Mersey Mavileri",
+"MRM",
+"Mersey Blues"
+],
+"ARS": [
+"Highbury Topçuları",
+"HIG",
+"Highbury Gunners"
+],
+"CHE": [
+"Kensington Mavileri",
+"KEN",
+"Kensington Blues"
+],
+"AVL": [
+"Birmingham Aslanları",
+"BRM",
+"Birmingham Lions"
+],
+"FUL": [
+"Batı Londra Beyazları",
+"BLW",
+"West London Whites"
+],
+"NFO": [
+"Notingem Okçuları",
+null,
+"Nottingham Archers"
+],
+"CRY": [
+"Güney Londra Kartalları",
+"GLK",
+"South London Eagles"
+],
+"RMA": [
+"Madrid Beyazları",
+"MDB",
+"Madrid Whites"
+],
+"BAR": [
+"Katalan Mavi-Kırmızıları",
+"KAT",
+"Catalan Blue-Reds"
+],
+"ATM": [
+"Madrid Kızıl-Beyazları",
+"MKB",
+"Madrid Red-Whites"
+],
+"ATH": [
+"Bilbao Aslanları",
+"BIL",
+"Bilbao Lions"
+],
+"RSO": [
+"Donostia Mavi-Beyazları",
+"DON",
+"Donostia Blue-Whites"
+],
+"BET": [
+"Sevilya Yeşil-Beyazları",
+"SYB",
+"Sevilla Green-Whites"
+],
+"SEV": [
+"Sevilya Kırmızı-Beyazları",
+"SKB",
+"Sevilla Red-Whites"
+],
+"GIR": [
+"Jirona Kırmızı-Beyazları",
+"JIR",
+"Girona Red-Whites"
+],
+"CEL": [
+"Vigo Gökmavileri",
+"VIG",
+"Vigo Sky Blues"
+],
+"OSA": [
+"Pamplona Kırmızıları",
+"PAM",
+"Pamplona Reds"
+],
+"RAY": [
+"Vallekas Şimşekleri",
+null,
+"Vallecas Lightning"
+],
+"ESY": [
+"Barselona Papağanları",
+"BPP",
+"Barcelona Parakeets"
+],
+"OVI": [
+"Oviedo Mavileri",
+null,
+"Oviedo Blues"
+],
+"DEP": [
+"Korunya Mavi-Beyazları",
+"KRN",
+"Coruña Blue-Whites"
+],
+"SPG": [
+"Hihon Kırmızı-Beyazları",
+"HIH",
+"Gijón Red-Whites"
+],
+"RSA": [
+"Santander Yeşil-Beyazları",
+"STD",
+"Santander Green-Whites"
+],
+"BAY": [
+"Münih Kızılları",
+"MÜN",
+"Munich Reds"
+],
+"LEV": [
+"Leverkuzen Kırmızı-Siyahları",
+"LEV",
+"Leverkusen Red-Blacks"
+],
+"BVB": [
+"Dortmund Sarı-Siyahları",
+"DOR",
+"Dortmund Yellow-Blacks"
+],
+"TSG": [
+"Hoffenhaym Mavileri",
+"HOF",
+"Hoffenheim Blues"
+],
+"SVW": [
+"Bremen Yeşil-Beyazları",
+"BYB",
+"Bremen Green-Whites"
+],
+"BSC": [
+"Berlin Mavi-Beyazları",
+"BMB",
+"Berlin Blue-Whites"
+],
+"F95": [
+"Düseldorf Kırmızı-Beyazları",
+"DÜS",
+"Düsseldorf Red-Whites"
+],
+"DSC": [
+"Bilefeld Mavileri",
+"BIE",
+"Bielefeld Blues"
+],
+"JRG": [
+"Regensburk Kırmızıları",
+"RGK",
+"Regensburg Reds"
+],
+"INT": [
+"Milano Mavi-Siyahları",
+"MMS",
+"Milano Blue-Blacks"
+],
+"MIL": [
+"Milano Kırmızı-Siyahları",
+"MKS",
+"Milano Red-Blacks"
+],
+"JUV": [
+"Torino Zebraları",
+"ZEB",
+"Torino Zebras"
+],
+"UDI": [
+"Udine Zebraları",
+"UDN",
+"Udine Zebras"
+],
+"GEN": [
+"Cenova Griffonları",
+"CEN",
+"Genova Griffins"
+],
+"CRE": [
+"Kremona Grileri",
+"KRE",
+"Cremona Greys"
+],
+"SMP": [
+"Cenova Denizcileri",
+"CND",
+"Genova Mariners"
+],
+"SAL": [
+"Salerno Denizatları",
+"SLR",
+"Salerno Seahorses"
+],
+"PSG": [
+"Paris Kırmızı-Mavileri",
+"PRS",
+"Paris Red-Blues"
+],
+"OM": [
+"Marsilya Mavi-Beyazları",
+"MRS",
+"Marseille Blue-Whites"
+],
+"RED": [
+"Saint-Ouen Yeşilleri",
+"SOY",
+"Saint-Ouen Greens"
+],
+"AJX": [
+"Amsterdam Kırmızı-Beyazları",
+"AKB",
+"Amsterdam Red-Whites"
+],
+"FEY": [
+"Rotterdam Liman Kulübü",
+"ROT",
+"Rotterdam Harbour Club"
+],
+"GAE": [
+"Deventer Kartalları",
+"DEV",
+"Deventer Eagles"
+],
+"SPR": [
+"Spangen Kırmızı-Beyazları",
+"SPA",
+"Spangen Red-Whites"
+],
+"FSI": [
+"Sittart Sarı-Yeşilleri",
+"SIT",
+"Sittard Yellow-Greens"
+],
+"HER": [
+"Almelo Siyah-Beyazları",
+"ALS",
+"Almelo Black-Whites"
+],
+"WIL": [
+"Tilburg Kırmızı-Beyazları",
+"TIL",
+"Tilburg Red-Whites"
+],
+"RKC": [
+"Valvayk Sarı-Mavileri",
+"VVK",
+"Waalwijk Yellow-Blues"
+],
+"VIT": [
+"Arnem Sarı-Siyahları",
+"ARN",
+"Arnhem Yellow-Blacks"
+],
+"EXC": [
+"Kralingen Kırmızı-Siyahları",
+"KRA",
+"Kralingen Red-Blacks"
+],
+"SPL": [
+"Lizbon Aslanları",
+"LZA",
+"Lisbon Lions"
+],
+"CAS": [
+"Belem Bordoları",
+"BLM",
+"Belém Maroons"
+],
+"GIL": [
+"Barselos Horozları",
+"BHZ",
+"Barcelos Roosters"
+],
+"MOR": [
+"Moreira Yeşilleri",
+null,
+"Moreira Greens"
+],
+"NAS": [
+"Funşal Kırmızı-Beyazları",
+"FUN",
+"Funchal Red-Whites"
+],
+"BOA": [
+"Porto Damalıları",
+"PDM",
+"Porto Checkers"
+],
+"EAM": [
+"Amadora Yıldızları",
+"AMA",
+"Amadora Stars"
+],
+"FAR": [
+"Faro Martıları",
+"FAR",
+"Faro Gulls"
+],
+"FLA": [
+"Rio Kara-Kızılları",
+"RKK",
+"Rio Red-Blacks"
+],
+"PLM": [
+"Pompeia Yeşilleri",
+"POM",
+"Pompeia Greens"
+],
+"CRN": [
+"Paulista Siyah-Beyazları",
+"PSB",
+"Paulista Black-Whites"
+],
+"FLU": [
+"Rio Üç Renkliler",
+"RÜR",
+"Rio Tricolours"
+],
+"GRM": [
+"Porto Alegre Ölümsüzleri",
+"PAÖ",
+"Porto Alegre Immortals"
+],
+"IBR": [
+"Porto Alegre Kırmızıları",
+"PAK",
+"Porto Alegre Reds"
+],
+"CAM": [
+"Belo Horizonte Horozları",
+"BHH",
+"Belo Horizonte Roosters"
+],
+"CRU": [
+"Mineyro Tilkileri",
+"MİN",
+"Mineiro Foxes"
+],
+"VAS": [
+"Rio Denizcileri",
+"RDZ",
+"Rio Mariners"
+],
+"CAP": [
+"Kuritiba Kasırgası",
+"KUR",
+"Curitiba Hurricane"
+],
+"JVD": [
+"Kaksiyas Yeşilleri",
+"KAK",
+"Caxias Greens"
+],
+"VTB": [
+"Salvador Kırmızı-Siyahları",
+"SLV",
+"Salvador Red-Blacks"
+],
+"RIV": [
+"Buenos Aires Milyonerleri",
+"BAM",
+"Buenos Aires Millionaires"
+],
+"BJR": [
+"Riachuelo Mavi-Sarıları",
+"RMS",
+"Riachuelo Blue-Golds"
+],
+"RAC": [
+"Avellaneda Akademisyenleri",
+"AVA",
+"Avellaneda Academics"
+],
+"IND": [
+"Avellaneda Kırmızıları",
+"AVK",
+"Avellaneda Reds"
+],
+"SLO": [
+"Boedo Azizleri",
+"BOE",
+"Boedo Saints"
+],
+"ELP": [
+"La Plata Öğrencileri",
+"LPÖ",
+"La Plata Students"
+],
+"VEL": [
+"Liniers Mavi-Beyazları",
+"LIN",
+"Liniers Blue-Whites"
+],
+"TAL": [
+"Kordoba Atölyecileri",
+"KOA",
+"Córdoba Workshop Men"
+],
+"NOB": [
+"Rosario Kırmızı-Siyahları",
+"RKS",
+"Rosario Red-Blacks"
+],
+"ARJ": [
+"Paternal Kırmızıları",
+"PAT",
+"Paternal Reds"
+],
+"HUR": [
+"Parque Patricios Balonları",
+"PPB",
+"Parque Patricios Balloons"
+],
+"DEF": [
+"Varela Turuncuları",
+"DFV",
+"Varela Oranges"
+],
+"GOD": [
+"Mendoza Tombikleri",
+"MEN",
+"Mendoza Chubbies"
+],
+"PLA": [
+"Vicente Lopez Kalamarları",
+"VLK",
+"Vicente López Squids"
+],
+"BEL": [
+"Kordoba Korsanları",
+"KKR",
+"Córdoba Pirates"
+],
+"UNI": [
+"Santa Fe Kırmızı-Beyazları",
+"SFE",
+"Santa Fe Red-Whites"
+],
+"STL": [
+"Liej Kızılları",
+"LİJ",
+"Liège Reds"
+],
+"CEB": [
+"Brüj Yeşil-Siyahları",
+"BYS",
+"Bruges Green-Blacks"
+],
+"LAG": [
+"Los Anjeles Yıldızları",
+"LAY",
+"Los Angeles Stars"
+],
+"NYB": [
+"Hudson Boğaları",
+"HUD",
+"Hudson Bulls"
+],
+"SEA": [
+"Sietıl Dalgaları",
+"SİE",
+"Seattle Waves"
+],
+"CMB": [
+"Kolombus Sarıları",
+"KLS",
+"Columbus Yellows"
+],
+"PTB": [
+"Portlant Yeşilleri",
+"PTL",
+"Portland Greens"
+],
+"VWC": [
+"Vankuver Mavileri",
+"VKM",
+"Vancouver Blues"
+],
+"HOU": [
+"Hyuston Turuncuları",
+"HYU",
+"Houston Oranges"
+],
+"ATU": [
+"Atlanta Kırmızı-Siyahları",
+"ATL",
+"Atlanta Red-Blacks"
+],
+"PHI": [
+"Filadelfiya Mavileri",
+"FİL",
+"Philadelphia Blues"
+],
+"HIL": [
+"Riyad Mavileri",
+"RYM",
+"Riyadh Blues"
+],
+"NSR": [
+"Riyad Sarıları",
+"RYS",
+"Riyadh Yellows"
+],
+"ITD": [
+"Cidde Kaplanları",
+"CKP",
+"Jeddah Tigers"
+],
+"AHL": [
+"Cidde Yeşilleri",
+"CYE",
+"Jeddah Greens"
+],
+"SHB": [
+"Riyad Beyazları",
+"RYB",
+"Riyadh Whites"
+],
+"CAZ": [
+"Mexiko Makineleri",
+"MXM",
+"Mexico Machines"
+],
+"PUM": [
+"Mexiko Öğrencileri",
+"MXÖ",
+"Mexico Students"
+],
+"ATS": [
+"Guadalahara Tilkileri",
+"GTL",
+"Guadalajara Foxes"
+],
+"VKB": [
+"Kobe Gemicileri",
+"KOB",
+"Kobe Sailors"
+],
+"GOS": [
+"Osaka Mavi-Siyahları",
+"OSK",
+"Osaka Blue-Blacks"
+],
+"URW": [
+"Saitama Kızılları",
+"SAI",
+"Saitama Reds"
+],
+"KWF": [
+"Kavasaki Gökmavileri",
+"KAV",
+"Kawasaki Sky Blues"
+],
+"YBB": [
+"Bern Sarı-Siyahları",
+"BSS",
+"Bern Yellow-Blacks"
+],
+"GCZ": [
+"Zürih Mavi-Beyazları",
+"ZMB",
+"Zurich Blue-Whites"
+],
+"SER": [
+"Cenevre Bordoları",
+"CNV",
+"Geneva Maroons"
+],
+"OLY": [
+"Pire Kırmızı-Beyazları",
+"PİR",
+"Piraeus Red-Whites"
+],
+"ARI": [
+"Selanik Sarıları",
+"SSR",
+"Thessaloniki Yellows"
+],
+"ATR": [
+"Peristeri Mavi-Beyazları",
+"PRT",
+"Peristeri Blue-Whites"
+],
+"SPR2": [
+"Prag Kızılları",
+"PRK",
+"Prague Reds"
+],
+"VPL": [
+"Plzen Kırmızı-Mavileri",
+"PLZ",
+"Plzeň Red-Blues"
+],
+"BAN2": [
+"Ostrava Madencileri",
+null,
+"Ostrava Miners"
+],
+"SLL": [
+"Liberets Mavi-Beyazları",
+"LİB",
+"Liberec Blue-Whites"
+],
+"SIG": [
+"Olomots Mavileri",
+"OLO",
+"Olomouc Blues"
+],
+"LEG2": [
+"Varşova Yeşilleri",
+"VRŞ",
+"Warsaw Greens"
+],
+"RAK": [
+"Çenstohova Kırmızı-Mavileri",
+"ÇEN",
+"Częstochowa Red-Blues"
+],
+"JAG": [
+"Bialistok Sarı-Kırmızıları",
+"BİA",
+"Białystok Yellow-Reds"
+],
+"POG": [
+"Şçeçin Bordo-Mavileri",
+"ŞÇE",
+"Szczecin Maroon-Blues"
+],
+"LGD": [
+"Gdansk Yeşil-Beyazları",
+"GDA",
+"Gdańsk Green-Whites"
+],
+"SLW": [
+"Vrotslav Yeşilleri",
+"VRO",
+"Wrocław Greens"
+],
+"PIA": [
+"Gliviçe Mavi-Kırmızıları",
+"GLİ",
+"Gliwice Blue-Reds"
+],
+"ZAG": [
+"Lubin Madencileri",
+"LUB",
+"Lubin Miners"
+],
+"WID": [
+"Lodz Kırmızıları",
+"LOD",
+"Łódź Reds"
+],
+"DYK": [
+"Kiev Beyaz-Mavileri",
+"KBM",
+"Kyiv White-Blues"
+],
+"VRS": [
+"Rivne Yeşil-Beyazları",
+"RİV",
+"Rivne Green-Whites"
+],
+"OBO": [
+"Kiev Kıyısı",
+"KKY",
+"Kyiv Riverside"
+],
+"TOT": [
+"Kuzey Londra Horozları",
+"KLH",
+"North London Roosters"
+]
+}

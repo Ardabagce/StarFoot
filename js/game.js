@@ -38,21 +38,21 @@ const Game = {
   },
   save() {
     try {
-      if (Game.state && !Game.state.nf) Game.state.nf = 1;
+      if (Game.state && (Game.state.nf || 0) < 2) Game.state.nf = 2;
       Store.write(Game.key(Game.slot), JSON.stringify(Game.state, Game.packRoster));
       // ana menü için küçük özet (büyük kaydı açmadan listelenir)
       const s = Game.state, p = s && s.player, c = s && s.world && s.world.clubs && s.world.clubs[s.clubId];
-      if (p) Store.put(Game.sumKey(Game.slot), JSON.stringify({ n: p.name + ' ' + p.surname, a: p.age, c: c ? c.name : '', y: s.season ? s.season.year : '', nf: 1 }));
+      if (p) Store.put(Game.sumKey(Game.slot), JSON.stringify({ n: p.name + ' ' + p.surname, a: p.age, c: c ? c.name : '', y: s.season ? s.season.year : '', nf: 2 }));
     } catch (e) { /* depolama yok */ }
   },
   sumKey(i) { return 'starfoot_sum_' + i; },
   // slot özeti: { n: ad soyad, a: yaş, c: kulüp, y: yıl } ya da null
   summary(i) {
-    try { const j = localStorage.getItem(Game.sumKey(i)); if (j && localStorage.getItem(Game.key(i))) { const o = JSON.parse(j); return o.nf || typeof NameFix === 'undefined' ? o : JSON.parse(NameFix.text(j)); } } catch (e) { /* yok */ }
+    try { const j = localStorage.getItem(Game.sumKey(i)); if (j && localStorage.getItem(Game.key(i))) { const o = JSON.parse(j); return o.nf >= 2 || typeof NameFix === 'undefined' ? o : JSON.parse(NameFix.text(j)); } } catch (e) { /* yok */ }
     const d = Game.load(i);
     if (!d || !d.player) return null;
     const c = d.world && d.world.clubs ? d.world.clubs[d.clubId] : null;
-    const o = { n: d.player.name + ' ' + d.player.surname, a: d.player.age, c: c ? c.name : '', y: d.season ? d.season.year : '', nf: 1 };
+    const o = { n: d.player.name + ' ' + d.player.surname, a: d.player.age, c: c ? c.name : '', y: d.season ? d.season.year : '', nf: 2 };
     Store.put(Game.sumKey(i), JSON.stringify(o));
     return o;
   },
@@ -66,11 +66,11 @@ const Game = {
       if (!raw) return null;
       let d = JSON.parse(raw, Game.unpackRoster);
       // 1.0.12: gerçek kişilere benzeyen isimler kurgusal karşılıklarıyla değişti; eski kayıtlar bir kez taşınır
-      if (d && !d.nf && typeof NameFix !== 'undefined') {
+      if (d && (d.nf || 0) < 2 && typeof NameFix !== 'undefined') {
         d = JSON.parse(NameFix.text(raw), Game.unpackRoster);
         const cl = d && d.world && d.world.clubs;
         if (cl) CLUB_LIST.forEach(([id, n, sh]) => { if (cl[id] && cl[id].name === n) cl[id].short = sh; });
-        if (d) d.nf = 1;
+        if (d) { Edit.fixPosts(d); d.nf = 2; }
       }
       return d;
     } catch (e) { return null; }

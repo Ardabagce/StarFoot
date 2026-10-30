@@ -257,44 +257,44 @@
 3812|Jejak Para Legenda
 3813|Jalan legenda
 3814|Si Penyihir Kecil
-3815|Kamu lahir di Rosario. Semua kagum dengan aksimu bersama bola, tapi tubuhmu jauh lebih pendek dari anak seusiamu dan butuh terapi pertumbuhan. Katalan Mavi-Kırmızıları menanggung biayanya dan membawamu menyeberangi samudra ke akademi mereka di usia 13 tahun.
+3815|Kamu lahir di Rosario. Semua kagum dengan aksimu bersama bola, tapi tubuhmu jauh lebih pendek dari anak seusiamu dan butuh terapi pertumbuhan. Barselona Kanatları menanggung biayanya dan membawamu menyeberangi samudra ke akademi mereka di usia 13 tahun.
 4023|Akademi {}
 3820|Terapi pertumbuhannya berhasil! Semua orang di akademi membicarakanmu.
 3823|Turnamen besar pertamamu sudah dekat. Nomor 10 legendaris negaramu memperkenalkanmu sebagai "pewarisku".
-3826|Klub yang kamu bela bertahun-tahun sedang krisis keuangan. Paris Kırmızı-Mavileri datang mengetuk: petualangan baru?
+3826|Klub yang kamu bela bertahun-tahun sedang krisis keuangan. Paris Rüzgarı datang mengetuk: petualangan baru?
 3829|Di tahun-tahun akhir kariermu, tawaran kejutan datang dari seberang samudra: Miami.
 3830|Badai Madeira
 3831|Kamu lahir di Pulau Madeira. Kamu anak yang paling rajin berlatih dan menangis saat kalah. Di usia 12 tahun kamu pergi sendirian ke daratan, ke akademi Sporting Lisbon.
 3835|Muncul masalah irama jantung, tapi operasi kecil mengatasinya. Kini tak ada yang bisa menghentikanmu.
 3838|Kamu mengobrak-abrik pertahanan Manchester Reds di laga uji coba. Manajer mereka langsung menginginkanmu!
-3841|Madrid Beyazları menginginkanmu dengan biaya transfer rekor dunia. Saatnya memakai seragam putih?
-3844|Torino Zebraları menawarkan tantangan baru: taklukkan Italia juga.
+3841|Madrid Pusulası menginginkanmu dengan biaya transfer rekor dunia. Saatnya memakai seragam putih?
+3844|Piemonte Kometleri menawarkan tantangan baru: taklukkan Italia juga.
 3845|Riyadh Nassr datang dengan tawaran gaji terbesar dalam kariermu.
 3846|Penyihir Murah Senyum
 3847|Kamu tumbuh bermain di jalanan Porto Alegre, di pantai, dan di lapangan futsal. Katanya di usia 13 tahun kamu mencetak 23 gol dalam satu laga. Akademi Gremio sudah lama merekrutmu.
 3851|Di final negara bagian kamu membuat legenda negeri menari dengan giringanmu. Seluruh Brasil kini tahu namamu.
-3854|Paris Kırmızı-Mavileri membuka pintu Eropa untukmu.
-3855|Katalan Mavi-Kırmızıları ingin kamu jadi wajah proyek baru mereka. Stadion menantimu!
-3858|Tawaran dari Milano Kırmızı-Siyahları: babak baru di Italia.
+3854|Paris Rüzgarı membuka pintu Eropa untukmu.
+3855|Barselona Kanatları ingin kamu jadi wajah proyek baru mereka. Stadion menantimu!
+3858|Tawaran dari Brera Esintisi: babak baru di Italia.
 3859|Flamengo memanggilmu pulang ke kampung halaman.
 3860|Sang Maestro
 3861|Kamu tumbuh di kawasan La Castellane, Marseille. Saat bola di kakimu, waktu seakan melambat. Sebuah akademi di pesisir selatan menemukanmu di usia 14 tahun.
 3865|Bordeaux Girondins ingin menjadikanmu bintang di panggung profesional.
-3866|Torino Zebraları memilihmu untuk membangun lini tengah terbaik Eropa.
+3866|Piemonte Kometleri memilihmu untuk membangun lini tengah terbaik Eropa.
 3867|Ini tahun Kejuaraan Dunia di negaramu sendiri. Seluruh negeri menggantungkan harapan padamu.
-3870|Madrid Beyazları datang untuk transfer termahal di dunia.
+3870|Madrid Pusulası datang untuk transfer termahal di dunia.
 3871|Sang Fenomena
 3872|Di pinggiran Rio, kamu tetap berlari ke latihan bahkan saat tak punya ongkos bus. Cruzeiro Foxes merekrutmu ke akademi di usia 14 tahun. Kecepatan dan penyelesaianmu sudah melegenda.
 3876|Eindhoven Lights ingin membawamu ke Eropa. Usiamu baru 18 tahun.
-3879|Semusim bersama Katalan Mavi-Kırmızıları: semua ingin melihat larimu yang tak terhentikan.
-3880|Milano Mavi-Siyahları mengajukan tawaran rekor dunia.
+3879|Semusim bersama Barselona Kanatları: semua ingin melihat larimu yang tak terhentikan.
+3880|Milano Çınarları mengajukan tawaran rekor dunia.
 3881|Cedera lutut parah! Dokter memperkirakan pemulihan yang panjang.
-3884|Setelah comeback luar biasamu, Madrid Beyazları ingin memasukkanmu ke jajaran Galácticos.
+3884|Setelah comeback luar biasamu, Madrid Pusulası ingin memasukkanmu ke jajaran Galácticos.
 3899|Si Kura-kura
 3900|Kamu tumbuh di Bondy, pinggiran Paris. Dinding kamarmu penuh poster para idolamu. Monaco Princes merekrutmu ke akademi di usia 14 tahun: kecepatanmu luar biasa.
-3904|Paris Kırmızı-Mavileri mengajukan tawaran rekor agar kamu pulang.
+3904|Paris Rüzgarı mengajukan tawaran rekor agar kamu pulang.
 3905|Kamu berangkat ke Kejuaraan Dunia di usia 19 tahun. Dunia bersiap membicarakan kecepatanmu.
-3908|Mimpi masa kecilmu, Madrid Beyazları, akhirnya datang.
+3908|Mimpi masa kecilmu, Madrid Pusulası, akhirnya datang.
 4000|Raih Bintang Emas {} kali
 3980|Raih Piala Champions Eropa {} kali
 3981|Raih Piala Federasi Eropa {} kali

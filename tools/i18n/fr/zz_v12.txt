@@ -70,3 +70,4 @@
 4841|{} clubs et {} joueurs chargés. Touche Enregistrer pour appliquer.
 4833|Tous les noms sont réinitialisés. Touche Enregistrer pour appliquer.
 4835|Modifie les noms des clubs et des joueurs comme tu veux ; partage ton fichier avec tes amis.
+4853|Application…

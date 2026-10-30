@@ -84,27 +84,40 @@ const Edit = {
     });
   },
 
-  // kayıtlı kariyerleri yeni isimlere taşı: metin değişimi + kulüp kısaltmaları
-  migrateSaves(map, clubFix) {
-    const keys = Object.keys(map);
-    if (!keys.length && !Object.keys(clubFix).length) return;
+  // sosyal medya gönderileri kulüp kısaltmasını ayrıca saklar: güncel kulüp bilgisiyle eşitle
+  fixPosts(d) {
+    const cl = d && d.world && d.world.clubs, so = d && d.player && d.player.social;
+    if (!cl || !so || !Array.isArray(so.posts)) return;
+    so.posts.forEach((x) => { const c = x.cid && cl[x.cid]; if (c) x.short = c.short; });
+  },
+  // kayıtlı kariyerleri yeni isimlere taşı: metin değişimi + kulüp kısaltmaları (kare kare, ekran donmasın)
+  async migrateSaves(map, clubFix) {
+    const keys = Object.keys(map), cf = Object.keys(clubFix).length;
+    if (!keys.length && !cf) return;
     const rx = NameRx.build(keys);
+    const tick = () => new Promise((r) => setTimeout(r, 16));
     if (Game.state) Game.save();
-    [0, 1, 2, 3, 4, 'wc', 'lp', 'legends'].forEach((i) => {
+    for (const i of [0, 1, 2, 3, 4, 'wc', 'lp', 'legends']) {
       const k = Game.key(i);
       let raw = null;
       try { raw = Store.read(k); } catch (e) { /* yok */ }
-      if (!raw) return;
-      raw = NameRx.run(raw, rx, map);
-      try {
-        const d = JSON.parse(raw);
-        const cl = d && d.world && d.world.clubs;
-        if (cl) Object.entries(clubFix).forEach(([id, [n, s]]) => { if (cl[id]) { cl[id].name = n; cl[id].short = s; } });
-        raw = JSON.stringify(d);
-      } catch (e) { /* metin değişimi yeter */ }
-      Store.write(k, raw);
-      try { localStorage.removeItem(Game.sumKey(i)); } catch (e) { /* yok */ }
-    });
+      if (!raw) continue;
+      await tick();
+      const nr = rx ? NameRx.run(raw, rx, map) : raw;
+      let out = nr;
+      if (cf) {
+        await tick();
+        try {
+          const d = JSON.parse(nr);
+          const cl = d && d.world && d.world.clubs;
+          if (cl) Object.entries(clubFix).forEach(([id, [n, s]]) => { if (cl[id]) { cl[id].name = n; cl[id].short = s; } });
+          Edit.fixPosts(d);
+          out = JSON.stringify(d);
+        } catch (e) { /* metin değişimi yeter */ }
+      }
+      if (out !== raw) { Store.write(k, out); try { localStorage.removeItem(Game.sumKey(i)); } catch (e) { /* yok */ } }
+    }
+    if (typeof SocialArt !== 'undefined' && SocialArt.cache) SocialArt.cache.clear();
     if (Game.state) Game.state = Game.load(Game.slot);
   },
   // yeni düzenlemeyi kaydet ve her yere uygula
@@ -121,8 +134,7 @@ const Edit = {
     Object.keys(nd.p).forEach((k) => { if (!nd.p[k] || nd.p[k] === k) delete nd.p[k]; });
     Edit.set(nd);
     Edit.applyData(nd);
-    Edit.migrateSaves(map, clubFix);
-    return Object.keys(map).length + Object.keys(clubFix).length;
+    return Edit.migrateSaves(map, clubFix).then(() => Object.keys(map).length + Object.keys(clubFix).length);
   },
 
   // ---------- Paylaşım dosyası ----------
@@ -160,8 +172,12 @@ const Edit = {
     requestAnimationFrame(() => Edit.el.classList.add('on'));
   },
   close() { if (Edit.el) Edit.el.classList.remove('on'); },
-  save() {
-    const n = Edit.commit(Edit.draft);
+  async save() {
+    const btn = document.getElementById('ed-save');
+    if (btn) { if (btn.disabled) return; btn.disabled = true; btn.textContent = 'Uygulanıyor…'; }
+    let n = 0;
+    try { n = await Edit.commit(Edit.draft); } catch (e) { /* yok */ }
+    if (btn) { btn.disabled = false; btn.textContent = 'Kaydet'; }
     Edit.close();
     Game.toast(n ? 'Değişiklikler kaydedildi ve kariyerlerine uygulandı.' : 'Değişiklik yok.', n ? 'good' : '');
     if (Game.state && Game.render) Game.render(); else if (!Game.state && Game.init) Game.init();

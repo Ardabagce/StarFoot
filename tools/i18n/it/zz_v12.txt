@@ -70,3 +70,4 @@
 4841|{} club e {} giocatori caricati. Tocca Salva per applicare.
 4833|Tutti i nomi sono stati ripristinati. Tocca Salva per applicare.
 4835|Cambia i nomi di club e giocatori come vuoi; condividi il tuo file di modifica con gli amici.
+4853|Applicazione…

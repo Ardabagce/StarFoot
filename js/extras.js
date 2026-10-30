@@ -601,7 +601,7 @@ const Social = {
     const p = Game.p, so = Social.ensure(p), s = Game.state;
     const likes = Math.round(so.followers * U.rand(0.05, 0.12) * boost) + U.randi(1, 9);
     const pool = SOCIAL_COMMENTS[kind] || SOCIAL_COMMENTS.daily;
-    const fans = ['futbolsever', 'tribunsesi', 'golkrali', 'altyapi_avcisi', 'mahallemizin_yildizi', 'sahakenari', 'cimbomkalbim', 'kanarya1907', 'kartalgozu', 'taraftar_ayse', 'deden_gururlu'];
+    const fans = ['futbolsever', 'tribunsesi', 'golkrali', 'altyapi_avcisi', 'mahallemizin_yildizi', 'sahakenari', 'tribun_kalbi', 'sari_atki', 'kartopu_7', 'taraftar_ayse', 'deden_gururlu'];
     const comments = U.shuffle(pool).slice(0, 2).map((c) => ({ u: U.pick(fans) + U.randi(1, 99), t: c }));
     const club = Game.inStreet() ? null : Game.club();
     const scene = SocialArt.sceneFor(kind, text);

@@ -257,44 +257,44 @@
 3812|Tras los pasos de las leyendas
 3813|Camino de leyenda
 3814|El Pequeño Mago
-3815|Naciste en Rosario. Todos admiran lo que haces con el balón, pero eres mucho más bajo que los chicos de tu edad y necesitas un tratamiento de crecimiento. Katalan Mavi-Kırmızıları lo asumió y te llevó a su academia, al otro lado del océano, con 13 años.
+3815|Naciste en Rosario. Todos admiran lo que haces con el balón, pero eres mucho más bajo que los chicos de tu edad y necesitas un tratamiento de crecimiento. Barselona Kanatları lo asumió y te llevó a su academia, al otro lado del océano, con 13 años.
 4023|Cantera del {}
 3820|¡El tratamiento de crecimiento funciona! En la academia todos hablan de ti.
 3823|Se acerca tu primer gran torneo. El legendario 10 de tu país te presentó como "mi heredero".
-3826|El club en el que jugaste tantos años está en crisis económica. El Paris Kırmızı-Mavileri llama a tu puerta: ¿una nueva aventura?
+3826|El club en el que jugaste tantos años está en crisis económica. El Paris Rüzgarı llama a tu puerta: ¿una nueva aventura?
 3829|En los últimos años de tu carrera llega una oferta sorpresa del otro lado del océano: Miami.
 3830|La Tormenta de Madeira
 3831|Naciste en la isla de Madeira. Eras el niño que más entrenaba y que lloraba al perder. Con 12 años te fuiste solo al continente, a la academia del Sporting Lisboa.
 3835|Apareció un problema de ritmo cardíaco, pero lo superaste con una pequeña operación. Ya nada puede detenerte.
 3838|Destrozaste a la defensa del Manchester Reds en un amistoso. ¡Su entrenador te quiere ya!
-3841|El Madrid Beyazları te quiere con un traspaso récord mundial. ¿Ha llegado la hora de vestir de blanco?
-3844|La Torino Zebraları te ofrece un nuevo reto: conquistar también Italia.
+3841|El Madrid Pusulası te quiere con un traspaso récord mundial. ¿Ha llegado la hora de vestir de blanco?
+3844|La Piemonte Kometleri te ofrece un nuevo reto: conquistar también Italia.
 3845|El Riyadh Nassr llama a tu puerta con la mayor oferta salarial de tu carrera.
 3846|El Mago Sonriente
 3847|Creciste jugando en las calles de Porto Alegre, en la playa y en el fútbol sala. Dicen que con 13 años marcaste 23 goles en un partido. La academia del Gremio te fichó hace tiempo.
 3851|En la final estatal hiciste bailar a la leyenda del país con tus regates. Todo Brasil aprendió tu nombre.
-3854|El Paris Kırmızı-Mavileri te abre las puertas de Europa.
-3855|El Katalan Mavi-Kırmızıları te quiere como cara de su nuevo proyecto. ¡El estadio te espera!
-3858|Oferta del Milano Kırmızı-Siyahları: una nueva etapa en Italia.
+3854|El Paris Rüzgarı te abre las puertas de Europa.
+3855|El Barselona Kanatları te quiere como cara de su nuevo proyecto. ¡El estadio te espera!
+3858|Oferta del Brera Esintisi: una nueva etapa en Italia.
 3859|El Flamengo te llama de vuelta a casa.
 3860|El Maestro
 3861|Creciste en el barrio de La Castellane, en Marsella. Cuando tienes el balón, el tiempo parece detenerse. Una academia de la costa sur te descubrió con 14 años.
 3865|El Bordeaux Girondins quiere convertirte en estrella del fútbol profesional.
-3866|La Torino Zebraları te eligió para construir el mejor centro del campo de Europa.
+3866|La Piemonte Kometleri te eligió para construir el mejor centro del campo de Europa.
 3867|Es el año del Campeonato Mundial que organiza tu país. Todo el país ha puesto sus esperanzas en ti.
-3870|El Madrid Beyazları llama a tu puerta para el fichaje más caro del mundo.
+3870|El Madrid Pusulası llama a tu puerta para el fichaje más caro del mundo.
 3871|El Fenómeno
 3872|En los suburbios de Río corrías al entrenamiento incluso los días en que no tenías para el autobús. El Cruzeiro Foxes te fichó para su academia con 14 años. Tu velocidad y tu definición ya son leyenda.
 3876|El Eindhoven Lights quiere llevarte a Europa. Solo tienes 18 años.
-3879|Una temporada con el Katalan Mavi-Kırmızıları: todos quieren ver tus carreras imparables.
-3880|El Milano Mavi-Siyahları hizo una oferta récord mundial.
+3879|Una temporada con el Barselona Kanatları: todos quieren ver tus carreras imparables.
+3880|El Milano Çınarları hizo una oferta récord mundial.
 3881|¡Una grave lesión de rodilla! Los médicos prevén una larga recuperación.
-3884|Tras tu espectacular regreso, el Madrid Beyazları quiere sumarte a sus Galácticos.
+3884|Tras tu espectacular regreso, el Madrid Pusulası quiere sumarte a sus Galácticos.
 3899|La Tortuga
 3900|Creciste en Bondy, en las afueras de París. Las paredes de tu habitación están llenas de pósteres de tus ídolos. El Monaco Princes te fichó para su academia con 14 años: tu velocidad es increíble.
-3904|El Paris Kırmızı-Mavileri hizo una oferta récord para que vuelvas a casa.
+3904|El Paris Rüzgarı hizo una oferta récord para que vuelvas a casa.
 3905|Vas al Campeonato Mundial con 19 años. El mundo se prepara para hablar de tu velocidad.
-3908|El sueño de tu infancia, el Madrid Beyazları, por fin llama a tu puerta.
+3908|El sueño de tu infancia, el Madrid Pusulası, por fin llama a tu puerta.
 4000|Gana la Estrella de Oro {} veces
 3980|Gana la Copa de Campeones de Europa {} veces
 3981|Gana la Copa de la Federación Europea {} veces

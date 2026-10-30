@@ -20,6 +20,9 @@ def fix_club(m):
 data = re.sub(r"\['([A-Z0-9]+)', '([^']+)', '([^']+)'(?=, '[A-Z0-9]+', \d+, '#)", fix_club, data)
 open(ROOT + 'js/data.js', 'w', encoding='utf-8').write(data)
 hist = json.load(open(D + 'clubs_old.json')) if os.path.exists(D + 'clubs_old.json') else {}
+# zincirleri kapat: en eski ad → en yeni ad
+for k, v in list(hist.items()):
+    if v in old_club: hist[k] = old_club[v]
 hist.update(old_club)
 json.dump(hist, open(D + 'clubs_old.json', 'w'), ensure_ascii=False, indent=0, sort_keys=True)
 

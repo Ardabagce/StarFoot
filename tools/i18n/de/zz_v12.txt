@@ -70,3 +70,4 @@
 4841|{} Vereine und {} Spieler geladen. Tippe auf Speichern, um sie anzuwenden.
 4833|Alle Namen zurückgesetzt. Tippe auf Speichern, um sie anzuwenden.
 4835|Ändere Vereins- und Spielernamen nach Belieben; teile deine Bearbeitungsdatei mit Freunden.
+4853|Wird angewendet…

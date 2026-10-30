@@ -70,3 +70,4 @@
 4841|{} klub dan {} pemain dimuat. Ketuk Simpan untuk menerapkan.
 4833|Semua nama dikembalikan. Ketuk Simpan untuk menerapkan.
 4835|Ubah nama klub dan pemain sesukamu; bagikan file editanmu ke teman.
+4853|Menerapkan…

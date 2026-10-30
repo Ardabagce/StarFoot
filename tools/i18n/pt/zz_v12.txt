@@ -70,3 +70,4 @@
 4841|{} clubes e {} jogadores carregados. Toque em Salvar para aplicar.
 4833|Todos os nomes foram restaurados. Toque em Salvar para aplicar.
 4835|Mude os nomes de clubes e jogadores como quiser; compartilhe seu arquivo de edição com amigos.
+4853|Aplicando…
