@@ -219,7 +219,8 @@ const Game = {
       document.getElementById('t-hof').onclick = () => Legacy.show();
     }
     // güncelleme duyurusu: oyun açılınca ana ekranda bir kez
-    setTimeout(() => { const t = document.getElementById('title'); if (!Game.state && t && !t.classList.contains('hidden') && typeof WhatsNew !== 'undefined') WhatsNew.check(); }, 700);
+    // (yalnız kayıtlı kariyeri olanlara; yeni oyuncu duyuruyu görmez)
+    setTimeout(() => { const t = document.getElementById('title'); if (!Game.state && t && !t.classList.contains('hidden') && typeof WhatsNew !== 'undefined' && [0, 1, 2, 3, 4].some((i) => Game.summary(i))) WhatsNew.check(); }, 700);
     U.$$('[data-cont]', box).forEach((b) => (b.onclick = () => {
       Game.slot = +b.dataset.cont;
       // büyük kayıt açılırken ekran donmuş gibi görünmesin: önce yükleniyor ekranı, sonra kayıt
@@ -285,6 +286,8 @@ const Game = {
     }
     Game.save();
     Game._fresh = true;
+    // ilk kariyerini açan yeni oyuncu eski güncelleme duyurusunu görmez
+    try { if (!localStorage.getItem('starfoot_whatsnew') && typeof WN_VER !== 'undefined') localStorage.setItem('starfoot_whatsnew', WN_VER); } catch (e) { /* yok */ }
     Game.enterHub();
     Game.modal(`
       <h2>Hoş geldin, ${U.esc(opts.name)}!</h2>
