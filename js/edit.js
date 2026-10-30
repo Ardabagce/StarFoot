@@ -43,14 +43,15 @@ const Edit = {
   boot() {
     if (Edit.base) return;
     const players = new Map();
-    const add = (n, nat, r, club) => { const o = players.get(n); if (!o || r > o[2]) players.set(n, [n, nat, r, club || (o && o[3]) || '']); };
+    // [isim, uyruk, güç, kulüp, mevki]
+    const add = (n, nat, r, club, pos) => { const o = players.get(n); if (!o || r > o[2]) players.set(n, [n, nat, r, club || (o && o[3]) || '', pos || (o && o[4]) || '']); else if (o && !o[4] && pos) o[4] = pos; };
     const clubs = {};
     CLUB_LIST.forEach((c) => (clubs[c[0]] = [c[1], c[2]]));
-    if (typeof LEGENDS !== 'undefined') LEGENDS.forEach(([n, , r, nat, , club]) => add(n, nat, r, club));
-    if (typeof STARS !== 'undefined') Object.entries(STARS).forEach(([club, a]) => a.forEach(([n, , r, nat]) => add(n, nat, r, club)));
-    if (typeof NATIONS !== 'undefined') NATIONS.forEach((x) => (x.stars || []).forEach((n, i) => add(n, x.code, x.rating - i, '')));
-    if (typeof WC_NATIONS !== 'undefined') WC_NATIONS.forEach((x) => (x.stars || []).forEach((n, i) => add(n, x.code, x.rating - i, '')));
-    if (typeof SQUADS !== 'undefined') Object.entries(SQUADS).forEach(([club, a]) => a.forEach(([n, , , , nat, r]) => add(n, nat, r, club)));
+    if (typeof LEGENDS !== 'undefined') LEGENDS.forEach(([n, pos, r, nat, , club]) => add(n, nat, r, club, pos));
+    if (typeof STARS !== 'undefined') Object.entries(STARS).forEach(([club, a]) => a.forEach(([n, pos, r, nat]) => add(n, nat, r, club, pos)));
+    if (typeof NATIONS !== 'undefined') NATIONS.forEach((x) => (x.stars || []).forEach((n, i) => add(n, x.code, x.rating - i, '', i < 2 ? 'FW' : '')));
+    if (typeof WC_NATIONS !== 'undefined') WC_NATIONS.forEach((x) => (x.stars || []).forEach((n, i) => add(n, x.code, x.rating - i, '', i < 2 ? 'FW' : '')));
+    if (typeof SQUADS !== 'undefined') Object.entries(SQUADS).forEach(([club, a]) => a.forEach(([n, pos, , , nat, r]) => add(n, nat, r, club, pos)));
     Edit.base = { clubs, players: [...players.values()].sort((a, b) => b[2] - a[2]) };
     Edit.applyData(Edit.get());
   },
@@ -154,7 +155,14 @@ const Edit = {
   },
 
   // ---------- Arayüz ----------
-  el: null, tab: 'clubs', league: null, q: '', draft: null, shown: 40,
+  el: null, tab: 'clubs', league: null, q: '', team: '', draft: null, shown: 40,
+  POS: { GK: ['KL', 'Kaleci'], DF: ['DF', 'Defans'], MF: ['OS', 'Orta Saha'], FW: ['FV', 'Forvet'] },
+  // oyuncunun şu anki kulübü: açık kariyerde dünyadaki kulübü, yoksa çıkış kulübü
+  where() {
+    const m = new Map(), w = Game.state && Game.state.world;
+    if (w && w.clubs) Object.values(w.clubs).forEach((c) => (c.roster || []).forEach((pl) => { if (pl.star || pl.lid != null) m.set(pl.n, c.id); }));
+    return m;
+  },
   open() {
     Edit.boot();
     Edit.draft = JSON.parse(JSON.stringify(Edit.get()));
@@ -205,14 +213,22 @@ const Edit = {
   },
   playersView() {
     const D = Edit.draft, q = Edit.q.toLocaleLowerCase('tr');
-    const all = Edit.base.players.filter((x) => !q || x[0].toLocaleLowerCase('tr').includes(q) || Edit.pn(D, x[0]).toLocaleLowerCase('tr').includes(q));
+    const here = Edit.where(), clubOf = (x) => here.get(Edit.pn(Edit.get(), x[0])) || x[3];
+    const all = Edit.base.players.filter((x) => (!Edit.team || clubOf(x) === Edit.team) && (!q || x[0].toLocaleLowerCase('tr').includes(q) || Edit.pn(D, x[0]).toLocaleLowerCase('tr').includes(q)));
     const list = all.slice(0, Edit.shown);
     const club = (id) => { const c = CLUB_LIST.find((x) => x[0] === id); return c ? c[1] : ''; };
-    const rows = list.map(([n, nat, r, cl]) => {
+    const natN = (c) => { const n = Game.nat(c); return n ? `${n.flag || ''} ${I18N.t ? I18N.t(n.name) : n.name}`.trim() : c; };
+    const pos = (p) => (Edit.POS[p] ? `<b class="ed-pos" title="${Edit.POS[p][1]}">${Edit.POS[p][0]}</b>` : '');
+    const rows = list.map((x) => {
+      const [n, nat, r, , ps] = x, cl = clubOf(x);
       const ch = D.p[n] && D.p[n] !== n;
-      return `<div class="ed-row ed-pr${ch ? ' ch' : ''}"><input class="ed-in" data-pn="${U.esc(n)}" value="${U.esc(Edit.pn(D, n))}" maxlength="32" data-noi18n aria-label="Oyuncu adı"><small data-noi18n>${U.esc(nat)} · ${r}${cl ? ' · ' + U.esc(club(cl)) : ''}${ch ? ' · ' + U.esc(n) : ''}</small>${ch ? `<button class="ed-rs" data-prs="${U.esc(n)}" aria-label="Varsayılana dön">↺</button>` : ''}</div>`;
+      return `<div class="ed-row ed-pr${ch ? ' ch' : ''}">${pos(ps)}<input class="ed-in" data-pn="${U.esc(n)}" value="${U.esc(Edit.pn(D, n))}" maxlength="32" data-noi18n aria-label="Oyuncu adı"><small><span>${U.esc(natN(nat))}</span> · ${r}${cl ? ` · <span data-noi18n>${U.esc(club(cl))}</span>` : ''}${ch ? ` · <span data-noi18n>${U.esc(n)}</span>` : ''}</small>${ch ? `<button class="ed-rs" data-prs="${U.esc(n)}" aria-label="Varsayılana dön">↺</button>` : ''}</div>`;
     }).join('');
-    return `<input class="ed-in ed-q" id="ed-q" type="search" placeholder="Oyuncu ara" value="${U.esc(Edit.q)}">
+    // takım filtresi: listede oyuncusu olan kulüpler, lige göre gruplu
+    const has = new Set(Edit.base.players.map(clubOf).filter(Boolean));
+    const opts = LEAGUES.map((l) => { const cs = CLUB_LIST.filter((c) => c[3] === l.id && has.has(c[0])); return cs.length ? `<optgroup label="${U.esc(l.name)}">${cs.map((c) => `<option value="${c[0]}"${c[0] === Edit.team ? ' selected' : ''}>${U.esc(c[1])}</option>`).join('')}</optgroup>` : ''; }).join('');
+    return `<div class="set-row"><span><b>Takım</b></span><select class="lang-sel" id="ed-tm"><option value="">Tüm takımlar</option>${opts}</select></div>
+      <input class="ed-in ed-q" id="ed-q" type="search" placeholder="Oyuncu ara" value="${U.esc(Edit.q)}">
       <div class="ed-list">${rows || '<p class="muted">Sonuç yok.</p>'}</div>
       ${all.length > list.length ? `<button class="btn btn-ghost" id="ed-more">Daha fazla göster (${all.length - list.length})</button>` : ''}`;
   },
@@ -228,6 +244,7 @@ const Edit = {
     U.$$('[data-edtab]', body).forEach((b) => (b.onclick = () => { Edit.tab = b.dataset.edtab; Edit.fill(); }));
     const D = Edit.draft, B = Edit.base;
     const lg = body.querySelector('#ed-lg'); if (lg) lg.onchange = () => { Edit.league = lg.value; Edit.fill(); };
+    const tm = body.querySelector('#ed-tm'); if (tm) tm.onchange = () => { Edit.team = tm.value; Edit.shown = 40; Edit.fill(); };
     const setC = (id) => {
       const n = Edit.clean(body.querySelector(`[data-cn="${id}"]`).value, 28), s = Edit.clean(body.querySelector(`[data-cs="${id}"]`).value, 4).toUpperCase();
       D.c[id] = [n.length >= 2 ? n : B.clubs[id][0], s.length >= 2 ? s : B.clubs[id][1]];

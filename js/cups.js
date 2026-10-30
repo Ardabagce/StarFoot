@@ -436,7 +436,7 @@ const Cups = {
     const col = NAT_COLORS[code] || ['#1d3c8f', '#ffffff'];
     const stars = Game.natStars(code);
     const roster = stars.map((name, i) => ({ n: name, pos: i < 2 ? 'FW' : 'MF', r: n.rating + 3 }));
-    while (roster.length < 14) roster.push({ n: World.genName(code === 'TUR' ? 'TR' : 'XX'), pos: U.pick(['DF', 'MF', 'DF', 'FW']), r: n.rating - 3 });
+    while (roster.length < 14) roster.push({ n: World.genName(World.natPool(code)), pos: U.pick(['DF', 'MF', 'DF', 'FW']), r: n.rating - 3 });
     return { id: code, name: n.name, rating: n.rating, c1: col[0], c2: col[1], roster };
   },
 

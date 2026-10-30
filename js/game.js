@@ -38,21 +38,21 @@ const Game = {
   },
   save() {
     try {
-      if (Game.state && (Game.state.nf || 0) < 2) Game.state.nf = 2;
+      if (Game.state && (Game.state.nf || 0) < 3) Game.state.nf = 3;
       Store.write(Game.key(Game.slot), JSON.stringify(Game.state, Game.packRoster));
       // ana menü için küçük özet (büyük kaydı açmadan listelenir)
       const s = Game.state, p = s && s.player, c = s && s.world && s.world.clubs && s.world.clubs[s.clubId];
-      if (p) Store.put(Game.sumKey(Game.slot), JSON.stringify({ n: p.name + ' ' + p.surname, a: p.age, c: c ? c.name : '', y: s.season ? s.season.year : '', nf: 2 }));
+      if (p) Store.put(Game.sumKey(Game.slot), JSON.stringify({ n: p.name + ' ' + p.surname, a: p.age, c: c ? c.name : '', y: s.season ? s.season.year : '', nf: 3 }));
     } catch (e) { /* depolama yok */ }
   },
   sumKey(i) { return 'starfoot_sum_' + i; },
   // slot özeti: { n: ad soyad, a: yaş, c: kulüp, y: yıl } ya da null
   summary(i) {
-    try { const j = localStorage.getItem(Game.sumKey(i)); if (j && localStorage.getItem(Game.key(i))) { const o = JSON.parse(j); return o.nf >= 2 || typeof NameFix === 'undefined' ? o : JSON.parse(NameFix.text(j)); } } catch (e) { /* yok */ }
+    try { const j = localStorage.getItem(Game.sumKey(i)); if (j && localStorage.getItem(Game.key(i))) { const o = JSON.parse(j); return o.nf >= 3 || typeof NameFix === 'undefined' ? o : JSON.parse(NameFix.text(j)); } } catch (e) { /* yok */ }
     const d = Game.load(i);
     if (!d || !d.player) return null;
     const c = d.world && d.world.clubs ? d.world.clubs[d.clubId] : null;
-    const o = { n: d.player.name + ' ' + d.player.surname, a: d.player.age, c: c ? c.name : '', y: d.season ? d.season.year : '', nf: 2 };
+    const o = { n: d.player.name + ' ' + d.player.surname, a: d.player.age, c: c ? c.name : '', y: d.season ? d.season.year : '', nf: 3 };
     Store.put(Game.sumKey(i), JSON.stringify(o));
     return o;
   },
@@ -66,11 +66,11 @@ const Game = {
       if (!raw) return null;
       let d = JSON.parse(raw, Game.unpackRoster);
       // 1.0.12: gerçek kişilere benzeyen isimler kurgusal karşılıklarıyla değişti; eski kayıtlar bir kez taşınır
-      if (d && (d.nf || 0) < 2 && typeof NameFix !== 'undefined') {
+      if (d && (d.nf || 0) < 3 && typeof NameFix !== 'undefined') {
         d = JSON.parse(NameFix.text(raw), Game.unpackRoster);
         const cl = d && d.world && d.world.clubs;
         if (cl) CLUB_LIST.forEach(([id, n, sh]) => { if (cl[id] && cl[id].name === n) cl[id].short = sh; });
-        if (d) { Edit.fixPosts(d); d.nf = 2; }
+        if (d) { Edit.fixPosts(d); d.nf = 3; }
       }
       return d;
     } catch (e) { return null; }
@@ -108,7 +108,7 @@ const Game = {
   teamRoster(id) { return Game.isYouth() && !Game.inStreet() ? Game.state.youth.rosters[id] : Game.state.world.clubs[id].roster; },
   // Döneme göre milli takım (güç ve varlık yıla bağlı)
   nat(code) {
-    const n = NATIONS.find((x) => x.code === code) || (typeof WC_NATIONS !== 'undefined' ? WC_NATIONS.find((x) => x.code === code) : null);
+    const n = NATIONS.find((x) => x.code === code) || (typeof WC_NATIONS !== 'undefined' ? WC_NATIONS.find((x) => x.code === code) : null) || NAT_EXTRA.find((x) => x.code === code);
     if (!n) return null;
     const year = Game.state ? Game.state.season.year : 2026;
     const era = NAT_ERA[code];
@@ -125,7 +125,7 @@ const Game = {
     const me = Game.state.player ? Player.fullName(Game.state.player) : '';
     const act = Legends.active(Game.state.world, code).sort((a, b) => b.r - a.r).slice(0, 5).map((x) => x.n).filter((x) => x !== me);
     if (act.length >= 2) return act;
-    const n = NATIONS.find((x) => x.code === code) || (typeof WC_NATIONS !== 'undefined' ? WC_NATIONS.find((x) => x.code === code) : null);
+    const n = NATIONS.find((x) => x.code === code) || (typeof WC_NATIONS !== 'undefined' ? WC_NATIONS.find((x) => x.code === code) : null) || NAT_EXTRA.find((x) => x.code === code);
     return act.concat(Game.state.season.year >= 2022 && n ? n.stars.filter((x) => !act.includes(x) && x !== me) : []).slice(0, 5);
   },
   facility() { return (0.9 + 0.35 * U.clamp((Game.club().rating - 48) / 40, 0, 1)) * Game.diff().train; },
@@ -593,7 +593,7 @@ const Game = {
     const cat = Game.intlCat(), off = Game.catOffset(cat), sfx = cat ? ' ' + cat : '';
     const mkRoster = (n) => {
       const r = cat ? [] : Game.natStars(n.code).map((name, i) => ({ n: name, pos: i < 2 ? 'FW' : 'MF', r: n.rating + 3 }));
-      while (r.length < 14) r.push({ n: World.genName(n.code === 'TUR' ? 'TR' : 'XX'), pos: U.pick(['DF', 'MF', 'DF', 'FW']), r: n.rating - 3 - off });
+      while (r.length < 14) r.push({ n: World.genName(World.natPool(n.code)), pos: U.pick(['DF', 'MF', 'DF', 'FW']), r: n.rating - 3 - off });
       return r;
     };
     const ownRoster = mkRoster(nat).filter((x) => x.n !== Player.fullName(p));
@@ -2703,7 +2703,7 @@ const Create = {
     const name = (g('cr-name').value.trim() || I18N.defName()[0]);
     const sur = (g('cr-sur').value.trim() || I18N.defName()[1]);
     const nat = g('cr-nat').value, mom = g('cr-mom').value;
-    const natName = (c) => (NATIONS.find((n) => n.code === c) || {}).name || c;
+    const natName = (c) => (Game.nat(c) || {}).name || c;
     g('pv-name').textContent = `${name} ${sur}`.toLocaleUpperCase(I18N.lang);
     g('pv-ovr').textContent = Create.ovr();
     g('pv-pos').textContent = POSITIONS[Create.pos].short;

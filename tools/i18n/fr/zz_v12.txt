@@ -71,3 +71,8 @@
 4833|Tous les noms sont réinitialisés. Touche Enregistrer pour appliquer.
 4835|Modifie les noms des clubs et des joueurs comme tu veux ; partage ton fichier avec tes amis.
 4853|Application…
+5372|Toutes les équipes
+1414|Équipe
+5373|Bulgarie
+5374|Bosnie-Herzégovine
+5375|GB

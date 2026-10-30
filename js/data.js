@@ -34,6 +34,11 @@ const NATIONS = [
 ];
 
 // Milli takım gücü dönemlere göre (on yıl başına); yoksa NATIONS içindeki değer
+// yalnız oyuncu uyruğu olarak görünen ülkeler (milli takım yarışmalarında yer almaz)
+const NAT_EXTRA = [
+  { code: 'BUL', name: 'Bulgaristan', rating: 72, flag: '🇧🇬' },
+  { code: 'BIH', name: 'Bosna Hersek', rating: 73, flag: '🇧🇦' },
+];
 const NAT_ERA = {
   TUR: { 1980: 66, 1990: 72, 2000: 80, 2010: 77, 2020: 79 },
   BRA: { 1980: 89, 1990: 89, 2000: 89, 2010: 86, 2020: 85 },

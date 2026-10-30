@@ -71,3 +71,8 @@
 4833|Tutti i nomi sono stati ripristinati. Tocca Salva per applicare.
 4835|Cambia i nomi di club e giocatori come vuoi; condividi il tuo file di modifica con gli amici.
 4853|Applicazione…
+5372|Tutte le squadre
+1414|Squadra
+5373|Bulgaria
+5374|Bosnia ed Erzegovina
+5375|POR

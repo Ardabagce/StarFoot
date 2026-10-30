@@ -291,7 +291,7 @@ const Rival = {
     }
     const p = s.player, club = Rival.pickClub();
     if (!club) return null;
-    const [nat, pool] = U.chance(0.5) ? [p.nation, (RIVAL_NATS.find(([n]) => n === p.nation) || [0, 'XX'])[1]] : U.pick(RIVAL_NATS.filter(([n]) => n !== p.nation));
+    const [nat, pool] = U.chance(0.5) ? [p.nation, (RIVAL_NATS.find(([n]) => n === p.nation) || [0, World.natPool(p.nation)])[1]] : U.pick(RIVAL_NATS.filter(([n]) => n !== p.nation));
     const ovr = Math.round(Player.overall(p) + U.randi(-1, 3));
     s.rival = { name: NAME_POOLS[pool] ? World.genName(pool) : World.genName('XX'), nat, pos: p.position, age: p.age, ovr, club: club.id, look: U.randi(20, 900), season: { g: 0, a: 0, apps: 0 }, totals: { g: 0, a: 0, apps: 0, titles: 0, ballon: 0 }, passed: false, v2: true, form: U.rand(0.9, 1.1) };
     const der = Big.derby(club.id, s.clubId);

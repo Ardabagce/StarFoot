@@ -46,7 +46,8 @@ ce = json.load(open(I + 'clubs_en.json'))
 for o in hist: ce.pop(o, None)
 for cid, (nn, ns, en) in clubs.items(): ce[nn] = en
 json.dump(ce, open(I + 'clubs_en.json', 'w'), ensure_ascii=False, indent=0)
-# kayıt taşıma tablosu (oyun açılırken eski kayıtlardaki isimleri günceller)
+# kayıt taşıma tablosu (oyun açılırken eski kayıtlardaki isimleri günceller); fix_hist: test sürümlerinde kalan ara isimler
+if os.path.exists(D + 'fix_hist.json'): M.update(json.load(open(D + 'fix_hist.json')))
 open(ROOT + 'js/namefix.js', 'w', encoding='utf-8').write(
     '// Eski sürüm kayıtlarındaki oyuncu/kulüp isimlerinin yeni (kurgusal) karşılıkları. tools/names/apply.py üretir.\n'
     'const NAME_FIX = ' + json.dumps([[base64.b64encode(k.encode()).decode(), v] for k, v in M.items() if k != v], ensure_ascii=False, separators=(',', ':')) + ';\n')

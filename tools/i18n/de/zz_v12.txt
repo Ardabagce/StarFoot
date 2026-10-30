@@ -71,3 +71,8 @@
 4833|Alle Namen zurückgesetzt. Tippe auf Speichern, um sie anzuwenden.
 4835|Ändere Vereins- und Spielernamen nach Belieben; teile deine Bearbeitungsdatei mit Freunden.
 4853|Wird angewendet…
+5372|Alle Teams
+1414|Team
+5373|Bulgarien
+5374|Bosnien und Herzegowina
+5375|TW

@@ -71,3 +71,8 @@
 4833|Semua nama dikembalikan. Ketuk Simpan untuk menerapkan.
 4835|Ubah nama klub dan pemain sesukamu; bagikan file editanmu ke teman.
 4853|Menerapkan…
+5372|Semua tim
+1414|Tim
+5373|Bulgaria
+5374|Bosnia dan Herzegovina
+5375|PK

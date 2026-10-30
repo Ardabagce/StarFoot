@@ -38,11 +38,28 @@ const Squads = {
   },
 };
 
+// isim havuzu → ülke kodu (yabancı oyuncuların uyruğu)
+const POOL_NAT = { TR: 'TUR', EN: 'ENG', ES: 'ESP', DE: 'GER', IT: 'ITA', FR: 'FRA', BR: 'BRA', NL: 'NED', PT: 'POR', AR: 'ARG', BE: 'BEL', US: 'USA', SA: 'KSA', MX: 'MEX', JP: 'JPN', GR: 'GRE', DK: 'DEN', HR: 'CRO', CZ: 'CZE', PL: 'POL', UA: 'UKR', KR: 'KOR', IR: 'IRN', UZ: 'UZB', HU: 'HUN', RO: 'ROU', AF: 'GHA', SN: 'SEN' };
+// ülke kodu → isim havuzu (havuzu olmayan ülkeler en yakın dil/bölge havuzunu kullanır)
+const NAT_POOL = Object.assign(Object.fromEntries(Object.entries(POOL_NAT).map(([p, n]) => [n, p])), {
+  URU: 'AR', COL: 'MX', ECU: 'MX', PAR: 'AR', PER: 'MX', CHI: 'AR', PAN: 'MX', CRC: 'MX', CAN: 'US', AUS: 'EN', NZL: 'EN', IRL: 'EN', SCO: 'EN', WAL: 'EN', JAM: 'EN',
+  AUT: 'DE', SUI: 'DE', SWE: 'DK', NOR: 'DK', SRB: 'HR', SVN: 'HR', BIH: 'HR', SVK: 'CZ', ALB: 'HR', GEO: 'UA', AZE: 'TR', BUL: 'HR', CPV: 'PT', HAI: 'FR', CUW: 'NL',
+  NGA: 'AF', CMR: 'AF', CIV: 'SN', RSA: 'AF', GUI: 'SN', GAB: 'SN', MAR: 'SA', TUN: 'SA', ALG: 'SA', EGY: 'SA', QAT: 'SA', JOR: 'SA', IRQ: 'SA',
+});
+// yabancı oyuncuların geldiği havuzlar (ağırlıklı)
+const FOREIGN_POOLS = ['BR', 'BR', 'AR', 'FR', 'FR', 'ES', 'PT', 'NL', 'BE', 'DE', 'IT', 'EN', 'HR', 'DK', 'PL', 'CZ', 'UA', 'SN', 'SN', 'AF', 'AF', 'MX', 'RO', 'HU', 'GR', 'JP', 'KR', 'US'];
 const World = {
   genName(pool) {
-    const p = NAME_POOLS[pool] || NAME_POOLS.XX;
+    const p = NAME_POOLS[pool] || (typeof WC_POOLS !== 'undefined' && WC_POOLS[pool]) || NAME_POOLS.XX;
     return `${U.pick(p.f)} ${U.pick(p.l)}`;
   },
+  // kulübün ülkesi dışından rastgele bir yabancı: { pool, nat }
+  foreign(home) {
+    let pool = U.pick(FOREIGN_POOLS);
+    for (let k = 0; k < 4 && pool === home; k++) pool = U.pick(FOREIGN_POOLS);
+    return { pool, nat: POOL_NAT[pool] };
+  },
+  natPool(code) { return NAT_POOL[code] || 'XX'; },
 
   genRoster(club, year) {
     const roster = [];
@@ -56,12 +73,12 @@ const World = {
     roster.forEach((pl) => (need[pl.pos] = Math.max(0, need[pl.pos] - 1)));
     for (const pos in need) {
       for (let i = 0; i < need[pos]; i++) {
-        const foreign = U.chance(club.pool === 'TR' ? 0.3 : 0.35);
+        const fr = U.chance(club.pool === 'TR' ? 0.3 : 0.35) ? World.foreign(club.pool) : null;
         roster.push({
-          n: World.genName(foreign ? 'XX' : club.pool),
+          n: World.genName(fr ? fr.pool : club.pool),
           pos,
           r: Math.round(U.clamp(club.rating + U.randi(-9, 3), 35, 92)),
-          nat: foreign ? 'XX' : club.pool,
+          nat: fr ? fr.nat : POOL_NAT[club.pool] || club.pool,
           age: U.randi(18, 34),
         });
       }
@@ -222,7 +239,8 @@ const World = {
         const need = { GK: 2, DF: 6, MF: 6, FW: 4 };
         c.roster.forEach((pl) => (need[pl.pos] = Math.max(0, need[pl.pos] - 1)));
         for (const pos in need) for (let i = 0; i < need[pos]; i++) {
-          c.roster.push({ n: World.genName(U.chance(0.3) ? 'XX' : c.pool), pos, r: Math.round(U.clamp(c.rating + U.randi(-9, 3), 35, 92)), age: U.randi(18, 24) });
+          const fr = U.chance(0.3) ? World.foreign(c.pool) : null;
+          c.roster.push({ n: World.genName(fr ? fr.pool : c.pool), pos, r: Math.round(U.clamp(c.rating + U.randi(-9, 3), 35, 92)), age: U.randi(18, 24), nat: fr ? fr.nat : POOL_NAT[c.pool] || c.pool });
         }
       });
     });
