@@ -4,6 +4,18 @@ const PREMIUM_ID = 'starfoot_premium';
 // Premium açık; şimdilik yalnız iPhone'da (Google Play'de ürün tanımlanınca 'android' eklenir)
 const PREMIUM_ENABLED = true;
 const PREMIUM_PLATFORMS = ['ios'];
+// Test önizlemesi (yalnız web, uygulamada çalışmaz): adresin sonuna #sfplus eklenince Premium ve Premium+
+// özellikleri açılır; #sfplus-off ile kapanır. Satın alma yoktur, yalnız deneme içindir.
+(() => {
+  try {
+    const C = window.Capacitor;
+    if (C && C.isNativePlatform && C.isNativePlatform()) return;
+    const h = location.hash || '';
+    if (/sfplus-off/.test(h)) localStorage.removeItem('starfoot_plus_preview');
+    else if (/sfplus/.test(h)) localStorage.setItem('starfoot_plus_preview', '1');
+    if (localStorage.getItem('starfoot_plus_preview') === '1') { window.SF_PREVIEW = true; window.SF_PLUS_PREVIEW = true; }
+  } catch (e) { /* yok */ }
+})();
 
 // RevenueCat (App Store satın almaları). Herkese açık SDK anahtarı; gizli değildir.
 const RC_KEYS = { ios: 'appl_tpkurfIlsSGEYVvWSdgVWMUUnDt' };
@@ -83,7 +95,7 @@ const RCStore = {
   },
 };
 const Premium = {
-  active: PREMIUM_ENABLED && (() => { try { return localStorage.getItem('starfoot_premium') === '1'; } catch (e) { return false; } })(),
+  active: !!window.SF_PLUS_PREVIEW || (PREMIUM_ENABLED && (() => { try { return localStorage.getItem('starfoot_premium') === '1'; } catch (e) { return false; } })()),
   price: '',
   plugin() {
     const C = window.Capacitor;
