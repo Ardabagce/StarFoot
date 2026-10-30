@@ -2450,3 +2450,20 @@ div.doc { position: fixed; inset: 0; z-index: 49; background: #000; display: fle
 .cs-t td:last-child, .cs-t th:last-child { width: 64px; }
 .cs-note { margin-top: 12px; font-size: 12px; }
 @media (max-width: 420px) { .cs-row { grid-template-columns: 118px 1fr 28px; font-size: 13px; } }
+.undo-btn { width: 100%; margin-top: 8px; display: flex; align-items: center; justify-content: center; gap: 8px; }
+.undo-btn small { font-size: 11px; opacity: .75; text-transform: none; }
+.undo-btn.locked { color: #ffd65a; border-color: rgba(245, 200, 75, .45); }
+/* Hızlı ilerleme */
+.ff-btn { width: 100%; margin-top: 8px; }
+.ff-btn small { font-size: 11px; opacity: .8; }
+.ff-btn.locked { color: #ffd65a; border-color: rgba(245, 200, 75, .45); }
+.ff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin: 6px 0 12px; }
+.ff-chip { display: block; cursor: pointer; }
+.ff-chip input { position: absolute; opacity: 0; pointer-events: none; }
+.ff-chip span { display: flex; flex-direction: column; gap: 2px; padding: 9px 10px; border: 1px solid var(--line); border-radius: 10px; background: rgba(255, 255, 255, .03); min-height: 44px; }
+.ff-chip small { font-size: 11px; color: var(--muted); line-height: 1.25; }
+.ff-chip input:checked + span { border-color: #ffd65a; background: rgba(245, 200, 75, .12); }
+#ffov { position: fixed; inset: 0; z-index: 1300; display: grid; place-items: center; background: rgba(3, 8, 20, .82); }
+.ffov-c { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; padding: 20px; color: #fff; }
+.ffov-c b { font: 800 18px/1.2 var(--display); font-style: italic; text-transform: uppercase; }
+.ffov-c small { color: var(--muted); min-height: 1em; }

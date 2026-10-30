@@ -572,6 +572,7 @@ const Game = {
   async playNext() {
     const s = Game.state, p = s.player;
     if (typeof Tutorial !== 'undefined' && Tutorial.shouldOffer()) await Tutorial.offer();
+    if (typeof Undo !== 'undefined') Undo.take();
     if (Game.inStreet()) return s.street.offers ? Game.streetOffers() : s.street.trials ? Game.playTrials() : Game.playStreet();
     if (s.pendingCup) return Cups.playMine(s);
     if (s.pendingIntl) return Game.playIntl();
@@ -699,6 +700,7 @@ const Game = {
       const gt = p.gt = p.gt || {};
       Object.entries(sum.goalTypes || {}).forEach(([k, v]) => (gt[k] = (gt[k] || 0) + v));
       if (typeof CStats !== 'undefined') CStats.record(p, sum, ctx, comp);
+      if (typeof Undo !== 'undefined') Undo.played(sum, ctx);
       if (comp === 'cup' && sum.goals) gt.cup = (gt.cup || 0) + sum.goals;
       if (sum.motm) {
         p.motmAwards = p.motmAwards || [];
@@ -1638,6 +1640,7 @@ const UI = {
           ${UI.physioTip()}
           ${UI.adInjury()}${UI.adInjury() && typeof Star !== 'undefined' ? Star.noAds('noads_injury') : ''}
           <button class="btn btn-play" data-go="match">${Icon('play')} ${Game.inStreet() && s.street.trials ? 'Seçmelere Katıl' : 'Maça Çık'}</button>
+          ${typeof Undo !== 'undefined' ? Undo.button() + FF.button() : ''}
           ${s.ap > 0 ? `<div class="hint">Bu hafta ${s.ap} aksiyon hakkın daha var.</div>` : ''}
         </section>
         ${UI.report()}

@@ -109,7 +109,7 @@ const Match = {
 
     const M = {
       min: 0, hs: 0, as: 0, rating: 6.0, goals: 0, assists: 0, yellow: 0, red: false,
-      feed: [], speed: 1, instant: false, statsUsed: new Set(), shots: 0, keyPasses: 0, tackles: 0,
+      feed: [], speed: 1, instant: typeof FF !== 'undefined' && FF.on, statsUsed: new Set(), shots: 0, keyPasses: 0, tackles: 0,
       ownScorers: [], oppScorers: [], teamBoost: 0, energySave: 0, gt: {},
       energy: p.energy, e0: p.energy, tiredWarn: false,
     };
@@ -760,10 +760,11 @@ const Match = {
         Weather.reset();
         Sprites.curBall = null;
         Sprites.surface = null;
-        // Android'de belirli aralıklarla maç sonu geçiş reklamı
-        const ad = window.StarfootAds && window.StarfootAds.afterMatch ? window.StarfootAds.afterMatch() : null;
+        // Android'de belirli aralıklarla maç sonu geçiş reklamı (hızlı ilerlemede yok)
+        const ad = !(typeof FF !== 'undefined' && FF.on) && window.StarfootAds && window.StarfootAds.afterMatch ? window.StarfootAds.afterMatch() : null;
         Promise.resolve(ad).catch(() => {}).then(() => resolve(summary));
       };
+      if (typeof FF !== 'undefined' && FF.on) setTimeout(() => $('ms-done') && $('ms-done').onclick(), 0);
     };
 
     refresh();

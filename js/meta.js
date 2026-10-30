@@ -30,7 +30,7 @@ const Big = {
     if (derby) { ctx.derby = derby; ctx.compName = `${derby} · ${ctx.compName}`; ctx.levelBase = (ctx.levelBase || 0) + 0.02; ctx.sbTag = derby.toLocaleUpperCase('tr'); }
     if (final) { ctx.final = true; ctx.levelBase = (ctx.levelBase || 0) + 0.02; }
     const big = derby || final || stage === 'Yarı Final' || stage === 'Çeyrek Final' || stage === 'Son 16';
-    if (big && ctx.role !== 'out') await Press.ask(ctx, derby ? 'derby' : final ? 'final' : 'ko');
+    if (big && ctx.role !== 'out' && !(typeof FF !== 'undefined' && FF.on)) await Press.ask(ctx, derby ? 'derby' : final ? 'final' : 'ko');
   },
 };
 
