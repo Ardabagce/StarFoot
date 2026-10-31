@@ -188,9 +188,20 @@ const FF = {
     let weeks = 0, reason = '', lastRound = s0.season.round, guard = 0;
     Premium.track('plus_ff', { weeks: t.r - s0.season.round, plan });
     try {
-      while (guard++ < 80) {
+      while (guard++ < 160) {
         const s = Game.state;
-        if (FF.modalGate() === 'stop') { reason = 'Karar vermen gereken bir durum var.'; break; }
+        if (FF.modalGate() === 'stop') {
+          const m = document.getElementById('modal');
+          // teklif, sezon sonu gibi büyük kararlarda dur; olaylarda seçim yapılınca devam et
+          if (m.querySelector('[data-offer], [data-street], .ceremony')) { reason = 'Karar vermen gereken bir durum var.'; break; }
+          FF.ov(null);
+          const card = m.querySelector('.modal-card');
+          if (card && !card.querySelector('.ff-note')) card.insertBefore(U.el('<p class="ff-note">⏩ Seçimini yap, hızlı ilerleme kaldığı yerden devam edecek.</p>'), card.querySelector('.modal-btns'));
+          await new Promise((res) => { const iv = setInterval(() => { if (m.classList.contains('hidden') || FF.stop) { clearInterval(iv); res(); } }, 150); });
+          if (FF.stop) { reason = 'Durduruldu.'; break; }
+          await new Promise((r) => setTimeout(r, 250));
+          continue;
+        }
         if (s.season.year !== start.y) { reason = 'Yeni sezon başladı.'; break; }
         reason = FF.why(t, start);
         if (reason) break;

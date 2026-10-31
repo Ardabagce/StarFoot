@@ -2498,3 +2498,4 @@ div.doc { position: fixed; inset: 0; z-index: 49; background: #000; display: fle
 .ffx-opts { display: flex; flex-direction: column; gap: 8px; }
 .ffx-tg { display: flex; align-items: center; gap: 10px; font-size: 14px; cursor: pointer; }
 .ffx-tg input { width: 20px; height: 20px; accent-color: #ffd65a; flex-shrink: 0; }
+.ff-note { margin: 10px 0 0; padding: 8px 10px; border-radius: 8px; background: rgba(245, 200, 75, .12); color: #ffd65a; font-size: 13px; }
