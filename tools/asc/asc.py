@@ -102,6 +102,46 @@ def cancel_pending(asc, app_id, want):
     sys.exit('Geri çekilen sürüm hâlâ düzenlenebilir değil; birkaç dakika sonra yeniden çalıştır.')
 
 
+def gc_attach(asc, app_id, ver):
+    """Game Center'ı sürüme bağlar ve henüz yayınlanmamış başarım/liderlik tablolarını bu sürümle incelemeye hazırlar."""
+    try:
+        det = asc.get(f'/v1/apps/{app_id}/gameCenterDetail').get('data')
+    except RuntimeError:
+        det = None
+    if not det:
+        print('   Game Center kaydı yok, atlandı'); return
+    gid = det['id']
+    try:
+        cur = asc.get(f"/v1/appStoreVersions/{ver['id']}/gameCenterAppVersion").get('data')
+    except RuntimeError:
+        cur = None
+    if not cur:
+        try:
+            asc.req('POST', '/v1/gameCenterAppVersions', write=True, body={'data': {'type': 'gameCenterAppVersions',
+                'relationships': {'appStoreVersion': {'data': {'type': 'appStoreVersions', 'id': ver['id']}}}}})
+            print('   Game Center sürüme bağlandı')
+        except RuntimeError as err:
+            print(f'   ! Game Center sürüme bağlanamadı: {err}')
+    for kind, rel, typ in (('achievement', 'gameCenterAchievements', 'gameCenterAchievementReleases'), ('leaderboard', 'gameCenterLeaderboards', 'gameCenterLeaderboardReleases')):
+        try:
+            items = _all(asc, f'/v1/gameCenterDetails/{gid}/{rel}')
+            done = {r['relationships'][rel[:-1]]['data']['id'] for r in _all(asc, f'/v1/gameCenterDetails/{gid}/{kind}Releases', include=rel[:-1]) if r.get('relationships', {}).get(rel[:-1], {}).get('data')}
+        except RuntimeError as err:
+            print(f'   ! {kind} listesi okunamadı: {err}'); continue
+        n = 0
+        for it in items:
+            if it['id'] in done:
+                continue
+            try:
+                asc.req('POST', f'/v1/{typ}', write=True, body={'data': {'type': typ, 'relationships': {
+                    'gameCenterDetail': {'data': {'type': 'gameCenterDetails', 'id': gid}},
+                    rel[:-1]: {'data': {'type': rel, 'id': it['id']}}}}})
+                n += 1
+            except RuntimeError as err:
+                print(f'   ! {kind} {it["attributes"].get("referenceName", it["id"])}: {str(err)[:140]}')
+        print(f'   Game Center {kind}: {n} yeni yayın kaydı ({len(items)} toplam)')
+
+
 def release(asc, app_id, ver, build_no):
     """Sürüme derlemeyi bağlar, kademeli yayını açar ve incelemeye gönderir."""
     vs = ver['attributes'].get('versionString')
@@ -128,6 +168,7 @@ def release(asc, app_id, ver, build_no):
         print('   kademeli yayın açıldı (7 gün)')
     else:
         print('   kademeli yayın zaten açık')
+    gc_attach(asc, app_id, ver)
     subs = asc.get('/v1/reviewSubmissions', **{'filter[app]': app_id, 'filter[platform]': 'IOS', 'filter[state]': 'READY_FOR_REVIEW', 'limit': 5})['data']
     sub = subs[0] if subs else asc.req('POST', '/v1/reviewSubmissions', write=True, body={'data': {'type': 'reviewSubmissions',
         'attributes': {'platform': 'IOS'}, 'relationships': {'app': {'data': {'type': 'apps', 'id': app_id}}}}})['data']
