@@ -470,7 +470,7 @@ function stageScene(i, t, lt) {
     groundShadow(x, y, h * 0.25);
     fig(x, y, h, { kit: kitOf(GAL), number: 17, run: lt * 12, speed: k < 1 ? 1 : 0.4 });
   } else if (i === 3) {
-    drawBg(bgBackdrop(RMG, 'REAL MADRIGAL'), push);
+    drawBg(bgBackdrop(RMG, RMG.label || 'REAL MADRIGAL'), push);
     flashes(t, 10, 0.1, 0.75, 12);
     const x = 600, y = 1990, h = 1100;
     fig(x, y, h, { kit: kitOf(RMG), number: 10, dive: E.out(cl(lt / 0.4)) });

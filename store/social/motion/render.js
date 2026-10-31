@@ -16,7 +16,7 @@ const [, , which = 'all', outDir = path.join(__dirname, 'out'), preview] = proce
   const errs = [];
   pg.on('pageerror', (e) => errs.push(e.message));
   pg.on('console', (m) => { if (m.type() === 'error') errs.push(m.text()); });
-  await pg.goto('file://' + path.join(__dirname, 'ads.html'));
+  await pg.goto('file://' + path.join(__dirname, process.env.PAGE || 'ads.html'));
   await pg.evaluate(() => window.ready());
   const ids = which === 'all' ? Object.keys(await pg.evaluate(() => Object.fromEntries(Object.entries(window.VIDEOS).map(([k, v]) => [k, v.dur])))) : [which];
   for (const id of ids) {
