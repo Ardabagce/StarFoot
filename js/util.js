@@ -121,6 +121,48 @@ const U = {
   $$(sel, root = document) { return Array.from(root.querySelectorAll(sel)); },
 };
 
+// ---------- Çizim alanı koruması (iOS) ----------
+// iOS'ta tüm canvas'ların toplam bellek sınırı dolunca getContext('2d') null döner ve çizim kodu hata verir.
+// Önce önbellekteki görseller boşaltılıp yeniden denenir; yine olmazsa hata vermeyen boş bir bağlam döner
+// (o kare çizilmez ama oyun çökmez).
+(() => {
+  if (typeof HTMLCanvasElement === 'undefined') return;
+  const orig = HTMLCanvasElement.prototype.getContext;
+  const dummy = (cv) => {
+    let px;
+    const fn = () => px;
+    px = new Proxy(fn, {
+      get(t, k) {
+        if (k === 'canvas') return cv;
+        if (k === 'measureText') return () => ({ width: 0 });
+        if (k === 'getImageData' || k === 'createImageData') return (a, b, w, h) => new ImageData(Math.max(1, w || a | 0 || 1), Math.max(1, h || b | 0 || 1));
+        if (k === 'isPointInPath' || k === 'isPointInStroke') return () => false;
+        if (k === 'getLineDash') return () => [];
+        if (k === Symbol.toPrimitive) return () => '';
+        return fn;
+      },
+      set() { return true; },
+      apply() { return px; },
+    });
+    return px;
+  };
+  HTMLCanvasElement.prototype.getContext = function (type, opts) {
+    let c = orig.call(this, type, opts);
+    if (c || (type !== '2d')) return c;
+    try {
+      if (typeof SocialArt !== 'undefined' && SocialArt.cache) SocialArt.cache.clear();
+      if (typeof Sprites !== 'undefined') { Sprites._turf = {}; if (Sprites._tile) Sprites._tile = null; }
+    } catch (e) { /* yok */ }
+    c = orig.call(this, type, opts);
+    if (c) return c;
+    if (!window.__cvLow) {
+      window.__cvLow = 1;
+      try { const F = window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.FirebaseAnalytics; if (F && F.logEvent) F.logEvent({ name: 'canvas_low', params: { w: this.width, h: this.height } }).catch(() => {}); } catch (e) { /* yok */ }
+    }
+    return dummy(this);
+  };
+})();
+
 // ---------- Ekran koruması ----------
 // iOS WebView bazen bir pencere ya da tam ekran katman kapanınca alttaki sayfayı yeniden çizmiyor
 // (boş/beyaz ekran). Kapanma anında sayfa zorla yeniden çizilir. Ayrıca beklenmeyen bir hata olursa
@@ -181,6 +223,18 @@ const ScreenGuard = {
     window.addEventListener('error', (e) => { ScreenGuard.report(e.message, e.filename, e.lineno, e.error); setTimeout(ScreenGuard.heal, 60); });
     window.addEventListener('unhandledrejection', (e) => { const r = e.reason; ScreenGuard.report(r && (r.message || r), 'promise', 0, r); setTimeout(ScreenGuard.heal, 60); });
     document.addEventListener('visibilitychange', () => { if (!document.hidden) ScreenGuard.repaint(); });
+    // iOS'ta çizim alanlarının (canvas) toplam bellek sınırı var; sayfadan kaldırılan canvas'lar hemen boşalmıyor
+    // ve sınır dolunca getContext null dönüyor. Sayfadan çıkan canvas'ın belleği sıfırlanır.
+    try {
+      const free = [];
+      new MutationObserver((ms) => {
+        ms.forEach((m) => m.removedNodes.forEach((n) => {
+          if (n.nodeType !== 1) return;
+          if (n.tagName === 'CANVAS') free.push(n); else if (n.getElementsByTagName) free.push(...n.getElementsByTagName('canvas'));
+        }));
+        if (free.length) setTimeout(() => { free.splice(0).forEach((c) => { if (!c.isConnected && !c.dataset.keep) { c.width = 0; c.height = 0; } }); }, 0);
+      }).observe(document.documentElement, { childList: true, subtree: true });
+    } catch (e) { /* yok */ }
     if (ScreenGuard.tester()) setTimeout(() => ScreenGuard.setTester(true), 3000);
     // Ayarlar'daki sürüm yazısına 5 hızlı dokunuş: geliştirici cihazı işaretini aç/kapat
     let taps = 0, tt = 0;

@@ -58,7 +58,7 @@ const SocialArt = {
     c.width = SocialArt.W; c.height = SocialArt.H;
     try { SocialArt.draw(c.getContext('2d'), post); } catch (e) { console.error(e); }
     SocialArt.cache.set(key, c);
-    if (SocialArt.cache.size > 40) SocialArt.cache.delete(SocialArt.cache.keys().next().value);
+    if (SocialArt.cache.size > 16) SocialArt.cache.delete(SocialArt.cache.keys().next().value);
     return c;
   },
 
@@ -76,6 +76,7 @@ const SocialArt = {
       const h = square ? w : Math.round(w * 1.25);
       cv.width = w * dpr; cv.height = h * dpr;
       const c = cv.getContext('2d');
+      if (!c) return;
       const sy = square ? (SocialArt.H - SocialArt.W) * 0.35 : 0;
       c.drawImage(img, 0, sy, SocialArt.W, square ? SocialArt.W : SocialArt.H, 0, 0, cv.width, cv.height);
     });

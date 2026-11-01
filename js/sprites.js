@@ -605,7 +605,9 @@ const Sprites = {
     let b = Sprites._turf[key];
     if (!b) {
       b = document.createElement('canvas'); b.width = W; b.height = H;
-      const c = b.getContext('2d'); paint(c, 0);
+      const c = b.getContext('2d');
+      if (!c) return; // iOS çizim belleği dolu
+      paint(c, 0);
       const L = c.createRadialGradient(W / 2, H * 0.55, Math.min(W, H) * 0.15, W / 2, H * 0.5, Math.max(W, H) * 0.8);
       L.addColorStop(0, 'rgba(255,255,230,0.05)'); L.addColorStop(1, 'rgba(0,10,5,0.3)');
       c.fillStyle = L; c.fillRect(0, 0, W, H);

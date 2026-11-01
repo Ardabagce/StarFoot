@@ -1418,6 +1418,7 @@ const UI = {
     cv.width = w * dpr; cv.height = h * dpr;
     const sy = SocialArt.H * 0.12, shh = SocialArt.W * 0.62;
     const g = cv.getContext('2d');
+    if (!g) return; // iOS çizim belleği dolu: görseli atla
     g.filter = 'grayscale(0.35) contrast(1.05)';
     g.drawImage(img, 0, sy, SocialArt.W, shh, 0, 0, cv.width, cv.height);
   },
