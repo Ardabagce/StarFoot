@@ -766,7 +766,14 @@ def gamecenter_setup(asc, app_id, cfg):
                 has_img = False
                 if lid != 'DRY':
                     try:
-                        has_img = bool(asc.get(f'/v1/gameCenterAchievementLocalizations/{lid}/gameCenterAchievementImage').get('data'))
+                        im = asc.get(f'/v1/gameCenterAchievementLocalizations/{lid}/gameCenterAchievementImage').get('data')
+                        has_img = bool(im)
+                        # yüklemesi yarım kalmış görsel (Apple'da "yükleniyor" durumunda takılı) incelemeyi engeller: silip yeniden yükle
+                        st = ((im or {}).get('attributes', {}).get('assetDeliveryState') or {}).get('state')
+                        if im and st != 'COMPLETE':
+                            print(f"   {a['id']} {loc}: görsel durumu {st}, yeniden yükleniyor")
+                            asc.req('DELETE', f"/v1/gameCenterAchievementImages/{im['id']}", write=True)
+                            has_img = False
                     except RuntimeError:
                         has_img = False
                 if not has_img:
