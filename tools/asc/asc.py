@@ -66,6 +66,10 @@ class ASC:
             try:
                 errs = r.json().get('errors', [])
                 msg = '; '.join(f"{e.get('title')}: {e.get('detail')}" for e in errs)
+                # Apple asıl nedeni meta.associatedErrors içinde verir (ör. eksik yaş derecelendirmesi)
+                for e in errs:
+                    for k, lst in ((e.get('meta') or {}).get('associatedErrors') or {}).items():
+                        msg += ' || ' + k.split('/')[-1] + ': ' + '; '.join(f"{x.get('code')} {x.get('detail') or x.get('title')}" for x in lst)[:600]
             except Exception:
                 msg = r.text[:500]
             raise RuntimeError(f'{method} {path} -> {r.status_code} {msg}')
@@ -198,7 +202,7 @@ def release(asc, app_id, ver, build_no):
             if items:
                 print('   sürüm zaten başvuruda')
                 break
-            print(f'   sürüm henüz eklenemedi ({i + 1}/16): {err}')
+            print(f'   sürüm henüz eklenemedi ({i + 1}/16): {err if i == 0 else str(err)[:160]}')
             if i == 15:
                 sys.exit('Sürüm incelemeye eklenemedi; App Store Connect sayfasındaki uyarıyı kontrol et.')
             time.sleep(45)
