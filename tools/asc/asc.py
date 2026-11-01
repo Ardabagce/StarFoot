@@ -169,6 +169,20 @@ def release(asc, app_id, ver, build_no):
     else:
         print('   kademeli yayın zaten açık')
     gc_attach(asc, app_id, ver)
+    # yeni satın alma ürünleri (ilk kez) sürümle birlikte incelemeye gider
+    try:
+        for it in asc.get(f'/v1/apps/{app_id}/inAppPurchasesV2', limit=50)['data']:
+            if it['attributes'].get('state') == 'READY_TO_SUBMIT':
+                try:
+                    asc.req('POST', '/v1/inAppPurchaseSubmissions', write=True, body={'data': {'type': 'inAppPurchaseSubmissions',
+                        'relationships': {'inAppPurchaseV2': {'data': {'type': 'inAppPurchases', 'id': it['id']}}}}})
+                    print(f"   satın alma ürünü incelemeye eklendi: {it['attributes'].get('productId')}")
+                except RuntimeError as err:
+                    print(f"   ! {it['attributes'].get('productId')} eklenemedi: {str(err)[:160]}")
+            elif it['attributes'].get('state') == 'MISSING_METADATA':
+                print(f"   ! {it['attributes'].get('productId')}: bilgi eksik, bu sürümle gönderilemiyor")
+    except RuntimeError as err:
+        print(f'   ! satın alma ürünleri okunamadı: {err}')
     subs = asc.get('/v1/reviewSubmissions', **{'filter[app]': app_id, 'filter[platform]': 'IOS', 'filter[state]': 'READY_FOR_REVIEW', 'limit': 5})['data']
     sub = subs[0] if subs else asc.req('POST', '/v1/reviewSubmissions', write=True, body={'data': {'type': 'reviewSubmissions',
         'attributes': {'platform': 'IOS'}, 'relationships': {'app': {'data': {'type': 'apps', 'id': app_id}}}}})['data']
