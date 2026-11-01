@@ -135,11 +135,16 @@ const ScreenGuard = {
     ScreenGuard.t = requestAnimationFrame(() => requestAnimationFrame(() => { els.forEach((el) => { el.style.opacity = ''; }); }));
   },
   errs: 0,
-  report(msg, src, line) {
+  // hatanın geçtiği ilk fonksiyonlar ve satırlar (ör. "Match.end@match.js:812>Game.applyMatch@game.js:990")
+  stack(err) {
+    const st = err && err.stack ? String(err.stack) : '';
+    return st.split('\n').map((l) => { const m = /^\s*(?:at\s+)?([\w$.<>]*)\s*[@(]?.*?([\w-]+\.js):(\d+)/.exec(l); return m ? `${m[1] || '?'}@${m[2]}:${m[3]}` : ''; }).filter(Boolean).slice(0, 3).join('>').slice(0, 99);
+  },
+  report(msg, src, line, err) {
     if (ScreenGuard.errs++ > 8) return;
     try {
       const F = window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.FirebaseAnalytics;
-      if (F && F.logEvent) F.logEvent({ name: 'js_error', params: { m: String(msg || '').slice(0, 95), s: String(src || '').split('/').pop().slice(0, 30), l: line || 0, scr: ScreenGuard.where(), v: typeof APP_VER !== 'undefined' ? APP_VER : '', t: ScreenGuard.tester() ? 1 : 0 } }).catch(() => {});
+      if (F && F.logEvent) F.logEvent({ name: 'js_error', params: { m: String(msg || '').slice(0, 95), s: String(src || '').split('/').pop().slice(0, 30), l: line || 0, scr: ScreenGuard.where(), f: ScreenGuard.stack(err), v: typeof APP_VER !== 'undefined' ? APP_VER : '', t: ScreenGuard.tester() ? 1 : 0 } }).catch(() => {});
     } catch (e) { /* yok */ }
   },
   // hatanın olduğu ekran (ör. hub:life, match, drill, title)
@@ -173,8 +178,8 @@ const ScreenGuard = {
     } catch (e) { /* yok */ }
   },
   init() {
-    window.addEventListener('error', (e) => { ScreenGuard.report(e.message, e.filename, e.lineno); setTimeout(ScreenGuard.heal, 60); });
-    window.addEventListener('unhandledrejection', (e) => { const r = e.reason; ScreenGuard.report(r && (r.message || r), 'promise', 0); setTimeout(ScreenGuard.heal, 60); });
+    window.addEventListener('error', (e) => { ScreenGuard.report(e.message, e.filename, e.lineno, e.error); setTimeout(ScreenGuard.heal, 60); });
+    window.addEventListener('unhandledrejection', (e) => { const r = e.reason; ScreenGuard.report(r && (r.message || r), 'promise', 0, r); setTimeout(ScreenGuard.heal, 60); });
     document.addEventListener('visibilitychange', () => { if (!document.hidden) ScreenGuard.repaint(); });
     if (ScreenGuard.tester()) setTimeout(() => ScreenGuard.setTester(true), 3000);
     // Ayarlar'daki sürüm yazısına 5 hızlı dokunuş: geliştirici cihazı işaretini aç/kapat
