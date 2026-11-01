@@ -209,6 +209,10 @@ const Game = {
       ? `<button class="slot slot-lock" data-plus-slots><span class="sl-n">${Icon('star')}</span><div class="sl-t"><b>+5 kariyer slotu</b><small>Premium+ ile 10 kariyeri aynı anda sürdür</small></div><span class="sl-lk">Premium+</span></button>` : '';
     box.innerHTML = Game.allSlots().filter((i) => i < nOpen || Game.summary(i)).map((i) => {
       const d = Game.summary(i);
+      // kayıt var ama açılamıyorsa boş slot gibi gösterme (üzerine yeni kariyer yazılıp kaybolmasın)
+      let has = false;
+      if (!d) try { has = !!localStorage.getItem(Game.key(i)); } catch (e) { /* yok */ }
+      if (!d && has) return `<div class="slot"><span class="sl-n">${i + 1}</span><div class="sl-t"><b>⚠️ Kayıt açılamadı</b><small>Uygulamayı kapatıp yeniden aç. Sorun sürerse bize yaz.</small></div><button class="btn btn-ghost sl-del" data-del="${i}" aria-label="Kariyeri sil">${Icon('trash')}</button></div>`;
       if (!d) return `<div class="slot empty"><span class="sl-n">${i + 1}</span><div class="sl-t"><b>Boş slot</b><small>Yeni bir kariyere başla</small></div><button class="btn" data-new="${i}">Yeni Kariyer</button></div>`;
       return `<div class="slot"><span class="sl-n">${i + 1}</span><div class="sl-t"><b>${U.esc(d.n)}</b><small>${d.a} yaş · ${U.esc(d.c)} · ${d.y}</small></div>
         <button class="btn btn-play" data-cont="${i}">Devam</button><button class="btn btn-ghost sl-del" data-del="${i}" aria-label="Kariyeri sil">${Icon('trash')}</button></div>`;
@@ -2850,6 +2854,10 @@ window.addEventListener('DOMContentLoaded', () => {
   document.getElementById('notif-btn').onclick = () => Notifs.open();
   document.getElementById('set-btn').onclick = () => SetSheet.open();
   Game.init();
+  // web deposu silinmiş ya da bozulmuşsa kariyerleri uygulamanın dosya yedeğinden geri getir
+  if (typeof SaveBak !== 'undefined') SaveBak.check([...Game.allSlots(), 'wc', 'lp', 'legends'].map((x) => Game.key(x))).then((n) => {
+    if (n && !Game.state && !document.getElementById('title').classList.contains('hidden')) { Game.init(); Game.toast('💾 Kariyerlerin yedekten geri yüklendi', 'good'); }
+  }).catch(() => {});
 });
 
 // ---------- Ayarlar paneli (üst çubuktaki dişli) ----------
