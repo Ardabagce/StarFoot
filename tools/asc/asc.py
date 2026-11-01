@@ -83,13 +83,31 @@ class ASC:
 PENDING = {'WAITING_FOR_REVIEW', 'IN_REVIEW', 'READY_FOR_REVIEW'}
 
 
-def cancel_pending(asc, app_id, want):
+def cancel_pending(asc, app_id, want, build_no=''):
     """Başka numaralı bir sürüm inceleme bekliyorsa başvurusunu geri çeker (sürüm yeniden düzenlenebilir olur)."""
     import time
     vs = asc.get(f'/v1/apps/{app_id}/appStoreVersions', **{'filter[platform]': 'IOS', 'limit': 20})['data']
-    pend = [v for v in vs if v['attributes']['appStoreState'] in PENDING and v['attributes']['versionString'] != want]
+    def stale(v):
+        # başka numaralı sürüm ya da aynı sürüm ama farklı derlemeyle incelemede
+        if v['attributes']['appStoreState'] not in PENDING:
+            return False
+        if v['attributes']['versionString'] != want:
+            return True
+        if not build_no:
+            return False
+        try:
+            b = asc.get(f"/v1/appStoreVersions/{v['id']}/build").get('data')
+        except RuntimeError:
+            return False
+        cur = b and b['attributes'].get('version')
+        if cur and str(cur) != str(build_no):
+            print(f"   {want} incelemede derleme {cur} ile; {build_no} ile yeniden gönderilecek")
+            return True
+        return False
+    pend = [v for v in vs if stale(v)]
     if not pend:
         return
+    ids = {v['id'] for v in pend}
     for v in pend:
         print(f"   {v['attributes']['versionString']} incelemede ({v['attributes']['appStoreState']}): başvuru geri çekiliyor")
     subs = asc.get('/v1/reviewSubmissions', **{'filter[app]': app_id, 'filter[platform]': 'IOS', 'limit': 10})['data']
@@ -101,7 +119,7 @@ def cancel_pending(asc, app_id, want):
     for _ in range(24):
         time.sleep(10)
         vs = asc.get(f'/v1/apps/{app_id}/appStoreVersions', **{'filter[platform]': 'IOS', 'limit': 20})['data']
-        if not any(v['attributes']['appStoreState'] in PENDING and v['attributes']['versionString'] != want for v in vs):
+        if not any(v['attributes']['appStoreState'] in PENDING and v['id'] in ids for v in vs):
             print('   eski sürüm yeniden düzenlenebilir'); return
     sys.exit('Geri çekilen sürüm hâlâ düzenlenebilir değil; birkaç dakika sonra yeniden çalıştır.')
 
@@ -904,7 +922,7 @@ def main():
         return remove_locales(asc, app['id'], [x.strip() for x in a.remove_locales.split(',') if x.strip()])
 
     if a.release:
-        cancel_pending(asc, app['id'], a.version)
+        cancel_pending(asc, app['id'], a.version, a.release)
     ver = pick_version(asc, app['id'], a.version)
     info = pick_appinfo(asc, app['id'])
     print(f"Düzenlenen sürüm: {ver['attributes'].get('versionString', a.version)}")
