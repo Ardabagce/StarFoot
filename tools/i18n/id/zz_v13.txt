@@ -1,0 +1,373 @@
+5407|Tendangan bebas
+5408|Satu lawan satu dengan kiper
+5409|Tembakan dari permainan
+5410|Setelah menggiring
+5411|Jarak jauh
+5412|Lainnya
+5413|Gol per laga
+5414|Gol + assist / laga
+5415|Brace
+5416|Gol terbanyak (laga)
+5417|Rentetan gol terpanjang
+5418|Musim gol terbaik
+5419|M / S / K
+5420|Clean sheet
+5421|Penyelamatan
+5422|Penalti ditepis
+5423|Kebobolan
+5424|Kebobolan per laga
+5425|Rasio clean sheet
+5426|Kiper
+5427|Lawan favorit
+5428|Mimpi burukmu
+5429|Terisi seiring kamu bermain.
+5430|Tandang
+5431|Menit per gol
+5432|Umpan kunci
+5433|Tekel
+5434|Kartu kuning / merah
+5435|Menit
+5436|Tembakan
+5437|Statistik Karier
+5438|Jenis gol
+5439|Menit gol
+5440|Per lawan
+5441|Per kompetisi
+5442|Detail
+5443|Statistik karier lengkap
+5444|Sundulan, penalti dan tendangan bebas, berapa gol yang kamu cetak ke tiap tim, menit golmu dan lainnya. Statistikmu sudah dicatat; buka semuanya dengan Premium+.
+5445|Sundulan, penalti dan tendangan bebas, berapa gol yang kamu cetak ke tiap tim, menit golmu dan lainnya.
+5446|Statistikmu sudah dicatat; buka semuanya dengan Premium+.
+5447|Statistik Lengkap
+5448|Latihan Refleks
+5449|Tembakan cepat dari jarak dekat. Ketuk cepat sisi yang menyala.
+5450|Tembakan cepat dari jarak dekat.
+5451|Ketuk cepat sisi yang menyala.
+5452|Latihan Terbang
+5453|Pelatih menembak ke sudut. Terbang ke sudut yang benar saat bola lepas dari kaki.
+5454|Pelatih menembak ke sudut.
+5455|Terbang ke sudut yang benar saat bola lepas dari kaki.
+5456|Tangkapan dan Penalti
+5457|Tendangan penalti. Baca tatapan penendang dan terbang ke satu sudut.
+5458|Tendangan penalti.
+5459|Baca tatapan penendang dan terbang ke satu sudut.
+5460|Latihan Bola Udara
+5461|Umpan silang dari sayap. Tahan untuk bergerak ke bawah bola, lepas saat bola turun.
+5462|Umpan silang dari sayap.
+5463|Tahan untuk bergerak ke bawah bola, lepas saat bola turun.
+5464|Latihan Satu Lawan Satu
+5465|Penyerang berlari ke arahmu. Keluar saat dia mendorong bola terlalu jauh.
+5466|Penyerang berlari ke arahmu.
+5467|Keluar saat dia mendorong bola terlalu jauh.
+5468|Penempatan Posisi
+5469|Satu lawan satu: persempit sudut dan keluar di saat yang tepat.
+5470|Distribusi
+5471|Bola di tangan. Temukan rekan yang bebas sebelum waktu habis.
+5472|Bola di tangan.
+5473|Temukan rekan yang bebas sebelum waktu habis.
+5474|Latihan Tendangan Gawang
+5475|Distribusi jauh: temukan rekan yang bebas dan kirim bola kepadanya.
+5476|+5 slot karier
+5477|Jalankan 10 karier sekaligus dengan Premium+
+5478|refleks, terbang, bola udara
+5479|Penjaga gawang; penyelamatan, penalti dan clean sheet.
+5480|Karier kiper
+5481|Bermain sebagai kiper: penyelamatan ke sudut, duel penalti, satu lawan satu dan clean sheet. Karier kiper terbuka dengan Premium+.
+5482|Bermain sebagai kiper: penyelamatan ke sudut, duel penalti, satu lawan satu dan clean sheet.
+5483|Karier kiper terbuka dengan Premium+.
+5484|🧤 Tembakan Datang!
+5485|Tembakan Datang!
+5486|🧤 Satu Lawan Satu!
+5487|Satu Lawan Satu!
+5488|🧤 Umpan Silang Datang!
+5489|Umpan Silang Datang!
+5490|🧤 Penalti untuk Lawan!
+5491|Penalti untuk Lawan!
+5492|🧤 Kemelut di Depan Gawang!
+5493|Kemelut di Depan Gawang!
+5494|🧤 Mulai Serangan
+5495|Mulai Serangan
+5496|Penyerang akan menembak! Baca tatapannya dan terbang ke sudut yang benar saat bola lepas dari kaki (ketuk kiri, tengah atau kanan).
+5497|Penyerang akan menembak!
+5498|Baca tatapannya dan terbang ke sudut yang benar saat bola lepas dari kaki (ketuk kiri, tengah atau kanan).
+5499|Penyerang menggiring ke arahmu. Keluar saat dia mendorong bola terlalu jauh; terlalu cepat dia mencungkil, terlalu lambat dia menembak.
+5500|Penyerang menggiring ke arahmu.
+5501|Keluar saat dia mendorong bola terlalu jauh; terlalu cepat dia mencungkil, terlalu lambat dia menembak.
+5502|Umpan silang datang. Tahan untuk bergerak ke bawah bola, lepas saat bola jatuh ke tanganmu untuk menangkapnya.
+5503|Umpan silang datang.
+5504|Tahan untuk bergerak ke bawah bola, lepas saat bola jatuh ke tanganmu untuk menangkapnya.
+5505|Kemelut di depan gawang! Tembakan terus datang; ketuk cepat sisi yang menyala.
+5506|Kemelut di depan gawang!
+5507|Tembakan terus datang; ketuk cepat sisi yang menyala.
+5508|Bola di tangan. Lempar ke rekan yang bebas (cincin hijau) sebelum waktu habis dan mulai serangan.
+5509|Lempar ke rekan yang bebas (cincin hijau) sebelum waktu habis dan mulai serangan.
+5510|Lawan mengambil penalti. Baca tatapan penendang dan terbang ke satu sudut!
+5511|Lawan mengambil penalti.
+5512|Baca tatapan penendang dan terbang ke satu sudut!
+5513|Penalti untuk lawan!
+5514|berdiri di bawah mistar...
+5515|melakukan penyelamatan hebat di sudut!
+5516|Mereka mencetak gol dari bola muntah.
+5517|menepis dan bek menyapu bola.
+5518|keluar di saat yang tepat dan merebut bola dari penyerang!
+5519|menjatuhkan penyerang, kartu kuning.
+5520|menebusnya dengan menepis penalti!
+5521|Tembakan penyerang membentur tiang!
+5522|menangkap umpan silang dengan aman di udara.
+5523|Mereka mendorong bola liar ke gawang.
+5524|meninju umpan silang menjauh.
+5525|Gol sundulan.
+5526|Sundulannya tipis melebar.
+5527|menepis tiga tembakan beruntun dalam kemelut!
+5528|Tak bisa mencegah gol dalam kemelut.
+5529|Gol dari kemelut di depan gawang.
+5530|memulai cepat dan tim melancarkan serangan balik.
+5531|mengembalikan bola ke permainan dan tim tetap menguasai bola.
+5532|Bahaya di tepi kotak penalti...
+5533|menebus kesalahannya sendiri dengan penyelamatan!
+5534|menepis bola.
+5535|Penalti! Baca
+5536|Baca
+5537|tatapan
+5538|penendang, dan saat dia menendang,
+5539|terbang ke satu sudut
+5540|· ketuk kiri / tengah / kanan ·
+5541|Tembakan datang! Saat bola lepas dari kaki
+5542|Tembakan datang!
+5543|Saat bola lepas dari kaki
+5544|terbang ke sudut yang benar
+5545|· ketuk atau geser kiri / tengah / kanan ·
+5546|KAMU TERBANG TERLALU CEPAT DAN MEMBUKA SUDUT
+5547|GOL! KAMU TIDAK TERBANG
+5548|KAMU TIDAK TERBANG
+5549|KAMU MENYENTUHNYA, BOLA MUNTAH!
+5550|PENYELAMATAN LUAR BIASA!
+5551|DITEPIS DARI SUDUT!
+5552|KIPER RAKSASA!
+5553|DISELAMATKAN DENGAN KAKI!
+5554|GOL! SUDUT SALAH
+5555|SUDUT SALAH
+5556|TEMBAKAN DATANG!
+5557|Saat penyerang mendorong bola
+5558|terlalu jauh
+5559|(cincin kuning)
+5560|ketuk dan keluar
+5561|· jangan terlalu cepat, jangan terlalu lambat ·
+5562|CUNGKILANNYA MEMBENTUR TIANG!
+5563|KAMU KELUAR TERLALU CEPAT, DIA MENCUNGKIL!
+5564|KAMU MEREBUT DARI KAKINYA!
+5565|KAMU MENGAMANKANNYA!
+5566|WAKTU YANG SEMPURNA!
+5567|PELANGGARAN! KAMU MENJATUHKANNYA
+5568|KAMU MENJATUHKANNYA
+5569|DIA MELEWATIMU!
+5570|TEMBAKAN MEMBENTUR TIANG!
+5571|GOL! KAMU DIAM DI GARIS
+5572|KAMU DIAM DI GARIS
+5573|, gerakkan kiper ke bayangan bola · saat bola jatuh ke tanganmu
+5574|lepas
+5575|dan tangkap
+5576|DITANGKAP DI UDARA!
+5577|TANGAN AMAN!
+5578|DITINJU MENJAUH
+5579|KAMU MELESET!
+5580|KAMU MELOMPAT TERLALU CEPAT!
+5581|BOLA KENA SUNDULAN!
+5582|UMPAN SILANG DATANG!
+5583|Kemelut di depan gawang! Tembakan terus datang · ketuk sisi yang menyala
+5584|Tembakan terus datang · ketuk sisi yang menyala
+5585|cepat
+5586|(kiri / tengah / kanan) ·
+5587|KAMU MENEPIS KETIGANYA!
+5588|DITEPIS! BOLA MUNTAH…
+5589|DITEPIS!
+5590|BOLA MUNTAH…
+5591|AKHIRNYA MASUK…
+5592|Bola di tangan!
+5593|Cincin hijau
+5594|(bebas) rekan: ketuk dia untuk memulai serangan · merah = dijaga · sebelum waktu habis
+5595|SERANGAN BALIK!
+5596|UMPAN SAMPAI TAPI DITEKAN
+5597|BOLA HILANG!
+5598|BOLA PANJANG, BOLA REBUTAN
+5599|Refleks
+5600|Kecepatan reaksi terhadap tembakan jarak dekat.
+5601|Tendangan
+5602|Kekuatan dan akurasi tendangan jauh.
+5603|Memulai serangan dengan kaki dan tangan.
+5604|Satu Lawan Satu
+5605|Keluar di saat yang tepat dalam satu lawan satu.
+5606|Tangkapan
+5607|Menahan tembakan tanpa melepasnya.
+5608|Bola Udara
+5609|Mengamankan umpan silang di udara.
+5610|Mempersempit sudut dan berdiri di posisi yang tepat.
+5611|Terbang
+5612|Menjangkau sudut dan kekuatan fisik.
+5613|Konsentrasi dan kebugaran sepanjang laga.
+5614|↶ Batalkan laga terakhir
+5615|1 per musim
+5616|Urungkan
+5617|Batalkan laga buruk dan mainkan lagi. Dengan Premium+ kamu bisa membatalkan laga terakhir sekali per musim.
+5618|Batalkan laga buruk dan mainkan lagi.
+5619|Dengan Premium+ kamu bisa membatalkan laga terakhir sekali per musim.
+5620|Tidak ada laga untuk dibatalkan.
+5621|↶ Batalkan laga terakhir?
+5622|laga dan
+5623|semua setelahnya dihapus; kamu kembali ke sebelum laga. Satu-satunya pembatalan musim ini.
+5624|semua setelahnya dihapus; kamu kembali ke sebelum laga.
+5625|Satu-satunya pembatalan musim ini.
+5626|↶ Laga dibatalkan. Kamu bisa memainkannya lagi.
+5627|↶ Laga dibatalkan.
+5628|Kamu bisa memainkannya lagi.
+5629|Gagal membatalkan.
+5630|Intens
+5631|Berlatih saat energi bagus, istirahat saat rendah.
+5632|Semua aksi untuk latihan; istirahat hanya saat energi sangat rendah.
+5633|Perkembangan lebih cepat; lebih lelah dan risiko cedera.
+5634|Gunakan aksi untuk istirahat agar energi tetap tinggi.
+5635|Percepat
+5636|Pilih laga dari jadwal dan minggu-minggu sebelumnya disimulasikan; kamu memainkan laga itu. Kamu juga memilih cara aksimu dipakai di minggu yang dilewati.
+5637|Pilih laga dari jadwal dan minggu-minggu sebelumnya disimulasikan; kamu memainkan laga itu.
+5638|Kamu juga memilih cara aksimu dipakai di minggu yang dilewati.
+5639|Tidak ada laga lagi untuk dilewati musim ini.
+5640|Minggu
+5641|Minggu-minggu disimulasikan sampai laga pilihanmu, dan kamu memainkan laga itu.
+5642|Sampai laga mana?
+5643|Aksimu di minggu-minggu di antaranya
+5644|Berhenti di laga piala dan Eropa, aku yang main
+5645|Berhenti saat ada tawaran transfer
+5646|⏩ Mulai
+5647|Berhenti.
+5648|Ada laga Eropa.
+5649|Ada laga piala.
+5650|Laga terakhir musim ini sudah dimainkan.
+5651|Kamu sudah sampai di laga pilihanmu.
+5652|Ada tawaran transfer baru.
+5653|Berhenti
+5654|Akan berhenti setelah laga ini…
+5655|Ada keputusan yang harus kamu ambil.
+5656|Musim baru telah dimulai.
+5657|Terjadi kesalahan; percepatan dihentikan.
+5658|⏩ Percepatan selesai
+5659|Percepatan selesai
+5660|Rata-rata nilai
+5661|Latihan / istirahat
+5662|⭐ Premium+ dipulihkan.
+5663|Premium+ dipulihkan.
+5664|Premium+ aktif
+5665|Semua keuntungan Premium, 10 slot, urungkan, percepat, statistik, karier kiper
+5666|⭐ Premium+ aktif! Terima kasih atas dukunganmu.
+5667|Premium+ aktif! Terima kasih atas dukunganmu.
+5668|⭐ Premium+ aktif!
+5669|Premium+ aktif!
+5670|Semua Premium
+5671|Bebas iklan, lencana emas, Starpedia, hidup mewah, permintaan transfer
+5672|10 slot karier
+5673|10 karier sekaligus, bukan 5
+5674|Sekali per musim, batalkan laga terakhir yang buruk dan ulangi
+5675|Simulasikan laga sampai minggu pilihanmu
+5676|Sundulan, penalti, tendangan bebas; gol ke tiap tim
+5677|Bermain sebagai kiper: penyelamatan, penalti, clean sheet
+5678|Upgrade
+5679|Dapatkan Premium+
+5680|khusus untuk Premium+.
+5681|Premium+ dapat dibeli di aplikasi App Store.
+5682|Sebagai pemilik Premium kamu mendapat harga upgrade. Pembelian sekali.
+5683|Sebagai pemilik Premium kamu mendapat harga upgrade.
+5684|Perangkat pengembang: aktif (Firebase tester=1)
+5685|Perangkat pengembang: nonaktif
+5686|Statistik lawan, kompetisi dan menit dicatat sejak musim {}.
+5687|{} menepis tiga tembakan beruntun dalam kemelut!
+5688|{} keluar di saat yang tepat dan merebut bola dari penyerang!
+5689|{} memulai cepat dan tim melancarkan serangan balik.
+5690|{} sundulan · {} penalti · {} gol tendangan bebas dan lainnya
+5691|Umpan {} jatuh ke lawan! Bahaya di tepi kotak penalti...
+5692|sundulan · {} penalti · {} gol tendangan bebas dan lainnya
+5693|{} menebusnya dengan menepis penalti!
+5694|Serangan dari umpan panjang {} berakhir dengan gol!
+5695|{} menebus kesalahannya sendiri dengan penyelamatan!
+5696|{} mengembalikan bola ke permainan dan tim tetap menguasai bola.
+5697|{} melakukan penyelamatan hebat di sudut!
+5698|{} menepis dan bek menyapu bola.
+5699|Penalti untuk lawan! {} berdiri di bawah mistar...
+5700|{} menangkap umpan silang dengan aman di udara.
+5701|{} meninju umpan silang menjauh.
+5702|{} Bebas iklan dan langsung dengan Premium
+5703|{} menjatuhkan penyerang, kartu kuning.
+5704|{} Ajukan transfermu sendiri
+5705|{} Premium+ · semua termasuk{}
+5706|Premium+ · semua termasuk{}
+5707|{} Statistik Karier
+5708|{} Upgrade ke Premium+{}
+5709|Upgrade ke Premium+{}
+5710|Umpan {} jatuh ke lawan!
+5711|{} kekalahan dalam {} laga
+5712|kekalahan dalam {} laga
+5713|⏩ Percepat{}
+5714|{} menepis bola.
+5715|Percepat{}
+5716|{} gol dalam {} laga
+5717|{} laga · {} gol
+5718|gol dalam {} laga
+5719|laga · {} gol
+5720|{} berdiri di bawah mistar...
+5721|JARAK {} m
+5722|dalam {} mg
+5723|TEMBAKAN {} / {}
+5724|Fokus: {}
+5725|KETUK UNTUK MULAI
+5726|BERHASIL
+5727|SETENGAH BERHASIL
+5728|SATU LAWAN SATU
+5729|Tekan KELUAR saat bilah di atas berubah HIJAU.
+5730|Tunggu selama masih merah: terlalu cepat, atau bola masih di kakinya.
+5731|Bilah di atas
+5732|berubah
+5733|KELUAR
+5734|: bola lepas dari kaki penyerang ·
+5735|HIJAU
+5736|TERLALU JAUH · TUNGGU
+5737|BOLA DI KAKINYA · TUNGGU
+5738|KELUAR SEKARANG!
+5739|TERLALU DEKAT · RISIKO PELANGGARAN
+5740|AYO!
+5741|TERLALU CEPAT, DIA MENCUNGKIL
+5742|TERLALU LAMBAT: PELANGGARAN, PENALTI
+5743|BOLA DI KAKINYA, DIA MELEWATIMU
+5744|TEMBAKAN MEMBENTUR TIANG
+5745|KAMU DIAM, BOLA MASUK
+5746|MULAI SERANGAN
+5747|Bola di tangan: lempar ke rekan.
+5748|Ketuk yang berlabel hijau BEBAS.
+5749|Lempar ke pemain yang DIJAGA akan dipotong.
+5750|Ketuk rekan yang bertanda
+5751|BEBAS
+5752|·
+5753|DIJAGA
+5754|akan dipotong · sebelum waktu habis
+5755|DITEKAN
+5756|UMPAN SAMPAI, SERANGAN JALAN!
+5757|KE PEMAIN YANG DIJAGA, DIPOTONG
+5758|WAKTU HABIS, BOLA PANJANG
+5759|KETUK YANG BEBAS
+5760|UMPAN SILANG DATANG
+5761|Tahan jarimu dan gerakkan kiper ke bayangan.
+5762|Lepas saat cincin hijau muncul di sekitar bola.
+5763|Lepas di saat yang tepat untuk menangkapnya.
+5764|KEMELUT DI DEPAN GAWANG
+5765|Lawan akan menembak 3 kali beruntun.
+5766|Ketuk cepat sisi gawang yang menyala kuning.
+5767|Kiri, tengah atau kanan. Tepis ketiganya!
+5768|Kiri, tengah atau kanan.
+5769|Tepis ketiganya!
+5770|{} m
+5771|⏩ Buat pilihanmu; percepatan akan berlanjut dari titik terakhir.
+5772|Buat pilihanmu; percepatan akan berlanjut dari titik terakhir.
+5773|⚠️ Simpanan tidak bisa dibuka
+5774|Simpanan tidak bisa dibuka
+5775|Tutup lalu buka lagi aplikasi. Jika masalah berlanjut, hubungi kami.
+5776|Tutup lalu buka lagi aplikasi.
+5777|Jika masalah berlanjut, hubungi kami.
+5778|💾 Kariermu dipulihkan dari cadangan
+5779|Kariermu dipulihkan dari cadangan

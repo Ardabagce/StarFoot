@@ -1,0 +1,373 @@
+5407|Freistoß
+5408|Eins gegen eins mit dem Torwart
+5409|Schuss aus dem Spiel
+5410|Nach einem Dribbling
+5411|Distanzschuss
+5412|Sonstige
+5413|Tore pro Spiel
+5414|Tore + Vorlagen / Spiel
+5415|Doppelpacks
+5416|Meiste Tore (Spiel)
+5417|Längste Torserie
+5418|Beste Torsaison
+5419|S / U / N
+5420|Zu-null-Spiele
+5421|Paraden
+5422|Gehaltene Elfmeter
+5423|Gegentore
+5424|Gegentore pro Spiel
+5425|Zu-null-Quote
+5426|Torwartspiel
+5427|Lieblingsgegner
+5428|Dein Albtraum
+5429|Füllt sich, während du spielst.
+5430|Auswärts
+5431|Minuten pro Tor
+5432|Schlüsselpässe
+5433|Tacklings
+5434|Gelbe / Rote Karten
+5435|Minuten
+5436|Schüsse
+5437|Karrierestatistiken
+5438|Torarten
+5439|Torminuten
+5440|Nach Gegner
+5441|Nach Wettbewerb
+5442|Details
+5443|Detaillierte Karrierestatistiken
+5444|Kopfbälle, Elfmeter und Freistöße, wie viele Tore du gegen jedes Team erzielt hast, deine Torminuten und mehr. Deine Statistiken werden bereits erfasst; schalte sie alle mit Premium+ frei.
+5445|Kopfbälle, Elfmeter und Freistöße, wie viele Tore du gegen jedes Team erzielt hast, deine Torminuten und mehr.
+5446|Deine Statistiken werden bereits erfasst; schalte sie alle mit Premium+ frei.
+5447|Detaillierte Statistiken
+5448|Reflextraining
+5449|Schnelle Schüsse aus kurzer Distanz. Tippe schnell auf die Seite, die aufleuchtet.
+5450|Schnelle Schüsse aus kurzer Distanz.
+5451|Tippe schnell auf die Seite, die aufleuchtet.
+5452|Hechttraining
+5453|Der Trainer schießt in die Ecken. Hechte in die richtige Ecke, sobald der Ball den Fuß verlässt.
+5454|Der Trainer schießt in die Ecken.
+5455|Hechte in die richtige Ecke, sobald der Ball den Fuß verlässt.
+5456|Fangen und Elfmeter
+5457|Elfmeter. Lies den Blick des Schützen und hechte in eine Ecke.
+5458|Elfmeter.
+5459|Lies den Blick des Schützen und hechte in eine Ecke.
+5460|Flankentraining
+5461|Flanken von außen. Halte gedrückt, um unter den Ball zu laufen, und lass los, wenn er herunterkommt.
+5462|Flanken von außen.
+5463|Halte gedrückt, um unter den Ball zu laufen, und lass los, wenn er herunterkommt.
+5464|Eins-gegen-eins-Training
+5465|Der Stürmer läuft auf dich zu. Komm raus, sobald er sich den Ball zu weit vorlegt.
+5466|Der Stürmer läuft auf dich zu.
+5467|Komm raus, sobald er sich den Ball zu weit vorlegt.
+5468|Stellungsspiel
+5469|Eins gegen eins: Winkel verkürzen und im richtigen Moment rauskommen.
+5470|Spieleröffnung
+5471|Ball in der Hand. Finde einen freien Mitspieler, bevor die Zeit abläuft.
+5472|Ball in der Hand.
+5473|Finde einen freien Mitspieler, bevor die Zeit abläuft.
+5474|Abstoßtraining
+5475|Langer Abwurf: Finde deinen freien Mitspieler und bring den Ball zu ihm.
+5476|+5 Karriereplätze
+5477|Spiele mit Premium+ 10 Karrieren gleichzeitig
+5478|Reflexe, Hechtsprünge, hohe Bälle
+5479|Hüter des Tores; Paraden, Elfmeter und Zu-null-Spiele.
+5480|Torwartkarriere
+5481|Spiele als Torwart: Paraden in die Ecken, Elfmeterduelle, Eins-gegen-eins und Zu-null-Spiele. Die Torwartkarriere wird mit Premium+ freigeschaltet.
+5482|Spiele als Torwart: Paraden in die Ecken, Elfmeterduelle, Eins-gegen-eins und Zu-null-Spiele.
+5483|Die Torwartkarriere wird mit Premium+ freigeschaltet.
+5484|🧤 Schuss kommt!
+5485|Schuss kommt!
+5486|🧤 Eins gegen eins!
+5487|Eins gegen eins!
+5488|🧤 Flanke kommt!
+5489|Flanke kommt!
+5490|🧤 Elfmeter für den Gegner!
+5491|Elfmeter für den Gegner!
+5492|🧤 Gewühl im Strafraum!
+5493|Gewühl im Strafraum!
+5494|🧤 Starte den Angriff
+5495|Starte den Angriff
+5496|Der Stürmer schießt! Lies seinen Blick und hechte in die richtige Ecke, sobald der Ball den Fuß verlässt (tippe links, Mitte oder rechts).
+5497|Der Stürmer schießt!
+5498|Lies seinen Blick und hechte in die richtige Ecke, sobald der Ball den Fuß verlässt (tippe links, Mitte oder rechts).
+5499|Der Stürmer dribbelt auf dich zu. Komm raus, sobald er sich den Ball zu weit vorlegt; zu früh und er lupft, zu spät und er schießt.
+5500|Der Stürmer dribbelt auf dich zu.
+5501|Komm raus, sobald er sich den Ball zu weit vorlegt; zu früh und er lupft, zu spät und er schießt.
+5502|Eine Flanke kommt. Halte gedrückt, um unter den Ball zu laufen, und lass los, wenn er in deine Hände fällt.
+5503|Eine Flanke kommt.
+5504|Halte gedrückt, um unter den Ball zu laufen, und lass los, wenn er in deine Hände fällt.
+5505|Gewühl im Strafraum! Die Schüsse hören nicht auf; tippe schnell auf die Seite, die aufleuchtet.
+5506|Gewühl im Strafraum!
+5507|Die Schüsse hören nicht auf; tippe schnell auf die Seite, die aufleuchtet.
+5508|Ball in der Hand. Wirf ihn zum freien Mitspieler (grüner Ring), bevor die Zeit abläuft, und starte den Angriff.
+5509|Wirf ihn zum freien Mitspieler (grüner Ring), bevor die Zeit abläuft, und starte den Angriff.
+5510|Der Gegner tritt zum Elfmeter an. Lies den Blick des Schützen und hechte in eine Ecke!
+5511|Der Gegner tritt zum Elfmeter an.
+5512|Lies den Blick des Schützen und hechte in eine Ecke!
+5513|Elfmeter für den Gegner!
+5514|steht im Tor...
+5515|zeigt eine Glanzparade in der Ecke!
+5516|Sie verwandelten den Abpraller.
+5517|wehrte ab und die Abwehr klärte.
+5518|kam im richtigen Moment raus und nahm dem Stürmer den Ball ab!
+5519|brachte den Stürmer zu Fall, Gelbe Karte.
+5520|machte es wieder gut und hielt den Elfmeter!
+5521|Der Schuss des Stürmers traf den Pfosten!
+5522|pflückte die Flanke sicher aus der Luft.
+5523|Sie schoben den losen Ball ins Netz.
+5524|faustete die Flanke weg.
+5525|Kopfballtor.
+5526|Der Kopfball ging knapp vorbei.
+5527|hielt im Gewühl drei Schüsse in Folge!
+5528|Konnte das Tor im Gewühl nicht verhindern.
+5529|Tor nach Gewühl im Strafraum.
+5530|spielte schnell ab und das Team konterte.
+5531|brachte den Ball ins Spiel und das Team behielt den Ballbesitz.
+5532|Gefahr an der Strafraumgrenze...
+5533|machte seinen eigenen Fehler mit einer Parade wieder gut!
+5534|wehrte den Ball ab.
+5535|Elfmeter! Lies den
+5536|Lies den
+5537|Blick
+5538|des Schützen, und wenn er schießt,
+5539|hechte in eine Ecke
+5540|· tippe links / Mitte / rechts ·
+5541|Schuss kommt! Wenn der Ball den Fuß verlässt,
+5542|Schuss kommt!
+5543|Wenn der Ball den Fuß verlässt,
+5544|hechte in die richtige Ecke
+5545|· tippe oder wische links / Mitte / rechts ·
+5546|ZU FRÜH GESPRUNGEN, ECKE OFFEN
+5547|TOR! DU BIST NICHT GESPRUNGEN
+5548|DU BIST NICHT GESPRUNGEN
+5549|NOCH DRAN, ABPRALLER!
+5550|WAS FÜR EINE PARADE!
+5551|AUS DER ECKE GEKRATZT!
+5552|RIESEN-KEEPER!
+5553|MIT DEM FUSS GEHALTEN!
+5554|TOR! FALSCHE ECKE
+5555|FALSCHE ECKE
+5556|SCHUSS KOMMT!
+5557|Wenn der Stürmer sich den Ball
+5558|zu weit vorlegt
+5559|(gelber Ring)
+5560|tippe und komm raus
+5561|· nicht zu früh, nicht zu spät ·
+5562|DER LUPFER TRAF DEN PFOSTEN!
+5563|ZU FRÜH RAUSGEKOMMEN, ER HAT GELUPFT!
+5564|BALL VOM FUSS GENOMMEN!
+5565|BEGRABEN!
+5566|PERFEKTES TIMING!
+5567|FOUL! DU HAST IHN GELEGT
+5568|DU HAST IHN GELEGT
+5569|ER HAT DICH UMKURVT!
+5570|SCHUSS AN DEN PFOSTEN!
+5571|TOR! DU BLIEBST AUF DER LINIE
+5572|DU BLIEBST AUF DER LINIE
+5573|, bring den Torwart in den Schatten des Balls · wenn er in deine Hände fällt
+5574|lass los
+5575|und fang ihn
+5576|IN DER LUFT GEFANGEN!
+5577|SICHERE HÄNDE!
+5578|WEGGEFAUSTET
+5579|VERPASST!
+5580|ZU FRÜH GESPRUNGEN!
+5581|ER FAND EINEN KOPF!
+5582|FLANKE KOMMT!
+5583|Gewühl im Strafraum! Die Schüsse hören nicht auf · tippe auf die Seite, die aufleuchtet
+5584|Die Schüsse hören nicht auf · tippe auf die Seite, die aufleuchtet
+5585|schnell
+5586|(links / Mitte / rechts) ·
+5587|ALLE DREI GEHALTEN!
+5588|GEHALTEN! ABPRALLER…
+5589|GEHALTEN!
+5590|ABPRALLER…
+5591|AM ENDE DOCH DRIN…
+5592|Ball in der Hand!
+5593|Grüner Ring
+5594|(freier) Mitspieler: tippe ihn an, um den Angriff zu starten · rot = gedeckt · bevor die Zeit abläuft
+5595|KONTER LÄUFT!
+5596|PASS ANGEKOMMEN, ABER UNTER DRUCK
+5597|BALL VERLOREN!
+5598|LANG GESCHLAGEN, 50:50-BALL
+5599|Reflexe
+5600|Reaktionsschnelligkeit bei Schüssen aus kurzer Distanz.
+5601|Abschlag
+5602|Kraft und Genauigkeit langer Abschläge.
+5603|Angriffe mit Fuß und Hand einleiten.
+5604|Eins gegen eins
+5605|Im Eins gegen eins im richtigen Moment rauskommen.
+5606|Fangsicherheit
+5607|Schüsse festhalten, ohne sie abprallen zu lassen.
+5608|Luftduelle
+5609|Flanken in der Luft abfangen.
+5610|Winkel verkürzen und richtig stehen.
+5611|Sprungkraft
+5612|Die Ecken erreichen und körperliche Stärke.
+5613|Konzentration und Fitness über das ganze Spiel.
+5614|↶ Letztes Spiel rückgängig
+5615|1 pro Saison
+5616|Rückgängig
+5617|Mach ein schlechtes Spiel rückgängig und spiel es neu. Mit Premium+ kannst du dein letztes Spiel einmal pro Saison rückgängig machen.
+5618|Mach ein schlechtes Spiel rückgängig und spiel es neu.
+5619|Mit Premium+ kannst du dein letztes Spiel einmal pro Saison rückgängig machen.
+5620|Kein Spiel zum Rückgängigmachen.
+5621|↶ Letztes Spiel rückgängig machen?
+5622|Spiel und
+5623|alles danach wird gelöscht; du gehst zurück vor das Spiel. Dein einziges Rückgängig in dieser Saison.
+5624|alles danach wird gelöscht; du gehst zurück vor das Spiel.
+5625|Dein einziges Rückgängig in dieser Saison.
+5626|↶ Spiel rückgängig gemacht. Du kannst es neu spielen.
+5627|↶ Spiel rückgängig gemacht.
+5628|Du kannst es neu spielen.
+5629|Rückgängig fehlgeschlagen.
+5630|Intensiv
+5631|Trainiere bei guter Energie, ruh dich bei niedriger aus.
+5632|Jede Aktion geht ins Training; Pause nur bei sehr niedriger Energie.
+5633|Schnellere Entwicklung; mehr Müdigkeit und Verletzungsrisiko.
+5634|Aktionen für Erholung nutzen, damit die Energie hoch bleibt.
+5635|Vorspulen
+5636|Wähle ein Spiel aus dem Spielplan; die Wochen davor werden simuliert und du spielst dieses Spiel. Du wählst auch, wie deine Aktionen in den übersprungenen Wochen genutzt werden.
+5637|Wähle ein Spiel aus dem Spielplan; die Wochen davor werden simuliert und du spielst dieses Spiel.
+5638|Du wählst auch, wie deine Aktionen in den übersprungenen Wochen genutzt werden.
+5639|Diese Saison gibt es keine Spiele mehr zum Überspringen.
+5640|Woche
+5641|Die Wochen bis zum gewählten Spiel werden simuliert, und du spielst dieses Spiel.
+5642|Bis zu welchem Spiel?
+5643|Deine Aktionen in den Wochen dazwischen
+5644|Bei Pokal- und Europapokalspielen anhalten, die spiele ich
+5645|Anhalten, wenn ein Transferangebot kommt
+5646|⏩ Start
+5647|Angehalten.
+5648|Ein Europapokalspiel steht an.
+5649|Ein Pokalspiel steht an.
+5650|Das letzte Saisonspiel wurde gespielt.
+5651|Du hast das gewählte Spiel erreicht.
+5652|Ein neues Transferangebot ist da.
+5653|Stopp
+5654|Hält nach diesem Spiel an…
+5655|Du musst eine Entscheidung treffen.
+5656|Eine neue Saison hat begonnen.
+5657|Etwas ist schiefgelaufen; Vorspulen angehalten.
+5658|⏩ Vorspulen beendet
+5659|Vorspulen beendet
+5660|Ø Note
+5661|Training / Pause
+5662|⭐ Premium+ wiederhergestellt.
+5663|Premium+ wiederhergestellt.
+5664|Premium+ aktiv
+5665|Alle Premium-Vorteile, 10 Karriereplätze, Rückgängig, Vorspulen, Statistiken, Torwartkarriere
+5666|⭐ Premium+ aktiv! Danke für deine Unterstützung.
+5667|Premium+ aktiv! Danke für deine Unterstützung.
+5668|⭐ Premium+ aktiv!
+5669|Premium+ aktiv!
+5670|Alles aus Premium
+5671|Werbefrei, goldenes Abzeichen, Starpedia, Luxusleben, Transferanfragen
+5672|10 Karriereplätze
+5673|10 statt 5 Karrieren gleichzeitig
+5674|Einmal pro Saison ein schlechtes letztes Spiel rückgängig machen und neu spielen
+5675|Spiele bis zur gewählten Woche simulieren
+5676|Kopfbälle, Elfmeter, Freistöße; Tore gegen jedes Team
+5677|Als Torwart spielen: Paraden, Elfmeter, Zu-null-Spiele
+5678|Upgrade
+5679|Premium+ holen
+5680|ist exklusiv für Premium+.
+5681|Premium+ kann in der App-Store-App gekauft werden.
+5682|Als Premium-Besitzer bekommst du den Upgrade-Preis. Einmaliger Kauf.
+5683|Als Premium-Besitzer bekommst du den Upgrade-Preis.
+5684|Entwicklergerät: an (Firebase tester=1)
+5685|Entwicklergerät: aus
+5686|Gegner-, Wettbewerbs- und Minutenstatistiken werden ab der Saison {} erfasst.
+5687|{} hielt im Gewühl drei Schüsse in Folge!
+5688|{} kam im richtigen Moment raus und nahm dem Stürmer den Ball ab!
+5689|{} spielte schnell ab und das Team konterte.
+5690|{} Kopfballtore · {} Elfmeter · {} Freistoßtore und mehr
+5691|{}s Pass landete beim Gegner! Gefahr an der Strafraumgrenze...
+5692|Kopfballtore · {} Elfmeter · {} Freistoßtore und mehr
+5693|{} machte es wieder gut und hielt den Elfmeter!
+5694|Der Angriff nach {}s langem Pass endete mit einem Tor!
+5695|{} machte seinen eigenen Fehler mit einer Parade wieder gut!
+5696|{} brachte den Ball ins Spiel und das Team behielt den Ballbesitz.
+5697|{} zeigt eine Glanzparade in der Ecke!
+5698|{} wehrte ab und die Abwehr klärte.
+5699|Elfmeter für den Gegner! {} steht im Tor...
+5700|{} pflückte die Flanke sicher aus der Luft.
+5701|{} faustete die Flanke weg.
+5702|{} Werbefrei und sofort mit Premium
+5703|{} brachte den Stürmer zu Fall, Gelbe Karte.
+5704|{} Eigenen Transfer anfragen
+5705|{} Premium+ · alles inklusive{}
+5706|Premium+ · alles inklusive{}
+5707|{} Karrierestatistiken
+5708|{} Upgrade auf Premium+{}
+5709|Upgrade auf Premium+{}
+5710|{}s Pass landete beim Gegner!
+5711|{} Niederlagen in {} Spielen
+5712|Niederlagen in {} Spielen
+5713|⏩ Vorspulen{}
+5714|{} wehrte den Ball ab.
+5715|Vorspulen{}
+5716|{} Tore in {} Spielen
+5717|{} Spiele · {} Tore
+5718|Tore in {} Spielen
+5719|Spiele · {} Tore
+5720|{} steht im Tor...
+5721|DISTANZ {} m
+5722|in {} Wo.
+5723|SCHUSS {} / {}
+5724|Fokus: {}
+5725|ZUM STARTEN TIPPEN
+5726|GESCHAFFT
+5727|HALB GESCHAFFT
+5728|EINS GEGEN EINS
+5729|Drück RAUSKOMMEN, wenn der Balken oben GRÜN wird.
+5730|Warte, solange er rot ist: zu früh, oder der Ball ist an seinem Fuß.
+5731|Der Balken oben
+5732|wird
+5733|RAUSKOMMEN
+5734|: der Ball hat den Fuß des Stürmers verlassen ·
+5735|GRÜN
+5736|ZU WEIT · WARTEN
+5737|BALL AM FUSS · WARTEN
+5738|JETZT RAUS!
+5739|ZU NAH · FOULGEFAHR
+5740|LOS!
+5741|ZU FRÜH, ER HAT GELUPFT
+5742|ZU SPÄT: FOUL, ELFMETER
+5743|BALL WAR AM FUSS, ER HAT DICH UMKURVT
+5744|DER SCHUSS TRAF DEN PFOSTEN
+5745|DU BLIEBST STEHEN, DRIN
+5746|STARTE DEN ANGRIFF
+5747|Ball in der Hand: wirf ihn zu einem Mitspieler.
+5748|Tippe auf den mit dem grünen FREI-Label.
+5749|Wirfst du zu einem GEDECKTEN Spieler, wird abgefangen.
+5750|Tippe den Mitspieler an, markiert mit
+5751|FREI
+5752|·
+5753|GEDECKT
+5754|werden abgefangen · bevor die Zeit abläuft
+5755|BEDRÄNGT
+5756|PASS ANGEKOMMEN, ANGRIFF LÄUFT!
+5757|ZUM GEDECKTEN GESPIELT, ABGEFANGEN
+5758|ZEIT UM, LANG GESCHLAGEN
+5759|TIPPE DEN FREIEN AN
+5760|FLANKE KOMMT
+5761|Halte den Finger und bring den Torwart in den Schatten.
+5762|Lass los, wenn ein grüner Ring um den Ball erscheint.
+5763|Lass im richtigen Moment los, um ihn zu fangen.
+5764|GEWÜHL IM STRAFRAUM
+5765|Der Gegner schießt 3-mal hintereinander.
+5766|Tippe schnell auf die gelb leuchtende Torseite.
+5767|Links, Mitte oder rechts. Halte alle drei!
+5768|Links, Mitte oder rechts.
+5769|Halte alle drei!
+5770|{} m
+5771|⏩ Triff deine Wahl; das Vorspulen geht danach weiter.
+5772|Triff deine Wahl; das Vorspulen geht danach weiter.
+5773|⚠️ Spielstand konnte nicht geöffnet werden
+5774|Spielstand konnte nicht geöffnet werden
+5775|Schließe die App und öffne sie erneut. Wenn das Problem bleibt, schreib uns.
+5776|Schließe die App und öffne sie erneut.
+5777|Wenn das Problem bleibt, schreib uns.
+5778|💾 Deine Karrieren wurden aus dem Backup wiederhergestellt
+5779|Deine Karrieren wurden aus dem Backup wiederhergestellt

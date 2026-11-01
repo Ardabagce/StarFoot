@@ -1,0 +1,373 @@
+5407|Falta
+5408|Cara a cara com o goleiro
+5409|Chute em jogada
+5410|Após um drible
+5411|De longe
+5412|Outros
+5413|Gols por jogo
+5414|Gols + assistências / jogo
+5415|Dobletes
+5416|Mais gols (jogo)
+5417|Maior sequência marcando
+5418|Melhor temporada de gols
+5419|V / E / D
+5420|Jogos sem sofrer gol
+5421|Defesas
+5422|Pênaltis defendidos
+5423|Gols sofridos
+5424|Sofridos por jogo
+5425|% sem sofrer gol
+5426|Goleiro
+5427|Adversário favorito
+5428|Seu pesadelo
+5429|Vai enchendo conforme você joga.
+5430|Fora
+5431|Minutos por gol
+5432|Passes decisivos
+5433|Desarmes
+5434|Amarelos / vermelhos
+5435|Minutos
+5436|Chutes
+5437|Estatísticas da carreira
+5438|Tipos de gol
+5439|Minutos dos gols
+5440|Por adversário
+5441|Por competição
+5442|Detalhes
+5443|Estatísticas detalhadas da carreira
+5444|Cabeçadas, pênaltis e faltas, quantos gols você marcou contra cada time, seus minutos de gol e mais. Suas estatísticas já estão sendo registradas; desbloqueie todas com o Premium+.
+5445|Cabeçadas, pênaltis e faltas, quantos gols você marcou contra cada time, seus minutos de gol e mais.
+5446|Suas estatísticas já estão sendo registradas; desbloqueie todas com o Premium+.
+5447|Estatísticas detalhadas
+5448|Treino de reflexos
+5449|Chutes rápidos de perto. Toque rápido no lado que acende.
+5450|Chutes rápidos de perto.
+5451|Toque rápido no lado que acende.
+5452|Treino de saltos
+5453|O treinador chuta nos cantos. Pule no canto certo quando a bola sair do pé.
+5454|O treinador chuta nos cantos.
+5455|Pule no canto certo quando a bola sair do pé.
+5456|Encaixe e pênaltis
+5457|Pênaltis. Leia o olhar do batedor e pule num canto.
+5458|Pênaltis.
+5459|Leia o olhar do batedor e pule num canto.
+5460|Treino aéreo
+5461|Cruzamentos das pontas. Segure para ir para baixo da bola e solte quando ela cair.
+5462|Cruzamentos das pontas.
+5463|Segure para ir para baixo da bola e solte quando ela cair.
+5464|Treino de cara a cara
+5465|O atacante corre na sua direção. Saia assim que ele empurrar a bola longe demais.
+5466|O atacante corre na sua direção.
+5467|Saia assim que ele empurrar a bola longe demais.
+5468|Posicionamento
+5469|Cara a cara: feche o ângulo e saia na hora certa.
+5470|Reposição
+5471|Bola na mão. Ache um companheiro livre antes que o tempo acabe.
+5472|Bola na mão.
+5473|Ache um companheiro livre antes que o tempo acabe.
+5474|Treino de tiro de meta
+5475|Reposição longa: ache o companheiro livre e faça a bola chegar até ele.
+5476|+5 espaços de carreira
+5477|Tenha 10 carreiras ao mesmo tempo com o Premium+
+5478|reflexos, saltos, bolas aéreas
+5479|Guardião do gol; defesas, pênaltis e jogos sem sofrer gol.
+5480|Carreira de goleiro
+5481|Jogue como goleiro: defesas nos cantos, duelos de pênalti, cara a cara e jogos sem sofrer gol. A carreira de goleiro é desbloqueada com o Premium+.
+5482|Jogue como goleiro: defesas nos cantos, duelos de pênalti, cara a cara e jogos sem sofrer gol.
+5483|A carreira de goleiro é desbloqueada com o Premium+.
+5484|🧤 Lá vem o chute!
+5485|Lá vem o chute!
+5486|🧤 Cara a cara!
+5487|Cara a cara!
+5488|🧤 Lá vem o cruzamento!
+5489|Lá vem o cruzamento!
+5490|🧤 Pênalti para o adversário!
+5491|Pênalti para o adversário!
+5492|🧤 Bate-rebate na área!
+5493|Bate-rebate na área!
+5494|🧤 Inicie o ataque
+5495|Inicie o ataque
+5496|O atacante vai chutar! Leia o olhar dele e pule no canto certo quando a bola sair do pé (toque esquerda, centro ou direita).
+5497|O atacante vai chutar!
+5498|Leia o olhar dele e pule no canto certo quando a bola sair do pé (toque esquerda, centro ou direita).
+5499|O atacante vem driblando. Saia assim que ele empurrar a bola longe demais; cedo demais e ele te encobre, tarde demais e ele chuta.
+5500|O atacante vem driblando.
+5501|Saia assim que ele empurrar a bola longe demais; cedo demais e ele te encobre, tarde demais e ele chuta.
+5502|Vem um cruzamento. Segure para ir para baixo da bola e solte quando ela cair nas suas mãos para agarrá-la.
+5503|Vem um cruzamento.
+5504|Segure para ir para baixo da bola e solte quando ela cair nas suas mãos para agarrá-la.
+5505|Bate-rebate na área! Os chutes não param; toque rápido no lado que acende.
+5506|Bate-rebate na área!
+5507|Os chutes não param; toque rápido no lado que acende.
+5508|Bola na mão. Lance para o companheiro livre (anel verde) antes que o tempo acabe e inicie o ataque.
+5509|Lance para o companheiro livre (anel verde) antes que o tempo acabe e inicie o ataque.
+5510|O adversário vai bater um pênalti. Leia o olhar do batedor e pule num canto!
+5511|O adversário vai bater um pênalti.
+5512|Leia o olhar do batedor e pule num canto!
+5513|Pênalti para o adversário!
+5514|está no gol...
+5515|fez uma defesaça no canto!
+5516|Eles marcaram no rebote.
+5517|espalmou e a defesa afastou.
+5518|saiu na hora certa e tirou a bola do atacante!
+5519|derrubou o atacante, cartão amarelo.
+5520|se redimiu defendendo o pênalti!
+5521|O chute do atacante bateu na trave!
+5522|segurou o cruzamento com segurança no alto.
+5523|Eles empurraram a bola solta para a rede.
+5524|socou o cruzamento para longe.
+5525|Gol de cabeça.
+5526|A cabeçada passou perto.
+5527|defendeu três chutes seguidos no bate-rebate!
+5528|Não conseguiu evitar o gol no bate-rebate.
+5529|Gol após bate-rebate na área.
+5530|repôs rápido e o time saiu no contra-ataque.
+5531|repôs a bola e o time manteve a posse.
+5532|Perigo na entrada da área...
+5533|corrigiu o próprio erro com uma defesa!
+5534|espalmou a bola.
+5535|Pênalti! Leia o
+5536|Leia o
+5537|olhar
+5538|do batedor e, quando ele chutar,
+5539|pule num canto
+5540|· toque esquerda / centro / direita ·
+5541|Lá vem o chute! Quando a bola sair do pé
+5542|Lá vem o chute!
+5543|Quando a bola sair do pé
+5544|pule no canto certo
+5545|· toque ou deslize esquerda / centro / direita ·
+5546|VOCÊ PULOU CEDO E ABRIU O CANTO
+5547|GOL! VOCÊ NÃO PULOU
+5548|VOCÊ NÃO PULOU
+5549|VOCÊ TOCOU NELA, REBOTE!
+5550|QUE DEFESA!
+5551|TIROU DO CANTO!
+5552|GOLEIRO GIGANTE!
+5553|DEFENDEU COM O PÉ!
+5554|GOL! CANTO ERRADO
+5555|CANTO ERRADO
+5556|LÁ VEM O CHUTE!
+5557|Quando o atacante empurrar a bola
+5558|longe demais
+5559|(anel amarelo)
+5560|toque e saia
+5561|· nem cedo, nem tarde ·
+5562|A CAVADINHA BATEU NA TRAVE!
+5563|VOCÊ SAIU CEDO, ELE TE ENCOBRIU!
+5564|VOCÊ TIROU DO PÉ DELE!
+5565|VOCÊ ABAFOU!
+5566|TEMPO PERFEITO!
+5567|FALTA! VOCÊ O DERRUBOU
+5568|VOCÊ O DERRUBOU
+5569|ELE TE DRIBLOU!
+5570|O CHUTE BATE NA TRAVE!
+5571|GOL! VOCÊ FICOU NA LINHA
+5572|VOCÊ FICOU NA LINHA
+5573|, leve o goleiro até a sombra da bola · quando ela cair nas suas mãos
+5574|solte
+5575|e agarre
+5576|AGARROU NO ALTO!
+5577|MÃOS SEGURAS!
+5578|SOCOU PARA LONGE
+5579|VOCÊ ERROU!
+5580|PULOU CEDO DEMAIS!
+5581|ACHOU UMA CABEÇA!
+5582|LÁ VEM O CRUZAMENTO!
+5583|Bate-rebate na área! Os chutes não param · toque no lado que acende
+5584|Os chutes não param · toque no lado que acende
+5585|rápido
+5586|(esquerda / centro / direita) ·
+5587|DEFENDEU OS TRÊS!
+5588|DEFENDEU! REBOTE…
+5589|DEFENDEU!
+5590|REBOTE…
+5591|NO FIM ENTROU…
+5592|Bola na mão!
+5593|Anel verde
+5594|(livre) companheiro: toque nele para iniciar o ataque · vermelho = marcado · antes que o tempo acabe
+5595|CONTRA-ATAQUE!
+5596|O PASSE CHEGOU, MAS SOB PRESSÃO
+5597|BOLA PERDIDA!
+5598|CHUTÃO, BOLA DIVIDIDA
+5599|Reflexos
+5600|Velocidade de reação a chutes de perto.
+5601|Chute de meta
+5602|Força e precisão dos chutões.
+5603|Iniciar ataques com pés e mãos.
+5604|Cara a cara
+5605|Sair na hora certa nos cara a cara.
+5606|Encaixe
+5607|Segurar chutes sem soltar a bola.
+5608|Jogo aéreo
+5609|Pegar cruzamentos no alto.
+5610|Fechar o ângulo e se posicionar bem.
+5611|Salto
+5612|Alcançar os cantos e força física.
+5613|Concentração e condição física o jogo todo.
+5614|↶ Desfazer último jogo
+5615|1 por temporada
+5616|Desfazer
+5617|Desfaça um jogo ruim e jogue de novo. Com o Premium+ você pode desfazer seu último jogo uma vez por temporada.
+5618|Desfaça um jogo ruim e jogue de novo.
+5619|Com o Premium+ você pode desfazer seu último jogo uma vez por temporada.
+5620|Não há jogo para desfazer.
+5621|↶ Desfazer o último jogo?
+5622|jogo e
+5623|tudo depois dele é apagado; você volta para antes do jogo. Seu único desfazer nesta temporada.
+5624|tudo depois dele é apagado; você volta para antes do jogo.
+5625|Seu único desfazer nesta temporada.
+5626|↶ Jogo desfeito. Você pode jogá-lo de novo.
+5627|↶ Jogo desfeito.
+5628|Você pode jogá-lo de novo.
+5629|Não foi possível desfazer.
+5630|Intenso
+5631|Treine com energia boa, descanse quando estiver baixa.
+5632|Toda ação vai para treino; descanso só com energia muito baixa.
+5633|Evolução mais rápida; mais cansaço e risco de lesão.
+5634|Use ações para descansar e manter a energia alta.
+5635|Avanço rápido
+5636|Escolha um jogo do calendário e as semanas anteriores são simuladas; você joga esse jogo. Você também escolhe como suas ações são usadas nas semanas puladas.
+5637|Escolha um jogo do calendário e as semanas anteriores são simuladas; você joga esse jogo.
+5638|Você também escolhe como suas ações são usadas nas semanas puladas.
+5639|Não há mais jogos para pular nesta temporada.
+5640|Semana
+5641|As semanas são simuladas até o jogo escolhido, e você joga esse jogo.
+5642|Até qual jogo?
+5643|Suas ações nas semanas entre eles
+5644|Parar nos jogos de copa e continentais, eu jogo
+5645|Parar quando chegar uma proposta de transferência
+5646|⏩ Começar
+5647|Parado.
+5648|Tem jogo continental.
+5649|Tem jogo de copa.
+5650|O último jogo da temporada foi disputado.
+5651|Você chegou ao jogo escolhido.
+5652|Chegou uma nova proposta de transferência.
+5653|Parar
+5654|Vai parar depois deste jogo…
+5655|Há uma decisão para você tomar.
+5656|Começou uma nova temporada.
+5657|Algo deu errado; o avanço rápido parou.
+5658|⏩ Avanço rápido concluído
+5659|Avanço rápido concluído
+5660|Nota média
+5661|Treino / descanso
+5662|⭐ Premium+ restaurado.
+5663|Premium+ restaurado.
+5664|Premium+ ativo
+5665|Todas as vantagens Premium, 10 espaços, desfazer, avanço rápido, estatísticas, carreira de goleiro
+5666|⭐ Premium+ ativo! Obrigado pelo apoio.
+5667|Premium+ ativo! Obrigado pelo apoio.
+5668|⭐ Premium+ ativo!
+5669|Premium+ ativo!
+5670|Todo o Premium
+5671|Sem anúncios, selo dourado, Starpedia, vida de luxo, pedidos de transferência
+5672|10 espaços de carreira
+5673|10 carreiras ao mesmo tempo em vez de 5
+5674|Uma vez por temporada, desfaça um último jogo ruim e jogue de novo
+5675|Simule jogos até a semana que escolher
+5676|Cabeçadas, pênaltis, faltas; gols contra cada time
+5677|Jogue como goleiro: defesas, pênaltis, jogos sem sofrer gol
+5678|Fazer upgrade
+5679|Obter Premium+
+5680|é exclusivo do Premium+.
+5681|O Premium+ pode ser comprado no app da App Store.
+5682|Como dono do Premium, você paga o preço de upgrade. Compra única.
+5683|Como dono do Premium, você paga o preço de upgrade.
+5684|Dispositivo de desenvolvedor: ligado (Firebase tester=1)
+5685|Dispositivo de desenvolvedor: desligado
+5686|Estatísticas por adversário, competição e minuto são registradas desde a temporada {}.
+5687|{} defendeu três chutes seguidos no bate-rebate!
+5688|{} saiu na hora certa e tirou a bola do atacante!
+5689|{} repôs rápido e o time saiu no contra-ataque.
+5690|{} de cabeça · {} de pênalti · {} de falta e mais
+5691|O passe de {} foi para o adversário! Perigo na entrada da área...
+5692|de cabeça · {} de pênalti · {} de falta e mais
+5693|{} se redimiu defendendo o pênalti!
+5694|O ataque iniciado pelo lançamento de {} terminou em gol!
+5695|{} corrigiu o próprio erro com uma defesa!
+5696|{} repôs a bola e o time manteve a posse.
+5697|{} fez uma defesaça no canto!
+5698|{} espalmou e a defesa afastou.
+5699|Pênalti para o adversário! {} está no gol...
+5700|{} segurou o cruzamento com segurança no alto.
+5701|{} socou o cruzamento para longe.
+5702|{} Sem anúncios e na hora com o Premium
+5703|{} derrubou o atacante, cartão amarelo.
+5704|{} Peça sua própria transferência
+5705|{} Premium+ · tudo incluído{}
+5706|Premium+ · tudo incluído{}
+5707|{} Estatísticas da carreira
+5708|{} Upgrade para Premium+{}
+5709|Upgrade para Premium+{}
+5710|O passe de {} foi para o adversário!
+5711|{} derrotas em {} jogos
+5712|derrotas em {} jogos
+5713|⏩ Avanço rápido{}
+5714|{} espalmou a bola.
+5715|Avanço rápido{}
+5716|{} gols em {} jogos
+5717|{} jogos · {} gols
+5718|gols em {} jogos
+5719|jogos · {} gols
+5720|{} está no gol...
+5721|DISTÂNCIA {} m
+5722|em {} sem.
+5723|CHUTE {} / {}
+5724|Foco: {}
+5725|TOQUE PARA COMEÇAR
+5726|SUCESSO
+5727|PELA METADE
+5728|CARA A CARA
+5729|Aperte SAIR quando a barra de cima ficar VERDE.
+5730|Espere enquanto estiver vermelha: cedo demais, ou a bola está no pé dele.
+5731|A barra de cima
+5732|fica
+5733|SAIR
+5734|: a bola saiu do pé do atacante ·
+5735|VERDE
+5736|LONGE DEMAIS · ESPERE
+5737|BOLA NO PÉ · ESPERE
+5738|SAIA AGORA!
+5739|PERTO DEMAIS · RISCO DE FALTA
+5740|VAI!
+5741|CEDO DEMAIS, ELE TE ENCOBRIU
+5742|TARDE DEMAIS: FALTA, PÊNALTI
+5743|A BOLA ESTAVA NO PÉ, ELE TE DRIBLOU
+5744|O CHUTE BATEU NA TRAVE
+5745|VOCÊ FICOU PARADO, ENTROU
+5746|INICIE O ATAQUE
+5747|Bola na mão: lance para um companheiro.
+5748|Toque no que tem a etiqueta verde LIVRE.
+5749|Lançar para um MARCADO resulta em interceptação.
+5750|Toque no companheiro marcado como
+5751|LIVRE
+5752|·
+5753|MARCADO
+5754|são interceptados · antes que o tempo acabe
+5755|PRESSIONADO
+5756|PASSE CERTO, ATAQUE ROLANDO!
+5757|LANÇOU PARA UM MARCADO, INTERCEPTADO
+5758|TEMPO ESGOTADO, CHUTÃO
+5759|TOQUE NO LIVRE
+5760|LÁ VEM O CRUZAMENTO
+5761|Segure o dedo e leve o goleiro até a sombra.
+5762|Solte quando aparecer um anel verde em volta da bola.
+5763|Solte na hora certa para agarrar.
+5764|BATE-REBATE NA ÁREA
+5765|O adversário vai chutar 3 vezes seguidas.
+5766|Toque rápido no lado do gol que brilha em amarelo.
+5767|Esquerda, centro ou direita. Defenda os três!
+5768|Esquerda, centro ou direita.
+5769|Defenda os três!
+5770|{} m
+5771|⏩ Faça sua escolha; o avanço rápido continua de onde parou.
+5772|Faça sua escolha; o avanço rápido continua de onde parou.
+5773|⚠️ Não foi possível abrir o jogo salvo
+5774|Não foi possível abrir o jogo salvo
+5775|Feche e abra o app de novo. Se o problema continuar, fale com a gente.
+5776|Feche e abra o app de novo.
+5777|Se o problema continuar, fale com a gente.
+5778|💾 Suas carreiras foram restauradas do backup
+5779|Suas carreiras foram restauradas do backup

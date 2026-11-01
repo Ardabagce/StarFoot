@@ -1,0 +1,373 @@
+5407|Coup franc
+5408|Face-à-face avec le gardien
+5409|Tir dans le jeu
+5410|Après un dribble
+5411|De loin
+5412|Autres
+5413|Buts par match
+5414|Buts + passes déc. / match
+5415|Doublés
+5416|Plus de buts (match)
+5417|Plus longue série de buts
+5418|Meilleure saison de buts
+5419|V / N / D
+5420|Clean sheets
+5421|Arrêts
+5422|Penaltys arrêtés
+5423|Buts encaissés
+5424|Encaissés par match
+5425|Taux de clean sheets
+5426|Gardien
+5427|Adversaire préféré
+5428|Ton cauchemar
+5429|Se remplit au fil de tes matchs.
+5430|Extérieur
+5431|Minutes par but
+5432|Passes clés
+5433|Tacles
+5434|Cartons jaunes / rouges
+5435|Minutes
+5436|Tirs
+5437|Statistiques de carrière
+5438|Types de buts
+5439|Minutes des buts
+5440|Par adversaire
+5441|Par compétition
+5442|Détails
+5443|Statistiques de carrière détaillées
+5444|Têtes, penaltys et coups francs, combien de buts tu as marqués contre chaque équipe, tes minutes de buts et plus. Tes stats sont déjà enregistrées ; débloque-les toutes avec Premium+.
+5445|Têtes, penaltys et coups francs, combien de buts tu as marqués contre chaque équipe, tes minutes de buts et plus.
+5446|Tes stats sont déjà enregistrées ; débloque-les toutes avec Premium+.
+5447|Statistiques détaillées
+5448|Exercice de réflexes
+5449|Tirs rapides de près. Touche vite le côté qui s'allume.
+5450|Tirs rapides de près.
+5451|Touche vite le côté qui s'allume.
+5452|Exercice de plongeons
+5453|L'entraîneur tire dans les coins. Plonge dans le bon coin quand le ballon quitte le pied.
+5454|L'entraîneur tire dans les coins.
+5455|Plonge dans le bon coin quand le ballon quitte le pied.
+5456|Prise de balle et penaltys
+5457|Penaltys. Lis le regard du tireur et plonge dans un coin.
+5458|Penaltys.
+5459|Lis le regard du tireur et plonge dans un coin.
+5460|Exercice aérien
+5461|Centres depuis les ailes. Maintiens pour te placer sous le ballon, relâche quand il retombe.
+5462|Centres depuis les ailes.
+5463|Maintiens pour te placer sous le ballon, relâche quand il retombe.
+5464|Exercice de face-à-face
+5465|L'attaquant fonce sur toi. Sors dès qu'il pousse le ballon trop loin.
+5466|L'attaquant fonce sur toi.
+5467|Sors dès qu'il pousse le ballon trop loin.
+5468|Placement
+5469|Face-à-face : ferme l'angle et sors au bon moment.
+5470|Relance
+5471|Ballon en main. Trouve un coéquipier libre avant la fin du temps.
+5472|Ballon en main.
+5473|Trouve un coéquipier libre avant la fin du temps.
+5474|Exercice de dégagement
+5475|Relance longue : trouve ton coéquipier libre et fais-lui parvenir le ballon.
+5476|+5 emplacements de carrière
+5477|Mène 10 carrières à la fois avec Premium+
+5478|réflexes, plongeons, ballons aériens
+5479|Gardien du but ; arrêts, penaltys et clean sheets.
+5480|Carrière de gardien
+5481|Joue gardien : arrêts dans les coins, duels de penalty, face-à-face et clean sheets. La carrière de gardien se débloque avec Premium+.
+5482|Joue gardien : arrêts dans les coins, duels de penalty, face-à-face et clean sheets.
+5483|La carrière de gardien se débloque avec Premium+.
+5484|🧤 Tir !
+5485|Tir !
+5486|🧤 Face-à-face !
+5487|Face-à-face !
+5488|🧤 Centre !
+5489|Centre !
+5490|🧤 Penalty pour l'adversaire !
+5491|Penalty pour l'adversaire !
+5492|🧤 Cafouillage dans la surface !
+5493|Cafouillage dans la surface !
+5494|🧤 Lance l'attaque
+5495|Lance l'attaque
+5496|L'attaquant va tirer ! Lis son regard et plonge dans le bon coin quand le ballon quitte le pied (touche gauche, centre ou droite).
+5497|L'attaquant va tirer !
+5498|Lis son regard et plonge dans le bon coin quand le ballon quitte le pied (touche gauche, centre ou droite).
+5499|L'attaquant dribble vers toi. Sors dès qu'il pousse le ballon trop loin ; trop tôt et il te lobe, trop tard et il frappe.
+5500|L'attaquant dribble vers toi.
+5501|Sors dès qu'il pousse le ballon trop loin ; trop tôt et il te lobe, trop tard et il frappe.
+5502|Un centre arrive. Maintiens pour te placer sous le ballon et relâche quand il tombe dans tes mains pour le capter.
+5503|Un centre arrive.
+5504|Maintiens pour te placer sous le ballon et relâche quand il tombe dans tes mains pour le capter.
+5505|Cafouillage dans la surface ! Les tirs s'enchaînent ; touche vite le côté qui s'allume.
+5506|Cafouillage dans la surface !
+5507|Les tirs s'enchaînent ; touche vite le côté qui s'allume.
+5508|Ballon en main. Lance-le au coéquipier libre (anneau vert) avant la fin du temps et lance l'attaque.
+5509|Lance-le au coéquipier libre (anneau vert) avant la fin du temps et lance l'attaque.
+5510|L'adversaire tire un penalty. Lis le regard du tireur et plonge dans un coin !
+5511|L'adversaire tire un penalty.
+5512|Lis le regard du tireur et plonge dans un coin !
+5513|Penalty pour l'adversaire !
+5514|est dans les buts...
+5515|a réalisé un arrêt superbe dans le coin !
+5516|Ils ont marqué sur le rebond.
+5517|a repoussé et la défense a dégagé.
+5518|est sorti au bon moment et a pris le ballon à l'attaquant !
+5519|a fauché l'attaquant, carton jaune.
+5520|s'est racheté en arrêtant le penalty !
+5521|Le tir de l'attaquant a heurté le poteau !
+5522|a capté le centre en toute sécurité.
+5523|Ils ont poussé le ballon dans le filet.
+5524|a dégagé le centre des poings.
+5525|But de la tête.
+5526|La tête est passée juste à côté.
+5527|a arrêté trois tirs d'affilée dans le cafouillage !
+5528|N'a pas pu empêcher le but dans le cafouillage.
+5529|But sur un cafouillage.
+5530|a relancé vite et l'équipe a contre-attaqué.
+5531|a remis le ballon en jeu et l'équipe a gardé la possession.
+5532|Danger aux abords de la surface...
+5533|a réparé sa propre erreur par un arrêt !
+5534|a repoussé le ballon.
+5535|Penalty ! Lis le
+5536|Lis le
+5537|regard
+5538|du tireur, et quand il frappe,
+5539|plonge dans un coin
+5540|· touche gauche / centre / droite ·
+5541|Tir ! Quand le ballon quitte le pied
+5542|Tir !
+5543|Quand le ballon quitte le pied
+5544|plonge dans le bon coin
+5545|· touche ou glisse gauche / centre / droite ·
+5546|PLONGÉ TROP TÔT, COIN OUVERT
+5547|BUT ! TU N'AS PAS PLONGÉ
+5548|TU N'AS PAS PLONGÉ
+5549|TU L'AS TOUCHÉ, REBOND !
+5550|QUEL ARRÊT !
+5551|SORTI DU COIN !
+5552|GARDIEN GÉANT !
+5553|ARRÊT DU PIED !
+5554|BUT ! MAUVAIS COIN
+5555|MAUVAIS COIN
+5556|TIR !
+5557|Quand l'attaquant pousse le ballon
+5558|trop loin
+5559|(anneau jaune)
+5560|touche et sors
+5561|· ni trop tôt, ni trop tard ·
+5562|LE LOB A TOUCHÉ LE POTEAU !
+5563|SORTI TROP TÔT, IL T'A LOBÉ !
+5564|TU LUI AS PRIS LE BALLON !
+5565|TU L'AS ÉTOUFFÉ !
+5566|TIMING PARFAIT !
+5567|FAUTE ! TU L'AS FAUCHÉ
+5568|TU L'AS FAUCHÉ
+5569|IL T'A DRIBBLÉ !
+5570|LE TIR TOUCHE LE POTEAU !
+5571|BUT ! TU ES RESTÉ SUR TA LIGNE
+5572|TU ES RESTÉ SUR TA LIGNE
+5573|, place le gardien dans l'ombre du ballon · quand il tombe dans tes mains
+5574|relâche
+5575|et capte-le
+5576|CAPTÉ DANS LES AIRS !
+5577|MAINS SÛRES !
+5578|DÉGAGÉ DES POINGS
+5579|RATÉ !
+5580|SAUTÉ TROP TÔT !
+5581|IL A TROUVÉ UNE TÊTE !
+5582|CENTRE !
+5583|Cafouillage dans la surface ! Les tirs s'enchaînent · touche le côté qui s'allume
+5584|Les tirs s'enchaînent · touche le côté qui s'allume
+5585|vite
+5586|(gauche / centre / droite) ·
+5587|TU AS TOUT ARRÊTÉ !
+5588|ARRÊTÉ ! REBOND…
+5589|ARRÊTÉ !
+5590|REBOND…
+5591|FINALEMENT C'EST DEDANS…
+5592|Ballon en main !
+5593|Anneau vert
+5594|(libre) coéquipier : touche-le pour lancer l'attaque · rouge = marqué · avant la fin du temps
+5595|CONTRE-ATTAQUE !
+5596|PASSE ARRIVÉE, MAIS SOUS PRESSION
+5597|BALLON PERDU !
+5598|DÉGAGEMENT LONG, BALLON DISPUTÉ
+5599|Réflexes
+5600|Vitesse de réaction sur les tirs de près.
+5601|Dégagement
+5602|Puissance et précision des longs dégagements.
+5603|Lancer les attaques au pied et à la main.
+5604|Face-à-face
+5605|Sortir au bon moment dans les face-à-face.
+5606|Prise de balle
+5607|Bloquer les tirs sans les relâcher.
+5608|Jeu aérien
+5609|Capter les centres dans les airs.
+5610|Fermer l'angle et bien se placer.
+5611|Détente
+5612|Atteindre les coins et puissance physique.
+5613|Concentration et forme pendant tout le match.
+5614|↶ Annuler le dernier match
+5615|1 par saison
+5616|Annuler
+5617|Annule un mauvais match et rejoue-le. Avec Premium+, tu peux annuler ton dernier match une fois par saison.
+5618|Annule un mauvais match et rejoue-le.
+5619|Avec Premium+, tu peux annuler ton dernier match une fois par saison.
+5620|Aucun match à annuler.
+5621|↶ Annuler le dernier match ?
+5622|match et
+5623|tout ce qui suit est effacé ; tu reviens avant le match. Ta seule annulation de la saison.
+5624|tout ce qui suit est effacé ; tu reviens avant le match.
+5625|Ta seule annulation de la saison.
+5626|↶ Match annulé. Tu peux le rejouer.
+5627|↶ Match annulé.
+5628|Tu peux le rejouer.
+5629|Échec de l'annulation.
+5630|Intense
+5631|Entraîne-toi avec une bonne énergie, repose-toi quand elle est basse.
+5632|Toutes les actions à l'entraînement ; repos seulement si l'énergie est très basse.
+5633|Progression plus rapide ; plus de fatigue et de risque de blessure.
+5634|Utilise tes actions pour te reposer et garder l'énergie haute.
+5635|Avance rapide
+5636|Choisis un match du calendrier et les semaines précédentes sont simulées ; tu joues ce match. Tu choisis aussi comment tes actions sont utilisées pendant les semaines sautées.
+5637|Choisis un match du calendrier et les semaines précédentes sont simulées ; tu joues ce match.
+5638|Tu choisis aussi comment tes actions sont utilisées pendant les semaines sautées.
+5639|Plus aucun match à sauter cette saison.
+5640|Semaine
+5641|Les semaines sont simulées jusqu'au match choisi, et tu joues ce match.
+5642|Jusqu'à quel match ?
+5643|Tes actions dans les semaines intermédiaires
+5644|S'arrêter pour les matchs de coupe et européens, je les joue
+5645|S'arrêter quand une offre de transfert arrive
+5646|⏩ Lancer
+5647|Arrêté.
+5648|Un match européen arrive.
+5649|Un match de coupe arrive.
+5650|Le dernier match de la saison a été joué.
+5651|Tu as atteint le match choisi.
+5652|Une nouvelle offre de transfert est arrivée.
+5653|Arrêter
+5654|S'arrêtera après ce match…
+5655|Tu as une décision à prendre.
+5656|Une nouvelle saison a commencé.
+5657|Un problème est survenu ; l'avance rapide s'est arrêtée.
+5658|⏩ Avance rapide terminée
+5659|Avance rapide terminée
+5660|Note moy.
+5661|Entraînement / repos
+5662|⭐ Premium+ restauré.
+5663|Premium+ restauré.
+5664|Premium+ actif
+5665|Tous les avantages Premium, 10 emplacements, annuler, avance rapide, stats, carrière de gardien
+5666|⭐ Premium+ actif ! Merci pour ton soutien.
+5667|Premium+ actif ! Merci pour ton soutien.
+5668|⭐ Premium+ actif !
+5669|Premium+ actif !
+5670|Tout Premium
+5671|Sans pub, badge doré, Starpedia, vie de luxe, demandes de transfert
+5672|10 emplacements de carrière
+5673|10 carrières à la fois au lieu de 5
+5674|Une fois par saison, annule un mauvais dernier match et rejoue-le
+5675|Simule les matchs jusqu'à la semaine choisie
+5676|Têtes, penaltys, coups francs ; buts contre chaque équipe
+5677|Joue gardien : arrêts, penaltys, clean sheets
+5678|Passer à la version supérieure
+5679|Obtenir Premium+
+5680|est réservé à Premium+.
+5681|Premium+ peut être acheté dans l'app App Store.
+5682|En tant que détenteur de Premium, tu bénéficies du prix de mise à niveau. Achat unique.
+5683|En tant que détenteur de Premium, tu bénéficies du prix de mise à niveau.
+5684|Appareil de développement : activé (Firebase tester=1)
+5685|Appareil de développement : désactivé
+5686|Les stats par adversaire, compétition et minute sont enregistrées depuis la saison {}.
+5687|{} a arrêté trois tirs d'affilée dans le cafouillage !
+5688|{} est sorti au bon moment et a pris le ballon à l'attaquant !
+5689|{} a relancé vite et l'équipe a contre-attaqué.
+5690|{} de la tête · {} sur penalty · {} sur coup franc et plus
+5691|La passe de {} est allée à l'adversaire ! Danger aux abords de la surface...
+5692|de la tête · {} sur penalty · {} sur coup franc et plus
+5693|{} s'est racheté en arrêtant le penalty !
+5694|L'attaque lancée par la longue passe de {} s'est terminée par un but !
+5695|{} a réparé sa propre erreur par un arrêt !
+5696|{} a remis le ballon en jeu et l'équipe a gardé la possession.
+5697|{} a réalisé un arrêt superbe dans le coin !
+5698|{} a repoussé et la défense a dégagé.
+5699|Penalty pour l'adversaire ! {} est dans les buts...
+5700|{} a capté le centre en toute sécurité.
+5701|{} a dégagé le centre des poings.
+5702|{} Sans pub et instantané avec Premium
+5703|{} a fauché l'attaquant, carton jaune.
+5704|{} Demande ton propre transfert
+5705|{} Premium+ · tout inclus{}
+5706|Premium+ · tout inclus{}
+5707|{} Statistiques de carrière
+5708|{} Passer à Premium+{}
+5709|Passer à Premium+{}
+5710|La passe de {} est allée à l'adversaire !
+5711|{} défaites en {} matchs
+5712|défaites en {} matchs
+5713|⏩ Avance rapide{}
+5714|{} a repoussé le ballon.
+5715|Avance rapide{}
+5716|{} buts en {} matchs
+5717|{} matchs · {} buts
+5718|buts en {} matchs
+5719|matchs · {} buts
+5720|{} est dans les buts...
+5721|DISTANCE {} m
+5722|dans {} sem.
+5723|TIR {} / {}
+5724|Objectif : {}
+5725|TOUCHE POUR COMMENCER
+5726|RÉUSSI
+5727|À MOITIÉ
+5728|FACE-À-FACE
+5729|Appuie sur SORTIR quand la barre en haut devient VERTE.
+5730|Attends tant qu'elle est rouge : trop tôt, ou le ballon est dans ses pieds.
+5731|La barre en haut
+5732|devient
+5733|SORTIR
+5734|: le ballon a quitté les pieds de l'attaquant ·
+5735|VERTE
+5736|TROP LOIN · ATTENDS
+5737|BALLON DANS SES PIEDS · ATTENDS
+5738|SORS MAINTENANT !
+5739|TROP PRÈS · RISQUE DE FAUTE
+5740|GO !
+5741|TROP TÔT, IL T'A LOBÉ
+5742|TROP TARD : FAUTE, PENALTY
+5743|LE BALLON ÉTAIT DANS SES PIEDS, IL T'A DRIBBLÉ
+5744|LE TIR A TOUCHÉ LE POTEAU
+5745|TU ES RESTÉ EN RETRAIT, C'EST DEDANS
+5746|LANCE L'ATTAQUE
+5747|Ballon en main : lance-le à un coéquipier.
+5748|Touche celui avec l'étiquette verte LIBRE.
+5749|Un lancer vers un joueur MARQUÉ est intercepté.
+5750|Touche le coéquipier marqué
+5751|LIBRE
+5752|·
+5753|MARQUÉ
+5754|sont interceptés · avant la fin du temps
+5755|PRESSÉ
+5756|PASSE RÉUSSIE, À L'ATTAQUE !
+5757|LANCÉ VERS UN MARQUÉ, INTERCEPTÉ
+5758|TEMPS ÉCOULÉ, DÉGAGEMENT LONG
+5759|TOUCHE LE JOUEUR LIBRE
+5760|CENTRE
+5761|Garde le doigt appuyé et amène le gardien dans l'ombre.
+5762|Relâche quand un anneau vert apparaît autour du ballon.
+5763|Relâche au bon moment pour le capter.
+5764|CAFOUILLAGE DANS LA SURFACE
+5765|L'adversaire va tirer 3 fois d'affilée.
+5766|Touche vite le côté du but qui brille en jaune.
+5767|Gauche, centre ou droite. Arrête les trois !
+5768|Gauche, centre ou droite.
+5769|Arrête les trois !
+5770|{} m
+5771|⏩ Fais ton choix ; l'avance rapide reprendra là où elle s'est arrêtée.
+5772|Fais ton choix ; l'avance rapide reprendra là où elle s'est arrêtée.
+5773|⚠️ Impossible d'ouvrir la sauvegarde
+5774|Impossible d'ouvrir la sauvegarde
+5775|Ferme puis rouvre l'app. Si le problème persiste, écris-nous.
+5776|Ferme puis rouvre l'app.
+5777|Si le problème persiste, écris-nous.
+5778|💾 Tes carrières ont été restaurées depuis la sauvegarde
+5779|Tes carrières ont été restaurées depuis la sauvegarde

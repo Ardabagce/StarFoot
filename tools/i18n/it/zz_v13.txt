@@ -1,0 +1,373 @@
+5407|Punizione
+5408|Uno contro uno col portiere
+5409|Tiro su azione
+5410|Dopo un dribbling
+5411|Da lontano
+5412|Altro
+5413|Gol a partita
+5414|Gol + assist / partita
+5415|Doppiette
+5416|Più gol (partita)
+5417|Serie di gol più lunga
+5418|Miglior stagione di gol
+5419|V / N / P
+5420|Porta inviolata
+5421|Parate
+5422|Rigori parati
+5423|Gol subiti
+5424|Subiti a partita
+5425|% porta inviolata
+5426|Portiere
+5427|Avversario preferito
+5428|Il tuo incubo
+5429|Si riempie mentre giochi.
+5430|Trasferta
+5431|Minuti per gol
+5432|Passaggi chiave
+5433|Contrasti
+5434|Gialli / rossi
+5435|Minuti
+5436|Tiri
+5437|Statistiche di carriera
+5438|Tipi di gol
+5439|Minuti dei gol
+5440|Per avversario
+5441|Per competizione
+5442|Dettagli
+5443|Statistiche di carriera dettagliate
+5444|Colpi di testa, rigori e punizioni, quanti gol hai segnato a ogni squadra, i minuti dei tuoi gol e altro. Le tue statistiche vengono già registrate; sbloccale tutte con Premium+.
+5445|Colpi di testa, rigori e punizioni, quanti gol hai segnato a ogni squadra, i minuti dei tuoi gol e altro.
+5446|Le tue statistiche vengono già registrate; sbloccale tutte con Premium+.
+5447|Statistiche dettagliate
+5448|Allenamento riflessi
+5449|Tiri rapidi da vicino. Tocca in fretta il lato che si illumina.
+5450|Tiri rapidi da vicino.
+5451|Tocca in fretta il lato che si illumina.
+5452|Allenamento tuffi
+5453|L'allenatore tira negli angoli. Tuffati nell'angolo giusto quando la palla lascia il piede.
+5454|L'allenatore tira negli angoli.
+5455|Tuffati nell'angolo giusto quando la palla lascia il piede.
+5456|Presa e rigori
+5457|Rigori. Leggi lo sguardo del tiratore e tuffati in un angolo.
+5458|Rigori.
+5459|Leggi lo sguardo del tiratore e tuffati in un angolo.
+5460|Allenamento palle alte
+5461|Cross dalle fasce. Tieni premuto per portarti sotto la palla, rilascia quando scende.
+5462|Cross dalle fasce.
+5463|Tieni premuto per portarti sotto la palla, rilascia quando scende.
+5464|Allenamento uno contro uno
+5465|L'attaccante corre verso di te. Esci appena si allunga troppo la palla.
+5466|L'attaccante corre verso di te.
+5467|Esci appena si allunga troppo la palla.
+5468|Piazzamento
+5469|Uno contro uno: chiudi lo specchio ed esci al momento giusto.
+5470|Rilancio
+5471|Palla in mano. Trova un compagno libero prima che scada il tempo.
+5472|Palla in mano.
+5473|Trova un compagno libero prima che scada il tempo.
+5474|Allenamento rinvio dal fondo
+5475|Rilancio lungo: trova il compagno libero e fagli arrivare la palla.
+5476|+5 slot carriera
+5477|Gestisci 10 carriere insieme con Premium+
+5478|riflessi, tuffi, palle alte
+5479|Guardiano della porta; parate, rigori e porta inviolata.
+5480|Carriera da portiere
+5481|Gioca da portiere: parate negli angoli, sfide dal dischetto, uno contro uno e porte inviolate. La carriera da portiere si sblocca con Premium+.
+5482|Gioca da portiere: parate negli angoli, sfide dal dischetto, uno contro uno e porte inviolate.
+5483|La carriera da portiere si sblocca con Premium+.
+5484|🧤 Arriva il tiro!
+5485|Arriva il tiro!
+5486|🧤 Uno contro uno!
+5487|Uno contro uno!
+5488|🧤 Arriva il cross!
+5489|Arriva il cross!
+5490|🧤 Rigore per gli avversari!
+5491|Rigore per gli avversari!
+5492|🧤 Mischia in area!
+5493|Mischia in area!
+5494|🧤 Fai partire l'azione
+5495|Fai partire l'azione
+5496|L'attaccante sta per tirare! Leggi il suo sguardo e tuffati nell'angolo giusto quando la palla lascia il piede (tocca sinistra, centro o destra).
+5497|L'attaccante sta per tirare!
+5498|Leggi il suo sguardo e tuffati nell'angolo giusto quando la palla lascia il piede (tocca sinistra, centro o destra).
+5499|L'attaccante punta verso di te. Esci appena si allunga troppo la palla; troppo presto e ti fa il pallonetto, troppo tardi e tira.
+5500|L'attaccante punta verso di te.
+5501|Esci appena si allunga troppo la palla; troppo presto e ti fa il pallonetto, troppo tardi e tira.
+5502|Arriva un cross. Tieni premuto per portarti sotto la palla e rilascia quando scende nelle tue mani per bloccarla.
+5503|Arriva un cross.
+5504|Tieni premuto per portarti sotto la palla e rilascia quando scende nelle tue mani per bloccarla.
+5505|Mischia in area! I tiri non finiscono; tocca in fretta il lato che si illumina.
+5506|Mischia in area!
+5507|I tiri non finiscono; tocca in fretta il lato che si illumina.
+5508|Palla in mano. Lanciala al compagno libero (anello verde) prima che scada il tempo e fai partire l'azione.
+5509|Lanciala al compagno libero (anello verde) prima che scada il tempo e fai partire l'azione.
+5510|L'avversario calcia un rigore. Leggi lo sguardo del tiratore e tuffati in un angolo!
+5511|L'avversario calcia un rigore.
+5512|Leggi lo sguardo del tiratore e tuffati in un angolo!
+5513|Rigore per gli avversari!
+5514|è in porta...
+5515|ha fatto una parata splendida nell'angolo!
+5516|Hanno segnato sulla ribattuta.
+5517|ha respinto e la difesa ha spazzato.
+5518|è uscito al momento giusto e ha tolto la palla all'attaccante!
+5519|ha steso l'attaccante, cartellino giallo.
+5520|si è riscattato parando il rigore!
+5521|Il tiro dell'attaccante ha colpito il palo!
+5522|ha bloccato il cross in sicurezza.
+5523|Hanno spinto la palla vagante in rete.
+5524|ha respinto il cross di pugno.
+5525|Gol di testa.
+5526|Il colpo di testa è finito di poco fuori.
+5527|ha parato tre tiri di fila nella mischia!
+5528|Non è riuscito a evitare il gol nella mischia.
+5529|Gol in mischia.
+5530|ha rilanciato in fretta e la squadra è ripartita in contropiede.
+5531|ha rimesso la palla in gioco e la squadra ha mantenuto il possesso.
+5532|Pericolo al limite dell'area...
+5533|ha rimediato al proprio errore con una parata!
+5534|ha respinto la palla.
+5535|Rigore! Leggi lo
+5536|Leggi lo
+5537|sguardo
+5538|del tiratore e, quando calcia,
+5539|tuffati in un angolo
+5540|· tocca sinistra / centro / destra ·
+5541|Arriva il tiro! Quando la palla lascia il piede
+5542|Arriva il tiro!
+5543|Quando la palla lascia il piede
+5544|tuffati nell'angolo giusto
+5545|· tocca o scorri sinistra / centro / destra ·
+5546|TI SEI TUFFATO PRESTO E HAI APERTO L'ANGOLO
+5547|GOL! NON TI SEI TUFFATO
+5548|NON TI SEI TUFFATO
+5549|L'HAI TOCCATA, RIBATTUTA!
+5550|CHE PARATA!
+5551|TOLTA DALL'ANGOLO!
+5552|PORTIERE GIGANTE!
+5553|PARATA COL PIEDE!
+5554|GOL! ANGOLO SBAGLIATO
+5555|ANGOLO SBAGLIATO
+5556|ARRIVA IL TIRO!
+5557|Quando l'attaccante si allunga la palla
+5558|troppo
+5559|(anello giallo)
+5560|tocca ed esci
+5561|· né troppo presto, né troppo tardi ·
+5562|IL PALLONETTO HA COLPITO IL PALO!
+5563|SEI USCITO PRESTO, TI HA FATTO IL PALLONETTO!
+5564|GLIEL'HAI TOLTA DAI PIEDI!
+5565|L'HAI BLOCCATA!
+5566|TEMPISMO PERFETTO!
+5567|FALLO! L'HAI STESO
+5568|L'HAI STESO
+5569|TI HA SALTATO!
+5570|IL TIRO COLPISCE IL PALO!
+5571|GOL! SEI RIMASTO SULLA LINEA
+5572|SEI RIMASTO SULLA LINEA
+5573|, porta il portiere nell'ombra della palla · quando scende nelle tue mani
+5574|rilascia
+5575|e bloccala
+5576|PRESA IN ALTO!
+5577|MANI SICURE!
+5578|RESPINTA DI PUGNO
+5579|L'HAI MANCATA!
+5580|SALTATO TROPPO PRESTO!
+5581|HA TROVATO UNA TESTA!
+5582|ARRIVA IL CROSS!
+5583|Mischia in area! I tiri non finiscono · tocca il lato che si illumina
+5584|I tiri non finiscono · tocca il lato che si illumina
+5585|in fretta
+5586|(sinistra / centro / destra) ·
+5587|LE HAI PARATE TUTTE E TRE!
+5588|PARATA! RIBATTUTA…
+5589|PARATA!
+5590|RIBATTUTA…
+5591|ALLA FINE È ENTRATA…
+5592|Palla in mano!
+5593|Anello verde
+5594|(libero) compagno: toccalo per far partire l'azione · rosso = marcato · prima che scada il tempo
+5595|CONTROPIEDE!
+5596|PASSAGGIO ARRIVATO, MA SOTTO PRESSIONE
+5597|PALLA PERSA!
+5598|LANCIO LUNGO, PALLA CONTESA
+5599|Riflessi
+5600|Velocità di reazione sui tiri da vicino.
+5601|Rinvio
+5602|Potenza e precisione dei rinvii lunghi.
+5603|Far partire le azioni con piedi e mani.
+5604|Uno contro uno
+5605|Uscire al momento giusto negli uno contro uno.
+5606|Presa
+5607|Bloccare i tiri senza respingerli.
+5608|Gioco aereo
+5609|Prendere i cross in alto.
+5610|Chiudere lo specchio e piazzarsi bene.
+5611|Tuffo
+5612|Arrivare negli angoli e forza fisica.
+5613|Concentrazione e forma per tutta la partita.
+5614|↶ Annulla l'ultima partita
+5615|1 a stagione
+5616|Annulla
+5617|Annulla una brutta partita e rigiocala. Con Premium+ puoi annullare l'ultima partita una volta a stagione.
+5618|Annulla una brutta partita e rigiocala.
+5619|Con Premium+ puoi annullare l'ultima partita una volta a stagione.
+5620|Nessuna partita da annullare.
+5621|↶ Annullare l'ultima partita?
+5622|partita e
+5623|tutto ciò che segue viene cancellato; torni a prima della partita. Il tuo unico annullamento della stagione.
+5624|tutto ciò che segue viene cancellato; torni a prima della partita.
+5625|Il tuo unico annullamento della stagione.
+5626|↶ Partita annullata. Puoi rigiocarla.
+5627|↶ Partita annullata.
+5628|Puoi rigiocarla.
+5629|Annullamento non riuscito.
+5630|Intenso
+5631|Allenati con buona energia, riposa quando è bassa.
+5632|Ogni azione in allenamento; riposo solo con energia molto bassa.
+5633|Crescita più rapida; più fatica e rischio infortuni.
+5634|Usa le azioni per riposare e tenere alta l'energia.
+5635|Avanti veloce
+5636|Scegli una partita dal calendario e le settimane precedenti vengono simulate; giochi tu quella partita. Scegli anche come usare le azioni nelle settimane saltate.
+5637|Scegli una partita dal calendario e le settimane precedenti vengono simulate; giochi tu quella partita.
+5638|Scegli anche come usare le azioni nelle settimane saltate.
+5639|Nessuna partita da saltare in questa stagione.
+5640|Settimana
+5641|Le settimane vengono simulate fino alla partita scelta, e giochi tu quella partita.
+5642|Fino a quale partita?
+5643|Le tue azioni nelle settimane intermedie
+5644|Fermati per le partite di coppa ed europee, le gioco io
+5645|Fermati quando arriva un'offerta di trasferimento
+5646|⏩ Avvia
+5647|Fermato.
+5648|C'è una partita europea.
+5649|C'è una partita di coppa.
+5650|L'ultima partita della stagione è stata giocata.
+5651|Sei arrivato alla partita scelta.
+5652|È arrivata una nuova offerta di trasferimento.
+5653|Ferma
+5654|Si fermerà dopo questa partita…
+5655|C'è una decisione da prendere.
+5656|È iniziata una nuova stagione.
+5657|Qualcosa è andato storto; avanti veloce interrotto.
+5658|⏩ Avanti veloce completato
+5659|Avanti veloce completato
+5660|Voto medio
+5661|Allenamento / riposo
+5662|⭐ Premium+ ripristinato.
+5663|Premium+ ripristinato.
+5664|Premium+ attivo
+5665|Tutti i vantaggi Premium, 10 slot, annulla, avanti veloce, statistiche, carriera da portiere
+5666|⭐ Premium+ attivo! Grazie per il supporto.
+5667|Premium+ attivo! Grazie per il supporto.
+5668|⭐ Premium+ attivo!
+5669|Premium+ attivo!
+5670|Tutto Premium
+5671|Senza pubblicità, badge dorato, Starpedia, vita di lusso, richieste di trasferimento
+5672|10 slot carriera
+5673|10 carriere insieme invece di 5
+5674|Una volta a stagione, annulla un'ultima partita andata male e rigiocala
+5675|Simula le partite fino alla settimana scelta
+5676|Colpi di testa, rigori, punizioni; gol a ogni squadra
+5677|Gioca da portiere: parate, rigori, porte inviolate
+5678|Passa a Premium+
+5679|Ottieni Premium+
+5680|è esclusivo di Premium+.
+5681|Premium+ si può acquistare nell'app dell'App Store.
+5682|Come possessore di Premium hai il prezzo di upgrade. Acquisto unico.
+5683|Come possessore di Premium hai il prezzo di upgrade.
+5684|Dispositivo sviluppatore: attivo (Firebase tester=1)
+5685|Dispositivo sviluppatore: disattivo
+5686|Le statistiche per avversario, competizione e minuto sono registrate dalla stagione {}.
+5687|{} ha parato tre tiri di fila nella mischia!
+5688|{} è uscito al momento giusto e ha tolto la palla all'attaccante!
+5689|{} ha rilanciato in fretta e la squadra è ripartita in contropiede.
+5690|{} di testa · {} su rigore · {} su punizione e altro
+5691|Il passaggio di {} è finito agli avversari! Pericolo al limite dell'area...
+5692|di testa · {} su rigore · {} su punizione e altro
+5693|{} si è riscattato parando il rigore!
+5694|L'azione nata dal lancio lungo di {} si è chiusa con un gol!
+5695|{} ha rimediato al proprio errore con una parata!
+5696|{} ha rimesso la palla in gioco e la squadra ha mantenuto il possesso.
+5697|{} ha fatto una parata splendida nell'angolo!
+5698|{} ha respinto e la difesa ha spazzato.
+5699|Rigore per gli avversari! {} è in porta...
+5700|{} ha bloccato il cross in sicurezza.
+5701|{} ha respinto il cross di pugno.
+5702|{} Senza pubblicità e subito con Premium
+5703|{} ha steso l'attaccante, cartellino giallo.
+5704|{} Chiedi tu il trasferimento
+5705|{} Premium+ · tutto incluso{}
+5706|Premium+ · tutto incluso{}
+5707|{} Statistiche di carriera
+5708|{} Passa a Premium+{}
+5709|Passa a Premium+{}
+5710|Il passaggio di {} è finito agli avversari!
+5711|{} sconfitte in {} partite
+5712|sconfitte in {} partite
+5713|⏩ Avanti veloce{}
+5714|{} ha respinto la palla.
+5715|Avanti veloce{}
+5716|{} gol in {} partite
+5717|{} partite · {} gol
+5718|gol in {} partite
+5719|partite · {} gol
+5720|{} è in porta...
+5721|DISTANZA {} m
+5722|tra {} sett.
+5723|TIRO {} / {}
+5724|Obiettivo: {}
+5725|TOCCA PER INIZIARE
+5726|RIUSCITO
+5727|A METÀ
+5728|UNO CONTRO UNO
+5729|Premi ESCI quando la barra in alto diventa VERDE.
+5730|Aspetta finché è rossa: troppo presto, o la palla è tra i suoi piedi.
+5731|La barra in alto
+5732|diventa
+5733|ESCI
+5734|: la palla ha lasciato i piedi dell'attaccante ·
+5735|VERDE
+5736|TROPPO LONTANO · ASPETTA
+5737|PALLA AI PIEDI · ASPETTA
+5738|ESCI ORA!
+5739|TROPPO VICINO · RISCHIO FALLO
+5740|VAI!
+5741|TROPPO PRESTO, TI HA FATTO IL PALLONETTO
+5742|TROPPO TARDI: FALLO, RIGORE
+5743|LA PALLA ERA AI SUOI PIEDI, TI HA SALTATO
+5744|IL TIRO HA COLPITO IL PALO
+5745|SEI RIMASTO FERMO, È ENTRATA
+5746|FAI PARTIRE L'AZIONE
+5747|Palla in mano: lanciala a un compagno.
+5748|Tocca quello con l'etichetta verde LIBERO.
+5749|Se la lanci a uno MARCATO viene intercettata.
+5750|Tocca il compagno segnato come
+5751|LIBERO
+5752|·
+5753|MARCATO
+5754|vengono intercettati · prima che scada il tempo
+5755|PRESSATO
+5756|PASSAGGIO RIUSCITO, SI ATTACCA!
+5757|LANCIATA A UN MARCATO, INTERCETTATA
+5758|TEMPO SCADUTO, LANCIO LUNGO
+5759|TOCCA QUELLO LIBERO
+5760|ARRIVA IL CROSS
+5761|Tieni il dito e porta il portiere nell'ombra.
+5762|Rilascia quando appare un anello verde attorno alla palla.
+5763|Rilascia al momento giusto per bloccarla.
+5764|MISCHIA IN AREA
+5765|Gli avversari tireranno 3 volte di fila.
+5766|Tocca in fretta il lato della porta che brilla di giallo.
+5767|Sinistra, centro o destra. Parale tutte e tre!
+5768|Sinistra, centro o destra.
+5769|Parale tutte e tre!
+5770|{} m
+5771|⏩ Fai la tua scelta; l'avanti veloce riprenderà da dove si era fermato.
+5772|Fai la tua scelta; l'avanti veloce riprenderà da dove si era fermato.
+5773|⚠️ Impossibile aprire il salvataggio
+5774|Impossibile aprire il salvataggio
+5775|Chiudi e riapri l'app. Se il problema persiste, scrivici.
+5776|Chiudi e riapri l'app.
+5777|Se il problema persiste, scrivici.
+5778|💾 Le tue carriere sono state ripristinate dal backup
+5779|Le tue carriere sono state ripristinate dal backup
