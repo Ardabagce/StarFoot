@@ -21,6 +21,7 @@ const CUES = {
   us_career: [['hum', 0], ...[2.1, 3.8, 5.5, 7.2].map((t) => ['whoosh', t - 0.1]), ['tick', 3.1], ['tick', 6.55], ['cash', 5.7], ['crowd', 3.8], ['crowd', 7.2], ['boom', 8.9], ['chime', 9.1], ['boom', 10.9], ['chime', 11.2]],
   us_ovr: [['hum', 0], ...[2.4, 4.3, 6.2, 8.1, 9.9].map((t) => ['whoosh', t - 0.1]), ...[2.4, 6.2, 8.1, 9.9].map((t) => ['tick', t + 0.1]), ['kick', 4.5], ['boom', 5.05], ['crowd', 5.05], ['cash', 8.3], ['boom', 9.9], ['chime', 10.1], ['boom', 12.0], ['chime', 12.3]],
 };
+CUES.tr_kaleci = CUES.us_keeper;
 for (const [id, cues] of Object.entries(CUES)) {
   const src = path.join(dir, id + '.mp4'); if (!fs.existsSync(src)) continue;
   const silent = path.join(tmp, id + '-v.mp4'); fs.copyFileSync(src, silent);

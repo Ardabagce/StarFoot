@@ -57,6 +57,10 @@ function tapRing(t, x, y, t0, dur = 0.45) {
   c.beginPath(); c.arc(x, y, 30 + k * 110, 0, Math.PI * 2); c.stroke(); c.restore();
 }
 
+// Türkçe sürüm için metin seçici
+let KTR = false;
+const K = (en, tr) => (KTR ? tr : en);
+
 // ============================================================
 // US 1: Kaleci bakış açısı. 90+4 penaltı, sen kalecisin.
 // ============================================================
@@ -144,10 +148,10 @@ function vKeeper(t) {
     const pp = 0.7 + Math.abs(Math.sin(t * 4)) * 0.3;
     c.globalAlpha = pp; c.fillStyle = '#e11d2e'; rr(450, 214, 180, 64, 14); c.fill(); c.globalAlpha = 1;
     txt("90+4'", 540, 248, 50, { shadow: 0, skew: 0 });
-    hook(t, "90+4'. PENALTY.", "YOU'RE THE KEEPER", 0.06, 2.65, 520, 96, 132);
+    hook(t, K("90+4'. PENALTY.", "90+4'. PENALTI."), K("YOU'RE THE KEEPER", 'KALECİ SENSİN'), 0.06, 2.65, 520, 96, 132);
     if (t > 2.7 && t < 4.4) {
       const a = seg(t, 2.7, 2.95) * (1 - seg(t, 4.2, 4.4));
-      txt('PICK A SIDE', W / 2, 470, 140, { grad: GOLD, alpha: a, scale: 0.8 + 0.2 * E.back(seg(t, 2.7, 3.05)) });
+      txt(K('PICK A SIDE', 'KÖŞENİ SEÇ'), W / 2, 470, 140, { grad: GOLD, alpha: a, scale: 0.8 + 0.2 * E.back(seg(t, 2.7, 3.05)) });
       const pul = 1 + Math.sin(t * 12) * 0.08;
       txt('◀', 200, 900, 150 * pul, { alpha: a, color: t > 3.6 ? '#ffcf3f' : '#fff', skew: 0 });
       txt('▶', 880, 900, 150 * (t > 3.6 ? 1 : pul), { alpha: a * (t > 3.6 ? 0.35 : 1), skew: 0 });
@@ -155,12 +159,12 @@ function vKeeper(t) {
     tapRing(t, 200, 900, 3.6);
     if (t >= CATCH) {
       const sk = seg(t, CATCH + 0.05, CATCH + 0.35);
-      txt('SAVED!', W / 2, 520, 250, { grad: GOLD, alpha: sk, scale: 0.6 + 0.4 * E.back(sk) + Math.sin(t * 9) * 0.015, stroke: 12, strokeColor: 'rgba(0,0,0,.4)' });
+      txt(K('SAVED!', 'KURTARDIN!'), W / 2, 520, 250, { grad: GOLD, alpha: sk, scale: 0.6 + 0.4 * E.back(sk) + Math.sin(t * 9) * 0.015, stroke: 12, strokeColor: 'rgba(0,0,0,.4)' });
       const bk = E.back(seg(t, CATCH + 0.4, CATCH + 0.7));
       if (bk > 0) {
         c.save(); c.translate(W / 2, 760); c.scale(bk, bk);
         c.fillStyle = '#22c55e'; rr(-230, -50, 460, 100, 50); c.fill();
-        txt('✓  +1 RATING', 0, 4, 56, { shadow: 0, skew: 0 }); c.restore();
+        txt(K('✓  +1 RATING', '✓  +1 REYTİNG'), 0, 4, 56, { shadow: 0, skew: 0 }); c.restore();
       }
       confetti(t, CATCH, 150, ['#c6f135', '#ffffff', '#ffd84a', '#ffb02e']);
     }
@@ -170,7 +174,7 @@ function vKeeper(t) {
     const dt = t - 6.3;
     drawBg(bgStadium(US_A, false, 24), 1.06 + dt * 0.02);
     flashes(t, 8, 0.1, 0.5, 10);
-    const MOVES = ['1-ON-1s', 'CROSSES', 'REFLEX SAVES', 'PENALTIES'];
+    const MOVES = KTR ? ['KARŞI KARŞIYA', 'ORTALAR', 'REFLEKS', 'PENALTILAR'] : ['1-ON-1s', 'CROSSES', 'REFLEX SAVES', 'PENALTIES'];
     const i = Math.min(3, Math.floor(dt / 0.85)), lt = dt - i * 0.85;
     const dir = i % 2 ? -1 : 1, dk = E.out(cl(lt / 0.35));
     const x = 540 + dir * dk * 60, y = 1640 - dk * 150, h = 860;
@@ -180,18 +184,19 @@ function vKeeper(t) {
     vignette(0.5);
     const hk = seg(dt, 0, 0.3);
     c.fillStyle = '#c6f135'; c.globalAlpha = hk; rr(310, 255, 460, 80, 40); c.fill(); c.globalAlpha = 1;
-    txt('NEW', 540, 297, 58, { color: '#0a1530', shadow: 0, skew: 0, alpha: hk });
-    txt('GOALKEEPER CAREER', W / 2, 430, 118, { alpha: hk, scale: 0.8 + 0.2 * E.back(hk) });
+    txt(K('NEW', 'YENİ'), 540, 297, 58, { color: '#0a1530', shadow: 0, skew: 0, alpha: hk });
+    txt(K('GOALKEEPER CAREER', 'KALECİ KARİYERİ'), W / 2, 430, 118, { alpha: hk, scale: 0.8 + 0.2 * E.back(hk) });
     txt(MOVES[i], W / 2, 590, 130, { grad: GOLD, scale: 0.7 + 0.3 * E.back(cl(lt / 0.3)) });
     // sayaçlar
     const ck = E.io(seg(dt, 0.2, 3.3));
     c.fillStyle = 'rgba(5,9,24,.82)'; rr(90, 1530, 900, 210, 30); c.fill();
     txt(String(Math.round(ck * 147)), 300, 1610, 100, { grad: GOLD });
-    txt('SAVES', 300, 1690, 40, { font: FONT_B, weight: 700, skew: 0 });
+    txt(K('SAVES', 'KURTARIŞ'), 300, 1690, 40, { font: FONT_B, weight: 700, skew: 0 });
     txt(String(Math.round(ck * 62)), 780, 1610, 100, { grad: GOLD });
-    txt('CLEAN SHEETS', 780, 1690, 40, { font: FONT_B, weight: 700, skew: 0 });
+    txt(K('CLEAN SHEETS', 'GOL YEMEDİĞİ MAÇ'), 780, 1690, 40, { font: FONT_B, weight: 700, skew: 0 });
   }
-  endCardEN(t, 9.9, 'BE THE HERO IN GOAL', 'Play a full career as a striker or a keeper');
+  if (KTR) endCard(t, 9.9, 'KALENİN KAHRAMANI OL', 'Forvet ya da kaleci: kariyerini sen yaz');
+  else endCardEN(t, 9.9, 'BE THE HERO IN GOAL', 'Play a full career as a striker or a keeper');
   grain();
 }
 
@@ -350,3 +355,5 @@ const usWrap = (f) => (t) => {
   try { f(t); } finally { US_SWAP.forEach(([o], i) => { Object.keys(keep[i]).forEach((x) => (keep[i][x] === undefined ? delete o[x] : (o[x] = keep[i][x]))); }); }
 };
 Object.assign(VIDEOS, { us_keeper: { dur: 13.4, f: usWrap(vKeeper) }, us_career: { dur: 14.4, f: usWrap(vCareer) }, us_ovr: { dur: 15.5, f: usWrap(vOvr) } });
+// Kaleci reklamının Türkçesi
+VIDEOS.tr_kaleci = { dur: 13.4, f: usWrap((t) => { KTR = true; try { vKeeper(t); } finally { KTR = false; } }) };
