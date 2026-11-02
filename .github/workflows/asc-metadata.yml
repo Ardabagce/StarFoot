@@ -17,6 +17,10 @@ on:
         description: 'Mevcut ekran görüntülerini silip yeniden yükle'
         type: boolean
         default: false
+      prepare_only:
+        description: 'Sürümü hazırla (derleme bağlı) ama incelemeye gönderme'
+        type: boolean
+        default: false
       dry_run:
         description: 'Yalnız göster, değiştirme'
         type: boolean
@@ -65,6 +69,7 @@ jobs:
           if [ -n "$V" ]; then case "$V" in *@*) ARGS="$ARGS --version ${V%@*} --release ${V#*@}";; *) ARGS="$ARGS --version $V";; esac; fi
           [ "${{ inputs.screens }}" != "false" ] && ARGS="$ARGS --screens"
           [ "${{ inputs.replace_screens }}" = "true" ] && ARGS="$ARGS --replace-screens"
+          [ "${{ inputs.prepare_only }}" = "true" ] && ARGS="$ARGS --prepare-only"
           [ "${{ inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
           [ "${{ inputs.diagnose }}" = "true" ] && ARGS="$ARGS --diagnose"
           [ "${{ inputs.audit }}" = "true" ] && ARGS="$ARGS --audit"

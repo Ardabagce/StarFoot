@@ -164,7 +164,7 @@ def gc_attach(asc, app_id, ver):
         print(f'   Game Center {kind}: {n} yeni yayın kaydı ({len(items)} toplam)')
 
 
-def release(asc, app_id, ver, build_no):
+def release(asc, app_id, ver, build_no, prepare_only=False):
     """Sürüme derlemeyi bağlar, kademeli yayını açar ve incelemeye gönderir."""
     vs = ver['attributes'].get('versionString')
     bl = asc.get('/v1/builds', **{'filter[app]': app_id, 'filter[version]': str(build_no), 'filter[preReleaseVersion.version]': vs, 'limit': 5})['data']
@@ -191,6 +191,9 @@ def release(asc, app_id, ver, build_no):
     else:
         print('   kademeli yayın zaten açık')
     gc_attach(asc, app_id, ver)
+    if prepare_only:
+        print(f'   {vs} ({build_no}) hazır: derleme bağlı, bilgiler dolu. İncelemeye gönderme ve satın alma ürünlerini seçme sana kaldı.')
+        return
     # yeni satın alma ürünleri (ilk kez) sürümle birlikte incelemeye gider
     try:
         for it in asc.get(f'/v1/apps/{app_id}/inAppPurchasesV2', limit=50)['data']:
@@ -920,6 +923,7 @@ def main():
     ap.add_argument('--events-file', default=str(ROOT / 'store/asc/events.json'))
     ap.add_argument('--gamecenter', action='store_true')
     ap.add_argument('--release', default='')
+    ap.add_argument('--prepare-only', action='store_true')
     a = ap.parse_args()
     meta = json.load(open(a.metadata, encoding='utf-8'))
     asc = ASC(a.dry_run)
@@ -959,7 +963,7 @@ def main():
     if a.remove_locales:
         return remove_locales(asc, app['id'], [x.strip() for x in a.remove_locales.split(',') if x.strip()])
 
-    if a.release:
+    if a.release and not a.prepare_only:
         cancel_pending(asc, app['id'], a.version, a.release)
     ver = pick_version(asc, app['id'], a.version)
     info = pick_appinfo(asc, app['id'])
@@ -1007,7 +1011,7 @@ def main():
     if fails:
         sys.exit(f'Sorun çıkan diller: {", ".join(sorted(set(fails)))}')
     if a.release:
-        release(asc, app['id'], ver, a.release)
+        release(asc, app['id'], ver, a.release, a.prepare_only)
     print('Bitti.')
 
 
