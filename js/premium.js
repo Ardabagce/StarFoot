@@ -21,7 +21,10 @@ const PREMIUM_PLATFORMS = ['ios'];
 const RC_KEYS = { ios: 'appl_tpkurfIlsSGEYVvWSdgVWMUUnDt' };
 const RC_ENT = { starfoot_football_career_pro: 'starfoot_premium', wc: 'starfoot_wc', legends: 'starfoot_legends', plus: 'starfoot_plus' };
 // Premium+ : 'full' herkese (Premium dahil), 'upg' Premium sahiplerine yükseltme
-const PLUS_IDS = { full: 'starfoot_plus', upg: 'starfoot_plus_upg' };
+const PLUS_IDS = { full: 'starfoot_plus2', upg: 'starfoot_plus2_upg' };
+// ilk ürünler (Apple incelemesinde takılı kaldı); onaylanırsa yedek olarak kullanılır, sahipleri her zaman tanınır
+const PLUS_OLD = { full: 'starfoot_plus', upg: 'starfoot_plus_upg' };
+const PLUS_ALL = [...Object.values(PLUS_IDS), ...Object.values(PLUS_OLD)];
 // Oyunun geri kalanı eski eklentinin (getProducts / getPurchases / purchaseProduct / restorePurchases)
 // biçimini kullanır; bu katman aynı biçimi RevenueCat üzerinden verir.
 const RCStore = {
@@ -123,7 +126,7 @@ const Premium = {
     try { localStorage.setItem('starfoot_premium', v ? '1' : '0'); } catch (e) { /* yok */ }
   },
   owned(list) {
-    return (list || []).some((t) => t && (t.productIdentifier === PREMIUM_ID || Object.values(PLUS_IDS).includes(t.productIdentifier)) && !/pending|refund|revok/i.test(String(t.purchaseState || '')));
+    return (list || []).some((t) => t && (t.productIdentifier === PREMIUM_ID || PLUS_ALL.includes(t.productIdentifier)) && !/pending|refund|revok/i.test(String(t.purchaseState || '')));
   },
   // Açılışta fiyatı ve önceki satın alımı mağazadan okur (yeniden kurulumda Premium kendiliğinden geri gelir)
   // Ürün bilgisini (yerel fiyatıyla) mağazadan yükler; başarısız olursa false
@@ -243,7 +246,7 @@ const Plus = {
     if (v) Premium.set(true);
   },
   owned(list) {
-    return (list || []).some((t) => t && Object.values(PLUS_IDS).includes(t.productIdentifier) && !/pending|refund|revok/i.test(String(t.purchaseState || '')));
+    return (list || []).some((t) => t && PLUS_ALL.includes(t.productIdentifier) && !/pending|refund|revok/i.test(String(t.purchaseState || '')));
   },
   // Premium+ özellikleri: sahibi ya da (tanıtım için) satın alınabildiği yerde görünür
   has() { return Plus.active || !!window.SF_PLUS_PREVIEW; },
@@ -255,11 +258,17 @@ const Plus = {
     const P = Premium.plugin();
     if (!P) return false;
     try {
-      const r = await P.getProducts({ productIdentifiers: Object.values(PLUS_IDS), productType: 'inapp' });
-      ((r && r.products) || []).forEach((pr) => {
-        const k = Object.keys(PLUS_IDS).find((x) => PLUS_IDS[x] === pr.identifier);
-        if (k) Plus.prices[k] = { s: pr.priceString, n: Number(pr.price) || 0, c: pr.currencyCode || '' };
+      const r = await P.getProducts({ productIdentifiers: PLUS_ALL, productType: 'inapp' });
+      const got = {};
+      ((r && r.products) || []).forEach((pr) => { got[pr.identifier] = pr; });
+      // her tür için önce yeni ürün, yoksa eski ürün (App Store'da satışta olan)
+      Object.keys(PLUS_IDS).forEach((k) => {
+        const id = got[PLUS_IDS[k]] ? PLUS_IDS[k] : got[PLUS_OLD[k]] ? PLUS_OLD[k] : '';
+        if (!id) { delete Plus.prices[k]; return; }
+        const pr = got[id];
+        Plus.prices[k] = { id, s: pr.priceString, n: Number(pr.price) || 0, c: pr.currencyCode || '' };
       });
+      Plus.loaded = true;
       return true;
     } catch (e) { return false; }
   },
@@ -267,10 +276,17 @@ const Plus = {
     const P = Premium.plugin();
     if (!P || Premium.busy) return false;
     Premium.busy = true;
-    const k = Plus.key(), id = PLUS_IDS[k];
+    const k = Plus.key();
     let ok = false;
+    if (!Plus.prices[k]) await Plus.load();
+    // ürün App Store'da henüz yoksa satın alma denenmez (hata yerine bilgi)
+    if (!Plus.prices[k]) {
+      Premium.busy = false;
+      Game.toast('Premium+ çok yakında! Şimdilik Premium\'u alabilirsin.', 'info');
+      return false;
+    }
+    const id = Plus.prices[k].id;
     try {
-      if (!Plus.prices[k]) await Plus.load();
       Premium.track('plus_tap', { item_id: id, source: src || Plus.src || 'card' });
       const t = await P.purchaseProduct({ productIdentifier: id, productType: 'inapp', quantity: 1 });
       if (t) {
@@ -312,7 +328,12 @@ const Plus = {
     const up = Premium.active;
     const pr = Plus.priceOf();
     const btns = [{ t: 'Kapat', cls: 'btn-ghost' }];
-    if (can) btns.push({ t: `${Icon('star')} ${up ? 'Yükselt' : 'Premium+ al'}${pr ? ` · ${U.esc(pr)}` : ''}`, cls: 'btn-big', fn: () => Plus.buy(src) });
+    // ürün bilgisi geldi ama Premium+ App Store'da yoksa: hata veren düğme yerine "Yakında" ve Premium seçeneği
+    const soon = can && Plus.loaded && !pr;
+    if (soon) {
+      if (!up) btns.push({ t: `${Icon('star')} Premium al${Premium.price ? ` · ${U.esc(Premium.price)}` : ''}`, cls: 'btn-big', fn: () => Premium.buy() });
+      else btns.push({ t: 'Premium+ çok yakında', cls: 'btn-ghost', fn: () => {} });
+    } else if (can) btns.push({ t: `${Icon('star')} ${up ? 'Yükselt' : 'Premium+ al'}${pr ? ` · ${U.esc(pr)}` : ''}`, cls: 'btn-big', fn: () => Plus.buy(src) });
     Game.modal(`<div class="ev-tag">Premium+</div><h2>${Icon('star')} Premium+</h2>
       ${after ? `<p>${after}</p>` : feat ? `<p><b>${U.esc(feat)}</b> Premium+'a özel.</p>` : ''}
       ${Plus.perksHtml(!up)}
