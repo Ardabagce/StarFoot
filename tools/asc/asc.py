@@ -566,6 +566,41 @@ def iap_report(asc, app_id):
             print('   ülkeler: YOK')
 
 
+def iap_resubmit(asc, app_id):
+    """Boşta kalan ürünleri yeniden incelemeye gönderir ve Game Center yayın durumunu gösterir."""
+    for it in asc.get(f'/v1/apps/{app_id}/inAppPurchasesV2', limit=50)['data']:
+        st = it['attributes'].get('state'); pid = it['attributes'].get('productId')
+        if st not in ('WAITING_FOR_REVIEW', 'READY_TO_SUBMIT', 'DEVELOPER_ACTION_NEEDED', 'REJECTED'):
+            continue
+        print(f'• {pid}: {st}')
+        try:
+            asc.req('POST', '/v1/inAppPurchaseSubmissions', write=True, body={'data': {'type': 'inAppPurchaseSubmissions',
+                'relationships': {'inAppPurchaseV2': {'data': {'type': 'inAppPurchases', 'id': it['id']}}}}})
+            print('   incelemeye gönderildi')
+        except RuntimeError as err:
+            print(f'   ! {str(err)[:400]}')
+        try:
+            cur = asc.get(f"/v2/inAppPurchases/{it['id']}")['data']['attributes'].get('state')
+            print(f'   şimdiki durum: {cur}')
+        except RuntimeError:
+            pass
+    # Game Center: yayın kayıtları canlı mı?
+    try:
+        gid = asc.get(f'/v1/apps/{app_id}/gameCenterDetail')['data']['id']
+        for kind in ('achievementReleases', 'leaderboardReleases'):
+            rel = _all(asc, f'/v1/gameCenterDetails/{gid}/{kind}')
+            live = sum(1 for r in rel if r['attributes'].get('live'))
+            print(f'• Game Center {kind}: {len(rel)} kayıt, canlı {live}')
+    except RuntimeError as err:
+        print(f'   ! Game Center okunamadı: {str(err)[:200]}')
+    try:
+        subs = asc.get('/v1/reviewSubmissions', **{'filter[app]': app_id, 'limit': 5})['data']
+        for sb in subs:
+            print(f"   başvuru {sb['id'][:8]}: {sb['attributes'].get('state')} {sb['attributes'].get('submittedDate')}")
+    except RuntimeError:
+        pass
+
+
 def submit_packs(asc, app_id, packs):
     # Açık inceleme başvurularını gösterir, sonra içerik paketlerini incelemeye gönderir (sürümle birlikte incelenir)
     try:
@@ -879,6 +914,7 @@ def main():
     ap.add_argument('--iap-setup', action='store_true')
     ap.add_argument('--packs', action='store_true')
     ap.add_argument('--submit-packs', action='store_true')
+    ap.add_argument('--iap-resubmit', action='store_true')
     ap.add_argument('--unsubmit-packs', action='store_true')
     ap.add_argument('--events', action='store_true')
     ap.add_argument('--events-file', default=str(ROOT / 'store/asc/events.json'))
@@ -907,6 +943,8 @@ def main():
         unsubmit_packs(asc, app['id'])
         pack_setup(asc, app['id'], meta.get('packs') or {}, True)
         return iap_report(asc, app['id'])
+    if a.iap_resubmit:
+        return iap_resubmit(asc, app['id'])
     if a.submit_packs:
         submit_packs(asc, app['id'], meta.get('packs') or {})
         return iap_report(asc, app['id'])

@@ -74,6 +74,7 @@ jobs:
           [ "${{ inputs.iap }}" = "setup" ] && ARGS="$ARGS --iap-setup"
           [ "${{ inputs.iap }}" = "packs" ] && ARGS="$ARGS --packs"
           [ "${{ inputs.iap }}" = "submit" ] && ARGS="$ARGS --submit-packs"
+          [ "${{ inputs.iap }}" = "resubmit" ] && ARGS="$ARGS --iap-resubmit"
           [ "${{ inputs.iap }}" = "unsubmit" ] && ARGS="$ARGS --unsubmit-packs"
           [ -n "${{ inputs.remove_locales }}" ] && ARGS="$ARGS --remove-locales ${{ inputs.remove_locales }}"
           python -u tools/asc/asc.py $ARGS
