@@ -42,3 +42,22 @@ Büyüme: değer artışları Instagram'a paylaşılabilir kart ("Piyasa değeri
 ## Bekleyen diğer işler
 - Meta SDK + SKAdNetwork (Instagram reklam ölçümü) – 1.0.14.
 - 1.0.13 (build 198) Apple incelemesinde; çizim belleği düzeltmesi dahil.
+
+## Destekçi programı (VIP puanı + rütbeler) – tekrar alınabilir satın alma
+Amaç: Oyunu seven oyuncuların istedikleri kadar destek olabilmesi. Pay-to-win yok: sadece rozet, görünüm ve gurur.
+
+Ürünler (consumable): destek_kucuk 0,99 $ = 100 puan · destek_buyuk 4,99 $ = 550 puan · destek_dev 19,99 $ = 2.400 puan.
+Rütbeler: Bronz 100 · Gümüş 500 · Altın 2.000 · Platin 5.000 · Efsane 10.000 puan. Ayarlar ve profilde "sonraki rütbeye X puan" çubuğu.
+Ödüller (hepsi kozmetik): her rütbe rozeti profil/Instagram/Starpedia'da; Gümüş kart çerçevesi; Altın özel gol sevinci + krampon rengi;
+Platin Starpedia "Kurucu Destekçi" bölümü + tema; Efsane "Efsane Destekçi" unvanı (haberlerde geçer). Her alımda teşekkür animasyonu.
+Kurallar:
+- Puanlar kariyere değil hesaba bağlı: iCloud meta + cihaz dosya yedeği (consumable'lar Apple'da geri yüklenmez).
+- Premium otomatik verilmez (Apple, consumable ile kalıcı özellik açılmasını sorun edebilir); Premium ayrı kalır.
+- Düğme Ayarlar'ın üstünde ve profilde; kendiliğinden açılan pencere yok (en fazla mutlu anlarda, ayda 1).
+- "Bağış/yardım" ifadesi yok, "geliştiriciyi destekle". Ortak destekçi listesi şimdilik yok (sunucu gerekir).
+- Firebase: tip_view / tip_purchase olayları.
+
+## Android satın almaları (Play Console)
+Kullanıcı: ödeme profili, test kanalında build, ürünleri iOS ile aynı kimliklerle aç (starfoot_premium, starfoot_plus2, starfoot_plus2_upg,
+starfoot_wc, starfoot_legends), RevenueCat'e Google Play + hizmet hesabı JSON, lisans test kullanıcısı.
+Kod: PREMIUM_PLATFORMS'a 'android', RevenueCat Android public key (goog_...), test build.
