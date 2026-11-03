@@ -2,6 +2,7 @@
 const { execSync } = require('child_process');
 const fs = require('fs'), path = require('path');
 const dir = process.argv[2] || path.join(__dirname, '../us');
+const only = process.argv[3] ? new RegExp(process.argv[3]) : null;
 const tmp = fs.mkdtempSync('/tmp/ussfx-');
 const SFX = {
   beat: `aevalsrc='0.9*sin(2*PI*55*t)*exp(-t*18)+0.7*sin(2*PI*50*(t-0.18))*exp(-(t-0.18)*18)*gt(t,0.18)':s=44100:d=0.6`,
@@ -22,7 +23,15 @@ const CUES = {
   us_ovr: [['hum', 0], ...[2.4, 4.3, 6.2, 8.1, 9.9].map((t) => ['whoosh', t - 0.1]), ...[2.4, 6.2, 8.1, 9.9].map((t) => ['tick', t + 0.1]), ['kick', 4.5], ['boom', 5.05], ['crowd', 5.05], ['cash', 8.3], ['boom', 9.9], ['chime', 10.1], ['boom', 12.0], ['chime', 12.3]],
 };
 CUES.tr_kaleci = CUES.us_keeper;
+// Reels: ortak ses düzeni (geçişlerde whoosh, sayaçlarda tık, kapanışta boom + chime)
+const RC = {
+  reel_choice: [['hum', 0], ['whoosh', 0.3], ['tick', 0.5], ['tick', 0.65], ...[1.9, 2.3, 2.7, 3.1, 3.5, 3.9].map((t) => ['tick', t]), ['boom', 5.0], ['crowd', 5.0], ['cash', 5.6], ['boom', 9.0], ['chime', 9.3]],
+  reel_things: [['hum', 0], ['whoosh', 0.1], ...[1.6, 4.7, 7.8].map((t) => ['boom', t]), ['whoosh', 1.75], ['crowd', 2.3], ['whoosh', 5.6], ['chime', 6.7], ...[7.9, 8.1, 8.3, 8.5, 8.9, 9.1, 9.3].map((t) => ['tick', t]), ['boom', 11.0], ['chime', 11.3]],
+  reel_stats: [['hum', 0], ['whoosh', 1.2], ...[1.9, 2.6, 3.3, 4.0, 4.7, 5.4].map((t) => ['tick', t]), ['boom', 6.4], ['whoosh', 7.1], ['boom', 10.0], ['chime', 10.3]],
+};
+Object.entries(RC).forEach(([k, v]) => { CUES[k + '_en'] = v; CUES[k + '_tr'] = v; });
 for (const [id, cues] of Object.entries(CUES)) {
+  if (only && !only.test(id)) continue;
   const src = path.join(dir, id + '.mp4'); if (!fs.existsSync(src)) continue;
   const silent = path.join(tmp, id + '-v.mp4'); fs.copyFileSync(src, silent);
   const dur = parseFloat(execSync(`ffprobe -v error -show_entries format=duration -of csv=p=0 "${silent}"`).toString());
