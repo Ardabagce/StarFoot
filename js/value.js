@@ -167,7 +167,7 @@ const Market = {
 
   open(tab) {
     const s = Game.state, p = s.player;
-    if (Game.inStreet()) return Game.toast('StarDeğer profesyonel kariyerde açılır.', 'info');
+    if (Game.inStreet() || (Game.isYouth() && !Market.now())) return Game.toast('StarDeğer profesyonel kariyerde açılır.', 'info');
     const full = typeof Star === 'undefined' || Star.has();
     let taste = false;
     if (!full && tab) {
@@ -385,7 +385,7 @@ document.addEventListener('click', (e) => {
   }
   if (b.dataset.mv === 'share') { close(); return Market.share(); }
   if (b.dataset.mv === 'pay') { close(); return setTimeout(() => PayRise.open(), 30); }
-  if (b.hasAttribute('data-sup')) Support.open();
+  if (b.hasAttribute('data-sup')) { if (typeof SetSheet !== 'undefined' && document.body.classList.contains('ss-on')) SetSheet.close(); Support.open(); }
   else if (b.hasAttribute('data-payrise')) PayRise.open();
   else if (b.hasAttribute('data-mvopen')) Market.open();
 });
