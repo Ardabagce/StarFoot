@@ -17,6 +17,7 @@ async function career(pg) {
     const s = Game.state; s.street.done = true; Game.joinClub(club, 185000, 4);
     const p = Game.p; p.age = 24; p.position = 'FW'; Object.keys(p.stats).forEach((k) => (p.stats[k] = 95));
     p.energy = 100; p.morale = 90; p.money = 8.6e6; p.fame = 55; s.ap = 3; p.celeb = 'siu'; p.totals.goals = 80; p.shirt = 10;
+    localStorage.setItem('starfoot_tut', 'done');
   }, CLUB);
 }
 

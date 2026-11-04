@@ -20,9 +20,9 @@ const T = {
 
 const base = `${fontCss}*{margin:0;padding:0;box-sizing:border-box}body{width:${W}px;height:${H}px;overflow:hidden;position:relative;color:#fff}`;
 // üstte koyu şerit ve iki satırlık büyük yazı (oyun arayüzünün üst çubuğunun altında)
-const capHtml = ([a, b]) => `<!doctype html><html><head><meta charset="utf-8"><style>${base}body{background:transparent}
-.band{position:absolute;left:0;right:0;top:90px;height:420px;background:linear-gradient(180deg,rgba(2,5,15,0) 0%,rgba(2,5,15,.82) 25%,rgba(2,5,15,.82) 75%,rgba(2,5,15,0) 100%)}
-.h{position:absolute;left:40px;right:40px;top:170px;text-align:center;font-family:'Saira Condensed';font-weight:900;font-style:italic;text-transform:uppercase;transform:skewX(-6deg)}
+const capHtml = ([a, b], top = 170) => `<!doctype html><html><head><meta charset="utf-8"><style>${base}body{background:transparent}
+.band{position:absolute;left:0;right:0;top:${top - 80}px;height:420px;background:linear-gradient(180deg,rgba(2,5,15,0) 0%,rgba(2,5,15,.82) 25%,rgba(2,5,15,.82) 75%,rgba(2,5,15,0) 100%)}
+.h{position:absolute;left:40px;right:40px;top:${top}px;text-align:center;font-family:'Saira Condensed';font-weight:900;font-style:italic;text-transform:uppercase;transform:skewX(-6deg)}
 .h .a{display:block;font-size:72px;letter-spacing:.02em}
 .h .b{display:block;font-size:118px;line-height:.95;margin-top:6px;background:linear-gradient(180deg,#fff3c2,#ffcf3f 55%,#e39a12);-webkit-background-clip:text;color:transparent;filter:drop-shadow(0 8px 24px rgba(0,0,0,.5))}
 </style></head><body><div class="band"></div><div class="h"><span class="a">${a}</span><span class="b">${b}</span></div></body></html>`;
@@ -42,7 +42,8 @@ img{width:330px;height:330px;border-radius:74px;box-shadow:0 30px 90px rgba(255,
     await pg.goto('file://' + f); await pg.evaluate(() => document.fonts.ready); await pg.waitForTimeout(100);
     await pg.screenshot({ path: file, omitBackground: transparent });
   };
-  for (const [i, c] of T.caps.entries()) await shot(capHtml(c), path.join(tmp, `cap${i}.png`));
+  const TOPS = [170, 760, 1330, 170, 170, 170];
+  for (const [i, c] of T.caps.entries()) await shot(capHtml(c, TOPS[i]), path.join(tmp, `cap${i}.png`));
   await shot(endHtml('file://' + ICON), path.join(tmp, 'end.png'), false);
   await b.close();
 
