@@ -207,6 +207,8 @@ const MiniGame = {
       const kits = o.kits;
 
       let t = 0, kickT = -9, endT = 0;
+      // Süre ve rakip baskısı oyuncu topa ilk dokunduğunda başlar (düşünme süresi serbest)
+      let touched = false, aimT = 0, chipKick = false;
       let result = null, resultText = '', resultColor = '#fff';
       let slowmo = 1, particles = [], netShake = 0, flash = 0;
       let last = performance.now(), raf = 0;
@@ -302,9 +304,22 @@ const MiniGame = {
         return Math.atan2(-ball.y, nx - ball.x);
       };
 
+      // Aşırtma: güç, topu üst direğin altından kalecinin üstüne düşürecek hıza doğru çekilir (teknik arttıkça daha isabetli)
+      const chipSpeed = (ang, sp) => {
+        if (liftIdx !== 2) return sp;
+        const dy = -Math.sin(ang);
+        if (dy < 0.2) return sp;
+        const D = ball.y / dy, th = LIFTS[2].v * 0.62, Hs = 2.0;
+        if (D * Math.tan(th) <= Hs + 0.4) return sp;
+        const ideal = Math.min(maxSpeed * 1.05, Math.sqrt((9.8 * D * D) / (2 * Math.cos(th) ** 2 * (D * Math.tan(th) - Hs))) * 1.02);
+        const k = U.clamp(0.35 + st.technique / 250 + assist * 0.4, 0.35, 0.85);
+        return sp * (1 - k) + ideal * k;
+      };
+
       const simulate = (pr) => {
         const b = { x: ball.x, y: ball.y, z: 0, vx: 0, vy: 0, vz: 0, spin: 0 };
-        BallPhys.launch(b, assistAngle(pr.ang), pr.power * maxSpeed, LIFTS[liftIdx].v, pr.spin);
+        const a0 = assistAngle(pr.ang);
+        BallPhys.launch(b, a0, chipSpeed(a0, pr.power * maxSpeed), LIFTS[liftIdx].v, pr.spin);
         const pts = [];
         for (let i = 0; i < 180; i++) {
           for (let k = 0; k < 4; k++) BallPhys.step(b, 1 / 240);
@@ -333,6 +348,7 @@ const MiniGame = {
         const w0 = toWorld(p[0], p[1]);
         // Kaptan: arkadaşına basılı tutup sürükleyerek yerini değiştirir
         gesture = { pts: [p], world: [w0], mate: o.captain ? mateAt(w0) : null, drag: false };
+        touched = true;
         preview = null;
         e.preventDefault();
       });
@@ -404,7 +420,8 @@ const MiniGame = {
         offAtKick = scene.offside != null ? new Set(mates.filter((m) => m.y < scene.offside - 0.15 && m.y < ball.y)) : new Set();
         const sig = isPass ? passSigma : angSigma * (0.6 + 0.5 * power);
         const a = ang + U.gauss() * sig;
-        const sp = power * maxSpeed * (1 + U.gauss() * 0.035 * cond);
+        const sp = (isPass ? power * maxSpeed : chipSpeed(a, power * maxSpeed)) * (1 + U.gauss() * 0.035 * cond);
+        chipKick = !isPass && liftIdx === 2;
         BallPhys.launch(ball, a, sp, (liftV != null ? liftV : LIFTS[liftIdx].v) * (1 + U.gauss() * 0.05 * cond), spin * (1 + U.gauss() * 0.08 * cond));
         phase = 'fly';
         kickT = t;
@@ -514,7 +531,8 @@ const MiniGame = {
       function step(dt) {
         t += dt;
         if (phase === 'aim') {
-          if (scene.creep) {
+          if (touched) aimT += dt;
+          if (scene.creep && touched) {
             defs.forEach((d) => {
               if (!d.presser) return;
               const dx = ball.x - d.x, dy = ball.y - d.y, dist = Math.hypot(dx, dy);
@@ -522,7 +540,7 @@ const MiniGame = {
               if (dist < 1.05) finish('lost', 'TOPU KAPTIRDIN', '#ff6b6b');
             });
           }
-          if (t > scene.timeLimit) finish('lost', scene.creep ? 'TOPU KAPTIRDIN' : 'SÜRE DOLDU', '#ff6b6b');
+          if (aimT > scene.timeLimit) finish('lost', scene.creep ? 'TOPU KAPTIRDIN' : 'SÜRE DOLDU', '#ff6b6b');
           keeper.x += (U.clamp(ball.x * (HARD() ? 0.24 : 0.15), HARD() ? -2.6 : -2, HARD() ? 2.6 : 2) - keeper.x) * Math.min(1, dt * (HARD() ? 3 : 2));
           [...defs, keeper].forEach((e) => moveEnt(e, dt));
           return;
@@ -583,7 +601,8 @@ const MiniGame = {
         const HD = HARD();
         const reach = keeper.reach + (ball.y < 5 ? keeper.dive : 0) + (HD ? 0.25 : 0);
         if (prevY >= keeper.y && ball.y < keeper.y) {
-          const maxZ = 2.2 + 0.3 * s + (HD ? 0.1 : 0);
+          // aşırtmada kaleci düşen topa geriye doğru uzanamaz: yüksek top sınırı daha alçak
+          const maxZ = chipKick ? 1.85 + 0.35 * s + (HD ? 0.1 : 0) : 2.2 + 0.3 * s + (HD ? 0.1 : 0);
           const r = ball.z > 1.7 ? reach * (HD ? 0.82 : 0.75) : reach;
           if (Math.abs(ball.x - keeper.x) < r && ball.z < maxZ) return finish('saved', 'KALECİ KURTARDI', '#ffd166');
         }
@@ -649,7 +668,7 @@ const MiniGame = {
       function drawHud() {
         const fs = dpr;
         if (phase === 'aim') {
-          const rem = U.clamp(1 - t / scene.timeLimit, 0, 1);
+          const rem = U.clamp(1 - aimT / scene.timeLimit, 0, 1);
           ctx.fillStyle = 'rgba(10,16,32,0.6)'; ctx.fillRect(0, 0, W, 7 * fs);
           ctx.fillStyle = rem > 0.35 ? '#ffcf3f' : '#ff5a4f'; ctx.fillRect(0, 0, W * rem, 7 * fs);
         }

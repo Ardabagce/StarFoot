@@ -2540,3 +2540,6 @@ div.doc { position: fixed; inset: 0; z-index: 49; background: #000; display: fle
 .sup-ranks li { display: flex; flex-direction: column; padding: 6px 0; border-bottom: 1px solid var(--line); opacity: .6; }
 .sup-ranks li.on { opacity: 1; }
 .sup-ranks small { color: var(--muted); font-size: 12px; }
+.nego-btn { margin-top: 6px; width: 100%; }
+.nego-done { display: block; margin-top: 6px; text-align: center; color: var(--muted); font-size: 12px; }
+.nego-done.good { color: #46e08f; }

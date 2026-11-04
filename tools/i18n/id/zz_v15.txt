@@ -123,3 +123,14 @@
 5951|Era baru untuk kariermu!
 5952|Buka StarNilai
 5953|{} Buka StarNilai
+5954|Negosiasi diterima
+5955|Klub bertahan dengan tawarannya
+5956|Negosiasi gaji
+5957|Negosiasi gaji
+5963|Kamu hanya bisa bernegosiasi sekali per tawaran. Minta terlalu banyak, klub bisa mundur.
+5966|{} bertahan dengan tawarannya. Kamu masih bisa menerima tawaran awal.
+5967|{} menawarkan {} per minggu. Berapa yang kamu mau?
+5969|{} mundur dan menarik tawarannya.
+5972|{} setuju: +{} per minggu
+5973|{} Negosiasi gaji
+5976|{} Negosiasi gaji

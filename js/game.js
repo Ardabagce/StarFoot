@@ -1725,6 +1725,7 @@ ${UI.paper()}`;
         <div><span>Rolün</span><b class="role-${role}">${roleL}</b></div>
       </div>
       <button class="btn btn-big ofc-btn" data-offer="${i}" data-ctx="${ctx}">${o.own ? 'Sözleşmeyi İmzala' : 'Teklifi Kabul Et'}</button>
+      ${typeof Nego !== 'undefined' && !o.youth && o.wage ? Nego.btn(o, i, ctx) : ''}
     </div>`;
   },
 

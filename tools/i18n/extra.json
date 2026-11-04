@@ -1864,5 +1864,18 @@
 "Piyasa değerin, kariyer grafiğin, dünyanın en değerlileri ve transfer söylentileri.": "Your market value, career chart, the world's most valuable players and transfer rumours.",
 "Kariyerinde yeni dönem! 🚀": "A new era for your career! 🚀",
 "{} StarDeğer'i aç": "{} Open StarValue",
-"StarDeğer'i aç": "Open StarValue"
+"StarDeğer'i aç": "Open StarValue",
+"Pazarlık kabul edildi": "Negotiation accepted",
+"Kulüp son teklifinde ısrarcı": "The club stands by its offer",
+"{} Maaş için pazarlık et": "{} Negotiate the wage",
+"Maaş için pazarlık et": "Negotiate the wage",
+"Maaş pazarlığı": "Wage negotiation",
+"{} Maaş pazarlığı": "{} Wage negotiation",
+"{} kabul etti: haftalık +{}": "{} agreed: +{} a week",
+"{} masadan kalktı, teklifini geri çekti.": "{} walked away and withdrew the offer.",
+"{} teklifinde ısrarcı. İstersen ilk teklifi kabul edebilirsin.": "{} stands by its offer. You can still accept the original one.",
+"{} sana haftalık {} teklif ediyor. Ne kadar istiyorsun?": "{} is offering you {} a week. How much do you want?",
+"Her teklifte yalnız bir kez pazarlık yapabilirsin. Fazla istersen kulüp masadan kalkabilir.": "You can negotiate only once per offer. Ask for too much and the club may walk away.",
+"+%10 · {}": "+10% · {}",
+"+%20 · {}": "+20% · {}"
 }

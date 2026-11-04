@@ -123,3 +123,14 @@
 5951|Eine neue Ära für deine Karriere!
 5952|StarWert öffnen
 5953|{} StarWert öffnen
+5954|Verhandlung akzeptiert
+5955|Der Verein bleibt bei seinem Angebot
+5956|Gehalt verhandeln
+5957|Gehaltsverhandlung
+5963|Du kannst pro Angebot nur einmal verhandeln. Wer zu viel will, riskiert, dass der Verein abbricht.
+5966|{} bleibt bei seinem Angebot. Du kannst das ursprüngliche Angebot trotzdem annehmen.
+5967|{} bietet dir {} pro Woche. Wie viel willst du?
+5969|{} hat die Verhandlung abgebrochen und das Angebot zurückgezogen.
+5972|{} ist einverstanden: +{} pro Woche
+5973|{} Gehalt verhandeln
+5976|{} Gehaltsverhandlung

@@ -83,6 +83,48 @@ const PayRise = {
   },
 };
 
+// ---------- Transfer ve sözleşme tekliflerinde maaş pazarlığı (teklif başına bir kez) ----------
+const Nego = {
+  list(ctx) { const s = Game.state; return ctx === 'end' ? (s.seasonEnd && s.seasonEnd.offers) || [] : s.offers || []; },
+  btn(o, i, ctx) {
+    if (o.neg === 'ok') return '<small class="nego-done good">Pazarlık kabul edildi</small>';
+    if (o.neg === 'no') return '<small class="nego-done">Kulüp son teklifinde ısrarcı</small>';
+    return `<button class="btn btn-ghost nego-btn" data-nego="${i}" data-ctx="${ctx}">${Icon('wallet')} Maaş için pazarlık et</button>`;
+  },
+  back(ctx) { if (ctx === 'end' && typeof SeasonEnd !== 'undefined') SeasonEnd.show(); else Game.render(); },
+  open(i, ctx) {
+    const o = Nego.list(ctx)[i];
+    if (!o || o.neg) return;
+    const c = Game.club(o.clubId), p = Game.p;
+    const r100 = (x) => Math.round(x / 100) * 100;
+    const ask = (pct) => {
+      // oyuncu kulübe göre ne kadar iyiyse ve ünlüyse o kadar pazarlık gücü var
+      const lev = (Player.overall(p, true) - c.rating) / 20 + (p.fame || 0) / 250 + Life.mgrQ() * 0.05;
+      const ch = U.clamp((pct === 10 ? 0.62 : 0.36) + lev, 0.12, 0.9);
+      if (U.chance(ch)) {
+        const add = r100(o.wage * pct / 100);
+        o.wage += add; o.neg = 'ok';
+        Game.toast(`${c.name} kabul etti: haftalık +${U.money(add)}`, 'good');
+      } else if (pct === 20 && U.chance(0.25) && !o.own) {
+        const L = Nego.list(ctx), k = L.indexOf(o);
+        if (k >= 0) L.splice(k, 1);
+        Game.toast(`${c.name} masadan kalktı, teklifini geri çekti.`, 'bad');
+      } else {
+        o.neg = 'no';
+        Game.toast(`${c.name} teklifinde ısrarcı. İstersen ilk teklifi kabul edebilirsin.`, 'info');
+      }
+      Game.save();
+      setTimeout(() => Nego.back(ctx), 60);
+    };
+    Game.modal(`<h3>${Icon('wallet')} Maaş pazarlığı</h3><p>${c.name} sana haftalık ${U.money(o.wage)} teklif ediyor. Ne kadar istiyorsun?</p>
+      <p class="muted">Her teklifte yalnız bir kez pazarlık yapabilirsin. Fazla istersen kulüp masadan kalkabilir.</p>`, [
+      { t: 'Vazgeç', cls: 'btn-ghost', fn: () => setTimeout(() => Nego.back(ctx), 60) },
+      { t: `+%10 · ${U.money(r100(o.wage * 1.1))}`, cls: 'btn-ghost', fn: () => ask(10) },
+      { t: `+%20 · ${U.money(r100(o.wage * 1.2))}`, cls: 'btn-big', fn: () => ask(20) },
+    ]);
+  },
+};
+
 // ---------- StarDeğer: piyasa değeri sayfası ----------
 const Market = {
   // Diğer oyuncuların değeri (oyuncununkiyle aynı formül, ün yerine yıldız çarpanı)
@@ -375,7 +417,7 @@ const Support = {
 };
 
 document.addEventListener('click', (e) => {
-  const b = e.target.closest && e.target.closest('[data-sup],[data-payrise],[data-mvopen],[data-mvtab],[data-mv]');
+  const b = e.target.closest && e.target.closest('[data-sup],[data-payrise],[data-mvopen],[data-mvtab],[data-mv],[data-nego]');
   if (!b || !Game.state) return;
   const close = () => { const m = document.getElementById('modal'); m.classList.add('hidden'); m.innerHTML = ''; };
   if (b.dataset.mvtab) {
@@ -383,6 +425,7 @@ document.addEventListener('click', (e) => {
     if (Market._taste && b.dataset.mvtab !== Market._tab) return setTimeout(() => Star.pitch('StarDeğer', 'value'), 60);
     return setTimeout(() => Market.open(b.dataset.mvtab), 30);
   }
+  if (b.dataset.nego != null) return Nego.open(+b.dataset.nego, b.dataset.ctx);
   if (b.dataset.mv === 'share') { close(); return Market.share(); }
   if (b.dataset.mv === 'pay') { close(); return setTimeout(() => PayRise.open(), 30); }
   if (b.hasAttribute('data-sup')) { if (typeof SetSheet !== 'undefined' && document.body.classList.contains('ss-on')) SetSheet.close(); Support.open(); }

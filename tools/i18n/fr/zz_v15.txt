@@ -123,3 +123,14 @@
 5951|Une nouvelle ère pour ta carrière !
 5952|Ouvrir StarValeur
 5953|{} Ouvrir StarValeur
+5954|Négociation acceptée
+5955|Le club maintient son offre
+5956|Négocier le salaire
+5957|Négociation salariale
+5963|Tu ne peux négocier qu'une fois par offre. Trop gourmand, et le club peut se retirer.
+5966|{} maintient son offre. Tu peux encore accepter l'offre initiale.
+5967|{} te propose {} par semaine. Combien veux-tu ?
+5969|{} a quitté la table et retiré son offre.
+5972|{} accepte : +{} par semaine
+5973|{} Négocier le salaire
+5976|{} Négociation salariale

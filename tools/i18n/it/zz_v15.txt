@@ -123,3 +123,14 @@
 5951|Una nuova era per la tua carriera!
 5952|Apri StarValore
 5953|{} Apri StarValore
+5954|Trattativa accettata
+5955|Il club conferma la sua offerta
+5956|Tratta lo stipendio
+5957|Trattativa sullo stipendio
+5963|Puoi trattare una sola volta per offerta. Se chiedi troppo, il club può ritirarsi.
+5966|{} conferma la sua offerta. Puoi ancora accettare quella iniziale.
+5967|{} ti offre {} a settimana. Quanto vuoi?
+5969|{} ha lasciato il tavolo e ritirato l'offerta.
+5972|{} ha accettato: +{} a settimana
+5973|{} Tratta lo stipendio
+5976|{} Trattativa sullo stipendio

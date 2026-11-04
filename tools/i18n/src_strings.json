@@ -55166,6 +55166,76 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Oyun içi sosyal medyan yenilendi: kendi adı, yeni tasarımı ve yıldız rozetleri.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"İyi oynuyorsan kulübünden sezonda bir kez zam iste. Fazla istersen reddedilebilirsin!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Piyasa değerin, kariyer grafiğin, dünyanın en değerlileri ve transfer söylentileri.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Kariyerinde yeni dönem! 🚀": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Kariyerinde yeni dönem!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"StarDeğer'i aç": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "(Asist)": [
 "lang-ar.js",
 "lang-de.js",
@@ -86917,6 +86987,39 @@
 ],
 "داعمو STARFOOT": [
 "lang-ar.js"
+],
+"KARİYERİNDE YENİ DÖNEM! 🚀": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KARİYERİNDE YENİ DÖNEM!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"STARDEĞER'İ AÇ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
@@ -119851,6 +119954,18 @@
 "{} افتح مع Premium": [
 "lang-ar.js"
 ],
+"{} StarDeğer'i aç": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
 "Aile ilişkisi +{}": [
 "lang-ar.js",
 "lang-de.js",
@@ -127473,6 +127588,24 @@
 "lang-de.js"
 ],
 "Belohnungen sind rein kosmetisch und bringen keinen Vorteil im Spiel. Punkte werden auf diesem Gerät gespeichert und gesichert.": [
+"lang-de.js"
+],
+"Dein Social Media im Spiel hat einen neuen Look: eigener Name, neues Design und Sternabzeichen.": [
+"lang-de.js"
+],
+"Du spielst gut? Fordere einmal pro Saison mehr Gehalt. Wer zu viel will, kann abblitzen!": [
+"lang-de.js"
+],
+"Dein Marktwert, deine Karrieregrafik, die wertvollsten Spieler der Welt und Transfergerüchte.": [
+"lang-de.js"
+],
+"Eine neue Ära für deine Karriere! 🚀": [
+"lang-de.js"
+],
+"Eine neue Ära für deine Karriere!": [
+"lang-de.js"
+],
+"StarWert öffnen": [
 "lang-de.js"
 ],
 "– wir haben uns qualifiziert!": [
@@ -136074,6 +136207,15 @@
 "STARFOOT-UNTERSTÜTZER": [
 "lang-de.js"
 ],
+"EINE NEUE ÄRA FÜR DEINE KARRIERE! 🚀": [
+"lang-de.js"
+],
+"EINE NEUE ÄRA FÜR DEINE KARRIERE!": [
+"lang-de.js"
+],
+"STARWERT ÖFFNEN": [
+"lang-de.js"
+],
 "– WIR HABEN UNS QUALIFIZIERT!": [
 "lang-de.js"
 ],
@@ -142015,6 +142157,9 @@
 "{} Mit Premium freischalten": [
 "lang-de.js"
 ],
+"{} StarWert öffnen": [
+"lang-de.js"
+],
 "Familienbindung +{}": [
 "lang-de.js"
 ],
@@ -147764,6 +147909,24 @@
 "lang-en.js"
 ],
 "Rewards are cosmetic only and give no in-game advantage. Points are saved and backed up on this device.": [
+"lang-en.js"
+],
+"Your in-game social media has a fresh look: its own name, a new design and star badges.": [
+"lang-en.js"
+],
+"Playing well? Ask your club for a raise once a season. Ask for too much and they may say no!": [
+"lang-en.js"
+],
+"Your market value, career chart, the world's most valuable players and transfer rumours.": [
+"lang-en.js"
+],
+"A new era for your career! 🚀": [
+"lang-en.js"
+],
+"A new era for your career!": [
+"lang-en.js"
+],
+"Open StarValue": [
 "lang-en.js"
 ],
 "— we qualified!": [
@@ -155911,6 +156074,15 @@
 "STARFOOT SUPPORTERS": [
 "lang-en.js"
 ],
+"A NEW ERA FOR YOUR CAREER! 🚀": [
+"lang-en.js"
+],
+"A NEW ERA FOR YOUR CAREER!": [
+"lang-en.js"
+],
+"OPEN STARVALUE": [
+"lang-en.js"
+],
 "— WE QUALIFIED!": [
 "lang-en.js"
 ],
@@ -161791,6 +161963,9 @@
 "{} Unlock with Premium": [
 "lang-en.js"
 ],
+"{} Open StarValue": [
+"lang-en.js"
+],
 "Family bond +{}": [
 "lang-en.js"
 ],
@@ -167586,6 +167761,25 @@
 ],
 "Las recompensas son solo estéticas y no dan ventaja en el juego. Los puntos se guardan y respaldan en este dispositivo.": [
 "lang-es.js"
+],
+"Tu red social del juego se renueva: nombre propio, nuevo diseño e insignias de estrella.": [
+"lang-es.js"
+],
+"¿Juegas bien? Pide un aumento a tu club una vez por temporada. ¡Si pides demasiado, te pueden decir que no!": [
+"lang-es.js"
+],
+"Tu valor de mercado, tu gráfico de carrera, los más valiosos del mundo y rumores de fichajes.": [
+"lang-es.js"
+],
+"¡Una nueva era para tu carrera! 🚀": [
+"lang-es.js"
+],
+"¡Una nueva era para tu carrera!": [
+"lang-es.js"
+],
+"Abrir StarValor": [
+"lang-es.js",
+"lang-pt.js"
 ],
 "— ¡nos hemos clasificado!": [
 "lang-es.js"
@@ -175772,6 +175966,16 @@
 "SOCIOS DE STARFOOT": [
 "lang-es.js"
 ],
+"¡UNA NUEVA ERA PARA TU CARRERA! 🚀": [
+"lang-es.js"
+],
+"¡UNA NUEVA ERA PARA TU CARRERA!": [
+"lang-es.js"
+],
+"ABRIR STARVALOR": [
+"lang-es.js",
+"lang-pt.js"
+],
 "— ¡NOS HEMOS CLASIFICADO!": [
 "lang-es.js"
 ],
@@ -181677,6 +181881,10 @@
 "{} Desbloquear con Premium": [
 "lang-es.js"
 ],
+"{} Abrir StarValor": [
+"lang-es.js",
+"lang-pt.js"
+],
 "Vínculo familiar +{}": [
 "lang-es.js",
 "lang-pt.js"
@@ -187336,6 +187544,24 @@
 "lang-fr.js"
 ],
 "Les récompenses sont purement esthétiques et ne donnent aucun avantage en jeu. Les points sont enregistrés et sauvegardés sur cet appareil.": [
+"lang-fr.js"
+],
+"Ton réseau social du jeu fait peau neuve : son propre nom, un nouveau design et des badges étoile.": [
+"lang-fr.js"
+],
+"Tu joues bien ? Demande une augmentation une fois par saison. Trop gourmand, et c'est non !": [
+"lang-fr.js"
+],
+"Ta valeur marchande, ta courbe de carrière, les joueurs les plus chers du monde et les rumeurs de transfert.": [
+"lang-fr.js"
+],
+"Une nouvelle ère pour ta carrière ! 🚀": [
+"lang-fr.js"
+],
+"Une nouvelle ère pour ta carrière !": [
+"lang-fr.js"
+],
+"Ouvrir StarValeur": [
 "lang-fr.js"
 ],
 "— on est qualifiés !": [
@@ -195270,6 +195496,15 @@
 "SUPPORTERS DE STARFOOT": [
 "lang-fr.js"
 ],
+"UNE NOUVELLE ÈRE POUR TA CARRIÈRE ! 🚀": [
+"lang-fr.js"
+],
+"UNE NOUVELLE ÈRE POUR TA CARRIÈRE !": [
+"lang-fr.js"
+],
+"OUVRIR STARVALEUR": [
+"lang-fr.js"
+],
 "— ON EST QUALIFIÉS !": [
 "lang-fr.js"
 ],
@@ -201005,6 +201240,9 @@
 "{} Débloquer avec Premium": [
 "lang-fr.js"
 ],
+"{} Ouvrir StarValeur": [
+"lang-fr.js"
+],
 "Lien familial +{}": [
 "lang-fr.js"
 ],
@@ -206504,6 +206742,24 @@
 "lang-id.js"
 ],
 "Hadiah hanya kosmetik dan tidak memberi keuntungan dalam game. Poin disimpan dan dicadangkan di perangkat ini.": [
+"lang-id.js"
+],
+"Media sosial dalam game kini tampil baru: nama sendiri, desain baru, dan lencana bintang.": [
+"lang-id.js"
+],
+"Bermain bagus? Minta kenaikan gaji sekali per musim. Minta terlalu banyak, bisa ditolak!": [
+"lang-id.js"
+],
+"Nilai pasarmu, grafik karier, pemain paling bernilai di dunia, dan rumor transfer.": [
+"lang-id.js"
+],
+"Era baru untuk kariermu! 🚀": [
+"lang-id.js"
+],
+"Era baru untuk kariermu!": [
+"lang-id.js"
+],
+"Buka StarNilai": [
 "lang-id.js"
 ],
 "— kita lolos!": [
@@ -214319,6 +214575,15 @@
 "PENDUKUNG STARFOOT": [
 "lang-id.js"
 ],
+"ERA BARU UNTUK KARIERMU! 🚀": [
+"lang-id.js"
+],
+"ERA BARU UNTUK KARIERMU!": [
+"lang-id.js"
+],
+"BUKA STARNILAI": [
+"lang-id.js"
+],
 "— KITA LOLOS!": [
 "lang-id.js"
 ],
@@ -220041,6 +220306,9 @@
 "{} Buka dengan Premium": [
 "lang-id.js"
 ],
+"{} Buka StarNilai": [
+"lang-id.js"
+],
 "Ikatan keluarga +{}": [
 "lang-id.js"
 ],
@@ -225556,6 +225824,24 @@
 "lang-it.js"
 ],
 "Le ricompense sono solo estetiche e non danno vantaggi in gioco. I punti sono salvati e con backup su questo dispositivo.": [
+"lang-it.js"
+],
+"Il tuo social nel gioco si rinnova: nome proprio, nuovo design e badge a stella.": [
+"lang-it.js"
+],
+"Giochi bene? Chiedi un aumento una volta a stagione. Se chiedi troppo, potrebbero dirti di no!": [
+"lang-it.js"
+],
+"Il tuo valore di mercato, il grafico della carriera, i più preziosi del mondo e le voci di mercato.": [
+"lang-it.js"
+],
+"Una nuova era per la tua carriera! 🚀": [
+"lang-it.js"
+],
+"Una nuova era per la tua carriera!": [
+"lang-it.js"
+],
+"Apri StarValore": [
 "lang-it.js"
 ],
 "— ci siamo qualificati!": [
@@ -233366,6 +233652,15 @@
 "SOSTENITORI DI STARFOOT": [
 "lang-it.js"
 ],
+"UNA NUOVA ERA PER LA TUA CARRIERA! 🚀": [
+"lang-it.js"
+],
+"UNA NUOVA ERA PER LA TUA CARRIERA!": [
+"lang-it.js"
+],
+"APRI STARVALORE": [
+"lang-it.js"
+],
 "— CI SIAMO QUALIFICATI!": [
 "lang-it.js"
 ],
@@ -239078,6 +239373,9 @@
 "{} Sblocca con Premium": [
 "lang-it.js"
 ],
+"{} Apri StarValore": [
+"lang-it.js"
+],
 "Legame familiare +{}": [
 "lang-it.js"
 ],
@@ -240267,6 +240565,9 @@
 "lang-ja.js"
 ],
 "StarFootが好きなら、開発を続ける応援をしてください。応援するたびにポイントが貯まり、ランクが上がります。": [
+"lang-ja.js"
+],
+"ゲーム内SNSが新しくなりました：独自の名前、新デザイン、スターバッジ。": [
 "lang-ja.js"
 ],
 "（PK戦）": [
@@ -245127,6 +245428,21 @@
 "lang-pt.js"
 ],
 "As recompensas são só visuais e não dão vantagem no jogo. Os pontos ficam salvos e com backup neste aparelho.": [
+"lang-pt.js"
+],
+"Sua rede social do jogo foi renovada: nome próprio, novo visual e selos de estrela.": [
+"lang-pt.js"
+],
+"Jogando bem? Peça aumento ao clube uma vez por temporada. Se pedir demais, podem recusar!": [
+"lang-pt.js"
+],
+"Seu valor de mercado, gráfico da carreira, os mais valiosos do mundo e rumores de transferência.": [
+"lang-pt.js"
+],
+"Uma nova era na sua carreira! 🚀": [
+"lang-pt.js"
+],
+"Uma nova era na sua carreira!": [
 "lang-pt.js"
 ],
 "— nos classificamos!": [
@@ -252711,6 +253027,12 @@
 "lang-pt.js"
 ],
 "APOIADORES DO STARFOOT": [
+"lang-pt.js"
+],
+"UMA NOVA ERA NA SUA CARREIRA! 🚀": [
+"lang-pt.js"
+],
+"UMA NOVA ERA NA SUA CARREIRA!": [
 "lang-pt.js"
 ],
 "— NOS CLASSIFICAMOS!": [
@@ -275171,22 +275493,7 @@
 "StarFeed": [
 "star.js"
 ],
-"Oyun içi sosyal medyan yenilendi: kendi adı, yeni tasarımı ve yıldız rozetleri.": [
-"star.js"
-],
-"İyi oynuyorsan kulübünden sezonda bir kez zam iste. Fazla istersen reddedilebilirsin!": [
-"star.js"
-],
-"Piyasa değerin, kariyer grafiğin, dünyanın en değerlileri ve transfer söylentileri.": [
-"star.js"
-],
-"{} StarDeğer'i aç": [
-"star.js"
-],
 "Yeni güncelleme · {}": [
-"star.js"
-],
-"Kariyerinde yeni dönem! 🚀": [
 "star.js"
 ],
 "LZ1:": [
@@ -275306,6 +275613,33 @@
 "AM": [
 "value.js"
 ],
+"Pazarlık kabul edildi": [
+"value.js"
+],
+"Kulüp son teklifinde ısrarcı": [
+"value.js"
+],
+"{} Maaş için pazarlık et": [
+"value.js"
+],
+"{} kabul etti: haftalık +{}": [
+"value.js"
+],
+"{} masadan kalktı, teklifini geri çekti.": [
+"value.js"
+],
+"{} teklifinde ısrarcı. İstersen ilk teklifi kabul edebilirsin.": [
+"value.js"
+],
+"{} Maaş pazarlığı": [
+"value.js"
+],
+"{} sana haftalık {} teklif ediyor. Ne kadar istiyorsun?": [
+"value.js"
+],
+"Her teklifte yalnız bir kez pazarlık yapabilirsin. Fazla istersen kulüp masadan kalkabilir.": [
+"value.js"
+],
 "{} senin için {} teklifini masaya koydu. Menajerin \"acelemiz yok\" diyor.": [
 "value.js"
 ],
@@ -275318,7 +275652,7 @@
 "SF": [
 "value.js"
 ],
-"[data-sup],[data-payrise],[data-mvopen],[data-mvtab],[data-mv]": [
+"[data-sup],[data-payrise],[data-mvopen],[data-mvtab],[data-mv],[data-nego]": [
 "value.js"
 ],
 "QAT": [
