@@ -61,3 +61,10 @@ Kurallar:
 Kullanıcı: ödeme profili, test kanalında build, ürünleri iOS ile aynı kimliklerle aç (starfoot_premium, starfoot_plus2, starfoot_plus2_upg,
 starfoot_wc, starfoot_legends), RevenueCat'e Google Play + hizmet hesabı JSON, lisans test kullanıcısı.
 Kod: PREMIUM_PLATFORMS'a 'android', RevenueCat Android public key (goog_...), test build.
+
+## Oyun içi sosyal medyanın kendi markası (1.0.15)
+"Instagram" Meta'nın markası; mağaza görsellerinde/tanıtım videosunda kullanmak Apple 5.2.1'e göre ret sebebi olabilir.
+- Ad: "StarFeed" (her dilde aynı); "-gram" sonekinden kaçın.
+- Renkli halka ve Instagram'ı andıran ikonlar yerine StarFoot altın-lacivert tasarım.
+- Oyundaki metinler: "Al, Instagram'da paylaş", "Oyun içi Instagram'da altın tik" → StarFeed (tüm dillerde).
+- Reklam videolarında "Instagram" geçen yerler (ig/tr-4 videoları, bildirim sahnesi) yenilenir.

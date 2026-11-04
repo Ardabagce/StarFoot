@@ -14,8 +14,8 @@ const ICON = path.join(__dirname, '../../app/ios/App/App/Assets.xcassets/AppIcon
 const W = 886, H = 1920;
 
 const T = {
-  tr: { caps: [['KRİTİK ANLARI', 'SEN OYNA'], ['KALECİ OLARAK', 'DA OYNA'], ['KENDİ', "INSTAGRAM'IN"], ['EFSANE', 'SAYFAN'], ['DEV', 'TRANSFERLER'], ["ALTIN TOP'U", 'KAZAN']], tag: 'Sokaktan efsaneye' },
-  en: { caps: [['PLAY THE', 'BIG MOMENTS'], ['PLAY AS THE', 'GOALKEEPER'], ['YOUR OWN', 'INSTAGRAM'], ['YOUR LEGEND', 'PAGE'], ['RECORD', 'TRANSFERS'], ['WIN THE', 'GOLDEN BALL']], tag: 'From the streets to legend' },
+  tr: { caps: [['KRİTİK ANLARI', 'SEN OYNA'], ['KALECİ OLARAK', 'DA OYNA'], ['KENDİ', 'SOSYAL MEDYAN'], ['EFSANE', 'SAYFAN'], ['DEV', 'TRANSFERLER'], ["ALTIN TOP'U", 'KAZAN']], tag: 'Sokaktan efsaneye' },
+  en: { caps: [['PLAY THE', 'BIG MOMENTS'], ['PLAY AS THE', 'GOALKEEPER'], ['YOUR OWN', 'SOCIAL FEED'], ['YOUR LEGEND', 'PAGE'], ['RECORD', 'TRANSFERS'], ['WIN THE', 'GOLDEN BALL']], tag: 'From the streets to legend' },
 }[lang];
 
 const base = `${fontCss}*{margin:0;padding:0;box-sizing:border-box}body{width:${W}px;height:${H}px;overflow:hidden;position:relative;color:#fff}`;
