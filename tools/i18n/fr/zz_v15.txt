@@ -136,3 +136,95 @@
 5976|{} Négociation salariale
 5977|Conseils de gardien
 5978|Textes qui expliquent quoi faire dans les moments de gardien. Activés pour tes 3 premiers matchs.
+5981|Tu as déchiré les filets
+5982|Voilà ce qu'est un buteur
+5983|Je raconterai ce but à mes petits-enfants
+5984|Le gardien cherche encore le ballon
+5985|Les tribunes ont explosé
+5986|But de la semaine assurément
+5987|Chacun de tes buts est une fête
+5988|Quelle frappe
+5989|Tu es le meilleur buteur de la saison
+5990|Tu vas hanter les rêves du gardien
+5991|Une armée à lui seul
+5992|Un autre niveau sur le terrain
+5993|Une performance digne de la sélection
+5994|Les adversaires parlent de toi
+5995|Sa forme est inarrêtable
+5996|Tu es entré dans l'histoire
+5997|Des mains solides pour soulever la coupe
+5998|Personne ne dort ce soir
+5999|Le titre te va bien
+6000|Un pas de plus vers la légende
+6001|La famille avant tout
+6002|Ta mère doit être fière
+6003|La fierté dans les yeux de ton père
+6004|Tes plus grands fans
+6005|Quelle belle famille
+6006|Garde-nous un peu de la cuisine de ta mère
+6007|Des racines solides, des branches hautes
+6008|Passe le bonjour à ton père
+6009|L'amour de la famille se voit sur le terrain
+6010|Une photo tellement sincère
+6011|Vous allez si bien ensemble
+6012|Que votre bonheur dure toujours
+6013|On connaît le secret de sa forme
+6014|Trop beau
+6015|L'amour marque des buts
+6016|Ce duo est champion
+6017|Tout le bonheur du monde
+6018|On sait à qui tu dédies tes buts
+6019|Capitaine romantique
+6020|Vous êtes trop mignons
+6021|Cet effectif sera champion
+6022|L'énergie du vestiaire
+6023|Ça, c'est l'esprit d'équipe
+6024|Voilà la fraternité
+6025|La meilleure équipe
+6026|Cette saison est à nous
+6027|Tous ensemble !
+6028|Cette photo mérite un poster
+6029|Salut à tes coéquipiers
+6030|Il ne manque qu'un trophée
+6031|Super entente avec le coach
+6032|Le coach t'adore
+6033|Le maître et l'élève
+6034|Le génie tactique et sa star
+6035|Coach, titularise-le à chaque match
+6036|Ce duo va ramener des trophées
+6037|Le chouchou du coach
+6038|Respect, coach
+6039|Le bon joueur avec le bon coach
+6040|Cette expérience va beaucoup t'apporter
+6041|Le travail paie
+6042|Rendez-vous sur le terrain ce week-end
+6043|Ça, c'est de la discipline
+6044|Garde cette forme
+6045|Bon courage, capitaine
+6046|Grands objectifs, long chemin
+6047|On est fiers de toi
+6072|Photo de la victoire ! La famille {}.
+6049|On a gagné en équipe. Tous ensemble !
+6051|Célébration de la victoire au vestiaire.
+6052|C'est génial de faire partie de cette famille.
+6053|Avec mes coéquipiers après l'entraînement.
+6054|Ensemble, on est plus forts !
+6055|Salut depuis le vestiaire.
+6056|Avec cet effectif, tout est possible.
+6057|Avec mon coach après la séance du jour. J'apprends énormément.
+6060|Merci à mon coach pour sa confiance.
+6061|Avec mon coach après la réunion tactique.
+6062|Avec mon coach, on va faire de grandes choses cette saison.
+6063|Une belle journée en famille.
+6064|Mes plus grands soutiens.
+6065|Rien ne vaut la cuisine de ma mère !
+6066|Je leur dois tout.
+6067|Une belle soirée en famille.
+6068|J'ai regardé nos vieux matchs avec mon père.
+6069|Foot dans le quartier avec mon frère, comme au bon vieux temps !
+3090|Une belle soirée avec {}.
+6073|Escapade du week-end avec {}.
+6071|Merci d'être à mes côtés, {}.
+6074|Mon plus grand soutien, {}.
+6075|Vestiaire du {}
+1180|Maison

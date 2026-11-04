@@ -136,3 +136,95 @@
 5976|{} Gehaltsverhandlung
 5977|Torwart-Tipps
 5978|Texte, die erklären, was in Torwartmomenten zu tun ist. In deinen ersten 3 Spielen an.
+5981|Du hast das Netz zerrissen
+5982|So sieht ein Torjäger aus
+5983|Von diesem Tor erzähle ich meinen Enkeln
+5984|Der Torwart sucht den Ball immer noch
+5985|Die Tribünen bebten
+5986|Definitiv das Tor der Woche
+5987|Jedes deiner Tore ist ein Fest
+5988|Was für ein Schuss
+5989|Du wirst Torschützenkönig
+5990|Du verfolgst den Torwart im Schlaf
+5991|Eine Ein-Mann-Armee
+5992|Auf dem Platz eine andere Liga
+5993|Das ist Nationalmannschaftsniveau
+5994|Die Gegner reden über dich
+5995|Seine Form ist nicht zu stoppen
+5996|Du hast Geschichte geschrieben
+5997|Starke Hände am Pokal
+5998|Heute Nacht schläft keiner
+5999|Der Titel steht dir
+6000|Ein weiterer Schritt zur Legende
+6001|Familie ist alles
+6002|Deine Mutter ist sicher stolz
+6003|Der Stolz in den Augen deines Vaters
+6004|Deine größten Fans
+6005|Was für eine schöne Familie
+6006|Lass uns was von Mamas Essen übrig
+6007|Starke Wurzeln, hohe Äste
+6008|Grüß deinen Vater
+6009|Die Familienliebe sieht man auf dem Platz
+6010|So ein ehrliches Foto
+6011|Ihr passt so gut zusammen
+6012|Möge euer Glück ewig halten
+6013|Jetzt kennen wir das Geheimnis seiner Form
+6014|Wie schön
+6015|Liebe schießt Tore
+6016|Dieses Duo ist Meister
+6017|Alles Glück der Welt
+6018|Wir wissen, wem der Torjubel gilt
+6019|Romantischer Kapitän
+6020|Ihr seid so süß
+6021|Dieser Kader wird Meister
+6022|Kabinen-Energie
+6023|Das ist Teamgeist
+6024|So sieht Brüderlichkeit aus
+6025|Die beste Truppe
+6026|Diese Saison gehört uns
+6027|Alle zusammen!
+6028|Dieses Foto gehört auf ein Poster
+6029|Grüße an deine Mitspieler
+6030|Es fehlt nur noch ein Pokal
+6031|Tolle Chemie mit dem Trainer
+6032|Der Trainer mag dich richtig
+6033|Meister und Schüler
+6034|Das Taktikgenie und sein Star
+6035|Trainer, lass ihn immer von Anfang an spielen
+6036|Dieses Duo holt Titel
+6037|Der Liebling des Trainers
+6038|Respekt, Trainer
+6039|Der richtige Spieler beim richtigen Trainer
+6040|Diese Erfahrung bringt dich weiter
+6041|Harte Arbeit zahlt sich aus
+6042|Wir sehen uns am Wochenende auf dem Platz
+6043|Das ist Disziplin
+6044|Bleib in dieser Form
+6045|Weiter so, Kapitän
+6046|Große Ziele, langer Weg
+6047|Wir sind stolz auf dich
+6072|Siegerfoto! Die {}-Familie.
+6049|Wir haben als Team gewonnen. Alle zusammen!
+6051|Siegesjubel in der Kabine.
+6052|Schön, Teil dieser Familie zu sein.
+6053|Mit meinen Mitspielern nach dem Training.
+6054|Zusammen sind wir stärker!
+6055|Grüße aus der Kabine.
+6056|Mit diesem Kader ist alles möglich.
+6057|Mit meinem Trainer nach dem heutigen Training. Ich lerne so viel.
+6060|Danke an meinen Trainer für das Vertrauen.
+6061|Mit meinem Trainer nach der Taktikbesprechung.
+6062|Mit meinem Trainer schaffen wir diese Saison Großes.
+6063|Ein schöner Tag mit meiner Familie.
+6064|Meine größten Unterstützer.
+6065|Nichts geht über Mamas Essen!
+6066|Ich verdanke ihnen alles.
+6067|Ein schöner Abend mit meiner Familie.
+6068|Mit meinem Vater alte Spiele geschaut.
+6069|Mit meinem Geschwister im Viertel gekickt, wie früher!
+3090|Ein schöner Abend mit {}.
+6073|Ein Wochenendtrip mit {}.
+6071|Danke, dass du an meiner Seite bist, {}.
+6074|Meine größte Unterstützung: {}.
+6075|{} Kabine
+1180|Zuhause

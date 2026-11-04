@@ -212,7 +212,7 @@ const MiniGame = {
       let result = null, resultText = '', resultColor = '#fff';
       let slowmo = 1, particles = [], netShake = 0, flash = 0;
       // görsel efektler: top izi, kamera sarsıntısı ve yakınlaşma, filede çarpma noktası
-      let trail = [], camShake = 0, camZoom = 0, zoomAt = null, netHitX = null;
+      let trail = [], camShake = 0, camZoom = 0, zoomAt = null, netHitX = null, netBall = false, netHit = false;
       let last = performance.now(), raf = 0;
       const showHint = MiniGame.seen++ < 3;
 
@@ -456,7 +456,7 @@ const MiniGame = {
         }
         if (outcome === 'saved' || outcome === 'claimed') { camZoom = 1; zoomAt = [tx(keeper.x), ty(keeper.y) - FIG() * 0.5]; }
         if (outcome === 'goal' || (extra && extra.mateGoal)) {
-          netShake = 1; flash = 1; camShake = 1; netHitX = ball.x;
+          netShake = 0.3; flash = 1; camShake = 1; netHitX = ball.x; netBall = true;
           const cols = [kits.own.shirt, kits.own.alt, '#ffffff', '#ffcf3f'];
           for (let i = 0; i < 90; i++) {
             particles.push({ x: tx(ball.x), y: ty(-1, 1.5), vx: U.rand(-320, 320) * dpr, vy: U.rand(-460, -80) * dpr, c: U.pick(cols), r: U.rand(3, 6) * dpr, life: U.rand(1.1, 2), rot: U.rand(0, 6) });
@@ -727,7 +727,8 @@ const MiniGame = {
         if (camZoom > 0 && zoomAt) { const z = 1 + 0.07 * Math.sin(Math.min(1, camZoom) * Math.PI / 2); ctx.translate(zoomAt[0], zoomAt[1]); ctx.scale(z, z); ctx.translate(-zoomAt[0], -zoomAt[1]); }
         ctx.drawImage(bg, 0, 0);
         Sprites.standsFx(ctx, t, result && result.outcome === 'goal' ? Math.min(1, (t - endT) * 3) : 0);
-        const sh = netShake > 0 ? Math.sin(t * 50) * 6 * dpr * netShake : 0;
+        // file: top arka fileye çarpınca geriye doğru cep yapar ve yavaşça sönümlenir
+        const sh = netShake > 0 ? (netHit ? -(0.6 + 0.4 * Math.cos(t * 16)) * 11 * dpr * netShake : Math.sin(t * 50) * 4 * dpr * netShake) : 0;
         Sprites.net(ctx, tx, ty, PX, sh, netHitX);
         if (scene.offside != null && (phase === 'aim' || (result && result.outcome === 'offside'))) {
           // TV tarzı ofsayt çizgisi
@@ -865,6 +866,18 @@ const MiniGame = {
         const n = Math.ceil(dt / (1 / 240));
         for (let i = 0; i < n && phase !== 'done'; i++) step(dt / n);
         if (phase === 'done') t += rdt;
+        // golde top filenin içine kadar gider; arka fileye çarpınca file şişer ve top yere düşer
+        if (phase === 'done' && netBall) {
+          const sd = rdt * 0.55;
+          BallPhys.step(ball, sd);
+          ball.rot += Math.hypot(ball.vx, ball.vy) * sd * 1.6;
+          if (ball.y < -1.75) {
+            ball.y = -1.75; ball.vy = 0; ball.vx *= 0.3;
+            if (!netHit) { netHit = true; netShake = 1; netHitX = ball.x; if (typeof Sfx !== 'undefined') Sfx.buzz('light'); }
+          }
+          if (Math.abs(ball.x) > PITCH.GOAL_W - 0.25) { ball.x = Math.sign(ball.x) * (PITCH.GOAL_W - 0.25); ball.vx *= -0.2; }
+          if (ball.z > 2.2) { ball.z = 2.2; ball.vz = Math.min(0, ball.vz); }
+        }
         netShake = Math.max(0, netShake - rdt * 1.1);
         camShake = Math.max(0, camShake - rdt * 2.4);
         camZoom = Math.max(0, camZoom - rdt * 0.9);

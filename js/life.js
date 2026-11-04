@@ -112,6 +112,7 @@ const Life = {
       p.rel.family = U.clamp(p.rel.family + g, 0, 100);
       Player.addMorale(p, 4); Player.addEnergy(p, 5);
       msg = U.pick(['Annenin yemekleri gibisi yok!', 'Babanla eski maçlarını izlediniz.', 'Kardeşinle sokakta top oynadın.', 'Ailenle güzel bir akşam yemeği.']) + ` Aile ilişkisi +${g}`;
+      if (U.chance(0.35)) Social.post('family', U.pick(['Ailemle güzel bir akşam.', 'Babamla eski maçlarımızı izledik.', 'Kardeşimle mahallede top oynadık, eski günler!', 'Annemin yemekleri gibisi yok!']), 1.2);
     } else if (kind === 'meet') {
       if (L.gf) return;
       if (p.age < 16) return Game.toast('Önce okul ve futbol!', 'bad');
@@ -130,7 +131,7 @@ const Life = {
       L.gf.rel = U.clamp(L.gf.rel + g, 0, 100);
       Player.addMorale(p, 6); Player.addEnergy(p, -4);
       msg = `${L.gf.name} ile ${U.pick(['romantik bir akşam yemeği', 'sahilde yürüyüş', 'sinema gecesi', 'hafta sonu kaçamağı'])}. İlişki +${g}`;
-      if (U.chance(0.3)) Social.post('life', `${L.gf.name} ile güzel bir akşam.`, 1.3);
+      if (U.chance(0.35)) Social.post('couple', U.pick([`${L.gf.name} ile güzel bir akşam.`, `${L.gf.name} ile hafta sonu kaçamağı.`, `Yanımda olduğun için teşekkürler ${L.gf.name}.`, `En büyük destekçim ${L.gf.name}.`]), 1.3);
     } else if (kind === 'propose') {
       if (!L.gf || L.gf.married || L.gf.rel < 85) return;
       if (!Life.adult(p)) return Game.toast('Evlilik için 18 yaşını doldurmalısın.', 'bad');
@@ -140,7 +141,7 @@ const Life = {
         Player.addMorale(p, 20); Player.addFame(p, 2);
         msg = `${L.gf.name} "Evet!" dedi! Düğün tarihi belli oldu.`;
         Game.news(`${Player.fullName(p)} ile ${L.gf.name} evlendi! Futbol dünyası mutlu çifti kutluyor.`, 'good');
-        Social.post('life', `Hayatımın en güzel günü. ${L.gf.name}, iyi ki varsın.`, 2.5);
+        Social.post('couple', `Hayatımın en güzel günü. ${L.gf.name}, iyi ki varsın.`, 2.5);
       } else { L.gf.rel -= 10; Player.addMorale(p, -6); msg = `${L.gf.name} "Biraz daha zamana ihtiyacım var" dedi.`; type = 'bad'; }
     } else if (kind === 'divorce') {
       if (!L.gf || !L.gf.married) return;

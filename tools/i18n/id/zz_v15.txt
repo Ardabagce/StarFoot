@@ -136,3 +136,95 @@
 5976|{} Negosiasi gaji
 5977|Tips kiper
 5978|Teks yang menjelaskan apa yang harus dilakukan saat momen kiper. Aktif di 3 laga pertamamu.
+5981|Kamu merobek jala
+5982|Begitulah seorang penyerang
+5983|Gol ini akan kuceritakan ke cucuku
+5984|Kiper masih mencari bolanya
+5985|Tribun bergemuruh
+5986|Pasti gol terbaik pekan ini
+5987|Setiap golmu adalah pesta
+5988|Tendangan yang luar biasa
+5989|Kamu top skor musim ini
+5990|Kamu akan menghantui mimpi kiper
+5991|Pasukan satu orang
+5992|Level berbeda di lapangan
+5993|Penampilan kelas timnas
+5994|Lawan membicarakanmu
+5995|Performanya tak terbendung
+5996|Kamu mencetak sejarah
+5997|Tangan kuat mengangkat trofi
+5998|Malam ini tak ada yang tidur
+5999|Gelar juara cocok untukmu
+6000|Satu langkah lagi menuju legenda
+6001|Keluarga adalah segalanya
+6002|Ibumu pasti bangga
+6003|Kebanggaan di mata ayahmu
+6004|Penggemar terbesarmu
+6005|Keluarga yang indah
+6006|Sisakan masakan ibumu untuk kami
+6007|Akar kuat, dahan tinggi
+6008|Salam untuk ayahmu
+6009|Cinta keluarga terlihat di lapangan
+6010|Foto yang tulus sekali
+6011|Kalian serasi sekali
+6012|Semoga bahagia selalu
+6013|Rahasia performanya terungkap
+6014|Masyaallah
+6015|Cinta mencetak gol
+6016|Duet ini juara
+6017|Semoga bahagia
+6018|Sudah jelas selebrasi untuk siapa
+6019|Kapten romantis
+6020|Kalian manis sekali
+6021|Skuad ini akan juara
+6022|Energi ruang ganti
+6023|Itulah semangat tim
+6024|Begitulah persaudaraan
+6025|Tim terbaik
+6026|Musim ini milik kita
+6027|Semua bersama!
+6028|Foto ini layak jadi poster
+6029|Salam untuk rekan setimmu
+6030|Yang kurang hanya trofi
+6031|Chemistry hebat dengan pelatih
+6032|Pelatih sangat menyukaimu
+6033|Guru dan murid
+6034|Jenius taktik dan bintangnya
+6035|Pelatih, mainkan dia sejak awal tiap laga
+6036|Duet ini akan membawa trofi
+6037|Anak emas pelatih
+6038|Hormat, pelatih
+6039|Pemain tepat dengan pelatih tepat
+6040|Pengalaman ini akan banyak membantumu
+6041|Kerja keras membuahkan hasil
+6042|Sampai jumpa di lapangan akhir pekan ini
+6043|Itulah disiplin
+6044|Pertahankan performa ini
+6045|Semangat, kapten
+6046|Target besar, jalan panjang
+6047|Kami bangga padamu
+6072|Foto kemenangan! Keluarga {}.
+6049|Kami menang sebagai tim. Semua bersama!
+6051|Selebrasi kemenangan di ruang ganti.
+6052|Senang menjadi bagian keluarga ini.
+6053|Bersama rekan setim setelah latihan.
+6054|Bersama kita lebih kuat!
+6055|Salam dari ruang ganti.
+6056|Dengan skuad ini, semua mungkin.
+6057|Bersama pelatih setelah latihan hari ini. Aku belajar banyak.
+6060|Terima kasih pelatih atas kepercayaannya.
+6061|Bersama pelatih setelah rapat taktik.
+6062|Bersama pelatih, kami akan meraih hal besar musim ini.
+6063|Hari indah bersama keluarga.
+6064|Pendukung terbesarku.
+6065|Tak ada yang mengalahkan masakan ibu!
+6066|Aku berutang segalanya pada mereka.
+6067|Malam indah bersama keluarga.
+6068|Nonton laga lama bersama ayah.
+6069|Main bola di kampung bersama saudara, seperti dulu!
+3090|Malam indah bersama {}.
+6073|Liburan akhir pekan bersama {}.
+6071|Terima kasih sudah di sisiku, {}.
+6074|Pendukung terbesarku, {}.
+6075|Ruang Ganti {}
+1180|Rumah

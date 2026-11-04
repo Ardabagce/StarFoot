@@ -136,3 +136,95 @@
 5976|{} Negociação salarial
 5977|Dicas de goleiro
 5978|Textos que explicam o que fazer nos lances de goleiro. Ativadas nos seus 3 primeiros jogos.
+5981|Você rasgou a rede
+5982|Isso é que é artilheiro
+5983|Vou contar esse gol aos meus netos
+5984|O goleiro ainda procura a bola
+5985|A arquibancada veio abaixo
+5986|Gol da semana com certeza
+5987|Cada gol seu é uma festa
+5988|Que chute
+5989|Você é o artilheiro da temporada
+5990|Você vai aparecer nos pesadelos do goleiro
+5991|Um exército de um homem só
+5992|Outro nível em campo
+5993|Atuação de seleção
+5994|Os rivais falam de você
+5995|A fase dele é imparável
+5996|Você fez história
+5997|Mãos firmes erguendo a taça
+5998|Hoje ninguém dorme
+5999|O título combina com você
+6000|Mais um passo rumo à lenda
+6001|Família é tudo
+6002|Sua mãe deve estar orgulhosa
+6003|O orgulho nos olhos do seu pai
+6004|Seus maiores fãs
+6005|Que família linda
+6006|Guarda um pouco da comida da sua mãe pra gente
+6007|Raízes fortes, galhos altos
+6008|Manda um abraço pro seu pai
+6009|O amor da família aparece em campo
+6010|Que foto sincera
+6011|Vocês combinam muito
+6012|Que a felicidade de vocês dure para sempre
+6013|Agora sabemos o segredo da boa fase
+6014|Que lindo
+6015|O amor faz gols
+6016|Essa dupla é campeã
+6017|Que sejam muito felizes
+6018|Já sabemos pra quem vai a comemoração
+6019|Capitão romântico
+6020|Vocês são muito fofos
+6021|Esse elenco vai ser campeão
+6022|Energia de vestiário
+6023|Isso é espírito de equipe
+6024|Isso é irmandade
+6025|A melhor turma
+6026|Essa temporada é nossa
+6027|Todos juntos!
+6028|Essa foto é de pôster
+6029|Abraço pros seus companheiros
+6030|Só falta uma taça
+6031|Ótima sintonia com o técnico
+6032|O técnico te adora
+6033|Mestre e aprendiz
+6034|O gênio tático e sua estrela
+6035|Professor, coloca ele de titular sempre
+6036|Essa dupla vai trazer títulos
+6037|O queridinho do técnico
+6038|Respeito, professor
+6039|O jogador certo com o técnico certo
+6040|Essa experiência vai te ensinar muito
+6041|Quem trabalha vence
+6042|Te vejo em campo no fim de semana
+6043|Isso é disciplina
+6044|Que continue nessa fase
+6045|Bom trabalho, capitão
+6046|Metas grandes, caminho longo
+6047|Temos orgulho de você
+6072|Foto da vitória! Família {}.
+6049|Vencemos como equipe. Todos juntos!
+6051|Comemoração da vitória no vestiário.
+6052|É ótimo fazer parte dessa família.
+6053|Com meus companheiros depois do treino.
+6054|Juntos somos mais fortes!
+6055|Saudações do vestiário.
+6056|Com esse elenco, tudo é possível.
+6057|Com meu técnico depois do treino de hoje. Estou aprendendo muito.
+6060|Obrigado ao meu técnico pela confiança.
+6061|Com meu técnico depois da reunião tática.
+6062|Com meu técnico vamos fazer grandes coisas nesta temporada.
+6063|Um dia lindo com a minha família.
+6064|Meus maiores apoiadores.
+6065|Nada supera a comida da minha mãe!
+6066|Devo tudo a eles.
+6067|Uma noite linda com a minha família.
+6068|Assisti jogos antigos com meu pai.
+6069|Joguei bola no bairro com meu irmão, como nos velhos tempos!
+3090|Uma noite linda com {}.
+6073|Uma escapada de fim de semana com {}.
+6071|Obrigado por estar ao meu lado, {}.
+6074|Minha maior apoiadora, {}.
+6075|Vestiário do {}
+1180|Casa

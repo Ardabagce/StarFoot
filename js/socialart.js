@@ -20,6 +20,7 @@ const SocialArt = {
   sceneFor(kind, text) {
     const t = text || '';
     if (kind === 'sponsor') return 'sponsor';
+    if (['family', 'couple', 'team', 'coach'].includes(kind)) return kind;
     if (kind === 'goal') return /Mahalle/.test(t) ? 'street' : 'goal';
     if (kind === 'motm') return 'motm';
     if (kind === 'trophy') return /kaptan/i.test(t) ? 'captain' : /Gelecek sezon/.test(t) ? 'europe' : 'trophy';
@@ -46,6 +47,7 @@ const SocialArt = {
     return {
       goal: `${n} Stadyumu`, motm: `${n} Stadyumu`, trophy: `${n} Stadyumu`, europe: `${n} Stadyumu`, captain: `${n} Stadyumu`,
       transfer: `${n} Basın Salonu`, training: `${n} Antrenman Merkezi`, number: `${n} Tesisleri`, legend: `${n} Tesisleri`,
+      family: 'Ev', couple: city, team: `${n} Soyunma Odası`, coach: `${n} Antrenman Merkezi`,
       camp: 'Milli Takım Kampı', street: 'Mahalle sahası', yacht: 'Akdeniz', car: city, home: city, music: city, pet: city, studio: city, city,
     }[scene] || city;
   },
@@ -422,6 +424,68 @@ const SocialArt = {
         Sprites.ball(c, sx + h * 0.18, sy - h * 0.04, h * 0.055, 0.6, Sprites.curBall || BALL_STYLES.classic);
       }
       tone = 'warm';
+    } else if (scene === 'team' || scene === 'coach') {
+      // takım arkadaşlarıyla ya da hocayla hatıra fotoğrafı
+      const train = scene === 'coach' || r() < 0.4;
+      SocialArt.blurred(c, W, H, 2.5, (b) => {
+        if (train) {
+          const sky = b.createLinearGradient(0, 0, 0, H * 0.5); sky.addColorStop(0, '#6aa8ea'); sky.addColorStop(1, '#d7ecfb');
+          b.fillStyle = sky; b.fillRect(0, 0, W, H); b.fillStyle = '#2f5b33'; b.fillRect(0, H * 0.42, W, H * 0.06);
+          b.fillStyle = '#46a24b'; b.fillRect(0, H * 0.48, W, H * 0.52);
+        } else SocialArt.stadium(b, W, H, r, P, false);
+      });
+      if (scene === 'coach') {
+        const suit = { shirt: '#1b2333', alt: P.c1, pattern: 'band', shorts: '#1b2333', socks: '#1b2333' };
+        const old = Object.assign(Sprites.look((post.seed || 3) % 97 + 11), { hair: r() < 0.5 ? '#9a9a9a' : '#d0d0d0', beard: r() < 0.5 });
+        SocialArt.lit(c, (l) => Sprites.figure(l, W * 0.68, H * 1.08, H * 0.8, { kit: suit, look: old, facing: 'down', noShadow: true, t: 0, armA: 0.25 }));
+        fig(W * 0.36, H * 1.1, H * 0.82, { number: num, armA: 0.25 });
+      } else {
+        const n = 3 + (r() < 0.5 ? 1 : 0);
+        for (let i = 0; i < n; i++) {
+          const x = W * (0.12 + i * (0.76 / (n - 1)));
+          if (Math.abs(x - W * 0.5) < W * 0.12) continue;
+          SocialArt.lit(c, (l) => Sprites.figure(l, x, H * (1.02 + (i % 2) * 0.03), H * 0.7, { kit, look: Sprites.look((post.seed || 5) % 89 + i * 7), facing: 'down', noShadow: true, t: 0, number: [4, 8, 11, 7][i], dive: r() < 0.5 ? 1 : 0 }));
+        }
+        fig(W * 0.5, H * 1.1, H * 0.8, { number: num, dive: 1 });
+      }
+      tone = train ? 'warm' : 'cool';
+    } else if (scene === 'family' || scene === 'couple') {
+      const cas = SocialArt.casual(r, P);
+      const person = (sx, sy, h, k, lk, o) => SocialArt.lit(c, (l) => Sprites.figure(l, sx, sy, h, Object.assign({ kit: k, look: lk, facing: 'down', noShadow: true, t: 0 }, o || {})));
+      const dress = (col) => ({ shirt: col, alt: col, pattern: 'plain', shorts: col, socks: Sprites.shade(col, -0.2) });
+      if (scene === 'family') {
+        // evde ya da bahçede aile fotoğrafı: annen, baban, bazen kardeşin
+        SocialArt.blurred(c, W, H, 3, (b) => {
+          const g = b.createLinearGradient(0, 0, 0, H); g.addColorStop(0, '#f6d7a7'); g.addColorStop(1, '#b98a5c');
+          b.fillStyle = g; b.fillRect(0, 0, W, H);
+          SocialArt.bokeh(b, W, H, r, ['rgba(255,240,200,0.8)', 'rgba(255,210,150,0.7)'], 22, 0, 0.6);
+          b.fillStyle = '#7a5a3c'; b.fillRect(0, H * 0.62, W, H * 0.38);
+        });
+        const skin = look.skin;
+        const mom = { skin, hair: r() < 0.5 ? '#5a3a22' : '#2a1d15', style: 'long', bald: false, beard: false };
+        const dad = { skin, hair: '#8f8f8f', style: r() < 0.5 ? 'short' : 'bald', bald: false, beard: r() < 0.6 };
+        dad.bald = dad.style === 'bald';
+        person(W * 0.2, H * 1.06, H * 0.72, dress(['#8d3b52', '#3b6e8d', '#6b8e3b'][Math.floor(r() * 3)]), mom);
+        person(W * 0.8, H * 1.06, H * 0.76, dress(['#2b3a55', '#5b4636', '#3a3d44'][Math.floor(r() * 3)]), dad);
+        if (r() < 0.5) person(W * 0.66, H * 1.1, H * 0.5, SocialArt.casual(r, P), Object.assign({}, look, { beard: false, style: 'short', bald: false }));
+        person(W * 0.46, H * 1.1, H * 0.8, cas, look, { armA: 0.3 });
+        tone = 'warm';
+      } else {
+        // sevgilin ya da eşinle: gün batımı ya da şehir ışıkları
+        const sunset = r() < 0.5;
+        SocialArt.blurred(c, W, H, 4, (b) => {
+          if (sunset) {
+            const g = b.createLinearGradient(0, 0, 0, H); g.addColorStop(0, '#3b2a6b'); g.addColorStop(0.5, '#ff7e5f'); g.addColorStop(1, '#ffc477');
+            b.fillStyle = g; b.fillRect(0, 0, W, H); SocialArt.glow(b, W * 0.5, H * 0.5, W * 0.45, 'rgba(255,220,150,0.7)');
+          } else { b.fillStyle = '#0d1022'; b.fillRect(0, 0, W, H); SocialArt.bokeh(b, W, H, r, ['rgba(255,190,90,0.9)', 'rgba(255,90,120,0.8)', 'rgba(255,255,255,0.7)'], 40, 0, 0.9); }
+        });
+        const pl = Sprites.look((post.seed || 9) % 79 + 31);
+        const her = { skin: pl.skin, hair: r() < 0.5 ? pl.hair : '#6b3a1f', style: r() < 0.7 ? 'long' : 'bun', bald: false, beard: false };
+        person(W * 0.66, H * 1.08, H * 0.76, dress(['#e8e2d6', '#b8324a', '#1b1d22', '#e3a3b5'][Math.floor(r() * 4)]), her, { armA: 0.35 });
+        person(W * 0.38, H * 1.1, H * 0.84, cas, look, { armA: 0.35 });
+        if (r() < 0.4) SocialArt.glow(c, W * 0.52, H * 0.5, W * 0.08, 'rgba(255,120,150,0.5)');
+        tone = sunset ? 'warm' : 'cool';
+      }
     } else if (scene === 'street') {
       c.fillStyle = '#7d7468'; c.fillRect(0, 0, W, H);
       for (let i = 0; i < 9; i++) for (let j = 0; j < 7; j++) { c.fillStyle = (i + j) % 2 ? '#857b6e' : '#776e62'; c.fillRect(j * 80 + (i % 2) * 40, i * 34, 78, 32); }

@@ -136,3 +136,95 @@
 5976|{} Negociación del sueldo
 5977|Consejos de portero
 5978|Textos que explican qué hacer en los momentos de portero. Activados en tus 3 primeros partidos.
+5981|Rompiste la red
+5982|Así es un goleador
+5983|Este gol se lo contaré a mis nietos
+5984|El portero aún busca el balón
+5985|Las gradas se vinieron abajo
+5986|Gol de la semana seguro
+5987|Cada gol tuyo es una fiesta
+5988|Qué golpeo
+5989|Eres el pichichi de la temporada
+5990|Vas a aparecer en las pesadillas del portero
+5991|Un ejército de un solo hombre
+5992|Otro nivel en el campo
+5993|Rendimiento de selección
+5994|Los rivales hablan de ti
+5995|Su forma es imparable
+5996|Has hecho historia
+5997|Manos firmes levantando la copa
+5998|Esta noche nadie duerme
+5999|El título te sienta bien
+6000|Un paso más hacia la leyenda
+6001|La familia lo es todo
+6002|Tu madre estará orgullosa
+6003|El orgullo en los ojos de tu padre
+6004|Tus mayores fans
+6005|Qué familia tan bonita
+6006|Guárdanos algo de la comida de tu madre
+6007|Raíces firmes, ramas altas
+6008|Saluda a tu padre
+6009|El amor familiar se nota en el campo
+6010|Qué foto tan sincera
+6011|Hacéis muy buena pareja
+6012|Que vuestra felicidad dure siempre
+6013|Ya sabemos el secreto de su forma
+6014|Qué bonito
+6015|El amor marca goles
+6016|Esta pareja es campeona
+6017|Que seáis muy felices
+6018|Ya sabemos a quién dedicas los goles
+6019|Capitán romántico
+6020|Qué monos sois
+6021|Esta plantilla será campeona
+6022|Energía de vestuario
+6023|Eso es espíritu de equipo
+6024|Así es la hermandad
+6025|El mejor equipo
+6026|Esta temporada es nuestra
+6027|¡Todos juntos!
+6028|Esta foto es de póster
+6029|Saludos a tus compañeros
+6030|Solo falta una copa
+6031|Gran química con el entrenador
+6032|El entrenador te adora
+6033|Maestro y aprendiz
+6034|El genio táctico y su estrella
+6035|Míster, que sea titular siempre
+6036|Este dúo traerá títulos
+6037|El favorito del entrenador
+6038|Respeto, míster
+6039|El jugador adecuado con el entrenador adecuado
+6040|Esa experiencia te aportará mucho
+6041|El trabajo tiene recompensa
+6042|Nos vemos en el campo el fin de semana
+6043|Eso es disciplina
+6044|Que siga esa forma
+6045|Ánimo, capitán
+6046|Metas grandes, camino largo
+6047|Estamos orgullosos de ti
+6072|¡Foto de la victoria! La familia {}.
+6049|Ganamos como equipo. ¡Todos juntos!
+6051|Celebración de la victoria en el vestuario.
+6052|Es genial ser parte de esta familia.
+6053|Con mis compañeros después del entrenamiento.
+6054|¡Juntos somos más fuertes!
+6055|Saludos desde el vestuario.
+6056|Con esta plantilla, todo es posible.
+6057|Con mi entrenador tras la sesión de hoy. Estoy aprendiendo mucho.
+6060|Gracias a mi entrenador por su confianza.
+6061|Con mi entrenador tras la charla táctica.
+6062|Con mi entrenador haremos grandes cosas esta temporada.
+6063|Un día precioso con mi familia.
+6064|Mis mayores apoyos.
+6065|¡No hay nada como la comida de mi madre!
+6066|Se lo debo todo.
+6067|Una noche preciosa con mi familia.
+6068|Vi partidos antiguos con mi padre.
+6069|Jugué en el barrio con mi hermano, ¡como en los viejos tiempos!
+3090|Una noche preciosa con {}.
+6073|Escapada de fin de semana con {}.
+6071|Gracias por estar a mi lado, {}.
+6074|Mi mayor apoyo, {}.
+6075|Vestuario del {}
+1180|Casa

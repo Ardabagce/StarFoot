@@ -540,13 +540,17 @@ Events.list.push(
 
 // ---------- Sosyal medya (takipçi, paylaşım, beğeni) ----------
 const SOCIAL_COMMENTS = {
-  goal: ['Kral!', 'Bu çocuk ileride efsane olur', 'Gol makinesi çalışıyor', 'Kaleciye geçmiş olsun', 'Ben bunu çok önceden söylemiştim', 'Şu vuruşu 40 kez izledim', 'Rakip defans hâlâ seni arıyor', 'Formanı ver abi'],
-  motm: ['Maçın adamı değil maçın kralı', 'Hoca bunu her maç oynat', 'Reyting değil roket', 'Bugün sahada tek kişi vardı'],
-  trophy: ['Vitrine bir kupa daha!', 'Şampiyon olan kim? Biziz!', 'Bu daha başlangıç', 'Gözlerim doldu valla'],
+  goal: ['Kral!', 'Bu çocuk ileride efsane olur', 'Gol makinesi çalışıyor', 'Kaleciye geçmiş olsun', 'Ben bunu çok önceden söylemiştim', 'Şu vuruşu 40 kez izledim', 'Rakip defans hâlâ seni arıyor', 'Formanı ver abi', 'Ağları yırttın', 'Golcü dediğin böyle olur', 'Bu golü torunlarıma anlatacağım', 'Kaleci hâlâ topu arıyor', 'Tribünler yıkıldı', 'Haftanın golü kesin', 'Sen gol atınca bayram oluyor', 'Ayağına sağlık', 'Bu sezon gol kralı sensin', 'Kalecinin rüyalarına gireceksin'],
+  motm: ['Maçın adamı değil maçın kralı', 'Hoca bunu her maç oynat', 'Reyting değil roket', 'Bugün sahada tek kişi vardı', 'Tek kişilik ordu', 'Sahada ayrı bir seviye', 'Bu performans milli takımlık', 'Rakipler seni konuşuyor', 'Formu durdurulamıyor'],
+  trophy: ['Vitrine bir kupa daha!', 'Şampiyon olan kim? Biziz!', 'Bu daha başlangıç', 'Gözlerim doldu valla', 'Tarihe geçtin', 'Kupayı kaldıran el sağlam', 'Bu gece kimse uyumuyor', 'Şampiyonluk sana yakışıyor', 'Efsane yolunda bir adım daha'],
   transfer: ['Yeni takımına hayırlı olsun', 'Eski takım üzgün yeni takım mutlu', 'Formanı şimdiden aldım', 'Bonservis kaç ya?'],
   sponsor: ['Reklam ama yakışmış', 'Ben de aldım bundan', 'Para kokuyor', 'Marka doğru adamı seçmiş', 'İndirim kodu var mı?'],
   life: ['Bu araba benim maaşımdan pahalı', 'Bir tur atalım mı?', 'Hak ettin kardeşim', 'Zenginlik yakışmış'],
-  daily: ['Antrenmanda bile karizma', 'Takip edene takip', 'Bu selfie maç kazandırır', 'Saç modeli efsane', 'Beni de antrenmana götür', 'Annemle beraber hayranız'],
+  family: ['Aile her şeydir', 'Annen seninle gurur duyuyordur', 'Babanın gözlerindeki gurur', 'En büyük taraftarların', 'Ne güzel bir aile', 'Annenin yemeklerinden bize de', 'Kökler sağlam olunca dallar yükselir', 'Babana selam söyle', 'Aile sevgisi sahaya yansıyor', 'Bu fotoğraf çok samimi'],
+  couple: ['Çok yakışıyorsunuz', 'Mutluluğunuz daim olsun', 'Formdaki sırrı belli oldu', 'Maşallah', 'Aşk gol attırıyor', 'Bu ikili şampiyon', 'Allah mesut etsin', 'Gol sevincini kime yapacağın belli', 'Romantik kaptan', 'Ne tatlısınız'],
+  team: ['Bu kadro şampiyon olur', 'Soyunma odası enerjisi', 'Takım ruhu bu işte', 'Kardeşlik böyle bir şey', 'En iyi ekip', 'Bu sezon bizim', 'Hep birlikte!', 'Bu fotoğraf posterlik', 'Takım arkadaşlarına selam', 'Bu karede tek eksik kupa'],
+  coach: ['Hocayla uyum harika', 'Hoca seni çok seviyor', 'Usta çırak', 'Taktik dehası ve yıldızı', 'Hocam bunu her maç ilk 11 yap', 'Bu ikili kupa getirir', 'Hocanın gözdesi', 'Saygılar hocam', 'Doğru hocayla doğru oyuncu', 'Bu tecrübe sana çok şey katar'],
+  daily: ['Antrenmanda bile karizma', 'Takip edene takip', 'Bu selfie maç kazandırır', 'Saç modeli efsane', 'Beni de antrenmana götür', 'Annemle beraber hayranız', 'Çalışan kazanır', 'Hafta sonu sahada görüşürüz', 'Disiplin bu işte', 'Formun hep böyle olsun', 'Kolay gelsin kaptan', 'Hedef büyük, yol uzun', 'Seninle gurur duyuyoruz'],
 };
 
 const Social = {
@@ -641,6 +645,7 @@ const Social = {
     if (sum.goals >= 3) Social.post('goal', `Hat-trick! ${teamName} formasıyla unutulmaz bir gece. Topu eve götürüyorum.`, 2.2);
     else if (sum.goals > 0) Social.post('goal', U.pick([`Golümü attım, 3 puanı aldık. Sıradaki maça!`, `Ağlar sallandı! Desteğiniz için teşekkürler.`, `Bu gol ailemize gelsin.`, `Çalıştık, kazandık. Gol bonusu da cabası.`]), 1.3);
     else if (sum.motm) Social.post('motm', `Maçın adamı ödülü takımımın. Birlikte daha güçlüyüz.`, 1.4);
+    else if (sum.res === 'W' && U.chance(0.18)) Social.post('team', U.pick([`Galibiyet fotoğrafı! ${teamName} ailesi.`, 'Takım olarak kazandık. Hep birlikte!', 'Soyunma odasında galibiyet sevinci.']), 1.2);
     else if (sum.assists > 0 && U.chance(0.5)) Social.post('goal', `Asist de en az gol kadar güzel. Arkadaşımı tebrik ederim.`, 1.1);
   },
   // StarFeed gönderisi (akış kartı)

@@ -488,7 +488,12 @@ const Game = {
         Player.addRel(p, 'fans', U.randi(2, 4));
         Player.addFame(p, Game.isYouth() ? 0.15 : 0.4);
         const cap = U.pick(['Antrenman sonrası mutluluk.', 'Bugün de çalıştık. Hedef büyük!', 'Yeni kramponlarla ilk gün.', 'Hafta sonu maçı için hazırız.', 'Sabah koşusu tamam.', 'Taraftarımıza selam olsun!']);
-        Social.post('daily', cap, 1);
+        // paylaşım türü: günlük kare, takım arkadaşları, hoca ya da aile fotoğrafı
+        const pick = Game.inStreet() ? 'daily' : U.weighted(['daily', 'team', 'coach', 'family'], (k) => ({ daily: 5, team: 2, coach: 1, family: 1.5 })[k]);
+        if (pick === 'team') Social.post('team', U.pick(['Bu ailenin parçası olmak güzel.', 'Antrenman sonrası takım arkadaşlarımla.', 'Birlikte daha güçlüyüz!', 'Soyunma odasından selamlar.', 'Bu kadroyla her şey mümkün.']), 1.2);
+        else if (pick === 'coach') Social.post('coach', U.pick(['Hocamla bugünkü antrenman sonrası. Çok şey öğreniyorum.', 'Hocama güveni için teşekkürler.', 'Taktik toplantısından sonra hocamla.', 'Bu sezon hocamla büyük işler yapacağız.']), 1.15);
+        else if (pick === 'family') Social.post('family', U.pick(['Ailemle güzel bir gün.', 'En büyük destekçilerim.', 'Annemin yemekleri gibisi yok!', 'Her şeyimi onlara borçluyum.']), 1.2);
+        else Social.post('daily', cap, 1);
         Game.toast('Sosyal medyada paylaşım yaptın: takipçilerin arttı', 'good');
         break;
       }

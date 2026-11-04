@@ -136,3 +136,95 @@
 5976|{} Trattativa sullo stipendio
 5977|Consigli da portiere
 5978|Testi che spiegano cosa fare nei momenti da portiere. Attivi nelle prime 3 partite.
+5981|Hai strappato la rete
+5982|Questo è un vero bomber
+5983|Racconterò questo gol ai miei nipoti
+5984|Il portiere cerca ancora il pallone
+5985|Le tribune sono esplose
+5986|Gol della settimana di sicuro
+5987|Ogni tuo gol è una festa
+5988|Che tiro
+5989|Sei il capocannoniere della stagione
+5990|Comparirai negli incubi del portiere
+5991|Un esercito da solo
+5992|Un altro livello in campo
+5993|Prestazione da nazionale
+5994|Gli avversari parlano di te
+5995|La sua forma è inarrestabile
+5996|Hai fatto la storia
+5997|Mani salde ad alzare la coppa
+5998|Stanotte non dorme nessuno
+5999|Il titolo ti sta a pennello
+6000|Un altro passo verso la leggenda
+6001|La famiglia è tutto
+6002|Tua madre sarà orgogliosa
+6003|L'orgoglio negli occhi di tuo padre
+6004|I tuoi più grandi tifosi
+6005|Che bella famiglia
+6006|Lasciaci un po' della cucina di tua madre
+6007|Radici forti, rami alti
+6008|Saluta tuo padre
+6009|L'amore della famiglia si vede in campo
+6010|Che foto sincera
+6011|State benissimo insieme
+6012|Che la vostra felicità duri per sempre
+6013|Ora sappiamo il segreto della sua forma
+6014|Che bello
+6015|L'amore fa gol
+6016|Questa coppia è campione
+6017|Tanta felicità
+6018|Sappiamo a chi dedichi i gol
+6019|Capitano romantico
+6020|Che dolci che siete
+6021|Questa rosa vincerà il titolo
+6022|Energia da spogliatoio
+6023|Questo è spirito di squadra
+6024|Questa è fratellanza
+6025|La squadra migliore
+6026|Questa stagione è nostra
+6027|Tutti insieme!
+6028|Questa foto è da poster
+6029|Saluti ai tuoi compagni
+6030|Manca solo una coppa
+6031|Grande intesa con il mister
+6032|Il mister ti adora
+6033|Maestro e allievo
+6034|Il genio tattico e la sua stella
+6035|Mister, fallo giocare titolare sempre
+6036|Questa coppia porterà trofei
+6037|Il pupillo del mister
+6038|Rispetto, mister
+6039|Il giocatore giusto con il mister giusto
+6040|Questa esperienza ti darà tanto
+6041|Chi lavora vince
+6042|Ci vediamo in campo nel weekend
+6043|Questa è disciplina
+6044|Mantieni questa forma
+6045|Forza, capitano
+6046|Obiettivi grandi, strada lunga
+6047|Siamo orgogliosi di te
+6072|Foto della vittoria! La famiglia {}.
+6049|Abbiamo vinto da squadra. Tutti insieme!
+6051|Festa per la vittoria nello spogliatoio.
+6052|È bello far parte di questa famiglia.
+6053|Con i compagni dopo l'allenamento.
+6054|Insieme siamo più forti!
+6055|Saluti dallo spogliatoio.
+6056|Con questa rosa tutto è possibile.
+6057|Con il mister dopo l'allenamento di oggi. Sto imparando tanto.
+6060|Grazie al mister per la fiducia.
+6061|Con il mister dopo la riunione tattica.
+6062|Con il mister faremo grandi cose quest'anno.
+6063|Una bella giornata con la mia famiglia.
+6064|I miei più grandi sostenitori.
+6065|Niente batte la cucina di mia madre!
+6066|Devo loro tutto.
+6067|Una bella serata con la mia famiglia.
+6068|Ho guardato le vecchie partite con mio padre.
+6069|Ho giocato nel quartiere con mio fratello, come ai vecchi tempi!
+3090|Una bella serata con {}.
+6073|Fuga nel weekend con {}.
+6071|Grazie per essere al mio fianco, {}.
+6074|Il mio più grande sostegno, {}.
+6075|Spogliatoio del {}
+1180|Casa
