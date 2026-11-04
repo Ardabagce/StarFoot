@@ -643,7 +643,7 @@ const Social = {
     else if (sum.motm) Social.post('motm', `Maçın adamı ödülü takımımın. Birlikte daha güçlüyüz.`, 1.4);
     else if (sum.assists > 0 && U.chance(0.5)) Social.post('goal', `Asist de en az gol kadar güzel. Arkadaşımı tebrik ederim.`, 1.1);
   },
-  // Instagram tarzı gönderi (akış kartı)
+  // StarFeed gönderisi (akış kartı)
   postCard(x, so, verified) {
     return `<article class="ig-post">
       <header class="ig-ph"><span class="ig-pav"><canvas class="so-avatar sm" aria-hidden="true"></canvas></span>
@@ -666,7 +666,7 @@ const Social = {
     const lead = so.posts[0];
     if (!full) {
       return `<section class="card ig ig-home">
-        <div class="ig-top"><b>${U.esc(so.handle.replace('@', ''))}${typeof Star !== 'undefined' ? Star.badge(verified) : verified ? IG.verified() : ''}</b><small>${Social.fmt(so.followers)} takipçi</small></div>
+        ${IG.brand()}<div class="ig-top"><b>${U.esc(so.handle.replace('@', ''))}${typeof Star !== 'undefined' ? Star.badge(verified) : verified ? IG.verified() : ''}</b><small>${Social.fmt(so.followers)} takipçi</small></div>
         ${lead ? Social.postCard(lead, so, verified) : '<p class="muted">Henüz paylaşım yok. Gol at ya da haftalık planda "Sosyal Medya" ile paylaşım yap.</p>'}
       </section>`;
     }
@@ -675,7 +675,7 @@ const Social = {
     const tr = (so.trends || []).slice(0, 8);
     return `
       <section class="card ig">
-        <div class="ig-top"><b>${U.esc(so.handle.replace('@', ''))}${typeof Star !== 'undefined' ? Star.badge(verified) + Star.ghost() : verified ? IG.verified() : ''}</b></div>
+        ${IG.brand()}<div class="ig-top"><b>${U.esc(so.handle.replace('@', ''))}${typeof Star !== 'undefined' ? Star.badge(verified) + Star.ghost() : verified ? IG.verified() : ''}${typeof Support !== 'undefined' ? Support.badge() : ''}</b></div>
         <div class="ig-prof">
           <div class="ig-ring"><canvas class="so-avatar" aria-hidden="true"></canvas></div>
           <div class="ig-nums">
@@ -684,7 +684,7 @@ const Social = {
             <div><b>${Social.fmt(so.following)}</b><span>takip</span></div>
           </div>
         </div>
-        <div class="ig-bio"><b>${U.esc(Player.fullName(p))}</b><small>${cat}</small><span>${U.esc(bio)}</span></div>
+        <div class="ig-bio"><b>${U.esc(Player.fullName(p))}</b><small>${cat}${typeof Support !== 'undefined' && Support.title() ? ` · <span class="sup-title">${Support.title()}</span>` : ''}</small><span>${U.esc(bio)}</span></div>
         ${typeof Star !== 'undefined' && Star.on() ? '<div class="ig-btns"><button data-star="studio">Profili düzenle</button><button data-star="wiki">Starpedia</button></div>' : ''}
         ${tr.length ? `<div class="ig-hl">${tr.map((x) => `<div class="ig-st ${x.kind}" data-trend="${U.esc(x.n)}"><i><canvas data-story="${U.esc(x.n)}"></canvas></i><small>${U.esc(x.n.split(' ').slice(-1)[0])}</small></div>`).join('')}</div>` : ''}
         <div class="ig-tabs"><span class="on">${IG.grid()}</span><span>${IG.reels()}</span><span>${IG.tag()}</span></div>

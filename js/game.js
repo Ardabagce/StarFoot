@@ -688,6 +688,7 @@ const Game = {
         if (sum.motm) ss.motm++;
       }
       p.totals.apps++; p.totals.goals += sum.goals; p.totals.assists += sum.assists; p.totals.ratingSum += sum.rating;
+      if (typeof Market !== 'undefined' && comp !== 'intl' && !ctx.intlCat) Market.track(sum);
       if (sum.motm) p.totals.motm++;
       const wb = Player.wearBoot(p);
       if (wb && wb.gone) Game.news(`${wb.gone.name} eskidi ve artık giyilemiyor. Mağazadan yenisini alabilirsin.`, 'bad');
@@ -1022,6 +1023,7 @@ const Game = {
     const s = Game.state, p = s.player;
     p.transfers = p.transfers || [];
     p.transfers.push({ y: s.season.year, from, to: Game.club(o.clubId).name, fee: o.fee || 0, type: o.feeType || 'fee' });
+    if (typeof Market !== 'undefined') Market.mark(`Transfer: ${Game.club(o.clubId).name}`);
     if (o.fee) {
       p.best = p.best || {};
       p.best.fee = Math.max(p.best.fee || 0, o.fee);
@@ -1033,7 +1035,7 @@ const Game = {
   joinClub(id, wage, years) {
     const s = Game.state, p = s.player;
     s.clubId = id;
-    s.contract = { type: 'pro', clubId: id, wage, years };
+    s.contract = { type: 'pro', clubId: id, wage, years, since: { y: s.season.year, r: s.season.round } };
     p.rel.coach = 50; p.rel.team = 45; p.rel.fans = Math.max(25, p.rel.fans * 0.5);
     Shirt.onJoin();
   },
@@ -1176,7 +1178,7 @@ const Game = {
       } else if (choice.pro) {
         const wasYouth = Game.isYouth();
         if (choice.own) {
-          s.contract = { type: 'pro', clubId: choice.clubId, wage: choice.wage, years: choice.years };
+          s.contract = { type: 'pro', clubId: choice.clubId, wage: choice.wage, years: choice.years, since: { y: s.season.year, r: s.season.round } };
           Game.news(wasYouth ? `🎉 ${Game.club().name} A takımıyla ilk profesyonel sözleşmeni imzaladın! Haftalık ${U.money(choice.wage)}` : `✍️ ${Game.club().name} ile sözleşmeni ${choice.years} yıl uzattın.`, 'good');
         } else {
           const old = Game.club().name;
@@ -1548,7 +1550,7 @@ const UI = {
     const stars = Math.round(U.clamp((p.potential - 75) / 4.5, 1, 5));
     const meter = (ic, l, v, cls) => `<div class="mt-row">${Icon(ic)}<span>${l}</span>${UI.bar(v, cls)}<b>${Math.round(v)}</b></div>`;
     return `
-      <div class="pc">
+      <div class="pc${typeof Support !== 'undefined' && Support.has('silver') ? ' sup-frame' : ''}">
         <div class="pc-hero" style="--c1:${club.c1};--c2:${club.c2}">
           <canvas class="pc-fig" aria-hidden="true"></canvas>
           <div class="pc-id">
@@ -1581,7 +1583,7 @@ const UI = {
         ${meter('fans', 'Taraftar', p.rel.fans, 'c-rel')}
         <div class="pc-contract">${Icon('contract')}<span>${Game.isYouth()
           ? `Altyapı oyuncusu · Harçlık <b>${U.money(Game.weeklyIncome())}</b>/hafta`
-          : `<b>${U.money(s.contract.wage)}</b>/hafta · ${s.contract.years} yıl kaldı`}</span></div>
+          : `<b>${U.money(s.contract.wage)}</b>/hafta · ${s.contract.years} yıl kaldı${typeof PayRise !== 'undefined' && !Game.inStreet() ? ' <button class="linkbtn" data-payrise>Maaş artışı iste</button>' : ''}`}</span></div>
       </div>`;
   },
 
@@ -2102,7 +2104,7 @@ ${UI.paper()}`;
           <div><span>Ort. Reyting</span><b>${t.apps ? (t.ratingSum / t.apps).toFixed(2) : '-'}</b></div>
           <div><span>Maçın Adamı</span><b>${t.motm}</b></div>
           <div><span>Milli Maç</span><b>${p.intl.caps} (${p.intl.goals} gol)</b></div>${['U21', 'U19'].filter((c) => p.intlY && p.intlY[c]).map((c) => `<div><span>${c} Milli Maç</span><b>${p.intlY[c].caps} (${p.intlY[c].goals} gol)</b></div>`).join('')}
-          ${Game.inStreet() ? '' : `<div><span>Piyasa Değeri</span><b>${U.money(Game.marketValue(p))}</b></div>`}
+          ${Game.inStreet() ? '' : `<div${typeof Market !== 'undefined' ? ' class="mv-tap" data-mvopen role="button"' : ''}><span>Piyasa Değeri</span><b>${U.money(Game.marketValue(p))}</b></div>`}
           ${p.best && p.best.fee ? `<div><span>Rekor Bonservis</span><b>${U.money(p.best.fee)}</b></div>` : ''}
         </div>
       </div>
@@ -2187,6 +2189,7 @@ ${UI.paper()}`;
         <div class="card-h"><span>${Icon('train')} Oynanış</span></div>
         <label class="drill-tg"><input type="checkbox" id="drill-tg" ${s.drills !== false ? 'checked' : ''}><span><b>Antrenman mini oyunları</b><small>Odak statına göre çalışma oynanır. İyi oynarsan gelişim ×1,5'e kadar çıkar.</small></span></label>
         ${typeof Edit !== 'undefined' ? row('Editör', 'Kulüp ve oyuncu isimlerini değiştir, düzenleme dosyası paylaş.', `<button class="btn btn-ghost" data-edopen>${Icon('pen')} Aç</button>`) : ''}
+        ${typeof Support !== 'undefined' ? Support.row() : ''}
         ${typeof WhatsNew !== 'undefined' ? row('Yenilikler', `${WN_VER} güncelleme notları`, '<button class="btn btn-ghost" data-wnopen>Göster</button>') : ''}
         ${typeof Notify !== 'undefined' && Notify.plugin() ? `<label class="drill-tg"><input type="checkbox" id="notif-tg" ${Notify.on() ? 'checked' : ''}><span><b>Bildirimler</b><small>Günlük ödül ve enerji hatırlatmaları.</small></span></label>` : ''}
       </section>

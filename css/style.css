@@ -992,7 +992,7 @@ kbd { background: var(--panel-2); border: 1px solid var(--line); padding: 0 5px;
 /* Sosyal medya (premium) */
 .social { background: linear-gradient(165deg, #1a1440, #0d1736 60%); border-color: rgba(214, 41, 118, .35); }
 .so-top { display: flex; align-items: center; gap: 14px; }
-.so-ring { flex: none; padding: 3px; border-radius: 50%; background: conic-gradient(#feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5, #feda75); }
+.so-ring { flex: none; padding: 3px; border-radius: 50%; background: conic-gradient(from 210deg, #fff0b0, #ffcf3f, #e39a12, #ffcf3f, #fff0b0); }
 .so-avatar { display: block; width: 76px; height: 76px; border-radius: 50%; border: 3px solid #120e2e; }
 .so-id { min-width: 0; }
 .so-handle { display: flex; align-items: center; gap: 6px; font-weight: 700; font-size: 16px; }
@@ -1014,7 +1014,7 @@ kbd { background: var(--panel-2); border: 1px solid var(--line); padding: 0 5px;
 .so-feature { border: 1px solid rgba(255, 255, 255, .08); background: rgba(5, 8, 24, .5); margin-bottom: 8px; }
 .so-fhead { display: flex; align-items: center; gap: 8px; padding: 8px 10px; font-size: 13px; }
 .so-fhead small { margin-left: auto; color: var(--muted); }
-.so-mini { width: 22px; height: 22px; border-radius: 50%; background: conic-gradient(#feda75, #d62976, #4f5bd5, #feda75); }
+.so-mini { width: 22px; height: 22px; border-radius: 50%; background: conic-gradient(from 210deg, #fff0b0, #ffcf3f, #e39a12, #ffcf3f, #fff0b0); }
 .so-fimg { position: relative; aspect-ratio: 16 / 9; display: grid; place-items: center; align-content: center; gap: 10px; padding: 16px; text-align: center; color: #fff; background: linear-gradient(135deg, #2a6fdb, #7b3fe4); }
 .so-fimg .ic { width: 46px; height: 46px; filter: drop-shadow(0 4px 10px rgba(0, 0, 0, .4)); }
 .so-fimg span { font-family: var(--display); font-weight: 800; font-size: 19px; line-height: 1.15; text-shadow: 0 2px 8px rgba(0, 0, 0, .45); }
@@ -1326,39 +1326,39 @@ kbd { background: var(--panel-2); border: 1px solid var(--line); padding: 0 5px;
   .sn-st span { flex: 1; min-width: 0; }
 }
 
-/* --- Instagram tarzı sosyal medya --- */
-.card.ig { background: #000; border: 1px solid #262626; color: #f5f5f5; font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; padding: 12px 0 14px; clip-path: none; }
+/* --- StarFeed: oyun içi sosyal medya (kendi tasarımımız) --- */
+.card.ig { background: #08112b; border: 1px solid #1d2a52; color: #eef2ff; font-family: var(--body); padding: 12px 0 14px; clip-path: none; }
 .card.ig::before, .card.ig::after { display: none; }
-.igi { width: 24px; height: 24px; flex: none; color: #f5f5f5; }
-.igi.on { color: #ff3040; }
+.igi { width: 24px; height: 24px; flex: none; color: #eef2ff; }
+.igi.on { color: #ffcf3f; }
 .igv { width: 14px; height: 14px; margin-left: 4px; vertical-align: -2px; }
 .ig-top { display: flex; align-items: baseline; justify-content: space-between; padding: 0 14px 10px; }
 .ig-top b { font-size: 19px; font-weight: 700; letter-spacing: -.01em; }
-.ig-top small { color: #a8a8a8; font-size: 13px; }
+.ig-top small { color: #9fb0d8; font-size: 13px; }
 .ig-prof { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 18px; padding: 4px 14px 10px; }
-.ig-ring { padding: 3px; border-radius: 50%; background: conic-gradient(from 210deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5, #feda75); }
-.ig-ring .so-avatar { display: block; width: 84px; height: 84px; border-radius: 50%; border: 3px solid #000; }
+.ig-ring { padding: 3px; border-radius: 50%; background: conic-gradient(from 210deg, #fff0b0, #ffcf3f, #e39a12, #ffcf3f, #fff0b0); }
+.ig-ring .so-avatar { display: block; width: 84px; height: 84px; border-radius: 50%; border: 3px solid #08112b; }
 .ig-nums { display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; }
 .ig-nums b { display: block; font-size: 18px; font-weight: 700; }
-.ig-nums span { font-size: 13px; color: #f5f5f5; }
+.ig-nums span { font-size: 13px; color: #eef2ff; }
 .ig-bio { display: flex; flex-direction: column; padding: 0 14px; font-size: 14px; line-height: 1.35; }
 .ig-bio b { font-weight: 600; }
-.ig-bio small { color: #a8a8a8; font-size: 13px; }
+.ig-bio small { color: #9fb0d8; font-size: 13px; }
 .ig-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; padding: 12px 14px 4px; }
-.ig-btns span { text-align: center; padding: 7px 0; border-radius: 8px; background: #262626; font-size: 14px; font-weight: 600; }
+.ig-btns span { text-align: center; padding: 7px 0; border-radius: 8px; background: #1d2a52; font-size: 14px; font-weight: 600; }
 .ig-hl { display: flex; gap: 14px; overflow-x: auto; padding: 12px 14px 6px; scrollbar-width: none; }
 .ig-hl::-webkit-scrollbar { display: none; }
 .ig-st { flex: none; display: flex; flex-direction: column; align-items: center; gap: 4px; width: 66px; }
-.ig-st i { display: block; padding: 2.5px; border-radius: 50%; background: conic-gradient(from 210deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5, #feda75); }
-.ig-st.retire i { background: #737373; }
-.ig-st canvas { display: block; width: 58px; height: 58px; border-radius: 50%; border: 2.5px solid #000; }
-.ig-st small { font-size: 12px; color: #f5f5f5; max-width: 66px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.ig-tabs { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 8px; border-top: 1px solid #262626; }
-.ig-tabs span { display: grid; place-items: center; padding: 10px 0; color: #737373; border-top: 1px solid transparent; margin-top: -1px; }
+.ig-st i { display: block; padding: 2.5px; border-radius: 50%; background: conic-gradient(from 210deg, #fff0b0, #ffcf3f, #e39a12, #ffcf3f, #fff0b0); }
+.ig-st.retire i { background: #6c7cab; }
+.ig-st canvas { display: block; width: 58px; height: 58px; border-radius: 50%; border: 2.5px solid #08112b; }
+.ig-st small { font-size: 12px; color: #eef2ff; max-width: 66px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ig-tabs { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 8px; border-top: 1px solid #1d2a52; }
+.ig-tabs span { display: grid; place-items: center; padding: 10px 0; color: #6c7cab; border-top: 1px solid transparent; margin-top: -1px; }
 .ig-tabs span .igi { color: inherit; width: 22px; height: 22px; }
-.ig-tabs span.on { color: #f5f5f5; border-top-color: #f5f5f5; }
+.ig-tabs span.on { color: #eef2ff; border-top-color: #eef2ff; }
 .ig-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
-.ig-tile { position: relative; display: block; aspect-ratio: 1; padding: 0; border: 0; background: #121212; cursor: pointer; overflow: hidden; }
+.ig-tile { position: relative; display: block; aspect-ratio: 1; padding: 0; border: 0; background: #0d1838; cursor: pointer; overflow: hidden; }
 .ig-tile canvas { display: block; width: 100%; height: 100%; }
 .ig-badge { position: absolute; top: 6px; right: 6px; }
 .ig-badge .igi { width: 18px; height: 18px; filter: drop-shadow(0 1px 2px rgba(0, 0, 0, .6)); }
@@ -1369,29 +1369,33 @@ kbd { background: var(--panel-2); border: 1px solid var(--line); padding: 0 5px;
 .ig .so-trends { padding: 0 14px; }
 .ig .lbl { padding: 0 14px; }
 /* gönderi */
-.ig-post { background: #000; }
+.ig-post { background: #08112b; }
 .ig-ph { display: flex; align-items: center; gap: 10px; padding: 8px 12px; }
-.ig-pav { padding: 2px; border-radius: 50%; background: conic-gradient(from 210deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5, #feda75); }
-.ig-pav .so-avatar.sm { display: block; width: 32px; height: 32px; border-radius: 50%; border: 2px solid #000; }
+.ig-pav { padding: 2px; border-radius: 50%; background: conic-gradient(from 210deg, #fff0b0, #ffcf3f, #e39a12, #ffcf3f, #fff0b0); }
+.ig-pav .so-avatar.sm { display: block; width: 32px; height: 32px; border-radius: 50%; border: 2px solid #08112b; }
 .ig-pid { flex: 1; min-width: 0; display: flex; flex-direction: column; line-height: 1.2; }
 .ig-pid b { font-size: 14px; font-weight: 600; }
-.ig-pid small { font-size: 12px; color: #f5f5f5; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.ig-media { background: #111; }
+.ig-pid small { font-size: 12px; color: #eef2ff; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ig-media { background: #0d1838; }
 .ig-media canvas { display: block; width: 100%; aspect-ratio: 4 / 5; }
 .ig-acts { display: flex; align-items: center; gap: 16px; padding: 10px 12px 6px; }
 .ig-acts .ig-sp { flex: 1; }
 .ig-likes { padding: 0 12px; font-size: 14px; font-weight: 600; }
 .ig-cap { padding: 4px 12px 0; font-size: 14px; line-height: 1.4; }
 .ig-cap b, .ig-cm b { font-weight: 600; }
-.ig-all { padding: 4px 12px 0; font-size: 14px; color: #a8a8a8; }
+.ig-all { padding: 4px 12px 0; font-size: 14px; color: #9fb0d8; }
 .ig-cm { display: flex; align-items: center; gap: 4px; padding: 2px 12px 0; font-size: 14px; }
 .ig-cm b { margin-right: 2px; }
-.ig-cm .igi { width: 12px; height: 12px; margin-left: auto; color: #a8a8a8; }
-.ig-time { display: block; padding: 6px 12px 0; font-size: 11px; letter-spacing: .02em; color: #a8a8a8; text-transform: uppercase; }
+.ig-cm .igi { width: 12px; height: 12px; margin-left: auto; color: #9fb0d8; }
+.ig-time { display: block; padding: 6px 12px 0; font-size: 11px; letter-spacing: .02em; color: #9fb0d8; text-transform: uppercase; }
 .ig-home { padding-bottom: 10px; }
 .ig-home .ig-top { padding-bottom: 6px; }
-.ig-modal { margin: -6px -4px 6px; border-radius: 10px; overflow: hidden; border: 1px solid #262626; max-height: 72vh; overflow-y: auto; background: #000; color: #f5f5f5; font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+.ig-modal { margin: -6px -4px 6px; border-radius: 10px; overflow: hidden; border: 1px solid #1d2a52; max-height: 72vh; overflow-y: auto; background: #08112b; color: #eef2ff; font-family: var(--body); }
 @media (min-width: 900px) { .ig-home .ig-post { max-width: 470px; margin: 0 auto; } }
+.sf-brand { display: flex; align-items: center; gap: 6px; padding: 0 14px 8px; font-family: var(--display); font-style: italic; font-weight: 800; font-size: 20px; letter-spacing: .02em; color: #eef2ff; }
+.sf-brand svg { width: 20px; height: 20px; }
+.sf-brand span { color: #ffcf3f; }
+.ig-top b, .ig-nums b, .ig-likes { font-family: var(--display); letter-spacing: .02em; }
 .tw-tag { font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; background: rgba(70, 224, 143, .15); color: #9ff0c3; border: 1px solid rgba(70, 224, 143, .35); white-space: nowrap; }
 
 /* --- Gol sevinci ve şampiyonluk töreni --- */
@@ -1414,7 +1418,7 @@ kbd { background: var(--panel-2); border: 1px solid var(--line); padding: 0 5px;
 /* Profil sekmesi: profil fotoğrafı simgesi */
 .tab-av { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; padding: 2px; background: transparent; }
 .tab-av .so-avatar { display: block; width: 22px; height: 22px; border-radius: 50%; }
-.tabs button.on .tab-av { background: conic-gradient(from 210deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5, #feda75); }
+.tabs button.on .tab-av { background: conic-gradient(from 210deg, #fff0b0, #ffcf3f, #e39a12, #ffcf3f, #fff0b0); }
 .tabs button.on .tab-av .so-avatar { border: 2px solid #050b1d; width: 22px; height: 22px; }
 .tab-prof { display: inline-flex; align-items: center; gap: 6px; }
 .vnav button:disabled { opacity: .35; cursor: default; }
@@ -2124,7 +2128,7 @@ button, .btn, a, [data-act], [data-tab] { touch-action: manipulation; -webkit-ta
 .wc-me .ms-stats { grid-template-columns: repeat(4, 1fr); }
 
 /* ---------- Premium: Yıldız gibi yaşa ---------- */
-.ig-btns button { text-align: center; padding: 7px 0; border-radius: 8px; background: #262626; font-size: 14px; font-weight: 600; color: #f5f5f5; border: 0; font-family: inherit; cursor: pointer; }
+.ig-btns button { text-align: center; padding: 7px 0; border-radius: 8px; background: #1d2a52; font-size: 14px; font-weight: 600; color: #eef2ff; border: 0; font-family: inherit; cursor: pointer; }
 .igv-gold { filter: drop-shadow(0 0 4px rgba(245, 180, 0, .55)); }
 .star-perks li { line-height: 1.35; }
 .star-perks li b { display: block; }
@@ -2499,3 +2503,40 @@ div.doc { position: fixed; inset: 0; z-index: 49; background: #000; display: fle
 .ffx-tg { display: flex; align-items: center; gap: 10px; font-size: 14px; cursor: pointer; }
 .ffx-tg input { width: 20px; height: 20px; accent-color: #ffd65a; flex-shrink: 0; }
 .ff-note { margin: 10px 0 0; padding: 8px 10px; border-radius: 8px; background: rgba(245, 200, 75, .12); color: #ffd65a; font-size: 13px; }
+
+/* --- StarDeğer, maaş artışı, destekçi programı --- */
+.linkbtn { background: none; border: 0; padding: 0; margin-left: 6px; color: #ffcf3f; font: inherit; font-weight: 700; text-decoration: underline; cursor: pointer; }
+.mv-tap { cursor: pointer; }
+.mv-tap b::after { content: ' ›'; color: #ffcf3f; }
+.mv-brand { font-family: var(--display); font-style: italic; font-weight: 900; font-size: 26px; letter-spacing: .02em; margin-bottom: 8px; }
+.mv-brand span { color: #ffcf3f; }
+.mv-head { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px; }
+.mv-head span { display: flex; flex-direction: column; padding: 10px 12px; border-radius: 12px; background: rgba(5, 11, 29, .5); border: 1px solid var(--line); }
+.mv-head small { color: var(--muted); font-size: 12px; }
+.mv-head b { font-family: var(--display); font-size: 22px; }
+.mv-up { color: #46e08f; } .mv-dn { color: #ff6b6b; }
+.mv-tabs { display: grid; grid-template-columns: repeat(5, 1fr); margin-bottom: 10px; }
+.mv-tabs button { padding-left: 2px; padding-right: 2px; font-size: 12px; min-width: 0; }
+.mv-body { max-height: 52vh; overflow-y: auto; }
+.mv-chart { display: block; width: 100%; height: auto; background: rgba(5, 11, 29, .5); border-radius: 12px; margin-bottom: 8px; }
+.mv-peaks { list-style: none; margin: 0 0 8px; padding: 0; }
+.mv-peaks li { display: flex; flex-direction: column; padding: 6px 0; border-bottom: 1px solid var(--line); }
+.mv-peaks small { color: var(--muted); }
+.mv-row { display: grid; grid-template-columns: 30px 1fr auto; gap: 8px; align-items: center; padding: 7px 4px; border-bottom: 1px solid var(--line); font-size: 14px; }
+.mv-row i { font-style: normal; color: var(--muted); font-size: 12px; text-align: center; }
+.mv-row span { display: flex; flex-direction: column; min-width: 0; }
+.mv-row span b, .mv-row span small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mv-row small { color: var(--muted); font-size: 12px; }
+.mv-row.me { background: rgba(255, 207, 63, .12); border-radius: 8px; }
+.mv-buzz p { margin: 0 0 8px; padding: 8px 10px; border-radius: 10px; background: rgba(5, 11, 29, .5); }
+.sup-badge { display: inline-block; margin-left: 4px; color: var(--sc); font-size: 13px; vertical-align: 1px; text-shadow: 0 0 6px var(--sc); }
+.sup-title { color: #ffcf3f; font-weight: 700; }
+.pc.sup-frame { box-shadow: 0 0 0 2px #c0c8d8, 0 0 18px rgba(192, 200, 216, .35); border-radius: 16px; }
+.sup-bar { display: flex; flex-direction: column; gap: 4px; margin: 8px 0 12px; }
+.sup-bar small { color: var(--muted); }
+.sup-bar i { display: block; height: 8px; border-radius: 99px; background: rgba(255, 255, 255, .1); overflow: hidden; }
+.sup-bar em { display: block; height: 100%; background: linear-gradient(90deg, #e39a12, #ffcf3f); }
+.sup-ranks { list-style: none; margin: 0 0 8px; padding: 0; }
+.sup-ranks li { display: flex; flex-direction: column; padding: 6px 0; border-bottom: 1px solid var(--line); opacity: .6; }
+.sup-ranks li.on { opacity: 1; }
+.sup-ranks small { color: var(--muted); font-size: 12px; }

@@ -456,7 +456,7 @@ def pack_setup(asc, app_id, packs, replace_shot=False):
             asc.req('PATCH', f'/v2/inAppPurchases/{iid}', write=True, body={'data': {'type': 'inAppPurchases', 'id': iid, 'attributes': {'name': cfg['refName'], 'reviewNote': cfg['reviewNote']}}})
         else:
             iid = asc.req('POST', '/v2/inAppPurchases', write=True, body={'data': {'type': 'inAppPurchases', 'attributes': {
-                'name': cfg['refName'], 'productId': pid, 'inAppPurchaseType': 'NON_CONSUMABLE', 'reviewNote': cfg['reviewNote'], 'familySharable': False},
+                'name': cfg['refName'], 'productId': pid, 'inAppPurchaseType': cfg.get('type', 'NON_CONSUMABLE'), 'reviewNote': cfg['reviewNote'], 'familySharable': False},
                 'relationships': {'app': {'data': {'type': 'apps', 'id': app_id}}}}})['data']['id']
             print('   oluşturuldu')
         if iid == 'DRY':

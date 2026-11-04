@@ -1,0 +1,125 @@
+5784|StarWert
+5785|Wert
+5786|Dein Wertverlauf, Weltlisten, Gerüchte
+5787|Marktwert und Weltlisten
+5788|Keine
+5789|Gründungsunterstützer
+5790|Gehaltserhöhung fordern
+5791|Eine Gehaltserhöhung kannst du mit einem Profivertrag fordern.
+5792|Dein Gehalt wurde diese Saison schon erhöht.
+5793|Der Vorstand hat deine Forderung diese Saison abgelehnt. Versuch es nächste Saison wieder.
+5795|Du hast gerade einen neuen Vertrag unterschrieben. Fordern kannst du erst nach einer halben Saison.
+5798|Zeig zuerst Leistung: Durchschnittsnote 7,0 in mindestens 8 Spielen oder starke Werte für deine Position.
+5799|Dein Gehalt liegt schon nahe an deinem Marktwert.
+5800|Aktuelles Gehalt
+5801|Saisonnote
+5802|Tore + Vorlagen
+5804|Einmal pro Saison möglich.
+5807|Dein Verhältnis zum Trainer hat etwas gelitten.
+5811|Wer mehr fordert, wird eher abgelehnt. Bei einer Ablehnung kannst du diese Saison nicht erneut fragen und dein Verhältnis zum Trainer sinkt.
+5814|Die Grafik erscheint nach ein paar Spielen.
+5815|StarWert öffnet sich in deiner Profikarriere.
+5816|Dein Marktwert
+5817|Seit dem letzten Spiel
+5818|Karrieregrafik
+5819|Deine Wertspitzen und warum
+5820|Weltlisten
+5821|Die 100 Wertvollsten, Rekordtransfers
+5822|Kaderwert, Gerüchte, Vergleiche
+5823|Die Besten in deinem Alter und die Legenden
+5824|Einmal gratis testen
+5826|Mein Wert
+5827|Gerüchte
+5828|Vergleich
+5829|Noch keine
+5830|Leihe
+5831|Jugend
+5832|Noch keine Transfers.
+5833|Spitzen
+5834|Transferhistorie
+5836|Dein Weltrang:
+5837|Dein Karriererekord
+5838|Die 100 Wertvollsten
+5839|Öffnet sich mit einem Profivertrag.
+5840|Kaderwert
+5841|Ligaplatz
+5843|Die wertvollsten Kader der Liga
+5844|Verträge, die diese Saison enden
+5849|Gerüchte sind Fiktion im Spiel.
+5850|Du:
+5851|Du hast diese Woche schon geteilt.
+5853|Auf StarFeed geteilt.
+5854|Bronze
+5855|Unterstützer-Abzeichen
+5856|Silber
+5857|Silberner Kartenrahmen
+5858|Gold
+5859|Goldener Titel im StarFeed-Profil
+5860|Platin
+5861|Gründungsunterstützer-Abschnitt in Starpedia
+5862|Titel „Legenden-Unterstützer“ in den News
+5866|Legenden-Unterstützer
+5868|Optional. Nur Abzeichen und Optik, kein Vorteil im Spiel.
+5871|Entwickler unterstützen
+5872|Noch kein Rang
+5873|Du hast den höchsten Rang!
+5874|StarFoot-Unterstützer
+5875|Wenn du StarFoot magst, kannst du uns helfen, weiterzumachen. Jede Unterstützung bringt Punkte, Punkte erhöhen deinen Rang.
+5878|Belohnungen sind rein kosmetisch und bringen keinen Vorteil im Spiel. Punkte werden auf diesem Gerät gespeichert und gesichert.
+5881|{} gehört zu den ersten Unterstützern von StarFoot und hat das Spiel wachsen lassen.
+5882|Mit dieser Form könnte dir dein Verein etwa {} pro Woche zahlen. Du bist bereit für das Gespräch mit dem Vorstand.
+5883|Deine Form der letzten Wochen hat deinen Wert um {} gesteigert. Scouts machen sich Notizen auf der Tribüne.
+5884|{} ist mit +{} pro Woche einverstanden, will dafür aber deinen Vertrag um 1 Jahr verlängern.
+5885|Der Vorstand von {} will dein Gehalt gerade nicht erhöhen. Diese Saison kannst du nicht erneut fragen.
+5887|{} hat ein Angebot über {} für dich vorgelegt. Dein Berater sagt: „Wir haben keine Eile.“
+5889|Gerüchten zufolge hat der Präsident von {} nach dir gefragt. Der Verein dementiert nicht.
+5890|Fordern geht erst nach dem ersten Saisondrittel (ab Woche {}).
+5891|💼 {} hat dein Gehalt erhöht: {} pro Woche (+{}). Dein Vertrag wurde um 1 Jahr verlängert.
+5893|{} ist der wertvollste Spieler der Welt: {}. {} will nicht verkaufen.
+5897|Gerücht: {} hat dich fürs nächste Transferfenster auf der Liste.
+5898|Danke! +{} Unterstützerpunkte. Rang {} freigeschaltet!
+5899|Mein Marktwert liegt jetzt bei {}. Das ist erst der Anfang!
+5901|💼 Der Vorstand von {} hat deine Gehaltsforderung abgelehnt.
+5904|Lehnst du die Verlängerung ab, beträgt die Erhöhung +{}.
+5908|💼 {} hat dein Gehalt erhöht: {} pro Woche (+{}).
+5913|🌟 {} ist jetzt ein Legenden-Unterstützer!
+5914|Dein Vertrag: noch {} Jahre.
+5917|Danke! +{} Unterstützerpunkte
+5918|Die wertvollsten {}-Jährigen
+5920|{} Entwickler unterstützen
+5921|Legenden mit {} Jahren
+5922|Noch {1} Punkte bis {0}
+5923|Gehaltserhöhung: +{}/Woche
+5925|{} Auf StarFeed teilen
+5926|{} Der Verein hat eine Bedingung
+5927|{} Forderung abgelehnt
+5928|{} Gehaltserhöhung fordern
+5929|{}-Unterstützer · {} Punkte
+5932|{} Mit Premium freischalten
+5933|{}: die Wertvollsten
+5934|Ohne Verlängerung · +{}
+5935|{} Gehaltserhöhung
+5936|Transfer: {}
+5937|Hoch · +{}
+5938|Fair · +{}
+5939|{}-UNTERSTÜTZER
+5940|{}-Unterstützer
+5941|{} Punkte · {}
+5942|{} · {} Punkte
+5945|+{} Punkte{}
+5946|{} Öffnen
+
+5803|Gehaltserhöhung
+5805|Forderung abgelehnt
+5809|Der Verein hat eine Bedingung
+5825|Mit Premium freischalten
+5835|Auf StarFeed teilen
+5863|UNTERSTÜTZER
+5867|Unterstützer
+5947|Dein Social Media im Spiel hat einen neuen Look: eigener Name, neues Design und Sternabzeichen.
+5948|Du spielst gut? Fordere einmal pro Saison mehr Gehalt. Wer zu viel will, kann abblitzen!
+5949|Dein Marktwert, deine Karrieregrafik, die wertvollsten Spieler der Welt und Transfergerüchte.
+5950|Eine neue Ära für deine Karriere! 🚀
+5951|Eine neue Ära für deine Karriere!
+5952|StarWert öffnen
+5953|{} StarWert öffnen

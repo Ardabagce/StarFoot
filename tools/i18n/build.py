@@ -118,6 +118,10 @@ for code in LANGS:
             uk = up_tr(k)
             if uk != k and uk not in ex: ex[uk] = tr_(v).upper()
     pl = [(k, tr_(v)) for k, v in plist]
+    # Eski "Instagram" metinleri artık kullanılmıyor (oyunda StarFeed); marka adı pakette kalmasın
+    IGX = re.compile(r'instagram|インスタ|إنستغرام|انستغرام', re.I)
+    ex = {k: v for k, v in ex.items() if not IGX.search(k) and not IGX.search(v)}
+    pl = [(k, v) for k, v in pl if not IGX.search(k) and not IGX.search(v)]
     var = 'LANG_' + code.upper()
     out = f'// Otomatik üretildi (tools/i18n/build.py): Türkçe → {code} sözlük\nvar {var} = ' + json.dumps({'exact': ex, 'pats': pl}, ensure_ascii=False, separators=(',', ':')) + f';\n(window.LANGS = window.LANGS || {{}}).{code} = {var};\n'
     open(ROOT + f'js/lang-{code}.js', 'w').write(out)

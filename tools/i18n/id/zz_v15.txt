@@ -1,0 +1,125 @@
+5784|StarNilai
+5785|Nilai
+5786|Grafik nilaimu, daftar dunia, rumor
+5787|Nilai pasar dan daftar dunia
+5788|Tidak ada
+5789|Pendukung pendiri
+5790|Minta kenaikan gaji
+5791|Kamu bisa minta kenaikan gaji setelah punya kontrak profesional.
+5792|Gajimu sudah naik musim ini.
+5793|Manajemen menolak permintaanmu musim ini. Coba lagi musim depan.
+5795|Kamu baru menandatangani kontrak baru. Kamu baru bisa meminta setelah setengah musim.
+5798|Buktikan dulu: rata-rata rating 7,0 dalam minimal 8 laga atau statistik kuat untuk posisimu.
+5799|Gajimu sudah mendekati nilai pasarmu.
+5800|Gaji saat ini
+5801|Rating musim
+5802|Gol + assist
+5804|Bisa diminta sekali per musim.
+5807|Hubunganmu dengan pelatih sedikit menurun.
+5811|Meminta lebih banyak membuat penolakan lebih mungkin. Jika ditolak, kamu tidak bisa meminta lagi musim ini dan hubunganmu dengan pelatih menurun.
+5814|Grafik muncul setelah beberapa laga.
+5815|StarNilai terbuka di karier profesional.
+5816|Nilai pasarmu
+5817|Sejak laga terakhir
+5818|Grafik karier
+5819|Puncak nilaimu dan alasannya
+5820|Daftar dunia
+5821|100 paling bernilai, transfer rekor
+5822|Nilai skuad, rumor, perbandingan
+5823|Yang terbaik seusiamu dan para legenda
+5824|Coba gratis sekali
+5826|Nilaiku
+5827|Rumor
+5828|Bandingkan
+5829|Belum ada
+5830|Pinjaman
+5831|Akademi
+5832|Belum ada transfer.
+5833|Puncak
+5834|Riwayat transfer
+5836|Peringkat duniamu:
+5837|Rekor kariermu
+5838|100 paling bernilai
+5839|Terbuka dengan kontrak profesional.
+5840|Nilai skuad
+5841|Peringkat liga
+5843|Skuad paling bernilai di liga
+5844|Kontrak yang habis musim ini
+5849|Rumor adalah fiksi dalam game.
+5850|Kamu:
+5851|Kamu sudah berbagi minggu ini.
+5853|Dibagikan di StarFeed.
+5854|Perunggu
+5855|Lencana pendukung
+5856|Perak
+5857|Bingkai kartu perak
+5858|Emas
+5859|Gelar emas di profil StarFeed
+5860|Platinum
+5861|Bagian Pendukung pendiri di Starpedia
+5862|Gelar Pendukung legenda di berita
+5866|Pendukung legenda
+5868|Opsional. Hanya lencana dan tampilan, tanpa keuntungan dalam game.
+5871|Dukung pengembang
+5872|Belum ada peringkat
+5873|Kamu di peringkat tertinggi!
+5874|Pendukung StarFoot
+5875|Kalau kamu suka StarFoot, kamu bisa membantu kami terus mengembangkannya. Setiap dukungan memberi poin, dan poin menaikkan peringkatmu.
+5878|Hadiah hanya kosmetik dan tidak memberi keuntungan dalam game. Poin disimpan dan dicadangkan di perangkat ini.
+5881|{} adalah salah satu pendukung pertama StarFoot dan membantu game ini berkembang.
+5882|Dengan performa ini klubmu bisa membayarmu sekitar {} per minggu. Kamu siap bertemu manajemen.
+5883|Performa terbarumu menaikkan nilaimu sebesar {}. Pemandu bakat mencatat dari tribun.
+5884|{} setuju kenaikan +{} per minggu, tapi ingin memperpanjang kontrakmu 1 tahun sebagai gantinya.
+5885|Manajemen {} belum mau menaikkan gajimu. Kamu tidak bisa meminta lagi musim ini.
+5887|{} mengajukan tawaran {} untukmu. Agenmu bilang: "kita tidak terburu-buru".
+5889|Kabarnya presiden {} menanyakan dirimu. Klub tidak membantah.
+5890|Belum bisa meminta sebelum sepertiga musim berlalu (setelah minggu ke-{}).
+5891|💼 {} menaikkan gajimu: {} per minggu (+{}). Kontrakmu diperpanjang 1 tahun.
+5893|{} adalah pemain paling bernilai di dunia: {}. {} tidak berniat menjualnya.
+5897|Kabarnya: {} memasukkanmu ke daftar untuk bursa berikutnya.
+5898|Terima kasih! +{} poin dukungan. Peringkat {} terbuka!
+5899|Nilai pasarku kini {}. Ini baru permulaan!
+5901|💼 Manajemen {} menolak permintaan kenaikan gajimu.
+5904|Jika kamu menolak perpanjangan, kenaikannya +{}.
+5908|💼 {} menaikkan gajimu: {} per minggu (+{}).
+5913|🌟 {} kini Pendukung legenda!
+5914|Kontrakmu: sisa {} tahun.
+5917|Terima kasih! +{} poin dukungan
+5918|Paling bernilai usia {}
+5920|{} Dukung pengembang
+5921|Legenda di usia {}
+5922|{1} poin lagi menuju {0}
+5923|Kenaikan gaji: +{}/minggu
+5925|{} Bagikan di StarFeed
+5926|{} Klub punya syarat
+5927|{} Permintaan ditolak
+5928|{} Minta kenaikan gaji
+5929|Pendukung {} · {} poin
+5932|{} Buka dengan Premium
+5933|{}: paling bernilai
+5934|Tanpa perpanjangan · +{}
+5935|{} Kenaikan gaji
+5936|Transfer: {}
+5937|Tinggi · +{}
+5938|Wajar · +{}
+5939|PENDUKUNG {}
+5940|Pendukung {}
+5941|{} poin · {}
+5942|{} · {} poin
+5945|+{} poin{}
+5946|{} Buka
+
+5803|Kenaikan gaji
+5805|Permintaan ditolak
+5809|Klub punya syarat
+5825|Buka dengan Premium
+5835|Bagikan di StarFeed
+5863|PENDUKUNG
+5867|Pendukung
+5947|Media sosial dalam game kini tampil baru: nama sendiri, desain baru, dan lencana bintang.
+5948|Bermain bagus? Minta kenaikan gaji sekali per musim. Minta terlalu banyak, bisa ditolak!
+5949|Nilai pasarmu, grafik karier, pemain paling bernilai di dunia, dan rumor transfer.
+5950|Era baru untuk kariermu! 🚀
+5951|Era baru untuk kariermu!
+5952|Buka StarNilai
+5953|{} Buka StarNilai

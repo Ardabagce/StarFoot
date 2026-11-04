@@ -25,7 +25,7 @@ const Star = {
     if (typeof Premium !== 'undefined') Premium.track('premium_view', { source: src });
     Nudge.seen();
     const btns = [{ t: 'Kapat', cls: 'btn-ghost' }];
-    if (can && typeof Plus !== 'undefined') btns.push({ t: `Premium+${Plus.priceOf('full') ? ` · ${U.esc(Plus.priceOf('full'))}` : ''}`, cls: 'btn-ghost', fn: () => Plus.pitch(null, src + '_plus') });
+    if (can && typeof Plus !== 'undefined') btns.push({ t: `Premium+ · her şey dahil${Plus.priceOf('full') ? ` · ${U.esc(Plus.priceOf('full'))}` : ''}`, cls: 'btn-ghost', fn: () => Plus.pitch(null, src + '_plus') });
     if (can) btns.push({ t: `${Icon('star')} Premium al${Premium.price ? ` · ${U.esc(Premium.price)}` : ''}`, cls: 'btn-big', fn: () => { Premium.src = src; Premium.buy(); } });
     Game.modal(`<div class="ev-tag">Premium ayrıcalığı</div><h2>${Icon('star')} Yıldız gibi yaşa</h2>
       ${after ? `<p>${after}</p>` : feat ? `<p><b>${U.esc(feat)}</b> StarFoot Premium'a özel.</p>` : ''}
@@ -78,6 +78,7 @@ const Star = {
       <li><b>Altın onay rozeti ve Starpedia</b><small>Kendi ansiklopedi sayfan</small></li>
       <li><b>Lüks yaşam vitrini</b><small>Süper arabalar, villalar, yat ve özel jet</small></li>
       <li><b>Transfer talebi</b><small>İstediğin an kulüplerden teklif iste</small></li>
+      <li><b>StarDeğer</b><small>Değer grafiğin, dünya listeleri, söylentiler</small></li>
       <li><b>Görünüm stüdyosu ve kariyer belgeseli</b><small>Tarzını seç, hikâyeni izle</small></li>
       <li><b>Reklamsız</b><small>Geçiş reklamı yok, ödüller reklam izlemeden</small></li>
     </ul>`;
@@ -88,10 +89,10 @@ const Star = {
   noAds(src) {
     return Star.canSell() ? `<button class="no-ads" data-star="pitch" data-src="${src}">${Icon('star')} Premium ile reklamsız, anında</button>` : '';
   },
-  // Kendi Instagram profilinde boş (gri) onay rozeti
+  // Kendi StarFeed profilinde boş (gri) onay rozeti
   ghost() {
     if (!Star.canSell()) return '';
-    return `<button class="ig-ghost" data-star="gold" aria-label="Altın onay rozeti"><svg class="igv" viewBox="0 0 40 40"><path fill="#8e8e93" d="M20 2l4.6 3.4 5.7-.3 1.8 5.4 4.9 3-1.7 5.5 1.7 5.5-4.9 3-1.8 5.4-5.7-.3L20 38l-4.6-3.4-5.7.3-1.8-5.4-4.9-3L4.7 21 3 15.5l4.9-3 1.8-5.4 5.7.3z"/><path d="M13 20.5l4.6 4.6L27.5 15" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>`;
+    return `<button class="ig-ghost" data-star="gold" aria-label="Altın onay rozeti"><svg class="igv" viewBox="0 0 40 40"><path fill="#8e8e93" d="M20 1.5l5.6 11.4 12.6 1.8-9.1 8.9 2.2 12.5L20 30.2 8.7 36.1l2.2-12.5-9.1-8.9 12.6-1.8z"/><path d="M13.5 19.5l4.3 4.3 8.7-8.7" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>`;
   },
   // Üst çubuktaki küçük yıldız
   topBtn() {
@@ -102,13 +103,13 @@ const Star = {
     if (!b) { b = U.el(`<button type="button" class="notif-btn prem-btn" id="prem-btn" data-star="pitch" data-src="topbar" aria-label="Premium">${Icon('star')}</button>`); l.appendChild(b); }
   },
 
-  // Oyun içi Instagram rozeti: Premium'da altın, ünlüyken mavi
+  // StarFeed rozeti: Premium'da altın, ünlüyken mavi
   badge(verified) {
     if (Star.has()) return Star.gold();
     return verified && typeof IG !== 'undefined' ? IG.verified() : '';
   },
   gold() {
-    return '<svg class="igv igv-gold" viewBox="0 0 40 40"><defs><linearGradient id="igvg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe27a"/><stop offset=".55" stop-color="#f5b400"/><stop offset="1" stop-color="#c98a00"/></linearGradient></defs><path fill="url(#igvg)" d="M19.998 3.094 14.638 0l-2.972 5.15H5.432v6.354L0 14.64 3.094 20 0 25.359l5.432 3.137v5.905h5.975L14.638 40l5.36-3.094L25.358 40l3.232-5.6h6.162v-6.01L40 25.359 36.905 20 40 14.641l-5.248-3.03v-6.46h-6.419L25.358 0l-5.36 3.094Z"/><path fill="#fff" d="m17.2 27.7-7-6.9 2.5-2.5 4.5 4.4 9.6-9.6 2.5 2.5z"/></svg>';
+    return '<svg class="igv igv-gold" viewBox="0 0 40 40"><defs><linearGradient id="igvg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe27a"/><stop offset=".55" stop-color="#f5b400"/><stop offset="1" stop-color="#c98a00"/></linearGradient></defs><path fill="url(#igvg)" d="M20 1.5l5.6 11.4 12.6 1.8-9.1 8.9 2.2 12.5L20 30.2 8.7 36.1l2.2-12.5-9.1-8.9 12.6-1.8z"/><path fill="#fff" d="m17.2 27.7-7-6.9 2.5-2.5 4.5 4.4 9.6-9.6 2.5 2.5z"/></svg>';
   },
 
   // Profil sekmesindeki ayrıcalık kartı
@@ -117,7 +118,7 @@ const Star = {
     const on = Star.has();
     const lock = on ? '' : `<i class="st-lock">${Icon('star')}</i>`;
     const tile = (k, ic, t, d) => {
-      const fr = k === 'studio' ? !on : (k === 'wiki' || k === 'doc') && Star.free(k);
+      const fr = k === 'studio' ? !on : (k === 'wiki' || k === 'doc' || k === 'value') && Star.free(k);
       return `<button class="st-tile ${on ? '' : 'locked'} ${fr ? 'free' : ''}" data-star="${k}"><span class="st-ic">${Icon(ic)}</span><span class="st-t"><b>${t}</b><small>${d}</small></span>${fr ? `<i class="st-free">${k === 'studio' ? 'Dene' : '1 kez ücretsiz'}</i>` : lock}</button>`;
     };
     return `<section class="card star-hub ${on ? 'on' : ''}">
@@ -127,6 +128,7 @@ const Star = {
         ${tile('doc', 'play', 'Belgesel', 'Kariyerinin hikâyesi')}
         ${tile('studio', 'smile', 'Görünüm', 'Saç, sakal, krampon')}
         ${tile('transfer', 'mail', 'Transfer talebi', 'Kulüplerden teklif iste')}
+        ${typeof Market !== 'undefined' ? tile('value', 'coin', 'StarDeğer', 'Piyasa değeri ve dünya listeleri') : ''}
       </div>
     </section>`;
   },
@@ -359,6 +361,7 @@ const Star = {
         <h2 id="sp-honours">Başarılar</h2>${honours}
         <h2 id="sp-records">Rekorlar</h2>${rec ? `<ul>${rec}</ul>` : '<p><span>Rekorlar kariyer ilerledikçe burada yer alır.</span></p>'}
         <h2 id="sp-matches">Önemli maçlar</h2>${matches}
+        ${typeof Support !== 'undefined' && Support.has('plat') ? `<h2 id="sp-sup">Kurucu Destekçi</h2><p>${U.esc(Player.fullName(p))}, StarFoot'un ilk destekçileri arasında yer alır ve oyunun gelişimine katkı sağlamıştır.</p>` : ''}
         <div class="sp-doc"><button class="btn" data-star="doc">${Icon('play')} Kariyer belgeselini izle</button></div>
         <div class="sp-cats"><b>Kategoriler:</b> ${cats.map((c) => `<a>${U.esc(c)}</a>`).join(' | ')}</div>
         <div class="sp-foot">Bu sayfa en son ${d.year} sezonunda, ${s.season.round + 1}. haftada değiştirildi. İçerik StarFoot evreninde geçer; tüm kişi ve kulüpler kurgusaldır.</div>
@@ -583,15 +586,16 @@ document.addEventListener('click', (e) => {
   else if (k === 'doc') Star.doc();
   else if (k === 'studio') Star.studio();
   else if (k === 'transfer') Star.transferReq();
+  else if (k === 'value') Market.open('val');
   else if (k === 'lux') Star.buyLux(b.dataset.id);
   else if (k === 'pitch') Star.pitch(null, b.dataset.src || 'lux');
   else if (k === 'gold') Star.pitch('Altın onay rozeti', 'ig_badge', 'Altın onay rozeti yalnız gerçek yıldızların profilinde parlar. Premium ile rozetin hemen altın olur; Starpedia sayfan ve lüks yaşamın da açılır.');
 });
 
 // ---------- Güncelleme duyurusu (her sürümde bir kez) ----------
-const APP_VER = '1.0.14';
+const APP_VER = '1.0.15';
 // Duyuru içeriğinin sürümü: yeni duyuru yazılınca güncellenir (yalnız sürüm atlamak tekrar göstermez)
-const WN_VER = '1.0.12';
+const WN_VER = '1.0.15';
 const WhatsNew = {
   KEY: 'starfoot_whatsnew',
   // Hub'a girişte bir kez gösterir; gösterdiyse true döner. done(): pencere kapanınca çalışır.
@@ -606,20 +610,19 @@ const WhatsNew = {
   },
   // Duyuruyu gösterir (Ayarlar'dan yeniden açılabilir)
   show(done) {
-    // 1.0.12 duyurusu: Editör
+    // 1.0.15 duyurusu: StarFeed, maaş artışı, StarDeğer
     const it = (ic, t, d) => `<li><i>${ic}</i><span><b>${t}</b><small>${d}</small></span></li>`;
     const list = [
-      it('🌍', 'Oyun Evreni Yenilendi', 'Tüm kulüp ve oyuncu isimleri daha dinamik ve özgün bir yapıya kavuşturuldu.'),
-      it('✏️', 'Tam Kontrol Sende', "Artık yeni Editör sayfasından (Ana Menü ve Ayarlar'dan ulaşılabilir) dilediğin kulübün adını, kısaltmasını ve oyuncu isimlerini özgürce düzenleyebilir, kendi özgün ligini oluşturabilirsin!"),
-      it('🤝', 'Kendi Kadronu Paylaş', 'Hazırladığın düzenleme dosyalarını içe/dışa aktararak arkadaşlarınla paylaşabilirsin.'),
+      it('⭐', 'StarFeed', 'Oyun içi sosyal medyan yenilendi: kendi adı, yeni tasarımı ve yıldız rozetleri.'),
+      it('💼', 'Maaş artışı iste', 'İyi oynuyorsan kulübünden sezonda bir kez zam iste. Fazla istersen reddedilebilirsin!'),
+      it('📈', 'StarDeğer', 'Piyasa değerin, kariyer grafiğin, dünyanın en değerlileri ve transfer söylentileri.'),
     ].join('');
     const has = typeof Star !== 'undefined' && Star.has && Star.has();
     const end = () => { if (done) setTimeout(done, 300); };
     const btns = [{ t: 'Tamam', cls: 'btn-ghost', fn: end }];
-    if (typeof Edit !== 'undefined') btns.push({ t: `${Icon('pen')} Editörü aç`, cls: 'btn-big', fn: () => { end(); setTimeout(() => Edit.open(), 120); } });
+    if (typeof Market !== 'undefined' && Game.state && !Game.inStreet()) btns.push({ t: `${Icon('coin')} StarDeğer'i aç`, cls: 'btn-big', fn: () => { end(); setTimeout(() => Market.open(), 120); } });
     Game.modal(`<div class="wn"><div class="ev-tag">Yeni güncelleme · ${WN_VER}</div>
-      <h2>Büyük Güncelleme: Kendi Futbol Evrenini Kur! 🚀</h2>
-      <p>StarFoot ${WN_VER} ile oyuna yepyeni Düzenleyici (Editör) özelliğini ekledik!</p>
+      <h2>Kariyerinde yeni dönem! 🚀</h2>
       <ul class="wn-l">${list}</ul><p class="wn-note ok">İyi oyunlar!</p></div>`, btns, { wide: true });
     if (typeof Premium !== 'undefined') Premium.track('whatsnew_view', { ver: WN_VER, premium: has ? 1 : 0 });
   },

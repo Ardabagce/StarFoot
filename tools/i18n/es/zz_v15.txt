@@ -1,0 +1,125 @@
+5784|StarValor
+5785|Valor
+5786|Tu gráfico de valor, listas mundiales, rumores
+5787|Valor de mercado y listas mundiales
+5788|Ninguno
+5789|Socio fundador
+5790|Pedir aumento de sueldo
+5791|Puedes pedir un aumento cuando tengas contrato profesional.
+5792|Tu sueldo ya subió esta temporada.
+5793|La directiva rechazó tu petición esta temporada. Inténtalo la próxima.
+5795|Acabas de firmar un contrato nuevo. No puedes pedirlo hasta que pase media temporada.
+5798|Demuestra primero: nota media de 7,0 en al menos 8 partidos o buenas cifras para tu posición.
+5799|Tu sueldo ya está cerca de tu valor de mercado.
+5800|Sueldo actual
+5801|Nota de la temporada
+5802|Goles + asistencias
+5804|Puedes pedirlo una vez por temporada.
+5807|Tu relación con el entrenador bajó un poco.
+5811|Si pides más, es más probable que te lo rechacen. Si te lo rechazan, no podrás pedirlo otra vez esta temporada y tu relación con el entrenador bajará.
+5814|El gráfico aparece tras unos partidos.
+5815|StarValor se abre en tu carrera profesional.
+5816|Tu valor de mercado
+5817|Desde el último partido
+5818|Gráfico de carrera
+5819|Tus picos de valor y por qué
+5820|Listas mundiales
+5821|Los 100 más valiosos, fichajes récord
+5822|Valor de plantilla, rumores, comparativas
+5823|Los mejores de tu edad y las leyendas
+5824|Probar gratis una vez
+5826|Mi valor
+5827|Rumores
+5828|Comparar
+5829|Aún ninguno
+5830|Cedido
+5831|Cantera
+5832|Aún no hay traspasos.
+5833|Picos
+5834|Historial de traspasos
+5836|Tu puesto en el ranking mundial:
+5837|Tu récord de carrera
+5838|Los 100 más valiosos
+5839|Se abre con contrato profesional.
+5840|Valor de plantilla
+5841|Puesto en la liga
+5843|Plantillas más valiosas de la liga
+5844|Contratos que terminan esta temporada
+5849|Los rumores son ficción del juego.
+5850|Tú:
+5851|Ya compartiste esta semana.
+5853|Compartido en StarFeed.
+5854|Bronce
+5855|Insignia de socio
+5856|Plata
+5857|Marco de carta plateado
+5858|Oro
+5859|Título dorado en tu perfil de StarFeed
+5860|Platino
+5861|Sección de Socio fundador en Starpedia
+5862|Título de Socio leyenda en las noticias
+5866|Socio leyenda
+5868|Opcional. Solo insignias y aspecto, sin ventaja en el juego.
+5871|Apoyar al desarrollador
+5872|Aún sin rango
+5873|¡Estás en el rango más alto!
+5874|Socios de StarFoot
+5875|Si te gusta StarFoot, puedes ayudarnos a seguir mejorándolo. Cada apoyo da puntos y los puntos suben tu rango.
+5878|Las recompensas son solo estéticas y no dan ventaja en el juego. Los puntos se guardan y respaldan en este dispositivo.
+5881|{} es uno de los primeros socios de StarFoot y ha ayudado a que el juego crezca.
+5882|Con este rendimiento tu club podría pagarte unos {} por semana. Estás listo para hablar con la directiva.
+5883|Tu forma reciente ha subido tu valor en {}. Los ojeadores toman nota en la grada.
+5884|{} acepta un aumento de +{} semanales, pero a cambio quiere ampliar tu contrato 1 año.
+5885|La directiva del {} no quiere subirte el sueldo ahora. No puedes volver a pedirlo esta temporada.
+5887|{} ha puesto sobre la mesa una oferta de {} por ti. Tu agente dice: "no tenemos prisa".
+5889|Se dice que el presidente del {} preguntó por ti. El club no lo ha desmentido.
+5890|No puedes pedirlo antes de que acabe el primer tercio de la temporada (después de la semana {}).
+5891|💼 {} te subió el sueldo: {} por semana (+{}). Tu contrato se amplió 1 año.
+5893|{} es el jugador más valioso del mundo: {}. {} no piensa venderlo.
+5897|Se comenta: {} te tiene en su lista para el próximo mercado.
+5898|¡Gracias! +{} puntos de apoyo. ¡Rango {} desbloqueado!
+5899|Mi valor de mercado ya es de {}. ¡Esto solo es el principio!
+5901|💼 La directiva del {} rechazó tu petición de aumento.
+5904|Si rechazas la ampliación, el aumento será de +{}.
+5908|💼 {} te subió el sueldo: {} por semana (+{}).
+5913|🌟 ¡{} ya es Socio leyenda!
+5914|Tu contrato: quedan {} años.
+5917|¡Gracias! +{} puntos de apoyo
+5918|Los más valiosos de {} años
+5920|{} Apoyar al desarrollador
+5921|Leyendas a los {} años
+5922|{1} puntos para {0}
+5923|Aumento: +{}/semana
+5925|{} Compartir en StarFeed
+5926|{} El club pone una condición
+5927|{} Petición rechazada
+5928|{} Pedir aumento de sueldo
+5929|Socio {} · {} puntos
+5932|{} Desbloquear con Premium
+5933|{}: los más valiosos
+5934|Sin ampliación · +{}
+5935|{} Aumento de sueldo
+5936|Traspaso: {}
+5937|Alto · +{}
+5938|Razonable · +{}
+5939|SOCIO {}
+5940|Socio {}
+5941|{} puntos · {}
+5942|{} · {} puntos
+5945|+{} puntos{}
+5946|{} Abrir
+
+5803|Aumento de sueldo
+5805|Petición rechazada
+5809|El club pone una condición
+5825|Desbloquear con Premium
+5835|Compartir en StarFeed
+5863|SOCIO
+5867|Socio
+5947|Tu red social del juego se renueva: nombre propio, nuevo diseño e insignias de estrella.
+5948|¿Juegas bien? Pide un aumento a tu club una vez por temporada. ¡Si pides demasiado, te pueden decir que no!
+5949|Tu valor de mercado, tu gráfico de carrera, los más valiosos del mundo y rumores de fichajes.
+5950|¡Una nueva era para tu carrera! 🚀
+5951|¡Una nueva era para tu carrera!
+5952|Abrir StarValor
+5953|{} Abrir StarValor

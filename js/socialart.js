@@ -528,17 +528,18 @@ const SocialArt = {
   },
 };
 
-// Instagram tarzı ikonlar (satır içi SVG)
+// StarFeed ikonları (satır içi SVG)
 const IG = {
   i(path, cls = '', fill = 'none') { return `<svg class="igi ${cls}" viewBox="0 0 24 24" fill="${fill}" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${path}</svg>`; },
   heart(on) { return IG.i('<path d="M12 21s-7.5-4.6-9.6-9.2C1 8.6 3 5 6.6 5c2.2 0 3.6 1.2 5.4 3.2C13.8 6.2 15.2 5 17.4 5 21 5 23 8.6 21.6 11.8 19.5 16.4 12 21 12 21z"/>', on ? 'on' : '', on ? 'currentColor' : 'none'); },
   comment() { return IG.i('<path d="M20.7 16.4A9 9 0 1 0 17 20.1L21 21z"/>'); },
-  send() { return IG.i('<path d="M22 3 9.2 10.1"/><path d="M22 3 15 21l-5.8-10.9L2 7z"/>'); },
+  send() { return IG.i('<path d="M12 3v12"/><path d="m7 8 5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/>'); },
   save() { return IG.i('<path d="M19 21 12 16 5 21V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1z"/>'); },
   more() { return IG.i('<circle cx="5" cy="12" r="1.3"/><circle cx="12" cy="12" r="1.3"/><circle cx="19" cy="12" r="1.3"/>', '', 'currentColor'); },
   grid() { return IG.i('<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/>'); },
-  reels() { return IG.i('<rect x="3" y="3" width="18" height="18" rx="4"/><path d="M3 8h18M8 3l3 5M14 3l3 5"/><path d="m10 12 5 3-5 3z" fill="currentColor"/>'); },
+  reels() { return IG.i('<circle cx="12" cy="12" r="9"/><path d="m10 8.5 5.5 3.5-5.5 3.5z" fill="currentColor"/>'); },
   tag() { return IG.i('<rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="10" r="3"/><path d="M6.5 19c1.2-2.4 3.2-3.5 5.5-3.5s4.3 1.1 5.5 3.5"/>'); },
   multi() { return IG.i('<rect x="7" y="7" width="13" height="13" rx="2" fill="currentColor"/><path d="M4 16V5a1 1 0 0 1 1-1h11"/>'); },
-  verified() { return '<svg class="igv" viewBox="0 0 40 40"><path fill="#0095f6" d="M19.998 3.094 14.638 0l-2.972 5.15H5.432v6.354L0 14.64 3.094 20 0 25.359l5.432 3.137v5.905h5.975L14.638 40l5.36-3.094L25.358 40l3.232-5.6h6.162v-6.01L40 25.359 36.905 20 40 14.641l-5.248-3.03v-6.46h-6.419L25.358 0l-5.36 3.094Z"/><path fill="#fff" d="m17.2 27.7-7-6.9 2.5-2.5 4.5 4.4 9.6-9.6 2.5 2.5z"/></svg>'; },
+  verified() { return '<svg class="igv" viewBox="0 0 40 40"><path fill="#3d8bff" d="M20 1.5l5.6 11.4 12.6 1.8-9.1 8.9 2.2 12.5L20 30.2 8.7 36.1l2.2-12.5-9.1-8.9 12.6-1.8z"/><path d="M13.5 19.5l4.3 4.3 8.7-8.7" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>'; },
+  brand() { return '<div class="sf-brand"><svg viewBox="0 0 40 40"><path fill="#ffcf3f" d="M20 1.5l5.6 11.4 12.6 1.8-9.1 8.9 2.2 12.5L20 30.2 8.7 36.1l2.2-12.5-9.1-8.9 12.6-1.8z"/></svg><b>Star<span>Feed</span></b></div>'; },
 };

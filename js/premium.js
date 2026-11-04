@@ -155,6 +155,7 @@ const Premium = {
       if (Plus.owned(r && r.purchases)) Plus.set(true);
       Packs.sync(r && r.purchases);
     } catch (e) { /* yok */ }
+    if (typeof Support !== 'undefined') Support.restore();
     Packs.load();
     Plus.load();
     if (typeof Game !== 'undefined' && Game.state && !document.getElementById('hub').classList.contains('hidden')) Game.render();
@@ -196,6 +197,7 @@ const Premium = {
       await P.restorePurchases();
       const r = await P.getPurchases({ productType: 'inapp' });
       const packs = Packs.sync(r && r.purchases);
+      if (typeof Support !== 'undefined') Support.restore();
       const plus = Plus.owned(r && r.purchases);
       if (plus) Plus.set(true);
       if (Premium.owned(r && r.purchases)) { Premium.set(true); Premium.track('premium_restore'); Game.toast(plus ? '⭐ Premium+ geri yüklendi.' : '⭐ Premium geri yüklendi.', 'good'); }
