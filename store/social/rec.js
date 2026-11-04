@@ -9,7 +9,8 @@ const fontCss = [['Saira Condensed', 'saira-condensed', [600, 800, 900]], ['Barl
 const VW = 390, VH = 693, DPR = 1080 / 390;
 
 async function open(b, lang, seed = 7, size) {
-  const sz = size || { w: VW, h: VH, dpr: DPR };
+  // PREVIEW=1: App Store tanıtım videosu boyutu (886x1920)
+  const sz = size || (process.env.PREVIEW ? { w: 390, h: 845, dpr: 886 / 390 } : { w: VW, h: VH, dpr: DPR });
   const pg = await b.newPage({ viewport: { width: sz.w, height: sz.h }, deviceScaleFactor: sz.dpr, hasTouch: false, isMobile: false });
   pg.errs = []; pg.on('pageerror', (e) => pg.errs.push(e.message));
   await pg.clock.install();
