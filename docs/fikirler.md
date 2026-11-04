@@ -77,3 +77,10 @@ Kod: PREMIUM_PLATFORMS'a 'android', RevenueCat Android public key (goog_...), te
 ## Destekçiler listesi (1.0.16, destek alan çıkarsa)
 Game Center liderlik tablosu "StarFoot Destekçileri": destek puanı skor olarak gönderilir, isim = Game Center takma adı (moderasyon/kişisel veri yok).
 Starpedia'nın en altında "Destekçiler" bölümü + tabloyu açan düğme. Metinde "teşekkür listesi"; para değil puan/rütbe. Kendi sunucuyla liste önerilmedi (moderasyon, gizlilik, Apple UGC kuralları).
+
+## Yıldız Saati: reklamla 30 dk Premium denemesi (1.0.16, kullanıcı onayı)
+- Aynı gün içinde 10 ödüllü reklam izleyene 30 dakika Premium (Plus özellikleri yok).
+- Hesap başına hayatta 1 kez (kariyer başına değil): localStorage + iCloud meta + cihaz dosya yedeği; yeniden kurulumda da geri gelmez.
+- Sayaç: Ayarlar'da ve Premium kartında "Yıldız Saati'ne 7 reklam kaldı" (gün değişince sıfırlanır). Hak kullanıldıysa sayaç gizlenir.
+- 30 dk gerçek zaman; uygulama kapalıyken de akar. Bitince "Premium süren bitti" penceresi + Premium al (günde 1 hatırlatma kuralı).
+- Premium sahiplerinde hiç görünmez. Firebase: trial_progress, trial_start, trial_end, trial_purchase.
