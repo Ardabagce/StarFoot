@@ -17,6 +17,10 @@ on:
         description: 'Mevcut ekran görüntülerini silip yeniden yükle'
         type: boolean
         default: false
+      previews:
+        description: 'Tanıtım videosunu (store/asc/preview) tüm dillere yükle; varsa değiştirir'
+        type: boolean
+        default: false
       prepare_only:
         description: 'Sürümü hazırla (derleme bağlı) ama incelemeye gönderme'
         type: boolean
@@ -70,6 +74,7 @@ jobs:
           [ "${{ inputs.screens }}" != "false" ] && ARGS="$ARGS --screens"
           [ "${{ inputs.replace_screens }}" = "true" ] && ARGS="$ARGS --replace-screens"
           [ "${{ inputs.prepare_only }}" = "true" ] && ARGS="$ARGS --prepare-only"
+          [ "${{ inputs.previews }}" = "true" ] && ARGS="$ARGS --previews"
           [ "${{ inputs.dry_run }}" = "true" ] && ARGS="$ARGS --dry-run"
           [ "${{ inputs.diagnose }}" = "true" ] && ARGS="$ARGS --diagnose"
           [ "${{ inputs.audit }}" = "true" ] && ARGS="$ARGS --audit"

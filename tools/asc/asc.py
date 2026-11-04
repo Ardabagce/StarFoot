@@ -322,6 +322,38 @@ def upload_shots(asc, vloc_id, loc, replace):
         print(f'      {dtype}: {len(files)} görsel yüklendi ({files[0].name[:3]}…)')
 
 
+def upload_preview(asc, vloc_id, loc):
+    # App Store tanıtım videosu (iPhone 6.9"/6.7", 886x1920): tr dili Türkçe, diğer diller İngilizce video
+    f = ROOT / 'store/asc/preview' / ('preview-tr.mp4' if loc == 'tr' else 'preview-en.mp4')
+    if not f.exists() or vloc_id == 'DRY':
+        return
+    sets = {s['attributes']['previewType']: s for s in asc.get(f'/v1/appStoreVersionLocalizations/{vloc_id}/appPreviewSets', limit=20)['data']}
+    s = sets.get('IPHONE_67')
+    if s:
+        for c in asc.get(f"/v1/appPreviewSets/{s['id']}/appPreviews", limit=10)['data']:
+            asc.req('DELETE', f"/v1/appPreviews/{c['id']}", write=True)
+        set_id = s['id']
+    else:
+        set_id = asc.req('POST', '/v1/appPreviewSets', write=True, body={'data': {
+            'type': 'appPreviewSets', 'attributes': {'previewType': 'IPHONE_67'},
+            'relationships': {'appStoreVersionLocalization': {'data': {'type': 'appStoreVersionLocalizations', 'id': vloc_id}}}}})['data']['id']
+    blob = f.read_bytes()
+    d = asc.req('POST', '/v1/appPreviews', write=True, body={'data': {
+        'type': 'appPreviews', 'attributes': {'fileName': f.name, 'fileSize': len(blob), 'mimeType': 'video/mp4', 'previewFrameTimeCode': '00:00:02:00'},
+        'relationships': {'appPreviewSet': {'data': {'type': 'appPreviewSets', 'id': set_id}}}}})['data']
+    if asc.dry:
+        return
+    for op in d['attributes']['uploadOperations']:
+        part = blob[op['offset']:op['offset'] + op['length']]
+        r = requests.request(op['method'], op['url'], data=part, timeout=300,
+                             headers={h['name']: h['value'] for h in op.get('requestHeaders', [])})
+        r.raise_for_status()
+    asc.req('PATCH', f"/v1/appPreviews/{d['id']}", write=True, body={'data': {
+        'type': 'appPreviews', 'id': d['id'],
+        'attributes': {'uploaded': True, 'sourceFileChecksum': hashlib.md5(blob).hexdigest()}}})
+    print(f'      tanıtım videosu yüklendi ({f.name})')
+
+
 def probe(asc, path, **params):
     # yalnız okur; her isteği bir kez dener ve durum kodunu yazar
     r = requests.get(API + path, params=params, timeout=120, headers={'Authorization': 'Bearer ' + asc.token()})
@@ -924,6 +956,7 @@ def main():
     ap.add_argument('--gamecenter', action='store_true')
     ap.add_argument('--release', default='')
     ap.add_argument('--prepare-only', action='store_true')
+    ap.add_argument('--previews', action='store_true')
     a = ap.parse_args()
     meta = json.load(open(a.metadata, encoding='utf-8'))
     asc = ASC(a.dry_run)
@@ -1008,6 +1041,11 @@ def main():
                 upload_shots(asc, vid, loc, a.replace_screens)
             except Exception as err:
                 print(f'   ! görseller: {err}'); fails.append(loc)
+        if a.previews:
+            try:
+                upload_preview(asc, vid, loc)
+            except Exception as err:
+                print(f'   ! tanıtım videosu: {err}'); fails.append(loc)
     if fails:
         sys.exit(f'Sorun çıkan diller: {", ".join(sorted(set(fails)))}')
     if a.release:
