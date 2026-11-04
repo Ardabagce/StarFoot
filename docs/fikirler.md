@@ -73,3 +73,7 @@ Kod: PREMIUM_PLATFORMS'a 'android', RevenueCat Android public key (goog_...), te
 - Renkli halka ve Instagram'ı andıran ikonlar yerine StarFoot altın-lacivert tasarım.
 - Oyundaki metinler: "Al, Instagram'da paylaş", "Oyun içi Instagram'da altın tik" → StarFeed (tüm dillerde).
 - Reklam videolarında "Instagram" geçen yerler (ig/tr-4 videoları, bildirim sahnesi) yenilenir.
+
+## Destekçiler listesi (1.0.16, destek alan çıkarsa)
+Game Center liderlik tablosu "StarFoot Destekçileri": destek puanı skor olarak gönderilir, isim = Game Center takma adı (moderasyon/kişisel veri yok).
+Starpedia'nın en altında "Destekçiler" bölümü + tabloyu açan düğme. Metinde "teşekkür listesi"; para değil puan/rütbe. Kendi sunucuyla liste önerilmedi (moderasyon, gizlilik, Apple UGC kuralları).
