@@ -134,3 +134,5 @@
 5972|{} ha accettato: +{} a settimana
 5973|{} Tratta lo stipendio
 5976|{} Trattativa sullo stipendio
+5977|Consigli da portiere
+5978|Testi che spiegano cosa fare nei momenti da portiere. Attivi nelle prime 3 partite.

@@ -134,3 +134,5 @@
 5972|{} ist einverstanden: +{} pro Woche
 5973|{} Gehalt verhandeln
 5976|{} Gehaltsverhandlung
+5977|Torwart-Tipps
+5978|Texte, die erklären, was in Torwartmomenten zu tun ist. In deinen ersten 3 Spielen an.

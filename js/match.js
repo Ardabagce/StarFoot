@@ -45,6 +45,14 @@ const MOMENT_DESC = {
   gk_pen: 'Rakip penaltı kullanıyor. Forvetin bakışını oku ve bir köşeye uç!',
 };
 
+// Kaleci ipuçları (anlatım yazıları): ilk 3 maçta açık; sonra Ayarlar'dan açılabilir
+const GKHelp = {
+  KEY: 'starfoot_gkhelp',
+  pref() { try { return localStorage.getItem(GKHelp.KEY) || ''; } catch (e) { return ''; } },
+  on() { const v = GKHelp.pref(); if (v === 'on') return true; if (v === 'off') return false; const p = typeof Game !== 'undefined' && Game.p; return !p || (p.totals && p.totals.apps < 3); },
+  set(v) { try { localStorage.setItem(GKHelp.KEY, v ? 'on' : 'off'); } catch (e) { /* yok */ } },
+};
+
 const Match = {
   run(ctx, state) {
     return new Promise((resolve) => Match._run(ctx, state, resolve));
@@ -405,6 +413,8 @@ const Match = {
       $('mm-min').textContent = `${M.min}'`;
       $('mm-title').textContent = M.drama ? 'SON DAKİKA!' : U.plain(MOMENT_TITLES[type]);
       $('mm-desc').textContent = M.drama ? 'Son şans! Bu vuruş maçın kaderini belirleyebilir.' : MOMENT_DESC[type];
+      // kaleci ipuçları: ilk maçlarda görünür, sonra ayarlardan açılmadıkça gizlenir
+      $('mt-moment').classList.toggle('no-help', /^gk_/.test(type) && !M.drama && !GKHelp.on());
     };
     // Kendi golünden sonra seçtiğin gol sevinci (dokununca geçilir)
     const celebrate = async () => {

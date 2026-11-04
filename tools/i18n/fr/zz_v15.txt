@@ -134,3 +134,5 @@
 5972|{} accepte : +{} par semaine
 5973|{} Négocier le salaire
 5976|{} Négociation salariale
+5977|Conseils de gardien
+5978|Textes qui expliquent quoi faire dans les moments de gardien. Activés pour tes 3 premiers matchs.

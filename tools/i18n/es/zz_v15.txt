@@ -134,3 +134,5 @@
 5972|{} aceptó: +{} por semana
 5973|{} Negociar el sueldo
 5976|{} Negociación del sueldo
+5977|Consejos de portero
+5978|Textos que explican qué hacer en los momentos de portero. Activados en tus 3 primeros partidos.

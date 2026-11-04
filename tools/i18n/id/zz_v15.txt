@@ -134,3 +134,5 @@
 5972|{} setuju: +{} per minggu
 5973|{} Negosiasi gaji
 5976|{} Negosiasi gaji
+5977|Tips kiper
+5978|Teks yang menjelaskan apa yang harus dilakukan saat momen kiper. Aktif di 3 laga pertamamu.

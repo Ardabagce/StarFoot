@@ -1877,5 +1877,7 @@
 "{} sana haftalık {} teklif ediyor. Ne kadar istiyorsun?": "{} is offering you {} a week. How much do you want?",
 "Her teklifte yalnız bir kez pazarlık yapabilirsin. Fazla istersen kulüp masadan kalkabilir.": "You can negotiate only once per offer. Ask for too much and the club may walk away.",
 "+%10 · {}": "+10% · {}",
-"+%20 · {}": "+20% · {}"
+"+%20 · {}": "+20% · {}",
+"Kaleci ipuçları": "Goalkeeper tips",
+"Kaleci anlarında ne yapacağını anlatan yazılar. İlk 3 maçta açıktır.": "Texts that explain what to do in goalkeeper moments. On for your first 3 matches."
 }

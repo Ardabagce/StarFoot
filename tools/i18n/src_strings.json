@@ -62,8 +62,7 @@
 ],
 "800 {}px \"Saira Condensed\", \"Arial Narrow\", sans-serif": [
 "app.js",
-"socialart.js",
-"sprites.js"
+"socialart.js"
 ],
 "STARFOOT   ·   ANADOLU ENERJİ   ·   BOSFOR BANK   ·": [
 "app.js"
@@ -29415,6 +29414,12 @@
 "lang-pt.js",
 "value.js"
 ],
+"Kaleci ipuçları": [
+"game.js"
+],
+"Kaleci anlarında ne yapacağını anlatan yazılar. İlk 3 maçta açıktır.": [
+"game.js"
+],
 "Yenilikler": [
 "game.js",
 "lang-ar.js",
@@ -55226,6 +55231,218 @@
 "lang-pt.js"
 ],
 "StarDeğer'i aç": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Pazarlık kabul edildi": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"value.js"
+],
+"Kulüp son teklifinde ısrarcı": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"value.js"
+],
+"Maaş için pazarlık et": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Maaş pazarlığı": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"masadan kalktı, teklifini geri çekti.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"walked away and withdrew the offer.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"teklifinde ısrarcı. İstersen ilk teklifi kabul edebilirsin.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"stands by its offer. You can still accept the original one.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"teklifinde ısrarcı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"stands by its offer.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"İstersen ilk teklifi kabul edebilirsin.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"You can still accept the original one.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Ne kadar istiyorsun?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"How much do you want?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Her teklifte yalnız bir kez pazarlık yapabilirsin. Fazla istersen kulüp masadan kalkabilir.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"value.js"
+],
+"Her teklifte yalnız bir kez pazarlık yapabilirsin.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"You can negotiate only once per offer.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Fazla istersen kulüp masadan kalkabilir.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Ask for too much and the club may walk away.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -87021,6 +87238,160 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"PAZARLIK KABUL EDİLDİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KULÜP SON TEKLİFİNDE ISRARCI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MAAŞ İÇİN PAZARLIK ET": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MAAŞ PAZARLIĞI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MASADAN KALKTI, TEKLİFİNİ GERİ ÇEKTİ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"WALKED AWAY AND WITHDREW THE OFFER.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TEKLİFİNDE ISRARCI.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"STANDS BY ITS OFFER.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"İSTERSEN İLK TEKLİFİ KABUL EDEBİLİRSİN.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YOU CAN STILL ACCEPT THE ORIGINAL ONE.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"NE KADAR İSTİYORSUN?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HOW MUCH DO YOU WANT?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"FAZLA İSTERSEN KULÜP MASADAN KALKABİLİR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ASK FOR TOO MUCH AND THE CLUB MAY WALK AWAY.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -114082,6 +114453,18 @@
 "lang-pt.js",
 "value.js"
 ],
+"{} teklifinde ısrarcı. İstersen ilk teklifi kabul edebilirsin.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"value.js"
+],
 "{} A takımıyla ilk profesyonel sözleşmeni imzaladın! Haftalık {}": [
 "lang-ar.js",
 "lang-de.js",
@@ -114770,6 +115153,18 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"{} sana haftalık {} teklif ediyor. Ne kadar istiyorsun?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"value.js"
+],
 "{} ile {} evlendi! Futbol dünyası mutlu çifti kutluyor.": [
 "lang-ar.js",
 "lang-de.js",
@@ -114861,6 +115256,28 @@
 "lang-pt.js"
 ],
 "He started playing football in street games in {}.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"sana haftalık {} teklif ediyor. Ne kadar istiyorsun?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"is offering you {} a week. How much do you want?": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -116444,6 +116861,18 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"{} masadan kalktı, teklifini geri çekti.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"value.js"
+],
 "Magazin: {} ile {} {} birlikte görüntülendi!": [
 "lang-ar.js",
 "lang-de.js",
@@ -117411,6 +117840,28 @@
 "{} بلا إعلانات وفورًا مع Premium": [
 "lang-ar.js"
 ],
+"{} sana haftalık {} teklif ediyor.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{} is offering you {} a week.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "{} frikikten nefis bir gol attı!": [
 "lang-ar.js",
 "lang-de.js",
@@ -117537,6 +117988,28 @@
 "lang-ja.js",
 "lang-pt.js",
 "value.js"
+],
+"sana haftalık {} teklif ediyor.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"is offering you {} a week.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Federasyon men cezası: {} hafta": [
 "lang-ar.js",
@@ -118687,6 +119160,29 @@
 "lang-pt.js",
 "value.js"
 ],
+"{} Maaş için pazarlık et": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"value.js"
+],
+"agreed: +{} a week": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "{}'in vuruşu auta gitti.": [
 "lang-ar.js",
 "lang-de.js",
@@ -119007,6 +119503,28 @@
 "legacy.js"
 ],
 "{} kulüp teklif yaptı!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{} teklifinde ısrarcı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{} stands by its offer.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -119965,6 +120483,18 @@
 "lang-ja.js",
 "lang-pt.js",
 "star.js"
+],
+"{} Maaş pazarlığı": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"value.js"
 ],
 "Aile ilişkisi +{}": [
 "lang-ar.js",
@@ -127606,6 +128136,21 @@
 "lang-de.js"
 ],
 "StarWert öffnen": [
+"lang-de.js"
+],
+"Verhandlung akzeptiert": [
+"lang-de.js"
+],
+"Der Verein bleibt bei seinem Angebot": [
+"lang-de.js"
+],
+"Gehalt verhandeln": [
+"lang-de.js"
+],
+"Gehaltsverhandlung": [
+"lang-de.js"
+],
+"Du kannst pro Angebot nur einmal verhandeln. Wer zu viel will, riskiert, dass der Verein abbricht.": [
 "lang-de.js"
 ],
 "– wir haben uns qualifiziert!": [
@@ -136216,6 +136761,18 @@
 "STARWERT ÖFFNEN": [
 "lang-de.js"
 ],
+"VERHANDLUNG AKZEPTIERT": [
+"lang-de.js"
+],
+"DER VEREIN BLEIBT BEI SEINEM ANGEBOT": [
+"lang-de.js"
+],
+"GEHALT VERHANDELN": [
+"lang-de.js"
+],
+"GEHALTSVERHANDLUNG": [
+"lang-de.js"
+],
 "– WIR HABEN UNS QUALIFIZIERT!": [
 "lang-de.js"
 ],
@@ -140547,6 +141104,9 @@
 "Fordern geht erst nach dem ersten Saisondrittel (ab Woche {}).": [
 "lang-de.js"
 ],
+"{} bleibt bei seinem Angebot. Du kannst das ursprüngliche Angebot trotzdem annehmen.": [
+"lang-de.js"
+],
 "{} ist geöffnet. Noch keine Angebote; spiel gut, dann klopft vielleicht jemand an.": [
 "lang-de.js"
 ],
@@ -140707,6 +141267,9 @@
 "lang-de.js"
 ],
 "{0} Du wurdest in die {2}-Nationalmannschaft von {1} berufen! Das Spiel {3} {4} {5} wartet.": [
+"lang-de.js"
+],
+"{} bietet dir {} pro Woche. Wie viel willst du?": [
 "lang-de.js"
 ],
 "{} und {} haben geheiratet! Die Fußballwelt feiert das glückliche Paar.": [
@@ -141118,6 +141681,9 @@
 "lang-de.js"
 ],
 "Seine Jugendjahre verbrachte er bei {}.": [
+"lang-de.js"
+],
+"{} hat die Verhandlung abgebrochen und das Angebot zurückgezogen.": [
 "lang-de.js"
 ],
 "Klatsch: {} zusammen mit {} {} gesichtet!": [
@@ -141657,6 +142223,9 @@
 "{} Entwickler unterstützen": [
 "lang-de.js"
 ],
+"{} ist einverstanden: +{} pro Woche": [
+"lang-de.js"
+],
 "{} Nationalmannschafts-Rangliste": [
 "lang-de.js"
 ],
@@ -141726,6 +142295,9 @@
 "lang-de.js"
 ],
 "Noch {1} Punkte bis {0}": [
+"lang-de.js"
+],
+"{} Gehalt verhandeln": [
 "lang-de.js"
 ],
 "Moral +10 und {} Taschengeld!": [
@@ -142158,6 +142730,9 @@
 "lang-de.js"
 ],
 "{} StarWert öffnen": [
+"lang-de.js"
+],
+"{} Gehaltsverhandlung": [
 "lang-de.js"
 ],
 "Familienbindung +{}": [
@@ -147927,6 +148502,21 @@
 "lang-en.js"
 ],
 "Open StarValue": [
+"lang-en.js"
+],
+"Negotiation accepted": [
+"lang-en.js"
+],
+"The club stands by its offer": [
+"lang-en.js"
+],
+"Negotiate the wage": [
+"lang-en.js"
+],
+"Wage negotiation": [
+"lang-en.js"
+],
+"You can negotiate only once per offer. Ask for too much and the club may walk away.": [
 "lang-en.js"
 ],
 "— we qualified!": [
@@ -156083,6 +156673,18 @@
 "OPEN STARVALUE": [
 "lang-en.js"
 ],
+"NEGOTIATION ACCEPTED": [
+"lang-en.js"
+],
+"THE CLUB STANDS BY ITS OFFER": [
+"lang-en.js"
+],
+"NEGOTIATE THE WAGE": [
+"lang-en.js"
+],
+"WAGE NEGOTIATION": [
+"lang-en.js"
+],
 "— WE QUALIFIED!": [
 "lang-en.js"
 ],
@@ -160345,6 +160947,9 @@
 "You can't ask before the first third of the season is over (after week {}).": [
 "lang-en.js"
 ],
+"{} stands by its offer. You can still accept the original one.": [
+"lang-en.js"
+],
 "{} is open. No offers yet; play well and someone may knock.": [
 "lang-en.js"
 ],
@@ -160505,6 +161110,9 @@
 "lang-en.js"
 ],
 "{0} You've been called up to the {1} {2} national team! {3} {4} {5} match awaits.": [
+"lang-en.js"
+],
+"{} is offering you {} a week. How much do you want?": [
 "lang-en.js"
 ],
 "{} and {} got married! The football world celebrates the happy couple.": [
@@ -160916,6 +161524,9 @@
 "lang-en.js"
 ],
 "He spent his youth years at {}.": [
+"lang-en.js"
+],
+"{} walked away and withdrew the offer.": [
 "lang-en.js"
 ],
 "Gossip: {} spotted together with {} {}!": [
@@ -161455,6 +162066,9 @@
 "{} Support the developer": [
 "lang-en.js"
 ],
+"{} agreed: +{} a week": [
+"lang-en.js"
+],
 "{} National Team Ranking": [
 "lang-en.js"
 ],
@@ -161522,6 +162136,9 @@
 "lang-en.js"
 ],
 "{1} points to {0}": [
+"lang-en.js"
+],
+"{} Negotiate the wage": [
 "lang-en.js"
 ],
 "Morale +10 and {} pocket money!": [
@@ -161964,6 +162581,9 @@
 "lang-en.js"
 ],
 "{} Open StarValue": [
+"lang-en.js"
+],
+"{} Wage negotiation": [
 "lang-en.js"
 ],
 "Family bond +{}": [
@@ -167780,6 +168400,21 @@
 "Abrir StarValor": [
 "lang-es.js",
 "lang-pt.js"
+],
+"Negociación aceptada": [
+"lang-es.js"
+],
+"El club mantiene su oferta": [
+"lang-es.js"
+],
+"Negociar el sueldo": [
+"lang-es.js"
+],
+"Negociación del sueldo": [
+"lang-es.js"
+],
+"Solo puedes negociar una vez por oferta. Si pides demasiado, el club puede retirarse.": [
+"lang-es.js"
 ],
 "— ¡nos hemos clasificado!": [
 "lang-es.js"
@@ -175976,6 +176611,18 @@
 "lang-es.js",
 "lang-pt.js"
 ],
+"NEGOCIACIÓN ACEPTADA": [
+"lang-es.js"
+],
+"EL CLUB MANTIENE SU OFERTA": [
+"lang-es.js"
+],
+"NEGOCIAR EL SUELDO": [
+"lang-es.js"
+],
+"NEGOCIACIÓN DEL SUELDO": [
+"lang-es.js"
+],
 "— ¡NOS HEMOS CLASIFICADO!": [
 "lang-es.js"
 ],
@@ -180257,6 +180904,9 @@
 "No puedes pedirlo antes de que acabe el primer tercio de la temporada (después de la semana {}).": [
 "lang-es.js"
 ],
+"{} mantiene su oferta. Aún puedes aceptar la original.": [
+"lang-es.js"
+],
 "{} está abierto. Aún no hay ofertas; juega bien y alguien llamará a tu puerta.": [
 "lang-es.js"
 ],
@@ -180417,6 +181067,9 @@
 "lang-es.js"
 ],
 "{0} ¡Te han convocado con la selección {2} de {1}! Te espera el partido {3} {4} {5}.": [
+"lang-es.js"
+],
+"{} te ofrece {} por semana. ¿Cuánto quieres?": [
 "lang-es.js"
 ],
 "¡{} y {} se casaron! El mundo del fútbol celebra a la feliz pareja.": [
@@ -180828,6 +181481,9 @@
 "lang-es.js"
 ],
 "Pasó sus años de cantera en el {}.": [
+"lang-es.js"
+],
+"{} se levantó de la mesa y retiró la oferta.": [
 "lang-es.js"
 ],
 "Cotilleo: ¡{} visto junto a {} {}!": [
@@ -181367,6 +182023,9 @@
 "{} Apoyar al desarrollador": [
 "lang-es.js"
 ],
+"{} aceptó: +{} por semana": [
+"lang-es.js"
+],
 "Ranking de selecciones {}": [
 "lang-es.js"
 ],
@@ -181434,6 +182093,9 @@
 "lang-es.js"
 ],
 "{1} puntos para {0}": [
+"lang-es.js"
+],
+"{} Negociar el sueldo": [
 "lang-es.js"
 ],
 "¡Moral +10 y {} de paga!": [
@@ -181884,6 +182546,9 @@
 "{} Abrir StarValor": [
 "lang-es.js",
 "lang-pt.js"
+],
+"{} Negociación del sueldo": [
+"lang-es.js"
 ],
 "Vínculo familiar +{}": [
 "lang-es.js",
@@ -187562,6 +188227,21 @@
 "lang-fr.js"
 ],
 "Ouvrir StarValeur": [
+"lang-fr.js"
+],
+"Négociation acceptée": [
+"lang-fr.js"
+],
+"Le club maintient son offre": [
+"lang-fr.js"
+],
+"Négocier le salaire": [
+"lang-fr.js"
+],
+"Négociation salariale": [
+"lang-fr.js"
+],
+"Tu ne peux négocier qu'une fois par offre. Trop gourmand, et le club peut se retirer.": [
 "lang-fr.js"
 ],
 "— on est qualifiés !": [
@@ -195505,6 +196185,18 @@
 "OUVRIR STARVALEUR": [
 "lang-fr.js"
 ],
+"NÉGOCIATION ACCEPTÉE": [
+"lang-fr.js"
+],
+"LE CLUB MAINTIENT SON OFFRE": [
+"lang-fr.js"
+],
+"NÉGOCIER LE SALAIRE": [
+"lang-fr.js"
+],
+"NÉGOCIATION SALARIALE": [
+"lang-fr.js"
+],
 "— ON EST QUALIFIÉS !": [
 "lang-fr.js"
 ],
@@ -199638,6 +200330,9 @@
 "Tu ne peux pas demander avant la fin du premier tiers de la saison (après la semaine {}).": [
 "lang-fr.js"
 ],
+"{} maintient son offre. Tu peux encore accepter l'offre initiale.": [
+"lang-fr.js"
+],
 "{} est ouvert. Pas encore d'offres ; joue bien et quelqu'un frappera peut-être à la porte.": [
 "lang-fr.js"
 ],
@@ -199798,6 +200493,9 @@
 "lang-fr.js"
 ],
 "{0} Tu es convoqué en équipe nationale {2} de {1} ! Le match {3} {4} {5} t'attend.": [
+"lang-fr.js"
+],
+"{} te propose {} par semaine. Combien veux-tu ?": [
 "lang-fr.js"
 ],
 "{} et {} se sont mariés ! Le monde du foot célèbre l'heureux couple.": [
@@ -200209,6 +200907,9 @@
 "lang-fr.js"
 ],
 "Il a passé ses années de formation à {}.": [
+"lang-fr.js"
+],
+"{} a quitté la table et retiré son offre.": [
 "lang-fr.js"
 ],
 "Rumeur : {} aperçu avec {} {} !": [
@@ -200748,6 +201449,9 @@
 "{} Soutenir le développeur": [
 "lang-fr.js"
 ],
+"{} accepte : +{} par semaine": [
+"lang-fr.js"
+],
 "Classement des équipes nationales {}": [
 "lang-fr.js"
 ],
@@ -200815,6 +201519,9 @@
 "lang-fr.js"
 ],
 "{1} points avant {0}": [
+"lang-fr.js"
+],
+"{} Négocier le salaire": [
 "lang-fr.js"
 ],
 "Moral +10 et {} d'argent de poche !": [
@@ -201241,6 +201948,9 @@
 "lang-fr.js"
 ],
 "{} Ouvrir StarValeur": [
+"lang-fr.js"
+],
+"{} Négociation salariale": [
 "lang-fr.js"
 ],
 "Lien familial +{}": [
@@ -206760,6 +207470,18 @@
 "lang-id.js"
 ],
 "Buka StarNilai": [
+"lang-id.js"
+],
+"Negosiasi diterima": [
+"lang-id.js"
+],
+"Klub bertahan dengan tawarannya": [
+"lang-id.js"
+],
+"Negosiasi gaji": [
+"lang-id.js"
+],
+"Kamu hanya bisa bernegosiasi sekali per tawaran. Minta terlalu banyak, klub bisa mundur.": [
 "lang-id.js"
 ],
 "— kita lolos!": [
@@ -214584,6 +215306,15 @@
 "BUKA STARNILAI": [
 "lang-id.js"
 ],
+"NEGOSIASI DITERIMA": [
+"lang-id.js"
+],
+"KLUB BERTAHAN DENGAN TAWARANNYA": [
+"lang-id.js"
+],
+"NEGOSIASI GAJI": [
+"lang-id.js"
+],
 "— KITA LOLOS!": [
 "lang-id.js"
 ],
@@ -218704,6 +219435,9 @@
 "Belum bisa meminta sebelum sepertiga musim berlalu (setelah minggu ke-{}).": [
 "lang-id.js"
 ],
+"{} bertahan dengan tawarannya. Kamu masih bisa menerima tawaran awal.": [
+"lang-id.js"
+],
 "{} dibuka. Belum ada tawaran; bermainlah bagus dan mungkin ada yang mengetuk pintu.": [
 "lang-id.js"
 ],
@@ -218864,6 +219598,9 @@
 "lang-id.js"
 ],
 "{0} Kamu dipanggil ke timnas {2} {1}! Pertandingan {3} {4} {5} menantimu.": [
+"lang-id.js"
+],
+"{} menawarkan {} per minggu. Berapa yang kamu mau?": [
 "lang-id.js"
 ],
 "{} dan {} menikah! Dunia sepak bola merayakan pasangan bahagia itu.": [
@@ -219275,6 +220012,9 @@
 "lang-id.js"
 ],
 "Ia menghabiskan masa juniornya di {}.": [
+"lang-id.js"
+],
+"{} mundur dan menarik tawarannya.": [
 "lang-id.js"
 ],
 "Gosip: {} terlihat bersama {} {}!": [
@@ -219814,6 +220554,9 @@
 "{} Dukung pengembang": [
 "lang-id.js"
 ],
+"{} setuju: +{} per minggu": [
+"lang-id.js"
+],
 "Peringkat Timnas {}": [
 "lang-id.js"
 ],
@@ -219878,6 +220621,9 @@
 "lang-id.js"
 ],
 "{1} poin lagi menuju {0}": [
+"lang-id.js"
+],
+"{} Negosiasi gaji": [
 "lang-id.js"
 ],
 "Moral +10 dan uang saku {}!": [
@@ -225842,6 +226588,21 @@
 "lang-it.js"
 ],
 "Apri StarValore": [
+"lang-it.js"
+],
+"Trattativa accettata": [
+"lang-it.js"
+],
+"Il club conferma la sua offerta": [
+"lang-it.js"
+],
+"Tratta lo stipendio": [
+"lang-it.js"
+],
+"Trattativa sullo stipendio": [
+"lang-it.js"
+],
+"Puoi trattare una sola volta per offerta. Se chiedi troppo, il club può ritirarsi.": [
 "lang-it.js"
 ],
 "— ci siamo qualificati!": [
@@ -233661,6 +234422,18 @@
 "APRI STARVALORE": [
 "lang-it.js"
 ],
+"TRATTATIVA ACCETTATA": [
+"lang-it.js"
+],
+"IL CLUB CONFERMA LA SUA OFFERTA": [
+"lang-it.js"
+],
+"TRATTA LO STIPENDIO": [
+"lang-it.js"
+],
+"TRATTATIVA SULLO STIPENDIO": [
+"lang-it.js"
+],
 "— CI SIAMO QUALIFICATI!": [
 "lang-it.js"
 ],
@@ -237771,6 +238544,9 @@
 "Non puoi chiederlo prima della fine del primo terzo di stagione (dopo la settimana {}).": [
 "lang-it.js"
 ],
+"{} conferma la sua offerta. Puoi ancora accettare quella iniziale.": [
+"lang-it.js"
+],
 "{} è aperto. Ancora nessuna offerta; gioca bene e qualcuno potrebbe bussare.": [
 "lang-it.js"
 ],
@@ -237931,6 +238707,9 @@
 "lang-it.js"
 ],
 "{0} Sei stato convocato nella nazionale {2} di {1}! Ti aspetta la partita {3} {4} {5}.": [
+"lang-it.js"
+],
+"{} ti offre {} a settimana. Quanto vuoi?": [
 "lang-it.js"
 ],
 "{} e {} si sono sposati! Il mondo del calcio festeggia la coppia felice.": [
@@ -238342,6 +239121,9 @@
 "lang-it.js"
 ],
 "Ha trascorso gli anni del vivaio al {}.": [
+"lang-it.js"
+],
+"{} ha lasciato il tavolo e ritirato l'offerta.": [
 "lang-it.js"
 ],
 "Gossip: {} avvistato insieme a {} {}!": [
@@ -238881,6 +239663,9 @@
 "{} Sostieni lo sviluppatore": [
 "lang-it.js"
 ],
+"{} ha accettato: +{} a settimana": [
+"lang-it.js"
+],
 "Ranking delle nazionali {}": [
 "lang-it.js"
 ],
@@ -238945,6 +239730,9 @@
 "lang-it.js"
 ],
 "{1} punti per {0}": [
+"lang-it.js"
+],
+"{} Tratta lo stipendio": [
 "lang-it.js"
 ],
 "Morale +10 e {} di paghetta!": [
@@ -239374,6 +240162,9 @@
 "lang-it.js"
 ],
 "{} Apri StarValore": [
+"lang-it.js"
+],
+"{} Trattativa sullo stipendio": [
 "lang-it.js"
 ],
 "Legame familiare +{}": [
@@ -245443,6 +246234,21 @@
 "lang-pt.js"
 ],
 "Uma nova era na sua carreira!": [
+"lang-pt.js"
+],
+"Negociação aceita": [
+"lang-pt.js"
+],
+"O clube mantém a proposta": [
+"lang-pt.js"
+],
+"Negociar o salário": [
+"lang-pt.js"
+],
+"Negociação salarial": [
+"lang-pt.js"
+],
+"Você só pode negociar uma vez por proposta. Se pedir demais, o clube pode desistir.": [
 "lang-pt.js"
 ],
 "— nos classificamos!": [
@@ -253035,6 +253841,18 @@
 "UMA NOVA ERA NA SUA CARREIRA!": [
 "lang-pt.js"
 ],
+"NEGOCIAÇÃO ACEITA": [
+"lang-pt.js"
+],
+"O CLUBE MANTÉM A PROPOSTA": [
+"lang-pt.js"
+],
+"NEGOCIAR O SALÁRIO": [
+"lang-pt.js"
+],
+"NEGOCIAÇÃO SALARIAL": [
+"lang-pt.js"
+],
 "— NOS CLASSIFICAMOS!": [
 "lang-pt.js"
 ],
@@ -257034,6 +257852,9 @@
 "Você não pode pedir antes do fim do primeiro terço da temporada (depois da semana {}).": [
 "lang-pt.js"
 ],
+"{} mantém a proposta. Você ainda pode aceitar a original.": [
+"lang-pt.js"
+],
 "{} está aberta. Ainda sem ofertas; jogue bem e alguém pode bater na porta.": [
 "lang-pt.js"
 ],
@@ -257194,6 +258015,9 @@
 "lang-pt.js"
 ],
 "{0} Você foi convocado para a seleção {2} de {1}! O jogo {3} {4} {5} te espera.": [
+"lang-pt.js"
+],
+"{} oferece {} por semana. Quanto você quer?": [
 "lang-pt.js"
 ],
 "{} e {} se casaram! O mundo do futebol celebra o casal feliz.": [
@@ -257605,6 +258429,9 @@
 "lang-pt.js"
 ],
 "Passou os anos de base no {}.": [
+"lang-pt.js"
+],
+"{} desistiu e retirou a proposta.": [
 "lang-pt.js"
 ],
 "Fofoca: {} visto junto com {} {}!": [
@@ -258144,6 +258971,9 @@
 "{} Apoiar o desenvolvedor": [
 "lang-pt.js"
 ],
+"{} aceitou: +{} por semana": [
+"lang-pt.js"
+],
 "Ranking de seleções {}": [
 "lang-pt.js"
 ],
@@ -258211,6 +259041,9 @@
 "lang-pt.js"
 ],
 "{1} pontos para {0}": [
+"lang-pt.js"
+],
+"{} Negociar o salário": [
 "lang-pt.js"
 ],
 "Moral +10 e {} de mesada!": [
@@ -258604,6 +259437,9 @@
 "lang-pt.js"
 ],
 "{} Desbloquear com Premium": [
+"lang-pt.js"
+],
+"{} Negociação salarial": [
 "lang-pt.js"
 ],
 "{} jogos por este clube": [
@@ -275400,6 +276236,9 @@
 "Feed": [
 "socialart.js"
 ],
+"900 {}px \"Saira Condensed\", \"Arial Narrow\", sans-serif": [
+"sprites.js"
+],
 "img/grass.jpg": [
 "sprites.js"
 ],
@@ -275613,31 +276452,7 @@
 "AM": [
 "value.js"
 ],
-"Pazarlık kabul edildi": [
-"value.js"
-],
-"Kulüp son teklifinde ısrarcı": [
-"value.js"
-],
-"{} Maaş için pazarlık et": [
-"value.js"
-],
 "{} kabul etti: haftalık +{}": [
-"value.js"
-],
-"{} masadan kalktı, teklifini geri çekti.": [
-"value.js"
-],
-"{} teklifinde ısrarcı. İstersen ilk teklifi kabul edebilirsin.": [
-"value.js"
-],
-"{} Maaş pazarlığı": [
-"value.js"
-],
-"{} sana haftalık {} teklif ediyor. Ne kadar istiyorsun?": [
-"value.js"
-],
-"Her teklifte yalnız bir kez pazarlık yapabilirsin. Fazla istersen kulüp masadan kalkabilir.": [
 "value.js"
 ],
 "{} senin için {} teklifini masaya koydu. Menajerin \"acelemiz yok\" diyor.": [

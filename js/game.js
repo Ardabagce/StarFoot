@@ -2192,6 +2192,7 @@ ${UI.paper()}`;
         <div class="card-h"><span>${Icon('train')} Oynanış</span></div>
         <label class="drill-tg"><input type="checkbox" id="drill-tg" ${s.drills !== false ? 'checked' : ''}><span><b>Antrenman mini oyunları</b><small>Odak statına göre çalışma oynanır. İyi oynarsan gelişim ×1,5'e kadar çıkar.</small></span></label>
         ${typeof Edit !== 'undefined' ? row('Editör', 'Kulüp ve oyuncu isimlerini değiştir, düzenleme dosyası paylaş.', `<button class="btn btn-ghost" data-edopen>${Icon('pen')} Aç</button>`) : ''}
+        ${typeof GKHelp !== 'undefined' && p && p.position === 'GK' ? `<label class="drill-tg"><input type="checkbox" id="gkhelp-tg" ${GKHelp.on() ? 'checked' : ''}><span><b>Kaleci ipuçları</b><small>Kaleci anlarında ne yapacağını anlatan yazılar. İlk 3 maçta açıktır.</small></span></label>` : ''}
         ${typeof Support !== 'undefined' ? Support.row() : ''}
         ${typeof WhatsNew !== 'undefined' ? row('Yenilikler', `${WN_VER} güncelleme notları`, '<button class="btn btn-ghost" data-wnopen>Göster</button>') : ''}
         ${typeof Notify !== 'undefined' && Notify.plugin() ? `<label class="drill-tg"><input type="checkbox" id="notif-tg" ${Notify.on() ? 'checked' : ''}><span><b>Bildirimler</b><small>Günlük ödül ve enerji hatırlatmaları.</small></span></label>` : ''}
@@ -2272,6 +2273,8 @@ ${UI.paper()}`;
     U.$$('[data-more]', root).forEach((b) => (b.onclick = () => { UI.more[b.dataset.more] = !UI.more[b.dataset.more]; Game.render(); }));
     const dtg = root.querySelector('#drill-tg');
     if (dtg) dtg.onchange = () => { Game.state.drills = dtg.checked; Game.save(); };
+    const gtg = root.querySelector('#gkhelp-tg');
+    if (gtg) gtg.onchange = () => GKHelp.set(gtg.checked);
     const stg = root.querySelector('#sfx-tg'), htg = root.querySelector('#hap-tg');
     if (stg) stg.onchange = () => { Sfx.setOn(stg.checked); if (stg.checked) Sfx.play('whistle'); };
     if (htg) htg.onchange = () => { Sfx.setHap(htg.checked); if (htg.checked) Sfx.buzz('medium'); };

@@ -134,3 +134,5 @@
 5972|{} aceitou: +{} por semana
 5973|{} Negociar o salário
 5976|{} Negociação salarial
+5977|Dicas de goleiro
+5978|Textos que explicam o que fazer nos lances de goleiro. Ativadas nos seus 3 primeiros jogos.

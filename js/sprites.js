@@ -200,9 +200,9 @@ const Sprites = {
         const lift = runAmt * Math.max(0, Math.sin(run + phase)); // 0 basıyor, 1 havada
         const plant = runAmt * Math.max(0, -Math.sin(run + phase));
         fx = hx + side * (h * 0.012 + plant * h * 0.05 - lift * h * 0.012);
-        fy = sy - bob * (1 - lift) - lift * h * 0.155 + plant * h * 0.006 - h * 0.03;
+        fy = sy - bob * (1 - lift) - lift * h * 0.1 + plant * h * 0.006 - h * 0.03;
         kx = hx + side * (lift * h * 0.05 + plant * h * 0.02 + h * 0.006);
-        ky = hipY + (fy - hipY) * 0.42 + lift * h * 0.02;
+        ky = hipY + (fy - hipY) * 0.5 - lift * h * 0.035; // diz öne-yukarı kalkar, topuk geriye katlanmaz
         // makas: arkadan/önden bakınca adım ayakların çaprazlanması gibi görünür
         const sc2 = -side * sw * h * 0.075; fx += sc2; kx += sc2 * 0.45;
       }
@@ -210,8 +210,6 @@ const Sprites = {
       limb(hx, hipY, kx, ky, legW * 1.18, look.skin);
       limb(kx, ky, fx, fy, legW * 0.98, kit.socks);
       // diz ve çorap ağzı: dizin hemen altı ten, sonra çorap
-      limb(kx, ky, kx + (fx - kx) * 0.05, ky + (fy - ky) * 0.05, legW * 1.04, look.skin);
-      if (h > 80) { ctx.strokeStyle = 'rgba(255,255,255,0.35)'; ctx.lineWidth = Math.max(1, h * 0.008); const cx = kx + (fx - kx) * 0.09, cy = ky + (fy - ky) * 0.09; ctx.beginPath(); ctx.moveTo(cx - legW * 0.45, cy); ctx.lineTo(cx + legW * 0.45, cy); ctx.stroke(); }
       // krampon: burun hafif dışa dönük
       ctx.fillStyle = look.boots || '#16181d';
       ctx.beginPath(); ctx.ellipse(fx + side * legW * 0.08, fy + legW * 0.22, legW * 0.6, legW * 0.4, side * 0.25, 0, Math.PI * 2); ctx.fill();
