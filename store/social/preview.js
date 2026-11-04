@@ -49,7 +49,7 @@ img{width:330px;height:330px;border-radius:74px;box-shadow:0 30px 90px rgba(255,
 
   // [klasör, başlangıç karesi, kare sayısı, yazı]
   const segs = [
-    ['moment', 0, 150, 0],
+    ['moment', 0, 175, 0],
     ['gk', 25, 100, 1],
     ['ig', 0, 105, 2],
     ['wiki', 0, 105, 3],

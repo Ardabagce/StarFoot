@@ -4,7 +4,7 @@ const { chromium, open, record } = require('./rec');
 const path = require('path');
 const lang = process.argv[2] || 'tr';
 const OUT = process.argv[3] || path.join(__dirname, 'work', lang);
-const KIND = process.env.MOMENT || 'freekick';
+const KIND = process.env.MOMENT || (process.env.PREVIEW ? 'penalty' : 'freekick');
 const CLUB = process.env.CLUB || 'GAL'; // oyuncunun kulübü
 const hideFoot = () => { const st = document.createElement('style'); st.textContent = '.ct-foot{display:none!important}'; document.head.appendChild(st); };
 
@@ -52,7 +52,7 @@ async function career(pg) {
       }
     }
     await pg.clock.runFor(300);
-    const acts = {}, x0 = 225, y0 = 480, dx = +(process.env.DX || -36), dy = +(process.env.DY || 140);
+    const acts = {}, x0 = 225, y0 = 480, dx = +(process.env.DX || (process.env.PREVIEW ? -30 : -36)), dy = +(process.env.DY || 140);
     acts[14] = async () => { await pg.mouse.move(x0, y0); await pg.mouse.down(); };
     for (let k = 1; k <= 12; k++) acts[14 + k] = async () => { await pg.mouse.move(x0 + dx * k / 12, y0 + dy * k / 12); };
     acts[30] = async () => { await pg.mouse.up(); };

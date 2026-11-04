@@ -1,5 +1,12 @@
 # Sonraki güncellemeler için fikirler
 
+## 1.0.15 PLANI (kullanıcı onayı 2026-11-04)
+Yapılacak: 1) Maaş artışı talebi · 2) Piyasa değeri sayfası · 3) Destekçi programı (göze batmayan, deneme) ·
+4) StarFeed – oyun içi Instagram'ın yerine kendi markamız (kesin, risk sıfır) · 8) Premium+ fiyatı Premium'un yanında.
+Sonra: 11) Android satın almaları (kullanıcı Play Console adımlarını yapınca).
+Var: 6) heyecan anlarında teklif. Kaldırıldı: Meta SDK/SKAdNetwork, Firebase `source` boyutu.
+Akış: TestFlight → kullanıcı test eder → onaylarsa review'e gönderilir. Tanıtım videosu StarFeed sonrası yeniden kaydedilir.
+
 ## Maaş artışı talebi (oyuncu geri bildirimi, 1.0.12 · iPad)
 Amaç: Sevdiğin kulüpte kalırken iyi performansın karşılığını alabilmek; sırf maaş düşük diye kulüp değiştirmek zorunda kalmamak.
 
@@ -35,12 +42,10 @@ Büyüme: değer artışları Instagram'a paylaşılabilir kart ("Piyasa değeri
 (ör. ilk büyük transferde grafik bir kez tam açılır). Mağaza ekran görüntülerinden biri bu sayfaya ayrılır.
 
 ## Satış artırma notları (1.0.14 öncesi veri)
-- Firebase'de `source` özel boyutunu ekle; premium_purchase'ı kaynağa göre ve premium_taste'i gün gün izle.
 - Fikirler: dönen ücretsiz deneme (her birkaç günde farklı Premium özelliği), heyecan anlarında teklif (ilk kupa / büyük transfer),
   ilk günlere özel indirim, Premium+ fiyatını yanında göstermek. Günde en fazla 1 hatırlatma kuralı korunur.
 
 ## Bekleyen diğer işler
-- Meta SDK + SKAdNetwork (Instagram reklam ölçümü) – 1.0.14.
 - 1.0.13 (build 198) Apple incelemesinde; çizim belleği düzeltmesi dahil.
 
 ## Destekçi programı (VIP puanı + rütbeler) – tekrar alınabilir satın alma
