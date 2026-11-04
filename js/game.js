@@ -1298,6 +1298,8 @@ const Game = {
     document.getElementById('side').innerHTML = Game.tab === 'profile' ? '' : UI.playerCard();
     const main = document.getElementById('main');
     main.innerHTML = UI[Game.tab]();
+    // sekme değişince kartlar kayarak gelir (aynı sekmede yeniden çizimde değil)
+    if (Game._lastTab !== Game.tab) { Game._lastTab = Game.tab; main.classList.remove('tab-anim'); void main.offsetWidth; main.classList.add('tab-anim'); clearTimeout(Game._taT); Game._taT = setTimeout(() => main.classList.remove('tab-anim'), 700); }
     UI.drawFigure();
     Social.drawAvatar();
     UI.paintPaper();

@@ -211,6 +211,8 @@ const MiniGame = {
       let touched = false, aimT = 0, chipKick = false;
       let result = null, resultText = '', resultColor = '#fff';
       let slowmo = 1, particles = [], netShake = 0, flash = 0;
+      // görsel efektler: top izi, kamera sarsıntısı ve yakınlaşma, filede çarpma noktası
+      let trail = [], camShake = 0, camZoom = 0, zoomAt = null, netHitX = null;
       let last = performance.now(), raf = 0;
       const showHint = MiniGame.seen++ < 3;
 
@@ -452,8 +454,9 @@ const MiniGame = {
           else if (outcome === 'post' || outcome === 'bar') { Sfx.play('post'); Sfx.play('ooh'); Sfx.buzz('medium'); }
           else if (outcome === 'miss') Sfx.play('ooh');
         }
+        if (outcome === 'saved' || outcome === 'claimed') { camZoom = 1; zoomAt = [tx(keeper.x), ty(keeper.y) - FIG() * 0.5]; }
         if (outcome === 'goal' || (extra && extra.mateGoal)) {
-          netShake = 1; flash = 1;
+          netShake = 1; flash = 1; camShake = 1; netHitX = ball.x;
           const cols = [kits.own.shirt, kits.own.alt, '#ffffff', '#ffcf3f'];
           for (let i = 0; i < 90; i++) {
             particles.push({ x: tx(ball.x), y: ty(-1, 1.5), vx: U.rand(-320, 320) * dpr, vy: U.rand(-460, -80) * dpr, c: U.pick(cols), r: U.rand(3, 6) * dpr, life: U.rand(1.1, 2), rot: U.rand(0, 6) });
@@ -718,10 +721,14 @@ const MiniGame = {
       }
 
       function draw(dt) {
+        // kamera: golde kısa sarsıntı, kurtarışta kaleciye hafif yakınlaşma
+        ctx.save();
+        if (camShake > 0) ctx.translate(Math.sin(t * 61) * 7 * dpr * camShake, Math.cos(t * 47) * 5 * dpr * camShake);
+        if (camZoom > 0 && zoomAt) { const z = 1 + 0.07 * Math.sin(Math.min(1, camZoom) * Math.PI / 2); ctx.translate(zoomAt[0], zoomAt[1]); ctx.scale(z, z); ctx.translate(-zoomAt[0], -zoomAt[1]); }
         ctx.drawImage(bg, 0, 0);
         Sprites.standsFx(ctx, t, result && result.outcome === 'goal' ? Math.min(1, (t - endT) * 3) : 0);
         const sh = netShake > 0 ? Math.sin(t * 50) * 6 * dpr * netShake : 0;
-        Sprites.net(ctx, tx, ty, PX, sh);
+        Sprites.net(ctx, tx, ty, PX, sh, netHitX);
         if (scene.offside != null && (phase === 'aim' || (result && result.outcome === 'offside'))) {
           // TV tarzı ofsayt çizgisi
           const oy = ty(scene.offside);
@@ -780,12 +787,23 @@ const MiniGame = {
         ents.push({
           y: ball.y + 0.01, d: () => {
             const br = Math.max(3.5 * dpr, 0.22 * PX) * (1 + ball.z * 0.05);
+            // sert vuruşta topun arkasında solan iz
+            if (trail.length > 1) {
+              ctx.lineCap = 'round';
+              for (let k = 1; k < trail.length; k++) {
+                const a = trail[k - 1], b = trail[k], f = k / trail.length;
+                ctx.strokeStyle = `rgba(255,255,255,${0.32 * f})`; ctx.lineWidth = br * 1.3 * f;
+                ctx.beginPath(); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); ctx.stroke();
+              }
+              ctx.lineCap = 'butt';
+            }
             ctx.fillStyle = 'rgba(0,0,0,0.3)';
             ctx.beginPath(); ctx.ellipse(tx(ball.x) + ball.z * PX * 0.15, ty(ball.y), br * 1.1, br * 0.45, 0, 0, Math.PI * 2); ctx.fill();
             Sprites.ball(ctx, tx(ball.x), ty(ball.y, ball.z) - br * 0.8, br, ball.rot);
           },
         });
         ents.sort((a, b) => a.y - b.y).forEach((e) => e.d());
+        ctx.restore();
         Weather.draw(ctx, wx, W, H, dpr, t);
         if (wx && wx.kmh && phase === 'aim') {
           // rüzgar göstergesi
@@ -848,6 +866,12 @@ const MiniGame = {
         for (let i = 0; i < n && phase !== 'done'; i++) step(dt / n);
         if (phase === 'done') t += rdt;
         netShake = Math.max(0, netShake - rdt * 1.1);
+        camShake = Math.max(0, camShake - rdt * 2.4);
+        camZoom = Math.max(0, camZoom - rdt * 0.9);
+        if ((phase === 'fly' || phase === 'mfly') && Math.hypot(ball.vx, ball.vy) > 17) {
+          trail.push([tx(ball.x), ty(ball.y, ball.z) - Math.max(3.5 * dpr, 0.22 * PX) * 0.8]);
+          if (trail.length > 9) trail.shift();
+        } else if (trail.length) trail.shift();
         flash = Math.max(0, flash - rdt * 3);
         draw(rdt);
         if (phase === 'done' && t - endT > (result.outcome === 'goal' || result.mateGoal ? 2.0 : 1.5)) {

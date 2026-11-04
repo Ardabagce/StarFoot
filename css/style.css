@@ -2543,3 +2543,11 @@ div.doc { position: fixed; inset: 0; z-index: 49; background: #000; display: fle
 .nego-btn { margin-top: 6px; width: 100%; }
 .nego-done { display: block; margin-top: 6px; text-align: center; color: var(--muted); font-size: 12px; }
 .nego-done.good { color: #46e08f; }
+
+/* Yumuşak geçişler: pencere açılışı ve sekme değişiminde kartların kayarak gelmesi */
+@keyframes mcIn { from { opacity: 0; transform: translateY(14px) scale(.97); } to { opacity: 1; transform: none; } }
+@keyframes cardIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.modal:not(.hidden) .modal-card { animation: mcIn .22s cubic-bezier(.2, .8, .3, 1); }
+.tab-anim > .card, .tab-anim > section, .tab-anim > div > .card { animation: cardIn .28s cubic-bezier(.2, .8, .3, 1) both; }
+.tab-anim > :nth-child(2) { animation-delay: .04s; } .tab-anim > :nth-child(3) { animation-delay: .08s; } .tab-anim > :nth-child(4) { animation-delay: .12s; } .tab-anim > :nth-child(n+5) { animation-delay: .16s; }
+@media (prefers-reduced-motion: reduce) { .modal:not(.hidden) .modal-card, .tab-anim > * { animation: none !important; } }

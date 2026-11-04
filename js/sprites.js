@@ -153,7 +153,8 @@ const Sprites = {
     const run = o.run || 0; // koşu fazı (radyan)
     const runAmt = U.clamp(o.speed || 0, 0, 1);
     const sw = Math.sin(run) * runAmt;
-    const bob = Math.abs(Math.cos(run)) * runAmt * h * 0.02;
+    // koşuda belirgin zıplama; dururken hafif nefes alma
+    const bob = Math.abs(Math.cos(run)) * runAmt * h * 0.034 + (runAmt < 0.1 && !o.dive && !o.kick ? (Math.sin((o.t || 0) * 3.2 + (o.number || 0)) * 0.5 + 0.5) * h * 0.006 : 0);
     const by = sy - bob;
     const W = h * 0.36;
 
@@ -163,6 +164,10 @@ const Sprites = {
       ctx.beginPath(); ctx.ellipse(sx + h * 0.06, sy + h * 0.02, h * 0.24, h * 0.07, 0, 0, Math.PI * 2); ctx.fill();
     }
 
+    // koşarken gövde adımla birlikte hafifçe yana salınır (daha canlı, akıcı koşu)
+    const sway = !o.dive ? sw * 0.055 : 0;
+    ctx.save();
+    if (sway) { ctx.translate(sx, sy); ctx.rotate(sway); ctx.translate(-sx, -sy); }
     if (o.ring) {
       ctx.strokeStyle = o.ring; ctx.lineWidth = Math.max(2, h * 0.04);
       ctx.beginPath(); ctx.ellipse(sx, sy, h * 0.32 + Math.sin(o.t * 6) * h * 0.03, h * 0.1, 0, 0, Math.PI * 2); ctx.stroke();
@@ -195,7 +200,7 @@ const Sprites = {
         const lift = runAmt * Math.max(0, Math.sin(run + phase)); // 0 basıyor, 1 havada
         const plant = runAmt * Math.max(0, -Math.sin(run + phase));
         fx = hx + side * (h * 0.012 + plant * h * 0.05 - lift * h * 0.012);
-        fy = sy - bob * (1 - lift) - lift * h * 0.12 + plant * h * 0.006 - h * 0.03;
+        fy = sy - bob * (1 - lift) - lift * h * 0.155 + plant * h * 0.006 - h * 0.03;
         kx = hx + side * (lift * h * 0.05 + plant * h * 0.02 + h * 0.006);
         ky = hipY + (fy - hipY) * 0.42 + lift * h * 0.02;
         // makas: arkadan/önden bakınca adım ayakların çaprazlanması gibi görünür
@@ -238,12 +243,12 @@ const Sprites = {
       const L1 = h * 0.18, L2 = h * 0.17;
       const p1 = 0.2 + Math.max(-0.1, armA - 0.12);
       const k1 = 1 - 0.18 * Math.abs(f) * (1 - raise);
-      const ex = ax + side * Math.sin(p1) * L1, ey = ay + Math.cos(p1) * L1 * k1 - f * h * 0.012;
+      const ex = ax + side * Math.sin(p1) * L1, ey = ay + Math.cos(p1) * L1 * k1 - f * h * 0.02;
       const bend = (0.1 + 0.5 * runAmt) * (1 - raise);
       const p2 = p1 - bend * 0.45;
       const k2 = 1 - (0.15 + 0.35 * Math.max(0, f)) * runAmt * (1 - raise);
       let hx2 = ex + side * Math.sin(p2) * L2 * k2;
-      const hy2 = ey + Math.cos(p2) * L2 * k2 - f * h * 0.025;
+      const hy2 = ey + Math.cos(p2) * L2 * k2 - f * h * 0.042;
       if (raise < 0.5 && side * (hx2 - sx) < W * 0.56) hx2 = sx + side * W * 0.56; // el gövdenin arkasında kaybolmasın
       const aw = h * 0.088;
       limb(ax, ay, ex, ey, aw, o.longSleeve ? kit.shirt : look.skin);
@@ -302,9 +307,9 @@ const Sprites = {
     if (o.number != null && h > 26) {
       // sırtta büyük numara; önden bakışta göğüste küçük numara
       const nx = up ? sx : sx + W * 0.2, ny = top + (bot - top) * (up ? 0.48 : 0.3);
-      ctx.font = `800 ${Math.round(h * (up ? 0.17 : 0.09))}px "Saira Condensed", "Arial Narrow", sans-serif`;
+      ctx.font = `900 ${Math.round(h * (up ? 0.19 : 0.1))}px "Saira Condensed", "Arial Narrow", sans-serif`;
       ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-      ctx.lineWidth = Math.max(1, h * 0.02); ctx.strokeStyle = 'rgba(0,0,0,0.35)';
+      ctx.lineJoin = 'round'; ctx.lineWidth = Math.max(1.5, h * 0.03); ctx.strokeStyle = 'rgba(0,0,0,0.5)';
       const nc = kit.pattern === 'plain' ? kit.alt : '#ffffff';
       ctx.strokeText(String(o.number), nx, ny);
       ctx.fillStyle = Sprites.colorDist(nc, kit.shirt) < 80 ? '#ffffff' : nc;
@@ -316,7 +321,7 @@ const Sprites = {
     }
 
     // boyun ve kafa
-    const hr = h * 0.105;
+    const hr = h * 0.115; // biraz büyük kafa: daha sevimli ve tanınır
     const hy = top - hr * 0.95;
     ctx.fillStyle = Sprites.shade(look.skin, -0.12); ctx.fillRect(sx - hr * 0.35, top - hr * 0.4, hr * 0.7, hr * 0.5);
     ctx.fillStyle = look.skin;
@@ -380,6 +385,7 @@ const Sprites = {
       };
       arm(-1); arm(1);
     }
+    ctx.restore();
     if (o.label) Sprites.tag(ctx, sx, hy - hr * 1.6, o.label, o.labelScale || 1, o.labelColor);
   },
 
@@ -649,6 +655,17 @@ const Sprites = {
       ctx.fillStyle = g; ctx.beginPath(); ctx.arc(0, 0, rx * PX, 0, Math.PI * 2); ctx.fill(); ctx.restore();
     };
     wear(0, 1.2, 3.4, 1.6, 0.32); wear(-1.6, 0.6, 1.4, 0.8, 0.18); wear(1.7, 0.7, 1.3, 0.8, 0.16); wear(0, 11, 1.0, 0.7, 0.2);
+    // çapraz biçim: dikey bantlarla hafif dama deseni
+    for (let x = Math.floor(view.x0 / 6) * 6; x < view.x1; x += 6) {
+      if (Math.round(x / 6) % 2) continue;
+      ctx.fillStyle = 'rgba(255,255,235,0.035)'; ctx.fillRect(tx(x), 0, 6 * PX, H);
+    }
+    // projektör ışık havuzları (bir kez çizilir, kare başına maliyeti yok)
+    [[0.12, 0.25], [0.88, 0.25], [0.2, 0.85], [0.8, 0.85]].forEach(([fx, fy]) => {
+      const r = Math.max(W, H) * 0.42, g = ctx.createRadialGradient(W * fx, H * fy, 0, W * fx, H * fy, r);
+      g.addColorStop(0, 'rgba(255,250,220,0.09)'); g.addColorStop(1, 'rgba(255,250,220,0)');
+      ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+    });
     // stadyum ışığı: ortası parlak, kenarlar ve uzak taraf hafif koyu
     const L = ctx.createRadialGradient(W * 0.5, H * 0.55, Math.min(W, H) * 0.15, W * 0.5, H * 0.5, Math.max(W, H) * 0.8);
     L.addColorStop(0, 'rgba(255,255,230,0.06)'); L.addColorStop(1, 'rgba(0,10,5,0.32)');
@@ -772,6 +789,21 @@ const Sprites = {
       ctx.closePath(); ctx.fillStyle = alt ? C.c2 : C.c1; ctx.fill();
       ctx.fillStyle = alt ? C.c1 : C.c2; ctx.fillRect(x, y + h * 0.4, w * 0.25, h * 0.2);
     });
+    // golde tribün ayağa kalkar: zıplayan taraftarlar ve havaya kalkan kollar (yalnız sevinçte çizilir)
+    if (hype > 0.05) {
+      const N = Math.round(46 * F.lvl);
+      for (let i = 0; i < N; i++) {
+        const hx = Math.abs(Math.sin(i * 12.9898) * 43758.5453) % 1, hy = Math.abs(Math.sin(i * 78.233) * 12345.678) % 1;
+        const y0 = F.top + (0.25 + hy * 0.7) * (F.bottom - F.top), sz = PX * (0.3 + hy * 0.3);
+        const x = hx * W, j = Math.abs(Math.sin(t * 9 + i * 1.7)) * sz * 0.6 * hype, y = y0 - j;
+        ctx.fillStyle = i % 3 ? C.c1 : C.c2;
+        ctx.beginPath(); ctx.ellipse(x, y + sz * 0.42, sz * 0.46, sz * 0.4, 0, Math.PI, 0); ctx.fill();
+        ctx.strokeStyle = ctx.fillStyle; ctx.lineWidth = sz * 0.14; ctx.lineCap = 'round';
+        ctx.beginPath(); ctx.moveTo(x - sz * 0.3, y + sz * 0.25); ctx.lineTo(x - sz * 0.42, y - sz * 0.45); ctx.moveTo(x + sz * 0.3, y + sz * 0.25); ctx.lineTo(x + sz * 0.42, y - sz * 0.45); ctx.stroke();
+        ctx.fillStyle = '#e0ac69'; ctx.beginPath(); ctx.arc(x, y + sz * 0.02, sz * 0.22, 0, Math.PI * 2); ctx.fill();
+      }
+      ctx.lineCap = 'butt';
+    }
     // tribün flaşları
     const n = Math.round((3 + hype * 14) * F.lvl);
     for (let i = 0; i < n; i++) {
@@ -866,8 +898,10 @@ const Sprites = {
   },
 
   // Kale: arka ve yan fileler (eşkenar dörtgen ağ), file sallanması; çerçeve ayrı çizilir
-  net(ctx, tx, ty, PX, shake) {
+  net(ctx, tx, ty, PX, shake, hitX) {
     const back = -2, bz = 1.7, sh = shake || 0;
+    // top çarptığı yerde file daha çok şişer
+    const bulge = (x) => (hitX == null ? 1 : 0.35 + 1.4 * Math.exp(-(((x - hitX) / 1.6) ** 2)));
     const sand = Sprites.surface === 'sand';
     // file içi hafif gölge (derinlik)
     const fg = ctx.createLinearGradient(0, ty(0, 2.44), 0, ty(back) + sh);
@@ -878,7 +912,7 @@ const Sprites = {
     ctx.lineTo(tx(3.66), ty(back, bz) + sh); ctx.lineTo(tx(3.66), ty(back) + sh * 0.5);
     ctx.lineTo(tx(-3.66), ty(back) + sh * 0.5); ctx.lineTo(tx(-3.66), ty(back, bz) + sh); ctx.closePath(); ctx.fill();
     // ağ: tek yolda çizilir (hızlı); çatı ve arka yüz, yan fileler
-    const P = (x, y, z, f) => [tx(x), ty(y, z) + sh * f];
+    const P = (x, y, z, f) => [tx(x), ty(y, z) + sh * f * bulge(x)];
     const lerp = (a, b, k) => [a[0] + (b[0] - a[0]) * k, a[1] + (b[1] - a[1]) * k];
     ctx.strokeStyle = sand ? 'rgba(230,230,230,0.30)' : 'rgba(255,255,255,0.42)';
     ctx.lineWidth = Math.max(1, PX * 0.025);
@@ -890,6 +924,7 @@ const Sprites = {
       for (const dir of [1, -1]) {
         const a0 = i / cols, a1 = (i + rows * dir) / cols;
         const p0 = lerp(tl, tr, Math.min(1, Math.max(0, a0))), p1 = lerp(bl, br, Math.min(1, Math.max(0, a1)));
+        if (hitX != null && sh) { const c0 = Math.min(1, Math.max(0, a0)), c1 = Math.min(1, Math.max(0, a1)); p0[1] += sh * (bulge(-3.66 + 7.32 * c0) - bulge(-3.66)); p1[1] += sh * 0.5 * (bulge(-3.66 + 7.32 * c1) - bulge(-3.66)); }
         if ((a0 < 0 && a1 < 0) || (a0 > 1 && a1 > 1)) continue;
         ctx.moveTo(p0[0], p0[1]); ctx.lineTo(p1[0], p1[1]);
       }
