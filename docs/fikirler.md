@@ -84,3 +84,10 @@ Starpedia'nın en altında "Destekçiler" bölümü + tabloyu açan düğme. Met
 - Sayaç: Ayarlar'da ve Premium kartında "Yıldız Saati'ne 7 reklam kaldı" (gün değişince sıfırlanır). Hak kullanıldıysa sayaç gizlenir.
 - 30 dk gerçek zaman; uygulama kapalıyken de akar. Bitince "Premium süren bitti" penceresi + Premium al (günde 1 hatırlatma kuralı).
 - Premium sahiplerinde hiç görünmez. Firebase: trial_progress, trial_start, trial_end, trial_purchase.
+
+## Oyuncu önerileri (e-posta, 1.0.13 · iOS)
+- Kritik anlarda süre, oyuncu topa ilk dokunduğunda başlasın (şimdi an açılır açılmaz akıyor; "oyun çok hızlı bitiyor").
+- Aşırtma (lob) vuruşu: nişana rağmen çok sık aut/kurtarış. İsabet ve kaleci tepkisi gözden geçirilsin.
+- Transfer tekliflerinde maaş pazarlığı (karşı teklif: kulüp kabul/ret/orta yol). Kendi kulübünde zam isteği 1.0.15'te geldi.
+- Grafikler: oyuncu figürleri ve stadyum detayı adım adım iyileştirilsin.
+- Gerçek kulüp/lig adları: telif ve Apple kuralları nedeniyle yapılmaz; Editör var.
