@@ -268,3 +268,80 @@
 6117|Entrevista tras el partido · {} {} {}
 6118|🎙️ Tras el partido: "{}"{}
 6116|Tus palabras son tema en el vestuario.
+6199|¡Hat-trick ante {}! Te llevas el balón a casa. ¿Cómo te sientes?
+6120|Este balón es de mis compañeros, sin ellos no habría sido posible.
+6121|Era mi sueño y por fin se cumplió.
+6122|¡Veréis cuántos más marco esta temporada!
+6214|¿Nos cuentas tu gol del minuto {}?
+6123|Mi compañero me dio un gran pase, yo solo la empujé.
+6124|Miré al portero, elegí el palo y disparé.
+6125|¡En esa jugada nadie podía pararme!
+6126|Las gradas estallaron con el gol final. ¿Cómo fue ese momento?
+6129|Creímos hasta el final, ese es el carácter de este equipo.
+6130|Trabajamos para momentos así, estoy muy feliz.
+6131|Los grandes jugadores aparecen en los grandes momentos.
+6203|Hoy sin gol, pero con {} asistencias. ¿Asistencia o gol?
+6133|Mientras gane el equipo, da igual quién marque.
+6134|Hoy asistencias, el próximo partido goles.
+6206|Hoy no participaste en goles. ¿Te complicó la defensa del {}?
+6136|Defendieron bien, tengo que trabajar más.
+6137|Corrí por el equipo, los goles llegarán.
+6138|En el próximo partido veréis la diferencia.
+6202|Hoy un {} de nota, de lo mejor del campo. ¿Cuál es tu secreto?
+6140|La confianza del míster y del equipo me da tranquilidad.
+6141|Hago en el campo lo que hago en los entrenamientos.
+6142|Este es mi nivel normal, acostumbraos.
+6143|Hoy no fue el rendimiento que querías. ¿Qué pasó?
+6146|Fue un mal día, asumo la responsabilidad.
+6147|No todos los partidos son iguales, me recuperaré pronto.
+6148|Todos me miran a mí, pero también soy humano.
+6201|Sostuviste al equipo con {} paradas. ¿Cuál fue la más difícil?
+6150|La defensa ayudó mucho, lo logramos juntos.
+6151|La que iba a la escuadra, fue muy difícil.
+6152|Hoy nadie me podía batir.
+6216|¡Victoria por {}! ¿Cuál fue el momento clave?
+6154|Tras el primer gol el equipo se soltó.
+6155|Ejecutamos bien el plan y merecimos ganar.
+6156|Sabía que ganaríamos desde que salimos al campo.
+6204|Goleada ante el {}. ¿Algún mensaje para el rival?
+6211|El {} es un buen equipo, hoy era nuestro día.
+6159|Este resultado premia nuestro trabajo.
+6160|Esto es solo el principio, que todos nos teman.
+6210|Empate {}. ¿Os vale el punto?
+6162|Un punto también vale, seguimos.
+6163|Pudimos ganar, tuvimos algo de mala suerte.
+6164|Este resultado no nos satisface nada.
+6205|Perdisteis {1} ante el {0}. ¿Qué se habló en el vestuario?
+6165|Todos somos responsables, nos recuperaremos rápido.
+6166|Hablamos de nuestros errores y aprendimos.
+6167|Algunos compañeros tienen que dar más.
+6200|¿Qué quieres decir del {}? La afición hablará de este partido durante semanas.
+6169|Jugamos por nuestra afición, el ambiente fue especial.
+6170|La emoción del derbi es otra cosa, nunca olvidaré este partido.
+6171|Soy el hombre de los derbis, todos lo vieron.
+6212|Sois {}.º en la liga. ¿Cuál es el objetivo?
+6173|Vamos partido a partido, los objetivos al final.
+6174|Lucharemos por puestos europeos.
+6175|Merecemos estar más arriba.
+6176|¡El título! No hay otro objetivo.
+6209|El próximo rival es el {}. ¿Cómo os prepararéis?
+6208|Respetamos al {}, nos prepararemos bien.
+6180|Queremos mantener esta racha de victorias.
+6181|Queremos reaccionar enseguida y ganar.
+6215|Contra el {} también marcaré, apuntadlo.
+6182|¿Cómo fue el apoyo de la grada? ¿Algún mensaje para la afición?
+6185|Gracias por vuestro apoyo, jugamos por vosotros.
+6186|Jugar ante esta afición es un privilegio.
+6187|Cuanto más ganemos, más se llenará el estadio.
+6188|¿Cómo valoras el papel que te da el míster?
+6189|Estoy listo para hacer lo que pida el míster.
+6190|Confía en mí y le respondo en el campo.
+6191|Creo que debería asumir más responsabilidad.
+6192|¿Con esta forma se abre la puerta de la selección?
+6193|Primero me centro en mi club, lo demás llegará.
+6194|Vestir la camiseta de la selección es mi mayor sueño.
+6195|Que los seleccionadores sigan mirándome.
+6227|{} · Tras el partido
+6197|Terminar la entrevista
+6224|🎙️ Tras el partido: "{}"
+6198|EN VIVO

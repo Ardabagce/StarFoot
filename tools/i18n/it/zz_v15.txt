@@ -268,3 +268,80 @@
 6117|Intervista post-partita · {} {} {}
 6118|🎙️ Dopo la partita: "{}"{}
 6116|Le tue parole fanno discutere nello spogliatoio.
+6199|Tripletta contro il {}! Ti porti a casa il pallone. Come ti senti?
+6120|Questo pallone è dei miei compagni, senza di loro non ce l'avrei fatta.
+6121|Era il mio sogno e finalmente si è avverato.
+6122|Vedrete quanti altri ne segnerò quest'anno!
+6214|Ci racconti il tuo gol al {}' minuto?
+6123|Il mio compagno ha fatto un grande passaggio, io l'ho solo spinta dentro.
+6124|Ho guardato il portiere, scelto l'angolo e tirato.
+6125|In quell'azione nessuno poteva fermarmi!
+6126|Le tribune sono esplose al gol nel finale. Raccontaci quel momento.
+6129|Ci abbiamo creduto fino alla fine, è il carattere di questa squadra.
+6130|Lavoriamo per momenti così, sono felicissimo.
+6131|I grandi giocatori si vedono nei momenti importanti.
+6203|Niente gol oggi, ma {} assist. Assist o gol?
+6133|Basta che la squadra vinca, non importa chi segna.
+6134|Oggi assist, la prossima volta gol.
+6206|Oggi niente gol né assist. La difesa del {} ti ha messo in difficoltà?
+6136|Hanno difeso bene, devo lavorare di più.
+6137|Ho corso per la squadra, i gol arriveranno.
+6138|Alla prossima vedrete la differenza.
+6202|Voto {} oggi, tra i migliori in campo. Qual è il segreto?
+6140|La fiducia del mister e della squadra mi dà serenità.
+6141|Faccio in partita quello che faccio in allenamento.
+6142|Questo è il mio livello normale, abituatevi.
+6143|Oggi non è stata la prestazione che volevi. Cos'è successo?
+6146|È stata una brutta giornata, me ne assumo la responsabilità.
+6147|Non tutte le partite sono uguali, mi riprenderò subito.
+6148|Tutti guardano me, ma sono umano anch'io.
+6201|Hai tenuto in piedi la squadra con {} parate. Qual è stata la più difficile?
+6150|La difesa ci ha aiutato tanto, ce l'abbiamo fatta insieme.
+6151|Quella diretta all'angolino, difficilissima.
+6152|Oggi nessuno poteva battermi.
+6216|Vittoria per {}! Qual è stato il momento chiave?
+6154|Dopo il primo gol la squadra si è sciolta.
+6155|Abbiamo applicato bene il piano e meritato di vincere.
+6156|Sapevo che avremmo vinto appena entrati in campo.
+6204|Vittoria larga contro il {}. Un messaggio per loro?
+6211|Il {} è una buona squadra, oggi era la nostra giornata.
+6159|Questo risultato premia il nostro lavoro.
+6160|È solo l'inizio, tutti dovrebbero temerci.
+6210|Pareggio {}. Vi soddisfa il punto?
+6162|Anche un punto vale, andiamo avanti.
+6163|Potevamo vincere, siamo stati un po' sfortunati.
+6164|Questo risultato non ci soddisfa affatto.
+6205|Avete perso {1} contro il {0}. Cosa vi siete detti nello spogliatoio?
+6165|Siamo tutti responsabili, ci riprenderemo presto.
+6166|Abbiamo parlato degli errori e imparato.
+6167|Alcuni compagni devono dare di più.
+6200|Cosa vuoi dire del {}? I tifosi ne parleranno per settimane.
+6169|Abbiamo giocato per i tifosi, l'atmosfera era speciale.
+6170|Il derby è un'altra cosa, non dimenticherò mai questa partita.
+6171|Sono l'uomo dei derby, l'hanno visto tutti.
+6212|Siete {}° in campionato. Qual è l'obiettivo stagionale?
+6173|Andiamo partita dopo partita, degli obiettivi parleremo alla fine.
+6174|Lotteremo per un posto in Europa.
+6175|Meritiamo di stare più in alto.
+6176|Lo scudetto! Non c'è altro obiettivo.
+6209|La prossima è contro il {}. Come vi preparerete?
+6208|Rispettiamo il {}, ci prepareremo bene.
+6180|Vogliamo continuare questa serie di vittorie.
+6181|Vogliamo rialzarci subito e vincere.
+6215|Segnerò anche contro il {}, scrivetelo.
+6182|Com'è stato il sostegno dalle tribune? Un messaggio per i tifosi?
+6185|Grazie per il sostegno, giochiamo per voi.
+6186|Giocare davanti a questi tifosi è un privilegio.
+6187|Più vinciamo, più lo stadio si riempirà.
+6188|Come valuti il ruolo che ti dà il mister?
+6189|Sono pronto a fare ciò che chiede il mister.
+6190|Si fida di me e io ricambio.
+6191|Penso di dover prendere più responsabilità.
+6192|Con questa forma si apre la porta della nazionale?
+6193|Prima penso al mio club, il resto verrà.
+6194|Indossare la maglia della nazionale è il mio sogno più grande.
+6195|Che i ct continuino a osservarmi.
+6227|{} · Post-partita
+6197|Termina l'intervista
+6224|🎙️ Dopo la partita: "{}"
+6198|LIVE

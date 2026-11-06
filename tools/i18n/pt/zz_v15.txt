@@ -268,3 +268,80 @@
 6117|Entrevista pós-jogo · {} {} {}
 6118|🎙️ Pós-jogo: "{}"{}
 6116|Suas palavras viraram assunto no vestiário.
+6199|Hat-trick contra o {}! Você leva a bola pra casa. Como se sente?
+6120|Essa bola é dos meus companheiros, sem eles não daria.
+6121|Era meu sonho e finalmente se realizou.
+6122|Vocês vão ver quantos mais vou marcar nesta temporada!
+6214|Conta pra gente o seu gol aos {} minutos?
+6123|Meu companheiro deu um ótimo passe, só empurrei.
+6124|Olhei o goleiro, escolhi o canto e chutei.
+6125|Naquele lance ninguém me pararia!
+6126|A arquibancada explodiu com o gol no fim. Como foi esse momento?
+6129|Acreditamos até o fim, esse é o caráter do time.
+6130|Trabalhamos por momentos assim, estou muito feliz.
+6131|Grandes jogadores aparecem nos grandes momentos.
+6203|Sem gol hoje, mas com {} assistências. Assistência ou gol?
+6133|Se o time vencer, não importa quem marca.
+6134|Hoje assistência, no próximo jogo gol.
+6206|Sem participação em gols hoje. A defesa do {} te complicou?
+6136|Eles defenderam bem, preciso trabalhar mais.
+6137|Corri pelo time, os gols vão vir.
+6138|No próximo jogo vocês vão ver a diferença.
+6202|Nota {} hoje, um dos melhores em campo. Qual é o segredo?
+6140|A confiança do técnico e do time me deixa tranquilo.
+6141|Faço em campo o que faço nos treinos.
+6142|Esse é meu nível normal, se acostumem.
+6143|Não foi a atuação que você queria hoje. O que houve?
+6146|Foi um dia ruim, assumo a responsabilidade.
+6147|Nem todo jogo é igual, vou me recuperar logo.
+6148|Todo mundo olha pra mim, mas sou humano.
+6201|Você segurou o time com {} defesas. Qual foi a mais difícil?
+6150|A defesa ajudou muito, conseguimos juntos.
+6151|A que ia no canto foi muito difícil.
+6152|Hoje ninguém passava por mim.
+6216|Vitória por {}! Qual foi o momento decisivo?
+6154|Depois do primeiro gol o time se soltou.
+6155|Executamos bem o plano e merecemos vencer.
+6156|Eu sabia que íamos vencer assim que entramos em campo.
+6204|Goleada contra o {}. Algum recado pro adversário?
+6211|O {} é um bom time, hoje foi nosso dia.
+6159|Esse placar é o fruto do nosso trabalho.
+6160|Isso é só o começo, todos que nos temam.
+6210|Empate em {}. Esse ponto agrada?
+6162|Um ponto também vale, seguimos.
+6163|Podíamos ter vencido, faltou sorte.
+6164|Esse resultado não nos agradou nada.
+6205|Vocês perderam {1} para o {0}. O que foi dito no vestiário?
+6165|Todos somos responsáveis, vamos nos recuperar rápido.
+6166|Falamos dos nossos erros e aprendemos.
+6167|Alguns companheiros precisam dar mais.
+6200|O que você quer dizer sobre o {}? A torcida vai falar desse jogo por semanas.
+6169|Jogamos pela nossa torcida, o clima foi especial.
+6170|Clássico é outra coisa, nunca vou esquecer esse jogo.
+6171|Sou o cara dos clássicos, todo mundo viu.
+6212|Vocês estão em {}º na liga. Qual é a meta da temporada?
+6173|Vamos jogo a jogo, metas no fim da temporada.
+6174|Vamos lutar por vaga europeia.
+6175|Merecemos estar mais acima.
+6176|O título! Não há outra meta.
+6209|O próximo jogo é contra o {}. Como vão se preparar?
+6208|Respeitamos o {}, vamos nos preparar bem.
+6180|Queremos manter essa sequência de vitórias.
+6181|Queremos reagir logo e vencer.
+6215|Contra o {} também vou marcar, anotem.
+6182|Como foi o apoio da arquibancada? Algum recado pra torcida?
+6185|Obrigado pelo apoio, jogamos por vocês.
+6186|Jogar diante dessa torcida é um privilégio.
+6187|Quanto mais vencermos, mais cheio o estádio vai ficar.
+6188|Como você avalia a função que o técnico te dá?
+6189|Estou pronto pra fazer o que o técnico pedir.
+6190|Ele confia em mim e eu retribuo.
+6191|Acho que devo ter mais responsabilidade.
+6192|Essa fase pode abrir as portas da seleção?
+6193|Primeiro foco no meu clube, o resto vem.
+6194|Vestir a camisa da seleção é meu maior sonho.
+6195|Os treinadores que continuem me observando.
+6227|{} · Pós-jogo
+6197|Encerrar a entrevista
+6224|🎙️ Pós-jogo: "{}"
+6198|AO VIVO

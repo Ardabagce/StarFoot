@@ -337,6 +337,7 @@
 "data.js",
 "drills.js",
 "game.js",
+"interview.js",
 "lang-en.js",
 "lang-ja.js",
 "league.js",
@@ -717,6 +718,7 @@
 ],
 "STARFOOT": [
 "celebrate.js",
+"interview.js",
 "socialart.js",
 "sprites.js",
 "star.js"
@@ -32552,6 +32554,326 @@
 "i18n.js",
 "util.js"
 ],
+"Hat-trick yaptın! {} karşısında topu eve götürüyorsun. Neler hissediyorsun?": [
+"interview.js"
+],
+"Bu top takım arkadaşlarımın, onlar olmasa olmazdı.": [
+"interview.js"
+],
+"Hayalimdi, sonunda gerçekleşti.": [
+"interview.js"
+],
+"Bu sezon kaç tane daha atacağımı göreceksiniz!": [
+"interview.js"
+],
+"{}. dakikada attığın golü anlatır mısın?": [
+"interview.js"
+],
+"Arkadaşım çok iyi bir pas verdi, ben sadece dokundum.": [
+"interview.js"
+],
+"Kaleciyi izledim, köşeyi seçtim ve vurdum.": [
+"interview.js"
+],
+"O pozisyonda kimse beni durduramazdı!": [
+"interview.js"
+],
+"Son dakikalarda gelen golle tribünler yıkıldı. O anı anlatır mısın?": [
+"interview.js"
+],
+"Son ana kadar inandık, bu takımın karakteri bu.": [
+"interview.js"
+],
+"Böyle anlar için çalışıyoruz, çok mutluyum.": [
+"interview.js"
+],
+"Büyük oyuncular büyük anlarda ortaya çıkar.": [
+"interview.js"
+],
+"Bugün gol atamadın ama {} asistle oynadın. Asist mi, gol mü?": [
+"interview.js"
+],
+"Takım kazansın yeter, kimin attığı önemli değil.": [
+"interview.js"
+],
+"Asist de en az gol kadar güzel.": [
+"interview.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Bugün asist, bir sonraki maç gol de atarım.": [
+"interview.js"
+],
+"Bugün skor katkın olmadı. {} savunması seni zorladı mı?": [
+"interview.js"
+],
+"Rakip iyi savundu, ben daha çok çalışmalıyım.": [
+"interview.js"
+],
+"Takım için koştum, goller de gelecek.": [
+"interview.js"
+],
+"Gelecek maç farkı göreceksiniz.": [
+"interview.js"
+],
+"rateHi": [
+"interview.js"
+],
+"Bugün {} reyting aldın, sahanın en iyilerindendin. Sırrın ne?": [
+"interview.js"
+],
+"Hocamın ve takımın güveni beni rahatlatıyor.": [
+"interview.js"
+],
+"Antrenmanda ne yapıyorsam sahada onu yapıyorum.": [
+"interview.js"
+],
+"Bu benim normal seviyem, alışın.": [
+"interview.js"
+],
+"rateLo": [
+"interview.js"
+],
+"Bugün istediğin gibi bir performans değildi. Ne oldu?": [
+"interview.js"
+],
+"Kötü bir gündü, sorumluluğu alıyorum.": [
+"interview.js"
+],
+"Her maç aynı olmuyor, hemen toparlanırım.": [
+"interview.js"
+],
+"Herkes bana bakıyor, ben de insanım.": [
+"interview.js"
+],
+"gkSave": [
+"interview.js"
+],
+"{} kurtarışla takımını ayakta tuttun. En zor kurtarış hangisiydi?": [
+"interview.js"
+],
+"Savunmamız çok yardım etti, birlikte başardık.": [
+"interview.js"
+],
+"Köşeye giden şutu çıkardığım an, çok zordu.": [
+"interview.js"
+],
+"Bugün kaleyi kimse geçemezdi.": [
+"interview.js"
+],
+"{} galibiyet! Maçın kırılma anı neydi?": [
+"interview.js"
+],
+"İlk golden sonra takım rahatladı.": [
+"interview.js"
+],
+"Planımızı iyi uyguladık, kazanmayı hak ettik.": [
+"interview.js"
+],
+"Sahaya çıktığımız an kazanacağımızı biliyordum.": [
+"interview.js"
+],
+"winBig": [
+"interview.js"
+],
+"{} karşısında farklı kazandınız. Rakibe bir mesajın var mı?": [
+"interview.js"
+],
+"{} iyi bir takım, sadece bugün bizim günümüzdü.": [
+"interview.js"
+],
+"Bu skor çalışmamızın karşılığı.": [
+"interview.js"
+],
+"Bu daha başlangıç, herkes bizden korksun.": [
+"interview.js"
+],
+"{} berabere kaldınız. Bu bir puan sevindirir mi?": [
+"interview.js"
+],
+"Bir puan da değerli, yolumuza devam ediyoruz.": [
+"interview.js"
+],
+"Kazanabilirdik, biraz şanssızdık.": [
+"interview.js"
+],
+"Bu sonuç bizi hiç memnun etmedi.": [
+"interview.js"
+],
+"{} karşısında {} kaybettiniz. Soyunma odasında ne konuştunuz?": [
+"interview.js"
+],
+"Hepimiz sorumluyuz, hemen toparlanacağız.": [
+"interview.js"
+],
+"Hatalarımızı konuştuk, ders çıkardık.": [
+"interview.js"
+],
+"Bazı arkadaşların daha fazlasını vermesi gerek.": [
+"interview.js"
+],
+"{} hakkında ne söylemek istersin? Taraftar bu maçı haftalarca konuşacak.": [
+"interview.js"
+],
+"Taraftarımız için oynadık, bu atmosfer çok özeldi.": [
+"interview.js"
+],
+"Derbi heyecanı başka, bu maçı hiç unutmayacağım.": [
+"interview.js"
+],
+"Derbilerin adamı benim, herkes gördü.": [
+"interview.js"
+],
+"Ligde {}. sıradasınız. Sezon sonu hedefiniz ne?": [
+"interview.js"
+],
+"Maç maç gidiyoruz, hedefi sezon sonunda konuşuruz.": [
+"interview.js"
+],
+"Avrupa kupaları için savaşacağız.": [
+"interview.js"
+],
+"Daha yukarılarda olmayı hak ediyoruz.": [
+"interview.js"
+],
+"Şampiyonluk! Başka bir hedefimiz yok.": [
+"interview.js"
+],
+"Sıradaki maçınız {} ile. Nasıl hazırlanacaksınız?": [
+"interview.js"
+],
+"{} saygı duyduğumuz bir takım, iyi hazırlanacağız.": [
+"interview.js"
+],
+"Bu galibiyet serisini sürdürmek istiyoruz.": [
+"interview.js"
+],
+"Hemen toparlanıp kazanmak istiyoruz.": [
+"interview.js"
+],
+"{} maçında da gol atacağım, yazın bunu.": [
+"interview.js"
+],
+"Tribünlerden destek nasıldı? Taraftara bir mesajın var mı?": [
+"interview.js"
+],
+"Desteğiniz için teşekkürler, sizin için oynuyoruz.": [
+"interview.js"
+],
+"Bu taraftarın önünde oynamak bir ayrıcalık.": [
+"interview.js"
+],
+"Biz kazandıkça stadı daha da dolduracaksınız.": [
+"interview.js"
+],
+"Hocanın sana verdiği görevi nasıl değerlendiriyorsun?": [
+"interview.js"
+],
+"Hocam ne isterse onu yapmaya hazırım.": [
+"interview.js"
+],
+"Bana güveniyor, ben de karşılığını veriyorum.": [
+"interview.js"
+],
+"Bence daha fazla sorumluluk almalıyım.": [
+"interview.js"
+],
+"Bu formla milli takım kapısı açılır mı?": [
+"interview.js"
+],
+"Önce kulübüme odaklanıyorum, gerisi gelir.": [
+"interview.js"
+],
+"Milli formayı giymek en büyük hayalim.": [
+"interview.js"
+],
+"Hocalar beni izlemeye devam etsin.": [
+"interview.js"
+],
+"CANLI": [
+"interview.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SF SPORT": [
+"interview.js"
+],
+"{} · Maç sonu": [
+"interview.js"
+],
+"Röportajı bitir": [
+"interview.js"
+],
+"🎙️ Maç sonu: \"{}\"": [
+"interview.js"
+],
+"Mütevazı": [
+"interview.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Kendinden emin": [
+"interview.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"meta.js",
+"wc.js"
+],
+"İddialı": [
+"interview.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"meta.js",
+"wc.js"
+],
+"SF": [
+"interview.js",
+"value.js"
+],
+"italic 900 {}px \"Saira Condensed\", sans-serif": [
+"interview.js"
+],
+"900 {}px \"Saira Condensed\", sans-serif": [
+"interview.js"
+],
+"800 {}px \"Barlow Semi Condensed\", sans-serif": [
+"interview.js"
+],
 "Lig değiştir": [
 "lang-ar.js",
 "lang-de.js",
@@ -34463,19 +34785,6 @@
 "lang-pt.js",
 "meta.js"
 ],
-"Kendinden emin": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"meta.js",
-"wc.js"
-],
 "Kimse beni durduramaz!": [
 "lang-ar.js",
 "lang-de.js",
@@ -35473,19 +35782,6 @@
 "lang-ja.js",
 "lang-pt.js",
 "meta.js"
-],
-"İddialı": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"meta.js",
-"wc.js"
 ],
 "İstanbul Derbisi": [
 "lang-ar.js",
@@ -56674,6 +56970,436 @@
 "lang-pt.js",
 "socialart.js"
 ],
+"Hazır ol": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"match.js"
+],
+"Galibiyetin ardından neler söylemek istersin?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Takım arkadaşlarımı tebrik ederim, hep birlikte kazandık.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Çok çalıştık, bu galibiyeti hak ettik.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Bu ligde bizi kimse durduramaz!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Bugünkü oyunu nasıl değerlendiriyorsun?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"İyi oynadık ama geliştirmemiz gereken yerler var.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Planımızı sahaya mükemmel yansıttık.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Rakip bugün bize rakip olamadı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Beraberlik için ne dersin?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Bir puan da önemli, devam ediyoruz.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Kazanmak için her şeyi yaptık, şanssızdık.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Hakem kararları maçın sonucunu etkiledi.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Sahadan neden üç puanla ayrılamadınız?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Rakip iyi savundu, saygı duyuyoruz.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Pozisyonları değerlendiremedik, bir dahakine olacak.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Bu sonuç bizim için kabul edilemez.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Mağlubiyetin ardından taraftarlara ne söylemek istersin?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Özür dileriz, daha çok çalışacağız.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Bu bir kaza, hemen toparlanacağız.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Bazı arkadaşlarım bugün sahada yoktu.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Bu yenilginin sebebi neydi?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Hepimiz sorumluyuz, ben de dahil.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Rakip fırsatları iyi değerlendirdi.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Taktik yanlıştı, hocayla konuşacağım.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Bugün maçın yıldızıydın. Bu performansın sırrı ne?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Bugün maçın yıldızıydın.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"You were the star today.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Bu performansın sırrı ne?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"What's the secret?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Takımım olmasa bunların hiçbiri olmazdı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Antrenmanda çok çalışıyorum, karşılığını alıyorum.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Ben bu ligin en iyisiyim, bunu herkes görüyor.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Gollerden sonra neler hissediyorsun?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Golleri ailem ve taraftarlarımız için attım.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Çok mutluyum, daha fazlası gelecek.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Bu sadece başlangıç, rekorları kıracağım.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Röportaj vermeden geç": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Sözlerin soyunma odasında konuşuluyor.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "(Asist)": [
 "lang-ar.js",
 "lang-de.js",
@@ -63114,17 +63840,6 @@
 "lang-pt.js"
 ],
 "Hayalim gerçek oluyor.": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"Asist de en az gol kadar güzel.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -75074,17 +75789,6 @@
 "lang-pt.js"
 ],
 "KARİYER ÖZETİ": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"CANLI": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -89681,6 +90385,325 @@
 "lang-pt.js"
 ],
 "GÜNDEM": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HAZIR OL": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ÇOK ÇALIŞTIK, BU GALİBİYETİ HAK ETTİK.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BU LİGDE BİZİ KİMSE DURDURAMAZ!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BUGÜNKÜ OYUNU NASIL DEĞERLENDİRİYORSUN?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"PLANIMIZI SAHAYA MÜKEMMEL YANSITTIK.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"RAKİP BUGÜN BİZE RAKİP OLAMADI.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BERABERLİK İÇİN NE DERSİN?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BİR PUAN DA ÖNEMLİ, DEVAM EDİYORUZ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HAKEM KARARLARI MAÇIN SONUCUNU ETKİLEDİ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SAHADAN NEDEN ÜÇ PUANLA AYRILAMADINIZ?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"RAKİP İYİ SAVUNDU, SAYGI DUYUYORUZ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BU SONUÇ BİZİM İÇİN KABUL EDİLEMEZ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ÖZÜR DİLERİZ, DAHA ÇOK ÇALIŞACAĞIZ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BU BİR KAZA, HEMEN TOPARLANACAĞIZ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BAZI ARKADAŞLARIM BUGÜN SAHADA YOKTU.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BU YENİLGİNİN SEBEBİ NEYDİ?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HEPİMİZ SORUMLUYUZ, BEN DE DAHİL.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"RAKİP FIRSATLARI İYİ DEĞERLENDİRDİ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TAKTİK YANLIŞTI, HOCAYLA KONUŞACAĞIM.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BUGÜN MAÇIN YILDIZIYDIN.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YOU WERE THE STAR TODAY.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BU PERFORMANSIN SIRRI NE?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"WHAT'S THE SECRET?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TAKIMIM OLMASA BUNLARIN HİÇBİRİ OLMAZDI.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GOLLERDEN SONRA NELER HİSSEDİYORSUN?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ÇOK MUTLUYUM, DAHA FAZLASI GELECEK.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MÜTEVAZI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"RÖPORTAJ VERMEDEN GEÇ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SÖZLERİN SOYUNMA ODASINDA KONUŞULUYOR.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -121187,6 +122210,17 @@
 "lang-pt.js",
 "value.js"
 ],
+"Maç Sonu Röportajı · {} {} {}": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "{} ile yollarını ayırdın.": [
 "lang-ar.js",
 "lang-de.js",
@@ -130767,6 +131801,114 @@
 "Im Trend": [
 "lang-de.js"
 ],
+"Mach dich bereit": [
+"lang-de.js"
+],
+"Was möchtest du nach dem Sieg sagen?": [
+"lang-de.js"
+],
+"Glückwunsch an meine Mitspieler, wir haben gemeinsam gewonnen.": [
+"lang-de.js"
+],
+"Wir haben hart gearbeitet und diesen Sieg verdient.": [
+"lang-de.js"
+],
+"In dieser Liga hält uns keiner auf!": [
+"lang-de.js"
+],
+"Wie bewertest du das heutige Spiel?": [
+"lang-de.js"
+],
+"Wir haben gut gespielt, können uns aber noch steigern.": [
+"lang-de.js"
+],
+"Wir haben unseren Plan perfekt umgesetzt.": [
+"lang-de.js"
+],
+"Der Gegner war heute kein Gegner für uns.": [
+"lang-de.js"
+],
+"Was sagst du zum Unentschieden?": [
+"lang-de.js"
+],
+"Ein Punkt ist auch wichtig, wir machen weiter.": [
+"lang-de.js"
+],
+"Wir haben alles für den Sieg getan, hatten Pech.": [
+"lang-de.js"
+],
+"Die Schiedsrichterentscheidungen haben das Ergebnis beeinflusst.": [
+"lang-de.js"
+],
+"Warum habt ihr keine drei Punkte geholt?": [
+"lang-de.js"
+],
+"Der Gegner hat gut verteidigt, Respekt.": [
+"lang-de.js"
+],
+"Wir haben unsere Chancen nicht genutzt, nächstes Mal klappt's.": [
+"lang-de.js"
+],
+"Dieses Ergebnis ist für uns inakzeptabel.": [
+"lang-de.js"
+],
+"Was möchtest du den Fans nach der Niederlage sagen?": [
+"lang-de.js"
+],
+"Es tut uns leid, wir werden noch härter arbeiten.": [
+"lang-de.js"
+],
+"Das war ein Ausrutscher, wir kommen sofort zurück.": [
+"lang-de.js"
+],
+"Einige Mitspieler waren heute nicht da.": [
+"lang-de.js"
+],
+"Was war der Grund für die Niederlage?": [
+"lang-de.js"
+],
+"Wir sind alle verantwortlich, ich auch.": [
+"lang-de.js"
+],
+"Der Gegner hat seine Chancen gut genutzt.": [
+"lang-de.js"
+],
+"Die Taktik war falsch, ich rede mit dem Trainer.": [
+"lang-de.js"
+],
+"Du warst heute der Star. Was ist das Geheimnis?": [
+"lang-de.js"
+],
+"Ohne mein Team wäre das alles nicht möglich.": [
+"lang-de.js"
+],
+"Ich arbeite hart im Training, das zahlt sich aus.": [
+"lang-de.js"
+],
+"Ich bin der Beste dieser Liga, das sieht jeder.": [
+"lang-de.js"
+],
+"Wie fühlst du dich nach den Toren?": [
+"lang-de.js"
+],
+"Die Tore waren für meine Familie und unsere Fans.": [
+"lang-de.js"
+],
+"Ich bin sehr glücklich, da kommt noch mehr.": [
+"lang-de.js"
+],
+"Das ist erst der Anfang, ich breche Rekorde.": [
+"lang-de.js"
+],
+"Bescheiden": [
+"lang-de.js"
+],
+"Interview überspringen": [
+"lang-de.js"
+],
+"Deine Worte sind Thema in der Kabine.": [
+"lang-de.js"
+],
 "– wir haben uns qualifiziert!": [
 "lang-de.js"
 ],
@@ -139639,6 +140781,81 @@
 "IM TREND": [
 "lang-de.js"
 ],
+"MACH DICH BEREIT": [
+"lang-de.js"
+],
+"WIR HABEN HART GEARBEITET UND DIESEN SIEG VERDIENT.": [
+"lang-de.js"
+],
+"IN DIESER LIGA HÄLT UNS KEINER AUF!": [
+"lang-de.js"
+],
+"WIE BEWERTEST DU DAS HEUTIGE SPIEL?": [
+"lang-de.js"
+],
+"WIR HABEN UNSEREN PLAN PERFEKT UMGESETZT.": [
+"lang-de.js"
+],
+"DER GEGNER WAR HEUTE KEIN GEGNER FÜR UNS.": [
+"lang-de.js"
+],
+"WAS SAGST DU ZUM UNENTSCHIEDEN?": [
+"lang-de.js"
+],
+"EIN PUNKT IST AUCH WICHTIG, WIR MACHEN WEITER.": [
+"lang-de.js"
+],
+"DIE SCHIEDSRICHTERENTSCHEIDUNGEN HABEN DAS ERGEBNIS BEEINFLUSST.": [
+"lang-de.js"
+],
+"WARUM HABT IHR KEINE DREI PUNKTE GEHOLT?": [
+"lang-de.js"
+],
+"DER GEGNER HAT GUT VERTEIDIGT, RESPEKT.": [
+"lang-de.js"
+],
+"DIESES ERGEBNIS IST FÜR UNS INAKZEPTABEL.": [
+"lang-de.js"
+],
+"ES TUT UNS LEID, WIR WERDEN NOCH HÄRTER ARBEITEN.": [
+"lang-de.js"
+],
+"DAS WAR EIN AUSRUTSCHER, WIR KOMMEN SOFORT ZURÜCK.": [
+"lang-de.js"
+],
+"EINIGE MITSPIELER WAREN HEUTE NICHT DA.": [
+"lang-de.js"
+],
+"WAS WAR DER GRUND FÜR DIE NIEDERLAGE?": [
+"lang-de.js"
+],
+"WIR SIND ALLE VERANTWORTLICH, ICH AUCH.": [
+"lang-de.js"
+],
+"DER GEGNER HAT SEINE CHANCEN GUT GENUTZT.": [
+"lang-de.js"
+],
+"DIE TAKTIK WAR FALSCH, ICH REDE MIT DEM TRAINER.": [
+"lang-de.js"
+],
+"OHNE MEIN TEAM WÄRE DAS ALLES NICHT MÖGLICH.": [
+"lang-de.js"
+],
+"WIE FÜHLST DU DICH NACH DEN TOREN?": [
+"lang-de.js"
+],
+"ICH BIN SEHR GLÜCKLICH, DA KOMMT NOCH MEHR.": [
+"lang-de.js"
+],
+"BESCHEIDEN": [
+"lang-de.js"
+],
+"INTERVIEW ÜBERSPRINGEN": [
+"lang-de.js"
+],
+"DEINE WORTE SIND THEMA IN DER KABINE.": [
+"lang-de.js"
+],
 "– WIR HABEN UNS QUALIFIZIERT!": [
 "lang-de.js"
 ],
@@ -145090,6 +146307,9 @@
 "lang-de.js"
 ],
 "{} ist einverstanden: +{} pro Woche": [
+"lang-de.js"
+],
+"Interview nach dem Spiel · {} {} {}": [
 "lang-de.js"
 ],
 "{} Nationalmannschafts-Rangliste": [
@@ -151653,6 +152873,115 @@
 "lang-en.js"
 ],
 "Trending": [
+"lang-en.js"
+],
+"Get ready": [
+"lang-en.js"
+],
+"What would you like to say after the win?": [
+"lang-en.js"
+],
+"Congrats to my teammates, we won this together.": [
+"lang-en.js"
+],
+"We worked hard and deserved this win.": [
+"lang-en.js"
+],
+"Nobody can stop us in this league!": [
+"lang-en.js"
+],
+"How would you rate today's performance?": [
+"lang-en.js"
+],
+"We played well, but there's still room to improve.": [
+"lang-en.js"
+],
+"We executed our plan perfectly.": [
+"lang-en.js"
+],
+"Our opponents were no match for us today.": [
+"lang-en.js"
+],
+"What do you make of the draw?": [
+"lang-en.js"
+],
+"A point still matters, we keep going.": [
+"lang-en.js"
+],
+"We did everything to win, we were unlucky.": [
+"lang-en.js"
+],
+"The referee's decisions affected the result.": [
+"lang-en.js"
+],
+"Why didn't you leave with all three points?": [
+"lang-en.js"
+],
+"They defended well, we respect that.": [
+"lang-en.js"
+],
+"We didn't take our chances, next time we will.": [
+"lang-en.js"
+],
+"This result is unacceptable for us.": [
+"lang-en.js"
+],
+"What would you like to tell the fans after the defeat?": [
+"lang-en.js"
+],
+"We're sorry, we'll work even harder.": [
+"lang-en.js"
+],
+"It was a slip, we'll bounce back right away.": [
+"lang-en.js"
+],
+"Some of my teammates just didn't show up today.": [
+"lang-en.js"
+],
+"What caused this defeat?": [
+"lang-en.js"
+],
+"We're all responsible, me included.": [
+"lang-en.js"
+],
+"They took their chances well.": [
+"lang-en.js"
+],
+"The tactics were wrong, I'll talk to the coach.": [
+"lang-en.js"
+],
+"You were the star today. What's the secret?": [
+"lang-en.js"
+],
+"None of this happens without my team.": [
+"lang-en.js"
+],
+"I work hard in training and it's paying off.": [
+"lang-en.js"
+],
+"I'm the best in this league, everyone can see it.": [
+"lang-en.js"
+],
+"How do you feel after those goals?": [
+"lang-en.js"
+],
+"These goals were for my family and our fans.": [
+"lang-en.js"
+],
+"I'm very happy, there's more to come.": [
+"lang-en.js"
+],
+"This is just the beginning, I'll break records.": [
+"lang-en.js"
+],
+"Humble": [
+"lang-en.js",
+"lang-fr.js"
+],
+"Skip the interview": [
+"lang-en.js"
+],
+"Your words are the talk of the dressing room.": [
 "lang-en.js"
 ],
 "— we qualified!": [
@@ -160073,6 +161402,82 @@
 "TRENDING": [
 "lang-en.js"
 ],
+"GET READY": [
+"lang-en.js"
+],
+"WE WORKED HARD AND DESERVED THIS WIN.": [
+"lang-en.js"
+],
+"NOBODY CAN STOP US IN THIS LEAGUE!": [
+"lang-en.js"
+],
+"HOW WOULD YOU RATE TODAY'S PERFORMANCE?": [
+"lang-en.js"
+],
+"WE EXECUTED OUR PLAN PERFECTLY.": [
+"lang-en.js"
+],
+"OUR OPPONENTS WERE NO MATCH FOR US TODAY.": [
+"lang-en.js"
+],
+"WHAT DO YOU MAKE OF THE DRAW?": [
+"lang-en.js"
+],
+"A POINT STILL MATTERS, WE KEEP GOING.": [
+"lang-en.js"
+],
+"THE REFEREE'S DECISIONS AFFECTED THE RESULT.": [
+"lang-en.js"
+],
+"WHY DIDN'T YOU LEAVE WITH ALL THREE POINTS?": [
+"lang-en.js"
+],
+"THEY DEFENDED WELL, WE RESPECT THAT.": [
+"lang-en.js"
+],
+"THIS RESULT IS UNACCEPTABLE FOR US.": [
+"lang-en.js"
+],
+"WE'RE SORRY, WE'LL WORK EVEN HARDER.": [
+"lang-en.js"
+],
+"IT WAS A SLIP, WE'LL BOUNCE BACK RIGHT AWAY.": [
+"lang-en.js"
+],
+"SOME OF MY TEAMMATES JUST DIDN'T SHOW UP TODAY.": [
+"lang-en.js"
+],
+"WHAT CAUSED THIS DEFEAT?": [
+"lang-en.js"
+],
+"WE'RE ALL RESPONSIBLE, ME INCLUDED.": [
+"lang-en.js"
+],
+"THEY TOOK THEIR CHANCES WELL.": [
+"lang-en.js"
+],
+"THE TACTICS WERE WRONG, I'LL TALK TO THE COACH.": [
+"lang-en.js"
+],
+"NONE OF THIS HAPPENS WITHOUT MY TEAM.": [
+"lang-en.js"
+],
+"HOW DO YOU FEEL AFTER THOSE GOALS?": [
+"lang-en.js"
+],
+"I'M VERY HAPPY, THERE'S MORE TO COME.": [
+"lang-en.js"
+],
+"HUMBLE": [
+"lang-en.js",
+"lang-fr.js"
+],
+"SKIP THE INTERVIEW": [
+"lang-en.js"
+],
+"YOUR WORDS ARE THE TALK OF THE DRESSING ROOM.": [
+"lang-en.js"
+],
 "— WE QUALIFIED!": [
 "lang-en.js"
 ],
@@ -165458,6 +166863,9 @@
 "lang-en.js"
 ],
 "{} agreed: +{} a week": [
+"lang-en.js"
+],
+"Post-Match Interview · {} {} {}": [
 "lang-en.js"
 ],
 "{} National Team Ranking": [
@@ -172077,6 +173485,115 @@
 "lang-es.js"
 ],
 "Tendencia": [
+"lang-es.js"
+],
+"Prepárate": [
+"lang-es.js"
+],
+"¿Qué quieres decir tras la victoria?": [
+"lang-es.js"
+],
+"Felicito a mis compañeros, ganamos todos juntos.": [
+"lang-es.js"
+],
+"Trabajamos mucho y merecimos ganar.": [
+"lang-es.js"
+],
+"¡Nadie nos para en esta liga!": [
+"lang-es.js"
+],
+"¿Cómo valoras el partido de hoy?": [
+"lang-es.js"
+],
+"Jugamos bien, pero aún podemos mejorar.": [
+"lang-es.js"
+],
+"Ejecutamos el plan a la perfección.": [
+"lang-es.js"
+],
+"El rival no estuvo a nuestra altura hoy.": [
+"lang-es.js"
+],
+"¿Qué opinas del empate?": [
+"lang-es.js"
+],
+"Un punto también importa, seguimos.": [
+"lang-es.js"
+],
+"Lo dimos todo para ganar, no tuvimos suerte.": [
+"lang-es.js"
+],
+"Las decisiones arbitrales afectaron el resultado.": [
+"lang-es.js"
+],
+"¿Por qué no os llevasteis los tres puntos?": [
+"lang-es.js"
+],
+"El rival defendió bien, lo respetamos.": [
+"lang-es.js"
+],
+"No aprovechamos las ocasiones, la próxima será.": [
+"lang-es.js"
+],
+"Este resultado es inaceptable para nosotros.": [
+"lang-es.js"
+],
+"¿Qué quieres decir a la afición tras la derrota?": [
+"lang-es.js"
+],
+"Lo sentimos, trabajaremos más duro.": [
+"lang-es.js"
+],
+"Ha sido un tropiezo, nos recuperaremos enseguida.": [
+"lang-es.js"
+],
+"Algunos compañeros no estuvieron hoy.": [
+"lang-es.js"
+],
+"¿Cuál fue la causa de la derrota?": [
+"lang-es.js"
+],
+"Todos somos responsables, yo también.": [
+"lang-es.js"
+],
+"El rival aprovechó bien sus ocasiones.": [
+"lang-es.js"
+],
+"La táctica fue errónea, hablaré con el entrenador.": [
+"lang-es.js"
+],
+"Hoy fuiste la estrella. ¿Cuál es el secreto?": [
+"lang-es.js"
+],
+"Nada de esto sería posible sin mi equipo.": [
+"lang-es.js"
+],
+"Trabajo duro en los entrenamientos y da sus frutos.": [
+"lang-es.js"
+],
+"Soy el mejor de esta liga, todos lo ven.": [
+"lang-es.js"
+],
+"¿Cómo te sientes tras esos goles?": [
+"lang-es.js"
+],
+"Los goles fueron para mi familia y nuestra afición.": [
+"lang-es.js"
+],
+"Estoy muy feliz, vendrán más.": [
+"lang-es.js"
+],
+"Esto es solo el principio, batiré récords.": [
+"lang-es.js"
+],
+"Humilde": [
+"lang-es.js",
+"lang-pt.js"
+],
+"Saltar la entrevista": [
+"lang-es.js"
+],
+"Tus palabras son tema en el vestuario.": [
 "lang-es.js"
 ],
 "— ¡nos hemos clasificado!": [
@@ -180543,6 +182060,82 @@
 "TENDENCIA": [
 "lang-es.js"
 ],
+"PREPÁRATE": [
+"lang-es.js"
+],
+"TRABAJAMOS MUCHO Y MERECIMOS GANAR.": [
+"lang-es.js"
+],
+"¡NADIE NOS PARA EN ESTA LIGA!": [
+"lang-es.js"
+],
+"¿CÓMO VALORAS EL PARTIDO DE HOY?": [
+"lang-es.js"
+],
+"EJECUTAMOS EL PLAN A LA PERFECCIÓN.": [
+"lang-es.js"
+],
+"EL RIVAL NO ESTUVO A NUESTRA ALTURA HOY.": [
+"lang-es.js"
+],
+"¿QUÉ OPINAS DEL EMPATE?": [
+"lang-es.js"
+],
+"UN PUNTO TAMBIÉN IMPORTA, SEGUIMOS.": [
+"lang-es.js"
+],
+"LAS DECISIONES ARBITRALES AFECTARON EL RESULTADO.": [
+"lang-es.js"
+],
+"¿POR QUÉ NO OS LLEVASTEIS LOS TRES PUNTOS?": [
+"lang-es.js"
+],
+"EL RIVAL DEFENDIÓ BIEN, LO RESPETAMOS.": [
+"lang-es.js"
+],
+"ESTE RESULTADO ES INACEPTABLE PARA NOSOTROS.": [
+"lang-es.js"
+],
+"LO SENTIMOS, TRABAJAREMOS MÁS DURO.": [
+"lang-es.js"
+],
+"HA SIDO UN TROPIEZO, NOS RECUPERAREMOS ENSEGUIDA.": [
+"lang-es.js"
+],
+"ALGUNOS COMPAÑEROS NO ESTUVIERON HOY.": [
+"lang-es.js"
+],
+"¿CUÁL FUE LA CAUSA DE LA DERROTA?": [
+"lang-es.js"
+],
+"TODOS SOMOS RESPONSABLES, YO TAMBIÉN.": [
+"lang-es.js"
+],
+"EL RIVAL APROVECHÓ BIEN SUS OCASIONES.": [
+"lang-es.js"
+],
+"LA TÁCTICA FUE ERRÓNEA, HABLARÉ CON EL ENTRENADOR.": [
+"lang-es.js"
+],
+"NADA DE ESTO SERÍA POSIBLE SIN MI EQUIPO.": [
+"lang-es.js"
+],
+"¿CÓMO TE SIENTES TRAS ESOS GOLES?": [
+"lang-es.js"
+],
+"ESTOY MUY FELIZ, VENDRÁN MÁS.": [
+"lang-es.js"
+],
+"HUMILDE": [
+"lang-es.js",
+"lang-pt.js"
+],
+"SALTAR LA ENTREVISTA": [
+"lang-es.js"
+],
+"TUS PALABRAS SON TEMA EN EL VESTUARIO.": [
+"lang-es.js"
+],
 "— ¡NOS HEMOS CLASIFICADO!": [
 "lang-es.js"
 ],
@@ -185944,6 +187537,9 @@
 "lang-es.js"
 ],
 "{} aceptó: +{} por semana": [
+"lang-es.js"
+],
+"Entrevista tras el partido · {} {} {}": [
 "lang-es.js"
 ],
 "Ranking de selecciones {}": [
@@ -192429,6 +194025,111 @@
 "lang-fr.js"
 ],
 "Tendance": [
+"lang-fr.js"
+],
+"Prépare-toi": [
+"lang-fr.js"
+],
+"Que veux-tu dire après la victoire ?": [
+"lang-fr.js"
+],
+"Bravo à mes coéquipiers, on a gagné ensemble.": [
+"lang-fr.js"
+],
+"On a beaucoup travaillé, on mérite cette victoire.": [
+"lang-fr.js"
+],
+"Personne ne nous arrêtera dans ce championnat !": [
+"lang-fr.js"
+],
+"Comment juges-tu le match d'aujourd'hui ?": [
+"lang-fr.js"
+],
+"On a bien joué, mais on peut encore progresser.": [
+"lang-fr.js"
+],
+"On a parfaitement appliqué notre plan.": [
+"lang-fr.js"
+],
+"L'adversaire n'était pas à notre niveau aujourd'hui.": [
+"lang-fr.js"
+],
+"Que penses-tu du match nul ?": [
+"lang-fr.js"
+],
+"Un point, c'est important aussi, on continue.": [
+"lang-fr.js"
+],
+"On a tout fait pour gagner, on n'a pas eu de chance.": [
+"lang-fr.js"
+],
+"Les décisions de l'arbitre ont pesé sur le résultat.": [
+"lang-fr.js"
+],
+"Pourquoi n'avez-vous pas pris les trois points ?": [
+"lang-fr.js"
+],
+"L'adversaire a bien défendu, respect.": [
+"lang-fr.js"
+],
+"On n'a pas concrétisé nos occasions, la prochaine fois ça passera.": [
+"lang-fr.js"
+],
+"Ce résultat est inacceptable pour nous.": [
+"lang-fr.js"
+],
+"Que veux-tu dire aux supporters après la défaite ?": [
+"lang-fr.js"
+],
+"Désolés, on va travailler encore plus dur.": [
+"lang-fr.js"
+],
+"C'est un accident, on va vite rebondir.": [
+"lang-fr.js"
+],
+"Certains coéquipiers n'étaient pas là aujourd'hui.": [
+"lang-fr.js"
+],
+"Qu'est-ce qui explique cette défaite ?": [
+"lang-fr.js"
+],
+"On est tous responsables, moi compris.": [
+"lang-fr.js"
+],
+"L'adversaire a bien saisi ses occasions.": [
+"lang-fr.js"
+],
+"La tactique était mauvaise, je vais parler au coach.": [
+"lang-fr.js"
+],
+"Tu as été la star aujourd'hui. Quel est le secret ?": [
+"lang-fr.js"
+],
+"Rien de tout ça sans mon équipe.": [
+"lang-fr.js"
+],
+"Je travaille dur à l'entraînement, et ça paie.": [
+"lang-fr.js"
+],
+"Je suis le meilleur de ce championnat, tout le monde le voit.": [
+"lang-fr.js"
+],
+"Que ressens-tu après ces buts ?": [
+"lang-fr.js"
+],
+"Ces buts sont pour ma famille et nos supporters.": [
+"lang-fr.js"
+],
+"Je suis très heureux, il y en aura d'autres.": [
+"lang-fr.js"
+],
+"Ce n'est que le début, je vais battre des records.": [
+"lang-fr.js"
+],
+"Passer l'interview": [
+"lang-fr.js"
+],
+"Tes propos font parler dans le vestiaire.": [
 "lang-fr.js"
 ],
 "— on est qualifiés !": [
@@ -200636,6 +202337,78 @@
 "TENDANCE": [
 "lang-fr.js"
 ],
+"PRÉPARE-TOI": [
+"lang-fr.js"
+],
+"ON A BEAUCOUP TRAVAILLÉ, ON MÉRITE CETTE VICTOIRE.": [
+"lang-fr.js"
+],
+"PERSONNE NE NOUS ARRÊTERA DANS CE CHAMPIONNAT !": [
+"lang-fr.js"
+],
+"COMMENT JUGES-TU LE MATCH D'AUJOURD'HUI ?": [
+"lang-fr.js"
+],
+"ON A PARFAITEMENT APPLIQUÉ NOTRE PLAN.": [
+"lang-fr.js"
+],
+"L'ADVERSAIRE N'ÉTAIT PAS À NOTRE NIVEAU AUJOURD'HUI.": [
+"lang-fr.js"
+],
+"QUE PENSES-TU DU MATCH NUL ?": [
+"lang-fr.js"
+],
+"UN POINT, C'EST IMPORTANT AUSSI, ON CONTINUE.": [
+"lang-fr.js"
+],
+"LES DÉCISIONS DE L'ARBITRE ONT PESÉ SUR LE RÉSULTAT.": [
+"lang-fr.js"
+],
+"POURQUOI N'AVEZ-VOUS PAS PRIS LES TROIS POINTS ?": [
+"lang-fr.js"
+],
+"L'ADVERSAIRE A BIEN DÉFENDU, RESPECT.": [
+"lang-fr.js"
+],
+"CE RÉSULTAT EST INACCEPTABLE POUR NOUS.": [
+"lang-fr.js"
+],
+"DÉSOLÉS, ON VA TRAVAILLER ENCORE PLUS DUR.": [
+"lang-fr.js"
+],
+"C'EST UN ACCIDENT, ON VA VITE REBONDIR.": [
+"lang-fr.js"
+],
+"CERTAINS COÉQUIPIERS N'ÉTAIENT PAS LÀ AUJOURD'HUI.": [
+"lang-fr.js"
+],
+"QU'EST-CE QUI EXPLIQUE CETTE DÉFAITE ?": [
+"lang-fr.js"
+],
+"ON EST TOUS RESPONSABLES, MOI COMPRIS.": [
+"lang-fr.js"
+],
+"L'ADVERSAIRE A BIEN SAISI SES OCCASIONS.": [
+"lang-fr.js"
+],
+"LA TACTIQUE ÉTAIT MAUVAISE, JE VAIS PARLER AU COACH.": [
+"lang-fr.js"
+],
+"RIEN DE TOUT ÇA SANS MON ÉQUIPE.": [
+"lang-fr.js"
+],
+"QUE RESSENS-TU APRÈS CES BUTS ?": [
+"lang-fr.js"
+],
+"JE SUIS TRÈS HEUREUX, IL Y EN AURA D'AUTRES.": [
+"lang-fr.js"
+],
+"PASSER L'INTERVIEW": [
+"lang-fr.js"
+],
+"TES PROPOS FONT PARLER DANS LE VESTIAIRE.": [
+"lang-fr.js"
+],
 "— ON EST QUALIFIÉS !": [
 "lang-fr.js"
 ],
@@ -205889,6 +207662,9 @@
 "lang-fr.js"
 ],
 "{} accepte : +{} par semaine": [
+"lang-fr.js"
+],
+"Interview d'après-match · {} {} {}": [
 "lang-fr.js"
 ],
 "Classement des équipes nationales {}": [
@@ -212191,6 +213967,114 @@
 "lang-id.js"
 ],
 "Sedang tren": [
+"lang-id.js"
+],
+"Bersiap": [
+"lang-id.js"
+],
+"Apa yang ingin kamu katakan setelah kemenangan ini?": [
+"lang-id.js"
+],
+"Selamat untuk rekan setimku, kami menang bersama.": [
+"lang-id.js"
+],
+"Kami bekerja keras dan pantas menang.": [
+"lang-id.js"
+],
+"Tak ada yang bisa menghentikan kami di liga ini!": [
+"lang-id.js"
+],
+"Bagaimana penilaianmu atas laga hari ini?": [
+"lang-id.js"
+],
+"Kami bermain bagus, tapi masih bisa lebih baik.": [
+"lang-id.js"
+],
+"Kami menjalankan rencana dengan sempurna.": [
+"lang-id.js"
+],
+"Lawan tak sebanding dengan kami hari ini.": [
+"lang-id.js"
+],
+"Apa pendapatmu soal hasil imbang ini?": [
+"lang-id.js"
+],
+"Satu poin tetap penting, kami lanjutkan.": [
+"lang-id.js"
+],
+"Kami berusaha menang, tapi kurang beruntung.": [
+"lang-id.js"
+],
+"Keputusan wasit memengaruhi hasil laga.": [
+"lang-id.js"
+],
+"Kenapa kalian gagal meraih tiga poin?": [
+"lang-id.js"
+],
+"Lawan bertahan dengan baik, kami menghormatinya.": [
+"lang-id.js"
+],
+"Kami gagal memanfaatkan peluang, lain kali pasti bisa.": [
+"lang-id.js"
+],
+"Hasil ini tak bisa kami terima.": [
+"lang-id.js"
+],
+"Apa yang ingin kamu sampaikan ke suporter setelah kekalahan ini?": [
+"lang-id.js"
+],
+"Kami minta maaf, kami akan bekerja lebih keras.": [
+"lang-id.js"
+],
+"Ini hanya kecelakaan, kami akan segera bangkit.": [
+"lang-id.js"
+],
+"Beberapa rekan tidak tampil hari ini.": [
+"lang-id.js"
+],
+"Apa penyebab kekalahan ini?": [
+"lang-id.js"
+],
+"Kami semua bertanggung jawab, termasuk aku.": [
+"lang-id.js"
+],
+"Lawan memanfaatkan peluang dengan baik.": [
+"lang-id.js"
+],
+"Taktiknya salah, aku akan bicara dengan pelatih.": [
+"lang-id.js"
+],
+"Kamu bintang laga hari ini. Apa rahasianya?": [
+"lang-id.js"
+],
+"Semua ini tak mungkin tanpa timku.": [
+"lang-id.js"
+],
+"Aku berlatih keras dan hasilnya terlihat.": [
+"lang-id.js"
+],
+"Aku yang terbaik di liga ini, semua bisa melihatnya.": [
+"lang-id.js"
+],
+"Bagaimana perasaanmu setelah gol-gol itu?": [
+"lang-id.js"
+],
+"Gol-gol ini untuk keluargaku dan suporter kami.": [
+"lang-id.js"
+],
+"Aku sangat senang, masih ada lagi.": [
+"lang-id.js"
+],
+"Ini baru permulaan, aku akan memecahkan rekor.": [
+"lang-id.js"
+],
+"Rendah hati": [
+"lang-id.js"
+],
+"Lewati wawancara": [
+"lang-id.js"
+],
+"Ucapanmu jadi bahan obrolan di ruang ganti.": [
 "lang-id.js"
 ],
 "— kita lolos!": [
@@ -220276,6 +222160,81 @@
 "SEDANG TREN": [
 "lang-id.js"
 ],
+"BERSIAP": [
+"lang-id.js"
+],
+"KAMI BEKERJA KERAS DAN PANTAS MENANG.": [
+"lang-id.js"
+],
+"TAK ADA YANG BISA MENGHENTIKAN KAMI DI LIGA INI!": [
+"lang-id.js"
+],
+"BAGAIMANA PENILAIANMU ATAS LAGA HARI INI?": [
+"lang-id.js"
+],
+"KAMI MENJALANKAN RENCANA DENGAN SEMPURNA.": [
+"lang-id.js"
+],
+"LAWAN TAK SEBANDING DENGAN KAMI HARI INI.": [
+"lang-id.js"
+],
+"APA PENDAPATMU SOAL HASIL IMBANG INI?": [
+"lang-id.js"
+],
+"SATU POIN TETAP PENTING, KAMI LANJUTKAN.": [
+"lang-id.js"
+],
+"KEPUTUSAN WASIT MEMENGARUHI HASIL LAGA.": [
+"lang-id.js"
+],
+"KENAPA KALIAN GAGAL MERAIH TIGA POIN?": [
+"lang-id.js"
+],
+"LAWAN BERTAHAN DENGAN BAIK, KAMI MENGHORMATINYA.": [
+"lang-id.js"
+],
+"HASIL INI TAK BISA KAMI TERIMA.": [
+"lang-id.js"
+],
+"KAMI MINTA MAAF, KAMI AKAN BEKERJA LEBIH KERAS.": [
+"lang-id.js"
+],
+"INI HANYA KECELAKAAN, KAMI AKAN SEGERA BANGKIT.": [
+"lang-id.js"
+],
+"BEBERAPA REKAN TIDAK TAMPIL HARI INI.": [
+"lang-id.js"
+],
+"APA PENYEBAB KEKALAHAN INI?": [
+"lang-id.js"
+],
+"KAMI SEMUA BERTANGGUNG JAWAB, TERMASUK AKU.": [
+"lang-id.js"
+],
+"LAWAN MEMANFAATKAN PELUANG DENGAN BAIK.": [
+"lang-id.js"
+],
+"TAKTIKNYA SALAH, AKU AKAN BICARA DENGAN PELATIH.": [
+"lang-id.js"
+],
+"SEMUA INI TAK MUNGKIN TANPA TIMKU.": [
+"lang-id.js"
+],
+"BAGAIMANA PERASAANMU SETELAH GOL-GOL ITU?": [
+"lang-id.js"
+],
+"AKU SANGAT SENANG, MASIH ADA LAGI.": [
+"lang-id.js"
+],
+"RENDAH HATI": [
+"lang-id.js"
+],
+"LEWATI WAWANCARA": [
+"lang-id.js"
+],
+"UCAPANMU JADI BAHAN OBROLAN DI RUANG GANTI.": [
+"lang-id.js"
+],
 "— KITA LOLOS!": [
 "lang-id.js"
 ],
@@ -225513,6 +227472,9 @@
 "lang-id.js"
 ],
 "{} setuju: +{} per minggu": [
+"lang-id.js"
+],
+"Wawancara Usai Laga · {} {} {}": [
 "lang-id.js"
 ],
 "Peringkat Timnas {}": [
@@ -231831,6 +233793,114 @@
 "lang-it.js"
 ],
 "Di tendenza": [
+"lang-it.js"
+],
+"Preparati": [
+"lang-it.js"
+],
+"Cosa vuoi dire dopo la vittoria?": [
+"lang-it.js"
+],
+"Complimenti ai miei compagni, abbiamo vinto insieme.": [
+"lang-it.js"
+],
+"Abbiamo lavorato tanto, ce la siamo meritata.": [
+"lang-it.js"
+],
+"In questo campionato nessuno ci ferma!": [
+"lang-it.js"
+],
+"Come valuti la partita di oggi?": [
+"lang-it.js"
+],
+"Abbiamo giocato bene, ma possiamo migliorare.": [
+"lang-it.js"
+],
+"Abbiamo eseguito il piano alla perfezione.": [
+"lang-it.js"
+],
+"L'avversario oggi non era alla nostra altezza.": [
+"lang-it.js"
+],
+"Cosa pensi del pareggio?": [
+"lang-it.js"
+],
+"Anche un punto conta, andiamo avanti.": [
+"lang-it.js"
+],
+"Abbiamo fatto di tutto per vincere, siamo stati sfortunati.": [
+"lang-it.js"
+],
+"Le decisioni arbitrali hanno influito sul risultato.": [
+"lang-it.js"
+],
+"Perché non avete portato a casa i tre punti?": [
+"lang-it.js"
+],
+"Hanno difeso bene, li rispettiamo.": [
+"lang-it.js"
+],
+"Non abbiamo sfruttato le occasioni, la prossima volta andrà meglio.": [
+"lang-it.js"
+],
+"Questo risultato è inaccettabile per noi.": [
+"lang-it.js"
+],
+"Cosa vuoi dire ai tifosi dopo la sconfitta?": [
+"lang-it.js"
+],
+"Ci scusiamo, lavoreremo ancora di più.": [
+"lang-it.js"
+],
+"È stato un incidente, ci rialzeremo subito.": [
+"lang-it.js"
+],
+"Alcuni compagni oggi non c'erano.": [
+"lang-it.js"
+],
+"Qual è stato il motivo della sconfitta?": [
+"lang-it.js"
+],
+"Siamo tutti responsabili, me compreso.": [
+"lang-it.js"
+],
+"L'avversario ha sfruttato bene le occasioni.": [
+"lang-it.js"
+],
+"La tattica era sbagliata, parlerò con il mister.": [
+"lang-it.js"
+],
+"Oggi sei stato la stella. Qual è il segreto?": [
+"lang-it.js"
+],
+"Niente di tutto questo senza la mia squadra.": [
+"lang-it.js"
+],
+"Lavoro tanto in allenamento e sta dando i suoi frutti.": [
+"lang-it.js"
+],
+"Sono il migliore di questo campionato, lo vedono tutti.": [
+"lang-it.js"
+],
+"Come ti senti dopo questi gol?": [
+"lang-it.js"
+],
+"I gol sono per la mia famiglia e i nostri tifosi.": [
+"lang-it.js"
+],
+"Sono felicissimo, ne arriveranno altri.": [
+"lang-it.js"
+],
+"È solo l'inizio, batterò dei record.": [
+"lang-it.js"
+],
+"Umile": [
+"lang-it.js"
+],
+"Salta l'intervista": [
+"lang-it.js"
+],
+"Le tue parole fanno discutere nello spogliatoio.": [
 "lang-it.js"
 ],
 "— ci siamo qualificati!": [
@@ -239910,6 +241980,81 @@
 "DI TENDENZA": [
 "lang-it.js"
 ],
+"PREPARATI": [
+"lang-it.js"
+],
+"ABBIAMO LAVORATO TANTO, CE LA SIAMO MERITATA.": [
+"lang-it.js"
+],
+"IN QUESTO CAMPIONATO NESSUNO CI FERMA!": [
+"lang-it.js"
+],
+"COME VALUTI LA PARTITA DI OGGI?": [
+"lang-it.js"
+],
+"ABBIAMO ESEGUITO IL PIANO ALLA PERFEZIONE.": [
+"lang-it.js"
+],
+"L'AVVERSARIO OGGI NON ERA ALLA NOSTRA ALTEZZA.": [
+"lang-it.js"
+],
+"COSA PENSI DEL PAREGGIO?": [
+"lang-it.js"
+],
+"ANCHE UN PUNTO CONTA, ANDIAMO AVANTI.": [
+"lang-it.js"
+],
+"LE DECISIONI ARBITRALI HANNO INFLUITO SUL RISULTATO.": [
+"lang-it.js"
+],
+"PERCHÉ NON AVETE PORTATO A CASA I TRE PUNTI?": [
+"lang-it.js"
+],
+"HANNO DIFESO BENE, LI RISPETTIAMO.": [
+"lang-it.js"
+],
+"QUESTO RISULTATO È INACCETTABILE PER NOI.": [
+"lang-it.js"
+],
+"CI SCUSIAMO, LAVOREREMO ANCORA DI PIÙ.": [
+"lang-it.js"
+],
+"È STATO UN INCIDENTE, CI RIALZEREMO SUBITO.": [
+"lang-it.js"
+],
+"ALCUNI COMPAGNI OGGI NON C'ERANO.": [
+"lang-it.js"
+],
+"QUAL È STATO IL MOTIVO DELLA SCONFITTA?": [
+"lang-it.js"
+],
+"SIAMO TUTTI RESPONSABILI, ME COMPRESO.": [
+"lang-it.js"
+],
+"L'AVVERSARIO HA SFRUTTATO BENE LE OCCASIONI.": [
+"lang-it.js"
+],
+"LA TATTICA ERA SBAGLIATA, PARLERÒ CON IL MISTER.": [
+"lang-it.js"
+],
+"NIENTE DI TUTTO QUESTO SENZA LA MIA SQUADRA.": [
+"lang-it.js"
+],
+"COME TI SENTI DOPO QUESTI GOL?": [
+"lang-it.js"
+],
+"SONO FELICISSIMO, NE ARRIVERANNO ALTRI.": [
+"lang-it.js"
+],
+"UMILE": [
+"lang-it.js"
+],
+"SALTA L'INTERVISTA": [
+"lang-it.js"
+],
+"LE TUE PAROLE FANNO DISCUTERE NELLO SPOGLIATOIO.": [
+"lang-it.js"
+],
 "— CI SIAMO QUALIFICATI!": [
 "lang-it.js"
 ],
@@ -245143,6 +247288,9 @@
 "lang-it.js"
 ],
 "{} ha accettato: +{} a settimana": [
+"lang-it.js"
+],
+"Intervista post-partita · {} {} {}": [
 "lang-it.js"
 ],
 "Ranking delle nazionali {}": [
@@ -252001,6 +254149,111 @@
 "lang-pt.js"
 ],
 "Em alta": [
+"lang-pt.js"
+],
+"Prepare-se": [
+"lang-pt.js"
+],
+"O que você quer dizer depois da vitória?": [
+"lang-pt.js"
+],
+"Parabéns aos meus companheiros, vencemos juntos.": [
+"lang-pt.js"
+],
+"Trabalhamos muito e merecemos a vitória.": [
+"lang-pt.js"
+],
+"Ninguém nos para nessa liga!": [
+"lang-pt.js"
+],
+"Como você avalia o jogo de hoje?": [
+"lang-pt.js"
+],
+"Jogamos bem, mas ainda podemos melhorar.": [
+"lang-pt.js"
+],
+"Executamos nosso plano perfeitamente.": [
+"lang-pt.js"
+],
+"O adversário não foi páreo pra gente hoje.": [
+"lang-pt.js"
+],
+"O que você acha do empate?": [
+"lang-pt.js"
+],
+"Um ponto também conta, seguimos em frente.": [
+"lang-pt.js"
+],
+"Fizemos de tudo para vencer, faltou sorte.": [
+"lang-pt.js"
+],
+"As decisões do árbitro afetaram o resultado.": [
+"lang-pt.js"
+],
+"Por que vocês não saíram com os três pontos?": [
+"lang-pt.js"
+],
+"O adversário defendeu bem, respeitamos.": [
+"lang-pt.js"
+],
+"Não aproveitamos as chances, na próxima vai.": [
+"lang-pt.js"
+],
+"Esse resultado é inaceitável para nós.": [
+"lang-pt.js"
+],
+"O que você quer dizer à torcida depois da derrota?": [
+"lang-pt.js"
+],
+"Pedimos desculpas, vamos trabalhar ainda mais.": [
+"lang-pt.js"
+],
+"Foi um tropeço, vamos nos recuperar logo.": [
+"lang-pt.js"
+],
+"Alguns companheiros não apareceram hoje.": [
+"lang-pt.js"
+],
+"O que causou essa derrota?": [
+"lang-pt.js"
+],
+"Todos somos responsáveis, eu também.": [
+"lang-pt.js"
+],
+"O adversário aproveitou bem as chances.": [
+"lang-pt.js"
+],
+"A tática estava errada, vou falar com o técnico.": [
+"lang-pt.js"
+],
+"Você foi o destaque hoje. Qual é o segredo?": [
+"lang-pt.js"
+],
+"Nada disso aconteceria sem o meu time.": [
+"lang-pt.js"
+],
+"Treino muito e estou colhendo os frutos.": [
+"lang-pt.js"
+],
+"Sou o melhor dessa liga, todo mundo vê.": [
+"lang-pt.js"
+],
+"Como você se sente depois dos gols?": [
+"lang-pt.js"
+],
+"Os gols foram para minha família e nossa torcida.": [
+"lang-pt.js"
+],
+"Estou muito feliz, vem mais por aí.": [
+"lang-pt.js"
+],
+"Isso é só o começo, vou quebrar recordes.": [
+"lang-pt.js"
+],
+"Pular a entrevista": [
+"lang-pt.js"
+],
+"Suas palavras viraram assunto no vestiário.": [
 "lang-pt.js"
 ],
 "— nos classificamos!": [
@@ -259857,6 +262110,78 @@
 "EM ALTA": [
 "lang-pt.js"
 ],
+"PREPARE-SE": [
+"lang-pt.js"
+],
+"TRABALHAMOS MUITO E MERECEMOS A VITÓRIA.": [
+"lang-pt.js"
+],
+"NINGUÉM NOS PARA NESSA LIGA!": [
+"lang-pt.js"
+],
+"COMO VOCÊ AVALIA O JOGO DE HOJE?": [
+"lang-pt.js"
+],
+"EXECUTAMOS NOSSO PLANO PERFEITAMENTE.": [
+"lang-pt.js"
+],
+"O ADVERSÁRIO NÃO FOI PÁREO PRA GENTE HOJE.": [
+"lang-pt.js"
+],
+"O QUE VOCÊ ACHA DO EMPATE?": [
+"lang-pt.js"
+],
+"UM PONTO TAMBÉM CONTA, SEGUIMOS EM FRENTE.": [
+"lang-pt.js"
+],
+"AS DECISÕES DO ÁRBITRO AFETARAM O RESULTADO.": [
+"lang-pt.js"
+],
+"POR QUE VOCÊS NÃO SAÍRAM COM OS TRÊS PONTOS?": [
+"lang-pt.js"
+],
+"O ADVERSÁRIO DEFENDEU BEM, RESPEITAMOS.": [
+"lang-pt.js"
+],
+"ESSE RESULTADO É INACEITÁVEL PARA NÓS.": [
+"lang-pt.js"
+],
+"PEDIMOS DESCULPAS, VAMOS TRABALHAR AINDA MAIS.": [
+"lang-pt.js"
+],
+"FOI UM TROPEÇO, VAMOS NOS RECUPERAR LOGO.": [
+"lang-pt.js"
+],
+"ALGUNS COMPANHEIROS NÃO APARECERAM HOJE.": [
+"lang-pt.js"
+],
+"O QUE CAUSOU ESSA DERROTA?": [
+"lang-pt.js"
+],
+"TODOS SOMOS RESPONSÁVEIS, EU TAMBÉM.": [
+"lang-pt.js"
+],
+"O ADVERSÁRIO APROVEITOU BEM AS CHANCES.": [
+"lang-pt.js"
+],
+"A TÁTICA ESTAVA ERRADA, VOU FALAR COM O TÉCNICO.": [
+"lang-pt.js"
+],
+"NADA DISSO ACONTECERIA SEM O MEU TIME.": [
+"lang-pt.js"
+],
+"COMO VOCÊ SE SENTE DEPOIS DOS GOLS?": [
+"lang-pt.js"
+],
+"ESTOU MUITO FELIZ, VEM MAIS POR AÍ.": [
+"lang-pt.js"
+],
+"PULAR A ENTREVISTA": [
+"lang-pt.js"
+],
+"SUAS PALAVRAS VIRARAM ASSUNTO NO VESTIÁRIO.": [
+"lang-pt.js"
+],
 "— NOS CLASSIFICAMOS!": [
 "lang-pt.js"
 ],
@@ -264978,6 +267303,9 @@
 "{} aceitou: +{} por semana": [
 "lang-pt.js"
 ],
+"Entrevista pós-jogo · {} {} {}": [
+"lang-pt.js"
+],
 "Ranking de seleções {}": [
 "lang-pt.js"
 ],
@@ -267380,9 +269708,6 @@
 "POZİSYON!": [
 "match.js"
 ],
-"Hazır ol": [
-"match.js"
-],
 "{} {} · Tekrar dene": [
 "match.js"
 ],
@@ -267418,117 +269743,6 @@
 "meta.js"
 ],
 "🎙️ Basın toplantısı: \"{}\"{}": [
-"meta.js"
-],
-"Galibiyetin ardından neler söylemek istersin?": [
-"meta.js"
-],
-"Takım arkadaşlarımı tebrik ederim, hep birlikte kazandık.": [
-"meta.js"
-],
-"Çok çalıştık, bu galibiyeti hak ettik.": [
-"meta.js"
-],
-"Bu ligde bizi kimse durduramaz!": [
-"meta.js"
-],
-"Bugünkü oyunu nasıl değerlendiriyorsun?": [
-"meta.js"
-],
-"İyi oynadık ama geliştirmemiz gereken yerler var.": [
-"meta.js"
-],
-"Planımızı sahaya mükemmel yansıttık.": [
-"meta.js"
-],
-"Rakip bugün bize rakip olamadı.": [
-"meta.js"
-],
-"Beraberlik için ne dersin?": [
-"meta.js"
-],
-"Bir puan da önemli, devam ediyoruz.": [
-"meta.js"
-],
-"Kazanmak için her şeyi yaptık, şanssızdık.": [
-"meta.js"
-],
-"Hakem kararları maçın sonucunu etkiledi.": [
-"meta.js"
-],
-"Sahadan neden üç puanla ayrılamadınız?": [
-"meta.js"
-],
-"Rakip iyi savundu, saygı duyuyoruz.": [
-"meta.js"
-],
-"Pozisyonları değerlendiremedik, bir dahakine olacak.": [
-"meta.js"
-],
-"Bu sonuç bizim için kabul edilemez.": [
-"meta.js"
-],
-"Mağlubiyetin ardından taraftarlara ne söylemek istersin?": [
-"meta.js"
-],
-"Özür dileriz, daha çok çalışacağız.": [
-"meta.js"
-],
-"Bu bir kaza, hemen toparlanacağız.": [
-"meta.js"
-],
-"Bazı arkadaşlarım bugün sahada yoktu.": [
-"meta.js"
-],
-"Bu yenilginin sebebi neydi?": [
-"meta.js"
-],
-"Hepimiz sorumluyuz, ben de dahil.": [
-"meta.js"
-],
-"Rakip fırsatları iyi değerlendirdi.": [
-"meta.js"
-],
-"Taktik yanlıştı, hocayla konuşacağım.": [
-"meta.js"
-],
-"Bugün maçın yıldızıydın. Bu performansın sırrı ne?": [
-"meta.js"
-],
-"Takımım olmasa bunların hiçbiri olmazdı.": [
-"meta.js"
-],
-"Antrenmanda çok çalışıyorum, karşılığını alıyorum.": [
-"meta.js"
-],
-"Ben bu ligin en iyisiyim, bunu herkes görüyor.": [
-"meta.js"
-],
-"Gollerden sonra neler hissediyorsun?": [
-"meta.js"
-],
-"Golleri ailem ve taraftarlarımız için attım.": [
-"meta.js"
-],
-"Çok mutluyum, daha fazlası gelecek.": [
-"meta.js"
-],
-"Bu sadece başlangıç, rekorları kıracağım.": [
-"meta.js"
-],
-"Mütevazı": [
-"meta.js"
-],
-"Maç Sonu Röportajı · {} {} {}": [
-"meta.js"
-],
-"Röportaj vermeden geç": [
-"meta.js"
-],
-"Sözlerin soyunma odasında konuşuluyor.": [
-"meta.js"
-],
-"🎙️ Maç sonu: \"{}\"{}": [
 "meta.js"
 ],
 "+25 enerji": [
@@ -282586,9 +284800,6 @@
 "value.js"
 ],
 "StarFoot Support": [
-"value.js"
-],
-"SF": [
 "value.js"
 ],
 "[data-sup],[data-payrise],[data-mvopen],[data-mvtab],[data-mv],[data-nego]": [

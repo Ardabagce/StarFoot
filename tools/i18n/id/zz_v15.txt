@@ -268,3 +268,80 @@
 6117|Wawancara Usai Laga · {} {} {}
 6118|🎙️ Usai laga: "{}"{}
 6116|Ucapanmu jadi bahan obrolan di ruang ganti.
+6199|Hat-trick melawan {}! Kamu membawa pulang bolanya. Bagaimana perasaanmu?
+6120|Bola ini milik rekan setimku, tanpa mereka tak mungkin.
+6121|Ini mimpiku dan akhirnya terwujud.
+6122|Lihat saja berapa gol lagi yang kucetak musim ini!
+6214|Bisa ceritakan golmu di menit ke-{}?
+6123|Rekanku memberi umpan hebat, aku tinggal menyentuh.
+6124|Aku melihat kiper, memilih sudut, lalu menendang.
+6125|Di situasi itu tak ada yang bisa menghentikanku!
+6126|Tribun meledak karena gol di menit akhir. Ceritakan momen itu.
+6129|Kami percaya sampai akhir, itulah karakter tim ini.
+6130|Kami bekerja untuk momen seperti ini, aku sangat senang.
+6131|Pemain besar muncul di momen besar.
+6203|Hari ini tanpa gol, tapi {} assist. Assist atau gol?
+6133|Asal tim menang, siapa pun yang mencetak gol tak masalah.
+6134|Hari ini assist, laga berikutnya gol.
+6206|Tanpa kontribusi gol hari ini. Apakah pertahanan {} menyulitkanmu?
+6136|Mereka bertahan dengan baik, aku harus bekerja lebih keras.
+6137|Aku berlari untuk tim, gol akan datang.
+6138|Lihat bedanya di laga berikutnya.
+6202|Rating {} hari ini, salah satu yang terbaik. Apa rahasiamu?
+6140|Kepercayaan pelatih dan tim membuatku tenang.
+6141|Aku melakukan di laga apa yang kulakukan saat latihan.
+6142|Ini level normalku, biasakan saja.
+6143|Penampilanmu hari ini tak sesuai harapan. Apa yang terjadi?
+6146|Hari yang buruk, aku bertanggung jawab.
+6147|Tak setiap laga sama, aku akan cepat bangkit.
+6148|Semua melihatku, tapi aku juga manusia.
+6201|Kamu menyelamatkan tim dengan {} penyelamatan. Mana yang tersulit?
+6150|Pertahanan kami sangat membantu, kami melakukannya bersama.
+6151|Tembakan ke pojok itu, sangat sulit.
+6152|Hari ini tak ada yang bisa membobol gawangku.
+6216|Menang {}! Apa titik baliknya?
+6154|Setelah gol pertama tim lebih tenang.
+6155|Kami menjalankan rencana dengan baik dan pantas menang.
+6156|Aku tahu kami akan menang sejak masuk lapangan.
+6204|Menang telak atas {}. Ada pesan untuk lawan?
+6211|{} tim yang bagus, hari ini milik kami saja.
+6159|Skor ini buah kerja keras kami.
+6160|Ini baru permulaan, semua harus takut pada kami.
+6210|Imbang {}. Puas dengan satu poin?
+6162|Satu poin tetap berharga, kami lanjutkan.
+6163|Kami bisa menang, sedikit kurang beruntung.
+6164|Kami sama sekali tidak puas dengan hasil ini.
+6205|Kalian kalah {1} dari {0}. Apa yang dibicarakan di ruang ganti?
+6165|Kami semua bertanggung jawab, kami akan cepat bangkit.
+6166|Kami membahas kesalahan dan belajar darinya.
+6167|Beberapa rekan harus memberi lebih.
+6200|Apa pendapatmu tentang {}? Suporter akan membicarakan laga ini berminggu-minggu.
+6169|Kami bermain untuk suporter, atmosfernya sangat spesial.
+6170|Sensasi derbi berbeda, aku takkan lupa laga ini.
+6171|Akulah pemain derbi, semua melihatnya.
+6212|Kalian di posisi {} liga. Apa target musim ini?
+6173|Kami jalani laga demi laga, target dibahas di akhir musim.
+6174|Kami akan berjuang ke kompetisi Eropa.
+6175|Kami pantas berada lebih tinggi.
+6176|Gelar juara! Tak ada target lain.
+6209|Laga berikutnya melawan {}. Bagaimana persiapan kalian?
+6208|Kami menghormati {}, kami akan bersiap dengan baik.
+6180|Kami ingin melanjutkan tren kemenangan ini.
+6181|Kami ingin segera bangkit dan menang.
+6215|Aku akan mencetak gol juga melawan {}, catat itu.
+6182|Bagaimana dukungan dari tribun? Ada pesan untuk suporter?
+6185|Terima kasih atas dukungannya, kami bermain untuk kalian.
+6186|Bermain di depan suporter ini adalah kehormatan.
+6187|Semakin kami menang, semakin penuh stadionnya.
+6188|Bagaimana pendapatmu tentang peran dari pelatih?
+6189|Aku siap melakukan apa pun yang diminta pelatih.
+6190|Dia percaya padaku dan aku membalasnya.
+6191|Kurasa aku harus memikul tanggung jawab lebih.
+6192|Dengan performa ini, apakah pintu timnas terbuka?
+6193|Aku fokus ke klub dulu, sisanya akan datang.
+6194|Mengenakan seragam timnas adalah mimpi terbesarku.
+6195|Biarkan para pelatih terus mengamatiku.
+6227|{} · Usai laga
+6197|Akhiri wawancara
+6224|🎙️ Usai laga: "{}"
+6198|LANGSUNG

@@ -268,3 +268,80 @@
 6117|Interview nach dem Spiel · {} {} {}
 6118|🎙️ Nach dem Spiel: „{}“{}
 6116|Deine Worte sind Thema in der Kabine.
+6199|Hattrick gegen {}! Du nimmst den Ball mit nach Hause. Wie fühlst du dich?
+6120|Der Ball gehört meinen Mitspielern, ohne sie ginge das nicht.
+6121|Das war mein Traum, endlich ist er wahr geworden.
+6122|Ihr werdet sehen, wie viele ich diese Saison noch mache!
+6214|Erzähl uns von deinem Tor in der {}. Minute.
+6123|Mein Mitspieler hat super gepasst, ich musste nur noch einschieben.
+6124|Ich habe den Torwart beobachtet, die Ecke gewählt und abgezogen.
+6125|In der Situation hätte mich keiner stoppen können!
+6126|Beim späten Tor sind die Tribünen explodiert. Erzähl uns von dem Moment.
+6129|Wir haben bis zum Schluss geglaubt, das ist der Charakter dieses Teams.
+6130|Für solche Momente arbeiten wir, ich bin sehr glücklich.
+6131|Große Spieler zeigen sich in großen Momenten.
+6203|Heute kein Tor, aber {} Vorlagen. Vorlage oder Tor?
+6133|Hauptsache, das Team gewinnt, egal wer trifft.
+6134|Heute Vorlagen, nächstes Mal Tore.
+6206|Heute keine Torbeteiligung. Hat dich die Abwehr von {} gefordert?
+6136|Sie haben gut verteidigt, ich muss mehr arbeiten.
+6137|Ich bin für das Team gelaufen, die Tore kommen noch.
+6138|Im nächsten Spiel seht ihr den Unterschied.
+6202|Heute Note {}, einer der Besten auf dem Platz. Was ist dein Geheimnis?
+6140|Das Vertrauen von Trainer und Team gibt mir Ruhe.
+6141|Ich mache im Spiel, was ich im Training mache.
+6142|Das ist mein normales Niveau, gewöhnt euch dran.
+6143|Heute lief es nicht wie gewünscht. Was war los?
+6146|Es war ein schlechter Tag, ich übernehme die Verantwortung.
+6147|Nicht jedes Spiel ist gleich, ich komme schnell zurück.
+6148|Alle schauen auf mich, aber ich bin auch nur ein Mensch.
+6201|Mit {} Paraden hast du dein Team im Spiel gehalten. Welche war die schwerste?
+6150|Unsere Abwehr hat viel geholfen, wir haben es gemeinsam geschafft.
+6151|Der Schuss in die Ecke war richtig schwer.
+6152|Heute kam keiner an mir vorbei.
+6216|{}-Sieg! Was war der Wendepunkt?
+6154|Nach dem ersten Tor war das Team befreit.
+6155|Wir haben den Plan gut umgesetzt und verdient gewonnen.
+6156|Als wir rausgingen, wusste ich, dass wir gewinnen.
+6204|Klarer Sieg gegen {}. Eine Botschaft an den Gegner?
+6211|{} ist ein gutes Team, heute war einfach unser Tag.
+6159|Dieses Ergebnis ist der Lohn für unsere Arbeit.
+6160|Das ist erst der Anfang, alle sollten uns fürchten.
+6210|{} unentschieden. Freut euch der Punkt?
+6162|Ein Punkt ist auch wertvoll, wir machen weiter.
+6163|Wir hätten gewinnen können, hatten etwas Pech.
+6164|Mit diesem Ergebnis sind wir gar nicht zufrieden.
+6205|{1} gegen {0} verloren. Was wurde in der Kabine gesagt?
+6165|Wir sind alle verantwortlich, wir kommen schnell zurück.
+6166|Wir haben über unsere Fehler gesprochen und gelernt.
+6167|Einige Mitspieler müssen mehr geben.
+6200|Was sagst du zum {}? Die Fans reden noch wochenlang darüber.
+6169|Wir haben für unsere Fans gespielt, die Atmosphäre war besonders.
+6170|Derby-Fieber ist etwas anderes, dieses Spiel vergesse ich nie.
+6171|Ich bin der Derby-Spieler, alle haben es gesehen.
+6212|Ihr seid {}. in der Liga. Was ist euer Saisonziel?
+6173|Wir gehen Spiel für Spiel, über Ziele reden wir am Ende.
+6174|Wir kämpfen um einen Europapokal-Platz.
+6175|Wir verdienen es, weiter oben zu stehen.
+6176|Die Meisterschaft! Ein anderes Ziel gibt es nicht.
+6209|Als Nächstes geht es gegen {}. Wie bereitet ihr euch vor?
+6208|{} verdient Respekt, wir bereiten uns gut vor.
+6180|Wir wollen die Siegesserie fortsetzen.
+6181|Wir wollen sofort zurückkommen und gewinnen.
+6215|Gegen {} treffe ich auch, schreibt das auf.
+6182|Wie war die Unterstützung von den Rängen? Eine Botschaft an die Fans?
+6185|Danke für eure Unterstützung, wir spielen für euch.
+6186|Vor diesen Fans zu spielen ist ein Privileg.
+6187|Je mehr wir gewinnen, desto voller wird das Stadion.
+6188|Wie bewertest du die Rolle, die dir der Trainer gibt?
+6189|Ich mache, was der Trainer verlangt.
+6190|Er vertraut mir und ich zahle es zurück.
+6191|Ich finde, ich sollte mehr Verantwortung übernehmen.
+6192|Öffnet diese Form die Tür zur Nationalmannschaft?
+6193|Erst mal zählt mein Verein, der Rest kommt.
+6194|Das Nationaltrikot zu tragen ist mein größter Traum.
+6195|Die Trainer sollen mich weiter beobachten.
+6227|{} · Nach dem Spiel
+6197|Interview beenden
+6224|🎙️ Nach dem Spiel: „{}“
+6198|LIVE

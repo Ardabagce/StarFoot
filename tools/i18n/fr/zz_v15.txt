@@ -268,3 +268,80 @@
 6117|Interview d'après-match · {} {} {}
 6118|🎙️ Après le match : « {} »{}
 6116|Tes propos font parler dans le vestiaire.
+6199|Triplé contre {} ! Tu repars avec le ballon. Que ressens-tu ?
+6120|Ce ballon est à mes coéquipiers, sans eux rien n'aurait été possible.
+6121|C'était mon rêve, il s'est enfin réalisé.
+6122|Vous verrez combien j'en marque encore cette saison !
+6214|Tu peux nous raconter ton but à la {}e minute ?
+6123|Mon coéquipier m'a fait une super passe, je n'ai eu qu'à pousser.
+6124|J'ai regardé le gardien, choisi mon coin et frappé.
+6125|Sur cette action, personne ne pouvait m'arrêter !
+6126|Les tribunes ont explosé sur ce but tardif. Raconte-nous ce moment.
+6129|On y a cru jusqu'au bout, c'est le caractère de cette équipe.
+6130|On travaille pour ces moments, je suis très heureux.
+6131|Les grands joueurs répondent présents dans les grands moments.
+6203|Pas de but aujourd'hui, mais {} passes décisives. Passe ou but ?
+6133|Tant que l'équipe gagne, peu importe qui marque.
+6134|Des passes aujourd'hui, des buts la prochaine fois.
+6206|Pas de but ni de passe aujourd'hui. La défense de {} t'a-t-elle gêné ?
+6136|Ils ont bien défendu, je dois travailler davantage.
+6137|J'ai couru pour l'équipe, les buts viendront.
+6138|Vous verrez la différence au prochain match.
+6202|Note de {} aujourd'hui, parmi les meilleurs. Quel est ton secret ?
+6140|La confiance du coach et de l'équipe me libère.
+6141|Je fais en match ce que je fais à l'entraînement.
+6142|C'est mon niveau normal, habituez-vous.
+6143|Ce n'était pas la performance voulue aujourd'hui. Que s'est-il passé ?
+6146|C'était un mauvais jour, j'assume.
+6147|Chaque match est différent, je vais vite rebondir.
+6148|Tout le monde me regarde, mais je suis humain.
+6201|Tu as maintenu ton équipe avec {} arrêts. Lequel était le plus dur ?
+6150|Notre défense a beaucoup aidé, on l'a fait ensemble.
+6151|Celle qui partait dans la lucarne, très difficile.
+6152|Personne ne pouvait me battre aujourd'hui.
+6216|Victoire {} ! Quel a été le tournant du match ?
+6154|Après le premier but, l'équipe s'est libérée.
+6155|On a bien appliqué notre plan et mérité la victoire.
+6156|Je savais qu'on gagnerait dès l'entrée sur le terrain.
+6204|Large victoire contre {}. Un message pour l'adversaire ?
+6211|{} est une bonne équipe, c'était juste notre jour.
+6159|Ce score récompense notre travail.
+6160|Ce n'est que le début, tout le monde doit nous craindre.
+6210|Match nul {}. Ce point vous satisfait-il ?
+6162|Un point, c'est précieux aussi, on continue.
+6163|On aurait pu gagner, on a manqué de chance.
+6164|Ce résultat ne nous satisfait pas du tout.
+6205|Défaite {1} contre {0}. Qu'est-ce qui s'est dit au vestiaire ?
+6165|On est tous responsables, on va vite rebondir.
+6166|On a parlé de nos erreurs et on en a tiré des leçons.
+6167|Certains coéquipiers doivent en donner plus.
+6200|Que veux-tu dire sur le {} ? Les supporters en parleront pendant des semaines.
+6169|On a joué pour nos supporters, l'ambiance était spéciale.
+6170|Un derby, c'est autre chose, je n'oublierai jamais ce match.
+6171|Je suis l'homme des derbys, tout le monde l'a vu.
+6212|Vous êtes {}e au classement. Quel est l'objectif de la saison ?
+6173|On avance match après match, on parlera objectifs à la fin.
+6174|On va se battre pour l'Europe.
+6175|On mérite d'être plus haut.
+6176|Le titre ! Il n'y a pas d'autre objectif.
+6209|Prochain match contre {}. Comment allez-vous vous préparer ?
+6208|On respecte {}, on va bien se préparer.
+6180|On veut prolonger cette série de victoires.
+6181|On veut vite rebondir et gagner.
+6215|Contre {}, je marquerai aussi, notez-le.
+6182|Comment était le soutien des tribunes ? Un message aux supporters ?
+6185|Merci pour votre soutien, on joue pour vous.
+6186|Jouer devant ces supporters est un privilège.
+6187|Plus on gagnera, plus le stade sera plein.
+6188|Comment vois-tu le rôle que te confie le coach ?
+6189|Je suis prêt à faire tout ce que le coach demande.
+6190|Il me fait confiance et je le lui rends.
+6191|Je pense devoir prendre plus de responsabilités.
+6192|Cette forme peut-elle t'ouvrir la porte de la sélection ?
+6193|Je me concentre d'abord sur mon club, le reste suivra.
+6194|Porter le maillot national est mon plus grand rêve.
+6195|Que les sélectionneurs continuent de m'observer.
+6227|{} · Après-match
+6197|Terminer l'interview
+6224|🎙️ Après le match : « {} »
+6198|EN DIRECT
