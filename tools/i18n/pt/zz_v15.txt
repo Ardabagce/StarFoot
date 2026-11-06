@@ -228,3 +228,5 @@
 6074|Minha maior apoiadora, {}.
 6075|Vestiário do {}
 1180|Casa
+6077|#Despedida
+6078|#Estreia

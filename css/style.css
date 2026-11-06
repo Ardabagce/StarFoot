@@ -2553,3 +2553,22 @@ div.doc { position: fixed; inset: 0; z-index: 49; background: #000; display: fle
 @media (prefers-reduced-motion: reduce) { .modal:not(.hidden) .modal-card, .tab-anim > * { animation: none !important; } }
 /* kaleci ipuçları kapalıyken anlatım yazıları gizlenir */
 #mt-moment.no-help #mm-desc, #mt-moment.no-help .tg-foot { display: none; }
+
+/* StarFeed Gündem: zaman akışı kartları (kendi tasarımımız) */
+.ag-lbl { margin-top: 10px; }
+.ag-tags { display: flex; gap: 6px; flex-wrap: wrap; padding: 0 14px 8px; }
+.ag-tags span { padding: 4px 10px; border-radius: 999px; background: rgba(255, 207, 63, .12); border: 1px solid rgba(255, 207, 63, .35); color: #ffe27a; font-size: 12px; font-weight: 700; }
+.ag { border-top: 1px solid #1d2a52; }
+.ag-p { display: grid; grid-template-columns: 42px 1fr; gap: 10px; padding: 10px 14px; border-bottom: 1px solid #1d2a52; }
+.ag-av canvas { display: block; width: 42px; height: 42px; border-radius: 50%; border: 2px solid #ffcf3f; }
+.ag-p.retire .ag-av canvas { border-color: #6c7cab; }
+.ag-b { min-width: 0; }
+.ag-h { display: flex; align-items: center; gap: 4px; min-width: 0; }
+.ag-h b { font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.ag-h small { color: #9fb0d8; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-left: 2px; }
+.ag-b p { margin: 2px 0 6px; font-size: 14px; line-height: 1.35; }
+.ag-b p em { font-style: normal; color: #ffcf3f; font-weight: 600; }
+.ag-a { display: flex; justify-content: space-between; max-width: 320px; color: #9fb0d8; font-size: 12px; }
+.ag-a span { display: inline-flex; align-items: center; gap: 4px; }
+.ag-a .igi, .ag-a .ag-i { width: 15px; height: 15px; }
+.ag-a .lk .igi { color: #ff6f8a; }

@@ -228,3 +228,5 @@
 6074|Il mio più grande sostegno, {}.
 6075|Spogliatoio del {}
 1180|Casa
+6077|#Addio
+6078|#Esordio

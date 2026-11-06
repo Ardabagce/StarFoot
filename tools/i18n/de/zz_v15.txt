@@ -228,3 +228,5 @@
 6074|Meine größte Unterstützung: {}.
 6075|{} Kabine
 1180|Zuhause
+6077|#Abschied
+6078|#Debüt

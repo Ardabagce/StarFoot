@@ -579,9 +579,29 @@ const Social = {
   },
   fmt(n) {
     n = Math.round(n);
+    if (n >= 1e9) return (n / 1e9).toFixed(1).replace('.', ',') + ' Mr';
     if (n >= 1e6) return (n / 1e6).toFixed(n >= 1e7 ? 0 : 1).replace('.', ',') + ' Mn';
     if (n >= 1e3) return (n / 1e3).toFixed(n >= 1e4 ? 0 : 1).replace('.', ',') + ' B';
     return String(n);
+  },
+  // Gündem: dünyadaki yıldızların paylaşımları zaman akışı kartları olarak (kendi tasarımımız)
+  agenda(list) {
+    const tags = { retire: '#Veda', debut: '#İlkMaç', transfer: '#Transfer' };
+    const seen = [...new Set(list.map((x) => tags[x.kind]).filter(Boolean))];
+    const ico = (k) => IG.i({ rep: '<path d="M4 12a8 8 0 1 1 3.3 6.5L4 20l1-3.6A8 8 0 0 1 4 12z"/>', rt: '<path d="M7 7h10v4"/><path d="m14 4 3 3-3 3"/><path d="M17 17H7v-4"/><path d="m10 20-3-3 3-3"/>', view: '<path d="M5 20V11M12 20V5M19 20v-6"/>' }[k], 'ag-i');
+    return `<div class="lbl ag-lbl">Gündem</div>
+      ${seen.length ? `<div class="ag-tags">${seen.map((t) => `<span>${t}</span>`).join('')}</div>` : ''}
+      <div class="ag">${list.map((x) => {
+        const rep = Math.max(1, Math.round(x.likes * 0.045)), rt = Math.max(1, Math.round(x.likes * 0.13)), views = Math.round(x.likes * 16);
+        return `<article class="ag-p ${x.kind}">
+          <span class="ag-av"><canvas data-story="${U.esc(x.n)}"></canvas></span>
+          <div class="ag-b">
+            <div class="ag-h"><b>${U.esc(x.n)}</b>${IG.verified()}<small>${U.esc(x.u)} · ${x.y}</small></div>
+            <p>${U.esc(x.text)}${tags[x.kind] ? ` <em>${tags[x.kind]}</em>` : ''}</p>
+            <div class="ag-a"><span>${ico('rep')}${Social.fmt(rep)}</span><span>${ico('rt')}${Social.fmt(rt)}</span><span class="lk">${IG.heart(true)}${Social.fmt(x.likes)}</span><span>${ico('view')}${Social.fmt(views)}</span></div>
+          </div>
+        </article>`;
+      }).join('')}</div>`;
   },
   // Dünya gündemi: yıldızların veda, ilk maç ve transfer paylaşımları
   trend(x) {
@@ -694,7 +714,7 @@ const Social = {
         ${tr.length ? `<div class="ig-hl">${tr.map((x) => `<div class="ig-st ${x.kind}" data-trend="${U.esc(x.n)}"><i><canvas data-story="${U.esc(x.n)}"></canvas></i><small>${U.esc(x.n.split(' ').slice(-1)[0])}</small></div>`).join('')}</div>` : ''}
         <div class="ig-tabs"><span class="on">${IG.grid()}</span><span>${IG.reels()}</span><span>${IG.tag()}</span></div>
         ${so.posts.length ? `<div class="ig-grid">${so.posts.slice(0, 12).map((x) => `<button class="ig-tile" data-post="${x.id}" aria-label="${U.esc(x.text)}"><canvas data-pid="${x.id}" data-crop="1"></canvas>${x.kind === 'trophy' || x.kind === 'transfer' ? `<span class="ig-badge">${IG.multi()}</span>` : ''}<span class="ig-hov">${IG.heart(true)}${Social.fmt(x.likes)}</span></button>`).join('')}</div>` : '<p class="muted">Henüz paylaşım yok.</p>'}
-        ${tr.length ? `<div class="lbl">Gündem</div><div class="so-trends">${tr.slice(0, 6).map((x) => `<div class="so-tr ${x.kind}"><b>${U.esc(x.u)}</b><span>${U.esc(x.text)}</span><small>${Icon('heart')}${Social.fmt(x.likes)} · ${x.y}</small></div>`).join('')}</div>` : ''}
+        ${tr.length ? Social.agenda(tr.slice(0, 6), verified) : ''}
       </section>`;
   },
 

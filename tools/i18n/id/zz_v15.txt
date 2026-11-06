@@ -228,3 +228,5 @@
 6074|Pendukung terbesarku, {}.
 6075|Ruang Ganti {}
 1180|Rumah
+6077|#Perpisahan
+6078|#Debut
