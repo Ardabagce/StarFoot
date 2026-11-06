@@ -328,14 +328,21 @@ def upload_preview(asc, vloc_id, loc):
     if not f.exists() or vloc_id == 'DRY':
         return
     sets = {s['attributes']['previewType']: s for s in asc.get(f'/v1/appStoreVersionLocalizations/{vloc_id}/appPreviewSets', limit=20)['data']}
-    s = sets.get('IPHONE_67')
+    # 6,9"/6,7" ve 6,1"/6,3" iPhone'lar ayrı setler kullanır (6,1" için ayrı ekran görüntüsü setimiz var): ikisine de yüklenir
+    for ptype in ('IPHONE_67', 'IPHONE_61'):
+        _upload_preview_set(asc, vloc_id, sets.get(ptype), ptype, f)
+
+
+def _upload_preview_set(asc, vloc_id, s, ptype, f):
     if s:
         for c in asc.get(f"/v1/appPreviewSets/{s['id']}/appPreviews", limit=10)['data']:
+            st = (c['attributes'].get('assetDeliveryState') or {})
+            print(f"      {ptype}: önceki video durumu {st.get('state')} {st.get('errors') or ''}")
             asc.req('DELETE', f"/v1/appPreviews/{c['id']}", write=True)
         set_id = s['id']
     else:
         set_id = asc.req('POST', '/v1/appPreviewSets', write=True, body={'data': {
-            'type': 'appPreviewSets', 'attributes': {'previewType': 'IPHONE_67'},
+            'type': 'appPreviewSets', 'attributes': {'previewType': ptype},
             'relationships': {'appStoreVersionLocalization': {'data': {'type': 'appStoreVersionLocalizations', 'id': vloc_id}}}}})['data']['id']
     blob = f.read_bytes()
     d = asc.req('POST', '/v1/appPreviews', write=True, body={'data': {
@@ -351,7 +358,7 @@ def upload_preview(asc, vloc_id, loc):
     asc.req('PATCH', f"/v1/appPreviews/{d['id']}", write=True, body={'data': {
         'type': 'appPreviews', 'id': d['id'],
         'attributes': {'uploaded': True, 'sourceFileChecksum': hashlib.md5(blob).hexdigest()}}})
-    print(f'      tanıtım videosu yüklendi ({f.name})')
+    print(f'      {ptype}: tanıtım videosu yüklendi ({f.name})')
 
 
 def probe(asc, path, **params):
