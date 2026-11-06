@@ -593,7 +593,7 @@ document.addEventListener('click', (e) => {
 });
 
 // ---------- Güncelleme duyurusu (her sürümde bir kez) ----------
-const APP_VER = '1.0.16';
+const APP_VER = '1.0.17';
 // Duyuru içeriğinin sürümü: yeni duyuru yazılınca güncellenir (yalnız sürüm atlamak tekrar göstermez)
 const WN_VER = '1.0.15';
 const WhatsNew = {

@@ -611,6 +611,7 @@ const Game = {
     if (typeof Big !== 'undefined') await Big.prepare(ctx);
     const sum = await Match.run(ctx, s);
     Game.applyMatch(sum, ctx, 'league');
+    if (typeof Interview !== 'undefined' && ctx.role !== 'out') await Interview.maybe(sum, ctx);
     // ligin geri kalanı
     const lg = Game.league();
     World.record(lg, fx.home, fx.away, sum.hs, sum.as);

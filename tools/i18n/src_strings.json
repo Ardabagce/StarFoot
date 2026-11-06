@@ -89680,6 +89680,17 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"GÜNDEM": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -93126,17 +93137,6 @@
 "lang-pt.js"
 ],
 "GÖÇEBE": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"GÜNDEM": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -130764,6 +130764,9 @@
 "Mit meinem Geschwister im Viertel gekickt, wie früher!": [
 "lang-de.js"
 ],
+"Im Trend": [
+"lang-de.js"
+],
 "– wir haben uns qualifiziert!": [
 "lang-de.js"
 ],
@@ -132040,9 +132043,6 @@
 "lang-de.js",
 "lang-fr.js",
 "lang-it.js"
-],
-"Im Trend": [
-"lang-de.js"
 ],
 "Südamerika-Pokal": [
 "lang-de.js"
@@ -139636,6 +139636,9 @@
 "ZUHAUSE": [
 "lang-de.js"
 ],
+"IM TREND": [
+"lang-de.js"
+],
 "– WIR HABEN UNS QUALIFIZIERT!": [
 "lang-de.js"
 ],
@@ -140584,9 +140587,6 @@
 "lang-de.js",
 "lang-fr.js",
 "lang-it.js"
-],
-"IM TREND": [
-"lang-de.js"
 ],
 "SÜDAMERIKA-POKAL": [
 "lang-de.js"
@@ -151652,6 +151652,9 @@
 "Played ball in the neighbourhood with my sibling, good old days!": [
 "lang-en.js"
 ],
+"Trending": [
+"lang-en.js"
+],
 "— we qualified!": [
 "lang-en.js"
 ],
@@ -152839,9 +152842,6 @@
 "lang-en.js"
 ],
 "Nomad": [
-"lang-en.js"
-],
-"Trending": [
 "lang-en.js"
 ],
 "South American Cup": [
@@ -160070,6 +160070,9 @@
 "WATCHED OUR OLD MATCHES WITH MY DAD.": [
 "lang-en.js"
 ],
+"TRENDING": [
+"lang-en.js"
+],
 "— WE QUALIFIED!": [
 "lang-en.js"
 ],
@@ -161000,9 +161003,6 @@
 "lang-en.js"
 ],
 "NOMAD": [
-"lang-en.js"
-],
-"TRENDING": [
 "lang-en.js"
 ],
 "SOUTH AMERICAN CUP": [
@@ -172076,6 +172076,9 @@
 "Jugué en el barrio con mi hermano, ¡como en los viejos tiempos!": [
 "lang-es.js"
 ],
+"Tendencia": [
+"lang-es.js"
+],
 "— ¡nos hemos clasificado!": [
 "lang-es.js"
 ],
@@ -173264,9 +173267,6 @@
 "lang-es.js"
 ],
 "Nómada": [
-"lang-es.js"
-],
-"Tendencia": [
 "lang-es.js"
 ],
 "Copa Sudamericana": [
@@ -180540,6 +180540,9 @@
 "lang-it.js",
 "lang-pt.js"
 ],
+"TENDENCIA": [
+"lang-es.js"
+],
 "— ¡NOS HEMOS CLASIFICADO!": [
 "lang-es.js"
 ],
@@ -181467,9 +181470,6 @@
 "lang-es.js"
 ],
 "NÓMADA": [
-"lang-es.js"
-],
-"TENDENCIA": [
 "lang-es.js"
 ],
 "COPA SUDAMERICANA": [
@@ -192428,6 +192428,9 @@
 "Foot dans le quartier avec mon frère, comme au bon vieux temps !": [
 "lang-fr.js"
 ],
+"Tendance": [
+"lang-fr.js"
+],
 "— on est qualifiés !": [
 "lang-fr.js"
 ],
@@ -193579,9 +193582,6 @@
 "lang-fr.js"
 ],
 "J'en ai les larmes aux yeux": [
-"lang-fr.js"
-],
-"Tendance": [
 "lang-fr.js"
 ],
 "Coupe d'Amérique du Sud": [
@@ -200633,6 +200633,9 @@
 "MAISON": [
 "lang-fr.js"
 ],
+"TENDANCE": [
+"lang-fr.js"
+],
 "— ON EST QUALIFIÉS !": [
 "lang-fr.js"
 ],
@@ -201523,9 +201526,6 @@
 "lang-fr.js"
 ],
 "J'EN AI LES LARMES AUX YEUX": [
-"lang-fr.js"
-],
-"TENDANCE": [
 "lang-fr.js"
 ],
 "COUPE D'AMÉRIQUE DU SUD": [
@@ -212190,6 +212190,9 @@
 "Main bola di kampung bersama saudara, seperti dulu!": [
 "lang-id.js"
 ],
+"Sedang tren": [
+"lang-id.js"
+],
 "— kita lolos!": [
 "lang-id.js"
 ],
@@ -213330,9 +213333,6 @@
 "lang-id.js"
 ],
 "Pengembara": [
-"lang-id.js"
-],
-"Sedang tren": [
 "lang-id.js"
 ],
 "Piala Amerika Selatan": [
@@ -220273,6 +220273,9 @@
 "RUMAH": [
 "lang-id.js"
 ],
+"SEDANG TREN": [
+"lang-id.js"
+],
 "— KITA LOLOS!": [
 "lang-id.js"
 ],
@@ -221150,9 +221153,6 @@
 "lang-id.js"
 ],
 "PENGEMBARA": [
-"lang-id.js"
-],
-"SEDANG TREN": [
 "lang-id.js"
 ],
 "PIALA AMERIKA SELATAN": [
@@ -231830,6 +231830,9 @@
 "Ho giocato nel quartiere con mio fratello, come ai vecchi tempi!": [
 "lang-it.js"
 ],
+"Di tendenza": [
+"lang-it.js"
+],
 "— ci siamo qualificati!": [
 "lang-it.js"
 ],
@@ -232961,9 +232964,6 @@
 "lang-it.js"
 ],
 "Mi vengono le lacrime": [
-"lang-it.js"
-],
-"Di tendenza": [
 "lang-it.js"
 ],
 "Coppa Sudamericana": [
@@ -239907,6 +239907,9 @@
 "HO GUARDATO LE VECCHIE PARTITE CON MIO PADRE.": [
 "lang-it.js"
 ],
+"DI TENDENZA": [
+"lang-it.js"
+],
 "— CI SIAMO QUALIFICATI!": [
 "lang-it.js"
 ],
@@ -240789,9 +240792,6 @@
 "lang-it.js"
 ],
 "MI VENGONO LE LACRIME": [
-"lang-it.js"
-],
-"DI TENDENZA": [
 "lang-it.js"
 ],
 "COPPA SUDAMERICANA": [
@@ -252000,6 +252000,9 @@
 "Joguei bola no bairro com meu irmão, como nos velhos tempos!": [
 "lang-pt.js"
 ],
+"Em alta": [
+"lang-pt.js"
+],
 "— nos classificamos!": [
 "lang-pt.js"
 ],
@@ -253084,9 +253087,6 @@
 "lang-pt.js"
 ],
 "Nômade": [
-"lang-pt.js"
-],
-"Em alta": [
 "lang-pt.js"
 ],
 "Copa Sul-Americana": [
@@ -259854,6 +259854,9 @@
 "ASSISTI JOGOS ANTIGOS COM MEU PAI.": [
 "lang-pt.js"
 ],
+"EM ALTA": [
+"lang-pt.js"
+],
 "— NOS CLASSIFICAMOS!": [
 "lang-pt.js"
 ],
@@ -260683,9 +260686,6 @@
 "lang-pt.js"
 ],
 "NÔMADE": [
-"lang-pt.js"
-],
-"EM ALTA": [
 "lang-pt.js"
 ],
 "COPA SUL-AMERICANA": [
@@ -267377,6 +267377,12 @@
 "🌦️ Hava: {}. {}": [
 "match.js"
 ],
+"POZİSYON!": [
+"match.js"
+],
+"Hazır ol": [
+"match.js"
+],
 "{} {} · Tekrar dene": [
 "match.js"
 ],
@@ -267412,6 +267418,117 @@
 "meta.js"
 ],
 "🎙️ Basın toplantısı: \"{}\"{}": [
+"meta.js"
+],
+"Galibiyetin ardından neler söylemek istersin?": [
+"meta.js"
+],
+"Takım arkadaşlarımı tebrik ederim, hep birlikte kazandık.": [
+"meta.js"
+],
+"Çok çalıştık, bu galibiyeti hak ettik.": [
+"meta.js"
+],
+"Bu ligde bizi kimse durduramaz!": [
+"meta.js"
+],
+"Bugünkü oyunu nasıl değerlendiriyorsun?": [
+"meta.js"
+],
+"İyi oynadık ama geliştirmemiz gereken yerler var.": [
+"meta.js"
+],
+"Planımızı sahaya mükemmel yansıttık.": [
+"meta.js"
+],
+"Rakip bugün bize rakip olamadı.": [
+"meta.js"
+],
+"Beraberlik için ne dersin?": [
+"meta.js"
+],
+"Bir puan da önemli, devam ediyoruz.": [
+"meta.js"
+],
+"Kazanmak için her şeyi yaptık, şanssızdık.": [
+"meta.js"
+],
+"Hakem kararları maçın sonucunu etkiledi.": [
+"meta.js"
+],
+"Sahadan neden üç puanla ayrılamadınız?": [
+"meta.js"
+],
+"Rakip iyi savundu, saygı duyuyoruz.": [
+"meta.js"
+],
+"Pozisyonları değerlendiremedik, bir dahakine olacak.": [
+"meta.js"
+],
+"Bu sonuç bizim için kabul edilemez.": [
+"meta.js"
+],
+"Mağlubiyetin ardından taraftarlara ne söylemek istersin?": [
+"meta.js"
+],
+"Özür dileriz, daha çok çalışacağız.": [
+"meta.js"
+],
+"Bu bir kaza, hemen toparlanacağız.": [
+"meta.js"
+],
+"Bazı arkadaşlarım bugün sahada yoktu.": [
+"meta.js"
+],
+"Bu yenilginin sebebi neydi?": [
+"meta.js"
+],
+"Hepimiz sorumluyuz, ben de dahil.": [
+"meta.js"
+],
+"Rakip fırsatları iyi değerlendirdi.": [
+"meta.js"
+],
+"Taktik yanlıştı, hocayla konuşacağım.": [
+"meta.js"
+],
+"Bugün maçın yıldızıydın. Bu performansın sırrı ne?": [
+"meta.js"
+],
+"Takımım olmasa bunların hiçbiri olmazdı.": [
+"meta.js"
+],
+"Antrenmanda çok çalışıyorum, karşılığını alıyorum.": [
+"meta.js"
+],
+"Ben bu ligin en iyisiyim, bunu herkes görüyor.": [
+"meta.js"
+],
+"Gollerden sonra neler hissediyorsun?": [
+"meta.js"
+],
+"Golleri ailem ve taraftarlarımız için attım.": [
+"meta.js"
+],
+"Çok mutluyum, daha fazlası gelecek.": [
+"meta.js"
+],
+"Bu sadece başlangıç, rekorları kıracağım.": [
+"meta.js"
+],
+"Mütevazı": [
+"meta.js"
+],
+"Maç Sonu Röportajı · {} {} {}": [
+"meta.js"
+],
+"Röportaj vermeden geç": [
+"meta.js"
+],
+"Sözlerin soyunma odasında konuşuluyor.": [
+"meta.js"
+],
+"🎙️ Maç sonu: \"{}\"{}": [
 "meta.js"
 ],
 "+25 enerji": [

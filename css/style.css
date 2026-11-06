@@ -2572,3 +2572,12 @@ div.doc { position: fixed; inset: 0; z-index: 49; background: #000; display: fle
 .ag-a span { display: inline-flex; align-items: center; gap: 4px; }
 .ag-a .igi, .ag-a .ag-i { width: 15px; height: 15px; }
 .ag-a .lk .igi { color: #ff6f8a; }
+/* pozisyon öncesi kısa uyarı: dokunuşları bir saniyeliğine yakalar */
+.mm-alert { position: absolute; inset: 0; z-index: 30; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; background: rgba(3, 7, 18, .78); animation: mmIn .18s ease-out; }
+.mm-alert b { font-family: var(--display); font-style: italic; font-weight: 900; font-size: 34px; letter-spacing: .02em; color: #ffcf3f; text-transform: uppercase; text-align: center; padding: 0 16px; animation: mmPulse .55s ease-in-out infinite alternate; }
+.mm-alert small { color: var(--muted); font-size: 14px; letter-spacing: .12em; text-transform: uppercase; }
+.mm-alert i { display: block; width: 160px; height: 4px; border-radius: 99px; background: rgba(255, 255, 255, .15); overflow: hidden; position: relative; }
+.mm-alert i::after { content: ''; position: absolute; inset: 0; background: #ffcf3f; transform-origin: left; animation: mmBar 1.1s linear forwards; }
+@keyframes mmIn { from { opacity: 0; } }
+@keyframes mmPulse { to { transform: scale(1.06); } }
+@keyframes mmBar { from { transform: scaleX(0); } to { transform: scaleX(1); } }

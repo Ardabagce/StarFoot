@@ -230,3 +230,41 @@
 1180|Casa
 6077|#Despedida
 6078|#Debut
+6079|Prepárate
+6080|¿Qué quieres decir tras la victoria?
+6081|Felicito a mis compañeros, ganamos todos juntos.
+6082|Trabajamos mucho y merecimos ganar.
+6083|¡Nadie nos para en esta liga!
+6084|¿Cómo valoras el partido de hoy?
+6085|Jugamos bien, pero aún podemos mejorar.
+6086|Ejecutamos el plan a la perfección.
+6087|El rival no estuvo a nuestra altura hoy.
+6088|¿Qué opinas del empate?
+6089|Un punto también importa, seguimos.
+6090|Lo dimos todo para ganar, no tuvimos suerte.
+6091|Las decisiones arbitrales afectaron el resultado.
+6092|¿Por qué no os llevasteis los tres puntos?
+6093|El rival defendió bien, lo respetamos.
+6094|No aprovechamos las ocasiones, la próxima será.
+6095|Este resultado es inaceptable para nosotros.
+6096|¿Qué quieres decir a la afición tras la derrota?
+6097|Lo sentimos, trabajaremos más duro.
+6098|Ha sido un tropiezo, nos recuperaremos enseguida.
+6099|Algunos compañeros no estuvieron hoy.
+6100|¿Cuál fue la causa de la derrota?
+6101|Todos somos responsables, yo también.
+6102|El rival aprovechó bien sus ocasiones.
+6103|La táctica fue errónea, hablaré con el entrenador.
+6104|Hoy fuiste la estrella. ¿Cuál es el secreto?
+6107|Nada de esto sería posible sin mi equipo.
+6108|Trabajo duro en los entrenamientos y da sus frutos.
+6109|Soy el mejor de esta liga, todos lo ven.
+6110|¿Cómo te sientes tras esos goles?
+6111|Los goles fueron para mi familia y nuestra afición.
+6112|Estoy muy feliz, vendrán más.
+6113|Esto es solo el principio, batiré récords.
+6114|Humilde
+6115|Saltar la entrevista
+6117|Entrevista tras el partido · {} {} {}
+6118|🎙️ Tras el partido: "{}"{}
+6116|Tus palabras son tema en el vestuario.

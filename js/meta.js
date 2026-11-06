@@ -78,6 +78,58 @@ const Press = {
   },
 };
 
+// ---------- Maç sonu röportajı ----------
+// Her maçta değil: önemli anlarda (hat-trick, maçın adamı, derbi/final, ağır yenilgi) ya da rastgele (%25)
+const INTERVIEW_Q = {
+  win: [
+    { q: 'Galibiyetin ardından neler söylemek istersin?', a: ['Takım arkadaşlarımı tebrik ederim, hep birlikte kazandık.', 'Çok çalıştık, bu galibiyeti hak ettik.', 'Bu ligde bizi kimse durduramaz!'] },
+    { q: 'Bugünkü oyunu nasıl değerlendiriyorsun?', a: ['İyi oynadık ama geliştirmemiz gereken yerler var.', 'Planımızı sahaya mükemmel yansıttık.', 'Rakip bugün bize rakip olamadı.'] },
+  ],
+  draw: [
+    { q: 'Beraberlik için ne dersin?', a: ['Bir puan da önemli, devam ediyoruz.', 'Kazanmak için her şeyi yaptık, şanssızdık.', 'Hakem kararları maçın sonucunu etkiledi.'] },
+    { q: 'Sahadan neden üç puanla ayrılamadınız?', a: ['Rakip iyi savundu, saygı duyuyoruz.', 'Pozisyonları değerlendiremedik, bir dahakine olacak.', 'Bu sonuç bizim için kabul edilemez.'] },
+  ],
+  loss: [
+    { q: 'Mağlubiyetin ardından taraftarlara ne söylemek istersin?', a: ['Özür dileriz, daha çok çalışacağız.', 'Bu bir kaza, hemen toparlanacağız.', 'Bazı arkadaşlarım bugün sahada yoktu.'] },
+    { q: 'Bu yenilginin sebebi neydi?', a: ['Hepimiz sorumluyuz, ben de dahil.', 'Rakip fırsatları iyi değerlendirdi.', 'Taktik yanlıştı, hocayla konuşacağım.'] },
+  ],
+  star: [
+    { q: 'Bugün maçın yıldızıydın. Bu performansın sırrı ne?', a: ['Takımım olmasa bunların hiçbiri olmazdı.', 'Antrenmanda çok çalışıyorum, karşılığını alıyorum.', 'Ben bu ligin en iyisiyim, bunu herkes görüyor.'] },
+    { q: 'Gollerden sonra neler hissediyorsun?', a: ['Golleri ailem ve taraftarlarımız için attım.', 'Çok mutluyum, daha fazlası gelecek.', 'Bu sadece başlangıç, rekorları kıracağım.'] },
+  ],
+};
+// cevap etkileri: [moral, taraftar, hoca, takım, ün]
+const INTERVIEW_FX = [[2, 1, 3, 3, 0.2], [3, 3, 0, 0, 0.5], [2, 5, -3, -3, 1]];
+const Interview = {
+  maybe(sum, ctx) {
+    const s = Game.state, p = s && s.player;
+    if (!s || Game.inStreet() || Game.isYouth() || !sum || !sum.played || (typeof FF !== 'undefined' && FF.on)) return Promise.resolve();
+    const star = sum.goals >= 2 || sum.motm;
+    const key = star && sum.res !== 'L' ? 'star' : sum.res === 'W' ? 'win' : sum.res === 'D' ? 'draw' : 'loss';
+    const must = sum.goals >= 3 || sum.motm || ctx.derby || ctx.final || (sum.res === 'L' && sum.ga - sum.gf >= 3);
+    if (!must && !U.chance(0.25)) return Promise.resolve();
+    const q = U.pick(INTERVIEW_Q[key]);
+    const score = ctx.side === 'home' ? `${sum.gf}-${sum.ga}` : `${sum.ga}-${sum.gf}`;
+    return new Promise((res) => {
+      const m = Game.modal(`<div class="press">
+          <div class="ev-tag">Maç Sonu Röportajı · ${U.esc(ctx.home.name)} ${score} ${U.esc(ctx.away.name)}</div>
+          <div class="press-mics"><i></i><i></i><i></i></div>
+          <h3>${U.esc(q.q)}</h3>
+          <div class="press-opts">${q.a.map((t, i) => `<button class="btn btn-ghost press-a" data-ia="${i}"><small>${['Mütevazı', 'Kendinden emin', 'İddialı'][i]}</small>${U.esc(t)}</button>`).join('')}</div>
+        </div>`, [{ t: 'Röportaj vermeden geç', cls: 'btn-ghost', fn: res }]);
+      U.$$('[data-ia]', m).forEach((b) => (b.onclick = () => {
+        const i = +b.dataset.ia, fx = INTERVIEW_FX[i];
+        m.classList.add('hidden'); m.innerHTML = '';
+        Player.addMorale(p, fx[0]); Player.addRel(p, 'fans', fx[1]); Player.addRel(p, 'coach', fx[2]); Player.addRel(p, 'team', fx[3]); Player.addFame(p, fx[4]);
+        Game.news(`🎙️ Maç sonu: "${q.a[i]}"${i === 2 ? ' Sözlerin soyunma odasında konuşuluyor.' : ''}`, 'me');
+        if (typeof Sfx !== 'undefined') Sfx.play('shutter');
+        Game.save();
+        res();
+      }));
+    });
+  },
+};
+
 // ---------- Ortak yardımcılar ----------
 const Meta = {
   today(off = 0) { const d = new Date(Date.now() + off * 864e5); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`; },

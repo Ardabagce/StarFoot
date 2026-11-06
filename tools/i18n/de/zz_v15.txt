@@ -230,3 +230,41 @@
 1180|Zuhause
 6077|#Abschied
 6078|#Debüt
+6079|Mach dich bereit
+6080|Was möchtest du nach dem Sieg sagen?
+6081|Glückwunsch an meine Mitspieler, wir haben gemeinsam gewonnen.
+6082|Wir haben hart gearbeitet und diesen Sieg verdient.
+6083|In dieser Liga hält uns keiner auf!
+6084|Wie bewertest du das heutige Spiel?
+6085|Wir haben gut gespielt, können uns aber noch steigern.
+6086|Wir haben unseren Plan perfekt umgesetzt.
+6087|Der Gegner war heute kein Gegner für uns.
+6088|Was sagst du zum Unentschieden?
+6089|Ein Punkt ist auch wichtig, wir machen weiter.
+6090|Wir haben alles für den Sieg getan, hatten Pech.
+6091|Die Schiedsrichterentscheidungen haben das Ergebnis beeinflusst.
+6092|Warum habt ihr keine drei Punkte geholt?
+6093|Der Gegner hat gut verteidigt, Respekt.
+6094|Wir haben unsere Chancen nicht genutzt, nächstes Mal klappt's.
+6095|Dieses Ergebnis ist für uns inakzeptabel.
+6096|Was möchtest du den Fans nach der Niederlage sagen?
+6097|Es tut uns leid, wir werden noch härter arbeiten.
+6098|Das war ein Ausrutscher, wir kommen sofort zurück.
+6099|Einige Mitspieler waren heute nicht da.
+6100|Was war der Grund für die Niederlage?
+6101|Wir sind alle verantwortlich, ich auch.
+6102|Der Gegner hat seine Chancen gut genutzt.
+6103|Die Taktik war falsch, ich rede mit dem Trainer.
+6104|Du warst heute der Star. Was ist das Geheimnis?
+6107|Ohne mein Team wäre das alles nicht möglich.
+6108|Ich arbeite hart im Training, das zahlt sich aus.
+6109|Ich bin der Beste dieser Liga, das sieht jeder.
+6110|Wie fühlst du dich nach den Toren?
+6111|Die Tore waren für meine Familie und unsere Fans.
+6112|Ich bin sehr glücklich, da kommt noch mehr.
+6113|Das ist erst der Anfang, ich breche Rekorde.
+6114|Bescheiden
+6115|Interview überspringen
+6117|Interview nach dem Spiel · {} {} {}
+6118|🎙️ Nach dem Spiel: „{}“{}
+6116|Deine Worte sind Thema in der Kabine.

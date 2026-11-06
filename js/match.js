@@ -415,6 +415,13 @@ const Match = {
       $('mm-desc').textContent = M.drama ? 'Son şans! Bu vuruş maçın kaderini belirleyebilir.' : MOMENT_DESC[type];
       // kaleci ipuçları: ilk maçlarda görünür, sonra ayarlardan açılmadıkça gizlenir
       $('mt-moment').classList.toggle('no-help', /^gk_/.test(type) && !M.drama && !GKHelp.on());
+      // pozisyon uyarısı: titreşim ve kısa "hazır ol" ekranı; bu sürede dokunuşlar mini oyuna gitmez (hızlı maçta yanlışlıkla basmayı önler)
+      if (typeof Sfx !== 'undefined') { Sfx.buzz('medium'); Sfx.play('whistle'); }
+      const al = document.createElement('div');
+      al.className = 'mm-alert';
+      al.innerHTML = `<b>${M.drama ? 'SON DAKİKA!' : U.esc(U.plain(MOMENT_TITLES[type] || 'POZİSYON!'))}</b><small>Hazır ol</small><i></i>`;
+      $('mt-moment').appendChild(al);
+      return new Promise((res) => setTimeout(() => { al.remove(); res(); }, 1100));
     };
     // Kendi golünden sonra seçtiğin gol sevinci (dokununca geçilir)
     const celebrate = async () => {
@@ -437,7 +444,7 @@ const Match = {
 
     const playCanvas = async (type) => {
       if (M.instant) return autoCanvas(type);
-      showMoment(type);
+      await showMoment(type);
       let auto = false;
       $('mm-auto').onclick = () => { auto = true; if (MiniGame._abort) MiniGame._abort(); };
       // mahalle maçında ofsayt yok
@@ -468,7 +475,7 @@ const Match = {
 
     const playTiming = async (type, k, cfg, bonus) => {
       if (M.instant) return autoTiming(k, bonus);
-      showMoment(type);
+      await showMoment(type);
       let auto = false;
       $('mm-auto').onclick = () => { auto = true; if (MiniGame._abort) MiniGame._abort(); };
       const r = await MiniGame.timing($('mm-host'), timingCfg(k, cfg));
@@ -481,7 +488,7 @@ const Match = {
     const autoUsed = () => lastAuto;
     const playMini = async (type, fn, k, bonus, extra) => {
       if (M.instant) { lastAuto = true; return autoTiming(k, bonus); }
-      showMoment(type);
+      await showMoment(type);
       let auto = false;
       $('mm-auto').onclick = () => { auto = true; if (MiniGame._abort) MiniGame._abort(); };
       lastAuto = false;

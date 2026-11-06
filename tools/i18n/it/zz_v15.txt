@@ -230,3 +230,41 @@
 1180|Casa
 6077|#Addio
 6078|#Esordio
+6079|Preparati
+6080|Cosa vuoi dire dopo la vittoria?
+6081|Complimenti ai miei compagni, abbiamo vinto insieme.
+6082|Abbiamo lavorato tanto, ce la siamo meritata.
+6083|In questo campionato nessuno ci ferma!
+6084|Come valuti la partita di oggi?
+6085|Abbiamo giocato bene, ma possiamo migliorare.
+6086|Abbiamo eseguito il piano alla perfezione.
+6087|L'avversario oggi non era alla nostra altezza.
+6088|Cosa pensi del pareggio?
+6089|Anche un punto conta, andiamo avanti.
+6090|Abbiamo fatto di tutto per vincere, siamo stati sfortunati.
+6091|Le decisioni arbitrali hanno influito sul risultato.
+6092|Perché non avete portato a casa i tre punti?
+6093|Hanno difeso bene, li rispettiamo.
+6094|Non abbiamo sfruttato le occasioni, la prossima volta andrà meglio.
+6095|Questo risultato è inaccettabile per noi.
+6096|Cosa vuoi dire ai tifosi dopo la sconfitta?
+6097|Ci scusiamo, lavoreremo ancora di più.
+6098|È stato un incidente, ci rialzeremo subito.
+6099|Alcuni compagni oggi non c'erano.
+6100|Qual è stato il motivo della sconfitta?
+6101|Siamo tutti responsabili, me compreso.
+6102|L'avversario ha sfruttato bene le occasioni.
+6103|La tattica era sbagliata, parlerò con il mister.
+6104|Oggi sei stato la stella. Qual è il segreto?
+6107|Niente di tutto questo senza la mia squadra.
+6108|Lavoro tanto in allenamento e sta dando i suoi frutti.
+6109|Sono il migliore di questo campionato, lo vedono tutti.
+6110|Come ti senti dopo questi gol?
+6111|I gol sono per la mia famiglia e i nostri tifosi.
+6112|Sono felicissimo, ne arriveranno altri.
+6113|È solo l'inizio, batterò dei record.
+6114|Umile
+6115|Salta l'intervista
+6117|Intervista post-partita · {} {} {}
+6118|🎙️ Dopo la partita: "{}"{}
+6116|Le tue parole fanno discutere nello spogliatoio.

@@ -230,3 +230,41 @@
 1180|Casa
 6077|#Despedida
 6078|#Estreia
+6079|Prepare-se
+6080|O que você quer dizer depois da vitória?
+6081|Parabéns aos meus companheiros, vencemos juntos.
+6082|Trabalhamos muito e merecemos a vitória.
+6083|Ninguém nos para nessa liga!
+6084|Como você avalia o jogo de hoje?
+6085|Jogamos bem, mas ainda podemos melhorar.
+6086|Executamos nosso plano perfeitamente.
+6087|O adversário não foi páreo pra gente hoje.
+6088|O que você acha do empate?
+6089|Um ponto também conta, seguimos em frente.
+6090|Fizemos de tudo para vencer, faltou sorte.
+6091|As decisões do árbitro afetaram o resultado.
+6092|Por que vocês não saíram com os três pontos?
+6093|O adversário defendeu bem, respeitamos.
+6094|Não aproveitamos as chances, na próxima vai.
+6095|Esse resultado é inaceitável para nós.
+6096|O que você quer dizer à torcida depois da derrota?
+6097|Pedimos desculpas, vamos trabalhar ainda mais.
+6098|Foi um tropeço, vamos nos recuperar logo.
+6099|Alguns companheiros não apareceram hoje.
+6100|O que causou essa derrota?
+6101|Todos somos responsáveis, eu também.
+6102|O adversário aproveitou bem as chances.
+6103|A tática estava errada, vou falar com o técnico.
+6104|Você foi o destaque hoje. Qual é o segredo?
+6107|Nada disso aconteceria sem o meu time.
+6108|Treino muito e estou colhendo os frutos.
+6109|Sou o melhor dessa liga, todo mundo vê.
+6110|Como você se sente depois dos gols?
+6111|Os gols foram para minha família e nossa torcida.
+6112|Estou muito feliz, vem mais por aí.
+6113|Isso é só o começo, vou quebrar recordes.
+6114|Humilde
+6115|Pular a entrevista
+6117|Entrevista pós-jogo · {} {} {}
+6118|🎙️ Pós-jogo: "{}"{}
+6116|Suas palavras viraram assunto no vestiário.

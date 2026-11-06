@@ -230,3 +230,41 @@
 1180|Maison
 6077|#Adieux
 6078|#Débuts
+6079|Prépare-toi
+6080|Que veux-tu dire après la victoire ?
+6081|Bravo à mes coéquipiers, on a gagné ensemble.
+6082|On a beaucoup travaillé, on mérite cette victoire.
+6083|Personne ne nous arrêtera dans ce championnat !
+6084|Comment juges-tu le match d'aujourd'hui ?
+6085|On a bien joué, mais on peut encore progresser.
+6086|On a parfaitement appliqué notre plan.
+6087|L'adversaire n'était pas à notre niveau aujourd'hui.
+6088|Que penses-tu du match nul ?
+6089|Un point, c'est important aussi, on continue.
+6090|On a tout fait pour gagner, on n'a pas eu de chance.
+6091|Les décisions de l'arbitre ont pesé sur le résultat.
+6092|Pourquoi n'avez-vous pas pris les trois points ?
+6093|L'adversaire a bien défendu, respect.
+6094|On n'a pas concrétisé nos occasions, la prochaine fois ça passera.
+6095|Ce résultat est inacceptable pour nous.
+6096|Que veux-tu dire aux supporters après la défaite ?
+6097|Désolés, on va travailler encore plus dur.
+6098|C'est un accident, on va vite rebondir.
+6099|Certains coéquipiers n'étaient pas là aujourd'hui.
+6100|Qu'est-ce qui explique cette défaite ?
+6101|On est tous responsables, moi compris.
+6102|L'adversaire a bien saisi ses occasions.
+6103|La tactique était mauvaise, je vais parler au coach.
+6104|Tu as été la star aujourd'hui. Quel est le secret ?
+6107|Rien de tout ça sans mon équipe.
+6108|Je travaille dur à l'entraînement, et ça paie.
+6109|Je suis le meilleur de ce championnat, tout le monde le voit.
+6110|Que ressens-tu après ces buts ?
+6111|Ces buts sont pour ma famille et nos supporters.
+6112|Je suis très heureux, il y en aura d'autres.
+6113|Ce n'est que le début, je vais battre des records.
+6114|Humble
+6115|Passer l'interview
+6117|Interview d'après-match · {} {} {}
+6118|🎙️ Après le match : « {} »{}
+6116|Tes propos font parler dans le vestiaire.

@@ -230,3 +230,41 @@
 1180|Rumah
 6077|#Perpisahan
 6078|#Debut
+6079|Bersiap
+6080|Apa yang ingin kamu katakan setelah kemenangan ini?
+6081|Selamat untuk rekan setimku, kami menang bersama.
+6082|Kami bekerja keras dan pantas menang.
+6083|Tak ada yang bisa menghentikan kami di liga ini!
+6084|Bagaimana penilaianmu atas laga hari ini?
+6085|Kami bermain bagus, tapi masih bisa lebih baik.
+6086|Kami menjalankan rencana dengan sempurna.
+6087|Lawan tak sebanding dengan kami hari ini.
+6088|Apa pendapatmu soal hasil imbang ini?
+6089|Satu poin tetap penting, kami lanjutkan.
+6090|Kami berusaha menang, tapi kurang beruntung.
+6091|Keputusan wasit memengaruhi hasil laga.
+6092|Kenapa kalian gagal meraih tiga poin?
+6093|Lawan bertahan dengan baik, kami menghormatinya.
+6094|Kami gagal memanfaatkan peluang, lain kali pasti bisa.
+6095|Hasil ini tak bisa kami terima.
+6096|Apa yang ingin kamu sampaikan ke suporter setelah kekalahan ini?
+6097|Kami minta maaf, kami akan bekerja lebih keras.
+6098|Ini hanya kecelakaan, kami akan segera bangkit.
+6099|Beberapa rekan tidak tampil hari ini.
+6100|Apa penyebab kekalahan ini?
+6101|Kami semua bertanggung jawab, termasuk aku.
+6102|Lawan memanfaatkan peluang dengan baik.
+6103|Taktiknya salah, aku akan bicara dengan pelatih.
+6104|Kamu bintang laga hari ini. Apa rahasianya?
+6107|Semua ini tak mungkin tanpa timku.
+6108|Aku berlatih keras dan hasilnya terlihat.
+6109|Aku yang terbaik di liga ini, semua bisa melihatnya.
+6110|Bagaimana perasaanmu setelah gol-gol itu?
+6111|Gol-gol ini untuk keluargaku dan suporter kami.
+6112|Aku sangat senang, masih ada lagi.
+6113|Ini baru permulaan, aku akan memecahkan rekor.
+6114|Rendah hati
+6115|Lewati wawancara
+6117|Wawancara Usai Laga · {} {} {}
+6118|🎙️ Usai laga: "{}"{}
+6116|Ucapanmu jadi bahan obrolan di ruang ganti.
