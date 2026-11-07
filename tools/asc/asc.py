@@ -797,6 +797,11 @@ def nominate(asc, app_id, cfg, event_ids):
             rel.pop('inAppEvents')
             d = asc.req('POST', '/v1/nominations', write=True, body={'data': {'type': 'nominations', 'attributes': attrs, 'relationships': rel}})['data']
         print(f"• öne çıkarılma başvurusu oluşturuldu (taslak, {d['id']})")
+        nid = d['id']
+    if n.get('submit') and nid != 'DRY':
+        attrs['submitted'] = True
+        asc.req('PATCH', f'/v1/nominations/{nid}', write=True, body={'data': {'type': 'nominations', 'id': nid, 'attributes': attrs}})
+        print(f'• öne çıkarılma başvurusu Apple\'a gönderildi ({nid})')
 
 
 def _all(asc, path, **params):

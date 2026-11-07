@@ -1,0 +1,12 @@
+{
+ "events": [],
+ "nomination": {
+  "name": "StarFoot 1.0.17: post-match TV interviews, Premium+ all-inclusive",
+  "type": "APP_ENHANCEMENTS",
+  "publishStart": "2026-11-12T17:00:00Z",
+  "locales": ["en-US", "en-GB", "tr", "de-DE", "es-MX", "es-ES", "pt-BR", "pt-PT", "fr-FR", "ja"],
+  "description": "StarFoot is a football (soccer) career game made by a solo indie developer from Türkiye. You start at age 8 in a street match, get spotted by scouts and rise through the academy to the world's biggest clubs, playing the key moments of every match yourself: shots, passes, dribbles, free kicks and penalties. Off the pitch you negotiate wages, manage your fame, family and your own in-game social feed. Version 1.0.17 adds post-match TV interviews with match-specific questions whose answers affect fans, coach and teammates, plus a short 'Get ready' screen with haptics before every key moment. Premium+ now includes everything, including the World Championship Dream (a four-tournament international career) and In the Footsteps of Legends modes. The game is fully localized in 10 languages, supports iPhone and iPad, iCloud career backup and 38 Game Center achievements with 4 leaderboards, and every club and player name is fictional. It is shaped by player feedback, with weekly updates.",
+  "notes": "Solo indie developer from Türkiye; the game is built and updated based on player emails and reviews. Happy to provide additional assets, a promo code or a TestFlight build.",
+  "submit": true
+ }
+}
