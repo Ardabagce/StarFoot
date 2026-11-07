@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       action:
-        description: 'check / products / release'
+        description: 'check / products / listing / release'
         required: true
         default: check
       run_id:

@@ -125,6 +125,44 @@ def products(a):
         print(f'{p["sku"]} hazır ({p["price"]} USD, {len(regions)} ülke) — {st}')
 
 
+def listing(a):
+    """Mağaza sayfası: başlık, kısa/tam açıklama, simge, öne çıkan görsel, telefon ekran görüntüleri."""
+    s = session()
+    cfg = json.load(open(os.path.join(ROOT, 'store/play/listing.json')))
+    meta = json.load(open(os.path.join(ROOT, 'store/asc/metadata.json')))['locales']
+    D = os.path.join(ROOT, 'store/play')
+    e = ok(s.post(f'{API}/{PKG}/edits'), 'edit')['id']
+    have = [x['language'] for x in ok(s.get(f'{API}/{PKG}/edits/{e}/listings'), 'listeler').get('listings', [])]
+    print('Play\'deki diller:', have)
+    langs = list(dict.fromkeys(list(cfg['listings']) + have))
+
+    def up(lang, kind, path):
+        with open(path, 'rb') as f:
+            ok(s.post(f'{UP}/{PKG}/edits/{e}/listings/{lang}/{kind}?uploadType=media', data=f,
+                      headers={'Content-Type': 'image/png'}, timeout=300), f'{lang} {kind}')
+
+    for lang in langs:
+        c = cfg['listings'].get(lang)
+        if c:
+            m = meta[c['asc']]
+            body = {'language': lang, 'title': m['name'][:30], 'shortDescription': c['short'][:80],
+                    'fullDescription': m['description'][:4000]}
+            ok(s.put(f'{API}/{PKG}/edits/{e}/listings/{lang}', json=body), f'{lang} metin')
+        img = c['img'] if c else cfg['other_img']
+        for kind in ('icon', 'featureGraphic', 'phoneScreenshots'):
+            ok(s.delete(f'{API}/{PKG}/edits/{e}/listings/{lang}/{kind}'), f'{lang} {kind} sil')
+        up(lang, 'icon', os.path.join(D, 'icon-512.png'))
+        up(lang, 'featureGraphic', os.path.join(D, f'feature-{img}.png'))
+        for i in range(1, 7):
+            up(lang, 'phoneScreenshots', os.path.join(D, 'shots', f'{img}-{i}.png'))
+        print(f'{lang}: {"metin + " if c else ""}görseller ({img})')
+    r = s.post(f'{API}/{PKG}/edits/{e}:commit')
+    if r.status_code >= 300 and 'changesNotSentForReview' in r.text:
+        r = s.post(f'{API}/{PKG}/edits/{e}:commit?changesNotSentForReview=true')
+    ok(r, 'commit')
+    print('TAMAM: mağaza sayfası güncellendi')
+
+
 def check(a):
     s = session()
     e = ok(s.post(f'{API}/{PKG}/edits'), 'edit')['id']
@@ -147,5 +185,6 @@ if __name__ == '__main__':
     u.add_argument('--version', default='')
     sub.add_parser('products')
     sub.add_parser('check')
+    sub.add_parser('listing')
     a = ap.parse_args()
-    {'upload': upload, 'products': products, 'check': check}[a.cmd](a)
+    {'upload': upload, 'products': products, 'check': check, 'listing': listing}[a.cmd](a)
