@@ -5,6 +5,15 @@
 name: Android
 on:
   workflow_dispatch:
+    inputs:
+      play_track:
+        description: "Play'e yükle (boş = yükleme yok): internal / alpha / beta / production"
+        required: false
+        default: ''
+      play_status:
+        description: 'completed (yayınla) / draft (taslak) / inProgress (kademeli)'
+        required: false
+        default: completed
   push:
     paths:
       - 'app/**'
@@ -89,3 +98,13 @@ jobs:
         with:
           name: starfoot-release-aab
           path: app/android/app/build/outputs/bundle/release/*.aab
+      - name: Google Play'e yükle
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.play_track != '' }}
+        env:
+          PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+          PLAY_ALLOW_PROD: ${{ inputs.play_track == 'production' && '1' || '0' }}
+        run: |
+          pip install -q google-auth requests
+          VER=$(grep -oP 'versionName "\K[^"]+' app/android/app/build.gradle)
+          python3 tools/play/play.py upload --aab app/android/app/build/outputs/bundle/release/*.aab \
+            --track "${{ inputs.play_track }}" --status "${{ inputs.play_status }}" --version "$VER"

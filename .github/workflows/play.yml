@@ -1,0 +1,18 @@
+# Google Play: tek seferlik ürünleri oluştur/güncelle ya da erişimi kontrol et (derleme yok).
+name: Play
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'check / products'
+        required: true
+        default: check
+jobs:
+  play:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install -q google-auth requests
+      - env:
+          PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+        run: python3 tools/play/play.py "${{ inputs.action }}"

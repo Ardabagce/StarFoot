@@ -1,0 +1,348 @@
+{
+ "package": "app.vercel.starfoot.twa",
+ "products": [
+  {
+   "sku": "starfoot_premium",
+   "price": "2.99",
+   "listings": {
+    "tr-TR": {
+     "title": "StarFoot Premium",
+     "description": "Altın rozet, Starpedia, lüks vitrin ve reklamsız oyun"
+    },
+    "en-US": {
+     "title": "StarFoot Premium",
+     "description": "Gold badge, Starpedia, luxury showcase, no ads"
+    },
+    "es-ES": {
+     "title": "StarFoot Premium",
+     "description": "Insignia dorada, Starpedia, lujo y sin anuncios"
+    },
+    "pt-BR": {
+     "title": "StarFoot Premium",
+     "description": "Selo dourado, Starpedia, vitrine de luxo, sem anúncios"
+    },
+    "de-DE": {
+     "title": "StarFoot Premium",
+     "description": "Goldabzeichen, Starpedia, Luxus-Vitrine, ohne Werbung"
+    },
+    "fr-FR": {
+     "title": "StarFoot Premium",
+     "description": "Badge doré, Starpedia, vitrine de luxe, sans pub"
+    },
+    "it-IT": {
+     "title": "StarFoot Premium",
+     "description": "Badge dorato, Starpedia, vetrina di lusso, senza pub"
+    },
+    "id": {
+     "title": "StarFoot Premium",
+     "description": "Lencana emas, Starpedia, etalase mewah, tanpa iklan"
+    },
+    "ja-JP": {
+     "title": "StarFoot プレミアム",
+     "description": "金バッジ、Starpedia、ラグジュアリー、広告なし"
+    }
+   }
+  },
+  {
+   "sku": "starfoot_wc",
+   "price": "1.99",
+   "consumable": false,
+   "listings": {
+    "tr-TR": {
+     "title": "Dünya Şampiyonası Rüyası",
+     "description": "Milli takımınla tek bir Dünya Şampiyonası modu"
+    },
+    "en-US": {
+     "title": "World Championship Dream",
+     "description": "A World Championship-only mode with your nation"
+    },
+    "es-ES": {
+     "title": "Sueño del Campeonato Mundial",
+     "description": "Modo Campeonato Mundial con tu selección"
+    },
+    "pt-BR": {
+     "title": "Sonho do Campeonato Mundial",
+     "description": "Modo Campeonato Mundial com sua seleção"
+    },
+    "de-DE": {
+     "title": "Weltmeisterschaftstraum",
+     "description": "Weltmeisterschaftsmodus mit deinem Team"
+    },
+    "fr-FR": {
+     "title": "Rêve de Championnat du monde",
+     "description": "Mode Championnat du monde avec ta sélection"
+    },
+    "it-IT": {
+     "title": "Sogno Mondiale",
+     "description": "Modalità Mondiale con la tua nazionale"
+    },
+    "id": {
+     "title": "Mimpi Kejuaraan Dunia",
+     "description": "Mode Kejuaraan Dunia bersama timnasmu"
+    },
+    "ja-JP": {
+     "title": "世界選手権の夢",
+     "description": "代表チームで挑む世界選手権モード"
+    }
+   }
+  },
+  {
+   "sku": "starfoot_legends",
+   "price": "1.99",
+   "consumable": false,
+   "listings": {
+    "tr-TR": {
+     "title": "Efsanelerin İzinde",
+     "description": "Efsanelerden esinlenen 6 kurgusal kariyer"
+    },
+    "en-US": {
+     "title": "In the Footsteps of Legends",
+     "description": "6 fictional careers inspired by legends"
+    },
+    "es-ES": {
+     "title": "Tras los pasos de leyendas",
+     "description": "6 carreras ficticias inspiradas en leyendas"
+    },
+    "pt-BR": {
+     "title": "Nos passos das lendas",
+     "description": "6 carreiras fictícias inspiradas em lendas"
+    },
+    "de-DE": {
+     "title": "Auf den Spuren der Legenden",
+     "description": "6 fiktive Karrieren nach großen Legenden"
+    },
+    "fr-FR": {
+     "title": "Sur les traces des légendes",
+     "description": "6 carrières fictives inspirées des légendes"
+    },
+    "it-IT": {
+     "title": "Sulle orme delle leggende",
+     "description": "6 carriere di fantasia ispirate alle leggende"
+    },
+    "id": {
+     "title": "Jejak Para Legenda",
+     "description": "6 karier fiktif terinspirasi para legenda"
+    },
+    "ja-JP": {
+     "title": "レジェンドの軌跡",
+     "description": "伝説の選手に着想を得た6つの架空キャリア"
+    }
+   }
+  },
+  {
+   "sku": "starfoot_plus2",
+   "price": "3.99",
+   "consumable": false,
+   "listings": {
+    "tr-TR": {
+     "title": "Premium+",
+     "description": "Premium dahil: 10 slot, geri al, kaleci"
+    },
+    "en-US": {
+     "title": "Premium+",
+     "description": "All Premium + 10 slots, undo, goalkeeper"
+    },
+    "es-ES": {
+     "title": "Premium+",
+     "description": "Premium + 10 ranuras, deshacer, portero"
+    },
+    "pt-BR": {
+     "title": "Premium+",
+     "description": "Premium + 10 slots, desfazer, goleiro"
+    },
+    "de-DE": {
+     "title": "Premium+",
+     "description": "Premium + 10 Slots, Rückgängig, Torwart"
+    },
+    "fr-FR": {
+     "title": "Premium+",
+     "description": "Premium + 10 emplacements, annuler, gardien"
+    },
+    "it-IT": {
+     "title": "Premium+",
+     "description": "Premium + 10 slot, annulla, portiere"
+    },
+    "id": {
+     "title": "Premium+",
+     "description": "Premium + 10 slot, urungkan, kiper"
+    },
+    "ja-JP": {
+     "title": "Premium+",
+     "description": "Premium＋10枠・やり直し・GK"
+    }
+   }
+  },
+  {
+   "sku": "starfoot_plus2_upg",
+   "price": "1.99",
+   "consumable": false,
+   "listings": {
+    "tr-TR": {
+     "title": "Premium+ Yükseltme",
+     "description": "Premium'dan Premium+'a yükselt"
+    },
+    "en-US": {
+     "title": "Premium+ Upgrade",
+     "description": "Upgrade from Premium to Premium+"
+    },
+    "es-ES": {
+     "title": "Mejora a Premium+",
+     "description": "Mejora de Premium a Premium+"
+    },
+    "pt-BR": {
+     "title": "Upgrade Premium+",
+     "description": "Upgrade de Premium para Premium+"
+    },
+    "de-DE": {
+     "title": "Premium+ Upgrade",
+     "description": "Upgrade von Premium auf Premium+"
+    },
+    "fr-FR": {
+     "title": "Passage à Premium+",
+     "description": "Passe de Premium à Premium+"
+    },
+    "it-IT": {
+     "title": "Upgrade a Premium+",
+     "description": "Passa da Premium a Premium+"
+    },
+    "id": {
+     "title": "Upgrade Premium+",
+     "description": "Upgrade dari Premium ke Premium+"
+    },
+    "ja-JP": {
+     "title": "Premium+アップグレード",
+     "description": "PremiumからPremium+へ"
+    }
+   }
+  },
+  {
+   "sku": "starfoot_sup_100",
+   "price": "0.99",
+   "consumable": true,
+   "listings": {
+    "tr-TR": {
+     "title": "Destek +100",
+     "description": "StarFoot geliştiricisine destek ol (+100)"
+    },
+    "en-US": {
+     "title": "Support +100",
+     "description": "Support the StarFoot developer (+100)"
+    },
+    "es-ES": {
+     "title": "Apoyo +100",
+     "description": "Apoya al desarrollador de StarFoot (+100)"
+    },
+    "pt-BR": {
+     "title": "Apoio +100",
+     "description": "Apoie o desenvolvedor do StarFoot (+100)"
+    },
+    "de-DE": {
+     "title": "Unterstützung +100",
+     "description": "Unterstütze den StarFoot-Entwickler (+100)"
+    },
+    "fr-FR": {
+     "title": "Soutien +100",
+     "description": "Soutiens le développeur de StarFoot (+100)"
+    },
+    "it-IT": {
+     "title": "Supporto +100",
+     "description": "Sostieni lo sviluppatore di StarFoot (+100)"
+    },
+    "id": {
+     "title": "Dukungan +100",
+     "description": "Dukung pengembang StarFoot (+100)"
+    },
+    "ja-JP": {
+     "title": "サポート +100",
+     "description": "StarFootの開発者を応援 (+100)"
+    }
+   }
+  },
+  {
+   "sku": "starfoot_sup_550",
+   "price": "4.99",
+   "consumable": true,
+   "listings": {
+    "tr-TR": {
+     "title": "Destek +550",
+     "description": "StarFoot geliştiricisine destek ol (+550)"
+    },
+    "en-US": {
+     "title": "Support +550",
+     "description": "Support the StarFoot developer (+550)"
+    },
+    "es-ES": {
+     "title": "Apoyo +550",
+     "description": "Apoya al desarrollador de StarFoot (+550)"
+    },
+    "pt-BR": {
+     "title": "Apoio +550",
+     "description": "Apoie o desenvolvedor do StarFoot (+550)"
+    },
+    "de-DE": {
+     "title": "Unterstützung +550",
+     "description": "Unterstütze den StarFoot-Entwickler (+550)"
+    },
+    "fr-FR": {
+     "title": "Soutien +550",
+     "description": "Soutiens le développeur de StarFoot (+550)"
+    },
+    "it-IT": {
+     "title": "Supporto +550",
+     "description": "Sostieni lo sviluppatore di StarFoot (+550)"
+    },
+    "id": {
+     "title": "Dukungan +550",
+     "description": "Dukung pengembang StarFoot (+550)"
+    },
+    "ja-JP": {
+     "title": "サポート +550",
+     "description": "StarFootの開発者を応援 (+550)"
+    }
+   }
+  },
+  {
+   "sku": "starfoot_sup_2400",
+   "price": "19.99",
+   "consumable": true,
+   "listings": {
+    "tr-TR": {
+     "title": "Destek +2400",
+     "description": "StarFoot geliştiricisine destek ol (+2400)"
+    },
+    "en-US": {
+     "title": "Support +2400",
+     "description": "Support the StarFoot developer (+2400)"
+    },
+    "es-ES": {
+     "title": "Apoyo +2400",
+     "description": "Apoya al desarrollador de StarFoot (+2400)"
+    },
+    "pt-BR": {
+     "title": "Apoio +2400",
+     "description": "Apoie o desenvolvedor do StarFoot (+2400)"
+    },
+    "de-DE": {
+     "title": "Unterstützung +2400",
+     "description": "Unterstütze den StarFoot-Entwickler (+2400)"
+    },
+    "fr-FR": {
+     "title": "Soutien +2400",
+     "description": "Soutiens le développeur de StarFoot (+2400)"
+    },
+    "it-IT": {
+     "title": "Supporto +2400",
+     "description": "Sostieni lo sviluppatore di StarFoot (+2400)"
+    },
+    "id": {
+     "title": "Dukungan +2400",
+     "description": "Dukung pengembang StarFoot (+2400)"
+    },
+    "ja-JP": {
+     "title": "サポート +2400",
+     "description": "StarFootの開発者を応援 (+2400)"
+    }
+   }
+  }
+ ]
+}
