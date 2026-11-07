@@ -277,7 +277,9 @@ const ShareCard = {
   // paylaşım metni: iPhone'da App Store bağlantısı, diğerlerinde tarayıcıda oynanan sürüm
   link() {
     const C = window.Capacitor;
-    return C && C.getPlatform && C.getPlatform() === 'ios' ? 'https://apps.apple.com/app/id6819292902' : 'https://starfoot.bagce.dev';
+    const pl = C && C.getPlatform && C.getPlatform();
+    return pl === 'ios' ? 'https://apps.apple.com/app/id6819292902'
+      : pl === 'android' ? 'https://play.google.com/store/apps/details?id=app.vercel.starfoot.twa' : 'https://starfoot.bagce.dev';
   },
   text() {
     return I18N.t('StarFoot kariyerim ⚽ Geçebilir misin? #StarFoot #futbol') + '\n' + ShareCard.link();

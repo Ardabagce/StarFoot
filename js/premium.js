@@ -3,7 +3,7 @@
 const PREMIUM_ID = 'starfoot_premium';
 // Premium açık; şimdilik yalnız iPhone'da (Google Play'de ürün tanımlanınca 'android' eklenir)
 const PREMIUM_ENABLED = true;
-const PREMIUM_PLATFORMS = ['ios'];
+const PREMIUM_PLATFORMS = ['ios', 'android'];
 // Test önizlemesi (yalnız web, uygulamada çalışmaz): adresin sonuna #sfplus eklenince Premium ve Premium+
 // özellikleri açılır; #sfplus-off ile kapanır. Satın alma yoktur, yalnız deneme içindir.
 (() => {
@@ -17,8 +17,8 @@ const PREMIUM_PLATFORMS = ['ios'];
   } catch (e) { /* yok */ }
 })();
 
-// RevenueCat (App Store satın almaları). Herkese açık SDK anahtarı; gizli değildir.
-const RC_KEYS = { ios: 'appl_tpkurfIlsSGEYVvWSdgVWMUUnDt' };
+// RevenueCat (App Store ve Google Play satın almaları). Herkese açık SDK anahtarı; gizli değildir.
+const RC_KEYS = { ios: 'appl_tpkurfIlsSGEYVvWSdgVWMUUnDt', android: 'goog_injpbDCbJOyLjBavTaPEdfWSDRT' };
 const RC_ENT = { starfoot_football_career_pro: 'starfoot_premium', wc: 'starfoot_wc', legends: 'starfoot_legends', plus: 'starfoot_plus' };
 // Premium+ : 'full' herkese (Premium dahil), 'upg' Premium sahiplerine yükseltme
 const PLUS_IDS = { full: 'starfoot_plus2', upg: 'starfoot_plus2_upg' };
