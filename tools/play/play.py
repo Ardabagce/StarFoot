@@ -9,7 +9,7 @@ Kimlik: PLAY_SERVICE_ACCOUNT_JSON ortam değişkeni (servis hesabı JSON anahtar
 
 Üretim (production) izi yalnız açıkça --track production verilirse kullanılır.
 """
-import argparse, json, os, sys
+import argparse, json, os, re, sys
 import requests
 from google.oauth2 import service_account
 from google.auth.transport.requests import Request
@@ -60,9 +60,15 @@ def upload(a):
     e = ok(s.post(f'{API}/{PKG}/edits'), 'edit')['id']
     print('edit', e)
     with open(a.aab, 'rb') as f:
-        b = ok(s.post(f'{UP}/{PKG}/edits/{e}/bundles?uploadType=media', data=f,
-                      headers={'Content-Type': 'application/octet-stream'}, timeout=900), 'bundle')
-    vc = b['versionCode']
+        r = s.post(f'{UP}/{PKG}/edits/{e}/bundles?uploadType=media', data=f,
+                   headers={'Content-Type': 'application/octet-stream'}, timeout=900)
+    m = re.search(r'Version code (\d+) has already been used', r.text) if r.status_code >= 300 else None
+    if m:
+        # paket başka bir ize zaten yüklenmiş: aynı sürüm kodunu bu ize taşı
+        vc = int(m.group(1))
+        print('zaten yüklü, taşınıyor: versionCode', vc)
+    else:
+        vc = ok(r, 'bundle')['versionCode']
     print('yüklendi, versionCode', vc)
     rel = {'versionCodes': [str(vc)], 'status': a.status, 'releaseNotes': notes(a.version)}
     if a.version:
