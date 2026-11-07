@@ -318,6 +318,7 @@ const Plus = {
       <li><b>Hızlı ilerleme</b><small>Seçtiğin haftaya kadar maçları simüle et</small></li>
       <li><b>Detaylı kariyer istatistikleri</b><small>Kafa, penaltı, frikik golleri; hangi takıma kaç gol</small></li>
       <li><b>Kaleci kariyeri</b><small>Kaleci olarak oyna: kurtarışlar, penaltılar, gol yememe</small></li>
+      <li><b>2 oyun modu dahil</b><small>Dünya Şampiyonası Rüyası · Efsanelerin İzinde</small></li>
       ${withPremium ? '<li><b>Premium\'un tamamı</b><small>Reklamsız, altın rozet, Starpedia, lüks yaşam, transfer talebi</small></li>' : ''}
     </ul>`;
   },
@@ -359,7 +360,9 @@ const PACKS = {
 const Packs = {
   price: {},
   key(k) { return 'starfoot_pack_' + k; },
-  owns(k) { try { return localStorage.getItem(Packs.key(k)) === '1'; } catch (e) { return false; } },
+  // Premium+ sahiplerinde iki mod da dahil (önceden alanlar dahil)
+  owns(k) { if (typeof Plus !== 'undefined' && Plus.active) return true; try { return localStorage.getItem(Packs.key(k)) === '1'; } catch (e) { return false; } },
+  bought(k) { try { return localStorage.getItem(Packs.key(k)) === '1'; } catch (e) { return false; } },
   set(k) { try { localStorage.setItem(Packs.key(k), '1'); } catch (e) { /* yok */ } },
   // mağazadaki satın alımlara göre sahiplik; yeni paket bulunduysa true
   sync(list) {
@@ -416,6 +419,7 @@ const Packs = {
       btns.push({ t: 'Satın alımları geri yükle', cls: 'btn-ghost', fn: () => Premium.restore().then(() => { if (Packs.owns(k)) Packs.open(k); }) });
       btns.push({ t: `${Icon(x.ic)} Satın al${pr ? ` · ${U.esc(pr.s)}` : ''}`, cls: 'btn-big', fn: () => Packs.buy(k).then((ok) => { if (ok) Packs.open(k); }) });
     }
+    if (can && !Plus.active) btns.push({ t: `${Icon('star')} Premium+ ile dahil`, cls: 'btn-ghost', fn: () => Plus.pitch('', 'pack_' + k) });
     Game.modal(`<div class="ev-tag">Yeni mod</div><h2>${Icon(x.ic)} ${x.t}</h2><p>${x.d}</p>
       <ul class="prem-l">${x.f.map((t) => `<li>${t}</li>`).join('')}</ul>
       ${can ? '<p class="muted">Tek seferlik satın alma. Reklam yok, tüm cihazlarında geri yükleyebilirsin.</p>' : '<p class="muted">Bu mod App Store uygulamasında satın alınabilir.</p>'}`, btns, { wide: true });

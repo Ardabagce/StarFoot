@@ -136,39 +136,39 @@
    "listings": {
     "tr-TR": {
      "title": "Premium+",
-     "description": "Premium dahil: 10 slot, geri al, kaleci"
+     "description": "Premium + 10 slot, kaleci, 2 oyun modu dahil"
     },
     "en-US": {
      "title": "Premium+",
-     "description": "All Premium + 10 slots, undo, goalkeeper"
+     "description": "All Premium + 10 slots, goalkeeper, 2 game modes"
     },
     "es-ES": {
      "title": "Premium+",
-     "description": "Premium + 10 ranuras, deshacer, portero"
+     "description": "Premium + 10 ranuras, portero y 2 modos de juego"
     },
     "pt-BR": {
      "title": "Premium+",
-     "description": "Premium + 10 slots, desfazer, goleiro"
+     "description": "Premium + 10 slots, goleiro e 2 modos de jogo"
     },
     "de-DE": {
      "title": "Premium+",
-     "description": "Premium + 10 Slots, Rückgängig, Torwart"
+     "description": "Premium + 10 Slots, Torwart, 2 Spielmodi"
     },
     "fr-FR": {
      "title": "Premium+",
-     "description": "Premium + 10 emplacements, annuler, gardien"
+     "description": "Premium + 10 emplacements, gardien, 2 modes de jeu"
     },
     "it-IT": {
      "title": "Premium+",
-     "description": "Premium + 10 slot, annulla, portiere"
+     "description": "Premium + 10 slot, portiere, 2 modalità di gioco"
     },
     "id": {
      "title": "Premium+",
-     "description": "Premium + 10 slot, urungkan, kiper"
+     "description": "Premium + 10 slot, kiper, 2 mode permainan"
     },
     "ja-JP": {
      "title": "Premium+",
-     "description": "Premium＋10枠・やり直し・GK"
+     "description": "Premium＋10枠・GK・2つのモード"
     }
    }
   },
