@@ -1,18 +1,47 @@
-# Google Play: tek seferlik ürünleri oluştur/güncelle ya da erişimi kontrol et (derleme yok).
+# Google Play: ürünler, kontrol ya da daha önce derlenmiş AAB'yi bir ize gönderme (derleme yok).
 name: Play
 on:
   workflow_dispatch:
     inputs:
       action:
-        description: 'check / products'
+        description: 'check / products / release'
         required: true
         default: check
+      run_id:
+        description: "release: AAB'nin alınacağı Android çalışmasının kimliği"
+        required: false
+        default: ''
+      track:
+        description: 'release: internal / alpha / production'
+        required: false
+        default: internal
+      status:
+        description: 'release: completed / draft / inProgress'
+        required: false
+        default: completed
+permissions:
+  contents: read
+  actions: read
 jobs:
   play:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - run: pip install -q google-auth requests
+      - if: ${{ inputs.action == 'release' }}
+        uses: actions/download-artifact@v4
+        with:
+          name: starfoot-release-aab
+          path: aab
+          run-id: ${{ inputs.run_id }}
+          github-token: ${{ github.token }}
       - env:
           PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
-        run: python3 tools/play/play.py "${{ inputs.action }}"
+          PLAY_ALLOW_PROD: ${{ inputs.track == 'production' && '1' || '0' }}
+        run: |
+          if [ "${{ inputs.action }}" = release ]; then
+            VER=$(grep -oP 'versionName "\K[^"]+' app/android/app/build.gradle)
+            python3 tools/play/play.py upload --aab aab/*.aab --track "${{ inputs.track }}" --status "${{ inputs.status }}" --version "$VER"
+          else
+            python3 tools/play/play.py "${{ inputs.action }}"
+          fi
