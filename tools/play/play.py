@@ -78,28 +78,44 @@ def upload(a):
     print(f'TAMAM: {vc} -> {a.track} ({a.status})')
 
 
+RV = 'regionsVersion.version=2025/03'
+
+
+def money(m):
+    """{'currencyCode','units','nanos'} sözlüğünü olduğu gibi döndürür (convertRegionPrices çıktısı)."""
+    return {k: m[k] for k in ('currencyCode', 'units', 'nanos') if k in m}
+
+
 def products(a):
+    """Yeni tek seferlik ürün API'si (monetization.onetimeproducts)."""
     s = session()
-    have = {p['sku'] for p in ok(s.get(f'{API}/{PKG}/inappproducts'), 'liste').get('inappproduct', [])}
+    base = f'{API}/{PKG}/oneTimeProducts'
     for p in CFG['products']:
-        listings = {lang: {'title': v['title'][:55], 'description': (v['description'] or v['title'])[:200]}
-                    for lang, v in p['listings'].items()}
+        u, c = p['price'].split('.')
+        usd = {'currencyCode': 'USD', 'units': u, 'nanos': int(c.ljust(9, '0'))}
+        conv = ok(s.post(f'{API}/{PKG}/pricing:convertRegionPrices', json={'price': usd}), 'fiyat çevirme')
+        regions = [{'regionCode': rc, 'price': money(v['price']), 'availability': 'AVAILABLE'}
+                   for rc, v in conv.get('convertedRegionPrices', {}).items()]
         body = {
-            'packageName': PKG, 'sku': p['sku'], 'status': 'active', 'purchaseType': 'managedUser',
-            'defaultLanguage': 'en-US', 'listings': listings,
-            'defaultPrice': {'priceMicros': str(round(float(p['price']) * 1e6)), 'currency': 'USD'},
+            'packageName': PKG, 'productId': p['sku'],
+            'listings': [{'languageCode': lang, 'title': v['title'][:55],
+                          'description': (v['description'] or v['title'])[:200]}
+                         for lang, v in p['listings'].items()],
+            'purchaseOptions': [{
+                'purchaseOptionId': 'buy',
+                'buyOption': {'legacyCompatible': True, 'multiQuantityEnabled': False},
+                'regionalPricingAndAvailabilityConfigs': regions,
+            }],
         }
-        q = 'autoConvertMissingPrices=true'
-        if p['sku'] in have:
-            r = s.put(f'{API}/{PKG}/inappproducts/{p["sku"]}?{q}', json=body)
-            what = 'güncellendi'
-        else:
-            r = s.post(f'{API}/{PKG}/inappproducts?{q}', json=body)
-            what = 'oluşturuldu'
+        mask = 'listings,purchaseOptions'
+        r = s.patch(f'{base}/{p["sku"]}?allowMissing=true&updateMask={mask}&{RV}', json=body)
         if r.status_code >= 300:
-            print(f'HATA {p["sku"]}: {r.status_code} {r.text[:800]}')
-        else:
-            print(f'{p["sku"]} {what} ({p["price"]} USD)')
+            print(f'HATA {p["sku"]}: {r.status_code} {r.text[:1500]}')
+            continue
+        r2 = s.post(f'{base}/{p["sku"]}/purchaseOptions:batchUpdateStates', json={'requests': [
+            {'activatePurchaseOptionRequest': {'packageName': PKG, 'productId': p['sku'], 'purchaseOptionId': 'buy'}}]})
+        st = 'etkin' if r2.status_code < 300 else f'etkinleştirilemedi {r2.status_code} {r2.text[:400]}'
+        print(f'{p["sku"]} hazır ({p["price"]} USD, {len(regions)} ülke) — {st}')
 
 
 def check(a):
@@ -109,8 +125,8 @@ def check(a):
         for r in t.get('releases', []):
             print(t['track'], r.get('name'), r.get('status'), r.get('versionCodes'))
     s.delete(f'{API}/{PKG}/edits/{e}')
-    n = ok(s.get(f'{API}/{PKG}/inappproducts'), 'liste').get('inappproduct', [])
-    print('ürünler:', [p['sku'] for p in n])
+    r = s.get(f'{API}/{PKG}/oneTimeProducts')
+    print('ürünler:', [p['productId'] for p in r.json().get('oneTimeProducts', [])] if r.ok else r.text[:500])
 
 
 if __name__ == '__main__':
