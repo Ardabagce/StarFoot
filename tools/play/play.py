@@ -108,7 +108,8 @@ def products(a):
             }],
         }
         mask = 'listings,purchaseOptions'
-        r = s.patch(f'{base}/{p["sku"]}?allowMissing=true&updateMask={mask}&{RV}', json=body)
+        rv = conv.get('regionVersion', {}).get('version', '2025/03')
+        r = s.patch(f'{API}/{PKG}/onetimeproducts/{p["sku"]}?allowMissing=true&updateMask={mask}&regionsVersion.version={rv}', json=body)
         if r.status_code >= 300:
             print(f'HATA {p["sku"]}: {r.status_code} {r.text[:1500]}')
             continue
