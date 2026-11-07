@@ -45,13 +45,18 @@ const IV_Q = [
 const IV_FX = [[2, 1, 3, 3, 0.2], [3, 3, 0, 0, 0.5], [2, 5, -3, -3, 1]];
 
 const Interview = {
-  // Şimdilik her maçtan sonra (test); ileride oran düşürülecek
-  RATE: 1,
+  // Ortalama 4-5 maçta bir: son röportajdan sonra en az 3 maç geçmeli (final ve hat-trick hariç)
+  RATE: 0.35,
+  GAP: 3,
   maybe(sum, ctx) {
     const s = Game.state;
     if (!s || Game.inStreet() || Game.isYouth() || !sum || !sum.played || (typeof FF !== 'undefined' && FF.on)) return Promise.resolve();
-    const must = sum.goals >= 3 || sum.motm || ctx.derby || ctx.final || (sum.res === 'L' && sum.ga - sum.gf >= 3);
+    s.ivGap = (s.ivGap || 0) + 1;
+    const big = sum.goals >= 3 || ctx.final;
+    const must = big || sum.motm || ctx.derby || (sum.res === 'L' && sum.ga - sum.gf >= 3);
+    if (!big && s.ivGap <= Interview.GAP) return Promise.resolve();
     if (!must && !U.chance(Interview.RATE)) return Promise.resolve();
+    s.ivGap = 0;
     return Interview.show(sum, ctx);
   },
   context(sum, ctx) {
