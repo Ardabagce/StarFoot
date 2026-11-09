@@ -2072,6 +2072,123 @@
 "squads.js",
 "weather.js"
 ],
+"SRB": [
+"cups.js",
+"data.js",
+"legends.js",
+"squads.js",
+"wc.js"
+],
+"SWE": [
+"cups.js",
+"data.js",
+"legends.js",
+"squads.js",
+"wc.js"
+],
+"WAL": [
+"cups.js",
+"data.js",
+"legends.js",
+"wc.js"
+],
+"HUN": [
+"cups.js",
+"data.js",
+"league.js",
+"squads.js",
+"wc.js"
+],
+"ROU": [
+"cups.js",
+"league.js",
+"legends.js",
+"squads.js",
+"wc.js"
+],
+"SVK": [
+"cups.js",
+"data.js",
+"squads.js",
+"wc.js"
+],
+"IRL": [
+"cups.js",
+"squads.js",
+"wc.js"
+],
+"SVN": [
+"cups.js",
+"data.js",
+"squads.js",
+"wc.js"
+],
+"ALB": [
+"cups.js",
+"data.js",
+"squads.js",
+"wc.js"
+],
+"BIH": [
+"cups.js",
+"legends.js",
+"wc.js"
+],
+"ISL": [
+"cups.js",
+"data.js",
+"wc.js"
+],
+"FIN": [
+"cups.js",
+"wc.js"
+],
+"NIR": [
+"cups.js",
+"wc.js"
+],
+"MNE": [
+"cups.js",
+"wc.js"
+],
+"BUL": [
+"cups.js",
+"legends.js",
+"wc.js"
+],
+"MKD": [
+"cups.js",
+"wc.js"
+],
+"KAZ": [
+"cups.js",
+"wc.js"
+],
+"ARM": [
+"cups.js",
+"wc.js"
+],
+"LUX": [
+"cups.js",
+"wc.js"
+],
+"BLR": [
+"cups.js",
+"wc.js"
+],
+"LTU": [
+"cups.js",
+"wc.js"
+],
+"LVA": [
+"cups.js",
+"wc.js"
+],
+"EST": [
+"cups.js",
+"data.js",
+"wc.js"
+],
 "Son 32": [
 "cups.js",
 "lang-ar.js",
@@ -3523,29 +3640,11 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"16 ülke, eleme": [
-"cups.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
+"{} ülke, eleme": [
+"cups.js"
 ],
-"8 Avrupa ülkesi, eleme": [
-"cups.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
+"{} Avrupa ülkesi, eleme": [
+"cups.js"
 ],
 "Kariyerinde henüz milli turnuva oynanmadı.": [
 "cups.js",
@@ -4371,38 +4470,6 @@
 "legends.js",
 "namefix.js"
 ],
-"BUL": [
-"data.js",
-"legends.js"
-],
-"Bulgaristan": [
-"data.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"BIH": [
-"data.js",
-"legends.js"
-],
-"Bosna Hersek": [
-"data.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "Yıldızlar Ligi": [
 "data.js",
 "lang-ar.js",
@@ -5186,9 +5253,6 @@
 "lang-pt.js",
 "namefix.js"
 ],
-"ISL": [
-"data.js"
-],
 "CHE": [
 "data.js",
 "legends.js",
@@ -5208,7 +5272,8 @@
 "namefix.js"
 ],
 "KEN": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "MUN": [
 "data.js",
@@ -5898,7 +5963,8 @@
 "data.js"
 ],
 "BOL": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Bolonya Kayaları": [
 "data.js",
@@ -6490,11 +6556,6 @@
 "lang-ja.js",
 "lang-pt.js",
 "namefix.js"
-],
-"WAL": [
-"data.js",
-"legends.js",
-"wc.js"
 ],
 "NFO": [
 "data.js",
@@ -7908,11 +7969,6 @@
 "lang-pt.js",
 "namefix.js"
 ],
-"ALB": [
-"data.js",
-"squads.js",
-"wc.js"
-],
 "Albasete Yolcuları": [
 "data.js",
 "lang-ar.js",
@@ -8438,7 +8494,8 @@
 "namefix.js"
 ],
 "VEN": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Venedik Kıvılcımları": [
 "data.js",
@@ -8733,7 +8790,8 @@
 "namefix.js"
 ],
 "GUI": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Gengam Kayaları": [
 "data.js",
@@ -9407,7 +9465,8 @@
 "BEN": [
 "data.js",
 "legends.js",
-"meta.js"
+"meta.js",
+"wc.js"
 ],
 "Lizbon Yıldızları": [
 "data.js",
@@ -9549,9 +9608,6 @@
 "lang-ja.js",
 "lang-pt.js",
 "namefix.js"
-],
-"EST": [
-"data.js"
 ],
 "Estoril Ufku": [
 "data.js",
@@ -9915,7 +9971,8 @@
 "namefix.js"
 ],
 "GUA": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "CAM": [
 "data.js"
@@ -10167,7 +10224,8 @@
 "data.js"
 ],
 "IND": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Gerli Akıncıları": [
 "data.js",
@@ -12152,7 +12210,8 @@
 "data.js"
 ],
 "ANG": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Niigata Esintisi": [
 "data.js",
@@ -14052,11 +14111,6 @@
 "data.js",
 "namefix.js"
 ],
-"SVK": [
-"data.js",
-"squads.js",
-"wc.js"
-],
 "Marko Arón": [
 "data.js",
 "namefix.js"
@@ -14140,22 +14194,10 @@
 "namefix.js",
 "squads.js"
 ],
-"HUN": [
-"data.js",
-"league.js",
-"squads.js",
-"wc.js"
-],
 "Mathias Solestad": [
 "data.js",
 "namefix.js",
 "squads.js"
-],
-"SWE": [
-"data.js",
-"legends.js",
-"squads.js",
-"wc.js"
 ],
 "Gabriel Farado": [
 "data.js",
@@ -14200,11 +14242,6 @@
 "Benjamin Bokinić": [
 "data.js",
 "namefix.js"
-],
-"SVN": [
-"data.js",
-"squads.js",
-"wc.js"
 ],
 "Anthony Langeridge": [
 "data.js",
@@ -14329,12 +14366,6 @@
 "namefix.js",
 "wc.js"
 ],
-"SRB": [
-"data.js",
-"legends.js",
-"squads.js",
-"wc.js"
-],
 "Gleison Tarida": [
 "data.js",
 "namefix.js"
@@ -14409,7 +14440,8 @@
 "namefix.js"
 ],
 "GAB": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Ansu Barera": [
 "data.js",
@@ -14912,7 +14944,8 @@
 ],
 "Lukas": [
 "data.js",
-"i18n.js"
+"i18n.js",
+"wc.js"
 ],
 "Leon": [
 "data.js"
@@ -15677,7 +15710,8 @@
 "data.js"
 ],
 "Robin": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Siebe": [
 "data.js"
@@ -16472,7 +16506,8 @@
 "data.js"
 ],
 "Tomas": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Patrik": [
 "data.js"
@@ -16697,7 +16732,8 @@
 "data.js"
 ],
 "Ruslan": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Illia": [
 "data.js"
@@ -19091,7 +19127,16 @@
 "lang-pt.js"
 ],
 "Hoca kornerden orta açıyor. Top kafana gelirken kalede vurmak istediğin yere dokun.": [
-"drills.js"
+"drills.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "İkili Mücadele": [
 "drills.js",
@@ -32543,10 +32588,16 @@
 "i18n.js"
 ],
 "Rizky": [
-"i18n.js"
+"i18n.js",
+"wc.js"
 ],
 "Pratama": [
-"i18n.js"
+"i18n.js",
+"wc.js"
+],
+"IDN": [
+"i18n.js",
+"wc.js"
 ],
 "StarFoot": [
 "i18n.js",
@@ -33513,25 +33564,88 @@
 "interview.js"
 ],
 "Sözleri soyunma odasında konuşuluyor.": [
-"interview.js"
+"interview.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Rakip cephe bu sözlere tepkili.": [
-"interview.js"
+"interview.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Taraftar coştu, hoca temkinli.": [
-"interview.js"
+"interview.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Maç sonu açıklamaları gündemde.": [
-"interview.js"
+"interview.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Kendinden emin sözleri dikkat çekti.": [
-"interview.js"
+"interview.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Alçakgönüllü tavrı takdir topladı.": [
-"interview.js"
+"interview.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Takım ruhuna vurgu yaptı.": [
-"interview.js"
+"interview.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Mütevazı": [
 "interview.js",
@@ -52071,6 +52185,30 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Bulgaristan": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Bosna Hersek": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
 "Büyük Güncelleme: Kendi Futbol Evrenini Kur! 🚀": [
 "lang-ar.js",
 "lang-de.js",
@@ -58555,6 +58693,110 @@
 "مشمول في Premium+": [
 "lang-ar.js"
 ],
+"Top kafana gelirken kalede vurmak istediğin yere dokun": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"minigame.js"
+],
+"· dokunduğun an zamanlama, dokunduğun yer yön ·": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"minigame.js"
+],
+"Durmadan, hızlı hızlı dokun": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"minigame.js"
+],
+"· ne kadar hızlı basarsan o kadar hızlı koşarsın ·": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"minigame.js"
+],
+"Korner! Top kafana gelirken kalede vurmak istediğin yere dokun: zamanlama ve yön senin elinde.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"match.js"
+],
+"Korner!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Top kafana gelirken kalede vurmak istediğin yere dokun: zamanlama ve yön senin elinde.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Hoca kornerden orta açıyor.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Top kafana gelirken kalede vurmak istediğin yere dokun.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "(Asist)": [
 "lang-ar.js",
 "lang-de.js",
@@ -58615,6 +58857,17 @@
 "lang-pt.js",
 "life.js"
 ],
+"16 ülke, eleme": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "18 yaşından sonra": [
 "lang-ar.js",
 "lang-de.js",
@@ -58638,6 +58891,17 @@
 "lang-ja.js",
 "lang-pt.js",
 "weather.js"
+],
+"8 Avrupa ülkesi, eleme": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "A takım profesyonel sözleşmesi": [
 "lang-ar.js",
@@ -65682,17 +65946,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Hoca kornerden orta açıyor.": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "Top kafana gelirken dokun; nişangah neredeyse oraya vurursun.": [
 "lang-ar.js",
 "lang-de.js",
@@ -65870,17 +66123,6 @@
 "lang-pt.js"
 ],
 "Kendini daha hafif hissediyorsun.": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"Korner!": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -92538,6 +92780,105 @@
 "مشمول في PREMIUM+": [
 "lang-ar.js"
 ],
+"DURMADAN, HIZLI HIZLI DOKUN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HOCA KORNERDEN ORTA AÇIYOR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SÖZLERİ SOYUNMA ODASINDA KONUŞULUYOR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"RAKİP CEPHE BU SÖZLERE TEPKİLİ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TARAFTAR COŞTU, HOCA TEMKİNLİ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MAÇ SONU AÇIKLAMALARI GÜNDEMDE.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KENDİNDEN EMİN SÖZLERİ DİKKAT ÇEKTİ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ALÇAKGÖNÜLLÜ TAVRI TAKDİR TOPLADI.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TAKIM RUHUNA VURGU YAPTI.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -105211,17 +105552,6 @@
 "lang-pt.js"
 ],
 "HOCA ETKİLENDİ!": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"HOCA KORNERDEN ORTA AÇIYOR.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -134174,6 +134504,57 @@
 "In Premium+ enthalten": [
 "lang-de.js"
 ],
+"Tippe dorthin, wohin du köpfen willst, wenn der Ball an deinen Kopf kommt": [
+"lang-de.js"
+],
+"· der Moment des Tippens ist das Timing, die Stelle die Richtung ·": [
+"lang-de.js"
+],
+"Tippe schnell und ohne Pause": [
+"lang-de.js"
+],
+"· je schneller du tippst, desto schneller läufst du ·": [
+"lang-de.js"
+],
+"Ecke! Wenn der Ball an deinen Kopf kommt, tippe dorthin, wohin du im Tor zielen willst: Timing und Richtung liegen bei dir.": [
+"lang-de.js"
+],
+"Ecke!": [
+"lang-de.js"
+],
+"Wenn der Ball an deinen Kopf kommt, tippe dorthin, wohin du im Tor zielen willst: Timing und Richtung liegen bei dir.": [
+"lang-de.js"
+],
+"Der Trainer flankt von der Ecke. Wenn der Ball an deinen Kopf kommt, tippe dorthin, wohin du im Tor zielen willst.": [
+"lang-de.js"
+],
+"Der Trainer flankt von der Ecke.": [
+"lang-de.js"
+],
+"Wenn der Ball an deinen Kopf kommt, tippe dorthin, wohin du im Tor zielen willst.": [
+"lang-de.js"
+],
+"Seine Worte sind Thema in der Kabine.": [
+"lang-de.js"
+],
+"Der Gegner reagiert verärgert auf diese Worte.": [
+"lang-de.js"
+],
+"Die Fans jubeln, der Trainer bleibt vorsichtig.": [
+"lang-de.js"
+],
+"Seine Aussagen nach dem Spiel machen Schlagzeilen.": [
+"lang-de.js"
+],
+"Seine selbstbewussten Worte sorgen für Aufsehen.": [
+"lang-de.js"
+],
+"Seine bescheidene Art wird gelobt.": [
+"lang-de.js"
+],
+"Er betonte den Teamgeist.": [
+"lang-de.js"
+],
 "– wir haben uns qualifiziert!": [
 "lang-de.js"
 ],
@@ -138712,9 +139093,6 @@
 "Der Trainer war beeindruckt!": [
 "lang-de.js"
 ],
-"Der Trainer flankt von der Ecke.": [
-"lang-de.js"
-],
 "Tippe, wenn der Ball deinen Kopf erreicht; du zielst ungefähr dorthin, wo das Ziel ist.": [
 "lang-de.js"
 ],
@@ -138764,9 +139142,6 @@
 "lang-de.js"
 ],
 "Du fühlst dich leichter.": [
-"lang-de.js"
-],
-"Ecke!": [
 "lang-de.js"
 ],
 "Tippe, wenn der Ball deinen Kopf erreicht; du zielst ungefähr auf das sich bewegende Ziel.": [
@@ -143195,6 +143570,33 @@
 "IN PREMIUM+ ENTHALTEN": [
 "lang-de.js"
 ],
+"TIPPE SCHNELL UND OHNE PAUSE": [
+"lang-de.js"
+],
+"DER TRAINER FLANKT VON DER ECKE.": [
+"lang-de.js"
+],
+"SEINE WORTE SIND THEMA IN DER KABINE.": [
+"lang-de.js"
+],
+"DER GEGNER REAGIERT VERÄRGERT AUF DIESE WORTE.": [
+"lang-de.js"
+],
+"DIE FANS JUBELN, DER TRAINER BLEIBT VORSICHTIG.": [
+"lang-de.js"
+],
+"SEINE AUSSAGEN NACH DEM SPIEL MACHEN SCHLAGZEILEN.": [
+"lang-de.js"
+],
+"SEINE SELBSTBEWUSSTEN WORTE SORGEN FÜR AUFSEHEN.": [
+"lang-de.js"
+],
+"SEINE BESCHEIDENE ART WIRD GELOBT.": [
+"lang-de.js"
+],
+"ER BETONTE DEN TEAMGEIST.": [
+"lang-de.js"
+],
 "– WIR HABEN UNS QUALIFIZIERT!": [
 "lang-de.js"
 ],
@@ -146615,9 +147017,6 @@
 "lang-de.js"
 ],
 "DER TRAINER WAR BEEINDRUCKT!": [
-"lang-de.js"
-],
-"DER TRAINER FLANKT VON DER ECKE.": [
 "lang-de.js"
 ],
 "NUMMERN WIE 10, 9 UND 7 SIND SCHWERER.": [
@@ -152613,7 +153012,8 @@
 ],
 "Long": [
 "lang-en.js",
-"lang-fr.js"
+"lang-fr.js",
+"wc.js"
 ],
 "Curly": [
 "lang-en.js"
@@ -155555,6 +155955,57 @@
 "lang-en.js"
 ],
 "Included with Premium+": [
+"lang-en.js"
+],
+"Tap where you want to aim in the goal as the ball reaches your head": [
+"lang-en.js"
+],
+"· when you tap is timing, where you tap is direction ·": [
+"lang-en.js"
+],
+"Keep tapping, fast": [
+"lang-en.js"
+],
+"· the faster you tap, the faster you run ·": [
+"lang-en.js"
+],
+"Corner! As the ball reaches your head, tap where you want to aim in the goal: timing and direction are up to you.": [
+"lang-en.js"
+],
+"Corner!": [
+"lang-en.js"
+],
+"As the ball reaches your head, tap where you want to aim in the goal: timing and direction are up to you.": [
+"lang-en.js"
+],
+"The coach crosses from the corner. As the ball reaches your head, tap where you want to aim in the goal.": [
+"lang-en.js"
+],
+"The coach crosses from the corner.": [
+"lang-en.js"
+],
+"As the ball reaches your head, tap where you want to aim in the goal.": [
+"lang-en.js"
+],
+"His words are the talk of the dressing room.": [
+"lang-en.js"
+],
+"The rivals are not happy with these words.": [
+"lang-en.js"
+],
+"The fans loved it, the coach is cautious.": [
+"lang-en.js"
+],
+"His post-match comments are making headlines.": [
+"lang-en.js"
+],
+"His confident words drew attention.": [
+"lang-en.js"
+],
+"His humble attitude won praise.": [
+"lang-en.js"
+],
+"He stressed team spirit.": [
 "lang-en.js"
 ],
 "— we qualified!": [
@@ -159809,9 +160260,6 @@
 "The coach was impressed!": [
 "lang-en.js"
 ],
-"The coach crosses from the corner.": [
-"lang-en.js"
-],
 "Tap as the ball reaches your head; you'll aim roughly where the target is.": [
 "lang-en.js"
 ],
@@ -159861,9 +160309,6 @@
 "lang-en.js"
 ],
 "You feel lighter.": [
-"lang-en.js"
-],
-"Corner!": [
 "lang-en.js"
 ],
 "Tap as the ball reaches your head; you'll aim roughly at the moving target.": [
@@ -164129,6 +164574,33 @@
 "INCLUDED WITH PREMIUM+": [
 "lang-en.js"
 ],
+"KEEP TAPPING, FAST": [
+"lang-en.js"
+],
+"THE COACH CROSSES FROM THE CORNER.": [
+"lang-en.js"
+],
+"HIS WORDS ARE THE TALK OF THE DRESSING ROOM.": [
+"lang-en.js"
+],
+"THE RIVALS ARE NOT HAPPY WITH THESE WORDS.": [
+"lang-en.js"
+],
+"THE FANS LOVED IT, THE COACH IS CAUTIOUS.": [
+"lang-en.js"
+],
+"HIS POST-MATCH COMMENTS ARE MAKING HEADLINES.": [
+"lang-en.js"
+],
+"HIS CONFIDENT WORDS DREW ATTENTION.": [
+"lang-en.js"
+],
+"HIS HUMBLE ATTITUDE WON PRAISE.": [
+"lang-en.js"
+],
+"HE STRESSED TEAM SPIRIT.": [
+"lang-en.js"
+],
 "— WE QUALIFIED!": [
 "lang-en.js"
 ],
@@ -167485,9 +167957,6 @@
 "lang-en.js"
 ],
 "THE COACH WAS IMPRESSED!": [
-"lang-en.js"
-],
-"THE COACH CROSSES FROM THE CORNER.": [
 "lang-en.js"
 ],
 "NUMBERS LIKE 10, 9 AND 7 ARE HARDER.": [
@@ -176484,6 +176953,57 @@
 "Incluido con Premium+": [
 "lang-es.js"
 ],
+"Toca donde quieras rematar en la portería cuando el balón llegue a tu cabeza": [
+"lang-es.js"
+],
+"· el momento del toque es el timing, el lugar es la dirección ·": [
+"lang-es.js"
+],
+"Toca rápido y sin parar": [
+"lang-es.js"
+],
+"· cuanto más rápido toques, más rápido corres ·": [
+"lang-es.js"
+],
+"¡Córner! Cuando el balón llegue a tu cabeza, toca donde quieras rematar en la portería: el timing y la dirección dependen de ti.": [
+"lang-es.js"
+],
+"¡Córner!": [
+"lang-es.js"
+],
+"Cuando el balón llegue a tu cabeza, toca donde quieras rematar en la portería: el timing y la dirección dependen de ti.": [
+"lang-es.js"
+],
+"El entrenador centra desde el córner. Cuando el balón llegue a tu cabeza, toca donde quieras rematar en la portería.": [
+"lang-es.js"
+],
+"El entrenador centra desde el córner.": [
+"lang-es.js"
+],
+"Cuando el balón llegue a tu cabeza, toca donde quieras rematar en la portería.": [
+"lang-es.js"
+],
+"Sus palabras son el tema del vestuario.": [
+"lang-es.js"
+],
+"El rival no está contento con estas palabras.": [
+"lang-es.js"
+],
+"La afición se vino arriba, el entrenador es prudente.": [
+"lang-es.js"
+],
+"Sus declaraciones tras el partido son noticia.": [
+"lang-es.js"
+],
+"Sus palabras llenas de confianza llamaron la atención.": [
+"lang-es.js"
+],
+"Su humildad recibió elogios.": [
+"lang-es.js"
+],
+"Destacó el espíritu de equipo.": [
+"lang-es.js"
+],
 "— ¡nos hemos clasificado!": [
 "lang-es.js"
 ],
@@ -180727,9 +181247,6 @@
 "¡El entrenador quedó impresionado!": [
 "lang-es.js"
 ],
-"El entrenador centra desde el córner.": [
-"lang-es.js"
-],
 "Toca cuando el balón llegue a tu cabeza; apuntarás más o menos hacia el objetivo.": [
 "lang-es.js"
 ],
@@ -180779,9 +181296,6 @@
 "lang-es.js"
 ],
 "Te sientes más ligero.": [
-"lang-es.js"
-],
-"¡Córner!": [
 "lang-es.js"
 ],
 "Toca cuando el balón llegue a tu cabeza; apuntarás más o menos al objetivo en movimiento.": [
@@ -185099,6 +185613,33 @@
 "INCLUIDO CON PREMIUM+": [
 "lang-es.js"
 ],
+"TOCA RÁPIDO Y SIN PARAR": [
+"lang-es.js"
+],
+"EL ENTRENADOR CENTRA DESDE EL CÓRNER.": [
+"lang-es.js"
+],
+"SUS PALABRAS SON EL TEMA DEL VESTUARIO.": [
+"lang-es.js"
+],
+"EL RIVAL NO ESTÁ CONTENTO CON ESTAS PALABRAS.": [
+"lang-es.js"
+],
+"LA AFICIÓN SE VINO ARRIBA, EL ENTRENADOR ES PRUDENTE.": [
+"lang-es.js"
+],
+"SUS DECLARACIONES TRAS EL PARTIDO SON NOTICIA.": [
+"lang-es.js"
+],
+"SUS PALABRAS LLENAS DE CONFIANZA LLAMARON LA ATENCIÓN.": [
+"lang-es.js"
+],
+"SU HUMILDAD RECIBIÓ ELOGIOS.": [
+"lang-es.js"
+],
+"DESTACÓ EL ESPÍRITU DE EQUIPO.": [
+"lang-es.js"
+],
 "— ¡NOS HEMOS CLASIFICADO!": [
 "lang-es.js"
 ],
@@ -188474,9 +189015,6 @@
 "lang-es.js"
 ],
 "¡EL ENTRENADOR QUEDÓ IMPRESIONADO!": [
-"lang-es.js"
-],
-"EL ENTRENADOR CENTRA DESDE EL CÓRNER.": [
 "lang-es.js"
 ],
 "NÚMEROS COMO EL 10, EL 9 Y EL 7 SON MÁS DIFÍCILES.": [
@@ -197332,6 +197870,57 @@
 "Inclus avec Premium+": [
 "lang-fr.js"
 ],
+"Touche l'endroit où tu veux viser dans le but quand le ballon arrive sur ta tête": [
+"lang-fr.js"
+],
+"· le moment du toucher donne le timing, l'endroit donne la direction ·": [
+"lang-fr.js"
+],
+"Tape vite, sans t'arrêter": [
+"lang-fr.js"
+],
+"· plus tu tapes vite, plus tu cours vite ·": [
+"lang-fr.js"
+],
+"Corner ! Quand le ballon arrive sur ta tête, touche l'endroit où tu veux viser dans le but : le timing et la direction dépendent de toi.": [
+"lang-fr.js"
+],
+"Corner !": [
+"lang-fr.js"
+],
+"Quand le ballon arrive sur ta tête, touche l'endroit où tu veux viser dans le but : le timing et la direction dépendent de toi.": [
+"lang-fr.js"
+],
+"Le coach centre depuis le corner. Quand le ballon arrive sur ta tête, touche l'endroit où tu veux viser dans le but.": [
+"lang-fr.js"
+],
+"Le coach centre depuis le corner.": [
+"lang-fr.js"
+],
+"Quand le ballon arrive sur ta tête, touche l'endroit où tu veux viser dans le but.": [
+"lang-fr.js"
+],
+"Ses paroles font parler dans le vestiaire.": [
+"lang-fr.js"
+],
+"L'adversaire n'apprécie pas ces paroles.": [
+"lang-fr.js"
+],
+"Les supporters adorent, le coach reste prudent.": [
+"lang-fr.js"
+],
+"Ses déclarations d'après-match font la une.": [
+"lang-fr.js"
+],
+"Ses paroles pleines d'assurance ont attiré l'attention.": [
+"lang-fr.js"
+],
+"Son humilité a été saluée.": [
+"lang-fr.js"
+],
+"Il a insisté sur l'esprit d'équipe.": [
+"lang-fr.js"
+],
 "— on est qualifiés !": [
 "lang-fr.js"
 ],
@@ -201429,9 +202018,6 @@
 "Le coach a été impressionné !": [
 "lang-fr.js"
 ],
-"Le coach centre depuis le corner.": [
-"lang-fr.js"
-],
 "Touche quand le ballon arrive à ta tête ; tu viseras à peu près là où se trouve la cible.": [
 "lang-fr.js"
 ],
@@ -201481,9 +202067,6 @@
 "lang-fr.js"
 ],
 "Tu te sens plus léger.": [
-"lang-fr.js"
-],
-"Corner !": [
 "lang-fr.js"
 ],
 "Touche quand le ballon arrive à ta tête ; tu viseras à peu près la cible mobile.": [
@@ -205684,6 +206267,33 @@
 "INCLUS AVEC PREMIUM+": [
 "lang-fr.js"
 ],
+"TAPE VITE, SANS T'ARRÊTER": [
+"lang-fr.js"
+],
+"LE COACH CENTRE DEPUIS LE CORNER.": [
+"lang-fr.js"
+],
+"SES PAROLES FONT PARLER DANS LE VESTIAIRE.": [
+"lang-fr.js"
+],
+"L'ADVERSAIRE N'APPRÉCIE PAS CES PAROLES.": [
+"lang-fr.js"
+],
+"LES SUPPORTERS ADORENT, LE COACH RESTE PRUDENT.": [
+"lang-fr.js"
+],
+"SES DÉCLARATIONS D'APRÈS-MATCH FONT LA UNE.": [
+"lang-fr.js"
+],
+"SES PAROLES PLEINES D'ASSURANCE ONT ATTIRÉ L'ATTENTION.": [
+"lang-fr.js"
+],
+"SON HUMILITÉ A ÉTÉ SALUÉE.": [
+"lang-fr.js"
+],
+"IL A INSISTÉ SUR L'ESPRIT D'ÉQUIPE.": [
+"lang-fr.js"
+],
 "— ON EST QUALIFIÉS !": [
 "lang-fr.js"
 ],
@@ -207810,7 +208420,8 @@
 "lang-fr.js"
 ],
 "VIE": [
-"lang-fr.js"
+"lang-fr.js",
+"wc.js"
 ],
 "REMPLAÇANT": [
 "lang-fr.js"
@@ -208918,9 +209529,6 @@
 "lang-fr.js"
 ],
 "LE COACH A ÉTÉ IMPRESSIONNÉ !": [
-"lang-fr.js"
-],
-"LE COACH CENTRE DEPUIS LE CORNER.": [
 "lang-fr.js"
 ],
 "LES NUMÉROS COMME 10, 9 ET 7 SONT PLUS DIFFICILES.": [
@@ -217589,6 +218197,57 @@
 "Termasuk dalam Premium+": [
 "lang-id.js"
 ],
+"Ketuk tempat yang ingin kamu tuju di gawang saat bola sampai di kepalamu": [
+"lang-id.js"
+],
+"· saat mengetuk adalah timing, tempatnya adalah arah ·": [
+"lang-id.js"
+],
+"Ketuk cepat tanpa henti": [
+"lang-id.js"
+],
+"· makin cepat kamu mengetuk, makin cepat kamu berlari ·": [
+"lang-id.js"
+],
+"Tendangan sudut! Saat bola sampai di kepalamu, ketuk tempat yang ingin kamu tuju di gawang: timing dan arah ada di tanganmu.": [
+"lang-id.js"
+],
+"Sepak pojok!": [
+"lang-id.js"
+],
+"Saat bola sampai di kepalamu, ketuk tempat yang ingin kamu tuju di gawang: timing dan arah ada di tanganmu.": [
+"lang-id.js"
+],
+"Pelatih mengirim umpan dari sudut. Saat bola sampai di kepalamu, ketuk tempat yang ingin kamu tuju di gawang.": [
+"lang-id.js"
+],
+"Pelatih mengirim umpan dari sepak pojok.": [
+"lang-id.js"
+],
+"Saat bola sampai di kepalamu, ketuk tempat yang ingin kamu tuju di gawang.": [
+"lang-id.js"
+],
+"Kata-katanya jadi bahan obrolan di ruang ganti.": [
+"lang-id.js"
+],
+"Kubu lawan tidak senang dengan kata-kata ini.": [
+"lang-id.js"
+],
+"Suporter bersorak, pelatih berhati-hati.": [
+"lang-id.js"
+],
+"Komentarnya usai laga jadi berita utama.": [
+"lang-id.js"
+],
+"Kata-katanya yang percaya diri menarik perhatian.": [
+"lang-id.js"
+],
+"Sikap rendah hatinya dipuji.": [
+"lang-id.js"
+],
+"Ia menekankan semangat tim.": [
+"lang-id.js"
+],
 "— kita lolos!": [
 "lang-id.js"
 ],
@@ -221645,9 +222304,6 @@
 "Pelatih terkesan!": [
 "lang-id.js"
 ],
-"Pelatih mengirim umpan dari sepak pojok.": [
-"lang-id.js"
-],
 "Ketuk saat bola mencapai kepalamu; kamu akan membidik kira-kira ke arah target.": [
 "lang-id.js"
 ],
@@ -221697,9 +222353,6 @@
 "lang-id.js"
 ],
 "Kamu merasa lebih ringan.": [
-"lang-id.js"
-],
-"Sepak pojok!": [
 "lang-id.js"
 ],
 "Ketuk saat bola mencapai kepalamu; kamu akan membidik kira-kira ke target yang bergerak.": [
@@ -225822,6 +226475,33 @@
 "TERMASUK DALAM PREMIUM+": [
 "lang-id.js"
 ],
+"KETUK CEPAT TANPA HENTI": [
+"lang-id.js"
+],
+"PELATIH MENGIRIM UMPAN DARI SEPAK POJOK.": [
+"lang-id.js"
+],
+"KATA-KATANYA JADI BAHAN OBROLAN DI RUANG GANTI.": [
+"lang-id.js"
+],
+"KUBU LAWAN TIDAK SENANG DENGAN KATA-KATA INI.": [
+"lang-id.js"
+],
+"SUPORTER BERSORAK, PELATIH BERHATI-HATI.": [
+"lang-id.js"
+],
+"KOMENTARNYA USAI LAGA JADI BERITA UTAMA.": [
+"lang-id.js"
+],
+"KATA-KATANYA YANG PERCAYA DIRI MENARIK PERHATIAN.": [
+"lang-id.js"
+],
+"SIKAP RENDAH HATINYA DIPUJI.": [
+"lang-id.js"
+],
+"IA MENEKANKAN SEMANGAT TIM.": [
+"lang-id.js"
+],
 "— KITA LOLOS!": [
 "lang-id.js"
 ],
@@ -229031,9 +229711,6 @@
 "lang-id.js"
 ],
 "PELATIH TERKESAN!": [
-"lang-id.js"
-],
-"PELATIH MENGIRIM UMPAN DARI SEPAK POJOK.": [
 "lang-id.js"
 ],
 "NOMOR SEPERTI 10, 9, DAN 7 LEBIH SULIT.": [
@@ -237724,6 +238401,57 @@
 "Incluso con Premium+": [
 "lang-it.js"
 ],
+"Tocca dove vuoi colpire in porta quando il pallone arriva alla tua testa": [
+"lang-it.js"
+],
+"· il momento del tocco è il tempo, il punto è la direzione ·": [
+"lang-it.js"
+],
+"Tocca veloce, senza fermarti": [
+"lang-it.js"
+],
+"· più tocchi veloce, più corri veloce ·": [
+"lang-it.js"
+],
+"Calcio d'angolo! Quando il pallone arriva alla tua testa, tocca dove vuoi mirare in porta: tempo e direzione dipendono da te.": [
+"lang-it.js"
+],
+"Calcio d'angolo!": [
+"lang-it.js"
+],
+"Quando il pallone arriva alla tua testa, tocca dove vuoi mirare in porta: tempo e direzione dipendono da te.": [
+"lang-it.js"
+],
+"Il mister crossa dall'angolo. Quando il pallone arriva alla tua testa, tocca dove vuoi mirare in porta.": [
+"lang-it.js"
+],
+"Il mister crossa dalla bandierina.": [
+"lang-it.js"
+],
+"Quando il pallone arriva alla tua testa, tocca dove vuoi mirare in porta.": [
+"lang-it.js"
+],
+"Le sue parole fanno discutere lo spogliatoio.": [
+"lang-it.js"
+],
+"Gli avversari non hanno gradito queste parole.": [
+"lang-it.js"
+],
+"I tifosi esultano, il mister è cauto.": [
+"lang-it.js"
+],
+"Le sue dichiarazioni a fine partita fanno notizia.": [
+"lang-it.js"
+],
+"Le sue parole sicure hanno attirato l'attenzione.": [
+"lang-it.js"
+],
+"La sua umiltà è stata elogiata.": [
+"lang-it.js"
+],
+"Ha sottolineato lo spirito di squadra.": [
+"lang-it.js"
+],
 "— ci siamo qualificati!": [
 "lang-it.js"
 ],
@@ -241771,9 +242499,6 @@
 "Il mister è rimasto colpito!": [
 "lang-it.js"
 ],
-"Il mister crossa dalla bandierina.": [
-"lang-it.js"
-],
 "Tocca quando la palla arriva alla testa; mirerai più o meno dove si trova il bersaglio.": [
 "lang-it.js"
 ],
@@ -241823,9 +242548,6 @@
 "lang-it.js"
 ],
 "Ti senti più leggero.": [
-"lang-it.js"
-],
-"Calcio d'angolo!": [
 "lang-it.js"
 ],
 "Tocca quando la palla arriva alla testa; mirerai più o meno al bersaglio in movimento.": [
@@ -245951,6 +246673,33 @@
 "INCLUSO CON PREMIUM+": [
 "lang-it.js"
 ],
+"TOCCA VELOCE, SENZA FERMARTI": [
+"lang-it.js"
+],
+"IL MISTER CROSSA DALLA BANDIERINA.": [
+"lang-it.js"
+],
+"LE SUE PAROLE FANNO DISCUTERE LO SPOGLIATOIO.": [
+"lang-it.js"
+],
+"GLI AVVERSARI NON HANNO GRADITO QUESTE PAROLE.": [
+"lang-it.js"
+],
+"I TIFOSI ESULTANO, IL MISTER È CAUTO.": [
+"lang-it.js"
+],
+"LE SUE DICHIARAZIONI A FINE PARTITA FANNO NOTIZIA.": [
+"lang-it.js"
+],
+"LE SUE PAROLE SICURE HANNO ATTIRATO L'ATTENZIONE.": [
+"lang-it.js"
+],
+"LA SUA UMILTÀ È STATA ELOGIATA.": [
+"lang-it.js"
+],
+"HA SOTTOLINEATO LO SPIRITO DI SQUADRA.": [
+"lang-it.js"
+],
 "— CI SIAMO QUALIFICATI!": [
 "lang-it.js"
 ],
@@ -249162,9 +249911,6 @@
 "lang-it.js"
 ],
 "IL MISTER È RIMASTO COLPITO!": [
-"lang-it.js"
-],
-"IL MISTER CROSSA DALLA BANDIERINA.": [
 "lang-it.js"
 ],
 "NUMERI COME 10, 9 E 7 SONO PIÙ DIFFICILI.": [
@@ -258395,6 +259141,57 @@
 "Incluído no Premium+": [
 "lang-pt.js"
 ],
+"Toque onde quer cabecear no gol quando a bola chegar na sua cabeça": [
+"lang-pt.js"
+],
+"· o momento do toque é o tempo, o lugar é a direção ·": [
+"lang-pt.js"
+],
+"Toque rápido, sem parar": [
+"lang-pt.js"
+],
+"· quanto mais rápido tocar, mais rápido você corre ·": [
+"lang-pt.js"
+],
+"Escanteio! Quando a bola chegar na sua cabeça, toque onde quer mirar no gol: tempo e direção são com você.": [
+"lang-pt.js"
+],
+"Escanteio!": [
+"lang-pt.js"
+],
+"Quando a bola chegar na sua cabeça, toque onde quer mirar no gol: tempo e direção são com você.": [
+"lang-pt.js"
+],
+"O técnico cruza do escanteio. Quando a bola chegar na sua cabeça, toque onde quer mirar no gol.": [
+"lang-pt.js"
+],
+"O técnico cruza do escanteio.": [
+"lang-pt.js"
+],
+"Quando a bola chegar na sua cabeça, toque onde quer mirar no gol.": [
+"lang-pt.js"
+],
+"Suas palavras são o assunto do vestiário.": [
+"lang-pt.js"
+],
+"O rival não gostou dessas palavras.": [
+"lang-pt.js"
+],
+"A torcida vibrou, o técnico está cauteloso.": [
+"lang-pt.js"
+],
+"Suas declarações pós-jogo viraram manchete.": [
+"lang-pt.js"
+],
+"Suas palavras confiantes chamaram a atenção.": [
+"lang-pt.js"
+],
+"Sua humildade foi elogiada.": [
+"lang-pt.js"
+],
+"Ele destacou o espírito de equipe.": [
+"lang-pt.js"
+],
 "— nos classificamos!": [
 "lang-pt.js"
 ],
@@ -262337,9 +263134,6 @@
 "O técnico ficou impressionado!": [
 "lang-pt.js"
 ],
-"O técnico cruza do escanteio.": [
-"lang-pt.js"
-],
 "Toque quando a bola chegar na sua cabeça; você mira mais ou menos onde está o alvo.": [
 "lang-pt.js"
 ],
@@ -262389,9 +263183,6 @@
 "lang-pt.js"
 ],
 "Você se sente mais leve.": [
-"lang-pt.js"
-],
-"Escanteio!": [
 "lang-pt.js"
 ],
 "Toque quando a bola chegar na sua cabeça; você mira mais ou menos no alvo em movimento.": [
@@ -266396,6 +267187,33 @@
 "INCLUÍDO NO PREMIUM+": [
 "lang-pt.js"
 ],
+"TOQUE RÁPIDO, SEM PARAR": [
+"lang-pt.js"
+],
+"O TÉCNICO CRUZA DO ESCANTEIO.": [
+"lang-pt.js"
+],
+"SUAS PALAVRAS SÃO O ASSUNTO DO VESTIÁRIO.": [
+"lang-pt.js"
+],
+"O RIVAL NÃO GOSTOU DESSAS PALAVRAS.": [
+"lang-pt.js"
+],
+"A TORCIDA VIBROU, O TÉCNICO ESTÁ CAUTELOSO.": [
+"lang-pt.js"
+],
+"SUAS DECLARAÇÕES PÓS-JOGO VIRARAM MANCHETE.": [
+"lang-pt.js"
+],
+"SUAS PALAVRAS CONFIANTES CHAMARAM A ATENÇÃO.": [
+"lang-pt.js"
+],
+"SUA HUMILDADE FOI ELOGIADA.": [
+"lang-pt.js"
+],
+"ELE DESTACOU O ESPÍRITO DE EQUIPE.": [
+"lang-pt.js"
+],
 "— NOS CLASSIFICAMOS!": [
 "lang-pt.js"
 ],
@@ -269487,9 +270305,6 @@
 "lang-pt.js"
 ],
 "O TÉCNICO FICOU IMPRESSIONADO!": [
-"lang-pt.js"
-],
-"O TÉCNICO CRUZA DO ESCANTEIO.": [
 "lang-pt.js"
 ],
 "NÚMEROS COMO 10, 9 E 7 SÃO MAIS DIFÍCEIS.": [
@@ -272798,12 +273613,6 @@
 "league.js",
 "wc.js"
 ],
-"ROU": [
-"league.js",
-"legends.js",
-"squads.js",
-"wc.js"
-],
 "GHA": [
 "league.js",
 "squads.js",
@@ -273966,9 +274775,6 @@
 "LZString": [
 "lz-string.min.js"
 ],
-"Korner! Top kafana gelirken kalede vurmak istediğin yere dokun: zamanlama ve yön senin elinde.": [
-"match.js"
-],
 "whistleLong": [
 "match.js",
 "sfx.js"
@@ -274110,12 +274916,6 @@
 "Enter": [
 "minigame.js"
 ],
-"Durmadan, hızlı hızlı dokun": [
-"minigame.js"
-],
-"· ne kadar hızlı basarsan o kadar hızlı koşarsın ·": [
-"minigame.js"
-],
 "800 {}px \"Saira Condensed\", sans-serif": [
 "minigame.js",
 "socialart.js"
@@ -274139,12 +274939,6 @@
 "minigame.js"
 ],
 "Üstteki çubuk YEŞİL olunca ÇIK\\'a bas.": [
-"minigame.js"
-],
-"Top kafana gelirken kalede vurmak istediğin yere dokun": [
-"minigame.js"
-],
-"· dokunduğun an zamanlama, dokunduğun yer yön ·": [
 "minigame.js"
 ],
 "Tempoda: %{}": [
@@ -288890,10 +289684,6 @@
 "squads.js",
 "wc.js"
 ],
-"IRL": [
-"squads.js",
-"wc.js"
-],
 "CUW": [
 "squads.js",
 "wc.js"
@@ -289008,7 +289798,8 @@
 "util.js"
 ],
 "FI": [
-"util.js"
+"util.js",
+"wc.js"
 ],
 "SK": [
 "util.js"
@@ -289077,7 +289868,8 @@
 "util.js"
 ],
 "AM": [
-"value.js"
+"value.js",
+"wc.js"
 ],
 "{} kabul etti: haftalık +{}": [
 "value.js"
@@ -289114,6 +289906,1044 @@
 "wc.js"
 ],
 "HAI": [
+"wc.js"
+],
+"MLI": [
+"wc.js"
+],
+"Mali": [
+"wc.js"
+],
+"Yves Bissoké": [
+"wc.js"
+],
+"Amadou Hadara": [
+"wc.js"
+],
+"Kamory Domba": [
+"wc.js"
+],
+"COD": [
+"wc.js"
+],
+"DR Kongo": [
+"wc.js"
+],
+"Chancel Bembala": [
+"wc.js"
+],
+"Cédric Bakamu": [
+"wc.js"
+],
+"Yoane Wisima": [
+"wc.js"
+],
+"Venezuela": [
+"wc.js"
+],
+"Salomón Rondero": [
+"wc.js"
+],
+"Yeferson Soledo": [
+"wc.js"
+],
+"Yangel Herreda": [
+"wc.js"
+],
+"Edin Džekarić": [
+"wc.js"
+],
+"Ermedin Demirić": [
+"wc.js"
+],
+"İzlanda": [
+"wc.js"
+],
+"IS": [
+"wc.js"
+],
+"Albert Gunnarsen": [
+"wc.js"
+],
+"Hákon Haldorsen": [
+"wc.js"
+],
+"Ísak Bergþór": [
+"wc.js"
+],
+"BFA": [
+"wc.js"
+],
+"Burkina Faso": [
+"wc.js"
+],
+"Bertrand Traoka": [
+"wc.js"
+],
+"Edmond Tapsida": [
+"wc.js"
+],
+"Finlandiya": [
+"wc.js"
+],
+"Teemu Pukkala": [
+"wc.js"
+],
+"Glen Kamarainen": [
+"wc.js"
+],
+"Kuzey İrlanda": [
+"wc.js"
+],
+"Conor Bradewell": [
+"wc.js"
+],
+"Shea Charleton": [
+"wc.js"
+],
+"Gine": [
+"wc.js"
+],
+"Serhou Guirandé": [
+"wc.js"
+],
+"Naby Keïtara": [
+"wc.js"
+],
+"Karadağ": [
+"wc.js"
+],
+"Stevan Jovetović": [
+"wc.js"
+],
+"Nikola Krstanić": [
+"wc.js"
+],
+"Kiril Despodić": [
+"wc.js"
+],
+"Ilian Ilarov": [
+"wc.js"
+],
+"Kuzey Makedonya": [
+"wc.js"
+],
+"Eljif Elmarić": [
+"wc.js"
+],
+"Enis Bardić": [
+"wc.js"
+],
+"Gabon": [
+"wc.js"
+],
+"Pierre Aubaneyang": [
+"wc.js"
+],
+"Denis Bouanda": [
+"wc.js"
+],
+"HON": [
+"wc.js"
+],
+"Honduras": [
+"wc.js"
+],
+"Alberth Elisardo": [
+"wc.js"
+],
+"Romell Quiotero": [
+"wc.js"
+],
+"UAE": [
+"wc.js"
+],
+"BAE": [
+"wc.js"
+],
+"Ali Mabkari": [
+"wc.js"
+],
+"Khalil Ibrami": [
+"wc.js"
+],
+"Angola": [
+"wc.js"
+],
+"Gelson Dalida": [
+"wc.js"
+],
+"Fredy Ribeira": [
+"wc.js"
+],
+"ZAM": [
+"wc.js"
+],
+"Zambiya": [
+"wc.js"
+],
+"Patson Dakala": [
+"wc.js"
+],
+"Fashion Sakaba": [
+"wc.js"
+],
+"Bolivya": [
+"wc.js"
+],
+"Miguel Terrazo": [
+"wc.js"
+],
+"Ramiro Vacara": [
+"wc.js"
+],
+"OMA": [
+"wc.js"
+],
+"Umman": [
+"wc.js"
+],
+"Issam Sabhari": [
+"wc.js"
+],
+"Muhsen Ghassabi": [
+"wc.js"
+],
+"Benin": [
+"wc.js"
+],
+"Steve Mouniko": [
+"wc.js"
+],
+"Jodel Dossah": [
+"wc.js"
+],
+"Kazakistan": [
+"wc.js"
+],
+"KZ": [
+"wc.js"
+],
+"Baktiyar Zainutov": [
+"wc.js"
+],
+"Islambek Kuatbekov": [
+"wc.js"
+],
+"Endonezya": [
+"wc.js"
+],
+"ID": [
+"wc.js"
+],
+"Rizky Ridhana": [
+"wc.js"
+],
+"Marselino Ferdano": [
+"wc.js"
+],
+"Jay Idzesa": [
+"wc.js"
+],
+"CHN": [
+"wc.js"
+],
+"Çin": [
+"wc.js"
+],
+"CN": [
+"wc.js"
+],
+"Wu Leiming": [
+"wc.js"
+],
+"Zhang Yuchen": [
+"wc.js"
+],
+"BHR": [
+"wc.js"
+],
+"Bahreyn": [
+"wc.js"
+],
+"Ali Madawi": [
+"wc.js"
+],
+"Kamil Hardani": [
+"wc.js"
+],
+"SYR": [
+"wc.js"
+],
+"Suriye": [
+"wc.js"
+],
+"Omar Kharbani": [
+"wc.js"
+],
+"Mahmoud Mawasi": [
+"wc.js"
+],
+"Ermenistan": [
+"wc.js"
+],
+"Eduard Spertoyan": [
+"wc.js"
+],
+"Tigran Barseghan": [
+"wc.js"
+],
+"UGA": [
+"wc.js"
+],
+"Uganda": [
+"wc.js"
+],
+"Emmanuel Okwira": [
+"wc.js"
+],
+"Khalid Auchera": [
+"wc.js"
+],
+"Guatemala": [
+"wc.js"
+],
+"Rubio Rubiano": [
+"wc.js"
+],
+"Óscar Santero": [
+"wc.js"
+],
+"Lüksemburg": [
+"wc.js"
+],
+"Leandro Barreda": [
+"wc.js"
+],
+"Danel Sinarić": [
+"wc.js"
+],
+"THA": [
+"wc.js"
+],
+"Tayland": [
+"wc.js"
+],
+"TH": [
+"wc.js"
+],
+"Suphanat Muangsri": [
+"wc.js"
+],
+"Supachok Saranwong": [
+"wc.js"
+],
+"Vietnam": [
+"wc.js"
+],
+"VN": [
+"wc.js"
+],
+"Nguyen Quang Hao": [
+"wc.js"
+],
+"Nguyen Tien Lam": [
+"wc.js"
+],
+"SLV": [
+"wc.js"
+],
+"El Salvador": [
+"wc.js"
+],
+"Brayan Gileo": [
+"wc.js"
+],
+"Jairo Henrado": [
+"wc.js"
+],
+"TRI": [
+"wc.js"
+],
+"Trinidad ve Tobago": [
+"wc.js"
+],
+"Levi Garwell": [
+"wc.js"
+],
+"Kevin Molinor": [
+"wc.js"
+],
+"Belarus": [
+"wc.js"
+],
+"Max Ebongar": [
+"wc.js"
+],
+"Vladislav Malkovets": [
+"wc.js"
+],
+"Kenya": [
+"wc.js"
+],
+"Michael Olunde": [
+"wc.js"
+],
+"Victor Wanyamo": [
+"wc.js"
+],
+"Litvanya": [
+"wc.js"
+],
+"BA": [
+"wc.js"
+],
+"Gvidas Ginaudas": [
+"wc.js"
+],
+"Fedor Černiauskas": [
+"wc.js"
+],
+"KGZ": [
+"wc.js"
+],
+"Kırgızistan": [
+"wc.js"
+],
+"Gulzhigit Alymbek": [
+"wc.js"
+],
+"Joel Kojomurat": [
+"wc.js"
+],
+"Letonya": [
+"wc.js"
+],
+"Janis Ikaumers": [
+"wc.js"
+],
+"Roberts Savalders": [
+"wc.js"
+],
+"Estonya": [
+"wc.js"
+],
+"Rauno Sappela": [
+"wc.js"
+],
+"Henri Anierand": [
+"wc.js"
+],
+"LBN": [
+"wc.js"
+],
+"Lübnan": [
+"wc.js"
+],
+"Hassan Maatouki": [
+"wc.js"
+],
+"Bassel Jarawi": [
+"wc.js"
+],
+"Hindistan": [
+"wc.js"
+],
+"IN": [
+"wc.js"
+],
+"Arjun Mehrani": [
+"wc.js"
+],
+"Rohan Desaval": [
+"wc.js"
+],
+"Lallian Zothang": [
+"wc.js"
+],
+"TJK": [
+"wc.js"
+],
+"Tacikistan": [
+"wc.js"
+],
+"Parvizdzhon Umarali": [
+"wc.js"
+],
+"Rustam Soirali": [
+"wc.js"
+],
+"Gylfi": [
+"wc.js"
+],
+"Aron": [
+"wc.js"
+],
+"Jóhann": [
+"wc.js"
+],
+"Hörður": [
+"wc.js"
+],
+"Kári": [
+"wc.js"
+],
+"Birkir": [
+"wc.js"
+],
+"Ragnar": [
+"wc.js"
+],
+"Alfreð": [
+"wc.js"
+],
+"Arnór": [
+"wc.js"
+],
+"Sverrir": [
+"wc.js"
+],
+"Gunnarsson": [
+"wc.js"
+],
+"Sigurðsson": [
+"wc.js"
+],
+"Jónsson": [
+"wc.js"
+],
+"Magnússon": [
+"wc.js"
+],
+"Halldórsson": [
+"wc.js"
+],
+"Einarsson": [
+"wc.js"
+],
+"Guðmundsson": [
+"wc.js"
+],
+"Kristjánsson": [
+"wc.js"
+],
+"Ólafsson": [
+"wc.js"
+],
+"Stefánsson": [
+"wc.js"
+],
+"Teemu": [
+"wc.js"
+],
+"Joel": [
+"wc.js"
+],
+"Jere": [
+"wc.js"
+],
+"Niko": [
+"wc.js"
+],
+"Onni": [
+"wc.js"
+],
+"Aapo": [
+"wc.js"
+],
+"Juho": [
+"wc.js"
+],
+"Eero": [
+"wc.js"
+],
+"Virtanen": [
+"wc.js"
+],
+"Korhonen": [
+"wc.js"
+],
+"Mäkinen": [
+"wc.js"
+],
+"Nieminen": [
+"wc.js"
+],
+"Mäkelä": [
+"wc.js"
+],
+"Hämäläinen": [
+"wc.js"
+],
+"Laine": [
+"wc.js"
+],
+"Heikkinen": [
+"wc.js"
+],
+"Koskinen": [
+"wc.js"
+],
+"Järvinen": [
+"wc.js"
+],
+"Nurlan": [
+"wc.js"
+],
+"Askhat": [
+"wc.js"
+],
+"Islam": [
+"wc.js"
+],
+"Yerkebulan": [
+"wc.js"
+],
+"Baurzhan": [
+"wc.js"
+],
+"Daniyar": [
+"wc.js"
+],
+"Aibol": [
+"wc.js"
+],
+"Marat": [
+"wc.js"
+],
+"Arman": [
+"wc.js"
+],
+"Abenov": [
+"wc.js"
+],
+"Zhaksylykov": [
+"wc.js"
+],
+"Seitkali": [
+"wc.js"
+],
+"Tagybergen": [
+"wc.js"
+],
+"Kairatov": [
+"wc.js"
+],
+"Nurgaliyev": [
+"wc.js"
+],
+"Bekov": [
+"wc.js"
+],
+"Omarov": [
+"wc.js"
+],
+"Sadykov": [
+"wc.js"
+],
+"Askarov": [
+"wc.js"
+],
+"Tigran": [
+"wc.js"
+],
+"Aram": [
+"wc.js"
+],
+"Hovhannes": [
+"wc.js"
+],
+"Narek": [
+"wc.js"
+],
+"Gor": [
+"wc.js"
+],
+"Artur": [
+"wc.js"
+],
+"Davit": [
+"wc.js"
+],
+"Levon": [
+"wc.js"
+],
+"Vahan": [
+"wc.js"
+],
+"Karen": [
+"wc.js"
+],
+"Hakobyan": [
+"wc.js"
+],
+"Petrosyan": [
+"wc.js"
+],
+"Grigoryan": [
+"wc.js"
+],
+"Harutyunyan": [
+"wc.js"
+],
+"Sargsyan": [
+"wc.js"
+],
+"Avetisyan": [
+"wc.js"
+],
+"Mkrtchyan": [
+"wc.js"
+],
+"Hovhannisyan": [
+"wc.js"
+],
+"Gevorgyan": [
+"wc.js"
+],
+"Vardanyan": [
+"wc.js"
+],
+"Mantas": [
+"wc.js"
+],
+"Darius": [
+"wc.js"
+],
+"Edgaras": [
+"wc.js"
+],
+"Kristaps": [
+"wc.js"
+],
+"Raivis": [
+"wc.js"
+],
+"Artjoms": [
+"wc.js"
+],
+"Karl": [
+"wc.js"
+],
+"Mattias": [
+"wc.js"
+],
+"Siim": [
+"wc.js"
+],
+"Kazlauskas": [
+"wc.js"
+],
+"Petrauskas": [
+"wc.js"
+],
+"Jankauskas": [
+"wc.js"
+],
+"Bērziņš": [
+"wc.js"
+],
+"Kalniņš": [
+"wc.js"
+],
+"Ozoliņš": [
+"wc.js"
+],
+"Tamm": [
+"wc.js"
+],
+"Saar": [
+"wc.js"
+],
+"Sepp": [
+"wc.js"
+],
+"Mägi": [
+"wc.js"
+],
+"Arjun": [
+"wc.js"
+],
+"Rahul": [
+"wc.js"
+],
+"Sandesh": [
+"wc.js"
+],
+"Anirudh": [
+"wc.js"
+],
+"Liston": [
+"wc.js"
+],
+"Manvir": [
+"wc.js"
+],
+"Sahal": [
+"wc.js"
+],
+"Akash": [
+"wc.js"
+],
+"Vikram": [
+"wc.js"
+],
+"Rohit": [
+"wc.js"
+],
+"Singh": [
+"wc.js"
+],
+"Kumar": [
+"wc.js"
+],
+"Sharma": [
+"wc.js"
+],
+"Thapa": [
+"wc.js"
+],
+"Bheke": [
+"wc.js"
+],
+"Das": [
+"wc.js"
+],
+"Nair": [
+"wc.js"
+],
+"Menon": [
+"wc.js"
+],
+"Gupta": [
+"wc.js"
+],
+"Bose": [
+"wc.js"
+],
+"Wei": [
+"wc.js"
+],
+"Lei": [
+"wc.js"
+],
+"Hao": [
+"wc.js"
+],
+"Jun": [
+"wc.js"
+],
+"Yang": [
+"wc.js"
+],
+"Xin": [
+"wc.js"
+],
+"Bin": [
+"wc.js"
+],
+"Peng": [
+"wc.js"
+],
+"Tao": [
+"wc.js"
+],
+"Wang": [
+"wc.js"
+],
+"Li": [
+"wc.js"
+],
+"Zhang": [
+"wc.js"
+],
+"Liu": [
+"wc.js"
+],
+"Chen": [
+"wc.js"
+],
+"Zhao": [
+"wc.js"
+],
+"Huang": [
+"wc.js"
+],
+"Zhou": [
+"wc.js"
+],
+"Wu": [
+"wc.js"
+],
+"Sun": [
+"wc.js"
+],
+"Teerasil": [
+"wc.js"
+],
+"Chanathip": [
+"wc.js"
+],
+"Supachai": [
+"wc.js"
+],
+"Theerathon": [
+"wc.js"
+],
+"Ekanit": [
+"wc.js"
+],
+"Pansa": [
+"wc.js"
+],
+"Weerathep": [
+"wc.js"
+],
+"Sarach": [
+"wc.js"
+],
+"Kritsada": [
+"wc.js"
+],
+"Bordin": [
+"wc.js"
+],
+"Sukjai": [
+"wc.js"
+],
+"Chaiyong": [
+"wc.js"
+],
+"Wongsa": [
+"wc.js"
+],
+"Saenkham": [
+"wc.js"
+],
+"Srisuk": [
+"wc.js"
+],
+"Thongdee": [
+"wc.js"
+],
+"Kaewmanee": [
+"wc.js"
+],
+"Boonmee": [
+"wc.js"
+],
+"Charoen": [
+"wc.js"
+],
+"Panya": [
+"wc.js"
+],
+"Quang": [
+"wc.js"
+],
+"Tien": [
+"wc.js"
+],
+"Van": [
+"wc.js"
+],
+"Hoang": [
+"wc.js"
+],
+"Duc": [
+"wc.js"
+],
+"Thanh": [
+"wc.js"
+],
+"Minh": [
+"wc.js"
+],
+"Tuan": [
+"wc.js"
+],
+"Hung": [
+"wc.js"
+],
+"Cong": [
+"wc.js"
+],
+"Nguyen": [
+"wc.js"
+],
+"Tran": [
+"wc.js"
+],
+"Le": [
+"wc.js"
+],
+"Pham": [
+"wc.js"
+],
+"Phan": [
+"wc.js"
+],
+"Vu": [
+"wc.js"
+],
+"Dang": [
+"wc.js"
+],
+"Bui": [
+"wc.js"
+],
+"Do": [
+"wc.js"
+],
+"Egy": [
+"wc.js"
+],
+"Witan": [
+"wc.js"
+],
+"Asnawi": [
+"wc.js"
+],
+"Ricky": [
+"wc.js"
+],
+"Dimas": [
+"wc.js"
+],
+"Fajar": [
+"wc.js"
+],
+"Bagas": [
+"wc.js"
+],
+"Hokky": [
+"wc.js"
+],
+"Saputra": [
+"wc.js"
+],
+"Wijaya": [
+"wc.js"
+],
+"Kurniawan": [
+"wc.js"
+],
+"Setiawan": [
+"wc.js"
+],
+"Hidayat": [
+"wc.js"
+],
+"Nugroho": [
+"wc.js"
+],
+"Santoso": [
+"wc.js"
+],
+"Siregar": [
+"wc.js"
+],
+"Lubis": [
 "wc.js"
 ],
 "Min-ho": [
@@ -289354,9 +291184,6 @@
 "wc.js"
 ],
 "Valentin": [
-"wc.js"
-],
-"Darius": [
 "wc.js"
 ],
 "Marius": [

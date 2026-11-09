@@ -6,7 +6,8 @@ const NAT_COLORS = {
   NED: ['#f36c21', '#ffffff'], ITA: ['#1f4fa3', '#ffffff'], BEL: ['#c8102e', '#111111'], CRO: ['#ffffff', '#c8102e'],
   NOR: ['#c8102e', '#1d2c5e'], USA: ['#1d2c5e', '#ffffff'], MEX: ['#006847', '#ffffff'], JPN: ['#0b2a7a', '#ffffff'], KSA: ['#006c35', '#ffffff'], SCO: ['#0b2a5a', '#ffffff'], AUT: ['#c8102e', '#ffffff'], SUI: ['#c8102e', '#ffffff'], GRE: ['#0d5eaf', '#ffffff'], DEN: ['#c8102e', '#ffffff'], CZE: ['#ffffff', '#c8102e'], UKR: ['#ffd500', '#005bbb'], EGY: ['#c8102e', '#ffffff'], POL: ['#ffffff', '#c8102e'], GEO: ['#ffffff', '#c8102e'], AZE: ['#0092bc', '#c8102e'],
 };
-const EURO_NATIONS = ['TUR', 'FRA', 'ESP', 'ENG', 'POR', 'GER', 'NED', 'ITA', 'BEL', 'CRO', 'NOR', 'POL', 'GEO', 'AZE', 'SCO', 'AUT', 'SUI', 'GRE', 'DEN', 'CZE', 'UKR'];
+const EURO_NATIONS = ['TUR', 'FRA', 'ESP', 'ENG', 'POR', 'GER', 'NED', 'ITA', 'BEL', 'CRO', 'NOR', 'POL', 'GEO', 'AZE', 'SCO', 'AUT', 'SUI', 'GRE', 'DEN', 'CZE', 'UKR',
+  'SRB', 'SWE', 'WAL', 'HUN', 'ROU', 'SVK', 'IRL', 'SVN', 'ALB', 'BIH', 'ISL', 'FIN', 'NIR', 'MNE', 'BUL', 'MKD', 'KAZ', 'ARM', 'LUX', 'BLR', 'LTU', 'LVA', 'EST'];
 const STAGE_NAMES = { 32: 'Son 32', 16: 'Son 16', 8: 'Çeyrek Final', 4: 'Yarı Final', 2: 'Final' };
 // Ülke kupaları: Avrupa kupası haftalarıyla çakışmayan takvim
 const DOM_CUPS = [
@@ -444,7 +445,7 @@ const Cups = {
     const type = Cups.tourType(s.season.year);
     const name = `${s.season.year} ${Cups.tourName(type)}`;
     let pool = type === 'wc' ? Game.nations() : Game.nations().filter((n) => EURO_NATIONS.includes(n.code));
-    let size = type === 'wc' ? 16 : type === 'nl' ? 4 : 8;
+    let size = Cups.tourSize(type, pool.length);
     while (size > pool.length) size /= 2;
     if (type === 'nl') {
       // Milletler Ligi: sıralamadaki en iyi 4 Avrupa takımı finallerde
@@ -599,6 +600,8 @@ const Cups = {
     return (cup.teams || []).includes(s.clubId) || cup.alive.includes(s.clubId) || cup.log.some((m) => m.h === s.clubId || m.a === s.clubId);
   },
 
+  // takım sayısı: ülke listesi büyüdüğü için DŞ 32, Avrupa 16 takımlı (eski kayıtlarda/erken yıllarda daha az)
+  tourSize(type, n) { return type === 'nl' ? 4 : type === 'wc' ? (n >= 48 ? 32 : 16) : (n >= 24 ? 16 : 8); },
   tourName(t) { return { wc: 'Dünya Şampiyonası', euro: 'Avrupa Milletler Şampiyonası', nl: 'Milletler Ligi Finalleri' }[t] || ''; },
 };
 
@@ -638,7 +641,7 @@ const Nations = {
     const p = s.player;
     return `<section class="card nat-rank">
       <div class="card-h"><span>${Icon('shield')} Milli Takım Sıralaması</span><small class="muted">${s.season.year}</small></div>
-      <div class="nr-list">${rk.map((r, i) => {
+      <div class="nr-list">${rk.map((r, i) => ({ r, i })).filter((x) => x.i < 30 || x.r.code === me).map(({ r, i }) => {
         const d = prev[r.code] ? prev[r.code] - (i + 1) : 0;
         return `<div class="nr-row ${r.code === me ? 'me' : ''} ${i < 3 ? 'top' + (i + 1) : ''}">
           <span class="nr-rk">${i + 1}</span><span class="nr-mv ${d > 0 ? 'up' : d < 0 ? 'down' : ''}">${d > 0 ? '▲' + d : d < 0 ? '▼' + -d : '–'}</span>
@@ -650,7 +653,7 @@ const Nations = {
     <div class="grid2">
       <section class="card">
         <div class="card-h"><span>${Icon('career')} Turnuva Takvimi</span></div>
-        <div class="tour-cal">${ty.map((x) => `<div class="tc ${x.t}"><b>${x.y}</b><span>${Cups.tourName(x.t)}</span><small>${x.t === 'nl' ? 'Sıralamadaki en iyi 4 Avrupa takımı' : x.t === 'wc' ? '16 ülke, eleme' : '8 Avrupa ülkesi, eleme'}</small></div>`).join('')}</div>
+        <div class="tour-cal">${ty.map((x) => `<div class="tc ${x.t}"><b>${x.y}</b><span>${Cups.tourName(x.t)}</span><small>${x.t === 'nl' ? 'Sıralamadaki en iyi 4 Avrupa takımı' : x.t === 'wc' ? `${Cups.tourSize('wc', Game.nations().length)} ülke, eleme` : `${Cups.tourSize('euro', Game.nations().filter((n) => EURO_NATIONS.includes(n.code)).length)} Avrupa ülkesi, eleme`}</small></div>`).join('')}</div>
         <div class="lbl">Senin milli kariyerin</div>
         <div class="ms-stats"><div class="mst"><i>${Icon('shield')}</i><b>${p.intl.caps}</b><span>Maç</span></div><div class="mst"><i>${Icon('ball')}</i><b>${p.intl.goals}</b><span>Gol</span></div><div class="mst"><i>${Icon('table')}</i><b>${rk.findIndex((r) => r.code === me) + 1 || '-'}</b><span>Ülke sırası</span></div></div>
       </section>

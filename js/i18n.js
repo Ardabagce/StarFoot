@@ -35,7 +35,7 @@ const I18N = {
   },
   // dile göre varsayılan oyuncu adı ve ülke (senaryolar, kariyer oluşturma)
   defName() { return { tr: ['Emre', 'Yıldız'], en: ['Alex', 'Stone'], es: ['Diego', 'Romero'], pt: ['Lucas', 'Silva'], de: ['Lukas', 'Becker'], fr: ['Hugo', 'Martin'], it: ['Marco', 'Rossi'], id: ['Rizky', 'Pratama'], ar: ['عمر', 'الحداد'], ja: ['タクミ', 'ホシノ'] }[I18N.lang] || ['Alex', 'Stone']; },
-  home() { return { tr: 'TUR', en: 'ENG', es: 'ESP', pt: 'BRA', de: 'GER', fr: 'FRA', it: 'ITA', id: 'ENG', ar: 'KSA', ja: 'JPN' }[I18N.lang] || 'ENG'; },
+  home() { return { tr: 'TUR', en: 'ENG', es: 'ESP', pt: 'BRA', de: 'GER', fr: 'FRA', it: 'ITA', id: 'IDN', ar: 'KSA', ja: 'JPN' }[I18N.lang] || 'ENG'; },
   deviceLang() {
     const list = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || '']).filter(Boolean);
     for (const x of list) { const c = String(x).slice(0, 2).toLowerCase(); if (I18N.LANGS[c]) return c; if (c === 'in') return 'id'; }

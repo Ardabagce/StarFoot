@@ -16,3 +16,48 @@
 6243|Sus palabras llenas de confianza llamaron la atención.
 6244|Su humildad recibió elogios.
 6245|Destacó el espíritu de equipo.
+6246|Mali
+6247|RD Congo
+6248|Venezuela
+6249|Islandia
+6250|Burkina Faso
+6251|Finlandia
+6252|Irlanda del Norte
+6253|Guinea
+6254|Montenegro
+6255|Macedonia del Norte
+6256|Gabón
+6257|Honduras
+6258|EAU
+6259|Angola
+6260|Zambia
+6261|Bolivia
+6262|Omán
+6263|Benín
+6264|Kazajistán
+6265|Indonesia
+6266|China
+6267|Baréin
+6268|Siria
+6269|Armenia
+6270|Uganda
+6271|Guatemala
+6272|Luxemburgo
+6273|Tailandia
+6274|Vietnam
+6275|El Salvador
+6276|Trinidad y Tobago
+6277|Bielorrusia
+6278|Kenia
+6279|Lituania
+6280|Kirguistán
+6281|Letonia
+6282|Estonia
+6283|Líbano
+6284|India
+6285|Tayikistán
+6286|Otros países
+6287|selecciones, eliminatoria
+6288|selecciones europeas, eliminatoria
+6289|{} selecciones europeas, eliminatoria
+6290|{} selecciones, eliminatoria

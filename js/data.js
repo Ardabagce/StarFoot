@@ -36,8 +36,6 @@ const NATIONS = [
 // Milli takım gücü dönemlere göre (on yıl başına); yoksa NATIONS içindeki değer
 // yalnız oyuncu uyruğu olarak görünen ülkeler (milli takım yarışmalarında yer almaz)
 const NAT_EXTRA = [
-  { code: 'BUL', name: 'Bulgaristan', rating: 72, flag: '🇧🇬' },
-  { code: 'BIH', name: 'Bosna Hersek', rating: 73, flag: '🇧🇦' },
 ];
 const NAT_ERA = {
   TUR: { 1980: 66, 1990: 72, 2000: 80, 2010: 77, 2020: 79 },
@@ -59,7 +57,7 @@ const NAT_ERA = {
   AZE: { 1990: 58, 2000: 60, 2010: 62, 2020: 64 },
 };
 // Bağımsızlık sonrası milli takımı olan ülkeler
-const NAT_FROM = { CRO: 1992, GEO: 1992, AZE: 1992 };
+const NAT_FROM = { CRO: 1992, GEO: 1992, AZE: 1992, BIH: 1992, SVN: 1992, SVK: 1993, SRB: 2006, MNE: 2006, MKD: 1992, KAZ: 1992, ARM: 1992, BLR: 1992, LTU: 1991, LVA: 1991, EST: 1991, UZB: 1992, KGZ: 1992, TJK: 1992 };
 
 const LEAGUES = [
   { id: 'TR1', name: 'Yıldızlar Ligi', country: 'Türkiye', flag: '🇹🇷', level: 1, fame: 1.0 },

@@ -16,3 +16,48 @@
 6243|Seine selbstbewussten Worte sorgen für Aufsehen.
 6244|Seine bescheidene Art wird gelobt.
 6245|Er betonte den Teamgeist.
+6246|Mali
+6247|DR Kongo
+6248|Venezuela
+6249|Island
+6250|Burkina Faso
+6251|Finnland
+6252|Nordirland
+6253|Guinea
+6254|Montenegro
+6255|Nordmazedonien
+6256|Gabun
+6257|Honduras
+6258|VAE
+6259|Angola
+6260|Sambia
+6261|Bolivien
+6262|Oman
+6263|Benin
+6264|Kasachstan
+6265|Indonesien
+6266|China
+6267|Bahrain
+6268|Syrien
+6269|Armenien
+6270|Uganda
+6271|Guatemala
+6272|Luxemburg
+6273|Thailand
+6274|Vietnam
+6275|El Salvador
+6276|Trinidad und Tobago
+6277|Belarus
+6278|Kenia
+6279|Litauen
+6280|Kirgisistan
+6281|Lettland
+6282|Estland
+6283|Libanon
+6284|Indien
+6285|Tadschikistan
+6286|Weitere Länder
+6287|Nationen, K.-o.-System
+6288|europäische Nationen, K.-o.-System
+6289|{} europäische Nationen, K.-o.-System
+6290|{} Nationen, K.-o.-System

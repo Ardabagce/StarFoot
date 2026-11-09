@@ -5,9 +5,9 @@
 // Ana oyunda olmayan, yalnız bu modda oynanan milli takımlar. Yıldız isimleri kurgusaldır.
 const WC_NATIONS = [
   { code: 'CAN', name: 'Kanada', rating: 76, flag: '🇨🇦', pool: 'EN', c: ['#d52b1e', '#ffffff'], stars: ['Alphonso Redemore', 'Jonathan Pemham', 'Tajon Moreton'] },
-  { code: 'MAR', name: 'Fas', rating: 82, flag: '🇲🇦', pool: 'AR', c: ['#c1272d', '#006233'], stars: ['Achraf Mari', 'Brahim Namawi', 'Yassine Jadawi', 'Nayef Harah'] },
-  { code: 'TUN', name: 'Tunus', rating: 72, flag: '🇹🇳', pool: 'AR', c: ['#e70013', '#ffffff'], stars: ['Hannibal El Abawi', 'Ellyes El Berani'] },
-  { code: 'ALG', name: 'Cezayir', rating: 75, flag: '🇩🇿', pool: 'AR', c: ['#ffffff', '#006233'], stars: ['Riyad Narah', 'Rami Ouri', 'Amine Bemouri'] },
+  { code: 'MAR', name: 'Fas', rating: 82, flag: '🇲🇦', pool: 'SA', c: ['#c1272d', '#006233'], stars: ['Achraf Mari', 'Brahim Namawi', 'Yassine Jadawi', 'Nayef Harah'] },
+  { code: 'TUN', name: 'Tunus', rating: 72, flag: '🇹🇳', pool: 'SA', c: ['#e70013', '#ffffff'], stars: ['Hannibal El Abawi', 'Ellyes El Berani'] },
+  { code: 'ALG', name: 'Cezayir', rating: 75, flag: '🇩🇿', pool: 'SA', c: ['#ffffff', '#006233'], stars: ['Riyad Narah', 'Rami Ouri', 'Amine Bemouri'] },
   { code: 'GHA', name: 'Gana', rating: 73, flag: '🇬🇭', pool: 'AF', c: ['#ffffff', '#111111'], stars: ['Mohammed Chiba', 'Thomas Okolela', 'Inaki Amarimbe'] },
   { code: 'SEN', name: 'Senegal', rating: 79, flag: '🇸🇳', pool: 'SN', c: ['#ffffff', '#00853f'], stars: ['Sadio Dakoka', 'Nikolas Ndoriye', 'Kalidou Ekeledu', 'Ismaila Yonuba'] },
   { code: 'CIV', name: 'Fildişi Sahili', rating: 77, flag: '🇨🇮', pool: 'SN', c: ['#ff8200', '#ffffff'], stars: ['Franck Tamaka', 'Sebastien Chiledu', 'Simon Sanusi'] },
@@ -24,10 +24,10 @@ const WC_NATIONS = [
   { code: 'IRN', name: 'İran', rating: 76, flag: '🇮🇷', pool: 'IR', c: ['#ffffff', '#239f40'], stars: ['Mehdi Narani', 'Sardar Narapour'] },
   { code: 'KOR', name: 'Güney Kore', rating: 79, flag: '🇰🇷', pool: 'KR', c: ['#c60c30', '#ffffff'], stars: ['Son Baek', 'Kim Yoo', 'Lee Baek'] },
   { code: 'AUS', name: 'Avustralya', rating: 74, flag: '🇦🇺', pool: 'EN', c: ['#ffcd00', '#00843d'], stars: ['Mathew Norewell', 'Jackson Brometon'] },
-  { code: 'QAT', name: 'Katar', rating: 70, flag: '🇶🇦', pool: 'AR', c: ['#8a1538', '#ffffff'], stars: ['Akram Tari', 'Almoez El Jarah'] },
+  { code: 'QAT', name: 'Katar', rating: 70, flag: '🇶🇦', pool: 'SA', c: ['#8a1538', '#ffffff'], stars: ['Akram Tari', 'Almoez El Jarah'] },
   { code: 'UZB', name: 'Özbekistan', rating: 71, flag: '🇺🇿', pool: 'UZ', c: ['#0099b5', '#ffffff'], stars: ['Eldor Marev', 'Abdukodir Marazade'] },
-  { code: 'JOR', name: 'Ürdün', rating: 69, flag: '🇯🇴', pool: 'AR', c: ['#ffffff', '#ce1126'], stars: ['Musa El Zarouri', 'Yazan Fadawi'] },
-  { code: 'IRQ', name: 'Irak', rating: 69, flag: '🇮🇶', pool: 'AR', c: ['#ffffff', '#007a3d'], stars: ['Aymen Ramouri'] },
+  { code: 'JOR', name: 'Ürdün', rating: 69, flag: '🇯🇴', pool: 'SA', c: ['#ffffff', '#ce1126'], stars: ['Musa El Zarouri', 'Yazan Fadawi'] },
+  { code: 'IRQ', name: 'Irak', rating: 69, flag: '🇮🇶', pool: 'SA', c: ['#ffffff', '#007a3d'], stars: ['Aymen Ramouri'] },
   { code: 'NZL', name: 'Yeni Zelanda', rating: 67, flag: '🇳🇿', pool: 'EN', c: ['#ffffff', '#111111'], stars: ['Chris Haler'] },
   { code: 'PAN', name: 'Panama', rating: 70, flag: '🇵🇦', pool: 'MX', c: ['#da121a', '#ffffff'], stars: ['Adalberto Bareda'] },
   { code: 'CRC', name: 'Kosta Rika', rating: 70, flag: '🇨🇷', pool: 'MX', c: ['#002b7f', '#ce1126'], stars: ['Keylor Lores'] },
@@ -43,10 +43,63 @@ const WC_NATIONS = [
   { code: 'IRL', name: 'İrlanda', rating: 72, flag: '🇮🇪', pool: 'EN', c: ['#169b62', '#ffffff'], stars: ['Evan Rameridge', 'Caoimhin Haleridge'] },
   { code: 'SVN', name: 'Slovenya', rating: 72, flag: '🇸🇮', pool: 'HR', c: ['#ffffff', '#005da4'], stars: ['Jan Kovinić', 'Benjamin Rarović'] },
   { code: 'ALB', name: 'Arnavutluk', rating: 70, flag: '🇦🇱', pool: 'XX', c: ['#e41e20', '#111111'], stars: ['Armando Muleri', 'Kristjan Kenaj'] },
+  // FIFA sıralamasından eklenen takımlar
+  { code: 'MLI', name: 'Mali', rating: 74, flag: '🇲🇱', pool: 'SN', c: ['#14b53a', '#fcd116'], stars: ['Yves Bissoké', 'Amadou Hadara', 'Kamory Domba'] },
+  { code: 'COD', name: 'DR Kongo', rating: 73, flag: '🇨🇩', pool: 'SN', c: ['#007fff', '#ce1021'], stars: ['Chancel Bembala', 'Cédric Bakamu', 'Yoane Wisima'] },
+  { code: 'VEN', name: 'Venezuela', rating: 72, flag: '🇻🇪', pool: 'MX', c: ['#7b1e3a', '#ffcc00'], stars: ['Salomón Rondero', 'Yeferson Soledo', 'Yangel Herreda'] },
+  { code: 'BIH', name: 'Bosna Hersek', rating: 71, flag: '🇧🇦', pool: 'HR', c: ['#002395', '#fecb00'], stars: ['Edin Džekarić', 'Ermedin Demirić'] },
+  { code: 'ISL', name: 'İzlanda', rating: 70, flag: '🇮🇸', pool: 'IS', c: ['#02529c', '#ffffff'], stars: ['Albert Gunnarsen', 'Hákon Haldorsen', 'Ísak Bergþór'] },
+  { code: 'BFA', name: 'Burkina Faso', rating: 70, flag: '🇧🇫', pool: 'SN', c: ['#009e49', '#ef2b2d'], stars: ['Bertrand Traoka', 'Edmond Tapsida'] },
+  { code: 'FIN', name: 'Finlandiya', rating: 69, flag: '🇫🇮', pool: 'FI', c: ['#ffffff', '#002f6c'], stars: ['Teemu Pukkala', 'Glen Kamarainen'] },
+  { code: 'NIR', name: 'Kuzey İrlanda', rating: 69, flag: '🏴', pool: 'EN', c: ['#00843d', '#ffffff'], stars: ['Conor Bradewell', 'Shea Charleton'] },
+  { code: 'GUI', name: 'Gine', rating: 68, flag: '🇬🇳', pool: 'SN', c: ['#ce1126', '#fcd116'], stars: ['Serhou Guirandé', 'Naby Keïtara'] },
+  { code: 'MNE', name: 'Karadağ', rating: 68, flag: '🇲🇪', pool: 'HR', c: ['#c40308', '#d4af37'], stars: ['Stevan Jovetović', 'Nikola Krstanić'] },
+  { code: 'BUL', name: 'Bulgaristan', rating: 67, flag: '🇧🇬', pool: 'HR', c: ['#ffffff', '#00966e'], stars: ['Kiril Despodić', 'Ilian Ilarov'] },
+  { code: 'MKD', name: 'Kuzey Makedonya', rating: 67, flag: '🇲🇰', pool: 'HR', c: ['#d20000', '#ffe600'], stars: ['Eljif Elmarić', 'Enis Bardić'] },
+  { code: 'GAB', name: 'Gabon', rating: 67, flag: '🇬🇦', pool: 'SN', c: ['#fcd116', '#009e60'], stars: ['Pierre Aubaneyang', 'Denis Bouanda'] },
+  { code: 'HON', name: 'Honduras', rating: 66, flag: '🇭🇳', pool: 'MX', c: ['#ffffff', '#0073cf'], stars: ['Alberth Elisardo', 'Romell Quiotero'] },
+  { code: 'UAE', name: 'BAE', rating: 66, flag: '🇦🇪', pool: 'SA', c: ['#ffffff', '#00732f'], stars: ['Ali Mabkari', 'Khalil Ibrami'] },
+  { code: 'ANG', name: 'Angola', rating: 65, flag: '🇦🇴', pool: 'PT', c: ['#cc092f', '#111111'], stars: ['Gelson Dalida', 'Fredy Ribeira'] },
+  { code: 'ZAM', name: 'Zambiya', rating: 64, flag: '🇿🇲', pool: 'AF', c: ['#198a00', '#ef7d00'], stars: ['Patson Dakala', 'Fashion Sakaba'] },
+  { code: 'BOL', name: 'Bolivya', rating: 64, flag: '🇧🇴', pool: 'MX', c: ['#007934', '#ffffff'], stars: ['Miguel Terrazo', 'Ramiro Vacara'] },
+  { code: 'OMA', name: 'Umman', rating: 63, flag: '🇴🇲', pool: 'SA', c: ['#db161b', '#ffffff'], stars: ['Issam Sabhari', 'Muhsen Ghassabi'] },
+  { code: 'BEN', name: 'Benin', rating: 63, flag: '🇧🇯', pool: 'SN', c: ['#fcd116', '#008751'], stars: ['Steve Mouniko', 'Jodel Dossah'] },
+  { code: 'KAZ', name: 'Kazakistan', rating: 63, flag: '🇰🇿', pool: 'KZ', c: ['#00afca', '#fec50c'], stars: ['Baktiyar Zainutov', 'Islambek Kuatbekov'] },
+  { code: 'IDN', name: 'Endonezya', rating: 62, flag: '🇮🇩', pool: 'ID', c: ['#ce1126', '#ffffff'], stars: ['Rizky Ridhana', 'Marselino Ferdano', 'Jay Idzesa'] },
+  { code: 'CHN', name: 'Çin', rating: 62, flag: '🇨🇳', pool: 'CN', c: ['#de2910', '#ffde00'], stars: ['Wu Leiming', 'Zhang Yuchen'] },
+  { code: 'BHR', name: 'Bahreyn', rating: 62, flag: '🇧🇭', pool: 'SA', c: ['#ce1126', '#ffffff'], stars: ['Ali Madawi', 'Kamil Hardani'] },
+  { code: 'SYR', name: 'Suriye', rating: 62, flag: '🇸🇾', pool: 'SA', c: ['#ce1126', '#ffffff'], stars: ['Omar Kharbani', 'Mahmoud Mawasi'] },
+  { code: 'ARM', name: 'Ermenistan', rating: 62, flag: '🇦🇲', pool: 'AM', c: ['#d90012', '#0033a0'], stars: ['Eduard Spertoyan', 'Tigran Barseghan'] },
+  { code: 'UGA', name: 'Uganda', rating: 62, flag: '🇺🇬', pool: 'AF', c: ['#fcdc04', '#111111'], stars: ['Emmanuel Okwira', 'Khalid Auchera'] },
+  { code: 'GUA', name: 'Guatemala', rating: 62, flag: '🇬🇹', pool: 'MX', c: ['#4997d0', '#ffffff'], stars: ['Rubio Rubiano', 'Óscar Santero'] },
+  { code: 'LUX', name: 'Lüksemburg', rating: 62, flag: '🇱🇺', pool: 'FR', c: ['#ef3340', '#ffffff'], stars: ['Leandro Barreda', 'Danel Sinarić'] },
+  { code: 'THA', name: 'Tayland', rating: 61, flag: '🇹🇭', pool: 'TH', c: ['#241d4f', '#ffffff'], stars: ['Suphanat Muangsri', 'Supachok Saranwong'] },
+  { code: 'VIE', name: 'Vietnam', rating: 61, flag: '🇻🇳', pool: 'VN', c: ['#da251d', '#ffff00'], stars: ['Nguyen Quang Hao', 'Nguyen Tien Lam'] },
+  { code: 'SLV', name: 'El Salvador', rating: 61, flag: '🇸🇻', pool: 'MX', c: ['#0047ab', '#ffffff'], stars: ['Brayan Gileo', 'Jairo Henrado'] },
+  { code: 'TRI', name: 'Trinidad ve Tobago', rating: 61, flag: '🇹🇹', pool: 'EN', c: ['#da1a35', '#111111'], stars: ['Levi Garwell', 'Kevin Molinor'] },
+  { code: 'BLR', name: 'Belarus', rating: 60, flag: '🇧🇾', pool: 'UA', c: ['#c8313e', '#ffffff'], stars: ['Max Ebongar', 'Vladislav Malkovets'] },
+  { code: 'KEN', name: 'Kenya', rating: 60, flag: '🇰🇪', pool: 'AF', c: ['#bb0000', '#006600'], stars: ['Michael Olunde', 'Victor Wanyamo'] },
+  { code: 'LTU', name: 'Litvanya', rating: 59, flag: '🇱🇹', pool: 'BA', c: ['#fdb913', '#006a44'], stars: ['Gvidas Ginaudas', 'Fedor Černiauskas'] },
+  { code: 'KGZ', name: 'Kırgızistan', rating: 59, flag: '🇰🇬', pool: 'KZ', c: ['#e8112d', '#ffef00'], stars: ['Gulzhigit Alymbek', 'Joel Kojomurat'] },
+  { code: 'LVA', name: 'Letonya', rating: 58, flag: '🇱🇻', pool: 'BA', c: ['#9e3039', '#ffffff'], stars: ['Janis Ikaumers', 'Roberts Savalders'] },
+  { code: 'EST', name: 'Estonya', rating: 58, flag: '🇪🇪', pool: 'BA', c: ['#0072ce', '#111111'], stars: ['Rauno Sappela', 'Henri Anierand'] },
+  { code: 'LBN', name: 'Lübnan', rating: 58, flag: '🇱🇧', pool: 'SA', c: ['#ed1c24', '#ffffff'], stars: ['Hassan Maatouki', 'Bassel Jarawi'] },
+  { code: 'IND', name: 'Hindistan', rating: 58, flag: '🇮🇳', pool: 'IN', c: ['#1f4fa3', '#ff9933'], stars: ['Arjun Mehrani', 'Rohan Desaval', 'Lallian Zothang'] },
+  { code: 'TJK', name: 'Tacikistan', rating: 58, flag: '🇹🇯', pool: 'UZ', c: ['#ffffff', '#cc0000'], stars: ['Parvizdzhon Umarali', 'Rustam Soirali'] },
 ];
 
 // Ek isim havuzları (yalnız bu moddaki takımların kadroları için)
 const WC_POOLS = {
+  IS: { f: ['Gylfi', 'Aron', 'Jóhann', 'Hörður', 'Kári', 'Birkir', 'Ragnar', 'Alfreð', 'Arnór', 'Sverrir'], l: ['Gunnarsson', 'Sigurðsson', 'Jónsson', 'Magnússon', 'Halldórsson', 'Einarsson', 'Guðmundsson', 'Kristjánsson', 'Ólafsson', 'Stefánsson'] },
+  FI: { f: ['Teemu', 'Joel', 'Lukas', 'Robin', 'Jere', 'Niko', 'Onni', 'Aapo', 'Juho', 'Eero'], l: ['Virtanen', 'Korhonen', 'Mäkinen', 'Nieminen', 'Mäkelä', 'Hämäläinen', 'Laine', 'Heikkinen', 'Koskinen', 'Järvinen'] },
+  KZ: { f: ['Nurlan', 'Askhat', 'Islam', 'Yerkebulan', 'Baurzhan', 'Daniyar', 'Aibol', 'Marat', 'Ruslan', 'Arman'], l: ['Abenov', 'Zhaksylykov', 'Seitkali', 'Tagybergen', 'Kairatov', 'Nurgaliyev', 'Bekov', 'Omarov', 'Sadykov', 'Askarov'] },
+  AM: { f: ['Tigran', 'Aram', 'Hovhannes', 'Narek', 'Gor', 'Artur', 'Davit', 'Levon', 'Vahan', 'Karen'], l: ['Hakobyan', 'Petrosyan', 'Grigoryan', 'Harutyunyan', 'Sargsyan', 'Avetisyan', 'Mkrtchyan', 'Hovhannisyan', 'Gevorgyan', 'Vardanyan'] },
+  BA: { f: ['Mantas', 'Darius', 'Tomas', 'Edgaras', 'Kristaps', 'Raivis', 'Artjoms', 'Karl', 'Mattias', 'Siim'], l: ['Kazlauskas', 'Petrauskas', 'Jankauskas', 'Bērziņš', 'Kalniņš', 'Ozoliņš', 'Tamm', 'Saar', 'Sepp', 'Mägi'] },
+  IN: { f: ['Arjun', 'Rahul', 'Sandesh', 'Anirudh', 'Liston', 'Manvir', 'Sahal', 'Akash', 'Vikram', 'Rohit'], l: ['Singh', 'Kumar', 'Sharma', 'Thapa', 'Bheke', 'Das', 'Nair', 'Menon', 'Gupta', 'Bose'] },
+  CN: { f: ['Wei', 'Lei', 'Hao', 'Jun', 'Yang', 'Xin', 'Bin', 'Peng', 'Tao', 'Long'], l: ['Wang', 'Li', 'Zhang', 'Liu', 'Chen', 'Zhao', 'Huang', 'Zhou', 'Wu', 'Sun'] },
+  TH: { f: ['Teerasil', 'Chanathip', 'Supachai', 'Theerathon', 'Ekanit', 'Pansa', 'Weerathep', 'Sarach', 'Kritsada', 'Bordin'], l: ['Sukjai', 'Chaiyong', 'Wongsa', 'Saenkham', 'Srisuk', 'Thongdee', 'Kaewmanee', 'Boonmee', 'Charoen', 'Panya'] },
+  VN: { f: ['Quang', 'Tien', 'Van', 'Hoang', 'Duc', 'Thanh', 'Minh', 'Tuan', 'Hung', 'Cong'], l: ['Nguyen', 'Tran', 'Le', 'Pham', 'Hoang', 'Phan', 'Vu', 'Dang', 'Bui', 'Do'] },
+  ID: { f: ['Rizky', 'Egy', 'Witan', 'Pratama', 'Asnawi', 'Ricky', 'Dimas', 'Fajar', 'Bagas', 'Hokky'], l: ['Pratama', 'Saputra', 'Wijaya', 'Kurniawan', 'Setiawan', 'Hidayat', 'Nugroho', 'Santoso', 'Siregar', 'Lubis'] },
   KR: { f: ['Min-ho', 'Ji-hoon', 'Sung-min', 'Jae-won', 'Dong-hyun', 'Tae-yang', 'Seung-woo', 'Hyun-woo', 'Jin-woo', 'Young-jae'], l: ['Kim', 'Lee', 'Park', 'Hwang', 'Jung', 'Cho', 'Kwon', 'Seol', 'Oh', 'Bae'] },
   IR: { f: ['Ali', 'Mehdi', 'Saman', 'Alireza', 'Morteza', 'Ehsan', 'Milad', 'Saeid', 'Ramin', 'Hossein'], l: ['Hosseini', 'Ahmadi', 'Mohammadi', 'Rezaei', 'Moradi', 'Karimi', 'Hashemi', 'Rahimi', 'Ghasemi', 'Jafari'] },
   UZ: { f: ['Otabek', 'Rustam', 'Sherzod', 'Azizbek', 'Bekzod', 'Jasur', 'Sardor', 'Timur', 'Ulugbek', 'Dilshod'], l: ['Karimov', 'Rakhimov', 'Yusupov', 'Tursunov', 'Nazarov', 'Aliyev', 'Sobirov', 'Kholmatov', 'Ergashev', 'Mirzaev'] },
@@ -123,7 +176,7 @@ const WC = {
   poolOf(code) {
     const x = WC_NATIONS.find((n) => n.code === code);
     if (x) return x.pool;
-    return { TUR: 'TR', ENG: 'EN', SCO: 'EN', USA: 'US', ESP: 'ES', ARG: 'ES', MEX: 'MX', BRA: 'BR', POR: 'PT', GER: 'DE', AUT: 'DE', SUI: 'DE', ITA: 'IT', FRA: 'FR', BEL: 'BE', NED: 'NL', KSA: 'SA', EGY: 'AR', JPN: 'JP', GRE: 'GR', DEN: 'DK', NOR: 'DK', CRO: 'HR', CZE: 'CZ', POL: 'PL', UKR: 'UA' }[code] || 'XX';
+    return { TUR: 'TR', ENG: 'EN', SCO: 'EN', USA: 'US', ESP: 'ES', ARG: 'ES', MEX: 'MX', BRA: 'BR', POR: 'PT', GER: 'DE', AUT: 'DE', SUI: 'DE', ITA: 'IT', FRA: 'FR', BEL: 'BE', NED: 'NL', KSA: 'SA', EGY: 'SA', JPN: 'JP', GRE: 'GR', DEN: 'DK', NOR: 'DK', CRO: 'HR', CZE: 'CZ', POL: 'PL', UKR: 'UA' }[code] || 'XX';
   },
   // içinde bulunulan turnuvanın yılı (kariyer modunda 2026, 2030, 2034, 2038)
   yr() { const s = Game.state; return (s && s.mode === 'wc' && s.wc && s.wc.year) || WC.YEAR; },
@@ -890,3 +943,5 @@ const WC = {
 // ek takımların forma renkleri ve isim havuzları
 WC_NATIONS.forEach((n) => { if (!NAT_COLORS[n.code]) NAT_COLORS[n.code] = n.c; });
 Object.keys(WC_POOLS).forEach((k) => { if (!NAME_POOLS[k]) NAME_POOLS[k] = WC_POOLS[k]; });
+// ana kariyerde de bu takımların kadroları kendi isim havuzundan gelsin
+WC_NATIONS.forEach((n) => { if (!NAT_POOL[n.code] && n.pool !== 'AR') NAT_POOL[n.code] = n.pool; });

@@ -16,3 +16,48 @@
 6243|Kata-katanya yang percaya diri menarik perhatian.
 6244|Sikap rendah hatinya dipuji.
 6245|Ia menekankan semangat tim.
+6246|Mali
+6247|RD Kongo
+6248|Venezuela
+6249|Islandia
+6250|Burkina Faso
+6251|Finlandia
+6252|Irlandia Utara
+6253|Guinea
+6254|Montenegro
+6255|Makedonia Utara
+6256|Gabon
+6257|Honduras
+6258|UEA
+6259|Angola
+6260|Zambia
+6261|Bolivia
+6262|Oman
+6263|Benin
+6264|Kazakhstan
+6265|Indonesia
+6266|Tiongkok
+6267|Bahrain
+6268|Suriah
+6269|Armenia
+6270|Uganda
+6271|Guatemala
+6272|Luksemburg
+6273|Thailand
+6274|Vietnam
+6275|El Salvador
+6276|Trinidad dan Tobago
+6277|Belarus
+6278|Kenya
+6279|Lituania
+6280|Kirgistan
+6281|Latvia
+6282|Estonia
+6283|Lebanon
+6284|India
+6285|Tajikistan
+6286|Negara lain
+6287|negara, sistem gugur
+6288|negara Eropa, sistem gugur
+6289|{} negara Eropa, sistem gugur
+6290|{} negara, sistem gugur

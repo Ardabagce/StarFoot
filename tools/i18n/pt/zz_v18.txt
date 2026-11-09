@@ -16,3 +16,48 @@
 6243|Suas palavras confiantes chamaram a atenção.
 6244|Sua humildade foi elogiada.
 6245|Ele destacou o espírito de equipe.
+6246|Mali
+6247|RD Congo
+6248|Venezuela
+6249|Islândia
+6250|Burkina Faso
+6251|Finlândia
+6252|Irlanda do Norte
+6253|Guiné
+6254|Montenegro
+6255|Macedônia do Norte
+6256|Gabão
+6257|Honduras
+6258|EAU
+6259|Angola
+6260|Zâmbia
+6261|Bolívia
+6262|Omã
+6263|Benin
+6264|Cazaquistão
+6265|Indonésia
+6266|China
+6267|Bahrein
+6268|Síria
+6269|Armênia
+6270|Uganda
+6271|Guatemala
+6272|Luxemburgo
+6273|Tailândia
+6274|Vietnã
+6275|El Salvador
+6276|Trinidad e Tobago
+6277|Belarus
+6278|Quênia
+6279|Lituânia
+6280|Quirguistão
+6281|Letônia
+6282|Estônia
+6283|Líbano
+6284|Índia
+6285|Tajiquistão
+6286|Outros países
+6287|seleções, mata-mata
+6288|seleções europeias, mata-mata
+6289|{} seleções europeias, mata-mata
+6290|{} seleções, mata-mata

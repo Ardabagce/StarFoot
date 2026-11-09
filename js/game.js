@@ -132,7 +132,10 @@ const Game = {
   },
   nations() {
     const year = Game.state.season.year;
-    return NATIONS.filter((n) => !NAT_FROM[n.code] || year >= NAT_FROM[n.code]).map((n) => Game.nat(n.code));
+    return Game.allNations().filter((n) => !NAT_FROM[n.code] || year >= NAT_FROM[n.code]).map((n) => Game.nat(n.code));
+  },
+  // ana listedeki ülkeler + FIFA sıralamasından eklenenler (wc.js)
+  allNations() { return typeof WC_NATIONS !== 'undefined' ? NATIONS.concat(WC_NATIONS) : NATIONS;
   },
   nation() { return Game.nat(Game.p.nation) || Game.nat('TUR'); },
   // O dönemin milli yıldızları
@@ -2623,7 +2626,11 @@ const Create = {
     Game.show('create');
     window.scrollTo(0, 0);
     const el = document.getElementById('create');
-    const natOpts = NATIONS.map((n) => `<option value="${n.code}">${n.name}</option>`).join('');
+    // önce ana ülkeler, sonra diğerleri (oyunun dilindeki ada göre sıralı)
+    const tn = (n) => (I18N.t ? I18N.t(n.name) : n.name);
+    const others = (typeof WC_NATIONS !== 'undefined' ? WC_NATIONS : []).slice().sort((a, b) => tn(a).localeCompare(tn(b), I18N.lang));
+    const opt = (n) => `<option value="${n.code}">${n.name}</option>`;
+    const natOpts = NATIONS.map(opt).join('') + (others.length ? `<optgroup label="Diğer ülkeler">${others.map(opt).join('')}</optgroup>` : '');
     el.innerHTML = `
       <div class="cr-wrap">
         <header class="cr-hero">
@@ -2706,7 +2713,7 @@ const Create = {
     ['cr-nat', 'cr-mom'].forEach((id) => (document.getElementById(id).onchange = () => Create.preview()));
     // varsayılan memleket: oyunun diline göre (Türkçede Türkiye, İspanyolcada İspanya…)
     const hm = I18N.home();
-    if (NATIONS.some((n) => n.code === hm)) ['cr-nat', 'cr-mom'].forEach((id) => (document.getElementById(id).value = hm));
+    if (Game.allNations().some((n) => n.code === hm)) ['cr-nat', 'cr-mom'].forEach((id) => (document.getElementById(id).value = hm));
     const ageSel = document.getElementById('cr-age'), yearSel = document.getElementById('cr-year');
     const updAge = () => {
       const a = +ageSel.value;
