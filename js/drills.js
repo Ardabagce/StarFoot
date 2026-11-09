@@ -5,7 +5,7 @@ const DRILLS = {
   technique: { t: 'Top Sektirme', d: 'Topu yere düşürmeden 10 kez sektir. Top yeşil bölgeye inince dokun.', kind: 'mini', fn: 'juggle', k: 'dribble' },
   passing: { t: 'Pas Çalışması', d: 'Verkaç istasyonu: parlayan arkadaşına süre dolmadan pas ver.', kind: 'mini', fn: 'onetwo', k: 'pass' },
   dribbling: { t: 'Çalım Çalışması', d: 'Savunmacılar üstüne geliyor. Hamle yaptıkları an topu ters tarafa çek (sola/sağa dokun ya da kaydır).', kind: 'mini', fn: 'dribble', k: 'dribble', rounds: 3 },
-  heading: { t: 'Kafa Vuruşu Çalışması', d: 'Hoca kornerden orta açıyor. Top kafana gelirken dokun; nişangah neredeyse oraya vurursun.', kind: 'mini', fn: 'header', k: 'header' },
+  heading: { t: 'Kafa Vuruşu Çalışması', d: 'Hoca kornerden orta açıyor. Top kafana gelirken kalede vurmak istediğin yere dokun.', kind: 'mini', fn: 'header', k: 'header' },
   defending: { t: 'İkili Mücadele', d: 'Hücum oyuncusunu durdur. Yeşil alan temiz müdahale.', kind: 'timing', tk: 'tackle', k: 'tackle', cfg: { title: 'Topu kap!', button: 'MÜDAHALE!', okText: 'TERTEMİZ!', partialText: 'Faul olurdu', failText: 'Geçildin', rounds: 2 } },
   physical: { t: 'Omuz Omuza', d: 'Basılı tut, güç dolsun; yeşil bantta bırakıp rakibi it.', kind: 'mini', fn: 'shoulder', k: 'tackle' },
   pace: { t: 'Sürat Koşusu', d: 'Rakibinden önce topa ulaş: hızlı hızlı dokun.', kind: 'mini', fn: 'sprint', k: 'dribble' },

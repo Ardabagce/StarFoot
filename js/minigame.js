@@ -1072,7 +1072,7 @@ Object.assign(MiniGame, {
       host.innerHTML = `
         <div class="tg">
           <div class="tg-stage"><canvas class="tg-canvas"></canvas></div>
-          <div class="tg-foot"><b>Hızlı hızlı dokun</b> · rakibinden önce topa ulaş · <kbd>Boşluk</kbd></div>
+          <div class="tg-foot"><b>Durmadan, hızlı hızlı dokun</b> · ne kadar hızlı basarsan o kadar hızlı koşarsın · <kbd>Boşluk</kbd></div>
         </div>`;
       const box = host.querySelector('.tg');
       const stage = host.querySelector('.tg-stage');
@@ -1093,7 +1093,10 @@ Object.assign(MiniGame, {
       const me = { y: 0, v: 0, run: 0 }, op = { y: 0, v: 0, run: 1 };
       let t = 0, done = false, raf = 0, last = performance.now(), msg = '', msgCol = '#fff', taps = 0;
       const lookMe = Sprites.me(), lookOp = Sprites.look(19);
-      const tap = () => { if (done || t < 0.6) return; taps++; me.v = Math.min(vmax, me.v + 1.6); };
+      // hız, son yarım saniyedeki dokunuş sıklığına bağlı: ne kadar hızlı basarsan o kadar hızlı koşarsın
+      const TAPS_MAX = 11; // en yüksek hız için saniyedeki dokunuş
+      const hits = [];
+      const tap = () => { if (done || t < 0.6) return; taps++; hits.push(t); };
       const finish = (ok) => {
         done = true;
         msg = ok ? 'TOPA SEN ULAŞTIN!' : 'RAKİP DAHA HIZLIYDI';
@@ -1126,7 +1129,10 @@ Object.assign(MiniGame, {
         last = now;
         t += dt;
         if (!done && t > 0.6) {
-          me.v = Math.max(0, me.v - 1.6 * dt);
+          while (hits.length && hits[0] < t - 0.5) hits.shift();
+          const rate = hits.length / 0.5;
+          const want = Math.min(vmax, (rate / TAPS_MAX) * vmax);
+          me.v += (want - me.v) * Math.min(1, dt * (want > me.v ? 5 : 3));
           op.v = Math.min(oppV, op.v + 4 * dt);
           me.y += me.v * dt; op.y += op.v * dt;
           me.run += me.v * dt * 1.6; op.run += op.v * dt * 1.6;
@@ -1733,11 +1739,11 @@ Object.assign(MiniGame, {
     });
   },
 
-  // Kafa vuruşu: köşeden gelen ortaya doğru anda yüksel; nişangah kale ağzında gidip gelir,
-  // dokunduğun anda nişangahın olduğu yere vurursun. Zamanlama + yön birlikte.
+  // Kafa vuruşu: köşeden gelen ortaya doğru anda yüksel; kale ağzında dokunduğun yere vurursun.
+  // Dokunma anı zamanlama, dokunulan yer yön; kaleci ekranda durduğu yerden uzanır.
   header(host, o) {
     return new Promise((resolve) => {
-      const g = MiniGame._canvas(host, '<b>Top kafana gelirken dokun</b> · nişangah kale ağzında nerdeyse oraya vurursun · <kbd>Boşluk</kbd>');
+      const g = MiniGame._canvas(host, '<b>Top kafana gelirken kalede vurmak istediğin yere dokun</b> · dokunduğun an zamanlama, dokunduğun yer yön · <kbd>Boşluk</kbd>');
       const { ctx } = g;
       const head = o.heading || 40, phys = o.physical || 40;
       const flight = U.clamp(1.55 - o.skill * 0.35, 1.1, 1.6);
@@ -1745,16 +1751,18 @@ Object.assign(MiniGame, {
       const side = U.pick([-1, 1]);
       const keeperX = U.rand(-0.25, 0.25);
       let t = 0, done = false, raf = 0, last = performance.now(), tapT = null, aimAt = 0, shot = null, msg = '', msgCol = '#fff';
+      // klavye için yedek nişan (dokunmada yön dokunulan yerden gelir)
       const sweep = 1.1 + o.skill * 0.9;
-      const aim = () => Math.sin(t * sweep * 2.2) * 0.95; // -1..1 kale ağzı
+      const aim = () => Math.sin(t * sweep * 2.2 + side) * 0.95;
+      const lean = () => (!shot ? side * U.clamp(t / flight, 0, 1) * 0.08 : 0);
       const lookMe = Sprites.me(), lookDef = Sprites.look(29), lookGk = Sprites.look(3);
       const finish = (res, text, col) => {
         done = true; msg = text; msgCol = col;
         setTimeout(() => { cleanup(); resolve({ result: res }); }, 1300);
       };
-      const tap = () => {
+      const tap = (want) => {
         if (done || tapT != null || t < 0.35) return;
-        tapT = t; aimAt = aim();
+        tapT = t; aimAt = want == null ? aim() : want;
         const err = Math.abs(tapT - flight);
         const timing = err < win ? 'perfect' : err < win * 2.3 ? 'good' : 'miss';
         // ikili mücadele: kötü zamanlamada savunmacı kazanabilir
@@ -1763,12 +1771,17 @@ Object.assign(MiniGame, {
           shot = { miss: true };
           return finish('fail', timing === 'miss' ? (tapT < flight ? 'ERKEN YÜKSELDİN' : 'GEÇ KALDIN') : 'SAVUNMA ÖNCE DAVRANDI', '#ff6b6b');
         }
-        const spread = timing === 'perfect' ? 0.05 : 0.2;
+        // isabet: zamanlama ve kafa vuruşu yeteneği
+        const spread = (timing === 'perfect' ? 0.07 : 0.2) * U.clamp(1.25 - head / 200, 0.7, 1.2);
         const tx = U.clamp(aimAt + U.rand(-spread, spread), -1.3, 1.3);
-        const reach = (0.32 + o.skill * 0.25) * (HARD() ? 1.2 : 1);
-        const saved = Math.abs(tx - keeperX) < reach;
+        // kaleci o an durduğu yerden uzanır (ekranda görünen konum)
+        const kp = keeperX + lean();
+        // kaleci vuruşun yönünü biraz sezer (zorlukla artar); köşeler yine en iyi seçenek
+        const read = (0.1 + o.skill * 0.2) * (HARD() ? 1.2 : 1);
+        const reach = (0.38 + o.skill * 0.3) * (HARD() ? 1.15 : 1) + read;
         const wide = Math.abs(tx) > 1;
-        shot = { tx, t0: t, saved, wide };
+        const saved = !wide && Math.abs(tx - kp) < reach;
+        shot = { tx, t0: t, saved, wide, kp };
         setTimeout(() => {
           if (wide) finish('partial', 'AZ FARKLA DIŞARIDA', '#ffcf3f');
           else if (saved) finish('partial', 'KALECİ ÇIKARDI', '#ffcf3f');
@@ -1810,16 +1823,19 @@ Object.assign(MiniGame, {
         ctx.fillRect(gx0 + gw - pw / 2, gy - gh - pw / 2, pw * 0.7, gh + pw / 2);
         ctx.fillRect(gx0 - pw / 2, gy - gh - pw / 2, gw + pw, pw * 0.7);
         const toGoal = (v) => W / 2 + v * gw / 2;
+        g.goal = { cx: W / 2, hw: gw / 2 };
         // kaleci: hazır duruşta yaylanır; vuruşta topun gittiği yöne itiş-uçuş-iniş ile atlar
         let kx = toGoal(keeperX);
-        const dir = shot && !shot.miss ? (Math.sign(shot.tx - keeperX) || 1) : 0;
+        const k0 = shot && !shot.miss ? shot.kp : keeperX;
+        const dir = shot && !shot.miss ? (Math.sign(shot.tx - k0) || 1) : 0;
         const since = shot && !shot.miss ? t - shot.t0 : -1;
         ctx.fillStyle = 'rgba(0,0,0,0.24)';
         if (since > 0) {
           const ease = (k) => 1 - Math.pow(1 - k, 3);
           const fly = U.clamp((since - 0.03) / 0.46, 0, 1), land = U.clamp((since - 0.62) / 0.18, 0, 1);
-          const reachX = shot.saved ? shot.tx - keeperX : dir * 0.28;
-          kx = toGoal(keeperX + reachX * ease(fly));
+          // kurtarışta topa uzanır; golde topa yetişemeden yere iner
+          const reachX = shot.saved ? shot.tx - k0 : dir * U.clamp(Math.abs(shot.tx - k0) - 0.62, 0.08, 0.3);
+          kx = toGoal(k0 + reachX * ease(fly));
           const rot = dir * (ease(fly) * 1.15 + land * 0.35);
           // top kale ağzının üst yarısına gidiyor: kurtarışta ellerin topa ulaşacağı kadar yükselir, sonra yere iner
           const peak = shot.saved ? Math.max(fh * 0.3, gh * 0.55 - fh * 0.45) : fh * 0.3;
@@ -1831,19 +1847,25 @@ Object.assign(MiniGame, {
           ctx.restore();
         } else {
           // top kanattan gelirken orta tarafa doğru adım adım kayar
-          const lean = !shot ? side * U.clamp(t / flight, 0, 1) * 0.08 : 0;
-          kx = toGoal(keeperX + lean);
+          const ln = lean();
+          kx = toGoal(keeperX + ln);
           const bob = Math.abs(Math.sin(t * 5.5)) * fh * 0.018;
           ctx.beginPath(); ctx.ellipse(kx + fh * 0.05, gy + fh * 0.1, fh * 0.26, fh * 0.07, 0, 0, Math.PI * 2); ctx.fill();
-          Sprites.figure(ctx, kx, gy + fh * 0.08 - bob, fh * 0.96, { kit: o.kits.gk, look: lookGk, facing: 'down', number: 1, gloves: true, armA: 0.62 + Math.sin(t * 5.5) * 0.04, noShadow: true, run: t * 4, speed: lean ? 0.25 : 0, t });
+          Sprites.figure(ctx, kx, gy + fh * 0.08 - bob, fh * 0.96, { kit: o.kits.gk, look: lookGk, facing: 'down', number: 1, gloves: true, armA: 0.62 + Math.sin(t * 5.5) * 0.04, noShadow: true, run: t * 4, speed: ln ? 0.25 : 0, t });
         }
-        // nişangah
-        if (!shot) {
-          const ax = toGoal(aim());
+        // hedef: dokunulan yer (vuruştan sonra görünür)
+        if (shot && !shot.miss) {
+          const ax = toGoal(aimAt);
           ctx.strokeStyle = 'rgba(5,11,29,0.8)'; ctx.lineWidth = 6 * dpr;
           ctx.beginPath(); ctx.arc(ax, gy - gh * 0.55, 12 * dpr, 0, Math.PI * 2); ctx.stroke();
           ctx.strokeStyle = '#ff3df0'; ctx.lineWidth = 3 * dpr;
           ctx.beginPath(); ctx.arc(ax, gy - gh * 0.55, 12 * dpr, 0, Math.PI * 2); ctx.stroke();
+        } else if (!shot && t > 0.35) {
+          // kale ağzı dokunma bölgesi ipucu
+          ctx.save(); ctx.globalAlpha = 0.35 + 0.15 * Math.sin(t * 6);
+          ctx.setLineDash([8 * dpr, 6 * dpr]); ctx.strokeStyle = '#ffffff'; ctx.lineWidth = 2 * dpr;
+          ctx.strokeRect(gx0 + pw, gy - gh + pw, gw - pw * 2, gh - pw * 1.5);
+          ctx.restore();
         }
         // oyuncu ve savunmacı
         const px = W / 2, py = H * 0.68;
@@ -1885,7 +1907,12 @@ Object.assign(MiniGame, {
       };
       const key = (e) => { if (e.code === 'Space' || e.code === 'Enter') { e.preventDefault(); tap(); } };
       const cleanup = () => { cancelAnimationFrame(raf); document.removeEventListener('keydown', key); window.removeEventListener('resize', g.layout); };
-      g.box.addEventListener('pointerdown', (e) => { e.preventDefault(); tap(); });
+      g.box.addEventListener('pointerdown', (e) => {
+        e.preventDefault();
+        const r = g.cv.getBoundingClientRect();
+        const x = (e.clientX - r.left) * g.dpr;
+        tap(g.goal ? U.clamp((x - g.goal.cx) / g.goal.hw, -1.25, 1.25) : null);
+      });
       document.addEventListener('keydown', key);
       raf = requestAnimationFrame(loop);
       MiniGame._abort = () => { if (done) return; done = true; cleanup(); resolve({ result: 'auto' }); };

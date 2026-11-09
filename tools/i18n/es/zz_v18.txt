@@ -1,3 +1,18 @@
 6228|2 modos de juego incluidos
 6229|Sueño Campeonato Mundial · Tras los pasos de las leyendas
 6230|Incluido con Premium+
+6231|Toca donde quieras rematar en la portería cuando el balón llegue a tu cabeza
+6232|· el momento del toque es el timing, el lugar es la dirección ·
+6233|Toca rápido y sin parar
+6234|· cuanto más rápido toques, más rápido corres ·
+6235|¡Córner! Cuando el balón llegue a tu cabeza, toca donde quieras rematar en la portería: el timing y la dirección dependen de ti.
+6236|Cuando el balón llegue a tu cabeza, toca donde quieras rematar en la portería: el timing y la dirección dependen de ti.
+6237|El entrenador centra desde el córner. Cuando el balón llegue a tu cabeza, toca donde quieras rematar en la portería.
+6238|Cuando el balón llegue a tu cabeza, toca donde quieras rematar en la portería.
+6239|Sus palabras son el tema del vestuario.
+6240|El rival no está contento con estas palabras.
+6241|La afición se vino arriba, el entrenador es prudente.
+6242|Sus declaraciones tras el partido son noticia.
+6243|Sus palabras llenas de confianza llamaron la atención.
+6244|Su humildad recibió elogios.
+6245|Destacó el espíritu de equipo.

@@ -1,3 +1,18 @@
 6228|2 modos de jogo incluídos
 6229|Sonho da Copa · Nos passos das lendas
 6230|Incluído no Premium+
+6231|Toque onde quer cabecear no gol quando a bola chegar na sua cabeça
+6232|· o momento do toque é o tempo, o lugar é a direção ·
+6233|Toque rápido, sem parar
+6234|· quanto mais rápido tocar, mais rápido você corre ·
+6235|Escanteio! Quando a bola chegar na sua cabeça, toque onde quer mirar no gol: tempo e direção são com você.
+6236|Quando a bola chegar na sua cabeça, toque onde quer mirar no gol: tempo e direção são com você.
+6237|O técnico cruza do escanteio. Quando a bola chegar na sua cabeça, toque onde quer mirar no gol.
+6238|Quando a bola chegar na sua cabeça, toque onde quer mirar no gol.
+6239|Suas palavras são o assunto do vestiário.
+6240|O rival não gostou dessas palavras.
+6241|A torcida vibrou, o técnico está cauteloso.
+6242|Suas declarações pós-jogo viraram manchete.
+6243|Suas palavras confiantes chamaram a atenção.
+6244|Sua humildade foi elogiada.
+6245|Ele destacou o espírito de equipe.

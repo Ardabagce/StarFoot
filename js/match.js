@@ -34,7 +34,7 @@ const MOMENT_DESC = {
   penalty: 'Penaltı noktasındasın. Geriye çek, bir köşeye nişan al ve bırak!',
   dribble: 'Rakip üstüne geliyor! Bir tarafa hamle yaptığı an topu ters tarafa çek (ekranın sol/sağına dokun ya da kaydır).',
   tackle: 'Rakip forvet topla geliyor. Halka yeşile girince dokun; sarı bölge faul demek.',
-  header: 'Korner! Top kafana gelirken dokun; kale ağzında gezen nişangah neredeyse oraya vurursun.',
+  header: 'Korner! Top kafana gelirken kalede vurmak istediğin yere dokun: zamanlama ve yön senin elinde.',
   sprint: 'Top boşta! Hızlı hızlı dokunarak rakibinden önce topa ulaş.',
   onetwo: 'Kısa paslarla savunmayı aç: parlayan arkadaşına süre dolmadan dokun.',
   gk_save: 'Forvet şut çekiyor! Bakışını oku, top ayaktan çıkınca doğru köşeye uç (sol, orta ya da sağa dokun).',

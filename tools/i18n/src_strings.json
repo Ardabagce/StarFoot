@@ -19090,17 +19090,8 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Hoca kornerden orta açıyor. Top kafana gelirken dokun; nişangah neredeyse oraya vurursun.": [
-"drills.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
+"Hoca kornerden orta açıyor. Top kafana gelirken kalede vurmak istediğin yere dokun.": [
+"drills.js"
 ],
 "İkili Mücadele": [
 "drills.js",
@@ -25016,7 +25007,16 @@
 "lang-pt.js"
 ],
 "Premium+ ile dahil": [
-"game.js"
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Yeni mod": [
 "game.js",
@@ -27497,6 +27497,19 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
+],
+"Röportaj": [
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
 ],
 "Yıldızlar": [
 "game.js",
@@ -33497,6 +33510,27 @@
 "lang-pt.js"
 ],
 "🎙️ Maç sonu: \"{}\"": [
+"interview.js"
+],
+"Sözleri soyunma odasında konuşuluyor.": [
+"interview.js"
+],
+"Rakip cephe bu sözlere tepkili.": [
+"interview.js"
+],
+"Taraftar coştu, hoca temkinli.": [
+"interview.js"
+],
+"Maç sonu açıklamaları gündemde.": [
+"interview.js"
+],
+"Kendinden emin sözleri dikkat çekti.": [
+"interview.js"
+],
+"Alçakgönüllü tavrı takdir topladı.": [
+"interview.js"
+],
+"Takım ruhuna vurgu yaptı.": [
 "interview.js"
 ],
 "Mütevazı": [
@@ -40574,18 +40608,6 @@
 "wc.js"
 ],
 "Kupayı eve getireceğiz, söz!": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"wc.js"
-],
-"Röportaj": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -58518,6 +58540,21 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Dünya Şampiyonası Rüyası · Efsanelerin İzinde": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"premium.js"
+],
+"مشمول في Premium+": [
+"lang-ar.js"
+],
 "(Asist)": [
 "lang-ar.js",
 "lang-de.js",
@@ -60174,6 +60211,17 @@
 "lang-pt.js",
 "life.js"
 ],
+"Hoca kornerden orta açıyor. Top kafana gelirken dokun; nişangah neredeyse oraya vurursun.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "Hoca ısınmanı beğendi, ikinci yarıda oyuna gireceksin!": [
 "lang-ar.js",
 "lang-de.js",
@@ -60231,8 +60279,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"minigame.js"
+"lang-pt.js"
 ],
 "Islak zeminde top daha çok kayar, vuruşlar biraz daha az isabetli.": [
 "lang-ar.js",
@@ -60672,8 +60719,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"match.js"
+"lang-pt.js"
 ],
 "Krupiyeye karşı 21'e yaklaş. Blackjack 3:2 öder, krupiye 17'de durur.": [
 "lang-ar.js",
@@ -62095,8 +62141,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"minigame.js"
+"lang-pt.js"
 ],
 "Top kapma ve müdahaleler.": [
 "lang-ar.js",
@@ -63924,8 +63969,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"minigame.js"
+"lang-pt.js"
 ],
 "· rakibinden önce topa ulaş ·": [
 "lang-ar.js",
@@ -63936,8 +63980,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"minigame.js"
+"lang-pt.js"
 ],
 "· süre dolmadan pası ver": [
 "lang-ar.js",
@@ -92469,6 +92512,31 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
+],
+"2 OYUN MODU DAHİL": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"PREMİUM+ İLE DAHİL": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"مشمول في PREMIUM+": [
+"lang-ar.js"
 ],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
@@ -134097,6 +134165,15 @@
 "lang-en.js",
 "lang-it.js"
 ],
+"2 Spielmodi inklusive": [
+"lang-de.js"
+],
+"Weltmeisterschaftstraum · Auf den Spuren der Legenden": [
+"lang-de.js"
+],
+"In Premium+ enthalten": [
+"lang-de.js"
+],
 "– wir haben uns qualifiziert!": [
 "lang-de.js"
 ],
@@ -143110,6 +143187,12 @@
 "lang-de.js"
 ],
 "INTERVIEW BEENDEN": [
+"lang-de.js"
+],
+"2 SPIELMODI INKLUSIVE": [
+"lang-de.js"
+],
+"IN PREMIUM+ ENTHALTEN": [
 "lang-de.js"
 ],
 "– WIR HABEN UNS QUALIFIZIERT!": [
@@ -155468,6 +155551,12 @@
 "End the interview": [
 "lang-en.js"
 ],
+"World Championship Dream · In the Footsteps of Legends": [
+"lang-en.js"
+],
+"Included with Premium+": [
+"lang-en.js"
+],
 "— we qualified!": [
 "lang-en.js"
 ],
@@ -164032,6 +164121,12 @@
 "lang-en.js"
 ],
 "END THE INTERVIEW": [
+"lang-en.js"
+],
+"2 GAME MODES INCLUDED": [
+"lang-en.js"
+],
+"INCLUDED WITH PREMIUM+": [
 "lang-en.js"
 ],
 "— WE QUALIFIED!": [
@@ -176383,6 +176478,12 @@
 "EN VIVO": [
 "lang-es.js"
 ],
+"Sueño Campeonato Mundial · Tras los pasos de las leyendas": [
+"lang-es.js"
+],
+"Incluido con Premium+": [
+"lang-es.js"
+],
 "— ¡nos hemos clasificado!": [
 "lang-es.js"
 ],
@@ -184990,6 +185091,12 @@
 "lang-es.js"
 ],
 "TERMINAR LA ENTREVISTA": [
+"lang-es.js"
+],
+"2 MODOS DE JUEGO INCLUIDOS": [
+"lang-es.js"
+],
+"INCLUIDO CON PREMIUM+": [
 "lang-es.js"
 ],
 "— ¡NOS HEMOS CLASIFICADO!": [
@@ -197219,6 +197326,12 @@
 "EN DIRECT": [
 "lang-fr.js"
 ],
+"Rêve de Championnat du monde · Sur les traces des légendes": [
+"lang-fr.js"
+],
+"Inclus avec Premium+": [
+"lang-fr.js"
+],
 "— on est qualifiés !": [
 "lang-fr.js"
 ],
@@ -205563,6 +205676,12 @@
 "lang-fr.js"
 ],
 "TERMINER L'INTERVIEW": [
+"lang-fr.js"
+],
+"2 MODES DE JEU INCLUS": [
+"lang-fr.js"
+],
+"INCLUS AVEC PREMIUM+": [
 "lang-fr.js"
 ],
 "— ON EST QUALIFIÉS !": [
@@ -217464,6 +217583,12 @@
 "LANGSUNG": [
 "lang-id.js"
 ],
+"Mimpi Kejuaraan Dunia · Jejak Para Legenda": [
+"lang-id.js"
+],
+"Termasuk dalam Premium+": [
+"lang-id.js"
+],
 "— kita lolos!": [
 "lang-id.js"
 ],
@@ -225689,6 +225814,12 @@
 "lang-id.js"
 ],
 "AKHIRI WAWANCARA": [
+"lang-id.js"
+],
+"2 MODE PERMAINAN TERMASUK": [
+"lang-id.js"
+],
+"TERMASUK DALAM PREMIUM+": [
 "lang-id.js"
 ],
 "— KITA LOLOS!": [
@@ -237587,6 +237718,12 @@
 "Termina l'intervista": [
 "lang-it.js"
 ],
+"Sogno Mondiale · Sulle orme delle leggende": [
+"lang-it.js"
+],
+"Incluso con Premium+": [
+"lang-it.js"
+],
 "— ci siamo qualificati!": [
 "lang-it.js"
 ],
@@ -245808,6 +245945,12 @@
 "TERMINA L'INTERVISTA": [
 "lang-it.js"
 ],
+"2 MODALITÀ DI GIOCO INCLUSE": [
+"lang-it.js"
+],
+"INCLUSO CON PREMIUM+": [
+"lang-it.js"
+],
 "— CI SIAMO QUALIFICATI!": [
 "lang-it.js"
 ],
@@ -252807,6 +252950,9 @@
 "GKの場面で何をすればいいか説明するテキスト。最初の3試合はオン。": [
 "lang-ja.js"
 ],
+"Premium+に含まれる": [
+"lang-ja.js"
+],
 "（PK戦）": [
 "lang-ja.js"
 ],
@@ -252994,6 +253140,9 @@
 "lang-ja.js"
 ],
 "STARFOOTサポーター": [
+"lang-ja.js"
+],
+"PREMIUM+に含まれる": [
 "lang-ja.js"
 ],
 "STARFOOT ワールドサービス": [
@@ -258238,6 +258387,12 @@
 "lang-pt.js"
 ],
 "AO VIVO": [
+"lang-pt.js"
+],
+"Sonho da Copa · Nos passos das lendas": [
+"lang-pt.js"
+],
+"Incluído no Premium+": [
 "lang-pt.js"
 ],
 "— nos classificamos!": [
@@ -266235,6 +266390,12 @@
 "ENCERRAR A ENTREVISTA": [
 "lang-pt.js"
 ],
+"2 MODOS DE JOGO INCLUÍDOS": [
+"lang-pt.js"
+],
+"INCLUÍDO NO PREMIUM+": [
+"lang-pt.js"
+],
 "— NOS CLASSIFICAMOS!": [
 "lang-pt.js"
 ],
@@ -273805,6 +273966,9 @@
 "LZString": [
 "lz-string.min.js"
 ],
+"Korner! Top kafana gelirken kalede vurmak istediğin yere dokun: zamanlama ve yön senin elinde.": [
+"match.js"
+],
 "whistleLong": [
 "match.js",
 "sfx.js"
@@ -273946,6 +274110,12 @@
 "Enter": [
 "minigame.js"
 ],
+"Durmadan, hızlı hızlı dokun": [
+"minigame.js"
+],
+"· ne kadar hızlı basarsan o kadar hızlı koşarsın ·": [
+"minigame.js"
+],
 "800 {}px \"Saira Condensed\", sans-serif": [
 "minigame.js",
 "socialart.js"
@@ -273969,6 +274139,12 @@
 "minigame.js"
 ],
 "Üstteki çubuk YEŞİL olunca ÇIK\\'a bas.": [
+"minigame.js"
+],
+"Top kafana gelirken kalede vurmak istediğin yere dokun": [
+"minigame.js"
+],
+"· dokunduğun an zamanlama, dokunduğun yer yön ·": [
 "minigame.js"
 ],
 "Tempoda: %{}": [
@@ -288610,9 +288786,6 @@
 "premium.js"
 ],
 "Premium\\'un tamamı": [
-"premium.js"
-],
-"Dünya Şampiyonası Rüyası · Efsanelerin İzinde": [
 "premium.js"
 ],
 "{} Premium+": [

@@ -1,3 +1,18 @@
 6228|2 modes de jeu inclus
 6229|Rêve de Championnat du monde · Sur les traces des légendes
 6230|Inclus avec Premium+
+6231|Touche l'endroit où tu veux viser dans le but quand le ballon arrive sur ta tête
+6232|· le moment du toucher donne le timing, l'endroit donne la direction ·
+6233|Tape vite, sans t'arrêter
+6234|· plus tu tapes vite, plus tu cours vite ·
+6235|Corner ! Quand le ballon arrive sur ta tête, touche l'endroit où tu veux viser dans le but : le timing et la direction dépendent de toi.
+6236|Quand le ballon arrive sur ta tête, touche l'endroit où tu veux viser dans le but : le timing et la direction dépendent de toi.
+6237|Le coach centre depuis le corner. Quand le ballon arrive sur ta tête, touche l'endroit où tu veux viser dans le but.
+6238|Quand le ballon arrive sur ta tête, touche l'endroit où tu veux viser dans le but.
+6239|Ses paroles font parler dans le vestiaire.
+6240|L'adversaire n'apprécie pas ces paroles.
+6241|Les supporters adorent, le coach reste prudent.
+6242|Ses déclarations d'après-match font la une.
+6243|Ses paroles pleines d'assurance ont attiré l'attention.
+6244|Son humilité a été saluée.
+6245|Il a insisté sur l'esprit d'équipe.

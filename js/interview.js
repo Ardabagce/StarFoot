@@ -126,7 +126,7 @@ const Interview = {
       window.addEventListener('resize', onR);
       const tot = [0, 0, 0, 0, 0];
       let i = 0;
-      const said = [];
+      const said = [], tones = [];
       const end = () => {
         window.removeEventListener('resize', onR);
         el.classList.add('out');
@@ -134,6 +134,13 @@ const Interview = {
         if (said.length) {
           Player.addMorale(p, tot[0]); Player.addRel(p, 'fans', tot[1]); Player.addRel(p, 'coach', tot[2]); Player.addRel(p, 'team', tot[3]); Player.addFame(p, tot[4]);
           Game.news(`🎙️ Maç sonu: "${said[said.length - 1]}"`, 'me');
+          // gazete manşeti: en iddialı cevap (eşitse sonuncusu)
+          let bi = 0; tones.forEach((k, j) => { if (k >= tones[bi]) bi = j; });
+          const tone = tones[bi];
+          const sub = tone === 2 ? U.pick(['Sözleri soyunma odasında konuşuluyor.', 'Rakip cephe bu sözlere tepkili.', 'Taraftar coştu, hoca temkinli.'])
+            : tone === 1 ? U.pick(['Maç sonu açıklamaları gündemde.', 'Kendinden emin sözleri dikkat çekti.'])
+              : U.pick(['Alçakgönüllü tavrı takdir topladı.', 'Takım ruhuna vurgu yaptı.']);
+          Game.news(sub, tone === 2 ? 'bad' : 'good', { iv: { who: p.surname, q: said[bi], sub } });
           Game.save();
         }
         resolve();
@@ -149,7 +156,7 @@ const Interview = {
         U.$$('.iv-a', el).forEach((b) => (b.onclick = () => {
           const k = +b.dataset.k;
           IV_FX[k].forEach((v, j) => (tot[j] += v * 0.6));
-          said.push(ans[k]);
+          said.push(ans[k]); tones.push(k);
           if (typeof Sfx !== 'undefined') Sfx.play('shutter');
           i++;
           setTimeout(ask, 160);

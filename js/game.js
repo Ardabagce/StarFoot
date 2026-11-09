@@ -1361,18 +1361,20 @@ const UI = {
     const s = Game.state;
     const items = s.news.filter((n) => n.type !== 'me' && !/Maç primi/.test(n.t));
     if (!items.length) return '';
-    const kicker = (n) => (n.star ? 'Yıldızlar' : n.type === 'world' ? (/Magazin/.test(n.t) ? 'Magazin' : 'Dünya') : /transfer|imza|sözleşme/i.test(n.t) ? 'Transfer' : /madalya|kupa|Şampiyon|ödül/i.test(n.t) ? 'Ödül' : /Federasyon|ceza/i.test(n.t) ? 'Son Dakika' : /karşısında|kazandı|kaybetti|berabere/.test(n.t) ? 'Maç' : n.type === 'bad' ? 'Gündem' : 'Kulüp');
+    const kicker = (n) => (n.iv ? 'Röportaj' : n.star ? 'Yıldızlar' : n.type === 'world' ? (/Magazin/.test(n.t) ? 'Magazin' : 'Dünya') : /transfer|imza|sözleşme/i.test(n.t) ? 'Transfer' : /madalya|kupa|Şampiyon|ödül/i.test(n.t) ? 'Ödül' : /Federasyon|ceza/i.test(n.t) ? 'Son Dakika' : /karşısında|kazandı|kaybetti|berabere/.test(n.t) ? 'Maç' : n.type === 'bad' ? 'Gündem' : 'Kulüp');
     const big = /ŞAMPİYON|Şampiyon|transfer oldun|MİLLİ TAKIMA|Hat-trick|Federasyon|evlendi|sözleşme imzaladın/;
     const top = items.slice(0, 8);
-    const lead = top.find((n) => n.type !== 'world' && big.test(n.t)) || top.find((n) => n.star) || items[0];
+    const lead = top.find((n) => n.type !== 'world' && big.test(n.t)) || top.slice(0, 3).find((n) => n.iv) || top.find((n) => n.star) || items[0];
     const rest = items.filter((n) => n !== lead).slice(0, UI.more.news ? 30 : 6);
     const clean = (t) => U.plain(t.replace(/<[^>]+>/g, ''));
+    // röportaj manşeti: söz çevrilir, isim olduğu gibi kalır
+    const ivh = (n) => [`${n.iv.who}: “${I18N.t(n.iv.q)}”`, I18N.t(n.iv.sub)];
     const split = (t) => {
       const plain = I18N.t(clean(t));
       const cut = plain.search(/[.!?:](\s|$)/);
       return cut > 14 && cut < 95 ? [plain.slice(0, cut + 1), plain.slice(cut + 1).trim()] : [plain, ''];
     };
-    const [h1, sub] = split(lead.t);
+    const [h1, sub] = lead.iv ? ivh(lead) : split(lead.t);
     UI.paperLead = lead;
     const no = (s.season.year - (s.startYear || s.season.year)) * 40 + s.season.round + 1;
     // kısa kısa: kendi liginin son hafta sonuçları
@@ -1399,7 +1401,7 @@ const UI = {
           <div class="pp-box"><h4>Zirve</h4><ol>${tbl.map((r) => `<li class="${r.id === s.clubId ? 'me' : ''}"><span>${sn(r.id)}</span><b>${r.pts}</b></li>`).join('')}</ol>${sc ? `<p class="pp-sc">Gol kralı: <b>${U.esc(sc.name)}</b> (${sc.g})</p>` : ''}</div>
         </aside>` : ''}
       </div>
-      <div class="pp-cols">${rest.map((n) => { const [a, b] = split(n.t); return `<article class="pp-item ${n.type}"><span class="pp-k">${kicker(n)}</span><h5>${U.esc(a)}</h5>${b ? `<p>${U.esc(b)}</p>` : ''}<small>${n.type === 'world' ? 'StarFoot Dünya Servisi' : n.w || ''}</small></article>`; }).join('')}</div>
+      <div class="pp-cols">${rest.map((n) => { const [a, b] = n.iv ? ivh(n) : split(n.t); return `<article class="pp-item ${n.type}"><span class="pp-k">${kicker(n)}</span><h5>${U.esc(a)}</h5>${b ? `<p>${U.esc(b)}</p>` : ''}<small>${n.type === 'world' ? 'StarFoot Dünya Servisi' : n.w || ''}</small></article>`; }).join('')}</div>
       ${items.length > 7 ? UI.moreBtn('news', 'Tüm haberler') : ''}
     </section>`;
   },
@@ -1419,7 +1421,7 @@ const UI = {
       post = { id: 'np' + hsh, seed: hsh, kind: 'goal', scene, cid: c.id, c1: c.c1, c2: c.c2, short: c.short, num: 7 + (ls % 5), lookSeed: ls + 1 };
     } else {
       const c = Game.club() || { c1: '#c8102e', c2: '#fff', short: '' };
-      const scene = /ŞAMPİYON|Şampiyon/.test(lead.t) ? 'trophy' : /transfer|imza/i.test(lead.t) ? 'transfer' : /MİLLİ/.test(lead.t) ? 'camp' : /Federasyon|ceza/.test(lead.t) ? 'studio' : 'goal';
+      const scene = lead.iv ? 'studio' : /ŞAMPİYON|Şampiyon/.test(lead.t) ? 'trophy' : /transfer|imza/i.test(lead.t) ? 'transfer' : /MİLLİ/.test(lead.t) ? 'camp' : /Federasyon|ceza/.test(lead.t) ? 'studio' : 'goal';
       post = { id: 'np' + hsh, seed: hsh, kind: 'goal', scene, cid: c.id, c1: c.c1, c2: c.c2, short: c.short, num: s.player.shirt };
     }
     const img = SocialArt.get(post);
