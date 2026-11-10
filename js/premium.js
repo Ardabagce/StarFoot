@@ -154,7 +154,9 @@ const Premium = {
       if (Premium.owned(r && r.purchases)) Premium.set(true);
       if (Plus.owned(r && r.purchases)) Plus.set(true);
       Packs.sync(r && r.purchases);
+      if (typeof Diamond !== 'undefined' && Diamond.owned(r && r.purchases)) Diamond.set(true);
     } catch (e) { /* yok */ }
+    if (typeof Diamond !== 'undefined') Diamond.load();
     if (typeof Support !== 'undefined') Support.restore();
     Packs.load();
     Plus.load();
@@ -200,6 +202,7 @@ const Premium = {
       if (typeof Support !== 'undefined') Support.restore();
       const plus = Plus.owned(r && r.purchases);
       if (plus) Plus.set(true);
+      if (typeof Diamond !== 'undefined' && Diamond.owned(r && r.purchases)) { Diamond.set(true); Premium.busy = false; Game.toast('💎 Diamond geri yüklendi.', 'good'); if (Game.state) Game.render(); return; }
       if (Premium.owned(r && r.purchases)) { Premium.set(true); Premium.track('premium_restore'); Game.toast(plus ? '⭐ Premium+ geri yüklendi.' : '⭐ Premium geri yüklendi.', 'good'); }
       else if (packs) Game.toast('Satın aldığın paketler geri yüklendi.', 'good');
       else Game.toast('Bu hesapta Premium satın alımı bulunamadı.', 'info');
@@ -363,7 +366,7 @@ const Packs = {
   price: {},
   key(k) { return 'starfoot_pack_' + k; },
   // Premium+ sahiplerinde iki mod da dahil (önceden alanlar dahil)
-  owns(k) { if (k !== 'coach' && typeof Plus !== 'undefined' && Plus.active) return true; try { return localStorage.getItem(Packs.key(k)) === '1'; } catch (e) { return false; } },
+  owns(k) { if (typeof Diamond !== 'undefined' && Diamond.active) return true; if (k !== 'coach' && typeof Plus !== 'undefined' && Plus.active) return true; try { return localStorage.getItem(Packs.key(k)) === '1'; } catch (e) { return false; } },
   bought(k) { try { return localStorage.getItem(Packs.key(k)) === '1'; } catch (e) { return false; } },
   set(k) { try { localStorage.setItem(Packs.key(k), '1'); } catch (e) { /* yok */ } },
   // mağazadaki satın alımlara göre sahiplik; yeni paket bulunduysa true
@@ -422,6 +425,7 @@ const Packs = {
       btns.push({ t: `${Icon(x.ic)} Satın al${pr ? ` · ${U.esc(pr.s)}` : ''}`, cls: 'btn-big', fn: () => Packs.buy(k).then((ok) => { if (ok) Packs.open(k); }) });
     }
     if (can && !Plus.active && k !== 'coach') btns.push({ t: `${Icon('star')} Premium+ ile dahil`, cls: 'btn-ghost', fn: () => Plus.pitch('', 'pack_' + k) });
+    if (can && typeof Diamond !== 'undefined' && Diamond.enabled()) btns.push({ t: '<span lang="en">💎 Diamond\'da var</span>', cls: 'btn-ghost', fn: () => Diamond.pitch('pack_' + k) });
     Game.modal(`<div class="ev-tag">Yeni mod</div><h2>${Icon(x.ic)} ${x.t}</h2><p>${x.d}</p>
       <ul class="prem-l">${x.f.map((t) => `<li>${t}</li>`).join('')}</ul>
       ${can ? '<p class="muted">Tek seferlik satın alma. Reklam yok, tüm cihazlarında geri yükleyebilirsin.</p>' : '<p class="muted">Bu mod App Store uygulamasında satın alınabilir.</p>'}`, btns, { wide: true });

@@ -378,3 +378,24 @@
 6777|Títulos y habilidades
 6778|🚗 Primero necesitas el carné
 6795|Necesitas carné para usar {}. El examen tiene 3 preguntas.
+6840|¡Diamond llega pronto!
+6841|💎 ¡Diamond activado! Todo es tuyo.
+6846|Todo incluido
+6847|Todo Premium y Premium+: sin anuncios, 10 carreras, deshacer, avance rápido, carrera de portero
+6848|Entrenador · Sueño del Campeonato Mundial · Tras los pasos de las leyendas
+6849|Todos los modos futuros
+6850|Cada nuevo modo que salga será tuyo gratis
+6851|Colección dorada
+6852|Botas de oro y diamante, pelo platino, insignia de diamante en tu perfil
+6853|¡Tienes Diamond! Todo está desbloqueado.
+6856|Comprar Diamond
+6857|Tienes Premium+: mejora a Diamond con descuento.
+6858|Compra única, todo es tuyo para siempre.
+6859|Compra única. Sin suscripción; restáurala en todos tus dispositivos.
+6861|Diamond se compra en las apps de App Store y Google Play.
+6862|Precio de lanzamiento
+6863|💎 Pelo colección dorada
+6865|💎 Diamond restaurado.
+6867|💎 Incluido en Diamond
+6869|Todo desbloqueado
+6870|3 modos de juego

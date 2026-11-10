@@ -343,6 +343,135 @@
      "description": "StarFootの開発者を応援 (+2400)"
     }
    }
+  },
+  {
+   "sku": "starfoot_coach",
+   "price": "2.99",
+   "consumable": false,
+   "listings": {
+    "tr-TR": {
+     "title": "Teknik Direktör",
+     "description": "Kulübü yönet, maçı kenardan canlı yönet"
+    },
+    "en-US": {
+     "title": "Manager",
+     "description": "Run a club and manage matches live"
+    },
+    "es-ES": {
+     "title": "Entrenador",
+     "description": "Dirige un club y los partidos en directo"
+    },
+    "pt-BR": {
+     "title": "Treinador",
+     "description": "Comande um clube e os jogos ao vivo"
+    },
+    "de-DE": {
+     "title": "Trainer",
+     "description": "Führe einen Verein, leite Spiele live"
+    },
+    "fr-FR": {
+     "title": "Entraîneur",
+     "description": "Dirige un club et les matchs en direct"
+    },
+    "it-IT": {
+     "title": "Allenatore",
+     "description": "Guida un club e le partite dal vivo"
+    },
+    "id": {
+     "title": "Manajer",
+     "description": "Pimpin klub dan atur laga langsung"
+    },
+    "ja-JP": {
+     "title": "監督",
+     "description": "クラブを率いて試合をライブ指揮"
+    }
+   }
+  },
+  {
+   "sku": "starfoot_diamond",
+   "price": "7.99",
+   "consumable": false,
+   "listings": {
+    "tr-TR": {
+     "title": "StarFoot Diamond",
+     "description": "Her şey dahil: Premium+, tüm modlar"
+    },
+    "en-US": {
+     "title": "StarFoot Diamond",
+     "description": "Everything: Premium+, all game modes"
+    },
+    "es-ES": {
+     "title": "StarFoot Diamond",
+     "description": "Todo: Premium+ y todos los modos"
+    },
+    "pt-BR": {
+     "title": "StarFoot Diamond",
+     "description": "Tudo: Premium+ e todos os modos"
+    },
+    "de-DE": {
+     "title": "StarFoot Diamond",
+     "description": "Alles: Premium+ und alle Modi"
+    },
+    "fr-FR": {
+     "title": "StarFoot Diamond",
+     "description": "Tout : Premium+ et tous les modes"
+    },
+    "it-IT": {
+     "title": "StarFoot Diamond",
+     "description": "Tutto: Premium+ e tutte le modalità"
+    },
+    "id": {
+     "title": "StarFoot Diamond",
+     "description": "Semua: Premium+ dan semua mode"
+    },
+    "ja-JP": {
+     "title": "StarFoot Diamond",
+     "description": "全部入り：Premium+と全モード"
+    }
+   }
+  },
+  {
+   "sku": "starfoot_diamond_upg",
+   "price": "4.99",
+   "consumable": false,
+   "listings": {
+    "tr-TR": {
+     "title": "Diamond yükseltme",
+     "description": "Her şey dahil: Premium+, tüm modlar"
+    },
+    "en-US": {
+     "title": "Diamond upgrade",
+     "description": "Everything: Premium+, all game modes"
+    },
+    "es-ES": {
+     "title": "Mejora a Diamond",
+     "description": "Todo: Premium+ y todos los modos"
+    },
+    "pt-BR": {
+     "title": "Upgrade Diamond",
+     "description": "Tudo: Premium+ e todos os modos"
+    },
+    "de-DE": {
+     "title": "Diamond-Upgrade",
+     "description": "Alles: Premium+ und alle Modi"
+    },
+    "fr-FR": {
+     "title": "Passage à Diamond",
+     "description": "Tout : Premium+ et tous les modes"
+    },
+    "it-IT": {
+     "title": "Upgrade Diamond",
+     "description": "Tutto: Premium+ e tutte le modalità"
+    },
+    "id": {
+     "title": "Upgrade Diamond",
+     "description": "Semua: Premium+ dan semua mode"
+    },
+    "ja-JP": {
+     "title": "Diamondへアップグレード",
+     "description": "全部入り：Premium+と全モード"
+    }
+   }
   }
  ]
 }

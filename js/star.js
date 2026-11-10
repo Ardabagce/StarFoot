@@ -105,6 +105,7 @@ const Star = {
 
   // StarFeed rozeti: Premium'da altın, ünlüyken mavi
   badge(verified) {
+    if (typeof Diamond !== 'undefined' && Diamond.active) return Diamond.badge();
     if (Star.has()) return Star.gold();
     return verified && typeof IG !== 'undefined' ? IG.verified() : '';
   },
@@ -152,7 +153,8 @@ const Star = {
         <div class="lbl">Saç modeli</div><div class="chip-row">${Star.STYLES.map(([k, l]) => `<button class="chip ${cur.style === k ? 'on' : ''}" data-k="style" data-v="${k}">${l}</button>`).join('')}</div>
         <div class="lbl">Saç rengi</div><div class="stu-row">${sw('hair', HAIRS.concat(Star.HAIRX))}</div>
         <div class="lbl">Sakal</div><div class="chip-row"><button class="chip ${cur.beard ? '' : 'on'}" data-k="beard" data-v="0">Yok</button><button class="chip ${cur.beard ? 'on' : ''}" data-k="beard" data-v="1">Var</button></div>
-        <div class="lbl">Krampon</div><div class="stu-row">${sw('boots', Star.BOOTS)}</div>
+        <div class="lbl">Krampon</div><div class="stu-row">${sw('boots', Star.BOOTS)}${typeof Diamond !== 'undefined' && Diamond.enabled() ? Diamond.BOOTS.map((c) => `<button class="stu-sw dia-sw ${cur.boots === c ? 'on' : ''}" data-k="boots" data-v="${c}" data-dia="1" style="background:${c}" aria-label="Diamond"></button>`).join('') : ''}</div>
+        ${typeof Diamond !== 'undefined' && Diamond.enabled() ? `<div class="lbl">💎 Altın koleksiyon saç</div><div class="stu-row">${Diamond.HAIRS.map((c) => `<button class="stu-sw dia-sw ${cur.hair === c ? 'on' : ''}" data-k="hair" data-v="${c}" data-dia="1" style="background:${c}" aria-label="Diamond"></button>`).join('')}</div>` : ''}
       </div></div></div>`, [
       { t: 'Varsayılan', cls: 'btn-ghost', keep: true, fn: () => { Object.assign(cur, Sprites.look(7), { boots: '#16181d' }); sync(); } },
       { t: 'Vazgeç', cls: 'btn-ghost' },
@@ -177,6 +179,7 @@ const Star = {
     };
     U.$$('[data-k]', m).forEach((b) => (b.onclick = () => {
       const k = b.dataset.k, v = b.dataset.v;
+      if (b.dataset.dia && !(typeof Diamond !== 'undefined' && Diamond.active)) return Diamond.pitch('studio');
       if (k === 'beard') cur.beard = v === '1';
       else cur[k] = v;
       if (k === 'style') cur.bald = v === 'bald';

@@ -590,6 +590,186 @@
           "StarFootの開発者を応援 (+2400)"
         ]
       }
+    },
+    "starfoot_coach": {
+      "refName": "Manager mode",
+      "price": "2.99",
+      "screenshot": "store/packs/coach-review.png",
+      "reviewNote": "Non-consumable, one-time purchase that unlocks the \"Manager\" game mode. On the title screen tap the green \"Manager\" button, then \"Buy\". \"Restore purchases\" is in the same window. After purchase: enter a name, pick a club and manage matches.",
+      "locales": {
+        "tr": [
+          "Teknik Direktör",
+          "Kulübü yönet, maçı kenardan canlı yönet"
+        ],
+        "en-US": [
+          "Manager",
+          "Run a club and manage matches live"
+        ],
+        "en-GB": [
+          "Manager",
+          "Run a club and manage matches live"
+        ],
+        "es-ES": [
+          "Entrenador",
+          "Dirige un club y los partidos en directo"
+        ],
+        "es-MX": [
+          "Entrenador",
+          "Dirige un club y los partidos en vivo"
+        ],
+        "pt-BR": [
+          "Treinador",
+          "Comande um clube e os jogos ao vivo"
+        ],
+        "pt-PT": [
+          "Treinador",
+          "Comanda um clube e os jogos ao vivo"
+        ],
+        "de-DE": [
+          "Trainer",
+          "Führe einen Verein, leite Spiele live"
+        ],
+        "fr-FR": [
+          "Entraîneur",
+          "Dirige un club et les matchs en direct"
+        ],
+        "it": [
+          "Allenatore",
+          "Guida un club e le partite dal vivo"
+        ],
+        "id": [
+          "Manajer",
+          "Pimpin klub dan atur laga langsung"
+        ],
+        "ar-SA": [
+          "المدير الفني",
+          "أدر ناديًا وقُد المباريات مباشرة"
+        ],
+        "ja": [
+          "監督",
+          "クラブを率いて試合をライブ指揮"
+        ]
+      }
+    },
+    "starfoot_diamond": {
+      "refName": "StarFoot Diamond",
+      "price": "7.99",
+      "screenshot": "store/packs/diamond-review.png",
+      "reviewNote": "Non-consumable, one-time purchase that unlocks everything: Premium, Premium+, all game modes (Manager, World Championship Dream, Legends) and cosmetic items. On the title screen tap \"StarFoot Diamond\", then \"Buy\".",
+      "locales": {
+        "tr": [
+          "StarFoot Diamond",
+          "Her şey dahil: Premium+, tüm modlar"
+        ],
+        "en-US": [
+          "StarFoot Diamond",
+          "Everything: Premium+, all game modes"
+        ],
+        "en-GB": [
+          "StarFoot Diamond",
+          "Everything: Premium+, all game modes"
+        ],
+        "es-ES": [
+          "StarFoot Diamond",
+          "Todo: Premium+ y todos los modos"
+        ],
+        "es-MX": [
+          "StarFoot Diamond",
+          "Todo: Premium+ y todos los modos"
+        ],
+        "pt-BR": [
+          "StarFoot Diamond",
+          "Tudo: Premium+ e todos os modos"
+        ],
+        "pt-PT": [
+          "StarFoot Diamond",
+          "Tudo: Premium+ e todos os modos"
+        ],
+        "de-DE": [
+          "StarFoot Diamond",
+          "Alles: Premium+ und alle Modi"
+        ],
+        "fr-FR": [
+          "StarFoot Diamond",
+          "Tout : Premium+ et tous les modes"
+        ],
+        "it": [
+          "StarFoot Diamond",
+          "Tutto: Premium+ e tutte le modalità"
+        ],
+        "id": [
+          "StarFoot Diamond",
+          "Semua: Premium+ dan semua mode"
+        ],
+        "ar-SA": [
+          "StarFoot Diamond",
+          "كل شيء: Premium+ وكل الأوضاع"
+        ],
+        "ja": [
+          "StarFoot Diamond",
+          "全部入り：Premium+と全モード"
+        ]
+      }
+    },
+    "starfoot_diamond_upg": {
+      "refName": "StarFoot Diamond upgrade",
+      "price": "4.99",
+      "screenshot": "store/packs/diamond-review.png",
+      "reviewNote": "Discounted upgrade to StarFoot Diamond, offered only to users who already own Premium+. Unlocks the same content as StarFoot Diamond.",
+      "locales": {
+        "tr": [
+          "Diamond yükseltme",
+          "Her şey dahil: Premium+, tüm modlar"
+        ],
+        "en-US": [
+          "Diamond upgrade",
+          "Everything: Premium+, all game modes"
+        ],
+        "en-GB": [
+          "Diamond upgrade",
+          "Everything: Premium+, all game modes"
+        ],
+        "es-ES": [
+          "Mejora a Diamond",
+          "Todo: Premium+ y todos los modos"
+        ],
+        "es-MX": [
+          "Mejora a Diamond",
+          "Todo: Premium+ y todos los modos"
+        ],
+        "pt-BR": [
+          "Upgrade Diamond",
+          "Tudo: Premium+ e todos os modos"
+        ],
+        "pt-PT": [
+          "Upgrade Diamond",
+          "Tudo: Premium+ e todos os modos"
+        ],
+        "de-DE": [
+          "Diamond-Upgrade",
+          "Alles: Premium+ und alle Modi"
+        ],
+        "fr-FR": [
+          "Passage à Diamond",
+          "Tout : Premium+ et tous les modes"
+        ],
+        "it": [
+          "Upgrade Diamond",
+          "Tutto: Premium+ e tutte le modalità"
+        ],
+        "id": [
+          "Upgrade Diamond",
+          "Semua: Premium+ dan semua mode"
+        ],
+        "ar-SA": [
+          "الترقية إلى Diamond",
+          "كل شيء: Premium+ وكل الأوضاع"
+        ],
+        "ja": [
+          "Diamondへアップグレード",
+          "全部入り：Premium+と全モード"
+        ]
+      }
     }
   }
 }

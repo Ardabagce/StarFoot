@@ -378,3 +378,24 @@
 6777|Abschlüsse und Fähigkeiten
 6778|🚗 Du brauchst zuerst einen Führerschein
 6795|Für {} brauchst du einen Führerschein. Die Prüfung hat 3 Fragen.
+6840|Diamond kommt bald!
+6841|💎 Diamond ist aktiv! Alles gehört dir.
+6846|Alles inklusive
+6847|Alles aus Premium und Premium+: werbefrei, 10 Karriereplätze, Rückgängig, Vorspulen, Torwartkarriere
+6848|Trainer · Weltmeisterschaftstraum · Auf den Spuren der Legenden
+6849|Alle künftigen Modi
+6850|Jeder neue Modus gehört dir kostenlos
+6851|Gold-Kollektion
+6852|Gold- und Diamantschuhe, Platinhaar, Diamant-Abzeichen im Profil
+6853|Du hast Diamond! Alles ist freigeschaltet.
+6856|Diamond holen
+6857|Du hast Premium+: Upgrade zu Diamond mit Rabatt.
+6858|Einmalkauf, alles gehört für immer dir.
+6859|Einmalkauf. Kein Abo, auf allen Geräten wiederherstellbar.
+6861|Diamond gibt es in den Apps im App Store und bei Google Play.
+6862|Einführungspreis
+6863|💎 Gold-Kollektion Haare
+6865|💎 Diamond wiederhergestellt.
+6867|💎 In Diamond enthalten
+6869|Alles freigeschaltet
+6870|3 Spielmodi

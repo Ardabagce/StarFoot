@@ -378,3 +378,24 @@
 6777|Titoli e abilità
 6778|🚗 Prima ti serve la patente
 6795|Serve la patente per guidare {}. L'esame ha 3 domande.
+6840|Diamond arriva presto!
+6841|💎 Diamond attivo! Tutto è tuo.
+6846|Tutto incluso
+6847|Tutto Premium e Premium+: senza pubblicità, 10 carriere, annulla, avanzamento rapido, carriera da portiere
+6848|Allenatore · Sogno Mondiale · Sulle orme delle leggende
+6849|Tutte le modalità future
+6850|Ogni nuova modalità sarà tua gratis
+6851|Collezione oro
+6852|Scarpini oro e diamante, capelli platino, badge diamante sul profilo
+6853|Hai Diamond! Tutto è sbloccato.
+6856|Prendi Diamond
+6857|Hai Premium+: passa a Diamond con lo sconto.
+6858|Acquisto unico, tutto è tuo per sempre.
+6859|Acquisto unico. Nessun abbonamento, ripristinabile su tutti i dispositivi.
+6861|Diamond si acquista nelle app di App Store e Google Play.
+6862|Prezzo di lancio
+6863|💎 Capelli collezione oro
+6865|💎 Diamond ripristinato.
+6867|💎 Incluso in Diamond
+6869|Tutto sbloccato
+6870|3 modalità di gioco

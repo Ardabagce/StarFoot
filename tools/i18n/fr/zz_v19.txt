@@ -378,3 +378,24 @@
 6777|Diplômes et compétences
 6778|🚗 Il te faut d'abord le permis
 6795|Il faut le permis pour conduire {}. L'examen a 3 questions.
+6840|Diamond arrive bientôt !
+6841|💎 Diamond activé ! Tout est à toi.
+6846|Tout inclus
+6847|Tout Premium et Premium+ : sans pub, 10 carrières, annuler, avance rapide, carrière de gardien
+6848|Entraîneur · Rêve de Championnat du monde · Sur les traces des légendes
+6849|Tous les futurs modes
+6850|Chaque nouveau mode sera à toi gratuitement
+6851|Collection dorée
+6852|Crampons or et diamant, cheveux platine, badge diamant sur ton profil
+6853|Tu as Diamond ! Tout est débloqué.
+6856|Obtenir Diamond
+6857|Tu as Premium+ : passe à Diamond à prix réduit.
+6858|Achat unique, tout est à toi pour toujours.
+6859|Achat unique. Pas d'abonnement, restaurable sur tous tes appareils.
+6861|Diamond s'achète dans les applis App Store et Google Play.
+6862|Prix de lancement
+6863|💎 Cheveux collection dorée
+6865|💎 Diamond restauré.
+6867|💎 Inclus dans Diamond
+6869|Tout débloqué
+6870|3 modes de jeu
