@@ -286,6 +286,7 @@ const Life = {
         ${L.sponsors.length ? `<div class="lf-sps">${L.sponsors.map((o) => `<div class="lf-sp" style="--b1:${o.c1};--b2:${o.c2}"><i>${U.esc(o.name.slice(0, 2).toUpperCase())}</i><div><b>${U.esc(o.name)}</b><small>${o.l} · ${o.weeks} hafta kaldı</small></div><b class="lf-sp-w">${U.money(o.weekly)}<small>/hf</small></b></div>`).join('')}</div>` : !L.offers.length ? `<p class="muted">${p.fame < 8 ? 'Sponsorlar için biraz daha tanınman gerekiyor.' : 'Şimdilik teklif yok. İyi oynadıkça ve ünün arttıkça markalar seni arayacak.'}</p>` : ''}
       </section>`);
     }
+    if (typeof School !== 'undefined') parts.splice(1, 0, School.card());
     return parts.join('');
   },
 

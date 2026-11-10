@@ -1,0 +1,58 @@
+6291|Urutkan bentuk menurut jumlah sudut, dari yang paling sedikit.
+6292|Selesaikan persamaan: berapa nilai x?
+6293|Berapa hasilnya?
+6294|Bentuk apa yang berikutnya?
+6295|Angka berapa yang berikutnya?
+6296|Bendera negara mana ini?
+6297|Berapa bagian kue yang diwarnai?
+6298|Ada berapa segitiga di papan?
+6299|Ada berapa persegi di papan?
+6300|Ada berapa lingkaran di papan?
+6301|Jam berapa sekarang?
+6302|Sekolah
+6375|{} Sekolah
+6303|Bel sekolah berbunyi, tapi pelatih mengadakan latihan tambahan. Kamu pilih yang mana?
+6306|Hari ini ada pelajaran penting: guru akan membahas materi ujian. Latihannya di jam yang sama.
+6309|Ibumu ingin kamu ke sekolah, teman setimmu mengajak latihan.
+6310|Kecerdasan
+6311|· Materi di kelas akan keluar di ujian.
+6312|🏫 Pergi ke sekolah
+6314|Waktunya pelajaran
+6315|Pelajaran
+6316|Benar! Gurumu memujimu. Soal ini bisa keluar di ujian.
+6320|Salah, tapi tidak apa-apa: kamu sudah lihat jawabannya. Jangan lupa sampai ujian!
+6323|Kecerdasan +1 · Keluargamu senang
+6324|Kecerdasan +0.5 · Kamu memahami materinya
+1873|⚽ Ikut latihan
+6325|Kamu bolos pelajaran: materi itu akan terasa baru saat ujian.
+6326|Ujian tengah semester
+6327|Ujian akhir tahun
+6373|Soal {}/{}
+6328|Ujian
+6372|{} dimulai!
+6359|Ada {} soal dari materi di kelas. Kalau berhasil, keluarga dan pelatihmu akan sangat senang.
+6330|Ikut ujian
+6374|Kecerdasan +{}
+6331|Sangat baik
+6332|Baik
+6333|Cukup
+6334|Kurang
+6335|Nilai sempurna! Keluargamu menangis bangga, dan pelatihmu bilang: "Main secerdas ini juga di lapangan."
+6338|Ujian yang bagus. Keluarga dan pelatihmu puas denganmu.
+6341|Lulus pas-pasan. Ibumu ingin kamu belajar lebih giat.
+6344|Ujiannya buruk. Keluargamu sedih; lain kali lebih sering masuk kelas.
+6347|Piagam Prestasi
+6348|Piagam Penghargaan
+6360|📜 Hari rapor: kamu dapat {}! Keluargamu bangga padamu.
+6362|🎓 Kamu lulus SMA! Nilai rata-rata: {}.
+6352|🎓 Kelulusan
+6371|Usia {} · Rapor
+6354|Rapor
+6355|Tengah semester
+6356|Akhir tahun
+6357|Berikutnya: ujian akhir tahun
+6364|Ujian tengah semester: minggu {}
+6370|Nilai tengah semester: {}/{}
+6365|Rata-rata tahun lalu: {}
+6367|Kelas yang diikuti: {}/{}
+6358|Kecerdasan membuat latihanmu lebih efektif.

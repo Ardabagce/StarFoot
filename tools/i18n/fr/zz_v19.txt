@@ -1,0 +1,58 @@
+6291|Classe les formes selon le nombre de coins, du plus petit au plus grand.
+6292|Résous l'équation : combien vaut x ?
+6293|Quel est le résultat ?
+6294|Quelle forme vient ensuite ?
+6295|Quel nombre vient ensuite ?
+6296|À quel pays appartient ce drapeau ?
+6297|Quelle part du gâteau est colorée ?
+6298|Combien de triangles y a-t-il au tableau ?
+6299|Combien de carrés y a-t-il au tableau ?
+6300|Combien de cercles y a-t-il au tableau ?
+6301|Quelle heure est-il ?
+6302|École
+6375|{} École
+6303|La cloche de l'école sonne, mais le coach a prévu un entraînement en plus. Où vas-tu aller ?
+6306|Il y a un cours important aujourd'hui : la prof va traiter un sujet de l'examen. L'entraînement est à la même heure.
+6309|Ta mère veut que tu ailles à l'école ; tes coéquipiers t'appellent à l'entraînement.
+6310|Intelligence
+6311|· Les sujets vus en cours tombent à l'examen.
+6312|🏫 Aller à l'école
+6314|C'est l'heure du cours
+6315|Cours
+6316|Bravo ! Ta prof t'a félicité. Cette question peut tomber à l'examen.
+6320|Raté, mais ce n'est pas grave : tu as vu la bonne réponse. Ne l'oublie pas avant l'examen !
+6323|Intelligence +1 · Ta famille est contente
+6324|Intelligence +0.5 · Tu as appris le sujet
+1873|⚽ Aller à l'entraînement
+6325|Tu as manqué le cours : ce sujet sera nouveau pour toi à l'examen.
+6326|Examen de mi-semestre
+6327|Examen de fin d'année
+6373|Question {}/{}
+6328|Examen
+6372|{} : c'est parti !
+6359|Il y a {} questions sur les sujets vus en cours. Réussis et ta famille comme ton coach seront ravis.
+6330|Passer l'examen
+6374|Intelligence +{}
+6331|Excellent
+6332|Bien
+6333|Passable
+6334|Insuffisant
+6335|Sans faute ! Ta famille a pleuré de fierté et ton coach a dit : « Joue aussi malin sur le terrain. »
+6338|Un bon examen. Ta famille et ton coach sont contents de toi.
+6341|Tout juste. Ta mère voudrait que tu révises un peu plus.
+6344|L'examen s'est mal passé. Ta famille est déçue ; va plus souvent en cours la prochaine fois.
+6347|Félicitations du conseil
+6348|Encouragements
+6360|📜 Jour du bulletin : tu as obtenu {} ! Ta famille est fière de toi.
+6362|🎓 Tu as fini le lycée ! Moyenne : {}.
+6352|🎓 Diplôme
+6371|{} ans · Bulletin
+6354|Bulletin
+6355|Mi-semestre
+6356|Fin d'année
+6357|Prochain : examen de fin d'année
+6364|Examen de mi-semestre : semaine {}
+6370|Note de mi-semestre : {}/{}
+6365|Moyenne de l'an dernier : {}
+6367|Cours suivis : {}/{}
+6358|L'intelligence rend ton entraînement plus efficace.

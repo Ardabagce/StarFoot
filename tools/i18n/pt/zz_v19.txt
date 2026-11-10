@@ -1,0 +1,58 @@
+6291|Ordene as formas pelo número de cantos, do menor para o maior.
+6292|Resolva a equação: quanto vale x?
+6293|Qual é o resultado?
+6294|Qual forma vem a seguir?
+6295|Qual número vem a seguir?
+6296|De qual país é esta bandeira?
+6297|Quanto da torta está pintado?
+6298|Quantos triângulos há no quadro?
+6299|Quantos quadrados há no quadro?
+6300|Quantos círculos há no quadro?
+6301|Que horas são?
+6302|Escola
+6375|{} Escola
+6303|O sinal da escola tocou, mas o treinador marcou um treino extra. Para onde você vai?
+6306|Hoje tem uma aula importante: a professora vai ensinar um tema da prova. O treino é no mesmo horário.
+6309|Sua mãe quer que você vá à escola; seus colegas chamam você para o treino.
+6310|Inteligência
+6311|· Os temas da aula caem na prova.
+6312|🏫 Ir à escola
+6314|Hora da aula
+6315|Aula
+6316|Certo! A professora te parabenizou. Essa pergunta pode cair na prova.
+6320|Errado, mas tudo bem: você viu a resposta certa. Não esqueça até a prova!
+6323|Inteligência +1 · Sua família está feliz
+6324|Inteligência +0.5 · Você aprendeu o tema
+1873|⚽ Ir ao treino
+6325|Você faltou à aula: esse tema será novo para você na prova.
+6326|Prova de meio de ano
+6327|Prova final
+6373|Pergunta {}/{}
+6328|Prova
+6372|{} começando!
+6359|São {} perguntas sobre os temas da aula. Se for bem, sua família e o treinador vão adorar.
+6330|Fazer a prova
+6374|Inteligência +{}
+6331|Excelente
+6332|Bom
+6333|Suficiente
+6334|Insuficiente
+6335|Nota máxima! Sua família chorou de orgulho e o treinador disse: "Jogue com essa inteligência em campo também."
+6338|Uma boa prova. Sua família e o treinador estão contentes com você.
+6341|Passou raspando. Sua mãe quer que você estude um pouco mais.
+6344|A prova foi mal. Sua família está triste; vá mais às aulas da próxima vez.
+6347|Certificado de excelência
+6348|Certificado de mérito
+6360|📜 Dia do boletim: você ganhou um {}! Sua família está orgulhosa.
+6362|🎓 Você se formou no ensino médio! Média final: {}.
+6352|🎓 Formatura
+6371|{} anos · Boletim
+6354|Boletim
+6355|Meio de ano
+6356|Final
+6357|Próxima: prova final
+6364|Prova de meio de ano: semana {}
+6370|Nota de meio de ano: {}/{}
+6365|Média do ano passado: {}
+6367|Aulas assistidas: {}/{}
+6358|A inteligência deixa seu treino mais eficiente.

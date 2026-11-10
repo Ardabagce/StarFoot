@@ -147,7 +147,7 @@ const Player = {
 
   trainMult(p) {
     const g = Player.bestItem(p, 'gear', 'mult');
-    return g ? g.mult : 1;
+    return (g ? g.mult : 1) * (typeof School !== 'undefined' ? School.trainF(p) : 1);
   },
 
   energyRegen(p) {

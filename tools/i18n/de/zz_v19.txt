@@ -1,0 +1,58 @@
+6291|Ordne die Formen nach Anzahl der Ecken, die wenigsten zuerst.
+6292|Löse die Gleichung: Wie groß ist x?
+6293|Was ist das Ergebnis?
+6294|Welche Form kommt als Nächstes?
+6295|Welche Zahl kommt als Nächstes?
+6296|Zu welchem Land gehört diese Flagge?
+6297|Wie viel vom Kuchen ist gefärbt?
+6298|Wie viele Dreiecke sind an der Tafel?
+6299|Wie viele Quadrate sind an der Tafel?
+6300|Wie viele Kreise sind an der Tafel?
+6301|Wie spät ist es?
+6302|Schule
+6375|{} Schule
+6303|Die Schulglocke läutet, aber der Trainer hat ein Extratraining angesetzt. Wohin gehst du?
+6306|Heute gibt es eine wichtige Stunde: Die Lehrerin nimmt ein Prüfungsthema durch. Das Training ist zur gleichen Zeit.
+6309|Deine Mutter will, dass du zur Schule gehst; deine Teamkollegen rufen dich zum Training.
+6310|Intelligenz
+6311|· Die Themen aus dem Unterricht kommen in der Prüfung dran.
+6312|🏫 Zur Schule gehen
+6314|Unterrichtszeit
+6315|Unterricht
+6316|Richtig! Deine Lehrerin hat dich gelobt. Diese Frage kann in der Prüfung kommen.
+6320|Falsch, aber kein Problem: Du hast die richtige Antwort gesehen. Vergiss sie bis zur Prüfung nicht!
+6323|Intelligenz +1 · Deine Familie freut sich
+6324|Intelligenz +0.5 · Du hast das Thema gelernt
+1873|⚽ Zum Training gehen
+6325|Du hast den Unterricht verpasst: Das Thema ist in der Prüfung neu für dich.
+6326|Halbjahresprüfung
+6327|Jahresabschlussprüfung
+6373|Frage {}/{}
+6328|Prüfung
+6372|{} beginnt!
+6359|Es gibt {} Fragen zu den Themen aus dem Unterricht. Wenn du gut abschneidest, freuen sich Familie und Trainer.
+6330|Prüfung schreiben
+6374|Intelligenz +{}
+6331|Sehr gut
+6332|Gut
+6333|Ausreichend
+6334|Ungenügend
+6335|Volle Punktzahl! Deine Familie weinte vor Stolz und dein Trainer sagte: „Spiel auf dem Platz genauso klug.“
+6338|Eine gute Prüfung. Familie und Trainer sind zufrieden mit dir.
+6341|Knapp bestanden. Deine Mutter möchte, dass du mehr lernst.
+6344|Die Prüfung lief schlecht. Deine Familie ist traurig; geh nächstes Mal öfter zum Unterricht.
+6347|Ehrenurkunde
+6348|Anerkennungsurkunde
+6360|📜 Zeugnistag: Du hast eine {} bekommen! Deine Familie ist stolz auf dich.
+6362|🎓 Du hast die Schule abgeschlossen! Notendurchschnitt: {}.
+6352|🎓 Abschluss
+6371|{} Jahre · Zeugnis
+6354|Zeugnis
+6355|Halbjahr
+6356|Jahresende
+6357|Als Nächstes: Jahresabschlussprüfung
+6364|Halbjahresprüfung: Woche {}
+6370|Halbjahresnote: {}/{}
+6365|Durchschnitt im letzten Jahr: {}
+6367|Besuchte Stunden: {}/{}
+6358|Intelligenz macht dein Training effektiver.

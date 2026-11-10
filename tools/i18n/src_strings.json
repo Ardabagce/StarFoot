@@ -449,6 +449,7 @@
 "lang-pt.js",
 "lpath.js",
 "plusx.js",
+"school.js",
 "star.js",
 "value.js"
 ],
@@ -803,6 +804,7 @@
 "lpath.js",
 "match.js",
 "meta.js",
+"school.js",
 "wc.js",
 "wcx.js"
 ],
@@ -3641,10 +3643,28 @@
 "lang-pt.js"
 ],
 "{} ülke, eleme": [
-"cups.js"
+"cups.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "{} Avrupa ülkesi, eleme": [
-"cups.js"
+"cups.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Kariyerinde henüz milli turnuva oynanmadı.": [
 "cups.js",
@@ -27447,7 +27467,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"school.js"
 ],
 "Taraftar": [
 "game.js",
@@ -27497,6 +27518,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"school.js",
 "wc.js"
 ],
 "MVP": [
@@ -30177,7 +30199,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"school.js"
 ],
 "Ort.": [
 "game.js",
@@ -41534,6 +41557,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"school.js",
 "wc.js",
 "wcx.js"
 ],
@@ -58797,6 +58821,519 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Mali": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"DR Kongo": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Venezuela": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"İzlanda": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Burkina Faso": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Finlandiya": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Kuzey İrlanda": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Gine": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Karadağ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Kuzey Makedonya": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Gabon": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Honduras": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"BAE": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Angola": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Zambiya": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Bolivya": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Umman": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Benin": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Kazakistan": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Endonezya": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Çin": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Bahreyn": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Suriye": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Ermenistan": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Uganda": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Guatemala": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Lüksemburg": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Tayland": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Vietnam": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"El Salvador": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Trinidad ve Tobago": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Belarus": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Kenya": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Litvanya": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Kırgızistan": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Letonya": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Estonya": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Lübnan": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Hindistan": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Tacikistan": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"Diğer ülkeler": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ülke, eleme": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Avrupa ülkesi, eleme": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "(Asist)": [
 "lang-ar.js",
 "lang-de.js",
@@ -59043,7 +59580,8 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"life.js"
+"life.js",
+"school.js"
 ],
 "Aile ilişkisi ve moral artar": [
 "lang-ar.js",
@@ -92869,6 +93407,468 @@
 "lang-pt.js"
 ],
 "TAKIM RUHUNA VURGU YAPTI.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MALİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DR KONGO": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"VENEZUELA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"İZLANDA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BURKİNA FASO": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"FİNLANDİYA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KUZEY İRLANDA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GİNE": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KARADAĞ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KUZEY MAKEDONYA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GABON": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HONDURAS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ANGOLA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ZAMBİYA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BOLİVYA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"UMMAN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BENİN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KAZAKİSTAN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ENDONEZYA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ÇİN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BAHREYN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SURİYE": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ERMENİSTAN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"UGANDA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GUATEMALA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"LÜKSEMBURG": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TAYLAND": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"VİETNAM": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"EL SALVADOR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TRİNİDAD VE TOBAGO": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BELARUS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KENYA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"LİTVANYA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KIRGIZİSTAN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"LETONYA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ESTONYA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"LÜBNAN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HİNDİSTAN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TACİKİSTAN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DİĞER ÜLKELER": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ÜLKE, ELEME": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"AVRUPA ÜLKESİ, ELEME": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -134555,6 +135555,120 @@
 "Er betonte den Teamgeist.": [
 "lang-de.js"
 ],
+"Island": [
+"lang-de.js"
+],
+"Finnland": [
+"lang-de.js"
+],
+"Nordirland": [
+"lang-de.js"
+],
+"Guinea": [
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-id.js",
+"lang-it.js"
+],
+"Montenegro": [
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-id.js",
+"lang-it.js",
+"lang-pt.js"
+],
+"Nordmazedonien": [
+"lang-de.js"
+],
+"Gabun": [
+"lang-de.js"
+],
+"VAE": [
+"lang-de.js"
+],
+"Sambia": [
+"lang-de.js"
+],
+"Bolivien": [
+"lang-de.js"
+],
+"Oman": [
+"lang-de.js",
+"lang-en.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js"
+],
+"Kasachstan": [
+"lang-de.js"
+],
+"Indonesien": [
+"lang-de.js"
+],
+"China": [
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-pt.js"
+],
+"Bahrain": [
+"lang-de.js",
+"lang-en.js",
+"lang-id.js"
+],
+"Syrien": [
+"lang-de.js"
+],
+"Armenien": [
+"lang-de.js"
+],
+"Luxemburg": [
+"lang-de.js"
+],
+"Thailand": [
+"lang-de.js",
+"lang-en.js",
+"lang-id.js"
+],
+"Trinidad und Tobago": [
+"lang-de.js"
+],
+"Kenia": [
+"lang-de.js",
+"lang-es.js"
+],
+"Litauen": [
+"lang-de.js"
+],
+"Kirgisistan": [
+"lang-de.js"
+],
+"Lettland": [
+"lang-de.js"
+],
+"Estland": [
+"lang-de.js"
+],
+"Libanon": [
+"lang-de.js"
+],
+"Indien": [
+"lang-de.js"
+],
+"Tadschikistan": [
+"lang-de.js"
+],
+"Weitere Länder": [
+"lang-de.js"
+],
+"Nationen, K.-o.-System": [
+"lang-de.js"
+],
+"europäische Nationen, K.-o.-System": [
+"lang-de.js"
+],
 "– wir haben uns qualifiziert!": [
 "lang-de.js"
 ],
@@ -143597,6 +144711,149 @@
 "ER BETONTE DEN TEAMGEIST.": [
 "lang-de.js"
 ],
+"MALI": [
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-pt.js"
+],
+"ISLAND": [
+"lang-de.js"
+],
+"BURKINA FASO": [
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-pt.js"
+],
+"FINNLAND": [
+"lang-de.js"
+],
+"NORDIRLAND": [
+"lang-de.js"
+],
+"GUINEA": [
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-id.js",
+"lang-it.js"
+],
+"MONTENEGRO": [
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-id.js",
+"lang-it.js",
+"lang-pt.js"
+],
+"NORDMAZEDONIEN": [
+"lang-de.js"
+],
+"GABUN": [
+"lang-de.js"
+],
+"SAMBIA": [
+"lang-de.js"
+],
+"BOLIVIEN": [
+"lang-de.js"
+],
+"OMAN": [
+"lang-de.js",
+"lang-en.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js"
+],
+"BENIN": [
+"lang-de.js",
+"lang-en.js",
+"lang-id.js",
+"lang-it.js",
+"lang-pt.js"
+],
+"KASACHSTAN": [
+"lang-de.js"
+],
+"INDONESIEN": [
+"lang-de.js"
+],
+"CHINA": [
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-pt.js"
+],
+"BAHRAIN": [
+"lang-de.js",
+"lang-en.js",
+"lang-id.js"
+],
+"SYRIEN": [
+"lang-de.js"
+],
+"ARMENIEN": [
+"lang-de.js"
+],
+"LUXEMBURG": [
+"lang-de.js"
+],
+"THAILAND": [
+"lang-de.js",
+"lang-en.js",
+"lang-id.js"
+],
+"VIETNAM": [
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-id.js",
+"lang-it.js"
+],
+"TRINIDAD UND TOBAGO": [
+"lang-de.js"
+],
+"KENIA": [
+"lang-de.js",
+"lang-es.js"
+],
+"LITAUEN": [
+"lang-de.js"
+],
+"KIRGISISTAN": [
+"lang-de.js"
+],
+"LETTLAND": [
+"lang-de.js"
+],
+"ESTLAND": [
+"lang-de.js"
+],
+"LIBANON": [
+"lang-de.js"
+],
+"INDIEN": [
+"lang-de.js"
+],
+"TADSCHIKISTAN": [
+"lang-de.js"
+],
+"WEITERE LÄNDER": [
+"lang-de.js"
+],
+"NATIONEN, K.-O.-SYSTEM": [
+"lang-de.js"
+],
+"EUROPÄISCHE NATIONEN, K.-O.-SYSTEM": [
+"lang-de.js"
+],
 "– WIR HABEN UNS QUALIFIZIERT!": [
 "lang-de.js"
 ],
@@ -149223,6 +150480,9 @@
 "Ein schöner Abend mit {}.": [
 "lang-de.js"
 ],
+"{} europäische Nationen, K.-o.-System": [
+"lang-de.js"
+],
 "Deine Gesamtwertung hat {} erreicht": [
 "lang-de.js"
 ],
@@ -149901,6 +151161,9 @@
 "lang-de.js"
 ],
 "{} Gehaltserhöhung": [
+"lang-de.js"
+],
+"{} Nationen, K.-o.-System": [
 "lang-de.js"
 ],
 "Überkauft ({}). -{}": [
@@ -156006,6 +157269,104 @@
 "lang-en.js"
 ],
 "He stressed team spirit.": [
+"lang-en.js"
+],
+"DR Congo": [
+"lang-en.js"
+],
+"Iceland": [
+"lang-en.js"
+],
+"Finland": [
+"lang-en.js"
+],
+"Northern Ireland": [
+"lang-en.js"
+],
+"North Macedonia": [
+"lang-en.js"
+],
+"UAE": [
+"lang-en.js",
+"lang-ja.js",
+"wc.js"
+],
+"Zambia": [
+"lang-en.js",
+"lang-es.js",
+"lang-id.js",
+"lang-it.js"
+],
+"Bolivia": [
+"lang-en.js",
+"lang-es.js",
+"lang-id.js",
+"lang-it.js"
+],
+"Kazakhstan": [
+"lang-en.js",
+"lang-fr.js",
+"lang-id.js"
+],
+"Indonesia": [
+"lang-en.js",
+"lang-es.js",
+"lang-id.js",
+"lang-it.js"
+],
+"Syria": [
+"lang-en.js"
+],
+"Armenia": [
+"lang-en.js",
+"lang-es.js",
+"lang-id.js",
+"lang-it.js"
+],
+"Luxembourg": [
+"lang-en.js",
+"lang-fr.js"
+],
+"Trinidad and Tobago": [
+"lang-en.js"
+],
+"Lithuania": [
+"lang-en.js"
+],
+"Kyrgyzstan": [
+"lang-en.js"
+],
+"Latvia": [
+"lang-en.js",
+"lang-id.js"
+],
+"Estonia": [
+"lang-en.js",
+"lang-es.js",
+"lang-id.js",
+"lang-it.js"
+],
+"Lebanon": [
+"lang-en.js",
+"lang-id.js"
+],
+"India": [
+"lang-en.js",
+"lang-es.js",
+"lang-id.js",
+"lang-it.js"
+],
+"Tajikistan": [
+"lang-en.js",
+"lang-id.js"
+],
+"Other countries": [
+"lang-en.js"
+],
+"nations, knockout": [
+"lang-en.js"
+],
+"European nations, knockout": [
 "lang-en.js"
 ],
 "— we qualified!": [
@@ -164601,6 +165962,99 @@
 "HE STRESSED TEAM SPIRIT.": [
 "lang-en.js"
 ],
+"DR CONGO": [
+"lang-en.js"
+],
+"ICELAND": [
+"lang-en.js"
+],
+"FINLAND": [
+"lang-en.js"
+],
+"NORTHERN IRELAND": [
+"lang-en.js"
+],
+"NORTH MACEDONIA": [
+"lang-en.js"
+],
+"ZAMBIA": [
+"lang-en.js",
+"lang-es.js",
+"lang-id.js",
+"lang-it.js"
+],
+"BOLIVIA": [
+"lang-en.js",
+"lang-es.js",
+"lang-id.js",
+"lang-it.js"
+],
+"KAZAKHSTAN": [
+"lang-en.js",
+"lang-fr.js",
+"lang-id.js"
+],
+"INDONESIA": [
+"lang-en.js",
+"lang-es.js",
+"lang-id.js",
+"lang-it.js"
+],
+"SYRIA": [
+"lang-en.js"
+],
+"ARMENIA": [
+"lang-en.js",
+"lang-es.js",
+"lang-id.js",
+"lang-it.js"
+],
+"LUXEMBOURG": [
+"lang-en.js",
+"lang-fr.js"
+],
+"TRINIDAD AND TOBAGO": [
+"lang-en.js"
+],
+"LITHUANIA": [
+"lang-en.js"
+],
+"KYRGYZSTAN": [
+"lang-en.js"
+],
+"LATVIA": [
+"lang-en.js",
+"lang-id.js"
+],
+"ESTONIA": [
+"lang-en.js",
+"lang-es.js",
+"lang-id.js",
+"lang-it.js"
+],
+"LEBANON": [
+"lang-en.js",
+"lang-id.js"
+],
+"INDIA": [
+"lang-en.js",
+"lang-es.js",
+"lang-id.js",
+"lang-it.js"
+],
+"TAJIKISTAN": [
+"lang-en.js",
+"lang-id.js"
+],
+"OTHER COUNTRIES": [
+"lang-en.js"
+],
+"NATIONS, KNOCKOUT": [
+"lang-en.js"
+],
+"EUROPEAN NATIONS, KNOCKOUT": [
+"lang-en.js"
+],
 "— WE QUALIFIED!": [
 "lang-en.js"
 ],
@@ -170159,6 +171613,9 @@
 "A lovely evening with {}.": [
 "lang-en.js"
 ],
+"{} European nations, knockout": [
+"lang-en.js"
+],
 "Your overall reached {}": [
 "lang-en.js"
 ],
@@ -170850,6 +172307,9 @@
 "lang-en.js"
 ],
 "{} Pay rise": [
+"lang-en.js"
+],
+"{} nations, knockout": [
 "lang-en.js"
 ],
 "Bust ({}). -{}": [
@@ -177004,6 +178464,92 @@
 "Destacó el espíritu de equipo.": [
 "lang-es.js"
 ],
+"RD Congo": [
+"lang-es.js",
+"lang-fr.js",
+"lang-it.js",
+"lang-pt.js"
+],
+"Islandia": [
+"lang-es.js",
+"lang-id.js"
+],
+"Finlandia": [
+"lang-es.js",
+"lang-id.js",
+"lang-it.js"
+],
+"Irlanda del Norte": [
+"lang-es.js"
+],
+"Macedonia del Norte": [
+"lang-es.js"
+],
+"Gabón": [
+"lang-es.js"
+],
+"EAU": [
+"lang-es.js",
+"lang-fr.js",
+"lang-it.js",
+"lang-pt.js"
+],
+"Omán": [
+"lang-es.js"
+],
+"Benín": [
+"lang-es.js"
+],
+"Kazajistán": [
+"lang-es.js"
+],
+"Baréin": [
+"lang-es.js"
+],
+"Siria": [
+"lang-es.js",
+"lang-it.js"
+],
+"Luxemburgo": [
+"lang-es.js",
+"lang-pt.js"
+],
+"Tailandia": [
+"lang-es.js"
+],
+"Trinidad y Tobago": [
+"lang-es.js"
+],
+"Bielorrusia": [
+"lang-es.js"
+],
+"Lituania": [
+"lang-es.js",
+"lang-id.js",
+"lang-it.js"
+],
+"Kirguistán": [
+"lang-es.js"
+],
+"Letonia": [
+"lang-es.js"
+],
+"Líbano": [
+"lang-es.js",
+"lang-pt.js"
+],
+"Tayikistán": [
+"lang-es.js"
+],
+"Otros países": [
+"lang-es.js"
+],
+"selecciones, eliminatoria": [
+"lang-es.js"
+],
+"selecciones europeas, eliminatoria": [
+"lang-es.js"
+],
 "— ¡nos hemos clasificado!": [
 "lang-es.js"
 ],
@@ -182348,9 +183894,6 @@
 "lang-es.js",
 "lang-it.js"
 ],
-"EL SALVADOR": [
-"lang-es.js"
-],
 "DERBI DEL NORTE DE LONDRES": [
 "lang-es.js"
 ],
@@ -185638,6 +187181,86 @@
 "lang-es.js"
 ],
 "DESTACÓ EL ESPÍRITU DE EQUIPO.": [
+"lang-es.js"
+],
+"RD CONGO": [
+"lang-es.js",
+"lang-fr.js",
+"lang-it.js",
+"lang-pt.js"
+],
+"ISLANDIA": [
+"lang-es.js",
+"lang-id.js"
+],
+"FINLANDIA": [
+"lang-es.js",
+"lang-id.js",
+"lang-it.js"
+],
+"IRLANDA DEL NORTE": [
+"lang-es.js"
+],
+"MACEDONIA DEL NORTE": [
+"lang-es.js"
+],
+"GABÓN": [
+"lang-es.js"
+],
+"OMÁN": [
+"lang-es.js"
+],
+"BENÍN": [
+"lang-es.js"
+],
+"KAZAJISTÁN": [
+"lang-es.js"
+],
+"BARÉIN": [
+"lang-es.js"
+],
+"SIRIA": [
+"lang-es.js",
+"lang-it.js"
+],
+"LUXEMBURGO": [
+"lang-es.js",
+"lang-pt.js"
+],
+"TAILANDIA": [
+"lang-es.js"
+],
+"TRINIDAD Y TOBAGO": [
+"lang-es.js"
+],
+"BIELORRUSIA": [
+"lang-es.js"
+],
+"LITUANIA": [
+"lang-es.js",
+"lang-id.js",
+"lang-it.js"
+],
+"KIRGUISTÁN": [
+"lang-es.js"
+],
+"LETONIA": [
+"lang-es.js"
+],
+"LÍBANO": [
+"lang-es.js",
+"lang-pt.js"
+],
+"TAYIKISTÁN": [
+"lang-es.js"
+],
+"OTROS PAÍSES": [
+"lang-es.js"
+],
+"SELECCIONES, ELIMINATORIA": [
+"lang-es.js"
+],
+"SELECCIONES EUROPEAS, ELIMINATORIA": [
 "lang-es.js"
 ],
 "— ¡NOS HEMOS CLASIFICADO!": [
@@ -191215,6 +192838,9 @@
 "Una noche preciosa con {}.": [
 "lang-es.js"
 ],
+"{} selecciones europeas, eliminatoria": [
+"lang-es.js"
+],
 "Tu media llegó a {}": [
 "lang-es.js"
 ],
@@ -191914,6 +193540,9 @@
 "lang-es.js"
 ],
 "{} Aumento de sueldo": [
+"lang-es.js"
+],
+"{} selecciones, eliminatoria": [
 "lang-es.js"
 ],
 "Te pasaste ({}). -{}": [
@@ -197919,6 +199548,97 @@
 "lang-fr.js"
 ],
 "Il a insisté sur l'esprit d'équipe.": [
+"lang-fr.js"
+],
+"Islande": [
+"lang-fr.js"
+],
+"Finlande": [
+"lang-fr.js"
+],
+"Irlande du Nord": [
+"lang-fr.js"
+],
+"Guinée": [
+"lang-fr.js"
+],
+"Monténégro": [
+"lang-fr.js"
+],
+"Macédoine du Nord": [
+"lang-fr.js"
+],
+"Zambie": [
+"lang-fr.js"
+],
+"Bolivie": [
+"lang-fr.js"
+],
+"Bénin": [
+"lang-fr.js"
+],
+"Indonésie": [
+"lang-fr.js"
+],
+"Chine": [
+"lang-fr.js"
+],
+"Bahreïn": [
+"lang-fr.js"
+],
+"Syrie": [
+"lang-fr.js"
+],
+"Arménie": [
+"lang-fr.js"
+],
+"Ouganda": [
+"lang-fr.js"
+],
+"Thaïlande": [
+"lang-fr.js"
+],
+"Viêt Nam": [
+"lang-fr.js"
+],
+"Salvador": [
+"lang-fr.js"
+],
+"Trinité-et-Tobago": [
+"lang-fr.js"
+],
+"Biélorussie": [
+"lang-fr.js"
+],
+"Lituanie": [
+"lang-fr.js"
+],
+"Kirghizistan": [
+"lang-fr.js",
+"lang-it.js"
+],
+"Lettonie": [
+"lang-fr.js"
+],
+"Estonie": [
+"lang-fr.js"
+],
+"Liban": [
+"lang-fr.js"
+],
+"Inde": [
+"lang-fr.js"
+],
+"Tadjikistan": [
+"lang-fr.js"
+],
+"Autres pays": [
+"lang-fr.js"
+],
+"nations, élimination directe": [
+"lang-fr.js"
+],
+"nations européennes, élimination directe": [
 "lang-fr.js"
 ],
 "— on est qualifiés !": [
@@ -206294,6 +208014,97 @@
 "IL A INSISTÉ SUR L'ESPRIT D'ÉQUIPE.": [
 "lang-fr.js"
 ],
+"ISLANDE": [
+"lang-fr.js"
+],
+"FINLANDE": [
+"lang-fr.js"
+],
+"IRLANDE DU NORD": [
+"lang-fr.js"
+],
+"GUINÉE": [
+"lang-fr.js"
+],
+"MONTÉNÉGRO": [
+"lang-fr.js"
+],
+"MACÉDOINE DU NORD": [
+"lang-fr.js"
+],
+"ZAMBIE": [
+"lang-fr.js"
+],
+"BOLIVIE": [
+"lang-fr.js"
+],
+"BÉNIN": [
+"lang-fr.js"
+],
+"INDONÉSIE": [
+"lang-fr.js"
+],
+"CHINE": [
+"lang-fr.js"
+],
+"BAHREÏN": [
+"lang-fr.js"
+],
+"SYRIE": [
+"lang-fr.js"
+],
+"ARMÉNIE": [
+"lang-fr.js"
+],
+"OUGANDA": [
+"lang-fr.js"
+],
+"THAÏLANDE": [
+"lang-fr.js"
+],
+"VIÊT NAM": [
+"lang-fr.js"
+],
+"SALVADOR": [
+"lang-fr.js"
+],
+"TRINITÉ-ET-TOBAGO": [
+"lang-fr.js"
+],
+"BIÉLORUSSIE": [
+"lang-fr.js"
+],
+"LITUANIE": [
+"lang-fr.js"
+],
+"KIRGHIZISTAN": [
+"lang-fr.js",
+"lang-it.js"
+],
+"LETTONIE": [
+"lang-fr.js"
+],
+"ESTONIE": [
+"lang-fr.js"
+],
+"LIBAN": [
+"lang-fr.js"
+],
+"INDE": [
+"lang-fr.js"
+],
+"TADJIKISTAN": [
+"lang-fr.js"
+],
+"AUTRES PAYS": [
+"lang-fr.js"
+],
+"NATIONS, ÉLIMINATION DIRECTE": [
+"lang-fr.js"
+],
+"NATIONS EUROPÉENNES, ÉLIMINATION DIRECTE": [
+"lang-fr.js"
+],
 "— ON EST QUALIFIÉS !": [
 "lang-fr.js"
 ],
@@ -211721,6 +213532,9 @@
 "Une belle soirée avec {}.": [
 "lang-fr.js"
 ],
+"{} nations européennes, élimination directe": [
+"lang-fr.js"
+],
 "Ta note globale a atteint {}": [
 "lang-fr.js"
 ],
@@ -212385,6 +214199,9 @@
 "lang-fr.js"
 ],
 "{} Augmentation": [
+"lang-fr.js"
+],
+"{} nations, élimination directe": [
 "lang-fr.js"
 ],
 "Dépassé ({}). -{}": [
@@ -218246,6 +220063,42 @@
 "lang-id.js"
 ],
 "Ia menekankan semangat tim.": [
+"lang-id.js"
+],
+"RD Kongo": [
+"lang-id.js"
+],
+"Irlandia Utara": [
+"lang-id.js"
+],
+"Makedonia Utara": [
+"lang-id.js"
+],
+"UEA": [
+"lang-id.js"
+],
+"Tiongkok": [
+"lang-id.js"
+],
+"Suriah": [
+"lang-id.js"
+],
+"Luksemburg": [
+"lang-id.js"
+],
+"Trinidad dan Tobago": [
+"lang-id.js"
+],
+"Kirgistan": [
+"lang-id.js"
+],
+"Negara lain": [
+"lang-id.js"
+],
+"negara, sistem gugur": [
+"lang-id.js"
+],
+"negara Eropa, sistem gugur": [
 "lang-id.js"
 ],
 "— kita lolos!": [
@@ -226502,6 +228355,39 @@
 "IA MENEKANKAN SEMANGAT TIM.": [
 "lang-id.js"
 ],
+"RD KONGO": [
+"lang-id.js"
+],
+"IRLANDIA UTARA": [
+"lang-id.js"
+],
+"MAKEDONIA UTARA": [
+"lang-id.js"
+],
+"TIONGKOK": [
+"lang-id.js"
+],
+"SURIAH": [
+"lang-id.js"
+],
+"LUKSEMBURG": [
+"lang-id.js"
+],
+"TRINIDAD DAN TOBAGO": [
+"lang-id.js"
+],
+"KIRGISTAN": [
+"lang-id.js"
+],
+"NEGARA LAIN": [
+"lang-id.js"
+],
+"NEGARA, SISTEM GUGUR": [
+"lang-id.js"
+],
+"NEGARA EROPA, SISTEM GUGUR": [
+"lang-id.js"
+],
 "— KITA LOLOS!": [
 "lang-id.js"
 ],
@@ -231909,6 +233795,9 @@
 "Malam indah bersama {}.": [
 "lang-id.js"
 ],
+"{} negara Eropa, sistem gugur": [
+"lang-id.js"
+],
 "Rating keseluruhanmu mencapai {}": [
 "lang-id.js"
 ],
@@ -232580,6 +234469,9 @@
 "lang-id.js"
 ],
 "{} Kenaikan gaji": [
+"lang-id.js"
+],
+"{} negara, sistem gugur": [
 "lang-id.js"
 ],
 "Lewat ({}). -{}": [
@@ -238450,6 +240342,53 @@
 "lang-it.js"
 ],
 "Ha sottolineato lo spirito di squadra.": [
+"lang-it.js"
+],
+"Islanda": [
+"lang-it.js"
+],
+"Irlanda del Nord": [
+"lang-it.js"
+],
+"Macedonia del Nord": [
+"lang-it.js"
+],
+"Cina": [
+"lang-it.js"
+],
+"Bahrein": [
+"lang-it.js",
+"lang-pt.js"
+],
+"Lussemburgo": [
+"lang-it.js"
+],
+"Thailandia": [
+"lang-it.js"
+],
+"Trinidad e Tobago": [
+"lang-it.js",
+"lang-pt.js"
+],
+"Bielorussia": [
+"lang-it.js"
+],
+"Lettonia": [
+"lang-it.js"
+],
+"Libano": [
+"lang-it.js"
+],
+"Tagikistan": [
+"lang-it.js"
+],
+"Altri paesi": [
+"lang-it.js"
+],
+"nazionali, eliminazione diretta": [
+"lang-it.js"
+],
+"nazionali europee, eliminazione diretta": [
 "lang-it.js"
 ],
 "— ci siamo qualificati!": [
@@ -246700,6 +248639,56 @@
 "HA SOTTOLINEATO LO SPIRITO DI SQUADRA.": [
 "lang-it.js"
 ],
+"ISLANDA": [
+"lang-it.js"
+],
+"IRLANDA DEL NORD": [
+"lang-it.js"
+],
+"MACEDONIA DEL NORD": [
+"lang-it.js"
+],
+"KAZAKISTAN": [
+"lang-it.js"
+],
+"CINA": [
+"lang-it.js"
+],
+"BAHREIN": [
+"lang-it.js",
+"lang-pt.js"
+],
+"LUSSEMBURGO": [
+"lang-it.js"
+],
+"THAILANDIA": [
+"lang-it.js"
+],
+"TRINIDAD E TOBAGO": [
+"lang-it.js",
+"lang-pt.js"
+],
+"BIELORUSSIA": [
+"lang-it.js"
+],
+"LETTONIA": [
+"lang-it.js"
+],
+"LIBANO": [
+"lang-it.js"
+],
+"TAGIKISTAN": [
+"lang-it.js"
+],
+"ALTRI PAESI": [
+"lang-it.js"
+],
+"NAZIONALI, ELIMINAZIONE DIRETTA": [
+"lang-it.js"
+],
+"NAZIONALI EUROPEE, ELIMINAZIONE DIRETTA": [
+"lang-it.js"
+],
 "— CI SIAMO QUALIFICATI!": [
 "lang-it.js"
 ],
@@ -252103,6 +254092,9 @@
 "Una bella serata con {}.": [
 "lang-it.js"
 ],
+"{} nazionali europee, eliminazione diretta": [
+"lang-it.js"
+],
 "Il tuo valore complessivo ha raggiunto {}": [
 "lang-it.js"
 ],
@@ -252775,6 +254767,9 @@
 "{} Aumento": [
 "lang-it.js",
 "lang-pt.js"
+],
+"{} nazionali, eliminazione diretta": [
+"lang-it.js"
 ],
 "Sballato ({}). -{}": [
 "lang-it.js"
@@ -259190,6 +261185,81 @@
 "lang-pt.js"
 ],
 "Ele destacou o espírito de equipe.": [
+"lang-pt.js"
+],
+"Islândia": [
+"lang-pt.js"
+],
+"Finlândia": [
+"lang-pt.js"
+],
+"Irlanda do Norte": [
+"lang-pt.js"
+],
+"Guiné": [
+"lang-pt.js"
+],
+"Macedônia do Norte": [
+"lang-pt.js"
+],
+"Gabão": [
+"lang-pt.js"
+],
+"Zâmbia": [
+"lang-pt.js"
+],
+"Bolívia": [
+"lang-pt.js"
+],
+"Omã": [
+"lang-pt.js"
+],
+"Cazaquistão": [
+"lang-pt.js"
+],
+"Indonésia": [
+"lang-pt.js"
+],
+"Síria": [
+"lang-pt.js"
+],
+"Armênia": [
+"lang-pt.js"
+],
+"Tailândia": [
+"lang-pt.js"
+],
+"Vietnã": [
+"lang-pt.js"
+],
+"Quênia": [
+"lang-pt.js"
+],
+"Lituânia": [
+"lang-pt.js"
+],
+"Quirguistão": [
+"lang-pt.js"
+],
+"Letônia": [
+"lang-pt.js"
+],
+"Estônia": [
+"lang-pt.js"
+],
+"Índia": [
+"lang-pt.js"
+],
+"Tajiquistão": [
+"lang-pt.js"
+],
+"Outros países": [
+"lang-pt.js"
+],
+"seleções, mata-mata": [
+"lang-pt.js"
+],
+"seleções europeias, mata-mata": [
 "lang-pt.js"
 ],
 "— nos classificamos!": [
@@ -267214,6 +269284,81 @@
 "ELE DESTACOU O ESPÍRITO DE EQUIPE.": [
 "lang-pt.js"
 ],
+"ISLÂNDIA": [
+"lang-pt.js"
+],
+"FINLÂNDIA": [
+"lang-pt.js"
+],
+"IRLANDA DO NORTE": [
+"lang-pt.js"
+],
+"GUINÉ": [
+"lang-pt.js"
+],
+"MACEDÔNIA DO NORTE": [
+"lang-pt.js"
+],
+"GABÃO": [
+"lang-pt.js"
+],
+"ZÂMBIA": [
+"lang-pt.js"
+],
+"BOLÍVIA": [
+"lang-pt.js"
+],
+"OMÃ": [
+"lang-pt.js"
+],
+"CAZAQUISTÃO": [
+"lang-pt.js"
+],
+"INDONÉSIA": [
+"lang-pt.js"
+],
+"SÍRIA": [
+"lang-pt.js"
+],
+"ARMÊNIA": [
+"lang-pt.js"
+],
+"TAILÂNDIA": [
+"lang-pt.js"
+],
+"VIETNÃ": [
+"lang-pt.js"
+],
+"QUÊNIA": [
+"lang-pt.js"
+],
+"LITUÂNIA": [
+"lang-pt.js"
+],
+"QUIRGUISTÃO": [
+"lang-pt.js"
+],
+"LETÔNIA": [
+"lang-pt.js"
+],
+"ESTÔNIA": [
+"lang-pt.js"
+],
+"ÍNDIA": [
+"lang-pt.js"
+],
+"TAJIQUISTÃO": [
+"lang-pt.js"
+],
+"OUTROS PAÍSES": [
+"lang-pt.js"
+],
+"SELEÇÕES, MATA-MATA": [
+"lang-pt.js"
+],
+"SELEÇÕES EUROPEIAS, MATA-MATA": [
+"lang-pt.js"
+],
 "— NOS CLASSIFICAMOS!": [
 "lang-pt.js"
 ],
@@ -272503,6 +274648,9 @@
 "Uma noite linda com {}.": [
 "lang-pt.js"
 ],
+"{} seleções europeias, mata-mata": [
+"lang-pt.js"
+],
 "Seu geral chegou a {}": [
 "lang-pt.js"
 ],
@@ -273119,6 +275267,9 @@
 "lang-pt.js"
 ],
 "Avanço rápido{}": [
+"lang-pt.js"
+],
+"{} seleções, mata-mata": [
 "lang-pt.js"
 ],
 "Estourou ({}). -{}": [
@@ -289600,6 +291751,180 @@
 "700 9px \"Barlow Semi Condensed\", sans-serif": [
 "radar.js"
 ],
+"Şekilleri köşe sayısına göre azdan çoğa sırala.": [
+"school.js"
+],
+"Denklemi çöz: x kaç?": [
+"school.js"
+],
+"İşlemin sonucu kaç?": [
+"school.js"
+],
+"Sıradaki şekil hangisi?": [
+"school.js"
+],
+"Sıradaki sayı kaç?": [
+"school.js"
+],
+"Bu bayrak hangi ülkenin?": [
+"school.js"
+],
+"Pastanın boyalı kısmı ne kadar?": [
+"school.js"
+],
+"Tahtada kaç tane üçgen var?": [
+"school.js"
+],
+"Tahtada kaç tane kare var?": [
+"school.js"
+],
+"Tahtada kaç tane daire var?": [
+"school.js"
+],
+"Saat kaç?": [
+"school.js"
+],
+"Okul": [
+"school.js"
+],
+"Sabah okul zili çaldı ama hoca da ekstra antrenman koydu. Hangisine gideceksin?": [
+"school.js"
+],
+"Bugün okulda önemli bir ders var, öğretmen sınavda çıkacak bir konu işleyecek. Antrenman da aynı saatte.": [
+"school.js"
+],
+"Annen okula gitmeni istiyor, takım arkadaşların antrenmana çağırıyor.": [
+"school.js"
+],
+"Zeka": [
+"school.js"
+],
+"· Derste işlenen konular dönem sınavında çıkar.": [
+"school.js"
+],
+"🏫 Okula git": [
+"school.js"
+],
+"Ders zamanı": [
+"school.js"
+],
+"Ders": [
+"school.js"
+],
+"Doğru! Öğretmenin seni tebrik etti. Bu soru sınavda çıkabilir.": [
+"school.js"
+],
+"Yanlış ama sorun değil, doğru cevabı gördün. Sınava kadar unutma!": [
+"school.js"
+],
+"Zeka +1 · Ailen mutlu": [
+"school.js"
+],
+"Zeka +0.5 · Konuyu öğrendin": [
+"school.js"
+],
+"⚽ Antrenmana katıl": [
+"school.js"
+],
+"{} +{} · Dersi kaçırdın, sınavda o konu sana yeni gelecek.": [
+"school.js"
+],
+"Ara dönem sınavı": [
+"school.js"
+],
+"Sezon sonu sınavı": [
+"school.js"
+],
+"Soru {}/{}": [
+"school.js"
+],
+"Sınav": [
+"school.js"
+],
+"{} başlıyor!": [
+"school.js"
+],
+"{} soru var. Derste işlediğiniz konular çıkacak. Başarılı olursan ailen ve hocan çok mutlu olur.": [
+"school.js"
+],
+"Sınava gir": [
+"school.js"
+],
+"Zeka +{}": [
+"school.js"
+],
+"Pekiyi": [
+"school.js"
+],
+"İyi": [
+"school.js"
+],
+"Geçer": [
+"school.js"
+],
+"Zayıf": [
+"school.js"
+],
+"Tam puan! Ailen gururdan ağladı, hocan da \"Sahada da böyle akıllı oyna\" dedi.": [
+"school.js"
+],
+"Güzel bir sınav geçirdin. Ailen ve hocan senden memnun.": [
+"school.js"
+],
+"Zar zor geçtin. Annen biraz daha ders çalışmanı istiyor.": [
+"school.js"
+],
+"Sınav kötü geçti. Ailen üzgün, bir dahakine derslere daha çok katılmalısın.": [
+"school.js"
+],
+"Takdir Belgesi": [
+"school.js"
+],
+"Teşekkür Belgesi": [
+"school.js"
+],
+"📜 Karne günü: {} aldın! Ailen seninle gurur duyuyor.": [
+"school.js"
+],
+"🎓 Liseden mezun oldun! Karne ortalaman {}.": [
+"school.js"
+],
+"🎓 Mezuniyet": [
+"school.js"
+],
+"{} yaş · Karne": [
+"school.js"
+],
+"Karne": [
+"school.js"
+],
+"Ara dönem": [
+"school.js"
+],
+"Sezon sonu": [
+"school.js"
+],
+"Sıradaki: Sezon sonu sınavı": [
+"school.js"
+],
+"Ara dönem sınavı: {}. hafta": [
+"school.js"
+],
+"Ara dönem notu: {}/{}": [
+"school.js"
+],
+"Geçen yılın ortalaması: {}": [
+"school.js"
+],
+"{} Okul": [
+"school.js"
+],
+"Katıldığın dersler: {}/{}": [
+"school.js"
+],
+"Zeka antrenman verimini artırır.": [
+"school.js"
+],
 "snd/{}.mp3": [
 "sfx.js"
 ],
@@ -289911,9 +292236,6 @@
 "MLI": [
 "wc.js"
 ],
-"Mali": [
-"wc.js"
-],
 "Yves Bissoké": [
 "wc.js"
 ],
@@ -289926,9 +292248,6 @@
 "COD": [
 "wc.js"
 ],
-"DR Kongo": [
-"wc.js"
-],
 "Chancel Bembala": [
 "wc.js"
 ],
@@ -289936,9 +292255,6 @@
 "wc.js"
 ],
 "Yoane Wisima": [
-"wc.js"
-],
-"Venezuela": [
 "wc.js"
 ],
 "Salomón Rondero": [
@@ -289956,9 +292272,6 @@
 "Ermedin Demirić": [
 "wc.js"
 ],
-"İzlanda": [
-"wc.js"
-],
 "IS": [
 "wc.js"
 ],
@@ -289974,16 +292287,10 @@
 "BFA": [
 "wc.js"
 ],
-"Burkina Faso": [
-"wc.js"
-],
 "Bertrand Traoka": [
 "wc.js"
 ],
 "Edmond Tapsida": [
-"wc.js"
-],
-"Finlandiya": [
 "wc.js"
 ],
 "Teemu Pukkala": [
@@ -289992,25 +292299,16 @@
 "Glen Kamarainen": [
 "wc.js"
 ],
-"Kuzey İrlanda": [
-"wc.js"
-],
 "Conor Bradewell": [
 "wc.js"
 ],
 "Shea Charleton": [
 "wc.js"
 ],
-"Gine": [
-"wc.js"
-],
 "Serhou Guirandé": [
 "wc.js"
 ],
 "Naby Keïtara": [
-"wc.js"
-],
-"Karadağ": [
 "wc.js"
 ],
 "Stevan Jovetović": [
@@ -290025,16 +292323,10 @@
 "Ilian Ilarov": [
 "wc.js"
 ],
-"Kuzey Makedonya": [
-"wc.js"
-],
 "Eljif Elmarić": [
 "wc.js"
 ],
 "Enis Bardić": [
-"wc.js"
-],
-"Gabon": [
 "wc.js"
 ],
 "Pierre Aubaneyang": [
@@ -290046,28 +292338,16 @@
 "HON": [
 "wc.js"
 ],
-"Honduras": [
-"wc.js"
-],
 "Alberth Elisardo": [
 "wc.js"
 ],
 "Romell Quiotero": [
 "wc.js"
 ],
-"UAE": [
-"wc.js"
-],
-"BAE": [
-"wc.js"
-],
 "Ali Mabkari": [
 "wc.js"
 ],
 "Khalil Ibrami": [
-"wc.js"
-],
-"Angola": [
 "wc.js"
 ],
 "Gelson Dalida": [
@@ -290079,16 +292359,10 @@
 "ZAM": [
 "wc.js"
 ],
-"Zambiya": [
-"wc.js"
-],
 "Patson Dakala": [
 "wc.js"
 ],
 "Fashion Sakaba": [
-"wc.js"
-],
-"Bolivya": [
 "wc.js"
 ],
 "Miguel Terrazo": [
@@ -290100,25 +292374,16 @@
 "OMA": [
 "wc.js"
 ],
-"Umman": [
-"wc.js"
-],
 "Issam Sabhari": [
 "wc.js"
 ],
 "Muhsen Ghassabi": [
 "wc.js"
 ],
-"Benin": [
-"wc.js"
-],
 "Steve Mouniko": [
 "wc.js"
 ],
 "Jodel Dossah": [
-"wc.js"
-],
-"Kazakistan": [
 "wc.js"
 ],
 "KZ": [
@@ -290128,9 +292393,6 @@
 "wc.js"
 ],
 "Islambek Kuatbekov": [
-"wc.js"
-],
-"Endonezya": [
 "wc.js"
 ],
 "ID": [
@@ -290148,9 +292410,6 @@
 "CHN": [
 "wc.js"
 ],
-"Çin": [
-"wc.js"
-],
 "CN": [
 "wc.js"
 ],
@@ -290163,9 +292422,6 @@
 "BHR": [
 "wc.js"
 ],
-"Bahreyn": [
-"wc.js"
-],
 "Ali Madawi": [
 "wc.js"
 ],
@@ -290175,16 +292431,10 @@
 "SYR": [
 "wc.js"
 ],
-"Suriye": [
-"wc.js"
-],
 "Omar Kharbani": [
 "wc.js"
 ],
 "Mahmoud Mawasi": [
-"wc.js"
-],
-"Ermenistan": [
 "wc.js"
 ],
 "Eduard Spertoyan": [
@@ -290196,25 +292446,16 @@
 "UGA": [
 "wc.js"
 ],
-"Uganda": [
-"wc.js"
-],
 "Emmanuel Okwira": [
 "wc.js"
 ],
 "Khalid Auchera": [
 "wc.js"
 ],
-"Guatemala": [
-"wc.js"
-],
 "Rubio Rubiano": [
 "wc.js"
 ],
 "Óscar Santero": [
-"wc.js"
-],
-"Lüksemburg": [
 "wc.js"
 ],
 "Leandro Barreda": [
@@ -290226,9 +292467,6 @@
 "THA": [
 "wc.js"
 ],
-"Tayland": [
-"wc.js"
-],
 "TH": [
 "wc.js"
 ],
@@ -290236,9 +292474,6 @@
 "wc.js"
 ],
 "Supachok Saranwong": [
-"wc.js"
-],
-"Vietnam": [
 "wc.js"
 ],
 "VN": [
@@ -290253,9 +292488,6 @@
 "SLV": [
 "wc.js"
 ],
-"El Salvador": [
-"wc.js"
-],
 "Brayan Gileo": [
 "wc.js"
 ],
@@ -290265,16 +292497,10 @@
 "TRI": [
 "wc.js"
 ],
-"Trinidad ve Tobago": [
-"wc.js"
-],
 "Levi Garwell": [
 "wc.js"
 ],
 "Kevin Molinor": [
-"wc.js"
-],
-"Belarus": [
 "wc.js"
 ],
 "Max Ebongar": [
@@ -290283,16 +292509,10 @@
 "Vladislav Malkovets": [
 "wc.js"
 ],
-"Kenya": [
-"wc.js"
-],
 "Michael Olunde": [
 "wc.js"
 ],
 "Victor Wanyamo": [
-"wc.js"
-],
-"Litvanya": [
 "wc.js"
 ],
 "BA": [
@@ -290307,25 +292527,16 @@
 "KGZ": [
 "wc.js"
 ],
-"Kırgızistan": [
-"wc.js"
-],
 "Gulzhigit Alymbek": [
 "wc.js"
 ],
 "Joel Kojomurat": [
 "wc.js"
 ],
-"Letonya": [
-"wc.js"
-],
 "Janis Ikaumers": [
 "wc.js"
 ],
 "Roberts Savalders": [
-"wc.js"
-],
-"Estonya": [
 "wc.js"
 ],
 "Rauno Sappela": [
@@ -290337,16 +292548,10 @@
 "LBN": [
 "wc.js"
 ],
-"Lübnan": [
-"wc.js"
-],
 "Hassan Maatouki": [
 "wc.js"
 ],
 "Bassel Jarawi": [
-"wc.js"
-],
-"Hindistan": [
 "wc.js"
 ],
 "IN": [
@@ -290362,9 +292567,6 @@
 "wc.js"
 ],
 "TJK": [
-"wc.js"
-],
-"Tacikistan": [
 "wc.js"
 ],
 "Parvizdzhon Umarali": [

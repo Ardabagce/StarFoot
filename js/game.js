@@ -425,6 +425,7 @@ const Game = {
   checkPending() {
     const s = Game.state;
     if (s.seasonEnd) return SeasonEnd.show();
+    if (s.pendingSchool && typeof School !== 'undefined') return School.show();
     if (s.pendingEvent) return Events.show();
     if (s.pendingLoot) return Loot.show();
     if (s.pendingGift) return Gift.show();
@@ -839,6 +840,7 @@ const Game = {
       // milli takım
       if (Game.intlWeeks().includes(r)) Game.checkCallup();
       Game.transferWeek(r);
+      if (typeof School !== 'undefined') School.week(s, r);
       if (!Game.inStreet()) Cups.week(s, r);
       if (r === Math.floor(Game.rounds() / 2)) setTimeout(() => Game.seasonAd('midSeason'), 400);
       if (r >= Game.rounds()) {
@@ -1167,7 +1169,7 @@ const Game = {
     Game.save();
     // lig şampiyonluğunda önce kupa kaldırma töreni
     // sezon sonu sırası: şampiyonluk töreni → Altın Yıldız → ezeli rakip özeti → sezon sonu ekranı
-    const after = () => (typeof Ballon !== 'undefined' ? Ballon.ceremony() : Promise.resolve()).catch(() => {}).then(() => (typeof Scenario !== 'undefined' ? Scenario.result() : null)).catch(() => {}).then(() => { if (typeof Rival !== 'undefined') Rival.season(); Game.save(); SeasonEnd.show(); });
+    const after = () => (typeof Ballon !== 'undefined' ? Ballon.ceremony() : Promise.resolve()).catch(() => {}).then(() => (typeof Scenario !== 'undefined' ? Scenario.result() : null)).catch(() => {}).then(() => { if (typeof Rival !== 'undefined') Rival.season(); Game.save(); }).then(() => (typeof School !== 'undefined' ? School.yearEnd() : null)).catch(() => {}).then(() => { Game.save(); SeasonEnd.show(); });
     if (pos === 1 && typeof Celebrate !== 'undefined') Celebrate.champion(`${compName} Şampiyonu`, Game.teamName()).then(after);
     else after();
   },
@@ -1447,7 +1449,7 @@ const UI = {
     const nodes = [];
     while (w.nextNode()) nodes.push(w.currentNode);
     const emo = /[\p{Extended_Pictographic}\u{1F1E6}-\u{1F1FF}]/u;
-    nodes.forEach((n) => { if (emo.test(n.nodeValue)) n.nodeValue = U.plain(n.nodeValue); });
+    nodes.forEach((n) => { if (emo.test(n.nodeValue) && !(n.parentElement && n.parentElement.closest('[data-emo]'))) n.nodeValue = U.plain(n.nodeValue); });
   },
 
   // Sakatken: fizyoterapi önerisi ve tek dokunuşla satın alma
@@ -2490,7 +2492,7 @@ const Events = {
       ],
     },
     {
-      id: 'school', cond: (p) => p.age < 17,
+      id: 'school', cond: (p) => p.age < 17 && !(typeof School !== 'undefined' && School.enabled()),
       text: () => 'Okulda sınav haftası! Ailen bu hafta ders çalışmanı istiyor.',
       opts: [
         { t: '📚 Ders çalış', fx: (p) => { Player.addMorale(p, 4); Game.state.ap = Math.max(0, Game.state.ap - 1); return 'Sınavların iyi geçti, ailen gurur duyuyor. (1 aksiyon hakkı harcandı)'; } },

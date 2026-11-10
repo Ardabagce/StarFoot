@@ -1,0 +1,58 @@
+6291|Ordina le forme per numero di angoli, dal minore al maggiore.
+6292|Risolvi l'equazione: quanto vale x?
+6293|Qual è il risultato?
+6294|Quale forma viene dopo?
+6295|Quale numero viene dopo?
+6296|Di quale paese è questa bandiera?
+6297|Quanta parte della torta è colorata?
+6298|Quanti triangoli ci sono sulla lavagna?
+6299|Quanti quadrati ci sono sulla lavagna?
+6300|Quanti cerchi ci sono sulla lavagna?
+6301|Che ore sono?
+6302|Scuola
+6375|{} Scuola
+6303|È suonata la campanella, ma il mister ha fissato un allenamento extra. Dove vai?
+6306|Oggi c'è una lezione importante: la prof spiegherà un argomento dell'esame. L'allenamento è alla stessa ora.
+6309|Tua madre vuole che tu vada a scuola; i compagni ti chiamano all'allenamento.
+6310|Intelligenza
+6311|· Gli argomenti della lezione escono all'esame.
+6312|🏫 Andare a scuola
+6314|Ora di lezione
+6315|Lezione
+6316|Giusto! La prof si è complimentata. Questa domanda può uscire all'esame.
+6320|Sbagliato, ma va bene: hai visto la risposta giusta. Non dimenticarla prima dell'esame!
+6323|Intelligenza +1 · La famiglia è contenta
+6324|Intelligenza +0.5 · Hai imparato l'argomento
+1873|⚽ Andare all'allenamento
+6325|Hai saltato la lezione: quell'argomento all'esame sarà nuovo per te.
+6326|Esame di metà anno
+6327|Esame di fine anno
+6373|Domanda {}/{}
+6328|Esame
+6372|{}: si comincia!
+6359|Ci sono {} domande sugli argomenti della lezione. Se vai bene, famiglia e mister saranno felicissimi.
+6330|Fai l'esame
+6374|Intelligenza +{}
+6331|Ottimo
+6332|Buono
+6333|Sufficiente
+6334|Insufficiente
+6335|Punteggio pieno! La famiglia ha pianto di orgoglio e il mister ha detto: "Gioca così intelligente anche in campo."
+6338|Un buon esame. Famiglia e mister sono contenti di te.
+6341|Passato per un pelo. Tua madre vuole che studi un po' di più.
+6344|L'esame è andato male. La famiglia è dispiaciuta; la prossima volta vai di più a lezione.
+6347|Attestato di eccellenza
+6348|Attestato di merito
+6360|📜 Giorno della pagella: hai ottenuto un {}! La famiglia è orgogliosa di te.
+6362|🎓 Ti sei diplomato! Media finale: {}.
+6352|🎓 Diploma
+6371|{} anni · Pagella
+6354|Pagella
+6355|Metà anno
+6356|Fine anno
+6357|Prossimo: esame di fine anno
+6364|Esame di metà anno: settimana {}
+6370|Voto di metà anno: {}/{}
+6365|Media dell'anno scorso: {}
+6367|Lezioni seguite: {}/{}
+6358|L'intelligenza rende l'allenamento più efficace.

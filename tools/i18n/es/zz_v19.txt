@@ -1,0 +1,58 @@
+6291|Ordena las figuras por número de esquinas, de menos a más.
+6292|Resuelve la ecuación: ¿cuánto vale x?
+6293|¿Cuál es el resultado?
+6294|¿Qué figura sigue?
+6295|¿Qué número sigue?
+6296|¿De qué país es esta bandera?
+6297|¿Qué parte del pastel está pintada?
+6298|¿Cuántos triángulos hay en la pizarra?
+6299|¿Cuántos cuadrados hay en la pizarra?
+6300|¿Cuántos círculos hay en la pizarra?
+6301|¿Qué hora es?
+6302|Escuela
+6375|{} Escuela
+6303|Suena el timbre del colegio, pero el entrenador ha convocado un entrenamiento extra. ¿Adónde irás?
+6306|Hoy hay una clase importante: la profesora explicará un tema del examen. El entrenamiento es a la misma hora.
+6309|Tu madre quiere que vayas al colegio; tus compañeros te llaman al entrenamiento.
+6310|Inteligencia
+6311|· Los temas de clase salen en el examen.
+6312|🏫 Ir al colegio
+6314|Hora de clase
+6315|Clase
+6316|¡Correcto! Tu profesora te felicitó. Esta pregunta puede salir en el examen.
+6320|Incorrecto, pero no pasa nada: ya viste la respuesta. ¡No la olvides antes del examen!
+6323|Inteligencia +1 · Tu familia está contenta
+6324|Inteligencia +0.5 · Aprendiste el tema
+1873|⚽ Ir al entrenamiento
+6325|Te perdiste la clase: ese tema será nuevo para ti en el examen.
+6326|Examen parcial
+6327|Examen final
+6373|Pregunta {}/{}
+6328|Examen
+6372|¡Empieza el {}!
+6359|Hay {} preguntas sobre los temas de clase. Si te va bien, tu familia y tu entrenador estarán encantados.
+6330|Hacer el examen
+6374|Inteligencia +{}
+6331|Sobresaliente
+6332|Notable
+6333|Aprobado
+6334|Suspenso
+6335|¡Nota perfecta! Tu familia lloró de orgullo y tu entrenador dijo: «Juega igual de listo en el campo».
+6338|Buen examen. Tu familia y tu entrenador están contentos contigo.
+6341|Aprobaste por los pelos. Tu madre quiere que estudies un poco más.
+6344|El examen salió mal. Tu familia está triste; la próxima vez ve más a clase.
+6347|Diploma de excelencia
+6348|Diploma de mérito
+6360|📜 Día de notas: ¡conseguiste un {}! Tu familia está orgullosa de ti.
+6362|🎓 ¡Te graduaste del instituto! Nota media: {}.
+6352|🎓 Graduación
+6371|{} años · Boletín de notas
+6354|Boletín de notas
+6355|Parcial
+6356|Final
+6357|Siguiente: examen final
+6364|Examen parcial: semana {}
+6370|Nota del parcial: {}/{}
+6365|Media del año pasado: {}
+6367|Clases asistidas: {}/{}
+6358|La inteligencia hace tu entrenamiento más eficaz.
