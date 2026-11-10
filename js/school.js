@@ -1,7 +1,15 @@
 // Okul (8-18 yaş): sezon içinde "okula git / antrenmana katıl" ikilemi, sınıfta görselli sorular,
 // ara dönem ve sezon sonu sınavı (derste çıkan sorular sınavda tekrar sorulur), karne ve Zeka puanı.
-// 1.0.19 özellikleri yayına kadar kapalı: tarayıcıda localStorage sf_v19=1 ile açılır.
-const FEAT_V19 = (() => { try { return localStorage.getItem('sf_v19') === '1'; } catch (e) { return false; } })();
+// 1.0.19 özellikleri: uygulamada (iOS/Android) açık; web'de yayına kadar kapalı (localStorage sf_v19=1 ile açılır, =0 ile kapanır).
+const FEAT_V19 = (() => {
+  try {
+    const v = localStorage.getItem('sf_v19');
+    if (v === '0') return false;
+    if (v === '1') return true;
+  } catch (e) { /* yok */ }
+  const C = window.Capacitor;
+  return !!(C && C.isNativePlatform && C.isNativePlatform());
+})();
 
 const School = {
   // ---------- durum ----------
