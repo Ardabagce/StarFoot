@@ -287,6 +287,8 @@ const Life = {
       </section>`);
     }
     if (typeof School !== 'undefined') parts.splice(1, 0, School.card());
+    if (typeof Friends !== 'undefined') parts.splice(2, 0, Friends.card());
+    if (typeof LifeX !== 'undefined') parts.splice(2, 0, LifeX.card());
     return parts.join('');
   },
 

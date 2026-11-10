@@ -532,7 +532,7 @@ const Coach = {
   },
   // futbolculuk kariyerinden geçiş (emeklilik ekranı)
   fromPlayer(p, legend) {
-    const o = { name: p.name, surname: p.surname, nat: p.nation, age: p.age + 1, rep: U.clamp(Math.round(18 + legend / 25 + (p.iq || 50) / 10), 15, 75), iq: p.iq || 55, from: 'player', past: { trophies: (p.trophies || []).length, apps: p.totals ? p.totals.apps : 0 } };
+    const o = { name: p.name, surname: p.surname, nat: p.nation, age: p.age + 1, rep: U.clamp(Math.round(18 + legend / 25 + (p.iq || 50) / 10 + (p.uni && p.uni.done ? 6 : 0)), 15, 75), iq: p.iq || 55, from: 'player', past: { trophies: (p.trophies || []).length, apps: p.totals ? p.totals.apps : 0 } };
     Coach.begin(o);
   },
 

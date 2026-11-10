@@ -2730,3 +2730,11 @@ div.doc { position: fixed; inset: 0; z-index: 49; background: #000; display: fle
 .cm-sb b { flex: 1; } .cm-sb em { font-style: normal; font-family: var(--display); font-size: 18px; }
 .cm-sb.on { border-color: var(--flood); }
 .t-packs .t-pack.cm { grid-column: 1 / -1; }
+
+/* Arkadaşlar (1.0.19) */
+.fr-row { display: grid; grid-template-columns: 34px 1fr 70px; gap: 10px; align-items: center; padding: 6px 0; border-bottom: 1px solid rgba(160,185,255,.08); }
+.fr-av { width: 34px; height: 34px; border-radius: 50%; background: linear-gradient(135deg, #4fb3ff, #b394ff); display: flex; align-items: center; justify-content: center; font-style: normal; font-weight: 900; color: #071029; }
+.fr-row b { display: block; } .fr-row small { color: var(--muted); font-size: 12px; }
+
+.lx-r { display: flex; align-items: center; gap: 10px; padding: 6px 0; border-bottom: 1px solid rgba(160,185,255,.08); }
+.lx-r span { flex: 1; } .lx-r .btn { padding: 4px 10px; min-height: 0; font-size: 13px; }

@@ -233,3 +233,148 @@
 6600|Kamu selalu memilih starting XI sendiri.
 6601|Mati
 6602|Tetap di klubku
+6603|Teman sekolah
+6604|Teman sekampung
+6605|Pesepak bola
+6606|Jurnalis olahraga
+1646|Agen
+6607|Pelatih akademi
+6608|Insinyur
+6609|Dokter
+6610|Koki
+6611|Guru
+6813|🤝 Kamu punya teman baru di kelas: {}.
+6797|🤝 Sahabatmu dari kampung, {}, selalu di tribun setiap laga.
+6789|🤝 Kamu sangat akrab dengan {}. Sekarang kalian sahabat.
+6825|{} jadi pemain profesional · {}
+6829|{} memulai pekerjaan baru: {}
+6783|⚔️ Teman lamamu {} ada di tim lawan laga berikutnya! Kalian saling kirim pesan.
+6837|Temanmu · {}
+6803|{} mengadakan pesta ulang tahun dan mengundangmu!
+6615|Malam yang seru. Persahabatan kalian makin kuat.
+6617|🎁 Kirim hadiah
+6830|Hadiahmu sangat disukai. ({})
+6619|Aku tidak bisa
+6804|{} menelepon: "Aku nonton laga kamu, kamu hebat!"
+6621|😊 Ngobrol panjang
+6623|Kamu beruntung punya sahabat baik.
+6624|Singkat saja
+6796|{} mengajak belajar bersama untuk ujian besok.
+6626|📚 Belajar bersama
+6628|Belajar sambil bersenang-senang. Kecerdasan +1 (1 aksi)
+6631|Aku ada latihan
+6814|{} sedang kesulitan dan meminjam {}.
+6632|🤝 Pinjamkan
+6634|Temanmu sangat berterima kasih.
+1050|Tidak bisa
+6809|{} mengerti, tapi sedikit kecewa.
+6794|Temanmu yang jurnalis, {}, ingin wawancara eksklusif.
+6636|🎙️ Terima
+6637|Wawancaranya banyak dibaca. Ketenaranmu naik!
+6640|Tidak sekarang
+6793|Temanmu yang agen, {}: "Aku bisa bicara dengan beberapa klub untukmu."
+6641|👍 Silakan
+6643|Temanmu akan membantu setelah kamu lulus akademi.
+6644|Temanmu sudah menelepon, tapi belum ada klub yang tertarik.
+6785|📨 Berkat temanmu {}, {} klub mengajukan tawaran! Berlaku 2 minggu.
+6645|Tawaran ada di layar utama!
+6788|🎉 Teman lamamu {} bergabung dengan klub kita, {}! Kalian akan memakai seragam yang sama.
+6811|Kejutan! {} pindah ke timmu!
+6649|Teman yang dulu bermain bersamamu kini satu ruang ganti denganmu.
+6812|💸 {} membayar utangnya sambil berterima kasih: {}.
+6650|Teman-temanmu
+6651|Bahasa Turki
+6652|Bahasa Inggris
+6653|Bahasa Spanyol
+6654|Bahasa Portugis
+6655|Bahasa Jerman
+6656|Bahasa Prancis
+6657|Bahasa Italia
+6658|Bahasa Belanda
+6659|Bahasa Jepang
+6660|Bahasa Arab
+6661|Bahasa Yunani
+6662|Bahasa Denmark
+6663|Bahasa Kroasia
+6664|Bahasa Ceko
+6665|Bahasa Polandia
+6666|Bahasa Ukraina
+6781|🗣️ Kamu belum bisa {} di negara barumu. Kursus bahasa membantumu akrab dengan rekan setim.
+6668|SIM
+6669|Kamu sudah 18! Mau ikut ujian SIM?
+6672|Jika lulus, kamu bisa beli mobil dan motor.
+6673|🚗 Ikut ujian
+6674|Kamu bisa ikut ujian SIM kapan saja dari tab Hidup.
+6675|Universitas
+6676|Mau kuliah Manajemen Olahraga jarak jauh?
+6677|Kamu bisa kuliah tanpa berhenti main bola. Ada ujian tiap akhir musim, lulus dalam 4 tahun. Ijazahnya membantu karier manajer.
+6836|Biaya tahunan: {}
+6681|🎓 Daftar
+6683|🎓 Kamu terdaftar di Manajemen Olahraga jarak jauh!
+6685|Pendaftaran selesai. Ujian di akhir musim.
+6688|Nanti saja
+6689|Tahun Baru
+6690|Malam tahun baru! Di mana kamu akan merayakannya?
+6693|🏠 Bersama keluarga
+6695|Tahun baru yang hangat bersama keluarga.
+6696|🎉 Bersama rekan setim
+6698|Malam yang seru bersama tim.
+6699|Hari Ibu
+6700|Hari ini Hari Ibu! Apa yang akan kamu lakukan untuk ibumu?
+6703|💐 Kirim bunga dan hadiah
+6705|📞 Telepon dia
+6706|Ibumu sangat senang mendengar suaramu.
+6707|Hari ini ulang tahunku! Terima kasih atas semua ucapannya.
+6710|Ulang tahun
+6711|🎂 Hari ini ulang tahunmu! Rekan setim membawa kue kejutan saat latihan.
+4467|Terima kasih!
+6716|Moral +6
+6717|Lebaran
+6718|Lebaran tiba! Akan minta izin pelatih untuk pulang ke keluarga?
+6721|🏡 Pulang ke keluarga
+6723|Kamu berlebaran bersama keluarga dan sungkem ke orang tua.
+6724|⚽ Aku tetap latihan
+6726|Pelatih melihat dedikasimu. Keluargamu sedikit sedih.
+6729|Kursus bahasa
+6798|Klub mengatur kursus {}. Ikut kelas minggu ini?
+6838|Level: {}/3
+6731|📖 Masuk kelas
+6787|🗣️ Kamu sekarang fasih {}! Komunikasi dengan rekan setim jauh lebih baik.
+6734|Level bahasa 3/3
+6835|Level bahasa {}/3
+719|Tidak minggu ini
+6735|Dilarang masuk
+6736|Beri jalan
+6737|Dilarang parkir
+6738|Apa arti rambu ini?
+6739|Saat melihat rambu ini, berapa kecepatan maksimal (km/jam)?
+6740|Apa yang kamu lakukan saat lampu berwarna ini?
+6741|Aku berhenti
+6742|Aku mempercepat
+6743|Aku lewat pelan-pelan
+6744|Aku membunyikan klakson
+6745|Ada orang menyeberang di zebra cross. Apa yang kamu lakukan?
+6746|Aku berhenti dan memberi jalan
+6747|Aku pindah lajur
+6748|Ujian SIM
+6749|🚗 Kamu dapat SIM! Sekarang bisa menyetir.
+6754|Lulus!
+6755|Gagal
+6756|Selamat atas SIM-mu!
+6757|Jangan sedih, kamu bisa mengulang kapan saja.
+6833|Jarak jauh · Tahun {}
+6758|Ujian akhir tahun jarak jauh
+6820|Tahun {} · 3 soal, cukup 2 benar.
+6759|🎓 Kamu lulus Manajemen Olahraga! Ijazah sudah di tangan.
+6764|Kamu lulus! Ijazah ini akan membantu karier manajermu.
+6822|Naik tingkat! Berikutnya: Tahun {}.
+6768|Tahun ini belum lulus. Coba lagi tahun depan.
+6771|Lulus
+6772|Ada
+6773|Lulus
+6839|Tahun {}
+6774|🚗 SIM
+6775|🎓 Kuliah jarak jauh
+6777|Dokumen dan keterampilan
+6778|🚗 Kamu perlu SIM dulu
+6795|Kamu perlu SIM untuk memakai {}. Ujiannya 3 soal.

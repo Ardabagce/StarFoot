@@ -233,3 +233,148 @@
 6600|Du stellst die Startelf immer selbst auf.
 6601|Aus
 6602|Beim Verein bleiben
+6603|Schulfreund
+6604|Freund aus der Nachbarschaft
+6605|Fußballer
+6606|Sportjournalist
+1646|Berater
+6607|Jugendtrainer
+6608|Ingenieur
+6609|Arzt
+6610|Koch
+6611|Lehrer
+6813|🤝 Neuer Freund in der Klasse: {}.
+6797|🤝 Dein bester Freund aus der Nachbarschaft, {}, ist bei jedem Spiel auf der Tribüne.
+6789|🤝 Du verstehst dich super mit {}. Ihr seid jetzt enge Freunde.
+6825|{} ist jetzt Profi · {}
+6829|{} hat einen neuen Beruf: {}
+6783|⚔️ Dein alter Freund {} steht im nächsten Spiel beim Gegner! Ihr habt euch vorher geschrieben.
+6837|Dein Freund · {}
+6803|{} feiert Geburtstag und hat dich eingeladen!
+6615|Ein toller Abend. Eure Freundschaft ist gewachsen.
+6617|🎁 Geschenk schicken
+6830|Dein Geschenk kam super an. ({})
+6619|Ich kann nicht
+6804|{} rief an: „Ich hab dein Spiel gesehen, du warst super!“
+6621|😊 Lange plaudern
+6623|Du hast Glück mit so einem Freund.
+6624|Kurz halten
+6796|{} schlägt vor, für die Prüfung morgen zusammen zu lernen.
+6626|📚 Zusammen lernen
+6628|Gelernt und Spaß gehabt. Intelligenz +1 (1 Aktion)
+6631|Ich habe Training
+6814|{} steckt in Schwierigkeiten und möchte {} leihen.
+6632|🤝 Leihen
+6634|Dein Freund ist dir dankbar.
+1050|Geht nicht
+6809|{} hatte Verständnis, war aber etwas gekränkt.
+6794|Dein Journalistenfreund {} möchte ein Exklusivinterview.
+6636|🎙️ Annehmen
+6637|Das Interview wurde viel gelesen. Dein Ruhm wächst!
+6640|Nicht jetzt
+6793|Dein Beraterfreund {}: „Ich kann für dich mit ein paar Vereinen reden.“
+6641|👍 Mach das
+6643|Dein Freund hilft dir, sobald du aus der Jugend raus bist.
+6644|Dein Freund hat telefoniert, aber gerade ist kein Verein interessiert.
+6785|📨 Dank deines Beraterfreundes {} haben {} Vereine Angebote gemacht! 2 Wochen gültig.
+6645|Die Angebote sind auf dem Startbildschirm!
+6788|🎉 Dein alter Freund {} hat bei uns, {}, unterschrieben! Jetzt tragt ihr dasselbe Trikot.
+6811|Überraschung! {} wechselt zu deinem Team!
+6649|Mit dem Freund, mit dem du vor Jahren gekickt hast, teilst du jetzt die Kabine.
+6812|💸 {} hat dir das Geld dankend zurückgezahlt: {}.
+6650|Deine Freunde
+6651|Türkisch
+6652|Englisch
+6653|Spanisch
+6654|Portugiesisch
+6655|Deutsch
+6656|Französisch
+6657|Italienisch
+6658|Niederländisch
+6659|Japanisch
+6660|Arabisch
+6661|Griechisch
+6662|Dänisch
+6663|Kroatisch
+6664|Tschechisch
+6665|Polnisch
+6666|Ukrainisch
+6781|🗣️ In deinem neuen Land sprichst du noch kein {}. Ein Sprachkurs hilft dir mit den Mitspielern.
+6668|Führerschein
+6669|Du bist 18! Willst du die Führerscheinprüfung machen?
+6672|Bestehst du, kannst du Autos und Motorräder kaufen.
+6673|🚗 Prüfung machen
+6674|Die Führerscheinprüfung kannst du jederzeit im Tab Leben machen.
+6675|Universität
+6676|Möchtest du per Fernstudium Sportmanagement studieren?
+6677|Du kannst studieren, ohne aufzuhören. Am Saisonende gibt es eine Prüfung, nach 4 Jahren bist du fertig. Der Abschluss hilft als Trainer.
+6836|Jahresgebühr: {}
+6681|🎓 Einschreiben
+6683|🎓 Du bist im Fernstudium Sportmanagement eingeschrieben!
+6685|Eingeschrieben. Die Prüfung ist am Saisonende.
+6688|Vorerst nicht
+6689|Silvester
+6690|Silvester! Wo feierst du ins neue Jahr?
+6693|🏠 Mit meiner Familie
+6695|Ein gemütliches Silvester mit der Familie.
+6696|🎉 Mit meinen Teamkollegen
+6698|Ein lustiger Abend mit dem Team.
+6699|Muttertag
+6700|Heute ist Muttertag! Was machst du für deine Mutter?
+6703|💐 Blumen und ein Geschenk schicken
+6705|📞 Anrufen
+6706|Deine Mutter hat sich sehr über deinen Anruf gefreut.
+6707|Heute ist mein Geburtstag! Danke für alle Nachrichten.
+6710|Geburtstag
+6711|🎂 Du hast Geburtstag! Deine Teamkollegen haben eine Überraschungstorte zum Training mitgebracht.
+4467|Danke!
+6716|Moral +6
+6717|Feiertag
+6718|Feiertag! Bittest du den Trainer um frei, um deine Familie zu besuchen?
+6721|🏡 Zur Familie fahren
+6723|Du hast den Feiertag mit der Familie verbracht und die Älteren besucht.
+6724|⚽ Ich bleibe und trainiere
+6726|Der Trainer hat deinen Einsatz bemerkt. Die Familie ist etwas traurig.
+6729|Sprachkurs
+6798|Der Verein hat einen {}-Kurs organisiert. Gehst du diese Woche hin?
+6838|Stufe: {}/3
+6731|📖 Zum Kurs gehen
+6787|🗣️ Du sprichst jetzt fließend {}! Die Verständigung im Team ist viel besser.
+6734|Sprachniveau 3/3
+6835|Sprachniveau {}/3
+719|Nicht diese Woche
+6735|Einfahrt verboten
+6736|Vorfahrt gewähren
+6737|Parkverbot
+6738|Was bedeutet dieses Schild?
+6739|Wie schnell darfst du bei diesem Schild höchstens fahren (km/h)?
+6740|Was machst du, wenn die Ampel so leuchtet?
+6741|Ich halte an
+6742|Ich gebe Gas
+6743|Ich fahre langsam durch
+6744|Ich hupe
+6745|Jemand ist auf dem Zebrastreifen. Was machst du?
+6746|Ich halte und lasse sie gehen
+6747|Ich wechsle die Spur
+6748|Führerscheinprüfung
+6749|🚗 Führerschein bestanden! Jetzt darfst du fahren.
+6754|Bestanden!
+6755|Durchgefallen
+6756|Glückwunsch zum Führerschein!
+6757|Keine Sorge, du kannst es jederzeit wiederholen.
+6833|Fernstudium · {}. Jahr
+6758|Fernstudium: Jahresabschlussprüfung
+6820|{}. Jahr · 3 Fragen, 2 richtige reichen.
+6759|🎓 Abschluss in Sportmanagement! Du hast dein Diplom.
+6764|Abschluss geschafft! Das Diplom hilft dir als Trainer.
+6822|Jahr bestanden! Als Nächstes: {}. Jahr.
+6768|Dieses Jahr nicht bestanden. Nächstes Jahr neuer Versuch.
+6771|Bestanden
+6772|Ja
+6773|Abgeschlossen
+6839|{}. Jahr
+6774|🚗 Führerschein
+6775|🎓 Fernstudium
+6777|Abschlüsse und Fähigkeiten
+6778|🚗 Du brauchst zuerst einen Führerschein
+6795|Für {} brauchst du einen Führerschein. Die Prüfung hat 3 Fragen.

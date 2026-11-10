@@ -426,6 +426,8 @@ const Game = {
     const s = Game.state;
     if (s.seasonEnd) return SeasonEnd.show();
     if (s.pendingSchool && typeof School !== 'undefined') return School.show();
+    if (s.pendingFriend && typeof Friends !== 'undefined') return Friends.show();
+    if (s.pendingLX && typeof LifeX !== 'undefined') return LifeX.show();
     if (s.pendingEvent) return Events.show();
     if (s.pendingLoot) return Loot.show();
     if (s.pendingGift) return Gift.show();
@@ -841,6 +843,8 @@ const Game = {
       if (Game.intlWeeks().includes(r)) Game.checkCallup();
       Game.transferWeek(r);
       if (typeof School !== 'undefined') School.week(s, r);
+      if (typeof Friends !== 'undefined') Friends.week(s);
+      if (typeof LifeX !== 'undefined') LifeX.week(s);
       if (!Game.inStreet()) Cups.week(s, r);
       if (r === Math.floor(Game.rounds() / 2)) setTimeout(() => Game.seasonAd('midSeason'), 400);
       if (r >= Game.rounds()) {
@@ -1169,7 +1173,7 @@ const Game = {
     Game.save();
     // lig şampiyonluğunda önce kupa kaldırma töreni
     // sezon sonu sırası: şampiyonluk töreni → Altın Yıldız → ezeli rakip özeti → sezon sonu ekranı
-    const after = () => (typeof Ballon !== 'undefined' ? Ballon.ceremony() : Promise.resolve()).catch(() => {}).then(() => (typeof Scenario !== 'undefined' ? Scenario.result() : null)).catch(() => {}).then(() => { if (typeof Rival !== 'undefined') Rival.season(); Game.save(); }).then(() => (typeof School !== 'undefined' ? School.yearEnd() : null)).catch(() => {}).then(() => { Game.save(); SeasonEnd.show(); });
+    const after = () => (typeof Ballon !== 'undefined' ? Ballon.ceremony() : Promise.resolve()).catch(() => {}).then(() => (typeof Scenario !== 'undefined' ? Scenario.result() : null)).catch(() => {}).then(() => { if (typeof Rival !== 'undefined') Rival.season(); Game.save(); }).then(() => (typeof School !== 'undefined' ? School.yearEnd() : null)).catch(() => {}).then(() => (typeof LifeX !== 'undefined' ? LifeX.uniYear() : null)).catch(() => {}).then(() => { Game.save(); SeasonEnd.show(); });
     if (pos === 1 && typeof Celebrate !== 'undefined') Celebrate.champion(`${compName} Şampiyonu`, Game.teamName()).then(after);
     else after();
   },
@@ -2314,6 +2318,8 @@ ${UI.paper()}`;
       const it = ITEMS.find((i) => i.id === b.dataset.buy);
       const p = Game.p;
       if (p.money < it.price) return;
+      // araba ve motor için önce ehliyet (1.0.19)
+      if (typeof LifeX !== 'undefined' && LifeX.needLicense(it)) return Game.modal(`<h3>🚗 Önce ehliyet almalısın</h3><p>${U.esc(it.name)} kullanmak için ehliyet gerekiyor. Sınav 3 sorudan oluşuyor.</p>`, [{ t: 'Vazgeç', cls: 'btn-ghost' }, { t: 'Sınava gir', cls: 'btn-big', fn: () => LifeX.licenseExam((ok) => { if (ok) b.click(); else Game.render(); }) }]);
       p.money -= it.price;
       p.items.push(it.id);
       if (it.cat === 'boots') { p.wear = p.wear || {}; p.wear[it.id] = U.randi(30, 40); }

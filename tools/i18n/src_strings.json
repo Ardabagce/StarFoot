@@ -448,6 +448,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"lifex.js",
 "lpath.js",
 "plusx.js",
 "school.js",
@@ -803,6 +804,7 @@
 "lang-ja.js",
 "lang-pt.js",
 "legacy.js",
+"lifex.js",
 "lpath.js",
 "match.js",
 "meta.js",
@@ -2616,7 +2618,16 @@
 "coach.js"
 ],
 "Şu an bir kulübün yok. Yeni takımını seç:": [
-"coach.js"
+"coach.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "{} Sıradaki maç": [
 "coach.js"
@@ -2942,10 +2953,28 @@
 "weather.js"
 ],
 "Kondisyonu düşen oyuncu maç öncesi dinç yedekle değişir.": [
-"coach.js"
+"coach.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Kapalı": [
-"coach.js"
+"coach.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "İlk 11\\'i her zaman sen belirlersin.": [
 "coach.js"
@@ -3212,7 +3241,16 @@
 "lang-pt.js"
 ],
 "Kulübümde kal": [
-"coach.js"
+"coach.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Rakip skoru değiştirmek için öne çıkıyor.": [
 "coach.js",
@@ -4217,6 +4255,7 @@
 "league.js",
 "legacy.js",
 "legends.js",
+"lifex.js",
 "meta.js",
 "squads.js",
 "wc.js",
@@ -4344,7 +4383,8 @@
 "AZE": [
 "cups.js",
 "data.js",
-"legends.js"
+"legends.js",
+"lifex.js"
 ],
 "SCO": [
 "cups.js",
@@ -4456,12 +4496,14 @@
 "ALB": [
 "cups.js",
 "data.js",
+"lifex.js",
 "squads.js",
 "wc.js"
 ],
 "BIH": [
 "cups.js",
 "legends.js",
+"lifex.js",
 "wc.js"
 ],
 "ISL": [
@@ -4492,6 +4534,7 @@
 ],
 "KAZ": [
 "cups.js",
+"lifex.js",
 "wc.js"
 ],
 "ARM": [
@@ -4970,6 +5013,7 @@
 "game.js",
 "i18n.js",
 "league.js",
+"lifex.js",
 "meta.js",
 "wcx.js",
 "weather.js"
@@ -5950,7 +5994,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"lifex.js"
 ],
 "Tolga Özmen": [
 "data.js",
@@ -5992,7 +6037,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"lifex.js"
 ],
 "Mateo Lirandi": [
 "data.js",
@@ -6026,7 +6072,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"lifex.js"
 ],
 "Enzo Kamara": [
 "data.js",
@@ -6061,7 +6108,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"lifex.js"
 ],
 "Rubén Belez": [
 "data.js",
@@ -6096,7 +6144,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"lifex.js"
 ],
 "Tom Hartewood": [
 "data.js",
@@ -6131,7 +6180,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"lifex.js"
 ],
 "Rafael Pares": [
 "data.js",
@@ -6165,7 +6215,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"lifex.js"
 ],
 "Rafael Santeiro": [
 "data.js",
@@ -6199,7 +6250,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"lifex.js"
 ],
 "Lukas Neuner": [
 "data.js",
@@ -6230,7 +6282,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"lifex.js"
 ],
 "Bram van Dekeveld": [
 "data.js",
@@ -6261,7 +6314,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"lifex.js"
 ],
 "Nicolo Rosini": [
 "data.js",
@@ -6289,7 +6343,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"lifex.js"
 ],
 "Yanis De Roret": [
 "data.js",
@@ -6319,7 +6374,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"lifex.js"
 ],
 "Elias Jakić": [
 "data.js",
@@ -6358,6 +6414,7 @@
 "EGY": [
 "data.js",
 "legends.js",
+"lifex.js",
 "squads.js"
 ],
 "Mısır": [
@@ -6391,7 +6448,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"lifex.js"
 ],
 "Noah Haleny": [
 "data.js",
@@ -6433,7 +6491,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"lifex.js"
 ],
 "Christian Fenham": [
 "data.js",
@@ -6457,7 +6516,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"lifex.js"
 ],
 "Santiago Lorales": [
 "data.js",
@@ -6481,7 +6541,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"lifex.js"
 ],
 "Kaoru Maemoto": [
 "data.js",
@@ -6505,7 +6566,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"lifex.js"
 ],
 "Salem El Eli": [
 "data.js",
@@ -6525,7 +6587,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"lifex.js"
 ],
 "Scott Noreley": [
 "data.js",
@@ -6549,7 +6612,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"lifex.js"
 ],
 "David Goleling": [
 "data.js",
@@ -6573,7 +6637,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"lifex.js"
 ],
 "Granit Toault": [
 "data.js",
@@ -6597,7 +6662,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"lifex.js"
 ],
 "Kostas Gepapoulos": [
 "data.js",
@@ -6617,7 +6683,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"lifex.js"
 ],
 "Rasmus Bergestad": [
 "data.js",
@@ -6641,7 +6708,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"lifex.js"
 ],
 "Tomaş Prák": [
 "data.js",
@@ -6661,7 +6729,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"lifex.js"
 ],
 "Mihaylo Zaruk": [
 "data.js",
@@ -8275,6 +8344,7 @@
 ],
 "MAR": [
 "data.js",
+"lifex.js",
 "squads.js",
 "wc.js",
 "wcx.js"
@@ -11013,6 +11083,7 @@
 ],
 "GUI": [
 "data.js",
+"lifex.js",
 "wc.js"
 ],
 "Gengam Kayaları": [
@@ -12991,6 +13062,7 @@
 "lang-pt.js",
 "league.js",
 "legends.js",
+"lifex.js",
 "minigame.js",
 "squads.js",
 "wc.js"
@@ -14561,6 +14633,7 @@
 ],
 "AUS": [
 "data.js",
+"lang-de.js",
 "squads.js",
 "wc.js",
 "wcx.js"
@@ -14925,6 +14998,7 @@
 ],
 "TUN": [
 "data.js",
+"lifex.js",
 "squads.js",
 "wc.js"
 ],
@@ -25086,6 +25160,7 @@
 ],
 "Gerek yok": [
 "extras.js",
+"friends.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -26903,6 +26978,221 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Okul arkadaşı": [
+"friends.js"
+],
+"Takım arkadaşı": [
+"friends.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"minigame.js"
+],
+"Mahalle arkadaşı": [
+"friends.js"
+],
+"Futbolcu": [
+"friends.js"
+],
+"Spor gazetecisi": [
+"friends.js"
+],
+"Menajer": [
+"friends.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Altyapı antrenörü": [
+"friends.js"
+],
+"Mühendis": [
+"friends.js"
+],
+"Doktor": [
+"friends.js"
+],
+"Aşçı": [
+"friends.js"
+],
+"Öğretmen": [
+"friends.js"
+],
+"🤝 Sınıfta yeni bir arkadaş edindin: {}.": [
+"friends.js"
+],
+"🤝 Mahalleden en yakın arkadaşın {} her maçında tribünde.": [
+"friends.js"
+],
+"🤝 Takım arkadaşın {} ile çok iyi anlaşıyorsunuz. Artık yakın arkadaşsınız.": [
+"friends.js"
+],
+"{} profesyonel futbolcu oldu · {}": [
+"friends.js"
+],
+"{} yeni mesleğine başladı: {}": [
+"friends.js"
+],
+"⚔️ Sıradaki maçta eski arkadaşın {} karşı takımda! Maç öncesi birbirinize mesaj attınız.": [
+"friends.js"
+],
+"STREET": [
+"friends.js",
+"game.js",
+"lang-en.js"
+],
+"Arkadaşın · {}": [
+"friends.js"
+],
+"{} doğum günü partisi veriyor ve seni de çağırdı!": [
+"friends.js"
+],
+"🎉 Partiye git": [
+"friends.js",
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Harika bir geceydi. Arkadaşlığınız güçlendi.": [
+"friends.js"
+],
+"🎁 Hediye gönder": [
+"friends.js"
+],
+"Hediyen çok beğenildi. ({})": [
+"friends.js"
+],
+"Gidemem": [
+"friends.js"
+],
+"{} biraz kırıldı.": [
+"friends.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"life.js"
+],
+"{} arayıp \"Seni maçta izledim, harikaydın!\" dedi.": [
+"friends.js"
+],
+"😊 Uzun uzun sohbet et": [
+"friends.js"
+],
+"İyi bir dostun olduğu için şanslısın.": [
+"friends.js"
+],
+"Kısa tut": [
+"friends.js"
+],
+"{} yarınki sınav için birlikte ders çalışmayı teklif ediyor.": [
+"friends.js"
+],
+"📚 Birlikte çalış": [
+"friends.js"
+],
+"Hem ders çalıştınız hem eğlendiniz. Zeka +1 (1 aksiyon hakkı)": [
+"friends.js"
+],
+"Antrenmanım var": [
+"friends.js"
+],
+"{} zor durumda ve senden {} borç istiyor.": [
+"friends.js"
+],
+"🤝 Ver": [
+"friends.js"
+],
+"Arkadaşın sana minnettar.": [
+"friends.js"
+],
+"Veremem": [
+"friends.js"
+],
+"{} anlayışla karşıladı ama biraz bozuldu.": [
+"friends.js"
+],
+"Gazeteci arkadaşın {} seninle özel bir röportaj yapmak istiyor.": [
+"friends.js"
+],
+"🎙️ Kabul et": [
+"friends.js"
+],
+"Röportaj çok okundu. Ünün arttı!": [
+"friends.js"
+],
+"Şimdi değil": [
+"friends.js"
+],
+"Menajer olan arkadaşın {}: \"Senin için birkaç kulüple konuşabilirim.\"": [
+"friends.js"
+],
+"👍 Konuş": [
+"friends.js"
+],
+"Arkadaşın altyapıdan çıkınca seninle ilgileneceğini söyledi.": [
+"friends.js"
+],
+"Arkadaşın aradı ama şu an ilgilenen kulüp çıkmadı.": [
+"friends.js"
+],
+"📨 Menajer arkadaşın {} sayesinde {} kulüp teklif yaptı! Teklifler 2 hafta geçerli.": [
+"friends.js"
+],
+"Teklifler ana ekranda!": [
+"friends.js"
+],
+"🎉 Eski arkadaşın {} takımımız {} ile anlaştı! Artık aynı formayı giyeceksiniz.": [
+"friends.js"
+],
+"Sürpriz! {} senin takımına transfer oldu!": [
+"friends.js"
+],
+"Yıllar önce birlikte top koşturduğunuz arkadaşınla artık aynı soyunma odasındasınız.": [
+"friends.js"
+],
+"Harika!": [
+"friends.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"💸 {} borcunu teşekkürlerle geri ödedi: {}.": [
+"friends.js"
+],
+"{} Arkadaşların": [
+"friends.js"
+],
 "Kolay": [
 "game.js",
 "lang-ar.js",
@@ -27295,10 +27585,6 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
-],
-"STREET": [
-"game.js",
-"lang-en.js"
 ],
 "Seçme Kampı": [
 "game.js",
@@ -32968,6 +33254,26 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"🚗 Önce ehliyet almalısın": [
+"game.js"
+],
+"{} kullanmak için ehliyet gerekiyor. Sınav 3 sorudan oluşuyor.": [
+"game.js"
+],
+"Sınava gir": [
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lifex.js",
+"school.js"
+],
 "Kendime küçük bir hediye: {}.": [
 "game.js",
 "lang-ar.js",
@@ -33335,18 +33641,6 @@
 "lang-pt.js"
 ],
 "Takım arkadaşın {} bu akşam doğum günü partisi veriyor. Sen de davetlisin.": [
-"game.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"🎉 Partiye git": [
 "game.js",
 "lang-ar.js",
 "lang-de.js",
@@ -34547,7 +34841,8 @@
 "star.js"
 ],
 "Türkçe": [
-"i18n.js"
+"i18n.js",
+"lifex.js"
 ],
 "English": [
 "i18n.js"
@@ -34592,6 +34887,7 @@
 ],
 "IDN": [
 "i18n.js",
+"lifex.js",
 "wc.js"
 ],
 "StarFoot": [
@@ -40020,17 +40316,6 @@
 "lang-ja.js",
 "lang-pt.js",
 "tutorial.js"
-],
-"Harika!": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
 ],
 "Great!": [
 "lang-ar.js",
@@ -46715,7 +47000,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"lifex.js"
 ],
 "Premium'un var: hepsi senin için açık!": [
 "lang-ar.js",
@@ -51362,7 +51648,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"lifex.js"
 ],
 "Thank you!": [
 "lang-ar.js",
@@ -57825,6 +58112,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"lifex.js",
 "star.js",
 "value.js"
 ],
@@ -61702,6 +61990,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"lifex.js",
 "school.js"
 ],
 "başlıyor!": [
@@ -61725,18 +62014,6 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
-],
-"Sınava gir": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"school.js"
 ],
 "Pekiyi": [
 "lang-ar.js",
@@ -63157,6 +63434,83 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"İş teklifleri": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Şu an bir kulübün yok.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"You don't have a club right now.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Yeni takımını seç:": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Choose your new team:": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Otomatik rotasyon": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"İlk 11'i her zaman sen belirlersin.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "(Asist)": [
 "lang-ar.js",
 "lang-de.js",
@@ -64244,7 +64598,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"lifex.js"
 ],
 "DÜŞTÜ!": [
 "lang-ar.js",
@@ -66543,18 +66898,6 @@
 "lang-pt.js",
 "life.js"
 ],
-"Takım arkadaşı": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"minigame.js"
-],
 "Takım ikinci yarıda daha güçlü oynar": [
 "lang-ar.js",
 "lang-de.js",
@@ -67573,17 +67916,6 @@
 "lang-pt.js"
 ],
 "Maçın Adamı Ödülleri": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"Menajer": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -99987,6 +100319,105 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"İŞ TEKLİFLERİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ŞU AN BİR KULÜBÜN YOK.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YOU DON'T HAVE A CLUB RIGHT NOW.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YENİ TAKIMINI SEÇ:": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"CHOOSE YOUR NEW TEAM:": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"OTOMATİK ROTASYON": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"İLK 11'İ HER ZAMAN SEN BELİRLERSİN.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KAPALI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KULÜBÜMDE KAL": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -104874,17 +105305,6 @@
 "lang-pt.js"
 ],
 "KRİYOTERAPİ KABİNİ": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"KULÜBÜMDE KAL": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -131634,7 +132054,8 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"life.js"
+"life.js",
+"lifex.js"
 ],
 "PAS ULAŞTI · {} VURUYOR...": [
 "lang-ar.js",
@@ -133814,18 +134235,6 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
-],
-"{} biraz kırıldı.": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"life.js"
 ],
 "{} hazır olabilir": [
 "lang-ar.js",
@@ -136446,6 +136855,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"lifex.js",
 "school.js"
 ],
 "Zeka +{}": [
@@ -142981,6 +143391,27 @@
 "lang-de.js"
 ],
 "Trainerkarriere starten": [
+"lang-de.js"
+],
+"Jobangebote": [
+"lang-de.js"
+],
+"Du hast gerade keinen Verein. Wähle dein neues Team:": [
+"lang-de.js"
+],
+"Automatische Rotation": [
+"lang-de.js"
+],
+"Müde Stammspieler werden vor dem Spiel durch frische Ersatzleute ersetzt.": [
+"lang-de.js"
+],
+"Du stellst die Startelf immer selbst auf.": [
+"lang-de.js"
+],
+"Aus": [
+"lang-de.js"
+],
+"Beim Verein bleiben": [
 "lang-de.js"
 ],
 "– wir haben uns qualifiziert!": [
@@ -152515,6 +152946,18 @@
 "TRAINERKARRIERE STARTEN": [
 "lang-de.js"
 ],
+"JOBANGEBOTE": [
+"lang-de.js"
+],
+"AUTOMATISCHE ROTATION": [
+"lang-de.js"
+],
+"DU STELLST DIE STARTELF IMMER SELBST AUF.": [
+"lang-de.js"
+],
+"BEIM VEREIN BLEIBEN": [
+"lang-de.js"
+],
 "– WIR HABEN UNS QUALIFIZIERT!": [
 "lang-de.js"
 ],
@@ -153846,9 +154289,6 @@
 "lang-de.js"
 ],
 "KÄLTEKAMMER": [
-"lang-de.js"
-],
-"IN MEINEM VEREIN BLEIBEN": [
 "lang-de.js"
 ],
 "VEREIN": [
@@ -165055,6 +165495,7 @@
 "UAE": [
 "lang-en.js",
 "lang-ja.js",
+"lifex.js",
 "wc.js"
 ],
 "Zambia": [
@@ -165622,6 +166063,27 @@
 "lang-en.js"
 ],
 "Start managing": [
+"lang-en.js"
+],
+"Job offers": [
+"lang-en.js"
+],
+"You don't have a club right now. Choose your new team:": [
+"lang-en.js"
+],
+"Auto rotation": [
+"lang-en.js"
+],
+"Tired starters are swapped for fresh bench players before kick-off.": [
+"lang-en.js"
+],
+"You always pick the XI yourself.": [
+"lang-en.js"
+],
+"Off": [
+"lang-en.js"
+],
+"Stay at my club": [
 "lang-en.js"
 ],
 "— we qualified!": [
@@ -173450,7 +173912,8 @@
 "lang-en.js"
 ],
 "STOP": [
-"lang-en.js"
+"lang-en.js",
+"lifex.js"
 ],
 "WILL STOP AFTER THIS MATCH…": [
 "lang-en.js"
@@ -174641,6 +175104,21 @@
 "lang-en.js"
 ],
 "START MANAGING": [
+"lang-en.js"
+],
+"JOB OFFERS": [
+"lang-en.js"
+],
+"AUTO ROTATION": [
+"lang-en.js"
+],
+"YOU ALWAYS PICK THE XI YOURSELF.": [
+"lang-en.js"
+],
+"OFF": [
+"lang-en.js"
+],
+"STAY AT MY CLUB": [
 "lang-en.js"
 ],
 "— WE QUALIFIED!": [
@@ -175952,9 +176430,6 @@
 "lang-en.js"
 ],
 "CRYOTHERAPY CHAMBER": [
-"lang-en.js"
-],
-"STAY AT MY CLUB": [
 "lang-en.js"
 ],
 "CLUB": [
@@ -187744,6 +188219,27 @@
 "Empezar a entrenar": [
 "lang-es.js"
 ],
+"Ofertas de trabajo": [
+"lang-es.js"
+],
+"Ahora no tienes club. Elige tu nuevo equipo:": [
+"lang-es.js"
+],
+"Rotación automática": [
+"lang-es.js"
+],
+"Los titulares cansados se cambian por suplentes frescos antes del partido.": [
+"lang-es.js"
+],
+"Tú eliges siempre el once.": [
+"lang-es.js"
+],
+"Desactivada": [
+"lang-es.js"
+],
+"Seguir en mi club": [
+"lang-es.js"
+],
 "— ¡nos hemos clasificado!": [
 "lang-es.js"
 ],
@@ -196789,6 +197285,21 @@
 "EMPEZAR A ENTRENAR": [
 "lang-es.js"
 ],
+"OFERTAS DE TRABAJO": [
+"lang-es.js"
+],
+"ROTACIÓN AUTOMÁTICA": [
+"lang-es.js"
+],
+"TÚ ELIGES SIEMPRE EL ONCE.": [
+"lang-es.js"
+],
+"DESACTIVADA": [
+"lang-es.js"
+],
+"SEGUIR EN MI CLUB": [
+"lang-es.js"
+],
 "— ¡NOS HEMOS CLASIFICADO!": [
 "lang-es.js"
 ],
@@ -198091,9 +198602,6 @@
 "lang-es.js"
 ],
 "CÁMARA DE CRIOTERAPIA": [
-"lang-es.js"
-],
-"QUEDARME EN MI CLUB": [
 "lang-es.js"
 ],
 "BOTAS DEL CLUB": [
@@ -209759,6 +210267,27 @@
 "Commencer à entraîner": [
 "lang-fr.js"
 ],
+"Offres d'emploi": [
+"lang-fr.js"
+],
+"Tu n'as pas de club pour l'instant. Choisis ta nouvelle équipe :": [
+"lang-fr.js"
+],
+"Rotation automatique": [
+"lang-fr.js"
+],
+"Les titulaires fatigués sont remplacés par des remplaçants frais avant le match.": [
+"lang-fr.js"
+],
+"Tu choisis toujours le onze toi-même.": [
+"lang-fr.js"
+],
+"Désactivée": [
+"lang-fr.js"
+],
+"Rester dans mon club": [
+"lang-fr.js"
+],
 "— on est qualifiés !": [
 "lang-fr.js"
 ],
@@ -211416,9 +211945,6 @@
 "lang-fr.js"
 ],
 "Approche-toi plus de 21 que le croupier. Le blackjack paie 3:2, le croupier s'arrête à 17.": [
-"lang-fr.js"
-],
-"Rester dans mon club": [
 "lang-fr.js"
 ],
 "Le kiné du club a étudié tes mouvements et t'a préparé un plan d'étirements personnalisé.": [
@@ -218538,6 +219064,21 @@
 "COMMENCER À ENTRAÎNER": [
 "lang-fr.js"
 ],
+"OFFRES D'EMPLOI": [
+"lang-fr.js"
+],
+"ROTATION AUTOMATIQUE": [
+"lang-fr.js"
+],
+"TU CHOISIS TOUJOURS LE ONZE TOI-MÊME.": [
+"lang-fr.js"
+],
+"DÉSACTIVÉE": [
+"lang-fr.js"
+],
+"RESTER DANS MON CLUB": [
+"lang-fr.js"
+],
 "— ON EST QUALIFIÉS !": [
 "lang-fr.js"
 ],
@@ -219805,9 +220346,6 @@
 "lang-fr.js"
 ],
 "CHAMBRE DE CRYOTHÉRAPIE": [
-"lang-fr.js"
-],
-"RESTER DANS MON CLUB": [
 "lang-fr.js"
 ],
 "CHAUSSURES DU CLUB": [
@@ -231125,6 +231663,27 @@
 "Mulai jadi manajer": [
 "lang-id.js"
 ],
+"Tawaran kerja": [
+"lang-id.js"
+],
+"Kamu sedang tanpa klub. Pilih tim barumu:": [
+"lang-id.js"
+],
+"Rotasi otomatis": [
+"lang-id.js"
+],
+"Pemain inti yang lelah diganti cadangan yang segar sebelum laga.": [
+"lang-id.js"
+],
+"Kamu selalu memilih starting XI sendiri.": [
+"lang-id.js"
+],
+"Mati": [
+"lang-id.js"
+],
+"Tetap di klubku": [
+"lang-id.js"
+],
 "— kita lolos!": [
 "lang-id.js"
 ],
@@ -232760,9 +233319,6 @@
 "lang-id.js"
 ],
 "Dekati angka 21 lebih dari bandar. Blackjack dibayar 3:2, bandar berhenti di 17.": [
-"lang-id.js"
-],
-"Tetap di klubku": [
 "lang-id.js"
 ],
 "Fisio klub mempelajari gerakanmu dan membuat rencana peregangan pribadi untukmu.": [
@@ -239742,6 +240298,21 @@
 "MULAI JADI MANAJER": [
 "lang-id.js"
 ],
+"TAWARAN KERJA": [
+"lang-id.js"
+],
+"ROTASI OTOMATIS": [
+"lang-id.js"
+],
+"KAMU SELALU MEMILIH STARTING XI SENDIRI.": [
+"lang-id.js"
+],
+"MATI": [
+"lang-id.js"
+],
+"TETAP DI KLUBKU": [
+"lang-id.js"
+],
 "— KITA LOLOS!": [
 "lang-id.js"
 ],
@@ -240988,9 +241559,6 @@
 "lang-id.js"
 ],
 "RUANG KRIOTERAPI": [
-"lang-id.js"
-],
-"TETAP DI KLUBKU": [
 "lang-id.js"
 ],
 "SEPATU KLUB": [
@@ -252344,6 +252912,27 @@
 "Inizia ad allenare": [
 "lang-it.js"
 ],
+"Offerte di lavoro": [
+"lang-it.js"
+],
+"Ora non hai un club. Scegli la tua nuova squadra:": [
+"lang-it.js"
+],
+"Rotazione automatica": [
+"lang-it.js"
+],
+"I titolari stanchi vengono sostituiti da riserve fresche prima della partita.": [
+"lang-it.js"
+],
+"Scegli sempre tu l'undici.": [
+"lang-it.js"
+],
+"Disattivata": [
+"lang-it.js"
+],
+"Resta nel mio club": [
+"lang-it.js"
+],
 "— ci siamo qualificati!": [
 "lang-it.js"
 ],
@@ -260973,6 +261562,21 @@
 "INIZIA AD ALLENARE": [
 "lang-it.js"
 ],
+"OFFERTE DI LAVORO": [
+"lang-it.js"
+],
+"ROTAZIONE AUTOMATICA": [
+"lang-it.js"
+],
+"SCEGLI SEMPRE TU L'UNDICI.": [
+"lang-it.js"
+],
+"DISATTIVATA": [
+"lang-it.js"
+],
+"RESTA NEL MIO CLUB": [
+"lang-it.js"
+],
 "— CI SIAMO QUALIFICATI!": [
 "lang-it.js"
 ],
@@ -262218,9 +262822,6 @@
 "lang-it.js"
 ],
 "CAMERA DI CRIOTERAPIA": [
-"lang-it.js"
-],
-"RESTO NEL MIO CLUB": [
 "lang-it.js"
 ],
 "SCARPE DEL CLUB": [
@@ -274116,6 +274717,27 @@
 "Começar a treinar": [
 "lang-pt.js"
 ],
+"Propostas de trabalho": [
+"lang-pt.js"
+],
+"Você está sem clube agora. Escolha seu novo time:": [
+"lang-pt.js"
+],
+"Rodízio automático": [
+"lang-pt.js"
+],
+"Titulares cansados são trocados por reservas descansados antes do jogo.": [
+"lang-pt.js"
+],
+"Você sempre escolhe os titulares.": [
+"lang-pt.js"
+],
+"Desligado": [
+"lang-pt.js"
+],
+"Ficar no meu clube": [
+"lang-pt.js"
+],
 "— nos classificamos!": [
 "lang-pt.js"
 ],
@@ -275695,9 +276317,6 @@
 "lang-pt.js"
 ],
 "Chegue mais perto de 21 que a banca. Blackjack paga 3:2 e a banca para no 17.": [
-"lang-pt.js"
-],
-"Ficar no meu clube": [
 "lang-pt.js"
 ],
 "O fisio do clube estudou seus movimentos e montou um plano de alongamento pessoal.": [
@@ -282522,6 +283141,21 @@
 "COMEÇAR A TREINAR": [
 "lang-pt.js"
 ],
+"PROPOSTAS DE TRABALHO": [
+"lang-pt.js"
+],
+"RODÍZIO AUTOMÁTICO": [
+"lang-pt.js"
+],
+"VOCÊ SEMPRE ESCOLHE OS TITULARES.": [
+"lang-pt.js"
+],
+"DESLIGADO": [
+"lang-pt.js"
+],
+"FICAR NO MEU CLUBE": [
+"lang-pt.js"
+],
 "— NOS CLASSIFICAMOS!": [
 "lang-pt.js"
 ],
@@ -283720,9 +284354,6 @@
 "lang-pt.js"
 ],
 "CÂMARA DE CRIOTERAPIA": [
-"lang-pt.js"
-],
-"FICAR NO MEU CLUBE": [
 "lang-pt.js"
 ],
 "CLUBE": [
@@ -289016,11 +289647,13 @@
 ],
 "IRN": [
 "league.js",
+"lifex.js",
 "squads.js",
 "wc.js"
 ],
 "UZB": [
 "league.js",
+"lifex.js",
 "wc.js"
 ],
 "GHA": [
@@ -289699,6 +290332,7 @@
 ],
 "ALG": [
 "legends.js",
+"lifex.js",
 "squads.js",
 "wc.js"
 ],
@@ -290076,6 +290710,327 @@
 ],
 "fireMgr": [
 "life.js"
+],
+"İngilizce": [
+"lifex.js"
+],
+"İspanyolca": [
+"lifex.js"
+],
+"Portekizce": [
+"lifex.js"
+],
+"Almanca": [
+"lifex.js"
+],
+"Fransızca": [
+"lifex.js"
+],
+"İtalyanca": [
+"lifex.js"
+],
+"Felemenkçe": [
+"lifex.js"
+],
+"Japonca": [
+"lifex.js"
+],
+"Arapça": [
+"lifex.js"
+],
+"Yunanca": [
+"lifex.js"
+],
+"Danca": [
+"lifex.js"
+],
+"Hırvatça": [
+"lifex.js"
+],
+"Çekçe": [
+"lifex.js"
+],
+"Lehçe": [
+"lifex.js"
+],
+"Ukraynaca": [
+"lifex.js"
+],
+"QAT": [
+"lifex.js",
+"wc.js"
+],
+"JOR": [
+"lifex.js",
+"wc.js"
+],
+"IRQ": [
+"lifex.js",
+"wc.js"
+],
+"OMA": [
+"lifex.js",
+"wc.js"
+],
+"BHR": [
+"lifex.js",
+"wc.js"
+],
+"SYR": [
+"lifex.js",
+"wc.js"
+],
+"LBN": [
+"lifex.js",
+"wc.js"
+],
+"MLI": [
+"lifex.js",
+"wc.js"
+],
+"KGZ": [
+"lifex.js",
+"wc.js"
+],
+"TJK": [
+"lifex.js",
+"wc.js"
+],
+"BFA": [
+"lifex.js",
+"wc.js"
+],
+"🗣️ Yeni ülkende henüz {} bilmiyorsun. Dil kursu takım arkadaşlarınla anlaşmanı kolaylaştırır.": [
+"lifex.js"
+],
+"Ehliyet": [
+"lifex.js"
+],
+"18 yaşına girdin! Ehliyet sınavına girmek ister misin?": [
+"lifex.js"
+],
+"Geçersen araba ve motosiklet alabilirsin.": [
+"lifex.js"
+],
+"🚗 Sınava gir": [
+"lifex.js"
+],
+"Ehliyet sınavına istediğin zaman Yaşam sekmesinden girebilirsin.": [
+"lifex.js"
+],
+"Üniversite": [
+"lifex.js"
+],
+"Açık öğretimde Spor Yöneticiliği okumak ister misin?": [
+"lifex.js"
+],
+"Futbolu bırakmadan okuyabilirsin. Her sezon sonunda bir sınav var, 4 yılda mezun olursun. Mezun olursan teknik direktörlükte işin kolaylaşır.": [
+"lifex.js"
+],
+"Yıllık harç: {}": [
+"lifex.js"
+],
+"🎓 Kaydol": [
+"lifex.js"
+],
+"🎓 Açık öğretimde Spor Yöneticiliği bölümüne kaydoldun!": [
+"lifex.js"
+],
+"Kaydın yapıldı. Sınav sezon sonunda.": [
+"lifex.js"
+],
+"Şimdilik değil": [
+"lifex.js"
+],
+"Yılbaşı": [
+"lifex.js"
+],
+"Yılbaşı gecesi! Yeni yıla nerede gireceksin?": [
+"lifex.js"
+],
+"🏠 Ailemle": [
+"lifex.js"
+],
+"Ailenle sıcacık bir yılbaşı geçirdin.": [
+"lifex.js"
+],
+"🎉 Takım arkadaşlarımla": [
+"lifex.js"
+],
+"Takımla eğlenceli bir gece geçirdin.": [
+"lifex.js"
+],
+"Anneler Günü": [
+"lifex.js"
+],
+"Bugün Anneler Günü! Annen için ne yapacaksın?": [
+"lifex.js"
+],
+"💐 Çiçek ve hediye gönder": [
+"lifex.js"
+],
+"📞 Telefonla ara": [
+"lifex.js"
+],
+"Annen sesini duyduğuna çok sevindi.": [
+"lifex.js"
+],
+"Bugün doğum günüm! Bütün mesajlar için teşekkürler.": [
+"lifex.js"
+],
+"Doğum günü": [
+"lifex.js"
+],
+"🎂 Bugün doğum günün! Takım arkadaşların antrenmanda sürpriz pasta getirdi.": [
+"lifex.js"
+],
+"Moral +6": [
+"lifex.js"
+],
+"Bayram": [
+"lifex.js"
+],
+"Bayram geldi! Ailenin yanına gitmek için hocandan izin isteyecek misin?": [
+"lifex.js"
+],
+"🏡 Ailemin yanına git": [
+"lifex.js"
+],
+"Bayramı ailenle geçirdin, büyüklerinin elini öptün.": [
+"lifex.js"
+],
+"⚽ Kalıp çalışacağım": [
+"lifex.js"
+],
+"Hocan özverini fark etti. Ailen biraz buruk.": [
+"lifex.js"
+],
+"Dil kursu": [
+"lifex.js"
+],
+"Kulüp {} kursu ayarladı. Bu hafta derse katılacak mısın?": [
+"lifex.js"
+],
+"Seviye: {}/3": [
+"lifex.js"
+],
+"📖 Derse git": [
+"lifex.js"
+],
+"🗣️ Artık {} akıcı konuşuyorsun! Takım arkadaşlarınla iletişimin çok güçlendi.": [
+"lifex.js"
+],
+"Dil seviyesi 3/3": [
+"lifex.js"
+],
+"Dil seviyesi {}/3": [
+"lifex.js"
+],
+"Bu hafta değil": [
+"lifex.js"
+],
+"Girişi olmayan yol": [
+"lifex.js"
+],
+"Yol ver": [
+"lifex.js"
+],
+"Park yasak": [
+"lifex.js"
+],
+"Bu levha ne anlama gelir?": [
+"lifex.js"
+],
+"Bu levhayı gördüğünde en fazla kaç km/s hızla gidebilirsin?": [
+"lifex.js"
+],
+"Işık bu renkteyken ne yaparsın?": [
+"lifex.js"
+],
+"Dururum": [
+"lifex.js"
+],
+"Hızlanırım": [
+"lifex.js"
+],
+"Yavaşça geçerim": [
+"lifex.js"
+],
+"Korna çalarım": [
+"lifex.js"
+],
+"Yaya geçidinde biri karşıya geçiyorsa ne yaparsın?": [
+"lifex.js"
+],
+"Durup yol veririm": [
+"lifex.js"
+],
+"Şerit değiştiririm": [
+"lifex.js"
+],
+"Ehliyet sınavı": [
+"lifex.js"
+],
+"🚗 Ehliyetini aldın! Artık araba kullanabilirsin.": [
+"lifex.js"
+],
+"Geçtin!": [
+"lifex.js"
+],
+"Kaldın": [
+"lifex.js"
+],
+"Tebrikler, ehliyetin hayırlı olsun!": [
+"lifex.js"
+],
+"Üzülme, istediğin zaman tekrar girebilirsin.": [
+"lifex.js"
+],
+"Açık öğretim · {}. sınıf": [
+"lifex.js"
+],
+"Açık öğretim yıl sonu sınavı": [
+"lifex.js"
+],
+"{}. sınıf · 3 soru, 2 doğru yeterli.": [
+"lifex.js"
+],
+"🎓 Spor Yöneticiliği bölümünden mezun oldun! Diplomanı aldın.": [
+"lifex.js"
+],
+"Mezun oldun! Teknik direktörlük kariyerinde bu diploma işine yarayacak.": [
+"lifex.js"
+],
+"Sınıfı geçtin! Sıradaki: {}. sınıf.": [
+"lifex.js"
+],
+"Bu yıl geçemedin. Gelecek yıl tekrar deneyeceksin.": [
+"lifex.js"
+],
+"Geçtin": [
+"lifex.js"
+],
+"Var": [
+"lifex.js",
+"star.js"
+],
+"Game.render())\">Sınava gir": [
+"lifex.js"
+],
+"🚗 Ehliyet": [
+"lifex.js"
+],
+"Mezun": [
+"lifex.js"
+],
+"{}. sınıf": [
+"lifex.js"
+],
+"🎓 Açık öğretim": [
+"lifex.js"
+],
+"{} Belgeler ve beceriler": [
+"lifex.js"
 ],
 "Lirandi": [
 "lpath.js"
@@ -305135,9 +306090,6 @@
 "{} Görünüm Stüdyosu": [
 "star.js"
 ],
-"Var": [
-"star.js"
-],
 "{} Transfer talebi": [
 "star.js"
 ],
@@ -305311,16 +306263,7 @@
 "[data-sup],[data-payrise],[data-mvopen],[data-mvtab],[data-mv],[data-nego]": [
 "value.js"
 ],
-"QAT": [
-"wc.js"
-],
 "UZ": [
-"wc.js"
-],
-"JOR": [
-"wc.js"
-],
-"IRQ": [
 "wc.js"
 ],
 "NZL": [
@@ -305331,9 +306274,6 @@
 "wc.js"
 ],
 "HAI": [
-"wc.js"
-],
-"MLI": [
 "wc.js"
 ],
 "Yves Bissoké": [
@@ -305382,9 +306322,6 @@
 "wc.js"
 ],
 "Ísak Bergþór": [
-"wc.js"
-],
-"BFA": [
 "wc.js"
 ],
 "Bertrand Traoka": [
@@ -305471,9 +306408,6 @@
 "Ramiro Vacara": [
 "wc.js"
 ],
-"OMA": [
-"wc.js"
-],
 "Issam Sabhari": [
 "wc.js"
 ],
@@ -305519,16 +306453,10 @@
 "Zhang Yuchen": [
 "wc.js"
 ],
-"BHR": [
-"wc.js"
-],
 "Ali Madawi": [
 "wc.js"
 ],
 "Kamil Hardani": [
-"wc.js"
-],
-"SYR": [
 "wc.js"
 ],
 "Omar Kharbani": [
@@ -305624,9 +306552,6 @@
 "Fedor Černiauskas": [
 "wc.js"
 ],
-"KGZ": [
-"wc.js"
-],
 "Gulzhigit Alymbek": [
 "wc.js"
 ],
@@ -305645,9 +306570,6 @@
 "Henri Anierand": [
 "wc.js"
 ],
-"LBN": [
-"wc.js"
-],
 "Hassan Maatouki": [
 "wc.js"
 ],
@@ -305664,9 +306586,6 @@
 "wc.js"
 ],
 "Lallian Zothang": [
-"wc.js"
-],
-"TJK": [
 "wc.js"
 ],
 "Parvizdzhon Umarali": [

@@ -233,3 +233,148 @@
 6600|Scegli sempre tu l'undici.
 6601|Disattivata
 6602|Resta nel mio club
+6603|Amico di scuola
+6604|Amico del quartiere
+6605|Calciatore
+6606|Giornalista sportivo
+1646|Procuratore
+6607|Allenatore delle giovanili
+6608|Ingegnere
+6609|Medico
+6610|Cuoco
+6611|Insegnante
+6813|🤝 Nuovo amico in classe: {}.
+6797|🤝 Il tuo migliore amico del quartiere, {}, è in tribuna a ogni partita.
+6789|🤝 Vai molto d'accordo con {}. Ora siete amici stretti.
+6825|{} è diventato professionista · {}
+6829|{} ha iniziato un nuovo lavoro: {}
+6783|⚔️ Il tuo vecchio amico {} gioca contro di te nella prossima partita! Vi siete scritti prima.
+6837|Il tuo amico · {}
+6803|{} festeggia il compleanno e ti ha invitato!
+6615|Serata fantastica. La vostra amicizia si è rafforzata.
+6617|🎁 Manda un regalo
+6830|Il regalo è piaciuto tantissimo. ({})
+6619|Non posso
+6804|{} ti ha chiamato: "Ti ho visto giocare, sei stato grande!"
+6621|😊 Fare una lunga chiacchierata
+6623|Sei fortunato ad avere un buon amico.
+6624|Tagliare corto
+6796|{} propone di studiare insieme per l'esame di domani.
+6626|📚 Studiare insieme
+6628|Avete studiato e vi siete divertiti. Intelligenza +1 (1 azione)
+6631|Ho allenamento
+6814|{} è nei guai e ti chiede {} in prestito.
+6632|🤝 Presta
+6634|Il tuo amico ti è grato.
+1050|Non posso
+6809|{} ha capito, ma ci è rimasto un po' male.
+6794|Il tuo amico giornalista {} vuole un'intervista esclusiva.
+6636|🎙️ Accetta
+6637|L'intervista è stata molto letta. La tua fama cresce!
+6640|Non ora
+6793|Il tuo amico procuratore {}: "Posso parlare con qualche club per te."
+6641|👍 Vai pure
+6643|Il tuo amico ti aiuterà quando uscirai dalle giovanili.
+6644|Il tuo amico ha chiamato, ma ora nessun club è interessato.
+6785|📨 Grazie al tuo amico procuratore {}, {} club hanno fatto offerte! Valide 2 settimane.
+6645|Le offerte sono nella schermata principale!
+6788|🎉 Il tuo vecchio amico {} ha firmato per noi, il {}! Ora indosserete la stessa maglia.
+6811|Sorpresa! {} arriva nella tua squadra!
+6649|L'amico con cui giocavi anni fa ora condivide il tuo spogliatoio.
+6812|💸 {} ti ha restituito il prestito ringraziandoti: {}.
+6650|I tuoi amici
+6651|Turco
+6652|Inglese
+6653|Spagnolo
+6654|Portoghese
+6655|Tedesco
+6656|Francese
+6657|Italiano
+6658|Olandese
+6659|Giapponese
+6660|Arabo
+6661|Greco
+6662|Danese
+6663|Croato
+6664|Ceco
+6665|Polacco
+6666|Ucraino
+6781|🗣️ Non parli ancora {} nel nuovo paese. Un corso di lingua ti aiuterà con i compagni.
+6668|Patente
+6669|Hai compiuto 18 anni! Vuoi fare l'esame della patente?
+6672|Se lo passi, potrai comprare auto e moto.
+6673|🚗 Fai l'esame
+6674|Puoi fare l'esame quando vuoi dalla sezione Vita.
+6675|Università
+6676|Vuoi studiare Management dello sport a distanza?
+6677|Puoi studiare senza lasciare il calcio. Un esame a fine stagione, laurea in 4 anni. Ti aiuterà da allenatore.
+6836|Retta annuale: {}
+6681|🎓 Iscriviti
+6683|🎓 Ti sei iscritto a Management dello sport a distanza!
+6685|Iscrizione fatta. L'esame è a fine stagione.
+6688|Per ora no
+6689|Capodanno
+6690|È Capodanno! Dove festeggerai l'anno nuovo?
+6693|🏠 Con la mia famiglia
+6695|Un Capodanno caloroso in famiglia.
+6696|🎉 Con i compagni di squadra
+6698|Una serata divertente con la squadra.
+6699|Festa della mamma
+6700|Oggi è la festa della mamma! Cosa farai per lei?
+6703|💐 Manda fiori e un regalo
+6705|📞 Chiamala
+6706|Tua madre è stata felicissima di sentirti.
+6707|Oggi è il mio compleanno! Grazie per tutti i messaggi.
+6710|Compleanno
+6711|🎂 È il tuo compleanno! I compagni hanno portato una torta a sorpresa all'allenamento.
+4467|Grazie!
+6716|Morale +6
+6717|Festa
+6718|È festa! Chiederai il permesso al mister per andare dalla famiglia?
+6721|🏡 Vai dalla famiglia
+6723|Hai passato la festa in famiglia e fatto visita agli anziani.
+6724|⚽ Resto ad allenarmi
+6726|Il mister ha notato la tua dedizione. La famiglia è un po' triste.
+6729|Corso di lingua
+6798|Il club ha organizzato un corso di {}. Andrai a lezione questa settimana?
+6838|Livello: {}/3
+6731|📖 Vai a lezione
+6787|🗣️ Ora parli {} fluentemente! La comunicazione con i compagni è molto migliorata.
+6734|Livello di lingua 3/3
+6835|Livello di lingua {}/3
+719|Non questa settimana
+6735|Divieto di accesso
+6736|Dare precedenza
+6737|Divieto di sosta
+6738|Cosa significa questo cartello?
+6739|Con questo cartello, qual è la velocità massima in km/h?
+6740|Cosa fai quando il semaforo è di questo colore?
+6741|Mi fermo
+6742|Accelero
+6743|Passo piano
+6744|Suono il clacson
+6745|Qualcuno attraversa sulle strisce. Cosa fai?
+6746|Mi fermo e lo lascio passare
+6747|Cambio corsia
+6748|Esame della patente
+6749|🚗 Hai preso la patente! Ora puoi guidare.
+6754|Promosso!
+6755|Bocciato
+6756|Complimenti per la patente!
+6757|Tranquillo, puoi riprovare quando vuoi.
+6833|A distanza · {}° anno
+6758|Esame di fine anno a distanza
+6820|{}° anno · 3 domande, ne bastano 2 giuste.
+6759|🎓 Laureato in Management dello sport! Hai il diploma.
+6764|Laureato! Questo titolo ti aiuterà da allenatore.
+6822|Anno superato! Prossimo: {}° anno.
+6768|Non hai superato l'anno. Riproverai il prossimo.
+6771|Promosso
+6772|Sì
+6773|Laureato
+6839|{}° anno
+6774|🚗 Patente
+6775|🎓 Università a distanza
+6777|Titoli e abilità
+6778|🚗 Prima ti serve la patente
+6795|Serve la patente per guidare {}. L'esame ha 3 domande.

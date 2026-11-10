@@ -202,6 +202,7 @@ const School = {
         Player.addEnergy(p, 4);
         School.ask(q, `${head}<h3>Ders zamanı</h3>`, 'Ders', ['Doğru! Öğretmenin seni tebrik etti. Bu soru sınavda çıkabilir.', 'Yanlış ama sorun değil, doğru cevabı gördün. Sınava kadar unutma!']).then((ok) => {
           School.addIq(p, ok ? 1.2 : 0.5);
+          if (typeof Friends !== 'undefined') Friends.maybeSchool();
           Player.addMorale(p, ok ? 2 : 0);
           p.rel.family = U.clamp((p.rel.family || 60) + 2, 0, 100);
           Game.save(); Game.render();
