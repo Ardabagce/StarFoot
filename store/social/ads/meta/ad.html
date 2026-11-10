@@ -1,0 +1,41 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@800&family=Barlow+Semi+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}
+body{width:var(--w);height:var(--h);overflow:hidden;font-family:"Barlow Semi Condensed",sans-serif;color:#f3f1ea;
+background:radial-gradient(120% 70% at 50% 0%,#1d3b8f 0%,#0b1736 55%,#060d24 100%)}
+.wrap{position:relative;height:100%;display:flex;flex-direction:column;align-items:center;padding:70px 64px 60px}
+.top{display:flex;align-items:center;gap:18px;align-self:flex-start}
+.top img{width:84px;height:84px;border-radius:20px;box-shadow:0 6px 20px rgba(0,0,0,.5)}
+.logo{font-family:"Saira Condensed";font-style:italic;font-weight:800;font-size:58px;letter-spacing:1px}
+.logo span{color:#ffcf3f}
+h1{font-family:"Saira Condensed";font-style:italic;font-weight:800;text-transform:uppercase;line-height:.95;text-align:center;margin:34px 0 10px;font-size:var(--hs)}
+h1 em{font-style:inherit;color:#ffcf3f}
+.sub{font-size:var(--ss);font-weight:600;color:#c9d4f2;text-align:center;max-width:900px}
+.phones{flex:1;display:flex;justify-content:center;align-items:center;gap:34px;margin:34px 0;min-height:0}
+.ph{height:100%;max-height:var(--ph);aspect-ratio:1170/2532;border-radius:44px;border:10px solid #0d1325;background:#000;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.6),0 0 0 2px rgba(255,255,255,.12)}
+.ph img{width:100%;height:100%;object-fit:cover;object-position:top}
+.ph.tilt-l{transform:rotate(-4deg)} .ph.tilt-r{transform:rotate(4deg)}
+.cta{display:flex;align-items:center;gap:20px}
+.btn{background:#ffcf3f;color:#1a1400;font-family:"Saira Condensed";font-style:italic;font-weight:800;font-size:46px;padding:14px 46px;transform:skewX(-8deg);text-transform:uppercase}
+.store{font-size:30px;font-weight:700;color:#c9d4f2}
+.chips{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:18px}
+.chip{border:2px solid rgba(255,207,63,.6);color:#ffe28a;border-radius:30px;padding:6px 18px;font-size:26px;font-weight:700}
+</style></head><body><div class="wrap">
+<div class="top"><img src="icon-512.png"><div class="logo">STAR<span>FOOT</span></div></div>
+<h1 id="h"></h1><div class="sub" id="s"></div><div class="chips" id="c"></div>
+<div class="phones" id="p"></div>
+<div class="cta"><div class="btn" id="b">Ücretsiz oyna</div><div class="store">App Store</div></div>
+</div>
+<script>
+const q=new URLSearchParams(location.search);const v=q.get('v'),story=q.get('f')==='story';
+document.documentElement.style.setProperty('--w','1080px');document.documentElement.style.setProperty('--h',story?'1920px':'1350px');
+document.documentElement.style.setProperty('--hs',story?'104px':'92px');document.documentElement.style.setProperty('--ss',story?'38px':'34px');
+document.documentElement.style.setProperty('--ph',story?'1060px':'720px');
+const D={
+ mgr:{h:'Takımını <em>sen</em> yönet',s:'Taktik kur, transfer yap, maçı canlı izle. Kritik anda şutu sen çek!',c:['Canlı maç','Transfer pazarlığı','Basın toplantısı'],p:['mgr_live.png','mgr_home.png']},
+ pen:{h:'Sokaktan <em>efsaneye</em>',s:'Kendi futbolcunu yarat, penaltıyı sen at, kupaları kaldır.',c:['Kritik anları sen oyna','Dünya ligleri','Transfer ve şöhret'],p:['pen_goal.png']},
+}[v];
+if(v==="mgr")b.textContent="Hemen indir";h.innerHTML=D.h;s.textContent=D.s;c.innerHTML=D.c.map(x=>`<span class="chip">${x}</span>`).join('');
+p.innerHTML=D.p.map((x,i)=>`<div class="ph ${D.p.length>1?(i?'tilt-r':'tilt-l'):''}"><img src="${x}"></div>`).join('');
+</script></body></html>
