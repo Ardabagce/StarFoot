@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset="utf-8">
+<!doctype html><html lang="tr"><head><meta charset="utf-8">
 <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@800&family=Barlow+Semi+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0}
@@ -34,6 +34,7 @@ document.documentElement.style.setProperty('--hs',story?'104px':'92px');document
 document.documentElement.style.setProperty('--ph',story?'1060px':'720px');
 const D={
  mgr:{h:'Takımını <em>sen</em> yönet',s:'Taktik kur, transfer yap, maçı canlı izle. Kritik anda şutu sen çek!',c:['Canlı maç','Transfer pazarlığı','Basın toplantısı'],p:['mgr_live.png','mgr_home.png']},
+ car:{h:'Kariyerini <em>sen</em> yaz',s:'Maça çık, gol at, büyük kulüplere transfer ol. Hayatını ve şöhretini de sen yönet.',c:['Kendi oyuncun','Maç günü','Transfer ve şöhret'],p:['car_profile.png','car_home.png']},
  pen:{h:'Sokaktan <em>efsaneye</em>',s:'Kendi futbolcunu yarat, penaltıyı sen at, kupaları kaldır.',c:['Kritik anları sen oyna','Dünya ligleri','Transfer ve şöhret'],p:['pen_goal.png']},
 }[v];
 if(v==="mgr")b.textContent="Hemen indir";h.innerHTML=D.h;s.textContent=D.s;c.innerHTML=D.c.map(x=>`<span class="chip">${x}</span>`).join('');
