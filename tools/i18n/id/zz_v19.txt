@@ -56,3 +56,180 @@
 6365|Rata-rata tahun lalu: {}
 6367|Kelas yang diikuti: {}/{}
 6358|Kecerdasan membuat latihanmu lebih efektif.
+6376|Tidak terlalu terbuka, tidak terlalu tertutup.
+6377|Mengejar gol, tapi meninggalkan celah di belakang.
+6378|Utamakan menjaga gawang, sedikit menciptakan peluang.
+6379|Pressing tinggi
+6380|Menekan lawan di wilayahnya, tapi membuat pemain cepat lelah.
+6381|Serangan balik
+6382|Sangat efektif melawan lawan yang menyerang.
+6383|Ringan
+6384|Pemain beristirahat, kebugaran cepat pulih.
+6385|Beban seimbang.
+6386|Perkembangan lebih cepat, tapi pemulihan lambat dan risiko cedera naik.
+6387|Tawaran kerja pertama
+6388|Beberapa klub ingin bicara denganmu. Pilih tim pertamamu:
+6391|Manajer
+6566|Selamat datang di {}!
+6392|Manajemen memperkenalkanmu ke media. Target musim ini:
+6395|Pilih starting XI di Skuad, atur formasi dan gaya di Taktik.
+6396|Pimpin laga secara langsung: ubah taktik, ganti pemain, bicara ke tim saat jeda.
+6397|Beli atau jual pemain dengan anggaranmu di bursa transfer.
+6398|Jika manajemen hilang kepercayaan, kamu dipecat. Sukses, klub besar akan datang.
+6534|{} ditunjuk sebagai manajer {}.
+6401|4 besar
+6402|Separuh atas
+6403|Papan tengah
+6404|Bertahan di liga
+6584|Piala {}
+6561|🏆 Kami juara {}!
+6573|{}: juara {}.
+6585|vs {}: {}
+6555|💪 {} pulih dari cedera.
+6535|🤕 {} cedera saat latihan ({} minggu).
+6407|Skuad penuh (maks. 30). Jual pemain dulu.
+6410|Anggaran tidak cukup.
+6578|Transfer {}
+6593|Rating {}
+6574|Potensi ~{}
+6411|Biaya transfer:
+6412|Rekrut
+6530|{} menolak: dia ingin klub yang lebih besar.
+6551|✍️ {} bergabung ke skuad ({}).
+6414|Bursa transfer ditutup.
+6415|Skuad minimal 18 pemain.
+6568|{} mengajukan tawaran
+6546|Tawaran mereka untuk {}:
+6417|Jual
+6545|👋 {} dijual ke {} seharga {}.
+6418|Dipecat
+6537|📰 {} berpisah jalan dengan {}.
+6418|Dipecat
+6419|Kamu kehilangan kepercayaan manajemen
+6529|Setelah hasil buruk kamu meninggalkan {}. Tapi dunia sepak bola tidak melupakanmu.
+6421|Lihat tawaran
+6422|Tawaran kerja baru
+6423|Klub-klub ini ingin bicara denganmu:
+98|Pergi
+6547|👋 {} pensiun di usia {}.
+6541|🌱 {} naik dari akademi.
+6549|📅 Musim {} dimulai. Target: {}.
+6424|Pensiun
+6425|Tanpa trofi
+6426|Perpisahan
+6531|Kamu mengakhiri karier manajer di usia {}.
+6427|Menang
+6428|Seri
+6429|Kalah
+6430|Hapus karier manajer saat ini?
+6431|Hapus dan mulai
+6432|Pimpin sebuah klub: bangun skuad, pilih taktik, arahkan dari pinggir lapangan.
+6433|Manajer baru
+6434|Negara
+6435|Latar belakang
+6436|Mantan pemain (reputasi tinggi)
+6437|Sekolah pelatih (kecerdasan taktik tinggi)
+6438|Dari sepak bola amatir (mulai dari liga bawah)
+6439|Tulis nama depan dan belakang.
+6440|Taktik
+6441|Anggaran
+6442|Kepercayaan
+6443|Reputasi
+4039|Progresmu tersimpan.
+6444|Pemain ini sedang tidak bisa main.
+6445|Starting XI penuh. Keluarkan seseorang dulu.
+6448|Yakin ingin berhenti jadi manajer?
+794|Pensiun
+6449|Laga berikutnya
+6450|Pimpin laga
+6451|Hasil cepat
+6576|Starting XI: {}/11
+6452|Tidak ada laga minggu ini.
+6453|Lewati minggu
+6577|Laga terakhir: {} {}-{}
+6564|Kamu peringkat {} di liga
+6591|{}M {}S {}K
+6454|Manajemen mulai tidak sabar!
+6455|Bursa transfer dibuka. Ada pemain baru di tab Transfer.
+6458|Manajemen
+6586|Target: {}
+6569|Cedera: {} minggu
+6592|Performa {}
+3949|Beli
+6581|Skuad ({})
+6459|Pilih otomatis
+6590|Serangan {}
+6582|Pertahanan {}
+6460|Ketuk kotak di kiri untuk memasukkan atau mengeluarkan pemain dari starting XI.
+6461|Jual pemain
+6462|Potensi
+6463|Kebugaran
+6464|Formasi
+4198|Gaya bermain
+6465|Intensitas latihan
+6562|Kekuatan tim: Serangan {}
+6466|Kita tersingkir dari piala.
+6467|Bursa transfer ditutup. Bursa musim panas 5 minggu pertama, bursa musim dingin 4 minggu di tengah musim.
+6587|Anggaran: {}
+6469|Tidak ada pemain baru minggu ini.
+6470|Daftar transfer
+6471|Untuk menjual, ketuk nama pemain di tab Skuad.
+6472|Musim pertamamu sedang berjalan.
+6473|Kecerdasan taktik
+6474|Riwayat karier
+6475|Berhenti jadi manajer
+6476|Juara! Suporter meneriakkan namamu.
+6478|Manajemen sangat senang target tercapai.
+6479|Kamu jauh dari target, manajemen tidak memperpanjang kontrakmu.
+6480|Kamu di bawah target. Manajemen berharap lebih musim depan.
+6483|Klub lain juga tertarik padamu:
+6570|Musim {} selesai
+6485|Target:
+6486|Lawan maju menyerang untuk mengubah skor.
+6565|GOL! {} (assist: {})
+6554|Kebobolan. {} membuat skor {}.
+6544|KARTU MERAH! {} diusir keluar.
+6489|Pemain lawan diusir!
+6559|{} cedera ({} minggu).
+6536|Pergantian: {} masuk, {} keluar.
+6490|Cedera! Siapa yang masuk?
+6493|Jeda babak
+6532|Skor {}-{}. Apa yang akan kamu katakan di ruang ganti?
+6495|😌 Tenang, ikuti rencana
+6497|Tim jadi tenang.
+6498|🔥 Aku ingin lebih!
+6500|Pemain jadi bersemangat!
+6501|😠 Ini tidak bisa diterima!
+6503|Omelan berhasil, tim terbakar semangat!
+6504|Kata-kata keras berbalik, moral turun.
+6505|Siapa yang keluar?
+6506|Pengganti
+6507|Tidak ada cadangan yang cocok.
+6508|Pergantian
+6509|Pilih dulu pemain yang keluar.
+6510|Ganti
+6589|{} lelah
+6512|Lompat ke akhir
+6583|Taktik: {}
+3718|Kita lolos!
+6513|Kita tersingkir.
+6572|Adu penalti: {}-{}
+6575|Laga selesai: {}-{}
+6514|Pimpin sebuah klub: bangun skuad, pilih taktik, dan arahkan laga langsung dari pinggir lapangan. Bisa juga dilanjutkan setelah pensiun sebagai pemain.
+6517|Tawaran dari klub di 30 liga: dari liga bawah hingga klub raksasa
+6518|Formasi, gaya bermain, dan intensitas latihan
+6519|Laga langsung: ubah taktik, ganti pemain, bicara saat jeda
+6520|Bursa transfer, anggaran, dan pemain muda akademi
+6521|Liga, piala, degradasi dan promosi; gagal target, kamu dipecat
+6522|Lanjut langsung saat pensiun sebagai pemain
+6523|Jadi manajer
+6524|Karier bermain dan kecerdasanmu menentukan reputasi. Klub-klub menunggumu.
+6527|Mulai jadi manajer
+6528|M-S-K
+6594|Tawaran kerja
+6595|Kamu sedang tanpa klub. Pilih tim barumu:
+6598|Rotasi otomatis
+6599|Pemain inti yang lelah diganti cadangan yang segar sebelum laga.
+6600|Kamu selalu memilih starting XI sendiri.
+6601|Mati
+6602|Tetap di klubku

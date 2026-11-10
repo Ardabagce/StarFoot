@@ -56,3 +56,180 @@
 6365|Durchschnitt im letzten Jahr: {}
 6367|Besuchte Stunden: {}/{}
 6358|Intelligenz macht dein Training effektiver.
+6376|Weder zu offen noch zu defensiv.
+6377|Sucht Tore, lässt aber hinten Lücken.
+6378|Sichert zuerst das Tor, erspielt wenig Chancen.
+6379|Pressing
+6380|Erdrückt den Gegner in seiner Hälfte, ermüdet aber die Spieler.
+6381|Konter
+6382|Sehr wirksam gegen offensive Gegner.
+6383|Leicht
+6384|Die Spieler erholen sich, die Fitness kommt schnell zurück.
+6385|Ausgewogene Belastung.
+6386|Schnellere Entwicklung, aber langsamere Erholung und mehr Verletzungen.
+6387|Erste Jobangebote
+6388|Vereine wollen mit dir sprechen. Wähle dein erstes Team:
+6391|Trainer
+6566|Willkommen bei {}!
+6392|Der Vorstand hat dich der Presse vorgestellt. Saisonziel:
+6395|Wähle die Startelf unter Kader, Formation und Spielstil unter Taktik.
+6396|Leite Spiele live: Taktik ändern, wechseln, in der Halbzeit zur Mannschaft sprechen.
+6397|Kaufe oder verkaufe in Transferphasen Spieler mit deinem Budget.
+6398|Verliert der Vorstand das Vertrauen, wirst du entlassen. Mit Erfolg klopfen große Vereine an.
+6534|{} ist neuer Trainer von {}.
+6401|Top 4
+6402|Obere Tabellenhälfte
+6403|Mittelfeld
+6404|Klassenerhalt
+6584|{}-Pokal
+6561|🏆 Wir sind {}-Sieger!
+6573|{}: Sieger {}.
+6585|gegen {}: {}
+6555|💪 {} ist wieder fit.
+6535|🤕 {} hat sich im Training verletzt ({} Wochen).
+6407|Kader voll (max. 30 Spieler). Verkaufe zuerst jemanden.
+6410|Budget reicht nicht.
+6578|Transfer: {}
+6593|Stärke {}
+6574|Potenzial ~{}
+6411|Ablöse:
+6412|Verpflichten
+6530|{} hat abgelehnt: Er will zu einem größeren Verein.
+6551|✍️ {} ist zum Kader gestoßen ({}).
+6414|Das Transferfenster ist geschlossen.
+6415|Der Kader braucht mindestens 18 Spieler.
+6568|{} hat ein Angebot gemacht
+6546|Ihr Angebot für {}:
+6417|Verkaufen
+6545|👋 {} für {} an {} verkauft.
+6418|Entlassen
+6537|📰 {} trennt sich von {}.
+6418|Entlassen
+6419|Du hast das Vertrauen des Vorstands verloren
+6529|Nach schlechten Ergebnissen musst du {} verlassen. Aber die Fußballwelt hat dich nicht vergessen.
+6421|Angebote ansehen
+6422|Neue Jobangebote
+6423|Diese Vereine wollen mit dir sprechen:
+98|Gegangen
+6547|👋 {} beendet mit {} seine Karriere.
+6541|🌱 {} aus der Jugend hochgezogen.
+6549|📅 Die Saison {} hat begonnen. Ziel: {}.
+6424|Ruhestand
+6425|Keine Titel
+6426|Abschied
+6531|Mit {} beendest du deine Trainerkarriere.
+6427|Siege
+6428|Remis
+6429|Niederlagen
+6430|Aktuelle Trainerkarriere löschen?
+6431|Löschen und starten
+6432|Übernimm einen Verein: Kader bauen, Taktik wählen, das Spiel von der Seitenlinie leiten.
+6433|Neuer Trainer
+6434|Land
+6435|Hintergrund
+6436|Ex-Profi (hohes Ansehen)
+6437|Trainerschule (hohe taktische Intelligenz)
+6438|Aus dem Amateurfußball (startet unterklassig)
+6439|Gib Vor- und Nachnamen ein.
+6440|Taktik
+6441|Budget
+6442|Vertrauen
+6443|Ansehen
+4039|Dein Fortschritt ist gespeichert.
+6444|Dieser Spieler ist gerade nicht verfügbar.
+6445|Die Startelf ist voll. Nimm zuerst jemanden raus.
+6448|Willst du deine Trainerkarriere wirklich beenden?
+794|In den Ruhestand
+6449|Nächstes Spiel
+6450|Spiel leiten
+6451|Schnelles Ergebnis
+6576|Startelf: {}/11
+6452|Diese Woche kein Spiel.
+6453|Woche überspringen
+6577|Letztes Spiel: {} {}-{}
+6564|Du bist Tabellen-{}.
+6591|{}S {}U {}N
+6454|Der Vorstand wird ungeduldig!
+6455|Das Transferfenster ist offen. Neue Spieler im Tab Transfers.
+6458|Vorstand
+6586|Ziel: {}
+6569|Verletzt: {} Wochen
+6592|Form {}
+3949|Kaufen
+6581|Kader ({})
+6459|Automatisch
+6590|Angriff {}
+6582|Abwehr {}
+6460|Tippe links auf das Kästchen, um einen Spieler in die Startelf zu nehmen oder herauszunehmen.
+6461|Zum Verkauf stellen
+6462|Potenzial
+6463|Fitness
+6464|Formation
+4198|Spielstil
+6465|Trainingsintensität
+6562|Teamstärke: Angriff {}
+6466|Wir sind aus dem Pokal ausgeschieden.
+6467|Das Transferfenster ist zu. Sommer: die ersten 5 Wochen der Saison; Winter: 4 Wochen zur Saisonmitte.
+6587|Budget: {}
+6469|Diese Woche keine neuen Spieler.
+6470|Transferliste
+6471|Um einen Spieler zu verkaufen, tippe im Kader auf seinen Namen.
+6472|Deine erste Saison läuft.
+6473|Taktische Intelligenz
+6474|Karriereverlauf
+6475|Trainerkarriere beenden
+6476|Meister! Die Fans singen deinen Namen.
+6478|Der Vorstand freut sich, dass du das Ziel erreicht hast.
+6479|Du hast das Ziel weit verfehlt, der Vorstand verlängert deinen Vertrag nicht.
+6480|Du hast das Ziel verfehlt. Der Vorstand erwartet nächste Saison mehr.
+6483|Auch andere Vereine sind an dir interessiert:
+6570|Saison {} beendet
+6485|Ziel:
+6486|Der Gegner drängt nach vorne, um das Ergebnis zu drehen.
+6565|TOR! {} (Vorlage: {})
+6554|Gegentor. {} stellt auf {}.
+6544|ROTE KARTE! {} fliegt vom Platz.
+6489|Ein Gegenspieler sieht Rot!
+6559|{} hat sich verletzt ({} Wochen).
+6536|Wechsel: {} kommt, {} geht.
+6490|Verletzung! Wer kommt rein?
+6493|Halbzeit
+6532|Es steht {}-{}. Was sagst du der Mannschaft in der Kabine?
+6495|😌 Ruhig bleiben, am Plan festhalten
+6497|Die Mannschaft hat sich beruhigt.
+6498|🔥 Ich will mehr sehen!
+6500|Die Spieler sind heiß!
+6501|😠 Das ist inakzeptabel!
+6503|Die Standpauke wirkt: Das Team brennt!
+6504|Die harten Worte gingen nach hinten los, die Stimmung ist im Keller.
+6505|Wer geht raus?
+6506|Für ihn
+6507|Kein passender Spieler auf der Bank.
+6508|Auswechslung
+6509|Wähle zuerst den Spieler, der rausgeht.
+6510|Wechsel
+6589|{} müde
+6512|Zum Ende springen
+6583|Taktik: {}
+3718|Wir sind weiter!
+6513|Wir sind raus.
+6572|Elfmeterschießen: {}-{}
+6575|Abpfiff: {}-{}
+6514|Übernimm einen Verein: Kader bauen, Taktik wählen und Spiele live von der Seitenlinie leiten. Auch nach dem Karriereende als Spieler möglich.
+6517|Angebote aus 30 Ligen: vom Unterhaus bis zu den Topklubs
+6518|Formation, Spielstil und Trainingsintensität
+6519|Live-Spiele: Taktik ändern, wechseln, Halbzeitansprache
+6520|Transferfenster, Budget und Talente aus der Jugend
+6521|Liga, Pokal, Abstieg und Aufstieg; verfehlst du das Ziel, fliegst du
+6522|Direkter Wechsel nach dem Karriereende als Spieler
+6523|Trainer werden
+6524|Deine Spielerkarriere und deine Intelligenz bestimmen dein Ansehen. Die Vereine warten.
+6527|Trainerkarriere starten
+6528|S-U-N
+6594|Jobangebote
+6595|Du hast gerade keinen Verein. Wähle dein neues Team:
+6598|Automatische Rotation
+6599|Müde Stammspieler werden vor dem Spiel durch frische Ersatzleute ersetzt.
+6600|Du stellst die Startelf immer selbst auf.
+6601|Aus
+6602|Beim Verein bleiben

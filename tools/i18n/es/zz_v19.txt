@@ -56,3 +56,180 @@
 6365|Media del año pasado: {}
 6367|Clases asistidas: {}/{}
 6358|La inteligencia hace tu entrenamiento más eficaz.
+6376|Ni muy abierto ni muy cerrado.
+6377|Busca muchos goles, pero deja huecos atrás.
+6378|Primero protege su portería; crea pocas ocasiones.
+6379|Presión alta
+6380|Ahoga al rival en su campo, pero cansa mucho a los jugadores.
+6381|Contraataque
+6382|Muy eficaz contra rivales ofensivos.
+6383|Suave
+6384|Los jugadores descansan y recuperan forma rápido.
+6385|Carga equilibrada.
+6386|Mejora más rápida, pero recuperación lenta y más lesiones.
+6387|Primeras ofertas
+6388|Varios clubes quieren hablar contigo. Elige tu primer equipo:
+6391|Entrenador
+6566|¡Bienvenido a {}!
+6392|La directiva te presentó a la prensa. Objetivo de la temporada:
+6395|Elige el once en Plantilla y la formación y el estilo en Táctica.
+6396|Dirige en directo: cambia la táctica, haz cambios y habla al equipo en el descanso.
+6397|Compra o vende jugadores con tu presupuesto en los mercados.
+6398|Si la directiva pierde la confianza, te despiden. Si triunfas, llamarán los grandes.
+6534|{} es nombrado entrenador del {}.
+6401|Top 4
+6402|Mitad alta
+6403|Mitad de tabla
+6404|Evitar el descenso
+6584|Copa de {}
+6561|🏆 ¡Somos campeones de {}!
+6573|{}: campeón {}.
+6585|vs {}: {}
+6555|💪 {} se recuperó de su lesión.
+6535|🤕 {} se lesionó entrenando ({} semanas).
+6407|Plantilla llena (máx. 30). Vende a alguien antes.
+6410|No hay presupuesto suficiente.
+6578|Fichaje de {}
+6593|Media {}
+6574|Potencial ~{}
+6411|Traspaso:
+6412|Fichar
+6530|{} rechazó la oferta: quiere un club más grande.
+6551|✍️ {} se une a la plantilla ({}).
+6414|El mercado está cerrado.
+6415|Necesitas al menos 18 jugadores.
+6568|{} ha hecho una oferta
+6546|Su oferta por {}:
+6417|Vender
+6545|👋 {} vendido al {} por {}.
+6418|Destituido
+6537|📰 El {} prescinde de {}.
+6418|Despedido
+6419|Has perdido la confianza de la directiva
+6529|Tras malos resultados dejas el {}. Pero el fútbol no te ha olvidado.
+6421|Ver ofertas
+6422|Nuevas ofertas
+6423|Estos clubes quieren hablar contigo:
+98|Se marchó
+6547|👋 {} se retira con {} años.
+6541|🌱 {} sube del filial.
+6549|📅 Empieza la temporada {}. Objetivo: {}.
+6424|Retirado
+6425|Sin títulos
+6426|Despedida
+6531|Pones fin a tu carrera de entrenador a los {} años.
+6427|Victorias
+6428|Empates
+6429|Derrotas
+6430|¿Borrar tu carrera de entrenador actual?
+6431|Borrar y empezar
+6432|Toma las riendas de un club: arma la plantilla, elige la táctica y dirige desde la banda.
+6433|Nuevo entrenador
+6434|País
+6435|Trayectoria
+6436|Exjugador (gran reputación)
+6437|Escuela de entrenadores (gran inteligencia táctica)
+6438|Desde el fútbol amateur (empieza en categorías bajas)
+6439|Escribe tu nombre y apellido.
+6440|Táctica
+6441|Presupuesto
+6442|Confianza
+6443|Reputación
+4039|Tu progreso está guardado.
+6444|Este jugador no está disponible ahora.
+6445|El once está completo. Quita a alguien primero.
+6448|¿Seguro que quieres dejar de entrenar?
+794|Retirarse
+6449|Próximo partido
+6450|Dirigir el partido
+6451|Resultado rápido
+6576|Once: {}/11
+6452|No hay partido esta semana.
+6453|Pasar la semana
+6577|Último partido: {} {}-{}
+6564|Vas {}.º en la liga
+6591|{}V {}E {}D
+6454|¡La directiva se impacienta!
+6455|El mercado está abierto. Hay jugadores nuevos en Fichajes.
+6458|Directiva
+6586|Objetivo: {}
+6569|Lesionado: {} semanas
+6592|Forma {}
+3949|Fichar
+6581|Plantilla ({})
+6459|Alinear automático
+6590|Ataque {}
+6582|Defensa {}
+6460|Toca la casilla de la izquierda para meter o sacar a un jugador del once.
+6461|Poner a la venta
+6462|Potencial
+6463|Forma física
+6464|Formación
+4198|Estilo de juego
+6465|Intensidad del entrenamiento
+6562|Fuerza del equipo: Ataque {}
+6466|Estamos eliminados de la copa.
+6467|El mercado está cerrado. El de verano son las 5 primeras semanas; el de invierno, 4 semanas a mitad de temporada.
+6587|Presupuesto: {}
+6469|No hay jugadores nuevos esta semana.
+6470|Lista de fichajes
+6471|Para vender, toca el nombre del jugador en Plantilla.
+6472|Tu primera temporada está en marcha.
+6473|Inteligencia táctica
+6474|Historial
+6475|Dejar de entrenar
+6476|¡Campeones! La afición corea tu nombre.
+6478|La directiva está encantada con el objetivo cumplido.
+6479|Te quedaste muy lejos del objetivo y la directiva no renueva tu contrato.
+6480|No cumpliste el objetivo. La directiva espera más la próxima temporada.
+6483|Otros clubes también se interesan por ti:
+6570|Temporada {} terminada
+6485|Objetivo:
+6486|El rival se vuelca al ataque para cambiar el marcador.
+6565|¡GOL! {} (asistencia: {})
+6554|Encajamos. {} pone el {}.
+6544|¡TARJETA ROJA! {} es expulsado.
+6489|¡Expulsan a un rival!
+6559|{} se ha lesionado ({} semanas).
+6536|Cambio: entra {}, sale {}.
+6490|¡Lesión! ¿Quién entra?
+6493|Descanso
+6532|Van {}-{}. ¿Qué le dirás al equipo en el vestuario?
+6495|😌 Calma, seguid el plan
+6497|El equipo se ha calmado.
+6498|🔥 ¡Quiero más!
+6500|¡Los jugadores se han motivado!
+6501|😠 ¡Esto es inaceptable!
+6503|¡La bronca funcionó: el equipo está encendido!
+6504|Las duras palabras salieron mal; la moral cae.
+6505|¿A quién sacamos?
+6506|Entra
+6507|No hay suplentes disponibles.
+6508|Cambio
+6509|Elige primero al jugador que sale.
+6510|Cambios
+6589|{} cansados
+6512|Ir al final
+6583|Táctica: {}
+3718|¡Pasamos de ronda!
+6513|Eliminados.
+6572|Penaltis: {}-{}
+6575|Final: {}-{}
+6514|Toma las riendas de un club: arma la plantilla, elige la táctica y dirige en directo desde la banda. También puedes seguir tras retirarte como jugador.
+6517|Ofertas de clubes de 30 ligas: de categorías bajas a los grandes
+6518|Formación, estilo de juego e intensidad de entrenamiento
+6519|Partidos en directo: cambia la táctica, haz cambios, habla en el descanso
+6520|Mercados, presupuesto y jóvenes de la cantera
+6521|Liga, copa, descenso y ascenso; si no cumples, te despiden
+6522|Paso directo al retirarte como jugador
+6523|Hazte entrenador
+6524|Tu carrera como jugador y tu inteligencia marcan tu reputación. Los clubes te esperan.
+6527|Empezar a entrenar
+6528|V-E-D
+6594|Ofertas de trabajo
+6595|Ahora no tienes club. Elige tu nuevo equipo:
+6598|Rotación automática
+6599|Los titulares cansados se cambian por suplentes frescos antes del partido.
+6600|Tú eliges siempre el once.
+6601|Desactivada
+6602|Seguir en mi club

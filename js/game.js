@@ -186,7 +186,7 @@ const Game = {
     setTimeout(() => d.remove(), 3100);
   },
   show(id) {
-    ['title', 'create', 'hub', 'end'].forEach((s) => document.getElementById(s).classList.toggle('hidden', s !== id));
+    ['title', 'create', 'hub', 'end', 'coach'].forEach((s) => { const e = document.getElementById(s); if (e) e.classList.toggle('hidden', s !== id); });
   },
 
   // tam ekran yükleniyor göstergesi
@@ -226,10 +226,10 @@ const Game = {
     if (tx && typeof Legacy !== 'undefined') {
       const nb = Object.keys(Scenario.badges()).length;
       const pk = typeof Packs !== 'undefined';
-      tx.innerHTML = (pk ? `<div class="t-packs"><button class="btn t-pack wc" id="t-wc">${Icon('star')}<span><b>Dünya Şampiyonası Rüyası</b><small>${Plus.active ? 'Premium+ ile dahil' : Packs.owns('wc') ? 'Yeni mod' : 'Yeni mod · kilitli'}</small></span></button><button class="btn t-pack lp" id="t-lp">${Icon('fire')}<span><b>Efsanelerin İzinde</b><small>${Plus.active ? 'Premium+ ile dahil' : Packs.owns('legends') ? 'Yeni mod' : 'Yeni mod · kilitli'}</small></span></button></div>` : '') + `<button class="btn btn-ghost" id="t-tut">${Icon('whistle')} Nasıl Oynanır</button><button class="btn btn-ghost" id="t-edit">${Icon('pen')} Editör</button><button class="btn btn-ghost" id="t-scn">🎯 Senaryolar${nb ? ` <em>${nb}/${SCEN.length}</em>` : ''}</button><button class="btn btn-ghost" id="t-hof">🏛️ Efsaneler Salonu${Legacy.list().length ? ` <em>${Legacy.list().length}</em>` : ''}</button>`;
+      tx.innerHTML = (pk ? `<div class="t-packs"><button class="btn t-pack wc" id="t-wc">${Icon('star')}<span><b>Dünya Şampiyonası Rüyası</b><small>${Plus.active ? 'Premium+ ile dahil' : Packs.owns('wc') ? 'Yeni mod' : 'Yeni mod · kilitli'}</small></span></button><button class="btn t-pack lp" id="t-lp">${Icon('fire')}<span><b>Efsanelerin İzinde</b><small>${Plus.active ? 'Premium+ ile dahil' : Packs.owns('legends') ? 'Yeni mod' : 'Yeni mod · kilitli'}</small></span></button>${typeof Coach !== 'undefined' && Coach.enabled() ? `<button class="btn t-pack cm" id="t-cm">${Icon('whistle')}<span><b>Teknik Direktör</b><small>${Packs.owns('coach') ? 'Yeni mod' : 'Yeni mod · kilitli'}</small></span></button>` : ''}</div>` : '') + `<button class="btn btn-ghost" id="t-tut">${Icon('whistle')} Nasıl Oynanır</button><button class="btn btn-ghost" id="t-edit">${Icon('pen')} Editör</button><button class="btn btn-ghost" id="t-scn">🎯 Senaryolar${nb ? ` <em>${nb}/${SCEN.length}</em>` : ''}</button><button class="btn btn-ghost" id="t-hof">🏛️ Efsaneler Salonu${Legacy.list().length ? ` <em>${Legacy.list().length}</em>` : ''}</button>`;
       UI.strip(tx);
       document.getElementById('t-scn').onclick = () => Scenario.menu();
-      if (pk) { document.getElementById('t-wc').onclick = () => WC.menu(); document.getElementById('t-lp').onclick = () => LPath.menu(); }
+      if (pk) { document.getElementById('t-wc').onclick = () => WC.menu(); document.getElementById('t-lp').onclick = () => LPath.menu(); const tc = document.getElementById('t-cm'); if (tc) tc.onclick = () => Coach.menu(); }
       document.getElementById('t-tut').onclick = () => Tutorial.open();
       const te = document.getElementById('t-edit'); if (te) te.onclick = () => (typeof Edit !== 'undefined' ? Edit.open() : null);
       document.getElementById('t-hof').onclick = () => Legacy.show();
@@ -1277,6 +1277,10 @@ const Game = {
         <div class="end-btns">${typeof Star !== 'undefined' && Star.on() ? `<button class="btn btn-ghost" id="end-doc">${Icon('play')} Belgeselin</button>` : ''}${shareCv ? `<button class="btn btn-ghost" id="end-share">${Icon('share')} Paylaş</button>` : ''}<button class="btn btn-big" onclick="Game.toMenu()">Ana Menü</button></div>
       </div>`;
     if (heir) el.querySelector('#end-heir').onclick = () => Legacy.continueWith(heir);
+    if (typeof Coach !== 'undefined' && Coach.enabled()) {
+      el.querySelector('.end-btns').insertAdjacentHTML('beforebegin', `<div class="heir cm-heir"><b>${Icon('whistle')} Teknik direktör ol</b><small>Futbolculuk kariyerin ve Zeka puanın itibarını belirler. Kulüpler seni bekliyor.</small><button class="btn" id="end-coach">Teknik direktörlüğe başla</button></div>`);
+      el.querySelector('#end-coach').onclick = () => (Packs.owns('coach') ? Coach.fromPlayer(p, legend) : Packs.offer('coach'));
+    }
     if (el.querySelector('#end-doc')) el.querySelector('#end-doc').onclick = () => Star.doc(p, s);
     if (shareCv) el.querySelector('#end-share').onclick = () => ShareCard.preview(shareCv, ShareCard.text());
     UI.strip(el);

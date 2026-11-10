@@ -56,3 +56,180 @@
 6365|Média do ano passado: {}
 6367|Aulas assistidas: {}/{}
 6358|A inteligência deixa seu treino mais eficiente.
+6376|Nem muito aberto nem muito fechado.
+6377|Busca muitos gols, mas deixa espaços atrás.
+6378|Protege o gol primeiro; cria poucas chances.
+6379|Pressão alta
+6380|Sufoca o rival no campo dele, mas cansa muito os jogadores.
+6381|Contra-ataque
+6382|Muito eficaz contra rivais ofensivos.
+6383|Leve
+6384|Os jogadores descansam e recuperam rápido.
+6385|Carga equilibrada.
+6386|Evolução mais rápida, mas recuperação lenta e mais lesões.
+6387|Primeiras propostas
+6388|Clubes querem conversar com você. Escolha seu primeiro time:
+6391|Treinador
+6566|Bem-vindo ao {}!
+6392|A diretoria apresentou você à imprensa. Meta da temporada:
+6395|Escolha os titulares em Elenco e a formação e o estilo em Tática.
+6396|Comande ao vivo: mude a tática, faça substituições e fale com o time no intervalo.
+6397|Compre ou venda jogadores com seu orçamento nas janelas.
+6398|Se a diretoria perder a confiança, você é demitido. Com sucesso, grandes clubes vão chamar.
+6534|{} é o novo treinador do {}.
+6401|Top 4
+6402|Metade de cima
+6403|Meio da tabela
+6404|Escapar do rebaixamento
+6584|Copa de {}
+6561|🏆 Somos campeões: {}!
+6573|{}: campeão {}.
+6585|contra {}: {}
+6555|💪 {} se recuperou da lesão.
+6535|🤕 {} se lesionou no treino ({} semanas).
+6407|Elenco cheio (máx. 30). Venda alguém antes.
+6410|Orçamento insuficiente.
+6578|Contratação de {}
+6593|Força {}
+6574|Potencial ~{}
+6411|Valor:
+6412|Contratar
+6530|{} recusou: quer um clube maior.
+6551|✍️ {} chegou ao elenco ({}).
+6414|A janela de transferências está fechada.
+6415|O elenco precisa de pelo menos 18 jogadores.
+6568|{} fez uma proposta
+6546|A proposta deles por {}:
+6417|Vender
+6545|👋 {} vendido ao {} por {}.
+6418|Demitido
+6537|📰 O {} demitiu {}.
+6418|Demitido
+6419|Você perdeu a confiança da diretoria
+6529|Após maus resultados você deixa o {}. Mas o futebol não te esqueceu.
+6421|Ver propostas
+6422|Novas propostas
+6423|Estes clubes querem falar com você:
+98|Saiu
+6547|👋 {} se aposentou aos {} anos.
+6541|🌱 {} promovido(s) da base.
+6549|📅 Começou a temporada {}. Meta: {}.
+6424|Aposentado
+6425|Sem títulos
+6426|Despedida
+6531|Você encerrou a carreira de treinador aos {} anos.
+6427|Vitórias
+6428|Empates
+6429|Derrotas
+6430|Apagar sua carreira de treinador atual?
+6431|Apagar e começar
+6432|Assuma um clube: monte o elenco, escolha a tática e comande da beira do campo.
+6433|Novo treinador
+6434|País
+6435|Histórico
+6436|Ex-jogador (alta reputação)
+6437|Escola de treinadores (alta inteligência tática)
+6438|Vindo do amador (começa em divisão inferior)
+6439|Digite nome e sobrenome.
+6440|Tática
+6441|Orçamento
+6442|Confiança
+6443|Reputação
+4039|Seu progresso foi salvo.
+6444|Este jogador não pode jogar agora.
+6445|Os titulares estão completos. Tire alguém antes.
+6448|Tem certeza de que quer parar de treinar?
+794|Aposentar
+6449|Próximo jogo
+6450|Comandar o jogo
+6451|Resultado rápido
+6576|Titulares: {}/11
+6452|Sem jogo nesta semana.
+6453|Pular a semana
+6577|Último jogo: {} {}-{}
+6564|Você está em {}º na liga
+6591|{}V {}E {}D
+6454|A diretoria está impaciente!
+6455|A janela está aberta. Há novos jogadores na aba Transferências.
+6458|Diretoria
+6586|Meta: {}
+6569|Lesionado: {} semanas
+6592|Forma {}
+3949|Comprar
+6581|Elenco ({})
+6459|Escalar automático
+6590|Ataque {}
+6582|Defesa {}
+6460|Toque na caixa à esquerda para pôr ou tirar um jogador dos titulares.
+6461|Colocar à venda
+6462|Potencial
+6463|Condição
+6464|Formação
+4198|Estilo de jogo
+6465|Intensidade do treino
+6562|Força do time: Ataque {}
+6466|Fomos eliminados da copa.
+6467|A janela está fechada. A de verão são as 5 primeiras semanas; a de inverno dura 4 semanas no meio da temporada.
+6587|Orçamento: {}
+6469|Sem jogadores novos nesta semana.
+6470|Lista de transferências
+6471|Para vender, toque no nome do jogador em Elenco.
+6472|Sua primeira temporada está em andamento.
+6473|Inteligência tática
+6474|Histórico da carreira
+6475|Parar de treinar
+6476|Campeões! A torcida grita seu nome.
+6478|A diretoria está muito feliz com a meta cumprida.
+6479|Você ficou muito longe da meta e a diretoria não vai renovar.
+6480|Você ficou abaixo da meta. A diretoria espera mais na próxima temporada.
+6483|Outros clubes também estão interessados:
+6570|Temporada {} encerrada
+6485|Meta:
+6486|O rival se lança ao ataque para mudar o placar.
+6565|GOL! {} (assistência: {})
+6554|Sofremos. {} faz {}.
+6544|CARTÃO VERMELHO! {} foi expulso.
+6489|Um rival foi expulso!
+6559|{} se lesionou ({} semanas).
+6536|Substituição: entra {}, sai {}.
+6490|Lesão! Quem entra?
+6493|Intervalo
+6532|Está {}-{}. O que você vai dizer ao time no vestiário?
+6495|😌 Calma, sigam o plano
+6497|O time se acalmou.
+6498|🔥 Quero mais!
+6500|Os jogadores ficaram motivados!
+6501|😠 Isso é inaceitável!
+6503|A bronca funcionou: o time pegou fogo!
+6504|As palavras duras pegaram mal; o moral caiu.
+6505|Quem sai?
+6506|Entra
+6507|Sem reservas disponíveis.
+6508|Substituição
+6509|Escolha primeiro quem sai.
+6510|Substituições
+6589|{} cansados
+6512|Pular para o fim
+6583|Tática: {}
+3718|Passamos de fase!
+6513|Eliminados.
+6572|Pênaltis: {}-{}
+6575|Fim de jogo: {}-{}
+6514|Assuma um clube: monte o elenco, escolha a tática e comande ao vivo da beira do campo. Também dá para continuar após se aposentar como jogador.
+6517|Propostas de clubes de 30 ligas: da divisão de baixo aos gigantes
+6518|Formação, estilo de jogo e intensidade de treino
+6519|Jogos ao vivo: mude a tática, substitua, fale no intervalo
+6520|Janelas de transferência, orçamento e jovens da base
+6521|Liga, copa, rebaixamento e acesso; não bata a meta e é demitido
+6522|Passagem direta ao se aposentar como jogador
+6523|Vire treinador
+6524|Sua carreira de jogador e sua inteligência definem sua reputação. Os clubes esperam por você.
+6527|Começar a treinar
+6528|V-E-D
+6594|Propostas de trabalho
+6595|Você está sem clube agora. Escolha seu novo time:
+6598|Rodízio automático
+6599|Titulares cansados são trocados por reservas descansados antes do jogo.
+6600|Você sempre escolhe os titulares.
+6601|Desligado
+6602|Ficar no meu clube

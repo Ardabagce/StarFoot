@@ -56,3 +56,180 @@
 6365|Media dell'anno scorso: {}
 6367|Lezioni seguite: {}/{}
 6358|L'intelligenza rende l'allenamento più efficace.
+6376|Né troppo aperto né troppo chiuso.
+6377|Cerca molti gol ma lascia spazi dietro.
+6378|Prima protegge la porta, crea poche occasioni.
+6379|Pressing alto
+6380|Soffoca l'avversario nella sua metà campo, ma stanca molto i giocatori.
+6381|Contropiede
+6382|Molto efficace contro avversari offensivi.
+6383|Leggero
+6384|I giocatori riposano e recuperano in fretta.
+6385|Carico equilibrato.
+6386|Crescita più rapida, ma recupero lento e più infortuni.
+6387|Prime offerte
+6388|Alcuni club vogliono parlarti. Scegli la tua prima squadra:
+6391|Allenatore
+6566|Benvenuto al {}!
+6392|La dirigenza ti ha presentato alla stampa. Obiettivo stagionale:
+6395|Scegli l'undici in Rosa, modulo e stile in Tattica.
+6396|Gestisci le partite dal vivo: cambia tattica, fai sostituzioni e parla alla squadra all'intervallo.
+6397|Compra o vendi giocatori col tuo budget nelle finestre di mercato.
+6398|Se la dirigenza perde fiducia sei esonerato. Se vinci, i grandi club busseranno.
+6534|{} è il nuovo allenatore del {}.
+6401|Primi 4
+6402|Prima metà
+6403|Metà classifica
+6404|Salvezza
+6584|Coppa di {}
+6561|🏆 Siamo campioni: {}!
+6573|{}: vince {}.
+6585|contro {}: {}
+6555|💪 {} ha recuperato dall'infortunio.
+6535|🤕 {} si è infortunato in allenamento ({} settimane).
+6407|Rosa piena (max 30). Vendi prima qualcuno.
+6410|Budget insufficiente.
+6578|Acquisto di {}
+6593|Forza {}
+6574|Potenziale ~{}
+6411|Costo:
+6412|Ingaggia
+6530|{} ha rifiutato: vuole un club più grande.
+6551|✍️ {} si unisce alla rosa ({}).
+6414|Il mercato è chiuso.
+6415|Servono almeno 18 giocatori in rosa.
+6568|{} ha fatto un'offerta
+6546|La loro offerta per {}:
+6417|Vendi
+6545|👋 {} ceduto al {} per {}.
+6418|Esonerato
+6537|📰 Il {} esonera {}.
+6418|Esonerato
+6419|Hai perso la fiducia della dirigenza
+6529|Dopo i cattivi risultati lasci il {}. Ma il calcio non ti ha dimenticato.
+6421|Vedi offerte
+6422|Nuove offerte
+6423|Questi club vogliono parlarti:
+98|Lasciato
+6547|👋 {} si ritira a {} anni.
+6541|🌱 {} promosso/i dal vivaio.
+6549|📅 Inizia la stagione {}. Obiettivo: {}.
+6424|Ritirato
+6425|Nessun trofeo
+6426|Addio
+6531|Chiudi la carriera da allenatore a {} anni.
+6427|Vittorie
+6428|Pareggi
+6429|Sconfitte
+6430|Eliminare la carriera da allenatore attuale?
+6431|Elimina e inizia
+6432|Prendi in mano un club: costruisci la rosa, scegli la tattica, guida dalla panchina.
+6433|Nuovo allenatore
+6434|Paese
+6435|Percorso
+6436|Ex calciatore (alta reputazione)
+6437|Scuola allenatori (alta intelligenza tattica)
+6438|Dal calcio dilettanti (parte dalle serie minori)
+6439|Inserisci nome e cognome.
+6440|Tattica
+6441|Budget
+6442|Fiducia
+6443|Reputazione
+4039|I progressi sono salvati.
+6444|Questo giocatore ora non è disponibile.
+6445|L'undici è completo. Togli prima qualcuno.
+6448|Sei sicuro di voler smettere di allenare?
+794|Ritirati
+6449|Prossima partita
+6450|Gestisci la partita
+6451|Risultato rapido
+6576|Undici: {}/11
+6452|Nessuna partita questa settimana.
+6453|Salta la settimana
+6577|Ultima partita: {} {}-{}
+6564|Sei {}° in campionato
+6591|{}V {}N {}P
+6454|La dirigenza è impaziente!
+6455|Il mercato è aperto. Nuovi giocatori nella sezione Mercato.
+6458|Dirigenza
+6586|Obiettivo: {}
+6569|Infortunato: {} settimane
+6592|Forma {}
+3949|Compra
+6581|Rosa ({})
+6459|Auto
+6590|Attacco {}
+6582|Difesa {}
+6460|Tocca la casella a sinistra per mettere o togliere un giocatore dall'undici.
+6461|Metti in vendita
+6462|Potenziale
+6463|Condizione
+6464|Modulo
+4198|Stile di gioco
+6465|Intensità allenamento
+6562|Forza della squadra: Attacco {}
+6466|Siamo fuori dalla coppa.
+6467|Il mercato è chiuso. Estivo: le prime 5 settimane; invernale: 4 settimane a metà stagione.
+6587|Budget: {}
+6469|Nessun nuovo giocatore questa settimana.
+6470|Lista trasferimenti
+6471|Per vendere, tocca il nome del giocatore in Rosa.
+6472|La tua prima stagione è in corso.
+6473|Intelligenza tattica
+6474|Storico carriera
+6475|Smetti di allenare
+6476|Campioni! I tifosi cantano il tuo nome.
+6478|La dirigenza è felice dell'obiettivo raggiunto.
+6479|Sei rimasto lontano dall'obiettivo: la dirigenza non rinnova il contratto.
+6480|Obiettivo mancato. La dirigenza si aspetta di più la prossima stagione.
+6483|Anche altri club sono interessati a te:
+6570|Stagione {} conclusa
+6485|Obiettivo:
+6486|L'avversario si spinge in avanti per cambiare il risultato.
+6565|GOL! {} (assist: {})
+6554|Gol subito. {} porta il punteggio sul {}.
+6544|CARTELLINO ROSSO! {} espulso.
+6489|Un avversario è stato espulso!
+6559|{} si è infortunato ({} settimane).
+6536|Sostituzione: entra {}, esce {}.
+6490|Infortunio! Chi entra?
+6493|Intervallo
+6532|{}-{}. Cosa dirai alla squadra nello spogliatoio?
+6495|😌 Calma, seguite il piano
+6497|La squadra si è calmata.
+6498|🔥 Voglio di più!
+6500|I giocatori si sono caricati!
+6501|😠 È inaccettabile!
+6503|La strigliata ha funzionato: squadra infuocata!
+6504|Le parole dure hanno avuto l'effetto opposto, morale a terra.
+6505|Chi esce?
+6506|Al suo posto
+6507|Nessun panchinaro disponibile.
+6508|Sostituzione
+6509|Scegli prima chi esce.
+6510|Cambi
+6589|{} stanchi
+6512|Vai alla fine
+6583|Tattica: {}
+3718|Siamo passati!
+6513|Eliminati.
+6572|Rigori: {}-{}
+6575|Finale: {}-{}
+6514|Prendi in mano un club: costruisci la rosa, scegli la tattica e guida le partite dal vivo. Puoi continuare anche dopo il ritiro da giocatore.
+6517|Offerte da club di 30 campionati: dalle serie minori ai grandi club
+6518|Modulo, stile di gioco e intensità di allenamento
+6519|Partite dal vivo: cambia tattica, fai sostituzioni, parla all'intervallo
+6520|Mercato, budget e giovani del vivaio
+6521|Campionato, coppa, retrocessione e promozione; manchi l'obiettivo e sei esonerato
+6522|Passaggio diretto al ritiro da giocatore
+6523|Diventa allenatore
+6524|La carriera da giocatore e l'intelligenza decidono la tua reputazione. I club ti aspettano.
+6527|Inizia ad allenare
+6528|V-N-P
+6594|Offerte di lavoro
+6595|Ora non hai un club. Scegli la tua nuova squadra:
+6598|Rotazione automatica
+6599|I titolari stanchi vengono sostituiti da riserve fresche prima della partita.
+6600|Scegli sempre tu l'undici.
+6601|Disattivata
+6602|Resta nel mio club

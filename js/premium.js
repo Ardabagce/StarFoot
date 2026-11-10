@@ -354,6 +354,8 @@ const Plus = {
 const PACKS = {
   wc: { id: 'starfoot_wc', ic: 'star', t: 'Dünya Şampiyonası Rüyası', d: '18 yaşında seçtiğin milli takımla tek bir Dünya Şampiyonası\'na odaklanan, kendi kaydı olan ayrı bir mod.',
     f: ['65 milli takım arasından ülkeni seç, 48 takımlı turnuvada oyna', 'Hazırlık kampı, hazırlık maçları ve kadro açıklaması', 'Maçlar arası günler: antrenman, taktik, röportaj, kamp olayları', 'Eleme turlarında penaltı atışları: penaltını sen atarsın', 'Gol Kralı Kupası, Altın Yıldız ve En İyi Genç Oyuncu ödülleri', 'Aynı oyuncuyla 4 turnuvalık milli takım kariyeri (2026–2038)', 'Rakip analizi, taktik seçimi ve 26 çıkartmalık hedef albümü'] },
+  coach: { id: 'starfoot_coach', ic: 'whistle', t: 'Teknik Direktör', d: 'Kulübün başına geç: kadroyu kur, taktiği seç, maçı kenardan canlı yönet. Futbolculuk kariyerinden emekli olunca da devam edebilirsin.',
+    f: ['30 ligden kulüp teklifleri: alt ligden devlere uzanan kariyer', 'Diziliş, oyun anlayışı ve antrenman yoğunluğu', 'Canlı maç: taktik değiştir, oyuncu değiştir, devre arasında takıma konuş', 'Transfer dönemleri, bütçe, altyapıdan yetişen gençler', 'Lig, kupa, küme düşme ve yükselme; yönetimin hedefi tutmazsa kovulma', 'Futbolcu kariyerinden emeklilikte doğrudan geçiş'] },
   legends: { id: 'starfoot_legends', ic: 'fire', t: 'Efsanelerin İzinde', d: 'Futbol tarihinin efsanelerinden esinlenen 6 kurgusal kariyer: onların doğduğu yılda, onların altyapısında ve yetenekleriyle başla.',
     f: ['6 efsane hikâyesi: Arjantin, Portekiz, Brezilya ve Fransa\'dan', 'Efsanenin kulüplerinden gelen hikâye transferleri ve dönüm noktaları', 'Başlangıçta özel yetenek ve efsanenin oyun tarzına uygun özellikler', 'Efsanenin başarılarına göre hedefler ve emeklilikte karşılaştırma'] },
 };
@@ -361,7 +363,7 @@ const Packs = {
   price: {},
   key(k) { return 'starfoot_pack_' + k; },
   // Premium+ sahiplerinde iki mod da dahil (önceden alanlar dahil)
-  owns(k) { if (typeof Plus !== 'undefined' && Plus.active) return true; try { return localStorage.getItem(Packs.key(k)) === '1'; } catch (e) { return false; } },
+  owns(k) { if (k !== 'coach' && typeof Plus !== 'undefined' && Plus.active) return true; try { return localStorage.getItem(Packs.key(k)) === '1'; } catch (e) { return false; } },
   bought(k) { try { return localStorage.getItem(Packs.key(k)) === '1'; } catch (e) { return false; } },
   set(k) { try { localStorage.setItem(Packs.key(k), '1'); } catch (e) { /* yok */ } },
   // mağazadaki satın alımlara göre sahiplik; yeni paket bulunduysa true
@@ -419,12 +421,12 @@ const Packs = {
       btns.push({ t: 'Satın alımları geri yükle', cls: 'btn-ghost', fn: () => Premium.restore().then(() => { if (Packs.owns(k)) Packs.open(k); }) });
       btns.push({ t: `${Icon(x.ic)} Satın al${pr ? ` · ${U.esc(pr.s)}` : ''}`, cls: 'btn-big', fn: () => Packs.buy(k).then((ok) => { if (ok) Packs.open(k); }) });
     }
-    if (can && !Plus.active) btns.push({ t: `${Icon('star')} Premium+ ile dahil`, cls: 'btn-ghost', fn: () => Plus.pitch('', 'pack_' + k) });
+    if (can && !Plus.active && k !== 'coach') btns.push({ t: `${Icon('star')} Premium+ ile dahil`, cls: 'btn-ghost', fn: () => Plus.pitch('', 'pack_' + k) });
     Game.modal(`<div class="ev-tag">Yeni mod</div><h2>${Icon(x.ic)} ${x.t}</h2><p>${x.d}</p>
       <ul class="prem-l">${x.f.map((t) => `<li>${t}</li>`).join('')}</ul>
       ${can ? '<p class="muted">Tek seferlik satın alma. Reklam yok, tüm cihazlarında geri yükleyebilirsin.</p>' : '<p class="muted">Bu mod App Store uygulamasında satın alınabilir.</p>'}`, btns, { wide: true });
   },
-  open(k) { if (k === 'wc') WC.menu(); else LPath.menu(); },
+  open(k) { if (k === 'wc') WC.menu(); else if (k === 'coach') Coach.menu(); else LPath.menu(); },
 };
 
 // Premium'da ödüllü reklam gösterilmez, ödül doğrudan verilir
