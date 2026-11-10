@@ -770,3 +770,29 @@
 7321|Brunei
 7322|Bhutan
 7323|Osttimor
+7344|{} legt ab, {} schießt, aber kein Tor.
+7324|Spielweise des Gegners
+7347|{}: will mehr Einsatzzeit
+7346|{} sorgt für Ärger in der Kabine
+7348|{} will einen neuen Vertrag
+7349|{} bietet für {}
+7327|Der Präsident will dich sprechen
+7328|Entscheidung offen
+7329|Keine neuen Nachrichten.
+7330|Posteingang
+7331|Vertrauen des Vorstands
+1651|Tabelle
+7332|Vereinslage
+7333|Auf Liste
+7350|Ø {}
+7334|Fitn.
+7335|Sehr zufrieden
+7336|Zufrieden
+7337|Unruhig
+7338|Unzufrieden
+7339|Persönlichkeit
+7340|Schlüsselmomente selbst spielen
+7341|Transferfenster offen
+7342|Transferfenster geschlossen
+7351|{} Wo.
+7353|{} steht im Abseits.

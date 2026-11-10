@@ -770,3 +770,29 @@
 7321|Brunéi
 7322|Bután
 7323|Timor Oriental
+7344|{} pasa, {} dispara pero no entra.
+7324|Estilo del rival
+7347|{}: quiere más minutos
+7346|{} armó lío en el vestuario
+7348|{} quiere un nuevo contrato
+7349|{} hizo una oferta por {}
+7327|El presidente quiere verte
+7328|Pendiente de decisión
+7329|No hay mensajes nuevos.
+7330|Bandeja de entrada
+7331|Confianza de la directiva
+1651|Clasificación
+7332|Estado del club
+7333|En venta
+7350|Media {}
+7334|Cond.
+7335|Muy feliz
+7336|Contento
+7337|Inquieto
+7338|Descontento
+7339|Personalidad
+7340|Juego yo los momentos clave
+7341|Mercado abierto
+7342|Mercado cerrado
+7351|{} sem
+7353|{} cae en fuera de juego.

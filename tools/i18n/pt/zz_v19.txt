@@ -770,3 +770,29 @@
 7321|Brunei
 7322|Butão
 7323|Timor-Leste
+7344|{} passa, {} chuta mas não entra.
+7324|Estilo do rival
+7347|{}: quer mais minutos
+7346|{} causou problemas no vestiário
+7348|{} quer um novo contrato
+7349|{} fez uma oferta por {}
+7327|O presidente quer te ver
+7328|Aguardando decisão
+7329|Nenhuma mensagem nova.
+7330|Caixa de entrada
+7331|Confiança da diretoria
+1651|Classificação
+7332|Situação do clube
+7333|À venda
+7350|Média {}
+7334|Cond.
+7335|Muito feliz
+7336|Satisfeito
+7337|Inquieto
+7338|Insatisfeito
+7339|Personalidade
+7340|Eu jogo os lances decisivos
+7341|Janela de transferências aberta
+7342|Janela de transferências fechada
+7351|{} sem
+7353|{} está impedido.

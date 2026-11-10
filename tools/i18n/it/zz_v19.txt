@@ -770,3 +770,29 @@
 7321|Brunei
 7322|Bhutan
 7323|Timor Est
+7344|{} passa, {} tira ma niente gol.
+7324|Stile avversario
+7347|{}: vuole più minuti
+7346|{} ha creato problemi nello spogliatoio
+7348|{} vuole un nuovo contratto
+7349|{} ha fatto un'offerta per {}
+7327|Il presidente vuole vederti
+7328|In attesa di decisione
+7329|Nessun nuovo messaggio.
+7330|Posta in arrivo
+7331|Fiducia della società
+1651|Classifica
+7332|Situazione del club
+7333|In vendita
+7350|Media {}
+7334|Cond.
+7335|Molto felice
+7336|Soddisfatto
+7337|Irrequieto
+7338|Scontento
+7339|Personalità
+7340|Gioco io i momenti chiave
+7341|Mercato aperto
+7342|Mercato chiuso
+7351|{} sett
+7353|{} è in fuorigioco.

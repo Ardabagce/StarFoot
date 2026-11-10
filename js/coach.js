@@ -128,6 +128,8 @@ const Coach = {
     return ro.map((p) => Coach.mkPlayer({ n: p.n, pos: p.pos, r: U.clamp(p.r, 35, 92), age: p.age || U.randi(19, 33), nat: p.nat }));
   },
   ovr(p) { return Math.round(p.r); },
+  // isimle birlikte yazılan mevki kısaltması (oyunun diline göre)
+  pa(pos) { const t = CM_POS[pos] || pos; try { return typeof I18N !== 'undefined' && I18N.t ? I18N.t(t) : t; } catch (e) { return t; } },
   avg(list) { return list.length ? list.reduce((a, b) => a + b, 0) / list.length : 0; },
   teamRating() {
     const sq = Coach.s.squad.filter((p) => !p.loan).sort((a, b) => b.r - a.r).slice(0, 14);
@@ -358,10 +360,12 @@ const Coach = {
     s.rec.gf += gf; s.rec.ga += ga;
     if (win) { s.rec.w++; s.stint.w++; s.month.w++; } else if (draw) { s.rec.d++; s.stint.d++; s.month.d++; } else { s.rec.l++; s.stint.l++; s.month.l++; }
     const diff = Coach.teamRating() - Coach.rating(m.opp) + (m.home ? 2 : -2);
-    const exp = U.clamp(0.5 + diff / 30, 0.1, 0.9);
+    const exp = U.clamp(0.5 + diff / 30, 0.2, 0.8);
     const got = win ? 1 : draw ? 0.45 : 0;
-    s.conf = U.clamp(s.conf + (got - exp) * (m.comp === 'cup' ? 6 : 9), 0, 100);
-    s.fans = U.clamp(s.fans + (got - exp) * 8 + (gf >= 3 ? 1 : 0), 0, 100);
+    // FM gibi: maç sonucu küçük etki, asıl belirleyici ligdeki sıranın hedefe göre durumu
+    const tgt = m.comp === 'lg' && s.round >= 6 ? U.clamp((s.target - Coach.myPos()) * 0.6, -2, 2) : 0;
+    s.conf = U.clamp(s.conf + (got - exp) * (m.comp === 'cup' ? 4 : 5) + tgt + (60 - s.conf) * 0.03, 0, 100);
+    s.fans = U.clamp(s.fans + (got - exp) * 5 + (gf >= 3 ? 1 : 0) + tgt * 0.5 + (55 - s.fans) * 0.04, 0, 100);
     s.rep = U.clamp(s.rep + (got - exp) * 0.6, 0, 100);
     s.squad.forEach((p) => { const k = p.pers === 'calm' ? 0.5 : 1; p.mor = U.clamp(p.mor + (win ? 3 : draw ? 0 : -3) * k, 25, 100); });
     if (m.home) { const t = Coach.ticketIncome(); s.money += t; s.lastGate = t; }
@@ -394,11 +398,11 @@ const Coach = {
     const avgR = Coach.teamRating();
     s.squad.forEach((p) => {
       p.fit = U.clamp(p.fit + T.fit + (F.fit || 0), 0, 100);
-      if (p.inj > 0) { p.inj--; if (!p.inj) Coach.news(`💪 ${CM_POS[p.pos]} ${p.n} sakatlığını atlattı.`, 'good'); }
+      if (p.inj > 0) { p.inj--; if (!p.inj) Coach.news(`💪 ${Coach.pa(p.pos)} ${p.n} sakatlığını atlattı.`, 'good'); }
       if (p.sus > 0) p.sus--;
       const growK = (p.pers === 'pro' ? 1.25 : p.pers === 'amb' ? 1.15 : 1) * (p.loan ? 1.4 : 1);
       if (p.age <= 24 && p.r < p.pot) p.r = Math.min(p.pot, p.r + (p.pot - p.r) * 0.012 * T.grow * trainF * growK * (1 + (s.iq - 50) / 200));
-      if (!p.inj && !p.loan && U.chance(0.004 * T.inj * medF * (s.focus === 'fit' ? 0.6 : 1))) { p.inj = Math.max(1, Math.round(U.randi(1, 3) * medF)); Coach.news(`🤕 ${CM_POS[p.pos]} ${p.n} antrenmanda sakatlandı (${p.inj} hafta).`, 'bad'); }
+      if (!p.inj && !p.loan && U.chance(0.004 * T.inj * medF * (s.focus === 'fit' ? 0.6 : 1))) { p.inj = Math.max(1, Math.round(U.randi(1, 3) * medF)); Coach.news(`🤕 ${Coach.pa(p.pos)} ${p.n} antrenmanda sakatlandı (${p.inj} hafta).`, 'bad'); }
       p.mor += (65 - p.mor) * 0.1;
       if (!p.loan) {
         const important = p.r >= avgR - 2;
@@ -451,6 +455,14 @@ const Coach = {
     }
     if (s.conf < 30 && !s.warned) { s.warned = 1; s.pend.push({ k: 'board' }); }
     if (s.conf > 40) s.warned = 0;
+    // cevapsız kalan kararlar: teklifler 2 hafta sonra ya da dönem kapanınca düşer, diğerleri 4 hafta sonra
+    s.pend.forEach((e) => { if (e.w == null) e.w = s.round; });
+    s.pend = s.pend.filter((e, i, a) => {
+      const age = s.round - e.w;
+      if (e.k === 'bid' && (!Coach.window() || age > 2)) return false;
+      if (age > 4) { const p = e.id ? Coach.P(e.id) : null; if (p && e.k !== 'bid') p.happy = U.clamp(p.happy - 5, 0, 100); return false; }
+      return a.findIndex((x) => x.k === e.k && x.id === e.id) === i;
+    }).slice(-8);
   },
 
   // ---------- transfer: gözlemci ağı ----------
@@ -533,7 +545,7 @@ const Coach = {
     s.scout.res = s.scout.res.filter((x) => x.id !== p.id);
     s.mk = s.mk.filter((x) => x.id !== p.id);
     s.chem = U.clamp(s.chem - 2, 0, 100);
-    Coach.news(fee ? `✍️ ${CM_POS[p.pos]} ${p.n} kadromuza katıldı (${U.money(fee)}).` : `✍️ ${CM_POS[p.pos]} ${p.n} bedelsiz olarak kadromuza katıldı.`, 'good');
+    Coach.news(fee ? `✍️ ${Coach.pa(p.pos)} ${p.n} kadromuza katıldı (${U.money(fee)}).` : `✍️ ${Coach.pa(p.pos)} ${p.n} bedelsiz olarak kadromuza katıldı.`, 'good');
     Coach.save();
   },
   sellTo(p, club, fee) {
@@ -543,7 +555,7 @@ const Coach = {
     if (s.xi.length < 11) Coach.autoPick();
     if ([s.cap, s.pk, s.fk].includes(p.id)) Coach.autoRoles();
     s.chem = U.clamp(s.chem - 1, 0, 100);
-    Coach.news(`👋 ${CM_POS[p.pos]} ${p.n}, ${U.money(fee)} karşılığında ${Coach.club(club).name}'a satıldı.`, '');
+    Coach.news(`👋 ${Coach.pa(p.pos)} ${p.n}, ${U.money(fee)} karşılığında ${Coach.club(club).name}'a satıldı.`, '');
     Coach.save();
   },
   loanOut(p) {

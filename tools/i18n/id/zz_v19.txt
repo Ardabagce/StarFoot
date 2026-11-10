@@ -770,3 +770,29 @@
 7321|Brunei
 7322|Bhutan
 7323|Timor Leste
+7344|{} mengoper, {} menembak tapi gagal.
+7324|Gaya lawan
+7347|{}: ingin lebih banyak menit
+7346|{} bikin masalah di ruang ganti
+7348|{} ingin kontrak baru
+7349|{} mengajukan tawaran untuk {}
+7327|Presiden ingin bertemu
+7328|Menunggu keputusan
+7329|Tidak ada pesan baru.
+7330|Kotak masuk
+7331|Kepercayaan manajemen
+1651|Klasemen
+7332|Status klub
+7333|Dijual
+7350|Rata {}
+7334|Kond.
+7335|Sangat senang
+7336|Puas
+7337|Gelisah
+7338|Tidak senang
+7339|Kepribadian
+7340|Saya mainkan momen penting
+7341|Bursa transfer dibuka
+7342|Bursa transfer ditutup
+7351|{} mg
+7353|{} terjebak offside.

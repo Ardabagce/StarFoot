@@ -15,7 +15,7 @@ const Live = {
       match, opp, min: 0, gf: 0, ga: 0, on, bench: s.squad.filter((p) => !on.includes(p.id) && Coach.available(p)).map((p) => p.id),
       subs: 3, style: s.style, feed: [], red: 0, oppRed: 0, speed: 1, paused: false, ht: false, done: false, me, oc, rates: {}, mins: {},
       mods: { att: b.att || 0, def: b.def || 0 }, set: b.set || 0, keyN: 0, scorers: [], yel: {}, quick: !!quick,
-      st: { sh: [0, 0], ot: [0, 0], pos: [0, 0], cor: [0, 0], yel: [0, 0], fo: [0, 0] },
+      st: { sh: [0, 0], ot: [0, 0], pos: [6, 6], cor: [0, 0], yel: [0, 0], fo: [0, 0] },
     };
     on.forEach((id) => { Live.m.rates[id] = 6.4; Live.m.mins[id] = 0; });
     if (quick) { Live.sim(); return Live.finish(); }
@@ -32,11 +32,11 @@ const Live = {
     const oppAtt = L.opp.att - L.oppRed * 4, oppDef = L.opp.def - L.oppRed * 4;
     if (L.style === 'counter' && L.opp.style === 'att') st.att += CM_STYLES.counter.vsAtt;
     const h = L.match.home ? 1 : -1;
-    const lf = 1.3 * Math.exp((st.att - oppDef + h * 1.5) / 25), la = 1.3 * Math.exp((oppAtt - st.def - h * 1.5) / 25);
+    const lf = 1.3 * Math.exp((st.att - oppDef + h * 1.5) / 28), la = 1.3 * Math.exp((oppAtt - st.def - h * 1.5) / 28);
     return [lf / 90, la / 90, st];
   },
   // oyuncu adı pozisyonuyla
-  nm(p) { return `${CM_POS[p.pos]} ${p.n}`; },
+  nm(p) { return `${Coach.pa(p.pos)} ${p.n}`; },
   ourSide() { return Live.m.match.home ? 'H' : 'A'; },
   oppSide() { return Live.m.match.home ? 'A' : 'H'; },
 
@@ -169,9 +169,14 @@ const Live = {
     return new Promise((res) => {
       Game.modal(`<div class="ev-tag">${T[0]} · ${L.min}'</div><h3>${U.esc(T[1])}!</h3><p class="muted">${Live.nm(p)} · Güç ${Coach.ovr(p)}</p>`, [
         { t: '⚡ Otomatik', cls: 'btn-ghost', fn: () => { Live.autoShot(p, type); res(); } },
-        { t: '⚽ Sen oyna', cls: 'btn-big', fn: () => Live.playShot(p, type, T).then((goal) => {
-          if (goal) Live.goal(p, type === 'penalty' || type === 'freekick' ? null : undefined);
-          else { L.st.ot[0]++; Live.log(type === 'penalty' ? `${Live.nm(p)} penaltıyı kaçırdı!` : `${Live.nm(p)} fırsatı değerlendiremedi.`, 'bad'); }
+        { t: '⚽ Sen oyna', cls: 'btn-big', fn: () => Live.playShot(p, type, T).then((r) => {
+          if (r.goal) Live.goal(p, type === 'penalty' || type === 'freekick' ? null : undefined);
+          else if (r.mate) {
+            // pas verildi: arkadaşının şutu
+            const mp = Live.onField().find((x) => x !== p && x.n.split(' ').slice(-1)[0] === r.mate) || Live.pickAssist(p) || p;
+            if (r.mateGoal) Live.goal(mp, p);
+            else { L.st.sh[0]++; if (U.chance(0.5)) L.st.ot[0]++; Live.log(`${Live.nm(p)} pas verdi, ${Live.nm(mp)} vurdu ama gol olmadı.`, ''); if (L.R) L.R.chance(Live.ourSide()); }
+          } else { if (r.on) L.st.ot[0]++; Live.log(r.off ? `${Live.nm(p)} ofsayta yakalandı.` : type === 'penalty' ? `${Live.nm(p)} penaltıyı kaçırdı!` : `${Live.nm(p)} fırsatı değerlendiremedi.`, 'bad'); if (L.R) L.R.chance(Live.ourSide()); }
           res();
         }) },
       ]);
@@ -199,15 +204,22 @@ const Live = {
       // şut sahnesi bir futbolcu kariyeri bekler: geçici kimlik
       const prev = Game.state;
       Game.state = { player: { name: p.n.split(' ')[0], surname: p.n.split(' ').slice(1).join(' '), look: Sprites.look(p.id), position: p.pos === 'GK' ? 'MF' : p.pos, shirt: 9 }, difficulty: 'normal' };
-      const done = (goal) => { Game.state = prev; el.remove(); MiniGame._abort = null; res(goal); };
+      let fin = false;
+      const done = (r) => { if (fin) return; fin = true; Game.state = prev; el.remove(); MiniGame._abort = null; res(r); };
       try {
         const kits = Sprites.kits(L.me, L.oc);
         const mates = Live.onField().filter((x) => x !== p && x.pos !== 'GK').slice(0, 3).map((x) => x.n.split(' ').slice(-1)[0]);
         const scene = Scenes.make(type, { skill, mates, position: p.pos === 'GK' ? 'MF' : p.pos, pace: st.pace, narrow: window.innerWidth / window.innerHeight < 0.9 });
         MiniGame.play(el.querySelector('.dr-host'), scene, { stats: st, skill, cond: 1.25 - 0.35 * (p.fit / 100), kits, number: 9, mateChance: () => 0.5 })
-          .then((r) => done(r.outcome === 'goal' || (r.outcome === 'auto' && U.chance(0.5))))
-          .catch(() => done(U.chance(0.4)));
-      } catch (e) { done(U.chance(0.4)); }
+          .then((r) => {
+            r = r || {};
+            if (r.outcome === 'goal') return done({ goal: true });
+            if (r.outcome === 'received' && r.mate) return done({ goal: false, mate: r.mate, mateGoal: !!r.mateGoal });
+            if (r.outcome === 'auto') return done({ goal: U.chance(0.5) });
+            done({ goal: false, on: r.outcome === 'saved' || r.outcome === 'claimed', off: r.outcome === 'offside' });
+          })
+          .catch(() => done({ goal: U.chance(0.4) }));
+      } catch (e) { done({ goal: U.chance(0.4) }); }
     });
   },
 
@@ -289,14 +301,14 @@ const Live = {
           <div class="cm-score">${UI.shirt(h)}<b>${U.esc(h.short || h.name)}</b><em id="lv-sc">0 - 0</em><b>${U.esc(a.short || a.name)}</b>${UI.shirt(a)}</div>
           <div class="cm-min"><i id="lv-bar"></i><span id="lv-min">0'</span></div></div>
         <canvas class="cm-rad" id="lv-rad"></canvas>
-        <div class="cm-lstat"><span>Topa sahip olma <b id="lv-pos">50%</b></span><span>Şut <b id="lv-sh">0-0</b></span><span>İsabet <b id="lv-ot">0-0</b></span></div>
+        <div class="cm-lstat"><span>Topa sahip olma <b id="lv-pos">50% - 50%</b></span><span>Şut <b id="lv-sh">0-0</b></span><span>İsabet <b id="lv-ot">0-0</b></span></div>
+        <ul class="cm-feed" id="lv-feed"></ul>
         <div class="cm-ctrl">
           <div class="cm-chips">${Object.entries(CM_STYLES).map(([k, x]) => `<button class="cm-chip sm" data-lst="${k}">${x.t}</button>`).join('')}</div>
           <div class="cm-row"><button class="btn btn-ghost" id="lv-sub">${Icon('squad')} <span>Değişiklik</span> <em id="lv-subn"></em></button>
           <button class="btn btn-ghost" id="lv-speed"></button>
           <button class="btn btn-ghost" id="lv-skip">${Icon('fast')} Sona atla</button></div>
         </div>
-        <ul class="cm-feed" id="lv-feed"></ul>
         <div class="cm-done hidden" id="lv-donebox"></div>`;
       U.$$('[data-lst]', el).forEach((b) => (b.onclick = () => { const M = Live.m; if (!M || M.done) return; M.style = b.dataset.lst; Live.log(`Taktik: ${CM_STYLES[M.style].t}`, 'info'); Live.draw(); }));
       el.querySelector('#lv-sub').onclick = () => { const M = Live.m; if (!M || M.done || M.subs <= 0 || M.paused) return; clearTimeout(Live._t); Live.subMenu(null); };
@@ -323,9 +335,12 @@ const Live = {
     el.querySelector('#lv-sc').textContent = `${hs} - ${as}`;
     el.querySelector('#lv-bar').style.width = `${(L.min / 90) * 100}%`;
     el.querySelector('#lv-min').textContent = `${L.min}'`;
-    el.querySelector('#lv-pos').textContent = `${Live.possPct()}%`;
-    el.querySelector('#lv-sh').textContent = `${L.st.sh[0]}-${L.st.sh[1]}`;
-    el.querySelector('#lv-ot').textContent = `${L.st.ot[0]}-${L.st.ot[1]}`;
+    // istatistikler skor tabelası gibi: ev sahibi solda
+    const ha = (x) => (L.match.home ? x : [x[1], x[0]]);
+    const pp = Live.possPct();
+    el.querySelector("#lv-pos").textContent = ha([pp, 100 - pp]).map((x) => `${x}%`).join(" - ");
+    el.querySelector('#lv-sh').textContent = ha(L.st.sh).join('-');
+    el.querySelector('#lv-ot').textContent = ha(L.st.ot).join('-');
     U.$$('[data-lst]', el).forEach((b) => b.classList.toggle('on', b.dataset.lst === L.style));
     el.querySelector('#lv-subn').textContent = `(${L.subs})${tired ? ` · ${tired} yorgun` : ''}`;
     el.querySelector('#lv-sub').disabled = L.subs <= 0 || L.done;
@@ -377,9 +392,11 @@ const Live = {
     if (!el) return;
     const box = el.querySelector('#lv-donebox');
     const rows = L.final.slice(0, 14).map((x) => `<div class="cm-rt ${x.p === L.motm ? 'motm' : ''}"><span class="cm-pos ${x.p.pos}">${CM_POS[x.p.pos]}</span><b>${U.esc(x.p.n)}</b><small>${x.mins}'</small><em class="${x.r >= 7.5 ? 'hi' : x.r < 6 ? 'lo' : ''}">${x.r.toFixed(1)}</em></div>`).join('');
-    const st = L.st, poss = Live.possPct();
+    const ha = (x) => (L.match.home ? x : [x[1], x[0]]);
+    const pp = Live.possPct(), poss = ha([pp, 100 - pp]);
+    const st = { sh: ha(L.st.sh), ot: ha(L.st.ot), cor: ha(L.st.cor), yel: ha(L.st.yel) };
     box.innerHTML = `<div class="cm-sumh"><b>Maç sonu</b>${L.motm ? `<span>⭐ Maçın oyuncusu: ${U.esc(L.motm.n)}</span>` : ''}</div>
-      <div class="cm-stbl"><div><span>${poss}%</span><small>Topa sahip olma</small><span>${100 - poss}%</span></div><div><span>${st.sh[0]}</span><small>Şut</small><span>${st.sh[1]}</span></div><div><span>${st.ot[0]}</span><small>İsabetli şut</small><span>${st.ot[1]}</span></div><div><span>${st.cor[0]}</span><small>Korner</small><span>${st.cor[1]}</span></div><div><span>${st.yel[0]}</span><small>Sarı kart</small><span>${st.yel[1]}</span></div></div>
+      <div class="cm-stbl"><div><span>${poss[0]}%</span><small>Topa sahip olma</small><span>${poss[1]}%</span></div><div><span>${st.sh[0]}</span><small>Şut</small><span>${st.sh[1]}</span></div><div><span>${st.ot[0]}</span><small>İsabetli şut</small><span>${st.ot[1]}</span></div><div><span>${st.cor[0]}</span><small>Korner</small><span>${st.cor[1]}</span></div><div><span>${st.yel[0]}</span><small>Sarı kart</small><span>${st.yel[1]}</span></div></div>
       <div class="lbl">Oyuncu puanları</div><div class="cm-rts">${rows}</div>
       <button class="btn btn-big" id="lv-done">${Icon('team')} Soyunma odasına git</button>`;
     box.classList.remove('hidden');

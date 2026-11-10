@@ -1,28 +1,34 @@
-// Teknik Direktör — ekranlar: merkez (rakip analizi, kararlar), kadro (roller, oyuncu kartı), taktik,
-// transfer (gözlemci, pazarlık, sözleşme), kulüp (finans, tesisler), lig, kariyer.
+// Teknik Direktör — ekranlar (Football Manager düzeni): Merkez (sıradaki maç, gelen kutusu, durum),
+// Kadro, Taktik, Transfer, Kulüp (Lig · Finans · Kariyer).
 
 Object.assign(Coach, {
+  sub: 'league',
   render() {
     const s = Coach.s;
     const el = document.getElementById('coach');
     if (!s || !el) return;
     const c = Coach.my();
-    const tabs = [['home', 'home', 'Merkez'], ['squad', 'squad', 'Kadro'], ['tactic', 'coach', 'Taktik'], ['market', 'contract', 'Transfer'], ['club', 'shield', 'Kulüp'], ['league', 'table', 'Lig'], ['career', 'career', 'Kariyer']];
-    const body = { home: Coach.vHome, squad: Coach.vSquad, tactic: Coach.vTactic, market: Coach.vMarket, club: Coach.vClub, league: Coach.vLeague, career: Coach.vCareer }[Coach.view] || Coach.vHome;
-    const bar = (v) => `<i class="cm-bar"><i style="width:${v}%;background:${v > 55 ? '#46e08f' : v > 30 ? '#ffcf3f' : '#ff6b6b'}"></i></i>`;
-    el.innerHTML = `<div class="cm-top">
-        <div class="cm-hd">${UI.shirt(c)}<div><b>${U.esc(c.name)}</b><small>${U.esc(Coach.fullName())} · ${s.year} · ${Math.min(s.round + 1, Coach.rounds())}. hafta</small></div>
-          <button class="notif-btn" id="cm-menu" aria-label="Menü">${Icon('exit')}</button></div>
-        <div class="cm-stat"><span>Kasa <b class="${s.money < 0 ? 'neg' : ''}">${U.money(s.money)}</b></span><span>Yönetim ${bar(s.conf)}</span><span>Taraftar ${bar(s.fans)}</span></div>
-      </div>
-      <nav class="cm-tabs">${tabs.map(([k, ic, t]) => `<button data-cmv="${k}" class="${Coach.view === k ? 'on' : ''}">${Icon(ic)}<span>${t}</span></button>`).join('')}</nav>
-      <main class="cm-main">${body()}</main>`;
+    // eski sekme adları Kulüp altına taşındı
+    if (Coach.view === 'league' || Coach.view === 'career') { Coach.sub = Coach.view; Coach.view = 'club'; }
+    const tabs = [['home', 'home', 'Merkez'], ['squad', 'squad', 'Kadro'], ['tactic', 'coach', 'Taktik'], ['market', 'contract', 'Transfer'], ['club', 'shield', 'Kulüp']];
+    const body = { home: Coach.vHome, squad: Coach.vSquad, tactic: Coach.vTactic, market: Coach.vMarket, club: Coach.vClub }[Coach.view] || Coach.vHome;
+    const pend = (s.pend || []).length;
+    el.innerHTML = `<header class="cm-top">
+        <div class="cm-hd">${UI.shirt(c)}<div><b>${U.esc(c.name)}</b><small>${U.esc(Coach.lgName(s.lg ? s.lg.id : c.league))} · ${Math.min(s.round + 1, Coach.rounds())}. hafta · ${s.year}</small></div>
+          <span class="cm-cash ${s.money < 0 ? 'neg' : ''}">${U.money(s.money)}</span>
+          <button class="cm-ib" id="cm-menu" aria-label="Menü">${Icon('cog')}</button></div>
+      </header>
+      <main class="cm-main">${body()}</main>
+      <nav class="cm-tabs">${tabs.map(([k, ic, t]) => `<button data-cmv="${k}" class="${Coach.view === k ? 'on' : ''}">${Icon(ic)}<span>${t}</span>${k === 'home' && pend ? `<i class="cm-badge">${pend}</i>` : ''}</button>`).join('')}</nav>`;
     U.$$('[data-cmv]', el).forEach((b) => (b.onclick = () => { Coach.view = b.dataset.cmv; Coach.render(); window.scrollTo(0, 0); }));
-    el.querySelector('#cm-menu').onclick = () => Game.modal('<h3>Ana menüye dönülsün mü?</h3><p>İlerlemen kaydedildi.</p>', [{ t: 'Vazgeç', cls: 'btn-ghost' }, { t: 'Ana menü', fn: () => Coach.exit() }]);
+    el.querySelector('#cm-menu').onclick = () => Game.modal(`<h3>${U.esc(Coach.fullName())}</h3><p class="muted">İlerlemen kaydedildi.</p>`, [
+      { t: 'Kariyer', fn: () => { Coach.view = 'club'; Coach.sub = 'career'; Coach.render(); window.scrollTo(0, 0); } },
+      { t: 'Ana menü', fn: () => Coach.exit() },
+      { t: 'Vazgeç', cls: 'btn-ghost' },
+    ]);
     Coach.bind(el);
     UI.strip(el);
     if (s.phase === 'end') Coach.showSeasonEnd();
-    else if (s.pend && s.pend.length && document.getElementById('modal').classList.contains('hidden')) setTimeout(() => { if (Coach.s && document.getElementById('modal').classList.contains('hidden') && !document.getElementById('cm-live')) Coach.showPending(); }, 250);
   },
   bind(el) {
     const s = Coach.s;
@@ -41,8 +47,8 @@ Object.assign(Coach, {
     on('[data-style]', (b) => { s.style = b.dataset.style; Coach.save(); Coach.render(); });
     on('[data-train]', (b) => { s.train = b.dataset.train; Coach.save(); Coach.render(); });
     on('[data-focus]', (b) => { s.focus = b.dataset.focus; Coach.save(); Coach.render(); });
-    on('[data-rot]', (b) => { s.rot = b.dataset.rot === 'on'; Coach.save(); Coach.render(); });
-    on('[data-km]', (b) => { s.keyMom = b.dataset.km === 'on'; Coach.save(); Coach.render(); });
+    on('[data-rot]', () => { s.rot = s.rot === false; Coach.save(); Coach.render(); });
+    on('[data-km]', () => { s.keyMom = s.keyMom === false; Coach.save(); Coach.render(); });
     on('[data-job]', (b) => { const id = b.dataset.job; s.jobless = null; Coach.joinClub(id, false); Coach.save(); Coach.render(); });
     on('[data-spos]', (b) => { Coach.sq = Object.assign(Coach.sq || {}, { pos: b.dataset.spos }); Coach.render(); });
     on('[data-sage]', (b) => { Coach.sq = Object.assign(Coach.sq || {}, { age: +b.dataset.sage }); Coach.render(); });
@@ -52,10 +58,13 @@ Object.assign(Coach, {
     on('[data-bid]', (b) => Coach.negotiate(+b.dataset.bid));
     on('[data-free]', (b) => { const p = s.mk.find((x) => x.id === +b.dataset.free); if (p) Coach.contract(p, 0); });
     on('[data-build]', (b) => { Coach.build(b.dataset.build); Coach.render(); });
-    on('#cm-pend', () => Coach.showPending());
+    on('[data-pend]', (b) => Coach.showPending(+b.dataset.pend));
+    on('[data-sub]', (b) => { Coach.sub = b.dataset.sub; Coach.render(); });
+    on('[data-goto]', (b) => { const [v, sub] = b.dataset.goto.split(':'); Coach.view = v; if (sub) Coach.sub = sub; Coach.render(); window.scrollTo(0, 0); });
     on('#cm-retire', () => Game.modal('<h3>Teknik direktörlüğü bırakmak istediğine emin misin?</h3><p>Kariyerin sona erecek.</p>', [{ t: 'Vazgeç', cls: 'btn-ghost' }, { t: 'Emekli ol', cls: 'btn-danger', fn: () => Coach.retire() }]));
   },
   formDots(id) { return `<span class="cm-fd">${(Coach.s.cf[id] || '').split('').map((r) => `<i class="${r}">${r}</i>`).join('') || '<small class="muted">–</small>'}</span>`; },
+  meter(label, v, col) { return `<div class="cm-mt"><span>${label}</span><i><i style="width:${Math.round(v)}%;background:${col || (v > 55 ? '#46e08f' : v > 30 ? '#ffcf3f' : '#ff6b6b')}"></i></i><b>${Math.round(v)}</b></div>`; },
 
   // ---------- merkez ----------
   vHome() {
@@ -69,30 +78,44 @@ Object.assign(Coach, {
       const o = Coach.club(m.opp), me = Coach.my();
       const [h, a] = m.home ? [me, o] : [o, me];
       const star = Coach.starOf(m.opp), ost = CM_STYLES[Coach.oppStyle(m.opp)];
-      const lgPos = Coach.table().findIndex((r) => r.id === m.opp) + 1;
-      mh = `<section class="card cm-next"><div class="card-h"><span>${Icon('whistle')} Sıradaki maç</span><small class="muted">${U.esc(m.name)}</small></div>
-        <div class="cm-vs"><div>${UI.shirt(h, 'big')}<b>${U.esc(h.name)}</b><small>Güç ${Coach.rating(h.id)}</small></div><em>VS</em><div>${UI.shirt(a, 'big')}<b>${U.esc(a.name)}</b><small>Güç ${Coach.rating(a.id)}</small></div></div>
-        <div class="cm-scout"><div class="lbl">Rakip analizi</div>
-          <div class="cm-sr"><span>Form</span>${Coach.formDots(m.opp)}</div>
-          <div class="cm-sr"><span>Oyun anlayışı</span><b>${ost.t}</b></div>
-          <div class="cm-sr"><span>Dikkat edilecek oyuncu</span><b>${CM_POS[star[1]]} ${U.esc(star[0])}</b></div>
-          ${lgPos ? `<div class="cm-sr"><span>Ligdeki sırası</span><b>${lgPos}.</b></div>` : ''}
-          <p class="muted cm-tip">${Coach.oppTip(Coach.oppStyle(m.opp))}</p></div>
-        <div class="cm-play"><button class="btn btn-big" id="cm-play">${Icon('play')} Maçı yönet</button><button class="btn btn-ghost" id="cm-quick">${Icon('fast')} Hızlı sonuç</button></div>
-        <p class="muted">${s.form} · ${CM_STYLES[s.style].t} · Antrenman: ${CM_FOCUS[s.focus].t} · İlk 11: ${Coach.xiPlayers().length}/11</p></section>`;
+      const t = Coach.table(), pos = (id) => t.findIndex((r) => r.id === id) + 1;
+      const side = (c) => `<div class="cm-side">${UI.shirt(c, 'big')}<b>${U.esc(c.name)}</b></div>`;
+      const cmp = (lbl, x, y) => `<div class="cm-cmp"><span>${x}</span><small>${lbl}</small><span>${y}</span></div>`;
+      mh = `<section class="card cm-next"><div class="cm-nh"><span>${U.esc(m.name)}</span><span>${m.home ? 'İç saha' : 'Deplasman'}</span></div>
+        <div class="cm-vs">${side(h)}<em>VS</em>${side(a)}</div>
+        <div class="cm-cmps">${cmp('Güç', Coach.rating(h.id), Coach.rating(a.id))}${cmp('Form', Coach.formDots(h.id), Coach.formDots(a.id))}${pos(h.id) && pos(a.id) ? cmp('Sıra', `${pos(h.id)}.`, `${pos(a.id)}.`) : ''}</div>
+        <div class="cm-rep"><div><span>Rakip oyun anlayışı</span><b>${ost.t}</b></div><div><span>Dikkat edilecek oyuncu</span><b>${Coach.pa(star[1])} ${U.esc(star[0])}</b></div><p>${Coach.oppTip(Coach.oppStyle(m.opp))}</p></div>
+        <div class="cm-play"><button class="btn btn-big" id="cm-play">${Icon('play')} Maça çık</button><button class="btn btn-ghost" id="cm-quick">${Icon('fast')} Hızlı sonuç</button></div></section>`;
     } else if (m && m.comp === 'bye') {
-      mh = `<section class="card"><p>Bu hafta maç yok.</p><button class="btn btn-big" id="cm-play">Haftayı geç</button></section>`;
+      mh = `<section class="card cm-next"><p>Bu hafta maç yok.</p><button class="btn btn-big" id="cm-play">Haftayı geç</button></section>`;
     }
-    const pos = Coach.myPos();
-    const last = s.last ? `<p class="cm-last">Son maç: ${U.esc(Coach.club(s.last.opp).name)} ${s.last.gf}-${s.last.ga}${s.last.motm ? ` · ⭐ ${U.esc(s.last.motm)}` : ''}</p>` : '';
-    const pend = (s.pend || []).length;
-    return `${pend ? `<button class="card cm-pendc" id="cm-pend">${Icon('mail')}<span><b>Bekleyen kararlar: ${pend}</b><small>Oyuncuların ve yönetim senden cevap bekliyor</small></span>${Icon('chevron')}</button>` : ''}${mh}
-      <section class="card"><div class="card-h"><span>${Icon('shield')} Yönetim</span><small class="muted">Hedef: ${Coach.targetText(s.target)}</small></div>
-        <div class="lf-rows"><div class="lf-row"><span>Güven</span><div class="lf-bar"><i style="width:${s.conf}%;background:${s.conf > 55 ? '#46e08f' : s.conf > 30 ? '#ffcf3f' : '#ff6b6b'}"></i></div><b>${Math.round(s.conf)}</b></div>
-        <div class="lf-row"><span>Takım uyumu</span><div class="lf-bar"><i style="width:${s.chem}%;background:#7fb2ff"></i></div><b>${Math.round(s.chem)}</b></div></div>
-        <p class="muted">${[`Ligde ${pos}. sıradasın`, `${s.stint.w}G ${s.stint.d}B ${s.stint.l}M`, s.cup && !s.cup.out && !s.cup.done ? `Kupa hedefi: ${Coach.cupStageName(s.cupTarget)}` : '', s.conf < 30 ? 'Yönetim sabırsızlanıyor!' : ''].filter(Boolean).join(' · ')}</p>${last}</section>
-      ${Coach.window() ? `<section class="card cm-win">${Icon('contract')} Transfer dönemi açık. Transfer sekmesinde oyuncu arayabilirsin.</section>` : ''}
-      <section class="card"><div class="card-h"><span>${Icon('news')} Haberler</span></div><ul class="cm-news">${s.news.slice(0, 10).map((n) => `<li class="${n.type}">${U.esc(n.t)}</li>`).join('')}</ul></section>`;
+    return `${mh}${Coach.vInbox()}${Coach.vStatus()}`;
+  },
+  // FM'deki gibi gelen kutusu: önce bekleyen kararlar, sonra haberler
+  pendTitle(ev) {
+    const p = ev.id ? Coach.P(ev.id) : null, n = p ? U.esc(p.n) : '';
+    if (ev.k === 'unhappy') return [`${n}: daha çok forma şansı istiyor`, 'Oyuncu görüşmesi'];
+    if (ev.k === 'rebel') return [`${n} soyunma odasında sorun çıkardı`, 'Soyunma odası'];
+    if (ev.k === 'renew') return [`${n} yeni sözleşme istiyor`, 'Sözleşme'];
+    if (ev.k === 'bid') return [`${U.esc(Coach.club(ev.club).name)}, ${n} için teklif yaptı`, 'Transfer teklifi'];
+    if (ev.k === 'board') return ['Başkan seni görmek istiyor', 'Yönetim kurulu'];
+    return [n, ''];
+  },
+  vInbox() {
+    const s = Coach.s, pend = s.pend || [];
+    const pr = pend.map((ev, i) => { const [t, tag] = Coach.pendTitle(ev); return `<button class="cm-msg act" data-pend="${i}"><i class="cm-dot2"></i><span><small>${tag} · Karar bekliyor</small><b>${t}</b></span>${Icon('chevron')}</button>`; }).join('');
+    const nw = s.news.slice(0, pend.length ? 5 : 7).map((n) => `<div class="cm-msg ${n.type}"><i class="cm-dot2"></i><span><small>${n.r != null ? `${Math.min(n.r + 1, Coach.rounds())}. hafta` : ''}</small><b>${U.esc(n.t)}</b></span></div>`).join('');
+    return `<section class="card"><div class="card-h"><span>${Icon('mail')} Gelen kutusu</span>${pend.length ? `<small class="cm-pill">${pend.length}</small>` : ''}</div>
+      <div class="cm-inbox">${pr}${nw || '<p class="muted">Yeni mesaj yok.</p>'}</div></section>`;
+  },
+  vStatus() {
+    const s = Coach.s, t = Coach.table(), me = t.findIndex((r) => r.id === s.clubId);
+    const from = U.clamp(me - 2, 0, Math.max(0, t.length - 5));
+    const rows = t.slice(from, from + 5).map((r, i) => { const c = Coach.club(r.id); return `<tr class="${r.id === s.clubId ? 'me' : ''}"><td>${from + i + 1}</td><td class="tn">${UI.shirt(c)}${U.esc(c.name)}</td><td>${r.p}</td><td>${r.gf - r.ga}</td><td><b>${r.pts}</b></td></tr>`; }).join('');
+    return `<section class="card"><div class="card-h"><span>${Icon('shield')} Kulüp durumu</span><small class="muted">Hedef: ${Coach.targetText(s.target)}</small></div>
+      <div class="cm-mts">${Coach.meter('Yönetim güveni', s.conf)}${Coach.meter('Taraftar', s.fans, '#ffcf3f')}${Coach.meter('Takım uyumu', s.chem, '#7fb2ff')}</div>
+      ${s.conf < 30 ? '<p class="cm-warn">Yönetim sabırsızlanıyor!</p>' : ''}
+      ${t.length ? `<div class="tbl-wrap"><table class="tbl cm-tbl"><tr><th>#</th><th>Takım</th><th>O</th><th>Av</th><th>P</th></tr>${rows}</table></div><button class="cm-link" data-goto="club:league">Puan durumu ${Icon('chevron')}</button>` : ''}</section>`;
   },
   oppTip(st) {
     return { att: 'Rakip hücum ediyor: kontra oyunla arkalarındaki boşluğu kullanabilirsin.', def: 'Rakip geride bekleyecek: hücum ya da önde baskı ile zorla.', press: 'Rakip önde baskı yapıyor: çabuk yorulurlar, ikinci yarıda hücuma kalk.', counter: 'Rakip kontraya yatacak: çok açılmadan dengeli oyna.', bal: 'Rakip dengeli oynuyor: kadronun gücüne güven.' }[st];
@@ -101,18 +124,20 @@ Object.assign(Coach, {
   // ---------- kadro ----------
   prow(p, opts) {
     const s = Coach.s, inXi = s.xi.includes(p.id);
-    const form = p.form.length ? (p.form.reduce((a, b) => a + b, 0) / p.form.length).toFixed(1) : '–';
     const roles = `${p.id === s.cap ? '<i class="cm-role c">C</i>' : ''}${p.id === s.pk ? '<i class="cm-role">P</i>' : ''}${p.id === s.fk ? '<i class="cm-role">F</i>' : ''}`;
-    const mood = p.happy >= 70 ? '😀' : p.happy >= 45 ? '🙂' : p.happy >= 25 ? '😕' : '😠';
+    const mood = p.happy >= 70 ? 'g' : p.happy >= 45 ? 'o' : p.happy >= 25 ? 'w' : 'b';
     const buy = opts && opts.buy;
+    const avg = p.apps ? (p.rs / p.apps).toFixed(1) : '';
+    const flag = `<span data-emo>${Coach.natFlag(p.nat)}</span>`;
+    const tags = buy ? '' : `${p.inj ? `<em class="cm-tag bad">${Icon('injury')} ${p.inj} hf</em>` : ''}${p.sus ? '<em class="cm-tag bad">Cezalı</em>' : ''}${p.loan ? '<em class="cm-tag">Kiralık</em>' : ''}${p.listed ? '<em class="cm-tag">Satışta</em>' : ''}`;
     const info = buy
-      ? [`${p.age} yaş`, p.free ? 'Serbest' : U.esc((Coach.base(p.club) || {}).name || ''), `Potansiyel ${Coach.potStars(p)}`]
-      : [`${p.age} yaş`, p.loan ? `Kiralık: ${U.esc((Coach.base(p.loanClub) || {}).name || '')}` : '', p.inj ? `Sakat: ${p.inj} hafta` : '', p.sus ? 'Cezalı' : '', `Form ${form}`, `${p.g} gol`];
+      ? `${p.age} yaş · ${flag} · ${p.free ? 'Serbest' : U.esc((Coach.base(p.club) || {}).name || '')} · ${Coach.potStars(p)}`
+      : `${p.age} yaş · ${flag}${avg ? ` · Ort. ${avg}` : ''}${p.g ? ` · ${p.g} gol` : ''}`;
     return `<div class="cm-p ${buy ? 'buy' : ''} ${inXi ? 'xi' : ''} ${!Coach.available(p) && !buy ? 'out' : ''}">
       ${buy ? '' : `<button class="cm-x" data-xi="${p.id}" aria-label="İlk 11">${inXi ? '✓' : ''}</button>`}
       <span class="cm-pos ${p.pos}">${CM_POS[p.pos]}</span>
-      <button class="cm-pn" ${buy ? '' : `data-pinfo="${p.id}"`}><b>${U.esc(p.n)}${roles}</b><small>${info.filter(Boolean).join(' · ')}</small></button>
-      ${buy ? '' : `<span class="cm-mood">${mood}</span><i class="cm-fit"><i style="width:${p.fit}%"></i></i>`}
+      <button class="cm-pn" ${buy ? '' : `data-pinfo="${p.id}"`}><b>${U.esc(p.n)}${roles}</b><small>${info}</small>${tags}</button>
+      ${buy ? '' : `<i class="cm-fit"><i style="width:${p.fit}%;background:${p.fit > 70 ? '#46e08f' : p.fit > 45 ? '#ffcf3f' : '#ff6b6b'}"></i></i><i class="cm-mood ${mood}"></i>`}
       <b class="cm-r">${Coach.ovr(p)}</b>
       ${buy ? `<div class="cm-acts"><span class="cm-pr">${p.free ? 'Bedelsiz' : U.money(p.price)}</span>${p.free ? `<button class="btn cm-buy" data-free="${p.id}">Sözleşme teklif et</button>` : `${p.known === 1 ? '' : `<button class="btn btn-ghost cm-buy" data-watch="${p.id}" ${p.known ? 'disabled' : ''}>${p.known ? 'Gözlemci izliyor' : 'Gözlemle'}</button>`}<button class="btn cm-buy" data-bid="${p.id}">Teklif ver</button>`}</div>` : ''}</div>`;
   },
@@ -120,12 +145,12 @@ Object.assign(Coach, {
     const s = Coach.s, xi = Coach.xiPlayers();
     const st = Coach.strength(xi, s.form, s.style);
     const sq = s.squad.filter((p) => !p.loan), loans = s.squad.filter((p) => p.loan);
+    const head = '<div class="cm-th"><span></span><span>Oyuncu</span><span>Kond.</span><span>Moral</span><span>Güç</span></div>';
     const grp = ['GK', 'DF', 'MF', 'FW'].map((pos) => `<div class="lbl">${POSITIONS[pos].l}</div>${sq.filter((p) => p.pos === pos).sort((a, b) => b.r - a.r).map((p) => Coach.prow(p)).join('')}`).join('');
-    const nm = (id) => { const p = Coach.P(id); return p ? U.esc(p.n) : '–'; };
-    return `<section class="card"><div class="card-h"><span>${Icon('squad')} Kadro (${sq.length})</span><button class="btn btn-ghost" id="cm-auto">Otomatik diz</button></div>
-      <p class="muted">İlk 11: ${xi.length}/11 · Hücum ${Math.round(st.att)} · Savunma ${Math.round(st.def)}</p>
-      <div class="cm-roles"><span><i class="cm-role c">C</i> Kaptan: <b>${nm(s.cap)}</b></span><span><i class="cm-role">P</i> Penaltı: <b>${nm(s.pk)}</b></span><span><i class="cm-role">F</i> Frikik: <b>${nm(s.fk)}</b></span></div>
-      <p class="muted">Soldaki kutu ile 11'e al ya da çıkar. Kaptan, penaltıcı, sözleşme ve satış için oyuncunun adına dokun.</p>${grp}
+    const nm = (id) => { const p = Coach.P(id); return p ? U.esc(p.n.split(' ').slice(-1)[0]) : '–'; };
+    return `<section class="card cm-sqh"><div class="cm-kpis"><div><small>İlk 11</small><b class="${xi.length < 11 ? 'neg' : ''}">${xi.length}/11</b></div><div><small>Hücum</small><b>${Math.round(st.att)}</b></div><div><small>Savunma</small><b>${Math.round(st.def)}</b></div><button class="btn btn-ghost" id="cm-auto">Otomatik diz</button></div>
+        <div class="cm-roles"><span><i class="cm-role c">C</i> ${nm(s.cap)}</span><span><i class="cm-role">P</i> ${nm(s.pk)}</span><span><i class="cm-role">F</i> ${nm(s.fk)}</span></div></section>
+      <section class="card"><div class="card-h"><span>${Icon('squad')} Kadro (${sq.length})</span></div>${head}${grp}
       ${loans.length ? `<div class="lbl">Kiralıktakiler</div>${loans.map((p) => Coach.prow(p)).join('')}` : ''}</section>`;
   },
   playerInfo(id) {
@@ -133,17 +158,28 @@ Object.assign(Coach, {
     if (!p) return;
     const v = Coach.value(p.r, p.age);
     const avg = p.apps ? (p.rs / p.apps).toFixed(2) : '–';
-    const btns = [{ t: 'Kapat', cls: 'btn-ghost' }];
+    const set = (fn) => () => { fn(); Coach.save(); Coach.render(); Coach.playerInfo(id); };
+    const acts = [];
     if (!p.loan) {
-      if (s.cap !== id) btns.push({ t: 'Kaptan yap', fn: () => { s.cap = id; s.chem = U.clamp(s.chem + (p.pers === 'lead' ? 2 : 0), 0, 100); Coach.news(`🅲 ${p.n} takımın yeni kaptanı.`, 'good'); Coach.save(); Coach.render(); } });
-      if (p.pos !== 'GK' && s.pk !== id) btns.push({ t: 'Penaltıcı yap', fn: () => { s.pk = id; Coach.save(); Coach.render(); } });
-      if (p.pos !== 'GK' && s.fk !== id) btns.push({ t: 'Frikikçi yap', fn: () => { s.fk = id; Coach.save(); Coach.render(); } });
-      if (p.yrs <= 2) btns.push({ t: 'Sözleşme uzat', fn: () => Coach.renew(p) });
-      if (Coach.window() && p.age <= 22 && !p.loan) btns.push({ t: 'Kiralık gönder', fn: () => Coach.loanOut(p) || Coach.render() });
-      if (Coach.window()) btns.push({ t: 'Satışa çıkar', fn: () => Coach.sell(id) });
+      if (s.cap !== id) acts.push(['Kaptan yap', set(() => { s.cap = id; s.chem = U.clamp(s.chem + (p.pers === 'lead' ? 2 : 0), 0, 100); Coach.news(`🅲 ${p.n} takımın yeni kaptanı.`, 'good'); })]);
+      if (p.pos !== 'GK' && s.pk !== id) acts.push(['Penaltıcı yap', set(() => { s.pk = id; })]);
+      if (p.pos !== 'GK' && s.fk !== id) acts.push(['Frikikçi yap', set(() => { s.fk = id; })]);
+      if (p.yrs <= 2) acts.push(['Sözleşme uzat', () => Coach.renew(p)]);
+      if (Coach.window() && p.age <= 22) acts.push(['Kiralık gönder', () => Coach.loanOut(p) || Coach.render()]);
+      if (Coach.window()) acts.push(['Satışa çıkar', () => Coach.sell(id)]);
     }
-    Game.modal(`<h3>${U.esc(p.n)}</h3><p>${POSITIONS[p.pos].l} · ${p.age} yaş · <span data-emo>${Coach.natFlag(p.nat)}</span> · ${CM_PERS[p.pers].t}</p><p class="muted">${CM_PERS[p.pers].d}</p>
-      <div class="ms-grid"><div><span>Güç</span><b>${Coach.ovr(p)}</b></div><div><span>Potansiyel</span><b>${Coach.potStars(p)}</b></div><div><span>Kondisyon</span><b>${Math.round(p.fit)}</b></div><div><span>Moral</span><b>${Math.round(p.mor)}</b></div><div><span>Mutluluk</span><b>${Math.round(p.happy)}</b></div><div><span>Maaş</span><b>${U.money(p.wage)}/hf</b></div><div><span>Sözleşme</span><b>${p.yrs} yıl</b></div><div><span>Değer</span><b>${U.money(v)}</b></div><div><span>Maç</span><b>${p.apps}</b></div><div><span>Gol</span><b>${p.g}</b></div><div><span>Asist</span><b>${p.a}</b></div><div><span>Ort. puan</span><b>${avg}</b></div></div>`, btns, { wide: true });
+    const mood = p.happy >= 70 ? 'Çok mutlu' : p.happy >= 45 ? 'Memnun' : p.happy >= 25 ? 'Huzursuz' : 'Mutsuz';
+    const m = Game.modal(`<div class="cm-pc"><span class="cm-pos ${p.pos}">${CM_POS[p.pos]}</span><div><h3>${U.esc(p.n)}</h3><small>${POSITIONS[p.pos].l} · ${p.age} yaş · <span data-emo>${Coach.natFlag(p.nat)}</span></small></div><b class="cm-r big">${Coach.ovr(p)}</b></div>
+      <div class="cm-kv">
+        <div><span>Potansiyel</span><b>${Coach.potStars(p)}</b></div><div><span>Kişilik</span><b>${CM_PERS[p.pers].t}</b></div>
+        <div><span>Kondisyon</span><b>${Math.round(p.fit)}</b></div><div><span>Moral</span><b>${Math.round(p.mor)}</b></div>
+        <div><span>Mutluluk</span><b>${mood}</b></div><div><span>Değer</span><b>${U.money(v)}</b></div>
+        <div><span>Maaş</span><b>${U.money(p.wage)}/hf</b></div><div><span>Sözleşme</span><b>${p.yrs} yıl</b></div>
+      </div>
+      <div class="cm-kv four"><div><span>Maç</span><b>${p.apps}</b></div><div><span>Gol</span><b>${p.g}</b></div><div><span>Asist</span><b>${p.a}</b></div><div><span>Ort. puan</span><b>${avg}</b></div></div>
+      <p class="muted cm-pd">${CM_PERS[p.pers].d}</p>
+      ${acts.length ? `<div class="cm-pacts">${acts.map(([t], i) => `<button class="btn btn-ghost" data-pa="${i}">${t}</button>`).join('')}</div>` : ''}`, [{ t: 'Kapat', cls: 'btn-big' }], { wide: true });
+    U.$$('[data-pa]', m).forEach((b) => (b.onclick = () => { m.classList.add('hidden'); m.innerHTML = ''; acts[+b.dataset.pa][1](); }));
   },
   sell(id) {
     const s = Coach.s, p = Coach.P(id);
@@ -178,42 +214,44 @@ Object.assign(Coach, {
   // ---------- taktik ----------
   vTactic() {
     const s = Coach.s, st = Coach.strength(Coach.xiPlayers(), s.form, s.style);
-    const chip = (attr, k, t, d, on) => `<button class="cm-chip ${on ? 'on' : ''}" data-${attr}="${k}"><b>${t}</b>${d ? `<small>${d}</small>` : ''}</button>`;
-    return `<section class="card"><div class="card-h"><span>${Icon('coach')} Diziliş</span></div><div class="cm-chips">${Object.keys(CM_FORMS).map((k) => chip('form', k, k, '', s.form === k)).join('')}</div>${Coach.pitch()}</section>
-      <section class="card"><div class="card-h"><span>${Icon('bolt')} Oyun anlayışı</span></div><div class="cm-chips col">${Object.entries(CM_STYLES).map(([k, x]) => chip('style', k, x.t, x.d, s.style === k)).join('')}</div></section>
-      <section class="card"><div class="card-h"><span>${Icon('train')} Haftalık antrenman</span></div><div class="lbl">Odak</div><div class="cm-chips col">${Object.entries(CM_FOCUS).map(([k, x]) => chip('focus', k, x.t, x.d, s.focus === k)).join('')}</div>
-        <div class="lbl">Yoğunluk</div><div class="cm-chips col">${Object.entries(CM_TRAIN).map(([k, x]) => chip('train', k, x.t, x.d, s.train === k)).join('')}</div></section>
-      <section class="card"><div class="card-h"><span>${Icon('rest')} Otomatik rotasyon</span></div><div class="cm-chips">${chip('rot', 'on', 'Açık', 'Kondisyonu düşen oyuncu maç öncesi dinç yedekle değişir.', s.rot !== false)}${chip('rot', 'off', 'Kapalı', "İlk 11'i her zaman sen belirlersin.", s.rot === false)}</div></section>
-      <section class="card"><div class="card-h"><span>${Icon('ball')} Kritik anlar</span></div><div class="cm-chips">${chip('km', 'on', 'Ben oynayayım', 'Penaltı, frikik ve net fırsatlarda topu sen vurursun.', s.keyMom !== false)}${chip('km', 'off', 'Otomatik', 'Kritik anlar oyuncunun gücüne göre sonuçlanır.', s.keyMom === false)}</div></section>
-      <p class="muted">Takım gücü: Hücum ${Math.round(st.att)} · Savunma ${Math.round(st.def)}</p>`;
+    const seg = (attr, obj, cur) => `<div class="cm-seg">${Object.entries(obj).map(([k, x]) => `<button class="${cur === k ? 'on' : ''}" data-${attr}="${k}">${x.t}</button>`).join('')}</div><p class="cm-desc">${obj[cur] ? obj[cur].d : ''}</p>`;
+    const sw = (attr, on, t, d) => `<button class="cm-sw ${on ? 'on' : ''}" data-${attr}="1"><span><b>${t}</b><small>${d}</small></span><i></i></button>`;
+    return `<section class="card"><div class="card-h"><span>${Icon('coach')} Diziliş</span><small class="muted">Hücum ${Math.round(st.att)} · Savunma ${Math.round(st.def)}</small></div>
+        <div class="cm-seg">${Object.keys(CM_FORMS).map((k) => `<button class="${s.form === k ? 'on' : ''}" data-form="${k}">${k}</button>`).join('')}</div>${Coach.pitch()}</section>
+      <section class="card"><div class="card-h"><span>${Icon('bolt')} Oyun anlayışı</span></div>${seg('style', CM_STYLES, s.style)}</section>
+      <section class="card"><div class="card-h"><span>${Icon('train')} Haftalık antrenman</span></div>
+        <div class="lbl">Odak</div>${seg('focus', CM_FOCUS, s.focus)}
+        <div class="lbl">Yoğunluk</div>${seg('train', CM_TRAIN, s.train)}</section>
+      <section class="card cm-sws">${sw('rot', s.rot !== false, 'Otomatik rotasyon', 'Kondisyonu düşen oyuncu maç öncesi dinç yedekle değişir.')}
+        ${sw('km', s.keyMom !== false, 'Kritik anları ben oynayayım', 'Penaltı, frikik ve net fırsatlarda topu sen vurursun.')}</section>`;
   },
   pitch() {
     const s = Coach.s, a = Coach.assign(Coach.xiPlayers(), s.form), f = CM_FORMS[s.form];
-    const rows = [['FW', f.FW, 18], ['MF', f.MF, 45], ['DF', f.DF, 72], ['GK', 1, 90]];
+    const rows = [['FW', f.FW, 16], ['MF', f.MF, 44], ['DF', f.DF, 71], ['GK', 1, 90]];
     const dots = rows.map(([slot, n, y]) => a.filter((x) => x.slot === slot).map((x, i, arr) => {
       const xp = ((i + 1) / (arr.length + 1)) * 100;
-      return `<div class="cm-dot ${x.pen ? 'bad' : ''}" style="left:${xp}%;top:${y}%"><i>${Coach.ovr(x.p)}</i><span>${x.p.id === s.cap ? '(C) ' : ''}${U.esc(x.p.n.split(' ').slice(-1)[0])}</span></div>`;
+      return `<button class="cm-dot ${x.pen ? 'bad' : ''}" style="left:${xp}%;top:${y}%" data-pinfo="${x.p.id}"><i>${Coach.ovr(x.p)}</i><span>${x.p.id === s.cap ? '(C) ' : ''}${U.esc(x.p.n.split(' ').slice(-1)[0])}</span></button>`;
     }).join('')).join('');
-    return `<div class="cm-pitch">${dots}</div>`;
+    return `<div class="cm-pitch"><i class="cm-pl1"></i><i class="cm-pl2"></i>${dots}</div>`;
   },
 
   // ---------- transfer ----------
   vMarket() {
     const s = Coach.s, q = Coach.sq || {};
-    const head = `<section class="card"><div class="card-h"><span>${Icon('contract')} Transfer</span><small class="muted">${Coach.window() ? 'Dönem açık' : 'Dönem kapalı'}</small></div>
-      <div class="cm-fin"><div><span>Transfer bütçesi</span><b>${U.money(s.budget)}</b></div><div><span>Maaş gideri</span><b>${U.money(Coach.wageBill())}/hf</b></div><div><span>Maaş bütçesi</span><b>${U.money(s.wbudget)}/hf</b></div></div></section>`;
-    if (!Coach.window()) return `${head}<section class="card"><p>Transfer dönemi kapalı. Yaz dönemi sezonun ilk 5 haftası, kış dönemi sezonun ortasında 4 hafta sürer.</p><p class="muted">Kapalıyken de oyuncularının sözleşmelerini yenileyebilirsin.</p></section>`;
-    const chips = (attr, list, cur) => list.map(([v, t]) => `<button class="cm-chip sm ${String(cur) === String(v) ? 'on' : ''}" data-${attr}="${v}">${t}</button>`).join('');
+    const open = Coach.window();
+    const head = `<section class="card cm-sqh"><div class="cm-kpis three"><div><small>Transfer bütçesi</small><b>${U.money(s.budget)}</b></div><div><small>Maaş gideri</small><b>${U.money(Coach.wageBill())}</b></div><div><small>Maaş bütçesi</small><b>${U.money(s.wbudget)}</b></div></div>
+      <p class="cm-wst ${open ? 'on' : ''}"><i></i>${open ? 'Transfer dönemi açık' : 'Transfer dönemi kapalı'}</p></section>`;
+    if (!open) return `${head}<section class="card"><p>Yaz dönemi sezonun ilk 5 haftası, kış dönemi sezonun ortasında 4 hafta sürer.</p><p class="muted">Kapalıyken de oyuncularının sözleşmelerini yenileyebilirsin.</p></section>`;
+    const seg = (attr, list, cur) => `<div class="cm-seg sm">${list.map(([v, t]) => `<button class="${String(cur) === String(v) ? 'on' : ''}" data-${attr}="${v}">${t}</button>`).join('')}</div>`;
     const res = s.scout.res || [];
     return `${head}
       <section class="card"><div class="card-h"><span>${Icon('globe')} Gözlemci ağı</span></div>
-        <div class="lbl">Mevki</div><div class="cm-chips">${chips('spos', [['all', 'Hepsi'], ['GK', 'KL'], ['DF', 'DF'], ['MF', 'OS'], ['FW', 'FV']], q.pos || 'all')}</div>
-        <div class="lbl">En fazla yaş</div><div class="cm-chips">${chips('sage', [[21, '21'], [25, '25'], [29, '29'], [33, 'Hepsi']], q.age || 33)}</div>
-        <div class="lbl">En fazla bonservis</div><div class="cm-chips">${chips('smax', [[0.25, '%25'], [0.5, '%50'], [1, 'Tüm bütçe'], [0, 'Sınırsız']], q.max == null ? 0 : q.max)}</div>
+        <div class="cm-flt"><span>Mevki</span>${seg('spos', [['all', 'Hepsi'], ['GK', 'KL'], ['DF', 'DF'], ['MF', 'OS'], ['FW', 'FV']], q.pos || 'all')}</div>
+        <div class="cm-flt"><span>En fazla yaş</span>${seg('sage', [[21, '21'], [25, '25'], [29, '29'], [33, 'Hepsi']], q.age || 33)}</div>
+        <div class="cm-flt"><span>En fazla bonservis</span>${seg('smax', [[0.25, '¼'], [0.5, '½'], [1, 'Tüm bütçe'], [0, 'Sınırsız']], q.max == null ? 0 : q.max)}</div>
         <button class="btn btn-big cm-sbtn" id="cm-search">${Icon('globe')} Oyuncu ara</button>
-        ${res.length ? `<p class="muted">Gözlemle: 1 hafta sonra gerçek potansiyeli ve maaş beklentisi netleşir.</p>${res.map((p) => Coach.prow(p, { buy: true })).join('')}` : '<p class="muted">Kriterleri seçip arama yap.</p>'}</section>
-      ${s.mk.length ? `<section class="card"><div class="card-h"><span>${Icon('mail')} Serbest oyuncular</span></div><p class="muted">Sözleşmesi bitmiş oyuncular: bonservis yok, sadece maaş.</p>${s.mk.map((p) => Coach.prow(p, { buy: true })).join('')}</section>` : ''}
-      <p class="muted">Oyuncu satmak ya da kiralık göndermek için Kadro sekmesinde oyuncunun adına dokun.</p>`;
+        ${res.length ? `<p class="cm-desc">Gözlemle: 1 hafta sonra gerçek potansiyeli ve maaş beklentisi netleşir.</p>${res.map((p) => Coach.prow(p, { buy: true })).join('')}` : ''}</section>
+      ${s.mk.length ? `<section class="card"><div class="card-h"><span>${Icon('mail')} Serbest oyuncular</span></div><p class="cm-desc">Sözleşmesi bitmiş oyuncular: bonservis yok, sadece maaş.</p>${s.mk.map((p) => Coach.prow(p, { buy: true })).join('')}</section>` : ''}`;
   },
   negotiate(id) {
     const s = Coach.s, p = s.scout.res.find((x) => x.id === id);
@@ -258,29 +296,30 @@ Object.assign(Coach, {
     draw();
   },
 
-  // ---------- kulüp ----------
+  // ---------- kulüp: Lig · Finans · Kariyer ----------
   vClub() {
-    const s = Coach.s, c = Coach.my();
-    const net = Coach.sponsorWeekly() - Coach.wageBill();
+    const subs = [['league', 'Lig'], ['fin', 'Finans'], ['career', 'Kariyer']];
+    if (!subs.some(([k]) => k === Coach.sub)) Coach.sub = 'league';
+    const body = { league: Coach.vLeague, fin: Coach.vFinance, career: Coach.vCareer }[Coach.sub];
+    return `<div class="cm-seg top">${subs.map(([k, t]) => `<button class="${Coach.sub === k ? 'on' : ''}" data-sub="${k}">${t}</button>`).join('')}</div>${body()}`;
+  },
+  vFinance() {
+    const s = Coach.s;
+    // haftalık net: sponsor + ortalama bilet geliri (iki haftada bir iç saha) − maaşlar
+    const net = Math.round((Coach.sponsorWeekly() + Coach.ticketIncome() / 2 - Coach.wageBill()) / 100) * 100;
+    const row = (t, v, cls) => `<div class="cm-sr"><span>${t}</span><b class="${cls || ''}">${v}</b></div>`;
     const fac = Object.entries(CM_FAC).map(([k, f]) => {
       const lv = s.fac[k], building = s.build && s.build.k === k;
-      return `<div class="cm-fac"><span class="cm-fi">${Icon(f.ic)}</span><span class="cm-ft"><b>${f.t}</b><small>${f.d}</small><i class="cm-stars">${'★'.repeat(lv)}${'☆'.repeat(5 - lv)}</i></span>
-        ${building ? `<em class="cm-bld">${s.build.w} hf</em>` : lv >= 5 ? '<em class="cm-bld">MAX</em>' : `<button class="btn cm-buy" data-build="${k}" ${s.build ? 'disabled' : ''}>${U.money(Coach.facCost(k))}</button>`}</div>`;
+      return `<div class="cm-fac"><span class="cm-fi">${Icon(f.ic)}</span><span class="cm-ft"><b>${f.t}</b><small>${f.d}</small><i class="cm-lv">${[1, 2, 3, 4, 5].map((i) => `<i class="${i <= lv ? 'on' : ''}"></i>`).join('')}</i></span>
+        ${building ? `<em class="cm-bld">${s.build.w} hf</em>` : lv >= 5 ? '<em class="cm-bld">MAX</em>' : `<button class="btn btn-ghost cm-buy" data-build="${k}" ${s.build ? 'disabled' : ''}>${U.money(Coach.facCost(k))}</button>`}</div>`;
     }).join('');
-    return `<section class="card"><div class="card-h"><span>${Icon('coin')} Finans</span><small class="muted">${U.esc(c.name)}</small></div>
-        <div class="cm-fin"><div><span>Kasa</span><b class="${s.money < 0 ? 'neg' : ''}">${U.money(s.money)}</b></div><div><span>Transfer bütçesi</span><b>${U.money(s.budget)}</b></div>
-        <div><span>Sponsor geliri</span><b>${U.money(Coach.sponsorWeekly())}/hf</b></div><div><span>Maaş gideri</span><b>${U.money(Coach.wageBill())}/hf</b></div>
-        <div><span>Haftalık net</span><b class="${net < 0 ? 'neg' : ''}">${U.money(net)}</b></div><div><span>Son bilet geliri</span><b>${s.lastGate ? U.money(s.lastGate) : '–'}</b></div>
-        <div><span>Stadyum</span><b>${Coach.capacity().toLocaleString('tr')} kişi</b></div><div><span>Maaş bütçesi</span><b>${U.money(s.wbudget)}/hf</b></div></div>
+    return `<section class="card"><div class="card-h"><span>${Icon('coin')} Finans</span></div>
+        <div class="cm-kpis two"><div><small>Kasa</small><b class="${s.money < 0 ? 'neg' : ''}">${U.money(s.money)}</b></div><div><small>Haftalık net</small><b class="${net < 0 ? 'neg' : 'pos'}">${net >= 0 ? '+' : ''}${U.money(net)}</b></div></div>
+        ${row('Sponsor geliri', `${U.money(Coach.sponsorWeekly())}/hf`)}${row('Maaş gideri', `${U.money(Coach.wageBill())}/hf`)}${row('Maaş bütçesi', `${U.money(s.wbudget)}/hf`)}
+        ${row('Transfer bütçesi', U.money(s.budget))}${row('Son bilet geliri', s.lastGate ? U.money(s.lastGate) : '–')}${row('Stadyum', `${Coach.capacity().toLocaleString('tr')} kişi`)}
         ${s.money < 0 ? '<p class="cm-warn">Kasa ekside! Yönetim sezon sonunda bunu hesaba katacak. Oyuncu satmayı ya da maaşları düşürmeyi düşün.</p>' : ''}</section>
-      <section class="card"><div class="card-h"><span>${Icon('shield')} Tesisler</span><small class="muted">Aynı anda bir inşaat</small></div>${fac}</section>
-      <section class="card"><div class="card-h"><span>${Icon('fans')} Taraftar ve soyunma odası</span></div>
-        <div class="lf-rows"><div class="lf-row"><span>Taraftar</span><div class="lf-bar"><i style="width:${s.fans}%;background:#ffcf3f"></i></div><b>${Math.round(s.fans)}</b></div>
-        <div class="lf-row"><span>Takım uyumu</span><div class="lf-bar"><i style="width:${s.chem}%;background:#7fb2ff"></i></div><b>${Math.round(s.chem)}</b></div></div>
-        <p class="muted">Taraftar memnuniyeti stadın doluluğunu, takım uyumu sahadaki gücü etkiler. Uyum sabit ilk 11, taktik antrenmanı ve lider bir kaptanla artar.</p></section>`;
+      <section class="card"><div class="card-h"><span>${Icon('shield')} Tesisler</span><small class="muted">Aynı anda bir inşaat</small></div>${fac}</section>`;
   },
-
-  // ---------- lig ----------
   vLeague() {
     const s = Coach.s, t = Coach.table(), n = t.length;
     const rows = t.map((r, i) => { const c = Coach.club(r.id); return `<tr class="${r.id === s.clubId ? 'me' : ''} ${i >= n - 3 ? 'rel' : ''}"><td>${i + 1}</td><td class="tn">${UI.shirt(c)}${U.esc(c.name)}</td><td>${r.p}</td><td>${r.w}</td><td>${r.d}</td><td>${r.l}</td><td>${r.gf - r.ga}</td><td><b>${r.pts}</b></td></tr>`; }).join('');
@@ -288,26 +327,25 @@ Object.assign(Coach, {
     const sc = s.squad.filter((p) => p.g || p.a).sort((a, b) => b.g - a.g || b.a - a.a).slice(0, 5);
     return `<section class="card"><div class="card-h"><span>${Icon('table')} ${U.esc(Coach.lgName(s.lg.id))}</span><small class="muted">Hedef: ${Coach.targetText(s.target)}</small></div>
       <div class="tbl-wrap"><table class="tbl cm-tbl"><tr><th>#</th><th>Takım</th><th>O</th><th>G</th><th>B</th><th>M</th><th>Av</th><th>P</th></tr>${rows}</table></div></section>${cup}
-      ${sc.length ? `<section class="card"><div class="card-h"><span>${Icon('ball')} Takımımızın golcüleri</span></div>${sc.map((p) => `<div class="cm-sr"><span>${CM_POS[p.pos]} ${U.esc(p.n)}</span><b>${p.g} gol · ${p.a} asist</b></div>`).join('')}</section>` : ''}`;
+      ${sc.length ? `<section class="card"><div class="card-h"><span>${Icon('ball')} Takımımızın golcüleri</span></div>${sc.map((p) => `<div class="cm-sr"><span>${Coach.pa(p.pos)} ${U.esc(p.n)}</span><b>${p.g} gol · ${p.a} asist</b></div>`).join('')}</section>` : ''}`;
   },
-
-  // ---------- kariyer ----------
   vCareer() {
     const s = Coach.s, t = s.rec;
     return `<section class="card"><div class="card-h"><span>${Icon('career')} ${U.esc(Coach.fullName())}</span><small class="muted">${s.age} yaş · <span data-emo>${Coach.natFlag(s.nat)}</span></small></div>
-      <div class="ms-grid"><div><span>Maç</span><b>${t.w + t.d + t.l}</b></div><div><span>G-B-M</span><b>${t.w}-${t.d}-${t.l}</b></div><div><span>Gol</span><b>${t.gf}:${t.ga}</b></div><div><span>Kupa</span><b>${s.trophies.length}</b></div><div><span>İtibar</span><b>${Math.round(s.rep)}</b></div><div><span>Taktik zekası</span><b>${Math.round(s.iq)}</b></div></div>
+      <div class="cm-kv four"><div><span>Maç</span><b>${t.w + t.d + t.l}</b></div><div><span>G-B-M</span><b>${t.w}-${t.d}-${t.l}</b></div><div><span>Gol</span><b>${t.gf}:${t.ga}</b></div><div><span>Kupa</span><b>${s.trophies.length}</b></div></div>
+      <div class="cm-mts">${Coach.meter('İtibar', s.rep, '#b394ff')}${Coach.meter('Taktik zekası', s.iq, '#4fb3ff')}</div>
       ${s.trophies.length ? `<ul class="trophies">${s.trophies.map((x) => `<li>🏆 ${U.esc(x)}</li>`).join('')}</ul>` : ''}
       ${s.awards.length ? `<ul class="trophies">${s.awards.slice(-6).map((x) => `<li>🏅 ${U.esc(x)}</li>`).join('')}</ul>` : ''}</section>
       <section class="card"><div class="card-h"><span>${Icon('globe')} Kariyer geçmişi</span></div>
       <div class="cm-hist">${(s.seasons || []).slice().reverse().map((x) => `<div><span>${x.y}</span><b>${U.esc(Coach.club(x.club).name)}</b><small>${U.esc(Coach.lgName(x.lg))} · ${x.pos}./${x.n}</small></div>`).join('') || '<p class="muted">İlk sezonun devam ediyor.</p>'}</div></section>
-      <button class="btn btn-ghost" id="cm-retire">Teknik direktörlüğü bırak</button>`;
+      <button class="btn btn-ghost cm-ret" id="cm-retire">Teknik direktörlüğü bırak</button>`;
   },
 
   // ---------- bekleyen kararlar ----------
-  showPending() {
+  showPending(idx) {
     const s = Coach.s;
     if (!s || !s.pend || !s.pend.length || s.phase === 'end') return;
-    const ev = s.pend.shift();
+    const ev = s.pend.splice(idx > 0 && idx < s.pend.length ? idx : 0, 1)[0];
     const p = ev.id ? Coach.P(ev.id) : null;
     const next = (msg, type) => { Coach.save(); if (msg) Game.toast(msg, type || 'good'); Coach.render(); };
     if (ev.id && !p) return next('');
@@ -359,7 +397,7 @@ Object.assign(Coach, {
     const c = Coach.club(x.club);
     const good = x.pos <= x.target;
     let offers = Coach.jobOffers(s.rep, s.clubId, 2).filter((id) => Coach.base(id).rating > c.rating - 2);
-    const fired = s.conf < 25 && x.pos > x.target + 1;
+    const fired = s.conf < 25 && x.pos > x.target + 2;
     if (fired && !offers.length) offers = Coach.jobOffers(Math.max(5, s.rep - 10), s.clubId, 2);
     const msg = x.champ ? 'Şampiyonluk! Taraftarlar adını tezahürat yapıyor.' : good ? 'Yönetim hedefin tutturulmasından çok memnun.' : fired ? 'Yönetim hedefin çok uzağında kaldığın için sözleşmeni uzatmıyor.' : 'Hedefin gerisinde kaldın. Yönetim gelecek sezon daha iyisini bekliyor.';
     const aw = [x.top ? `⚽ Gol kralımız: ${U.esc(x.top[0])} (${x.top[1]})` : '', x.best ? `⭐ Sezonun oyuncusu: ${U.esc(x.best[0])} (${x.best[1]})` : '', x.young ? `🌱 Sezonun genci: ${U.esc(x.young)}` : ''].filter(Boolean);
