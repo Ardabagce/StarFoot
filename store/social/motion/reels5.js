@@ -60,7 +60,7 @@ function stars(x, y, s, n, alpha) {
 
 const vTop8 = timeline([
   // 0–1.6 sn: liste yükselir, kanca
-  [1.6, (lt, d) => { chartBg(lt); chartList(lt, 740, 0, 1); chip('APP STORE · TÜRKİYE', 200, seg(lt, 0, 0.2)); txt('EN ÇOK OYNANAN', W / 2, 330, 104, { alpha: seg(lt, 0.05, 0.3), scale: 0.7 + 0.3 * E.back(seg(lt, 0.05, 0.4)) }); txt('OYUNLAR', W / 2, 450, 118, { grad: GOLD, alpha: seg(lt, 0.15, 0.4), scale: 0.7 + 0.3 * E.back(seg(lt, 0.15, 0.5)) }); }],
+  [1.6, (lt, d) => { chartBg(lt); chartList(lt, 740, 0, 1); chip('APP STORE · GAME CENTER', 200, seg(lt, 0, 0.2)); txt('EN ÇOK OYNANAN', W / 2, 330, 104, { alpha: seg(lt, 0.05, 0.3), scale: 0.7 + 0.3 * E.back(seg(lt, 0.05, 0.4)) }); txt('OYUNLAR', W / 2, 450, 118, { grad: GOLD, alpha: seg(lt, 0.15, 0.4), scale: 0.7 + 0.3 * E.back(seg(lt, 0.15, 0.5)) }); }],
   // 1.6–3.2 sn: 8. sıra parlar, "8. SIRADAYIZ"
   [1.7, (lt, d) => {
     chartBg(lt + 1.6);

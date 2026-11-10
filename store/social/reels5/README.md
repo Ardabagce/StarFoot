@@ -6,7 +6,7 @@ Yeniden üretmek: `cd store/social/motion && PAGE=reels5.html ASSETS=$PWD/assets
 
 | Süre | Sahne |
 |---|---|
-| 0–1,6 sn | "APP STORE · TÜRKİYE / EN ÇOK OYNANAN OYUNLAR" — liste yükselir |
+| 0–1,6 sn | "APP STORE · GAME CENTER / EN ÇOK OYNANAN OYUNLAR" — liste yükselir |
 | 1,6–3,3 sn | "8. SIRADAYIZ!" — StarFoot satırı parlar, konfeti |
 | 3,3–7,8 sn | "Neden mi? Kariyeri sen yazıyorsun" · "Kupalar, şöhret ve milyonlarca takipçi" |
 | 7,8–10,2 sn | "Teşekkürler!" · 5 yıldız · 4,75 puan · "Sizin sayenizde" |
@@ -17,7 +17,7 @@ Listedeki diğer oyunlar isimsiz ve bulanık gösterilir (başka markaların ad�
 ## Açıklama (kopyala-yapıştır)
 
 ```
-App Store Türkiye'de en çok oynanan oyunlar listesinde 8. sıradayız! 🇹🇷🏆
+App Store'da Game Center "En Çok Oynanan Oyunlar" listesinde 8. sıradayız! 🇹🇷🏆
 Dev oyunların arasında, Türkiye'den bir indie futbol oyunu… Bu başarı oynayan herkesin, sizin sayenizde. Teşekkürler! 🙏⚽
 Sen kaçıncı sezonundasın? Yorumlara yaz 👇
 📲 Link profilde, App Store ve Google Play'de ücretsiz.
