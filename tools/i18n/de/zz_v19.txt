@@ -696,3 +696,77 @@
 7180|{} ist enttäuscht über den geplatzten Wechsel.
 7227|{} hat sich zurückgezogen.
 7249|{}/Woche
+7250|Russland
+7251|Israel
+7252|Kosovo
+7253|Äquatorialguinea
+7254|Palästina
+7255|Mosambik
+7256|Madagaskar
+7257|Tansania
+7258|Komoren
+7259|Libyen
+7260|Mauretanien
+7261|Sierra Leone
+7262|Namibia
+7263|Sudan
+7264|Kongo
+7265|Nordkorea
+7266|Simbabwe
+7267|Togo
+7268|Gambia
+7269|Guinea-Bissau
+7270|Niger
+7271|Malaysia
+7272|Zypern
+7273|Malawi
+7274|Ruanda
+7275|Zentralafrikanische Republik
+7276|Nicaragua
+7277|Suriname
+7278|Färöer
+7279|Kuwait
+7280|Turkmenistan
+7281|Philippinen
+7282|Botswana
+7283|Burundi
+7284|Dominikanische Republik
+7285|Äthiopien
+7286|Hongkong
+7287|Eswatini
+7288|Liberia
+7289|Lesotho
+7290|Jemen
+7291|Neukaledonien
+7292|Salomonen
+7293|Moldau
+7294|Singapur
+7295|Myanmar
+7296|Afghanistan
+7297|Guyana
+7298|Puerto Rico
+7299|Tahiti
+7300|Fidschi
+7301|Südsudan
+7302|Malediven
+7303|Kuba
+7304|Bermuda
+7305|Papua-Neuguinea
+7306|Malta
+7307|Grenada
+7308|Vanuatu
+7309|Andorra
+7310|Nepal
+7311|Bangladesch
+7312|Kambodscha
+7313|Mongolei
+7314|Laos
+7315|Belize
+7316|Pakistan
+7317|Sri Lanka
+7318|Gibraltar
+7319|Liechtenstein
+7320|San Marino
+7321|Brunei
+7322|Bhutan
+7323|Osttimor

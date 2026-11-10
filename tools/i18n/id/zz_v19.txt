@@ -696,3 +696,77 @@
 7180|{} kecewa gagal pindah ke klub besar.
 7227|{} mundur.
 7249|{}/minggu
+7250|Rusia
+7251|Israel
+7252|Kosovo
+7253|Guinea Khatulistiwa
+7254|Palestina
+7255|Mozambik
+7256|Madagaskar
+7257|Tanzania
+7258|Komoro
+7259|Libya
+7260|Mauritania
+7261|Sierra Leone
+7262|Namibia
+7263|Sudan
+7264|Kongo
+7265|Korea Utara
+7266|Zimbabwe
+7267|Togo
+7268|Gambia
+7269|Guinea-Bissau
+7270|Niger
+7271|Malaysia
+7272|Siprus
+7273|Malawi
+7274|Rwanda
+7275|Republik Afrika Tengah
+7276|Nikaragua
+7277|Suriname
+7278|Kepulauan Faroe
+7279|Kuwait
+7280|Turkmenistan
+7281|Filipina
+7282|Botswana
+7283|Burundi
+7284|Republik Dominika
+7285|Etiopia
+7286|Hong Kong
+7287|Eswatini
+7288|Liberia
+7289|Lesotho
+7290|Yaman
+7291|Kaledonia Baru
+7292|Kepulauan Solomon
+7293|Moldova
+7294|Singapura
+7295|Myanmar
+7296|Afganistan
+7297|Guyana
+7298|Puerto Riko
+7299|Tahiti
+7300|Fiji
+7301|Sudan Selatan
+7302|Maladewa
+7303|Kuba
+7304|Bermuda
+7305|Papua Nugini
+7306|Malta
+7307|Grenada
+7308|Vanuatu
+7309|Andorra
+7310|Nepal
+7311|Bangladesh
+7312|Kamboja
+7313|Mongolia
+7314|Laos
+7315|Belize
+7316|Pakistan
+7317|Sri Lanka
+7318|Gibraltar
+7319|Liechtenstein
+7320|San Marino
+7321|Brunei
+7322|Bhutan
+7323|Timor Leste

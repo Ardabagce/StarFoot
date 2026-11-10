@@ -696,3 +696,77 @@
 7180|{} ficou triste por perder a grande chance.
 7227|{} desistiu.
 7249|{}/semana
+7250|Rússia
+7251|Israel
+7252|Kosovo
+7253|Guiné Equatorial
+7254|Palestina
+7255|Moçambique
+7256|Madagascar
+7257|Tanzânia
+7258|Comores
+7259|Líbia
+7260|Mauritânia
+7261|Serra Leoa
+7262|Namíbia
+7263|Sudão
+7264|Congo
+7265|Coreia do Norte
+7266|Zimbábue
+7267|Togo
+7268|Gâmbia
+7269|Guiné-Bissau
+7270|Níger
+7271|Malásia
+7272|Chipre
+7273|Malawi
+7274|Ruanda
+7275|República Centro-Africana
+7276|Nicarágua
+7277|Suriname
+7278|Ilhas Faroé
+7279|Kuwait
+7280|Turcomenistão
+7281|Filipinas
+7282|Botsuana
+7283|Burundi
+7284|República Dominicana
+7285|Etiópia
+7286|Hong Kong
+7287|Essuatíni
+7288|Libéria
+7289|Lesoto
+7290|Iêmen
+7291|Nova Caledônia
+7292|Ilhas Salomão
+7293|Moldávia
+7294|Singapura
+7295|Mianmar
+7296|Afeganistão
+7297|Guiana
+7298|Porto Rico
+7299|Taiti
+7300|Fiji
+7301|Sudão do Sul
+7302|Maldivas
+7303|Cuba
+7304|Bermudas
+7305|Papua-Nova Guiné
+7306|Malta
+7307|Granada
+7308|Vanuatu
+7309|Andorra
+7310|Nepal
+7311|Bangladesh
+7312|Camboja
+7313|Mongólia
+7314|Laos
+7315|Belize
+7316|Paquistão
+7317|Sri Lanka
+7318|Gibraltar
+7319|Liechtenstein
+7320|San Marino
+7321|Brunei
+7322|Butão
+7323|Timor-Leste

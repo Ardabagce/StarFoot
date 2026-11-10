@@ -696,3 +696,77 @@
 7180|{} est déçu de rater un gros transfert.
 7227|{} s'est retiré.
 7249|{}/semaine
+7250|Russie
+7251|Israël
+7252|Kosovo
+7253|Guinée équatoriale
+7254|Palestine
+7255|Mozambique
+7256|Madagascar
+7257|Tanzanie
+7258|Comores
+7259|Libye
+7260|Mauritanie
+7261|Sierra Leone
+7262|Namibie
+7263|Soudan
+7264|Congo
+7265|Corée du Nord
+7266|Zimbabwe
+7267|Togo
+7268|Gambie
+7269|Guinée-Bissau
+7270|Niger
+7271|Malaisie
+7272|Chypre
+7273|Malawi
+7274|Rwanda
+7275|République centrafricaine
+7276|Nicaragua
+7277|Suriname
+7278|Îles Féroé
+7279|Koweït
+7280|Turkménistan
+7281|Philippines
+7282|Botswana
+7283|Burundi
+7284|République dominicaine
+7285|Éthiopie
+7286|Hong Kong
+7287|Eswatini
+7288|Liberia
+7289|Lesotho
+7290|Yémen
+7291|Nouvelle-Calédonie
+7292|Îles Salomon
+7293|Moldavie
+7294|Singapour
+7295|Birmanie
+7296|Afghanistan
+7297|Guyana
+7298|Porto Rico
+7299|Tahiti
+7300|Fidji
+7301|Soudan du Sud
+7302|Maldives
+7303|Cuba
+7304|Bermudes
+7305|Papouasie-Nouvelle-Guinée
+7306|Malte
+7307|Grenade
+7308|Vanuatu
+7309|Andorre
+7310|Népal
+7311|Bangladesh
+7312|Cambodge
+7313|Mongolie
+7314|Laos
+7315|Belize
+7316|Pakistan
+7317|Sri Lanka
+7318|Gibraltar
+7319|Liechtenstein
+7320|Saint-Marin
+7321|Brunei
+7322|Bhoutan
+7323|Timor oriental

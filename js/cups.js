@@ -7,7 +7,8 @@ const NAT_COLORS = {
   NOR: ['#c8102e', '#1d2c5e'], USA: ['#1d2c5e', '#ffffff'], MEX: ['#006847', '#ffffff'], JPN: ['#0b2a7a', '#ffffff'], KSA: ['#006c35', '#ffffff'], SCO: ['#0b2a5a', '#ffffff'], AUT: ['#c8102e', '#ffffff'], SUI: ['#c8102e', '#ffffff'], GRE: ['#0d5eaf', '#ffffff'], DEN: ['#c8102e', '#ffffff'], CZE: ['#ffffff', '#c8102e'], UKR: ['#ffd500', '#005bbb'], EGY: ['#c8102e', '#ffffff'], POL: ['#ffffff', '#c8102e'], GEO: ['#ffffff', '#c8102e'], AZE: ['#0092bc', '#c8102e'],
 };
 const EURO_NATIONS = ['TUR', 'FRA', 'ESP', 'ENG', 'POR', 'GER', 'NED', 'ITA', 'BEL', 'CRO', 'NOR', 'POL', 'GEO', 'AZE', 'SCO', 'AUT', 'SUI', 'GRE', 'DEN', 'CZE', 'UKR',
-  'SRB', 'SWE', 'WAL', 'HUN', 'ROU', 'SVK', 'IRL', 'SVN', 'ALB', 'BIH', 'ISL', 'FIN', 'NIR', 'MNE', 'BUL', 'MKD', 'KAZ', 'ARM', 'LUX', 'BLR', 'LTU', 'LVA', 'EST'];
+  'SRB', 'SWE', 'WAL', 'HUN', 'ROU', 'SVK', 'IRL', 'SVN', 'ALB', 'BIH', 'ISL', 'FIN', 'NIR', 'MNE', 'BUL', 'MKD', 'KAZ', 'ARM', 'LUX', 'BLR', 'LTU', 'LVA', 'EST',
+  'RUS', 'ISR', 'KVX', 'CYP', 'FRO', 'MDA', 'MLT', 'AND', 'GIB', 'LIE', 'SMR'];
 const STAGE_NAMES = { 32: 'Son 32', 16: 'Son 16', 8: 'Çeyrek Final', 4: 'Yarı Final', 2: 'Final' };
 // Ülke kupaları: Avrupa kupası haftalarıyla çakışmayan takvim
 const DOM_CUPS = [

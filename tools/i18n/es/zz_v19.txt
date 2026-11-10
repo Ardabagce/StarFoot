@@ -696,3 +696,77 @@
 7180|{} está dolido por perder el gran traspaso.
 7227|{} se retiró.
 7249|{}/semana
+7250|Rusia
+7251|Israel
+7252|Kosovo
+7253|Guinea Ecuatorial
+7254|Palestina
+7255|Mozambique
+7256|Madagascar
+7257|Tanzania
+7258|Comoras
+7259|Libia
+7260|Mauritania
+7261|Sierra Leona
+7262|Namibia
+7263|Sudán
+7264|Congo
+7265|Corea del Norte
+7266|Zimbabue
+7267|Togo
+7268|Gambia
+7269|Guinea-Bisáu
+7270|Níger
+7271|Malasia
+7272|Chipre
+7273|Malaui
+7274|Ruanda
+7275|República Centroafricana
+7276|Nicaragua
+7277|Surinam
+7278|Islas Feroe
+7279|Kuwait
+7280|Turkmenistán
+7281|Filipinas
+7282|Botsuana
+7283|Burundi
+7284|República Dominicana
+7285|Etiopía
+7286|Hong Kong
+7287|Esuatini
+7288|Liberia
+7289|Lesoto
+7290|Yemen
+7291|Nueva Caledonia
+7292|Islas Salomón
+7293|Moldavia
+7294|Singapur
+7295|Myanmar
+7296|Afganistán
+7297|Guyana
+7298|Puerto Rico
+7299|Tahití
+7300|Fiyi
+7301|Sudán del Sur
+7302|Maldivas
+7303|Cuba
+7304|Bermudas
+7305|Papúa Nueva Guinea
+7306|Malta
+7307|Granada
+7308|Vanuatu
+7309|Andorra
+7310|Nepal
+7311|Bangladés
+7312|Camboya
+7313|Mongolia
+7314|Laos
+7315|Belice
+7316|Pakistán
+7317|Sri Lanka
+7318|Gibraltar
+7319|Liechtenstein
+7320|San Marino
+7321|Brunéi
+7322|Bután
+7323|Timor Oriental

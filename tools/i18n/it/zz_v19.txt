@@ -696,3 +696,77 @@
 7180|{} è deluso di aver perso il grande salto.
 7227|{} si è ritirato.
 7249|{}/settimana
+7250|Russia
+7251|Israele
+7252|Kosovo
+7253|Guinea Equatoriale
+7254|Palestina
+7255|Mozambico
+7256|Madagascar
+7257|Tanzania
+7258|Comore
+7259|Libia
+7260|Mauritania
+7261|Sierra Leone
+7262|Namibia
+7263|Sudan
+7264|Congo
+7265|Corea del Nord
+7266|Zimbabwe
+7267|Togo
+7268|Gambia
+7269|Guinea-Bissau
+7270|Niger
+7271|Malesia
+7272|Cipro
+7273|Malawi
+7274|Ruanda
+7275|Repubblica Centrafricana
+7276|Nicaragua
+7277|Suriname
+7278|Isole Fær Øer
+7279|Kuwait
+7280|Turkmenistan
+7281|Filippine
+7282|Botswana
+7283|Burundi
+7284|Repubblica Dominicana
+7285|Etiopia
+7286|Hong Kong
+7287|Eswatini
+7288|Liberia
+7289|Lesotho
+7290|Yemen
+7291|Nuova Caledonia
+7292|Isole Salomone
+7293|Moldavia
+7294|Singapore
+7295|Myanmar
+7296|Afghanistan
+7297|Guyana
+7298|Porto Rico
+7299|Tahiti
+7300|Figi
+7301|Sudan del Sud
+7302|Maldive
+7303|Cuba
+7304|Bermuda
+7305|Papua Nuova Guinea
+7306|Malta
+7307|Grenada
+7308|Vanuatu
+7309|Andorra
+7310|Nepal
+7311|Bangladesh
+7312|Cambogia
+7313|Mongolia
+7314|Laos
+7315|Belize
+7316|Pakistan
+7317|Sri Lanka
+7318|Gibilterra
+7319|Liechtenstein
+7320|San Marino
+7321|Brunei
+7322|Bhutan
+7323|Timor Est

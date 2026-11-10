@@ -57,7 +57,7 @@ const NAT_ERA = {
   AZE: { 1990: 58, 2000: 60, 2010: 62, 2020: 64 },
 };
 // Bağımsızlık sonrası milli takımı olan ülkeler
-const NAT_FROM = { CRO: 1992, GEO: 1992, AZE: 1992, BIH: 1992, SVN: 1992, SVK: 1993, SRB: 2006, MNE: 2006, MKD: 1992, KAZ: 1992, ARM: 1992, BLR: 1992, LTU: 1991, LVA: 1991, EST: 1991, UZB: 1992, KGZ: 1992, TJK: 1992 };
+const NAT_FROM = { CRO: 1992, GEO: 1992, AZE: 1992, BIH: 1992, SVN: 1992, SVK: 1993, SRB: 2006, MNE: 2006, MKD: 1992, KAZ: 1992, ARM: 1992, BLR: 1992, LTU: 1991, LVA: 1991, EST: 1991, UZB: 1992, KGZ: 1992, TJK: 1992, KVX: 2016, PLE: 1998, COM: 2005, NAM: 1990, FRO: 1988, TKM: 1992, YEM: 1990, NCL: 2004, MDA: 1992, SSD: 2012, VAN: 1988, AND: 1996, BAN: 1972, GIB: 2013, SMR: 1990, TLS: 2005 };
 
 const LEAGUES = [
   { id: 'TR1', name: 'Yıldızlar Ligi', country: 'Türkiye', flag: '🇹🇷', level: 1, fame: 1.0 },

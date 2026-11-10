@@ -4960,7 +4960,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"{} · {} yaş · {} · {}": [
+"{} · {} yaş ·": [
 "coachui.js"
 ],
 "Güç": [
@@ -6005,7 +6005,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"{} yaş · {}": [
+"{} yaş ·": [
 "coachui.js"
 ],
 "İtibar": [
@@ -7581,6 +7581,56 @@
 "wc.js"
 ],
 "EST": [
+"cups.js",
+"data.js",
+"wc.js"
+],
+"RUS": [
+"cups.js",
+"wc.js"
+],
+"ISR": [
+"cups.js",
+"wc.js"
+],
+"KVX": [
+"cups.js",
+"lifex.js",
+"wc.js"
+],
+"CYP": [
+"cups.js",
+"wc.js"
+],
+"FRO": [
+"cups.js",
+"data.js",
+"wc.js"
+],
+"MDA": [
+"cups.js",
+"wc.js"
+],
+"MLT": [
+"cups.js",
+"data.js",
+"wc.js"
+],
+"AND": [
+"cups.js",
+"data.js",
+"meta.js",
+"wc.js"
+],
+"GIB": [
+"cups.js",
+"wc.js"
+],
+"LIE": [
+"cups.js",
+"wc.js"
+],
+"SMR": [
 "cups.js",
 "data.js",
 "wc.js"
@@ -10466,9 +10516,6 @@
 "lang-pt.js",
 "namefix.js"
 ],
-"MLT": [
-"data.js"
-],
 "HAT": [
 "data.js"
 ],
@@ -10729,7 +10776,8 @@
 "namefix.js"
 ],
 "MAD": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "ES": [
 "data.js",
@@ -11219,7 +11267,8 @@
 "namefix.js"
 ],
 "BER": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "ROM": [
 "data.js",
@@ -11808,7 +11857,8 @@
 "namefix.js"
 ],
 "VAN": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Van Gücü": [
 "data.js",
@@ -12398,7 +12448,9 @@
 "data.js"
 ],
 "COM": [
-"data.js"
+"data.js",
+"lifex.js",
+"wc.js"
 ],
 "Komo Rüzgarı": [
 "data.js",
@@ -13851,9 +13903,6 @@
 "lang-pt.js",
 "namefix.js"
 ],
-"FRO": [
-"data.js"
-],
 "EMP": [
 "data.js"
 ],
@@ -15248,7 +15297,8 @@
 "data.js"
 ],
 "BOT": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Rio Yolcuları": [
 "data.js",
@@ -15301,7 +15351,8 @@
 "wc.js"
 ],
 "CAM": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Belo Horizonte Kayaları": [
 "data.js",
@@ -15770,7 +15821,9 @@
 "data.js"
 ],
 "BAN": [
-"data.js"
+"data.js",
+"lifex.js",
+"wc.js"
 ],
 "Banfield Ateşi": [
 "data.js",
@@ -15877,10 +15930,6 @@
 "league.js",
 "util.js",
 "wc.js"
-],
-"AND": [
-"data.js",
-"meta.js"
 ],
 "Anderleht Kayaları": [
 "data.js",
@@ -16274,9 +16323,6 @@
 "lang-pt.js",
 "namefix.js"
 ],
-"SMR": [
-"data.js"
-],
 "Peysli Kayaları": [
 "data.js",
 "lang-ar.js",
@@ -16509,7 +16555,8 @@
 "data.js"
 ],
 "PHI": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Filadelfiya Yıldırımı": [
 "data.js",
@@ -20166,7 +20213,8 @@
 "data.js"
 ],
 "Javier": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Diego": [
 "data.js",
@@ -20268,7 +20316,8 @@
 "data.js"
 ],
 "Ramos": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Gil": [
 "data.js"
@@ -20617,7 +20666,8 @@
 "data.js"
 ],
 "Simon": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Laurent": [
 "data.js"
@@ -20626,7 +20676,8 @@
 "data.js"
 ],
 "Michel": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Fournier": [
 "data.js"
@@ -20654,7 +20705,8 @@
 ],
 "Rafael": [
 "data.js",
-"lpath.js"
+"lpath.js",
+"wc.js"
 ],
 "Thiago": [
 "data.js"
@@ -20679,7 +20731,8 @@
 "data.js"
 ],
 "Igor": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Éverton": [
 "data.js"
@@ -20698,10 +20751,12 @@
 ],
 "Silva": [
 "data.js",
-"i18n.js"
+"i18n.js",
+"wc.js"
 ],
 "Santos": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Oliveira": [
 "data.js"
@@ -20767,7 +20822,8 @@
 "lang-id.js"
 ],
 "Levi": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Luuk": [
 "data.js"
@@ -20914,7 +20970,8 @@
 "data.js"
 ],
 "Miguel": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Tomás": [
 "data.js"
@@ -21035,7 +21092,8 @@
 "data.js"
 ],
 "Kevin": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Hans": [
 "data.js"
@@ -21219,7 +21277,8 @@
 "data.js"
 ],
 "Hassan": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Nawaf": [
 "data.js"
@@ -21257,7 +21316,8 @@
 "data.js"
 ],
 "Faisal": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Waleed": [
 "data.js"
@@ -21267,7 +21327,8 @@
 "wc.js"
 ],
 "Ahmed": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Mansour": [
 "data.js"
@@ -21342,7 +21403,8 @@
 "data.js"
 ],
 "Fernando": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Eduardo": [
 "data.js"
@@ -21372,13 +21434,15 @@
 "data.js"
 ],
 "Cruz": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Morales": [
 "data.js"
 ],
 "Reyes": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Gutiérrez": [
 "data.js"
@@ -21390,7 +21454,8 @@
 "data.js"
 ],
 "Mendoza": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Haruto": [
 "data.js"
@@ -22069,7 +22134,8 @@
 "data.js"
 ],
 "Artem": [
-"data.js"
+"data.js",
+"wc.js"
 ],
 "Ruslan": [
 "data.js",
@@ -87009,7 +87075,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"wc.js"
 ],
 "SAĞ": [
 "lang-ar.js",
@@ -107329,7 +107396,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"wc.js"
 ],
 "OTOMATİK DİZ": [
 "lang-ar.js",
@@ -118778,7 +118846,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"wc.js"
 ],
 "MOR UZAY VE YILDIZLAR": [
 "lang-ar.js",
@@ -151180,6 +151249,17 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"{}/hafta": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "Sen · {}": [
 "lang-ar.js",
 "lang-de.js",
@@ -176160,6 +176240,9 @@
 "Verkaufen · {}": [
 "lang-de.js"
 ],
+"{}/Woche": [
+"lang-de.js"
+],
 "Du ({})": [
 "lang-de.js"
 ],
@@ -200237,6 +200320,9 @@
 "lang-en.js"
 ],
 "Sell · {}": [
+"lang-en.js"
+],
+"{}/week": [
 "lang-en.js"
 ],
 "You ({})": [
@@ -224444,6 +224530,10 @@
 "lang-es.js",
 "lang-pt.js"
 ],
+"{}/semana": [
+"lang-es.js",
+"lang-pt.js"
+],
 "({} goles)": [
 "lang-es.js"
 ],
@@ -247856,6 +247946,9 @@
 "Vendre · {}": [
 "lang-fr.js"
 ],
+"{}/semaine": [
+"lang-fr.js"
+],
 "Toi ({})": [
 "lang-fr.js"
 ],
@@ -251409,7 +251502,8 @@
 ],
 "PK": [
 "lang-id.js",
-"lang-ja.js"
+"lang-ja.js",
+"wc.js"
 ],
 "Pembaruan Besar: Bangun Semesta Sepak Bolamu Sendiri! 🚀": [
 "lang-id.js"
@@ -255845,7 +255939,8 @@
 "lang-id.js"
 ],
 "Junior": [
-"lang-id.js"
+"lang-id.js",
+"wc.js"
 ],
 "Pesepak bola muda": [
 "lang-id.js"
@@ -271017,6 +271112,9 @@
 "lang-id.js"
 ],
 "Jual · {}": [
+"lang-id.js"
+],
+"{}/minggu": [
 "lang-id.js"
 ],
 "Kamu ({})": [
@@ -294183,6 +294281,9 @@
 "Vendi · {}": [
 "lang-it.js"
 ],
+"{}/settimana": [
+"lang-it.js"
+],
 "Tu ({})": [
 "lang-it.js"
 ],
@@ -301129,7 +301230,8 @@
 "lang-pt.js"
 ],
 "Sim": [
-"lang-pt.js"
+"lang-pt.js",
+"wc.js"
 ],
 "Formado": [
 "lang-pt.js"
@@ -318598,6 +318700,66 @@
 "fireMgr": [
 "life.js"
 ],
+"PLE": [
+"lifex.js",
+"wc.js"
+],
+"LBY": [
+"lifex.js",
+"wc.js"
+],
+"MTN": [
+"lifex.js",
+"wc.js"
+],
+"SDN": [
+"lifex.js",
+"wc.js"
+],
+"KUW": [
+"lifex.js",
+"wc.js"
+],
+"TKM": [
+"lifex.js",
+"wc.js"
+],
+"YEM": [
+"lifex.js",
+"wc.js"
+],
+"AFG": [
+"lifex.js",
+"wc.js"
+],
+"MDV": [
+"lifex.js",
+"wc.js"
+],
+"PAK": [
+"lifex.js",
+"wc.js"
+],
+"MAS": [
+"lifex.js",
+"wc.js"
+],
+"BRU": [
+"lifex.js",
+"wc.js"
+],
+"NIG": [
+"lifex.js",
+"wc.js"
+],
+"GAM": [
+"lifex.js",
+"wc.js"
+],
+"SLE": [
+"lifex.js",
+"wc.js"
+],
 "QAT": [
 "lifex.js",
 "wc.js"
@@ -334216,6 +334378,1494 @@
 "Rustam Soirali": [
 "wc.js"
 ],
+"Rusya": [
+"wc.js"
+],
+"RU": [
+"wc.js"
+],
+"Daniil Lebedev": [
+"wc.js"
+],
+"Fyodor Novikov": [
+"wc.js"
+],
+"İsrail": [
+"wc.js"
+],
+"IL": [
+"wc.js"
+],
+"Itay Levi": [
+"wc.js"
+],
+"Yossi Cohen": [
+"wc.js"
+],
+"Kosova": [
+"wc.js"
+],
+"Besart Berisha": [
+"wc.js"
+],
+"Vedat Kelmendi": [
+"wc.js"
+],
+"EQG": [
+"wc.js"
+],
+"Ekvator Ginesi": [
+"wc.js"
+],
+"Krépin Fofana": [
+"wc.js"
+],
+"Abdou Camara": [
+"wc.js"
+],
+"Filistin": [
+"wc.js"
+],
+"Ayman Al-Mutairi": [
+"wc.js"
+],
+"Mohammed Al-Subaie": [
+"wc.js"
+],
+"MOZ": [
+"wc.js"
+],
+"Mozambik": [
+"wc.js"
+],
+"Duarte Silva": [
+"wc.js"
+],
+"Rafael Martins": [
+"wc.js"
+],
+"Madagaskar": [
+"wc.js"
+],
+"Pape Koné": [
+"wc.js"
+],
+"Cheikhou Camara": [
+"wc.js"
+],
+"TAN": [
+"wc.js"
+],
+"Tanzanya": [
+"wc.js"
+],
+"EA": [
+"wc.js"
+],
+"Djihad Msuva": [
+"wc.js"
+],
+"Haruna Kebede": [
+"wc.js"
+],
+"Komorlar": [
+"wc.js"
+],
+"Seko Ndiaye": [
+"wc.js"
+],
+"Libya": [
+"wc.js"
+],
+"Nasser Al-Rashidi": [
+"wc.js"
+],
+"Mansour Al-Hazmi": [
+"wc.js"
+],
+"Moritanya": [
+"wc.js"
+],
+"Habib Diatta": [
+"wc.js"
+],
+"Cheikhou Diallo": [
+"wc.js"
+],
+"Sierra Leone": [
+"wc.js"
+],
+"Ola Eze": [
+"wc.js"
+],
+"Chidi Asante": [
+"wc.js"
+],
+"NAM": [
+"wc.js"
+],
+"Namibya": [
+"wc.js"
+],
+"ZA": [
+"wc.js"
+],
+"Bongani Shalulile": [
+"wc.js"
+],
+"Tendai Shalulile": [
+"wc.js"
+],
+"Sudan": [
+"wc.js"
+],
+"Abdullah Al-Asmari": [
+"wc.js"
+],
+"Fahad Al-Anazi": [
+"wc.js"
+],
+"CGO": [
+"wc.js"
+],
+"Kongo": [
+"wc.js"
+],
+"Habib Koné": [
+"wc.js"
+],
+"Seko Fofana": [
+"wc.js"
+],
+"PRK": [
+"wc.js"
+],
+"Kuzey Kore": [
+"wc.js"
+],
+"Hyun-woo Lee": [
+"wc.js"
+],
+"Jin-woo Oh": [
+"wc.js"
+],
+"ZIM": [
+"wc.js"
+],
+"Zimbabve": [
+"wc.js"
+],
+"Tendai Mhango": [
+"wc.js"
+],
+"TOG": [
+"wc.js"
+],
+"Togo": [
+"wc.js"
+],
+"Ibrahima Diallo": [
+"wc.js"
+],
+"Cheikhou Fofana": [
+"wc.js"
+],
+"Gambiya": [
+"wc.js"
+],
+"Lamine Diatta": [
+"wc.js"
+],
+"Idrissa Diatta": [
+"wc.js"
+],
+"GNB": [
+"wc.js"
+],
+"Gine-Bissau": [
+"wc.js"
+],
+"Ricardo Pereira": [
+"wc.js"
+],
+"Ricardo Alves": [
+"wc.js"
+],
+"Nijer": [
+"wc.js"
+],
+"Idrissa Fofana": [
+"wc.js"
+],
+"Abdou Traoré": [
+"wc.js"
+],
+"Malezya": [
+"wc.js"
+],
+"MY": [
+"wc.js"
+],
+"Safawi Hamid": [
+"wc.js"
+],
+"Wei Jie Tan": [
+"wc.js"
+],
+"Kıbrıs": [
+"wc.js"
+],
+"Pantelis Konstantinou": [
+"wc.js"
+],
+"Konstantinos Michailidis": [
+"wc.js"
+],
+"MWI": [
+"wc.js"
+],
+"Malavi": [
+"wc.js"
+],
+"Themba Dube": [
+"wc.js"
+],
+"Sipho Phiri": [
+"wc.js"
+],
+"RWA": [
+"wc.js"
+],
+"Ruanda": [
+"wc.js"
+],
+"Abebe Kagere": [
+"wc.js"
+],
+"Haruna Niyonzima": [
+"wc.js"
+],
+"CTA": [
+"wc.js"
+],
+"Orta Afrika Cumhuriyeti": [
+"wc.js"
+],
+"Lamine Mendy": [
+"wc.js"
+],
+"Seko Sarr": [
+"wc.js"
+],
+"NCA": [
+"wc.js"
+],
+"Nikaragua": [
+"wc.js"
+],
+"Jorge Cruz": [
+"wc.js"
+],
+"Óscar Flores": [
+"wc.js"
+],
+"SUR": [
+"wc.js"
+],
+"Surinam": [
+"wc.js"
+],
+"Jesse Meijer": [
+"wc.js"
+],
+"Jurriën van Dijk": [
+"wc.js"
+],
+"Faroe Adaları": [
+"wc.js"
+],
+"Sverrir Ólafsson": [
+"wc.js"
+],
+"Birkir Einarsson": [
+"wc.js"
+],
+"Kuveyt": [
+"wc.js"
+],
+"Waleed Al-Mutairi": [
+"wc.js"
+],
+"Waleed Al-Juhani": [
+"wc.js"
+],
+"Türkmenistan": [
+"wc.js"
+],
+"Bekzod Ergashev": [
+"wc.js"
+],
+"Otabek Mirzaev": [
+"wc.js"
+],
+"Filipinler": [
+"wc.js"
+],
+"PH": [
+"wc.js"
+],
+"Miguel Cruz": [
+"wc.js"
+],
+"Jefferson Ramos": [
+"wc.js"
+],
+"Botsvana": [
+"wc.js"
+],
+"Lebo Phiri": [
+"wc.js"
+],
+"Tatenda Dube": [
+"wc.js"
+],
+"BDI": [
+"wc.js"
+],
+"Burundi": [
+"wc.js"
+],
+"Djihad Bizimana": [
+"wc.js"
+],
+"DOM": [
+"wc.js"
+],
+"Dominik Cumhuriyeti": [
+"wc.js"
+],
+"Sergio Sánchez": [
+"wc.js"
+],
+"Andrés Díaz": [
+"wc.js"
+],
+"ETH": [
+"wc.js"
+],
+"Etiyopya": [
+"wc.js"
+],
+"Getaneh Samatta": [
+"wc.js"
+],
+"Getaneh Kebede": [
+"wc.js"
+],
+"HKG": [
+"wc.js"
+],
+"Hong Kong": [
+"wc.js"
+],
+"Tao Sun": [
+"wc.js"
+],
+"Lei Wang": [
+"wc.js"
+],
+"SWZ": [
+"wc.js"
+],
+"Esvatini": [
+"wc.js"
+],
+"Tendai Moyo": [
+"wc.js"
+],
+"Gabadinho Hlongwane": [
+"wc.js"
+],
+"LBR": [
+"wc.js"
+],
+"Liberya": [
+"wc.js"
+],
+"Ibrahim Danso": [
+"wc.js"
+],
+"Tariq Nwosu": [
+"wc.js"
+],
+"LES": [
+"wc.js"
+],
+"Lesotho": [
+"wc.js"
+],
+"Tendai Hlongwane": [
+"wc.js"
+],
+"Themba Shalulile": [
+"wc.js"
+],
+"Yemen": [
+"wc.js"
+],
+"Faisal Al-Anazi": [
+"wc.js"
+],
+"Abdullah Al-Ghamdi": [
+"wc.js"
+],
+"NCL": [
+"wc.js"
+],
+"Yeni Kaledonya": [
+"wc.js"
+],
+"OC": [
+"wc.js"
+],
+"Raphael Tehau": [
+"wc.js"
+],
+"Teaonui Wadriako": [
+"wc.js"
+],
+"Solomon Adaları": [
+"wc.js"
+],
+"Roy Molia": [
+"wc.js"
+],
+"Michel Krishna": [
+"wc.js"
+],
+"Moldova": [
+"wc.js"
+],
+"Andrei Constantin": [
+"wc.js"
+],
+"Alexandru Lungu": [
+"wc.js"
+],
+"SIN": [
+"wc.js"
+],
+"Singapur": [
+"wc.js"
+],
+"Darren Yusof": [
+"wc.js"
+],
+"Wei Jie Hamid": [
+"wc.js"
+],
+"MYA": [
+"wc.js"
+],
+"Myanmar": [
+"wc.js"
+],
+"MM": [
+"wc.js"
+],
+"Thiha Htun": [
+"wc.js"
+],
+"Htet Aung": [
+"wc.js"
+],
+"Afganistan": [
+"wc.js"
+],
+"Ehsan Ahmadi": [
+"wc.js"
+],
+"Morteza Hashemi": [
+"wc.js"
+],
+"GUY": [
+"wc.js"
+],
+"Guyana": [
+"wc.js"
+],
+"Joe Walker": [
+"wc.js"
+],
+"Callum Roberts": [
+"wc.js"
+],
+"PUR": [
+"wc.js"
+],
+"Porto Riko": [
+"wc.js"
+],
+"Óscar González": [
+"wc.js"
+],
+"Javier Gutiérrez": [
+"wc.js"
+],
+"TAH": [
+"wc.js"
+],
+"Tahiti": [
+"wc.js"
+],
+"Roy Krishna": [
+"wc.js"
+],
+"Teaonui Kaltak": [
+"wc.js"
+],
+"FIJ": [
+"wc.js"
+],
+"Fiji": [
+"wc.js"
+],
+"Teaonui Tehau": [
+"wc.js"
+],
+"Michel Tiama": [
+"wc.js"
+],
+"SSD": [
+"wc.js"
+],
+"Güney Sudan": [
+"wc.js"
+],
+"Meddie Mwamba": [
+"wc.js"
+],
+"Saladin Mwamba": [
+"wc.js"
+],
+"Maldivler": [
+"wc.js"
+],
+"LK": [
+"wc.js"
+],
+"Ibrahim Naseer": [
+"wc.js"
+],
+"Ali Jayasuriya": [
+"wc.js"
+],
+"CUB": [
+"wc.js"
+],
+"Küba": [
+"wc.js"
+],
+"José Martínez": [
+"wc.js"
+],
+"Andrés Castillo": [
+"wc.js"
+],
+"Bermuda": [
+"wc.js"
+],
+"Sam Green": [
+"wc.js"
+],
+"Reece Taylor": [
+"wc.js"
+],
+"PNG": [
+"wc.js"
+],
+"Papua Yeni Gine": [
+"wc.js"
+],
+"Kalo Tehau": [
+"wc.js"
+],
+"Malta": [
+"wc.js"
+],
+"Federico Giordano": [
+"wc.js"
+],
+"Marco Conti": [
+"wc.js"
+],
+"GRN": [
+"wc.js"
+],
+"Grenada": [
+"wc.js"
+],
+"George Thompson": [
+"wc.js"
+],
+"Lewis Walker": [
+"wc.js"
+],
+"Vanuatu": [
+"wc.js"
+],
+"Junior Krishna": [
+"wc.js"
+],
+"Raphael Faisi": [
+"wc.js"
+],
+"Andorra": [
+"wc.js"
+],
+"Pau Gómez": [
+"wc.js"
+],
+"Rubén Muñoz": [
+"wc.js"
+],
+"NEP": [
+"wc.js"
+],
+"Nepal": [
+"wc.js"
+],
+"Liston Singh": [
+"wc.js"
+],
+"Arjun Gupta": [
+"wc.js"
+],
+"Bangladeş": [
+"wc.js"
+],
+"Hassan Khan": [
+"wc.js"
+],
+"Hassan Malik": [
+"wc.js"
+],
+"Kamboçya": [
+"wc.js"
+],
+"KH": [
+"wc.js"
+],
+"Keo Chhay": [
+"wc.js"
+],
+"Sopheap Khiev": [
+"wc.js"
+],
+"MNG": [
+"wc.js"
+],
+"Moğolistan": [
+"wc.js"
+],
+"Tsend Ochir": [
+"wc.js"
+],
+"Erdene Batbold": [
+"wc.js"
+],
+"LAO": [
+"wc.js"
+],
+"Laos": [
+"wc.js"
+],
+"Vathanaka Sokha": [
+"wc.js"
+],
+"Sieng Phommasane": [
+"wc.js"
+],
+"BLZ": [
+"wc.js"
+],
+"Belize": [
+"wc.js"
+],
+"Emilio Ramírez": [
+"wc.js"
+],
+"Emilio Hernández": [
+"wc.js"
+],
+"Pakistan": [
+"wc.js"
+],
+"Sohail Rahman": [
+"wc.js"
+],
+"Hassan Islam": [
+"wc.js"
+],
+"SRI": [
+"wc.js"
+],
+"Sri Lanka": [
+"wc.js"
+],
+"Mohamed Gunaratne": [
+"wc.js"
+],
+"Chathura Jayasuriya": [
+"wc.js"
+],
+"Cebelitarık": [
+"wc.js"
+],
+"Reece Clarke": [
+"wc.js"
+],
+"Lewis Johnson": [
+"wc.js"
+],
+"Lihtenştayn": [
+"wc.js"
+],
+"Leon Schmidt": [
+"wc.js"
+],
+"Marco Koch": [
+"wc.js"
+],
+"San Marino": [
+"wc.js"
+],
+"Andrea Rossi": [
+"wc.js"
+],
+"Giacomo Gallo": [
+"wc.js"
+],
+"Brunei": [
+"wc.js"
+],
+"Wei Jie Halim": [
+"wc.js"
+],
+"Arif Yusof": [
+"wc.js"
+],
+"BHU": [
+"wc.js"
+],
+"Butan": [
+"wc.js"
+],
+"Rohit Thapa": [
+"wc.js"
+],
+"Akash Gupta": [
+"wc.js"
+],
+"TLS": [
+"wc.js"
+],
+"Doğu Timor": [
+"wc.js"
+],
+"Ricky Pratama": [
+"wc.js"
+],
+"Pratama Setiawan": [
+"wc.js"
+],
+"Aleksandr": [
+"wc.js"
+],
+"Dmitri": [
+"wc.js"
+],
+"Sergei": [
+"wc.js"
+],
+"Maksim": [
+"wc.js"
+],
+"Denis": [
+"wc.js"
+],
+"Anton": [
+"wc.js"
+],
+"Fyodor": [
+"wc.js"
+],
+"Daniil": [
+"wc.js"
+],
+"Ivanov": [
+"wc.js"
+],
+"Smirnov": [
+"wc.js"
+],
+"Kuznetsov": [
+"wc.js"
+],
+"Popov": [
+"wc.js"
+],
+"Sokolov": [
+"wc.js"
+],
+"Volkov": [
+"wc.js"
+],
+"Morozov": [
+"wc.js"
+],
+"Lebedev": [
+"wc.js"
+],
+"Novikov": [
+"wc.js"
+],
+"Fedorov": [
+"wc.js"
+],
+"Eran": [
+"wc.js"
+],
+"Yossi": [
+"wc.js"
+],
+"Omer": [
+"wc.js"
+],
+"Dor": [
+"wc.js"
+],
+"Itay": [
+"wc.js"
+],
+"Liel": [
+"wc.js"
+],
+"Manor": [
+"wc.js"
+],
+"Shon": [
+"wc.js"
+],
+"Gavriel": [
+"wc.js"
+],
+"Tai": [
+"wc.js"
+],
+"Cohen": [
+"wc.js"
+],
+"Mizrahi": [
+"wc.js"
+],
+"Peretz": [
+"wc.js"
+],
+"Biton": [
+"wc.js"
+],
+"Dahan": [
+"wc.js"
+],
+"Avraham": [
+"wc.js"
+],
+"Friedman": [
+"wc.js"
+],
+"Azulai": [
+"wc.js"
+],
+"Katz": [
+"wc.js"
+],
+"Arbnor": [
+"wc.js"
+],
+"Ermal": [
+"wc.js"
+],
+"Milot": [
+"wc.js"
+],
+"Vedat": [
+"wc.js"
+],
+"Edon": [
+"wc.js"
+],
+"Amir": [
+"wc.js"
+],
+"Florent": [
+"wc.js"
+],
+"Lirim": [
+"wc.js"
+],
+"Besart": [
+"wc.js"
+],
+"Valon": [
+"wc.js"
+],
+"Krasniqi": [
+"wc.js"
+],
+"Gashi": [
+"wc.js"
+],
+"Berisha": [
+"wc.js"
+],
+"Hoxha": [
+"wc.js"
+],
+"Shala": [
+"wc.js"
+],
+"Morina": [
+"wc.js"
+],
+"Rexhepi": [
+"wc.js"
+],
+"Bytyqi": [
+"wc.js"
+],
+"Kelmendi": [
+"wc.js"
+],
+"Hasani": [
+"wc.js"
+],
+"Muhammad": [
+"wc.js"
+],
+"Bilal": [
+"wc.js"
+],
+"Usman": [
+"wc.js"
+],
+"Zahid": [
+"wc.js"
+],
+"Rahim": [
+"wc.js"
+],
+"Jamal": [
+"wc.js"
+],
+"Tariq": [
+"wc.js"
+],
+"Sohail": [
+"wc.js"
+],
+"Imran": [
+"wc.js"
+],
+"Khan": [
+"wc.js"
+],
+"Hossain": [
+"wc.js"
+],
+"Rahman": [
+"wc.js"
+],
+"Islam": [
+"wc.js"
+],
+"Chowdhury": [
+"wc.js"
+],
+"Iqbal": [
+"wc.js"
+],
+"Malik": [
+"wc.js"
+],
+"Butt": [
+"wc.js"
+],
+"Safawi": [
+"wc.js"
+],
+"Syafiq": [
+"wc.js"
+],
+"Hafiz": [
+"wc.js"
+],
+"Aiman": [
+"wc.js"
+],
+"Irfan": [
+"wc.js"
+],
+"Arif": [
+"wc.js"
+],
+"Darren": [
+"wc.js"
+],
+"Ikhsan": [
+"wc.js"
+],
+"Wei Jie": [
+"wc.js"
+],
+"Halim": [
+"wc.js"
+],
+"Rasid": [
+"wc.js"
+],
+"Ahmad": [
+"wc.js"
+],
+"Hamid": [
+"wc.js"
+],
+"Ismail": [
+"wc.js"
+],
+"Lok": [
+"wc.js"
+],
+"Tan": [
+"wc.js"
+],
+"Yusof": [
+"wc.js"
+],
+"Jose": [
+"wc.js"
+],
+"Jefferson": [
+"wc.js"
+],
+"Paolo": [
+"wc.js"
+],
+"Mark": [
+"wc.js"
+],
+"Patrick": [
+"wc.js"
+],
+"Angelo": [
+"wc.js"
+],
+"Bautista": [
+"wc.js"
+],
+"Garcia": [
+"wc.js"
+],
+"Villanueva": [
+"wc.js"
+],
+"Aquino": [
+"wc.js"
+],
+"Tolentino": [
+"wc.js"
+],
+"Batbayar": [
+"wc.js"
+],
+"Ganbold": [
+"wc.js"
+],
+"Temuulen": [
+"wc.js"
+],
+"Naranbold": [
+"wc.js"
+],
+"Tsend": [
+"wc.js"
+],
+"Bilguun": [
+"wc.js"
+],
+"Erdene": [
+"wc.js"
+],
+"Munkh": [
+"wc.js"
+],
+"Altan": [
+"wc.js"
+],
+"Bat-Erdene": [
+"wc.js"
+],
+"Enkhbat": [
+"wc.js"
+],
+"Batbold": [
+"wc.js"
+],
+"Ganzorig": [
+"wc.js"
+],
+"Tsogt": [
+"wc.js"
+],
+"Dorj": [
+"wc.js"
+],
+"Bayar": [
+"wc.js"
+],
+"Ochir": [
+"wc.js"
+],
+"Purev": [
+"wc.js"
+],
+"Sukh": [
+"wc.js"
+],
+"Gantulga": [
+"wc.js"
+],
+"Aung": [
+"wc.js"
+],
+"Kyaw": [
+"wc.js"
+],
+"Htet": [
+"wc.js"
+],
+"Zaw": [
+"wc.js"
+],
+"Myo": [
+"wc.js"
+],
+"Thiha": [
+"wc.js"
+],
+"Min": [
+"wc.js"
+],
+"Hein": [
+"wc.js"
+],
+"Lwin": [
+"wc.js"
+],
+"Naing": [
+"wc.js"
+],
+"Win": [
+"wc.js"
+],
+"Htun": [
+"wc.js"
+],
+"Oo": [
+"wc.js"
+],
+"Thu": [
+"wc.js"
+],
+"Zin": [
+"wc.js"
+],
+"Soe": [
+"wc.js"
+],
+"Lin": [
+"wc.js"
+],
+"Tun": [
+"wc.js"
+],
+"Roy": [
+"wc.js"
+],
+"Kalo": [
+"wc.js"
+],
+"Joel": [
+"wc.js"
+],
+"Raphael": [
+"wc.js"
+],
+"Atkin": [
+"wc.js"
+],
+"Teaonui": [
+"wc.js"
+],
+"Bertrand": [
+"wc.js"
+],
+"Tevita": [
+"wc.js"
+],
+"Krishna": [
+"wc.js"
+],
+"Kakou": [
+"wc.js"
+],
+"Tiama": [
+"wc.js"
+],
+"Wadriako": [
+"wc.js"
+],
+"Tehau": [
+"wc.js"
+],
+"Kaltak": [
+"wc.js"
+],
+"Lotomo": [
+"wc.js"
+],
+"Naidu": [
+"wc.js"
+],
+"Molia": [
+"wc.js"
+],
+"Faisi": [
+"wc.js"
+],
+"Abebe": [
+"wc.js"
+],
+"Getaneh": [
+"wc.js"
+],
+"Mbwana": [
+"wc.js"
+],
+"Haruna": [
+"wc.js"
+],
+"Meddie": [
+"wc.js"
+],
+"Jean": [
+"wc.js"
+],
+"Saladin": [
+"wc.js"
+],
+"Abdi": [
+"wc.js"
+],
+"Djihad": [
+"wc.js"
+],
+"Kebede": [
+"wc.js"
+],
+"Tadesse": [
+"wc.js"
+],
+"Msuva": [
+"wc.js"
+],
+"Samatta": [
+"wc.js"
+],
+"Niyonzima": [
+"wc.js"
+],
+"Kagere": [
+"wc.js"
+],
+"Bizimana": [
+"wc.js"
+],
+"Mugisha": [
+"wc.js"
+],
+"Tesfaye": [
+"wc.js"
+],
+"Mwamba": [
+"wc.js"
+],
+"Tendai": [
+"wc.js"
+],
+"Themba": [
+"wc.js"
+],
+"Gabadinho": [
+"wc.js"
+],
+"Khama": [
+"wc.js"
+],
+"Tapiwa": [
+"wc.js"
+],
+"Bongani": [
+"wc.js"
+],
+"Tatenda": [
+"wc.js"
+],
+"Lebo": [
+"wc.js"
+],
+"Sipho": [
+"wc.js"
+],
+"Gerald": [
+"wc.js"
+],
+"Moyo": [
+"wc.js"
+],
+"Ncube": [
+"wc.js"
+],
+"Banda": [
+"wc.js"
+],
+"Phiri": [
+"wc.js"
+],
+"Dube": [
+"wc.js"
+],
+"Mhango": [
+"wc.js"
+],
+"Billiat": [
+"wc.js"
+],
+"Musona": [
+"wc.js"
+],
+"Hlongwane": [
+"wc.js"
+],
+"Shalulile": [
+"wc.js"
+],
+"Sovann": [
+"wc.js"
+],
+"Chan": [
+"wc.js"
+],
+"Keo": [
+"wc.js"
+],
+"Phoutthasay": [
+"wc.js"
+],
+"Bounma": [
+"wc.js"
+],
+"Vathanaka": [
+"wc.js"
+],
+"Sieng": [
+"wc.js"
+],
+"Sopheap": [
+"wc.js"
+],
+"Khamla": [
+"wc.js"
+],
+"Sok": [
+"wc.js"
+],
+"Chhay": [
+"wc.js"
+],
+"Vong": [
+"wc.js"
+],
+"Sokha": [
+"wc.js"
+],
+"Phommasane": [
+"wc.js"
+],
+"Keola": [
+"wc.js"
+],
+"Khiev": [
+"wc.js"
+],
+"Sayavong": [
+"wc.js"
+],
+"Pich": [
+"wc.js"
+],
+"Dimuth": [
+"wc.js"
+],
+"Chathura": [
+"wc.js"
+],
+"Kasun": [
+"wc.js"
+],
+"Nuwan": [
+"wc.js"
+],
+"Mohamed": [
+"wc.js"
+],
+"Sujan": [
+"wc.js"
+],
+"Perera": [
+"wc.js"
+],
+"Rasheed": [
+"wc.js"
+],
+"Naseer": [
+"wc.js"
+],
+"Gunaratne": [
+"wc.js"
+],
+"Mahdhee": [
+"wc.js"
+],
+"Waheed": [
+"wc.js"
+],
+"Jayasuriya": [
+"wc.js"
+],
+"Rizwan": [
+"wc.js"
+],
 "Gylfi": [
 "wc.js"
 ],
@@ -334279,9 +335929,6 @@
 "Teemu": [
 "wc.js"
 ],
-"Joel": [
-"wc.js"
-],
 "Jere": [
 "wc.js"
 ],
@@ -334334,9 +335981,6 @@
 "wc.js"
 ],
 "Askhat": [
-"wc.js"
-],
-"Islam": [
 "wc.js"
 ],
 "Yerkebulan": [
@@ -335084,9 +336728,6 @@
 "wc.js"
 ],
 "Chidi": [
-"wc.js"
-],
-"Tariq": [
 "wc.js"
 ],
 "Owusu": [
