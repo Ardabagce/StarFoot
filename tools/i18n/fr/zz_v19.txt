@@ -399,3 +399,300 @@
 6867|💎 Inclus dans Diamond
 6869|Tout débloqué
 6870|3 modes de jeu
+6871|La cohésion de l'équipe s'améliore.
+6872|Attaque +2 au prochain match.
+6873|Défense +2 au prochain match.
+6874|Coups de pied arrêtés
+6875|Meilleurs penalties et coups francs.
+6876|Récupération plus rapide, moins de blessures.
+6877|Leader
+6878|Capitaine, il booste le moral et la cohésion.
+6879|Progresse plus vite, ne râle pas pour le temps de jeu.
+6880|Ambitieux
+6881|Progresse beaucoup mais s'agace vite sur le banc.
+6882|Peu affecté par les résultats.
+6883|Rebelle
+6884|Talentueux, mais met parfois le bazar dans le vestiaire.
+6885|Aucun trait particulier.
+6886|Centre d'entraînement
+6887|Les joueurs progressent plus vite.
+6888|Centre de formation
+6889|Des jeunes plus talentueux émergent.
+1657|Stade
+6890|Plus de places et de recettes.
+6891|Centre médical
+6892|Blessures plus courtes et plus rares.
+6893|Choisis le onze, le capitaine et les tireurs dans Effectif.
+6894|Suis les matchs sur le mini-terrain : tactique, changements et tirs décisifs à toi.
+6895|Cherche avec tes recruteurs, négocie et signe des contrats.
+6896|Gère budget, salaires et installations dans Club.
+7014|🏗️ {} passe au niveau {} !
+6971|😠 {} estime que tu n'as pas tenu ta promesse de temps de jeu.
+6898|Entraîneur du mois
+7005|{} Entraîneur du mois
+6899|🏅 Tu es élu entraîneur du mois !
+6901|Tes recruteurs suivent au plus 3 joueurs à la fois.
+6975|🔎 Ton recruteur prépare un rapport sur {} (1 semaine).
+6999|📋 Rapport prêt : {}
+6980|✍️ {} arrive libre.
+6982|🔁 {} prêté à {} jusqu'à la fin de saison.
+6903|Un chantier est déjà en cours.
+6904|Cette installation est au niveau max.
+6905|Le club n'a pas assez d'argent.
+6986|🏗️ Agrandissement de {} lancé ({} semaines).
+6996|🔁 {} revient de prêt (note {}).
+6976|📄 {} quitte le club en fin de contrat.
+6988|Coup d'envoi ! On commence avec un jeu {}.
+7004|🤕 {} est blessé ({} semaines).
+6994|{} frappe, le gardien sauve.
+6997|{} frappe à côté.
+6995|But encaissé. {} ({}) fait {}.
+6983|{} sauve, superbe arrêt !
+6979|{} a une occasion, juste à côté.
+6989|🟥 CARTON ROUGE ! {} est expulsé.
+7009|🟨 {} est averti.
+6972|{} prend un 5e jaune, suspendu au prochain match.
+7017|Penalty pour {} !
+6916|Notre gardien
+7007|{} arrête le penalty !
+6987|Penalty pour nous ! {} s'élance.
+7010|{} rate le penalty !
+7011|{} au point de penalty
+3740|Tire en arrière, choisis le coin et lâche !
+6921|COUP FRANC
+7024|{} se place devant le ballon
+6923|Trouve le but par-dessus ou à côté du mur !
+7002|{} seul face au gardien
+6925|Dribble le gardien ou place-le dans le coin !
+6926|GROSSE OCCASION
+6993|{} reçoit le ballon dans la surface
+6928|Frappe ou passe à un coéquipier libre !
+6929|⚡ Auto
+6930|⚽ Joue-le
+6998|{} n'a pas su conclure.
+6981|🔄 Changement : {} entre, {} sort.
+6973|Blessure ! {} ne peut pas continuer. Qui entre ?
+7018|Possession {} %
+7026|Tirs {}-{}
+6934|Possession
+6935|Cadrés
+7013|⭐ Homme du match : {}
+7006|⭐ Homme du match : {} ({})
+6936|Fin du match
+6937|Tirs cadrés
+6938|Corners
+6939|Notes des joueurs
+6940|Aller au vestiaire
+6941|👏 Vous avez été brillants !
+6943|Les joueurs ont adoré les éloges.
+6944|🙂 Bien, mais vous pouvez mieux faire
+6946|L'équipe a compris le message de rester humble.
+6947|😐 Pas de relâchement
+6949|Certains n'ont pas aimé voir leur joie coupée, mais le message est passé.
+6950|🤝 Un point, c'est un point
+6952|L'équipe a gardé le moral.
+6953|📋 On pouvait gagner ce match
+6955|Les joueurs ont parlé de leurs erreurs.
+6956|😠 Cette performance ne suffit pas !
+6958|Les mots durs ont piqué l'équipe.
+6959|Les joueurs ont mal pris ces mots durs.
+6960|🤝 Relevons la tête
+6962|L'équipe essaie d'oublier la défaite.
+6963|📋 Parlons de nos erreurs
+6965|Analyse vidéo faite, lacunes notées.
+6966|Les joueurs ont réagi et sont remontés.
+6967|Il y a de la tension dans le vestiaire.
+6990|{}-{}. Que vas-tu dire à l'équipe ?
+6969|⚖️ La fédération t'inflige {} d'amende pour critique de l'arbitre.
+3364|· Semaine {}
+7241|(t.a.b. {}-{})
+7243|{}Match contre {} : {}
+7202|💪 {} {} est remis de sa blessure.
+7181|🤕 {} {} s'est blessé à l'entraînement ({} semaines).
+7199|✍️ {} {} rejoint l'effectif ({}).
+7179|✍️ {} {} arrive libre.
+7190|👋 {} {} vendu pour {} à {}.
+7245|· Note {}
+7200|Possession {} % · Tirs {}-{}
+7201|Changements · {} restants
+7237|· {} fatigués
+7224|Tirs au but : {}-{} · {}
+6501|😠 C'est inacceptable !
+7027|Vestiaire
+7028|Comment analysez-vous la victoire du jour ?
+7029|Je félicite mes joueurs, ils l'ont tous mérité.
+7030|Cette équipe joue chaque match pour gagner !
+7031|On a répondu à nos détracteurs sur le terrain.
+7032|Les supporters parlent du titre. Qu'en dites-vous ?
+7034|La route est longue, on avance match après match.
+7035|Pourquoi pas ? Je crois en cette équipe.
+7038|Personne ne peut nous arrêter.
+7039|Un point vous suffit-il ?
+7040|Un adversaire coriace, je respecte ce point.
+7041|Sans ces décisions arbitrales, on aurait gagné.
+6100|Qu'est-ce qui explique cette défaite ?
+7042|La responsabilité est la mienne, on corrigera nos erreurs.
+7043|On a perdu une bataille, pas la guerre.
+7044|L'arbitrage a fait basculer le match.
+7045|La direction vous fait-elle encore confiance ?
+7046|On parle à la direction tous les jours, on est unis.
+7047|Les résultats viendront, j'en suis sûr.
+7048|Je fais mon travail, le reste ne me regarde pas.
+7049|Conférence de presse
+7050|La direction a apprécié ton calme.
+7051|Les supporters ont adoré ces mots.
+3649|Tes mots ont fait les gros titres.
+7230|· {} · Semaine {}
+7052|Trésorerie
+7242|Direction {}
+7238|Supporters {}
+1127|Classement
+7053|Joueur à surveiller
+7191|· {} · Entraînement : {} · Onze : {}/11
+7233|Dernier match : {} {}-{}{}
+7217|Décisions en attente : {}
+7054|Tes joueurs et la direction attendent ta réponse
+7228|Objectif coupe : {}
+7055|Le mercato est ouvert. Cherche des joueurs dans Transferts.
+7057|Cohésion d'équipe
+7058|Ils attaquent : contre pour exploiter l'espace dans leur dos.
+7059|Ils vont défendre bas : force avec l'attaque ou un pressing haut.
+7060|Ils pressent haut : ils fatigueront, attaque en seconde période.
+7061|Ils joueront le contre : reste équilibré.
+7062|Ils sont équilibrés : fais confiance à ton effectif.
+7234|Potentiel {}
+7239|En prêt : {}
+1345|Libre
+7063|Proposer un contrat
+7064|Recruteur en observation
+7065|Observer
+7066|Faire une offre
+7067|Joueurs prêtés
+7188|Onze : {}/11 · Attaque {} · Défense {}
+7068|Capitaine :
+7069|Penalties :
+7070|Coups francs :
+7071|Coche à gauche pour le onze. Touche un nom pour capitaine, penalties, contrat ou vente.
+7074|Nommer capitaine
+7203|🅲 {} est le nouveau capitaine.
+7076|Tireur de penalties
+7077|Tireur de coups francs
+7078|Prolonger le contrat
+7079|Prêter
+7231|· {} ans · {} · {}
+7080|Moral
+7248|{}/sem
+7081|Contrat
+5660|Note moy.
+7186|demande {}/semaine pour un nouveau contrat.
+7178|Salaire actuel {}/semaine · Budget salarial : {} / {}
+7082|Négocier (−10 %)
+7083|a refusé l'offre.
+7084|Ce salaire dépasse le budget salarial.
+7173|📝 {} prolongé de {} ans ({}/semaine).
+7085|Je les joue
+7086|Tu tires les penalties, coups francs et grosses occasions.
+7087|Les moments clés dépendent de la note du joueur.
+7088|Entraînement hebdo
+7089|Axe
+7090|Moments clés
+7193|Force : Attaque {} · Défense {}
+7091|Mercato ouvert
+7092|Mercato fermé
+7093|Budget transferts
+7094|Masse salariale
+7095|Budget salarial
+7096|Tu peux prolonger des contrats même fermé.
+7097|Tous
+7098|Tout le budget
+7099|Illimité
+7100|Observer : après 1 semaine, potentiel réel et salaire demandé.
+7101|Choisis tes critères et cherche.
+7102|Joueurs libres
+7103|Sans contrat : pas d'indemnité, que le salaire.
+7104|Réseau de recrutement
+7105|Âge max
+7106|Indemnité max
+7107|Pour vendre ou prêter, touche son nom dans Effectif.
+7235|Négociation · {}
+7108|— quelle est ton offre ?
+7197|· {} ans · Note {} · Potentiel {}
+7194|Prix demandé : {} · Ton budget : {}
+7109|Demandé
+7110|Contre-offre
+7213|{} : « Pour {}, c'est d'accord. »
+7236|Accepter · {}
+7111|Négociation du contrat
+7208|demande {} par semaine.
+7214|Masse salariale : {} / budget {}
+7112|Durée du contrat
+7113|Ton offre de salaire
+7244|{}/sem · {} %
+7232|· Indemnité {}
+7225|✍️ {} a signé !
+7204|ans de contrat · {}/semaine{}
+7115|trouve l'offre trop basse. Ses exigences augmentent un peu.
+7118|La trésorerie est dans le rouge ! La direction s'en souviendra. Vends des joueurs ou réduis les salaires.
+7122|Finances
+7123|Revenus sponsors
+7124|Net hebdo
+7125|Dernière recette
+7126|spectateurs
+7127|Un chantier à la fois
+7128|Supporters et vestiaire
+7129|Les supporters remplissent le stade, la cohésion renforce l'équipe. Elle grandit avec un onze stable, l'entraînement tactique et un leader capitaine.
+7132|Nos buteurs
+7246|ans · {}
+7133|Entretien joueur
+7134|frappe à ta porte : « Coach, je veux plus de temps de jeu. »
+7240|· Note {} · {}
+7135|🤝 Promis, tu joueras
+7137|Tu dois le faire jouer au moins 2 fois en 3 semaines.
+7138|⏳ Tu dois être patient
+7140|n'est pas satisfait de la réponse.
+7141|📤 Le placer sur la liste des transferts
+7143|est sur la liste des transferts.
+7144|s'est accroché avec un coéquipier à l'entraînement.
+7145|💸 L'amender
+7147|L'équipe a apprécié ta fermeté.
+7148|💬 En discuter
+7150|L'ambiance s'est apaisée, mais certains attendaient plus de fermeté.
+7151|🚫 Écarté pour un match
+7153|manquera le prochain match.
+7192|veut un nouveau contrat : {}/semaine.
+7171|Il reste {} an(s) de contrat. Sans prolongation, il part libre.
+7155|On en reparle
+7156|Offre de transfert
+7215|{} offre {} pour {}.
+7209|· {} ans · Note {} · Valeur {}
+7157|est déçu de rater un gros transfert.
+7158|Tu as refusé l'offre.
+7159|Demander plus (+20 %)
+7160|Négociation réussie, vente conclue !
+7161|s'est retiré.
+7247|Vendre · {}
+7162|Direction
+7163|Le président t'a convoqué : « Les résultats ne sont pas à la hauteur. »
+7164|🤝 Promis, on va redresser la barre
+7166|La direction t'accorde un peu plus de temps.
+7167|💰 Il me faut un budget transferts
+7205|La direction a ajouté {} au budget.
+7169|La direction n'a pas apprécié la demande.
+7218|⚽ Notre meilleur buteur : {} ({})
+7210|⭐ Joueur de la saison : {} ({})
+7223|🌱 Meilleur jeune de la saison : {}
+7187|Primes et droits TV de fin de saison : {}
+7170|Clubs intéressés par toi :
+7184|{} demande {}/semaine pour un nouveau contrat.
+7219|{} a refusé l'offre.
+7206|{} demande {} par semaine.
+7177|{} trouve l'offre trop basse. Ses exigences augmentent un peu.
+7172|{} frappe à ta porte : « Coach, je veux plus de temps de jeu. »
+7196|{} n'est pas satisfait de la réponse.
+7221|{} est sur la liste des transferts.
+7176|{} s'est accroché avec un coéquipier à l'entraînement.
+7198|{} manquera le prochain match.
+7189|{} veut un nouveau contrat : {}/semaine.
+7180|{} est déçu de rater un gros transfert.
+7227|{} s'est retiré.
+7249|{}/semaine

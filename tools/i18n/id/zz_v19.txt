@@ -399,3 +399,300 @@
 6867|💎 Termasuk di Diamond
 6869|Semua terbuka
 6870|3 mode permainan
+6871|Kekompakan tim meningkat.
+6872|Serangan +2 di laga berikutnya.
+6873|Pertahanan +2 di laga berikutnya.
+6874|Bola mati
+6875|Penalti dan tendangan bebas lebih baik.
+6876|Pemulihan lebih cepat, cedera berkurang.
+6877|Pemimpin
+6878|Sebagai kapten, moral dan kekompakan naik.
+6879|Berkembang lebih cepat, tak protes soal menit main.
+6880|Ambisius
+6881|Berkembang pesat tapi cepat kecewa jika di bangku.
+6882|Tak banyak terpengaruh hasil.
+6883|Pemberontak
+6884|Berbakat, tapi kadang bikin ribut di ruang ganti.
+6885|Tidak punya sifat khusus.
+6886|Pusat latihan
+6887|Pemain berkembang lebih cepat.
+6888|Akademi muda
+6889|Pemain muda lebih berbakat bermunculan.
+1657|Stadion
+6890|Kapasitas dan pendapatan tiket naik.
+6891|Pusat medis
+6892|Cedera lebih jarang dan lebih singkat.
+6893|Pilih starting XI, kapten, dan eksekutor bola mati di Skuad.
+6894|Tonton laga di lapangan mini: ubah taktik, ganti pemain, eksekusi sendiri momen penting.
+6895|Cari dengan pemandu bakat, negosiasi, dan teken kontrak.
+6896|Kelola anggaran, gaji, dan fasilitas di tab Klub.
+7014|🏗️ {} kini level {}!
+6971|😠 {} merasa kamu ingkar janji soal menit bermain.
+6898|Manajer Terbaik Bulan Ini
+7005|{} Manajer Terbaik Bulan Ini
+6899|🏅 Kamu Manajer Terbaik Bulan Ini!
+6901|Pemandu bakat bisa memantau maksimal 3 pemain sekaligus.
+6975|🔎 Pemandu bakat menyiapkan laporan {} (1 minggu).
+6999|📋 Laporan siap: {}
+6980|✍️ {} bergabung dengan status bebas transfer.
+6982|🔁 {} dipinjamkan ke {} hingga akhir musim.
+6903|Pembangunan sedang berlangsung.
+6904|Fasilitas ini sudah level maksimal.
+6905|Uang klub tidak cukup.
+6986|🏗️ Perluasan {} dimulai ({} minggu).
+6996|🔁 {} kembali dari peminjaman (rating {}).
+6976|📄 {} pergi karena kontraknya habis.
+6988|Kick-off! Kita mulai dengan gaya {}.
+7004|🤕 {} cedera ({} minggu).
+6994|{} menembak, kiper menepis.
+6997|{} menembak melebar.
+6995|Kebobolan. {} ({}) membuat skor {}.
+6983|{} menggagalkan gol, penyelamatan hebat!
+6979|{} punya peluang, tipis melebar.
+6989|🟥 KARTU MERAH! {} diusir keluar.
+7009|🟨 {} mendapat kartu kuning.
+6972|{} dapat kartu kuning ke-5 dan absen di laga berikutnya.
+7017|Penalti untuk {}!
+6916|Kiper kita
+7007|{} menepis penalti!
+6987|Penalti untuk kita! {} jadi eksekutor.
+7010|{} gagal mengeksekusi penalti!
+7011|{} di titik penalti
+3740|Tarik, pilih sudut, lalu lepas!
+6921|TENDANGAN BEBAS
+7024|{} siap di depan bola
+6923|Lewati pagar betis dan bobol gawang!
+7002|{} berhadapan satu lawan satu dengan kiper
+6925|Lewati kiper atau tempatkan di sudut!
+6926|PELUANG EMAS
+6993|{} menerima bola di kotak penalti
+6928|Tembak atau oper ke rekan yang bebas!
+6929|⚡ Otomatis
+6930|⚽ Kamu yang main
+6998|{} gagal memanfaatkan peluang.
+6981|🔄 Pergantian: {} masuk, {} keluar.
+6973|Cedera! {} tak bisa lanjut. Siapa yang masuk?
+7018|Penguasaan bola {}%
+7026|Tembakan {}-{}
+6934|Penguasaan bola
+6935|Tepat sasaran
+7013|⭐ Pemain terbaik laga: {}
+7006|⭐ Pemain terbaik laga: {} ({})
+6936|Akhir laga
+6937|Tembakan tepat sasaran
+6938|Tendangan sudut
+6939|Rating pemain
+6940|Ke ruang ganti
+6941|👏 Kalian luar biasa!
+6943|Para pemain senang dipuji.
+6944|🙂 Bagus, tapi kalian bisa lebih
+6946|Tim memahami pesan untuk tetap membumi.
+6947|😐 Jangan cepat puas
+6949|Beberapa pemain tak suka selebrasinya dipotong, tapi pesannya sampai.
+6950|🤝 Satu poin tetap poin
+6952|Tim menjaga semangatnya.
+6953|📋 Kita bisa menang
+6955|Para pemain membahas kesalahan mereka.
+6956|😠 Penampilan ini tidak cukup!
+6958|Kata-kata keras membakar semangat tim.
+6959|Para pemain tersinggung kata-kata keras.
+6960|🤝 Angkat kepala kalian
+6962|Tim berusaha melupakan kekalahan.
+6963|📋 Mari bahas kesalahan kita
+6965|Analisis video selesai, kekurangan dicatat.
+6966|Para pemain bereaksi dan jadi bersemangat.
+6967|Ada ketegangan di ruang ganti.
+6990|Skor {}-{}. Apa yang akan kamu katakan ke tim?
+6969|⚖️ Federasi mendendamu {} karena mengkritik wasit.
+3364|· Minggu {}
+7241|(pen. {}-{})
+7243|{}Laga vs {}: {}
+7202|💪 {} {} pulih dari cedera.
+7181|🤕 {} {} cedera saat latihan ({} minggu).
+7199|✍️ {} {} bergabung ke skuad ({}).
+7179|✍️ {} {} bergabung dengan status bebas transfer.
+7190|👋 {} {} dijual seharga {} ke {}.
+7245|· Rating {}
+7200|Penguasaan bola {}% · Tembakan {}-{}
+7201|Pergantian · sisa {}
+7237|· {} lelah
+7224|Adu penalti: {}-{} · {}
+6501|😠 Ini tidak bisa diterima!
+7027|Ruang ganti
+7028|Bagaimana penilaian Anda atas kemenangan hari ini?
+7029|Saya ucapkan selamat ke pemain, semua layak.
+7030|Tim ini turun untuk menang di setiap laga!
+7031|Kami menjawab peremeh kami di lapangan.
+7032|Fans mulai bicara gelar juara. Bagaimana menurut Anda?
+7034|Jalan masih panjang, kami fokus laga demi laga.
+7035|Kenapa tidak? Saya percaya tim ini.
+7038|Tak ada yang bisa menghentikan kami.
+7039|Apakah satu poin cukup bagi Anda?
+7040|Lawan berat, saya menghargai poin ini.
+7041|Tanpa keputusan wasit itu kami pasti menang.
+6100|Apa penyebab kekalahan ini?
+7042|Tanggung jawab ada pada saya, kami akan perbaiki kesalahan.
+7043|Kami kalah satu laga, bukan perang.
+7044|Keputusan wasit menentukan hasil laga.
+7045|Apakah manajemen kehilangan kepercayaan pada Anda?
+7046|Kami bicara dengan manajemen setiap hari, kami solid.
+7047|Hasil akan datang, saya yakin.
+7048|Saya kerjakan tugas saya, sisanya bukan urusan saya.
+7049|Konferensi pers
+7050|Manajemen menyukai sikap tenangmu.
+7051|Fans menyukai kata-kata itu.
+3649|Kata-katamu jadi berita utama.
+7230|· {} · Minggu {}
+7052|Kas
+7242|Manajemen {}
+7238|Fans {}
+1127|Posisi di liga
+7053|Pemain yang perlu diwaspadai
+7191|· {} · Latihan: {} · XI: {}/11
+7233|Laga terakhir: {} {}-{}{}
+7217|Keputusan tertunda: {}
+7054|Pemain dan manajemen menunggu jawabanmu
+7228|Target piala: {}
+7055|Bursa transfer dibuka. Cari pemain di tab Transfer.
+7057|Kekompakan tim
+7058|Lawan menyerang: serangan balik manfaatkan ruang di belakang mereka.
+7059|Lawan bertahan dalam: paksa dengan menyerang atau pressing tinggi.
+7060|Lawan pressing tinggi: mereka cepat lelah, menyeranglah di babak kedua.
+7061|Lawan mengandalkan serangan balik: main seimbang.
+7062|Lawan seimbang: percayai kualitas skuadmu.
+7234|Potensi {}
+7239|Dipinjamkan: {}
+1345|Gratis
+7063|Tawarkan kontrak
+7064|Sedang dipantau
+7065|Pantau
+7066|Ajukan tawaran
+7067|Dipinjamkan
+7188|XI: {}/11 · Serangan {} · Pertahanan {}
+7068|Kapten:
+7069|Penalti:
+7070|Tendangan bebas:
+7071|Pakai kotak di kiri untuk masuk/keluar XI. Ketuk nama untuk kapten, penalti, kontrak, atau jual.
+7074|Jadikan kapten
+7203|🅲 {} kapten baru tim.
+7076|Jadikan eksekutor penalti
+7077|Jadikan eksekutor tendangan bebas
+7078|Perpanjang kontrak
+7079|Pinjamkan
+7231|· {} th · {} · {}
+7080|Kebahagiaan
+7248|{}/mg
+7081|Kontrak
+5660|Rata-rata
+7186|minta {}/minggu untuk kontrak baru.
+7178|Gaji saat ini {}/minggu · Anggaran gaji: {} / {}
+7082|Tawar (−10%)
+7083|menolak tawaran.
+7084|Gaji ini melebihi anggaran gaji dari manajemen.
+7173|📝 {} diperpanjang {} tahun ({}/minggu).
+7085|Saya yang main
+7086|Kamu eksekusi penalti, tendangan bebas, dan peluang emas.
+7087|Momen penting ditentukan rating pemain.
+7088|Latihan mingguan
+7089|Fokus
+7090|Momen penting
+7193|Kekuatan tim: Serangan {} · Pertahanan {}
+7091|Bursa dibuka
+7092|Bursa ditutup
+7093|Anggaran transfer
+7094|Beban gaji
+7095|Anggaran gaji
+7096|Kamu tetap bisa memperpanjang kontrak saat ditutup.
+7097|Semua
+7098|Seluruh anggaran
+7099|Bebas
+7100|Pantau: setelah 1 minggu potensi asli dan permintaan gaji terlihat.
+7101|Pilih kriteria lalu cari.
+7102|Pemain bebas
+7103|Tanpa kontrak: tanpa biaya transfer, hanya gaji.
+7104|Jaringan pemandu bakat
+7105|Usia maks.
+7106|Biaya maks.
+7107|Untuk menjual atau meminjamkan, ketuk nama di tab Skuad.
+7235|Negosiasi · {}
+7108|— berapa tawaranmu?
+7197|· {} th · Rating {} · Potensi {}
+7194|Harga diminta: {} · Anggaranmu: {}
+7109|Diminta
+7110|Tawaran balik
+7213|{}: "Kalau {}, kita sepakat."
+7236|Terima · {}
+7111|Negosiasi kontrak
+7208|minta gaji {} per minggu.
+7214|Beban gaji: {} / anggaran {}
+7112|Durasi kontrak
+7113|Tawaran gajimu
+7244|{}/mg · {}%
+7232|· Biaya {}
+7225|✍️ {} sudah teken kontrak!
+7204|tahun kontrak · {}/minggu{}
+7115|menganggap tawaran terlalu rendah. Permintaannya naik sedikit.
+7118|Kas minus! Manajemen akan memperhitungkannya di akhir musim. Pertimbangkan jual pemain atau potong gaji.
+7122|Keuangan
+7123|Pendapatan sponsor
+7124|Bersih mingguan
+7125|Pendapatan tiket terakhir
+7126|penonton
+7127|Satu pembangunan sekaligus
+7128|Fans dan ruang ganti
+7129|Kepuasan fans mengisi stadion; kekompakan menambah kekuatan. Kekompakan naik dengan XI tetap, latihan taktik, dan kapten pemimpin.
+7132|Pencetak gol kita
+7246|th · {}
+7133|Pertemuan pemain
+7134|mengetuk pintumu: "Pelatih, saya mau lebih banyak menit."
+7240|· Rating {} · {}
+7135|🤝 Saya janji kamu akan main
+7137|Kamu harus memainkannya minimal 2 kali dalam 3 minggu.
+7138|⏳ Kamu harus sabar
+7140|tidak puas dengan jawaban itu.
+7141|📤 Masukkan daftar jual
+7143|masuk daftar jual.
+7144|bertengkar dengan rekan setim saat latihan.
+7145|💸 Beri denda
+7147|Tim menghargai sikap disiplinmu.
+7148|💬 Selesaikan dengan bicara
+7150|Suasana mereda, tapi sebagian mengharapkan sikap lebih tegas.
+7151|🚫 Coret satu laga
+7153|absen di laga berikutnya.
+7192|ingin kontrak baru: {}/minggu.
+7171|Sisa kontrak {} tahun. Jika tak diperpanjang, ia pergi gratis.
+7155|Bicara nanti
+7156|Tawaran transfer
+7215|{} menawar {} untuk {}.
+7209|· {} th · Rating {} · Nilai {}
+7157|kecewa gagal pindah ke klub besar.
+7158|Kamu menolak tawaran.
+7159|Minta lebih (+20%)
+7160|Negosiasi berhasil, penjualan selesai!
+7161|mundur.
+7247|Jual · {}
+7162|Dewan direksi
+7163|Presiden memanggilmu: "Hasilnya tidak sesuai harapan."
+7164|🤝 Saya janji kami akan bangkit
+7166|Manajemen memberimu sedikit waktu lagi.
+7167|💰 Saya butuh anggaran transfer
+7205|Manajemen menambah {} ke anggaran.
+7169|Manajemen tidak menyukai permintaan itu.
+7218|⚽ Top skor kita: {} ({})
+7210|⭐ Pemain terbaik musim: {} ({})
+7223|🌱 Pemain muda terbaik musim: {}
+7187|Hadiah dan hak siar akhir musim: {}
+7170|Klub yang tertarik padamu:
+7184|{} minta {}/minggu untuk kontrak baru.
+7219|{} menolak tawaran.
+7206|{} minta gaji {} per minggu.
+7177|{} menganggap tawaran terlalu rendah. Permintaannya naik sedikit.
+7172|{} mengetuk pintumu: "Pelatih, saya mau lebih banyak menit."
+7196|{} tidak puas dengan jawaban itu.
+7221|{} masuk daftar jual.
+7176|{} bertengkar dengan rekan setim saat latihan.
+7198|{} absen di laga berikutnya.
+7189|{} ingin kontrak baru: {}/minggu.
+7180|{} kecewa gagal pindah ke klub besar.
+7227|{} mundur.
+7249|{}/minggu
