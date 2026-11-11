@@ -156,7 +156,7 @@ const Interview = {
         U.$$('.iv-a', el).forEach((b) => (b.onclick = () => {
           const k = +b.dataset.k;
           IV_FX[k].forEach((v, j) => (tot[j] += v * 0.6));
-          said.push(ans[k]); tones.push(k);
+          said.push(ans[k]); tones.push(k); if (typeof Pers !== 'undefined') Pers.tone(k);
           if (typeof Sfx !== 'undefined') Sfx.play('shutter');
           i++;
           setTimeout(ask, 160);

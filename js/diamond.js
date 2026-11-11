@@ -57,11 +57,32 @@ const Diamond = {
     return ok;
   },
   perks() {
-    return `<ul class="prem-l star-perks dia-perks">
-      <li><b>Her şey dahil</b><small>Premium ve Premium+'ın tamamı: reklamsız, 10 kariyer slotu, geri al, hızlı ilerleme, kaleci kariyeri</small></li>
-      <li><b>3 oyun modu</b><small>Teknik Direktör · Dünya Şampiyonası Rüyası · Efsanelerin İzinde</small></li>
-      <li><b>Gelecekteki tüm modlar</b><small>Bundan sonra çıkan her yeni mod ücretsiz senin</small></li>
-      <li><b>Altın koleksiyon</b><small>Altın ve elmas krampon, platin saç rengi, profilinde elmas rozet</small></li>
+    const mode = (ic, t, d) => `<div class="dia-mode"><span>${Icon(ic)}</span><b>${t}</b><small>${d}</small></div>`;
+    const li = (t, d) => `<li><b>${t}</b><small>${d}</small></li>`;
+    return `<div class="dia-sec">3 oyun modu dahil</div>
+    <div class="dia-modes">
+      ${mode('coach', 'Teknik Direktör', 'Kulüp yönet, transfer yap, maçı kenardan yönet')}
+      ${mode('globe', 'Dünya Şampiyonası Rüyası', 'Milli takımınla kupayı kaldır')}
+      ${mode('star', 'Efsanelerin İzinde', 'Efsanelerin kariyerini yeniden yaz')}
+    </div>
+    <div class="dia-sec">Premium'un tamamı</div>
+    <ul class="prem-l star-perks dia-perks">
+      ${li('Reklamsız', 'Geçiş reklamı yok, ödüller reklam izlemeden')}
+      ${li('Starpedia ve kariyer belgeseli', 'Kendi ansiklopedi sayfan ve hikâyenin filmi')}
+      ${li('Sınırsız transfer talebi', 'İstediğin kulübe her dönem istediğin kadar talep gönder')}
+      ${li('Görünüm stüdyosu', 'Yeni saç modelleri, sakallar, saç bandı ve içlik dahil')}
+      ${li('Lüks yaşam ve StarDeğer', 'Süper arabalar, villalar, yat, değer grafiğin ve söylentiler')}
+    </ul>
+    <div class="dia-sec">Premium+'ın tamamı</div>
+    <ul class="prem-l star-perks dia-perks">
+      ${li('Kaleci kariyeri', 'Kurtarışlar, penaltı düelloları, gol yememe')}
+      ${li('10 kariyer slotu, geri al, hızlı ilerleme', 'Kötü giden maçı yeniden oyna, istediğin haftaya atla')}
+      ${li('Detaylı kariyer istatistikleri', 'Kafa, penaltı ve frikik golleri, rakiplere göre dağılım')}
+    </ul>
+    <div class="dia-sec">Sadece Diamond'da</div>
+    <ul class="prem-l star-perks dia-perks">
+      ${li('Altın koleksiyon', 'Altın ve elmas krampon, platin saç rengi, profilinde elmas rozet')}
+      ${li('Gelecekteki tüm modlar', 'Bundan sonra çıkan her yeni mod ücretsiz senin')}
     </ul>`;
   },
   // tanıtım penceresi

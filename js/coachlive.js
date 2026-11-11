@@ -13,7 +13,7 @@ const Live = {
     const b = s.boost || {};
     Live.m = {
       match, opp, min: 0, gf: 0, ga: 0, on, bench: s.squad.filter((p) => !on.includes(p.id) && Coach.available(p)).map((p) => p.id),
-      subs: 3, style: s.style, feed: [], red: 0, oppRed: 0, speed: 1, paused: false, ht: false, done: false, me, oc, rates: {}, mins: {},
+      subs: 5, style: s.style, feed: [], red: 0, oppRed: 0, speed: 1, paused: false, ht: false, done: false, me, oc, rates: {}, mins: {},
       mods: { att: b.att || 0, def: b.def || 0 }, set: b.set || 0, keyN: 0, scorers: [], yel: {}, quick: !!quick,
       st: { sh: [0, 0], ot: [0, 0], pos: [6, 6], cor: [0, 0], yel: [0, 0], fo: [0, 0] },
     };
@@ -228,7 +228,7 @@ const Live = {
     const L = Live.m;
     while (L.min < 90) {
       Live.tick();
-      if (L.injured) { const p = Live.P(L.injured); L.injured = null; Live.autoSub(p); }
+      if (L.injured) { const p = Live.P(L.injured); L.injured = null; Live.autoSub(p); Live.injOff(p); }
       if (L.min === 70) Live.autoSubs();
     }
   },
@@ -238,11 +238,21 @@ const Live = {
     const b = L.bench.map(Live.P).filter((p) => p && Coach.available(p)).sort((a, c) => (c.pos === out.pos) - (a.pos === out.pos) || c.r - a.r)[0];
     if (b) Live.sub(out.id, b.id);
   },
+  // değişiklik hakkı kalmadıysa sakatlanan oyuncu oyundan çıkar, takım eksik kalır
+  injOff(p) {
+    const L = Live.m;
+    if (!p || !L.on.includes(p.id) || L.on.length <= 7) return;
+    L.on = L.on.filter((x) => x !== p.id);
+    Live.log(`${Live.nm(p)} devam edemedi, sahada bir kişi eksiğiz.`, 'bad');
+  },
   autoSubs() { Live.onField().filter((p) => p.fit < 45 && p.pos !== 'GK').sort((a, b) => a.fit - b.fit).slice(0, 2).forEach((p) => Live.autoSub(p)); },
   sub(outId, inId) {
     const L = Live.m, o = Live.P(outId), i = Live.P(inId);
+    // oyundan çıkan oyuncu aynı maçta tekrar giremez
+    if (L.subs <= 0 || !L.on.includes(outId) || !L.bench.includes(inId)) return false;
     L.on = L.on.map((x) => (x === outId ? inId : x));
-    L.bench = L.bench.filter((x) => x !== inId).concat([outId]);
+    L.bench = L.bench.filter((x) => x !== inId);
+    L.off = (L.off || []).concat([outId]);
     L.subs--;
     L.rates[inId] = L.rates[inId] || 6.3; L.mins[inId] = L.mins[inId] || 0;
     Live.log(`🔄 Oyuncu değişikliği: ${Live.nm(i)} girdi, ${Live.nm(o)} çıktı.`, 'info');
@@ -255,7 +265,7 @@ const Live = {
     if (L.min >= 45 && !L.ht) { L.ht = true; Live.draw(); return Live.halftime(); }
     const ev = Live.tick();
     if (ev && ev.then) { Live.draw(); ev.then(() => Live.loop()); return; }
-    if (L.injured) { const p = Live.P(L.injured); L.injured = null; Live.draw(); if (L.subs > 0) { L.paused = true; return Live.subMenu(p.id, `Sakatlık! ${Live.nm(p)} devam edemiyor. Yerine kimi alalım?`); } }
+    if (L.injured) { const p = Live.P(L.injured); L.injured = null; Live.draw(); if (L.subs > 0 && L.bench.some((id) => Coach.available(Live.P(id)))) { L.paused = true; return Live.subMenu(p.id, `Sakatlık! ${Live.nm(p)} devam edemiyor. Yerine kimi alalım?`); } Live.injOff(p); }
     Live.draw();
     Live._t = setTimeout(Live.loop, Live.SPEEDS[L.speed - 1] || 900);
   },
@@ -281,7 +291,7 @@ const Live = {
     const m = Game.modal(`<div class="ev-tag">Oyuncu değişikliği · ${L.subs} hak</div><h3>${title || 'Kimi çıkaralım?'}</h3>
       ${outId ? '' : `<div class="cm-sublist">${out.map((p) => row(p, 'o')).join('')}</div><div class="lbl">Yerine</div>`}
       <div class="cm-sublist">${bench.map((p) => row(p, 'i')).join('') || '<p class="muted">Yedekte uygun oyuncu yok.</p>'}</div>`,
-    [{ t: 'Vazgeç', cls: 'btn-ghost', fn: () => Live.resume() }], { wide: true });
+    [{ t: outId ? '10 kişi devam et' : 'Vazgeç', cls: 'btn-ghost', fn: () => { if (outId) Live.injOff(Live.P(outId)); Live.resume(); } }], { wide: true });
     U.$$('[data-o]', m).forEach((b) => (b.onclick = () => { pick = +b.dataset.o; U.$$('[data-o]', m).forEach((x) => x.classList.toggle('on', x === b)); }));
     U.$$('[data-i]', m).forEach((b) => (b.onclick = () => {
       if (!pick) return Game.toast('Önce çıkacak oyuncuyu seç.', 'bad');

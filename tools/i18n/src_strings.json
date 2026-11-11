@@ -336,6 +336,7 @@
 "coach.js",
 "coachlive.js",
 "coachui.js",
+"coachx.js",
 "cstats.js",
 "data.js",
 "drills.js",
@@ -356,6 +357,7 @@
 ],
 "Teknik direktör": [
 "captain.js",
+"coachx.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -528,6 +530,388 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
+],
+"Kulübün istediği bonservisi karşılayamayız.": [
+"career2.js"
+],
+"Kadromuzda bu mevkide yeterince oyuncu var.": [
+"career2.js"
+],
+"Şu an aradığımız seviyede değilsin.": [
+"career2.js"
+],
+"Daha genç bir oyuncu arıyoruz.": [
+"career2.js"
+],
+"Yüksek ilgi": [
+"career2.js"
+],
+"Belki": [
+"career2.js"
+],
+"Düşük ihtimal": [
+"career2.js"
+],
+"Talebin değerlendiriliyor": [
+"career2.js"
+],
+"Güç {} olursa (şu an {})": [
+"career2.js"
+],
+"{} Kiralık": [
+"career2.js"
+],
+"{} kulübünden sezon sonuna kadar kiralıksın.": [
+"career2.js"
+],
+"Transfer dönemi kapalı": [
+"career2.js",
+"coachui.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"· Premium: sınırsız": [
+"career2.js"
+],
+"· 1 hak": [
+"career2.js"
+],
+"· hakkın bitti": [
+"career2.js"
+],
+"{} Kulüp seç": [
+"career2.js"
+],
+"{} Transfer talebi": [
+"career2.js",
+"star.js"
+],
+"İstediğin kulübe talep gönder. Kulüp gücüne, bütçesine ve kadro ihtiyacına göre karar verir.": [
+"career2.js"
+],
+"Transfer dönemi kapalı.": [
+"career2.js",
+"coachui.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Kiralıkken transfer talebi gönderemezsin.": [
+"career2.js"
+],
+"Transfer talebi": [
+"career2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Bu dönem için talep hakkın bitti.": [
+"career2.js"
+],
+"Aynı anda en fazla 3 talep bekleyebilir.": [
+"career2.js"
+],
+"{} Hangi ligde oynamak istersin?": [
+"career2.js"
+],
+"Vazgeç": [
+"career2.js",
+"coach.js",
+"coachlive.js",
+"coachui.js",
+"coachx.js",
+"edit.js",
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"legacy.js",
+"life.js",
+"lpath.js",
+"plusx.js",
+"star.js",
+"value.js",
+"wc.js"
+],
+"Güç {}": [
+"career2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Gücün {} · Kulübünün istediği bonservis: {}": [
+"career2.js"
+],
+"Geri": [
+"career2.js",
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"tutorial.js"
+],
+"📨 Transfer talebin {} kulübüne iletildi. Cevap gelecek hafta.": [
+"career2.js"
+],
+"✅ {} transfer talebini kabul etti! Teklif masanda, transfer dönemi bitene kadar geçerli.": [
+"career2.js"
+],
+"✅ {} teklif yaptı!": [
+"career2.js"
+],
+"🤔 {}: \"Gücün {} olursa seninle tekrar görüşmek isteriz.\"": [
+"career2.js"
+],
+"❌ {} transfer talebini reddetti: \"{}\"": [
+"career2.js"
+],
+"🎯 {} sözünü tuttu: hedef gücü yakaladın, resmi teklif geldi!": [
+"career2.js"
+],
+"İmza parası": [
+"career2.js"
+],
+"Forma satış payı": [
+"career2.js"
+],
+"✍️ İmza parası {} hesabına yattı.": [
+"career2.js"
+],
+"Agresif": [
+"career2.js"
+],
+"İkili mücadelede sertsin; taraftar sever ama kart riskin yüksek.": [
+"career2.js"
+],
+"Lider": [
+"career2.js",
+"coach.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Takım arkadaşların sana bakar; soyunma odasında sözün geçer, kaptanlık yolu kısalır.": [
+"career2.js"
+],
+"Sakin": [
+"career2.js",
+"coach.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"meta.js",
+"wc.js"
+],
+"Baskı altında soğukkanlısın; kötü sonuçlar moralini az etkiler, kart görmezsin.": [
+"career2.js"
+],
+"Profesyonel": [
+"career2.js",
+"coach.js",
+"extras.js",
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Disiplinlisin; antrenmanlardan daha çok gelişirsin.": [
+"career2.js"
+],
+"Asi": [
+"career2.js",
+"coach.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Kurallara meydan okursun; taraftar sever, hocalar zorlanır.": [
+"career2.js"
+],
+"Hırslı": [
+"career2.js",
+"coach.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Hep daha fazlasını istersin; hızlı gelişirsin ama yedek kalınca moralin çöker.": [
+"career2.js"
+],
+"Antrenmanda sert müdahalen tartışma yarattı.": [
+"career2.js"
+],
+"Genç oyunculara verdiğin tavsiyeler soyunma odasında konuşuluyor.": [
+"career2.js"
+],
+"Kötü giden bir haftada sakinliğin takımı toparladı.": [
+"career2.js"
+],
+"Ekstra antrenmanların hocanın dikkatini çekti.": [
+"career2.js"
+],
+"Hocanın kararını sosyal medyada eleştirdin. Taraftar seni destekliyor.": [
+"career2.js"
+],
+"Daha büyük hedeflerin olduğunu açıkça söyledin. Kulüpler kulak kabarttı.": [
+"career2.js"
+],
+"🧠 Davranışların kişiliğini değiştirdi: artık {} biri olarak görülüyorsun.": [
+"career2.js"
+],
+"{} biri olduğumu söylüyorlar. Belki de haklılar.": [
+"career2.js"
+],
+"{} Kişiliğin": [
+"career2.js"
+],
+"Röportaj cevapların, kartların ve sahadaki tavrın kişiliğini zamanla değiştirir.": [
+"career2.js"
+],
+"Kişiliğin": [
+"career2.js"
+],
+"Kariyerin boyunca davranışlarınla değişebilir": [
+"career2.js"
+],
+"NONE": [
+"career2.js",
+"game.js",
+"lang-en.js"
+],
+"🔁 {}, düzenli forma şansı bulman için seni bir sezon {} kulübüne kiralık göndermek istiyor.": [
+"career2.js"
+],
+"{} Kiralık teklifi": [
+"career2.js"
+],
+"{} · Güç {}": [
+"career2.js",
+"coach.js",
+"coachlive.js",
+"coachui.js"
+],
+"Bir sezon {} formasını giyersin. Maaşın aynı kalır, sezon sonunda kulübüne dönersin. İyi oynarsan satın alma opsiyonunu kullanabilirler.": [
+"career2.js"
+],
+"Kal ve forma için savaş": [
+"career2.js"
+],
+"Kiralık git": [
+"career2.js"
+],
+"🔁 {} seni sezon sonuna kadar {} kulübüne kiraladı. Satın alma opsiyonu: {}.": [
+"career2.js"
+],
+"Bir sezonluk yeni macera: {}! Forma şansını değerlendireceğim.": [
+"career2.js"
+],
+"Kiralık teklifini reddettin. Hocaya kendini kanıtlaman gerekecek.": [
+"career2.js"
+],
+"Rolün": [
+"career2.js",
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"📨 {} seninle ilgilendiğini resmen açıkladı!": [
+"career2.js"
+],
+"🔎 {} gözlemcisi son maçında tribündeydi.": [
+"career2.js"
+],
+"🔎 {} gözlemcisi seni izlemeye devam ediyor.": [
+"career2.js"
+],
+"👕 Formanız bu sezon {} adet sattı. %{} payınla {} kazandın.": [
+"career2.js"
+],
+"👕 Forma satışından {} payın hesabına yattı.": [
+"career2.js"
+],
+"🔁 {} kiralık sözleşmendeki satın alma opsiyonunu kullanmak istiyor ({}).": [
+"career2.js"
+],
+"🔁 Kiralık dönemin bitti. Bir teklif seçmezsen {} kulübüne dönersin.": [
+"career2.js"
+],
+"🔁 Kiralık dönemin bitti, {} kulübüne döndün.": [
+"career2.js"
 ],
 "Kollar Havada": [
 "celebrate.js",
@@ -1484,18 +1868,6 @@
 "lang-pt.js",
 "player.js"
 ],
-"Lider": [
-"coach.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "Kaptan olursa takımın morali ve uyumu artar.": [
 "coach.js",
 "lang-ar.js",
@@ -1508,33 +1880,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Profesyonel": [
-"coach.js",
-"extras.js",
-"game.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "Daha hızlı gelişir, forma için sorun çıkarmaz.": [
-"coach.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"Hırslı": [
 "coach.js",
 "lang-ar.js",
 "lang-de.js",
@@ -1558,33 +1904,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Sakin": [
-"coach.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"meta.js",
-"wc.js"
-],
 "Sonuçlardan az etkilenir.": [
-"coach.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"Asi": [
 "coach.js",
 "lang-ar.js",
 "lang-de.js",
@@ -1779,6 +2099,7 @@
 ],
 "Teknik Direktör": [
 "coach.js",
+"diamond.js",
 "game.js",
 "lang-ar.js",
 "lang-de.js",
@@ -2066,7 +2387,8 @@
 ],
 "{} · {}. hafta": [
 "coach.js",
-"coachui.js"
+"coachui.js",
+"coachx.js"
 ],
 "(pen. {}-{})": [
 "coach.js",
@@ -2280,6 +2602,7 @@
 ],
 "Kovuldu": [
 "coach.js",
+"coachx.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -2376,6 +2699,7 @@
 ],
 "Ayrıldı": [
 "coach.js",
+"coachx.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -2588,6 +2912,7 @@
 "Kapat": [
 "coach.js",
 "coachui.js",
+"coachx.js",
 "cstats.js",
 "diamond.js",
 "extras.js",
@@ -2633,29 +2958,6 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
-],
-"Vazgeç": [
-"coach.js",
-"coachlive.js",
-"coachui.js",
-"edit.js",
-"game.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"legacy.js",
-"life.js",
-"lpath.js",
-"plusx.js",
-"star.js",
-"value.js",
-"wc.js"
 ],
 "Sil ve başla": [
 "coach.js",
@@ -2823,11 +3125,6 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
-],
-"{} · Güç {}": [
-"coach.js",
-"coachlive.js",
-"coachui.js"
 ],
 "Maç başladı! {} oyunla başlıyoruz.": [
 "coachlive.js",
@@ -3242,7 +3539,16 @@
 "lang-pt.js"
 ],
 "{} ofsayta yakalandı.": [
-"coachlive.js"
+"coachlive.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "{} fırsatı değerlendiremedi.": [
 "coachlive.js",
@@ -3255,6 +3561,9 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
+],
+"{} devam edemedi, sahada bir kişi eksiğiz.": [
+"coachlive.js"
 ],
 "🔄 Oyuncu değişikliği: {} girdi, {} çıktı.": [
 "coachlive.js",
@@ -3282,6 +3591,7 @@
 ],
 "Devre arası": [
 "coachlive.js",
+"coachx.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -3294,6 +3604,7 @@
 ],
 "Skor {}-{}. Soyunma odasında takıma ne diyeceksin?": [
 "coachlive.js",
+"coachx.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -3306,6 +3617,7 @@
 ],
 "Topa sahip olma %{} · Şut {}-{}": [
 "coachlive.js",
+"coachx.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -3318,6 +3630,7 @@
 ],
 "😌 Sakin olun, plana sadık kalın": [
 "coachlive.js",
+"coachx.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -3342,6 +3655,7 @@
 ],
 "🔥 Daha fazlasını istiyorum!": [
 "coachlive.js",
+"coachx.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -3366,6 +3680,7 @@
 ],
 "😠 Bu oyun kabul edilemez!": [
 "coachlive.js",
+"coachx.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -3447,6 +3762,9 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
+],
+"10 kişi devam et": [
+"coachlive.js"
 ],
 "Önce çıkacak oyuncuyu seç.": [
 "coachlive.js",
@@ -3628,6 +3946,7 @@
 ],
 "👏 Harika iş çıkardınız!": [
 "coachlive.js",
+"coachx.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -3652,6 +3971,7 @@
 ],
 "🙂 İyiydi ama daha fazlası var": [
 "coachlive.js",
+"coachx.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -3676,6 +3996,7 @@
 ],
 "😐 Rehavete kapılmayın": [
 "coachlive.js",
+"coachx.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -3700,6 +4021,7 @@
 ],
 "🤝 Bir puan da puandır": [
 "coachlive.js",
+"coachx.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -3724,6 +4046,7 @@
 ],
 "📋 Kazanabileceğimiz bir maçtı": [
 "coachlive.js",
+"coachx.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -3748,6 +4071,7 @@
 ],
 "😠 Bu performans yetmez!": [
 "coachlive.js",
+"coachx.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -3760,6 +4084,7 @@
 ],
 "Sert sözler takımı ateşledi.": [
 "coachlive.js",
+"coachx.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -3784,6 +4109,7 @@
 ],
 "🤝 Başımızı kaldıralım": [
 "coachlive.js",
+"coachx.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -3808,6 +4134,7 @@
 ],
 "📋 Hatalarımızı konuşalım": [
 "coachlive.js",
+"coachx.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -3832,6 +4159,7 @@
 ],
 "😠 Bu kabul edilemez!": [
 "coachlive.js",
+"coachx.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -3856,6 +4184,7 @@
 ],
 "Soyunma odasında gerginlik var.": [
 "coachlive.js",
+"coachx.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -3868,6 +4197,7 @@
 ],
 "⭐ Maçın oyuncusu: {} ({})": [
 "coachlive.js",
+"coachx.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -3881,6 +4211,7 @@
 "Soyunma odası": [
 "coachlive.js",
 "coachui.js",
+"coachx.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -3893,6 +4224,7 @@
 ],
 "Skor {}-{}. Takıma ne söyleyeceksin?": [
 "coachlive.js",
+"coachx.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -4235,6 +4567,7 @@
 ],
 "Kulüp": [
 "coachui.js",
+"coachx.js",
 "game.js",
 "lang-ar.js",
 "lang-de.js",
@@ -4411,6 +4744,7 @@
 ],
 "Sıra": [
 "coachui.js",
+"coachx.js",
 "game.js",
 "lang-ar.js",
 "lang-de.js",
@@ -4671,6 +5005,7 @@
 ],
 "Takım": [
 "coachui.js",
+"coachx.js",
 "cups.js",
 "edit.js",
 "game.js",
@@ -5240,18 +5575,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Transfer dönemi kapalı.": [
-"coachui.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "Kadroda en az 18 oyuncu kalmalı.": [
 "coachui.js",
 "lang-ar.js",
@@ -5487,18 +5810,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Transfer dönemi kapalı": [
-"coachui.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "Transfer bütçesi": [
 "coachui.js",
 "lang-ar.js",
@@ -5667,6 +5978,7 @@
 ],
 "Kadro dolu (en fazla 30 oyuncu). Önce oyuncu sat.": [
 "coachui.js",
+"coachx.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -5866,6 +6178,7 @@
 ],
 "Lig": [
 "coachui.js",
+"coachx.js",
 "edit.js",
 "lang-ar.js",
 "lang-de.js",
@@ -6586,6 +6899,697 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Eşofman": [
+"coachx.js"
+],
+"Kulüp renklerinde antrenman eşofmanı": [
+"coachx.js"
+],
+"Takım elbise": [
+"coachx.js"
+],
+"Kravatlı, şık ve otoriter": [
+"coachx.js"
+],
+"Casual": [
+"coachx.js"
+],
+"Kazak ve kot, rahat bir hoca": [
+"coachx.js"
+],
+"Teknik direktörünü oluştur": [
+"coachx.js"
+],
+"Görünüm": [
+"coachx.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Kısa": [
+"coachx.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Asker": [
+"coachx.js"
+],
+"Geriye taranmış": [
+"coachx.js",
+"star.js"
+],
+"Yana yatık": [
+"coachx.js"
+],
+"Uzun": [
+"coachx.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Yok": [
+"coachx.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lifex.js",
+"star.js",
+"value.js"
+],
+"Kirli sakal": [
+"coachx.js",
+"star.js"
+],
+"Tam sakal": [
+"coachx.js",
+"star.js"
+],
+"Keçi sakal": [
+"coachx.js",
+"star.js"
+],
+"Bıyık": [
+"coachx.js",
+"star.js"
+],
+"Kıyafet": [
+"coachx.js"
+],
+"Renk": [
+"coachx.js"
+],
+"Ten rengi": [
+"coachx.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Saç rengi": [
+"coachx.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Saç modeli": [
+"coachx.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Kel": [
+"coachx.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Sakal": [
+"coachx.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Kaydet": [
+"coachx.js",
+"edit.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Görünümün kaydedildi.": [
+"coachx.js"
+],
+"YENİ SAYFA": [
+"coachx.js"
+],
+"HOŞ GELDİN": [
+"coachx.js"
+],
+"Henüz gönderi yok. Maçlardan sonra paylaşımların burada görünür.": [
+"coachx.js"
+],
+"gönderi": [
+"coachx.js",
+"extras.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"takipçi": [
+"coachx.js",
+"extras.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"canvas.cmf-av, canvas.cmf-big": [
+"coachx.js"
+],
+"{}, takımlarını çoğunlukla {} dizilişiyle ve dengeli bir oyun anlayışıyla sahaya sürer.": [
+"coachx.js"
+],
+"{}, takımlarını çoğunlukla {} dizilişiyle ve hücum odaklı bir oyun anlayışıyla sahaya sürer.": [
+"coachx.js"
+],
+"{}, takımlarını çoğunlukla {} dizilişiyle ve savunma ağırlıklı bir oyun anlayışıyla sahaya sürer.": [
+"coachx.js"
+],
+"{}, takımlarını çoğunlukla {} dizilişiyle ve önde baskıya dayalı bir oyun anlayışıyla sahaya sürer.": [
+"coachx.js"
+],
+"{}, takımlarını çoğunlukla {} dizilişiyle ve kontra atağa dayalı bir oyun anlayışıyla sahaya sürer.": [
+"coachx.js"
+],
+"Halen {} takımını çalıştırmaktadır.": [
+"coachx.js"
+],
+"({} doğumlu), {} uyruklu futbol teknik direktörüdür.": [
+"coachx.js"
+],
+"Kariyerinde {} maçta {} galibiyet aldı (%{}).": [
+"coachx.js"
+],
+"Taktik zekâsıyla tanınır.": [
+"coachx.js"
+],
+"Oyuncularıyla kurduğu yakın ilişkiyle bilinir.": [
+"coachx.js"
+],
+"Kulüp bilgileri": [
+"coachx.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Şu anki takımı": [
+"coachx.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Görevi": [
+"coachx.js"
+],
+"Kötü sonuçların ardından görevinden alındı.": [
+"coachx.js"
+],
+"Başka bir kulübün teklifini kabul ederek ayrıldı.": [
+"coachx.js"
+],
+"{} maçta {} galibiyet, {} beraberlik ve {} mağlubiyet aldı.": [
+"coachx.js"
+],
+"İlk sezonu devam ediyor.": [
+"coachx.js"
+],
+"Henüz bir kupa kazanmamıştır.": [
+"coachx.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"En iyi lig sırası:": [
+"coachx.js"
+],
+"STARPEDIA": [
+"coachx.js",
+"star.js"
+],
+"Özgür futbol ansiklopedisi": [
+"coachx.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Starpedia, özgür futbol ansiklopedisi": [
+"coachx.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Kişisel bilgiler": [
+"coachx.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Tam adı": [
+"coachx.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Doğum tarihi": [
+"coachx.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"({} yaşında)": [
+"coachx.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Uyruğu": [
+"coachx.js"
+],
+"Teknik direktörlük kariyeri": [
+"coachx.js"
+],
+"Yıllar": [
+"coachx.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Oyun anlayışı": [
+"coachx.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Sezonlar": [
+"coachx.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Sezon": [
+"coachx.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Başarılar": [
+"coachx.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Rekorlar": [
+"coachx.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Toplam maç:": [
+"coachx.js"
+],
+"Galibiyet yüzdesi:": [
+"coachx.js"
+],
+"Atılan / yenilen gol:": [
+"coachx.js"
+],
+"İçerik StarFoot evreninde geçer; tüm kişi ve kulüpler kurgusaldır.": [
+"coachx.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{} Görünüm": [
+"coachx.js"
+],
+"{} Starpedia": [
+"coachx.js"
+],
+"{} Sosyal medya": [
+"coachx.js"
+],
+"🧱 Arkayı kapatın, skoru koruyalım": [
+"coachx.js"
+],
+"🎯 Bir gol daha atıp maçı bitirin": [
+"coachx.js"
+],
+"👏 Harika oynuyorsunuz, devam!": [
+"coachx.js"
+],
+"⚠️ Rehavete kapılmayın": [
+"coachx.js"
+],
+"🧠 Topu ayağınızda tutun, oyunu yavaşlatın": [
+"coachx.js"
+],
+"📋 Sabırlı olun, fırsat gelecek": [
+"coachx.js"
+],
+"⚡ Kanatları daha çok kullanın": [
+"coachx.js"
+],
+"🧱 Önce gol yemeyelim": [
+"coachx.js"
+],
+"💪 Bu maçı kazanabilecek tek takım biziz": [
+"coachx.js"
+],
+"😠 Uyanın artık!": [
+"coachx.js"
+],
+"🔥 Hâlâ şansımız var, saldırın!": [
+"coachx.js"
+],
+"📋 Panik yok, adım adım": [
+"coachx.js"
+],
+"💪 Size inanıyorum, geri döneceğiz": [
+"coachx.js"
+],
+"🎯 Ceza sahasına daha çok adam taşıyın": [
+"coachx.js"
+],
+"🤫 Bir şey demiyorum, sessizce bakıyorum": [
+"coachx.js"
+],
+"👏 Mükemmel bir performanstı!": [
+"coachx.js"
+],
+"🍾 Bu galibiyeti hak ettiniz, keyfini çıkarın": [
+"coachx.js"
+],
+"🙂 Güzel ama ayaklar yere bassın": [
+"coachx.js"
+],
+"📸 Taraftarla birlikte kutlayın": [
+"coachx.js"
+],
+"🛡️ Savunmanızla gurur duyuyorum": [
+"coachx.js"
+],
+"💪 Böyle maçları kazanmak şampiyonluk getirir": [
+"coachx.js"
+],
+"🙂 Mücadelenizi beğendim": [
+"coachx.js"
+],
+"🔁 Önümüzdeki maça odaklanalım": [
+"coachx.js"
+],
+"🫡 Sorumluluk bende": [
+"coachx.js"
+],
+"🔥 Bu yenilginin acısını çıkaracağız": [
+"coachx.js"
+],
+"😠 Utanç verici bir performans!": [
+"coachx.js"
+],
+"🫡 Sorumluluk bende, birlikte düzelteceğiz": [
+"coachx.js"
+],
+"🤐 Bugün konuşmayacağım, yarın analiz": [
+"coachx.js"
+],
+"📋 Herkes kendine dürüstçe baksın": [
+"coachx.js"
+],
+"Sözlerin işe yaradı, takım ateşlendi!": [
+"coachx.js"
+],
+"Takım mesajı aldı.": [
+"coachx.js"
+],
+"Oyuncular bu tavırdan etkilendi, moraller bozuk.": [
+"coachx.js"
+],
+"⭐ {}: \"Oyunu sen taşıyorsun\"": [
+"coachx.js"
+],
+"{} övgüyle coştu.": [
+"coachx.js"
+],
+"👉 {}: \"Senden daha fazlasını bekliyorum\"": [
+"coachx.js"
+],
+"{} tepki gösterip hırslandı.": [
+"coachx.js"
+],
+"{} eleştiriye bozuldu.": [
+"coachx.js"
+],
+"Oyuncular sözlerinden çok mutlu oldu.": [
+"coachx.js"
+],
+"Takım mesajı anladı.": [
+"coachx.js"
+],
+"Oyuncular sözlerini dinledi.": [
+"coachx.js"
+],
+"⭐ {}: \"Bugün farkı sen yarattın\"": [
+"coachx.js"
+],
+"{} övgüden çok mutlu.": [
+"coachx.js"
+],
+"👉 {}: \"Bugün yeterli değildin\"": [
+"coachx.js"
+],
+"{} eleştiriyi kabul etti.": [
+"coachx.js"
+],
+"Önemli bir galibiyet. {} karşısında oyuncularımla gurur duyuyorum!": [
+"coachx.js"
+],
+"Üç puan bizim. Taraftarımıza teşekkürler!": [
+"coachx.js"
+],
+"Planımız işledi. Sırada yeni hedefler var.": [
+"coachx.js"
+],
+"Bu takım karakterini gösterdi. Tebrikler çocuklar!": [
+"coachx.js"
+],
+"{} maçı zordu, bir puanla yetindik.": [
+"coachx.js"
+],
+"Kazanmak istiyorduk, çalışmaya devam.": [
+"coachx.js"
+],
+"Pes etmeyen bir takımımız var.": [
+"coachx.js"
+],
+"Bugün istediğimizi alamadık. Sorumluluk bende.": [
+"coachx.js"
+],
+"Kafaları kaldırıp önümüzdeki maça bakacağız.": [
+"coachx.js"
+],
+"Hatalarımızdan ders çıkaracağız.": [
+"coachx.js"
+],
+"{} aramıza hoş geldin! Birlikte büyük işler başaracağız.": [
+"coachx.js"
+],
+"Yeni bir sayfa: {}. Bu formayı taşıyan herkes için çalışacağım.": [
+"coachx.js"
+],
+"ŞAMPİYON! {}. Bu kupa hepimizin!": [
+"coachx.js"
+],
+"KUPA BİZİM! {}. Bu gece kutlama var!": [
+"coachx.js"
+],
+"Kadroda en az 16 oyuncu kalmalı.": [
+"coachx.js"
+],
+"En az 2 kaleci kadroda kalmalı.": [
+"coachx.js"
+],
+"🧤 Kaleci {} kadroya katıldı.": [
+"coachx.js"
+],
 "Kafa": [
 "cstats.js",
 "lang-ar.js",
@@ -7169,6 +8173,7 @@
 ],
 "Detaylı kariyer istatistikleri": [
 "cstats.js",
+"diamond.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -24418,7 +25423,10 @@
 "premium.js",
 "value.js"
 ],
-"Her şey dahil": [
+"Kulüp yönet, transfer yap, maçı kenardan yönet": [
+"diamond.js"
+],
+"Dünya Şampiyonası Rüyası": [
 "diamond.js",
 "game.js",
 "lang-ar.js",
@@ -24429,9 +25437,118 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"premium.js",
+"wc.js"
 ],
-"Premium ve Premium+'ın tamamı: reklamsız, 10 kariyer slotu, geri al, hızlı ilerleme, kaleci kariyeri": [
+"Milli takımınla kupayı kaldır": [
+"diamond.js"
+],
+"Efsanelerin İzinde": [
+"diamond.js",
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lpath.js",
+"premium.js"
+],
+"Efsanelerin kariyerini yeniden yaz": [
+"diamond.js"
+],
+"Reklamsız": [
+"diamond.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Geçiş reklamı yok, ödüller reklam izlemeden": [
+"diamond.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Starpedia ve kariyer belgeseli": [
+"diamond.js"
+],
+"Kendi ansiklopedi sayfan ve hikâyenin filmi": [
+"diamond.js"
+],
+"Sınırsız transfer talebi": [
+"diamond.js"
+],
+"İstediğin kulübe her dönem istediğin kadar talep gönder": [
+"diamond.js"
+],
+"Görünüm stüdyosu": [
+"diamond.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Yeni saç modelleri, sakallar, saç bandı ve içlik dahil": [
+"diamond.js"
+],
+"Lüks yaşam ve StarDeğer": [
+"diamond.js"
+],
+"Süper arabalar, villalar, yat, değer grafiğin ve söylentiler": [
+"diamond.js"
+],
+"Kaleci kariyeri": [
+"diamond.js",
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"premium.js"
+],
+"Kurtarışlar, penaltı düelloları, gol yememe": [
+"diamond.js"
+],
+"10 kariyer slotu, geri al, hızlı ilerleme": [
+"diamond.js"
+],
+"Kötü giden maçı yeniden oyna, istediğin haftaya atla": [
+"diamond.js"
+],
+"Kafa, penaltı ve frikik golleri, rakiplere göre dağılım": [
+"diamond.js"
+],
+"Altın koleksiyon": [
 "diamond.js",
 "lang-ar.js",
 "lang-de.js",
@@ -24443,7 +25560,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Teknik Direktör · Dünya Şampiyonası Rüyası · Efsanelerin İzinde": [
+"Altın ve elmas krampon, platin saç rengi, profilinde elmas rozet": [
 "diamond.js",
 "lang-ar.js",
 "lang-de.js",
@@ -24479,7 +25596,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Altın koleksiyon": [
+"Premium'un tamamı": [
 "diamond.js",
 "lang-ar.js",
 "lang-de.js",
@@ -24491,17 +25608,11 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Altın ve elmas krampon, platin saç rengi, profilinde elmas rozet": [
-"diamond.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
+"Premium+'ın tamamı": [
+"diamond.js"
+],
+"Sadece Diamond'da": [
+"diamond.js"
 ],
 "Diamond sende! Her şey açık.": [
 "diamond.js",
@@ -25230,19 +26341,6 @@
 "{} Editör": [
 "edit.js",
 "game.js"
-],
-"Kaydet": [
-"edit.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"star.js"
 ],
 "Uygulanıyor…": [
 "edit.js",
@@ -29974,30 +31072,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"gönderi": [
-"extras.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"takipçi": [
-"extras.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "{} antrenmana pijamayla geldi. Teknik direktör: \"En azından renkler kulübe uygundu.\"": [
 "extras.js"
 ],
@@ -31154,7 +32228,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Dünya Şampiyonası Rüyası": [
+"Her şey dahil": [
 "game.js",
 "lang-ar.js",
 "lang-de.js",
@@ -31164,23 +32238,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"premium.js",
-"wc.js"
-],
-"Efsanelerin İzinde": [
-"game.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"lpath.js",
-"premium.js"
+"lang-pt.js"
 ],
 "{} Nasıl Oynanır": [
 "game.js"
@@ -31292,10 +32350,6 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
-],
-"NONE": [
-"game.js",
-"lang-en.js"
 ],
 "{} {} yaşında, {} yılında mahallede top koşturan bir çocuk. Bugün mahalleler arası maç var ve kenarda bir scout izliyor!": [
 "game.js",
@@ -34988,18 +36042,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Rolün": [
-"game.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "lgView": [
 "game.js"
 ],
@@ -38242,34 +39284,8 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Geri": [
-"game.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"tutorial.js"
-],
 "{} Kariyere Başla": [
 "game.js"
-],
-"Kaleci kariyeri": [
-"game.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"premium.js"
 ],
 "Kaleci olarak oyna: köşelere uçan kurtarışlar, penaltı düelloları, karşı karşıya pozisyonlar ve gol yemeden kapanan maçlar. Kaleci kariyeri Premium+ ile açılır.": [
 "game.js",
@@ -50053,18 +51069,6 @@
 "lang-pt.js",
 "star.js"
 ],
-"Görünüm": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"star.js"
-],
 "Saç, sakal, krampon": [
 "lang-ar.js",
 "lang-de.js",
@@ -50114,18 +51118,6 @@
 "star.js"
 ],
 "Kariyerinin hikâyesi": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"star.js"
-],
-"Transfer talebi": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -50336,18 +51328,6 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
-],
-"Görünüm stüdyosu": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"star.js"
 ],
 "Görünüm Stüdyosu": [
 "lang-ar.js",
@@ -50620,30 +51600,6 @@
 "star.js"
 ],
 "Tarzını seç, hikâyeni izle": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"star.js"
-],
-"Reklamsız": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"star.js"
-],
-"Geçiş reklamı yok, ödüller reklam izlemeden": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -50954,54 +51910,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Ten rengi": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"star.js"
-],
-"Saç modeli": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"star.js"
-],
-"Saç rengi": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"star.js"
-],
-"Sakal": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"star.js"
-],
 "Krampon": [
 "lang-ar.js",
 "lang-de.js",
@@ -51026,18 +51934,6 @@
 "lang-pt.js",
 "star.js"
 ],
-"Kısa": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"star.js"
-],
 "Asker tıraşı": [
 "lang-ar.js",
 "lang-de.js",
@@ -51051,18 +51947,6 @@
 "star.js"
 ],
 "Yana tarama": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"star.js"
-],
-"Uzun": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -51099,18 +51983,6 @@
 "star.js"
 ],
 "Topuz": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"star.js"
-],
-"Kel": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -51822,30 +52694,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Özgür futbol ansiklopedisi": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"star.js"
-],
-"Starpedia, özgür futbol ansiklopedisi": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"star.js"
-],
 "Ücretsiz önizleme": [
 "lang-ar.js",
 "lang-de.js",
@@ -51977,42 +52825,6 @@
 "lang-pt.js",
 "star.js"
 ],
-"Kişisel bilgiler": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"star.js"
-],
-"Tam adı": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"star.js"
-],
-"Doğum tarihi": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"star.js"
-],
 "Doğum yeri": [
 "lang-ar.js",
 "lang-de.js",
@@ -52061,30 +52873,6 @@
 "lang-pt.js",
 "star.js"
 ],
-"Kulüp bilgileri": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"star.js"
-],
-"Şu anki takımı": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"star.js"
-],
 "Forma numarası": [
 "lang-ar.js",
 "lang-de.js",
@@ -52110,18 +52898,6 @@
 "star.js"
 ],
 "Profesyonel kariyeri*": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"star.js"
-],
-"Yıllar": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -52278,30 +53054,6 @@
 "lang-pt.js",
 "star.js"
 ],
-"Başarılar": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"star.js"
-],
-"Rekorlar": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"star.js"
-],
 "Önemli maçlar": [
 "lang-ar.js",
 "lang-de.js",
@@ -52363,18 +53115,6 @@
 "star.js"
 ],
 "Henüz millî takım formasıyla sahaya çıkmamıştır.": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"star.js"
-],
-"Henüz bir kupa kazanmamıştır.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -52539,17 +53279,6 @@
 "lang-ja.js",
 "lang-pt.js",
 "star.js"
-],
-"İçerik StarFoot evreninde geçer; tüm kişi ve kulüpler kurgusaldır.": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
 ],
 "Content is set in the StarFoot universe; all people and clubs are fictional.": [
 "lang-ar.js",
@@ -60639,17 +61368,6 @@
 "Premium+ مفعّل!": [
 "lang-ar.js"
 ],
-"Premium'un tamamı": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "كل Premium": [
 "lang-ar.js"
 ],
@@ -61569,20 +62287,6 @@
 "lang-ja.js",
 "lang-pt.js",
 "star.js"
-],
-"Yok": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"lifex.js",
-"star.js",
-"value.js"
 ],
 "Kurucu Destekçi": [
 "lang-ar.js",
@@ -66443,17 +67147,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Oyun anlayışı": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "Antrenman yoğunluğu": [
 "lang-ar.js",
 "lang-de.js",
@@ -69651,8 +70344,30 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Premium ve Premium+'ın tamamı: reklamsız, 10 kariyer slotu, geri al, hızlı ilerleme, kaleci kariyeri": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "كل Premium وPremium+: بلا إعلانات، 10 مسيرات، تراجع، تقديم سريع، مسيرة حارس مرمى": [
 "lang-ar.js"
+],
+"Teknik Direktör · Dünya Şampiyonası Rüyası · Efsanelerin İzinde": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "لديك Diamond! كل شيء مفتوح.": [
 "lang-ar.js"
@@ -72390,6 +73105,28 @@
 "lang-pt.js"
 ],
 "Kulüp durumu": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ofsayta yakalandı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"is caught offside.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -76858,29 +77595,6 @@
 "lang-pt.js"
 ],
 "Sende": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"Sezon": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"star.js"
-],
-"Sezonlar": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -115254,6 +115968,28 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"OFSAYTA YAKALANDI.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"IS CAUGHT OFFSIDE.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -152141,18 +152877,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"({} yaşında)": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"star.js"
-],
 "{} turnuvası": [
 "lang-ar.js",
 "lang-de.js",
@@ -153712,17 +154436,6 @@
 "lang-pt.js"
 ],
 "{} gol": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"Güç {}": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -177955,6 +178668,9 @@
 "lang-de.js"
 ],
 "⚽ Unser Torschützenkönig: {} ({})": [
+"lang-de.js"
+],
+"{} steht im Abseits.": [
 "lang-de.js"
 ],
 "/Woche · noch {} Jahre": [
@@ -202426,6 +203142,9 @@
 "lang-en.js"
 ],
 "⚽ Our top scorer: {} ({})": [
+"lang-en.js"
+],
+"{} is caught offside.": [
 "lang-en.js"
 ],
 "/week · {} years left": [
@@ -226999,6 +227718,9 @@
 "⚽ Nuestro máximo goleador: {} ({})": [
 "lang-es.js"
 ],
+"{} cae en fuera de juego.": [
+"lang-es.js"
+],
 "/semana · quedan {} años": [
 "lang-es.js"
 ],
@@ -250875,6 +251597,9 @@
 "⚽ Notre meilleur buteur : {} ({})": [
 "lang-fr.js"
 ],
+"{} est signalé hors-jeu.": [
+"lang-fr.js"
+],
 "/semaine · encore {} ans": [
 "lang-fr.js"
 ],
@@ -274270,6 +274995,9 @@
 "lang-id.js"
 ],
 "⚽ Top skor kita: {} ({})": [
+"lang-id.js"
+],
+"{} terjebak offside.": [
 "lang-id.js"
 ],
 "/minggu · tersisa {} tahun": [
@@ -297678,6 +298406,9 @@
 "lang-it.js"
 ],
 "⚽ Il nostro capocannoniere: {} ({})": [
+"lang-it.js"
+],
+"{} è in fuorigioco.": [
 "lang-it.js"
 ],
 "/settimana · ancora {} anni": [
@@ -321369,6 +322100,9 @@
 "⚽ Nosso artilheiro: {} ({})": [
 "lang-pt.js"
 ],
+"{} está impedido.": [
+"lang-pt.js"
+],
 "/semana · faltam {} anos": [
 "lang-pt.js"
 ],
@@ -338683,22 +339417,40 @@
 "{} Yıldız Ayrıcalıkları": [
 "star.js"
 ],
+"Fade": [
+"star.js"
+],
+"Afro": [
+"star.js"
+],
+"Rasta": [
+"star.js"
+],
+"Örgü": [
+"star.js"
+],
+"Dikleştirilmiş": [
+"star.js"
+],
 "{} Dilediğin kadar dene. Kaydetmek Premium'a özel.": [
 "star.js"
 ],
-"{} Görünüm Stüdyosu": [
+"Yeni saç modelleri": [
 "star.js"
 ],
-"{} Transfer talebi": [
+"Saç bandı": [
+"star.js"
+],
+"Uzun kollu içlik": [
+"star.js"
+],
+"{} Görünüm Stüdyosu": [
 "star.js"
 ],
 "📨 Transfer talebin kulüplere ulaştı: {} kulüp teklif yaptı! Teklifler 2 hafta geçerli.": [
 "star.js"
 ],
 "📨 {} kulüp teklif yaptı!": [
-"star.js"
-],
-"STARPEDIA": [
 "star.js"
 ],
 "{} Kariyer belgeselini izle": [

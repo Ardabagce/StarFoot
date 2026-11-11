@@ -796,3 +796,198 @@
 7342|Mercado cerrado
 7351|{} sem
 7353|{} cae en fuera de juego.
+7354|Solicitud en estudio
+7659|Si llegas a {} (ahora {})
+7614|Estás cedido por {} hasta final de temporada.
+7355|Envía una solicitud al club que quieras. Decidirá según tu nivel, su presupuesto y sus necesidades.
+7358|Elegir club
+7359|Premium: ilimitado
+7360|1 solicitud
+7361|sin solicitudes
+7362|No puedes pedir traspaso estando cedido.
+7363|Ya usaste tu solicitud de este mercado.
+7364|Máximo 3 solicitudes pendientes a la vez.
+7365|¿En qué liga quieres jugar?
+7666|Tu media {}
+7640|Tu club pide: {}
+7366|Mucho interés
+7367|Quizás
+7368|Poco probable
+7598|📨 Tu solicitud llegó a {}. Respuesta la próxima semana.
+7581|✅ ¡{} aceptó tu solicitud! La oferta vale hasta el cierre del mercado.
+7663|✅ ¡{} hizo una oferta!
+7604|🤔 {}: "Si llegas a {} volveremos a hablar."
+7634|❌ {} rechazó tu solicitud: "{}"
+7374|No podemos pagar lo que pide tu club.
+7375|Tenemos suficientes jugadores en tu puesto.
+7376|Ahora mismo no estás al nivel que buscamos.
+7377|Buscamos un jugador más joven.
+7599|🎯 {} cumplió: alcanzaste el objetivo, ¡llegó la oferta oficial!
+7379|Prima de fichaje
+7380|Parte de camisetas
+7639|✍️ Prima de fichaje de {} ingresada.
+7381|Agresivo
+7382|Duro en los duelos; la afición te adora, pero ves más tarjetas.
+7383|Tus compañeros te siguen; mandas en el vestuario y el brazalete llega antes.
+7384|Frío bajo presión; las derrotas apenas te afectan y casi no ves tarjetas.
+7385|Disciplinado; mejoras más entrenando.
+7386|Desafías las normas; la afición te quiere, los técnicos sufren.
+7387|Siempre quieres más; mejoras rápido, pero en el banquillo te hundes.
+7388|🧠 Tu entrada dura en el entrenamiento causó una discusión.
+7390|🧠 Tus consejos a los jóvenes son la comidilla del vestuario.
+7392|🧠 En una mala semana, tu calma unió al equipo.
+7394|🧠 Tus entrenamientos extra llamaron la atención del técnico.
+7396|🧠 Criticaste al técnico en redes. La afición te apoya.
+7401|🧠 Dijiste abiertamente que aspiras a más. Los clubes tomaron nota.
+7585|🧠 Tu comportamiento te cambió: ahora te ven como {}.
+7610|Dicen que soy {}. Quizás tengan razón.
+7407|Tu personalidad
+7408|Tus entrevistas, tarjetas y actitud moldean tu personalidad.
+7409|Puede cambiar según tus actos
+7580|🔁 {} quiere cederte una temporada al {} para que tengas minutos.
+7410|Oferta de cesión
+7575|Vestirías la camiseta del {} una temporada. Mismo sueldo y vuelves al final. Si juegas bien, pueden ejercer la opción de compra.
+7413|Quedarme y pelear el puesto
+7414|Irme cedido
+7587|🔁 {} te cedió al {} hasta final de temporada. Opción de compra: {}.
+7597|Una temporada de aventura: ¡{}! Aprovecharé la oportunidad.
+7416|Rechazaste la cesión. Tendrás que demostrarle al técnico.
+7617|📨 ¡{} anunció oficialmente su interés en ti!
+7628|🔎 Un ojeador del {} estuvo en tu último partido.
+7618|🔎 Los ojeadores del {} siguen observándote.
+7603|👕 Tu camiseta vendió {} unidades. Tu {}% te dejó {}.
+7619|👕 Tu parte de {} por camisetas ya está en tu cuenta.
+7588|🔁 {} quiere ejercer la opción de compra ({}).
+7593|🔁 Terminó la cesión. Si no eliges oferta, vuelves al {}.
+7615|🔁 Fin de la cesión, vuelves al {}.
+7423|Chándal
+7424|Chándal con los colores del club
+7425|Traje
+7426|Con corbata, elegante y con autoridad
+7427|Casual
+7428|Jersey y vaqueros, un técnico relajado
+7429|Crea tu entrenador
+7430|Vestimenta
+7431|Color
+4118|Rapado
+7432|Peinado hacia atrás
+4119|Raya al lado
+7433|Barba de tres días
+7434|Barba completa
+7435|Perilla
+7436|Bigote
+7437|Tu aspecto se guardó.
+7438|Nuevos peinados
+7439|Degradado
+7440|Afro
+7441|Rastas
+7442|Trenzas
+7443|De punta
+7444|Cinta de pelo
+7445|Camiseta interior de manga larga
+7446|NUEVA ETAPA
+7447|BIENVENIDO
+7448|Aún no hay publicaciones. Tras los partidos aparecerán aquí.
+7594|Una victoria importante. ¡Orgulloso de mis jugadores ante el {}!
+7451|Tres puntos para nosotros. ¡Gracias, afición!
+7454|El plan funcionó. A por el siguiente objetivo.
+7457|Este equipo mostró carácter. ¡Enhorabuena, chicos!
+7635|Partido duro ante el {}, nos quedamos con el punto.
+7461|Queríamos ganar. A seguir trabajando.
+7462|Este equipo nunca se rinde.
+7463|Hoy no logramos lo que queríamos. La responsabilidad es mía.
+7466|Cabeza alta y a por el próximo partido.
+7467|Aprenderemos de nuestros errores.
+7602|¡Bienvenido, {}! Juntos haremos grandes cosas.
+7596|Nueva etapa: {}. Trabajaré por todos los que llevan esta camiseta.
+7644|¡CAMPEONES! {}. ¡Este título es de todos!
+7633|¡LA COPA ES NUESTRA! {}. ¡Esta noche hay fiesta!
+7609|(nacido en {}) es un entrenador de fútbol de {}.
+7636|Actualmente dirige al {}.
+7626|En su carrera ganó {} de {} partidos ({}%).
+7584|{} suele usar un {} con un enfoque equilibrado.
+7579|{} suele usar un {} con un enfoque ofensivo.
+7578|{} suele usar un {} con un enfoque defensivo.
+7576|{} suele usar un {} basado en la presión alta.
+7577|{} suele usar un {} basado en el contraataque.
+7473|Es conocido por su inteligencia táctica.
+7474|Es conocido por su cercanía con los jugadores.
+7475|Nacionalidad
+7476|Cargo
+7477|Carrera como entrenador
+7606|{} partidos: {} victorias, {} empates y {} derrotas.
+7478|Fue destituido tras malos resultados.
+7479|Se marchó tras aceptar la oferta de otro club.
+1654|Temporadas
+7480|Primera temporada en curso.
+7481|Partidos totales:
+7482|Porcentaje de victorias:
+7483|Goles a favor / en contra:
+7484|Mejor puesto en liga:
+7485|Redes sociales
+7486|🧱 Cerrad atrás, a proteger el resultado
+7488|🎯 Otro gol y partido cerrado
+7490|👏 ¡Estáis jugando genial, seguid así!
+7492|⚠️ No os relajéis
+7493|🧠 Tened el balón, bajad el ritmo
+7495|📋 Paciencia, la ocasión llegará
+7497|⚡ Usad más las bandas
+7499|🧱 Primero, no encajar
+7501|💪 Somos los únicos que podemos ganar esto
+7503|😠 ¡Despertad ya!
+7505|🔥 ¡Aún tenemos opciones, al ataque!
+7507|📋 Sin pánico, paso a paso
+7509|💪 Creo en vosotros, vamos a remontar
+7511|🎯 Más gente al área
+7513|🤫 No digo nada, solo miro en silencio
+7515|👏 ¡Fue una actuación perfecta!
+7517|🍾 Os habéis ganado esta victoria, disfrutadla
+7519|🙂 Bien, pero con los pies en el suelo
+7521|📸 Id a celebrarlo con la afición
+7523|🛡️ Orgulloso de vuestra defensa
+7525|💪 Ganar partidos así da títulos
+7527|🙂 Me gustó vuestra lucha
+7529|🔁 Centrémonos en el próximo partido
+7531|🫡 La responsabilidad es mía
+7533|🔥 Nos vamos a resarcir de esta derrota
+7535|😠 ¡Una actuación vergonzosa!
+7537|🫡 Es culpa mía, lo arreglaremos juntos
+7539|🤐 Hoy no hablo, mañana análisis
+7541|📋 Que cada uno se mire con honestidad
+7543|¡Tus palabras funcionaron, el equipo se encendió!
+7544|El equipo captó el mensaje.
+7545|Los jugadores lo encajaron mal, la moral cayó.
+7651|⭐ {}: "Tú estás llevando el partido"
+7664|{} se vino arriba con el elogio.
+7629|👉 {}: "Espero más de ti"
+7652|{} reaccionó y se motivó.
+7660|{} se tomó mal la crítica.
+7549|A los jugadores les encantaron tus palabras.
+7550|El equipo entendió el mensaje.
+7551|Los jugadores escucharon.
+7645|⭐ {}: "Hoy marcaste la diferencia"
+7661|{} está encantado con el elogio.
+7648|👉 {}: "Hoy no estuviste a la altura"
+7657|{} aceptó la crítica.
+7554|Debes mantener al menos 16 jugadores.
+7555|Debes mantener al menos 2 porteros.
+7654|🧤 El portero {} se unió a la plantilla.
+7622|{} no puede seguir, nos quedamos con diez.
+7557|Seguir con diez
+7558|3 modos de juego incluidos
+7559|Dirige un club, ficha y manda desde la banda
+7560|Levanta la copa con tu selección
+7561|Reescribe la carrera de las leyendas
+7562|Starpedia y documental de carrera
+7563|Tu propia página de enciclopedia y la película de tu historia
+7564|Solicitudes de traspaso ilimitadas
+7565|Envía tantas solicitudes como quieras en cada mercado
+7566|Nuevos peinados, barbas, cintas e interiores incluidos
+7567|Vida de lujo y StarValor
+7568|Superdeportivos, villas, yate, tu gráfico de valor y rumores
+7569|Todo Premium+
+7570|Paradas, duelos de penaltis, porterías a cero
+7571|10 ranuras, deshacer y avance rápido
+7572|Repite un mal partido, salta a la semana que quieras
+7573|Goles de cabeza, penalti, falta y por rival
+7574|Solo en Diamond

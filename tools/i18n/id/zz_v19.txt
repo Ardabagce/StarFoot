@@ -796,3 +796,198 @@
 7342|Bursa transfer ditutup
 7351|{} mg
 7353|{} terjebak offside.
+7354|Permintaan sedang ditinjau
+7659|Jika rating {} (kini {})
+7614|Kamu dipinjamkan dari {} hingga akhir musim.
+7355|Kirim permintaan ke klub mana pun. Klub memutuskan berdasarkan rating, anggaran, dan kebutuhan skuad.
+7358|Pilih klub
+7359|Premium: tanpa batas
+7360|1 permintaan
+7361|habis
+7362|Tidak bisa minta transfer saat dipinjamkan.
+7363|Jatah permintaan di bursa ini habis.
+7364|Maksimal 3 permintaan tertunda.
+7365|Ingin main di liga mana?
+7666|Rating-mu {}
+7640|Klubmu meminta: {}
+7366|Minat tinggi
+7367|Mungkin
+7368|Kecil kemungkinan
+7598|📨 Permintaanmu dikirim ke {}. Jawaban minggu depan.
+7581|✅ {} menerima permintaanmu! Tawaran berlaku sampai bursa ditutup.
+7663|✅ {} mengajukan tawaran!
+7604|🤔 {}: "Capai rating {} dan kita bicara lagi."
+7634|❌ {} menolak permintaanmu: "{}"
+7374|Kami tak sanggup membayar harga klubmu.
+7375|Kami punya cukup pemain di posisimu.
+7376|Kamu belum di level yang kami cari.
+7377|Kami mencari pemain lebih muda.
+7599|🎯 {} menepati janji: target tercapai, tawaran resmi datang!
+7379|Bonus tanda tangan
+7380|Bagian penjualan jersey
+7639|✍️ Bonus tanda tangan {} masuk ke rekening.
+7381|Agresif
+7382|Keras dalam duel; fans suka, tapi rawan kartu.
+7383|Rekan setim menghormatimu; suaramu didengar dan ban kapten datang lebih cepat.
+7384|Tenang di bawah tekanan; hasil buruk tak banyak memengaruhi, jarang kena kartu.
+7385|Disiplin; latihan lebih berdampak.
+7386|Suka melanggar aturan; fans suka, pelatih kewalahan.
+7387|Selalu ingin lebih; cepat berkembang, tapi moral anjlok saat cadangan.
+7388|🧠 Tekel kerasmu saat latihan memicu pertengkaran.
+7390|🧠 Nasihatmu untuk pemain muda jadi bahan obrolan.
+7392|🧠 Di pekan buruk, ketenanganmu menyatukan tim.
+7394|🧠 Latihan ekstramu menarik perhatian pelatih.
+7396|🧠 Kamu mengkritik pelatih di medsos. Fans mendukungmu.
+7401|🧠 Kamu terang-terangan ingin lebih. Klub-klub memperhatikan.
+7585|🧠 Perilakumu mengubahmu: kini kamu dikenal {}.
+7610|Kata mereka aku {}. Mungkin mereka benar.
+7407|Kepribadianmu
+7408|Jawaban wawancara, kartu, dan sikapmu membentuk kepribadian.
+7409|Bisa berubah oleh tindakanmu
+7580|🔁 {} ingin meminjamkanmu ke {} semusim agar dapat menit bermain.
+7410|Tawaran pinjaman
+7575|Kamu memakai jersey {} semusim. Gaji sama, kembali di akhir musim. Main bagus, mereka bisa menebusmu.
+7413|Bertahan dan berjuang
+7414|Pergi dipinjamkan
+7587|🔁 {} meminjamkanmu ke {} hingga akhir musim. Opsi beli: {}.
+7597|Petualangan semusim: {}! Akan kumanfaatkan kesempatan ini.
+7416|Kamu menolak pinjaman. Buktikan dirimu ke pelatih.
+7617|📨 {} resmi menyatakan minat padamu!
+7628|🔎 Pemandu bakat {} hadir di laga terakhirmu.
+7618|🔎 {} masih memantaumu.
+7603|👕 Jerseymu terjual {} buah. Bagianmu {}% menghasilkan {}.
+7619|👕 Bagian {} dari penjualan jersey sudah masuk.
+7588|🔁 {} ingin memakai opsi beli ({}).
+7593|🔁 Masa pinjaman selesai. Jika tak memilih tawaran, kembali ke {}.
+7615|🔁 Pinjaman usai, kamu kembali ke {}.
+7423|Training
+7424|Training warna klub
+7425|Jas
+7426|Berdasi, rapi dan berwibawa
+7427|Kasual
+7428|Sweter dan jins, pelatih santai
+7429|Buat pelatihmu
+7430|Pakaian
+7431|Warna
+4118|Cepak
+7432|Disisir ke belakang
+4119|Belah samping
+7433|Brewok tipis
+7434|Jenggot penuh
+7435|Janggut kambing
+7436|Kumis
+7437|Penampilanmu tersimpan.
+7438|Gaya rambut baru
+7439|Fade
+7440|Afro
+7441|Gimbal
+7442|Kepang
+7443|Jabrik
+7444|Bando
+7445|Manset lengan panjang
+7446|BABAK BARU
+7447|SELAMAT DATANG
+7448|Belum ada postingan. Postinganmu setelah laga muncul di sini.
+7594|Kemenangan penting. Bangga pada pemainku melawan {}!
+7451|Tiga poin milik kita. Terima kasih, fans!
+7454|Rencana berhasil. Lanjut ke target berikutnya.
+7457|Tim ini menunjukkan karakter. Selamat, anak-anak!
+7635|Laga melawan {} berat, kami terima satu poin.
+7461|Kami ingin menang. Terus bekerja.
+7462|Tim ini tak pernah menyerah.
+7463|Hari ini kami gagal. Itu tanggung jawabku.
+7466|Angkat kepala, fokus ke laga berikutnya.
+7467|Kami akan belajar dari kesalahan.
+7602|Selamat datang, {}! Bersama kita raih hal besar.
+7596|Babak baru: {}. Aku bekerja untuk semua yang memakai jersey ini.
+7644|JUARA! {}. Trofi ini milik kita semua!
+7633|PIALA MILIK KITA! {}. Malam ini pesta!
+7609|(lahir {}) adalah pelatih sepak bola asal {}.
+7636|Saat ini melatih {}.
+7626|Sepanjang karier menang {} dari {} laga ({}%).
+7584|{} biasa memakai formasi {} dengan gaya seimbang.
+7579|{} biasa memakai formasi {} dengan gaya menyerang.
+7578|{} biasa memakai formasi {} dengan gaya bertahan.
+7576|{} biasa memakai formasi {} dengan pressing tinggi.
+7577|{} biasa memakai formasi {} dengan serangan balik.
+7473|Dikenal karena kecerdasan taktiknya.
+7474|Dikenal dekat dengan para pemainnya.
+7475|Kewarganegaraan
+7476|Jabatan
+7477|Karier kepelatihan
+7606|{} laga: {} menang, {} imbang, {} kalah.
+7478|Dipecat setelah hasil buruk.
+7479|Pergi setelah menerima tawaran klub lain.
+1654|Musim
+7480|Musim pertama berjalan.
+7481|Total laga:
+7482|Persentase menang:
+7483|Gol memasukkan / kemasukan:
+7484|Posisi liga terbaik:
+7485|Media sosial
+7486|🧱 Rapatkan belakang, jaga skor
+7488|🎯 Satu gol lagi, tutup laga
+7490|👏 Kalian main hebat, lanjutkan!
+7492|⚠️ Jangan lengah
+7493|🧠 Kuasai bola, perlambat tempo
+7495|📋 Sabar, peluang akan datang
+7497|⚡ Manfaatkan sayap
+7499|🧱 Pertama, jangan kebobolan
+7501|💪 Hanya kita yang bisa menang
+7503|😠 Bangun!
+7505|🔥 Masih ada peluang, serang!
+7507|📋 Jangan panik, selangkah demi selangkah
+7509|💪 Aku percaya, kita akan bangkit
+7511|🎯 Lebih banyak orang ke kotak penalti
+7513|🤫 Diam, hanya menatap
+7515|👏 Penampilan sempurna!
+7517|🍾 Kalian layak menang, nikmati
+7519|🙂 Bagus, tapi tetap rendah hati
+7521|📸 Rayakan bersama fans
+7523|🛡️ Bangga dengan pertahanan kalian
+7525|💪 Menang laga seperti ini bawa gelar
+7527|🙂 Aku suka semangat kalian
+7529|🔁 Fokus ke laga berikutnya
+7531|🫡 Itu tanggung jawabku
+7533|🔥 Kita akan membalas kekalahan ini
+7535|😠 Penampilan memalukan!
+7537|🫡 Salahku, kita perbaiki bersama
+7539|🤐 Hari ini diam, besok analisis
+7541|📋 Semua introspeksi dengan jujur
+7543|Kata-katamu berhasil, tim terbakar semangat!
+7544|Tim menangkap pesannya.
+7545|Pemain tersinggung, moral turun.
+7651|⭐ {}: "Kamu yang memikul tim"
+7664|{} makin semangat setelah dipuji.
+7629|👉 {}: "Aku harap lebih darimu"
+7652|{} bereaksi dan makin bertekad.
+7660|{} tersinggung dengan kritik.
+7549|Pemain sangat senang dengan ucapanmu.
+7550|Tim memahami pesannya.
+7551|Para pemain mendengarkan.
+7645|⭐ {}: "Hari ini kamu pembedanya"
+7661|{} sangat senang dipuji.
+7648|👉 {}: "Hari ini kamu kurang"
+7657|{} menerima kritik.
+7554|Minimal 16 pemain harus tersisa.
+7555|Minimal 2 kiper harus tersisa.
+7654|🧤 Kiper {} bergabung ke skuad.
+7622|{} tak bisa lanjut, kita main dengan sepuluh.
+7557|Lanjut dengan sepuluh
+7558|Termasuk 3 mode permainan
+7559|Kelola klub, rekrut pemain, atur dari pinggir lapangan
+7560|Angkat trofi bersama timnas
+7561|Tulis ulang karier para legenda
+7562|Starpedia dan dokumenter karier
+7563|Halaman ensiklopedia dan film kisahmu
+7564|Permintaan transfer tanpa batas
+7565|Kirim permintaan sebanyak apa pun tiap bursa
+7566|Termasuk gaya rambut, jenggot, bando, dan manset baru
+7567|Hidup mewah dan StarValue
+7568|Mobil super, vila, kapal pesiar, grafik nilai, dan rumor
+7569|Semua fitur Premium+
+7570|Penyelamatan, adu penalti, nirbobol
+7571|10 slot karier, urungkan, maju cepat
+7572|Ulangi laga buruk, lompat ke pekan mana saja
+7573|Gol sundulan, penalti, tendangan bebas, per lawan
+7574|Khusus Diamond

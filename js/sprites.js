@@ -207,7 +207,7 @@ const Sprites = {
         const sc2 = -side * sw * h * 0.075; fx += sc2; kx += sc2 * 0.45;
       }
       // uyluk (ten), diz, kaval (çorap)
-      limb(hx, hipY, kx, ky, legW * 1.18, look.skin);
+      limb(hx, hipY, kx, ky, legW * 1.18, kit.pants || look.skin);
       limb(kx, ky, fx, fy, legW * 0.98, kit.socks);
       // diz ve çorap ağzı: dizin hemen altı ten, sonra çorap
       // krampon: burun hafif dışa dönük
@@ -249,8 +249,8 @@ const Sprites = {
       const hy2 = ey + Math.cos(p2) * L2 * k2 - f * h * 0.042;
       if (raise < 0.5 && side * (hx2 - sx) < W * 0.56) hx2 = sx + side * W * 0.56; // el gövdenin arkasında kaybolmasın
       const aw = h * 0.088;
-      limb(ax, ay, ex, ey, aw, o.longSleeve ? kit.shirt : look.skin);
-      limb(ex, ey, hx2, hy2, aw * 0.88, o.longSleeve ? kit.shirt : look.skin);
+      limb(ax, ay, ex, ey, aw, o.longSleeve ? kit.shirt : look.sleeve ? look.sleeve : look.skin);
+      limb(ex, ey, hx2, hy2, aw * 0.88, o.longSleeve ? kit.shirt : look.sleeve ? look.sleeve : look.skin);
       // kol ağzı (forma)
       limb(ax, ay, ax + (ex - ax) * 0.55, ay + (ey - ay) * 0.55, aw * 1.25, kit.shirt, -0.15);
       if (o.gloves) {
@@ -281,12 +281,34 @@ const Sprites = {
     const tw = W * 1.2, x0 = sx - tw / 2;
     if (h > 30) {
       // yaka ve kol dikişleri
-      ctx.save(); ctx.fillStyle = kit.pattern === 'plain' ? kit.alt : Sprites.shadeC(kit.shirt, -0.3);
+      ctx.save(); if (kit.coat) ctx.globalAlpha = 0;
+      ctx.fillStyle = kit.pattern === 'plain' ? kit.alt : Sprites.shadeC(kit.shirt, -0.3);
       if (up) ctx.fillRect(sx - W * 0.2, top - h * 0.02, W * 0.4, h * 0.03);
       else { ctx.beginPath(); ctx.moveTo(sx - W * 0.2, top - h * 0.01); ctx.lineTo(sx, top + h * 0.06); ctx.lineTo(sx + W * 0.2, top - h * 0.01); ctx.lineTo(sx + W * 0.12, top - h * 0.01); ctx.lineTo(sx, top + h * 0.035); ctx.lineTo(sx - W * 0.12, top - h * 0.01); ctx.fill(); }
       ctx.restore();
     }
-    if (kit.pattern === 'stripes') {
+    if (kit.coat && h > 30 && !up) {
+      // teknik direktör kıyafetleri: takım elbise, eşofman, casual
+      const mid = top + (bot - top) * 0.55;
+      if (kit.coat === 'suit') {
+        ctx.fillStyle = kit.inner || '#f4f4f4';
+        ctx.beginPath(); ctx.moveTo(sx - W * 0.2, top - h * 0.01); ctx.lineTo(sx, mid); ctx.lineTo(sx + W * 0.2, top - h * 0.01); ctx.fill();
+        ctx.fillStyle = kit.tie || '#b3122e';
+        ctx.beginPath(); ctx.moveTo(sx - W * 0.05, top + h * 0.01); ctx.lineTo(sx + W * 0.05, top + h * 0.01); ctx.lineTo(sx + W * 0.07, mid - h * 0.04); ctx.lineTo(sx, mid + h * 0.005); ctx.lineTo(sx - W * 0.07, mid - h * 0.04); ctx.fill();
+        ctx.strokeStyle = Sprites.shadeC(kit.shirt, -0.35); ctx.lineWidth = Math.max(1, h * 0.008);
+        ctx.beginPath(); ctx.moveTo(sx - W * 0.22, top); ctx.lineTo(sx - W * 0.02, mid + h * 0.02); ctx.moveTo(sx + W * 0.22, top); ctx.lineTo(sx + W * 0.02, mid + h * 0.02); ctx.stroke();
+        ctx.fillStyle = Sprites.shadeC(kit.shirt, -0.3); ctx.beginPath(); ctx.arc(sx, mid + h * 0.05, h * 0.008, 0, Math.PI * 2); ctx.fill();
+      } else if (kit.coat === 'track') {
+        ctx.fillStyle = kit.alt; ctx.fillRect(sx - W * 0.6, top + h * 0.02, W * 0.1, h * 0.4); ctx.fillRect(sx + W * 0.5, top + h * 0.02, W * 0.1, h * 0.4);
+        ctx.strokeStyle = Sprites.shadeC(kit.shirt, -0.35); ctx.lineWidth = Math.max(1, h * 0.007);
+        ctx.beginPath(); ctx.moveTo(sx, top + h * 0.02); ctx.lineTo(sx, bot); ctx.stroke();
+        ctx.fillStyle = kit.alt; ctx.fillRect(sx - W * 0.22, top - h * 0.02, W * 0.44, h * 0.025);
+        ctx.beginPath(); ctx.arc(sx - W * 0.24, top + h * 0.09, h * 0.022, 0, Math.PI * 2); ctx.fill();
+      } else {
+        ctx.fillStyle = Sprites.shadeC(kit.shirt, -0.25);
+        ctx.beginPath(); ctx.moveTo(sx - W * 0.16, top - h * 0.01); ctx.quadraticCurveTo(sx, top + h * 0.05, sx + W * 0.16, top - h * 0.01); ctx.lineTo(sx + W * 0.12, top - h * 0.01); ctx.quadraticCurveTo(sx, top + h * 0.03, sx - W * 0.12, top - h * 0.01); ctx.fill();
+      }
+    } else if (kit.pattern === 'stripes') {
       for (let i = 0; i < 6; i++) if (i % 2) ctx.fillRect(x0 + (tw / 6) * i, top - h * 0.05, tw / 6, h * 0.5);
     } else if (kit.pattern === 'halves') {
       ctx.fillRect(sx, top - h * 0.05, tw, h * 0.5);
@@ -313,7 +335,7 @@ const Sprites = {
       ctx.fillStyle = Sprites.colorDist(nc, kit.shirt) < 80 ? '#ffffff' : nc;
       ctx.fillText(String(o.number), nx, ny);
       ctx.textBaseline = 'alphabetic';
-    } else if (!up) {
+    } else if (!up && !kit.coat) {
       ctx.fillStyle = kit.alt;
       ctx.beginPath(); ctx.arc(sx - W * 0.2, top + h * 0.08, h * 0.03, 0, Math.PI * 2); ctx.fill();
     }
@@ -337,6 +359,22 @@ const Sprites = {
         if (up) ctx.arc(sx, hy - hr * 0.05, hr * 1.0, 0, Math.PI * 2);
         else ctx.arc(sx, hy - hr * 0.12, hr * 0.94, Math.PI * 1.12, Math.PI * 1.88);
         ctx.globalAlpha = 0.85;
+      } else if (style === 'afro') {
+        ctx.arc(sx, hy - hr * 0.35, hr * 1.38, up ? 0 : Math.PI * 0.92, up ? Math.PI * 2 : Math.PI * 2.08);
+      } else if (style === 'spiky') {
+        if (up) ctx.arc(sx, hy - hr * 0.05, hr * 1.02, 0, Math.PI * 2);
+        else ctx.arc(sx, hy - hr * 0.3, hr * 0.98, Math.PI * 1.05, Math.PI * 1.95);
+        for (let k = 0; k < 5; k++) { const x0 = sx - hr * 0.8 + k * hr * 0.4; ctx.moveTo(x0, hy - hr * 0.95); ctx.lineTo(x0 + hr * 0.2, hy - hr * 1.55); ctx.lineTo(x0 + hr * 0.4, hy - hr * 0.95); }
+      } else if (style === 'fade') {
+        if (up) ctx.arc(sx, hy - hr * 0.05, hr * 1.0, 0, Math.PI * 2);
+        else { ctx.arc(sx, hy - hr * 0.42, hr * 0.84, Math.PI * 1.1, Math.PI * 1.9); }
+      } else if (style === 'dreads' || style === 'braids') {
+        if (up) ctx.arc(sx, hy - hr * 0.05, hr * 1.04, 0, Math.PI * 2);
+        else ctx.arc(sx, hy - hr * 0.28, hr * 1.0, Math.PI * 1.02, Math.PI * 1.98);
+        if (style === 'dreads') for (let k = 0; k < 4; k++) { const dx = hr * (0.72 + k * 0.1); ctx.rect(sx - dx - hr * 0.13, hy - hr * 0.4, hr * 0.15, hr * (1.25 + k * 0.08)); ctx.rect(sx + dx - hr * 0.02, hy - hr * 0.4, hr * 0.15, hr * (1.25 + k * 0.08)); }
+      } else if (style === 'slick') {
+        if (up) ctx.arc(sx, hy - hr * 0.05, hr * 1.02, 0, Math.PI * 2);
+        else { ctx.moveTo(sx - hr * 0.98, hy - hr * 0.2); ctx.arc(sx, hy - hr * 0.42, hr * 0.98, Math.PI * 1.02, Math.PI * 1.98); }
       } else if (style === 'curly') {
         ctx.arc(sx, hy - hr * 0.25, hr * 1.12, up ? 0 : Math.PI * 1.0, up ? Math.PI * 2 : Math.PI * 2);
         for (let k = 0; k < 7; k++) { const a = Math.PI * (1.05 + k * 0.15); ctx.moveTo(sx + Math.cos(a) * hr * 1.05, hy - hr * 0.25 + Math.sin(a) * hr * 1.05); ctx.arc(sx + Math.cos(a) * hr * 1.05, hy - hr * 0.25 + Math.sin(a) * hr * 1.05, hr * 0.3, 0, Math.PI * 2); }
@@ -349,6 +387,9 @@ const Sprites = {
       }
       ctx.fill();
       ctx.globalAlpha = 1;
+      // örgü: koyu sıralar; fade: yanlarda kısa saç gölgesi
+      if (style === 'braids' && h > 40) { ctx.strokeStyle = 'rgba(0,0,0,0.35)'; ctx.lineWidth = Math.max(1, hr * 0.08); for (let k = -2; k <= 2; k++) { ctx.beginPath(); ctx.moveTo(sx + k * hr * 0.32, hy - hr * 1.2); ctx.lineTo(sx + k * hr * 0.38, hy - (up ? -hr * 0.6 : hr * 0.55)); ctx.stroke(); } }
+      if (style === 'fade' && !up) { ctx.fillStyle = look.hair; ctx.globalAlpha = 0.35; ctx.beginPath(); ctx.arc(sx, hy - hr * 0.12, hr * 0.97, Math.PI * 1.02, Math.PI * 1.98); ctx.fill(); ctx.globalAlpha = 1; }
       // arkadan bakışta ense ve kulaklar görünür
       if (up && h > 60) {
         ctx.fillStyle = look.skin;
@@ -357,14 +398,23 @@ const Sprites = {
         ctx.beginPath(); ctx.ellipse(sx + hr * 1.0, hy + hr * 0.1, hr * 0.16, hr * 0.26, 0, 0, Math.PI * 2); ctx.fill();
       }
     }
+    if (look.band && h > 26) { ctx.fillStyle = look.band; ctx.fillRect(sx - hr * 0.98, hy - hr * 0.58, hr * 1.96, hr * 0.24); }
     if (!up) {
       ctx.fillStyle = '#1a1a1a';
       ctx.fillRect(sx - hr * 0.42, hy + hr * 0.05, hr * 0.18, hr * 0.14);
       ctx.fillRect(sx + hr * 0.24, hy + hr * 0.05, hr * 0.18, hr * 0.14);
-      if (look.beard && h > 30) {
-        ctx.fillStyle = look.hair; ctx.globalAlpha = 0.8;
-        ctx.beginPath(); ctx.arc(sx, hy + hr * 0.12, hr * 0.92, Math.PI * 0.08, Math.PI * 0.92);
-        ctx.lineTo(sx - hr * 0.5, hy + hr * 0.45); ctx.quadraticCurveTo(sx, hy + hr * 0.62, sx + hr * 0.5, hy + hr * 0.45); ctx.closePath(); ctx.fill();
+      const bt = look.beard === true || look.beard === 1 || look.beard === '1' ? 'full' : look.beard;
+      if (bt && h > 30) {
+        ctx.fillStyle = look.hair; ctx.globalAlpha = bt === 'stubble' ? 0.38 : 0.8;
+        if (bt === 'full' || bt === 'stubble') {
+          ctx.beginPath(); ctx.arc(sx, hy + hr * 0.12, hr * 0.92, Math.PI * 0.08, Math.PI * 0.92);
+          ctx.lineTo(sx - hr * 0.5, hy + hr * 0.45); ctx.quadraticCurveTo(sx, hy + hr * 0.62, sx + hr * 0.5, hy + hr * 0.45); ctx.closePath(); ctx.fill();
+        } else if (bt === 'goatee') {
+          ctx.beginPath(); ctx.ellipse(sx, hy + hr * 0.82, hr * 0.26, hr * 0.24, 0, 0, Math.PI * 2); ctx.fill();
+          ctx.fillRect(sx - hr * 0.3, hy + hr * 0.42, hr * 0.6, hr * 0.1);
+        } else if (bt === 'mustache') {
+          ctx.beginPath(); ctx.ellipse(sx, hy + hr * 0.46, hr * 0.36, hr * 0.1, 0, 0, Math.PI * 2); ctx.fill();
+        }
         ctx.globalAlpha = 1;
       }
     }

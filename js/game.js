@@ -1706,12 +1706,13 @@ const UI = {
         </section>
       </div>
       ${typeof Life !== 'undefined' ? Life.homeCard() : ''}
+      ${typeof TReq !== 'undefined' ? TReq.card() : ''}
       ${s.offers.length ? `
       <section class="card">
         <div class="card-h"><span>${Icon('mail')} Transfer Teklifleri</span>${Game.tWindow(s.season.round) ? `<span class="tw-tag">${Game.tWindow(s.season.round).name} · ${Game.tWindow(s.season.round).to - s.season.round + 1} hafta kaldı</span>` : ''}</div>
         <div class="offers">${s.offers.map((o, i) => UI.offerRow(o, i, 'mid')).join('')}</div>
         <button class="btn btn-ghost" data-reject="1">Teklifleri Reddet</button>
-        ${typeof Star !== 'undefined' && Star.on() && !s.offers.some((o) => o.req) ? `<button class="btn btn-ghost st-req" data-star="transfer">${Icon('star')} Kendi transferini talep et</button>` : ''}
+        ${typeof Star !== 'undefined' && Star.on() && !(typeof C2 !== 'undefined' && C2.on()) && !s.offers.some((o) => o.req) ? `<button class="btn btn-ghost st-req" data-star="transfer">${Icon('star')} Kendi transferini talep et</button>` : ''}
       </section>` : ''}
       ${Social.render(false)}
       ${UI.inbox()}
@@ -2118,7 +2119,7 @@ ${UI.paper()}`;
   career() {
     const p = Game.p, t = p.totals;
     const hist = p.history.slice().reverse();
-    return `${typeof CStats !== 'undefined' ? CStats.card() : ''}${typeof Traits !== 'undefined' ? Rival.card() + Peers.card() + Traits.card() + Records.card() : ''}
+    return `${typeof CStats !== 'undefined' ? CStats.card() : ''}${typeof Pers !== 'undefined' ? Pers.card() : ''}${typeof Traits !== 'undefined' ? Rival.card() + Peers.card() + Traits.card() + Records.card() : ''}
       <div class="card">
         <div class="card-h"><span>${Icon('career')} Kariyer Özeti</span></div>
         <div class="ms-grid big">
@@ -2314,6 +2315,7 @@ ${UI.paper()}`;
     U.$$('[data-post]', root).forEach((b) => (b.onclick = () => Social.open(b.dataset.post)));
     U.$$('[data-offer]', root).forEach((b) => (b.onclick = () => Game.acceptOffer(+b.dataset.offer)));
     U.$$('[data-reject]', root).forEach((b) => (b.onclick = () => { Game.state.offers = []; Game.save(); Game.render(); }));
+    if (typeof TReq !== 'undefined') TReq.bind(root);
     U.$$('[data-buy]', root).forEach((b) => (b.onclick = () => {
       const it = ITEMS.find((i) => i.id === b.dataset.buy);
       const p = Game.p;
@@ -2700,8 +2702,9 @@ const Create = {
                 ${Object.entries(DIFFS).map(([k, v]) => `<button type="button" data-diff="${k}" class="cr-opt d-${k} ${k === Create.diff ? 'on' : ''}"><b>${v.l}</b><small>${v.d}</small></button>`).join('')}
               </div>
             </section>
+            ${typeof Pers !== 'undefined' ? Pers.createStep() : ''}
             <section class="cr-step">
-              <div class="cr-step-h"><i>6</i><div><b>Yeteneklerin</b><small id="cr-pts-note"></small></div><span class="cr-pts" id="cr-pts"></span></div>
+              <div class="cr-step-h"><i>${typeof C2 !== 'undefined' && C2.feat() ? 7 : 6}</i><div><b>Yeteneklerin</b><small id="cr-pts-note"></small></div><span class="cr-pts" id="cr-pts"></span></div>
               <div class="cr-auto"><button type="button" class="btn btn-ghost" id="cr-auto">${Icon('bolt')} Otomatik dağıt</button><button type="button" class="btn btn-ghost" id="cr-reset">Sıfırla</button></div>
               <div class="cr-stats" id="cr-stats"></div>
             </section>
@@ -2718,6 +2721,7 @@ const Create = {
       fn(b.dataset[attr]);
     }));
     pick('#cr-diff', 'diff', (v) => { Create.diff = v; });
+    if (typeof Pers !== 'undefined') Pers.bindCreate();
     pick('#cr-pos', 'pos', (v) => { Create.pos = v; if (!Create.manual) Create.auto(); Create.drawStats(); });
     pick('#cr-foot', 'foot', (v) => { Create.foot = v; Create.preview(); });
     document.getElementById('cr-back').onclick = () => Game.init();
@@ -2759,6 +2763,7 @@ const Create = {
         position: Create.pos, alloc: Create.alloc, difficulty: Create.diff,
         year: +yearSel.value, age: +ageSel.value, heir: Create.heir || null,
       });
+      if (typeof Pers !== 'undefined' && C2.feat() && Game.state) { Pers.init(Create.pers || 'pro'); Game.save(); }
       Create.heir = null;
     };
   },
@@ -2851,7 +2856,7 @@ Game.toMenu = function () {
 const Notifs = {
   push(msg, type) {
     const s = Game.state;
-    if (!s) return;
+    if (!s || !s.season) return;
     s.notifs = s.notifs || [];
     s.notifs.unshift({ t: U.plain(String(msg)), type: type || '', w: `${s.season.year} · ${Math.min(s.season.round + 1, Game.rounds())}. Hafta` });
     s.notifs = s.notifs.slice(0, 60);

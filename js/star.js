@@ -136,6 +136,11 @@ const Star = {
 
   // ---------- Görünüm stüdyosu ----------
   STYLES: [['short', 'Kısa'], ['buzz', 'Asker tıraşı'], ['side', 'Yana tarama'], ['long', 'Uzun'], ['curly', 'Kıvırcık'], ['mohawk', 'Mohikan'], ['bun', 'Topuz'], ['bald', 'Kel']],
+  // 1.0.19: yeni saç, sakal ve aksesuarlar (paket sahiplerine açık)
+  STYLES2: [['fade', 'Fade'], ['afro', 'Afro'], ['dreads', 'Rasta'], ['braids', 'Örgü'], ['spiky', 'Dikleştirilmiş'], ['slick', 'Geriye taranmış']],
+  BEARDS: [['0', 'Yok'], ['stubble', 'Kirli sakal'], ['full', 'Tam sakal'], ['goatee', 'Keçi sakal'], ['mustache', 'Bıyık']],
+  BANDS: ['#ffffff', '#16181d', '#ff3b30', '#0a84ff', '#ffd60a', '#30d158'],
+  SLEEVES: ['#ffffff', '#16181d', '#0a84ff', '#ff3b30'],
   HAIRX: ['#e6dcc4', '#b5482c'],
   BOOTS: ['#16181d', '#f4f4f4', '#ff3b30', '#ffd60a', '#30d158', '#0a84ff', '#ff6ec7', '#f5b400'],
   studio() {
@@ -152,11 +157,15 @@ const Star = {
         <div class="lbl">Ten rengi</div><div class="stu-row">${sw('skin', SKINS)}</div>
         <div class="lbl">Saç modeli</div><div class="chip-row">${Star.STYLES.map(([k, l]) => `<button class="chip ${cur.style === k ? 'on' : ''}" data-k="style" data-v="${k}">${l}</button>`).join('')}</div>
         <div class="lbl">Saç rengi</div><div class="stu-row">${sw('hair', HAIRS.concat(Star.HAIRX))}</div>
-        <div class="lbl">Sakal</div><div class="chip-row"><button class="chip ${cur.beard ? '' : 'on'}" data-k="beard" data-v="0">Yok</button><button class="chip ${cur.beard ? 'on' : ''}" data-k="beard" data-v="1">Var</button></div>
+        ${typeof FEAT_V19 !== 'undefined' && FEAT_V19 ? `<div class="lbl">Yeni saç modelleri</div><div class="chip-row">${Star.STYLES2.map(([k, l]) => `<button class="chip ${cur.style === k ? 'on' : ''}" data-k="style" data-v="${k}">${l}</button>`).join('')}</div>
+        <div class="lbl">Sakal</div><div class="chip-row">${Star.BEARDS.map(([k, l]) => `<button class="chip ${Star.beardKey(cur.beard) === k ? 'on' : ''}" data-k="beard" data-v="${k}">${l}</button>`).join('')}</div>
+        <div class="lbl">Saç bandı</div><div class="stu-row"><button class="chip ${cur.band ? '' : 'on'}" data-k="band" data-v="">Yok</button>${sw('band', Star.BANDS)}</div>
+        <div class="lbl">Uzun kollu içlik</div><div class="stu-row"><button class="chip ${cur.sleeve ? '' : 'on'}" data-k="sleeve" data-v="">Yok</button>${sw('sleeve', Star.SLEEVES)}</div>`
+        : `<div class="lbl">Sakal</div><div class="chip-row"><button class="chip ${cur.beard ? '' : 'on'}" data-k="beard" data-v="0">Yok</button><button class="chip ${cur.beard ? 'on' : ''}" data-k="beard" data-v="1">Var</button></div>`}
         <div class="lbl">Krampon</div><div class="stu-row">${sw('boots', Star.BOOTS)}${typeof Diamond !== 'undefined' && Diamond.enabled() ? Diamond.BOOTS.map((c) => `<button class="stu-sw dia-sw ${cur.boots === c ? 'on' : ''}" data-k="boots" data-v="${c}" data-dia="1" style="background:${c}" aria-label="Diamond"></button>`).join('') : ''}</div>
         ${typeof Diamond !== 'undefined' && Diamond.enabled() ? `<div class="lbl">💎 Altın koleksiyon saç</div><div class="stu-row">${Diamond.HAIRS.map((c) => `<button class="stu-sw dia-sw ${cur.hair === c ? 'on' : ''}" data-k="hair" data-v="${c}" data-dia="1" style="background:${c}" aria-label="Diamond"></button>`).join('')}</div>` : ''}
       </div></div></div>`, [
-      { t: 'Varsayılan', cls: 'btn-ghost', keep: true, fn: () => { Object.assign(cur, Sprites.look(7), { boots: '#16181d' }); sync(); } },
+      { t: 'Varsayılan', cls: 'btn-ghost', keep: true, fn: () => { Object.assign(cur, Sprites.look(7), { boots: '#16181d', band: null, sleeve: null }); sync(); } },
       { t: 'Vazgeç', cls: 'btn-ghost' },
       { t: on ? 'Kaydet' : `${Icon('star')} Kaydet`, cls: 'btn-big', fn: () => { if (!on) return setTimeout(() => Star.pitch('Görünüm stüdyosu', 'studio', 'Yeni görünümün çok yakıştı! Kaydetmek ve maçlarda, sosyal medyada bu görünümle çıkmak için Premium gerekir.'), 60); p.look = Object.assign({}, cur); if (typeof SocialArt !== 'undefined') SocialArt.cache.clear(); Game.save(); Game.render(); Game.toast('Yeni görünümün kaydedildi.', 'good'); } },
     ], { wide: true });
@@ -173,20 +182,23 @@ const Star = {
     const sync = () => {
       U.$$('[data-k]', m).forEach((b) => {
         const k = b.dataset.k, v = b.dataset.v;
-        b.classList.toggle('on', k === 'beard' ? String(cur.beard ? 1 : 0) === v : cur[k] === v);
+        b.classList.toggle('on', k === 'beard' ? (Star.BEARDS.some(([x]) => x === v) ? Star.beardKey(cur.beard) === v : String(cur.beard ? 1 : 0) === v) : (cur[k] || '') === v);
       });
       draw();
     };
     U.$$('[data-k]', m).forEach((b) => (b.onclick = () => {
       const k = b.dataset.k, v = b.dataset.v;
       if (b.dataset.dia && !(typeof Diamond !== 'undefined' && Diamond.active)) return Diamond.pitch('studio');
-      if (k === 'beard') cur.beard = v === '1';
+      if (k === 'beard') cur.beard = v === '1' ? true : v === '0' ? false : v;
+      else if (k === 'band' || k === 'sleeve') cur[k] = v || null;
       else cur[k] = v;
       if (k === 'style') cur.bald = v === 'bald';
       sync();
     }));
     draw();
   },
+
+  beardKey(b) { return b === true || b === 1 || b === '1' ? 'full' : b ? b : '0'; },
 
   // ---------- Transfer talebi ----------
   transferReq() {

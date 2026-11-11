@@ -796,3 +796,198 @@
 7342|Mercato chiuso
 7351|{} sett
 7353|{} è in fuorigioco.
+7354|Richiesta in valutazione
+7659|Se arrivi a {} (ora {})
+7614|Sei in prestito dal {} fino a fine stagione.
+7355|Invia una richiesta al club che vuoi. Deciderà in base al tuo livello, al budget e alle esigenze della rosa.
+7358|Scegli club
+7359|Premium: illimitato
+7360|1 richiesta
+7361|esaurite
+7362|Non puoi chiedere un trasferimento mentre sei in prestito.
+7363|Hai già usato la richiesta di questa sessione.
+7364|Al massimo 3 richieste in attesa.
+7365|In quale campionato vuoi giocare?
+7666|La tua forza {}
+7640|Il tuo club chiede: {}
+7366|Forte interesse
+7367|Forse
+7368|Improbabile
+7598|📨 La tua richiesta è arrivata al {}. Risposta la prossima settimana.
+7581|✅ {} ha accettato la richiesta! L'offerta vale fino alla chiusura del mercato.
+7663|✅ {} ha fatto un'offerta!
+7604|🤔 {}: "Se arrivi a {} ne riparliamo."
+7634|❌ {} ha rifiutato la richiesta: "{}"
+7374|Non possiamo permetterci la richiesta del tuo club.
+7375|Abbiamo già abbastanza giocatori nel tuo ruolo.
+7376|Ora non sei al livello che cerchiamo.
+7377|Cerchiamo un giocatore più giovane.
+7599|🎯 {} ha mantenuto la parola: obiettivo raggiunto, ecco l'offerta ufficiale!
+7379|Bonus alla firma
+7380|Quota maglie
+7639|✍️ Bonus alla firma di {} accreditato.
+7381|Aggressivo
+7382|Duro nei contrasti; i tifosi ti amano, ma rischi più cartellini.
+7383|I compagni ti seguono; la tua parola conta e la fascia arriva prima.
+7384|Freddo sotto pressione; le sconfitte ti toccano poco e prendi pochi cartellini.
+7385|Disciplinato; migliori di più in allenamento.
+7386|Sfidi le regole; i tifosi ti amano, gli allenatori meno.
+7387|Vuoi sempre di più; migliori in fretta ma in panchina crolli.
+7388|🧠 Il tuo intervento duro in allenamento ha creato tensione.
+7390|🧠 I tuoi consigli ai giovani sono il tema dello spogliatoio.
+7392|🧠 In una settimana difficile la tua calma ha unito la squadra.
+7394|🧠 I tuoi allenamenti extra hanno colpito il mister.
+7396|🧠 Hai criticato il mister sui social. I tifosi stanno con te.
+7401|🧠 Hai detto chiaramente di puntare più in alto. I club ascoltano.
+7585|🧠 Il tuo comportamento ti ha cambiato: ora sei visto come {}.
+7610|Dicono che sono {}. Forse hanno ragione.
+7407|La tua personalità
+7408|Interviste, cartellini e atteggiamento plasmano la tua personalità.
+7409|Può cambiare con le tue azioni
+7580|🔁 {} vuole mandarti in prestito al {} per una stagione per farti giocare.
+7410|Offerta di prestito
+7575|Indosseresti la maglia del {} per una stagione. Stesso stipendio, poi torni. Se giochi bene potrebbero riscattarti.
+7413|Resto e lotto per il posto
+7414|Vado in prestito
+7587|🔁 {} ti ha prestato al {} fino a fine stagione. Riscatto: {}.
+7597|Una stagione di avventura: {}! Sfrutterò l'occasione.
+7416|Hai rifiutato il prestito. Ora devi convincere il mister.
+7617|📨 {} ha dichiarato ufficialmente interesse per te!
+7628|🔎 Un osservatore del {} era in tribuna all'ultima partita.
+7618|🔎 Il {} continua a osservarti.
+7603|👕 La tua maglia ha venduto {} pezzi. Il tuo {}% ti ha fruttato {}.
+7619|👕 La tua quota di {} sulle maglie è stata accreditata.
+7588|🔁 {} vuole esercitare il riscatto ({}).
+7593|🔁 Il prestito è finito. Se non scegli un'offerta torni al {}.
+7615|🔁 Prestito finito, sei tornato al {}.
+7423|Tuta
+7424|Tuta nei colori del club
+7425|Abito
+7426|In cravatta, elegante e autorevole
+7427|Casual
+7428|Maglione e jeans, un mister rilassato
+7429|Crea il tuo allenatore
+7430|Abbigliamento
+7431|Colore
+4118|Rasato
+7432|Pettinati all'indietro
+4119|Riga laterale
+7433|Barba incolta
+7434|Barba folta
+7435|Pizzetto
+7436|Baffi
+7437|Il tuo look è stato salvato.
+7438|Nuovi tagli
+7439|Sfumato
+7440|Afro
+7441|Dreadlocks
+7442|Treccine
+7443|A punta
+7444|Fascia
+7445|Maglia termica
+7446|NUOVO CAPITOLO
+7447|BENVENUTO
+7448|Ancora nessun post. Dopo le partite appariranno qui.
+7594|Una vittoria importante. Orgoglioso dei miei contro il {}!
+7451|Tre punti nostri. Grazie, tifosi!
+7454|Il piano ha funzionato. Avanti col prossimo obiettivo.
+7457|Questa squadra ha mostrato carattere. Bravi ragazzi!
+7635|Partita dura col {}, ci prendiamo il punto.
+7461|Volevamo vincere. Si continua a lavorare.
+7462|Questa squadra non molla mai.
+7463|Oggi non abbiamo ottenuto ciò che volevamo. La colpa è mia.
+7466|Testa alta, pensiamo alla prossima.
+7467|Impareremo dai nostri errori.
+7602|Benvenuto, {}! Insieme faremo grandi cose.
+7596|Nuovo capitolo: {}. Lavorerò per chi indossa questa maglia.
+7644|CAMPIONI! {}. Questo trofeo è di tutti!
+7633|LA COPPA È NOSTRA! {}. Stasera si festeggia!
+7609|(nato nel {}) è un allenatore di calcio, nazionalità {}.
+7636|Attualmente allena il {}.
+7626|In carriera ha vinto {} partite su {} ({}%).
+7584|{} usa di solito il {} con un approccio equilibrato.
+7579|{} usa di solito il {} con un approccio offensivo.
+7578|{} usa di solito il {} con un approccio difensivo.
+7576|{} usa di solito il {} basato sul pressing alto.
+7577|{} usa di solito il {} basato sul contropiede.
+7473|È noto per la sua intelligenza tattica.
+7474|È noto per il rapporto stretto con i giocatori.
+7475|Nazionalità
+7476|Ruolo
+7477|Carriera da allenatore
+7606|{} partite: {} vittorie, {} pareggi e {} sconfitte.
+7478|È stato esonerato dopo risultati deludenti.
+7479|Se n'è andato accettando un'altra offerta.
+1654|Stagioni
+7480|Prima stagione in corso.
+7481|Partite totali:
+7482|Percentuale vittorie:
+7483|Gol fatti / subiti:
+7484|Miglior piazzamento:
+7485|Social
+7486|🧱 Chiudiamoci, difendiamo il risultato
+7488|🎯 Un altro gol e la chiudiamo
+7490|👏 State giocando benissimo, continuate!
+7492|⚠️ Non rilassatevi
+7493|🧠 Tenete palla, rallentate il gioco
+7495|📋 Pazienza, l'occasione arriverà
+7497|⚡ Sfruttate di più le fasce
+7499|🧱 Prima di tutto non prendere gol
+7501|💪 Solo noi possiamo vincerla
+7503|😠 Svegliatevi!
+7505|🔥 Abbiamo ancora una chance, attaccate!
+7507|📋 Niente panico, passo dopo passo
+7509|💪 Credo in voi, la ribalteremo
+7511|🎯 Più uomini in area
+7513|🤫 Non dico nulla, li guardo in silenzio
+7515|👏 È stata una prestazione perfetta!
+7517|🍾 Ve la siete meritata, godetevela
+7519|🙂 Bene, ma restiamo umili
+7521|📸 Festeggiate con i tifosi
+7523|🛡️ Orgoglioso della vostra difesa
+7525|💪 Vincere partite così porta allo scudetto
+7527|🙂 Mi è piaciuta la vostra grinta
+7529|🔁 Concentriamoci sulla prossima
+7531|🫡 La colpa è mia
+7533|🔥 Ci rifaremo di questa sconfitta
+7535|😠 Una prestazione vergognosa!
+7537|🫡 La colpa è mia, sistemeremo insieme
+7539|🤐 Oggi niente parole, domani analisi
+7541|📋 Ognuno si guardi dentro con onestà
+7543|Le tue parole hanno funzionato, squadra carica!
+7544|La squadra ha recepito il messaggio.
+7545|I giocatori l'hanno presa male, morale giù.
+7651|⭐ {}: "Stai trascinando la squadra"
+7664|{} si è caricato con l'elogio.
+7629|👉 {}: "Mi aspetto di più da te"
+7652|{} ha reagito e si è caricato.
+7660|{} ha preso male la critica.
+7549|I giocatori hanno apprezzato molto.
+7550|La squadra ha capito il messaggio.
+7551|I giocatori hanno ascoltato.
+7645|⭐ {}: "Oggi hai fatto la differenza"
+7661|{} è felicissimo dell'elogio.
+7648|👉 {}: "Oggi non sei stato all'altezza"
+7657|{} ha accettato la critica.
+7554|Devi tenere almeno 16 giocatori.
+7555|Devi tenere almeno 2 portieri.
+7654|🧤 Il portiere {} si è unito alla rosa.
+7622|{} non può continuare, siamo in dieci.
+7557|Continua in dieci
+7558|3 modalità incluse
+7559|Gestisci un club, fai mercato, guida dalla panchina
+7560|Alza la coppa con la tua nazionale
+7561|Riscrivi la carriera delle leggende
+7562|Starpedia e documentario di carriera
+7563|La tua pagina d'enciclopedia e il film della tua storia
+7564|Richieste di trasferimento illimitate
+7565|Invia tutte le richieste che vuoi in ogni sessione
+7566|Nuovi tagli, barbe, fasce e maglie termiche inclusi
+7567|Vita di lusso e StarValore
+7568|Supercar, ville, yacht, grafico del valore e voci
+7569|Tutto Premium+
+7570|Parate, rigori, porta inviolata
+7571|10 slot, annulla, avanzamento rapido
+7572|Rigioca una brutta partita, salta alla settimana che vuoi
+7573|Gol di testa, rigore, punizione e per avversario
+7574|Solo in Diamond

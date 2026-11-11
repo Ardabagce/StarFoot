@@ -679,7 +679,7 @@ const Match = {
           feed(`🛡️ <b>${M.min}'</b> ${U.esc(pname)} kusursuz bir müdahaleyle topu kaptı!`);
         } else if (r === 'partial') {
           rate(-0.2);
-          if (U.chance(0.35)) {
+          if (U.chance(0.35 * (typeof Pers !== 'undefined' ? Pers.cardK() : 1))) {
             M.yellow++;
             if (M.yellow >= 2) {
               M.red = true; rate(-1.5);

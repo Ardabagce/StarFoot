@@ -331,7 +331,7 @@ Object.assign(Coach, {
   },
   vCareer() {
     const s = Coach.s, t = s.rec;
-    return `<section class="card"><div class="card-h"><span>${Icon('career')} ${U.esc(Coach.fullName())}</span><small class="muted">${s.age} yaş · <span data-emo>${Coach.natFlag(s.nat)}</span></small></div>
+    return `<section class="card"><div class="card-h"><span>${Icon('career')} ${U.esc(Coach.fullName())}</span><small class="muted"><span>${s.age} yaş</span> <span data-emo>${Coach.natFlag(s.nat)}</span></small></div>
       <div class="cm-kv four"><div><span>Maç</span><b>${t.w + t.d + t.l}</b></div><div><span>G-B-M</span><b>${t.w}-${t.d}-${t.l}</b></div><div><span>Gol</span><b>${t.gf}:${t.ga}</b></div><div><span>Kupa</span><b>${s.trophies.length}</b></div></div>
       <div class="cm-mts">${Coach.meter('İtibar', s.rep, '#b394ff')}${Coach.meter('Taktik zekası', s.iq, '#4fb3ff')}</div>
       ${s.trophies.length ? `<ul class="trophies">${s.trophies.map((x) => `<li>🏆 ${U.esc(x)}</li>`).join('')}</ul>` : ''}
