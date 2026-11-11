@@ -57,7 +57,7 @@ const Diamond = {
     return ok;
   },
   perks() {
-    const mode = (ic, t, d) => `<div class="dia-mode"><span>${Icon(ic)}</span><b>${t}</b><small>${d}</small></div>`;
+    const mode = (ic, t, d) => `<div class="dia-mode"><canvas class="dia-cv" data-dm="${ic}" width="240" height="150"></canvas><span>${Icon(ic)}</span><b>${t}</b><small>${d}</small></div>`;
     const li = (t, d) => `<li><b>${t}</b><small>${d}</small></li>`;
     return `<div class="dia-sec">3 oyun modu dahil</div>
     <div class="dia-modes">
@@ -85,17 +85,50 @@ const Diamond = {
       ${li('Gelecekteki tüm modlar', 'Bundan sonra çıkan her yeni mod ücretsiz senin')}
     </ul>`;
   },
+  // mod kartlarındaki metinsiz küçük çizimler (her dilde aynı)
+  paintModes(root) {
+    if (!root || typeof Sprites === 'undefined') return;
+    U.$$('canvas.dia-cv', root).forEach((cv) => {
+      const c = cv.getContext('2d'), W = cv.width, H = cv.height, k = cv.dataset.dm;
+      const bg = c.createLinearGradient(0, 0, 0, H);
+      bg.addColorStop(0, k === 'coach' ? '#1f3d2b' : k === 'globe' ? '#1b2f63' : '#3a2a08'); bg.addColorStop(1, '#0b1020');
+      c.fillStyle = bg; c.fillRect(0, 0, W, H);
+      // ışık huzmeleri
+      c.save(); c.globalAlpha = 0.18; c.fillStyle = k === 'star' ? '#ffd76a' : '#ffffff';
+      for (let i = 0; i < 4; i++) { c.beginPath(); c.moveTo(30 + i * 60, 0); c.lineTo(60 + i * 60, 0); c.lineTo(W / 2 + (i - 1.5) * 18, H); c.closePath(); c.fill(); }
+      c.restore();
+      c.fillStyle = 'rgba(255,255,255,.08)'; c.fillRect(0, H * 0.82, W, H * 0.18);
+      const look = { skin: SKINS[2], hair: HAIRS[0], style: 'short' };
+      if (k === 'coach') {
+        const kit = { shirt: '#1d2433', alt: '#ffffff', pattern: 'plain', shorts: '#1d2433', socks: '#1d2433', pants: '#1d2433', coat: 'suit', tie: '#c8102e' };
+        // taktik tahtası
+        c.fillStyle = '#2e7d4f'; c.fillRect(W * 0.06, H * 0.2, W * 0.26, H * 0.36); c.strokeStyle = '#fff'; c.lineWidth = 2; c.strokeRect(W * 0.06, H * 0.2, W * 0.26, H * 0.36);
+        c.fillStyle = '#ffcf3f'; [[0.12, 0.3], [0.2, 0.42], [0.26, 0.28]].forEach(([x, y]) => { c.beginPath(); c.arc(W * x, H * y, 4, 0, Math.PI * 2); c.fill(); });
+        Sprites.figure(c, W * 0.55, H * 0.97, H * 0.9, { kit, look: Object.assign(look, { beard: 'stubble', boots: '#111' }), facing: 'down', number: null, t: 0, longSleeve: true });
+      } else if (k === 'globe') {
+        Sprites.figure(c, W * 0.4, H * 0.97, H * 0.88, { kit: { shirt: '#ffd400', alt: '#0a7d3b', pattern: 'plain', shorts: '#0a3d8f', socks: '#ffffff' }, look, facing: 'down', number: 10, t: 0 });
+        if (typeof SocialArt !== 'undefined' && SocialArt.trophyCup) SocialArt.trophyCup(c, W * 0.75, H * 0.55, H * 0.55);
+      } else {
+        c.save(); c.shadowColor = '#ffd76a'; c.shadowBlur = 30;
+        Sprites.figure(c, W * 0.5, H * 0.97, H * 0.9, { kit: { shirt: '#f4f4f4', alt: '#c9a227', pattern: 'band', shorts: '#16181d', socks: '#f4f4f4' }, look: Object.assign(look, { style: 'long', hair: HAIRS[1] }), facing: 'down', number: 7, t: 0 });
+        c.restore();
+        c.fillStyle = '#ffd76a';
+        [[0.18, 0.25, 7], [0.82, 0.3, 9], [0.12, 0.55, 5], [0.88, 0.6, 6]].forEach(([x, y, r]) => { if (Sprites.star) Sprites.star(c, W * x, H * y, r, 0); });
+      }
+    });
+  },
   // tanıtım penceresi
   pitch(src) {
     const can = Premium.available();
     Premium.track('diamond_view', { source: src || 'menu' });
-    if (Diamond.active) return Game.modal(`<div class="dia-hero">${Diamond.gem()}<h2 lang="en">StarFoot Diamond</h2><p>Diamond sende! Her şey açık.</p></div>${Diamond.perks()}`, [{ t: 'Harika', cls: 'btn-big' }], { wide: true });
+    if (Diamond.active) { const m0 = Game.modal(`<div class="dia-hero">${Diamond.gem()}<h2 lang="en">StarFoot Diamond</h2><p>Diamond sende! Her şey açık.</p></div>${Diamond.perks()}`, [{ t: 'Harika', cls: 'btn-big' }], { wide: true }); Diamond.paintModes(m0); return m0; }
     if (can && !Diamond.prices[Diamond.key()]) Diamond.load().then(() => { const el = document.querySelector('.dia-price'); if (el && Diamond.priceOf()) el.textContent = Diamond.priceOf(); });
     const up = Plus.active;
     const btns = [{ t: 'Kapat', cls: 'btn-ghost' }];
     if (can) btns.push({ t: `<span lang="en">💎 ${up ? 'Yükselt' : 'Diamond al'}</span> · <span class="dia-price">${U.esc(Diamond.priceOf() || '')}</span>`, cls: 'btn-big dia-btn', fn: () => Diamond.buy(src) });
-    Game.modal(`<div class="dia-hero">${Diamond.gem()}<div class="ev-tag dia-tag">Çıkışa özel fiyat</div><h2 lang="en">StarFoot Diamond</h2><p>${up ? 'Premium+ sahibisin: Diamond\'a indirimli yükselt.' : 'Tek seferlik satın alma, her şey sonsuza kadar senin.'}</p></div>${Diamond.perks()}
+    const dm = Game.modal(`<div class="dia-hero">${Diamond.gem()}<div class="ev-tag dia-tag">Çıkışa özel fiyat</div><h2 lang="en">StarFoot Diamond</h2><p>${up ? 'Premium+ sahibisin: Diamond\'a indirimli yükselt.' : 'Tek seferlik satın alma, her şey sonsuza kadar senin.'}</p></div>${Diamond.perks()}
       ${can ? '<p class="muted">Tek seferlik satın alma. Abonelik yok, tüm cihazlarında geri yükleyebilirsin.</p>' : '<p class="muted">Diamond App Store ve Google Play uygulamasında satın alınabilir.</p>'}`, btns, { wide: true });
+    Diamond.paintModes(dm);
   },
   gem(size) {
     const s = size || 64;

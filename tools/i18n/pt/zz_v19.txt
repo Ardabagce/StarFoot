@@ -991,3 +991,68 @@
 7572|Rejogue uma partida ruim, pule para qualquer semana
 7573|Gols de cabeça, pênalti, falta e por adversário
 7574|Só no Diamond
+7667|Em campo ninguém passa por mim, e hoje não foi diferente!
+7668|O adversário sentiu nossa intensidade. Vamos seguir assim!
+7669|Seja quem for, vamos atropelar!
+7670|Carregar o time é minha função, confio nos companheiros.
+7671|Seja qual for o resultado, este time segue unido.
+7672|Precisamos de todos; vamos juntos atrás do objetivo.
+7673|Não me empolgo nos dias bons nem desabo nos ruins.
+7674|Resultados vêm e vão; o importante é estar no caminho certo.
+7675|Passo a passo, sem pânico.
+7676|O que faço no treino aparece no jogo. Disciplina é tudo.
+7677|Seguimos o plano; agora descansar e preparar o próximo.
+7678|Sono, alimentação, treino. O resto vem naturalmente.
+7681|Digo o que penso: deveriam me dar mais liberdade.
+7682|Não entendi algumas decisões. Tenho o que falar, mas não agora.
+7683|Que outros façam as regras; eu falo em campo.
+7684|É só o começo; miro muito mais alto.
+7685|Esse resultado não me basta, quero vencer todo jogo.
+7686|Um dia serei o melhor do mundo, todos precisam saber.
+7748|🤝 Seu amigo {} joga aqui
+7744|🤝 {}: "Também falei com o técnico. Vem vestir a mesma camisa!"
+7742|🤝 Você e seu amigo de infância {} agora são companheiros! A adaptação foi imediata.
+7688|Qual foi o momento decisivo do jogo?
+7689|Meus jogadores executaram o plano com paciência.
+7690|A mudança no intervalo virou o jogo.
+7691|O adversário não aguentou nosso ritmo.
+7692|A quem dedica esta vitória?
+7693|À nossa torcida, que nunca nos abandona.
+7694|A todos que acreditam neste time.
+7695|A quem não acreditou na gente!
+7696|Qual é a maior força do seu time?
+7697|Nossa união: todos correm uns pelos outros.
+7698|Nossa qualidade; com este elenco tudo é possível.
+7699|Nossa fome; ninguém quer tanto quanto nós.
+7700|Por que não arriscou mais no fim?
+7701|Quisemos manter o equilíbrio; acho que foi o certo.
+7702|Arriscamos e criamos chances, mas o gol não saiu.
+7703|Não havia muito no banco para mudar.
+7704|Está satisfeito com o jogo?
+7705|Teve coisas boas, e sabemos onde falhamos.
+7706|Fomos melhores que o adversário.
+7707|Não, esse não é o nosso nível.
+7708|A torcida está irritada. O que diria a ela?
+7711|Eles têm razão, pedimos desculpas.
+7712|Confiem, este time vai se reerguer.
+7713|Precisam estar com a gente nos dias difíceis.
+7714|Pensa em mudar a escalação?
+7715|Todos terão chance; a porta está aberta.
+7716|Se precisar, tomo decisões corajosas.
+7717|Alguns jogadores não merecem a camisa.
+7718|Dizem que seu cargo está em risco. O que diz?
+7721|Respeito a diretoria e foco no meu trabalho.
+7722|Vou recolocar este time no lugar, tenho certeza.
+7723|Cuido do campo, não de boatos.
+7724|Pensou em pedir demissão?
+7725|Não, conheço minha responsabilidade e estou aqui.
+7726|Nunca! Vamos conseguir com este time.
+7729|Não vou responder a essa pergunta.
+7730|Venceram um rival mais forte no papel. Qual o segredo?
+7733|Respeitamos o rival e nos preparamos bem.
+7734|Papel não joga futebol.
+7735|Nos subestimaram e pagaram por isso.
+7736|Vocês lideram a liga. Sentem pressão?
+7739|Pressão faz parte; seguimos calmos.
+7740|Essa pressão nos deixa ainda mais fortes.
+7741|Quem tem que sentir pressão são os rivais.

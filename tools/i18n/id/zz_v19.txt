@@ -991,3 +991,68 @@
 7572|Ulangi laga buruk, lompat ke pekan mana saja
 7573|Gol sundulan, penalti, tendangan bebas, per lawan
 7574|Khusus Diamond
+7667|Di lapangan tak ada yang lolos dariku, hari ini juga!
+7668|Lawan merasakan kerasnya kami hari ini. Lanjutkan!
+7669|Siapa pun lawannya, akan kami gilas!
+7670|Memikul tim adalah tugasku, aku percaya rekan-rekanku.
+7671|Apa pun hasilnya, tim ini tetap bersatu.
+7672|Kami butuh semua pemain, bersama mengejar target.
+7673|Tak terlena saat bagus, tak hancur saat buruk.
+7674|Hasil datang dan pergi, yang penting arahnya benar.
+7675|Selangkah demi selangkah, jangan panik.
+7676|Apa yang kulatih terlihat di laga. Disiplin adalah segalanya.
+7677|Rencana berjalan, kini istirahat dan siapkan laga berikutnya.
+7678|Tidur, gizi, latihan. Sisanya datang sendiri.
+7681|Kukatakan apa adanya: aku butuh lebih banyak kebebasan.
+7682|Ada keputusan yang tak kumengerti. Nanti akan kubicarakan.
+7683|Biar orang lain bikin aturan, aku bicara di lapangan.
+7684|Ini baru permulaan, targetku jauh lebih tinggi.
+7685|Hasil ini tak cukup, aku ingin menang tiap laga.
+7686|Suatu hari aku jadi yang terbaik di dunia, semua harus tahu.
+7748|🤝 Temanmu {} main di sini
+7744|🤝 {}: "Aku juga bicara dengan pelatih. Ayo pakai jersey yang sama!"
+7742|🤝 Kamu dan teman masa kecilmu {} kini satu tim! Kamu langsung beradaptasi.
+7688|Apa titik balik laga ini?
+7689|Pemainku menjalankan rencana dengan sabar.
+7690|Perubahan saat jeda membalikkan laga.
+7691|Lawan tak sanggup mengimbangi tempo kami.
+7692|Kemenangan ini untuk siapa?
+7693|Untuk fans yang tak pernah meninggalkan kami.
+7694|Untuk semua yang percaya pada tim ini.
+7695|Untuk yang tak percaya pada kami!
+7696|Apa kekuatan terbesar tim Anda?
+7697|Kebersamaan, semua berlari untuk satu sama lain.
+7698|Kualitas kami, dengan skuad ini semua mungkin.
+7699|Hasrat kami, tak ada yang seingin kami.
+7700|Kenapa tak ambil risiko lebih di akhir laga?
+7701|Kami ingin tetap seimbang, kurasa itu tepat.
+7702|Sudah, peluang ada, tapi gol tak datang.
+7703|Tak banyak opsi di bangku cadangan.
+7704|Puas dengan permainan tim?
+7705|Ada sisi positif, kekurangan kami juga tahu.
+7706|Kami lebih baik dari lawan.
+7707|Tidak, ini bukan level kami.
+7708|Fans kecewa. Apa pesan Anda?
+7711|Mereka benar, kami minta maaf.
+7712|Percayalah, tim ini akan bangkit.
+7713|Mereka harus tetap mendukung di masa sulit.
+7714|Apakah akan merombak susunan pemain?
+7715|Semua dapat kesempatan, pintu terbuka.
+7716|Jika perlu, aku ambil keputusan berani.
+7717|Beberapa pemain tak layak memakai jersey ini.
+7718|Ada kabar kursi Anda goyah. Tanggapan Anda?
+7721|Saya hormati manajemen, fokus pada pekerjaan.
+7722|Aku akan membenahi tim ini, aku yakin.
+7723|Aku urus lapangan, bukan rumor.
+7724|Pernah pikir mundur?
+7725|Tidak, aku sadar tanggung jawabku dan tetap di sini.
+7726|Tidak akan! Kami berhasil dengan tim ini.
+7729|Aku tak akan menjawab pertanyaan itu.
+7730|Kalian kalahkan tim yang lebih kuat di atas kertas. Rahasianya?
+7733|Kami hormati lawan dan bersiap dengan baik.
+7734|Di atas kertas tak bermain bola.
+7735|Mereka meremehkan kami dan membayar mahal.
+7736|Kalian puncak klasemen. Merasa tertekan?
+7739|Tekanan bagian dari pekerjaan, kami tetap tenang.
+7740|Tekanan ini membuat kami makin kuat.
+7741|Biar rival kami yang merasakan tekanan.

@@ -991,3 +991,68 @@
 7572|Schlechtes Spiel wiederholen, zu jeder Woche springen
 7573|Kopfball-, Elfmeter- und Freistoßtore, Tore pro Gegner
 7574|Nur in Diamond
+7667|Auf dem Platz kommt keiner an mir vorbei, heute auch nicht!
+7668|Der Gegner hat unsere Härte gespürt. Weiter so!
+7669|Egal wer kommt, wir überrollen jeden!
+7670|Das Team zu tragen ist meine Aufgabe, ich vertraue meinen Mitspielern.
+7671|Egal wie es ausgeht, dieses Team hält zusammen.
+7672|Wir brauchen jeden Einzelnen, gemeinsam gehen wir aufs Ziel.
+7673|Ich hebe an guten Tagen nicht ab und breche an schlechten nicht ein.
+7674|Ergebnisse kommen und gehen, wichtig ist der richtige Weg.
+7675|Schritt für Schritt, keine Panik.
+7676|Was ich im Training mache, zeigt sich im Spiel. Disziplin ist alles.
+7677|Wir haben den Plan umgesetzt, jetzt Erholung und Vorbereitung.
+7678|Schlaf, Ernährung, Training. Der Rest kommt von allein.
+7681|Ich sage, was ich denke: Ich brauche mehr Freiheit.
+7682|Manche Entscheidungen verstehe ich nicht. Dazu sage ich später etwas.
+7683|Regeln machen andere, ich rede auf dem Platz.
+7684|Das ist erst der Anfang, ich will viel höher hinaus.
+7685|Das reicht mir nicht, ich will jedes Spiel gewinnen.
+7686|Eines Tages bin ich der Beste der Welt, das sollen alle wissen.
+7748|🤝 Dein Freund {} spielt hier
+7744|🤝 {}: "Ich habe auch mit dem Trainer geredet. Komm, lass uns dasselbe Trikot tragen!"
+7742|🤝 Du und dein Jugendfreund {} spielt jetzt zusammen! Du hast dich sofort eingelebt.
+7688|Was war der Wendepunkt des Spiels?
+7689|Meine Spieler haben den Plan geduldig umgesetzt.
+7690|Unsere Umstellung zur Pause hat das Spiel gedreht.
+7691|Der Gegner kam mit unserem Tempo nicht klar.
+7692|Wem widmen Sie diesen Sieg?
+7693|Unseren Fans, die uns nie allein lassen.
+7694|Allen, die an dieses Team glauben.
+7695|Allen, die nicht an uns geglaubt haben!
+7696|Was ist die größte Stärke Ihres Teams?
+7697|Unser Zusammenhalt, jeder läuft für den anderen.
+7698|Unsere Qualität, mit diesem Kader ist alles möglich.
+7699|Unser Hunger, niemand will es so sehr wie wir.
+7700|Warum sind Sie am Ende nicht mehr Risiko gegangen?
+7701|Wir wollten die Balance halten, das war richtig.
+7702|Haben wir, wir hatten Chancen, aber kein Tor.
+7703|Auf der Bank gab es kaum Alternativen.
+7704|Sind Sie mit dem Spiel zufrieden?
+7705|Es gab Positives, unsere Schwächen kennen wir.
+7706|Spielerisch waren wir besser.
+7707|Nein, das ist nicht unser Niveau.
+7708|Die Fans sind sauer. Was sagen Sie ihnen?
+7711|Sie haben recht, wir entschuldigen uns.
+7712|Vertraut uns, das Team kommt zurück.
+7713|Auch in schweren Zeiten sollten sie zu uns stehen.
+7714|Denken Sie über Änderungen in der Startelf nach?
+7715|Jeder bekommt seine Chance, die Tür ist offen.
+7716|Wenn nötig, treffe ich mutige Entscheidungen.
+7717|Manche Spieler verdienen das Trikot nicht.
+7718|Es heißt, Ihr Stuhl wackelt. Was sagen Sie?
+7721|Ich respektiere den Vorstand und konzentriere mich auf meine Arbeit.
+7722|Ich bringe dieses Team wieder hin, da bin ich sicher.
+7723|Ich kümmere mich um den Platz, nicht um Gerüchte.
+7724|Haben Sie an Rücktritt gedacht?
+7725|Nein, ich kenne meine Verantwortung und bleibe.
+7726|Niemals! Mit diesem Team schaffen wir es.
+7729|Darauf antworte ich nicht.
+7730|Sie haben einen stärkeren Gegner geschlagen. Das Geheimnis?
+7733|Wir hatten Respekt und haben uns gut vorbereitet.
+7734|Papier spielt keinen Fußball.
+7735|Sie haben uns unterschätzt und dafür bezahlt.
+7736|Sie sind Tabellenführer. Spüren Sie Druck?
+7739|Druck gehört dazu, wir bleiben ruhig.
+7740|Dieser Druck macht uns noch stärker.
+7741|Den echten Druck sollen unsere Rivalen spüren.

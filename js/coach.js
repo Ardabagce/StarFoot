@@ -425,7 +425,10 @@ const Coach = {
     Coach.events();
     if (s.round % 4 === 0) {
       const m = s.month;
-      if (m.w >= 3 && m.l === 0) { s.awards.push(`${s.year} Ayın Teknik Direktörü`); s.rep = U.clamp(s.rep + 2, 0, 100); Coach.news('🏅 Ayın Teknik Direktörü ödülünü kazandın!', 'good'); }
+      // Ayın Teknik Direktörü: ligde son 4 haftanın en çok puan toplayan takımı (eşitlikte kura)
+      const pts = (id) => (s.cf[id] || '').slice(-4).split('').reduce((t, r) => t + (r === 'G' ? 3 : r === 'B' ? 1 : 0), 0);
+      const mine = m.w * 3 + m.d, rival = Math.max(0, ...s.lg.ids.filter((id) => id !== s.clubId).map(pts));
+      if (mine >= 9 && m.l === 0 && (mine > rival || (mine === rival && U.chance(0.4)))) { s.awards.push(`${s.year} Ayın Teknik Direktörü`); s.rep = U.clamp(s.rep + 2, 0, 100); Coach.news('🏅 Ayın Teknik Direktörü ödülünü kazandın!', 'good'); }
       s.month = { w: 0, d: 0, l: 0 };
     }
     if (s.round >= Coach.rounds()) Coach.seasonEnd();

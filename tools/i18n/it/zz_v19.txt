@@ -991,3 +991,68 @@
 7572|Rigioca una brutta partita, salta alla settimana che vuoi
 7573|Gol di testa, rigore, punizione e per avversario
 7574|Solo in Diamond
+7667|In campo non passa nessuno, nemmeno oggi!
+7668|L'avversario ha sentito la nostra grinta. Avanti così!
+7669|Chiunque ci sia davanti, lo travolgeremo!
+7670|Trascinare la squadra è il mio compito, mi fido dei compagni.
+7671|Qualunque sia il risultato, questa squadra resta unita.
+7672|Ci serve ognuno di noi, insieme verso l'obiettivo.
+7673|Non mi esalto nei giorni buoni né crollo in quelli brutti.
+7674|I risultati vanno e vengono, conta essere sulla strada giusta.
+7675|Passo dopo passo, niente panico.
+7676|Quello che faccio in allenamento si vede in partita. La disciplina è tutto.
+7677|Abbiamo seguito il piano, ora riposo e testa alla prossima.
+7678|Sonno, alimentazione, allenamento. Il resto viene da sé.
+7681|Dico quello che penso: dovrei avere più libertà.
+7682|Non ho capito alcune scelte. Avrei cose da dire, ma non ora.
+7683|Le regole le facciano altri, io parlo in campo.
+7684|È solo l'inizio, punto molto più in alto.
+7685|Questo risultato non mi basta, voglio vincere ogni partita.
+7686|Un giorno sarò il migliore al mondo, che lo sappiano tutti.
+7748|🤝 Il tuo amico {} gioca qui
+7744|🤝 {}: "Ho parlato anch'io col mister. Vieni a indossare la stessa maglia!"
+7742|🤝 Tu e il tuo amico d'infanzia {} ora siete compagni! Ti sei ambientato subito.
+7688|Qual è stato il momento chiave della partita?
+7689|I miei giocatori hanno applicato il piano con pazienza.
+7690|Il cambio all'intervallo ha girato la partita.
+7691|L'avversario non ha retto il nostro ritmo.
+7692|A chi dedica questa vittoria?
+7693|Ai nostri tifosi, che non ci lasciano mai soli.
+7694|A tutti quelli che credono in questa squadra.
+7695|A chi non credeva in noi!
+7696|Qual è la forza principale della sua squadra?
+7697|La nostra unione, tutti corrono per tutti.
+7698|La qualità, con questa rosa possiamo tutto.
+7699|La fame, nessuno lo vuole quanto noi.
+7700|Perché non ha rischiato di più nel finale?
+7701|Volevamo restare equilibrati, credo sia stata la scelta giusta.
+7702|L'abbiamo fatto e abbiamo creato occasioni, ma niente gol.
+7703|In panchina non c'era molto da cambiare.
+7704|È soddisfatto della prestazione?
+7705|Ci sono lati positivi e conosciamo i nostri limiti.
+7706|Siamo stati superiori all'avversario.
+7707|No, non è il nostro livello.
+7708|I tifosi sono arrabbiati. Cosa vuole dire loro?
+7711|Hanno ragione, chiediamo scusa.
+7712|Si fidino, questa squadra si rialzerà.
+7713|Devono starci vicino anche nei momenti duri.
+7714|Pensa a cambiare la formazione?
+7715|Tutti avranno una chance, la porta è aperta.
+7716|Se serve, prenderò decisioni coraggiose.
+7717|Alcuni giocatori non meritano la maglia.
+7718|Si dice che la sua panchina traballa. Cosa risponde?
+7721|Rispetto la società, sono concentrato sul lavoro.
+7722|Rimetterò in sesto questa squadra, ne sono certo.
+7723|Mi occupo del campo, non delle voci.
+7724|Ha pensato alle dimissioni?
+7725|No, conosco la mia responsabilità e sono qui.
+7726|Mai! Ce la faremo con questa squadra.
+7729|Non rispondo a questa domanda.
+7730|Avete battuto una squadra più forte sulla carta. Il segreto?
+7733|Abbiamo rispettato l'avversario e preparato bene la gara.
+7734|La carta non gioca a calcio.
+7735|Ci hanno sottovalutato e l'hanno pagata.
+7736|Siete in testa. Sentite la pressione?
+7739|La pressione fa parte del lavoro, restiamo calmi.
+7740|Questa pressione ci rende ancora più forti.
+7741|La vera pressione la sentano i nostri rivali.

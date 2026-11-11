@@ -37,7 +37,8 @@ const TReq = {
     const p = Game.p, ovr = C2.ovr();
     const better = (c.roster || []).filter((x) => x.pos === p.position && x.r >= ovr).length;
     const young = p.age <= 21 ? Math.min(3, (22 - p.age) * 0.75) : 0;
-    const sc = (ovr - c.rating) + 2 + young + Math.min(4, (p.fame || 0) / 20) - Math.min(4, Math.max(0, better - 2) * 0.8) - (p.age > 31 ? (p.age - 31) * 1.5 : 0) + (Pers.is('lead') || Pers.is('amb') ? 0.5 : 0);
+    const fr = FrTeam.at(c.id).length ? 1.5 : 0;
+    const sc = fr + (ovr - c.rating) + 2 + young + Math.min(4, (p.fame || 0) / 20) - Math.min(4, Math.max(0, better - 2) * 0.8) - (p.age > 31 ? (p.age - 31) * 1.5 : 0) + (Pers.is('lead') || Pers.is('amb') ? 0.5 : 0);
     if (TReq.fee() > TReq.maxFee(c)) return { res: 'no', why: 'budget', sc };
     if (p.age >= 33 && c.rating >= 80) return { res: 'no', why: 'age', sc };
     if (sc >= 0) return { res: 'yes', sc };
@@ -93,10 +94,10 @@ const TReq = {
   clubs(lgId) {
     const s = Game.state;
     const taken = new Set([s.clubId].concat((s.treqs || []).map((x) => x.id)).concat((s.offers || []).map((o) => o.clubId)));
-    const list = Object.values(s.world.clubs).filter((c) => c.league === lgId && !taken.has(c.id)).sort((a, b) => b.rating - a.rating);
+    const list = Object.values(s.world.clubs).filter((c) => c.league === lgId && !taken.has(c.id)).sort((a, b) => (FrTeam.at(b.id).length - FrTeam.at(a.id).length) || b.rating - a.rating);
     const l = LEAGUES.find((x) => x.id === lgId) || {};
     const m = Game.modal(`<h3>${U.esc(l.name || '')}</h3><p class="muted">Gücün ${C2.ovr()} · Kulübünün istediği bonservis: ${U.money(TReq.fee())}</p>
-      <div class="tr-clubs">${list.map((c) => { const [k, t] = TReq.hint(c); return `<button class="tr-club" data-tc="${c.id}">${UI.shirt(c)}<span><b>${U.esc(c.name)}</b><small>Güç ${c.rating}</small></span><em class="tr-h ${k}">${t}</em></button>`; }).join('')}</div>`,
+      <div class="tr-clubs">${list.map((c) => { const [k, t] = TReq.hint(c); const fr = FrTeam.at(c.id)[0]; return `<button class="tr-club" data-tc="${c.id}">${UI.shirt(c)}<span><b>${U.esc(c.name)}</b><small>Güç ${c.rating}</small>${fr ? `<small class="tr-fr">🤝 Arkadaşın ${U.esc(fr.n)} burada</small>` : ''}</span><em class="tr-h ${k}">${t}</em></button>`; }).join('')}</div>`,
     [{ t: 'Geri', cls: 'btn-ghost', fn: () => setTimeout(() => TReq.open(), 30) }], { wide: true });
     U.$$('[data-tc]', m).forEach((b) => (b.onclick = () => { m.classList.add('hidden'); m.innerHTML = ''; TReq.send(b.dataset.tc); }));
   },
@@ -124,6 +125,8 @@ const TReq = {
       if (e.res === 'yes') {
         s.offers = (s.offers || []).filter((o) => o.clubId !== c.id).concat([TReq.offerFor(c)]);
         Game.news(`✅ ${c.name} transfer talebini kabul etti! Teklif masanda, transfer dönemi bitene kadar geçerli.`, 'good');
+        const fr = FrTeam.at(c.id)[0];
+        if (fr) { fr.rel = U.clamp(fr.rel + 5, 0, 100); Game.news(`🤝 ${fr.n}: "Hocayla ben de konuştum, gel aynı formayı giyelim!"`, 'good'); }
         Game.toast(`✅ ${c.name} teklif yaptı!`, 'good');
       } else if (e.res === 'cond') {
         p.tGoals = (p.tGoals || []).filter((g) => g.id !== c.id).concat([{ id: c.id, ovr: e.target, y: s.season.year }]);
@@ -274,6 +277,30 @@ const Pers = {
   },
 };
 
+// Röportajda kişiliğe özel cevap: [moral, taraftar, hoca, takım, ün], manşet tonu (0-2) ve kategoriye göre cevap
+const PERS_IV = {
+  agr: { fx: [3, 5, -2, -1, 0.8], tone: 2, me: 'Sahada kimseye geçit vermem, bugün de vermedim!', res: 'Rakip bugün sertliğimizi hissetti, böyle devam!', fut: 'Kim karşımıza çıkarsa çıksın, ezip geçeceğiz!' },
+  lead: { fx: [3, 2, 2, 4, 0.5], tone: 1, me: 'Takımı sırtlamak benim görevim, arkadaşlarıma güveniyorum.', res: 'Sonuç ne olursa olsun bu takım birlikte ayakta kalır.', fut: 'Takımın her bireyine ihtiyacımız var, hedefe birlikte yürüyeceğiz.' },
+  calm: { fx: [3, 1, 3, 2, 0.2], tone: 0, me: 'Ne iyi günde şımarırım ne kötü günde yıkılırım.', res: 'Sonuçlar gelip geçer, önemli olan doğru yolda olmak.', fut: 'Adım adım gideceğiz, panik yok.' },
+  pro: { fx: [2, 1, 4, 2, 0.3], tone: 0, me: 'Antrenmanda ne yaparsam maçta da o çıkar, disiplin her şey.', res: 'Planı uyguladık, şimdi dinlenip bir sonraki maça hazırlanacağız.', fut: 'Uyku, beslenme, antrenman. Gerisi kendiliğinden gelir.' },
+  rebel: { fx: [3, 6, -5, -2, 1.2], tone: 2, me: 'Ne düşündüğümü söylerim: bana daha çok özgürlük verilmeli.', res: 'Bazı kararları hiç anlamadım, söyleyeceklerim var ama şimdi değil.', fut: 'Kuralları başkaları koysun, ben sahada konuşurum.' },
+  amb: { fx: [4, 2, -1, -1, 0.9], tone: 2, me: 'Bu sadece başlangıç, gözüm çok daha büyük hedeflerde.', res: 'Bu sonuç bana yetmez, her maç kazanmak istiyorum.', fut: 'Bir gün dünyanın en iyisi olacağım, bunu herkes bilsin.' },
+};
+Pers.ivOpt = (cat) => {
+  const k = Pers.get();
+  if (!k || !PERS_IV[k]) return null;
+  const x = PERS_IV[k];
+  return { k, t: x[cat] || x.me, fx: x.fx, tone: x.tone, lab: PERS[k].t };
+};
+
+// ---------- Arkadaşla aynı takım ----------
+const FrTeam = {
+  at(clubId) {
+    const p = Game.p;
+    return (p && p.friends || []).filter((f) => f.job === 'pro' && f.club === clubId && f.rel >= 50);
+  },
+};
+
 // ---------- Kiralık gönderilme ----------
 const Loan = {
   // yaz transfer döneminin ilk haftası: az süre alan genç oyuncuya kulübü kiralık önerir
@@ -343,7 +370,12 @@ const Loan = {
   Game.acceptOffer = (i) => {
     const s = Game.state, o = s.offers && s.offers[i];
     acc(i);
-    if (C2.feat() && o && s.clubId === o.clubId) { Deal.apply(o); Game.save(); }
+    if (C2.feat() && o && s.clubId === o.clubId) {
+      Deal.apply(o);
+      const fr = FrTeam.at(o.clubId)[0];
+      if (fr) { Player.addRel(s.player, 'team', 8); Player.addMorale(s.player, 6); fr.rel = U.clamp(fr.rel + 8, 0, 100); Game.news(`🤝 Çocukluk arkadaşın ${fr.n} ile artık aynı takımdasınız! Soyunma odasına hemen uyum sağladın.`, 'good'); }
+      Game.save();
+    }
   };
 
   const tw = Game.transferWeek.bind(Game);

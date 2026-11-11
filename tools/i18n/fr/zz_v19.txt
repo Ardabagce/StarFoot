@@ -991,3 +991,68 @@
 7572|Rejoue un mauvais match, saute à la semaine voulue
 7573|Buts de la tête, penalties, coups francs et par adversaire
 7574|Exclusif Diamond
+7667|Sur le terrain, personne ne passe, et aujourd'hui non plus !
+7668|L'adversaire a senti notre intensité. On continue !
+7669|Peu importe l'adversaire, on va l'écraser !
+7670|Porter l'équipe, c'est mon rôle, et j'ai confiance en mes coéquipiers.
+7671|Quel que soit le résultat, cette équipe reste soudée.
+7672|On a besoin de chacun, on ira ensemble vers l'objectif.
+7673|Je ne m'emballe pas les bons jours et ne m'effondre pas les mauvais.
+7674|Les résultats passent, l'essentiel est d'être sur la bonne voie.
+7675|Pas à pas, pas de panique.
+7676|Ce que je fais à l'entraînement se voit en match. La discipline, c'est tout.
+7677|On a suivi le plan, maintenant repos et préparation.
+7678|Sommeil, nutrition, entraînement. Le reste suit.
+7681|Je dis ce que je pense : on devrait me laisser plus de liberté.
+7682|Je n'ai pas compris certaines décisions. J'aurai des choses à dire, plus tard.
+7683|Que d'autres fassent les règles, moi je parle sur le terrain.
+7684|Ce n'est qu'un début, je vise bien plus haut.
+7685|Ce résultat ne me suffit pas, je veux gagner chaque match.
+7686|Un jour je serai le meilleur du monde, que tout le monde le sache.
+7748|🤝 Ton ami {} joue ici
+7744|🤝 {} : « J'ai parlé au coach aussi. Viens porter le même maillot ! »
+7742|🤝 Toi et ton ami d'enfance {} êtes coéquipiers ! Tu t'es vite intégré.
+7688|Quel a été le tournant du match ?
+7689|Mes joueurs ont appliqué le plan avec patience.
+7690|Notre changement à la pause a renversé le match.
+7691|L'adversaire n'a pas tenu notre rythme.
+7692|À qui dédiez-vous cette victoire ?
+7693|À nos supporters, qui ne nous lâchent jamais.
+7694|À tous ceux qui croient en cette équipe.
+7695|À ceux qui ne croyaient pas en nous !
+7696|Quelle est la plus grande force de votre équipe ?
+7697|Notre unité, chacun court pour l'autre.
+7698|Notre qualité, avec cet effectif tout est possible.
+7699|Notre faim, personne n'en veut autant que nous.
+7700|Pourquoi ne pas avoir pris plus de risques en fin de match ?
+7701|On voulait garder l'équilibre, je pense que c'était juste.
+7702|On l'a fait, on a eu des occasions, mais pas de but.
+7703|Il n'y avait pas grand-chose sur le banc.
+7704|Êtes-vous satisfait du jeu ?
+7705|Il y a du positif, et nous connaissons nos manques.
+7706|Nous étions meilleurs que l'adversaire.
+7707|Non, ce n'est pas notre niveau.
+7708|Les supporters sont mécontents. Que leur dites-vous ?
+7711|Ils ont raison, nous nous excusons.
+7712|Faites-nous confiance, cette équipe va se relever.
+7713|Ils doivent nous soutenir aussi dans les moments durs.
+7714|Envisagez-vous des changements dans l'équipe ?
+7715|Tout le monde aura sa chance, la porte est ouverte.
+7716|S'il le faut, je prendrai des décisions fortes.
+7717|Certains joueurs ne méritent pas le maillot.
+7718|On dit que votre poste est menacé. Votre réponse ?
+7721|Je respecte la direction, je me concentre sur mon travail.
+7722|Je vais redresser cette équipe, j'en suis sûr.
+7723|Je m'occupe du terrain, pas des rumeurs.
+7724|Avez-vous pensé à démissionner ?
+7725|Non, je connais ma responsabilité et je suis là.
+7726|Jamais ! On va réussir avec cette équipe.
+7729|Je ne répondrai pas à cette question.
+7730|Vous avez battu plus fort sur le papier. Le secret ?
+7733|On a respecté l'adversaire et bien préparé le match.
+7734|Le papier ne joue pas au football.
+7735|Ils nous ont sous-estimés, ils l'ont payé.
+7736|Vous êtes en tête. Ressentez-vous la pression ?
+7739|La pression fait partie du métier, on reste calmes.
+7740|Cette pression nous rend encore plus forts.
+7741|Que ce soient nos rivaux qui sentent la pression.

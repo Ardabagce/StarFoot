@@ -185,8 +185,63 @@ const CM_FT = {
   heavy: [['😠 Utanç verici bir performans!', 5, 1, 0.45], ['🫡 Sorumluluk bende, birlikte düzelteceğiz', 3, 2], ['🤐 Bugün konuşmayacağım, yarın analiz', 0, 1], ['📋 Herkes kendine dürüstçe baksın', 1, 2]],
 };
 
+// basın toplantısı soru havuzu: [soru, mütevazı, iddialı, sert]
+const CM_PRESS = {
+  win: [
+    ['Bugünkü galibiyeti nasıl değerlendiriyorsunuz?', 'Oyuncularımı tebrik ediyorum, hepsi hak etti.', 'Bu takım her maçı kazanmak için sahaya çıkıyor!', 'Bizi küçümseyenlere cevabı sahada verdik.'],
+    ['Taraftarlar şampiyonluk konuşmaya başladı. Ne dersiniz?', 'Önümüzde uzun bir yol var, maç maç bakıyoruz.', 'Neden olmasın? Bu takıma inanıyorum.', 'Bizi kimse durduramaz.'],
+    ['Maçın kırılma anı sizce neydi?', 'Oyuncularım planı sabırla uyguladı.', 'Devre arasında yaptığımız değişiklik maçı çevirdi.', 'Rakip bizim temposumuza dayanamadı.'],
+    ['Bu galibiyeti kime armağan ediyorsunuz?', 'Her hafta bizi yalnız bırakmayan taraftarlarımıza.', 'Bu takıma inanan herkese.', 'Bize inanmayanlara!'],
+    ['Takımınızın en büyük gücü ne?', 'Birlikteliğimiz, herkes birbiri için koşuyor.', 'Kalitemiz, bu kadroyla her şeyi başarabiliriz.', 'Hırsımız, kimse bizim kadar istemiyor.'],
+  ],
+  draw: [
+    ['Bir puan sizin için yeterli mi?', 'Zor bir rakipti, bu puana saygı duyuyorum.', 'Kazanmak için her şeyi yaptık, şanssızdık.', 'Hakem kararları olmasa kazanırdık.'],
+    ['Son dakikalarda neden daha fazla risk almadınız?', 'Dengeyi korumak istedik, doğru karar olduğunu düşünüyorum.', 'Aldık, fırsatlar da yakaladık ama gol gelmedi.', 'Kadroda değiştirebileceğim pek bir şey yoktu.'],
+    ['Oyundan memnun musunuz?', 'İyi taraflar var, eksiklerimizi de biliyoruz.', 'Oyun olarak rakipten iyiydik.', 'Hayır, bu oyun bizim seviyemiz değil.'],
+  ],
+  loss: [
+    ['Bu mağlubiyetin sebebi neydi?', 'Sorumluluk bende, hatalarımızı düzelteceğiz.', 'Bir maç kaybettik, savaşı değil.', 'Hakem kararları maçın kaderini değiştirdi.'],
+    ['Yönetimin size güveni sarsıldı mı?', 'Yönetimle her gün konuşuyoruz, birlikteyiz.', 'Sonuçlar gelecek, bundan şüphem yok.', 'Ben işimi yapıyorum, gerisi beni ilgilendirmez.'],
+    ['Taraftarlar tepkili. Onlara ne söylemek istersiniz?', 'Tepkilerinde haklılar, özür diliyoruz.', 'Bize güvensinler, bu takım toparlanacak.', 'Zor günlerde de yanımızda olmalılar.'],
+    ['Kadroda değişiklik düşünüyor musunuz?', 'Herkese şans vereceğim, kapı herkese açık.', 'Gerekirse cesur kararlar alırım.', 'Bazı oyuncular formayı hak etmiyor.'],
+  ],
+  sack: [
+    ['Koltuğunuzun sallandığı konuşuluyor. Ne diyorsunuz?', 'Yönetimin kararına saygı duyarım, işime odaklanıyorum.', 'Bu takımı ben düzelteceğim, buna eminim.', 'Söylentilerle değil, sahayla ilgileniyorum.'],
+    ['İstifayı düşündünüz mü?', 'Hayır, sorumluluğumun farkındayım ve buradayım.', 'Asla! Bu takımla başaracağız.', 'Böyle bir soruyu cevaplamayacağım.'],
+  ],
+  upset: [
+    ['Kâğıt üzerinde güçlü bir rakibi yendiniz. Sırrı neydi?', 'Rakibe saygı duyduk ve iyi hazırlandık.', 'Kâğıt üzerindeki güç sahada oynamıyor.', 'Bizi hafife aldılar, bedelini ödediler.'],
+  ],
+  top: [
+    ['Ligin zirvesindesiniz. Baskı hissediyor musunuz?', 'Baskı bu işin parçası, sakin kalıyoruz.', 'Bu baskı bizi daha da güçlendiriyor.', 'Asıl baskıyı rakiplerimiz hissetsin.'],
+  ],
+};
+
 (function wireCoach() {
   if (typeof Coach === 'undefined' || typeof Live === 'undefined') return;
+  Live.press = function (L, next) {
+    const s = Coach.s;
+    const win = L.pens ? L.pens.win : L.gf > L.ga, draw = !L.pens && L.gf === L.ga;
+    const ctx = win ? 'win' : draw ? 'draw' : 'loss';
+    let pool = CM_PRESS[ctx];
+    if (s.conf < 35 && !win && U.chance(0.7)) pool = CM_PRESS.sack;
+    else if (win && Coach.rating(L.match.opp) >= Coach.teamRating() + 4 && U.chance(0.6)) pool = CM_PRESS.upset;
+    else if (L.match.comp === 'lg' && s.round >= 8 && Coach.myPos() === 1 && U.chance(0.35)) pool = CM_PRESS.top;
+    const fx = (k) => {
+      const t = { modest: { conf: 2, fans: 0, mor: 1 }, bold: { conf: 0, fans: 4, mor: 2 }, sharp: { conf: -2, fans: 3, mor: -1 } }[k];
+      s.conf = U.clamp(s.conf + t.conf, 0, 100); s.fans = U.clamp(s.fans + t.fans, 0, 100);
+      s.squad.forEach((p) => (p.mor = U.clamp(p.mor + t.mor, 0, 100)));
+      if (k === 'sharp' && ctx === 'loss' && U.chance(0.3)) { const fine = Math.round(Coach.wageOf(Coach.my().rating) * 2 / 1000) * 1000; s.money -= fine; Coach.news(`⚖️ Hakem eleştirisi nedeniyle federasyon ${U.money(fine)} para cezası verdi.`, 'bad'); }
+      Coach.save();
+    };
+    const q = U.pick(pool);
+    Game.modal(`<div class="ev-tag">Basın toplantısı</div><div class="iv-mic">🎙️</div><h3 class="cm-pq">${q[0]}</h3>`, [
+      { t: q[1], fn: () => { fx('modest'); Game.toast('Yönetim sakin tavrını beğendi.', 'good'); setTimeout(next, 120); } },
+      { t: q[2], fn: () => { fx('bold'); Game.toast('Taraftarlar bu sözlere bayıldı.', 'good'); setTimeout(next, 120); } },
+      { t: q[3], fn: () => { fx('sharp'); Game.toast('Sözlerin manşet oldu.', ''); setTimeout(next, 120); } },
+    ]);
+  };
+
   const pick = (arr, n) => U.shuffle(arr.slice()).slice(0, n);
 
   Live.halftime = function () {

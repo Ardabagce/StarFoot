@@ -127,6 +127,7 @@ const Interview = {
       const tot = [0, 0, 0, 0, 0];
       let i = 0;
       const said = [], tones = [];
+      const persAt = U.randi(0, Math.max(0, qs.length - 1));
       const end = () => {
         window.removeEventListener('resize', onR);
         el.classList.add('out');
@@ -147,16 +148,18 @@ const Interview = {
       };
       const ask = () => {
         if (i >= qs.length) return end();
-        const q = qs[i], ans = q.a(c);
+        const q = qs[i], ans = q.a(c).slice();
+        const po = i === persAt && typeof Pers !== 'undefined' && Pers.ivOpt ? Pers.ivOpt(q.cat) : null;
+        if (po) ans.push(po.t);
         el.querySelector('.iv-dots').innerHTML = qs.map((_, k) => `<i class="${k < i ? 'done' : k === i ? 'on' : ''}"></i>`).join('');
         el.querySelector('h3').textContent = q.q(c);
-        el.querySelector('.iv-opts').innerHTML = ans.map((t, k) => `<button class="iv-a" data-k="${k}"><small>${['Mütevazı', 'Kendinden emin', 'İddialı'][k]}</small>${U.esc(t)}</button>`).join('');
+        el.querySelector('.iv-opts').innerHTML = ans.map((t, k) => `<button class="iv-a ${k === 3 ? 'iv-pers' : ''}" data-k="${k}"><small>${k === 3 ? `★ ${po.lab}` : ['Mütevazı', 'Kendinden emin', 'İddialı'][k]}</small>${U.esc(t)}</button>`).join('');
         UI.strip && UI.strip(el);
         el.querySelector('.iv-q').classList.remove('in'); void el.offsetWidth; el.querySelector('.iv-q').classList.add('in');
         U.$$('.iv-a', el).forEach((b) => (b.onclick = () => {
           const k = +b.dataset.k;
-          IV_FX[k].forEach((v, j) => (tot[j] += v * 0.6));
-          said.push(ans[k]); tones.push(k); if (typeof Pers !== 'undefined') Pers.tone(k);
+          if (k === 3 && po) { po.fx.forEach((v, j) => (tot[j] += v * 0.6)); said.push(ans[k]); tones.push(po.tone); Pers.note(po.k, 1); }
+          else { IV_FX[k].forEach((v, j) => (tot[j] += v * 0.6)); said.push(ans[k]); tones.push(k); if (typeof Pers !== 'undefined') Pers.tone(k); }
           if (typeof Sfx !== 'undefined') Sfx.play('shutter');
           i++;
           setTimeout(ask, 160);
