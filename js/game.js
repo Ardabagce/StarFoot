@@ -2440,7 +2440,8 @@ Game.modal = function (html, buttons, opts = {}) {
 // ---------- Sezon sonu ekranı ----------
 const SeasonEnd = {
   show() {
-    const s = Game.state, se = s.seasonEnd, p = s.player;
+    const s = Game.state, se = s && s.seasonEnd, p = s && s.player;
+    if (!se) return;
     if (se.forceRetire) {
       return Game.modal(`<h2>👋 Veda Zamanı</h2><p>${p.age} yaşındasın ve vücudun artık üst düzey futbolu kaldıramıyor. Kariyerini noktalama vakti geldi.</p>`, [{ t: 'Kariyer Özeti', fn: () => Game.retire() }]);
     }
