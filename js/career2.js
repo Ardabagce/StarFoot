@@ -63,14 +63,14 @@ const TReq = {
   card() {
     if (!C2.on()) return '';
     const s = Game.state, p = s.player, w = TReq.win();
-    const pend = (s.treqs || []).map((x) => `<div class="tr-row"><span>⏳</span><b>${U.esc(Game.club(x.id).name)}</b><small>Talebin değerlendiriliyor</small></div>`).join('');
-    const goals = (p.tGoals || []).map((g) => `<div class="tr-row"><span>🎯</span><b>${U.esc(Game.club(g.id).name)}</b><small>Güç ${g.ovr} olursa (şu an ${C2.ovr()})</small></div>`).join('');
+    const pend = (s.treqs || []).map((x) => `<div class="tq-row"><span>⏳</span><b>${U.esc(Game.club(x.id).name)}</b><small>Talebin değerlendiriliyor</small></div>`).join('');
+    const goals = (p.tGoals || []).map((g) => `<div class="tq-row"><span>🎯</span><b>${U.esc(Game.club(g.id).name)}</b><small>Güç ${g.ovr} olursa (şu an ${C2.ovr()})</small></div>`).join('');
     const loan = Loan.card();
     if (loan) return loan;
-    if (s.loan) return `<section class="card tr-card"><div class="card-h"><span>${Icon('mail')} Kiralık</span></div><p class="muted">${U.esc(Game.club(s.loan.parent).name)} kulübünden sezon sonuna kadar kiralıksın.</p></section>`;
+    if (s.loan) return `<section class="card tq-card"><div class="card-h"><span>${Icon('mail')} Kiralık</span></div><p class="muted">${U.esc(Game.club(s.loan.parent).name)} kulübünden sezon sonuna kadar kiralıksın.</p></section>`;
     if (!w && !pend && !goals) return '';
     const left = TReq.left();
-    return `<section class="card tr-card"><div class="card-h"><span>${Icon('mail')} Transfer talebi</span><small class="muted">${w ? w.name : 'Transfer dönemi kapalı'}</small></div>
+    return `<section class="card tq-card"><div class="card-h"><span>${Icon('mail')} Transfer talebi</span><small class="muted">${w ? w.name : 'Transfer dönemi kapalı'}</small></div>
       <p class="muted">İstediğin kulübe talep gönder. Kulüp gücüne, bütçesine ve kadro ihtiyacına göre karar verir.</p>
       ${pend}${goals}
       ${w ? `<button class="btn ${left ? 'btn-big' : 'btn-ghost'}" data-treq="1">${Icon('globe')} Kulüp seç <small>${left >= 99 ? '· Premium: sınırsız' : left ? '· 1 hak' : '· hakkın bitti'}</small></button>` : ''}
@@ -88,7 +88,7 @@ const TReq = {
     if ((s.treqs || []).length >= 3) return Game.toast('Aynı anda en fazla 3 talep bekleyebilir.', 'info');
     const cur = Game.club().league;
     const lgs = LEAGUES.filter((l) => l.level === 1 || l.id === cur);
-    const m = Game.modal(`<h3>${Icon('globe')} Hangi ligde oynamak istersin?</h3><div class="tr-lgs">${lgs.map((l) => `<button class="tr-lg" data-lg="${l.id}"><span data-emo>${l.flag || ''}</span><b>${U.esc(l.name)}</b><small>${U.esc(l.country || '')}</small></button>`).join('')}</div>`, [{ t: 'Vazgeç', cls: 'btn-ghost' }], { wide: true });
+    const m = Game.modal(`<h3>${Icon('globe')} Hangi ligde oynamak istersin?</h3><div class="tq-lgs">${lgs.map((l) => `<button class="tq-lg" data-lg="${l.id}"><span data-emo>${l.flag || ''}</span><b>${U.esc(l.name)}</b><small>${U.esc(l.country || '')}</small></button>`).join('')}</div>`, [{ t: 'Vazgeç', cls: 'btn-ghost' }], { wide: true });
     U.$$('[data-lg]', m).forEach((b) => (b.onclick = () => TReq.clubs(b.dataset.lg)));
   },
   clubs(lgId) {
@@ -97,7 +97,7 @@ const TReq = {
     const list = Object.values(s.world.clubs).filter((c) => c.league === lgId && !taken.has(c.id)).sort((a, b) => (FrTeam.at(b.id).length - FrTeam.at(a.id).length) || b.rating - a.rating);
     const l = LEAGUES.find((x) => x.id === lgId) || {};
     const m = Game.modal(`<h3>${U.esc(l.name || '')}</h3><p class="muted">Gücün ${C2.ovr()} · Kulübünün istediği bonservis: ${U.money(TReq.fee())}</p>
-      <div class="tr-clubs">${list.map((c) => { const [k, t] = TReq.hint(c); const fr = FrTeam.at(c.id)[0]; return `<button class="tr-club" data-tc="${c.id}">${UI.shirt(c)}<span><b>${U.esc(c.name)}</b><small>Güç ${c.rating}</small>${fr ? `<small class="tr-fr">🤝 Arkadaşın ${U.esc(fr.n)} burada</small>` : ''}</span><em class="tr-h ${k}">${t}</em></button>`; }).join('')}</div>`,
+      <div class="tq-clubs">${list.map((c) => { const [k, t] = TReq.hint(c); const fr = FrTeam.at(c.id)[0]; return `<button class="tq-club" data-tc="${c.id}">${UI.shirt(c)}<span><b>${U.esc(c.name)}</b><small>Güç ${c.rating}</small>${fr ? `<small class="tq-fr">🤝 Arkadaşın ${U.esc(fr.n)} burada</small>` : ''}</span><em class="tq-h ${k}">${t}</em></button>`; }).join('')}</div>`,
     [{ t: 'Geri', cls: 'btn-ghost', fn: () => setTimeout(() => TReq.open(), 30) }], { wide: true });
     U.$$('[data-tc]', m).forEach((b) => (b.onclick = () => { m.classList.add('hidden'); m.innerHTML = ''; TReq.send(b.dataset.tc); }));
   },
@@ -324,10 +324,10 @@ const Loan = {
     const o = s.loanOffer;
     if (!o || o.y !== s.season.year || s.season.round > o.to) return '';
     const c = Game.club(o.id);
-    return `<section class="card tr-card loan"><div class="card-h"><span>${Icon('mail')} Kiralık teklifi</span><small class="muted">${o.to - s.season.round + 1} hafta</small></div>
-      <div class="tr-row">${UI.shirt(c)}<b>${U.esc(c.name)}</b><small>${U.esc(C2.lgOf(c).name)} · Güç ${c.rating}</small></div>
+    return `<section class="card tq-card loan"><div class="card-h"><span>${Icon('mail')} Kiralık teklifi</span><small class="muted">${o.to - s.season.round + 1} hafta</small></div>
+      <div class="tq-row">${UI.shirt(c)}<b>${U.esc(c.name)}</b><small>${U.esc(C2.lgOf(c).name)} · Güç ${c.rating}</small></div>
       <p class="muted">Bir sezon ${U.esc(c.name)} formasını giyersin. Maaşın aynı kalır, sezon sonunda kulübüne dönersin. İyi oynarsan satın alma opsiyonunu kullanabilirler.</p>
-      <div class="tr-acts"><button class="btn btn-ghost" data-loan="no">Kal ve forma için savaş</button><button class="btn btn-big" data-loan="yes">Kiralık git</button></div></section>`;
+      <div class="tq-acts"><button class="btn btn-ghost" data-loan="no">Kal ve forma için savaş</button><button class="btn btn-big" data-loan="yes">Kiralık git</button></div></section>`;
   },
   accept() {
     const s = Game.state, p = s.player, o = s.loanOffer;

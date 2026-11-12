@@ -136,7 +136,7 @@ Object.assign(Coach, {
     return `<div class="cm-p ${buy ? 'buy' : ''} ${inXi ? 'xi' : ''} ${!Coach.available(p) && !buy ? 'out' : ''}">
       ${buy ? '' : `<button class="cm-x" data-xi="${p.id}" aria-label="İlk 11">${inXi ? '✓' : ''}</button>`}
       <span class="cm-pos ${p.pos}">${CM_POS[p.pos]}</span>
-      <button class="cm-pn" ${buy ? '' : `data-pinfo="${p.id}"`}><b>${U.esc(p.n)}${roles}</b><small>${info}</small>${tags}</button>
+      <button class="cm-pn" ${buy ? '' : `data-pinfo="${p.id}"`}><b><span class="cm-nm">${U.esc(p.n)}</span>${roles}</b><small>${info}</small>${tags}</button>
       ${buy ? '' : `<i class="cm-fit"><i style="width:${p.fit}%;background:${p.fit > 70 ? '#46e08f' : p.fit > 45 ? '#ffcf3f' : '#ff6b6b'}"></i></i><i class="cm-mood ${mood}"></i>`}
       <b class="cm-r">${Coach.ovr(p)}</b>
       ${buy ? `<div class="cm-acts"><span class="cm-pr">${p.free ? 'Bedelsiz' : U.money(p.price)}</span>${p.free ? `<button class="btn cm-buy" data-free="${p.id}">Sözleşme teklif et</button>` : `${p.known === 1 ? '' : `<button class="btn btn-ghost cm-buy" data-watch="${p.id}" ${p.known ? 'disabled' : ''}>${p.known ? 'Gözlemci izliyor' : 'Gözlemle'}</button>`}<button class="btn cm-buy" data-bid="${p.id}">Teklif ver</button>`}</div>` : ''}</div>`;
