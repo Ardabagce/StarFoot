@@ -366,7 +366,7 @@ const Live = {
   end() {
     const L = Live.m;
     if (L.done) return;
-    if (L.match.comp === 'cup' && L.gf === L.ga) {
+    if ((L.match.comp === 'cup' || L.match.ko) && L.gf === L.ga) {
       const st = Live.str();
       const pw = U.clamp(0.5 + (st.att - L.opp.att) / 60 + L.set * 0.03, 0.3, 0.72);
       let a = 0, b = 0;

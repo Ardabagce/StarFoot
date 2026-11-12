@@ -1056,3 +1056,178 @@
 7739|La pression fait partie du métier, on reste calmes.
 7740|Cette pression nous rend encore plus forts.
 7741|Que ce soient nos rivaux qui sentent la pression.
+3324|{} · Semaine {}
+7750|Progression et préparation. L'énergie baisse.
+764|Repos
+7753|L'énergie remonte, les blessés guérissent plus vite.
+7754|Sortie d'équipe
+7755|Renforce l'alchimie et la confiance des joueurs.
+7756|Rencontre avec les fans
+7757|Séance de dédicaces et entraînement ouvert. Soutien en hausse.
+7760|Réunion avec la direction
+7761|Présente ton projet, la confiance grandit.
+7762|Entretien individuel
+7763|Parle aux mécontents, le vestiaire s'apaise.
+7764|Dîner d'équipe
+7765|Blagues et souvenirs autour d'une grande table... L'équipe s'est soudée.
+7768|Soirée bowling
+7769|Le capitaine a fait deux strikes, le vestiaire en parle encore.
+7770|Paintball
+7771|Défenseurs contre attaquants. Tout le monde couvert de peinture, mais quels fous rires.
+7774|Soirée karaoké
+7775|La chanson du gardien est devenue l'hymne de l'équipe.
+7776|Barbecue
+7777|Un barbecue au centre d'entraînement a rapproché jeunes et anciens.
+7778|Sortie en bateau
+7779|Une journée en mer : tout le monde s'est reposé et a décompressé.
+7950|Essaie {} matchs gratuits
+7972|{} Débloquer le pack
+7781|Essai gratuit terminé
+7943|{} Ton club t'attend !
+7910|Tu as joué tes {} matchs gratuits. Ta carrière est sauvegardée : débloque le pack Entraîneur pour reprendre.
+7936|Essai gratuit : {} matchs restants
+7784|Tes matchs gratuits sont terminés
+7973|Emplacement libre {}
+7785|En recherche de poste
+7786|Sans club
+7974|{} Continuer
+7787|Prends les rênes avant d'acheter le pack. Ta carrière est sauvegardée.
+7780|Débloquer le pack
+7790|Débloque le pack pour reprendre ta carrière.
+7791|Tes carrières
+7792|Tactique, schéma et rôles
+7793|Dirige en direct et tire toi-même aux moments clés
+7794|Recrutement, négociation, transferts et budget
+7795|Gagne la confiance des fans, des joueurs et de la direction
+7796|Le mode Entraîneur est nouveau et s'enrichira à chaque mise à jour. On attend tes idées !
+7799| : cette carrière sera définitivement supprimée.
+1639|Enregistrer
+7800|Choisis ton look
+7976|Emplacement {}
+7801|Tous tes emplacements sont pris
+7802|La nouvelle carrière remplacera celle de l'emplacement choisi.
+7955|Entraîneur de {}
+7804|Plus d'actions cette semaine. Place au match !
+7806|Une séance intense. L'équipe est mieux préparée et les jeunes progressent, mais les joueurs sont fatigués.
+7809|Les joueurs se sont reposés. Les blessés guérissent plus vite.
+7812|Tu as posé avec des centaines de fans lors des dédicaces.
+7813|Des milliers de fans ont assisté à l'entraînement ouvert, les tribunes ont chanté.
+7814|Tu as rendu visite au club de supporters, tes mots ont beaucoup circulé.
+7815|Rencontre avec nos supporters aujourd'hui. Ce soutien nous donne de la force !
+7818|Nos tribunes sont notre plus grande force. Merci !
+7820|Le président a écouté ton projet mais veut des résultats.
+7821|Le président est ravi des résultats et soutient pleinement ton projet.
+7822|Tu as présenté ton projet, la direction a écouté attentivement.
+7913|Tu as parlé avec {}. Tu les as écoutés, ils sont rassurés.
+7824|Tu as parlé aux joueurs un par un.
+7825|Alchimie
+7826|Préparation ↑
+7827|Préparation déjà au maximum
+7932|Action de la semaine · {}/3 restantes
+7828|Tu as utilisé tes actions. Place au match !
+7971|{} Ta cote
+7832|Énergie de l'équipe
+7057|Alchimie de l'équipe
+7833|Retour
+7834|⚔️ Attaque
+7835|⚖️ Équilibré
+7836|S'appuie sur la qualité de l'effectif.
+7837|🧱 Défense
+7838|D'abord ne pas encaisser, puis frapper en contre.
+7920|🌍 Le tirage de la {} est tombé ! Nos adversaires en phase de ligue : {}.
+7914|🌍 {} : {}e de la phase de ligue, nous voilà en quarts !
+7923|🌍 {} : {}e de la phase de ligue, nous sommes éliminés.
+7949|🌍 Éliminés de la {} en {}.
+7925|🏆 Vainqueurs de la {} ! Nous sommes au sommet du continent !
+7921|AU SOMMET DU CONTINENT ! {} {}. Ce soir, nous sommes entrés dans l'histoire !
+7966|🌍 {} : vainqueur {}.
+7956|{} · Phase de ligue {}/4
+7843|Vainqueur
+7844|Éliminé en phase de ligue
+7961|Éliminé en {}
+7845|· Ton pays
+7846|Offre de la sélection
+7941|{} La fédération t'appelle !
+7848|Tes succès ont été remarqués. Tu peux diriger la sélection tout en gardant ton club.
+7851|Merci, pas pour l'instant
+7926|🌐 Tu es le nouveau sélectionneur de {} !
+7912|Représenter mon pays... Je dirige {}. Tous ensemble !
+7945|La sélection de {} est à toi !
+7924|🌐 Trêve internationale : {} joue 2 matchs de qualification.
+7853|Choisis le plan de jeu :
+7854|gagné
+7970|Tirs au but : {}
+7855|Tout le pays est dans la rue, les félicitations affluent !
+7856|Ton plan a parfaitement fonctionné.
+7857|Les joueurs ont salué les tribunes avant de quitter la pelouse.
+7858|Un point dans un match difficile.
+7859|On aurait pu gagner, mais l'engagement était bon.
+2041|Les supporters sont déçus.
+7860|La presse remet en cause tes choix.
+7861|Nous devons tirer les leçons de cette défaite.
+7937|Sélection · Qualification {}/4
+7916|🌐 La fédération t'a limogé de la sélection de {}.
+7862|Sélection
+7863|La fédération t'a limogé
+7864|Après de mauvais résultats, ta mission en sélection est terminée. Tu restes en club.
+7953|🌐 {} ne s'est pas qualifié pour le {}.
+7867|Nous ne sommes pas qualifiés
+7911|Pas assez de points en qualifications ({} points). La fédération s'impatiente.
+7942|🏆 Nous avons gagné le {} avec {} !
+7919|AU SOMMET DU MONDE ! {} {}. Pour notre pays !
+7871|🏆 Champions !
+7963|{} · Match de groupe {}/3
+7931|Avec {} points, nous sommes éliminés en phase de groupes.
+7938|🌐 {} : sortis des groupes ({} points) !
+7957|Nous sommes éliminés en {}.
+7873|Tout le pays fait la fête ! Tu as mené la sélection au sommet.
+7876|🏆 Vainqueur
+7877|Éliminés
+7935|Phase de ligue · {}e · {} pts
+7948|Prochain match : semaine {}
+7975|Classement {}
+7968|· Fin de saison : {}
+7878|Les matchs internationaux t'attendent !
+7954|Trêve internationale : semaine {}
+7969|Sélection de {}
+7947|Qualifications : {} matchs · {} pts{}
+7964|{} Jouer avec la sélection
+7944|{} Coupes et sélection
+7882|Les 8 premiers vont en quarts.
+7883|Entraîneur : 3 carrières
+7884|Trois carrières d'entraîneur, un nouvel écran d'accueil et le choix du look dès la création.
+7885|Coupes d'Europe et sélection
+7886|Finis haut pour jouer la Coupe des Champions. Si tu réussis, la sélection t'appellera.
+7889|Fans, joueurs et direction
+7890|Suis ta cote. 3 actions par semaine : entraînement, repos, sorties d'équipe et plus.
+7893|Réseaux sociaux de l'entraîneur
+7894|Des posts photo des matchs, titres et recrues.
+7895|Essaie 3 matchs gratuits
+7896|Prends ton équipe en main avant d'acheter le pack Entraîneur.
+7897|Mode Entraîneur
+7898|Prends un club en main : effectif, tactique, matchs en direct, transferts et presse.
+7899|Années d'école et amis
+7900|Examens, bulletins, Intelligence ; des amis à l'école, au quartier et dans l'équipe.
+7901|Demandes de transfert, personnalité, prêts
+7902|Demande à rejoindre le club de ton choix ; ta personnalité évolue selon ton comportement.
+7903|Tout en un seul achat.
+7904|Historique des mises à jour
+7905|Nouveautés 🚀
+7906|Cette mise à jour
+7907|Le mode Entraîneur est tout nouveau et s'enrichira à chaque mise à jour. Envoie-nous tes idées !
+7909|Mise à jour précédente
+7922|Le tirage de la {} est tombé ! Nos adversaires en phase de ligue : {}.
+7915|{} : {}e de la phase de ligue, nous voilà en quarts !
+7927|{} : {}e de la phase de ligue, nous sommes éliminés.
+7952|Éliminés de la {} en {}.
+7929|Vainqueurs de la {} ! Nous sommes au sommet du continent !
+7930|Tu es le nouveau sélectionneur de {} !
+7928|Trêve internationale : {} joue 2 matchs de qualification.
+7918|La fédération t'a limogé de la sélection de {}.
+7960|{} ne s'est pas qualifié pour le {}.
+7946|Nous avons gagné le {} avec {} !
+7872|Champions !
+7940|{} : sortis des groupes ({} points) !
+7977|Ton pays
+7979|{} Ouvrir Entraîneur
+7980|Compose ton effectif, choisis ta tactique et dirige le match en direct depuis le banc.

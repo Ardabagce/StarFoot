@@ -608,9 +608,9 @@ document.addEventListener('click', (e) => {
 });
 
 // ---------- Güncelleme duyurusu (her sürümde bir kez) ----------
-const APP_VER = '1.0.19';
+const APP_VER = '1.0.20';
 // Duyuru içeriğinin sürümü: yeni duyuru yazılınca güncellenir (yalnız sürüm atlamak tekrar göstermez)
-const WN_VER = '1.0.15';
+const WN_VER = '1.0.20';
 const WhatsNew = {
   KEY: 'starfoot_whatsnew',
   // Hub'a girişte bir kez gösterir; gösterdiyse true döner. done(): pencere kapanınca çalışır.
@@ -618,27 +618,40 @@ const WhatsNew = {
     let seen = '';
     try { seen = localStorage.getItem(WhatsNew.KEY) || ''; } catch (e) { return false; }
     if (seen === WN_VER || (Game.state && Game.state.seasonEnd)) return false;
+    // 1.0.20 notları Teknik Direktör modunu anlatır: mod kapalıysa (web) gösterilmez
+    if (typeof Coach !== 'undefined' && Coach.enabled && !Coach.enabled()) return false;
     if (!document.getElementById('modal').classList.contains('hidden')) return false;
     try { localStorage.setItem(WhatsNew.KEY, WN_VER); } catch (e) { /* yok */ }
     WhatsNew.show(done);
     return true;
   },
-  // Duyuruyu gösterir (Ayarlar'dan yeniden açılabilir)
+  // Duyuruyu gösterir (Ayarlar'dan yeniden açılabilir): bu ve bir önceki güncelleme, geçmiş gibi
   show(done) {
-    // 1.0.15 duyurusu: StarFeed, maaş artışı, StarDeğer
-    const it = (ic, t, d) => `<li><i>${ic}</i><span><b>${t}</b><small>${d}</small></span></li>`;
-    const list = [
-      it('⭐', 'StarFeed', 'Oyun içi sosyal medyan yenilendi: kendi adı, yeni tasarımı ve yıldız rozetleri.'),
-      it('💼', 'Maaş artışı iste', 'İyi oynuyorsan kulübünden sezonda bir kez zam iste. Fazla istersen reddedilebilirsin!'),
-      it('📈', 'StarDeğer', 'Piyasa değerin, kariyer grafiğin, dünyanın en değerlileri ve transfer söylentileri.'),
+    const it = (ic, t, d) => `<li><i data-emo>${ic}</i><span><b>${t}</b><small>${d}</small></span></li>`;
+    const v20 = [
+      it('🎽', 'Teknik Direktör: 3 kariyer', 'Üç ayrı teknik direktör kariyeri, yeni giriş ekranı ve oluştururken dış görünüş seçimi.'),
+      it('🌍', 'Avrupa kupaları ve milli takım', 'Ligde üst sıralara oyna, Şampiyonlar Kupası’na katıl. Başarılı olursan milli takımdan teklif gelir.'),
+      it('📈', 'Taraftar, oyuncular ve yönetim', 'Sana bakışlarını barlardan izle. Haftada 3 aksiyon: antrenman, dinlenme, takım etkinliği ve daha fazlası.'),
+      it('📸', 'Hocanın sosyal medyası', 'Maçlardan, kupalardan ve transferlerden fotoğraflı paylaşımlar.'),
+      it('🎁', '3 maç ücretsiz dene', 'Teknik Direktör paketini almadan önce takımının başına geç.'),
+    ].join('');
+    const v19 = [
+      it('📋', 'Teknik Direktör modu', 'Kulübün başına geç: kadro, taktik, canlı maç, transfer ve basın.'),
+      it('🎒', 'Okul yılları ve arkadaşlar', 'Sınavlar, karne, Zeka puanı; okulda, mahallede ve takımda arkadaşlar.'),
+      it('🔁', 'Transfer talebi, kişilik, kiralık', 'İstediğin kulübe talep gönder; kişiliğin davranışlarınla değişir.'),
+      it('💎', 'StarFoot Diamond', 'Her şey dahil tek satın alma.'),
     ].join('');
     const has = typeof Star !== 'undefined' && Star.has && Star.has();
     const end = () => { if (done) setTimeout(done, 300); };
     const btns = [{ t: 'Tamam', cls: 'btn-ghost', fn: end }];
-    if (typeof Market !== 'undefined' && Game.state && !Game.inStreet()) btns.push({ t: `${Icon('coin')} StarDeğer'i aç`, cls: 'btn-big', fn: () => { end(); setTimeout(() => Market.open(), 120); } });
-    Game.modal(`<div class="wn"><div class="ev-tag">Yeni güncelleme · ${WN_VER}</div>
-      <h2>Kariyerinde yeni dönem! 🚀</h2>
-      <ul class="wn-l">${list}</ul><p class="wn-note ok">İyi oyunlar!</p></div>`, btns, { wide: true });
+    if (typeof Coach !== 'undefined' && Coach.enabled && Coach.enabled()) btns.push({ t: `${Icon('whistle')} Teknik Direktör'ü aç`, cls: 'btn-big', fn: () => { end(); setTimeout(() => Coach.menu(), 120); } });
+    Game.modal(`<div class="wn"><div class="ev-tag">Güncelleme geçmişi</div>
+      <h2>Yenilikler 🚀</h2>
+      <div class="wn-v"><b>${WN_VER}</b><small>Bu güncelleme</small></div>
+      <ul class="wn-l">${v20}</ul>
+      <p class="wn-note ok">Teknik Direktör modu yepyeni bir fikir ve her güncellemede gelişmeye devam edecek. Fikirlerini bekliyoruz!</p>
+      <div class="wn-v old"><b>1.0.19</b><small>Önceki güncelleme</small></div>
+      <ul class="wn-l old">${v19}</ul></div>`, btns, { wide: true });
     if (typeof Premium !== 'undefined') Premium.track('whatsnew_view', { ver: WN_VER, premium: has ? 1 : 0 });
   },
 };

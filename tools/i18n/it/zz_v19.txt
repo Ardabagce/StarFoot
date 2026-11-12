@@ -1056,3 +1056,178 @@
 7739|La pressione fa parte del lavoro, restiamo calmi.
 7740|Questa pressione ci rende ancora più forti.
 7741|La vera pressione la sentano i nostri rivali.
+3324|{} · Giornata {}
+7750|Crescita e preparazione. L'energia cala.
+764|Riposo
+7753|L'energia torna, gli infortuni guariscono prima.
+7754|Evento di squadra
+7755|Aumenta l'intesa e la fiducia dei giocatori.
+7756|Incontro con i tifosi
+7757|Autografi e allenamento aperto. Più sostegno.
+7760|Riunione con la dirigenza
+7761|Presenta il progetto, cresce la fiducia.
+7762|Colloquio individuale
+7763|Parla con gli scontenti, lo spogliatoio si calma.
+7764|Cena di squadra
+7765|Battute e ricordi a una lunga tavolata... La squadra si è unita.
+7768|Serata al bowling
+7769|Il capitano ha fatto due strike, lo spogliatoio ne parla ancora.
+7770|Paintball
+7771|Difensori contro attaccanti. Tutti pieni di vernice, ma tante risate.
+7774|Serata karaoke
+7775|La canzone del portiere è il nuovo inno della squadra.
+7776|Grigliata
+7777|Una grigliata al centro sportivo ha unito giovani e veterani.
+7778|Gita in barca
+7779|Una giornata al mare: tutti si sono riposati e rilassati.
+7950|Prova {} partite gratis
+7972|{} Sblocca pacchetto
+7781|Prova gratuita finita
+7943|{} Il tuo club ti aspetta!
+7910|Hai giocato le tue {} partite gratis. La carriera è salvata: sblocca il pacchetto Allenatore e riprendi.
+7936|Prova gratuita: {} partite rimaste
+7784|Le partite gratuite sono finite
+7973|Slot libero {}
+7785|In cerca di panchina
+7786|Senza squadra
+7974|{} Continua
+7787|Guida la squadra prima di comprare il pacchetto. La carriera viene salvata.
+7780|Sblocca pacchetto
+7790|Sblocca il pacchetto e riprendi la carriera.
+7791|Le tue carriere
+7792|Tattica, modulo e ruoli
+7793|Dirigi dal vivo e calcia tu nei momenti chiave
+7794|Osservatori, trattative, mercato e budget
+7795|Conquista tifosi, giocatori e dirigenza
+7796|La modalità Allenatore è nuova e crescerà a ogni aggiornamento. Aspettiamo le tue idee!
+7799|: questa carriera verrà eliminata per sempre.
+1639|Salva
+7800|Scegli il tuo aspetto
+7976|Slot {}
+7801|Tutti gli slot sono pieni
+7802|La nuova carriera sostituirà quella dello slot scelto.
+7955|Allenatore del {}
+7804|Niente più azioni questa settimana. Si gioca!
+7806|Un allenamento intenso. La squadra è più pronta e i giovani migliorano, ma sono stanchi.
+7809|I giocatori si sono riposati. Gli infortunati guariscono prima.
+7812|Hai fatto foto con centinaia di tifosi agli autografi.
+7813|Migliaia hanno visto l'allenamento aperto, gli spalti hanno cantato.
+7814|Hai visitato il club dei tifosi, le tue parole sono state molto condivise.
+7815|Oggi abbiamo incontrato i nostri tifosi. Questo sostegno ci dà forza!
+7818|I nostri spalti sono la nostra forza più grande. Grazie!
+7820|Il presidente ha ascoltato il progetto ma vuole risultati.
+7821|Il presidente è entusiasta dei risultati e sostiene il progetto.
+7822|Hai presentato il progetto e la dirigenza ha ascoltato attenta.
+7913|Hai parlato con {}. Li hai ascoltati e ora sono più sereni.
+7824|Hai parlato con i giocatori uno per uno.
+7825|Intesa
+7826|Preparazione ↑
+7827|Preparazione già al massimo
+7932|Azione settimanale · {}/3 rimaste
+7828|Hai usato le azioni della settimana. Ora la partita!
+7971|{} Come ti vedono
+7832|Energia squadra
+7057|Intesa di squadra
+7833|Indietro
+7834|⚔️ Attacco
+7835|⚖️ Equilibrato
+7836|Si affida alla qualità della rosa.
+7837|🧱 Difesa
+7838|Prima non subire, poi colpire in contropiede.
+7920|🌍 Sorteggio della {}! Avversari nella fase campionato: {}.
+7914|🌍 {}: {}° nella fase campionato, siamo ai quarti!
+7923|🌍 {}: {}° nella fase campionato, siamo eliminati.
+7949|🌍 Eliminati dalla {} ai {}.
+7925|🏆 Campioni della {}! Siamo i migliori del continente!
+7921|IN CIMA AL CONTINENTE! {} {}. Stanotte abbiamo fatto la storia!
+7966|🌍 {}: vince {}.
+7956|{} · Fase campionato {}/4
+7843|Campione
+7844|Eliminato nella fase campionato
+7961|Eliminato ai {}
+7845|· Il tuo paese
+7846|Offerta della nazionale
+7941|{} La federazione ti chiama!
+7848|I tuoi successi sono stati notati. Puoi guidare la nazionale restando al club.
+7851|Grazie, per ora no
+7926|🌐 Sei il nuovo ct di {}!
+7912|Rappresentare il mio paese... Guido {}. Tutti insieme!
+7945|La nazionale di {} è tua!
+7924|🌐 Sosta per le nazionali: {} gioca 2 qualificazioni.
+7853|Scegli il piano partita:
+7854|vinto
+7970|Rigori: {}
+7855|Il paese è in strada, piovono i complimenti!
+7856|Il tuo piano ha funzionato alla perfezione.
+7857|I giocatori hanno salutato gli spalti prima di uscire.
+7858|Un punto da una partita difficile.
+7859|Potevamo vincere, ma l'impegno c'era.
+2041|I tifosi sono delusi.
+7860|La stampa critica le tue scelte.
+7861|Dobbiamo imparare da questa sconfitta.
+7937|Nazionale · Qualificazione {}/4
+7916|🌐 La federazione ti ha esonerato dalla nazionale di {}.
+7862|Nazionale
+7863|La federazione ti ha esonerato
+7864|Dopo i cattivi risultati è finita in nazionale. Resti al club.
+7953|🌐 {} non si è qualificata per il {}.
+7867|Non ci siamo qualificati
+7911|Pochi punti nelle qualificazioni ({} punti). La federazione è impaziente.
+7942|🏆 Campioni del {} con {}!
+7919|IN CIMA AL MONDO! {} {}. Per il nostro paese!
+7871|🏆 Campioni!
+7963|{} · Partita del girone {}/3
+7931|Con {} punti siamo usciti nel girone.
+7938|🌐 {}: superato il girone ({} punti)!
+7957|Siamo usciti ai {}.
+7873|Tutto il paese in festa! Hai portato la nazionale in cima.
+7876|🏆 Campione
+7877|Eliminati
+7935|Fase campionato · {}° · {} pt
+7948|Prossima partita: giornata {}
+7975|Classifica {}
+7968|· Fine stagione: {}
+7878|Le partite della nazionale ti aspettano!
+7954|Sosta nazionali: giornata {}
+7969|Nazionale di {}
+7947|Qualificazioni: {} partite · {} pt{}
+7964|{} Gioca con la nazionale
+7944|{} Coppe e nazionale
+7882|Le prime 8 vanno ai quarti.
+7883|Allenatore: 3 carriere
+7884|Tre carriere da allenatore, nuova schermata iniziale e scelta dell'aspetto alla creazione.
+7885|Coppe europee e nazionale
+7886|Chiudi in alto e gioca la Coppa dei Campioni. Se vinci, chiamerà la nazionale.
+7889|Tifosi, giocatori e dirigenza
+7890|Segui come ti vedono. 3 azioni a settimana: allenamento, riposo, eventi di squadra e altro.
+7893|Social dell'allenatore
+7894|Post con foto di partite, trofei e acquisti.
+7895|Prova 3 partite gratis
+7896|Guida la squadra prima di comprare il pacchetto Allenatore.
+7897|Modalità Allenatore
+7898|Guida un club: rosa, tattica, partite dal vivo, mercato e stampa.
+7899|Anni di scuola e amici
+7900|Esami, pagelle, Intelligenza; amici a scuola, nel quartiere e in squadra.
+7901|Richieste di cessione, personalità, prestiti
+7902|Chiedi di andare in qualsiasi club; la personalità cambia con il tuo comportamento.
+7903|Tutto in un solo acquisto.
+7904|Cronologia aggiornamenti
+7905|Novità 🚀
+7906|Questo aggiornamento
+7907|La modalità Allenatore è nuovissima e crescerà a ogni aggiornamento. Mandaci le tue idee!
+7909|Aggiornamento precedente
+7922|Sorteggio della {}! Avversari nella fase campionato: {}.
+7915|{}: {}° nella fase campionato, siamo ai quarti!
+7927|{}: {}° nella fase campionato, siamo eliminati.
+7952|Eliminati dalla {} ai {}.
+7929|Campioni della {}! Siamo i migliori del continente!
+7930|Sei il nuovo ct di {}!
+7928|Sosta per le nazionali: {} gioca 2 qualificazioni.
+7918|La federazione ti ha esonerato dalla nazionale di {}.
+7960|{} non si è qualificata per il {}.
+7946|Campioni del {} con {}!
+7872|Campioni!
+7940|{}: superato il girone ({} punti)!
+7977|Il tuo paese
+7979|{} Apri Allenatore
+7980|Costruisci la rosa, scegli la tattica e dirigi la partita dalla panchina.

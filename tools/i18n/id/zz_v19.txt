@@ -1056,3 +1056,178 @@
 7739|Tekanan bagian dari pekerjaan, kami tetap tenang.
 7740|Tekanan ini membuat kami makin kuat.
 7741|Biar rival kami yang merasakan tekanan.
+3324|{} · Pekan {}
+7750|Perkembangan dan persiapan laga. Energi turun.
+764|Istirahat
+7753|Energi pulih, cedera sembuh lebih cepat.
+7754|Acara tim
+7755|Chemistry dan kepercayaan pemain naik.
+7756|Temu fans
+7757|Hari tanda tangan dan latihan terbuka. Dukungan fans naik.
+7760|Rapat dengan manajemen
+7761|Jelaskan proyekmu, kepercayaan manajemen naik.
+7762|Obrolan empat mata
+7763|Ajak bicara pemain yang kecewa, ruang ganti tenang.
+7764|Makan malam tim
+7765|Canda dan cerita di meja panjang... Tim makin kompak.
+7768|Malam bowling
+7769|Kapten mencetak dua strike, ruang ganti masih membicarakannya.
+7770|Paintball
+7771|Bek lawan penyerang. Semua belepotan cat tapi banyak tertawa.
+7774|Malam karaoke
+7775|Lagu kiper jadi lagu kebangsaan baru tim.
+7776|Pesta barbekyu
+7777|Barbekyu di tempat latihan menyatukan pemain muda dan senior.
+7778|Tur perahu
+7779|Sehari di tepi laut: semua beristirahat dan melepas penat.
+7950|Coba {} laga gratis
+7972|{} Buka paket
+7781|Uji coba gratis selesai
+7943|{} Klubmu menunggu!
+7910|Kamu sudah memainkan {} laga gratis. Kariermu tersimpan: buka paket Pelatih untuk melanjutkan.
+7936|Uji coba: sisa {} laga
+7784|Laga gratismu sudah habis
+7973|Slot kosong {}
+7785|Mencari pekerjaan
+7786|Tanpa klub
+7974|{} Lanjut
+7787|Pimpin timmu sebelum membeli paket. Kariermu tersimpan.
+7780|Buka paket
+7790|Buka paket untuk melanjutkan kariermu.
+7791|Kariermu
+7792|Taktik, formasi, dan peran pemain
+7793|Pimpin langsung dan tendang sendiri di momen penting
+7794|Pemandu bakat, negosiasi, transfer, dan anggaran
+7795|Raih hati fans, pemain, dan manajemen
+7796|Mode Pelatih masih baru dan akan terus berkembang tiap pembaruan. Kami tunggu idemu!
+7799|: karier ini akan dihapus permanen.
+1639|Simpan
+7800|Pilih penampilanmu
+7976|Slot {}
+7801|Semua slot kariermu penuh
+7802|Karier baru akan menggantikan karier di slot yang kamu pilih.
+7955|Pelatih {}
+7804|Jatah aksi minggu ini habis. Saatnya bertanding!
+7806|Latihan berat. Tim lebih siap dan pemain muda berkembang, tapi para pemain lelah.
+7809|Para pemain beristirahat dan pulih. Yang cedera sembuh lebih cepat.
+7812|Kamu berfoto dengan ratusan fans di hari tanda tangan.
+7813|Ribuan fans menonton latihan terbuka, tribun bergemuruh dengan nyanyian.
+7814|Kamu mengunjungi klub suporter, ucapanmu banyak dibagikan di media sosial.
+7815|Hari ini kami bertemu fans. Dukungan ini memberi kami kekuatan!
+7818|Tribun kami adalah kekuatan terbesar kami. Terima kasih!
+7820|Presiden mendengarkan rencanamu tapi ingin melihat hasil.
+7821|Presiden sangat puas dengan hasil terakhir dan mendukung penuh proyekmu.
+7822|Kamu memaparkan rencanamu dan manajemen mendengarkan dengan saksama.
+7913|Kamu berbicara dengan {}. Kamu mendengarkan mereka dan mereka lega.
+7824|Kamu berbicara dengan pemain satu per satu.
+7825|Chemistry
+7826|Persiapan laga ↑
+7827|Persiapan sudah maksimal
+7932|Aksi mingguan · sisa {}/3
+7828|Jatah aksi minggu ini sudah terpakai. Saatnya laga!
+7971|{} Pandangan mereka
+7832|Energi tim
+7057|Chemistry tim
+7833|Kembali
+7834|⚔️ Menyerang
+7835|⚖️ Seimbang
+7836|Mengandalkan kualitas skuad.
+7837|🧱 Bertahan
+7838|Jangan kebobolan dulu, lalu serang balik.
+7920|🌍 Undian {} sudah keluar! Lawan fase liga kami: {}.
+7914|🌍 {}: kami finis di posisi {} fase liga dan lolos ke perempat final!
+7923|🌍 {}: kami finis di posisi {} fase liga dan tersingkir.
+7949|🌍 Tersingkir dari {} di babak {}.
+7925|🏆 Juara {}! Kami terbaik di benua ini!
+7921|PUNCAK BENUA! {} {}. Malam ini kami cetak sejarah!
+7966|🌍 {}: juaranya {}.
+7956|{} · Fase liga {}/4
+7843|Juara
+7844|Tersingkir di fase liga
+7961|Tersingkir di babak {}
+7845|· Negaramu
+7846|Tawaran timnas
+7941|{} Federasi menghubungimu!
+7848|Prestasimu menarik perhatian. Kamu bisa melatih timnas sambil tetap di klub.
+7851|Terima kasih, nanti saja
+7926|🌐 Kamu kini pelatih timnas {}!
+7912|Mewakili negaraku... Kini aku melatih {}. Bersama!
+7945|Timnas {} kini milikmu!
+7924|🌐 Jeda internasional: {} memainkan 2 laga kualifikasi.
+7853|Pilih rencana pertandingan:
+7854|menang
+7970|Adu penalti: {}
+7855|Seluruh negeri turun ke jalan, ucapan selamat membanjir!
+7856|Rencanamu berjalan sempurna.
+7857|Para pemain memberi hormat ke tribun sebelum meninggalkan lapangan.
+7858|Satu poin dari laga sulit.
+7859|Kami bisa menang, tapi perjuangannya bagus.
+2041|Fans kecewa.
+7860|Media mempertanyakan pilihan skuadmu.
+7861|Kami harus belajar dari kekalahan ini.
+7937|Timnas · Kualifikasi {}/4
+7916|🌐 Federasi memecatmu dari timnas {}.
+7862|Timnas
+7863|Federasi memberhentikanmu
+7864|Setelah hasil buruk, tugasmu di timnas berakhir. Kamu tetap di klub.
+7953|🌐 {} gagal lolos ke {}.
+7867|Kami gagal lolos
+7911|Poin kualifikasi kami kurang ({} poin). Federasi mulai tidak sabar.
+7942|🏆 Juara {} bersama {}!
+7919|PUNCAK DUNIA! {} {}. Untuk negeri kami!
+7871|🏆 Juara!
+7963|{} · Laga grup {}/3
+7931|Kami meraih {} poin di grup dan tersingkir.
+7938|🌐 {}: lolos dari grup ({} poin)!
+7957|Kami tersingkir di babak {}.
+7873|Seluruh negeri berpesta! Kamu membawa timnas ke puncak.
+7876|🏆 Juara
+7877|Tersingkir
+7935|Fase liga · posisi {} · {} poin
+7948|Laga berikutnya: pekan {}
+7975|Klasemen {}
+7968|· Akhir musim: {}
+7878|Laga timnas menunggumu!
+7954|Jeda internasional: pekan {}
+7969|Timnas {}
+7947|Kualifikasi: {} laga · {} poin{}
+7964|{} Main untuk timnas
+7944|{} Piala dan timnas
+7882|8 teratas lolos ke perempat final.
+7883|Pelatih: 3 karier
+7884|Tiga karier pelatih terpisah, layar awal baru, dan pilih penampilan saat membuat.
+7885|Piala Eropa dan timnas
+7886|Finis di papan atas dan main di Piala Champions. Jika sukses, timnas akan memanggil.
+7889|Fans, pemain, dan manajemen
+7890|Pantau pandangan mereka. 3 aksi per minggu: latihan, istirahat, acara tim, dan lainnya.
+7893|Media sosial pelatih
+7894|Unggahan foto dari laga, trofi, dan transfer.
+7895|Coba 3 laga gratis
+7896|Pimpin timmu sebelum membeli paket Pelatih.
+7897|Mode Pelatih
+7898|Pimpin klub: skuad, taktik, laga langsung, transfer, dan media.
+7899|Masa sekolah dan teman
+7900|Ujian, rapor, Kecerdasan; teman di sekolah, lingkungan, dan tim.
+7901|Permintaan transfer, kepribadian, pinjaman
+7902|Ajukan pindah ke klub mana pun; kepribadianmu berubah sesuai perilakumu.
+7903|Semua dalam satu pembelian.
+7904|Riwayat pembaruan
+7905|Yang baru 🚀
+7906|Pembaruan ini
+7907|Mode Pelatih adalah ide baru dan akan terus berkembang tiap pembaruan. Kirim idemu!
+7909|Pembaruan sebelumnya
+7922|Undian {} sudah keluar! Lawan fase liga kami: {}.
+7915|{}: kami finis di posisi {} fase liga dan lolos ke perempat final!
+7927|{}: kami finis di posisi {} fase liga dan tersingkir.
+7952|Tersingkir dari {} di babak {}.
+7929|Juara {}! Kami terbaik di benua ini!
+7930|Kamu kini pelatih timnas {}!
+7928|Jeda internasional: {} memainkan 2 laga kualifikasi.
+7918|Federasi memecatmu dari timnas {}.
+7960|{} gagal lolos ke {}.
+7946|Juara {} bersama {}!
+7872|Juara!
+7940|{}: lolos dari grup ({} poin)!
+7977|Negaramu
+7979|{} Buka Pelatih
+7980|Bangun skuad, pilih taktik, dan pimpin laga langsung dari pinggir lapangan.

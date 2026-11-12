@@ -1056,3 +1056,178 @@
 7739|Pressão faz parte; seguimos calmos.
 7740|Essa pressão nos deixa ainda mais fortes.
 7741|Quem tem que sentir pressão são os rivais.
+3324|{} · Semana {}
+7750|Evolução e preparação. A energia cai.
+764|Descanso
+7753|A energia volta e as lesões saram mais rápido.
+7754|Atividade de equipe
+7755|Aumenta a química e a confiança dos jogadores.
+7756|Encontro com a torcida
+7757|Sessão de autógrafos e treino aberto. Mais apoio.
+7760|Reunião com a diretoria
+7761|Apresente seu projeto e ganhe confiança.
+7762|Conversa individual
+7763|Converse com os insatisfeitos e o vestiário acalma.
+7764|Jantar da equipe
+7765|Piadas e histórias numa mesa comprida... O time se uniu.
+7768|Noite de boliche
+7769|O capitão fez dois strikes e o vestiário ainda comenta.
+7770|Paintball
+7771|Defensores contra atacantes. Todos sujos de tinta, mas riram muito.
+7774|Noite de karaokê
+7775|A música do goleiro virou o novo hino do time.
+7776|Churrasco
+7777|Um churrasco no CT uniu jovens e veteranos.
+7778|Passeio de barco
+7779|Um dia no mar: todos descansaram e relaxaram.
+7950|Teste {} jogos grátis
+7972|{} Desbloquear pacote
+7781|Teste grátis encerrado
+7943|{} Seu clube espera por você!
+7910|Você jogou seus {} jogos grátis. Sua carreira está salva: desbloqueie o pacote Técnico e continue de onde parou.
+7936|Teste grátis: faltam {} jogos
+7784|Seus jogos grátis acabaram
+7973|Espaço livre {}
+7785|Procurando emprego
+7786|Sem clube
+7974|{} Continuar
+7787|Comande o time antes de comprar o pacote. A carreira fica salva.
+7780|Desbloquear pacote
+7790|Desbloqueie o pacote e continue a carreira de onde parou.
+7791|Suas carreiras
+7792|Tática, formação e funções
+7793|Comande ao vivo e chute você nos lances decisivos
+7794|Olheiros, negociação, transferências e orçamento
+7795|Conquiste torcida, jogadores e diretoria
+7796|O modo Técnico é novo e vai crescer a cada atualização. Mande suas ideias!
+7799|: esta carreira será apagada para sempre.
+1639|Salvar
+7800|Escolha seu visual
+7976|Espaço {}
+7801|Todos os espaços estão ocupados
+7802|A nova carreira substituirá a do espaço escolhido.
+7955|Técnico do {}
+7804|Sem ações nesta semana. Hora do jogo!
+7806|Um treino puxado. O time está mais preparado e os jovens evoluíram, mas estão cansados.
+7809|Os jogadores descansaram. Os lesionados se recuperam mais rápido.
+7812|Você tirou fotos com centenas de torcedores na sessão de autógrafos.
+7813|Milhares viram o treino aberto e a arquibancada cantou sem parar.
+7814|Você visitou a torcida organizada e suas palavras viralizaram.
+7815|Hoje encontramos nossa torcida. Esse apoio nos dá força!
+7818|Nossa torcida é nossa maior força. Obrigado!
+7820|O presidente ouviu seu projeto, mas quer resultados.
+7821|O presidente adorou os resultados e apoia seu projeto.
+7822|Você apresentou o projeto e a diretoria ouviu com atenção.
+7913|Você conversou com {}. Ouviu as expectativas e eles ficaram tranquilos.
+7824|Você conversou com os jogadores um a um.
+7825|Química
+7826|Preparação ↑
+7827|Preparação já no máximo
+7932|Ação da semana · restam {}/3
+7828|Você usou as ações da semana. Agora é o jogo!
+7971|{} Como te veem
+7832|Energia do time
+7057|Química do time
+7833|Voltar
+7834|⚔️ Ataque
+7835|⚖️ Equilibrado
+7836|Confia na qualidade do elenco.
+7837|🧱 Defesa
+7838|Primeiro não sofrer gol, depois atacar no contra-ataque.
+7920|🌍 Sorteio da {}! Adversários na fase de liga: {}.
+7914|🌍 {}: terminamos em {}º na fase de liga e fomos às quartas!
+7923|🌍 {}: terminamos em {}º na fase de liga e fomos eliminados.
+7949|🌍 Eliminados da {} nas {}.
+7925|🏆 Campeões da {}! Somos os melhores do continente!
+7921|NO TOPO DO CONTINENTE! {} {}. Hoje fizemos história!
+7966|🌍 {}: campeão {}.
+7956|{} · Fase de liga {}/4
+7843|Campeão
+7844|Eliminado na fase de liga
+7961|Eliminado nas {}
+7845|· Seu país
+7846|Proposta da seleção
+7941|{} A federação está ligando!
+7848|Seu sucesso chamou atenção. Você pode comandar a seleção sem deixar o clube.
+7851|Obrigado, agora não
+7926|🌐 Você é o novo técnico da seleção de {}!
+7912|Representar meu país... Estou no comando de {}. Juntos!
+7945|A seleção de {} é sua!
+7924|🌐 Data FIFA: {} joga 2 jogos das eliminatórias.
+7853|Escolha o plano de jogo:
+7854|vencemos
+7970|Pênaltis: {}
+7855|O país foi às ruas e as mensagens de parabéns não param!
+7856|Seu plano funcionou perfeitamente.
+7857|Os jogadores saudaram a torcida antes de deixar o campo.
+7858|Um ponto num jogo difícil.
+7859|Podíamos ter vencido, mas a luta foi boa.
+2041|A torcida está decepcionada.
+7860|A imprensa questiona suas escolhas.
+7861|Precisamos aprender com esta derrota.
+7937|Seleção · Eliminatórias {}/4
+7916|🌐 A federação demitiu você da seleção de {}.
+7862|Seleção
+7863|A federação dispensou você
+7864|Após resultados ruins, seu trabalho na seleção acabou. Você segue no clube.
+7953|🌐 {} não se classificou para o {}.
+7867|Não nos classificamos
+7911|Não somamos pontos suficientes nas eliminatórias ({} pontos). A federação está impaciente.
+7942|🏆 Campeões do {} com {}!
+7919|NO TOPO DO MUNDO! {} {}. Para o nosso país!
+7871|🏆 Campeões!
+7963|{} · Jogo de grupo {}/3
+7931|Fizemos {} pontos no grupo e caímos.
+7938|🌐 {}: passamos do grupo ({} pontos)!
+7957|Caímos nas {}.
+7873|O país inteiro nas ruas! Você levou a seleção ao topo.
+7876|🏆 Campeão
+7877|Eliminados
+7935|Fase de liga · {}º · {} pts
+7948|Próximo jogo: semana {}
+7975|Tabela {}
+7968|· Fim de temporada: {}
+7878|Os jogos da seleção esperam por você!
+7954|Data FIFA: semana {}
+7969|Seleção de {}
+7947|Eliminatórias: {} jogos · {} pts{}
+7964|{} Jogar pela seleção
+7944|{} Copas e seleção
+7882|Os 8 primeiros vão às quartas.
+7883|Técnico: 3 carreiras
+7884|Três carreiras de técnico, nova tela inicial e escolha do visual na criação.
+7885|Copas europeias e seleção
+7886|Termine no alto e dispute a Copa dos Campeões. Com sucesso, a seleção vai chamar.
+7889|Torcida, jogadores e diretoria
+7890|Acompanhe como te veem. 3 ações por semana: treino, descanso, atividades de equipe e mais.
+7893|Redes sociais do técnico
+7894|Posts com fotos de jogos, títulos e contratações.
+7895|Teste 3 jogos grátis
+7896|Comande seu time antes de comprar o pacote Técnico.
+7897|Modo Técnico
+7898|Assuma um clube: elenco, tática, jogos ao vivo, transferências e imprensa.
+7899|Anos de escola e amigos
+7900|Provas, boletim, Inteligência; amigos na escola, no bairro e no time.
+7901|Pedidos de transferência, personalidade, empréstimos
+7902|Peça para ir a qualquer clube; sua personalidade muda com suas atitudes.
+7903|Tudo em uma compra só.
+7904|Histórico de atualizações
+7905|Novidades 🚀
+7906|Esta atualização
+7907|O modo Técnico é uma ideia nova e vai crescer a cada atualização. Mande suas ideias!
+7909|Atualização anterior
+7922|Sorteio da {}! Adversários na fase de liga: {}.
+7915|{}: terminamos em {}º na fase de liga e fomos às quartas!
+7927|{}: terminamos em {}º na fase de liga e fomos eliminados.
+7952|Eliminados da {} nas {}.
+7929|Campeões da {}! Somos os melhores do continente!
+7930|Você é o novo técnico da seleção de {}!
+7928|Data FIFA: {} joga 2 jogos das eliminatórias.
+7918|A federação demitiu você da seleção de {}.
+7960|{} não se classificou para o {}.
+7946|Campeões do {} com {}!
+7872|Campeões!
+7940|{}: passamos do grupo ({} pontos)!
+7977|Seu país
+7979|{} Abrir Técnico
+7980|Monte o elenco, escolha a tática e comande o jogo ao vivo da beira do campo.
