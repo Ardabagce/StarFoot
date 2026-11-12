@@ -1231,3 +1231,38 @@
 7977|Negaramu
 7979|{} Buka Pelatih
 7980|Bangun skuad, pilih taktik, dan pimpin laga langsung dari pinggir lapangan.
+8023|Pelatih Bulan Ini · {} {}
+8020|🏅 Kamu Pelatih Bulan Ini untuk {} {}!
+7981|Agustus
+7982|September
+7983|Oktober
+7984|November
+7985|Desember
+7986|Januari
+7987|Februari
+7988|Maret
+7989|April
+7990|Mei
+8026|{} Pengaturan
+7991|Ketuk pemain yang keluar
+8022|Pergantian · sisa {} · {}'
+7992|Rating laga
+7993|Cadangan · ketuk pemain yang masuk
+7994|Pilih dulu pemain yang keluar.
+7995|Komentar
+7996|Ketuk pemain untuk mengganti.
+7997|Jatah pergantian habis.
+8019|{} tak mau membahas kontrak musim ini.
+8027|{} thn{}
+7999|Perpanjangan kontrak
+8009|{} · {} thn · Kekuatan {} · Sisa {} thn · Gaji saat ini {}/pekan
+8012|Beban gaji: {} / anggaran {} · Sisa negosiasi: {}
+8000|Durasi kontrak baru (mulai hari ini)
+8001|★ Durasi pilihan pemain
+8011|📝 {} menandatangani kontrak baru {} tahun ({}/pekan).
+8024|Kontrak {} tahun · {}/pekan
+8015|😠 {} menghentikan negosiasi kontrak musim ini.
+8004|Ia bisa pergi gratis di akhir musim.
+8025|{} menghentikan negosiasi
+8008|Ketiga tawaranmu ditolak. Ia tak mau bicara lagi musim ini.{}
+8018|{} menolak tawaran. Tuntutannya sedikit naik.

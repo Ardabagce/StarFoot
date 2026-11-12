@@ -306,7 +306,8 @@ const Coach = {
     });
     return out;
   },
-  eff(x) { const p = x.p; return (p.r - x.pen) * (0.9 + 0.1 * U.clamp(p.fit, 0, 100) / 100) * (0.98 + 0.04 * p.mor / 100); },
+  // kondisyon: 85 civarı nötr; dinç oyuncu biraz daha iyi, 55'in altı belirgin düşüş (değişiklik gerektirir)
+  eff(x) { const p = x.p, f = U.clamp(p.fit, 0, 100); return (p.r - x.pen) * (1 + (f - 85) * 0.002 - (f < 55 ? (55 - f) * 0.004 : 0)) * (0.98 + 0.04 * p.mor / 100); },
   // takım uyumu ve kaptan etkisi dahil güç
   strength(list, form, style, mods) {
     const s = Coach.s;
@@ -428,10 +429,16 @@ const Coach = {
       // Ayın Teknik Direktörü: ligde son 4 haftanın en çok puan toplayan takımı (eşitlikte kura)
       const pts = (id) => (s.cf[id] || '').slice(-4).split('').reduce((t, r) => t + (r === 'G' ? 3 : r === 'B' ? 1 : 0), 0);
       const mine = m.w * 3 + m.d, rival = Math.max(0, ...s.lg.ids.filter((id) => id !== s.clubId).map(pts));
-      if (mine >= 9 && m.l === 0 && (mine > rival || (mine === rival && U.chance(0.4)))) { s.awards.push(`${s.year} Ayın Teknik Direktörü`); s.rep = U.clamp(s.rep + 2, 0, 100); Coach.news('🏅 Ayın Teknik Direktörü ödülünü kazandın!', 'good'); }
+      if (mine >= 9 && m.l === 0 && (mine > rival || (mine === rival && U.chance(0.4)))) { const [mo, yr] = Coach.monthOf(s.round - 1); s.awards.push(`${mo} ${yr} · Ayın Teknik Direktörü`); s.rep = U.clamp(s.rep + 2, 0, 100); Coach.news(`🏅 ${mo} ${yr} ayının teknik direktörü seçildin!`, 'good'); }
       s.month = { w: 0, d: 0, l: 0 };
     }
     if (s.round >= Coach.rounds()) Coach.seasonEnd();
+  },
+  // sezon takvimi: Ağustos'tan Mayıs'a 10 ay; hafta → [ay adı, yıl]
+  monthOf(r) {
+    const s = Coach.s, M = ['Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık', 'Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs'];
+    const i = U.clamp(Math.floor((Math.max(0, r) / Math.max(1, Coach.rounds())) * 10), 0, 9);
+    return [M[i], i >= 5 ? s.year + 1 : s.year];
   },
   window() { const s = Coach.s, n = Coach.rounds(), mid = Math.floor(n / 2); return s.round < 5 || (s.round >= mid && s.round < mid + 4); },
 

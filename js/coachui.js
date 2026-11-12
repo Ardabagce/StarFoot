@@ -23,6 +23,7 @@ Object.assign(Coach, {
     U.$$('[data-cmv]', el).forEach((b) => (b.onclick = () => { Coach.view = b.dataset.cmv; Coach.render(); window.scrollTo(0, 0); }));
     el.querySelector('#cm-menu').onclick = () => Game.modal(`<h3>${U.esc(Coach.fullName())}</h3><p class="muted">İlerlemen kaydedildi.</p>`, [
       { t: 'Kariyer', fn: () => { Coach.view = 'club'; Coach.sub = 'career'; Coach.render(); window.scrollTo(0, 0); } },
+      { t: 'Ayarlar', fn: () => setTimeout(() => Coach.settings(), 120) },
       { t: 'Ana menü', fn: () => Coach.exit() },
       { t: 'Vazgeç', cls: 'btn-ghost' },
     ]);

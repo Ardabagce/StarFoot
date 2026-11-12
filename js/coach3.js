@@ -414,6 +414,30 @@ const CM_BOND = [
     setTimeout(() => list.slice(3, 8).forEach(paint), 250);
   };
 
+  // ---------- ayarlar: dil ve para birimi (oyunun genel ayarlarıyla ortak) ----------
+  Coach.setCur = (k) => { try { if (k) localStorage.setItem('starfoot_cur', k); else localStorage.removeItem('starfoot_cur'); } catch (e) { /* yok */ } };
+  Coach.settings = () => {
+    let cur = '';
+    try { cur = localStorage.getItem('starfoot_cur') || ''; } catch (e) { /* yok */ }
+    const m = Game.modal(`<h3>${Icon('cog')} Ayarlar</h3>
+      <div class="set-row"><span><b>Para birimi</b><small>Otomatik: telefonun bölgesine göre (${U.CUR[U.curAuto()].sym})</small></span><div class="seg" data-noi18n>${[['', 'Oto'], ['TRY', '₺'], ['USD', '$'], ['EUR', '€'], ['GBP', '£']].map(([k, l]) => `<button data-cmcur="${k}" class="${cur === k ? 'on' : ''}">${l}</button>`).join('')}</div></div>
+      <div class="set-row"><span><b>Dil / Language</b></span><select class="lang-sel" data-cmlang data-noi18n>${Object.entries(I18N.LANGS).map(([k, n]) => `<option value="${k}"${k === I18N.lang ? ' selected' : ''}>${n}</option>`).join('')}</select></div>`, [{ t: 'Kapat', cls: 'btn-ghost' }], { wide: true });
+    U.$$('[data-cmcur]', m).forEach((b) => (b.onclick = () => {
+      Coach.setCur(b.dataset.cmcur);
+      U.$$('[data-cmcur]', m).forEach((x) => x.classList.toggle('on', x === b));
+      Coach.render();
+    }));
+    const sel = m.querySelector('[data-cmlang]');
+    if (sel) sel.onchange = () => { if (sel.value !== I18N.lang) { Coach.save(); I18N.set(sel.value); } };
+  };
+  // dil değişince teknik direktör ekranı yeniden çizilir (oyuncu kariyeri ekranına dönmeden)
+  const onCh = I18N.onChange;
+  I18N.onChange = (l) => {
+    const el = document.getElementById('coach');
+    if (el && !el.classList.contains('hidden')) { if (Coach.s) Coach.render(); else Coach.hub(); window.dispatchEvent(new Event('resize')); return; }
+    if (typeof onCh === 'function') onCh(l);
+  };
+
   // ---------- taraftar / oyuncular / yönetim, enerji, kimya ve haftalık aksiyonlar ----------
   const mig0 = Coach.migrate.bind(Coach);
   Coach.migrate = (s) => { mig0(s); if (s.trust == null) s.trust = 60; if (s.ap == null) s.ap = 3; return s; };

@@ -336,6 +336,7 @@
 "captain.js",
 "coach.js",
 "coachlive.js",
+"coachlive2.js",
 "coachui.js",
 "coachx.js",
 "cstats.js",
@@ -446,6 +447,7 @@
 "captain.js",
 "coach3.js",
 "coach4.js",
+"coachlive2.js",
 "game.js",
 "lang-ar.js",
 "lang-de.js",
@@ -769,6 +771,7 @@
 "coach.js",
 "coach3.js",
 "coachlive.js",
+"coachlive2.js",
 "coachui.js",
 "coachx.js",
 "edit.js",
@@ -2517,6 +2520,7 @@
 ],
 "Kondisyon": [
 "coach.js",
+"coachlive2.js",
 "coachui.js",
 "lang-ar.js",
 "lang-de.js",
@@ -3207,29 +3211,41 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"{} Ayın Teknik Direktörü": [
-"coach.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
+"{} {} · Ayın Teknik Direktörü": [
+"coach.js"
 ],
-"🏅 Ayın Teknik Direktörü ödülünü kazandın!": [
-"coach.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
+"🏅 {} {} ayının teknik direktörü seçildin!": [
+"coach.js"
+],
+"Ağustos": [
+"coach.js"
+],
+"Eylül": [
+"coach.js"
+],
+"Ekim": [
+"coach.js"
+],
+"Kasım": [
+"coach.js"
+],
+"Aralık": [
+"coach.js"
+],
+"Ocak": [
+"coach.js"
+],
+"Şubat": [
+"coach.js"
+],
+"Mart": [
+"coach.js"
+],
+"Nisan": [
+"coach.js"
+],
+"Mayıs": [
+"coach.js"
 ],
 "Gözlemcilerin aynı anda en fazla 3 oyuncuyu izleyebilir.": [
 "coach.js",
@@ -4396,7 +4412,16 @@
 "lang-pt.js"
 ],
 "Kadronu kur, taktiğini seç ve maçı kenardan canlı yönet.": [
-"coach3.js"
+"coach3.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Kariyerlerin": [
 "coach3.js",
@@ -4943,6 +4968,85 @@
 "coach3.js",
 "coachx.js"
 ],
+"Oto": [
+"coach3.js",
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TRY": [
+"coach3.js",
+"data.js",
+"game.js",
+"icons.js",
+"lang-en.js",
+"util.js"
+],
+"USD": [
+"coach3.js",
+"game.js",
+"util.js"
+],
+"EUR": [
+"coach3.js",
+"game.js",
+"util.js"
+],
+"GBP": [
+"coach3.js",
+"game.js",
+"util.js"
+],
+"{} Ayarlar": [
+"coach3.js",
+"game.js"
+],
+"Para birimi": [
+"coach3.js",
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Otomatik: telefonun bölgesine göre ({})": [
+"coach3.js",
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Dil / Language": [
+"coach3.js",
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "Bu hafta aksiyon hakkın kalmadı. Maça çık!": [
 "coach3.js",
 "lang-ar.js",
@@ -5127,6 +5231,7 @@
 ],
 "Oyuncular": [
 "coach3.js",
+"coachlive2.js",
 "edit.js",
 "lang-ar.js",
 "lang-de.js",
@@ -6801,6 +6906,7 @@
 ],
 "Yedekte uygun oyuncu yok.": [
 "coachlive.js",
+"coachlive2.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -6825,6 +6931,7 @@
 ],
 "10 kişi devam et": [
 "coachlive.js",
+"coachlive2.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -6906,6 +7013,7 @@
 ],
 "· {} yorgun": [
 "coachlive.js",
+"coachlive2.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -7605,6 +7713,151 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Sahadan çıkacak oyuncuya dokun": [
+"coachlive2.js"
+],
+"Oyuncu değişikliği · {} hak · {}'": [
+"coachlive2.js"
+],
+"Maç reytingi": [
+"coachlive2.js"
+],
+"Yedekler · girecek oyuncuya dokun": [
+"coachlive2.js"
+],
+"Önce sahadan çıkacak oyuncuyu seç.": [
+"coachlive2.js"
+],
+"Anlatım": [
+"coachlive2.js"
+],
+"Değiştirmek için oyuncuya dokun.": [
+"coachlive2.js"
+],
+"Değişiklik hakkın kalmadı.": [
+"coachlive2.js"
+],
+"{} bu sezon sözleşme konuşmak istemiyor.": [
+"coachlive2.js"
+],
+"{} yıl{}": [
+"coachlive2.js"
+],
+"Sözleşme yenileme": [
+"coachlive2.js"
+],
+"{} yeni sözleşme için {}/hafta istiyor.": [
+"coachlive2.js",
+"coachui.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{} · {} yaş · Güç {} · Kalan sözleşme {} yıl · Şu anki maaşı {}/hafta": [
+"coachlive2.js"
+],
+"Maaş gideri: {} / bütçe {} · Kalan görüşme hakkı: {}": [
+"coachlive2.js"
+],
+"Yeni sözleşme süresi (bugünden itibaren)": [
+"coachlive2.js"
+],
+"★ Oyuncunun tercih ettiği süre": [
+"coachlive2.js"
+],
+"Maaş teklifin": [
+"coachlive2.js",
+"coachui.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{}/hf · {}%": [
+"coachlive2.js",
+"coachui.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Bu maaş, yönetimin verdiği maaş bütçesini aşıyor.": [
+"coachlive2.js",
+"coachui.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"📝 {} ile {} yıllık yeni sözleşme imzalandı ({}/hafta).": [
+"coachlive2.js"
+],
+"✍️ {} imzayı attı!": [
+"coachlive2.js",
+"coachui.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{} yıllık sözleşme · {}/hafta": [
+"coachlive2.js"
+],
+"Harika!": [
+"coachlive2.js",
+"coachui.js",
+"friends.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"😠 {} sözleşme görüşmelerini bu sezonluk kesti.": [
+"coachlive2.js"
+],
+"Sezon sonunda bedelsiz ayrılabilir.": [
+"coachlive2.js"
+],
+"{} görüşmeleri kesti": [
+"coachlive2.js"
+],
+"Üç teklifin de reddedildi. Oyuncu bu sezon yeniden konuşmak istemiyor.{}": [
+"coachlive2.js"
+],
+"{} teklifi reddetti. Beklentisi biraz arttı.": [
+"coachlive2.js"
+],
 "Merkez": [
 "coachui.js",
 "lang-ar.js",
@@ -7670,6 +7923,18 @@
 "coachui.js",
 "extras.js",
 "game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Ayarlar": [
+"coachui.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -8661,18 +8926,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"{} yeni sözleşme için {}/hafta istiyor.": [
-"coachui.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "Şu anki maaşı {}/hafta · Maaş bütçesi: {} / {}": [
 "coachui.js"
 ],
@@ -8713,18 +8966,6 @@
 "lang-pt.js",
 "value.js",
 "wcx.js"
-],
-"Bu maaş, yönetimin verdiği maaş bütçesini aşıyor.": [
-"coachui.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
 ],
 "📝 {} ile sözleşme {} yıl olarak yenilendi ({}/hafta).": [
 "coachui.js",
@@ -9124,43 +9365,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Maaş teklifin": [
-"coachui.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"{}/hf · {}%": [
-"coachui.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "· Bonservis {}": [
-"coachui.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"✍️ {} imzayı attı!": [
 "coachui.js",
 "lang-ar.js",
 "lang-de.js",
@@ -9174,19 +9379,6 @@
 ],
 "{} yıllık sözleşme · {}/hafta{}": [
 "coachui.js"
-],
-"Harika!": [
-"coachui.js",
-"friends.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
 ],
 "{} teklifi az buldu. Beklentisi biraz arttı.": [
 "coachui.js",
@@ -19367,13 +19559,6 @@
 "lang-ja.js",
 "lang-pt.js",
 "namefix.js"
-],
-"TRY": [
-"data.js",
-"game.js",
-"icons.js",
-"lang-en.js",
-"util.js"
 ],
 "Trua Esintisi": [
 "data.js",
@@ -41504,66 +41689,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Para birimi": [
-"game.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"Otomatik: telefonun bölgesine göre ({})": [
-"game.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"Oto": [
-"game.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"USD": [
-"game.js",
-"util.js"
-],
-"EUR": [
-"game.js",
-"util.js"
-],
-"GBP": [
-"game.js",
-"util.js"
-],
-"Dil / Language": [
-"game.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "Zorluk": [
 "game.js",
 "lang-ar.js",
@@ -43554,9 +43679,6 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
-],
-"{} Ayarlar": [
-"game.js"
 ],
 "{} Premium": [
 "game.js",
@@ -45567,17 +45689,6 @@
 "match.js"
 ],
 "Otomatik dağıt": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"Ayarlar": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -74647,6 +74758,17 @@
 "lang-pt.js"
 ],
 "Ayın Teknik Direktörü": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"🏅 Ayın Teknik Direktörü ödülünü kazandın!": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -162824,6 +162946,17 @@
 "lang-pt.js",
 "lifex.js"
 ],
+"{} Ayın Teknik Direktörü": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "{} {} sakatlığını atlattı.": [
 "lang-ar.js",
 "lang-de.js",
@@ -176610,6 +176743,9 @@
 "lang-de.js"
 ],
 "Dein Land": [
+"lang-de.js"
+],
+"Stell den Kader zusammen, wähle die Taktik und leite das Spiel live von der Seitenlinie.": [
 "lang-de.js"
 ],
 "– wir haben uns qualifiziert!": [
@@ -203582,6 +203718,9 @@
 "Your country": [
 "lang-en.js"
 ],
+"Build your squad, pick your tactics and run the match live from the touchline.": [
+"lang-en.js"
+],
 "— we qualified!": [
 "lang-en.js"
 ],
@@ -229894,6 +230033,9 @@
 "Tu país": [
 "lang-es.js"
 ],
+"Arma la plantilla, elige la táctica y dirige el partido en directo desde la banda.": [
+"lang-es.js"
+],
 "— ¡nos hemos clasificado!": [
 "lang-es.js"
 ],
@@ -256037,6 +256179,9 @@
 "Ton pays": [
 "lang-fr.js"
 ],
+"Compose ton effectif, choisis ta tactique et dirige le match en direct depuis le banc.": [
+"lang-fr.js"
+],
 "— on est qualifiés !": [
 "lang-fr.js"
 ],
@@ -281416,6 +281561,9 @@
 "Negaramu": [
 "lang-id.js"
 ],
+"Bangun skuad, pilih taktik, dan pimpin laga langsung dari pinggir lapangan.": [
+"lang-id.js"
+],
 "— kita lolos!": [
 "lang-id.js"
 ],
@@ -306585,6 +306733,9 @@
 "lang-it.js"
 ],
 "Il tuo paese": [
+"lang-it.js"
+],
+"Costruisci la rosa, scegli la tattica e dirigi la partita dalla panchina.": [
 "lang-it.js"
 ],
 "— ci siamo qualificati!": [
@@ -332432,6 +332583,9 @@
 "lang-pt.js"
 ],
 "Seu país": [
+"lang-pt.js"
+],
+"Monte o elenco, escolha a tática e comande o jogo ao vivo da beira do campo.": [
 "lang-pt.js"
 ],
 "— nos classificamos!": [

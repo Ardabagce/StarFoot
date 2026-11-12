@@ -1231,3 +1231,38 @@
 7977|Tu país
 7979|{} Abrir Entrenador
 7980|Arma la plantilla, elige la táctica y dirige el partido en directo desde la banda.
+8023|Entrenador del mes · {} {}
+8020|🏅 ¡Eres el entrenador del mes de {} {}!
+7981|Agosto
+7982|Septiembre
+7983|Octubre
+7984|Noviembre
+7985|Diciembre
+7986|Enero
+7987|Febrero
+7988|Marzo
+7989|Abril
+7990|Mayo
+8026|{} Ajustes
+7991|Toca al jugador que sale
+8022|Cambio · quedan {} · {}'
+7992|Nota del partido
+7993|Banquillo · toca al que entra
+7994|Primero elige al jugador que sale.
+7995|Narración
+7996|Toca a un jugador para cambiarlo.
+7997|No te quedan cambios.
+8019|{} no quiere hablar de contrato esta temporada.
+8027|{} años{}
+7999|Renovación de contrato
+8009|{} · {} años · Media {} · Le quedan {} años · Sueldo actual {}/sem
+8012|Masa salarial: {} / presupuesto {} · Intentos: {}
+8000|Duración del nuevo contrato (desde hoy)
+8001|★ Duración preferida del jugador
+8011|📝 {} firmó un nuevo contrato de {} años ({}/sem).
+8024|Contrato de {} años · {}/sem
+8015|😠 {} rompió las negociaciones esta temporada.
+8004|Podría irse gratis a final de temporada.
+8025|{} rompió las negociaciones
+8008|Rechazó tus tres ofertas. No quiere volver a hablar esta temporada.{}
+8018|{} rechazó la oferta. Su exigencia subió un poco.

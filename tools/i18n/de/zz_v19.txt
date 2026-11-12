@@ -1231,3 +1231,38 @@
 7977|Dein Land
 7979|{} Trainer-Modus öffnen
 7980|Stell den Kader zusammen, wähle die Taktik und leite das Spiel live von der Seitenlinie.
+8023|Trainer des Monats · {} {}
+8020|🏅 Du bist Trainer des Monats {} {}!
+7981|August
+7982|September
+7983|Oktober
+7984|November
+7985|Dezember
+7986|Januar
+7987|Februar
+7988|März
+7989|April
+7990|Mai
+8026|{} Einstellungen
+7991|Tippe auf den Spieler, der rausgeht
+8022|Wechsel · noch {} · {}'
+7992|Spielnote
+7993|Bank · tippe auf den Einwechselspieler
+7994|Wähle zuerst den Spieler, der rausgeht.
+7995|Ticker
+7996|Tippe auf einen Spieler zum Wechseln.
+7997|Keine Wechsel mehr.
+8019|{} will diese Saison nicht über einen Vertrag reden.
+8027|{} J.{}
+7999|Vertragsverlängerung
+8009|{} · {} J. · Stärke {} · noch {} J. Vertrag · Gehalt {}/Woche
+8012|Gehälter: {} / Budget {} · Verhandlungen übrig: {}
+8000|Neue Vertragslaufzeit (ab heute)
+8001|★ Wunschlaufzeit des Spielers
+8011|📝 {} hat einen neuen {}-Jahres-Vertrag unterschrieben ({}/Woche).
+8024|{}-Jahres-Vertrag · {}/Woche
+8015|😠 {} hat die Vertragsgespräche für diese Saison abgebrochen.
+8004|Er könnte am Saisonende ablösefrei gehen.
+8025|{} hat die Gespräche abgebrochen
+8008|Alle drei Angebote wurden abgelehnt. Er will diese Saison nicht mehr reden.{}
+8018|{} hat abgelehnt. Seine Forderung ist etwas gestiegen.
