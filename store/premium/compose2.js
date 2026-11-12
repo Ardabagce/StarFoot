@@ -1,4 +1,4 @@
-// 1.0.11 App Store görselleri (7 sahne, 10 dil): node store/premium/compose2.js [ipad]
+// App Store görselleri (7 sahne: gol, teknik direktör, maç, kupa, sokak, DŞ, yaşam; 10 dil): node store/premium/compose2.js [ipad]
 // Önce: node store/premium/capture2.js (ham ekranlar raw2/, iPad için VIEW=ipad → raw2-ipad/)
 const { chromium } = require('playwright');
 const path = require('path');
@@ -17,6 +17,18 @@ const POSTERS = [
     ind: { tag: 'GAME KARIER SEPAK BOLA', h1: 'KAMU YANG', h2: 'CETAK GOL', sub: 'Di momen penting bola ada di kakimu: tarik, bidik, tendang!', chips: [['Suara stadion asli', 'left', 1060], ['Geser & tendang', 'right', 1520]] },
     ar: { tag: 'لعبة مسيرة كرة القدم', h1: 'أنت من', h2: 'يسجل الهدف', sub: 'في اللحظات الحاسمة الكرة عند قدميك: اسحب، صوّب، سدّد!', chips: [['صوت ملعب حقيقي', 'left', 1060], ['اسحب وسدد', 'right', 1520]] },
     ja: { tag: 'サッカーキャリアゲーム', h1: 'ゴールを', h2: '決めるのは君', sub: '決定的な瞬間、ボールは君の足元に。引いて、狙って、蹴り込め！', chips: [['本物のスタジアム音', 'left', 1060], ['引いてシュート', 'right', 1520]] },
+  }),
+  P('coach', '#46e08f', 'rgba(70,224,143,.42)', 3, {}, {
+    tr: { tag: 'YENİ MOD', h1: 'TEKNİK', h2: 'DİREKTÖR OL', sub: 'Kadroyu kur, taktiği seç, maçı kenardan canlı yönet.', chips: [['Canlı maç yönetimi', 'right', 1000], ['Transfer ve pazarlık', 'left', 1560]] },
+    en: { tag: 'NEW MODE', h1: 'BECOME THE', h2: 'MANAGER', sub: 'Build the squad, pick tactics and run matches live from the touchline.', chips: [['Live touchline control', 'right', 1000], ['Transfers & negotiation', 'left', 1560]] },
+    es: { tag: 'NUEVO MODO', h1: 'SÉ EL', h2: 'ENTRENADOR', sub: 'Arma la plantilla, elige la táctica y dirige el partido en directo.', chips: [['Dirige en directo', 'right', 1000], ['Fichajes y negociación', 'left', 1560]] },
+    pt: { tag: 'NOVO MODO', h1: 'SEJA O', h2: 'TÉCNICO', sub: 'Monte o elenco, escolha a tática e comande o jogo ao vivo.', chips: [['Comando ao vivo', 'right', 1000], ['Contratações', 'left', 1560]] },
+    de: { tag: 'NEUER MODUS', h1: 'WERDE', h2: 'TRAINER', sub: 'Kader bauen, Taktik wählen und Spiele live von der Seitenlinie leiten.', chips: [['Live an der Seitenlinie', 'right', 1000], ['Transfers & Verhandlungen', 'left', 1560]] },
+    fr: { tag: 'NOUVEAU MODE', h1: 'DEVIENS', h2: 'ENTRAÎNEUR', sub: "Compose l'effectif, choisis la tactique et dirige le match en direct.", chips: [['Coaching en direct', 'right', 1000], ['Transferts', 'left', 1560]] },
+    it: { tag: 'NUOVA MODALITÀ', h1: 'DIVENTA', h2: 'ALLENATORE', sub: 'Costruisci la rosa, scegli la tattica e guida la partita dal vivo.', chips: [['Guida dal vivo', 'right', 1000], ['Calciomercato', 'left', 1560]] },
+    ind: { tag: 'MODE BARU', h1: 'JADILAH', h2: 'PELATIH', sub: 'Bangun skuad, pilih taktik dan pimpin laga langsung dari pinggir lapangan.', chips: [['Kendali langsung', 'right', 1000], ['Transfer & negosiasi', 'left', 1560]] },
+    ar: { tag: 'وضع جديد', h1: 'كن', h2: 'المدرب', sub: 'ابنِ التشكيلة واختر الخطة وقُد المباراة مباشرة من خط التماس.', chips: [['قيادة مباشرة', 'right', 1000], ['الانتقالات والتفاوض', 'left', 1560]] },
+    ja: { tag: '新モード', h1: '監督に', h2: 'なろう', sub: '選手を揃え、戦術を決め、ベンチから試合をライブで指揮。', chips: [['ライブ采配', 'right', 1000], ['移籍・交渉', 'left', 1560]] },
   }),
   P('match', '#8fb8ff', 'rgba(120,170,255,.5)', 3, { stars: true }, {
     tr: { tag: 'CANLI MAÇ', h1: 'MAÇI', h2: 'CANLI YAŞA', sub: 'Maç radarı, dakika dakika akış ve tribünün uğultusu.', chips: [['Maç radarı', 'right', 1000], ['Şampiyonlar Kupası geceleri', 'left', 1560]] },
@@ -77,18 +89,6 @@ const POSTERS = [
     ind: { tag: 'HIDUP DI LUAR LAPANGAN', h1: 'BINTANG', h2: 'DI LUAR LAPANGAN', sub: 'Mobil super, vila, sponsor, dan jutaan pengikut.', chips: [['Etalase mewah', 'right', 1040], ['Jutaan pengikut', 'left', 1520]] },
     ar: { tag: 'الحياة خارج الملعب', h1: 'نجم', h2: 'خارج الملعب', sub: 'سيارات خارقة وفلل وعقود رعاية وملايين المتابعين.', chips: [['واجهة الحياة الفاخرة', 'right', 1040], ['ملايين المتابعين', 'left', 1520]] },
     ja: { tag: 'ピッチ外のライフ', h1: 'ピッチの外でも', h2: 'スターに', sub: 'スーパーカー、豪邸、スポンサー契約、そして数百万のフォロワー。', chips: [['ラグジュアリー', 'right', 1040], ['数百万のフォロワー', 'left', 1520]] },
-  }),
-  P('medals', '#ffd36b', 'rgba(255,190,60,.5)', -3, {}, {
-    tr: { tag: 'BAŞARIMLAR', h1: '100+ MADALYA', h2: 'DÜNYA SIRALAMASI', sub: "Game Center'da dünyayla yarış; kariyerin iCloud'da güvende.", chips: [['Game Center', 'left', 1060], ['iCloud yedeği', 'right', 1520]] },
-    en: { tag: 'ACHIEVEMENTS', h1: '100+ MEDALS', h2: 'WORLD RANKINGS', sub: 'Compete with the world on Game Center; your career is safe in iCloud.', chips: [['Game Center', 'left', 1060], ['iCloud backup', 'right', 1520]] },
-    es: { tag: 'LOGROS', h1: '100+ MEDALLAS', h2: 'RANKING MUNDIAL', sub: 'Compite con el mundo en Game Center; tu carrera, a salvo en iCloud.', chips: [['Game Center', 'left', 1060], ['Copia en iCloud', 'right', 1520]] },
-    pt: { tag: 'CONQUISTAS', h1: '100+ MEDALHAS', h2: 'RANKING MUNDIAL', sub: 'Dispute com o mundo no Game Center; sua carreira segura no iCloud.', chips: [['Game Center', 'left', 1060], ['Backup no iCloud', 'right', 1520]] },
-    de: { tag: 'ERFOLGE', h1: '100+ MEDAILLEN', h2: 'WELTRANGLISTE', sub: 'Miss dich mit der Welt im Game Center; deine Karriere ist in iCloud sicher.', chips: [['Game Center', 'left', 1060], ['iCloud-Backup', 'right', 1520]] },
-    fr: { tag: 'SUCCÈS', h1: '100+ MÉDAILLES', h2: 'CLASSEMENT MONDIAL', sub: 'Affronte le monde sur Game Center ; ta carrière est en sécurité sur iCloud.', chips: [['Game Center', 'left', 1060], ['Sauvegarde iCloud', 'right', 1520]] },
-    it: { tag: 'OBIETTIVI', h1: '100+ MEDAGLIE', h2: 'CLASSIFICA MONDIALE', sub: 'Sfida il mondo su Game Center; la tua carriera è al sicuro su iCloud.', chips: [['Game Center', 'left', 1060], ['Backup iCloud', 'right', 1520]] },
-    ind: { tag: 'PENCAPAIAN', h1: '100+ MEDALI', h2: 'PERINGKAT DUNIA', sub: 'Bersaing dengan dunia di Game Center; kariermu aman di iCloud.', chips: [['Game Center', 'left', 1060], ['Cadangan iCloud', 'right', 1520]] },
-    ar: { tag: 'الإنجازات', h1: 'أكثر من 100 ميدالية', h2: 'الترتيب العالمي', sub: 'نافس العالم في Game Center؛ مسيرتك آمنة في iCloud.', chips: [['Game Center', 'left', 1060], ['نسخة iCloud', 'right', 1520]] },
-    ja: { tag: '実績', h1: '100以上のメダル', h2: '世界ランキング', sub: 'Game Centerで世界と競い、キャリアはiCloudで安心。', chips: [['Game Center', 'left', 1060], ['iCloudバックアップ', 'right', 1520]] },
   }),
 ];
 

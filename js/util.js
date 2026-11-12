@@ -268,12 +268,13 @@ ScreenGuard.init();
 // ---------- Derin bağlantılar (App Store etkinlikleri, paylaşımlar) ----------
 // starfoot://star  -> Starpedia (kariyerdeysen hemen, değilsen kariyere girince)
 // starfoot://wc    -> Dünya Şampiyonası Rüyası menüsü
+// starfoot://coach -> Teknik Direktör menüsü (paketi yoksa satın alma penceresi)
 const DeepLink = {
   pending: null,
   key(url) {
     const m = String(url || '').match(/^starfoot:\/\/([a-z]+)|\/go\/([a-z]+)/i);
     const k = m && (m[1] || m[2] || '').toLowerCase();
-    return k === 'star' || k === 'wc' ? k : null;
+    return k === 'star' || k === 'wc' || k === 'coach' ? k : null;
   },
   handle(url) {
     const k = DeepLink.key(url);
@@ -294,6 +295,15 @@ const DeepLink = {
       if (Game.state) { Game.save(); Game.init(); }
       Game.show('title');
       WC.menu();
+      return true;
+    }
+    if (k === 'coach') {
+      if (typeof Coach === 'undefined' || !Coach.enabled()) return false;
+      if (Coach.s && document.getElementById('coach') && !document.getElementById('coach').classList.contains('hidden')) { DeepLink.pending = null; return true; }
+      DeepLink.pending = null;
+      if (Game.state) { Game.save(); Game.init(); }
+      Game.show('title');
+      Coach.menu();
       return true;
     }
     if (k === 'star') {

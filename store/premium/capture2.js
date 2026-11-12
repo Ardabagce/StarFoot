@@ -1,5 +1,5 @@
 // 1.0.11 mağaza görselleri için ham oyun ekranları: LANGS=tr,en node store/premium/capture2.js
-// Sahneler: goal (kritik an), match (canlı maç + radar), trophy, street, wc, life, medals
+// Sahneler: goal (kritik an), coach (teknik direktör canlı maç), match (canlı maç + radar), trophy, street, wc, life
 // VIEW=ipad: iPad 13" ham ekranları raw2-ipad klasörüne
 const { chromium } = require('playwright');
 const path = require('path');
@@ -25,7 +25,7 @@ const ONLY = process.env.ONLY ? process.env.ONLY.split(',') : null;
       pg.errs = []; pg.on('pageerror', (e) => pg.errs.push(e.message));
       await pg.addInitScript((c) => { document.addEventListener('DOMContentLoaded', () => { const st = document.createElement('style'); st.textContent = c; document.head.appendChild(st); }); }, css + ja);
       await pg.goto('http://localhost:8765/oyna-r8k4tq.html');
-      await pg.evaluate((l) => { localStorage.clear(); localStorage.setItem('starfoot_lang', l); localStorage.setItem('starfoot_tut', 'done'); localStorage.setItem('starfoot_whatsnew', '1.0.11'); localStorage.setItem('starfoot_premium', '1'); localStorage.setItem('starfoot_pack_wc', '1'); localStorage.setItem('starfoot_pack_legends', '1'); localStorage.setItem('starfoot_cur', { tr: 'TRY', en: 'USD', es: 'EUR', pt: 'EUR', de: 'EUR', fr: 'EUR', it: 'EUR', id: 'USD', ar: 'USD', ja: 'USD' }[l] || 'USD'); }, l);
+      await pg.evaluate((l) => { localStorage.clear(); localStorage.setItem('starfoot_lang', l); localStorage.setItem('starfoot_tut', 'done'); localStorage.setItem('starfoot_whatsnew', '99'); localStorage.setItem('sf_v19', '1'); localStorage.setItem('starfoot_pack_coach', '1'); localStorage.setItem('starfoot_premium', '1'); localStorage.setItem('starfoot_pack_wc', '1'); localStorage.setItem('starfoot_pack_legends', '1'); localStorage.setItem('starfoot_cur', { tr: 'TRY', en: 'USD', es: 'EUR', pt: 'EUR', de: 'EUR', fr: 'EUR', it: 'EUR', id: 'USD', ar: 'USD', ja: 'USD' }[l] || 'USD'); }, l);
       await pg.reload(); await pg.waitForTimeout(500);
       return pg;
     };
@@ -147,6 +147,31 @@ const ONLY = process.env.ONLY ? process.env.ONLY.split(',') : null;
       await shot(p3, 'wc', 700);
       console.log(l, 'wc', p3.errs.slice(0, 3));
       await p3.close();
+    }
+
+    // ---------- Teknik direktör: canlı maç ekranı ----------
+    if (want('coach')) {
+      const p4 = await page();
+      const [fn, sn] = l === 'tr' ? ['Emre', 'Yıldız'] : l === 'en' ? ['Alex', 'Stone'] : await p4.evaluate(() => I18N.defName());
+      await p4.evaluate(async ([fn, sn]) => {
+        const w = (ms) => new Promise((r) => setTimeout(r, ms));
+        Coach.start({ name: fn, surname: sn, nat: I18N.home(), rep: 55, age: 42 }, 'GAL');
+        Coach.s.keyMom = false;
+        const md = document.getElementById('modal');
+        for (let i = 0; i < 5; i++) { for (let k = 0; k < 5 && !md.classList.contains('hidden'); k++) { const x = md.querySelector('.modal-btns .btn:last-child'); if (x) x.click(); await w(30); } Coach.play(true); await w(30); }
+        md.classList.add('hidden'); md.innerHTML = '';
+        Coach.view = 'home'; Coach.render();
+        Live.start(Coach.nextMatch(), false); clearTimeout(Live._t);
+        const L = Live.m; L.paused = true; L.speed = 1;
+        for (let i = 0; i < 400 && L.min < 63; i++) Live.tick();
+        L.paused = true; clearTimeout(Live._t);
+        Live.draw();
+      }, [fn, sn]);
+      await closeModals(p4);
+      await p4.evaluate(() => { const m = document.getElementById('modal'); m.classList.add('hidden'); window.scrollTo(0, 0); });
+      await shot(p4, 'coach', 900);
+      console.log(l, 'coach', p4.errs.slice(0, 3));
+      await p4.close();
     }
   }
   await b.close();

@@ -79,6 +79,66 @@
     ]
    },
    "deepLink": "starfoot://wc"
+  },
+  {
+   "ref": "Manager Mode Launch 2026-11",
+   "badge": "MAJOR_UPDATE",
+   "purpose": "APPROPRIATE_FOR_ALL_USERS",
+   "priority": "HIGH",
+   "purchase": "IN_APP_PURCHASE",
+   "publishStart": "2026-11-20T17:00:00Z",
+   "eventStart": "2026-11-22T17:00:00Z",
+   "eventEnd": "2026-12-20T17:00:00Z",
+   "card": "store/asc/events/coach-card.jpg",
+   "details": "store/asc/events/coach-details.jpg",
+   "locales": {
+    "tr": [
+     "Teknik Direktör Oldun!",
+     "Kulübünü yönet, maçı kenardan canlı yönet",
+     "Kadroyu kur, taktiği seç, transfer yap ve maçı kenardan canlı yönet. Yeni Teknik Direktör modu StarFoot'ta!"
+    ],
+    "en-US": [
+     "You're the Manager Now",
+     "Run your club and lead matches live",
+     "Build the squad, pick tactics, sign players and run matches live from the touchline. The new Manager mode is here!"
+    ],
+    "en-GB": [
+     "You're the Manager Now",
+     "Run your club and lead matches live",
+     "Build the squad, pick tactics, sign players and run matches live from the touchline. The new Manager mode is here!"
+    ],
+    "de-DE": [
+     "Du bist jetzt Trainer",
+     "Führe deinen Verein, leite Spiele live",
+     "Kader bauen, Taktik wählen, Spieler holen und Spiele live von der Seitenlinie leiten. Der neue Trainer-Modus!"
+    ],
+    "es-MX": [
+     "Ahora eres el entrenador",
+     "Dirige tu club y el partido en directo",
+     "Arma la plantilla, elige la táctica, ficha y dirige el partido en directo. ¡Llega el modo Entrenador!"
+    ],
+    "es-ES": [
+     "Ahora eres el entrenador",
+     "Dirige tu club y el partido en directo",
+     "Arma la plantilla, elige la táctica, ficha y dirige el partido en directo. ¡Llega el modo Entrenador!"
+    ],
+    "pt-BR": [
+     "Agora você é o técnico",
+     "Comande seu clube e o jogo ao vivo",
+     "Monte o elenco, escolha a tática, contrate e comande o jogo ao vivo da beira do campo. Chegou o modo Técnico!"
+    ],
+    "fr-FR": [
+     "Tu es l'entraîneur",
+     "Gère ton club et dirige le match en direct",
+     "Compose l'effectif, choisis la tactique, recrute et dirige le match en direct depuis le banc. Le mode Entraîneur !"
+    ],
+    "ja": [
+     "監督デビュー！",
+     "クラブを率いて試合をライブ指揮",
+     "選手を揃え、戦術を決め、補強し、ベンチから試合をライブで指揮。新モード「監督」登場！"
+    ]
+   },
+   "deepLink": "starfoot://coach"
   }
  ],
  "nomination": {
