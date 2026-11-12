@@ -468,8 +468,8 @@ const CM_BOND = [
     if (k === 'train') {
       s.trainB = (s.trainB || 0) + 1;
       // gelişim: haftada en fazla 2 antrenman sayılır, normal haftalık gelişimin yaklaşık üçte biri kadar
-      team.forEach((p) => { p.fit = U.clamp(p.fit - 10, 15, 100); if (s.trainB <= 2 && p.age <= 24 && p.r < p.pot) p.r = Math.min(p.pot, p.r + (p.pot - p.r) * 0.006 * (1 + 0.1 * (s.fac.train - 1))); });
-      if (s.trainB <= 2) { s.boost.att = (s.boost.att || 0) + 0.9; s.boost.def = (s.boost.def || 0) + 0.9; }
+      team.forEach((p) => { p.fit = U.clamp(p.fit - 6, 15, 100); if (s.trainB <= 2 && p.age <= 24 && p.r < p.pot) p.r = Math.min(p.pot, p.r + (p.pot - p.r) * 0.006 * (1 + 0.1 * (s.fac.train - 1))); });
+      if (s.trainB <= 2) { s.boost.att = (s.boost.att || 0) + 1.1; s.boost.def = (s.boost.def || 0) + 1.1; }
       ic = '🏋️'; title = 'Antrenman'; msg = 'Yoğun bir antrenman yapıldı. Takım maça daha hazır, gençler gelişti ama oyuncular yoruldu.';
     } else if (k === 'rest') {
       team.forEach((p) => { p.fit = U.clamp(p.fit + 14, 0, 100); if (p.inj > 1 && U.chance(0.3)) p.inj--; });

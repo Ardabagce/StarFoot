@@ -1266,3 +1266,84 @@
 8025|{} hat die Gespräche abgebrochen
 8008|Alle drei Angebote wurden abgelehnt. Er will diese Saison nicht mehr reden.{}
 8018|{} hat abgelehnt. Seine Forderung ist etwas gestiegen.
+8029|Mindestens 2 Talente (bis 21) machen 12+ Spiele
+8124|Gehälter am Saisonende unter {} halten
+8030|Pokal-Halbfinale erreichen
+8031|Europäisches Viertelfinale erreichen
+8150|Mindestens {} Ligatore erzielen
+8135|Höchstens {} Heimspiele verlieren
+8032|Auf dem Papier sind sie stark. Wir sehen uns auf dem Platz.
+8033|Ihre Spielweise ist zehn Jahre alt.
+8034|Am Wochenende sieht man, wer der bessere Trainer ist.
+8035|Ehemaliger Mitspieler
+8130|{} möchte dein Co-Trainer werden
+8102|{}, den du aus deiner Spielerzeit kennst, will in dein Trainerteam. Die Spieler mögen ihn.
+6688|Vorerst nicht
+8038|Ins Team holen
+8120|🤝 Dein ehemaliger Mitspieler {} ist jetzt dein Co-Trainer.
+8039|🔥 DERBY
+8041|Gegnertrainer:
+8042|(dein ehemaliger Mitspieler)
+8043|Manndeckung:
+8044|Matchplan
+8045|Spitze gesetzt
+8046|Spitze gegen den Gegnertrainer
+8151|Stärke {} · Fitness {}
+8047|Spielweise
+8048|Gefährlichster Spieler
+8049|Manndeckung
+8105|Dein Spieler deckt {}: ihr Angriff wird schwächer, unserer etwas auch.
+8050|Keine Manndeckung
+8051|Matchplan steht.
+8110|Gegnertrainer {} ist dein Ex-Mitspieler: das könnte eure Freundschaft belasten.
+8138|Was sagst du vor dem Spiel gegen {}?
+8052|Eine Spitze heizt beide Teams an. Gewinnst du, jubeln die Fans; verlierst du, wird es teuer.
+8144|🗯️ Deine Worte in den Schlagzeilen: "{}"
+8055|Alle Augen auf dieses Spiel!
+8155|{} · Derby
+8111|🔥 Das Derby gehört uns! Nach dem Sieg gegen {} trägt die Stadt unsere Farben.
+8123|🔥 Derby gegen {} verloren. Die Fans sind am Boden.
+8060|🗯️ Du hast Wort gehalten! Die Presse spricht über dich.
+8065|🗯️ Deine Worte vor dem Spiel fallen auf dich zurück. Die Fans sind sauer.
+8145|· Beste Platzierung {} ({})
+8070|Noch keine Titel. Der erste für das Museum liegt an dir!
+8073|Höchster Sieg
+8074|Torrekorde füllen sich im Laufe der Saison.
+8075|Vereinsmuseum
+8147|Deine Ära: Saison {}{}
+8076|Trophäenschrank
+8077|Vereinslegenden (100+ Spiele)
+8078|🏛️ Vereinsmuseum
+8103|🌟 Ein Juwel aus der Jugend: {} {} (17). Die Scouts schwärmen von seinem Potenzial!
+8119|Aus unserer Jugend in die Profis: {}! Merkt euch den Namen.
+8081|Beendet
+8139|{} Saisonziele des Vorstands
+8083|Budgetbonus bei Erfolg
+8106|🌱 Du hast {} Talenten eine Chance gegeben. Fans und Vorstand schätzen deinen Mut.
+8154|🎯 Ziel: {}
+8085|Vorstandsziele
+8116|Der Vorstand will in {} Wochen wieder darüber reden.
+8115|Der Vorstand gibt nicht mehr als 80 % der Kasse ({}) für Transfers aus.
+8112|Der Vorstand hebt das Gehaltsbudget nicht weit über die Einnahmen ({}/Woche).
+8086|Über dem Limit: der Vorstand lehnt ab
+8152|Zustimmungschance {} %
+8132|{} vom Transfer- ins Gehaltsbudget verschieben
+7760|Gespräch mit dem Vorstand
+8153|{}-Erhöhung fordern
+8129|Aktuell: {}{} · Vorstandsvertrauen {} · Kasse {}
+8087|Präsident: "So viel Geld haben wir nicht. Wir ruinieren den Verein nicht."
+8134|🤝 Der Vorstand hat die {}-Erhöhung genehmigt: {}{}.
+8113|Präsident: "In Ordnung, wir vertrauen dir. Aber wir erwarten Ergebnisse." {}: {}{}
+8131|🤝 Der Vorstand kam dir beim {} entgegen: {}{}.
+8109|Präsident: "Alles geht nicht, aber treffen wir uns in der Mitte." {}: {}{}
+8091|Präsident: "Erst Ergebnisse, dann Geld."
+8092|Präsident: "Wir können das Budget jetzt nicht erhöhen. Mach mit diesem Kader weiter."
+8093|Präsident: "Die Gehälter belasten uns schon. Diese Umschichtung geht nicht."
+8117|🔁 {} vom Transfer- ins Gehaltsbudget verschoben (+{}/Woche).
+8128|Umschichtung genehmigt: Gehaltsbudget +{}/Woche
+8141|{} Budgetgespräch mit dem Vorstand
+8097|Wenn du gut mit dem Vorstand stehst und Geld da ist, sagt er vielleicht Ja.
+8098|Transferbudget fordern
+8099|Gehaltsbudget fordern
+8100|Transferbudget
+8101|Gehaltsbudget

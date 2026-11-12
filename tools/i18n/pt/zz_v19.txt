@@ -1266,3 +1266,84 @@
 8025|{} encerrou as conversas
 8008|Suas três propostas foram recusadas. Ele não quer conversar de novo nesta temporada.{}
 8018|{} recusou a proposta. A exigência subiu um pouco.
+8029|Pelo menos 2 jovens (até 21) joguem 12+ jogos
+8124|Mantenha a folha abaixo de {} no fim da temporada
+8030|Chegue à semifinal da copa
+8031|Chegue às quartas na Europa
+8150|Marque pelo menos {} gols na liga
+8135|Perca no máximo {} jogos em casa
+8032|No papel são fortes. Veremos em campo.
+8033|O estilo deles parou dez anos atrás.
+8034|No fim de semana veremos quem é o melhor técnico.
+8035|Ex-companheiro
+8130|{} quer ser seu auxiliar
+8102|{}, que você conhece dos tempos de jogador, quer entrar na comissão. Os jogadores gostam dele.
+6688|Agora não
+8038|Que venha
+8120|🤝 Seu ex-companheiro {} agora é seu auxiliar.
+8039|🔥 CLÁSSICO
+8041|Técnico rival:
+8042|(seu ex-companheiro)
+8043|Marcação:
+8044|Plano de jogo
+8045|Provocação feita
+8046|Provoque o técnico rival
+8151|Força {} · Condição {}
+8047|Estilo
+8048|Jogador mais perigoso
+8049|Marcação individual
+8105|Seu jogador marca {}: o ataque deles enfraquece, mas o nosso perde um pouco.
+8050|Sem marcação
+8051|Plano de jogo pronto.
+8110|O técnico rival {} é seu ex-companheiro: isso pode estremecer a amizade.
+8138|O que vai dizer antes do jogo contra {}?
+8052|A provocação motiva os dois times. Vença e a torcida vibra; perca e vai pagar caro.
+8144|🗯️ Suas palavras viram manchete: "{}"
+8055|Todos de olho neste jogo!
+8155|{} · Clássico
+8111|🔥 O clássico é nosso! A cidade ganha nossas cores depois de vencer o {}.
+8123|🔥 Perdemos o clássico para o {}. A torcida está arrasada.
+8060|🗯️ Você bancou suas palavras! A imprensa fala de você.
+8065|🗯️ Suas palavras antes do jogo voltaram contra você. A torcida está irritada.
+8145|· Melhor posição {}º ({})
+8070|Ainda sem títulos. O primeiro do museu depende de você!
+8073|Maior goleada
+8074|Os recordes de gols vão sendo preenchidos.
+8075|Museu do clube
+8147|Sua era: temporada {}{}
+8076|Sala de troféus
+8077|Lendas do clube (100+ jogos)
+8078|🏛️ Museu do clube
+8103|🌟 Uma joia da base: {} {} (17). Os olheiros dizem que o potencial é enorme!
+8119|Da nossa base para o time principal: {}! Guardem esse nome.
+8081|Encerrado
+8139|{} Metas da diretoria
+8083|Bônus de orçamento se cumprir
+8106|🌱 Você deu chance a {} jovens. Torcida e diretoria admiram sua coragem.
+8154|🎯 Meta: {}
+8085|Metas da diretoria
+8116|A diretoria quer voltar ao assunto em {} semanas.
+8115|A diretoria não usa mais de 80% do caixa ({}) em contratações.
+8112|A diretoria não sobe a folha muito acima das receitas ({}/sem).
+8086|Acima do limite: a diretoria recusa
+8152|Chance de aprovação {}%
+8132|Passar {} do orçamento de transferências para salários
+7760|Reunião com a diretoria
+8153|Pedir aumento do {}
+8129|Agora: {}{} · Confiança {} · Caixa {}
+8087|Presidente: "Não temos tanto dinheiro. Não vamos quebrar o clube."
+8134|🤝 A diretoria aprovou o aumento do {}: {}{}.
+8113|Presidente: "Certo, confiamos em você. Mas queremos resultados." {}: {}{}
+8131|🤝 A diretoria chegou a um meio-termo no {}: {}{}.
+8109|Presidente: "Não posso dar tudo, mas vamos nos encontrar no meio." {}: {}{}
+8091|Presidente: "Primeiro resultados, depois dinheiro."
+8092|Presidente: "Agora não dá para aumentar o orçamento. Siga com este elenco."
+8093|Presidente: "Os salários já apertam as receitas. Não dá para fazer essa transferência."
+8117|🔁 {} passou do orçamento de transferências para salários (+{}/sem).
+8128|Transferência aprovada: folha +{}/sem
+8141|{} Negociar orçamento com a diretoria
+8097|Se você está bem com a diretoria e há caixa, ela pode aceitar mais orçamento.
+8098|Pedir orçamento de transferências
+8099|Pedir orçamento salarial
+8100|orçamento de transferências
+8101|orçamento salarial

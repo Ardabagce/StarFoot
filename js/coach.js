@@ -16,9 +16,9 @@ const CM_STYLES = {
   counter: { t: 'Kontra', d: 'Hücum eden rakibe karşı çok etkilidir.', att: 0.5, def: 1.5, tire: 1, vsAtt: 2.5 },
 };
 const CM_TRAIN = {
-  light: { t: 'Hafif', d: 'Oyuncular dinlenir, kondisyon hızlı toplanır.', fit: 30, grow: 0.4, inj: 0.4 },
-  normal: { t: 'Normal', d: 'Dengeli yük.', fit: 23, grow: 1, inj: 1 },
-  hard: { t: 'Yoğun', d: 'Gelişim hızlanır ama kondisyon yavaş toplanır, sakatlık riski artar.', fit: 16, grow: 1.9, inj: 1.8 },
+  light: { t: 'Hafif', d: 'Oyuncular dinlenir, kondisyon hızlı toplanır.', fit: 40, grow: 0.4, inj: 0.4 },
+  normal: { t: 'Normal', d: 'Dengeli yük.', fit: 32, grow: 1, inj: 1 },
+  hard: { t: 'Yoğun', d: 'Gelişim hızlanır ama kondisyon yavaş toplanır, sakatlık riski artar.', fit: 23, grow: 1.9, inj: 1.8 },
 };
 // haftalık antrenman odağı: sıradaki maça küçük artı ve uzun vadede takım uyumu
 const CM_FOCUS = {

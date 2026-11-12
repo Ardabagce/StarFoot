@@ -447,6 +447,7 @@
 "captain.js",
 "coach3.js",
 "coach4.js",
+"coach5.js",
 "coachlive2.js",
 "game.js",
 "lang-ar.js",
@@ -770,6 +771,7 @@
 "career2.js",
 "coach.js",
 "coach3.js",
+"coach5.js",
 "coachlive.js",
 "coachlive2.js",
 "coachui.js",
@@ -2562,6 +2564,7 @@
 ],
 "DF": [
 "coach.js",
+"coach5.js",
 "coachlive.js",
 "coachui.js",
 "cups.js",
@@ -2801,6 +2804,7 @@
 ],
 "MF": [
 "coach.js",
+"coach5.js",
 "coachlive.js",
 "coachui.js",
 "cups.js",
@@ -3212,40 +3216,148 @@
 "lang-pt.js"
 ],
 "{} {} · Ayın Teknik Direktörü": [
-"coach.js"
+"coach.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "🏅 {} {} ayının teknik direktörü seçildin!": [
-"coach.js"
+"coach.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Ağustos": [
-"coach.js"
+"coach.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Eylül": [
-"coach.js"
+"coach.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Ekim": [
-"coach.js"
+"coach.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Kasım": [
-"coach.js"
+"coach.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Aralık": [
-"coach.js"
+"coach.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Ocak": [
-"coach.js"
+"coach.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Şubat": [
-"coach.js"
+"coach.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Mart": [
-"coach.js"
+"coach.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Nisan": [
-"coach.js"
+"coach.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Mayıs": [
-"coach.js"
+"coach.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Gözlemcilerin aynı anda en fazla 3 oyuncuyu izleyebilir.": [
 "coach.js",
@@ -3683,6 +3795,7 @@
 "coach.js",
 "coach3.js",
 "coach4.js",
+"coach5.js",
 "coachui.js",
 "coachx.js",
 "cstats.js",
@@ -5006,7 +5119,16 @@
 ],
 "{} Ayarlar": [
 "coach3.js",
-"game.js"
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Para birimi": [
 "coach3.js",
@@ -5464,6 +5586,7 @@
 ],
 "Lig aşaması": [
 "coach4.js",
+"coach5.js",
 "cups.js",
 "lang-ar.js",
 "lang-de.js",
@@ -6151,6 +6274,7 @@
 ],
 "Elendik": [
 "coach4.js",
+"coach5.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -6280,7 +6404,464 @@
 "coachui.js"
 ],
 "<section class=\"card cp": [
-"coach4.js"
+"coach4.js",
+"coach5.js"
+],
+"En az 2 genç (21 yaş ve altı) 12+ maç oynasın": [
+"coach5.js"
+],
+"Sezon sonunda maaş gideri {} altında kalsın": [
+"coach5.js"
+],
+"Kupada yarı finale kal": [
+"coach5.js"
+],
+"Avrupa’da çeyrek finale çık": [
+"coach5.js"
+],
+"Ligde en az {} gol at": [
+"coach5.js"
+],
+"İç sahada en fazla {} maç kaybet": [
+"coach5.js"
+],
+"Rakip hocanın takımı kâğıt üstünde güçlü, sahada göreceğiz.": [
+"coach5.js"
+],
+"Onların oyun anlayışı on yıl önce kaldı.": [
+"coach5.js"
+],
+"Hafta sonu kimin daha iyi hoca olduğu belli olacak.": [
+"coach5.js"
+],
+"Eski takım arkadaşın": [
+"coach5.js"
+],
+"{} yardımcı antrenörün olmak istiyor": [
+"coach5.js"
+],
+"Futbol yıllarından tanıdığın {}, teknik ekibine katılmak için kapını çaldı. Oyuncular onu seviyor.": [
+"coach5.js"
+],
+"Şimdilik hayır": [
+"coach5.js"
+],
+"Ekibe katılsın": [
+"coach5.js"
+],
+"🤝 Eski takım arkadaşın {} yardımcı antrenörün oldu.": [
+"coach5.js"
+],
+"🔥 DERBİ": [
+"coach5.js"
+],
+"Rakip hoca:": [
+"coach5.js"
+],
+"(eski takım arkadaşın)": [
+"coach5.js"
+],
+"Markaj:": [
+"coach5.js"
+],
+"Maç planı": [
+"coach5.js"
+],
+"Laf sokuldu": [
+"coach5.js"
+],
+"Rakip hocaya laf sok": [
+"coach5.js"
+],
+"Güç {} · Kondisyon {}": [
+"coach5.js"
+],
+"Rakip analizi": [
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wcx.js"
+],
+"Güç": [
+"coach5.js",
+"coachui.js",
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"player.js"
+],
+"Sıra": [
+"coach5.js",
+"coachui.js",
+"coachx.js",
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Gol": [
+"coach5.js",
+"coachui.js",
+"cstats.js",
+"cups.js",
+"extras.js",
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"legacy.js",
+"match.js",
+"plusx.js",
+"star.js",
+"wc.js",
+"wcx.js"
+],
+"Oyun": [
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Son 5 maç": [
+"coach5.js",
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"En tehlikeli oyuncu": [
+"coach5.js"
+],
+"Adam adama markaj": [
+"coach5.js"
+],
+"Seçtiğin oyuncu {}'yi takip eder: rakibin hücumu zayıflar, bizim hücuma katkı biraz azalır.": [
+"coach5.js"
+],
+"Markaj yok": [
+"coach5.js"
+],
+"Maç planı hazır.": [
+"coach5.js"
+],
+"Rakip hoca {} eski takım arkadaşın: bu söz aranızı biraz gerebilir.": [
+"coach5.js"
+],
+"Basın toplantısı": [
+"coach5.js",
+"coachlive.js",
+"coachx.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{} maçı öncesi ne diyeceksin?": [
+"coach5.js"
+],
+"Laf sokarsan iki takım da maça daha hırslı çıkar. Kazanırsan taraftar coşar, kaybedersen faturası ağır olur.": [
+"coach5.js"
+],
+"🗯️ Sözlerin manşette: \"{}\"": [
+"coach5.js"
+],
+"Gözler bu maçta!": [
+"coach5.js"
+],
+"{} · Derbi": [
+"coach5.js"
+],
+"🔥 Derbi bizim! {} karşısında şehir bizim renklerimize boyandı.": [
+"coach5.js"
+],
+"🔥 Derbide {}'a kaybettik. Taraftar çok üzgün.": [
+"coach5.js"
+],
+"🗯️ Sözlerinin arkasında durdun! Basın seni konuşuyor.": [
+"coach5.js"
+],
+"🗯️ Maç öncesi sözlerin sana geri döndü. Taraftar tepkili.": [
+"coach5.js"
+],
+"Dünya Şampiyonası": [
+"coach5.js",
+"cups.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"sprites.js",
+"util.js",
+"wc.js",
+"wcx.js",
+"weather.js"
+],
+"Avrupa Milletler Şampiyonası": [
+"coach5.js",
+"cups.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"sprites.js",
+"util.js",
+"weather.js"
+],
+"Milletler Ligi Finalleri": [
+"coach5.js",
+"cups.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"weather.js"
+],
+"· En iyi lig sırası {}. ({})": [
+"coach5.js"
+],
+"Henüz kupa yok. İlk kupayı müzeye koymak senin elinde!": [
+"coach5.js"
+],
+"En farklı galibiyet": [
+"coach5.js"
+],
+"Gol kayıtları sezon ilerledikçe dolacak.": [
+"coach5.js"
+],
+"{} maç": [
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"100 maça ulaşan oyuncular burada efsane olarak anılır.": [
+"coach5.js"
+],
+"Kulüp müzesi": [
+"coach5.js"
+],
+"Senin dönemin: {}. sezon{}": [
+"coach5.js"
+],
+"Kupa dolabı": [
+"coach5.js"
+],
+"Rekorlar": [
+"coach5.js",
+"coachx.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Kulüp efsaneleri (100+ maç)": [
+"coach5.js"
+],
+"🏛️ Kulüp müzesi": [
+"coach5.js"
+],
+"🌟 Altyapıdan bir cevher çıktı: {} {} (17). Gözlemciler potansiyelinin çok yüksek olduğunu söylüyor!": [
+"coach5.js"
+],
+"Altyapımızdan {} A takımda! Bu çocuğun adını not edin.": [
+"coach5.js"
+],
+"Bitti": [
+"coach5.js"
+],
+"{} Yönetimin sezon hedefleri": [
+"coach5.js"
+],
+"Başarırsan bütçe ödülü": [
+"coach5.js"
+],
+"🌱 {} gence forma şansı verdin. Taraftar ve yönetim bu cesareti takdir ediyor.": [
+"coach5.js"
+],
+"🎯 Hedef: {}": [
+"coach5.js"
+],
+"Yönetimin hedefleri": [
+"coach5.js"
+],
+"Yönetim bu konuyu {} hafta sonra yeniden konuşmak istiyor.": [
+"coach5.js"
+],
+"Transfer bütçesi": [
+"coach5.js",
+"coachui.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Maaş bütçesi": [
+"coach5.js",
+"coachui.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"/hf": [
+"coach5.js",
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"life.js"
+],
+"Yönetim kasanın %80'inden ({}) fazlasını transfere ayırmaz.": [
+"coach5.js"
+],
+"Yönetim maaş bütçesini gelirlerin çok üstüne ({}/hf) çıkarmaz.": [
+"coach5.js"
+],
+"Sınırın üstünde: yönetim kabul etmez": [
+"coach5.js"
+],
+"Kabul olasılığı %{}": [
+"coach5.js"
+],
+"Transfer bütçesinden {} maaşa aktar": [
+"coach5.js"
+],
+"Yönetimle görüşme": [
+"coach5.js"
+],
+"{} artışı iste": [
+"coach5.js"
+],
+"Şu an: {}{} · Yönetimin güveni {} · Kasa {}": [
+"coach5.js"
+],
+"Başkan: \"Kasada bu kadar para yok. Kulübü batıramayız.\"": [
+"coach5.js"
+],
+"🤝 Yönetim {} artışını onayladı: {}{}.": [
+"coach5.js"
+],
+"Başkan: \"Tamam, sana güveniyoruz. Ama sonuç bekliyoruz.\" {}: {}{}": [
+"coach5.js"
+],
+"🤝 Yönetim {} için orta yolu buldu: {}{}.": [
+"coach5.js"
+],
+"Başkan: \"İstediğinin hepsini veremem ama yarı yolda buluşalım.\" {}: {}{}": [
+"coach5.js"
+],
+"Başkan: \"Önce sonuç, sonra para.\"": [
+"coach5.js"
+],
+"Başkan: \"Şu an bütçeyi artıramayız, mevcut kadroyla devam.\"": [
+"coach5.js"
+],
+"Başkan: \"Maaşlar zaten gelirlerimizi zorluyor. Bu aktarımı yapamayız.\"": [
+"coach5.js"
+],
+"🔁 Transfer bütçesinden {} maaş bütçesine aktarıldı (+{}/hf).": [
+"coach5.js"
+],
+"Aktarım onaylandı: maaş bütçesi +{}/hf": [
+"coach5.js"
+],
+"{} Yönetimle bütçe görüşmesi": [
+"coach5.js"
+],
+"Yönetimle aran iyiyse ve kasa elveriyorsa bütçe artışına \"tamam\" diyebilir.": [
+"coach5.js"
+],
+"Transfer bütçesi iste": [
+"coach5.js"
+],
+"Maaş bütçesi iste": [
+"coach5.js"
 ],
 "Maç başladı! {} oyunla başlıyoruz.": [
 "coachlive.js",
@@ -7661,19 +8242,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Basın toplantısı": [
-"coachlive.js",
-"coachx.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "Yönetim sakin tavrını beğendi.": [
 "coachlive.js",
 "coachx.js",
@@ -7714,37 +8282,136 @@
 "lang-pt.js"
 ],
 "Sahadan çıkacak oyuncuya dokun": [
-"coachlive2.js"
+"coachlive2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Oyuncu değişikliği · {} hak · {}'": [
-"coachlive2.js"
+"coachlive2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Maç reytingi": [
-"coachlive2.js"
+"coachlive2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Yedekler · girecek oyuncuya dokun": [
-"coachlive2.js"
+"coachlive2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Önce sahadan çıkacak oyuncuyu seç.": [
-"coachlive2.js"
+"coachlive2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Anlatım": [
-"coachlive2.js"
+"coachlive2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Değiştirmek için oyuncuya dokun.": [
-"coachlive2.js"
+"coachlive2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Değişiklik hakkın kalmadı.": [
-"coachlive2.js"
+"coachlive2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "{} bu sezon sözleşme konuşmak istemiyor.": [
-"coachlive2.js"
+"coachlive2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "{} yıl{}": [
-"coachlive2.js"
+"coachlive2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Sözleşme yenileme": [
-"coachlive2.js"
+"coachlive2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "{} yeni sözleşme için {}/hafta istiyor.": [
 "coachlive2.js",
@@ -7760,16 +8427,43 @@
 "lang-pt.js"
 ],
 "{} · {} yaş · Güç {} · Kalan sözleşme {} yıl · Şu anki maaşı {}/hafta": [
-"coachlive2.js"
+"coachlive2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Maaş gideri: {} / bütçe {} · Kalan görüşme hakkı: {}": [
 "coachlive2.js"
 ],
 "Yeni sözleşme süresi (bugünden itibaren)": [
-"coachlive2.js"
+"coachlive2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "★ Oyuncunun tercih ettiği süre": [
-"coachlive2.js"
+"coachlive2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Maaş teklifin": [
 "coachlive2.js",
@@ -7811,7 +8505,16 @@
 "lang-pt.js"
 ],
 "📝 {} ile {} yıllık yeni sözleşme imzalandı ({}/hafta).": [
-"coachlive2.js"
+"coachlive2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "✍️ {} imzayı attı!": [
 "coachlive2.js",
@@ -7827,7 +8530,16 @@
 "lang-pt.js"
 ],
 "{} yıllık sözleşme · {}/hafta": [
-"coachlive2.js"
+"coachlive2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Harika!": [
 "coachlive2.js",
@@ -7844,19 +8556,64 @@
 "lang-pt.js"
 ],
 "😠 {} sözleşme görüşmelerini bu sezonluk kesti.": [
-"coachlive2.js"
+"coachlive2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Sezon sonunda bedelsiz ayrılabilir.": [
-"coachlive2.js"
+"coachlive2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "{} görüşmeleri kesti": [
-"coachlive2.js"
+"coachlive2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Üç teklifin de reddedildi. Oyuncu bu sezon yeniden konuşmak istemiyor.{}": [
-"coachlive2.js"
+"coachlive2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "{} teklifi reddetti. Beklentisi biraz arttı.": [
-"coachlive2.js"
+"coachlive2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Merkez": [
 "coachui.js",
@@ -8049,20 +8806,6 @@
 "lang-pt.js",
 "plusx.js"
 ],
-"Güç": [
-"coachui.js",
-"game.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"player.js"
-],
 "Form": [
 "coachui.js",
 "game.js",
@@ -8076,20 +8819,6 @@
 "lang-ja.js",
 "lang-pt.js",
 "wcx.js"
-],
-"Sıra": [
-"coachui.js",
-"coachx.js",
-"game.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
 ],
 "VS": [
 "coachui.js",
@@ -8809,28 +9538,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Gol": [
-"coachui.js",
-"cstats.js",
-"cups.js",
-"extras.js",
-"game.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"legacy.js",
-"match.js",
-"plusx.js",
-"star.js",
-"wc.js",
-"wcx.js"
-],
 "Asist": [
 "coachui.js",
 "cstats.js",
@@ -9075,31 +9782,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Transfer bütçesi": [
-"coachui.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "Maaş gideri": [
-"coachui.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"Maaş bütçesi": [
 "coachui.js",
 "lang-ar.js",
 "lang-de.js",
@@ -10618,19 +11301,6 @@
 "star.js"
 ],
 "Başarılar": [
-"coachx.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"star.js"
-],
-"Rekorlar": [
 "coachx.js",
 "lang-ar.js",
 "lang-de.js",
@@ -14183,51 +14853,6 @@
 "Sıradaki milli turnuva: {} {}": [
 "cups.js"
 ],
-"Dünya Şampiyonası": [
-"cups.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"sprites.js",
-"util.js",
-"wc.js",
-"wcx.js",
-"weather.js"
-],
-"Avrupa Milletler Şampiyonası": [
-"cups.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"sprites.js",
-"util.js",
-"weather.js"
-],
-"Milletler Ligi Finalleri": [
-"cups.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"weather.js"
-],
 "Sıralamadaki en iyi 4 Avrupa takımı": [
 "cups.js",
 "lang-ar.js",
@@ -17417,7 +18042,8 @@
 "namefix.js"
 ],
 "MAY": [
-"data.js"
+"data.js",
+"lang-en.js"
 ],
 "RAY": [
 "data.js"
@@ -38902,19 +39528,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"/hf": [
-"game.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"life.js"
-],
 "HAFTA": [
 "game.js",
 "lang-ar.js",
@@ -40683,18 +41296,6 @@
 "lang-pt.js"
 ],
 "Sıran": [
-"game.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"Son 5 maç": [
 "game.js",
 "lang-ar.js",
 "lang-de.js",
@@ -58027,18 +58628,6 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
-],
-"Rakip analizi": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"wcx.js"
 ],
 "Yıldızı": [
 "lang-ar.js",
@@ -80948,6 +81537,127 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"bu sezon sözleşme konuşmak istemiyor.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"doesn't want to discuss a contract this season.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Oyuncunun tercih ettiği süre": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"The player's preferred length": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"sözleşme görüşmelerini bu sezonluk kesti.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"has broken off contract talks for this season.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"görüşmeleri kesti": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Üç teklifin de reddedildi.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"All three of your offers were rejected.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"teklifi reddetti. Beklentisi biraz arttı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"rejected the offer. His demands went up a little.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "(Asist)": [
 "lang-ar.js",
 "lang-de.js",
@@ -85362,17 +86072,6 @@
 "lang-pt.js"
 ],
 "Muhtemel İlk 11": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"Oyun": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -128402,6 +129101,325 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"AĞUSTOS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"EYLÜL": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"EKİM": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KASIM": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ARALIK": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"OCAK": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ŞUBAT": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MART": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"NİSAN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MAYIS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SAHADAN ÇIKACAK OYUNCUYA DOKUN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MAÇ REYTİNGİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YEDEKLER · GİRECEK OYUNCUYA DOKUN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ÖNCE SAHADAN ÇIKACAK OYUNCUYU SEÇ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ANLATIM": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DEĞİŞTİRMEK İÇİN OYUNCUYA DOKUN.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DEĞİŞİKLİK HAKKIN KALMADI.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BU SEZON SÖZLEŞME KONUŞMAK İSTEMİYOR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DOESN'T WANT TO DISCUSS A CONTRACT THIS SEASON.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SÖZLEŞME YENİLEME": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YENİ SÖZLEŞME SÜRESİ (BUGÜNDEN İTİBAREN)": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"★ OYUNCUNUN TERCİH ETTİĞİ SÜRE": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"OYUNCUNUN TERCİH ETTİĞİ SÜRE": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"THE PLAYER'S PREFERRED LENGTH": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SEZON SONUNDA BEDELSİZ AYRILABİLİR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GÖRÜŞMELERİ KESTİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BROKE OFF TALKS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ÜÇ TEKLİFİN DE REDDEDİLDİ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ALL THREE OF YOUR OFFERS WERE REJECTED.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -155746,6 +156764,28 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"· {} yaş · Güç {} · Kalan sözleşme {} yıl · Şu anki maaşı {}/hafta": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"· Age {} · OVR {} · {} yrs left · Current wage {}/wk": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "Ama paparazziler seni yakaladı; {} haberi görünce çok kızdı.": [
 "lang-ar.js",
 "lang-de.js",
@@ -157464,6 +158504,28 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"{} ile {} yıllık yeni sözleşme imzalandı ({}/hafta).": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{} signed a new {}-year deal ({}/wk).": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "🎁 Günlük ödülün hazır! {}. gün serini kaybetme.": [
 "lang-ar.js",
 "lang-de.js",
@@ -157634,6 +158696,28 @@
 "lang-pt.js"
 ],
 "{} renewed for {} years ({}/week).": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ile {} yıllık yeni sözleşme imzalandı ({}/hafta).": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"signed a new {}-year deal ({}/wk).": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -158073,6 +159157,28 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Oyuncu bu sezon yeniden konuşmak istemiyor.{}": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"He doesn't want to talk again this season.{}": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "{} altyapısından {} altyapısına transfer oldun!": [
 "lang-ar.js",
 "lang-de.js",
@@ -158231,6 +159337,28 @@
 "lang-pt.js"
 ],
 "So proud of my players against {}!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{} sözleşme görüşmelerini bu sezonluk kesti.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{} has broken off contract talks for this season.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -159664,6 +160792,28 @@
 "lang-pt.js"
 ],
 "{} year(s) left on his contract.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{} {} ayının teknik direktörü seçildin!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"You are Manager of the Month for {} {}!": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -168186,17 +169336,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"{} maç": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "{} gol": [
 "lang-ar.js",
 "lang-de.js",
@@ -168209,6 +169348,28 @@
 "lang-pt.js"
 ],
 "{} hf": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"yıl{}": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"yrs{}": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -176746,6 +177907,75 @@
 "lang-de.js"
 ],
 "Stell den Kader zusammen, wähle die Taktik und leite das Spiel live von der Seitenlinie.": [
+"lang-de.js"
+],
+"August": [
+"lang-de.js",
+"lang-en.js"
+],
+"September": [
+"lang-de.js",
+"lang-en.js",
+"lang-id.js"
+],
+"Oktober": [
+"lang-de.js",
+"lang-id.js"
+],
+"November": [
+"lang-de.js",
+"lang-en.js",
+"lang-id.js"
+],
+"Dezember": [
+"lang-de.js"
+],
+"Januar": [
+"lang-de.js"
+],
+"Februar": [
+"lang-de.js"
+],
+"März": [
+"lang-de.js"
+],
+"April": [
+"lang-de.js",
+"lang-en.js",
+"lang-id.js"
+],
+"Mai": [
+"lang-de.js",
+"lang-fr.js"
+],
+"Tippe auf den Spieler, der rausgeht": [
+"lang-de.js"
+],
+"Spielnote": [
+"lang-de.js"
+],
+"Bank · tippe auf den Einwechselspieler": [
+"lang-de.js"
+],
+"Ticker": [
+"lang-de.js"
+],
+"Tippe auf einen Spieler zum Wechseln.": [
+"lang-de.js"
+],
+"Keine Wechsel mehr.": [
+"lang-de.js"
+],
+"Vertragsverlängerung": [
+"lang-de.js"
+],
+"Neue Vertragslaufzeit (ab heute)": [
+"lang-de.js"
+],
+"★ Wunschlaufzeit des Spielers": [
+"lang-de.js"
+],
+"Er könnte am Saisonende ablösefrei gehen.": [
 "lang-de.js"
 ],
 "– wir haben uns qualifiziert!": [
@@ -187873,6 +189103,75 @@
 "DEIN LAND": [
 "lang-de.js"
 ],
+"AUGUST": [
+"lang-de.js",
+"lang-en.js"
+],
+"SEPTEMBER": [
+"lang-de.js",
+"lang-en.js",
+"lang-id.js"
+],
+"OKTOBER": [
+"lang-de.js",
+"lang-id.js"
+],
+"NOVEMBER": [
+"lang-de.js",
+"lang-en.js",
+"lang-id.js"
+],
+"DEZEMBER": [
+"lang-de.js"
+],
+"JANUAR": [
+"lang-de.js"
+],
+"FEBRUAR": [
+"lang-de.js"
+],
+"MÄRZ": [
+"lang-de.js"
+],
+"APRIL": [
+"lang-de.js",
+"lang-en.js",
+"lang-id.js"
+],
+"MAI": [
+"lang-de.js",
+"lang-fr.js"
+],
+"TIPPE AUF DEN SPIELER, DER RAUSGEHT": [
+"lang-de.js"
+],
+"SPIELNOTE": [
+"lang-de.js"
+],
+"BANK · TIPPE AUF DEN EINWECHSELSPIELER": [
+"lang-de.js"
+],
+"TICKER": [
+"lang-de.js"
+],
+"TIPPE AUF EINEN SPIELER ZUM WECHSELN.": [
+"lang-de.js"
+],
+"KEINE WECHSEL MEHR.": [
+"lang-de.js"
+],
+"VERTRAGSVERLÄNGERUNG": [
+"lang-de.js"
+],
+"NEUE VERTRAGSLAUFZEIT (AB HEUTE)": [
+"lang-de.js"
+],
+"★ WUNSCHLAUFZEIT DES SPIELERS": [
+"lang-de.js"
+],
+"ER KÖNNTE AM SAISONENDE ABLÖSEFREI GEHEN.": [
+"lang-de.js"
+],
 "– WIR HABEN UNS QUALIFIZIERT!": [
 "lang-de.js"
 ],
@@ -192016,6 +193315,9 @@
 "Was sagst du zum {}? Die Fans reden noch wochenlang darüber.": [
 "lang-de.js"
 ],
+"Alle drei Angebote wurden abgelehnt. Er will diese Saison nicht mehr reden.{}": [
+"lang-de.js"
+],
 "Dein Vertrag läuft noch {} Jahre. Du kannst die Angebote prüfen.": [
 "lang-de.js"
 ],
@@ -192239,6 +193541,9 @@
 "lang-de.js"
 ],
 "📨 Deine Wechselanfrage ging an {}. Antwort nächste Woche.": [
+"lang-de.js"
+],
+"{} · {} J. · Stärke {} · noch {} J. Vertrag · Gehalt {}/Woche": [
 "lang-de.js"
 ],
 "👀 Es gibt ein weiteres Talent in deinem Alter auf deiner Position: {} ({}).": [
@@ -192562,6 +193867,9 @@
 "DIE BESTEN DES KONTINENTS! {} {}. Heute haben wir Geschichte geschrieben!": [
 "lang-de.js"
 ],
+"📝 {} hat einen neuen {}-Jahres-Vertrag unterschrieben ({}/Woche).": [
+"lang-de.js"
+],
 "{} Tore im Straßenspiel! An der Seitenlinie stand ein Scout...": [
 "lang-de.js"
 ],
@@ -192730,6 +194038,9 @@
 "{} ist im Training mit einem Mitspieler aneinandergeraten.": [
 "lang-de.js"
 ],
+"😠 {} hat die Vertragsgespräche für diese Saison abgebrochen.": [
+"lang-de.js"
+],
 "{} nächste Saison! Diese Fans haben es verdient.": [
 "lang-de.js"
 ],
@@ -192809,6 +194120,9 @@
 "lang-de.js"
 ],
 "🌐 Du bist jetzt Nationaltrainer von {}!": [
+"lang-de.js"
+],
+"{} hat abgelehnt. Seine Forderung ist etwas gestiegen.": [
 "lang-de.js"
 ],
 "Der Gegner ließ {} stehen und kam in eine gefährliche Zone!": [
@@ -193000,6 +194314,9 @@
 "👉 {}: \\\"Ich erwarte mehr von dir\\\"": [
 "lang-de.js"
 ],
+"{} will diese Saison nicht über einen Vertrag reden.": [
+"lang-de.js"
+],
 "Klatsch: {} zusammen mit {} {} gesichtet!": [
 "lang-de.js"
 ],
@@ -193040,6 +194357,9 @@
 "lang-de.js"
 ],
 "{} ist enttäuscht über den geplatzten Wechsel.": [
+"lang-de.js"
+],
+"🏅 Du bist Trainer des Monats {} {}!": [
 "lang-de.js"
 ],
 "Der Tag deines Lebens! Technik +{}, Dribbling +{}": [
@@ -193435,6 +194755,9 @@
 "{} kommt im Strafraum an den Ball": [
 "lang-de.js"
 ],
+"Wechsel · noch {} · {}'": [
+"lang-de.js"
+],
 "Verbandssperre: {} Wochen": [
 "lang-de.js"
 ],
@@ -193640,6 +194963,12 @@
 "lang-de.js"
 ],
 "{}: Gruppe überstanden ({} Punkte)!": [
+"lang-de.js"
+],
+"Trainer des Monats · {} {}": [
+"lang-de.js"
+],
+"{}-Jahres-Vertrag · {}/Woche": [
 "lang-de.js"
 ],
 ", {} kündigte das Sponsoring": [
@@ -194266,6 +195595,9 @@
 "lang-de.js"
 ],
 "🌐 {} hat sich nicht für die {} qualifiziert.": [
+"lang-de.js"
+],
+"{} hat die Gespräche abgebrochen": [
 "lang-de.js"
 ],
 "Der Trainer war beeindruckt! {} +{}": [
@@ -195227,6 +196559,9 @@
 "lang-de.js"
 ],
 "Vorstand {}": [
+"lang-de.js"
+],
+"{} Einstellungen": [
 "lang-de.js"
 ],
 "/{}. WOCHE": [
@@ -203719,6 +205054,57 @@
 "lang-en.js"
 ],
 "Build your squad, pick your tactics and run the match live from the touchline.": [
+"lang-en.js"
+],
+"October": [
+"lang-en.js"
+],
+"December": [
+"lang-en.js"
+],
+"January": [
+"lang-en.js"
+],
+"February": [
+"lang-en.js"
+],
+"March": [
+"lang-en.js"
+],
+"May": [
+"lang-en.js"
+],
+"Tap the player coming off": [
+"lang-en.js"
+],
+"Match rating": [
+"lang-en.js"
+],
+"Bench · tap the player coming on": [
+"lang-en.js"
+],
+"First pick the player coming off.": [
+"lang-en.js"
+],
+"Commentary": [
+"lang-en.js"
+],
+"Tap a player to substitute.": [
+"lang-en.js"
+],
+"No substitutions left.": [
+"lang-en.js"
+],
+"Contract renewal": [
+"lang-en.js"
+],
+"New contract length (from today)": [
+"lang-en.js"
+],
+"★ The player's preferred length": [
+"lang-en.js"
+],
+"He may leave on a free at the end of the season.": [
 "lang-en.js"
 ],
 "— we qualified!": [
@@ -214179,6 +215565,54 @@
 "YOUR COUNTRY": [
 "lang-en.js"
 ],
+"OCTOBER": [
+"lang-en.js"
+],
+"DECEMBER": [
+"lang-en.js"
+],
+"JANUARY": [
+"lang-en.js"
+],
+"FEBRUARY": [
+"lang-en.js"
+],
+"MARCH": [
+"lang-en.js"
+],
+"TAP THE PLAYER COMING OFF": [
+"lang-en.js"
+],
+"MATCH RATING": [
+"lang-en.js"
+],
+"BENCH · TAP THE PLAYER COMING ON": [
+"lang-en.js"
+],
+"FIRST PICK THE PLAYER COMING OFF.": [
+"lang-en.js"
+],
+"COMMENTARY": [
+"lang-en.js"
+],
+"TAP A PLAYER TO SUBSTITUTE.": [
+"lang-en.js"
+],
+"NO SUBSTITUTIONS LEFT.": [
+"lang-en.js"
+],
+"CONTRACT RENEWAL": [
+"lang-en.js"
+],
+"NEW CONTRACT LENGTH (FROM TODAY)": [
+"lang-en.js"
+],
+"★ THE PLAYER'S PREFERRED LENGTH": [
+"lang-en.js"
+],
+"HE MAY LEAVE ON A FREE AT THE END OF THE SEASON.": [
+"lang-en.js"
+],
 "— WE QUALIFIED!": [
 "lang-en.js"
 ],
@@ -218263,6 +219697,9 @@
 "What would you like to say about the {}? Fans will talk about this one for weeks.": [
 "lang-en.js"
 ],
+"All three of your offers were rejected. He doesn't want to talk again this season.{}": [
+"lang-en.js"
+],
 "{} years left on your contract. You can consider the offers.": [
 "lang-en.js"
 ],
@@ -218486,6 +219923,9 @@
 "lang-en.js"
 ],
 "📨 Your transfer request was sent to {}. Answer next week.": [
+"lang-en.js"
+],
+"{} · Age {} · OVR {} · {} yrs left · Current wage {}/wk": [
 "lang-en.js"
 ],
 "👀 There's another prospect your age in your position: {} ({}).": [
@@ -218809,6 +220249,9 @@
 "TOP OF THE CONTINENT! {} {}. Tonight we made history!": [
 "lang-en.js"
 ],
+"📝 {} signed a new {}-year deal ({}/wk).": [
+"lang-en.js"
+],
 "{} goals in the street match! There was a scout on the sideline...": [
 "lang-en.js"
 ],
@@ -218977,6 +220420,9 @@
 "{} clashed with a teammate in training.": [
 "lang-en.js"
 ],
+"😠 {} has broken off contract talks for this season.": [
+"lang-en.js"
+],
 "{} next season! These fans deserve it.": [
 "lang-en.js"
 ],
@@ -219056,6 +220502,9 @@
 "lang-en.js"
 ],
 "🌐 You are now the {} national team manager!": [
+"lang-en.js"
+],
+"{} rejected the offer. His demands went up a little.": [
 "lang-en.js"
 ],
 "The opponent got past {} and into a dangerous area!": [
@@ -219247,6 +220696,9 @@
 "👉 {}: \\\"I expect more from you\\\"": [
 "lang-en.js"
 ],
+"{} doesn't want to discuss a contract this season.": [
+"lang-en.js"
+],
 "Gossip: {} spotted together with {} {}!": [
 "lang-en.js"
 ],
@@ -219287,6 +220739,9 @@
 "lang-en.js"
 ],
 "{} is upset to miss out on a big move.": [
+"lang-en.js"
+],
+"🏅 You are Manager of the Month for {} {}!": [
 "lang-en.js"
 ],
 "Day of your life! Technique +{}, Dribbling +{}": [
@@ -219682,6 +221137,9 @@
 "{} gets the ball in the box": [
 "lang-en.js"
 ],
+"Substitution · {} left · {}'": [
+"lang-en.js"
+],
 "Federation ban: {} weeks": [
 "lang-en.js"
 ],
@@ -219887,6 +221345,12 @@
 "lang-en.js"
 ],
 "{}: through the group ({} points)!": [
+"lang-en.js"
+],
+"Manager of the Month · {} {}": [
+"lang-en.js"
+],
+"{}-year contract · {}/wk": [
 "lang-en.js"
 ],
 ", {} cancelled the sponsorship": [
@@ -220513,6 +221977,9 @@
 "lang-en.js"
 ],
 "🌐 {} failed to qualify for the {}.": [
+"lang-en.js"
+],
+"{} broke off talks": [
 "lang-en.js"
 ],
 "The coach was impressed! {} +{}": [
@@ -221480,6 +222947,9 @@
 "Board {}": [
 "lang-en.js"
 ],
+"{} Settings": [
+"lang-en.js"
+],
 "/{}. WEEK": [
 "lang-en.js"
 ],
@@ -221757,6 +223227,9 @@
 "Rating {}": [
 "lang-en.js",
 "lang-id.js"
+],
+"{} yrs{}": [
+"lang-en.js"
 ],
 "{} Goals": [
 "lang-en.js"
@@ -230034,6 +231507,73 @@
 "lang-es.js"
 ],
 "Arma la plantilla, elige la táctica y dirige el partido en directo desde la banda.": [
+"lang-es.js"
+],
+"Agosto": [
+"lang-es.js",
+"lang-it.js",
+"lang-pt.js"
+],
+"Septiembre": [
+"lang-es.js"
+],
+"Octubre": [
+"lang-es.js"
+],
+"Noviembre": [
+"lang-es.js"
+],
+"Diciembre": [
+"lang-es.js"
+],
+"Enero": [
+"lang-es.js"
+],
+"Febrero": [
+"lang-es.js"
+],
+"Marzo": [
+"lang-es.js",
+"lang-it.js"
+],
+"Abril": [
+"lang-es.js",
+"lang-pt.js"
+],
+"Mayo": [
+"lang-es.js"
+],
+"Toca al jugador que sale": [
+"lang-es.js"
+],
+"Nota del partido": [
+"lang-es.js"
+],
+"Banquillo · toca al que entra": [
+"lang-es.js"
+],
+"Primero elige al jugador que sale.": [
+"lang-es.js"
+],
+"Narración": [
+"lang-es.js"
+],
+"Toca a un jugador para cambiarlo.": [
+"lang-es.js"
+],
+"No te quedan cambios.": [
+"lang-es.js"
+],
+"Renovación de contrato": [
+"lang-es.js"
+],
+"Duración del nuevo contrato (desde hoy)": [
+"lang-es.js"
+],
+"★ Duración preferida del jugador": [
+"lang-es.js"
+],
+"Podría irse gratis a final de temporada.": [
 "lang-es.js"
 ],
 "— ¡nos hemos clasificado!": [
@@ -240523,6 +242063,73 @@
 "TU PAÍS": [
 "lang-es.js"
 ],
+"AGOSTO": [
+"lang-es.js",
+"lang-it.js",
+"lang-pt.js"
+],
+"SEPTIEMBRE": [
+"lang-es.js"
+],
+"OCTUBRE": [
+"lang-es.js"
+],
+"NOVIEMBRE": [
+"lang-es.js"
+],
+"DICIEMBRE": [
+"lang-es.js"
+],
+"ENERO": [
+"lang-es.js"
+],
+"FEBRERO": [
+"lang-es.js"
+],
+"MARZO": [
+"lang-es.js",
+"lang-it.js"
+],
+"ABRIL": [
+"lang-es.js",
+"lang-pt.js"
+],
+"MAYO": [
+"lang-es.js"
+],
+"TOCA AL JUGADOR QUE SALE": [
+"lang-es.js"
+],
+"NOTA DEL PARTIDO": [
+"lang-es.js"
+],
+"BANQUILLO · TOCA AL QUE ENTRA": [
+"lang-es.js"
+],
+"PRIMERO ELIGE AL JUGADOR QUE SALE.": [
+"lang-es.js"
+],
+"NARRACIÓN": [
+"lang-es.js"
+],
+"TOCA A UN JUGADOR PARA CAMBIARLO.": [
+"lang-es.js"
+],
+"NO TE QUEDAN CAMBIOS.": [
+"lang-es.js"
+],
+"RENOVACIÓN DE CONTRATO": [
+"lang-es.js"
+],
+"DURACIÓN DEL NUEVO CONTRATO (DESDE HOY)": [
+"lang-es.js"
+],
+"★ DURACIÓN PREFERIDA DEL JUGADOR": [
+"lang-es.js"
+],
+"PODRÍA IRSE GRATIS A FINAL DE TEMPORADA.": [
+"lang-es.js"
+],
 "— ¡NOS HEMOS CLASIFICADO!": [
 "lang-es.js"
 ],
@@ -244622,6 +246229,9 @@
 "¿Qué quieres decir del {}? La afición hablará de este partido durante semanas.": [
 "lang-es.js"
 ],
+"Rechazó tus tres ofertas. No quiere volver a hablar esta temporada.{}": [
+"lang-es.js"
+],
 "Te quedan {} años de contrato. Puedes estudiar las ofertas.": [
 "lang-es.js"
 ],
@@ -244845,6 +246455,9 @@
 "lang-es.js"
 ],
 "📨 Tu solicitud llegó a {}. Respuesta la próxima semana.": [
+"lang-es.js"
+],
+"{} · {} años · Media {} · Le quedan {} años · Sueldo actual {}/sem": [
 "lang-es.js"
 ],
 "👀 Hay otra promesa de tu edad en tu posición: {} ({}).": [
@@ -245168,6 +246781,9 @@
 "¡LOS MEJORES DEL CONTINENTE! {} {}. ¡Esta noche hicimos historia!": [
 "lang-es.js"
 ],
+"📝 {} firmó un nuevo contrato de {} años ({}/sem).": [
+"lang-es.js"
+],
 "¡{} goles en el partido de la calle! Había un ojeador en la banda...": [
 "lang-es.js"
 ],
@@ -245336,6 +246952,9 @@
 "{} discutió con un compañero en el entrenamiento.": [
 "lang-es.js"
 ],
+"😠 {} rompió las negociaciones esta temporada.": [
+"lang-es.js"
+],
 "¡{} la próxima temporada! Esta afición se lo merece.": [
 "lang-es.js"
 ],
@@ -245415,6 +247034,9 @@
 "lang-es.js"
 ],
 "🌐 ¡Eres el nuevo seleccionador de {}!": [
+"lang-es.js"
+],
+"{} rechazó la oferta. Su exigencia subió un poco.": [
 "lang-es.js"
 ],
 "¡El rival superó a {} y llegó a zona peligrosa!": [
@@ -245606,6 +247228,9 @@
 "👉 {}: \\\"Espero más de ti\\\"": [
 "lang-es.js"
 ],
+"{} no quiere hablar de contrato esta temporada.": [
+"lang-es.js"
+],
 "Cotilleo: ¡{} visto junto a {} {}!": [
 "lang-es.js"
 ],
@@ -245646,6 +247271,9 @@
 "lang-es.js"
 ],
 "{} está dolido por perder el gran traspaso.": [
+"lang-es.js"
+],
+"🏅 ¡Eres el entrenador del mes de {} {}!": [
 "lang-es.js"
 ],
 "¡El día de tu vida! Técnica +{}, Regate +{}": [
@@ -246041,6 +247669,9 @@
 "{} recibe en el área": [
 "lang-es.js"
 ],
+"Cambio · quedan {} · {}'": [
+"lang-es.js"
+],
 "Sanción de la federación: {} semanas": [
 "lang-es.js"
 ],
@@ -246246,6 +247877,12 @@
 "lang-es.js"
 ],
 "{}: ¡pasamos de grupo ({} puntos)!": [
+"lang-es.js"
+],
+"Entrenador del mes · {} {}": [
+"lang-es.js"
+],
+"Contrato de {} años · {}/sem": [
 "lang-es.js"
 ],
 ", {} canceló el patrocinio": [
@@ -246878,6 +248515,9 @@
 "lang-es.js"
 ],
 "🌐 {} no se clasificó para el {}.": [
+"lang-es.js"
+],
+"{} rompió las negociaciones": [
 "lang-es.js"
 ],
 "¡El entrenador quedó impresionado! {} +{}": [
@@ -247864,6 +249504,9 @@
 "Directiva {}": [
 "lang-es.js"
 ],
+"{} Ajustes": [
+"lang-es.js"
+],
 "/{}. SEMANA": [
 "lang-es.js",
 "lang-pt.js"
@@ -248135,6 +249778,9 @@
 "lang-es.js"
 ],
 "{} goles": [
+"lang-es.js"
+],
+"{} años{}": [
 "lang-es.js"
 ],
 "{} Goles": [
@@ -256180,6 +257826,64 @@
 "lang-fr.js"
 ],
 "Compose ton effectif, choisis ta tactique et dirige le match en direct depuis le banc.": [
+"lang-fr.js"
+],
+"Août": [
+"lang-fr.js"
+],
+"Septembre": [
+"lang-fr.js"
+],
+"Octobre": [
+"lang-fr.js"
+],
+"Novembre": [
+"lang-fr.js",
+"lang-it.js"
+],
+"Décembre": [
+"lang-fr.js"
+],
+"Janvier": [
+"lang-fr.js"
+],
+"Février": [
+"lang-fr.js"
+],
+"Mars": [
+"lang-fr.js"
+],
+"Avril": [
+"lang-fr.js"
+],
+"Touche le joueur qui sort": [
+"lang-fr.js"
+],
+"Note du match": [
+"lang-fr.js"
+],
+"Banc · touche le joueur qui entre": [
+"lang-fr.js"
+],
+"Commentaire": [
+"lang-fr.js"
+],
+"Touche un joueur pour le remplacer.": [
+"lang-fr.js"
+],
+"Plus de remplacements.": [
+"lang-fr.js"
+],
+"Prolongation de contrat": [
+"lang-fr.js"
+],
+"Durée du nouveau contrat (dès aujourd'hui)": [
+"lang-fr.js"
+],
+"★ Durée souhaitée par le joueur": [
+"lang-fr.js"
+],
+"Il pourrait partir libre en fin de saison.": [
 "lang-fr.js"
 ],
 "— on est qualifiés !": [
@@ -266323,6 +268027,64 @@
 "TON PAYS": [
 "lang-fr.js"
 ],
+"AOÛT": [
+"lang-fr.js"
+],
+"SEPTEMBRE": [
+"lang-fr.js"
+],
+"OCTOBRE": [
+"lang-fr.js"
+],
+"NOVEMBRE": [
+"lang-fr.js",
+"lang-it.js"
+],
+"DÉCEMBRE": [
+"lang-fr.js"
+],
+"JANVIER": [
+"lang-fr.js"
+],
+"FÉVRIER": [
+"lang-fr.js"
+],
+"MARS": [
+"lang-fr.js"
+],
+"AVRIL": [
+"lang-fr.js"
+],
+"TOUCHE LE JOUEUR QUI SORT": [
+"lang-fr.js"
+],
+"NOTE DU MATCH": [
+"lang-fr.js"
+],
+"BANC · TOUCHE LE JOUEUR QUI ENTRE": [
+"lang-fr.js"
+],
+"COMMENTAIRE": [
+"lang-fr.js"
+],
+"TOUCHE UN JOUEUR POUR LE REMPLACER.": [
+"lang-fr.js"
+],
+"PLUS DE REMPLACEMENTS.": [
+"lang-fr.js"
+],
+"PROLONGATION DE CONTRAT": [
+"lang-fr.js"
+],
+"DURÉE DU NOUVEAU CONTRAT (DÈS AUJOURD'HUI)": [
+"lang-fr.js"
+],
+"★ DURÉE SOUHAITÉE PAR LE JOUEUR": [
+"lang-fr.js"
+],
+"IL POURRAIT PARTIR LIBRE EN FIN DE SAISON.": [
+"lang-fr.js"
+],
 "— ON EST QUALIFIÉS !": [
 "lang-fr.js"
 ],
@@ -270280,6 +272042,9 @@
 "Que veux-tu dire sur le {} ? Les supporters en parleront pendant des semaines.": [
 "lang-fr.js"
 ],
+"Tes trois offres ont été refusées. Il ne veut plus parler cette saison.{}": [
+"lang-fr.js"
+],
 "Il te reste {} ans de contrat. Tu peux étudier les offres.": [
 "lang-fr.js"
 ],
@@ -270503,6 +272268,9 @@
 "lang-fr.js"
 ],
 "📨 Ta demande a été envoyée à {}. Réponse la semaine prochaine.": [
+"lang-fr.js"
+],
+"{} · {} ans · Note {} · {} ans restants · Salaire actuel {}/sem": [
 "lang-fr.js"
 ],
 "👀 Il y a un autre espoir de ton âge à ton poste : {} ({}).": [
@@ -270826,6 +272594,9 @@
 "AU SOMMET DU CONTINENT ! {} {}. Ce soir, nous sommes entrés dans l'histoire !": [
 "lang-fr.js"
 ],
+"📝 {} a signé un nouveau contrat de {} ans ({}/sem).": [
+"lang-fr.js"
+],
 "{} buts dans le match de rue ! Il y avait un recruteur au bord du terrain...": [
 "lang-fr.js"
 ],
@@ -270994,6 +272765,9 @@
 "{} s'est accroché avec un coéquipier à l'entraînement.": [
 "lang-fr.js"
 ],
+"😠 {} a rompu les négociations pour cette saison.": [
+"lang-fr.js"
+],
 "{} la saison prochaine ! Ces fans le méritent.": [
 "lang-fr.js"
 ],
@@ -271073,6 +272847,9 @@
 "lang-fr.js"
 ],
 "🌐 Tu es le nouveau sélectionneur de {} !": [
+"lang-fr.js"
+],
+"{} a refusé l'offre. Ses exigences ont un peu augmenté.": [
 "lang-fr.js"
 ],
 "L'adversaire a passé {} et est entré dans une zone dangereuse !": [
@@ -271264,6 +273041,9 @@
 "👉 {} : « J'attends plus de toi »": [
 "lang-fr.js"
 ],
+"{} ne veut pas parler contrat cette saison.": [
+"lang-fr.js"
+],
 "Rumeur : {} aperçu avec {} {} !": [
 "lang-fr.js"
 ],
@@ -271304,6 +273084,9 @@
 "lang-fr.js"
 ],
 "{} est déçu de rater un gros transfert.": [
+"lang-fr.js"
+],
+"🏅 Tu es l'entraîneur du mois de {} {} !": [
 "lang-fr.js"
 ],
 "Le jour de ta vie ! Technique +{}, Dribble +{}": [
@@ -271699,6 +273482,9 @@
 "{} reçoit le ballon dans la surface": [
 "lang-fr.js"
 ],
+"Remplacement · {} restants · {}'": [
+"lang-fr.js"
+],
 "Suspension fédérale : {} semaines": [
 "lang-fr.js"
 ],
@@ -271904,6 +273690,12 @@
 "lang-fr.js"
 ],
 "{} : sortis des groupes ({} points) !": [
+"lang-fr.js"
+],
+"Entraîneur du mois · {} {}": [
+"lang-fr.js"
+],
+"Contrat de {} ans · {}/sem": [
 "lang-fr.js"
 ],
 ", {} a annulé le sponsoring": [
@@ -272528,6 +274320,9 @@
 "lang-fr.js"
 ],
 "🌐 {} ne s'est pas qualifié pour le {}.": [
+"lang-fr.js"
+],
+"{} a rompu les négociations": [
 "lang-fr.js"
 ],
 "Le coach a été impressionné ! {} +{}": [
@@ -273437,6 +275232,9 @@
 "Direction {}": [
 "lang-fr.js"
 ],
+"{} Réglages": [
+"lang-fr.js"
+],
 "/{}. SEMAINE": [
 "lang-fr.js"
 ],
@@ -273675,6 +275473,9 @@
 "lang-fr.js"
 ],
 "Note {}": [
+"lang-fr.js"
+],
+"{} ans{}": [
 "lang-fr.js"
 ],
 "{} Buts": [
@@ -281562,6 +283363,54 @@
 "lang-id.js"
 ],
 "Bangun skuad, pilih taktik, dan pimpin laga langsung dari pinggir lapangan.": [
+"lang-id.js"
+],
+"Agustus": [
+"lang-id.js"
+],
+"Desember": [
+"lang-id.js"
+],
+"Januari": [
+"lang-id.js"
+],
+"Februari": [
+"lang-id.js"
+],
+"Maret": [
+"lang-id.js"
+],
+"Mei": [
+"lang-id.js"
+],
+"Ketuk pemain yang keluar": [
+"lang-id.js"
+],
+"Rating laga": [
+"lang-id.js"
+],
+"Cadangan · ketuk pemain yang masuk": [
+"lang-id.js"
+],
+"Komentar": [
+"lang-id.js"
+],
+"Ketuk pemain untuk mengganti.": [
+"lang-id.js"
+],
+"Jatah pergantian habis.": [
+"lang-id.js"
+],
+"Perpanjangan kontrak": [
+"lang-id.js"
+],
+"Durasi kontrak baru (mulai hari ini)": [
+"lang-id.js"
+],
+"★ Durasi pilihan pemain": [
+"lang-id.js"
+],
+"Ia bisa pergi gratis di akhir musim.": [
 "lang-id.js"
 ],
 "— kita lolos!": [
@@ -291516,6 +293365,54 @@
 "NEGARAMU": [
 "lang-id.js"
 ],
+"AGUSTUS": [
+"lang-id.js"
+],
+"DESEMBER": [
+"lang-id.js"
+],
+"JANUARI": [
+"lang-id.js"
+],
+"FEBRUARI": [
+"lang-id.js"
+],
+"MARET": [
+"lang-id.js"
+],
+"MEI": [
+"lang-id.js"
+],
+"KETUK PEMAIN YANG KELUAR": [
+"lang-id.js"
+],
+"RATING LAGA": [
+"lang-id.js"
+],
+"CADANGAN · KETUK PEMAIN YANG MASUK": [
+"lang-id.js"
+],
+"KOMENTAR": [
+"lang-id.js"
+],
+"KETUK PEMAIN UNTUK MENGGANTI.": [
+"lang-id.js"
+],
+"JATAH PERGANTIAN HABIS.": [
+"lang-id.js"
+],
+"PERPANJANGAN KONTRAK": [
+"lang-id.js"
+],
+"DURASI KONTRAK BARU (MULAI HARI INI)": [
+"lang-id.js"
+],
+"★ DURASI PILIHAN PEMAIN": [
+"lang-id.js"
+],
+"IA BISA PERGI GRATIS DI AKHIR MUSIM.": [
+"lang-id.js"
+],
 "— KITA LOLOS!": [
 "lang-id.js"
 ],
@@ -295453,6 +297350,9 @@
 "Apa pendapatmu tentang {}? Suporter akan membicarakan laga ini berminggu-minggu.": [
 "lang-id.js"
 ],
+"Ketiga tawaranmu ditolak. Ia tak mau bicara lagi musim ini.{}": [
+"lang-id.js"
+],
 "Kontrakmu tersisa {} tahun. Kamu bisa menimbang tawaran-tawaran.": [
 "lang-id.js"
 ],
@@ -295676,6 +297576,9 @@
 "lang-id.js"
 ],
 "📨 Permintaanmu dikirim ke {}. Jawaban minggu depan.": [
+"lang-id.js"
+],
+"{} · {} thn · Kekuatan {} · Sisa {} thn · Gaji saat ini {}/pekan": [
 "lang-id.js"
 ],
 "👀 Ada pemain muda lain seusiamu di posisimu: {} ({}).": [
@@ -295999,6 +297902,9 @@
 "PUNCAK BENUA! {} {}. Malam ini kami cetak sejarah!": [
 "lang-id.js"
 ],
+"📝 {} menandatangani kontrak baru {} tahun ({}/pekan).": [
+"lang-id.js"
+],
 "{} gol di pertandingan jalanan! Ada pencari bakat di pinggir lapangan...": [
 "lang-id.js"
 ],
@@ -296167,6 +298073,9 @@
 "{} bertengkar dengan rekan setim saat latihan.": [
 "lang-id.js"
 ],
+"😠 {} menghentikan negosiasi kontrak musim ini.": [
+"lang-id.js"
+],
 "{} musim depan! Para suporter ini pantas mendapatkannya.": [
 "lang-id.js"
 ],
@@ -296246,6 +298155,9 @@
 "lang-id.js"
 ],
 "🌐 Kamu kini pelatih timnas {}!": [
+"lang-id.js"
+],
+"{} menolak tawaran. Tuntutannya sedikit naik.": [
 "lang-id.js"
 ],
 "Lawan melewati {} dan masuk ke area berbahaya!": [
@@ -296437,6 +298349,9 @@
 "👉 {}: \\\"Aku harap lebih darimu\\\"": [
 "lang-id.js"
 ],
+"{} tak mau membahas kontrak musim ini.": [
+"lang-id.js"
+],
 "Gosip: {} terlihat bersama {} {}!": [
 "lang-id.js"
 ],
@@ -296477,6 +298392,9 @@
 "lang-id.js"
 ],
 "{} kecewa gagal pindah ke klub besar.": [
+"lang-id.js"
+],
+"🏅 Kamu Pelatih Bulan Ini untuk {} {}!": [
 "lang-id.js"
 ],
 "Hari terindah dalam hidupmu! Teknik +{}, Dribel +{}": [
@@ -296872,6 +298790,9 @@
 "{} menerima bola di kotak penalti": [
 "lang-id.js"
 ],
+"Pergantian · sisa {} · {}'": [
+"lang-id.js"
+],
 "Larangan federasi: {} minggu": [
 "lang-id.js"
 ],
@@ -297077,6 +298998,12 @@
 "lang-id.js"
 ],
 "{}: lolos dari grup ({} poin)!": [
+"lang-id.js"
+],
+"Pelatih Bulan Ini · {} {}": [
+"lang-id.js"
+],
+"Kontrak {} tahun · {}/pekan": [
 "lang-id.js"
 ],
 ", {} membatalkan sponsor": [
@@ -297695,6 +299622,9 @@
 "lang-id.js"
 ],
 "🌐 {} gagal lolos ke {}.": [
+"lang-id.js"
+],
+"{} menghentikan negosiasi": [
 "lang-id.js"
 ],
 "Pelatih terkesan! {} +{}": [
@@ -298613,6 +300543,9 @@
 "Manajemen {}": [
 "lang-id.js"
 ],
+"{} Pengaturan": [
+"lang-id.js"
+],
 "/{}. MINGGU": [
 "lang-id.js"
 ],
@@ -298846,6 +300779,9 @@
 "lang-id.js"
 ],
 "{} laga": [
+"lang-id.js"
+],
+"{} thn{}": [
 "lang-id.js"
 ],
 "{} Pertandingan": [
@@ -306736,6 +308672,60 @@
 "lang-it.js"
 ],
 "Costruisci la rosa, scegli la tattica e dirigi la partita dalla panchina.": [
+"lang-it.js"
+],
+"Settembre": [
+"lang-it.js"
+],
+"Ottobre": [
+"lang-it.js"
+],
+"Dicembre": [
+"lang-it.js"
+],
+"Gennaio": [
+"lang-it.js"
+],
+"Febbraio": [
+"lang-it.js"
+],
+"Aprile": [
+"lang-it.js"
+],
+"Maggio": [
+"lang-it.js"
+],
+"Tocca il giocatore che esce": [
+"lang-it.js"
+],
+"Voto partita": [
+"lang-it.js"
+],
+"Panchina · tocca chi entra": [
+"lang-it.js"
+],
+"Prima scegli il giocatore che esce.": [
+"lang-it.js"
+],
+"Cronaca": [
+"lang-it.js"
+],
+"Tocca un giocatore per sostituirlo.": [
+"lang-it.js"
+],
+"Nessun cambio rimasto.": [
+"lang-it.js"
+],
+"Rinnovo del contratto": [
+"lang-it.js"
+],
+"Durata del nuovo contratto (da oggi)": [
+"lang-it.js"
+],
+"★ Durata preferita dal giocatore": [
+"lang-it.js"
+],
+"Potrebbe andarsene a zero a fine stagione.": [
 "lang-it.js"
 ],
 "— ci siamo qualificati!": [
@@ -316684,6 +318674,60 @@
 "IL TUO PAESE": [
 "lang-it.js"
 ],
+"SETTEMBRE": [
+"lang-it.js"
+],
+"OTTOBRE": [
+"lang-it.js"
+],
+"DICEMBRE": [
+"lang-it.js"
+],
+"GENNAIO": [
+"lang-it.js"
+],
+"FEBBRAIO": [
+"lang-it.js"
+],
+"APRILE": [
+"lang-it.js"
+],
+"MAGGIO": [
+"lang-it.js"
+],
+"TOCCA IL GIOCATORE CHE ESCE": [
+"lang-it.js"
+],
+"VOTO PARTITA": [
+"lang-it.js"
+],
+"PANCHINA · TOCCA CHI ENTRA": [
+"lang-it.js"
+],
+"PRIMA SCEGLI IL GIOCATORE CHE ESCE.": [
+"lang-it.js"
+],
+"CRONACA": [
+"lang-it.js"
+],
+"TOCCA UN GIOCATORE PER SOSTITUIRLO.": [
+"lang-it.js"
+],
+"NESSUN CAMBIO RIMASTO.": [
+"lang-it.js"
+],
+"RINNOVO DEL CONTRATTO": [
+"lang-it.js"
+],
+"DURATA DEL NUOVO CONTRATTO (DA OGGI)": [
+"lang-it.js"
+],
+"★ DURATA PREFERITA DAL GIOCATORE": [
+"lang-it.js"
+],
+"POTREBBE ANDARSENE A ZERO A FINE STAGIONE.": [
+"lang-it.js"
+],
 "— CI SIAMO QUALIFICATI!": [
 "lang-it.js"
 ],
@@ -320614,6 +322658,9 @@
 "Cosa vuoi dire del {}? I tifosi ne parleranno per settimane.": [
 "lang-it.js"
 ],
+"Tutte e tre le offerte rifiutate. Non vuole parlarne più in questa stagione.{}": [
+"lang-it.js"
+],
 "Ti restano {} anni di contratto. Puoi valutare le offerte.": [
 "lang-it.js"
 ],
@@ -320837,6 +322884,9 @@
 "lang-it.js"
 ],
 "📨 La tua richiesta è arrivata al {}. Risposta la prossima settimana.": [
+"lang-it.js"
+],
+"{} · {} anni · Forza {} · {} anni rimasti · Stipendio attuale {}/sett": [
 "lang-it.js"
 ],
 "👀 C'è un altro talento della tua età nel tuo ruolo: {} ({}).": [
@@ -321160,6 +323210,9 @@
 "IN CIMA AL CONTINENTE! {} {}. Stanotte abbiamo fatto la storia!": [
 "lang-it.js"
 ],
+"📝 {} ha firmato un nuovo contratto di {} anni ({}/sett).": [
+"lang-it.js"
+],
 "{} gol nella partita di strada! C'era un osservatore a bordo campo...": [
 "lang-it.js"
 ],
@@ -321328,6 +323381,9 @@
 "{} ha litigato con un compagno in allenamento.": [
 "lang-it.js"
 ],
+"😠 {} ha interrotto le trattative per questa stagione.": [
+"lang-it.js"
+],
 "{} la prossima stagione! Questi tifosi se lo meritano.": [
 "lang-it.js"
 ],
@@ -321407,6 +323463,9 @@
 "lang-it.js"
 ],
 "🌐 Sei il nuovo ct di {}!": [
+"lang-it.js"
+],
+"{} ha rifiutato. Le sue richieste sono salite un po'.": [
 "lang-it.js"
 ],
 "L'avversario ha superato {} ed è entrato in zona pericolosa!": [
@@ -321598,6 +323657,9 @@
 "👉 {}: \\\"Mi aspetto di più da te\\\"": [
 "lang-it.js"
 ],
+"{} non vuole parlare di contratto in questa stagione.": [
+"lang-it.js"
+],
 "Gossip: {} avvistato insieme a {} {}!": [
 "lang-it.js"
 ],
@@ -321638,6 +323700,9 @@
 "lang-it.js"
 ],
 "{} è deluso di aver perso il grande salto.": [
+"lang-it.js"
+],
+"🏅 Sei l'allenatore del mese di {} {}!": [
 "lang-it.js"
 ],
 "Il giorno della tua vita! Tecnica +{}, Dribbling +{}": [
@@ -322033,6 +324098,9 @@
 "{} riceve in area": [
 "lang-it.js"
 ],
+"Sostituzione · {} rimaste · {}'": [
+"lang-it.js"
+],
 "Squalifica federale: {} settimane": [
 "lang-it.js"
 ],
@@ -322238,6 +324306,12 @@
 "lang-it.js"
 ],
 "{}: superato il girone ({} punti)!": [
+"lang-it.js"
+],
+"Allenatore del mese · {} {}": [
+"lang-it.js"
+],
+"Contratto di {} anni · {}/sett": [
 "lang-it.js"
 ],
 ", {} ha annullato la sponsorizzazione": [
@@ -322856,6 +324930,9 @@
 "lang-it.js"
 ],
 "🌐 {} non si è qualificata per il {}.": [
+"lang-it.js"
+],
+"{} ha interrotto le trattative": [
 "lang-it.js"
 ],
 "Il mister è rimasto colpito! {} +{}": [
@@ -323778,6 +325855,9 @@
 "Società {}": [
 "lang-it.js"
 ],
+"{} Impostazioni": [
+"lang-it.js"
+],
 "/{}. SETTIMANA": [
 "lang-it.js"
 ],
@@ -323972,6 +326052,9 @@
 "lang-it.js"
 ],
 "Forza {}": [
+"lang-it.js"
+],
+"{} anni{}": [
 "lang-it.js"
 ],
 "{} Partite": [
@@ -332586,6 +334669,63 @@
 "lang-pt.js"
 ],
 "Monte o elenco, escolha a tática e comande o jogo ao vivo da beira do campo.": [
+"lang-pt.js"
+],
+"Setembro": [
+"lang-pt.js"
+],
+"Outubro": [
+"lang-pt.js"
+],
+"Novembro": [
+"lang-pt.js"
+],
+"Dezembro": [
+"lang-pt.js"
+],
+"Janeiro": [
+"lang-pt.js"
+],
+"Fevereiro": [
+"lang-pt.js"
+],
+"Março": [
+"lang-pt.js"
+],
+"Maio": [
+"lang-pt.js"
+],
+"Toque no jogador que vai sair": [
+"lang-pt.js"
+],
+"Nota no jogo": [
+"lang-pt.js"
+],
+"Banco · toque no jogador que entra": [
+"lang-pt.js"
+],
+"Escolha primeiro o jogador que sai.": [
+"lang-pt.js"
+],
+"Narração": [
+"lang-pt.js"
+],
+"Toque num jogador para substituir.": [
+"lang-pt.js"
+],
+"Sem substituições restantes.": [
+"lang-pt.js"
+],
+"Renovação de contrato": [
+"lang-pt.js"
+],
+"Duração do novo contrato (a partir de hoje)": [
+"lang-pt.js"
+],
+"★ Duração preferida do jogador": [
+"lang-pt.js"
+],
+"Ele pode sair de graça no fim da temporada.": [
 "lang-pt.js"
 ],
 "— nos classificamos!": [
@@ -342296,6 +344436,63 @@
 "SEU PAÍS": [
 "lang-pt.js"
 ],
+"SETEMBRO": [
+"lang-pt.js"
+],
+"OUTUBRO": [
+"lang-pt.js"
+],
+"NOVEMBRO": [
+"lang-pt.js"
+],
+"DEZEMBRO": [
+"lang-pt.js"
+],
+"JANEIRO": [
+"lang-pt.js"
+],
+"FEVEREIRO": [
+"lang-pt.js"
+],
+"MARÇO": [
+"lang-pt.js"
+],
+"MAIO": [
+"lang-pt.js"
+],
+"TOQUE NO JOGADOR QUE VAI SAIR": [
+"lang-pt.js"
+],
+"NOTA NO JOGO": [
+"lang-pt.js"
+],
+"BANCO · TOQUE NO JOGADOR QUE ENTRA": [
+"lang-pt.js"
+],
+"ESCOLHA PRIMEIRO O JOGADOR QUE SAI.": [
+"lang-pt.js"
+],
+"NARRAÇÃO": [
+"lang-pt.js"
+],
+"TOQUE NUM JOGADOR PARA SUBSTITUIR.": [
+"lang-pt.js"
+],
+"SEM SUBSTITUIÇÕES RESTANTES.": [
+"lang-pt.js"
+],
+"RENOVAÇÃO DE CONTRATO": [
+"lang-pt.js"
+],
+"DURAÇÃO DO NOVO CONTRATO (A PARTIR DE HOJE)": [
+"lang-pt.js"
+],
+"★ DURAÇÃO PREFERIDA DO JOGADOR": [
+"lang-pt.js"
+],
+"ELE PODE SAIR DE GRAÇA NO FIM DA TEMPORADA.": [
+"lang-pt.js"
+],
 "— NOS CLASSIFICAMOS!": [
 "lang-pt.js"
 ],
@@ -346124,6 +348321,9 @@
 "O que você quer dizer sobre o {}? A torcida vai falar desse jogo por semanas.": [
 "lang-pt.js"
 ],
+"Suas três propostas foram recusadas. Ele não quer conversar de novo nesta temporada.{}": [
+"lang-pt.js"
+],
 "Faltam {} anos de contrato. Você pode avaliar as ofertas.": [
 "lang-pt.js"
 ],
@@ -346347,6 +348547,9 @@
 "lang-pt.js"
 ],
 "📨 Seu pedido foi enviado ao {}. Resposta na próxima semana.": [
+"lang-pt.js"
+],
+"{} · {} anos · Força {} · Restam {} anos · Salário atual {}/sem": [
 "lang-pt.js"
 ],
 "👀 Tem outra promessa da sua idade na sua posição: {} ({}).": [
@@ -346670,6 +348873,9 @@
 "NO TOPO DO CONTINENTE! {} {}. Hoje fizemos história!": [
 "lang-pt.js"
 ],
+"📝 {} assinou novo contrato de {} anos ({}/sem).": [
+"lang-pt.js"
+],
 "{} gols no jogo de rua! Tinha um olheiro na lateral...": [
 "lang-pt.js"
 ],
@@ -346838,6 +349044,9 @@
 "{} brigou com um companheiro no treino.": [
 "lang-pt.js"
 ],
+"😠 {} encerrou as negociações nesta temporada.": [
+"lang-pt.js"
+],
 "{} na próxima temporada! Essa torcida merece.": [
 "lang-pt.js"
 ],
@@ -346917,6 +349126,9 @@
 "lang-pt.js"
 ],
 "🌐 Você é o novo técnico da seleção de {}!": [
+"lang-pt.js"
+],
+"{} recusou a proposta. A exigência subiu um pouco.": [
 "lang-pt.js"
 ],
 "O adversário passou por {} e entrou em zona perigosa!": [
@@ -347108,6 +349320,9 @@
 "👉 {}: \\\"Espero mais de você\\\"": [
 "lang-pt.js"
 ],
+"{} não quer falar de contrato nesta temporada.": [
+"lang-pt.js"
+],
 "Fofoca: {} visto junto com {} {}!": [
 "lang-pt.js"
 ],
@@ -347148,6 +349363,9 @@
 "lang-pt.js"
 ],
 "{} ficou triste por perder a grande chance.": [
+"lang-pt.js"
+],
+"🏅 Você é o técnico do mês de {} {}!": [
 "lang-pt.js"
 ],
 "O dia da sua vida! Técnica +{}, Drible +{}": [
@@ -347543,6 +349761,9 @@
 "{} recebe na área": [
 "lang-pt.js"
 ],
+"Substituição · restam {} · {}'": [
+"lang-pt.js"
+],
 "Suspensão da federação: {} semanas": [
 "lang-pt.js"
 ],
@@ -347748,6 +349969,12 @@
 "lang-pt.js"
 ],
 "{}: passamos do grupo ({} pontos)!": [
+"lang-pt.js"
+],
+"Técnico do mês · {} {}": [
+"lang-pt.js"
+],
+"Contrato de {} anos · {}/sem": [
 "lang-pt.js"
 ],
 ", {} cancelou o patrocínio": [
@@ -348348,6 +350575,9 @@
 "lang-pt.js"
 ],
 "🌐 {} não se classificou para o {}.": [
+"lang-pt.js"
+],
+"{} encerrou as conversas": [
 "lang-pt.js"
 ],
 "O técnico ficou impressionado! {} +{}": [
@@ -349178,6 +351408,9 @@
 "Diretoria {}": [
 "lang-pt.js"
 ],
+"{} Configurações": [
+"lang-pt.js"
+],
 "ESTAÇÃO {}/3": [
 "lang-pt.js"
 ],
@@ -349380,6 +351613,9 @@
 "lang-pt.js"
 ],
 "Força {}": [
+"lang-pt.js"
+],
+"{} anos{}": [
 "lang-pt.js"
 ],
 "{} Gols": [

@@ -1266,3 +1266,84 @@
 8025|{} rompió las negociaciones
 8008|Rechazó tus tres ofertas. No quiere volver a hablar esta temporada.{}
 8018|{} rechazó la oferta. Su exigencia subió un poco.
+8029|Al menos 2 jóvenes (21 o menos) jueguen 12+ partidos
+8124|Mantén la masa salarial por debajo de {} al final
+8030|Llega a semifinales de copa
+8031|Llega a cuartos en Europa
+8150|Marca al menos {} goles en liga
+8135|Pierde como máximo {} partidos en casa
+8032|Sobre el papel son fuertes. Ya veremos en el campo.
+8033|Su estilo de juego se quedó hace diez años.
+8034|El fin de semana se verá quién es mejor entrenador.
+8035|Excompañero
+8130|{} quiere ser tu ayudante
+8102|{}, a quien conoces de tu etapa como jugador, quiere unirse a tu cuerpo técnico. Los jugadores lo adoran.
+6688|Por ahora no
+8038|Que se una
+8120|🤝 Tu excompañero {} es ahora tu ayudante.
+8039|🔥 DERBI
+8041|Técnico rival:
+8042|(tu excompañero)
+8043|Marcaje:
+8044|Plan de partido
+8045|Pulla lanzada
+8046|Lanza una pulla al rival
+8151|Media {} · Forma {}
+8047|Estilo
+8048|Jugador más peligroso
+8049|Marcaje al hombre
+8105|Tu jugador sigue a {}: su ataque se debilita, pero aportamos algo menos arriba.
+8050|Sin marcaje
+8051|Plan de partido listo.
+8110|El técnico rival {} es tu excompañero: esto puede tensar la relación.
+8138|¿Qué dirás antes del partido contra {}?
+8052|Una pulla motiva a ambos equipos. Si ganas, la afición estalla; si pierdes, lo pagarás.
+8144|🗯️ Tus palabras son titular: "{}"
+8055|¡Todas las miradas en este partido!
+8155|{} · Derbi
+8111|🔥 ¡El derbi es nuestro! La ciudad se tiñe de nuestros colores tras ganar a {}.
+8123|🔥 Perdimos el derbi contra {}. La afición está destrozada.
+8060|🗯️ ¡Respaldaste tus palabras! La prensa habla de ti.
+8065|🗯️ Tus palabras previas se volvieron en tu contra. La afición está molesta.
+8145|· Mejor puesto {}.º ({})
+8070|Aún no hay títulos. ¡El primero para el museo depende de ti!
+8073|Mayor goleada
+8074|Los récords goleadores se irán llenando.
+8075|Museo del club
+8147|Tu etapa: temporada {}{}
+8076|Vitrina
+8077|Leyendas del club (100+ partidos)
+8078|🏛️ Museo del club
+8103|🌟 Una joya de la cantera: {} {} (17). ¡Los ojeadores dicen que su potencial es enorme!
+8119|¡De nuestra cantera al primer equipo: {}! Recuerden este nombre.
+8081|Terminado
+8139|{} Objetivos de la directiva
+8083|Bonus de presupuesto si lo logras
+8106|🌱 Diste oportunidades a {} jóvenes. Afición y directiva valoran tu valentía.
+8154|🎯 Objetivo: {}
+8085|Objetivos de la directiva
+8116|La directiva quiere hablarlo de nuevo en {} semanas.
+8115|La directiva no destina más del 80% de la caja ({}) a fichajes.
+8112|La directiva no subirá la masa salarial muy por encima de los ingresos ({}/sem).
+8086|Por encima del límite: la directiva lo rechazará
+8152|Probabilidad de aceptación {}%
+8132|Pasar {} del presupuesto de fichajes al salarial
+7760|Reunión con la directiva
+8153|Pedir aumento de {}
+8129|Ahora: {}{} · Confianza {} · Caja {}
+8087|Presidente: "No hay tanto dinero. No podemos arruinar el club."
+8134|🤝 La directiva aprobó el aumento de {}: {}{}.
+8113|Presidente: "De acuerdo, confiamos en ti. Pero queremos resultados." {}: {}{}
+8131|🤝 La directiva buscó un punto medio en el {}: {}{}.
+8109|Presidente: "No puedo darte todo, pero encontrémonos a mitad de camino." {}: {}{}
+8091|Presidente: "Primero resultados, luego dinero."
+8092|Presidente: "Ahora no podemos subir el presupuesto. Sigue con esta plantilla."
+8093|Presidente: "Los sueldos ya aprietan nuestros ingresos. No podemos hacer este traspaso."
+8117|🔁 {} pasó del presupuesto de fichajes al salarial (+{}/sem).
+8128|Traspaso aprobado: presupuesto salarial +{}/sem
+8141|{} Negociar presupuesto con la directiva
+8097|Si te llevas bien con la directiva y hay dinero, puede aceptar más presupuesto.
+8098|Pedir presupuesto de fichajes
+8099|Pedir presupuesto salarial
+8100|presupuesto de fichajes
+8101|presupuesto salarial

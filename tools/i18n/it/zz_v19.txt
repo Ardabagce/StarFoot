@@ -1266,3 +1266,84 @@
 8025|{} ha interrotto le trattative
 8008|Tutte e tre le offerte rifiutate. Non vuole parlarne più in questa stagione.{}
 8018|{} ha rifiutato. Le sue richieste sono salite un po'.
+8029|Almeno 2 giovani (fino a 21) giochino 12+ partite
+8124|Tieni il monte ingaggi sotto {} a fine stagione
+8030|Raggiungi la semifinale di coppa
+8031|Raggiungi i quarti in Europa
+8150|Segna almeno {} gol in campionato
+8135|Perdi al massimo {} partite in casa
+8032|Sulla carta sono forti. Vedremo in campo.
+8033|Il loro gioco è fermo a dieci anni fa.
+8034|Nel weekend si vedrà chi è l'allenatore migliore.
+8035|Ex compagno
+8130|{} vuole essere il tuo vice
+8102|{}, che conosci dai tempi da giocatore, vuole entrare nel tuo staff. I giocatori lo adorano.
+6688|Per ora no
+8038|Che entri
+8120|🤝 Il tuo ex compagno {} è ora il tuo vice.
+8039|🔥 DERBY
+8041|Allenatore avversario:
+8042|(tuo ex compagno)
+8043|Marcatura:
+8044|Piano partita
+8045|Frecciatina lanciata
+8046|Frecciatina al rivale
+8151|Forza {} · Condizione {}
+8047|Stile
+8048|Giocatore più pericoloso
+8049|Marcatura a uomo
+8105|Il tuo giocatore segue {}: il loro attacco cala, il nostro un po' anche.
+8050|Nessuna marcatura
+8051|Piano partita pronto.
+8110|L'allenatore avversario {} è un tuo ex compagno: potrebbe incrinare l'amicizia.
+8138|Cosa dirai prima della partita contro {}?
+8052|Una frecciatina carica entrambe. Vinci e i tifosi esultano; perdi e la pagherai.
+8144|🗯️ Le tue parole in prima pagina: "{}"
+8055|Occhi puntati su questa partita!
+8155|{} · Derby
+8111|🔥 Il derby è nostro! La città si colora dei nostri colori dopo {}.
+8123|🔥 Derby perso contro {}. I tifosi sono distrutti.
+8060|🗯️ Hai mantenuto la parola! La stampa parla di te.
+8065|🗯️ Le parole pre-partita ti si sono ritorte contro. I tifosi sono arrabbiati.
+8145|· Miglior piazzamento {}° ({})
+8070|Ancora nessun trofeo. Il primo per il museo dipende da te!
+8073|Vittoria più larga
+8074|I record di gol si riempiranno con la stagione.
+8075|Museo del club
+8147|La tua era: stagione {}{}
+8076|Bacheca
+8077|Leggende del club (100+ partite)
+8078|🏛️ Museo del club
+8103|🌟 Un gioiello dal vivaio: {} {} (17). Gli osservatori dicono che ha un potenziale enorme!
+8119|Dal nostro vivaio alla prima squadra: {}! Ricordatevi questo nome.
+8081|Finito
+8139|{} Obiettivi della dirigenza
+8083|Bonus di budget se raggiunto
+8106|🌱 Hai dato spazio a {} giovani. Tifosi e dirigenza apprezzano il coraggio.
+8154|🎯 Obiettivo: {}
+8085|Obiettivi della dirigenza
+8116|La dirigenza vuole riparlarne tra {} settimane.
+8115|La dirigenza non spende più dell'80% della cassa ({}) sul mercato.
+8112|La dirigenza non alza il monte ingaggi molto oltre le entrate ({}/sett).
+8086|Oltre il limite: la dirigenza rifiuta
+8152|Probabilità di ok {}%
+8132|Sposta {} dal budget mercato agli ingaggi
+7760|Incontro con la dirigenza
+8153|Chiedi un aumento del {}
+8129|Ora: {}{} · Fiducia {} · Cassa {}
+8087|Presidente: "Non ci sono tutti quei soldi. Non possiamo far fallire il club."
+8134|🤝 La dirigenza ha approvato l'aumento del {}: {}{}.
+8113|Presidente: "Va bene, ci fidiamo. Ma vogliamo risultati." {}: {}{}
+8131|🤝 La dirigenza ha trovato un compromesso sul {}: {}{}.
+8109|Presidente: "Non posso darti tutto, ma veniamoci incontro." {}: {}{}
+8091|Presidente: "Prima i risultati, poi i soldi."
+8092|Presidente: "Ora non possiamo alzare il budget. Vai avanti con questa rosa."
+8093|Presidente: "Gli ingaggi pesano già sulle entrate. Non possiamo farlo."
+8117|🔁 {} spostati dal budget mercato agli ingaggi (+{}/sett).
+8128|Spostamento approvato: budget ingaggi +{}/sett
+8141|{} Trattativa sul budget con la dirigenza
+8097|Se sei in buoni rapporti con la dirigenza e c'è cassa, può dire di sì.
+8098|Chiedi budget mercato
+8099|Chiedi budget ingaggi
+8100|budget mercato
+8101|budget ingaggi

@@ -1266,3 +1266,84 @@
 8025|{} a rompu les négociations
 8008|Tes trois offres ont été refusées. Il ne veut plus parler cette saison.{}
 8018|{} a refusé l'offre. Ses exigences ont un peu augmenté.
+8029|Au moins 2 jeunes (21 ans ou moins) jouent 12+ matchs
+8124|Garde la masse salariale sous {} en fin de saison
+8030|Atteins les demi-finales de coupe
+8031|Atteins les quarts en Europe
+8150|Marque au moins {} buts en championnat
+8135|Ne perds pas plus de {} matchs à domicile
+8032|Sur le papier ils sont forts. On verra sur le terrain.
+8033|Leur style de jeu date d'il y a dix ans.
+8034|Ce week-end, on verra qui est le meilleur entraîneur.
+8035|Ancien coéquipier
+8130|{} veut être ton adjoint
+8102|{}, que tu connais de tes années de joueur, veut rejoindre ton staff. Les joueurs l'adorent.
+6688|Pas pour l'instant
+8038|Qu'il nous rejoigne
+8120|🤝 Ton ancien coéquipier {} est désormais ton adjoint.
+8039|🔥 DERBY
+8041|Entraîneur adverse :
+8042|(ton ancien coéquipier)
+8043|Marquage :
+8044|Plan de jeu
+8045|Pique lancée
+8046|Lance une pique au rival
+8151|Note {} · Forme {}
+8047|Style
+8048|Joueur le plus dangereux
+8049|Marquage individuel
+8105|Ton joueur suit {} : leur attaque s'affaiblit, la nôtre un peu aussi.
+8050|Pas de marquage
+8051|Plan de jeu prêt.
+8110|L'entraîneur adverse {} est ton ancien coéquipier : cela peut tendre vos relations.
+8138|Que diras-tu avant le match contre {} ?
+8052|Une pique motive les deux équipes. Gagne et les fans exultent ; perds et tu le paieras.
+8144|🗯️ Tes mots font la une : « {} »
+8055|Tous les regards sur ce match !
+8155|{} · Derby
+8111|🔥 Le derby est à nous ! La ville se pare de nos couleurs après {}.
+8123|🔥 Derby perdu contre {}. Les fans sont dévastés.
+8060|🗯️ Tu as tenu parole ! La presse ne parle que de toi.
+8065|🗯️ Tes mots d'avant-match se retournent contre toi. Les fans sont furieux.
+8145|· Meilleur classement {}e ({})
+8070|Pas encore de trophée. Le premier pour le musée dépend de toi !
+8073|Plus large victoire
+8074|Les records de buteurs se rempliront au fil de la saison.
+8075|Musée du club
+8147|Ton ère : saison {}{}
+8076|Armoire à trophées
+8077|Légendes du club (100+ matchs)
+8078|🏛️ Musée du club
+8103|🌟 Une pépite du centre de formation : {} {} (17). Les recruteurs parlent d'un énorme potentiel !
+8119|De notre centre au groupe pro : {} ! Retenez ce nom.
+8081|Terminé
+8139|{} Objectifs de la direction
+8083|Bonus de budget si atteint
+8106|🌱 Tu as donné leur chance à {} jeunes. Fans et direction saluent ton courage.
+8154|🎯 Objectif : {}
+8085|Objectifs de la direction
+8116|La direction veut en reparler dans {} semaines.
+8115|La direction ne consacre pas plus de 80 % de la trésorerie ({}) aux transferts.
+8112|La direction n'augmentera pas la masse salariale bien au-delà des revenus ({}/sem).
+8086|Au-dessus de la limite : la direction refusera
+8152|Chance d'accord {} %
+8132|Transférer {} du budget transferts vers les salaires
+7760|Réunion avec la direction
+8153|Demander une hausse du {}
+8129|Actuel : {}{} · Confiance {} · Trésorerie {}
+8087|Président : « Il n'y a pas autant d'argent. On ne va pas couler le club. »
+8134|🤝 La direction a validé la hausse du {} : {}{}.
+8113|Président : « D'accord, on te fait confiance. Mais on attend des résultats. » {} : {}{}
+8131|🤝 La direction a trouvé un compromis sur le {} : {}{}.
+8109|Président : « Je ne peux pas tout te donner, mais trouvons un compromis. » {} : {}{}
+8091|Président : « D'abord les résultats, ensuite l'argent. »
+8092|Président : « On ne peut pas augmenter le budget pour l'instant. Continue avec cet effectif. »
+8093|Président : « Les salaires pèsent déjà sur nos revenus. Impossible de faire ce transfert. »
+8117|🔁 {} transféré du budget transferts aux salaires (+{}/sem).
+8128|Transfert validé : budget salarial +{}/sem
+8141|{} Négocier le budget avec la direction
+8097|Si tu t'entends bien avec la direction et qu'il y a de l'argent, elle peut accepter.
+8098|Demander un budget transferts
+8099|Demander un budget salaires
+8100|budget transferts
+8101|budget salaires

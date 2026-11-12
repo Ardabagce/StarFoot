@@ -1266,3 +1266,84 @@
 8025|{} menghentikan negosiasi
 8008|Ketiga tawaranmu ditolak. Ia tak mau bicara lagi musim ini.{}
 8018|{} menolak tawaran. Tuntutannya sedikit naik.
+8029|Minimal 2 pemain muda (≤21) main 12+ laga
+8124|Jaga beban gaji di bawah {} di akhir musim
+8030|Capai semifinal piala
+8031|Capai perempat final Eropa
+8150|Cetak minimal {} gol liga
+8135|Kalah maksimal {} laga kandang
+8032|Di atas kertas mereka kuat. Kita lihat di lapangan.
+8033|Gaya main mereka tertinggal sepuluh tahun.
+8034|Akhir pekan ini akan terlihat siapa pelatih terbaik.
+8035|Mantan rekan setim
+8130|{} ingin jadi asistenmu
+8102|{}, yang kamu kenal sejak masa bermain, ingin bergabung dengan stafmu. Para pemain menyukainya.
+6688|Tidak sekarang
+8038|Ajak bergabung
+8120|🤝 Mantan rekan setimmu {} kini asistenmu.
+8039|🔥 DERBI
+8041|Pelatih lawan:
+8042|(mantan rekan setimmu)
+8043|Kawalan:
+8044|Rencana laga
+8045|Sindiran dilontarkan
+8046|Sindir pelatih lawan
+8151|Kekuatan {} · Kebugaran {}
+8047|Gaya
+8048|Pemain paling berbahaya
+8049|Kawalan satu lawan satu
+8105|Pemain pilihanmu mengawal {}: serangan lawan melemah, serangan kita sedikit berkurang.
+8050|Tanpa kawalan
+8051|Rencana laga siap.
+8110|Pelatih lawan {} mantan rekan setimmu: ini bisa merenggangkan hubungan.
+8138|Apa yang akan kamu katakan sebelum laga melawan {}?
+8052|Sindiran memacu kedua tim. Menang, fans bersorak; kalah, kamu menanggung akibatnya.
+8144|🗯️ Ucapanmu jadi berita utama: "{}"
+8055|Semua mata tertuju pada laga ini!
+8155|{} · Derbi
+8111|🔥 Derbi milik kita! Kota berwarna kebanggaan kita usai menaklukkan {}.
+8123|🔥 Kita kalah di derbi dari {}. Fans sangat sedih.
+8060|🗯️ Kamu membuktikan ucapanmu! Media terus membicarakanmu.
+8065|🗯️ Ucapanmu sebelum laga berbalik menyerangmu. Fans marah.
+8145|· Posisi terbaik {} ({})
+8070|Belum ada trofi. Trofi pertama untuk museum ada di tanganmu!
+8073|Kemenangan terbesar
+8074|Rekor gol akan terisi seiring musim berjalan.
+8075|Museum klub
+8147|Eramu: musim ke-{}{}
+8076|Lemari trofi
+8077|Legenda klub (100+ laga)
+8078|🏛️ Museum klub
+8103|🌟 Permata dari akademi: {} {} (17). Pemandu bakat bilang potensinya luar biasa!
+8119|Dari akademi kami ke tim utama: {}! Ingat nama ini.
+8081|Selesai
+8139|{} Target musim manajemen
+8083|Bonus anggaran jika tercapai
+8106|🌱 Kamu memberi kesempatan pada {} pemain muda. Fans dan manajemen menghargai keberanianmu.
+8154|🎯 Target: {}
+8085|Target manajemen
+8116|Manajemen ingin membahasnya lagi dalam {} pekan.
+8115|Manajemen tak akan memakai lebih dari 80% kas ({}) untuk transfer.
+8112|Manajemen tak menaikkan anggaran gaji jauh di atas pemasukan ({}/pekan).
+8086|Melebihi batas: manajemen menolak
+8152|Peluang disetujui {}%
+8132|Pindahkan {} dari anggaran transfer ke gaji
+7760|Pertemuan manajemen
+8153|Minta kenaikan {}
+8129|Saat ini: {}{} · Kepercayaan {} · Kas {}
+8087|Presiden: "Uangnya tidak sebanyak itu. Kita tak boleh membangkrutkan klub."
+8134|🤝 Manajemen menyetujui kenaikan {}: {}{}.
+8113|Presiden: "Baik, kami percaya padamu. Tapi kami menunggu hasil." {}: {}{}
+8131|🤝 Manajemen mencari jalan tengah untuk {}: {}{}.
+8109|Presiden: "Tak bisa kuberikan semua, tapi mari bertemu di tengah." {}: {}{}
+8091|Presiden: "Hasil dulu, uang kemudian."
+8092|Presiden: "Kami belum bisa menaikkan anggaran. Lanjutkan dengan skuad ini."
+8093|Presiden: "Gaji sudah membebani pemasukan. Kami tak bisa memindahkannya."
+8117|🔁 {} dipindah dari anggaran transfer ke gaji (+{}/pekan).
+8128|Pemindahan disetujui: anggaran gaji +{}/pekan
+8141|{} Negosiasi anggaran dengan manajemen
+8097|Jika hubunganmu baik dengan manajemen dan kas cukup, mereka bisa menyetujui.
+8098|Minta anggaran transfer
+8099|Minta anggaran gaji
+8100|anggaran transfer
+8101|anggaran gaji
