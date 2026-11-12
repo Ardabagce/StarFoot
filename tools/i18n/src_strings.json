@@ -2736,6 +2736,7 @@
 ],
 "Stadyum": [
 "coach.js",
+"coach6.js",
 "coachui.js",
 "lang-ar.js",
 "lang-de.js",
@@ -2974,6 +2975,7 @@
 ],
 "Şampiyonluk": [
 "coach.js",
+"coach6.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -2987,6 +2989,7 @@
 ],
 "İlk 4": [
 "coach.js",
+"coach6.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -2999,6 +3002,7 @@
 ],
 "İlk yarı": [
 "coach.js",
+"coach6.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -3011,6 +3015,7 @@
 ],
 "Orta sıralar": [
 "coach.js",
+"coach6.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -3023,6 +3028,7 @@
 ],
 "Ligde kalmak": [
 "coach.js",
+"coach6.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -3796,6 +3802,7 @@
 "coach3.js",
 "coach4.js",
 "coach5.js",
+"coach6.js",
 "coachui.js",
 "coachx.js",
 "cstats.js",
@@ -5341,6 +5348,7 @@
 ],
 "Kimya": [
 "coach3.js",
+"coach6.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -5443,6 +5451,7 @@
 "Takım": [
 "coach3.js",
 "coach4.js",
+"coach6.js",
 "coachui.js",
 "coachx.js",
 "cups.js",
@@ -6401,6 +6410,7 @@
 ],
 "Av": [
 "coach4.js",
+"coach6.js",
 "coachui.js"
 ],
 "<section class=\"card cp": [
@@ -6408,73 +6418,280 @@
 "coach5.js"
 ],
 "En az 2 genç (21 yaş ve altı) 12+ maç oynasın": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Sezon sonunda maaş gideri {} altında kalsın": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Kupada yarı finale kal": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Avrupa’da çeyrek finale çık": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Ligde en az {} gol at": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "İç sahada en fazla {} maç kaybet": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Rakip hocanın takımı kâğıt üstünde güçlü, sahada göreceğiz.": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Onların oyun anlayışı on yıl önce kaldı.": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Hafta sonu kimin daha iyi hoca olduğu belli olacak.": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Eski takım arkadaşın": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "{} yardımcı antrenörün olmak istiyor": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Futbol yıllarından tanıdığın {}, teknik ekibine katılmak için kapını çaldı. Oyuncular onu seviyor.": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Şimdilik hayır": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Ekibe katılsın": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "🤝 Eski takım arkadaşın {} yardımcı antrenörün oldu.": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "🔥 DERBİ": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Rakip hoca:": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "(eski takım arkadaşın)": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Markaj:": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Maç planı": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Laf sokuldu": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Rakip hocaya laf sok": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Güç {} · Kondisyon {}": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Rakip analizi": [
 "coach5.js",
@@ -6491,6 +6708,7 @@
 ],
 "Güç": [
 "coach5.js",
+"coach6.js",
 "coachui.js",
 "game.js",
 "lang-ar.js",
@@ -6506,6 +6724,7 @@
 ],
 "Sıra": [
 "coach5.js",
+"coach6.js",
 "coachui.js",
 "coachx.js",
 "game.js",
@@ -6568,22 +6787,76 @@
 "lang-pt.js"
 ],
 "En tehlikeli oyuncu": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Adam adama markaj": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Seçtiğin oyuncu {}'yi takip eder: rakibin hücumu zayıflar, bizim hücuma katkı biraz azalır.": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Markaj yok": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Maç planı hazır.": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Rakip hoca {} eski takım arkadaşın: bu söz aranızı biraz gerebilir.": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Basın toplantısı": [
 "coach5.js",
@@ -6600,31 +6873,103 @@
 "lang-pt.js"
 ],
 "{} maçı öncesi ne diyeceksin?": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Laf sokarsan iki takım da maça daha hırslı çıkar. Kazanırsan taraftar coşar, kaybedersen faturası ağır olur.": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "🗯️ Sözlerin manşette: \"{}\"": [
 "coach5.js"
 ],
 "Gözler bu maçta!": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "{} · Derbi": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "🔥 Derbi bizim! {} karşısında şehir bizim renklerimize boyandı.": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "🔥 Derbide {}'a kaybettik. Taraftar çok üzgün.": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "🗯️ Sözlerinin arkasında durdun! Basın seni konuşuyor.": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "🗯️ Maç öncesi sözlerin sana geri döndü. Taraftar tepkili.": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Dünya Şampiyonası": [
 "coach5.js",
@@ -6675,16 +7020,52 @@
 "weather.js"
 ],
 "· En iyi lig sırası {}. ({})": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Henüz kupa yok. İlk kupayı müzeye koymak senin elinde!": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "En farklı galibiyet": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Gol kayıtları sezon ilerledikçe dolacak.": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "{} maç": [
 "coach5.js",
@@ -6702,13 +7083,31 @@
 "coach5.js"
 ],
 "Kulüp müzesi": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Senin dönemin: {}. sezon{}": [
 "coach5.js"
 ],
 "Kupa dolabı": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Rekorlar": [
 "coach5.js",
@@ -6725,37 +7124,127 @@
 "star.js"
 ],
 "Kulüp efsaneleri (100+ maç)": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "🏛️ Kulüp müzesi": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "🌟 Altyapıdan bir cevher çıktı: {} {} (17). Gözlemciler potansiyelinin çok yüksek olduğunu söylüyor!": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Altyapımızdan {} A takımda! Bu çocuğun adını not edin.": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Bitti": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "{} Yönetimin sezon hedefleri": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Başarırsan bütçe ödülü": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "🌱 {} gence forma şansı verdin. Taraftar ve yönetim bu cesareti takdir ediyor.": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "🎯 Hedef: {}": [
 "coach5.js"
 ],
 "Yönetimin hedefleri": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Yönetim bu konuyu {} hafta sonra yeniden konuşmak istiyor.": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Transfer bütçesi": [
 "coach5.js",
@@ -6798,25 +7287,88 @@
 "life.js"
 ],
 "Yönetim kasanın %80'inden ({}) fazlasını transfere ayırmaz.": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Yönetim maaş bütçesini gelirlerin çok üstüne ({}/hf) çıkarmaz.": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Sınırın üstünde: yönetim kabul etmez": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Kabul olasılığı %{}": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Transfer bütçesinden {} maaşa aktar": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Yönetimle görüşme": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "{} artışı iste": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Şu an: {}{} · Yönetimin güveni {} · Kasa {}": [
 "coach5.js"
@@ -6825,13 +7377,31 @@
 "coach5.js"
 ],
 "🤝 Yönetim {} artışını onayladı: {}{}.": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Başkan: \"Tamam, sana güveniyoruz. Ama sonuç bekliyoruz.\" {}: {}{}": [
 "coach5.js"
 ],
 "🤝 Yönetim {} için orta yolu buldu: {}{}.": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Başkan: \"İstediğinin hepsini veremem ama yarı yolda buluşalım.\" {}: {}{}": [
 "coach5.js"
@@ -6846,22 +7416,194 @@
 "coach5.js"
 ],
 "🔁 Transfer bütçesinden {} maaş bütçesine aktarıldı (+{}/hf).": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Aktarım onaylandı: maaş bütçesi +{}/hf": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "{} Yönetimle bütçe görüşmesi": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Yönetimle aran iyiyse ve kasa elveriyorsa bütçe artışına \"tamam\" diyebilir.": [
 "coach5.js"
 ],
 "Transfer bütçesi iste": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Maaş bütçesi iste": [
-"coach5.js"
+"coach5.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ENG": [
+"coach6.js",
+"cups.js",
+"data.js",
+"game.js",
+"i18n.js",
+"league.js",
+"legends.js",
+"meta.js",
+"squads.js",
+"wcx.js",
+"weather.js"
+],
+"ESP": [
+"coach6.js",
+"cups.js",
+"data.js",
+"game.js",
+"i18n.js",
+"league.js",
+"legends.js",
+"meta.js",
+"squads.js",
+"wcx.js"
+],
+"GER": [
+"coach6.js",
+"cups.js",
+"data.js",
+"game.js",
+"i18n.js",
+"league.js",
+"legends.js",
+"meta.js",
+"squads.js",
+"wcx.js",
+"weather.js"
+],
+"ITA": [
+"coach6.js",
+"cups.js",
+"data.js",
+"game.js",
+"i18n.js",
+"league.js",
+"legends.js",
+"meta.js",
+"squads.js",
+"wcx.js"
+],
+"FRA": [
+"coach6.js",
+"cups.js",
+"data.js",
+"game.js",
+"i18n.js",
+"league.js",
+"legends.js",
+"lpath.js",
+"meta.js",
+"squads.js"
+],
+"🌍 {} şampiyonu: {}.": [
+"coach6.js"
+],
+"Kulübü incelemek için satıra dokun.": [
+"coach6.js"
+],
+"Son maçlar": [
+"coach6.js"
+],
+"Şu anki sırayla Avrupa": [
+"coach6.js"
+],
+"Hocası eski takım arkadaşın {}.": [
+"coach6.js"
+],
+"Kulüp incelemesi": [
+"coach6.js"
+],
+"Puan": [
+"coach6.js",
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Kadro gücü sıralaması": [
+"coach6.js"
+],
+"Yönetimin beklentisi": [
+"coach6.js"
+],
+"Tahmini transfer bütçesi": [
+"coach6.js"
+],
+"{} kişi": [
+"coach6.js",
+"coachui.js"
+],
+"Tekliflere dön": [
+"coach6.js"
+],
+".cm-offer[data-club], .cm-offer[data-job]": [
+"coach6.js"
+],
+"İncele": [
+"coach6.js"
+],
+"🔄 {} iki oyuncu değişikliği yaptı.": [
+"coach6.js"
+],
+"🔄 {} oyuncu değişikliği yaptı.": [
+"coach6.js"
+],
+"Rakip kondisyonu": [
+"coach6.js"
+],
+"Takım kimyası: {} · Bizim kimyamız: {}": [
+"coach6.js"
 ],
 "Maç başladı! {} oyunla başlıyoruz.": [
 "coachlive.js",
@@ -10130,9 +10872,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"{} kişi": [
-"coachui.js"
-],
 "Kasa ekside! Yönetim sezon sonunda bunu hesaba katacak. Oyuncu satmayı ya da maaşları düşürmeyi düşün.": [
 "coachui.js",
 "lang-ar.js",
@@ -13245,40 +13984,6 @@
 "wc.js",
 "wcx.js"
 ],
-"FRA": [
-"cups.js",
-"data.js",
-"game.js",
-"i18n.js",
-"league.js",
-"legends.js",
-"lpath.js",
-"meta.js",
-"squads.js"
-],
-"ESP": [
-"cups.js",
-"data.js",
-"game.js",
-"i18n.js",
-"league.js",
-"legends.js",
-"meta.js",
-"squads.js",
-"wcx.js"
-],
-"ENG": [
-"cups.js",
-"data.js",
-"game.js",
-"i18n.js",
-"league.js",
-"legends.js",
-"meta.js",
-"squads.js",
-"wcx.js",
-"weather.js"
-],
 "POR": [
 "cups.js",
 "data.js",
@@ -13292,18 +13997,6 @@
 "squads.js",
 "wcx.js"
 ],
-"GER": [
-"cups.js",
-"data.js",
-"game.js",
-"i18n.js",
-"league.js",
-"legends.js",
-"meta.js",
-"squads.js",
-"wcx.js",
-"weather.js"
-],
 "NED": [
 "cups.js",
 "data.js",
@@ -13313,17 +14006,6 @@
 "meta.js",
 "wcx.js",
 "weather.js"
-],
-"ITA": [
-"cups.js",
-"data.js",
-"game.js",
-"i18n.js",
-"league.js",
-"legends.js",
-"meta.js",
-"squads.js",
-"wcx.js"
 ],
 "BEL": [
 "cups.js",
@@ -41004,18 +41686,6 @@
 ],
 "lgView": [
 "game.js"
-],
-"Puan": [
-"game.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
 ],
 "Fikstür": [
 "game.js",
@@ -81648,6 +82318,710 @@
 "lang-pt.js"
 ],
 "rejected the offer. His demands went up a little.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"yardımcı antrenörün olmak istiyor": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Oyuncular onu seviyor.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"The players love him.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DERBİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DERBY": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Laf sokarsan iki takım da maça daha hırslı çıkar.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"A jibe fires up both teams.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Kazanırsan taraftar coşar, kaybedersen faturası ağır olur.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Win and the fans go wild; lose and you'll pay for it.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"· Derbi": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"· Derby": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"🔥 Derbi bizim!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"🔥 The derby is ours!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Derbi bizim!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"The derby is ours!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Taraftar çok üzgün.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"The fans are heartbroken.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Sözlerinin arkasında durdun! Basın seni konuşuyor.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"You backed up your words! The press can't stop talking about you.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"🗯️ Sözlerinin arkasında durdun!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"🗯️ You backed up your words!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Sözlerinin arkasında durdun!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"You backed up your words!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Basın seni konuşuyor.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"The press can't stop talking about you.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Maç öncesi sözlerin sana geri döndü. Taraftar tepkili.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Your pre-match words came back to bite you. The fans are angry.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"🗯️ Maç öncesi sözlerin sana geri döndü.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"🗯️ Your pre-match words came back to bite you.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Maç öncesi sözlerin sana geri döndü.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Your pre-match words came back to bite you.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Taraftar tepkili.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"The fans are angry.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Henüz kupa yok.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"No trophies yet.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"İlk kupayı müzeye koymak senin elinde!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"The first one for the museum is up to you!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Gözlemciler potansiyelinin çok yüksek olduğunu söylüyor!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Scouts say his potential is huge!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Bu çocuğun adını not edin.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Remember the name.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Yönetimin sezon hedefleri": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Board's season objectives": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Taraftar ve yönetim bu cesareti takdir ediyor.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Fans and the board admire your courage.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Başkan: \\\"Kasada bu kadar para yok. Kulübü batıramayız.\\\"": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Başkan: \\\"Kasada bu kadar para yok.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Chairman: \\\"There isn't that much money.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Kulübü batıramayız.\\\"": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"We can't bankrupt the club.\\\"": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Başkan: \\\"Tamam, sana güveniyoruz.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Chairman: \\\"OK, we trust you.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Başkan: \\\"Önce sonuç, sonra para.\\\"": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Başkan: \\\"Şu an bütçeyi artıramayız, mevcut kadroyla devam.\\\"": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Başkan: \\\"Maaşlar zaten gelirlerimizi zorluyor. Bu aktarımı yapamayız.\\\"": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Başkan: \\\"Maaşlar zaten gelirlerimizi zorluyor.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Chairman: \\\"Wages already stretch our income.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Bu aktarımı yapamayız.\\\"": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"We can't make this transfer.\\\"": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Yönetimle bütçe görüşmesi": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Budget talks with the board": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Yönetimle aran iyiyse ve kasa elveriyorsa bütçe artışına \\\"tamam\\\" diyebilir.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"transfer bütçesi": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"maaş bütçesi": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -129420,6 +130794,820 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"KUPADA YARI FİNALE KAL": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"AVRUPA’DA ÇEYREK FİNALE ÇIK": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ONLARIN OYUN ANLAYIŞI ON YIL ÖNCE KALDI.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ESKİ TAKIM ARKADAŞIN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YARDIMCI ANTRENÖRÜN OLMAK İSTİYOR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"WANTS TO BE YOUR ASSISTANT": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"OYUNCULAR ONU SEVİYOR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"THE PLAYERS LOVE HIM.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ŞİMDİLİK HAYIR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"EKİBE KATILSIN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"RAKİP HOCA:": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"(ESKİ TAKIM ARKADAŞIN)": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MARKAJ:": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MAÇ PLANI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"LAF SOKULDU": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"RAKİP HOCAYA LAF SOK": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"OYUN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"EN TEHLİKELİ OYUNCU": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ADAM ADAMA MARKAJ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MARKAJ YOK": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MAÇ PLANI HAZIR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GÖZLER BU MAÇTA!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"· DERBİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"· DERBY": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"🔥 DERBİ BİZİM!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"🔥 THE DERBY IS OURS!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DERBİ BİZİM!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"THE DERBY IS OURS!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TARAFTAR ÇOK ÜZGÜN.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"THE FANS ARE HEARTBROKEN.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"🗯️ SÖZLERİNİN ARKASINDA DURDUN!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"🗯️ YOU BACKED UP YOUR WORDS!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SÖZLERİNİN ARKASINDA DURDUN!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YOU BACKED UP YOUR WORDS!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BASIN SENİ KONUŞUYOR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"THE PRESS CAN'T STOP TALKING ABOUT YOU.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"🗯️ MAÇ ÖNCESİ SÖZLERİN SANA GERİ DÖNDÜ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"🗯️ YOUR PRE-MATCH WORDS CAME BACK TO BITE YOU.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MAÇ ÖNCESİ SÖZLERİN SANA GERİ DÖNDÜ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YOUR PRE-MATCH WORDS CAME BACK TO BITE YOU.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TARAFTAR TEPKİLİ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"THE FANS ARE ANGRY.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HENÜZ KUPA YOK.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"NO TROPHIES YET.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"İLK KUPAYI MÜZEYE KOYMAK SENİN ELİNDE!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"THE FIRST ONE FOR THE MUSEUM IS UP TO YOU!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"EN FARKLI GALİBİYET": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GOL KAYITLARI SEZON İLERLEDİKÇE DOLACAK.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KULÜP MÜZESİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KUPA DOLABI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KULÜP EFSANELERİ (100+ MAÇ)": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"🏛️ KULÜP MÜZESİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BU ÇOCUĞUN ADINI NOT EDİN.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"REMEMBER THE NAME.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BİTTİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YÖNETİMİN SEZON HEDEFLERİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BOARD'S SEASON OBJECTIVES": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BAŞARIRSAN BÜTÇE ÖDÜLÜ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YÖNETİMİN HEDEFLERİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SINIRIN ÜSTÜNDE: YÖNETİM KABUL ETMEZ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YÖNETİMLE GÖRÜŞME": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BAŞKAN: \\\"KASADA BU KADAR PARA YOK.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"CHAIRMAN: \\\"THERE ISN'T THAT MUCH MONEY.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KULÜBÜ BATIRAMAYIZ.\\\"": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"WE CAN'T BANKRUPT THE CLUB.\\\"": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BAŞKAN: \\\"TAMAM, SANA GÜVENİYORUZ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"CHAIRMAN: \\\"OK, WE TRUST YOU.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BAŞKAN: \\\"ÖNCE SONUÇ, SONRA PARA.\\\"": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BU AKTARIMI YAPAMAYIZ.\\\"": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"WE CAN'T MAKE THIS TRANSFER.\\\"": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YÖNETİMLE BÜTÇE GÖRÜŞMESİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BUDGET TALKS WITH THE BOARD": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TRANSFER BÜTÇESİ İSTE": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MAAŞ BÜTÇESİ İSTE": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -138703,17 +140891,6 @@
 "lang-pt.js"
 ],
 "MUHTEMEL İLK 11": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"OYUN": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -155269,6 +157446,28 @@
 "lang-pt.js",
 "school.js"
 ],
+"Altyapıdan bir cevher çıktı: {} {} (17). Gözlemciler potansiyelinin çok yüksek olduğunu söylüyor!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"A gem from the academy: {} {} (17). Scouts say his potential is huge!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "🗣️ Yeni ülkende henüz {} bilmiyorsun. Dil kursu takım arkadaşlarınla anlaşmanı kolaylaştırır.": [
 "lang-ar.js",
 "lang-de.js",
@@ -155848,6 +158047,50 @@
 "lang-pt.js"
 ],
 "👀 Ligdeki rakip {}'da senin yaşında, senin mevkinde bir yıldız adayı var: {}.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Futbol yıllarından tanıdığın {}, teknik ekibine katılmak için kapını çaldı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{}, whom you know from your playing days, wants to join your staff.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{} gence forma şansı verdin. Taraftar ve yönetim bu cesareti takdir ediyor.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"You gave {} youngsters a chance. Fans and the board admire your courage.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -156786,6 +159029,28 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Derbi bizim! {} karşısında şehir bizim renklerimize boyandı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"The derby is ours! The city turns our colours after beating {}.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "Ama paparazziler seni yakaladı; {} haberi görünce çok kızdı.": [
 "lang-ar.js",
 "lang-de.js",
@@ -157281,6 +159546,28 @@
 "lang-pt.js"
 ],
 "{}: lig aşamasını {}. bitirdik ve çeyrek finale yükseldik!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Transfer bütçesinden {} maaş bütçesine aktarıldı (+{}/hf).": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{} moved from the transfer to the wage budget (+{}/wk).": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -158315,6 +160602,28 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Eski takım arkadaşın {} yardımcı antrenörün oldu.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Your former teammate {} is now your assistant.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "{} yorulmaya başladı. Vuruşların isabeti düşüyor.": [
 "lang-ar.js",
 "lang-de.js",
@@ -158718,6 +161027,28 @@
 "lang-pt.js"
 ],
 "signed a new {}-year deal ({}/wk).": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{} karşısında şehir bizim renklerimize boyandı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"The city turns our colours after beating {}.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -159507,6 +161838,28 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Derbide {}'a kaybettik. Taraftar çok üzgün.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"We lost the derby to {}. The fans are heartbroken.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "Hayatımın en güzel günü. {}, iyi ki varsın.": [
 "lang-ar.js",
 "lang-de.js",
@@ -160217,6 +162570,28 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"🌟 Altyapıdan bir cevher çıktı: {} {} (17).": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"🌟 A gem from the academy: {} {} (17).": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "Magazin: {} ile {} {} birlikte görüntülendi!": [
 "lang-ar.js",
 "lang-de.js",
@@ -160570,6 +162945,28 @@
 "lang-pt.js"
 ],
 "{}: \\\"I expect more from you\\\"": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Altyapıdan bir cevher çıktı: {} {} (17).": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"A gem from the academy: {} {} (17).": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -161507,6 +163904,28 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Yönetim {} için orta yolu buldu: {}{}.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"The board met you halfway on the {}: {}{}.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "Berabere ({}). Bahsin iade edildi.": [
 "lang-ar.js",
 "lang-de.js",
@@ -162260,6 +164679,28 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Yönetim {} artışını onayladı: {}{}.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"The board approved the {} increase: {}{}.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "Federasyon men cezası: {} hafta": [
 "lang-ar.js",
 "lang-de.js",
@@ -162509,6 +164950,28 @@
 "lang-pt.js"
 ],
 "I'm now in charge of {}.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"🌱 {} gence forma şansı verdin.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"🌱 You gave {} youngsters a chance.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -162961,6 +165424,28 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"{} gence forma şansı verdin.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"You gave {} youngsters a chance.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "{} kaleciyi çaresiz bıraktı!": [
 "lang-ar.js",
 "lang-de.js",
@@ -163189,6 +165674,28 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Altyapımızdan {} A takımda!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"From our academy to the first team: {}!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 ", {} sponsorluğu iptal etti": [
 "lang-ar.js",
 "lang-de.js",
@@ -163385,6 +165892,17 @@
 "lang-pt.js"
 ],
 "Goalkeeper {} joined the squad.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"🗯️ Sözlerin manşette: \\\"{}\\\"": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -163711,6 +166229,28 @@
 "lang-pt.js"
 ],
 "· {} yaş · Güç {} · Değeri {}": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"🔥 Derbide {}'a kaybettik.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"🔥 We lost the derby to {}.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -164477,6 +167017,50 @@
 "lang-ja.js",
 "lang-pt.js",
 "star.js"
+],
+"Sözlerin manşette: \\\"{}\\\"": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Your words make the headlines: \\\"{}\\\"": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Derbide {}'a kaybettik.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"We lost the derby to {}.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "{} sektirme, fena değil": [
 "lang-ar.js",
@@ -177588,7 +180172,7 @@
 "Autogrammstunde und offenes Training. Mehr Fanunterstützung.": [
 "lang-de.js"
 ],
-"Vorstandstreffen": [
+"Gespräch mit dem Vorstand": [
 "lang-de.js"
 ],
 "Stell dein Projekt vor, das Vertrauen wächst.": [
@@ -177976,6 +180560,132 @@
 "lang-de.js"
 ],
 "Er könnte am Saisonende ablösefrei gehen.": [
+"lang-de.js"
+],
+"Mindestens 2 Talente (bis 21) machen 12+ Spiele": [
+"lang-de.js"
+],
+"Pokal-Halbfinale erreichen": [
+"lang-de.js"
+],
+"Europäisches Viertelfinale erreichen": [
+"lang-de.js"
+],
+"Auf dem Papier sind sie stark. Wir sehen uns auf dem Platz.": [
+"lang-de.js"
+],
+"Ihre Spielweise ist zehn Jahre alt.": [
+"lang-de.js"
+],
+"Am Wochenende sieht man, wer der bessere Trainer ist.": [
+"lang-de.js"
+],
+"Ehemaliger Mitspieler": [
+"lang-de.js"
+],
+"Ins Team holen": [
+"lang-de.js"
+],
+"🔥 DERBY": [
+"lang-de.js",
+"lang-en.js",
+"lang-fr.js",
+"lang-it.js"
+],
+"Gegnertrainer:": [
+"lang-de.js"
+],
+"(dein ehemaliger Mitspieler)": [
+"lang-de.js"
+],
+"Manndeckung:": [
+"lang-de.js"
+],
+"Matchplan": [
+"lang-de.js"
+],
+"Spitze gesetzt": [
+"lang-de.js"
+],
+"Spitze gegen den Gegnertrainer": [
+"lang-de.js"
+],
+"Spielweise": [
+"lang-de.js"
+],
+"Manndeckung": [
+"lang-de.js"
+],
+"Keine Manndeckung": [
+"lang-de.js"
+],
+"Matchplan steht.": [
+"lang-de.js"
+],
+"Eine Spitze heizt beide Teams an. Gewinnst du, jubeln die Fans; verlierst du, wird es teuer.": [
+"lang-de.js"
+],
+"Alle Augen auf dieses Spiel!": [
+"lang-de.js"
+],
+"🗯️ Du hast Wort gehalten! Die Presse spricht über dich.": [
+"lang-de.js"
+],
+"🗯️ Deine Worte vor dem Spiel fallen auf dich zurück. Die Fans sind sauer.": [
+"lang-de.js"
+],
+"Noch keine Titel. Der erste für das Museum liegt an dir!": [
+"lang-de.js"
+],
+"Höchster Sieg": [
+"lang-de.js"
+],
+"Torrekorde füllen sich im Laufe der Saison.": [
+"lang-de.js"
+],
+"Vereinsmuseum": [
+"lang-de.js"
+],
+"Trophäenschrank": [
+"lang-de.js"
+],
+"Vereinslegenden (100+ Spiele)": [
+"lang-de.js"
+],
+"🏛️ Vereinsmuseum": [
+"lang-de.js"
+],
+"Beendet": [
+"lang-de.js"
+],
+"Budgetbonus bei Erfolg": [
+"lang-de.js"
+],
+"Vorstandsziele": [
+"lang-de.js"
+],
+"Über dem Limit: der Vorstand lehnt ab": [
+"lang-de.js"
+],
+"Präsident: \\\"So viel Geld haben wir nicht. Wir ruinieren den Verein nicht.\\\"": [
+"lang-de.js"
+],
+"Präsident: \\\"Erst Ergebnisse, dann Geld.\\\"": [
+"lang-de.js"
+],
+"Präsident: \\\"Wir können das Budget jetzt nicht erhöhen. Mach mit diesem Kader weiter.\\\"": [
+"lang-de.js"
+],
+"Präsident: \\\"Die Gehälter belasten uns schon. Diese Umschichtung geht nicht.\\\"": [
+"lang-de.js"
+],
+"Wenn du gut mit dem Vorstand stehst und Geld da ist, sagt er vielleicht Ja.": [
+"lang-de.js"
+],
+"Transferbudget fordern": [
+"lang-de.js"
+],
+"Gehaltsbudget fordern": [
 "lang-de.js"
 ],
 "– wir haben uns qualifiziert!": [
@@ -181378,9 +184088,6 @@
 "lang-de.js"
 ],
 "In Gebrauch": [
-"lang-de.js"
-],
-"Trophäenschrank": [
 "lang-de.js"
 ],
 "Nach dem Spiel": [
@@ -188899,7 +191606,7 @@
 "FANTREFFEN": [
 "lang-de.js"
 ],
-"VORSTANDSTREFFEN": [
+"GESPRÄCH MIT DEM VORSTAND": [
 "lang-de.js"
 ],
 "STELL DEIN PROJEKT VOR, DAS VERTRAUEN WÄCHST.": [
@@ -189170,6 +191877,93 @@
 "lang-de.js"
 ],
 "ER KÖNNTE AM SAISONENDE ABLÖSEFREI GEHEN.": [
+"lang-de.js"
+],
+"POKAL-HALBFINALE ERREICHEN": [
+"lang-de.js"
+],
+"EUROPÄISCHES VIERTELFINALE ERREICHEN": [
+"lang-de.js"
+],
+"IHRE SPIELWEISE IST ZEHN JAHRE ALT.": [
+"lang-de.js"
+],
+"EHEMALIGER MITSPIELER": [
+"lang-de.js"
+],
+"INS TEAM HOLEN": [
+"lang-de.js"
+],
+"GEGNERTRAINER:": [
+"lang-de.js"
+],
+"(DEIN EHEMALIGER MITSPIELER)": [
+"lang-de.js"
+],
+"MANNDECKUNG:": [
+"lang-de.js"
+],
+"MATCHPLAN": [
+"lang-de.js"
+],
+"SPITZE GESETZT": [
+"lang-de.js"
+],
+"SPITZE GEGEN DEN GEGNERTRAINER": [
+"lang-de.js"
+],
+"SPIELWEISE": [
+"lang-de.js"
+],
+"MANNDECKUNG": [
+"lang-de.js"
+],
+"KEINE MANNDECKUNG": [
+"lang-de.js"
+],
+"MATCHPLAN STEHT.": [
+"lang-de.js"
+],
+"ALLE AUGEN AUF DIESES SPIEL!": [
+"lang-de.js"
+],
+"HÖCHSTER SIEG": [
+"lang-de.js"
+],
+"TORREKORDE FÜLLEN SICH IM LAUFE DER SAISON.": [
+"lang-de.js"
+],
+"VEREINSMUSEUM": [
+"lang-de.js"
+],
+"TROPHÄENSCHRANK": [
+"lang-de.js"
+],
+"VEREINSLEGENDEN (100+ SPIELE)": [
+"lang-de.js"
+],
+"🏛️ VEREINSMUSEUM": [
+"lang-de.js"
+],
+"BEENDET": [
+"lang-de.js"
+],
+"BUDGETBONUS BEI ERFOLG": [
+"lang-de.js"
+],
+"VORSTANDSZIELE": [
+"lang-de.js"
+],
+"ÜBER DEM LIMIT: DER VORSTAND LEHNT AB": [
+"lang-de.js"
+],
+"PRÄSIDENT: \\\"ERST ERGEBNISSE, DANN GELD.\\\"": [
+"lang-de.js"
+],
+"TRANSFERBUDGET FORDERN": [
+"lang-de.js"
+],
+"GEHALTSBUDGET FORDERN": [
 "lang-de.js"
 ],
 "– WIR HABEN UNS QUALIFIZIERT!": [
@@ -191644,9 +194438,6 @@
 "IN GEBRAUCH": [
 "lang-de.js"
 ],
-"TROPHÄENSCHRANK": [
-"lang-de.js"
-],
 "NACH DEM SPIEL": [
 "lang-de.js"
 ],
@@ -191660,9 +194451,6 @@
 "lang-de.js"
 ],
 "VORAUSSICHTLICHE ELF": [
-"lang-de.js"
-],
-"SPIEL": [
 "lang-de.js"
 ],
 "DEINS": [
@@ -193045,6 +195833,9 @@
 "ist {} Jahre alt, wir schreiben {}. Er nimmt am Akademie-Probetraining teil. Scouts mehrerer Vereine machen sich Notizen!": [
 "lang-de.js"
 ],
+"{}, den du aus deiner Spielerzeit kennst, will in dein Trainerteam. Die Spieler mögen ihn.": [
+"lang-de.js"
+],
 "Das Maskottchen von {} verwandelte in der Halbzeit 3 von 3 Elfmetern. Die Fans wollen es im Kader.": [
 "lang-de.js"
 ],
@@ -193052,6 +195843,9 @@
 "lang-de.js"
 ],
 "{} spielt meist im {} mit Konterfußball.": [
+"lang-de.js"
+],
+"🌟 Ein Juwel aus der Jugend: {} {} (17). Die Scouts schwärmen von seinem Potenzial!": [
 "lang-de.js"
 ],
 "Dein neuer Berater ist {}. Er nimmt {}% deines Einkommens und findet dafür bessere Angebote und Sponsoren.": [
@@ -193097,6 +195891,9 @@
 "lang-de.js"
 ],
 "Überraschung: {} von {} verliert! Der Star steht in der Kritik nach der Niederlage gegen {} {}-{}.": [
+"lang-de.js"
+],
+"Dein Spieler deckt {}: ihr Angriff wird schwächer, unserer etwas auch.": [
 "lang-de.js"
 ],
 "Eine Drohne, die das Training von {} filmte, wurde vom Torwart weggefaustet. Torwart: „Reflex.“": [
@@ -193244,6 +196041,9 @@
 "lang-de.js"
 ],
 "🗣️ Du sprichst jetzt fließend {}! Die Verständigung im Team ist viel besser.": [
+"lang-de.js"
+],
+"🌱 Du hast {} Talenten eine Chance gegeben. Fans und Vorstand schätzen deinen Mut.": [
 "lang-de.js"
 ],
 "Ich bin im Trainingslager der Nationalmannschaft von {}. Für dieses Trikot gebe ich alles!": [
@@ -193405,6 +196205,9 @@
 "Mein Land vertreten... Ich trainiere jetzt {}. Gemeinsam!": [
 "lang-de.js"
 ],
+"Gegnertrainer {} ist dein Ex-Mitspieler: das könnte eure Freundschaft belasten.": [
+"lang-de.js"
+],
 "Star-Transfer! Bei deinem neuen Verein trägst du weiter die Nummer {}.": [
 "lang-de.js"
 ],
@@ -193510,6 +196313,12 @@
 "Ein Jahr neues Abenteuer: {}! Ich nutze meine Chance.": [
 "lang-de.js"
 ],
+"🔥 Das Derby gehört uns! Nach dem Sieg gegen {} trägt die Stadt unsere Farben.": [
+"lang-de.js"
+],
+"Der Vorstand hebt das Gehaltsbudget nicht weit über die Einnahmen ({}/Woche).": [
+"lang-de.js"
+],
 "{} ist geöffnet. Noch keine Angebote; spiel gut, dann klopft vielleicht jemand an.": [
 "lang-de.js"
 ],
@@ -193588,6 +196397,9 @@
 "Du hast mit {} gesprochen. Du hast zugehört, jetzt geht es ihnen besser.": [
 "lang-de.js"
 ],
+"Der Vorstand gibt nicht mehr als 80 % der Kasse ({}) für Transfers aus.": [
+"lang-de.js"
+],
 "{} Deine Energie ist niedrig. Deine Leistung sinkt und das Verletzungsrisiko steigt.": [
 "lang-de.js"
 ],
@@ -193622,6 +196434,12 @@
 "lang-de.js"
 ],
 "🌍 {}: Platz {} in der Ligaphase, wir stehen im Viertelfinale!": [
+"lang-de.js"
+],
+"Der Vorstand will in {} Wochen wieder darüber reden.": [
+"lang-de.js"
+],
+"🔁 {} vom Transfer- ins Gehaltsbudget verschoben (+{}/Woche).": [
 "lang-de.js"
 ],
 "Klatsch: {} im Casino gesichtet. Die Fans sind nicht zufrieden.": [
@@ -193712,6 +196530,9 @@
 "lang-de.js"
 ],
 "🌐 Der Verband hat dich als Trainer von {} entlassen.": [
+"lang-de.js"
+],
+"Aus unserer Jugend in die Profis: {}! Merkt euch den Namen.": [
 "lang-de.js"
 ],
 "{} Wenn du dich für ein Land entscheidest, kannst du nicht mehr für das andere spielen.": [
@@ -193826,6 +196647,9 @@
 "lang-de.js"
 ],
 "🌍 Die Auslosung für den {} ist da! Unsere Gegner in der Ligaphase: {}.": [
+"lang-de.js"
+],
+"🤝 Dein ehemaliger Mitspieler {} ist jetzt dein Co-Trainer.": [
 "lang-de.js"
 ],
 "{}, eine der Heimaten deiner Eltern, hat dich berufen.": [
@@ -194086,6 +196910,9 @@
 "🌐 Länderspielpause: {} bestreitet 2 Qualifikationsspiele.": [
 "lang-de.js"
 ],
+"🔥 Derby gegen {} verloren. Die Fans sind am Boden.": [
+"lang-de.js"
+],
 "{} ist geschlossen. Offene Angebote sind verfallen.": [
 "lang-de.js"
 ],
@@ -194165,6 +196992,9 @@
 "lang-de.js"
 ],
 "Länderspielpause: {} bestreitet 2 Qualifikationsspiele.": [
+"lang-de.js"
+],
+"Gehälter am Saisonende unter {} halten": [
 "lang-de.js"
 ],
 "Der schönste Tag meines Lebens. {}, ich bin so froh, dass du da bist.": [
@@ -194410,6 +197240,9 @@
 "🤕 {} {} hat sich im Training verletzt ({} Wochen).": [
 "lang-de.js"
 ],
+"Umschichtung genehmigt: Gehaltsbudget +{}/Woche": [
+"lang-de.js"
+],
 "{} Vorlagen: Deine Mitspieler sind dankbar": [
 "lang-de.js"
 ],
@@ -194494,6 +197327,12 @@
 "DER POKAL GEHÖRT UNS! {}. Heute wird gefeiert!": [
 "lang-de.js"
 ],
+"{} möchte dein Co-Trainer werden": [
+"lang-de.js"
+],
+"🤝 Der Vorstand kam dir beim {} entgegen: {}{}.": [
+"lang-de.js"
+],
 "Du hast diese Woche noch {} Aktionen.": [
 "lang-de.js"
 ],
@@ -194561,6 +197400,9 @@
 "lang-de.js"
 ],
 "Mit {} Punkten sind wir in der Gruppe ausgeschieden.": [
+"lang-de.js"
+],
+"{} vom Transfer- ins Gehaltsbudget verschieben": [
 "lang-de.js"
 ],
 "Elfmeter! {} tritt an...": [
@@ -194662,6 +197504,9 @@
 "Wochenaktion · noch {}/3": [
 "lang-de.js"
 ],
+"🤝 Der Vorstand hat die {}-Erhöhung genehmigt: {}{}.": [
+"lang-de.js"
+],
 "Ein neues Kapitel: {}! Total aufgeregt.": [
 "lang-de.js"
 ],
@@ -194711,6 +197556,9 @@
 "lang-de.js"
 ],
 "⭐ {}: \\\"Heute hast du den Unterschied gemacht\\\"": [
+"lang-de.js"
+],
+"Höchstens {} Heimspiele verlieren": [
 "lang-de.js"
 ],
 "Mit Legende {}. Eines Tages werde ich...": [
@@ -194875,6 +197723,9 @@
 "🌐 {}: Gruppe überstanden ({} Punkte)!": [
 "lang-de.js"
 ],
+"Was sagst du vor dem Spiel gegen {}?": [
+"lang-de.js"
+],
 "+{}, aber dein Gewissen ist nicht rein.": [
 "lang-de.js"
 ],
@@ -194918,6 +197769,12 @@
 "lang-de.js"
 ],
 "🧤 Torhüter {} ist zum Kader gestoßen.": [
+"lang-de.js"
+],
+"{} Saisonziele des Vorstands": [
+"lang-de.js"
+],
+"{} Budgetgespräch mit dem Vorstand": [
 "lang-de.js"
 ],
 "{} ließ dem Torwart keine Chance!": [
@@ -195041,6 +197898,12 @@
 "lang-de.js"
 ],
 "🏆 Mit {} haben wir die {} gewonnen!": [
+"lang-de.js"
+],
+"🗯️ Deine Worte in den Schlagzeilen: \\\"{}\\\"": [
+"lang-de.js"
+],
+"· Beste Platzierung {} ({})": [
 "lang-de.js"
 ],
 "Deine Mutter war gerührt. ({})": [
@@ -195495,6 +198358,9 @@
 "🤝 Dein Freund {} spielt hier": [
 "lang-de.js"
 ],
+"Mindestens {} Ligatore erzielen": [
+"lang-de.js"
+],
 "/Woche · noch {} Jahre": [
 "lang-de.js"
 ],
@@ -195655,6 +198521,12 @@
 "lang-de.js"
 ],
 "Wir sind im {} ausgeschieden.": [
+"lang-de.js"
+],
+"Stärke {} · Fitness {}": [
+"lang-de.js"
+],
+"Zustimmungschance {} %": [
 "lang-de.js"
 ],
 "Du gewinnst! {} - {} · +{}": [
@@ -196130,6 +199002,9 @@
 "· Ablöse {}": [
 "lang-de.js"
 ],
+"{}-Erhöhung fordern": [
+"lang-de.js"
+],
 "Überkauft ({}). -{}": [
 "lang-de.js"
 ],
@@ -196563,6 +199438,12 @@
 ],
 "{} Einstellungen": [
 "lang-de.js"
+],
+"{} · Derby": [
+"lang-de.js",
+"lang-en.js",
+"lang-fr.js",
+"lang-it.js"
 ],
 "/{}. WOCHE": [
 "lang-de.js"
@@ -205107,6 +207988,130 @@
 "He may leave on a free at the end of the season.": [
 "lang-en.js"
 ],
+"At least 2 youngsters (21 or under) play 12+ games": [
+"lang-en.js"
+],
+"Reach the cup semi-finals": [
+"lang-en.js"
+],
+"Reach the European quarter-finals": [
+"lang-en.js"
+],
+"Their team looks strong on paper. We'll see on the pitch.": [
+"lang-en.js"
+],
+"Their style of play is ten years out of date.": [
+"lang-en.js"
+],
+"This weekend will show who the better manager is.": [
+"lang-en.js"
+],
+"Former teammate": [
+"lang-en.js"
+],
+"Bring him in": [
+"lang-en.js"
+],
+"Opposing manager:": [
+"lang-en.js"
+],
+"(your former teammate)": [
+"lang-en.js"
+],
+"Marking:": [
+"lang-en.js"
+],
+"Game plan": [
+"lang-en.js"
+],
+"Jibe made": [
+"lang-en.js"
+],
+"Take a jibe at their manager": [
+"lang-en.js"
+],
+"Style": [
+"lang-en.js",
+"lang-fr.js"
+],
+"Most dangerous player": [
+"lang-en.js"
+],
+"Man-marking": [
+"lang-en.js"
+],
+"No marking": [
+"lang-en.js"
+],
+"Game plan ready.": [
+"lang-en.js"
+],
+"A jibe fires up both teams. Win and the fans go wild; lose and you'll pay for it.": [
+"lang-en.js"
+],
+"All eyes on this game!": [
+"lang-en.js"
+],
+"🗯️ You backed up your words! The press can't stop talking about you.": [
+"lang-en.js"
+],
+"🗯️ Your pre-match words came back to bite you. The fans are angry.": [
+"lang-en.js"
+],
+"No trophies yet. The first one for the museum is up to you!": [
+"lang-en.js"
+],
+"Biggest win": [
+"lang-en.js"
+],
+"Scoring records will fill up as the season goes on.": [
+"lang-en.js"
+],
+"Club museum": [
+"lang-en.js"
+],
+"Trophy cabinet": [
+"lang-en.js"
+],
+"Club legends (100+ games)": [
+"lang-en.js"
+],
+"🏛️ Club museum": [
+"lang-en.js"
+],
+"Finished": [
+"lang-en.js"
+],
+"Budget bonus if achieved": [
+"lang-en.js"
+],
+"Board objectives": [
+"lang-en.js"
+],
+"Over the limit: the board will refuse": [
+"lang-en.js"
+],
+"Chairman: \\\"There isn't that much money. We can't bankrupt the club.\\\"": [
+"lang-en.js"
+],
+"Chairman: \\\"Results first, money later.\\\"": [
+"lang-en.js"
+],
+"Chairman: \\\"We can't raise the budget now. Carry on with this squad.\\\"": [
+"lang-en.js"
+],
+"Chairman: \\\"Wages already stretch our income. We can't make this transfer.\\\"": [
+"lang-en.js"
+],
+"If you're on good terms with the board and there's cash, they may say yes to more budget.": [
+"lang-en.js"
+],
+"Ask for transfer budget": [
+"lang-en.js"
+],
+"Ask for wage budget": [
+"lang-en.js"
+],
 "— we qualified!": [
 "lang-en.js"
 ],
@@ -208258,9 +211263,6 @@
 "lang-en.js"
 ],
 "Probable XI": [
-"lang-en.js"
-],
-"Game": [
 "lang-en.js"
 ],
 "KEEPY-UPS!": [
@@ -215613,6 +218615,97 @@
 "HE MAY LEAVE ON A FREE AT THE END OF THE SEASON.": [
 "lang-en.js"
 ],
+"REACH THE CUP SEMI-FINALS": [
+"lang-en.js"
+],
+"REACH THE EUROPEAN QUARTER-FINALS": [
+"lang-en.js"
+],
+"THEIR STYLE OF PLAY IS TEN YEARS OUT OF DATE.": [
+"lang-en.js"
+],
+"FORMER TEAMMATE": [
+"lang-en.js"
+],
+"BRING HIM IN": [
+"lang-en.js"
+],
+"OPPOSING MANAGER:": [
+"lang-en.js"
+],
+"(YOUR FORMER TEAMMATE)": [
+"lang-en.js"
+],
+"MARKING:": [
+"lang-en.js"
+],
+"GAME PLAN": [
+"lang-en.js"
+],
+"JIBE MADE": [
+"lang-en.js"
+],
+"TAKE A JIBE AT THEIR MANAGER": [
+"lang-en.js"
+],
+"STYLE": [
+"lang-en.js",
+"lang-fr.js"
+],
+"MOST DANGEROUS PLAYER": [
+"lang-en.js"
+],
+"MAN-MARKING": [
+"lang-en.js"
+],
+"NO MARKING": [
+"lang-en.js"
+],
+"GAME PLAN READY.": [
+"lang-en.js"
+],
+"ALL EYES ON THIS GAME!": [
+"lang-en.js"
+],
+"BIGGEST WIN": [
+"lang-en.js"
+],
+"SCORING RECORDS WILL FILL UP AS THE SEASON GOES ON.": [
+"lang-en.js"
+],
+"CLUB MUSEUM": [
+"lang-en.js"
+],
+"TROPHY CABINET": [
+"lang-en.js"
+],
+"CLUB LEGENDS (100+ GAMES)": [
+"lang-en.js"
+],
+"🏛️ CLUB MUSEUM": [
+"lang-en.js"
+],
+"FINISHED": [
+"lang-en.js"
+],
+"BUDGET BONUS IF ACHIEVED": [
+"lang-en.js"
+],
+"BOARD OBJECTIVES": [
+"lang-en.js"
+],
+"OVER THE LIMIT: THE BOARD WILL REFUSE": [
+"lang-en.js"
+],
+"CHAIRMAN: \\\"RESULTS FIRST, MONEY LATER.\\\"": [
+"lang-en.js"
+],
+"ASK FOR TRANSFER BUDGET": [
+"lang-en.js"
+],
+"ASK FOR WAGE BUDGET": [
+"lang-en.js"
+],
 "— WE QUALIFIED!": [
 "lang-en.js"
 ],
@@ -218036,9 +221129,6 @@
 "IN USE": [
 "lang-en.js"
 ],
-"TROPHY CABINET": [
-"lang-en.js"
-],
 "AFTER THE MATCH": [
 "lang-en.js"
 ],
@@ -218052,9 +221142,6 @@
 "lang-en.js"
 ],
 "PROBABLE XI": [
-"lang-en.js"
-],
-"GAME": [
 "lang-en.js"
 ],
 "YOURS": [
@@ -219427,6 +222514,9 @@
 "is {} years old and it's {}. He's attending academy trials. Scouts from several clubs are taking notes!": [
 "lang-en.js"
 ],
+"{}, whom you know from your playing days, wants to join your staff. The players love him.": [
+"lang-en.js"
+],
 "The {} mascot scored 3 out of 3 penalties at half-time. Fans want him in the squad.": [
 "lang-en.js"
 ],
@@ -219434,6 +222524,9 @@
 "lang-en.js"
 ],
 "{} usually sets up in a {} built on counter-attacks.": [
+"lang-en.js"
+],
+"🌟 A gem from the academy: {} {} (17). Scouts say his potential is huge!": [
 "lang-en.js"
 ],
 "Your new agent is {}. They'll take {}% of your income and find better offers and sponsors in return.": [
@@ -219479,6 +222572,9 @@
 "lang-en.js"
 ],
 "Shock result: {}'s {} lose! The star is under fire in the side beaten by {} {}-{}.": [
+"lang-en.js"
+],
+"Your chosen player shadows {}: their attack weakens, but we lose a little going forward.": [
 "lang-en.js"
 ],
 "A drone filming {} training was punched away by the keeper. Keeper: \\\"Reflex.\\\"": [
@@ -219626,6 +222722,9 @@
 "lang-en.js"
 ],
 "🗣️ You now speak fluent {}! Communication with your teammates is much better.": [
+"lang-en.js"
+],
+"🌱 You gave {} youngsters a chance. Fans and the board admire your courage.": [
 "lang-en.js"
 ],
 "I'm at the national team camp for {}. I'll give everything for this shirt!": [
@@ -219787,6 +222886,9 @@
 "Representing my country... I'm now in charge of {}. Together!": [
 "lang-en.js"
 ],
+"Their manager {} is your former teammate: this could strain your friendship.": [
+"lang-en.js"
+],
 "Star signing! You'll keep wearing number {} at your new club.": [
 "lang-en.js"
 ],
@@ -219892,6 +222994,12 @@
 "A one-season adventure: {}! I'll make the most of my chance.": [
 "lang-en.js"
 ],
+"🔥 The derby is ours! The city turns our colours after beating {}.": [
+"lang-en.js"
+],
+"The board won't raise the wage budget far above income ({}/wk).": [
+"lang-en.js"
+],
 "{} is open. No offers yet; play well and someone may knock.": [
 "lang-en.js"
 ],
@@ -219970,6 +223078,9 @@
 "You spoke with {}. You listened to them and they feel better.": [
 "lang-en.js"
 ],
+"The board won't spend more than 80% of the cash ({}) on transfers.": [
+"lang-en.js"
+],
 "{} Your energy is low. Your performance drops and injury risk rises.": [
 "lang-en.js"
 ],
@@ -220004,6 +223115,12 @@
 "lang-en.js"
 ],
 "🌍 {}: we finished {} in the league phase and reached the quarter-finals!": [
+"lang-en.js"
+],
+"The board wants to revisit this in {} weeks.": [
+"lang-en.js"
+],
+"🔁 {} moved from the transfer to the wage budget (+{}/wk).": [
 "lang-en.js"
 ],
 "Gossip: {} spotted at a casino. Fans are not happy.": [
@@ -220094,6 +223211,9 @@
 "lang-en.js"
 ],
 "🌐 The federation has sacked you as {} manager.": [
+"lang-en.js"
+],
+"From our academy to the first team: {}! Remember the name.": [
 "lang-en.js"
 ],
 "{} If you choose one country you can no longer play for the other.": [
@@ -220208,6 +223328,9 @@
 "lang-en.js"
 ],
 "🌍 The {} draw is out! Our league-phase opponents: {}.": [
+"lang-en.js"
+],
+"🤝 Your former teammate {} is now your assistant.": [
 "lang-en.js"
 ],
 "{}, one of your parents' homelands, called you up.": [
@@ -220468,6 +223591,9 @@
 "🌐 International break: {} play 2 qualifiers.": [
 "lang-en.js"
 ],
+"🔥 We lost the derby to {}. The fans are heartbroken.": [
+"lang-en.js"
+],
 "{} has closed. Pending offers expired.": [
 "lang-en.js"
 ],
@@ -220547,6 +223673,9 @@
 "lang-en.js"
 ],
 "International break: {} play 2 qualifiers.": [
+"lang-en.js"
+],
+"Keep the wage bill under {} at season end": [
 "lang-en.js"
 ],
 "The best day of my life. {}, I'm so glad you're here.": [
@@ -220792,6 +223921,9 @@
 "🤕 {} {} was injured in training ({} weeks).": [
 "lang-en.js"
 ],
+"Transfer approved: wage budget +{}/wk": [
+"lang-en.js"
+],
 "{} assists: your teammates are grateful": [
 "lang-en.js"
 ],
@@ -220876,6 +224008,12 @@
 "THE CUP IS OURS! {}. Party tonight!": [
 "lang-en.js"
 ],
+"{} wants to be your assistant": [
+"lang-en.js"
+],
+"🤝 The board met you halfway on the {}: {}{}.": [
+"lang-en.js"
+],
 "You have {} more actions this week.": [
 "lang-en.js"
 ],
@@ -220943,6 +224081,9 @@
 "lang-en.js"
 ],
 "We got {} points in the group and went out.": [
+"lang-en.js"
+],
+"Move {} from transfer to wage budget": [
 "lang-en.js"
 ],
 "Penalty! {} steps up...": [
@@ -221044,6 +224185,9 @@
 "Weekly action · {}/3 left": [
 "lang-en.js"
 ],
+"🤝 The board approved the {} increase: {}{}.": [
+"lang-en.js"
+],
 "A new chapter: {}! So excited.": [
 "lang-en.js"
 ],
@@ -221093,6 +224237,9 @@
 "lang-en.js"
 ],
 "⭐ {}: \\\"You made the difference today\\\"": [
+"lang-en.js"
+],
+"Lose no more than {} home games": [
 "lang-en.js"
 ],
 "With legend {}. One day I'll be...": [
@@ -221257,6 +224404,9 @@
 "🌐 {}: through the group ({} points)!": [
 "lang-en.js"
 ],
+"What will you say before the {} game?": [
+"lang-en.js"
+],
 "+{} but your conscience isn't clear.": [
 "lang-en.js"
 ],
@@ -221300,6 +224450,12 @@
 "lang-en.js"
 ],
 "🧤 Goalkeeper {} joined the squad.": [
+"lang-en.js"
+],
+"{} Board's season objectives": [
+"lang-en.js"
+],
+"{} Budget talks with the board": [
 "lang-en.js"
 ],
 "{} left the keeper helpless!": [
@@ -221423,6 +224579,12 @@
 "lang-en.js"
 ],
 "🏆 We won the {} with {}!": [
+"lang-en.js"
+],
+"🗯️ Your words make the headlines: \\\"{}\\\"": [
+"lang-en.js"
+],
+"· Best league finish {} ({})": [
 "lang-en.js"
 ],
 "Your mum was moved. ({})": [
@@ -221877,6 +225039,9 @@
 "🤝 Your friend {} plays here": [
 "lang-en.js"
 ],
+"Score at least {} league goals": [
+"lang-en.js"
+],
 "/week · {} years left": [
 "lang-en.js"
 ],
@@ -222040,6 +225205,12 @@
 "lang-en.js"
 ],
 "We went out in the {}.": [
+"lang-en.js"
+],
+"OVR {} · Fitness {}": [
+"lang-en.js"
+],
+"Chance of approval {}%": [
 "lang-en.js"
 ],
 "You win! {} - {} · +{}": [
@@ -222521,6 +225692,9 @@
 "lang-en.js"
 ],
 "· Fee {}": [
+"lang-en.js"
+],
+"Ask for a {} increase": [
 "lang-en.js"
 ],
 "Bust ({}). -{}": [
@@ -231574,6 +234748,137 @@
 "lang-es.js"
 ],
 "Podría irse gratis a final de temporada.": [
+"lang-es.js"
+],
+"Al menos 2 jóvenes (21 o menos) jueguen 12+ partidos": [
+"lang-es.js"
+],
+"Llega a semifinales de copa": [
+"lang-es.js"
+],
+"Llega a cuartos en Europa": [
+"lang-es.js"
+],
+"Sobre el papel son fuertes. Ya veremos en el campo.": [
+"lang-es.js"
+],
+"Su estilo de juego se quedó hace diez años.": [
+"lang-es.js"
+],
+"El fin de semana se verá quién es mejor entrenador.": [
+"lang-es.js"
+],
+"Excompañero": [
+"lang-es.js"
+],
+"Que se una": [
+"lang-es.js"
+],
+"🔥 DERBI": [
+"lang-es.js",
+"lang-id.js"
+],
+"Técnico rival:": [
+"lang-es.js",
+"lang-pt.js"
+],
+"(tu excompañero)": [
+"lang-es.js"
+],
+"Marcaje:": [
+"lang-es.js"
+],
+"Plan de partido": [
+"lang-es.js"
+],
+"Pulla lanzada": [
+"lang-es.js"
+],
+"Lanza una pulla al rival": [
+"lang-es.js"
+],
+"Estilo": [
+"lang-es.js",
+"lang-pt.js"
+],
+"Jugador más peligroso": [
+"lang-es.js"
+],
+"Marcaje al hombre": [
+"lang-es.js"
+],
+"Sin marcaje": [
+"lang-es.js"
+],
+"Plan de partido listo.": [
+"lang-es.js"
+],
+"Una pulla motiva a ambos equipos. Si ganas, la afición estalla; si pierdes, lo pagarás.": [
+"lang-es.js"
+],
+"¡Todas las miradas en este partido!": [
+"lang-es.js"
+],
+"🗯️ ¡Respaldaste tus palabras! La prensa habla de ti.": [
+"lang-es.js"
+],
+"🗯️ Tus palabras previas se volvieron en tu contra. La afición está molesta.": [
+"lang-es.js"
+],
+"Aún no hay títulos. ¡El primero para el museo depende de ti!": [
+"lang-es.js"
+],
+"Mayor goleada": [
+"lang-es.js"
+],
+"Los récords goleadores se irán llenando.": [
+"lang-es.js"
+],
+"Museo del club": [
+"lang-es.js",
+"lang-it.js"
+],
+"Vitrina": [
+"lang-es.js"
+],
+"Leyendas del club (100+ partidos)": [
+"lang-es.js"
+],
+"🏛️ Museo del club": [
+"lang-es.js",
+"lang-it.js"
+],
+"Terminado": [
+"lang-es.js"
+],
+"Bonus de presupuesto si lo logras": [
+"lang-es.js"
+],
+"Objetivos de la directiva": [
+"lang-es.js"
+],
+"Por encima del límite: la directiva lo rechazará": [
+"lang-es.js"
+],
+"Presidente: \\\"No hay tanto dinero. No podemos arruinar el club.\\\"": [
+"lang-es.js"
+],
+"Presidente: \\\"Primero resultados, luego dinero.\\\"": [
+"lang-es.js"
+],
+"Presidente: \\\"Ahora no podemos subir el presupuesto. Sigue con esta plantilla.\\\"": [
+"lang-es.js"
+],
+"Presidente: \\\"Los sueldos ya aprietan nuestros ingresos. No podemos hacer este traspaso.\\\"": [
+"lang-es.js"
+],
+"Si te llevas bien con la directiva y hay dinero, puede aceptar más presupuesto.": [
+"lang-es.js"
+],
+"Pedir presupuesto de fichajes": [
+"lang-es.js"
+],
+"Pedir presupuesto salarial": [
 "lang-es.js"
 ],
 "— ¡nos hemos clasificado!": [
@@ -242130,6 +245435,100 @@
 "PODRÍA IRSE GRATIS A FINAL DE TEMPORADA.": [
 "lang-es.js"
 ],
+"LLEGA A SEMIFINALES DE COPA": [
+"lang-es.js"
+],
+"LLEGA A CUARTOS EN EUROPA": [
+"lang-es.js"
+],
+"SU ESTILO DE JUEGO SE QUEDÓ HACE DIEZ AÑOS.": [
+"lang-es.js"
+],
+"EXCOMPAÑERO": [
+"lang-es.js"
+],
+"QUE SE UNA": [
+"lang-es.js"
+],
+"TÉCNICO RIVAL:": [
+"lang-es.js",
+"lang-pt.js"
+],
+"(TU EXCOMPAÑERO)": [
+"lang-es.js"
+],
+"MARCAJE:": [
+"lang-es.js"
+],
+"PLAN DE PARTIDO": [
+"lang-es.js"
+],
+"PULLA LANZADA": [
+"lang-es.js"
+],
+"LANZA UNA PULLA AL RIVAL": [
+"lang-es.js"
+],
+"ESTILO": [
+"lang-es.js",
+"lang-pt.js"
+],
+"JUGADOR MÁS PELIGROSO": [
+"lang-es.js"
+],
+"MARCAJE AL HOMBRE": [
+"lang-es.js"
+],
+"SIN MARCAJE": [
+"lang-es.js"
+],
+"PLAN DE PARTIDO LISTO.": [
+"lang-es.js"
+],
+"¡TODAS LAS MIRADAS EN ESTE PARTIDO!": [
+"lang-es.js"
+],
+"MAYOR GOLEADA": [
+"lang-es.js"
+],
+"LOS RÉCORDS GOLEADORES SE IRÁN LLENANDO.": [
+"lang-es.js"
+],
+"MUSEO DEL CLUB": [
+"lang-es.js",
+"lang-it.js"
+],
+"VITRINA": [
+"lang-es.js"
+],
+"LEYENDAS DEL CLUB (100+ PARTIDOS)": [
+"lang-es.js"
+],
+"🏛️ MUSEO DEL CLUB": [
+"lang-es.js",
+"lang-it.js"
+],
+"TERMINADO": [
+"lang-es.js"
+],
+"BONUS DE PRESUPUESTO SI LO LOGRAS": [
+"lang-es.js"
+],
+"OBJETIVOS DE LA DIRECTIVA": [
+"lang-es.js"
+],
+"POR ENCIMA DEL LÍMITE: LA DIRECTIVA LO RECHAZARÁ": [
+"lang-es.js"
+],
+"PRESIDENTE: \\\"PRIMERO RESULTADOS, LUEGO DINERO.\\\"": [
+"lang-es.js"
+],
+"PEDIR PRESUPUESTO DE FICHAJES": [
+"lang-es.js"
+],
+"PEDIR PRESUPUESTO SALARIAL": [
+"lang-es.js"
+],
 "— ¡NOS HEMOS CLASIFICADO!": [
 "lang-es.js"
 ],
@@ -245959,6 +249358,9 @@
 "tiene {} años y estamos en {}. Va a las pruebas de la cantera. ¡Ojeadores de varios clubes toman notas!": [
 "lang-es.js"
 ],
+"{}, a quien conoces de tu etapa como jugador, quiere unirse a tu cuerpo técnico. Los jugadores lo adoran.": [
+"lang-es.js"
+],
 "La mascota del {} marcó 3 de 3 penaltis en el descanso. La afición lo quiere en la convocatoria.": [
 "lang-es.js"
 ],
@@ -245966,6 +249368,9 @@
 "lang-es.js"
 ],
 "{} suele usar un {} basado en el contraataque.": [
+"lang-es.js"
+],
+"🌟 Una joya de la cantera: {} {} (17). ¡Los ojeadores dicen que su potencial es enorme!": [
 "lang-es.js"
 ],
 "Tu nuevo agente es {}. Se llevará el {}% de tus ingresos y, a cambio, encontrará mejores ofertas y patrocinadores.": [
@@ -246011,6 +249416,9 @@
 "lang-es.js"
 ],
 "¡Sorpresa! ¡El {} de {} pierde! La estrella, en el punto de mira en el equipo derrotado por {} {}-{}.": [
+"lang-es.js"
+],
+"Tu jugador sigue a {}: su ataque se debilita, pero aportamos algo menos arriba.": [
 "lang-es.js"
 ],
 "El portero despejó de un puñetazo un dron que grababa el entrenamiento del {}. El portero: \\\"Reflejos\\\".": [
@@ -246158,6 +249566,9 @@
 "lang-es.js"
 ],
 "🗣️ ¡Ya hablas {} con fluidez! La comunicación con tus compañeros ha mejorado mucho.": [
+"lang-es.js"
+],
+"🌱 Diste oportunidades a {} jóvenes. Afición y directiva valoran tu valentía.": [
 "lang-es.js"
 ],
 "Estoy en la concentración de la selección de {}. ¡Lo daré todo por esta camiseta!": [
@@ -246319,6 +249730,9 @@
 "Representar a mi país... Dirijo a {}. ¡Todos juntos!": [
 "lang-es.js"
 ],
+"El técnico rival {} es tu excompañero: esto puede tensar la relación.": [
+"lang-es.js"
+],
 "¡Fichaje estrella! Seguirás llevando el dorsal {} en tu nuevo club.": [
 "lang-es.js"
 ],
@@ -246424,6 +249838,12 @@
 "Una temporada de aventura: ¡{}! Aprovecharé la oportunidad.": [
 "lang-es.js"
 ],
+"🔥 ¡El derbi es nuestro! La ciudad se tiñe de nuestros colores tras ganar a {}.": [
+"lang-es.js"
+],
+"La directiva no subirá la masa salarial muy por encima de los ingresos ({}/sem).": [
+"lang-es.js"
+],
 "{} está abierto. Aún no hay ofertas; juega bien y alguien llamará a tu puerta.": [
 "lang-es.js"
 ],
@@ -246502,6 +249922,9 @@
 "Hablaste con {}. Escuchaste sus inquietudes y se quedaron tranquilos.": [
 "lang-es.js"
 ],
+"La directiva no destina más del 80% de la caja ({}) a fichajes.": [
+"lang-es.js"
+],
 "{} Tienes poca energía. Tu rendimiento baja y aumenta el riesgo de lesión.": [
 "lang-es.js"
 ],
@@ -246536,6 +249959,12 @@
 "lang-es.js"
 ],
 "🌍 {}: terminamos {}.º en la fase liga y estamos en cuartos!": [
+"lang-es.js"
+],
+"La directiva quiere hablarlo de nuevo en {} semanas.": [
+"lang-es.js"
+],
+"🔁 {} pasó del presupuesto de fichajes al salarial (+{}/sem).": [
 "lang-es.js"
 ],
 "Cotilleo: {} visto en un casino. La afición no está contenta.": [
@@ -246626,6 +250055,9 @@
 "lang-es.js"
 ],
 "🌐 La federación te ha cesado como seleccionador de {}.": [
+"lang-es.js"
+],
+"¡De nuestra cantera al primer equipo: {}! Recuerden este nombre.": [
 "lang-es.js"
 ],
 "{} Si eliges un país, ya no podrás jugar con el otro.": [
@@ -246740,6 +250172,9 @@
 "lang-es.js"
 ],
 "🌍 ¡Sorteo de la {}! Rivales en la fase liga: {}.": [
+"lang-es.js"
+],
+"🤝 Tu excompañero {} es ahora tu ayudante.": [
 "lang-es.js"
 ],
 "{}, una de las tierras natales de tus padres, te convocó.": [
@@ -247000,6 +250435,9 @@
 "🌐 Parón internacional: {} juega 2 partidos de clasificación.": [
 "lang-es.js"
 ],
+"🔥 Perdimos el derbi contra {}. La afición está destrozada.": [
+"lang-es.js"
+],
 "{} se ha cerrado. Las ofertas pendientes caducaron.": [
 "lang-es.js"
 ],
@@ -247079,6 +250517,9 @@
 "lang-es.js"
 ],
 "Parón internacional: {} juega 2 partidos de clasificación.": [
+"lang-es.js"
+],
+"Mantén la masa salarial por debajo de {} al final": [
 "lang-es.js"
 ],
 "El mejor día de mi vida. {}, me alegra muchísimo que estés aquí.": [
@@ -247324,6 +250765,9 @@
 "🤕 {} {} se lesionó entrenando ({} semanas).": [
 "lang-es.js"
 ],
+"Traspaso aprobado: presupuesto salarial +{}/sem": [
+"lang-es.js"
+],
 "{} asistencias: tus compañeros te lo agradecen": [
 "lang-es.js"
 ],
@@ -247408,6 +250852,12 @@
 "¡LA COPA ES NUESTRA! {}. ¡Esta noche hay fiesta!": [
 "lang-es.js"
 ],
+"{} quiere ser tu ayudante": [
+"lang-es.js"
+],
+"🤝 La directiva buscó un punto medio en el {}: {}{}.": [
+"lang-es.js"
+],
 "Te quedan {} acciones más esta semana.": [
 "lang-es.js"
 ],
@@ -247475,6 +250925,9 @@
 "lang-es.js"
 ],
 "Sumamos {} puntos en el grupo y quedamos fuera.": [
+"lang-es.js"
+],
+"Pasar {} del presupuesto de fichajes al salarial": [
 "lang-es.js"
 ],
 "¡Penalti! {} se prepara...": [
@@ -247576,6 +251029,9 @@
 "Acción semanal · quedan {}/3": [
 "lang-es.js"
 ],
+"🤝 La directiva aprobó el aumento de {}: {}{}.": [
+"lang-es.js"
+],
 "Un nuevo capítulo: ¡{}! Qué emoción.": [
 "lang-es.js"
 ],
@@ -247625,6 +251081,9 @@
 "lang-es.js"
 ],
 "⭐ {}: \\\"Hoy marcaste la diferencia\\\"": [
+"lang-es.js"
+],
+"Pierde como máximo {} partidos en casa": [
 "lang-es.js"
 ],
 "Con la leyenda {}. Algún día seré...": [
@@ -247789,6 +251248,9 @@
 "🌐 {}: ¡pasamos de grupo ({} puntos)!": [
 "lang-es.js"
 ],
+"¿Qué dirás antes del partido contra {}?": [
+"lang-es.js"
+],
 "+{}, pero no tienes la conciencia tranquila.": [
 "lang-es.js"
 ],
@@ -247832,6 +251294,12 @@
 "lang-es.js"
 ],
 "🧤 El portero {} se unió a la plantilla.": [
+"lang-es.js"
+],
+"{} Objetivos de la directiva": [
+"lang-es.js"
+],
+"{} Negociar presupuesto con la directiva": [
 "lang-es.js"
 ],
 "¡{} dejó al portero sin opciones!": [
@@ -247955,6 +251423,12 @@
 "lang-es.js"
 ],
 "🏆 ¡Campeones del {} con {}!": [
+"lang-es.js"
+],
+"🗯️ Tus palabras son titular: \\\"{}\\\"": [
+"lang-es.js"
+],
+"· Mejor puesto {}.º ({})": [
 "lang-es.js"
 ],
 "Tu madre se emocionó. ({})": [
@@ -248415,6 +251889,9 @@
 "🤝 Tu amigo {} juega aquí": [
 "lang-es.js"
 ],
+"Marca al menos {} goles en liga": [
+"lang-es.js"
+],
 "/semana · quedan {} años": [
 "lang-es.js"
 ],
@@ -248580,6 +252057,12 @@
 "lang-id.js"
 ],
 "Caímos en {}.": [
+"lang-es.js"
+],
+"Media {} · Forma {}": [
+"lang-es.js"
+],
+"Probabilidad de aceptación {}%": [
 "lang-es.js"
 ],
 "¡Ganas! {} - {} · +{}": [
@@ -249066,6 +252549,9 @@
 "lang-es.js"
 ],
 "· Traspaso {}": [
+"lang-es.js"
+],
+"Pedir aumento de {}": [
 "lang-es.js"
 ],
 "Te pasaste ({}). -{}": [
@@ -257884,6 +261370,126 @@
 "lang-fr.js"
 ],
 "Il pourrait partir libre en fin de saison.": [
+"lang-fr.js"
+],
+"Au moins 2 jeunes (21 ans ou moins) jouent 12+ matchs": [
+"lang-fr.js"
+],
+"Atteins les demi-finales de coupe": [
+"lang-fr.js"
+],
+"Atteins les quarts en Europe": [
+"lang-fr.js"
+],
+"Sur le papier ils sont forts. On verra sur le terrain.": [
+"lang-fr.js"
+],
+"Leur style de jeu date d'il y a dix ans.": [
+"lang-fr.js"
+],
+"Ce week-end, on verra qui est le meilleur entraîneur.": [
+"lang-fr.js"
+],
+"Ancien coéquipier": [
+"lang-fr.js"
+],
+"Qu'il nous rejoigne": [
+"lang-fr.js"
+],
+"Entraîneur adverse :": [
+"lang-fr.js"
+],
+"(ton ancien coéquipier)": [
+"lang-fr.js"
+],
+"Marquage :": [
+"lang-fr.js"
+],
+"Plan de jeu": [
+"lang-fr.js"
+],
+"Pique lancée": [
+"lang-fr.js"
+],
+"Lance une pique au rival": [
+"lang-fr.js"
+],
+"Joueur le plus dangereux": [
+"lang-fr.js"
+],
+"Marquage individuel": [
+"lang-fr.js"
+],
+"Pas de marquage": [
+"lang-fr.js"
+],
+"Plan de jeu prêt.": [
+"lang-fr.js"
+],
+"Une pique motive les deux équipes. Gagne et les fans exultent ; perds et tu le paieras.": [
+"lang-fr.js"
+],
+"Tous les regards sur ce match !": [
+"lang-fr.js"
+],
+"🗯️ Tu as tenu parole ! La presse ne parle que de toi.": [
+"lang-fr.js"
+],
+"🗯️ Tes mots d'avant-match se retournent contre toi. Les fans sont furieux.": [
+"lang-fr.js"
+],
+"Pas encore de trophée. Le premier pour le musée dépend de toi !": [
+"lang-fr.js"
+],
+"Plus large victoire": [
+"lang-fr.js"
+],
+"Les records de buteurs se rempliront au fil de la saison.": [
+"lang-fr.js"
+],
+"Musée du club": [
+"lang-fr.js"
+],
+"Armoire à trophées": [
+"lang-fr.js"
+],
+"Légendes du club (100+ matchs)": [
+"lang-fr.js"
+],
+"🏛️ Musée du club": [
+"lang-fr.js"
+],
+"Terminé": [
+"lang-fr.js"
+],
+"Bonus de budget si atteint": [
+"lang-fr.js"
+],
+"Objectifs de la direction": [
+"lang-fr.js"
+],
+"Au-dessus de la limite : la direction refusera": [
+"lang-fr.js"
+],
+"Président : « Il n'y a pas autant d'argent. On ne va pas couler le club. »": [
+"lang-fr.js"
+],
+"Président : « D'abord les résultats, ensuite l'argent. »": [
+"lang-fr.js"
+],
+"Président : « On ne peut pas augmenter le budget pour l'instant. Continue avec cet effectif. »": [
+"lang-fr.js"
+],
+"Président : « Les salaires pèsent déjà sur nos revenus. Impossible de faire ce transfert. »": [
+"lang-fr.js"
+],
+"Si tu t'entends bien avec la direction et qu'il y a de l'argent, elle peut accepter.": [
+"lang-fr.js"
+],
+"Demander un budget transferts": [
+"lang-fr.js"
+],
+"Demander un budget salaires": [
 "lang-fr.js"
 ],
 "— on est qualifiés !": [
@@ -268085,6 +271691,93 @@
 "IL POURRAIT PARTIR LIBRE EN FIN DE SAISON.": [
 "lang-fr.js"
 ],
+"ATTEINS LES DEMI-FINALES DE COUPE": [
+"lang-fr.js"
+],
+"ATTEINS LES QUARTS EN EUROPE": [
+"lang-fr.js"
+],
+"LEUR STYLE DE JEU DATE D'IL Y A DIX ANS.": [
+"lang-fr.js"
+],
+"ANCIEN COÉQUIPIER": [
+"lang-fr.js"
+],
+"QU'IL NOUS REJOIGNE": [
+"lang-fr.js"
+],
+"ENTRAÎNEUR ADVERSE :": [
+"lang-fr.js"
+],
+"(TON ANCIEN COÉQUIPIER)": [
+"lang-fr.js"
+],
+"MARQUAGE :": [
+"lang-fr.js"
+],
+"PLAN DE JEU": [
+"lang-fr.js"
+],
+"PIQUE LANCÉE": [
+"lang-fr.js"
+],
+"LANCE UNE PIQUE AU RIVAL": [
+"lang-fr.js"
+],
+"JOUEUR LE PLUS DANGEREUX": [
+"lang-fr.js"
+],
+"MARQUAGE INDIVIDUEL": [
+"lang-fr.js"
+],
+"PAS DE MARQUAGE": [
+"lang-fr.js"
+],
+"PLAN DE JEU PRÊT.": [
+"lang-fr.js"
+],
+"TOUS LES REGARDS SUR CE MATCH !": [
+"lang-fr.js"
+],
+"PLUS LARGE VICTOIRE": [
+"lang-fr.js"
+],
+"LES RECORDS DE BUTEURS SE REMPLIRONT AU FIL DE LA SAISON.": [
+"lang-fr.js"
+],
+"MUSÉE DU CLUB": [
+"lang-fr.js"
+],
+"ARMOIRE À TROPHÉES": [
+"lang-fr.js"
+],
+"LÉGENDES DU CLUB (100+ MATCHS)": [
+"lang-fr.js"
+],
+"🏛️ MUSÉE DU CLUB": [
+"lang-fr.js"
+],
+"TERMINÉ": [
+"lang-fr.js"
+],
+"BONUS DE BUDGET SI ATTEINT": [
+"lang-fr.js"
+],
+"OBJECTIFS DE LA DIRECTION": [
+"lang-fr.js"
+],
+"AU-DESSUS DE LA LIMITE : LA DIRECTION REFUSERA": [
+"lang-fr.js"
+],
+"PRÉSIDENT : « D'ABORD LES RÉSULTATS, ENSUITE L'ARGENT. »": [
+"lang-fr.js"
+],
+"DEMANDER UN BUDGET TRANSFERTS": [
+"lang-fr.js"
+],
+"DEMANDER UN BUDGET SALAIRES": [
+"lang-fr.js"
+],
 "— ON EST QUALIFIÉS !": [
 "lang-fr.js"
 ],
@@ -271772,6 +275465,9 @@
 "a {} ans, nous sommes en {}. Il participe aux essais d'un centre de formation. Les recruteurs de plusieurs clubs prennent des notes !": [
 "lang-fr.js"
 ],
+"{}, que tu connais de tes années de joueur, veut rejoindre ton staff. Les joueurs l'adorent.": [
+"lang-fr.js"
+],
 "La mascotte de {} a marqué 3 penalties sur 3 à la mi-temps. Les fans la veulent dans l'effectif.": [
 "lang-fr.js"
 ],
@@ -271779,6 +275475,9 @@
 "lang-fr.js"
 ],
 "{} aligne surtout un {} basé sur la contre-attaque.": [
+"lang-fr.js"
+],
+"🌟 Une pépite du centre de formation : {} {} (17). Les recruteurs parlent d'un énorme potentiel !": [
 "lang-fr.js"
 ],
 "Ton nouvel agent est {}. Il prendra {} % de tes revenus et te trouvera en échange de meilleures offres et sponsors.": [
@@ -271824,6 +275523,9 @@
 "lang-fr.js"
 ],
 "Surprise : {} de {} perd ! La star est critiquée dans l'équipe battue par {} {}-{}.": [
+"lang-fr.js"
+],
+"Ton joueur suit {} : leur attaque s'affaiblit, la nôtre un peu aussi.": [
 "lang-fr.js"
 ],
 "Un drone qui filmait l'entraînement de {} a été repoussé du poing par le gardien. Gardien : « Réflexe. »": [
@@ -271971,6 +275673,9 @@
 "lang-fr.js"
 ],
 "🗣️ Tu parles maintenant {} couramment ! La communication avec tes coéquipiers est bien meilleure.": [
+"lang-fr.js"
+],
+"🌱 Tu as donné leur chance à {} jeunes. Fans et direction saluent ton courage.": [
 "lang-fr.js"
 ],
 "Je suis au rassemblement de l'équipe nationale de {}. Je donnerai tout pour ce maillot !": [
@@ -272132,6 +275837,9 @@
 "Représenter mon pays... Je dirige {}. Tous ensemble !": [
 "lang-fr.js"
 ],
+"L'entraîneur adverse {} est ton ancien coéquipier : cela peut tendre vos relations.": [
+"lang-fr.js"
+],
 "Recrue star ! Tu garderas le numéro {} dans ton nouveau club.": [
 "lang-fr.js"
 ],
@@ -272237,6 +275945,12 @@
 "Une saison d'aventure : {} ! Je vais saisir ma chance.": [
 "lang-fr.js"
 ],
+"🔥 Le derby est à nous ! La ville se pare de nos couleurs après {}.": [
+"lang-fr.js"
+],
+"La direction n'augmentera pas la masse salariale bien au-delà des revenus ({}/sem).": [
+"lang-fr.js"
+],
 "{} est ouvert. Pas encore d'offres ; joue bien et quelqu'un frappera peut-être à la porte.": [
 "lang-fr.js"
 ],
@@ -272315,6 +276029,9 @@
 "Tu as parlé avec {}. Tu les as écoutés, ils sont rassurés.": [
 "lang-fr.js"
 ],
+"La direction ne consacre pas plus de 80 % de la trésorerie ({}) aux transferts.": [
+"lang-fr.js"
+],
 "{} Ton énergie est basse. Ta performance baisse et le risque de blessure augmente.": [
 "lang-fr.js"
 ],
@@ -272349,6 +276066,12 @@
 "lang-fr.js"
 ],
 "🌍 {} : {}e de la phase de ligue, nous voilà en quarts !": [
+"lang-fr.js"
+],
+"La direction veut en reparler dans {} semaines.": [
+"lang-fr.js"
+],
+"🔁 {} transféré du budget transferts aux salaires (+{}/sem).": [
 "lang-fr.js"
 ],
 "Rumeur : {} aperçu au casino. Les fans ne sont pas contents.": [
@@ -272439,6 +276162,9 @@
 "lang-fr.js"
 ],
 "🌐 La fédération t'a limogé de la sélection de {}.": [
+"lang-fr.js"
+],
+"De notre centre au groupe pro : {} ! Retenez ce nom.": [
 "lang-fr.js"
 ],
 "{} Si tu choisis un pays, tu ne pourras plus jouer pour l'autre.": [
@@ -272553,6 +276279,9 @@
 "lang-fr.js"
 ],
 "🌍 Le tirage de la {} est tombé ! Nos adversaires en phase de ligue : {}.": [
+"lang-fr.js"
+],
+"🤝 Ton ancien coéquipier {} est désormais ton adjoint.": [
 "lang-fr.js"
 ],
 "{}, l'un des pays d'origine de tes parents, t'a convoqué.": [
@@ -272813,6 +276542,9 @@
 "🌐 Trêve internationale : {} joue 2 matchs de qualification.": [
 "lang-fr.js"
 ],
+"🔥 Derby perdu contre {}. Les fans sont dévastés.": [
+"lang-fr.js"
+],
 "{} est fermé. Les offres en attente ont expiré.": [
 "lang-fr.js"
 ],
@@ -272892,6 +276624,9 @@
 "lang-fr.js"
 ],
 "Trêve internationale : {} joue 2 matchs de qualification.": [
+"lang-fr.js"
+],
+"Garde la masse salariale sous {} en fin de saison": [
 "lang-fr.js"
 ],
 "Le plus beau jour de ma vie. {}, je suis si heureux que tu sois là.": [
@@ -273137,6 +276872,9 @@
 "🤕 {} {} s'est blessé à l'entraînement ({} semaines).": [
 "lang-fr.js"
 ],
+"Transfert validé : budget salarial +{}/sem": [
+"lang-fr.js"
+],
 "{} passes décisives : tes coéquipiers te remercient": [
 "lang-fr.js"
 ],
@@ -273221,6 +276959,12 @@
 "LA COUPE EST À NOUS ! {}. Ce soir on fête ça !": [
 "lang-fr.js"
 ],
+"{} veut être ton adjoint": [
+"lang-fr.js"
+],
+"🤝 La direction a trouvé un compromis sur le {} : {}{}.": [
+"lang-fr.js"
+],
 "Il te reste {} actions cette semaine.": [
 "lang-fr.js"
 ],
@@ -273288,6 +277032,9 @@
 "lang-fr.js"
 ],
 "Avec {} points, nous sommes éliminés en phase de groupes.": [
+"lang-fr.js"
+],
+"Transférer {} du budget transferts vers les salaires": [
 "lang-fr.js"
 ],
 "Penalty ! {} s'élance...": [
@@ -273389,6 +277136,9 @@
 "Action de la semaine · {}/3 restantes": [
 "lang-fr.js"
 ],
+"🤝 La direction a validé la hausse du {} : {}{}.": [
+"lang-fr.js"
+],
 "Un nouveau chapitre : {} ! Tellement excité.": [
 "lang-fr.js"
 ],
@@ -273438,6 +277188,9 @@
 "lang-fr.js"
 ],
 "⭐ {} : « Tu as fait la différence aujourd'hui »": [
+"lang-fr.js"
+],
+"Ne perds pas plus de {} matchs à domicile": [
 "lang-fr.js"
 ],
 "Avec la légende {}. Un jour, je serai...": [
@@ -273602,6 +277355,9 @@
 "🌐 {} : sortis des groupes ({} points) !": [
 "lang-fr.js"
 ],
+"Que diras-tu avant le match contre {} ?": [
+"lang-fr.js"
+],
 "+{}, mais ta conscience n'est pas tranquille.": [
 "lang-fr.js"
 ],
@@ -273645,6 +277401,12 @@
 "lang-fr.js"
 ],
 "🧤 Le gardien {} a rejoint l'effectif.": [
+"lang-fr.js"
+],
+"{} Objectifs de la direction": [
+"lang-fr.js"
+],
+"{} Négocier le budget avec la direction": [
 "lang-fr.js"
 ],
 "{} n'a laissé aucune chance au gardien !": [
@@ -273768,6 +277530,12 @@
 "lang-fr.js"
 ],
 "🏆 Nous avons gagné le {} avec {} !": [
+"lang-fr.js"
+],
+"🗯️ Tes mots font la une : « {} »": [
+"lang-fr.js"
+],
+"· Meilleur classement {}e ({})": [
 "lang-fr.js"
 ],
 "Ta mère était émue. ({})": [
@@ -274220,6 +277988,9 @@
 "🤝 Ton ami {} joue ici": [
 "lang-fr.js"
 ],
+"Marque au moins {} buts en championnat": [
+"lang-fr.js"
+],
 "/semaine · encore {} ans": [
 "lang-fr.js"
 ],
@@ -274383,6 +278154,12 @@
 "lang-fr.js"
 ],
 "Nous sommes éliminés en {}.": [
+"lang-fr.js"
+],
+"Note {} · Forme {}": [
+"lang-fr.js"
+],
+"Chance d'accord {} %": [
 "lang-fr.js"
 ],
 "Tu gagnes ! {} - {} · +{}": [
@@ -274839,6 +278616,9 @@
 "lang-fr.js"
 ],
 "· Indemnité {}": [
+"lang-fr.js"
+],
+"Demander une hausse du {}": [
 "lang-fr.js"
 ],
 "Dépassé ({}). -{}": [
@@ -281535,9 +285315,6 @@
 "Pendaftaran selesai. Ujian di akhir musim.": [
 "lang-id.js"
 ],
-"Nanti saja": [
-"lang-id.js"
-],
 "Tahun Baru": [
 "lang-id.js"
 ],
@@ -283047,7 +286824,7 @@
 "Hari tanda tangan dan latihan terbuka. Dukungan fans naik.": [
 "lang-id.js"
 ],
-"Rapat dengan manajemen": [
+"Pertemuan manajemen": [
 "lang-id.js"
 ],
 "Jelaskan proyekmu, kepercayaan manajemen naik.": [
@@ -283411,6 +287188,129 @@
 "lang-id.js"
 ],
 "Ia bisa pergi gratis di akhir musim.": [
+"lang-id.js"
+],
+"Minimal 2 pemain muda (≤21) main 12+ laga": [
+"lang-id.js"
+],
+"Capai semifinal piala": [
+"lang-id.js"
+],
+"Capai perempat final Eropa": [
+"lang-id.js"
+],
+"Di atas kertas mereka kuat. Kita lihat di lapangan.": [
+"lang-id.js"
+],
+"Gaya main mereka tertinggal sepuluh tahun.": [
+"lang-id.js"
+],
+"Akhir pekan ini akan terlihat siapa pelatih terbaik.": [
+"lang-id.js"
+],
+"Mantan rekan setim": [
+"lang-id.js"
+],
+"Ajak bergabung": [
+"lang-id.js"
+],
+"Pelatih lawan:": [
+"lang-id.js"
+],
+"(mantan rekan setimmu)": [
+"lang-id.js"
+],
+"Kawalan:": [
+"lang-id.js"
+],
+"Rencana laga": [
+"lang-id.js"
+],
+"Sindiran dilontarkan": [
+"lang-id.js"
+],
+"Sindir pelatih lawan": [
+"lang-id.js"
+],
+"Gaya": [
+"lang-id.js"
+],
+"Pemain paling berbahaya": [
+"lang-id.js"
+],
+"Kawalan satu lawan satu": [
+"lang-id.js"
+],
+"Tanpa kawalan": [
+"lang-id.js"
+],
+"Rencana laga siap.": [
+"lang-id.js"
+],
+"Sindiran memacu kedua tim. Menang, fans bersorak; kalah, kamu menanggung akibatnya.": [
+"lang-id.js"
+],
+"Semua mata tertuju pada laga ini!": [
+"lang-id.js"
+],
+"🗯️ Kamu membuktikan ucapanmu! Media terus membicarakanmu.": [
+"lang-id.js"
+],
+"🗯️ Ucapanmu sebelum laga berbalik menyerangmu. Fans marah.": [
+"lang-id.js"
+],
+"Belum ada trofi. Trofi pertama untuk museum ada di tanganmu!": [
+"lang-id.js"
+],
+"Kemenangan terbesar": [
+"lang-id.js"
+],
+"Rekor gol akan terisi seiring musim berjalan.": [
+"lang-id.js"
+],
+"Museum klub": [
+"lang-id.js"
+],
+"Lemari trofi": [
+"lang-id.js"
+],
+"Legenda klub (100+ laga)": [
+"lang-id.js"
+],
+"🏛️ Museum klub": [
+"lang-id.js"
+],
+"Selesai": [
+"lang-id.js"
+],
+"Bonus anggaran jika tercapai": [
+"lang-id.js"
+],
+"Target manajemen": [
+"lang-id.js"
+],
+"Melebihi batas: manajemen menolak": [
+"lang-id.js"
+],
+"Presiden: \\\"Uangnya tidak sebanyak itu. Kita tak boleh membangkrutkan klub.\\\"": [
+"lang-id.js"
+],
+"Presiden: \\\"Hasil dulu, uang kemudian.\\\"": [
+"lang-id.js"
+],
+"Presiden: \\\"Kami belum bisa menaikkan anggaran. Lanjutkan dengan skuad ini.\\\"": [
+"lang-id.js"
+],
+"Presiden: \\\"Gaji sudah membebani pemasukan. Kami tak bisa memindahkannya.\\\"": [
+"lang-id.js"
+],
+"Jika hubunganmu baik dengan manajemen dan kas cukup, mereka bisa menyetujui.": [
+"lang-id.js"
+],
+"Minta anggaran transfer": [
+"lang-id.js"
+],
+"Minta anggaran gaji": [
 "lang-id.js"
 ],
 "— kita lolos!": [
@@ -292133,9 +296033,6 @@
 "PENDAFTARAN SELESAI. UJIAN DI AKHIR MUSIM.": [
 "lang-id.js"
 ],
-"NANTI SAJA": [
-"lang-id.js"
-],
 "TAHUN BARU": [
 "lang-id.js"
 ],
@@ -293176,7 +297073,7 @@
 "TEMU FANS": [
 "lang-id.js"
 ],
-"RAPAT DENGAN MANAJEMEN": [
+"PERTEMUAN MANAJEMEN": [
 "lang-id.js"
 ],
 "JELASKAN PROYEKMU, KEPERCAYAAN MANAJEMEN NAIK.": [
@@ -293411,6 +297308,96 @@
 "lang-id.js"
 ],
 "IA BISA PERGI GRATIS DI AKHIR MUSIM.": [
+"lang-id.js"
+],
+"CAPAI SEMIFINAL PIALA": [
+"lang-id.js"
+],
+"CAPAI PEREMPAT FINAL EROPA": [
+"lang-id.js"
+],
+"GAYA MAIN MEREKA TERTINGGAL SEPULUH TAHUN.": [
+"lang-id.js"
+],
+"MANTAN REKAN SETIM": [
+"lang-id.js"
+],
+"AJAK BERGABUNG": [
+"lang-id.js"
+],
+"PELATIH LAWAN:": [
+"lang-id.js"
+],
+"(MANTAN REKAN SETIMMU)": [
+"lang-id.js"
+],
+"KAWALAN:": [
+"lang-id.js"
+],
+"RENCANA LAGA": [
+"lang-id.js"
+],
+"SINDIRAN DILONTARKAN": [
+"lang-id.js"
+],
+"SINDIR PELATIH LAWAN": [
+"lang-id.js"
+],
+"GAYA": [
+"lang-id.js"
+],
+"PEMAIN PALING BERBAHAYA": [
+"lang-id.js"
+],
+"KAWALAN SATU LAWAN SATU": [
+"lang-id.js"
+],
+"TANPA KAWALAN": [
+"lang-id.js"
+],
+"RENCANA LAGA SIAP.": [
+"lang-id.js"
+],
+"SEMUA MATA TERTUJU PADA LAGA INI!": [
+"lang-id.js"
+],
+"KEMENANGAN TERBESAR": [
+"lang-id.js"
+],
+"REKOR GOL AKAN TERISI SEIRING MUSIM BERJALAN.": [
+"lang-id.js"
+],
+"MUSEUM KLUB": [
+"lang-id.js"
+],
+"LEMARI TROFI": [
+"lang-id.js"
+],
+"LEGENDA KLUB (100+ LAGA)": [
+"lang-id.js"
+],
+"🏛️ MUSEUM KLUB": [
+"lang-id.js"
+],
+"SELESAI": [
+"lang-id.js"
+],
+"BONUS ANGGARAN JIKA TERCAPAI": [
+"lang-id.js"
+],
+"TARGET MANAJEMEN": [
+"lang-id.js"
+],
+"MELEBIHI BATAS: MANAJEMEN MENOLAK": [
+"lang-id.js"
+],
+"PRESIDEN: \\\"HASIL DULU, UANG KEMUDIAN.\\\"": [
+"lang-id.js"
+],
+"MINTA ANGGARAN TRANSFER": [
+"lang-id.js"
+],
+"MINTA ANGGARAN GAJI": [
 "lang-id.js"
 ],
 "— KITA LOLOS!": [
@@ -295715,9 +299702,6 @@
 "DIPAKAI": [
 "lang-id.js"
 ],
-"LEMARI TROFI": [
-"lang-id.js"
-],
 "SETELAH PERTANDINGAN": [
 "lang-id.js"
 ],
@@ -297080,6 +301064,9 @@
 "berusia {} tahun dan sekarang tahun {}. Ia mengikuti seleksi akademi. Pencari bakat dari beberapa klub mencatat!": [
 "lang-id.js"
 ],
+"{}, yang kamu kenal sejak masa bermain, ingin bergabung dengan stafmu. Para pemain menyukainya.": [
+"lang-id.js"
+],
 "Maskot {} mencetak 3 dari 3 penalti saat turun minum. Suporter ingin ia masuk skuad.": [
 "lang-id.js"
 ],
@@ -297087,6 +301074,9 @@
 "lang-id.js"
 ],
 "{} biasa memakai formasi {} dengan serangan balik.": [
+"lang-id.js"
+],
+"🌟 Permata dari akademi: {} {} (17). Pemandu bakat bilang potensinya luar biasa!": [
 "lang-id.js"
 ],
 "Agen barumu adalah {}. Ia akan mengambil {}% penghasilanmu dan sebagai gantinya mencarikan tawaran dan sponsor yang lebih baik.": [
@@ -297132,6 +301122,9 @@
 "lang-id.js"
 ],
 "Hasil mengejutkan: {} milik {} kalah! Sang bintang dikritik setelah timnya dikalahkan {} {}-{}.": [
+"lang-id.js"
+],
+"Pemain pilihanmu mengawal {}: serangan lawan melemah, serangan kita sedikit berkurang.": [
 "lang-id.js"
 ],
 "Drone yang merekam latihan {} ditinju jauh oleh kiper. Kiper: \\\"Refleks.\\\"": [
@@ -297279,6 +301272,9 @@
 "lang-id.js"
 ],
 "🗣️ Kamu sekarang fasih {}! Komunikasi dengan rekan setim jauh lebih baik.": [
+"lang-id.js"
+],
+"🌱 Kamu memberi kesempatan pada {} pemain muda. Fans dan manajemen menghargai keberanianmu.": [
 "lang-id.js"
 ],
 "Aku sedang di pemusatan latihan timnas {}. Aku akan memberikan segalanya untuk jersey ini!": [
@@ -297440,6 +301436,9 @@
 "Mewakili negaraku... Kini aku melatih {}. Bersama!": [
 "lang-id.js"
 ],
+"Pelatih lawan {} mantan rekan setimmu: ini bisa merenggangkan hubungan.": [
+"lang-id.js"
+],
 "Rekrutan bintang! Kamu tetap memakai nomor {} di klub barumu.": [
 "lang-id.js"
 ],
@@ -297545,6 +301544,12 @@
 "Petualangan semusim: {}! Akan kumanfaatkan kesempatan ini.": [
 "lang-id.js"
 ],
+"🔥 Derbi milik kita! Kota berwarna kebanggaan kita usai menaklukkan {}.": [
+"lang-id.js"
+],
+"Manajemen tak menaikkan anggaran gaji jauh di atas pemasukan ({}/pekan).": [
+"lang-id.js"
+],
 "{} dibuka. Belum ada tawaran; bermainlah bagus dan mungkin ada yang mengetuk pintu.": [
 "lang-id.js"
 ],
@@ -297623,6 +301628,9 @@
 "Kamu berbicara dengan {}. Kamu mendengarkan mereka dan mereka lega.": [
 "lang-id.js"
 ],
+"Manajemen tak akan memakai lebih dari 80% kas ({}) untuk transfer.": [
+"lang-id.js"
+],
 "{} Energimu rendah. Performamu turun dan risiko cedera meningkat.": [
 "lang-id.js"
 ],
@@ -297657,6 +301665,12 @@
 "lang-id.js"
 ],
 "🌍 {}: kami finis di posisi {} fase liga dan lolos ke perempat final!": [
+"lang-id.js"
+],
+"Manajemen ingin membahasnya lagi dalam {} pekan.": [
+"lang-id.js"
+],
+"🔁 {} dipindah dari anggaran transfer ke gaji (+{}/pekan).": [
 "lang-id.js"
 ],
 "Gosip: {} terlihat di kasino. Para suporter tidak senang.": [
@@ -297747,6 +301761,9 @@
 "lang-id.js"
 ],
 "🌐 Federasi memecatmu dari timnas {}.": [
+"lang-id.js"
+],
+"Dari akademi kami ke tim utama: {}! Ingat nama ini.": [
 "lang-id.js"
 ],
 "{} Jika kamu memilih satu negara, kamu tidak bisa lagi bermain untuk yang lain.": [
@@ -297861,6 +301878,9 @@
 "lang-id.js"
 ],
 "🌍 Undian {} sudah keluar! Lawan fase liga kami: {}.": [
+"lang-id.js"
+],
+"🤝 Mantan rekan setimmu {} kini asistenmu.": [
 "lang-id.js"
 ],
 "{}, salah satu tanah air orang tuamu, memanggilmu.": [
@@ -298121,6 +302141,9 @@
 "🌐 Jeda internasional: {} memainkan 2 laga kualifikasi.": [
 "lang-id.js"
 ],
+"🔥 Kita kalah di derbi dari {}. Fans sangat sedih.": [
+"lang-id.js"
+],
 "{} ditutup. Tawaran yang tertunda sudah kedaluwarsa.": [
 "lang-id.js"
 ],
@@ -298200,6 +302223,9 @@
 "lang-id.js"
 ],
 "Jeda internasional: {} memainkan 2 laga kualifikasi.": [
+"lang-id.js"
+],
+"Jaga beban gaji di bawah {} di akhir musim": [
 "lang-id.js"
 ],
 "Hari terbaik dalam hidupku. {}, aku sangat senang kamu di sini.": [
@@ -298445,6 +302471,9 @@
 "🤕 {} {} cedera saat latihan ({} minggu).": [
 "lang-id.js"
 ],
+"Pemindahan disetujui: anggaran gaji +{}/pekan": [
+"lang-id.js"
+],
 "{} assist: rekan setimmu berterima kasih": [
 "lang-id.js"
 ],
@@ -298529,6 +302558,12 @@
 "PIALA MILIK KITA! {}. Malam ini pesta!": [
 "lang-id.js"
 ],
+"{} ingin jadi asistenmu": [
+"lang-id.js"
+],
+"🤝 Manajemen mencari jalan tengah untuk {}: {}{}.": [
+"lang-id.js"
+],
 "Kamu masih punya {} aksi minggu ini.": [
 "lang-id.js"
 ],
@@ -298596,6 +302631,9 @@
 "lang-id.js"
 ],
 "Kami meraih {} poin di grup dan tersingkir.": [
+"lang-id.js"
+],
+"Pindahkan {} dari anggaran transfer ke gaji": [
 "lang-id.js"
 ],
 "Penalti! {} maju...": [
@@ -298697,6 +302735,9 @@
 "Aksi mingguan · sisa {}/3": [
 "lang-id.js"
 ],
+"🤝 Manajemen menyetujui kenaikan {}: {}{}.": [
+"lang-id.js"
+],
 "Babak baru: {}! Sangat bersemangat.": [
 "lang-id.js"
 ],
@@ -298746,6 +302787,9 @@
 "lang-id.js"
 ],
 "⭐ {}: \\\"Hari ini kamu pembedanya\\\"": [
+"lang-id.js"
+],
+"Kalah maksimal {} laga kandang": [
 "lang-id.js"
 ],
 "Bersama legenda {}. Suatu hari aku akan menjadi...": [
@@ -298910,6 +302954,9 @@
 "🌐 {}: lolos dari grup ({} poin)!": [
 "lang-id.js"
 ],
+"Apa yang akan kamu katakan sebelum laga melawan {}?": [
+"lang-id.js"
+],
 "+{} tapi hati nuranimu tidak tenang.": [
 "lang-id.js"
 ],
@@ -298953,6 +303000,12 @@
 "lang-id.js"
 ],
 "🧤 Kiper {} bergabung ke skuad.": [
+"lang-id.js"
+],
+"{} Target musim manajemen": [
+"lang-id.js"
+],
+"{} Negosiasi anggaran dengan manajemen": [
 "lang-id.js"
 ],
 "{} membuat kiper tak berdaya!": [
@@ -299076,6 +303129,12 @@
 "lang-id.js"
 ],
 "🏆 Juara {} bersama {}!": [
+"lang-id.js"
+],
+"🗯️ Ucapanmu jadi berita utama: \\\"{}\\\"": [
+"lang-id.js"
+],
+"· Posisi terbaik {} ({})": [
 "lang-id.js"
 ],
 "Ibumu terharu. ({})": [
@@ -299522,6 +303581,9 @@
 "🤝 Temanmu {} main di sini": [
 "lang-id.js"
 ],
+"Cetak minimal {} gol liga": [
+"lang-id.js"
+],
 "/minggu · tersisa {} tahun": [
 "lang-id.js"
 ],
@@ -299682,6 +303744,12 @@
 "lang-id.js"
 ],
 "Kami tersingkir di babak {}.": [
+"lang-id.js"
+],
+"Kekuatan {} · Kebugaran {}": [
+"lang-id.js"
+],
+"Peluang disetujui {}%": [
 "lang-id.js"
 ],
 "Kamu menang! {} - {} · +{}": [
@@ -300149,6 +304217,9 @@
 "lang-id.js"
 ],
 "· Biaya {}": [
+"lang-id.js"
+],
+"Minta kenaikan {}": [
 "lang-id.js"
 ],
 "Lewat ({}). -{}": [
@@ -308353,7 +312424,7 @@
 "Autografi e allenamento aperto. Più sostegno.": [
 "lang-it.js"
 ],
-"Riunione con la dirigenza": [
+"Incontro con la dirigenza": [
 "lang-it.js"
 ],
 "Presenta il progetto, cresce la fiducia.": [
@@ -308726,6 +312797,123 @@
 "lang-it.js"
 ],
 "Potrebbe andarsene a zero a fine stagione.": [
+"lang-it.js"
+],
+"Almeno 2 giovani (fino a 21) giochino 12+ partite": [
+"lang-it.js"
+],
+"Raggiungi la semifinale di coppa": [
+"lang-it.js"
+],
+"Raggiungi i quarti in Europa": [
+"lang-it.js"
+],
+"Sulla carta sono forti. Vedremo in campo.": [
+"lang-it.js"
+],
+"Il loro gioco è fermo a dieci anni fa.": [
+"lang-it.js"
+],
+"Nel weekend si vedrà chi è l'allenatore migliore.": [
+"lang-it.js"
+],
+"Ex compagno": [
+"lang-it.js"
+],
+"Che entri": [
+"lang-it.js"
+],
+"Allenatore avversario:": [
+"lang-it.js"
+],
+"(tuo ex compagno)": [
+"lang-it.js"
+],
+"Marcatura:": [
+"lang-it.js"
+],
+"Piano partita": [
+"lang-it.js"
+],
+"Frecciatina lanciata": [
+"lang-it.js"
+],
+"Frecciatina al rivale": [
+"lang-it.js"
+],
+"Stile": [
+"lang-it.js"
+],
+"Giocatore più pericoloso": [
+"lang-it.js"
+],
+"Marcatura a uomo": [
+"lang-it.js"
+],
+"Nessuna marcatura": [
+"lang-it.js"
+],
+"Piano partita pronto.": [
+"lang-it.js"
+],
+"Una frecciatina carica entrambe. Vinci e i tifosi esultano; perdi e la pagherai.": [
+"lang-it.js"
+],
+"Occhi puntati su questa partita!": [
+"lang-it.js"
+],
+"🗯️ Hai mantenuto la parola! La stampa parla di te.": [
+"lang-it.js"
+],
+"🗯️ Le parole pre-partita ti si sono ritorte contro. I tifosi sono arrabbiati.": [
+"lang-it.js"
+],
+"Ancora nessun trofeo. Il primo per il museo dipende da te!": [
+"lang-it.js"
+],
+"Vittoria più larga": [
+"lang-it.js"
+],
+"I record di gol si riempiranno con la stagione.": [
+"lang-it.js"
+],
+"Bacheca": [
+"lang-it.js"
+],
+"Leggende del club (100+ partite)": [
+"lang-it.js"
+],
+"Finito": [
+"lang-it.js"
+],
+"Bonus di budget se raggiunto": [
+"lang-it.js"
+],
+"Obiettivi della dirigenza": [
+"lang-it.js"
+],
+"Oltre il limite: la dirigenza rifiuta": [
+"lang-it.js"
+],
+"Presidente: \\\"Non ci sono tutti quei soldi. Non possiamo far fallire il club.\\\"": [
+"lang-it.js"
+],
+"Presidente: \\\"Prima i risultati, poi i soldi.\\\"": [
+"lang-it.js"
+],
+"Presidente: \\\"Ora non possiamo alzare il budget. Vai avanti con questa rosa.\\\"": [
+"lang-it.js"
+],
+"Presidente: \\\"Gli ingaggi pesano già sulle entrate. Non possiamo farlo.\\\"": [
+"lang-it.js"
+],
+"Se sei in buoni rapporti con la dirigenza e c'è cassa, può dire di sì.": [
+"lang-it.js"
+],
+"Chiedi budget mercato": [
+"lang-it.js"
+],
+"Chiedi budget ingaggi": [
 "lang-it.js"
 ],
 "— ci siamo qualificati!": [
@@ -318479,7 +322667,7 @@
 "INCONTRO CON I TIFOSI": [
 "lang-it.js"
 ],
-"RIUNIONE CON LA DIRIGENZA": [
+"INCONTRO CON LA DIRIGENZA": [
 "lang-it.js"
 ],
 "PRESENTA IL PROGETTO, CRESCE LA FIDUCIA.": [
@@ -318726,6 +322914,90 @@
 "lang-it.js"
 ],
 "POTREBBE ANDARSENE A ZERO A FINE STAGIONE.": [
+"lang-it.js"
+],
+"RAGGIUNGI LA SEMIFINALE DI COPPA": [
+"lang-it.js"
+],
+"RAGGIUNGI I QUARTI IN EUROPA": [
+"lang-it.js"
+],
+"IL LORO GIOCO È FERMO A DIECI ANNI FA.": [
+"lang-it.js"
+],
+"EX COMPAGNO": [
+"lang-it.js"
+],
+"CHE ENTRI": [
+"lang-it.js"
+],
+"ALLENATORE AVVERSARIO:": [
+"lang-it.js"
+],
+"(TUO EX COMPAGNO)": [
+"lang-it.js"
+],
+"MARCATURA:": [
+"lang-it.js"
+],
+"PIANO PARTITA": [
+"lang-it.js"
+],
+"FRECCIATINA LANCIATA": [
+"lang-it.js"
+],
+"FRECCIATINA AL RIVALE": [
+"lang-it.js"
+],
+"STILE": [
+"lang-it.js"
+],
+"GIOCATORE PIÙ PERICOLOSO": [
+"lang-it.js"
+],
+"MARCATURA A UOMO": [
+"lang-it.js"
+],
+"NESSUNA MARCATURA": [
+"lang-it.js"
+],
+"PIANO PARTITA PRONTO.": [
+"lang-it.js"
+],
+"OCCHI PUNTATI SU QUESTA PARTITA!": [
+"lang-it.js"
+],
+"VITTORIA PIÙ LARGA": [
+"lang-it.js"
+],
+"I RECORD DI GOL SI RIEMPIRANNO CON LA STAGIONE.": [
+"lang-it.js"
+],
+"BACHECA": [
+"lang-it.js"
+],
+"LEGGENDE DEL CLUB (100+ PARTITE)": [
+"lang-it.js"
+],
+"FINITO": [
+"lang-it.js"
+],
+"BONUS DI BUDGET SE RAGGIUNTO": [
+"lang-it.js"
+],
+"OBIETTIVI DELLA DIRIGENZA": [
+"lang-it.js"
+],
+"OLTRE IL LIMITE: LA DIRIGENZA RIFIUTA": [
+"lang-it.js"
+],
+"PRESIDENTE: \\\"PRIMA I RISULTATI, POI I SOLDI.\\\"": [
+"lang-it.js"
+],
+"CHIEDI BUDGET MERCATO": [
+"lang-it.js"
+],
+"CHIEDI BUDGET INGAGGI": [
 "lang-it.js"
 ],
 "— CI SIAMO QUALIFICATI!": [
@@ -322388,6 +326660,9 @@
 "ha {} anni, siamo nel {}. Partecipa ai provini di un'accademia. Gli osservatori di diversi club prendono appunti!": [
 "lang-it.js"
 ],
+"{}, che conosci dai tempi da giocatore, vuole entrare nel tuo staff. I giocatori lo adorano.": [
+"lang-it.js"
+],
 "La mascotte del {} ha segnato 3 rigori su 3 all'intervallo. I tifosi la vogliono in rosa.": [
 "lang-it.js"
 ],
@@ -322395,6 +326670,9 @@
 "lang-it.js"
 ],
 "{} usa di solito il {} basato sul contropiede.": [
+"lang-it.js"
+],
+"🌟 Un gioiello dal vivaio: {} {} (17). Gli osservatori dicono che ha un potenziale enorme!": [
 "lang-it.js"
 ],
 "Il tuo nuovo agente è {}. Prenderà il {}% dei tuoi guadagni e in cambio troverà offerte e sponsor migliori.": [
@@ -322440,6 +326718,9 @@
 "lang-it.js"
 ],
 "Sorpresa: il {} di {} perde! La stella finisce sotto accusa nella squadra battuta dal {} {}-{}.": [
+"lang-it.js"
+],
+"Il tuo giocatore segue {}: il loro attacco cala, il nostro un po' anche.": [
 "lang-it.js"
 ],
 "Un drone che filmava l'allenamento del {} è stato respinto di pugno dal portiere. Portiere: \\\"Riflesso.\\\"": [
@@ -322587,6 +326868,9 @@
 "lang-it.js"
 ],
 "🗣️ Ora parli {} fluentemente! La comunicazione con i compagni è molto migliorata.": [
+"lang-it.js"
+],
+"🌱 Hai dato spazio a {} giovani. Tifosi e dirigenza apprezzano il coraggio.": [
 "lang-it.js"
 ],
 "Sono in ritiro con la nazionale {}. Darò tutto per questa maglia!": [
@@ -322748,6 +327032,9 @@
 "Rappresentare il mio paese... Guido {}. Tutti insieme!": [
 "lang-it.js"
 ],
+"L'allenatore avversario {} è un tuo ex compagno: potrebbe incrinare l'amicizia.": [
+"lang-it.js"
+],
 "Colpo di mercato! Nel nuovo club continuerai a indossare il numero {}.": [
 "lang-it.js"
 ],
@@ -322853,6 +327140,12 @@
 "Una stagione di avventura: {}! Sfrutterò l'occasione.": [
 "lang-it.js"
 ],
+"🔥 Il derby è nostro! La città si colora dei nostri colori dopo {}.": [
+"lang-it.js"
+],
+"La dirigenza non alza il monte ingaggi molto oltre le entrate ({}/sett).": [
+"lang-it.js"
+],
 "{} è aperto. Ancora nessuna offerta; gioca bene e qualcuno potrebbe bussare.": [
 "lang-it.js"
 ],
@@ -322931,6 +327224,9 @@
 "Hai parlato con {}. Li hai ascoltati e ora sono più sereni.": [
 "lang-it.js"
 ],
+"La dirigenza non spende più dell'80% della cassa ({}) sul mercato.": [
+"lang-it.js"
+],
 "{} La tua energia è bassa. La prestazione cala e il rischio infortuni aumenta.": [
 "lang-it.js"
 ],
@@ -322965,6 +327261,12 @@
 "lang-it.js"
 ],
 "🌍 {}: {}° nella fase campionato, siamo ai quarti!": [
+"lang-it.js"
+],
+"La dirigenza vuole riparlarne tra {} settimane.": [
+"lang-it.js"
+],
+"🔁 {} spostati dal budget mercato agli ingaggi (+{}/sett).": [
 "lang-it.js"
 ],
 "Gossip: {} avvistato al casinò. I tifosi non sono contenti.": [
@@ -323055,6 +327357,9 @@
 "lang-it.js"
 ],
 "🌐 La federazione ti ha esonerato dalla nazionale di {}.": [
+"lang-it.js"
+],
+"Dal nostro vivaio alla prima squadra: {}! Ricordatevi questo nome.": [
 "lang-it.js"
 ],
 "{} Se scegli un paese non potrai più giocare per l'altro.": [
@@ -323169,6 +327474,9 @@
 "lang-it.js"
 ],
 "🌍 Sorteggio della {}! Avversari nella fase campionato: {}.": [
+"lang-it.js"
+],
+"🤝 Il tuo ex compagno {} è ora il tuo vice.": [
 "lang-it.js"
 ],
 "{}, uno dei paesi d'origine dei tuoi genitori, ti ha convocato.": [
@@ -323429,6 +327737,9 @@
 "🌐 Sosta per le nazionali: {} gioca 2 qualificazioni.": [
 "lang-it.js"
 ],
+"🔥 Derby perso contro {}. I tifosi sono distrutti.": [
+"lang-it.js"
+],
 "{} è chiuso. Le offerte in sospeso sono scadute.": [
 "lang-it.js"
 ],
@@ -323508,6 +327819,9 @@
 "lang-it.js"
 ],
 "Sosta per le nazionali: {} gioca 2 qualificazioni.": [
+"lang-it.js"
+],
+"Tieni il monte ingaggi sotto {} a fine stagione": [
 "lang-it.js"
 ],
 "Il giorno più bello della mia vita. {}, sono così felice che tu sia qui.": [
@@ -323753,6 +328067,9 @@
 "🤕 {} {} si è infortunato in allenamento ({} settimane).": [
 "lang-it.js"
 ],
+"Spostamento approvato: budget ingaggi +{}/sett": [
+"lang-it.js"
+],
 "{} assist: i tuoi compagni ti ringraziano": [
 "lang-it.js"
 ],
@@ -323837,6 +328154,12 @@
 "LA COPPA È NOSTRA! {}. Stasera si festeggia!": [
 "lang-it.js"
 ],
+"{} vuole essere il tuo vice": [
+"lang-it.js"
+],
+"🤝 La dirigenza ha trovato un compromesso sul {}: {}{}.": [
+"lang-it.js"
+],
 "Ti restano {} azioni questa settimana.": [
 "lang-it.js"
 ],
@@ -323904,6 +328227,9 @@
 "lang-it.js"
 ],
 "Con {} punti siamo usciti nel girone.": [
+"lang-it.js"
+],
+"Sposta {} dal budget mercato agli ingaggi": [
 "lang-it.js"
 ],
 "Rigore! {} si presenta sul dischetto...": [
@@ -324005,6 +328331,9 @@
 "Azione settimanale · {}/3 rimaste": [
 "lang-it.js"
 ],
+"🤝 La dirigenza ha approvato l'aumento del {}: {}{}.": [
+"lang-it.js"
+],
 "Un nuovo capitolo: {}! Che emozione.": [
 "lang-it.js"
 ],
@@ -324054,6 +328383,9 @@
 "lang-it.js"
 ],
 "⭐ {}: \\\"Oggi hai fatto la differenza\\\"": [
+"lang-it.js"
+],
+"Perdi al massimo {} partite in casa": [
 "lang-it.js"
 ],
 "Con la leggenda {}. Un giorno sarò...": [
@@ -324218,6 +328550,9 @@
 "🌐 {}: superato il girone ({} punti)!": [
 "lang-it.js"
 ],
+"Cosa dirai prima della partita contro {}?": [
+"lang-it.js"
+],
 "+{}, ma la tua coscienza non è pulita.": [
 "lang-it.js"
 ],
@@ -324261,6 +328596,12 @@
 "lang-it.js"
 ],
 "🧤 Il portiere {} si è unito alla rosa.": [
+"lang-it.js"
+],
+"{} Obiettivi della dirigenza": [
+"lang-it.js"
+],
+"{} Trattativa sul budget con la dirigenza": [
 "lang-it.js"
 ],
 "{} ha lasciato il portiere senza scampo!": [
@@ -324384,6 +328725,12 @@
 "lang-it.js"
 ],
 "🏆 Campioni del {} con {}!": [
+"lang-it.js"
+],
+"🗯️ Le tue parole in prima pagina: \\\"{}\\\"": [
+"lang-it.js"
+],
+"· Miglior piazzamento {}° ({})": [
 "lang-it.js"
 ],
 "Tua madre si è commossa. ({})": [
@@ -324830,6 +329177,9 @@
 "🤝 Il tuo amico {} gioca qui": [
 "lang-it.js"
 ],
+"Segna almeno {} gol in campionato": [
+"lang-it.js"
+],
 "/settimana · ancora {} anni": [
 "lang-it.js"
 ],
@@ -324993,6 +329343,12 @@
 "lang-it.js"
 ],
 "Siamo usciti ai {}.": [
+"lang-it.js"
+],
+"Forza {} · Condizione {}": [
+"lang-it.js"
+],
+"Probabilità di ok {}%": [
 "lang-it.js"
 ],
 "Hai vinto! {} - {} · +{}": [
@@ -325456,6 +329812,9 @@
 "lang-it.js"
 ],
 "· Cartellino {}": [
+"lang-it.js"
+],
+"Chiedi un aumento del {}": [
 "lang-it.js"
 ],
 "Sballato ({}). -{}": [
@@ -326580,6 +330939,9 @@
 "lang-ja.js"
 ],
 "監督のSNS": [
+"lang-ja.js"
+],
+"フロントとの関係が良く資金があれば、予算増額にOKが出るかも。": [
 "lang-ja.js"
 ],
 "（PK戦）": [
@@ -334728,6 +339090,132 @@
 "Ele pode sair de graça no fim da temporada.": [
 "lang-pt.js"
 ],
+"Pelo menos 2 jovens (até 21) joguem 12+ jogos": [
+"lang-pt.js"
+],
+"Chegue à semifinal da copa": [
+"lang-pt.js"
+],
+"Chegue às quartas na Europa": [
+"lang-pt.js"
+],
+"No papel são fortes. Veremos em campo.": [
+"lang-pt.js"
+],
+"O estilo deles parou dez anos atrás.": [
+"lang-pt.js"
+],
+"No fim de semana veremos quem é o melhor técnico.": [
+"lang-pt.js"
+],
+"Ex-companheiro": [
+"lang-pt.js"
+],
+"Que venha": [
+"lang-pt.js"
+],
+"🔥 CLÁSSICO": [
+"lang-pt.js"
+],
+"(seu ex-companheiro)": [
+"lang-pt.js"
+],
+"Marcação:": [
+"lang-pt.js"
+],
+"Plano de jogo": [
+"lang-pt.js"
+],
+"Provocação feita": [
+"lang-pt.js"
+],
+"Provoque o técnico rival": [
+"lang-pt.js"
+],
+"Jogador mais perigoso": [
+"lang-pt.js"
+],
+"Marcação individual": [
+"lang-pt.js"
+],
+"Sem marcação": [
+"lang-pt.js"
+],
+"Plano de jogo pronto.": [
+"lang-pt.js"
+],
+"A provocação motiva os dois times. Vença e a torcida vibra; perca e vai pagar caro.": [
+"lang-pt.js"
+],
+"Todos de olho neste jogo!": [
+"lang-pt.js"
+],
+"🗯️ Você bancou suas palavras! A imprensa fala de você.": [
+"lang-pt.js"
+],
+"🗯️ Suas palavras antes do jogo voltaram contra você. A torcida está irritada.": [
+"lang-pt.js"
+],
+"Ainda sem títulos. O primeiro do museu depende de você!": [
+"lang-pt.js"
+],
+"Maior goleada": [
+"lang-pt.js"
+],
+"Os recordes de gols vão sendo preenchidos.": [
+"lang-pt.js"
+],
+"Museu do clube": [
+"lang-pt.js"
+],
+"Sala de troféus": [
+"lang-pt.js"
+],
+"Lendas do clube (100+ jogos)": [
+"lang-pt.js"
+],
+"🏛️ Museu do clube": [
+"lang-pt.js"
+],
+"Encerrado": [
+"lang-pt.js"
+],
+"Bônus de orçamento se cumprir": [
+"lang-pt.js"
+],
+"Metas da diretoria": [
+"lang-pt.js"
+],
+"Acima do limite: a diretoria recusa": [
+"lang-pt.js"
+],
+"Presidente: \\\"Não temos tanto dinheiro. Não vamos quebrar o clube.\\\"": [
+"lang-pt.js"
+],
+"Presidente: \\\"Primeiro resultados, depois dinheiro.\\\"": [
+"lang-pt.js"
+],
+"Presidente: \\\"Agora não dá para aumentar o orçamento. Siga com este elenco.\\\"": [
+"lang-pt.js"
+],
+"Presidente: \\\"Os salários já apertam as receitas. Não dá para fazer essa transferência.\\\"": [
+"lang-pt.js"
+],
+"Se você está bem com a diretoria e há caixa, ela pode aceitar mais orçamento.": [
+"lang-pt.js"
+],
+"Pedir orçamento de transferências": [
+"lang-pt.js"
+],
+"Pedir orçamento salarial": [
+"lang-pt.js"
+],
+"orçamento de transferências": [
+"lang-pt.js"
+],
+"orçamento salarial": [
+"lang-pt.js"
+],
 "— nos classificamos!": [
 "lang-pt.js"
 ],
@@ -337624,9 +342112,6 @@
 "lang-pt.js"
 ],
 "Provável escalação": [
-"lang-pt.js"
-],
-"Jogo": [
 "lang-pt.js"
 ],
 "EMBAIXADINHAS!": [
@@ -344493,6 +348978,90 @@
 "ELE PODE SAIR DE GRAÇA NO FIM DA TEMPORADA.": [
 "lang-pt.js"
 ],
+"CHEGUE À SEMIFINAL DA COPA": [
+"lang-pt.js"
+],
+"CHEGUE ÀS QUARTAS NA EUROPA": [
+"lang-pt.js"
+],
+"O ESTILO DELES PAROU DEZ ANOS ATRÁS.": [
+"lang-pt.js"
+],
+"EX-COMPANHEIRO": [
+"lang-pt.js"
+],
+"QUE VENHA": [
+"lang-pt.js"
+],
+"(SEU EX-COMPANHEIRO)": [
+"lang-pt.js"
+],
+"MARCAÇÃO:": [
+"lang-pt.js"
+],
+"PLANO DE JOGO": [
+"lang-pt.js"
+],
+"PROVOCAÇÃO FEITA": [
+"lang-pt.js"
+],
+"PROVOQUE O TÉCNICO RIVAL": [
+"lang-pt.js"
+],
+"JOGADOR MAIS PERIGOSO": [
+"lang-pt.js"
+],
+"MARCAÇÃO INDIVIDUAL": [
+"lang-pt.js"
+],
+"SEM MARCAÇÃO": [
+"lang-pt.js"
+],
+"PLANO DE JOGO PRONTO.": [
+"lang-pt.js"
+],
+"TODOS DE OLHO NESTE JOGO!": [
+"lang-pt.js"
+],
+"MAIOR GOLEADA": [
+"lang-pt.js"
+],
+"OS RECORDES DE GOLS VÃO SENDO PREENCHIDOS.": [
+"lang-pt.js"
+],
+"MUSEU DO CLUBE": [
+"lang-pt.js"
+],
+"SALA DE TROFÉUS": [
+"lang-pt.js"
+],
+"LENDAS DO CLUBE (100+ JOGOS)": [
+"lang-pt.js"
+],
+"🏛️ MUSEU DO CLUBE": [
+"lang-pt.js"
+],
+"ENCERRADO": [
+"lang-pt.js"
+],
+"BÔNUS DE ORÇAMENTO SE CUMPRIR": [
+"lang-pt.js"
+],
+"METAS DA DIRETORIA": [
+"lang-pt.js"
+],
+"ACIMA DO LIMITE: A DIRETORIA RECUSA": [
+"lang-pt.js"
+],
+"PRESIDENTE: \\\"PRIMEIRO RESULTADOS, DEPOIS DINHEIRO.\\\"": [
+"lang-pt.js"
+],
+"PEDIR ORÇAMENTO DE TRANSFERÊNCIAS": [
+"lang-pt.js"
+],
+"PEDIR ORÇAMENTO SALARIAL": [
+"lang-pt.js"
+],
 "— NOS CLASSIFICAMOS!": [
 "lang-pt.js"
 ],
@@ -346725,9 +351294,6 @@
 "PROVÁVEL ESCALAÇÃO": [
 "lang-pt.js"
 ],
-"JOGO": [
-"lang-pt.js"
-],
 "SEU": [
 "lang-pt.js"
 ],
@@ -348051,6 +352617,9 @@
 "tem {} anos e estamos em {}. Ele está na peneira da base. Olheiros de vários clubes estão anotando tudo!": [
 "lang-pt.js"
 ],
+"{}, que você conhece dos tempos de jogador, quer entrar na comissão. Os jogadores gostam dele.": [
+"lang-pt.js"
+],
 "O mascote do {} acertou 3 de 3 pênaltis no intervalo. A torcida quer ele na lista.": [
 "lang-pt.js"
 ],
@@ -348058,6 +352627,9 @@
 "lang-pt.js"
 ],
 "{} costuma usar o {} apostando no contra-ataque.": [
+"lang-pt.js"
+],
+"🌟 Uma joia da base: {} {} (17). Os olheiros dizem que o potencial é enorme!": [
 "lang-pt.js"
 ],
 "Seu novo empresário é {}. Ele fica com {}% da sua renda e, em troca, encontra ofertas e patrocinadores melhores.": [
@@ -348103,6 +352675,9 @@
 "lang-pt.js"
 ],
 "Zebra! O {} de {} perde! A estrela está na berlinda no time derrotado por {} {}-{}.": [
+"lang-pt.js"
+],
+"Seu jogador marca {}: o ataque deles enfraquece, mas o nosso perde um pouco.": [
 "lang-pt.js"
 ],
 "Um drone que filmava o treino do {} foi socado pelo goleiro. O goleiro: \\\"Reflexo\\\".": [
@@ -348250,6 +352825,9 @@
 "lang-pt.js"
 ],
 "🗣️ Agora você fala {} fluentemente! A comunicação com os colegas melhorou muito.": [
+"lang-pt.js"
+],
+"🌱 Você deu chance a {} jovens. Torcida e diretoria admiram sua coragem.": [
 "lang-pt.js"
 ],
 "Estou na convocação da seleção de {}. Vou dar tudo por esta camisa!": [
@@ -348411,6 +352989,9 @@
 "Representar meu país... Estou no comando de {}. Juntos!": [
 "lang-pt.js"
 ],
+"O técnico rival {} é seu ex-companheiro: isso pode estremecer a amizade.": [
+"lang-pt.js"
+],
 "Contratação de peso! Você vai continuar usando a camisa {} no novo clube.": [
 "lang-pt.js"
 ],
@@ -348516,6 +353097,12 @@
 "Uma temporada de aventura: {}! Vou aproveitar a chance.": [
 "lang-pt.js"
 ],
+"🔥 O clássico é nosso! A cidade ganha nossas cores depois de vencer o {}.": [
+"lang-pt.js"
+],
+"A diretoria não sobe a folha muito acima das receitas ({}/sem).": [
+"lang-pt.js"
+],
 "{} está aberta. Ainda sem ofertas; jogue bem e alguém pode bater na porta.": [
 "lang-pt.js"
 ],
@@ -348594,6 +353181,9 @@
 "Você conversou com {}. Ouviu as expectativas e eles ficaram tranquilos.": [
 "lang-pt.js"
 ],
+"A diretoria não usa mais de 80% do caixa ({}) em contratações.": [
+"lang-pt.js"
+],
 "{} Sua energia está baixa. Seu desempenho cai e o risco de lesão aumenta.": [
 "lang-pt.js"
 ],
@@ -348628,6 +353218,12 @@
 "lang-pt.js"
 ],
 "🌍 {}: terminamos em {}º na fase de liga e fomos às quartas!": [
+"lang-pt.js"
+],
+"A diretoria quer voltar ao assunto em {} semanas.": [
+"lang-pt.js"
+],
+"🔁 {} passou do orçamento de transferências para salários (+{}/sem).": [
 "lang-pt.js"
 ],
 "Fofoca: {} visto num cassino. A torcida não está feliz.": [
@@ -348718,6 +353314,9 @@
 "lang-pt.js"
 ],
 "🌐 A federação demitiu você da seleção de {}.": [
+"lang-pt.js"
+],
+"Da nossa base para o time principal: {}! Guardem esse nome.": [
 "lang-pt.js"
 ],
 "{} Se você escolher um país, não poderá mais jogar pelo outro.": [
@@ -348832,6 +353431,9 @@
 "lang-pt.js"
 ],
 "🌍 Sorteio da {}! Adversários na fase de liga: {}.": [
+"lang-pt.js"
+],
+"🤝 Seu ex-companheiro {} agora é seu auxiliar.": [
 "lang-pt.js"
 ],
 "{}, uma das terras natais dos seus pais, te convocou.": [
@@ -349092,6 +353694,9 @@
 "🌐 Data FIFA: {} joga 2 jogos das eliminatórias.": [
 "lang-pt.js"
 ],
+"🔥 Perdemos o clássico para o {}. A torcida está arrasada.": [
+"lang-pt.js"
+],
 "{} fechou. As ofertas pendentes expiraram.": [
 "lang-pt.js"
 ],
@@ -349171,6 +353776,9 @@
 "lang-pt.js"
 ],
 "Data FIFA: {} joga 2 jogos das eliminatórias.": [
+"lang-pt.js"
+],
+"Mantenha a folha abaixo de {} no fim da temporada": [
 "lang-pt.js"
 ],
 "O melhor dia da minha vida. {}, que bom que você está aqui.": [
@@ -349416,6 +354024,9 @@
 "🤕 {} {} se lesionou no treino ({} semanas).": [
 "lang-pt.js"
 ],
+"Transferência aprovada: folha +{}/sem": [
+"lang-pt.js"
+],
 "{} assistências: seus companheiros agradecem": [
 "lang-pt.js"
 ],
@@ -349500,6 +354111,12 @@
 "A TAÇA É NOSSA! {}. Hoje tem festa!": [
 "lang-pt.js"
 ],
+"{} quer ser seu auxiliar": [
+"lang-pt.js"
+],
+"🤝 A diretoria chegou a um meio-termo no {}: {}{}.": [
+"lang-pt.js"
+],
 "Você tem mais {} ações esta semana.": [
 "lang-pt.js"
 ],
@@ -349567,6 +354184,9 @@
 "lang-pt.js"
 ],
 "Fizemos {} pontos no grupo e caímos.": [
+"lang-pt.js"
+],
+"Passar {} do orçamento de transferências para salários": [
 "lang-pt.js"
 ],
 "Pênalti! {} vai para a cobrança...": [
@@ -349668,6 +354288,9 @@
 "Ação da semana · restam {}/3": [
 "lang-pt.js"
 ],
+"🤝 A diretoria aprovou o aumento do {}: {}{}.": [
+"lang-pt.js"
+],
 "Um novo capítulo: {}! Que ansiedade boa.": [
 "lang-pt.js"
 ],
@@ -349717,6 +354340,9 @@
 "lang-pt.js"
 ],
 "⭐ {}: \\\"Hoje você fez a diferença\\\"": [
+"lang-pt.js"
+],
+"Perca no máximo {} jogos em casa": [
 "lang-pt.js"
 ],
 "Com o ídolo {}. Um dia eu vou ser...": [
@@ -349881,6 +354507,9 @@
 "🌐 {}: passamos do grupo ({} pontos)!": [
 "lang-pt.js"
 ],
+"O que vai dizer antes do jogo contra {}?": [
+"lang-pt.js"
+],
 "+{}, mas sua consciência não está tranquila.": [
 "lang-pt.js"
 ],
@@ -349924,6 +354553,12 @@
 "lang-pt.js"
 ],
 "🧤 O goleiro {} entrou no elenco.": [
+"lang-pt.js"
+],
+"{} Metas da diretoria": [
+"lang-pt.js"
+],
+"{} Negociar orçamento com a diretoria": [
 "lang-pt.js"
 ],
 "{} deixou o goleiro sem chance!": [
@@ -350047,6 +354682,12 @@
 "lang-pt.js"
 ],
 "🏆 Campeões do {} com {}!": [
+"lang-pt.js"
+],
+"🗯️ Suas palavras viram manchete: \\\"{}\\\"": [
+"lang-pt.js"
+],
+"· Melhor posição {}º ({})": [
 "lang-pt.js"
 ],
 "Sua mãe ficou emocionada. ({})": [
@@ -350475,6 +355116,9 @@
 "🤝 Seu amigo {} joga aqui": [
 "lang-pt.js"
 ],
+"Marque pelo menos {} gols na liga": [
+"lang-pt.js"
+],
 "/semana · faltam {} anos": [
 "lang-pt.js"
 ],
@@ -350635,6 +355279,12 @@
 "lang-pt.js"
 ],
 "Caímos nas {}.": [
+"lang-pt.js"
+],
+"Força {} · Condição {}": [
+"lang-pt.js"
+],
+"Chance de aprovação {}%": [
 "lang-pt.js"
 ],
 "Você ganhou! {} - {} · +{}": [
@@ -351060,6 +355710,9 @@
 "· Taxa {}": [
 "lang-pt.js"
 ],
+"Pedir aumento do {}": [
+"lang-pt.js"
+],
 "Estourou ({}). -{}": [
 "lang-pt.js"
 ],
@@ -351409,6 +356062,9 @@
 "lang-pt.js"
 ],
 "{} Configurações": [
+"lang-pt.js"
+],
+"{} · Clássico": [
 "lang-pt.js"
 ],
 "ESTAÇÃO {}/3": [

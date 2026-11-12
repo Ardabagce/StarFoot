@@ -58,7 +58,7 @@ const CM_JABS = [
     }
     Coach.save();
   };
-  Coach.palOf = (clubId) => (Coach.s.palClubs && Coach.s.palClubs[clubId]) || null;
+  Coach.palOf = (clubId) => (Coach.s && Coach.s.palClubs && Coach.s.palClubs[clubId]) || null;
 
   // ---------- maç kartı: plan, derbi, laf sokma, rakip hoca ----------
   const vh2 = Coach.vHome;

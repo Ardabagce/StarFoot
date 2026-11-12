@@ -1347,3 +1347,22 @@
 8099|Gehaltsbudget fordern
 8100|Transferbudget
 8101|Gehaltsbudget
+8174|🌍 Meister der {}: {}.
+8175|Meister der {}: {}.
+8156|Tippe auf eine Zeile, um den Verein anzusehen.
+8157|Letzte Spiele
+8158|Europa nach aktuellem Platz
+8171|Ihr Trainer ist dein Ex-Mitspieler {}.
+8159|Vereinsprofil
+8160|Kaderstärke-Rang
+8161|Erwartung des Vorstands
+8162|Geschätztes Transferbudget
+8177|{} Plätze
+8163|Zurück zu den Angeboten
+8164|Ansehen
+8169|🔄 {} wechselt doppelt.
+8172|🔄 {} wechselt.
+8170|{} wechselt doppelt.
+8173|{} wechselt.
+8167|Fitness des Gegners
+8168|Ihre Chemie: {} · Unsere: {}

@@ -1347,3 +1347,22 @@
 8099|Pedir orçamento salarial
 8100|orçamento de transferências
 8101|orçamento salarial
+8174|🌍 Campeão da {}: {}.
+8175|Campeão da {}: {}.
+8156|Toque numa linha para ver o clube.
+8157|Últimos jogos
+8158|Europa pela posição atual
+8171|O técnico é seu ex-companheiro {}.
+8159|Perfil do clube
+8160|Ranking do elenco
+8161|Expectativa da diretoria
+8162|Orçamento estimado
+8177|{} lugares
+8163|Voltar às propostas
+8164|Ver
+8169|🔄 {} fez substituição dupla.
+8172|🔄 {} fez uma substituição.
+8170|{} fez substituição dupla.
+8173|{} fez uma substituição.
+8167|Condição do rival
+8168|Química deles: {} · A nossa: {}

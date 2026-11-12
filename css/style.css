@@ -3180,3 +3180,19 @@ div.doc { position: fixed; inset: 0; z-index: 49; background: #000; display: fle
 .bud-btns .btn { min-width: 0; white-space: normal; line-height: 1.15; padding: 10px 8px; }
 .bud-mv { width: 100%; margin-top: 8px; white-space: normal; }
 .cm-musb { width: 100%; margin-bottom: 10px; }
+
+/* yaşayan dünya: lig seçici, kulüp incelemesi */
+.wl-sel { margin-bottom: 10px; }
+.wl-sel select { width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--panel-2); color: var(--chalk); font: 700 15px var(--body); }
+.wl-tbl tr[data-ci] { cursor: pointer; }
+.wl-tbl tr.eu td:first-child { box-shadow: inset 3px 0 0 #4fb3ff; }
+.wl-tbl tr.up td:first-child { box-shadow: inset 3px 0 0 var(--grass); }
+.wl-hint { font-size: 12px; margin: 6px 0 0; text-align: center; }
+.ci-w { display: flex; gap: 6px; align-items: stretch; }
+.ci-w .cm-offer { flex: 1; min-width: 0; }
+.ci-b { flex: none; padding: 0 12px; border-radius: 10px; border: 1px solid var(--line); background: rgba(255,255,255,.05); color: var(--flood); font: 800 13px var(--display); text-transform: uppercase; }
+.ci-h { display: flex; align-items: center; gap: 12px; margin: 4px 0 10px; }
+.ci-h b { display: block; font: 800 20px var(--display); }
+.ci-h small { color: var(--muted); }
+.cm-lstat { flex-wrap: wrap; gap: 2px 10px; }
+.cm-lstat b { white-space: nowrap; }

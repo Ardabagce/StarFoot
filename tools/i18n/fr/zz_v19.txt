@@ -1347,3 +1347,22 @@
 8099|Demander un budget salaires
 8100|budget transferts
 8101|budget salaires
+8174|🌍 Champion de la {} : {}.
+8175|Champion de la {} : {}.
+8156|Touche une ligne pour voir le club.
+8157|Derniers matchs
+8158|Europe au classement actuel
+8171|Leur entraîneur est ton ancien coéquipier {}.
+8159|Fiche du club
+8160|Rang de l'effectif
+8161|Attente de la direction
+8162|Budget transferts estimé
+8177|{} places
+8163|Retour aux offres
+8164|Voir
+8169|🔄 {} effectue un double changement.
+8172|🔄 {} effectue un changement.
+8170|{} effectue un double changement.
+8173|{} effectue un changement.
+8167|Forme adverse
+8168|Leur alchimie : {} · La nôtre : {}

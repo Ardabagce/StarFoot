@@ -1347,3 +1347,22 @@
 8099|Chiedi budget ingaggi
 8100|budget mercato
 8101|budget ingaggi
+8174|🌍 Campione della {}: {}.
+8175|Campione della {}: {}.
+8156|Tocca una riga per vedere il club.
+8157|Ultime partite
+8158|Europa con la posizione attuale
+8171|L'allenatore è il tuo ex compagno {}.
+8159|Scheda del club
+8160|Classifica della rosa
+8161|Aspettativa della dirigenza
+8162|Budget mercato stimato
+8177|{} posti
+8163|Torna alle offerte
+8164|Vedi
+8169|🔄 {} fa un doppio cambio.
+8172|🔄 {} fa un cambio.
+8170|{} fa un doppio cambio.
+8173|{} fa un cambio.
+8167|Condizione avversaria
+8168|La loro intesa: {} · La nostra: {}

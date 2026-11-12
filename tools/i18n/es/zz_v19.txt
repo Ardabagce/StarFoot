@@ -1347,3 +1347,22 @@
 8099|Pedir presupuesto salarial
 8100|presupuesto de fichajes
 8101|presupuesto salarial
+8174|🌍 Campeón de la {}: {}.
+8175|Campeón de la {}: {}.
+8156|Toca una fila para ver el club.
+8157|Últimos partidos
+8158|Europa con la posición actual
+8171|Su técnico es tu excompañero {}.
+8159|Ficha del club
+8160|Ranking de plantilla
+8161|Expectativa de la directiva
+8162|Presupuesto de fichajes estimado
+8177|{} plazas
+8163|Volver a las ofertas
+8164|Ver
+8169|🔄 {} hizo un doble cambio.
+8172|🔄 {} hizo un cambio.
+8170|{} hizo un doble cambio.
+8173|{} hizo un cambio.
+8167|Forma del rival
+8168|Su química: {} · La nuestra: {}

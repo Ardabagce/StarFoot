@@ -9,7 +9,16 @@
   // ---------- otomatik değişiklik (hızlı sonuç ve sona atla) ----------
   Live.autoSubs = () => {
     const L = Live.m;
-    Live.onField().filter((p) => p.fit < 66 && p.pos !== 'GK').sort((a, b) => a.fit - b.fit).slice(0, Math.min(3, L.subs)).forEach((p) => Live.autoSub(p));
+    // akıllı değişiklik: yedeğin bugünkü gücü, yorgun oyuncunun 8 dakika sonraki gücünden iyiyse
+    const ahead = (p) => p.r * Coach.fitK(Math.max(5, p.fit - 3));
+    let n = 0;
+    Live.onField().filter((p) => p.pos !== 'GK' && p.fit < 80).sort((a, b) => a.fit - b.fit).forEach((p) => {
+      if (n >= 2 || L.subs <= 0) return;
+      const b = L.bench.map(Live.P).filter((x) => x && Coach.available(x)).sort((x, y) => (y.pos === p.pos) - (x.pos === p.pos) || y.r - x.r)[0];
+      if (!b) return;
+      const pen = b.pos === p.pos ? 0 : 6;
+      if ((b.r - pen) * Coach.fitK(b.fit) >= ahead(p)) { Live.sub(p.id, b.id); n++; }
+    });
   };
   const sim0 = Live.sim;
   Live.sim = () => {
@@ -17,7 +26,7 @@
     while (L.min < 90) {
       Live.tick();
       if (L.injured) { const p = Live.P(L.injured); L.injured = null; Live.autoSub(p); Live.injOff(p); }
-      if (L.min === 62 || L.min === 75) Live.autoSubs();
+      if (L.min >= 55 && L.subs > 0 && L.min - (L.aLast || 0) >= 5) { L.aLast = L.min; Live.autoSubs(); }
     }
     void sim0;
   };

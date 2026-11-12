@@ -16,9 +16,9 @@ const CM_STYLES = {
   counter: { t: 'Kontra', d: 'Hücum eden rakibe karşı çok etkilidir.', att: 0.5, def: 1.5, tire: 1, vsAtt: 2.5 },
 };
 const CM_TRAIN = {
-  light: { t: 'Hafif', d: 'Oyuncular dinlenir, kondisyon hızlı toplanır.', fit: 40, grow: 0.4, inj: 0.4 },
-  normal: { t: 'Normal', d: 'Dengeli yük.', fit: 32, grow: 1, inj: 1 },
-  hard: { t: 'Yoğun', d: 'Gelişim hızlanır ama kondisyon yavaş toplanır, sakatlık riski artar.', fit: 23, grow: 1.9, inj: 1.8 },
+  light: { t: 'Hafif', d: 'Oyuncular dinlenir, kondisyon hızlı toplanır.', fit: 50, grow: 0.4, inj: 0.4 },
+  normal: { t: 'Normal', d: 'Dengeli yük.', fit: 42, grow: 1, inj: 1 },
+  hard: { t: 'Yoğun', d: 'Gelişim hızlanır ama kondisyon yavaş toplanır, sakatlık riski artar.', fit: 32, grow: 1.9, inj: 1.8 },
 };
 // haftalık antrenman odağı: sıradaki maça küçük artı ve uzun vadede takım uyumu
 const CM_FOCUS = {
@@ -307,7 +307,9 @@ const Coach = {
     return out;
   },
   // kondisyon: 85 civarı nötr; dinç oyuncu biraz daha iyi, 55'in altı belirgin düşüş (değişiklik gerektirir)
-  eff(x) { const p = x.p, f = U.clamp(p.fit, 0, 100); return (p.r - x.pen) * (1 + (f - 85) * 0.002 - (f < 55 ? (55 - f) * 0.004 : 0)) * (0.98 + 0.04 * p.mor / 100); },
+  eff(x) { const p = x.p, f = U.clamp(p.fit, 0, 100); return (p.r - x.pen) * Coach.fitK(f) * (0.98 + 0.04 * p.mor / 100); },
+  // kondisyon etkisi: 85 civarı nötr, 70'in altında hızla düşer (yorgun oyuncuyu değiştirmek gerekir)
+  fitK(f) { return 1 + (f - 85) * 0.002 - (f < 70 ? (70 - f) * 0.013 : 0); },
   // takım uyumu ve kaptan etkisi dahil güç
   strength(list, form, style, mods) {
     const s = Coach.s;

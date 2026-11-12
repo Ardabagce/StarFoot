@@ -1347,3 +1347,22 @@
 8099|Minta anggaran gaji
 8100|anggaran transfer
 8101|anggaran gaji
+8174|🌍 Juara {}: {}.
+8175|Juara {}: {}.
+8156|Ketuk baris untuk melihat klub.
+8157|Laga terakhir
+8158|Eropa dengan posisi saat ini
+8171|Pelatihnya mantan rekan setimmu {}.
+8159|Profil klub
+8160|Peringkat kekuatan skuad
+8161|Harapan manajemen
+8162|Perkiraan anggaran transfer
+8177|{} kursi
+8163|Kembali ke tawaran
+8164|Lihat
+8169|🔄 {} melakukan pergantian ganda.
+8172|🔄 {} melakukan pergantian.
+8170|{} melakukan pergantian ganda.
+8173|{} melakukan pergantian.
+8167|Kebugaran lawan
+8168|Chemistry mereka: {} · Kita: {}

@@ -31,7 +31,9 @@ const Live = {
     const st = Live.str();
     // rakip de yorulur (kendi değişikliklerini yapar, daha az düşer)
     const oT = (L.min / 90) * 2;
-    const oppAtt = L.opp.att - L.oppRed * 4 - oT, oppDef = L.opp.def - L.oppRed * 4 - oT;
+    // rakibin anlık gücü: kondisyonu, değişiklikleri ve kimyası (coach6), yoksa basit yorgunluk
+    const on = Live.oppNow ? Live.oppNow() : { att: L.opp.att - oT, def: L.opp.def - oT };
+    const oppAtt = on.att - L.oppRed * 4, oppDef = on.def - L.oppRed * 4;
     if (L.style === 'counter' && L.opp.style === 'att') st.att += CM_STYLES.counter.vsAtt;
     const h = L.match.home ? 1 : -1;
     const lf = 1.3 * Math.exp((st.att - oppDef + h * 1.5) / 28), la = 1.3 * Math.exp((oppAtt - st.def - h * 1.5) / 28);
@@ -49,7 +51,7 @@ const Live = {
     const [pf, pa, st] = Live.lambdas();
     const tire = CM_STYLES[L.style].tire;
     // yorgunluk: 90 dakikada yaklaşık 30 puan (yaşlılar ve önde baskı daha çok yorulur), değişiklik gerektirir
-    Live.onField().forEach((p) => { p.fit = Math.max(5, p.fit - 0.34 * tire * (p.age > 31 ? 1.25 : p.age <= 21 ? 0.85 : 1)); L.mins[p.id] = (L.mins[p.id] || 0) + 1; });
+    Live.onField().forEach((p) => { p.fit = Math.max(5, p.fit - 0.45 * tire * (p.age > 31 ? 1.25 : p.age <= 21 ? 0.85 : 1)); L.mins[p.id] = (L.mins[p.id] || 0) + 1; });
     // topa sahip olma
     const share = U.clamp(0.5 + (st.att + st.def - L.opp.att - L.opp.def) / 90 + (L.style === 'press' ? 0.04 : L.style === 'counter' || L.style === 'def' ? -0.05 : 0), 0.28, 0.72);
     if (U.chance(share)) L.st.pos[0]++; else L.st.pos[1]++;
@@ -331,7 +333,7 @@ const Live = {
         const M = Live.m; if (!M || M.done || M.paused) return;
         clearTimeout(Live._t);
         M.auto = true; // sona atlarken kritik anlar otomatik
-        while (M.min < 90) { Live.tick(); if (M.min === 45 && !M.ht) M.ht = true; if (M.injured) { const p = Live.P(M.injured); M.injured = null; Live.autoSub(p); } }
+        while (M.min < 90) { Live.tick(); if (M.min === 45 && !M.ht) M.ht = true; if (M.injured) { const p = Live.P(M.injured); M.injured = null; Live.autoSub(p); } if (M.min >= 55 && M.subs > 0 && M.min - (M.aLast || 0) >= 5) { M.aLast = M.min; Live.autoSubs(); } }
         Live.draw(); Live.end();
       };
       UI.strip(el);
