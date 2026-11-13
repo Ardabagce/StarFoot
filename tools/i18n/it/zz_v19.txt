@@ -1512,3 +1512,4 @@
 8355|Hai preso la partita {}.
 8368|{} sfide sbloccate
 8336|Prendi una partita da un certo minuto o salva la squadra nelle ultime settimane. {}/{}
+6842|Diamond attivo! Tutto è tuo.

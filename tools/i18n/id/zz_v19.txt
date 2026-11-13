@@ -1512,3 +1512,4 @@
 8355|Kamu mengambil alih laga {}.
 8368|{} tantangan terbuka
 8336|Ambil alih laga dari menit tertentu atau selamatkan tim di pekan-pekan terakhir. {}/{}
+6842|Diamond aktif! Semuanya milikmu.

@@ -3274,3 +3274,9 @@ div.doc { position: fixed; inset: 0; z-index: 49; background: #000; display: fle
 #modal .set-row > span { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
 #modal .set-row small { color: var(--muted); font-size: 12px; line-height: 1.35; }
 .ch-chal > .ic:last-child { transform: rotate(-90deg); flex: none; }
+/* uzun kelimeler (de/ja) ızgara sütunlarını ekrandan taşırmasın */
+.t-packs { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.t-pack b, .t-pack small { overflow-wrap: anywhere; hyphens: auto; }
+.ac-row, .plan .ac-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.ac-tile { min-width: 0; }
+.ac-t b { overflow-wrap: anywhere; }

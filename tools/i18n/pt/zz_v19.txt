@@ -1512,3 +1512,4 @@
 8355|Você assumiu o jogo {}.
 8368|{} desafios liberados
 8336|Assuma um jogo num minuto definido ou salve o time nas últimas semanas. {}/{}
+6842|Diamond ativado! Tudo é seu.

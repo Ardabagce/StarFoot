@@ -1512,3 +1512,4 @@
 8355|Tu reprends le match {}.
 8368|{} défis débloqués
 8336|Reprends un match à une minute donnée ou sauve l’équipe en fin de saison. {}/{}
+6842|Diamond activé ! Tout est à toi.

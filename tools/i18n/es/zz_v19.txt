@@ -1512,3 +1512,4 @@
 8355|Tomaste el partido {}.
 8368|{} desafíos abiertos
 8336|Toma un partido en un minuto dado o salva al equipo en las últimas semanas. {}/{}
+6842|¡Diamond activado! Todo es tuyo.

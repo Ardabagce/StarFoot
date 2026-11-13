@@ -1512,3 +1512,4 @@
 8355|Du übernimmst das Spiel {}.
 8368|{} Aufgaben frei
 8336|Übernimm ein Spiel ab einer bestimmten Minute oder rette das Team in den letzten Wochen. {}/{}
+6842|Diamond ist aktiv! Alles gehört dir.
