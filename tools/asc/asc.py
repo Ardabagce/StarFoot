@@ -1023,7 +1023,7 @@ def main():
     if a.remove_locales:
         return remove_locales(asc, app['id'], [x.strip() for x in a.remove_locales.split(',') if x.strip()])
 
-    if a.release and not a.prepare_only:
+    if a.release:  # yeni derleme bağlanabilsin diye eski başvuru hazırla modunda da geri çekilir (gönderilmez)
         cancel_pending(asc, app['id'], a.version, a.release)
     ver = pick_version(asc, app['id'], a.version)
     info = pick_appinfo(asc, app['id'])
