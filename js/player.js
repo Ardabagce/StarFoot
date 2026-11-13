@@ -177,16 +177,25 @@ const Player = {
   train(p, statKey, intensity, facility) {
     const val = p.stats[statKey];
     const moraleF = 0.75 + 0.5 * (p.morale / 100);
-    const gain = Player.TRAIN_K * intensity * Player.ageMult(p.age) * Player.growthFactor(p, val) * moraleF * facility * Player.trainMult(p) * U.rand(0.7, 1.3);
+    const gain = Player.TRAIN_K * intensity * Player.ageMult(p.age) * Player.growthFactor(p, val) * moraleF * facility * Player.trainMult(p) * Player.fastK(p) * U.rand(0.7, 1.3);
     p.stats[statKey] = U.clamp(val + gain, 1, 99);
     return gain;
   },
 
+  // Hızlı altyapı: daha az hafta oynanır; haftalık gelişim, toplam gelişim ~%90 olacak şekilde artırılır
+  fastK(p) {
+    try {
+      if (typeof Game === 'undefined' || !Game.state || !Game.state.fastYouth || p !== Game.state.player || !Game.isYouth() || Game.inStreet()) return 1;
+      return Player.FAST_YOUTH_K;
+    } catch (e) { return 1; }
+  },
+  FAST_YOUTH_K: 2.2,
   // Maçta kullanılan statlara küçük deneyim
   matchXp(p, keys) {
+    const fk = Player.fastK(p);
     for (const k of keys) {
       const val = p.stats[k];
-      p.stats[k] = U.clamp(val + 0.065 * Player.ageMult(p.age) * Player.growthFactor(p, val), 1, 99);
+      p.stats[k] = U.clamp(val + 0.065 * fk * Player.ageMult(p.age) * Player.growthFactor(p, val), 1, 99);
     }
   },
 

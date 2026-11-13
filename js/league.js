@@ -278,9 +278,20 @@ const World = {
 
 // Altyapı ligi: oyuncunun kulübünün ligindeki takımların yaş grubu takımları
 const Youth = {
+  // Hızlı altyapı (kariyer oluştururken seçilir): 8 takımlı lig, sezon 14 maç
+  FAST_TEAMS: 8,
+  fastOn() { return typeof Game !== 'undefined' && !!(Game.state && Game.state.fastYouth); },
   create(world, clubId, age) {
     const leagueId = world.clubs[clubId].league;
-    const ids = Object.values(world.clubs).filter((c) => c.league === leagueId).map((c) => c.id);
+    let ids = Object.values(world.clubs).filter((c) => c.league === leagueId).map((c) => c.id);
+    if (Youth.fastOn() && ids.length > Youth.FAST_TEAMS) {
+      // kendi kulübün + güç sırasına yayılmış 7 rakip (ligin dengesi korunur)
+      const others = ids.filter((id) => id !== clubId).sort((a, b) => world.clubs[b].rating - world.clubs[a].rating);
+      const n = Youth.FAST_TEAMS - 1, pick = [];
+      for (let i = 0; i < n; i++) pick.push(others[Math.min(others.length - 1, Math.floor((i + U.rand(0, 0.99)) * others.length / n))]);
+      ids = [clubId].concat([...new Set(pick)]);
+      for (const id of others) { if (ids.length >= Youth.FAST_TEAMS) break; if (!ids.includes(id)) ids.push(id); }
+    }
     const exp = expectedAtAge(age);
     const strength = {};
     const rosters = {};

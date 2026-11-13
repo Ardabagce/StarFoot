@@ -1513,3 +1513,6 @@
 8368|{} défis débloqués
 8336|Reprends un match à une minute donnée ou sauve l’équipe en fin de saison. {}/{}
 6842|Diamond activé ! Tout est à toi.
+8370|⚡ Formation rapide
+8371|Formation rapide
+8372|Les saisons de formation durent 14 matchs (38 normalement) : l’enfance passe plus vite. Ta progression est un peu plus lente (90 %).

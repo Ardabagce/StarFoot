@@ -1513,3 +1513,6 @@
 8368|{} sfide sbloccate
 8336|Prendi una partita da un certo minuto o salva la squadra nelle ultime settimane. {}/{}
 6842|Diamond attivo! Tutto è tuo.
+8370|⚡ Giovanili rapide
+8371|Giovanili rapide
+8372|Le stagioni giovanili durano 14 partite (di solito 38): l’infanzia passa più in fretta. La tua crescita è un po’ più lenta (90%).

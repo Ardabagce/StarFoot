@@ -1513,3 +1513,6 @@
 8368|{} Aufgaben frei
 8336|Übernimm ein Spiel ab einer bestimmten Minute oder rette das Team in den letzten Wochen. {}/{}
 6842|Diamond ist aktiv! Alles gehört dir.
+8370|⚡ Schnelle Jugend
+8371|Schnelle Jugend
+8372|Jugendsaisons dauern 14 Spiele (sonst 38), deine Kindheit vergeht schneller. Deine Entwicklung ist etwas langsamer (90 %).

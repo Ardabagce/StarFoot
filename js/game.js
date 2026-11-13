@@ -284,6 +284,7 @@ const Game = {
       street: { done: false, trials },
       startYear: year,
       difficulty: opts.difficulty || 'normal',
+      fastYouth: !!opts.fastYouth,
       ap: 3,
       week: { coachTalk: false },
       trainFocus: POSITIONS[opts.position] ? Object.keys(POSITIONS[opts.position].w)[0] : 'shooting',
@@ -539,7 +540,7 @@ const Game = {
   estGain(intensity) {
     const p = Game.p;
     const val = p.stats[Game.state.trainFocus];
-    return Player.TRAIN_K * intensity * Player.ageMult(p.age) * Player.growthFactor(p, val) * (0.75 + 0.5 * (p.morale / 100)) * Game.facility() * Player.trainMult(p);
+    return Player.TRAIN_K * intensity * Player.ageMult(p.age) * Player.growthFactor(p, val) * (0.75 + 0.5 * (p.morale / 100)) * Game.facility() * Player.trainMult(p) * Player.fastK(p);
   },
 
   coachCost() { return Game.isYouth() ? 300 + (Game.p.age - 8) * 50 : Math.max(2000, Math.round(Game.weeklyIncome() * 0.25)); },
@@ -2694,6 +2695,7 @@ const Create = {
                 <label class="cr-f"><span>Başlangıç yaşı</span><select id="cr-age">${Array.from({ length: 11 }, (_, i) => 8 + i).map((a) => `<option value="${a}">${a} yaş</option>`).join('')}</select></label>
               </div>
               <p class="cr-note" id="cr-age-note"></p>
+              <label class="cr-fast" id="cr-fast-w"><input type="checkbox" id="cr-fast"><span><b>⚡ Hızlı altyapı</b><small>Altyapı sezonları 14 maç sürer (normalde 38): çocukluk yılları daha hızlı geçer. Gelişimin biraz daha yavaş olur (%90).</small></span></label>
               <div class="cr-f"><span>Kullandığın ayak</span>
                 <div class="cr-toggle" id="cr-foot">${[['L', 'Sol'], ['R', 'Sağ']].map(([k, l]) => `<button type="button" data-foot="${k}" class="${k === Create.foot ? 'on' : ''}">${l}</button>`).join('')}</div>
               </div>
@@ -2742,6 +2744,7 @@ const Create = {
     const updAge = () => {
       const a = +ageSel.value;
       document.getElementById('cr-age-note').textContent = a <= 12 ? 'İlk maçın bir mahalle maçı; scout seni izleyecek' : `Altyapı seçmelerine katılırsın (${ageGroupName(a)}); kulübünü scoutlar belirler`;
+      const fw = document.getElementById('cr-fast-w'); if (fw) fw.classList.toggle('hidden', a > 15);
       Create.drawStats();
     };
     const updYear = () => {
@@ -2770,6 +2773,7 @@ const Create = {
         name, surname, nation: document.getElementById('cr-nat').value, mother: document.getElementById('cr-mom').value, foot: Create.foot,
         position: Create.pos, alloc: Create.alloc, difficulty: Create.diff,
         year: +yearSel.value, age: +ageSel.value, heir: Create.heir || null,
+        fastYouth: +ageSel.value <= 15 && !!(document.getElementById('cr-fast') || {}).checked,
       });
       if (typeof Pers !== 'undefined' && C2.feat() && Game.state) { Pers.init(Create.pers || 'pro'); Game.save(); }
       Create.heir = null;

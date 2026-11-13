@@ -3667,5 +3667,8 @@
 "{} kırmızı kart gördü. 10 kişisin.": "{} is sent off. You’re down to 10.",
 "Maçı {} devraldın.": "You took over the match {}.",
 "{} görev açık": "{} challenges unlocked",
-"Maçı belli bir dakikadan devral ya da sezonun son haftalarında takımı kurtar. {}/{}": "Take over a match at a set minute or save the team in the final weeks of the season. {}/{}"
+"Maçı belli bir dakikadan devral ya da sezonun son haftalarında takımı kurtar. {}/{}": "Take over a match at a set minute or save the team in the final weeks of the season. {}/{}",
+"⚡ Hızlı altyapı": "⚡ Fast academy",
+"Hızlı altyapı": "Fast academy",
+"Altyapı sezonları 14 maç sürer (normalde 38): çocukluk yılları daha hızlı geçer. Gelişimin biraz daha yavaş olur (%90).": "Academy seasons last 14 matches (normally 38), so your childhood years pass faster. Your development is a little slower (90%)."
 }

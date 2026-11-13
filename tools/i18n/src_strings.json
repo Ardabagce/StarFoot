@@ -31549,6 +31549,9 @@
 "Harika": [
 "diamond.js"
 ],
+".dia-price, .dia-price2": [
+"diamond.js"
+],
 "Yükselt": [
 "diamond.js",
 "lang-ar.js",
@@ -31574,7 +31577,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Premium+ sahibisin: Diamond\\'a indirimli yükselt.": [
+"Sahip olduğun paketler fiyattan düşüldü: Diamond’a indirimli yükselt.": [
 "diamond.js"
 ],
 "Tek seferlik satın alma, her şey sonsuza kadar senin.": [
@@ -46470,6 +46473,12 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
+],
+"⚡ Hızlı altyapı": [
+"game.js"
+],
+"Altyapı sezonları 14 maç sürer (normalde 38): çocukluk yılları daha hızlı geçer. Gelişimin biraz daha yavaş olur (%90).": [
+"game.js"
 ],
 "Kullandığın ayak": [
 "game.js",
@@ -77366,16 +77375,8 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Diamond is active! Everything is yours.": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
+"تم تفعيل Diamond! كل شيء لك.": [
+"lang-ar.js"
 ],
 "💎 Diamond aktif!": [
 "lang-ar.js",
@@ -124826,16 +124827,8 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"DIAMOND IS ACTIVE! EVERYTHING IS YOURS.": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
+"تم تفعيل DIAMOND! كل شيء لك.": [
+"lang-ar.js"
 ],
 "💎 DİAMOND AKTİF!": [
 "lang-ar.js",
@@ -162464,17 +162457,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Take over a match at a set minute or save the team in the final weeks of the season. {}/{}": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "Coşku zirvede! {} meydanlarına dev ekranlar kuruldu, sokaklar bayraklarla doldu.": [
 "lang-ar.js",
 "lang-de.js",
@@ -168540,17 +168522,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"{} is sent off. You’re down to 10.": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "Berabere ({}). Bahsin iade edildi.": [
 "lang-ar.js",
 "lang-de.js",
@@ -173292,17 +173263,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"You took over the match {}.": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "{} Kariyer posteri": [
 "lang-ar.js",
 "lang-de.js",
@@ -174783,17 +174743,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Challenges · {}/{}": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "Battın ({}). -{}": [
 "lang-ar.js",
 "lang-de.js",
@@ -175075,17 +175024,6 @@
 "lang-pt.js"
 ],
 "{} görev açık": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"{} challenges unlocked": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -183573,6 +183511,9 @@
 "lang-de.js"
 ],
 "💎 Diamond ist aktiv! Alles gehört dir.": [
+"lang-de.js"
+],
+"Diamond ist aktiv! Alles gehört dir.": [
 "lang-de.js"
 ],
 "Alles inklusive": [
@@ -195725,6 +195666,9 @@
 "💎 DIAMOND IST AKTIV! ALLES GEHÖRT DIR.": [
 "lang-de.js"
 ],
+"DIAMOND IST AKTIV! ALLES GEHÖRT DIR.": [
+"lang-de.js"
+],
 "ALLES INKLUSIVE": [
 "lang-de.js"
 ],
@@ -201551,6 +201495,9 @@
 "{} hat mit {} seine Karriere beendet. Sein Abschiedspost bekam schnell Millionen Likes.": [
 "lang-de.js"
 ],
+"Übernimm ein Spiel ab einer bestimmten Minute oder rette das Team in den letzten Wochen. {}/{}": [
+"lang-de.js"
+],
 "Sowohl die Heimat deines Vaters, {}, als auch die Heimat deiner Mutter, {}, haben dich in ihre Nationalmannschaft berufen.": [
 "lang-de.js"
 ],
@@ -203027,6 +202974,9 @@
 "🔄 {} wechselt doppelt.": [
 "lang-de.js"
 ],
+"{} sieht Rot. Du bist zu zehnt.": [
+"lang-de.js"
+],
 "Unentschieden ({}). Dein Einsatz wurde zurückerstattet.": [
 "lang-de.js"
 ],
@@ -204175,6 +204125,9 @@
 "{} Gründungsunterstützer": [
 "lang-de.js"
 ],
+"Du übernimmst das Spiel {}.": [
+"lang-de.js"
+],
 "{} Karriereposter{}": [
 "lang-de.js"
 ],
@@ -204624,6 +204577,9 @@
 "📅 Letzte {} Wochen": [
 "lang-de.js"
 ],
+"Aufgaben · {}/{}": [
+"lang-de.js"
+],
 "Überkauft ({}). -{}": [
 "lang-de.js"
 ],
@@ -204712,6 +204668,9 @@
 "lang-de.js"
 ],
 "Ab Minute {}": [
+"lang-de.js"
+],
+"{} Aufgaben frei": [
 "lang-de.js"
 ],
 "{} hat getroffen.": [
@@ -211820,6 +211779,9 @@
 "lang-en.js"
 ],
 "💎 Diamond is active! Everything is yours.": [
+"lang-en.js"
+],
+"Diamond is active! Everything is yours.": [
 "lang-en.js"
 ],
 "All included": [
@@ -223342,6 +223304,9 @@
 "💎 DIAMOND IS ACTIVE! EVERYTHING IS YOURS.": [
 "lang-en.js"
 ],
+"DIAMOND IS ACTIVE! EVERYTHING IS YOURS.": [
+"lang-en.js"
+],
 "ALL INCLUDED": [
 "lang-en.js"
 ],
@@ -228903,6 +228868,9 @@
 "{} retired from football at {}. His farewell post quickly got millions of likes.": [
 "lang-en.js"
 ],
+"Take over a match at a set minute or save the team in the final weeks of the season. {}/{}": [
+"lang-en.js"
+],
 "Both your father's homeland {} and your mother's homeland {} called you up to their national teams.": [
 "lang-en.js"
 ],
@@ -230379,6 +230347,9 @@
 "🔄 {} made a double substitution.": [
 "lang-en.js"
 ],
+"{} is sent off. You’re down to 10.": [
+"lang-en.js"
+],
 "Push ({}). Your stake was returned.": [
 "lang-en.js"
 ],
@@ -231534,6 +231505,9 @@
 "{} Founding Supporter": [
 "lang-en.js"
 ],
+"You took over the match {}.": [
+"lang-en.js"
+],
 "{} Career poster{}": [
 "lang-en.js"
 ],
@@ -231990,6 +231964,9 @@
 "📅 Last {} weeks": [
 "lang-en.js"
 ],
+"Challenges · {}/{}": [
+"lang-en.js"
+],
 "Bust ({}). -{}": [
 "lang-en.js"
 ],
@@ -232084,6 +232061,9 @@
 "lang-en.js"
 ],
 "From minute {}": [
+"lang-en.js"
+],
+"{} challenges unlocked": [
 "lang-en.js"
 ],
 "{} scored.": [
@@ -239229,6 +239209,9 @@
 "lang-es.js"
 ],
 "💎 ¡Diamond activado! Todo es tuyo.": [
+"lang-es.js"
+],
+"¡Diamond activado! Todo es tuyo.": [
 "lang-es.js"
 ],
 "Todo incluido": [
@@ -250798,6 +250781,9 @@
 "💎 ¡DIAMOND ACTIVADO! TODO ES TUYO.": [
 "lang-es.js"
 ],
+"¡DIAMOND ACTIVADO! TODO ES TUYO.": [
+"lang-es.js"
+],
 "TODO INCLUIDO": [
 "lang-es.js"
 ],
@@ -256414,6 +256400,9 @@
 "{} se retiró del fútbol a los {}. Su publicación de despedida recibió millones de \\\"me gusta\\\" en poco tiempo.": [
 "lang-es.js"
 ],
+"Toma un partido en un minuto dado o salva al equipo en las últimas semanas. {}/{}": [
+"lang-es.js"
+],
 "Tanto la tierra natal de tu padre, {}, como la de tu madre, {}, te convocaron con sus selecciones.": [
 "lang-es.js"
 ],
@@ -257890,6 +257879,9 @@
 "🔄 {} hizo un doble cambio.": [
 "lang-es.js"
 ],
+"{} ve la roja. Juegas con 10.": [
+"lang-es.js"
+],
 "Empate ({}). Te devolvieron la apuesta.": [
 "lang-es.js"
 ],
@@ -259051,6 +259043,9 @@
 "{} Socio fundador": [
 "lang-es.js"
 ],
+"Tomaste el partido {}.": [
+"lang-es.js"
+],
 "{} Póster de carrera{}": [
 "lang-es.js"
 ],
@@ -259515,6 +259510,9 @@
 "lang-es.js",
 "lang-pt.js"
 ],
+"Desafíos · {}/{}": [
+"lang-es.js"
+],
 "Te pasaste ({}). -{}": [
 "lang-es.js"
 ],
@@ -259607,6 +259605,9 @@
 "lang-es.js"
 ],
 "Desde el minuto {}": [
+"lang-es.js"
+],
+"{} desafíos abiertos": [
 "lang-es.js"
 ],
 "{} marcó.": [
@@ -266591,6 +266592,9 @@
 "lang-fr.js"
 ],
 "💎 Diamond activé ! Tout est à toi.": [
+"lang-fr.js"
+],
+"Diamond activé ! Tout est à toi.": [
 "lang-fr.js"
 ],
 "Tout inclus": [
@@ -277815,6 +277819,9 @@
 "💎 DIAMOND ACTIVÉ ! TOUT EST À TOI.": [
 "lang-fr.js"
 ],
+"DIAMOND ACTIVÉ ! TOUT EST À TOI.": [
+"lang-fr.js"
+],
 "TOUT INCLUS": [
 "lang-fr.js"
 ],
@@ -283213,6 +283220,9 @@
 "{} a pris sa retraite à {}. Son message d'adieu a vite récolté des millions de likes.": [
 "lang-fr.js"
 ],
+"Reprends un match à une minute donnée ou sauve l’équipe en fin de saison. {}/{}": [
+"lang-fr.js"
+],
 "Le pays natal de ton père, {}, et celui de ta mère, {}, t'ont tous deux convoqué en équipe nationale.": [
 "lang-fr.js"
 ],
@@ -284689,6 +284699,9 @@
 "🔄 {} effectue un double changement.": [
 "lang-fr.js"
 ],
+"{} est exclu. Tu es à 10.": [
+"lang-fr.js"
+],
 "Égalité ({}). Ta mise t'a été rendue.": [
 "lang-fr.js"
 ],
@@ -285832,6 +285845,9 @@
 "{} Soutien fondateur": [
 "lang-fr.js"
 ],
+"Tu reprends le match {}.": [
+"lang-fr.js"
+],
 "{} Affiche de carrière{}": [
 "lang-fr.js"
 ],
@@ -286273,6 +286289,9 @@
 "📅 {} dernières semaines": [
 "lang-fr.js"
 ],
+"Défis · {}/{}": [
+"lang-fr.js"
+],
 "Dépassé ({}). -{}": [
 "lang-fr.js"
 ],
@@ -286361,6 +286380,9 @@
 "lang-fr.js"
 ],
 "Dès la {}e minute": [
+"lang-fr.js"
+],
+"{} défis débloqués": [
 "lang-fr.js"
 ],
 "{} a marqué.": [
@@ -293143,6 +293165,9 @@
 "lang-id.js"
 ],
 "💎 Diamond aktif! Semuanya milikmu.": [
+"lang-id.js"
+],
+"Diamond aktif! Semuanya milikmu.": [
 "lang-id.js"
 ],
 "Semua termasuk": [
@@ -304150,6 +304175,9 @@
 "💎 DIAMOND AKTIF! SEMUANYA MILIKMU.": [
 "lang-id.js"
 ],
+"DIAMOND AKTIF! SEMUANYA MILIKMU.": [
+"lang-id.js"
+],
 "SEMUA TERMASUK": [
 "lang-id.js"
 ],
@@ -309472,6 +309500,9 @@
 "{} pensiun dari sepak bola di usia {}. Unggahan perpisahannya cepat mendapat jutaan suka.": [
 "lang-id.js"
 ],
+"Ambil alih laga dari menit tertentu atau selamatkan tim di pekan-pekan terakhir. {}/{}": [
+"lang-id.js"
+],
 "Tanah air ayahmu {} dan tanah air ibumu {} sama-sama memanggilmu ke timnas mereka.": [
 "lang-id.js"
 ],
@@ -310948,6 +310979,9 @@
 "🔄 {} melakukan pergantian ganda.": [
 "lang-id.js"
 ],
+"{} dikartu merah. Kamu tinggal 10 orang.": [
+"lang-id.js"
+],
 "Seri ({}). Taruhanmu dikembalikan.": [
 "lang-id.js"
 ],
@@ -312085,6 +312119,9 @@
 "{} Pendukung Pendiri": [
 "lang-id.js"
 ],
+"Kamu mengambil alih laga {}.": [
+"lang-id.js"
+],
 "{} Poster karier{}": [
 "lang-id.js"
 ],
@@ -312534,6 +312571,9 @@
 "📅 {} pekan terakhir": [
 "lang-id.js"
 ],
+"Tantangan · {}/{}": [
+"lang-id.js"
+],
 "Lewat ({}). -{}": [
 "lang-id.js"
 ],
@@ -312620,6 +312660,9 @@
 "lang-id.js"
 ],
 "Dari menit {}": [
+"lang-id.js"
+],
+"{} tantangan terbuka": [
 "lang-id.js"
 ],
 "{} mencetak gol.": [
@@ -319417,6 +319460,9 @@
 "lang-it.js"
 ],
 "💎 Diamond attivo! Tutto è tuo.": [
+"lang-it.js"
+],
+"Diamond attivo! Tutto è tuo.": [
 "lang-it.js"
 ],
 "Tutto incluso": [
@@ -330424,6 +330470,9 @@
 "💎 DIAMOND ATTIVO! TUTTO È TUO.": [
 "lang-it.js"
 ],
+"DIAMOND ATTIVO! TUTTO È TUO.": [
+"lang-it.js"
+],
 "TUTTO INCLUSO": [
 "lang-it.js"
 ],
@@ -335737,6 +335786,9 @@
 "{} si è ritirato dal calcio a {}. Il suo post d'addio ha raccolto in fretta milioni di like.": [
 "lang-it.js"
 ],
+"Prendi una partita da un certo minuto o salva la squadra nelle ultime settimane. {}/{}": [
+"lang-it.js"
+],
 "Sia il paese di tuo padre, {}, sia quello di tua madre, {}, ti hanno convocato in nazionale.": [
 "lang-it.js"
 ],
@@ -337213,6 +337265,9 @@
 "🔄 {} fa un doppio cambio.": [
 "lang-it.js"
 ],
+"{} espulso. Sei in 10.": [
+"lang-it.js"
+],
 "Pareggio ({}). La tua puntata è stata restituita.": [
 "lang-it.js"
 ],
@@ -338353,6 +338408,9 @@
 "{} Sostenitore fondatore": [
 "lang-it.js"
 ],
+"Hai preso la partita {}.": [
+"lang-it.js"
+],
 "{} Poster della carriera{}": [
 "lang-it.js"
 ],
@@ -338798,6 +338856,9 @@
 "📅 Ultime {} settimane": [
 "lang-it.js"
 ],
+"Sfide · {}/{}": [
+"lang-it.js"
+],
 "Sballato ({}). -{}": [
 "lang-it.js"
 ],
@@ -338880,6 +338941,9 @@
 "lang-it.js"
 ],
 "Dal {}° minuto": [
+"lang-it.js"
+],
+"{} sfide sbloccate": [
 "lang-it.js"
 ],
 "{} ha segnato.": [
@@ -339850,6 +339914,9 @@
 "💎 Diamondが有効！すべて君のもの。": [
 "lang-ja.js"
 ],
+"Diamondが有効！すべて君のもの。": [
+"lang-ja.js"
+],
 "PremiumとPremium+のすべて：広告なし、10枠、やり直し、早送り、GKキャリア": [
 "lang-ja.js"
 ],
@@ -340181,6 +340248,9 @@
 "lang-ja.js"
 ],
 "💎 DIAMONDが有効！すべて君のもの。": [
+"lang-ja.js"
+],
+"DIAMONDが有効！すべて君のもの。": [
 "lang-ja.js"
 ],
 "DIAMOND所持！すべて解放済み。": [
@@ -346446,6 +346516,9 @@
 "lang-pt.js"
 ],
 "💎 Diamond ativado! Tudo é seu.": [
+"lang-pt.js"
+],
+"Diamond ativado! Tudo é seu.": [
 "lang-pt.js"
 ],
 "Tudo incluído": [
@@ -357227,6 +357300,9 @@
 "💎 DIAMOND ATIVADO! TUDO É SEU.": [
 "lang-pt.js"
 ],
+"DIAMOND ATIVADO! TUDO É SEU.": [
+"lang-pt.js"
+],
 "TUDO INCLUÍDO": [
 "lang-pt.js"
 ],
@@ -362447,6 +362523,9 @@
 "{} se aposentou do futebol aos {}. A postagem de despedida recebeu milhões de curtidas em pouco tempo.": [
 "lang-pt.js"
 ],
+"Assuma um jogo num minuto definido ou salve o time nas últimas semanas. {}/{}": [
+"lang-pt.js"
+],
 "Tanto a terra natal do seu pai, {}, quanto a da sua mãe, {}, te convocaram para suas seleções.": [
 "lang-pt.js"
 ],
@@ -363923,6 +364002,9 @@
 "🔄 {} fez substituição dupla.": [
 "lang-pt.js"
 ],
+"{} foi expulso. Você está com 10.": [
+"lang-pt.js"
+],
 "Empate ({}). Sua aposta foi devolvida.": [
 "lang-pt.js"
 ],
@@ -365039,6 +365121,9 @@
 "{} Apoiador fundador": [
 "lang-pt.js"
 ],
+"Você assumiu o jogo {}.": [
+"lang-pt.js"
+],
 "{} Pôster da carreira{}": [
 "lang-pt.js"
 ],
@@ -365444,6 +365529,9 @@
 "Pedir aumento do {}": [
 "lang-pt.js"
 ],
+"Desafios · {}/{}": [
+"lang-pt.js"
+],
 "Estourou ({}). -{}": [
 "lang-pt.js"
 ],
@@ -365520,6 +365608,9 @@
 "lang-pt.js"
 ],
 "A partir dos {} minutos": [
+"lang-pt.js"
+],
+"{} desafios liberados": [
 "lang-pt.js"
 ],
 "{} marcou.": [

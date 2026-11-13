@@ -133,7 +133,21 @@ const Sprites = {
   },
 
   // İnsan figürü. (sx, sy) ayakların ekran noktası, h ekrandaki boy (px)
+  // Çocukluk dönemi (U14 ve altı): sahadaki herkes çocuk görünür (kısa boy, iri baş, sakal yok)
+  kidNow() {
+    try {
+      const s = typeof Game !== 'undefined' && Game.state;
+      return !!(s && s.contract && s.contract.type === 'youth' && s.player && s.player.age <= 14 && s.mode !== 'wc');
+    } catch (e) { return false; }
+  },
+  kidLook(L) {
+    const l = Object.assign({}, L || { skin: SKINS[1], hair: HAIRS[0] });
+    l.beard = 0; l.mustache = 0;
+    if (l.bald || l.style === 'bald') { l.bald = false; l.style = 'buzz'; }
+    return l;
+  },
   figure(ctx, sx, sy, h, o) {
+    if (!o.noKid && Sprites.kidNow()) { h *= 0.86; o = Object.assign({}, o, { look: Sprites.kidLook(o.look), _kid: 1, noKid: 1 }); }
     // Mahalle maçı: herkes farklı kıyafette (kit.variants), forma numarası yok
     let kit = o.kit;
     if (kit && kit.variants) {
@@ -341,7 +355,7 @@ const Sprites = {
     }
 
     // boyun ve kafa
-    const hr = h * 0.115; // biraz büyük kafa: daha sevimli ve tanınır
+    const hr = h * (o._kid ? 0.142 : 0.115); // biraz büyük kafa: daha sevimli ve tanınır (çocuklarda daha da iri)
     const hy = top - hr * 0.95;
     ctx.fillStyle = Sprites.shade(look.skin, -0.12); ctx.fillRect(sx - hr * 0.35, top - hr * 0.4, hr * 0.7, hr * 0.5);
     ctx.fillStyle = look.skin;

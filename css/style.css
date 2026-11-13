@@ -3280,3 +3280,11 @@ div.doc { position: fixed; inset: 0; z-index: 49; background: #000; display: fle
 .ac-row, .plan .ac-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
 .ac-tile { min-width: 0; }
 .ac-t b { overflow-wrap: anywhere; }
+
+/* hızlı altyapı seçeneği */
+.cr-fast { display: flex; align-items: flex-start; gap: 10px; margin: 2px 0 10px; padding: 10px 12px; border-radius: 12px; border: 1px solid rgba(255,207,63,.35); background: rgba(255,207,63,.07); cursor: pointer; }
+.cr-fast input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--flood); flex: none; }
+.cr-fast span { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.cr-fast b { font-size: 14px; }
+.cr-fast small { color: var(--muted); font-size: 12px; line-height: 1.35; }
+.cr-fast.hidden { display: none; }

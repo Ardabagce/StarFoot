@@ -1513,3 +1513,6 @@
 8368|{} desafios liberados
 8336|Assuma um jogo num minuto definido ou salve o time nas últimas semanas. {}/{}
 6842|Diamond ativado! Tudo é seu.
+8370|⚡ Base rápida
+8371|Base rápida
+8372|As temporadas da base duram 14 jogos (normalmente 38): a infância passa mais rápido. Sua evolução fica um pouco mais lenta (90%).

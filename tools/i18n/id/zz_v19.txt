@@ -1513,3 +1513,6 @@
 8368|{} tantangan terbuka
 8336|Ambil alih laga dari menit tertentu atau selamatkan tim di pekan-pekan terakhir. {}/{}
 6842|Diamond aktif! Semuanya milikmu.
+8370|⚡ Akademi cepat
+8371|Akademi cepat
+8372|Musim akademi berlangsung 14 laga (biasanya 38): masa kecil berlalu lebih cepat. Perkembanganmu sedikit lebih lambat (90%).
