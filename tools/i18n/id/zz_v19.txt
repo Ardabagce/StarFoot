@@ -1525,3 +1525,14 @@
 8382|KETUK TARGET DI GAWANG
 8381|KETUK TARGET DI GAWANG · KETUK REKAN: OPER
 8383|TENAGA {} · HENTIKAN DI HIJAU · {}
+8384|Sentuh
+8385|Gaya tendangan: Sentuh
+8386|Sentuh: tarik ke belakang untuk membidik, lalu ketuk satu titik di bola. Sisi memberi efek, bagian bawah mengangkat bola.
+8389|KETUK SATU TITIK DI BOLA
+8390|KETUK DI LUAR: BIDIK ULANG
+8391|KERAS
+8392|CUNGKIL
+8393|EFEK →
+8394|← EFEK
+
+8395|SISI: EFEK  ·  BAWAH: CUNGKIL

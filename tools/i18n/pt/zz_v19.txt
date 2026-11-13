@@ -1525,3 +1525,14 @@
 8382|TOQUE UM ALVO NO GOL
 8381|TOQUE UM ALVO NO GOL · TOQUE NUM COLEGA: PASSE
 8383|FORÇA {} · PARE NO VERDE · {}
+8384|Toque
+8385|Estilo de chute: Toque
+8386|Toque: puxe para trás para mirar e depois toque num ponto da bola. Os lados dão efeito, a parte de baixo levanta.
+8389|TOQUE NUM PONTO DA BOLA
+8390|TOQUE FORA: MIRAR DE NOVO
+8391|FORTE
+8392|CAVADINHA
+8393|EFEITO →
+8394|← EFEITO
+
+8395|LADOS: EFEITO  ·  BAIXO: CAVADINHA

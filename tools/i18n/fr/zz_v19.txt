@@ -1525,3 +1525,14 @@
 8382|TOUCHE UNE CIBLE DANS LE BUT
 8381|TOUCHE UNE CIBLE DANS LE BUT · TOUCHE UN COÉQUIPIER : PASSE
 8383|PUISSANCE {} · ARRÊTE DANS LE VERT · {}
+8384|Touche
+8385|Style de tir : Touche
+8386|Touche : tire vers l’arrière pour viser, puis touche un point du ballon. Les côtés donnent de l’effet, le bas le soulève.
+8389|TOUCHE UN POINT DU BALLON
+8390|TOUCHE À CÔTÉ : VISER À NOUVEAU
+8391|PUISSANT
+8392|LOB
+8393|EFFET →
+8394|← EFFET
+
+8395|CÔTÉS : EFFET  ·  BAS : LOB

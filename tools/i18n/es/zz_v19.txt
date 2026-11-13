@@ -1525,3 +1525,14 @@
 8382|TOCA UN OBJETIVO EN LA PORTERÍA
 8381|TOCA UN OBJETIVO EN LA PORTERÍA · TOCA A UN COMPAÑERO: PASE
 8383|POTENCIA {} · DETÉN EN VERDE · {}
+8384|Toque
+8385|Estilo de tiro: Toque
+8386|Toque: tira hacia atrás para apuntar y luego toca un punto del balón. Los lados dan efecto, la parte baja lo eleva.
+8389|TOCA UN PUNTO DEL BALÓN
+8390|TOCA FUERA: APUNTAR DE NUEVO
+8391|FUERTE
+8392|VASELINA
+8393|EFECTO →
+8394|← EFECTO
+
+8395|LADOS: EFECTO  ·  ABAJO: VASELINA

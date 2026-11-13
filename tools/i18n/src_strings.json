@@ -44729,13 +44729,40 @@
 "lang-pt.js"
 ],
 "Vuruş tarzı": [
-"game.js"
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
-"Hedef: kalede bir noktaya dokun, güç çubuğunu yeşilde durdur.": [
-"game.js"
+"Dokunuş: geri çekip nişan al, sonra topun bir noktasına dokun. Yanlar falso, alt kısım aşırtma verir.": [
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "StarFoot: geri çek ve bırak; çizginin yönü falsoyu belirler.": [
-"game.js"
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "StarFoot": [
 "game.js",
@@ -44744,8 +44771,17 @@
 "meta.js",
 "oyna-r8k4tq.html"
 ],
-"Hedef": [
-"game.js"
+"Dokunuş": [
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Editör": [
 "game.js",
@@ -45295,11 +45331,29 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Vuruş tarzı: Hedef": [
-"game.js"
+"Vuruş tarzı: Dokunuş": [
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Vuruş tarzı: StarFoot": [
-"game.js"
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "💾 Kaydedildi": [
 "game.js",
@@ -86007,6 +86061,181 @@
 "lang-pt.js"
 ],
 "Your development is a little slower (90%).": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Hedef": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Hedef: kalede bir noktaya dokun, güç çubuğunu yeşilde durdur.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"StarFoot: اسحب للخلف ثم اترك؛ شكل السحب يحدد الالتفاف.": [
+"lang-ar.js"
+],
+"Vuruş tarzı: Hedef": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"أسلوب التسديد: StarFoot": [
+"lang-ar.js"
+],
+"KALEDE HEDEFE DOKUN · ARKADAŞINA DOKUN: PAS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KALEDE HEDEFE DOKUN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Dokunuş: geri çekip nişan al, sonra topun bir noktasına dokun.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Touch: pull back to aim, then tap a spot on the ball.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Yanlar falso, alt kısım aşırtma verir.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"The sides add curl, the bottom lifts it.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TOPUN BİR NOKTASINA DOKUN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"minigame.js"
+],
+"DIŞARI DOKUN: YENİDEN NİŞAN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"minigame.js"
+],
+"SERT": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"minigame.js"
+],
+"AŞIRTMA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"minigame.js"
+],
+"FALSO →": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"← FALSO": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -136315,6 +136544,97 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"VURUŞ TARZI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HEDEF": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"VURUŞ TARZI: HEDEF": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"VURUŞ TARZI: STARFOOT": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"أسلوب التسديد: STARFOOT": [
+"lang-ar.js"
+],
+"DOKUNUŞ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"VURUŞ TARZI: DOKUNUŞ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YANLAR FALSO, ALT KISIM AŞIRTMA VERİR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"THE SIDES ADD CURL, THE BOTTOM LIFTS IT.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -137704,17 +138024,6 @@
 "lang-pt.js"
 ],
 "AÇIKÇA KONUŞ": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"AŞIRTMA": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -170689,6 +170998,17 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"GÜÇ {} · YEŞİLDE DURDUR · {}": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "Annen çok duygulandı. ({})": [
 "lang-ar.js",
 "lang-de.js",
@@ -186069,6 +186389,60 @@
 "Jugendsaisons dauern 14 Spiele (sonst 38), deine Kindheit vergeht schneller. Deine Entwicklung ist etwas langsamer (90 %).": [
 "lang-de.js"
 ],
+"Schussstil": [
+"lang-de.js"
+],
+"Ziel": [
+"lang-de.js"
+],
+"Ziel: Tippe auf einen Punkt im Tor und stoppe die Kraftleiste im grünen Bereich.": [
+"lang-de.js"
+],
+"StarFoot: zurückziehen und loslassen; die Form der Wischbewegung bestimmt den Effet.": [
+"lang-de.js"
+],
+"Schussstil: Ziel": [
+"lang-de.js"
+],
+"Schussstil: StarFoot": [
+"lang-de.js"
+],
+"ZIEL IM TOR ANTIPPEN · MITSPIELER ANTIPPEN: PASS": [
+"lang-de.js"
+],
+"ZIEL IM TOR ANTIPPEN": [
+"lang-de.js"
+],
+"Touch": [
+"lang-de.js",
+"lang-en.js"
+],
+"Schussstil: Touch": [
+"lang-de.js"
+],
+"Touch: Zum Zielen zurückziehen, dann auf eine Stelle am Ball tippen. Seiten geben Effet, unten hebt ihn an.": [
+"lang-de.js"
+],
+"TIPPE AUF EINE STELLE AM BALL": [
+"lang-de.js"
+],
+"AUSSEN TIPPEN: NEU ZIELEN": [
+"lang-de.js"
+],
+"HART": [
+"lang-de.js"
+],
+"LUPFER": [
+"lang-de.js"
+],
+"EFFET →": [
+"lang-de.js",
+"lang-fr.js"
+],
+"← EFFET": [
+"lang-de.js",
+"lang-fr.js"
+],
 "– wir haben uns qualifiziert!": [
 "lang-de.js"
 ],
@@ -197611,6 +197985,25 @@
 "SCHNELLE JUGEND": [
 "lang-de.js"
 ],
+"SCHUSSSTIL": [
+"lang-de.js"
+],
+"ZIEL": [
+"lang-de.js"
+],
+"SCHUSSSTIL: ZIEL": [
+"lang-de.js"
+],
+"SCHUSSSTIL: STARFOOT": [
+"lang-de.js"
+],
+"TOUCH": [
+"lang-de.js",
+"lang-en.js"
+],
+"SCHUSSSTIL: TOUCH": [
+"lang-de.js"
+],
 "– WIR HABEN UNS QUALIFIZIERT!": [
 "lang-de.js"
 ],
@@ -198004,9 +198397,6 @@
 "lang-de.js"
 ],
 "OFFEN REDEN": [
-"lang-de.js"
-],
-"LUPFER": [
 "lang-de.js"
 ],
 "HEIMATLAND DES VATERS": [
@@ -203585,6 +203975,9 @@
 "lang-de.js"
 ],
 "· Beste Platzierung {} ({})": [
+"lang-de.js"
+],
+"KRAFT {} · IM GRÜNEN STOPPEN · {}": [
 "lang-de.js"
 ],
 "Deine Mutter war gerührt. ({})": [
@@ -214215,6 +214608,55 @@
 "lang-en.js"
 ],
 "Academy seasons last 14 matches (normally 38), so your childhood years pass faster. Your development is a little slower (90%).": [
+"lang-en.js"
+],
+"Shooting style": [
+"lang-en.js"
+],
+"Target": [
+"lang-en.js",
+"lang-id.js"
+],
+"Target: tap a spot in the goal, then stop the power bar in the green.": [
+"lang-en.js"
+],
+"StarFoot: pull back and release; the shape of your swipe sets the curl.": [
+"lang-en.js"
+],
+"Shooting style: Target": [
+"lang-en.js"
+],
+"Shooting style: StarFoot": [
+"lang-en.js"
+],
+"TAP A TARGET IN THE GOAL · TAP A TEAMMATE: PASS": [
+"lang-en.js"
+],
+"TAP A TARGET IN THE GOAL": [
+"lang-en.js"
+],
+"Shooting style: Touch": [
+"lang-en.js"
+],
+"Touch: pull back to aim, then tap a spot on the ball. The sides add curl, the bottom lifts it.": [
+"lang-en.js"
+],
+"TAP A SPOT ON THE BALL": [
+"lang-en.js"
+],
+"TAP OUTSIDE: AIM AGAIN": [
+"lang-en.js"
+],
+"POWER": [
+"lang-en.js"
+],
+"CHIP": [
+"lang-en.js"
+],
+"CURL →": [
+"lang-en.js"
+],
+"← CURL": [
 "lang-en.js"
 ],
 "— we qualified!": [
@@ -225058,6 +225500,22 @@
 "FAST ACADEMY": [
 "lang-en.js"
 ],
+"SHOOTING STYLE": [
+"lang-en.js"
+],
+"TARGET": [
+"lang-en.js",
+"lang-id.js"
+],
+"SHOOTING STYLE: TARGET": [
+"lang-en.js"
+],
+"SHOOTING STYLE: STARFOOT": [
+"lang-en.js"
+],
+"SHOOTING STYLE: TOUCH": [
+"lang-en.js"
+],
 "— WE QUALIFIED!": [
 "lang-en.js"
 ],
@@ -225438,10 +225896,6 @@
 ],
 "TALK OPENLY": [
 "lang-en.js"
-],
-"LOB": [
-"lang-en.js",
-"lang-fr.js"
 ],
 "FATHER'S HOMELAND": [
 "lang-en.js"
@@ -230973,6 +231427,9 @@
 "lang-en.js"
 ],
 "· Best league finish {} ({})": [
+"lang-en.js"
+],
+"POWER {} · STOP IN THE GREEN · {}": [
 "lang-en.js"
 ],
 "Your mum was moved. ({})": [
@@ -241679,6 +242136,58 @@
 "lang-es.js"
 ],
 "Las temporadas de cantera duran 14 partidos (normalmente 38): la infancia pasa más rápido. Tu progresión es algo más lenta (90 %).": [
+"lang-es.js"
+],
+"Estilo de tiro": [
+"lang-es.js"
+],
+"Objetivo": [
+"lang-es.js"
+],
+"Objetivo: toca un punto de la portería y detén la barra de potencia en verde.": [
+"lang-es.js"
+],
+"StarFoot: tira hacia atrás y suelta; la forma del gesto define el efecto.": [
+"lang-es.js"
+],
+"Estilo de tiro: Objetivo": [
+"lang-es.js"
+],
+"Estilo de tiro: StarFoot": [
+"lang-es.js"
+],
+"TOCA UN OBJETIVO EN LA PORTERÍA · TOCA A UN COMPAÑERO: PASE": [
+"lang-es.js"
+],
+"TOCA UN OBJETIVO EN LA PORTERÍA": [
+"lang-es.js"
+],
+"Toque": [
+"lang-es.js",
+"lang-pt.js"
+],
+"Estilo de tiro: Toque": [
+"lang-es.js"
+],
+"Toque: tira hacia atrás para apuntar y luego toca un punto del balón. Los lados dan efecto, la parte baja lo eleva.": [
+"lang-es.js"
+],
+"TOCA UN PUNTO DEL BALÓN": [
+"lang-es.js"
+],
+"TOCA FUERA: APUNTAR DE NUEVO": [
+"lang-es.js"
+],
+"FUERTE": [
+"lang-es.js"
+],
+"VASELINA": [
+"lang-es.js"
+],
+"EFECTO →": [
+"lang-es.js"
+],
+"← EFECTO": [
 "lang-es.js"
 ],
 "— ¡nos hemos clasificado!": [
@@ -252587,6 +253096,25 @@
 "CANTERA RÁPIDA": [
 "lang-es.js"
 ],
+"ESTILO DE TIRO": [
+"lang-es.js"
+],
+"OBJETIVO": [
+"lang-es.js"
+],
+"ESTILO DE TIRO: OBJETIVO": [
+"lang-es.js"
+],
+"ESTILO DE TIRO: STARFOOT": [
+"lang-es.js"
+],
+"TOQUE": [
+"lang-es.js",
+"lang-pt.js"
+],
+"ESTILO DE TIRO: TOQUE": [
+"lang-es.js"
+],
 "— ¡NOS HEMOS CLASIFICADO!": [
 "lang-es.js"
 ],
@@ -252949,9 +253477,6 @@
 "lang-es.js"
 ],
 "HABLAR ABIERTAMENTE": [
-"lang-es.js"
-],
-"VASELINA": [
 "lang-es.js"
 ],
 "TIERRA NATAL DE TU PADRE": [
@@ -258520,6 +259045,9 @@
 "lang-es.js"
 ],
 "· Mejor puesto {}.º ({})": [
+"lang-es.js"
+],
+"POTENCIA {} · DETÉN EN VERDE · {}": [
 "lang-es.js"
 ],
 "Tu madre se emocionó. ({})": [
@@ -269012,6 +269540,51 @@
 "lang-fr.js"
 ],
 "Les saisons de formation durent 14 matchs (38 normalement) : l’enfance passe plus vite. Ta progression est un peu plus lente (90 %).": [
+"lang-fr.js"
+],
+"Style de tir": [
+"lang-fr.js"
+],
+"Cible": [
+"lang-fr.js"
+],
+"Cible : touche un point dans le but, puis arrête la jauge de puissance dans le vert.": [
+"lang-fr.js"
+],
+"StarFoot : tire vers l’arrière et relâche ; la forme du geste donne l’effet.": [
+"lang-fr.js"
+],
+"Style de tir : Cible": [
+"lang-fr.js"
+],
+"Style de tir : StarFoot": [
+"lang-fr.js"
+],
+"TOUCHE UNE CIBLE DANS LE BUT · TOUCHE UN COÉQUIPIER : PASSE": [
+"lang-fr.js"
+],
+"TOUCHE UNE CIBLE DANS LE BUT": [
+"lang-fr.js"
+],
+"Touche": [
+"lang-fr.js"
+],
+"Style de tir : Touche": [
+"lang-fr.js"
+],
+"Touche : tire vers l’arrière pour viser, puis touche un point du ballon. Les côtés donnent de l’effet, le bas le soulève.": [
+"lang-fr.js"
+],
+"TOUCHE UN POINT DU BALLON": [
+"lang-fr.js"
+],
+"TOUCHE À CÔTÉ : VISER À NOUVEAU": [
+"lang-fr.js"
+],
+"PUISSANT": [
+"lang-fr.js"
+],
+"LOB": [
 "lang-fr.js"
 ],
 "— on est qualifiés !": [
@@ -279561,6 +280134,24 @@
 "FORMATION RAPIDE": [
 "lang-fr.js"
 ],
+"STYLE DE TIR": [
+"lang-fr.js"
+],
+"CIBLE": [
+"lang-fr.js"
+],
+"STYLE DE TIR : CIBLE": [
+"lang-fr.js"
+],
+"STYLE DE TIR : STARFOOT": [
+"lang-fr.js"
+],
+"TOUCHE": [
+"lang-fr.js"
+],
+"STYLE DE TIR : TOUCHE": [
+"lang-fr.js"
+],
 "— ON EST QUALIFIÉS !": [
 "lang-fr.js"
 ],
@@ -285355,6 +285946,9 @@
 "lang-fr.js"
 ],
 "· Meilleur classement {}e ({})": [
+"lang-fr.js"
+],
+"PUISSANCE {} · ARRÊTE DANS LE VERT · {}": [
 "lang-fr.js"
 ],
 "Ta mère était émue. ({})": [
@@ -295544,6 +296138,54 @@
 "lang-id.js"
 ],
 "Musim akademi berlangsung 14 laga (biasanya 38): masa kecil berlalu lebih cepat. Perkembanganmu sedikit lebih lambat (90%).": [
+"lang-id.js"
+],
+"Gaya tendangan": [
+"lang-id.js"
+],
+"Target: ketuk satu titik di gawang, lalu hentikan bar tenaga di zona hijau.": [
+"lang-id.js"
+],
+"StarFoot: tarik ke belakang lalu lepas; bentuk usapan menentukan efek.": [
+"lang-id.js"
+],
+"Gaya tendangan: Target": [
+"lang-id.js"
+],
+"Gaya tendangan: StarFoot": [
+"lang-id.js"
+],
+"KETUK TARGET DI GAWANG · KETUK REKAN: OPER": [
+"lang-id.js"
+],
+"KETUK TARGET DI GAWANG": [
+"lang-id.js"
+],
+"Sentuh": [
+"lang-id.js"
+],
+"Gaya tendangan: Sentuh": [
+"lang-id.js"
+],
+"Sentuh: tarik ke belakang untuk membidik, lalu ketuk satu titik di bola. Sisi memberi efek, bagian bawah mengangkat bola.": [
+"lang-id.js"
+],
+"KETUK SATU TITIK DI BOLA": [
+"lang-id.js"
+],
+"KETUK DI LUAR: BIDIK ULANG": [
+"lang-id.js"
+],
+"KERAS": [
+"lang-id.js"
+],
+"CUNGKIL": [
+"lang-id.js"
+],
+"EFEK →": [
+"lang-id.js"
+],
+"← EFEK": [
 "lang-id.js"
 ],
 "— kita lolos!": [
@@ -305879,6 +306521,21 @@
 "AKADEMI CEPAT": [
 "lang-id.js"
 ],
+"GAYA TENDANGAN": [
+"lang-id.js"
+],
+"GAYA TENDANGAN: TARGET": [
+"lang-id.js"
+],
+"GAYA TENDANGAN: STARFOOT": [
+"lang-id.js"
+],
+"SENTUH": [
+"lang-id.js"
+],
+"GAYA TENDANGAN: SENTUH": [
+"lang-id.js"
+],
 "— KITA LOLOS!": [
 "lang-id.js"
 ],
@@ -306225,9 +306882,6 @@
 "lang-id.js"
 ],
 "BICARA TERUS TERANG": [
-"lang-id.js"
-],
-"CUNGKIL": [
 "lang-id.js"
 ],
 "KAMPUNG HALAMAN AYAH": [
@@ -311650,6 +312304,9 @@
 "lang-id.js"
 ],
 "· Posisi terbaik {} ({})": [
+"lang-id.js"
+],
+"TENAGA {} · HENTIKAN DI HIJAU · {}": [
 "lang-id.js"
 ],
 "Ibumu terharu. ({})": [
@@ -321852,6 +322509,57 @@
 "lang-it.js"
 ],
 "Le stagioni giovanili durano 14 partite (di solito 38): l’infanzia passa più in fretta. La tua crescita è un po’ più lenta (90%).": [
+"lang-it.js"
+],
+"Stile di tiro": [
+"lang-it.js"
+],
+"Mirino": [
+"lang-it.js"
+],
+"Mirino: tocca un punto della porta e ferma la barra di potenza sul verde.": [
+"lang-it.js"
+],
+"StarFoot: tira indietro e rilascia; la forma del gesto decide l’effetto.": [
+"lang-it.js"
+],
+"Stile di tiro: Mirino": [
+"lang-it.js"
+],
+"Stile di tiro: StarFoot": [
+"lang-it.js"
+],
+"TOCCA UN PUNTO DELLA PORTA · TOCCA UN COMPAGNO: PASSAGGIO": [
+"lang-it.js"
+],
+"TOCCA UN PUNTO DELLA PORTA": [
+"lang-it.js"
+],
+"Tocco": [
+"lang-it.js"
+],
+"Stile di tiro: Tocco": [
+"lang-it.js"
+],
+"Tocco: tira indietro per mirare, poi tocca un punto del pallone. I lati danno effetto, la parte bassa lo alza.": [
+"lang-it.js"
+],
+"TOCCA UN PUNTO DEL PALLONE": [
+"lang-it.js"
+],
+"TOCCA FUORI: MIRA DI NUOVO": [
+"lang-it.js"
+],
+"POTENTE": [
+"lang-it.js"
+],
+"PALLONETTO": [
+"lang-it.js"
+],
+"EFFETTO →": [
+"lang-it.js"
+],
+"← EFFETTO": [
 "lang-it.js"
 ],
 "— ci siamo qualificati!": [
@@ -332187,6 +332895,24 @@
 "GIOVANILI RAPIDE": [
 "lang-it.js"
 ],
+"STILE DI TIRO": [
+"lang-it.js"
+],
+"MIRINO": [
+"lang-it.js"
+],
+"STILE DI TIRO: MIRINO": [
+"lang-it.js"
+],
+"STILE DI TIRO: STARFOOT": [
+"lang-it.js"
+],
+"TOCCO": [
+"lang-it.js"
+],
+"STILE DI TIRO: TOCCO": [
+"lang-it.js"
+],
 "— CI SIAMO QUALIFICATI!": [
 "lang-it.js"
 ],
@@ -332541,9 +333267,6 @@
 "lang-it.js"
 ],
 "PARLA APERTAMENTE": [
-"lang-it.js"
-],
-"PALLONETTO": [
 "lang-it.js"
 ],
 "TERRA NATALE DEL PADRE": [
@@ -337953,6 +338676,9 @@
 "· Miglior piazzamento {}° ({})": [
 "lang-it.js"
 ],
+"POTENZA {} · FERMA SUL VERDE · {}": [
+"lang-it.js"
+],
 "Tua madre si è commossa. ({})": [
 "lang-it.js"
 ],
@@ -340281,6 +341007,12 @@
 "Diamondの追加要素で試合が有利になることはなく、無料版も何も変わっていない。": [
 "lang-ja.js"
 ],
+"StarFoot：引いて離す。スワイプの形でカーブが決まる。": [
+"lang-ja.js"
+],
+"シュート操作：StarFoot": [
+"lang-ja.js"
+],
 "（PK戦）": [
 "lang-ja.js"
 ],
@@ -340516,6 +341248,9 @@
 "lang-ja.js"
 ],
 "DIAMONDに新コンテンツ": [
+"lang-ja.js"
+],
+"シュート操作：STARFOOT": [
 "lang-ja.js"
 ],
 "STARFOOT ワールドサービス": [
@@ -348935,6 +349670,54 @@
 "lang-pt.js"
 ],
 "As temporadas da base duram 14 jogos (normalmente 38): a infância passa mais rápido. Sua evolução fica um pouco mais lenta (90%).": [
+"lang-pt.js"
+],
+"Estilo de chute": [
+"lang-pt.js"
+],
+"Alvo": [
+"lang-pt.js"
+],
+"Alvo: toque num ponto do gol e pare a barra de força no verde.": [
+"lang-pt.js"
+],
+"StarFoot: puxe para trás e solte; o formato do gesto define o efeito.": [
+"lang-pt.js"
+],
+"Estilo de chute: Alvo": [
+"lang-pt.js"
+],
+"Estilo de chute: StarFoot": [
+"lang-pt.js"
+],
+"TOQUE UM ALVO NO GOL · TOQUE NUM COLEGA: PASSE": [
+"lang-pt.js"
+],
+"TOQUE UM ALVO NO GOL": [
+"lang-pt.js"
+],
+"Estilo de chute: Toque": [
+"lang-pt.js"
+],
+"Toque: puxe para trás para mirar e depois toque num ponto da bola. Os lados dão efeito, a parte de baixo levanta.": [
+"lang-pt.js"
+],
+"TOQUE NUM PONTO DA BOLA": [
+"lang-pt.js"
+],
+"TOQUE FORA: MIRAR DE NOVO": [
+"lang-pt.js"
+],
+"FORTE": [
+"lang-pt.js"
+],
+"CAVADINHA": [
+"lang-pt.js"
+],
+"EFEITO →": [
+"lang-pt.js"
+],
+"← EFEITO": [
 "lang-pt.js"
 ],
 "— nos classificamos!": [
@@ -359041,6 +359824,21 @@
 "BASE RÁPIDA": [
 "lang-pt.js"
 ],
+"ESTILO DE CHUTE": [
+"lang-pt.js"
+],
+"ALVO": [
+"lang-pt.js"
+],
+"ESTILO DE CHUTE: ALVO": [
+"lang-pt.js"
+],
+"ESTILO DE CHUTE: STARFOOT": [
+"lang-pt.js"
+],
+"ESTILO DE CHUTE: TOQUE": [
+"lang-pt.js"
+],
 "— NOS CLASSIFICAMOS!": [
 "lang-pt.js"
 ],
@@ -359375,9 +360173,6 @@
 "lang-pt.js"
 ],
 "CONVERSAR ABERTAMENTE": [
-"lang-pt.js"
-],
-"CAVADINHA": [
 "lang-pt.js"
 ],
 "TERRA NATAL DO SEU PAI": [
@@ -364705,6 +365500,9 @@
 "· Melhor posição {}º ({})": [
 "lang-pt.js"
 ],
+"FORÇA {} · PARE NO VERDE · {}": [
+"lang-pt.js"
+],
 "Sua mãe ficou emocionada. ({})": [
 "lang-pt.js"
 ],
@@ -367757,13 +368555,16 @@
 "minigame.js",
 "sprites.js"
 ],
-"KALEDE HEDEFE DOKUN  ·  ARKADAŞINA DOKUN: PAS": [
+"lineTo": [
 "minigame.js"
 ],
-"KALEDE HEDEFE DOKUN": [
+"moveTo": [
 "minigame.js"
 ],
-"GÜÇ {}  ·  YEŞİLDE DURDUR  ·  {}": [
+"800 {}px \"Barlow Semi Condensed\", \"Arial Narrow\", sans-serif": [
+"minigame.js"
+],
+"YANLAR FALSO  ·  ALT KISIM AŞIRTMA": [
 "minigame.js"
 ],
 "GÜÇ {}   ·   {}   ·   {}{}": [

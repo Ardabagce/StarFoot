@@ -164,7 +164,7 @@ const MiniGame = {
       host.innerHTML = `
         <div class="mg">
           <div class="mg-stage"><canvas class="mg-canvas"></canvas></div>
-          <div class="mg-lift" role="group" aria-label="Vuruş tipi">
+          <div class="mg-lift" role="group" aria-label="Vuruş tipi"${MiniGame.style() === 'aim' ? ' style="display:none"' : ''}>
             ${LIFTS.map((l, i) => `<button type="button" data-lift="${i}" class="${i === defLift ? 'on' : ''}"><b>${l.l}</b><small>${l.d}</small></button>`).join('')}
           </div>
         </div>`;
@@ -220,11 +220,17 @@ const MiniGame = {
       let t = 0, kickT = -9, endT = 0;
       // Süre ve rakip baskısı oyuncu topa ilk dokunduğunda başlar (düşünme süresi serbest)
       let touched = false, aimT = 0, chipKick = false;
-      // Hedef vuruş: hedef seçilir (kale çizgisinde x), güç çubuğu salınır, ikinci dokunuş vurur
+      // Dokunuş tarzı: önce geri çekip nişan alınır (yön + güç), sonra büyük topun bir noktasına dokunulur:
+      // yanlar falso, alt kısım aşırtma/yükseklik, üst kısım sert ve alçak vuruş
       const aimStyle = MiniGame.style() === 'aim';
-      let aimSt = null; // { gx, t0 }
+      let aimSt = null; // { ang, power }
       const showAimHint = aimStyle && MiniGame.aimSeen++ < 4;
-      const meterAt = (tt) => 0.5 - 0.5 * Math.cos(((tt - aimSt.t0) / 1.15) * Math.PI * 2 * 0.5 * 2); // 0..1..0 (1,15 sn)
+      // büyük top, oyuncunun ve topun üstüne binmesin diye topun karşı tarafında alt köşede durur
+      const touchBall = () => {
+        const R = Math.min(W * 0.17, 62 * dpr, H * 0.11), m = R * 1.32 + 10 * dpr;
+        const left = tx(ball.x) >= W / 2;
+        return { x: left ? m : W - m, y: H - 70 * dpr - R * 1.32, R };
+      };
       let result = null, resultText = '', resultColor = '#fff';
       let slowmo = 1, particles = [], netShake = 0, flash = 0;
       // görsel efektler: top izi, kamera sarsıntısı ve yakınlaşma, filede çarpma noktası
@@ -273,7 +279,7 @@ const MiniGame = {
       layout();
       const onResize = () => layout();
       window.addEventListener('resize', onResize);
-      MiniGame.dbg = { ball, keeper, defs, mates, scene, get view() { return view; }, get PX() { return PX; }, get dpr() { return dpr; } };
+      MiniGame.dbg = { ball, keeper, defs, mates, scene, get tb() { return touchBall(); }, get view() { return view; }, get PX() { return PX; }, get dpr() { return dpr; } };
 
       const toCanvas = (e) => {
         const r = cv.getBoundingClientRect();
@@ -300,7 +306,7 @@ const MiniGame = {
         }
         const curve = U.clamp((dmax / L) * 3.2, -1, 1);
         const power = U.clamp(Lpx / PULL_MAX(), 0.15, 1);
-        const spin = curve * curveMax;
+        const spin = aimStyle ? 0 : curve * curveMax;
         const chord = Math.atan2(cy, cx);
         const dirY = Math.sin(chord);
         const dist = dirY < -0.15 ? Math.min(ball.y / -dirY, 40) : 20;
@@ -361,39 +367,33 @@ const MiniGame = {
 
       cv.addEventListener('pointerdown', (e) => {
         if (phase !== 'aim') return;
-        if (aimStyle) {
-          const p = toCanvas(e), w0 = toWorld(p[0], p[1]);
+        if (aimStyle && aimSt) {
+          const p = toCanvas(e), tb = touchBall();
           touched = true;
           e.preventDefault();
-          if (!aimSt) {
-            const m = mateAt(w0);
-            if (m) { passTo(m); return; }
-            // hedef: kale ağzı genişliği boyunca (biraz dışı da seçilebilir; ıska riski)
-            const gx = U.clamp(w0.x, -PITCH.GOAL_W - 1.2, PITCH.GOAL_W + 1.2);
-            aimSt = { gx, t0: t };
-            return;
-          }
-          // ikinci dokunuş: güç çubuğunun o anki değeri
-          const power = U.clamp(meterAt(t), 0.12, 1);
-          // tatlı nokta 0,62–0,85: dışına çıktıkça isabet bozulur; çok sert vuruş yükselir
-          const q = power >= 0.62 && power <= 0.85 ? 1 : U.clamp(1 - Math.min(Math.abs(power - 0.62), Math.abs(power - 0.85)) * 2.6, 0.2, 1);
-          const chord = Math.atan2(0 - ball.y, aimSt.gx - ball.x);
-          // vuruş hızı: çubuk değeri doğrudan değil, tatlı noktada sert ve isabetli
-          // frikikte daha yumuşak ve falsolu (barajın yanından dolanır), diğerlerinde sert
-          const sweet = q === 1 ? (power - 0.62) / 0.23 : -1;
-          const kp = isFK ? (sweet >= 0 ? 0.74 + 0.08 * sweet : U.clamp(0.36 + 0.5 * power, 0.2, 0.86)) : (sweet >= 0 ? 0.93 + 0.07 * sweet : U.clamp(0.4 + 0.6 * power, 0.2, 0.95));
-          // frikik: barajın etrafından dolanması için hedefe göre otomatik falso
-          let spin = 0, comp = 0;
-          if (isFK) {
-            spin = (aimSt.gx >= ball.x ? 1 : -1) * curveMax;
-            const dist = Math.hypot(aimSt.gx - ball.x, ball.y), sp = kp * maxSpeed;
-            comp = U.clamp((0.55 * spin * dist) / (sp * sp), -0.5, 0.5);
-          }
-          MiniGame.lastAim = { power, q, kp };
-          let ang = chord + comp + U.gauss() * (1 - q) * 0.15;
+          let dx = (p[0] - tb.x) / tb.R, dy = (p[1] - tb.y) / tb.R;
+          const r = Math.hypot(dx, dy);
+          // topun dışına dokunmak: nişanı iptal et, yeniden çek
+          if (r > 1.25) { aimSt = null; return; }
+          if (r > 1) { dx /= r; dy /= r; }
+          const rr = Math.min(1, r);
+          // sol tarafa vurmak topu sağa döndürür (spin<0 → +x)
+          const spin = dx * curveMax;
+          // dikey: üst = alçak ve sert, orta = yarım yükseklik, alt = aşırtma
+          const liftV = U.clamp((dy + 0.25) / 1.15, 0, 1) * 0.62;
+          liftIdx = liftV > 0.42 ? 2 : liftV > 0.1 ? 1 : 0;
+          const power = U.clamp(aimSt.power * (1 + 0.06 * Math.max(0, -dy)), 0.15, 1);
+          // falso nişan alınan noktaya kavisle varsın diye başlangıç açısı telafi edilir
+          const dirY = Math.sin(aimSt.ang);
+          const dist = dirY < -0.15 ? Math.min(ball.y / -dirY, 40) : 20;
+          const sp = power * maxSpeed;
+          const comp = U.clamp((0.55 * spin * dist) / (sp * sp), -0.5, 0.5);
+          // topun en kenarına vurmak riskli: hafif sapma
+          const edge = Math.max(0, rr - 0.8) / 0.2;
+          const ang = assistAngle(aimSt.ang) + comp + U.gauss() * 0.05 * edge;
+          MiniGame.lastAim = { power, dx, dy, liftV };
           aimSt = null;
-          if (kp > 0.93 && liftIdx === 0) liftIdx = 1; // tam güç alçak gitmez
-          kick(ang, kp, spin, false);
+          kick(ang, power, spin, false, liftV);
           return;
         }
         cv.setPointerCapture(e.pointerId);
@@ -442,6 +442,7 @@ const MiniGame = {
         }
         const pr = params(g);
         preview = null;
+        if (pr && aimStyle) { aimSt = { ang: pr.ang, power: pr.power, t0: t }; return; }
         if (pr) kick(assistAngle(pr.ang), pr.power, pr.spin, false);
       });
       cv.addEventListener('pointercancel', () => { gesture = null; preview = null; });
@@ -695,36 +696,57 @@ const MiniGame = {
 
       function drawAim() {
         const fs = dpr;
-        if (!aimSt) {
-          // kale ağzında hedef bölgesi
-          const y = ty(0, 1.2), x0 = tx(-PITCH.GOAL_W), x1 = tx(PITCH.GOAL_W);
-          ctx.fillStyle = `rgba(255,207,63,${0.10 + 0.08 * Math.sin(t * 5)})`;
-          ctx.fillRect(x0, ty(0, PITCH.BAR), x1 - x0, ty(0, 0) - ty(0, PITCH.BAR));
-          if (showAimHint || t < 2.2) pill(scene.mates.length ? 'KALEDE HEDEFE DOKUN  ·  ARKADAŞINA DOKUN: PAS' : 'KALEDE HEDEFE DOKUN');
-          void y;
-          return;
-        }
-        const gx = tx(aimSt.gx), gy = ty(0, LIFTS[liftIdx].v > 0.4 ? 2.0 : LIFTS[liftIdx].v > 0.1 ? 1.2 : 0.4), r = 13 * fs;
-        ctx.strokeStyle = 'rgba(5,11,29,0.8)'; ctx.lineWidth = 6 * fs;
-        ctx.beginPath(); ctx.arc(gx, gy, r, 0, Math.PI * 2); ctx.stroke();
+        // nişan çizgisi (yön + güç)
+        const L = (4 + 14 * aimSt.power) * PX;
+        const bx = tx(ball.x), by = ty(ball.y);
+        const ex = bx + Math.cos(aimSt.ang) * L, ey = by + Math.sin(aimSt.ang) * L;
+        ctx.strokeStyle = 'rgba(255,255,255,0.8)'; ctx.lineWidth = 3 * fs; ctx.setLineDash([6 * fs, 6 * fs]);
+        ctx.beginPath(); ctx.moveTo(bx, by); ctx.lineTo(ex, ey); ctx.stroke(); ctx.setLineDash([]);
         ctx.strokeStyle = '#ff3df0'; ctx.lineWidth = 3 * fs;
-        ctx.beginPath(); ctx.arc(gx, gy, r, 0, Math.PI * 2); ctx.stroke();
-        ctx.beginPath(); ctx.moveTo(gx - r * 1.7, gy); ctx.lineTo(gx + r * 1.7, gy); ctx.moveTo(gx, gy - r * 1.7); ctx.lineTo(gx, gy + r * 1.7); ctx.stroke();
-        ctx.strokeStyle = 'rgba(255,255,255,0.5)'; ctx.lineWidth = 2 * fs; ctx.setLineDash([4 * fs, 8 * fs]);
-        ctx.beginPath(); ctx.moveTo(tx(ball.x), ty(ball.y)); ctx.lineTo(gx, gy); ctx.stroke(); ctx.setLineDash([]);
-        // güç çubuğu (topun yanında, dikey)
-        const m = meterAt(t), bh = 120 * fs, bw = 16 * fs;
-        const bx = U.clamp(tx(ball.x) + 34 * fs, 8 * fs, W - bw - 8 * fs), by = U.clamp(ty(ball.y) - bh * 0.8, 40 * fs, H - bh - 20 * fs);
-        ctx.fillStyle = 'rgba(5,11,29,0.7)'; ctx.fillRect(bx - 3 * fs, by - 3 * fs, bw + 6 * fs, bh + 6 * fs);
-        ctx.fillStyle = 'rgba(70,224,143,0.45)'; ctx.fillRect(bx, by + bh * (1 - 0.85), bw, bh * (0.85 - 0.62));
-        ctx.fillStyle = m > 0.85 ? '#ff785a' : m >= 0.62 ? '#46e08f' : '#ffcf3f';
-        ctx.fillRect(bx, by + bh * (1 - m), bw, bh * m);
-        ctx.fillStyle = '#fff'; ctx.fillRect(bx - 4 * fs, by + bh * (1 - m) - 1.5 * fs, bw + 8 * fs, 3 * fs);
-        pill(`GÜÇ ${Math.round(m * 100)}  ·  YEŞİLDE DURDUR  ·  ${LIFTS[liftIdx].l.toUpperCase()}`);
+        ctx.beginPath(); ctx.arc(ex, ey, 9 * fs, 0, Math.PI * 2); ctx.stroke();
+        // büyük top: dokunulan nokta falsoyu ve yüksekliği belirler
+        const tb = touchBall(), R = tb.R;
+        ctx.fillStyle = 'rgba(5,11,29,0.55)';
+        ctx.beginPath(); ctx.arc(tb.x, tb.y, R * 1.18, 0, Math.PI * 2); ctx.fill();
+        const gr = ctx.createRadialGradient(tb.x - R * 0.35, tb.y - R * 0.4, R * 0.1, tb.x, tb.y, R);
+        gr.addColorStop(0, '#ffffff'); gr.addColorStop(1, '#c9d2e3');
+        ctx.fillStyle = gr;
+        ctx.beginPath(); ctx.arc(tb.x, tb.y, R, 0, Math.PI * 2); ctx.fill();
+        // desen: ortada beşgen, kenarlarda yarım yamalar
+        ctx.save();
+        ctx.beginPath(); ctx.arc(tb.x, tb.y, R, 0, Math.PI * 2); ctx.clip();
+        ctx.fillStyle = '#1b2236';
+        const pent = (cx, cy, r, rot) => { ctx.beginPath(); for (let i = 0; i < 5; i++) { const a = rot + (i * Math.PI * 2) / 5; ctx[i ? 'lineTo' : 'moveTo'](cx + Math.cos(a) * r, cy + Math.sin(a) * r); } ctx.closePath(); ctx.fill(); };
+        pent(tb.x, tb.y, R * 0.24, -Math.PI / 2);
+        for (let i = 0; i < 5; i++) { const a = -Math.PI / 2 + Math.PI / 5 + (i * Math.PI * 2) / 5; pent(tb.x + Math.cos(a) * R * 0.92, tb.y + Math.sin(a) * R * 0.92, R * 0.24, a); }
+        ctx.restore();
+        // bölgeler: yatay ve dikey ince çizgiler
+        ctx.strokeStyle = 'rgba(255,61,240,0.55)'; ctx.lineWidth = 1.5 * fs; ctx.setLineDash([3 * fs, 4 * fs]);
+        ctx.beginPath(); ctx.moveTo(tb.x - R, tb.y); ctx.lineTo(tb.x + R, tb.y); ctx.moveTo(tb.x, tb.y - R); ctx.lineTo(tb.x, tb.y + R); ctx.stroke(); ctx.setLineDash([]);
+        ctx.strokeStyle = 'rgba(5,11,29,0.9)'; ctx.lineWidth = 2 * fs;
+        ctx.beginPath(); ctx.arc(tb.x, tb.y, R, 0, Math.PI * 2); ctx.stroke();
+        // yanlarda falso okları (sol tarafa vurmak sağa döndürür)
+        const curl = (side) => {
+          const cx = tb.x + side * R * 1.16, a = side > 0 ? 0 : Math.PI;
+          ctx.strokeStyle = '#ff3df0'; ctx.fillStyle = '#ff3df0'; ctx.lineWidth = 3 * fs; ctx.lineCap = 'round';
+          ctx.beginPath(); ctx.arc(tb.x, tb.y, R * 1.16, a - 0.45, a + 0.45); ctx.stroke();
+          const ea = a - 0.45 * side, ex = tb.x + Math.cos(ea) * R * 1.16, ey = tb.y + Math.sin(ea) * R * 1.16;
+          const hx = -Math.sin(ea) * -side, hy = Math.cos(ea) * -side; // ok ucu yönü (yukarı doğru)
+          ctx.beginPath(); ctx.moveTo(ex + hx * 7 * fs, ey + hy * 7 * fs); ctx.lineTo(ex - hy * 5 * fs, ey + hx * 5 * fs); ctx.lineTo(ex + hy * 5 * fs, ey - hx * 5 * fs); ctx.closePath(); ctx.fill();
+          ctx.lineCap = 'butt'; void cx;
+        };
+        curl(-1); curl(1);
+        ctx.font = `800 ${Math.round(11 * fs)}px "Barlow Semi Condensed", "Arial Narrow", sans-serif`;
+        ctx.textAlign = 'center';
+        const lab = (txt, x, y) => { const w = ctx.measureText(txt).width + 10 * fs; ctx.fillStyle = 'rgba(5,11,29,0.8)'; ctx.fillRect(x - w / 2, y - 11 * fs, w, 15 * fs); ctx.fillStyle = '#fff'; ctx.fillText(txt, x, y); };
+        lab('SERT', tb.x, tb.y - R * 1.32 - 3 * fs);
+        lab('AŞIRTMA', tb.x, tb.y + R * 1.32 + 12 * fs);
+        const since = t - aimSt.t0;
+        pill(since < 2.5 ? 'TOPUN BİR NOKTASINA DOKUN' : since < 5.5 ? 'YANLAR FALSO  ·  ALT KISIM AŞIRTMA' : 'DIŞARI DOKUN: YENİDEN NİŞAN');
       }
 
       function drawPreview() {
-        if (aimStyle) return drawAim();
+        if (aimStyle && aimSt && phase === 'aim') return drawAim();
         if (!preview || !preview.pts.length) return;
         const pts = preview.pts;
         const n = Math.max(2, Math.floor(pts.length * previewFrac));
@@ -787,7 +809,7 @@ const MiniGame = {
         }
         if (o.captain && phase === 'aim' && !gesture && !preview && t < 3.5 && scene.mates.length) {
           pill('KAPTANSIN: ARKADAŞINI BASILI TUTUP SÜRÜKLE');
-        } else if (showHint && !aimStyle && phase === 'aim' && !gesture && !preview) {
+        } else if ((showHint || showAimHint) && !aimSt && phase === 'aim' && !gesture && !preview) {
           const k = (t % 1.6) / 1.6;
           const bx = tx(ball.x), by = ty(ball.y);
           const gx = tx(U.clamp(ball.x * 0.3, -2.5, 2.5)), gy = ty(1);

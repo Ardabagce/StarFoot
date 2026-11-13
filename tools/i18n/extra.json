@@ -3679,5 +3679,15 @@
 "Vuruş tarzı: StarFoot": "Shooting style: StarFoot",
 "KALEDE HEDEFE DOKUN  ·  ARKADAŞINA DOKUN: PAS": "TAP A TARGET IN THE GOAL  ·  TAP A TEAMMATE: PASS",
 "KALEDE HEDEFE DOKUN": "TAP A TARGET IN THE GOAL",
-"GÜÇ {}  ·  YEŞİLDE DURDUR  ·  {}": "POWER {}  ·  STOP IN THE GREEN  ·  {}"
+"GÜÇ {}  ·  YEŞİLDE DURDUR  ·  {}": "POWER {}  ·  STOP IN THE GREEN  ·  {}",
+"Dokunuş": "Touch",
+"Vuruş tarzı: Dokunuş": "Shooting style: Touch",
+"Dokunuş: geri çekip nişan al, sonra topun bir noktasına dokun. Yanlar falso, alt kısım aşırtma verir.": "Touch: pull back to aim, then tap a spot on the ball. The sides add curl, the bottom lifts it.",
+"TOPUN BİR NOKTASINA DOKUN": "TAP A SPOT ON THE BALL",
+"DIŞARI DOKUN: YENİDEN NİŞAN": "TAP OUTSIDE: AIM AGAIN",
+"SERT": "POWER",
+"AŞIRTMA": "CHIP",
+"FALSO →": "CURL →",
+"← FALSO": "← CURL",
+"YANLAR FALSO  ·  ALT KISIM AŞIRTMA": "SIDES: CURL  ·  BOTTOM: CHIP"
 }
