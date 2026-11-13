@@ -126,7 +126,7 @@ const Sprites = {
 
   // Oyuncunun kendi görünümü (Premium görünüm stüdyosunda değiştirilebilir)
   me(p) {
-    p = p || (typeof Game !== 'undefined' && Game.p);
+    p = p || (typeof Game !== 'undefined' && Game.state && Game.p);
     const L = (p && p.look) || Sprites.look(7);
     // kaleci: her yerde kaleci forması ve eldiven
     return p && p.position === 'GK' ? Object.assign({}, L, { gk: true }) : L;

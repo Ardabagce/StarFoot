@@ -42,6 +42,8 @@ const Game = {
   },
   save() {
     try {
+      // eksik/geçici durum (ör. Teknik Direktör şut sahnesi) asla kariyer kaydının üstüne yazılmaz
+      if (!Game.state || Game.state._tmp || !Game.state.season || !Game.state.world || !Game.state.player) return;
       if (Game.state && (Game.state.nf || 0) < 3) Game.state.nf = 3;
       Store.write(Game.key(Game.slot), JSON.stringify(Game.state, Game.packRoster));
       // ana menü için küçük özet (büyük kaydı açmadan listelenir)
@@ -104,7 +106,7 @@ const Game = {
   rounds() { const lg = Game.league(); return lg ? lg.fixtures.length : 38; },
   // Milli maç araları (sezon uzunluğuna göre)
   intlWeeks() { const n = Game.rounds(); return [Math.round(n * 0.22), Math.round(n * 0.45), Math.round(n * 0.75)]; },
-  get p() { return Game.state.player; },
+  get p() { return Game.state ? Game.state.player : null; },
   club(id) { return Game.state.world.clubs[id || Game.state.clubId]; },
   isYouth() { return Game.state.contract.type === 'youth'; },
   inStreet() { return !!(Game.state.street && !Game.state.street.done); },
@@ -2218,6 +2220,7 @@ ${UI.paper()}`;
       </section>
       <section class="card settings">
         <div class="card-h"><span>${Icon('train')} Oynanış</span></div>
+        ${typeof MiniGame !== 'undefined' && MiniGame.style ? row('Vuruş tarzı', MiniGame.style() === 'aim' ? 'Hedef: kalede bir noktaya dokun, güç çubuğunu yeşilde durdur.' : 'StarFoot: geri çek ve bırak; çizginin yönü falsoyu belirler.', `<div class="seg">${[['swipe', 'StarFoot'], ['aim', 'Hedef']].map(([k, l]) => `<button data-shot="${k}" class="${MiniGame.style() === k ? 'on' : ''}">${l}</button>`).join('')}</div>`) : ''}
         <label class="drill-tg"><input type="checkbox" id="drill-tg" ${s.drills !== false ? 'checked' : ''}><span><b>Antrenman mini oyunları</b><small>Odak statına göre çalışma oynanır. İyi oynarsan gelişim ×1,5'e kadar çıkar.</small></span></label>
         ${typeof Edit !== 'undefined' ? row('Editör', 'Kulüp ve oyuncu isimlerini değiştir, düzenleme dosyası paylaş.', `<button class="btn btn-ghost" data-edopen>${Icon('pen')} Aç</button>`) : ''}
         ${typeof GKHelp !== 'undefined' && p && p.position === 'GK' ? `<label class="drill-tg"><input type="checkbox" id="gkhelp-tg" ${GKHelp.on() ? 'checked' : ''}><span><b>Kaleci ipuçları</b><small>Kaleci anlarında ne yapacağını anlatan yazılar. İlk 3 maçta açıktır.</small></span></label>` : ''}
@@ -2417,6 +2420,7 @@ ${UI.paper()}`;
     if (typeof Cloud !== 'undefined') { Cloud.bind(root); GC.bind(root); }
     U.$$('[data-setcur]', root).forEach((b) => (b.onclick = () => { try { if (b.dataset.setcur) localStorage.setItem('starfoot_cur', b.dataset.setcur); else localStorage.removeItem('starfoot_cur'); } catch (e) { /* yok */ } Game.render(); }));
     U.$$('select[data-setlang]', root).forEach((b) => (b.onchange = () => { if (b.value !== I18N.lang) { Game.save(); I18N.set(b.value); } }));
+    U.$$('[data-shot]', root).forEach((b) => (b.onclick = () => { if (MiniGame.style() === b.dataset.shot) return; MiniGame.setStyle(b.dataset.shot); Game.toast(b.dataset.shot === 'aim' ? 'Vuruş tarzı: Hedef' : 'Vuruş tarzı: StarFoot', 'good'); Game.render(); }));
     U.$$('[data-sys]', root).forEach((b) => (b.onclick = () => {
       const k = b.dataset.sys;
       if (k === 'save') { Game.save(); Game.toast('💾 Kaydedildi', 'good'); }

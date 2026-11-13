@@ -145,6 +145,17 @@ const BallPhys = {
 
 const MiniGame = {
   seen: 0,
+  // Vuruş tarzı (Ayarlar): 'swipe' = StarFoot (geri çek ve bırak, varsayılan), 'aim' = Hedef (kaleye dokun, gücü durdur)
+  style() { try { return localStorage.getItem('starfoot_shot') === 'aim' ? 'aim' : 'swipe'; } catch (e) { return 'swipe'; } },
+  setStyle(v) {
+    try { localStorage.setItem('starfoot_shot', v === 'aim' ? 'aim' : 'swipe'); } catch (e) { /* yok */ }
+    try {
+      if (typeof Premium !== 'undefined' && Premium.track) Premium.track('shot_style', { style: v === 'aim' ? 'aim' : 'swipe' });
+      const F = window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.FirebaseAnalytics;
+      if (F && F.setUserProperty) F.setUserProperty({ key: 'shot_style', value: v === 'aim' ? 'aim' : 'swipe' }).catch(() => {});
+    } catch (e) { /* yok */ }
+  },
+  aimSeen: 0,
 
   // Kaydırarak şut / dokunarak pas sahnesi. Promise<{outcome, mate?}>
   play(host, scene, o) {
@@ -209,6 +220,11 @@ const MiniGame = {
       let t = 0, kickT = -9, endT = 0;
       // Süre ve rakip baskısı oyuncu topa ilk dokunduğunda başlar (düşünme süresi serbest)
       let touched = false, aimT = 0, chipKick = false;
+      // Hedef vuruş: hedef seçilir (kale çizgisinde x), güç çubuğu salınır, ikinci dokunuş vurur
+      const aimStyle = MiniGame.style() === 'aim';
+      let aimSt = null; // { gx, t0 }
+      const showAimHint = aimStyle && MiniGame.aimSeen++ < 4;
+      const meterAt = (tt) => 0.5 - 0.5 * Math.cos(((tt - aimSt.t0) / 1.15) * Math.PI * 2 * 0.5 * 2); // 0..1..0 (1,15 sn)
       let result = null, resultText = '', resultColor = '#fff';
       let slowmo = 1, particles = [], netShake = 0, flash = 0;
       // görsel efektler: top izi, kamera sarsıntısı ve yakınlaşma, filede çarpma noktası
@@ -345,6 +361,29 @@ const MiniGame = {
 
       cv.addEventListener('pointerdown', (e) => {
         if (phase !== 'aim') return;
+        if (aimStyle) {
+          const p = toCanvas(e), w0 = toWorld(p[0], p[1]);
+          touched = true;
+          e.preventDefault();
+          if (!aimSt) {
+            const m = mateAt(w0);
+            if (m) { passTo(m); return; }
+            // hedef: kale ağzı genişliği boyunca (biraz dışı da seçilebilir; ıska riski)
+            const gx = U.clamp(w0.x, -PITCH.GOAL_W / 2 - 1.2, PITCH.GOAL_W / 2 + 1.2);
+            aimSt = { gx, t0: t };
+            return;
+          }
+          // ikinci dokunuş: güç çubuğunun o anki değeri
+          const power = U.clamp(meterAt(t), 0.12, 1);
+          // tatlı nokta 0,62–0,85: dışına çıktıkça isabet bozulur; çok sert vuruş yükselir
+          const q = power >= 0.62 && power <= 0.85 ? 1 : U.clamp(1 - Math.min(Math.abs(power - 0.62), Math.abs(power - 0.85)) * 2.6, 0.2, 1);
+          let ang = Math.atan2(0 - ball.y, aimSt.gx - ball.x);
+          ang += U.gauss() * (1 - q) * 0.07;
+          aimSt = null;
+          if (power > 0.93 && liftIdx === 0) liftIdx = 1; // tam güç alçak gitmez
+          kick(ang, power, 0, false);
+          return;
+        }
         cv.setPointerCapture(e.pointerId);
         const p = toCanvas(e);
         const w0 = toWorld(p[0], p[1]);
@@ -642,7 +681,38 @@ const MiniGame = {
         ctx.fillText(text, W / 2, y + h * 0.68);
       }
 
+      function drawAim() {
+        const fs = dpr;
+        if (!aimSt) {
+          // kale ağzında hedef bölgesi
+          const y = ty(0, 1.2), x0 = tx(-PITCH.GOAL_W / 2), x1 = tx(PITCH.GOAL_W / 2);
+          ctx.fillStyle = `rgba(255,207,63,${0.10 + 0.08 * Math.sin(t * 5)})`;
+          ctx.fillRect(x0, ty(0, PITCH.BAR), x1 - x0, ty(0, 0) - ty(0, PITCH.BAR));
+          if (showAimHint || t < 2.2) pill(scene.mates.length ? 'KALEDE HEDEFE DOKUN  ·  ARKADAŞINA DOKUN: PAS' : 'KALEDE HEDEFE DOKUN');
+          void y;
+          return;
+        }
+        const gx = tx(aimSt.gx), gy = ty(0, LIFTS[liftIdx].v > 0.4 ? 2.0 : LIFTS[liftIdx].v > 0.1 ? 1.2 : 0.4), r = 13 * fs;
+        ctx.strokeStyle = 'rgba(5,11,29,0.8)'; ctx.lineWidth = 6 * fs;
+        ctx.beginPath(); ctx.arc(gx, gy, r, 0, Math.PI * 2); ctx.stroke();
+        ctx.strokeStyle = '#ff3df0'; ctx.lineWidth = 3 * fs;
+        ctx.beginPath(); ctx.arc(gx, gy, r, 0, Math.PI * 2); ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(gx - r * 1.7, gy); ctx.lineTo(gx + r * 1.7, gy); ctx.moveTo(gx, gy - r * 1.7); ctx.lineTo(gx, gy + r * 1.7); ctx.stroke();
+        ctx.strokeStyle = 'rgba(255,255,255,0.5)'; ctx.lineWidth = 2 * fs; ctx.setLineDash([4 * fs, 8 * fs]);
+        ctx.beginPath(); ctx.moveTo(tx(ball.x), ty(ball.y)); ctx.lineTo(gx, gy); ctx.stroke(); ctx.setLineDash([]);
+        // güç çubuğu (topun yanında, dikey)
+        const m = meterAt(t), bh = 120 * fs, bw = 16 * fs;
+        const bx = U.clamp(tx(ball.x) + 34 * fs, 8 * fs, W - bw - 8 * fs), by = U.clamp(ty(ball.y) - bh * 0.8, 40 * fs, H - bh - 20 * fs);
+        ctx.fillStyle = 'rgba(5,11,29,0.7)'; ctx.fillRect(bx - 3 * fs, by - 3 * fs, bw + 6 * fs, bh + 6 * fs);
+        ctx.fillStyle = 'rgba(70,224,143,0.45)'; ctx.fillRect(bx, by + bh * (1 - 0.85), bw, bh * (0.85 - 0.62));
+        ctx.fillStyle = m > 0.85 ? '#ff785a' : m >= 0.62 ? '#46e08f' : '#ffcf3f';
+        ctx.fillRect(bx, by + bh * (1 - m), bw, bh * m);
+        ctx.fillStyle = '#fff'; ctx.fillRect(bx - 4 * fs, by + bh * (1 - m) - 1.5 * fs, bw + 8 * fs, 3 * fs);
+        pill(`GÜÇ ${Math.round(m * 100)}  ·  YEŞİLDE DURDUR  ·  ${LIFTS[liftIdx].l.toUpperCase()}`);
+      }
+
       function drawPreview() {
+        if (aimStyle) return drawAim();
         if (!preview || !preview.pts.length) return;
         const pts = preview.pts;
         const n = Math.max(2, Math.floor(pts.length * previewFrac));
@@ -705,7 +775,7 @@ const MiniGame = {
         }
         if (o.captain && phase === 'aim' && !gesture && !preview && t < 3.5 && scene.mates.length) {
           pill('KAPTANSIN: ARKADAŞINI BASILI TUTUP SÜRÜKLE');
-        } else if (showHint && phase === 'aim' && !gesture && !preview) {
+        } else if (showHint && !aimStyle && phase === 'aim' && !gesture && !preview) {
           const k = (t % 1.6) / 1.6;
           const bx = tx(ball.x), by = ty(ball.y);
           const gx = tx(U.clamp(ball.x * 0.3, -2.5, 2.5)), gy = ty(1);

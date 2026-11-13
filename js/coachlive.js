@@ -176,6 +176,7 @@ const Live = {
       Game.modal(`<div class="ev-tag">${T[0]} · ${L.min}'</div><h3>${U.esc(T[1])}!</h3><p class="muted">${Live.nm(p)} · Güç ${Coach.ovr(p)}</p>`, [
         { t: '⚡ Otomatik', cls: 'btn-ghost', fn: () => { Live.autoShot(p, type); res(); } },
         { t: '⚽ Sen oyna', cls: 'btn-big', fn: () => Live.playShot(p, type, T).then((r) => {
+          if (Live.m !== L) return res(); // maç bu arada kapandıysa sonucu işleme
           if (r.goal) Live.goal(p, type === 'penalty' || type === 'freekick' ? null : undefined);
           else if (r.mate) {
             // pas verildi: arkadaşının şutu
@@ -186,7 +187,7 @@ const Live = {
           res();
         }) },
       ]);
-    }).then(() => { L.paused = false; Live.draw(); });
+    }).then(() => { if (Live.m !== L) return; L.paused = false; Live.draw(); });
   },
   autoShot(p, type) {
     const L = Live.m;
@@ -209,7 +210,7 @@ const Live = {
       UI.strip(el);
       // şut sahnesi bir futbolcu kariyeri bekler: geçici kimlik
       const prev = Game.state;
-      Game.state = { player: { name: p.n.split(' ')[0], surname: p.n.split(' ').slice(1).join(' '), look: Sprites.look(p.id), position: p.pos === 'GK' ? 'MF' : p.pos, shirt: 9 }, difficulty: 'normal' };
+      Game.state = { _tmp: true, player: { name: p.n.split(' ')[0], surname: p.n.split(' ').slice(1).join(' '), look: Sprites.look(p.id), position: p.pos === 'GK' ? 'MF' : p.pos, shirt: 9, items: [], stats: st }, difficulty: 'normal' };
       let fin = false;
       const done = (r) => { if (fin) return; fin = true; Game.state = prev; el.remove(); MiniGame._abort = null; res(r); };
       try {
@@ -266,11 +267,11 @@ const Live = {
   loop() {
     const L = Live.m;
     clearTimeout(Live._t);
-    if (!L || L.done || L.paused) return;
+    if (!L || L.done || L.paused || !Coach.s) return;
     if (L.min >= 90) { Live.draw(); return Live.end(); }
     if (L.min >= 45 && !L.ht) { L.ht = true; Live.draw(); return Live.halftime(); }
     const ev = Live.tick();
-    if (ev && ev.then) { Live.draw(); ev.then(() => Live.loop()); return; }
+    if (ev && ev.then) { Live.draw(); ev.then(() => { if (Live.m === L) Live.loop(); }); return; }
     if (L.injured) { const p = Live.P(L.injured); L.injured = null; Live.draw(); if (L.subs > 0 && L.bench.some((id) => Coach.available(Live.P(id)))) { L.paused = true; return Live.subMenu(p.id, `Sakatlık! ${Live.nm(p)} devam edemiyor. Yerine kimi alalım?`); } Live.injOff(p); }
     Live.draw();
     Live._t = setTimeout(Live.loop, Live.SPEEDS[L.speed - 1] || 900);
