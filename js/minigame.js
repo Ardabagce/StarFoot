@@ -225,12 +225,8 @@ const MiniGame = {
       const aimStyle = MiniGame.style() === 'aim';
       let aimSt = null; // { ang, power }
       const showAimHint = aimStyle && MiniGame.aimSeen++ < 4;
-      // büyük top, oyuncunun ve topun üstüne binmesin diye topun karşı tarafında alt köşede durur
-      const touchBall = () => {
-        const R = Math.min(W * 0.17, 62 * dpr, H * 0.11), m = R * 1.32 + 10 * dpr;
-        const left = tx(ball.x) >= W / 2;
-        return { x: left ? m : W - m, y: H - 70 * dpr - R * 1.32, R };
-      };
+      // nişandan sonra ayrı yakın plan sahnesi: ekranın ortasında büyük top
+      const touchBall = () => ({ x: W / 2, y: H * 0.48, R: Math.min(W * 0.36, H * 0.24) });
       let result = null, resultText = '', resultColor = '#fff';
       let slowmo = 1, particles = [], netShake = 0, flash = 0;
       // görsel efektler: top izi, kamera sarsıntısı ve yakınlaşma, filede çarpma noktası
@@ -696,23 +692,30 @@ const MiniGame = {
 
       function drawAim() {
         const fs = dpr;
-        // nişan çizgisi (yön + güç)
-        const L = (4 + 14 * aimSt.power) * PX;
-        const bx = tx(ball.x), by = ty(ball.y);
-        const ex = bx + Math.cos(aimSt.ang) * L, ey = by + Math.sin(aimSt.ang) * L;
-        ctx.strokeStyle = 'rgba(255,255,255,0.8)'; ctx.lineWidth = 3 * fs; ctx.setLineDash([6 * fs, 6 * fs]);
-        ctx.beginPath(); ctx.moveTo(bx, by); ctx.lineTo(ex, ey); ctx.stroke(); ctx.setLineDash([]);
-        ctx.strokeStyle = '#ff3df0'; ctx.lineWidth = 3 * fs;
-        ctx.beginPath(); ctx.arc(ex, ey, 9 * fs, 0, Math.PI * 2); ctx.stroke();
-        // büyük top: dokunulan nokta falsoyu ve yüksekliği belirler
-        const tb = touchBall(), R = tb.R;
-        ctx.fillStyle = 'rgba(5,11,29,0.55)';
-        ctx.beginPath(); ctx.arc(tb.x, tb.y, R * 1.18, 0, Math.PI * 2); ctx.fill();
+        const since = t - aimSt.t0;
+        const k = U.clamp(since / 0.22, 0, 1), ek = 1 - (1 - k) * (1 - k);
+        const tb = touchBall(), R = tb.R * (0.55 + 0.45 * ek);
+        ctx.save();
+        ctx.globalAlpha = ek;
+        // yakın plan çim: perspektifli şeritler ve kenar gölgesi
+        const g0 = ctx.createLinearGradient(0, 0, 0, H);
+        g0.addColorStop(0, '#1d5a2c'); g0.addColorStop(1, '#2f8a43');
+        ctx.fillStyle = g0; ctx.fillRect(0, 0, W, H);
+        ctx.fillStyle = 'rgba(255,255,255,0.05)';
+        for (let i = 0; i < 9; i++) { const y0 = H * Math.pow(i / 9, 1.6), y1 = H * Math.pow((i + 0.5) / 9, 1.6); ctx.fillRect(0, y0, W, y1 - y0); }
+        ctx.fillStyle = 'rgba(0,0,0,0.12)';
+        for (let i = 0; i < 160; i++) { const x = ((i * 97) % 1000) / 1000 * W, y = ((i * 571) % 1000) / 1000 * H; ctx.fillRect(x, y, 2 * fs, 6 * fs); }
+        const vg = ctx.createRadialGradient(W / 2, H * 0.5, Math.min(W, H) * 0.25, W / 2, H * 0.5, Math.max(W, H) * 0.75);
+        vg.addColorStop(0, 'rgba(0,0,0,0)'); vg.addColorStop(1, 'rgba(0,0,0,0.55)');
+        ctx.fillStyle = vg; ctx.fillRect(0, 0, W, H);
+        // gölge
+        ctx.fillStyle = 'rgba(0,0,0,0.35)';
+        ctx.beginPath(); ctx.ellipse(tb.x + R * 0.12, tb.y + R * 0.95, R * 0.95, R * 0.2, 0, 0, Math.PI * 2); ctx.fill();
+        // top
         const gr = ctx.createRadialGradient(tb.x - R * 0.35, tb.y - R * 0.4, R * 0.1, tb.x, tb.y, R);
-        gr.addColorStop(0, '#ffffff'); gr.addColorStop(1, '#c9d2e3');
+        gr.addColorStop(0, '#ffffff'); gr.addColorStop(1, '#c3ccdd');
         ctx.fillStyle = gr;
         ctx.beginPath(); ctx.arc(tb.x, tb.y, R, 0, Math.PI * 2); ctx.fill();
-        // desen: ortada beşgen, kenarlarda yarım yamalar
         ctx.save();
         ctx.beginPath(); ctx.arc(tb.x, tb.y, R, 0, Math.PI * 2); ctx.clip();
         ctx.fillStyle = '#1b2236';
@@ -720,33 +723,40 @@ const MiniGame = {
         pent(tb.x, tb.y, R * 0.24, -Math.PI / 2);
         for (let i = 0; i < 5; i++) { const a = -Math.PI / 2 + Math.PI / 5 + (i * Math.PI * 2) / 5; pent(tb.x + Math.cos(a) * R * 0.92, tb.y + Math.sin(a) * R * 0.92, R * 0.24, a); }
         ctx.restore();
-        // bölgeler: yatay ve dikey ince çizgiler
-        ctx.strokeStyle = 'rgba(255,61,240,0.55)'; ctx.lineWidth = 1.5 * fs; ctx.setLineDash([3 * fs, 4 * fs]);
+        ctx.strokeStyle = 'rgba(255,61,240,0.55)'; ctx.lineWidth = 1.5 * fs; ctx.setLineDash([4 * fs, 5 * fs]);
         ctx.beginPath(); ctx.moveTo(tb.x - R, tb.y); ctx.lineTo(tb.x + R, tb.y); ctx.moveTo(tb.x, tb.y - R); ctx.lineTo(tb.x, tb.y + R); ctx.stroke(); ctx.setLineDash([]);
-        ctx.strokeStyle = 'rgba(5,11,29,0.9)'; ctx.lineWidth = 2 * fs;
+        ctx.strokeStyle = 'rgba(5,11,29,0.9)'; ctx.lineWidth = 2.5 * fs;
         ctx.beginPath(); ctx.arc(tb.x, tb.y, R, 0, Math.PI * 2); ctx.stroke();
-        // yanlarda falso okları (sol tarafa vurmak sağa döndürür)
+        // yanlarda falso okları
         const curl = (side) => {
-          const cx = tb.x + side * R * 1.16, a = side > 0 ? 0 : Math.PI;
-          ctx.strokeStyle = '#ff3df0'; ctx.fillStyle = '#ff3df0'; ctx.lineWidth = 3 * fs; ctx.lineCap = 'round';
-          ctx.beginPath(); ctx.arc(tb.x, tb.y, R * 1.16, a - 0.45, a + 0.45); ctx.stroke();
-          const ea = a - 0.45 * side, ex = tb.x + Math.cos(ea) * R * 1.16, ey = tb.y + Math.sin(ea) * R * 1.16;
-          const hx = -Math.sin(ea) * -side, hy = Math.cos(ea) * -side; // ok ucu yönü (yukarı doğru)
-          ctx.beginPath(); ctx.moveTo(ex + hx * 7 * fs, ey + hy * 7 * fs); ctx.lineTo(ex - hy * 5 * fs, ey + hx * 5 * fs); ctx.lineTo(ex + hy * 5 * fs, ey - hx * 5 * fs); ctx.closePath(); ctx.fill();
-          ctx.lineCap = 'butt'; void cx;
+          const a = side > 0 ? 0 : Math.PI, rr = R * 1.14;
+          ctx.strokeStyle = '#ff3df0'; ctx.fillStyle = '#ff3df0'; ctx.lineWidth = 4 * fs; ctx.lineCap = 'round';
+          ctx.beginPath(); ctx.arc(tb.x, tb.y, rr, a - 0.42, a + 0.42); ctx.stroke();
+          const ea = a - 0.42 * side, ex = tb.x + Math.cos(ea) * rr, ey = tb.y + Math.sin(ea) * rr;
+          const hx = Math.sin(ea) * side, hy = -Math.cos(ea) * side;
+          ctx.beginPath(); ctx.moveTo(ex + hx * 9 * fs, ey + hy * 9 * fs); ctx.lineTo(ex - hy * 6 * fs, ey + hx * 6 * fs); ctx.lineTo(ex + hy * 6 * fs, ey - hx * 6 * fs); ctx.closePath(); ctx.fill();
+          ctx.lineCap = 'butt';
         };
         curl(-1); curl(1);
-        ctx.font = `800 ${Math.round(11 * fs)}px "Barlow Semi Condensed", "Arial Narrow", sans-serif`;
+        ctx.font = `800 ${Math.round(14 * fs)}px "Barlow Semi Condensed", "Arial Narrow", sans-serif`;
         ctx.textAlign = 'center';
-        const lab = (txt, x, y) => { const w = ctx.measureText(txt).width + 10 * fs; ctx.fillStyle = 'rgba(5,11,29,0.8)'; ctx.fillRect(x - w / 2, y - 11 * fs, w, 15 * fs); ctx.fillStyle = '#fff'; ctx.fillText(txt, x, y); };
-        lab('SERT', tb.x, tb.y - R * 1.32 - 3 * fs);
-        lab('AŞIRTMA', tb.x, tb.y + R * 1.32 + 12 * fs);
-        const since = t - aimSt.t0;
+        const lab = (txt, x, y) => { const w = ctx.measureText(txt).width + 14 * fs; ctx.fillStyle = 'rgba(5,11,29,0.82)'; ctx.fillRect(x - w / 2, y - 15 * fs, w, 21 * fs); ctx.fillStyle = '#fff'; ctx.fillText(txt, x, y); };
+        lab('SERT', tb.x, tb.y - R * 1.14 - 12 * fs);
+        lab('AŞIRTMA', tb.x, tb.y + R * 1.14 + 24 * fs);
+        // üstte süre çubuğu ve nişanın gücü
+        const rem = U.clamp(1 - aimT / scene.timeLimit, 0, 1);
+        ctx.fillStyle = 'rgba(10,16,32,0.6)'; ctx.fillRect(0, 0, W, 7 * fs);
+        ctx.fillStyle = rem > 0.35 ? '#ffcf3f' : '#ff5a4f'; ctx.fillRect(0, 0, W * rem, 7 * fs);
+        const pw = Math.min(W * 0.5, 180 * fs), px = W / 2 - pw / 2, py = 26 * fs;
+        ctx.fillStyle = 'rgba(5,11,29,0.75)'; ctx.fillRect(px - 30 * fs, py - 4 * fs, pw + 38 * fs, 18 * fs);
+        ctx.fillStyle = '#fff'; ctx.font = `800 ${Math.round(13 * fs)}px sans-serif`; ctx.fillText('⚡', px - 16 * fs, py + 10 * fs);
+        ctx.fillStyle = 'rgba(255,255,255,0.18)'; ctx.fillRect(px, py, pw, 10 * fs);
+        ctx.fillStyle = aimSt.power > 0.85 ? '#ff785a' : '#ffcf3f'; ctx.fillRect(px, py, pw * aimSt.power, 10 * fs);
+        ctx.restore();
         pill(since < 2.5 ? 'TOPUN BİR NOKTASINA DOKUN' : since < 5.5 ? 'YANLAR FALSO  ·  ALT KISIM AŞIRTMA' : 'DIŞARI DOKUN: YENİDEN NİŞAN');
       }
 
       function drawPreview() {
-        if (aimStyle && aimSt && phase === 'aim') return drawAim();
         if (!preview || !preview.pts.length) return;
         const pts = preview.pts;
         const n = Math.max(2, Math.floor(pts.length * previewFrac));
@@ -919,6 +929,8 @@ const MiniGame = {
         }
 
         drawHud();
+        // Dokunuş tarzı: nişandan sonra ayrı yakın plan sahnesi (her şeyin üstünde)
+        if (aimStyle && aimSt && phase === 'aim') drawAim();
 
         particles.forEach((p) => {
           p.vy += 620 * dpr * dt; p.x += p.vx * dt; p.y += p.vy * dt; p.life -= dt; p.rot += dt * 8;
