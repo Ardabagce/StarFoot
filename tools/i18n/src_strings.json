@@ -44728,6 +44728,25 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Vuruş tarzı": [
+"game.js"
+],
+"Hedef: kalede bir noktaya dokun, güç çubuğunu yeşilde durdur.": [
+"game.js"
+],
+"StarFoot: geri çek ve bırak; çizginin yönü falsoyu belirler.": [
+"game.js"
+],
+"StarFoot": [
+"game.js",
+"i18n.js",
+"legacy.js",
+"meta.js",
+"oyna-r8k4tq.html"
+],
+"Hedef": [
+"game.js"
+],
 "Editör": [
 "game.js",
 "lang-ar.js",
@@ -45275,6 +45294,12 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
+],
+"Vuruş tarzı: Hedef": [
+"game.js"
+],
+"Vuruş tarzı: StarFoot": [
+"game.js"
 ],
 "💾 Kaydedildi": [
 "game.js",
@@ -46475,10 +46500,28 @@
 "lang-pt.js"
 ],
 "⚡ Hızlı altyapı": [
-"game.js"
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Altyapı sezonları 14 maç sürer (normalde 38): çocukluk yılları daha hızlı geçer. Gelişimin biraz daha yavaş olur (%90).": [
-"game.js"
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Kullandığın ayak": [
 "game.js",
@@ -46783,12 +46826,6 @@
 "i18n.js",
 "lifex.js",
 "wc.js"
-],
-"StarFoot": [
-"i18n.js",
-"legacy.js",
-"meta.js",
-"oyna-r8k4tq.html"
 ],
 "script,style,textarea,[contenteditable],[data-noi18n]": [
 "i18n.js"
@@ -85924,6 +85961,61 @@
 ],
 "لا شيء مما أُضيف إلى Diamond يمنح أفضلية في المباريات، ولم يتغير شيء في اللعبة المجانية.": [
 "lang-ar.js"
+],
+"Hızlı altyapı": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Altyapı sezonları 14 maç sürer (normalde 38): çocukluk yılları daha hızlı geçer.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Academy seasons last 14 matches (normally 38), so your childhood years pass faster.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Gelişimin biraz daha yavaş olur (%90).": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Your development is a little slower (90%).": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "(Asist)": [
 "lang-ar.js",
@@ -136179,6 +136271,50 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"⚡ HIZLI ALTYAPI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HIZLI ALTYAPI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GELİŞİMİN BİRAZ DAHA YAVAŞ OLUR (%90).": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YOUR DEVELOPMENT IS A LITTLE SLOWER (90%).": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -185924,6 +186060,15 @@
 "Nichts davon gibt in Spielen einen Vorteil, und im kostenlosen Spiel hat sich nichts geändert.": [
 "lang-de.js"
 ],
+"⚡ Schnelle Jugend": [
+"lang-de.js"
+],
+"Schnelle Jugend": [
+"lang-de.js"
+],
+"Jugendsaisons dauern 14 Spiele (sonst 38), deine Kindheit vergeht schneller. Deine Entwicklung ist etwas langsamer (90 %).": [
+"lang-de.js"
+],
 "– wir haben uns qualifiziert!": [
 "lang-de.js"
 ],
@@ -197458,6 +197603,12 @@
 "lang-de.js"
 ],
 "NEUE INHALTE FÜR DIAMOND": [
+"lang-de.js"
+],
+"⚡ SCHNELLE JUGEND": [
+"lang-de.js"
+],
+"SCHNELLE JUGEND": [
 "lang-de.js"
 ],
 "– WIR HABEN UNS QUALIFIZIERT!": [
@@ -214057,6 +214208,15 @@
 "Nothing added to Diamond gives an edge in matches, and nothing changed in the free game.": [
 "lang-en.js"
 ],
+"⚡ Fast academy": [
+"lang-en.js"
+],
+"Fast academy": [
+"lang-en.js"
+],
+"Academy seasons last 14 matches (normally 38), so your childhood years pass faster. Your development is a little slower (90%).": [
+"lang-en.js"
+],
 "— we qualified!": [
 "lang-en.js"
 ],
@@ -224890,6 +225050,12 @@
 "lang-en.js"
 ],
 "NEW DIAMOND CONTENT": [
+"lang-en.js"
+],
+"⚡ FAST ACADEMY": [
+"lang-en.js"
+],
+"FAST ACADEMY": [
 "lang-en.js"
 ],
 "— WE QUALIFIED!": [
@@ -241506,6 +241672,15 @@
 "Nada de lo añadido a Diamond da ventaja en los partidos y el juego gratis no ha cambiado.": [
 "lang-es.js"
 ],
+"⚡ Cantera rápida": [
+"lang-es.js"
+],
+"Cantera rápida": [
+"lang-es.js"
+],
+"Las temporadas de cantera duran 14 partidos (normalmente 38): la infancia pasa más rápido. Tu progresión es algo más lenta (90 %).": [
+"lang-es.js"
+],
 "— ¡nos hemos clasificado!": [
 "lang-es.js"
 ],
@@ -252404,6 +252579,12 @@
 "lang-es.js"
 ],
 "NUEVO CONTENIDO DIAMOND": [
+"lang-es.js"
+],
+"⚡ CANTERA RÁPIDA": [
+"lang-es.js"
+],
+"CANTERA RÁPIDA": [
 "lang-es.js"
 ],
 "— ¡NOS HEMOS CLASIFICADO!": [
@@ -268824,6 +269005,15 @@
 "Rien de ce qui est ajouté à Diamond ne donne d’avantage en match, et rien n’a changé dans le jeu gratuit.": [
 "lang-fr.js"
 ],
+"⚡ Formation rapide": [
+"lang-fr.js"
+],
+"Formation rapide": [
+"lang-fr.js"
+],
+"Les saisons de formation durent 14 matchs (38 normalement) : l’enfance passe plus vite. Ta progression est un peu plus lente (90 %).": [
+"lang-fr.js"
+],
 "— on est qualifiés !": [
 "lang-fr.js"
 ],
@@ -279363,6 +279553,12 @@
 "lang-fr.js"
 ],
 "NOUVEAU CONTENU DIAMOND": [
+"lang-fr.js"
+],
+"⚡ FORMATION RAPIDE": [
+"lang-fr.js"
+],
+"FORMATION RAPIDE": [
 "lang-fr.js"
 ],
 "— ON EST QUALIFIÉS !": [
@@ -295341,6 +295537,15 @@
 "Tak satu pun tambahan Diamond memberi keunggulan di laga, dan game gratis tidak berubah.": [
 "lang-id.js"
 ],
+"⚡ Akademi cepat": [
+"lang-id.js"
+],
+"Akademi cepat": [
+"lang-id.js"
+],
+"Musim akademi berlangsung 14 laga (biasanya 38): masa kecil berlalu lebih cepat. Perkembanganmu sedikit lebih lambat (90%).": [
+"lang-id.js"
+],
 "— kita lolos!": [
 "lang-id.js"
 ],
@@ -305666,6 +305871,12 @@
 "lang-id.js"
 ],
 "KONTEN DIAMOND BARU": [
+"lang-id.js"
+],
+"⚡ AKADEMI CEPAT": [
+"lang-id.js"
+],
+"AKADEMI CEPAT": [
 "lang-id.js"
 ],
 "— KITA LOLOS!": [
@@ -321634,6 +321845,15 @@
 "Nulla di ciò che arriva in Diamond dà vantaggi in partita, e nel gioco gratuito non cambia nulla.": [
 "lang-it.js"
 ],
+"⚡ Giovanili rapide": [
+"lang-it.js"
+],
+"Giovanili rapide": [
+"lang-it.js"
+],
+"Le stagioni giovanili durano 14 partite (di solito 38): l’infanzia passa più in fretta. La tua crescita è un po’ più lenta (90%).": [
+"lang-it.js"
+],
 "— ci siamo qualificati!": [
 "lang-it.js"
 ],
@@ -331959,6 +332179,12 @@
 "lang-it.js"
 ],
 "NUOVI CONTENUTI DIAMOND": [
+"lang-it.js"
+],
+"⚡ GIOVANILI RAPIDE": [
+"lang-it.js"
+],
+"GIOVANILI RAPIDE": [
 "lang-it.js"
 ],
 "— CI SIAMO QUALIFICATI!": [
@@ -348702,6 +348928,15 @@
 "Nada do que entrou no Diamond dá vantagem nos jogos, e nada mudou no jogo grátis.": [
 "lang-pt.js"
 ],
+"⚡ Base rápida": [
+"lang-pt.js"
+],
+"Base rápida": [
+"lang-pt.js"
+],
+"As temporadas da base duram 14 jogos (normalmente 38): a infância passa mais rápido. Sua evolução fica um pouco mais lenta (90%).": [
+"lang-pt.js"
+],
 "— nos classificamos!": [
 "lang-pt.js"
 ],
@@ -358800,6 +359035,12 @@
 "NOVO CONTEÚDO DIAMOND": [
 "lang-pt.js"
 ],
+"⚡ BASE RÁPIDA": [
+"lang-pt.js"
+],
+"BASE RÁPIDA": [
+"lang-pt.js"
+],
 "— NOS CLASSIFICAMOS!": [
 "lang-pt.js"
 ],
@@ -367515,6 +367756,15 @@
 "700 {}px \"Barlow Semi Condensed\", \"Arial Narrow\", sans-serif": [
 "minigame.js",
 "sprites.js"
+],
+"KALEDE HEDEFE DOKUN  ·  ARKADAŞINA DOKUN: PAS": [
+"minigame.js"
+],
+"KALEDE HEDEFE DOKUN": [
+"minigame.js"
+],
+"GÜÇ {}  ·  YEŞİLDE DURDUR  ·  {}": [
+"minigame.js"
 ],
 "GÜÇ {}   ·   {}   ·   {}{}": [
 "minigame.js"

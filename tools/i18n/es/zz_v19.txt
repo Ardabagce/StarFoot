@@ -1516,3 +1516,12 @@
 8370|⚡ Cantera rápida
 8371|Cantera rápida
 8372|Las temporadas de cantera duran 14 partidos (normalmente 38): la infancia pasa más rápido. Tu progresión es algo más lenta (90 %).
+8375|Estilo de tiro
+8376|Objetivo
+8377|Objetivo: toca un punto de la portería y detén la barra de potencia en verde.
+8378|StarFoot: tira hacia atrás y suelta; la forma del gesto define el efecto.
+8379|Estilo de tiro: Objetivo
+8380|Estilo de tiro: StarFoot
+8382|TOCA UN OBJETIVO EN LA PORTERÍA
+8381|TOCA UN OBJETIVO EN LA PORTERÍA · TOCA A UN COMPAÑERO: PASE
+8383|POTENCIA {} · DETÉN EN VERDE · {}

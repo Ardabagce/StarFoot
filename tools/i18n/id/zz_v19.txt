@@ -1516,3 +1516,12 @@
 8370|⚡ Akademi cepat
 8371|Akademi cepat
 8372|Musim akademi berlangsung 14 laga (biasanya 38): masa kecil berlalu lebih cepat. Perkembanganmu sedikit lebih lambat (90%).
+8375|Gaya tendangan
+8376|Target
+8377|Target: ketuk satu titik di gawang, lalu hentikan bar tenaga di zona hijau.
+8378|StarFoot: tarik ke belakang lalu lepas; bentuk usapan menentukan efek.
+8379|Gaya tendangan: Target
+8380|Gaya tendangan: StarFoot
+8382|KETUK TARGET DI GAWANG
+8381|KETUK TARGET DI GAWANG · KETUK REKAN: OPER
+8383|TENAGA {} · HENTIKAN DI HIJAU · {}

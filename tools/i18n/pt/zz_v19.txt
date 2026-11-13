@@ -1516,3 +1516,12 @@
 8370|⚡ Base rápida
 8371|Base rápida
 8372|As temporadas da base duram 14 jogos (normalmente 38): a infância passa mais rápido. Sua evolução fica um pouco mais lenta (90%).
+8375|Estilo de chute
+8376|Alvo
+8377|Alvo: toque num ponto do gol e pare a barra de força no verde.
+8378|StarFoot: puxe para trás e solte; o formato do gesto define o efeito.
+8379|Estilo de chute: Alvo
+8380|Estilo de chute: StarFoot
+8382|TOQUE UM ALVO NO GOL
+8381|TOQUE UM ALVO NO GOL · TOQUE NUM COLEGA: PASSE
+8383|FORÇA {} · PARE NO VERDE · {}

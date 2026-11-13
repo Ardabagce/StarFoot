@@ -1516,3 +1516,12 @@
 8370|⚡ Giovanili rapide
 8371|Giovanili rapide
 8372|Le stagioni giovanili durano 14 partite (di solito 38): l’infanzia passa più in fretta. La tua crescita è un po’ più lenta (90%).
+8375|Stile di tiro
+8376|Mirino
+8377|Mirino: tocca un punto della porta e ferma la barra di potenza sul verde.
+8378|StarFoot: tira indietro e rilascia; la forma del gesto decide l’effetto.
+8379|Stile di tiro: Mirino
+8380|Stile di tiro: StarFoot
+8382|TOCCA UN PUNTO DELLA PORTA
+8381|TOCCA UN PUNTO DELLA PORTA · TOCCA UN COMPAGNO: PASSAGGIO
+8383|POTENZA {} · FERMA SUL VERDE · {}

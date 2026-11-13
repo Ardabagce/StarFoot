@@ -377,11 +377,23 @@ const MiniGame = {
           const power = U.clamp(meterAt(t), 0.12, 1);
           // tatlı nokta 0,62–0,85: dışına çıktıkça isabet bozulur; çok sert vuruş yükselir
           const q = power >= 0.62 && power <= 0.85 ? 1 : U.clamp(1 - Math.min(Math.abs(power - 0.62), Math.abs(power - 0.85)) * 2.6, 0.2, 1);
-          let ang = Math.atan2(0 - ball.y, aimSt.gx - ball.x);
-          ang += U.gauss() * (1 - q) * 0.07;
+          const chord = Math.atan2(0 - ball.y, aimSt.gx - ball.x);
+          // vuruş hızı: çubuk değeri doğrudan değil, tatlı noktada sert ve isabetli
+          // frikikte daha yumuşak ve falsolu (barajın yanından dolanır), diğerlerinde sert
+          const sweet = q === 1 ? (power - 0.62) / 0.23 : -1;
+          const kp = isFK ? (sweet >= 0 ? 0.74 + 0.08 * sweet : U.clamp(0.36 + 0.5 * power, 0.2, 0.86)) : (sweet >= 0 ? 0.93 + 0.07 * sweet : U.clamp(0.4 + 0.6 * power, 0.2, 0.95));
+          // frikik: barajın etrafından dolanması için hedefe göre otomatik falso
+          let spin = 0, comp = 0;
+          if (isFK) {
+            spin = (aimSt.gx >= ball.x ? 1 : -1) * curveMax;
+            const dist = Math.hypot(aimSt.gx - ball.x, ball.y), sp = kp * maxSpeed;
+            comp = U.clamp((0.55 * spin * dist) / (sp * sp), -0.5, 0.5);
+          }
+          MiniGame.lastAim = { power, q, kp };
+          let ang = chord + comp + U.gauss() * (1 - q) * 0.07;
           aimSt = null;
-          if (power > 0.93 && liftIdx === 0) liftIdx = 1; // tam güç alçak gitmez
-          kick(ang, power, 0, false);
+          if (kp > 0.93 && liftIdx === 0) liftIdx = 1; // tam güç alçak gitmez
+          kick(ang, kp, spin, false);
           return;
         }
         cv.setPointerCapture(e.pointerId);

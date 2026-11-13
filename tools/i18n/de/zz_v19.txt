@@ -1516,3 +1516,12 @@
 8370|⚡ Schnelle Jugend
 8371|Schnelle Jugend
 8372|Jugendsaisons dauern 14 Spiele (sonst 38), deine Kindheit vergeht schneller. Deine Entwicklung ist etwas langsamer (90 %).
+8375|Schussstil
+8376|Ziel
+8377|Ziel: Tippe auf einen Punkt im Tor und stoppe die Kraftleiste im grünen Bereich.
+8378|StarFoot: zurückziehen und loslassen; die Form der Wischbewegung bestimmt den Effet.
+8379|Schussstil: Ziel
+8380|Schussstil: StarFoot
+8382|ZIEL IM TOR ANTIPPEN
+8381|ZIEL IM TOR ANTIPPEN · MITSPIELER ANTIPPEN: PASS
+8383|KRAFT {} · IM GRÜNEN STOPPEN · {}

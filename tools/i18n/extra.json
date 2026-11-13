@@ -3670,5 +3670,14 @@
 "Maçı belli bir dakikadan devral ya da sezonun son haftalarında takımı kurtar. {}/{}": "Take over a match at a set minute or save the team in the final weeks of the season. {}/{}",
 "⚡ Hızlı altyapı": "⚡ Fast academy",
 "Hızlı altyapı": "Fast academy",
-"Altyapı sezonları 14 maç sürer (normalde 38): çocukluk yılları daha hızlı geçer. Gelişimin biraz daha yavaş olur (%90).": "Academy seasons last 14 matches (normally 38), so your childhood years pass faster. Your development is a little slower (90%)."
+"Altyapı sezonları 14 maç sürer (normalde 38): çocukluk yılları daha hızlı geçer. Gelişimin biraz daha yavaş olur (%90).": "Academy seasons last 14 matches (normally 38), so your childhood years pass faster. Your development is a little slower (90%).",
+"Vuruş tarzı": "Shooting style",
+"Hedef": "Target",
+"Hedef: kalede bir noktaya dokun, güç çubuğunu yeşilde durdur.": "Target: tap a spot in the goal, then stop the power bar in the green.",
+"StarFoot: geri çek ve bırak; çizginin yönü falsoyu belirler.": "StarFoot: pull back and release; the shape of your swipe sets the curl.",
+"Vuruş tarzı: Hedef": "Shooting style: Target",
+"Vuruş tarzı: StarFoot": "Shooting style: StarFoot",
+"KALEDE HEDEFE DOKUN  ·  ARKADAŞINA DOKUN: PAS": "TAP A TARGET IN THE GOAL  ·  TAP A TEAMMATE: PASS",
+"KALEDE HEDEFE DOKUN": "TAP A TARGET IN THE GOAL",
+"GÜÇ {}  ·  YEŞİLDE DURDUR  ·  {}": "POWER {}  ·  STOP IN THE GREEN  ·  {}"
 }
