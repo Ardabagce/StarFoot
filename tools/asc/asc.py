@@ -513,7 +513,22 @@ def pack_setup(asc, app_id, packs, replace_shot=False):
         print(f"   {len(cfg['locales'])} dil tamam")
         # fiyat (ABD tabanlı, diğer ülkeler Apple'ın eşdeğer fiyatı)
         sch = safe(f'/v2/inAppPurchases/{iid}/iapPriceSchedule')
-        if not sch.get('data'):
+        cur = None
+        if sch.get('data'):
+            # mevcut ABD fiyatı: metadata'daki fiyattan farklıysa çizelge yeniden kurulur (hemen geçerli)
+            mp = safe(f"/v1/inAppPurchasePriceSchedules/{sch['data']['id']}/manualPrices", limit=50, include='inAppPurchasePricePoint,territory')
+            pts_inc = {x['id']: x for x in mp.get('included', []) if x['type'] == 'inAppPurchasePricePoints'}
+            for row in mp.get('data', []):
+                rel = row.get('relationships', {})
+                t = ((rel.get('territory') or {}).get('data') or {}).get('id')
+                ppid = ((rel.get('inAppPurchasePricePoint') or {}).get('data') or {}).get('id')
+                if t == 'USA' and ppid in pts_inc:
+                    cur = pts_inc[ppid]['attributes'].get('customerPrice')
+            if cur and str(cur) != str(cfg['price']):
+                print(f"   fiyat değişiyor: {cur} -> {cfg['price']} USD")
+            elif not cur:
+                print('   fiyat zaten var (ana ülke ABD değil, dokunulmadı)')
+        if not sch.get('data') or (cur and str(cur) != str(cfg['price'])):
             pts, nxt = [], f'/v2/inAppPurchases/{iid}/pricePoints'
             params = {'filter[territory]': 'USA', 'limit': 200}
             while nxt:
@@ -534,8 +549,8 @@ def pack_setup(asc, app_id, packs, replace_shot=False):
                                   'relationships': {'inAppPurchaseV2': {'data': {'type': 'inAppPurchases', 'id': iid}},
                                                     'inAppPurchasePricePoint': {'data': {'type': 'inAppPurchasePricePoints', 'id': pp['id']}}}}]})
                 print(f"   fiyat: {cfg['price']} USD")
-        else:
-            print('   fiyat zaten var')
+        elif cur:
+            print(f'   fiyat zaten {cur} USD')
         # satışta olduğu ülkeler: hepsi
         av = safe(f'/v2/inAppPurchases/{iid}/inAppPurchaseAvailability')
         if not av.get('data'):

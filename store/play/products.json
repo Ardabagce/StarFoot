@@ -432,7 +432,136 @@
   },
   {
    "sku": "starfoot_diamond_upg",
-   "price": "4.99",
+   "price": "3.99",
+   "consumable": false,
+   "listings": {
+    "tr-TR": {
+     "title": "Diamond yükseltme",
+     "description": "Her şey dahil: Premium+, tüm modlar"
+    },
+    "en-US": {
+     "title": "Diamond upgrade",
+     "description": "Everything: Premium+, all game modes"
+    },
+    "es-ES": {
+     "title": "Mejora a Diamond",
+     "description": "Todo: Premium+ y todos los modos"
+    },
+    "pt-BR": {
+     "title": "Upgrade Diamond",
+     "description": "Tudo: Premium+ e todos os modos"
+    },
+    "de-DE": {
+     "title": "Diamond-Upgrade",
+     "description": "Alles: Premium+ und alle Modi"
+    },
+    "fr-FR": {
+     "title": "Passage à Diamond",
+     "description": "Tout : Premium+ et tous les modes"
+    },
+    "it-IT": {
+     "title": "Upgrade Diamond",
+     "description": "Tutto: Premium+ e tutte le modalità"
+    },
+    "id": {
+     "title": "Upgrade Diamond",
+     "description": "Semua: Premium+ dan semua mode"
+    },
+    "ja-JP": {
+     "title": "Diamondへアップグレード",
+     "description": "全部入り：Premium+と全モード"
+    }
+   }
+  },
+  {
+   "sku": "starfoot_diamond_u599",
+   "price": "5.99",
+   "consumable": false,
+   "listings": {
+    "tr-TR": {
+     "title": "Diamond yükseltme",
+     "description": "Her şey dahil: Premium+, tüm modlar"
+    },
+    "en-US": {
+     "title": "Diamond upgrade",
+     "description": "Everything: Premium+, all game modes"
+    },
+    "es-ES": {
+     "title": "Mejora a Diamond",
+     "description": "Todo: Premium+ y todos los modos"
+    },
+    "pt-BR": {
+     "title": "Upgrade Diamond",
+     "description": "Tudo: Premium+ e todos os modos"
+    },
+    "de-DE": {
+     "title": "Diamond-Upgrade",
+     "description": "Alles: Premium+ und alle Modi"
+    },
+    "fr-FR": {
+     "title": "Passage à Diamond",
+     "description": "Tout : Premium+ et tous les modes"
+    },
+    "it-IT": {
+     "title": "Upgrade Diamond",
+     "description": "Tutto: Premium+ e tutte le modalità"
+    },
+    "id": {
+     "title": "Upgrade Diamond",
+     "description": "Semua: Premium+ dan semua mode"
+    },
+    "ja-JP": {
+     "title": "Diamondへアップグレード",
+     "description": "全部入り：Premium+と全モード"
+    }
+   }
+  },
+  {
+   "sku": "starfoot_diamond_u199",
+   "price": "1.99",
+   "consumable": false,
+   "listings": {
+    "tr-TR": {
+     "title": "Diamond yükseltme",
+     "description": "Her şey dahil: Premium+, tüm modlar"
+    },
+    "en-US": {
+     "title": "Diamond upgrade",
+     "description": "Everything: Premium+, all game modes"
+    },
+    "es-ES": {
+     "title": "Mejora a Diamond",
+     "description": "Todo: Premium+ y todos los modos"
+    },
+    "pt-BR": {
+     "title": "Upgrade Diamond",
+     "description": "Tudo: Premium+ e todos os modos"
+    },
+    "de-DE": {
+     "title": "Diamond-Upgrade",
+     "description": "Alles: Premium+ und alle Modi"
+    },
+    "fr-FR": {
+     "title": "Passage à Diamond",
+     "description": "Tout : Premium+ et tous les modes"
+    },
+    "it-IT": {
+     "title": "Upgrade Diamond",
+     "description": "Tutto: Premium+ e tutte le modalità"
+    },
+    "id": {
+     "title": "Upgrade Diamond",
+     "description": "Semua: Premium+ dan semua mode"
+    },
+    "ja-JP": {
+     "title": "Diamondへアップグレード",
+     "description": "全部入り：Premium+と全モード"
+    }
+   }
+  },
+  {
+   "sku": "starfoot_diamond_u099",
+   "price": "0.99",
    "consumable": false,
    "listings": {
     "tr-TR": {

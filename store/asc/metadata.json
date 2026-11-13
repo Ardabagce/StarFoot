@@ -713,9 +713,189 @@
     },
     "starfoot_diamond_upg": {
       "refName": "StarFoot Diamond upgrade",
-      "price": "4.99",
+      "price": "3.99",
       "screenshot": "store/packs/diamond-review.png",
-      "reviewNote": "Discounted upgrade to StarFoot Diamond, offered only to users who already own Premium+. Unlocks the same content as StarFoot Diamond.",
+      "reviewNote": "Discounted upgrade to StarFoot Diamond (3.99 USD), offered only to users who already own Premium+, or the Manager pack, or two of Premium / World Championship Dream / In the Footsteps of Legends. The price shown is the full Diamond price minus what the user already owns. Unlocks the same content as StarFoot Diamond.",
+      "locales": {
+        "tr": [
+          "Diamond yükseltme",
+          "Her şey dahil: Premium+, tüm modlar"
+        ],
+        "en-US": [
+          "Diamond upgrade",
+          "Everything: Premium+, all game modes"
+        ],
+        "en-GB": [
+          "Diamond upgrade",
+          "Everything: Premium+, all game modes"
+        ],
+        "es-ES": [
+          "Mejora a Diamond",
+          "Todo: Premium+ y todos los modos"
+        ],
+        "es-MX": [
+          "Mejora a Diamond",
+          "Todo: Premium+ y todos los modos"
+        ],
+        "pt-BR": [
+          "Upgrade Diamond",
+          "Tudo: Premium+ e todos os modos"
+        ],
+        "pt-PT": [
+          "Upgrade Diamond",
+          "Tudo: Premium+ e todos os modos"
+        ],
+        "de-DE": [
+          "Diamond-Upgrade",
+          "Alles: Premium+ und alle Modi"
+        ],
+        "fr-FR": [
+          "Passage à Diamond",
+          "Tout : Premium+ et tous les modes"
+        ],
+        "it": [
+          "Upgrade Diamond",
+          "Tutto: Premium+ e tutte le modalità"
+        ],
+        "id": [
+          "Upgrade Diamond",
+          "Semua: Premium+ dan semua mode"
+        ],
+        "ar-SA": [
+          "الترقية إلى Diamond",
+          "كل شيء: Premium+ وكل الأوضاع"
+        ],
+        "ja": [
+          "Diamondへアップグレード",
+          "全部入り：Premium+と全モード"
+        ]
+      }
+    },
+    "starfoot_diamond_u599": {
+      "refName": "StarFoot Diamond upgrade 5.99",
+      "price": "5.99",
+      "screenshot": "store/packs/diamond-review.png",
+      "reviewNote": "Discounted upgrade to StarFoot Diamond (5.99 USD), offered only to users who already own StarFoot Premium or one of the World Championship Dream / In the Footsteps of Legends packs. The price shown is the full Diamond price minus what the user already owns. Unlocks the same content as StarFoot Diamond.",
+      "locales": {
+        "tr": [
+          "Diamond yükseltme",
+          "Her şey dahil: Premium+, tüm modlar"
+        ],
+        "en-US": [
+          "Diamond upgrade",
+          "Everything: Premium+, all game modes"
+        ],
+        "en-GB": [
+          "Diamond upgrade",
+          "Everything: Premium+, all game modes"
+        ],
+        "es-ES": [
+          "Mejora a Diamond",
+          "Todo: Premium+ y todos los modos"
+        ],
+        "es-MX": [
+          "Mejora a Diamond",
+          "Todo: Premium+ y todos los modos"
+        ],
+        "pt-BR": [
+          "Upgrade Diamond",
+          "Tudo: Premium+ e todos os modos"
+        ],
+        "pt-PT": [
+          "Upgrade Diamond",
+          "Tudo: Premium+ e todos os modos"
+        ],
+        "de-DE": [
+          "Diamond-Upgrade",
+          "Alles: Premium+ und alle Modi"
+        ],
+        "fr-FR": [
+          "Passage à Diamond",
+          "Tout : Premium+ et tous les modes"
+        ],
+        "it": [
+          "Upgrade Diamond",
+          "Tutto: Premium+ e tutte le modalità"
+        ],
+        "id": [
+          "Upgrade Diamond",
+          "Semua: Premium+ dan semua mode"
+        ],
+        "ar-SA": [
+          "الترقية إلى Diamond",
+          "كل شيء: Premium+ وكل الأوضاع"
+        ],
+        "ja": [
+          "Diamondへアップグレード",
+          "全部入り：Premium+と全モード"
+        ]
+      }
+    },
+    "starfoot_diamond_u199": {
+      "refName": "StarFoot Diamond upgrade 1.99",
+      "price": "1.99",
+      "screenshot": "store/packs/diamond-review.png",
+      "reviewNote": "Discounted upgrade to StarFoot Diamond (1.99 USD), offered only to users who already own the Manager pack plus StarFoot Premium or another pack. The price shown is the full Diamond price minus what the user already owns. Unlocks the same content as StarFoot Diamond.",
+      "locales": {
+        "tr": [
+          "Diamond yükseltme",
+          "Her şey dahil: Premium+, tüm modlar"
+        ],
+        "en-US": [
+          "Diamond upgrade",
+          "Everything: Premium+, all game modes"
+        ],
+        "en-GB": [
+          "Diamond upgrade",
+          "Everything: Premium+, all game modes"
+        ],
+        "es-ES": [
+          "Mejora a Diamond",
+          "Todo: Premium+ y todos los modos"
+        ],
+        "es-MX": [
+          "Mejora a Diamond",
+          "Todo: Premium+ y todos los modos"
+        ],
+        "pt-BR": [
+          "Upgrade Diamond",
+          "Tudo: Premium+ e todos os modos"
+        ],
+        "pt-PT": [
+          "Upgrade Diamond",
+          "Tudo: Premium+ e todos os modos"
+        ],
+        "de-DE": [
+          "Diamond-Upgrade",
+          "Alles: Premium+ und alle Modi"
+        ],
+        "fr-FR": [
+          "Passage à Diamond",
+          "Tout : Premium+ et tous les modes"
+        ],
+        "it": [
+          "Upgrade Diamond",
+          "Tutto: Premium+ e tutte le modalità"
+        ],
+        "id": [
+          "Upgrade Diamond",
+          "Semua: Premium+ dan semua mode"
+        ],
+        "ar-SA": [
+          "الترقية إلى Diamond",
+          "كل شيء: Premium+ وكل الأوضاع"
+        ],
+        "ja": [
+          "Diamondへアップグレード",
+          "全部入り：Premium+と全モード"
+        ]
+      }
+    },
+    "starfoot_diamond_u099": {
+      "refName": "StarFoot Diamond upgrade 0.99",
+      "price": "0.99",
+      "screenshot": "store/packs/diamond-review.png",
+      "reviewNote": "Discounted upgrade to StarFoot Diamond (0.99 USD), offered only to users who already own both Premium+ and the Manager pack; it adds the Diamond-only extras (manager challenges, celebrations, poster, themes). Unlocks the same content as StarFoot Diamond.",
       "locales": {
         "tr": [
           "Diamond yükseltme",

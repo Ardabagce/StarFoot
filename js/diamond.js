@@ -1,7 +1,9 @@
 // StarFoot Diamond (1.0.19): her şey dahil tek satın alma.
 // Premium + Premium+ + tüm oyun modları (Dünya Şampiyonası, Efsaneler, Teknik Direktör) + gelecekteki modlar
 // + Altın koleksiyon (altın/elmas krampon, platin saç, elmas rozet). Premium+ sahiplerine indirimli yükseltme.
-const DIA_IDS = { full: 'starfoot_diamond', upg: 'starfoot_diamond_upg' };
+// Fiyat kademeleri (ABD): full 7.99 · u599 5.99 · upg 3.99 · u199 1.99 · u099 0.99.
+// Sahip olunan paketlerin değeri düşülür: Premium 1.99, Premium+ 3.99 (DŞ ve Efsaneler dahil), DŞ/Efsaneler 1.99'ar, Teknik Direktör 3.99.
+const DIA_IDS = { full: 'starfoot_diamond', u599: 'starfoot_diamond_u599', upg: 'starfoot_diamond_upg', u199: 'starfoot_diamond_u199', u099: 'starfoot_diamond_u099' };
 const DIA_ALL = Object.values(DIA_IDS);
 
 const Diamond = {
@@ -14,7 +16,17 @@ const Diamond = {
     if (v) { Plus.set(true); Premium.set(true); ['wc', 'legends', 'coach'].forEach((k) => Packs.set(k)); }
   },
   owned(list) { return (list || []).some((t) => t && DIA_ALL.includes(t.productIdentifier) && !/pending|refund|revok/i.test(String(t.purchaseState || ''))); },
-  key() { return Plus.active ? 'upg' : 'full'; },
+  // sahip olunanların değeri (USD): Premium+ kapsamı en fazla 3.99, Teknik Direktör 3.99
+  owned() {
+    const raw = (k) => { try { return localStorage.getItem(Packs.key(k)) === '1'; } catch (e) { return false; } };
+    const plus = typeof Plus !== 'undefined' && Plus.active;
+    const base = plus ? 3.99 : Math.min(3.99, (Premium.active ? 1.99 : 0) + (raw('wc') ? 1.99 : 0) + (raw('legends') ? 1.99 : 0));
+    return base + (raw('coach') ? 3.99 : 0);
+  },
+  key() {
+    const r = 7.99 - Diamond.owned();
+    return r > 7 ? 'full' : r > 5 ? 'u599' : r > 3 ? 'upg' : r > 1.5 ? 'u199' : 'u099';
+  },
   priceOf(k) { const x = Diamond.prices[k || Diamond.key()]; return x ? x.s : ''; },
   async load() {
     const P = Premium.plugin();
@@ -122,11 +134,11 @@ const Diamond = {
     const can = Premium.available();
     Premium.track('diamond_view', { source: src || 'menu' });
     if (Diamond.active) { const m0 = Game.modal(`<div class="dia-hero">${Diamond.gem()}<h2 lang="en">StarFoot Diamond</h2><p>Diamond sende! Her şey açık.</p></div>${Diamond.perks()}`, [{ t: 'Harika', cls: 'btn-big' }], { wide: true }); Diamond.paintModes(m0); return m0; }
-    if (can && !Diamond.prices[Diamond.key()]) Diamond.load().then(() => { const el = document.querySelector('.dia-price'); if (el && Diamond.priceOf()) el.textContent = Diamond.priceOf(); });
-    const up = Plus.active;
+    if (can && (!Diamond.prices[Diamond.key()] || !Diamond.prices.full)) Diamond.load().then(() => { U.$$('.dia-price, .dia-price2').forEach((el) => { if (Diamond.priceOf()) el.textContent = Diamond.priceOf(); }); const w = document.querySelector('.dia-was'); if (w && Diamond.prices.full && Diamond.key() !== 'full') w.innerHTML = `<s>${U.esc(Diamond.priceOf('full'))}</s> yerine <b class="dia-price2">${U.esc(Diamond.priceOf())}</b>`; });
+    const up = Diamond.key() !== 'full';
     const btns = [{ t: 'Kapat', cls: 'btn-ghost' }];
     if (can) btns.push({ t: `<span lang="en">💎 ${up ? 'Yükselt' : 'Diamond al'}</span> · <span class="dia-price">${U.esc(Diamond.priceOf() || '')}</span>`, cls: 'btn-big dia-btn', fn: () => Diamond.buy(src) });
-    const dm = Game.modal(`<div class="dia-hero">${Diamond.gem()}<div class="ev-tag dia-tag">Çıkışa özel fiyat</div><h2 lang="en">StarFoot Diamond</h2><p>${up ? 'Premium+ sahibisin: Diamond\'a indirimli yükselt.' : 'Tek seferlik satın alma, her şey sonsuza kadar senin.'}</p></div>${Diamond.perks()}
+    const dm = Game.modal(`<div class="dia-hero">${Diamond.gem()}<div class="ev-tag dia-tag">Çıkışa özel fiyat</div><h2 lang="en">StarFoot Diamond</h2><p>${up ? 'Sahip olduğun paketler fiyattan düşüldü: Diamond’a indirimli yükselt.' : 'Tek seferlik satın alma, her şey sonsuza kadar senin.'}</p>${up ? `<p class="dia-was muted">${Diamond.prices.full ? `<s>${U.esc(Diamond.priceOf('full'))}</s> yerine` : ''} <b class="dia-price2">${U.esc(Diamond.priceOf() || '')}</b></p>` : ''}</div>${Diamond.perks()}
       ${can ? '<p class="muted">Tek seferlik satın alma. Abonelik yok, tüm cihazlarında geri yükleyebilirsin.</p>' : '<p class="muted">Diamond App Store ve Google Play uygulamasında satın alınabilir.</p>'}`, btns, { wide: true });
     Diamond.paintModes(dm);
   },
