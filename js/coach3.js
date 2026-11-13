@@ -30,7 +30,7 @@ const CM_BOND = [
   Coach.keyOf = (i) => (i <= 1 ? 'starfoot_coach' : `starfoot_coach_${i}`);
   Coach.useSlot = (i) => { Coach.slot = i; Coach.KEY = Coach.keyOf(i); };
   Coach.readSlot = (i) => { try { const r = Store.read(Coach.keyOf(i)); return r ? JSON.parse(r) : null; } catch (e) { return null; } };
-  Coach.freeSlot = () => { for (let i = 1; i <= CM_SLOTS; i++) if (!Coach.readSlot(i)) return i; return 0; };
+  Coach.freeSlot = () => { for (let i = 1; i <= (Coach.nSlots ? Coach.nSlots() : CM_SLOTS); i++) if (!Coach.readSlot(i)) return i; return 0; };
 
   // ---------- ücretsiz deneme ----------
   const TKEY = 'starfoot_coach_trial';
@@ -73,7 +73,7 @@ const CM_BOND = [
     const el = document.getElementById('coach');
     const owned = Coach.owned(), left = Coach.trialLeft();
     const slots = [];
-    for (let i = 1; i <= CM_SLOTS; i++) slots.push([i, Coach.readSlot(i)]);
+    for (let i = 1; i <= (Coach.nSlots ? Coach.nSlots() : CM_SLOTS); i++) slots.push([i, Coach.readSlot(i)]);
     const card = ([i, sv]) => {
       if (!sv) return `<button class="ch-slot empty" data-new="${i}"><i>+</i><span><b>Yeni kariyer</b><small>Boş yuva ${i}</small></span></button>`;
       const c = (sv.clubId && Coach.base(sv.clubId)) || CM_NEUTRAL, r = sv.rec || { w: 0, d: 0, l: 0 };
@@ -240,7 +240,7 @@ const CM_BOND = [
   };
   Coach.slotPicker = (fn) => {
     const rows = [];
-    for (let i = 1; i <= CM_SLOTS; i++) { const sv = Coach.readSlot(i); rows.push(`<button class="cm-offer" data-ps="${i}"><span><b>Yuva ${i}</b><small data-noi18n>${sv ? U.esc(`${sv.name} ${sv.surname} · ${(Coach.base(sv.clubId) || {}).name || ''} · ${sv.year}`) : ''}</small></span>${Icon('chevron')}</button>`); }
+    for (let i = 1; i <= (Coach.nSlots ? Coach.nSlots() : CM_SLOTS); i++) { const sv = Coach.readSlot(i); rows.push(`<button class="cm-offer" data-ps="${i}"><span><b>Yuva ${i}</b><small data-noi18n>${sv ? U.esc(`${sv.name} ${sv.surname} · ${(Coach.base(sv.clubId) || {}).name || ''} · ${sv.year}`) : ''}</small></span>${Icon('chevron')}</button>`); }
     const m = Game.modal(`<div class="ev-tag">Teknik Direktör</div><h3>Tüm kariyer yuvaların dolu</h3><p>Yeni kariyer seçtiğin yuvadakinin yerine geçecek.</p><div class="cm-offers">${rows.join('')}</div>`, [{ t: 'Vazgeç', cls: 'btn-ghost' }], { wide: true });
     U.$$('[data-ps]', m).forEach((b) => (b.onclick = () => { m.classList.add('hidden'); m.innerHTML = ''; fn(+b.dataset.ps); }));
   };

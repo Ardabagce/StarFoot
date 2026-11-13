@@ -1366,3 +1366,149 @@
 8173|{} fez uma substituição.
 8167|Condição do rival
 8168|Química deles: {} · A nossa: {}
+8352|{} Apoiador fundador
+8178|Diamante
+8179|Noite dourada
+8180|Gramado
+8181|Retrô
+8182|+3 espaços de carreira
+8183|6 espaços com Diamond
+8184|Desafio em andamento
+8185|🎯 Desafios
+8340|Situações prontas, metas difíceis: {} desafios · {}/{} ⭐
+8186|Tema da tela
+8187|Cores da tela de técnico
+8188|Temas além do Clássico liberam com o Diamond
+8189|Fora de casa, 55 minutos, perdendo por 0-2. O vestiário está mudo e a torcida olha para você.
+8192|Diminua para um gol
+8193|Termine empatado
+8194|Vença
+8195|Não perca
+8196|Vença por 2
+8197|Vença por 3
+8198|Com 10
+8199|Seu zagueiro foi expulso aos 25. Está 0-0 e o rival pressiona.
+8202|Vença sem sofrer gol
+8203|Derrube o gigante
+8204|O mais forte da liga vem ao seu estádio. No papel, você não tem chance.
+8207|Apito final
+8208|Final de copa, 78 minutos, 1-1. Sem prorrogação: empate leva aos pênaltis.
+8211|Levante a taça (nos pênaltis)
+8212|Vença no tempo normal
+8213|Você perdeu a ida por 0-3. A volta é em casa, estádio lotado. O milagre exige ao menos 3 gols.
+8217|Vença o jogo
+8218|Vença por 4 (avance)
+8219|Operação resgate
+8220|Faltam 10 semanas. O time está na zona de rebaixamento, a 5 pontos da salvação. A diretoria te deu uma última chance.
+8224|Escape do rebaixamento
+8225|Termine 2 posições acima da zona
+8226|Termine 4 posições acima da zona
+8227|Corrida pelo título
+8228|Faltam 6 semanas. Você é o segundo, o líder está 3 pontos à frente. Cada jogo é uma final.
+8232|Termine entre os 2 primeiros
+8233|Seja campeão
+8234|Seja campeão invicto
+180|Sonho europeu
+8235|Faltam 12 semanas. Seu modesto clube está em 7.º e a torcida sonha com a Europa.
+8238|Termine entre os 6 primeiros
+8239|Termine entre os 5 primeiros
+8240|Termine entre os 4 primeiros
+8241|Acesso antecipado
+8242|🧪 Acesso antecipado
+1345|Grátis
+8367|A partir dos {} minutos
+8243|Jogo completo
+8365|📅 Últimas {} semanas
+8369|Últimas {} semanas
+8244|Desafio da semana
+8245|Desafio da semana
+8338|{} O primeiro desafio é aberto a todos. Os demais, com o StarFoot Diamond.
+8246|O primeiro desafio é aberto a todos. Os demais, com o StarFoot Diamond.
+8249|Assuma uma situação pronta, cumpra a meta e junte estrelas. Suas carreiras não são afetadas.
+8360|Desafios · {}/{} ⭐
+267|Desafios
+8252|Desafio
+8362|{} Desafio
+8253|Final de copa
+8254|Europa · Jogo de volta
+8350|{} Desafio: {}. {}
+8255|Ajuste seu time titular e a tática, depois vá para o jogo.
+8255|Ajuste seu time titular e a tática, depois vá para o jogo.
+8361|{}.º lugar · {}V {}E {}D
+8256|Perfeito!
+189|Você conseguiu!
+8257|Desta vez não
+8258|, você está com 10
+8259|Você joga em casa.
+8260|Você joga fora.
+8337|{} minutos, placar {}-{}{}. {} Todos jogam o mesmo desafio; seja o melhor da semana.
+8346|Faltam {} semanas · {}.º lugar
+8262|Sair do desafio
+8263|Sair do desafio?
+8264|Esta tentativa não será salva.
+635|Sair
+8342|🟥 {} foi expulso. Você está com 10.
+8267|Ida: 0-3. É preciso vencer por 4 para avançar.
+8363|aos {} minutos, com {}-{}
+8348|⏱️ Você assumiu o jogo {}.
+8270|desde o início
+8364|💎 {} desafios liberados
+8272|1 desafio grátis · o resto com o Diamond
+8273|Desafios de técnico
+8274|🎯 Desafios de técnico
+8335|Assuma um jogo num minuto definido ou salve o time nas últimas semanas. {}/{} ⭐
+8276|Chuva de diamantes
+8277|Braços para cima, chovem diamantes do céu.
+8278|Coroação
+8279|Ele para, leva as mãos à cabeça e desce uma coroa de ouro.
+8280|Fogos de artifício
+8281|Desliza de joelhos e o céu se ilumina.
+8282|Dança do robô
+8283|Movimentos de robô junto à bandeirinha.
+8284|Hora de dormir
+8285|Deita no gramado e canta uma canção de ninar ao rival.
+8286|Salta no ar enquanto relâmpagos caem atrás.
+8287|GOL DE DIAMANTE!
+8288|REI!
+8289|FOGOS!
+8290|RELÂMPAGO!
+8291|Comemorações Diamond
+8349|{} Comemorações Diamond
+8292|Libera com o Diamond
+8293|Cores do clube
+8294|Pôster da carreira
+8356|{} Pôster da carreira{}
+8357|{} Pôster da carreira
+8295|A história está só começando.
+8296|% vitórias
+8297|Títulos e prêmios
+8298|Toda semana o mesmo desafio de técnico para todos. Primeiro para quem tem Diamond, depois para todos.
+8301|As novidades chegam antes para quem tem o Diamond. Conte o que achou e moldamos o jogo juntos.
+8334|{} desafios com estrelas: virar um 0-2, jogar com 10, operação resgate, corrida pelo título...
+8305|Novidades antes de todos. A primeira: Desafio da semana
+8308|6 comemorações exclusivas
+8309|💎 6 comemorações exclusivas
+8310|Chuva de diamantes, coroação, fogos, dança do robô, hora de dormir, relâmpago
+8311|🖼️ Pôster da carreira em HD
+8312|Pôster da carreira em HD
+8313|3 designs para suas carreiras de jogador e técnico, resolução para impressão
+8314|🎨 Temas de técnico e 6 espaços de carreira
+8315|Temas de técnico e 6 espaços de carreira
+8316|4 temas para a tela de técnico, 6 carreiras em vez de 3
+8317|◆ Selo de apoiador fundador
+8318|Selo de apoiador fundador
+8319|Selo permanente para quem comprar o Diamond no lançamento
+8320|Virar um 0-2, jogar com 10, operação resgate, corrida pelo título... Junte estrelas. O primeiro desafio é grátis para todos.
+8324|Novo conteúdo Diamond
+8325|6 comemorações exclusivas, pôster da carreira em HD, temas de técnico e 6 espaços de carreira.
+8326|Novidades no Diamond antes de todos. A primeira: Desafio da semana.
+8329|Selo permanente para quem comprar o Diamond no lançamento. Obrigado a todos que apoiam o jogo!
+8332|Nada do que entrou no Diamond dá vantagem nos jogos, e nada mudou no jogo grátis.
+8178|Diamond
+8333|· Diamond
+8341|Situações prontas, metas difíceis: {} desafios · {}/{}
+8366|Desafios · {}/{}
+8343|{} foi expulso. Você está com 10.
+8355|Você assumiu o jogo {}.
+8368|{} desafios liberados
+8336|Assuma um jogo num minuto definido ou salve o time nas últimas semanas. {}/{}

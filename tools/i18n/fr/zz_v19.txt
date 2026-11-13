@@ -1366,3 +1366,149 @@
 8173|{} effectue un changement.
 8167|Forme adverse
 8168|Leur alchimie : {} · La nôtre : {}
+8352|{} Soutien fondateur
+8178|Diamant
+8179|Nuit dorée
+8180|Pelouse
+8181|Rétro
+8182|+3 emplacements de carrière
+8183|6 emplacements avec Diamond
+8184|Défi en cours
+8185|🎯 Défis
+8340|Situations imposées, objectifs durs : {} défis · {}/{} ⭐
+8186|Thème d’écran
+8187|Couleurs de l’écran entraîneur
+8188|Les thèmes autres que Classique se débloquent avec Diamond
+8189|À l’extérieur, 55e minute, mené 0-2. Le vestiaire est muet, les tribunes te regardent.
+8192|Réduis l’écart à un but
+8193|Finis à égalité
+8194|Gagne
+8195|Ne perds pas
+8196|Gagne par 2 buts
+8197|Gagne par 3 buts
+8198|À 10
+8199|Ton défenseur central a été exclu à la 25e. 0-0 et l’adversaire pousse.
+8202|Gagne sans encaisser
+8203|Tueur de géants
+8204|Le plus fort du championnat vient chez toi. Sur le papier, aucune chance.
+8207|Coup de sifflet final
+8208|Finale de coupe, 78e minute, 1-1. Pas de prolongation : en cas de nul, tirs au but.
+8211|Soulève la coupe (aux tirs au but)
+8212|Gagne dans le temps réglementaire
+8213|Tu as perdu l’aller 0-3. Le retour est à domicile, stade plein. Il faut au moins 3 buts pour un miracle.
+8217|Gagne le match
+8218|Gagne par 4 buts (qualifie-toi)
+8219|Opération sauvetage
+8220|Plus que 10 semaines. L’équipe est relégable, à 5 points du maintien. La direction te donne une dernière chance.
+8224|Assure le maintien
+8225|Finis 2 places au-dessus de la zone rouge
+8226|Finis 4 places au-dessus de la zone rouge
+8227|Course au titre
+8228|Plus que 6 semaines. Tu es deuxième, le leader a 3 points d’avance. Chaque match est une finale.
+8232|Finis dans les 2 premiers
+8233|Sois champion
+8234|Sois champion sans défaite
+180|Rêve européen
+8235|Plus que 12 semaines. Ton modeste club est 7e et les supporters rêvent d’Europe.
+8238|Finis dans les 6 premiers
+8239|Finis dans les 5 premiers
+8240|Finis dans les 4 premiers
+8241|Accès anticipé
+8242|🧪 Accès anticipé
+1345|Gratuit
+8367|Dès la {}e minute
+8243|Match complet
+8365|📅 {} dernières semaines
+8369|{} dernières semaines
+8244|Défi de la semaine
+8245|Défi de la semaine
+8338|{} Le premier défi est ouvert à tous. Les autres avec StarFoot Diamond.
+8246|Le premier défi est ouvert à tous. Les autres avec StarFoot Diamond.
+8249|Reprends une situation donnée, atteins l’objectif, collectionne les étoiles. Tes carrières ne sont pas touchées.
+8360|Défis · {}/{} ⭐
+267|Défis
+8252|Défi
+8362|{} Défi
+8253|Finale de coupe
+8254|Europe · Match retour
+8350|{} Défi : {}. {}
+8255|Règle ton onze et ta tactique, puis lance le match.
+8255|Règle ton onze et ta tactique, puis lance le match.
+8361|{}e place · {}V {}N {}D
+8256|Parfait !
+189|Tu as réussi !
+8257|Pas cette fois
+8258|, tu es à 10
+8259|Tu joues à domicile.
+8260|Tu joues à l’extérieur.
+8337|{}e minute, score {}-{}{}. {} Tout le monde joue le même défi ; sois le meilleur de la semaine.
+8346|Encore {} semaines · {}e place
+8262|Quitter le défi
+8263|Quitter le défi ?
+8264|Cette tentative ne sera pas enregistrée.
+635|Quitter
+8342|🟥 {} est exclu. Tu es à 10.
+8267|Aller : 0-3. Il faut gagner par 4 buts pour passer.
+8363|à la {}e minute, à {}-{}
+8348|⏱️ Tu reprends le match {}.
+8270|dès le coup d’envoi
+8364|💎 {} défis débloqués
+8272|1 défi gratuit · le reste avec Diamond
+8273|Défis d’entraîneur
+8274|🎯 Défis d’entraîneur
+8335|Reprends un match à une minute donnée ou sauve l’équipe en fin de saison. {}/{} ⭐
+8276|Pluie de diamants
+8277|Bras levés, il pleut des diamants.
+8278|Couronnement
+8279|Il s’arrête, mains sur la tête, et une couronne d’or descend.
+8280|Feu d’artifice
+8281|Glissade à genoux, le ciel s’illumine.
+8282|Danse du robot
+8283|Mouvements saccadés de robot au poteau de corner.
+8284|L’heure de la sieste
+8285|S’allonge sur la pelouse et chante une berceuse à l’adversaire.
+8286|Saute en l’air, des éclairs zèbrent le ciel.
+8287|BUT EN DIAMANT !
+8288|LE ROI !
+8289|FEU D’ARTIFICE !
+8290|ÉCLAIR !
+8291|Célébrations Diamond
+8349|{} Célébrations Diamond
+8292|Débloqué avec Diamond
+8293|Couleurs du club
+8294|Affiche de carrière
+8356|{} Affiche de carrière{}
+8357|{} Affiche de carrière
+8295|L’histoire ne fait que commencer.
+8296|% victoires
+8297|Trophées et distinctions
+8298|Chaque semaine, le même défi d’entraîneur pour tous. D’abord pour Diamond, puis pour tous.
+8301|Les nouveautés arrivent d’abord chez les détenteurs de Diamond. Dis-nous ce que tu en penses, on façonnera le jeu ensemble.
+8334|{} défis notés en étoiles : remonter un 0-2, à 10, opération sauvetage, course au titre...
+8305|Les nouveautés avant tout le monde. Première : le Défi de la semaine
+8308|6 célébrations exclusives
+8309|💎 6 célébrations exclusives
+8310|Pluie de diamants, couronnement, feu d’artifice, danse du robot, sieste, éclair
+8311|🖼️ Affiche de carrière HD
+8312|Affiche de carrière HD
+8313|3 designs pour tes carrières de joueur et d’entraîneur, résolution prête à imprimer
+8314|🎨 Thèmes entraîneur et 6 emplacements
+8315|Thèmes entraîneur et 6 emplacements
+8316|4 thèmes pour l’écran entraîneur, 6 carrières au lieu de 3
+8317|◆ Badge Soutien fondateur
+8318|Badge Soutien fondateur
+8319|Badge permanent pour ceux qui prennent Diamond au lancement
+8320|Remonter un 0-2, jouer à 10, opération sauvetage, course au titre... Collectionne les étoiles. Le premier défi est gratuit pour tous.
+8324|Nouveau contenu Diamond
+8325|6 célébrations exclusives, affiche de carrière HD, thèmes entraîneur et 6 emplacements.
+8326|Les nouveautés dans Diamond avant tout le monde. Première : le Défi de la semaine.
+8329|Badge permanent pour ceux qui prennent Diamond au lancement. Merci à tous ceux qui soutiennent le jeu !
+8332|Rien de ce qui est ajouté à Diamond ne donne d’avantage en match, et rien n’a changé dans le jeu gratuit.
+8178|Diamond
+8333|· Diamond
+8341|Situations imposées, objectifs durs : {} défis · {}/{}
+8366|Défis · {}/{}
+8343|{} est exclu. Tu es à 10.
+8355|Tu reprends le match {}.
+8368|{} défis débloqués
+8336|Reprends un match à une minute donnée ou sauve l’équipe en fin de saison. {}/{}

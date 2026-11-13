@@ -226,7 +226,7 @@ const Game = {
     if (tx && typeof Legacy !== 'undefined') {
       const nb = Object.keys(Scenario.badges()).length;
       const pk = typeof Packs !== 'undefined';
-      tx.innerHTML = (pk ? `<div class="t-packs"><button class="btn t-pack wc" id="t-wc">${Icon('star')}<span><b>Dünya Şampiyonası Rüyası</b><small>${Plus.active ? 'Premium+ ile dahil' : Packs.owns('wc') ? 'Yeni mod' : 'Yeni mod · kilitli'}</small></span></button><button class="btn t-pack lp" id="t-lp">${Icon('fire')}<span><b>Efsanelerin İzinde</b><small>${Plus.active ? 'Premium+ ile dahil' : Packs.owns('legends') ? 'Yeni mod' : 'Yeni mod · kilitli'}</small></span></button>${typeof Coach !== 'undefined' && Coach.enabled() ? `<button class="btn t-pack cm" id="t-cm">${Icon('whistle')}<span><b>Teknik Direktör</b><small>${Coach.tileSub ? Coach.tileSub() : Packs.owns('coach') ? 'Yeni mod' : 'Yeni mod · kilitli'}</small></span></button>` : ''}${typeof Diamond !== 'undefined' && Diamond.enabled() ? `<button class="btn t-pack dia" id="t-dia">${Diamond.gem(26)}<span><b lang="en">StarFoot Diamond</b><small>${Diamond.active ? 'Her şey açık' : 'Her şey dahil'}</small></span></button>` : ''}</div>` : '') + `<button class="btn btn-ghost" id="t-tut">${Icon('whistle')} Nasıl Oynanır</button><button class="btn btn-ghost" id="t-edit">${Icon('pen')} Editör</button><button class="btn btn-ghost" id="t-scn">🎯 Senaryolar${nb ? ` <em>${nb}/${SCEN.length}</em>` : ''}</button><button class="btn btn-ghost" id="t-hof">🏛️ Efsaneler Salonu${Legacy.list().length ? ` <em>${Legacy.list().length}</em>` : ''}</button>`;
+      tx.innerHTML = (pk ? `<div class="t-packs"><button class="btn t-pack wc" id="t-wc">${Icon('star')}<span><b>Dünya Şampiyonası Rüyası</b><small>${Plus.active ? 'Premium+ ile dahil' : Packs.owns('wc') ? 'Yeni mod' : 'Yeni mod · kilitli'}</small></span></button><button class="btn t-pack lp" id="t-lp">${Icon('fire')}<span><b>Efsanelerin İzinde</b><small>${Plus.active ? 'Premium+ ile dahil' : Packs.owns('legends') ? 'Yeni mod' : 'Yeni mod · kilitli'}</small></span></button>${typeof Coach !== 'undefined' && Coach.enabled() ? `<button class="btn t-pack cm" id="t-cm">${Icon('whistle')}<span><b>Teknik Direktör</b><small>${Coach.tileSub ? Coach.tileSub() : Packs.owns('coach') ? 'Yeni mod' : 'Yeni mod · kilitli'}</small></span></button>` : ''}${typeof Diamond !== 'undefined' && Diamond.enabled() ? `<button class="btn t-pack dia" id="t-dia">${Diamond.gem(26)}<span><b lang="en">StarFoot Diamond</b><small>${Diamond.active ? (Diamond.founder && Diamond.founder() ? 'Kurucu Destekçi' : 'Her şey açık') : 'Her şey dahil'}</small></span></button>` : ''}</div>` : '') + `<button class="btn btn-ghost" id="t-tut">${Icon('whistle')} Nasıl Oynanır</button><button class="btn btn-ghost" id="t-edit">${Icon('pen')} Editör</button><button class="btn btn-ghost" id="t-scn">🎯 Senaryolar${nb ? ` <em>${nb}/${SCEN.length}</em>` : ''}</button><button class="btn btn-ghost" id="t-hof">🏛️ Efsaneler Salonu${Legacy.list().length ? ` <em>${Legacy.list().length}</em>` : ''}</button>`;
       UI.strip(tx);
       document.getElementById('t-scn').onclick = () => Scenario.menu();
       if (pk) { document.getElementById('t-wc').onclick = () => WC.menu(); document.getElementById('t-lp').onclick = () => LPath.menu(); const tc = document.getElementById('t-cm'); if (tc) tc.onclick = () => Coach.menu(); const td = document.getElementById('t-dia'); if (td) td.onclick = () => Diamond.pitch('title'); }
@@ -1525,10 +1525,14 @@ const UI = {
     const p = Game.p, cur = p.celeb || 'arms';
     return `<section class="card celeb">
       <div class="card-h"><span>${Icon('fire')} Gol Sevincin</span><small class="muted">${p.totals.goals} kariyer golü</small></div>
-      <div class="cb-grid">${CELEBRATIONS.concat([{ id: 'random', name: 'Rastgele', desc: 'Açık sevinçlerden biri', goals: 0 }]).map((c) => {
+      <div class="cb-grid">${CELEBRATIONS.filter((c) => !c.dia).concat([{ id: 'random', name: 'Rastgele', desc: 'Açık sevinçlerden biri', goals: 0 }]).map((c) => {
         const lock = p.totals.goals < c.goals;
         return `<button class="cb ${cur === c.id ? 'on' : ''} ${lock ? 'lock' : ''}" data-celeb="${c.id}" ${lock ? 'disabled' : ''}><b>${c.name}</b><small>${lock ? `${c.goals} golde açılır` : c.desc}</small></button>`;
       }).join('')}</div>
+      ${CELEBRATIONS.some((c) => c.dia) && typeof Diamond !== 'undefined' && Diamond.enabled() ? `<div class="lbl cb-dl">${Diamond.gem(16)} Diamond sevinçleri</div><div class="cb-grid">${CELEBRATIONS.filter((c) => c.dia).map((c) => {
+        const lock = !Diamond.active;
+        return `<button class="cb dia ${cur === c.id ? 'on' : ''} ${lock ? 'lock' : ''}" ${lock ? 'data-dialock="celeb"' : `data-celeb="${c.id}"`}><b><span data-emo>${c.ic}</span> ${c.name}</b><small>${lock ? 'Diamond ile açılır' : c.desc}</small></button>`;
+      }).join('')}</div>` : ''}
     </section>`;
   },
 
@@ -1585,6 +1589,7 @@ const UI = {
           <div class="pc-ovr ${UI.statColor(ovr)}"><b>${ovr}</b><span>GÜÇ${ovrI > ovr ? ` +${ovrI - ovr}` : ''}</span></div>
         </div>
         ${typeof ShareCard !== 'undefined' ? `<button class="btn btn-ghost sh-btn" data-share="player">${Icon('share')} Oyuncu kartını paylaş</button>` : ''}
+        ${typeof Poster !== 'undefined' && Diamond.enabled() ? `<button class="btn btn-ghost sh-btn dia-sh" data-poster>${Diamond.gem(16)} Kariyer posteri${Diamond.active ? '' : ' · Diamond'}</button>` : ''}
         ${p.injuryWeeks ? `<div class="pc-inj">${Icon('injury')} Sakat · ${p.injuryWeeks} hafta</div>` : ''}
         <div class="pc-meta">
           <span class="pot">${'★'.repeat(stars)}<i>${'★'.repeat(5 - stars)}</i> potansiyel</span>
@@ -2312,6 +2317,7 @@ ${UI.paper()}`;
       } else Game.playNext();
     }));
     U.$$('[data-celeb]', root).forEach((b) => (b.onclick = () => { Game.p.celeb = b.dataset.celeb; Game.save(); Game.toast('Gol sevincin seçildi', 'good'); Game.render(); }));
+    U.$$('[data-dialock]', root).forEach((b) => (b.onclick = () => Diamond.pitch(b.dataset.dialock)));
     U.$$('[data-post]', root).forEach((b) => (b.onclick = () => Social.open(b.dataset.post)));
     U.$$('[data-offer]', root).forEach((b) => (b.onclick = () => Game.acceptOffer(+b.dataset.offer)));
     U.$$('[data-reject]', root).forEach((b) => (b.onclick = () => { Game.state.offers = []; Game.save(); Game.render(); }));
@@ -2380,6 +2386,7 @@ ${UI.paper()}`;
     }));
     U.$$('[data-mission-claim]', root).forEach((b) => (b.onclick = () => Missions.claim()));
     U.$$('[data-share="player"]', root).forEach((b) => (b.onclick = () => ShareCard.preview(ShareCard.player(), ShareCard.text())));
+    U.$$('[data-poster]', root).forEach((b) => (b.onclick = () => Poster.open('player')));
     const ntg = root.querySelector('#notif-tg');
     if (ntg) ntg.onchange = () => Notify.setOn(ntg.checked);
     U.$$('[data-fb]', root).forEach((b) => b.addEventListener('click', () => { if (typeof Premium !== 'undefined') Premium.track('feedback_' + b.dataset.fb); }));

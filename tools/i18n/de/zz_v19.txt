@@ -1366,3 +1366,149 @@
 8173|{} wechselt.
 8167|Fitness des Gegners
 8168|Ihre Chemie: {} · Unsere: {}
+8352|{} Gründungsunterstützer
+8178|Diamant
+8179|Goldene Nacht
+8180|Rasen
+8181|Retro
+8182|+3 Karriereplätze
+8183|6 Plätze mit Diamond
+8184|Laufende Herausforderung
+8185|🎯 Herausforderungen
+8340|Vorgegebene Lagen, harte Ziele: {} Aufgaben · {}/{} ⭐
+8186|Bildschirmthema
+8187|Farben des Trainerbildschirms
+8188|Themen außer Klassisch gibt es mit Diamond
+8189|Auswärts, 55. Minute, 0:2 hinten. Die Kabine schweigt, die Tribünen schauen auf dich.
+8192|Auf ein Tor verkürzen
+8193|Unentschieden spielen
+8194|Gewinnen
+8195|Nicht verlieren
+8196|Mit 2 Toren gewinnen
+8197|Mit 3 Toren gewinnen
+8198|Zu zehnt
+8199|Dein Innenverteidiger sah in der 25. Minute Rot. Es steht 0:0, der Gegner drückt.
+8202|Zu null gewinnen
+8203|Riesentöter
+8204|Das stärkste Team der Liga kommt in dein Stadion. Auf dem Papier bist du chancenlos.
+8207|Schlusspfiff
+8208|Pokalfinale, 78. Minute, 1:1. Keine Verlängerung: bei Remis Elfmeterschießen.
+8211|Den Pokal holen (im Elfmeterschießen)
+8212|In der regulären Spielzeit gewinnen
+8213|Das Hinspiel ging 0:3 verloren. Das Rückspiel ist daheim, das Stadion voll. Für ein Wunder braucht es mindestens 3 Tore.
+8217|Das Spiel gewinnen
+8218|Mit 4 Toren gewinnen (weiterkommen)
+8219|Rettungsmission
+8220|Noch 10 Wochen. Das Team steht auf einem Abstiegsplatz, 5 Punkte vom rettenden Ufer. Der Vorstand gibt dir eine letzte Chance.
+8224|Klassenerhalt schaffen
+8225|2 Plätze über den Abstiegsrängen landen
+8226|4 Plätze über den Abstiegsrängen landen
+8227|Meisterschaftsrennen
+8228|Noch 6 Wochen. Du bist Zweiter, der Spitzenreiter hat 3 Punkte mehr. Jedes Spiel ist ein Finale.
+8232|Unter den ersten 2 landen
+8233|Meister werden
+8234|Ungeschlagen Meister werden
+180|Europa-Traum
+8235|Noch 12 Wochen. Dein bescheidener Verein ist Siebter, die Fans träumen von Europa.
+8238|Unter den ersten 6 landen
+8239|Unter den ersten 5 landen
+8240|Unter den ersten 4 landen
+8241|Früher Zugang
+8242|🧪 Früher Zugang
+1345|Gratis
+8367|Ab Minute {}
+8243|Ganzes Spiel
+8365|📅 Letzte {} Wochen
+8369|Letzte {} Wochen
+8244|Herausforderung der Woche
+8245|Herausforderung der Woche
+8338|{} Die erste Aufgabe ist für alle offen. Die übrigen gibt es mit StarFoot Diamond.
+8246|Die erste Aufgabe ist für alle offen. Die übrigen gibt es mit StarFoot Diamond.
+8249|Übernimm eine vorgegebene Lage, erreiche das Ziel, sammle Sterne. Deine Karriereplätze bleiben unberührt.
+8360|Aufgaben · {}/{} ⭐
+267|Aufgaben
+8252|Herausforderung
+8362|{} Herausforderung
+8253|Pokalfinale
+8254|Europa · Rückspiel
+8350|{} Herausforderung: {}. {}
+8255|Stelle deine Startelf und Taktik ein, dann geht’s los.
+8255|Stelle deine Startelf und Taktik ein, dann geht’s los.
+8361|Platz {} · {}S {}U {}N
+8256|Makellos!
+189|Geschafft!
+8257|Diesmal nicht
+8258|, du bist zu zehnt
+8259|Du spielst zu Hause.
+8260|Du spielst auswärts.
+8337|Minute {}, Stand {}:{}{}. {} Alle spielen dieselbe Aufgabe; sei der Beste der Woche.
+8346|Noch {} Wochen · Platz {}
+8262|Herausforderung verlassen
+8263|Herausforderung verlassen?
+8264|Dieser Versuch wird nicht gespeichert.
+635|Verlassen
+8342|🟥 {} sieht Rot. Du bist zu zehnt.
+8267|Hinspiel: 0:3. Zum Weiterkommen braucht es einen Sieg mit 4 Toren Unterschied.
+8363|in Minute {} beim Stand von {}:{}
+8348|⏱️ Du übernimmst das Spiel {}.
+8270|vom Anpfiff an
+8364|💎 {} Aufgaben frei
+8272|1 Aufgabe gratis · der Rest mit Diamond
+8273|Trainer-Herausforderungen
+8274|🎯 Trainer-Herausforderungen
+8335|Übernimm ein Spiel ab einer bestimmten Minute oder rette das Team in den letzten Wochen. {}/{} ⭐
+8276|Diamantregen
+8277|Arme hoch, Diamanten regnen vom Himmel.
+8278|Krönung
+8279|Er bleibt stehen, legt die Hände an den Kopf, eine goldene Krone senkt sich.
+8280|Feuerwerk
+8281|Knierutscher, der Himmel leuchtet auf.
+8282|Robotertanz
+8283|Abgehackte Roboterbewegungen an der Eckfahne.
+8284|Schlafenszeit
+8285|Legt sich ins Gras und singt dem Gegner ein Schlaflied.
+8286|Springt in die Luft, hinter ihm zucken Blitze.
+8287|DIAMANTTOR!
+8288|KÖNIG!
+8289|FEUERWERK!
+8290|BLITZ!
+8291|Diamond-Jubel
+8349|{} Diamond-Jubel
+8292|Mit Diamond freigeschaltet
+8293|Vereinsfarben
+8294|Karriereposter
+8356|{} Karriereposter{}
+8357|{} Karriereposter
+8295|Die Geschichte fängt gerade erst an.
+8296|Siegquote %
+8297|Titel und Auszeichnungen
+8298|Jede Woche dieselbe Traineraufgabe für alle. Zuerst für Diamond-Besitzer, dann für alle.
+8301|Neue Funktionen gibt es für Diamond-Besitzer vor allen anderen. Schreib uns deine Meinung, dann gestalten wir das Spiel gemeinsam.
+8334|{} Aufgaben mit Sternen: Comeback nach 0:2, zu zehnt, Rettungsmission, Meisterschaftsrennen...
+8305|Neue Funktionen vor allen anderen. Den Anfang macht: Herausforderung der Woche
+8308|6 exklusive Torjubel
+8309|💎 6 exklusive Torjubel
+8310|Diamantregen, Krönung, Feuerwerk, Robotertanz, Schlafenszeit, Blitz
+8311|🖼️ HD-Karriereposter
+8312|HD-Karriereposter
+8313|3 Designs für deine Spieler- und Trainerkarriere, druckfähige Auflösung
+8314|🎨 Trainer-Themen und 6 Karriereplätze
+8315|Trainer-Themen und 6 Karriereplätze
+8316|4 Themen für den Trainerbildschirm, 6 statt 3 Karrieren
+8317|◆ Gründungsunterstützer-Abzeichen
+8318|Gründungsunterstützer-Abzeichen
+8319|Dauerhaftes Abzeichen für alle, die Diamond zum Start kaufen
+8320|Comeback nach 0:2, zu zehnt, Rettungsmission, Meisterschaftsrennen... Sammle Sterne. Die erste Aufgabe ist für alle gratis.
+8324|Neue Inhalte für Diamond
+8325|6 exklusive Torjubel, HD-Karriereposter, Trainer-Themen und 6 Karriereplätze.
+8326|Neue Funktionen in Diamond vor allen anderen. Den Anfang macht: Herausforderung der Woche.
+8329|Dauerhaftes Abzeichen für alle, die Diamond zum Start kaufen. Danke an alle, die das Spiel unterstützen!
+8332|Nichts davon gibt in Spielen einen Vorteil, und im kostenlosen Spiel hat sich nichts geändert.
+8178|Diamond
+8333|· Diamond
+8341|Vorgegebene Lagen, harte Ziele: {} Aufgaben · {}/{}
+8366|Aufgaben · {}/{}
+8343|{} sieht Rot. Du bist zu zehnt.
+8355|Du übernimmst das Spiel {}.
+8368|{} Aufgaben frei
+8336|Übernimm ein Spiel ab einer bestimmten Minute oder rette das Team in den letzten Wochen. {}/{}

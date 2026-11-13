@@ -54,7 +54,7 @@ const RCStore = {
     const out = [];
     const seen = new Set();
     ((info && info.nonSubscriptionTransactions) || []).forEach((t) => {
-      if (t && t.productIdentifier && !seen.has(t.productIdentifier)) { seen.add(t.productIdentifier); out.push({ productIdentifier: t.productIdentifier, transactionId: t.transactionIdentifier, purchaseState: 'purchased' }); }
+      if (t && t.productIdentifier && !seen.has(t.productIdentifier)) { seen.add(t.productIdentifier); out.push({ productIdentifier: t.productIdentifier, transactionId: t.transactionIdentifier, purchaseState: 'purchased', date: t.purchaseDate || null }); }
     });
     const act = (info && info.entitlements && info.entitlements.active) || {};
     Object.entries(RC_ENT).forEach(([ent, pid]) => { if (act[ent] && !seen.has(pid)) { seen.add(pid); out.push({ productIdentifier: pid, purchaseState: 'purchased' }); } });

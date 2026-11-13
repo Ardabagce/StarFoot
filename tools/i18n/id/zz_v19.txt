@@ -1366,3 +1366,149 @@
 8173|{} melakukan pergantian.
 8167|Kebugaran lawan
 8168|Chemistry mereka: {} · Kita: {}
+8352|{} Pendukung Pendiri
+8178|Berlian
+8179|Malam Emas
+8180|Rumput
+8181|Retro
+8182|+3 slot karier
+8183|6 slot dengan Diamond
+8184|Tantangan berjalan
+8185|🎯 Tantangan
+8340|Situasi siap, target berat: {} tantangan · {}/{} ⭐
+8186|Tema layar
+8187|Warna layar pelatih
+8188|Tema selain Klasik terbuka dengan Diamond
+8189|Laga tandang, menit 55, tertinggal 0-2. Ruang ganti sunyi, tribun menatapmu.
+8192|Perkecil selisih jadi satu
+8193|Akhiri dengan imbang
+8194|Menang
+8195|Jangan kalah
+8196|Menang selisih 2
+8197|Menang selisih 3
+8198|10 Pemain
+8199|Bek tengahmu dikartu merah di menit 25. Skor 0-0, lawan menekan.
+8202|Menang tanpa kebobolan
+8203|Penumbang Raksasa
+8204|Tim terkuat liga datang ke stadionmu. Di atas kertas kamu tak punya peluang.
+8207|Peluit Akhir
+8208|Final piala, menit 78, skor 1-1. Tanpa perpanjangan: imbang berarti adu penalti.
+8211|Angkat piala (lewat penalti)
+8212|Menang di waktu normal
+8213|Kamu kalah 0-3 di leg pertama. Leg kedua di kandang, stadion penuh. Butuh minimal 3 gol untuk keajaiban.
+8217|Menangkan laga
+8218|Menang selisih 4 (lolos)
+8219|Misi Penyelamatan
+8220|Sisa 10 pekan. Tim di zona degradasi, 5 poin dari zona aman. Manajemen memberimu kesempatan terakhir.
+8224|Bertahan di liga
+8225|Finis 2 peringkat di atas zona degradasi
+8226|Finis 4 peringkat di atas zona degradasi
+8227|Perburuan Gelar
+8228|Sisa 6 pekan. Kamu kedua, pemuncak unggul 3 poin. Setiap laga adalah final.
+8232|Finis di 2 besar
+8233|Jadi juara
+8234|Juara tanpa kalah
+180|Mimpi Eropa
+8235|Sisa 12 pekan. Klub sederhanamu di posisi 7 dan suporter memimpikan Eropa.
+8238|Finis di 6 besar
+8239|Finis di 5 besar
+8240|Finis di 4 besar
+8241|Akses awal
+8242|🧪 Akses awal
+1345|Gratis
+8367|Dari menit {}
+8243|Laga penuh
+8365|📅 {} pekan terakhir
+8369|{} pekan terakhir
+8244|Tantangan pekan ini
+8245|Tantangan Pekan Ini
+8338|{} Tantangan pertama terbuka untuk semua. Sisanya dengan StarFoot Diamond.
+8246|Tantangan pertama terbuka untuk semua. Sisanya dengan StarFoot Diamond.
+8249|Ambil alih situasi siap, capai target, kumpulkan bintang. Slot kariermu tidak terpengaruh.
+8360|Tantangan · {}/{} ⭐
+267|Tantangan
+8252|Tantangan
+8362|{} Tantangan
+8253|Final piala
+8254|Eropa · Leg kedua
+8350|{} Tantangan: {}. {}
+8255|Atur starting XI dan taktik, lalu mulai laga.
+8255|Atur starting XI dan taktik, lalu mulai laga.
+8361|Peringkat {} · {}M {}S {}K
+8256|Sempurna!
+189|Kamu berhasil!
+8257|Belum kali ini
+8258|, kamu bermain dengan 10 orang
+8259|Kamu bermain di kandang.
+8260|Kamu bermain tandang.
+8337|Menit {}, skor {}-{}{}. {} Semua memainkan tantangan yang sama; jadilah yang terbaik pekan ini.
+8346|Sisa {} pekan · peringkat {}
+8262|Keluar dari tantangan
+8263|Keluar dari tantangan?
+8264|Percobaan ini tidak disimpan.
+635|Keluar
+8342|🟥 {} dikartu merah. Kamu tinggal 10 orang.
+8267|Leg pertama: 0-3. Butuh menang selisih 4 untuk lolos.
+8363|di menit {} dengan skor {}-{}
+8348|⏱️ Kamu mengambil alih laga {}.
+8270|sejak awal
+8364|💎 {} tantangan terbuka
+8272|1 tantangan gratis · sisanya dengan Diamond
+8273|Tantangan pelatih
+8274|🎯 Tantangan pelatih
+8335|Ambil alih laga dari menit tertentu atau selamatkan tim di pekan-pekan terakhir. {}/{} ⭐
+8276|Hujan Berlian
+8277|Tangan terangkat, berlian berjatuhan dari langit.
+8278|Penobatan
+8279|Ia berhenti, tangan ke kepala, mahkota emas turun.
+8280|Kembang Api
+8281|Meluncur dengan lutut, langit menyala.
+8282|Tarian Robot
+8283|Gerakan robot patah-patah di bendera sudut.
+8284|Waktu Tidur
+8285|Berbaring di rumput dan menyanyikan lagu nina bobo untuk lawan.
+8286|Melompat ke udara, petir menyambar di belakangnya.
+8287|GOL BERLIAN!
+8288|RAJA!
+8289|KEMBANG API!
+8290|PETIR!
+8291|Selebrasi Diamond
+8349|{} Selebrasi Diamond
+8292|Terbuka dengan Diamond
+8293|Warna klub
+8294|Poster karier
+8356|{} Poster karier{}
+8357|{} Poster karier
+8295|Kisahnya baru dimulai.
+8296|% menang
+8297|Trofi dan penghargaan
+8298|Setiap pekan tantangan pelatih yang sama untuk semua. Pertama untuk pemilik Diamond, lalu semua.
+8301|Fitur baru terbuka untuk pemilik Diamond lebih dulu. Ceritakan pendapatmu dan kita bentuk game ini bersama.
+8334|{} tantangan berbintang: bangkit dari 0-2, 10 pemain, misi penyelamatan, perburuan gelar...
+8305|Fitur baru lebih dulu. Yang pertama: Tantangan Pekan Ini
+8308|6 selebrasi gol eksklusif
+8309|💎 6 selebrasi gol eksklusif
+8310|Hujan berlian, penobatan, kembang api, tarian robot, waktu tidur, petir
+8311|🖼️ Poster karier HD
+8312|Poster karier HD
+8313|3 desain untuk karier pemain dan pelatihmu, resolusi siap cetak
+8314|🎨 Tema pelatih dan 6 slot karier
+8315|Tema pelatih dan 6 slot karier
+8316|4 tema untuk layar pelatih, 6 karier alih-alih 3
+8317|◆ Lencana Pendukung Pendiri
+8318|Lencana Pendukung Pendiri
+8319|Lencana permanen bagi yang membeli Diamond di masa peluncuran
+8320|Bangkit dari 0-2, 10 pemain, misi penyelamatan, perburuan gelar... Kumpulkan bintang. Tantangan pertama gratis untuk semua.
+8324|Konten Diamond baru
+8325|6 selebrasi gol eksklusif, poster karier HD, tema pelatih, dan 6 slot karier.
+8326|Fitur baru di Diamond lebih dulu. Yang pertama: Tantangan Pekan Ini.
+8329|Lencana permanen bagi pembeli Diamond di masa peluncuran. Terima kasih untuk semua pendukung game ini!
+8332|Tak satu pun tambahan Diamond memberi keunggulan di laga, dan game gratis tidak berubah.
+8178|Diamond
+8333|· Diamond
+8341|Situasi siap, target berat: {} tantangan · {}/{}
+8366|Tantangan · {}/{}
+8343|{} dikartu merah. Kamu tinggal 10 orang.
+8355|Kamu mengambil alih laga {}.
+8368|{} tantangan terbuka
+8336|Ambil alih laga dari menit tertentu atau selamatkan tim di pekan-pekan terakhir. {}/{}

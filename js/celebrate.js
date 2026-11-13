@@ -17,9 +17,10 @@ const Celebrate = {
     const id = p.celeb || 'arms';
     if (id === 'random') return U.pick(Celebrate.unlocked(p)).id;
     const c = CELEBRATIONS.find((x) => x.id === id);
-    return c && p.totals.goals >= c.goals ? id : 'arms';
+    return c && Celebrate.open(p, c) ? id : 'arms';
   },
-  unlocked(p) { return CELEBRATIONS.filter((c) => p.totals.goals >= c.goals); },
+  open(p, c) { return p.totals.goals >= c.goals && (!c.dia || (typeof Diamond !== 'undefined' && Diamond.active)); },
+  unlocked(p) { return CELEBRATIONS.filter((c) => Celebrate.open(p, c)); },
 
   // Kadrajı dolduran canvas ve stadyum arka planı
   stage(host, P, day) {
@@ -140,6 +141,7 @@ const Celebrate = {
       const ground = H * 0.95, h0 = Math.min(H * 0.5, W * 0.9);
       // Tribün: pankart (oyuncunun adı) arka plana bir kez; ön sıradaki taraftarlar kare kare zıplar
       const fans = Celebrate.fanWall(bg.getContext('2d'), W, H, dpr, P, o);
+      const fx = {};
       let t = 0, last = performance.now(), done = false, raf;
       const finish = () => { if (done) return; done = true; cancelAnimationFrame(raf); host.innerHTML = ''; resolve(); };
       host.onclick = finish;
@@ -185,8 +187,13 @@ const Celebrate = {
           if (t > 0.8 && t < 1.6) { const s = (t - 0.8) / 0.8; y -= Math.sin(s * Math.PI) * h * 0.45; rot = -s * Math.PI * 2; f.speed = 0; }
           if (t >= 1.6) { f.dive = 1; f.speed = 0; }
         }
+        else if (Celebrate.DIA && Celebrate.DIA[type]) {
+          // Diamond sevinçleri (diamond2.js): poz ve arka plan efektleri
+          const r = Celebrate.DIA[type](c, t, { W, H, dpr, ground, h0, x, y, h, f, fx }) || {};
+          if (r.x != null) x = r.x; if (r.y != null) y = r.y; if (r.h != null) h = r.h; if (r.rot != null) rot = r.rot; if (r.sx != null) sx = r.sx;
+        }
         // takım arkadaşları koşarak gelir
-        if (t > 1.8 && type !== 'fans') {
+        if (t > 1.8 && type !== 'fans' && !fx.noMates) {
           const s = Math.min(1, (t - 1.8) / 0.9);
           mates.forEach((L, i) => {
             const from = i % 2 ? W * 1.2 : -W * 0.2;
@@ -195,11 +202,12 @@ const Celebrate = {
           });
         }
         Celebrate.fig(c, x, y, h, f, rot, sx);
+        if (fx.front) fx.front(c, t, x, y, h);
         // vinyet
         const v = c.createRadialGradient(W / 2, H * 0.5, W * 0.3, W / 2, H * 0.5, W * 0.9);
         v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, 'rgba(0,0,0,0.45)');
         c.fillStyle = v; c.fillRect(0, 0, W, H);
-        const name = type === 'siu' && t > 1.5 ? 'SİUUU!' : 'GOOOL!';
+        const name = type === 'siu' && t > 1.5 ? 'SİUUU!' : fx.title && t > 1.2 ? fx.title : 'GOOOL!';
         Celebrate.title(c, W, H, dpr, t, name, `${o.name} · ${o.min}'  ·  ${o.score}`);
         if (t >= D) return finish();
         raf = requestAnimationFrame(frame);

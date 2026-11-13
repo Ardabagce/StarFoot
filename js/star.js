@@ -608,9 +608,9 @@ document.addEventListener('click', (e) => {
 });
 
 // ---------- Güncelleme duyurusu (her sürümde bir kez) ----------
-const APP_VER = '1.0.20';
+const APP_VER = '1.0.21';
 // Duyuru içeriğinin sürümü: yeni duyuru yazılınca güncellenir (yalnız sürüm atlamak tekrar göstermez)
-const WN_VER = '1.0.20';
+const WN_VER = '1.0.21';
 const WhatsNew = {
   KEY: 'starfoot_whatsnew',
   // Hub'a girişte bir kez gösterir; gösterdiyse true döner. done(): pencere kapanınca çalışır.
@@ -618,7 +618,7 @@ const WhatsNew = {
     let seen = '';
     try { seen = localStorage.getItem(WhatsNew.KEY) || ''; } catch (e) { return false; }
     if (seen === WN_VER || (Game.state && Game.state.seasonEnd)) return false;
-    // 1.0.20 notları Teknik Direktör modunu anlatır: mod kapalıysa (web) gösterilmez
+    // 1.0.20/1.0.21 notları Teknik Direktör ve Diamond'ı anlatır: mod kapalıysa (web) gösterilmez
     if (typeof Coach !== 'undefined' && Coach.enabled && !Coach.enabled()) return false;
     if (!document.getElementById('modal').classList.contains('hidden')) return false;
     try { localStorage.setItem(WhatsNew.KEY, WN_VER); } catch (e) { /* yok */ }
@@ -628,6 +628,12 @@ const WhatsNew = {
   // Duyuruyu gösterir (Ayarlar'dan yeniden açılabilir): bu ve bir önceki güncelleme, geçmiş gibi
   show(done) {
     const it = (ic, t, d) => `<li><i data-emo>${ic}</i><span><b>${t}</b><small>${d}</small></span></li>`;
+    const v21 = [
+      it('🎯', 'Teknik Direktör meydan okumaları', '0-2 geriden dönüş, 10 kişi, kurtarma operasyonu, şampiyonluk yarışı... Yıldızları topla. İlk görev herkese ücretsiz.'),
+      it('💎', 'Diamond’a yeni içerik', '6 özel gol sevinci, HD kariyer posteri, Teknik Direktör temaları ve 6 kariyer yuvası.'),
+      it('🧪', 'Erken erişim', 'Yeni özellikler herkese açılmadan önce Diamond’da. İlki: Haftanın Meydan Okuması.'),
+      it('◆', 'Kurucu Destekçi', 'Çıkış döneminde Diamond alanlara özel, kalıcı rozet. Oyunu destekleyen herkese teşekkürler!'),
+    ].join('');
     const v20 = [
       it('🎽', 'Teknik Direktör: 3 kariyer', 'Üç ayrı teknik direktör kariyeri, yeni giriş ekranı ve oluştururken dış görünüş seçimi.'),
       it('🌍', 'Avrupa kupaları ve milli takım', 'Ligde üst sıralara oyna, Şampiyonlar Kupası’na katıl. Başarılı olursan milli takımdan teklif gelir.'),
@@ -644,13 +650,16 @@ const WhatsNew = {
     const has = typeof Star !== 'undefined' && Star.has && Star.has();
     const end = () => { if (done) setTimeout(done, 300); };
     const btns = [{ t: 'Tamam', cls: 'btn-ghost', fn: end }];
-    if (typeof Coach !== 'undefined' && Coach.enabled && Coach.enabled()) btns.push({ t: `${Icon('whistle')} Teknik Direktör'ü aç`, cls: 'btn-big', fn: () => { end(); setTimeout(() => Coach.menu(), 120); } });
+    if (typeof Coach !== 'undefined' && Coach.enabled && Coach.enabled()) btns.push({ t: '🎯 Meydan okumalar', cls: 'btn-big', fn: () => { end(); setTimeout(() => (typeof TDCh !== 'undefined' ? TDCh.menu() : Coach.menu()), 120); } });
     Game.modal(`<div class="wn"><div class="ev-tag">Güncelleme geçmişi</div>
       <h2>Yenilikler 🚀</h2>
       <div class="wn-v"><b>${WN_VER}</b><small>Bu güncelleme</small></div>
-      <ul class="wn-l">${v20}</ul>
-      <p class="wn-note ok">Teknik Direktör modu yepyeni bir fikir ve her güncellemede gelişmeye devam edecek. Fikirlerini bekliyoruz!</p>
-      <div class="wn-v old"><b>1.0.19</b><small>Önceki güncelleme</small></div>
+      <ul class="wn-l">${v21}</ul>
+      <p class="wn-note ok">Diamond’a eklenenlerin hiçbiri maçta güç vermez; ücretsiz oyunda hiçbir şey değişmedi.</p>
+      <div class="wn-v old"><b>1.0.20</b><small>Önceki güncelleme</small></div>
+      <ul class="wn-l old">${v20}</ul>
+      <p class="wn-note">Teknik Direktör modu yepyeni bir fikir ve her güncellemede gelişmeye devam edecek. Fikirlerini bekliyoruz!</p>
+      <div class="wn-v old"><b>1.0.19</b></div>
       <ul class="wn-l old">${v19}</ul></div>`, btns, { wide: true });
     if (typeof Premium !== 'undefined') Premium.track('whatsnew_view', { ver: WN_VER, premium: has ? 1 : 0 });
   },

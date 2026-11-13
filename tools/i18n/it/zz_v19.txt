@@ -1366,3 +1366,149 @@
 8173|{} fa un cambio.
 8167|Condizione avversaria
 8168|La loro intesa: {} · La nostra: {}
+8352|{} Sostenitore fondatore
+8178|Diamante
+8179|Notte dorata
+8180|Erba
+8181|Retrò
+8182|+3 slot carriera
+8183|6 slot con Diamond
+8184|Sfida in corso
+8185|🎯 Sfide
+8340|Situazioni pronte, obiettivi duri: {} sfide · {}/{} ⭐
+8186|Tema dello schermo
+8187|Colori della schermata allenatore
+8188|I temi diversi da Classico si sbloccano con Diamond
+8189|In trasferta, 55° minuto, sotto 0-2. Lo spogliatoio tace, gli spalti ti guardano.
+8192|Accorcia a un gol
+8193|Finisci in pareggio
+8194|Vinci
+8195|Non perdere
+8196|Vinci con 2 gol di scarto
+8197|Vinci con 3 gol di scarto
+8198|In 10
+8199|Il tuo centrale è stato espulso al 25°. 0-0 e l’avversario spinge.
+8202|Vinci senza subire gol
+8203|Ammazzagiganti
+8204|La più forte del campionato viene nel tuo stadio. Sulla carta non hai speranze.
+8207|Fischio finale
+8208|Finale di coppa, 78°, 1-1. Niente supplementari: col pareggio si va ai rigori.
+8211|Alza la coppa (ai rigori)
+8212|Vinci nei tempi regolamentari
+8213|Hai perso l’andata 0-3. Il ritorno è in casa, stadio pieno. Per il miracolo servono almeno 3 gol.
+8217|Vinci la partita
+8218|Vinci con 4 gol di scarto (passa il turno)
+8219|Operazione salvezza
+8220|Mancano 10 settimane. La squadra è in zona retrocessione, a 5 punti dalla salvezza. La società ti dà un’ultima chance.
+8224|Salvati
+8225|Chiudi 2 posti sopra la zona retrocessione
+8226|Chiudi 4 posti sopra la zona retrocessione
+8227|Corsa scudetto
+8228|Mancano 6 settimane. Sei secondo, la capolista è a +3. Ogni partita è una finale.
+8232|Chiudi tra le prime 2
+8233|Vinci il campionato
+8234|Vinci il campionato da imbattuto
+180|Sogno europeo
+8235|Mancano 12 settimane. Il tuo modesto club è 7° e i tifosi sognano l’Europa.
+8238|Chiudi tra le prime 6
+8239|Chiudi tra le prime 5
+8240|Chiudi tra le prime 4
+8241|Accesso anticipato
+8242|🧪 Accesso anticipato
+1345|Gratis
+8367|Dal {}° minuto
+8243|Partita intera
+8365|📅 Ultime {} settimane
+8369|Ultime {} settimane
+8244|Sfida della settimana
+8245|Sfida della settimana
+8338|{} La prima sfida è aperta a tutti. Le altre con StarFoot Diamond.
+8246|La prima sfida è aperta a tutti. Le altre con StarFoot Diamond.
+8249|Prendi in mano una situazione, centra l’obiettivo, raccogli stelle. Le tue carriere non cambiano.
+8360|Sfide · {}/{} ⭐
+267|Sfide
+8252|Sfida
+8362|{} Sfida
+8253|Finale di coppa
+8254|Europa · Ritorno
+8350|{} Sfida: {}. {}
+8255|Imposta l’undici e la tattica, poi scendi in campo.
+8255|Imposta l’undici e la tattica, poi scendi in campo.
+8361|{}° posto · {}V {}N {}P
+8256|Perfetto!
+189|Ce l’hai fatta!
+8257|Non stavolta
+8258|, sei in 10
+8259|Giochi in casa.
+8260|Giochi in trasferta.
+8337|{}° minuto, punteggio {}-{}{}. {} Tutti giocano la stessa sfida; sii il migliore della settimana.
+8346|Mancano {} settimane · {}° posto
+8262|Esci dalla sfida
+8263|Uscire dalla sfida?
+8264|Questo tentativo non verrà salvato.
+635|Esci
+8342|🟥 {} espulso. Sei in 10.
+8267|Andata: 0-3. Serve vincere con 4 gol di scarto per passare.
+8363|al {}° minuto, sul {}-{}
+8348|⏱️ Hai preso la partita {}.
+8270|dal fischio d’inizio
+8364|💎 {} sfide sbloccate
+8272|1 sfida gratis · il resto con Diamond
+8273|Sfide da allenatore
+8274|🎯 Sfide da allenatore
+8335|Prendi una partita da un certo minuto o salva la squadra nelle ultime settimane. {}/{} ⭐
+8276|Pioggia di diamanti
+8277|Braccia al cielo, piovono diamanti.
+8278|Incoronazione
+8279|Si ferma, porta le mani alla testa e scende una corona d’oro.
+8280|Fuochi d’artificio
+8281|Scivolata in ginocchio, il cielo si illumina.
+8282|Danza del robot
+8283|Movimenti a scatti da robot alla bandierina.
+8284|Ora della nanna
+8285|Si sdraia sull’erba e canta la ninna nanna agli avversari.
+8286|Salta in aria mentre dietro cadono fulmini.
+8287|GOL DI DIAMANTE!
+8288|RE!
+8289|FUOCHI!
+8290|FULMINE!
+8291|Esultanze Diamond
+8349|{} Esultanze Diamond
+8292|Si sblocca con Diamond
+8293|Colori del club
+8294|Poster della carriera
+8356|{} Poster della carriera{}
+8357|{} Poster della carriera
+8295|La storia è appena iniziata.
+8296|% vittorie
+8297|Trofei e premi
+8298|Ogni settimana la stessa sfida da allenatore per tutti. Prima per chi ha Diamond, poi per tutti.
+8301|Le novità arrivano prima a chi ha Diamond. Dicci cosa ne pensi e daremo forma al gioco insieme.
+8334|{} sfide a stelle: rimontare uno 0-2, giocare in 10, operazione salvezza, corsa scudetto...
+8305|Le novità prima di tutti. La prima: Sfida della settimana
+8308|6 esultanze esclusive
+8309|💎 6 esultanze esclusive
+8310|Pioggia di diamanti, incoronazione, fuochi, danza del robot, nanna, fulmine
+8311|🖼️ Poster della carriera HD
+8312|Poster della carriera HD
+8313|3 design per le tue carriere da giocatore e allenatore, risoluzione da stampa
+8314|🎨 Temi allenatore e 6 slot carriera
+8315|Temi allenatore e 6 slot carriera
+8316|4 temi per la schermata allenatore, 6 carriere invece di 3
+8317|◆ Badge Sostenitore fondatore
+8318|Badge Sostenitore fondatore
+8319|Badge permanente per chi prende Diamond al lancio
+8320|Rimontare uno 0-2, giocare in 10, operazione salvezza, corsa scudetto... Raccogli stelle. La prima sfida è gratis per tutti.
+8324|Nuovi contenuti Diamond
+8325|6 esultanze esclusive, poster della carriera HD, temi allenatore e 6 slot carriera.
+8326|Novità in Diamond prima di tutti. La prima: Sfida della settimana.
+8329|Badge permanente per chi prende Diamond al lancio. Grazie a tutti quelli che sostengono il gioco!
+8332|Nulla di ciò che arriva in Diamond dà vantaggi in partita, e nel gioco gratuito non cambia nulla.
+8178|Diamond
+8333|· Diamond
+8341|Situazioni pronte, obiettivi duri: {} sfide · {}/{}
+8366|Sfide · {}/{}
+8343|{} espulso. Sei in 10.
+8355|Hai preso la partita {}.
+8368|{} sfide sbloccate
+8336|Prendi una partita da un certo minuto o salva la squadra nelle ultime settimane. {}/{}
