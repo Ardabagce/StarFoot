@@ -189,7 +189,7 @@ const Player = {
       return Player.FAST_YOUTH_K;
     } catch (e) { return 1; }
   },
-  FAST_YOUTH_K: 2.2,
+  FAST_YOUTH_K: 1.9,
   // Maçta kullanılan statlara küçük deneyim
   matchXp(p, keys) {
     const fk = Player.fastK(p);

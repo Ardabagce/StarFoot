@@ -369,7 +369,7 @@ const MiniGame = {
             const m = mateAt(w0);
             if (m) { passTo(m); return; }
             // hedef: kale ağzı genişliği boyunca (biraz dışı da seçilebilir; ıska riski)
-            const gx = U.clamp(w0.x, -PITCH.GOAL_W / 2 - 1.2, PITCH.GOAL_W / 2 + 1.2);
+            const gx = U.clamp(w0.x, -PITCH.GOAL_W - 1.2, PITCH.GOAL_W + 1.2);
             aimSt = { gx, t0: t };
             return;
           }
@@ -390,7 +390,7 @@ const MiniGame = {
             comp = U.clamp((0.55 * spin * dist) / (sp * sp), -0.5, 0.5);
           }
           MiniGame.lastAim = { power, q, kp };
-          let ang = chord + comp + U.gauss() * (1 - q) * 0.07;
+          let ang = chord + comp + U.gauss() * (1 - q) * 0.15;
           aimSt = null;
           if (kp > 0.93 && liftIdx === 0) liftIdx = 1; // tam güç alçak gitmez
           kick(ang, kp, spin, false);
@@ -697,7 +697,7 @@ const MiniGame = {
         const fs = dpr;
         if (!aimSt) {
           // kale ağzında hedef bölgesi
-          const y = ty(0, 1.2), x0 = tx(-PITCH.GOAL_W / 2), x1 = tx(PITCH.GOAL_W / 2);
+          const y = ty(0, 1.2), x0 = tx(-PITCH.GOAL_W), x1 = tx(PITCH.GOAL_W);
           ctx.fillStyle = `rgba(255,207,63,${0.10 + 0.08 * Math.sin(t * 5)})`;
           ctx.fillRect(x0, ty(0, PITCH.BAR), x1 - x0, ty(0, 0) - ty(0, PITCH.BAR));
           if (showAimHint || t < 2.2) pill(scene.mates.length ? 'KALEDE HEDEFE DOKUN  ·  ARKADAŞINA DOKUN: PAS' : 'KALEDE HEDEFE DOKUN');

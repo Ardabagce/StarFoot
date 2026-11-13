@@ -249,6 +249,7 @@ const Match = {
       efUi();
     };
     const refresh = () => {
+      if (!$('mt-hs') || !$('mt-rating') || !$('mt-en')) return; // ekran değiştiyse sessizce atla
       $('mt-hs').textContent = M.hs; $('mt-as').textContent = M.as;
       $('mt-min').textContent = Math.min(90, M.min) + "'";
       $('mt-bar').style.width = Math.min(100, (M.min / 90) * 100) + '%';
