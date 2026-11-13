@@ -23,9 +23,16 @@ const Diamond = {
     const base = plus ? 3.99 : Math.min(3.99, (Premium.active ? 1.99 : 0) + (raw('wc') ? 1.99 : 0) + (raw('legends') ? 1.99 : 0));
     return base + (raw('coach') ? 3.99 : 0);
   },
-  key() {
+  ideal() {
     const r = 7.99 - Diamond.owned();
     return r > 7 ? 'full' : r > 5 ? 'u599' : r > 3 ? 'upg' : r > 1.5 ? 'u199' : 'u099';
+  },
+  // mağazada henüz açılmamış (onay bekleyen) kademe varsa bir üst kademe kullanılır; satın alma hiç kırılmaz
+  key() {
+    const order = ['u099', 'u199', 'upg', 'u599', 'full'], want = Diamond.ideal();
+    if (!Object.keys(Diamond.prices).length) return want;
+    for (let i = order.indexOf(want); i < order.length; i++) if (Diamond.prices[order[i]]) return order[i];
+    return want;
   },
   priceOf(k) { const x = Diamond.prices[k || Diamond.key()]; return x ? x.s : ''; },
   async load() {
@@ -40,8 +47,8 @@ const Diamond = {
   async buy(src) {
     const P = Premium.plugin();
     if (!P || Premium.busy) return false;
+    if (!Diamond.prices[Diamond.key()]) await Diamond.load();
     const k = Diamond.key();
-    if (!Diamond.prices[k]) await Diamond.load();
     if (!Diamond.prices[k]) { Game.toast('Diamond çok yakında!', 'info'); return false; }
     Premium.busy = true;
     let ok = false;
