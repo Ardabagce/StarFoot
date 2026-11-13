@@ -51,8 +51,8 @@
     const bench = L.bench.map(Live.P).filter((p) => p && Coach.available(p)).sort((a, b) => b.r - a.r);
     const tok = ({ p, x, y }) => {
       const r = L.rates[p.id] || 6.4;
-      return `<button class="lp-t ${p.id === pick ? 'on' : ''} ${p.fit < 50 ? 'tired' : ''}" data-o="${p.id}" style="left:${x}%;top:${y}%">
-        <i class="lp-r" style="background:${rcol(r)}">${r.toFixed(1)}</i><b data-noi18n>${U.esc(last(p.n))}</b>
+      return `<button class="sbp-t ${p.id === pick ? 'on' : ''} ${p.fit < 50 ? 'tired' : ''}" data-o="${p.id}" style="left:${x}%;top:${y}%">
+        <i class="sbp-r" style="background:${rcol(r)}">${r.toFixed(1)}</i><b data-noi18n>${U.esc(last(p.n))}</b>
         <span class="lp-f"><i style="width:${Math.round(p.fit)}%;background:${fcol(p.fit)}"></i></span></button>`;
     };
     const card = (p) => `<button class="lp-b" data-i="${p.id}"><span class="cm-pos ${p.pos}">${CM_POS[p.pos]}</span><b data-noi18n>${U.esc(p.n)}</b>
