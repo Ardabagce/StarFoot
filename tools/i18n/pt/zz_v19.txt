@@ -1536,3 +1536,6 @@
 8394|← EFEITO
 
 8395|LADOS: EFEITO  ·  BAIXO: CAVADINHA
+8396|Fácil: seu time fica um pouco mais forte em campo, a diretoria mais paciente e o orçamento maior.
+8397|Médio: equilibrado, a experiência padrão.
+8398|Difícil: adversários mais duros, diretoria impaciente e orçamento apertado.

@@ -3689,5 +3689,8 @@
 "AŞIRTMA": "CHIP",
 "FALSO →": "CURL →",
 "← FALSO": "← CURL",
-"YANLAR FALSO  ·  ALT KISIM AŞIRTMA": "SIDES: CURL  ·  BOTTOM: CHIP"
+"YANLAR FALSO  ·  ALT KISIM AŞIRTMA": "SIDES: CURL  ·  BOTTOM: CHIP",
+"Kolay: takımın sahada biraz daha güçlü, yönetim daha sabırlı, bütçe daha yüksek.": "Easy: your team is a bit stronger on the pitch, the board is more patient and the budget is bigger.",
+"Orta: dengeli, standart deneyim.": "Medium: the balanced, standard experience.",
+"Zor: rakipler daha zorlu, yönetim sabırsız, bütçe kısıtlı.": "Hard: opponents are tougher, the board is impatient and the budget is tight."
 }

@@ -1536,3 +1536,6 @@
 8394|← EFFET
 
 8395|SEITEN: EFFET  ·  UNTEN: LUPFER
+8396|Leicht: Dein Team ist auf dem Platz etwas stärker, der Vorstand geduldiger und das Budget größer.
+8397|Mittel: ausgewogen, das Standard-Erlebnis.
+8398|Schwer: Gegner sind stärker, der Vorstand ist ungeduldig und das Budget knapp.

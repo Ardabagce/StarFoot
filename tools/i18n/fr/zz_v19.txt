@@ -1536,3 +1536,6 @@
 8394|← EFFET
 
 8395|CÔTÉS : EFFET  ·  BAS : LOB
+8396|Facile : ton équipe est un peu plus forte sur le terrain, la direction plus patiente et le budget plus élevé.
+8397|Moyen : équilibré, l’expérience standard.
+8398|Difficile : adversaires plus coriaces, direction impatiente et budget serré.

@@ -7754,6 +7754,72 @@
 "Takım kimyası: {} · Bizim kimyamız: {}": [
 "coach6.js"
 ],
+"Kolay": [
+"coachdiff.js",
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Kolay: takımın sahada biraz daha güçlü, yönetim daha sabırlı, bütçe daha yüksek.": [
+"coachdiff.js"
+],
+"Orta": [
+"coachdiff.js",
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"match.js"
+],
+"Orta: dengeli, standart deneyim.": [
+"coachdiff.js"
+],
+"Zor": [
+"coachdiff.js",
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Zor: rakipler daha zorlu, yönetim sabırsız, bütçe kısıtlı.": [
+"coachdiff.js"
+],
+"Zorluk": [
+"coachdiff.js",
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Zorluk: {}": [
+"coachdiff.js",
+"game.js"
+],
 "Maç başladı! {} oyunla başlıyoruz.": [
 "coachlive.js",
 "lang-ar.js",
@@ -39390,18 +39456,6 @@
 "{} Arkadaşların": [
 "friends.js"
 ],
-"Kolay": [
-"game.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "Kaleciler ve savunma daha zayıf, nişan yardımı güçlü, antrenmanda daha hızlı gelişirsin.": [
 "game.js",
 "lang-ar.js",
@@ -39414,32 +39468,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Orta": [
-"game.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"match.js"
-],
 "Dengeli bir kariyer deneyimi.": [
-"game.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"Zor": [
 "game.js",
 "lang-ar.js",
 "lang-de.js",
@@ -44716,18 +44745,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Zorluk": [
-"game.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "Vuruş tarzı": [
 "game.js",
 "lang-ar.js",
@@ -45264,9 +45281,6 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
-],
-"Zorluk: {}": [
-"game.js"
 ],
 "{} artık maçlarda kullanılıyor": [
 "game.js",
@@ -86236,6 +86250,17 @@
 "lang-pt.js"
 ],
 "← FALSO": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YANLAR FALSO · ALT KISIM AŞIRTMA": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -186443,6 +186468,9 @@
 "lang-de.js",
 "lang-fr.js"
 ],
+"SEITEN: EFFET  ·  UNTEN: LUPFER": [
+"lang-de.js"
+],
 "– wir haben uns qualifiziert!": [
 "lang-de.js"
 ],
@@ -214659,6 +214687,9 @@
 "← CURL": [
 "lang-en.js"
 ],
+"SIDES: CURL · BOTTOM: CHIP": [
+"lang-en.js"
+],
 "— we qualified!": [
 "lang-en.js"
 ],
@@ -242190,6 +242221,9 @@
 "← EFECTO": [
 "lang-es.js"
 ],
+"LADOS: EFECTO  ·  ABAJO: VASELINA": [
+"lang-es.js"
+],
 "— ¡nos hemos clasificado!": [
 "lang-es.js"
 ],
@@ -269587,6 +269621,9 @@
 "LOB": [
 "lang-fr.js"
 ],
+"CÔTÉS : EFFET  ·  BAS : LOB": [
+"lang-fr.js"
+],
 "— on est qualifiés !": [
 "lang-fr.js"
 ],
@@ -296188,6 +296225,9 @@
 "← EFEK": [
 "lang-id.js"
 ],
+"SISI: EFEK  ·  BAWAH: CUNGKIL": [
+"lang-id.js"
+],
 "— kita lolos!": [
 "lang-id.js"
 ],
@@ -322560,6 +322600,9 @@
 "lang-it.js"
 ],
 "← EFFETTO": [
+"lang-it.js"
+],
+"LATI: EFFETTO  ·  SOTTO: PALLONETTO": [
 "lang-it.js"
 ],
 "— ci siamo qualificati!": [
@@ -349718,6 +349761,9 @@
 "lang-pt.js"
 ],
 "← EFEITO": [
+"lang-pt.js"
+],
+"LADOS: EFEITO  ·  BAIXO: CAVADINHA": [
 "lang-pt.js"
 ],
 "— nos classificamos!": [

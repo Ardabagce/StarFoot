@@ -1536,3 +1536,6 @@
 8394|← EFEK
 
 8395|SISI: EFEK  ·  BAWAH: CUNGKIL
+8396|Mudah: timmu sedikit lebih kuat di lapangan, manajemen lebih sabar, dan anggaran lebih besar.
+8397|Sedang: seimbang, pengalaman standar.
+8398|Sulit: lawan lebih tangguh, manajemen tidak sabar, dan anggaran terbatas.

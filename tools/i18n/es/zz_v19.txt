@@ -1536,3 +1536,6 @@
 8394|← EFECTO
 
 8395|LADOS: EFECTO  ·  ABAJO: VASELINA
+8396|Fácil: tu equipo es algo más fuerte en el campo, la directiva es más paciente y el presupuesto mayor.
+8397|Medio: equilibrado, la experiencia estándar.
+8398|Difícil: los rivales son más duros, la directiva impaciente y el presupuesto ajustado.

@@ -1536,3 +1536,6 @@
 8394|← EFFETTO
 
 8395|LATI: EFFETTO  ·  SOTTO: PALLONETTO
+8396|Facile: la tua squadra è un po’ più forte in campo, la dirigenza più paziente e il budget più alto.
+8397|Medio: equilibrato, l’esperienza standard.
+8398|Difficile: avversari più tosti, dirigenza impaziente e budget ridotto.
