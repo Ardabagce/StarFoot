@@ -461,6 +461,7 @@ const Ballon = {
   },
   // sezon sonu töreni
   async ceremony() {
+    if (!Game.state || !Game.state.player) return; // kariyer kapalıyken (başlık ekranı, Teknik Direktör) gelen geç çağrılar
     const s = Game.state, p = s.player;
     if (!s || Game.isYouth() || Game.inStreet() || p.age < 17) return;
     const top = Ballon.ranking();

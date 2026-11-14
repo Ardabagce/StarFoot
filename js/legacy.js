@@ -137,6 +137,7 @@ const Scenario = {
   },
   // sezon sonunda değerlendirme (ilk sezon)
   async result() {
+    if (!Game.state || !Game.state.player) return; // kariyer kapalıyken (başlık ekranı, Teknik Direktör) gelen geç çağrılar
     const s = Game.state, sc = s.scenario, se = s.seasonEnd;
     if (!sc || sc.res || !se || sc.year !== se.year) return;
     const x = Scenario.def(sc.id);

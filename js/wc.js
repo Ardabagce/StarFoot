@@ -551,6 +551,7 @@ const WC = {
 
   // ---------- Günlük aksiyonlar ----------
   async act(id) {
+    if (!Game.state || !Game.state.player) return; // kariyer kapalıyken (başlık ekranı, Teknik Direktör) gelen geç çağrılar
     const s = Game.state, w = s.wc, p = s.player;
     if (w.ap <= 0 || WC.busy) return;
     const A = WC_ACTS.find((a) => a.id === id);
@@ -655,6 +656,7 @@ const WC = {
     return r === 'out' ? 'bench' : r;
   },
   async play() {
+    if (!Game.state || !Game.state.player) return; // kariyer kapalıyken (başlık ekranı, Teknik Direktör) gelen geç çağrılar
     const s = Game.state, w = s.wc, p = s.player;
     if (WC.busy) return;
     const cur = WC.cur();

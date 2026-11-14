@@ -324,6 +324,7 @@ const Game = {
 
   // ---------- Sokak maçı ----------
   async playStreet() {
+    if (!Game.state || !Game.state.player) return; // kariyer kapalıyken (başlık ekranı, Teknik Direktör) gelen geç çağrılar
     const s = Game.state, p = s.player;
     const exp = Math.round(expectedAtAge(p.age));
     const home = s.world.clubs.STREET;
@@ -364,6 +365,7 @@ const Game = {
 
   // Seçmeler: mevkiye göre 3 istasyon, ortalama başarı teklifleri belirler
   async playTrials() {
+    if (!Game.state || !Game.state.player) return; // kariyer kapalıyken (başlık ekranı, Teknik Direktör) gelen geç çağrılar
     const s = Game.state, p = s.player;
     const stations = { FW: ['shooting', 'pace', 'dribbling'], MF: ['passing', 'technique', 'dribbling'], DF: ['defending', 'physical', 'heading'], GK: ['pace', 'physical', 'heading'] }[p.position] || ['shooting', 'passing', 'pace'];
     const res = [];
@@ -514,6 +516,7 @@ const Game = {
 
   // Antrenman: açıksa odak statına uygun mini oyun oynanır, başarı gelişimi belirler
   async trainSession(intensity, label, after) {
+    if (!Game.state || !Game.state.player) return; // kariyer kapalıyken (başlık ekranı, Teknik Direktör) gelen geç çağrılar
     const s = Game.state, p = s.player, focus = s.trainFocus;
     if (Game._training) return;
     Game._training = true;
@@ -588,6 +591,7 @@ const Game = {
   },
 
   async playNext() {
+    if (!Game.state || !Game.state.player) return; // kariyer kapalıyken (başlık ekranı, Teknik Direktör) gelen geç çağrılar
     const s = Game.state, p = s.player;
     if (typeof Tutorial !== 'undefined' && Tutorial.shouldOffer()) await Tutorial.offer();
     if (typeof Undo !== 'undefined') Undo.take();
@@ -645,6 +649,7 @@ const Game = {
   },
 
   async playIntl() {
+    if (!Game.state || !Game.state.player) return; // kariyer kapalıyken (başlık ekranı, Teknik Direktör) gelen geç çağrılar
     const s = Game.state, p = s.player;
     const nat = Game.nation();
     const opp = s.pendingIntl;

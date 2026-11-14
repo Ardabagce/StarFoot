@@ -41,6 +41,7 @@ const Drill = {
 
   // Bir antrenman çalışması oynatır. Sonuç: { q, auto }
   async run(focus, opts = {}) {
+    if (!Game.state || !Game.state.player) return; // kariyer kapalıyken (başlık ekranı, Teknik Direktör) gelen geç çağrılar
     const s = Game.state, p = s.player;
     const D = (p.position === 'GK' && GK_DRILLS[focus]) || DRILLS[focus] || DRILLS.shooting;
     const el = Drill.host();
