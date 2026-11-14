@@ -203,7 +203,8 @@
      "アウェーで後半55分、0-2。選手交代と戦術で試合をひっくり返せ。誰でも無料でプレイ！"
     ]
    },
-   "deepLink": "starfoot://comeback"
+   "deepLink": "starfoot://comeback",
+   "submit": true
   }
  ],
  "nomination": {
@@ -223,7 +224,6 @@
   ],
   "description": "StarFoot is a football (soccer) career game by a solo indie developer from Türkiye. It is two careers in one: rise from a street match to world legend as a player, then take over a club as manager. Players control the key moments of every match themselves, and the game has no energy timers or subscriptions, only optional one-time purchases. Version 1.0.22 adds a second, physics-based shooting style called Touch: pull back to aim, then tap a spot on a close-up ball to choose curl or a chip, so every free kick can bend around the wall. Manager mode gets Easy, Medium and Hard difficulty levels, and a new fast academy option lets players skip through childhood faster while long-career fans keep the full experience. A free in-app event, The Comeback Challenge, invites everyone to turn around a 0-2 deficit as manager. StarFoot is available in 10 languages and every club and player name is fictional.",
   "notes": "Solo indie developer from Türkiye. Happy to provide additional assets, a promo video or a TestFlight build.",
-  "replaces": "StarFoot 1.0.19: Manager mode, school years, friends",
-  "submit": true
+  "replaces": "StarFoot 1.0.19: Manager mode, school years, friends"
  }
 }

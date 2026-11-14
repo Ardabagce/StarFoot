@@ -230,7 +230,7 @@ def release(asc, app_id, ver, build_no, prepare_only=False):
     # hazır (taslağı tamamlanmış) uygulama içi etkinlikler de aynı başvuruyla incelemeye gider
     try:
         for e in asc.get(f'/v1/apps/{app_id}/appEvents', limit=50)['data']:
-            if e['attributes'].get('eventState') != 'READY_FOR_REVIEW':
+            if e['attributes'].get('eventState') not in ('READY_FOR_REVIEW',):
                 continue
             try:
                 asc.req('POST', '/v1/reviewSubmissionItems', write=True, body={'data': {'type': 'reviewSubmissionItems', 'relationships': {
@@ -795,6 +795,23 @@ def events_setup(asc, app_id, cfg):
                 if t not in have:
                     _upload_asset(asc, 'appEventScreenshots', 'appEventLocalization', 'appEventLocalizations', lid, ROOT / f, {'appEventAssetType': t})
             print(f'   {loc}: metin ve görseller tamam')
+    # "submit": true olan taslak etkinlikleri kendi başvurusuyla incelemeye gönder
+    for ev in cfg.get('events', []):
+        if not ev.get('submit'):
+            continue
+        e = {x['attributes']['referenceName']: x for x in asc.get(f'/v1/apps/{app_id}/appEvents', limit=50)['data']}.get(ev['ref'])
+        if not e or e['attributes'].get('eventState') not in ('DRAFT', 'READY_FOR_REVIEW', 'REJECTED'):
+            continue
+        try:
+            sub = asc.req('POST', '/v1/reviewSubmissions', write=True, body={'data': {'type': 'reviewSubmissions',
+                'attributes': {'platform': 'IOS'}, 'relationships': {'app': {'data': {'type': 'apps', 'id': app_id}}}}})['data']
+            asc.req('POST', '/v1/reviewSubmissionItems', write=True, body={'data': {'type': 'reviewSubmissionItems', 'relationships': {
+                'reviewSubmission': {'data': {'type': 'reviewSubmissions', 'id': sub['id']}},
+                'appEvent': {'data': {'type': 'appEvents', 'id': e['id']}}}}})
+            asc.req('PATCH', f"/v1/reviewSubmissions/{sub['id']}", write=True, body={'data': {'type': 'reviewSubmissions', 'id': sub['id'], 'attributes': {'submitted': True}}})
+            print(f"• etkinlik incelemeye gönderildi: {ev['ref']}")
+        except RuntimeError as err:
+            print(f"   ! etkinlik gönderilemedi ({ev['ref']}): {str(err)[:240]}")
     return ids
 
 
