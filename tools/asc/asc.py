@@ -23,7 +23,7 @@ SCREENS = {'APP_IPHONE_67': 'store/premium/ios', 'APP_IPHONE_61': 'store/premium
            'APP_IPAD_PRO_3GEN_129': 'store/premium/ipad'}
 # dil -> görsel dosya öneki (yoksa İngilizce)
 # TR, ES ve MX kendi dilinde; diğer tüm diller İngilizce görseller
-SHOT_PREFIX = {'tr': 'tr', 'es-ES': 'es', 'es-MX': 'es'}
+SHOT_PREFIX = {'tr': 'tr', 'es-ES': 'es', 'es-MX': 'es', 'de-DE': 'de'}
 
 
 class ASC:
@@ -227,6 +227,20 @@ def release(asc, app_id, ver, build_no, prepare_only=False):
             if i == 15:
                 sys.exit('Sürüm incelemeye eklenemedi; App Store Connect sayfasındaki uyarıyı kontrol et.')
             time.sleep(45)
+    # hazır (taslağı tamamlanmış) uygulama içi etkinlikler de aynı başvuruyla incelemeye gider
+    try:
+        for e in asc.get(f'/v1/apps/{app_id}/appEvents', limit=50)['data']:
+            if e['attributes'].get('eventState') != 'READY_FOR_REVIEW':
+                continue
+            try:
+                asc.req('POST', '/v1/reviewSubmissionItems', write=True, body={'data': {'type': 'reviewSubmissionItems', 'relationships': {
+                    'reviewSubmission': {'data': {'type': 'reviewSubmissions', 'id': sub['id']}},
+                    'appEvent': {'data': {'type': 'appEvents', 'id': e['id']}}}}})
+                print(f"   etkinlik incelemeye eklendi: {e['attributes'].get('referenceName')}")
+            except RuntimeError as err:
+                print(f"   ! etkinlik eklenemedi ({e['attributes'].get('referenceName')}): {str(err)[:160]}")
+    except RuntimeError as err:
+        print(f'   ! etkinlikler okunamadı: {err}')
     asc.req('PATCH', f"/v1/reviewSubmissions/{sub['id']}", write=True, body={'data': {'type': 'reviewSubmissions', 'id': sub['id'], 'attributes': {'submitted': True}}})
     print(f'   {vs} ({build_no}) incelemeye gönderildi')
 
@@ -292,10 +306,17 @@ def upload_shots(asc, vloc_id, loc, replace):
             cur = asc.get(f"/v1/appScreenshotSets/{s['id']}/appScreenshots", limit=20)['data']
             # yarıda kalmış yükleme (eksik sayı ya da yüklenmemiş/başarısız görsel) varsa seti baştan yükle
             bad = [c for c in cur if ((c['attributes'].get('assetDeliveryState') or {}).get('state')) in ('AWAITING_UPLOAD', 'FAILED', None)]
-            if cur and not replace and not bad and len(cur) >= len(files):
+            # mağazadaki görseller yereldekilerden farklıysa (dil değişti ya da görsel yenilendi) seti değiştir
+            local = sorted(hashlib.md5(f.read_bytes()).hexdigest() for f in files)
+            remote = sorted((c['attributes'].get('sourceFileChecksum') or '') for c in cur)
+            rep = replace
+            if cur and not rep and not bad and len(cur) == len(files) and local != remote:
+                print(f'      {dtype}: görseller değişmiş, yenileniyor')
+                rep = True
+            if cur and not rep and not bad and len(cur) >= len(files):
                 print(f'      {dtype}: {len(cur)} görsel zaten var, atlandı')
                 continue
-            if cur and not replace:
+            if cur and not rep:
                 print(f'      {dtype}: yarım kalmış ({len(cur)}/{len(files)}, {len(bad)} sorunlu), yeniden yükleniyor')
             for c in cur:
                 asc.req('DELETE', f"/v1/appScreenshots/{c['id']}", write=True)

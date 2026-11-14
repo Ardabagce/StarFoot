@@ -8,7 +8,7 @@ const P = (id, accent, glow, tilt, extra, T) => Object.assign({ id, accent, glow
 const POSTERS = [
   P('goal', '#ffcf3f', 'rgba(255,207,63,.45)', -3, {}, {
     tr: { tag: 'FUTBOL KARİYER OYUNU', h1: 'GOLÜ', h2: 'SEN AT', sub: 'Kritik anlarda top senin ayağında: geri çek, nişan al, vur!', chips: [['Gerçek stadyum sesi', 'left', 1060], ['Kaydır & vur', 'right', 1520]] },
-    en: { tag: 'FOOTBALL CAREER GAME', h1: 'YOU TAKE', h2: 'THE SHOT', sub: 'In the big moments the ball is at your feet: pull back, aim, strike!', chips: [['Real stadium sound', 'left', 1060], ['Swipe & shoot', 'right', 1520]] },
+    en: { tag: 'PLAYER & MANAGER CAREER', h1: 'YOU TAKE', h2: 'THE SHOT', sub: 'Two careers in one game. In the big moments the ball is at your feet: aim and strike!', chips: [['Two careers in one', 'left', 1060], ['No energy timers', 'right', 1520]] },
     es: { tag: 'JUEGO DE CARRERA DE FÚTBOL', h1: 'TÚ METES', h2: 'EL GOL', sub: 'En los momentos clave el balón es tuyo: tira atrás, apunta y dispara.', chips: [['Sonido real de estadio', 'left', 1060], ['Desliza y dispara', 'right', 1520]] },
     pt: { tag: 'JOGO DE CARREIRA NO FUTEBOL', h1: 'VOCÊ FAZ', h2: 'O GOL', sub: 'Nos lances decisivos a bola é sua: puxe, mire e chute!', chips: [['Som real de estádio', 'left', 1060], ['Deslize e chute', 'right', 1520]] },
     de: { tag: 'FUSSBALL-KARRIERESPIEL', h1: 'DU SCHIESST', h2: 'DAS TOR', sub: 'In den großen Momenten liegt der Ball bei dir: zurückziehen, zielen, abziehen!', chips: [['Echter Stadionsound', 'left', 1060], ['Wischen & schießen', 'right', 1520]] },

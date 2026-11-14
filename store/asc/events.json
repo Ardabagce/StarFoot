@@ -139,25 +139,91 @@
     ]
    },
    "deepLink": "starfoot://coach"
+  },
+  {
+   "ref": "Comeback Challenge 2026-11",
+   "badge": "CHALLENGE",
+   "purpose": "ATTRACT_NEW_USERS",
+   "priority": "HIGH",
+   "purchase": "NO_COST_ASSOCIATED",
+   "publishStart": "2026-11-17T17:00:00Z",
+   "eventStart": "2026-11-19T17:00:00Z",
+   "eventEnd": "2026-12-17T17:00:00Z",
+   "card": "store/asc/events/event_card_1920x1080.png",
+   "details": "store/asc/events/event_detail_1080x1920.png",
+   "locales": {
+    "tr": [
+     "Büyük Dönüş Meydan Okuması",
+     "0-2 geridesin. Maçı çevirebilir misin?",
+     "55. dakika, deplasmanda 0-2 geridesin. Değişiklikleri yap, taktiği kur, maçı çevir. Herkese ücretsiz!"
+    ],
+    "en-US": [
+     "The Comeback Challenge",
+     "Down 0-2. Can you turn it around?",
+     "55th minute, 0-2 down away from home. Make your subs, set your tactics and turn it around. Free for everyone!"
+    ],
+    "en-GB": [
+     "The Comeback Challenge",
+     "Down 0-2. Can you turn it around?",
+     "55th minute, 0-2 down away from home. Make your subs, set your tactics and turn it around. Free for everyone!"
+    ],
+    "de-DE": [
+     "Das Comeback: Challenge",
+     "0:2 hinten. Drehst du das Spiel?",
+     "55. Minute, 0:2 auswärts hinten. Wechsle, stell die Taktik um und dreh das Spiel. Für alle kostenlos!"
+    ],
+    "es-ES": [
+     "Desafío: El gran regreso",
+     "Pierdes 0-2. ¿Puedes darle la vuelta?",
+     "Minuto 55, pierdes 0-2 fuera de casa. Haz cambios, ajusta la táctica y remonta. ¡Gratis para todos!"
+    ],
+    "es-MX": [
+     "Desafío: El gran regreso",
+     "Pierdes 0-2. ¿Puedes darle la vuelta?",
+     "Minuto 55, pierdes 0-2 fuera de casa. Haz cambios, ajusta la táctica y remonta. ¡Gratis para todos!"
+    ],
+    "pt-BR": [
+     "Desafio: A volta por cima",
+     "Perdendo de 0 a 2. Consegue virar?",
+     "Minuto 55, perdendo de 0 a 2 fora de casa. Faça substituições, ajuste a tática e vire o jogo. Grátis!"
+    ],
+    "pt-PT": [
+     "Desafio: A volta por cima",
+     "Perdendo de 0 a 2. Consegue virar?",
+     "Minuto 55, perdendo de 0 a 2 fora de casa. Faça substituições, ajuste a tática e vire o jogo. Grátis!"
+    ],
+    "fr-FR": [
+     "Défi : Le grand retour",
+     "Mené 0-2. Peux-tu renverser le match ?",
+     "55e minute, mené 0-2 à l'extérieur. Fais tes changements, règle ta tactique et renverse le match. Gratuit !"
+    ],
+    "ja": [
+     "カムバック・チャレンジ",
+     "0-2のビハインド。逆転できるか？",
+     "アウェーで後半55分、0-2。選手交代と戦術で試合をひっくり返せ。誰でも無料でプレイ！"
+    ]
+   },
+   "deepLink": "starfoot://comeback"
   }
  ],
  "nomination": {
-  "name": "StarFoot 1.0.19: Manager mode, school years, friends",
+  "name": "StarFoot 1.0.22: Touch shooting, Manager difficulty, fast academy",
   "type": "APP_ENHANCEMENTS",
-  "publishStart": "2026-11-22T17:00:00Z",
+  "publishStart": "2026-11-19T17:00:00Z",
   "locales": [
    "en-US",
    "en-GB",
-   "tr",
    "de-DE",
+   "tr",
    "es-MX",
    "es-ES",
    "pt-BR",
    "fr-FR",
    "ja"
   ],
-  "description": "StarFoot is a football (soccer) career game by a solo indie developer from Türkiye: start in a street match, get spotted by scouts and rise to the world's biggest clubs, playing the key moments of every match yourself. Version 1.0.19 is our biggest update yet. A new Manager mode puts players in charge of a club: build the squad, pick tactics, run matches live from the touchline with substitutions and half-time talks, negotiate transfers and face the press. The player career goes deeper: school years with exams and report cards, friends who grow up to become players, journalists or agents, a driving test, open university, language courses and holidays. Players can request a transfer to any club, earn signing bonuses and a share of shirt sales, go out on loan and develop a personality that changes with how they play. 40+ new national teams and StarFoot Diamond, an all-in-one purchase, complete the update. Fully localized in 10 languages; all names are fictional.",
-  "notes": "Solo indie developer from Türkiye. Happy to provide additional assets or a TestFlight build.",
-  "replaces": "StarFoot 1.0.11: iCloud, Game Center, live match radar"
+  "description": "StarFoot is a football (soccer) career game by a solo indie developer from Türkiye. It is two careers in one: rise from a street match to world legend as a player, then take over a club as manager. Players control the key moments of every match themselves, and the game has no energy timers or subscriptions, only optional one-time purchases. Version 1.0.22 adds a second, physics-based shooting style called Touch: pull back to aim, then tap a spot on a close-up ball to choose curl or a chip, so every free kick can bend around the wall. Manager mode gets Easy, Medium and Hard difficulty levels, and a new fast academy option lets players skip through childhood faster while long-career fans keep the full experience. A free in-app event, The Comeback Challenge, invites everyone to turn around a 0-2 deficit as manager. StarFoot is available in 10 languages and every club and player name is fictional.",
+  "notes": "Solo indie developer from Türkiye. Happy to provide additional assets, a promo video or a TestFlight build.",
+  "replaces": "StarFoot 1.0.19: Manager mode, school years, friends",
+  "submit": true
  }
 }
