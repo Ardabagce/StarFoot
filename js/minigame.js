@@ -143,6 +143,46 @@ const BallPhys = {
   },
 };
 
+// Dokunuş tarzı falso: topun dokunulan noktası, topun kale çizgisinde ne kadar kıvrılacağını belirler.
+// Gereken dönüş fizikle çözülür; böylece şutun gücü, yüksekliği ya da mesafesi ne olursa olsun
+// aynı noktaya dokunmak aynı (öngörülebilir) kavisi verir.
+const TouchCurl = {
+  // kale çizgisinde istenen yana kayma (m): kenar (|ck|=1) yakın mesafede ~1,9 m, 20 m'de ~2,8 m, 30 m'de ~3,8 m
+  bend(ck, dist, technique) {
+    return ck * Math.min(4.2, 0.6 + 0.11 * dist) * (0.88 + (technique || 60) / 500);
+  },
+  // topu uçurur; kale çizgisini geçtiği andaki x konumunu verir (geçmezse 2 sn sonraki konumu)
+  latAt(b0, ang, speed, lift, spin) {
+    const b = { x: b0.x, y: b0.y, z: 0, vx: 0, vy: 0, vz: 0, spin: 0 };
+    BallPhys.launch(b, ang, speed, lift, spin);
+    let px = b.x, py = b.y;
+    for (let i = 0; i < 480; i++) {
+      px = b.x; py = b.y;
+      BallPhys.step(b, 1 / 240);
+      if (b.y <= 0) return py > 0 ? px + (b.x - px) * (py / (py - b.y)) : b.x;
+    }
+    return b.x;
+  },
+  // istenen kaymayı veren dönüşü bulur (ikiye bölme); ulaşılamıyorsa sınırda kalır
+  solve(b0, ang, speed, lift, want, smax) {
+    const x0 = TouchCurl.latAt(b0, ang, speed, lift, 0);
+    const f = (sp) => TouchCurl.latAt(b0, ang, speed, lift, sp) - x0 - want;
+    let lo = -smax, hi = smax, flo = f(lo), fhi = f(hi);
+    // çözüm aralıkta değilse (çok yumuşak, sekerek giden toplar): yönü doğru, ölçülü bir dönüş
+    if (flo * fhi > 0) {
+      // istenen kavise ulaşılamıyor: doğru yöne en çok kıvıran uç (çok sert, yakın şut); o da yoksa ölçülü dönüş
+      const dl = flo + want, dh = fhi + want;
+      const ok = [[lo, dl], [hi, dh]].filter(([, d]) => Math.sign(d) === Math.sign(want)).sort((u, v) => Math.abs(u[1] - want) - Math.abs(v[1] - want));
+      return ok.length ? ok[0][0] : -Math.sign(want) * Math.min(smax, Math.abs(want) * 3);
+    }
+    for (let i = 0; i < 16; i++) {
+      const mid = (lo + hi) / 2, fm = f(mid);
+      if (fm * flo > 0) { lo = mid; flo = fm; } else hi = mid;
+    }
+    return (lo + hi) / 2;
+  },
+};
+
 const MiniGame = {
   seen: 0,
   // Vuruş tarzı (Ayarlar): 'swipe' = StarFoot (geri çek ve bırak, varsayılan), 'aim' = Hedef (kaleye dokun, gücü durdur)
@@ -373,23 +413,23 @@ const MiniGame = {
           if (r > 1.25) { aimSt = null; return; }
           if (r > 1) { dx /= r; dy /= r; }
           const rr = Math.min(1, r);
-          // sol tarafa vurmak topu sağa döndürür (spin<0 → +x); kenara yaklaştıkça güçlü, belirgin kavis
-          const ck = Math.sign(dx) * Math.pow(Math.abs(dx), 0.8);
-          const spin = ck * curveMax * 2.0;
+          // falso eğrisi: merkezde yumuşak, kenara doğru güçlenir
+          const ck = Math.sign(dx) * Math.pow(Math.abs(dx), 0.85);
           // dikey: üst = alçak ve sert, orta = yarım yükseklik, alt = aşırtma
-          // yandan vuruşta top hafif havalanır (falso havada daha çok döner)
-          const liftV = Math.max(U.clamp((dy + 0.25) / 1.15, 0, 1) * 0.62, 0.2 * Math.abs(ck));
+          // yandan vuruşta top hafif havalanır
+          const liftV = Math.max(U.clamp((dy + 0.25) / 1.15, 0, 1) * 0.62, 0.16 * Math.abs(ck));
           liftIdx = liftV > 0.42 ? 2 : liftV > 0.1 ? 1 : 0;
           const power = U.clamp(aimSt.power * (1 + 0.06 * Math.max(0, -dy)), 0.15, 1);
-          // top önce nişan yönünde çıkar, sonra falso yönüne kıvrılır (açı telafisi yalnızca küçük bir yardım)
+          // top nişan yönünde çıkar, sonra falso yönüne kıvrılır; sol tarafa vurmak topu sağa (+x) götürür
           const dirY = Math.sin(aimSt.ang);
           const dist = dirY < -0.15 ? Math.min(ball.y / -dirY, 40) : 20;
-          const sp = power * maxSpeed;
-          const comp = 0.25 * U.clamp((0.55 * spin * dist) / (sp * sp), -0.5, 0.5);
-          // topun en kenarına vurmak riskli: hafif sapma
-          const edge = Math.max(0, rr - 0.8) / 0.2;
-          const ang = assistAngle(aimSt.ang) + comp + U.gauss() * 0.05 * edge;
-          MiniGame.lastAim = { power, dx, dy, liftV };
+          // topun kenarına vurmak: çok hafif rastgele sapma (falsonun miktarı değişmez)
+          const edge = Math.max(0, rr - 0.85) / 0.15;
+          const ang = assistAngle(aimSt.ang) + U.gauss() * 0.012 * edge;
+          const sp = chipSpeed(ang, power * maxSpeed);
+          const want = -TouchCurl.bend(ck, dist, st.technique);
+          const spin = Math.abs(ck) < 0.02 ? 0 : TouchCurl.solve(ball, ang, sp, liftV, want, curveMax * 4);
+          MiniGame.lastAim = { power, dx, dy, liftV, want, spin, dist };
           aimSt = null;
           kick(ang, power, spin, false, liftV);
           return;
