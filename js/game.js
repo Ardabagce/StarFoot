@@ -856,7 +856,9 @@ const Game = {
       if (typeof LifeX !== 'undefined') LifeX.week(s);
       if (!Game.inStreet()) Cups.week(s, r);
       if (r === Math.floor(Game.rounds() / 2)) setTimeout(() => Game.seasonAd('midSeason'), 400);
-      if (r >= Game.rounds()) {
+      // mahalle/seçme aşamasında lig yok: sezon kapanmaz, oyuncu maça çıkıp kulüp bulana kadar son haftada bekler
+      if (r >= Game.rounds() && Game.inStreet()) s.season.round = Game.rounds() - 1;
+      else if (r >= Game.rounds()) {
         Game.save();
         return Game.endSeason();
       }
