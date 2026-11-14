@@ -1,8 +1,9 @@
 # StarFoot
 
-> StarFoot is a football (soccer) career game for iPhone and iPad. You start as a child aged 8 to 18 in any year from 1980 to today, impress scouts in street matches, rise through the academy and play the key moments of every match yourself (shots, passes, free kicks, penalties, headers). A separate Manager mode lets you run a club. It is free to play with optional one-time purchases, has no energy timers and no subscriptions, and works fully offline. Available in 10 languages. All club and player names are fictional.
+> StarFoot is a football (soccer) career game for iPhone, iPad and Android. You start as a child aged 8 to 18 in any year from 1980 to today, impress scouts in street matches, rise through the academy and play the key moments of every match yourself (shots, passes, free kicks, penalties, headers). A separate Manager mode lets you run a club. It is free to play with optional one-time purchases, has no energy timers and no subscriptions, and works fully offline. Available in 10 languages. All club and player names are fictional.
 
 - App Store: https://apps.apple.com/app/id6819292902
+- Google Play: https://play.google.com/store/apps/details?id=app.vercel.starfoot.twa
 - Website: https://starfoot.bagce.dev/
 - Download page: https://starfoot.bagce.dev/ios
 

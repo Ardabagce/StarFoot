@@ -4,15 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>StarFoot: Futbol Kariyeri</title>
-  <meta name="description" content="Sokaktan efsaneye: futbol kariyerini sen yaz. Kritik anları sen oyna, transfer ol, kupaları kaldır. App Store'da ücretsiz, Android çok yakında.">
+  <meta name="description" content="Sokaktan efsaneye: futbol kariyerini sen yaz. Kritik anları sen oyna, transfer ol, kupaları kaldır. App Store ve Google Play'de ücretsiz.">
   <meta name="theme-color" content="#0a1530">
   <meta property="og:title" content="StarFoot: Futbol Kariyeri">
-  <meta property="og:description" content="Sokaktan efsaneye: futbol kariyerini sen yaz. App Store'da ücretsiz, Android çok yakında.">
+  <meta property="og:description" content="Sokaktan efsaneye: futbol kariyerini sen yaz. App Store ve Google Play'de ücretsiz.">
   <meta property="og:image" content="https://starfoot.bagce.dev/site/tr-2-matchday.jpg">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="apple-itunes-app" content="app-id=6819292902">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "StarFoot", "alternateName": "StarFoot: Futbol Kariyer Oyunu", "operatingSystem": "iOS, iPadOS", "applicationCategory": "GameApplication", "applicationSubCategory": "Sports", "url": "https://starfoot.bagce.dev/", "downloadUrl": "https://apps.apple.com/app/id6819292902", "image": "https://starfoot.bagce.dev/icons/icon-512.png", "description": "Football career game: start as a kid aged 8 to 18, play the key moments of every match, become a world star, then manage a club. Free, offline, no energy timers, no subscriptions.", "inLanguage": ["tr", "en", "de", "es", "fr", "pt", "it", "id", "ar", "ja"], "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "StarFoot", "alternateName": "StarFoot: Futbol Kariyer Oyunu", "operatingSystem": "iOS, iPadOS, Android", "applicationCategory": "GameApplication", "applicationSubCategory": "Sports", "url": "https://starfoot.bagce.dev/", "downloadUrl": ["https://apps.apple.com/app/id6819292902", "https://play.google.com/store/apps/details?id=app.vercel.starfoot.twa"], "image": "https://starfoot.bagce.dev/icons/icon-512.png", "description": "Football career game: start as a kid aged 8 to 18, play the key moments of every match, become a world star, then manage a club. Free, offline, no energy timers, no subscriptions.", "inLanguage": ["tr", "en", "de", "es", "fr", "pt", "it", "id", "ar", "ja"], "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "StarFoot", "url": "https://starfoot.bagce.dev/"}</script>
   <link rel="alternate" type="application/rss+xml" href="/blog/tr/feed.xml" title="StarFoot Blog">
   <link rel="icon" href="icons/icon-192.png" type="image/png">
@@ -39,8 +39,7 @@
     .btn { display: inline-flex; align-items: center; gap: 10px; padding: 14px 22px; border-radius: 14px; font: 700 19px 'Barlow Semi Condensed', sans-serif; text-decoration: none; }
     .btn svg { width: 22px; height: 22px; flex: none; }
     .btn.ios { background: var(--gold); color: #0a1530; box-shadow: 0 12px 34px rgba(255,207,63,.3); }
-    .btn.and { border: 1px solid var(--line); color: var(--mut); background: rgba(255,255,255,.04); cursor: default; }
-    .btn.and b { color: var(--txt); }
+    .btn.and { background: #fff; color: #0a1530; box-shadow: 0 12px 34px rgba(255,255,255,.12); }
     .note { font-size: 15px; color: var(--mut); }
     .phones { display: flex; gap: 14px; justify-content: center; align-items: flex-start; }
     .phones img { width: 46%; max-width: 270px; height: auto; aspect-ratio: 9 / 16; object-fit: cover; align-self: flex-start; min-height: 0; display: block; border-radius: 22px; border: 1px solid var(--line); box-shadow: 0 24px 60px rgba(0,0,0,.5); }
@@ -89,10 +88,10 @@
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.8-.8-3-.8-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.3.9-1.3 1.3-2.6 1.3-2.6s-2.5-1-2.5-3.8zM14.1 5.8c.6-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.4-.6.7-1.1 1.8-1 2.9 1.1.1 2.2-.6 2.8-1.3z"/></svg>
             <span data-t="ios">App Store'dan ücretsiz indir</span>
           </a>
-          <span class="btn and">
+          <a class="btn and" href="https://play.google.com/store/apps/details?id=app.vercel.starfoot.twa" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.6 2.3 13.4 12l-9.8 9.7c-.4-.2-.6-.7-.6-1.2V3.5c0-.5.2-1 .6-1.2zm11 10.9 2.6 2.6-11 6.3 8.4-8.9zm3.8-3.8 2.5 1.4c.7.4.7 1.4 0 1.8l-2.5 1.4-2.8-2.3 2.8-2.3zM6.2 1.9l11 6.3-2.6 2.6-8.4-8.9z"/></svg>
-            <span data-t="and">Google Play: <b>çok yakında</b></span>
-          </span>
+            <span data-t="and">Google Play'den ücretsiz indir</span>
+          </a>
         </div>
         <p class="note" data-t="note">Ücretsiz · Tamamen Türkçe · İnternetsiz de oynanır</p>
       </div>
@@ -111,7 +110,7 @@
 
     <section class="soon">
       <i>🤖</i>
-      <div><b data-t="s1">Android sürümü çok yakında!</b><p data-t="s1p">Google Play'e hazırlanıyoruz. Çıktığı gün haberdar olmak için Instagram ve TikTok'ta <b>@starfootapp</b> hesabını takip et.</p>
+      <div><b data-t="s1">Artık Android'de de!</b><p data-t="s1p">StarFoot <a href="https://play.google.com/store/apps/details?id=app.vercel.starfoot.twa" rel="noopener"><b>Google Play'de</b></a> yayında. Yeniliklerden haberdar olmak için Instagram ve TikTok'ta <b>@starfootapp</b> hesabını takip et.</p>
         <div class="social">
           <a class="sbtn" href="https://www.instagram.com/starfootapp/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a>
           <a class="sbtn" href="https://www.tiktok.com/@starfootapp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.6 3c.3 2.2 1.6 3.6 3.9 3.8v3.1c-1.4.1-2.6-.3-3.9-1.1v5.9c0 4.3-4.7 6.9-8.3 4.6-3.7-2.3-2.5-8.6 2.5-8.9v3.2c-.4.1-.8.2-1.2.3-1.3.5-2 1.5-1.8 2.8.4 2.6 5.1 3.4 4.7-1.7V3h4.1z"/></svg><span>TikTok</span></a>
@@ -138,12 +137,12 @@
     var EN = {
       h1: 'From the streets <em>to legend</em>',
       lead: 'Write your own football career. Start in street football, play the key moments yourself, sign with giant clubs and become the world\'s best player.',
-      ios: 'Download free on the App Store', and: 'Google Play: <b>coming soon</b>',
+      ios: 'Download free on the App Store', and: 'Get it free on Google Play',
       note: 'Free · 10 languages · Plays offline', h2: 'What\'s inside?',
       f1: 'Play the key moments', f1p: 'Penalties, free kicks, dribbles and shots: the ball is at your feet in the big moments, the rest is a live simulation.',
       f2: 'Leagues and cups', f2p: 'Dozens of leagues, European cups, the World Championship and your national team. Transfer offers and contracts.',
       f3: 'Life off the pitch', f3p: 'Social media, sponsors, an agent and family. Every decision shapes your career.',
-      s1: 'Android version coming soon!', s1p: 'We\'re getting ready for Google Play. Follow <b>@starfootapp</b> on Instagram and TikTok to hear the day it launches.',
+      s1: 'Now on Android too!', s1p: 'StarFoot is out on <a href="https://play.google.com/store/apps/details?id=app.vercel.starfoot.twa" rel="noopener"><b>Google Play</b></a>. Follow <b>@starfootapp</b> on Instagram and TikTok for news and updates.',
       h3: 'Screenshots', fic: 'All club and player names are fictional.', priv: 'Privacy Policy',
     };
     var TR = {};
@@ -159,6 +158,7 @@
     var saved = null; try { saved = localStorage.getItem('starfoot_site_lang'); } catch (e) { /* yok */ }
     var lang = saved || ((navigator.language || 'tr').toLowerCase().indexOf('tr') === 0 ? 'tr' : 'en');
     if (lang === 'en') set('en');
+    if (/android/i.test(navigator.userAgent)) { var c = document.querySelector('.cta'), a = c && c.querySelector('.btn.and'); if (a) c.insertBefore(a, c.firstChild); }
     document.getElementById('lang').onclick = function () { set(document.documentElement.lang === 'en' ? 'tr' : 'en'); };
   </script>
 </body>

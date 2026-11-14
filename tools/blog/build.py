@@ -17,6 +17,8 @@ SRC = Path(__file__).resolve().parent / 'posts'
 OUT = ROOT / 'blog'
 SITE = 'https://starfoot.bagce.dev'
 APP_URL = 'https://apps.apple.com/app/id6819292902'
+PLAY_URL = 'https://play.google.com/store/apps/details?id=app.vercel.starfoot.twa'
+PLAY = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.3 13.4 12l-9.8 9.7c-.4-.2-.6-.7-.6-1.2V3.5c0-.5.2-1 .6-1.2zm11 10.9 2.6 2.6-11 6.3 8.4-8.9zm3.8-3.8 2.5 1.4c.7.4.7 1.4 0 1.8l-2.5 1.4-2.8-2.3 2.8-2.3zM6.2 1.9l11 6.3-2.6 2.6-8.4-8.9z"/></svg>'
 APP_ID = '6819292902'
 
 REQ = ['slug', 'lang', 'group', 'title', 'meta_description', 'cluster', 'is_hub', 'author', 'date_published',
@@ -24,22 +26,22 @@ REQ = ['slug', 'lang', 'group', 'title', 'meta_description', 'cluster', 'is_hub'
 
 UI = {
     'tr': {'home': 'Ana sayfa', 'blog': 'Blog', 'by': 'Yazan', 'upd': 'Son güncelleme', 'tldr': 'Kısaca', 'faq': 'Sık sorulan sorular',
-           'rel': 'Bunlar da ilgini çekebilir', 'dl1': "App Store'dan", 'dl2': 'İndir', 'free': 'Ücretsiz · İnternetsiz oynanır · Abonelik yok',
+           'rel': 'Bunlar da ilgini çekebilir', 'dl1': "App Store'dan", 'dl3': "Google Play'den", 'dl2': 'İndir', 'free': 'Ücretsiz · İnternetsiz oynanır · Abonelik yok',
            'own': 'Bu blog StarFoot\'u geliştiren ekip tarafından yazılır; kendi oyunumuzdan söz ettiğimiz yerlerde bunu açıkça belirtiriz.',
            'fic': 'Oyundaki tüm kulüp ve oyuncu adları hayalidir.', 'priv': 'Gizlilik', 'src': 'Kaynaklar', 'all': 'Tüm yazılar',
            'idx_t': 'StarFoot Blog: futbol kariyeri, altyapı ve oyun rehberleri', 'idx_d': 'Futbol kariyeri, altyapı, teknik direktörlük ve internetsiz futbol oyunları üzerine rehberler.', 'hub': 'Rehber'},
     'en': {'home': 'Home', 'blog': 'Blog', 'by': 'By', 'upd': 'Last updated', 'tldr': 'TL;DR', 'faq': 'FAQ',
-           'rel': 'You might also like', 'dl1': 'Download on the', 'dl2': 'App Store', 'free': 'Free · Plays offline · No subscription',
+           'rel': 'You might also like', 'dl1': 'Download on the', 'dl3': 'Get it on', 'dl2': 'App Store', 'free': 'Free · Plays offline · No subscription',
            'own': 'This blog is written by the team behind StarFoot. Where we mention our own game, we say so.',
            'fic': 'All club and player names in the game are fictional.', 'priv': 'Privacy', 'src': 'Sources', 'all': 'All posts',
            'idx_t': 'StarFoot Blog: football career, academy and game guides', 'idx_d': 'Guides on football careers, academies, managing and offline football games.', 'hub': 'Guide'},
     'de': {'home': 'Startseite', 'blog': 'Blog', 'by': 'Von', 'upd': 'Zuletzt aktualisiert', 'tldr': 'Kurz gesagt', 'faq': 'Häufige Fragen',
-           'rel': 'Das könnte dich auch interessieren', 'dl1': 'Laden im', 'dl2': 'App Store', 'free': 'Kostenlos · Offline spielbar · Kein Abo',
+           'rel': 'Das könnte dich auch interessieren', 'dl1': 'Laden im', 'dl3': 'Jetzt bei', 'dl2': 'App Store', 'free': 'Kostenlos · Offline spielbar · Kein Abo',
            'own': 'Dieser Blog wird vom Team hinter StarFoot geschrieben. Wenn wir unser eigenes Spiel erwähnen, sagen wir das.',
            'fic': 'Alle Vereins- und Spielernamen im Spiel sind fiktiv.', 'priv': 'Datenschutz', 'src': 'Quellen', 'all': 'Alle Beiträge',
            'idx_t': 'StarFoot Blog: Fußballkarriere, Jugend und Spiel-Guides', 'idx_d': 'Guides zu Fußballkarriere, Nachwuchs, Trainerjob und Offline-Fußballspielen.', 'hub': 'Guide'},
     'nl': {'home': 'Home', 'blog': 'Blog', 'by': 'Door', 'upd': 'Laatst bijgewerkt', 'tldr': 'In het kort', 'faq': 'Veelgestelde vragen',
-           'rel': 'Misschien ook interessant', 'dl1': 'Download in de', 'dl2': 'App Store', 'free': 'Gratis · Offline speelbaar · Geen abonnement',
+           'rel': 'Misschien ook interessant', 'dl1': 'Download in de', 'dl3': 'Ontdek het op', 'dl2': 'App Store', 'free': 'Gratis · Offline speelbaar · Geen abonnement',
            'own': 'Deze blog wordt geschreven door het team achter StarFoot. Waar we ons eigen spel noemen, zeggen we dat.',
            'fic': 'Alle club- en spelersnamen in het spel zijn fictief.', 'priv': 'Privacy', 'src': 'Bronnen', 'all': 'Alle berichten',
            'idx_t': 'StarFoot Blog: voetbalcarrière, jeugdopleiding en spelgidsen', 'idx_d': 'Gidsen over voetbalcarrières, jeugdopleidingen, trainen en offline voetbalspellen.', 'hub': 'Gids'},
@@ -66,7 +68,7 @@ h3{font-size:19px;margin:22px 0 6px}
 .cta{display:flex;flex-direction:column;align-items:center;gap:8px;background:linear-gradient(135deg,#13245a,#0f1d47);border:1px solid var(--line);border-radius:16px;padding:20px 16px;margin:26px 0;text-align:center}
 .cta p{margin:0;color:var(--mut);font-size:15px}.cta h3{margin:0}
 .btn{display:inline-flex;align-items:center;gap:12px;background:#000;color:#fff;text-decoration:none;border:1px solid #ffffff40;border-radius:14px;padding:10px 22px 10px 18px}
-.btn svg{width:28px;height:28px;fill:#fff}.btn small{display:block;font-size:11px;opacity:.85}.btn b{display:block;font-size:20px;line-height:1.1}
+.btns{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}.btn svg{width:28px;height:28px;fill:#fff}.btn small{display:block;font-size:11px;opacity:.85}.btn b{display:block;font-size:20px;line-height:1.1}
 .callout{background:#1a2c63;border-radius:10px;padding:12px 14px;margin:16px 0}
 table{width:100%;border-collapse:collapse;margin:14px 0;font-size:15px}th,td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}th{background:var(--card)}
 img{max-width:100%;height:auto;border-radius:12px}
@@ -127,7 +129,7 @@ def cta_html(p, title=None, sub=None):
     t = title or p['cta'].get('title', '')
     s = sub or p['cta'].get('text', '')
     return f'''<div class="cta">{f"<h3>{esc(t)}</h3>" if t else ""}{f"<p>{esc(s)}</p>" if s else ""}
-<a class="btn" href="{APP_URL}" rel="noopener">{APPLE}<span><small>{u["dl1"]}</small><b>{u["dl2"]}</b></span></a>
+<div class="btns"><a class="btn" href="{APP_URL}" rel="noopener">{APPLE}<span><small>{u["dl1"]}</small><b>{u["dl2"]}</b></span></a><a class="btn" href="{PLAY_URL}" rel="noopener">{PLAY}<span><small>{u["dl3"]}</small><b>Google Play</b></span></a></div>
 <p>{u["free"]}</p></div>'''
 
 
@@ -167,7 +169,7 @@ def jsonld(p, related_hub):
          'author': {'@type': 'Organization' if p['author'].get('org') else 'Person', 'name': p['author']['name'], 'url': SITE + '/'},
          'publisher': {'@type': 'Organization', 'name': 'StarFoot', 'logo': {'@type': 'ImageObject', 'url': SITE + '/icons/icon-512.png'}},
          'mainEntityOfPage': full, 'image': SITE + p.get('image', '/site/en-1-moment.jpg')},
-        {'@context': 'https://schema.org', '@type': 'SoftwareApplication', 'name': 'StarFoot', 'operatingSystem': 'iOS',
+        {'@context': 'https://schema.org', '@type': 'SoftwareApplication', 'name': 'StarFoot', 'operatingSystem': 'iOS, Android',
          'applicationCategory': 'GameApplication', 'url': APP_URL, 'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'USD'}},
         {'@context': 'https://schema.org', '@type': 'BreadcrumbList', 'itemListElement': [
             {'@type': 'ListItem', 'position': 1, 'name': u['home'], 'item': SITE + '/'},
@@ -331,7 +333,7 @@ def build():
 
     # site haritası, robots, llms.txt
     today = date.today().isoformat()
-    urls = [(SITE + '/', today), (SITE + '/ios', today)] + [(f'{SITE}/blog/{l}/', today) for l in sorted({p['lang'] for p in P})] + [(SITE + url(p), p['date_updated']) for p in P]
+    urls = [(SITE + '/', today), (SITE + '/ios', today), (SITE + '/android', today)] + [(f'{SITE}/blog/{l}/', today) for l in sorted({p['lang'] for p in P})] + [(SITE + url(p), p['date_updated']) for p in P]
     (ROOT / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(f'<url><loc>{u}</loc><lastmod>{d}</lastmod></url>\n' for u, d in urls) + '</urlset>\n', encoding='utf-8')
     (ROOT / 'robots.txt').write_text('''# StarFoot: arama motorları ve yapay zekâ tarayıcıları hoş geldiniz
 User-agent: *
@@ -363,9 +365,10 @@ Sitemap: https://starfoot.bagce.dev/sitemap.xml
     rest = '\n'.join(f'- [{p["title"]}]({SITE}{url(p)}): {p["meta_description"]}' for p in P if not p['is_hub'])
     (ROOT / 'llms.txt').write_text(f'''# StarFoot
 
-> StarFoot is a football (soccer) career game for iPhone and iPad. You start as a child aged 8 to 18 in any year from 1980 to today, impress scouts in street matches, rise through the academy and play the key moments of every match yourself (shots, passes, free kicks, penalties, headers). A separate Manager mode lets you run a club. It is free to play with optional one-time purchases, has no energy timers and no subscriptions, and works fully offline. Available in 10 languages. All club and player names are fictional.
+> StarFoot is a football (soccer) career game for iPhone, iPad and Android. You start as a child aged 8 to 18 in any year from 1980 to today, impress scouts in street matches, rise through the academy and play the key moments of every match yourself (shots, passes, free kicks, penalties, headers). A separate Manager mode lets you run a club. It is free to play with optional one-time purchases, has no energy timers and no subscriptions, and works fully offline. Available in 10 languages. All club and player names are fictional.
 
 - App Store: {APP_URL}
+- Google Play: {PLAY_URL}
 - Website: {SITE}/
 - Download page: {SITE}/ios
 
