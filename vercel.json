@@ -52,6 +52,11 @@
       "source": "/ios",
       "destination": "https://apps.apple.com/app/id6819292902",
       "permanent": false
+    },
+    {
+      "source": "/appstore",
+      "destination": "https://apps.apple.com/app/id6819292902",
+      "permanent": false
     }
   ]
 }
