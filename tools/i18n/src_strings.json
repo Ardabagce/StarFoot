@@ -31279,6 +31279,15 @@
 ],
 "Mağazaya ulaşılamadı. İnternet bağlantını kontrol edip tekrar dene.": [
 "diamond.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
 "premium.js",
 "value.js"
 ],
@@ -41477,6 +41486,9 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
+],
+"🎯 {} Asist Kralı ({})": [
+"game.js"
 ],
 "⭐ {} Sezonun Oyuncusu": [
 "game.js",
@@ -86456,6 +86468,28 @@
 "lang-ja.js",
 "lang-pt.js",
 "star.js"
+],
+"Mağazaya ulaşılamadı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Could not reach the store.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "(Asist)": [
 "lang-ar.js",
@@ -136901,6 +136935,28 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"MAĞAZAYA ULAŞILAMADI.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"COULD NOT REACH THE STORE.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -186745,6 +186801,9 @@
 "Verbesserungen am Spielbildschirm und an den Challenges für flüssigeres Spielen.": [
 "lang-de.js"
 ],
+"Der Store ist nicht erreichbar. Prüfe deine Internetverbindung und versuche es erneut.": [
+"lang-de.js"
+],
 "– wir haben uns qualifiziert!": [
 "lang-de.js"
 ],
@@ -215012,6 +215071,9 @@
 "Improvements to the match screen and challenges for smoother play.": [
 "lang-en.js"
 ],
+"Could not reach the store. Check your internet connection and try again.": [
+"lang-en.js"
+],
 "— we qualified!": [
 "lang-en.js"
 ],
@@ -242594,6 +242656,9 @@
 "Mejoras en la pantalla de partido y los desafíos para un juego más fluido.": [
 "lang-es.js"
 ],
+"No se pudo conectar con la tienda. Revisa tu conexión a internet e inténtalo de nuevo.": [
+"lang-es.js"
+],
 "— ¡nos hemos clasificado!": [
 "lang-es.js"
 ],
@@ -270042,6 +270107,9 @@
 "Améliorations de l’écran de match et des défis pour un jeu plus fluide.": [
 "lang-fr.js"
 ],
+"Impossible de joindre la boutique. Vérifie ta connexion internet et réessaie.": [
+"lang-fr.js"
+],
 "— on est qualifiés !": [
 "lang-fr.js"
 ],
@@ -296694,6 +296762,9 @@
 "Peningkatan layar pertandingan dan tantangan agar permainan lebih lancar.": [
 "lang-id.js"
 ],
+"Tidak dapat terhubung ke toko. Periksa koneksi internetmu dan coba lagi.": [
+"lang-id.js"
+],
 "— kita lolos!": [
 "lang-id.js"
 ],
@@ -323117,6 +323188,9 @@
 "lang-it.js"
 ],
 "Miglioramenti alla schermata partita e alle sfide per un gioco più fluido.": [
+"lang-it.js"
+],
+"Impossibile raggiungere lo store. Controlla la connessione internet e riprova.": [
 "lang-it.js"
 ],
 "— ci siamo qualificati!": [
@@ -350326,6 +350400,9 @@
 "lang-pt.js"
 ],
 "Melhorias na tela de partida e nos desafios para um jogo mais fluido.": [
+"lang-pt.js"
+],
+"Não foi possível acessar a loja. Verifique sua conexão com a internet e tente novamente.": [
 "lang-pt.js"
 ],
 "— nos classificamos!": [

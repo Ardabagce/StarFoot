@@ -1548,3 +1548,4 @@
 8408|Perbaikan
 8409|Peningkatan layar pertandingan dan tantangan agar permainan lebih lancar.
 8410|Tidak dapat terhubung ke toko. Periksa koneksi internetmu dan coba lagi.
+8412|🎯 {} Raja Assist ({})

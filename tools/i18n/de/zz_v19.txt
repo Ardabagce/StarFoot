@@ -1548,3 +1548,4 @@
 8408|Fehlerbehebungen
 8409|Verbesserungen am Spielbildschirm und an den Challenges für flüssigeres Spielen.
 8410|Der Store ist nicht erreichbar. Prüfe deine Internetverbindung und versuche es erneut.
+8412|🎯 {} Top-Vorlagengeber ({})

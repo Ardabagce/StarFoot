@@ -1548,3 +1548,4 @@
 8408|Correzioni
 8409|Miglioramenti alla schermata partita e alle sfide per un gioco più fluido.
 8410|Impossibile raggiungere lo store. Controlla la connessione internet e riprova.
+8412|🎯 {} Re degli assist ({})

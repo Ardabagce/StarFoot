@@ -1548,3 +1548,4 @@
 8408|Correcciones
 8409|Mejoras en la pantalla de partido y los desafíos para un juego más fluido.
 8410|No se pudo conectar con la tienda. Revisa tu conexión a internet e inténtalo de nuevo.
+8412|🎯 {} Máximo asistente ({})

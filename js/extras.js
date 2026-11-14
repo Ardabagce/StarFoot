@@ -106,7 +106,7 @@ const Ach = {
 const Trophy = {
   kind(text) {
     if (/Altın Yıldız/.test(text)) return 'ball';
-    if (/Gol Kralı/.test(text)) return 'boot';
+    if (/Gol Kralı|Asist Kralı/.test(text)) return 'boot';
     if (/Şampiyon/.test(text)) return 'cup';
     if (/Genç/.test(text)) return 'young';
     return 'star';

@@ -1548,3 +1548,4 @@
 8408|Correções
 8409|Melhorias na tela de partida e nos desafios para um jogo mais fluido.
 8410|Não foi possível acessar a loja. Verifique sua conexão com a internet e tente novamente.
+8412|🎯 {} Líder de assistências ({})

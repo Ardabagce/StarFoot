@@ -1086,6 +1086,8 @@ const Game = {
     if (pos === 1) trophies.push(`🏆 ${compName} Şampiyonu`);
     const top = World.topScorers(lg, 1)[0];
     if (ss.goals > 0 && top && ss.goals >= top.g) trophies.push(`👟 ${compName} Gol Kralı (${ss.goals})`);
+    const topA = World.topAssists(lg, 1)[0];
+    if (ss.assists > 0 && topA && ss.assists >= topA.g) trophies.push(`🎯 ${compName} Asist Kralı (${ss.assists})`);
     if (!youth && avg >= 7.6 && ss.apps >= 10) trophies.push(`⭐ ${compName} Sezonun Oyuncusu`);
     if (youth && avg >= 7.4 && ss.apps >= 8) trophies.push(`🌟 ${s.youth.group} Ligi En İyi Oyuncu`);
     if (!youth && p.age <= 21 && avg >= 7.2 && ss.apps >= 10) trophies.push('🌱 Yılın Genç Oyuncusu');
