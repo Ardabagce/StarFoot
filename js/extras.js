@@ -259,7 +259,8 @@ const Loot = {
 
 // ---------- Mağaza puanı ----------
 // iPhone'da Apple'ın kendi "Bu oyunu değerlendir" penceresi, yalnız mutlu anlarda (kupa, hat-trick, Altın Yıldız) istenir.
-// Apple pencereyi yılda en fazla 3 kez gösterir; biz de ilk günü ve son istekten sonraki 60 günü atlarız.
+// Apple pencereyi yılda en fazla 3 kez gösterir; biz ilk 30 dakikayı ve son istekten sonraki 30 günü atlarız.
+// (Reklamla gelen yeni oyuncu en heyecanlı olduğu ilk gün de sorulabilsin diye bekleme bir gün değil yarım saat.)
 const Review = {
   KEY: 'sf_review',
   plugin() {
@@ -274,7 +275,7 @@ const Review = {
     try { st = JSON.parse(localStorage.getItem(Review.KEY) || '{}'); } catch (e) {}
     const now = Date.now(), day = 864e5;
     if (!st.first) { st.first = now; try { localStorage.setItem(Review.KEY, JSON.stringify(st)); } catch (e) {} return; }
-    if (now - st.first < day || (st.last && now - st.last < 60 * day)) return;
+    if (now - st.first < 30 * 60e3 || (st.last && now - st.last < 30 * day)) return;
     st.last = now;
     try { localStorage.setItem(Review.KEY, JSON.stringify(st)); } catch (e) {}
     setTimeout(() => { try { pl.request().catch(() => {}); } catch (e) {} }, delay);

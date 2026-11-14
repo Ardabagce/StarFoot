@@ -780,14 +780,15 @@ const Game = {
       if (sum.motm) line += ' • ⭐ Maçın adamı';
       Game.news(line, sum.res === 'W' ? 'good' : sum.res === 'L' ? 'bad' : '');
       if (bonus > 0) Game.news(`Maç primi: ${U.money(bonus)}`, 'me');
-      if (sum.goals >= 3 && typeof Review !== 'undefined') Review.maybe(2500);
+      // mutlu anlar: hat-trick, ya da galibiyette maçın adamı / çok yüksek reyting
+      if (typeof Review !== 'undefined' && (sum.goals >= 3 || (sum.res === 'W' && (sum.motm || sum.rating >= 8.5)))) Review.maybe(2500);
     } else {
       Player.addMorale(p, -3);
       if (p.injuryWeeks === 0) Player.addRel(p, 'coach', 0.5);
       Game.news(`${teamTxt}, ${oppName} karşısında ${sum.gf}-${sum.ga} ${resTxt}. (Forma giymedin)`, sum.res === 'W' ? 'good' : sum.res === 'L' ? 'bad' : '');
     }
     // derbi, basın toplantısı sözleri ve son dakika golü
-    if (ctx.derby && sum.res === 'W') { Player.addRel(p, 'fans', 4); Game.news(`🔥 ${ctx.derby} bizim! Şehir bu gece senin adını konuşuyor.`, 'good'); }
+    if (ctx.derby && sum.res === 'W') { Player.addRel(p, 'fans', 4); Game.news(`🔥 ${ctx.derby} bizim! Şehir bu gece senin adını konuşuyor.`, 'good'); if (typeof Review !== 'undefined' && sum.played) Review.maybe(3000); }
     else if (ctx.derby && sum.res === 'L') { Player.addMorale(p, -4); Game.news(`${ctx.derby} kaybedildi. Taraftar öfkeli.`, 'bad'); }
     if (ctx.pressBold && sum.played) {
       if (sum.res === 'W') { Player.addFame(p, 1); Game.news('🎙️ Basın toplantısındaki iddialı sözlerinin arkasında durdun!', 'good'); }

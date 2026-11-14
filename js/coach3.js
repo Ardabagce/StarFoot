@@ -537,7 +537,7 @@ const CM_BOND = [
   const play1 = Coach.play;
   Coach.play = (quick) => {
     const s = Coach.s;
-    if (s && s.ap > 0 && !s.jobless && !Coach.apAsked) {
+    if (s && s.ap > 0 && !s.jobless && !Coach.apAsked && !(s.scn && s.scn.kind === 'match')) {
       return Game.modal(`<h3>Maça çıkılsın mı?</h3><p>Bu hafta kullanılmamış <b>${s.ap}</b> aksiyon hakkın var. Maça çıkarsan bu haklar kaybolacak.</p>`, [
         { t: 'Geri dön', cls: 'btn-ghost' },
         { t: 'Maça çık', cls: 'btn-big', fn: () => { Coach.apAsked = true; setTimeout(() => { play1(quick); Coach.apAsked = false; }, 120); } },

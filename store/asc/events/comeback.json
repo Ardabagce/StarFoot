@@ -1,0 +1,62 @@
+{
+ "tr": {
+  "name": "Büyük Dönüş Meydan Okuması",
+  "short": "0-2 geridesin. Maçı çevirebilir misin?",
+  "long": "55. dakika, deplasmanda 0-2 geridesin. Değişiklikleri yap, taktiği kur, maçı çevir. Herkese ücretsiz!",
+  "promo": "Hafta sonu özel: Teknik Direktör modunda 'Büyük Dönüş' meydan okuması herkese ücretsiz! 55. dakikada 0-2 gerideyken maçı çevirebilir misin?"
+ },
+ "en": {
+  "name": "The Comeback Challenge",
+  "short": "Down 0-2. Can you turn it around?",
+  "long": "55th minute, 0-2 down away from home. Make your subs, set your tactics and turn it around. Free for everyone!",
+  "promo": "Weekend special: The Comeback challenge in Manager mode is free for everyone! 0-2 down in the 55th minute. Can you turn it around?"
+ },
+ "de": {
+  "name": "Das Comeback: Challenge",
+  "short": "0:2 hinten. Drehst du das Spiel?",
+  "long": "55. Minute, 0:2 auswärts hinten. Wechsle, stell die Taktik um und dreh das Spiel. Für alle kostenlos!",
+  "promo": "Wochenend-Special: Die Challenge „Das Comeback“ im Trainer-Modus ist für alle kostenlos! In der 55. Minute 0:2 hinten. Drehst du das Spiel?"
+ },
+ "es": {
+  "name": "Desafío: El gran regreso",
+  "short": "Pierdes 0-2. ¿Puedes darle la vuelta?",
+  "long": "Minuto 55, pierdes 0-2 fuera de casa. Haz cambios, ajusta la táctica y remonta. ¡Gratis para todos!",
+  "promo": "Especial fin de semana: ¡el desafío «El gran regreso» del modo Entrenador es gratis para todos! Pierdes 0-2 en el minuto 55. ¿Puedes darle la vuelta?"
+ },
+ "fr": {
+  "name": "Défi : Le grand retour",
+  "short": "Mené 0-2. Peux-tu renverser le match ?",
+  "long": "55e minute, mené 0-2 à l'extérieur. Fais tes changements, règle ta tactique et renverse le match. Gratuit !",
+  "promo": "Spécial week-end : le défi « Le grand retour » du mode Entraîneur est gratuit pour tous ! Mené 0-2 à la 55e minute, peux-tu renverser le match ?"
+ },
+ "pt": {
+  "name": "Desafio: A volta por cima",
+  "short": "Perdendo de 0 a 2. Consegue virar?",
+  "long": "Minuto 55, perdendo de 0 a 2 fora de casa. Faça substituições, ajuste a tática e vire o jogo. Grátis!",
+  "promo": "Especial de fim de semana: o desafio “A volta por cima” do modo Treinador é grátis para todos! Perdendo de 0 a 2 aos 55 minutos. Consegue virar?"
+ },
+ "it": {
+  "name": "Sfida: Il grande ritorno",
+  "short": "Sotto 0-2. Riesci a ribaltarla?",
+  "long": "55° minuto, sotto 0-2 in trasferta. Fai i cambi, imposta la tattica e ribalta la partita. Gratis per tutti!",
+  "promo": "Speciale weekend: la sfida «Il grande ritorno» della modalità Allenatore è gratis per tutti! Sotto 0-2 al 55°, riesci a ribaltarla?"
+ },
+ "id": {
+  "name": "Tantangan Kebangkitan",
+  "short": "Tertinggal 0-2. Bisa membalikkan?",
+  "long": "Menit 55, tertinggal 0-2 di kandang lawan. Lakukan pergantian, atur taktik, balikkan laga. Gratis!",
+  "promo": "Spesial akhir pekan: tantangan Kebangkitan di mode Manajer gratis untuk semua! Tertinggal 0-2 di menit 55, bisakah kamu membalikkan laga?"
+ },
+ "ar": {
+  "name": "تحدي العودة",
+  "short": "متأخر 0-2. هل تقلب النتيجة؟",
+  "long": "الدقيقة 55 وأنت متأخر 0-2 خارج أرضك. أجرِ التبديلات واضبط الخطة واقلب المباراة. مجانًا للجميع!",
+  "promo": "عرض نهاية الأسبوع: تحدي «العودة» في وضع المدير الفني مجاني للجميع! متأخر 0-2 في الدقيقة 55، هل تستطيع قلب المباراة؟"
+ },
+ "ja": {
+  "name": "カムバック・チャレンジ",
+  "short": "0-2のビハインド。逆転できるか？",
+  "long": "アウェーで後半55分、0-2。選手交代と戦術で試合をひっくり返せ。誰でも無料でプレイ！",
+  "promo": "週末スペシャル：監督モードのチャレンジ「カムバック」が誰でも無料！55分で0-2のビハインド、試合をひっくり返せるか？"
+ }
+}

@@ -373,17 +373,19 @@ const MiniGame = {
           if (r > 1.25) { aimSt = null; return; }
           if (r > 1) { dx /= r; dy /= r; }
           const rr = Math.min(1, r);
-          // sol tarafa vurmak topu sağa döndürür (spin<0 → +x)
-          const spin = dx * curveMax;
+          // sol tarafa vurmak topu sağa döndürür (spin<0 → +x); kenara yaklaştıkça güçlü, belirgin kavis
+          const ck = Math.sign(dx) * Math.pow(Math.abs(dx), 0.8);
+          const spin = ck * curveMax * 2.0;
           // dikey: üst = alçak ve sert, orta = yarım yükseklik, alt = aşırtma
-          const liftV = U.clamp((dy + 0.25) / 1.15, 0, 1) * 0.62;
+          // yandan vuruşta top hafif havalanır (falso havada daha çok döner)
+          const liftV = Math.max(U.clamp((dy + 0.25) / 1.15, 0, 1) * 0.62, 0.2 * Math.abs(ck));
           liftIdx = liftV > 0.42 ? 2 : liftV > 0.1 ? 1 : 0;
           const power = U.clamp(aimSt.power * (1 + 0.06 * Math.max(0, -dy)), 0.15, 1);
-          // falso nişan alınan noktaya kavisle varsın diye başlangıç açısı telafi edilir
+          // top önce nişan yönünde çıkar, sonra falso yönüne kıvrılır (açı telafisi yalnızca küçük bir yardım)
           const dirY = Math.sin(aimSt.ang);
           const dist = dirY < -0.15 ? Math.min(ball.y / -dirY, 40) : 20;
           const sp = power * maxSpeed;
-          const comp = U.clamp((0.55 * spin * dist) / (sp * sp), -0.5, 0.5);
+          const comp = 0.25 * U.clamp((0.55 * spin * dist) / (sp * sp), -0.5, 0.5);
           // topun en kenarına vurmak riskli: hafif sapma
           const edge = Math.max(0, rr - 0.8) / 0.2;
           const ang = assistAngle(aimSt.ang) + comp + U.gauss() * 0.05 * edge;

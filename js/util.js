@@ -269,12 +269,13 @@ ScreenGuard.init();
 // starfoot://star  -> Starpedia (kariyerdeysen hemen, değilsen kariyere girince)
 // starfoot://wc    -> Dünya Şampiyonası Rüyası menüsü
 // starfoot://coach -> Teknik Direktör menüsü (paketi yoksa satın alma penceresi)
+// starfoot://comeback -> Teknik Direktör 'Büyük Dönüş' meydan okuması (herkese ücretsiz; App Store etkinliği)
 const DeepLink = {
   pending: null,
   key(url) {
     const m = String(url || '').match(/^starfoot:\/\/([a-z]+)|\/go\/([a-z]+)/i);
     const k = m && (m[1] || m[2] || '').toLowerCase();
-    return k === 'star' || k === 'wc' || k === 'coach' ? k : null;
+    return k === 'star' || k === 'wc' || k === 'coach' || k === 'comeback' ? k : null;
   },
   handle(url) {
     const k = DeepLink.key(url);
@@ -304,6 +305,16 @@ const DeepLink = {
       if (Game.state) { Game.save(); Game.init(); }
       Game.show('title');
       Coach.menu();
+      return true;
+    }
+    if (k === 'comeback') {
+      if (typeof TDCh === 'undefined' || typeof Coach === 'undefined') return false;
+      if (Coach.s && document.getElementById('coach') && !document.getElementById('coach').classList.contains('hidden')) return false; // maç/sezon sürerken bölme
+      DeepLink.pending = null;
+      if (Game.state) { Game.save(); Game.init(); }
+      Game.show('title');
+      const x = TDCh.def('comeback');
+      if (x) TDCh.brief(x);
       return true;
     }
     if (k === 'star') {
