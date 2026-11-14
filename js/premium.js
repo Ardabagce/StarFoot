@@ -191,7 +191,7 @@ const Premium = {
       else { Premium.track('premium_fail', { reason: msg.slice(0, 90), item_id: PREMIUM_ID }); Game.toast(/not found/i.test(msg) ? 'Mağazaya ulaşılamadı. İnternet bağlantını kontrol edip tekrar dene.' : 'Satın alma tamamlanamadı. Biraz sonra tekrar dene.', 'bad'); }
     }
     Premium.busy = false;
-    Game.render();
+    if (Game.state) Game.render();
   },
   async restore() {
     const P = Premium.plugin();
@@ -212,7 +212,7 @@ const Premium = {
       Game.toast('Geri yükleme yapılamadı. İnternet bağlantını kontrol et.', 'bad');
     }
     Premium.busy = false;
-    Game.render();
+    if (Game.state) Game.render();
   },
   // Ödüllü reklam düğmelerindeki ön ek
   lbl() { return Premium.active ? '⭐ Premium' : 'Reklam izle'; },
