@@ -188,7 +188,7 @@ const Premium = {
     } catch (e) {
       const msg = String((e && (e.message || e.code)) || e);
       if (/cancel/i.test(msg)) Premium.track('premium_cancel');
-      else { Premium.track('premium_fail', { reason: msg.slice(0, 90), item_id: PREMIUM_ID }); Game.toast(/not found/i.test(msg) ? 'Mağazaya ulaşılamadı. İnternet bağlantını kontrol edip tekrar dene.' : 'Satın alma tamamlanamadı. Biraz sonra tekrar dene.', 'bad'); }
+      else { Premium.track('premium_fail', { reason: msg.slice(0, 90), item_id: PREMIUM_ID }); Game.toast(/not found|network|offline|internet|çevrimdışı/i.test(msg) ? 'Mağazaya ulaşılamadı. İnternet bağlantını kontrol edip tekrar dene.' : 'Satın alma tamamlanamadı. Biraz sonra tekrar dene.', 'bad'); }
     }
     Premium.busy = false;
     if (Game.state) Game.render();
@@ -310,7 +310,7 @@ const Plus = {
     } catch (e) {
       const msg = String((e && (e.message || e.code)) || e);
       if (/cancel/i.test(msg)) Premium.track('plus_cancel');
-      else { Premium.track('premium_fail', { reason: msg.slice(0, 90), item_id: id }); Game.toast(/not found/i.test(msg) ? 'Mağazaya ulaşılamadı. İnternet bağlantını kontrol edip tekrar dene.' : 'Satın alma tamamlanamadı. Biraz sonra tekrar dene.', 'bad'); }
+      else { Premium.track('premium_fail', { reason: msg.slice(0, 90), item_id: id }); Game.toast(/not found|network|offline|internet|çevrimdışı/i.test(msg) ? 'Mağazaya ulaşılamadı. İnternet bağlantını kontrol edip tekrar dene.' : 'Satın alma tamamlanamadı. Biraz sonra tekrar dene.', 'bad'); }
     }
     Premium.busy = false;
     if (typeof Game !== 'undefined' && Game.render) { if (Game.state) Game.render(); else if (Game.init) Game.init(); }
@@ -411,7 +411,7 @@ const Packs = {
       }
     } catch (e) {
       const msg = String((e && (e.message || e.code)) || e);
-      if (!/cancel/i.test(msg)) { Premium.track('premium_fail', { reason: msg.slice(0, 90), item_id: x.id }); Game.toast(/not found/i.test(msg) ? 'Mağazaya ulaşılamadı. İnternet bağlantını kontrol edip tekrar dene.' : 'Satın alma tamamlanamadı. Biraz sonra tekrar dene.', 'bad'); }
+      if (!/cancel/i.test(msg)) { Premium.track('premium_fail', { reason: msg.slice(0, 90), item_id: x.id }); Game.toast(/not found|network|offline|internet|çevrimdışı/i.test(msg) ? 'Mağazaya ulaşılamadı. İnternet bağlantını kontrol edip tekrar dene.' : 'Satın alma tamamlanamadı. Biraz sonra tekrar dene.', 'bad'); }
     }
     Premium.busy = false;
     return ok;

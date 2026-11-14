@@ -69,7 +69,7 @@ const Diamond = {
       }
     } catch (e) {
       const msg = String((e && (e.message || e.code)) || e);
-      if (!/cancel/i.test(msg)) { Premium.track('premium_fail', { reason: msg.slice(0, 90), item_id: id }); Game.toast(/not found/i.test(msg) ? 'Mağazaya ulaşılamadı. İnternet bağlantını kontrol edip tekrar dene.' : 'Satın alma tamamlanamadı. Biraz sonra tekrar dene.', 'bad'); }
+      if (!/cancel/i.test(msg)) { Premium.track('premium_fail', { reason: msg.slice(0, 90), item_id: id }); Game.toast(/not found|network|offline|internet|çevrimdışı/i.test(msg) ? 'Mağazaya ulaşılamadı. İnternet bağlantını kontrol edip tekrar dene.' : 'Satın alma tamamlanamadı. Biraz sonra tekrar dene.', 'bad'); }
     }
     Premium.busy = false;
     if (Game.state) Game.render();
