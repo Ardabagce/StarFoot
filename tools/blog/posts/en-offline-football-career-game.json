@@ -1,0 +1,52 @@
+{
+  "slug": "offline-football-career-game-iphone",
+  "lang": "en",
+  "group": "offline-career",
+  "cluster": "game",
+  "is_hub": true,
+  "title": "Offline football career game for iPhone: what to look for",
+  "meta_description": "Looking for a football (soccer) career game that works without internet? How to spot a good offline game, and how StarFoot works.",
+  "author": {
+    "name": "The StarFoot Team",
+    "org": true,
+    "bio": "The independent team that builds StarFoot. We design and write about football careers and management."
+  },
+  "date_published": "2026-11-14",
+  "date_updated": "2026-11-14",
+  "image": "/site/en-1-moment.jpg",
+  "tldr": "A good offline football career game opens in airplane mode, never makes you wait for energy, and lets you play the deciding moments yourself. Our game **StarFoot** does all three: you start as a kid on the street and the whole career runs on your iPhone.",
+  "sections": [
+    {
+      "h": "What to look for",
+      "md": "1. **Does it really open in airplane mode?** Some games connect to a server before every match.\n2. **Are there energy timers?** \"Come back in 2 hours\" ruins a career game.\n3. **Is your save on the device?** Then you never lose progress without signal.\n4. **Do you play the match?** In some career games the match is fully automatic."
+    },
+    {
+      "h": "How StarFoot works",
+      "md": "**StarFoot is our own game**, so we say that up front. You start aged 8 to 18 in any year from 1980, impress scouts in street matches and trials, and climb through the academy to the pros. The match runs minute by minute and stops when the ball comes to you: the shot, pass, dribble, free kick, penalty or header is yours.\n\nThere are transfers, contracts, cups, the national team and life off the pitch, plus a separate Manager mode (Easy, Medium, Hard; the first 3 matches are free). The game is free, with no energy timers and no subscriptions. Get it on the [App Store](/ios)."
+    },
+    {
+      "h": "Which languages?",
+      "md": "StarFoot is available in 10 languages, including English, German, French, Spanish and Portuguese. More guides on our [blog](/blog/en/)."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Does StarFoot work without internet?",
+      "a": "Yes. Career, matches and saves run fully on your device. You only need internet for purchases."
+    },
+    {
+      "q": "Is StarFoot free?",
+      "a": "Yes. No energy timers and no subscription; extra modes are optional one-time purchases."
+    },
+    {
+      "q": "Are the clubs real?",
+      "a": "No, all club and player names are fictional. You can rename them with the in-game Editor."
+    }
+  ],
+  "cta": {
+    "title": "Start your career",
+    "text": "A kid on the street today, a world star tomorrow.",
+    "top_title": "Try StarFoot",
+    "top_text": "An offline football career game for iPhone and iPad."
+  }
+}

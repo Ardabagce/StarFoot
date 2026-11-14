@@ -1,0 +1,56 @@
+{
+  "slug": "iphone-teknik-direktor-oyunu",
+  "lang": "tr",
+  "group": "manager-ios",
+  "cluster": "oyun",
+  "is_hub": false,
+  "title": "iPhone için teknik direktör oyunu: kısa ve keyifli menajerlik",
+  "meta_description": "Saatlerce tablo doldurmadan takım yönetmek mi istiyorsun? iPhone için hızlı, internetsiz bir teknik direktör oyunu nasıl olmalı ve StarFoot nasıl çalışıyor?",
+  "author": {
+    "name": "StarFoot Ekibi",
+    "org": true,
+    "bio": "StarFoot'u geliştiren bağımsız oyun ekibi. Futbol kariyeri ve teknik direktörlük üzerine oyun tasarlıyor ve yazıyoruz."
+  },
+  "date_published": "2026-11-14",
+  "date_updated": "2026-11-14",
+  "image": "/site/tr-2-matchday.jpg",
+  "tldr": "Telefonda iyi bir teknik direktör oyunu kısa oturumlarda oynanabilmeli, maçı canlı izletip değişiklik yaptırmalı ve internet istememeli. **StarFoot**'un Teknik Direktör modu bunu hedefliyor: kadro, taktik, transfer ve canlı maç; Kolay, Orta ve Zor seviyeleriyle.",
+  "sections": [
+    {
+      "h": "Telefonda menajerlik neden farklı?",
+      "md": "Bilgisayardaki menajerlik oyunları saatlerce oturmayı ister. Telefonda ise genelde 5-10 dakikalık aralar vardır. Bu yüzden iyi bir mobil teknik direktör oyunu:\n\n- Bir haftayı birkaç dokunuşta oynatmalı,\n- Önemli kararları öne çıkarmalı (kadro, taktik, transfer),\n- Maçı canlı izletip araya girmene izin vermeli."
+    },
+    {
+      "h": "StarFoot'un Teknik Direktör modu",
+      "md": "**StarFoot bizim oyunumuz.** Teknik Direktör modunda:\n\n- Kadronu ve oyuncu rollerini belirlersin, taktiğini seçersin.\n- Transfer, scout ve sözleşme pazarlığı yaparsın.\n- Maçı canlı izlersin: oyuncu değişikliği, devre arası konuşması ve basın toplantısı senin elinde.\n- Taraftar, oyuncular ve yönetimin sana bakışı barlarla görünür; kötü giderse kovulabilirsin.\n- Avrupa kupaları ve milli takım teklifleri var.\n\nKolay, Orta ve Zor seviyeleri bulunur. Mod ayrı bir paket olarak açılır, ama **ilk 3 maçı herkes ücretsiz** oynayabilir."
+    },
+    {
+      "h": "Meydan okumalar: kısa ve zor görevler",
+      "md": "Vaktin azsa meydan okumalar tam sana göre: 0-2 geriden dönmek, 10 kişi kalınca maçı kurtarmak ya da şampiyonluk yarışını bitirmek gibi tek seferlik görevler. İlk görev herkese ücretsiz."
+    },
+    {
+      "h": "Futbolcu kariyeriyle aynı oyunda",
+      "md": "Teknik direktörlükten sıkılırsan aynı oyunda futbolcu kariyerine geçebilirsin. Futbolcu tarafını [internetsiz futbol kariyer oyunu rehberimizde](/blog/tr/internetsiz-futbol-kariyer-oyunu/) anlattık. Oyunu [App Store'dan indirebilirsin](/ios). Gerçek hayatta futbolcu yolunu merak ediyorsan [futbol altyapısına nasıl girilir](/blog/tr/futbol-altyapisina-nasil-girilir/) rehberimize de göz at."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Teknik Direktör modu ücretli mi?",
+      "a": "Mod ayrı bir paket olarak açılır; ilk 3 maçı herkes ücretsiz oynayabilir. Meydan okumalardaki ilk görev de ücretsizdir."
+    },
+    {
+      "q": "İnternet gerekiyor mu?",
+      "a": "Hayır. Teknik Direktör modu da internetsiz çalışır; internet yalnızca satın alma için gerekir."
+    },
+    {
+      "q": "Zorluk seçilebiliyor mu?",
+      "a": "Evet: Kolay, Orta ve Zor. Oluştururken ya da Ayarlar'dan değiştirebilirsin."
+    }
+  ],
+  "cta": {
+    "title": "Takımın seni bekliyor",
+    "text": "İlk 3 maç ücretsiz.",
+    "top_title": "StarFoot'ta teknik direktör ol",
+    "top_text": "Kadro, taktik, transfer ve canlı maç. İnternetsiz."
+  }
+}

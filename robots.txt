@@ -1,0 +1,25 @@
+# StarFoot: arama motorları ve yapay zekâ tarayıcıları hoş geldiniz
+User-agent: *
+Allow: /
+Disallow: /app/
+Disallow: /tools/
+Disallow: /store/
+Disallow: /docs/
+Disallow: /oyna-r8k4tq.html
+
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://starfoot.bagce.dev/sitemap.xml

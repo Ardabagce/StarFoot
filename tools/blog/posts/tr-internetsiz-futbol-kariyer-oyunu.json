@@ -1,0 +1,91 @@
+{
+  "slug": "internetsiz-futbol-kariyer-oyunu",
+  "lang": "tr",
+  "group": "offline-career",
+  "cluster": "oyun",
+  "is_hub": true,
+  "title": "İnternetsiz futbol kariyer oyunu: iPhone için rehber (2026)",
+  "meta_description": "İnternet olmadan oynanan bir futbol kariyer oyunu mu arıyorsun? Neye bakmalı, nelerden kaçınmalı ve StarFoot nasıl çalışır, hepsi bu rehberde.",
+  "author": {
+    "name": "StarFoot Ekibi",
+    "org": true,
+    "bio": "StarFoot'u geliştiren bağımsız oyun ekibi. Futbol kariyeri ve teknik direktörlük üzerine oyun tasarlıyor ve yazıyoruz."
+  },
+  "date_published": "2026-11-14",
+  "date_updated": "2026-11-14",
+  "image": "/site/tr-1-moment.jpg",
+  "tldr": "İyi bir internetsiz futbol kariyer oyunu; uçak modunda tam çalışmalı, enerji sayacıyla seni bekletmemeli ve maçın kritik anlarını sana oynatmalı. Bizim geliştirdiğimiz **StarFoot** bu üçünü de yapıyor: 8 yaşında mahallede başlıyorsun, kariyerin tamamen telefonunda ilerliyor.",
+  "sections": [
+    {
+      "h": "İnternetsiz futbol oyununda neye bakmalı?",
+      "md": "Metroda, uçakta ya da çekmeyen bir yerde oynamak istiyorsan \"internetsiz\" yazması yetmez. Şu dört şeyi kontrol et:\n\n1. **Uçak modunda gerçekten açılıyor mu?** Bazı oyunlar ilk açılışta ya da her maçtan önce sunucuya bağlanmak ister.\n2. **Enerji sayacı var mı?** Kariyer oyunlarında \"enerjin bitti, 2 saat bekle\" ekranı oyunun keyfini öldürür.\n3. **Kayıt telefonda mı?** Kariyer kaydın cihazda duruyorsa internet gidince ilerlemen kaybolmaz.\n4. **Maçı sen mi oynuyorsun?** Bazı kariyer oyunlarında maç tamamen otomatik geçer; asıl heyecan kritik anı senin oynamandır."
+    },
+    {
+      "h": "StarFoot nasıl çalışır?",
+      "md": "**StarFoot bizim oyunumuz**, bunu baştan söyleyelim. İnternetsiz oynanacak şekilde tasarladık:\n\n- Kariyerin 8 ile 18 yaş arasında, 1980'den bugüne istediğin bir yılda başlar.\n- Mahalle maçında ya da seçmelerde scoutların dikkatini çekip altyapıya girersin.\n- Maç dakika dakika akar ve top sana geldiğinde durur: şut, pas, çalım, frikik, penaltı ya da kafa vuruşu senin elinde.\n- Transfer teklifleri, sözleşmeler, kupalar, milli takım ve saha dışı hayat da kariyerin parçası.\n\nOyun ücretsiz; enerji sayacı ve abonelik yok. İstersen tek seferlik satın almalarla ek modlar açılır. Hepsi [App Store sayfamızda](/ios)."
+    },
+    {
+      "h": "Kariyer mi, teknik direktörlük mü?",
+      "md": "Bazı oyuncular sahada olmayı, bazıları kulübü yönetmeyi sever. StarFoot'ta ikisi de var: futbolcu kariyerinin yanında ayrı bir Teknik Direktör modu bulunuyor. Kolay, Orta ve Zor seviyeleri var ve ilk 3 maçı ücretsiz deneyebilirsin. Ayrıntılar için [iPhone teknik direktör oyunu rehberimize](/blog/tr/iphone-teknik-direktor-oyunu/) bak."
+    },
+    {
+      "h": "Gerçek hayatta da futbolcu olmak istiyorsan",
+      "md": "Oyundaki yol (mahalle maçı, seçmeler, altyapı) gerçek hayattakine benziyor. Gerçekte bir altyapıya nasıl girildiğini [futbol altyapısına nasıl girilir](/blog/tr/futbol-altyapisina-nasil-girilir/) yazımızda adım adım anlattık."
+    },
+    {
+      "h": "Kısa karşılaştırma: iyi ve kötü internetsiz futbol oyunu",
+      "md": "Aşağıdaki tablo, mağazada bir oyuna bakarken hızlıca kontrol edebileceğin şeyleri özetliyor.",
+      "table": [
+        [
+          "Özellik",
+          "İyi işaret",
+          "Kötü işaret"
+        ],
+        [
+          "Bağlantı",
+          "Uçak modunda açılıyor",
+          "Her maçta sunucu bekliyor"
+        ],
+        [
+          "Bekleme",
+          "Enerji sayacı yok",
+          "Saatlerce enerji dolumu"
+        ],
+        [
+          "Ödeme",
+          "Tek seferlik, isteğe bağlı",
+          "Abonelik ya da sürekli paket baskısı"
+        ],
+        [
+          "Maç",
+          "Kritik anları sen oynuyorsun",
+          "Maç tamamen otomatik"
+        ]
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "StarFoot internet olmadan çalışır mı?",
+      "a": "Evet. Kariyer, maçlar ve kayıt tamamen telefonunda çalışır. İnternet yalnızca satın alma yapmak ya da geri yüklemek için gerekir."
+    },
+    {
+      "q": "StarFoot ücretsiz mi?",
+      "a": "Evet, ücretsiz indirilir ve oynanır. Enerji sayacı ve abonelik yoktur; ek modlar isteğe bağlı tek seferlik satın almalarla açılır."
+    },
+    {
+      "q": "Hangi cihazlarda oynanır?",
+      "a": "iPhone ve iPad'de, [App Store üzerinden](/ios)."
+    },
+    {
+      "q": "Oyundaki kulüpler gerçek mi?",
+      "a": "Hayır, tüm kulüp ve oyuncu adları hayalidir. İstersen oyundaki Editör ile isimleri değiştirebilirsin."
+    }
+  ],
+  "cta": {
+    "title": "Kariyerine bugün başla",
+    "text": "8 yaşında mahallede başla, dünya yıldızı ol.",
+    "top_title": "StarFoot'u dene",
+    "top_text": "İnternetsiz futbol kariyeri, iPhone ve iPad için."
+  }
+}

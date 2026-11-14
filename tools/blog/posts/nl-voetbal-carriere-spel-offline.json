@@ -1,0 +1,52 @@
+{
+  "slug": "voetbal-carriere-spel-offline",
+  "lang": "nl",
+  "group": "offline-career",
+  "cluster": "spel",
+  "is_hub": true,
+  "title": "Voetbal carrière spel offline voor iPhone: waar let je op?",
+  "meta_description": "Op zoek naar een voetbal carrière spel dat zonder internet werkt? Waar je op let bij een goed offline spel en hoe StarFoot werkt.",
+  "author": {
+    "name": "Het StarFoot-team",
+    "org": true,
+    "bio": "Het onafhankelijke team achter StarFoot. We maken en schrijven over voetbalcarrières en trainen."
+  },
+  "date_published": "2026-11-14",
+  "date_updated": "2026-11-14",
+  "image": "/site/en-1-moment.jpg",
+  "tldr": "Een goed offline voetbal carrière spel start in vliegtuigmodus, laat je niet wachten op energie en laat je de beslissende momenten zelf spelen. Ons spel **StarFoot** doet precies dat: je begint als kind op straat en je hele carrière draait op je iPhone.",
+  "sections": [
+    {
+      "h": "Waar let je op?",
+      "md": "1. **Start het echt in vliegtuigmodus?** Sommige spellen maken voor elke wedstrijd verbinding met een server.\n2. **Zijn er energietimers?** \"Wacht 2 uur\" maakt elke carrière kapot.\n3. **Staat je voortgang op je toestel?** Dan verlies je niets zonder netwerk.\n4. **Speel je zelf?** In sommige spellen loopt de wedstrijd helemaal automatisch."
+    },
+    {
+      "h": "Zo werkt StarFoot",
+      "md": "**StarFoot is ons eigen spel**, dat zeggen we eerlijk. Je begint tussen 8 en 18 jaar oud in elk jaar vanaf 1980, valt op bij scouts in straatwedstrijden en selecties en klimt via de jeugdopleiding op tot prof. De wedstrijd loopt minuut voor minuut en pauzeert als de bal bij jou komt: schot, pass, dribbel, vrije trap, penalty of kopbal.\n\nDaarnaast zijn er transfers, contracten, bekers, het nationale team en het leven naast het veld, plus een aparte Trainer-modus (makkelijk, normaal, moeilijk; de eerste 3 wedstrijden gratis). Het spel is gratis, zonder energietimers en zonder abonnement. Naar de [App Store](/ios)."
+    },
+    {
+      "h": "Is het spel in het Nederlands?",
+      "md": "Het spel zelf is (nog) niet in het Nederlands; je speelt in het Engels, Duits of een van de andere 10 talen. Meer berichten vind je op onze [blog](/blog/nl/)."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Werkt StarFoot zonder internet?",
+      "a": "Ja. Carrière, wedstrijden en voortgang draaien volledig op je toestel. Internet heb je alleen nodig voor aankopen."
+    },
+    {
+      "q": "Is StarFoot gratis?",
+      "a": "Ja. Geen energietimers en geen abonnement; extra modi zijn optionele eenmalige aankopen."
+    },
+    {
+      "q": "Zijn de clubs echt?",
+      "a": "Nee, alle club- en spelersnamen zijn fictief. Met de Editor in het spel kun je namen aanpassen."
+    }
+  ],
+  "cta": {
+    "title": "Begin je carrière",
+    "text": "Als kind op straat, later wereldster.",
+    "top_title": "Probeer StarFoot",
+    "top_text": "Voetbalcarrière offline, voor iPhone en iPad."
+  }
+}

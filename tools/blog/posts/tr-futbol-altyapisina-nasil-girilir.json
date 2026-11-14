@@ -1,0 +1,76 @@
+{
+  "slug": "futbol-altyapisina-nasil-girilir",
+  "lang": "tr",
+  "group": "academy-howto",
+  "cluster": "futbolcu-olmak",
+  "is_hub": true,
+  "title": "Futbol altyapısına nasıl girilir? Aileler ve gençler için rehber",
+  "meta_description": "Futbol altyapısına girmek için kaç yaşında başlanmalı, seçmelere nasıl hazırlanılır, scoutlar neye bakar ve hangi tuzaklardan kaçınılmalı?",
+  "author": {
+    "name": "StarFoot Ekibi",
+    "org": true,
+    "bio": "StarFoot'u geliştiren bağımsız oyun ekibi. Futbol kariyeri ve teknik direktörlük üzerine oyun tasarlıyor ve yazıyoruz."
+  },
+  "date_published": "2026-11-14",
+  "date_updated": "2026-11-14",
+  "image": "/site/tr-1-moment.jpg",
+  "tldr": "Altyapıya giden yol genelde bir amatör kulüpte ya da futbol okulunda düzenli oynamakla başlar; kulüpler yetenekleri maçlarda, turnuvalarda ve açık seçmelerde görür. Seçmelere düzenli antrenmanla, sağlık kontrolüyle ve okulu ihmal etmeden hazırlan; ücret karşılığı \"kesin altyapı\" vaat edenlerden uzak dur.",
+  "sections": [
+    {
+      "h": "Kaç yaşında başlamak gerekir?",
+      "md": "Kesin bir yaş yok. Pek çok çocuk 6-10 yaş arasında futbol okullarında ya da amatör kulüplerde başlar. Daha geç başlayıp profesyonel olan oyuncular da vardır; önemli olan düzenli oynamak ve gelişmektir.\n\n> Küçük yaşta en önemli şey eğlenmek ve topla çok zaman geçirmektir. Erken yaşta aşırı yüklenme sakatlık ve futboldan soğuma riskini artırır."
+    },
+    {
+      "h": "Altyapıya giden yollar",
+      "md": "Genelde üç yol vardır:\n\n1. **Amatör kulüp veya futbol okulu:** Düzenli antrenman ve resmi maç. Profesyonel kulüplerin gözlemcileri bu maçları izler.\n2. **Açık seçmeler:** Bazı kulüpler belirli dönemlerde yaş gruplarına göre seçme yapar. Duyurular genelde kulüplerin resmi sitelerinde ve sosyal medya hesaplarında olur.\n3. **Turnuvalar ve okul takımları:** Okul ligleri ve yaz turnuvaları da görünür olmanın yollarıdır."
+    },
+    {
+      "h": "Scoutlar oyuncuda neye bakar?",
+      "md": "Gözlemciler yalnızca gole bakmaz. Genelde şunlara dikkat ederler:\n\n- **Topla ilişki:** İlk dokunuş, pas ve iki ayağı kullanma.\n- **Oyun zekâsı:** Doğru kararı doğru anda vermek, boş alanı görmek.\n- **Fiziksel gelişim:** Hız ve dayanıklılık; ama küçük yaşta fiziğe göre çok erken karar verilmemesi gerektiğini bilen gözlemciler de çoktur.\n- **Karakter:** Hata sonrası tepki, takım arkadaşlarıyla iletişim, antrenmana bağlılık."
+    },
+    {
+      "h": "Seçmelere nasıl hazırlanılır?",
+      "md": "- Seçmeden önceki haftalarda düzenli antrenman yap; seçmeden bir gün önce ağır çalışma yapma.\n- Bir sağlık kontrolünden geç; kulüpler lisans için genelde sağlık raporu ister.\n- Yanında uygun krampon, tekmelik ve su olsun.\n- Seçmede mevkinde rahat oyna, basit ve doğru işleri yap; tek başına şov yapmaya çalışma.\n- Kabul edilmezsen bırakma: bir sonraki seçmeye kadar eksiklerin üzerinde çalış."
+    },
+    {
+      "h": "Okul ve futbol dengesi",
+      "md": "Altyapıya giren gençlerin çok küçük bir kısmı profesyonel olur. Bu yüzden okulu bırakmamak hem güvence hem de oyun zekâsı için önemlidir. Pek çok kulüp oyuncularının okul durumunu da takip eder."
+    },
+    {
+      "h": "Kaçınılması gereken tuzaklar",
+      "md": "> Para karşılığı \"kesin altyapı\", \"yurt dışı kulübe garanti transfer\" vaat eden kişi ve organizasyonlara karşı dikkatli ol. Ciddi kulüpler yetenek için seçme ücretiyle oyuncu almaz. Bir teklif aldığında kulübün resmi kanallarından doğrula."
+    },
+    {
+      "h": "Bu yolu oyunda yaşamak istersen",
+      "md": "Gerçek hayattaki bu yolculuğu oyunda da deneyebilirsin. Bizim geliştirdiğimiz StarFoot'ta 8 yaşında mahalle maçında başlıyor, scoutların gözüne giriyor, seçmelere çıkıyor ve altyapıda okul ile antrenman arasında seçim yapıyorsun. Ayrıntılar [internetsiz futbol kariyer oyunu](/blog/tr/internetsiz-futbol-kariyer-oyunu/) yazımızda; oyunu [buradan indirebilirsin](/ios). Diğer rehberler için [blog sayfamıza](/blog/tr/) göz at."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Altyapı seçmeleri ücretli mi?",
+      "a": "Ciddi kulüpler yetenek seçimi için oyuncudan para almaz. Ücret karşılığı altyapı garantisi verenlere karşı dikkatli olun ve teklifleri kulübün resmi kanallarından doğrulayın."
+    },
+    {
+      "q": "Geç başlayan biri altyapıya girebilir mi?",
+      "a": "Evet, mümkün. Gelişim herkeste farklı hızda olur; düzenli antrenman ve resmi maçlarda oynamak, yaş ne olursa olsun görünür olmanın en iyi yoludur."
+    },
+    {
+      "q": "Lisans için ne gerekir?",
+      "a": "Resmi maçlarda oynamak için bir kulüpte lisans çıkarılması gerekir. Gerekli belgeler (kimlik, sağlık raporu, veli izni gibi) kulüp tarafından söylenir; güncel kurallar için Türkiye Futbol Federasyonu'nun duyurularına bakın."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Türkiye Futbol Federasyonu (resmi site)",
+      "url": "https://www.tff.org"
+    }
+  ],
+  "cta": {
+    "title": "Bu yolculuğu oyunda yaşa",
+    "text": "Mahalleden altyapıya, oradan dünya yıldızlığına.",
+    "top_title": "Futbolcu olmayı önce oyunda dene",
+    "top_text": "StarFoot: 8 yaşında başlayan futbol kariyeri, internetsiz.",
+    "mid_title": "Seçmeleri oyunda dene",
+    "mid_text": "StarFoot'ta scoutlar seni mahalle maçında izliyor."
+  }
+}

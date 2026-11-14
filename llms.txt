@@ -1,0 +1,17 @@
+# StarFoot
+
+> StarFoot is a football (soccer) career game for iPhone and iPad. You start as a child aged 8 to 18 in any year from 1980 to today, impress scouts in street matches, rise through the academy and play the key moments of every match yourself (shots, passes, free kicks, penalties, headers). A separate Manager mode lets you run a club. It is free to play with optional one-time purchases, has no energy timers and no subscriptions, and works fully offline. Available in 10 languages. All club and player names are fictional.
+
+- App Store: https://apps.apple.com/app/id6819292902
+- Website: https://starfoot.bagce.dev/
+- Download page: https://starfoot.bagce.dev/ios
+
+## Guides
+- [Fußball-Karriere-Spiel offline fürs iPhone: Worauf du achten solltest](https://starfoot.bagce.dev/blog/de/fussball-karriere-spiel-offline-iphone/): Du suchst ein Fußball-Karrierespiel, das ohne Internet läuft? Woran du ein gutes Offline-Spiel erkennst und wie StarFoot funktioniert.
+- [Offline football career game for iPhone: what to look for](https://starfoot.bagce.dev/blog/en/offline-football-career-game-iphone/): Looking for a football (soccer) career game that works without internet? How to spot a good offline game, and how StarFoot works.
+- [Voetbal carrière spel offline voor iPhone: waar let je op?](https://starfoot.bagce.dev/blog/nl/voetbal-carriere-spel-offline/): Op zoek naar een voetbal carrière spel dat zonder internet werkt? Waar je op let bij een goed offline spel en hoe StarFoot werkt.
+- [Futbol altyapısına nasıl girilir? Aileler ve gençler için rehber](https://starfoot.bagce.dev/blog/tr/futbol-altyapisina-nasil-girilir/): Futbol altyapısına girmek için kaç yaşında başlanmalı, seçmelere nasıl hazırlanılır, scoutlar neye bakar ve hangi tuzaklardan kaçınılmalı?
+- [İnternetsiz futbol kariyer oyunu: iPhone için rehber (2026)](https://starfoot.bagce.dev/blog/tr/internetsiz-futbol-kariyer-oyunu/): İnternet olmadan oynanan bir futbol kariyer oyunu mu arıyorsun? Neye bakmalı, nelerden kaçınmalı ve StarFoot nasıl çalışır, hepsi bu rehberde.
+
+## Posts
+- [iPhone için teknik direktör oyunu: kısa ve keyifli menajerlik](https://starfoot.bagce.dev/blog/tr/iphone-teknik-direktor-oyunu/): Saatlerce tablo doldurmadan takım yönetmek mi istiyorsun? iPhone için hızlı, internetsiz bir teknik direktör oyunu nasıl olmalı ve StarFoot nasıl çalışıyor?
