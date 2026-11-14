@@ -779,6 +779,7 @@ const Coach = {
     U.$$('[data-club]', m).forEach((b) => (b.onclick = () => { m.classList.add('hidden'); m.innerHTML = ''; fn(b.dataset.club); }));
   },
   play(quick) {
+    if (!Coach.s) return; // meydan okuma yeniden kurulurken eski düğmeye basıldı
     const m = Coach.nextMatch();
     if (!m) return;
     if (m.comp === 'bye') { Coach.week(); Coach.save(); return Coach.render(); }

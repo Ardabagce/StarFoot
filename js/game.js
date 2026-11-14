@@ -1297,7 +1297,9 @@ const Game = {
 
   // ---------- Arayüz ----------
   render() {
-    const s = Game.state, p = s.player;
+    const s = Game.state;
+    if (!s || !s.player) return; // kariyer yokken (başlık ekranı, Teknik Direktör) çizilecek bir şey yok
+    const p = s.player;
     if (s.mode === 'wc' && typeof WC !== 'undefined') return WC.render();
     Notifs.badge();
     document.getElementById('hdr-info').innerHTML = `
