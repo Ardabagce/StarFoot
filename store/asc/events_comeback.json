@@ -1,0 +1,70 @@
+{
+ "events": [
+  {
+   "ref": "Comeback Challenge 2026-11",
+   "badge": "CHALLENGE",
+   "purpose": "ATTRACT_NEW_USERS",
+   "priority": "HIGH",
+   "purchase": "NO_COST_ASSOCIATED",
+   "publishStart": "2026-11-17T17:00:00Z",
+   "eventStart": "2026-11-19T17:00:00Z",
+   "eventEnd": "2026-12-17T17:00:00Z",
+   "card": "store/asc/events/event_card_1920x1080.png",
+   "details": "store/asc/events/event_detail_1080x1920.png",
+   "locales": {
+    "tr": [
+     "Büyük Dönüş Meydan Okuması",
+     "0-2 geridesin. Maçı çevirebilir misin?",
+     "55. dakika, deplasmanda 0-2 geridesin. Değişiklikleri yap, taktiği kur, maçı çevir. Herkese ücretsiz!"
+    ],
+    "en-US": [
+     "The Comeback Challenge",
+     "Down 0-2. Can you turn it around?",
+     "55th minute, 0-2 down away from home. Make your subs, set your tactics and turn it around. Free for everyone!"
+    ],
+    "en-GB": [
+     "The Comeback Challenge",
+     "Down 0-2. Can you turn it around?",
+     "55th minute, 0-2 down away from home. Make your subs, set your tactics and turn it around. Free for everyone!"
+    ],
+    "de-DE": [
+     "Das Comeback: Challenge",
+     "0:2 hinten. Drehst du das Spiel?",
+     "55. Minute, 0:2 auswärts hinten. Wechsle, stell die Taktik um und dreh das Spiel. Für alle kostenlos!"
+    ],
+    "es-ES": [
+     "Desafío: El gran regreso",
+     "Pierdes 0-2. ¿Puedes darle la vuelta?",
+     "Minuto 55, pierdes 0-2 fuera de casa. Haz cambios, ajusta la táctica y remonta. ¡Gratis para todos!"
+    ],
+    "es-MX": [
+     "Desafío: El gran regreso",
+     "Pierdes 0-2. ¿Puedes darle la vuelta?",
+     "Minuto 55, pierdes 0-2 fuera de casa. Haz cambios, ajusta la táctica y remonta. ¡Gratis para todos!"
+    ],
+    "pt-BR": [
+     "Desafio: A volta por cima",
+     "Perdendo de 0 a 2. Consegue virar?",
+     "Minuto 55, perdendo de 0 a 2 fora de casa. Faça substituições, ajuste a tática e vire o jogo. Grátis!"
+    ],
+    "pt-PT": [
+     "Desafio: A volta por cima",
+     "Perdendo de 0 a 2. Consegue virar?",
+     "Minuto 55, perdendo de 0 a 2 fora de casa. Faça substituições, ajuste a tática e vire o jogo. Grátis!"
+    ],
+    "fr-FR": [
+     "Défi : Le grand retour",
+     "Mené 0-2. Peux-tu renverser le match ?",
+     "55e minute, mené 0-2 à l'extérieur. Fais tes changements, règle ta tactique et renverse le match. Gratuit !"
+    ],
+    "ja": [
+     "カムバック・チャレンジ",
+     "0-2のビハインド。逆転できるか？",
+     "アウェーで後半55分、0-2。選手交代と戦術で試合をひっくり返せ。誰でも無料でプレイ！"
+    ]
+   },
+   "deepLink": "starfoot://comeback",
+   "submit": true
+  }
+ ]
+}
