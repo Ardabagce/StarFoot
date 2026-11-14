@@ -1539,3 +1539,11 @@
 8396|Fácil: tu equipo es algo más fuerte en el campo, la directiva es más paciente y el presupuesto mayor.
 8397|Medio: equilibrado, la experiencia estándar.
 8398|Difícil: los rivales son más duros, la directiva impaciente y el presupuesto ajustado.
+8399|Nuevo estilo de tiro: Toque
+8400|Elígelo en Ajustes: tira hacia atrás para apuntar y toca un punto del balón. Los lados dan efecto, la parte baja hace vaselina.
+8402|Cantera rápida y aspecto infantil
+8403|Elígelo al crear un jugador joven: las temporadas de cantera duran 14 partidos. En la cantera tu jugador ahora parece un niño.
+8406|Entrenador: niveles de dificultad
+8407|Fácil, Medio o Difícil: elígelo al crear o en Ajustes.
+8408|Correcciones
+8409|Mejoras en la pantalla de partido y los desafíos para un juego más fluido.

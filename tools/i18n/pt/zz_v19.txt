@@ -1539,3 +1539,11 @@
 8396|Fácil: seu time fica um pouco mais forte em campo, a diretoria mais paciente e o orçamento maior.
 8397|Médio: equilibrado, a experiência padrão.
 8398|Difícil: adversários mais duros, diretoria impaciente e orçamento apertado.
+8399|Novo estilo de chute: Toque
+8400|Escolha em Ajustes: puxe para trás para mirar e toque num ponto da bola. Os lados dão efeito, a parte de baixo faz cavadinha.
+8402|Base rápida e visual infantil
+8403|Escolha ao criar um jogador jovem: as temporadas da base duram 14 jogos. Na base, seu jogador agora parece uma criança.
+8406|Treinador: níveis de dificuldade
+8407|Fácil, Médio ou Difícil: escolha ao criar ou em Ajustes.
+8408|Correções
+8409|Melhorias na tela de partida e nos desafios para um jogo mais fluido.

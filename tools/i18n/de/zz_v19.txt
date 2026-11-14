@@ -1539,3 +1539,11 @@
 8396|Leicht: Dein Team ist auf dem Platz etwas stärker, der Vorstand geduldiger und das Budget größer.
 8397|Mittel: ausgewogen, das Standard-Erlebnis.
 8398|Schwer: Gegner sind stärker, der Vorstand ist ungeduldig und das Budget knapp.
+8399|Neuer Schussstil: Touch
+8400|In den Einstellungen wählen: zum Zielen zurückziehen, dann auf eine Stelle am Ball tippen. Seiten geben Effet, unten wird es ein Lupfer.
+8402|Schnelle Jugend und Kinder-Look
+8403|Beim Erstellen eines jungen Spielers wählbar: Jugendsaisons dauern 14 Spiele. In der Jugend sieht dein Spieler jetzt wie ein Kind aus.
+8406|Trainer: Schwierigkeitsstufen
+8407|Leicht, Mittel oder Schwer: beim Erstellen oder in den Einstellungen wählen.
+8408|Fehlerbehebungen
+8409|Verbesserungen am Spielbildschirm und an den Challenges für flüssigeres Spielen.

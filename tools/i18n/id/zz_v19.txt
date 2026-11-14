@@ -1539,3 +1539,11 @@
 8396|Mudah: timmu sedikit lebih kuat di lapangan, manajemen lebih sabar, dan anggaran lebih besar.
 8397|Sedang: seimbang, pengalaman standar.
 8398|Sulit: lawan lebih tangguh, manajemen tidak sabar, dan anggaran terbatas.
+8399|Gaya tendangan baru: Sentuh
+8400|Pilih di Pengaturan: tarik ke belakang untuk membidik, lalu ketuk satu titik di bola. Sisi memberi efek, bagian bawah jadi cungkilan.
+8402|Akademi cepat dan tampilan anak
+8403|Pilih saat membuat pemain muda: musim akademi berlangsung 14 laga. Di akademi pemainmu kini terlihat seperti anak-anak.
+8406|Manajer: tingkat kesulitan
+8407|Mudah, Sedang, atau Sulit: pilih saat membuat atau di Pengaturan.
+8408|Perbaikan
+8409|Peningkatan layar pertandingan dan tantangan agar permainan lebih lancar.

@@ -1539,3 +1539,11 @@
 8396|Facile: la tua squadra è un po’ più forte in campo, la dirigenza più paziente e il budget più alto.
 8397|Medio: equilibrato, l’esperienza standard.
 8398|Difficile: avversari più tosti, dirigenza impaziente e budget ridotto.
+8399|Nuovo stile di tiro: Tocco
+8400|Sceglilo nelle Impostazioni: tira indietro per mirare, poi tocca un punto del pallone. I lati danno effetto, la parte bassa fa il pallonetto.
+8402|Giovanili rapide e aspetto da bambino
+8403|Sceglilo creando un giocatore giovane: le stagioni giovanili durano 14 partite. Nelle giovanili il tuo giocatore ora sembra un bambino.
+8406|Allenatore: livelli di difficoltà
+8407|Facile, Medio o Difficile: sceglilo alla creazione o nelle Impostazioni.
+8408|Correzioni
+8409|Miglioramenti alla schermata partita e alle sfide per un gioco più fluido.

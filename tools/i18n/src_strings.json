@@ -7768,7 +7768,16 @@
 "lang-pt.js"
 ],
 "Kolay: takımın sahada biraz daha güçlü, yönetim daha sabırlı, bütçe daha yüksek.": [
-"coachdiff.js"
+"coachdiff.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Orta": [
 "coachdiff.js",
@@ -7785,7 +7794,16 @@
 "match.js"
 ],
 "Orta: dengeli, standart deneyim.": [
-"coachdiff.js"
+"coachdiff.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Zor": [
 "coachdiff.js",
@@ -7801,7 +7819,16 @@
 "lang-pt.js"
 ],
 "Zor: rakipler daha zorlu, yönetim sabırsız, bütçe kısıtlı.": [
-"coachdiff.js"
+"coachdiff.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Zorluk": [
 "coachdiff.js",
@@ -31236,8 +31263,7 @@
 ],
 "StarFoot Diamond": [
 "diamond.js",
-"game.js",
-"star.js"
+"game.js"
 ],
 "💎 Diamond aktif! Her şey senin.": [
 "diamond.js",
@@ -83804,8 +83830,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"star.js"
+"lang-pt.js"
 ],
 "Kulübün başına geç: kadro, taktik, canlı maç, transfer ve basın.": [
 "lang-ar.js",
@@ -83816,8 +83841,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"star.js"
+"lang-pt.js"
 ],
 "Okul yılları ve arkadaşlar": [
 "lang-ar.js",
@@ -83828,8 +83852,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"star.js"
+"lang-pt.js"
 ],
 "Sınavlar, karne, Zeka puanı; okulda, mahallede ve takımda arkadaşlar.": [
 "lang-ar.js",
@@ -83840,8 +83863,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"star.js"
+"lang-pt.js"
 ],
 "Transfer talebi, kişilik, kiralık": [
 "lang-ar.js",
@@ -83852,8 +83874,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"star.js"
+"lang-pt.js"
 ],
 "İstediğin kulübe talep gönder; kişiliğin davranışlarınla değişir.": [
 "lang-ar.js",
@@ -83864,8 +83885,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"star.js"
+"lang-pt.js"
 ],
 "Her şey dahil tek satın alma.": [
 "lang-ar.js",
@@ -83876,8 +83896,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"star.js"
+"lang-pt.js"
 ],
 "Güncelleme geçmişi": [
 "lang-ar.js",
@@ -136660,6 +136679,17 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"ORTA: DENGELİ, STANDART DENEYİM.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -186471,6 +186501,15 @@
 "SEITEN: EFFET  ·  UNTEN: LUPFER": [
 "lang-de.js"
 ],
+"Leicht: Dein Team ist auf dem Platz etwas stärker, der Vorstand geduldiger und das Budget größer.": [
+"lang-de.js"
+],
+"Mittel: ausgewogen, das Standard-Erlebnis.": [
+"lang-de.js"
+],
+"Schwer: Gegner sind stärker, der Vorstand ist ungeduldig und das Budget knapp.": [
+"lang-de.js"
+],
 "– wir haben uns qualifiziert!": [
 "lang-de.js"
 ],
@@ -198030,6 +198069,9 @@
 "lang-en.js"
 ],
 "SCHUSSSTIL: TOUCH": [
+"lang-de.js"
+],
+"MITTEL: AUSGEWOGEN, DAS STANDARD-ERLEBNIS.": [
 "lang-de.js"
 ],
 "– WIR HABEN UNS QUALIFIZIERT!": [
@@ -214690,6 +214732,15 @@
 "SIDES: CURL · BOTTOM: CHIP": [
 "lang-en.js"
 ],
+"Easy: your team is a bit stronger on the pitch, the board is more patient and the budget is bigger.": [
+"lang-en.js"
+],
+"Medium: the balanced, standard experience.": [
+"lang-en.js"
+],
+"Hard: opponents are tougher, the board is impatient and the budget is tight.": [
+"lang-en.js"
+],
 "— we qualified!": [
 "lang-en.js"
 ],
@@ -225545,6 +225596,9 @@
 "lang-en.js"
 ],
 "SHOOTING STYLE: TOUCH": [
+"lang-en.js"
+],
+"MEDIUM: THE BALANCED, STANDARD EXPERIENCE.": [
 "lang-en.js"
 ],
 "— WE QUALIFIED!": [
@@ -242224,6 +242278,15 @@
 "LADOS: EFECTO  ·  ABAJO: VASELINA": [
 "lang-es.js"
 ],
+"Fácil: tu equipo es algo más fuerte en el campo, la directiva es más paciente y el presupuesto mayor.": [
+"lang-es.js"
+],
+"Medio: equilibrado, la experiencia estándar.": [
+"lang-es.js"
+],
+"Difícil: los rivales son más duros, la directiva impaciente y el presupuesto ajustado.": [
+"lang-es.js"
+],
 "— ¡nos hemos clasificado!": [
 "lang-es.js"
 ],
@@ -253147,6 +253210,9 @@
 "lang-pt.js"
 ],
 "ESTILO DE TIRO: TOQUE": [
+"lang-es.js"
+],
+"MEDIO: EQUILIBRADO, LA EXPERIENCIA ESTÁNDAR.": [
 "lang-es.js"
 ],
 "— ¡NOS HEMOS CLASIFICADO!": [
@@ -269624,6 +269690,15 @@
 "CÔTÉS : EFFET  ·  BAS : LOB": [
 "lang-fr.js"
 ],
+"Facile : ton équipe est un peu plus forte sur le terrain, la direction plus patiente et le budget plus élevé.": [
+"lang-fr.js"
+],
+"Moyen : équilibré, l’expérience standard.": [
+"lang-fr.js"
+],
+"Difficile : adversaires plus coriaces, direction impatiente et budget serré.": [
+"lang-fr.js"
+],
 "— on est qualifiés !": [
 "lang-fr.js"
 ],
@@ -280187,6 +280262,9 @@
 "lang-fr.js"
 ],
 "STYLE DE TIR : TOUCHE": [
+"lang-fr.js"
+],
+"MOYEN : ÉQUILIBRÉ, L’EXPÉRIENCE STANDARD.": [
 "lang-fr.js"
 ],
 "— ON EST QUALIFIÉS !": [
@@ -296228,6 +296306,15 @@
 "SISI: EFEK  ·  BAWAH: CUNGKIL": [
 "lang-id.js"
 ],
+"Mudah: timmu sedikit lebih kuat di lapangan, manajemen lebih sabar, dan anggaran lebih besar.": [
+"lang-id.js"
+],
+"Sedang: seimbang, pengalaman standar.": [
+"lang-id.js"
+],
+"Sulit: lawan lebih tangguh, manajemen tidak sabar, dan anggaran terbatas.": [
+"lang-id.js"
+],
 "— kita lolos!": [
 "lang-id.js"
 ],
@@ -306574,6 +306661,9 @@
 "lang-id.js"
 ],
 "GAYA TENDANGAN: SENTUH": [
+"lang-id.js"
+],
+"SEDANG: SEIMBANG, PENGALAMAN STANDAR.": [
 "lang-id.js"
 ],
 "— KITA LOLOS!": [
@@ -322605,6 +322695,15 @@
 "LATI: EFFETTO  ·  SOTTO: PALLONETTO": [
 "lang-it.js"
 ],
+"Facile: la tua squadra è un po’ più forte in campo, la dirigenza più paziente e il budget più alto.": [
+"lang-it.js"
+],
+"Medio: equilibrato, l’esperienza standard.": [
+"lang-it.js"
+],
+"Difficile: avversari più tosti, dirigenza impaziente e budget ridotto.": [
+"lang-it.js"
+],
 "— ci siamo qualificati!": [
 "lang-it.js"
 ],
@@ -332954,6 +333053,9 @@
 "lang-it.js"
 ],
 "STILE DI TIRO: TOCCO": [
+"lang-it.js"
+],
+"MEDIO: EQUILIBRATO, L’ESPERIENZA STANDARD.": [
 "lang-it.js"
 ],
 "— CI SIAMO QUALIFICATI!": [
@@ -349766,6 +349868,15 @@
 "LADOS: EFEITO  ·  BAIXO: CAVADINHA": [
 "lang-pt.js"
 ],
+"Fácil: seu time fica um pouco mais forte em campo, a diretoria mais paciente e o orçamento maior.": [
+"lang-pt.js"
+],
+"Médio: equilibrado, a experiência padrão.": [
+"lang-pt.js"
+],
+"Difícil: adversários mais duros, diretoria impaciente e orçamento apertado.": [
+"lang-pt.js"
+],
 "— nos classificamos!": [
 "lang-pt.js"
 ],
@@ -359883,6 +359994,9 @@
 "lang-pt.js"
 ],
 "ESTILO DE CHUTE: TOQUE": [
+"lang-pt.js"
+],
+"MÉDIO: EQUILIBRADO, A EXPERIÊNCIA PADRÃO.": [
 "lang-pt.js"
 ],
 "— NOS CLASSIFICAMOS!": [
@@ -383458,6 +383572,30 @@
 "star.js"
 ],
 "✨ {} artık senin! Gönderin beğeni topluyor.": [
+"star.js"
+],
+"Yeni vuruş tarzı: Dokunuş": [
+"star.js"
+],
+"Ayarlar’dan seç: geri çekip nişan al, sonra topun bir noktasına dokun. Yanlar falso, alt kısım aşırtma verir.": [
+"star.js"
+],
+"Hızlı altyapı ve çocuk görünümü": [
+"star.js"
+],
+"Küçük yaşta oluştururken seç: altyapı sezonları 14 maç sürer. Altyapıda oyuncun artık çocuk gibi görünür.": [
+"star.js"
+],
+"Teknik Direktör: zorluk seviyeleri": [
+"star.js"
+],
+"Kolay, Orta ya da Zor: oluştururken veya Ayarlar’dan seç.": [
+"star.js"
+],
+"Düzeltmeler": [
+"star.js"
+],
+"Maç ekranı ve meydan okumalarda iyileştirmeler, daha akıcı oyun.": [
 "star.js"
 ],
 "LZ1:": [

@@ -610,7 +610,7 @@ document.addEventListener('click', (e) => {
 // ---------- Güncelleme duyurusu (her sürümde bir kez) ----------
 const APP_VER = '1.0.22';
 // Duyuru içeriğinin sürümü: yeni duyuru yazılınca güncellenir (yalnız sürüm atlamak tekrar göstermez)
-const WN_VER = '1.0.21';
+const WN_VER = '1.0.22';
 const WhatsNew = {
   KEY: 'starfoot_whatsnew',
   // Hub'a girişte bir kez gösterir; gösterdiyse true döner. done(): pencere kapanınca çalışır.
@@ -628,6 +628,12 @@ const WhatsNew = {
   // Duyuruyu gösterir (Ayarlar'dan yeniden açılabilir): bu ve bir önceki güncelleme, geçmiş gibi
   show(done) {
     const it = (ic, t, d) => `<li><i data-emo>${ic}</i><span><b>${t}</b><small>${d}</small></span></li>`;
+    const v22 = [
+      it('🎯', 'Yeni vuruş tarzı: Dokunuş', 'Ayarlar’dan seç: geri çekip nişan al, sonra topun bir noktasına dokun. Yanlar falso, alt kısım aşırtma verir.'),
+      it('🧒', 'Hızlı altyapı ve çocuk görünümü', 'Küçük yaşta oluştururken seç: altyapı sezonları 14 maç sürer. Altyapıda oyuncun artık çocuk gibi görünür.'),
+      it('📊', 'Teknik Direktör: zorluk seviyeleri', 'Kolay, Orta ya da Zor: oluştururken veya Ayarlar’dan seç.'),
+      it('🔧', 'Düzeltmeler', 'Maç ekranı ve meydan okumalarda iyileştirmeler, daha akıcı oyun.'),
+    ].join('');
     const v21 = [
       it('🎯', 'Teknik Direktör meydan okumaları', '0-2 geriden dönüş, 10 kişi, kurtarma operasyonu, şampiyonluk yarışı... Yıldızları topla. İlk görev herkese ücretsiz.'),
       it('💎', 'Diamond’a yeni içerik', '6 özel gol sevinci, HD kariyer posteri, Teknik Direktör temaları ve 6 kariyer yuvası.'),
@@ -641,12 +647,6 @@ const WhatsNew = {
       it('📸', 'Hocanın sosyal medyası', 'Maçlardan, kupalardan ve transferlerden fotoğraflı paylaşımlar.'),
       it('🎁', '3 maç ücretsiz dene', 'Teknik Direktör paketini almadan önce takımının başına geç.'),
     ].join('');
-    const v19 = [
-      it('📋', 'Teknik Direktör modu', 'Kulübün başına geç: kadro, taktik, canlı maç, transfer ve basın.'),
-      it('🎒', 'Okul yılları ve arkadaşlar', 'Sınavlar, karne, Zeka puanı; okulda, mahallede ve takımda arkadaşlar.'),
-      it('🔁', 'Transfer talebi, kişilik, kiralık', 'İstediğin kulübe talep gönder; kişiliğin davranışlarınla değişir.'),
-      it('💎', 'StarFoot Diamond', 'Her şey dahil tek satın alma.'),
-    ].join('');
     const has = typeof Star !== 'undefined' && Star.has && Star.has();
     const end = () => { if (done) setTimeout(done, 300); };
     const btns = [{ t: 'Tamam', cls: 'btn-ghost', fn: end }];
@@ -654,13 +654,13 @@ const WhatsNew = {
     Game.modal(`<div class="wn"><div class="ev-tag">Güncelleme geçmişi</div>
       <h2>Yenilikler 🚀</h2>
       <div class="wn-v"><b>${WN_VER}</b><small>Bu güncelleme</small></div>
-      <ul class="wn-l">${v21}</ul>
+      <ul class="wn-l">${v22}</ul>
+      <div class="wn-v old"><b>1.0.21</b><small>Önceki güncelleme</small></div>
+      <ul class="wn-l old">${v21}</ul>
       <p class="wn-note ok">Diamond’a eklenenlerin hiçbiri maçta güç vermez; ücretsiz oyunda hiçbir şey değişmedi.</p>
-      <div class="wn-v old"><b>1.0.20</b><small>Önceki güncelleme</small></div>
+      <div class="wn-v old"><b>1.0.20</b></div>
       <ul class="wn-l old">${v20}</ul>
-      <p class="wn-note">Teknik Direktör modu yepyeni bir fikir ve her güncellemede gelişmeye devam edecek. Fikirlerini bekliyoruz!</p>
-      <div class="wn-v old"><b>1.0.19</b></div>
-      <ul class="wn-l old">${v19}</ul></div>`, btns, { wide: true });
+      <p class="wn-note">Teknik Direktör modu yepyeni bir fikir ve her güncellemede gelişmeye devam edecek. Fikirlerini bekliyoruz!</p></div>`, btns, { wide: true });
     if (typeof Premium !== 'undefined') Premium.track('whatsnew_view', { ver: WN_VER, premium: has ? 1 : 0 });
   },
 };

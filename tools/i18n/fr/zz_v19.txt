@@ -1539,3 +1539,11 @@
 8396|Facile : ton équipe est un peu plus forte sur le terrain, la direction plus patiente et le budget plus élevé.
 8397|Moyen : équilibré, l’expérience standard.
 8398|Difficile : adversaires plus coriaces, direction impatiente et budget serré.
+8399|Nouveau style de tir : Touche
+8400|À choisir dans les Réglages : tire vers l’arrière pour viser, puis touche un point du ballon. Les côtés donnent de l’effet, le bas fait un lob.
+8402|Formation rapide et look enfant
+8403|À choisir en créant un jeune joueur : les saisons de formation durent 14 matchs. En formation, ton joueur a maintenant l’air d’un enfant.
+8406|Entraîneur : niveaux de difficulté
+8407|Facile, Moyen ou Difficile : à choisir à la création ou dans les Réglages.
+8408|Corrections
+8409|Améliorations de l’écran de match et des défis pour un jeu plus fluide.
