@@ -77,7 +77,9 @@ const RCStore = {
   },
   async purchaseProduct({ productIdentifier }) {
     await RCStore.ready();
-    if (!RCStore.prods[productIdentifier]) await RCStore.getProducts({ productIdentifiers: [productIdentifier] });
+    if (!RCStore.prods[productIdentifier]) await RCStore.getProducts({ productIdentifiers: [productIdentifier] }).catch(() => {});
+    // bağlantı zayıfsa ya da ürün mağazaya yeni yayıldıysa ilk sorgu boş dönebilir: kısa bekleyip bir kez daha sor
+    if (!RCStore.prods[productIdentifier]) { await new Promise((r) => setTimeout(r, 1500)); await RCStore.getProducts({ productIdentifiers: [productIdentifier] }).catch(() => {}); }
     const product = RCStore.prods[productIdentifier];
     if (!product) throw new Error('product not found');
     try {
@@ -186,7 +188,7 @@ const Premium = {
     } catch (e) {
       const msg = String((e && (e.message || e.code)) || e);
       if (/cancel/i.test(msg)) Premium.track('premium_cancel');
-      else { Premium.track('premium_fail', { reason: msg.slice(0, 90) }); Game.toast('Satın alma tamamlanamadı. Biraz sonra tekrar dene.', 'bad'); }
+      else { Premium.track('premium_fail', { reason: msg.slice(0, 90), item_id: PREMIUM_ID }); Game.toast(/not found/i.test(msg) ? 'Mağazaya ulaşılamadı. İnternet bağlantını kontrol edip tekrar dene.' : 'Satın alma tamamlanamadı. Biraz sonra tekrar dene.', 'bad'); }
     }
     Premium.busy = false;
     Game.render();
@@ -308,7 +310,7 @@ const Plus = {
     } catch (e) {
       const msg = String((e && (e.message || e.code)) || e);
       if (/cancel/i.test(msg)) Premium.track('plus_cancel');
-      else { Premium.track('premium_fail', { reason: msg.slice(0, 90), item_id: id }); Game.toast('Satın alma tamamlanamadı. Biraz sonra tekrar dene.', 'bad'); }
+      else { Premium.track('premium_fail', { reason: msg.slice(0, 90), item_id: id }); Game.toast(/not found/i.test(msg) ? 'Mağazaya ulaşılamadı. İnternet bağlantını kontrol edip tekrar dene.' : 'Satın alma tamamlanamadı. Biraz sonra tekrar dene.', 'bad'); }
     }
     Premium.busy = false;
     if (typeof Game !== 'undefined' && Game.render) { if (Game.state) Game.render(); else if (Game.init) Game.init(); }
@@ -409,7 +411,7 @@ const Packs = {
       }
     } catch (e) {
       const msg = String((e && (e.message || e.code)) || e);
-      if (!/cancel/i.test(msg)) { Premium.track('premium_fail', { reason: msg.slice(0, 90), item_id: x.id }); Game.toast('Satın alma tamamlanamadı. Biraz sonra tekrar dene.', 'bad'); }
+      if (!/cancel/i.test(msg)) { Premium.track('premium_fail', { reason: msg.slice(0, 90), item_id: x.id }); Game.toast(/not found/i.test(msg) ? 'Mağazaya ulaşılamadı. İnternet bağlantını kontrol edip tekrar dene.' : 'Satın alma tamamlanamadı. Biraz sonra tekrar dene.', 'bad'); }
     }
     Premium.busy = false;
     return ok;

@@ -1547,3 +1547,4 @@
 8407|Leicht, Mittel oder Schwer: beim Erstellen oder in den Einstellungen wählen.
 8408|Fehlerbehebungen
 8409|Verbesserungen am Spielbildschirm und an den Challenges für flüssigeres Spielen.
+8410|Der Store ist nicht erreichbar. Prüfe deine Internetverbindung und versuche es erneut.

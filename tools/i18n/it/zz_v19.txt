@@ -1547,3 +1547,4 @@
 8407|Facile, Medio o Difficile: sceglilo alla creazione o nelle Impostazioni.
 8408|Correzioni
 8409|Miglioramenti alla schermata partita e alle sfide per un gioco più fluido.
+8410|Impossibile raggiungere lo store. Controlla la connessione internet e riprova.

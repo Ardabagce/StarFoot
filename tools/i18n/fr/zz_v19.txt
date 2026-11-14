@@ -1547,3 +1547,4 @@
 8407|Facile, Moyen ou Difficile : à choisir à la création ou dans les Réglages.
 8408|Corrections
 8409|Améliorations de l’écran de match et des défis pour un jeu plus fluide.
+8410|Impossible de joindre la boutique. Vérifie ta connexion internet et réessaie.

@@ -31277,6 +31277,11 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Mağazaya ulaşılamadı. İnternet bağlantını kontrol edip tekrar dene.": [
+"diamond.js",
+"premium.js",
+"value.js"
+],
 "Satın alma tamamlanamadı. Biraz sonra tekrar dene.": [
 "diamond.js",
 "lang-ar.js",
@@ -86290,6 +86295,168 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Yeni vuruş tarzı: Dokunuş": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Ayarlar’dan seç: geri çekip nişan al, sonra topun bir noktasına dokun. Yanlar falso, alt kısım aşırtma verir.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Ayarlar’dan seç: geri çekip nişan al, sonra topun bir noktasına dokun.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Pick it in Settings: pull back to aim, then tap a spot on the ball.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Hızlı altyapı ve çocuk görünümü": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Küçük yaşta oluştururken seç: altyapı sezonları 14 maç sürer. Altyapıda oyuncun artık çocuk gibi görünür.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Küçük yaşta oluştururken seç: altyapı sezonları 14 maç sürer.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Choose it when creating a young player: academy seasons last 14 matches.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Altyapıda oyuncun artık çocuk gibi görünür.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Your player now looks like a kid in the academy.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Teknik Direktör: zorluk seviyeleri": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Kolay, Orta ya da Zor: oluştururken veya Ayarlar’dan seç.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Düzeltmeler": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Maç ekranı ve meydan okumalarda iyileştirmeler, daha akıcı oyun.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
 "(Asist)": [
 "lang-ar.js",
 "lang-de.js",
@@ -136690,6 +136857,50 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"YENİ VURUŞ TARZI: DOKUNUŞ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HIZLI ALTYAPI VE ÇOCUK GÖRÜNÜMÜ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TEKNİK DİREKTÖR: ZORLUK SEVİYELERİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DÜZELTMELER": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -186510,6 +186721,30 @@
 "Schwer: Gegner sind stärker, der Vorstand ist ungeduldig und das Budget knapp.": [
 "lang-de.js"
 ],
+"Neuer Schussstil: Touch": [
+"lang-de.js"
+],
+"In den Einstellungen wählen: zum Zielen zurückziehen, dann auf eine Stelle am Ball tippen. Seiten geben Effet, unten wird es ein Lupfer.": [
+"lang-de.js"
+],
+"Schnelle Jugend und Kinder-Look": [
+"lang-de.js"
+],
+"Beim Erstellen eines jungen Spielers wählbar: Jugendsaisons dauern 14 Spiele. In der Jugend sieht dein Spieler jetzt wie ein Kind aus.": [
+"lang-de.js"
+],
+"Trainer: Schwierigkeitsstufen": [
+"lang-de.js"
+],
+"Leicht, Mittel oder Schwer: beim Erstellen oder in den Einstellungen wählen.": [
+"lang-de.js"
+],
+"Fehlerbehebungen": [
+"lang-de.js"
+],
+"Verbesserungen am Spielbildschirm und an den Challenges für flüssigeres Spielen.": [
+"lang-de.js"
+],
 "– wir haben uns qualifiziert!": [
 "lang-de.js"
 ],
@@ -198072,6 +198307,18 @@
 "lang-de.js"
 ],
 "MITTEL: AUSGEWOGEN, DAS STANDARD-ERLEBNIS.": [
+"lang-de.js"
+],
+"NEUER SCHUSSSTIL: TOUCH": [
+"lang-de.js"
+],
+"SCHNELLE JUGEND UND KINDER-LOOK": [
+"lang-de.js"
+],
+"TRAINER: SCHWIERIGKEITSSTUFEN": [
+"lang-de.js"
+],
+"FEHLERBEHEBUNGEN": [
 "lang-de.js"
 ],
 "– WIR HABEN UNS QUALIFIZIERT!": [
@@ -214741,6 +214988,30 @@
 "Hard: opponents are tougher, the board is impatient and the budget is tight.": [
 "lang-en.js"
 ],
+"New shooting style: Touch": [
+"lang-en.js"
+],
+"Pick it in Settings: pull back to aim, then tap a spot on the ball. The sides add curl, the bottom chips it.": [
+"lang-en.js"
+],
+"Fast academy and kid look": [
+"lang-en.js"
+],
+"Choose it when creating a young player: academy seasons last 14 matches. Your player now looks like a kid in the academy.": [
+"lang-en.js"
+],
+"Manager: difficulty levels": [
+"lang-en.js"
+],
+"Easy, Medium or Hard: choose when creating or in Settings.": [
+"lang-en.js"
+],
+"Fixes": [
+"lang-en.js"
+],
+"Improvements to the match screen and challenges for smoother play.": [
+"lang-en.js"
+],
 "— we qualified!": [
 "lang-en.js"
 ],
@@ -225599,6 +225870,18 @@
 "lang-en.js"
 ],
 "MEDIUM: THE BALANCED, STANDARD EXPERIENCE.": [
+"lang-en.js"
+],
+"NEW SHOOTING STYLE: TOUCH": [
+"lang-en.js"
+],
+"FAST ACADEMY AND KID LOOK": [
+"lang-en.js"
+],
+"MANAGER: DIFFICULTY LEVELS": [
+"lang-en.js"
+],
+"FIXES": [
 "lang-en.js"
 ],
 "— WE QUALIFIED!": [
@@ -242287,6 +242570,30 @@
 "Difícil: los rivales son más duros, la directiva impaciente y el presupuesto ajustado.": [
 "lang-es.js"
 ],
+"Nuevo estilo de tiro: Toque": [
+"lang-es.js"
+],
+"Elígelo en Ajustes: tira hacia atrás para apuntar y toca un punto del balón. Los lados dan efecto, la parte baja hace vaselina.": [
+"lang-es.js"
+],
+"Cantera rápida y aspecto infantil": [
+"lang-es.js"
+],
+"Elígelo al crear un jugador joven: las temporadas de cantera duran 14 partidos. En la cantera tu jugador ahora parece un niño.": [
+"lang-es.js"
+],
+"Entrenador: niveles de dificultad": [
+"lang-es.js"
+],
+"Fácil, Medio o Difícil: elígelo al crear o en Ajustes.": [
+"lang-es.js"
+],
+"Correcciones": [
+"lang-es.js"
+],
+"Mejoras en la pantalla de partido y los desafíos para un juego más fluido.": [
+"lang-es.js"
+],
 "— ¡nos hemos clasificado!": [
 "lang-es.js"
 ],
@@ -253213,6 +253520,18 @@
 "lang-es.js"
 ],
 "MEDIO: EQUILIBRADO, LA EXPERIENCIA ESTÁNDAR.": [
+"lang-es.js"
+],
+"NUEVO ESTILO DE TIRO: TOQUE": [
+"lang-es.js"
+],
+"CANTERA RÁPIDA Y ASPECTO INFANTIL": [
+"lang-es.js"
+],
+"ENTRENADOR: NIVELES DE DIFICULTAD": [
+"lang-es.js"
+],
+"CORRECCIONES": [
 "lang-es.js"
 ],
 "— ¡NOS HEMOS CLASIFICADO!": [
@@ -269699,6 +270018,30 @@
 "Difficile : adversaires plus coriaces, direction impatiente et budget serré.": [
 "lang-fr.js"
 ],
+"Nouveau style de tir : Touche": [
+"lang-fr.js"
+],
+"À choisir dans les Réglages : tire vers l’arrière pour viser, puis touche un point du ballon. Les côtés donnent de l’effet, le bas fait un lob.": [
+"lang-fr.js"
+],
+"Formation rapide et look enfant": [
+"lang-fr.js"
+],
+"À choisir en créant un jeune joueur : les saisons de formation durent 14 matchs. En formation, ton joueur a maintenant l’air d’un enfant.": [
+"lang-fr.js"
+],
+"Entraîneur : niveaux de difficulté": [
+"lang-fr.js"
+],
+"Facile, Moyen ou Difficile : à choisir à la création ou dans les Réglages.": [
+"lang-fr.js"
+],
+"Corrections": [
+"lang-fr.js"
+],
+"Améliorations de l’écran de match et des défis pour un jeu plus fluide.": [
+"lang-fr.js"
+],
 "— on est qualifiés !": [
 "lang-fr.js"
 ],
@@ -280265,6 +280608,18 @@
 "lang-fr.js"
 ],
 "MOYEN : ÉQUILIBRÉ, L’EXPÉRIENCE STANDARD.": [
+"lang-fr.js"
+],
+"NOUVEAU STYLE DE TIR : TOUCHE": [
+"lang-fr.js"
+],
+"FORMATION RAPIDE ET LOOK ENFANT": [
+"lang-fr.js"
+],
+"ENTRAÎNEUR : NIVEAUX DE DIFFICULTÉ": [
+"lang-fr.js"
+],
+"CORRECTIONS": [
 "lang-fr.js"
 ],
 "— ON EST QUALIFIÉS !": [
@@ -296315,6 +296670,30 @@
 "Sulit: lawan lebih tangguh, manajemen tidak sabar, dan anggaran terbatas.": [
 "lang-id.js"
 ],
+"Gaya tendangan baru: Sentuh": [
+"lang-id.js"
+],
+"Pilih di Pengaturan: tarik ke belakang untuk membidik, lalu ketuk satu titik di bola. Sisi memberi efek, bagian bawah jadi cungkilan.": [
+"lang-id.js"
+],
+"Akademi cepat dan tampilan anak": [
+"lang-id.js"
+],
+"Pilih saat membuat pemain muda: musim akademi berlangsung 14 laga. Di akademi pemainmu kini terlihat seperti anak-anak.": [
+"lang-id.js"
+],
+"Manajer: tingkat kesulitan": [
+"lang-id.js"
+],
+"Mudah, Sedang, atau Sulit: pilih saat membuat atau di Pengaturan.": [
+"lang-id.js"
+],
+"Perbaikan": [
+"lang-id.js"
+],
+"Peningkatan layar pertandingan dan tantangan agar permainan lebih lancar.": [
+"lang-id.js"
+],
 "— kita lolos!": [
 "lang-id.js"
 ],
@@ -306664,6 +307043,18 @@
 "lang-id.js"
 ],
 "SEDANG: SEIMBANG, PENGALAMAN STANDAR.": [
+"lang-id.js"
+],
+"GAYA TENDANGAN BARU: SENTUH": [
+"lang-id.js"
+],
+"AKADEMI CEPAT DAN TAMPILAN ANAK": [
+"lang-id.js"
+],
+"MANAJER: TINGKAT KESULITAN": [
+"lang-id.js"
+],
+"PERBAIKAN": [
 "lang-id.js"
 ],
 "— KITA LOLOS!": [
@@ -322704,6 +323095,30 @@
 "Difficile: avversari più tosti, dirigenza impaziente e budget ridotto.": [
 "lang-it.js"
 ],
+"Nuovo stile di tiro: Tocco": [
+"lang-it.js"
+],
+"Sceglilo nelle Impostazioni: tira indietro per mirare, poi tocca un punto del pallone. I lati danno effetto, la parte bassa fa il pallonetto.": [
+"lang-it.js"
+],
+"Giovanili rapide e aspetto da bambino": [
+"lang-it.js"
+],
+"Sceglilo creando un giocatore giovane: le stagioni giovanili durano 14 partite. Nelle giovanili il tuo giocatore ora sembra un bambino.": [
+"lang-it.js"
+],
+"Allenatore: livelli di difficoltà": [
+"lang-it.js"
+],
+"Facile, Medio o Difficile: sceglilo alla creazione o nelle Impostazioni.": [
+"lang-it.js"
+],
+"Correzioni": [
+"lang-it.js"
+],
+"Miglioramenti alla schermata partita e alle sfide per un gioco più fluido.": [
+"lang-it.js"
+],
 "— ci siamo qualificati!": [
 "lang-it.js"
 ],
@@ -333056,6 +333471,18 @@
 "lang-it.js"
 ],
 "MEDIO: EQUILIBRATO, L’ESPERIENZA STANDARD.": [
+"lang-it.js"
+],
+"NUOVO STILE DI TIRO: TOCCO": [
+"lang-it.js"
+],
+"GIOVANILI RAPIDE E ASPETTO DA BAMBINO": [
+"lang-it.js"
+],
+"ALLENATORE: LIVELLI DI DIFFICOLTÀ": [
+"lang-it.js"
+],
+"CORREZIONI": [
 "lang-it.js"
 ],
 "— CI SIAMO QUALIFICATI!": [
@@ -349877,6 +350304,30 @@
 "Difícil: adversários mais duros, diretoria impaciente e orçamento apertado.": [
 "lang-pt.js"
 ],
+"Novo estilo de chute: Toque": [
+"lang-pt.js"
+],
+"Escolha em Ajustes: puxe para trás para mirar e toque num ponto da bola. Os lados dão efeito, a parte de baixo faz cavadinha.": [
+"lang-pt.js"
+],
+"Base rápida e visual infantil": [
+"lang-pt.js"
+],
+"Escolha ao criar um jogador jovem: as temporadas da base duram 14 jogos. Na base, seu jogador agora parece uma criança.": [
+"lang-pt.js"
+],
+"Treinador: níveis de dificuldade": [
+"lang-pt.js"
+],
+"Fácil, Médio ou Difícil: escolha ao criar ou em Ajustes.": [
+"lang-pt.js"
+],
+"Correções": [
+"lang-pt.js"
+],
+"Melhorias na tela de partida e nos desafios para um jogo mais fluido.": [
+"lang-pt.js"
+],
 "— nos classificamos!": [
 "lang-pt.js"
 ],
@@ -359997,6 +360448,18 @@
 "lang-pt.js"
 ],
 "MÉDIO: EQUILIBRADO, A EXPERIÊNCIA PADRÃO.": [
+"lang-pt.js"
+],
+"NOVO ESTILO DE CHUTE: TOQUE": [
+"lang-pt.js"
+],
+"BASE RÁPIDA E VISUAL INFANTIL": [
+"lang-pt.js"
+],
+"TREINADOR: NÍVEIS DE DIFICULDADE": [
+"lang-pt.js"
+],
+"CORREÇÕES": [
 "lang-pt.js"
 ],
 "— NOS CLASSIFICAMOS!": [
@@ -383572,30 +384035,6 @@
 "star.js"
 ],
 "✨ {} artık senin! Gönderin beğeni topluyor.": [
-"star.js"
-],
-"Yeni vuruş tarzı: Dokunuş": [
-"star.js"
-],
-"Ayarlar’dan seç: geri çekip nişan al, sonra topun bir noktasına dokun. Yanlar falso, alt kısım aşırtma verir.": [
-"star.js"
-],
-"Hızlı altyapı ve çocuk görünümü": [
-"star.js"
-],
-"Küçük yaşta oluştururken seç: altyapı sezonları 14 maç sürer. Altyapıda oyuncun artık çocuk gibi görünür.": [
-"star.js"
-],
-"Teknik Direktör: zorluk seviyeleri": [
-"star.js"
-],
-"Kolay, Orta ya da Zor: oluştururken veya Ayarlar’dan seç.": [
-"star.js"
-],
-"Düzeltmeler": [
-"star.js"
-],
-"Maç ekranı ve meydan okumalarda iyileştirmeler, daha akıcı oyun.": [
 "star.js"
 ],
 "LZ1:": [
