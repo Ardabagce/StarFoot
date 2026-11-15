@@ -90,14 +90,19 @@ jobs:
             echo "İMZASIZ: $AAB (ANDROID_KEYSTORE_* sırlarını kontrol et)"
             if [ -f ../../../../../keystore.properties ]; then exit 1; fi
           fi
+      # Yedekler: depolama kotası dolarsa Play'e yüklemeyi engellemesin
       - uses: actions/upload-artifact@v4
+        continue-on-error: true
         with:
           name: starfoot-debug-apk
           path: app/android/app/build/outputs/apk/debug/*.apk
+          retention-days: 3
       - uses: actions/upload-artifact@v4
+        continue-on-error: true
         with:
           name: starfoot-release-aab
           path: app/android/app/build/outputs/bundle/release/*.aab
+          retention-days: 7
       - name: Google Play'e yükle
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.play_track != '' }}
         env:
