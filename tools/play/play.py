@@ -49,7 +49,11 @@ def notes(version):
     out = []
     for k, v in meta['locales'].items():
         if k in LOC and v.get('whatsNew'):
-            out.append({'language': LOC[k], 'text': v['whatsNew'][:500]})
+            w = v['whatsNew']
+            if len(w) > 500:  # satır sonundan kes, cümle yarım kalmasın
+                w = w[:500]
+                w = w[:w.rfind('\n')] if '\n' in w else w
+            out.append({'language': LOC[k], 'text': w.strip()})
     return out
 
 
