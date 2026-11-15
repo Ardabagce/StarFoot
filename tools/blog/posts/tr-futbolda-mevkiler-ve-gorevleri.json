@@ -1,0 +1,64 @@
+{
+  "slug": "futbolda-mevkiler-ve-gorevleri",
+  "lang": "tr",
+  "group": "positions",
+  "cluster": "futbolcu-olmak",
+  "is_hub": false,
+  "title": "Futbolda mevkiler ve görevleri: kaleciden santrfora rehber",
+  "meta_description": "Futbolda hangi mevkiler var, her mevkinin görevi ne ve hangi özellikleri ister? Kaleci, stoper, bek, orta saha, kanat ve santrfor tek rehberde.",
+  "author": {
+    "name": "StarFoot Ekibi",
+    "org": true,
+    "bio": "StarFoot'u geliştiren bağımsız oyun ekibi. Futbol kariyeri ve teknik direktörlük üzerine oyun tasarlıyor ve yazıyoruz."
+  },
+  "date_published": "2026-11-15",
+  "date_updated": "2026-11-15",
+  "image": "/site/tr-2-matchday.jpg",
+  "tldr": "Futbolda temel olarak dört bölge vardır: kaleci, defans, orta saha ve hücum. Bunların içinde stoper, bek, ön libero, merkez orta saha, on numara, kanat ve santrfor gibi rollerin her biri farklı özellikler ister. Hangisine uygun olduğunu [8 soruluk mevki testimizle](/mevki-testi/) öğrenebilirsin.",
+  "sections": [
+    {
+      "h": "Kaleci",
+      "md": "Kaleci takımın son savunma oyuncusudur ve elle oynayabilen tek oyuncudur (kendi ceza sahasında). Görevleri:\n\n- Şutları kurtarmak ve ortaları kesmek,\n- Savunmayı konuşarak yönetmek,\n- Oyunu doğru bir pas ya da atışla başlatmak.\n\nİyi bir kalecide refleks, cesaret, iletişim ve soğukkanlılık öne çıkar."
+    },
+    {
+      "h": "Defans: stoper ve bek",
+      "md": "**Stoper** savunmanın ortasında oynar. Rakip forveti durdurmak, hava toplarını kazanmak ve savunma çizgisini düzenlemek onun işidir.\n\n**Bek** sağ ya da sol kanatta oynar. Modern futbolda bekler hem savunur hem hücuma katılır; bu yüzden dayanıklılık, hız ve iyi orta önemlidir."
+    },
+    {
+      "h": "Orta saha: ön libero, merkez orta saha ve on numara",
+      "md": "- **Ön libero** (defansif orta saha): Savunmanın önünde top kapar, boşlukları kapatır ve sade paslarla oyunu dengeler.\n- **Merkez orta saha**: Takımın motorudur; savunmaya da hücuma da katılır, oyunun temposunu belirler.\n- **On numara** (ofansif orta saha): Rakip ceza sahası önünde yaratıcılıkla son pası verir ya da golü atar."
+    },
+    {
+      "h": "Hücum: kanat ve santrfor",
+      "md": "**Kanat oyuncusu** hızı ve çalımıyla rakibi bire birde geçer; orta yapar ya da içeri kat edip şut çeker.\n\n**Santrfor** ceza sahasında gol arar. Doğru zamanda doğru yerde olmak, sırtı dönük top saklamak ve tek dokunuşla bitirmek en önemli becerileridir."
+    },
+    {
+      "h": "Hangi mevkiye uygunsun?",
+      "md": "Mevkiyi genelde antrenör, oyuncunun güçlü yönlerine bakarak belirler. Gençlerin farklı mevkilerde oynaması da gelişim için faydalıdır. Kendini merak ediyorsan [hangi mevkiye uygunsun testini](/mevki-testi/) çözebilirsin. Gerçek hayatta bu yolun nasıl başladığını [futbol altyapısına nasıl girilir](/blog/tr/futbol-altyapisina-nasil-girilir/) yazımızda anlattık."
+    },
+    {
+      "h": "Mevkini oyunda dene",
+      "md": "Bizim geliştirdiğimiz StarFoot'ta kaleci, defans, orta saha ya da forvet olarak 8 yaşında başlayıp kariyer yapabilirsin. Ayrıntılar [internetsiz futbol kariyer oyunu](/blog/tr/internetsiz-futbol-kariyer-oyunu/) yazımızda; oyunu [buradan indirebilirsin](/ios)."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Futbolda kaç mevki vardır?",
+      "a": "Temel olarak kaleci, defans, orta saha ve hücum olmak üzere dört bölge vardır. Bu bölgelerin içinde stoper, bek, ön libero, merkez orta saha, on numara, kanat ve santrfor gibi farklı roller bulunur."
+    },
+    {
+      "q": "En zor mevki hangisi?",
+      "a": "Her mevkinin kendine göre zorluğu vardır. Kaleci hata yapma lüksü en az olan oyuncudur; merkez orta saha ise en çok koşan ve en çok karar veren mevkilerden biridir."
+    },
+    {
+      "q": "Mevki değiştirmek mümkün mü?",
+      "a": "Evet. Pek çok oyuncu kariyerinde mevki değiştirir; örneğin kanat oyuncuları zamanla beke ya da orta sahaya geçebilir. Gençlerin farklı mevkileri denemesi gelişim için faydalıdır."
+    }
+  ],
+  "cta": {
+    "title": "Mevkini seç, kariyerine başla",
+    "text": "StarFoot: kaleci, defans, orta saha ya da forvet.",
+    "top_title": "Hangi mevkiye uygunsun?",
+    "top_text": "8 soruluk testi çöz, sonra kariyerini oyunda yaşa."
+  }
+}

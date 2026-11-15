@@ -1,0 +1,60 @@
+{
+  "slug": "fussball-positionen-erklaert",
+  "lang": "de",
+  "group": "positions",
+  "cluster": "spiel",
+  "is_hub": false,
+  "title": "Fußballpositionen erklärt: Aufgaben vom Torwart bis zum Stürmer",
+  "meta_description": "Welche Positionen gibt es im Fußball und was macht jede? Torwart, Innenverteidiger, Außenverteidiger, Sechser, Achter, Zehner, Flügel und Stürmer.",
+  "author": {
+    "name": "Das StarFoot-Team",
+    "org": true,
+    "bio": "Das unabhängige Team hinter StarFoot. Wir entwickeln und schreiben über Fußballkarrieren und Trainerarbeit."
+  },
+  "date_published": "2026-11-15",
+  "date_updated": "2026-11-15",
+  "image": "/site/en-2-matchday.jpg",
+  "tldr": "Im Fußball gibt es vier Bereiche: Tor, Abwehr, Mittelfeld und Angriff. Darin verteilen sich Rollen wie Innen- und Außenverteidiger, Sechser, Achter, Zehner, Flügelspieler und Mittelstürmer. Welche zu dir passt, zeigt unser [Positionstest mit 8 Fragen](/positionstest/).",
+  "sections": [
+    {
+      "h": "Torwart",
+      "md": "Der Torwart ist der letzte Mann und darf im eigenen Strafraum als Einziger die Hände benutzen. Er hält Schüsse, fängt Flanken, dirigiert die Abwehr und eröffnet das Spiel. Wichtig sind Reflexe, Mut und Kommunikation."
+    },
+    {
+      "h": "Abwehr: Innen- und Außenverteidiger",
+      "md": "**Innenverteidiger** stoppen die gegnerischen Stürmer im Zentrum, gewinnen Kopfballduelle und organisieren die Abwehrkette.\n\n**Außenverteidiger** spielen auf den Flügeln, verteidigen und schalten sich in den Angriff ein. Ausdauer, Tempo und gute Flanken sind entscheidend."
+    },
+    {
+      "h": "Mittelfeld: Sechser, Achter und Zehner",
+      "md": "- **Sechser** (defensives Mittelfeld): erobert Bälle vor der Abwehr und hält das Spiel im Gleichgewicht.\n- **Achter** (zentrales Mittelfeld): der Motor, der hinten hilft und vorne Angriffe einleitet.\n- **Zehner** (offensives Mittelfeld): der kreative Spielmacher, der den letzten Pass spielt oder selbst trifft."
+    },
+    {
+      "h": "Angriff: Flügelspieler und Mittelstürmer",
+      "md": "**Flügelspieler** gehen mit Tempo und Dribbling ins Eins-gegen-eins und flanken oder ziehen nach innen.\n\nDer **Mittelstürmer** sucht im Strafraum das Tor: richtig stehen, Bälle festmachen und direkt abschließen."
+    },
+    {
+      "h": "Welche Position passt zu dir?",
+      "md": "Probier unseren kostenlosen [Fußball-Positionstest](/positionstest/) aus. Und wenn du deine Position im Spiel erleben willst: In StarFoot, unserem eigenen Spiel, startest du mit 8 Jahren und spielst die entscheidenden Szenen selbst, auch offline. Mehr im Beitrag [Fußball-Karrierespiel offline](/blog/de/fussball-karriere-spiel-offline-iphone/) oder direkt im [App Store](/ios)."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Wie viele Positionen gibt es im Fußball?",
+      "a": "Grundsätzlich vier Bereiche: Tor, Abwehr, Mittelfeld und Angriff. Darin gibt es Rollen wie Innen- und Außenverteidiger, Sechser, Achter, Zehner, Flügelspieler und Mittelstürmer."
+    },
+    {
+      "q": "Was ist ein Sechser im Fußball?",
+      "a": "Der Sechser ist der defensive Mittelfeldspieler vor der Abwehr. Er erobert Bälle, schließt Lücken und spielt einfache, sichere Pässe."
+    },
+    {
+      "q": "Was macht ein Zehner?",
+      "a": "Der Zehner ist der kreative Spielmacher hinter den Spitzen. Er spielt den letzten Pass vor dem Tor oder schließt selbst ab."
+    }
+  ],
+  "cta": {
+    "title": "Wähle deine Position",
+    "text": "StarFoot: Torwart, Abwehr, Mittelfeld oder Sturm.",
+    "top_title": "Welche Position passt zu dir?",
+    "top_text": "Mach den Test und erlebe deine Karriere im Spiel."
+  }
+}

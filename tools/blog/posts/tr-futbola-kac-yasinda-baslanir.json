@@ -1,0 +1,60 @@
+{
+  "slug": "futbola-kac-yasinda-baslanir",
+  "lang": "tr",
+  "group": "start-age",
+  "cluster": "futbolcu-olmak",
+  "is_hub": false,
+  "title": "Futbola kaç yaşında başlanır? Aileler için yaş rehberi",
+  "meta_description": "Çocuklar futbola kaç yaşında başlamalı, futbol okulu ile kulüp arasındaki fark ne, geç başlayan biri futbolcu olabilir mi? Yaş yaş rehber.",
+  "author": {
+    "name": "StarFoot Ekibi",
+    "org": true,
+    "bio": "StarFoot'u geliştiren bağımsız oyun ekibi. Futbol kariyeri ve teknik direktörlük üzerine oyun tasarlıyor ve yazıyoruz."
+  },
+  "date_published": "2026-11-15",
+  "date_updated": "2026-11-15",
+  "image": "/site/tr-1-moment.jpg",
+  "tldr": "Çocukların çoğu futbola 5-7 yaş arasında, oyun ağırlıklı futbol okullarında başlar; düzenli kulüp antrenmanı ve resmi maçlar genelde 8-10 yaşlarında gelir. Erken başlamak avantaj sağlar ama şart değildir; düzenli oynamak ve futbolu sevmek en az yaş kadar önemlidir.",
+  "sections": [
+    {
+      "h": "5-7 yaş: oyunla tanışma",
+      "md": "Bu yaşta amaç topla çok zaman geçirmek ve eğlenmektir. Futbol okulları küçük sahalarda, az oyunculu oyunlarla koordinasyon ve top hissi kazandırır.\n\n> Bu yaşta skor ya da mevki önemli değildir. Çocuğun futbolu sevmesi, ileriki yıllarda devam etmesinin en büyük nedenidir."
+    },
+    {
+      "h": "8-12 yaş: düzenli antrenman ve ilk maçlar",
+      "md": "Pek çok çocuk bu dönemde bir kulübün alt yaş grubuna katılır ve haftada birkaç gün antrenman yapar. Teknik (pas, top sürme, şut) en hızlı bu yaşlarda gelişir. Scoutlar da bu yaş gruplarındaki maçları izlemeye başlar; ayrıntılar [futbol altyapısına nasıl girilir](/blog/tr/futbol-altyapisina-nasil-girilir/) yazımızda."
+    },
+    {
+      "h": "13 yaş ve sonrası: geç başlamak",
+      "md": "Geç başlayan biri de futbolcu olabilir; özellikle fiziksel gelişimi hızlı olan, atletik altyapısı güçlü gençler aradaki farkı kapatabilir. Bu durumda:\n\n- Teknik çalışmaya ekstra zaman ayırmak,\n- Bir amatör kulüpte düzenli resmi maç oynamak,\n- Kondisyonu ve sakatlıktan korunmayı ihmal etmemek önemlidir."
+    },
+    {
+      "h": "Futbol okulu mu, kulüp mü?",
+      "md": "Futbol okulları genelde ücretli ve oyun ağırlıklıdır; kulüp altyapıları ise seçmeyle oyuncu alır ve resmi liglerde oynar. Küçük yaşta futbol okulu, ilerleyen yaşlarda bir kulüp altyapısı yaygın bir yoldur. Hangi rolde oynayacağını merak ediyorsan [mevki testimizi](/mevki-testi/) çözebilirsin."
+    },
+    {
+      "h": "Bu yolculuğu oyunda yaşa",
+      "md": "Bizim geliştirdiğimiz StarFoot'ta 8 yaşında mahallede başlıyor, scoutların gözüne giriyor ve altyapıda okul ile antrenman arasında seçim yapıyorsun. Oyunu [buradan indirebilirsin](/ios)."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Futbola başlamak için en ideal yaş kaç?",
+      "a": "Tek bir ideal yaş yoktur. Çoğu çocuk 5-7 yaşında oyun ağırlıklı futbol okullarıyla başlar, 8-10 yaş civarında düzenli kulüp antrenmanına geçer."
+    },
+    {
+      "q": "15 yaşında futbola başlayan futbolcu olabilir mi?",
+      "a": "Mümkündür ama daha çok çalışmak gerekir. Teknik eksikleri kapatmak için ekstra antrenman yapmak ve bir kulüpte düzenli resmi maç oynamak önemlidir."
+    },
+    {
+      "q": "Çocuğumun yetenekli olup olmadığını nasıl anlarım?",
+      "a": "Küçük yaşta yetenekten çok istek ve sevgi önemlidir. Düzenli antrenmana katılan, futbolu seven ve öğrenmeye açık çocuklar zamanla gelişir; antrenörün görüşü de iyi bir rehberdir."
+    }
+  ],
+  "cta": {
+    "title": "8 yaşında başlayan bir kariyer",
+    "text": "StarFoot'ta mahalleden dünya yıldızlığına.",
+    "top_title": "Futbolcu olmayı oyunda dene",
+    "top_text": "StarFoot: 8 yaşında başlayan futbol kariyeri, internetsiz."
+  }
+}

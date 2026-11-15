@@ -1,0 +1,106 @@
+{
+  "slug": "forma-numaralari-anlamlari",
+  "lang": "tr",
+  "group": "shirt-numbers",
+  "cluster": "futbolcu-olmak",
+  "is_hub": false,
+  "title": "Futbolda forma numaraları ne anlama gelir? 1'den 11'e rehber",
+  "meta_description": "1 numara neden kaleci, 9 numara neden santrfor, 10 numara neden özel? Futbolda forma numaralarının geleneksel anlamları ve mevkilerle ilişkisi.",
+  "author": {
+    "name": "StarFoot Ekibi",
+    "org": true,
+    "bio": "StarFoot'u geliştiren bağımsız oyun ekibi. Futbol kariyeri ve teknik direktörlük üzerine oyun tasarlıyor ve yazıyoruz."
+  },
+  "date_published": "2026-11-15",
+  "date_updated": "2026-11-15",
+  "image": "/site/tr-4-trophy.jpg",
+  "tldr": "Forma numaraları ilk on bir oyuncuya mevkilerine göre verilmesinden kalan bir gelenektir: 1 kaleci, 2-5 defans, 6 ön libero, 8 orta saha, 7 ve 11 kanat, 9 santrfor, 10 ise oyun kurucudur. Bugün oyuncular numarayı daha özgür seçse de bu anlamlar hâlâ yaygındır.",
+  "sections": [
+    {
+      "h": "Numaralar nereden geliyor?",
+      "md": "Forma numaraları yaygınlaştığında ilk on bir oyuncuya sahadaki yerlerine göre 1'den 11'e kadar numara verildi. Kadrolar büyüyüp oyuncular sabit numaralar almaya başlayınca bu düzen esnedi, ama numaraların taşıdığı anlam futbol kültüründe kaldı."
+    },
+    {
+      "h": "1'den 11'e numaraların geleneksel anlamı",
+      "md": "Aşağıdaki tablo en yaygın kullanımı gösterir; ülkeden ülkeye küçük farklar vardır.",
+      "table": [
+        [
+          "Numara",
+          "Geleneksel mevki"
+        ],
+        [
+          "1",
+          "Kaleci"
+        ],
+        [
+          "2",
+          "Sağ bek"
+        ],
+        [
+          "3",
+          "Sol bek"
+        ],
+        [
+          "4 ve 5",
+          "Stoper"
+        ],
+        [
+          "6",
+          "Ön libero"
+        ],
+        [
+          "7",
+          "Sağ kanat"
+        ],
+        [
+          "8",
+          "Merkez orta saha"
+        ],
+        [
+          "9",
+          "Santrfor"
+        ],
+        [
+          "10",
+          "Oyun kurucu / on numara"
+        ],
+        [
+          "11",
+          "Sol kanat"
+        ]
+      ]
+    },
+    {
+      "h": "10 numara neden bu kadar özel?",
+      "md": "10 numara geleneksel olarak takımın en yaratıcı oyuncusuna, oyunu kuran ve son pası veren isme verilir. Bu yüzden pek çok takımda yıldız oyuncunun numarası olarak görülür ve taraftarlar için ayrı bir anlam taşır."
+    },
+    {
+      "h": "Numara mı seçmeli, mevki mi?",
+      "md": "Numara bir gelenektir; asıl önemli olan sahadaki rolündür. Hangi mevkiye uygun olduğunu merak ediyorsan [mevki testimizi](/mevki-testi/) çöz; mevkilerin görevlerini de [futbolda mevkiler ve görevleri](/blog/tr/futbolda-mevkiler-ve-gorevleri/) yazımızda anlattık."
+    },
+    {
+      "h": "Oyunda kendi numaranı seç",
+      "md": "Bizim geliştirdiğimiz StarFoot'ta kariyer ilerledikçe sevdiğin forma numarasını isteyebilirsin. Oyunu [buradan indirebilirsin](/ios)."
+    }
+  ],
+  "faq": [
+    {
+      "q": "9 numara neden santrfor?",
+      "a": "Klasik dizilişte ileri uçta oynayan oyuncuya 9 numara verilirdi. Bu yüzden 9 numara bugün de golcü santrforla özdeşleşmiştir."
+    },
+    {
+      "q": "1 numarayı sadece kaleci mi giyer?",
+      "a": "Geleneksel olarak evet. Pek çok ligde 1 numara neredeyse her zaman takımın ilk kalecisine verilir."
+    },
+    {
+      "q": "Oyuncular numarayı nasıl seçer?",
+      "a": "Profesyonel takımlarda oyuncular boştaki numaralardan birini seçer; mevki geleneği, kişisel anlam ya da önceki kulüplerindeki numara seçimde etkili olur."
+    }
+  ],
+  "cta": {
+    "title": "Numaranı sırtına geçir",
+    "text": "StarFoot'ta kariyerini sen yaz.",
+    "top_title": "Kendi forma numaranla oyna",
+    "top_text": "StarFoot: internetsiz futbol kariyer oyunu."
+  }
+}

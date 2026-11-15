@@ -26,7 +26,7 @@ REQ = ['slug', 'lang', 'group', 'title', 'meta_description', 'cluster', 'is_hub'
 
 UI = {
     'tr': {'home': 'Ana sayfa', 'blog': 'Blog', 'by': 'Yazan', 'upd': 'Son güncelleme', 'tldr': 'Kısaca', 'faq': 'Sık sorulan sorular',
-           'rel': 'Bunlar da ilgini çekebilir', 'dl1': "App Store'dan", 'dl3': "Google Play'den", 'dl2': 'İndir', 'free': 'Ücretsiz · İnternetsiz oynanır · Abonelik yok',
+           'rel': 'Bunlar da ilgini çekebilir', 'dl1': "App Store'dan", 'dl3': "Google Play'den", 'dl4': 'İndir', 'dl2': 'İndir', 'free': 'Ücretsiz · İnternetsiz oynanır · Abonelik yok',
            'own': 'Bu blog StarFoot\'u geliştiren ekip tarafından yazılır; kendi oyunumuzdan söz ettiğimiz yerlerde bunu açıkça belirtiriz.',
            'fic': 'Oyundaki tüm kulüp ve oyuncu adları hayalidir.', 'priv': 'Gizlilik', 'src': 'Kaynaklar', 'all': 'Tüm yazılar',
            'idx_t': 'StarFoot Blog: futbol kariyeri, altyapı ve oyun rehberleri', 'idx_d': 'Futbol kariyeri, altyapı, teknik direktörlük ve internetsiz futbol oyunları üzerine rehberler.', 'hub': 'Rehber'},
@@ -129,7 +129,7 @@ def cta_html(p, title=None, sub=None):
     t = title or p['cta'].get('title', '')
     s = sub or p['cta'].get('text', '')
     return f'''<div class="cta">{f"<h3>{esc(t)}</h3>" if t else ""}{f"<p>{esc(s)}</p>" if s else ""}
-<div class="btns"><a class="btn" href="{APP_URL}" rel="noopener">{APPLE}<span><small>{u["dl1"]}</small><b>{u["dl2"]}</b></span></a><a class="btn" href="{PLAY_URL}" rel="noopener">{PLAY}<span><small>{u["dl3"]}</small><b>Google Play</b></span></a></div>
+<div class="btns"><a class="btn" href="{APP_URL}" rel="noopener">{APPLE}<span><small>{u["dl1"]}</small><b>{u["dl2"]}</b></span></a><a class="btn" href="{PLAY_URL}" rel="noopener">{PLAY}<span><small>{u["dl3"]}</small><b>{u.get("dl4", "Google Play")}</b></span></a></div>
 <p>{u["free"]}</p></div>'''
 
 
@@ -333,7 +333,7 @@ def build():
 
     # site haritası, robots, llms.txt
     today = date.today().isoformat()
-    urls = [(SITE + '/', today), (SITE + '/ios', today), (SITE + '/android', today)] + [(f'{SITE}/blog/{l}/', today) for l in sorted({p['lang'] for p in P})] + [(SITE + url(p), p['date_updated']) for p in P]
+    urls = [(SITE + '/', today), (SITE + '/ios', today), (SITE + '/android', today), (SITE + '/mevki-testi/', today), (SITE + '/position-quiz/', today), (SITE + '/positionstest/', today)] + [(f'{SITE}/blog/{l}/', today) for l in sorted({p['lang'] for p in P})] + [(SITE + url(p), p['date_updated']) for p in P]
     (ROOT / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(f'<url><loc>{u}</loc><lastmod>{d}</lastmod></url>\n' for u, d in urls) + '</urlset>\n', encoding='utf-8')
     (ROOT / 'robots.txt').write_text('''# StarFoot: arama motorları ve yapay zekâ tarayıcıları hoş geldiniz
 User-agent: *
@@ -371,6 +371,10 @@ Sitemap: https://starfoot.bagce.dev/sitemap.xml
 - Google Play: {PLAY_URL}
 - Website: {SITE}/
 - Download page: {SITE}/ios
+
+## Free tools
+- [Football position quiz (EN)]({SITE}/position-quiz/): 8-question quiz that suggests the football position that fits you.
+- [Mevki testi (TR)]({SITE}/mevki-testi/) · [Positionstest (DE)]({SITE}/positionstest/)
 
 ## Guides
 {hubl}

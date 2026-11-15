@@ -7,6 +7,10 @@
 - Website: https://starfoot.bagce.dev/
 - Download page: https://starfoot.bagce.dev/ios
 
+## Free tools
+- [Football position quiz (EN)](https://starfoot.bagce.dev/position-quiz/): 8-question quiz that suggests the football position that fits you.
+- [Mevki testi (TR)](https://starfoot.bagce.dev/mevki-testi/) · [Positionstest (DE)](https://starfoot.bagce.dev/positionstest/)
+
 ## Guides
 - [Fußball-Karriere-Spiel offline fürs iPhone: Worauf du achten solltest](https://starfoot.bagce.dev/blog/de/fussball-karriere-spiel-offline-iphone/): Du suchst ein Fußball-Karrierespiel, das ohne Internet läuft? Woran du ein gutes Offline-Spiel erkennst und wie StarFoot funktioniert.
 - [Offline football career game for iPhone: what to look for](https://starfoot.bagce.dev/blog/en/offline-football-career-game-iphone/): Looking for a football (soccer) career game that works without internet? How to spot a good offline game, and how StarFoot works.
@@ -15,4 +19,10 @@
 - [İnternetsiz futbol kariyer oyunu: iPhone için rehber (2026)](https://starfoot.bagce.dev/blog/tr/internetsiz-futbol-kariyer-oyunu/): İnternet olmadan oynanan bir futbol kariyer oyunu mu arıyorsun? Neye bakmalı, nelerden kaçınmalı ve StarFoot nasıl çalışır, hepsi bu rehberde.
 
 ## Posts
+- [Ab welchem Alter Fußball im Verein? Ein Leitfaden für Eltern](https://starfoot.bagce.dev/blog/de/ab-welchem-alter-fussball-verein/): Ab wann können Kinder im Verein Fußball spielen? Altersklassen von den Bambini bis zur A-Jugend und Tipps, wenn dein Kind später anfängt.
+- [Fußballpositionen erklärt: Aufgaben vom Torwart bis zum Stürmer](https://starfoot.bagce.dev/blog/de/fussball-positionen-erklaert/): Welche Positionen gibt es im Fußball und was macht jede? Torwart, Innenverteidiger, Außenverteidiger, Sechser, Achter, Zehner, Flügel und Stürmer.
+- [Futbolda forma numaraları ne anlama gelir? 1'den 11'e rehber](https://starfoot.bagce.dev/blog/tr/forma-numaralari-anlamlari/): 1 numara neden kaleci, 9 numara neden santrfor, 10 numara neden özel? Futbolda forma numaralarının geleneksel anlamları ve mevkilerle ilişkisi.
+- [Futbola kaç yaşında başlanır? Aileler için yaş rehberi](https://starfoot.bagce.dev/blog/tr/futbola-kac-yasinda-baslanir/): Çocuklar futbola kaç yaşında başlamalı, futbol okulu ile kulüp arasındaki fark ne, geç başlayan biri futbolcu olabilir mi? Yaş yaş rehber.
+- [Futbolda mevkiler ve görevleri: kaleciden santrfora rehber](https://starfoot.bagce.dev/blog/tr/futbolda-mevkiler-ve-gorevleri/): Futbolda hangi mevkiler var, her mevkinin görevi ne ve hangi özellikleri ister? Kaleci, stoper, bek, orta saha, kanat ve santrfor tek rehberde.
 - [iPhone için teknik direktör oyunu: kısa ve keyifli menajerlik](https://starfoot.bagce.dev/blog/tr/iphone-teknik-direktor-oyunu/): Saatlerce tablo doldurmadan takım yönetmek mi istiyorsun? iPhone için hızlı, internetsiz bir teknik direktör oyunu nasıl olmalı ve StarFoot nasıl çalışıyor?
+- [Futbolda zayıf ayak nasıl geliştirilir? Evde yapılacak 6 çalışma](https://starfoot.bagce.dev/blog/tr/zayif-ayak-nasil-gelistirilir/): Zayıf ayağını geliştirmek isteyen futbolcular için evde ve sahada yapılabilecek 6 basit çalışma, sık yapılan hatalar ve haftalık plan önerisi.

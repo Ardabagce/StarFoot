@@ -1,0 +1,94 @@
+{
+  "slug": "ab-welchem-alter-fussball-verein",
+  "lang": "de",
+  "group": "start-age",
+  "cluster": "spiel",
+  "is_hub": false,
+  "title": "Ab welchem Alter Fußball im Verein? Ein Leitfaden für Eltern",
+  "meta_description": "Ab wann können Kinder im Verein Fußball spielen? Altersklassen von den Bambini bis zur A-Jugend und Tipps, wenn dein Kind später anfängt.",
+  "author": {
+    "name": "Das StarFoot-Team",
+    "org": true,
+    "bio": "Das unabhängige Team hinter StarFoot. Wir entwickeln und schreiben über Fußballkarrieren und Trainerarbeit."
+  },
+  "date_published": "2026-11-15",
+  "date_updated": "2026-11-15",
+  "image": "/site/en-1-moment.jpg",
+  "tldr": "Viele Vereine nehmen Kinder schon mit etwa 4 bis 6 Jahren bei den Bambini (G-Jugend) auf. Geordnete Spielrunden beginnen meist in der F- und E-Jugend. Früh anzufangen hilft, ist aber keine Pflicht: Spaß und regelmäßiges Training zählen mindestens genauso viel.",
+  "sections": [
+    {
+      "h": "Die Altersklassen im Jugendfußball",
+      "md": "In Deutschland sind die Jugendmannschaften nach Altersklassen eingeteilt. Die genauen Jahrgänge legt jedes Jahr der Verband fest; grob gilt:",
+      "table": [
+        [
+          "Altersklasse",
+          "Alter (ungefähr)"
+        ],
+        [
+          "G-Jugend (Bambini)",
+          "unter 7"
+        ],
+        [
+          "F-Jugend",
+          "unter 9"
+        ],
+        [
+          "E-Jugend",
+          "unter 11"
+        ],
+        [
+          "D-Jugend",
+          "unter 13"
+        ],
+        [
+          "C-Jugend",
+          "unter 15"
+        ],
+        [
+          "B-Jugend",
+          "unter 17"
+        ],
+        [
+          "A-Jugend",
+          "unter 19"
+        ]
+      ]
+    },
+    {
+      "h": "Bambini und F-Jugend: Spaß am Ball",
+      "md": "In den jüngsten Altersklassen steht das Spielen im Vordergrund: kleine Felder, wenige Spieler, viele Ballkontakte.\n\n> Ergebnis und Position sind in diesem Alter nebensächlich. Wer Spaß hat, bleibt dabei."
+    },
+    {
+      "h": "E- bis C-Jugend: Technik und erste Talentförderung",
+      "md": "In diesen Jahren entwickelt sich die Technik am schnellsten. Leistungszentren und Scouts schauen sich hier zunehmend Spiele an. Welche Rolle zu deinem Kind passt, kann unser [Positionstest](/positionstest/) spielerisch zeigen; die Aufgaben der Positionen erklären wir in [Fußballpositionen erklärt](/blog/de/fussball-positionen-erklaert/)."
+    },
+    {
+      "h": "Später anfangen: geht das?",
+      "md": "Ja. Auch Jugendliche, die erst mit 12 oder 13 Jahren in einen Verein kommen, können aufholen, vor allem mit sportlicher Grundlage und zusätzlichem Techniktraining. Wichtig ist regelmäßiges Training und Spielpraxis in einer Mannschaft."
+    },
+    {
+      "h": "Den Weg im Spiel erleben",
+      "md": "In StarFoot, unserem eigenen Spiel, startest du mit 8 Jahren auf der Straße, beeindruckst Scouts und steigst über die Jugend zum Profi auf. Offline und kostenlos im [App Store](/ios)."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Ab welchem Alter kann man im Verein Fußball spielen?",
+      "a": "Viele Vereine haben Bambini-Gruppen für Kinder ab etwa 4 bis 6 Jahren. Die genauen Regeln hängen vom Verein und vom Landesverband ab."
+    },
+    {
+      "q": "Ist es mit 12 Jahren zu spät, mit Fußball anzufangen?",
+      "a": "Nein. Mit regelmäßigem Training, zusätzlicher Technikarbeit und Spielpraxis im Verein lässt sich viel aufholen."
+    },
+    {
+      "q": "Was ist die G-Jugend?",
+      "a": "Die G-Jugend, auch Bambini genannt, ist die jüngste Altersklasse im Vereinsfußball, meist für Kinder unter 7 Jahren."
+    }
+  ],
+  "cta": {
+    "title": "Eine Karriere, die mit 8 beginnt",
+    "text": "StarFoot: vom Straßenkicker zum Weltstar.",
+    "top_title": "Fußballkarriere im Spiel erleben",
+    "top_text": "StarFoot: offline, kostenlos, für iPhone und Android."
+  }
+}

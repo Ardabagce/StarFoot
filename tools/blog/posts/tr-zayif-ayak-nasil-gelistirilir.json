@@ -1,0 +1,60 @@
+{
+  "slug": "zayif-ayak-nasil-gelistirilir",
+  "lang": "tr",
+  "group": "weak-foot",
+  "cluster": "futbolcu-olmak",
+  "is_hub": false,
+  "title": "Futbolda zayıf ayak nasıl geliştirilir? Evde yapılacak 6 çalışma",
+  "meta_description": "Zayıf ayağını geliştirmek isteyen futbolcular için evde ve sahada yapılabilecek 6 basit çalışma, sık yapılan hatalar ve haftalık plan önerisi.",
+  "author": {
+    "name": "StarFoot Ekibi",
+    "org": true,
+    "bio": "StarFoot'u geliştiren bağımsız oyun ekibi. Futbol kariyeri ve teknik direktörlük üzerine oyun tasarlıyor ve yazıyoruz."
+  },
+  "date_published": "2026-11-15",
+  "date_updated": "2026-11-15",
+  "image": "/site/tr-1-moment.jpg",
+  "tldr": "Zayıf ayak, kısa ama her gün yapılan çalışmalarla gelişir: duvara pas, top sürme, yerden ve havadan şut ve maçta bilerek zayıf ayağı kullanmak. Günde 10-15 dakika, birkaç hafta içinde fark yaratır.",
+  "sections": [
+    {
+      "h": "Neden zayıf ayak önemli?",
+      "md": "İki ayağını kullanabilen oyuncu daha zor savunulur: rakip onu tek tarafa zorlayamaz, pas ve şut açıları artar. Bu yüzden altyapılarda ve [scoutların baktığı özelliklerde](/blog/tr/futbol-altyapisina-nasil-girilir/) iki ayak kullanımı önemli bir artıdır."
+    },
+    {
+      "h": "Evde ve sahada 6 çalışma",
+      "md": "1. **Duvara pas:** Zayıf ayağınla duvara 50 kısa pas, iç ve dış taraftan.\n2. **Top sürme:** Sadece zayıf ayakla kısa mesafede top sür, dönüşleri de o ayakla yap.\n3. **Durgun topa şut:** Önce isabet, sonra güç. Hedefi küçük tut.\n4. **Havada top sektirme:** Sadece zayıf ayakla sektir; her gün rekorunu artırmaya çalış.\n5. **İlk dokunuş:** Duvardan dönen topu zayıf ayakla kontrol et, sonra pas ver.\n6. **Maçta bilinçli kullanım:** Antrenman maçlarında rahat pozisyonlarda bilerek zayıf ayağını kullan."
+    },
+    {
+      "h": "Sık yapılan hatalar",
+      "md": "- Sadece güçlü şut çekmeye çalışmak: önce doğru vuruş tekniği ve isabet gelmeli.\n- Haftada bir uzun çalışma yapmak: kısa ama her gün yapılan çalışma daha etkilidir.\n- Maçta hiç denememek: antrenmanda öğrendiğini maçta kullanmazsan alışkanlık oluşmaz."
+    },
+    {
+      "h": "Haftalık örnek plan",
+      "md": "Haftada 5 gün, günde 10-15 dakika: iki gün pas ve ilk dokunuş, iki gün top sürme, bir gün şut. Hangi mevkide oynadığına göre ağırlığı değiştirebilirsin; mevkini bilmiyorsan [mevki testimizi](/mevki-testi/) çöz."
+    },
+    {
+      "h": "Kariyerini oyunda da geliştir",
+      "md": "Bizim geliştirdiğimiz StarFoot'ta antrenman odağını seçip oyuncunun özelliklerini geliştiriyor, maçın kritik anlarını kendin oynuyorsun. Oyunu [buradan indirebilirsin](/ios)."
+    }
+  ],
+  "faq": [
+    {
+      "q": "Zayıf ayak ne kadar sürede gelişir?",
+      "a": "Düzenli, günde 10-15 dakikalık çalışmayla birkaç hafta içinde pas ve kontrolde fark hissedilir; şutta güven kazanmak daha uzun sürebilir."
+    },
+    {
+      "q": "Zayıf ayakla şut mu yoksa pas mı önce çalışılmalı?",
+      "a": "Önce pas ve ilk dokunuş. Bunlar oturduktan sonra şuta geçmek tekniği daha sağlam hale getirir."
+    },
+    {
+      "q": "Evde çalışmak yeterli mi?",
+      "a": "Ev çalışması çok faydalıdır ama asıl gelişim, öğrendiğini antrenman ve maçlarda kullandığında gelir."
+    }
+  ],
+  "cta": {
+    "title": "Antrenmanını oyunda da yap",
+    "text": "StarFoot'ta özelliklerini geliştir, kritik anları sen oyna.",
+    "top_title": "Futbolcu kariyerini oyunda yaşa",
+    "top_text": "StarFoot: internetsiz futbol kariyer oyunu."
+  }
+}
