@@ -57,6 +57,10 @@ dependencies {
     androidTestImplementation "androidx.test.ext:junit:$androidxJunitVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$androidxEspressoCoreVersion"
     implementation project(':capacitor-cordova-android-plugins')
+    // AdMob arabuluculuğu (mediation): Unity Ads ve Liftoff Monetize (Vungle) adaptörleri.
+    // Sürümler AdMob eklentisinin kullandığı Google Mobile Ads 25.4 ile uyumlu seçildi (iOS'ta da aynı ağlar var).
+    implementation 'com.google.ads.mediation:unity:4.20.1.0'
+    implementation 'com.google.ads.mediation:vungle:7.7.8.0'
 }
 
 apply from: 'capacitor.build.gradle'
