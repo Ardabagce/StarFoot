@@ -72,7 +72,7 @@ const SocialArt = {
       const post = so.posts.find((x) => String(x.id) === cv.dataset.pid);
       if (!post) return;
       const img = SocialArt.get(post);
-      const dpr = Math.min(2, window.devicePixelRatio || 1);
+      const dpr = Perf.dpr();
       const w = Math.max(60, Math.round(cv.clientWidth || 300));
       const square = cv.dataset.crop === '1';
       const h = square ? w : Math.round(w * 1.25);
@@ -87,7 +87,7 @@ const SocialArt = {
 
   // Gündemdeki yıldızın hikâye halkası içindeki portresi
   storyAvatar(cv) {
-    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    const dpr = Perf.dpr();
     const S = 60 * dpr;
     cv.width = S; cv.height = S;
     const c = cv.getContext('2d');

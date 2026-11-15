@@ -1549,3 +1549,12 @@
 8409|Peningkatan layar pertandingan dan tantangan agar permainan lebih lancar.
 8410|Tidak dapat terhubung ke toko. Periksa koneksi internetmu dan coba lagi.
 8412|🎯 {} Raja Assist ({})
+8415|Performa
+3506|Tinggi
+8416|Ringan: resolusi lebih rendah dan efek lebih sedikit. Lancar di ponsel lama.
+8419|Tinggi: resolusi penuh dan semua efek.
+8420|Otomatis: mode ringan aktif untuk ponselmu.
+8421|Otomatis: jika ponsel lambat, grafis otomatis jadi lebih ringan.
+8422|Performa: Ringan
+8423|Performa: Tinggi
+8424|Performa: Otomatis

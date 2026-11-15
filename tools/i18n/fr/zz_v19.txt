@@ -1549,3 +1549,12 @@
 8409|Améliorations de l’écran de match et des défis pour un jeu plus fluide.
 8410|Impossible de joindre la boutique. Vérifie ta connexion internet et réessaie.
 8412|🎯 {} Meilleur passeur ({})
+8415|Performances
+3506|Élevé
+8416|Léger : résolution plus basse et moins d'effets. Jeu fluide sur les anciens téléphones.
+8419|Élevé : pleine résolution et tous les effets.
+8420|Auto : le mode léger est activé pour ton téléphone.
+8421|Auto : si ton téléphone est lent, les graphismes s'allègent automatiquement.
+8422|Performances : Léger
+8423|Performances : Élevé
+8424|Performances : Auto

@@ -1549,3 +1549,12 @@
 8409|Miglioramenti alla schermata partita e alle sfide per un gioco più fluido.
 8410|Impossibile raggiungere lo store. Controlla la connessione internet e riprova.
 8412|🎯 {} Re degli assist ({})
+8415|Prestazioni
+3506|Alto
+8416|Leggero: risoluzione più bassa e meno effetti. Gioco fluido sui telefoni più vecchi.
+8419|Alto: risoluzione piena e tutti gli effetti.
+8420|Automatico: la modalità leggera è attiva per il tuo telefono.
+8421|Automatico: se il telefono è lento, la grafica si alleggerisce da sola.
+8422|Prestazioni: Leggero
+8423|Prestazioni: Alto
+8424|Prestazioni: Automatico

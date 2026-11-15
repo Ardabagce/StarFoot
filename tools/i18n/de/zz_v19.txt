@@ -1549,3 +1549,12 @@
 8409|Verbesserungen am Spielbildschirm und an den Challenges für flüssigeres Spielen.
 8410|Der Store ist nicht erreichbar. Prüfe deine Internetverbindung und versuche es erneut.
 8412|🎯 {} Top-Vorlagengeber ({})
+8415|Leistung
+3506|Hoch
+8416|Leicht: geringere Auflösung und weniger Effekte. Flüssiges Spiel auf älteren Handys.
+8419|Hoch: volle Auflösung und alle Effekte.
+8420|Automatisch: Leichter Modus ist für dein Handy aktiv.
+8421|Automatisch: Ist dein Handy langsam, wird die Grafik automatisch leichter.
+8422|Leistung: Leicht
+8423|Leistung: Hoch
+8424|Leistung: Automatisch

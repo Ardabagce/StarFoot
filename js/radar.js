@@ -22,17 +22,25 @@ const Radar = {
     R.H = mk('H'); R.A = mk('A');
     R.all = R.H.concat(R.A);
     const fit = () => {
-      const dpr = Math.min(2, window.devicePixelRatio || 1), w = cv.clientWidth || 300, h = cv.clientHeight || 110;
+      const dpr = Perf.dpr(), w = cv.clientWidth || 300, h = cv.clientHeight || 110;
       if (cv.width !== Math.round(w * dpr)) { cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr); }
       R.dpr = dpr; R.w = w; R.h = h;
     };
     fit();
     R.fit = fit;
+    const watch = Perf.watch();
     const loop = (now) => {
       if (!R.run) return;
       if (!document.body.contains(cv)) { R.run = false; return; }
+      // kritik an (mini oyun) açıkken radar çizilmez: telefon aynı anda iki sahne çizmesin
+      const mg = document.querySelector('#mt-moment:not(.hidden) canvas');
+      // hafif modda saniyede ~30 kare
+      if (mg || (Perf.low && now - (R.last || 0) < 30)) { if (mg) R.last = now; requestAnimationFrame(loop); return; }
       const dt = Math.min(0.05, (now - (R.last || now)) / 1000); R.last = now;
-      if (!document.hidden && cv.offsetParent !== null) { Radar.step(R, dt * (0.7 + R.speed * 0.3)); Radar.draw(R); }
+      if (!document.hidden && cv.offsetParent !== null) {
+        if (watch(now)) fit();
+        Radar.step(R, dt * (0.7 + R.speed * 0.3)); Radar.draw(R);
+      }
       requestAnimationFrame(loop);
     };
     requestAnimationFrame(loop);

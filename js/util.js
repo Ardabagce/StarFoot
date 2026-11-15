@@ -167,6 +167,53 @@ const U = {
 // iOS WebView bazen bir pencere ya da tam ekran katman kapanınca alttaki sayfayı yeniden çizmiyor
 // (boş/beyaz ekran). Kapanma anında sayfa zorla yeniden çizilir. Ayrıca beklenmeyen bir hata olursa
 // ekran geri getirilir ve hata Firebase'e kaydedilir.
+// ---------- Performans: zayıf cihazlarda (özellikle Android) hafif mod ----------
+// Hafif mod: canvas çözünürlüğü 1x, daha az parçacık, radar 30 kare/sn, ağır CSS efektleri kapalı.
+// Açılış: Android'de az çekirdek/bellek ya da oyun sırasında ölçülen düşük kare hızı. Karar cihazda hatırlanır.
+const Perf = {
+  KEY: 'starfoot_lite',
+  android: /android/i.test(navigator.userAgent || ''),
+  low: false,
+  init() {
+    let saved = null;
+    try { saved = localStorage.getItem(Perf.KEY); } catch (e) { /* yok */ }
+    const cores = navigator.hardwareConcurrency || 8, mem = navigator.deviceMemory || 8;
+    Perf.low = saved === '1' || (saved !== '0' && Perf.android && (cores <= 4 || mem <= 3));
+    Perf.apply();
+  },
+  apply() { if (document.body) document.body.classList.toggle('lite', Perf.low); else document.addEventListener('DOMContentLoaded', Perf.apply, { once: true }); },
+  // kullanıcı tercihi: true/false sabitler, null otomatiğe döner
+  set(v) {
+    try { if (v == null) localStorage.removeItem(Perf.KEY); else localStorage.setItem(Perf.KEY, v ? '1' : '0'); } catch (e) { /* yok */ }
+    if (v == null) Perf.init(); else { Perf.low = !!v; Perf.apply(); }
+  },
+  pref() { try { return localStorage.getItem(Perf.KEY); } catch (e) { return null; } },
+  // canvas piksel oranı: hafif modda 1, Android'de en fazla 1.5, diğerlerinde 2
+  dpr() { const d = window.devicePixelRatio || 1; return Perf.low ? 1 : Math.min(Perf.android ? 1.5 : 2, d); },
+  // kare süresi izleyici: yavaşsa hafif moda geçer (kullanıcı elle kapattıysa dokunmaz)
+  watch() {
+    const s = { n: 0, slow: 0, last: 0 };
+    return (now) => {
+      if (Perf.low || Perf.pref() === '0' || document.hidden) { s.last = now; return false; }
+      const dt = s.last ? now - s.last : 16; s.last = now;
+      if (dt > 250) return false; // sekme/arka plan arası
+      s.n++; if (dt > 30) s.slow++;
+      if (s.n >= 90) {
+        const bad = s.slow / s.n > 0.4;
+        s.n = 0; s.slow = 0;
+        if (bad) {
+          Perf.low = true; Perf.apply();
+          try { localStorage.setItem(Perf.KEY, '1'); } catch (e) { /* yok */ }
+          try { const F = window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.FirebaseAnalytics; if (F && F.logEvent) F.logEvent({ name: 'perf_lite', params: { cores: navigator.hardwareConcurrency || 0, mem: navigator.deviceMemory || 0 } }).catch(() => {}); } catch (e) { /* yok */ }
+          return true;
+        }
+      }
+      return false;
+    };
+  },
+};
+Perf.init();
+
 const ScreenGuard = {
   t: 0,
   repaint() {

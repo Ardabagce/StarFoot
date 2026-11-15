@@ -1453,7 +1453,7 @@ const UI = {
       post = { id: 'np' + hsh, seed: hsh, kind: 'goal', scene, cid: c.id, c1: c.c1, c2: c.c2, short: c.short, num: s.player.shirt };
     }
     const img = SocialArt.get(post);
-    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    const dpr = Perf.dpr();
     const w = cv.clientWidth || 300, h = Math.round(w * 0.62);
     cv.width = w * dpr; cv.height = h * dpr;
     const sy = SocialArt.H * 0.12, shh = SocialArt.W * 0.62;
@@ -1577,7 +1577,7 @@ const UI = {
     const cv = document.querySelector('.pc-fig');
     if (!cv || typeof Sprites === 'undefined') return;
     const ctx = cv.getContext('2d');
-    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    const dpr = Perf.dpr();
     cv.width = 120 * dpr; cv.height = 150 * dpr;
     const kit = Sprites.kit(Game.club(), false);
     Sprites.figure(ctx, 60 * dpr, 140 * dpr, 118 * dpr, { kit, look: Sprites.me(), facing: 'down', t: 0 });
@@ -2233,6 +2233,9 @@ ${UI.paper()}`;
       <section class="card settings">
         <div class="card-h"><span>${Icon('train')} Oynanış</span></div>
         ${typeof MiniGame !== 'undefined' && MiniGame.style ? row('Vuruş tarzı', MiniGame.style() === 'aim' ? 'Dokunuş: geri çekip nişan al, sonra topun bir noktasına dokun. Yanlar falso, alt kısım aşırtma verir.' : 'StarFoot: geri çek ve bırak; çizginin yönü falsoyu belirler.', `<div class="seg">${[['swipe', 'StarFoot'], ['aim', 'Dokunuş']].map(([k, l]) => `<button data-shot="${k}" class="${MiniGame.style() === k ? 'on' : ''}">${l}</button>`).join('')}</div>`) : ''}
+        ${typeof Perf !== 'undefined' ? (() => { const pf = Perf.pref(), cur = pf === '1' ? 'lite' : pf === '0' ? 'high' : 'auto';
+          const d = cur === 'lite' ? 'Hafif: daha düşük çözünürlük ve az efekt. Eski telefonlarda akıcı oyun.' : cur === 'high' ? 'Yüksek: tam çözünürlük ve tüm efektler.' : (Perf.low ? 'Otomatik: telefonun için hafif mod açık.' : 'Otomatik: telefon yavaşsa grafikler kendiliğinden hafifler.');
+          return row('Performans', d, `<div class="seg">${[['auto', 'Otomatik'], ['lite', 'Hafif'], ['high', 'Yüksek']].map(([k, l]) => `<button data-perf="${k}" class="${cur === k ? 'on' : ''}">${l}</button>`).join('')}</div>`); })() : ''}
         <label class="drill-tg"><input type="checkbox" id="drill-tg" ${s.drills !== false ? 'checked' : ''}><span><b>Antrenman mini oyunları</b><small>Odak statına göre çalışma oynanır. İyi oynarsan gelişim ×1,5'e kadar çıkar.</small></span></label>
         ${typeof Edit !== 'undefined' ? row('Editör', 'Kulüp ve oyuncu isimlerini değiştir, düzenleme dosyası paylaş.', `<button class="btn btn-ghost" data-edopen>${Icon('pen')} Aç</button>`) : ''}
         ${typeof GKHelp !== 'undefined' && p && p.position === 'GK' ? `<label class="drill-tg"><input type="checkbox" id="gkhelp-tg" ${GKHelp.on() ? 'checked' : ''}><span><b>Kaleci ipuçları</b><small>Kaleci anlarında ne yapacağını anlatan yazılar. İlk 3 maçta açıktır.</small></span></label>` : ''}
@@ -2432,6 +2435,7 @@ ${UI.paper()}`;
     if (typeof Cloud !== 'undefined') { Cloud.bind(root); GC.bind(root); }
     U.$$('[data-setcur]', root).forEach((b) => (b.onclick = () => { try { if (b.dataset.setcur) localStorage.setItem('starfoot_cur', b.dataset.setcur); else localStorage.removeItem('starfoot_cur'); } catch (e) { /* yok */ } Game.render(); }));
     U.$$('select[data-setlang]', root).forEach((b) => (b.onchange = () => { if (b.value !== I18N.lang) { Game.save(); I18N.set(b.value); } }));
+    U.$$('[data-perf]', root).forEach((b) => (b.onclick = () => { const k = b.dataset.perf; Perf.set(k === 'auto' ? null : k === 'lite'); Game.toast(k === 'lite' ? 'Performans: Hafif' : k === 'high' ? 'Performans: Yüksek' : 'Performans: Otomatik', 'good'); Game.render(); }));
     U.$$('[data-shot]', root).forEach((b) => (b.onclick = () => { if (MiniGame.style() === b.dataset.shot) return; MiniGame.setStyle(b.dataset.shot); Game.toast(b.dataset.shot === 'aim' ? 'Vuruş tarzı: Dokunuş' : 'Vuruş tarzı: StarFoot', 'good'); Game.render(); }));
     U.$$('[data-sys]', root).forEach((b) => (b.onclick = () => {
       const k = b.dataset.sys;

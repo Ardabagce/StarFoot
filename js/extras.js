@@ -730,7 +730,7 @@ const Social = {
 
   drawAvatar(root) {
     U.$$('.so-avatar', root || document).forEach((cv) => {
-      const dpr = Math.min(2, window.devicePixelRatio || 1);
+      const dpr = Perf.dpr();
       cv.width = 72 * dpr; cv.height = 72 * dpr;
       const c = cv.getContext('2d');
       const club = Game.club() || { c1: '#2a6fdb', c2: '#fff', id: 'X' };

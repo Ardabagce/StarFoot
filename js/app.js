@@ -24,7 +24,7 @@
   const drawTitle = () => {
     const cv = document.getElementById('title-art');
     if (!cv || typeof Sprites === 'undefined') return;
-    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    const dpr = Perf.dpr();
     const w = window.innerWidth, h = window.innerHeight;
     cv.width = w * dpr; cv.height = h * dpr;
     cv.style.width = w + 'px'; cv.style.height = h + 'px';

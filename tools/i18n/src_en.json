@@ -8413,5 +8413,15 @@
 "Could not reach the store.",
 "🎯 {} Top Assists ({})",
 "{} Top Assists ({})",
-"Top Assists ({})"
+"Top Assists ({})",
+"Performance",
+"Light: lower resolution and fewer effects. Smooth play on older phones.",
+"Light: lower resolution and fewer effects.",
+"Smooth play on older phones.",
+"High: full resolution and all effects.",
+"Auto: light mode is on for your phone.",
+"Auto: graphics get lighter automatically if your phone is slow.",
+"Performance: Light",
+"Performance: High",
+"Performance: Auto"
 ]

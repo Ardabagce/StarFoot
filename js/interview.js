@@ -171,7 +171,7 @@ const Interview = {
   },
   // TV görüntüsü: sponsor panosu, forma ile oyuncu, öne uzanan mikrofon ve kanal küpü
   scene(cv, club, p) {
-    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    const dpr = Perf.dpr();
     const w = Math.max(200, cv.clientWidth), h = Math.max(160, cv.clientHeight);
     cv.width = Math.round(w * dpr); cv.height = Math.round(h * dpr);
     const c = cv.getContext('2d');

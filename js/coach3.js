@@ -401,7 +401,7 @@ const CM_BOND = [
       const x = f[+cv.dataset.fi];
       if (!x || cv.dataset.done) return;
       cv.dataset.done = '1';
-      const img = Coach.art(x), dpr = Math.min(2, window.devicePixelRatio || 1);
+      const img = Coach.art(x), dpr = Perf.dpr();
       const w = Math.max(120, Math.round(cv.clientWidth || 300));
       cv.width = w * dpr; cv.height = Math.round(w * 1.25) * dpr;
       cv.getContext('2d').drawImage(img, 0, 0, cv.width, cv.height);

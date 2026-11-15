@@ -281,7 +281,7 @@ const MiniGame = {
       const toWorld = (cx, cy) => ({ x: cx / PX + view.x0, y: cy / PX + view.y0 });
       const layout = () => {
         const cw = Math.max(200, stage.clientWidth), ch = Math.max(200, stage.clientHeight);
-        dpr = Math.min(2, window.devicePixelRatio || 1);
+        dpr = Perf.dpr();
         W = Math.round(cw * dpr); H = Math.round(ch * dpr);
         cv.width = W; cv.height = H;
         cv.style.width = cw + 'px'; cv.style.height = ch + 'px';
@@ -1017,9 +1017,11 @@ const MiniGame = {
         window.removeEventListener('resize', onResize);
       }
 
+      const perfWatch = Perf.watch();
       function loop(now) {
         const rdt = Math.min(0.05, (now - last) / 1000);
         last = now;
+        perfWatch(now); // yavaş cihazda hafif mod (sonraki sahnelerden itibaren 1x çözünürlük)
         const dt = rdt * slowmo;
         const n = Math.ceil(dt / (1 / 240));
         for (let i = 0; i < n && phase !== 'done'; i++) step(dt / n);
@@ -1078,7 +1080,7 @@ const MiniGame = {
       let W, H, dpr, U0;
       const layout = () => {
         const cw = Math.max(200, stage.clientWidth), ch = Math.max(200, stage.clientHeight);
-        dpr = Math.min(2, window.devicePixelRatio || 1);
+        dpr = Perf.dpr();
         W = Math.round(cw * dpr); H = Math.round(ch * dpr);
         cv.width = W; cv.height = H; cv.style.width = cw + 'px'; cv.style.height = ch + 'px';
         U0 = Math.min(W, H) / 300;
@@ -1239,7 +1241,7 @@ Object.assign(MiniGame, {
       let W, H, dpr;
       const layout = () => {
         const cw = Math.max(200, stage.clientWidth), ch = Math.max(200, stage.clientHeight);
-        dpr = Math.min(2, window.devicePixelRatio || 1);
+        dpr = Perf.dpr();
         W = Math.round(cw * dpr); H = Math.round(ch * dpr);
         cv.width = W; cv.height = H; cv.style.width = cw + 'px'; cv.style.height = ch + 'px';
       };
@@ -1320,7 +1322,7 @@ Object.assign(MiniGame, {
     g.ctx = g.cv.getContext('2d');
     g.layout = () => {
       const cw = Math.max(200, g.stage.clientWidth), ch = Math.max(200, g.stage.clientHeight);
-      g.dpr = Math.min(2, window.devicePixelRatio || 1);
+      g.dpr = Perf.dpr();
       g.W = Math.round(cw * g.dpr); g.H = Math.round(ch * g.dpr);
       g.cv.width = g.W; g.cv.height = g.H; g.cv.style.width = cw + 'px'; g.cv.style.height = ch + 'px';
     };
@@ -2309,7 +2311,7 @@ Object.assign(MiniGame, {
       let W, H, dpr;
       const layout = () => {
         const cw = Math.max(200, stage.clientWidth), ch = Math.max(200, stage.clientHeight);
-        dpr = Math.min(2, window.devicePixelRatio || 1);
+        dpr = Perf.dpr();
         W = Math.round(cw * dpr); H = Math.round(ch * dpr);
         cv.width = W; cv.height = H; cv.style.width = cw + 'px'; cv.style.height = ch + 'px';
       };

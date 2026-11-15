@@ -1549,3 +1549,12 @@
 8409|Melhorias na tela de partida e nos desafios para um jogo mais fluido.
 8410|Não foi possível acessar a loja. Verifique sua conexão com a internet e tente novamente.
 8412|🎯 {} Líder de assistências ({})
+8415|Desempenho
+3506|Alto
+8416|Leve: resolução menor e menos efeitos. Jogo fluido em celulares antigos.
+8419|Alto: resolução total e todos os efeitos.
+8420|Automático: o modo leve está ativado no seu celular.
+8421|Automático: se o celular for lento, os gráficos ficam mais leves sozinhos.
+8422|Desempenho: Leve
+8423|Desempenho: Alto
+8424|Desempenho: Automático

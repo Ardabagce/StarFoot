@@ -51,9 +51,12 @@ const Weather = {
   draw(ctx, w, W, H, dpr, t) {
     if (!w || w.id === 'clear') return;
     if (w.id === 'rain' || w.id === 'snow') {
-      const fx = w._fx || (w._fx = Array.from({ length: w.id === 'rain' ? 140 : 90 }, () => ({ x: Math.random(), y: Math.random(), s: U.rand(0.6, 1.2) })));
+      const lite = typeof Perf !== 'undefined' && Perf.low;
+      const n = (w.id === 'rain' ? 140 : 90) * (lite ? 0.4 : 1) | 0;
+      if (!w._fx || w._fx.length !== n) w._fx = Array.from({ length: n }, () => ({ x: Math.random(), y: Math.random(), s: U.rand(0.6, 1.2) }));
+      const fx = w._fx;
       if (w.id === 'rain') {
-        ctx.fillStyle = 'rgba(20,40,80,0.18)'; ctx.fillRect(0, 0, W, H);
+        if (!lite) { ctx.fillStyle = 'rgba(20,40,80,0.18)'; ctx.fillRect(0, 0, W, H); }
         ctx.strokeStyle = 'rgba(200,225,255,0.5)'; ctx.lineWidth = 1.2 * dpr;
         ctx.beginPath();
         fx.forEach((p) => {
@@ -62,24 +65,30 @@ const Weather = {
         });
         ctx.stroke();
       } else {
-        ctx.fillStyle = 'rgba(235,245,255,0.14)'; ctx.fillRect(0, 0, W, H);
+        if (!lite) { ctx.fillStyle = 'rgba(235,245,255,0.14)'; ctx.fillRect(0, 0, W, H); }
+        // tüm kar taneleri tek yolda, tek dolgu (her tane için ayrı çizim yerine)
         ctx.fillStyle = 'rgba(255,255,255,0.9)';
+        ctx.beginPath();
         fx.forEach((p) => {
-          const y = ((p.y + t * 0.18 * p.s) % 1) * H, x = ((p.x + Math.sin(t + p.y * 9) * 0.02) % 1 + 1) % 1 * W;
-          ctx.beginPath(); ctx.arc(x, y, 2.2 * dpr * p.s, 0, Math.PI * 2); ctx.fill();
+          const y = ((p.y + t * 0.18 * p.s) % 1) * H, x = ((p.x + Math.sin(t + p.y * 9) * 0.02) % 1 + 1) % 1 * W, r = 2.2 * dpr * p.s;
+          if (lite) ctx.rect(x - r, y - r, r * 2, r * 2); else { ctx.moveTo(x + r, y); ctx.arc(x, y, r, 0, Math.PI * 2); }
         });
+        ctx.fill();
       }
     } else if (w.id === 'fog') {
+      if (typeof Perf !== 'undefined' && Perf.low) { ctx.fillStyle = 'rgba(210,220,230,0.3)'; ctx.fillRect(0, 0, W, H * 0.5); return; }
       const g = ctx.createLinearGradient(0, 0, 0, H);
       g.addColorStop(0, 'rgba(210,220,230,0.75)'); g.addColorStop(0.45, 'rgba(210,220,230,0.25)'); g.addColorStop(1, 'rgba(210,220,230,0.08)');
       ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
     } else if (w.id === 'wind') {
       const fx = w._fx || (w._fx = Array.from({ length: 18 }, () => ({ x: Math.random(), y: Math.random(), s: U.rand(0.6, 1.4) })));
       ctx.strokeStyle = 'rgba(255,255,255,0.28)'; ctx.lineWidth = 2 * dpr; ctx.lineCap = 'round';
+      ctx.beginPath();
       fx.forEach((p) => {
         const x = (((p.x + t * 0.35 * p.s * w.dir) % 1) + 1) % 1 * W, y = p.y * H;
-        ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x - w.dir * 34 * dpr * p.s, y); ctx.stroke();
+        ctx.moveTo(x, y); ctx.lineTo(x - w.dir * 34 * dpr * p.s, y);
       });
+      ctx.stroke();
       ctx.lineCap = 'butt';
     }
   },

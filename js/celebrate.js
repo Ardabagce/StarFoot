@@ -28,7 +28,7 @@ const Celebrate = {
     const cv = document.createElement('canvas');
     cv.className = 'celeb-cv';
     host.appendChild(cv);
-    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    const dpr = Perf.dpr();
     const W = Math.round((host.clientWidth || 360) * dpr), H = Math.round((host.clientHeight || 480) * dpr);
     cv.width = W; cv.height = H;
     const bg = document.createElement('canvas'); bg.width = W; bg.height = H;
@@ -329,7 +329,7 @@ const Welcome = {
       const fb = el.querySelector('.ct-foot b'), fs = el.querySelector('.ct-foot small'), btn = el.querySelector('.ct-foot button');
       host.innerHTML = '';
       const cv = document.createElement('canvas'); cv.className = 'celeb-cv'; host.appendChild(cv);
-      const dpr = Math.min(2, window.devicePixelRatio || 1);
+      const dpr = Perf.dpr();
       const W = Math.round((host.clientWidth || 360) * dpr), H = Math.round((host.clientHeight || 480) * dpr);
       cv.width = W; cv.height = H;
       const c = cv.getContext('2d');

@@ -3702,5 +3702,14 @@
 "Düzeltmeler": "Fixes",
 "Maç ekranı ve meydan okumalarda iyileştirmeler, daha akıcı oyun.": "Improvements to the match screen and challenges for smoother play.",
 "Mağazaya ulaşılamadı. İnternet bağlantını kontrol edip tekrar dene.": "Could not reach the store. Check your internet connection and try again.",
-"🎯 {} Asist Kralı ({})": "🎯 {} Top Assists ({})"
+"🎯 {} Asist Kralı ({})": "🎯 {} Top Assists ({})",
+"Performans": "Performance",
+"Yüksek": "High",
+"Hafif: daha düşük çözünürlük ve az efekt. Eski telefonlarda akıcı oyun.": "Light: lower resolution and fewer effects. Smooth play on older phones.",
+"Yüksek: tam çözünürlük ve tüm efektler.": "High: full resolution and all effects.",
+"Otomatik: telefonun için hafif mod açık.": "Auto: light mode is on for your phone.",
+"Otomatik: telefon yavaşsa grafikler kendiliğinden hafifler.": "Auto: graphics get lighter automatically if your phone is slow.",
+"Performans: Hafif": "Performance: Light",
+"Performans: Yüksek": "Performance: High",
+"Performans: Otomatik": "Performance: Auto"
 }

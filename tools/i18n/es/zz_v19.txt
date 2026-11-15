@@ -1549,3 +1549,12 @@
 8409|Mejoras en la pantalla de partido y los desafíos para un juego más fluido.
 8410|No se pudo conectar con la tienda. Revisa tu conexión a internet e inténtalo de nuevo.
 8412|🎯 {} Máximo asistente ({})
+8415|Rendimiento
+3506|Alto
+8416|Ligero: menor resolución y menos efectos. Juego fluido en móviles antiguos.
+8419|Alto: resolución completa y todos los efectos.
+8420|Automático: el modo ligero está activado para tu móvil.
+8421|Automático: si tu móvil es lento, los gráficos se aligeran solos.
+8422|Rendimiento: Ligero
+8423|Rendimiento: Alto
+8424|Rendimiento: Automático

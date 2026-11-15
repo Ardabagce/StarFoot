@@ -2387,6 +2387,7 @@
 ],
 "Hafif": [
 "coach.js",
+"game.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -41488,7 +41489,16 @@
 "lang-pt.js"
 ],
 "🎯 {} Asist Kralı ({})": [
-"game.js"
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "⭐ {} Sezonun Oyuncusu": [
 "game.js",
@@ -44843,6 +44853,37 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Hafif: daha düşük çözünürlük ve az efekt. Eski telefonlarda akıcı oyun.": [
+"game.js"
+],
+"Yüksek: tam çözünürlük ve tüm efektler.": [
+"game.js"
+],
+"Otomatik: telefonun için hafif mod açık.": [
+"game.js"
+],
+"Otomatik: telefon yavaşsa grafikler kendiliğinden hafifler.": [
+"game.js"
+],
+"Performans": [
+"game.js"
+],
+"Otomatik": [
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"match.js"
+],
+"Yüksek": [
+"game.js"
+],
 "Editör": [
 "game.js",
 "lang-ar.js",
@@ -45387,6 +45428,15 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
+],
+"Performans: Hafif": [
+"game.js"
+],
+"Performans: Yüksek": [
+"game.js"
+],
+"Performans: Otomatik": [
+"game.js"
 ],
 "Vuruş tarzı: Dokunuş": [
 "game.js",
@@ -78230,18 +78280,6 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
-],
-"Otomatik": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"match.js"
 ],
 "Sen oyna": [
 "lang-ar.js",
@@ -174360,6 +174398,28 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"{} Asist Kralı ({})": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{} Top Assists ({})": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "Aile ilişkisi +{}": [
 "lang-ar.js",
 "lang-de.js",
@@ -174772,6 +174832,28 @@
 "lang-pt.js"
 ],
 "· Group game {}/3": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Asist Kralı ({})": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Top Assists ({})": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -204991,6 +205073,9 @@
 "Zustimmungschance {} %": [
 "lang-de.js"
 ],
+"🎯 {} Top-Vorlagengeber ({})": [
+"lang-de.js"
+],
 "Du gewinnst! {} - {} · +{}": [
 "lang-de.js"
 ],
@@ -232498,6 +232583,9 @@
 "lang-en.js"
 ],
 "Chance of approval {}%": [
+"lang-en.js"
+],
+"🎯 {} Top Assists ({})": [
 "lang-en.js"
 ],
 "You win! {} - {} · +{}": [
@@ -260180,6 +260268,9 @@
 "Probabilidad de aceptación {}%": [
 "lang-es.js"
 ],
+"🎯 {} Máximo asistente ({})": [
+"lang-es.js"
+],
 "¡Ganas! {} - {} · +{}": [
 "lang-es.js"
 ],
@@ -287125,6 +287216,9 @@
 "Chance d'accord {} %": [
 "lang-fr.js"
 ],
+"🎯 {} Meilleur passeur ({})": [
+"lang-fr.js"
+],
 "Tu gagnes ! {} - {} · +{}": [
 "lang-fr.js"
 ],
@@ -313526,6 +313620,9 @@
 "lang-id.js"
 ],
 "Peluang disetujui {}%": [
+"lang-id.js"
+],
+"🎯 {} Raja Assist ({})": [
 "lang-id.js"
 ],
 "Kamu menang! {} - {} · +{}": [
@@ -339953,6 +340050,9 @@
 "lang-it.js"
 ],
 "Probabilità di ok {}%": [
+"lang-it.js"
+],
+"🎯 {} Re degli assist ({})": [
 "lang-it.js"
 ],
 "Hai vinto! {} - {} · +{}": [
@@ -366810,6 +366910,9 @@
 "lang-pt.js"
 ],
 "Chance de aprovação {}%": [
+"lang-pt.js"
+],
+"🎯 {} Líder de assistências ({})": [
 "lang-pt.js"
 ],
 "Você ganhou! {} - {} · +{}": [
