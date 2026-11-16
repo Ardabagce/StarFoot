@@ -1,0 +1,1220 @@
+<title>StarFoot Telefon</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700&family=Saira+Condensed:ital,wght@0,600;0,800;1,800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* Düzen: solda oyun durumu paneli, ortada oyuncunun cep telefonu (oyunun kendi koyu lacivert + altın kimliği) */
+:root {
+  --night: #070f24;      /* sayfa zemini: oyunun gece laciverti */
+  --panel: #0f1b3d;      /* kartlar */
+  --line: #22325f;       /* ince çizgiler */
+  --chalk: #eef2ff;      /* ana yazı */
+  --muted: #8fa0cc;      /* ikincil yazı */
+  --gold: #ffcf3f;       /* vurgu: oyunun altını */
+  --good: #46e08f; --bad: #ff6f8a; --love: #ff6f8a; --sky: #7fb2ff;
+  --f-display: "Saira Condensed", "Arial Narrow", sans-serif;
+  --f-body: "Barlow Semi Condensed", "Segoe UI", system-ui, sans-serif;
+  --f-wiki: "Lora", Georgia, serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; background: radial-gradient(1200px 700px at 70% -10%, #13306f 0%, var(--night) 55%) fixed, var(--night); color: var(--chalk); font: 15px/1.45 var(--f-body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 20px 32px; }
+button { font: inherit; color: inherit; cursor: pointer; }
+button:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+.wrap { max-width: 1060px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 40px; align-items: start; }
+@media (max-width: 860px) { .wrap { grid-template-columns: minmax(0, 1fr); gap: 22px; } .stage { order: -1; } }
+
+/* ------- sol panel ------- */
+.brand { font: 800 italic 34px/1 var(--f-display); letter-spacing: .5px; margin: 6px 0 4px; }
+.brand span { color: var(--gold); }
+.lead { color: var(--muted); max-width: 46ch; margin: 0 0 18px; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 16px; }
+.side { display: grid; gap: 14px; min-width: 0; }
+.h { font: 800 italic 18px var(--f-display); text-transform: uppercase; letter-spacing: .6px; margin: 0 0 10px; display: flex; justify-content: space-between; align-items: baseline; }
+.h small { font: 500 13px var(--f-body); color: var(--muted); letter-spacing: 0; text-transform: none; }
+.stat { display: grid; grid-template-columns: 74px 1fr 34px; gap: 10px; align-items: center; font-size: 14px; color: var(--muted); padding: 3px 0; }
+.stat b { color: var(--chalk); text-align: right; font: 800 17px var(--f-display); font-variant-numeric: tabular-nums; }
+.bar { height: 8px; border-radius: 4px; background: rgba(255,255,255,.07); overflow: hidden; }
+.bar i { display: block; height: 100%; border-radius: 4px; transition: width .5s cubic-bezier(.2,.8,.2,1); }
+.kv { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 10px; }
+.kv div { background: rgba(255,255,255,.04); border-radius: 10px; padding: 8px 10px; min-width: 0; }
+.kv span { display: block; font-size: 11px; letter-spacing: .8px; text-transform: uppercase; color: var(--muted); }
+.kv b { font: 800 18px var(--f-display); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.flash { animation: flash .7s; }
+@keyframes flash { 0% { color: var(--gold); text-shadow: 0 0 12px rgba(255,207,63,.8); } 100% {} }
+.log { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 13.5px; max-height: 190px; overflow: auto; }
+.log li { display: flex; gap: 8px; color: var(--muted); }
+.log li b { color: var(--chalk); font-weight: 600; }
+.log .up { color: var(--good); } .log .down { color: var(--bad); }
+.tips { margin: 0; padding-left: 18px; color: var(--muted); font-size: 14px; display: grid; gap: 4px; }
+.reset { background: transparent; border: 1px solid var(--line); border-radius: 10px; padding: 6px 12px; color: var(--muted); font-size: 13px; }
+
+/* ------- telefon ------- */
+.stage { display: flex; justify-content: center; }
+.phone { --frame: #2b2f3a; --edge: 14px; --r: 46px; position: relative; width: min(372px, calc(100vw - 32px)); aspect-ratio: 9 / 19.3; border-radius: var(--r); background: var(--frame); padding: var(--edge);
+  box-shadow: 0 0 0 2px rgba(255,255,255,.08) inset, 0 30px 80px rgba(0,0,0,.6), 0 0 0 1px rgba(0,0,0,.6); transition: background .6s, padding .6s; }
+.phone::before, .phone::after { content: ""; position: absolute; width: 4px; border-radius: 2px; background: var(--frame); filter: brightness(.8); }
+.phone::before { left: -4px; top: 22%; height: 9%; } .phone::after { right: -4px; top: 28%; height: 13%; }
+.phone.t0 { --frame: linear-gradient(160deg, #4a4f5c, #2a2d36); --edge: 18px; --r: 40px; }
+.phone.t1 { --frame: linear-gradient(160deg, #3b6fd8, #1d3f95); --edge: 14px; --r: 46px; }
+.phone.t2 { --frame: linear-gradient(160deg, #8d939e, #4b5059 45%, #a6acb6); --edge: 10px; --r: 52px; }
+.phone.t3 { --frame: linear-gradient(150deg, #fff3c4, #d9a520 35%, #8a5a0a 60%, #ffd76a); --edge: 10px; --r: 52px; }
+.screen { position: relative; width: 100%; height: 100%; border-radius: calc(var(--r) - var(--edge) + 4px); overflow: hidden; background: #000; isolation: isolate; }
+.cam { position: absolute; z-index: 40; left: 50%; transform: translateX(-50%); background: #000; pointer-events: none; }
+.t0 .cam { top: 0; width: 26px; height: 22px; border-radius: 0 0 14px 14px; }
+.t1 .cam { top: 0; width: 46%; height: 26px; border-radius: 0 0 18px 18px; }
+.t2 .cam, .t3 .cam { top: 9px; width: 31%; height: 30px; border-radius: 16px; }
+.wall { position: absolute; inset: 0; transition: background .6s; }
+.status { position: absolute; z-index: 30; top: 0; left: 0; right: 0; height: 44px; display: flex; justify-content: space-between; align-items: center; padding: 6px 24px 0; font: 600 14px var(--f-body); font-variant-numeric: tabular-nums; color: #fff; pointer-events: none; }
+.status.dark { color: #111; }
+.status .ico { display: flex; gap: 6px; align-items: center; }
+.batt { width: 24px; height: 12px; border: 1.5px solid currentColor; border-radius: 3px; padding: 1px; position: relative; }
+.batt::after { content: ""; position: absolute; right: -4px; top: 3px; width: 2px; height: 4px; background: currentColor; border-radius: 1px; }
+.batt i { display: block; height: 100%; background: currentColor; border-radius: 1px; }
+.batt.low i { background: #ff5a5a; }
+.homebar { position: absolute; z-index: 35; bottom: 7px; left: 50%; transform: translateX(-50%); width: 36%; height: 5px; border-radius: 3px; background: rgba(255,255,255,.85); border: 0; padding: 0; }
+.homebar.dark { background: rgba(0,0,0,.6); }
+.view { position: absolute; inset: 0; }
+
+/* kilit ekranı */
+.lock { display: flex; flex-direction: column; align-items: center; padding: 70px 14px 40px; color: #fff; }
+.lock .date { font: 600 16px var(--f-body); opacity: .9; }
+.lock .time { font: 800 84px/1 var(--f-display); letter-spacing: 1px; text-shadow: 0 4px 30px rgba(0,0,0,.35); font-variant-numeric: tabular-nums; }
+.lock .week { font: 600 13px var(--f-body); color: rgba(255,255,255,.75); margin-top: 4px; letter-spacing: .4px; }
+.notifs { width: 100%; display: grid; gap: 8px; margin-top: auto; }
+.nt { display: grid; grid-template-columns: 38px 1fr; gap: 10px; align-items: center; text-align: left; background: rgba(20,28,52,.62); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid rgba(255,255,255,.08); border-radius: 18px; padding: 10px 12px; }
+.nt .ai { width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center; }
+.nt b { display: flex; justify-content: space-between; font-size: 14px; }
+.nt b small { font-weight: 500; opacity: .6; font-size: 12px; }
+.nt p { margin: 0; font-size: 13.5px; line-height: 1.3; color: rgba(255,255,255,.85); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.unlock { margin-top: 14px; background: rgba(255,255,255,.14); backdrop-filter: blur(10px); border: 0; border-radius: 22px; padding: 9px 22px; font-weight: 600; font-size: 14px; color: #fff; }
+
+/* ana ekran */
+.home { padding: 52px 16px 0; display: flex; flex-direction: column; gap: 14px; color: #fff; }
+.widgets { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.wg { border-radius: 22px; padding: 12px 13px; background: rgba(10,16,36,.55); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,.08); min-height: 128px; display: flex; flex-direction: column; text-align: left; min-width: 0; }
+.wg .lbl { font: 700 11px var(--f-body); letter-spacing: 1px; text-transform: uppercase; color: var(--gold); }
+.wg .big { font: 800 22px/1.05 var(--f-display); margin: 6px 0 2px; }
+.wg small { color: rgba(255,255,255,.7); font-size: 12.5px; line-height: 1.3; }
+.wg .mini { display: grid; gap: 5px; margin-top: auto; }
+.wg .mini div { display: grid; grid-template-columns: 46px 1fr; align-items: center; gap: 6px; font-size: 11.5px; color: rgba(255,255,255,.75); }
+.wg .bar { height: 6px; }
+.apps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px 8px; padding: 4px 2px; }
+.app { display: flex; flex-direction: column; align-items: center; gap: 6px; background: none; border: 0; padding: 0; min-width: 0; }
+.app .ic { width: 58px; height: 58px; border-radius: 15px; display: grid; place-items: center; box-shadow: 0 6px 16px rgba(0,0,0,.35); position: relative; transition: transform .15s; }
+.app:active .ic { transform: scale(.92); }
+.app .ic svg { width: 30px; height: 30px; }
+.app span { font: 500 12px var(--f-body); color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,.6); white-space: nowrap; }
+.badge { position: absolute; top: -5px; right: -5px; min-width: 20px; height: 20px; border-radius: 10px; background: #ff3b45; color: #fff; font: 700 12px/20px var(--f-body); padding: 0 5px; text-align: center; box-shadow: 0 0 0 2px rgba(0,0,0,.25); }
+.dock { margin-top: auto; margin-bottom: 18px; padding: 12px 10px; border-radius: 30px; background: rgba(255,255,255,.14); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); display: grid; grid-template-columns: repeat(4, 1fr); }
+.dock .app > span:not(.ic) { display: none; }
+
+/* uygulama penceresi */
+.appv { background: #0b1430; color: var(--chalk); display: flex; flex-direction: column; animation: open .28s cubic-bezier(.2,.8,.2,1); }
+@keyframes open { from { transform: scale(.88); opacity: 0; border-radius: 40px; } to { transform: none; opacity: 1; } }
+.bar-top { padding: 50px 14px 10px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid rgba(255,255,255,.06); flex: none; }
+.bar-top h2 { margin: 0; font: 800 italic 22px var(--f-display); letter-spacing: .4px; flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.back { background: none; border: 0; padding: 4px 6px 4px 0; display: flex; align-items: center; color: var(--sky); font-size: 15px; }
+.back svg { width: 20px; height: 20px; }
+.body { flex: 1; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; padding: 10px 12px 30px; min-height: 0; }
+.body::-webkit-scrollbar { width: 0; }
+
+/* mesajlar */
+.thr { display: grid; grid-template-columns: 48px 1fr; gap: 10px; align-items: center; width: 100%; text-align: left; background: none; border: 0; border-bottom: 1px solid rgba(255,255,255,.06); padding: 10px 2px; }
+.av { width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center; font: 800 18px var(--f-display); color: #fff; flex: none; position: relative; }
+.av.sm { width: 34px; height: 34px; font-size: 14px; }
+.thr b { display: flex; justify-content: space-between; gap: 6px; font-size: 16px; }
+.thr b small { color: var(--muted); font-weight: 500; font-size: 12px; }
+.thr p { margin: 1px 0 0; color: var(--muted); font-size: 13.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.thr .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--sky); margin-right: 4px; }
+.chat { display: flex; flex-direction: column; gap: 6px; }
+.day { align-self: center; font-size: 11.5px; color: var(--muted); margin: 6px 0; letter-spacing: .3px; }
+.bub { max-width: 78%; padding: 8px 12px; border-radius: 18px; font-size: 14.5px; line-height: 1.35; animation: pop .22s ease-out; }
+@keyframes pop { from { transform: translateY(6px) scale(.96); opacity: 0; } }
+.bub.in { align-self: flex-start; background: #1c2a52; border-bottom-left-radius: 6px; }
+.bub.out { align-self: flex-end; background: #2f6ee8; border-bottom-right-radius: 6px; }
+.bub.out.gold { background: linear-gradient(135deg, #e0a91a, #b37a08); }
+.typing { align-self: flex-start; background: #1c2a52; border-radius: 18px; padding: 10px 14px; display: flex; gap: 4px; }
+.typing i { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); animation: blink 1s infinite; }
+.typing i:nth-child(2) { animation-delay: .15s; } .typing i:nth-child(3) { animation-delay: .3s; }
+@keyframes blink { 50% { opacity: .25; } }
+.replies { flex: none; padding: 8px 10px 26px; border-top: 1px solid rgba(255,255,255,.06); display: grid; gap: 6px; background: #0b1430; }
+.replies .lbl2 { font-size: 11.5px; color: var(--muted); letter-spacing: .6px; text-transform: uppercase; }
+.rep { text-align: left; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); border-radius: 14px; padding: 8px 12px; font-size: 14px; display: flex; justify-content: space-between; gap: 10px; align-items: center; }
+.rep em { font-style: normal; font-size: 12px; color: var(--gold); white-space: nowrap; }
+.rep:disabled { opacity: .45; cursor: default; }
+.callv { background: linear-gradient(180deg, #23345f, #0b1430 70%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: #fff; }
+.callv .av { width: 110px; height: 110px; font-size: 42px; }
+.callv h3 { margin: 6px 0 0; font: 800 30px var(--f-display); }
+.callv p { margin: 0; color: rgba(255,255,255,.7); font-variant-numeric: tabular-nums; }
+.callv .wave { display: flex; gap: 4px; height: 30px; align-items: center; margin-top: 8px; }
+.callv .wave i { width: 4px; border-radius: 2px; background: var(--good); animation: wave 0.9s infinite ease-in-out; }
+@keyframes wave { 50% { height: 6px; } }
+.hang { margin-top: 40px; width: 68px; height: 68px; border-radius: 50%; background: #ff3b45; border: 0; display: grid; place-items: center; }
+
+/* StarFeed */
+.sf-top { display: flex; align-items: center; gap: 8px; }
+.sf-logo { font: 800 italic 25px var(--f-display); flex: 1; }
+.sf-logo span { color: var(--gold); }
+.round { width: 34px; height: 34px; border-radius: 50%; border: 0; background: rgba(255,255,255,.08); display: grid; place-items: center; }
+.round svg { width: 19px; height: 19px; }
+.stories { display: flex; gap: 12px; overflow-x: auto; padding: 4px 2px 12px; margin: 0 -12px; padding-left: 12px; }
+.stories::-webkit-scrollbar { height: 0; }
+.st { display: flex; flex-direction: column; align-items: center; gap: 4px; font-size: 11.5px; color: var(--muted); flex: none; width: 62px; background: none; border: 0; padding: 0; }
+.st .av { width: 58px; height: 58px; box-shadow: 0 0 0 2px #0b1430, 0 0 0 4px var(--gold); }
+.st span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%; text-align: center; }
+.post { background: #0f1b3d; border: 1px solid rgba(255,255,255,.06); border-radius: 16px; overflow: hidden; margin-bottom: 12px; }
+.ph { display: flex; align-items: center; gap: 8px; padding: 9px 10px; }
+.ph b { font-size: 14px; display: block; }
+.ph small { color: var(--muted); font-size: 12px; }
+.vf { display: inline-grid; place-items: center; width: 14px; height: 14px; border-radius: 50%; background: var(--gold); color: #0a1530; font-size: 9px; font-weight: 800; vertical-align: 1px; margin-left: 3px; }
+.photo { position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: #000; }
+.photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.photo .q { position: absolute; left: 8px; bottom: 8px; font: 700 11px var(--f-body); background: rgba(0,0,0,.55); padding: 2px 7px; border-radius: 8px; letter-spacing: .4px; }
+.txtpost { aspect-ratio: 1 / 1; display: grid; place-items: center; padding: 26px; text-align: center; font: 800 italic 28px/1.1 var(--f-display); }
+.pa { display: flex; gap: 14px; padding: 8px 10px 2px; align-items: center; }
+.pa button { background: none; border: 0; padding: 0; display: grid; place-items: center; }
+.pa svg { width: 25px; height: 25px; }
+.pa .liked svg { fill: #ff3d6e; stroke: #ff3d6e; animation: like .35s; }
+@keyframes like { 40% { transform: scale(1.3); } }
+.pc { padding: 2px 10px 10px; font-size: 14px; }
+.pc b { margin-right: 4px; }
+.pc .lk { font-weight: 700; display: block; font-variant-numeric: tabular-nums; }
+.pc small { color: var(--muted); }
+.seg { display: flex; background: rgba(255,255,255,.06); border-radius: 12px; padding: 3px; margin-bottom: 12px; }
+.seg button { flex: 1; border: 0; background: none; padding: 6px; border-radius: 9px; font-weight: 600; color: var(--muted); }
+.seg button.on { background: var(--gold); color: #0a1530; }
+.prof { display: grid; grid-template-columns: 76px 1fr; gap: 14px; align-items: center; margin-bottom: 10px; }
+.prof .av { width: 76px; height: 76px; font-size: 28px; box-shadow: 0 0 0 3px var(--gold); }
+.nums { display: grid; grid-template-columns: repeat(3, 1fr); text-align: center; }
+.nums b { display: block; font: 800 20px var(--f-display); font-variant-numeric: tabular-nums; }
+.nums span { font-size: 12px; color: var(--muted); }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; border-radius: 12px; overflow: hidden; }
+.grid3 .photo .q { display: none; }
+
+/* paylaşım sayfası */
+.sheet { position: absolute; inset: 0; z-index: 25; background: rgba(0,0,0,.55); display: flex; align-items: flex-end; animation: fade .2s; }
+@keyframes fade { from { opacity: 0; } }
+.sheet .in { width: 100%; max-height: 92%; overflow-y: auto; background: #101c40; border-radius: 26px 26px 0 0; padding: 14px 14px 30px; animation: up .28s cubic-bezier(.2,.8,.2,1); }
+@keyframes up { from { transform: translateY(100%); } }
+.grab { width: 40px; height: 5px; border-radius: 3px; background: rgba(255,255,255,.25); margin: 0 auto 10px; }
+.sheet h3 { margin: 0 0 10px; font: 800 italic 22px var(--f-display); }
+.pick { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 10px; }
+.pick button { padding: 0; border: 3px solid transparent; border-radius: 12px; overflow: hidden; background: none; }
+.pick button.on { border-color: var(--gold); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.chip { border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.05); border-radius: 16px; padding: 6px 11px; font-size: 13.5px; }
+.chip.on { background: var(--chalk); color: #0a1530; border-color: var(--chalk); }
+.camq { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--muted); background: rgba(255,255,255,.04); border-radius: 12px; padding: 8px 10px; margin-bottom: 12px; gap: 8px; }
+.camq b { color: var(--chalk); }
+.btn { width: 100%; border: 0; border-radius: 14px; padding: 12px; background: var(--gold); color: #0a1530; font: 800 18px var(--f-display); letter-spacing: .5px; text-transform: uppercase; }
+.btn:disabled { opacity: .45; }
+.btn.ghost { background: rgba(255,255,255,.08); color: var(--chalk); }
+
+/* Starpedia */
+.wiki { background: #fff; color: #202122; }
+.wiki .bar-top { border-bottom: 1px solid #c8ccd1; }
+.wiki .bar-top h2 { font: 400 20px/1 var(--f-wiki); letter-spacing: 2px; text-transform: uppercase; color: #202122; text-align: center; }
+.wiki .back { color: #36c; }
+.wiki .body { padding: 12px 14px 30px; font: 15px/1.6 -apple-system, "Helvetica Neue", Arial, sans-serif; }
+.wiki h1 { font: 400 26px/1.2 var(--f-wiki); margin: 0 0 2px; border-bottom: 1px solid #a2a9b1; padding-bottom: 4px; }
+.wiki .sub { font-size: 12.5px; color: #54595d; margin-bottom: 10px; }
+.wiki h3 { font: 600 19px var(--f-wiki); border-bottom: 1px solid #a2a9b1; margin: 16px 0 6px; padding-bottom: 2px; }
+.wiki p { margin: 0 0 8px; font-size: 14.5px; }
+.wiki a { color: #36c; text-decoration: none; }
+.ibox { border: 1px solid #a2a9b1; background: #f8f9fa; font-size: 13px; margin: 6px 0 12px; color: #202122; }
+.ibox th, .ibox td { color: #202122; }
+.ibox .hd { background: #eaecf0; text-align: center; font-weight: 700; padding: 6px; }
+.ibox .img { aspect-ratio: 4/3; overflow: hidden; }
+.ibox .img img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 70%; display: block; }
+.ibox table { width: 100%; border-collapse: collapse; }
+.ibox th { text-align: left; padding: 4px 8px; width: 42%; vertical-align: top; }
+.ibox td { padding: 4px 8px; }
+.wiki ul { padding-left: 20px; margin: 0 0 8px; font-size: 14.5px; }
+
+/* Banka */
+.bank { background: #0a1124; }
+.bal { border-radius: 22px; padding: 18px; background: linear-gradient(135deg, #1f4fbf, #0e2a6b 60%, #152150); position: relative; overflow: hidden; margin-bottom: 14px; }
+.bal::after { content: ""; position: absolute; right: -40px; top: -40px; width: 170px; height: 170px; border-radius: 50%; border: 26px solid rgba(255,255,255,.06); }
+.bal span { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,.7); }
+.bal b { display: block; font: 800 38px/1.1 var(--f-display); font-variant-numeric: tabular-nums; margin: 4px 0 10px; }
+.bal small { color: rgba(255,255,255,.7); }
+.inc { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 14px; }
+.inc div { background: rgba(255,255,255,.05); border-radius: 14px; padding: 10px; }
+.inc span { font-size: 12px; color: var(--muted); }
+.inc b { display: block; font: 800 19px var(--f-display); font-variant-numeric: tabular-nums; }
+.tx { display: grid; grid-template-columns: 38px 1fr auto; gap: 10px; align-items: center; padding: 9px 0; border-bottom: 1px solid rgba(255,255,255,.06); font-size: 14px; }
+.tx .ti { width: 38px; height: 38px; border-radius: 12px; display: grid; place-items: center; background: rgba(255,255,255,.07); font-size: 18px; }
+.tx small { display: block; color: var(--muted); font-size: 12px; }
+.tx b { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.pos { color: var(--good); } .neg { color: var(--bad); }
+.secl { font: 700 12px var(--f-body); letter-spacing: 1px; text-transform: uppercase; color: var(--muted); margin: 6px 0 4px; }
+
+/* Takvim */
+.daysrow { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; margin-bottom: 12px; text-align: center; }
+.daysrow div { border-radius: 12px; padding: 6px 0; font-size: 12px; color: var(--muted); }
+.daysrow div b { display: block; font: 800 19px var(--f-display); color: var(--chalk); }
+.daysrow .today { background: var(--gold); color: #0a1530; }
+.daysrow .today b { color: #0a1530; }
+.ev { display: grid; grid-template-columns: 54px 1fr; gap: 10px; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,.06); }
+.ev .d { font: 800 15px var(--f-display); color: var(--muted); text-transform: uppercase; }
+.ev .e { border-left: 4px solid var(--sky); padding: 4px 10px; background: rgba(255,255,255,.04); border-radius: 0 10px 10px 0; font-size: 14px; }
+.ev .e small { display: block; color: var(--muted); font-size: 12px; }
+.ev .e.match { border-color: var(--gold); } .ev .e.love { border-color: var(--love); } .ev .e.fam { border-color: var(--good); } .ev .e.new { animation: pop .3s; }
+
+/* Menajer */
+.offer { background: #0f1b3d; border: 1px solid rgba(255,255,255,.08); border-radius: 18px; padding: 12px; margin-bottom: 10px; }
+.offer .top { display: flex; gap: 10px; align-items: center; margin-bottom: 8px; }
+.shirt { width: 44px; height: 44px; flex: none; }
+.offer b { font: 800 19px var(--f-display); display: block; }
+.offer small { color: var(--muted); font-size: 12.5px; }
+.offer .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 10px; }
+.offer .row div { background: rgba(255,255,255,.05); border-radius: 10px; padding: 6px 8px; }
+.offer .row span { display: block; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .6px; }
+.offer .row b { font-size: 16px; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.two .btn { font-size: 16px; padding: 9px; }
+
+/* Mağaza */
+.store { background: #f2f3f7; color: #111827; }
+.store .bar-top { border-bottom: 1px solid #dfe2ea; background: #fff; }
+.store .back { color: #1e5bd8; }
+.store .body { padding: 12px; }
+.sbal { display: flex; justify-content: space-between; align-items: center; background: #fff; border-radius: 14px; padding: 10px 12px; margin-bottom: 12px; font-size: 14px; border: 1px solid #e5e7eb; }
+.sbal b { font: 800 20px var(--f-display); font-variant-numeric: tabular-nums; }
+.pr { background: #fff; border-radius: 18px; padding: 12px; margin-bottom: 10px; display: grid; grid-template-columns: 74px 1fr; gap: 12px; border: 1px solid #e5e7eb; }
+.pr.cur { border: 2px solid #1e5bd8; }
+.mini-ph { width: 74px; height: 140px; border-radius: 16px; padding: 4px; position: relative; }
+.mini-ph i { display: block; width: 100%; height: 100%; border-radius: 12px; }
+.pr h4 { margin: 0; font: 800 21px var(--f-display); }
+.pr .tag { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase; padding: 2px 7px; border-radius: 6px; background: #eef2ff; color: #1e5bd8; margin-bottom: 4px; }
+.pr ul { margin: 4px 0 8px; padding-left: 16px; font-size: 13px; color: #4b5563; }
+.pr .price { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.pr .price b { font: 800 20px var(--f-display); font-variant-numeric: tabular-nums; }
+.buy { border: 0; border-radius: 12px; padding: 8px 14px; background: #1e5bd8; color: #fff; font-weight: 700; font-size: 14px; white-space: nowrap; }
+.buy.own { background: #e5e7eb; color: #374151; }
+.buy:disabled { background: #e5e7eb; color: #9ca3af; cursor: default; }
+.unbox { position: absolute; inset: 0; z-index: 45; display: grid; place-items: center; background: radial-gradient(circle at 50% 45%, rgba(255,207,63,.35), rgba(0,0,0,.85) 60%); animation: fade .3s; color: #fff; text-align: center; }
+.unbox .mini-ph { width: 110px; height: 210px; margin: 0 auto 14px; animation: spin 1.1s cubic-bezier(.2,.8,.2,1); }
+@keyframes spin { from { transform: rotateY(180deg) scale(.4); opacity: 0; } }
+.unbox h3 { font: 800 italic 30px var(--f-display); margin: 0; }
+.unbox p { margin: 4px 0 0; color: rgba(255,255,255,.8); }
+
+/* Ayarlar */
+.walls { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.walls button { aspect-ratio: 9/16; border-radius: 12px; border: 3px solid transparent; padding: 0; position: relative; overflow: hidden; }
+.walls button.on { border-color: var(--gold); }
+.walls button:disabled { opacity: .35; cursor: default; }
+.walls button span { position: absolute; left: 0; right: 0; bottom: 4px; font-size: 11px; color: #fff; text-shadow: 0 1px 2px #000; }
+.setrow { display: flex; justify-content: space-between; align-items: center; padding: 10px 2px; border-bottom: 1px solid rgba(255,255,255,.06); font-size: 14.5px; gap: 8px; }
+.setrow span { color: var(--muted); text-align: right; }
+
+/* fotoğraf kalitesi (kamera) */
+.q0 img { filter: blur(.8px) saturate(.75) contrast(.88) brightness(1.05); }
+.q0 .photo::after, .q0::after { content: ""; }
+.noise { position: absolute; inset: 0; pointer-events: none; opacity: .22; mix-blend-mode: overlay; background-image: repeating-radial-gradient(circle at 17% 32%, #fff 0 .6px, transparent .6px 2.2px), repeating-radial-gradient(circle at 73% 61%, #000 0 .6px, transparent .6px 2.6px); }
+.q1 img { filter: saturate(.95); }
+.q2 img { filter: saturate(1.1) contrast(1.04); }
+.q3 img { filter: saturate(1.18) contrast(1.06) brightness(1.03); }
+
+/* bildirim afişi ve küçük uyarı */
+.banner { position: absolute; z-index: 50; top: 8px; left: 8px; right: 8px; display: grid; grid-template-columns: 36px 1fr; gap: 10px; align-items: center; background: rgba(28,36,62,.92); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-radius: 20px; padding: 10px 12px; color: #fff; text-align: left; border: 1px solid rgba(255,255,255,.1); animation: drop .35s cubic-bezier(.2,.8,.2,1); box-shadow: 0 10px 30px rgba(0,0,0,.4); }
+@keyframes drop { from { transform: translateY(-120%); } }
+.banner b { font-size: 13.5px; display: block; } .banner p { margin: 0; font-size: 13px; color: rgba(255,255,255,.8); line-height: 1.3; }
+.toast { position: absolute; z-index: 55; left: 50%; bottom: 34px; transform: translateX(-50%); background: rgba(10,16,36,.94); border: 1px solid rgba(255,207,63,.5); color: var(--chalk); border-radius: 16px; padding: 8px 14px; font-size: 13.5px; white-space: nowrap; animation: pop .25s; box-shadow: 0 8px 24px rgba(0,0,0,.4); }
+.toast b { color: var(--gold); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
+
+/* ===== v2: yeni uygulamalar ===== */
+.apps { gap: 14px 6px; }
+.app .ic { width: 56px; height: 56px; }
+.app span { font-size: 11.5px; }
+
+/* StarFeed: kendine has tasarım (kalp yerine alkış, kare hikâyeler) */
+.st .av { border-radius: 16px; box-shadow: 0 0 0 2px #0b1430, 0 0 0 4px var(--gold); }
+.pa2 { display: flex; gap: 6px; padding: 8px 10px 2px; }
+.pa2 button { display: flex; align-items: center; gap: 5px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.08); border-radius: 12px; padding: 5px 10px; font-size: 13px; font-weight: 600; color: var(--chalk); }
+.pa2 button svg { width: 17px; height: 17px; }
+.pa2 button.on { background: rgba(255,207,63,.16); border-color: var(--gold); color: var(--gold); }
+.pa2 button.on svg { fill: var(--gold); }
+.pa2 .sp { flex: 1; }
+
+/* iOS benzeri takvim */
+.ical { background: #fff; color: #111; }
+.ical .bar-top { border-bottom: 0; }
+.ical .back { color: #e5383b; }
+.ical .bar-top h2 { color: #111; font: 700 17px var(--f-body); text-align: center; letter-spacing: 0; font-style: normal; }
+.ical .body { padding: 0 12px 30px; }
+.mhead { display: flex; justify-content: space-between; align-items: baseline; margin: 2px 2px 10px; }
+.mhead h3 { margin: 0; font: 800 30px var(--f-body); letter-spacing: -.3px; }
+.mhead h3 span { color: #e5383b; }
+.mhead .nav { display: flex; gap: 6px; }
+.mhead .nav button { border: 0; background: #f2f2f5; border-radius: 15px; height: 30px; padding: 0 12px; color: #e5383b; font-weight: 700; white-space: nowrap; }
+.wkd { display: grid; grid-template-columns: repeat(7, 1fr); font-size: 11px; color: #8e8e93; text-align: center; margin-bottom: 4px; font-weight: 600; }
+.mgrid { display: grid; grid-template-columns: repeat(7, 1fr); row-gap: 2px; border-bottom: 1px solid #e5e5ea; padding-bottom: 8px; }
+.mgrid button { border: 0; background: none; height: 46px; display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 4px 0 0; color: #111; font: 500 17px var(--f-body); font-variant-numeric: tabular-nums; }
+.mgrid button .n { width: 32px; height: 32px; line-height: 32px; border-radius: 50%; text-align: center; }
+.mgrid button.we { color: #8e8e93; }
+.mgrid button.today .n { color: #e5383b; font-weight: 700; }
+.mgrid button.sel .n { background: #111; color: #fff; font-weight: 700; }
+.mgrid button.sel.today .n { background: #e5383b; color: #fff; }
+.mgrid .dots { display: flex; gap: 2px; height: 5px; }
+.mgrid .dots i { width: 5px; height: 5px; border-radius: 50%; }
+.mgrid .blank { height: 46px; }
+.agenda { padding-top: 10px; }
+.agenda h4 { margin: 0 0 8px; font: 700 15px var(--f-body); color: #3a3a3c; }
+.ag { display: grid; grid-template-columns: 50px 1fr; gap: 10px; padding: 7px 0; }
+.ag .tm { font: 600 13px var(--f-body); color: #8e8e93; text-align: right; font-variant-numeric: tabular-nums; padding-top: 6px; }
+.ag .bx { border-radius: 8px; padding: 6px 10px; font-size: 14.5px; font-weight: 600; }
+.ag .bx small { display: block; font-weight: 500; font-size: 12.5px; opacity: .75; }
+.ag .bx.new { animation: pop .3s; }
+.noev { color: #8e8e93; font-size: 14px; padding: 10px 0; }
+
+/* Evim Emlak */
+.emlak { background: #f4f7f6; color: #0f2a26; }
+.emlak .bar-top { background: #0f7a6c; color: #fff; border: 0; padding-bottom: 12px; }
+.emlak .bar-top h2 { font: 800 21px var(--f-body); font-style: normal; letter-spacing: -.2px; }
+.emlak .back { color: #d6fff7; }
+.search { margin: -2px 0 10px; display: flex; align-items: center; gap: 8px; background: #fff; border-radius: 12px; padding: 9px 12px; font-size: 14px; color: #5b6b68; box-shadow: 0 2px 8px rgba(15,42,38,.08); }
+.search svg { width: 17px; height: 17px; flex: none; }
+.fchips { display: flex; gap: 6px; overflow-x: auto; margin-bottom: 10px; }
+.fchips::-webkit-scrollbar { height: 0; }
+.fchips button { flex: none; border: 1px solid #cfe3df; background: #fff; border-radius: 18px; padding: 5px 12px; font-size: 13px; font-weight: 600; color: #0f2a26; }
+.fchips button.on { background: #0f7a6c; color: #fff; border-color: #0f7a6c; }
+.listing { background: #fff; border-radius: 16px; overflow: hidden; margin-bottom: 12px; box-shadow: 0 3px 12px rgba(15,42,38,.08); border: 0; padding: 0; width: 100%; text-align: left; color: inherit; display: block; }
+.listing .pic { position: relative; aspect-ratio: 16 / 10; }
+.listing .pic svg { width: 100%; height: 100%; display: block; }
+.listing .pic .lbl3 { position: absolute; left: 10px; top: 10px; background: #0f7a6c; color: #fff; font-size: 11.5px; font-weight: 700; padding: 3px 8px; border-radius: 7px; }
+.listing .pic .own3 { position: absolute; right: 10px; top: 10px; background: #ffcf3f; color: #3a2a05; font-size: 11.5px; font-weight: 800; padding: 3px 8px; border-radius: 7px; }
+.listing .inf { padding: 10px 12px 12px; }
+.listing .pr3 { font: 800 21px var(--f-body); color: #0f2a26; font-variant-numeric: tabular-nums; }
+.listing .tt { font-weight: 600; font-size: 15px; }
+.listing .mt { color: #5b6b68; font-size: 13px; }
+.listing .fx3 { margin-top: 6px; font-size: 12.5px; color: #0f7a6c; font-weight: 600; }
+
+/* Arabalar */
+.cars { background: #0d0d10; color: #f3f3f5; }
+.cars .bar-top { border-bottom: 1px solid #222; }
+.cars .bar-top h2 { font: 800 italic 24px var(--f-display); letter-spacing: 1px; text-transform: uppercase; }
+.cars .bar-top h2 span { color: #ff3b30; }
+.cars .back { color: #ff5e57; }
+.ctabs { display: flex; gap: 16px; border-bottom: 1px solid #222; margin: 0 -12px 12px; padding: 0 12px; }
+.ctabs button { border: 0; background: none; padding: 8px 0; font: 700 14px var(--f-body); color: #8b8b93; border-bottom: 3px solid transparent; }
+.ctabs button.on { color: #fff; border-color: #ff3b30; }
+.car { background: linear-gradient(180deg, #1b1b21, #131317); border: 1px solid #26262d; border-radius: 18px; overflow: hidden; margin-bottom: 12px; }
+.car .stage2 { aspect-ratio: 16 / 8; position: relative; background: radial-gradient(70% 90% at 50% 100%, #2c2c35, #131317 70%); }
+.car .stage2 svg { position: absolute; inset: 6% 6% 0; width: 88%; height: 94%; }
+.car .stage2 .gar { position: absolute; left: 10px; top: 10px; background: #ff3b30; color: #fff; font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 6px; letter-spacing: .5px; }
+.car .inf { padding: 10px 12px 12px; }
+.car h4 { margin: 0; font: 800 21px var(--f-display); letter-spacing: .3px; }
+.car .spec { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin: 8px 0 10px; }
+.car .spec div { background: #1f1f26; border-radius: 10px; padding: 5px 8px; }
+.car .spec span { display: block; font-size: 10.5px; color: #8b8b93; text-transform: uppercase; letter-spacing: .6px; }
+.car .spec b { font: 800 16px var(--f-display); }
+.car .row3 { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+.car .row3 b { font: 800 22px var(--f-display); font-variant-numeric: tabular-nums; }
+.redbtn { border: 0; border-radius: 12px; padding: 8px 16px; background: #ff3b30; color: #fff; font-weight: 800; font-size: 14px; }
+.redbtn:disabled { background: #2a2a31; color: #6b6b73; }
+.redbtn.own { background: #2a2a31; color: #cfcfd6; }
+
+/* Alışveriş */
+.shop { background: #fbf7ff; color: #1d1530; }
+.shop .bar-top { background: #fff; border-bottom: 1px solid #ece4f7; }
+.shop .bar-top h2 { font: 800 22px var(--f-body); font-style: normal; color: #6d28d9; letter-spacing: -.3px; }
+.shop .back { color: #6d28d9; }
+.cartb { position: relative; border: 0; background: #f3ecff; width: 36px; height: 36px; border-radius: 12px; display: grid; place-items: center; color: #6d28d9; }
+.cartb svg { width: 20px; height: 20px; }
+.cartb .badge { top: -6px; right: -6px; background: #6d28d9; }
+.banner2 { border-radius: 16px; padding: 14px; margin-bottom: 10px; background: linear-gradient(120deg, #6d28d9, #a855f7); color: #fff; }
+.banner2 b { display: block; font: 800 20px var(--f-body); }
+.banner2 small { opacity: .85; }
+.shop .fchips button { border-color: #e4d8f6; color: #1d1530; }
+.shop .fchips button.on { background: #1d1530; color: #fff; border-color: #1d1530; }
+.pgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.prod { background: #fff; border-radius: 14px; padding: 10px; display: flex; flex-direction: column; gap: 4px; border: 1px solid #efe7fa; min-width: 0; }
+.prod .art { aspect-ratio: 1; border-radius: 10px; display: grid; place-items: center; background: linear-gradient(160deg, #f6f0ff, #ede3fb); }
+.prod .art svg { width: 64%; height: 64%; }
+.prod .nm { font-weight: 600; font-size: 13.5px; line-height: 1.25; min-height: 2.5em; }
+.prod .ds { font-size: 11.5px; color: #7c6f93; }
+.prod .pp { display: flex; justify-content: space-between; align-items: center; gap: 4px; margin-top: auto; }
+.prod .pp b { font: 800 16px var(--f-body); font-variant-numeric: tabular-nums; }
+.addb { border: 0; border-radius: 10px; width: 32px; height: 32px; background: #6d28d9; color: #fff; display: grid; place-items: center; flex: none; }
+.addb svg { width: 18px; height: 18px; }
+.addb.in { background: #22c55e; }
+.addb.own { background: #e9e2f5; color: #7c6f93; }
+.cartrow { display: grid; grid-template-columns: 44px 1fr auto; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,.08); font-size: 14px; }
+.cartrow .art { width: 44px; height: 44px; border-radius: 10px; background: #f3ecff; display: grid; place-items: center; }
+.cartrow .art svg { width: 32px; height: 32px; }
+.cartsum { display: flex; justify-content: space-between; font: 800 19px var(--f-body); margin: 12px 0; }
+
+/* StarFoot+ (premium) */
+.prem { background: radial-gradient(120% 60% at 50% 0%, #2a1c00 0%, #0b0a12 60%); color: #fff; }
+.prem .bar-top { border-bottom: 0; }
+.prem .back { color: var(--gold); }
+.phero { text-align: center; padding: 6px 4px 14px; }
+.phero .logo2 { width: 76px; height: 76px; border-radius: 20px; margin: 0 auto 10px; display: grid; place-items: center; background: linear-gradient(140deg, #fff1b8, #ffcf3f 45%, #c98a06); box-shadow: 0 12px 40px rgba(255,207,63,.35); }
+.phero .logo2 svg { width: 44px; height: 44px; }
+.phero h3 { margin: 0; font: 800 italic 34px/1 var(--f-display); letter-spacing: .5px; }
+.phero h3 span { color: var(--gold); }
+.phero p { margin: 6px 0 0; color: rgba(255,255,255,.75); font-size: 14px; }
+.perks { list-style: none; margin: 0 0 14px; padding: 0; display: grid; gap: 7px; }
+.perks li { display: grid; grid-template-columns: 24px 1fr; gap: 8px; align-items: start; font-size: 14px; }
+.perks li i { width: 22px; height: 22px; border-radius: 50%; background: rgba(255,207,63,.18); color: var(--gold); display: grid; place-items: center; font-style: normal; font-weight: 800; font-size: 13px; }
+.plans { display: grid; gap: 8px; margin-bottom: 12px; }
+.plan { display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; align-items: center; text-align: left; background: rgba(255,255,255,.05); border: 2px solid rgba(255,255,255,.1); border-radius: 16px; padding: 10px 12px; position: relative; color: #fff; }
+.plan.on { border-color: var(--gold); background: rgba(255,207,63,.08); }
+.plan b { font: 800 19px var(--f-display); }
+.plan small { color: rgba(255,255,255,.7); font-size: 12.5px; grid-column: 1; }
+.plan .pr4 { font: 800 18px var(--f-display); grid-row: 1 / span 2; grid-column: 2; text-align: right; }
+.plan .pr4 small { display: block; font: 500 11px var(--f-body); color: rgba(255,255,255,.6); }
+.plan .pop { position: absolute; right: 12px; top: -10px; background: var(--gold); color: #2a1c00; font-size: 10.5px; font-weight: 800; padding: 2px 8px; border-radius: 8px; letter-spacing: .5px; }
+.plan .owned { color: var(--good); font: 700 13px var(--f-body); }
+.restore { display: block; margin: 10px auto 0; background: none; border: 0; color: rgba(255,255,255,.7); text-decoration: underline; font-size: 13px; }
+.mine { margin-top: 16px; }
+.mine .secl { color: rgba(255,255,255,.6); }
+.legal { font-size: 11px; color: rgba(255,255,255,.45); text-align: center; margin-top: 10px; }
+</style>
+
+<div class="wrap">
+  <section class="side" aria-label="Prototip bilgisi">
+    <div>
+      <div class="brand">STAR<span>FOOT</span> · TELEFON</div>
+      <p class="lead">Oyuncunun kendi akıllı telefonu. Annenle, babanla, sevgilinle, hocanla, menajerinle ve arkadaşlarınla mesajlaş; maç takvimini gör; ev, araba ve eşyaları kendi uygulamalarından oyun parasıyla al. Telefonda yaptığın her şey soldaki değerleri gerçek oyundaki gibi etkiler.</p>
+    </div>
+    <div class="card">
+      <h3 class="h">Oyuncu durumu <small id="apTxt"></small></h3>
+      <div id="stats"></div>
+      <div class="kv">
+        <div><span>Para</span><b id="kMoney"></b></div>
+        <div><span>Takipçi</span><b id="kFol"></b></div>
+        <div><span>Telefon</span><b id="kPhone"></b></div>
+      </div>
+    </div>
+    <div class="card">
+      <h3 class="h">Son olaylar <button class="reset" id="reset" type="button">Baştan başlat</button></h3>
+      <ul class="log" id="log"></ul>
+    </div>
+    <div class="card">
+      <h3 class="h">Denemek için</h3>
+      <ol class="tips">
+        <li>Kilit ekranındaki bildirime dokun ya da kilidi aç.</li>
+        <li>Mesajlar: hocana, babana, Can'a cevap ver. Buluşmalar Takvim'e düşer.</li>
+        <li>Takvim'de günlere dokun: maçlar kırmızı, antrenmanlar mavi.</li>
+        <li>Evim Emlak'tan ev, Arabalar'dan araç, alışveriş'ten saat al.</li>
+        <li>StarFeed'de fotoğraf paylaş, TeknoPazar'dan yeni telefon al.</li>
+        <li>StarFoot+ uygulamasında paywall ve satın alımlar.</li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="stage">
+    <div class="phone t0" id="phone">
+      <div class="screen" id="screen">
+        <div class="wall" id="wall"></div>
+        <div class="cam"></div>
+        <div class="status" id="status"></div>
+        <div class="view" id="view"></div>
+        <button class="homebar" id="homebar" type="button" aria-label="Ana ekran"></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// Mağaza ürün çizimleri (64x64, dolgulu basit illüstrasyonlar)
+
+const SHOP_ART = {
+  boot: (c) => `<path d="M8 40c0-6 4-9 9-9h7l5-17h10l2 18 13 5c4 1 4 5 4 7v4H8z" fill="${c}"/><path d="M8 48h50v4H8z" fill="#1d2433"/><path d="M14 52v4M22 52v4M30 52v4M38 52v4M46 52v4M54 52v4" stroke="#1d2433" stroke-width="3"/><path d="M27 22l8 2M26 27l9 2" stroke="#fff" stroke-width="2.5"/>`,
+  ball: () => `<circle cx="32" cy="32" r="22" fill="#f4f4f4" stroke="#1d2433" stroke-width="2"/><path d="M32 21l9 6-3 10h-12l-3-10z" fill="#1d2433"/><path d="M32 10v11M41 27l11-3M38 37l7 11M26 37l-7 11M23 27l-11-3" stroke="#1d2433" stroke-width="2"/>`,
+  goal: (c) => `<path d="M8 50V16h48v34" fill="none" stroke="#f4f4f4" stroke-width="4"/><path d="M12 20h40v30H12z" fill="${c}" opacity=".25"/><path d="M12 26h40M12 34h40M12 42h40M20 20v30M28 20v30M36 20v30M44 20v30" stroke="#fff" stroke-width="1" opacity=".6"/><circle cx="46" cy="50" r="6" fill="#f4f4f4" stroke="#1d2433" stroke-width="1.5"/>`,
+  cones: (c) => `<path d="M14 50l7-24h4l7 24z" fill="${c}"/><path d="M34 50l7-24h4l7 24z" fill="${c}"/><path d="M17 40h12M37 40h12" stroke="#fff" stroke-width="3"/><path d="M8 50h50v4H8z" fill="#1d2433"/>`,
+  rope: (c) => `<path d="M14 14c-6 20 8 40 18 40s24-20 18-40" fill="none" stroke="${c}" stroke-width="3"/><rect x="10" y="6" width="8" height="14" rx="3" fill="#1d2433"/><rect x="46" y="6" width="8" height="14" rx="3" fill="#1d2433"/>`,
+  dumbbell: (c) => `<rect x="20" y="29" width="24" height="6" fill="#8a96a8"/><rect x="8" y="20" width="8" height="24" rx="2" fill="${c}"/><rect x="15" y="23" width="6" height="18" rx="2" fill="${c}"/><rect x="48" y="20" width="8" height="24" rx="2" fill="${c}"/><rect x="43" y="23" width="6" height="18" rx="2" fill="${c}"/>`,
+  gym: (c) => `<path d="M8 52h48" stroke="#1d2433" stroke-width="4"/><path d="M14 52V22h36v30" fill="none" stroke="#8a96a8" stroke-width="4"/><rect x="18" y="16" width="28" height="6" fill="${c}"/><rect x="26" y="34" width="12" height="14" fill="${c}"/><path d="M20 30h24" stroke="#8a96a8" stroke-width="3"/>`,
+  center: (c) => `<path d="M6 54h52V26L32 10 6 26z" fill="${c}"/><path d="M14 54V32h12v22M38 34h12v10H38z" fill="#0a1530" opacity=".6"/><path d="M28 22h8" stroke="#fff" stroke-width="3"/>`,
+  book: (c) => `<path d="M10 14h20c2 0 2 2 2 2v36s0-2-2-2H10z" fill="${c}"/><path d="M54 14H34c-2 0-2 2-2 2v36s0-2 2-2h20z" fill="${c}" opacity=".8"/><path d="M15 22h12M15 28h12M37 22h12M37 28h12" stroke="#fff" stroke-width="2"/>`,
+  blender: (c) => `<path d="M20 8h24l-4 32H24z" fill="#cfe8ff" opacity=".8"/><path d="M22 22h20l-2 18H24z" fill="${c}"/><rect x="18" y="40" width="28" height="16" rx="3" fill="#1d2433"/><circle cx="32" cy="48" r="3" fill="#ffcf3f"/>`,
+  vitamins: (c) => `<rect x="18" y="16" width="28" height="40" rx="4" fill="${c}"/><rect x="20" y="8" width="24" height="10" rx="2" fill="#1d2433"/><rect x="22" y="28" width="20" height="16" fill="#fff"/><path d="M28 36h8M32 32v8" stroke="${c}" stroke-width="3"/>`,
+  apple: (c) => `<path d="M32 20c-8-6-22-2-20 14s12 22 20 18c8 4 18-2 20-18S40 14 32 20z" fill="${c}"/><path d="M32 20c0-6 2-10 6-12" stroke="#5a3a1a" stroke-width="3" fill="none"/><path d="M34 14c6-4 12-2 12-2s-4 6-12 2z" fill="#46e08f"/>`,
+  chef: (c) => `<path d="M16 32c-8-2-8-16 2-16 2-8 12-10 16-4 4-6 14-4 14 4 10 0 10 14 2 16v14H16z" fill="#f4f4f4"/><rect x="16" y="40" width="34" height="10" fill="${c}"/>`,
+  cards: (c) => `<rect x="10" y="12" width="26" height="36" rx="3" fill="${c}" transform="rotate(-10 23 30)"/><rect x="26" y="14" width="26" height="36" rx="3" fill="#f4f4f4" stroke="${c}" stroke-width="2" transform="rotate(8 39 32)"/><circle cx="39" cy="28" r="6" fill="${c}" transform="rotate(8 39 32)"/>`,
+  jersey: (c) => `<path d="M20 10l-12 8 6 10 6-3v29h24V25l6 3 6-10-12-8c-2 4-6 6-12 6s-10-2-12-6z" fill="${c}"/><text x="32" y="44" text-anchor="middle" font-size="14" font-weight="800" fill="#fff" font-family="sans-serif">10</text>`,
+  bike: (c) => `<circle cx="16" cy="42" r="10" fill="none" stroke="#1d2433" stroke-width="4"/><circle cx="48" cy="42" r="10" fill="none" stroke="#1d2433" stroke-width="4"/><path d="M16 42l10-18h16l6 18M26 24l8 18h-18M40 18h6" fill="none" stroke="${c}" stroke-width="4"/>`,
+  skate: (c) => `<path d="M6 34c0-4 4-6 8-6h36c4 0 8 2 8 6z" fill="${c}"/><circle cx="18" cy="42" r="5" fill="#1d2433"/><circle cx="46" cy="42" r="5" fill="#1d2433"/>`,
+  console: (c) => `<path d="M12 22h40c6 0 10 6 10 14s-4 14-10 10l-8-6H20l-8 6C6 50 2 44 2 36s4-14 10-14z" fill="${c}"/><path d="M16 30v10M11 35h10" stroke="#fff" stroke-width="3"/><circle cx="44" cy="32" r="3" fill="#fff"/><circle cx="50" cy="38" r="3" fill="#fff"/>`,
+  headphones: (c) => `<path d="M12 40V32a20 20 0 0 1 40 0v8" fill="none" stroke="#1d2433" stroke-width="5"/><rect x="8" y="36" width="12" height="18" rx="4" fill="${c}"/><rect x="44" y="36" width="12" height="18" rx="4" fill="${c}"/>`,
+  phone: (c) => `<rect x="18" y="6" width="28" height="52" rx="5" fill="#1d2433"/><rect x="21" y="12" width="22" height="38" fill="${c}"/><circle cx="32" cy="54" r="2" fill="#8a96a8"/>`,
+  scooter: (c) => `<path d="M44 10l-6 32H14" fill="none" stroke="${c}" stroke-width="5"/><path d="M38 10h12" stroke="#1d2433" stroke-width="4"/><circle cx="14" cy="46" r="7" fill="#1d2433"/><circle cx="40" cy="46" r="7" fill="#1d2433"/>`,
+  watch: (c) => `<rect x="24" y="4" width="16" height="56" rx="4" fill="#1d2433"/><circle cx="32" cy="32" r="15" fill="${c}"/><circle cx="32" cy="32" r="11" fill="#0a1530"/><path d="M32 24v8l6 4" stroke="#fff" stroke-width="2.5"/>`,
+  car: (c) => `<path d="M4 40l6-12c2-4 6-6 10-6h20c6 0 10 4 14 10l6 2c2 1 2 3 2 6v4H4z" fill="${c}"/><path d="M18 26h10v8H14zM32 26h8l6 8H32z" fill="#cfe8ff" opacity=".85"/><circle cx="16" cy="46" r="7" fill="#1d2433"/><circle cx="48" cy="46" r="7" fill="#1d2433"/>`,
+  villa: (c) => `<path d="M4 56h56" stroke="#2f8c45" stroke-width="4"/><path d="M8 54V28l18-12 18 12v26z" fill="#f4f4f4"/><path d="M4 30l22-16 22 16" fill="none" stroke="${c}" stroke-width="5"/><rect x="40" y="36" width="20" height="18" fill="#e8e1d0"/><rect x="20" y="38" width="10" height="16" fill="${c}"/><rect x="44" y="40" width="10" height="6" fill="#4fb3ff"/>`,
+  yacht: (c) => `<path d="M4 40h56l-8 12H12z" fill="#f4f4f4"/><path d="M16 40V28h24l8 12" fill="${c}"/><path d="M22 32h6M32 32h6" stroke="#cfe8ff" stroke-width="3"/><path d="M0 56c8 4 16-4 24 0s16 4 24 0 12-4 16 0" stroke="#4fb3ff" stroke-width="3" fill="none"/>`,
+  guitar: (c) => `<path d="M40 8l8 8-14 14" stroke="#5a3a1a" stroke-width="4"/><path d="M30 26c-6-2-14 0-16 6-4 0-8 4-6 10s8 10 14 8c6 2 12-2 12-8 6-2 8-10 4-14z" fill="${c}"/><circle cx="22" cy="40" r="4" fill="#1d2433"/>`,
+  drone: (c) => `<rect x="24" y="26" width="16" height="12" rx="3" fill="${c}"/><path d="M24 28L12 18M40 28l12-10M24 36l-12 10M40 36l12 10" stroke="#1d2433" stroke-width="3"/><ellipse cx="12" cy="16" rx="8" ry="2.5" fill="#8a96a8"/><ellipse cx="52" cy="16" rx="8" ry="2.5" fill="#8a96a8"/><ellipse cx="12" cy="48" rx="8" ry="2.5" fill="#8a96a8"/><ellipse cx="52" cy="48" rx="8" ry="2.5" fill="#8a96a8"/>`,
+  glasses: (c) => `<path d="M6 26h52" stroke="#1d2433" stroke-width="3"/><path d="M8 26h20l-2 12c-1 4-4 6-8 6s-8-2-9-6zM36 26h20l-1 12c-1 4-5 6-9 6s-7-2-8-6z" fill="${c}"/>`,
+  moto: (c) => `<circle cx="14" cy="44" r="9" fill="none" stroke="#1d2433" stroke-width="4"/><circle cx="50" cy="44" r="9" fill="none" stroke="#1d2433" stroke-width="4"/><path d="M14 44l12-14h14l10 14M24 30l-4-8h-6M40 30l6-10h6" fill="none" stroke="${c}" stroke-width="5"/>`,
+  jet: (c) => `<path d="M4 34l40-4 14-10 2 4-8 10 8 2-2 4-12-2-12 10h-6l6-10-30-2z" fill="#f4f4f4"/><path d="M30 31h14" stroke="${c}" stroke-width="3"/><path d="M48 20l6 0" stroke="${c}" stroke-width="3"/>`,
+  drink: (c) => `<rect x="22" y="12" width="20" height="44" rx="4" fill="${c}"/><rect x="24" y="6" width="16" height="8" rx="2" fill="#8a96a8"/><path d="M34 22l-6 12h6l-4 12 10-16h-6l4-8z" fill="#fff"/>`,
+  massage: (c) => `<rect x="6" y="38" width="52" height="8" rx="2" fill="${c}"/><path d="M10 46v10M54 46v10" stroke="#1d2433" stroke-width="4"/><circle cx="16" cy="32" r="6" fill="#e0b48a"/><path d="M22 34h30" stroke="#e0b48a" stroke-width="7"/>`,
+  physio: (c) => `<rect x="10" y="10" width="44" height="44" rx="8" fill="#f4f4f4"/><path d="M26 18h12v8h8v12h-8v8H26v-8h-8V26h8z" fill="${c}"/>`,
+  camp: (c) => `<path d="M4 54L32 10l28 44z" fill="${c}"/><path d="M32 10v44M24 54l8-14 8 14z" fill="#0a1530" opacity=".55"/><path d="M28 10l4-6 4 6" stroke="#1d2433" stroke-width="3" fill="none"/>`,
+  clinic: (c) => `<path d="M32 4l7 15 16 2-12 11 3 16-14-8-14 8 3-16L9 21l16-2z" fill="${c}"/><circle cx="32" cy="28" r="6" fill="#fff"/>`,
+  sleep: (c) => `<path d="M40 10a20 20 0 1 0 14 34A16 16 0 0 1 40 10z" fill="${c}"/><path d="M14 12h8l-8 8h8M44 6h6l-6 6h6" stroke="#fff" stroke-width="2.5" fill="none"/>`,
+  brain: (c) => `<path d="M22 12c-8 0-12 8-10 14-6 4-4 14 2 16 0 6 6 10 12 8 2 4 10 4 12 0 6 2 12-2 12-8 6-2 8-12 2-16 2-6-2-14-10-14-2-4-12-4-14 0z" fill="${c}"/><path d="M32 12v40M22 26c4 0 6 2 6 6M42 26c-4 0-6 2-6 6" stroke="#0a1530" stroke-width="2.5" fill="none" opacity=".5"/>`,
+  video: (c) => `<rect x="6" y="14" width="40" height="30" rx="4" fill="${c}"/><path d="M46 24l12-8v28l-12-8z" fill="${c}" opacity=".8"/><path d="M22 22l12 7-12 7z" fill="#fff"/><path d="M14 52h28" stroke="#1d2433" stroke-width="4"/>`,
+  fans: (c) => `<circle cx="16" cy="28" r="7" fill="${c}"/><circle cx="32" cy="24" r="8" fill="${c}"/><circle cx="48" cy="28" r="7" fill="${c}"/><path d="M4 56c0-9 5-14 12-14s12 5 12 14zM20 56c0-10 5-16 12-16s12 6 12 16zM36 56c0-9 5-14 12-14s12 5 12 14z" fill="${c}" opacity=".75"/>`,
+};
+
+const ShopArt = {
+  tierColor(price) {
+    if (price >= 1e6) return '#ffcf3f';
+    if (price >= 50000) return '#4fb3ff';
+    if (price >= 3000) return '#46e08f';
+    return '#ff6f64';
+  },
+  svg(art, color) {
+    const f = SHOP_ART[art] || SHOP_ART.ball;
+    return `<svg viewBox="0 0 64 64" aria-hidden="true">${f(color)}</svg>`;
+  },
+};
+
+const SHOP=[{"id": "watch", "c": "watch", "n": "Lüks Saat", "p": 400000, "art": "watch", "d": "Her hafta moral +1, Ün +3"}, {"id": "chain", "c": "watch", "n": "Altın Kolye", "p": 150000, "art": "watch", "d": "Her hafta moral +1, Ün +2"}, {"id": "sneakers", "c": "fashion", "n": "Sınırlı Seri Spor Ayakkabı", "p": 8000, "art": "jersey", "d": "Her hafta moral +1, Ün +1"}, {"id": "shades", "c": "fashion", "n": "Tasarım Güneş Gözlüğü", "p": 60000, "art": "glasses", "d": "Her hafta moral +1, Ün +2"}, {"id": "suit", "c": "fashion", "n": "Terzi Dikimi Takım Elbise", "p": 900000, "art": "jersey", "d": "Her hafta moral +1, Ün +4"}, {"id": "idol", "c": "fashion", "n": "İdolünün Forması", "p": 350, "art": "jersey", "d": "Dönemin en büyük yıldızının forması. Her hafta moral +1"}, {"id": "phones", "c": "tech", "n": "Kablosuz Kulaklık", "p": 3500, "art": "headphones", "d": "Her hafta moral +1"}, {"id": "life2", "c": "tech", "n": "Oyun Konsolu", "p": 9000, "art": "console", "d": "Her hafta moral +1"}, {"id": "vr", "c": "tech", "n": "Sanal Gerçeklik Gözlüğü", "p": 12000, "art": "console", "d": "Her hafta moral +1"}, {"id": "drone", "c": "tech", "n": "Kameralı Drone", "p": 18000, "art": "drone", "d": "Her hafta moral +1, Ün +1"}, {"id": "guitar", "c": "hobby", "n": "Gitar", "p": 2500, "art": "guitar", "d": "Her hafta moral +1"}, {"id": "skate", "c": "hobby", "n": "Kaykay", "p": 900, "art": "skate", "d": "Her hafta moral +1"}, {"id": "life1", "c": "hobby", "n": "Bisiklet", "p": 1500, "art": "bike", "d": "Her hafta moral +1"}, {"id": "cards", "c": "hobby", "n": "Futbolcu Kartı Albümü", "p": 150, "art": "cards", "d": "Her hafta moral +1"}, {"id": "books", "c": "hobby", "n": "Futbol Efsaneleri Kitap Seti", "p": 400, "art": "book", "d": "Her hafta moral +1"}, {"id": "boot_pro", "c": "sport", "n": "Pro Krampon", "p": 90000, "art": "boot", "d": "Maçlarda giyilir"}, {"id": "gpsvest", "c": "sport", "n": "GPS Performans Yeleği", "p": 70000, "art": "video", "d": "Antrenman kazancı +%28"}, {"id": "gear3", "c": "sport", "n": "Ev Spor Salonu", "p": 120000, "art": "gym", "d": "Antrenman kazancı +%30"}, {"id": "vitamin", "c": "sport", "n": "Vitamin ve Mineral Seti", "p": 20000, "art": "vitamins", "d": "Haftalık enerji yenilenmesi +11"}, {"id": "boot_gold", "c": "sport", "n": "Altın Krampon", "p": 1500000, "art": "boot", "d": "Maçlarda giyilir"}];
+const RIDES=[{"id": "scooter", "n": "Elektrikli Scooter", "p": 14000, "art": "scooter", "d": "Her hafta moral +1"}, {"id": "hatch", "n": "İlk Araban (Hatchback)", "p": 60000, "art": "car", "d": "Her hafta moral +1, Ün +1"}, {"id": "moto", "n": "Motosiklet", "p": 250000, "art": "moto", "d": "Her hafta moral +1, Ün +2"}, {"id": "suv", "n": "Lüks SUV", "p": 900000, "art": "car", "d": "Her hafta moral +1, Ün +3"}, {"id": "life4", "n": "Spor Araba", "p": 4500000, "art": "car", "d": "Her hafta moral +2, Ün +5"}, {"id": "classic", "n": "Klasik Koleksiyon Arabası", "p": 15000000, "art": "car", "d": "Her hafta moral +2, Ün +7"}, {"id": "life6", "n": "Lüks Yat", "p": 90000000, "art": "yacht", "d": "Her hafta moral +3, Ün +12"}, {"id": "jet", "n": "Özel Jet", "p": 250000000, "art": "jet", "d": "Her hafta moral +4, Ün +18"}];
+const HOMES_G=[{"id": "penthouse", "n": "Şehir Merkezinde Çatı Katı", "p": 8000000, "d": "Her hafta moral +2, Ün +6"}, {"id": "life5", "n": "Deniz Manzaralı Villa", "p": 25000000, "d": "Her hafta moral +3, Ün +8"}, {"id": "island", "n": "Özel Ada", "p": 400000000, "d": "Her hafta moral +5, Ün +25"}];
+
+(() => {
+  // ---------------- veri ----------------
+  const PHONES = [
+    { id: 0, n: 'Nokta A2', tag: 'Başlangıç', price: 0, mp: 8, mult: 0.55, scr: 'HD+ ekran', bat: 23, extra: 'Kalın çerçeve, damla çentik', walls: [0, 1], mini: 'linear-gradient(160deg,#4a4f5c,#2a2d36)' },
+    { id: 1, n: 'Vega 12', tag: 'Orta seviye', price: 9500, mp: 24, mult: 1, scr: 'Full HD OLED', bat: 64, extra: 'Mavi gövde, 2 yeni duvar kâğıdı', walls: [0, 1, 2, 3], mini: 'linear-gradient(160deg,#3b6fd8,#1d3f95)' },
+    { id: 2, n: 'Orion Pro', tag: 'Amiral gemisi', price: 42000, mp: 64, mult: 1.45, scr: '120 Hz LTPO ekran', bat: 88, extra: 'Titanyum çerçeve, kamera adası', walls: [0, 1, 2, 3, 4], mini: 'linear-gradient(160deg,#8d939e,#4b5059 45%,#a6acb6)' },
+    { id: 3, n: 'Aurum Edition', tag: 'Efsane', price: 250000, mp: 108, mult: 2.1, scr: '144 Hz, safir cam', bat: 100, extra: 'Altın kaplama, özel altın tema', walls: [0, 1, 2, 3, 4, 5], mini: 'linear-gradient(150deg,#fff3c4,#d9a520 35%,#8a5a0a 60%,#ffd76a)' },
+  ];
+  const WALLS = [
+    { n: 'Gece', bg: 'radial-gradient(120% 70% at 50% 0%, #2a4a9c 0%, #0b1838 55%, #050a1c 100%)' },
+    { n: 'Stat ışıkları', bg: 'radial-gradient(60% 30% at 20% 12%, rgba(255,240,200,.55), transparent 70%), radial-gradient(60% 30% at 80% 12%, rgba(255,240,200,.5), transparent 70%), linear-gradient(180deg, #0b1838 0%, #12306b 50%, #1f7a3a 72%, #145a2a 100%)' },
+    { n: 'Çim', bg: 'repeating-linear-gradient(180deg, #2e8b43 0 48px, #2a7f3d 48px 96px)' },
+    { n: 'Gün batımı', bg: 'linear-gradient(180deg, #ff8a5b 0%, #c2416b 42%, #3a1f5d 75%, #120b2a 100%)' },
+    { n: 'Titan', bg: 'radial-gradient(90% 60% at 30% 20%, #6a7385, transparent 60%), linear-gradient(160deg, #23272f, #0d0f14)' },
+    { n: 'Altın', bg: 'radial-gradient(70% 45% at 50% 22%, rgba(255,233,160,.9), rgba(217,165,32,.6) 45%, transparent 75%), linear-gradient(180deg, #3a2a05, #120c02)' },
+  ];
+  const PEOPLE = {
+    anne: { n: 'Annem', role: 'Aile', c: 'linear-gradient(135deg,#46e08f,#1f9d5c)', i: 'A' },
+    baba: { n: 'Babam', role: 'Aile', c: 'linear-gradient(135deg,#34c4b0,#147a6c)', i: 'B' },
+    defne: { n: 'Defne', role: 'Sevgilin', c: 'linear-gradient(135deg,#ff6f8a,#c2416b)', i: 'D', heart: true },
+    hoca: { n: 'Selim Hoca', role: 'Teknik direktör', c: 'linear-gradient(135deg,#9aa6c4,#4b5878)', i: 'S' },
+    menajer: { n: 'Volkan', role: 'Menajer', c: 'linear-gradient(135deg,#ffcf3f,#e08d0c)', i: 'V' },
+    can: { n: 'Can', role: 'Çocukluk arkadaşın', c: 'linear-gradient(135deg,#c792ff,#7b3fe4)', i: 'C' },
+    kaptan: { n: 'Kaptan Akın', role: 'Takım arkadaşın', c: 'linear-gradient(135deg,#7fb2ff,#1e5bd8)', i: 'K' },
+  };
+  // takvim: bugün 15 Kasım 2031 Cumartesi
+  const TODAY = 15;
+  const THREADS = {
+    defne: {
+      msgs: [['in', 'Bu akşam boş musun? Sahilde yürüyelim mi? 🌊'], ['in', 'Maçtaki sevincin çok tatlıydı bu arada 😄']],
+      replies: [
+        { t: 'Tabii, 8\'de seni alırım', fx: { love: 7, morale: 3 }, ap: 1, back: 'Harika! Hazır olurum 🥰', cal: { d: 15, h: '20:00', t: 'Defne ile sahil yürüyüşü', s: 'Moda sahili', k: 'love' } },
+        { t: '❤️ gönder', fx: { love: 2 }, back: '❤️❤️', gold: true },
+        { t: 'Yarın maç var, sonra buluşalım mı?', fx: { love: -2 }, back: 'Peki… maçtan sonra ama söz!' },
+      ],
+    },
+    anne: {
+      msgs: [['in', 'Oğlum maçı izledim, o golü babana üç kere gösterdim 😊'], ['in', 'Pazar yemeğe geliyor musun? Dolma yapıyorum.']],
+      replies: [
+        { t: 'Gelirim anne, kaçırmam ❤️', fx: { family: 4 }, back: 'Ohh çok sevindim! Kardeşin de gelecek.', cal: { d: 16, h: '13:00', t: 'Annemle pazar yemeği', s: 'Ev', k: 'fam' } },
+        { t: 'Sesli arayayım mı?', fx: { family: 7 }, ap: 1, call: true, back: 'Sesini duymak çok iyi geldi oğlum. Kendine dikkat et.' },
+        { t: 'Bu hafta antrenman çok yoğun anne', fx: { family: -3 }, back: 'Tamam oğlum… ama ihmal etme bizi.' },
+      ],
+    },
+    hoca: {
+      msgs: [['in', 'Yarın ilk 11\'desin. Ama savunmaya yardım etmeni istiyorum, anlaştık mı?']],
+      replies: [
+        { t: 'Anlaştık hocam, söz', fx: { coach: 5 }, back: 'Güzel. Rakibin sol beki çok çıkıyor, arkasına koş.' },
+        { t: 'Ekstra antrenman yapayım mı?', fx: { coach: 7, morale: -1 }, ap: 1, back: 'İşte bunu duymak istiyorum. Yarın 9\'da sahada ol.', cal: { d: 17, h: '09:00', t: 'Ekstra antrenman (Selim Hoca)', s: 'Tesis · saha 2', k: 'train' } },
+        { t: 'Hocam ben forvetim, golü düşünmeliyim', fx: { coach: -5, morale: 2 }, back: 'Takım her şeyden önce gelir. Bunu konuşacağız.' },
+      ],
+    },
+    menajer: {
+      msgs: [['in', 'Barselona Kanatları resmi teklif yaptı: 3 yıl, haftalık 1,25 Mn $.'], ['in', 'Madrid Pusulası da maaşını artırmak istiyor. İki teklifi de uygulamaya koydum.']],
+      replies: [
+        { t: 'Teklifleri açayım', open: 'agent', back: 'Bekliyorum, acele etme.' },
+        { t: 'Maaşı %10 daha yükseltmeye çalış', fx: { morale: 2 }, back: 'Tamam, masaya oturuyorum. Akşama haber veririm.' },
+        { t: 'Şimdilik ilgilenmiyorum', fx: { team: 3 }, back: 'Anlaşıldı, kulübüne bağlılığın taraftarın hoşuna gidecek.' },
+      ],
+    },
+    baba: {
+      msgs: [['in', 'Dünkü maçta sol kanatta çok yalnız kaldın. Hocana söyle bunu 😄']],
+      replies: [
+        { t: 'Bu akşam maç izleyelim mi beraber?', fx: { family: 6 }, ap: 1, back: 'Çekirdekler benden! 🍿', cal: { d: 19, h: '21:45', t: 'Babamla Avrupa maçı izle', s: 'Ev', k: 'fam' } },
+        { t: 'Baba sen de her maçı analiz ediyorsun 😂', fx: { family: 2, morale: 1 }, back: 'Ben senin ilk hocanım unutma 😎' },
+        { t: 'Haklısın baba, konuşacağım', fx: { family: 3 }, back: 'Aferin oğlum.' },
+      ],
+    },
+    can: {
+      msgs: [['in', 'Kanka cumartesi halı saha var, eski mahalle ekibi toplanıyoruz ⚽ Gelir misin?']],
+      replies: [
+        { t: 'Gelirim, ama kaleye geçmem 😄', fx: { friends: 7, morale: 3 }, ap: 1, back: 'Efsane geri dönüyor! Herkese haber veriyorum 🔥', cal: { d: 22, h: '18:00', t: 'Mahalle ekibiyle halı saha', s: 'Şimşek Halı Saha', k: 'fun' } },
+        { t: 'Sakatlık riski var kanka, izlemeye gelirim', fx: { friends: 3 }, back: 'Olsun, sen gel yeter. Çaylar senden 😄' },
+        { t: 'Bu hafta olmaz', fx: { friends: -3 }, back: 'Yıldız olunca bizi unuttun ha 😒' },
+      ],
+    },
+    kaptan: {
+      msgs: [['in', 'Yarın antrenmandan önce kahve? Altyapıdan gelen çocuk da gelsin, alışsın.']],
+      replies: [
+        { t: 'Gelirim kaptan, ben ısmarlıyorum', fx: { team: 5 }, ap: 1, back: 'İşte lider ruhu! 9:30\'da tesiste.', cal: { d: 18, h: '09:30', t: 'Takımla kahve', s: 'Tesis kafesi', k: 'fun' } },
+        { t: 'Bu sefer pas, yorgunum', fx: { team: -2 }, back: 'Tamam, dinlen. Hafta sonu önemli.' },
+      ],
+    },
+  };
+  const CALK = { match: ['#e5383b', '#fde8e8', '#8f1d1f'], train: ['#2f6ee8', '#e6efff', '#1b3f8f'], fam: ['#22a55a', '#e4f7ec', '#14653a'], love: ['#e2457a', '#fde7ef', '#8f1f45'], fun: ['#9b51e0', '#f2e9fd', '#5b2591'], media: ['#f59e0b', '#fef3e2', '#8a5a07'] };
+  const BASE_CAL = [];
+  [1, 9, 16, 23, 30].forEach((d, i) => BASE_CAL.push({ d, h: '19:00', t: ['Lig: Dolmabahçe Gücü', 'Lig: Trabzon Yıldızları', 'Lig: Kadıköy Fırtınası', 'Lig: Bodrum Ateşi', 'Lig: Antalya Kanatları'][i], s: i % 2 ? 'Deplasman' : 'İç saha', k: 'match' }));
+  [5, 19, 26].forEach((d, i) => BASE_CAL.push({ d, h: '21:45', t: ['Kupa: Gaziantep Kayaları', 'Avrupa: Haringey Ufku', 'Avrupa: Napoli Kalesi'][i], s: i === 0 ? 'İç saha' : 'Avrupa Şampiyonlar Kupası', k: 'match' }));
+  for (let d = 3; d <= 28; d++) { const wd = (d + 4) % 7; if ([0, 1, 3].includes(wd) && ![5, 19, 26].includes(d)) BASE_CAL.push({ d, h: '10:00', t: 'Takım antrenmanı', s: 'Tesis', k: 'train' }); }
+  BASE_CAL.push({ d: 14, h: '12:00', t: 'Basın toplantısı', s: 'Medya merkezi', k: 'media' }, { d: 21, h: '15:00', t: 'Sponsor çekimi · Rüzgar Spor', s: 'Stüdyo', k: 'media' });
+  const PHOTOS = [
+    { id: 'trophy', src: 'img/trophy.jpg', loc: 'Madrid Pusulası Stadyumu' },
+    { id: 'family', src: 'img/family.jpg', loc: 'Ev' },
+    { id: 'gstar', src: 'img/gstar.jpg', loc: 'Altın Yıldız Töreni' },
+  ];
+  const CAPS = ['Kupa bizim! 🏆', 'Her şey onlar için ❤️', 'Rüyaydı, gerçek oldu ⭐', 'Daha bitmedi 💪', 'Taraftarımıza teşekkürler 🙏'];
+  const OTHERS = [
+    { u: 'akin.kaptan', n: 'A', c: 'linear-gradient(135deg,#7fb2ff,#1e5bd8)', txt: 'Soyunma odasında bu enerji başka 🔥', bg: 'linear-gradient(135deg,#1e5bd8,#0b1838)', likes: 48210, time: '2 sa' },
+    { u: 'futbolgundemi', n: 'FG', c: 'linear-gradient(135deg,#ff6f8a,#c8102e)', txt: 'SON DAKİKA: Emir Yıldız için 3 dev kulüp sırada!', bg: 'linear-gradient(135deg,#c8102e,#3a0a14)', likes: 312400, time: '5 sa', v: true },
+    { u: 'madridpusulasi', n: 'MP', c: 'linear-gradient(135deg,#ffffff,#d4dae8)', txt: 'Ayın oyuncusu: Emir Yıldız ⭐ 4 gol · 3 asist', bg: 'linear-gradient(135deg,#f5f7fb,#c9d2e6)', ink: '#0a1530', likes: 189500, time: '1 g', v: true },
+  ];
+  // Evim Emlak: oyundaki evler (ÇATI KATI, VİLLA, ADA) + iki yeni öneri
+  const HOMES = [
+    { id: 'rent', n: 'Kiralık Daire', where: 'Beşiktaş, İstanbul', room: '2+1 · 95 m²', p: 0, kind: 'flat', d: 'Şu an yaşadığın ev', rent: true },
+    { id: 'studio', n: 'Deniz Gören Stüdyo Daire', where: 'Moda, Kadıköy', room: '1+1 · 60 m²', p: 180000, kind: 'studio', d: 'Her hafta moral +1', fx: { morale: 1 }, tag: 'Yeni öneri' },
+    { id: 'house', n: 'Bahçeli Müstakil Ev', where: 'Çengelköy, Üsküdar', room: '4+1 · 240 m²', p: 1600000, kind: 'house', d: 'Her hafta moral +2, Ün +2 · Aile ziyaretleri +', fx: { morale: 2, fame: 1, family: 2 }, tag: 'Yeni öneri' },
+  ].concat(HOMES_G.map((h, i) => ({ id: h.id, n: h.n, p: h.p, d: h.d, kind: ['penthouse', 'villa', 'island'][i], where: ['Levent, İstanbul', 'Bebek, Boğaz', 'Ege Denizi'][i], room: ['5+1 · 320 m² · teras', '7+2 · 680 m² · havuz', '42 dönüm · iskele'][i], fx: [{ morale: 2, fame: 3 }, { morale: 3, fame: 4 }, { morale: 5, fame: 8 }][i] })));
+  const CARSPEC = { scooter: ['25 km/s', '—', '1 kW'], hatch: ['185 km/s', '9,8 sn', '110 bg'], moto: ['245 km/s', '3,1 sn', '160 bg'], suv: ['250 km/s', '5,4 sn', '420 bg'], sport: ['330 km/s', '2,9 sn', '720 bg'], classic: ['240 km/s', '6,2 sn', '350 bg'], yacht: ['38 knot', '—', '2×1800 bg'], jet: ['950 km/s', '—', '12 kişi'] };
+  const RIDE_KIND = { scooter: 'scooter', hatch: 'hatch', moto: 'moto', suv: 'suv', life4: 'sport', classic: 'classic', life6: 'yacht', jet: 'jet' };
+  const RIDE_COL = { scooter: '#22c3e6', hatch: '#e8e8ec', moto: '#ff3b30', suv: '#2b2f3a', sport: '#ffcf3f', classic: '#9b1c1c', yacht: '#1e5bd8', jet: '#d7dbe6' };
+  const SHOPCATS = [['all', 'Tümü'], ['watch', 'Saat & Takı'], ['fashion', 'Moda'], ['tech', 'Elektronik'], ['hobby', 'Hobi'], ['sport', 'Sporcu']];
+  const PLANS = [
+    { k: 'premium', n: 'Premium', s: 'Reklamsız oyun, ekstra kariyer yuvası, hızlı ilerleme', pr: '4,99 $', owned: true },
+    { k: 'plus', n: 'Premium+', s: 'Her şey dahil: Premium, Teknik Direktör, Dünya Şampiyonası, Efsaneler', pr: '14,99 $', pop: true },
+    { k: 'diamond', n: 'Diamond', s: 'Altın görünümler, senaryolar, erken erişim, kurucu rozeti', pr: '9,99 $' },
+    { k: 'coach', n: 'Teknik Direktör', s: 'Takımın başına geç: transfer, taktik, canlı maç', pr: '5,99 $' },
+  ];
+
+  const fresh = () => ({
+    money: 32500000, ap: 3, phone: 0, owned: [0], wall: 0, followers: 1240000,
+    rel: { family: 72, love: 81, coach: 64, team: 68, friends: 58, morale: 76, fame: 64 },
+    th: Object.fromEntries(Object.keys(THREADS).map((k) => [k, { msgs: THREADS[k].msgs.slice(), done: false, unread: true }])),
+    posts: [{ id: 'trophy', cap: 'Kupa bizim! 🏆', likes: 1912000, q: 0, liked: false, time: '3 g', loc: 'Madrid Pusulası Stadyumu' }, { id: 'family', cap: 'Her şey onlar için ❤️', likes: 846000, q: 0, liked: false, time: '1 hf', loc: 'Ev' }],
+    cal: BASE_CAL.slice(), calSel: TODAY,
+    tx: [
+      { i: '⚽', t: 'Maaş · Madrid Pusulası', s: 'Bu hafta', v: 96153 },
+      { i: '👟', t: 'Sponsor · Rüzgar Spor', s: 'Bu hafta', v: 85000 },
+      { i: '🤝', t: 'Menajer payı', s: 'Bu hafta', v: -12400 },
+      { i: '🍽️', t: 'Restoran · Boğaz', s: 'Dün', v: -1850 },
+    ],
+    have: { rent: 1 }, home: 'rent', cart: [], shopCat: 'all', carTab: 'all', estFilter: 'all', plan: 'plus',
+    log: [], app: null, locked: true, sub: null, feedTab: 'feed', sheet: null,
+  });
+  let S = fresh();
+
+  // ---------------- yardımcılar ----------------
+  const $ = (s, r = document) => r.querySelector(s);
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const money = (n) => { const a = Math.abs(n); const s = a >= 1e6 ? (a / 1e6).toFixed(a >= 1e8 ? 0 : 2).replace('.', ',').replace(',00', '') + ' Mn $' : Math.round(a).toLocaleString('tr-TR') + ' $'; return (n < 0 ? '-' : '') + s; };
+  const short = (n) => n >= 1e6 ? (n / 1e6).toFixed(1).replace('.', ',') + ' Mn' : n >= 1e3 ? Math.round(n / 1e3) + ' B' : String(n);
+  const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+  const P = () => PHONES[S.phone];
+  const STAT = { family: ['Aile', '#46e08f'], love: ['Defne', '#ff6f8a'], coach: ['Hoca', '#9aa6c4'], team: ['Takım', '#7fb2ff'], friends: ['Arkadaşlar', '#c792ff'], morale: ['Moral', '#ffcf3f'], fame: ['Ün', '#ff9f43'] };
+  const art = (a, price) => (typeof ShopArt !== 'undefined' ? ShopArt.svg(a, ShopArt.tierColor(price)) : '');
+  const IC = {
+    msg: '<svg viewBox="0 0 24 24" fill="#fff"><path d="M12 3C6.5 3 2 6.8 2 11.5c0 2.6 1.4 4.9 3.6 6.5L5 22l4.3-2.3c.9.2 1.8.3 2.7.3 5.5 0 10-3.8 10-8.5S17.5 3 12 3z"/></svg>',
+    // StarFeed: kendine has logo (lacivert zemin üzerinde parlayan yıldız ve yayın halkası)
+    feed: '<svg viewBox="0 0 24 24"><path d="M12 3.2l2.5 5.3 5.8.7-4.3 4 1.1 5.7L12 16.1l-5.1 2.8L8 13.2 3.7 9.2l5.8-.7z" fill="#ffcf3f"/><path d="M19.5 3.5a9 9 0 012 3.3M4.5 3.5a9 9 0 00-2 3.3" stroke="#7fb2ff" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>',
+    wiki: '<svg viewBox="0 0 24 24" fill="none" stroke="#202122" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3.5 3 14.5 0 18M12 3c-3 3.5-3 14.5 0 18"/></svg>',
+    bank: '<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 10l9-6 9 6"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20h18"/></svg>',
+    cal: `<svg viewBox="0 0 24 24"><text x="12" y="8.2" text-anchor="middle" font-size="5.2" font-weight="700" font-family="Barlow Semi Condensed" fill="#e5383b">CMT</text><text x="12" y="19.5" text-anchor="middle" font-size="12" font-weight="500" font-family="Barlow Semi Condensed" fill="#111">${TODAY}</text></svg>`,
+    agent: '<svg viewBox="0 0 24 24" fill="none" stroke="#0a1530" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M3 13h18"/></svg>',
+    photos: '<svg viewBox="0 0 24 24"><circle cx="12" cy="7" r="4" fill="#ffcf3f"/><circle cx="17" cy="12" r="4" fill="#ff6f8a" opacity=".9"/><circle cx="12" cy="17" r="4" fill="#7fb2ff" opacity=".9"/><circle cx="7" cy="12" r="4" fill="#46e08f" opacity=".9"/></svg>',
+    store: '<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg>',
+    set: '<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg>',
+    emlak: '<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><circle cx="12" cy="14" r="2.2" fill="#fff"/><path d="M12 16.2V19"/></svg>',
+    cars: '<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5" fill="#fff"/><path d="M3.5 10.5c3-1.2 5.8-1.5 8.5-1.5s5.5.3 8.5 1.5M12 14.5V21"/></svg>',
+    shop: '<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 10V6a3 3 0 016 0v4"/></svg>',
+    prem: '<svg viewBox="0 0 24 24"><path d="M12 2.8l2.4 5 5.5.7-4 3.8 1 5.4L12 15l-4.9 2.7 1-5.4-4-3.8 5.5-.7z" fill="#2a1c00"/><path d="M18.5 15.5v6M15.5 18.5h6" stroke="#2a1c00" stroke-width="2.2" stroke-linecap="round"/></svg>',
+    back: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 5l-7 7 7 7"/></svg>',
+    star: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.8l-5.2 2.8 1-5.8L3.5 9.7l5.9-.8z"/></svg>',
+    comment: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="13" rx="3"/><path d="M8 17l-2 4 6-4"/></svg>',
+    repost: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9h13l-3-3M20 15H7l3 3"/></svg>',
+    plus: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14"/></svg>',
+    check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12l5 5 9-10"/></svg>',
+    search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>',
+    cart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h2l2.4 11h11L21 8H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>',
+    phone: '<svg viewBox="0 0 24 24" fill="#fff"><path d="M21 16.4v3.2a1.9 1.9 0 01-2.1 1.9A18.8 18.8 0 012.5 5.1 1.9 1.9 0 014.4 3h3.2c.9 0 1.7.7 1.9 1.6l.6 2.8c.1.7-.1 1.4-.6 1.8l-1.3 1.3a15 15 0 006 6l1.3-1.3c.5-.5 1.2-.7 1.8-.6l2.8.6c.9.2 1.6 1 1.6 1.9z" transform="rotate(135 12 12)"/></svg>',
+  };
+  const APPS = [
+    { k: 'wiki', n: 'Starpedia', bg: '#ffffff' },
+    { k: 'bank', n: 'Banka', bg: 'linear-gradient(135deg,#1f4fbf,#0e2a6b)' },
+    { k: 'agent', n: 'Menajer', bg: 'linear-gradient(135deg,#ffd76a,#e0a10e)' },
+    { k: 'prem', n: 'StarFoot+', bg: 'linear-gradient(140deg,#fff1b8,#ffcf3f 45%,#c98a06)' },
+    { k: 'emlak', n: 'Evim Emlak', bg: 'linear-gradient(135deg,#14a08d,#0b5e53)' },
+    { k: 'cars', n: 'Arabalar', bg: 'linear-gradient(135deg,#2a2a31,#0d0d10)' },
+    { k: 'shop', n: 'Alışveriş', bg: 'linear-gradient(135deg,#a855f7,#6d28d9)' },
+    { k: 'store', n: 'TeknoPazar', bg: 'linear-gradient(135deg,#ff7a45,#e0283e)' },
+    { k: 'photos', n: 'Fotoğraflar', bg: '#ffffff' },
+    { k: 'set', n: 'Ayarlar', bg: 'linear-gradient(135deg,#8a93a6,#4b5363)' },
+  ];
+  const DOCK = [
+    { k: 'msg', n: 'Mesajlar', bg: 'linear-gradient(135deg,#5ee27a,#1fa646)' },
+    { k: 'feed', n: 'StarFeed', bg: 'linear-gradient(150deg,#16306f,#0a1530)' },
+    { k: 'cal', n: 'Takvim', bg: '#ffffff' },
+    { k: 'cam', n: 'Kamera', bg: 'linear-gradient(135deg,#3a3f4b,#16181d)', ic: '<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.6"/></svg>' },
+  ];
+
+  // ---------------- çizimler: ev ve araç ----------------
+  function houseSvg(kind) {
+    const sky = { flat: ['#9ec9ff', '#e8f3ff'], studio: ['#8fd3ff', '#e9f8ff'], house: ['#a8e0ff', '#f1fbff'], penthouse: ['#0d1b3d', '#36507f'], villa: ['#ffb36b', '#ffe3b5'], island: ['#5ec8ff', '#d6f3ff'] }[kind];
+    const g = `<defs><linearGradient id="sk${kind}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${sky[0]}"/><stop offset="1" stop-color="${sky[1]}"/></linearGradient></defs><rect width="320" height="200" fill="url(#sk${kind})"/>`;
+    const win = (x, y, w, h, n, m, lit) => { let s = ''; for (let i = 0; i < n; i++) for (let j = 0; j < m; j++) s += `<rect x="${x + i * (w + 6)}" y="${y + j * (h + 8)}" width="${w}" height="${h}" rx="1.5" fill="${lit && (i + j) % 3 ? '#ffd76a' : '#bcd7f0'}"/>`; return s; };
+    const B = {
+      flat: `<rect x="0" y="150" width="320" height="50" fill="#9aa5b1"/><rect x="40" y="40" width="110" height="120" fill="#e9e1d4"/><rect x="160" y="70" width="120" height="90" fill="#d9cdb9"/>${win(52, 52, 16, 14, 4, 4)}${win(172, 82, 18, 14, 4, 3)}<rect x="88" y="132" width="16" height="28" fill="#7a5a3a"/>`,
+      studio: `<rect x="0" y="140" width="320" height="60" fill="#3d8bd9"/><path d="M0 150 Q80 140 160 150 T320 148 V200 H0z" fill="#2f78c4"/><rect x="190" y="50" width="100" height="110" fill="#f4efe6"/>${win(202, 62, 14, 12, 4, 5)}<rect x="30" y="110" width="140" height="40" fill="#e8e3d8"/>${win(40, 118, 18, 10, 5, 1)}`,
+      house: `<rect x="0" y="150" width="320" height="50" fill="#5cb85c"/><path d="M70 90 L160 40 L250 90 Z" fill="#b5523a"/><rect x="85" y="88" width="150" height="72" fill="#f6efe3"/><rect x="148" y="120" width="24" height="40" fill="#6b4a2b"/>${win(100, 102, 26, 20, 1, 1)}${win(194, 102, 26, 20, 1, 1)}<circle cx="40" cy="132" r="22" fill="#3e9b4f"/><rect x="37" y="140" width="6" height="20" fill="#6b4a2b"/><circle cx="285" cy="128" r="26" fill="#43a656"/><rect x="282" y="140" width="6" height="22" fill="#6b4a2b"/><path d="M0 160h320" stroke="#8b6b4a" stroke-width="3" stroke-dasharray="6 4"/>`,
+      penthouse: `${Array.from({ length: 40 }, (_, i) => `<circle cx="${(i * 73) % 320}" cy="${(i * 37) % 90}" r="${i % 3 ? .8 : 1.3}" fill="#fff" opacity=".8"/>`).join('')}<rect x="10" y="120" width="50" height="80" fill="#1b2a4a"/>${win(16, 128, 8, 8, 3, 6, 1)}<rect x="250" y="100" width="60" height="100" fill="#1b2a4a"/>${win(256, 108, 9, 8, 4, 8, 1)}<rect x="110" y="40" width="100" height="160" fill="#22355e"/>${win(118, 80, 12, 10, 6, 7, 1)}<rect x="104" y="34" width="112" height="34" rx="2" fill="#ffd76a" opacity=".95"/><path d="M104 34h112" stroke="#fff" stroke-width="2"/><rect x="116" y="42" width="88" height="18" fill="#fff3c4" opacity=".7"/>`,
+      villa: `<circle cx="250" cy="70" r="26" fill="#ffd27a" opacity=".9"/><rect x="0" y="120" width="320" height="30" fill="#2f78c4"/><rect x="0" y="146" width="320" height="54" fill="#e9dcc3"/><rect x="40" y="88" width="200" height="62" fill="#fbf8f2"/><rect x="40" y="80" width="200" height="10" fill="#d8d0c2"/><rect x="120" y="58" width="120" height="30" fill="#f4efe6"/><rect x="50" y="98" width="70" height="40" fill="#7fc7f2" opacity=".85"/><rect x="132" y="98" width="96" height="40" fill="#7fc7f2" opacity=".85"/><rect x="130" y="64" width="100" height="18" fill="#7fc7f2" opacity=".8"/><rect x="60" y="160" width="170" height="26" rx="4" fill="#35b7e6"/><path d="M60 168h170" stroke="#9ee6ff" stroke-width="2" opacity=".7"/><rect x="262" y="96" width="5" height="54" fill="#6b4a2b"/><path d="M264 98c-16-10-28-4-34 2M264 98c14-12 28-8 34-2M264 98c-4-14-16-20-24-18M264 98c6-14 18-18 26-14" stroke="#2f8c45" stroke-width="5" fill="none" stroke-linecap="round"/>`,
+      island: `<rect x="0" y="110" width="320" height="90" fill="#1fa2d6"/><path d="M0 130 Q160 115 320 132 V200 H0z" fill="#1891c4"/><ellipse cx="160" cy="140" rx="120" ry="26" fill="#f0dca8"/><ellipse cx="160" cy="132" rx="95" ry="20" fill="#5cb85c"/><rect x="128" y="104" width="70" height="28" fill="#fbf8f2"/><rect x="134" y="110" width="58" height="14" fill="#7fc7f2"/><rect x="80" y="96" width="4" height="40" fill="#6b4a2b"/><path d="M82 98c-12-8-22-3-26 2M82 98c10-10 22-7 26-2M82 98c-2-12-12-16-18-14" stroke="#2f8c45" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M230 150h50" stroke="#8b6b4a" stroke-width="4"/><path d="M262 150l18-14 4 14z" fill="#fff"/>`,
+    }[kind];
+    return `<svg viewBox="0 0 320 200" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${g}${B}</svg>`;
+  }
+  function carSvg(kind, col) {
+    const wheel = (x) => `<circle cx="${x}" cy="128" r="20" fill="#111"/><circle cx="${x}" cy="128" r="11" fill="#9aa0ab"/><circle cx="${x}" cy="128" r="3" fill="#333"/>`;
+    const glass = '#9fc8e8';
+    const shapes = {
+      hatch: `<path d="M30 124 L38 92 Q46 76 70 74 L150 72 Q176 72 196 92 L232 100 Q262 104 266 118 L268 124 Z" fill="${col}"/><path d="M78 80 L144 78 Q164 79 180 94 L74 96 Z" fill="${glass}"/><path d="M122 79v17" stroke="${col}" stroke-width="4"/>${wheel(78)}${wheel(222)}`,
+      suv: `<path d="M24 124 L26 92 Q30 70 56 66 L170 64 Q196 66 214 86 L250 92 Q274 96 276 114 L276 124 Z" fill="${col}"/><path d="M60 72 L168 70 Q186 72 200 88 L58 90 Z" fill="${glass}"/><path d="M112 71v19M156 71v19" stroke="${col}" stroke-width="4"/>${wheel(74)}${wheel(226)}`,
+      sport: `<path d="M18 124 Q20 106 46 100 L96 92 Q130 70 170 72 Q206 76 234 94 L276 104 Q294 108 296 120 L296 124 Z" fill="${col}"/><path d="M104 92 Q134 76 168 78 Q196 80 214 94 Z" fill="#1d2433" opacity=".85"/><path d="M40 112h60M200 112h70" stroke="rgba(0,0,0,.25)" stroke-width="3"/>${wheel(72)}${wheel(242)}`,
+      classic: `<path d="M20 124 Q18 104 40 100 L70 98 Q90 72 130 70 L178 70 Q206 72 222 96 L262 100 Q286 104 284 124 Z" fill="${col}"/><path d="M98 98 Q108 78 132 76 L176 76 Q196 78 208 98 Z" fill="${glass}"/><path d="M152 77v21" stroke="${col}" stroke-width="4"/><path d="M20 120h264" stroke="#d9d9d9" stroke-width="4"/>${wheel(70)}${wheel(232)}`,
+    };
+    if (shapes[kind]) return `<svg viewBox="0 0 310 160" aria-hidden="true"><ellipse cx="155" cy="148" rx="140" ry="9" fill="rgba(0,0,0,.45)"/>${shapes[kind]}</svg>`;
+    return `<svg viewBox="0 0 64 64" aria-hidden="true">${typeof SHOP_ART !== 'undefined' && SHOP_ART[kind] ? SHOP_ART[kind](col) : ''}</svg>`;
+  }
+
+  // ---------------- oyun durumu paneli ----------------
+  function panel(flashKeys = []) {
+    $('#stats').innerHTML = Object.entries(STAT).map(([k, [l, c]]) => `<div class="stat"><span>${l}</span><div class="bar"><i style="width:${S.rel[k]}%;background:${c}"></i></div><b class="${flashKeys.includes(k) ? 'flash' : ''}">${Math.round(S.rel[k])}</b></div>`).join('');
+    $('#apTxt').textContent = `${S.ap} aksiyon hakkı`;
+    $('#kMoney').textContent = money(S.money); $('#kFol').textContent = short(S.followers); $('#kPhone').textContent = P().n;
+    if (flashKeys.includes('money')) $('#kMoney').classList.add('flash');
+    $('#log').innerHTML = S.log.slice(0, 14).map((x) => `<li><span>${x.ic}</span><span><b>${esc(x.t)}</b> ${x.fx.map(([v, cl]) => `<span class="${cl}">${esc(v)}</span>`).join(' ')}</span></li>`).join('') || '<li>Telefonda yaptıkların burada görünecek.</li>';
+  }
+  function apply(fx = {}, title, ic = '📱', apCost = 0) {
+    const keys = [], parts = [];
+    Object.entries(fx).forEach(([k, v]) => {
+      if (k in S.rel) { S.rel[k] = clamp(S.rel[k] + v, 0, 100); keys.push(k); parts.push([`${STAT[k][0]} ${v > 0 ? '+' : ''}${v}`, v >= 0 ? 'up' : 'down']); }
+    });
+    if (apCost) { S.ap = Math.max(0, S.ap - apCost); parts.push([`−${apCost} aksiyon`, 'down']); }
+    if (title) S.log.unshift({ ic, t: title, fx: parts });
+    panel(keys);
+    if (parts.length) toast(parts.map((p) => p[0]).join(' · '));
+  }
+  function spend(v, title, ic) {
+    S.money -= v; S.tx.unshift({ i: ic, t: title, s: 'Şimdi', v: -v });
+    S.log.unshift({ ic, t: title, fx: [[`−${money(v)}`, 'down']] });
+    panel(['money']);
+  }
+
+  // ---------------- çerçeve ----------------
+  const now = () => '19:42';
+  const LIGHT = ['wiki', 'store', 'cal', 'emlak', 'shop'];
+  function chrome() {
+    $('#phone').className = 'phone t' + S.phone;
+    $('#wall').style.background = WALLS[S.wall].bg;
+    const light = LIGHT.includes(S.app) && !(S.app === 'emlak');
+    const b = P().bat;
+    $('#status').className = 'status' + (light ? ' dark' : '');
+    $('#status').innerHTML = `<span>${S.locked ? '' : now()}</span><span class="ico"><svg width="17" height="11" viewBox="0 0 17 11" fill="currentColor"><rect x="0" y="7" width="3" height="4" rx="1"/><rect x="4.5" y="5" width="3" height="6" rx="1"/><rect x="9" y="2.5" width="3" height="8.5" rx="1"/><rect x="13.5" y="0" width="3" height="11" rx="1" opacity="${S.phone ? 1 : .35}"/></svg><span style="font-size:12px">${S.phone >= 2 ? '5G' : '4G'}</span><span class="batt ${b < 30 ? 'low' : ''}"><i style="width:${b}%"></i></span></span>`;
+    $('#homebar').className = 'homebar' + (LIGHT.includes(S.app) ? ' dark' : '');
+  }
+  function render() {
+    chrome();
+    const v = $('#view');
+    const keep = v.querySelector('.body') ? v.querySelector('.body').scrollTop : 0;
+    const same = render.last === S.app + '|' + S.sub;
+    v.innerHTML = S.locked ? lockView() : !S.app ? homeView() : appView();
+    render.last = S.app + '|' + S.sub;
+    if (same && v.querySelector('.body')) { v.querySelector('.body').scrollTop = keep; const a = v.querySelector('.appv'); if (a) a.style.animation = 'none'; }
+    bind();
+  }
+
+  // ---------------- kilit ekranı ----------------
+  function lockView() {
+    const items = [];
+    ['defne', 'hoca', 'anne', 'menajer'].forEach((k, i) => { if (S.th[k].unread) items.push(['msg', PEOPLE[k], THREADS[k].msgs[THREADS[k].msgs.length - 1][1], ['şimdi', '4 dk', '12 dk', '1 sa'][i], k]); });
+    items.push(['feed', null, 'futbolgundemi seni bir gönderide etiketledi', '2 sa', null]);
+    return `<div class="view lock">
+      <div class="date">Cumartesi, ${TODAY} Kasım</div>
+      <div class="time">${now()}</div>
+      <div class="week">2031 SEZONU · 12. HAFTA · YARIN MAÇ VAR</div>
+      <div class="notifs">${items.slice(0, 4).map(([app, p, t, tm, th]) => `<button class="nt" data-open="${app}" ${th ? `data-th="${th}"` : ''} type="button"><span class="ai" style="background:${app === 'msg' ? DOCK[0].bg : DOCK[1].bg}">${IC[app]}</span><span><b>${app === 'msg' ? esc(p.n) : 'StarFeed'} <small>${tm}</small></b><p>${esc(t)}</p></span></button>`).join('')}</div>
+      <button class="unlock" data-unlock type="button">Kilidi açmak için dokun</button>
+    </div>`;
+  }
+
+  // ---------------- ana ekran ----------------
+  function icon(a) {
+    const unread = a.k === 'msg' ? Object.values(S.th).filter((t) => t.unread).length : a.k === 'feed' ? 3 : a.k === 'agent' ? 2 : 0;
+    return `<button class="app" data-open="${a.k}" type="button" aria-label="${a.n}"><span class="ic" style="background:${a.bg}">${a.ic || IC[a.k]}${unread ? `<span class="badge">${unread}</span>` : ''}</span><span>${a.n}</span></button>`;
+  }
+  function homeView() {
+    const next = S.cal.filter((e) => e.k === 'match' && e.d >= TODAY).sort((a, b) => a.d - b.d)[0];
+    return `<div class="view home">
+      <div class="widgets">
+        <button class="wg" data-open="cal" type="button" style="color:#fff;border:1px solid rgba(255,255,255,.08)"><span class="lbl">Sıradaki maç</span><span class="big">${esc(next.t.split(': ')[1])}</span><small>${esc(next.t.split(':')[0])} · ${next.d === TODAY + 1 ? 'Yarın' : next.d + ' Kasım'} ${next.h}<br>${esc(next.s)}</small>
+          <div class="mini" style="margin-top:auto"><div><span>Form</span><span style="color:#46e08f;font-weight:700;letter-spacing:2px">G G B G M</span></div></div></button>
+        <div class="wg"><span class="lbl">Durum</span>
+          <div class="mini" style="margin-top:8px">${['family', 'love', 'coach', 'morale'].map((k) => `<div><span>${STAT[k][0]}</span><div class="bar"><i style="width:${S.rel[k]}%;background:${STAT[k][1]}"></i></div></div>`).join('')}</div>
+          <small style="margin-top:auto">${S.ap} aksiyon hakkın var</small></div>
+      </div>
+      <div class="apps">${APPS.map(icon).join('')}</div>
+      <div class="dock">${DOCK.map(icon).join('')}</div>
+    </div>`;
+  }
+
+  // ---------------- uygulamalar ----------------
+  const top = (title, cls = '', right = '') => `<div class="bar-top ${cls}"><button class="back" data-back type="button">${IC.back}<span>${S.sub ? 'Geri' : 'Ana ekran'}</span></button><h2>${title}</h2>${right}</div>`;
+  function appView() {
+    const a = S.app;
+    if (a === 'msg') return S.sub ? chatView(S.sub) : msgList();
+    return ({ call: callView, feed: feedView, wiki: wikiView, bank: bankView, cal: calView, agent: agentView, store: storeView, set: setView, photos: photosView, emlak: emlakView, cars: carsView, shop: shopView, prem: premView }[a] || (() => ''))();
+  }
+  function msgList() {
+    return `<div class="view appv">${top('Mesajlar')}<div class="body">${Object.keys(THREADS).map((k) => { const t = S.th[k], p = PEOPLE[k], last = t.msgs[t.msgs.length - 1]; return `<button class="thr" data-th="${k}" type="button"><span class="av" style="background:${p.c}">${p.i}</span><span style="min-width:0"><b><span>${t.unread ? '<i class="dot"></i>' : ''}${esc(p.n)}${p.heart ? ' ❤️' : ''} <small style="font-weight:500">· ${esc(p.role)}</small></span><small>${t.unread ? 'yeni' : 'okundu'}</small></b><p>${last[0] === 'out' ? 'Sen: ' : ''}${esc(last[1])}</p></span></button>`; }).join('')}</div></div>`;
+  }
+  function chatView(k) {
+    const t = S.th[k], p = PEOPLE[k], R = THREADS[k].replies;
+    return `<div class="view appv">${top(`<span style="display:flex;align-items:center;gap:8px"><span class="av sm" style="background:${p.c}">${p.i}</span><span style="display:flex;flex-direction:column;line-height:1.05">${esc(p.n)}<small style="font:500 12px var(--f-body);color:var(--muted)">${esc(p.role)}</small></span></span>`)}
+      <div class="body" id="chatBody"><div class="chat"><div class="day">Bugün</div>${t.msgs.map(([d, m, g]) => `<div class="bub ${d}${g ? ' gold' : ''}">${esc(m)}</div>`).join('')}${t.typing ? '<div class="typing"><i></i><i></i><i></i></div>' : ''}</div></div>
+      ${t.done ? '' : `<div class="replies"><span class="lbl2">Cevabın</span>${R.map((r, i) => `<button class="rep" data-rep="${i}" type="button" ${r.ap && S.ap < r.ap ? 'disabled' : ''}><span>${esc(r.t)}</span>${r.ap ? `<em>${r.ap} aksiyon</em>` : r.open ? '<em>uygulamayı aç</em>' : ''}</button>`).join('')}</div>`}
+    </div>`;
+  }
+  function callView() {
+    const p = PEOPLE.anne;
+    return `<div class="view callv"><span class="av" style="background:${p.c}">${p.i}</span><h3>Annem</h3><p id="callT">00:00</p><div class="wave">${Array.from({ length: 9 }, (_, i) => `<i style="height:${10 + (i % 4) * 6}px;animation-delay:${i * 0.09}s"></i>`).join('')}</div><button class="hang" data-hang type="button" aria-label="Kapat">${IC.phone}</button></div>`;
+  }
+  function photoBox(src, q) {
+    return `<div class="photo q${q}"><img src="${src}" alt="" loading="lazy">${q === 0 ? '<span class="noise"></span>' : ''}<span class="q">${PHONES[q].mp} MP</span></div>`;
+  }
+  const srcOf = (id) => PHOTOS.find((x) => x.id === id).src;
+  const meAv = '<span class="av sm" style="background:linear-gradient(135deg,#ffcf3f,#e08d0c);color:#0a1530;border-radius:10px">EY</span>';
+  function feedView() {
+    const tab = S.feedTab;
+    const head = `<div class="sf-top"><span class="sf-logo">Star<span>Feed</span></span><button class="round" data-share type="button" aria-label="Yeni paylaşım">${IC.plus}</button></div>`;
+    const seg = `<div class="seg"><button class="${tab === 'feed' ? 'on' : ''}" data-ftab="feed" type="button">Akış</button><button class="${tab === 'me' ? 'on' : ''}" data-ftab="me" type="button">Profilim</button></div>`;
+    let body;
+    if (tab === 'me') {
+      body = `<div class="prof"><span class="av" style="background:linear-gradient(135deg,#ffcf3f,#e08d0c);color:#0a1530;border-radius:22px">EY</span><div><b style="font:800 21px var(--f-display)">Emir Yıldız<span class="vf">✓</span></b><div style="color:var(--muted);font-size:13px">@emiryildiz10 · Forvet, Madrid Pusulası</div>
+        <div class="nums" style="margin-top:8px"><div><b>${S.posts.length + 46}</b><span>gönderi</span></div><div><b>${short(S.followers)}</b><span>takipçi</span></div><div><b>312</b><span>takip</span></div></div></div></div>
+        <button class="btn" data-share type="button" style="margin-bottom:12px">Yeni fotoğraf paylaş</button>
+        <div class="grid3">${S.posts.map((p) => photoBox(srcOf(p.id), p.q)).join('')}</div>`;
+    } else {
+      const own = S.posts.map((p, i) => `<article class="post"><div class="ph">${meAv}<span><b>emiryildiz10<span class="vf">✓</span></b><small>${esc(p.loc)}</small></span></div>${photoBox(srcOf(p.id), p.q)}
+        <div class="pa2"><button class="${p.liked ? 'on' : ''}" data-like="${i}" type="button">${IC.star}<span>Alkış</span></button><button type="button">${IC.comment}<span>Yorum</span></button><button type="button">${IC.repost}<span>Yay</span></button></div>
+        <div class="pc"><span class="lk">⭐ ${(p.likes + (p.liked ? 1 : 0)).toLocaleString('tr-TR')} alkış</span><b>emiryildiz10</b>${esc(p.cap)} <small>· ${p.time}</small></div></article>`);
+      const oth = OTHERS.map((o) => `<article class="post"><div class="ph"><span class="av sm" style="background:${o.c};color:${o.ink || '#fff'};border-radius:10px">${o.n}</span><span><b>${o.u}${o.v ? '<span class="vf">✓</span>' : ''}</b><small>${o.time}</small></span></div><div class="txtpost" style="background:${o.bg};color:${o.ink || '#fff'}">${esc(o.txt)}</div><div class="pa2"><button type="button">${IC.star}<span>Alkış</span></button><button type="button">${IC.comment}<span>Yorum</span></button></div><div class="pc"><span class="lk">⭐ ${o.likes.toLocaleString('tr-TR')} alkış</span></div></article>`);
+      const mix = [own[0], oth[1], own[1], oth[0], oth[2], ...own.slice(2)].filter(Boolean);
+      body = `<div class="stories">${[['Sen', 'EY', 'linear-gradient(135deg,#ffcf3f,#e08d0c)'], ['Defne', 'D', PEOPLE.defne.c], ['Kaptan', 'K', PEOPLE.kaptan.c], ['Pusula', 'MP', '#dfe5f2'], ['Gündem', 'FG', '#c8102e'], ['Can', 'C', PEOPLE.can.c]].map(([n, i, c]) => `<button class="st" type="button"><span class="av" style="background:${c};color:${c.startsWith('#d') ? '#0a1530' : '#fff'}">${i}</span><span>${n}</span></button>`).join('')}</div>${mix.join('')}`;
+    }
+    return `<div class="view appv">${top('StarFeed')}<div class="body">${head}${seg}${body}</div>${S.sheet ? shareSheet() : ''}</div>`;
+  }
+  function shareSheet() {
+    const sh = S.sheet;
+    const est = Math.round(S.followers * 0.42 * P().mult * (0.85 + S.rel.fame / 400));
+    return `<div class="sheet" data-close-sheet><div class="in"><div class="grab"></div><h3>Yeni paylaşım</h3>
+      <div class="pick">${PHOTOS.map((p) => `<button class="${sh.photo === p.id ? 'on' : ''}" data-pick="${p.id}" type="button">${photoBox(p.src, S.phone)}</button>`).join('')}</div>
+      <div class="chips">${CAPS.map((c, i) => `<button class="chip ${sh.cap === i ? 'on' : ''}" data-cap="${i}" type="button">${esc(c)}</button>`).join('')}</div>
+      <div class="camq"><span>Kamera: <b>${P().n} · ${P().mp} MP</b></span><span>Tahmini alkış: <b>${short(est)}</b></span></div>
+      <button class="btn" data-post type="button" ${sh.photo ? '' : 'disabled'}>Paylaş</button>
+      ${S.phone < 3 ? '<p style="color:var(--muted);font-size:12.5px;margin:10px 0 0">Daha iyi kamera daha çok alkış getirir. TeknoPazar\'a göz at.</p>' : ''}
+    </div></div>`;
+  }
+  function wikiView() {
+    const home = HOMES.find((h) => h.id === S.home);
+    const rides = RIDES.filter((r) => S.have[r.id]).map((r) => r.n);
+    return `<div class="view appv wiki">${top('Starpedia')}<div class="body">
+      <h1>Emir Yıldız</h1><div class="sub">Starpedia, özgür futbol ansiklopedisi</div>
+      <div class="ibox"><div class="hd">Emir Yıldız</div><div class="img"><img src="img/trophy.jpg" alt="Emir Yıldız kupayla"></div>
+        <table><tr><th>Tam adı</th><td>Emir Yıldız</td></tr><tr><th>Doğum tarihi</th><td>2005 (26 yaşında)</td></tr><tr><th>Doğum yeri</th><td>İstanbul, Türkiye</td></tr><tr><th>Mevkii</th><td>Forvet</td></tr><tr><th>Kulüp</th><td><a href="#">Madrid Pusulası</a></td></tr><tr><th>Forma no.</th><td>10</td></tr><tr><th>Takipçi</th><td>${short(S.followers)}</td></tr></table></div>
+      <p><b>Emir Yıldız</b> (d. 2005, İstanbul), Madrid Pusulası'nda forvet olarak oynayan Türk futbolcudur. Kariyerine 8 yaşında mahalle maçlarında başlamış, bir scoutun dikkatini çekerek altyapıya katılmıştır.</p>
+      <h3>Kariyer</h3><p>2024'te profesyonel sözleşme imzaladı. 2029'da Madrid Pusulası'na transfer oldu ve ilk sezonunda ligi şampiyon tamamladı. 2031'de <a href="#">Altın Yıldız</a> ödülünü kazandı.</p>
+      <h3>Ödüller</h3><ul><li>Altın Yıldız (2031)</li><li>Yıldızlar Ligi şampiyonu (2029)</li><li>Gol kralı (2030)</li></ul>
+      <h3>Kişisel hayat</h3><p>Mimar Defne ile ${S.rel.love >= 85 ? 'ilişkisini sosyal medyada sık sık paylaşmaktadır' : 'ilişkisi bulunmaktadır'}. ${home.rent ? 'İstanbul Beşiktaş\'ta kiralık bir dairede yaşamaktadır' : `${esc(home.where)} bölgesindeki ${esc(home.n.toLocaleLowerCase('tr'))} evinde yaşamaktadır`}.${rides.length ? ` Garajında ${esc(rides.join(', ').toLocaleLowerCase('tr'))} bulunur.` : ''} ${S.rel.family >= 80 ? 'Maçlardan sonra ilk telefonunu annesine açtığını söylemiştir.' : 'Yoğun programı nedeniyle ailesini az gördüğünü söylemiştir.'}</p>
+    </div></div>`;
+  }
+  function bankView() {
+    return `<div class="view appv bank">${top('Banka')}<div class="body">
+      <div class="bal"><span>Vadesiz hesap</span><b>${money(S.money)}</b><small>Emir Yıldız · **** 1010</small></div>
+      <div class="inc"><div><span>Haftalık maaş</span><b class="pos">${money(96153)}</b></div><div><span>Sponsor geliri</span><b class="pos">${money(85000)}</b></div></div>
+      <div class="secl">Hareketler</div>${S.tx.map((x) => `<div class="tx"><span class="ti">${x.i}</span><span>${esc(x.t)}<small>${esc(x.s)}</small></span><b class="${x.v >= 0 ? 'pos' : 'neg'}">${x.v >= 0 ? '+' : ''}${money(x.v)}</b></div>`).join('')}
+    </div></div>`;
+  }
+  // iOS takvimine benzeyen ay görünümü (Kasım 2031, 1 Kasım Cumartesi)
+  function calView() {
+    const first = 5; // Pzt=0 … 1 Kasım 2031 Cumartesi
+    const days = 30, sel = S.calSel;
+    const ev = (d) => S.cal.filter((e) => e.d === d).sort((a, b) => a.h.localeCompare(b.h));
+    let cells = '';
+    for (let i = 0; i < first; i++) cells += '<span class="blank"></span>';
+    for (let d = 1; d <= days; d++) {
+      const wd = (first + d - 1) % 7, es = ev(d);
+      const kinds = [...new Set(es.map((e) => e.k))].slice(0, 3);
+      cells += `<button class="${wd >= 5 ? 'we' : ''} ${d === TODAY ? 'today' : ''} ${d === sel ? 'sel' : ''}" data-day="${d}" type="button"><span class="n">${d}</span><span class="dots">${kinds.map((k) => `<i style="background:${CALK[k][0]}"></i>`).join('')}</span></button>`;
+    }
+    const wdName = ['Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi', 'Pazar'][(first + sel - 1) % 7];
+    const list = ev(sel);
+    return `<div class="view appv ical">${top('Takvim')}<div class="body">
+      <div class="mhead"><h3>Kasım <span>2031</span></h3><div class="nav"><button type="button" data-today>Bugün</button></div></div>
+      <div class="wkd"><span>Pzt</span><span>Sal</span><span>Çar</span><span>Per</span><span>Cum</span><span>Cmt</span><span>Paz</span></div>
+      <div class="mgrid">${cells}</div>
+      <div class="agenda"><h4>${sel} Kasım ${wdName}${sel === TODAY ? ' · Bugün' : ''}</h4>
+        ${list.length ? list.map((e) => `<div class="ag"><span class="tm">${e.h}</span><div class="bx ${e.isNew ? 'new' : ''}" style="background:${CALK[e.k][1]};color:${CALK[e.k][2]};border-left:4px solid ${CALK[e.k][0]}">${esc(e.t)}<small>${esc(e.s)}</small></div></div>`).join('') : '<div class="noev">Etkinlik yok. Dinlenme günü.</div>'}
+      </div>
+    </div></div>`;
+  }
+  const shirtSvg = (c1, c2) => `<svg class="shirt" viewBox="0 0 44 44"><path d="M14 6l-9 6 4 8 4-2v20h18V18l4 2 4-8-9-6c-1 3-4 5-8 5s-7-2-8-5z" fill="${c1}" stroke="rgba(0,0,0,.25)"/><path d="M19 14h6v24h-6z" fill="${c2}" opacity=".9"/></svg>`;
+  function agentView() {
+    const offers = [
+      { c: 'Barselona Kanatları', l: 'İberya Ligi · 2. sırada', c1: '#1d3f95', c2: '#c8102e', w: '1,25 Mn $', y: '3 yıl', r: 'İlk 11' },
+      { c: 'Madrid Pusulası (yenileme)', l: 'Mevcut kulübün', c1: '#f5f7fb', c2: '#ffcf3f', w: '1,05 Mn $', y: '4 yıl', r: 'Kaptan adayı' },
+    ];
+    return `<div class="view appv">${top('Menajer')}<div class="body">
+      <p style="color:var(--muted);margin:0 0 10px;font-size:13.5px">Volkan · ★★★ menajer · gelirinin %8'i</p>
+      ${offers.map((o, i) => `<div class="offer"><div class="top">${shirtSvg(o.c1, o.c2)}<div><b>${esc(o.c)}</b><small>${esc(o.l)}</small></div></div>
+        <div class="row"><div><span>Maaş/hf</span><b>${o.w}</b></div><div><span>Süre</span><b>${o.y}</b></div><div><span>Rol</span><b>${o.r}</b></div></div>
+        <div class="two"><button class="btn ghost" data-offer="${i}" data-act="talk" type="button">Pazarlık</button><button class="btn" data-offer="${i}" data-act="ok" type="button">İncele</button></div></div>`).join('')}
+    </div></div>`;
+  }
+  function storeView() {
+    return `<div class="view appv store">${top('TeknoPazar')}<div class="body">
+      <div class="sbal"><span>Bakiyen</span><b>${money(S.money)}</b></div>
+      ${PHONES.map((p) => { const own = S.owned.includes(p.id), cur = S.phone === p.id; return `<div class="pr ${cur ? 'cur' : ''}"><div class="mini-ph" style="background:${p.mini}"><i style="background:${WALLS[p.walls[p.walls.length - 1]].bg}"></i></div><div style="min-width:0"><span class="tag">${p.tag}</span><h4>${p.n}</h4>
+        <ul><li>${p.mp} MP kamera · alkış ×${p.mult.toString().replace('.', ',')}</li><li>${p.scr}</li><li>${p.extra}</li></ul>
+        <div class="price"><b>${p.price ? money(p.price) : 'Senin'}</b>${cur ? '<button class="buy own" type="button" disabled>Kullanılıyor</button>' : own ? `<button class="buy own" data-use="${p.id}" type="button">Kullan</button>` : `<button class="buy" data-buy="${p.id}" type="button" ${S.money < p.price ? 'disabled' : ''}>${S.money < p.price ? 'Bakiye yetersiz' : 'Satın al'}</button>`}</div></div></div>`; }).join('')}
+      <p style="color:#6b7280;font-size:12.5px">Oyun parasıyla alınır, gerçek ödeme yok.</p>
+    </div></div>`;
+  }
+  function emlakView() {
+    const f = S.estFilter;
+    const list = HOMES.filter((h) => f === 'all' || (f === 'flat' ? ['flat', 'studio', 'penthouse'].includes(h.kind) : f === 'house' ? ['house', 'villa'].includes(h.kind) : h.kind === 'island'));
+    return `<div class="view appv emlak">${top('Evim Emlak')}<div class="body">
+      <div class="search">${IC.search}<span>İstanbul ve çevresi · Satılık</span></div>
+      <div class="fchips">${[['all', 'Tümü'], ['flat', 'Daire'], ['house', 'Müstakil & Villa'], ['island', 'Ada']].map(([k, n]) => `<button class="${f === k ? 'on' : ''}" data-est="${k}" type="button">${n}</button>`).join('')}</div>
+      ${list.map((h) => { const own = S.have[h.id], here = S.home === h.id; return `<button class="listing" data-home="${h.id}" type="button"><div class="pic">${houseSvg(h.kind)}${h.tag ? `<span class="lbl3">${h.tag}</span>` : ''}${here ? '<span class="own3">Burada yaşıyorsun</span>' : own ? '<span class="own3">Senin</span>' : ''}</div>
+        <div class="inf"><div class="pr3">${h.rent ? 'Kiradasın' : money(h.p)}</div><div class="tt">${esc(h.n)}</div><div class="mt">${esc(h.room)} · ${esc(h.where)}</div><div class="fx3">${esc(h.d)}</div></div></button>`; }).join('')}
+    </div>${S.sheet && S.sheet.home ? homeSheet(S.sheet.home) : ''}</div>`;
+  }
+  function homeSheet(id) {
+    const h = HOMES.find((x) => x.id === id), own = S.have[id], here = S.home === id;
+    return `<div class="sheet" data-close-sheet><div class="in" style="background:#fff;color:#0f2a26"><div class="grab" style="background:#cfd8d6"></div>
+      <div style="border-radius:14px;overflow:hidden;aspect-ratio:16/10;margin-bottom:10px">${houseSvg(h.kind)}</div>
+      <h3 style="color:#0f2a26;font:800 22px var(--f-body);font-style:normal">${esc(h.n)}</h3>
+      <p style="margin:0 0 6px;color:#5b6b68">${esc(h.room)} · ${esc(h.where)}</p>
+      <p style="margin:0 0 12px;color:#0f7a6c;font-weight:700">${esc(h.d)}</p>
+      ${here ? '<button class="btn" type="button" disabled style="background:#e3ecea;color:#5b6b68">Burada yaşıyorsun</button>' : own ? `<button class="btn" data-move="${id}" type="button" style="background:#0f7a6c;color:#fff">Bu eve taşın</button>` : `<button class="btn" data-buyhome="${id}" type="button" style="background:#0f7a6c;color:#fff" ${S.money < h.p ? 'disabled' : ''}>${S.money < h.p ? 'Bakiye yetersiz' : `Satın al · ${money(h.p)}`}</button>`}
+    </div></div>`;
+  }
+  function carsView() {
+    const tab = S.carTab;
+    const list = RIDES.filter((r) => tab === 'all' || (tab === 'car' ? ['hatch', 'suv', 'life4', 'classic'].includes(r.id) : tab === 'garage' ? S.have[r.id] : !['hatch', 'suv', 'life4', 'classic'].includes(r.id)));
+    return `<div class="view appv cars">${top('ARA<span>BALAR</span>')}<div class="body">
+      <div class="ctabs">${[['all', 'Vitrin'], ['car', 'Otomobil'], ['other', 'Motor, Deniz, Hava'], ['garage', `Garajım (${RIDES.filter((r) => S.have[r.id]).length})`]].map(([k, n]) => `<button class="${tab === k ? 'on' : ''}" data-ctab="${k}" type="button">${n}</button>`).join('')}</div>
+      ${list.length ? list.map((r) => { const kind = RIDE_KIND[r.id] || r.art, sp = CARSPEC[kind] || ['—', '—', '—'], own = S.have[r.id]; return `<div class="car"><div class="stage2">${carSvg(kind, RIDE_COL[kind] || '#ffcf3f')}${own ? '<span class="gar">GARAJINDA</span>' : ''}</div><div class="inf"><h4>${esc(r.n)}</h4>
+        <div class="spec"><div><span>Hız</span><b>${sp[0]}</b></div><div><span>0-100</span><b>${sp[1]}</b></div><div><span>Güç</span><b>${sp[2]}</b></div></div>
+        <div style="color:#8b8b93;font-size:12.5px;margin-bottom:8px">${esc(r.d)}</div>
+        <div class="row3"><b>${money(r.p)}</b>${own ? '<button class="redbtn own" type="button" disabled>Senin</button>' : `<button class="redbtn" data-buyride="${r.id}" type="button" ${S.money < r.p ? 'disabled' : ''}>${S.money < r.p ? 'Bakiye yetersiz' : 'Satın al'}</button>`}</div></div></div>`; }).join('') : '<p style="color:#8b8b93">Garajın boş. Vitrine göz at.</p>'}
+    </div></div>`;
+  }
+  function shopView() {
+    const cat = S.shopCat, list = SHOP.filter((x) => cat === 'all' || x.c === cat);
+    const inCart = (id) => S.cart.includes(id);
+    return `<div class="view appv shop">${top('alışveriş', '', `<button class="cartb" data-cart type="button" aria-label="Sepet">${IC.cart}${S.cart.length ? `<span class="badge">${S.cart.length}</span>` : ''}</button>`)}<div class="body">
+      <div class="search" style="box-shadow:none;border:1px solid #ece4f7">${IC.search}<span>Saat, ayakkabı, kulaklık ara</span></div>
+      <div class="banner2"><b>Yıldız indirimi 🌟</b><small>Seçili ürünlerde kargo bedava · Bu hafta</small></div>
+      <div class="fchips">${SHOPCATS.map(([k, n]) => `<button class="${cat === k ? 'on' : ''}" data-scat="${k}" type="button">${n}</button>`).join('')}</div>
+      <div class="pgrid">${list.map((x) => `<div class="prod"><div class="art">${art(x.art, x.p)}</div><div class="nm">${esc(x.n)}</div><div class="ds">${esc(x.d)}</div><div class="pp"><b>${money(x.p)}</b>${S.have[x.id] ? `<span class="addb own" title="Sende var">${IC.check}</span>` : `<button class="addb ${inCart(x.id) ? 'in' : ''}" data-add="${x.id}" type="button" aria-label="Sepete ekle">${inCart(x.id) ? IC.check : IC.plus}</button>`}</div></div>`).join('')}</div>
+    </div>${S.sheet && S.sheet.cart ? cartSheet() : ''}</div>`;
+  }
+  function cartSheet() {
+    const items = S.cart.map((id) => SHOP.find((x) => x.id === id)), sum = items.reduce((t, x) => t + x.p, 0);
+    return `<div class="sheet" data-close-sheet><div class="in" style="background:#fff;color:#1d1530"><div class="grab" style="background:#e4d8f6"></div><h3 style="color:#1d1530;font:800 22px var(--f-body);font-style:normal">Sepetim</h3>
+      ${items.length ? items.map((x) => `<div class="cartrow" style="border-color:#efe7fa"><span class="art">${art(x.art, x.p)}</span><span>${esc(x.n)}<small style="display:block;color:#7c6f93">${esc(x.d)}</small></span><b>${money(x.p)}</b></div>`).join('') : '<p style="color:var(--muted)">Sepetin boş.</p>'}
+      <div class="cartsum"><span>Toplam</span><span>${money(sum)}</span></div>
+      <button class="btn" data-checkout type="button" ${!items.length || S.money < sum ? 'disabled' : ''} style="background:#a855f7;color:#fff">${S.money < sum ? 'Bakiye yetersiz' : 'Siparişi tamamla'}</button>
+    </div></div>`;
+  }
+  function premView() {
+    return `<div class="view appv prem">${top('')}<div class="body">
+      <div class="phero"><div class="logo2">${IC.prem}</div><h3>STARFOOT<span>+</span></h3><p>Kariyerini bir üst seviyeye taşı</p></div>
+      <ul class="perks"><li><i>✓</i><span>Reklamsız oyun ve hızlı ilerleme</span></li><li><i>✓</i><span>Teknik Direktör, Dünya Şampiyonası ve Efsaneler modları</span></li><li><i>✓</i><span>Altın görünümler, senaryolar ve erken erişim</span></li><li><i>✓</i><span>Tek seferlik ödeme, abonelik yok</span></li></ul>
+      <div class="plans">${PLANS.map((p) => `<button class="plan ${S.plan === p.k ? 'on' : ''}" data-plan="${p.k}" type="button">${p.pop ? '<span class="pop">EN ÇOK TERCİH EDİLEN</span>' : ''}<b>${p.n}</b><span class="pr4">${p.owned ? '<span class="owned">✓ Sende</span>' : p.pr}<small>${p.owned ? 'aktif' : 'tek seferlik'}</small></span><small>${esc(p.s)}</small></button>`).join('')}</div>
+      <button class="btn" data-paywall type="button" ${PLANS.find((p) => p.k === S.plan).owned ? 'disabled' : ''}>${PLANS.find((p) => p.k === S.plan).owned ? 'Zaten sende' : 'Devam et'}</button>
+      <button class="restore" data-restore type="button">Satın alımları geri yükle</button>
+      <div class="mine"><div class="secl">Satın alımlarım</div><div class="tx" style="border-color:rgba(255,255,255,.08)"><span class="ti">⭐</span><span>Premium<small>12 Ekim 2031 · App Store</small></span><b class="pos">Aktif</b></div></div>
+      <p class="legal">Prototip: fiyatlar örnektir. Gerçek oyunda ödeme App Store veya Google Play üzerinden yapılır.</p>
+    </div></div>`;
+  }
+  function setView() {
+    return `<div class="view appv">${top('Ayarlar')}<div class="body">
+      <div class="secl">Duvar kâğıdı</div>
+      <div class="walls">${WALLS.map((w, i) => { const ok = P().walls.includes(i); return `<button class="${S.wall === i ? 'on' : ''}" data-wall="${i}" type="button" ${ok ? '' : 'disabled'} style="background:${w.bg}"><span>${ok ? w.n : '🔒 ' + w.n}</span></button>`; }).join('')}</div>
+      <div class="secl" style="margin-top:14px">Cihaz</div>
+      <div class="setrow">Model<span>${P().n}</span></div><div class="setrow">Kamera<span>${P().mp} MP</span></div><div class="setrow">Ekran<span>${P().scr}</span></div><div class="setrow">Pil<span>%${P().bat}</span></div>
+      <button class="btn ghost" data-lock type="button" style="margin-top:14px">Telefonu kilitle</button>
+    </div></div>`;
+  }
+  function photosView() {
+    return `<div class="view appv">${top('Fotoğraflar')}<div class="body">
+      <p style="color:var(--muted);font-size:13.5px;margin:0 0 10px">Fotoğraflar şu anki telefonunun kamerasıyla görünür: <b style="color:var(--chalk)">${P().n} · ${P().mp} MP</b></p>
+      <div class="grid3" style="grid-template-columns:repeat(2,1fr);gap:6px">${PHOTOS.map((p) => photoBox(p.src, S.phone)).join('')}</div>
+      <button class="btn" data-share-from-photos type="button" style="margin-top:12px">StarFeed'de paylaş</button>
+    </div></div>`;
+  }
+
+  // ---------------- etkileşimler ----------------
+  let callTimer = 0;
+  const scrollChat = () => { const b = $('#chatBody'); if (b) b.scrollTop = b.scrollHeight; };
+  function open(app, th) {
+    S.locked = false; S.app = app; S.sub = null; S.sheet = null;
+    if (app === 'cam') { S.app = 'feed'; S.sheet = { photo: null, cap: 0 }; }
+    if (app === 'msg' && th) { S.sub = th; S.th[th].unread = false; }
+    render(); scrollChat();
+  }
+  function openThread(k) { S.sub = k; S.th[k].unread = false; render(); scrollChat(); }
+  function reply(i) {
+    const k = S.sub, t = S.th[k], r = THREADS[k].replies[i];
+    if (t.done || (r.ap && S.ap < r.ap)) return;
+    t.msgs.push(['out', r.t, r.gold]); t.done = true;
+    if (r.call) { S.app = 'call'; render(); let s = 0; clearInterval(callTimer); callTimer = setInterval(() => { s++; const el = $('#callT'); if (el) el.textContent = `00:${String(s).padStart(2, '0')}`; if (s >= 4) hang(); }, 700); return; }
+    after(k, r);
+  }
+  function after(k, r) {
+    const t = S.th[k];
+    apply(r.fx || {}, `${PEOPLE[k].n}: "${r.t}"`, '💬', r.ap || 0);
+    if (r.cal) { S.cal.push(Object.assign({ isNew: true }, r.cal)); setTimeout(() => banner(DOCK[2].bg, IC.cal, 'Takvim', `${r.cal.d} Kasım ${r.cal.h} · ${r.cal.t}`, () => { S.calSel = r.cal.d; open('cal'); }), 1700); }
+    t.typing = true; render(); scrollChat();
+    setTimeout(() => { t.typing = false; t.msgs.push(['in', r.back]); if (S.app === 'msg' && S.sub === k) { render(); scrollChat(); } if (r.open) setTimeout(() => open(r.open), 700); }, 1300);
+  }
+  function hang() { clearInterval(callTimer); S.app = 'msg'; S.sub = 'anne'; after('anne', THREADS.anne.replies[1]); }
+  function toast(t) {
+    const old = $('.toast'); if (old) old.remove();
+    const d = document.createElement('div'); d.className = 'toast'; d.innerHTML = esc(t).replace(/([+−-]\d+)/g, '<b>$1</b>');
+    $('#screen').appendChild(d); setTimeout(() => d.remove(), 2400);
+  }
+  function banner(bg, ic, title, text, go) {
+    const old = $('.banner'); if (old) old.remove();
+    const d = document.createElement('button'); d.type = 'button'; d.className = 'banner';
+    d.innerHTML = `<span style="width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:${bg}">${ic}</span><span><b>${esc(title)}</b><p>${esc(text)}</p></span>`;
+    d.onclick = () => { d.remove(); if (go) go(); };
+    $('#screen').appendChild(d); setTimeout(() => d.remove(), 3600);
+  }
+  const letter = (k) => `<span style="font:800 16px var(--f-display);color:#fff">${PEOPLE[k].i}</span>`;
+  function post() {
+    const sh = S.sheet; if (!sh || !sh.photo) return;
+    const ph = PHOTOS.find((p) => p.id === sh.photo);
+    const target = Math.round(S.followers * 0.42 * P().mult * (0.85 + S.rel.fame / 400) * (0.9 + Math.random() * 0.2));
+    const p = { id: sh.photo, cap: CAPS[sh.cap], likes: 0, q: S.phone, liked: false, time: 'şimdi', loc: ph.loc };
+    S.posts.unshift(p); S.sheet = null; S.feedTab = 'feed';
+    S.followers += Math.round(target * 0.04);
+    apply({ fame: P().mult >= 1.4 ? 2 : 1, morale: 2 }, `StarFeed paylaşımı (${P().mp} MP)`, '📸');
+    render();
+    const t0 = performance.now();
+    const step = (t) => { const k = Math.min(1, (t - t0) / 1600); p.likes = Math.round(target * (1 - Math.pow(1 - k, 3))); const el = document.querySelector('.post .lk'); if (el && S.app === 'feed') el.textContent = '⭐ ' + p.likes.toLocaleString('tr-TR') + ' alkış'; if (k < 1) requestAnimationFrame(step); else { panel(); setTimeout(() => banner(PEOPLE.anne.c, letter('anne'), 'Annem gönderini alkışladı', `"${p.cap}" · ${short(target)} alkış`), 400); } };
+    requestAnimationFrame(step);
+  }
+  function unbox(bg, inner, title, sub, done) {
+    const d = document.createElement('div'); d.className = 'unbox';
+    d.innerHTML = `<div><div style="width:200px;margin:0 auto 14px;animation:spin 1.1s cubic-bezier(.2,.8,.2,1)">${inner}</div><h3>${esc(title)}</h3><p>${esc(sub)}</p></div>`;
+    d.style.background = bg;
+    $('#screen').appendChild(d);
+    setTimeout(() => { d.remove(); if (done) done(); }, 1600);
+  }
+  function buyPhone(id) {
+    const ph = PHONES[id]; if (S.money < ph.price || S.owned.includes(id)) return;
+    S.owned.push(id); spend(ph.price, `TeknoPazar · ${ph.n}`, '📱');
+    unbox('radial-gradient(circle at 50% 45%, rgba(255,207,63,.35), rgba(0,0,0,.85) 60%)', `<div class="mini-ph" style="background:${ph.mini};width:110px;height:210px;margin:0 auto"><i style="background:${WALLS[ph.walls[ph.walls.length - 1]].bg}"></i></div>`, ph.n, `${ph.mp} MP kamera · ${ph.extra}`, () => usePhone(id, true));
+  }
+  function usePhone(id, isNew) {
+    S.phone = id; const ws = PHONES[id].walls; S.wall = ws[ws.length - 1];
+    if (isNew) apply({ morale: 3, fame: id >= 3 ? 3 : 1 }, `Yeni telefon: ${PHONES[id].n}`, '✨');
+    render();
+  }
+  function buyHome(id) {
+    const h = HOMES.find((x) => x.id === id); if (S.have[id] || S.money < h.p) return;
+    S.have[id] = 1; S.sheet = null; spend(h.p, `Evim Emlak · ${h.n}`, '🏠');
+    unbox('radial-gradient(circle at 50% 45%, rgba(20,160,141,.45), rgba(0,0,0,.88) 60%)', `<div style="border-radius:14px;overflow:hidden">${houseSvg(h.kind)}</div>`, 'Tapu senin! 🔑', h.n, () => { S.home = id; apply(h.fx || {}, `Yeni ev: ${h.n}`, '🔑'); render(); setTimeout(() => banner(PEOPLE.anne.c, letter('anne'), 'Annem', 'Yeni evin hayırlı olsun oğlum! Ne zaman geliyoruz? 😍'), 900); });
+  }
+  function buyRide(id) {
+    const r = RIDES.find((x) => x.id === id); if (S.have[id] || S.money < r.p) return;
+    const kind = RIDE_KIND[id] || r.art;
+    S.have[id] = 1; spend(r.p, `Arabalar · ${r.n}`, '🚗');
+    unbox('radial-gradient(circle at 50% 50%, rgba(255,59,48,.4), rgba(0,0,0,.9) 60%)', carSvg(kind, RIDE_COL[kind] || '#ffcf3f'), r.n, 'Garajına eklendi', () => { apply({ morale: 2, fame: r.p >= 1e6 ? 3 : 1 }, `Yeni araç: ${r.n}`, '🏁'); render(); setTimeout(() => banner(PEOPLE.can.c, letter('can'), 'Can', 'Kankaa bu ne ya 😱 Bir tur atmadan bırakmam!'), 900); });
+  }
+  function checkout() {
+    const items = S.cart.map((id) => SHOP.find((x) => x.id === id)), sum = items.reduce((t, x) => t + x.p, 0);
+    if (!items.length || S.money < sum) return;
+    items.forEach((x) => (S.have[x.id] = 1)); S.cart = []; S.sheet = null;
+    spend(sum, `Alışveriş · ${items.length} ürün`, '🛍️');
+    apply({ morale: Math.min(4, items.length + 1), fame: items.some((x) => x.p >= 100000) ? 2 : 0 }, 'Sipariş verildi', '📦');
+    render(); setTimeout(() => banner('linear-gradient(135deg,#a855f7,#6d28d9)', IC.shop, 'alışveriş', 'Siparişin kargoya verildi 📦 Yarın kapında.'), 700);
+  }
+
+  function on(sel, fn) { $('#view').querySelectorAll(sel).forEach((b) => (b.onclick = (e) => fn(b, e))); }
+  function bind() {
+    on('[data-open]', (b) => open(b.dataset.open, b.dataset.th));
+    on('[data-unlock]', () => { S.locked = false; S.app = null; render(); });
+    on('[data-back]', () => { if (S.sub) S.sub = null; else S.app = null; S.sheet = null; render(); });
+    $('#view').querySelectorAll('[data-th]').forEach((b) => { if (!b.dataset.open) b.onclick = () => openThread(b.dataset.th); });
+    on('[data-rep]', (b) => reply(+b.dataset.rep));
+    on('[data-hang]', hang);
+    on('[data-ftab]', (b) => { S.feedTab = b.dataset.ftab; render(); });
+    on('[data-share]', () => { S.sheet = { photo: null, cap: 0 }; render(); });
+    on('[data-share-from-photos]', () => { S.app = 'feed'; S.sheet = { photo: 'gstar', cap: 2 }; render(); });
+    on('[data-close-sheet]', (b, e) => { if (e.target === b) { S.sheet = null; render(); } });
+    on('[data-pick]', (b) => { S.sheet.photo = b.dataset.pick; S.sheet.cap = PHOTOS.findIndex((p) => p.id === b.dataset.pick); render(); });
+    on('[data-cap]', (b) => { S.sheet.cap = +b.dataset.cap; render(); });
+    on('[data-post]', post);
+    on('[data-like]', (b) => { const p = S.posts[+b.dataset.like]; p.liked = !p.liked; render(); });
+    on('[data-buy]', (b) => buyPhone(+b.dataset.buy));
+    on('[data-use]', (b) => usePhone(+b.dataset.use));
+    on('[data-wall]', (b) => { S.wall = +b.dataset.wall; render(); });
+    on('[data-lock]', () => { S.locked = true; S.app = null; render(); });
+    on('[data-day]', (b) => { S.calSel = +b.dataset.day; render(); });
+    on('[data-today]', () => { S.calSel = TODAY; render(); });
+    on('[data-est]', (b) => { S.estFilter = b.dataset.est; render(); });
+    on('[data-home]', (b) => { S.sheet = { home: b.dataset.home }; render(); });
+    on('[data-buyhome]', (b) => buyHome(b.dataset.buyhome));
+    on('[data-move]', (b) => { const h = HOMES.find((x) => x.id === b.dataset.move); S.home = h.id; S.sheet = null; apply({ morale: 1 }, `${h.n} evine taşındın`, '🚚'); render(); });
+    on('[data-ctab]', (b) => { S.carTab = b.dataset.ctab; render(); });
+    on('[data-buyride]', (b) => buyRide(b.dataset.buyride));
+    on('[data-scat]', (b) => { S.shopCat = b.dataset.scat; render(); });
+    on('[data-add]', (b) => { const id = b.dataset.add; S.cart = S.cart.includes(id) ? S.cart.filter((x) => x !== id) : S.cart.concat(id); render(); });
+    on('[data-cart]', () => { S.sheet = { cart: 1 }; render(); });
+    on('[data-checkout]', checkout);
+    on('[data-plan]', (b) => { S.plan = b.dataset.plan; render(); });
+    on('[data-paywall]', () => toast('Burada App Store / Google Play ödeme ekranı açılır'));
+    on('[data-restore]', () => toast('Satın alımların geri yüklendi: Premium'));
+    on('[data-offer]', (b) => {
+      if (b.dataset.act === 'talk') { apply({ morale: 1 }, 'Menajere pazarlık talimatı', '🤝'); banner(PEOPLE.menajer.c, letter('menajer'), 'Volkan (Menajer)', 'Tamam, %10 fazlasını isteyeceğim. Sonucu yazarım.'); }
+      else toast('Oyunda transfer ekranı burada açılır');
+    });
+  }
+  $('#homebar').onclick = () => { S.locked = false; S.app = null; S.sub = null; S.sheet = null; render(); };
+  $('#reset').onclick = () => { clearInterval(callTimer); S = fresh(); panel(); render(); };
+
+  panel(); render();
+  setTimeout(() => { if (S.locked) banner(DOCK[0].bg, IC.msg, 'Can', 'Kanka cumartesi halı saha var, gelir misin? ⚽', () => open('msg', 'can')); }, 2600);
+})();
+
+</script>
+
