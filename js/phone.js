@@ -538,8 +538,9 @@
   const CM = {
     win: ['Helal olsun!', 'Böyle devam!', 'Bu takım başka!', 'Üç puan cebimizde!'], loss: ['Toparlanacağız.', 'Her zaman arkanızdayız.', 'Kafalar dik!'], draw: ['Bir puan da puan.', 'Daha iyisini yaparız.'],
     me: ['Kral!', 'Yıldız doğuyor!', 'Formasını aldım bile.', 'Bu çocuk çok iyi olacak.'], gen: ['Harika kare!', 'Efsane!', 'Başarılar!', 'Bayıldım.'], news: ['Vay be!', 'Bunu bekliyordum.', 'Sonunda!'],
+    pre: ['Hadi çocuklar!', 'Bugün bizim günümüz!', 'Üç puan istiyoruz!', 'Stattayız!'], stat: ['Yarış kızışıyor.', 'Bu sezon bizim!', 'Takipteyiz.'],
   };
-  const comments = (id, pool) => { const h = hstr(`${Phone.week()}|c|${id}`), P = CM[pool] || CM.gen; return [0, 1].map((i) => ({ u: FANS[(h >>> (i * 4)) % FANS.length] + ((h >>> (i * 3 + 2)) % 90 + 10), t: P[(h >>> (i * 5 + 1)) % P.length] })); };
+  const comments = (id, pool) => { const h = hstr(`${Phone.week()}|c|${id}`), P = CM[pool] || CM.gen; const a = (h >>> 1) % P.length, b = (a + 1 + ((h >>> 6) % (P.length - 1))) % P.length, f = (h >>> 11) % FANS.length; return [a, b].map((t, i) => ({ u: FANS[(f + i * 3) % FANS.length] + ((h >>> (i * 3 + 2)) % 90 + 10), t: P[t] })); };
   function feedPosts() {
     const s = Game.state, p = s.player, w = Phone.week(), out = [], me = Player.fullName(p), X = ctxNow(), r = s.lastReport;
     const n = (k, a, b) => a + (hstr(`${w}|${k}`) % (b - a));
@@ -549,7 +550,7 @@
       const big = Math.max(1, (Game.teamRating(s.clubId) || 60) - 40);
       const nm = nextMatch();
       // kulüp: maç günü afişi (tarih ve saat takvimle aynı)
-      if (nm && (nm.k === 'match' || nm.k === 'cup')) out.push({ id: 'pre', who: cn, club: true, h: hrs('pre', 1, 6), loc: club.city || '', kind: 'poster', nm, txt: 'Maç günü! Hep birlikte!', likes: n('pre', 300, 900) * big, cm: comments('pre', 'gen'), nc: n('prec', 20, 200) });
+      if (nm && (nm.k === 'match' || nm.k === 'cup')) out.push({ id: 'pre', who: cn, club: true, h: hrs('pre', 1, 6), loc: club.city || '', kind: 'poster', nm, txt: 'Maç günü! Hep birlikte!', likes: n('pre', 300, 900) * big, cm: comments('pre', 'pre'), nc: n('prec', 20, 200) });
       const intlRes = Phone.data().lastComp === 'intl';
       if ((X.win || X.loss || X.draw) && intlRes) {
         const nat = Game.nation() || {};
@@ -566,9 +567,9 @@
         const lg = Game.league();
         if (lg && lg.table && s.season.round > 0) {
           const t = World.sortedTable(lg).slice(0, 3);
-          out.push({ id: 'lg', who: Game.leagueName(), lg: true, h: hrs('lg', 18, 40), kind: 'table', rows: t.map((x) => [Game.teamName(x.id), x.pts, x.id === s.clubId]), txt: `${s.season.round}. hafta sonunda zirve`, likes: n('lg', 400, 6000), cm: comments('lg', 'gen'), nc: n('lgc', 20, 300) });
+          out.push({ id: 'lg', who: Game.leagueName(), lg: true, h: hrs('lg', 18, 40), kind: 'table', rows: t.map((x) => [Game.teamName(x.id), x.pts, x.id === s.clubId]), txt: `${s.season.round}. hafta sonunda zirve`, likes: n('lg', 400, 6000), cm: comments('lg', 'stat'), nc: n('lgc', 20, 300) });
           const sc = World.topScorers ? World.topScorers(lg, 3) : [];
-          if (sc.length && sc[0].g > 0) out.push({ id: 'gk', who: Game.leagueName(), lg: true, h: hrs('gk', 20, 44), kind: 'scorers', rows: sc.map((x) => [x.name, x.g, x.name === me]), txt: 'Gol krallığı yarışı', likes: n('gk', 300, 4000), cm: comments('gk', 'gen'), nc: n('gkc', 10, 200) });
+          if (sc.length && sc[0].g > 0) out.push({ id: 'gk', who: Game.leagueName(), lg: true, h: hrs('gk', 20, 44), kind: 'scorers', rows: sc.map((x) => [x.name, x.g, x.name === me]), txt: 'Gol krallığı yarışı', likes: n('gk', 300, 4000), cm: comments('gk', 'stat'), nc: n('gkc', 10, 200) });
         }
       } catch (e) { /* tablo yok */ }
       // transfer kulisi: gerçekten teklif varsa

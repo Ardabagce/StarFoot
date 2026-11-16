@@ -2092,3 +2092,10 @@
 9052|Kamu tinggal bersama keluarga
 9053|Rumah keluarga
 9054|3 KT · 120 m² · Lingkungan
+9055|Ayo, tim!
+9056|Hari ini milik kita!
+9057|Kami mau tiga poin!
+9058|Kami sudah di stadion!
+9059|Persaingan makin panas.
+9060|Musim ini milik kita!
+9061|Kami pantau terus.

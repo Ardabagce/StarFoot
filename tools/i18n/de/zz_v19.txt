@@ -2092,3 +2092,10 @@
 9052|Du wohnst bei deiner Familie
 9053|Elternhaus
 9054|4 Zimmer · 120 m² · Wohnviertel
+9055|Auf geht's, Jungs!
+9056|Heute ist unser Tag!
+9057|Wir wollen drei Punkte!
+9058|Wir sind im Stadion!
+9059|Das Rennen wird spannend.
+9060|Diese Saison gehört uns!
+9061|Wir bleiben dran.

@@ -94797,6 +94797,42 @@
 "lang-pt.js",
 "phone.js"
 ],
+"Ailenle yaşıyorsun": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Aile evi": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"3+1 · 120 m² · Mahalle": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
 "(Asist)": [
 "lang-ar.js",
 "lang-de.js",
@@ -151188,6 +151224,39 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"AİLENLE YAŞIYORSUN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"AİLE EVİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"3+1 · 120 M² · MAHALLE": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -203046,6 +203115,15 @@
 "SPIELTAG": [
 "lang-de.js"
 ],
+"Du wohnst bei deiner Familie": [
+"lang-de.js"
+],
+"Elternhaus": [
+"lang-de.js"
+],
+"4 Zimmer · 120 m² · Wohnviertel": [
+"lang-de.js"
+],
 "– wir haben uns qualifiziert!": [
 "lang-de.js"
 ],
@@ -215756,6 +215834,15 @@
 "lang-de.js"
 ],
 "SPIELTAG! ALLE ZUSAMMEN!": [
+"lang-de.js"
+],
+"DU WOHNST BEI DEINER FAMILIE": [
+"lang-de.js"
+],
+"ELTERNHAUS": [
+"lang-de.js"
+],
+"4 ZIMMER · 120 M² · WOHNVIERTEL": [
 "lang-de.js"
 ],
 "– WIR HABEN UNS QUALIFIZIERT!": [
@@ -234011,6 +234098,15 @@
 "MATCH DAY": [
 "lang-en.js"
 ],
+"You live with your family": [
+"lang-en.js"
+],
+"Family home": [
+"lang-en.js"
+],
+"3 bed · 120 m² · Neighborhood": [
+"lang-en.js"
+],
 "— we qualified!": [
 "lang-en.js"
 ],
@@ -246005,6 +246101,15 @@
 "lang-en.js"
 ],
 "MATCH DAY! ALL TOGETHER!": [
+"lang-en.js"
+],
+"YOU LIVE WITH YOUR FAMILY": [
+"lang-en.js"
+],
+"FAMILY HOME": [
+"lang-en.js"
+],
+"3 BED · 120 M² · NEIGHBORHOOD": [
 "lang-en.js"
 ],
 "— WE QUALIFIED!": [
@@ -264306,6 +264411,15 @@
 "DÍA DE PARTIDO": [
 "lang-es.js"
 ],
+"Vives con tu familia": [
+"lang-es.js"
+],
+"Casa familiar": [
+"lang-es.js"
+],
+"3 hab. · 120 m² · Barrio": [
+"lang-es.js"
+],
 "— ¡nos hemos clasificado!": [
 "lang-es.js"
 ],
@@ -276404,6 +276518,15 @@
 "lang-es.js"
 ],
 "¡DÍA DE PARTIDO! ¡TODOS JUNTOS!": [
+"lang-es.js"
+],
+"VIVES CON TU FAMILIA": [
+"lang-es.js"
+],
+"CASA FAMILIAR": [
+"lang-es.js"
+],
+"3 HAB. · 120 M² · BARRIO": [
 "lang-es.js"
 ],
 "— ¡NOS HEMOS CLASIFICADO!": [
@@ -294442,6 +294565,15 @@
 "JOUR DE MATCH": [
 "lang-fr.js"
 ],
+"Tu vis chez tes parents": [
+"lang-fr.js"
+],
+"Maison familiale": [
+"lang-fr.js"
+],
+"4 pièces · 120 m² · Quartier": [
+"lang-fr.js"
+],
 "— on est qualifiés !": [
 "lang-fr.js"
 ],
@@ -306109,6 +306241,15 @@
 "lang-fr.js"
 ],
 "JOUR DE MATCH ! TOUS ENSEMBLE !": [
+"lang-fr.js"
+],
+"TU VIS CHEZ TES PARENTS": [
+"lang-fr.js"
+],
+"MAISON FAMILIALE": [
+"lang-fr.js"
+],
+"4 PIÈCES · 120 M² · QUARTIER": [
 "lang-fr.js"
 ],
 "— ON EST QUALIFIÉS !": [
@@ -323683,6 +323824,15 @@
 "HARI PERTANDINGAN": [
 "lang-id.js"
 ],
+"Kamu tinggal bersama keluarga": [
+"lang-id.js"
+],
+"Rumah keluarga": [
+"lang-id.js"
+],
+"3 KT · 120 m² · Lingkungan": [
+"lang-id.js"
+],
 "— kita lolos!": [
 "lang-id.js"
 ],
@@ -335133,6 +335283,15 @@
 "lang-id.js"
 ],
 "HARI PERTANDINGAN! BERSAMA-SAMA!": [
+"lang-id.js"
+],
+"KAMU TINGGAL BERSAMA KELUARGA": [
+"lang-id.js"
+],
+"RUMAH KELUARGA": [
+"lang-id.js"
+],
+"3 KT · 120 M² · LINGKUNGAN": [
 "lang-id.js"
 ],
 "— KITA LOLOS!": [
@@ -352710,6 +352869,15 @@
 "GIORNO DI PARTITA": [
 "lang-it.js"
 ],
+"Vivi con la tua famiglia": [
+"lang-it.js"
+],
+"Casa di famiglia": [
+"lang-it.js"
+],
+"4 locali · 120 m² · Quartiere": [
+"lang-it.js"
+],
 "— ci siamo qualificati!": [
 "lang-it.js"
 ],
@@ -364160,6 +364328,15 @@
 "GIORNO DI PARTITA! TUTTI INSIEME!": [
 "lang-it.js"
 ],
+"VIVI CON LA TUA FAMIGLIA": [
+"lang-it.js"
+],
+"CASA DI FAMIGLIA": [
+"lang-it.js"
+],
+"4 LOCALI · 120 M² · QUARTIERE": [
+"lang-it.js"
+],
 "— CI SIAMO QUALIFICATI!": [
 "lang-it.js"
 ],
@@ -372374,6 +372551,9 @@
 "StarFeedフォロワー": [
 "lang-ja.js"
 ],
+"3LDK · 120 m² · 住宅街": [
+"lang-ja.js"
+],
 "（PK戦）": [
 "lang-ja.js"
 ],
@@ -372624,6 +372804,9 @@
 "lang-ja.js"
 ],
 "STARFEEDフォロワー": [
+"lang-ja.js"
+],
+"3LDK · 120 M² · 住宅街": [
 "lang-ja.js"
 ],
 "STARFOOT ワールドサービス": [
@@ -382543,6 +382726,15 @@
 "lang-pt.js"
 ],
 "DIA DE JOGO": [
+"lang-pt.js"
+],
+"Você mora com a família": [
+"lang-pt.js"
+],
+"Casa da família": [
+"lang-pt.js"
+],
+"3 quartos · 120 m² · Bairro": [
 "lang-pt.js"
 ],
 "— nos classificamos!": [
@@ -393739,6 +393931,15 @@
 "lang-pt.js"
 ],
 "DIA DE JOGO! TODOS JUNTOS!": [
+"lang-pt.js"
+],
+"VOCÊ MORA COM A FAMÍLIA": [
+"lang-pt.js"
+],
+"CASA DA FAMÍLIA": [
+"lang-pt.js"
+],
+"3 QUARTOS · 120 M² · BAIRRO": [
 "lang-pt.js"
 ],
 "— NOS CLASSIFICAMOS!": [
@@ -417282,13 +417483,25 @@
 "<section": [
 "phone.js"
 ],
-"Ailenle yaşıyorsun": [
+"Hadi çocuklar!": [
 "phone.js"
 ],
-"Aile evi": [
+"Bugün bizim günümüz!": [
 "phone.js"
 ],
-"3+1 · 120 m² · Mahalle": [
+"Üç puan istiyoruz!": [
+"phone.js"
+],
+"Stattayız!": [
+"phone.js"
+],
+"Yarış kızışıyor.": [
+"phone.js"
+],
+"Bu sezon bizim!": [
+"phone.js"
+],
+"Takipteyiz.": [
 "phone.js"
 ],
 "{}|tm{}": [

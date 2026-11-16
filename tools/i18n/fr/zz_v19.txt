@@ -2092,3 +2092,10 @@
 9052|Tu vis chez tes parents
 9053|Maison familiale
 9054|4 pièces · 120 m² · Quartier
+9055|Allez les gars !
+9056|Aujourd'hui, c'est notre jour !
+9057|On veut les trois points !
+9058|On est au stade !
+9059|La course s'intensifie.
+9060|Cette saison est à nous !
+9061|On suit ça de près.

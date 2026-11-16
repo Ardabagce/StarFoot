@@ -2092,3 +2092,10 @@
 9052|Vives con tu familia
 9053|Casa familiar
 9054|3 hab. · 120 m² · Barrio
+9055|¡Vamos, chicos!
+9056|¡Hoy es nuestro día!
+9057|¡Queremos los tres puntos!
+9058|¡Ya estamos en el estadio!
+9059|La carrera se calienta.
+9060|¡Esta temporada es nuestra!
+9061|Atentos.
