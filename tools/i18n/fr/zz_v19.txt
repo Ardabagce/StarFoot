@@ -1661,7 +1661,6 @@
 8525|Tu as une petite fille !
 8550|Fais glisser un joueur sur un autre pour les échanger. Appuie brièvement sur un remplaçant pour le déplacer. Touche-le pour ouvrir sa fiche.
 8552|Téléphone
-1640|Utilisé
 8553|À toi
 8554|Nuit
 8555|Projecteurs du stade
@@ -1761,7 +1760,6 @@
 8735|{0} s
 8736|{0} ch
 8734|{0} nœuds
-1180|Accueil
 8662|MaMaison
 8663|Autos
 8664|shopping
@@ -1788,7 +1786,6 @@
 8689|Ton ancien logement
 8690|Tu es locataire
 8691|Tu vis ici
-1653|À toi
 8692|Maisons à vendre
 8693|Appartement en location
 8694|Centre-ville
@@ -1825,7 +1822,6 @@
 8723|Ouvre ton profil sur ton téléphone
 8733|{0} bravos
 8724|Orion Pro
-1656|Sponsoring
 8737|Chaque semaine moral +2, Célébrité +4
 8741|{0} ans
 8738|3 pièces · 95 m² · Centre-ville
@@ -1872,3 +1868,135 @@
 8784|Une séance de kiné réduit la blessure de 2 semaines. Achète-en au Magasin de sport sur ton téléphone et utilise-les depuis ton sac dans le Plan de la semaine.
 8787|{0} sont usés et inutilisables. Achète-en de nouveaux au Magasin de sport sur ton téléphone.
 8788|✨ {0} est à toi ! Ta publication reçoit des bravos.
+8790|3 points ! Continue comme ça.
+8793|Ma famille
+8794|Passer du temps en famille renforce vos liens ; si tu la négliges, ils faiblissent.
+8795|Fil
+8796|Le fil est calme pour l'instant. Dès les premiers matchs, tes coéquipiers et le club publieront.
+8799|Le dîner est à 19 h, ne sois pas en retard !
+8800|Dîner entre amis.
+8801|Au centre de formation, je te cite en exemple aux jeunes.
+8802|Ta mère m'a invitée à dîner, trop gentille.
+8803|Le dernier à l'entraînement paie les cafés !
+8804|Après l'entraînement, directement à la maison.
+8805|Tu as fait la vidange de ta voiture ?
+8806|Mes copains veulent ton autographe !
+8807|Papa, tu m'apprends à tirer ?
+8808|Papa, j'ai besoin de ton avis.
+8809|Papa, j'ai vu ton but ! Je serai comme toi !
+8812|Papa, je t'ai dessiné à l'école !
+8813|Corps et esprit
+8814|J'ai mon billet, je viens à ton match !
+8815|Un recruteur d'un club est venu te voir.
+8816|Une émission de télé veut t'inviter.
+8817|Je rentre tôt ce soir, on mange ensemble
+8818|Montre-toi à l'entraînement cette semaine, ta chance viendra.
+8819|Notre match a été dur cette semaine, et le tien ?
+8820|Pourquoi tu n'as pas joué cette semaine ? Pourquoi le coach ne t'a pas pris ?
+8823|Il va faire froid cette semaine, couvre-toi.
+8824|Tu as l'air très fatigué cette semaine, repose-toi.
+8825|Combien de buts vises-tu cette saison ?
+8826|Nous allons tous analyser cette défaite.
+8827|J'ai couru 10 kilomètres aujourd'hui !
+8828|Séance de muscu aujourd'hui. Plus fort demain !
+8831|Ce n'était pas notre jour. On reviendra plus forts.
+8834|Ils ont parlé de toi à la télé aujourd'hui, j'ai pleuré.
+8835|Les rendez-vous renforcent votre relation. Si elle chute trop, c'est la rupture.
+8838|En route pour le match à l'extérieur !
+8839|On repart avec un point.
+8840|Ne néglige pas le repos, le calendrier est chargé.
+8841|Je prie toujours pour toi.
+8842|Je suis passé devant notre ancienne école, j'ai pensé à toi.
+8843|Je suis allé au match de ton ancien club, ils ont parlé de toi.
+8844|Une séance de kiné accélère la guérison. Disponible au Magasin de sport.
+8847|Va voir le kiné régulièrement, ne te précipite pas.
+8848|J'ai vu ta photo dans le journal, je la fais encadrer !
+8849|Victoire ! Merci pour votre soutien.
+8851|Chaque fois que tu marques, mon téléphone n'arrête pas !
+8852|J'ai crié quand tu as marqué !
+8853|Notre buteur a fait le show !
+8854|J'ai vu ton but et j'ai serré l'écran dans mes bras !
+8855|J'ai perdu la voix en voyant ton but ! Bravo, mon fils.
+8857|Prêts pour le week-end.
+8858|On va au parc s'entraîner aux tirs ce week-end ?
+8859|Le foot à cinq, un classique.
+8860|Une bonne relation avec le coach, c'est plus de temps de jeu. L'entraînement et les échanges l'améliorent.
+8863|Tu as encore ton vieux ballon ?
+8864|Têtes hautes, on se rattrape ce week-end.
+8865|Frérot, trouve-moi un maillot aussi !
+8866|T'inquiète, c'est qu'un match.
+8867|Le capitaine a apporté un gâteau d'anniversaire !
+8868|On a gagné ! Fête ce soir !
+8870|Vous avez gagné ! Je suis fière de toi.
+8873|Gagner, marquer et passer du temps avec tes proches remontent le moral.
+8874|Fais attention, une blessure, ce n'est pas une blague !
+8875|Qui participe au tournoi de console ?
+8876|Ne laisse pas tes crampons devant la porte !
+8877|J'ai nettoyé tes crampons, ils brillent !
+8878|Une petite pause vacances.
+8879|SCORE FINAL
+8880|L'intendant a encore mélangé les numéros.
+8881|La nutrition avant le match, c'est essentiel.
+8882|Elle détermine ta performance. Repos, nutrition et boissons énergisantes l'augmentent ; l'entraînement intensif la baisse.
+8885|J'ai vu le match, vous avez gagné ! Tout le quartier fait la fête !
+8888|Tu étais le meilleur du match, je suis fier.
+8889|Mon agence marche bien, travaillons ensemble un jour.
+8890|Message
+8891|Garde le moral, mon fils, vous gagnerez le prochain.
+8892|Ce but, je l'aurais marqué à mon époque... Je plaisante, tu étais génial !
+8893|Les publications et les bons matchs attirent des abonnés.
+8894|Sois plus agressif au pressing.
+8895|Mon profil
+8896|J'ai observé l'adversaire, leur latéral gauche est lent.
+8897|Viens au restaurant, je te prépare un menu spécial.
+8898|DERNIÈRE MINUTE
+8899|Footing du matin terminé. Objectifs ambitieux.
+8901|Je suis allé courir ce matin, tu m'as inspiré !
+8902|Blessure
+8903|Comment va ta blessure ? Prends bien tes médicaments, je m'inquiète.
+8906|Je t'ai envoyé une chanson, écoute-la !
+8907|Je t'ai fait de la soupe, je prends soin de toi jusqu'à ta guérison.
+8908|J'ai parlé au staff médical, on ne se précipite pas.
+8909|J'ai montré tes anciens matchs à mes amis !
+8910|Je peux te faire une petite interview ?
+8911|Au dernier match, tu étais en dessous de mes attentes.
+8912|Tu étais excellent au dernier match, continue.
+8913|Ta dernière performance a fait grimper ta valeur.
+8914|Le moral est au beau fixe dans le vestiaire.
+8915|C'est à qui de mettre la musique au vestiaire ?
+8916|Abonnés StarFeed
+8917|J'ai relu les clauses du contrat.
+8918|C'est quand ton examen ? Révise un peu.
+8921|Passer du temps avec tes coéquipiers améliore l'entente et les passes.
+8922|On joue au foot à la récré ?
+8923|Ta tante a appelé, elle veut un maillot signé.
+8924|Encore une journée avec le ballon.
+8925|Les 5 secondes après la perte du ballon sont cruciales.
+8926|La Voix des Tribunes
+8927|Je t'ai fait signe des tribunes, tu m'as vue ?
+8928|Fais attention à ton sommeil, mon fils.
+8929|Célibataire
+8930|Demain j'apporte mon nouveau ballon à l'école !
+8931|Analyse vidéo demain, 10 h en salle.
+8932|J'ai commencé une nouvelle série, on la regarde ensemble ?
+8933|J'ai trouvé un nouveau boulot, fêtons ça !
+8934|Nouveaux crampons prêts pour le terrain.
+8935|La défaite fait partie du jeu. Relève la tête.
+8951|{0} était le meilleur sur le terrain aujourd'hui !
+8953|En couple avec {0}
+8954|Marié à {0}
+8952|En tête après la journée {0}
+8938|J'ai préparé ton sac, n'oublie pas ta gourde.
+8939|Tu as fait les devoirs ? Tu me montres ?
+8942|Tu as fini tes devoirs ?
+8943|Mes élèves ont accroché ton poster au mur !
+8944|Plus ta célébrité grandit, plus les sponsors, offres et abonnés arrivent.
+8945|Ta célébrité
+8946|Ne sois pas triste, papa, tu restes le meilleur.
+8947|Ne sois pas triste, je suis toujours là.
+8948|Ton premier contrôle est crucial, travaille-le.
+8949|Les bons matchs et les buts gagnent le cœur des supporters.
+8950|Bon match, ton but a rassuré l'équipe.
+8955|depuis {0}
+
+8956|Accueil

@@ -117,37 +117,64 @@
   }
 
   // ---------------- kişiler ve haftalık mesajlar ----------------
-  const pick = (arr, salt) => { const s = Game.state; const i = (s.season.year * 7 + s.season.round * 3 + salt) % arr.length; return arr[i]; };
+  // her kişi her hafta farklı bir mesaj atar: haftaya ve kişiye göre karışık seçim, son maça / sakatlığa / yaşa göre bağlam
+  const hstr = (t) => { let h = 2166136261; for (let i = 0; i < t.length; i++) { h ^= t.charCodeAt(i); h = Math.imul(h, 16777619); } return h >>> 0; };
+  function ctxNow() {
+    const s = Game.state, p = s.player, r = s.lastReport;
+    const f = !!(r && r.w && String(r.w).indexOf(String(s.season.year)) === 0 && s.season.round > 0);
+    return { win: f && r.res === 'W', loss: f && r.res === 'L', draw: f && r.res === 'D', goals: f && r.goals > 0, star: f && r.rating != null && r.rating >= 7.5, poor: f && r.rating != null && r.rating < 6, bench: f && r.rating == null && !p.injuryWeeks, inj: p.injuryWeeks > 0, young: p.age <= 17, kid: p.age <= 12 };
+  }
+  // bağlamlı mesaj varsa çoğunlukla onu seçer; yoksa genel havuzdan
+  function say(id, gen, ctxList) {
+    const h = hstr(`${id}|${Phone.week()}`);
+    const c = (ctxList || []).filter(Boolean);
+    if (c.length && h % 10 < 7) return c[(h >>> 4) % c.length];
+    return gen[(h >>> 8) % gen.length];
+  }
+  const when = (cond, txt) => (cond ? txt : null);
   function contacts() {
-    const s = Game.state, p = s.player, L = Life.ensure(p), out = [];
+    const s = Game.state, p = s.player, L = Life.ensure(p), out = [], X = ctxNow();
     const gfName = L.gf ? L.gf.name : null;
     out.push({ id: 'mom', n: 'Annem', role: 'Aile', c: 'linear-gradient(135deg,#46e08f,#1f9d5c)', i: 'A',
-      m: pick(['Oğlum maçı izledim, seninle gurur duyuyorum.', 'Yemek yiyor musun düzgün? Kendine iyi bak.', 'Pazar yemeğe gel, en sevdiğin yemeği yapıyorum.', 'Komşular hep seni soruyor, çok ünlü oldun!', 'Babanla seni konuşuyorduk, seni çok özledik.'], 1),
-      r: [{ t: 'Bu akşam size geliyorum', act: () => Life.act('family'), ap: 1, ok: 'Oh çok sevindim! Hemen sofrayı kuruyorum.' }, { t: 'Ben de seni seviyorum anne', ok: 'Canım oğlum. Kendine dikkat et.' }] });
+      m: say('mom', X.young
+        ? ['Akşam yemeği 7\'de, geç kalma!', 'Ödevlerini bitirdin mi?', 'Kramponlarını kapının önüne bırakma!', 'Antrenmandan sonra doğru eve.', 'Çantanı hazırladım, su şişeni unutma.', 'Sınavın ne zaman? Biraz ders çalış.', 'Yemek yiyor musun düzgün? Kendine iyi bak.', 'Komşular hep seni soruyor, çok ünlü oldun!', 'Uyku düzenine dikkat et oğlum.', 'Bu hafta soğuk olacakmış, kalın giyin.']
+        : ['Oğlum maçı izledim, seninle gurur duyuyorum.', 'Yemek yiyor musun düzgün? Kendine iyi bak.', 'Pazar yemeğe gel, en sevdiğin yemeği yapıyorum.', 'Komşular hep seni soruyor, çok ünlü oldun!', 'Babanla seni konuşuyorduk, seni çok özledik.', 'Bugün televizyonda senden bahsettiler, ağladım valla.', 'Teyzen aradı, imzalı forma istiyor.', 'Uyku düzenine dikkat et oğlum.', 'Fotoğrafını gazetede gördüm, çerçeveletiyorum!', 'Bu hafta soğuk olacakmış, kalın giyin.', 'Dua ediyorum hep senin için.'],
+        [when(X.win, 'Maçı izledim, kazandınız! Mahallede bayram var!'), when(X.goals, 'Golünü izlerken sesim kısıldı! Aferin oğlum.'), when(X.loss, 'Moralini bozma oğlum, bir dahaki maçı kazanırsınız.'), when(X.inj, 'Sakatlığın nasıl? İlaçlarını aksatma, merak ediyorum.'), when(X.bench, 'Bu hafta neden oynamadın? Hoca seni neden almadı?')]),
+      r: [{ t: X.young ? 'Bu akşam erken geleceğim, beraber yemek yiyelim' : 'Bu akşam size geliyorum', act: () => Life.act('family'), ap: 1, ok: 'Oh çok sevindim! Hemen sofrayı kuruyorum.' }, { t: 'Ben de seni seviyorum anne', ok: 'Canım oğlum. Kendine dikkat et.' }] });
     out.push({ id: 'dad', n: 'Babam', role: 'Aile', c: 'linear-gradient(135deg,#34c4b0,#147a6c)', i: 'B',
-      m: pick(['Dünkü maçta kanatta çok yalnız kaldın, dikkat et.', 'Antrenmanlarını aksatma, yetenek tek başına yetmez.', 'Eski maçlarını izledim, ne günlerdi!', 'Bir gün seni tribünden izlemeye geleceğim.', 'Mahalledekiler senin formanı giyiyor, haberin olsun.'], 2),
+      m: say('dad', (X.young ? ['Hafta sonu parka gidip şut çalışalım mı?', 'Kramponlarını temizledim, parlıyor!'] : ['Arabanın yağını değiştirdin mi?', 'Eski takımın maçına gittim, seni andılar.'])
+        .concat(['Dünkü maçta kanatta çok yalnız kaldın, dikkat et.', 'Antrenmanlarını aksatma, yetenek tek başına yetmez.', 'Eski maçlarını izledim, ne günlerdi!', 'Bir gün seni tribünden izlemeye geleceğim.', 'Mahalledekiler senin formanı giyiyor, haberin olsun.', 'Bu sezon kaç gol hedefliyorsun?', 'Rakip takımı izledim, sol bekleri yavaş.', 'Sabah koşusuna çıktım, senden ilham aldım!']),
+        [when(X.win, '3 puan! Böyle devam.'), when(X.goals, 'O golü ben de atardım gençken... Şaka şaka, harikaydın!'), when(X.loss, 'Yenilgi de oyunun parçası. Kafanı kaldır.'), when(X.star, 'Maçın en iyisi sendin, gurur duydum.'), when(X.inj, 'Fizyoterapiste düzenli git, acele etme.')]),
       r: [{ t: 'Hafta sonu beraber maç izleyelim', act: () => Life.act('family'), ap: 1, ok: 'Çekirdekler benden!' }, { t: 'Haklısın baba', ok: 'Aferin oğlum. Ben senin ilk hocanım, unutma.' }] });
     if (gfName) out.push({ id: 'gf', n: gfName, role: L.gf.married ? 'Eşin' : 'Sevgilin', c: 'linear-gradient(135deg,#ff6f8a,#c2416b)', i: gfName[0], heart: true,
-      m: pick(['Bu akşam boş musun? Seni özledim.', 'Maçtaki sevincin çok tatlıydı.', 'Hafta sonu bir yerlere kaçalım mı?', 'Yeni bir restoran açılmış, gidelim mi?', 'Bugün aklım hep sendeydi.'], 3),
+      m: say('gf', ['Bu akşam boş musun? Seni özledim.', 'Maçtaki sevincin çok tatlıydı.', 'Hafta sonu bir yerlere kaçalım mı?', 'Yeni bir restoran açılmış, gidelim mi?', 'Bugün aklım hep sendeydi.', 'Sana bir şarkı gönderdim, dinle!', 'Bu hafta çok yorgun görünüyorsun, biraz dinlen.', 'Yeni bir dizi başladım, beraber izleyelim mi?', 'Tribünden sana el salladım, gördün mü?', 'Annen beni yemeğe çağırdı, çok tatlı.'],
+        [when(X.win, 'Kazandınız! Seninle gurur duyuyorum.'), when(X.goals, 'Gol attığında çığlık attım!'), when(X.loss, 'Üzülme, ben hep yanındayım.'), when(X.inj, 'Sana çorba yaptım, iyileşene kadar sana ben bakarım.')]),
       r: [{ t: 'Bu akşam buluşalım', act: () => Life.act('date'), ap: 1, ok: 'Harika! Hazır olurum.' }, { t: 'Seni seviyorum', ok: 'Ben de seni seviyorum.' }] });
     if (!Game.inStreet()) out.push({ id: 'coach', n: 'Hoca', role: `Teknik direktör · ${Game.teamName()}`, c: 'linear-gradient(135deg,#9aa6c4,#4b5878)', i: 'H',
-      m: pick(['Antrenmanda daha fazla çalışmanı istiyorum.', 'Bu hafta seni izliyorum, hazır ol.', 'Takım savunmasına daha çok yardım et.', 'Formun iyi, böyle devam.', 'Maçtan önce taktik toplantısını kaçırma.'], 4),
+      m: say('coach', ['Antrenmanda daha fazla çalışmanı istiyorum.', 'Bu hafta seni izliyorum, hazır ol.', 'Takım savunmasına daha çok yardım et.', 'Formun iyi, böyle devam.', 'Maçtan önce taktik toplantısını kaçırma.', 'Yarın video analizi var, 10\'da odadayız.', 'Pres yaparken daha agresif ol.', 'İlk dokunuşun çok önemli, üzerinde çalış.', 'Dinlenmeyi ihmal etme, fikstür yoğun.', 'Topu kaybettikten sonraki 5 saniye çok önemli.'],
+        [when(X.win && X.goals, 'İyi oyundu, golün takımı rahatlattı.'), when(X.loss, 'Bu yenilgiyi hepimiz analiz edeceğiz.'), when(X.poor, 'Son maçta beklentimin altındaydın.'), when(X.star, 'Son maçta harikaydın, devam.'), when(X.bench, 'Bu hafta antrenmanda kendini göster, şansın gelecek.'), when(X.inj, 'Sağlık ekibiyle konuştum, acele etmiyoruz.')]),
       r: [{ t: 'Ofisinize geleyim hocam, konuşalım', act: () => Game.act('talk'), ap: 1, ok: 'Gel bakalım, kapım açık.', once: () => !Game.state.week || !Game.state.week.coachTalk }, { t: 'Anlaşıldı hocam', ok: 'Güzel. Sahada görelim.' }] });
     if (!Game.inStreet()) out.push({ id: 'team', n: 'Takım Grubu', role: Game.teamName(), c: 'linear-gradient(135deg,#7fb2ff,#1e5bd8)', i: 'T',
-      m: pick(['Akşam hep beraber yemeğe çıkıyoruz, geliyor musun?', 'Yarın antrenmandan önce kahve?', 'Maçtan sonra kutlama var!', 'Yeni gelen çocuğa hoş geldin diyelim.'], 5),
+      m: say('team', ['Akşam hep beraber yemeğe çıkıyoruz, geliyor musun?', 'Yarın antrenmandan önce kahve?', 'Yeni gelen çocuğa hoş geldin diyelim.', 'Kim konsol turnuvasına katılıyor?', 'Malzemeci yine forma numaralarını karıştırmış.', 'Antrenmana en geç gelen kahveleri ısmarlıyor!', 'Soyunma odasında müzik sırası kimde?', 'Kaptan doğum günü pastası getirdi!'],
+        [when(X.win, 'Kazandık! Akşam kutlama var!'), when(X.loss, 'Kafalar dik, hafta sonu telafi ederiz.'), when(X.goals, 'Golcümüz şov yaptı!')]),
       r: [{ t: 'Geliyorum!', act: () => Game.act('team'), ap: 1, ok: 'Süper, masa ayırtıyoruz.' }, { t: 'Bu sefer pas, dinleneceğim', ok: 'Tamam, kendine iyi bak.' }] });
     if (L.manager) out.push({ id: 'agent', n: L.manager.name, role: 'Menajer', c: 'linear-gradient(135deg,#ffcf3f,#e08d0c)', i: L.manager.name[0],
-      m: L.offers && L.offers.length ? `${L.offers.length} sponsor teklifi seni bekliyor. Menajer uygulamasına koydum.` : pick(['Transfer dönemi yaklaşıyor, kulaklarımız açık.', 'Bir marka seninle çalışmak istiyor olabilir, takipteyim.', 'Performansın değerini artırıyor, böyle devam.'], 6),
+      m: L.offers && L.offers.length ? `${L.offers.length} sponsor teklifi seni bekliyor. Menajer uygulamasına koydum.` : say('agent', ['Transfer dönemi yaklaşıyor, kulaklarımız açık.', 'Bir marka seninle çalışmak istiyor olabilir, takipteyim.', 'Performansın değerini artırıyor, böyle devam.', 'Bir kulübün scout\'u seni izlemeye geldi.', 'Sözleşme maddelerini tekrar gözden geçirdim.', 'Bir televizyon programı seni konuk etmek istiyor.'],
+        [when(X.goals, 'Gol attıkça telefonum susmuyor!'), when(X.star, 'Son performansın değerini yükseltti.')]),
       r: [{ t: 'Teklifleri göster', open: 'agent', ok: 'Hepsini uygulamaya koydum.' }, { t: 'Teşekkürler, sen bilirsin', ok: 'Merak etme, işimi biliyorum.' }] });
-    (Friends && Friends.on && Friends.on() ? Friends.list() : []).slice(0, 3).forEach((f, i) => out.push({ id: 'fr' + i, n: f.n, role: 'Arkadaşın', c: 'linear-gradient(135deg,#c792ff,#7b3fe4)', i: (f.n.trim()[0] || '?'),
-      m: pick(['Kanka maçını izledim, efsaneydin!', 'Hafta sonu eski mahalle ekibiyle halı saha var, haberin olsun.', 'Ne zaman görüşüyoruz? Çok oldu!', 'İmzalı forma lazım, kuzenim deli hayranın.'], 7 + i),
+    const FJ = { journalist: 'Seninle kısa bir röportaj yapabilir miyim?', agent: 'Menajerlik işleri iyi gidiyor, bir gün beraber çalışalım.', pro: 'Bu hafta bizim maç zor geçti, seninki nasıldı?', doctor: 'Kendine dikkat et, sakatlık şakaya gelmez!', chef: 'Restorana gel, sana özel bir menü hazırlarım.', teacher: 'Öğrencilerim senin posterini duvara astı!', coach: 'Altyapıda çocuklara seni örnek gösteriyorum.', other: 'Yeni bir iş buldum, kutlayalım!' };
+    (Friends && Friends.on && Friends.on() ? Friends.list() : []).slice(0, 3).forEach((f, i) => out.push({ id: 'fr' + i, n: f.n, role: f.job && typeof FR_JOB !== 'undefined' ? FR_JOB[f.job] : 'Arkadaşın', c: 'linear-gradient(135deg,#c792ff,#7b3fe4)', i: (f.n.trim()[0] || '?'),
+      m: say('fr' + (f.id || i), (X.kid ? ['Teneffüste top oynayalım mı?', 'Yarın okula yeni topumu getiriyorum!', 'Ödevi yaptın mı? Bana da gösterir misin?'] : ['Hafta sonu eski mahalle ekibiyle halı saha var, haberin olsun.', 'Eski okulun önünden geçtim, seni andım.', 'Biletimi aldım, maçına geliyorum!'])
+        .concat(['Kanka maçını izledim, efsaneydin!', 'Ne zaman görüşüyoruz? Çok oldu!', 'İmzalı forma lazım, kuzenim deli hayranın.', 'Hâlâ o eski topunu saklıyor musun?', 'Kanka bana da bir forma ayarla!']),
+        [when(f.job && FJ[f.job], FJ[f.job]), when(X.goals, 'Golünü izledim, ekrana sarıldım!'), when(X.loss, 'Kanka kafana takma, bir maç sadece.')]),
       r: [{ t: 'Yakında buluşalım', ok: 'Söz mü? Bekliyorum!' }, { t: 'Sağ ol kanka', ok: 'Her zaman!' }] }));
     (L.kids || []).forEach((k, i) => {
       const a = Math.max(0, s.season.year - k.by);
       if (a < 7 || typeof Life.kidActs !== 'function') return;
       const acts = Life.kidActs(a); const ak = acts && acts[0];
       out.push({ id: 'kid' + i, n: k.n, role: `${a} yaş`, c: 'linear-gradient(135deg,#ffb36b,#e0672b)', i: k.n[0],
-        m: pick(a >= 18 ? ['Baba bu hafta yemeğe gelebilir miyim?', 'İşte her şey yolunda, merak etme.'] : ['Baba bugün top oynayalım mı?', 'Okulda herkes senin maçını konuştu!', 'Bana yeni krampon alır mısın?'], 11 + i),
+        m: say('kid' + i, a >= 18 ? ['Baba bu hafta yemeğe gelebilir miyim?', 'İşte her şey yolunda, merak etme.', 'Senin eski maçlarını arkadaşlarıma izlettim!', 'Baba bir tavsiyene ihtiyacım var.'] : ['Baba bugün top oynayalım mı?', 'Okulda herkes senin maçını konuştu!', 'Bana yeni krampon alır mısın?', 'Baba okulda resim yaptım, seni çizdim!', 'Arkadaşlarım imzanı istiyor!', 'Baba bana şut çekmeyi öğretir misin?'],
+          [when(X.goals, 'Baba golünü gördüm! Ben de senin gibi olacağım!'), when(X.loss, 'Üzülme baba, sen yine de en iyisisin.')]),
         r: ak ? [{ t: ak[1], act: () => Life.kidAct(i, ak[0]), ap: 1, ok: 'Yaşasın!' }, { t: 'Seni seviyorum', ok: 'Ben de seni!' }] : [{ t: 'Seni seviyorum', ok: 'Ben de seni!' }] });
     });
     return out;
@@ -249,7 +276,7 @@
     return `<div class="ph-home">
       <div class="ph-wgs">
         <button class="ph-wg" data-ph-open="cal" type="button"><span class="ph-lbl">Sıradaki maç</span>${next}<small class="ph-wk">${s.season.year} · ${Math.min(s.season.round + 1, Game.rounds())}. hafta</small></button>
-        <div class="ph-wg"><span class="ph-lbl">Durum</span><div class="ph-mini">${bar('Aile', p.rel.family, '#46e08f')}${bar('Hoca', p.rel.coach, '#9aa6c4')}${bar('Moral', p.morale, '#ffcf3f')}${bar('Enerji', p.energy, '#7fb2ff')}</div><small class="ph-wk">${s.ap} aksiyon hakkı</small></div>
+        <button class="ph-wg" data-ph-open="stat" type="button"><span class="ph-lbl">Durum <i class="ph-more">›</i></span><div class="ph-mini">${bar('Aile', p.rel.family, '#46e08f')}${bar('Hoca', p.rel.coach, '#9aa6c4')}${bar('Moral', p.morale, '#ffcf3f')}${bar('Enerji', p.energy, '#7fb2ff')}</div><small class="ph-wk">${s.ap} aksiyon hakkı</small></button>
       </div>
       <div class="ph-apps">${apps().map(appIcon).join('')}</div>
       <div class="ph-dock">${DOCK.map(appIcon).join('')}</div>
@@ -270,9 +297,6 @@
       <div class="ph-body" id="ph-chat"><div class="ph-chat" data-emo><div class="ph-day">Bu hafta</div><div class="ph-bub in">${esc(c.m)}</div>${replied && my ? `<div class="ph-bub out">${esc(my)}</div>` : ''}${replied && back ? `<div class="ph-bub in">${esc(back)}</div>` : ''}${note && note.length ? `<div class="ph-sys">${[].concat(note).map((x) => `<span>${esc(x)}</span>`).join('')}</div>` : ''}</div></div>
       ${replied ? '<div class="ph-replies"><span class="ph-lbl2">Gelecek hafta yeni mesajlar gelir.</span></div>' : `<div class="ph-replies"><span class="ph-lbl2">Cevabın</span>${c.r.map((r, i) => { const dis = (r.ap && ap < r.ap) || (r.once && !r.once()); return `<button class="ph-rep" data-ph-rep="${i}" type="button" ${dis ? 'disabled' : ''}><span>${esc(r.t)}</span>${r.ap ? `<em>${r.ap} aksiyon</em>` : r.open ? '<em>uygulamayı aç</em>' : ''}</button>`; }).join('')}</div>`}
     </div>`;
-  }
-  function feedView() {
-    return `<div class="ph-appv ph-feed">${top('StarFeed')}<div class="ph-body">${Social.render(true)}</div></div>`;
   }
   function wikiView() {
     const p = Phone.p();
@@ -358,19 +382,138 @@
     return `<div class="ph-appv ph-shop">${top('alışveriş')}<div class="ph-body"><div class="ph-promo"><b>Yıldız indirimi</b><small>Hobi, eğlence, stil ve lüks ürünler</small></div>${UI.shop({ tabs: ['lux'], luxCats: ['life', 'style'], excl: shopExcl(), title: 'Yaşam Tarzı' })}</div></div>`;
   }
   function sportView() {
-    return `<div class="ph-appv ph-shop ph-sport">${top('Spor Mağazası')}<div class="ph-body"><div class="ph-promo"><b>Sahaya hazır ol</b><small>Enerji içeceği, fizyoterapi, krampon, ekipman, beslenme ve toplar</small></div>${UI.shop({ tabs: ['bag', 'cons', 'kit', 'balls'], title: 'Spor Mağazası' })}</div></div>`;
+    return `<div class="ph-appv ph-sport">${top('Spor Mağazası')}<div class="ph-body"><div class="ph-promo"><b>Sahaya hazır ol</b><small>Enerji içeceği, fizyoterapi, krampon, ekipman, beslenme ve toplar</small></div>${UI.shop({ tabs: ['bag', 'cons', 'kit', 'balls'], title: 'Spor Mağazası' })}</div></div>`;
   }
-  // Hayatım: eski Yaşam sekmesinin tamamı (aile, ilişki, çocuklar, arkadaşlar, belgeler, menajer kısayolu); okul kartı Okul uygulamasında
+  // ---------------- StarFeed: akış (başkalarının gönderileri) + profil ----------------
+  const AVC = ['#ff6f8a', '#7fb2ff', '#46e08f', '#ffcf3f', '#c792ff', '#ffb36b', '#34c4b0', '#9aa6c4'];
+  const avatar = (name, cls = '') => { const n = String(name || '?').trim(); const c = AVC[hstr(n) % AVC.length]; return `<span class="ph-fav ${cls}" style="background:${c}">${esc(n[0] || '?')}</span>`; };
+  const handleOf = (n) => '@' + String(n).toLocaleLowerCase('tr').replace(/[^a-z0-9çğıöşü]+/g, '').slice(0, 18);
+  const FIMG = {
+    gym: '<path d="M6 9v6M18 9v6M3 10.5v3M21 10.5v3M6 12h12"/>',
+    ball: '<circle cx="12" cy="12" r="8"/><path d="M12 7.5l3.4 2.5-1.3 4H9.9l-1.3-4z"/>',
+    boot: '<path d="M4 15h11l5 2v2H4z"/><path d="M6 15V7h5v5l4 1"/>',
+    plane: '<path d="M3 13l18-7-7 18-2-8z"/>',
+    food: '<circle cx="12" cy="13" r="6"/><path d="M4 5v6M20 5v14M7 5v6"/>',
+    run: '<circle cx="14" cy="5" r="2"/><path d="M10 21l2-6-3-3 3-4 3 3 3 1M9 12l-3 2"/>',
+  };
+  const FIMG_BG = { gym: ['#1d3a8a', '#0b1838'], ball: ['#1f7a3a', '#0b3a1c'], boot: ['#7b3fe4', '#2a0f5e'], plane: ['#2f6ee8', '#0e2a6b'], food: ['#e0672b', '#5e240b'], run: ['#c2416b', '#4b0f26'] };
+  const TM_POSTS = [['gym', 'Bugün ağırlık günüydü. Yarın daha güçlü!'], ['ball', 'Topla geçen bir gün daha.'], ['boot', 'Yeni kramponlar sahaya hazır.'], ['plane', 'Deplasman yolundayız!'], ['food', 'Maç öncesi beslenme her şey.'], ['run', 'Sabah koşusu tamam. Hedef büyük.'], ['gym', 'Soyunma odasında moraller yüksek.'], ['ball', 'Hafta sonu için hazırız.']];
+  const FR_POSTS = [['food', 'Akşam yemeği dostlarla.'], ['ball', 'Halı saha klasiği.'], ['plane', 'Kısa bir tatil molası.'], ['run', 'Bugün 10 kilometre koştum!']];
+  function feedPosts() {
+    const s = Game.state, p = s.player, w = Phone.week(), out = [], me = Player.fullName(p), X = ctxNow();
+    const n = (k, a, b) => a + (hstr(`${w}|${k}`) % (b - a));
+    if (!Game.inStreet()) {
+      const cn = Game.teamName(), r = s.lastReport;
+      if (X.win || X.loss || X.draw) {
+        out.push({ id: 'club', who: cn, club: true, kind: 'score', a: cn, b: r.opp, ga: r.gf, gb: r.ga, res: r.res, txt: r.res === 'W' ? 'Galibiyet! Desteğiniz için teşekkürler.' : r.res === 'L' ? 'Bugün olmadı. Toparlanıp geri döneceğiz.' : 'Deplasmandan bir puanla dönüyoruz.', likes: n('club', 800, 9000) });
+        if (X.goals || X.star) out.push({ id: 'fan', who: 'Tribün Sesi', kind: 'quote', txt: `${me} bugün sahanın en iyisiydi!`, likes: n('fan', 200, 3000) });
+      }
+      const ro = (Game.teamRoster(s.clubId) || []).filter((x) => x && x.n && x.n !== me);
+      [0, 1].forEach((k) => { if (!ro.length) return; const m = ro[hstr(`${w}|tm${k}`) % ro.length]; const tp = TM_POSTS[hstr(`${w}|tp${k}`) % TM_POSTS.length]; if (!out.some((x) => x.who === m.n)) out.push({ id: 'tm' + k, who: m.n, sub: cn, kind: 'photo', art: tp[0], txt: tp[1], likes: n('tm' + k, 60, 1800) }); });
+      try {
+        const lg = Game.league();
+        if (lg && lg.table && s.season.round > 0) { const t = World.sortedTable(lg).slice(0, 3); out.push({ id: 'lg', who: Game.leagueName(), lg: true, kind: 'table', rows: t.map((x) => [Game.teamName(x.id), x.pts, x.id === s.clubId]), txt: `${s.season.round}. hafta sonunda zirve`, likes: n('lg', 400, 6000) }); }
+      } catch (e) { /* tablo yok */ }
+    }
+    (s.news || []).filter((x) => x && x.t && x.type !== 'bad').slice(0, 3).forEach((x, k) => out.push({ id: 'nw' + k, who: 'SporHaber', news: true, kind: 'news', txt: U.plain(String(x.t)), likes: n('nw' + k, 100, 2500) }));
+    (typeof Friends !== 'undefined' && Friends.on && Friends.on() ? Friends.list() : []).slice(0, 2).forEach((f, k) => { const fp = FR_POSTS[hstr(`${w}|fp${f.n}`) % FR_POSTS.length]; out.push({ id: 'fr' + k, who: f.n, kind: 'photo', art: fp[0], txt: fp[1], likes: n('fr' + k, 10, 300) }); });
+    return out.sort((a, b) => hstr(`${w}|o|${a.id}`) - hstr(`${w}|o|${b.id}`)).sort((a, b) => (b.kind === 'score') - (a.kind === 'score'));
+  }
+  function feedCard(x) {
+    const d = Phone.data(), on = !!(d.cheer && d.cheer[`${Phone.week()}|${x.id}`]);
+    const s = Game.state;
+    let av = avatar(x.who), media = '';
+    if (x.club) { try { av = `<span class="ph-fav ph-fav-club">${UI.shirt(Game.club())}</span>`; } catch (e) { /* yok */ } }
+    if (x.lg) av = `<span class="ph-fav ph-fav-lg">${IC.feed}</span>`;
+    if (x.news) av = '<span class="ph-fav ph-fav-nw" data-noi18n>SH</span>';
+    if (x.kind === 'score') media = `<div class="ph-fsc res-${x.res}"><small>MAÇ SONUCU</small><div><span>${esc(x.a)}</span><b>${x.ga} - ${x.gb}</b><span>${esc(x.b)}</span></div></div>`;
+    else if (x.kind === 'table') media = `<div class="ph-ftb">${x.rows.map((r, i) => `<div class="${r[2] ? 'me' : ''}"><i>${i + 1}</i><span>${esc(r[0])}</span><b>${r[1]}</b></div>`).join('')}</div>`;
+    else if (x.kind === 'photo') { const bg = FIMG_BG[x.art] || FIMG_BG.ball; media = `<div class="ph-fimg" style="background:linear-gradient(150deg,${bg[0]},${bg[1]})">${svg(FIMG[x.art] || FIMG.ball, 'none', 'rgba(255,255,255,.9)', 1.6)}</div>`; }
+    else if (x.kind === 'news') media = `<div class="ph-fnw"><small>SON DAKİKA</small><p>${esc(x.txt)}</p></div>`;
+    else if (x.kind === 'quote') media = `<div class="ph-fq">“${esc(x.txt)}”</div>`;
+    const cap = x.kind === 'news' || x.kind === 'quote' ? '' : `<p class="ph-fcap"><b>${esc(handleOf(x.who))}</b> ${esc(x.txt)}</p>`;
+    return `<article class="ph-fpost"><header>${av}<span><b>${esc(x.who)}${x.club || x.lg || x.news ? `<i class="ph-fv">${IC.feed}</i>` : ''}</b><small>${esc(x.sub || handleOf(x.who))}</small></span></header>${media}
+      <div class="ph-fact"><button type="button" class="${on ? 'on' : ''}" data-ph-cheer="${x.id}" aria-label="Alkış">${svg('<path d="M12 3.2l2.5 5.3 5.8.7-4.3 4 1.1 5.7L12 16.1l-5.1 2.8L8 13.2 3.7 9.2l5.8-.7z"/>', on ? '#ffcf3f' : 'none', on ? '#ffcf3f' : 'currentColor', 1.8)}<span>${Social.fmt(x.likes + (on ? 1 : 0))}</span></button></div>${cap}</article>`;
+  }
+  function feedView() {
+    const me = Phone.sub === 'me';
+    const seg = `<div class="ph-seg"><button type="button" class="${me ? '' : 'on'}" data-ph-ftab="">Akış</button><button type="button" class="${me ? 'on' : ''}" data-ph-ftab="me">Profilim</button></div>`;
+    if (me) return `<div class="ph-appv ph-feed">${top('StarFeed')}${seg}<div class="ph-body">${Social.render(true)}</div></div>`;
+    const posts = feedPosts();
+    return `<div class="ph-appv ph-feed">${top('StarFeed')}${seg}<div class="ph-body ph-fbody">${posts.length ? posts.map(feedCard).join('') : '<p class="ph-note">Akış şimdilik sessiz. Maçlar başladıkça takım arkadaşların ve kulübün paylaşım yapacak.</p>'}</div></div>`;
+  }
+  // ---------------- Durum ayrıntısı (ana ekrandaki Durum kartı) ----------------
+  function statView() {
+    const s = Game.state, p = s.player, L = Life.ensure(p), so = Social.ensure(p);
+    const row = (ic, l, v, c, tip, txt) => `<div class="ph-st"><span class="ph-st-i" style="background:${c}">${ic}</span><div><div class="ph-st-h"><b>${l}</b><em>${txt != null ? txt : Math.round(v)}</em></div>${v != null ? `<div class="ph-bar"><i style="width:${U.clamp(v, 0, 100)}%;background:${c}"></i></div>` : ''}<small>${tip}</small></div></div>`;
+    const i = (d) => svg(d, 'none', '#fff', 2.2);
+    const H = { e: i('<path d="M13 2L4 14h7l-1 8 9-12h-7z"/>'), m: i('<circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/>'), f: i('<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/>'), c: i('<circle cx="12" cy="7" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/>'), t: i('<circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3 3-6 6-6s6 3 6 6M15 14c3 0 6 2 6 5"/>'), fa: i('<path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/>'), h: i('<path d="M12 20s-7-4.4-9-8.6C1.6 8.3 3.5 5 7 5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.5 0 5.4 3.3 4 6.4-2 4.2-9 8.6-9 8.6z"/>'), s: i('<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>'), hp: i('<path d="M12 5v14M5 12h14"/>'), ap: i('<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>') };
+    return `<div class="ph-appv ph-stat">${top('Durum')}<div class="ph-body">
+      <div class="ph-st-top"><div><small>Güç</small><b>${Player.overall(p, true)}</b></div><div><small>Aksiyon hakkı</small><b>${s.ap}</b></div><div><small>Sağlık</small><b class="${p.injuryWeeks ? 'bad' : 'ok'}">${p.injuryWeeks ? `${p.injuryWeeks} hf` : '✓'}</b></div></div>
+      <div class="ph-secl">Bedenin ve aklın</div>
+      ${row(H.e, 'Enerji', p.energy, '#7fb2ff', 'Maçtaki performansını belirler. Dinlenme, beslenme ve enerji içeceği artırır; yoğun antrenman düşürür.')}
+      ${row(H.m, 'Moral', p.morale, '#ffcf3f', 'Kazanmak, gol atmak, ailen ve sevdiklerinle vakit geçirmek moralini yükseltir.')}
+      ${p.injuryWeeks ? row(H.hp, 'Sakatlık', null, '#ff5a64', 'Fizyoterapi seansı iyileşmeyi hızlandırır. Spor Mağazası\'ndan alabilirsin.', `${p.injuryWeeks} hafta`) : ''}
+      <div class="ph-secl">İlişkilerin</div>
+      ${row(H.f, 'Aile', p.rel.family, '#46e08f', 'Ailenle vakit geçirmek bağınızı güçlendirir; uzun süre ilgisiz kalırsan düşer.')}
+      ${L.gf ? row(H.h, L.gf.married ? 'Eşin' : 'Sevgilin', L.gf.rel, '#ff6f8a', 'Buluşmalar ilişkini güçlendirir. Çok düşerse ayrılık gelebilir.') : ''}
+      ${!Game.inStreet() ? row(H.c, 'Hoca', p.rel.coach, '#9aa6c4', 'Hocayla iyi ilişki daha çok forma şansı demek. Antrenman ve konuşmalar artırır.') : ''}
+      ${!Game.inStreet() ? row(H.t, 'Takım', p.rel.team, '#7fb2ff', 'Takım arkadaşlarınla vakit geçirmek uyumu ve maç içi pasları artırır.') : ''}
+      ${!Game.inStreet() ? row(H.fa, 'Taraftar', p.rel.fans, '#c792ff', 'İyi maçlar ve goller taraftarın sevgisini kazandırır.') : ''}
+      <div class="ph-secl">Ünün</div>
+      ${row(H.s, 'Ün', p.fame, '#ffb36b', 'Ün arttıkça sponsorlar, transfer teklifleri ve takipçiler gelir.')}
+      ${row(IC.feed, 'StarFeed takipçisi', null, '#16306f', 'Paylaşımlar ve iyi maçlar takipçi getirir.', Social.fmt(so.followers))}
+    </div></div>`;
+  }
+  // ---------------- Hayatım (telefon uygulaması tasarımı) ----------------
+  const ring = (v, c, l, sub) => `<div class="ph-ring"><span style="background:conic-gradient(${c} ${U.clamp(v, 0, 100) * 3.6}deg, rgba(255,255,255,.08) 0)"><i><b>${Math.round(v)}</b></i></span><small>${l}</small>${sub ? `<em>${esc(sub)}</em>` : ''}</div>`;
   function lifeView() {
-    let html = Life.screen();
-    try { if (typeof School !== 'undefined') { const sc = School.card(); if (sc) html = html.replace(sc, ''); } } catch (e) { /* yok */ }
-    // bu haftanın aksiyonları en üstte (durum kartının hemen altında): kaydırmadan ulaşılır
-    try {
-      const parts = html.split(/(?=<section[\s>])/);
-      const i = parts.findIndex((x) => x.indexOf('data-life="family"') >= 0);
-      if (i > 1) { const [x] = parts.splice(i, 1); parts.splice(1, 0, x); html = parts.join(''); }
-    } catch (e) { /* sıra aynı kalır */ }
-    return `<div class="ph-appv ph-life">${top('Hayatım')}<div class="ph-body">${html}</div></div>`;
+    const s = Game.state, p = s.player, L = Life.ensure(p), gf = L.gf, adult = Life.adult(p), ap = s.ap;
+    const kidsL = L.kids || [];
+    const act = (k, ic, t, d, dis) => `<button type="button" class="ph-la" data-life="${k}" ${dis || ap <= 0 ? 'disabled' : ''}><span class="ic">${ic}</span><b>${t}</b><small>${d}</small></button>`;
+    const I = (d) => svg(d, 'none', '#fff', 2);
+    const status = gf ? (gf.married ? `${gf.name} ile evli` : `${gf.name} ile birlikte`) : 'Yalnız';
+    const acts = [
+      act('family', I('<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/>'), 'Ailenle vakit geçir', 'Aile ilişkisi ve moral artar'),
+      gf ? act('date', I('<path d="M12 20s-7-4.4-9-8.6C1.6 8.3 3.5 5 7 5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.5 0 5.4 3.3 4 6.4-2 4.2-9 8.6-9 8.6z"/>'), `${gf.name} ile buluş`, 'İlişki güçlenir, moral artar') : act('meet', I('<circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 3-6 6-6s6 3 6 6M17 8v6M14 11h6"/>'), 'Yeni biriyle tanış', p.age < 16 ? '16 yaşından sonra' : 'Ünün ve moralin şansını artırır', p.age < 16),
+      gf && !gf.married && gf.rel >= 85 && s.season.year > gf.since && adult ? act('propose', I('<circle cx="12" cy="14" r="6"/><path d="M9 3h6l-3 5z"/>'), 'Evlilik teklif et', `${gf.name} hazır olabilir`) : '',
+      act('night', I('<path d="M20 14A8 8 0 019.5 3.6 8 8 0 1020 14z"/>'), 'Gece hayatı', adult ? 'Moral +10, enerji -18 · paparazzi riski' : '18 yaşından sonra', !adult),
+    ].join('');
+    const kidAge = (k) => Math.max(0, s.season.year - k.by);
+    const baby = L.babyNew ? `<div class="ph-lbaby"><b>${L.babyNew.sex === 'b' ? 'Bir oğlun oldu!' : 'Bir kızın oldu!'}</b><small>Anne ve bebek çok iyi. Ona hangi adı vereceksiniz?</small><div class="ph-lchips" data-noi18n>${L.babyNew.names.map((n) => `<button type="button" data-kname="${esc(n)}">${esc(n)}</button>`).join('')}</div></div>` : '';
+    const person = (avc, name, sub, v, c, extra = '', cls = '') => `<div class="ph-lp ${cls}">${avc}<div class="t"><b>${name}</b><small>${sub}</small>${v != null ? `<div class="ph-bar"><i style="width:${U.clamp(v, 0, 100)}%;background:${c}"></i></div>` : ''}${extra}</div></div>`;
+    const fam = [
+      person(avatar('Annem'), 'Annem', 'Aile', null, '', '<button type="button" class="ph-lmsg" data-ph-chat="mom">Mesaj</button>'),
+      person(avatar('Babam'), 'Babam', 'Aile', null, '', '<button type="button" class="ph-lmsg" data-ph-chat="dad">Mesaj</button>'),
+      gf ? person(avatar(gf.name), esc(gf.name), `<span>${gf.married ? 'Eşin' : 'Sevgilin'}</span> · <span>${esc(gf.job)}</span> · <span>${gf.since}'den beri</span>`, gf.rel, '#ff6f8a', '<button type="button" class="ph-lmsg" data-ph-chat="gf">Mesaj</button>') : '',
+      ...kidsL.map((k, i) => { const a = kidAge(k), ka = typeof Life.kidActs === 'function' ? Life.kidActs(a) : []; return person(avatar(k.n), `<span data-noi18n>${esc(k.n)}</span>`, `<span>${a} yaş</span>${k.dream ? ' · <span>futbolcu olmak istiyor</span>' : ''}`, k.bond == null ? 60 : k.bond, '#7fb2ff', `<div class="ph-lchips">${ka.map(([key, t]) => `<button type="button" data-kid="${i}" data-kact="${key}" ${ap <= 0 ? 'disabled' : ''}>${t}</button>`).join('')}</div>`, 'ph-lkid'); }),
+      gf && gf.married && !kidsL.length && !L.babyNew ? '<div class="ph-lp ph-lkid-none"><span></span><div class="t"><small>Henüz çocuğunuz yok. Evliliğinizin ilk yılından sonra güzel bir haber gelebilir.</small></div></div>' : '',
+    ].join('');
+    const fr = typeof Friends !== 'undefined' && Friends.on && Friends.on() ? Friends.list() : [];
+    const frHtml = fr.length ? `<div class="ph-secl">Arkadaşların</div><div class="ph-lfr">${fr.map((f) => `<div>${avatar(f.n)}<b>${esc(f.n.split(' ')[0])}</b><small>${esc(f.job && typeof FR_JOB !== 'undefined' ? FR_JOB[f.job] : (typeof FR_KIND !== 'undefined' ? FR_KIND[f.kind] : ''))}</small></div>`).join('')}</div>` : '';
+    const docs = [];
+    if (typeof LifeX !== 'undefined' && LifeX.on()) {
+      if (p.age >= 18) docs.push(`<div class="ph-ldoc"><span>Ehliyet</span>${p.license ? '<em class="ok">Var</em>' : '<button type="button" data-ph-lic>Sınava gir</button>'}</div>`);
+      if (p.uni) docs.push(`<div class="ph-ldoc"><span>Açık öğretim</span><em>${p.uni.done ? 'Mezun' : `${p.uni.yr}. sınıf`}</em></div>`);
+      const cl = LifeX.clubLang();
+      if (cl && cl !== LifeX.native(p)) docs.push(`<div class="ph-ldoc"><span>${typeof LX_LNAME !== 'undefined' ? esc(LX_LNAME[cl] || '') : ''}</span><em>${LifeX.langLvl(p, cl)}/3</em></div>`);
+    }
+    const origin = p.parents ? `<p class="ph-note">Baba memleketi: <b>${esc((Game.nat(p.parents.f) || {}).name || '')}</b> · Anne memleketi: <b>${esc((Game.nat(p.parents.m) || {}).name || '')}</b>${p.parents.f !== p.parents.m ? (p.natLocked ? ` · Milli tercihin: <b>${esc(Game.nation().name)}</b>` : ' · İki milli takıma da uygunsun') : ''}</p>` : '';
+    const mgr = p.age >= 16 && !Game.inStreet() ? `<button type="button" class="ph-lrow" data-ph-open="agent"><span class="ic" style="background:linear-gradient(135deg,#ffd76a,#e0a10e)">${IC.agent}</span><span><b>Menajer ve sponsorlar</b><small>${L.manager ? `<span data-noi18n>${esc(L.manager.name)}</span>` : '<span>Menajer bul</span>'} · <span>${L.sponsors.length} aktif sponsor</span>${L.offers.length ? ` · <span>${L.offers.length} yeni teklif</span>` : ''}</small></span><i>›</i></button>` : '';
+    return `<div class="ph-appv ph-life">${top('Hayatım')}<div class="ph-body">
+      <div class="ph-lhero">${avatar(Player.fullName(p), 'ph-fav-xl')}<div><b>${esc(Player.fullName(p))}</b><small><span>${p.age} yaş</span> · <span>${esc(status)}</span></small></div></div>
+      ${L.ban > 0 ? `<div class="ph-lban"><b>Federasyon men cezası: ${L.ban} hafta</b><small>Ceza bitene kadar maçlarda forma giyemezsin.</small></div>` : ''}
+      <div class="ph-rings">${ring(p.rel.family, '#46e08f', 'Aile')}${ring(gf ? gf.rel : 0, '#ff6f8a', gf ? (gf.married ? 'Eşin' : 'Sevgilin') : 'İlişki', gf ? '' : 'Yalnız')}${ring(p.morale, '#ffcf3f', 'Moral')}</div>
+      <div class="ph-secl ph-secl2"><span>Bu hafta</span><em>${ap} aksiyon hakkı</em></div>
+      <div class="ph-las">${acts}</div>
+      ${baby}
+      <div class="ph-secl">Ailem</div><div class="ph-lgrp">${fam}</div>
+      ${frHtml}
+      ${docs.length ? `<div class="ph-secl">Belgeler ve beceriler</div><div class="ph-lgrp">${docs.join('')}</div>` : ''}
+      ${mgr}
+      ${origin}
+      ${gf ? `<button type="button" class="ph-lend" data-life="${gf.married ? 'divorce' : 'breakup'}">${gf.married ? 'Boşan' : 'Ayrıl'}</button>` : ''}
+    </div></div>`;
   }
   const SUBJ = { corners: 'Geometri', math: 'Matematik', pattern: 'Mantık', flag: 'Coğrafya', count: 'Matematik', clock: 'Hayat Bilgisi' };
   function schoolView() {
@@ -448,8 +591,8 @@
       <button class="ph-cta ghost" data-ph-close type="button">Telefonu kapat</button>
     </div></div>`;
   }
-  const VIEWS = { feed: feedView, wiki: wikiView, bank: bankView, cal: calView, agent: agentView, emlak: emlakView, cars: carsView, shop: shopView, sport: sportView, life: lifeView, school: schoolView, lux: luxView, dia: diaView, store: storeView, prem: premView, set: setView };
-  const LIGHT = ['wiki', 'cal', 'store', 'shop', 'sport', 'school'];
+  const VIEWS = { feed: feedView, wiki: wikiView, bank: bankView, cal: calView, agent: agentView, emlak: emlakView, cars: carsView, shop: shopView, sport: sportView, life: lifeView, stat: statView, school: schoolView, lux: luxView, dia: diaView, store: storeView, prem: premView, set: setView };
+  const LIGHT = ['wiki', 'cal', 'store', 'shop', 'school'];
 
   // ---------------- çizim ve olaylar ----------------
   Phone.render = function () {
@@ -487,6 +630,16 @@
     on('[data-ph-open]', (b) => { Phone.app = b.dataset.phOpen; Phone.sub = null; Phone.day = null; Phone.month = null; Phone.render(); });
     on('[data-ph-back]', () => { if (Phone.sub) Phone.sub = null; else Phone.app = null; Phone.render(); });
     on('[data-ph-th]', (b) => { Phone.sub = b.dataset.phTh; Phone.render(); });
+    on('[data-ph-chat]', (b) => { Phone.app = 'msg'; Phone.sub = b.dataset.phChat; Phone.render(); });
+    on('[data-ph-ftab]', (b) => { Phone.sub = b.dataset.phFtab || null; Phone.render(); });
+    on('[data-ph-lic]', () => { try { LifeX.licenseExam(() => Game.render()); } catch (e) { console.error(e); } });
+    on('[data-ph-cheer]', (b) => {
+      const d = Phone.data(), k = `${Phone.week()}|${b.dataset.phCheer}`;
+      d.cheer = d.cheer || {};
+      if (d.cheer[k]) delete d.cheer[k]; else d.cheer[k] = 1;
+      const ks = Object.keys(d.cheer); if (ks.length > 60) ks.slice(0, ks.length - 60).forEach((x) => delete d.cheer[x]);
+      Game.save(); Phone.render();
+    });
     on('[data-ph-rep]', (b) => reply(+b.dataset.phRep));
     on('[data-ph-day]', (b) => { Phone.day = b.dataset.phDay; Phone.render(); });
     on('[data-ph-mon]', (b) => {
@@ -555,6 +708,8 @@
     if (!b) return;
     b.hidden = !Phone.on();
     let n = 0; try { const L = (Phone.p() && Phone.p().life) || {}; n = unread() + (L.offers || []).length + (L.babyNew ? 1 : 0); } catch (e) { n = 0; }
+    b.classList.toggle('on', !!Phone.open);
+    document.querySelectorAll('#tabs button[data-tab]').forEach((x) => x.classList.toggle('ph-off', !!Phone.open));
     const i = b.querySelector('.ph-tabn');
     if (i) { i.textContent = n > 9 ? '9+' : String(n); i.hidden = !n; }
   };
@@ -571,6 +726,7 @@
     Phone.open = true; Phone.app = app || null; Phone.sub = null; Phone.day = null; Phone.month = null; Phone._last = null;
     Phone.el.classList.add('on');
     document.documentElement.classList.add('ph-open');
+    fitTabs();
     Phone.render();
   };
   Phone.close = function () {
@@ -637,8 +793,22 @@
     const b = e.target.closest && e.target.closest('[data-phone-open], #tabs [data-phone]');
     if (!b || !Game.state || !Game.state.player) return;
     e.preventDefault();
+    // alt menüdeki Telefon düğmesi aç/kapa çalışır
+    if (!b.dataset.phoneOpen && Phone.open) return Phone.close();
     Phone.show(b.dataset.phoneOpen || null);
   });
+  // telefon açıkken alt menüden başka bir sekmeye basınca telefon kapanır ve o sekme açılır
+  document.addEventListener('click', (e) => {
+    const t = e.target.closest && e.target.closest('#tabs button[data-tab]');
+    if (t && Phone.open) Phone.close();
+  }, true);
+  // mobilde telefon alt menünün üstünde durur (alt menü görünür kalır)
+  function fitTabs() {
+    const t = document.getElementById('tabs');
+    const h = t && getComputedStyle(t).position === 'fixed' ? t.getBoundingClientRect().height : 0;
+    document.documentElement.style.setProperty('--ph-tabs', `${Math.round(h)}px`);
+  }
+  window.addEventListener('resize', () => { if (Phone.open) fitTabs(); });
   // alt menüye telefon düğmesi (Profil'in yanında)
   function addTab() {
     const tabs = document.getElementById('tabs');

@@ -1661,7 +1661,6 @@
 8525|¡Has tenido una niña!
 8550|Arrastra un jugador sobre otro para intercambiarlos. Mantén pulsado un suplente un momento para arrastrarlo. Tócalo para abrir su ficha.
 8552|Teléfono
-1640|En uso
 8553|Tuyo
 8554|Noche
 8555|Focos del estadio
@@ -1761,7 +1760,6 @@
 8735|{0} s
 8736|{0} CV
 8734|{0} nudos
-1180|Inicio
 8662|MiCasa
 8663|Coches
 8664|compras
@@ -1788,7 +1786,6 @@
 8689|Tu antigua casa
 8690|Vives de alquiler
 8691|Vives aquí
-1653|Tuya
 8692|Casas en venta
 8693|Piso de alquiler
 8694|Centro de la ciudad
@@ -1825,7 +1822,6 @@
 8723|Abre tu perfil en el teléfono
 8733|{0} aplausos
 8724|Orion Pro
-1656|Patrocinios
 8737|Cada semana moral +2, Fama +4
 8741|{0} años
 8738|2 hab. · 95 m² · Centro
@@ -1872,3 +1868,135 @@
 8784|Una sesión de fisio acorta la lesión 2 semanas. Cómprala en la Tienda deportiva de tu teléfono y úsala desde tu bolsa en el Plan semanal.
 8787|{0} están gastadas y ya no sirven. Compra unas nuevas en la Tienda deportiva de tu teléfono.
 8788|✨ ¡{0} ya es tuyo! Tu publicación recibe aplausos.
+8790|¡3 puntos! Sigue así.
+8793|Mi familia
+8794|Pasar tiempo con la familia fortalece el vínculo; si la descuidas, baja.
+8795|Inicio
+8796|El inicio está tranquilo. Cuando empiecen los partidos, tus compañeros y el club publicarán.
+8799|La cena es a las 7, ¡no llegues tarde!
+8800|Cena con amigos.
+8801|En la cantera pongo a los niños tu ejemplo.
+8802|Tu madre me invitó a cenar, qué amable.
+8803|¡El último en llegar al entreno paga los cafés!
+8804|Después del entreno, directo a casa.
+8805|¿Le cambiaste el aceite al coche?
+8806|¡Mis amigos quieren tu autógrafo!
+8807|Papá, ¿me enseñas a chutar?
+8808|Papá, necesito tu consejo.
+8809|¡Papá, vi tu gol! ¡Voy a ser como tú!
+8812|¡Papá, te dibujé en el cole!
+8813|Cuerpo y mente
+8814|¡Ya tengo entrada, voy a tu partido!
+8815|Un ojeador de un club vino a verte.
+8816|Un programa de televisión te quiere de invitado.
+8817|Esta noche llego temprano, cenemos juntos
+8818|Demuéstralo en los entrenos esta semana, tu oportunidad llegará.
+8819|Nuestro partido fue duro esta semana, ¿y el tuyo?
+8820|¿Por qué no jugaste esta semana? ¿Por qué no te convocó el míster?
+8823|Esta semana hará frío, abrígate.
+8824|Te veo muy cansado esta semana, descansa un poco.
+8825|¿Cuántos goles quieres marcar esta temporada?
+8826|Analizaremos esta derrota entre todos.
+8827|¡Hoy corrí 10 kilómetros!
+8828|Hoy tocaba pesas. ¡Mañana, más fuerte!
+8831|Hoy no salió. Nos levantaremos y volveremos.
+8834|Hoy hablaron de ti en la tele, lloré, de verdad.
+8835|Las citas fortalecen la relación. Si baja mucho, puede haber ruptura.
+8838|¡Rumbo al partido fuera de casa!
+8839|Nos llevamos un punto.
+8840|No descuides el descanso, el calendario está apretado.
+8841|Siempre rezo por ti.
+8842|Pasé por delante del viejo colegio y me acordé de ti.
+8843|Fui al partido de tu antiguo equipo, se acordaron de ti.
+8844|Una sesión de fisio acelera la recuperación. Cómprala en la Tienda deportiva.
+8847|Ve al fisio con regularidad, no tengas prisa.
+8848|¡Vi tu foto en el periódico, la voy a enmarcar!
+8849|¡Victoria! Gracias por vuestro apoyo.
+8851|¡Cada vez que marcas, mi teléfono no para!
+8852|¡Grité cuando marcaste!
+8853|¡Nuestro goleador dio un espectáculo!
+8854|¡Vi tu gol y abracé la pantalla!
+8855|¡Me quedé afónica viendo tu gol! Bien hecho, hijo.
+8857|Listos para el fin de semana.
+8858|¿Vamos al parque a practicar tiros el fin de semana?
+8859|El clásico partidito con amigos.
+8860|Una buena relación con el míster significa más minutos. Entrenar y hablar ayuda.
+8863|¿Todavía guardas aquel balón viejo?
+8864|Cabeza alta, el fin de semana lo arreglamos.
+8865|¡Tío, consígueme una camiseta a mí también!
+8866|Tranquilo, tío, es solo un partido.
+8867|¡El capitán trajo una tarta de cumpleaños!
+8868|¡Ganamos! ¡Esta noche hay fiesta!
+8870|¡Ganasteis! Estoy orgullosa de ti.
+8873|Ganar, marcar y pasar tiempo con la familia y tus seres queridos sube la moral.
+8874|¡Cuídate, las lesiones no son broma!
+8875|¿Quién se apunta al torneo de consola?
+8876|¡No dejes las botas en la puerta!
+8877|¡Te limpié las botas, brillan!
+8878|Una pequeña escapada.
+8879|FINAL
+8880|El utillero volvió a liar los dorsales.
+8881|La alimentación antes del partido lo es todo.
+8882|Determina tu rendimiento. El descanso, la nutrición y las bebidas energéticas la suben; entrenar duro la baja.
+8885|¡Vi el partido, ganasteis! ¡El barrio está de fiesta!
+8888|Fuiste el mejor del partido, estoy orgulloso.
+8889|El negocio de agente va bien, trabajemos juntos algún día.
+8890|Mensaje
+8891|Ánimo, hijo, el próximo lo ganáis.
+8892|Ese gol lo habría metido yo de joven... ¡Es broma, estuviste genial!
+8893|Las publicaciones y los buenos partidos traen seguidores.
+8894|Sé más agresivo al presionar.
+8895|Mi perfil
+8896|Vi al rival, su lateral izquierdo es lento.
+8897|Ven al restaurante, te preparo un menú especial.
+8898|ÚLTIMA HORA
+8899|Carrera matutina hecha. Objetivos grandes.
+8901|¡Salí a correr por la mañana, me inspiraste!
+8902|Lesión
+8903|¿Cómo va tu lesión? No te saltes las medicinas, me preocupo.
+8906|¡Te mandé una canción, escúchala!
+8907|Te hice sopa, te cuidaré hasta que te recuperes.
+8908|Hablé con los médicos, no hay prisa.
+8909|¡Les enseñé tus partidos antiguos a mis amigos!
+8910|¿Puedo hacerte una entrevista corta?
+8911|En el último partido estuviste por debajo de lo esperado.
+8912|Estuviste genial en el último partido, sigue.
+8913|Tu última actuación subió tu valor.
+8914|Mucha moral en el vestuario.
+8915|¿A quién le toca la música en el vestuario?
+8916|Seguidores en StarFeed
+8917|Revisé otra vez las cláusulas del contrato.
+8918|¿Cuándo es tu examen? Estudia un poco.
+8921|Pasar tiempo con tus compañeros mejora la química y los pases.
+8922|¿Jugamos al fútbol en el recreo?
+8923|Llamó tu tía, quiere una camiseta firmada.
+8924|Otro día con el balón.
+8925|Los 5 segundos tras perder el balón son clave.
+8926|La Voz de la Grada
+8927|Te saludé desde la grada, ¿me viste?
+8928|Cuida tus horas de sueño, hijo.
+8929|Soltero
+8930|¡Mañana llevo mi balón nuevo al cole!
+8931|Mañana hay análisis de vídeo, a las 10 en la sala.
+8932|Empecé una serie nueva, ¿la vemos juntos?
+8933|¡Encontré trabajo nuevo, celebrémoslo!
+8934|Botas nuevas listas para el campo.
+8935|Perder es parte del juego. Cabeza alta.
+8951|¡{0} fue hoy el mejor del campo!
+8953|Con {0}
+8954|Casado con {0}
+8952|Líder tras la jornada {0}
+8938|Te preparé la bolsa, no olvides la botella de agua.
+8939|¿Hiciste los deberes? ¿Me los enseñas?
+8942|¿Terminaste los deberes?
+8943|¡Mis alumnos colgaron tu póster en la pared!
+8944|Con más fama llegan patrocinadores, ofertas y seguidores.
+8945|Tu fama
+8946|No estés triste, papá, sigues siendo el mejor.
+8947|No estés triste, siempre estoy a tu lado.
+8948|Tu primer toque es clave, trabájalo.
+8949|Los buenos partidos y los goles conquistan a la afición.
+8950|Buen partido, tu gol tranquilizó al equipo.
+8955|desde {0}
+
+8956|Inicio

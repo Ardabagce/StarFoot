@@ -1661,7 +1661,6 @@
 8525|Anak perempuanmu lahir!
 8550|Seret pemain ke pemain lain untuk menukar posisi. Tahan sebentar pemain cadangan untuk menyeretnya. Ketuk untuk membuka kartu pemain.
 8552|Ponsel
-1640|Dipakai
 8553|Milikmu
 8554|Malam
 8555|Lampu stadion
@@ -1761,7 +1760,6 @@
 8735|{0} dtk
 8736|{0} hp
 8734|{0} knot
-1180|Beranda
 8662|RumahKu
 8663|Mobil
 8664|belanja
@@ -1788,7 +1786,6 @@
 8689|Rumah lamamu
 8690|Kamu menyewa
 8691|Kamu tinggal di sini
-1653|Milikmu
 8692|Rumah dijual
 8693|Apartemen sewa
 8694|Pusat kota
@@ -1825,7 +1822,6 @@
 8723|Buka profilmu di ponsel
 8733|{0} tepuk tangan
 8724|Orion Pro
-1656|Sponsor
 8737|Setiap minggu moral +2, Ketenaran +4
 8741|{0} tahun
 8738|2 KT · 95 m² · Pusat kota
@@ -1872,3 +1868,135 @@
 8784|Sesi fisioterapi memperpendek cedera 2 minggu. Beli di Toko Olahraga di ponselmu dan pakai dari tas di Rencana Mingguan.
 8787|{0} sudah usang dan tak bisa dipakai lagi. Beli yang baru di Toko Olahraga di ponselmu.
 8788|✨ {0} milikmu! Unggahanmu banjir tepuk tangan.
+8790|3 poin! Pertahankan.
+8793|Keluargaku
+8794|Waktu bersama keluarga mempererat ikatan; jika diabaikan, ikatan menurun.
+8795|Beranda
+8796|Beranda masih sepi. Begitu pertandingan dimulai, rekan tim dan klub akan mengunggah.
+8799|Makan malam jam 7, jangan telat!
+8800|Makan malam bersama teman.
+8801|Di akademi aku menjadikanmu contoh untuk anak-anak.
+8802|Ibumu mengundangku makan malam, baik sekali.
+8803|Yang terakhir datang latihan traktir kopi!
+8804|Setelah latihan langsung pulang.
+8805|Sudah ganti oli mobilmu?
+8806|Teman-temanku minta tanda tanganmu!
+8807|Ayah, ajari aku menendang, ya?
+8808|Ayah, aku butuh saranmu.
+8809|Ayah, aku lihat golmu! Aku mau seperti Ayah!
+8812|Ayah, aku menggambar Ayah di sekolah!
+8813|Tubuh dan pikiran
+8814|Tiket sudah dibeli, aku datang ke pertandinganmu!
+8815|Pencari bakat sebuah klub datang menontonmu.
+8816|Sebuah acara TV ingin mengundangmu.
+8817|Malam ini aku pulang cepat, kita makan bersama
+8818|Tunjukkan dirimu di latihan minggu ini, kesempatanmu akan datang.
+8819|Pertandingan kami berat minggu ini, punyamu bagaimana?
+8820|Kenapa kamu tidak main minggu ini? Kenapa pelatih tidak memilihmu?
+8823|Minggu ini akan dingin, pakai baju tebal.
+8824|Kamu terlihat lelah minggu ini, istirahatlah.
+8825|Berapa gol targetmu musim ini?
+8826|Kita semua akan menganalisis kekalahan ini.
+8827|Hari ini aku lari 10 kilometer!
+8828|Hari ini latihan beban. Besok lebih kuat!
+8831|Bukan hari kami. Kami akan bangkit kembali.
+8834|Hari ini kamu dibahas di TV, Ibu sampai menangis.
+8835|Kencan memperkuat hubungan. Jika terlalu turun, bisa putus.
+8838|Dalam perjalanan ke laga tandang!
+8839|Kami pulang membawa satu poin.
+8840|Jangan abaikan istirahat, jadwal padat.
+8841|Ibu selalu mendoakanmu.
+8842|Aku lewat depan sekolah lama dan teringat kamu.
+8843|Ayah nonton tim lamamu, mereka membicarakanmu.
+8844|Fisioterapi mempercepat pemulihan. Beli di Toko Olahraga.
+8847|Rutin ke fisioterapis, jangan terburu-buru.
+8848|Ibu lihat fotomu di koran, mau Ibu bingkai!
+8849|Menang! Terima kasih atas dukungannya.
+8851|Setiap kamu mencetak gol, ponselku tak berhenti berdering!
+8852|Aku menjerit saat kamu mencetak gol!
+8853|Penyerang kita tampil memukau!
+8854|Aku nonton golmu dan memeluk layar!
+8855|Suara Ibu habis saat melihat golmu! Hebat, Nak.
+8857|Siap untuk akhir pekan.
+8858|Akhir pekan latihan menendang di taman, yuk?
+8859|Futsal seperti biasa.
+8860|Hubungan baik dengan pelatih berarti lebih banyak menit bermain. Latihan dan obrolan menaikkannya.
+8863|Masih simpan bola lamamu itu?
+8864|Angkat kepala, akhir pekan kita tebus.
+8865|Bro, carikan aku jersey juga!
+8866|Santai bro, cuma satu pertandingan.
+8867|Kapten bawa kue ulang tahun!
+8868|Kita menang! Malam ini pesta!
+8870|Kalian menang! Aku bangga padamu.
+8873|Menang, mencetak gol, dan waktu bersama keluarga serta orang tersayang menaikkan moral.
+8874|Jaga dirimu, cedera bukan main-main!
+8875|Siapa ikut turnamen konsol?
+8876|Jangan taruh sepatu bolamu di depan pintu!
+8877|Ayah sudah bersihkan sepatumu, mengilap!
+8878|Liburan singkat.
+8879|HASIL AKHIR
+8880|Petugas perlengkapan lagi-lagi salah nomor jersey.
+8881|Nutrisi sebelum pertandingan itu segalanya.
+8882|Menentukan performa di pertandingan. Istirahat, nutrisi, dan minuman energi menaikkan; latihan berat menurunkan.
+8885|Ibu nonton, kalian menang! Satu kampung merayakan!
+8888|Kamu yang terbaik di lapangan, Ayah bangga.
+8889|Bisnis agenku lancar, suatu hari kita bekerja sama.
+8890|Pesan
+8891|Jangan sedih, Nak, pertandingan berikutnya kalian menang.
+8892|Gol itu Ayah juga bisa waktu muda... Bercanda, kamu hebat!
+8893|Unggahan dan pertandingan bagus mendatangkan pengikut.
+8894|Lebih agresif saat menekan.
+8895|Profilku
+8896|Ayah sudah lihat lawan, bek kirinya lambat.
+8897|Datang ke restoran, aku siapkan menu spesial untukmu.
+8898|BERITA TERKINI
+8899|Lari pagi selesai. Target besar.
+8901|Ayah lari pagi, terinspirasi olehmu!
+8902|Cedera
+8903|Bagaimana cederamu? Jangan lupa obatnya, Ibu khawatir.
+8906|Aku kirim lagu, dengarkan ya!
+8907|Aku buatkan sup, aku rawat kamu sampai sembuh.
+8908|Saya sudah bicara dengan tim medis, kita tidak terburu-buru.
+8909|Aku tunjukkan pertandingan lamamu ke teman-temanku!
+8910|Boleh aku wawancara singkat denganmu?
+8911|Di laga terakhir kamu di bawah harapan saya.
+8912|Kamu luar biasa di laga terakhir, lanjutkan.
+8913|Performa terakhirmu menaikkan nilaimu.
+8914|Suasana ruang ganti sedang bagus.
+8915|Giliran siapa pasang musik di ruang ganti?
+8916|Pengikut StarFeed
+8917|Aku sudah meninjau ulang klausul kontrak.
+8918|Kapan ujianmu? Belajar sedikit, ya.
+8921|Waktu bersama rekan tim meningkatkan chemistry dan umpan.
+8922|Main bola waktu istirahat, yuk?
+8923|Bibimu menelepon, minta jersey bertanda tangan.
+8924|Satu hari lagi bersama bola.
+8925|5 detik setelah kehilangan bola sangat penting.
+8926|Suara Tribun
+8927|Aku melambai dari tribun, lihat tidak?
+8928|Jaga pola tidurmu, Nak.
+8929|Lajang
+8930|Besok aku bawa bola baruku ke sekolah!
+8931|Besok analisis video, jam 10 di ruangan.
+8932|Aku mulai serial baru, nonton bareng yuk?
+8933|Aku dapat kerja baru, ayo rayakan!
+8934|Sepatu baru siap ke lapangan.
+8935|Kalah bagian dari permainan. Angkat kepalamu.
+8951|{0} yang terbaik di lapangan hari ini!
+8953|Bersama {0}
+8954|Menikah dengan {0}
+8952|Puncak klasemen setelah pekan {0}
+8938|Ibu sudah siapkan tasmu, jangan lupa botol minum.
+8939|Sudah kerjakan PR? Boleh aku lihat?
+8942|Sudah selesai PR-mu?
+8943|Murid-muridku menempel postermu di dinding!
+8944|Semakin terkenal, sponsor, tawaran transfer, dan pengikut berdatangan.
+8945|Ketenaranmu
+8946|Jangan sedih, Ayah, Ayah tetap yang terbaik.
+8947|Jangan sedih, aku selalu di sisimu.
+8948|Sentuhan pertamamu penting, latihlah.
+8949|Pertandingan bagus dan gol memenangkan hati suporter.
+8950|Permainan bagus, golmu menenangkan tim.
+8955|sejak {0}
+
+8956|Beranda
