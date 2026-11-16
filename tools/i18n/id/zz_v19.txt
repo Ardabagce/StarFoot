@@ -2099,3 +2099,4 @@
 9059|Persaingan makin panas.
 9060|Musim ini milik kita!
 9061|Kami pantau terus.
+9062|Belanja

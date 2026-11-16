@@ -2099,3 +2099,4 @@
 9059|La course s'intensifie.
 9060|Cette saison est à nous !
 9061|On suit ça de près.
+9062|Shopping

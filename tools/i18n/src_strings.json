@@ -89881,8 +89881,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"phone.js"
+"lang-pt.js"
 ],
 "Mesajlar": [
 "lang-ar.js",
@@ -94822,6 +94821,90 @@
 "phone.js"
 ],
 "3+1 · 120 m² · Mahalle": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Hadi çocuklar!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Bugün bizim günümüz!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Üç puan istiyoruz!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Stattayız!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Yarış kızışıyor.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Bu sezon bizim!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Takipteyiz.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -151257,6 +151340,83 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"HADİ ÇOCUKLAR!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BUGÜN BİZİM GÜNÜMÜZ!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ÜÇ PUAN İSTİYORUZ!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"STATTAYIZ!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YARIŞ KIZIŞIYOR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BU SEZON BİZİM!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TAKİPTEYİZ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -203124,6 +203284,27 @@
 "4 Zimmer · 120 m² · Wohnviertel": [
 "lang-de.js"
 ],
+"Auf geht's, Jungs!": [
+"lang-de.js"
+],
+"Heute ist unser Tag!": [
+"lang-de.js"
+],
+"Wir wollen drei Punkte!": [
+"lang-de.js"
+],
+"Wir sind im Stadion!": [
+"lang-de.js"
+],
+"Das Rennen wird spannend.": [
+"lang-de.js"
+],
+"Diese Saison gehört uns!": [
+"lang-de.js"
+],
+"Wir bleiben dran.": [
+"lang-de.js"
+],
 "– wir haben uns qualifiziert!": [
 "lang-de.js"
 ],
@@ -215843,6 +216024,27 @@
 "lang-de.js"
 ],
 "4 ZIMMER · 120 M² · WOHNVIERTEL": [
+"lang-de.js"
+],
+"AUF GEHT'S, JUNGS!": [
+"lang-de.js"
+],
+"HEUTE IST UNSER TAG!": [
+"lang-de.js"
+],
+"WIR WOLLEN DREI PUNKTE!": [
+"lang-de.js"
+],
+"WIR SIND IM STADION!": [
+"lang-de.js"
+],
+"DAS RENNEN WIRD SPANNEND.": [
+"lang-de.js"
+],
+"DIESE SAISON GEHÖRT UNS!": [
+"lang-de.js"
+],
+"WIR BLEIBEN DRAN.": [
 "lang-de.js"
 ],
 "– WIR HABEN UNS QUALIFIZIERT!": [
@@ -234107,6 +234309,27 @@
 "3 bed · 120 m² · Neighborhood": [
 "lang-en.js"
 ],
+"Come on, lads!": [
+"lang-en.js"
+],
+"Today is our day!": [
+"lang-en.js"
+],
+"We want three points!": [
+"lang-en.js"
+],
+"We're at the stadium!": [
+"lang-en.js"
+],
+"The race is heating up.": [
+"lang-en.js"
+],
+"This season is ours!": [
+"lang-en.js"
+],
+"We're watching closely.": [
+"lang-en.js"
+],
 "— we qualified!": [
 "lang-en.js"
 ],
@@ -246110,6 +246333,27 @@
 "lang-en.js"
 ],
 "3 BED · 120 M² · NEIGHBORHOOD": [
+"lang-en.js"
+],
+"COME ON, LADS!": [
+"lang-en.js"
+],
+"TODAY IS OUR DAY!": [
+"lang-en.js"
+],
+"WE WANT THREE POINTS!": [
+"lang-en.js"
+],
+"WE'RE AT THE STADIUM!": [
+"lang-en.js"
+],
+"THE RACE IS HEATING UP.": [
+"lang-en.js"
+],
+"THIS SEASON IS OURS!": [
+"lang-en.js"
+],
+"WE'RE WATCHING CLOSELY.": [
 "lang-en.js"
 ],
 "— WE QUALIFIED!": [
@@ -264420,6 +264664,27 @@
 "3 hab. · 120 m² · Barrio": [
 "lang-es.js"
 ],
+"¡Vamos, chicos!": [
+"lang-es.js"
+],
+"¡Hoy es nuestro día!": [
+"lang-es.js"
+],
+"¡Queremos los tres puntos!": [
+"lang-es.js"
+],
+"¡Ya estamos en el estadio!": [
+"lang-es.js"
+],
+"La carrera se calienta.": [
+"lang-es.js"
+],
+"¡Esta temporada es nuestra!": [
+"lang-es.js"
+],
+"Atentos.": [
+"lang-es.js"
+],
 "— ¡nos hemos clasificado!": [
 "lang-es.js"
 ],
@@ -276527,6 +276792,27 @@
 "lang-es.js"
 ],
 "3 HAB. · 120 M² · BARRIO": [
+"lang-es.js"
+],
+"¡VAMOS, CHICOS!": [
+"lang-es.js"
+],
+"¡HOY ES NUESTRO DÍA!": [
+"lang-es.js"
+],
+"¡QUEREMOS LOS TRES PUNTOS!": [
+"lang-es.js"
+],
+"¡YA ESTAMOS EN EL ESTADIO!": [
+"lang-es.js"
+],
+"LA CARRERA SE CALIENTA.": [
+"lang-es.js"
+],
+"¡ESTA TEMPORADA ES NUESTRA!": [
+"lang-es.js"
+],
+"ATENTOS.": [
 "lang-es.js"
 ],
 "— ¡NOS HEMOS CLASIFICADO!": [
@@ -294574,6 +294860,27 @@
 "4 pièces · 120 m² · Quartier": [
 "lang-fr.js"
 ],
+"Allez les gars !": [
+"lang-fr.js"
+],
+"Aujourd'hui, c'est notre jour !": [
+"lang-fr.js"
+],
+"On veut les trois points !": [
+"lang-fr.js"
+],
+"On est au stade !": [
+"lang-fr.js"
+],
+"La course s'intensifie.": [
+"lang-fr.js"
+],
+"Cette saison est à nous !": [
+"lang-fr.js"
+],
+"On suit ça de près.": [
+"lang-fr.js"
+],
 "— on est qualifiés !": [
 "lang-fr.js"
 ],
@@ -306250,6 +306557,27 @@
 "lang-fr.js"
 ],
 "4 PIÈCES · 120 M² · QUARTIER": [
+"lang-fr.js"
+],
+"ALLEZ LES GARS !": [
+"lang-fr.js"
+],
+"AUJOURD'HUI, C'EST NOTRE JOUR !": [
+"lang-fr.js"
+],
+"ON VEUT LES TROIS POINTS !": [
+"lang-fr.js"
+],
+"ON EST AU STADE !": [
+"lang-fr.js"
+],
+"LA COURSE S'INTENSIFIE.": [
+"lang-fr.js"
+],
+"CETTE SAISON EST À NOUS !": [
+"lang-fr.js"
+],
+"ON SUIT ÇA DE PRÈS.": [
 "lang-fr.js"
 ],
 "— ON EST QUALIFIÉS !": [
@@ -323833,6 +324161,27 @@
 "3 KT · 120 m² · Lingkungan": [
 "lang-id.js"
 ],
+"Ayo, tim!": [
+"lang-id.js"
+],
+"Hari ini milik kita!": [
+"lang-id.js"
+],
+"Kami mau tiga poin!": [
+"lang-id.js"
+],
+"Kami sudah di stadion!": [
+"lang-id.js"
+],
+"Persaingan makin panas.": [
+"lang-id.js"
+],
+"Musim ini milik kita!": [
+"lang-id.js"
+],
+"Kami pantau terus.": [
+"lang-id.js"
+],
 "— kita lolos!": [
 "lang-id.js"
 ],
@@ -335292,6 +335641,27 @@
 "lang-id.js"
 ],
 "3 KT · 120 M² · LINGKUNGAN": [
+"lang-id.js"
+],
+"AYO, TIM!": [
+"lang-id.js"
+],
+"HARI INI MILIK KITA!": [
+"lang-id.js"
+],
+"KAMI MAU TIGA POIN!": [
+"lang-id.js"
+],
+"KAMI SUDAH DI STADION!": [
+"lang-id.js"
+],
+"PERSAINGAN MAKIN PANAS.": [
+"lang-id.js"
+],
+"MUSIM INI MILIK KITA!": [
+"lang-id.js"
+],
+"KAMI PANTAU TERUS.": [
 "lang-id.js"
 ],
 "— KITA LOLOS!": [
@@ -352878,6 +353248,27 @@
 "4 locali · 120 m² · Quartiere": [
 "lang-it.js"
 ],
+"Forza ragazzi!": [
+"lang-it.js"
+],
+"Oggi è il nostro giorno!": [
+"lang-it.js"
+],
+"Vogliamo i tre punti!": [
+"lang-it.js"
+],
+"Siamo allo stadio!": [
+"lang-it.js"
+],
+"La corsa si fa calda.": [
+"lang-it.js"
+],
+"Questa stagione è nostra!": [
+"lang-it.js"
+],
+"Seguiamo da vicino.": [
+"lang-it.js"
+],
 "— ci siamo qualificati!": [
 "lang-it.js"
 ],
@@ -364335,6 +364726,27 @@
 "lang-it.js"
 ],
 "4 LOCALI · 120 M² · QUARTIERE": [
+"lang-it.js"
+],
+"FORZA RAGAZZI!": [
+"lang-it.js"
+],
+"OGGI È IL NOSTRO GIORNO!": [
+"lang-it.js"
+],
+"VOGLIAMO I TRE PUNTI!": [
+"lang-it.js"
+],
+"SIAMO ALLO STADIO!": [
+"lang-it.js"
+],
+"LA CORSA SI FA CALDA.": [
+"lang-it.js"
+],
+"QUESTA STAGIONE È NOSTRA!": [
+"lang-it.js"
+],
+"SEGUIAMO DA VICINO.": [
 "lang-it.js"
 ],
 "— CI SIAMO QUALIFICATI!": [
@@ -382737,6 +383149,27 @@
 "3 quartos · 120 m² · Bairro": [
 "lang-pt.js"
 ],
+"Vamos, rapaziada!": [
+"lang-pt.js"
+],
+"Hoje é o nosso dia!": [
+"lang-pt.js"
+],
+"Queremos os três pontos!": [
+"lang-pt.js"
+],
+"Já estamos no estádio!": [
+"lang-pt.js"
+],
+"A disputa está esquentando.": [
+"lang-pt.js"
+],
+"Esta temporada é nossa!": [
+"lang-pt.js"
+],
+"De olho.": [
+"lang-pt.js"
+],
 "— nos classificamos!": [
 "lang-pt.js"
 ],
@@ -393940,6 +394373,27 @@
 "lang-pt.js"
 ],
 "3 QUARTOS · 120 M² · BAIRRO": [
+"lang-pt.js"
+],
+"VAMOS, RAPAZIADA!": [
+"lang-pt.js"
+],
+"HOJE É O NOSSO DIA!": [
+"lang-pt.js"
+],
+"QUEREMOS OS TRÊS PONTOS!": [
+"lang-pt.js"
+],
+"JÁ ESTAMOS NO ESTÁDIO!": [
+"lang-pt.js"
+],
+"A DISPUTA ESTÁ ESQUENTANDO.": [
+"lang-pt.js"
+],
+"ESTA TEMPORADA É NOSSA!": [
+"lang-pt.js"
+],
+"DE OLHO.": [
 "lang-pt.js"
 ],
 "— NOS CLASSIFICAMOS!": [
@@ -417447,6 +417901,9 @@
 "linear-gradient(135deg,#2bd46a,#0b7a3a)": [
 "phone.js"
 ],
+"Alışveriş": [
+"phone.js"
+],
 "linear-gradient(135deg,#a855f7,#6d28d9)": [
 "phone.js"
 ],
@@ -417481,27 +417938,6 @@
 "phone.js"
 ],
 "<section": [
-"phone.js"
-],
-"Hadi çocuklar!": [
-"phone.js"
-],
-"Bugün bizim günümüz!": [
-"phone.js"
-],
-"Üç puan istiyoruz!": [
-"phone.js"
-],
-"Stattayız!": [
-"phone.js"
-],
-"Yarış kızışıyor.": [
-"phone.js"
-],
-"Bu sezon bizim!": [
-"phone.js"
-],
-"Takipteyiz.": [
 "phone.js"
 ],
 "{}|tm{}": [

@@ -396,7 +396,7 @@
       { k: 'emlak', n: 'Evim Emlak', bg: 'linear-gradient(135deg,#14a08d,#0b5e53)' },
       { k: 'cars', n: 'Arabalar', bg: 'linear-gradient(135deg,#2a2a31,#0d0d10)' },
       { k: 'sport', n: 'Spor Mağazası', bg: 'linear-gradient(135deg,#2bd46a,#0b7a3a)' },
-      { k: 'shop', n: 'alışveriş', bg: 'linear-gradient(135deg,#a855f7,#6d28d9)' },
+      { k: 'shop', n: 'Alışveriş', bg: 'linear-gradient(135deg,#a855f7,#6d28d9)' },
       { k: 'store', n: 'TeknoPazar', bg: 'linear-gradient(135deg,#ff7a45,#e0283e)' },
     );
     if (typeof Star !== 'undefined' && !Game.inStreet() && (hasStar() || sellable())) out.push({ k: 'lux', n: 'Lüks', bg: 'linear-gradient(150deg,#2b2213,#0d0a05)' });
@@ -514,7 +514,7 @@
   // evler Evim Emlak'ta, telefonlar TeknoPazar'da, araçlar Arabalar'da satılır; alışveriş'te hobi, eğlence ve stil kalır
   const shopExcl = () => Object.keys(HOUSE_KIND).concat(TIERS.map((t) => t.item).filter(Boolean));
   function shopView() {
-    return `<div class="ph-appv ph-shop">${top('alışveriş')}<div class="ph-body"><div class="ph-promo"><b>Yıldız indirimi</b><small>Hobi, eğlence, stil ve lüks ürünler</small></div>${UI.shop({ tabs: ['lux'], luxCats: ['life', 'style'], excl: shopExcl(), title: 'Yaşam Tarzı' })}</div></div>`;
+    return `<div class="ph-appv ph-shop">${top('Alışveriş')}<div class="ph-body"><div class="ph-promo"><b>Yıldız indirimi</b><small>Hobi, eğlence, stil ve lüks ürünler</small></div>${UI.shop({ tabs: ['lux'], luxCats: ['life', 'style'], excl: shopExcl(), title: 'Yaşam Tarzı' })}</div></div>`;
   }
   function sportView() {
     return `<div class="ph-appv ph-sport">${top('Spor Mağazası')}<div class="ph-body"><div class="ph-promo"><b>Sahaya hazır ol</b><small>Enerji içeceği, fizyoterapi, krampon, ekipman, beslenme ve toplar</small></div>${UI.shop({ tabs: ['bag', 'cons', 'kit', 'balls'], title: 'Spor Mağazası' })}</div></div>`;

@@ -2099,3 +2099,4 @@
 9059|A disputa está esquentando.
 9060|Esta temporada é nossa!
 9061|De olho.
+9062|Compras

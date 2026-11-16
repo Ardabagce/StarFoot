@@ -3365,6 +3365,7 @@ html.sf-lock { overflow: hidden; }
 .ph-homebar { position: absolute; z-index: 35; bottom: calc(7px + env(safe-area-inset-bottom, 0px)); left: 50%; transform: translateX(-50%); width: 38%; height: 5px; border-radius: 3px; background: rgba(255, 255, 255, .85); border: 0; padding: 0; cursor: pointer; }
 .ph-homebar::before { content: ""; position: absolute; inset: -14px -10px; }
 .ph-homebar.dark { background: rgba(0, 0, 0, .55); }
+.ph-homebar { display: none !important; }
 /* ana ekran */
 .ph-home { flex: 1; display: flex; flex-direction: column; gap: 14px; padding: calc(50px + env(safe-area-inset-top, 0px)) 16px calc(24px + env(safe-area-inset-bottom, 0px)); min-height: 0; overflow-y: auto; }
 @media (min-width: 561px) and (min-height: 761px) { .ph-home { padding-top: 50px; padding-bottom: 24px; } }

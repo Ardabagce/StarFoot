@@ -2099,3 +2099,4 @@
 9059|La corsa si fa calda.
 9060|Questa stagione è nostra!
 9061|Seguiamo da vicino.
+9062|Shopping
