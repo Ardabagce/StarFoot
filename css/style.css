@@ -3295,3 +3295,35 @@ body.lite .mm-sb, body.lite .lang-sw, body.lite .cr-hero-bg i, body.lite .cr-ste
 body.lite .card, body.lite .btn, body.lite .modal-box, body.lite .feat, body.lite .mt-card { box-shadow: none !important; }
 body.lite *, body.lite *::before, body.lite *::after { animation-iteration-count: 1 !important; }
 body.lite .busy-s { animation-iteration-count: infinite !important; }
+
+/* 1.0.24: pencere içi kaydırma arka sayfaya taşmasın (arka sayfa ayrıca js/v24.js ile sabitlenir) */
+.modal, .modal-card, .set-sheet .ss-body { overscroll-behavior: contain; }
+html.sf-lock { overflow: hidden; }
+/* 1.0.24: Teknik Direktör sürükle-bırak diziliş */
+.cm-dnd { touch-action: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+/* yedek kartlarında dikey kaydırma sayfayı kaydırır; yana/çapraz çekince sürükleme başlar */
+.cm-bchip.cm-dnd { touch-action: pan-y; }
+.cm-dot.cm-over, .cm-bchip.cm-over { outline: 3px solid #ffcf3f; outline-offset: 2px; }
+.cm-dragging { opacity: .35; }
+.cm-bchip.cm-armed { transform: scale(1.06); border-color: #ffcf3f; box-shadow: 0 6px 18px rgba(0,0,0,.4); transition: transform .12s; }
+.cm-ghost { opacity: .92; box-shadow: 0 10px 30px rgba(0,0,0,.5); }
+.cm-bchips { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 6px; margin: 6px 0 10px; }
+.cm-bchip { display: flex; flex-direction: column; align-items: flex-start; gap: 1px; padding: 7px 8px; border-radius: 10px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); color: inherit; text-align: left; font: inherit; cursor: grab; min-width: 0; }
+.cm-bchip b { font-size: 16px; line-height: 1; }
+.cm-bchip .cm-cn { font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+.cm-bchip small { font-size: 10.5px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+.cm-bchip em { font-style: normal; font-size: 10.5px; color: #ff8a8a; }
+.cm-bchip.off { opacity: .55; }
+.cm-bchip .cm-pos { font-size: 10px; padding: 1px 5px; }
+.cm-dndh { font-size: 12.5px; color: var(--muted); margin: 8px 0 2px; display: flex; gap: 6px; align-items: center; }
+.cm-dndh svg { width: 15px; height: 15px; flex: none; }
+.cm-autob { margin-left: auto; padding: 6px 10px; font-size: 13px; }
+.cm-plan { margin-top: 10px; }
+.cm-plan .cm-stysel.hidden { display: none; }
+/* 1.0.24: çocuklar */
+.lf-kid { padding: 10px 0; border-top: 1px solid rgba(255,255,255,.07); }
+.lf-kid:first-of-type { border-top: 0; }
+.lf-kid-h { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 4px; }
+.lf-kid-h small { color: var(--muted); }
+.lf-kacts { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.lf-kacts .btn { padding: 7px 10px; font-size: 13px; }

@@ -1562,3 +1562,101 @@
 8427|Tu energía:
 8428|Cuando el rival se lance,
 8429|lleva el balón al otro lado
+8430|Portero líbero
+8431|Sale del área y barre a la espalda de la defensa.
+8432|Portero de línea
+8433|Se queda bajo palos y para con sus reflejos.
+8434|Central duro
+8435|Fuerte por arriba y duro en los duelos.
+8436|Defensa con salida de balón
+8437|Inicia el juego con pases desde atrás.
+8438|Lateral ofensivo
+8439|Sube constantemente al ataque por la banda.
+8440|Recuperador
+8441|Recupera balones por delante de la defensa.
+8442|Centrocampista de posesión
+8443|Mantiene el balón y marca el ritmo del juego.
+8444|Centrocampista box to box
+8445|Corre para defender y para atacar.
+8446|Cazagoles
+8447|Siempre está en el sitio justo dentro del área.
+8448|Delantero referencia
+8449|Aguanta de espaldas y es fuerte por arriba.
+8450|Delantero rápido
+8451|Genera peligro con desmarques a la espalda.
+8452|Estándar
+8453|Entrenamiento normal con el equipo.
+8454|Individual intensivo
+8455|El desarrollo es un 60 % más rápido; la forma física baja un poco cada semana y sube el riesgo de lesión. 24 años o menos.
+8458|Gestión de cargas
+8459|La forma se recupera antes y el desarrollo se frena. Para jugadores veteranos.
+8462|Entrenamiento de estilo
+8463|Aprende el estilo elegido tras 8 semanas. Mientras tanto, el desarrollo se frena un poco.
+8536|🤕 {0} {1} se lesionó en el entrenamiento individual intensivo ({2} semanas).
+8540|🎓 {0} aprendió un nuevo estilo de juego: {1}.
+8466|Arrastra un jugador sobre otro para intercambiarlos. Tócalo para abrir su ficha.
+8469|Suplentes
+8470|Reservas
+8471|Sancionado
+8472|Once titular elegido a mano. Si un jugador no puede jugar, solo se cambia su puesto. «Alineación automática» vuelve al once más fuerte.
+8476|Plan de desarrollo
+8477|Cógelo en brazos y juega
+8478|Paseo con el carrito
+8479|Llévalo al parque
+8480|Leer un cuento
+8481|Jugar a la pelota en el jardín
+8482|Jugar al fútbol juntos
+8483|Ayudar con los deberes
+8484|Llévalo a tu partido
+8485|Una larga charla
+8486|Ver su partido
+8487|Escapada de fin de semana
+8488|Cenar juntos
+8489|Hablar de su vida
+8490|Sus carcajadas llenaron toda la casa.
+8491|¡Dijo «papá» por primera vez!
+8492|Se quedó dormido en tus brazos.
+8493|Disfrutasteis de un bonito paseo por el parque.
+8494|Se emocionó mucho al ver las palomas.
+8495|Se tiró por el tobogán una y otra vez.
+8496|Gritó «¡más alto!» en el columpio.
+8497|Te inventaste el final del cuento y le encantó.
+8498|Antes de dormirse pidió «otro más».
+8499|¡Te marcó su primer gol!
+8500|Intentó chutar como tú.
+8501|Marcó un golazo con la izquierda.
+8502|Te regateó y se sintió muy orgulloso.
+8503|Terminasteis juntos los deberes de matemáticas.
+8504|Su proyecto fue elegido el mejor de la clase.
+8505|Llevó tu camiseta en la grada y no paró de animar.
+8506|Después del partido lo llevaste al vestuario y se puso feliz.
+8507|Hablasteis del colegio y de sus amigos.
+8508|Te contó sus sueños de futuro.
+8509|Jugó todavía mejor al verte en la grada.
+8510|Fue el mejor de su equipo.
+8511|Pasasteis un fin de semana genial de acampada.
+8512|Conocisteis juntos una ciudad nueva.
+8513|Os reísteis mucho recordando viejos tiempos.
+8514|Te habló de su vida laboral.
+8515|Te pidió consejo para sus decisiones.
+8516|Te dijo que quiere ser como tú.
+8517|👶 ¡Has tenido un niño! Elige su nombre en la pestaña Vida.
+8522|👶 ¡Has tenido una niña! Elige su nombre en la pestaña Vida.
+8526|La madre y el bebé están muy bien. ¿Qué nombre le pondréis?
+8547|🎂 ¡{0} cumplió {1} años!
+8544|👶 ¡{0} ha sido padre! El bebé se llama {1}.
+8539|¡Bienvenido, {0}! El mejor gol de mi vida.
+8546|Un día precioso con {0}.
+8541|No hay nada como pasar tiempo con {0}.
+8543|Mi mayor fan: {0}.
+8549|{0} · {1} Vínculo +{2}
+8538|{0} · «¡Yo también seré futbolista como tú!»
+8529|Vínculo
+8530|Hijos
+8531|Aún no tenéis hijos. Tras el primer año de matrimonio podría llegar una buena noticia.
+8534|quiere ser futbolista ⚽
+8535|quiere ser futbolista
+
+8520|¡Has tenido un niño!
+8525|¡Has tenido una niña!
+8550|Arrastra un jugador sobre otro para intercambiarlos. Mantén pulsado un suplente un momento para arrastrarlo. Tócalo para abrir su ficha.

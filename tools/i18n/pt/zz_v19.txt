@@ -1562,3 +1562,101 @@
 8427|Sua energia:
 8428|Quando o adversário der o bote,
 8429|puxe a bola para o outro lado
+8430|Goleiro líbero
+8431|Sai da área e cobre as costas da defesa.
+8432|Goleiro de linha
+8433|Fica embaixo das traves e defende com reflexos.
+8434|Zagueiro duro
+8435|Forte pelo alto e duro nas divididas.
+8436|Zagueiro construtor
+8437|Inicia as jogadas com passes desde trás.
+8438|Lateral ofensivo
+8439|Apoia o ataque o tempo todo pela lateral.
+8440|Volante marcador
+8441|Rouba bolas à frente da defesa.
+8442|Meia armador
+8443|Segura a bola e dita o ritmo do jogo.
+8444|Meia box to box
+8445|Corre para defender e para atacar.
+8446|Artilheiro oportunista
+8447|Está sempre no lugar certo dentro da área.
+8448|Centroavante de referência
+8449|Segura a bola de costas e é forte pelo alto.
+8450|Atacante veloz
+8451|Cria perigo com infiltrações nas costas da defesa.
+8452|Padrão
+8453|Treino normal com o time.
+8454|Individual intensivo
+8455|Evolução 60% mais rápida; o condicionamento cai um pouco a cada semana e o risco de lesão aumenta. Até 24 anos.
+8458|Gestão de carga
+8459|O condicionamento se recupera mais rápido e a evolução desacelera. Para jogadores experientes.
+8462|Treino de estilo
+8463|Aprende o estilo escolhido após 8 semanas. Nesse período a evolução desacelera um pouco.
+8536|🤕 {0} {1} se lesionou no treino individual intensivo ({2} semanas).
+8540|🎓 {0} aprendeu um novo estilo de jogo: {1}.
+8466|Arraste um jogador sobre outro para trocá-los. Toque para abrir a ficha.
+8469|Reservas
+8470|Não relacionados
+8471|Suspenso
+8472|Time titular escalado manualmente. Se um jogador ficar indisponível, só a posição dele muda. "Escalar automático" volta ao time mais forte.
+8476|Plano de evolução
+8477|Colo e brincadeira
+8478|Passeio de carrinho
+8479|Levar ao parque
+8480|Ler uma história
+8481|Jogar bola no quintal
+8482|Jogar bola juntos
+8483|Ajudar com a lição de casa
+8484|Levar ao seu jogo
+8485|Uma longa conversa
+8486|Assistir ao jogo dele
+8487|Viagem de fim de semana
+8488|Jantar juntos
+8489|Conversar sobre a vida
+8490|As risadas encheram a casa toda.
+8491|Disse "papai" pela primeira vez!
+8492|Adormeceu no seu colo.
+8493|Vocês fizeram um passeio gostoso no parque.
+8494|Ficou todo animado ao ver os pombos.
+8495|Desceu no escorregador várias vezes.
+8496|Gritou "mais alto!" no balanço.
+8497|Você inventou o final da história e ele adorou.
+8498|Pediu "mais uma" antes de dormir.
+8499|Fez o primeiro gol da vida em você!
+8500|Tentou chutar a bola igualzinho a você.
+8501|Fez um golaço de canhota.
+8502|Driblou você e ficou todo orgulhoso.
+8503|Vocês terminaram juntos a lição de matemática.
+8504|O trabalho escolar foi escolhido o melhor da turma.
+8505|Vestiu sua camisa na arquibancada e não parou de torcer.
+8506|Depois do jogo você levou ele ao vestiário e ele ficou radiante.
+8507|Vocês conversaram sobre a escola e os amigos.
+8508|Contou os sonhos para o futuro.
+8509|Jogou ainda melhor ao ver você na arquibancada.
+8510|Foi o melhor do time.
+8511|Vocês passaram um ótimo fim de semana acampando.
+8512|Vocês conheceram juntos uma cidade nova.
+8513|Vocês riram muito lembrando os velhos tempos.
+8514|Contou sobre a vida profissional.
+8515|Pediu seu conselho sobre as decisões.
+8516|Disse que quer ser como você.
+8517|👶 Você teve um menino! Escolha o nome dele na aba Vida.
+8522|👶 Você teve uma menina! Escolha o nome dela na aba Vida.
+8526|Mãe e bebê estão ótimos. Que nome vocês vão dar?
+8547|🎂 {0} fez {1} anos!
+8544|👶 {0} virou pai! O bebê se chama {1}.
+8539|Bem-vindo, {0}! O gol mais bonito da minha vida.
+8546|Um dia lindo com {0}.
+8541|Nada como passar tempo com {0}.
+8543|Meu maior fã: {0}.
+8549|{0} · {1} Vínculo +{2}
+8538|{0} · "Eu também vou ser jogador igual a você!"
+8529|Vínculo
+8530|Filhos
+8531|Vocês ainda não têm filhos. Depois do primeiro ano de casamento pode vir uma boa notícia.
+8534|quer ser jogador ⚽
+8535|quer ser jogador
+
+8520|Você teve um menino!
+8525|Você teve uma menina!
+8550|Arraste um jogador sobre outro para trocá-los. Segure um reserva por um instante para arrastá-lo. Toque para abrir a ficha.

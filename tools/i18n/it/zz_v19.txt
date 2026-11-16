@@ -1562,3 +1562,101 @@
 8427|La tua energia:
 8428|Quando l'avversario si sbilancia,
 8429|porta la palla dall'altra parte
+8430|Portiere libero
+8431|Esce dall'area e copre le spalle della difesa.
+8432|Portiere di linea
+8433|Resta tra i pali e para con i riflessi.
+8434|Stopper roccioso
+8435|Forte di testa e duro nei contrasti.
+8436|Difensore regista
+8437|Avvia la manovra con passaggi dalle retrovie.
+8438|Terzino offensivo
+8439|Spinge di continuo sulla fascia.
+8440|Mediano incontrista
+8441|Recupera palloni davanti alla difesa.
+8442|Regista
+8443|Tiene palla e detta i ritmi del gioco.
+8444|Centrocampista box to box
+8445|Corre sia in difesa sia in attacco.
+8446|Opportunista d'area
+8447|In area è sempre al posto giusto.
+8448|Prima punta di peso
+8449|Fa da sponda spalle alla porta ed è forte di testa.
+8450|Attaccante veloce
+8451|Crea pericoli con gli inserimenti alle spalle.
+8452|Standard
+8453|Allenamento normale con la squadra.
+8454|Individuale intensivo
+8455|Crescita più rapida del 60%; la condizione cala un po' ogni settimana e aumenta il rischio infortuni. Fino a 24 anni.
+8458|Gestione dei carichi
+8459|La condizione si recupera prima, la crescita rallenta. Per giocatori esperti.
+8462|Allenamento di stile
+8463|Impara lo stile scelto dopo 8 settimane. Nel frattempo la crescita rallenta un po'.
+8536|🤕 {0} {1} si è infortunato nell'allenamento individuale intensivo ({2} settimane).
+8540|🎓 {0} ha imparato un nuovo stile di gioco: {1}.
+8466|Trascina un giocatore su un altro per scambiarli. Toccalo per aprire la scheda.
+8469|Panchina
+8470|Riserve
+8471|Squalificato
+8472|Formazione titolare scelta a mano. Se un giocatore non è disponibile, cambia solo il suo posto. «Formazione automatica» torna all'undici più forte.
+8476|Piano di crescita
+8477|Coccole e giochi
+8478|Passeggiata col passeggino
+8479|Portalo al parco
+8480|Leggi una favola
+8481|Gioca a pallone in giardino
+8482|Giocate a calcio insieme
+8483|Aiuta con i compiti
+8484|Portalo alla tua partita
+8485|Una lunga chiacchierata
+8486|Guarda la sua partita
+8487|Gita nel weekend
+8488|Cena insieme
+8489|Parla della sua vita
+8490|Le sue risate hanno riempito tutta la casa.
+8491|Ha detto «papà» per la prima volta!
+8492|Si è addormentato in braccio a te.
+8493|Avete fatto una bella passeggiata al parco.
+8494|Si è emozionato tantissimo vedendo i piccioni.
+8495|È sceso dallo scivolo un'infinità di volte.
+8496|Sull'altalena gridava «più in alto!».
+8497|Hai inventato il finale della favola e gli è piaciuto tantissimo.
+8498|Prima di dormire ha chiesto «ancora una».
+8499|Ti ha segnato il suo primo gol!
+8500|Ha provato a calciare proprio come te.
+8501|Ha segnato un gran gol di sinistro.
+8502|Ti ha dribblato ed era orgogliosissimo.
+8503|Avete finito insieme i compiti di matematica.
+8504|Il progetto è stato scelto come il migliore della classe.
+8505|Indossava la tua maglia in tribuna e non ha smesso di tifare.
+8506|Dopo la partita l'hai portato negli spogliatoi ed era felicissimo.
+8507|Avete parlato della scuola e degli amici.
+8508|Ti ha raccontato i suoi sogni per il futuro.
+8509|Ha giocato ancora meglio vedendoti in tribuna.
+8510|È stato il migliore della sua squadra.
+8511|Avete passato un bel weekend in campeggio.
+8512|Avete visitato insieme una nuova città.
+8513|Avete riso tanto ricordando i vecchi tempi.
+8514|Ti ha parlato del suo lavoro.
+8515|Ti ha chiesto consiglio per le sue decisioni.
+8516|Ti ha detto che vuole essere come te.
+8517|👶 È nato un maschietto! Scegli il suo nome nella scheda Vita.
+8522|👶 È nata una femminuccia! Scegli il suo nome nella scheda Vita.
+8526|Mamma e bebè stanno benissimo. Che nome gli darete?
+8547|🎂 {0} ha compiuto {1} anni!
+8544|👶 {0} è diventato papà! Il bambino si chiama {1}.
+8539|Benvenuto, {0}! Il gol più bello della mia vita.
+8546|Una bella giornata con {0}.
+8541|Niente è meglio del tempo con {0}.
+8543|Il mio tifoso numero uno: {0}.
+8549|{0} · {1} Legame +{2}
+8538|{0} · «Anch'io diventerò calciatore come te!»
+8529|Legame
+8530|Figli
+8531|Ancora nessun figlio. Dopo il primo anno di matrimonio potrebbe arrivare una bella notizia.
+8534|vuole fare il calciatore ⚽
+8535|vuole fare il calciatore
+
+8520|È nato un maschietto!
+8525|È nata una femminuccia!
+8550|Trascina un giocatore su un altro per scambiarli. Tieni premuto un attimo un panchinaro per trascinarlo. Toccalo per aprire la scheda.

@@ -1562,3 +1562,101 @@
 8427|Energimu:
 8428|Saat lawan bergerak,
 8429|tarik bola ke arah sebaliknya
+8430|Kiper sweeper
+8431|Keluar dari kotak penalti dan menyapu di belakang pertahanan.
+8432|Kiper garis
+8433|Tetap di garis gawang dan menyelamatkan dengan refleks.
+8434|Bek tengah tangguh
+8435|Kuat di udara dan keras dalam duel.
+8436|Bek pengumpan
+8437|Memulai serangan dengan umpan dari belakang.
+8438|Bek sayap menyerang
+8439|Terus maju menyerang dari sayap.
+8440|Perebut bola
+8441|Merebut bola di depan lini pertahanan.
+8442|Gelandang pengatur tempo
+8443|Menguasai bola dan mengatur tempo permainan.
+8444|Gelandang box-to-box
+8445|Berlari membantu bertahan dan menyerang.
+8446|Pemburu gol
+8447|Selalu berada di posisi tepat di kotak penalti.
+8448|Target man
+8449|Menahan bola membelakangi gawang dan kuat di udara.
+8450|Penyerang cepat
+8451|Berbahaya lewat lari ke belakang pertahanan.
+8452|Standar
+8453|Latihan normal bersama tim.
+8454|Latihan individu intensif
+8455|Perkembangan 60% lebih cepat; kebugaran sedikit turun tiap pekan dan risiko cedera naik. Usia 24 tahun ke bawah.
+8458|Manajemen beban
+8459|Kebugaran pulih lebih cepat, perkembangan melambat. Untuk pemain berpengalaman.
+8462|Latihan gaya bermain
+8463|Mempelajari gaya pilihanmu setelah 8 pekan. Selama itu perkembangan sedikit melambat.
+8536|🤕 {0} {1} cedera saat latihan individu intensif ({2} pekan).
+8540|🎓 {0} mempelajari gaya bermain baru: {1}.
+8466|Seret pemain ke pemain lain untuk menukar posisi. Ketuk untuk membuka kartu pemain.
+8469|Cadangan
+8470|Pemain non-skuad
+8471|Skorsing
+8472|Starting XI disusun manual. Jika ada pemain yang absen, hanya posisinya yang diganti. "Susun otomatis" kembali ke XI terkuat.
+8476|Rencana pengembangan
+8477|Gendong dan ajak bermain
+8478|Jalan-jalan dengan kereta bayi
+8479|Ajak ke taman
+8480|Bacakan dongeng
+8481|Main bola di halaman
+8482|Main bola bersama
+8483|Bantu mengerjakan PR
+8484|Ajak ke pertandinganmu
+8485|Ngobrol panjang
+8486|Tonton pertandingannya
+8487|Liburan akhir pekan
+8488|Makan bersama
+8489|Bicarakan hidupnya
+8490|Tawanya memenuhi seluruh rumah.
+8491|Untuk pertama kalinya bilang "ayah"!
+8492|Tertidur di pelukanmu.
+8493|Kalian berjalan-jalan dengan menyenangkan di taman.
+8494|Sangat senang melihat burung merpati.
+8495|Meluncur di perosotan berkali-kali.
+8496|Berteriak "lebih tinggi!" di ayunan.
+8497|Kamu mengarang akhir dongengnya, dan dia sangat suka.
+8498|Sebelum tidur minta "satu lagi".
+8499|Mencetak gol pertamanya ke gawangmu!
+8500|Mencoba menendang bola sepertimu.
+8501|Mencetak gol indah dengan kaki kiri.
+8502|Melewatimu dengan dribel dan sangat bangga.
+8503|Kalian menyelesaikan PR matematika bersama.
+8504|Tugas proyeknya terpilih sebagai yang terbaik di kelas.
+8505|Memakai jerseymu di tribun dan terus bersorak.
+8506|Usai laga kamu mengajaknya ke ruang ganti, dia sangat senang.
+8507|Kalian mengobrol soal sekolah dan teman-temannya.
+8508|Menceritakan impian masa depannya.
+8509|Bermain lebih baik setelah melihatmu di tribun.
+8510|Menjadi pemain terbaik di timnya.
+8511|Kalian menikmati akhir pekan seru berkemah.
+8512|Kalian menjelajahi kota baru bersama.
+8513|Kalian banyak tertawa mengenang masa lalu.
+8514|Bercerita tentang dunia kerjanya.
+8515|Meminta saranmu untuk keputusannya.
+8516|Bilang ingin menjadi sepertimu.
+8517|👶 Anak laki-lakimu lahir! Pilih namanya di tab Kehidupan.
+8522|👶 Anak perempuanmu lahir! Pilih namanya di tab Kehidupan.
+8526|Ibu dan bayi sehat. Nama apa yang akan kalian berikan?
+8547|🎂 {0} berulang tahun ke-{1}!
+8544|👶 {0} menjadi ayah! Nama bayinya {1}.
+8539|Selamat datang, {0}! Gol terindah dalam hidupku.
+8546|Hari yang indah bersama {0}.
+8541|Tak ada yang mengalahkan waktu bersama {0}.
+8543|Penggemar terbesarku: {0}.
+8549|{0} · {1} Ikatan +{2}
+8538|{0} · "Aku juga mau jadi pesepak bola sepertimu!"
+8529|Ikatan
+8530|Anak-anak
+8531|Belum punya anak. Kabar gembira bisa datang setelah tahun pertama pernikahan.
+8534|ingin jadi pesepak bola ⚽
+8535|ingin jadi pesepak bola
+
+8520|Anak laki-lakimu lahir!
+8525|Anak perempuanmu lahir!
+8550|Seret pemain ke pemain lain untuk menukar posisi. Tahan sebentar pemain cadangan untuk menyeretnya. Ketuk untuk membuka kartu pemain.

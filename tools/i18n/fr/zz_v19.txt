@@ -1562,3 +1562,101 @@
 8427|Ton énergie :
 8428|Quand l'adversaire se jette,
 8429|emmène le ballon de l'autre côté
+8430|Gardien libéro
+8431|Sort de sa surface et couvre l'espace derrière la défense.
+8432|Gardien sur sa ligne
+8433|Reste sur sa ligne et arrête grâce à ses réflexes.
+8434|Stoppeur rugueux
+8435|Fort dans les airs et rugueux dans les duels.
+8436|Défenseur relanceur
+8437|Lance le jeu par des passes depuis l'arrière.
+8438|Latéral offensif
+8439|Monte sans cesse à l'attaque sur son côté.
+8440|Récupérateur
+8441|Récupère les ballons devant la défense.
+8442|Milieu meneur de jeu
+8443|Garde le ballon et dicte le tempo.
+8444|Milieu box-to-box
+8445|Court pour défendre comme pour attaquer.
+8446|Renard des surfaces
+8447|Toujours bien placé dans la surface.
+8448|Pivot
+8449|Protège le ballon dos au but et domine dans les airs.
+8450|Attaquant rapide
+8451|Dangereux par ses appels dans le dos de la défense.
+8452|Standard
+8453|Entraînement normal avec l'équipe.
+8454|Individuel intensif
+8455|Progression 60 % plus rapide ; la forme baisse un peu chaque semaine et le risque de blessure augmente. 24 ans et moins.
+8458|Gestion de la charge
+8459|La forme revient plus vite, la progression ralentit. Pour les joueurs expérimentés.
+8462|Travail de style
+8463|Apprend le style choisi au bout de 8 semaines. La progression ralentit un peu pendant ce temps.
+8536|🤕 {0} {1} s'est blessé à l'entraînement individuel intensif ({2} semaines).
+8540|🎓 {0} a appris un nouveau style de jeu : {1}.
+8466|Fais glisser un joueur sur un autre pour les échanger. Touche-le pour ouvrir sa fiche.
+8469|Remplaçants
+8470|Réservistes
+8471|Suspendu
+8472|Onze de départ choisi à la main. Si un joueur est indisponible, seul son poste change. « Compo auto » revient au onze le plus fort.
+8476|Plan de progression
+8477|Câlins et jeux
+8478|Promenade en poussette
+8479|Aller au parc
+8480|Lire une histoire
+8481|Jouer au ballon dans le jardin
+8482|Jouer au foot ensemble
+8483|Aider aux devoirs
+8484|L'emmener à ton match
+8485|Une longue discussion
+8486|Regarder son match
+8487|Escapade du week-end
+8488|Dîner ensemble
+8489|Parler de sa vie
+8490|Ses éclats de rire ont rempli toute la maison.
+8491|A dit « papa » pour la première fois !
+8492|S'est endormi dans tes bras.
+8493|Vous avez fait une belle promenade au parc.
+8494|S'est beaucoup excité en voyant les pigeons.
+8495|A fait du toboggan encore et encore.
+8496|A crié « plus haut ! » sur la balançoire.
+8497|Tu as inventé la fin de l'histoire, il a adoré.
+8498|A réclamé « encore une » avant de s'endormir.
+8499|A marqué son tout premier but contre toi !
+8500|A essayé de frapper le ballon comme toi.
+8501|A marqué un superbe but du pied gauche.
+8502|T'a dribblé et en était très fier.
+8503|Vous avez fini ensemble les devoirs de maths.
+8504|Son exposé a été élu le meilleur de la classe.
+8505|A porté ton maillot en tribune et n'a pas arrêté d'encourager.
+8506|Après le match, tu l'as emmené au vestiaire, il était aux anges.
+8507|Vous avez parlé de l'école et des copains.
+8508|T'a raconté ses rêves d'avenir.
+8509|A encore mieux joué en te voyant en tribune.
+8510|Était le meilleur de son équipe.
+8511|Vous avez passé un super week-end en camping.
+8512|Vous avez visité ensemble une nouvelle ville.
+8513|Vous avez beaucoup ri en évoquant le bon vieux temps.
+8514|T'a parlé de sa vie professionnelle.
+8515|T'a demandé conseil pour ses décisions.
+8516|T'a dit vouloir te ressembler.
+8517|👶 Tu as un petit garçon ! Choisis son prénom dans l'onglet Vie.
+8522|👶 Tu as une petite fille ! Choisis son prénom dans l'onglet Vie.
+8526|La maman et le bébé vont très bien. Quel prénom allez-vous lui donner ?
+8547|🎂 {0} a fêté ses {1} ans !
+8544|👶 {0} est devenu papa ! Le bébé s'appelle {1}.
+8539|Bienvenue, {0} ! Le plus beau but de ma vie.
+8546|Une belle journée avec {0}.
+8541|Rien ne vaut un moment avec {0}.
+8543|Mon plus grand fan : {0}.
+8549|{0} · {1} Lien +{2}
+8538|{0} · « Moi aussi, je serai footballeur comme toi ! »
+8529|Lien
+8530|Enfants
+8531|Pas encore d'enfants. Une bonne nouvelle pourrait arriver après votre première année de mariage.
+8534|veut devenir footballeur ⚽
+8535|veut devenir footballeur
+
+8520|Tu as un petit garçon !
+8525|Tu as une petite fille !
+8550|Fais glisser un joueur sur un autre pour les échanger. Appuie brièvement sur un remplaçant pour le déplacer. Touche-le pour ouvrir sa fiche.

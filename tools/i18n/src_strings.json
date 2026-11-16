@@ -354,6 +354,7 @@
 "player.js",
 "sprites.js",
 "squads.js",
+"v24.js",
 "value.js",
 "wc.js",
 "wcx.js"
@@ -2583,6 +2584,7 @@
 "player.js",
 "squads.js",
 "star.js",
+"v24.js",
 "value.js",
 "wc.js",
 "wcx.js"
@@ -2805,6 +2807,7 @@
 "squads.js",
 "star.js",
 "tutorial.js",
+"v24.js",
 "value.js",
 "wc.js"
 ],
@@ -2823,6 +2826,7 @@
 "match.js",
 "minigame.js",
 "squads.js",
+"v24.js",
 "value.js",
 "wc.js"
 ],
@@ -9697,7 +9701,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"v24.js"
 ],
 "İlk 11 dolu. Önce birini çıkar.": [
 "coachui.js",
@@ -10296,7 +10301,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"v24.js"
 ],
 "{} Kadro ({})": [
 "coachui.js"
@@ -26694,7 +26700,8 @@
 "data.js"
 ],
 "Can": [
-"data.js"
+"data.js",
+"v24.js"
 ],
 "Cem": [
 "data.js"
@@ -26703,13 +26710,15 @@
 "data.js"
 ],
 "Kaan": [
-"data.js"
+"data.js",
+"v24.js"
 ],
 "Efe": [
 "data.js"
 ],
 "Yusuf": [
-"data.js"
+"data.js",
+"v24.js"
 ],
 "Eren": [
 "data.js"
@@ -26744,14 +26753,17 @@
 ],
 "Arda": [
 "data.js",
-"tutorial.js"
+"tutorial.js",
+"v24.js"
 ],
 "Kerem": [
 "data.js",
-"tutorial.js"
+"tutorial.js",
+"v24.js"
 ],
 "Deniz": [
-"data.js"
+"data.js",
+"v24.js"
 ],
 "Ozan": [
 "data.js"
@@ -26791,7 +26803,8 @@
 "data.js"
 ],
 "Emir": [
-"data.js"
+"data.js",
+"v24.js"
 ],
 "Ege": [
 "data.js"
@@ -27297,7 +27310,8 @@
 "data.js"
 ],
 "Luca": [
-"data.js"
+"data.js",
+"v24.js"
 ],
 "Alessandro": [
 "data.js"
@@ -27837,7 +27851,8 @@
 ],
 "Mateo": [
 "data.js",
-"lpath.js"
+"lpath.js",
+"v24.js"
 ],
 "Facundo": [
 "data.js"
@@ -27915,7 +27930,8 @@
 "data.js"
 ],
 "Noah": [
-"data.js"
+"data.js",
+"v24.js"
 ],
 "Victor": [
 "data.js"
@@ -28129,6 +28145,7 @@
 ],
 "Ali": [
 "data.js",
+"v24.js",
 "wc.js"
 ],
 "Saleh": [
@@ -40370,7 +40387,8 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"life.js"
+"life.js",
+"v24.js"
 ],
 "Sakatken antrenman yapamazsın.": [
 "game.js",
@@ -46999,7 +47017,9 @@
 "DOMContentLoaded": [
 "game.js",
 "i18n.js",
-"util.js"
+"store.js",
+"util.js",
+"v24.js"
 ],
 "💾 Kariyerlerin yedekten geri yüklendi": [
 "game.js",
@@ -60494,6 +60514,7 @@
 "lang-ja.js",
 "lang-pt.js",
 "star.js",
+"v24.js",
 "wcx.js"
 ],
 "Kişisel yaşamı": [
@@ -86702,6 +86723,1483 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Rakip hamle yapınca": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"minigame.js"
+],
+"topu ters tarafa çek": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"minigame.js"
+],
+"Libero kaleci": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Ceza sahası dışına çıkar, savunmanın arkasını süpürür.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Çizgi kalecisi": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Kalesinde kalır, refleksleriyle kurtarır.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Sert stoper": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Hava toplarında güçlü, ikili mücadelede sert.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Oyun kuran defans": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Geriden pasla oyunu başlatır.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Hücumcu bek": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Kanattan sürekli hücuma çıkar.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Top kesici": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Savunmanın önünde top kapar.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Top tutan orta saha": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Topu ayağında tutar, oyunun temposunu belirler.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"İki yönlü orta saha": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Hem savunmaya hem hücuma koşar.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Fırsatçı golcü": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Ceza sahasında doğru yerde durur.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Hedef santrfor": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Sırtı dönük top saklar, hava toplarında etkili.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Hızlı forvet": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Savunma arkasına koşularla tehlike yaratır.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Standart": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Takımla normal antrenman.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Yoğun bireysel": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Gelişim %60 hızlanır; kondisyon her hafta biraz düşer, sakatlık riski artar. 24 yaş ve altı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Gelişim %60 hızlanır; kondisyon her hafta biraz düşer, sakatlık riski artar.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Development is 60% faster; fitness drops a little each week and injury risk rises.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"24 yaş ve altı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Age 24 and under.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Yük yönetimi": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Kondisyon daha hızlı toplanır, gelişim yavaşlar. Tecrübeli oyuncular için.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Kondisyon daha hızlı toplanır, gelişim yavaşlar.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Fitness recovers faster, development slows.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Tecrübeli oyuncular için.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"For experienced players.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Tarz eğitimi": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"8 hafta sonra seçtiğin oyun tarzını öğrenir. Bu sürede gelişim biraz yavaşlar.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"8 hafta sonra seçtiğin oyun tarzını öğrenir.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Learns the style you pick after 8 weeks.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Bu sürede gelişim biraz yavaşlar.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Development slows a little meanwhile.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Oyuncuyu sürükleyip başka bir oyuncunun üstüne bırak: yer değiştirirler. Dokunursan bilgi kartı açılır.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Oyuncuyu sürükleyip başka bir oyuncunun üstüne bırak: yer değiştirirler.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Drag a player onto another player to swap them.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Dokunursan bilgi kartı açılır.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Tap to open the player card.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Yedekler": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Rezervler": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Ceza": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"İlk 11 elle dizildi. Oynayamayan oyuncu olursa yalnız onun yerine değişiklik yapılır. \\\"Otomatik diz\\\" en güçlü 11'e döner.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"İlk 11 elle dizildi.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Starting XI set manually.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Oynayamayan oyuncu olursa yalnız onun yerine değişiklik yapılır.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"If a player becomes unavailable, only that spot is changed.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"\\\"Otomatik diz\\\" en güçlü 11'e döner.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"\\\"Auto pick\\\" returns to the strongest XI.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Gelişim planı": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Kucağına al, oyna": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Bebek arabasıyla yürüyüş": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Parka götür": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Masal oku": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Bahçede top oyna": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Birlikte top oyna": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Ödevine yardım et": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Maçına götür": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Uzun bir sohbet": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Onun maçını izle": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Hafta sonu gezisi": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Birlikte yemek": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Hayatı hakkında konuş": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Kahkahaları bütün evi doldurdu.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"İlk kez \\\"baba\\\" dedi!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Kucağında uyuyakaldı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Parkta güzel bir yürüyüş yaptınız.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Güvercinleri görünce çok heyecanlandı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Kaydıraktan defalarca kaydı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Salıncakta \\\"daha yüksek!\\\" diye bağırdı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Masalın sonunu sen uydurdun, çok sevdi.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Uyumadan önce \\\"bir tane daha\\\" dedi.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"İlk golünü sana attı!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Topa senin gibi vurmaya çalıştı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Sol ayağıyla harika bir gol attı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Sana çalım attı ve çok gurur duydu.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Matematik ödevini birlikte bitirdiniz.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Proje ödevi sınıfın en iyisi seçildi.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Tribünde formanı giydi, hiç susmadı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Maçtan sonra soyunma odasına götürdün, çok mutlu oldu.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Okul ve arkadaşları hakkında konuştunuz.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Gelecek hayallerini anlattı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Tribünde seni görünce daha iyi oynadı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Takımının en iyisiydi.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Kampta güzel bir hafta sonu geçirdiniz.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Birlikte yeni bir şehir gezdiniz.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Eski günleri konuşup çok güldünüz.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Sana iş hayatından bahsetti.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Kararlarında sana danıştı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Senin gibi olmak istediğini söyledi.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"👶 Bir oğlun oldu! Yaşam sekmesinden ona bir isim ver.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Bir oğlun oldu! Yaşam sekmesinden ona bir isim ver.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"You have a baby boy! Choose his name in the Life tab.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"👶 Bir oğlun oldu!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"👶 You have a baby boy!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Bir oğlun oldu!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Yaşam sekmesinden ona bir isim ver.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Choose his name in the Life tab.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"👶 Bir kızın oldu! Yaşam sekmesinden ona bir isim ver.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Bir kızın oldu! Yaşam sekmesinden ona bir isim ver.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"You have a baby girl! Choose her name in the Life tab.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"👶 Bir kızın oldu!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"👶 You have a baby girl!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Bir kızın oldu!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Anne ve bebek çok iyi. Ona hangi adı vereceksiniz?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Anne ve bebek çok iyi.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Mother and baby are doing great.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Ona hangi adı vereceksiniz?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"What will you name the baby?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Bağınız": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Çocuklar": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Henüz çocuğunuz yok. Evliliğinizin ilk yılından sonra güzel bir haber gelebilir.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Henüz çocuğunuz yok.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"No children yet.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Evliliğinizin ilk yılından sonra güzel bir haber gelebilir.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Good news may come after your first year of marriage.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"futbolcu olmak istiyor ⚽": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "(Asist)": [
 "lang-ar.js",
 "lang-de.js",
@@ -87139,7 +88637,8 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"life.js"
+"life.js",
+"v24.js"
 ],
 "Asya Şampiyonlar Kupası'nı kazandın": [
 "lang-ar.js",
@@ -88380,7 +89879,8 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"life.js"
+"life.js",
+"v24.js"
 ],
 "Hoca kornerden orta açıyor. Top kafana gelirken dokun; nişangah neredeyse oraya vurursun.": [
 "lang-ar.js",
@@ -137308,6 +138808,1062 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"RAKİP HAMLE YAPINCA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TOPU TERS TARAFA ÇEK": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"LİBERO KALECİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ÇİZGİ KALECİSİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SERT STOPER": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"OYUN KURAN DEFANS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GERİDEN PASLA OYUNU BAŞLATIR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HÜCUMCU BEK": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KANATTAN SÜREKLİ HÜCUMA ÇIKAR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TOP KESİCİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SAVUNMANIN ÖNÜNDE TOP KAPAR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TOP TUTAN ORTA SAHA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"İKİ YÖNLÜ ORTA SAHA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HEM SAVUNMAYA HEM HÜCUMA KOŞAR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"FIRSATÇI GOLCÜ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"CEZA SAHASINDA DOĞRU YERDE DURUR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HEDEF SANTRFOR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HIZLI FORVET": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"STANDART": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TAKIMLA NORMAL ANTRENMAN.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YOĞUN BİREYSEL": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"24 YAŞ VE ALTI.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"AGE 24 AND UNDER.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YÜK YÖNETİMİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TECRÜBELİ OYUNCULAR İÇİN.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"FOR EXPERIENCED PLAYERS.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TARZ EĞİTİMİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BU SÜREDE GELİŞİM BİRAZ YAVAŞLAR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DEVELOPMENT SLOWS A LITTLE MEANWHILE.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DOKUNURSAN BİLGİ KARTI AÇILIR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TAP TO OPEN THE PLAYER CARD.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YEDEKLER": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"REZERVLER": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"CEZA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"İLK 11 ELLE DİZİLDİ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"STARTING XI SET MANUALLY.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"\\\"OTOMATİK DİZ\\\" EN GÜÇLÜ 11'E DÖNER.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"\\\"AUTO PICK\\\" RETURNS TO THE STRONGEST XI.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GELİŞİM PLANI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KUCAĞINA AL, OYNA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BEBEK ARABASIYLA YÜRÜYÜŞ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"PARKA GÖTÜR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MASAL OKU": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BAHÇEDE TOP OYNA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BİRLİKTE TOP OYNA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ÖDEVİNE YARDIM ET": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MAÇINA GÖTÜR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"UZUN BİR SOHBET": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ONUN MAÇINI İZLE": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HAFTA SONU GEZİSİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BİRLİKTE YEMEK": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HAYATI HAKKINDA KONUŞ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KAHKAHALARI BÜTÜN EVİ DOLDURDU.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"İLK KEZ \\\"BABA\\\" DEDİ!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KUCAĞINDA UYUYAKALDI.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"PARKTA GÜZEL BİR YÜRÜYÜŞ YAPTINIZ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GÜVERCİNLERİ GÖRÜNCE ÇOK HEYECANLANDI.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KAYDIRAKTAN DEFALARCA KAYDI.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SALINCAKTA \\\"DAHA YÜKSEK!\\\" DİYE BAĞIRDI.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MASALIN SONUNU SEN UYDURDUN, ÇOK SEVDİ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"UYUMADAN ÖNCE \\\"BİR TANE DAHA\\\" DEDİ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"İLK GOLÜNÜ SANA ATTI!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TOPA SENİN GİBİ VURMAYA ÇALIŞTI.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SOL AYAĞIYLA HARİKA BİR GOL ATTI.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SANA ÇALIM ATTI VE ÇOK GURUR DUYDU.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MATEMATİK ÖDEVİNİ BİRLİKTE BİTİRDİNİZ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"PROJE ÖDEVİ SINIFIN EN İYİSİ SEÇİLDİ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TRİBÜNDE FORMANI GİYDİ, HİÇ SUSMADI.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"OKUL VE ARKADAŞLARI HAKKINDA KONUŞTUNUZ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GELECEK HAYALLERİNİ ANLATTI.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TRİBÜNDE SENİ GÖRÜNCE DAHA İYİ OYNADI.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TAKIMININ EN İYİSİYDİ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KAMPTA GÜZEL BİR HAFTA SONU GEÇİRDİNİZ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BİRLİKTE YENİ BİR ŞEHİR GEZDİNİZ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ESKİ GÜNLERİ KONUŞUP ÇOK GÜLDÜNÜZ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SANA İŞ HAYATINDAN BAHSETTİ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KARARLARINDA SANA DANIŞTI.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SENİN GİBİ OLMAK İSTEDİĞİNİ SÖYLEDİ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"👶 BİR OĞLUN OLDU!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"👶 YOU HAVE A BABY BOY!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BİR OĞLUN OLDU!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YAŞAM SEKMESİNDEN ONA BİR İSİM VER.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"CHOOSE HIS NAME IN THE LIFE TAB.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"👶 BİR KIZIN OLDU!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"👶 YOU HAVE A BABY GIRL!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BİR KIZIN OLDU!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ANNE VE BEBEK ÇOK İYİ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MOTHER AND BABY ARE DOING GREAT.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ONA HANGİ ADI VERECEKSİNİZ?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"WHAT WILL YOU NAME THE BABY?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BAĞINIZ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ÇOCUKLAR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HENÜZ ÇOCUĞUNUZ YOK.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"NO CHILDREN YET.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"FUTBOLCU OLMAK İSTİYOR ⚽": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"FUTBOLCU OLMAK İSTİYOR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -166000,6 +168556,18 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"🤕 {} {} yoğun bireysel çalışmada sakatlandı ({} hafta).": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
 "Gazeteler \\\"{} cevap verebilecek mi?\\\" diye soruyor.": [
 "lang-ar.js",
 "lang-de.js",
@@ -166317,6 +168885,28 @@
 "lang-pt.js"
 ],
 "Your former teammate {} is now your assistant.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{} {} yoğun bireysel çalışmada sakatlandı ({} hafta).": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{0} {1} got injured in intensive individual training ({2} weeks).": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -167563,6 +170153,17 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"{} · \\\"Ben de senin gibi futbolcu olacağım!\\\"": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "Hayatımın en güzel günü. {}, iyi ki varsın.": [
 "lang-ar.js",
 "lang-de.js",
@@ -168388,6 +170989,18 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
+],
+"Hoş geldin {}! Hayatımın en güzel golü.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
 ],
 "Rakip kontra atakta {}'den hızlı çıktı!": [
 "lang-ar.js",
@@ -169887,6 +172500,30 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"🎓 {} yeni oyun tarzını öğrendi: {}.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"{} ile vakit geçirmek gibisi yok.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
 "Milli formayla {}. maçına çıktın!": [
 "lang-ar.js",
 "lang-de.js",
@@ -170426,6 +173063,28 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"{} yeni oyun tarzını öğrendi: {}.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{0} has learned a new playing style: {1}.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "Federasyon men cezası: {} hafta": [
 "lang-ar.js",
 "lang-de.js",
@@ -170707,6 +173366,18 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Benim en büyük taraftarım: {}.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
 "Lig aşaması · {}/8 maç oynandı": [
 "lang-ar.js",
 "lang-de.js",
@@ -170949,6 +173620,18 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
+],
+"👶 {} baba oldu! Bebeğin adı {}.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
 ],
 "{} devre arasında toparlandı.": [
 "lang-ar.js",
@@ -171422,6 +174105,28 @@
 "lang-pt.js"
 ],
 "From our academy to the first team: {}!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{} baba oldu! Bebeğin adı {}.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{0} is a dad! The baby's name is {1}.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -173473,6 +176178,18 @@
 "{} احتفالات Diamond": [
 "lang-ar.js"
 ],
+"{} ile güzel bir gün.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
 "/hafta · {} yıl kaldı": [
 "lang-ar.js",
 "lang-de.js",
@@ -174069,6 +176786,18 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
+],
+"🎂 {} {} yaşına girdi!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
 ],
 "Kazandın! {} - {} · +{}": [
 "lang-ar.js",
@@ -174723,6 +177452,28 @@
 "lang-pt.js"
 ],
 "{} Top Assists ({})": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{} {} yaşına girdi!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{0} turned {1}!": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -175581,6 +178332,18 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
+],
+"{} · {} Bağınız +{}": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
 ],
 "ile {} ayrıldı.": [
 "lang-ar.js",
@@ -180652,7 +183415,10 @@
 "lang-de.js"
 ],
 "Standard": [
-"lang-de.js"
+"lang-de.js",
+"lang-en.js",
+"lang-fr.js",
+"lang-it.js"
 ],
 "Kurz": [
 "lang-de.js"
@@ -187227,6 +189993,264 @@
 "lang-de.js"
 ],
 "Deine Energie:": [
+"lang-de.js"
+],
+"Wenn der Gegner zur Seite zieht,": [
+"lang-de.js"
+],
+"zieh den Ball zur anderen Seite": [
+"lang-de.js"
+],
+"Mitspielender Torwart": [
+"lang-de.js"
+],
+"Verlässt den Strafraum und räumt hinter der Abwehr ab.": [
+"lang-de.js"
+],
+"Linienkeeper": [
+"lang-de.js"
+],
+"Bleibt auf der Linie und pariert mit seinen Reflexen.": [
+"lang-de.js"
+],
+"Kompromissloser Innenverteidiger": [
+"lang-de.js"
+],
+"Kopfballstark und hart im Zweikampf.": [
+"lang-de.js"
+],
+"Spieleröffnender Verteidiger": [
+"lang-de.js"
+],
+"Leitet Angriffe mit Pässen von hinten ein.": [
+"lang-de.js"
+],
+"Offensiver Außenverteidiger": [
+"lang-de.js"
+],
+"Schaltet sich über die Flügel ständig in den Angriff ein.": [
+"lang-de.js"
+],
+"Balleroberer": [
+"lang-de.js"
+],
+"Erobert vor der Abwehr die Bälle.": [
+"lang-de.js"
+],
+"Ballsicherer Spielmacher": [
+"lang-de.js"
+],
+"Hält den Ball und bestimmt das Tempo.": [
+"lang-de.js"
+],
+"Box-to-Box-Spieler": [
+"lang-de.js"
+],
+"Arbeitet nach hinten und schaltet sich vorne ein.": [
+"lang-de.js"
+],
+"Abstauber": [
+"lang-de.js"
+],
+"Steht im Strafraum immer richtig.": [
+"lang-de.js"
+],
+"Wandspieler": [
+"lang-de.js"
+],
+"Behauptet den Ball mit dem Rücken zum Tor und ist kopfballstark.": [
+"lang-de.js"
+],
+"Schneller Stürmer": [
+"lang-de.js"
+],
+"Wird mit Läufen hinter die Abwehr gefährlich.": [
+"lang-de.js"
+],
+"Normales Training mit der Mannschaft.": [
+"lang-de.js"
+],
+"Intensives Einzeltraining": [
+"lang-de.js"
+],
+"Entwicklung 60 % schneller; die Fitness sinkt jede Woche etwas, das Verletzungsrisiko steigt. Bis 24 Jahre.": [
+"lang-de.js"
+],
+"Belastungssteuerung": [
+"lang-de.js"
+],
+"Die Fitness erholt sich schneller, die Entwicklung wird langsamer. Für erfahrene Spieler.": [
+"lang-de.js"
+],
+"Stiltraining": [
+"lang-de.js"
+],
+"Lernt nach 8 Wochen den gewählten Spielstil. In dieser Zeit verlangsamt sich die Entwicklung etwas.": [
+"lang-de.js"
+],
+"Zieh einen Spieler auf einen anderen, um sie zu tauschen. Tippen öffnet die Spielerkarte.": [
+"lang-de.js"
+],
+"Ersatzbank": [
+"lang-de.js"
+],
+"Reservisten": [
+"lang-de.js"
+],
+"Startelf manuell gesetzt. Fällt ein Spieler aus, wird nur seine Position geändert. „Automatisch aufstellen“ kehrt zur stärksten Elf zurück.": [
+"lang-de.js"
+],
+"Entwicklungsplan": [
+"lang-de.js"
+],
+"Kuscheln und spielen": [
+"lang-de.js"
+],
+"Spaziergang mit dem Kinderwagen": [
+"lang-de.js"
+],
+"In den Park gehen": [
+"lang-de.js"
+],
+"Geschichte vorlesen": [
+"lang-de.js"
+],
+"Im Garten kicken": [
+"lang-de.js"
+],
+"Zusammen kicken": [
+"lang-de.js"
+],
+"Bei den Hausaufgaben helfen": [
+"lang-de.js"
+],
+"Mit zu deinem Spiel nehmen": [
+"lang-de.js"
+],
+"Ein langes Gespräch": [
+"lang-de.js"
+],
+"Sein Spiel anschauen": [
+"lang-de.js"
+],
+"Wochenendausflug": [
+"lang-de.js"
+],
+"Gemeinsames Essen": [
+"lang-de.js"
+],
+"Über sein Leben reden": [
+"lang-de.js"
+],
+"Das Lachen erfüllte das ganze Haus.": [
+"lang-de.js"
+],
+"Hat zum ersten Mal „Papa“ gesagt!": [
+"lang-de.js"
+],
+"Ist in deinen Armen eingeschlafen.": [
+"lang-de.js"
+],
+"Ihr hattet einen schönen Spaziergang im Park.": [
+"lang-de.js"
+],
+"Hat sich beim Anblick der Tauben riesig gefreut.": [
+"lang-de.js"
+],
+"Ist immer wieder die Rutsche hinuntergerutscht.": [
+"lang-de.js"
+],
+"Rief auf der Schaukel „Höher!“.": [
+"lang-de.js"
+],
+"Du hast dir das Ende der Geschichte ausgedacht – es hat ihm sehr gefallen.": [
+"lang-de.js"
+],
+"Wollte vor dem Einschlafen „noch eine“ hören.": [
+"lang-de.js"
+],
+"Hat sein erstes Tor gegen dich geschossen!": [
+"lang-de.js"
+],
+"Hat versucht, den Ball genau wie du zu schießen.": [
+"lang-de.js"
+],
+"Hat mit links ein tolles Tor geschossen.": [
+"lang-de.js"
+],
+"Hat dich ausgedribbelt und war mächtig stolz.": [
+"lang-de.js"
+],
+"Ihr habt die Mathehausaufgaben zusammen geschafft.": [
+"lang-de.js"
+],
+"Das Schulprojekt wurde zum besten der Klasse gewählt.": [
+"lang-de.js"
+],
+"Trug auf der Tribüne dein Trikot und hat ununterbrochen angefeuert.": [
+"lang-de.js"
+],
+"Nach dem Spiel hast du ihn mit in die Kabine genommen – er war überglücklich.": [
+"lang-de.js"
+],
+"Ihr habt über die Schule und Freunde geredet.": [
+"lang-de.js"
+],
+"Hat dir von seinen Zukunftsträumen erzählt.": [
+"lang-de.js"
+],
+"Hat noch besser gespielt, als er dich auf der Tribüne sah.": [
+"lang-de.js"
+],
+"War der Beste seiner Mannschaft.": [
+"lang-de.js"
+],
+"Ihr hattet ein schönes Wochenende beim Camping.": [
+"lang-de.js"
+],
+"Ihr habt zusammen eine neue Stadt erkundet.": [
+"lang-de.js"
+],
+"Ihr habt über alte Zeiten geredet und viel gelacht.": [
+"lang-de.js"
+],
+"Hat dir von seinem Berufsleben erzählt.": [
+"lang-de.js"
+],
+"Hat dich bei seinen Entscheidungen um Rat gefragt.": [
+"lang-de.js"
+],
+"Sagte, er wolle so werden wie du.": [
+"lang-de.js"
+],
+"👶 Du hast einen Sohn bekommen! Wähle im Tab „Leben“ seinen Namen.": [
+"lang-de.js"
+],
+"Du hast einen Sohn bekommen!": [
+"lang-de.js"
+],
+"👶 Du hast eine Tochter bekommen! Wähle im Tab „Leben“ ihren Namen.": [
+"lang-de.js"
+],
+"Du hast eine Tochter bekommen!": [
+"lang-de.js"
+],
+"Mutter und Kind geht es prima. Wie soll das Baby heißen?": [
+"lang-de.js"
+],
+"Bindung": [
+"lang-de.js"
+],
+"Kinder": [
+"lang-de.js"
+],
+"Noch keine Kinder. Nach dem ersten Ehejahr könnte es gute Neuigkeiten geben.": [
+"lang-de.js"
+],
+"will Fußballer werden ⚽": [
+"lang-de.js"
+],
+"will Fußballer werden": [
 "lang-de.js"
 ],
 "– wir haben uns qualifiziert!": [
@@ -194157,7 +197181,10 @@
 "lang-de.js"
 ],
 "STANDARD": [
-"lang-de.js"
+"lang-de.js",
+"lang-en.js",
+"lang-fr.js",
+"lang-it.js"
 ],
 "KURZ": [
 "lang-de.js"
@@ -198824,6 +201851,216 @@
 "lang-de.js"
 ],
 "DEINE ENERGIE:": [
+"lang-de.js"
+],
+"WENN DER GEGNER ZUR SEITE ZIEHT,": [
+"lang-de.js"
+],
+"ZIEH DEN BALL ZUR ANDEREN SEITE": [
+"lang-de.js"
+],
+"MITSPIELENDER TORWART": [
+"lang-de.js"
+],
+"LINIENKEEPER": [
+"lang-de.js"
+],
+"KOMPROMISSLOSER INNENVERTEIDIGER": [
+"lang-de.js"
+],
+"SPIELERÖFFNENDER VERTEIDIGER": [
+"lang-de.js"
+],
+"LEITET ANGRIFFE MIT PÄSSEN VON HINTEN EIN.": [
+"lang-de.js"
+],
+"OFFENSIVER AUSSENVERTEIDIGER": [
+"lang-de.js"
+],
+"SCHALTET SICH ÜBER DIE FLÜGEL STÄNDIG IN DEN ANGRIFF EIN.": [
+"lang-de.js"
+],
+"BALLEROBERER": [
+"lang-de.js"
+],
+"EROBERT VOR DER ABWEHR DIE BÄLLE.": [
+"lang-de.js"
+],
+"BALLSICHERER SPIELMACHER": [
+"lang-de.js"
+],
+"BOX-TO-BOX-SPIELER": [
+"lang-de.js"
+],
+"ARBEITET NACH HINTEN UND SCHALTET SICH VORNE EIN.": [
+"lang-de.js"
+],
+"ABSTAUBER": [
+"lang-de.js"
+],
+"STEHT IM STRAFRAUM IMMER RICHTIG.": [
+"lang-de.js"
+],
+"WANDSPIELER": [
+"lang-de.js"
+],
+"SCHNELLER STÜRMER": [
+"lang-de.js"
+],
+"NORMALES TRAINING MIT DER MANNSCHAFT.": [
+"lang-de.js"
+],
+"INTENSIVES EINZELTRAINING": [
+"lang-de.js"
+],
+"BELASTUNGSSTEUERUNG": [
+"lang-de.js"
+],
+"STILTRAINING": [
+"lang-de.js"
+],
+"ERSATZBANK": [
+"lang-de.js"
+],
+"RESERVISTEN": [
+"lang-de.js"
+],
+"ENTWICKLUNGSPLAN": [
+"lang-de.js"
+],
+"KUSCHELN UND SPIELEN": [
+"lang-de.js"
+],
+"SPAZIERGANG MIT DEM KINDERWAGEN": [
+"lang-de.js"
+],
+"IN DEN PARK GEHEN": [
+"lang-de.js"
+],
+"GESCHICHTE VORLESEN": [
+"lang-de.js"
+],
+"IM GARTEN KICKEN": [
+"lang-de.js"
+],
+"ZUSAMMEN KICKEN": [
+"lang-de.js"
+],
+"BEI DEN HAUSAUFGABEN HELFEN": [
+"lang-de.js"
+],
+"MIT ZU DEINEM SPIEL NEHMEN": [
+"lang-de.js"
+],
+"EIN LANGES GESPRÄCH": [
+"lang-de.js"
+],
+"SEIN SPIEL ANSCHAUEN": [
+"lang-de.js"
+],
+"WOCHENENDAUSFLUG": [
+"lang-de.js"
+],
+"GEMEINSAMES ESSEN": [
+"lang-de.js"
+],
+"ÜBER SEIN LEBEN REDEN": [
+"lang-de.js"
+],
+"DAS LACHEN ERFÜLLTE DAS GANZE HAUS.": [
+"lang-de.js"
+],
+"HAT ZUM ERSTEN MAL „PAPA“ GESAGT!": [
+"lang-de.js"
+],
+"IST IN DEINEN ARMEN EINGESCHLAFEN.": [
+"lang-de.js"
+],
+"IHR HATTET EINEN SCHÖNEN SPAZIERGANG IM PARK.": [
+"lang-de.js"
+],
+"HAT SICH BEIM ANBLICK DER TAUBEN RIESIG GEFREUT.": [
+"lang-de.js"
+],
+"IST IMMER WIEDER DIE RUTSCHE HINUNTERGERUTSCHT.": [
+"lang-de.js"
+],
+"RIEF AUF DER SCHAUKEL „HÖHER!“.": [
+"lang-de.js"
+],
+"DU HAST DIR DAS ENDE DER GESCHICHTE AUSGEDACHT – ES HAT IHM SEHR GEFALLEN.": [
+"lang-de.js"
+],
+"WOLLTE VOR DEM EINSCHLAFEN „NOCH EINE“ HÖREN.": [
+"lang-de.js"
+],
+"HAT SEIN ERSTES TOR GEGEN DICH GESCHOSSEN!": [
+"lang-de.js"
+],
+"HAT VERSUCHT, DEN BALL GENAU WIE DU ZU SCHIESSEN.": [
+"lang-de.js"
+],
+"HAT MIT LINKS EIN TOLLES TOR GESCHOSSEN.": [
+"lang-de.js"
+],
+"HAT DICH AUSGEDRIBBELT UND WAR MÄCHTIG STOLZ.": [
+"lang-de.js"
+],
+"IHR HABT DIE MATHEHAUSAUFGABEN ZUSAMMEN GESCHAFFT.": [
+"lang-de.js"
+],
+"DAS SCHULPROJEKT WURDE ZUM BESTEN DER KLASSE GEWÄHLT.": [
+"lang-de.js"
+],
+"TRUG AUF DER TRIBÜNE DEIN TRIKOT UND HAT UNUNTERBROCHEN ANGEFEUERT.": [
+"lang-de.js"
+],
+"IHR HABT ÜBER DIE SCHULE UND FREUNDE GEREDET.": [
+"lang-de.js"
+],
+"HAT DIR VON SEINEN ZUKUNFTSTRÄUMEN ERZÄHLT.": [
+"lang-de.js"
+],
+"HAT NOCH BESSER GESPIELT, ALS ER DICH AUF DER TRIBÜNE SAH.": [
+"lang-de.js"
+],
+"WAR DER BESTE SEINER MANNSCHAFT.": [
+"lang-de.js"
+],
+"IHR HATTET EIN SCHÖNES WOCHENENDE BEIM CAMPING.": [
+"lang-de.js"
+],
+"IHR HABT ZUSAMMEN EINE NEUE STADT ERKUNDET.": [
+"lang-de.js"
+],
+"IHR HABT ÜBER ALTE ZEITEN GEREDET UND VIEL GELACHT.": [
+"lang-de.js"
+],
+"HAT DIR VON SEINEM BERUFSLEBEN ERZÄHLT.": [
+"lang-de.js"
+],
+"HAT DICH BEI SEINEN ENTSCHEIDUNGEN UM RAT GEFRAGT.": [
+"lang-de.js"
+],
+"SAGTE, ER WOLLE SO WERDEN WIE DU.": [
+"lang-de.js"
+],
+"DU HAST EINEN SOHN BEKOMMEN!": [
+"lang-de.js"
+],
+"DU HAST EINE TOCHTER BEKOMMEN!": [
+"lang-de.js"
+],
+"BINDUNG": [
+"lang-de.js"
+],
+"KINDER": [
+"lang-de.js"
+],
+"WILL FUSSBALLER WERDEN ⚽": [
+"lang-de.js"
+],
+"WILL FUSSBALLER WERDEN": [
 "lang-de.js"
 ],
 "– WIR HABEN UNS QUALIFIZIERT!": [
@@ -203518,6 +206755,9 @@
 "🤝 Dein ehemaliger Mitspieler {} ist jetzt dein Co-Trainer.": [
 "lang-de.js"
 ],
+"🤕 {0} {1} hat sich im intensiven Einzeltraining verletzt ({2} Wochen).": [
+"lang-de.js"
+],
 "{}, eine der Heimaten deiner Eltern, hat dich berufen.": [
 "lang-de.js"
 ],
@@ -203866,6 +207106,9 @@
 "Gehälter am Saisonende unter {} halten": [
 "lang-de.js"
 ],
+"{0} · „Ich werde auch Fußballer, genau wie du!“": [
+"lang-de.js"
+],
 "Der schönste Tag meines Lebens. {}, ich bin so froh, dass du da bist.": [
 "lang-de.js"
 ],
@@ -204059,6 +207302,9 @@
 "lang-de.js"
 ],
 "🏅 Du bist Trainer des Monats {} {}!": [
+"lang-de.js"
+],
+"Willkommen, {0}! Das schönste Tor meines Lebens.": [
 "lang-de.js"
 ],
 "Der Tag deines Lebens! Technik +{}, Dribbling +{}": [
@@ -204385,6 +207631,12 @@
 "🤝 Der Vorstand hat die {}-Erhöhung genehmigt: {}{}.": [
 "lang-de.js"
 ],
+"🎓 {0} hat einen neuen Spielstil gelernt: {1}.": [
+"lang-de.js"
+],
+"Nichts geht über Zeit mit {0}.": [
+"lang-de.js"
+],
 "Ein neues Kapitel: {}! Total aufgeregt.": [
 "lang-de.js"
 ],
@@ -204547,6 +207799,9 @@
 "🔄 {} wechselt.": [
 "lang-de.js"
 ],
+"Mein größter Fan: {0}.": [
+"lang-de.js"
+],
 "Du hast in {} Spielen in Folge getroffen": [
 "lang-de.js"
 ],
@@ -204611,6 +207866,9 @@
 "lang-de.js"
 ],
 "Was sagst du vor dem Spiel gegen {}?": [
+"lang-de.js"
+],
+"👶 {0} ist Vater geworden! Das Baby heißt {1}.": [
 "lang-de.js"
 ],
 "+{}, aber dein Gewissen ist nicht rein.": [
@@ -205266,6 +208524,9 @@
 "{} Diamond-Jubel": [
 "lang-de.js"
 ],
+"Ein schöner Tag mit {0}.": [
+"lang-de.js"
+],
 "/Woche · noch {} Jahre": [
 "lang-de.js"
 ],
@@ -205435,6 +208696,9 @@
 "lang-de.js"
 ],
 "🎯 {} Top-Vorlagengeber ({})": [
+"lang-de.js"
+],
+"🎂 {0} ist {1} geworden!": [
 "lang-de.js"
 ],
 "Du gewinnst! {} - {} · +{}": [
@@ -205805,6 +209069,9 @@
 "lang-de.js"
 ],
 "💎 {} Aufgaben frei": [
+"lang-de.js"
+],
+"{0} · {1} Bindung +{2}": [
 "lang-de.js"
 ],
 "+{} Moral und Ruhm": [
@@ -215548,6 +218815,262 @@
 "lang-en.js"
 ],
 "Your energy:": [
+"lang-en.js"
+],
+"When the defender commits,": [
+"lang-en.js"
+],
+"Sweeper keeper": [
+"lang-en.js"
+],
+"Comes off his line and sweeps behind the defence.": [
+"lang-en.js"
+],
+"Line keeper": [
+"lang-en.js"
+],
+"Stays on his line and saves with his reflexes.": [
+"lang-en.js"
+],
+"Stopper": [
+"lang-en.js"
+],
+"Strong in the air and tough in duels.": [
+"lang-en.js"
+],
+"Ball-playing defender": [
+"lang-en.js"
+],
+"Starts attacks with passes from the back.": [
+"lang-en.js"
+],
+"Attacking full-back": [
+"lang-en.js"
+],
+"Constantly bombs forward down the wing.": [
+"lang-en.js"
+],
+"Ball winner": [
+"lang-en.js"
+],
+"Wins the ball back in front of the defence.": [
+"lang-en.js"
+],
+"Deep-lying playmaker": [
+"lang-en.js"
+],
+"Keeps the ball and dictates the tempo.": [
+"lang-en.js"
+],
+"Box-to-box midfielder": [
+"lang-en.js"
+],
+"Runs up and down to defend and attack.": [
+"lang-en.js"
+],
+"Poacher": [
+"lang-en.js"
+],
+"Always in the right place in the box.": [
+"lang-en.js"
+],
+"Target man": [
+"lang-en.js",
+"lang-id.js"
+],
+"Holds the ball up with his back to goal and wins headers.": [
+"lang-en.js"
+],
+"Pacey forward": [
+"lang-en.js"
+],
+"Creates danger with runs in behind.": [
+"lang-en.js"
+],
+"Normal training with the team.": [
+"lang-en.js"
+],
+"Intensive individual": [
+"lang-en.js"
+],
+"Development is 60% faster; fitness drops a little each week and injury risk rises. Age 24 and under.": [
+"lang-en.js"
+],
+"Load management": [
+"lang-en.js"
+],
+"Fitness recovers faster, development slows. For experienced players.": [
+"lang-en.js"
+],
+"Style training": [
+"lang-en.js"
+],
+"Learns the style you pick after 8 weeks. Development slows a little meanwhile.": [
+"lang-en.js"
+],
+"Drag a player onto another player to swap them. Tap to open the player card.": [
+"lang-en.js"
+],
+"Substitutes": [
+"lang-en.js"
+],
+"Reserves": [
+"lang-en.js"
+],
+"Banned": [
+"lang-en.js"
+],
+"Starting XI set manually. If a player becomes unavailable, only that spot is changed. \\\"Auto pick\\\" returns to the strongest XI.": [
+"lang-en.js"
+],
+"Development plan": [
+"lang-en.js"
+],
+"Cuddle and play": [
+"lang-en.js"
+],
+"Stroller walk": [
+"lang-en.js"
+],
+"Go to the park": [
+"lang-en.js"
+],
+"Read a story": [
+"lang-en.js"
+],
+"Kick a ball in the garden": [
+"lang-en.js"
+],
+"Play football together": [
+"lang-en.js"
+],
+"Help with homework": [
+"lang-en.js"
+],
+"Take to your match": [
+"lang-en.js"
+],
+"A long talk": [
+"lang-en.js"
+],
+"Watch their match": [
+"lang-en.js"
+],
+"Weekend trip": [
+"lang-en.js"
+],
+"Dinner together": [
+"lang-en.js"
+],
+"Talk about their life": [
+"lang-en.js"
+],
+"Their laughter filled the whole house.": [
+"lang-en.js"
+],
+"Said \\\"dad\\\" for the first time!": [
+"lang-en.js"
+],
+"Fell asleep in your arms.": [
+"lang-en.js"
+],
+"You had a lovely walk in the park.": [
+"lang-en.js"
+],
+"Got very excited seeing the pigeons.": [
+"lang-en.js"
+],
+"Went down the slide again and again.": [
+"lang-en.js"
+],
+"Shouted \\\"higher!\\\" on the swing.": [
+"lang-en.js"
+],
+"You made up the ending of the story and they loved it.": [
+"lang-en.js"
+],
+"Asked for \\\"one more\\\" before falling asleep.": [
+"lang-en.js"
+],
+"Scored their first ever goal past you!": [
+"lang-en.js"
+],
+"Tried to kick the ball just like you.": [
+"lang-en.js"
+],
+"Scored a great goal with their left foot.": [
+"lang-en.js"
+],
+"Dribbled past you and was very proud.": [
+"lang-en.js"
+],
+"You finished the maths homework together.": [
+"lang-en.js"
+],
+"The school project was picked as the best in class.": [
+"lang-en.js"
+],
+"Wore your shirt in the stands and cheered nonstop.": [
+"lang-en.js"
+],
+"You took them to the dressing room after the match and they were thrilled.": [
+"lang-en.js"
+],
+"You talked about school and friends.": [
+"lang-en.js"
+],
+"Shared their dreams for the future.": [
+"lang-en.js"
+],
+"Played even better after spotting you in the stands.": [
+"lang-en.js"
+],
+"Was the best player on the team.": [
+"lang-en.js"
+],
+"You had a great weekend camping.": [
+"lang-en.js"
+],
+"You explored a new city together.": [
+"lang-en.js"
+],
+"You laughed a lot talking about the old days.": [
+"lang-en.js"
+],
+"Told you about their working life.": [
+"lang-en.js"
+],
+"Asked your advice on big decisions.": [
+"lang-en.js"
+],
+"Said they want to be just like you.": [
+"lang-en.js"
+],
+"👶 You have a baby boy! Choose his name in the Life tab.": [
+"lang-en.js"
+],
+"You have a baby boy!": [
+"lang-en.js"
+],
+"👶 You have a baby girl! Choose her name in the Life tab.": [
+"lang-en.js"
+],
+"You have a baby girl!": [
+"lang-en.js"
+],
+"Mother and baby are doing great. What will you name the baby?": [
+"lang-en.js"
+],
+"Bond": [
+"lang-en.js"
+],
+"Children": [
+"lang-en.js"
+],
+"No children yet. Good news may come after your first year of marriage.": [
+"lang-en.js"
+],
+"wants to be a footballer ⚽": [
 "lang-en.js"
 ],
 "— we qualified!": [
@@ -226446,6 +229969,220 @@
 "YOUR ENERGY:": [
 "lang-en.js"
 ],
+"WHEN THE DEFENDER COMMITS,": [
+"lang-en.js"
+],
+"DRAG THE BALL THE OTHER WAY": [
+"lang-en.js"
+],
+"SWEEPER KEEPER": [
+"lang-en.js"
+],
+"LINE KEEPER": [
+"lang-en.js"
+],
+"STOPPER": [
+"lang-en.js"
+],
+"BALL-PLAYING DEFENDER": [
+"lang-en.js"
+],
+"STARTS ATTACKS WITH PASSES FROM THE BACK.": [
+"lang-en.js"
+],
+"ATTACKING FULL-BACK": [
+"lang-en.js"
+],
+"CONSTANTLY BOMBS FORWARD DOWN THE WING.": [
+"lang-en.js"
+],
+"BALL WINNER": [
+"lang-en.js"
+],
+"WINS THE BALL BACK IN FRONT OF THE DEFENCE.": [
+"lang-en.js"
+],
+"DEEP-LYING PLAYMAKER": [
+"lang-en.js"
+],
+"BOX-TO-BOX MIDFIELDER": [
+"lang-en.js"
+],
+"RUNS UP AND DOWN TO DEFEND AND ATTACK.": [
+"lang-en.js"
+],
+"POACHER": [
+"lang-en.js"
+],
+"ALWAYS IN THE RIGHT PLACE IN THE BOX.": [
+"lang-en.js"
+],
+"TARGET MAN": [
+"lang-en.js",
+"lang-id.js"
+],
+"PACEY FORWARD": [
+"lang-en.js"
+],
+"NORMAL TRAINING WITH THE TEAM.": [
+"lang-en.js"
+],
+"INTENSIVE INDIVIDUAL": [
+"lang-en.js"
+],
+"LOAD MANAGEMENT": [
+"lang-en.js"
+],
+"STYLE TRAINING": [
+"lang-en.js"
+],
+"SUBSTITUTES": [
+"lang-en.js"
+],
+"RESERVES": [
+"lang-en.js"
+],
+"BANNED": [
+"lang-en.js"
+],
+"DEVELOPMENT PLAN": [
+"lang-en.js"
+],
+"CUDDLE AND PLAY": [
+"lang-en.js"
+],
+"STROLLER WALK": [
+"lang-en.js"
+],
+"GO TO THE PARK": [
+"lang-en.js"
+],
+"READ A STORY": [
+"lang-en.js"
+],
+"KICK A BALL IN THE GARDEN": [
+"lang-en.js"
+],
+"PLAY FOOTBALL TOGETHER": [
+"lang-en.js"
+],
+"HELP WITH HOMEWORK": [
+"lang-en.js"
+],
+"TAKE TO YOUR MATCH": [
+"lang-en.js"
+],
+"A LONG TALK": [
+"lang-en.js"
+],
+"WATCH THEIR MATCH": [
+"lang-en.js"
+],
+"WEEKEND TRIP": [
+"lang-en.js"
+],
+"DINNER TOGETHER": [
+"lang-en.js"
+],
+"TALK ABOUT THEIR LIFE": [
+"lang-en.js"
+],
+"THEIR LAUGHTER FILLED THE WHOLE HOUSE.": [
+"lang-en.js"
+],
+"SAID \\\"DAD\\\" FOR THE FIRST TIME!": [
+"lang-en.js"
+],
+"FELL ASLEEP IN YOUR ARMS.": [
+"lang-en.js"
+],
+"YOU HAD A LOVELY WALK IN THE PARK.": [
+"lang-en.js"
+],
+"GOT VERY EXCITED SEEING THE PIGEONS.": [
+"lang-en.js"
+],
+"WENT DOWN THE SLIDE AGAIN AND AGAIN.": [
+"lang-en.js"
+],
+"SHOUTED \\\"HIGHER!\\\" ON THE SWING.": [
+"lang-en.js"
+],
+"YOU MADE UP THE ENDING OF THE STORY AND THEY LOVED IT.": [
+"lang-en.js"
+],
+"ASKED FOR \\\"ONE MORE\\\" BEFORE FALLING ASLEEP.": [
+"lang-en.js"
+],
+"SCORED THEIR FIRST EVER GOAL PAST YOU!": [
+"lang-en.js"
+],
+"TRIED TO KICK THE BALL JUST LIKE YOU.": [
+"lang-en.js"
+],
+"SCORED A GREAT GOAL WITH THEIR LEFT FOOT.": [
+"lang-en.js"
+],
+"DRIBBLED PAST YOU AND WAS VERY PROUD.": [
+"lang-en.js"
+],
+"YOU FINISHED THE MATHS HOMEWORK TOGETHER.": [
+"lang-en.js"
+],
+"THE SCHOOL PROJECT WAS PICKED AS THE BEST IN CLASS.": [
+"lang-en.js"
+],
+"WORE YOUR SHIRT IN THE STANDS AND CHEERED NONSTOP.": [
+"lang-en.js"
+],
+"YOU TALKED ABOUT SCHOOL AND FRIENDS.": [
+"lang-en.js"
+],
+"SHARED THEIR DREAMS FOR THE FUTURE.": [
+"lang-en.js"
+],
+"PLAYED EVEN BETTER AFTER SPOTTING YOU IN THE STANDS.": [
+"lang-en.js"
+],
+"WAS THE BEST PLAYER ON THE TEAM.": [
+"lang-en.js"
+],
+"YOU HAD A GREAT WEEKEND CAMPING.": [
+"lang-en.js"
+],
+"YOU EXPLORED A NEW CITY TOGETHER.": [
+"lang-en.js"
+],
+"YOU LAUGHED A LOT TALKING ABOUT THE OLD DAYS.": [
+"lang-en.js"
+],
+"TOLD YOU ABOUT THEIR WORKING LIFE.": [
+"lang-en.js"
+],
+"ASKED YOUR ADVICE ON BIG DECISIONS.": [
+"lang-en.js"
+],
+"SAID THEY WANT TO BE JUST LIKE YOU.": [
+"lang-en.js"
+],
+"YOU HAVE A BABY BOY!": [
+"lang-en.js"
+],
+"YOU HAVE A BABY GIRL!": [
+"lang-en.js"
+],
+"BOND": [
+"lang-en.js"
+],
+"CHILDREN": [
+"lang-en.js"
+],
+"WANTS TO BE A FOOTBALLER ⚽": [
+"lang-en.js"
+],
+"WANTS TO BE A FOOTBALLER": [
+"lang-en.js"
+],
 "— WE QUALIFIED!": [
 "lang-en.js"
 ],
@@ -231081,6 +234818,9 @@
 "🤝 Your former teammate {} is now your assistant.": [
 "lang-en.js"
 ],
+"🤕 {0} {1} got injured in intensive individual training ({2} weeks).": [
+"lang-en.js"
+],
 "{}, one of your parents' homelands, called you up.": [
 "lang-en.js"
 ],
@@ -231429,6 +235169,9 @@
 "Keep the wage bill under {} at season end": [
 "lang-en.js"
 ],
+"{0} · \\\"I'm going to be a footballer just like you!\\\"": [
+"lang-en.js"
+],
 "The best day of my life. {}, I'm so glad you're here.": [
 "lang-en.js"
 ],
@@ -231622,6 +235365,9 @@
 "lang-en.js"
 ],
 "🏅 You are Manager of the Month for {} {}!": [
+"lang-en.js"
+],
+"Welcome, {0}! The best goal of my life.": [
 "lang-en.js"
 ],
 "Day of your life! Technique +{}, Dribbling +{}": [
@@ -231948,6 +235694,12 @@
 "🤝 The board approved the {} increase: {}{}.": [
 "lang-en.js"
 ],
+"🎓 {0} has learned a new playing style: {1}.": [
+"lang-en.js"
+],
+"Nothing beats time with {0}.": [
+"lang-en.js"
+],
 "A new chapter: {}! So excited.": [
 "lang-en.js"
 ],
@@ -232110,6 +235862,9 @@
 "🔄 {} made a substitution.": [
 "lang-en.js"
 ],
+"My biggest fan: {0}.": [
+"lang-en.js"
+],
 "You scored in {} matches in a row": [
 "lang-en.js"
 ],
@@ -232174,6 +235929,9 @@
 "lang-en.js"
 ],
 "What will you say before the {} game?": [
+"lang-en.js"
+],
+"👶 {0} is a dad! The baby's name is {1}.": [
 "lang-en.js"
 ],
 "+{} but your conscience isn't clear.": [
@@ -232829,6 +236587,9 @@
 "{} Diamond celebrations": [
 "lang-en.js"
 ],
+"A lovely day with {0}.": [
+"lang-en.js"
+],
 "/week · {} years left": [
 "lang-en.js"
 ],
@@ -233001,6 +236762,9 @@
 "lang-en.js"
 ],
 "🎯 {} Top Assists ({})": [
+"lang-en.js"
+],
+"🎂 {0} turned {1}!": [
 "lang-en.js"
 ],
 "You win! {} - {} · +{}": [
@@ -233383,6 +237147,9 @@
 "lang-en.js"
 ],
 "💎 {} challenges unlocked": [
+"lang-en.js"
+],
+"{0} · {1} Bond +{2}": [
 "lang-en.js"
 ],
 "+{} morale and fame": [
@@ -243192,6 +246959,266 @@
 "lang-es.js"
 ],
 "Tu energía:": [
+"lang-es.js"
+],
+"Cuando el rival se lance,": [
+"lang-es.js"
+],
+"Portero líbero": [
+"lang-es.js"
+],
+"Sale del área y barre a la espalda de la defensa.": [
+"lang-es.js"
+],
+"Portero de línea": [
+"lang-es.js"
+],
+"Se queda bajo palos y para con sus reflejos.": [
+"lang-es.js"
+],
+"Central duro": [
+"lang-es.js"
+],
+"Fuerte por arriba y duro en los duelos.": [
+"lang-es.js"
+],
+"Defensa con salida de balón": [
+"lang-es.js"
+],
+"Inicia el juego con pases desde atrás.": [
+"lang-es.js"
+],
+"Lateral ofensivo": [
+"lang-es.js",
+"lang-pt.js"
+],
+"Sube constantemente al ataque por la banda.": [
+"lang-es.js"
+],
+"Recuperador": [
+"lang-es.js"
+],
+"Recupera balones por delante de la defensa.": [
+"lang-es.js"
+],
+"Centrocampista de posesión": [
+"lang-es.js"
+],
+"Mantiene el balón y marca el ritmo del juego.": [
+"lang-es.js"
+],
+"Centrocampista box to box": [
+"lang-es.js",
+"lang-it.js"
+],
+"Corre para defender y para atacar.": [
+"lang-es.js"
+],
+"Cazagoles": [
+"lang-es.js"
+],
+"Siempre está en el sitio justo dentro del área.": [
+"lang-es.js"
+],
+"Delantero referencia": [
+"lang-es.js"
+],
+"Aguanta de espaldas y es fuerte por arriba.": [
+"lang-es.js"
+],
+"Delantero rápido": [
+"lang-es.js"
+],
+"Genera peligro con desmarques a la espalda.": [
+"lang-es.js"
+],
+"Estándar": [
+"lang-es.js"
+],
+"Entrenamiento normal con el equipo.": [
+"lang-es.js"
+],
+"Individual intensivo": [
+"lang-es.js",
+"lang-pt.js"
+],
+"El desarrollo es un 60 % más rápido; la forma física baja un poco cada semana y sube el riesgo de lesión. 24 años o menos.": [
+"lang-es.js"
+],
+"Gestión de cargas": [
+"lang-es.js"
+],
+"La forma se recupera antes y el desarrollo se frena. Para jugadores veteranos.": [
+"lang-es.js"
+],
+"Entrenamiento de estilo": [
+"lang-es.js"
+],
+"Aprende el estilo elegido tras 8 semanas. Mientras tanto, el desarrollo se frena un poco.": [
+"lang-es.js"
+],
+"Arrastra un jugador sobre otro para intercambiarlos. Tócalo para abrir su ficha.": [
+"lang-es.js"
+],
+"Suplentes": [
+"lang-es.js"
+],
+"Reservas": [
+"lang-es.js",
+"lang-pt.js"
+],
+"Once titular elegido a mano. Si un jugador no puede jugar, solo se cambia su puesto. «Alineación automática» vuelve al once más fuerte.": [
+"lang-es.js"
+],
+"Plan de desarrollo": [
+"lang-es.js"
+],
+"Cógelo en brazos y juega": [
+"lang-es.js"
+],
+"Paseo con el carrito": [
+"lang-es.js"
+],
+"Llévalo al parque": [
+"lang-es.js"
+],
+"Leer un cuento": [
+"lang-es.js"
+],
+"Jugar a la pelota en el jardín": [
+"lang-es.js"
+],
+"Jugar al fútbol juntos": [
+"lang-es.js"
+],
+"Ayudar con los deberes": [
+"lang-es.js"
+],
+"Llévalo a tu partido": [
+"lang-es.js"
+],
+"Una larga charla": [
+"lang-es.js"
+],
+"Ver su partido": [
+"lang-es.js"
+],
+"Escapada de fin de semana": [
+"lang-es.js"
+],
+"Cenar juntos": [
+"lang-es.js"
+],
+"Hablar de su vida": [
+"lang-es.js"
+],
+"Sus carcajadas llenaron toda la casa.": [
+"lang-es.js"
+],
+"¡Dijo «papá» por primera vez!": [
+"lang-es.js"
+],
+"Se quedó dormido en tus brazos.": [
+"lang-es.js"
+],
+"Disfrutasteis de un bonito paseo por el parque.": [
+"lang-es.js"
+],
+"Se emocionó mucho al ver las palomas.": [
+"lang-es.js"
+],
+"Se tiró por el tobogán una y otra vez.": [
+"lang-es.js"
+],
+"Gritó «¡más alto!» en el columpio.": [
+"lang-es.js"
+],
+"Te inventaste el final del cuento y le encantó.": [
+"lang-es.js"
+],
+"Antes de dormirse pidió «otro más».": [
+"lang-es.js"
+],
+"¡Te marcó su primer gol!": [
+"lang-es.js"
+],
+"Intentó chutar como tú.": [
+"lang-es.js"
+],
+"Marcó un golazo con la izquierda.": [
+"lang-es.js"
+],
+"Te regateó y se sintió muy orgulloso.": [
+"lang-es.js"
+],
+"Terminasteis juntos los deberes de matemáticas.": [
+"lang-es.js"
+],
+"Su proyecto fue elegido el mejor de la clase.": [
+"lang-es.js"
+],
+"Llevó tu camiseta en la grada y no paró de animar.": [
+"lang-es.js"
+],
+"Después del partido lo llevaste al vestuario y se puso feliz.": [
+"lang-es.js"
+],
+"Hablasteis del colegio y de sus amigos.": [
+"lang-es.js"
+],
+"Te contó sus sueños de futuro.": [
+"lang-es.js"
+],
+"Jugó todavía mejor al verte en la grada.": [
+"lang-es.js"
+],
+"Fue el mejor de su equipo.": [
+"lang-es.js"
+],
+"Pasasteis un fin de semana genial de acampada.": [
+"lang-es.js"
+],
+"Conocisteis juntos una ciudad nueva.": [
+"lang-es.js"
+],
+"Os reísteis mucho recordando viejos tiempos.": [
+"lang-es.js"
+],
+"Te habló de su vida laboral.": [
+"lang-es.js"
+],
+"Te pidió consejo para sus decisiones.": [
+"lang-es.js"
+],
+"Te dijo que quiere ser como tú.": [
+"lang-es.js"
+],
+"👶 ¡Has tenido un niño! Elige su nombre en la pestaña Vida.": [
+"lang-es.js"
+],
+"¡Has tenido un niño!": [
+"lang-es.js"
+],
+"👶 ¡Has tenido una niña! Elige su nombre en la pestaña Vida.": [
+"lang-es.js"
+],
+"¡Has tenido una niña!": [
+"lang-es.js"
+],
+"La madre y el bebé están muy bien. ¿Qué nombre le pondréis?": [
+"lang-es.js"
+],
+"Vínculo": [
+"lang-es.js",
+"lang-pt.js"
+],
+"Hijos": [
+"lang-es.js"
+],
+"Aún no tenéis hijos. Tras el primer año de matrimonio podría llegar una buena noticia.": [
+"lang-es.js"
+],
+"quiere ser futbolista ⚽": [
 "lang-es.js"
 ],
 "— ¡nos hemos clasificado!": [
@@ -254155,6 +258182,224 @@
 "TU ENERGÍA:": [
 "lang-es.js"
 ],
+"CUANDO EL RIVAL SE LANCE,": [
+"lang-es.js"
+],
+"LLEVA EL BALÓN AL OTRO LADO": [
+"lang-es.js"
+],
+"PORTERO LÍBERO": [
+"lang-es.js"
+],
+"PORTERO DE LÍNEA": [
+"lang-es.js"
+],
+"CENTRAL DURO": [
+"lang-es.js"
+],
+"DEFENSA CON SALIDA DE BALÓN": [
+"lang-es.js"
+],
+"INICIA EL JUEGO CON PASES DESDE ATRÁS.": [
+"lang-es.js"
+],
+"LATERAL OFENSIVO": [
+"lang-es.js",
+"lang-pt.js"
+],
+"SUBE CONSTANTEMENTE AL ATAQUE POR LA BANDA.": [
+"lang-es.js"
+],
+"RECUPERADOR": [
+"lang-es.js"
+],
+"RECUPERA BALONES POR DELANTE DE LA DEFENSA.": [
+"lang-es.js"
+],
+"CENTROCAMPISTA DE POSESIÓN": [
+"lang-es.js"
+],
+"CENTROCAMPISTA BOX TO BOX": [
+"lang-es.js",
+"lang-it.js"
+],
+"CORRE PARA DEFENDER Y PARA ATACAR.": [
+"lang-es.js"
+],
+"CAZAGOLES": [
+"lang-es.js"
+],
+"SIEMPRE ESTÁ EN EL SITIO JUSTO DENTRO DEL ÁREA.": [
+"lang-es.js"
+],
+"DELANTERO REFERENCIA": [
+"lang-es.js"
+],
+"DELANTERO RÁPIDO": [
+"lang-es.js"
+],
+"ESTÁNDAR": [
+"lang-es.js"
+],
+"ENTRENAMIENTO NORMAL CON EL EQUIPO.": [
+"lang-es.js"
+],
+"INDIVIDUAL INTENSIVO": [
+"lang-es.js",
+"lang-pt.js"
+],
+"GESTIÓN DE CARGAS": [
+"lang-es.js"
+],
+"ENTRENAMIENTO DE ESTILO": [
+"lang-es.js"
+],
+"SUPLENTES": [
+"lang-es.js"
+],
+"RESERVAS": [
+"lang-es.js",
+"lang-pt.js"
+],
+"PLAN DE DESARROLLO": [
+"lang-es.js"
+],
+"CÓGELO EN BRAZOS Y JUEGA": [
+"lang-es.js"
+],
+"PASEO CON EL CARRITO": [
+"lang-es.js"
+],
+"LLÉVALO AL PARQUE": [
+"lang-es.js"
+],
+"LEER UN CUENTO": [
+"lang-es.js"
+],
+"JUGAR A LA PELOTA EN EL JARDÍN": [
+"lang-es.js"
+],
+"JUGAR AL FÚTBOL JUNTOS": [
+"lang-es.js"
+],
+"AYUDAR CON LOS DEBERES": [
+"lang-es.js"
+],
+"LLÉVALO A TU PARTIDO": [
+"lang-es.js"
+],
+"UNA LARGA CHARLA": [
+"lang-es.js"
+],
+"VER SU PARTIDO": [
+"lang-es.js"
+],
+"ESCAPADA DE FIN DE SEMANA": [
+"lang-es.js"
+],
+"CENAR JUNTOS": [
+"lang-es.js"
+],
+"HABLAR DE SU VIDA": [
+"lang-es.js"
+],
+"SUS CARCAJADAS LLENARON TODA LA CASA.": [
+"lang-es.js"
+],
+"¡DIJO «PAPÁ» POR PRIMERA VEZ!": [
+"lang-es.js"
+],
+"SE QUEDÓ DORMIDO EN TUS BRAZOS.": [
+"lang-es.js"
+],
+"DISFRUTASTEIS DE UN BONITO PASEO POR EL PARQUE.": [
+"lang-es.js"
+],
+"SE EMOCIONÓ MUCHO AL VER LAS PALOMAS.": [
+"lang-es.js"
+],
+"SE TIRÓ POR EL TOBOGÁN UNA Y OTRA VEZ.": [
+"lang-es.js"
+],
+"GRITÓ «¡MÁS ALTO!» EN EL COLUMPIO.": [
+"lang-es.js"
+],
+"TE INVENTASTE EL FINAL DEL CUENTO Y LE ENCANTÓ.": [
+"lang-es.js"
+],
+"ANTES DE DORMIRSE PIDIÓ «OTRO MÁS».": [
+"lang-es.js"
+],
+"¡TE MARCÓ SU PRIMER GOL!": [
+"lang-es.js"
+],
+"INTENTÓ CHUTAR COMO TÚ.": [
+"lang-es.js"
+],
+"MARCÓ UN GOLAZO CON LA IZQUIERDA.": [
+"lang-es.js"
+],
+"TE REGATEÓ Y SE SINTIÓ MUY ORGULLOSO.": [
+"lang-es.js"
+],
+"TERMINASTEIS JUNTOS LOS DEBERES DE MATEMÁTICAS.": [
+"lang-es.js"
+],
+"SU PROYECTO FUE ELEGIDO EL MEJOR DE LA CLASE.": [
+"lang-es.js"
+],
+"LLEVÓ TU CAMISETA EN LA GRADA Y NO PARÓ DE ANIMAR.": [
+"lang-es.js"
+],
+"HABLASTEIS DEL COLEGIO Y DE SUS AMIGOS.": [
+"lang-es.js"
+],
+"TE CONTÓ SUS SUEÑOS DE FUTURO.": [
+"lang-es.js"
+],
+"JUGÓ TODAVÍA MEJOR AL VERTE EN LA GRADA.": [
+"lang-es.js"
+],
+"FUE EL MEJOR DE SU EQUIPO.": [
+"lang-es.js"
+],
+"PASASTEIS UN FIN DE SEMANA GENIAL DE ACAMPADA.": [
+"lang-es.js"
+],
+"CONOCISTEIS JUNTOS UNA CIUDAD NUEVA.": [
+"lang-es.js"
+],
+"OS REÍSTEIS MUCHO RECORDANDO VIEJOS TIEMPOS.": [
+"lang-es.js"
+],
+"TE HABLÓ DE SU VIDA LABORAL.": [
+"lang-es.js"
+],
+"TE PIDIÓ CONSEJO PARA SUS DECISIONES.": [
+"lang-es.js"
+],
+"TE DIJO QUE QUIERE SER COMO TÚ.": [
+"lang-es.js"
+],
+"¡HAS TENIDO UN NIÑO!": [
+"lang-es.js"
+],
+"¡HAS TENIDO UNA NIÑA!": [
+"lang-es.js"
+],
+"VÍNCULO": [
+"lang-es.js",
+"lang-pt.js"
+],
+"HIJOS": [
+"lang-es.js"
+],
+"QUIERE SER FUTBOLISTA ⚽": [
+"lang-es.js"
+],
+"QUIERE SER FUTBOLISTA": [
+"lang-es.js"
+],
 "— ¡NOS HEMOS CLASIFICADO!": [
 "lang-es.js"
 ],
@@ -256434,9 +260679,6 @@
 "lang-es.js"
 ],
 "TIRANDO ATRÁS Y SOLTANDO": [
-"lang-es.js"
-],
-"ESCAPADA DE FIN DE SEMANA": [
 "lang-es.js"
 ],
 "CUANDO SE LANCE": [
@@ -258804,6 +263046,9 @@
 "🤝 Tu excompañero {} es ahora tu ayudante.": [
 "lang-es.js"
 ],
+"🤕 {0} {1} se lesionó en el entrenamiento individual intensivo ({2} semanas).": [
+"lang-es.js"
+],
 "{}, una de las tierras natales de tus padres, te convocó.": [
 "lang-es.js"
 ],
@@ -259152,6 +263397,9 @@
 "Mantén la masa salarial por debajo de {} al final": [
 "lang-es.js"
 ],
+"{0} · «¡Yo también seré futbolista como tú!»": [
+"lang-es.js"
+],
 "El mejor día de mi vida. {}, me alegra muchísimo que estés aquí.": [
 "lang-es.js"
 ],
@@ -259345,6 +263593,9 @@
 "lang-es.js"
 ],
 "🏅 ¡Eres el entrenador del mes de {} {}!": [
+"lang-es.js"
+],
+"¡Bienvenido, {0}! El mejor gol de mi vida.": [
 "lang-es.js"
 ],
 "¡El día de tu vida! Técnica +{}, Regate +{}": [
@@ -259671,6 +263922,12 @@
 "🤝 La directiva aprobó el aumento de {}: {}{}.": [
 "lang-es.js"
 ],
+"🎓 {0} aprendió un nuevo estilo de juego: {1}.": [
+"lang-es.js"
+],
+"No hay nada como pasar tiempo con {0}.": [
+"lang-es.js"
+],
 "Un nuevo capítulo: ¡{}! Qué emoción.": [
 "lang-es.js"
 ],
@@ -259833,6 +264090,9 @@
 "🔄 {} hizo un cambio.": [
 "lang-es.js"
 ],
+"Mi mayor fan: {0}.": [
+"lang-es.js"
+],
 "Marcaste en {} partidos seguidos": [
 "lang-es.js"
 ],
@@ -259897,6 +264157,9 @@
 "lang-es.js"
 ],
 "¿Qué dirás antes del partido contra {}?": [
+"lang-es.js"
+],
+"👶 ¡{0} ha sido padre! El bebé se llama {1}.": [
 "lang-es.js"
 ],
 "+{}, pero no tienes la conciencia tranquila.": [
@@ -260558,6 +264821,9 @@
 "{} Celebraciones Diamond": [
 "lang-es.js"
 ],
+"Un día precioso con {0}.": [
+"lang-es.js"
+],
 "/semana · quedan {} años": [
 "lang-es.js"
 ],
@@ -260732,6 +264998,9 @@
 "lang-es.js"
 ],
 "🎯 {} Máximo asistente ({})": [
+"lang-es.js"
+],
+"🎂 ¡{0} cumplió {1} años!": [
 "lang-es.js"
 ],
 "¡Ganas! {} - {} · +{}": [
@@ -261111,6 +265380,10 @@
 ],
 "💎 {} desafíos abiertos": [
 "lang-es.js"
+],
+"{0} · {1} Vínculo +{2}": [
+"lang-es.js",
+"lang-pt.js"
 ],
 "+{} de moral y fama": [
 "lang-es.js"
@@ -270692,6 +274965,261 @@
 "lang-fr.js"
 ],
 "Ton énergie :": [
+"lang-fr.js"
+],
+"Quand l'adversaire se jette,": [
+"lang-fr.js"
+],
+"emmène le ballon de l'autre côté": [
+"lang-fr.js"
+],
+"Gardien libéro": [
+"lang-fr.js"
+],
+"Sort de sa surface et couvre l'espace derrière la défense.": [
+"lang-fr.js"
+],
+"Gardien sur sa ligne": [
+"lang-fr.js"
+],
+"Reste sur sa ligne et arrête grâce à ses réflexes.": [
+"lang-fr.js"
+],
+"Stoppeur rugueux": [
+"lang-fr.js"
+],
+"Fort dans les airs et rugueux dans les duels.": [
+"lang-fr.js"
+],
+"Défenseur relanceur": [
+"lang-fr.js"
+],
+"Lance le jeu par des passes depuis l'arrière.": [
+"lang-fr.js"
+],
+"Latéral offensif": [
+"lang-fr.js"
+],
+"Monte sans cesse à l'attaque sur son côté.": [
+"lang-fr.js"
+],
+"Récupérateur": [
+"lang-fr.js"
+],
+"Récupère les ballons devant la défense.": [
+"lang-fr.js"
+],
+"Milieu meneur de jeu": [
+"lang-fr.js"
+],
+"Garde le ballon et dicte le tempo.": [
+"lang-fr.js"
+],
+"Milieu box-to-box": [
+"lang-fr.js"
+],
+"Court pour défendre comme pour attaquer.": [
+"lang-fr.js"
+],
+"Renard des surfaces": [
+"lang-fr.js"
+],
+"Toujours bien placé dans la surface.": [
+"lang-fr.js"
+],
+"Pivot": [
+"lang-fr.js"
+],
+"Protège le ballon dos au but et domine dans les airs.": [
+"lang-fr.js"
+],
+"Attaquant rapide": [
+"lang-fr.js"
+],
+"Dangereux par ses appels dans le dos de la défense.": [
+"lang-fr.js"
+],
+"Entraînement normal avec l'équipe.": [
+"lang-fr.js"
+],
+"Individuel intensif": [
+"lang-fr.js"
+],
+"Progression 60 % plus rapide ; la forme baisse un peu chaque semaine et le risque de blessure augmente. 24 ans et moins.": [
+"lang-fr.js"
+],
+"Gestion de la charge": [
+"lang-fr.js"
+],
+"La forme revient plus vite, la progression ralentit. Pour les joueurs expérimentés.": [
+"lang-fr.js"
+],
+"Travail de style": [
+"lang-fr.js"
+],
+"Apprend le style choisi au bout de 8 semaines. La progression ralentit un peu pendant ce temps.": [
+"lang-fr.js"
+],
+"Fais glisser un joueur sur un autre pour les échanger. Touche-le pour ouvrir sa fiche.": [
+"lang-fr.js"
+],
+"Remplaçants": [
+"lang-fr.js"
+],
+"Réservistes": [
+"lang-fr.js"
+],
+"Onze de départ choisi à la main. Si un joueur est indisponible, seul son poste change. « Compo auto » revient au onze le plus fort.": [
+"lang-fr.js"
+],
+"Plan de progression": [
+"lang-fr.js"
+],
+"Câlins et jeux": [
+"lang-fr.js"
+],
+"Promenade en poussette": [
+"lang-fr.js"
+],
+"Aller au parc": [
+"lang-fr.js"
+],
+"Lire une histoire": [
+"lang-fr.js"
+],
+"Jouer au ballon dans le jardin": [
+"lang-fr.js"
+],
+"Jouer au foot ensemble": [
+"lang-fr.js"
+],
+"Aider aux devoirs": [
+"lang-fr.js"
+],
+"L'emmener à ton match": [
+"lang-fr.js"
+],
+"Une longue discussion": [
+"lang-fr.js"
+],
+"Regarder son match": [
+"lang-fr.js"
+],
+"Escapade du week-end": [
+"lang-fr.js"
+],
+"Dîner ensemble": [
+"lang-fr.js"
+],
+"Parler de sa vie": [
+"lang-fr.js"
+],
+"Ses éclats de rire ont rempli toute la maison.": [
+"lang-fr.js"
+],
+"A dit « papa » pour la première fois !": [
+"lang-fr.js"
+],
+"S'est endormi dans tes bras.": [
+"lang-fr.js"
+],
+"Vous avez fait une belle promenade au parc.": [
+"lang-fr.js"
+],
+"S'est beaucoup excité en voyant les pigeons.": [
+"lang-fr.js"
+],
+"A fait du toboggan encore et encore.": [
+"lang-fr.js"
+],
+"A crié « plus haut ! » sur la balançoire.": [
+"lang-fr.js"
+],
+"Tu as inventé la fin de l'histoire, il a adoré.": [
+"lang-fr.js"
+],
+"A réclamé « encore une » avant de s'endormir.": [
+"lang-fr.js"
+],
+"A marqué son tout premier but contre toi !": [
+"lang-fr.js"
+],
+"A essayé de frapper le ballon comme toi.": [
+"lang-fr.js"
+],
+"A marqué un superbe but du pied gauche.": [
+"lang-fr.js"
+],
+"T'a dribblé et en était très fier.": [
+"lang-fr.js"
+],
+"Vous avez fini ensemble les devoirs de maths.": [
+"lang-fr.js"
+],
+"Son exposé a été élu le meilleur de la classe.": [
+"lang-fr.js"
+],
+"A porté ton maillot en tribune et n'a pas arrêté d'encourager.": [
+"lang-fr.js"
+],
+"Après le match, tu l'as emmené au vestiaire, il était aux anges.": [
+"lang-fr.js"
+],
+"Vous avez parlé de l'école et des copains.": [
+"lang-fr.js"
+],
+"T'a raconté ses rêves d'avenir.": [
+"lang-fr.js"
+],
+"A encore mieux joué en te voyant en tribune.": [
+"lang-fr.js"
+],
+"Était le meilleur de son équipe.": [
+"lang-fr.js"
+],
+"Vous avez passé un super week-end en camping.": [
+"lang-fr.js"
+],
+"Vous avez visité ensemble une nouvelle ville.": [
+"lang-fr.js"
+],
+"Vous avez beaucoup ri en évoquant le bon vieux temps.": [
+"lang-fr.js"
+],
+"T'a parlé de sa vie professionnelle.": [
+"lang-fr.js"
+],
+"T'a demandé conseil pour ses décisions.": [
+"lang-fr.js"
+],
+"T'a dit vouloir te ressembler.": [
+"lang-fr.js"
+],
+"👶 Tu as un petit garçon ! Choisis son prénom dans l'onglet Vie.": [
+"lang-fr.js"
+],
+"Tu as un petit garçon !": [
+"lang-fr.js"
+],
+"👶 Tu as une petite fille ! Choisis son prénom dans l'onglet Vie.": [
+"lang-fr.js"
+],
+"Tu as une petite fille !": [
+"lang-fr.js"
+],
+"La maman et le bébé vont très bien. Quel prénom allez-vous lui donner ?": [
+"lang-fr.js"
+],
+"Lien": [
+"lang-fr.js"
+],
+"Enfants": [
+"lang-fr.js"
+],
+"Pas encore d'enfants. Une bonne nouvelle pourrait arriver après votre première année de mariage.": [
+"lang-fr.js"
+],
+"veut devenir footballeur ⚽": [
 "lang-fr.js"
 ],
 "— on est qualifiés !": [
@@ -281298,6 +285826,216 @@
 "TON ÉNERGIE :": [
 "lang-fr.js"
 ],
+"QUAND L'ADVERSAIRE SE JETTE,": [
+"lang-fr.js"
+],
+"EMMÈNE LE BALLON DE L'AUTRE CÔTÉ": [
+"lang-fr.js"
+],
+"GARDIEN LIBÉRO": [
+"lang-fr.js"
+],
+"GARDIEN SUR SA LIGNE": [
+"lang-fr.js"
+],
+"STOPPEUR RUGUEUX": [
+"lang-fr.js"
+],
+"DÉFENSEUR RELANCEUR": [
+"lang-fr.js"
+],
+"LANCE LE JEU PAR DES PASSES DEPUIS L'ARRIÈRE.": [
+"lang-fr.js"
+],
+"LATÉRAL OFFENSIF": [
+"lang-fr.js"
+],
+"MONTE SANS CESSE À L'ATTAQUE SUR SON CÔTÉ.": [
+"lang-fr.js"
+],
+"RÉCUPÉRATEUR": [
+"lang-fr.js"
+],
+"RÉCUPÈRE LES BALLONS DEVANT LA DÉFENSE.": [
+"lang-fr.js"
+],
+"MILIEU MENEUR DE JEU": [
+"lang-fr.js"
+],
+"MILIEU BOX-TO-BOX": [
+"lang-fr.js"
+],
+"COURT POUR DÉFENDRE COMME POUR ATTAQUER.": [
+"lang-fr.js"
+],
+"RENARD DES SURFACES": [
+"lang-fr.js"
+],
+"TOUJOURS BIEN PLACÉ DANS LA SURFACE.": [
+"lang-fr.js"
+],
+"PIVOT": [
+"lang-fr.js"
+],
+"ATTAQUANT RAPIDE": [
+"lang-fr.js"
+],
+"ENTRAÎNEMENT NORMAL AVEC L'ÉQUIPE.": [
+"lang-fr.js"
+],
+"INDIVIDUEL INTENSIF": [
+"lang-fr.js"
+],
+"GESTION DE LA CHARGE": [
+"lang-fr.js"
+],
+"TRAVAIL DE STYLE": [
+"lang-fr.js"
+],
+"REMPLAÇANTS": [
+"lang-fr.js"
+],
+"RÉSERVISTES": [
+"lang-fr.js"
+],
+"PLAN DE PROGRESSION": [
+"lang-fr.js"
+],
+"CÂLINS ET JEUX": [
+"lang-fr.js"
+],
+"PROMENADE EN POUSSETTE": [
+"lang-fr.js"
+],
+"ALLER AU PARC": [
+"lang-fr.js"
+],
+"LIRE UNE HISTOIRE": [
+"lang-fr.js"
+],
+"JOUER AU BALLON DANS LE JARDIN": [
+"lang-fr.js"
+],
+"JOUER AU FOOT ENSEMBLE": [
+"lang-fr.js"
+],
+"AIDER AUX DEVOIRS": [
+"lang-fr.js"
+],
+"L'EMMENER À TON MATCH": [
+"lang-fr.js"
+],
+"UNE LONGUE DISCUSSION": [
+"lang-fr.js"
+],
+"REGARDER SON MATCH": [
+"lang-fr.js"
+],
+"ESCAPADE DU WEEK-END": [
+"lang-fr.js"
+],
+"DÎNER ENSEMBLE": [
+"lang-fr.js"
+],
+"PARLER DE SA VIE": [
+"lang-fr.js"
+],
+"SES ÉCLATS DE RIRE ONT REMPLI TOUTE LA MAISON.": [
+"lang-fr.js"
+],
+"A DIT « PAPA » POUR LA PREMIÈRE FOIS !": [
+"lang-fr.js"
+],
+"S'EST ENDORMI DANS TES BRAS.": [
+"lang-fr.js"
+],
+"VOUS AVEZ FAIT UNE BELLE PROMENADE AU PARC.": [
+"lang-fr.js"
+],
+"S'EST BEAUCOUP EXCITÉ EN VOYANT LES PIGEONS.": [
+"lang-fr.js"
+],
+"A FAIT DU TOBOGGAN ENCORE ET ENCORE.": [
+"lang-fr.js"
+],
+"A CRIÉ « PLUS HAUT ! » SUR LA BALANÇOIRE.": [
+"lang-fr.js"
+],
+"TU AS INVENTÉ LA FIN DE L'HISTOIRE, IL A ADORÉ.": [
+"lang-fr.js"
+],
+"A RÉCLAMÉ « ENCORE UNE » AVANT DE S'ENDORMIR.": [
+"lang-fr.js"
+],
+"A MARQUÉ SON TOUT PREMIER BUT CONTRE TOI !": [
+"lang-fr.js"
+],
+"A ESSAYÉ DE FRAPPER LE BALLON COMME TOI.": [
+"lang-fr.js"
+],
+"A MARQUÉ UN SUPERBE BUT DU PIED GAUCHE.": [
+"lang-fr.js"
+],
+"T'A DRIBBLÉ ET EN ÉTAIT TRÈS FIER.": [
+"lang-fr.js"
+],
+"VOUS AVEZ FINI ENSEMBLE LES DEVOIRS DE MATHS.": [
+"lang-fr.js"
+],
+"SON EXPOSÉ A ÉTÉ ÉLU LE MEILLEUR DE LA CLASSE.": [
+"lang-fr.js"
+],
+"A PORTÉ TON MAILLOT EN TRIBUNE ET N'A PAS ARRÊTÉ D'ENCOURAGER.": [
+"lang-fr.js"
+],
+"VOUS AVEZ PARLÉ DE L'ÉCOLE ET DES COPAINS.": [
+"lang-fr.js"
+],
+"T'A RACONTÉ SES RÊVES D'AVENIR.": [
+"lang-fr.js"
+],
+"A ENCORE MIEUX JOUÉ EN TE VOYANT EN TRIBUNE.": [
+"lang-fr.js"
+],
+"ÉTAIT LE MEILLEUR DE SON ÉQUIPE.": [
+"lang-fr.js"
+],
+"VOUS AVEZ PASSÉ UN SUPER WEEK-END EN CAMPING.": [
+"lang-fr.js"
+],
+"VOUS AVEZ VISITÉ ENSEMBLE UNE NOUVELLE VILLE.": [
+"lang-fr.js"
+],
+"VOUS AVEZ BEAUCOUP RI EN ÉVOQUANT LE BON VIEUX TEMPS.": [
+"lang-fr.js"
+],
+"T'A PARLÉ DE SA VIE PROFESSIONNELLE.": [
+"lang-fr.js"
+],
+"T'A DEMANDÉ CONSEIL POUR SES DÉCISIONS.": [
+"lang-fr.js"
+],
+"T'A DIT VOULOIR TE RESSEMBLER.": [
+"lang-fr.js"
+],
+"TU AS UN PETIT GARÇON !": [
+"lang-fr.js"
+],
+"TU AS UNE PETITE FILLE !": [
+"lang-fr.js"
+],
+"LIEN": [
+"lang-fr.js"
+],
+"ENFANTS": [
+"lang-fr.js"
+],
+"VEUT DEVENIR FOOTBALLEUR ⚽": [
+"lang-fr.js"
+],
+"VEUT DEVENIR FOOTBALLEUR": [
+"lang-fr.js"
+],
 "— ON EST QUALIFIÉS !": [
 "lang-fr.js"
 ],
@@ -283492,9 +288230,6 @@
 "lang-fr.js"
 ],
 "EN TIRANT EN ARRIÈRE PUIS EN RELÂCHANT": [
-"lang-fr.js"
-],
-"ESCAPADE DU WEEK-END": [
 "lang-fr.js"
 ],
 "QUAND IL S'ENGAGE": [
@@ -285816,6 +290551,9 @@
 "🤝 Ton ancien coéquipier {} est désormais ton adjoint.": [
 "lang-fr.js"
 ],
+"🤕 {0} {1} s'est blessé à l'entraînement individuel intensif ({2} semaines).": [
+"lang-fr.js"
+],
 "{}, l'un des pays d'origine de tes parents, t'a convoqué.": [
 "lang-fr.js"
 ],
@@ -286164,6 +290902,9 @@
 "Garde la masse salariale sous {} en fin de saison": [
 "lang-fr.js"
 ],
+"{0} · « Moi aussi, je serai footballeur comme toi ! »": [
+"lang-fr.js"
+],
 "Le plus beau jour de ma vie. {}, je suis si heureux que tu sois là.": [
 "lang-fr.js"
 ],
@@ -286357,6 +291098,9 @@
 "lang-fr.js"
 ],
 "🏅 Tu es l'entraîneur du mois de {} {} !": [
+"lang-fr.js"
+],
+"Bienvenue, {0} ! Le plus beau but de ma vie.": [
 "lang-fr.js"
 ],
 "Le jour de ta vie ! Technique +{}, Dribble +{}": [
@@ -286683,6 +291427,12 @@
 "🤝 La direction a validé la hausse du {} : {}{}.": [
 "lang-fr.js"
 ],
+"🎓 {0} a appris un nouveau style de jeu : {1}.": [
+"lang-fr.js"
+],
+"Rien ne vaut un moment avec {0}.": [
+"lang-fr.js"
+],
 "Un nouveau chapitre : {} ! Tellement excité.": [
 "lang-fr.js"
 ],
@@ -286845,6 +291595,9 @@
 "🔄 {} effectue un changement.": [
 "lang-fr.js"
 ],
+"Mon plus grand fan : {0}.": [
+"lang-fr.js"
+],
 "Tu as marqué lors de {} matchs d'affilée": [
 "lang-fr.js"
 ],
@@ -286909,6 +291662,9 @@
 "lang-fr.js"
 ],
 "Que diras-tu avant le match contre {} ?": [
+"lang-fr.js"
+],
+"👶 {0} est devenu papa ! Le bébé s'appelle {1}.": [
 "lang-fr.js"
 ],
 "+{}, mais ta conscience n'est pas tranquille.": [
@@ -287562,6 +292318,9 @@
 "{} Célébrations Diamond": [
 "lang-fr.js"
 ],
+"Une belle journée avec {0}.": [
+"lang-fr.js"
+],
 "/semaine · encore {} ans": [
 "lang-fr.js"
 ],
@@ -287734,6 +292493,9 @@
 "lang-fr.js"
 ],
 "🎯 {} Meilleur passeur ({})": [
+"lang-fr.js"
+],
+"🎂 {0} a fêté ses {1} ans !": [
 "lang-fr.js"
 ],
 "Tu gagnes ! {} - {} · +{}": [
@@ -288088,6 +292850,9 @@
 "lang-fr.js"
 ],
 "💎 {} défis débloqués": [
+"lang-fr.js"
+],
+"{0} · {1} Lien +{2}": [
 "lang-fr.js"
 ],
 "+{} moral et célébrité": [
@@ -295086,7 +299851,8 @@
 ],
 "Ada": [
 "lang-id.js",
-"life.js"
+"life.js",
+"v24.js"
 ],
 "🚗 SIM": [
 "lang-id.js"
@@ -297401,6 +302167,258 @@
 "lang-id.js"
 ],
 "Energimu:": [
+"lang-id.js"
+],
+"Saat lawan bergerak,": [
+"lang-id.js"
+],
+"Kiper sweeper": [
+"lang-id.js"
+],
+"Keluar dari kotak penalti dan menyapu di belakang pertahanan.": [
+"lang-id.js"
+],
+"Kiper garis": [
+"lang-id.js"
+],
+"Tetap di garis gawang dan menyelamatkan dengan refleks.": [
+"lang-id.js"
+],
+"Bek tengah tangguh": [
+"lang-id.js"
+],
+"Kuat di udara dan keras dalam duel.": [
+"lang-id.js"
+],
+"Bek pengumpan": [
+"lang-id.js"
+],
+"Memulai serangan dengan umpan dari belakang.": [
+"lang-id.js"
+],
+"Bek sayap menyerang": [
+"lang-id.js"
+],
+"Terus maju menyerang dari sayap.": [
+"lang-id.js"
+],
+"Perebut bola": [
+"lang-id.js"
+],
+"Merebut bola di depan lini pertahanan.": [
+"lang-id.js"
+],
+"Gelandang pengatur tempo": [
+"lang-id.js"
+],
+"Menguasai bola dan mengatur tempo permainan.": [
+"lang-id.js"
+],
+"Gelandang box-to-box": [
+"lang-id.js"
+],
+"Berlari membantu bertahan dan menyerang.": [
+"lang-id.js"
+],
+"Pemburu gol": [
+"lang-id.js"
+],
+"Selalu berada di posisi tepat di kotak penalti.": [
+"lang-id.js"
+],
+"Menahan bola membelakangi gawang dan kuat di udara.": [
+"lang-id.js"
+],
+"Penyerang cepat": [
+"lang-id.js"
+],
+"Berbahaya lewat lari ke belakang pertahanan.": [
+"lang-id.js"
+],
+"Standar": [
+"lang-id.js"
+],
+"Latihan normal bersama tim.": [
+"lang-id.js"
+],
+"Latihan individu intensif": [
+"lang-id.js"
+],
+"Perkembangan 60% lebih cepat; kebugaran sedikit turun tiap pekan dan risiko cedera naik. Usia 24 tahun ke bawah.": [
+"lang-id.js"
+],
+"Manajemen beban": [
+"lang-id.js"
+],
+"Kebugaran pulih lebih cepat, perkembangan melambat. Untuk pemain berpengalaman.": [
+"lang-id.js"
+],
+"Latihan gaya bermain": [
+"lang-id.js"
+],
+"Mempelajari gaya pilihanmu setelah 8 pekan. Selama itu perkembangan sedikit melambat.": [
+"lang-id.js"
+],
+"Seret pemain ke pemain lain untuk menukar posisi. Ketuk untuk membuka kartu pemain.": [
+"lang-id.js"
+],
+"Cadangan": [
+"lang-id.js"
+],
+"Pemain non-skuad": [
+"lang-id.js"
+],
+"Skorsing": [
+"lang-id.js"
+],
+"Starting XI disusun manual. Jika ada pemain yang absen, hanya posisinya yang diganti. \\\"Susun otomatis\\\" kembali ke XI terkuat.": [
+"lang-id.js"
+],
+"Rencana pengembangan": [
+"lang-id.js"
+],
+"Gendong dan ajak bermain": [
+"lang-id.js"
+],
+"Jalan-jalan dengan kereta bayi": [
+"lang-id.js"
+],
+"Ajak ke taman": [
+"lang-id.js"
+],
+"Bacakan dongeng": [
+"lang-id.js"
+],
+"Main bola di halaman": [
+"lang-id.js"
+],
+"Main bola bersama": [
+"lang-id.js"
+],
+"Bantu mengerjakan PR": [
+"lang-id.js"
+],
+"Ajak ke pertandinganmu": [
+"lang-id.js"
+],
+"Tonton pertandingannya": [
+"lang-id.js"
+],
+"Liburan akhir pekan": [
+"lang-id.js"
+],
+"Makan bersama": [
+"lang-id.js"
+],
+"Bicarakan hidupnya": [
+"lang-id.js"
+],
+"Tawanya memenuhi seluruh rumah.": [
+"lang-id.js"
+],
+"Untuk pertama kalinya bilang \\\"ayah\\\"!": [
+"lang-id.js"
+],
+"Tertidur di pelukanmu.": [
+"lang-id.js"
+],
+"Kalian berjalan-jalan dengan menyenangkan di taman.": [
+"lang-id.js"
+],
+"Sangat senang melihat burung merpati.": [
+"lang-id.js"
+],
+"Meluncur di perosotan berkali-kali.": [
+"lang-id.js"
+],
+"Berteriak \\\"lebih tinggi!\\\" di ayunan.": [
+"lang-id.js"
+],
+"Kamu mengarang akhir dongengnya, dan dia sangat suka.": [
+"lang-id.js"
+],
+"Sebelum tidur minta \\\"satu lagi\\\".": [
+"lang-id.js"
+],
+"Mencetak gol pertamanya ke gawangmu!": [
+"lang-id.js"
+],
+"Mencoba menendang bola sepertimu.": [
+"lang-id.js"
+],
+"Mencetak gol indah dengan kaki kiri.": [
+"lang-id.js"
+],
+"Melewatimu dengan dribel dan sangat bangga.": [
+"lang-id.js"
+],
+"Kalian menyelesaikan PR matematika bersama.": [
+"lang-id.js"
+],
+"Tugas proyeknya terpilih sebagai yang terbaik di kelas.": [
+"lang-id.js"
+],
+"Memakai jerseymu di tribun dan terus bersorak.": [
+"lang-id.js"
+],
+"Usai laga kamu mengajaknya ke ruang ganti, dia sangat senang.": [
+"lang-id.js"
+],
+"Kalian mengobrol soal sekolah dan teman-temannya.": [
+"lang-id.js"
+],
+"Menceritakan impian masa depannya.": [
+"lang-id.js"
+],
+"Bermain lebih baik setelah melihatmu di tribun.": [
+"lang-id.js"
+],
+"Menjadi pemain terbaik di timnya.": [
+"lang-id.js"
+],
+"Kalian menikmati akhir pekan seru berkemah.": [
+"lang-id.js"
+],
+"Kalian menjelajahi kota baru bersama.": [
+"lang-id.js"
+],
+"Kalian banyak tertawa mengenang masa lalu.": [
+"lang-id.js"
+],
+"Bercerita tentang dunia kerjanya.": [
+"lang-id.js"
+],
+"Meminta saranmu untuk keputusannya.": [
+"lang-id.js"
+],
+"Bilang ingin menjadi sepertimu.": [
+"lang-id.js"
+],
+"👶 Anak laki-lakimu lahir! Pilih namanya di tab Kehidupan.": [
+"lang-id.js"
+],
+"Anak laki-lakimu lahir!": [
+"lang-id.js"
+],
+"👶 Anak perempuanmu lahir! Pilih namanya di tab Kehidupan.": [
+"lang-id.js"
+],
+"Anak perempuanmu lahir!": [
+"lang-id.js"
+],
+"Ibu dan bayi sehat. Nama apa yang akan kalian berikan?": [
+"lang-id.js"
+],
+"Ikatan": [
+"lang-id.js"
+],
+"Anak-anak": [
+"lang-id.js"
+],
+"Belum punya anak. Kabar gembira bisa datang setelah tahun pertama pernikahan.": [
+"lang-id.js"
+],
+"ingin jadi pesepak bola ⚽": [
 "lang-id.js"
 ],
 "— kita lolos!": [
@@ -300146,9 +305164,6 @@
 "lang-id.js"
 ],
 "Barang baru terbuka seiring bertambahnya usia. Ketuk kategori untuk membuka atau menutupnya.": [
-"lang-id.js"
-],
-"Cadangan": [
 "lang-id.js"
 ],
 "Di bangku cadangan": [
@@ -307787,6 +312802,216 @@
 "ENERGIMU:": [
 "lang-id.js"
 ],
+"SAAT LAWAN BERGERAK,": [
+"lang-id.js"
+],
+"TARIK BOLA KE ARAH SEBALIKNYA": [
+"lang-id.js"
+],
+"KIPER SWEEPER": [
+"lang-id.js"
+],
+"KIPER GARIS": [
+"lang-id.js"
+],
+"BEK TENGAH TANGGUH": [
+"lang-id.js"
+],
+"BEK PENGUMPAN": [
+"lang-id.js"
+],
+"MEMULAI SERANGAN DENGAN UMPAN DARI BELAKANG.": [
+"lang-id.js"
+],
+"BEK SAYAP MENYERANG": [
+"lang-id.js"
+],
+"TERUS MAJU MENYERANG DARI SAYAP.": [
+"lang-id.js"
+],
+"PEREBUT BOLA": [
+"lang-id.js"
+],
+"MEREBUT BOLA DI DEPAN LINI PERTAHANAN.": [
+"lang-id.js"
+],
+"GELANDANG PENGATUR TEMPO": [
+"lang-id.js"
+],
+"GELANDANG BOX-TO-BOX": [
+"lang-id.js"
+],
+"BERLARI MEMBANTU BERTAHAN DAN MENYERANG.": [
+"lang-id.js"
+],
+"PEMBURU GOL": [
+"lang-id.js"
+],
+"SELALU BERADA DI POSISI TEPAT DI KOTAK PENALTI.": [
+"lang-id.js"
+],
+"PENYERANG CEPAT": [
+"lang-id.js"
+],
+"STANDAR": [
+"lang-id.js"
+],
+"LATIHAN NORMAL BERSAMA TIM.": [
+"lang-id.js"
+],
+"LATIHAN INDIVIDU INTENSIF": [
+"lang-id.js"
+],
+"MANAJEMEN BEBAN": [
+"lang-id.js"
+],
+"LATIHAN GAYA BERMAIN": [
+"lang-id.js"
+],
+"CADANGAN": [
+"lang-id.js"
+],
+"PEMAIN NON-SKUAD": [
+"lang-id.js"
+],
+"SKORSING": [
+"lang-id.js"
+],
+"RENCANA PENGEMBANGAN": [
+"lang-id.js"
+],
+"GENDONG DAN AJAK BERMAIN": [
+"lang-id.js"
+],
+"JALAN-JALAN DENGAN KERETA BAYI": [
+"lang-id.js"
+],
+"AJAK KE TAMAN": [
+"lang-id.js"
+],
+"BACAKAN DONGENG": [
+"lang-id.js"
+],
+"MAIN BOLA DI HALAMAN": [
+"lang-id.js"
+],
+"MAIN BOLA BERSAMA": [
+"lang-id.js"
+],
+"BANTU MENGERJAKAN PR": [
+"lang-id.js"
+],
+"AJAK KE PERTANDINGANMU": [
+"lang-id.js"
+],
+"TONTON PERTANDINGANNYA": [
+"lang-id.js"
+],
+"LIBURAN AKHIR PEKAN": [
+"lang-id.js"
+],
+"MAKAN BERSAMA": [
+"lang-id.js"
+],
+"BICARAKAN HIDUPNYA": [
+"lang-id.js"
+],
+"TAWANYA MEMENUHI SELURUH RUMAH.": [
+"lang-id.js"
+],
+"UNTUK PERTAMA KALINYA BILANG \\\"AYAH\\\"!": [
+"lang-id.js"
+],
+"TERTIDUR DI PELUKANMU.": [
+"lang-id.js"
+],
+"KALIAN BERJALAN-JALAN DENGAN MENYENANGKAN DI TAMAN.": [
+"lang-id.js"
+],
+"SANGAT SENANG MELIHAT BURUNG MERPATI.": [
+"lang-id.js"
+],
+"MELUNCUR DI PEROSOTAN BERKALI-KALI.": [
+"lang-id.js"
+],
+"BERTERIAK \\\"LEBIH TINGGI!\\\" DI AYUNAN.": [
+"lang-id.js"
+],
+"KAMU MENGARANG AKHIR DONGENGNYA, DAN DIA SANGAT SUKA.": [
+"lang-id.js"
+],
+"SEBELUM TIDUR MINTA \\\"SATU LAGI\\\".": [
+"lang-id.js"
+],
+"MENCETAK GOL PERTAMANYA KE GAWANGMU!": [
+"lang-id.js"
+],
+"MENCOBA MENENDANG BOLA SEPERTIMU.": [
+"lang-id.js"
+],
+"MENCETAK GOL INDAH DENGAN KAKI KIRI.": [
+"lang-id.js"
+],
+"MELEWATIMU DENGAN DRIBEL DAN SANGAT BANGGA.": [
+"lang-id.js"
+],
+"KALIAN MENYELESAIKAN PR MATEMATIKA BERSAMA.": [
+"lang-id.js"
+],
+"TUGAS PROYEKNYA TERPILIH SEBAGAI YANG TERBAIK DI KELAS.": [
+"lang-id.js"
+],
+"MEMAKAI JERSEYMU DI TRIBUN DAN TERUS BERSORAK.": [
+"lang-id.js"
+],
+"KALIAN MENGOBROL SOAL SEKOLAH DAN TEMAN-TEMANNYA.": [
+"lang-id.js"
+],
+"MENCERITAKAN IMPIAN MASA DEPANNYA.": [
+"lang-id.js"
+],
+"BERMAIN LEBIH BAIK SETELAH MELIHATMU DI TRIBUN.": [
+"lang-id.js"
+],
+"MENJADI PEMAIN TERBAIK DI TIMNYA.": [
+"lang-id.js"
+],
+"KALIAN MENIKMATI AKHIR PEKAN SERU BERKEMAH.": [
+"lang-id.js"
+],
+"KALIAN MENJELAJAHI KOTA BARU BERSAMA.": [
+"lang-id.js"
+],
+"KALIAN BANYAK TERTAWA MENGENANG MASA LALU.": [
+"lang-id.js"
+],
+"BERCERITA TENTANG DUNIA KERJANYA.": [
+"lang-id.js"
+],
+"MEMINTA SARANMU UNTUK KEPUTUSANNYA.": [
+"lang-id.js"
+],
+"BILANG INGIN MENJADI SEPERTIMU.": [
+"lang-id.js"
+],
+"ANAK LAKI-LAKIMU LAHIR!": [
+"lang-id.js"
+],
+"ANAK PEREMPUANMU LAHIR!": [
+"lang-id.js"
+],
+"IKATAN": [
+"lang-id.js"
+],
+"ANAK-ANAK": [
+"lang-id.js"
+],
+"INGIN JADI PESEPAK BOLA ⚽": [
+"lang-id.js"
+],
+"INGIN JADI PESEPAK BOLA": [
+"lang-id.js"
+],
 "— KITA LOLOS!": [
 "lang-id.js"
 ],
@@ -309843,9 +315068,6 @@
 "HIDUP": [
 "lang-id.js"
 ],
-"CADANGAN": [
-"lang-id.js"
-],
 "DI BANGKU CADANGAN": [
 "lang-id.js"
 ],
@@ -309958,9 +315180,6 @@
 "lang-id.js"
 ],
 "DENGAN MENARIK LALU MELEPAS": [
-"lang-id.js"
-],
-"LIBURAN AKHIR PEKAN": [
 "lang-id.js"
 ],
 "SAAT DIA CONDONG": [
@@ -312279,6 +317498,9 @@
 "🤝 Mantan rekan setimmu {} kini asistenmu.": [
 "lang-id.js"
 ],
+"🤕 {0} {1} cedera saat latihan individu intensif ({2} pekan).": [
+"lang-id.js"
+],
 "{}, salah satu tanah air orang tuamu, memanggilmu.": [
 "lang-id.js"
 ],
@@ -312627,6 +317849,9 @@
 "Jaga beban gaji di bawah {} di akhir musim": [
 "lang-id.js"
 ],
+"{0} · \\\"Aku juga mau jadi pesepak bola sepertimu!\\\"": [
+"lang-id.js"
+],
 "Hari terbaik dalam hidupku. {}, aku sangat senang kamu di sini.": [
 "lang-id.js"
 ],
@@ -312820,6 +318045,9 @@
 "lang-id.js"
 ],
 "🏅 Kamu Pelatih Bulan Ini untuk {} {}!": [
+"lang-id.js"
+],
+"Selamat datang, {0}! Gol terindah dalam hidupku.": [
 "lang-id.js"
 ],
 "Hari terindah dalam hidupmu! Teknik +{}, Dribel +{}": [
@@ -313146,6 +318374,12 @@
 "🤝 Manajemen menyetujui kenaikan {}: {}{}.": [
 "lang-id.js"
 ],
+"🎓 {0} mempelajari gaya bermain baru: {1}.": [
+"lang-id.js"
+],
+"Tak ada yang mengalahkan waktu bersama {0}.": [
+"lang-id.js"
+],
 "Babak baru: {}! Sangat bersemangat.": [
 "lang-id.js"
 ],
@@ -313308,6 +318542,9 @@
 "🔄 {} melakukan pergantian.": [
 "lang-id.js"
 ],
+"Penggemar terbesarku: {0}.": [
+"lang-id.js"
+],
 "Kamu mencetak gol dalam {} pertandingan beruntun": [
 "lang-id.js"
 ],
@@ -313372,6 +318609,9 @@
 "lang-id.js"
 ],
 "Apa yang akan kamu katakan sebelum laga melawan {}?": [
+"lang-id.js"
+],
+"👶 {0} menjadi ayah! Nama bayinya {1}.": [
 "lang-id.js"
 ],
 "+{} tapi hati nuranimu tidak tenang.": [
@@ -314019,6 +319259,9 @@
 "{} Selebrasi Diamond": [
 "lang-id.js"
 ],
+"Hari yang indah bersama {0}.": [
+"lang-id.js"
+],
 "/minggu · tersisa {} tahun": [
 "lang-id.js"
 ],
@@ -314188,6 +319431,9 @@
 "lang-id.js"
 ],
 "🎯 {} Raja Assist ({})": [
+"lang-id.js"
+],
+"🎂 {0} berulang tahun ke-{1}!": [
 "lang-id.js"
 ],
 "Kamu menang! {} - {} · +{}": [
@@ -314552,6 +319798,9 @@
 "lang-id.js"
 ],
 "💎 {} tantangan terbuka": [
+"lang-id.js"
+],
+"{0} · {1} Ikatan +{2}": [
 "lang-id.js"
 ],
 "+{} moral dan ketenaran": [
@@ -323880,6 +329129,255 @@
 "lang-it.js"
 ],
 "La tua energia:": [
+"lang-it.js"
+],
+"Quando l'avversario si sbilancia,": [
+"lang-it.js"
+],
+"porta la palla dall'altra parte": [
+"lang-it.js"
+],
+"Portiere libero": [
+"lang-it.js"
+],
+"Esce dall'area e copre le spalle della difesa.": [
+"lang-it.js"
+],
+"Portiere di linea": [
+"lang-it.js"
+],
+"Resta tra i pali e para con i riflessi.": [
+"lang-it.js"
+],
+"Stopper roccioso": [
+"lang-it.js"
+],
+"Forte di testa e duro nei contrasti.": [
+"lang-it.js"
+],
+"Difensore regista": [
+"lang-it.js"
+],
+"Avvia la manovra con passaggi dalle retrovie.": [
+"lang-it.js"
+],
+"Terzino offensivo": [
+"lang-it.js"
+],
+"Spinge di continuo sulla fascia.": [
+"lang-it.js"
+],
+"Mediano incontrista": [
+"lang-it.js"
+],
+"Recupera palloni davanti alla difesa.": [
+"lang-it.js"
+],
+"Tiene palla e detta i ritmi del gioco.": [
+"lang-it.js"
+],
+"Corre sia in difesa sia in attacco.": [
+"lang-it.js"
+],
+"Opportunista d'area": [
+"lang-it.js"
+],
+"In area è sempre al posto giusto.": [
+"lang-it.js"
+],
+"Prima punta di peso": [
+"lang-it.js"
+],
+"Fa da sponda spalle alla porta ed è forte di testa.": [
+"lang-it.js"
+],
+"Attaccante veloce": [
+"lang-it.js"
+],
+"Crea pericoli con gli inserimenti alle spalle.": [
+"lang-it.js"
+],
+"Allenamento normale con la squadra.": [
+"lang-it.js"
+],
+"Individuale intensivo": [
+"lang-it.js"
+],
+"Crescita più rapida del 60%; la condizione cala un po' ogni settimana e aumenta il rischio infortuni. Fino a 24 anni.": [
+"lang-it.js"
+],
+"Gestione dei carichi": [
+"lang-it.js"
+],
+"La condizione si recupera prima, la crescita rallenta. Per giocatori esperti.": [
+"lang-it.js"
+],
+"Allenamento di stile": [
+"lang-it.js"
+],
+"Impara lo stile scelto dopo 8 settimane. Nel frattempo la crescita rallenta un po'.": [
+"lang-it.js"
+],
+"Trascina un giocatore su un altro per scambiarli. Toccalo per aprire la scheda.": [
+"lang-it.js"
+],
+"Panchina": [
+"lang-it.js"
+],
+"Riserve": [
+"lang-it.js"
+],
+"Formazione titolare scelta a mano. Se un giocatore non è disponibile, cambia solo il suo posto. «Formazione automatica» torna all'undici più forte.": [
+"lang-it.js"
+],
+"Piano di crescita": [
+"lang-it.js"
+],
+"Coccole e giochi": [
+"lang-it.js"
+],
+"Passeggiata col passeggino": [
+"lang-it.js"
+],
+"Portalo al parco": [
+"lang-it.js"
+],
+"Leggi una favola": [
+"lang-it.js"
+],
+"Gioca a pallone in giardino": [
+"lang-it.js"
+],
+"Giocate a calcio insieme": [
+"lang-it.js"
+],
+"Aiuta con i compiti": [
+"lang-it.js"
+],
+"Portalo alla tua partita": [
+"lang-it.js"
+],
+"Una lunga chiacchierata": [
+"lang-it.js"
+],
+"Guarda la sua partita": [
+"lang-it.js"
+],
+"Gita nel weekend": [
+"lang-it.js"
+],
+"Cena insieme": [
+"lang-it.js"
+],
+"Parla della sua vita": [
+"lang-it.js"
+],
+"Le sue risate hanno riempito tutta la casa.": [
+"lang-it.js"
+],
+"Ha detto «papà» per la prima volta!": [
+"lang-it.js"
+],
+"Si è addormentato in braccio a te.": [
+"lang-it.js"
+],
+"Avete fatto una bella passeggiata al parco.": [
+"lang-it.js"
+],
+"Si è emozionato tantissimo vedendo i piccioni.": [
+"lang-it.js"
+],
+"È sceso dallo scivolo un'infinità di volte.": [
+"lang-it.js"
+],
+"Sull'altalena gridava «più in alto!».": [
+"lang-it.js"
+],
+"Hai inventato il finale della favola e gli è piaciuto tantissimo.": [
+"lang-it.js"
+],
+"Prima di dormire ha chiesto «ancora una».": [
+"lang-it.js"
+],
+"Ti ha segnato il suo primo gol!": [
+"lang-it.js"
+],
+"Ha provato a calciare proprio come te.": [
+"lang-it.js"
+],
+"Ha segnato un gran gol di sinistro.": [
+"lang-it.js"
+],
+"Ti ha dribblato ed era orgogliosissimo.": [
+"lang-it.js"
+],
+"Avete finito insieme i compiti di matematica.": [
+"lang-it.js"
+],
+"Il progetto è stato scelto come il migliore della classe.": [
+"lang-it.js"
+],
+"Indossava la tua maglia in tribuna e non ha smesso di tifare.": [
+"lang-it.js"
+],
+"Dopo la partita l'hai portato negli spogliatoi ed era felicissimo.": [
+"lang-it.js"
+],
+"Avete parlato della scuola e degli amici.": [
+"lang-it.js"
+],
+"Ti ha raccontato i suoi sogni per il futuro.": [
+"lang-it.js"
+],
+"Ha giocato ancora meglio vedendoti in tribuna.": [
+"lang-it.js"
+],
+"È stato il migliore della sua squadra.": [
+"lang-it.js"
+],
+"Avete passato un bel weekend in campeggio.": [
+"lang-it.js"
+],
+"Avete visitato insieme una nuova città.": [
+"lang-it.js"
+],
+"Avete riso tanto ricordando i vecchi tempi.": [
+"lang-it.js"
+],
+"Ti ha parlato del suo lavoro.": [
+"lang-it.js"
+],
+"Ti ha chiesto consiglio per le sue decisioni.": [
+"lang-it.js"
+],
+"Ti ha detto che vuole essere come te.": [
+"lang-it.js"
+],
+"👶 È nato un maschietto! Scegli il suo nome nella scheda Vita.": [
+"lang-it.js"
+],
+"È nato un maschietto!": [
+"lang-it.js"
+],
+"👶 È nata una femminuccia! Scegli il suo nome nella scheda Vita.": [
+"lang-it.js"
+],
+"È nata una femminuccia!": [
+"lang-it.js"
+],
+"Mamma e bebè stanno benissimo. Che nome gli darete?": [
+"lang-it.js"
+],
+"Legame": [
+"lang-it.js"
+],
+"Figli": [
+"lang-it.js"
+],
+"Ancora nessun figlio. Dopo il primo anno di matrimonio potrebbe arrivare una bella notizia.": [
+"lang-it.js"
+],
+"vuole fare il calciatore ⚽": [
 "lang-it.js"
 ],
 "— ci siamo qualificati!": [
@@ -334269,6 +339767,210 @@
 "LA TUA ENERGIA:": [
 "lang-it.js"
 ],
+"QUANDO L'AVVERSARIO SI SBILANCIA,": [
+"lang-it.js"
+],
+"PORTA LA PALLA DALL'ALTRA PARTE": [
+"lang-it.js"
+],
+"PORTIERE LIBERO": [
+"lang-it.js"
+],
+"PORTIERE DI LINEA": [
+"lang-it.js"
+],
+"STOPPER ROCCIOSO": [
+"lang-it.js"
+],
+"DIFENSORE REGISTA": [
+"lang-it.js"
+],
+"AVVIA LA MANOVRA CON PASSAGGI DALLE RETROVIE.": [
+"lang-it.js"
+],
+"TERZINO OFFENSIVO": [
+"lang-it.js"
+],
+"SPINGE DI CONTINUO SULLA FASCIA.": [
+"lang-it.js"
+],
+"MEDIANO INCONTRISTA": [
+"lang-it.js"
+],
+"RECUPERA PALLONI DAVANTI ALLA DIFESA.": [
+"lang-it.js"
+],
+"CORRE SIA IN DIFESA SIA IN ATTACCO.": [
+"lang-it.js"
+],
+"OPPORTUNISTA D'AREA": [
+"lang-it.js"
+],
+"IN AREA È SEMPRE AL POSTO GIUSTO.": [
+"lang-it.js"
+],
+"PRIMA PUNTA DI PESO": [
+"lang-it.js"
+],
+"ATTACCANTE VELOCE": [
+"lang-it.js"
+],
+"ALLENAMENTO NORMALE CON LA SQUADRA.": [
+"lang-it.js"
+],
+"INDIVIDUALE INTENSIVO": [
+"lang-it.js"
+],
+"GESTIONE DEI CARICHI": [
+"lang-it.js"
+],
+"ALLENAMENTO DI STILE": [
+"lang-it.js"
+],
+"PANCHINA": [
+"lang-it.js"
+],
+"RISERVE": [
+"lang-it.js"
+],
+"PIANO DI CRESCITA": [
+"lang-it.js"
+],
+"COCCOLE E GIOCHI": [
+"lang-it.js"
+],
+"PASSEGGIATA COL PASSEGGINO": [
+"lang-it.js"
+],
+"PORTALO AL PARCO": [
+"lang-it.js"
+],
+"LEGGI UNA FAVOLA": [
+"lang-it.js"
+],
+"GIOCA A PALLONE IN GIARDINO": [
+"lang-it.js"
+],
+"GIOCATE A CALCIO INSIEME": [
+"lang-it.js"
+],
+"AIUTA CON I COMPITI": [
+"lang-it.js"
+],
+"PORTALO ALLA TUA PARTITA": [
+"lang-it.js"
+],
+"UNA LUNGA CHIACCHIERATA": [
+"lang-it.js"
+],
+"GUARDA LA SUA PARTITA": [
+"lang-it.js"
+],
+"GITA NEL WEEKEND": [
+"lang-it.js"
+],
+"CENA INSIEME": [
+"lang-it.js"
+],
+"PARLA DELLA SUA VITA": [
+"lang-it.js"
+],
+"LE SUE RISATE HANNO RIEMPITO TUTTA LA CASA.": [
+"lang-it.js"
+],
+"HA DETTO «PAPÀ» PER LA PRIMA VOLTA!": [
+"lang-it.js"
+],
+"SI È ADDORMENTATO IN BRACCIO A TE.": [
+"lang-it.js"
+],
+"AVETE FATTO UNA BELLA PASSEGGIATA AL PARCO.": [
+"lang-it.js"
+],
+"SI È EMOZIONATO TANTISSIMO VEDENDO I PICCIONI.": [
+"lang-it.js"
+],
+"È SCESO DALLO SCIVOLO UN'INFINITÀ DI VOLTE.": [
+"lang-it.js"
+],
+"SULL'ALTALENA GRIDAVA «PIÙ IN ALTO!».": [
+"lang-it.js"
+],
+"HAI INVENTATO IL FINALE DELLA FAVOLA E GLI È PIACIUTO TANTISSIMO.": [
+"lang-it.js"
+],
+"PRIMA DI DORMIRE HA CHIESTO «ANCORA UNA».": [
+"lang-it.js"
+],
+"TI HA SEGNATO IL SUO PRIMO GOL!": [
+"lang-it.js"
+],
+"HA PROVATO A CALCIARE PROPRIO COME TE.": [
+"lang-it.js"
+],
+"HA SEGNATO UN GRAN GOL DI SINISTRO.": [
+"lang-it.js"
+],
+"TI HA DRIBBLATO ED ERA ORGOGLIOSISSIMO.": [
+"lang-it.js"
+],
+"AVETE FINITO INSIEME I COMPITI DI MATEMATICA.": [
+"lang-it.js"
+],
+"IL PROGETTO È STATO SCELTO COME IL MIGLIORE DELLA CLASSE.": [
+"lang-it.js"
+],
+"INDOSSAVA LA TUA MAGLIA IN TRIBUNA E NON HA SMESSO DI TIFARE.": [
+"lang-it.js"
+],
+"AVETE PARLATO DELLA SCUOLA E DEGLI AMICI.": [
+"lang-it.js"
+],
+"TI HA RACCONTATO I SUOI SOGNI PER IL FUTURO.": [
+"lang-it.js"
+],
+"HA GIOCATO ANCORA MEGLIO VEDENDOTI IN TRIBUNA.": [
+"lang-it.js"
+],
+"È STATO IL MIGLIORE DELLA SUA SQUADRA.": [
+"lang-it.js"
+],
+"AVETE PASSATO UN BEL WEEKEND IN CAMPEGGIO.": [
+"lang-it.js"
+],
+"AVETE VISITATO INSIEME UNA NUOVA CITTÀ.": [
+"lang-it.js"
+],
+"AVETE RISO TANTO RICORDANDO I VECCHI TEMPI.": [
+"lang-it.js"
+],
+"TI HA PARLATO DEL SUO LAVORO.": [
+"lang-it.js"
+],
+"TI HA CHIESTO CONSIGLIO PER LE SUE DECISIONI.": [
+"lang-it.js"
+],
+"TI HA DETTO CHE VUOLE ESSERE COME TE.": [
+"lang-it.js"
+],
+"È NATO UN MASCHIETTO!": [
+"lang-it.js"
+],
+"È NATA UNA FEMMINUCCIA!": [
+"lang-it.js"
+],
+"LEGAME": [
+"lang-it.js"
+],
+"FIGLI": [
+"lang-it.js"
+],
+"VUOLE FARE IL CALCIATORE ⚽": [
+"lang-it.js"
+],
+"VUOLE FARE IL CALCIATORE": [
+"lang-it.js"
+],
 "— CI SIAMO QUALIFICATI!": [
 "lang-it.js"
 ],
@@ -338754,6 +344456,9 @@
 "🤝 Il tuo ex compagno {} è ora il tuo vice.": [
 "lang-it.js"
 ],
+"🤕 {0} {1} si è infortunato nell'allenamento individuale intensivo ({2} settimane).": [
+"lang-it.js"
+],
 "{}, uno dei paesi d'origine dei tuoi genitori, ti ha convocato.": [
 "lang-it.js"
 ],
@@ -339102,6 +344807,9 @@
 "Tieni il monte ingaggi sotto {} a fine stagione": [
 "lang-it.js"
 ],
+"{0} · «Anch'io diventerò calciatore come te!»": [
+"lang-it.js"
+],
 "Il giorno più bello della mia vita. {}, sono così felice che tu sia qui.": [
 "lang-it.js"
 ],
@@ -339295,6 +345003,9 @@
 "lang-it.js"
 ],
 "🏅 Sei l'allenatore del mese di {} {}!": [
+"lang-it.js"
+],
+"Benvenuto, {0}! Il gol più bello della mia vita.": [
 "lang-it.js"
 ],
 "Il giorno della tua vita! Tecnica +{}, Dribbling +{}": [
@@ -339621,6 +345332,12 @@
 "🤝 La dirigenza ha approvato l'aumento del {}: {}{}.": [
 "lang-it.js"
 ],
+"🎓 {0} ha imparato un nuovo stile di gioco: {1}.": [
+"lang-it.js"
+],
+"Niente è meglio del tempo con {0}.": [
+"lang-it.js"
+],
 "Un nuovo capitolo: {}! Che emozione.": [
 "lang-it.js"
 ],
@@ -339783,6 +345500,9 @@
 "🔄 {} fa un cambio.": [
 "lang-it.js"
 ],
+"Il mio tifoso numero uno: {0}.": [
+"lang-it.js"
+],
 "Hai segnato in {} partite di fila": [
 "lang-it.js"
 ],
@@ -339847,6 +345567,9 @@
 "lang-it.js"
 ],
 "Cosa dirai prima della partita contro {}?": [
+"lang-it.js"
+],
+"👶 {0} è diventato papà! Il bambino si chiama {1}.": [
 "lang-it.js"
 ],
 "+{}, ma la tua coscienza non è pulita.": [
@@ -340494,6 +346217,9 @@
 "{} Esultanze Diamond": [
 "lang-it.js"
 ],
+"Una bella giornata con {0}.": [
+"lang-it.js"
+],
 "/settimana · ancora {} anni": [
 "lang-it.js"
 ],
@@ -340666,6 +346392,9 @@
 "lang-it.js"
 ],
 "🎯 {} Re degli assist ({})": [
+"lang-it.js"
+],
+"🎂 {0} ha compiuto {1} anni!": [
 "lang-it.js"
 ],
 "Hai vinto! {} - {} · +{}": [
@@ -341029,6 +346758,9 @@
 "lang-it.js"
 ],
 "💎 {} sfide sbloccate": [
+"lang-it.js"
+],
+"{0} · {1} Legame +{2}": [
 "lang-it.js"
 ],
 "+{} morale e fama": [
@@ -342370,6 +348102,18 @@
 "lang-ja.js"
 ],
 "シュート操作：StarFoot": [
+"lang-ja.js"
+],
+"ペナルティエリアを飛び出し、DFラインの裏をカバーする。": [
+"lang-ja.js"
+],
+"ビルドアップ型DF": [
+"lang-ja.js"
+],
+"DFラインの前でボールを奪う。": [
+"lang-ja.js"
+],
+"DFラインの裏への抜け出しで脅威を生む。": [
 "lang-ja.js"
 ],
 "（PK戦）": [
@@ -351143,6 +356887,246 @@
 "lang-pt.js"
 ],
 "Sua energia:": [
+"lang-pt.js"
+],
+"Quando o adversário der o bote,": [
+"lang-pt.js"
+],
+"Goleiro líbero": [
+"lang-pt.js"
+],
+"Sai da área e cobre as costas da defesa.": [
+"lang-pt.js"
+],
+"Goleiro de linha": [
+"lang-pt.js"
+],
+"Fica embaixo das traves e defende com reflexos.": [
+"lang-pt.js"
+],
+"Zagueiro duro": [
+"lang-pt.js"
+],
+"Forte pelo alto e duro nas divididas.": [
+"lang-pt.js"
+],
+"Zagueiro construtor": [
+"lang-pt.js"
+],
+"Inicia as jogadas com passes desde trás.": [
+"lang-pt.js"
+],
+"Apoia o ataque o tempo todo pela lateral.": [
+"lang-pt.js"
+],
+"Volante marcador": [
+"lang-pt.js"
+],
+"Rouba bolas à frente da defesa.": [
+"lang-pt.js"
+],
+"Meia armador": [
+"lang-pt.js"
+],
+"Segura a bola e dita o ritmo do jogo.": [
+"lang-pt.js"
+],
+"Meia box to box": [
+"lang-pt.js"
+],
+"Corre para defender e para atacar.": [
+"lang-pt.js"
+],
+"Artilheiro oportunista": [
+"lang-pt.js"
+],
+"Está sempre no lugar certo dentro da área.": [
+"lang-pt.js"
+],
+"Centroavante de referência": [
+"lang-pt.js"
+],
+"Segura a bola de costas e é forte pelo alto.": [
+"lang-pt.js"
+],
+"Atacante veloz": [
+"lang-pt.js"
+],
+"Cria perigo com infiltrações nas costas da defesa.": [
+"lang-pt.js"
+],
+"Treino normal com o time.": [
+"lang-pt.js"
+],
+"Evolução 60% mais rápida; o condicionamento cai um pouco a cada semana e o risco de lesão aumenta. Até 24 anos.": [
+"lang-pt.js"
+],
+"Gestão de carga": [
+"lang-pt.js"
+],
+"O condicionamento se recupera mais rápido e a evolução desacelera. Para jogadores experientes.": [
+"lang-pt.js"
+],
+"Treino de estilo": [
+"lang-pt.js"
+],
+"Aprende o estilo escolhido após 8 semanas. Nesse período a evolução desacelera um pouco.": [
+"lang-pt.js"
+],
+"Arraste um jogador sobre outro para trocá-los. Toque para abrir a ficha.": [
+"lang-pt.js"
+],
+"Não relacionados": [
+"lang-pt.js"
+],
+"Time titular escalado manualmente. Se um jogador ficar indisponível, só a posição dele muda. \\\"Escalar automático\\\" volta ao time mais forte.": [
+"lang-pt.js"
+],
+"Plano de evolução": [
+"lang-pt.js"
+],
+"Colo e brincadeira": [
+"lang-pt.js"
+],
+"Passeio de carrinho": [
+"lang-pt.js"
+],
+"Levar ao parque": [
+"lang-pt.js"
+],
+"Ler uma história": [
+"lang-pt.js"
+],
+"Jogar bola no quintal": [
+"lang-pt.js"
+],
+"Jogar bola juntos": [
+"lang-pt.js"
+],
+"Ajudar com a lição de casa": [
+"lang-pt.js"
+],
+"Levar ao seu jogo": [
+"lang-pt.js"
+],
+"Uma longa conversa": [
+"lang-pt.js"
+],
+"Assistir ao jogo dele": [
+"lang-pt.js"
+],
+"Viagem de fim de semana": [
+"lang-pt.js"
+],
+"Jantar juntos": [
+"lang-pt.js"
+],
+"Conversar sobre a vida": [
+"lang-pt.js"
+],
+"As risadas encheram a casa toda.": [
+"lang-pt.js"
+],
+"Disse \\\"papai\\\" pela primeira vez!": [
+"lang-pt.js"
+],
+"Adormeceu no seu colo.": [
+"lang-pt.js"
+],
+"Vocês fizeram um passeio gostoso no parque.": [
+"lang-pt.js"
+],
+"Ficou todo animado ao ver os pombos.": [
+"lang-pt.js"
+],
+"Desceu no escorregador várias vezes.": [
+"lang-pt.js"
+],
+"Gritou \\\"mais alto!\\\" no balanço.": [
+"lang-pt.js"
+],
+"Você inventou o final da história e ele adorou.": [
+"lang-pt.js"
+],
+"Pediu \\\"mais uma\\\" antes de dormir.": [
+"lang-pt.js"
+],
+"Fez o primeiro gol da vida em você!": [
+"lang-pt.js"
+],
+"Tentou chutar a bola igualzinho a você.": [
+"lang-pt.js"
+],
+"Fez um golaço de canhota.": [
+"lang-pt.js"
+],
+"Driblou você e ficou todo orgulhoso.": [
+"lang-pt.js"
+],
+"Vocês terminaram juntos a lição de matemática.": [
+"lang-pt.js"
+],
+"O trabalho escolar foi escolhido o melhor da turma.": [
+"lang-pt.js"
+],
+"Vestiu sua camisa na arquibancada e não parou de torcer.": [
+"lang-pt.js"
+],
+"Depois do jogo você levou ele ao vestiário e ele ficou radiante.": [
+"lang-pt.js"
+],
+"Vocês conversaram sobre a escola e os amigos.": [
+"lang-pt.js"
+],
+"Contou os sonhos para o futuro.": [
+"lang-pt.js"
+],
+"Jogou ainda melhor ao ver você na arquibancada.": [
+"lang-pt.js"
+],
+"Foi o melhor do time.": [
+"lang-pt.js"
+],
+"Vocês passaram um ótimo fim de semana acampando.": [
+"lang-pt.js"
+],
+"Vocês conheceram juntos uma cidade nova.": [
+"lang-pt.js"
+],
+"Vocês riram muito lembrando os velhos tempos.": [
+"lang-pt.js"
+],
+"Contou sobre a vida profissional.": [
+"lang-pt.js"
+],
+"Pediu seu conselho sobre as decisões.": [
+"lang-pt.js"
+],
+"Disse que quer ser como você.": [
+"lang-pt.js"
+],
+"👶 Você teve um menino! Escolha o nome dele na aba Vida.": [
+"lang-pt.js"
+],
+"Você teve um menino!": [
+"lang-pt.js"
+],
+"👶 Você teve uma menina! Escolha o nome dela na aba Vida.": [
+"lang-pt.js"
+],
+"Você teve uma menina!": [
+"lang-pt.js"
+],
+"Mãe e bebê estão ótimos. Que nome vocês vão dar?": [
+"lang-pt.js"
+],
+"Filhos": [
+"lang-pt.js"
+],
+"Vocês ainda não têm filhos. Depois do primeiro ano de casamento pode vir uma boa notícia.": [
+"lang-pt.js"
+],
+"quer ser jogador ⚽": [
 "lang-pt.js"
 ],
 "— nos classificamos!": [
@@ -361300,6 +367284,204 @@
 "SUA ENERGIA:": [
 "lang-pt.js"
 ],
+"QUANDO O ADVERSÁRIO DER O BOTE,": [
+"lang-pt.js"
+],
+"PUXE A BOLA PARA O OUTRO LADO": [
+"lang-pt.js"
+],
+"GOLEIRO LÍBERO": [
+"lang-pt.js"
+],
+"GOLEIRO DE LINHA": [
+"lang-pt.js"
+],
+"ZAGUEIRO DURO": [
+"lang-pt.js"
+],
+"ZAGUEIRO CONSTRUTOR": [
+"lang-pt.js"
+],
+"INICIA AS JOGADAS COM PASSES DESDE TRÁS.": [
+"lang-pt.js"
+],
+"APOIA O ATAQUE O TEMPO TODO PELA LATERAL.": [
+"lang-pt.js"
+],
+"VOLANTE MARCADOR": [
+"lang-pt.js"
+],
+"ROUBA BOLAS À FRENTE DA DEFESA.": [
+"lang-pt.js"
+],
+"MEIA ARMADOR": [
+"lang-pt.js"
+],
+"MEIA BOX TO BOX": [
+"lang-pt.js"
+],
+"CORRE PARA DEFENDER E PARA ATACAR.": [
+"lang-pt.js"
+],
+"ARTILHEIRO OPORTUNISTA": [
+"lang-pt.js"
+],
+"ESTÁ SEMPRE NO LUGAR CERTO DENTRO DA ÁREA.": [
+"lang-pt.js"
+],
+"CENTROAVANTE DE REFERÊNCIA": [
+"lang-pt.js"
+],
+"ATACANTE VELOZ": [
+"lang-pt.js"
+],
+"TREINO NORMAL COM O TIME.": [
+"lang-pt.js"
+],
+"GESTÃO DE CARGA": [
+"lang-pt.js"
+],
+"TREINO DE ESTILO": [
+"lang-pt.js"
+],
+"NÃO RELACIONADOS": [
+"lang-pt.js"
+],
+"PLANO DE EVOLUÇÃO": [
+"lang-pt.js"
+],
+"COLO E BRINCADEIRA": [
+"lang-pt.js"
+],
+"PASSEIO DE CARRINHO": [
+"lang-pt.js"
+],
+"LEVAR AO PARQUE": [
+"lang-pt.js"
+],
+"LER UMA HISTÓRIA": [
+"lang-pt.js"
+],
+"JOGAR BOLA NO QUINTAL": [
+"lang-pt.js"
+],
+"JOGAR BOLA JUNTOS": [
+"lang-pt.js"
+],
+"AJUDAR COM A LIÇÃO DE CASA": [
+"lang-pt.js"
+],
+"LEVAR AO SEU JOGO": [
+"lang-pt.js"
+],
+"UMA LONGA CONVERSA": [
+"lang-pt.js"
+],
+"ASSISTIR AO JOGO DELE": [
+"lang-pt.js"
+],
+"VIAGEM DE FIM DE SEMANA": [
+"lang-pt.js"
+],
+"JANTAR JUNTOS": [
+"lang-pt.js"
+],
+"CONVERSAR SOBRE A VIDA": [
+"lang-pt.js"
+],
+"AS RISADAS ENCHERAM A CASA TODA.": [
+"lang-pt.js"
+],
+"DISSE \\\"PAPAI\\\" PELA PRIMEIRA VEZ!": [
+"lang-pt.js"
+],
+"ADORMECEU NO SEU COLO.": [
+"lang-pt.js"
+],
+"VOCÊS FIZERAM UM PASSEIO GOSTOSO NO PARQUE.": [
+"lang-pt.js"
+],
+"FICOU TODO ANIMADO AO VER OS POMBOS.": [
+"lang-pt.js"
+],
+"DESCEU NO ESCORREGADOR VÁRIAS VEZES.": [
+"lang-pt.js"
+],
+"GRITOU \\\"MAIS ALTO!\\\" NO BALANÇO.": [
+"lang-pt.js"
+],
+"VOCÊ INVENTOU O FINAL DA HISTÓRIA E ELE ADOROU.": [
+"lang-pt.js"
+],
+"PEDIU \\\"MAIS UMA\\\" ANTES DE DORMIR.": [
+"lang-pt.js"
+],
+"FEZ O PRIMEIRO GOL DA VIDA EM VOCÊ!": [
+"lang-pt.js"
+],
+"TENTOU CHUTAR A BOLA IGUALZINHO A VOCÊ.": [
+"lang-pt.js"
+],
+"FEZ UM GOLAÇO DE CANHOTA.": [
+"lang-pt.js"
+],
+"DRIBLOU VOCÊ E FICOU TODO ORGULHOSO.": [
+"lang-pt.js"
+],
+"VOCÊS TERMINARAM JUNTOS A LIÇÃO DE MATEMÁTICA.": [
+"lang-pt.js"
+],
+"O TRABALHO ESCOLAR FOI ESCOLHIDO O MELHOR DA TURMA.": [
+"lang-pt.js"
+],
+"VESTIU SUA CAMISA NA ARQUIBANCADA E NÃO PAROU DE TORCER.": [
+"lang-pt.js"
+],
+"VOCÊS CONVERSARAM SOBRE A ESCOLA E OS AMIGOS.": [
+"lang-pt.js"
+],
+"CONTOU OS SONHOS PARA O FUTURO.": [
+"lang-pt.js"
+],
+"JOGOU AINDA MELHOR AO VER VOCÊ NA ARQUIBANCADA.": [
+"lang-pt.js"
+],
+"FOI O MELHOR DO TIME.": [
+"lang-pt.js"
+],
+"VOCÊS PASSARAM UM ÓTIMO FIM DE SEMANA ACAMPANDO.": [
+"lang-pt.js"
+],
+"VOCÊS CONHECERAM JUNTOS UMA CIDADE NOVA.": [
+"lang-pt.js"
+],
+"VOCÊS RIRAM MUITO LEMBRANDO OS VELHOS TEMPOS.": [
+"lang-pt.js"
+],
+"CONTOU SOBRE A VIDA PROFISSIONAL.": [
+"lang-pt.js"
+],
+"PEDIU SEU CONSELHO SOBRE AS DECISÕES.": [
+"lang-pt.js"
+],
+"DISSE QUE QUER SER COMO VOCÊ.": [
+"lang-pt.js"
+],
+"VOCÊ TEVE UM MENINO!": [
+"lang-pt.js"
+],
+"VOCÊ TEVE UMA MENINA!": [
+"lang-pt.js"
+],
+"FILHOS": [
+"lang-pt.js"
+],
+"QUER SER JOGADOR ⚽": [
+"lang-pt.js"
+],
+"QUER SER JOGADOR": [
+"lang-pt.js"
+],
 "— NOS CLASSIFICAMOS!": [
 "lang-pt.js"
 ],
@@ -365683,6 +371865,9 @@
 "🤝 Seu ex-companheiro {} agora é seu auxiliar.": [
 "lang-pt.js"
 ],
+"🤕 {0} {1} se lesionou no treino individual intensivo ({2} semanas).": [
+"lang-pt.js"
+],
 "{}, uma das terras natais dos seus pais, te convocou.": [
 "lang-pt.js"
 ],
@@ -366031,6 +372216,9 @@
 "Mantenha a folha abaixo de {} no fim da temporada": [
 "lang-pt.js"
 ],
+"{0} · \\\"Eu também vou ser jogador igual a você!\\\"": [
+"lang-pt.js"
+],
 "O melhor dia da minha vida. {}, que bom que você está aqui.": [
 "lang-pt.js"
 ],
@@ -366224,6 +372412,9 @@
 "lang-pt.js"
 ],
 "🏅 Você é o técnico do mês de {} {}!": [
+"lang-pt.js"
+],
+"Bem-vindo, {0}! O gol mais bonito da minha vida.": [
 "lang-pt.js"
 ],
 "O dia da sua vida! Técnica +{}, Drible +{}": [
@@ -366550,6 +372741,12 @@
 "🤝 A diretoria aprovou o aumento do {}: {}{}.": [
 "lang-pt.js"
 ],
+"🎓 {0} aprendeu um novo estilo de jogo: {1}.": [
+"lang-pt.js"
+],
+"Nada como passar tempo com {0}.": [
+"lang-pt.js"
+],
 "Um novo capítulo: {}! Que ansiedade boa.": [
 "lang-pt.js"
 ],
@@ -366712,6 +372909,9 @@
 "🔄 {} fez uma substituição.": [
 "lang-pt.js"
 ],
+"Meu maior fã: {0}.": [
+"lang-pt.js"
+],
 "Você marcou em {} jogos seguidos": [
 "lang-pt.js"
 ],
@@ -366776,6 +372976,9 @@
 "lang-pt.js"
 ],
 "O que vai dizer antes do jogo contra {}?": [
+"lang-pt.js"
+],
+"👶 {0} virou pai! O bebê se chama {1}.": [
 "lang-pt.js"
 ],
 "+{}, mas sua consciência não está tranquila.": [
@@ -367405,6 +373608,9 @@
 "{} Comemorações Diamond": [
 "lang-pt.js"
 ],
+"Um dia lindo com {0}.": [
+"lang-pt.js"
+],
 "/semana · faltam {} anos": [
 "lang-pt.js"
 ],
@@ -367574,6 +373780,9 @@
 "lang-pt.js"
 ],
 "🎯 {} Líder de assistências ({})": [
+"lang-pt.js"
+],
+"🎂 {0} fez {1} anos!": [
 "lang-pt.js"
 ],
 "Você ganhou! {} - {} · +{}": [
@@ -369541,13 +375750,16 @@
 "namefix.js"
 ],
 "Elif": [
-"life.js"
+"life.js",
+"v24.js"
 ],
 "Zeynep": [
-"life.js"
+"life.js",
+"v24.js"
 ],
 "Defne": [
-"life.js"
+"life.js",
+"v24.js"
 ],
 "Ece": [
 "life.js"
@@ -369562,16 +375774,19 @@
 "life.js"
 ],
 "Sofia": [
-"life.js"
+"life.js",
+"v24.js"
 ],
 "Camila": [
 "life.js"
 ],
 "Emma": [
-"life.js"
+"life.js",
+"v24.js"
 ],
 "Mia": [
-"life.js"
+"life.js",
+"v24.js"
 ],
 "Chloe": [
 "life.js"
@@ -370041,12 +376256,6 @@
 "minigame.js"
 ],
 "Enter": [
-"minigame.js"
-],
-"Rakip hamle yapınca": [
-"minigame.js"
-],
-"topu ters tarafa çek": [
 "minigame.js"
 ],
 "ArrowLeft": [
@@ -384899,6 +391108,18 @@
 "saves/{}.txt": [
 "store.js"
 ],
+"saves/d_{}_{}.txt": [
+"store.js"
+],
+"saves/kv_{}.json": [
+"store.js"
+],
+"saves/kv_a.json": [
+"store.js"
+],
+"saves/kv_b.json": [
+"store.js"
+],
 "{} Eğitime başla": [
 "tutorial.js"
 ],
@@ -384995,6 +391216,63 @@
 ],
 "appUrlOpen": [
 "util.js"
+],
+"{} Oyuncuyu sürükleyip başka bir oyuncunun üstüne bırak: yer değiştirirler. Yedekleri sürüklemek için kısa basılı tut. Dokunursan bilgi kartı açılır.": [
+"v24.js"
+],
+"İlk 11 elle dizildi. Oynayamayan oyuncu olursa yalnız onun yerine değişiklik yapılır. \"Otomatik diz\" en güçlü 11\\'e döner.": [
+"v24.js"
+],
+"position:fixed;left:0;top:0;pointer-events:none;z-index:9999;width:{}px;margin:0;transform:translate(-50%,-50%)": [
+"v24.js"
+],
+"Leo": [
+"v24.js"
+],
+"Elias": [
+"v24.js"
+],
+"Aras": [
+"v24.js"
+],
+"Mila": [
+"v24.js"
+],
+"Lina": [
+"v24.js"
+],
+"Ela": [
+"v24.js"
+],
+"Nehir": [
+"v24.js"
+],
+"Lea": [
+"v24.js"
+],
+"Duru": [
+"v24.js"
+],
+"İlk kez \"baba\" dedi!": [
+"v24.js"
+],
+"Salıncakta \"daha yüksek!\" diye bağırdı.": [
+"v24.js"
+],
+"Uyumadan önce \"bir tane daha\" dedi.": [
+"v24.js"
+],
+"{} · \"Ben de senin gibi futbolcu olacağım!\"": [
+"v24.js"
+],
+"· futbolcu olmak istiyor ⚽": [
+"v24.js"
+],
+"{} yaş{}": [
+"v24.js"
+],
+"{} Çocuklar": [
+"v24.js"
 ],
 "AM": [
 "value.js",

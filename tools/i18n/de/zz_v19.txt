@@ -1562,3 +1562,101 @@
 8427|Deine Energie:
 8428|Wenn der Gegner zur Seite zieht,
 8429|zieh den Ball zur anderen Seite
+8430|Mitspielender Torwart
+8431|Verlässt den Strafraum und räumt hinter der Abwehr ab.
+8432|Linienkeeper
+8433|Bleibt auf der Linie und pariert mit seinen Reflexen.
+8434|Kompromissloser Innenverteidiger
+8435|Kopfballstark und hart im Zweikampf.
+8436|Spieleröffnender Verteidiger
+8437|Leitet Angriffe mit Pässen von hinten ein.
+8438|Offensiver Außenverteidiger
+8439|Schaltet sich über die Flügel ständig in den Angriff ein.
+8440|Balleroberer
+8441|Erobert vor der Abwehr die Bälle.
+8442|Ballsicherer Spielmacher
+8443|Hält den Ball und bestimmt das Tempo.
+8444|Box-to-Box-Spieler
+8445|Arbeitet nach hinten und schaltet sich vorne ein.
+8446|Abstauber
+8447|Steht im Strafraum immer richtig.
+8448|Wandspieler
+8449|Behauptet den Ball mit dem Rücken zum Tor und ist kopfballstark.
+8450|Schneller Stürmer
+8451|Wird mit Läufen hinter die Abwehr gefährlich.
+8452|Standard
+8453|Normales Training mit der Mannschaft.
+8454|Intensives Einzeltraining
+8455|Entwicklung 60 % schneller; die Fitness sinkt jede Woche etwas, das Verletzungsrisiko steigt. Bis 24 Jahre.
+8458|Belastungssteuerung
+8459|Die Fitness erholt sich schneller, die Entwicklung wird langsamer. Für erfahrene Spieler.
+8462|Stiltraining
+8463|Lernt nach 8 Wochen den gewählten Spielstil. In dieser Zeit verlangsamt sich die Entwicklung etwas.
+8536|🤕 {0} {1} hat sich im intensiven Einzeltraining verletzt ({2} Wochen).
+8540|🎓 {0} hat einen neuen Spielstil gelernt: {1}.
+8466|Zieh einen Spieler auf einen anderen, um sie zu tauschen. Tippen öffnet die Spielerkarte.
+8469|Ersatzbank
+8470|Reservisten
+8471|Gesperrt
+8472|Startelf manuell gesetzt. Fällt ein Spieler aus, wird nur seine Position geändert. „Automatisch aufstellen“ kehrt zur stärksten Elf zurück.
+8476|Entwicklungsplan
+8477|Kuscheln und spielen
+8478|Spaziergang mit dem Kinderwagen
+8479|In den Park gehen
+8480|Geschichte vorlesen
+8481|Im Garten kicken
+8482|Zusammen kicken
+8483|Bei den Hausaufgaben helfen
+8484|Mit zu deinem Spiel nehmen
+8485|Ein langes Gespräch
+8486|Sein Spiel anschauen
+8487|Wochenendausflug
+8488|Gemeinsames Essen
+8489|Über sein Leben reden
+8490|Das Lachen erfüllte das ganze Haus.
+8491|Hat zum ersten Mal „Papa“ gesagt!
+8492|Ist in deinen Armen eingeschlafen.
+8493|Ihr hattet einen schönen Spaziergang im Park.
+8494|Hat sich beim Anblick der Tauben riesig gefreut.
+8495|Ist immer wieder die Rutsche hinuntergerutscht.
+8496|Rief auf der Schaukel „Höher!“.
+8497|Du hast dir das Ende der Geschichte ausgedacht – es hat ihm sehr gefallen.
+8498|Wollte vor dem Einschlafen „noch eine“ hören.
+8499|Hat sein erstes Tor gegen dich geschossen!
+8500|Hat versucht, den Ball genau wie du zu schießen.
+8501|Hat mit links ein tolles Tor geschossen.
+8502|Hat dich ausgedribbelt und war mächtig stolz.
+8503|Ihr habt die Mathehausaufgaben zusammen geschafft.
+8504|Das Schulprojekt wurde zum besten der Klasse gewählt.
+8505|Trug auf der Tribüne dein Trikot und hat ununterbrochen angefeuert.
+8506|Nach dem Spiel hast du ihn mit in die Kabine genommen – er war überglücklich.
+8507|Ihr habt über die Schule und Freunde geredet.
+8508|Hat dir von seinen Zukunftsträumen erzählt.
+8509|Hat noch besser gespielt, als er dich auf der Tribüne sah.
+8510|War der Beste seiner Mannschaft.
+8511|Ihr hattet ein schönes Wochenende beim Camping.
+8512|Ihr habt zusammen eine neue Stadt erkundet.
+8513|Ihr habt über alte Zeiten geredet und viel gelacht.
+8514|Hat dir von seinem Berufsleben erzählt.
+8515|Hat dich bei seinen Entscheidungen um Rat gefragt.
+8516|Sagte, er wolle so werden wie du.
+8517|👶 Du hast einen Sohn bekommen! Wähle im Tab „Leben“ seinen Namen.
+8522|👶 Du hast eine Tochter bekommen! Wähle im Tab „Leben“ ihren Namen.
+8526|Mutter und Kind geht es prima. Wie soll das Baby heißen?
+8547|🎂 {0} ist {1} geworden!
+8544|👶 {0} ist Vater geworden! Das Baby heißt {1}.
+8539|Willkommen, {0}! Das schönste Tor meines Lebens.
+8546|Ein schöner Tag mit {0}.
+8541|Nichts geht über Zeit mit {0}.
+8543|Mein größter Fan: {0}.
+8549|{0} · {1} Bindung +{2}
+8538|{0} · „Ich werde auch Fußballer, genau wie du!“
+8529|Bindung
+8530|Kinder
+8531|Noch keine Kinder. Nach dem ersten Ehejahr könnte es gute Neuigkeiten geben.
+8534|will Fußballer werden ⚽
+8535|will Fußballer werden
+
+8520|Du hast einen Sohn bekommen!
+8525|Du hast eine Tochter bekommen!
+8550|Zieh einen Spieler auf einen anderen, um sie zu tauschen. Halte einen Ersatzspieler kurz gedrückt, um ihn zu ziehen. Tippen öffnet die Spielerkarte.
