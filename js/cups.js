@@ -495,16 +495,21 @@ const Cups = {
       Social.post('daily', `${t.name} için milli takım kampındayım. Ay-yıldızlı forma için her şeyimi vereceğim!`, 1.6, Social.natOpts());
       await Cups.ask(`<div class="ev-tag">Milli turnuva</div><h2>${t.name}</h2><p><b>${nat.name}</b> kadrosuna çağrıldın! Turnuvada ${t.alive.length} takım var; eleme usulüyle oynanacak.</p>`, 'Turnuvaya Başla');
     }
+    let played = 0;
     while (t.alive.length > 1) {
       const myIn = t.called && t.alive.includes(nat.code);
       if (myIn) {
+        // turnuva maçları arasında birkaç gün var: kamp ve maç arası dinlenme enerjiyi toparlar
+        if (played === 0) p.energy = Math.max(p.energy, 85);
+        else Player.addEnergy(p, 35);
+        played++;
         const i = t.alive.indexOf(nat.code);
         const j = i % 2 === 0 ? i + 1 : i - 1;
         const h = t.alive[Math.min(i, j)], a = t.alive[Math.max(i, j)];
         const oppCode = h === nat.code ? a : h;
         const opp = Game.nat(oppCode);
         const stageName = STAGE_NAMES[t.alive.length];
-        await Cups.ask(`<div class="ev-tag">${t.name}</div><h2>${stageName}</h2><p><b>${nat.name}</b> vs <b>${opp.name}</b> · Rakibin yıldızları: ${U.esc(Game.natStars(oppCode).slice(0, 2).join(', ') || '—')}</p>`, 'Maça Çık');
+        await Cups.ask(`<div class="ev-tag">${t.name}</div><h2>${stageName}</h2><p><b>${nat.name}</b> vs <b>${opp.name}</b> · Rakibin yıldızları: ${U.esc(Game.natStars(oppCode).slice(0, 2).join(', ') || '—')}</p><p class="muted">${played > 1 ? 'Maç arası dinlendin. ' : ''}Enerjin: <b>${Math.round(p.energy)}</b></p>`, 'Maça Çık');
         const ctx = { home: Cups.natTeam(h), away: Cups.natTeam(a), side: h === nat.code ? 'home' : 'away', compName: `${t.name} · ${stageName}`, levelBase: Game.levelBase(true) + 0.03, lg: t.type, theme: t.type };
         ctx.role = p.injuryWeeks > 0 ? 'out' : Game.roleFor(Player.overall(p, true), nat.rating, false);
         if (ctx.role === 'out' && p.injuryWeeks === 0) ctx.role = 'bench';

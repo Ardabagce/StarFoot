@@ -1558,3 +1558,7 @@
 8422|Leistung: Leicht
 8423|Leistung: Hoch
 8424|Leistung: Automatisch
+8425|Du hast dich zwischen den Spielen erholt. Deine Energie:
+8427|Deine Energie:
+8428|Wenn der Gegner zur Seite zieht,
+8429|zieh den Ball zur anderen Seite

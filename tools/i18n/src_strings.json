@@ -15531,7 +15531,22 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Maç arası dinlendin.": [
+"cups.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "· Rakibin yıldızları: {}": [
+"cups.js"
+],
+"{}Enerjin:": [
 "cups.js"
 ],
 "Maça Çık": [
@@ -44854,19 +44869,64 @@
 "lang-pt.js"
 ],
 "Hafif: daha düşük çözünürlük ve az efekt. Eski telefonlarda akıcı oyun.": [
-"game.js"
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Yüksek: tam çözünürlük ve tüm efektler.": [
-"game.js"
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Otomatik: telefonun için hafif mod açık.": [
-"game.js"
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Otomatik: telefon yavaşsa grafikler kendiliğinden hafifler.": [
-"game.js"
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Performans": [
-"game.js"
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Otomatik": [
 "game.js",
@@ -44882,7 +44942,16 @@
 "match.js"
 ],
 "Yüksek": [
-"game.js"
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Editör": [
 "game.js",
@@ -45430,13 +45499,40 @@
 "lang-pt.js"
 ],
 "Performans: Hafif": [
-"game.js"
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Performans: Yüksek": [
-"game.js"
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Performans: Otomatik": [
-"game.js"
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Vuruş tarzı: Dokunuş": [
 "game.js",
@@ -86529,6 +86625,83 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Hafif: daha düşük çözünürlük ve az efekt.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Light: lower resolution and fewer effects.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Eski telefonlarda akıcı oyun.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Smooth play on older phones.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Maç arası dinlendin. Enerjin:": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"You rested between matches.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Enerjin:": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "(Asist)": [
 "lang-ar.js",
 "lang-de.js",
@@ -89450,8 +89623,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"minigame.js"
+"lang-pt.js"
 ],
 "Rakip forvet topla geliyor. Halka yeşile girince dokun; sarı bölge faul demek.": [
 "lang-ar.js",
@@ -90419,8 +90591,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"minigame.js"
+"lang-pt.js"
 ],
 "kendi maçın": [
 "lang-ar.js",
@@ -90572,8 +90743,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"minigame.js"
+"lang-pt.js"
 ],
 "yazılımcı": [
 "lang-ar.js",
@@ -136995,6 +137165,149 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"PERFORMANS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YÜKSEK": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ESKİ TELEFONLARDA AKICI OYUN.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SMOOTH PLAY ON OLDER PHONES.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YÜKSEK: TAM ÇÖZÜNÜRLÜK VE TÜM EFEKTLER.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"OTOMATİK: TELEFONUN İÇİN HAFİF MOD AÇIK.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"PERFORMANS: HAFİF": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"PERFORMANS: YÜKSEK": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"PERFORMANS: OTOMATİK": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MAÇ ARASI DİNLENDİN. ENERJİN:": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MAÇ ARASI DİNLENDİN.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YOU RESTED BETWEEN MATCHES.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ENERJİN:": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -179250,7 +179563,7 @@
 "Wenig": [
 "lang-de.js"
 ],
-"Viel": [
+"Hoch": [
 "lang-de.js"
 ],
 "Du sparst Energie für das nächste Spiel, bekommst aber weniger Chancen.": [
@@ -186886,6 +187199,36 @@
 "Der Store ist nicht erreichbar. Prüfe deine Internetverbindung und versuche es erneut.": [
 "lang-de.js"
 ],
+"Leistung": [
+"lang-de.js"
+],
+"Leicht: geringere Auflösung und weniger Effekte. Flüssiges Spiel auf älteren Handys.": [
+"lang-de.js"
+],
+"Hoch: volle Auflösung und alle Effekte.": [
+"lang-de.js"
+],
+"Automatisch: Leichter Modus ist für dein Handy aktiv.": [
+"lang-de.js"
+],
+"Automatisch: Ist dein Handy langsam, wird die Grafik automatisch leichter.": [
+"lang-de.js"
+],
+"Leistung: Leicht": [
+"lang-de.js"
+],
+"Leistung: Hoch": [
+"lang-de.js"
+],
+"Leistung: Automatisch": [
+"lang-de.js"
+],
+"Du hast dich zwischen den Spielen erholt. Deine Energie:": [
+"lang-de.js"
+],
+"Deine Energie:": [
+"lang-de.js"
+],
 "– wir haben uns qualifiziert!": [
 "lang-de.js"
 ],
@@ -190103,9 +190446,6 @@
 "Reichtum steht dir": [
 "lang-de.js"
 ],
-"Hoch": [
-"lang-de.js"
-],
 "Schwer": [
 "lang-de.js"
 ],
@@ -193124,7 +193464,7 @@
 "WENIG": [
 "lang-de.js"
 ],
-"VIEL": [
+"HOCH": [
 "lang-de.js"
 ],
 "NORMALER ENERGIEVERBRAUCH UND NORMALE ANZAHL AN CHANCEN.": [
@@ -198462,6 +198802,30 @@
 "FEHLERBEHEBUNGEN": [
 "lang-de.js"
 ],
+"LEISTUNG": [
+"lang-de.js"
+],
+"HOCH: VOLLE AUFLÖSUNG UND ALLE EFFEKTE.": [
+"lang-de.js"
+],
+"AUTOMATISCH: LEICHTER MODUS IST FÜR DEIN HANDY AKTIV.": [
+"lang-de.js"
+],
+"LEISTUNG: LEICHT": [
+"lang-de.js"
+],
+"LEISTUNG: HOCH": [
+"lang-de.js"
+],
+"LEISTUNG: AUTOMATISCH": [
+"lang-de.js"
+],
+"DU HAST DICH ZWISCHEN DEN SPIELEN ERHOLT. DEINE ENERGIE:": [
+"lang-de.js"
+],
+"DEINE ENERGIE:": [
+"lang-de.js"
+],
 "– WIR HABEN UNS QUALIFIZIERT!": [
 "lang-de.js"
 ],
@@ -200773,9 +201137,6 @@
 "lang-de.js"
 ],
 "REICHTUM STEHT DIR": [
-"lang-de.js"
-],
-"HOCH": [
 "lang-de.js"
 ],
 "SCHWER": [
@@ -215159,6 +215520,36 @@
 "Could not reach the store. Check your internet connection and try again.": [
 "lang-en.js"
 ],
+"Performance": [
+"lang-en.js"
+],
+"Light: lower resolution and fewer effects. Smooth play on older phones.": [
+"lang-en.js"
+],
+"High: full resolution and all effects.": [
+"lang-en.js"
+],
+"Auto: light mode is on for your phone.": [
+"lang-en.js"
+],
+"Auto: graphics get lighter automatically if your phone is slow.": [
+"lang-en.js"
+],
+"Performance: Light": [
+"lang-en.js"
+],
+"Performance: High": [
+"lang-en.js"
+],
+"Performance: Auto": [
+"lang-en.js"
+],
+"You rested between matches. Your energy:": [
+"lang-en.js"
+],
+"Your energy:": [
+"lang-en.js"
+],
 "— we qualified!": [
 "lang-en.js"
 ],
@@ -226031,6 +226422,30 @@
 "FIXES": [
 "lang-en.js"
 ],
+"PERFORMANCE": [
+"lang-en.js"
+],
+"HIGH: FULL RESOLUTION AND ALL EFFECTS.": [
+"lang-en.js"
+],
+"AUTO: LIGHT MODE IS ON FOR YOUR PHONE.": [
+"lang-en.js"
+],
+"PERFORMANCE: LIGHT": [
+"lang-en.js"
+],
+"PERFORMANCE: HIGH": [
+"lang-en.js"
+],
+"PERFORMANCE: AUTO": [
+"lang-en.js"
+],
+"YOU RESTED BETWEEN MATCHES. YOUR ENERGY:": [
+"lang-en.js"
+],
+"YOUR ENERGY:": [
+"lang-en.js"
+],
 "— WE QUALIFIED!": [
 "lang-en.js"
 ],
@@ -235301,8 +235716,10 @@
 "lang-es.js",
 "lang-it.js"
 ],
-"Mucho": [
-"lang-es.js"
+"Alto": [
+"lang-es.js",
+"lang-it.js",
+"lang-pt.js"
 ],
 "Guardas energía para el próximo partido, pero tendrás menos ocasiones.": [
 "lang-es.js"
@@ -242747,6 +243164,36 @@
 "No se pudo conectar con la tienda. Revisa tu conexión a internet e inténtalo de nuevo.": [
 "lang-es.js"
 ],
+"Rendimiento": [
+"lang-es.js"
+],
+"Ligero: menor resolución y menos efectos. Juego fluido en móviles antiguos.": [
+"lang-es.js"
+],
+"Alto: resolución completa y todos los efectos.": [
+"lang-es.js"
+],
+"Automático: el modo ligero está activado para tu móvil.": [
+"lang-es.js"
+],
+"Automático: si tu móvil es lento, los gráficos se aligeran solos.": [
+"lang-es.js"
+],
+"Rendimiento: Ligero": [
+"lang-es.js"
+],
+"Rendimiento: Alto": [
+"lang-es.js"
+],
+"Rendimiento: Automático": [
+"lang-es.js"
+],
+"Descansaste entre partidos. Tu energía:": [
+"lang-es.js"
+],
+"Tu energía:": [
+"lang-es.js"
+],
 "— ¡nos hemos clasificado!": [
 "lang-es.js"
 ],
@@ -245743,11 +246190,6 @@
 "La riqueza te sienta bien": [
 "lang-es.js"
 ],
-"Alto": [
-"lang-es.js",
-"lang-it.js",
-"lang-pt.js"
-],
 "Difícil": [
 "lang-es.js",
 "lang-pt.js"
@@ -248606,8 +249048,10 @@
 "lang-es.js",
 "lang-it.js"
 ],
-"MUCHO": [
-"lang-es.js"
+"ALTO": [
+"lang-es.js",
+"lang-it.js",
+"lang-pt.js"
 ],
 "GASTO DE ENERGÍA NORMAL Y NÚMERO NORMAL DE OCASIONES.": [
 "lang-es.js"
@@ -253687,6 +254131,30 @@
 "CORRECCIONES": [
 "lang-es.js"
 ],
+"RENDIMIENTO": [
+"lang-es.js"
+],
+"ALTO: RESOLUCIÓN COMPLETA Y TODOS LOS EFECTOS.": [
+"lang-es.js"
+],
+"AUTOMÁTICO: EL MODO LIGERO ESTÁ ACTIVADO PARA TU MÓVIL.": [
+"lang-es.js"
+],
+"RENDIMIENTO: LIGERO": [
+"lang-es.js"
+],
+"RENDIMIENTO: ALTO": [
+"lang-es.js"
+],
+"RENDIMIENTO: AUTOMÁTICO": [
+"lang-es.js"
+],
+"DESCANSASTE ENTRE PARTIDOS. TU ENERGÍA:": [
+"lang-es.js"
+],
+"TU ENERGÍA:": [
+"lang-es.js"
+],
 "— ¡NOS HEMOS CLASIFICADO!": [
 "lang-es.js"
 ],
@@ -255942,11 +256410,6 @@
 ],
 "LA RIQUEZA TE SIENTA BIEN": [
 "lang-es.js"
-],
-"ALTO": [
-"lang-es.js",
-"lang-it.js",
-"lang-pt.js"
 ],
 "DIFÍCIL": [
 "lang-es.js",
@@ -270201,6 +270664,36 @@
 "Impossible de joindre la boutique. Vérifie ta connexion internet et réessaie.": [
 "lang-fr.js"
 ],
+"Performances": [
+"lang-fr.js"
+],
+"Léger : résolution plus basse et moins d'effets. Jeu fluide sur les anciens téléphones.": [
+"lang-fr.js"
+],
+"Élevé : pleine résolution et tous les effets.": [
+"lang-fr.js"
+],
+"Auto : le mode léger est activé pour ton téléphone.": [
+"lang-fr.js"
+],
+"Auto : si ton téléphone est lent, les graphismes s'allègent automatiquement.": [
+"lang-fr.js"
+],
+"Performances : Léger": [
+"lang-fr.js"
+],
+"Performances : Élevé": [
+"lang-fr.js"
+],
+"Performances : Auto": [
+"lang-fr.js"
+],
+"Tu t'es reposé entre les matchs. Ton énergie :": [
+"lang-fr.js"
+],
+"Ton énergie :": [
+"lang-fr.js"
+],
 "— on est qualifiés !": [
 "lang-fr.js"
 ],
@@ -280779,6 +281272,30 @@
 "lang-fr.js"
 ],
 "CORRECTIONS": [
+"lang-fr.js"
+],
+"PERFORMANCES": [
+"lang-fr.js"
+],
+"ÉLEVÉ : PLEINE RÉSOLUTION ET TOUS LES EFFETS.": [
+"lang-fr.js"
+],
+"AUTO : LE MODE LÉGER EST ACTIVÉ POUR TON TÉLÉPHONE.": [
+"lang-fr.js"
+],
+"PERFORMANCES : LÉGER": [
+"lang-fr.js"
+],
+"PERFORMANCES : ÉLEVÉ": [
+"lang-fr.js"
+],
+"PERFORMANCES : AUTO": [
+"lang-fr.js"
+],
+"TU T'ES REPOSÉ ENTRE LES MATCHS. TON ÉNERGIE :": [
+"lang-fr.js"
+],
+"TON ÉNERGIE :": [
 "lang-fr.js"
 ],
 "— ON EST QUALIFIÉS !": [
@@ -296859,6 +297376,33 @@
 "Tidak dapat terhubung ke toko. Periksa koneksi internetmu dan coba lagi.": [
 "lang-id.js"
 ],
+"Ringan: resolusi lebih rendah dan efek lebih sedikit. Lancar di ponsel lama.": [
+"lang-id.js"
+],
+"Tinggi: resolusi penuh dan semua efek.": [
+"lang-id.js"
+],
+"Otomatis: mode ringan aktif untuk ponselmu.": [
+"lang-id.js"
+],
+"Otomatis: jika ponsel lambat, grafis otomatis jadi lebih ringan.": [
+"lang-id.js"
+],
+"Performa: Ringan": [
+"lang-id.js"
+],
+"Performa: Tinggi": [
+"lang-id.js"
+],
+"Performa: Otomatis": [
+"lang-id.js"
+],
+"Kamu beristirahat di antara pertandingan. Energimu:": [
+"lang-id.js"
+],
+"Energimu:": [
+"lang-id.js"
+],
 "— kita lolos!": [
 "lang-id.js"
 ],
@@ -307222,6 +307766,27 @@
 "PERBAIKAN": [
 "lang-id.js"
 ],
+"TINGGI: RESOLUSI PENUH DAN SEMUA EFEK.": [
+"lang-id.js"
+],
+"OTOMATIS: MODE RINGAN AKTIF UNTUK PONSELMU.": [
+"lang-id.js"
+],
+"PERFORMA: RINGAN": [
+"lang-id.js"
+],
+"PERFORMA: TINGGI": [
+"lang-id.js"
+],
+"PERFORMA: OTOMATIS": [
+"lang-id.js"
+],
+"KAMU BERISTIRAHAT DI ANTARA PERTANDINGAN. ENERGIMU:": [
+"lang-id.js"
+],
+"ENERGIMU:": [
+"lang-id.js"
+],
 "— KITA LOLOS!": [
 "lang-id.js"
 ],
@@ -316168,9 +316733,6 @@
 "Il tuo impegno in partita": [
 "lang-it.js"
 ],
-"Molto": [
-"lang-it.js"
-],
 "Risparmi energia per la prossima partita, ma avrai meno occasioni.": [
 "lang-it.js"
 ],
@@ -323290,6 +323852,36 @@
 "Impossibile raggiungere lo store. Controlla la connessione internet e riprova.": [
 "lang-it.js"
 ],
+"Prestazioni": [
+"lang-it.js"
+],
+"Leggero: risoluzione più bassa e meno effetti. Gioco fluido sui telefoni più vecchi.": [
+"lang-it.js"
+],
+"Alto: risoluzione piena e tutti gli effetti.": [
+"lang-it.js"
+],
+"Automatico: la modalità leggera è attiva per il tuo telefono.": [
+"lang-it.js"
+],
+"Automatico: se il telefono è lento, la grafica si alleggerisce da sola.": [
+"lang-it.js"
+],
+"Prestazioni: Leggero": [
+"lang-it.js"
+],
+"Prestazioni: Alto": [
+"lang-it.js"
+],
+"Prestazioni: Automatico": [
+"lang-it.js"
+],
+"Ti sei riposato tra le partite. La tua energia:": [
+"lang-it.js"
+],
+"La tua energia:": [
+"lang-it.js"
+],
 "— ci siamo qualificati!": [
 "lang-it.js"
 ],
@@ -328899,9 +329491,6 @@
 "IL TUO IMPEGNO IN PARTITA": [
 "lang-it.js"
 ],
-"MOLTO": [
-"lang-it.js"
-],
 "CONSUMO DI ENERGIA STANDARD E NUMERO NORMALE DI OCCASIONI.": [
 "lang-it.js"
 ],
@@ -333654,6 +334243,30 @@
 "lang-it.js"
 ],
 "CORREZIONI": [
+"lang-it.js"
+],
+"PRESTAZIONI": [
+"lang-it.js"
+],
+"ALTO: RISOLUZIONE PIENA E TUTTI GLI EFFETTI.": [
+"lang-it.js"
+],
+"AUTOMATICO: LA MODALITÀ LEGGERA È ATTIVA PER IL TUO TELEFONO.": [
+"lang-it.js"
+],
+"PRESTAZIONI: LEGGERO": [
+"lang-it.js"
+],
+"PRESTAZIONI: ALTO": [
+"lang-it.js"
+],
+"PRESTAZIONI: AUTOMATICO": [
+"lang-it.js"
+],
+"TI SEI RIPOSATO TRA LE PARTITE. LA TUA ENERGIA:": [
+"lang-it.js"
+],
+"LA TUA ENERGIA:": [
 "lang-it.js"
 ],
 "— CI SIAMO QUALIFICATI!": [
@@ -343511,9 +344124,6 @@
 "Pouco": [
 "lang-pt.js"
 ],
-"Muito": [
-"lang-pt.js"
-],
 "Você poupa energia para a próxima partida, mas terá menos chances.": [
 "lang-pt.js"
 ],
@@ -350505,6 +351115,36 @@
 "Não foi possível acessar a loja. Verifique sua conexão com a internet e tente novamente.": [
 "lang-pt.js"
 ],
+"Desempenho": [
+"lang-pt.js"
+],
+"Leve: resolução menor e menos efeitos. Jogo fluido em celulares antigos.": [
+"lang-pt.js"
+],
+"Alto: resolução total e todos os efeitos.": [
+"lang-pt.js"
+],
+"Automático: o modo leve está ativado no seu celular.": [
+"lang-pt.js"
+],
+"Automático: se o celular for lento, os gráficos ficam mais leves sozinhos.": [
+"lang-pt.js"
+],
+"Desempenho: Leve": [
+"lang-pt.js"
+],
+"Desempenho: Alto": [
+"lang-pt.js"
+],
+"Desempenho: Automático": [
+"lang-pt.js"
+],
+"Você descansou entre as partidas. Sua energia:": [
+"lang-pt.js"
+],
+"Sua energia:": [
+"lang-pt.js"
+],
 "— nos classificamos!": [
 "lang-pt.js"
 ],
@@ -355989,9 +356629,6 @@
 "POUCO": [
 "lang-pt.js"
 ],
-"MUITO": [
-"lang-pt.js"
-],
 "GASTO DE ENERGIA NORMAL E NÚMERO NORMAL DE CHANCES.": [
 "lang-pt.js"
 ],
@@ -360637,6 +361274,30 @@
 "lang-pt.js"
 ],
 "CORREÇÕES": [
+"lang-pt.js"
+],
+"DESEMPENHO": [
+"lang-pt.js"
+],
+"ALTO: RESOLUÇÃO TOTAL E TODOS OS EFEITOS.": [
+"lang-pt.js"
+],
+"AUTOMÁTICO: O MODO LEVE ESTÁ ATIVADO NO SEU CELULAR.": [
+"lang-pt.js"
+],
+"DESEMPENHO: LEVE": [
+"lang-pt.js"
+],
+"DESEMPENHO: ALTO": [
+"lang-pt.js"
+],
+"DESEMPENHO: AUTOMÁTICO": [
+"lang-pt.js"
+],
+"VOCÊ DESCANSOU ENTRE AS PARTIDAS. SUA ENERGIA:": [
+"lang-pt.js"
+],
+"SUA ENERGIA:": [
 "lang-pt.js"
 ],
 "— NOS CLASSIFICAMOS!": [
@@ -369380,6 +370041,12 @@
 "minigame.js"
 ],
 "Enter": [
+"minigame.js"
+],
+"Rakip hamle yapınca": [
+"minigame.js"
+],
+"topu ters tarafa çek": [
 "minigame.js"
 ],
 "ArrowLeft": [

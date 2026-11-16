@@ -1558,3 +1558,7 @@
 8422|Rendimiento: Ligero
 8423|Rendimiento: Alto
 8424|Rendimiento: Automático
+8425|Descansaste entre partidos. Tu energía:
+8427|Tu energía:
+8428|Cuando el rival se lance,
+8429|lleva el balón al otro lado

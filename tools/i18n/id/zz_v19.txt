@@ -1558,3 +1558,7 @@
 8422|Performa: Ringan
 8423|Performa: Tinggi
 8424|Performa: Otomatis
+8425|Kamu beristirahat di antara pertandingan. Energimu:
+8427|Energimu:
+8428|Saat lawan bergerak,
+8429|tarik bola ke arah sebaliknya

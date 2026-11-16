@@ -1558,3 +1558,7 @@
 8422|Prestazioni: Leggero
 8423|Prestazioni: Alto
 8424|Prestazioni: Automatico
+8425|Ti sei riposato tra le partite. La tua energia:
+8427|La tua energia:
+8428|Quando l'avversario si sbilancia,
+8429|porta la palla dall'altra parte

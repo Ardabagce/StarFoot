@@ -1558,3 +1558,7 @@
 8422|Desempenho: Leve
 8423|Desempenho: Alto
 8424|Desempenho: Automático
+8425|Você descansou entre as partidas. Sua energia:
+8427|Sua energia:
+8428|Quando o adversário der o bote,
+8429|puxe a bola para o outro lado

@@ -1558,3 +1558,7 @@
 8422|Performances : Léger
 8423|Performances : Élevé
 8424|Performances : Auto
+8425|Tu t'es reposé entre les matchs. Ton énergie :
+8427|Ton énergie :
+8428|Quand l'adversaire se jette,
+8429|emmène le ballon de l'autre côté

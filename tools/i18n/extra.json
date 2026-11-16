@@ -3711,5 +3711,9 @@
 "Otomatik: telefon yavaşsa grafikler kendiliğinden hafifler.": "Auto: graphics get lighter automatically if your phone is slow.",
 "Performans: Hafif": "Performance: Light",
 "Performans: Yüksek": "Performance: High",
-"Performans: Otomatik": "Performance: Auto"
+"Performans: Otomatik": "Performance: Auto",
+"Maç arası dinlendin. Enerjin:": "You rested between matches. Your energy:",
+"Enerjin:": "Your energy:",
+"Rakip hamle yapınca": "When the defender commits,",
+"topu ters tarafa çek": "drag the ball the other way"
 }

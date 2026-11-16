@@ -1342,7 +1342,7 @@ Object.assign(MiniGame, {
   // Çalım: rakip üstüne gelir ve bir tarafa hamle yapar; o anda topu ters tarafa çek (sola/sağa dokun ya da kaydır)
   dribble(host, o) {
     return new Promise((resolve) => {
-      const g = MiniGame._canvas(host, 'Rakip bir tarafa <b>hamle yapınca</b> topu <b>ters tarafa çek</b> · ekranın sol/sağına dokun ya da kaydır · <kbd>←</kbd> <kbd>→</kbd>');
+      const g = MiniGame._canvas(host, 'Rakip hamle yapınca <b>topu ters tarafa çek</b> · ekranın sol/sağına dokun ya da kaydır · <kbd>←</kbd> <kbd>→</kbd>');
       const { ctx } = g;
       const rounds = o.rounds || 2;
       const drib = o.dribbling || 40;

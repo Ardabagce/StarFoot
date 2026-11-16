@@ -626,7 +626,7 @@ const Sprites = {
   grassImg: (() => {
     if (typeof Image === 'undefined') return null;
     const im = new Image();
-    im.onload = () => { Sprites.grassTile = null; Sprites._turf = {}; if (typeof window !== 'undefined') window.dispatchEvent(new Event('resize')); };
+    im.onload = () => { Sprites.grassTile = null; Sprites._turf = {}; Sprites._turfScroll = null; if (typeof window !== 'undefined') window.dispatchEvent(new Event('resize')); };
     im.src = 'img/grass.jpg';
     return im;
   })(),
@@ -664,9 +664,32 @@ const Sprites = {
       for (let i = 0, y = o2 - bh * 2; y < H; i++, y += bh) { c.fillStyle = i % 2 ? 'rgba(255,255,240,0.06)' : 'rgba(0,30,10,0.11)'; c.fillRect(0, y, W, bh + 1); }
     };
     if (scroll != null) {
-      paint(ctx, scroll);
-      const v = ctx.createLinearGradient(0, 0, W, 0); v.addColorStop(0, 'rgba(0,10,5,0.22)'); v.addColorStop(0.5, 'rgba(0,0,0,0)'); v.addColorStop(1, 'rgba(0,10,5,0.22)');
-      ctx.fillStyle = v; ctx.fillRect(0, 0, W, H);
+      // Kayan zemin (top sürme): her karede doku + şeritler + gölge yeniden boyanmaz.
+      // Ekrandan bir periyot uzun bir şerit bir kez hazırlanır, her karede tek seferde kaydırılarak kopyalanır.
+      // Periyot = şerit çifti (2 bant); doku boyu bu periyoda uydurulur ki ek yeri görünmesin.
+      const P = Math.max(8, Math.round(bh * 2));
+      const want = W / 5;
+      const ts = want <= P ? P / Math.max(1, Math.round(P / want)) : P * Math.max(1, Math.round(want / P));
+      const L = Math.max(P, Math.round(ts));
+      const key = 's' + W + 'x' + H + 'p' + P;
+      let sc = Sprites._turfScroll;
+      if (!sc || sc.key !== key) {
+        const b = document.createElement('canvas'); b.width = W; b.height = H + L;
+        const c = b.getContext('2d');
+        if (!c) { paint(ctx, scroll); return; }
+        const HH = H + L;
+        c.fillStyle = '#2a7d3d'; c.fillRect(0, 0, W, HH);
+        const pat = c.createPattern(tile, 'repeat'), k = ts / 256;
+        if (pat.setTransform && typeof DOMMatrix !== 'undefined') pat.setTransform(new DOMMatrix([k, 0, 0, k, 0, 0]));
+        c.fillStyle = pat; c.fillRect(0, 0, W, HH);
+        for (let i = 0, y = 0; y < HH; i++, y += bh) { c.fillStyle = i % 2 ? 'rgba(255,255,240,0.06)' : 'rgba(0,30,10,0.11)'; c.fillRect(0, y, W, bh + 1); }
+        const v = c.createLinearGradient(0, 0, W, 0); v.addColorStop(0, 'rgba(0,10,5,0.22)'); v.addColorStop(0.5, 'rgba(0,0,0,0)'); v.addColorStop(1, 'rgba(0,10,5,0.22)');
+        c.fillStyle = v; c.fillRect(0, 0, W, HH);
+        sc = Sprites._turfScroll = { key, b, L };
+      }
+      // aşağı doğru kayma: kaydırma arttıkça desen aşağı iner
+      const off = ((scroll % sc.L) + sc.L) % sc.L;
+      ctx.drawImage(sc.b, 0, off - sc.L);
       return;
     }
     const key = W + 'x' + H + 'n' + n;
