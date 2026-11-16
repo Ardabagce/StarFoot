@@ -2000,3 +2000,55 @@
 8955|sejak {0}
 
 8956|Beranda
+8957|Itu baru anakku.
+8958|Aku terus memikirkanmu
+8959|Ngopi yuk malam ini
+8960|Aku mampir makan malam
+8961|Makan malam di luar, yuk?
+8962|Siap, Ayah siapkan pancingnya!
+8963|Waktunya ujian tengah semester!
+8964|Ikut ujian tengah semester
+8965|Aku juga kangen.
+8966|Aku juga memikirkanmu.
+8967|Lanjutkan seperti biasa.
+8968|Malam ini mancing, yuk, Yah?
+8969|Malam ini aku di rumah, Bu, kita duduk bersama
+8970|Topik ini sudah ditutup.
+8971|Materi kelas akan keluar. Ikut ujian saat kamu siap.
+8974|Ayo jalan-jalan bersama
+8975|Sampai jumpa, bro!
+8976|Ibu akan menunggumu!
+8977|Ketemu akhir pekan ini, yuk
+8978|Akhir pekan aku datang sarapan
+8979|Aku punya kejutan untukmu akhir pekan ini
+8980|Haha, betul
+8981|Aku ikut futsal juga
+8982|Mantap, aku kangen!
+8983|Pengingat
+8984|Belum ada pesan. Keluarga, teman, dan timmu akan sesekali menulis.
+8987|Jaga dirimu!
+8988|Pasti, kita kabar-kabaran
+8989|Main bola sepulang sekolah, yuk
+8990|Aku tidak sabar!
+8991|Makasih, Bu, Ibu juga jaga diri
+8992|Tim Medis
+8993|Ibu sayang sekali padamu.
+8994|Aku kangen sekali
+8995|Wartawan olahraga
+8996|Mantap, sampai jumpa!
+8997|Oke, kita berangkat pagi-pagi.
+8998|Klub Suporter
+8999|Makasih sarannya
+9000|Sampai ketemu waktu istirahat!
+9001|Lembaga amal
+9002|Asyik! Ibu masak makanan favoritmu.
+9004|Pesan baru akan muncul di sini.
+9013|Waktu yang seru bersama {0}. Persahabatan +8
+9005|Senang sekali, aku tunggu!
+9006|Agenda
+9007|Pers
+9008|Kakek
+9009|Yayasan
+9010|menunggu balasan
+9011|Jangan khawatir, Bu, aku baik-baik saja
+9012|Tenang, Yah, aku berlatih keras

@@ -9669,6 +9669,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"phone.js",
 "star.js",
 "value.js"
 ],
@@ -40453,6 +40454,7 @@
 "lang-ja.js",
 "lang-pt.js",
 "life.js",
+"phone.js",
 "v24.js"
 ],
 "Sakatken antrenman yapamazsın.": [
@@ -88236,6 +88238,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"phone.js",
 "v24.js"
 ],
 "Henüz çocuğunuz yok.": [
@@ -89660,8 +89663,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"phone.js"
+"lang-pt.js"
 ],
 "Söz mü? Bekliyorum!": [
 "lang-ar.js",
@@ -89956,8 +89958,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"phone.js"
+"lang-pt.js"
 ],
 "uygulamayı aç": [
 "lang-ar.js",
@@ -92537,7 +92538,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"phone.js"
 ],
 "I'm so proud of you.": [
 "lang-ar.js",
@@ -194084,7 +194086,7 @@
 "Füllt sich, während du spielst.": [
 "lang-de.js"
 ],
-"Startbildschirm": [
+"Zuhause": [
 "lang-de.js"
 ],
 "Auswärts": [
@@ -199680,7 +199682,7 @@
 "Handy": [
 "lang-de.js"
 ],
-"In Benutzung": [
+"In Gebrauch": [
 "lang-de.js"
 ],
 "Gekauft": [
@@ -199963,6 +199965,9 @@
 "Ich dich auch!": [
 "lang-de.js"
 ],
+"Startbildschirm": [
+"lang-de.js"
+],
 "Traumhaus": [
 "lang-de.js"
 ],
@@ -200123,9 +200128,8 @@
 "Profil auf dem Handy öffnen": [
 "lang-de.js"
 ],
-"Sponsoring": [
-"lang-de.js",
-"lang-fr.js"
+"Sponsorings": [
+"lang-de.js"
 ],
 "Jede Woche Moral +2, Ruhm +4": [
 "lang-de.js"
@@ -209373,7 +209377,7 @@
 "MIT MEINEM VATER ALTE SPIELE GESCHAUT.": [
 "lang-de.js"
 ],
-"STARTBILDSCHIRM": [
+"ZUHAUSE": [
 "lang-de.js"
 ],
 "IM TREND": [
@@ -212420,7 +212424,7 @@
 "HANDY": [
 "lang-de.js"
 ],
-"IN BENUTZUNG": [
+"IN GEBRAUCH": [
 "lang-de.js"
 ],
 "GEKAUFT": [
@@ -212642,6 +212646,9 @@
 "ICH DICH AUCH!": [
 "lang-de.js"
 ],
+"STARTBILDSCHIRM": [
+"lang-de.js"
+],
 "TRAUMHAUS": [
 "lang-de.js"
 ],
@@ -212781,9 +212788,8 @@
 "PROFIL AUF DEM HANDY ÖFFNEN": [
 "lang-de.js"
 ],
-"SPONSORING": [
-"lang-de.js",
-"lang-fr.js"
+"SPONSORINGS": [
+"lang-de.js"
 ],
 "JEDE WOCHE MORAL +2, RUHM +4": [
 "lang-de.js"
@@ -230463,6 +230469,9 @@
 "Me too!": [
 "lang-en.js"
 ],
+"Home screen": [
+"lang-en.js"
+],
 "HomeFinder": [
 "lang-en.js"
 ],
@@ -242428,6 +242437,9 @@
 "lang-en.js"
 ],
 "ME TOO!": [
+"lang-en.js"
+],
+"HOME SCREEN": [
 "lang-en.js"
 ],
 "HOMEFINDER": [
@@ -254542,8 +254554,10 @@
 "Se llena a medida que juegas.": [
 "lang-es.js"
 ],
-"Inicio": [
-"lang-es.js"
+"Casa": [
+"lang-es.js",
+"lang-it.js",
+"lang-pt.js"
 ],
 "Fuera": [
 "lang-es.js"
@@ -260266,6 +260280,9 @@
 "¡Y yo a ti!": [
 "lang-es.js"
 ],
+"Inicio": [
+"lang-es.js"
+],
 "MiCasa": [
 "lang-es.js"
 ],
@@ -260337,9 +260354,6 @@
 "lang-es.js"
 ],
 "Vives aquí": [
-"lang-es.js"
-],
-"Tuya": [
 "lang-es.js"
 ],
 "Casas en venta": [
@@ -269279,8 +269293,10 @@
 "VI PARTIDOS ANTIGUOS CON MI PADRE.": [
 "lang-es.js"
 ],
-"INICIO": [
-"lang-es.js"
+"CASA": [
+"lang-es.js",
+"lang-it.js",
+"lang-pt.js"
 ],
 "TENDENCIA": [
 "lang-es.js"
@@ -272322,6 +272338,9 @@
 "¡Y YO A TI!": [
 "lang-es.js"
 ],
+"INICIO": [
+"lang-es.js"
+],
 "MICASA": [
 "lang-es.js"
 ],
@@ -272392,9 +272411,6 @@
 "lang-es.js"
 ],
 "VIVES AQUÍ": [
-"lang-es.js"
-],
-"TUYA": [
 "lang-es.js"
 ],
 "CASAS EN VENTA": [
@@ -284393,7 +284409,7 @@
 "Se remplit au fil de tes matchs.": [
 "lang-fr.js"
 ],
-"Accueil": [
+"Maison": [
 "lang-fr.js"
 ],
 "Extérieur": [
@@ -289947,6 +289963,9 @@
 "Moi aussi !": [
 "lang-fr.js"
 ],
+"Accueil": [
+"lang-fr.js"
+],
 "MaMaison": [
 "lang-fr.js"
 ],
@@ -290104,6 +290123,9 @@
 "lang-fr.js"
 ],
 "Ouvre ton profil sur ton téléphone": [
+"lang-fr.js"
+],
+"Sponsors": [
 "lang-fr.js"
 ],
 "Chaque semaine moral +2, Célébrité +4": [
@@ -298692,7 +298714,7 @@
 "J'AI REGARDÉ NOS VIEUX MATCHS AVEC MON PÈRE.": [
 "lang-fr.js"
 ],
-"ACCUEIL": [
+"MAISON": [
 "lang-fr.js"
 ],
 "TENDANCE": [
@@ -301598,6 +301620,9 @@
 "MOI AUSSI !": [
 "lang-fr.js"
 ],
+"ACCUEIL": [
+"lang-fr.js"
+],
 "MAMAISON": [
 "lang-fr.js"
 ],
@@ -301725,6 +301750,9 @@
 "lang-fr.js"
 ],
 "OUVRE TON PROFIL SUR TON TÉLÉPHONE": [
+"lang-fr.js"
+],
+"SPONSORS": [
 "lang-fr.js"
 ],
 "CHAQUE SEMAINE MORAL +2, CÉLÉBRITÉ +4": [
@@ -313287,7 +313315,7 @@
 "Terisi seiring kamu bermain.": [
 "lang-id.js"
 ],
-"Beranda": [
+"Rumah": [
 "lang-id.js"
 ],
 "Tandang": [
@@ -318752,6 +318780,9 @@
 "Aku juga!": [
 "lang-id.js"
 ],
+"Beranda": [
+"lang-id.js"
+],
 "RumahKu": [
 "lang-id.js"
 ],
@@ -319368,7 +319399,7 @@
 "Jangan sedih, aku selalu di sisimu.": [
 "lang-id.js"
 ],
-"Hubunganmu": [
+"Hubungan": [
 "lang-id.js"
 ],
 "Sentuhan pertamamu penting, latihlah.": [
@@ -322741,9 +322772,6 @@
 "lang-id.js"
 ],
 "Peluang lebih besar masuk di babak kedua": [
-"lang-id.js"
-],
-"Hubungan": [
 "lang-id.js"
 ],
 "Hubungan menguat, moral naik": [
@@ -327367,7 +327395,7 @@
 "NONTON LAGA LAMA BERSAMA AYAH.": [
 "lang-id.js"
 ],
-"BERANDA": [
+"RUMAH": [
 "lang-id.js"
 ],
 "SEDANG TREN": [
@@ -330172,6 +330200,9 @@
 "AKU JUGA!": [
 "lang-id.js"
 ],
+"BERANDA": [
+"lang-id.js"
+],
 "RUMAHKU": [
 "lang-id.js"
 ],
@@ -330610,7 +330641,7 @@
 "JANGAN SEDIH, AKU SELALU DI SISIMU.": [
 "lang-id.js"
 ],
-"HUBUNGANMU": [
+"HUBUNGAN": [
 "lang-id.js"
 ],
 "PERMAINAN BAGUS, GOLMU MENENANGKAN TIM.": [
@@ -333219,9 +333250,6 @@
 "lang-id.js"
 ],
 "PELUANG LEBIH BESAR MASUK DI BABAK KEDUA": [
-"lang-id.js"
-],
-"HUBUNGAN": [
 "lang-id.js"
 ],
 "HUBUNGAN MENGUAT, MORAL NAIK": [
@@ -347935,7 +347963,7 @@
 "Non essere triste, sono sempre al tuo fianco.": [
 "lang-it.js"
 ],
-"Relazioni": [
+"Rapporti": [
 "lang-it.js"
 ],
 "Il primo controllo è fondamentale, lavoraci.": [
@@ -351366,10 +351394,6 @@
 ],
 "Bella sessione": [
 "lang-it.js"
-],
-"CASA": [
-"lang-it.js",
-"lang-pt.js"
 ],
 "CAMPIONE": [
 "lang-it.js"
@@ -359187,7 +359211,7 @@
 "NON ESSERE TRISTE, SONO SEMPRE AL TUO FIANCO.": [
 "lang-it.js"
 ],
-"RELAZIONI": [
+"RAPPORTI": [
 "lang-it.js"
 ],
 "BELLA PARTITA, IL TUO GOL HA TRANQUILLIZZATO LA SQUADRA.": [
@@ -371310,9 +371334,6 @@
 "Vai enchendo conforme você joga.": [
 "lang-pt.js"
 ],
-"Início": [
-"lang-pt.js"
-],
 "Fora": [
 "lang-pt.js"
 ],
@@ -376700,6 +376721,9 @@
 "lang-pt.js"
 ],
 "Eu também!": [
+"lang-pt.js"
+],
+"Início": [
 "lang-pt.js"
 ],
 "MinhaCasa": [
@@ -385078,9 +385102,6 @@
 "ASSISTI JOGOS ANTIGOS COM MEU PAI.": [
 "lang-pt.js"
 ],
-"INÍCIO": [
-"lang-pt.js"
-],
 "EM ALTA": [
 "lang-pt.js"
 ],
@@ -387875,6 +387896,9 @@
 "lang-pt.js"
 ],
 "EU TAMBÉM!": [
+"lang-pt.js"
+],
+"INÍCIO": [
 "lang-pt.js"
 ],
 "MINHACASA": [
@@ -411760,16 +411784,91 @@
 "phone.js",
 "socialart.js"
 ],
+"{} ile güzel vakit geçirdiniz. Arkadaşlık +8": [
+"phone.js"
+],
 "linear-gradient(135deg,#46e08f,#1f9d5c)": [
 "phone.js"
 ],
 "Akşam yemeği 7\\'de, geç kalma!": [
 "phone.js"
 ],
+"Bu akşam evdeyim anne, beraber oturalım": [
+"phone.js"
+],
+"Hafta sonu kahvaltıya geliyorum": [
+"phone.js"
+],
+"Akşam yemeğe uğrarım": [
+"phone.js"
+],
+"Yaşasın! En sevdiğin yemeği yapıyorum.": [
+"phone.js"
+],
+"Gözüm yollarda olacak!": [
+"phone.js"
+],
+"Merak etme anne, iyiyim": [
+"phone.js"
+],
+"Sağ ol anne, sen de kendine iyi bak": [
+"phone.js"
+],
+"Seni çok seviyorum.": [
+"phone.js"
+],
+"Aferin benim oğluma.": [
+"phone.js"
+],
 "linear-gradient(135deg,#34c4b0,#147a6c)": [
 "phone.js"
 ],
+"Bu akşam balığa gidelim mi baba?": [
+"phone.js"
+],
+"Gel beraber yürüyüşe çıkalım": [
+"phone.js"
+],
+"Anlaştık, oltaları hazırlıyorum!": [
+"phone.js"
+],
+"Tamam, sabah erkenden çıkarız.": [
+"phone.js"
+],
+"Tavsiyen için sağ ol": [
+"phone.js"
+],
+"Merak etme baba, çalışıyorum": [
+"phone.js"
+],
+"Bildiğin gibi devam et.": [
+"phone.js"
+],
 "linear-gradient(135deg,#ff6f8a,#c2416b)": [
+"phone.js"
+],
+"Akşam yemeğine çıkalım mı?": [
+"phone.js"
+],
+"Hafta sonu sana sürprizim var": [
+"phone.js"
+],
+"Çok sevindim, bekliyorum!": [
+"phone.js"
+],
+"Sabırsızlanıyorum!": [
+"phone.js"
+],
+"Seni çok özledim": [
+"phone.js"
+],
+"Aklım hep sende": [
+"phone.js"
+],
+"Ben de seni özledim.": [
+"phone.js"
+],
+"Benim de aklım sende.": [
 "phone.js"
 ],
 "linear-gradient(135deg,#9aa6c4,#4b5878)": [
@@ -411790,13 +411889,76 @@
 "linear-gradient(135deg,#c792ff,#7b3fe4)": [
 "phone.js"
 ],
+"Teneffüste görüşürüz!": [
+"phone.js"
+],
+"Okuldan sonra top oynayalım": [
+"phone.js"
+],
+"Hafta sonu buluşalım": [
+"phone.js"
+],
+"Akşam bir kahve içelim": [
+"phone.js"
+],
+"Halı sahaya ben de gelirim": [
+"phone.js"
+],
+"Süper, görüşürüz!": [
+"phone.js"
+],
+"Harika, çok özledim!": [
+"phone.js"
+],
+"Haha, aynen": [
+"phone.js"
+],
+"Kesin, haberleşiriz": [
+"phone.js"
+],
+"Görüşürüz kanka!": [
+"phone.js"
+],
+"Kendine iyi bak!": [
+"phone.js"
+],
 "linear-gradient(135deg,#ffb36b,#e0672b)": [
 "phone.js"
 ],
-"kW": [
+"{}|{}|pr": [
+"phone.js"
+],
+"Hatırlatmalar": [
 "phone.js"
 ],
 "linear-gradient(135deg,#ffe58a,#f5b70a)": [
+"phone.js"
+],
+"Spor muhabiri": [
+"phone.js"
+],
+"linear-gradient(135deg,#ff7a45,#e0283e)": [
+"phone.js"
+],
+"Taraftar Derneği": [
+"phone.js"
+],
+"Taraftarlar": [
+"phone.js"
+],
+"Sağlık Ekibi": [
+"phone.js"
+],
+"Yardım kuruluşu": [
+"phone.js"
+],
+"Henüz mesaj yok. Ailen, arkadaşların ve takımın zaman zaman yazacak.": [
+"phone.js"
+],
+"Yeni mesaj gelince burada görünür.": [
+"phone.js"
+],
+"kW": [
 "phone.js"
 ],
 "linear-gradient(135deg,#ffd76a,#e0a10e)": [
@@ -411815,9 +411977,6 @@
 "phone.js"
 ],
 "TeknoPazar": [
-"phone.js"
-],
-"linear-gradient(135deg,#ff7a45,#e0283e)": [
 "phone.js"
 ],
 "linear-gradient(150deg,#2b2213,#0d0a05)": [
@@ -411868,6 +412027,9 @@
 "Fizyoterapi seansı iyileşmeyi hızlandırır. Spor Mağazası\\'ndan alabilirsin.": [
 "phone.js"
 ],
+"Ara dönem sınavına gir": [
+"phone.js"
+],
 "Premium\\'u incele": [
 "phone.js"
 ],
@@ -411879,6 +412041,39 @@
 "star.js"
 ],
 "{} MP": [
+"phone.js"
+],
+"x:Basın": [
+"phone.js"
+],
+"x:Dedem": [
+"phone.js"
+],
+"x:Taraftar Derneği": [
+"phone.js"
+],
+"x:Sağlık Ekibi": [
+"phone.js"
+],
+"x:Vakıf": [
+"phone.js"
+],
+"x:Ajanda": [
+"phone.js"
+],
+"x:Kulüp": [
+"phone.js"
+],
+"Bu konu kapandı.": [
+"phone.js"
+],
+"x:Okul": [
+"phone.js"
+],
+"Ara dönem sınavı zamanı!": [
+"phone.js"
+],
+"Derste işlenen konular çıkacak. Hazır olduğunda sınava gir.": [
 "phone.js"
 ],
 "ph-pill on {}": [

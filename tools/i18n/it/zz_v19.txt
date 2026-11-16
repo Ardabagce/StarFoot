@@ -2000,3 +2000,55 @@
 8955|dal {0}
 
 8956|Home
+8957|Questo è il mio ragazzo.
+8958|Penso sempre a te
+8959|Prendiamoci un caffè stasera
+8960|Passo per cena
+8961|Usciamo a cena?
+8962|Affare fatto, preparo le canne!
+8963|È l'ora dell'esame di metà anno!
+8964|Fai l'esame di metà anno
+8965|Anche tu mi manchi.
+8966|Anch'io penso a te.
+8967|Continua così.
+8968|Andiamo a pescare stasera, papà?
+8969|Stasera sono a casa, mamma, stiamo insieme
+8970|Questo argomento è chiuso.
+8971|Usciranno gli argomenti fatti in classe. Fai l'esame quando sei pronto.
+8974|Andiamo a fare una passeggiata insieme
+8975|Ci vediamo, fratello!
+8976|Ti aspetterò!
+8977|Vediamoci nel weekend
+8978|Nel weekend vengo a colazione
+8979|Ho una sorpresa per te nel weekend
+8980|Ahah, esatto
+8981|Vengo anch'io a calcetto
+8982|Grande, mi sei mancato!
+8983|Promemoria
+8984|Ancora nessun messaggio. Famiglia, amici e squadra scriveranno ogni tanto.
+8987|Abbi cura di te!
+8988|Certo, ci sentiamo
+8989|Giochiamo a pallone dopo la scuola
+8990|Non vedo l'ora!
+8991|Grazie, mamma, abbi cura di te anche tu
+8992|Staff medico
+8993|Ti voglio tanto bene.
+8994|Mi manchi tanto
+8995|Giornalista sportivo
+8996|Grande, a presto!
+8997|Va bene, partiamo presto la mattina.
+8998|Club dei tifosi
+8999|Grazie del consiglio
+9000|Ci vediamo all'intervallo!
+9001|Ente benefico
+9002|Evviva! Preparo il tuo piatto preferito.
+9004|I nuovi messaggi appariranno qui.
+9013|Bel tempo passato con {0}. Amicizia +8
+9005|Che bello, ti aspetto!
+9006|Agenda
+9007|Stampa
+9008|Nonno
+9009|Fondazione
+9010|in attesa di risposta
+9011|Non preoccuparti, mamma, sto bene
+9012|Tranquillo, papà, mi sto impegnando

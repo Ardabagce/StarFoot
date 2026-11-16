@@ -2000,3 +2000,55 @@
 8955|desde {0}
 
 8956|Inicio
+8957|Ese es mi niño.
+8958|No dejo de pensar en ti
+8959|Tomemos un café esta noche
+8960|Me paso a cenar
+8961|¿Salimos a cenar?
+8962|¡Hecho, preparo las cañas!
+8963|¡Hora del examen parcial!
+8964|Hacer el examen parcial
+8965|Yo también te echo de menos.
+8966|Yo también pienso en ti.
+8967|Sigue como sabes.
+8968|¿Vamos a pescar esta noche, papá?
+8969|Esta noche estoy en casa, mamá, pasemos tiempo juntos
+8970|Este tema está cerrado.
+8971|Saldrá lo visto en clase. Haz el examen cuando estés listo.
+8974|Vamos a dar un paseo juntos
+8975|¡Nos vemos, tío!
+8976|¡Te estaré esperando!
+8977|Quedemos el fin de semana
+8978|El fin de semana voy a desayunar
+8979|Tengo una sorpresa para ti el fin de semana
+8980|Jaja, exacto
+8981|Yo también voy al partidillo
+8982|¡Genial, te he echado de menos!
+8983|Recordatorios
+8984|Aún no hay mensajes. Tu familia, amigos y equipo escribirán de vez en cuando.
+8987|¡Cuídate!
+8988|Claro, seguimos en contacto
+8989|Juguemos al fútbol después del cole
+8990|¡No puedo esperar!
+8991|Gracias, mamá, cuídate tú también
+8992|Equipo médico
+8993|Te quiero mucho.
+8994|Te echo mucho de menos
+8995|Periodista deportivo
+8996|¡Genial, nos vemos!
+8997|Vale, salimos temprano por la mañana.
+8998|Peña de aficionados
+8999|Gracias por el consejo
+9000|¡Nos vemos en el recreo!
+9001|Organización benéfica
+9002|¡Qué bien! Te preparo tu plato favorito.
+9004|Los mensajes nuevos aparecerán aquí.
+9013|Lo pasaste genial con {0}. Amistad +8
+9005|¡Qué alegría, te espero!
+9006|Agenda
+9007|Prensa
+9008|Abuelo
+9009|Fundación
+9010|esperando respuesta
+9011|Tranquila, mamá, estoy bien
+9012|Tranquilo, papá, estoy trabajando duro

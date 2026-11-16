@@ -2000,3 +2000,55 @@
 8955|seit {0}
 
 8956|Startbildschirm
+8957|Das ist mein Junge.
+8958|Ich denke ständig an dich
+8959|Lass uns heute Abend einen Kaffee trinken
+8960|Ich komme zum Abendessen vorbei
+8961|Wollen wir essen gehen?
+8962|Abgemacht, ich mache die Angeln fertig!
+8963|Zeit für die Halbjahresprüfung!
+8964|Halbjahresprüfung schreiben
+8965|Ich vermisse dich auch.
+8966|Ich denke auch an dich.
+8967|Mach weiter so.
+8968|Gehen wir heute Abend angeln, Papa?
+8969|Ich bin heute Abend zu Hause, Mama, lass uns zusammensitzen
+8970|Dieses Thema ist erledigt.
+8971|Unterrichtsthemen kommen dran. Schreib die Prüfung, wenn du bereit bist.
+8974|Lass uns zusammen spazieren gehen
+8975|Bis dann, Alter!
+8976|Ich warte schon auf dich!
+8977|Lass uns am Wochenende treffen
+8978|Ich komme am Wochenende zum Frühstück
+8979|Ich habe am Wochenende eine Überraschung für dich
+8980|Haha, genau
+8981|Ich komme auch zum Kick
+8982|Super, ich hab dich vermisst!
+8983|Erinnerungen
+8984|Noch keine Nachrichten. Familie, Freunde und Team schreiben ab und zu.
+8987|Pass auf dich auf!
+8988|Klar, wir bleiben in Kontakt
+8989|Lass uns nach der Schule kicken
+8990|Ich kann es kaum erwarten!
+8991|Danke, Mama, pass du auch auf dich auf
+8992|Medizinisches Team
+8993|Ich hab dich so lieb.
+8994|Ich vermisse dich so sehr
+8995|Sportreporter
+8996|Super, bis dann!
+8997|Okay, wir brechen früh morgens auf.
+8998|Fanclub
+8999|Danke für den Rat
+9000|Wir sehen uns in der Pause!
+9001|Wohltätigkeitsorganisation
+9002|Juhu! Ich koche dein Lieblingsessen.
+9004|Neue Nachrichten erscheinen hier.
+9013|Schöne Zeit mit {0}. Freundschaft +8
+9005|Wie schön, ich warte!
+9006|Planer
+9007|Presse
+9008|Opa
+9009|Stiftung
+9010|wartet auf Antwort
+9011|Keine Sorge, Mama, mir geht's gut
+9012|Keine Sorge, Papa, ich trainiere fleißig

@@ -125,66 +125,157 @@
     return { win: f && r.res === 'W', loss: f && r.res === 'L', draw: f && r.res === 'D', goals: f && r.goals > 0, star: f && r.rating != null && r.rating >= 7.5, poor: f && r.rating != null && r.rating < 6, bench: f && r.rating == null && !p.injuryWeeks, inj: p.injuryWeeks > 0, young: p.age <= 17, kid: p.age <= 12 };
   }
   // bağlamlı mesaj varsa çoğunlukla onu seçer; yoksa genel havuzdan
+  // son 3 haftalık mesajını tekrar etmez (bu haftanınki hariç: hafta içinde mesaj sabit kalır)
+  const recent = (id) => { try { const w = Phone.week(), l = (Phone.data().log || {})[String(id).replace(/^fr(?=\d)/, 'f')] || []; return l.filter((e) => e.wk && e.w !== w).slice(-3).map((e) => e.t); } catch (e) { return []; } };
   function say(id, gen, ctxList) {
-    const h = hstr(`${id}|${Phone.week()}`);
-    const c = (ctxList || []).filter(Boolean);
+    const h = hstr(`${id}|${Phone.week()}`), rc = recent(id);
+    const fresh = (arr) => { const f = arr.filter((x) => !rc.includes(x)); return f.length ? f : arr; };
+    const c = fresh((ctxList || []).filter(Boolean));
     if (c.length && h % 10 < 7) return c[(h >>> 4) % c.length];
-    return gen[(h >>> 8) % gen.length];
+    const g = fresh(gen);
+    return g[(h >>> 8) % g.length];
   }
   const when = (cond, txt) => (cond ? txt : null);
+  function msg(id, gen, ctxList) { return { m: say(id, gen, ctxList), ctx: (ctxList || []).filter(Boolean).length > 0 }; }
+  const pickW = (id, arr) => arr[hstr(`${id}|${Phone.week()}|r`) % arr.length];
+  // arkadaşla buluşma: 1 aksiyon hakkı, arkadaşlık ve moral artar
+  function friendMeet(f) {
+    const s = Game.state, p = s.player;
+    if (s.ap <= 0) return Game.toast('Bu hafta için aksiyon hakkın kalmadı. Maça çık!', 'bad');
+    s.ap -= 1; f.rel = U.clamp((f.rel || 60) + 8, 0, 100); Player.addMorale(p, 3);
+    Game.toast(`${f.n} ile güzel vakit geçirdiniz. Arkadaşlık +8`, 'good');
+    Game.save(); Game.render();
+  }
   function contacts() {
     const s = Game.state, p = s.player, L = Life.ensure(p), out = [], X = ctxNow();
     const gfName = L.gf ? L.gf.name : null;
     out.push({ id: 'mom', n: 'Annem', role: 'Aile', c: 'linear-gradient(135deg,#46e08f,#1f9d5c)', i: 'A',
-      m: say('mom', X.young
+      ...msg('mom', X.young
         ? ['Akşam yemeği 7\'de, geç kalma!', 'Ödevlerini bitirdin mi?', 'Kramponlarını kapının önüne bırakma!', 'Antrenmandan sonra doğru eve.', 'Çantanı hazırladım, su şişeni unutma.', 'Sınavın ne zaman? Biraz ders çalış.', 'Yemek yiyor musun düzgün? Kendine iyi bak.', 'Komşular hep seni soruyor, çok ünlü oldun!', 'Uyku düzenine dikkat et oğlum.', 'Bu hafta soğuk olacakmış, kalın giyin.']
         : ['Oğlum maçı izledim, seninle gurur duyuyorum.', 'Yemek yiyor musun düzgün? Kendine iyi bak.', 'Pazar yemeğe gel, en sevdiğin yemeği yapıyorum.', 'Komşular hep seni soruyor, çok ünlü oldun!', 'Babanla seni konuşuyorduk, seni çok özledik.', 'Bugün televizyonda senden bahsettiler, ağladım valla.', 'Teyzen aradı, imzalı forma istiyor.', 'Uyku düzenine dikkat et oğlum.', 'Fotoğrafını gazetede gördüm, çerçeveletiyorum!', 'Bu hafta soğuk olacakmış, kalın giyin.', 'Dua ediyorum hep senin için.'],
         [when(X.win, 'Maçı izledim, kazandınız! Mahallede bayram var!'), when(X.goals, 'Golünü izlerken sesim kısıldı! Aferin oğlum.'), when(X.loss, 'Moralini bozma oğlum, bir dahaki maçı kazanırsınız.'), when(X.inj, 'Sakatlığın nasıl? İlaçlarını aksatma, merak ediyorum.'), when(X.bench, 'Bu hafta neden oynamadın? Hoca seni neden almadı?')]),
-      r: [{ t: X.young ? 'Bu akşam erken geleceğim, beraber yemek yiyelim' : 'Bu akşam size geliyorum', act: () => Life.act('family'), ap: 1, ok: 'Oh çok sevindim! Hemen sofrayı kuruyorum.' }, { t: 'Ben de seni seviyorum anne', ok: 'Canım oğlum. Kendine dikkat et.' }] });
+      r: [{ t: X.young ? pickW('mom', ['Bu akşam erken geleceğim, beraber yemek yiyelim', 'Bu akşam evdeyim anne, beraber oturalım']) : pickW('mom', ['Bu akşam size geliyorum', 'Hafta sonu kahvaltıya geliyorum', 'Akşam yemeğe uğrarım']), act: () => Life.act('family'), ap: 1, ok: pickW('mom2', ['Oh çok sevindim! Hemen sofrayı kuruyorum.', 'Yaşasın! En sevdiğin yemeği yapıyorum.', 'Gözüm yollarda olacak!']) }, { t: pickW('mom3', ['Ben de seni seviyorum anne', 'Merak etme anne, iyiyim', 'Sağ ol anne, sen de kendine iyi bak']), ok: pickW('mom4', ['Canım oğlum. Kendine dikkat et.', 'Seni çok seviyorum.', 'Aferin benim oğluma.']) }] });
     out.push({ id: 'dad', n: 'Babam', role: 'Aile', c: 'linear-gradient(135deg,#34c4b0,#147a6c)', i: 'B',
-      m: say('dad', (X.young ? ['Hafta sonu parka gidip şut çalışalım mı?', 'Kramponlarını temizledim, parlıyor!'] : ['Arabanın yağını değiştirdin mi?', 'Eski takımın maçına gittim, seni andılar.'])
+      ...msg('dad', (X.young ? ['Hafta sonu parka gidip şut çalışalım mı?', 'Kramponlarını temizledim, parlıyor!'] : ['Arabanın yağını değiştirdin mi?', 'Eski takımın maçına gittim, seni andılar.'])
         .concat(['Dünkü maçta kanatta çok yalnız kaldın, dikkat et.', 'Antrenmanlarını aksatma, yetenek tek başına yetmez.', 'Eski maçlarını izledim, ne günlerdi!', 'Bir gün seni tribünden izlemeye geleceğim.', 'Mahalledekiler senin formanı giyiyor, haberin olsun.', 'Bu sezon kaç gol hedefliyorsun?', 'Rakip takımı izledim, sol bekleri yavaş.', 'Sabah koşusuna çıktım, senden ilham aldım!']),
         [when(X.win, '3 puan! Böyle devam.'), when(X.goals, 'O golü ben de atardım gençken... Şaka şaka, harikaydın!'), when(X.loss, 'Yenilgi de oyunun parçası. Kafanı kaldır.'), when(X.star, 'Maçın en iyisi sendin, gurur duydum.'), when(X.inj, 'Fizyoterapiste düzenli git, acele etme.')]),
-      r: [{ t: 'Hafta sonu beraber maç izleyelim', act: () => Life.act('family'), ap: 1, ok: 'Çekirdekler benden!' }, { t: 'Haklısın baba', ok: 'Aferin oğlum. Ben senin ilk hocanım, unutma.' }] });
+      r: [{ t: pickW('dad', ['Hafta sonu beraber maç izleyelim', 'Bu akşam balığa gidelim mi baba?', 'Gel beraber yürüyüşe çıkalım']), act: () => Life.act('family'), ap: 1, ok: pickW('dad2', ['Çekirdekler benden!', 'Anlaştık, oltaları hazırlıyorum!', 'Tamam, sabah erkenden çıkarız.']) }, { t: pickW('dad3', ['Haklısın baba', 'Tavsiyen için sağ ol', 'Merak etme baba, çalışıyorum']), ok: pickW('dad4', ['Aferin oğlum. Ben senin ilk hocanım, unutma.', 'Seninle gurur duyuyorum.', 'Bildiğin gibi devam et.']) }] });
     if (gfName) out.push({ id: 'gf', n: gfName, role: L.gf.married ? 'Eşin' : 'Sevgilin', c: 'linear-gradient(135deg,#ff6f8a,#c2416b)', i: gfName[0], heart: true,
-      m: say('gf', ['Bu akşam boş musun? Seni özledim.', 'Maçtaki sevincin çok tatlıydı.', 'Hafta sonu bir yerlere kaçalım mı?', 'Yeni bir restoran açılmış, gidelim mi?', 'Bugün aklım hep sendeydi.', 'Sana bir şarkı gönderdim, dinle!', 'Bu hafta çok yorgun görünüyorsun, biraz dinlen.', 'Yeni bir dizi başladım, beraber izleyelim mi?', 'Tribünden sana el salladım, gördün mü?', 'Annen beni yemeğe çağırdı, çok tatlı.'],
+      ...msg('gf', ['Bu akşam boş musun? Seni özledim.', 'Maçtaki sevincin çok tatlıydı.', 'Hafta sonu bir yerlere kaçalım mı?', 'Yeni bir restoran açılmış, gidelim mi?', 'Bugün aklım hep sendeydi.', 'Sana bir şarkı gönderdim, dinle!', 'Bu hafta çok yorgun görünüyorsun, biraz dinlen.', 'Yeni bir dizi başladım, beraber izleyelim mi?', 'Tribünden sana el salladım, gördün mü?', 'Annen beni yemeğe çağırdı, çok tatlı.'],
         [when(X.win, 'Kazandınız! Seninle gurur duyuyorum.'), when(X.goals, 'Gol attığında çığlık attım!'), when(X.loss, 'Üzülme, ben hep yanındayım.'), when(X.inj, 'Sana çorba yaptım, iyileşene kadar sana ben bakarım.')]),
-      r: [{ t: 'Bu akşam buluşalım', act: () => Life.act('date'), ap: 1, ok: 'Harika! Hazır olurum.' }, { t: 'Seni seviyorum', ok: 'Ben de seni seviyorum.' }] });
+      r: [{ t: pickW('gf', ['Bu akşam buluşalım', 'Akşam yemeğine çıkalım mı?', 'Hafta sonu sana sürprizim var']), act: () => Life.act('date'), ap: 1, ok: pickW('gf2', ['Harika! Hazır olurum.', 'Çok sevindim, bekliyorum!', 'Sabırsızlanıyorum!']) }, { t: pickW('gf3', ['Seni seviyorum', 'Seni çok özledim', 'Aklım hep sende']), ok: pickW('gf4', ['Ben de seni seviyorum.', 'Ben de seni özledim.', 'Benim de aklım sende.']) }] });
     if (!Game.inStreet()) out.push({ id: 'coach', n: 'Hoca', role: `Teknik direktör · ${Game.teamName()}`, c: 'linear-gradient(135deg,#9aa6c4,#4b5878)', i: 'H',
-      m: say('coach', ['Antrenmanda daha fazla çalışmanı istiyorum.', 'Bu hafta seni izliyorum, hazır ol.', 'Takım savunmasına daha çok yardım et.', 'Formun iyi, böyle devam.', 'Maçtan önce taktik toplantısını kaçırma.', 'Yarın video analizi var, 10\'da odadayız.', 'Pres yaparken daha agresif ol.', 'İlk dokunuşun çok önemli, üzerinde çalış.', 'Dinlenmeyi ihmal etme, fikstür yoğun.', 'Topu kaybettikten sonraki 5 saniye çok önemli.'],
+      ...msg('coach', ['Antrenmanda daha fazla çalışmanı istiyorum.', 'Bu hafta seni izliyorum, hazır ol.', 'Takım savunmasına daha çok yardım et.', 'Formun iyi, böyle devam.', 'Maçtan önce taktik toplantısını kaçırma.', 'Yarın video analizi var, 10\'da odadayız.', 'Pres yaparken daha agresif ol.', 'İlk dokunuşun çok önemli, üzerinde çalış.', 'Dinlenmeyi ihmal etme, fikstür yoğun.', 'Topu kaybettikten sonraki 5 saniye çok önemli.'],
         [when(X.win && X.goals, 'İyi oyundu, golün takımı rahatlattı.'), when(X.loss, 'Bu yenilgiyi hepimiz analiz edeceğiz.'), when(X.poor, 'Son maçta beklentimin altındaydın.'), when(X.star, 'Son maçta harikaydın, devam.'), when(X.bench, 'Bu hafta antrenmanda kendini göster, şansın gelecek.'), when(X.inj, 'Sağlık ekibiyle konuştum, acele etmiyoruz.')]),
       r: [{ t: 'Ofisinize geleyim hocam, konuşalım', act: () => Game.act('talk'), ap: 1, ok: 'Gel bakalım, kapım açık.', once: () => !Game.state.week || !Game.state.week.coachTalk }, { t: 'Anlaşıldı hocam', ok: 'Güzel. Sahada görelim.' }] });
     if (!Game.inStreet()) out.push({ id: 'team', n: 'Takım Grubu', role: Game.teamName(), c: 'linear-gradient(135deg,#7fb2ff,#1e5bd8)', i: 'T',
-      m: say('team', ['Akşam hep beraber yemeğe çıkıyoruz, geliyor musun?', 'Yarın antrenmandan önce kahve?', 'Yeni gelen çocuğa hoş geldin diyelim.', 'Kim konsol turnuvasına katılıyor?', 'Malzemeci yine forma numaralarını karıştırmış.', 'Antrenmana en geç gelen kahveleri ısmarlıyor!', 'Soyunma odasında müzik sırası kimde?', 'Kaptan doğum günü pastası getirdi!'],
+      ...msg('team', ['Akşam hep beraber yemeğe çıkıyoruz, geliyor musun?', 'Yarın antrenmandan önce kahve?', 'Yeni gelen çocuğa hoş geldin diyelim.', 'Kim konsol turnuvasına katılıyor?', 'Malzemeci yine forma numaralarını karıştırmış.', 'Antrenmana en geç gelen kahveleri ısmarlıyor!', 'Soyunma odasında müzik sırası kimde?', 'Kaptan doğum günü pastası getirdi!'],
         [when(X.win, 'Kazandık! Akşam kutlama var!'), when(X.loss, 'Kafalar dik, hafta sonu telafi ederiz.'), when(X.goals, 'Golcümüz şov yaptı!')]),
       r: [{ t: 'Geliyorum!', act: () => Game.act('team'), ap: 1, ok: 'Süper, masa ayırtıyoruz.' }, { t: 'Bu sefer pas, dinleneceğim', ok: 'Tamam, kendine iyi bak.' }] });
     if (L.manager) out.push({ id: 'agent', n: L.manager.name, role: 'Menajer', c: 'linear-gradient(135deg,#ffcf3f,#e08d0c)', i: L.manager.name[0],
-      m: L.offers && L.offers.length ? `${L.offers.length} sponsor teklifi seni bekliyor. Menajer uygulamasına koydum.` : say('agent', ['Transfer dönemi yaklaşıyor, kulaklarımız açık.', 'Bir marka seninle çalışmak istiyor olabilir, takipteyim.', 'Performansın değerini artırıyor, böyle devam.', 'Bir kulübün scout\'u seni izlemeye geldi.', 'Sözleşme maddelerini tekrar gözden geçirdim.', 'Bir televizyon programı seni konuk etmek istiyor.'],
-        [when(X.goals, 'Gol attıkça telefonum susmuyor!'), when(X.star, 'Son performansın değerini yükseltti.')]),
+      ...(L.offers && L.offers.length ? { m: `${L.offers.length} sponsor teklifi seni bekliyor. Menajer uygulamasına koydum.`, force: true } : msg('agent', ['Transfer dönemi yaklaşıyor, kulaklarımız açık.', 'Bir marka seninle çalışmak istiyor olabilir, takipteyim.', 'Performansın değerini artırıyor, böyle devam.', 'Bir kulübün scout\'u seni izlemeye geldi.', 'Sözleşme maddelerini tekrar gözden geçirdim.', 'Bir televizyon programı seni konuk etmek istiyor.'],
+        [when(X.goals, 'Gol attıkça telefonum susmuyor!'), when(X.star, 'Son performansın değerini yükseltti.')])),
       r: [{ t: 'Teklifleri göster', open: 'agent', ok: 'Hepsini uygulamaya koydum.' }, { t: 'Teşekkürler, sen bilirsin', ok: 'Merak etme, işimi biliyorum.' }] });
     const FJ = { journalist: 'Seninle kısa bir röportaj yapabilir miyim?', agent: 'Menajerlik işleri iyi gidiyor, bir gün beraber çalışalım.', pro: 'Bu hafta bizim maç zor geçti, seninki nasıldı?', doctor: 'Kendine dikkat et, sakatlık şakaya gelmez!', chef: 'Restorana gel, sana özel bir menü hazırlarım.', teacher: 'Öğrencilerim senin posterini duvara astı!', coach: 'Altyapıda çocuklara seni örnek gösteriyorum.', other: 'Yeni bir iş buldum, kutlayalım!' };
-    (Friends && Friends.on && Friends.on() ? Friends.list() : []).slice(0, 3).forEach((f, i) => out.push({ id: 'fr' + i, n: f.n, role: f.job && typeof FR_JOB !== 'undefined' ? FR_JOB[f.job] : 'Arkadaşın', c: 'linear-gradient(135deg,#c792ff,#7b3fe4)', i: (f.n.trim()[0] || '?'),
-      m: say('fr' + (f.id || i), (X.kid ? ['Teneffüste top oynayalım mı?', 'Yarın okula yeni topumu getiriyorum!', 'Ödevi yaptın mı? Bana da gösterir misin?'] : ['Hafta sonu eski mahalle ekibiyle halı saha var, haberin olsun.', 'Eski okulun önünden geçtim, seni andım.', 'Biletimi aldım, maçına geliyorum!'])
+    (typeof Friends !== 'undefined' && Friends.on && Friends.on() ? Friends.list() : []).forEach((f, i) => out.push({ id: 'f' + (f.id != null ? f.id : i), n: f.n, role: f.job && typeof FR_JOB !== 'undefined' ? FR_JOB[f.job] : 'Arkadaşın', c: 'linear-gradient(135deg,#c792ff,#7b3fe4)', i: (f.n.trim()[0] || '?'),
+      ...msg('fr' + (f.id || i), (X.kid ? ['Teneffüste top oynayalım mı?', 'Yarın okula yeni topumu getiriyorum!', 'Ödevi yaptın mı? Bana da gösterir misin?'] : ['Hafta sonu eski mahalle ekibiyle halı saha var, haberin olsun.', 'Eski okulun önünden geçtim, seni andım.', 'Biletimi aldım, maçına geliyorum!'])
         .concat(['Kanka maçını izledim, efsaneydin!', 'Ne zaman görüşüyoruz? Çok oldu!', 'İmzalı forma lazım, kuzenim deli hayranın.', 'Hâlâ o eski topunu saklıyor musun?', 'Kanka bana da bir forma ayarla!']),
         [when(f.job && FJ[f.job], FJ[f.job]), when(X.goals, 'Golünü izledim, ekrana sarıldım!'), when(X.loss, 'Kanka kafana takma, bir maç sadece.')]),
-      r: [{ t: 'Yakında buluşalım', ok: 'Söz mü? Bekliyorum!' }, { t: 'Sağ ol kanka', ok: 'Her zaman!' }] }));
+      r: [{ t: pickW('fm' + f.id, X.kid ? ['Teneffüste görüşürüz!', 'Okuldan sonra top oynayalım'] : ['Hafta sonu buluşalım', 'Akşam bir kahve içelim', 'Halı sahaya ben de gelirim']), act: () => friendMeet(f), ap: 1, ok: pickW('fo' + f.id, ['Söz mü? Bekliyorum!', 'Süper, görüşürüz!', 'Harika, çok özledim!']) }, { t: pickW('fn' + f.id, ['Sağ ol kanka', 'Haha, aynen', 'Kesin, haberleşiriz']), ok: pickW('fk' + f.id, ['Her zaman!', 'Görüşürüz kanka!', 'Kendine iyi bak!']) }] }));
     (L.kids || []).forEach((k, i) => {
       const a = Math.max(0, s.season.year - k.by);
       if (a < 7 || typeof Life.kidActs !== 'function') return;
       const acts = Life.kidActs(a); const ak = acts && acts[0];
       out.push({ id: 'kid' + i, n: k.n, role: `${a} yaş`, c: 'linear-gradient(135deg,#ffb36b,#e0672b)', i: k.n[0],
-        m: say('kid' + i, a >= 18 ? ['Baba bu hafta yemeğe gelebilir miyim?', 'İşte her şey yolunda, merak etme.', 'Senin eski maçlarını arkadaşlarıma izlettim!', 'Baba bir tavsiyene ihtiyacım var.'] : ['Baba bugün top oynayalım mı?', 'Okulda herkes senin maçını konuştu!', 'Bana yeni krampon alır mısın?', 'Baba okulda resim yaptım, seni çizdim!', 'Arkadaşlarım imzanı istiyor!', 'Baba bana şut çekmeyi öğretir misin?'],
+        ...msg('kid' + i, a >= 18 ? ['Baba bu hafta yemeğe gelebilir miyim?', 'İşte her şey yolunda, merak etme.', 'Senin eski maçlarını arkadaşlarıma izlettim!', 'Baba bir tavsiyene ihtiyacım var.'] : ['Baba bugün top oynayalım mı?', 'Okulda herkes senin maçını konuştu!', 'Bana yeni krampon alır mısın?', 'Baba okulda resim yaptım, seni çizdim!', 'Arkadaşlarım imzanı istiyor!', 'Baba bana şut çekmeyi öğretir misin?'],
           [when(X.goals, 'Baba golünü gördüm! Ben de senin gibi olacağım!'), when(X.loss, 'Üzülme baba, sen yine de en iyisisin.')]),
         r: ak ? [{ t: ak[1], act: () => Life.kidAct(i, ak[0]), ap: 1, ok: 'Yaşasın!' }, { t: 'Seni seviyorum', ok: 'Ben de seni!' }] : [{ t: 'Seni seviyorum', ok: 'Ben de seni!' }] });
     });
+    // herkes her hafta yazmaz: kişiye göre olasılık (bağlamlı bir sebep varsa daha olası)
+    const PR = { mom: 0.5, dad: 0.35, gf: 0.6, coach: 0.3, team: 0.35, agent: 0.35 };
+    out.forEach((c) => { c.pr = PR[c.id] != null ? PR[c.id] : c.id.indexOf('kid') === 0 ? 0.45 : 0.22; });
     return out;
+  }
+  // ---------------- sohbet geçmişi (kalıcı) ve gelen kutusu ----------------
+  // d.log[kişi] = [{ w, d: 'in'|'out'|'sys', t?, h?, n?, wk? }]  (son 30 satır)
+  // d.inbox = [{ id, key, w, y, src, html, btns: [etiket], seen?, keep?, ... }]  oyunun olayları (seçimli)
+  const LOGMAX = 30;
+  const logOf = (k) => { const d = Phone.data(); d.log = d.log || {}; return (d.log[k] = d.log[k] || []); };
+  const pushLog = (k, e) => { const l = logOf(k); l.push(Object.assign({ w: Phone.week() }, e)); if (l.length > LOGMAX) l.splice(0, l.length - LOGMAX); };
+  const wNum = (w) => { const [y, r] = String(w).split('-').map(Number); return (y || 0) * 100 + (r || 0); };
+  const writes = (c) => c.force || Phone._all || (hstr(`${c.id}|${Phone.week()}|pr`) % 100) < ((c.pr || 0.3) + (c.ctx ? 0.25 : 0)) * 100;
+  const XT = {
+    Ajanda: ['Hatırlatmalar', 'linear-gradient(135deg,#7fb2ff,#1e5bd8)'], Okul: ['Okul', 'linear-gradient(135deg,#ffe58a,#f5b70a)'], Basın: ['Spor muhabiri', 'linear-gradient(135deg,#ff7a45,#e0283e)'],
+    Dedem: ['Aile', 'linear-gradient(135deg,#46e08f,#1f9d5c)'], 'Taraftar Derneği': ['Taraftarlar', 'linear-gradient(135deg,#c792ff,#7b3fe4)'], 'Sağlık Ekibi': ['Kulüp', 'linear-gradient(135deg,#34c4b0,#147a6c)'],
+    Vakıf: ['Yardım kuruluşu', 'linear-gradient(135deg,#ffb36b,#e0672b)'], Kulüp: ['Kulüp', 'linear-gradient(135deg,#9aa6c4,#4b5878)'],
+  };
+  function threadInfo(k, cs) {
+    const c = (cs || contacts()).find((x) => x.id === k);
+    if (c) return c;
+    if (String(k).indexOf('x:') === 0) { const n = k.slice(2), x = XT[n] || ['', 'linear-gradient(135deg,#9aa6c4,#4b5878)']; return { id: k, n, role: x[0], c: x[1], i: n[0], r: [] }; }
+    return null;
+  }
+  // bu hafta yazan kişilerin mesajı geçmişe bir kez eklenir
+  function syncWeek(cs) {
+    const w = Phone.week();
+    cs.forEach((c) => { if (writes(c) && !logOf(c.id).some((e) => e.w === w && e.wk)) pushLog(c.id, { d: 'in', t: c.m, wk: 1 }); });
+  }
+  const pending = (k) => Inbox.list().filter((it) => it.key === k);
+  function isNew(k) {
+    const d = Phone.data(), w = Phone.week();
+    return pending(k).some((it) => !it.seen) || (d.seen[k] !== w && logOf(k).some((e) => e.w === w && e.wk));
   }
   function unread() {
     if (!Phone.on()) return 0;
+    try {
+      Inbox.sweep();
+      const cs = contacts(); syncWeek(cs);
+      const keys = new Set(cs.map((c) => c.id).concat(Inbox.list().map((it) => it.key)));
+      let n = 0; keys.forEach((k) => { if (isNew(k)) n++; });
+      return n;
+    } catch (e) { console.error(e); return 0; }
+  }
+  const lastTxt = (k) => {
+    const it = pending(k)[0];
+    if (it) { const t = document.createElement('div'); t.innerHTML = it.html; return t.textContent.trim(); }
+    const l = logOf(k), e = l[l.length - 1];
+    if (!e) return '';
+    if (e.h) { const t = document.createElement('div'); t.innerHTML = e.h; return t.textContent.trim(); }
+    return e.t || (e.n || []).join(' · ');
+  };
+  function msgList() {
+    const cs = contacts(); syncWeek(cs);
     const d = Phone.data(), w = Phone.week();
-    let n = 0;
-    try { contacts().forEach((c) => { if (d.seen[c.id] !== w) n++; }); } catch (e) { return 0; }
-    return n;
+    const keys = new Set(cs.map((c) => c.id).concat(Object.keys(d.log || {})).concat(Inbox.list().map((it) => it.key)));
+    const rows = [...keys].map((k) => { const info = threadInfo(k, cs); const l = logOf(k); return info && (l.length || pending(k).length) ? { k, info, nw: isNew(k), lw: Math.max(l.length ? wNum(l[l.length - 1].w) : 0, ...pending(k).map((it) => wNum(it.w))) } : null; }).filter(Boolean)
+      .sort((a, b) => (b.nw - a.nw) || (b.lw - a.lw));
+    const body = rows.length ? rows.map(({ k, info, nw }) => `<button class="ph-thr" data-ph-th="${esc(k)}" type="button"><span class="ph-av" style="background:${info.c}">${esc(info.i)}</span><span class="ph-thr-t"><b><span>${nw ? '<i class="ph-dot"></i>' : ''}${esc(info.n)}</span><small>${pending(k).length ? 'cevap bekliyor' : nw ? 'yeni' : d.rep[k] === w ? 'cevaplandı' : ''}</small></b><em>${esc(info.role)}</em><p>${esc(lastTxt(k))}</p></span></button>`).join('')
+      : '<p class="ph-note">Henüz mesaj yok. Ailen, arkadaşların ve takımın zaman zaman yazacak.</p>';
+    return `<div class="ph-appv">${top('Mesajlar')}<div class="ph-body">${body}</div></div>`;
+  }
+  const weekLbl = (w) => { if (w === Phone.week()) return '<span>Bu hafta</span>'; const [y, r] = String(w).split('-').map(Number); return `<span>${y}</span> · <span>${(r || 0) + 1}. hafta</span>`; };
+  function chatView(k) {
+    const cs = contacts(); syncWeek(cs);
+    const info = threadInfo(k, cs);
+    if (!info) { Phone.sub = null; return msgList(); }
+    const d = Phone.data(), w = Phone.week(), ap = Game.state.ap;
+    d.seen[k] = w;
+    const its = pending(k); its.forEach((it) => (it.seen = 1));
+    let lastW = null; const parts = [];
+    logOf(k).forEach((e) => {
+      if (e.w !== lastW) { parts.push(`<div class="ph-day">${weekLbl(e.w)}</div>`); lastW = e.w; }
+      if (e.d === 'sys') parts.push(`<div class="ph-sys">${(e.n || [e.t]).filter(Boolean).map((x) => `<span>${esc(x)}</span>`).join('')}</div>`);
+      else if (e.h) parts.push(`<div class="ph-bub in ph-ev">${e.h}</div>`);
+      else parts.push(`<div class="ph-bub ${e.d === 'out' ? 'out' : 'in'}">${esc(e.t)}</div>`);
+    });
+    const it = its[0];
+    const weekly = info.r && info.r.length && logOf(k).some((e) => e.w === w && e.wk) && d.rep[k] !== w;
+    let foot;
+    if (it) foot = `<div class="ph-replies"><span class="ph-lbl2">Cevabın</span>${it.btns.map((t, i) => `<button class="ph-rep" data-ph-ibtn="${esc(it.id)}:${i}" type="button"><span>${esc(t)}</span></button>`).join('')}</div>`;
+    else if (weekly) foot = `<div class="ph-replies"><span class="ph-lbl2">Cevabın</span>${info.r.map((r, i) => { const dis = (r.ap && ap < r.ap) || (r.once && !r.once()); return `<button class="ph-rep" data-ph-rep="${i}" type="button" ${dis ? 'disabled' : ''}><span>${esc(r.t)}</span>${r.ap ? `<em>${r.ap} aksiyon</em>` : r.open ? '<em>uygulamayı aç</em>' : ''}</button>`; }).join('')}</div>`;
+    else foot = '<div class="ph-replies"><span class="ph-lbl2">Yeni mesaj gelince burada görünür.</span></div>';
+    return `<div class="ph-appv">${top(`<span class="ph-ct"><span class="ph-av sm" style="background:${info.c}">${esc(info.i)}</span><span><span class="ph-ctn">${esc(info.n)}</span><small>${esc(info.role)}</small></span></span>`)}
+      <div class="ph-body" id="ph-chat"><div class="ph-chat" data-emo>${parts.join('')}${it ? `<div class="ph-bub in ph-ev">${it.html}</div>` : ''}</div></div>${foot}</div>`;
   }
 
   // ---------------- çizimler ----------------
@@ -280,22 +371,6 @@
       </div>
       <div class="ph-apps">${apps().map(appIcon).join('')}</div>
       <div class="ph-dock">${DOCK.map(appIcon).join('')}</div>
-    </div>`;
-  }
-  function msgList() {
-    const d = Phone.data(), w = Phone.week();
-    return `<div class="ph-appv">${top('Mesajlar')}<div class="ph-body">${contacts().map((c) => `<button class="ph-thr" data-ph-th="${c.id}" type="button"><span class="ph-av" style="background:${c.c}">${esc(c.i)}</span><span class="ph-thr-t"><b><span>${d.seen[c.id] !== w ? '<i class="ph-dot"></i>' : ''}${esc(c.n)}</span><small>${d.seen[c.id] !== w ? 'yeni' : d.rep[c.id] === w ? 'cevaplandı' : 'okundu'}</small></b><em>${esc(c.role)}</em><p>${esc(d.rep[c.id] === w ? d.last && d.last[c.id] || c.m : c.m)}</p></span></button>`).join('')}</div></div>`;
-  }
-  function chatView(id) {
-    const c = contacts().find((x) => x.id === id);
-    if (!c) { Phone.sub = null; return msgList(); }
-    const d = Phone.data(), w = Phone.week();
-    d.seen[id] = w;
-    const replied = d.rep[id] === w, my = d.my && d.my[id], back = d.last && d.last[id], note = replied && d.note && d.note[id];
-    const ap = Game.state.ap;
-    return `<div class="ph-appv">${top(`<span class="ph-ct"><span class="ph-av sm" style="background:${c.c}">${esc(c.i)}</span><span><span class="ph-ctn">${esc(c.n)}</span><small>${esc(c.role)}</small></span></span>`)}
-      <div class="ph-body" id="ph-chat"><div class="ph-chat" data-emo><div class="ph-day">Bu hafta</div><div class="ph-bub in">${esc(c.m)}</div>${replied && my ? `<div class="ph-bub out">${esc(my)}</div>` : ''}${replied && back ? `<div class="ph-bub in">${esc(back)}</div>` : ''}${note && note.length ? `<div class="ph-sys">${[].concat(note).map((x) => `<span>${esc(x)}</span>`).join('')}</div>` : ''}</div></div>
-      ${replied ? '<div class="ph-replies"><span class="ph-lbl2">Gelecek hafta yeni mesajlar gelir.</span></div>' : `<div class="ph-replies"><span class="ph-lbl2">Cevabın</span>${c.r.map((r, i) => { const dis = (r.ap && ap < r.ap) || (r.once && !r.once()); return `<button class="ph-rep" data-ph-rep="${i}" type="button" ${dis ? 'disabled' : ''}><span>${esc(r.t)}</span>${r.ap ? `<em>${r.ap} aksiyon</em>` : r.open ? '<em>uygulamayı aç</em>' : ''}</button>`; }).join('')}</div>`}
     </div>`;
   }
   function wikiView() {
@@ -528,6 +603,7 @@
       <div class="ph-sch-h"><div><span>${p.age} yaş</span><b>${esc(Player.fullName(p))}</b></div><div class="iq"><small>Zeka</small><b>${iq}</b></div></div>
       <div class="ph-bar sc"><i style="width:${U.clamp(iq, 0, 100)}%;background:#2f6ee8"></i></div>
       <p class="ph-note">Zeka antrenman verimini artırır. Derste işlenen konular dönem sınavında çıkar.</p>
+      ${(() => { const mi = Inbox.list().find((it) => it.src === 'mid'); return mi ? `<button class="ph-cta" data-ph-ibtn="${esc(mi.id)}:0" type="button">Ara dönem sınavına gir</button>` : ''; })()}
       <div class="ph-secl">Sınavlar</div>
       <div class="ph-exams"><div><span>Ara dönem</span>${grade(sc.ex.mid)}<small>${sc.ex.mid ? 'Tamamlandı' : `${mid + 1}. hafta`}</small></div><div><span>Sezon sonu</span>${grade(sc.ex.fin)}<small>${sc.ex.fin ? 'Tamamlandı' : 'Sezonun sonunda'}</small></div></div>
       <div class="ph-secl">Bu yılın dersleri</div>
@@ -641,6 +717,7 @@
       Game.save(); Phone.render();
     });
     on('[data-ph-rep]', (b) => reply(+b.dataset.phRep));
+    on('[data-ph-ibtn]', (b) => { const [id, i] = b.dataset.phIbtn.split(':'); Inbox.resolve(id, +i); });
     on('[data-ph-day]', (b) => { Phone.day = b.dataset.phDay; Phone.render(); });
     on('[data-ph-mon]', (b) => {
       const k = +b.dataset.phMon;
@@ -662,11 +739,11 @@
     });
   }
   function reply(i) {
-    const id = Phone.sub, c = contacts().find((x) => x.id === id);
+    const k = Phone.sub, c = contacts().find((x) => x.id === k);
     if (!c) return;
     const r = c.r[i], d = Phone.data(), w = Phone.week(), s = Game.state;
-    if (!r || d.rep[id] === w) return;
-    if (r.open) { d.rep[id] = w; (d.my = d.my || {})[id] = r.t; (d.last = d.last || {})[id] = r.ok; Game.save(); Phone.app = r.open; Phone.sub = null; return Phone.render(); }
+    if (!r || d.rep[k] === w) return;
+    if (r.open) { d.rep[k] = w; pushLog(k, { d: 'out', t: r.t }); pushLog(k, { d: 'in', t: r.ok }); Game.save(); Phone.app = r.open; Phone.sub = null; return Phone.render(); }
     let note = null;
     if (r.act) {
       const ap0 = s.ap;
@@ -676,10 +753,159 @@
       if (Game.state.ap >= ap0) { cap.forEach((m) => flash(m.msg, m.type)); Phone.render(); return; } // hak harcanmadıysa (para yok, hak yok vb.) cevap gönderilmemiş sayılır
       note = cap.map((m) => m.msg).slice(0, 3);
     }
-    d.rep[id] = w; (d.my = d.my || {})[id] = r.t; (d.last = d.last || {})[id] = r.ok;
-    d.note = d.note || {}; if (note && note.length) d.note[id] = note; else delete d.note[id];
+    d.rep[k] = w;
+    pushLog(k, { d: 'out', t: r.t }); pushLog(k, { d: 'in', t: r.ok });
+    if (note && note.length) pushLog(k, { d: 'sys', n: note });
     Game.save();
     Phone.render();
+  }
+
+  // ---------------- oyunun seçimli olayları telefona gelir (ana ekranda pencere açılmaz, hızlı ilerleme durmaz) ----------------
+  const EV_FROM = { mom_bday: 'mom', mom: 'mom', school: 'mom', dad_match: 'dad', gf_trip: 'gf', marriage_crisis: 'gf', gf_leaves: 'gf', gf_jealous: 'gf', party: 'team', senior_tip: 'team', veteran: 'team', extra: 'coach', u_promo: 'coach', captain_fk: 'coach', sponsor: 'agent', scout: 'agent', interview: 'x:Basın', tvshow: 'x:Basın', gift: 'x:Dedem', signing: 'x:Taraftar Derneği', ankle: 'x:Sağlık Ekibi', physio: 'x:Sağlık Ekibi', charity: 'x:Vakıf' };
+  const LX_FROM = { lic: 'x:Ajanda', uni: 'x:Ajanda', md: 'x:Ajanda', ny: 'mom', bay: 'mom', bd: 'team', lang: 'x:Kulüp' };
+  function keyFor(k) {
+    const L = Life.ensure(Phone.p());
+    if (k === 'gf' && !L.gf) return 'x:Ajanda';
+    if (k === 'agent' && !L.manager) return 'x:Ajanda';
+    if ((k === 'coach' || k === 'team') && Game.inStreet()) return k === 'team' ? 'mom' : 'x:Ajanda';
+    return k;
+  }
+  const stripTag = (html) => { const t = document.createElement('div'); t.innerHTML = html; t.querySelectorAll('.ev-tag').forEach((x) => x.remove()); return t.innerHTML.trim(); };
+  const Inbox = {
+    fns: {}, _busy: false,
+    list() { const d = Phone.data(); return (d.inbox = d.inbox || []); },
+    add(it, fns) {
+      it.id = `i${Date.now().toString(36)}${Math.floor(Math.random() * 1e4)}`;
+      it.w = Phone.week(); it.y = Game.state.season.year;
+      Inbox.list().push(it);
+      if (fns) Inbox.fns[it.id] = fns;
+    },
+    // olayın penceresini açmadan yakalar: { html, btns }
+    capture(run) {
+      const m0 = Game.modal; let got = null;
+      Inbox._busy = true;
+      Game.modal = function (html, btns) { if (!got) { got = { html, btns: (btns || []).filter(Boolean) }; return document.createElement('div'); } return m0.apply(this, arguments); };
+      try { run(); } catch (e) { console.error(e); } finally { Game.modal = m0; Inbox._busy = false; }
+      return got;
+    },
+    addCaptured(key, src, extra, got) {
+      if (!got) return;
+      Inbox.add(Object.assign({ key, src, html: stripTag(got.html), btns: got.btns.map((b) => b.t) }, extra), got.btns.map((b) => b.fn || (() => {})));
+    },
+    // kayıt yeniden yüklendiyse seçeneklerin işlevleri yeniden kurulur
+    rebuild(it) {
+      const s = Game.state;
+      if (it.src === 'ev') {
+        const ev = Events.list.find((e) => e.id === it.ev);
+        if (!ev) return null;
+        return ev.opts.map((o) => () => {
+          Object.assign(Events, it.cache || {});
+          let res; try { res = o.fx(Game.state.player); } finally { Events.reset(); }
+          Game.save(); Game.render(); if (res) Game.toast(res, 'good');
+        });
+      }
+      if (it.src === 'mid') return [midFn];
+      let got = null;
+      if (it.src === 'lesson') got = Inbox.capture(() => School.lesson());
+      else if (it.src === 'fr' && it.fev && it.fev.k !== 'join' && Friends.get(it.fev.id)) { s.pendingFriend = it.fev; got = Inbox.capture(() => Fr0.call(Friends)); s.pendingFriend = null; }
+      else if (it.src === 'lx' && it.lk && it.lk !== 'bd') { s.pendingLX = it.lk; got = Inbox.capture(() => Lx0.call(LifeX)); s.pendingLX = null; }
+      return got ? got.btns.map((b) => b.fn || (() => {})) : null;
+    },
+    resolve(id, idx) {
+      const L = Inbox.list(), it = L.find((x) => x.id === id);
+      if (!it) return Phone.render();
+      const fns = Inbox.fns[id] || Inbox.rebuild(it);
+      L.splice(L.indexOf(it), 1); delete Inbox.fns[id];
+      pushLog(it.key, { d: 'in', h: it.html }); pushLog(it.key, { d: 'out', t: it.btns[idx] || '' });
+      if (!fns || !fns[idx]) { pushLog(it.key, { d: 'sys', n: ['Bu konu kapandı.'] }); Game.save(); return Phone.render(); }
+      Phone._cap = [];
+      try { fns[idx](); } catch (e) { console.error(e); }
+      const cap = Phone._cap || []; Phone._cap = null;
+      const n = cap.map((m) => m.msg).filter(Boolean).slice(0, 3);
+      if (n.length) pushLog(it.key, { d: 'sys', n });
+      Game.save();
+      Phone.render();
+    },
+    // hafta geçince cevapsız kalan olaylar kapanır; tek seçenekli (bilgi) olaylar kendiliğinden uygulanır
+    sweep() {
+      if (Inbox._sw) return;
+      const s = Game.state, w = Phone.week(), L = Inbox.list();
+      const old = L.filter((it) => (it.keep ? (it.y !== s.season.year || (s.school && s.school.ex && s.school.ex.mid) || !(typeof School !== 'undefined' && School.on())) : it.w !== w));
+      if (!old.length) return;
+      Inbox._sw = true;
+      try {
+        old.forEach((it) => {
+          L.splice(L.indexOf(it), 1);
+          pushLog(it.key, Object.assign({ d: 'in', h: it.html }, { w: it.w }));
+          if (it.src === 'ev' && it.btns.length === 1) {
+            const fns = Inbox.fns[it.id] || Inbox.rebuild(it);
+            Phone._cap = [];
+            try { if (fns && fns[0]) fns[0](); } catch (e) { console.error(e); }
+            const n = (Phone._cap || []).map((m) => m.msg).filter(Boolean).slice(0, 3); Phone._cap = null;
+            if (n.length) pushLog(it.key, { d: 'sys', n, w: it.w });
+          }
+          delete Inbox.fns[it.id];
+        });
+      } finally { Inbox._sw = false; }
+    },
+  };
+  Phone.inbox = Inbox;
+  Phone.contacts = () => contacts(); Phone.writes = (c) => writes(c);
+  const midFn = () => { if (typeof School !== 'undefined') School.exam('mid').then(() => { Game.save(); Game.render(); }); };
+  // zincir: yakalama sırasında oyunun "sıradaki bekleyen" çağrısı ertelenir, olay kaydedilince devam eder
+  const cp0 = Game.checkPending;
+  Game.checkPending = function () { if (Inbox._busy) return; return cp0.apply(this, arguments); };
+  const after = () => { Game.save(); try { Phone.badge(); if (Phone.open) Phone.render(); } catch (e) { /* yok */ } Game.checkPending(); };
+  let Fr0 = null, Lx0 = null;
+  if (typeof Events !== 'undefined') {
+    const Ev0 = Events.show;
+    Events.show = function () {
+      const s = Game.state, ev = Events.list.find((e) => e.id === s.pendingEvent);
+      if (!Phone.on() || !ev) return Ev0.apply(this, arguments);
+      Events.reset();
+      let text = ''; try { text = ev.text(); } catch (e) { console.error(e); s.pendingEvent = null; return Game.checkPending(); }
+      const cache = { _mate: Events._mate, _amt: Events._amt, _senior: Events._senior, _legend: Events._legend, _tip: Events._tip };
+      s.pendingEvent = null;
+      Inbox.add({ key: keyFor(EV_FROM[ev.id] || 'x:Ajanda'), src: 'ev', ev: ev.id, cache, html: `<h3>${U.esc(text)}</h3>`, btns: ev.opts.map((o) => o.t) });
+      after();
+    };
+  }
+  if (typeof Friends !== 'undefined') {
+    Fr0 = Friends.show;
+    Friends.show = function () {
+      const s = Game.state, fev = s.pendingFriend, f = fev && Friends.get(fev.id);
+      if (!Phone.on() || !f || !Friends.on()) return Fr0.apply(this, arguments);
+      Inbox.addCaptured('f' + f.id, 'fr', { fev }, Inbox.capture(() => Fr0.call(Friends)));
+      after();
+    };
+  }
+  if (typeof LifeX !== 'undefined') {
+    Lx0 = LifeX.show;
+    LifeX.show = function () {
+      const s = Game.state, lk = s.pendingLX;
+      if (!Phone.on() || !LifeX.on() || !lk) return Lx0.apply(this, arguments);
+      Inbox.addCaptured(keyFor(LX_FROM[lk] || 'x:Ajanda'), 'lx', { lk }, Inbox.capture(() => Lx0.call(LifeX)));
+      after();
+    };
+  }
+  // hızlı ilerleme sırasında hediye paketi bekler (ilerleme bölünmez); sonraki haftada ana ekranda açılır
+  if (typeof Gift !== 'undefined' && Gift.show) {
+    const Gf0 = Gift.show;
+    Gift.show = function () { if (typeof FF !== 'undefined' && FF.on) return; return Gf0.apply(this, arguments); };
+  }
+  if (typeof School !== 'undefined') {
+    const Sc0 = School.show;
+    School.show = function () {
+      const s = Game.state, k = s.pendingSchool;
+      if (!Phone.on() || !School.on() || !k) return Sc0.apply(this, arguments);
+      if (k === 'mid') {
+        s.pendingSchool = null;
+        if (!Inbox.list().some((it) => it.src === 'mid')) Inbox.add({ key: 'x:Okul', src: 'mid', keep: 1, html: '<h3>Ara dönem sınavı zamanı!</h3><p>Derste işlenen konular çıkacak. Hazır olduğunda sınava gir.</p>', btns: ['Sınava gir'] }, [midFn]);
+        return after();
+      }
+      Inbox.addCaptured('x:Okul', 'lesson', {}, Inbox.capture(() => Sc0.call(School)));
+      after();
+    };
   }
   // Telefon açıkken oyunun köşe bildirimleri gösterilmez: sohbette etkisi konuşmanın içinde küçük bir satır olur,
   // diğer uygulamalarda telefon ekranının altında kısa bir not belirir. Bildirim geçmişine (zil) yine kaydedilir.
@@ -696,7 +922,7 @@
   if (!Game._phoneToast) {
     const toast0 = Game.toast;
     Game.toast = function (msg, type) {
-      if (!Phone.open) return toast0.apply(this, arguments);
+      if (!Phone.open && !Phone._cap) return toast0.apply(this, arguments);
       try { if (typeof Notifs !== 'undefined' && Notifs.push) Notifs.push(msg, type); } catch (e) { /* yok */ }
       const m = { msg: U.plain(String(msg)), type: type || '' };
       if (Phone._cap) Phone._cap.push(m); else flash(m.msg, m.type);

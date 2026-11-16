@@ -2000,3 +2000,55 @@
 8955|desde {0}
 
 8956|Início
+8957|Esse é o meu menino.
+8958|Não paro de pensar em você
+8959|Vamos tomar um café hoje à noite
+8960|Passo aí para jantar
+8961|Vamos sair para jantar?
+8962|Combinado, vou preparar as varas!
+8963|Hora da prova do meio do ano!
+8964|Fazer a prova do meio do ano
+8965|Também estou com saudade.
+8966|Também penso em você.
+8967|Continue do seu jeito.
+8968|Vamos pescar hoje à noite, pai?
+8969|Estou em casa hoje, mãe, vamos ficar juntos
+8970|Este assunto foi encerrado.
+8971|Vai cair o que foi visto na aula. Faça a prova quando estiver pronto.
+8974|Vamos caminhar juntos
+8975|Até mais, mano!
+8976|Vou ficar te esperando!
+8977|Vamos nos ver no fim de semana
+8978|Vou tomar café da manhã aí no fim de semana
+8979|Tenho uma surpresa para você no fim de semana
+8980|Haha, isso aí
+8981|Também vou na pelada
+8982|Ótimo, estava com saudade!
+8983|Lembretes
+8984|Ainda não há mensagens. Família, amigos e time vão escrever de vez em quando.
+8987|Se cuida!
+8988|Claro, a gente se fala
+8989|Vamos jogar bola depois da escola
+8990|Mal posso esperar!
+8991|Valeu, mãe, se cuida também
+8992|Departamento médico
+8993|Te amo muito.
+8994|Estou morrendo de saudade
+8995|Repórter esportivo
+8996|Show, até mais!
+8997|Beleza, a gente sai cedinho.
+8998|Torcida organizada
+8999|Obrigado pelo conselho
+9000|A gente se vê no recreio!
+9001|Instituição de caridade
+9002|Oba! Vou fazer sua comida favorita.
+9004|Novas mensagens aparecerão aqui.
+9013|Vocês se divertiram, {0}. Amizade +8
+9005|Que alegria, te espero!
+9006|Agenda
+9007|Imprensa
+9008|Vovô
+9009|Fundação
+9010|aguardando resposta
+9011|Fica tranquila, mãe, estou bem
+9012|Fica tranquilo, pai, estou me dedicando

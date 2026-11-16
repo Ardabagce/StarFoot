@@ -2000,3 +2000,55 @@
 8955|depuis {0}
 
 8956|Accueil
+8957|C'est bien mon fils.
+8958|Je pense tout le temps à toi
+8959|On prend un café ce soir
+8960|Je passe pour le dîner
+8961|On sort dîner ?
+8962|Marché conclu, je prépare les cannes !
+8963|C'est l'heure de l'examen de mi-parcours !
+8964|Passer l'examen de mi-parcours
+8965|Tu me manques aussi.
+8966|Moi aussi je pense à toi.
+8967|Continue comme tu sais faire.
+8968|On va pêcher ce soir, papa ?
+8969|Je suis à la maison ce soir, maman, passons du temps ensemble
+8970|Ce sujet est clos.
+8971|Les sujets vus en classe tomberont. Passe l'examen quand tu es prêt.
+8974|Allons marcher ensemble
+8975|À plus, frérot !
+8976|Je t'attendrai !
+8977|Voyons-nous ce week-end
+8978|Je viens pour le petit-déjeuner ce week-end
+8979|J'ai une surprise pour toi ce week-end
+8980|Haha, carrément
+8981|Je viens aussi au foot à cinq
+8982|Super, tu m'as manqué !
+8983|Rappels
+8984|Pas encore de messages. Ta famille, tes amis et ton équipe écriront de temps en temps.
+8987|Prends soin de toi !
+8988|Bien sûr, on se tient au courant
+8989|On joue au foot après l'école
+8990|J'ai hâte !
+8991|Merci, maman, prends soin de toi aussi
+8992|Staff médical
+8993|Je t'aime très fort.
+8994|Tu me manques tellement
+8995|Journaliste sportif
+8996|Super, à plus !
+8997|D'accord, on part tôt le matin.
+8998|Club des supporters
+8999|Merci pour le conseil
+9000|On se voit à la récré !
+9001|Association caritative
+9002|Youpi ! Je prépare ton plat préféré.
+9004|Les nouveaux messages apparaîtront ici.
+9013|Super moment avec {0}. Amitié +8
+9005|Trop contente, je t'attends !
+9006|Agenda
+9007|Presse
+9008|Papi
+9009|Fondation
+9010|en attente de réponse
+9011|Ne t'inquiète pas, maman, je vais bien
+9012|T'inquiète pas, papa, je bosse
