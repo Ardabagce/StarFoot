@@ -58,10 +58,10 @@ const fresh = async (b, extra) => {
   await pg.waitForTimeout(250); await shot(pg, 'k_dream');
   await clearToasts(pg); await pg.waitForTimeout(100); await shot(pg, 'k_card');
   // Starpedia (kariyer sayfası) ve emeklilik ekranı (oğlunla devam et)
-  await pg.evaluate(() => { const s = Game.state, p = s.player; p.age = 38; p.totals = Object.assign(p.totals || {}, { goals: 412, assists: 188, apps: 640 }); try { Game.retire(); } catch (e) { console.log('retire', e.message); } });
+  await pg.evaluate(() => { const s = Game.state, p = s.player; p.age = 38; p.totals = Object.assign(p.totals || {}, { goals: 412, assists: 188, apps: 640, ratingSum: 640 * 7.68 }); p.intl = Object.assign(p.intl || {}, { caps: 96, goals: 44 }); p.money = 48.6e6; p.trophies = ['2029 Yıldızlar Ligi Şampiyonu', '2030 Gol Kralı', '2031 Altın Yıldız', '2032 Şampiyonlar Kupası', '2034 Dünya Şampiyonası']; try { Game.retire(); } catch (e) { console.log('retire', e.message); } });
   await pg.waitForTimeout(1200);
   for (let i = 0; i < 6; i++) { const open = await pg.evaluate(() => { const m = document.getElementById('modal'); if (m.classList.contains('hidden')) return false; const bb = m.querySelector('.modal-btns button:last-child'); if (bb) bb.click(); else m.classList.add('hidden'); return true; }); if (!open) break; await pg.waitForTimeout(500); }
-  await pg.evaluate(() => window.scrollTo(0, 0)); await pg.waitForTimeout(300);
+  await pg.evaluate(() => { const h = document.querySelector('.heir'); if (h) h.scrollIntoView({ block: 'center' }); }); await pg.waitForTimeout(300);
   await shot(pg, 'k_retire'); await shot(pg, 'k_retire_full', true);
   console.log('heir button:', await pg.evaluate(() => { const b = [...document.querySelectorAll('#end button')].map((x) => x.innerText.trim()); return b.join(' | '); }));
   await pg.close();

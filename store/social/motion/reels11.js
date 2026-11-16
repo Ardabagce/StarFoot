@@ -68,7 +68,7 @@ const vOglum = timeline([
   [1.6, (lt, d) => { cutF(lt); scene('ceremony', '', 'KUPALARI', 'TOPLADIM', lt, d, { bg: GOLDP, tag: 'ŞAMPİYON', sy: 0.15 }); confetti(lt, 0.15, 60, ['#ffd84a', '#ffffff']); }],
   [2.1, (lt, d) => { cutF(lt); darkBg(BLUE, 'AİLE', lt); phoneFocus('k_baby', lt, d, 0.12, 1.25, 1.32); cap(lt, d, 'AMA EN GÜZEL GOLÜM', 'OĞLUMUN DOĞUMUYDU', 230, 80, 112); chip('İSMİNİ SEN SEÇİYORSUN', 1760, seg(lt, 0.5, 0.8)); }],
   [2.6, (lt, d) => { cutF(lt); darkBg(BLUE, 'AİLE', lt); phoneFocus('k_card', lt, d, 0.12, 1.2, 1.28); cap(lt, d, 'TOP OYNADIK, MAÇIMA GELDİ', 'BAĞIMIZ HER HAFTA BÜYÜDÜ', 230, 70, 100); shareAsk(lt, d, 'BUNU FUTBOL DELİSİ', 'BABANA GÖNDER', 1520); }],
-  [2.2, (lt, d) => { cutF(lt); darkBg(GOLDP, 'YENİ NESİL', lt); phoneFocus('k_retire', lt, d, 0.9, 1.75, 1.85); cap(lt, d, 'BU YÜZDEN EMEKLİ OLUNCA', 'OĞLUMLA DEVAM ETTİM', 230, 76, 108); stores(lt); }],
+  [2.2, (lt, d) => { cutF(lt); darkBg(GOLDP, 'YENİ NESİL', lt); phoneFocus('k_retire', lt, d, 0.5, 1.0, 1.05); cap(lt, d, 'BU YÜZDEN EMEKLİ OLUNCA', 'OĞLUMLA DEVAM ETTİM', 230, 76, 108); stores(lt); }],
   [3.6, (lt) => endBoth(lt, 'HİKÂYENİ SEN YAZ')],
 ]);
 
@@ -102,7 +102,7 @@ const vSen = timeline([
   [1.7, (lt, d) => { cutF(lt); full('moment17', 1.05 + lt * 0.05, 0.5, 0.55); hook(lt, 'BU YÜZDEN', 'HER ŞUTU SEN ÇEKTİN', 0.0, d - 0.05, 1450, 88, 120); }],
   [1.8, (lt, d) => { cutF(lt); full('gstar', 1.04 + lt * 0.03, 0.5, 0.4); hook(lt, 'DÜNYANIN EN İYİSİ', 'ALTIN YILDIZ SENİN', 0.0, d - 0.05, 1480, 84, 116); confetti(lt, 0.1, 70, ['#ffd84a', '#ffffff']); }],
   [2.5, (lt, d) => { cutF(lt); darkBg(BLUE, 'AİLE', lt); phoneFocus('k_dream', lt, d, 0.08, 1.2, 1.26); cap(lt, d, 'OĞLUN DA', 'SENİN GİBİ OLMAK İSTİYOR', 230, 86, 104); shareAsk(lt, d, 'FUTBOLCU OLAMAYAN O', 'ARKADAŞINA GÖNDER', 1520); }],
-  [2.0, (lt, d) => { cutF(lt); darkBg(GOLDP, 'YENİ NESİL', lt); phoneFocus('k_retire', lt, d, 0.9, 1.75, 1.85); cap(lt, d, 'VE HİKÂYEN', 'OĞLUNLA DEVAM EDİYOR', 230, 86, 108); stores(lt); }],
+  [2.0, (lt, d) => { cutF(lt); darkBg(GOLDP, 'YENİ NESİL', lt); phoneFocus('k_retire', lt, d, 0.5, 1.0, 1.05); cap(lt, d, 'VE HİKÂYEN', 'OĞLUNLA DEVAM EDİYOR', 230, 86, 108); stores(lt); }],
   [3.6, (lt) => endBoth(lt, 'KARİYERİNİ SEN YAZ')],
 ]);
 
