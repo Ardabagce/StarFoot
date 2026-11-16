@@ -2052,3 +2052,43 @@
 9010|in attesa di risposta
 9011|Non preoccuparti, mamma, sto bene
 9012|Tranquillo, papà, mi sto impegnando
+9014|Provini del vivaio
+9015|Lo adoro.
+9016|In bocca al lupo!
+9017|Un punto è pur sempre un punto.
+9018|Questa squadra è un'altra cosa!
+9019|Questo ragazzo diventerà fortissimo.
+9020|Me lo aspettavo.
+9021|Continua così!
+9022|Faremo meglio.
+9023|Il tuo compleanno
+9024|Leggenda!
+9025|Ho già comprato la sua maglia.
+9026|CLASSIFICA MARCATORI
+9027|La corsa al titolo di capocannoniere
+9028|Che scatto!
+9029|Bravissimi!
+9030|Siamo sempre con voi.
+9031|PARTITA DI COPPA
+9032|Testa alta!
+9033|Festa
+9034|CLASSIFICA
+9035|Avversario deciso dal sorteggio
+9036|Stagione finita
+9037|Finalmente!
+9038|CALCIOMERCATO
+9039|Ci rialzeremo.
+9048|Voci di mercato: il {0} si muove per {1}.
+9040|Tutto il giorno
+9041|Wow!
+9042|Aspetta la nuova stagione
+9043|È nata una stella!
+9049|Partita della nazionale {0}
+9044|Tre punti in tasca!
+9045|Giorno di partita! Tutti insieme!
+9050|{0} h
+9051|{0} g
+9047|GIORNO DI PARTITA
+9052|Vivi con la tua famiglia
+9053|Casa di famiglia
+9054|4 locali · 120 m² · Quartiere

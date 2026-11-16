@@ -2052,3 +2052,43 @@
 9010|esperando respuesta
 9011|Tranquila, mamá, estoy bien
 9012|Tranquilo, papá, estoy trabajando duro
+9014|Pruebas de cantera
+9015|Me encanta.
+9016|¡Suerte!
+9017|Un punto es un punto.
+9018|¡Este equipo es otra cosa!
+9019|Este chico va a ser muy bueno.
+9020|Me lo esperaba.
+9021|¡Sigue así!
+9022|Lo haremos mejor.
+9023|Tu cumpleaños
+9024|¡Leyenda!
+9025|Ya me compré su camiseta.
+9026|PICHICHI
+9027|La carrera por el pichichi
+9028|¡Qué fotaza!
+9029|¡Olé!
+9030|Siempre estamos con vosotros.
+9031|PARTIDO DE COPA
+9032|¡Cabeza alta!
+9033|Celebración
+9034|CLASIFICACIÓN
+9035|Rival por sorteo
+9036|Temporada terminada
+9037|¡Por fin!
+9038|FICHAJES
+9039|Nos levantaremos.
+9048|Rumor de fichaje: el {0} va a por {1}.
+9040|Todo el día
+9041|¡Vaya!
+9042|Espera a la nueva temporada
+9043|¡Ha nacido una estrella!
+9049|Partido internacional {0}
+9044|¡Tres puntos al bolsillo!
+9045|¡Día de partido! ¡Todos juntos!
+9050|{0} h
+9051|{0} d
+9047|DÍA DE PARTIDO
+9052|Vives con tu familia
+9053|Casa familiar
+9054|3 hab. · 120 m² · Barrio

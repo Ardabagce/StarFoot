@@ -2052,3 +2052,43 @@
 9010|wartet auf Antwort
 9011|Keine Sorge, Mama, mir geht's gut
 9012|Keine Sorge, Papa, ich trainiere fleißig
+9014|Akademie-Probetraining
+9015|Liebe ich.
+9016|Viel Erfolg!
+9017|Ein Punkt ist ein Punkt.
+9018|Dieses Team ist der Wahnsinn!
+9019|Aus dem Jungen wird mal was Großes.
+9020|Das habe ich erwartet.
+9021|Weiter so!
+9022|Das können wir besser.
+9023|Dein Geburtstag
+9024|Legendär!
+9025|Ich habe sein Trikot schon gekauft.
+9026|TORJÄGERLISTE
+9027|Das Rennen um die Torjägerkanone
+9028|Tolles Foto!
+9029|Stark!
+9030|Wir stehen immer hinter euch.
+9031|POKALSPIEL
+9032|Kopf hoch!
+9033|Feier
+9034|TABELLE
+9035|Gegner wird ausgelost
+9036|Saison vorbei
+9037|Endlich!
+9038|TRANSFER
+9039|Wir kommen zurück.
+9048|Transfergerücht: {0} bemüht sich um {1}.
+9040|Ganztägig
+9041|Wow!
+9042|Warte auf die neue Saison
+9043|Ein Star ist geboren!
+9049|{0}-Länderspiel
+9044|Drei Punkte im Sack!
+9045|Spieltag! Alle zusammen!
+9050|{0} Std.
+9051|{0} T.
+9047|SPIELTAG
+9052|Du wohnst bei deiner Familie
+9053|Elternhaus
+9054|4 Zimmer · 120 m² · Wohnviertel

@@ -21,13 +21,15 @@ const LifeX = {
     const D = s.lifex.done;
     if (p.bm == null) p.bm = U.randi(0, 11);
     // takvim: sezon Ağustos'ta başlar, Mayıs'ta biter
-    const month = (7 + Math.floor((r / n) * 10)) % 12;
+    // telefondaki takvimle aynı ay (yılbaşı, anneler günü, doğum günü takvimdeki haftaya denk gelir)
+    const month = typeof Phone !== 'undefined' && Phone.monthOf ? Phone.monthOf(r) : (7 + Math.floor((r / n) * 10)) % 12;
     const ev = (k) => { D[k] = 1; s.pendingLX = k; };
     if (p.age >= 18 && !p.license && !D.lic && !p.licAsked) { p.licAsked = 1; return ev('lic'); }
     if (p.age >= 18 && p.age <= 30 && !p.uni && !p.uniAsked && (!s.school || s.school.done || p.age > 18)) { p.uniAsked = 1; return ev('uni'); }
-    if (month === 0 && !D.ny) return ev('ny');
-    if (month === 4 && !D.md) return ev('md');
-    if (month === p.bm && !D.bd) return ev('bd');
+    const hol = (k, m) => (typeof Phone !== 'undefined' && Phone.holidayRound ? Phone.holidayRound(k, r) : month === m);
+    if (hol('ny', 0) && !D.ny) return ev('ny');
+    if (hol('md', 4) && !D.md) return ev('md');
+    if ((typeof Phone !== 'undefined' && Phone.isBdayRound ? Phone.isBdayRound(r) : month === p.bm) && !D.bd) return ev('bd');
     if (LX_BAYRAM.includes(p.nation)) {
       if (s.lifex.bm == null) s.lifex.bm = U.pick([9, 10, 11, 1, 2, 3]);
       if (month === s.lifex.bm && !D.bay) return ev('bay');

@@ -3169,8 +3169,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"phone.js"
+"lang-pt.js"
 ],
 "(pen. {}-{})": [
 "coach.js",
@@ -7945,7 +7944,8 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"match.js"
+"match.js",
+"phone.js"
 ],
 "{} şut çekti, kaleci kurtardı.": [
 "coachlive.js",
@@ -9839,7 +9839,8 @@
 "VS": [
 "coachui.js",
 "game.js",
-"meta.js"
+"meta.js",
+"phone.js"
 ],
 "Rakip oyun anlayışı": [
 "coachui.js",
@@ -37222,7 +37223,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"phone.js"
 ],
 "Bu çocuk ileride efsane olur": [
 "extras.js",
@@ -38668,7 +38670,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"phone.js"
 ],
 "Henüz paylaşım yok. Gol at ya da haftalık planda \"Sosyal Medya\" ile paylaşım yap.": [
 "extras.js"
@@ -42904,7 +42907,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"phone.js"
 ],
 "ALTYAPI SEÇMELERİ · 3 istasyon: {}. Tribünde kulüplerin scoutları var!": [
 "game.js",
@@ -63674,6 +63678,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"phone.js",
 "wcx.js"
 ],
 "Aşama": [
@@ -67441,6 +67446,7 @@
 "lang-pt.js",
 "match.js",
 "minigame.js",
+"phone.js",
 "wc.js"
 ],
 "UÇAMADIN": [
@@ -76274,7 +76280,8 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"lifex.js"
+"lifex.js",
+"phone.js"
 ],
 "Yılbaşı gecesi! Yeni yıla nerede gireceksin?": [
 "lang-ar.js",
@@ -76434,7 +76441,8 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"lifex.js"
+"lifex.js",
+"phone.js"
 ],
 "Bugün Anneler Günü! Annen için ne yapacaksın?": [
 "lang-ar.js",
@@ -88614,8 +88622,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"phone.js"
+"lang-pt.js"
 ],
 "Annem": [
 "lang-ar.js",
@@ -92041,8 +92048,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"phone.js"
+"lang-pt.js"
 ],
 "Dinlenmeyi ihmal etme, fikstür yoğun.": [
 "lang-ar.js",
@@ -93385,8 +93391,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"phone.js"
+"lang-pt.js"
 ],
 "Yenilgi de oyunun parçası. Kafanı kaldır.": [
 "lang-ar.js",
@@ -93621,6 +93626,1166 @@
 "phone.js"
 ],
 "İyi oyundu, golün takımı rahatlattı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Aferin benim oğluma.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Aklım hep sende": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Akşam bir kahve içelim": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Akşam yemeğe uğrarım": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Akşam yemeğine çıkalım mı?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Anlaştık, oltaları hazırlıyorum!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Ara dönem sınavı zamanı!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Ara dönem sınavına gir": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Ben de seni özledim.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Benim de aklım sende.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Bildiğin gibi devam et.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Bu akşam balığa gidelim mi baba?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Bu akşam evdeyim anne, beraber oturalım": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Bu konu kapandı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Derste işlenen konular çıkacak. Hazır olduğunda sınava gir.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Derste işlenen konular çıkacak.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Topics from class will come up.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Hazır olduğunda sınava gir.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Take the exam when you're ready.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Gel beraber yürüyüşe çıkalım": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Görüşürüz kanka!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Gözüm yollarda olacak!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Hafta sonu buluşalım": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Hafta sonu kahvaltıya geliyorum": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Hafta sonu sana sürprizim var": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Haha, aynen": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Halı sahaya ben de gelirim": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Harika, çok özledim!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Hatırlatmalar": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Henüz mesaj yok. Ailen, arkadaşların ve takımın zaman zaman yazacak.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Henüz mesaj yok.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"No messages yet.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Ailen, arkadaşların ve takımın zaman zaman yazacak.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Your family, friends and team will write now and then.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Kendine iyi bak!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Kesin, haberleşiriz": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Okuldan sonra top oynayalım": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Sabırsızlanıyorum!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Sağ ol anne, sen de kendine iyi bak": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Sağlık Ekibi": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Seni çok seviyorum.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Seni çok özledim": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Spor muhabiri": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Süper, görüşürüz!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Tamam, sabah erkenden çıkarız.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Taraftar Derneği": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Taraftarlar": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Tavsiyen için sağ ol": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Teneffüste görüşürüz!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Yardım kuruluşu": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Yaşasın! En sevdiğin yemeği yapıyorum.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"En sevdiğin yemeği yapıyorum.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"I'm making your favorite dish.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Yeni mesaj gelince burada görünür.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Çok sevindim, bekliyorum!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Ajanda": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Basın": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Dedem": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Vakıf": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Merak etme anne, iyiyim": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Merak etme baba, çalışıyorum": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Altyapı seçmeleri": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Bayıldım.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Başarılar!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Bir puan da puan.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Bir puanla dönüyoruz.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Bu takım başka!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Bu çocuk çok iyi olacak.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Bunu bekliyordum.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Böyle devam!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Daha iyisini yaparız.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Doğum günün": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Efsane!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Formasını aldım bile.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"GOL KRALLIĞI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Gol krallığı yarışı": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Harika kare!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Helal olsun!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Her zaman arkanızdayız.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"KUPA MAÇI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Kafalar dik!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Kutlama": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"PUAN DURUMU": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Rakip kura ile belli olacak": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Sezon bitti": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Sonunda!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"TRANSFER": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Tatil": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Toparlanacağız.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Tüm gün": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Vay be!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Yeni sezonu bekle": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Yıldız doğuyor!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Üç puan cebimizde!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Maç günü! Hep birlikte!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Maç günü!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Match day!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MAÇ GÜNÜ": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -115388,17 +116553,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"MAÇ GÜNÜ": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "KAMP BİTTİ": [
 "lang-ar.js",
 "lang-de.js",
@@ -136232,17 +137386,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"PUAN DURUMU": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "KULÜP DURUMU": [
 "lang-ar.js",
 "lang-de.js",
@@ -149055,6 +150198,996 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"AFERİN BENİM OĞLUMA.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"AKLIM HEP SENDE": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"AKŞAM BİR KAHVE İÇELİM": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"AKŞAM YEMEĞE UĞRARIM": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"AKŞAM YEMEĞİNE ÇIKALIM MI?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ANLAŞTIK, OLTALARI HAZIRLIYORUM!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ARA DÖNEM SINAVI ZAMANI!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ARA DÖNEM SINAVINA GİR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BEN DE SENİ ÖZLEDİM.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BENİM DE AKLIM SENDE.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BİLDİĞİN GİBİ DEVAM ET.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BU AKŞAM BALIĞA GİDELİM Mİ BABA?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BU AKŞAM EVDEYİM ANNE, BERABER OTURALIM": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BU KONU KAPANDI.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DERSTE İŞLENEN KONULAR ÇIKACAK.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TOPICS FROM CLASS WILL COME UP.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HAZIR OLDUĞUNDA SINAVA GİR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TAKE THE EXAM WHEN YOU'RE READY.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GEL BERABER YÜRÜYÜŞE ÇIKALIM": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GÖRÜŞÜRÜZ KANKA!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GÖZÜM YOLLARDA OLACAK!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HAFTA SONU BULUŞALIM": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HAFTA SONU KAHVALTIYA GELİYORUM": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HAFTA SONU SANA SÜRPRİZİM VAR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HAHA, AYNEN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HALI SAHAYA BEN DE GELİRİM": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HARİKA, ÇOK ÖZLEDİM!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HATIRLATMALAR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HENÜZ MESAJ YOK.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"NO MESSAGES YET.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KENDİNE İYİ BAK!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KESİN, HABERLEŞİRİZ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"OKULDAN SONRA TOP OYNAYALIM": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SABIRSIZLANIYORUM!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SAĞ OL ANNE, SEN DE KENDİNE İYİ BAK": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SAĞLIK EKİBİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SENİ ÇOK SEVİYORUM.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SENİ ÇOK ÖZLEDİM": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SPOR MUHABİRİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SÜPER, GÖRÜŞÜRÜZ!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TAMAM, SABAH ERKENDEN ÇIKARIZ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TARAFTAR DERNEĞİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TARAFTARLAR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TAVSİYEN İÇİN SAĞ OL": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TENEFFÜSTE GÖRÜŞÜRÜZ!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YARDIM KURULUŞU": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YAŞASIN! EN SEVDİĞİN YEMEĞİ YAPIYORUM.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"EN SEVDİĞİN YEMEĞİ YAPIYORUM.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"I'M MAKING YOUR FAVORITE DISH.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YENİ MESAJ GELİNCE BURADA GÖRÜNÜR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ÇOK SEVİNDİM, BEKLİYORUM!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"AJANDA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BASIN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DEDEM": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"VAKIF": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"CEVAP BEKLİYOR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MERAK ETME ANNE, İYİYİM": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MERAK ETME BABA, ÇALIŞIYORUM": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ALTYAPI SEÇMELERİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BAYILDIM.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BAŞARILAR!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BİR PUAN DA PUAN.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BİR PUANLA DÖNÜYORUZ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BU TAKIM BAŞKA!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BU ÇOCUK ÇOK İYİ OLACAK.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BUNU BEKLİYORDUM.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BÖYLE DEVAM!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DAHA İYİSİNİ YAPARIZ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DOĞUM GÜNÜN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"EFSANE!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"FORMASINI ALDIM BİLE.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GOL KRALLIĞI YARIŞI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HARİKA KARE!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HELAL OLSUN!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HER ZAMAN ARKANIZDAYIZ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KAFALAR DİK!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KUTLAMA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"RAKİP KURA İLE BELLİ OLACAK": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SEZON BİTTİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SONUNDA!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TATİL": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TOPARLANACAĞIZ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TÜM GÜN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"VAY BE!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YENİ SEZONU BEKLE": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YILDIZ DOĞUYOR!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ÜÇ PUAN CEBİMİZDE!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MAÇ GÜNÜ! HEP BİRLİKTE!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MAÇ GÜNÜ!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MATCH DAY!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -152379,17 +154512,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"GOL KRALLIĞI": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "GOL KRALI:": [
 "lang-ar.js",
 "lang-de.js",
@@ -153975,17 +156097,6 @@
 "lang-pt.js"
 ],
 "KUMARHANEDEN ÇIK": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"KUPA MAÇI": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -179141,6 +181252,18 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"{} ile güzel vakit geçirdiniz. Arkadaşlık +8": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
 "Rakip {}'i geçti ve tehlikeli bölgeye girdi!": [
 "lang-ar.js",
 "lang-de.js",
@@ -179527,6 +181650,18 @@
 "lang-ja.js",
 "lang-pt.js",
 "star.js"
+],
+"Transfer kulisi: {}, {} için harekete geçti.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
 ],
 "{} \\\"Biraz daha zamana ihtiyacım var\\\" dedi.": [
 "lang-ar.js",
@@ -188613,6 +190748,18 @@
 "lang-pt.js",
 "phone.js"
 ],
+"{} milli maç": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
 "Gol {}'dan. {}": [
 "lang-ar.js",
 "lang-de.js",
@@ -190186,6 +192333,17 @@
 "lang-pt.js"
 ],
 "{} bg": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{} sa": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -200632,6 +202790,262 @@
 "Gutes Spiel, dein Tor hat das Team beruhigt.": [
 "lang-de.js"
 ],
+"Das ist mein Junge.": [
+"lang-de.js"
+],
+"Ich denke ständig an dich": [
+"lang-de.js"
+],
+"Lass uns heute Abend einen Kaffee trinken": [
+"lang-de.js"
+],
+"Ich komme zum Abendessen vorbei": [
+"lang-de.js"
+],
+"Wollen wir essen gehen?": [
+"lang-de.js"
+],
+"Abgemacht, ich mache die Angeln fertig!": [
+"lang-de.js"
+],
+"Zeit für die Halbjahresprüfung!": [
+"lang-de.js"
+],
+"Halbjahresprüfung schreiben": [
+"lang-de.js"
+],
+"Ich vermisse dich auch.": [
+"lang-de.js"
+],
+"Ich denke auch an dich.": [
+"lang-de.js"
+],
+"Mach weiter so.": [
+"lang-de.js"
+],
+"Gehen wir heute Abend angeln, Papa?": [
+"lang-de.js"
+],
+"Ich bin heute Abend zu Hause, Mama, lass uns zusammensitzen": [
+"lang-de.js"
+],
+"Dieses Thema ist erledigt.": [
+"lang-de.js"
+],
+"Unterrichtsthemen kommen dran. Schreib die Prüfung, wenn du bereit bist.": [
+"lang-de.js"
+],
+"Lass uns zusammen spazieren gehen": [
+"lang-de.js"
+],
+"Bis dann, Alter!": [
+"lang-de.js"
+],
+"Ich warte schon auf dich!": [
+"lang-de.js"
+],
+"Lass uns am Wochenende treffen": [
+"lang-de.js"
+],
+"Ich komme am Wochenende zum Frühstück": [
+"lang-de.js"
+],
+"Ich habe am Wochenende eine Überraschung für dich": [
+"lang-de.js"
+],
+"Haha, genau": [
+"lang-de.js"
+],
+"Ich komme auch zum Kick": [
+"lang-de.js"
+],
+"Super, ich hab dich vermisst!": [
+"lang-de.js"
+],
+"Erinnerungen": [
+"lang-de.js"
+],
+"Noch keine Nachrichten. Familie, Freunde und Team schreiben ab und zu.": [
+"lang-de.js"
+],
+"Pass auf dich auf!": [
+"lang-de.js"
+],
+"Klar, wir bleiben in Kontakt": [
+"lang-de.js"
+],
+"Lass uns nach der Schule kicken": [
+"lang-de.js"
+],
+"Ich kann es kaum erwarten!": [
+"lang-de.js"
+],
+"Danke, Mama, pass du auch auf dich auf": [
+"lang-de.js"
+],
+"Medizinisches Team": [
+"lang-de.js"
+],
+"Ich hab dich so lieb.": [
+"lang-de.js"
+],
+"Ich vermisse dich so sehr": [
+"lang-de.js"
+],
+"Sportreporter": [
+"lang-de.js"
+],
+"Super, bis dann!": [
+"lang-de.js"
+],
+"Okay, wir brechen früh morgens auf.": [
+"lang-de.js"
+],
+"Fanclub": [
+"lang-de.js"
+],
+"Fans": [
+"lang-de.js",
+"lang-en.js"
+],
+"Danke für den Rat": [
+"lang-de.js"
+],
+"Wir sehen uns in der Pause!": [
+"lang-de.js"
+],
+"Wohltätigkeitsorganisation": [
+"lang-de.js"
+],
+"Juhu! Ich koche dein Lieblingsessen.": [
+"lang-de.js"
+],
+"Neue Nachrichten erscheinen hier.": [
+"lang-de.js"
+],
+"Wie schön, ich warte!": [
+"lang-de.js"
+],
+"Planer": [
+"lang-de.js"
+],
+"Presse": [
+"lang-de.js",
+"lang-fr.js"
+],
+"Opa": [
+"lang-de.js"
+],
+"Stiftung": [
+"lang-de.js"
+],
+"wartet auf Antwort": [
+"lang-de.js"
+],
+"Keine Sorge, Mama, mir geht's gut": [
+"lang-de.js"
+],
+"Keine Sorge, Papa, ich trainiere fleißig": [
+"lang-de.js"
+],
+"Akademie-Probetraining": [
+"lang-de.js"
+],
+"Liebe ich.": [
+"lang-de.js"
+],
+"Viel Erfolg!": [
+"lang-de.js"
+],
+"Ein Punkt ist ein Punkt.": [
+"lang-de.js"
+],
+"Dieses Team ist der Wahnsinn!": [
+"lang-de.js"
+],
+"Aus dem Jungen wird mal was Großes.": [
+"lang-de.js"
+],
+"Das habe ich erwartet.": [
+"lang-de.js"
+],
+"Weiter so!": [
+"lang-de.js"
+],
+"Das können wir besser.": [
+"lang-de.js"
+],
+"Dein Geburtstag": [
+"lang-de.js"
+],
+"Legendär!": [
+"lang-de.js"
+],
+"Ich habe sein Trikot schon gekauft.": [
+"lang-de.js"
+],
+"TORJÄGERLISTE": [
+"lang-de.js"
+],
+"Das Rennen um die Torjägerkanone": [
+"lang-de.js"
+],
+"Tolles Foto!": [
+"lang-de.js"
+],
+"Stark!": [
+"lang-de.js"
+],
+"Wir stehen immer hinter euch.": [
+"lang-de.js"
+],
+"POKALSPIEL": [
+"lang-de.js"
+],
+"Kopf hoch!": [
+"lang-de.js"
+],
+"Feier": [
+"lang-de.js"
+],
+"TABELLE": [
+"lang-de.js"
+],
+"Gegner wird ausgelost": [
+"lang-de.js"
+],
+"Saison vorbei": [
+"lang-de.js"
+],
+"Endlich!": [
+"lang-de.js"
+],
+"Wir kommen zurück.": [
+"lang-de.js"
+],
+"Ganztägig": [
+"lang-de.js"
+],
+"Wow!": [
+"lang-de.js",
+"lang-en.js",
+"lang-it.js"
+],
+"Warte auf die neue Saison": [
+"lang-de.js"
+],
+"Ein Star ist geboren!": [
+"lang-de.js"
+],
+"Drei Punkte im Sack!": [
+"lang-de.js"
+],
+"Spieltag! Alle zusammen!": [
+"lang-de.js"
+],
+"SPIELTAG": [
+"lang-de.js"
+],
 "– wir haben uns qualifiziert!": [
 "lang-de.js"
 ],
@@ -203465,10 +205879,6 @@
 ],
 "Tango-Liga": [
 "lang-de.js"
-],
-"Fans": [
-"lang-de.js",
-"lang-en.js"
 ],
 "Der Fanclub organisiert einen Autogrammtag.": [
 "lang-de.js"
@@ -207279,9 +209689,6 @@
 "lang-de.js"
 ],
 "SPIEL STARTEN": [
-"lang-de.js"
-],
-"SPIELTAG": [
 "lang-de.js"
 ],
 "TRAININGSLAGER VORBEI": [
@@ -211109,9 +213516,6 @@
 "VERTRAUEN DES VORSTANDS": [
 "lang-de.js"
 ],
-"TABELLE": [
-"lang-de.js"
-],
 "VEREINSLAGE": [
 "lang-de.js"
 ],
@@ -213126,6 +215530,234 @@
 "GUTES SPIEL, DEIN TOR HAT DAS TEAM BERUHIGT.": [
 "lang-de.js"
 ],
+"DAS IST MEIN JUNGE.": [
+"lang-de.js"
+],
+"ICH DENKE STÄNDIG AN DICH": [
+"lang-de.js"
+],
+"LASS UNS HEUTE ABEND EINEN KAFFEE TRINKEN": [
+"lang-de.js"
+],
+"ICH KOMME ZUM ABENDESSEN VORBEI": [
+"lang-de.js"
+],
+"WOLLEN WIR ESSEN GEHEN?": [
+"lang-de.js"
+],
+"ABGEMACHT, ICH MACHE DIE ANGELN FERTIG!": [
+"lang-de.js"
+],
+"ZEIT FÜR DIE HALBJAHRESPRÜFUNG!": [
+"lang-de.js"
+],
+"HALBJAHRESPRÜFUNG SCHREIBEN": [
+"lang-de.js"
+],
+"ICH VERMISSE DICH AUCH.": [
+"lang-de.js"
+],
+"ICH DENKE AUCH AN DICH.": [
+"lang-de.js"
+],
+"MACH WEITER SO.": [
+"lang-de.js"
+],
+"GEHEN WIR HEUTE ABEND ANGELN, PAPA?": [
+"lang-de.js"
+],
+"ICH BIN HEUTE ABEND ZU HAUSE, MAMA, LASS UNS ZUSAMMENSITZEN": [
+"lang-de.js"
+],
+"DIESES THEMA IST ERLEDIGT.": [
+"lang-de.js"
+],
+"LASS UNS ZUSAMMEN SPAZIEREN GEHEN": [
+"lang-de.js"
+],
+"BIS DANN, ALTER!": [
+"lang-de.js"
+],
+"ICH WARTE SCHON AUF DICH!": [
+"lang-de.js"
+],
+"LASS UNS AM WOCHENENDE TREFFEN": [
+"lang-de.js"
+],
+"ICH KOMME AM WOCHENENDE ZUM FRÜHSTÜCK": [
+"lang-de.js"
+],
+"ICH HABE AM WOCHENENDE EINE ÜBERRASCHUNG FÜR DICH": [
+"lang-de.js"
+],
+"HAHA, GENAU": [
+"lang-de.js"
+],
+"ICH KOMME AUCH ZUM KICK": [
+"lang-de.js"
+],
+"SUPER, ICH HAB DICH VERMISST!": [
+"lang-de.js"
+],
+"ERINNERUNGEN": [
+"lang-de.js"
+],
+"PASS AUF DICH AUF!": [
+"lang-de.js"
+],
+"KLAR, WIR BLEIBEN IN KONTAKT": [
+"lang-de.js"
+],
+"LASS UNS NACH DER SCHULE KICKEN": [
+"lang-de.js"
+],
+"ICH KANN ES KAUM ERWARTEN!": [
+"lang-de.js"
+],
+"DANKE, MAMA, PASS DU AUCH AUF DICH AUF": [
+"lang-de.js"
+],
+"MEDIZINISCHES TEAM": [
+"lang-de.js"
+],
+"ICH HAB DICH SO LIEB.": [
+"lang-de.js"
+],
+"ICH VERMISSE DICH SO SEHR": [
+"lang-de.js"
+],
+"SPORTREPORTER": [
+"lang-de.js"
+],
+"SUPER, BIS DANN!": [
+"lang-de.js"
+],
+"OKAY, WIR BRECHEN FRÜH MORGENS AUF.": [
+"lang-de.js"
+],
+"FANCLUB": [
+"lang-de.js"
+],
+"DANKE FÜR DEN RAT": [
+"lang-de.js"
+],
+"WIR SEHEN UNS IN DER PAUSE!": [
+"lang-de.js"
+],
+"WOHLTÄTIGKEITSORGANISATION": [
+"lang-de.js"
+],
+"JUHU! ICH KOCHE DEIN LIEBLINGSESSEN.": [
+"lang-de.js"
+],
+"NEUE NACHRICHTEN ERSCHEINEN HIER.": [
+"lang-de.js"
+],
+"WIE SCHÖN, ICH WARTE!": [
+"lang-de.js"
+],
+"PLANER": [
+"lang-de.js"
+],
+"PRESSE": [
+"lang-de.js",
+"lang-fr.js"
+],
+"OPA": [
+"lang-de.js"
+],
+"STIFTUNG": [
+"lang-de.js"
+],
+"WARTET AUF ANTWORT": [
+"lang-de.js"
+],
+"KEINE SORGE, MAMA, MIR GEHT'S GUT": [
+"lang-de.js"
+],
+"KEINE SORGE, PAPA, ICH TRAINIERE FLEISSIG": [
+"lang-de.js"
+],
+"AKADEMIE-PROBETRAINING": [
+"lang-de.js"
+],
+"LIEBE ICH.": [
+"lang-de.js"
+],
+"VIEL ERFOLG!": [
+"lang-de.js"
+],
+"EIN PUNKT IST EIN PUNKT.": [
+"lang-de.js"
+],
+"DIESES TEAM IST DER WAHNSINN!": [
+"lang-de.js"
+],
+"AUS DEM JUNGEN WIRD MAL WAS GROSSES.": [
+"lang-de.js"
+],
+"DAS HABE ICH ERWARTET.": [
+"lang-de.js"
+],
+"DAS KÖNNEN WIR BESSER.": [
+"lang-de.js"
+],
+"DEIN GEBURTSTAG": [
+"lang-de.js"
+],
+"LEGENDÄR!": [
+"lang-de.js"
+],
+"ICH HABE SEIN TRIKOT SCHON GEKAUFT.": [
+"lang-de.js"
+],
+"DAS RENNEN UM DIE TORJÄGERKANONE": [
+"lang-de.js"
+],
+"TOLLES FOTO!": [
+"lang-de.js"
+],
+"WIR STEHEN IMMER HINTER EUCH.": [
+"lang-de.js"
+],
+"KOPF HOCH!": [
+"lang-de.js"
+],
+"FEIER": [
+"lang-de.js"
+],
+"GEGNER WIRD AUSGELOST": [
+"lang-de.js"
+],
+"SAISON VORBEI": [
+"lang-de.js"
+],
+"ENDLICH!": [
+"lang-de.js"
+],
+"WIR KOMMEN ZURÜCK.": [
+"lang-de.js"
+],
+"GANZTÄGIG": [
+"lang-de.js"
+],
+"WOW!": [
+"lang-de.js",
+"lang-en.js",
+"lang-it.js"
+],
+"WARTE AUF DIE NEUE SAISON": [
+"lang-de.js"
+],
+"EIN STAR IST GEBOREN!": [
+"lang-de.js"
+],
+"DREI PUNKTE IM SACK!": [
+"lang-de.js"
+],
+"SPIELTAG! ALLE ZUSAMMEN!": [
+"lang-de.js"
+],
 "– WIR HABEN UNS QUALIFIZIERT!": [
 "lang-de.js"
 ],
@@ -214034,9 +216666,6 @@
 "lang-it.js",
 "lang-pt.js"
 ],
-"TORSCHÜTZEN": [
-"lang-de.js"
-],
 "TORSCHÜTZENKÖNIG:": [
 "lang-de.js"
 ],
@@ -214457,9 +217086,6 @@
 "lang-de.js"
 ],
 "CASINO VERLASSEN": [
-"lang-de.js"
-],
-"POKALSPIEL": [
 "lang-de.js"
 ],
 "POKALSIEGER": [
@@ -218109,6 +220735,9 @@
 "Vorgegebene Lagen, harte Ziele: {} Aufgaben · {}/{} ⭐": [
 "lang-de.js"
 ],
+"Schöne Zeit mit {0}. Freundschaft +8": [
+"lang-de.js"
+],
 "Der Gegner ließ {} stehen und kam in eine gefährliche Zone!": [
 "lang-de.js"
 ],
@@ -218191,6 +220820,9 @@
 "lang-de.js"
 ],
 "✨ {0} gehört dir! Dein Beitrag bekommt Applaus.": [
+"lang-de.js"
+],
+"Transfergerücht: {0} bemüht sich um {1}.": [
 "lang-de.js"
 ],
 "Der Trainer bewunderte deine Entschlossenheit. Ausdauer +{}": [
@@ -220497,6 +223129,9 @@
 "{0}-MP-Kamera": [
 "lang-de.js"
 ],
+"{0}-Länderspiel": [
+"lang-de.js"
+],
 "({}. Platz)": [
 "lang-de.js"
 ],
@@ -221071,6 +223706,9 @@
 "lang-de.js"
 ],
 "{0} PS": [
+"lang-de.js"
+],
+"{0} Std.": [
 "lang-de.js"
 ],
 "KRAFT{}": [
@@ -231130,6 +233768,249 @@
 "Good game, your goal settled the team.": [
 "lang-en.js"
 ],
+"That's my boy.": [
+"lang-en.js"
+],
+"I keep thinking about you": [
+"lang-en.js"
+],
+"Let's grab a coffee tonight": [
+"lang-en.js"
+],
+"I'll drop by for dinner": [
+"lang-en.js"
+],
+"Shall we go out for dinner?": [
+"lang-en.js"
+],
+"Deal, I'm getting the rods ready!": [
+"lang-en.js"
+],
+"Midterm exam time!": [
+"lang-en.js"
+],
+"Take the midterm exam": [
+"lang-en.js"
+],
+"I miss you too.": [
+"lang-en.js"
+],
+"I'm thinking about you too.": [
+"lang-en.js"
+],
+"Keep doing what you're doing.": [
+"lang-en.js"
+],
+"Shall we go fishing tonight, Dad?": [
+"lang-en.js"
+],
+"I'm home tonight, Mom, let's spend time together": [
+"lang-en.js"
+],
+"This topic is closed.": [
+"lang-en.js"
+],
+"Topics from class will come up. Take the exam when you're ready.": [
+"lang-en.js"
+],
+"Let's go for a walk together": [
+"lang-en.js"
+],
+"See you, bro!": [
+"lang-en.js"
+],
+"I'll be waiting for you!": [
+"lang-en.js"
+],
+"Let's meet up this weekend": [
+"lang-en.js"
+],
+"I'm coming for breakfast this weekend": [
+"lang-en.js"
+],
+"I have a surprise for you this weekend": [
+"lang-en.js"
+],
+"Haha, exactly": [
+"lang-en.js"
+],
+"I'll come to the five-a-side too": [
+"lang-en.js"
+],
+"Great, I've missed you!": [
+"lang-en.js"
+],
+"Reminders": [
+"lang-en.js"
+],
+"No messages yet. Your family, friends and team will write now and then.": [
+"lang-en.js"
+],
+"Take care!": [
+"lang-en.js"
+],
+"Sure, let's keep in touch": [
+"lang-en.js"
+],
+"Let's play football after school": [
+"lang-en.js"
+],
+"I can't wait!": [
+"lang-en.js"
+],
+"Thanks, Mom, you take care too": [
+"lang-en.js"
+],
+"Medical Team": [
+"lang-en.js"
+],
+"I love you so much.": [
+"lang-en.js"
+],
+"I miss you so much": [
+"lang-en.js"
+],
+"Sports reporter": [
+"lang-en.js"
+],
+"Great, see you!": [
+"lang-en.js"
+],
+"Okay, we'll head out early in the morning.": [
+"lang-en.js"
+],
+"Supporters' Club": [
+"lang-en.js"
+],
+"Thanks for the advice": [
+"lang-en.js"
+],
+"See you at break!": [
+"lang-en.js"
+],
+"Charity": [
+"lang-en.js"
+],
+"Yay! I'm making your favorite dish.": [
+"lang-en.js"
+],
+"New messages will appear here.": [
+"lang-en.js"
+],
+"So happy, I'll be waiting!": [
+"lang-en.js"
+],
+"Planner": [
+"lang-en.js"
+],
+"Press": [
+"lang-en.js"
+],
+"Grandpa": [
+"lang-en.js"
+],
+"Foundation": [
+"lang-en.js"
+],
+"Don't worry, Mom, I'm fine": [
+"lang-en.js"
+],
+"Don't worry, Dad, I'm working hard": [
+"lang-en.js"
+],
+"Academy trials": [
+"lang-en.js"
+],
+"Love it.": [
+"lang-en.js"
+],
+"Good luck!": [
+"lang-en.js"
+],
+"A point is a point.": [
+"lang-en.js"
+],
+"This team is something else!": [
+"lang-en.js"
+],
+"This kid is going to be great.": [
+"lang-en.js"
+],
+"I saw this coming.": [
+"lang-en.js"
+],
+"Keep it up!": [
+"lang-en.js"
+],
+"We'll do better.": [
+"lang-en.js"
+],
+"Your birthday": [
+"lang-en.js"
+],
+"Legend!": [
+"lang-en.js"
+],
+"I've already bought his shirt.": [
+"lang-en.js"
+],
+"TOP SCORERS": [
+"lang-en.js"
+],
+"The race for top scorer": [
+"lang-en.js"
+],
+"Great shot!": [
+"lang-en.js"
+],
+"Well done!": [
+"lang-en.js"
+],
+"We're always behind you.": [
+"lang-en.js"
+],
+"CUP MATCH": [
+"lang-en.js"
+],
+"Heads up!": [
+"lang-en.js"
+],
+"Celebration": [
+"lang-en.js"
+],
+"STANDINGS": [
+"lang-en.js"
+],
+"Opponent decided by the draw": [
+"lang-en.js"
+],
+"Season over": [
+"lang-en.js"
+],
+"Finally!": [
+"lang-en.js"
+],
+"We'll bounce back.": [
+"lang-en.js"
+],
+"All day": [
+"lang-en.js"
+],
+"Wait for the new season": [
+"lang-en.js"
+],
+"A star is born!": [
+"lang-en.js"
+],
+"Three points in the bag!": [
+"lang-en.js"
+],
+"Match day! All together!": [
+"lang-en.js"
+],
+"MATCH DAY": [
+"lang-en.js"
+],
 "— we qualified!": [
 "lang-en.js"
 ],
@@ -237396,9 +240277,6 @@
 "PLAY THE MATCH": [
 "lang-en.js"
 ],
-"MATCH DAY": [
-"lang-en.js"
-],
 "CAMP OVER": [
 "lang-en.js"
 ],
@@ -240951,9 +243829,6 @@
 "BOARD CONFIDENCE": [
 "lang-en.js"
 ],
-"STANDINGS": [
-"lang-en.js"
-],
 "CLUB STATUS": [
 "lang-en.js"
 ],
@@ -242907,6 +245782,231 @@
 "GOOD GAME, YOUR GOAL SETTLED THE TEAM.": [
 "lang-en.js"
 ],
+"THAT'S MY BOY.": [
+"lang-en.js"
+],
+"I KEEP THINKING ABOUT YOU": [
+"lang-en.js"
+],
+"LET'S GRAB A COFFEE TONIGHT": [
+"lang-en.js"
+],
+"I'LL DROP BY FOR DINNER": [
+"lang-en.js"
+],
+"SHALL WE GO OUT FOR DINNER?": [
+"lang-en.js"
+],
+"DEAL, I'M GETTING THE RODS READY!": [
+"lang-en.js"
+],
+"MIDTERM EXAM TIME!": [
+"lang-en.js"
+],
+"TAKE THE MIDTERM EXAM": [
+"lang-en.js"
+],
+"I MISS YOU TOO.": [
+"lang-en.js"
+],
+"I'M THINKING ABOUT YOU TOO.": [
+"lang-en.js"
+],
+"KEEP DOING WHAT YOU'RE DOING.": [
+"lang-en.js"
+],
+"SHALL WE GO FISHING TONIGHT, DAD?": [
+"lang-en.js"
+],
+"I'M HOME TONIGHT, MOM, LET'S SPEND TIME TOGETHER": [
+"lang-en.js"
+],
+"THIS TOPIC IS CLOSED.": [
+"lang-en.js"
+],
+"LET'S GO FOR A WALK TOGETHER": [
+"lang-en.js"
+],
+"SEE YOU, BRO!": [
+"lang-en.js"
+],
+"I'LL BE WAITING FOR YOU!": [
+"lang-en.js"
+],
+"LET'S MEET UP THIS WEEKEND": [
+"lang-en.js"
+],
+"I'M COMING FOR BREAKFAST THIS WEEKEND": [
+"lang-en.js"
+],
+"I HAVE A SURPRISE FOR YOU THIS WEEKEND": [
+"lang-en.js"
+],
+"HAHA, EXACTLY": [
+"lang-en.js"
+],
+"I'LL COME TO THE FIVE-A-SIDE TOO": [
+"lang-en.js"
+],
+"GREAT, I'VE MISSED YOU!": [
+"lang-en.js"
+],
+"REMINDERS": [
+"lang-en.js"
+],
+"TAKE CARE!": [
+"lang-en.js"
+],
+"SURE, LET'S KEEP IN TOUCH": [
+"lang-en.js"
+],
+"LET'S PLAY FOOTBALL AFTER SCHOOL": [
+"lang-en.js"
+],
+"I CAN'T WAIT!": [
+"lang-en.js"
+],
+"THANKS, MOM, YOU TAKE CARE TOO": [
+"lang-en.js"
+],
+"MEDICAL TEAM": [
+"lang-en.js"
+],
+"I LOVE YOU SO MUCH.": [
+"lang-en.js"
+],
+"I MISS YOU SO MUCH": [
+"lang-en.js"
+],
+"SPORTS REPORTER": [
+"lang-en.js"
+],
+"GREAT, SEE YOU!": [
+"lang-en.js"
+],
+"OKAY, WE'LL HEAD OUT EARLY IN THE MORNING.": [
+"lang-en.js"
+],
+"SUPPORTERS' CLUB": [
+"lang-en.js"
+],
+"THANKS FOR THE ADVICE": [
+"lang-en.js"
+],
+"SEE YOU AT BREAK!": [
+"lang-en.js"
+],
+"CHARITY": [
+"lang-en.js"
+],
+"YAY! I'M MAKING YOUR FAVORITE DISH.": [
+"lang-en.js"
+],
+"NEW MESSAGES WILL APPEAR HERE.": [
+"lang-en.js"
+],
+"SO HAPPY, I'LL BE WAITING!": [
+"lang-en.js"
+],
+"PLANNER": [
+"lang-en.js"
+],
+"PRESS": [
+"lang-en.js"
+],
+"GRANDPA": [
+"lang-en.js"
+],
+"FOUNDATION": [
+"lang-en.js"
+],
+"AWAITING REPLY": [
+"lang-en.js"
+],
+"DON'T WORRY, MOM, I'M FINE": [
+"lang-en.js"
+],
+"DON'T WORRY, DAD, I'M WORKING HARD": [
+"lang-en.js"
+],
+"ACADEMY TRIALS": [
+"lang-en.js"
+],
+"LOVE IT.": [
+"lang-en.js"
+],
+"GOOD LUCK!": [
+"lang-en.js"
+],
+"A POINT IS A POINT.": [
+"lang-en.js"
+],
+"THIS TEAM IS SOMETHING ELSE!": [
+"lang-en.js"
+],
+"THIS KID IS GOING TO BE GREAT.": [
+"lang-en.js"
+],
+"I SAW THIS COMING.": [
+"lang-en.js"
+],
+"KEEP IT UP!": [
+"lang-en.js"
+],
+"WE'LL DO BETTER.": [
+"lang-en.js"
+],
+"YOUR BIRTHDAY": [
+"lang-en.js"
+],
+"LEGEND!": [
+"lang-en.js"
+],
+"I'VE ALREADY BOUGHT HIS SHIRT.": [
+"lang-en.js"
+],
+"THE RACE FOR TOP SCORER": [
+"lang-en.js"
+],
+"GREAT SHOT!": [
+"lang-en.js"
+],
+"WELL DONE!": [
+"lang-en.js"
+],
+"WE'RE ALWAYS BEHIND YOU.": [
+"lang-en.js"
+],
+"HEADS UP!": [
+"lang-en.js"
+],
+"CELEBRATION": [
+"lang-en.js"
+],
+"OPPONENT DECIDED BY THE DRAW": [
+"lang-en.js"
+],
+"FINALLY!": [
+"lang-en.js"
+],
+"WE'LL BOUNCE BACK.": [
+"lang-en.js"
+],
+"ALL DAY": [
+"lang-en.js"
+],
+"WAIT FOR THE NEW SEASON": [
+"lang-en.js"
+],
+"A STAR IS BORN!": [
+"lang-en.js"
+],
+"THREE POINTS IN THE BAG!": [
+"lang-en.js"
+],
+"MATCH DAY! ALL TOGETHER!": [
+"lang-en.js"
+],
 "— WE QUALIFIED!": [
 "lang-en.js"
 ],
@@ -243799,9 +246899,6 @@
 "WEARING": [
 "lang-en.js"
 ],
-"TOP SCORERS": [
-"lang-en.js"
-],
 "TOP SCORER:": [
 "lang-en.js"
 ],
@@ -244215,9 +247312,6 @@
 "lang-en.js"
 ],
 "LEAVE THE CASINO": [
-"lang-en.js"
-],
-"CUP MATCH": [
 "lang-en.js"
 ],
 "CUP WINNER": [
@@ -247836,6 +250930,9 @@
 "Set situations, tough goals: {} challenges · {}/{} ⭐": [
 "lang-en.js"
 ],
+"You had a great time with {0}. Friendship +8": [
+"lang-en.js"
+],
 "The opponent got past {} and into a dangerous area!": [
 "lang-en.js"
 ],
@@ -247918,6 +251015,9 @@
 "lang-en.js"
 ],
 "✨ {0} is yours! Your post is getting cheers.": [
+"lang-en.js"
+],
+"Transfer gossip: {0} make a move for {1}.": [
 "lang-en.js"
 ],
 "The coach admired your determination. Stamina +{}": [
@@ -250238,6 +253338,9 @@
 "lang-en.js"
 ],
 "{0} MP camera": [
+"lang-en.js"
+],
+"{0} international": [
 "lang-en.js"
 ],
 "({}th place)": [
@@ -260950,6 +264053,259 @@
 "Buen partido, tu gol tranquilizó al equipo.": [
 "lang-es.js"
 ],
+"Ese es mi niño.": [
+"lang-es.js"
+],
+"No dejo de pensar en ti": [
+"lang-es.js"
+],
+"Tomemos un café esta noche": [
+"lang-es.js"
+],
+"Me paso a cenar": [
+"lang-es.js"
+],
+"¿Salimos a cenar?": [
+"lang-es.js"
+],
+"¡Hecho, preparo las cañas!": [
+"lang-es.js"
+],
+"¡Hora del examen parcial!": [
+"lang-es.js"
+],
+"Hacer el examen parcial": [
+"lang-es.js"
+],
+"Yo también te echo de menos.": [
+"lang-es.js"
+],
+"Yo también pienso en ti.": [
+"lang-es.js"
+],
+"Sigue como sabes.": [
+"lang-es.js"
+],
+"¿Vamos a pescar esta noche, papá?": [
+"lang-es.js"
+],
+"Esta noche estoy en casa, mamá, pasemos tiempo juntos": [
+"lang-es.js"
+],
+"Este tema está cerrado.": [
+"lang-es.js"
+],
+"Saldrá lo visto en clase. Haz el examen cuando estés listo.": [
+"lang-es.js"
+],
+"Vamos a dar un paseo juntos": [
+"lang-es.js"
+],
+"¡Nos vemos, tío!": [
+"lang-es.js"
+],
+"¡Te estaré esperando!": [
+"lang-es.js"
+],
+"Quedemos el fin de semana": [
+"lang-es.js"
+],
+"El fin de semana voy a desayunar": [
+"lang-es.js"
+],
+"Tengo una sorpresa para ti el fin de semana": [
+"lang-es.js"
+],
+"Jaja, exacto": [
+"lang-es.js"
+],
+"Yo también voy al partidillo": [
+"lang-es.js"
+],
+"¡Genial, te he echado de menos!": [
+"lang-es.js"
+],
+"Recordatorios": [
+"lang-es.js"
+],
+"Aún no hay mensajes. Tu familia, amigos y equipo escribirán de vez en cuando.": [
+"lang-es.js"
+],
+"¡Cuídate!": [
+"lang-es.js"
+],
+"Claro, seguimos en contacto": [
+"lang-es.js"
+],
+"Juguemos al fútbol después del cole": [
+"lang-es.js"
+],
+"¡No puedo esperar!": [
+"lang-es.js"
+],
+"Gracias, mamá, cuídate tú también": [
+"lang-es.js"
+],
+"Equipo médico": [
+"lang-es.js"
+],
+"Te quiero mucho.": [
+"lang-es.js"
+],
+"Te echo mucho de menos": [
+"lang-es.js"
+],
+"¡Genial, nos vemos!": [
+"lang-es.js"
+],
+"Vale, salimos temprano por la mañana.": [
+"lang-es.js"
+],
+"Peña de aficionados": [
+"lang-es.js"
+],
+"Afición": [
+"lang-es.js"
+],
+"Gracias por el consejo": [
+"lang-es.js"
+],
+"¡Nos vemos en el recreo!": [
+"lang-es.js"
+],
+"Organización benéfica": [
+"lang-es.js"
+],
+"¡Qué bien! Te preparo tu plato favorito.": [
+"lang-es.js"
+],
+"Los mensajes nuevos aparecerán aquí.": [
+"lang-es.js"
+],
+"¡Qué alegría, te espero!": [
+"lang-es.js"
+],
+"Agenda": [
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-pt.js"
+],
+"Prensa": [
+"lang-es.js"
+],
+"Abuelo": [
+"lang-es.js"
+],
+"Fundación": [
+"lang-es.js"
+],
+"Tranquila, mamá, estoy bien": [
+"lang-es.js"
+],
+"Tranquilo, papá, estoy trabajando duro": [
+"lang-es.js"
+],
+"Pruebas de cantera": [
+"lang-es.js"
+],
+"Me encanta.": [
+"lang-es.js"
+],
+"¡Suerte!": [
+"lang-es.js"
+],
+"Un punto es un punto.": [
+"lang-es.js"
+],
+"¡Este equipo es otra cosa!": [
+"lang-es.js"
+],
+"Este chico va a ser muy bueno.": [
+"lang-es.js"
+],
+"Me lo esperaba.": [
+"lang-es.js"
+],
+"¡Sigue así!": [
+"lang-es.js"
+],
+"Lo haremos mejor.": [
+"lang-es.js"
+],
+"Tu cumpleaños": [
+"lang-es.js"
+],
+"¡Leyenda!": [
+"lang-es.js"
+],
+"Ya me compré su camiseta.": [
+"lang-es.js"
+],
+"PICHICHI": [
+"lang-es.js"
+],
+"La carrera por el pichichi": [
+"lang-es.js"
+],
+"¡Qué fotaza!": [
+"lang-es.js"
+],
+"¡Olé!": [
+"lang-es.js"
+],
+"Siempre estamos con vosotros.": [
+"lang-es.js"
+],
+"PARTIDO DE COPA": [
+"lang-es.js"
+],
+"¡Cabeza alta!": [
+"lang-es.js"
+],
+"Celebración": [
+"lang-es.js"
+],
+"CLASIFICACIÓN": [
+"lang-es.js"
+],
+"Rival por sorteo": [
+"lang-es.js"
+],
+"Temporada terminada": [
+"lang-es.js"
+],
+"¡Por fin!": [
+"lang-es.js"
+],
+"FICHAJES": [
+"lang-es.js"
+],
+"Nos levantaremos.": [
+"lang-es.js"
+],
+"Todo el día": [
+"lang-es.js"
+],
+"¡Vaya!": [
+"lang-es.js"
+],
+"Espera a la nueva temporada": [
+"lang-es.js"
+],
+"¡Ha nacido una estrella!": [
+"lang-es.js"
+],
+"¡Tres puntos al bolsillo!": [
+"lang-es.js"
+],
+"¡Día de partido! ¡Todos juntos!": [
+"lang-es.js"
+],
+"DÍA DE PARTIDO": [
+"lang-es.js"
+],
 "— ¡nos hemos clasificado!": [
 "lang-es.js"
 ],
@@ -263345,9 +266701,6 @@
 "¡Hora de celebrar! Toca para saltar.": [
 "lang-es.js"
 ],
-"Temporada terminada": [
-"lang-es.js"
-],
 "Saltar al final de temporada": [
 "lang-es.js"
 ],
@@ -263565,9 +266918,6 @@
 "Liga Tango": [
 "lang-es.js",
 "lang-id.js"
-],
-"Afición": [
-"lang-es.js"
 ],
 "La peña organiza una jornada de firmas.": [
 "lang-es.js"
@@ -267186,9 +270536,6 @@
 "JUGAR EL PARTIDO": [
 "lang-es.js"
 ],
-"DÍA DE PARTIDO": [
-"lang-es.js"
-],
 "FIN DE LA CONCENTRACIÓN": [
 "lang-es.js"
 ],
@@ -268102,9 +271449,6 @@
 "lang-es.js"
 ],
 "☁️ TUS CARRERAS SE RESTAURARON DESDE ICLOUD": [
-"lang-es.js"
-],
-"CLASIFICACIÓN": [
 "lang-es.js"
 ],
 "MÚSICA": [
@@ -272827,6 +276171,241 @@
 "BUEN PARTIDO, TU GOL TRANQUILIZÓ AL EQUIPO.": [
 "lang-es.js"
 ],
+"ESE ES MI NIÑO.": [
+"lang-es.js"
+],
+"NO DEJO DE PENSAR EN TI": [
+"lang-es.js"
+],
+"TOMEMOS UN CAFÉ ESTA NOCHE": [
+"lang-es.js"
+],
+"ME PASO A CENAR": [
+"lang-es.js"
+],
+"¿SALIMOS A CENAR?": [
+"lang-es.js"
+],
+"¡HECHO, PREPARO LAS CAÑAS!": [
+"lang-es.js"
+],
+"¡HORA DEL EXAMEN PARCIAL!": [
+"lang-es.js"
+],
+"HACER EL EXAMEN PARCIAL": [
+"lang-es.js"
+],
+"YO TAMBIÉN TE ECHO DE MENOS.": [
+"lang-es.js"
+],
+"YO TAMBIÉN PIENSO EN TI.": [
+"lang-es.js"
+],
+"SIGUE COMO SABES.": [
+"lang-es.js"
+],
+"¿VAMOS A PESCAR ESTA NOCHE, PAPÁ?": [
+"lang-es.js"
+],
+"ESTA NOCHE ESTOY EN CASA, MAMÁ, PASEMOS TIEMPO JUNTOS": [
+"lang-es.js"
+],
+"ESTE TEMA ESTÁ CERRADO.": [
+"lang-es.js"
+],
+"VAMOS A DAR UN PASEO JUNTOS": [
+"lang-es.js"
+],
+"¡NOS VEMOS, TÍO!": [
+"lang-es.js"
+],
+"¡TE ESTARÉ ESPERANDO!": [
+"lang-es.js"
+],
+"QUEDEMOS EL FIN DE SEMANA": [
+"lang-es.js"
+],
+"EL FIN DE SEMANA VOY A DESAYUNAR": [
+"lang-es.js"
+],
+"TENGO UNA SORPRESA PARA TI EL FIN DE SEMANA": [
+"lang-es.js"
+],
+"JAJA, EXACTO": [
+"lang-es.js"
+],
+"YO TAMBIÉN VOY AL PARTIDILLO": [
+"lang-es.js"
+],
+"¡GENIAL, TE HE ECHADO DE MENOS!": [
+"lang-es.js"
+],
+"RECORDATORIOS": [
+"lang-es.js"
+],
+"¡CUÍDATE!": [
+"lang-es.js"
+],
+"CLARO, SEGUIMOS EN CONTACTO": [
+"lang-es.js"
+],
+"JUGUEMOS AL FÚTBOL DESPUÉS DEL COLE": [
+"lang-es.js"
+],
+"¡NO PUEDO ESPERAR!": [
+"lang-es.js"
+],
+"GRACIAS, MAMÁ, CUÍDATE TÚ TAMBIÉN": [
+"lang-es.js"
+],
+"EQUIPO MÉDICO": [
+"lang-es.js"
+],
+"TE QUIERO MUCHO.": [
+"lang-es.js"
+],
+"TE ECHO MUCHO DE MENOS": [
+"lang-es.js"
+],
+"¡GENIAL, NOS VEMOS!": [
+"lang-es.js"
+],
+"VALE, SALIMOS TEMPRANO POR LA MAÑANA.": [
+"lang-es.js"
+],
+"PEÑA DE AFICIONADOS": [
+"lang-es.js"
+],
+"AFICIÓN": [
+"lang-es.js"
+],
+"GRACIAS POR EL CONSEJO": [
+"lang-es.js"
+],
+"¡NOS VEMOS EN EL RECREO!": [
+"lang-es.js"
+],
+"ORGANIZACIÓN BENÉFICA": [
+"lang-es.js"
+],
+"¡QUÉ BIEN! TE PREPARO TU PLATO FAVORITO.": [
+"lang-es.js"
+],
+"LOS MENSAJES NUEVOS APARECERÁN AQUÍ.": [
+"lang-es.js"
+],
+"¡QUÉ ALEGRÍA, TE ESPERO!": [
+"lang-es.js"
+],
+"AGENDA": [
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-pt.js"
+],
+"PRENSA": [
+"lang-es.js"
+],
+"ABUELO": [
+"lang-es.js"
+],
+"FUNDACIÓN": [
+"lang-es.js"
+],
+"ESPERANDO RESPUESTA": [
+"lang-es.js"
+],
+"TRANQUILA, MAMÁ, ESTOY BIEN": [
+"lang-es.js"
+],
+"TRANQUILO, PAPÁ, ESTOY TRABAJANDO DURO": [
+"lang-es.js"
+],
+"PRUEBAS DE CANTERA": [
+"lang-es.js"
+],
+"ME ENCANTA.": [
+"lang-es.js"
+],
+"¡SUERTE!": [
+"lang-es.js"
+],
+"UN PUNTO ES UN PUNTO.": [
+"lang-es.js"
+],
+"¡ESTE EQUIPO ES OTRA COSA!": [
+"lang-es.js"
+],
+"ESTE CHICO VA A SER MUY BUENO.": [
+"lang-es.js"
+],
+"ME LO ESPERABA.": [
+"lang-es.js"
+],
+"¡SIGUE ASÍ!": [
+"lang-es.js"
+],
+"LO HAREMOS MEJOR.": [
+"lang-es.js"
+],
+"TU CUMPLEAÑOS": [
+"lang-es.js"
+],
+"¡LEYENDA!": [
+"lang-es.js"
+],
+"YA ME COMPRÉ SU CAMISETA.": [
+"lang-es.js"
+],
+"LA CARRERA POR EL PICHICHI": [
+"lang-es.js"
+],
+"¡QUÉ FOTAZA!": [
+"lang-es.js"
+],
+"¡OLÉ!": [
+"lang-es.js"
+],
+"SIEMPRE ESTAMOS CON VOSOTROS.": [
+"lang-es.js"
+],
+"¡CABEZA ALTA!": [
+"lang-es.js"
+],
+"CELEBRACIÓN": [
+"lang-es.js"
+],
+"RIVAL POR SORTEO": [
+"lang-es.js"
+],
+"TEMPORADA TERMINADA": [
+"lang-es.js"
+],
+"¡POR FIN!": [
+"lang-es.js"
+],
+"NOS LEVANTAREMOS.": [
+"lang-es.js"
+],
+"TODO EL DÍA": [
+"lang-es.js"
+],
+"¡VAYA!": [
+"lang-es.js"
+],
+"ESPERA A LA NUEVA TEMPORADA": [
+"lang-es.js"
+],
+"¡HA NACIDO UNA ESTRELLA!": [
+"lang-es.js"
+],
+"¡TRES PUNTOS AL BOLSILLO!": [
+"lang-es.js"
+],
+"¡DÍA DE PARTIDO! ¡TODOS JUNTOS!": [
+"lang-es.js"
+],
 "— ¡NOS HEMOS CLASIFICADO!": [
 "lang-es.js"
 ],
@@ -273709,9 +277288,6 @@
 "LLEVANDO": [
 "lang-es.js"
 ],
-"MÁXIMOS GOLEADORES": [
-"lang-es.js"
-],
 "MÁXIMO GOLEADOR:": [
 "lang-es.js"
 ],
@@ -274116,9 +277692,6 @@
 "lang-es.js"
 ],
 "SALIR DEL CASINO": [
-"lang-es.js"
-],
-"PARTIDO DE COPA": [
 "lang-es.js"
 ],
 "CAMPEÓN DE COPA": [
@@ -274641,9 +278214,6 @@
 "lang-es.js"
 ],
 "¡HORA DE CELEBRAR! TOCA PARA SALTAR.": [
-"lang-es.js"
-],
-"TEMPORADA TERMINADA": [
 "lang-es.js"
 ],
 "SALTAR AL FINAL DE TEMPORADA": [
@@ -277763,6 +281333,9 @@
 "Situaciones fijas, metas duras: {} desafíos · {}/{} ⭐": [
 "lang-es.js"
 ],
+"Lo pasaste genial con {0}. Amistad +8": [
+"lang-es.js"
+],
 "¡El rival superó a {} y llegó a zona peligrosa!": [
 "lang-es.js"
 ],
@@ -277845,6 +281418,9 @@
 "lang-es.js"
 ],
 "✨ ¡{0} ya es tuyo! Tu publicación recibe aplausos.": [
+"lang-es.js"
+],
+"Rumor de fichaje: el {0} va a por {1}.": [
 "lang-es.js"
 ],
 "El entrenador admiró tu determinación. Resistencia +{}": [
@@ -280185,6 +283761,9 @@
 "lang-pt.js"
 ],
 "Cámara de {0} MP": [
+"lang-es.js"
+],
+"Partido internacional {0}": [
 "lang-es.js"
 ],
 "({}.º puesto)": [
@@ -290623,6 +294202,246 @@
 "Bon match, ton but a rassuré l'équipe.": [
 "lang-fr.js"
 ],
+"C'est bien mon fils.": [
+"lang-fr.js"
+],
+"Je pense tout le temps à toi": [
+"lang-fr.js"
+],
+"On prend un café ce soir": [
+"lang-fr.js"
+],
+"Je passe pour le dîner": [
+"lang-fr.js"
+],
+"On sort dîner ?": [
+"lang-fr.js"
+],
+"Marché conclu, je prépare les cannes !": [
+"lang-fr.js"
+],
+"C'est l'heure de l'examen de mi-parcours !": [
+"lang-fr.js"
+],
+"Passer l'examen de mi-parcours": [
+"lang-fr.js"
+],
+"Tu me manques aussi.": [
+"lang-fr.js"
+],
+"Moi aussi je pense à toi.": [
+"lang-fr.js"
+],
+"Continue comme tu sais faire.": [
+"lang-fr.js"
+],
+"On va pêcher ce soir, papa ?": [
+"lang-fr.js"
+],
+"Je suis à la maison ce soir, maman, passons du temps ensemble": [
+"lang-fr.js"
+],
+"Ce sujet est clos.": [
+"lang-fr.js"
+],
+"Les sujets vus en classe tomberont. Passe l'examen quand tu es prêt.": [
+"lang-fr.js"
+],
+"Allons marcher ensemble": [
+"lang-fr.js"
+],
+"À plus, frérot !": [
+"lang-fr.js"
+],
+"Je t'attendrai !": [
+"lang-fr.js"
+],
+"Voyons-nous ce week-end": [
+"lang-fr.js"
+],
+"Je viens pour le petit-déjeuner ce week-end": [
+"lang-fr.js"
+],
+"J'ai une surprise pour toi ce week-end": [
+"lang-fr.js"
+],
+"Haha, carrément": [
+"lang-fr.js"
+],
+"Je viens aussi au foot à cinq": [
+"lang-fr.js"
+],
+"Super, tu m'as manqué !": [
+"lang-fr.js"
+],
+"Rappels": [
+"lang-fr.js"
+],
+"Pas encore de messages. Ta famille, tes amis et ton équipe écriront de temps en temps.": [
+"lang-fr.js"
+],
+"Prends soin de toi !": [
+"lang-fr.js"
+],
+"Bien sûr, on se tient au courant": [
+"lang-fr.js"
+],
+"On joue au foot après l'école": [
+"lang-fr.js"
+],
+"J'ai hâte !": [
+"lang-fr.js"
+],
+"Merci, maman, prends soin de toi aussi": [
+"lang-fr.js"
+],
+"Staff médical": [
+"lang-fr.js"
+],
+"Je t'aime très fort.": [
+"lang-fr.js"
+],
+"Tu me manques tellement": [
+"lang-fr.js"
+],
+"Super, à plus !": [
+"lang-fr.js"
+],
+"D'accord, on part tôt le matin.": [
+"lang-fr.js"
+],
+"Club des supporters": [
+"lang-fr.js"
+],
+"Supporters": [
+"lang-fr.js"
+],
+"Merci pour le conseil": [
+"lang-fr.js"
+],
+"On se voit à la récré !": [
+"lang-fr.js"
+],
+"Association caritative": [
+"lang-fr.js"
+],
+"Youpi ! Je prépare ton plat préféré.": [
+"lang-fr.js"
+],
+"Les nouveaux messages apparaîtront ici.": [
+"lang-fr.js"
+],
+"Trop contente, je t'attends !": [
+"lang-fr.js"
+],
+"Papi": [
+"lang-fr.js"
+],
+"Fondation": [
+"lang-fr.js"
+],
+"Ne t'inquiète pas, maman, je vais bien": [
+"lang-fr.js"
+],
+"T'inquiète pas, papa, je bosse": [
+"lang-fr.js"
+],
+"Détections du centre de formation": [
+"lang-fr.js"
+],
+"J'adore.": [
+"lang-fr.js"
+],
+"Bonne chance !": [
+"lang-fr.js"
+],
+"Un point, c'est un point.": [
+"lang-fr.js"
+],
+"Cette équipe est à part !": [
+"lang-fr.js"
+],
+"Ce gamin va devenir très fort.": [
+"lang-fr.js"
+],
+"Je m'y attendais.": [
+"lang-fr.js"
+],
+"Continue comme ça !": [
+"lang-fr.js"
+],
+"On fera mieux.": [
+"lang-fr.js"
+],
+"Ton anniversaire": [
+"lang-fr.js"
+],
+"Légendaire !": [
+"lang-fr.js"
+],
+"J'ai déjà acheté son maillot.": [
+"lang-fr.js"
+],
+"MEILLEURS BUTEURS": [
+"lang-fr.js"
+],
+"La course au titre de meilleur buteur": [
+"lang-fr.js"
+],
+"Super photo !": [
+"lang-fr.js"
+],
+"Chapeau !": [
+"lang-fr.js"
+],
+"On est toujours derrière vous.": [
+"lang-fr.js"
+],
+"MATCH DE COUPE": [
+"lang-fr.js"
+],
+"Têtes hautes !": [
+"lang-fr.js"
+],
+"CLASSEMENT": [
+"lang-fr.js"
+],
+"Adversaire désigné par tirage": [
+"lang-fr.js"
+],
+"Saison terminée": [
+"lang-fr.js"
+],
+"Enfin !": [
+"lang-fr.js"
+],
+"TRANSFERT": [
+"lang-fr.js"
+],
+"On va rebondir.": [
+"lang-fr.js"
+],
+"Toute la journée": [
+"lang-fr.js"
+],
+"Waouh !": [
+"lang-fr.js"
+],
+"Attends la nouvelle saison": [
+"lang-fr.js"
+],
+"Une star est née !": [
+"lang-fr.js"
+],
+"Trois points dans la poche !": [
+"lang-fr.js"
+],
+"Jour de match ! Tous ensemble !": [
+"lang-fr.js"
+],
+"JOUR DE MATCH": [
+"lang-fr.js"
+],
 "— on est qualifiés !": [
 "lang-fr.js"
 ],
@@ -292919,9 +296738,6 @@
 "C'est l'heure de fêter ! Touche pour passer.": [
 "lang-fr.js"
 ],
-"Saison terminée": [
-"lang-fr.js"
-],
 "Aller à la fin de saison": [
 "lang-fr.js"
 ],
@@ -293136,9 +296952,6 @@
 "lang-fr.js"
 ],
 "Ligue tango": [
-"lang-fr.js"
-],
-"Supporters": [
 "lang-fr.js"
 ],
 "Rencontre avec les supporters": [
@@ -296675,9 +300488,6 @@
 "JOUER LE MATCH": [
 "lang-fr.js"
 ],
-"JOUR DE MATCH": [
-"lang-fr.js"
-],
 "FIN DU STAGE": [
 "lang-fr.js"
 ],
@@ -299789,9 +303599,6 @@
 "TRÉSORERIE": [
 "lang-fr.js"
 ],
-"CLASSEMENT": [
-"lang-fr.js"
-],
 "JOUEUR À SURVEILLER": [
 "lang-fr.js"
 ],
@@ -302085,6 +305892,225 @@
 "BON MATCH, TON BUT A RASSURÉ L'ÉQUIPE.": [
 "lang-fr.js"
 ],
+"C'EST BIEN MON FILS.": [
+"lang-fr.js"
+],
+"JE PENSE TOUT LE TEMPS À TOI": [
+"lang-fr.js"
+],
+"ON PREND UN CAFÉ CE SOIR": [
+"lang-fr.js"
+],
+"JE PASSE POUR LE DÎNER": [
+"lang-fr.js"
+],
+"ON SORT DÎNER ?": [
+"lang-fr.js"
+],
+"MARCHÉ CONCLU, JE PRÉPARE LES CANNES !": [
+"lang-fr.js"
+],
+"C'EST L'HEURE DE L'EXAMEN DE MI-PARCOURS !": [
+"lang-fr.js"
+],
+"PASSER L'EXAMEN DE MI-PARCOURS": [
+"lang-fr.js"
+],
+"TU ME MANQUES AUSSI.": [
+"lang-fr.js"
+],
+"MOI AUSSI JE PENSE À TOI.": [
+"lang-fr.js"
+],
+"CONTINUE COMME TU SAIS FAIRE.": [
+"lang-fr.js"
+],
+"ON VA PÊCHER CE SOIR, PAPA ?": [
+"lang-fr.js"
+],
+"JE SUIS À LA MAISON CE SOIR, MAMAN, PASSONS DU TEMPS ENSEMBLE": [
+"lang-fr.js"
+],
+"CE SUJET EST CLOS.": [
+"lang-fr.js"
+],
+"ALLONS MARCHER ENSEMBLE": [
+"lang-fr.js"
+],
+"À PLUS, FRÉROT !": [
+"lang-fr.js"
+],
+"JE T'ATTENDRAI !": [
+"lang-fr.js"
+],
+"VOYONS-NOUS CE WEEK-END": [
+"lang-fr.js"
+],
+"JE VIENS POUR LE PETIT-DÉJEUNER CE WEEK-END": [
+"lang-fr.js"
+],
+"J'AI UNE SURPRISE POUR TOI CE WEEK-END": [
+"lang-fr.js"
+],
+"HAHA, CARRÉMENT": [
+"lang-fr.js"
+],
+"JE VIENS AUSSI AU FOOT À CINQ": [
+"lang-fr.js"
+],
+"SUPER, TU M'AS MANQUÉ !": [
+"lang-fr.js"
+],
+"RAPPELS": [
+"lang-fr.js"
+],
+"PRENDS SOIN DE TOI !": [
+"lang-fr.js"
+],
+"BIEN SÛR, ON SE TIENT AU COURANT": [
+"lang-fr.js"
+],
+"ON JOUE AU FOOT APRÈS L'ÉCOLE": [
+"lang-fr.js"
+],
+"J'AI HÂTE !": [
+"lang-fr.js"
+],
+"MERCI, MAMAN, PRENDS SOIN DE TOI AUSSI": [
+"lang-fr.js"
+],
+"STAFF MÉDICAL": [
+"lang-fr.js"
+],
+"JE T'AIME TRÈS FORT.": [
+"lang-fr.js"
+],
+"TU ME MANQUES TELLEMENT": [
+"lang-fr.js"
+],
+"SUPER, À PLUS !": [
+"lang-fr.js"
+],
+"D'ACCORD, ON PART TÔT LE MATIN.": [
+"lang-fr.js"
+],
+"CLUB DES SUPPORTERS": [
+"lang-fr.js"
+],
+"MERCI POUR LE CONSEIL": [
+"lang-fr.js"
+],
+"ON SE VOIT À LA RÉCRÉ !": [
+"lang-fr.js"
+],
+"ASSOCIATION CARITATIVE": [
+"lang-fr.js"
+],
+"YOUPI ! JE PRÉPARE TON PLAT PRÉFÉRÉ.": [
+"lang-fr.js"
+],
+"LES NOUVEAUX MESSAGES APPARAÎTRONT ICI.": [
+"lang-fr.js"
+],
+"TROP CONTENTE, JE T'ATTENDS !": [
+"lang-fr.js"
+],
+"PAPI": [
+"lang-fr.js"
+],
+"FONDATION": [
+"lang-fr.js"
+],
+"EN ATTENTE DE RÉPONSE": [
+"lang-fr.js"
+],
+"NE T'INQUIÈTE PAS, MAMAN, JE VAIS BIEN": [
+"lang-fr.js"
+],
+"T'INQUIÈTE PAS, PAPA, JE BOSSE": [
+"lang-fr.js"
+],
+"DÉTECTIONS DU CENTRE DE FORMATION": [
+"lang-fr.js"
+],
+"J'ADORE.": [
+"lang-fr.js"
+],
+"BONNE CHANCE !": [
+"lang-fr.js"
+],
+"UN POINT, C'EST UN POINT.": [
+"lang-fr.js"
+],
+"CETTE ÉQUIPE EST À PART !": [
+"lang-fr.js"
+],
+"CE GAMIN VA DEVENIR TRÈS FORT.": [
+"lang-fr.js"
+],
+"JE M'Y ATTENDAIS.": [
+"lang-fr.js"
+],
+"CONTINUE COMME ÇA !": [
+"lang-fr.js"
+],
+"ON FERA MIEUX.": [
+"lang-fr.js"
+],
+"TON ANNIVERSAIRE": [
+"lang-fr.js"
+],
+"LÉGENDAIRE !": [
+"lang-fr.js"
+],
+"J'AI DÉJÀ ACHETÉ SON MAILLOT.": [
+"lang-fr.js"
+],
+"LA COURSE AU TITRE DE MEILLEUR BUTEUR": [
+"lang-fr.js"
+],
+"SUPER PHOTO !": [
+"lang-fr.js"
+],
+"CHAPEAU !": [
+"lang-fr.js"
+],
+"ON EST TOUJOURS DERRIÈRE VOUS.": [
+"lang-fr.js"
+],
+"TÊTES HAUTES !": [
+"lang-fr.js"
+],
+"ADVERSAIRE DÉSIGNÉ PAR TIRAGE": [
+"lang-fr.js"
+],
+"SAISON TERMINÉE": [
+"lang-fr.js"
+],
+"ENFIN !": [
+"lang-fr.js"
+],
+"ON VA REBONDIR.": [
+"lang-fr.js"
+],
+"TOUTE LA JOURNÉE": [
+"lang-fr.js"
+],
+"WAOUH !": [
+"lang-fr.js"
+],
+"ATTENDS LA NOUVELLE SAISON": [
+"lang-fr.js"
+],
+"UNE STAR EST NÉE !": [
+"lang-fr.js"
+],
+"TROIS POINTS DANS LA POCHE !": [
+"lang-fr.js"
+],
+"JOUR DE MATCH ! TOUS ENSEMBLE !": [
+"lang-fr.js"
+],
 "— ON EST QUALIFIÉS !": [
 "lang-fr.js"
 ],
@@ -302941,9 +306967,6 @@
 "PORTÉ": [
 "lang-fr.js"
 ],
-"MEILLEURS BUTEURS": [
-"lang-fr.js"
-],
 "MEILLEUR BUTEUR :": [
 "lang-fr.js"
 ],
@@ -303346,9 +307369,6 @@
 "lang-fr.js"
 ],
 "QUITTER LE CASINO": [
-"lang-fr.js"
-],
-"MATCH DE COUPE": [
 "lang-fr.js"
 ],
 "VAINQUEUR DE COUPE": [
@@ -303830,9 +307850,6 @@
 "lang-fr.js"
 ],
 "C'EST L'HEURE DE FÊTER ! TOUCHE POUR PASSER.": [
-"lang-fr.js"
-],
-"SAISON TERMINÉE": [
 "lang-fr.js"
 ],
 "ALLER À LA FIN DE SAISON": [
@@ -306887,6 +310904,9 @@
 "Situations imposées, objectifs durs : {} défis · {}/{} ⭐": [
 "lang-fr.js"
 ],
+"Super moment avec {0}. Amitié +8": [
+"lang-fr.js"
+],
 "L'adversaire a passé {} et est entré dans une zone dangereuse !": [
 "lang-fr.js"
 ],
@@ -306969,6 +310989,9 @@
 "lang-fr.js"
 ],
 "✨ {0} est à toi ! Ta publication reçoit des bravos.": [
+"lang-fr.js"
+],
+"Rumeur de transfert : {0} passe à l'action pour {1}.": [
 "lang-fr.js"
 ],
 "Le coach a admiré ta détermination. Endurance +{}": [
@@ -309252,6 +313275,9 @@
 "lang-fr.js"
 ],
 "Appareil photo {0} Mpx": [
+"lang-fr.js"
+],
+"Match international {0}": [
 "lang-fr.js"
 ],
 "({}e place)": [
@@ -319411,6 +323437,252 @@
 "Permainan bagus, golmu menenangkan tim.": [
 "lang-id.js"
 ],
+"Itu baru anakku.": [
+"lang-id.js"
+],
+"Aku terus memikirkanmu": [
+"lang-id.js"
+],
+"Ngopi yuk malam ini": [
+"lang-id.js"
+],
+"Aku mampir makan malam": [
+"lang-id.js"
+],
+"Makan malam di luar, yuk?": [
+"lang-id.js"
+],
+"Siap, Ayah siapkan pancingnya!": [
+"lang-id.js"
+],
+"Waktunya ujian tengah semester!": [
+"lang-id.js"
+],
+"Ikut ujian tengah semester": [
+"lang-id.js"
+],
+"Aku juga kangen.": [
+"lang-id.js"
+],
+"Aku juga memikirkanmu.": [
+"lang-id.js"
+],
+"Lanjutkan seperti biasa.": [
+"lang-id.js"
+],
+"Malam ini mancing, yuk, Yah?": [
+"lang-id.js"
+],
+"Malam ini aku di rumah, Bu, kita duduk bersama": [
+"lang-id.js"
+],
+"Topik ini sudah ditutup.": [
+"lang-id.js"
+],
+"Materi kelas akan keluar. Ikut ujian saat kamu siap.": [
+"lang-id.js"
+],
+"Ayo jalan-jalan bersama": [
+"lang-id.js"
+],
+"Sampai jumpa, bro!": [
+"lang-id.js"
+],
+"Ibu akan menunggumu!": [
+"lang-id.js"
+],
+"Ketemu akhir pekan ini, yuk": [
+"lang-id.js"
+],
+"Akhir pekan aku datang sarapan": [
+"lang-id.js"
+],
+"Aku punya kejutan untukmu akhir pekan ini": [
+"lang-id.js"
+],
+"Haha, betul": [
+"lang-id.js"
+],
+"Aku ikut futsal juga": [
+"lang-id.js"
+],
+"Mantap, aku kangen!": [
+"lang-id.js"
+],
+"Pengingat": [
+"lang-id.js"
+],
+"Belum ada pesan. Keluarga, teman, dan timmu akan sesekali menulis.": [
+"lang-id.js"
+],
+"Jaga dirimu!": [
+"lang-id.js"
+],
+"Pasti, kita kabar-kabaran": [
+"lang-id.js"
+],
+"Main bola sepulang sekolah, yuk": [
+"lang-id.js"
+],
+"Aku tidak sabar!": [
+"lang-id.js"
+],
+"Makasih, Bu, Ibu juga jaga diri": [
+"lang-id.js"
+],
+"Tim Medis": [
+"lang-id.js"
+],
+"Ibu sayang sekali padamu.": [
+"lang-id.js"
+],
+"Aku kangen sekali": [
+"lang-id.js"
+],
+"Wartawan olahraga": [
+"lang-id.js"
+],
+"Mantap, sampai jumpa!": [
+"lang-id.js"
+],
+"Oke, kita berangkat pagi-pagi.": [
+"lang-id.js"
+],
+"Klub Suporter": [
+"lang-id.js"
+],
+"Suporter": [
+"lang-id.js"
+],
+"Makasih sarannya": [
+"lang-id.js"
+],
+"Sampai ketemu waktu istirahat!": [
+"lang-id.js"
+],
+"Lembaga amal": [
+"lang-id.js"
+],
+"Asyik! Ibu masak makanan favoritmu.": [
+"lang-id.js"
+],
+"Pesan baru akan muncul di sini.": [
+"lang-id.js"
+],
+"Senang sekali, aku tunggu!": [
+"lang-id.js"
+],
+"Pers": [
+"lang-id.js"
+],
+"Kakek": [
+"lang-id.js"
+],
+"Yayasan": [
+"lang-id.js"
+],
+"Jangan khawatir, Bu, aku baik-baik saja": [
+"lang-id.js"
+],
+"Tenang, Yah, aku berlatih keras": [
+"lang-id.js"
+],
+"Seleksi akademi": [
+"lang-id.js"
+],
+"Suka banget.": [
+"lang-id.js"
+],
+"Sukses!": [
+"lang-id.js"
+],
+"Satu poin tetap poin.": [
+"lang-id.js"
+],
+"Tim ini beda kelas!": [
+"lang-id.js"
+],
+"Anak ini akan jadi hebat.": [
+"lang-id.js"
+],
+"Sudah kuduga.": [
+"lang-id.js"
+],
+"Pertahankan!": [
+"lang-id.js"
+],
+"Kita bisa lebih baik.": [
+"lang-id.js"
+],
+"Ulang tahunmu": [
+"lang-id.js"
+],
+"Legenda!": [
+"lang-id.js"
+],
+"Aku sudah beli jerseynya.": [
+"lang-id.js"
+],
+"TOP SKOR": [
+"lang-id.js"
+],
+"Persaingan top skor": [
+"lang-id.js"
+],
+"Foto keren!": [
+"lang-id.js"
+],
+"Mantap!": [
+"lang-id.js"
+],
+"Kami selalu mendukung kalian.": [
+"lang-id.js"
+],
+"LAGA PIALA": [
+"lang-id.js"
+],
+"Angkat kepala!": [
+"lang-id.js"
+],
+"Perayaan": [
+"lang-id.js"
+],
+"KLASEMEN": [
+"lang-id.js"
+],
+"Lawan ditentukan undian": [
+"lang-id.js"
+],
+"Musim selesai": [
+"lang-id.js"
+],
+"Akhirnya!": [
+"lang-id.js"
+],
+"Kami akan bangkit.": [
+"lang-id.js"
+],
+"Sepanjang hari": [
+"lang-id.js"
+],
+"Wah!": [
+"lang-id.js"
+],
+"Tunggu musim baru": [
+"lang-id.js"
+],
+"Bintang telah lahir!": [
+"lang-id.js"
+],
+"Tiga poin di tangan!": [
+"lang-id.js"
+],
+"Hari pertandingan! Bersama-sama!": [
+"lang-id.js"
+],
+"HARI PERTANDINGAN": [
+"lang-id.js"
+],
 "— kita lolos!": [
 "lang-id.js"
 ],
@@ -321902,9 +326174,6 @@
 "lang-id.js"
 ],
 "Permintaan disetujui": [
-"lang-id.js"
-],
-"Suporter": [
 "lang-id.js"
 ],
 "Temu Suporter": [
@@ -325366,9 +329635,6 @@
 "GUGUR": [
 "lang-id.js"
 ],
-"TOP SKOR": [
-"lang-id.js"
-],
 "BERITA": [
 "lang-id.js"
 ],
@@ -325385,9 +329651,6 @@
 "lang-id.js"
 ],
 "MAINKAN LAGA": [
-"lang-id.js"
-],
-"HARI PERTANDINGAN": [
 "lang-id.js"
 ],
 "KAMP SELESAI": [
@@ -328738,9 +333001,6 @@
 "KEPERCAYAAN MANAJEMEN": [
 "lang-id.js"
 ],
-"KLASEMEN": [
-"lang-id.js"
-],
 "STATUS KLUB": [
 "lang-id.js"
 ],
@@ -330647,6 +334907,234 @@
 "PERMAINAN BAGUS, GOLMU MENENANGKAN TIM.": [
 "lang-id.js"
 ],
+"ITU BARU ANAKKU.": [
+"lang-id.js"
+],
+"AKU TERUS MEMIKIRKANMU": [
+"lang-id.js"
+],
+"NGOPI YUK MALAM INI": [
+"lang-id.js"
+],
+"AKU MAMPIR MAKAN MALAM": [
+"lang-id.js"
+],
+"MAKAN MALAM DI LUAR, YUK?": [
+"lang-id.js"
+],
+"SIAP, AYAH SIAPKAN PANCINGNYA!": [
+"lang-id.js"
+],
+"WAKTUNYA UJIAN TENGAH SEMESTER!": [
+"lang-id.js"
+],
+"IKUT UJIAN TENGAH SEMESTER": [
+"lang-id.js"
+],
+"AKU JUGA KANGEN.": [
+"lang-id.js"
+],
+"AKU JUGA MEMIKIRKANMU.": [
+"lang-id.js"
+],
+"LANJUTKAN SEPERTI BIASA.": [
+"lang-id.js"
+],
+"MALAM INI MANCING, YUK, YAH?": [
+"lang-id.js"
+],
+"MALAM INI AKU DI RUMAH, BU, KITA DUDUK BERSAMA": [
+"lang-id.js"
+],
+"TOPIK INI SUDAH DITUTUP.": [
+"lang-id.js"
+],
+"AYO JALAN-JALAN BERSAMA": [
+"lang-id.js"
+],
+"SAMPAI JUMPA, BRO!": [
+"lang-id.js"
+],
+"IBU AKAN MENUNGGUMU!": [
+"lang-id.js"
+],
+"KETEMU AKHIR PEKAN INI, YUK": [
+"lang-id.js"
+],
+"AKHIR PEKAN AKU DATANG SARAPAN": [
+"lang-id.js"
+],
+"AKU PUNYA KEJUTAN UNTUKMU AKHIR PEKAN INI": [
+"lang-id.js"
+],
+"HAHA, BETUL": [
+"lang-id.js"
+],
+"AKU IKUT FUTSAL JUGA": [
+"lang-id.js"
+],
+"MANTAP, AKU KANGEN!": [
+"lang-id.js"
+],
+"PENGINGAT": [
+"lang-id.js"
+],
+"JAGA DIRIMU!": [
+"lang-id.js"
+],
+"PASTI, KITA KABAR-KABARAN": [
+"lang-id.js"
+],
+"MAIN BOLA SEPULANG SEKOLAH, YUK": [
+"lang-id.js"
+],
+"AKU TIDAK SABAR!": [
+"lang-id.js"
+],
+"MAKASIH, BU, IBU JUGA JAGA DIRI": [
+"lang-id.js"
+],
+"TIM MEDIS": [
+"lang-id.js"
+],
+"IBU SAYANG SEKALI PADAMU.": [
+"lang-id.js"
+],
+"AKU KANGEN SEKALI": [
+"lang-id.js"
+],
+"WARTAWAN OLAHRAGA": [
+"lang-id.js"
+],
+"MANTAP, SAMPAI JUMPA!": [
+"lang-id.js"
+],
+"OKE, KITA BERANGKAT PAGI-PAGI.": [
+"lang-id.js"
+],
+"KLUB SUPORTER": [
+"lang-id.js"
+],
+"MAKASIH SARANNYA": [
+"lang-id.js"
+],
+"SAMPAI KETEMU WAKTU ISTIRAHAT!": [
+"lang-id.js"
+],
+"LEMBAGA AMAL": [
+"lang-id.js"
+],
+"ASYIK! IBU MASAK MAKANAN FAVORITMU.": [
+"lang-id.js"
+],
+"PESAN BARU AKAN MUNCUL DI SINI.": [
+"lang-id.js"
+],
+"SENANG SEKALI, AKU TUNGGU!": [
+"lang-id.js"
+],
+"PERS": [
+"lang-id.js"
+],
+"KAKEK": [
+"lang-id.js"
+],
+"YAYASAN": [
+"lang-id.js"
+],
+"MENUNGGU BALASAN": [
+"lang-id.js"
+],
+"JANGAN KHAWATIR, BU, AKU BAIK-BAIK SAJA": [
+"lang-id.js"
+],
+"TENANG, YAH, AKU BERLATIH KERAS": [
+"lang-id.js"
+],
+"SELEKSI AKADEMI": [
+"lang-id.js"
+],
+"SUKA BANGET.": [
+"lang-id.js"
+],
+"SUKSES!": [
+"lang-id.js"
+],
+"SATU POIN TETAP POIN.": [
+"lang-id.js"
+],
+"TIM INI BEDA KELAS!": [
+"lang-id.js"
+],
+"ANAK INI AKAN JADI HEBAT.": [
+"lang-id.js"
+],
+"SUDAH KUDUGA.": [
+"lang-id.js"
+],
+"PERTAHANKAN!": [
+"lang-id.js"
+],
+"KITA BISA LEBIH BAIK.": [
+"lang-id.js"
+],
+"ULANG TAHUNMU": [
+"lang-id.js"
+],
+"LEGENDA!": [
+"lang-id.js"
+],
+"AKU SUDAH BELI JERSEYNYA.": [
+"lang-id.js"
+],
+"PERSAINGAN TOP SKOR": [
+"lang-id.js"
+],
+"FOTO KEREN!": [
+"lang-id.js"
+],
+"MANTAP!": [
+"lang-id.js"
+],
+"KAMI SELALU MENDUKUNG KALIAN.": [
+"lang-id.js"
+],
+"ANGKAT KEPALA!": [
+"lang-id.js"
+],
+"PERAYAAN": [
+"lang-id.js"
+],
+"LAWAN DITENTUKAN UNDIAN": [
+"lang-id.js"
+],
+"MUSIM SELESAI": [
+"lang-id.js"
+],
+"AKHIRNYA!": [
+"lang-id.js"
+],
+"KAMI AKAN BANGKIT.": [
+"lang-id.js"
+],
+"SEPANJANG HARI": [
+"lang-id.js"
+],
+"WAH!": [
+"lang-id.js"
+],
+"TUNGGU MUSIM BARU": [
+"lang-id.js"
+],
+"BINTANG TELAH LAHIR!": [
+"lang-id.js"
+],
+"TIGA POIN DI TANGAN!": [
+"lang-id.js"
+],
+"HARI PERTANDINGAN! BERSAMA-SAMA!": [
+"lang-id.js"
+],
 "— KITA LOLOS!": [
 "lang-id.js"
 ],
@@ -331889,9 +336377,6 @@
 "KELUAR DARI KASINO": [
 "lang-id.js"
 ],
-"LAGA PIALA": [
-"lang-id.js"
-],
 "JUARA PIALA": [
 "lang-id.js"
 ],
@@ -332368,9 +336853,6 @@
 "lang-id.js"
 ],
 "SAATNYA SELEBRASI! KETUK UNTUK MELEWATI.": [
-"lang-id.js"
-],
-"MUSIM SELESAI": [
 "lang-id.js"
 ],
 "LOMPAT KE AKHIR MUSIM": [
@@ -335430,6 +339912,9 @@
 "Situasi siap, target berat: {} tantangan · {}/{} ⭐": [
 "lang-id.js"
 ],
+"Waktu yang seru bersama {0}. Persahabatan +8": [
+"lang-id.js"
+],
 "Lawan melewati {} dan masuk ke area berbahaya!": [
 "lang-id.js"
 ],
@@ -335512,6 +339997,9 @@
 "lang-id.js"
 ],
 "✨ {0} milikmu! Unggahanmu banjir tepuk tangan.": [
+"lang-id.js"
+],
+"Rumor transfer: {0} bergerak untuk {1}.": [
 "lang-id.js"
 ],
 "Pelatih mengagumi tekadmu. Stamina +{}": [
@@ -337794,6 +342282,9 @@
 "Kamera {0} MP": [
 "lang-id.js"
 ],
+"Laga timnas {0}": [
+"lang-id.js"
+],
 "(peringkat {})": [
 "lang-id.js"
 ],
@@ -338292,6 +342783,9 @@
 "lang-id.js"
 ],
 "Ketenaran {}": [
+"lang-id.js"
+],
+"{0} hr": [
 "lang-id.js"
 ],
 "Informativa sulla privacy": [
@@ -347975,6 +352469,247 @@
 "Bella partita, il tuo gol ha tranquillizzato la squadra.": [
 "lang-it.js"
 ],
+"Questo è il mio ragazzo.": [
+"lang-it.js"
+],
+"Penso sempre a te": [
+"lang-it.js"
+],
+"Prendiamoci un caffè stasera": [
+"lang-it.js"
+],
+"Passo per cena": [
+"lang-it.js"
+],
+"Usciamo a cena?": [
+"lang-it.js"
+],
+"Affare fatto, preparo le canne!": [
+"lang-it.js"
+],
+"È l'ora dell'esame di metà anno!": [
+"lang-it.js"
+],
+"Fai l'esame di metà anno": [
+"lang-it.js"
+],
+"Anche tu mi manchi.": [
+"lang-it.js"
+],
+"Anch'io penso a te.": [
+"lang-it.js"
+],
+"Continua così.": [
+"lang-it.js"
+],
+"Andiamo a pescare stasera, papà?": [
+"lang-it.js"
+],
+"Stasera sono a casa, mamma, stiamo insieme": [
+"lang-it.js"
+],
+"Questo argomento è chiuso.": [
+"lang-it.js"
+],
+"Usciranno gli argomenti fatti in classe. Fai l'esame quando sei pronto.": [
+"lang-it.js"
+],
+"Andiamo a fare una passeggiata insieme": [
+"lang-it.js"
+],
+"Ci vediamo, fratello!": [
+"lang-it.js"
+],
+"Ti aspetterò!": [
+"lang-it.js"
+],
+"Vediamoci nel weekend": [
+"lang-it.js"
+],
+"Nel weekend vengo a colazione": [
+"lang-it.js"
+],
+"Ho una sorpresa per te nel weekend": [
+"lang-it.js"
+],
+"Ahah, esatto": [
+"lang-it.js"
+],
+"Vengo anch'io a calcetto": [
+"lang-it.js"
+],
+"Grande, mi sei mancato!": [
+"lang-it.js"
+],
+"Promemoria": [
+"lang-it.js"
+],
+"Ancora nessun messaggio. Famiglia, amici e squadra scriveranno ogni tanto.": [
+"lang-it.js"
+],
+"Abbi cura di te!": [
+"lang-it.js"
+],
+"Certo, ci sentiamo": [
+"lang-it.js"
+],
+"Giochiamo a pallone dopo la scuola": [
+"lang-it.js"
+],
+"Non vedo l'ora!": [
+"lang-it.js"
+],
+"Grazie, mamma, abbi cura di te anche tu": [
+"lang-it.js"
+],
+"Staff medico": [
+"lang-it.js"
+],
+"Ti voglio tanto bene.": [
+"lang-it.js"
+],
+"Mi manchi tanto": [
+"lang-it.js"
+],
+"Grande, a presto!": [
+"lang-it.js"
+],
+"Va bene, partiamo presto la mattina.": [
+"lang-it.js"
+],
+"Club dei tifosi": [
+"lang-it.js"
+],
+"Tifosi": [
+"lang-it.js"
+],
+"Grazie del consiglio": [
+"lang-it.js"
+],
+"Ci vediamo all'intervallo!": [
+"lang-it.js"
+],
+"Ente benefico": [
+"lang-it.js"
+],
+"Evviva! Preparo il tuo piatto preferito.": [
+"lang-it.js"
+],
+"I nuovi messaggi appariranno qui.": [
+"lang-it.js"
+],
+"Che bello, ti aspetto!": [
+"lang-it.js"
+],
+"Stampa": [
+"lang-it.js"
+],
+"Nonno": [
+"lang-it.js"
+],
+"Fondazione": [
+"lang-it.js"
+],
+"Non preoccuparti, mamma, sto bene": [
+"lang-it.js"
+],
+"Tranquillo, papà, mi sto impegnando": [
+"lang-it.js"
+],
+"Provini del vivaio": [
+"lang-it.js"
+],
+"Lo adoro.": [
+"lang-it.js"
+],
+"In bocca al lupo!": [
+"lang-it.js"
+],
+"Un punto è pur sempre un punto.": [
+"lang-it.js"
+],
+"Questa squadra è un'altra cosa!": [
+"lang-it.js"
+],
+"Questo ragazzo diventerà fortissimo.": [
+"lang-it.js"
+],
+"Me lo aspettavo.": [
+"lang-it.js"
+],
+"Continua così!": [
+"lang-it.js"
+],
+"Faremo meglio.": [
+"lang-it.js"
+],
+"Il tuo compleanno": [
+"lang-it.js"
+],
+"Leggenda!": [
+"lang-it.js"
+],
+"Ho già comprato la sua maglia.": [
+"lang-it.js"
+],
+"CLASSIFICA MARCATORI": [
+"lang-it.js"
+],
+"La corsa al titolo di capocannoniere": [
+"lang-it.js"
+],
+"Che scatto!": [
+"lang-it.js"
+],
+"Bravissimi!": [
+"lang-it.js"
+],
+"Siamo sempre con voi.": [
+"lang-it.js"
+],
+"PARTITA DI COPPA": [
+"lang-it.js"
+],
+"Testa alta!": [
+"lang-it.js"
+],
+"CLASSIFICA": [
+"lang-it.js"
+],
+"Avversario deciso dal sorteggio": [
+"lang-it.js"
+],
+"Stagione finita": [
+"lang-it.js"
+],
+"Finalmente!": [
+"lang-it.js",
+"lang-pt.js"
+],
+"CALCIOMERCATO": [
+"lang-it.js"
+],
+"Ci rialzeremo.": [
+"lang-it.js"
+],
+"Tutto il giorno": [
+"lang-it.js"
+],
+"Aspetta la nuova stagione": [
+"lang-it.js"
+],
+"È nata una stella!": [
+"lang-it.js"
+],
+"Tre punti in tasca!": [
+"lang-it.js"
+],
+"Giorno di partita! Tutti insieme!": [
+"lang-it.js"
+],
+"GIORNO DI PARTITA": [
+"lang-it.js"
+],
 "— ci siamo qualificati!": [
 "lang-it.js"
 ],
@@ -350242,9 +354977,6 @@
 "È ora di esultare! Tocca per saltare.": [
 "lang-it.js"
 ],
-"Stagione finita": [
-"lang-it.js"
-],
 "Vai a fine stagione": [
 "lang-it.js"
 ],
@@ -350460,9 +355192,6 @@
 "lang-it.js"
 ],
 "Lega Tango": [
-"lang-it.js"
-],
-"Tifosi": [
 "lang-it.js"
 ],
 "Il club dei tifosi organizza una giornata di autografi.": [
@@ -353914,9 +358643,6 @@
 "GIOCA LA PARTITA": [
 "lang-it.js"
 ],
-"GIORNO DELLA PARTITA": [
-"lang-it.js"
-],
 "FINE DEL RITIRO": [
 "lang-it.js"
 ],
@@ -357294,9 +362020,6 @@
 "FIDUCIA DELLA SOCIETÀ": [
 "lang-it.js"
 ],
-"CLASSIFICA": [
-"lang-it.js"
-],
 "SITUAZIONE DEL CLUB": [
 "lang-it.js"
 ],
@@ -359217,6 +363940,226 @@
 "BELLA PARTITA, IL TUO GOL HA TRANQUILLIZZATO LA SQUADRA.": [
 "lang-it.js"
 ],
+"QUESTO È IL MIO RAGAZZO.": [
+"lang-it.js"
+],
+"PENSO SEMPRE A TE": [
+"lang-it.js"
+],
+"PRENDIAMOCI UN CAFFÈ STASERA": [
+"lang-it.js"
+],
+"PASSO PER CENA": [
+"lang-it.js"
+],
+"USCIAMO A CENA?": [
+"lang-it.js"
+],
+"AFFARE FATTO, PREPARO LE CANNE!": [
+"lang-it.js"
+],
+"È L'ORA DELL'ESAME DI METÀ ANNO!": [
+"lang-it.js"
+],
+"FAI L'ESAME DI METÀ ANNO": [
+"lang-it.js"
+],
+"ANCHE TU MI MANCHI.": [
+"lang-it.js"
+],
+"ANCH'IO PENSO A TE.": [
+"lang-it.js"
+],
+"CONTINUA COSÌ.": [
+"lang-it.js"
+],
+"ANDIAMO A PESCARE STASERA, PAPÀ?": [
+"lang-it.js"
+],
+"STASERA SONO A CASA, MAMMA, STIAMO INSIEME": [
+"lang-it.js"
+],
+"QUESTO ARGOMENTO È CHIUSO.": [
+"lang-it.js"
+],
+"ANDIAMO A FARE UNA PASSEGGIATA INSIEME": [
+"lang-it.js"
+],
+"CI VEDIAMO, FRATELLO!": [
+"lang-it.js"
+],
+"TI ASPETTERÒ!": [
+"lang-it.js"
+],
+"VEDIAMOCI NEL WEEKEND": [
+"lang-it.js"
+],
+"NEL WEEKEND VENGO A COLAZIONE": [
+"lang-it.js"
+],
+"HO UNA SORPRESA PER TE NEL WEEKEND": [
+"lang-it.js"
+],
+"AHAH, ESATTO": [
+"lang-it.js"
+],
+"VENGO ANCH'IO A CALCETTO": [
+"lang-it.js"
+],
+"GRANDE, MI SEI MANCATO!": [
+"lang-it.js"
+],
+"PROMEMORIA": [
+"lang-it.js"
+],
+"ABBI CURA DI TE!": [
+"lang-it.js"
+],
+"CERTO, CI SENTIAMO": [
+"lang-it.js"
+],
+"GIOCHIAMO A PALLONE DOPO LA SCUOLA": [
+"lang-it.js"
+],
+"NON VEDO L'ORA!": [
+"lang-it.js"
+],
+"GRAZIE, MAMMA, ABBI CURA DI TE ANCHE TU": [
+"lang-it.js"
+],
+"STAFF MEDICO": [
+"lang-it.js"
+],
+"TI VOGLIO TANTO BENE.": [
+"lang-it.js"
+],
+"MI MANCHI TANTO": [
+"lang-it.js"
+],
+"GRANDE, A PRESTO!": [
+"lang-it.js"
+],
+"VA BENE, PARTIAMO PRESTO LA MATTINA.": [
+"lang-it.js"
+],
+"CLUB DEI TIFOSI": [
+"lang-it.js"
+],
+"GRAZIE DEL CONSIGLIO": [
+"lang-it.js"
+],
+"CI VEDIAMO ALL'INTERVALLO!": [
+"lang-it.js"
+],
+"ENTE BENEFICO": [
+"lang-it.js"
+],
+"EVVIVA! PREPARO IL TUO PIATTO PREFERITO.": [
+"lang-it.js"
+],
+"I NUOVI MESSAGGI APPARIRANNO QUI.": [
+"lang-it.js"
+],
+"CHE BELLO, TI ASPETTO!": [
+"lang-it.js"
+],
+"STAMPA": [
+"lang-it.js"
+],
+"NONNO": [
+"lang-it.js"
+],
+"FONDAZIONE": [
+"lang-it.js"
+],
+"IN ATTESA DI RISPOSTA": [
+"lang-it.js"
+],
+"NON PREOCCUPARTI, MAMMA, STO BENE": [
+"lang-it.js"
+],
+"TRANQUILLO, PAPÀ, MI STO IMPEGNANDO": [
+"lang-it.js"
+],
+"PROVINI DEL VIVAIO": [
+"lang-it.js"
+],
+"LO ADORO.": [
+"lang-it.js"
+],
+"IN BOCCA AL LUPO!": [
+"lang-it.js"
+],
+"UN PUNTO È PUR SEMPRE UN PUNTO.": [
+"lang-it.js"
+],
+"QUESTA SQUADRA È UN'ALTRA COSA!": [
+"lang-it.js"
+],
+"QUESTO RAGAZZO DIVENTERÀ FORTISSIMO.": [
+"lang-it.js"
+],
+"ME LO ASPETTAVO.": [
+"lang-it.js"
+],
+"CONTINUA COSÌ!": [
+"lang-it.js"
+],
+"FAREMO MEGLIO.": [
+"lang-it.js"
+],
+"IL TUO COMPLEANNO": [
+"lang-it.js"
+],
+"LEGGENDA!": [
+"lang-it.js"
+],
+"HO GIÀ COMPRATO LA SUA MAGLIA.": [
+"lang-it.js"
+],
+"LA CORSA AL TITOLO DI CAPOCANNONIERE": [
+"lang-it.js"
+],
+"CHE SCATTO!": [
+"lang-it.js"
+],
+"BRAVISSIMI!": [
+"lang-it.js"
+],
+"SIAMO SEMPRE CON VOI.": [
+"lang-it.js"
+],
+"TESTA ALTA!": [
+"lang-it.js"
+],
+"AVVERSARIO DECISO DAL SORTEGGIO": [
+"lang-it.js"
+],
+"STAGIONE FINITA": [
+"lang-it.js"
+],
+"FINALMENTE!": [
+"lang-it.js",
+"lang-pt.js"
+],
+"CI RIALZEREMO.": [
+"lang-it.js"
+],
+"TUTTO IL GIORNO": [
+"lang-it.js"
+],
+"ASPETTA LA NUOVA STAGIONE": [
+"lang-it.js"
+],
+"È NATA UNA STELLA!": [
+"lang-it.js"
+],
+"TRE PUNTI IN TASCA!": [
+"lang-it.js"
+],
+"GIORNO DI PARTITA! TUTTI INSIEME!": [
+"lang-it.js"
+],
 "— CI SIAMO QUALIFICATI!": [
 "lang-it.js"
 ],
@@ -360455,9 +365398,6 @@
 "LASCIA IL CASINÒ": [
 "lang-it.js"
 ],
-"PARTITA DI COPPA": [
-"lang-it.js"
-],
 "VINCITORE DI COPPA": [
 "lang-it.js"
 ],
@@ -360921,9 +365861,6 @@
 "lang-it.js"
 ],
 "È ORA DI ESULTARE! TOCCA PER SALTARE.": [
-"lang-it.js"
-],
-"STAGIONE FINITA": [
 "lang-it.js"
 ],
 "VAI A FINE STAGIONE": [
@@ -363996,6 +368933,9 @@
 "Situazioni pronte, obiettivi duri: {} sfide · {}/{} ⭐": [
 "lang-it.js"
 ],
+"Bel tempo passato con {0}. Amicizia +8": [
+"lang-it.js"
+],
 "L'avversario ha superato {} ed è entrato in zona pericolosa!": [
 "lang-it.js"
 ],
@@ -364078,6 +369018,9 @@
 "lang-it.js"
 ],
 "✨ {0} è tuo! Il tuo post riceve applausi.": [
+"lang-it.js"
+],
+"Voci di mercato: il {0} si muove per {1}.": [
 "lang-it.js"
 ],
 "Il mister ha ammirato la tua determinazione. Resistenza +{}": [
@@ -366348,6 +371291,9 @@
 "lang-it.js"
 ],
 "Fotocamera da {0} MP": [
+"lang-it.js"
+],
+"Partita della nazionale {0}": [
 "lang-it.js"
 ],
 "({}° posto)": [
@@ -377353,6 +382299,252 @@
 "Bom jogo, seu gol tranquilizou o time.": [
 "lang-pt.js"
 ],
+"Esse é o meu menino.": [
+"lang-pt.js"
+],
+"Não paro de pensar em você": [
+"lang-pt.js"
+],
+"Vamos tomar um café hoje à noite": [
+"lang-pt.js"
+],
+"Passo aí para jantar": [
+"lang-pt.js"
+],
+"Vamos sair para jantar?": [
+"lang-pt.js"
+],
+"Combinado, vou preparar as varas!": [
+"lang-pt.js"
+],
+"Hora da prova do meio do ano!": [
+"lang-pt.js"
+],
+"Fazer a prova do meio do ano": [
+"lang-pt.js"
+],
+"Também estou com saudade.": [
+"lang-pt.js"
+],
+"Também penso em você.": [
+"lang-pt.js"
+],
+"Continue do seu jeito.": [
+"lang-pt.js"
+],
+"Vamos pescar hoje à noite, pai?": [
+"lang-pt.js"
+],
+"Estou em casa hoje, mãe, vamos ficar juntos": [
+"lang-pt.js"
+],
+"Este assunto foi encerrado.": [
+"lang-pt.js"
+],
+"Vai cair o que foi visto na aula. Faça a prova quando estiver pronto.": [
+"lang-pt.js"
+],
+"Vamos caminhar juntos": [
+"lang-pt.js"
+],
+"Até mais, mano!": [
+"lang-pt.js"
+],
+"Vou ficar te esperando!": [
+"lang-pt.js"
+],
+"Vamos nos ver no fim de semana": [
+"lang-pt.js"
+],
+"Vou tomar café da manhã aí no fim de semana": [
+"lang-pt.js"
+],
+"Tenho uma surpresa para você no fim de semana": [
+"lang-pt.js"
+],
+"Haha, isso aí": [
+"lang-pt.js"
+],
+"Também vou na pelada": [
+"lang-pt.js"
+],
+"Ótimo, estava com saudade!": [
+"lang-pt.js"
+],
+"Lembretes": [
+"lang-pt.js"
+],
+"Ainda não há mensagens. Família, amigos e time vão escrever de vez em quando.": [
+"lang-pt.js"
+],
+"Se cuida!": [
+"lang-pt.js"
+],
+"Claro, a gente se fala": [
+"lang-pt.js"
+],
+"Vamos jogar bola depois da escola": [
+"lang-pt.js"
+],
+"Mal posso esperar!": [
+"lang-pt.js"
+],
+"Valeu, mãe, se cuida também": [
+"lang-pt.js"
+],
+"Departamento médico": [
+"lang-pt.js"
+],
+"Te amo muito.": [
+"lang-pt.js"
+],
+"Estou morrendo de saudade": [
+"lang-pt.js"
+],
+"Repórter esportivo": [
+"lang-pt.js"
+],
+"Show, até mais!": [
+"lang-pt.js"
+],
+"Beleza, a gente sai cedinho.": [
+"lang-pt.js"
+],
+"Torcida organizada": [
+"lang-pt.js"
+],
+"Torcida": [
+"lang-pt.js"
+],
+"Obrigado pelo conselho": [
+"lang-pt.js"
+],
+"A gente se vê no recreio!": [
+"lang-pt.js"
+],
+"Instituição de caridade": [
+"lang-pt.js"
+],
+"Oba! Vou fazer sua comida favorita.": [
+"lang-pt.js"
+],
+"Novas mensagens aparecerão aqui.": [
+"lang-pt.js"
+],
+"Que alegria, te espero!": [
+"lang-pt.js"
+],
+"Imprensa": [
+"lang-pt.js"
+],
+"Vovô": [
+"lang-pt.js"
+],
+"Fundação": [
+"lang-pt.js"
+],
+"Fica tranquila, mãe, estou bem": [
+"lang-pt.js"
+],
+"Fica tranquilo, pai, estou me dedicando": [
+"lang-pt.js"
+],
+"Peneira da base": [
+"lang-pt.js"
+],
+"Amei.": [
+"lang-pt.js"
+],
+"Boa sorte!": [
+"lang-pt.js"
+],
+"Um ponto é um ponto.": [
+"lang-pt.js"
+],
+"Esse time é outro nível!": [
+"lang-pt.js"
+],
+"Esse garoto vai longe.": [
+"lang-pt.js"
+],
+"Eu já esperava.": [
+"lang-pt.js"
+],
+"Continue assim!": [
+"lang-pt.js"
+],
+"Vamos fazer melhor.": [
+"lang-pt.js"
+],
+"Seu aniversário": [
+"lang-pt.js"
+],
+"Lenda!": [
+"lang-pt.js"
+],
+"Já comprei a camisa dele.": [
+"lang-pt.js"
+],
+"ARTILHARIA": [
+"lang-pt.js"
+],
+"A briga pela artilharia": [
+"lang-pt.js"
+],
+"Que foto!": [
+"lang-pt.js"
+],
+"Mandou bem!": [
+"lang-pt.js"
+],
+"Estamos sempre com vocês.": [
+"lang-pt.js"
+],
+"JOGO DE COPA": [
+"lang-pt.js"
+],
+"Cabeça erguida!": [
+"lang-pt.js"
+],
+"Comemoração": [
+"lang-pt.js"
+],
+"CLASSIFICAÇÃO": [
+"lang-pt.js"
+],
+"Adversário definido no sorteio": [
+"lang-pt.js"
+],
+"Temporada encerrada": [
+"lang-pt.js"
+],
+"TRANSFERÊNCIA": [
+"lang-pt.js"
+],
+"Vamos nos reerguer.": [
+"lang-pt.js"
+],
+"Dia inteiro": [
+"lang-pt.js"
+],
+"Uau!": [
+"lang-pt.js"
+],
+"Aguarde a nova temporada": [
+"lang-pt.js"
+],
+"Nasce uma estrela!": [
+"lang-pt.js"
+],
+"Três pontos no bolso!": [
+"lang-pt.js"
+],
+"Dia de jogo! Todos juntos!": [
+"lang-pt.js"
+],
+"DIA DE JOGO": [
+"lang-pt.js"
+],
 "— nos classificamos!": [
 "lang-pt.js"
 ],
@@ -379561,9 +384753,6 @@
 "Hora de comemorar! Toque para pular.": [
 "lang-pt.js"
 ],
-"Temporada encerrada": [
-"lang-pt.js"
-],
 "Pular para o fim da temporada": [
 "lang-pt.js"
 ],
@@ -379766,9 +384955,6 @@
 "lang-pt.js"
 ],
 "Liga do Tango": [
-"lang-pt.js"
-],
-"Torcida": [
 "lang-pt.js"
 ],
 "A torcida organizada está preparando um dia de autógrafos.": [
@@ -383167,9 +388353,6 @@
 "MATA-MATA": [
 "lang-pt.js"
 ],
-"ARTILHARIA": [
-"lang-pt.js"
-],
 "NOTÍCIAS": [
 "lang-pt.js"
 ],
@@ -383180,9 +388363,6 @@
 "lang-pt.js"
 ],
 "JOGAR A PARTIDA": [
-"lang-pt.js"
-],
-"DIA DE JOGO": [
 "lang-pt.js"
 ],
 "FIM DA PREPARAÇÃO": [
@@ -384017,9 +389197,6 @@
 "lang-pt.js"
 ],
 "☁️ SUAS CARREIRAS FORAM RESTAURADAS DO ICLOUD": [
-"lang-pt.js"
-],
-"CLASSIFICAÇÃO": [
 "lang-pt.js"
 ],
 "SOM REAL DE ESTÁDIO E MÚSICA": [
@@ -388336,6 +393513,234 @@
 "BOM JOGO, SEU GOL TRANQUILIZOU O TIME.": [
 "lang-pt.js"
 ],
+"ESSE É O MEU MENINO.": [
+"lang-pt.js"
+],
+"NÃO PARO DE PENSAR EM VOCÊ": [
+"lang-pt.js"
+],
+"VAMOS TOMAR UM CAFÉ HOJE À NOITE": [
+"lang-pt.js"
+],
+"PASSO AÍ PARA JANTAR": [
+"lang-pt.js"
+],
+"VAMOS SAIR PARA JANTAR?": [
+"lang-pt.js"
+],
+"COMBINADO, VOU PREPARAR AS VARAS!": [
+"lang-pt.js"
+],
+"HORA DA PROVA DO MEIO DO ANO!": [
+"lang-pt.js"
+],
+"FAZER A PROVA DO MEIO DO ANO": [
+"lang-pt.js"
+],
+"TAMBÉM ESTOU COM SAUDADE.": [
+"lang-pt.js"
+],
+"TAMBÉM PENSO EM VOCÊ.": [
+"lang-pt.js"
+],
+"CONTINUE DO SEU JEITO.": [
+"lang-pt.js"
+],
+"VAMOS PESCAR HOJE À NOITE, PAI?": [
+"lang-pt.js"
+],
+"ESTOU EM CASA HOJE, MÃE, VAMOS FICAR JUNTOS": [
+"lang-pt.js"
+],
+"ESTE ASSUNTO FOI ENCERRADO.": [
+"lang-pt.js"
+],
+"VAMOS CAMINHAR JUNTOS": [
+"lang-pt.js"
+],
+"ATÉ MAIS, MANO!": [
+"lang-pt.js"
+],
+"VOU FICAR TE ESPERANDO!": [
+"lang-pt.js"
+],
+"VAMOS NOS VER NO FIM DE SEMANA": [
+"lang-pt.js"
+],
+"VOU TOMAR CAFÉ DA MANHÃ AÍ NO FIM DE SEMANA": [
+"lang-pt.js"
+],
+"TENHO UMA SURPRESA PARA VOCÊ NO FIM DE SEMANA": [
+"lang-pt.js"
+],
+"HAHA, ISSO AÍ": [
+"lang-pt.js"
+],
+"TAMBÉM VOU NA PELADA": [
+"lang-pt.js"
+],
+"ÓTIMO, ESTAVA COM SAUDADE!": [
+"lang-pt.js"
+],
+"LEMBRETES": [
+"lang-pt.js"
+],
+"SE CUIDA!": [
+"lang-pt.js"
+],
+"CLARO, A GENTE SE FALA": [
+"lang-pt.js"
+],
+"VAMOS JOGAR BOLA DEPOIS DA ESCOLA": [
+"lang-pt.js"
+],
+"MAL POSSO ESPERAR!": [
+"lang-pt.js"
+],
+"VALEU, MÃE, SE CUIDA TAMBÉM": [
+"lang-pt.js"
+],
+"DEPARTAMENTO MÉDICO": [
+"lang-pt.js"
+],
+"TE AMO MUITO.": [
+"lang-pt.js"
+],
+"ESTOU MORRENDO DE SAUDADE": [
+"lang-pt.js"
+],
+"REPÓRTER ESPORTIVO": [
+"lang-pt.js"
+],
+"SHOW, ATÉ MAIS!": [
+"lang-pt.js"
+],
+"BELEZA, A GENTE SAI CEDINHO.": [
+"lang-pt.js"
+],
+"TORCIDA ORGANIZADA": [
+"lang-pt.js"
+],
+"TORCIDA": [
+"lang-pt.js"
+],
+"OBRIGADO PELO CONSELHO": [
+"lang-pt.js"
+],
+"A GENTE SE VÊ NO RECREIO!": [
+"lang-pt.js"
+],
+"INSTITUIÇÃO DE CARIDADE": [
+"lang-pt.js"
+],
+"OBA! VOU FAZER SUA COMIDA FAVORITA.": [
+"lang-pt.js"
+],
+"NOVAS MENSAGENS APARECERÃO AQUI.": [
+"lang-pt.js"
+],
+"QUE ALEGRIA, TE ESPERO!": [
+"lang-pt.js"
+],
+"IMPRENSA": [
+"lang-pt.js"
+],
+"VOVÔ": [
+"lang-pt.js"
+],
+"FUNDAÇÃO": [
+"lang-pt.js"
+],
+"AGUARDANDO RESPOSTA": [
+"lang-pt.js"
+],
+"FICA TRANQUILA, MÃE, ESTOU BEM": [
+"lang-pt.js"
+],
+"FICA TRANQUILO, PAI, ESTOU ME DEDICANDO": [
+"lang-pt.js"
+],
+"PENEIRA DA BASE": [
+"lang-pt.js"
+],
+"AMEI.": [
+"lang-pt.js"
+],
+"BOA SORTE!": [
+"lang-pt.js"
+],
+"UM PONTO É UM PONTO.": [
+"lang-pt.js"
+],
+"ESSE TIME É OUTRO NÍVEL!": [
+"lang-pt.js"
+],
+"ESSE GAROTO VAI LONGE.": [
+"lang-pt.js"
+],
+"EU JÁ ESPERAVA.": [
+"lang-pt.js"
+],
+"CONTINUE ASSIM!": [
+"lang-pt.js"
+],
+"VAMOS FAZER MELHOR.": [
+"lang-pt.js"
+],
+"SEU ANIVERSÁRIO": [
+"lang-pt.js"
+],
+"LENDA!": [
+"lang-pt.js"
+],
+"JÁ COMPREI A CAMISA DELE.": [
+"lang-pt.js"
+],
+"A BRIGA PELA ARTILHARIA": [
+"lang-pt.js"
+],
+"QUE FOTO!": [
+"lang-pt.js"
+],
+"MANDOU BEM!": [
+"lang-pt.js"
+],
+"ESTAMOS SEMPRE COM VOCÊS.": [
+"lang-pt.js"
+],
+"CABEÇA ERGUIDA!": [
+"lang-pt.js"
+],
+"COMEMORAÇÃO": [
+"lang-pt.js"
+],
+"ADVERSÁRIO DEFINIDO NO SORTEIO": [
+"lang-pt.js"
+],
+"TEMPORADA ENCERRADA": [
+"lang-pt.js"
+],
+"VAMOS NOS REERGUER.": [
+"lang-pt.js"
+],
+"DIA INTEIRO": [
+"lang-pt.js"
+],
+"UAU!": [
+"lang-pt.js"
+],
+"AGUARDE A NOVA TEMPORADA": [
+"lang-pt.js"
+],
+"NASCE UMA ESTRELA!": [
+"lang-pt.js"
+],
+"TRÊS PONTOS NO BOLSO!": [
+"lang-pt.js"
+],
+"DIA DE JOGO! TODOS JUNTOS!": [
+"lang-pt.js"
+],
 "— NOS CLASSIFICAMOS!": [
 "lang-pt.js"
 ],
@@ -389128,9 +394533,6 @@
 "USANDO": [
 "lang-pt.js"
 ],
-"ARTILHEIROS": [
-"lang-pt.js"
-],
 "ARTILHEIRO:": [
 "lang-pt.js"
 ],
@@ -389531,9 +394933,6 @@
 "lang-pt.js"
 ],
 "SAIR DO CASSINO": [
-"lang-pt.js"
-],
-"JOGO DE COPA": [
 "lang-pt.js"
 ],
 "CAMPEÃO DA COPA": [
@@ -389993,9 +395392,6 @@
 "lang-pt.js"
 ],
 "HORA DE COMEMORAR! TOQUE PARA PULAR.": [
-"lang-pt.js"
-],
-"TEMPORADA ENCERRADA": [
 "lang-pt.js"
 ],
 "PULAR PARA O FIM DA TEMPORADA": [
@@ -393013,6 +398409,9 @@
 "Situações prontas, metas difíceis: {} desafios · {}/{} ⭐": [
 "lang-pt.js"
 ],
+"Vocês se divertiram, {0}. Amizade +8": [
+"lang-pt.js"
+],
 "O adversário passou por {} e entrou em zona perigosa!": [
 "lang-pt.js"
 ],
@@ -393095,6 +398494,9 @@
 "lang-pt.js"
 ],
 "✨ {0} agora é seu! Seu post está recebendo aplausos.": [
+"lang-pt.js"
+],
+"Bastidores: {0} se movimenta por {1}.": [
 "lang-pt.js"
 ],
 "O técnico admirou sua determinação. Resistência +{}": [
@@ -395282,6 +400684,9 @@
 "lang-pt.js"
 ],
 "Câmera de {0} MP": [
+"lang-pt.js"
+],
+"Jogo internacional {0}": [
 "lang-pt.js"
 ],
 "({}º lugar)": [
@@ -411784,91 +417189,16 @@
 "phone.js",
 "socialart.js"
 ],
-"{} ile güzel vakit geçirdiniz. Arkadaşlık +8": [
-"phone.js"
-],
 "linear-gradient(135deg,#46e08f,#1f9d5c)": [
 "phone.js"
 ],
 "Akşam yemeği 7\\'de, geç kalma!": [
 "phone.js"
 ],
-"Bu akşam evdeyim anne, beraber oturalım": [
-"phone.js"
-],
-"Hafta sonu kahvaltıya geliyorum": [
-"phone.js"
-],
-"Akşam yemeğe uğrarım": [
-"phone.js"
-],
-"Yaşasın! En sevdiğin yemeği yapıyorum.": [
-"phone.js"
-],
-"Gözüm yollarda olacak!": [
-"phone.js"
-],
-"Merak etme anne, iyiyim": [
-"phone.js"
-],
-"Sağ ol anne, sen de kendine iyi bak": [
-"phone.js"
-],
-"Seni çok seviyorum.": [
-"phone.js"
-],
-"Aferin benim oğluma.": [
-"phone.js"
-],
 "linear-gradient(135deg,#34c4b0,#147a6c)": [
 "phone.js"
 ],
-"Bu akşam balığa gidelim mi baba?": [
-"phone.js"
-],
-"Gel beraber yürüyüşe çıkalım": [
-"phone.js"
-],
-"Anlaştık, oltaları hazırlıyorum!": [
-"phone.js"
-],
-"Tamam, sabah erkenden çıkarız.": [
-"phone.js"
-],
-"Tavsiyen için sağ ol": [
-"phone.js"
-],
-"Merak etme baba, çalışıyorum": [
-"phone.js"
-],
-"Bildiğin gibi devam et.": [
-"phone.js"
-],
 "linear-gradient(135deg,#ff6f8a,#c2416b)": [
-"phone.js"
-],
-"Akşam yemeğine çıkalım mı?": [
-"phone.js"
-],
-"Hafta sonu sana sürprizim var": [
-"phone.js"
-],
-"Çok sevindim, bekliyorum!": [
-"phone.js"
-],
-"Sabırsızlanıyorum!": [
-"phone.js"
-],
-"Seni çok özledim": [
-"phone.js"
-],
-"Aklım hep sende": [
-"phone.js"
-],
-"Ben de seni özledim.": [
-"phone.js"
-],
-"Benim de aklım sende.": [
 "phone.js"
 ],
 "linear-gradient(135deg,#9aa6c4,#4b5878)": [
@@ -411889,73 +417219,16 @@
 "linear-gradient(135deg,#c792ff,#7b3fe4)": [
 "phone.js"
 ],
-"Teneffüste görüşürüz!": [
-"phone.js"
-],
-"Okuldan sonra top oynayalım": [
-"phone.js"
-],
-"Hafta sonu buluşalım": [
-"phone.js"
-],
-"Akşam bir kahve içelim": [
-"phone.js"
-],
-"Halı sahaya ben de gelirim": [
-"phone.js"
-],
-"Süper, görüşürüz!": [
-"phone.js"
-],
-"Harika, çok özledim!": [
-"phone.js"
-],
-"Haha, aynen": [
-"phone.js"
-],
-"Kesin, haberleşiriz": [
-"phone.js"
-],
-"Görüşürüz kanka!": [
-"phone.js"
-],
-"Kendine iyi bak!": [
-"phone.js"
-],
 "linear-gradient(135deg,#ffb36b,#e0672b)": [
 "phone.js"
 ],
 "{}|{}|pr": [
 "phone.js"
 ],
-"Hatırlatmalar": [
-"phone.js"
-],
 "linear-gradient(135deg,#ffe58a,#f5b70a)": [
 "phone.js"
 ],
-"Spor muhabiri": [
-"phone.js"
-],
 "linear-gradient(135deg,#ff7a45,#e0283e)": [
-"phone.js"
-],
-"Taraftar Derneği": [
-"phone.js"
-],
-"Taraftarlar": [
-"phone.js"
-],
-"Sağlık Ekibi": [
-"phone.js"
-],
-"Yardım kuruluşu": [
-"phone.js"
-],
-"Henüz mesaj yok. Ailen, arkadaşların ve takımın zaman zaman yazacak.": [
-"phone.js"
-],
-"Yeni mesaj gelince burada görünür.": [
 "phone.js"
 ],
 "kW": [
@@ -412009,6 +417282,15 @@
 "<section": [
 "phone.js"
 ],
+"Ailenle yaşıyorsun": [
+"phone.js"
+],
+"Aile evi": [
+"phone.js"
+],
+"3+1 · 120 m² · Mahalle": [
+"phone.js"
+],
 "{}|tm{}": [
 "phone.js"
 ],
@@ -412025,9 +417307,6 @@
 "phone.js"
 ],
 "Fizyoterapi seansı iyileşmeyi hızlandırır. Spor Mağazası\\'ndan alabilirsin.": [
-"phone.js"
-],
-"Ara dönem sınavına gir": [
 "phone.js"
 ],
 "Premium\\'u incele": [
@@ -412064,16 +417343,7 @@
 "x:Kulüp": [
 "phone.js"
 ],
-"Bu konu kapandı.": [
-"phone.js"
-],
 "x:Okul": [
-"phone.js"
-],
-"Ara dönem sınavı zamanı!": [
-"phone.js"
-],
-"Derste işlenen konular çıkacak. Hazır olduğunda sınava gir.": [
 "phone.js"
 ],
 "ph-pill on {}": [

@@ -2052,3 +2052,43 @@
 9010|aguardando resposta
 9011|Fica tranquila, mãe, estou bem
 9012|Fica tranquilo, pai, estou me dedicando
+9014|Peneira da base
+9015|Amei.
+9016|Boa sorte!
+9017|Um ponto é um ponto.
+9018|Esse time é outro nível!
+9019|Esse garoto vai longe.
+9020|Eu já esperava.
+9021|Continue assim!
+9022|Vamos fazer melhor.
+9023|Seu aniversário
+9024|Lenda!
+9025|Já comprei a camisa dele.
+9026|ARTILHARIA
+9027|A briga pela artilharia
+9028|Que foto!
+9029|Mandou bem!
+9030|Estamos sempre com vocês.
+9031|JOGO DE COPA
+9032|Cabeça erguida!
+9033|Comemoração
+9034|CLASSIFICAÇÃO
+9035|Adversário definido no sorteio
+9036|Temporada encerrada
+9037|Finalmente!
+9038|TRANSFERÊNCIA
+9039|Vamos nos reerguer.
+9048|Bastidores: {0} se movimenta por {1}.
+9040|Dia inteiro
+9041|Uau!
+9042|Aguarde a nova temporada
+9043|Nasce uma estrela!
+9049|Jogo internacional {0}
+9044|Três pontos no bolso!
+9045|Dia de jogo! Todos juntos!
+9050|{0} h
+9051|{0} d
+9047|DIA DE JOGO
+9052|Você mora com a família
+9053|Casa da família
+9054|3 quartos · 120 m² · Bairro

@@ -75,44 +75,104 @@
   const calIcon = (d, wd) => `<svg viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="8.2" text-anchor="middle" font-size="5" font-weight="700" font-family="Barlow Semi Condensed, sans-serif" fill="#e5383b">${wd}</text><text x="12" y="19.5" text-anchor="middle" font-size="11.5" font-weight="500" font-family="Barlow Semi Condensed, sans-serif" fill="#111">${d}</text></svg>`;
   const photosIcon = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="4" fill="#ffcf3f"/><circle cx="17" cy="12" r="4" fill="#ff6f8a" opacity=".9"/><circle cx="12" cy="17" r="4" fill="#7fb2ff" opacity=".9"/><circle cx="7" cy="12" r="4" fill="#46e08f" opacity=".9"/></svg>';
 
-  // ---------------- tarih: sezon haftaları takvime dönüştürülür ----------------
+  // ---------------- tarih: sezon haftaları gerçek takvime yayılır (Ağustos → Mayıs) ----------------
+  // Lig maçı Cumartesi 19:00, kupa maçı aynı haftanın Çarşamba 21:45, milli maç Salı 20:45.
+  // Ana ekrandaki Maç Günü kartı, telefon widget'ı, takvim ve Okul/Ehliyet/Bayram gibi olaylar bu tek takvimi kullanır.
   const MONTHS = ['Ocak', 'Şubat', 'Mart', 'Nisan', 'Mayıs', 'Haziran', 'Temmuz', 'Ağustos', 'Eylül', 'Ekim', 'Kasım', 'Aralık'];
   const WD = ['Pzt', 'Sal', 'Çar', 'Per', 'Cum', 'Cmt', 'Paz'];
   const WDL = ['Pazartesi', 'Salı', 'Çarşamba', 'Perşembe', 'Cuma', 'Cumartesi', 'Pazar'];
-  // lig haftası r: sezonun ikinci Ağustos cumartesisinden itibaren haftada bir
+  const SEASON_WEEKS = 41; // Ağustos'un 2. cumartesisinden Mayıs sonuna
   const seasonStart = (y) => { const d = new Date(y, 7, 1); const add = (6 - d.getDay() + 7) % 7; d.setDate(1 + add + 7); return d; };
-  const roundDate = (r) => { const d = seasonStart(Game.state.season.year); d.setDate(d.getDate() + 7 * r); return d; };
-  const today = () => { const d = roundDate(Math.min(Game.state.season.round, Math.max(0, Game.rounds() - 1))); d.setDate(d.getDate() - 1); return d; };
+  const nRounds = () => Math.max(2, Game.rounds());
+  const roundWeek = (r) => { const n = nRounds(), span = Math.max(n - 1, SEASON_WEEKS - 1); return Math.round(Math.max(0, Math.min(r, n - 1)) * span / (n - 1)); };
+  const roundDate = (r, y) => { const d = seasonStart(y != null ? y : Game.state.season.year); d.setDate(d.getDate() + 7 * roundWeek(r)); return d; };
+  const KOFF = { match: 0, league: 0, street: 0, cup: -3, intl: -4 };
+  const KHOUR = { match: '19:00', league: '19:00', street: '17:00', cup: '21:45', intl: '20:45' };
+  const matchDate = (k, r) => { const d = roundDate(r); d.setDate(d.getDate() + (KOFF[k] || 0)); return d; };
   const mon = (d) => (d.getDay() + 6) % 7; // Pzt=0
   const key = (d) => `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
+  // sıradaki maç: ana ekrandaki Maç Günü kartıyla aynı sıra (önce kupa, sonra milli maç, sonra lig)
+  function nextMatch() {
+    const s = Game.state, r = s.season.round;
+    if (Game.inStreet()) return { k: 'street', t: s.street && s.street.trials ? 'Seçme Günü' : 'Mahalle maçı', sub: s.street && s.street.trials ? 'Altyapı seçmeleri' : 'Scout izliyor olabilir', date: matchDate('street', r), h: KHOUR.street };
+    if (s.pendingCup && s.cups && s.cups[s.pendingCup]) {
+      const cup = s.cups[s.pendingCup], op = Cups.opponent(s, cup);
+      if (op) return { k: 'cup', t: (Game.club(op.opp) || {}).name || '', sub: `${cup.name} · ${op.stage}`, home: op.h === s.clubId, date: matchDate('cup', r), h: KHOUR.cup };
+    }
+    if (s.pendingIntl) { const o = Game.nat(s.pendingIntl) || {}, cat = Game.intlCat(); return { k: 'intl', t: `${o.name || ''}${cat ? ' ' + cat : ''}`, sub: cat ? `${cat} milli maç` : 'Milli maç', date: matchDate('intl', r), h: KHOUR.intl }; }
+    const fx = Game.nextFixture();
+    if (fx) { const home = fx.home === s.clubId; return { k: 'match', t: Game.teamName(home ? fx.away : fx.home), sub: `${Game.leagueName()} · ${home ? 'İç saha' : 'Deplasman'}`, home, date: matchDate('league', r), h: KHOUR.league }; }
+    return null;
+  }
+  // bugün = sıradaki maçın günü (Maç Günü); sezon bittiyse son lig haftası
+  const today = () => { const m = Game.state && Game.state.player ? nextMatch() : null; return m ? new Date(m.date) : roundDate(nRounds() - 1); };
+  const dateLbl = (d) => `<span>${WDL[mon(d)]}</span> <span>${d.getDate()}</span> <span>${MONTHS[d.getMonth()]}</span>`;
+  // oyuncunun doğum günü: ay sabit (p.bm), gün isimden türetilir
+  const hstr0 = (t) => { let h = 2166136261; for (let i = 0; i < t.length; i++) { h ^= t.charCodeAt(i); h = Math.imul(h, 16777619); } return h >>> 0; };
+  const bdayOf = (y) => { const p = Phone.p(); if (!p || p.bm == null) return null; return new Date(y, p.bm, (hstr0(Player.fullName(p)) % 28) + 1); };
+  // doğum günü haftası: doğum günü (bu haftanın maçından önceki 7 gün içinde) — LifeX bu hafta kutlar
+  Phone.isBdayRound = (r) => {
+    const s = Game.state; if (!s || !s.player) return false;
+    return [s.season.year, s.season.year + 1].some((y) => { const b = bdayOf(y); return b && inRound(r, b); });
+  };
+  Phone.monthOf = (r) => roundDate(r).getMonth();
+  // verilen gün bu lig haftasına mı düşüyor (önceki haftanın maçından sonra, bu haftanın maçına kadar)
+  // gün geldi mi: sezon içinde ve bu haftanın maçına kadar (olay bayrağı sezonda bir kez kutlatır; araya başka olay girerse sonraki hafta gelir)
+  const inRound = (r, day) => {
+    const n = nRounds(), end = roundDate(r), start = new Date(roundDate(0).getTime() - 7 * 864e5);
+    if (day > start && day <= end) return true;
+    return r === n - 1 && day > end && day - end < 30 * 864e5; // sezon bittikten kısa süre sonraki gün son haftada kutlanır
+  };
+  const mothersDay = (y) => { const d = new Date(y, 4, 1); d.setDate(1 + ((7 - d.getDay()) % 7) + 7); return d; };
+  Phone.holidayRound = (k, r) => { const y = Game.state.season.year; return k === 'ny' ? inRound(r, new Date(y + 1, 0, 1)) : k === 'md' ? inRound(r, mothersDay(y + 1)) : false; };
+  Phone.nextMatch = () => nextMatch();
+  Phone.matchLabel = () => { const m = nextMatch(); return m ? `${dateLbl(m.date)} · ${m.h}` : ''; };
 
   function events() {
-    const s = Game.state, out = {};
+    const s = Game.state, p = s.player, out = {}, y = s.season.year, r0 = s.season.round;
     const add = (d, e) => { (out[key(d)] = out[key(d)] || []).push(e); };
-    if (Game.inStreet()) return out;
-    const lg = Game.league();
-    if (lg && lg.fixtures) {
-      lg.fixtures.forEach((round, i) => {
-        const f = round.find(([h, a]) => h === s.clubId || a === s.clubId);
-        if (!f) return;
-        const home = f[0] === s.clubId, opp = home ? f[1] : f[0];
-        const r = (lg.results || []).find((x) => x.round === i && (x.h === s.clubId || x.a === s.clubId));
-        let res = '';
-        if (r) { const gf = r.h === s.clubId ? r.hs : r.as, ga = r.h === s.clubId ? r.as : r.hs; res = `${gf}-${ga}`; }
-        add(roundDate(i), { k: 'match', h: '19:00', t: Game.teamName(opp), s: `${Game.leagueName()} · ${home ? 'İç saha' : 'Deplasman'}`, res, win: r ? (r.h === s.clubId ? r.hs - r.as : r.as - r.hs) : null });
-        // hafta içi antrenmanlar
-        [5, 4, 2].forEach((back) => { const d = roundDate(i); d.setDate(d.getDate() - back); add(d, { k: 'train', h: '10:00', t: 'Takım antrenmanı', s: Game.teamName() }); });
-      });
+    const busy = new Set();
+    // oynanan kupa ve milli maçlar (sonuçlarıyla)
+    ((Phone.data().cal) || []).filter((e) => e.y === y).forEach((e) => { const d = matchDate(e.k, e.r); busy.add(key(d)); add(d, { k: e.k === 'intl' ? 'intl' : 'cup', h: KHOUR[e.k] || '20:00', t: e.t, s: e.s, res: e.res, win: e.win }); });
+    const nm = nextMatch();
+    if (nm && (nm.k === 'cup' || nm.k === 'intl')) { busy.add(key(nm.date)); add(nm.date, { k: nm.k, h: nm.h, t: nm.t, s: nm.sub }); }
+    if (Game.inStreet()) { if (nm) add(nm.date, { k: 'match', h: nm.h, t: nm.t, s: nm.sub }); }
+    else {
+      // gelecek kupa turları (yalnız hâlâ kupadaysan; rakip kura ile belli olur)
+      try {
+        Object.values(s.cups || {}).forEach((cup) => {
+          if (cup.winner || !!cup.youth !== Game.isYouth() || !Cups.inCup(s, cup)) return;
+          (Cups.weeks(nRounds(), cup) || []).forEach((w, i) => {
+            if (i < cup.stage || w < r0 || (w === r0 && s.pendingCup === cup.id)) return;
+            const d = matchDate('cup', w); if (busy.has(key(d))) return;
+            busy.add(key(d)); add(d, { k: 'cup', h: KHOUR.cup, t: cup.name || 'Kupa', s: 'Rakip kura ile belli olacak' });
+          });
+        });
+      } catch (e) { /* kupa takvimi yok */ }
+      const lg = Game.league();
+      if (lg && lg.fixtures) {
+        lg.fixtures.forEach((round, i) => {
+          const f = round.find(([h, a]) => h === s.clubId || a === s.clubId);
+          if (!f) return;
+          const home = f[0] === s.clubId, opp = home ? f[1] : f[0];
+          const r = (lg.results || []).find((x) => x.round === i && (x.h === s.clubId || x.a === s.clubId));
+          let res = '';
+          if (r) { const gf = r.h === s.clubId ? r.hs : r.as, ga = r.h === s.clubId ? r.as : r.hs; res = `${gf}-${ga}`; }
+          add(matchDate('league', i), { k: 'match', h: KHOUR.league, t: Game.teamName(opp), s: `${Game.leagueName()} · ${home ? 'İç saha' : 'Deplasman'}`, res, win: r ? (r.h === s.clubId ? r.hs - r.as : r.as - r.hs) : null });
+          // hafta içi antrenmanlar (kupa ya da milli maç gününe denk gelmez)
+          [5, 4, 2].forEach((back) => { const d = matchDate('league', i); d.setDate(d.getDate() - back); if (!busy.has(key(d))) add(d, { k: 'train', h: '10:00', t: 'Takım antrenmanı', s: Game.teamName() }); });
+        });
+      }
     }
-    try {
-      Object.values(s.cups || {}).forEach((cup) => {
-        if (!!cup.youth !== Game.isYouth() || !Cups.everIn(s, cup)) return;
-        (Cups.weeks(Game.rounds(), cup) || []).forEach((w) => { const d = roundDate(w); d.setDate(d.getDate() - 3); add(d, { k: 'cup', h: '21:45', t: cup.name || 'Kupa', s: 'Kupa haftası' }); });
-      });
-    } catch (e) { /* kupa takvimi yok */ }
-    // çocukların doğum günleri (1.0.24)
-    const L = s.player.life;
-    (L && L.kids || []).forEach((k) => { const w = ((k.by * 7) % 30) + 3; if (w < Game.rounds()) add(roundDate(w), { k: 'fam', h: '17:00', t: `${k.n} doğum günü`, s: 'Aile' }); });
+    // çocukların doğum günleri: ana ekrandaki haber de bu haftada gelir
+    const L = p.life;
+    (L && L.kids || []).forEach((k) => { const w = ((k.by * 7) % 30) + 3; if (w < nRounds()) { const d = matchDate('league', w); d.setDate(d.getDate() - 2); add(d, { k: 'fam', h: '17:00', t: `${k.n} doğum günü`, s: 'Aile' }); } });
+    // senin doğum günün, yılbaşı, anneler günü
+    [y, y + 1].forEach((yy) => {
+      const b = bdayOf(yy); if (b) add(b, { k: 'fam', h: '', t: 'Doğum günün', s: 'Kutlama' });
+      add(new Date(yy, 0, 1), { k: 'fam', h: '', t: 'Yılbaşı', s: 'Tatil' });
+      add(mothersDay(yy), { k: 'fam', h: '', t: 'Anneler Günü', s: 'Aile' });
+    });
     return out;
   }
 
@@ -156,7 +216,7 @@
         [when(X.win, 'Maçı izledim, kazandınız! Mahallede bayram var!'), when(X.goals, 'Golünü izlerken sesim kısıldı! Aferin oğlum.'), when(X.loss, 'Moralini bozma oğlum, bir dahaki maçı kazanırsınız.'), when(X.inj, 'Sakatlığın nasıl? İlaçlarını aksatma, merak ediyorum.'), when(X.bench, 'Bu hafta neden oynamadın? Hoca seni neden almadı?')]),
       r: [{ t: X.young ? pickW('mom', ['Bu akşam erken geleceğim, beraber yemek yiyelim', 'Bu akşam evdeyim anne, beraber oturalım']) : pickW('mom', ['Bu akşam size geliyorum', 'Hafta sonu kahvaltıya geliyorum', 'Akşam yemeğe uğrarım']), act: () => Life.act('family'), ap: 1, ok: pickW('mom2', ['Oh çok sevindim! Hemen sofrayı kuruyorum.', 'Yaşasın! En sevdiğin yemeği yapıyorum.', 'Gözüm yollarda olacak!']) }, { t: pickW('mom3', ['Ben de seni seviyorum anne', 'Merak etme anne, iyiyim', 'Sağ ol anne, sen de kendine iyi bak']), ok: pickW('mom4', ['Canım oğlum. Kendine dikkat et.', 'Seni çok seviyorum.', 'Aferin benim oğluma.']) }] });
     out.push({ id: 'dad', n: 'Babam', role: 'Aile', c: 'linear-gradient(135deg,#34c4b0,#147a6c)', i: 'B',
-      ...msg('dad', (X.young ? ['Hafta sonu parka gidip şut çalışalım mı?', 'Kramponlarını temizledim, parlıyor!'] : ['Arabanın yağını değiştirdin mi?', 'Eski takımın maçına gittim, seni andılar.'])
+      ...msg('dad', (X.young ? ['Hafta sonu parka gidip şut çalışalım mı?', 'Kramponlarını temizledim, parlıyor!'] : ['Eski takımın maçına gittim, seni andılar.'].concat((p.items || []).some((id) => { const it = ITEMS.find((q) => q.id === id); return it && it.art === 'car'; }) ? ['Arabanın yağını değiştirdin mi?'] : []))
         .concat(['Dünkü maçta kanatta çok yalnız kaldın, dikkat et.', 'Antrenmanlarını aksatma, yetenek tek başına yetmez.', 'Eski maçlarını izledim, ne günlerdi!', 'Bir gün seni tribünden izlemeye geleceğim.', 'Mahalledekiler senin formanı giyiyor, haberin olsun.', 'Bu sezon kaç gol hedefliyorsun?', 'Rakip takımı izledim, sol bekleri yavaş.', 'Sabah koşusuna çıktım, senden ilham aldım!']),
         [when(X.win, '3 puan! Böyle devam.'), when(X.goals, 'O golü ben de atardım gençken... Şaka şaka, harikaydın!'), when(X.loss, 'Yenilgi de oyunun parçası. Kafanı kaldır.'), when(X.star, 'Maçın en iyisi sendin, gurur duydum.'), when(X.inj, 'Fizyoterapiste düzenli git, acele etme.')]),
       r: [{ t: pickW('dad', ['Hafta sonu beraber maç izleyelim', 'Bu akşam balığa gidelim mi baba?', 'Gel beraber yürüyüşe çıkalım']), act: () => Life.act('family'), ap: 1, ok: pickW('dad2', ['Çekirdekler benden!', 'Anlaştık, oltaları hazırlıyorum!', 'Tamam, sabah erkenden çıkarız.']) }, { t: pickW('dad3', ['Haklısın baba', 'Tavsiyen için sağ ol', 'Merak etme baba, çalışıyorum']), ok: pickW('dad4', ['Aferin oğlum. Ben senin ilk hocanım, unutma.', 'Seninle gurur duyuyorum.', 'Bildiğin gibi devam et.']) }] });
@@ -360,13 +420,13 @@
   }
   function homeView() {
     const s = Game.state, p = s.player;
-    const nf = Game.nextFixture ? Game.nextFixture() : null;
-    let next = '<span class="ph-big">Mahalle maçı</span><small>Scout izliyor olabilir</small>';
-    if (nf) { const home = nf.home === s.clubId, opp = home ? nf.away : nf.home; next = `<span class="ph-big">${esc(Game.teamName(opp))}</span><small>${esc(Game.leagueName())} · ${home ? 'İç saha' : 'Deplasman'}</small>`; }
+    const nm = nextMatch();
+    const next = nm ? `<span class="ph-big">${esc(nm.t)}</span><small>${esc(nm.sub)}</small>` : '<span class="ph-big">Sezon bitti</span><small>Yeni sezonu bekle</small>';
+    const whenTxt = nm ? `<small class="ph-wk">${dateLbl(nm.date)} · ${nm.h}</small>` : '';
     const bar = (l, v, c) => `<div><span>${l}</span><div class="ph-bar"><i style="width:${U.clamp(v, 0, 100)}%;background:${c}"></i></div></div>`;
     return `<div class="ph-home">
       <div class="ph-wgs">
-        <button class="ph-wg" data-ph-open="cal" type="button"><span class="ph-lbl">Sıradaki maç</span>${next}<small class="ph-wk">${s.season.year} · ${Math.min(s.season.round + 1, Game.rounds())}. hafta</small></button>
+        <button class="ph-wg" data-ph-open="cal" type="button"><span class="ph-lbl">Sıradaki maç</span>${next}${whenTxt}</button>
         <button class="ph-wg" data-ph-open="stat" type="button"><span class="ph-lbl">Durum <i class="ph-more">›</i></span><div class="ph-mini">${bar('Aile', p.rel.family, '#46e08f')}${bar('Hoca', p.rel.coach, '#9aa6c4')}${bar('Moral', p.morale, '#ffcf3f')}${bar('Enerji', p.energy, '#7fb2ff')}</div><small class="ph-wk">${s.ap} aksiyon hakkı</small></button>
       </div>
       <div class="ph-apps">${apps().map(appIcon).join('')}</div>
@@ -401,7 +461,7 @@
     const first = mon(new Date(m.getFullYear(), m.getMonth(), 1)), days = new Date(m.getFullYear(), m.getMonth() + 1, 0).getDate();
     let cells = '';
     for (let i = 0; i < first; i++) cells += '<span class="ph-blank"></span>';
-    const col = { match: '#e5383b', cup: '#f59e0b', train: '#2f6ee8', fam: '#22a55a' };
+    const col = { match: '#e5383b', cup: '#f59e0b', intl: '#7b3fe4', train: '#2f6ee8', fam: '#22a55a' };
     for (let dd = 1; dd <= days; dd++) {
       const d = new Date(m.getFullYear(), m.getMonth(), dd), k = key(d), es = ev[k] || [];
       const kinds = [...new Set(es.map((e) => e.k))].slice(0, 3);
@@ -409,13 +469,13 @@
     }
     const [sy, sm, sd] = sel.split('-').map(Number), sdate = new Date(sy, sm, sd);
     const list = (ev[sel] || []).slice().sort((a, b) => a.h.localeCompare(b.h));
-    const tint = { match: ['#fde8e8', '#8f1d1f', '#e5383b'], cup: ['#fef3e2', '#8a5a07', '#f59e0b'], train: ['#e6efff', '#1b3f8f', '#2f6ee8'], fam: ['#e4f7ec', '#14653a', '#22a55a'] };
+    const tint = { match: ['#fde8e8', '#8f1d1f', '#e5383b'], cup: ['#fef3e2', '#8a5a07', '#f59e0b'], intl: ['#f1e8fe', '#4c1d95', '#7b3fe4'], train: ['#e6efff', '#1b3f8f', '#2f6ee8'], fam: ['#e4f7ec', '#14653a', '#22a55a'] };
     return `<div class="ph-appv ph-cal">${top('Takvim')}<div class="ph-body">
       <div class="ph-mhead"><h3><span class="mn">${MONTHS[m.getMonth()]}</span> <span>${m.getFullYear()}</span></h3><div class="ph-mnav"><button type="button" data-ph-mon="-1" aria-label="Önceki ay">‹</button><button type="button" data-ph-mon="0">Bugün</button><button type="button" data-ph-mon="1" aria-label="Sonraki ay">›</button></div></div>
       <div class="ph-wkd">${WD.map((x) => `<span>${x}</span>`).join('')}</div>
       <div class="ph-mgrid">${cells}</div>
       <div class="ph-agenda"><h4><span>${sdate.getDate()}</span> <span>${MONTHS[sdate.getMonth()]}</span> <span>${WDL[mon(sdate)]}</span>${sel === key(td) ? ' · <span>Bugün</span>' : ''}</h4>
-        ${list.length ? list.map((e) => `<div class="ph-ag"><span class="tm">${e.h}</span><div class="bx" style="background:${tint[e.k][0]};color:${tint[e.k][1]};border-left:4px solid ${tint[e.k][2]}">${e.k === 'match' ? `${esc(e.t)}${e.res ? ` <b class="${e.win > 0 ? 'w' : e.win < 0 ? 'l' : 'd'}">${e.res}</b>` : ''}` : esc(e.t)}<small>${esc(e.s)}</small></div></div>`).join('') : '<div class="ph-noev">Etkinlik yok. Dinlenme günü.</div>'}
+        ${list.length ? list.map((e) => `<div class="ph-ag"><span class="tm">${e.h || 'Tüm gün'}</span><div class="bx" style="background:${tint[e.k][0]};color:${tint[e.k][1]};border-left:4px solid ${tint[e.k][2]}">${e.k === 'match' || e.k === 'cup' || e.k === 'intl' ? `${esc(e.t)}${e.res ? ` <b class="${e.win > 0 ? 'w' : e.win < 0 ? 'l' : 'd'}">${e.res}</b>` : ''}` : esc(e.t)}<small>${esc(e.s)}</small></div></div>`).join('') : '<div class="ph-noev">Etkinlik yok. Dinlenme günü.</div>'}
       </div>
     </div></div>`;
   }
@@ -439,7 +499,7 @@
     const live = list.filter((it) => owns(it.id)).sort((a, b) => b.price - a.price)[0];
     return `<div class="ph-appv ph-emlak">${top('Evim Emlak')}<div class="ph-body">
       <div class="ph-search">${IC.search}<span>Satılık evler</span></div>
-      <div class="ph-listing cur"><div class="pic">${houseSvg('flat')}${live ? '' : '<span class="own3">Şu an yaşadığın</span>'}</div><div class="inf"><div class="pr3">${live ? 'Eski evin' : 'Kiradasın'}</div><div class="tt">Kiralık daire</div><div class="mt">2+1 · 95 m² · Şehir merkezi</div></div></div>
+      <div class="ph-listing cur"><div class="pic">${houseSvg('flat')}${live ? '' : '<span class="own3">Şu an yaşadığın</span>'}</div><div class="inf">${Phone.p().age < 18 ? `<div class="pr3">${live ? 'Eski evin' : 'Ailenle yaşıyorsun'}</div><div class="tt">Aile evi</div><div class="mt">3+1 · 120 m² · Mahalle</div>` : `<div class="pr3">${live ? 'Eski evin' : 'Kiradasın'}</div><div class="tt">Kiralık daire</div><div class="mt">2+1 · 95 m² · Şehir merkezi</div>`}</div></div>
       ${list.map((it) => `<div class="ph-listing"><div class="pic">${houseSvg(HOUSE_KIND[it.id])}${live === it ? '<span class="own3">Burada yaşıyorsun</span>' : owns(it.id) ? '<span class="own3">Senin</span>' : ''}</div><div class="inf"><div class="row"><div><div class="pr3">${money(it.price)}</div><div class="tt">${esc(it.name)}</div></div>${buyBtn(it, 'ph-buy em')}</div><div class="fx3">${esc(it.desc)}</div></div></div>`).join('')}
     </div></div>`;
   }
@@ -459,63 +519,119 @@
   function sportView() {
     return `<div class="ph-appv ph-sport">${top('Spor Mağazası')}<div class="ph-body"><div class="ph-promo"><b>Sahaya hazır ol</b><small>Enerji içeceği, fizyoterapi, krampon, ekipman, beslenme ve toplar</small></div>${UI.shop({ tabs: ['bag', 'cons', 'kit', 'balls'], title: 'Spor Mağazası' })}</div></div>`;
   }
-  // ---------------- StarFeed: akış (başkalarının gönderileri) + profil ----------------
+  // ---------------- StarFeed: akış (hikâyeler + gönderiler) ve profil ----------------
   const AVC = ['#ff6f8a', '#7fb2ff', '#46e08f', '#ffcf3f', '#c792ff', '#ffb36b', '#34c4b0', '#9aa6c4'];
   const avatar = (name, cls = '') => { const n = String(name || '?').trim(); const c = AVC[hstr(n) % AVC.length]; return `<span class="ph-fav ${cls}" style="background:${c}">${esc(n[0] || '?')}</span>`; };
   const handleOf = (n) => '@' + String(n).toLocaleLowerCase('tr').replace(/[^a-z0-9çğıöşü]+/g, '').slice(0, 18);
-  const FIMG = {
-    gym: '<path d="M6 9v6M18 9v6M3 10.5v3M21 10.5v3M6 12h12"/>',
-    ball: '<circle cx="12" cy="12" r="8"/><path d="M12 7.5l3.4 2.5-1.3 4H9.9l-1.3-4z"/>',
-    boot: '<path d="M4 15h11l5 2v2H4z"/><path d="M6 15V7h5v5l4 1"/>',
-    plane: '<path d="M3 13l18-7-7 18-2-8z"/>',
-    food: '<circle cx="12" cy="13" r="6"/><path d="M4 5v6M20 5v14M7 5v6"/>',
-    run: '<circle cx="14" cy="5" r="2"/><path d="M10 21l2-6-3-3 3-4 3 3 3 1M9 12l-3 2"/>',
+  // fotoğraf sahneleri (özgün çizimler)
+  const SCN = {
+    stadium: '<defs><linearGradient id="sa" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a1433"/><stop offset=".55" stop-color="#1b2f6b"/><stop offset=".56" stop-color="#2b8a46"/><stop offset="1" stop-color="#1c6a34"/></linearGradient><radialGradient id="sb"><stop offset="0" stop-color="#fff8d8"/><stop offset="1" stop-color="#fff8d8" stop-opacity="0"/></radialGradient></defs><rect width="320" height="240" fill="url(#sa)"/><path d="M0 132 L40 104 L280 104 L320 132 Z" fill="#101a3a"/><g fill="#22305e">' + Array.from({ length: 16 }, (_, i) => `<rect x="${44 + i * 15}" y="108" width="11" height="20" rx="2"/>`).join('') + '</g><circle cx="40" cy="38" r="44" fill="url(#sb)"/><circle cx="280" cy="38" r="44" fill="url(#sb)"/><rect x="38" y="36" width="4" height="70" fill="#9aa6c4"/><rect x="278" y="36" width="4" height="70" fill="#9aa6c4"/><path d="M0 200 Q160 170 320 200" stroke="rgba(255,255,255,.55)" stroke-width="2" fill="none"/><ellipse cx="160" cy="196" rx="34" ry="9" stroke="rgba(255,255,255,.55)" stroke-width="2" fill="none"/>',
+    gym: '<rect width="320" height="240" fill="#1b2340"/><rect y="180" width="320" height="60" fill="#2a2f45"/><g fill="#4b5878"><rect x="40" y="40" width="8" height="140"/><rect x="272" y="40" width="8" height="140"/><rect x="40" y="70" width="240" height="6"/></g><g fill="#c9d3ef"><rect x="70" y="150" width="180" height="8" rx="4"/><rect x="58" y="128" width="16" height="52" rx="5"/><rect x="246" y="128" width="16" height="52" rx="5"/></g><g fill="#ffcf3f"><rect x="110" y="200" width="40" height="10" rx="5"/><rect x="170" y="200" width="40" height="10" rx="5"/></g>',
+    train: '<rect width="320" height="240" fill="#2e8b43"/>' + Array.from({ length: 6 }, (_, i) => `<rect y="${i * 40}" width="320" height="20" fill="#2a7f3d"/>`).join('') + '<g fill="#ff8a3d">' + [[60, 70], [110, 110], [160, 70], [210, 110], [260, 70]].map(([x, y]) => `<path d="M${x} ${y}l9 22h-18z"/>`).join('') + '</g><circle cx="160" cy="180" r="16" fill="#fff"/><path d="M160 170l7 5-3 8h-8l-3-8z" fill="#111"/>',
+    plane: '<rect width="320" height="240" fill="#0d1b3d"/><rect x="70" y="20" width="180" height="200" rx="80" fill="#cfe6ff"/><rect x="82" y="32" width="156" height="176" rx="70" fill="url(#pl)"/><defs><linearGradient id="pl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5ab0ff"/><stop offset="1" stop-color="#d9efff"/></linearGradient></defs><g fill="#fff"><ellipse cx="130" cy="150" rx="40" ry="14"/><ellipse cx="190" cy="128" rx="34" ry="11"/><ellipse cx="160" cy="176" rx="48" ry="12"/></g>',
+    food: '<rect width="320" height="240" fill="#6b4a2b"/><rect width="320" height="240" fill="url(#fw)" opacity=".35"/><defs><pattern id="fw" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M0 20h40" stroke="#4e3420" stroke-width="3"/></pattern></defs><circle cx="160" cy="120" r="84" fill="#f4f1ea"/><circle cx="160" cy="120" r="64" fill="#fff"/><g><circle cx="140" cy="108" r="16" fill="#46e08f"/><circle cx="174" cy="102" r="14" fill="#ff6f64"/><rect x="138" y="128" width="50" height="22" rx="10" fill="#e8b46b"/></g>',
+    run: '<defs><linearGradient id="rn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff9a5b"/><stop offset=".6" stop-color="#ffd08a"/><stop offset=".61" stop-color="#3d4a5c"/><stop offset="1" stop-color="#2a3442"/></linearGradient></defs><rect width="320" height="240" fill="url(#rn)"/><circle cx="160" cy="140" r="34" fill="#fff3c4"/><path d="M150 240 L170 240 L164 146 L156 146 Z" fill="#c9d3ef" opacity=".7"/>',
+    locker: '<rect width="320" height="240" fill="#1d2433"/>' + [0, 1, 2, 3].map((i) => `<rect x="${20 + i * 72}" y="20" width="64" height="200" rx="4" fill="#2c3650"/><rect x="${30 + i * 72}" y="60" width="44" height="54" rx="6" fill="${['#e5383b', '#2f6ee8', '#ffcf3f', '#46e08f'][i]}"/><text x="${52 + i * 72}" y="96" text-anchor="middle" font-size="22" font-weight="900" fill="#fff" font-family="Barlow Semi Condensed, sans-serif">${[7, 10, 4, 23][i]}</text>`).join(''),
   };
-  const FIMG_BG = { gym: ['#1d3a8a', '#0b1838'], ball: ['#1f7a3a', '#0b3a1c'], boot: ['#7b3fe4', '#2a0f5e'], plane: ['#2f6ee8', '#0e2a6b'], food: ['#e0672b', '#5e240b'], run: ['#c2416b', '#4b0f26'] };
-  const TM_POSTS = [['gym', 'Bugün ağırlık günüydü. Yarın daha güçlü!'], ['ball', 'Topla geçen bir gün daha.'], ['boot', 'Yeni kramponlar sahaya hazır.'], ['plane', 'Deplasman yolundayız!'], ['food', 'Maç öncesi beslenme her şey.'], ['run', 'Sabah koşusu tamam. Hedef büyük.'], ['gym', 'Soyunma odasında moraller yüksek.'], ['ball', 'Hafta sonu için hazırız.']];
-  const FR_POSTS = [['food', 'Akşam yemeği dostlarla.'], ['ball', 'Halı saha klasiği.'], ['plane', 'Kısa bir tatil molası.'], ['run', 'Bugün 10 kilometre koştum!']];
+  const scene = (k) => `<div class="ph-fimg"><svg viewBox="0 0 320 240" preserveAspectRatio="xMidYMid slice" aria-hidden="true">${SCN[k] || SCN.train}</svg></div>`;
+  const FANS = ['tribundeyiz', 'futbol_ask', 'kale_arkasi', 'ofsayt_degil', 'forvetsever', 'yesil_saha', 'son_dakika_gol', 'taraftar_ruhu'];
+  const CM = {
+    win: ['Helal olsun!', 'Böyle devam!', 'Bu takım başka!', 'Üç puan cebimizde!'], loss: ['Toparlanacağız.', 'Her zaman arkanızdayız.', 'Kafalar dik!'], draw: ['Bir puan da puan.', 'Daha iyisini yaparız.'],
+    me: ['Kral!', 'Yıldız doğuyor!', 'Formasını aldım bile.', 'Bu çocuk çok iyi olacak.'], gen: ['Harika kare!', 'Efsane!', 'Başarılar!', 'Bayıldım.'], news: ['Vay be!', 'Bunu bekliyordum.', 'Sonunda!'],
+  };
+  const comments = (id, pool) => { const h = hstr(`${Phone.week()}|c|${id}`), P = CM[pool] || CM.gen; return [0, 1].map((i) => ({ u: FANS[(h >>> (i * 4)) % FANS.length] + ((h >>> (i * 3 + 2)) % 90 + 10), t: P[(h >>> (i * 5 + 1)) % P.length] })); };
   function feedPosts() {
-    const s = Game.state, p = s.player, w = Phone.week(), out = [], me = Player.fullName(p), X = ctxNow();
+    const s = Game.state, p = s.player, w = Phone.week(), out = [], me = Player.fullName(p), X = ctxNow(), r = s.lastReport;
     const n = (k, a, b) => a + (hstr(`${w}|${k}`) % (b - a));
+    const hrs = (k, a, b) => n('t' + k, a, b);
     if (!Game.inStreet()) {
-      const cn = Game.teamName(), r = s.lastReport;
-      if (X.win || X.loss || X.draw) {
-        out.push({ id: 'club', who: cn, club: true, kind: 'score', a: cn, b: r.opp, ga: r.gf, gb: r.ga, res: r.res, txt: r.res === 'W' ? 'Galibiyet! Desteğiniz için teşekkürler.' : r.res === 'L' ? 'Bugün olmadı. Toparlanıp geri döneceğiz.' : 'Deplasmandan bir puanla dönüyoruz.', likes: n('club', 800, 9000) });
-        if (X.goals || X.star) out.push({ id: 'fan', who: 'Tribün Sesi', kind: 'quote', txt: `${me} bugün sahanın en iyisiydi!`, likes: n('fan', 200, 3000) });
+      const cn = Game.teamName(), club = Game.club() || {};
+      const big = Math.max(1, (Game.teamRating(s.clubId) || 60) - 40);
+      const nm = nextMatch();
+      // kulüp: maç günü afişi (tarih ve saat takvimle aynı)
+      if (nm && (nm.k === 'match' || nm.k === 'cup')) out.push({ id: 'pre', who: cn, club: true, h: hrs('pre', 1, 6), loc: club.city || '', kind: 'poster', nm, txt: 'Maç günü! Hep birlikte!', likes: n('pre', 300, 900) * big, cm: comments('pre', 'gen'), nc: n('prec', 20, 200) });
+      const intlRes = Phone.data().lastComp === 'intl';
+      if ((X.win || X.loss || X.draw) && intlRes) {
+        const nat = Game.nation() || {};
+        out.push({ id: 'res', who: `${nat.name || ''}`, natTeam: true, h: hrs('res', 14, 40), kind: 'score', a: nat.name || '', b: r.opp, ga: r.gf, gb: r.ga, res: r.res, scorer: r.goals > 0 ? me : '', txt: r.res === 'W' ? 'Galibiyet! Desteğiniz için teşekkürler.' : r.res === 'L' ? 'Bugün olmadı. Toparlanıp geri döneceğiz.' : 'Bir puanla dönüyoruz.', likes: n('res', 5000, 40000), cm: comments('res', X.win ? 'win' : X.loss ? 'loss' : 'draw'), nc: n('resc', 200, 3000) });
+      } else if (X.win || X.loss || X.draw) {
+        out.push({ id: 'res', who: cn, club: true, h: hrs('res', 14, 40), kind: 'score', a: cn, b: r.opp, ga: r.gf, gb: r.ga, res: r.res, scorer: r.goals > 0 ? me : '', txt: r.res === 'W' ? 'Galibiyet! Desteğiniz için teşekkürler.' : r.res === 'L' ? 'Bugün olmadı. Toparlanıp geri döneceğiz.' : 'Bir puanla dönüyoruz.', likes: n('res', 500, 1500) * big, cm: comments('res', X.win ? 'win' : X.loss ? 'loss' : 'draw'), nc: n('resc', 40, 400) });
+        if (X.goals && !intlRes) out.push({ id: 'goal', who: cn, club: true, h: hrs('goal', 16, 30), kind: 'goal', name: me, num: p.shirt, txt: `GOL! ${me}`, likes: n('goal', 600, 1800) * big, cm: comments('goal', 'me'), nc: n('goalc', 30, 300) });
+        if (X.goals || X.star) out.push({ id: 'fan', who: 'Tribün Sesi', h: hrs('fan', 10, 22), kind: 'quote', txt: `${me} bugün sahanın en iyisiydi!`, likes: n('fan', 200, 3000), cm: comments('fan', 'me'), nc: n('fanc', 10, 120) });
       }
       const ro = (Game.teamRoster(s.clubId) || []).filter((x) => x && x.n && x.n !== me);
-      [0, 1].forEach((k) => { if (!ro.length) return; const m = ro[hstr(`${w}|tm${k}`) % ro.length]; const tp = TM_POSTS[hstr(`${w}|tp${k}`) % TM_POSTS.length]; if (!out.some((x) => x.who === m.n)) out.push({ id: 'tm' + k, who: m.n, sub: cn, kind: 'photo', art: tp[0], txt: tp[1], likes: n('tm' + k, 60, 1800) }); });
+      const TP = [['gym', 'Bugün ağırlık günüydü. Yarın daha güçlü!'], ['train', 'Topla geçen bir gün daha.'], ['locker', 'Soyunma odasında moraller yüksek.'], ['plane', 'Deplasman yolundayız!'], ['food', 'Maç öncesi beslenme her şey.'], ['run', 'Sabah koşusu tamam. Hedef büyük.'], ['stadium', 'Hafta sonu için hazırız.']];
+      [0, 1, 2].forEach((k) => { if (!ro.length) return; const m = ro[hstr(`${w}|tm${k}`) % ro.length]; const tp = TP[hstr(`${w}|tp${k}`) % TP.length]; if (!out.some((x) => x.who === m.n)) out.push({ id: 'tm' + k, who: m.n, sub: cn, h: hrs('tm' + k, 2, 30), kind: 'photo', art: tp[0], txt: tp[1], likes: n('tm' + k, 60, 1800), cm: comments('tm' + k, 'gen'), nc: n('tmc' + k, 3, 60) }); });
       try {
         const lg = Game.league();
-        if (lg && lg.table && s.season.round > 0) { const t = World.sortedTable(lg).slice(0, 3); out.push({ id: 'lg', who: Game.leagueName(), lg: true, kind: 'table', rows: t.map((x) => [Game.teamName(x.id), x.pts, x.id === s.clubId]), txt: `${s.season.round}. hafta sonunda zirve`, likes: n('lg', 400, 6000) }); }
+        if (lg && lg.table && s.season.round > 0) {
+          const t = World.sortedTable(lg).slice(0, 3);
+          out.push({ id: 'lg', who: Game.leagueName(), lg: true, h: hrs('lg', 18, 40), kind: 'table', rows: t.map((x) => [Game.teamName(x.id), x.pts, x.id === s.clubId]), txt: `${s.season.round}. hafta sonunda zirve`, likes: n('lg', 400, 6000), cm: comments('lg', 'gen'), nc: n('lgc', 20, 300) });
+          const sc = World.topScorers ? World.topScorers(lg, 3) : [];
+          if (sc.length && sc[0].g > 0) out.push({ id: 'gk', who: Game.leagueName(), lg: true, h: hrs('gk', 20, 44), kind: 'scorers', rows: sc.map((x) => [x.name, x.g, x.name === me]), txt: 'Gol krallığı yarışı', likes: n('gk', 300, 4000), cm: comments('gk', 'gen'), nc: n('gkc', 10, 200) });
+        }
       } catch (e) { /* tablo yok */ }
+      // transfer kulisi: gerçekten teklif varsa
+      if ((s.offers || []).length) { const o = s.offers[0], cl = Game.club(o.clubId); if (cl) out.push({ id: 'tr', who: 'SporHaber', news: true, h: hrs('tr', 3, 12), kind: 'news', tag: 'TRANSFER', txt: `Transfer kulisi: ${cl.name}, ${me} için harekete geçti.`, likes: n('tr', 400, 4000), cm: comments('tr', 'news'), nc: n('trc', 20, 300) }); }
     }
-    (s.news || []).filter((x) => x && x.t && x.type !== 'bad').slice(0, 3).forEach((x, k) => out.push({ id: 'nw' + k, who: 'SporHaber', news: true, kind: 'news', txt: U.plain(String(x.t)), likes: n('nw' + k, 100, 2500) }));
-    (typeof Friends !== 'undefined' && Friends.on && Friends.on() ? Friends.list() : []).slice(0, 2).forEach((f, k) => { const fp = FR_POSTS[hstr(`${w}|fp${f.n}`) % FR_POSTS.length]; out.push({ id: 'fr' + k, who: f.n, kind: 'photo', art: fp[0], txt: fp[1], likes: n('fr' + k, 10, 300) }); });
-    return out.sort((a, b) => hstr(`${w}|o|${a.id}`) - hstr(`${w}|o|${b.id}`)).sort((a, b) => (b.kind === 'score') - (a.kind === 'score'));
+    (s.news || []).filter((x) => x && x.t && x.type !== 'bad').slice(0, 2).forEach((x, k) => out.push({ id: 'nw' + k, who: 'SporHaber', news: true, h: hrs('nw' + k, 4, 40), kind: 'news', tag: 'SON DAKİKA', txt: U.plain(String(x.t)), likes: n('nw' + k, 100, 2500), cm: comments('nw' + k, 'news'), nc: n('nwc' + k, 5, 120) }));
+    const FP = [['food', 'Akşam yemeği dostlarla.'], ['train', 'Halı saha klasiği.'], ['plane', 'Kısa bir tatil molası.'], ['run', 'Bugün 10 kilometre koştum!']];
+    (typeof Friends !== 'undefined' && Friends.on && Friends.on() ? Friends.list() : []).slice(0, 2).forEach((f, k) => { const fp = FP[hstr(`${w}|fp${f.n}`) % FP.length]; out.push({ id: 'fr' + k, who: f.n, h: hrs('fr' + k, 1, 44), kind: 'photo', art: fp[0], txt: fp[1], likes: n('fr' + k, 10, 300), cm: comments('fr' + k, 'gen'), nc: n('frc' + k, 1, 20) }); });
+    // senin bu haftaki ve geçen haftaki gönderilerin akışta görünür
+    try {
+      const so = Social.ensure(p);
+      so.posts.filter((x) => x.y === s.season.year && x.r >= s.season.round - 1).slice(0, 2).forEach((x, k) => out.push({ id: 'me' + x.id, who: me, mine: true, h: x.r === s.season.round ? hrs('me' + k, 1, 8) : hrs('me' + k, 26, 48), kind: 'mine', pid: x.id, loc: x.loc, txt: x.text, likes: x.likes, cm: (x.comments || []).slice(0, 2), nc: x.nc || 0 }));
+    } catch (e) { /* yok */ }
+    return out.sort((a, b) => a.h - b.h);
+  }
+  const ago = (h) => (h < 24 ? `<span>${h} sa</span>` : `<span>${Math.floor(h / 24)} g</span>`);
+  function media(x) {
+    const club = Game.club() || {};
+    if (x.kind === 'poster') {
+      const o = x.nm;
+      return `<div class="ph-fpo" style="--c1:${club.c1 || '#1d3a8a'};--c2:${club.c2 || '#fff'}"><small>${x.nm.k === 'cup' ? 'KUPA MAÇI' : 'MAÇ GÜNÜ'}</small><div class="vs"><span>${esc(Game.teamName())}</span><i>VS</i><span>${esc(o.t)}</span></div><em>${dateLbl(o.date)} · ${o.h}</em><b>${esc(o.sub)}</b></div>`;
+    }
+    if (x.kind === 'score') return `<div class="ph-fsc res-${x.res}" style="--c1:${club.c1 || '#16306f'}"><small>MAÇ SONUCU</small><div><span>${esc(x.a)}</span><b>${x.ga} - ${x.gb}</b><span>${esc(x.b)}</span></div>${x.scorer ? `<em>⚽ ${esc(x.scorer)}</em>` : ''}</div>`;
+    if (x.kind === 'goal') return `<div class="ph-fgo" style="--c1:${club.c1 || '#e5383b'};--c2:${club.c2 || '#fff'}"><b>GOL!</b><i>${x.num || ''}</i><span>${esc(x.name)}</span></div>`;
+    if (x.kind === 'table' || x.kind === 'scorers') return `<div class="ph-ftb"><small>${x.kind === 'table' ? 'PUAN DURUMU' : 'GOL KRALLIĞI'}</small>${x.rows.map((r, i) => `<div class="${r[2] ? 'me' : ''}"><i>${i + 1}</i><span>${esc(r[0])}</span><b>${r[1]}</b></div>`).join('')}</div>`;
+    if (x.kind === 'photo') return scene(x.art);
+    if (x.kind === 'news') return `<div class="ph-fnw"><small>${esc(x.tag || 'SON DAKİKA')}</small><p>${esc(x.txt)}</p></div>`;
+    if (x.kind === 'quote') return `<div class="ph-fq">“${esc(x.txt)}”</div>`;
+    if (x.kind === 'mine') return `<div class="ph-fimg mine"><canvas data-pid="${x.pid}" data-crop="1" aria-hidden="true"></canvas></div>`;
+    return '';
   }
   function feedCard(x) {
     const d = Phone.data(), on = !!(d.cheer && d.cheer[`${Phone.week()}|${x.id}`]);
-    const s = Game.state;
-    let av = avatar(x.who), media = '';
+    let av = avatar(x.who);
     if (x.club) { try { av = `<span class="ph-fav ph-fav-club">${UI.shirt(Game.club())}</span>`; } catch (e) { /* yok */ } }
     if (x.lg) av = `<span class="ph-fav ph-fav-lg">${IC.feed}</span>`;
     if (x.news) av = '<span class="ph-fav ph-fav-nw" data-noi18n>SH</span>';
-    if (x.kind === 'score') media = `<div class="ph-fsc res-${x.res}"><small>MAÇ SONUCU</small><div><span>${esc(x.a)}</span><b>${x.ga} - ${x.gb}</b><span>${esc(x.b)}</span></div></div>`;
-    else if (x.kind === 'table') media = `<div class="ph-ftb">${x.rows.map((r, i) => `<div class="${r[2] ? 'me' : ''}"><i>${i + 1}</i><span>${esc(r[0])}</span><b>${r[1]}</b></div>`).join('')}</div>`;
-    else if (x.kind === 'photo') { const bg = FIMG_BG[x.art] || FIMG_BG.ball; media = `<div class="ph-fimg" style="background:linear-gradient(150deg,${bg[0]},${bg[1]})">${svg(FIMG[x.art] || FIMG.ball, 'none', 'rgba(255,255,255,.9)', 1.6)}</div>`; }
-    else if (x.kind === 'news') media = `<div class="ph-fnw"><small>SON DAKİKA</small><p>${esc(x.txt)}</p></div>`;
-    else if (x.kind === 'quote') media = `<div class="ph-fq">“${esc(x.txt)}”</div>`;
+    if (x.mine) av = '<span class="ph-fav ph-fav-me"><canvas class="so-avatar" aria-hidden="true"></canvas></span>';
+    const ver = x.club || x.lg || x.news || x.natTeam || (x.mine && Phone.p().fame >= 35);
+    const sub = [x.sub ? esc(x.sub) : x.loc ? esc(x.loc) : '', ago(x.h)].filter(Boolean).join(' · ');
     const cap = x.kind === 'news' || x.kind === 'quote' ? '' : `<p class="ph-fcap"><b>${esc(handleOf(x.who))}</b> ${esc(x.txt)}</p>`;
-    return `<article class="ph-fpost"><header>${av}<span><b>${esc(x.who)}${x.club || x.lg || x.news ? `<i class="ph-fv">${IC.feed}</i>` : ''}</b><small>${esc(x.sub || handleOf(x.who))}</small></span></header>${media}
-      <div class="ph-fact"><button type="button" class="${on ? 'on' : ''}" data-ph-cheer="${x.id}" aria-label="Alkış">${svg('<path d="M12 3.2l2.5 5.3 5.8.7-4.3 4 1.1 5.7L12 16.1l-5.1 2.8L8 13.2 3.7 9.2l5.8-.7z"/>', on ? '#ffcf3f' : 'none', on ? '#ffcf3f' : 'currentColor', 1.8)}<span>${Social.fmt(x.likes + (on ? 1 : 0))}</span></button></div>${cap}</article>`;
+    const cm = (x.cm || []).map((c) => `<p class="ph-fcm"><b>${esc('@' + String(c.u).replace(/^@/, ''))}</b> <span>${esc(c.t)}</span></p>`).join('');
+    return `<article class="ph-fpost"><header>${av}<span><b>${esc(x.who)}${ver ? `<i class="ph-fv">${IC.feed}</i>` : ''}</b><small>${sub}</small></span></header>${media(x)}
+      <div class="ph-fact"><button type="button" class="${on ? 'on' : ''}" data-ph-cheer="${x.id}" aria-label="Alkış">${svg('<path d="M12 3.2l2.5 5.3 5.8.7-4.3 4 1.1 5.7L12 16.1l-5.1 2.8L8 13.2 3.7 9.2l5.8-.7z"/>', on ? '#ffcf3f' : 'none', on ? '#ffcf3f' : 'currentColor', 1.8)}<span>${Social.fmt(x.likes + (on ? 1 : 0))}</span></button><span class="ph-fic">${svg('<path d="M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z"/>', 'none', 'currentColor', 1.8)}<span>${Social.fmt(x.nc || 0)}</span></span><span class="ph-fic">${svg('<path d="M4 12v7a1 1 0 001 1h14a1 1 0 001-1v-7M12 3v12M7 8l5-5 5 5"/>', 'none', 'currentColor', 1.8)}</span></div>${cap}${cm}${x.nc > 2 ? `<p class="ph-fmore"><span>${Social.fmt(x.nc)} yorumun tümünü gör</span></p>` : ''}</article>`;
+  }
+  // hikâyeler: kulüp (maç afişi), takım arkadaşları ve arkadaşlar
+  function stories(posts) {
+    const seen = new Set();
+    return posts.filter((x) => (x.kind === 'poster' || x.kind === 'photo' || x.kind === 'goal' || x.kind === 'table') && !seen.has(x.who) && seen.add(x.who)).slice(0, 8);
   }
   function feedView() {
     const me = Phone.sub === 'me';
     const seg = `<div class="ph-seg"><button type="button" class="${me ? '' : 'on'}" data-ph-ftab="">Akış</button><button type="button" class="${me ? 'on' : ''}" data-ph-ftab="me">Profilim</button></div>`;
     if (me) return `<div class="ph-appv ph-feed">${top('StarFeed')}${seg}<div class="ph-body">${Social.render(true)}</div></div>`;
-    const posts = feedPosts();
-    return `<div class="ph-appv ph-feed">${top('StarFeed')}${seg}<div class="ph-body ph-fbody">${posts.length ? posts.map(feedCard).join('') : '<p class="ph-note">Akış şimdilik sessiz. Maçlar başladıkça takım arkadaşların ve kulübün paylaşım yapacak.</p>'}</div></div>`;
+    const posts = feedPosts(), st = stories(posts), d = Phone.data(), w = Phone.week();
+    const stBar = st.length ? `<div class="ph-stories">${st.map((x, i) => { const seen = d.stSeen && d.stSeen[`${w}|${x.id}`]; const av = x.club ? `<span class="ph-fav ph-fav-club">${UI.shirt(Game.club())}</span>` : x.lg ? `<span class="ph-fav ph-fav-lg">${IC.feed}</span>` : avatar(x.who); return `<button type="button" class="ph-st1 ${seen ? 'seen' : ''}" data-ph-story="${i}">${av}<small>${esc(String(x.who).split(' ')[0])}</small></button>`; }).join('')}</div>` : '';
+    let ov = '';
+    if (Phone.story != null && st[Phone.story]) {
+      const x = st[Phone.story];
+      (d.stSeen = d.stSeen || {})[`${w}|${x.id}`] = 1;
+      ov = `<div class="ph-story" data-ph-snext><div class="bars">${st.map((_, i) => `<i class="${i < Phone.story ? 'done' : i === Phone.story ? 'cur' : ''}"></i>`).join('')}</div><header>${avatar(x.who)}<b>${esc(x.who)}</b><small>${ago(x.h)}</small><button type="button" class="x" data-ph-sclose aria-label="Kapat">✕</button></header><div class="sm">${media(x)}</div><p>${esc(x.txt)}</p></div>`;
+    }
+    return `<div class="ph-appv ph-feed">${top('StarFeed')}${seg}<div class="ph-body ph-fbody">${stBar}${posts.length ? posts.map(feedCard).join('') : '<p class="ph-note">Akış şimdilik sessiz. Maçlar başladıkça takım arkadaşların ve kulübün paylaşım yapacak.</p>'}</div>${ov}</div>`;
   }
   // ---------------- Durum ayrıntısı (ana ekrandaki Durum kartı) ----------------
   function statView() {
@@ -703,11 +819,14 @@
   };
   function bind(v) {
     const on = (sel, fn) => v.querySelectorAll(sel).forEach((b) => (b.onclick = (e) => fn(b, e)));
-    on('[data-ph-open]', (b) => { Phone.app = b.dataset.phOpen; Phone.sub = null; Phone.day = null; Phone.month = null; Phone.render(); });
-    on('[data-ph-back]', () => { if (Phone.sub) Phone.sub = null; else Phone.app = null; Phone.render(); });
+    on('[data-ph-open]', (b) => { Phone.app = b.dataset.phOpen; Phone.sub = null; Phone.day = null; Phone.month = null; Phone.story = null; Phone.render(); });
+    on('[data-ph-back]', () => { Phone.story = null; if (Phone.sub) Phone.sub = null; else Phone.app = null; Phone.render(); });
     on('[data-ph-th]', (b) => { Phone.sub = b.dataset.phTh; Phone.render(); });
     on('[data-ph-chat]', (b) => { Phone.app = 'msg'; Phone.sub = b.dataset.phChat; Phone.render(); });
-    on('[data-ph-ftab]', (b) => { Phone.sub = b.dataset.phFtab || null; Phone.render(); });
+    on('[data-ph-ftab]', (b) => { Phone.sub = b.dataset.phFtab || null; Phone.story = null; Phone.render(); });
+    on('[data-ph-story]', (b) => { Phone.story = +b.dataset.phStory; Phone.render(); });
+    on('[data-ph-sclose]', (b, e) => { e.stopPropagation(); Phone.story = null; Game.save(); Phone.render(); });
+    on('[data-ph-snext]', () => { const n = v.querySelectorAll('.ph-st1').length; Phone.story = Phone.story + 1 < n ? Phone.story + 1 : null; if (Phone.story == null) Game.save(); Phone.render(); });
     on('[data-ph-lic]', () => { try { LifeX.licenseExam(() => Game.render()); } catch (e) { console.error(e); } });
     on('[data-ph-cheer]', (b) => {
       const d = Phone.data(), k = `${Phone.week()}|${b.dataset.phCheer}`;
@@ -949,7 +1068,7 @@
       Phone.el.addEventListener('click', (e) => { if (e.target === Phone.el) Phone.close(); });
       Phone.el.querySelector('.ph-homebar').onclick = () => { if (!Phone.app) return Phone.close(); Phone.app = null; Phone.sub = null; Phone.render(); };
     }
-    Phone.open = true; Phone.app = app || null; Phone.sub = null; Phone.day = null; Phone.month = null; Phone._last = null;
+    Phone.open = true; Phone.app = app || null; Phone.sub = null; Phone.day = null; Phone.month = null; Phone.story = null; Phone._last = null;
     Phone.el.classList.add('on');
     document.documentElement.classList.add('ph-open');
     fitTabs();
@@ -968,6 +1087,22 @@
   Game.render = function () {
     const out = render0.apply(this, arguments);
     try { Phone.badge(); if (Phone.open) Phone.render(); } catch (e) { console.error(e); }
+    return out;
+  };
+  // oynanan kupa ve milli maçlar takvime sonucuyla yazılır
+  const am0 = Game.applyMatch;
+  Game.applyMatch = function (sum, ctx, comp) {
+    const out = am0.apply(this, arguments);
+    try {
+      const s = Game.state;
+      if (s && s.player && s.mode !== 'wc') Phone.data().lastComp = comp;
+      if (s && s.player && s.mode !== 'wc' && (comp === 'cup' || comp === 'intl') && sum) {
+        const d = Phone.data(), opp = ctx.side === 'home' ? ctx.away.name : ctx.home.name;
+        d.cal = (d.cal || []).filter((e) => e.y >= s.season.year - 1);
+        const gf = sum.gf != null ? sum.gf : (ctx.side === 'home' ? sum.hs : sum.as), ga = sum.ga != null ? sum.ga : (ctx.side === 'home' ? sum.as : sum.hs);
+        if (gf != null && ga != null) d.cal.push({ y: s.season.year, r: Math.min(s.season.round, nRounds() - 1), k: comp, t: opp, s: ctx.compName || '', res: `${gf}-${ga}`, win: gf - ga });
+      }
+    } catch (e) { console.error(e); }
     return out;
   };
   // maç başlarken, ana menüye dönerken telefon kapanır

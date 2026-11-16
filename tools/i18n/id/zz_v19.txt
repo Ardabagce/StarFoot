@@ -2052,3 +2052,43 @@
 9010|menunggu balasan
 9011|Jangan khawatir, Bu, aku baik-baik saja
 9012|Tenang, Yah, aku berlatih keras
+9014|Seleksi akademi
+9015|Suka banget.
+9016|Sukses!
+9017|Satu poin tetap poin.
+9018|Tim ini beda kelas!
+9019|Anak ini akan jadi hebat.
+9020|Sudah kuduga.
+9021|Pertahankan!
+9022|Kita bisa lebih baik.
+9023|Ulang tahunmu
+9024|Legenda!
+9025|Aku sudah beli jerseynya.
+9026|TOP SKOR
+9027|Persaingan top skor
+9028|Foto keren!
+9029|Mantap!
+9030|Kami selalu mendukung kalian.
+9031|LAGA PIALA
+9032|Angkat kepala!
+9033|Perayaan
+9034|KLASEMEN
+9035|Lawan ditentukan undian
+9036|Musim selesai
+9037|Akhirnya!
+9038|TRANSFER
+9039|Kami akan bangkit.
+9048|Rumor transfer: {0} bergerak untuk {1}.
+9040|Sepanjang hari
+9041|Wah!
+9042|Tunggu musim baru
+9043|Bintang telah lahir!
+9049|Laga timnas {0}
+9044|Tiga poin di tangan!
+9045|Hari pertandingan! Bersama-sama!
+9050|{0} j
+9051|{0} hr
+9047|HARI PERTANDINGAN
+9052|Kamu tinggal bersama keluarga
+9053|Rumah keluarga
+9054|3 KT · 120 m² · Lingkungan

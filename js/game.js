@@ -1649,7 +1649,8 @@ const UI = {
         <div class="nm-meta">MAHALLE MAÇI · Kenarda bir scout izliyor. İyi oynarsan seni bir altyapıya götürecek!</div>`;
     }
     const crest = (name, club, sub) => `<div class="nm-team">${club ? UI.shirt(club, 'big') : `<span class="nat">${sub}</span>`}<b>${U.esc(name)}</b></div>`;
-    if (s.pendingIntl) {
+    // sıra maç oynatmayla aynı: önce kupa maçı, sonra milli maç, sonra lig
+    if (s.pendingIntl && !(s.pendingCup && next)) {
       const n = Game.nation(), o = Game.nat(s.pendingIntl), cat = Game.intlCat(), sx = cat ? ' ' + cat : '';
       next = `<div class="nm-vs">${crest(n.name + sx, null, n.code)}<span class="vs">VS</span>${crest(o.name + sx, null, o.code)}</div>
         <div class="nm-meta">${cat ? `${cat} MİLLİ MAÇ · Rakip gücü ${o.rating - Game.catOffset(cat)} · Geleceğin yıldızları sahada` : `MİLLİ MAÇ · Rakip gücü ${o.rating} · Yıldızlar: ${U.esc(Game.natStars(o.code).slice(0, 2).join(', ') || '—')}`}</div>`;
@@ -1664,10 +1665,11 @@ const UI = {
         <div class="nm-meta">Rakip ${oppPos}. sırada · Güç ${Game.teamRating(opp)} / Senin takımın ${Game.teamRating(s.clubId)}${star ? ` · Yıldızı: ${U.esc(star.n)}` : ''}</div>`;
     }
     let nTheme = null;
-    if (s.pendingIntl) { nTheme = CompTheme.get('intl', p.nation); if (Game.intlCat() && nTheme) nTheme = Object.assign({}, nTheme, { l: `${nTheme.l} ${Game.intlCat()}` }); }
+    if (s.pendingIntl && !(s.pendingCup && s.cups && s.cups[s.pendingCup])) { nTheme = CompTheme.get('intl', p.nation); if (Game.intlCat() && nTheme) nTheme = Object.assign({}, nTheme, { l: `${nTheme.l} ${Game.intlCat()}` }); }
     else if (s.pendingCup && s.cups && s.cups[s.pendingCup]) { const c = s.cups[s.pendingCup]; nTheme = CompTheme.get(c.youth ? 'ygl' : c.dom ? 'dom' : c.id); }
     const ovr = Player.overall(p, true);
-    const roleK = p.injuryWeeks ? 'inj' : Game.roleFor(ovr, s.pendingIntl ? Game.nation().rating - Game.catOffset(Game.intlCat()) : Game.teamRating(s.clubId), Game.isYouth() && !s.pendingIntl, true);
+    const intlNext = s.pendingIntl && !(s.pendingCup && s.cups && s.cups[s.pendingCup]);
+    const roleK = p.injuryWeeks ? 'inj' : Game.roleFor(ovr, intlNext ? Game.nation().rating - Game.catOffset(Game.intlCat()) : Game.teamRating(s.clubId), Game.isYouth() && !intlNext, true);
     const role = { inj: 'Sakatsın, bu maçta oynayamazsın', starter: "Muhtemelen ilk 11'desin", bench: 'Muhtemelen yedeksin', out: 'Kadroya girmen zor' }[roleK];
     const focusL = STATS.find((x) => x.k === s.trainFocus).l;
     const keyTxt = '★ mevkin için önemli';
@@ -1686,6 +1688,7 @@ const UI = {
           <div class="card-h"><span>${Icon('whistle')} Maç Günü</span><span class="tag role-${roleK}">${role}</span></div>
           ${nTheme ? `<div class="ct-badge">${nTheme.fx === 'stars' ? '<i class="ct-star"></i>' : ''}${U.esc(nTheme.l)}</div>` : ''}
           ${next}
+          ${typeof Phone !== 'undefined' && Phone.matchLabel && next ? `<div class="nm-meta nm-date">${Phone.matchLabel()}</div>` : ''}
           ${p.energy < 40 ? `<div class="warn">${Icon('bolt')} Enerjin düşük. Performansın düşer, sakatlık riski artar.</div>` : ''}
           ${UI.physioTip()}
           ${UI.adInjury()}${UI.adInjury() && typeof Star !== 'undefined' ? Star.noAds('noads_injury') : ''}

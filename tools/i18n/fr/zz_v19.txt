@@ -2052,3 +2052,43 @@
 9010|en attente de réponse
 9011|Ne t'inquiète pas, maman, je vais bien
 9012|T'inquiète pas, papa, je bosse
+9014|Détections du centre de formation
+9015|J'adore.
+9016|Bonne chance !
+9017|Un point, c'est un point.
+9018|Cette équipe est à part !
+9019|Ce gamin va devenir très fort.
+9020|Je m'y attendais.
+9021|Continue comme ça !
+9022|On fera mieux.
+9023|Ton anniversaire
+9024|Légendaire !
+9025|J'ai déjà acheté son maillot.
+9026|MEILLEURS BUTEURS
+9027|La course au titre de meilleur buteur
+9028|Super photo !
+9029|Chapeau !
+9030|On est toujours derrière vous.
+9031|MATCH DE COUPE
+9032|Têtes hautes !
+9033|Fête
+9034|CLASSEMENT
+9035|Adversaire désigné par tirage
+9036|Saison terminée
+9037|Enfin !
+9038|TRANSFERT
+9039|On va rebondir.
+9048|Rumeur de transfert : {0} passe à l'action pour {1}.
+9040|Toute la journée
+9041|Waouh !
+9042|Attends la nouvelle saison
+9043|Une star est née !
+9049|Match international {0}
+9044|Trois points dans la poche !
+9045|Jour de match ! Tous ensemble !
+9050|{0} h
+9051|{0} j
+9047|JOUR DE MATCH
+9052|Tu vis chez tes parents
+9053|Maison familiale
+9054|4 pièces · 120 m² · Quartier
