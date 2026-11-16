@@ -98,7 +98,7 @@ const Life = {
     const base = Math.max(300, Game.weeklyIncome() * U.rand(0.08, 0.22)) * b.m * (1 + p.fame / 120) * (1 + Life.mgrQ() * 0.1);
     const seasons = U.randi(1, 3);
     L.offers.push(Object.assign({}, b, { weekly: Math.round(base / 50) * 50, weeks: seasons * Game.rounds(), seasons }));
-    Game.news(`${b.name} (${b.l}) sana sponsorluk teklif ediyor! Yaşam sekmesinden inceleyebilirsin.`, 'good');
+    Game.news(`${b.name} (${b.l}) sana sponsorluk teklif ediyor! Telefonundaki Menajer uygulamasından inceleyebilirsin.`, 'good');
   },
 
   // ---------- aksiyonlar (haftalık hak harcar) ----------

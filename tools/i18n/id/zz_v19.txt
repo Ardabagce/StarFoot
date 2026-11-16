@@ -1833,3 +1833,42 @@
 8739|{0} Buka profilmu di ponsel
 8742|Kecepatan maks
 8743|Tenaga
+8744|Hidupku
+8745|Toko Olahraga
+8746|Mewah
+8747|Siap bertanding
+8748|Minuman energi, fisioterapi, sepatu, perlengkapan, nutrisi, dan bola
+8749|Hobi, hiburan, gaya, dan barang mewah
+8750|Matematika
+8751|Geometri
+8752|Logika
+8753|Geografi
+8754|Pengetahuan Umum
+8755|Masa sekolahmu sudah selesai.
+8756|Kecerdasan meningkatkan latihan. Materi di kelas keluar di ujian.
+8758|Ujian
+8759|Selesai
+8760|Di akhir musim
+8761|Pelajaran tahun ini
+8762|Kamu ikut kelas
+8763|Kamu memilih latihan
+8764|Belum ada pelajaran tahun ini.
+8765|Pekan pelajaran
+8766|Pekan itu kamu memilih sekolah atau latihan
+8767|Rapor
+8768|Etalase mewah khusus pemilik Premium dan Premium+.
+8769|Selebrasi Diamond dan poster karier khusus pemilik Diamond.
+8770|Lihat Premium
+8771|Lihat Diamond
+8772|Koleksi pribadi
+8773|Khusus bintang
+8774|Keistimewaanmu
+8775|Buat poster karier
+8786|{0} ({1}) ingin mensponsorimu! Lihat di aplikasi Agen di ponselmu.
+8776|Kamu bisa ikut ujian SIM kapan saja dari aplikasi Hidupku di ponsel.
+8777|👶 Kamu punya anak laki-laki! Beri dia nama di aplikasi Hidupku.
+8780|👶 Kamu punya anak perempuan! Beri dia nama di aplikasi Hidupku.
+8782|Tidak ada di tasmu. Beli di Toko Olahraga di ponselmu.
+8784|Sesi fisioterapi memperpendek cedera 2 minggu. Beli di Toko Olahraga di ponselmu dan pakai dari tas di Rencana Mingguan.
+8787|{0} sudah usang dan tak bisa dipakai lagi. Beli yang baru di Toko Olahraga di ponselmu.
+8788|✨ {0} milikmu! Unggahanmu banjir tepuk tangan.

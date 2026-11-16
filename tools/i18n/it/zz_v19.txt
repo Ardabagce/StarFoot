@@ -1833,3 +1833,42 @@
 8739|{0} Apri il tuo profilo sul telefono
 8742|Vel. massima
 8743|Potenza
+8744|La mia vita
+8745|Negozio sportivo
+8746|Lusso
+8747|Preparati alla partita
+8748|Energy drink, fisioterapia, scarpe, attrezzatura, alimentazione e palloni
+8749|Hobby, svago, stile e lusso
+8750|Matematica
+8751|Geometria
+8752|Logica
+8753|Geografia
+8754|Educazione civica
+8755|I tuoi anni di scuola sono finiti.
+8756|L'intelligenza migliora l'allenamento. Gli argomenti fatti in classe escono all'esame.
+8758|Esami
+8759|Completato
+8760|A fine stagione
+8761|Lezioni di quest'anno
+8762|Sei andato a lezione
+8763|Hai scelto l'allenamento
+8764|Nessuna lezione ancora quest'anno.
+8765|Settimana di lezione
+8766|Quella settimana sceglierai scuola o allenamento
+8767|Pagelle
+8768|La vetrina del lusso è riservata a Premium e Premium+.
+8769|Esultanze Diamond e poster della carriera sono riservati a Diamond.
+8770|Scopri Premium
+8771|Scopri Diamond
+8772|Collezione privata
+8773|Solo per le stelle
+8774|I tuoi vantaggi
+8775|Crea il poster della carriera
+8786|{0} ({1}) vuole sponsorizzarti! Guarda nell'app del procuratore sul telefono.
+8776|Puoi fare l'esame di guida quando vuoi dall'app La mia vita.
+8777|👶 È nato un maschietto! Dagli un nome nell'app La mia vita.
+8780|👶 È nata una femminuccia! Dalle un nome nell'app La mia vita.
+8782|Non è nella borsa. Puoi rifornirti nel Negozio sportivo sul telefono.
+8784|Una seduta di fisioterapia accorcia l'infortunio di 2 settimane. Comprala nel Negozio sportivo sul telefono e usala dalla borsa nel Piano settimanale.
+8787|{0} si sono consumate e non sono più utilizzabili. Comprane di nuove nel Negozio sportivo sul telefono.
+8788|✨ {0} è tuo! Il tuo post riceve applausi.

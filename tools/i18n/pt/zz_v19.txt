@@ -1833,3 +1833,42 @@
 8739|{0} Abra seu perfil no celular
 8742|Vel. máxima
 8743|Potência
+8744|Minha vida
+8745|Loja de esportes
+8746|Luxo
+8747|Fique pronto para o jogo
+8748|Energéticos, fisioterapia, chuteiras, equipamento, nutrição e bolas
+8749|Hobbies, diversão, estilo e luxo
+8750|Matemática
+8751|Geometria
+8752|Lógica
+8753|Geografia
+8754|Estudos gerais
+8755|Seus anos de escola terminaram.
+8756|A inteligência melhora o treino. O que é visto na aula cai na prova.
+8758|Provas
+8759|Concluído
+8760|No fim da temporada
+8761|Aulas deste ano
+8762|Você foi à aula
+8763|Você escolheu treinar
+8764|Ainda não houve aulas este ano.
+8765|Semana de aula
+8766|Nessa semana você vai escolher aula ou treino
+8767|Boletins
+8768|A vitrine de luxo é exclusiva para Premium e Premium+.
+8769|As comemorações Diamond e o pôster da carreira são exclusivos do Diamond.
+8770|Ver Premium
+8771|Ver Diamond
+8772|Coleção particular
+8773|Só para estrelas
+8774|Suas vantagens
+8775|Criar pôster da carreira
+8786|{0} ({1}) quer te patrocinar! Veja no app do empresário no seu celular.
+8776|Você pode fazer a prova de direção quando quiser pelo app Minha vida.
+8777|👶 Você teve um menino! Dê um nome a ele no app Minha vida.
+8780|👶 Você teve uma menina! Dê um nome a ela no app Minha vida.
+8782|Não está na bolsa. Compre na Loja de esportes do seu celular.
+8784|Uma sessão de fisioterapia encurta a lesão em 2 semanas. Compre na Loja de esportes do celular e use pela bolsa no Plano semanal.
+8787|{0} gastou e não dá mais para usar. Compre uma nova na Loja de esportes do celular.
+8788|✨ {0} agora é seu! Seu post está recebendo aplausos.

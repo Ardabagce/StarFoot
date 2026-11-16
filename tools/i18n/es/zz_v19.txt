@@ -1833,3 +1833,42 @@
 8739|{0} Abre tu perfil en el teléfono
 8742|Vel. máxima
 8743|Potencia
+8744|Mi vida
+8745|Tienda deportiva
+8746|Lujo
+8747|Prepárate para el partido
+8748|Bebidas energéticas, fisio, botas, equipo, nutrición y balones
+8749|Aficiones, ocio, estilo y lujo
+8750|Matemáticas
+8751|Geometría
+8752|Lógica
+8753|Geografía
+8754|Conocimiento del medio
+8755|Tus años de colegio han terminado.
+8756|La inteligencia mejora el entrenamiento. Lo visto en clase entra en el examen.
+8758|Exámenes
+8759|Completado
+8760|Al final de la temporada
+8761|Clases de este año
+8762|Fuiste a clase
+8763|Elegiste entrenar
+8764|Aún no ha habido clases este año.
+8765|Semana de clase
+8766|Esa semana elegirás clase o entrenamiento
+8767|Boletines
+8768|El escaparate de lujo es exclusivo de Premium y Premium+.
+8769|Las celebraciones Diamond y el póster de carrera son exclusivos de Diamond.
+8770|Ver Premium
+8771|Ver Diamond
+8772|Colección privada
+8773|Solo para estrellas
+8774|Tus ventajas
+8775|Crear póster de carrera
+8786|¡{0} ({1}) quiere patrocinarte! Míralo en la app del agente de tu teléfono.
+8776|Puedes hacer el examen de conducir cuando quieras desde la app Mi vida.
+8777|👶 ¡Has tenido un niño! Ponle nombre en la app Mi vida.
+8780|👶 ¡Has tenido una niña! Ponle nombre en la app Mi vida.
+8782|No está en tu bolsa. Puedes comprar en la Tienda deportiva de tu teléfono.
+8784|Una sesión de fisio acorta la lesión 2 semanas. Cómprala en la Tienda deportiva de tu teléfono y úsala desde tu bolsa en el Plan semanal.
+8787|{0} están gastadas y ya no sirven. Compra unas nuevas en la Tienda deportiva de tu teléfono.
+8788|✨ ¡{0} ya es tuyo! Tu publicación recibe aplausos.

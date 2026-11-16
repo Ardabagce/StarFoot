@@ -1833,3 +1833,42 @@
 8739|{0} Profil auf dem Handy öffnen
 8742|Höchstgeschw.
 8743|Leistung
+8744|Mein Leben
+8745|Sportladen
+8746|Luxus
+8747|Mach dich spielbereit
+8748|Energydrinks, Physio, Schuhe, Ausrüstung, Ernährung und Bälle
+8749|Hobbys, Spaß, Stil und Luxus
+8750|Mathe
+8751|Geometrie
+8752|Logik
+8753|Erdkunde
+8754|Sachkunde
+8755|Deine Schulzeit ist vorbei.
+8756|Intelligenz steigert den Trainingseffekt. Unterrichtsthemen kommen in der Prüfung dran.
+8758|Prüfungen
+8759|Abgeschlossen
+8760|Am Saisonende
+8761|Unterricht dieses Jahr
+8762|Du warst im Unterricht
+8763|Du hast Training gewählt
+8764|Dieses Jahr noch kein Unterricht.
+8765|Unterrichtswoche
+8766|In dieser Woche wählst du Schule oder Training
+8767|Zeugnisse
+8768|Das Luxus-Schaufenster gibt es nur mit Premium und Premium+.
+8769|Diamond-Jubel und Karriereposter gibt es nur mit Diamond.
+8770|Premium ansehen
+8771|Diamond ansehen
+8772|Private Sammlung
+8773|Nur für Stars
+8774|Deine Vorteile
+8775|Karriereposter erstellen
+8786|{0} ({1}) will dich sponsern! Sieh es dir in der Berater-App auf deinem Handy an.
+8776|Die Führerscheinprüfung kannst du jederzeit in der App „Mein Leben" machen.
+8777|👶 Du hast einen Sohn! Gib ihm in der App „Mein Leben" einen Namen.
+8780|👶 Du hast eine Tochter! Gib ihr in der App „Mein Leben" einen Namen.
+8782|Nicht in deiner Tasche. Im Sportladen auf deinem Handy kannst du nachkaufen.
+8784|Eine Physio-Sitzung verkürzt Verletzungen um 2 Wochen. Kauf sie im Sportladen auf deinem Handy und nutze sie im Wochenplan aus deiner Tasche.
+8787|{0} ist abgenutzt und nicht mehr tragbar. Hol dir neue im Sportladen auf deinem Handy.
+8788|✨ {0} gehört dir! Dein Beitrag bekommt Applaus.

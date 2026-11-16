@@ -542,7 +542,7 @@ const Star = {
         Social.post('life', x.post, 2.4);
         const so = Social.ensure(p);
         if (so.posts[0]) so.posts[0].scene = x.scene;
-        Game.toast(`✨ ${x.n} artık senin! Gönderin beğeni topluyor.`, 'good');
+        Game.toast(`✨ ${x.n} artık senin! Gönderin alkış topluyor.`, 'good');
         Game.save(); Game.render();
       } },
     ]);

@@ -50,7 +50,7 @@ const LifeX = {
     const E = {
       lic: () => Game.modal(`${tag('Ehliyet')}<h3>18 yaşına girdin! Ehliyet sınavına girmek ister misin?</h3><p>Geçersen araba ve motosiklet alabilirsin.</p>`, [
         { t: '🚗 Sınava gir', fn: () => LifeX.licenseExam(() => done('')) },
-        { t: 'Sonra', cls: 'btn-ghost', fn: () => done('Ehliyet sınavına istediğin zaman Yaşam sekmesinden girebilirsin.', '') },
+        { t: 'Sonra', cls: 'btn-ghost', fn: () => done('Ehliyet sınavına istediğin zaman telefonundaki Hayatım uygulamasından girebilirsin.', '') },
       ]),
       uni: () => {
         const fee = 1500;

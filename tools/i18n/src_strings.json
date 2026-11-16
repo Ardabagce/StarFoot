@@ -4500,7 +4500,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"phone.js"
 ],
 "Kulüpsüz": [
 "coach3.js",
@@ -33189,7 +33190,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"phone.js"
 ],
 "Milli": [
 "diamond2.js"
@@ -34354,8 +34356,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"oyna-r8k4tq.html"
+"lang-pt.js"
 ],
 "İlk Gol": [
 "extras.js",
@@ -35844,17 +35845,8 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Çantanda yok. Mağazadan stok alabilirsin.": [
-"extras.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
+"Çantanda yok. Telefonundaki Spor Mağazası\\'ndan stok alabilirsin.": [
+"extras.js"
 ],
 "{}: {} · {} kaldı": [
 "extras.js",
@@ -40861,7 +40853,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Fizyoterapi Seansı sakatlığı 2 hafta kısaltır. Mağazadan stok alıp Haftalık Plan\\'daki çantandan kullanabilirsin.": [
+"Fizyoterapi Seansı sakatlığı 2 hafta kısaltır. Telefonundaki Spor Mağazası\\'ndan stok alıp Haftalık Plan\\'daki çantandan kullanabilirsin.": [
 "game.js"
 ],
 "{} • {}. Hafta": [
@@ -40937,7 +40929,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"{} eskidi ve artık giyilemiyor. Mağazadan yenisini alabilirsin.": [
+"{} eskidi ve artık giyilemiyor. Telefonundaki Spor Mağazası'ndan yenisini alabilirsin.": [
 "game.js",
 "lang-ar.js",
 "lang-de.js",
@@ -44465,7 +44457,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"phone.js"
 ],
 "Toplar": [
 "game.js",
@@ -44604,18 +44597,6 @@
 "lang-pt.js"
 ],
 "Bu reyonda şimdilik ürün yok.": [
-"game.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"{} Mağaza": [
 "game.js",
 "lang-ar.js",
 "lang-de.js",
@@ -51810,6 +51791,17 @@
 "lang-ja.js",
 "lang-pt.js",
 "weather.js"
+],
+"Çantanda yok. Mağazadan stok alabilirsin.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Çantanda yok.": [
 "lang-ar.js",
@@ -73217,6 +73209,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"phone.js",
 "school.js"
 ],
 "Sabah okul zili çaldı ama hoca da ekstra antrenman koydu. Hangisine gideceksin?": [
@@ -73353,6 +73346,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"phone.js",
 "school.js"
 ],
 "· Derste işlenen konular dönem sınavında çıkar.": [
@@ -73423,6 +73417,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"phone.js",
 "school.js"
 ],
 "Doğru! Öğretmenin seni tebrik etti. Bu soru sınavda çıkabilir.": [
@@ -74093,6 +74088,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"phone.js",
 "school.js"
 ],
 "Sezon sonu": [
@@ -74105,6 +74101,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"phone.js",
 "school.js"
 ],
 "Sıradaki: Sezon sonu sınavı": [
@@ -76015,8 +76012,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"lifex.js"
+"lang-pt.js"
 ],
 "Üniversite": [
 "lang-ar.js",
@@ -85849,7 +85845,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"phone.js"
 ],
 "احتفالات Diamond": [
 "lang-ar.js"
@@ -87986,8 +87983,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"v24.js"
+"lang-pt.js"
 ],
 "Bir oğlun oldu! Yaşam sekmesinden ona bir isim ver.": [
 "lang-ar.js",
@@ -88076,8 +88072,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"v24.js"
+"lang-pt.js"
 ],
 "Bir kızın oldu! Yaşam sekmesinden ona bir isim ver.": [
 "lang-ar.js",
@@ -90332,8 +90327,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"phone.js"
+"lang-pt.js"
 ],
 "İlk telefonun": [
 "lang-ar.js",
@@ -90721,6 +90715,578 @@
 "lang-ja.js",
 "lang-pt.js",
 "phone.js"
+],
+"Hayatım": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Spor Mağazası": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Lüks": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Sahaya hazır ol": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Enerji içeceği, fizyoterapi, krampon, ekipman, beslenme ve toplar": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Hobi, eğlence, stil ve lüks ürünler": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Matematik": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Geometri": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Mantık": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Coğrafya": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Hayat Bilgisi": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Okul yılların tamamlandı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Zeka antrenman verimini artırır. Derste işlenen konular dönem sınavında çıkar.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Derste işlenen konular dönem sınavında çıkar.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Topics covered in class come up in the term exam.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Sınavlar": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Tamamlandı": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Sezonun sonunda": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Bu yılın dersleri": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Derse katıldın": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Antrenmanı seçtin": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Bu yıl henüz ders işlenmedi.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Ders haftası": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"O hafta okula ya da antrenmana gideceksin": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Karneler": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Lüks yaşam vitrini Premium ve Premium+ sahiplerine özeldir.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"واجهة الفخامة حصرية لمشتركي Premium وPremium+.": [
+"lang-ar.js"
+],
+"Diamond sevinçleri ve kariyer posteri Diamond sahiplerine özeldir.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"احتفالات Diamond وملصق المسيرة حصرية لمشتركي Diamond.": [
+"lang-ar.js"
+],
+"Premium'u incele": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"استعرض Premium": [
+"lang-ar.js"
+],
+"Diamond'u incele": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"استعرض Diamond": [
+"lang-ar.js"
+],
+"Özel koleksiyon": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Yıldızlara özel": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Senin ayrıcalıkların": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Kariyer posterini oluştur": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Ehliyet sınavına istediğin zaman telefonundaki Hayatım uygulamasından girebilirsin.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lifex.js"
+],
+"👶 Bir oğlun oldu! Telefonundaki Hayatım uygulamasından ona bir isim ver.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Bir oğlun oldu! Telefonundaki Hayatım uygulamasından ona bir isim ver.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"You had a baby boy! Name him in the My Life app on your phone.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Telefonundaki Hayatım uygulamasından ona bir isim ver.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Name him in the My Life app on your phone.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"👶 Bir kızın oldu! Telefonundaki Hayatım uygulamasından ona bir isim ver.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"v24.js"
+],
+"Bir kızın oldu! Telefonundaki Hayatım uygulamasından ona bir isim ver.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"You had a baby girl! Name her in the My Life app on your phone.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Çantanda yok. Telefonundaki Spor Mağazası'ndan stok alabilirsin.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Telefonundaki Spor Mağazası'ndan stok alabilirsin.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"You can stock up in the Sports Store app on your phone.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Fizyoterapi Seansı sakatlığı 2 hafta kısaltır. Telefonundaki Spor Mağazası'ndan stok alıp Haftalık Plan'daki çantandan kullanabilirsin.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Telefonundaki Spor Mağazası'ndan stok alıp Haftalık Plan'daki çantandan kullanabilirsin.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Buy some in the Sports Store on your phone and use them from your bag in the Weekly Plan.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "(Asist)": [
 "lang-ar.js",
@@ -144216,6 +144782,298 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"HAYATIM": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SPOR MAĞAZASI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"LÜKS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SAHAYA HAZIR OL": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HOBİ, EĞLENCE, STİL VE LÜKS ÜRÜNLER": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MATEMATİK": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GEOMETRİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MANTIK": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"COĞRAFYA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HAYAT BİLGİSİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"OKUL YILLARIN TAMAMLANDI.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SINAVLAR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TAMAMLANDI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SEZONUN SONUNDA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BU YILIN DERSLERİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DERSE KATILDIN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ANTRENMANI SEÇTİN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BU YIL HENÜZ DERS İŞLENMEDİ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DERS HAFTASI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KARNELER": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"PREMİUM'U İNCELE": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"استعرض PREMIUM": [
+"lang-ar.js"
+],
+"DİAMOND'U İNCELE": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"استعرض DIAMOND": [
+"lang-ar.js"
+],
+"ÖZEL KOLEKSİYON": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YILDIZLARA ÖZEL": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SENİN AYRICALIKLARIN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KARİYER POSTERİNİ OLUŞTUR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -170045,6 +170903,18 @@
 "lang-pt.js",
 "wc.js"
 ],
+"{} ({}) sana sponsorluk teklif ediyor! Telefonundaki Menajer uygulamasından inceleyebilirsin.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"life.js"
+],
 "{} antrenmanını izleyen dron, kaleci tarafından yumrukla uzaklaştırıldı. Kaleci: \\\"Refleks.\\\"": [
 "lang-ar.js",
 "lang-de.js",
@@ -170822,8 +171692,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"life.js"
+"lang-pt.js"
 ],
 "{} antrenmanını izleyen dron, kaleci tarafından yumrukla uzaklaştırıldı.": [
 "lang-ar.js",
@@ -171377,6 +172246,17 @@
 "lang-ja.js",
 "lang-pt.js",
 "life.js"
+],
+"{} eskidi ve artık giyilemiyor. Mağazadan yenisini alabilirsin.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "{} ile yollarınızı ayırdınız. Magazin basını bunu çoktan duydu.": [
 "lang-ar.js",
@@ -184751,6 +185631,17 @@
 "lang-pt.js",
 "star.js"
 ],
+"{} Mağaza": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "{} bizim!": [
 "lang-ar.js",
 "lang-de.js",
@@ -195199,6 +196090,111 @@
 "lang-de.js"
 ],
 "Höchstgeschw.": [
+"lang-de.js"
+],
+"Mein Leben": [
+"lang-de.js"
+],
+"Sportladen": [
+"lang-de.js"
+],
+"Luxus": [
+"lang-de.js"
+],
+"Mach dich spielbereit": [
+"lang-de.js"
+],
+"Energydrinks, Physio, Schuhe, Ausrüstung, Ernährung und Bälle": [
+"lang-de.js"
+],
+"Hobbys, Spaß, Stil und Luxus": [
+"lang-de.js"
+],
+"Mathe": [
+"lang-de.js"
+],
+"Geometrie": [
+"lang-de.js"
+],
+"Logik": [
+"lang-de.js"
+],
+"Erdkunde": [
+"lang-de.js"
+],
+"Sachkunde": [
+"lang-de.js"
+],
+"Deine Schulzeit ist vorbei.": [
+"lang-de.js"
+],
+"Intelligenz steigert den Trainingseffekt. Unterrichtsthemen kommen in der Prüfung dran.": [
+"lang-de.js"
+],
+"Prüfungen": [
+"lang-de.js"
+],
+"Am Saisonende": [
+"lang-de.js"
+],
+"Unterricht dieses Jahr": [
+"lang-de.js"
+],
+"Du warst im Unterricht": [
+"lang-de.js"
+],
+"Du hast Training gewählt": [
+"lang-de.js"
+],
+"Dieses Jahr noch kein Unterricht.": [
+"lang-de.js"
+],
+"Unterrichtswoche": [
+"lang-de.js"
+],
+"In dieser Woche wählst du Schule oder Training": [
+"lang-de.js"
+],
+"Zeugnisse": [
+"lang-de.js"
+],
+"Das Luxus-Schaufenster gibt es nur mit Premium und Premium+.": [
+"lang-de.js"
+],
+"Diamond-Jubel und Karriereposter gibt es nur mit Diamond.": [
+"lang-de.js"
+],
+"Premium ansehen": [
+"lang-de.js"
+],
+"Diamond ansehen": [
+"lang-de.js"
+],
+"Private Sammlung": [
+"lang-de.js"
+],
+"Nur für Stars": [
+"lang-de.js"
+],
+"Deine Vorteile": [
+"lang-de.js"
+],
+"Karriereposter erstellen": [
+"lang-de.js"
+],
+"Die Führerscheinprüfung kannst du jederzeit in der App „Mein Leben\\\" machen.": [
+"lang-de.js"
+],
+"👶 Du hast einen Sohn! Gib ihm in der App „Mein Leben\\\" einen Namen.": [
+"lang-de.js"
+],
+"👶 Du hast eine Tochter! Gib ihr in der App „Mein Leben\\\" einen Namen.": [
+"lang-de.js"
+],
+"Nicht in deiner Tasche. Im Sportladen auf deinem Handy kannst du nachkaufen.": [
+"lang-de.js"
+],
+"Eine Physio-Sitzung verkürzt Verletzungen um 2 Wochen. Kauf sie im Sportladen auf deinem Handy und nutze sie im Wochenplan aus deiner Tasche.": [
 "lang-de.js"
 ],
 "– wir haben uns qualifiziert!": [
@@ -207373,6 +208369,81 @@
 "HÖCHSTGESCHW.": [
 "lang-de.js"
 ],
+"MEIN LEBEN": [
+"lang-de.js"
+],
+"SPORTLADEN": [
+"lang-de.js"
+],
+"LUXUS": [
+"lang-de.js"
+],
+"MACH DICH SPIELBEREIT": [
+"lang-de.js"
+],
+"HOBBYS, SPASS, STIL UND LUXUS": [
+"lang-de.js"
+],
+"MATHE": [
+"lang-de.js"
+],
+"GEOMETRIE": [
+"lang-de.js"
+],
+"LOGIK": [
+"lang-de.js"
+],
+"ERDKUNDE": [
+"lang-de.js"
+],
+"SACHKUNDE": [
+"lang-de.js"
+],
+"DEINE SCHULZEIT IST VORBEI.": [
+"lang-de.js"
+],
+"PRÜFUNGEN": [
+"lang-de.js"
+],
+"AM SAISONENDE": [
+"lang-de.js"
+],
+"UNTERRICHT DIESES JAHR": [
+"lang-de.js"
+],
+"DU WARST IM UNTERRICHT": [
+"lang-de.js"
+],
+"DU HAST TRAINING GEWÄHLT": [
+"lang-de.js"
+],
+"DIESES JAHR NOCH KEIN UNTERRICHT.": [
+"lang-de.js"
+],
+"UNTERRICHTSWOCHE": [
+"lang-de.js"
+],
+"ZEUGNISSE": [
+"lang-de.js"
+],
+"PREMIUM ANSEHEN": [
+"lang-de.js"
+],
+"DIAMOND ANSEHEN": [
+"lang-de.js"
+],
+"PRIVATE SAMMLUNG": [
+"lang-de.js"
+],
+"NUR FÜR STARS": [
+"lang-de.js"
+],
+"DEINE VORTEILE": [
+"lang-de.js"
+],
+"KARRIEREPOSTER ERSTELLEN": [
+"lang-de.js"
+],
 "– WIR HABEN UNS QUALIFIZIERT!": [
 "lang-de.js"
 ],
@@ -211279,6 +212350,9 @@
 "Dein Spieler deckt {}: ihr Angriff wird schwächer, unserer etwas auch.": [
 "lang-de.js"
 ],
+"{0} ({1}) will dich sponsern! Sieh es dir in der Berater-App auf deinem Handy an.": [
+"lang-de.js"
+],
 "Eine Drohne, die das Training von {} filmte, wurde vom Torwart weggefaustet. Torwart: „Reflex.“": [
 "lang-de.js"
 ],
@@ -211328,6 +212402,9 @@
 "lang-de.js"
 ],
 "{} hat die Scheidung eingereicht. Eure Ehe ist vorbei; die Scheidung kostete dich {} deines Vermögens.": [
+"lang-de.js"
+],
+"{0} ist abgenutzt und nicht mehr tragbar. Hol dir neue im Sportladen auf deinem Handy.": [
 "lang-de.js"
 ],
 "Seit {} {} {} Follower hat, sagt der Friseur um die Ecke: „Das ist mein Kunde.“": [
@@ -224875,6 +225952,114 @@
 "Power": [
 "lang-en.js"
 ],
+"My Life": [
+"lang-en.js"
+],
+"Sports Store": [
+"lang-en.js"
+],
+"Luxury": [
+"lang-en.js"
+],
+"Get match-ready": [
+"lang-en.js"
+],
+"Energy drinks, physio, boots, gear, nutrition and balls": [
+"lang-en.js"
+],
+"Hobbies, fun, style and luxury goods": [
+"lang-en.js"
+],
+"Math": [
+"lang-en.js"
+],
+"Geometry": [
+"lang-en.js"
+],
+"Logic": [
+"lang-en.js"
+],
+"Geography": [
+"lang-en.js"
+],
+"Life Skills": [
+"lang-en.js"
+],
+"Your school years are over.": [
+"lang-en.js"
+],
+"Intelligence boosts training. Topics covered in class come up in the term exam.": [
+"lang-en.js"
+],
+"Exams": [
+"lang-en.js"
+],
+"Completed": [
+"lang-en.js"
+],
+"At season's end": [
+"lang-en.js"
+],
+"This year's lessons": [
+"lang-en.js"
+],
+"You attended class": [
+"lang-en.js"
+],
+"You chose training": [
+"lang-en.js"
+],
+"No lessons yet this year.": [
+"lang-en.js"
+],
+"Lesson week": [
+"lang-en.js"
+],
+"That week you'll choose school or training": [
+"lang-en.js"
+],
+"Report cards": [
+"lang-en.js"
+],
+"The luxury showcase is for Premium and Premium+ owners.": [
+"lang-en.js"
+],
+"Diamond celebrations and the career poster are for Diamond owners.": [
+"lang-en.js"
+],
+"See Premium": [
+"lang-en.js"
+],
+"See Diamond": [
+"lang-en.js"
+],
+"Private collection": [
+"lang-en.js"
+],
+"For stars only": [
+"lang-en.js"
+],
+"Your perks": [
+"lang-en.js"
+],
+"Create career poster": [
+"lang-en.js"
+],
+"You can take the driving test anytime from the My Life app on your phone.": [
+"lang-en.js"
+],
+"👶 You had a baby boy! Name him in the My Life app on your phone.": [
+"lang-en.js"
+],
+"👶 You had a baby girl! Name her in the My Life app on your phone.": [
+"lang-en.js"
+],
+"Not in your bag. You can stock up in the Sports Store app on your phone.": [
+"lang-en.js"
+],
+"A physio session cuts injuries by 2 weeks. Buy some in the Sports Store on your phone and use them from your bag in the Weekly Plan.": [
+"lang-en.js"
+],
 "— we qualified!": [
 "lang-en.js"
 ],
@@ -236339,6 +237524,84 @@
 "TOP SPEED": [
 "lang-en.js"
 ],
+"MY LIFE": [
+"lang-en.js"
+],
+"SPORTS STORE": [
+"lang-en.js"
+],
+"LUXURY": [
+"lang-en.js"
+],
+"GET MATCH-READY": [
+"lang-en.js"
+],
+"HOBBIES, FUN, STYLE AND LUXURY GOODS": [
+"lang-en.js"
+],
+"MATH": [
+"lang-en.js"
+],
+"GEOMETRY": [
+"lang-en.js"
+],
+"LOGIC": [
+"lang-en.js"
+],
+"GEOGRAPHY": [
+"lang-en.js"
+],
+"LIFE SKILLS": [
+"lang-en.js"
+],
+"YOUR SCHOOL YEARS ARE OVER.": [
+"lang-en.js"
+],
+"EXAMS": [
+"lang-en.js"
+],
+"COMPLETED": [
+"lang-en.js"
+],
+"AT SEASON'S END": [
+"lang-en.js"
+],
+"THIS YEAR'S LESSONS": [
+"lang-en.js"
+],
+"YOU ATTENDED CLASS": [
+"lang-en.js"
+],
+"YOU CHOSE TRAINING": [
+"lang-en.js"
+],
+"NO LESSONS YET THIS YEAR.": [
+"lang-en.js"
+],
+"LESSON WEEK": [
+"lang-en.js"
+],
+"REPORT CARDS": [
+"lang-en.js"
+],
+"SEE PREMIUM": [
+"lang-en.js"
+],
+"SEE DIAMOND": [
+"lang-en.js"
+],
+"PRIVATE COLLECTION": [
+"lang-en.js"
+],
+"FOR STARS ONLY": [
+"lang-en.js"
+],
+"YOUR PERKS": [
+"lang-en.js"
+],
+"CREATE CAREER POSTER": [
+"lang-en.js"
+],
 "— WE QUALIFIED!": [
 "lang-en.js"
 ],
@@ -240191,6 +241454,9 @@
 "Your chosen player shadows {}: their attack weakens, but we lose a little going forward.": [
 "lang-en.js"
 ],
+"{0} ({1}) wants to sponsor you! Check it in the Agent app on your phone.": [
+"lang-en.js"
+],
 "A drone filming {} training was punched away by the keeper. Keeper: \\\"Reflex.\\\"": [
 "lang-en.js"
 ],
@@ -240240,6 +241506,9 @@
 "lang-en.js"
 ],
 "{} filed for divorce. Your marriage is over; the divorce cost you {} of your fortune.": [
+"lang-en.js"
+],
+"{0} is worn out and can't be used anymore. Get a new pair in the Sports Store on your phone.": [
 "lang-en.js"
 ],
 "With {} {} reaching {} followers, the local barber says \\\"he's my customer\\\".": [
@@ -253879,6 +255148,117 @@
 "Potencia": [
 "lang-es.js"
 ],
+"Mi vida": [
+"lang-es.js"
+],
+"Tienda deportiva": [
+"lang-es.js"
+],
+"Lujo": [
+"lang-es.js"
+],
+"Prepárate para el partido": [
+"lang-es.js"
+],
+"Bebidas energéticas, fisio, botas, equipo, nutrición y balones": [
+"lang-es.js"
+],
+"Aficiones, ocio, estilo y lujo": [
+"lang-es.js"
+],
+"Matemáticas": [
+"lang-es.js"
+],
+"Geometría": [
+"lang-es.js"
+],
+"Lógica": [
+"lang-es.js",
+"lang-pt.js"
+],
+"Geografía": [
+"lang-es.js"
+],
+"Conocimiento del medio": [
+"lang-es.js"
+],
+"Tus años de colegio han terminado.": [
+"lang-es.js"
+],
+"La inteligencia mejora el entrenamiento. Lo visto en clase entra en el examen.": [
+"lang-es.js"
+],
+"Exámenes": [
+"lang-es.js"
+],
+"Completado": [
+"lang-es.js"
+],
+"Al final de la temporada": [
+"lang-es.js"
+],
+"Clases de este año": [
+"lang-es.js"
+],
+"Fuiste a clase": [
+"lang-es.js"
+],
+"Elegiste entrenar": [
+"lang-es.js"
+],
+"Aún no ha habido clases este año.": [
+"lang-es.js"
+],
+"Semana de clase": [
+"lang-es.js"
+],
+"Esa semana elegirás clase o entrenamiento": [
+"lang-es.js"
+],
+"Boletines": [
+"lang-es.js"
+],
+"El escaparate de lujo es exclusivo de Premium y Premium+.": [
+"lang-es.js"
+],
+"Las celebraciones Diamond y el póster de carrera son exclusivos de Diamond.": [
+"lang-es.js"
+],
+"Ver Premium": [
+"lang-es.js",
+"lang-pt.js"
+],
+"Ver Diamond": [
+"lang-es.js",
+"lang-pt.js"
+],
+"Colección privada": [
+"lang-es.js"
+],
+"Solo para estrellas": [
+"lang-es.js"
+],
+"Tus ventajas": [
+"lang-es.js"
+],
+"Crear póster de carrera": [
+"lang-es.js"
+],
+"Puedes hacer el examen de conducir cuando quieras desde la app Mi vida.": [
+"lang-es.js"
+],
+"👶 ¡Has tenido un niño! Ponle nombre en la app Mi vida.": [
+"lang-es.js"
+],
+"👶 ¡Has tenido una niña! Ponle nombre en la app Mi vida.": [
+"lang-es.js"
+],
+"No está en tu bolsa. Puedes comprar en la Tienda deportiva de tu teléfono.": [
+"lang-es.js"
+],
+"Una sesión de fisio acorta la lesión 2 semanas. Cómprala en la Tienda deportiva de tu teléfono y úsala desde tu bolsa en el Plan semanal.": [
+"lang-es.js"
+],
 "— ¡nos hemos clasificado!": [
 "lang-es.js"
 ],
@@ -265436,6 +266816,87 @@
 "POTENCIA": [
 "lang-es.js"
 ],
+"MI VIDA": [
+"lang-es.js"
+],
+"TIENDA DEPORTIVA": [
+"lang-es.js"
+],
+"LUJO": [
+"lang-es.js"
+],
+"PREPÁRATE PARA EL PARTIDO": [
+"lang-es.js"
+],
+"AFICIONES, OCIO, ESTILO Y LUJO": [
+"lang-es.js"
+],
+"MATEMÁTICAS": [
+"lang-es.js"
+],
+"GEOMETRÍA": [
+"lang-es.js"
+],
+"LÓGICA": [
+"lang-es.js",
+"lang-pt.js"
+],
+"GEOGRAFÍA": [
+"lang-es.js"
+],
+"CONOCIMIENTO DEL MEDIO": [
+"lang-es.js"
+],
+"TUS AÑOS DE COLEGIO HAN TERMINADO.": [
+"lang-es.js"
+],
+"EXÁMENES": [
+"lang-es.js"
+],
+"COMPLETADO": [
+"lang-es.js"
+],
+"AL FINAL DE LA TEMPORADA": [
+"lang-es.js"
+],
+"CLASES DE ESTE AÑO": [
+"lang-es.js"
+],
+"FUISTE A CLASE": [
+"lang-es.js"
+],
+"ELEGISTE ENTRENAR": [
+"lang-es.js"
+],
+"AÚN NO HA HABIDO CLASES ESTE AÑO.": [
+"lang-es.js"
+],
+"SEMANA DE CLASE": [
+"lang-es.js"
+],
+"BOLETINES": [
+"lang-es.js"
+],
+"VER PREMIUM": [
+"lang-es.js",
+"lang-pt.js"
+],
+"VER DIAMOND": [
+"lang-es.js",
+"lang-pt.js"
+],
+"COLECCIÓN PRIVADA": [
+"lang-es.js"
+],
+"SOLO PARA ESTRELLAS": [
+"lang-es.js"
+],
+"TUS VENTAJAS": [
+"lang-es.js"
+],
+"CREAR PÓSTER DE CARRERA": [
+"lang-es.js"
+],
 "— ¡NOS HEMOS CLASIFICADO!": [
 "lang-es.js"
 ],
@@ -269295,6 +270756,9 @@
 "Tu jugador sigue a {}: su ataque se debilita, pero aportamos algo menos arriba.": [
 "lang-es.js"
 ],
+"¡{0} ({1}) quiere patrocinarte! Míralo en la app del agente de tu teléfono.": [
+"lang-es.js"
+],
 "El portero despejó de un puñetazo un dron que grababa el entrenamiento del {}. El portero: \\\"Reflejos\\\".": [
 "lang-es.js"
 ],
@@ -269344,6 +270808,9 @@
 "lang-es.js"
 ],
 "{} pidió el divorcio. Tu matrimonio terminó; el divorcio te costó {} de tu fortuna.": [
+"lang-es.js"
+],
+"{0} están gastadas y ya no sirven. Compra unas nuevas en la Tienda deportiva de tu teléfono.": [
 "lang-es.js"
 ],
 "Con {} {} llegando a {} seguidores, el barbero del barrio dice \\\"es cliente mío\\\".": [
@@ -282726,6 +284193,111 @@
 "Puissance": [
 "lang-fr.js"
 ],
+"Ma vie": [
+"lang-fr.js"
+],
+"Magasin de sport": [
+"lang-fr.js"
+],
+"Luxe": [
+"lang-fr.js"
+],
+"Prépare-toi pour le match": [
+"lang-fr.js"
+],
+"Boissons énergisantes, kiné, crampons, équipement, nutrition et ballons": [
+"lang-fr.js"
+],
+"Loisirs, divertissement, style et luxe": [
+"lang-fr.js"
+],
+"Maths": [
+"lang-fr.js"
+],
+"Géométrie": [
+"lang-fr.js"
+],
+"Logique": [
+"lang-fr.js"
+],
+"Géographie": [
+"lang-fr.js"
+],
+"Vie pratique": [
+"lang-fr.js"
+],
+"Tes années d'école sont terminées.": [
+"lang-fr.js"
+],
+"L'intelligence améliore l'entraînement. Les sujets vus en classe tombent à l'examen.": [
+"lang-fr.js"
+],
+"Examens": [
+"lang-fr.js"
+],
+"En fin de saison": [
+"lang-fr.js"
+],
+"Cours de cette année": [
+"lang-fr.js"
+],
+"Tu étais en cours": [
+"lang-fr.js"
+],
+"Tu as choisi l'entraînement": [
+"lang-fr.js"
+],
+"Pas encore de cours cette année.": [
+"lang-fr.js"
+],
+"Semaine de cours": [
+"lang-fr.js"
+],
+"Cette semaine-là, tu choisiras l'école ou l'entraînement": [
+"lang-fr.js"
+],
+"Bulletins": [
+"lang-fr.js"
+],
+"La vitrine de luxe est réservée aux membres Premium et Premium+.": [
+"lang-fr.js"
+],
+"Les célébrations Diamond et le poster de carrière sont réservés aux membres Diamond.": [
+"lang-fr.js"
+],
+"Voir Premium": [
+"lang-fr.js"
+],
+"Voir Diamond": [
+"lang-fr.js"
+],
+"Collection privée": [
+"lang-fr.js"
+],
+"Réservé aux stars": [
+"lang-fr.js"
+],
+"Tes avantages": [
+"lang-fr.js"
+],
+"Créer le poster de carrière": [
+"lang-fr.js"
+],
+"Tu peux passer le permis quand tu veux depuis l'appli Ma vie.": [
+"lang-fr.js"
+],
+"👶 Tu as eu un petit garçon ! Donne-lui un prénom dans l'appli Ma vie.": [
+"lang-fr.js"
+],
+"👶 Tu as eu une petite fille ! Donne-lui un prénom dans l'appli Ma vie.": [
+"lang-fr.js"
+],
+"Pas dans ton sac. Tu peux en acheter au Magasin de sport sur ton téléphone.": [
+"lang-fr.js"
+],
+"Une séance de kiné réduit la blessure de 2 semaines. Achète-en au Magasin de sport sur ton téléphone et utilise-les depuis ton sac dans le Plan de la semaine.": [
+"lang-fr.js"
+],
 "— on est qualifiés !": [
 "lang-fr.js"
 ],
@@ -293870,6 +295442,81 @@
 "PUISSANCE": [
 "lang-fr.js"
 ],
+"MA VIE": [
+"lang-fr.js"
+],
+"MAGASIN DE SPORT": [
+"lang-fr.js"
+],
+"LUXE": [
+"lang-fr.js"
+],
+"PRÉPARE-TOI POUR LE MATCH": [
+"lang-fr.js"
+],
+"LOISIRS, DIVERTISSEMENT, STYLE ET LUXE": [
+"lang-fr.js"
+],
+"MATHS": [
+"lang-fr.js"
+],
+"GÉOMÉTRIE": [
+"lang-fr.js"
+],
+"LOGIQUE": [
+"lang-fr.js"
+],
+"GÉOGRAPHIE": [
+"lang-fr.js"
+],
+"VIE PRATIQUE": [
+"lang-fr.js"
+],
+"TES ANNÉES D'ÉCOLE SONT TERMINÉES.": [
+"lang-fr.js"
+],
+"EXAMENS": [
+"lang-fr.js"
+],
+"EN FIN DE SAISON": [
+"lang-fr.js"
+],
+"COURS DE CETTE ANNÉE": [
+"lang-fr.js"
+],
+"TU ÉTAIS EN COURS": [
+"lang-fr.js"
+],
+"TU AS CHOISI L'ENTRAÎNEMENT": [
+"lang-fr.js"
+],
+"PAS ENCORE DE COURS CETTE ANNÉE.": [
+"lang-fr.js"
+],
+"SEMAINE DE COURS": [
+"lang-fr.js"
+],
+"BULLETINS": [
+"lang-fr.js"
+],
+"VOIR PREMIUM": [
+"lang-fr.js"
+],
+"VOIR DIAMOND": [
+"lang-fr.js"
+],
+"COLLECTION PRIVÉE": [
+"lang-fr.js"
+],
+"RÉSERVÉ AUX STARS": [
+"lang-fr.js"
+],
+"TES AVANTAGES": [
+"lang-fr.js"
+],
+"CRÉER LE POSTER DE CARRIÈRE": [
+"lang-fr.js"
+],
 "— ON EST QUALIFIÉS !": [
 "lang-fr.js"
 ],
@@ -297595,6 +299242,9 @@
 "Ton joueur suit {} : leur attaque s'affaiblit, la nôtre un peu aussi.": [
 "lang-fr.js"
 ],
+"{0} ({1}) veut te sponsoriser ! Regarde dans l'appli Agent de ton téléphone.": [
+"lang-fr.js"
+],
 "Un drone qui filmait l'entraînement de {} a été repoussé du poing par le gardien. Gardien : « Réflexe. »": [
 "lang-fr.js"
 ],
@@ -297644,6 +299294,9 @@
 "lang-fr.js"
 ],
 "{} a demandé le divorce. Votre mariage est terminé ; le divorce t'a coûté {} de ta fortune.": [
+"lang-fr.js"
+],
+"{0} sont usés et inutilisables. Achète-en de nouveaux au Magasin de sport sur ton téléphone.": [
 "lang-fr.js"
 ],
 "Avec {} {} qui atteint {} abonnés, le coiffeur du quartier dit « c'est mon client ».": [
@@ -310710,6 +312363,102 @@
 "Tenaga": [
 "lang-id.js"
 ],
+"Hidupku": [
+"lang-id.js"
+],
+"Toko Olahraga": [
+"lang-id.js"
+],
+"Mewah": [
+"lang-id.js"
+],
+"Siap bertanding": [
+"lang-id.js"
+],
+"Minuman energi, fisioterapi, sepatu, perlengkapan, nutrisi, dan bola": [
+"lang-id.js"
+],
+"Hobi, hiburan, gaya, dan barang mewah": [
+"lang-id.js"
+],
+"Matematika": [
+"lang-id.js"
+],
+"Logika": [
+"lang-id.js"
+],
+"Geografi": [
+"lang-id.js"
+],
+"Pengetahuan Umum": [
+"lang-id.js"
+],
+"Masa sekolahmu sudah selesai.": [
+"lang-id.js"
+],
+"Kecerdasan meningkatkan latihan. Materi di kelas keluar di ujian.": [
+"lang-id.js"
+],
+"Di akhir musim": [
+"lang-id.js"
+],
+"Pelajaran tahun ini": [
+"lang-id.js"
+],
+"Kamu ikut kelas": [
+"lang-id.js"
+],
+"Kamu memilih latihan": [
+"lang-id.js"
+],
+"Belum ada pelajaran tahun ini.": [
+"lang-id.js"
+],
+"Pekan pelajaran": [
+"lang-id.js"
+],
+"Pekan itu kamu memilih sekolah atau latihan": [
+"lang-id.js"
+],
+"Etalase mewah khusus pemilik Premium dan Premium+.": [
+"lang-id.js"
+],
+"Selebrasi Diamond dan poster karier khusus pemilik Diamond.": [
+"lang-id.js"
+],
+"Lihat Premium": [
+"lang-id.js"
+],
+"Lihat Diamond": [
+"lang-id.js"
+],
+"Koleksi pribadi": [
+"lang-id.js"
+],
+"Khusus bintang": [
+"lang-id.js"
+],
+"Keistimewaanmu": [
+"lang-id.js"
+],
+"Buat poster karier": [
+"lang-id.js"
+],
+"Kamu bisa ikut ujian SIM kapan saja dari aplikasi Hidupku di ponsel.": [
+"lang-id.js"
+],
+"👶 Kamu punya anak laki-laki! Beri dia nama di aplikasi Hidupku.": [
+"lang-id.js"
+],
+"👶 Kamu punya anak perempuan! Beri dia nama di aplikasi Hidupku.": [
+"lang-id.js"
+],
+"Tidak ada di tasmu. Beli di Toko Olahraga di ponselmu.": [
+"lang-id.js"
+],
+"Sesi fisioterapi memperpendek cedera 2 minggu. Beli di Toko Olahraga di ponselmu dan pakai dari tas di Rencana Mingguan.": [
+"lang-id.js"
+],
 "— kita lolos!": [
 "lang-id.js"
 ],
@@ -321643,6 +323392,75 @@
 "TENAGA": [
 "lang-id.js"
 ],
+"HIDUPKU": [
+"lang-id.js"
+],
+"TOKO OLAHRAGA": [
+"lang-id.js"
+],
+"MEWAH": [
+"lang-id.js"
+],
+"SIAP BERTANDING": [
+"lang-id.js"
+],
+"HOBI, HIBURAN, GAYA, DAN BARANG MEWAH": [
+"lang-id.js"
+],
+"MATEMATIKA": [
+"lang-id.js"
+],
+"GEOMETRI": [
+"lang-id.js"
+],
+"LOGIKA": [
+"lang-id.js"
+],
+"GEOGRAFI": [
+"lang-id.js"
+],
+"PENGETAHUAN UMUM": [
+"lang-id.js"
+],
+"MASA SEKOLAHMU SUDAH SELESAI.": [
+"lang-id.js"
+],
+"DI AKHIR MUSIM": [
+"lang-id.js"
+],
+"PELAJARAN TAHUN INI": [
+"lang-id.js"
+],
+"KAMU IKUT KELAS": [
+"lang-id.js"
+],
+"KAMU MEMILIH LATIHAN": [
+"lang-id.js"
+],
+"BELUM ADA PELAJARAN TAHUN INI.": [
+"lang-id.js"
+],
+"PEKAN PELAJARAN": [
+"lang-id.js"
+],
+"LIHAT PREMIUM": [
+"lang-id.js"
+],
+"LIHAT DIAMOND": [
+"lang-id.js"
+],
+"KOLEKSI PRIBADI": [
+"lang-id.js"
+],
+"KHUSUS BINTANG": [
+"lang-id.js"
+],
+"KEISTIMEWAANMU": [
+"lang-id.js"
+],
+"BUAT POSTER KARIER": [
+"lang-id.js"
+],
 "— KITA LOLOS!": [
 "lang-id.js"
 ],
@@ -325349,6 +327167,9 @@
 "Pemain pilihanmu mengawal {}: serangan lawan melemah, serangan kita sedikit berkurang.": [
 "lang-id.js"
 ],
+"{0} ({1}) ingin mensponsorimu! Lihat di aplikasi Agen di ponselmu.": [
+"lang-id.js"
+],
 "Drone yang merekam latihan {} ditinju jauh oleh kiper. Kiper: \\\"Refleks.\\\"": [
 "lang-id.js"
 ],
@@ -325398,6 +327219,9 @@
 "lang-id.js"
 ],
 "{} mengajukan cerai. Pernikahan kalian berakhir; perceraian menghabiskan {} dari kekayaanmu.": [
+"lang-id.js"
+],
+"{0} sudah usang dan tak bisa dipakai lagi. Beli yang baru di Toko Olahraga di ponselmu.": [
 "lang-id.js"
 ],
 "Setelah {} {} mencapai {} pengikut, tukang cukur setempat bilang \\\"dia pelangganku\\\".": [
@@ -338473,6 +340297,113 @@
 "Potenza": [
 "lang-it.js"
 ],
+"La mia vita": [
+"lang-it.js"
+],
+"Negozio sportivo": [
+"lang-it.js"
+],
+"Lusso": [
+"lang-it.js"
+],
+"Preparati alla partita": [
+"lang-it.js"
+],
+"Energy drink, fisioterapia, scarpe, attrezzatura, alimentazione e palloni": [
+"lang-it.js"
+],
+"Hobby, svago, stile e lusso": [
+"lang-it.js"
+],
+"Matematica": [
+"lang-it.js"
+],
+"Geometria": [
+"lang-it.js",
+"lang-pt.js"
+],
+"Logica": [
+"lang-it.js"
+],
+"Geografia": [
+"lang-it.js",
+"lang-pt.js"
+],
+"Educazione civica": [
+"lang-it.js"
+],
+"I tuoi anni di scuola sono finiti.": [
+"lang-it.js"
+],
+"L'intelligenza migliora l'allenamento. Gli argomenti fatti in classe escono all'esame.": [
+"lang-it.js"
+],
+"Esami": [
+"lang-it.js"
+],
+"Completato": [
+"lang-it.js"
+],
+"A fine stagione": [
+"lang-it.js"
+],
+"Lezioni di quest'anno": [
+"lang-it.js"
+],
+"Sei andato a lezione": [
+"lang-it.js"
+],
+"Hai scelto l'allenamento": [
+"lang-it.js"
+],
+"Nessuna lezione ancora quest'anno.": [
+"lang-it.js"
+],
+"Settimana di lezione": [
+"lang-it.js"
+],
+"Quella settimana sceglierai scuola o allenamento": [
+"lang-it.js"
+],
+"La vetrina del lusso è riservata a Premium e Premium+.": [
+"lang-it.js"
+],
+"Esultanze Diamond e poster della carriera sono riservati a Diamond.": [
+"lang-it.js"
+],
+"Scopri Premium": [
+"lang-it.js"
+],
+"Scopri Diamond": [
+"lang-it.js"
+],
+"Collezione privata": [
+"lang-it.js"
+],
+"Solo per le stelle": [
+"lang-it.js"
+],
+"I tuoi vantaggi": [
+"lang-it.js"
+],
+"Crea il poster della carriera": [
+"lang-it.js"
+],
+"Puoi fare l'esame di guida quando vuoi dall'app La mia vita.": [
+"lang-it.js"
+],
+"👶 È nato un maschietto! Dagli un nome nell'app La mia vita.": [
+"lang-it.js"
+],
+"👶 È nata una femminuccia! Dalle un nome nell'app La mia vita.": [
+"lang-it.js"
+],
+"Non è nella borsa. Puoi rifornirti nel Negozio sportivo sul telefono.": [
+"lang-it.js"
+],
+"Una seduta di fisioterapia accorcia l'infortunio di 2 settimane. Comprala nel Negozio sportivo sul telefono e usala dalla borsa nel Piano settimanale.": [
+"lang-it.js"
+],
 "— ci siamo qualificati!": [
 "lang-it.js"
 ],
@@ -349407,6 +351338,83 @@
 "POTENZA": [
 "lang-it.js"
 ],
+"LA MIA VITA": [
+"lang-it.js"
+],
+"NEGOZIO SPORTIVO": [
+"lang-it.js"
+],
+"LUSSO": [
+"lang-it.js"
+],
+"PREPARATI ALLA PARTITA": [
+"lang-it.js"
+],
+"HOBBY, SVAGO, STILE E LUSSO": [
+"lang-it.js"
+],
+"MATEMATICA": [
+"lang-it.js"
+],
+"GEOMETRIA": [
+"lang-it.js",
+"lang-pt.js"
+],
+"LOGICA": [
+"lang-it.js"
+],
+"GEOGRAFIA": [
+"lang-it.js",
+"lang-pt.js"
+],
+"EDUCAZIONE CIVICA": [
+"lang-it.js"
+],
+"I TUOI ANNI DI SCUOLA SONO FINITI.": [
+"lang-it.js"
+],
+"ESAMI": [
+"lang-it.js"
+],
+"COMPLETATO": [
+"lang-it.js"
+],
+"A FINE STAGIONE": [
+"lang-it.js"
+],
+"LEZIONI DI QUEST'ANNO": [
+"lang-it.js"
+],
+"SEI ANDATO A LEZIONE": [
+"lang-it.js"
+],
+"HAI SCELTO L'ALLENAMENTO": [
+"lang-it.js"
+],
+"NESSUNA LEZIONE ANCORA QUEST'ANNO.": [
+"lang-it.js"
+],
+"SETTIMANA DI LEZIONE": [
+"lang-it.js"
+],
+"SCOPRI PREMIUM": [
+"lang-it.js"
+],
+"SCOPRI DIAMOND": [
+"lang-it.js"
+],
+"COLLEZIONE PRIVATA": [
+"lang-it.js"
+],
+"SOLO PER LE STELLE": [
+"lang-it.js"
+],
+"I TUOI VANTAGGI": [
+"lang-it.js"
+],
+"CREA IL POSTER DELLA CARRIERA": [
+"lang-it.js"
+],
 "— CI SIAMO QUALIFICATI!": [
 "lang-it.js"
 ],
@@ -353109,6 +355117,9 @@
 "Il tuo giocatore segue {}: il loro attacco cala, il nostro un po' anche.": [
 "lang-it.js"
 ],
+"{0} ({1}) vuole sponsorizzarti! Guarda nell'app del procuratore sul telefono.": [
+"lang-it.js"
+],
 "Un drone che filmava l'allenamento del {} è stato respinto di pugno dal portiere. Portiere: \\\"Riflesso.\\\"": [
 "lang-it.js"
 ],
@@ -353158,6 +355169,9 @@
 "lang-it.js"
 ],
 "{} ha chiesto il divorzio. Il vostro matrimonio è finito; il divorzio ti è costato {} del tuo patrimonio.": [
+"lang-it.js"
+],
+"{0} si sono consumate e non sono più utilizzabili. Comprane di nuove nel Negozio sportivo sul telefono.": [
 "lang-it.js"
 ],
 "Con {} {} arrivato a {} follower, il barbiere di quartiere dice \\\"è un mio cliente\\\".": [
@@ -357588,6 +359602,18 @@
 "2LDK · 95 m² · 都心": [
 "lang-ja.js"
 ],
+"ラグジュアリーはPremiumとPremium+限定です。": [
+"lang-ja.js"
+],
+"Diamondセレブレーションとキャリアポスターは Diamond限定です。": [
+"lang-ja.js"
+],
+"Premiumを見る": [
+"lang-ja.js"
+],
+"Diamondを見る": [
+"lang-ja.js"
+],
 "（PK戦）": [
 "lang-ja.js"
 ],
@@ -357829,6 +359855,12 @@
 "lang-ja.js"
 ],
 "2LDK · 95 M² · 都心": [
+"lang-ja.js"
+],
+"PREMIUMを見る": [
+"lang-ja.js"
+],
+"DIAMONDを見る": [
 "lang-ja.js"
 ],
 "STARFOOT ワールドサービス": [
@@ -367034,6 +369066,99 @@
 "lang-pt.js"
 ],
 "Potência": [
+"lang-pt.js"
+],
+"Minha vida": [
+"lang-pt.js"
+],
+"Loja de esportes": [
+"lang-pt.js"
+],
+"Luxo": [
+"lang-pt.js"
+],
+"Fique pronto para o jogo": [
+"lang-pt.js"
+],
+"Energéticos, fisioterapia, chuteiras, equipamento, nutrição e bolas": [
+"lang-pt.js"
+],
+"Hobbies, diversão, estilo e luxo": [
+"lang-pt.js"
+],
+"Matemática": [
+"lang-pt.js"
+],
+"Estudos gerais": [
+"lang-pt.js"
+],
+"Seus anos de escola terminaram.": [
+"lang-pt.js"
+],
+"A inteligência melhora o treino. O que é visto na aula cai na prova.": [
+"lang-pt.js"
+],
+"Provas": [
+"lang-pt.js"
+],
+"Concluído": [
+"lang-pt.js"
+],
+"No fim da temporada": [
+"lang-pt.js"
+],
+"Aulas deste ano": [
+"lang-pt.js"
+],
+"Você foi à aula": [
+"lang-pt.js"
+],
+"Você escolheu treinar": [
+"lang-pt.js"
+],
+"Ainda não houve aulas este ano.": [
+"lang-pt.js"
+],
+"Semana de aula": [
+"lang-pt.js"
+],
+"Nessa semana você vai escolher aula ou treino": [
+"lang-pt.js"
+],
+"Boletins": [
+"lang-pt.js"
+],
+"A vitrine de luxo é exclusiva para Premium e Premium+.": [
+"lang-pt.js"
+],
+"As comemorações Diamond e o pôster da carreira são exclusivos do Diamond.": [
+"lang-pt.js"
+],
+"Coleção particular": [
+"lang-pt.js"
+],
+"Só para estrelas": [
+"lang-pt.js"
+],
+"Suas vantagens": [
+"lang-pt.js"
+],
+"Criar pôster da carreira": [
+"lang-pt.js"
+],
+"Você pode fazer a prova de direção quando quiser pelo app Minha vida.": [
+"lang-pt.js"
+],
+"👶 Você teve um menino! Dê um nome a ele no app Minha vida.": [
+"lang-pt.js"
+],
+"👶 Você teve uma menina! Dê um nome a ela no app Minha vida.": [
+"lang-pt.js"
+],
+"Não está na bolsa. Compre na Loja de esportes do seu celular.": [
+"lang-pt.js"
+],
+"Uma sessão de fisioterapia encurta a lesão em 2 semanas. Compre na Loja de esportes do celular e use pela bolsa no Plano semanal.": [
 "lang-pt.js"
 ],
 "— nos classificamos!": [
@@ -377725,6 +379850,69 @@
 "POTÊNCIA": [
 "lang-pt.js"
 ],
+"MINHA VIDA": [
+"lang-pt.js"
+],
+"LOJA DE ESPORTES": [
+"lang-pt.js"
+],
+"LUXO": [
+"lang-pt.js"
+],
+"FIQUE PRONTO PARA O JOGO": [
+"lang-pt.js"
+],
+"HOBBIES, DIVERSÃO, ESTILO E LUXO": [
+"lang-pt.js"
+],
+"MATEMÁTICA": [
+"lang-pt.js"
+],
+"ESTUDOS GERAIS": [
+"lang-pt.js"
+],
+"SEUS ANOS DE ESCOLA TERMINARAM.": [
+"lang-pt.js"
+],
+"PROVAS": [
+"lang-pt.js"
+],
+"CONCLUÍDO": [
+"lang-pt.js"
+],
+"NO FIM DA TEMPORADA": [
+"lang-pt.js"
+],
+"AULAS DESTE ANO": [
+"lang-pt.js"
+],
+"VOCÊ FOI À AULA": [
+"lang-pt.js"
+],
+"VOCÊ ESCOLHEU TREINAR": [
+"lang-pt.js"
+],
+"AINDA NÃO HOUVE AULAS ESTE ANO.": [
+"lang-pt.js"
+],
+"SEMANA DE AULA": [
+"lang-pt.js"
+],
+"BOLETINS": [
+"lang-pt.js"
+],
+"COLEÇÃO PARTICULAR": [
+"lang-pt.js"
+],
+"SÓ PARA ESTRELAS": [
+"lang-pt.js"
+],
+"SUAS VANTAGENS": [
+"lang-pt.js"
+],
+"CRIAR PÔSTER DA CARREIRA": [
+"lang-pt.js"
+],
 "— NOS CLASSIFICAMOS!": [
 "lang-pt.js"
 ],
@@ -381325,6 +383513,9 @@
 "Seu jogador marca {}: o ataque deles enfraquece, mas o nosso perde um pouco.": [
 "lang-pt.js"
 ],
+"{0} ({1}) quer te patrocinar! Veja no app do empresário no seu celular.": [
+"lang-pt.js"
+],
 "Um drone que filmava o treino do {} foi socado pelo goleiro. O goleiro: \\\"Reflexo\\\".": [
 "lang-pt.js"
 ],
@@ -381374,6 +383565,9 @@
 "lang-pt.js"
 ],
 "{} pediu o divórcio. Seu casamento acabou; o divórcio custou {} da sua fortuna.": [
+"lang-pt.js"
+],
+"{0} gastou e não dá mais para usar. Compre uma nova na Loja de esportes do celular.": [
 "lang-pt.js"
 ],
 "Com {} {} chegando a {} seguidores, o barbeiro do bairro diz \\\"ele é meu cliente\\\".": [
@@ -386441,7 +388635,8 @@
 "meta.js"
 ],
 "{} · {} yaş": [
-"meta.js"
+"meta.js",
+"phone.js"
 ],
 "{}–{} yaş · {}": [
 "meta.js"
@@ -401187,6 +403382,9 @@
 "kW": [
 "phone.js"
 ],
+"linear-gradient(135deg,#ffe58a,#f5b70a)": [
+"phone.js"
+],
 "linear-gradient(135deg,#ffd76a,#e0a10e)": [
 "phone.js"
 ],
@@ -401196,6 +403394,9 @@
 "linear-gradient(135deg,#2a2a31,#0d0d10)": [
 "phone.js"
 ],
+"linear-gradient(135deg,#2bd46a,#0b7a3a)": [
+"phone.js"
+],
 "linear-gradient(135deg,#a855f7,#6d28d9)": [
 "phone.js"
 ],
@@ -401203,6 +403404,12 @@
 "phone.js"
 ],
 "linear-gradient(135deg,#ff7a45,#e0283e)": [
+"phone.js"
+],
+"linear-gradient(150deg,#2b2213,#0d0a05)": [
+"phone.js"
+],
+"linear-gradient(150deg,#123a6b,#061833)": [
 "phone.js"
 ],
 "StarFoot+": [
@@ -401229,11 +403436,20 @@
 "<section": [
 "phone.js"
 ],
+"Premium\\'u incele": [
+"phone.js"
+],
+"Diamond\\'u incele": [
+"phone.js"
+],
 "Premium": [
 "phone.js",
 "star.js"
 ],
 "{} MP": [
+"phone.js"
+],
+"ph-pill on {}": [
 "phone.js"
 ],
 "{} StarFeed": [
@@ -401461,7 +403677,7 @@
 "{} Lüks Yaşam Vitrini": [
 "star.js"
 ],
-"✨ {} artık senin! Gönderin beğeni topluyor.": [
+"✨ {} artık senin! Gönderin alkış topluyor.": [
 "star.js"
 ],
 "LZ1:": [

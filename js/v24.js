@@ -333,7 +333,7 @@
         const names = U.shuffle((sex === 'b' ? BOY : GIRL).filter((n) => !K.some((k) => k.n === n))).slice(0, 3);
         L.babyNew = { sex, by: y, names };
         p.rel.family = U.clamp(p.rel.family + 10, 0, 100); Player.addMorale(p, 15);
-        Game.news(sex === 'b' ? '👶 Bir oğlun oldu! Yaşam sekmesinden ona bir isim ver.' : '👶 Bir kızın oldu! Yaşam sekmesinden ona bir isim ver.', 'good');
+        Game.news(sex === 'b' ? '👶 Bir oğlun oldu! Telefonundaki Hayatım uygulamasından ona bir isim ver.' : '👶 Bir kızın oldu! Telefonundaki Hayatım uygulamasından ona bir isim ver.', 'good');
       }
       // yılda bir: çocuğun doğum günü
       K.forEach((k) => {

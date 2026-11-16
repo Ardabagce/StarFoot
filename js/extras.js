@@ -165,7 +165,7 @@ const Shop = {
   },
   useStock(id) {
     const p = Game.p, c = CONSUMABLES.find((x) => x.id === id);
-    if (Shop.stock(id) < 1) return Game.toast('Çantanda yok. Mağazadan stok alabilirsin.', 'bad');
+    if (Shop.stock(id) < 1) return Game.toast('Çantanda yok. Telefonundaki Spor Mağazası\'ndan stok alabilirsin.', 'bad');
     const msg = Shop.effect(id);
     if (msg == null) return;
     p.stock[id]--;

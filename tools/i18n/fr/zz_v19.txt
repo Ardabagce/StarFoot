@@ -1833,3 +1833,42 @@
 8739|{0} Ouvre ton profil sur ton téléphone
 8742|Vitesse max
 8743|Puissance
+8744|Ma vie
+8745|Magasin de sport
+8746|Luxe
+8747|Prépare-toi pour le match
+8748|Boissons énergisantes, kiné, crampons, équipement, nutrition et ballons
+8749|Loisirs, divertissement, style et luxe
+8750|Maths
+8751|Géométrie
+8752|Logique
+8753|Géographie
+8754|Vie pratique
+8755|Tes années d'école sont terminées.
+8756|L'intelligence améliore l'entraînement. Les sujets vus en classe tombent à l'examen.
+8758|Examens
+8759|Terminé
+8760|En fin de saison
+8761|Cours de cette année
+8762|Tu étais en cours
+8763|Tu as choisi l'entraînement
+8764|Pas encore de cours cette année.
+8765|Semaine de cours
+8766|Cette semaine-là, tu choisiras l'école ou l'entraînement
+8767|Bulletins
+8768|La vitrine de luxe est réservée aux membres Premium et Premium+.
+8769|Les célébrations Diamond et le poster de carrière sont réservés aux membres Diamond.
+8770|Voir Premium
+8771|Voir Diamond
+8772|Collection privée
+8773|Réservé aux stars
+8774|Tes avantages
+8775|Créer le poster de carrière
+8786|{0} ({1}) veut te sponsoriser ! Regarde dans l'appli Agent de ton téléphone.
+8776|Tu peux passer le permis quand tu veux depuis l'appli Ma vie.
+8777|👶 Tu as eu un petit garçon ! Donne-lui un prénom dans l'appli Ma vie.
+8780|👶 Tu as eu une petite fille ! Donne-lui un prénom dans l'appli Ma vie.
+8782|Pas dans ton sac. Tu peux en acheter au Magasin de sport sur ton téléphone.
+8784|Une séance de kiné réduit la blessure de 2 semaines. Achète-en au Magasin de sport sur ton téléphone et utilise-les depuis ton sac dans le Plan de la semaine.
+8787|{0} sont usés et inutilisables. Achète-en de nouveaux au Magasin de sport sur ton téléphone.
+8788|✨ {0} est à toi ! Ta publication reçoit des bravos.

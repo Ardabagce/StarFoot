@@ -65,6 +65,11 @@
     back: svg('<path d="M15 5l-7 7 7 7"/>', 'none', 'currentColor', 2.4),
     search: svg('<circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/>', 'none', 'currentColor', 2.2),
     lock: svg('<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/>', 'none', 'currentColor'),
+    life: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.4-9C1.2 8.2 3.3 4.6 7 4.6c2.1 0 3.6 1.2 5 3.1 1.4-1.9 2.9-3.1 5-3.1 3.7 0 5.8 3.6 4.4 6.9-1.9 4.4-9.4 9.1-9.4 9.1z" fill="#fff"/></svg>',
+    school: svg('<path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c2 1.6 4 2.4 6 2.4s4-.8 6-2.4v-5"/><path d="M22 9v6"/>', 'none', '#1d3a8a', 2),
+    sport: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="#fff"/><path d="M12 7.2l3.6 2.6-1.4 4.2H9.8L8.4 9.8z" fill="#0b5e2e"/><path d="M12 7.2V3.3M15.6 9.8l3.6-1.3M14.2 14l2.3 3.3M9.8 14l-2.3 3.3M8.4 9.8L4.8 8.5" stroke="#0b5e2e" stroke-width="1.4" stroke-linecap="round"/></svg>',
+    lux: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l4.5 3.5L12 4l4.5 7.5L21 8l-2 11H5z" fill="#ffcf3f"/><path d="M5 19h14" stroke="#ffe9a0" stroke-width="1.6"/></svg>',
+    dia: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12l4 5.5-10 12L2 9z" fill="#bff1ff"/><path d="M2 9h20M8.5 3.5L12 21l3.5-17.5M6 3.5L8.5 9 12 3.5 15.5 9 18 3.5" stroke="#3a8dff" stroke-width="1.1" fill="none" stroke-linejoin="round"/></svg>',
     tab: '<svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M10.5 18.5h3"/></svg>',
   };
   const calIcon = (d, wd) => `<svg viewBox="0 0 24 24" aria-hidden="true"><text x="12" y="8.2" text-anchor="middle" font-size="5" font-weight="700" font-family="Barlow Semi Condensed, sans-serif" fill="#e5383b">${wd}</text><text x="12" y="19.5" text-anchor="middle" font-size="11.5" font-weight="500" font-family="Barlow Semi Condensed, sans-serif" fill="#111">${d}</text></svg>`;
@@ -199,16 +204,28 @@
   };
 
   // ---------------- ekranlar ----------------
-  const APPS = [
-    { k: 'wiki', n: 'Starpedia', bg: '#ffffff' },
-    { k: 'agent', n: 'Menajer', bg: 'linear-gradient(135deg,#ffd76a,#e0a10e)' },
-    { k: 'emlak', n: 'Evim Emlak', bg: 'linear-gradient(135deg,#14a08d,#0b5e53)' },
-    { k: 'cars', n: 'Arabalar', bg: 'linear-gradient(135deg,#2a2a31,#0d0d10)' },
-    { k: 'shop', n: 'alışveriş', bg: 'linear-gradient(135deg,#a855f7,#6d28d9)' },
-    { k: 'store', n: 'TeknoPazar', bg: 'linear-gradient(135deg,#ff7a45,#e0283e)' },
-    { k: 'prem', n: 'StarFoot+', bg: 'linear-gradient(140deg,#fff1b8,#ffcf3f 45%,#c98a06)' },
-    { k: 'set', n: 'Ayarlar', bg: 'linear-gradient(135deg,#8a93a6,#4b5363)' },
-  ];
+  // Ücretli uygulamalar: yalnız sahibi içini görür; diğerleri kilitli simgeye dokununca tanıtımı görür (ürünler gösterilmez)
+  const hasStar = () => typeof Star !== 'undefined' && Star.has();
+  const hasDia = () => typeof Diamond !== 'undefined' && !!Diamond.active;
+  const sellable = () => typeof Premium !== 'undefined' && Premium.available && Premium.available();
+  const LOCK = { lux: () => !hasStar(), dia: () => !hasDia() };
+  function apps() {
+    const out = [{ k: 'life', n: 'Hayatım', bg: 'linear-gradient(135deg,#ff6f8a,#c2416b)' }];
+    if (typeof School !== 'undefined' && School.on()) out.push({ k: 'school', n: 'Okul', bg: 'linear-gradient(135deg,#ffe58a,#f5b70a)' });
+    out.push(
+      { k: 'agent', n: 'Menajer', bg: 'linear-gradient(135deg,#ffd76a,#e0a10e)' },
+      { k: 'wiki', n: 'Starpedia', bg: '#ffffff' },
+      { k: 'emlak', n: 'Evim Emlak', bg: 'linear-gradient(135deg,#14a08d,#0b5e53)' },
+      { k: 'cars', n: 'Arabalar', bg: 'linear-gradient(135deg,#2a2a31,#0d0d10)' },
+      { k: 'sport', n: 'Spor Mağazası', bg: 'linear-gradient(135deg,#2bd46a,#0b7a3a)' },
+      { k: 'shop', n: 'alışveriş', bg: 'linear-gradient(135deg,#a855f7,#6d28d9)' },
+      { k: 'store', n: 'TeknoPazar', bg: 'linear-gradient(135deg,#ff7a45,#e0283e)' },
+    );
+    if (typeof Star !== 'undefined' && !Game.inStreet() && (hasStar() || sellable())) out.push({ k: 'lux', n: 'Lüks', bg: 'linear-gradient(150deg,#2b2213,#0d0a05)' });
+    if (typeof Diamond !== 'undefined' && Diamond.enabled() && (hasDia() || sellable())) out.push({ k: 'dia', n: 'Diamond', bg: 'linear-gradient(150deg,#123a6b,#061833)' });
+    out.push({ k: 'prem', n: 'StarFoot+', bg: 'linear-gradient(140deg,#fff1b8,#ffcf3f 45%,#c98a06)' }, { k: 'set', n: 'Ayarlar', bg: 'linear-gradient(135deg,#8a93a6,#4b5363)' });
+    return out;
+  }
   const DOCK = [
     { k: 'msg', n: 'Mesajlar', bg: 'linear-gradient(135deg,#5ee27a,#1fa646)' },
     { k: 'feed', n: 'StarFeed', bg: 'linear-gradient(150deg,#16306f,#0a1530)' },
@@ -217,10 +234,11 @@
   ];
   function appIcon(a) {
     const L = Phone.p().life || {};
-    const badge = a.k === 'msg' ? unread() : a.k === 'agent' ? (L.offers || []).length : 0;
+    const badge = a.k === 'msg' ? unread() : a.k === 'agent' ? (L.offers || []).length : a.k === 'life' ? (L.babyNew ? 1 : 0) : 0;
+    const lk = LOCK[a.k] && LOCK[a.k]();
     const td = today();
     const ic = a.k === 'cal' ? calIcon(td.getDate(), WD[mon(td)].toUpperCase()) : IC[a.k];
-    return `<button class="ph-app" data-ph-open="${a.k}" type="button" aria-label="${a.n}"><span class="ph-ic" style="background:${a.bg}">${ic}${badge ? `<span class="ph-badge">${badge}</span>` : ''}</span><span class="ph-an">${a.n}</span></button>`;
+    return `<button class="ph-app" data-ph-open="${a.k}" type="button" aria-label="${a.n}"><span class="ph-ic" style="background:${a.bg}">${ic}${badge ? `<span class="ph-badge">${badge}</span>` : ''}${lk ? `<span class="ph-lk">${IC.lock}</span>` : ''}</span><span class="ph-an">${a.n}</span></button>`;
   }
   function homeView() {
     const s = Game.state, p = s.player;
@@ -233,7 +251,7 @@
         <button class="ph-wg" data-ph-open="cal" type="button"><span class="ph-lbl">Sıradaki maç</span>${next}<small class="ph-wk">${s.season.year} · ${Math.min(s.season.round + 1, Game.rounds())}. hafta</small></button>
         <div class="ph-wg"><span class="ph-lbl">Durum</span><div class="ph-mini">${bar('Aile', p.rel.family, '#46e08f')}${bar('Hoca', p.rel.coach, '#9aa6c4')}${bar('Moral', p.morale, '#ffcf3f')}${bar('Enerji', p.energy, '#7fb2ff')}</div><small class="ph-wk">${s.ap} aksiyon hakkı</small></div>
       </div>
-      <div class="ph-apps">${APPS.map(appIcon).join('')}</div>
+      <div class="ph-apps">${apps().map(appIcon).join('')}</div>
       <div class="ph-dock">${DOCK.map(appIcon).join('')}</div>
     </div>`;
   }
@@ -246,10 +264,10 @@
     if (!c) { Phone.sub = null; return msgList(); }
     const d = Phone.data(), w = Phone.week();
     d.seen[id] = w;
-    const replied = d.rep[id] === w, my = d.my && d.my[id], back = d.last && d.last[id];
+    const replied = d.rep[id] === w, my = d.my && d.my[id], back = d.last && d.last[id], note = replied && d.note && d.note[id];
     const ap = Game.state.ap;
     return `<div class="ph-appv">${top(`<span class="ph-ct"><span class="ph-av sm" style="background:${c.c}">${esc(c.i)}</span><span><span class="ph-ctn">${esc(c.n)}</span><small>${esc(c.role)}</small></span></span>`)}
-      <div class="ph-body" id="ph-chat"><div class="ph-chat" data-emo><div class="ph-day">Bu hafta</div><div class="ph-bub in">${esc(c.m)}</div>${replied && my ? `<div class="ph-bub out">${esc(my)}</div>` : ''}${replied && back ? `<div class="ph-bub in">${esc(back)}</div>` : ''}</div></div>
+      <div class="ph-body" id="ph-chat"><div class="ph-chat" data-emo><div class="ph-day">Bu hafta</div><div class="ph-bub in">${esc(c.m)}</div>${replied && my ? `<div class="ph-bub out">${esc(my)}</div>` : ''}${replied && back ? `<div class="ph-bub in">${esc(back)}</div>` : ''}${note && note.length ? `<div class="ph-sys">${[].concat(note).map((x) => `<span>${esc(x)}</span>`).join('')}</div>` : ''}</div></div>
       ${replied ? '<div class="ph-replies"><span class="ph-lbl2">Gelecek hafta yeni mesajlar gelir.</span></div>' : `<div class="ph-replies"><span class="ph-lbl2">Cevabın</span>${c.r.map((r, i) => { const dis = (r.ap && ap < r.ap) || (r.once && !r.once()); return `<button class="ph-rep" data-ph-rep="${i}" type="button" ${dis ? 'disabled' : ''}><span>${esc(r.t)}</span>${r.ap ? `<em>${r.ap} aksiyon</em>` : r.open ? '<em>uygulamayı aç</em>' : ''}</button>`; }).join('')}</div>`}
     </div>`;
   }
@@ -334,8 +352,64 @@
         <div class="ds">${esc(it.desc)}</div><div class="row">${buyBtn(it, 'ph-buy red')}</div></div></div>`; };
     return `<div class="ph-appv ph-cars">${top('<span class="r">Arabalar</span>')}<div class="ph-body">${list.map(card).join('')}${locked.map(card).join('')}${!list.length && !locked.length ? '<p class="ph-note">Şu an satışta araç yok.</p>' : ''}<p class="ph-note">Araba ve motor için ehliyet gerekir.</p></div></div>`;
   }
+  // evler Evim Emlak'ta, telefonlar TeknoPazar'da, araçlar Arabalar'da satılır; alışveriş'te hobi, eğlence ve stil kalır
+  const shopExcl = () => Object.keys(HOUSE_KIND).concat(TIERS.map((t) => t.item).filter(Boolean));
   function shopView() {
-    return `<div class="ph-appv ph-shop">${top('alışveriş')}<div class="ph-body"><div class="ph-promo"><b>Yıldız indirimi</b><small>Çanta, bakım, ekipman ve yaşam tarzı ürünleri</small></div>${UI.shop()}</div></div>`;
+    return `<div class="ph-appv ph-shop">${top('alışveriş')}<div class="ph-body"><div class="ph-promo"><b>Yıldız indirimi</b><small>Hobi, eğlence, stil ve lüks ürünler</small></div>${UI.shop({ tabs: ['lux'], luxCats: ['life', 'style'], excl: shopExcl(), title: 'Yaşam Tarzı' })}</div></div>`;
+  }
+  function sportView() {
+    return `<div class="ph-appv ph-shop ph-sport">${top('Spor Mağazası')}<div class="ph-body"><div class="ph-promo"><b>Sahaya hazır ol</b><small>Enerji içeceği, fizyoterapi, krampon, ekipman, beslenme ve toplar</small></div>${UI.shop({ tabs: ['bag', 'cons', 'kit', 'balls'], title: 'Spor Mağazası' })}</div></div>`;
+  }
+  // Hayatım: eski Yaşam sekmesinin tamamı (aile, ilişki, çocuklar, arkadaşlar, belgeler, menajer kısayolu); okul kartı Okul uygulamasında
+  function lifeView() {
+    let html = Life.screen();
+    try { if (typeof School !== 'undefined') { const sc = School.card(); if (sc) html = html.replace(sc, ''); } } catch (e) { /* yok */ }
+    // bu haftanın aksiyonları en üstte (durum kartının hemen altında): kaydırmadan ulaşılır
+    try {
+      const parts = html.split(/(?=<section[\s>])/);
+      const i = parts.findIndex((x) => x.indexOf('data-life="family"') >= 0);
+      if (i > 1) { const [x] = parts.splice(i, 1); parts.splice(1, 0, x); html = parts.join(''); }
+    } catch (e) { /* sıra aynı kalır */ }
+    return `<div class="ph-appv ph-life">${top('Hayatım')}<div class="ph-body">${html}</div></div>`;
+  }
+  const SUBJ = { corners: 'Geometri', math: 'Matematik', pattern: 'Mantık', flag: 'Coğrafya', count: 'Matematik', clock: 'Hayat Bilgisi' };
+  function schoolView() {
+    if (typeof School === 'undefined' || !School.on()) return `<div class="ph-appv ph-school">${top('Okul')}<div class="ph-body"><p class="ph-note">Okul yılların tamamlandı.</p></div></div>`;
+    const s = Game.state, p = s.player, sc = School.ensure(s), mid = School.mid(), r = s.season.round;
+    const iq = Math.round(School.iq(p));
+    const grade = (x) => (x ? `<b class="sc-g">${x.score}/${x.of}</b>` : '<b class="sc-g none">—</b>');
+    const lessons = sc.l.map((x) => `<div class="ph-les"><span class="d ${x.seen ? 'ok' : 'miss'}">${x.seen ? '✓' : '✕'}</span><span><b>${SUBJ[x.k] || 'Ders'}</b><small>${x.t === 'mid' ? 'Ara dönem' : 'Sezon sonu'} · ${x.seen ? 'Derse katıldın' : 'Antrenmanı seçtin'}</small></span></div>`).join('');
+    const upcoming = (sc.plan || []).filter((w) => w >= r).slice(0, 3).map((w) => `<div class="ph-les"><span class="d up">${w + 1}</span><span><b>Ders haftası</b><small>O hafta okula ya da antrenmana gideceksin</small></span></div>`).join('');
+    const hist = (sc.hist || []).slice(0, 6).map((h) => `<div class="ph-krow"><span>${h.y} · ${h.age} yaş</span><b>${h.avg}</b>${h.b ? `<em>${esc(h.b)}</em>` : '<em></em>'}</div>`).join('');
+    return `<div class="ph-appv ph-school">${top('Okul')}<div class="ph-body">
+      <div class="ph-sch-h"><div><span>${p.age} yaş</span><b>${esc(Player.fullName(p))}</b></div><div class="iq"><small>Zeka</small><b>${iq}</b></div></div>
+      <div class="ph-bar sc"><i style="width:${U.clamp(iq, 0, 100)}%;background:#2f6ee8"></i></div>
+      <p class="ph-note">Zeka antrenman verimini artırır. Derste işlenen konular dönem sınavında çıkar.</p>
+      <div class="ph-secl">Sınavlar</div>
+      <div class="ph-exams"><div><span>Ara dönem</span>${grade(sc.ex.mid)}<small>${sc.ex.mid ? 'Tamamlandı' : `${mid + 1}. hafta`}</small></div><div><span>Sezon sonu</span>${grade(sc.ex.fin)}<small>${sc.ex.fin ? 'Tamamlandı' : 'Sezonun sonunda'}</small></div></div>
+      <div class="ph-secl">Bu yılın dersleri</div>
+      ${lessons || '<p class="ph-note">Bu yıl henüz ders işlenmedi.</p>'}${upcoming}
+      ${hist ? `<div class="ph-secl">Karneler</div><div class="ph-kar">${hist}</div>` : ''}
+    </div></div>`;
+  }
+  // kilitli ücretli uygulama: içerik gösterilmez, yalnız tanıtım düğmesi
+  function lockedView(k) {
+    const t = k === 'lux' ? ['Lüks', 'Lüks yaşam vitrini Premium ve Premium+ sahiplerine özeldir.', 'Premium\'u incele'] : ['Diamond', 'Diamond sevinçleri ve kariyer posteri Diamond sahiplerine özeldir.', 'Diamond\'u incele'];
+    return `<div class="ph-appv ph-locked ph-${k}">${top(t[0])}<div class="ph-body"><div class="ph-lock-c"><span class="ph-lock-i">${IC.lock}</span><h3>${t[0]}</h3><p>${t[1]}</p><button class="ph-cta" data-ph-prem="${k === 'lux' ? 'premium' : 'diamond'}" type="button">${t[2]}</button></div></div></div>`;
+  }
+  function luxView() {
+    if (LOCK.lux()) return lockedView('lux');
+    return `<div class="ph-appv ph-lux">${top('Lüks')}<div class="ph-body"><div class="ph-lux-h"><small>Özel koleksiyon</small><b>Yıldızlara özel</b></div>${Star.luxCard()}</div></div>`;
+  }
+  function diaView() {
+    if (LOCK.dia()) return lockedView('dia');
+    const p = Phone.p(), cur = p.celeb || 'arms';
+    const cels = (typeof CELEBRATIONS !== 'undefined' ? CELEBRATIONS : []).filter((c) => c.dia);
+    return `<div class="ph-appv ph-dia">${top('Diamond')}<div class="ph-body">
+      <div class="ph-dia-h">${IC.dia}<b>Diamond</b><small>Senin ayrıcalıkların</small></div>
+      ${cels.length ? `<div class="ph-secl">Diamond sevinçleri</div><div class="cb-grid">${cels.map((c) => `<button class="cb dia ${cur === c.id ? 'on' : ''}" data-celeb="${c.id}"><b><span data-emo>${c.ic}</span> ${c.name}</b><small>${c.desc}</small></button>`).join('')}</div>` : ''}
+      ${typeof Poster !== 'undefined' ? `<div class="ph-secl">Kariyer posteri</div><button class="ph-cta" data-poster type="button">Kariyer posterini oluştur</button>` : ''}
+    </div></div>`;
   }
   function storeView() {
     const t = Phone.tier(), p = Phone.p();
@@ -374,8 +448,8 @@
       <button class="ph-cta ghost" data-ph-close type="button">Telefonu kapat</button>
     </div></div>`;
   }
-  const VIEWS = { feed: feedView, wiki: wikiView, bank: bankView, cal: calView, agent: agentView, emlak: emlakView, cars: carsView, shop: shopView, store: storeView, prem: premView, set: setView };
-  const LIGHT = ['wiki', 'cal', 'store', 'shop'];
+  const VIEWS = { feed: feedView, wiki: wikiView, bank: bankView, cal: calView, agent: agentView, emlak: emlakView, cars: carsView, shop: shopView, sport: sportView, life: lifeView, school: schoolView, lux: luxView, dia: diaView, store: storeView, prem: premView, set: setView };
+  const LIGHT = ['wiki', 'cal', 'store', 'shop', 'sport', 'school'];
 
   // ---------------- çizim ve olaylar ----------------
   Phone.render = function () {
@@ -397,13 +471,14 @@
     const v = scr.querySelector('.ph-view');
     v.innerHTML = statusBar(LIGHT.includes(Phone.app)) + html;
     Phone._last = `${Phone.app}|${Phone.sub}`;
+    if (!same) { const pl = scr.querySelector('.ph-pill'); if (pl) pl.classList.remove('on'); }
     const body = v.querySelector('.ph-body');
     if (body) { if (same) { body.scrollTop = keep; v.querySelector('.ph-appv').classList.add('still'); } else if (Phone.app === 'msg' && Phone.sub) body.scrollTop = body.scrollHeight; }
     Phone.el.querySelector('.ph-homebar').classList.toggle('dark', LIGHT.includes(Phone.app));
     try { UI.strip(v); } catch (e) { /* yok */ }
     // oyunun kendi bağlayıcıları: satın alma, menajer/sponsor, StarFeed gönderileri, mağaza sekmeleri
     try { UI.bind(v); } catch (e) { console.error(e); }
-    try { if (Phone.app === 'feed' || Phone.app === 'shop') Social.drawAvatar(v); } catch (e) { /* yok */ }
+    try { if (Phone.app === 'feed' || Phone.app === 'shop' || Phone.app === 'sport') Social.drawAvatar(v); } catch (e) { /* yok */ }
     bind(v);
     Phone.badge();
   };
@@ -439,20 +514,47 @@
     const r = c.r[i], d = Phone.data(), w = Phone.week(), s = Game.state;
     if (!r || d.rep[id] === w) return;
     if (r.open) { d.rep[id] = w; (d.my = d.my || {})[id] = r.t; (d.last = d.last || {})[id] = r.ok; Game.save(); Phone.app = r.open; Phone.sub = null; return Phone.render(); }
+    let note = null;
     if (r.act) {
       const ap0 = s.ap;
+      Phone._cap = [];
       try { r.act(); } catch (e) { console.error(e); }
-      if (Game.state.ap >= ap0) { Phone.render(); return; } // hak harcanmadıysa (para yok, hak yok vb.) cevap gönderilmemiş sayılır
+      const cap = Phone._cap; Phone._cap = null;
+      if (Game.state.ap >= ap0) { cap.forEach((m) => flash(m.msg, m.type)); Phone.render(); return; } // hak harcanmadıysa (para yok, hak yok vb.) cevap gönderilmemiş sayılır
+      note = cap.map((m) => m.msg).slice(0, 3);
     }
     d.rep[id] = w; (d.my = d.my || {})[id] = r.t; (d.last = d.last || {})[id] = r.ok;
+    d.note = d.note || {}; if (note && note.length) d.note[id] = note; else delete d.note[id];
     Game.save();
     Phone.render();
+  }
+  // Telefon açıkken oyunun köşe bildirimleri gösterilmez: sohbette etkisi konuşmanın içinde küçük bir satır olur,
+  // diğer uygulamalarda telefon ekranının altında kısa bir not belirir. Bildirim geçmişine (zil) yine kaydedilir.
+  function flash(msg, type) {
+    if (!Phone.el) return;
+    const scr = Phone.el.querySelector('.ph-screen');
+    let el = scr.querySelector('.ph-pill');
+    if (!el) { el = document.createElement('div'); el.className = 'ph-pill'; el.setAttribute('role', 'status'); scr.appendChild(el); }
+    el.className = `ph-pill on ${type || ''}`;
+    el.textContent = U.plain(String(msg));
+    clearTimeout(Phone._pt);
+    Phone._pt = setTimeout(() => el.classList.remove('on'), 2600);
+  }
+  if (!Game._phoneToast) {
+    const toast0 = Game.toast;
+    Game.toast = function (msg, type) {
+      if (!Phone.open) return toast0.apply(this, arguments);
+      try { if (typeof Notifs !== 'undefined' && Notifs.push) Notifs.push(msg, type); } catch (e) { /* yok */ }
+      const m = { msg: U.plain(String(msg)), type: type || '' };
+      if (Phone._cap) Phone._cap.push(m); else flash(m.msg, m.type);
+    };
+    Game._phoneToast = true;
   }
   Phone.badge = function () {
     const b = document.querySelector('#tabs [data-phone]');
     if (!b) return;
     b.hidden = !Phone.on();
-    let n = 0; try { n = unread() + ((Phone.p() && Phone.p().life && Phone.p().life.offers) || []).length; } catch (e) { n = 0; }
+    let n = 0; try { const L = (Phone.p() && Phone.p().life) || {}; n = unread() + (L.offers || []).length + (L.babyNew ? 1 : 0); } catch (e) { n = 0; }
     const i = b.querySelector('.ph-tabn');
     if (i) { i.textContent = n > 9 ? '9+' : String(n); i.hidden = !n; }
   };

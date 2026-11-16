@@ -558,7 +558,7 @@ const Game = {
     Game.news(`🤕 ${where} sakatlandın. ${weeks} hafta sahalardan uzak kalacaksın.`, 'bad');
     Game.toast(`🤕 Sakatlandın! (${weeks} hafta)`, 'bad');
     // İpucu: mağazadaki fizyoterapi seansı sakatlığı kısaltır
-    setTimeout(() => Game.toast('Fizyoterapi Seansı sakatlığı 2 hafta kısaltır. Mağazadan stok alıp Haftalık Plan\'daki çantandan kullanabilirsin.', 'info'), 900);
+    setTimeout(() => Game.toast('Fizyoterapi Seansı sakatlığı 2 hafta kısaltır. Telefonundaki Spor Mağazası\'ndan stok alıp Haftalık Plan\'daki çantandan kullanabilirsin.', 'info'), 900);
   },
 
   // ---------- Maç ----------
@@ -711,7 +711,7 @@ const Game = {
       if (typeof Market !== 'undefined' && comp !== 'intl' && !ctx.intlCat) Market.track(sum);
       if (sum.motm) p.totals.motm++;
       const wb = Player.wearBoot(p);
-      if (wb && wb.gone) Game.news(`${wb.gone.name} eskidi ve artık giyilemiyor. Mağazadan yenisini alabilirsin.`, 'bad');
+      if (wb && wb.gone) Game.news(`${wb.gone.name} eskidi ve artık giyilemiyor. Telefonundaki Spor Mağazası'ndan yenisini alabilirsin.`, 'bad');
       else if (wb && wb.warn) Game.news(`${wb.warn.name} için son 5 maç: krampon yıpranmaya başladı.`, '');
 
       const r = sum.rating;
@@ -1317,10 +1317,10 @@ const Game = {
       <span class="hi-money"><i class="hm-coin">${Icon('coin')}</i><span class="hm-t"><small>Bakiye</small><b>${U.money(p.money)}</b></span>${Game.weeklyIncome() > 0 ? `<em class="hm-inc">+${U.money(Game.weeklyIncome())}<small>/hf</small></em>` : ''}</span>`;
     if (typeof Star !== 'undefined') { Star.topBtn(); Nudge.tick(); }
     // eski sekme adları yeni yapıya taşınır
-    const alias = { player: 'profile', career: 'profile', world: 'league', shop: 'life' };
+    // 1.0.24: Yaşam sekmesi kalktı; içindekiler telefonda (Hayatım, Spor Mağazası, alışveriş, Okul)
+    const alias = { player: 'profile', career: 'profile', world: 'league', shop: 'home', life: 'home' };
     if (alias[Game.tab]) {
       if (Game.tab === 'world') UI.lgView = 'world';
-      if (Game.tab === 'shop') UI.lifeView = 'shop';
       if (Game.tab === 'career') UI.profView = 'career';
       if (Game.tab === 'player') UI.profView = 'profile';
       Game.tab = alias[Game.tab];
@@ -1544,7 +1544,7 @@ const UI = {
         const lock = p.totals.goals < c.goals;
         return `<button class="cb ${cur === c.id ? 'on' : ''} ${lock ? 'lock' : ''}" data-celeb="${c.id}" ${lock ? 'disabled' : ''}><b>${c.name}</b><small>${lock ? `${c.goals} golde açılır` : c.desc}</small></button>`;
       }).join('')}</div>
-      ${CELEBRATIONS.some((c) => c.dia) && typeof Diamond !== 'undefined' && Diamond.enabled() ? `<div class="lbl cb-dl">${Diamond.gem(16)} Diamond sevinçleri</div><div class="cb-grid">${CELEBRATIONS.filter((c) => c.dia).map((c) => {
+      ${CELEBRATIONS.some((c) => c.dia) && typeof Diamond !== 'undefined' && Diamond.enabled() && Diamond.active ? `<div class="lbl cb-dl">${Diamond.gem(16)} Diamond sevinçleri</div><div class="cb-grid">${CELEBRATIONS.filter((c) => c.dia).map((c) => {
         const lock = !Diamond.active;
         return `<button class="cb dia ${cur === c.id ? 'on' : ''} ${lock ? 'lock' : ''}" ${lock ? 'data-dialock="celeb"' : `data-celeb="${c.id}"`}><b><span data-emo>${c.ic}</span> ${c.name}</b><small>${lock ? 'Diamond ile açılır' : c.desc}</small></button>`;
       }).join('')}</div>` : ''}
@@ -1604,7 +1604,7 @@ const UI = {
           <div class="pc-ovr ${UI.statColor(ovr)}"><b>${ovr}</b><span>GÜÇ${ovrI > ovr ? ` +${ovrI - ovr}` : ''}</span></div>
         </div>
         ${typeof ShareCard !== 'undefined' ? `<button class="btn btn-ghost sh-btn" data-share="player">${Icon('share')} Oyuncu kartını paylaş</button>` : ''}
-        ${typeof Poster !== 'undefined' && Diamond.enabled() ? `<button class="btn btn-ghost sh-btn dia-sh" data-poster>${Diamond.gem(16)} Kariyer posteri${Diamond.active ? '' : ' · Diamond'}</button>` : ''}
+        ${typeof Poster !== 'undefined' && Diamond.enabled() && Diamond.active ? `<button class="btn btn-ghost sh-btn dia-sh" data-poster>${Diamond.gem(16)} Kariyer posteri${Diamond.active ? '' : ' · Diamond'}</button>` : ''}
         ${p.injuryWeeks ? `<div class="pc-inj">${Icon('injury')} Sakat · ${p.injuryWeeks} hafta</div>` : ''}
         <div class="pc-meta">
           <span class="pot">${'★'.repeat(stars)}<i>${'★'.repeat(5 - stars)}</i> potansiyel</span>
@@ -2043,10 +2043,13 @@ ${UI.paper()}`;
       </div>`;
   },
 
-  shop() {
+  // o (1.0.24 telefon): { tabs: gösterilecek reyonlar, luxCats: yaşam tarzı reyonundaki kategoriler, excl: gösterilmeyecek ürünler, title }
+  shop(o) {
     const p = Game.p;
     const ageBand = p.age <= 12 ? 'Çocuk' : p.age <= 17 ? 'Genç' : 'Profesyonel';
-    const tab = UI.shopTab || 'bag';
+    const allowed = o && o.tabs;
+    let tab = UI.shopTab || 'bag';
+    if (allowed && !allowed.includes(tab)) tab = allowed[0];
     const cats = {
       boots: ['boot', 'Kramponlar', 'Tek krampon giyilir (en iyisi) · 30-40 maçta eskir'],
       gear: ['gear', 'Antrenman Ekipmanı', 'Antrenman gelişimini artırır (en iyisi geçerli)'],
@@ -2056,7 +2059,8 @@ ${UI.paper()}`;
       style: ['star', 'Stil ve Lüks', 'Ün ağırlıklı (hepsi birikir)'],
       balls: ['ball', 'Kozmetik Toplar', 'Maçta ve antrenmanda kullandığın top'],
     };
-    const tabs = [['bag', 'bolt', 'Çanta'], ['cons', 'heart', 'Bakım'], ['kit', 'boot', 'Ekipman'], ['lux', 'star', 'Yaşam Tarzı'], ['balls', 'ball', 'Toplar']];
+    const tabs = [['bag', 'bolt', 'Çanta'], ['cons', 'heart', 'Bakım'], ['kit', 'boot', 'Ekipman'], ['lux', 'star', 'Yaşam Tarzı'], ['balls', 'ball', 'Toplar']].filter(([k]) => !allowed || allowed.includes(k));
+    const excl = (o && o.excl) || [];
     const card = (art, color, name, desc, right, cls = '', skin) => `
       <div class="sh-item ${cls}">
         <div class="sh-art">${skin ? `<img class="ball-thumb" alt="" src="${Balls.thumb(BALL_STYLES[skin], 96)}">` : ShopArt.svg(art, color)}</div>
@@ -2064,8 +2068,8 @@ ${UI.paper()}`;
         <div class="sh-act">${right}</div>
       </div>`;
     const itemsOf = (c) => {
-      const list = ITEMS.filter((i) => i.cat === c && (p.items.includes(i.id) || (p.age >= i.minAge && (!i.maxAge || p.age <= i.maxAge)))).sort((a, b) => a.price - b.price);
-      const locked = ITEMS.filter((i) => i.cat === c && i.minAge > p.age && !p.items.includes(i.id)).sort((x, y) => x.minAge - y.minAge).slice(0, 2);
+      const list = ITEMS.filter((i) => i.cat === c && !excl.includes(i.id) && (p.items.includes(i.id) || (p.age >= i.minAge && (!i.maxAge || p.age <= i.maxAge)))).sort((a, b) => a.price - b.price);
+      const locked = ITEMS.filter((i) => i.cat === c && !excl.includes(i.id) && i.minAge > p.age && !p.items.includes(i.id)).sort((x, y) => x.minAge - y.minAge).slice(0, 2);
       if (!list.length && !locked.length) return '';
       const owned = list.filter((i) => p.items.includes(i.id)).length;
       const body = (c === 'balls' ? card(null, null, 'Lig Topu', 'Her ligin ve turnuvanın kendi topu', !p.ballSkin ? `<span class="tag own">${Icon('star')} Kullanılıyor</span>` : '<button class="btn btn-ghost btn-buy" data-ball="">Kullan</button>', !p.ballSkin ? 'own' : '', 'tr') : '') + list.map((it) => {
@@ -2108,13 +2112,13 @@ ${UI.paper()}`;
         return card(c.art, '#4fb3ff', c.name, c.desc, used ? '<span class="tag">Bu sezon kullandın</span>' : `<button class="btn btn-buy" data-use="${c.id}" ${p.money < price ? 'disabled' : ''}>${U.money(price)}</button>`);
       }).join('')}</div>`;
     } else if (tab === 'kit') body = ['boots', 'gear', 'food'].map(itemsOf).join('');
-    else if (tab === 'lux') body = ['life', 'ride', 'style'].map(itemsOf).join('');
+    else if (tab === 'lux') body = ((o && o.luxCats) || ['life', 'ride', 'style']).map(itemsOf).join('');
     else body = itemsOf('balls');
-    return `${typeof Premium !== 'undefined' ? Premium.card() : ''}
+    return `${typeof Premium !== 'undefined' && !o ? Premium.card() : ''}
       <section class="card shop-head">
-        <div class="card-h"><span>${Icon('shop')} Mağaza</span><span class="tag">${ageBand} reyonu · ${p.age} yaş</span></div>
+        <div class="card-h"><span>${Icon('shop')} ${(o && o.title) || 'Mağaza'}</span><span class="tag">${ageBand} reyonu · ${p.age} yaş</span></div>
         <div class="shop-wallet">${Icon('wallet')}<span><small>Bakiyen</small><b>${U.money(p.money)}</b></span><span><small>Eşyaların</small><b>${p.items.length}</b></span><span><small>Çanta</small><b>${Shop.stock('drink')} + ${Shop.stock('physio')}</b></span></div>
-        <nav class="sh-tabs">${tabs.map(([k, ic, l]) => `<button class="${k === tab ? 'on' : ''}" data-shtab="${k}">${Icon(ic)}<span>${l}</span></button>`).join('')}</nav>
+        ${tabs.length > 1 ? `<nav class="sh-tabs">${tabs.map(([k, ic, l]) => `<button class="${k === tab ? 'on' : ''}" data-shtab="${k}">${Icon(ic)}<span>${l}</span></button>`).join('')}</nav>` : ''}
       </section>
       <section class="card shop-body">${body || '<p class="muted">Bu reyonda şimdilik ürün yok.</p>'}</section>`;
   },
