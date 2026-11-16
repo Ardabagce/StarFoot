@@ -128,8 +128,11 @@ const Sprites = {
   me(p) {
     p = p || (typeof Game !== 'undefined' && Game.state && Game.p);
     const L = (p && p.look) || Sprites.look(7);
-    // kaleci: her yerde kaleci forması ve eldiven
-    return p && p.position === 'GK' ? Object.assign({}, L, { gk: true }) : L;
+    // kaleci: her yerde kaleci forması ve eldiven; sol ayaklı oyuncu sol ayağıyla vurur
+    const extra = {};
+    if (p && p.position === 'GK') extra.gk = true;
+    if (p && p.foot === 'L') extra.foot = 'L';
+    return Object.keys(extra).length ? Object.assign({}, L, extra) : L;
   },
 
   // İnsan figürü. (sx, sy) ayakların ekran noktası, h ekrandaki boy (px)
@@ -229,8 +232,10 @@ const Sprites = {
       ctx.beginPath(); ctx.ellipse(fx + side * legW * 0.08, fy + legW * 0.22, legW * 0.6, legW * 0.4, side * 0.25, 0, Math.PI * 2); ctx.fill();
       if (h > 40) { ctx.fillStyle = 'rgba(255,255,255,0.22)'; ctx.beginPath(); ctx.ellipse(fx + side * legW * 0.02, fy + legW * 0.08, legW * 0.32, legW * 0.12, side * 0.25, 0, Math.PI * 2); ctx.fill(); }
     };
-    drawLeg(-1, 0, 0);
-    drawLeg(1, Math.PI, kick ? (up ? -1 : 1) * Math.sin(kick * Math.PI) * 1.1 : 0);
+    // vuruş ayağı: sol ayaklı oyuncu sol ayağıyla vurur (önce destek bacağı, sonra vuran bacak çizilir)
+    const kf = (o.foot || look.foot) === 'L' ? -1 : 1;
+    drawLeg(-kf, 0, 0);
+    drawLeg(kf, Math.PI, kick ? (up ? -1 : 1) * Math.sin(kick * Math.PI) * 1.1 : 0);
 
     // şort
     ctx.fillStyle = kit.shorts;

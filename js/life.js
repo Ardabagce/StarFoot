@@ -307,8 +307,9 @@ if (typeof Events !== 'undefined') {
   if (sp) sp.cond = () => false; // sponsorluklar artık Yaşam sekmesinde
   Events.list.push(
     {
-      id: 'mom_bday', cond: () => true,
-      text: () => 'Bu hafta annenin doğum günü. Ne yapacaksın?',
+      // yılda yalnız bir kez (aynı yıl iki doğum günü olmasın)
+      id: 'mom_bday', cond: () => { const s = Game.state; return !!s && s.momBday !== s.season.year; },
+      text: () => { const s = Game.state; if (s) s.momBday = s.season.year; return 'Bu hafta annenin doğum günü. Ne yapacaksın?'; },
       opts: [
         { t: 'Sürpriz hediye al', fx: (p) => { const c = Math.max(200, Math.round(Game.weeklyIncome() * 0.1)); p.money -= c; p.rel.family = U.clamp(p.rel.family + 12, 0, 100); Player.addMorale(p, 5); return `Annen çok duygulandı. (${U.money(c)})`; } },
         { t: 'Telefonla ara', fx: (p) => { p.rel.family = U.clamp(p.rel.family + 3, 0, 100); return 'Annen sesini duyduğuna sevindi.'; } },

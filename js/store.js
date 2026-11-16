@@ -80,8 +80,8 @@ const Store = {
     });
   },
 };
-document.addEventListener('visibilitychange', () => { if (document.hidden) { Store.flush(true); SaveBak.flush(); } });
-window.addEventListener('pagehide', () => { Store.flush(true); SaveBak.flush(); });
+document.addEventListener('visibilitychange', () => { if (document.hidden) { Store.flush(true); SaveBak.flush(); if (typeof Durable !== 'undefined') Durable.save(); } });
+window.addEventListener('pagehide', () => { Store.flush(true); SaveBak.flush(); if (typeof Durable !== 'undefined') Durable.save(); });
 
 // Kariyer kayıtlarının ikinci kopyası: uygulamanın kendi dosya alanında (yalnız iPhone/Android uygulamasında).
 // iOS, yer darlığında web deposunu (localStorage) temizleyebiliyor; o zaman kariyer bu dosyadan geri gelir.
@@ -141,3 +141,123 @@ const SaveBak = {
     return n;
   },
 };
+
+// ---------- Kalıcı kayıt (yalnız uygulamada): web deposunun zaman damgalı kopyası uygulama dosyalarında ----------
+// Android WebView web deposunu (localStorage) diske gecikmeli yazar; büyük kayıtlarda bu gecikme dakikalara çıkar.
+// Uygulama arka planda kapatılınca yazılmamış ilerleme kaybolur (kariyer geriye gider, Premium/slot/ödüller sıfırlanır).
+// Burada her değişiklik birkaç saniye içinde uygulamanın kendi dosyasına (hemen diske yazılır) zaman damgasıyla kopyalanır.
+// Açılışta dosyadaki kopya web deposundan yeniyse web deposu dosyadan geri yüklenir ve sayfa bir kez yenilenir.
+// Dosyalar iki kopya halinde dönüşümlü yazılır: yazma sırasında kapanırsa sağlam olan kopya kullanılır.
+const Durable = {
+  DIR: 'LIBRARY',
+  T: '__sf_t', // web deposunda anlık görüntü zamanı; büyük anahtarlar için __sf_t:<anahtar>
+  BIG: 30000,
+  dirty: {},
+  timer: 0,
+  ready: false,
+  busy: false,
+  again: false,
+  log: [], // son açılışta geri yüklenen anahtarlar (tanı için)
+  snap: null, // son yazılan / okunan anlık görüntü: { t, side, kv, big: { k: { t, f } } }
+  fs() { return SaveBak.fs(); },
+  raw: { set: Storage.prototype.setItem, rm: Storage.prototype.removeItem },
+  isBig(k, v) { return /^starfoot_slot_/.test(k) || (v != null && v.length > Durable.BIG); },
+  mark(k) {
+    if (k.startsWith(Durable.T)) return;
+    Durable.dirty[k] = 1;
+    clearTimeout(Durable.timer);
+    Durable.timer = setTimeout(() => Durable.save(), 1500);
+  },
+  ls() { const o = {}; try { for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); if (k && !k.startsWith(Durable.T)) o[k] = localStorage.getItem(k); } } catch (e) { /* yok */ } return o; },
+  async readJSON(path) {
+    const F = Durable.fs();
+    try { const r = await F.readFile({ path, directory: Durable.DIR, encoding: 'utf8' }); return JSON.parse(r.data); } catch (e) { return null; }
+  },
+  async write(path, data) { await Durable.fs().writeFile({ path, data, directory: Durable.DIR, encoding: 'utf8', recursive: true }); },
+  async save() {
+    const F = Durable.fs();
+    if (!F) return;
+    if (!Durable.ready || Durable.busy) { Durable.again = true; return; }
+    clearTimeout(Durable.timer);
+    const keys = Object.keys(Durable.dirty);
+    if (!keys.length && Durable.snap) return;
+    Durable.busy = true; Durable.again = false; Durable.dirty = {};
+    try {
+      const t = Date.now(), all = Durable.ls();
+      const prev = Durable.snap || { kv: {}, big: {} };
+      const big = Object.assign({}, prev.big);
+      // büyük anahtarlar: değişenler ayrı dosyaya (dönüşümlü a/b)
+      for (const k of (Durable.snap ? keys : Object.keys(all))) {
+        const v = all[k];
+        if (v == null) { delete big[k]; continue; }
+        if (!Durable.isBig(k, v)) { delete big[k]; continue; }
+        const f = big[k] && big[k].f === 'a' ? 'b' : 'a';
+        await Durable.write(`saves/d_${k}_${f}.txt`, v);
+        big[k] = { t, f };
+        try { Durable.raw.set.call(localStorage, Durable.T + ':' + k, String(t)); } catch (e) { /* yok */ }
+      }
+      const kv = {};
+      Object.keys(all).forEach((k) => { if (!big[k] && !Durable.isBig(k, all[k])) kv[k] = all[k]; });
+      const side = prev.side === 'a' ? 'b' : 'a';
+      const snap = { t, side, kv, big };
+      await Durable.write(`saves/kv_${side}.json`, JSON.stringify(snap));
+      Durable.snap = snap;
+      try { Durable.raw.set.call(localStorage, Durable.T, String(t)); } catch (e) { /* yok */ }
+    } catch (e) { /* bir sonraki değişiklikte yeniden denenir */ } finally {
+      Durable.busy = false;
+      if (Durable.again || Object.keys(Durable.dirty).length) { Durable.again = false; Durable.timer = setTimeout(() => Durable.save(), 800); }
+    }
+  },
+  async boot() {
+    const F = Durable.fs();
+    if (!F) return;
+    // açılış anındaki depo: dosya okunurken oyunun yazdıkları geri yükleme sanılmasın
+    const base = Durable.ls();
+    let lsT = 0;
+    try { lsT = +localStorage.getItem(Durable.T) || 0; } catch (e) { /* yok */ }
+    const same = (k) => { try { return localStorage.getItem(k) === (k in base ? base[k] : null); } catch (e) { return false; } };
+    try {
+      const [a, b] = await Promise.all([Durable.readJSON('saves/kv_a.json'), Durable.readJSON('saves/kv_b.json')]);
+      const snap = [a, b].filter((x) => x && x.t && x.kv).sort((x, y) => y.t - x.t)[0] || null;
+      if (!snap) { Durable.ready = true; Durable.save(); return; } // ilk kez: tam kopya oluştur
+      Durable.snap = snap;
+      let restored = 0;
+      if (snap.t > lsT) {
+        // web deposu dosyadan eski (ya da silinmiş): küçük değerleri geri yükle (açılıştan beri oyunun değiştirdiklerine dokunma)
+        Object.entries(snap.kv).forEach(([k, v]) => { try { if (base[k] !== v && same(k)) { Durable.raw.set.call(localStorage, k, v); restored++; Durable.log.push(k); } } catch (e) { /* yer yok */ } });
+      }
+      for (const [k, m] of Object.entries(snap.big || {})) {
+        let bt = 0;
+        try { bt = +localStorage.getItem(Durable.T + ':' + k) || 0; } catch (e) { /* yok */ }
+        if (m.t <= bt || !same(k)) continue;
+        let v = null;
+        try { v = (await F.readFile({ path: `saves/d_${k}_${m.f}.txt`, directory: Durable.DIR, encoding: 'utf8' })).data; } catch (e) { v = null; }
+        if (!v || v === base[k]) { if (v) try { Durable.raw.set.call(localStorage, Durable.T + ':' + k, String(m.t)); } catch (e) { /* yok */ } continue; }
+        try { Durable.raw.set.call(localStorage, k, v); Durable.raw.set.call(localStorage, Durable.T + ':' + k, String(m.t)); restored++; Durable.log.push(k); } catch (e) { /* yer yok */ }
+      }
+      if (snap.t > lsT) try { Durable.raw.set.call(localStorage, Durable.T, String(snap.t)); } catch (e) { /* yok */ }
+      Durable.ready = true;
+      if (restored) {
+        // oyun eski değerlerle açılmış olabilir: bir kez yenile (döngüye girmesin)
+        let once = false;
+        try { once = sessionStorage.getItem('sf_restored') === '1'; sessionStorage.setItem('sf_restored', '1'); } catch (e) { /* yok */ }
+        if (!once) { Durable.dirty = {}; clearTimeout(Durable.timer); location.reload(); return; }
+      }
+      if (Object.keys(Durable.dirty).length) Durable.save();
+    } catch (e) { Durable.ready = true; }
+  },
+};
+// Depo yazımları her zaman izlenir (uygulama köprüsü geç hazır olsa bile değişiklik kaçmasın); dosya işleri köprü hazır olunca başlar
+(function () {
+  const S = Storage.prototype;
+  const set0 = S.setItem, rm0 = S.removeItem;
+  Durable.raw = { set: set0, rm: rm0 };
+  S.setItem = function (k, v) { set0.call(this, k, v); if (this === window.localStorage && Durable.on) Durable.mark(String(k)); };
+  S.removeItem = function (k) { rm0.call(this, k); if (this === window.localStorage && Durable.on) Durable.mark(String(k)); };
+  const start = () => { if (Durable.on || !Durable.fs()) return false; Durable.on = true; Durable.boot(); return true; };
+  if (!start()) {
+    // köprü sonradan gelirse: DOMContentLoaded ve kısa aralıklarla birkaç kez dene
+    document.addEventListener('DOMContentLoaded', start, { once: true });
+    let n = 0; const iv = setInterval(() => { if (start() || ++n > 20) clearInterval(iv); }, 250);
+  }
+})();
