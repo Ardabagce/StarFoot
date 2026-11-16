@@ -608,7 +608,7 @@ document.addEventListener('click', (e) => {
 });
 
 // ---------- Güncelleme duyurusu (her sürümde bir kez) ----------
-const APP_VER = '1.0.23';
+const APP_VER = '1.0.24';
 // Duyuru içeriğinin sürümü: yeni duyuru yazılınca güncellenir (yalnız sürüm atlamak tekrar göstermez)
 const WN_VER = '1.0.22';
 const WhatsNew = {
