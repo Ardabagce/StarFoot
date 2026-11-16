@@ -1660,3 +1660,176 @@
 8520|Anak laki-lakimu lahir!
 8525|Anak perempuanmu lahir!
 8550|Seret pemain ke pemain lain untuk menukar posisi. Tahan sebentar pemain cadangan untuk menyeretnya. Ketuk untuk membuka kartu pemain.
+8552|Ponsel
+1640|Dipakai
+8553|Milikmu
+8554|Malam
+8555|Lampu stadion
+8556|Matahari terbenam
+8557|Juni
+8558|Juli
+8559|Sen
+8560|Sel
+8561|Rab
+8562|Kam
+8563|Jum
+8564|Sab
+8565|Min
+8566|Senin
+8567|Selasa
+8568|Rabu
+8569|Kamis
+8570|Jumat
+8571|Sabtu
+8572|Minggu
+8573|Latihan tim
+8574|Pekan piala
+8730|Ulang tahun {0}
+8575|Ibu
+8576|Ayah
+8577|Ibu nonton pertandinganmu, Nak. Ibu bangga sekali.
+8578|Makanmu teratur, kan? Jaga dirimu.
+8581|Datang makan hari Minggu, Ibu masak makanan favoritmu.
+8582|Tetangga selalu menanyakanmu, kamu sudah terkenal!
+8583|Ibu dan Ayah lagi membicarakanmu. Kami rindu sekali.
+8584|Malam ini aku datang
+8585|Senang sekali! Ibu siapkan meja sekarang.
+8588|Aku juga sayang Ibu
+8589|Anakku sayang. Hati-hati, ya.
+8592|Kemarin kamu terlalu sendirian di sayap, hati-hati.
+8593|Jangan bolos latihan, bakat saja tidak cukup.
+8594|Ayah nonton ulang pertandingan lamamu, masa-masa yang indah!
+8595|Suatu hari Ayah akan menontonmu dari tribun.
+8596|Asal kamu tahu, anak-anak sekitar rumah pakai jerseymu.
+8597|Ayo nonton pertandingan bareng akhir pekan ini
+8598|Camilannya dari Ayah!
+8599|Ayah benar
+8600|Bagus, Nak. Ayah pelatih pertamamu, jangan lupa.
+8603|Kamu kosong malam ini? Aku kangen.
+8606|Selebrasimu di pertandingan lucu sekali.
+8607|Akhir pekan ini kita liburan ke mana gitu?
+8608|Ada restoran baru buka, ke sana yuk?
+8609|Seharian ini aku terus memikirkanmu.
+8610|Ayo ketemu malam ini
+8611|Asyik! Aku siap-siap.
+8613|Aku sayang kamu
+8614|Aku juga sayang kamu.
+8726|Pelatih kepala · {0}
+8615|Aku mau kamu kerja lebih keras saat latihan.
+8616|Minggu ini aku mengawasimu, bersiaplah.
+8617|Bantu tim lebih banyak saat bertahan.
+8618|Performamu bagus, pertahankan.
+8619|Jangan lewatkan rapat taktik sebelum pertandingan.
+8620|Saya ke kantor Anda, Pelatih, mari bicara
+8621|Datanglah, pintuku terbuka.
+8622|Siap, Pelatih
+8623|Bagus. Buktikan di lapangan.
+8626|Grup tim
+8627|Malam ini kita semua makan bareng, ikut?
+8628|Ngopi besok sebelum latihan?
+8629|Ada perayaan setelah pertandingan!
+8630|Ayo sambut anak baru.
+8631|Aku ikut!
+8632|Mantap, kita pesan meja.
+8633|Kali ini lewat dulu, aku mau istirahat
+8634|Oke, jaga dirimu.
+8725|Ada {0} tawaran sponsor untukmu. Sudah kutaruh di aplikasi Agen.
+8635|Bursa transfer segera dibuka, kita pasang telinga.
+8636|Sepertinya ada merek yang ingin bekerja sama denganmu, sedang kuurus.
+8637|Performamu menaikkan nilaimu, teruskan.
+8638|Tunjukkan tawarannya
+8639|Semua sudah ada di aplikasi.
+8640|Terima kasih, kamu yang paling tahu
+8641|Tenang, aku tahu pekerjaanku.
+8642|Temanmu
+8643|Bro, aku nonton pertandinganmu, kamu legendaris!
+8644|Info, akhir pekan ada futsal sama geng lama dari kampung.
+8645|Kapan kita ketemu? Sudah lama sekali!
+8648|Aku butuh jersey bertanda tangan, sepupuku fans beratmu.
+8649|Ayo ketemu dalam waktu dekat
+8650|Janji? Aku tunggu!
+8653|Makasih, bro
+8654|Kapan saja!
+8655|Ayah, minggu ini aku boleh datang makan?
+8656|Pekerjaan lancar, jangan khawatir.
+8657|Ayah, hari ini main bola, yuk?
+8658|Di sekolah semua membicarakan pertandinganmu!
+8659|Belikan aku sepatu bola baru, ya?
+8660|Hore!
+8661|Aku juga!
+8732|{0} km/j
+8735|{0} dtk
+8736|{0} hp
+8734|{0} knot
+1180|Beranda
+8662|RumahKu
+8663|Mobil
+8664|belanja
+8665|Pesan
+8666|Kalender
+8667|Bank
+8668|Pertandingan kampung
+8669|Mungkin ada pencari bakat yang menonton
+8670|dibalas
+8671|Pesan baru datang minggu depan.
+8672|buka aplikasi
+8673|Balasanmu
+8674|Minggu ini
+8675|Buka halamanmu
+8676|Halaman ensiklopedimu diperbarui otomatis seiring kariermu.
+8677|Total nilai
+8678|Kamu belum punya rumah, mobil, atau barang mewah. Cek aplikasi RumahKu dan Mobil.
+8681|Rekening giro
+8682|Asetmu
+8683|Tidak ada acara. Hari istirahat.
+8686|Agen dan sponsor terbuka di usia 16.
+8687|Kamu belum punya agen.
+8688|Tempat tinggalmu
+8689|Rumah lamamu
+8690|Kamu menyewa
+8691|Kamu tinggal di sini
+1653|Milikmu
+8692|Rumah dijual
+8693|Apartemen sewa
+8694|Pusat kota
+8695|DI GARASI
+8696|Tidak ada kendaraan dijual saat ini.
+8697|Mobil dan motor butuh SIM.
+8698|Diskon bintang
+8699|Tas, perawatan, perlengkapan, dan gaya hidup
+8700|Ponsel pertamamu
+8731|Kamera {0} MP
+8728|{0} wallpaper
+8701|Ponsel terbaikmu yang dipakai. Kamera bagus memberi sedikit lebih banyak interaksi di StarFeed.
+8704|Main tanpa iklan dan keistimewaan bintang
+8705|Semua termasuk Premium: semua mode dan keistimewaan ekstra
+8706|Tampilan emas, skenario, akses awal
+8707|Pimpin sebuah tim
+8708|Satu turnamen bersama timnasmu
+8709|✓ Milikmu
+8710|Pembelian dilakukan di versi App Store dan Google Play.
+8711|Pembelian dan paketmu
+8712|Wallpaper
+8713|Perangkat
+8714|Model
+8715|Kamera
+8716|Baterai
+8717|Pengaturan game
+8718|Tutup ponsel
+8719|Cari agen
+8720|Mendatangkan lebih banyak tawaran
+8729|{0} tawaran baru
+8721|Agen dan sponsor
+8722|Di ponselmu
+8727|{0} sponsor aktif
+8723|Buka profilmu di ponsel
+8733|{0} tepuk tangan
+8724|Orion Pro
+1656|Sponsor
+8737|Setiap minggu moral +2, Ketenaran +4
+8741|{0} tahun
+8738|2 KT · 95 m² · Pusat kota
+8740|{0} Agen dan sponsor
+8739|{0} Buka profilmu di ponsel
+8742|Kecepatan maks
+8743|Tenaga

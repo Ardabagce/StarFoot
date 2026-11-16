@@ -1660,3 +1660,176 @@
 8520|Você teve um menino!
 8525|Você teve uma menina!
 8550|Arraste um jogador sobre outro para trocá-los. Segure um reserva por um instante para arrastá-lo. Toque para abrir a ficha.
+8552|Celular
+1640|Em uso
+8553|Seu
+8554|Noite
+8555|Refletores do estádio
+8556|Pôr do sol
+8557|Junho
+8558|Julho
+8559|Seg
+8560|Ter
+8561|Qua
+8562|Qui
+8563|Sex
+8564|Sáb
+8565|Dom
+8566|Segunda-feira
+8567|Terça-feira
+8568|Quarta-feira
+8569|Quinta-feira
+8570|Sexta-feira
+8571|Sábado
+8572|Domingo
+8573|Treino do time
+8574|Semana de copa
+8730|Aniversário de {0}
+8575|Mãe
+8576|Pai
+8577|Vi seu jogo, filho. Tenho muito orgulho de você.
+8578|Está comendo direito? Se cuida.
+8581|Vem almoçar domingo, vou fazer sua comida favorita.
+8582|Os vizinhos vivem perguntando de você, você ficou famoso!
+8583|Eu e seu pai estávamos falando de você. Sentimos muita saudade.
+8584|Vou aí hoje à noite
+8585|Que alegria! Já vou pôr a mesa.
+8588|Também te amo, mãe
+8589|Meu querido. Se cuida.
+8592|Ontem você ficou muito isolado na ponta, cuidado com isso.
+8593|Não falte aos treinos, talento sozinho não basta.
+8594|Revi seus jogos antigos, que tempos!
+8595|Um dia vou te ver da arquibancada.
+8596|Fique sabendo: a molecada do bairro usa sua camisa.
+8597|Vamos ver um jogo juntos no fim de semana
+8598|O petisco é por minha conta!
+8599|Você tem razão, pai
+8600|Muito bem. Eu fui seu primeiro técnico, não esqueça.
+8603|Está livre hoje à noite? Estou com saudade.
+8606|Sua comemoração no jogo foi muito fofa.
+8607|Vamos fugir para algum lugar no fim de semana?
+8608|Abriu um restaurante novo, vamos?
+8609|Pensei em você o dia todo.
+8610|Vamos nos encontrar hoje à noite
+8611|Ótimo! Vou estar pronta.
+8613|Te amo
+8614|Também te amo.
+8726|Técnico · {0}
+8615|Quero que você se dedique mais nos treinos.
+8616|Estou de olho em você esta semana, esteja pronto.
+8617|Ajude mais o time na defesa.
+8618|Você está em boa fase, continue assim.
+8619|Não perca a reunião tática antes do jogo.
+8620|Vou à sua sala, professor, vamos conversar
+8621|Pode vir, minha porta está aberta.
+8622|Entendido, professor
+8623|Ótimo. Mostre em campo.
+8626|Grupo do time
+8627|Vamos todos jantar hoje à noite, você vem?
+8628|Café amanhã antes do treino?
+8629|Tem comemoração depois do jogo!
+8630|Vamos dar boas-vindas ao novato.
+8631|Tô dentro!
+8632|Show, vamos reservar uma mesa.
+8633|Dessa vez não, vou descansar
+8634|Beleza, se cuida.
+8725|{0} propostas de patrocínio te esperam. Coloquei no app do empresário.
+8635|A janela de transferências está chegando, estamos atentos.
+8636|Uma marca pode querer trabalhar com você, estou acompanhando.
+8637|Seu desempenho está valorizando você, continue assim.
+8638|Me mostra as propostas
+8639|Estão todas no app.
+8640|Valeu, você que sabe
+8641|Fica tranquilo, sei o que estou fazendo.
+8642|Seu amigo
+8643|Mano, vi seu jogo, você foi lenda!
+8644|Só avisando: fim de semana tem pelada com a galera do bairro.
+8645|Quando a gente se vê? Faz tempo!
+8648|Preciso de uma camisa autografada, meu primo é seu fã número um.
+8649|Vamos marcar logo
+8650|Promete? Tô esperando!
+8653|Valeu, mano
+8654|Sempre!
+8655|Pai, posso ir jantar aí esta semana?
+8656|No trabalho está tudo bem, não se preocupe.
+8657|Pai, vamos jogar bola hoje?
+8658|Na escola todo mundo falou do seu jogo!
+8659|Você me compra chuteira nova?
+8660|Eba!
+8661|Eu também!
+8732|{0} km/h
+8735|{0} s
+8736|{0} cv
+8734|{0} nós
+1180|Início
+8662|MinhaCasa
+8663|Carros
+8664|compras
+8665|Mensagens
+8666|Calendário
+8667|Banco
+8668|Pelada de rua
+8669|Um olheiro pode estar assistindo
+8670|respondido
+8671|Novas mensagens chegam na próxima semana.
+8672|abrir app
+8673|Sua resposta
+8674|Esta semana
+8675|Abrir sua página
+8676|Sua página na enciclopédia se atualiza conforme a carreira avança.
+8677|Valor total
+8678|Você ainda não tem casa, carro nem item de luxo. Veja os apps MinhaCasa e Carros.
+8681|Conta corrente
+8682|Seus bens
+8683|Sem eventos. Dia de descanso.
+8686|Empresário e patrocínios liberam aos 16 anos.
+8687|Você ainda não tem empresário.
+8688|Onde você mora
+8689|Sua antiga casa
+8690|Você mora de aluguel
+8691|Você mora aqui
+1653|Seu
+8692|Casas à venda
+8693|Apartamento alugado
+8694|Centro da cidade
+8695|NA GARAGEM
+8696|Nenhum veículo à venda agora.
+8697|Carros e motos exigem carteira de motorista.
+8698|Promoção de estrela
+8699|Bolsa, cuidados, equipamento e estilo de vida
+8700|Seu primeiro celular
+8731|Câmera de {0} MP
+8728|{0} papéis de parede
+8701|Seu melhor celular é usado. Uma câmera melhor traz um pouco mais de interação no StarFeed.
+8704|Jogo sem anúncios e vantagens de estrela
+8705|Tudo, Premium incluso: todos os modos e vantagens extras
+8706|Visuais dourados, cenários, acesso antecipado
+8707|Assuma o comando de um time
+8708|Um torneio com sua seleção
+8709|✓ Seu
+8710|As compras são feitas nas versões da App Store e do Google Play.
+8711|Suas compras e pacotes
+8712|Papel de parede
+8713|Aparelho
+8714|Modelo
+8715|Câmera
+8716|Bateria
+8717|Configurações do jogo
+8718|Fechar celular
+8719|Encontrar empresário
+8720|Traz mais propostas
+8729|{0} novas propostas
+8721|Empresário e patrocinadores
+8722|No seu celular
+8727|{0} patrocinadores ativos
+8723|Abra seu perfil no celular
+8733|{0} aplausos
+8724|Orion Pro
+1656|Patrocínios
+8737|Toda semana moral +2, Fama +4
+8741|{0} anos
+8738|2 quartos · 95 m² · Centro
+8740|{0} Empresário e patrocinadores
+8739|{0} Abra seu perfil no celular
+8742|Vel. máxima
+8743|Potência

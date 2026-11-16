@@ -232,6 +232,7 @@ const Match = {
       const tag = { 'goal own': 'GOL', 'goal opp': 'GOL', info: 'BİLGİ', bad: 'KART' }[cls];
       d.innerHTML = (tag ? `<em class="ft">${tag}</em>` : '') + U.plain(txt);
       const f = $('mt-feed');
+      if (!f) return;
       f.prepend(d);
     };
     // seviyeye göre maç sonu tahmini enerji: kalan dakikalar × dakika başı tüketim + kritik anların ortalama payı

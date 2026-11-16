@@ -386,7 +386,7 @@ const CM_BOND = [
     const loc = (x) => { const cl = Coach.club(x.cl) || c; return x.k === 'match' || x.k === 'trophy' || x.k === 'fans' ? `${cl.name} Stadyumu` : x.k === 'club' || x.k === 'sign' ? `${cl.name} Basın Salonu` : `${cl.name} Antrenman Merkezi`; };
     const card = (x, i) => `<div class="cmf-post"><div class="cmf-h"><canvas class="cmf-av" width="80" height="80"></canvas><span><b data-noi18n>${me}</b>${ver}<small>${U.esc(loc(x))}</small></span></div>
         <canvas class="cmf-img" data-fi="${i}"></canvas>
-        <div class="cmf-f" data-emo><span>❤️ ${fmt(x.l)}</span><span>💬 ${fmt(x.c)}</span><small>${x.y} · ${x.r}. hafta</small></div>
+        <div class="cmf-f" data-emo><span>⭐ ${fmt(x.l)}</span><span>💬 ${fmt(x.c)}</span><small>${x.y} · ${x.r}. hafta</small></div>
         <p><b data-noi18n>${U.esc(handle.slice(1))}</b> ${U.esc(x.t)}</p></div>`;
     return `<div class="cmf-prof"><canvas class="cmf-big" width="160" height="160"></canvas><div><b data-noi18n>${me}</b>${ver}<small data-noi18n>${handle}</small>
       <div class="cmf-n"><span><b>${f.length}</b> gönderi</span><span><b>${fmt(Coach.fol())}</b> takipçi</span></div>

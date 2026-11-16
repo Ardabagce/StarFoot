@@ -1074,7 +1074,7 @@ const Game = {
       Cups.startTournament(s);
       s.tournament.year = s.season.year;
       Game.render();
-      Cups.runTournament(s).then(() => Game.endSeason());
+      Cups.runTournament(s).then(() => { if (Game.state === s && s.tournament && s.tournament.done) Game.endSeason(); });
       return;
     }
     // sezon sonu zaten hesaplandıysa (tören sürerken tekrar tetiklenirse) yeniden işleme
@@ -2923,7 +2923,7 @@ I18N.onChange = () => {
 };
 
 window.addEventListener('DOMContentLoaded', () => {
-  U.$$('#tabs button').forEach((b) => (b.onclick = () => { Game.tab = b.dataset.tab; Game.render(); window.scrollTo(0, 0); }));
+  U.$$('#tabs button[data-tab]').forEach((b) => (b.onclick = () => { Game.tab = b.dataset.tab; Game.render(); window.scrollTo(0, 0); }));
   document.getElementById('logo').onclick = () => { if (Game.state && Game.state.mode === 'wc' && typeof WC !== 'undefined') return WC.askExit(); if (Game.state) { Game.tab = 'home'; Game.render(); } };
   document.getElementById('notif-btn').onclick = () => Notifs.open();
   document.getElementById('set-btn').onclick = () => SetSheet.open();

@@ -1660,3 +1660,176 @@
 8520|Tu as un petit garçon !
 8525|Tu as une petite fille !
 8550|Fais glisser un joueur sur un autre pour les échanger. Appuie brièvement sur un remplaçant pour le déplacer. Touche-le pour ouvrir sa fiche.
+8552|Téléphone
+1640|Utilisé
+8553|À toi
+8554|Nuit
+8555|Projecteurs du stade
+8556|Coucher de soleil
+8557|Juin
+8558|Juillet
+8559|Lun
+8560|Mar
+8561|Mer
+8562|Jeu
+8563|Ven
+8564|Sam
+8565|Dim
+8566|Lundi
+8567|Mardi
+8568|Mercredi
+8569|Jeudi
+8570|Vendredi
+8571|Samedi
+8572|Dimanche
+8573|Entraînement collectif
+8574|Semaine de coupe
+8730|Anniversaire de {0}
+8575|Maman
+8576|Papa
+8577|J'ai regardé ton match, mon fils. Je suis si fière de toi.
+8578|Tu manges bien au moins ? Prends soin de toi.
+8581|Viens manger dimanche, je fais ton plat préféré.
+8582|Les voisins demandent tout le temps de tes nouvelles, tu es célèbre !
+8583|On parlait de toi avec ton père. Tu nous manques beaucoup.
+8584|Je passe ce soir
+8585|Oh, quelle joie ! Je mets la table tout de suite.
+8588|Je t'aime aussi, maman
+8589|Mon chéri. Prends soin de toi.
+8592|Hier tu étais trop isolé sur l'aile, fais attention.
+8593|Ne saute pas les entraînements, le talent ne suffit pas.
+8594|J'ai revu tes anciens matchs, quelle époque !
+8595|Un jour, je viendrai te voir depuis les tribunes.
+8596|Pour info, tout le quartier porte ton maillot.
+8597|Regardons un match ensemble ce week-end
+8598|Je m'occupe des grignotages !
+8599|Tu as raison, papa
+8600|Bravo. Je suis ton premier entraîneur, ne l'oublie pas.
+8603|Tu es libre ce soir ? Tu me manques.
+8606|Ta célébration pendant le match était trop mignonne.
+8607|On s'échappe quelque part ce week-end ?
+8608|Un nouveau restaurant a ouvert, on y va ?
+8609|J'ai pensé à toi toute la journée.
+8610|Voyons-nous ce soir
+8611|Super ! Je serai prête.
+8613|Je t'aime
+8614|Moi aussi je t'aime.
+8726|Entraîneur · {0}
+8615|Je veux que tu travailles plus à l'entraînement.
+8616|Je t'observe cette semaine, sois prêt.
+8617|Aide davantage l'équipe en défense.
+8618|Tu es en forme, continue comme ça.
+8619|Ne rate pas la réunion tactique avant le match.
+8620|Je passe à votre bureau, coach, parlons-en
+8621|Viens, ma porte est ouverte.
+8622|Compris, coach
+8623|Bien. Montre-le sur le terrain.
+8626|Groupe de l'équipe
+8627|On sort tous dîner ce soir, tu viens ?
+8628|Un café demain avant l'entraînement ?
+8629|On fait la fête après le match !
+8630|Souhaitons la bienvenue au petit nouveau.
+8631|J'arrive !
+8632|Super, on réserve une table.
+8633|Je passe mon tour, je vais me reposer
+8634|OK, prends soin de toi.
+8725|{0} offres de sponsoring t'attendent. Je les ai mises dans l'appli Agent.
+8635|Le mercato approche, on reste à l'écoute.
+8636|Une marque veut peut-être travailler avec toi, je m'en occupe.
+8637|Tes performances font grimper ta valeur, continue.
+8638|Montre-moi les offres
+8639|Tout est dans l'appli.
+8640|Merci, je te fais confiance
+8641|T'inquiète, je connais mon métier.
+8642|Ton ami
+8643|Frérot, j'ai vu ton match, t'étais une légende !
+8644|Pour info, il y a un five avec l'ancienne bande du quartier ce week-end.
+8645|On se voit quand ? Ça fait une éternité !
+8648|Il me faut un maillot signé, mon cousin est ton plus grand fan.
+8649|On se voit bientôt
+8650|Promis ? Je t'attends !
+8653|Merci, frérot
+8654|Quand tu veux !
+8655|Papa, je peux venir dîner cette semaine ?
+8656|Au travail tout va bien, ne t'inquiète pas.
+8657|Papa, on joue au foot aujourd'hui ?
+8658|À l'école, tout le monde a parlé de ton match !
+8659|Tu m'achètes des nouveaux crampons ?
+8660|Youpi !
+8661|Moi aussi !
+8732|{0} km/h
+8735|{0} s
+8736|{0} ch
+8734|{0} nœuds
+1180|Accueil
+8662|MaMaison
+8663|Autos
+8664|shopping
+8665|Messages
+8666|Calendrier
+8667|Banque
+8668|Match de quartier
+8669|Un recruteur regarde peut-être
+8670|répondu
+8671|De nouveaux messages arriveront la semaine prochaine.
+8672|ouvrir l'appli
+8673|Ta réponse
+8674|Cette semaine
+8675|Ouvrir ta page
+8676|Ta page d'encyclopédie se met à jour au fil de ta carrière.
+8677|Valeur totale
+8678|Tu n'as encore ni maison, ni voiture, ni objet de luxe. Jette un œil aux applis MaMaison et Autos.
+8681|Compte courant
+8682|Tes biens
+8683|Aucun événement. Jour de repos.
+8686|Agent et sponsors se débloquent à 16 ans.
+8687|Tu n'as pas encore d'agent.
+8688|Là où tu vis
+8689|Ton ancien logement
+8690|Tu es locataire
+8691|Tu vis ici
+1653|À toi
+8692|Maisons à vendre
+8693|Appartement en location
+8694|Centre-ville
+8695|AU GARAGE
+8696|Aucun véhicule en vente pour le moment.
+8697|Il faut le permis pour les voitures et les motos.
+8698|Soldes de star
+8699|Sac, soins, équipement et style de vie
+8700|Ton premier téléphone
+8731|Appareil photo {0} Mpx
+8728|{0} fonds d'écran
+8701|Ton meilleur téléphone est utilisé. Un meilleur appareil photo apporte un peu plus d'interactions sur StarFeed.
+8704|Jeu sans pub et avantages de star
+8705|Tout, Premium compris : tous les modes et bonus
+8706|Looks dorés, scénarios, accès anticipé
+8707|Prends les rênes d'une équipe
+8708|Un tournoi avec ta sélection
+8709|✓ À toi
+8710|Les achats se font dans les versions App Store et Google Play.
+8711|Tes achats et packs
+8712|Fond d'écran
+8713|Appareil
+8714|Modèle
+8715|Appareil photo
+8716|Batterie
+8717|Paramètres du jeu
+8718|Fermer le téléphone
+8719|Trouver un agent
+8720|Apporte plus d'offres
+8729|{0} nouvelles offres
+8721|Agent et sponsors
+8722|Sur ton téléphone
+8727|{0} sponsors actifs
+8723|Ouvre ton profil sur ton téléphone
+8733|{0} bravos
+8724|Orion Pro
+1656|Sponsoring
+8737|Chaque semaine moral +2, Célébrité +4
+8741|{0} ans
+8738|3 pièces · 95 m² · Centre-ville
+8740|{0} Agent et sponsors
+8739|{0} Ouvre ton profil sur ton téléphone
+8742|Vitesse max
+8743|Puissance

@@ -515,6 +515,7 @@ const Cups = {
         if (ctx.role === 'out' && p.injuryWeeks === 0) ctx.role = 'bench';
         ctx.subChance = 0.7;
         const sum = await Match.run(ctx, s);
+        if (s.tournament !== t) return; // maç sırasında başka kayıt yüklendiyse eski turnuvayı sürdürme
         Game.applyMatch(sum, ctx, 'intl');
         t.myGoals += sum.goals;
         let win = sum.hs > sum.as ? 0 : sum.as > sum.hs ? 1 : null, pens = null;

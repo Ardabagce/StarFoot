@@ -1660,3 +1660,176 @@
 8520|¡Has tenido un niño!
 8525|¡Has tenido una niña!
 8550|Arrastra un jugador sobre otro para intercambiarlos. Mantén pulsado un suplente un momento para arrastrarlo. Tócalo para abrir su ficha.
+8552|Teléfono
+1640|En uso
+8553|Tuyo
+8554|Noche
+8555|Focos del estadio
+8556|Atardecer
+8557|Junio
+8558|Julio
+8559|Lun
+8560|Mar
+8561|Mié
+8562|Jue
+8563|Vie
+8564|Sáb
+8565|Dom
+8566|Lunes
+8567|Martes
+8568|Miércoles
+8569|Jueves
+8570|Viernes
+8571|Sábado
+8572|Domingo
+8573|Entrenamiento del equipo
+8574|Semana de copa
+8730|Cumpleaños de {0}
+8575|Mamá
+8576|Papá
+8577|Vi tu partido, hijo. Estoy muy orgullosa de ti.
+8578|¿Estás comiendo bien? Cuídate.
+8581|Ven a comer el domingo, preparo tu plato favorito.
+8582|Los vecinos siempre preguntan por ti, ¡eres famoso!
+8583|Tu padre y yo hablábamos de ti. Te echamos mucho de menos.
+8584|Esta noche voy a casa
+8585|¡Qué alegría! Ya pongo la mesa.
+8588|Yo también te quiero, mamá
+8589|Mi niño. Cuídate.
+8592|Ayer te quedaste muy solo en la banda, ojo con eso.
+8593|No faltes a los entrenamientos, el talento solo no basta.
+8594|Vi tus partidos antiguos, ¡qué tiempos!
+8595|Un día iré a verte desde la grada.
+8596|Que sepas que en el barrio todos llevan tu camiseta.
+8597|Veamos un partido juntos el fin de semana
+8598|¡Las pipas las pongo yo!
+8599|Tienes razón, papá
+8600|Así me gusta. Fui tu primer entrenador, no lo olvides.
+8603|¿Estás libre esta noche? Te echo de menos.
+8606|Tu celebración en el partido fue muy tierna.
+8607|¿Nos escapamos a algún sitio el fin de semana?
+8608|Han abierto un restaurante nuevo, ¿vamos?
+8609|Hoy no he dejado de pensar en ti.
+8610|Quedemos esta noche
+8611|¡Genial! Estaré lista.
+8613|Te quiero
+8614|Yo también te quiero.
+8726|Entrenador · {0}
+8615|Quiero que trabajes más en los entrenamientos.
+8616|Esta semana te estoy observando, prepárate.
+8617|Ayuda más al equipo en defensa.
+8618|Estás en buena forma, sigue así.
+8619|No te pierdas la charla táctica antes del partido.
+8620|Paso por su despacho, míster, hablemos
+8621|Ven, mi puerta está abierta.
+8622|Entendido, míster
+8623|Bien. Demuéstralo en el campo.
+8626|Grupo del equipo
+8627|Esta noche salimos todos a cenar, ¿vienes?
+8628|¿Café mañana antes del entreno?
+8629|¡Hay celebración después del partido!
+8630|Démosle la bienvenida al nuevo.
+8631|¡Voy!
+8632|Genial, reservamos mesa.
+8633|Esta vez paso, voy a descansar
+8634|Vale, cuídate.
+8725|Tienes {0} ofertas de patrocinio. Las he puesto en la app del agente.
+8635|Se acerca el mercado de fichajes, estamos atentos.
+8636|Puede que una marca quiera trabajar contigo, estoy en ello.
+8637|Tu rendimiento está subiendo tu valor, sigue así.
+8638|Enséñame las ofertas
+8639|Están todas en la app.
+8640|Gracias, tú sabrás
+8641|Tranquilo, sé hacer mi trabajo.
+8642|Tu amigo
+8643|Tío, vi tu partido, ¡estuviste de leyenda!
+8644|Para que lo sepas, el fin de semana hay fútbol con la pandilla del barrio.
+8645|¿Cuándo quedamos? ¡Hace siglos!
+8648|Necesito una camiseta firmada, mi primo es tu fan número uno.
+8649|Quedemos pronto
+8650|¿Prometido? ¡Te espero!
+8653|Gracias, tío
+8654|¡Cuando quieras!
+8655|Papá, ¿puedo ir a cenar esta semana?
+8656|En el trabajo todo va bien, no te preocupes.
+8657|Papá, ¿jugamos al fútbol hoy?
+8658|¡En el cole todos hablaron de tu partido!
+8659|¿Me compras unas botas nuevas?
+8660|¡Bien!
+8661|¡Y yo a ti!
+8732|{0} km/h
+8735|{0} s
+8736|{0} CV
+8734|{0} nudos
+1180|Inicio
+8662|MiCasa
+8663|Coches
+8664|compras
+8665|Mensajes
+8666|Calendario
+8667|Banco
+8668|Partido de barrio
+8669|Puede que un ojeador esté mirando
+8670|respondido
+8671|La próxima semana llegarán mensajes nuevos.
+8672|abrir app
+8673|Tu respuesta
+8674|Esta semana
+8675|Abrir tu página
+8676|Tu página de la enciclopedia se actualiza sola a medida que avanza tu carrera.
+8677|Valor total
+8678|Aún no tienes casa, coche ni artículos de lujo. Echa un vistazo a las apps MiCasa y Coches.
+8681|Cuenta corriente
+8682|Tus bienes
+8683|Sin eventos. Día de descanso.
+8686|El agente y los patrocinios se desbloquean a los 16 años.
+8687|Aún no tienes agente.
+8688|Donde vives ahora
+8689|Tu antigua casa
+8690|Vives de alquiler
+8691|Vives aquí
+1653|Tuya
+8692|Casas en venta
+8693|Piso de alquiler
+8694|Centro de la ciudad
+8695|EN EL GARAJE
+8696|No hay vehículos a la venta ahora.
+8697|Para coches y motos necesitas carné de conducir.
+8698|Rebajas de estrella
+8699|Bolsa, cuidado, equipo y estilo de vida
+8700|Tu primer teléfono
+8731|Cámara de {0} MP
+8728|{0} fondos de pantalla
+8701|Se usa tu mejor teléfono. Una buena cámara trae algo más de interacción en StarFeed.
+8704|Juego sin anuncios y ventajas de estrella
+8705|Todo, Premium incluido: todos los modos y ventajas extra
+8706|Aspectos dorados, escenarios, acceso anticipado
+8707|Ponte al frente de un equipo
+8708|Un torneo con tu selección
+8709|✓ Tuyo
+8710|Las compras se hacen en las versiones de App Store y Google Play.
+8711|Tus compras y packs
+8712|Fondo de pantalla
+8713|Dispositivo
+8714|Modelo
+8715|Cámara
+8716|Batería
+8717|Ajustes del juego
+8718|Cerrar teléfono
+8719|Busca agente
+8720|Consigue más ofertas
+8729|{0} ofertas nuevas
+8721|Agente y patrocinadores
+8722|En tu teléfono
+8727|{0} patrocinadores activos
+8723|Abre tu perfil en el teléfono
+8733|{0} aplausos
+8724|Orion Pro
+1656|Patrocinios
+8737|Cada semana moral +2, Fama +4
+8741|{0} años
+8738|2 hab. · 95 m² · Centro
+8740|{0} Agente y patrocinadores
+8739|{0} Abre tu perfil en el teléfono
+8742|Vel. máxima
+8743|Potencia

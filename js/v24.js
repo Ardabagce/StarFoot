@@ -314,6 +314,7 @@
       : a <= 12 ? [['ball', 'Birlikte top oyna', ['Sol ayağıyla harika bir gol attı.', 'Sana çalım attı ve çok gurur duydu.']], ['homework', 'Ödevine yardım et', ['Matematik ödevini birlikte bitirdiniz.', 'Proje ödevi sınıfın en iyisi seçildi.']], ['match', 'Maçına götür', ['Tribünde formanı giydi, hiç susmadı.', 'Maçtan sonra soyunma odasına götürdün, çok mutlu oldu.']]]
         : a <= 17 ? [['talk', 'Uzun bir sohbet', ['Okul ve arkadaşları hakkında konuştunuz.', 'Gelecek hayallerini anlattı.']], ['watch', 'Onun maçını izle', ['Tribünde seni görünce daha iyi oynadı.', 'Takımının en iyisiydi.']], ['trip', 'Hafta sonu gezisi', ['Kampta güzel bir hafta sonu geçirdiniz.', 'Birlikte yeni bir şehir gezdiniz.']]]
           : [['dinner', 'Birlikte yemek', ['Eski günleri konuşup çok güldünüz.', 'Sana iş hayatından bahsetti.']], ['talk', 'Hayatı hakkında konuş', ['Kararlarında sana danıştı.', 'Senin gibi olmak istediğini söyledi.']]]);
+  Life.kidActs = (a) => ACTS(a); // telefon: çocuğun mesajına uygun aktivite
   const bar = (v, c) => `<div class="lf-bar"><i style="width:${U.clamp(v, 0, 100)}%;background:${c}"></i></div>`;
 
   // haftalık: bağ azalır, evliyken bebek haberi gelebilir, küçük olaylar
@@ -410,7 +411,7 @@
   const open = () => {
     const m = document.getElementById('modal');
     if (m && !m.classList.contains('hidden') && m.childElementCount > 0) return true;
-    return !!document.querySelector('.set-sheet.on');
+    return !!document.querySelector('.set-sheet.on, .ph-ov.on');
   };
   const scroll0 = window.scrollTo.bind(window);
   const lock = () => {

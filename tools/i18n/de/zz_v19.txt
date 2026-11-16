@@ -1660,3 +1660,176 @@
 8520|Du hast einen Sohn bekommen!
 8525|Du hast eine Tochter bekommen!
 8550|Zieh einen Spieler auf einen anderen, um sie zu tauschen. Halte einen Ersatzspieler kurz gedrückt, um ihn zu ziehen. Tippen öffnet die Spielerkarte.
+8552|Handy
+1640|In Benutzung
+8553|Gekauft
+8554|Nacht
+8555|Flutlicht
+8556|Sonnenuntergang
+8557|Juni
+8558|Juli
+8559|Mo
+8560|Di
+8561|Mi
+8562|Do
+8563|Fr
+8564|Sa
+8565|So
+8566|Montag
+8567|Dienstag
+8568|Mittwoch
+8569|Donnerstag
+8570|Freitag
+8571|Samstag
+8572|Sonntag
+8573|Mannschaftstraining
+8574|Pokalwoche
+8730|{0}s Geburtstag
+8575|Mama
+8576|Papa
+8577|Ich habe dein Spiel gesehen, mein Sohn. Ich bin so stolz auf dich.
+8578|Isst du auch ordentlich? Pass auf dich auf.
+8581|Komm Sonntag zum Essen, ich koche dein Lieblingsessen.
+8582|Die Nachbarn fragen ständig nach dir, du bist berühmt!
+8583|Papa und ich haben über dich geredet. Wir vermissen dich sehr.
+8584|Ich komme heute Abend vorbei
+8585|Oh, wie schön! Ich decke gleich den Tisch.
+8588|Ich hab dich auch lieb, Mama
+8589|Mein Schatz. Pass auf dich auf.
+8592|Gestern warst du auf dem Flügel zu allein, pass da auf.
+8593|Lass kein Training ausfallen, Talent allein reicht nicht.
+8594|Ich habe mir deine alten Spiele angesehen, was für Zeiten!
+8595|Eines Tages schaue ich dir von der Tribüne aus zu.
+8596|Übrigens, die Kinder im Viertel tragen dein Trikot.
+8597|Lass uns am Wochenende zusammen ein Spiel schauen
+8598|Die Snacks gehen auf mich!
+8599|Du hast recht, Papa
+8600|Braver Junge. Ich war dein erster Trainer, vergiss das nicht.
+8603|Hast du heute Abend Zeit? Ich vermisse dich.
+8606|Dein Torjubel war so süß.
+8607|Sollen wir am Wochenende wegfahren?
+8608|Ein neues Restaurant hat aufgemacht, wollen wir hin?
+8609|Ich musste heute die ganze Zeit an dich denken.
+8610|Lass uns heute Abend treffen
+8611|Super! Ich bin bereit.
+8613|Ich liebe dich
+8614|Ich liebe dich auch.
+8726|Cheftrainer · {0}
+8615|Ich will, dass du im Training mehr arbeitest.
+8616|Ich beobachte dich diese Woche, sei bereit.
+8617|Hilf der Mannschaft mehr in der Defensive.
+8618|Du bist gut in Form, weiter so.
+8619|Verpass die Taktikbesprechung vor dem Spiel nicht.
+8620|Ich komme in Ihr Büro, Trainer, lass uns reden
+8621|Komm vorbei, meine Tür steht offen.
+8622|Verstanden, Trainer
+8623|Gut. Zeig es mir auf dem Platz.
+8626|Team-Chat
+8627|Wir gehen heute Abend alle essen, kommst du mit?
+8628|Kaffee vor dem Training morgen?
+8629|Nach dem Spiel wird gefeiert!
+8630|Lasst uns den Neuen willkommen heißen.
+8631|Ich komme!
+8632|Super, wir reservieren einen Tisch.
+8633|Diesmal nicht, ich ruhe mich aus
+8634|Okay, pass auf dich auf.
+8725|{0} Sponsorenangebote warten auf dich. Ich habe sie in die Berater-App gelegt.
+8635|Das Transferfenster naht, wir sind offen für alles.
+8636|Eine Marke will vielleicht mit dir arbeiten, ich bleibe dran.
+8637|Deine Leistungen steigern deinen Marktwert, weiter so.
+8638|Zeig mir die Angebote
+8639|Sie sind alle in der App.
+8640|Danke, du weißt es am besten
+8641|Keine Sorge, ich kenne meinen Job.
+8642|Dein Freund
+8643|Alter, ich hab dein Spiel gesehen, du warst legendär!
+8644|Übrigens, die alte Truppe aus dem Viertel kickt am Wochenende.
+8645|Wann sehen wir uns? Ist ewig her!
+8648|Ich brauche ein signiertes Trikot, mein Cousin ist dein größter Fan.
+8649|Lass uns bald treffen
+8650|Versprochen? Ich warte!
+8653|Danke, Alter
+8654|Jederzeit!
+8655|Papa, kann ich diese Woche zum Essen kommen?
+8656|Bei der Arbeit läuft alles gut, keine Sorge.
+8657|Papa, spielen wir heute Fußball?
+8658|In der Schule haben alle über dein Spiel geredet!
+8659|Kaufst du mir neue Fußballschuhe?
+8660|Juhu!
+8661|Ich dich auch!
+8732|{0} km/h
+8735|{0} s
+8736|{0} PS
+8734|{0} Knoten
+1180|Startbildschirm
+8662|Traumhaus
+8663|Autos
+8664|shopping
+8665|Nachrichten
+8666|Kalender
+8667|Bank
+8668|Straßenspiel
+8669|Vielleicht schaut ein Scout zu
+8670|beantwortet
+8671|Nächste Woche kommen neue Nachrichten.
+8672|App öffnen
+8673|Deine Antwort
+8674|Diese Woche
+8675|Deine Seite öffnen
+8676|Deine Lexikonseite aktualisiert sich mit deiner Karriere.
+8677|Gesamtwert
+8678|Du hast noch kein Haus, Auto oder Luxusgut. Schau in die Apps Traumhaus und Autos.
+8681|Girokonto
+8682|Dein Besitz
+8683|Keine Termine. Ruhetag.
+8686|Berater und Sponsoren gibt es ab 16 Jahren.
+8687|Du hast noch keinen Berater.
+8688|Hier wohnst du
+8689|Deine alte Wohnung
+8690|Zur Miete
+8691|Hier wohnst du
+1653|Deins
+8692|Häuser zum Verkauf
+8693|Mietwohnung
+8694|Stadtzentrum
+8695|IN DER GARAGE
+8696|Gerade keine Fahrzeuge im Angebot.
+8697|Für Autos und Motorräder brauchst du einen Führerschein.
+8698|Star-Rabatt
+8699|Tasche, Pflege, Ausrüstung und Lifestyle
+8700|Dein erstes Handy
+8731|{0}-MP-Kamera
+8728|{0} Hintergründe
+8701|Dein bestes Handy wird benutzt. Eine bessere Kamera bringt etwas mehr Reaktionen auf StarFeed.
+8704|Werbefrei spielen und Star-Vorteile
+8705|Alles inkl. Premium: alle Modi und Extras
+8706|Gold-Looks, Szenarien, früher Zugang
+8707|Übernimm ein Team
+8708|Ein Turnier mit deiner Nationalmannschaft
+8709|✓ Gekauft
+8710|Käufe sind in den App-Store- und Google-Play-Versionen möglich.
+8711|Deine Käufe und Pakete
+8712|Hintergrund
+8713|Gerät
+8714|Modell
+8715|Kamera
+8716|Akku
+8717|Spieleinstellungen
+8718|Handy schließen
+8719|Berater finden
+8720|Bringt mehr Angebote
+8729|{0} neue Angebote
+8721|Berater und Sponsoren
+8722|Auf deinem Handy
+8727|{0} aktive Sponsoren
+8723|Profil auf dem Handy öffnen
+8733|{0} Applaus
+8724|Orion Pro
+1656|Sponsoring
+8737|Jede Woche Moral +2, Ruhm +4
+8741|{0} Jahre alt
+8738|3 Zimmer · 95 m² · Stadtzentrum
+8740|{0} Berater und Sponsoren
+8739|{0} Profil auf dem Handy öffnen
+8742|Höchstgeschw.
+8743|Leistung
