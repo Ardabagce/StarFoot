@@ -3306,7 +3306,8 @@ html.sf-lock { overflow: hidden; }
 .cm-dot.cm-over, .cm-bchip.cm-over { outline: 3px solid #ffcf3f; outline-offset: 2px; }
 .cm-dragging { opacity: .35; }
 .cm-bchip.cm-armed { transform: scale(1.06); border-color: #ffcf3f; box-shadow: 0 6px 18px rgba(0,0,0,.4); transition: transform .12s; }
-.cm-ghost { opacity: .92; box-shadow: 0 10px 30px rgba(0,0,0,.5); }
+.cm-ghost { opacity: .95; box-shadow: 0 10px 30px rgba(0,0,0,.5); }
+.cm-ghost.cm-bchip { background: #1c2c5e; border-color: #ffcf3f; }
 .cm-bchips { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 6px; margin: 6px 0 10px; }
 .cm-bchip { display: flex; flex-direction: column; align-items: flex-start; gap: 1px; padding: 7px 8px; border-radius: 10px; background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1); color: inherit; text-align: left; font: inherit; cursor: grab; min-width: 0; }
 .cm-bchip b { font-size: 16px; line-height: 1; }
