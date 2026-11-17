@@ -610,7 +610,7 @@ document.addEventListener('click', (e) => {
 // ---------- Güncelleme duyurusu (her sürümde bir kez) ----------
 const APP_VER = '1.0.24';
 // Duyuru içeriğinin sürümü: yeni duyuru yazılınca güncellenir (yalnız sürüm atlamak tekrar göstermez)
-const WN_VER = '1.0.22';
+const WN_VER = '1.0.24';
 const WhatsNew = {
   KEY: 'starfoot_whatsnew',
   // Hub'a girişte bir kez gösterir; gösterdiyse true döner. done(): pencere kapanınca çalışır.
@@ -628,6 +628,14 @@ const WhatsNew = {
   // Duyuruyu gösterir (Ayarlar'dan yeniden açılabilir): bu ve bir önceki güncelleme, geçmiş gibi
   show(done) {
     const it = (ic, t, d) => `<li><i data-emo>${ic}</i><span><b>${t}</b><small>${d}</small></span></li>`;
+    const v24 = [
+      it('📱', 'Yeni: Telefonun', 'Alt menüdeki Telefon: Mesajlar, Takvim, StarFeed, Banka, Menajer ve daha fazlası.'),
+      it('❤️', 'Yaşam sekmesi artık telefonda', 'Hayatım, Okul, Spor Mağazası ve Alışveriş telefonda birer uygulama.'),
+      it('💬', 'Olaylar mesaj olarak gelir', 'Ailen, arkadaşların ve hocan sana yazar; seçimini sohbette yaparsın. Hızlı ilerleme artık durmaz.'),
+      it('📅', 'Takvim ve StarFeed akışı', 'Maç günü ve saati takvimde. StarFeed’de kulübün, takım arkadaşların ve ligden paylaşımlar.'),
+      it('👶', 'Kariyerde çocuklar', 'Evlendikten sonra çocukların olabilir; yaşlarına göre onlarla vakit geçir.'),
+      it('🎽', 'Teknik Direktör', 'Dizilişte sürükle-bırak, oyuncu tarzları ve gelişim planları.'),
+    ].join('');
     const v22 = [
       it('🎯', 'Yeni vuruş tarzı: Dokunuş', 'Ayarlar’dan seç: geri çekip nişan al, sonra topun bir noktasına dokun. Yanlar falso, alt kısım aşırtma verir.'),
       it('🧒', 'Hızlı altyapı ve çocuk görünümü', 'Küçük yaşta oluştururken seç: altyapı sezonları 14 maç sürer. Altyapıda oyuncun artık çocuk gibi görünür.'),
@@ -640,13 +648,6 @@ const WhatsNew = {
       it('🧪', 'Erken erişim', 'Yeni özellikler herkese açılmadan önce Diamond’da. İlki: Haftanın Meydan Okuması.'),
       it('◆', 'Kurucu Destekçi', 'Çıkış döneminde Diamond alanlara özel, kalıcı rozet. Oyunu destekleyen herkese teşekkürler!'),
     ].join('');
-    const v20 = [
-      it('🎽', 'Teknik Direktör: 3 kariyer', 'Üç ayrı teknik direktör kariyeri, yeni giriş ekranı ve oluştururken dış görünüş seçimi.'),
-      it('🌍', 'Avrupa kupaları ve milli takım', 'Ligde üst sıralara oyna, Şampiyonlar Kupası’na katıl. Başarılı olursan milli takımdan teklif gelir.'),
-      it('📈', 'Taraftar, oyuncular ve yönetim', 'Sana bakışlarını barlardan izle. Haftada 3 aksiyon: antrenman, dinlenme, takım etkinliği ve daha fazlası.'),
-      it('📸', 'Hocanın sosyal medyası', 'Maçlardan, kupalardan ve transferlerden fotoğraflı paylaşımlar.'),
-      it('🎁', '3 maç ücretsiz dene', 'Teknik Direktör paketini almadan önce takımının başına geç.'),
-    ].join('');
     const has = typeof Star !== 'undefined' && Star.has && Star.has();
     const end = () => { if (done) setTimeout(done, 300); };
     const btns = [{ t: 'Tamam', cls: 'btn-ghost', fn: end }];
@@ -654,12 +655,12 @@ const WhatsNew = {
     Game.modal(`<div class="wn"><div class="ev-tag">Güncelleme geçmişi</div>
       <h2>Yenilikler 🚀</h2>
       <div class="wn-v"><b>${WN_VER}</b><small>Bu güncelleme</small></div>
-      <ul class="wn-l">${v22}</ul>
-      <div class="wn-v old"><b>1.0.21</b><small>Önceki güncelleme</small></div>
+      <ul class="wn-l">${v24}</ul>
+      <div class="wn-v old"><b>1.0.22</b><small>Önceki güncelleme</small></div>
+      <ul class="wn-l old">${v22}</ul>
+      <div class="wn-v old"><b>1.0.21</b></div>
       <ul class="wn-l old">${v21}</ul>
       <p class="wn-note ok">Diamond’a eklenenlerin hiçbiri maçta güç vermez; ücretsiz oyunda hiçbir şey değişmedi.</p>
-      <div class="wn-v old"><b>1.0.20</b></div>
-      <ul class="wn-l old">${v20}</ul>
       <p class="wn-note">Teknik Direktör modu yepyeni bir fikir ve her güncellemede gelişmeye devam edecek. Fikirlerini bekliyoruz!</p></div>`, btns, { wide: true });
     if (typeof Premium !== 'undefined') Premium.track('whatsnew_view', { ver: WN_VER, premium: has ? 1 : 0 });
   },

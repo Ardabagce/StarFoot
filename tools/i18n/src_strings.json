@@ -2872,7 +2872,8 @@
 "lang-ja.js",
 "lang-pt.js",
 "phone.js",
-"premium.js"
+"premium.js",
+"star.js"
 ],
 "{}'a hoş geldin!": [
 "coach.js",
@@ -83894,8 +83895,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"star.js"
+"lang-pt.js"
 ],
 "Üç ayrı teknik direktör kariyeri, yeni giriş ekranı ve oluştururken dış görünüş seçimi.": [
 "lang-ar.js",
@@ -83906,8 +83906,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"star.js"
+"lang-pt.js"
 ],
 "Avrupa kupaları ve milli takım": [
 "lang-ar.js",
@@ -83918,8 +83917,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"star.js"
+"lang-pt.js"
 ],
 "Ligde üst sıralara oyna, Şampiyonlar Kupası’na katıl. Başarılı olursan milli takımdan teklif gelir.": [
 "lang-ar.js",
@@ -83930,8 +83928,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"star.js"
+"lang-pt.js"
 ],
 "Ligde üst sıralara oyna, Şampiyonlar Kupası’na katıl.": [
 "lang-ar.js",
@@ -83986,8 +83983,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"star.js"
+"lang-pt.js"
 ],
 "Sana bakışlarını barlardan izle. Haftada 3 aksiyon: antrenman, dinlenme, takım etkinliği ve daha fazlası.": [
 "lang-ar.js",
@@ -83998,8 +83994,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"star.js"
+"lang-pt.js"
 ],
 "Sana bakışlarını barlardan izle.": [
 "lang-ar.js",
@@ -84054,8 +84049,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"star.js"
+"lang-pt.js"
 ],
 "Maçlardan, kupalardan ve transferlerden fotoğraflı paylaşımlar.": [
 "lang-ar.js",
@@ -84066,8 +84060,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"star.js"
+"lang-pt.js"
 ],
 "3 maç ücretsiz dene": [
 "lang-ar.js",
@@ -84078,8 +84071,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"star.js"
+"lang-pt.js"
 ],
 "Teknik Direktör paketini almadan önce takımının başına geç.": [
 "lang-ar.js",
@@ -84090,8 +84082,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"star.js"
+"lang-pt.js"
 ],
 "Teknik Direktör modu": [
 "lang-ar.js",
@@ -94915,6 +94906,238 @@
 "lang-ja.js",
 "lang-pt.js",
 "phone.js"
+],
+"Alışveriş": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Yeni: Telefonun": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Alt menüdeki Telefon: Mesajlar, Takvim, StarFeed, Banka, Menajer ve daha fazlası.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Yaşam sekmesi artık telefonda": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Hayatım, Okul, Spor Mağazası ve Alışveriş telefonda birer uygulama.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Olaylar mesaj olarak gelir": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Ailen, arkadaşların ve hocan sana yazar; seçimini sohbette yaparsın. Hızlı ilerleme artık durmaz.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Ailen, arkadaşların ve hocan sana yazar; seçimini sohbette yaparsın.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Your family, friends and coach text you, and you choose in the chat.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Hızlı ilerleme artık durmaz.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Fast-forward no longer stops.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Takvim ve StarFeed akışı": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Maç günü ve saati takvimde. StarFeed’de kulübün, takım arkadaşların ve ligden paylaşımlar.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Maç günü ve saati takvimde.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Match day and kickoff time in the calendar.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"StarFeed’de kulübün, takım arkadaşların ve ligden paylaşımlar.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Posts from your club, teammates and the league on StarFeed.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Kariyerde çocuklar": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Evlendikten sonra çocukların olabilir; yaşlarına göre onlarla vakit geçir.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
+],
+"Dizilişte sürükle-bırak, oyuncu tarzları ve gelişim planları.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"star.js"
 ],
 "(Asist)": [
 "lang-ar.js",
@@ -151417,6 +151640,105 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"YENİ: TELEFONUN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YAŞAM SEKMESİ ARTIK TELEFONDA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"OLAYLAR MESAJ OLARAK GELİR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HIZLI İLERLEME ARTIK DURMAZ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"FAST-FORWARD NO LONGER STOPS.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TAKVİM VE STARFEED AKIŞI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MAÇ GÜNÜ VE SAATİ TAKVİMDE.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MATCH DAY AND KICKOFF TIME IN THE CALENDAR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KARİYERDE ÇOCUKLAR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -203305,6 +203627,45 @@
 "Wir bleiben dran.": [
 "lang-de.js"
 ],
+"Shopping": [
+"lang-de.js",
+"lang-en.js",
+"lang-fr.js",
+"lang-it.js"
+],
+"Neu: Dein Handy": [
+"lang-de.js"
+],
+"Handy im unteren Menü: Nachrichten, Kalender, StarFeed, Bank, Berater und mehr.": [
+"lang-de.js"
+],
+"Der Leben-Tab ist jetzt im Handy": [
+"lang-de.js"
+],
+"Mein Leben, Schule, Sportshop und Shopping sind jetzt Apps im Handy.": [
+"lang-de.js"
+],
+"Ereignisse kommen als Nachrichten": [
+"lang-de.js"
+],
+"Familie, Freunde und Trainer schreiben dir, du entscheidest im Chat. Der Schnelldurchlauf stoppt nicht mehr.": [
+"lang-de.js"
+],
+"Kalender und StarFeed-Feed": [
+"lang-de.js"
+],
+"Spieltag und Anstoßzeit im Kalender. Beiträge von Verein, Mitspielern und Liga auf StarFeed.": [
+"lang-de.js"
+],
+"Kinder in der Karriere": [
+"lang-de.js"
+],
+"Nach der Hochzeit kannst du Kinder bekommen. Verbringe Zeit mit ihnen, passend zu ihrem Alter.": [
+"lang-de.js"
+],
+"Aufstellung per Drag-and-drop, Spielertypen und Entwicklungspläne.": [
+"lang-de.js"
+],
 "– wir haben uns qualifiziert!": [
 "lang-de.js"
 ],
@@ -216045,6 +216406,21 @@
 "lang-de.js"
 ],
 "WIR BLEIBEN DRAN.": [
+"lang-de.js"
+],
+"NEU: DEIN HANDY": [
+"lang-de.js"
+],
+"DER LEBEN-TAB IST JETZT IM HANDY": [
+"lang-de.js"
+],
+"EREIGNISSE KOMMEN ALS NACHRICHTEN": [
+"lang-de.js"
+],
+"KALENDER UND STARFEED-FEED": [
+"lang-de.js"
+],
+"KINDER IN DER KARRIERE": [
 "lang-de.js"
 ],
 "– WIR HABEN UNS QUALIFIZIERT!": [
@@ -234330,6 +234706,39 @@
 "We're watching closely.": [
 "lang-en.js"
 ],
+"New: Your phone": [
+"lang-en.js"
+],
+"Phone in the bottom menu: Messages, Calendar, StarFeed, Bank, Agent and more.": [
+"lang-en.js"
+],
+"The Life tab is now on your phone": [
+"lang-en.js"
+],
+"My Life, School, Sports Shop and Shopping are now apps on the phone.": [
+"lang-en.js"
+],
+"Events arrive as messages": [
+"lang-en.js"
+],
+"Your family, friends and coach text you, and you choose in the chat. Fast-forward no longer stops.": [
+"lang-en.js"
+],
+"Calendar and StarFeed feed": [
+"lang-en.js"
+],
+"Match day and kickoff time in the calendar. Posts from your club, teammates and the league on StarFeed.": [
+"lang-en.js"
+],
+"Kids in your career": [
+"lang-en.js"
+],
+"After marriage you can have kids. Spend time with them based on their age.": [
+"lang-en.js"
+],
+"Drag-and-drop lineups, player styles and development plans.": [
+"lang-en.js"
+],
 "— we qualified!": [
 "lang-en.js"
 ],
@@ -246354,6 +246763,21 @@
 "lang-en.js"
 ],
 "WE'RE WATCHING CLOSELY.": [
+"lang-en.js"
+],
+"NEW: YOUR PHONE": [
+"lang-en.js"
+],
+"THE LIFE TAB IS NOW ON YOUR PHONE": [
+"lang-en.js"
+],
+"EVENTS ARRIVE AS MESSAGES": [
+"lang-en.js"
+],
+"CALENDAR AND STARFEED FEED": [
+"lang-en.js"
+],
+"KIDS IN YOUR CAREER": [
 "lang-en.js"
 ],
 "— WE QUALIFIED!": [
@@ -264685,6 +265109,43 @@
 "Atentos.": [
 "lang-es.js"
 ],
+"Compras": [
+"lang-es.js",
+"lang-pt.js"
+],
+"Nuevo: tu teléfono": [
+"lang-es.js"
+],
+"Teléfono en el menú inferior: Mensajes, Calendario, StarFeed, Banco, Agente y más.": [
+"lang-es.js"
+],
+"La pestaña Vida ahora está en el teléfono": [
+"lang-es.js"
+],
+"Mi vida, Escuela, Tienda deportiva y Compras ahora son apps del teléfono.": [
+"lang-es.js"
+],
+"Los eventos llegan como mensajes": [
+"lang-es.js"
+],
+"Tu familia, tus amigos y tu entrenador te escriben y eliges en el chat. El avance rápido ya no se detiene.": [
+"lang-es.js"
+],
+"Calendario y feed de StarFeed": [
+"lang-es.js"
+],
+"Día y hora del partido en el calendario. Publicaciones de tu club, compañeros y la liga en StarFeed.": [
+"lang-es.js"
+],
+"Hijos en tu carrera": [
+"lang-es.js"
+],
+"Después de casarte puedes tener hijos. Pasa tiempo con ellos según su edad.": [
+"lang-es.js"
+],
+"Alineación con arrastrar y soltar, estilos de jugador y planes de desarrollo.": [
+"lang-es.js"
+],
 "— ¡nos hemos clasificado!": [
 "lang-es.js"
 ],
@@ -276813,6 +277274,21 @@
 "lang-es.js"
 ],
 "ATENTOS.": [
+"lang-es.js"
+],
+"NUEVO: TU TELÉFONO": [
+"lang-es.js"
+],
+"LA PESTAÑA VIDA AHORA ESTÁ EN EL TELÉFONO": [
+"lang-es.js"
+],
+"LOS EVENTOS LLEGAN COMO MENSAJES": [
+"lang-es.js"
+],
+"CALENDARIO Y FEED DE STARFEED": [
+"lang-es.js"
+],
+"HIJOS EN TU CARRERA": [
 "lang-es.js"
 ],
 "— ¡NOS HEMOS CLASIFICADO!": [
@@ -294881,6 +295357,39 @@
 "On suit ça de près.": [
 "lang-fr.js"
 ],
+"Nouveau : ton téléphone": [
+"lang-fr.js"
+],
+"Le téléphone dans le menu du bas : Messages, Calendrier, StarFeed, Banque, Agent et plus encore.": [
+"lang-fr.js"
+],
+"L'onglet Vie est maintenant dans le téléphone": [
+"lang-fr.js"
+],
+"Ma vie, École, Boutique de sport et Shopping sont désormais des applis du téléphone.": [
+"lang-fr.js"
+],
+"Les événements arrivent en messages": [
+"lang-fr.js"
+],
+"Ta famille, tes amis et ton coach t'écrivent, tu choisis dans la conversation. L'avance rapide ne s'arrête plus.": [
+"lang-fr.js"
+],
+"Calendrier et fil StarFeed": [
+"lang-fr.js"
+],
+"Jour et heure du match dans le calendrier. Publications de ton club, de tes coéquipiers et de la ligue sur StarFeed.": [
+"lang-fr.js"
+],
+"Des enfants dans ta carrière": [
+"lang-fr.js"
+],
+"Après le mariage, tu peux avoir des enfants. Passe du temps avec eux selon leur âge.": [
+"lang-fr.js"
+],
+"Composition par glisser-déposer, styles de joueur et plans de progression.": [
+"lang-fr.js"
+],
 "— on est qualifiés !": [
 "lang-fr.js"
 ],
@@ -306578,6 +307087,21 @@
 "lang-fr.js"
 ],
 "ON SUIT ÇA DE PRÈS.": [
+"lang-fr.js"
+],
+"NOUVEAU : TON TÉLÉPHONE": [
+"lang-fr.js"
+],
+"L'ONGLET VIE EST MAINTENANT DANS LE TÉLÉPHONE": [
+"lang-fr.js"
+],
+"LES ÉVÉNEMENTS ARRIVENT EN MESSAGES": [
+"lang-fr.js"
+],
+"CALENDRIER ET FIL STARFEED": [
+"lang-fr.js"
+],
+"DES ENFANTS DANS TA CARRIÈRE": [
 "lang-fr.js"
 ],
 "— ON EST QUALIFIÉS !": [
@@ -324182,6 +324706,42 @@
 "Kami pantau terus.": [
 "lang-id.js"
 ],
+"Belanja": [
+"lang-id.js"
+],
+"Baru: Ponselmu": [
+"lang-id.js"
+],
+"Ponsel di menu bawah: Pesan, Kalender, StarFeed, Bank, Agen, dan lainnya.": [
+"lang-id.js"
+],
+"Tab Kehidupan kini ada di ponsel": [
+"lang-id.js"
+],
+"Hidupku, Sekolah, Toko Olahraga, dan Belanja kini menjadi aplikasi di ponsel.": [
+"lang-id.js"
+],
+"Peristiwa datang sebagai pesan": [
+"lang-id.js"
+],
+"Keluarga, teman, dan pelatih mengirim pesan, kamu memilih di obrolan. Maju cepat tidak berhenti lagi.": [
+"lang-id.js"
+],
+"Kalender dan beranda StarFeed": [
+"lang-id.js"
+],
+"Hari dan jam pertandingan di kalender. Unggahan klub, rekan setim, dan liga di StarFeed.": [
+"lang-id.js"
+],
+"Anak dalam kariermu": [
+"lang-id.js"
+],
+"Setelah menikah kamu bisa punya anak. Habiskan waktu bersama mereka sesuai usianya.": [
+"lang-id.js"
+],
+"Susunan pemain seret-dan-lepas, gaya pemain, dan rencana pengembangan.": [
+"lang-id.js"
+],
 "— kita lolos!": [
 "lang-id.js"
 ],
@@ -335662,6 +336222,21 @@
 "lang-id.js"
 ],
 "KAMI PANTAU TERUS.": [
+"lang-id.js"
+],
+"BARU: PONSELMU": [
+"lang-id.js"
+],
+"TAB KEHIDUPAN KINI ADA DI PONSEL": [
+"lang-id.js"
+],
+"PERISTIWA DATANG SEBAGAI PESAN": [
+"lang-id.js"
+],
+"KALENDER DAN BERANDA STARFEED": [
+"lang-id.js"
+],
+"ANAK DALAM KARIERMU": [
 "lang-id.js"
 ],
 "— KITA LOLOS!": [
@@ -353269,6 +353844,39 @@
 "Seguiamo da vicino.": [
 "lang-it.js"
 ],
+"Novità: il tuo telefono": [
+"lang-it.js"
+],
+"Telefono nel menu in basso: Messaggi, Calendario, StarFeed, Banca, Procuratore e altro.": [
+"lang-it.js"
+],
+"La scheda Vita ora è nel telefono": [
+"lang-it.js"
+],
+"La mia vita, Scuola, Negozio sportivo e Shopping ora sono app del telefono.": [
+"lang-it.js"
+],
+"Gli eventi arrivano come messaggi": [
+"lang-it.js"
+],
+"Famiglia, amici e allenatore ti scrivono e scegli in chat. L'avanzamento rapido non si ferma più.": [
+"lang-it.js"
+],
+"Calendario e feed StarFeed": [
+"lang-it.js"
+],
+"Giorno e orario della partita nel calendario. Post del club, dei compagni e della lega su StarFeed.": [
+"lang-it.js"
+],
+"Figli nella carriera": [
+"lang-it.js"
+],
+"Dopo il matrimonio puoi avere figli. Passa del tempo con loro in base all'età.": [
+"lang-it.js"
+],
+"Formazione con trascinamento, stili dei giocatori e piani di sviluppo.": [
+"lang-it.js"
+],
 "— ci siamo qualificati!": [
 "lang-it.js"
 ],
@@ -364749,6 +365357,21 @@
 "SEGUIAMO DA VICINO.": [
 "lang-it.js"
 ],
+"NOVITÀ: IL TUO TELEFONO": [
+"lang-it.js"
+],
+"LA SCHEDA VITA ORA È NEL TELEFONO": [
+"lang-it.js"
+],
+"GLI EVENTI ARRIVANO COME MESSAGGI": [
+"lang-it.js"
+],
+"CALENDARIO E FEED STARFEED": [
+"lang-it.js"
+],
+"FIGLI NELLA CARRIERA": [
+"lang-it.js"
+],
 "— CI SIAMO QUALIFICATI!": [
 "lang-it.js"
 ],
@@ -372966,6 +373589,15 @@
 "3LDK · 120 m² · 住宅街": [
 "lang-ja.js"
 ],
+"下のメニューのスマホ：メッセージ、カレンダー、StarFeed、銀行、代理人など。": [
+"lang-ja.js"
+],
+"カレンダーとStarFeedフィード": [
+"lang-ja.js"
+],
+"試合日とキックオフ時刻はカレンダーに。StarFeedでクラブ、チームメイト、リーグの投稿。": [
+"lang-ja.js"
+],
 "（PK戦）": [
 "lang-ja.js"
 ],
@@ -373219,6 +373851,9 @@
 "lang-ja.js"
 ],
 "3LDK · 120 M² · 住宅街": [
+"lang-ja.js"
+],
+"カレンダーとSTARFEEDフィード": [
 "lang-ja.js"
 ],
 "STARFOOT ワールドサービス": [
@@ -383168,6 +383803,39 @@
 "lang-pt.js"
 ],
 "De olho.": [
+"lang-pt.js"
+],
+"Novo: seu celular": [
+"lang-pt.js"
+],
+"Celular no menu inferior: Mensagens, Calendário, StarFeed, Banco, Empresário e mais.": [
+"lang-pt.js"
+],
+"A aba Vida agora está no celular": [
+"lang-pt.js"
+],
+"Minha vida, Escola, Loja de esportes e Compras agora são apps no celular.": [
+"lang-pt.js"
+],
+"Os eventos chegam como mensagens": [
+"lang-pt.js"
+],
+"Sua família, amigos e técnico mandam mensagem, e você escolhe no chat. O avanço rápido não para mais.": [
+"lang-pt.js"
+],
+"Calendário e feed do StarFeed": [
+"lang-pt.js"
+],
+"Dia e horário do jogo no calendário. Posts do seu clube, colegas e da liga no StarFeed.": [
+"lang-pt.js"
+],
+"Filhos na carreira": [
+"lang-pt.js"
+],
+"Depois do casamento você pode ter filhos. Passe tempo com eles de acordo com a idade.": [
+"lang-pt.js"
+],
+"Escalação de arrastar e soltar, estilos de jogador e planos de desenvolvimento.": [
 "lang-pt.js"
 ],
 "— nos classificamos!": [
@@ -394394,6 +395062,21 @@
 "lang-pt.js"
 ],
 "DE OLHO.": [
+"lang-pt.js"
+],
+"NOVO: SEU CELULAR": [
+"lang-pt.js"
+],
+"A ABA VIDA AGORA ESTÁ NO CELULAR": [
+"lang-pt.js"
+],
+"OS EVENTOS CHEGAM COMO MENSAGENS": [
+"lang-pt.js"
+],
+"CALENDÁRIO E FEED DO STARFEED": [
+"lang-pt.js"
+],
+"FILHOS NA CARREIRA": [
 "lang-pt.js"
 ],
 "— NOS CLASSIFICAMOS!": [
@@ -417899,9 +418582,6 @@
 "phone.js"
 ],
 "linear-gradient(135deg,#2bd46a,#0b7a3a)": [
-"phone.js"
-],
-"Alışveriş": [
 "phone.js"
 ],
 "linear-gradient(135deg,#a855f7,#6d28d9)": [

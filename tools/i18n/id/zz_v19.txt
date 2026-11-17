@@ -2100,3 +2100,14 @@
 9060|Musim ini milik kita!
 9061|Kami pantau terus.
 9062|Belanja
+9063|Baru: Ponselmu
+9064|Ponsel di menu bawah: Pesan, Kalender, StarFeed, Bank, Agen, dan lainnya.
+9065|Tab Kehidupan kini ada di ponsel
+9078|Hidupku, Sekolah, Toko Olahraga, dan Belanja kini menjadi aplikasi di ponsel.
+9067|Peristiwa datang sebagai pesan
+9068|Keluarga, teman, dan pelatih mengirim pesan, kamu memilih di obrolan. Maju cepat tidak berhenti lagi.
+9071|Kalender dan beranda StarFeed
+9072|Hari dan jam pertandingan di kalender. Unggahan klub, rekan setim, dan liga di StarFeed.
+9075|Anak dalam kariermu
+9076|Setelah menikah kamu bisa punya anak. Habiskan waktu bersama mereka sesuai usianya.
+9077|Susunan pemain seret-dan-lepas, gaya pemain, dan rencana pengembangan.

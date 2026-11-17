@@ -2100,3 +2100,14 @@
 9060|Cette saison est à nous !
 9061|On suit ça de près.
 9062|Shopping
+9063|Nouveau : ton téléphone
+9064|Le téléphone dans le menu du bas : Messages, Calendrier, StarFeed, Banque, Agent et plus encore.
+9065|L'onglet Vie est maintenant dans le téléphone
+9078|Ma vie, École, Boutique de sport et Shopping sont désormais des applis du téléphone.
+9067|Les événements arrivent en messages
+9068|Ta famille, tes amis et ton coach t'écrivent, tu choisis dans la conversation. L'avance rapide ne s'arrête plus.
+9071|Calendrier et fil StarFeed
+9072|Jour et heure du match dans le calendrier. Publications de ton club, de tes coéquipiers et de la ligue sur StarFeed.
+9075|Des enfants dans ta carrière
+9076|Après le mariage, tu peux avoir des enfants. Passe du temps avec eux selon leur âge.
+9077|Composition par glisser-déposer, styles de joueur et plans de progression.
