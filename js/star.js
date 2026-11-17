@@ -306,7 +306,8 @@ const Star = {
   },
 
   wiki(p, s) {
-    const mode = document.getElementById('spedia') ? (Star.has() ? 'full' : 'taste') : Star.gate('wiki', 'Starpedia sayfası');
+    // Star._snap: emeklilikte Efsaneler Salonu için sayfanın kopyası (ekranda açılmaz, öğe döner)
+    const mode = Star._snap ? 'full' : document.getElementById('spedia') ? (Star.has() ? 'full' : 'taste') : Star.gate('wiki', 'Starpedia sayfası');
     if (!mode) return;
     const d = Star.data(p, s);
     p = d.p; s = d.s;
@@ -387,8 +388,10 @@ const Star = {
       tb.innerHTML = `${Icon('star')}<span><b>Ücretsiz önizleme</b> Starpedia sayfanı bir kez görüyorsun. Premium ile her zaman açık.</span><button class="btn" data-star="pitch" data-src="wiki_banner">Premium</button>`;
       el.insertBefore(tb, el.children[1] || null);
     }
-    Star.cover(el, 'sp-open');
-    if (typeof UI !== 'undefined' && UI.strip) UI.strip(el);
+    if (!Star._snap) {
+      Star.cover(el, 'sp-open');
+      if (typeof UI !== 'undefined' && UI.strip) UI.strip(el);
+    }
     const cv = el.querySelector('.sp-fig');
     const c = cv.getContext('2d');
     const club = cur || { id: 'X', c1: '#2a6fdb', c2: '#ffffff' };
@@ -396,6 +399,7 @@ const Star = {
     g.addColorStop(0, '#dfe7f2'); g.addColorStop(1, '#b8c6da');
     c.fillStyle = g; c.fillRect(0, 0, 300, 300);
     Sprites.figure(c, 150, 288, 268, { kit: Sprites.kit(club, false), look: Sprites.me(p), facing: 'down', number: p.shirt, t: 0 });
+    if (Star._snap) return el;
     el.scrollTop = 0;
   },
   wikiClose(quiet) {

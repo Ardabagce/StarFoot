@@ -4154,3 +4154,4 @@ html.ph-open #toasts { top: auto; bottom: calc(80px + env(safe-area-inset-bottom
 .ph-gcar small { font-size: 11px; color: #9aa0ad; padding: 0 8px; }
 .ph-gcar .gsp { display: flex; gap: 6px; padding: 4px 8px 0; font-size: 11px; color: #c7cbd6; }
 .ph-gcar .gsp span { background: rgba(255, 255, 255, .07); border-radius: 6px; padding: 1px 6px; white-space: nowrap; }
+.hof-wiki { flex: none; margin-left: auto; border: 1px solid #c8ccd1; background: #f8f9fa; color: #202122; font: 600 12px Georgia, 'Times New Roman', serif; letter-spacing: .3px; border-radius: 6px; padding: 4px 10px; cursor: pointer; }
