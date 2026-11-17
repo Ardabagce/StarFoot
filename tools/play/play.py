@@ -6,6 +6,7 @@ Kimlik: PLAY_SERVICE_ACCOUNT_JSON ortam değişkeni (servis hesabı JSON anahtar
   play.py upload --aab X.aab --track internal [--status completed|draft] [--version 1.0.17]
   play.py products            # store/play/products.json'daki tek seferlik ürünleri oluşturur/günceller
   play.py check               # erişimi ve izi listeler
+  play.py datasafety          # store/play/data_safety.csv'yi Veri güvenliği formuna yazar
 
 Üretim (production) izi yalnız açıkça --track production verilirse kullanılır.
 """
@@ -178,6 +179,13 @@ def check(a):
     print('ürünler:', [p['productId'] for p in r.json().get('oneTimeProducts', [])] if r.ok else r.text[:500])
 
 
+def datasafety(a):
+    s = session()
+    csv = open(os.path.join(ROOT, 'store/play/data_safety.csv'), encoding='utf-8').read()
+    ok(s.post(f'{API}/{PKG}/dataSafety', json={'safetyLabels': csv}), 'veri güvenliği')
+    print('TAMAM: Veri güvenliği formu güncellendi')
+
+
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest='cmd', required=True)
@@ -190,5 +198,6 @@ if __name__ == '__main__':
     sub.add_parser('products')
     sub.add_parser('check')
     sub.add_parser('listing')
+    sub.add_parser('datasafety')
     a = ap.parse_args()
-    {'upload': upload, 'products': products, 'check': check, 'listing': listing}[a.cmd](a)
+    {'upload': upload, 'products': products, 'check': check, 'listing': listing, 'datasafety': datasafety}[a.cmd](a)
