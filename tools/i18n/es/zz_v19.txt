@@ -2964,3 +2964,15 @@
 10041|¡Ánimo, la semana que viene ganáis!
 10042|Me enteré de la lesión, ¡recupérate pronto!
 10043|Si te aburres en casa, me paso y jugamos a la consola.
+10044|Showcase: más de 3.500 productos
+10045|La nueva app de compras de tu móvil: 30 marcas ficticias, 4 niveles de Económico a Lujo y una colección nueva cada temporada.
+10046|Planea tus vacaciones de fin de temporada y haz escapadas de fin de semana.
+10047|Titulares sobre ti, invitaciones a galas y entregas de premios y romances con famosos.
+10048|Inversiones y trabajos extra
+10049|Cafetería, restaurante, marca de ropa... Mira tus ingresos semanales en los movimientos del banco.
+10052|Estatua, dorsal retirado, autobiografía y comentarista de TV. Páginas de Starpedia de tus carreras retiradas en el Salón de Leyendas.
+10055|Mi garaje y nuevas imágenes
+10056|Coches y casas con imágenes nuevas; todos tus vehículos se exhiben en tu garaje.
+10057|Solicitudes de traspaso en la cantera
+10058|Postúlate a la cantera del club que quieras; desde los 14, entra en canteras extranjeras mediante pruebas.
+10059|Plan automático para las acciones semanales. Corregido: no llegaban ofertas tras fichar por un club más fuerte.

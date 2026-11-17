@@ -11,11 +11,11 @@ const OUT = __dirname;
 const IOS = path.join(ROOT, 'store/premium/ios');
 const LANGS = ['tr', 'en', 'es'];
 // Game Center / iCloud görseli (7) Play'de kullanılmaz
-const PICK = ['1-goal', '2-match', '3-trophy', '4-street', '5-wc', '6-life'];
+const PICK = ['1-goal', '2-life', '3-coach', '4-match', '5-trophy', '6-street'];
 const TXT = {
-  tr: { sub: 'Mahalleden Altın Top\'a futbol kariyeri', chips: ['Kritik anları sen oyna', 'Ligler, kupalar, transferler', 'Saha dışında da yıldız ol'], free: 'ÜCRETSİZ' },
-  en: { sub: 'From street football to the Golden Ball', chips: ['Play the key moments', 'Leagues, cups & transfers', 'Be a star off the pitch'], free: 'FREE' },
-  es: { sub: 'Del barrio al Balón de Oro', chips: ['Juega los momentos clave', 'Ligas, copas y fichajes', 'Sé una estrella fuera del campo'], free: 'GRATIS' },
+  tr: { sub: 'Mahalleden zirveye futbol kariyeri', chips: ['Kritik anları sen oyna', 'Teknik direktör modu', 'Saha dışında da yıldız ol'], free: 'ÜCRETSİZ' },
+  en: { sub: 'From street football to the top', chips: ['Play the key moments', 'Manager mode', 'Be a star off the pitch'], free: 'FREE' },
+  es: { sub: 'Del barrio a la cima', chips: ['Juega los momentos clave', 'Modo entrenador', 'Sé una estrella fuera del campo'], free: 'GRATIS' },
 };
 
 (async () => {
@@ -56,7 +56,7 @@ const TXT = {
       .ph{position:absolute;width:290px;height:628px;background-size:cover;background-position:center 22%;border-radius:36px;box-shadow:0 30px 60px rgba(0,0,0,.6)}
       </style></head><body>
       <div class="beam" style="left:560px;transform:rotate(-24deg)"></div><div class="beam" style="left:900px;transform:rotate(22deg)"></div>
-      <div class="ph" style="left:590px;top:60px;transform:rotate(-7deg);background-image:url('${shot('3-trophy')}');background-size:100% 100%"></div>
+      <div class="ph" style="left:590px;top:60px;transform:rotate(-7deg);background-image:url('${shot('2-life')}');background-size:100% 100%"></div>
       <div class="ph" style="left:780px;top:30px;transform:rotate(6deg);background-image:url('${shot('1-goal')}');background-size:100% 100%"></div>
       <div class="left"><div class="row"><img class="ic" src="${icon}"><div class="logo">STAR<span>FOOT</span></div></div>
         <div class="sub">${T.sub}</div><div class="chips">${T.chips.map((x) => `<div class="chip">${x}</div>`).join('')}</div></div>

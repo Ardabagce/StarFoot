@@ -18,6 +18,18 @@ const POSTERS = [
     ar: { tag: 'لعبة مسيرة كرة القدم', h1: 'أنت من', h2: 'يسجل الهدف', sub: 'في اللحظات الحاسمة الكرة عند قدميك: اسحب، صوّب، سدّد!', chips: [['صوت ملعب حقيقي', 'left', 1060], ['اسحب وسدد', 'right', 1520]] },
     ja: { tag: 'サッカーキャリアゲーム', h1: 'ゴールを', h2: '決めるのは君', sub: '決定的な瞬間、ボールは君の足元に。引いて、狙って、蹴り込め！', chips: [['本物のスタジアム音', 'left', 1060], ['引いてシュート', 'right', 1520]] },
   }),
+  P('life', '#ff6fb5', 'rgba(214,80,220,.5)', 3, { ig: true }, {
+    tr: { tag: 'YENİ: YILDIZ HAYATI', h1: 'SAHA DIŞINDA', h2: 'DA YILDIZ OL', sub: 'Telefonunda 3.500+ ürünlük alışveriş, tatiller, yatırımlar ve magazin.', chips: [['3.500+ ürün', 'right', 1040], ['Tatil ve yatırım', 'left', 1520]] },
+    en: { tag: 'NEW: STAR LIFE', h1: 'A STAR', h2: 'OFF THE PITCH', sub: 'Shop 3,500+ items, book holidays, invest and make headlines from your phone.', chips: [['3,500+ items', 'right', 1040], ['Holidays & investments', 'left', 1520]] },
+    es: { tag: 'NUEVO: VIDA DE ESTRELLA', h1: 'UNA ESTRELLA', h2: 'FUERA DEL CAMPO', sub: 'Más de 3.500 productos, vacaciones, inversiones y prensa rosa en tu móvil.', chips: [['3.500+ productos', 'right', 1040], ['Viajes e inversiones', 'left', 1520]] },
+    pt: { tag: 'NOVO: VIDA DE ESTRELA', h1: 'UMA ESTRELA', h2: 'FORA DE CAMPO', sub: 'Mais de 3.500 produtos, férias, investimentos e fofoca no seu celular.', chips: [['3.500+ produtos', 'right', 1040], ['Férias e investimentos', 'left', 1520]] },
+    de: { tag: 'NEU: STAR-LEBEN', h1: 'EIN STAR', h2: 'AUCH ABSEITS', sub: 'Über 3.500 Produkte, Urlaube, Investitionen und Schlagzeilen auf deinem Handy.', chips: [['3.500+ Produkte', 'right', 1040], ['Urlaub & Investitionen', 'left', 1520]] },
+    fr: { tag: 'NOUVEAU : VIE DE STAR', h1: 'UNE STAR', h2: 'HORS DU TERRAIN', sub: 'Plus de 3 500 articles, des vacances, des investissements et la une des magazines.', chips: [['3 500+ articles', 'right', 1040], ['Vacances et investissements', 'left', 1520]] },
+    it: { tag: 'NOVITÀ: VITA DA STAR', h1: 'UNA STELLA', h2: 'FUORI DAL CAMPO', sub: 'Oltre 3.500 prodotti, vacanze, investimenti e gossip sul tuo telefono.', chips: [['3.500+ prodotti', 'right', 1040], ['Vacanze e investimenti', 'left', 1520]] },
+    ind: { tag: 'BARU: HIDUP BINTANG', h1: 'BINTANG', h2: 'DI LUAR LAPANGAN', sub: 'Belanja 3.500+ barang, liburan, investasi, dan jadi berita di ponselmu.', chips: [['3.500+ barang', 'right', 1040], ['Liburan & investasi', 'left', 1520]] },
+    ar: { tag: 'جديد: حياة النجوم', h1: 'نجم', h2: 'خارج الملعب', sub: 'أكثر من 3500 منتج وعطلات واستثمارات وأخبار المشاهير على هاتفك.', chips: [['3500+ منتج', 'right', 1040], ['عطلات واستثمارات', 'left', 1520]] },
+    ja: { tag: '新機能：スターライフ', h1: 'ピッチの外でも', h2: 'スターに', sub: 'スマホで3,500点以上のショッピング、旅行、投資、ゴシップ。', chips: [['3,500点以上', 'right', 1040], ['旅行と投資', 'left', 1520]] },
+  }),
   P('coach', '#46e08f', 'rgba(70,224,143,.42)', 3, {}, {
     tr: { tag: 'YENİ MOD', h1: 'TEKNİK', h2: 'DİREKTÖR OL', sub: 'Kadroyu kur, taktiği seç, maçı kenardan canlı yönet.', chips: [['Canlı maç yönetimi', 'right', 1000], ['Transfer ve pazarlık', 'left', 1560]] },
     en: { tag: 'NEW MODE', h1: 'BECOME THE', h2: 'MANAGER', sub: 'Build the squad, pick tactics and run matches live from the touchline.', chips: [['Live touchline control', 'right', 1000], ['Transfers & negotiation', 'left', 1560]] },
@@ -77,18 +89,6 @@ const POSTERS = [
     ind: { tag: 'MIMPI KEJUARAAN DUNIA', h1: 'JADIKAN NEGARAMU', h2: 'JUARA', sub: 'Karier timnas 4 turnamen: pemusatan latihan, analisis lawan, taktik, dan penalti.', chips: [['Pemusatan latihan timnas', 'right', 1060], ['Album stiker', 'left', 1520]] },
     ar: { tag: 'حلم بطولة العالم', h1: 'اجعل بلدك', h2: 'بطلًا', sub: 'مسيرة دولية في 4 بطولات: معسكر وتحليل خصوم وتكتيك وركلات ترجيح.', chips: [['معسكر المنتخب', 'right', 1060], ['ألبوم الملصقات', 'left', 1520]] },
     ja: { tag: '世界選手権ドリーム', h1: '祖国を', h2: '世界王者に', sub: '4大会にわたる代表キャリア：合宿、対戦相手分析、戦術、そしてPK戦。', chips: [['代表合宿', 'right', 1060], ['ステッカーアルバム', 'left', 1520]] },
-  }),
-  P('life', '#ff6fb5', 'rgba(214,80,220,.5)', 3, { ig: true }, {
-    tr: { tag: 'SAHA DIŞI HAYAT', h1: 'SAHA DIŞINDA', h2: 'DA YILDIZ OL', sub: 'Süper arabalar, villalar, sponsorluklar ve milyonlarca takipçi.', chips: [['Lüks yaşam vitrini', 'right', 1040], ['Milyonlarca takipçi', 'left', 1520]] },
-    en: { tag: 'LIFE OFF THE PITCH', h1: 'A STAR', h2: 'OFF THE PITCH', sub: 'Supercars, villas, sponsorships and millions of followers.', chips: [['Luxury showcase', 'right', 1040], ['Millions of followers', 'left', 1520]] },
-    es: { tag: 'VIDA FUERA DEL CAMPO', h1: 'UNA ESTRELLA', h2: 'FUERA DEL CAMPO', sub: 'Superdeportivos, villas, patrocinios y millones de seguidores.', chips: [['Vida de lujo', 'right', 1040], ['Millones de seguidores', 'left', 1520]] },
-    pt: { tag: 'VIDA FORA DE CAMPO', h1: 'UMA ESTRELA', h2: 'FORA DE CAMPO', sub: 'Supercarros, mansões, patrocínios e milhões de seguidores.', chips: [['Vida de luxo', 'right', 1040], ['Milhões de seguidores', 'left', 1520]] },
-    de: { tag: 'LEBEN NEBEN DEM PLATZ', h1: 'EIN STAR', h2: 'AUCH ABSEITS', sub: 'Supersportwagen, Villen, Sponsorings und Millionen Follower.', chips: [['Luxus-Vitrine', 'right', 1040], ['Millionen Follower', 'left', 1520]] },
-    fr: { tag: 'VIE HORS DU TERRAIN', h1: 'UNE STAR', h2: 'HORS DU TERRAIN', sub: 'Supercars, villas, sponsors et des millions d’abonnés.', chips: [['Vitrine de luxe', 'right', 1040], ["Des millions d'abonnés", 'left', 1520]] },
-    it: { tag: 'VITA FUORI DAL CAMPO', h1: 'UNA STELLA', h2: 'FUORI DAL CAMPO', sub: 'Supercar, ville, sponsorizzazioni e milioni di follower.', chips: [['Vetrina di lusso', 'right', 1040], ['Milioni di follower', 'left', 1520]] },
-    ind: { tag: 'HIDUP DI LUAR LAPANGAN', h1: 'BINTANG', h2: 'DI LUAR LAPANGAN', sub: 'Mobil super, vila, sponsor, dan jutaan pengikut.', chips: [['Etalase mewah', 'right', 1040], ['Jutaan pengikut', 'left', 1520]] },
-    ar: { tag: 'الحياة خارج الملعب', h1: 'نجم', h2: 'خارج الملعب', sub: 'سيارات خارقة وفلل وعقود رعاية وملايين المتابعين.', chips: [['واجهة الحياة الفاخرة', 'right', 1040], ['ملايين المتابعين', 'left', 1520]] },
-    ja: { tag: 'ピッチ外のライフ', h1: 'ピッチの外でも', h2: 'スターに', sub: 'スーパーカー、豪邸、スポンサー契約、そして数百万のフォロワー。', chips: [['ラグジュアリー', 'right', 1040], ['数百万のフォロワー', 'left', 1520]] },
   }),
 ];
 

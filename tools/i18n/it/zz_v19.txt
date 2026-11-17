@@ -2964,3 +2964,15 @@
 10041|Su il morale, la prossima settimana vincete!
 10042|Ho saputo dell'infortunio, guarisci presto!
 10043|Se ti annoi a casa passo da te e giochiamo alla console.
+10044|Showcase: oltre 3.500 prodotti
+10045|La nuova app di shopping sul telefono: 30 marchi immaginari, 4 fasce da Economico a Lusso, una nuova collezione ogni stagione.
+10046|Pianifica le vacanze di fine stagione e fai fughe nel weekend.
+10047|Titoli su di te, inviti a gala e premiazioni, amori da copertina.
+10048|Investimenti e lavoretti
+10049|Caffè, ristorante, marchio di abbigliamento... Vedi le entrate settimanali nei movimenti in banca.
+10052|Statua, numero ritirato, autobiografia e opinionista TV. Le pagine Starpedia delle carriere concluse nella Hall delle Leggende.
+10055|Il mio garage e nuove immagini
+10056|Auto e case con immagini nuove; tutti i tuoi veicoli sono esposti nel garage.
+10057|Richieste di trasferimento nelle giovanili
+10058|Candidati al vivaio del club che vuoi; dai 14 anni entra nei vivai esteri tramite provini.
+10059|Un piano automatico per le azioni settimanali. Corretto: nessuna offerta dopo il passaggio a un club più forte.

@@ -2964,3 +2964,15 @@
 10041|Kopf hoch, nächste Woche gewinnt ihr!
 10042|Hab von der Verletzung gehört, gute Besserung!
 10043|Wenn dir zu Hause langweilig ist, komm ich vorbei und wir zocken.
+10044|Showcase: über 3.500 Produkte
+10045|Die neue Shopping-App auf deinem Handy: 30 fiktive Marken, 4 Stufen von Economy bis Luxus, jede Saison eine neue Kollektion.
+10046|Plane deinen Urlaub nach der Saison und mach Wochenendtrips.
+10047|Schlagzeilen über dich, Einladungen zu Galas und Preisverleihungen, Promi-Romanzen.
+10048|Investitionen und Nebenjobs
+10049|Café, Restaurant, Modemarke... Deine Wocheneinnahmen siehst du in den Kontobewegungen.
+10052|Statue, gesperrte Rückennummer, Autobiografie und TV-Experte. Starpedia-Seiten deiner beendeten Karrieren in der Ruhmeshalle.
+10055|Meine Garage und neue Bilder
+10056|Autos und Häuser mit ganz neuen Bildern; alle deine Fahrzeuge stehen in deiner Garage.
+10057|Wechselwunsch in der Jugend
+10058|Bewirb dich bei der Akademie deines Wunschvereins; ab 14 kommst du über Probetrainings in Akademien im Ausland.
+10059|Ein automatischer Plan für die wöchentlichen Aktionen. Behoben: keine Angebote mehr nach dem Wechsel zu einem stärkeren Klub.

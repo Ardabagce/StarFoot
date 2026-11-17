@@ -111,8 +111,10 @@ const ONLY = process.env.ONLY ? process.env.ONLY.split(',') : null;
       await pg.evaluate(() => { document.querySelectorAll('.cer-trophy, .celebrate, .cel').forEach((e) => e.remove()); const m = document.getElementById('modal'); if (m) m.classList.add('hidden'); const mt = document.getElementById('match'); if (mt) mt.classList.add('hidden'); Game.state.pendingEvent = null; Game.state.seasonEnd = null; Game.render(); });
     }
     if (want('life')) {
-      await pg.evaluate(() => { Game.p.money = 46e6; Game.tab = 'life'; UI.lifeView = 'life'; Game.render(); const c = document.querySelector('.card.lux'); window.scrollTo(0, c ? c.getBoundingClientRect().top + window.scrollY - 150 : 0); });
-      await shot(pg, 'life', 700);
+      // 1.0.25: telefondaki Vitrin alışveriş uygulaması (yıldız hayatı)
+      await pg.evaluate(() => { window.scrollTo(0, 0); const p = Game.p; p.money = 46e6; p.age = Math.max(p.age, 24); p.fame = Math.max(p.fame, 60); if (typeof Mall !== 'undefined') Mall.reset(); Phone.show('shop'); });
+      await shot(pg, 'life', 1500);
+      await pg.evaluate(() => Phone.close());
     }
     if (want('medals')) {
       await pg.evaluate(() => { Game.tab = 'profile'; UI.profView = 'career'; Game.render(); const d = document.querySelectorAll('.ach-cat'); if (d[5]) d[5].open = true; const c = d[5] || d[0]; window.scrollTo(0, c ? c.getBoundingClientRect().top + window.scrollY - 210 : 0); });

@@ -32590,8 +32590,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"star.js"
+"lang-pt.js"
 ],
 "{}. dakikadan": [
 "diamond2.js",
@@ -33041,8 +33040,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"star.js"
+"lang-pt.js"
 ],
 "Maçı belli bir dakikadan devral ya da sezonun son haftalarında takımı kurtar. {}/{} ⭐": [
 "diamond2.js",
@@ -42427,6 +42425,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"star.js",
 "starlife.js"
 ],
 "Dünya": [
@@ -86294,8 +86293,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"star.js"
+"lang-pt.js"
 ],
 "0-2 geriden dönüş, 10 kişi, kurtarma operasyonu, şampiyonluk yarışı...": [
 "lang-ar.js",
@@ -86372,8 +86370,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"star.js"
+"lang-pt.js"
 ],
 "محتوى جديد في Diamond": [
 "lang-ar.js"
@@ -86387,8 +86384,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"star.js"
+"lang-pt.js"
 ],
 "Yeni özellikler herkese açılmadan önce Diamond’da. İlki: Haftanın Meydan Okuması.": [
 "lang-ar.js",
@@ -86399,8 +86395,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"star.js"
+"lang-pt.js"
 ],
 "ميزات جديدة في Diamond قبل الجميع. أولها: تحدي الأسبوع.": [
 "lang-ar.js"
@@ -86458,8 +86453,7 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js",
-"star.js"
+"lang-pt.js"
 ],
 "شارة دائمة لمن يشتري Diamond في فترة الإطلاق. شكرًا لكل من يدعم اللعبة!": [
 "lang-ar.js"
@@ -102705,6 +102699,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"star.js",
 "starlife.js"
 ],
 "Sezon sonu tatilin": [
@@ -104428,6 +104423,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"star.js",
 "starlife.js"
 ],
 "Taraftar sevgisi": [
@@ -106528,6 +106524,194 @@
 "lang-ja.js",
 "lang-pt.js",
 "youthx.js"
+],
+"Parkta bisiklet sürelim mi?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Yeni bir kafe açılmış, bir ara gidelim.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Hafta sonu boş musun? Bizimkiler mangal yapıyor.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Hafta sonu boş musun?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Free this weekend?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Bizimkiler mangal yapıyor.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"We're having a barbecue.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Eski takım fotoğrafımızı buldum, ne kadar küçükmüşüz!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"O golü kaç kere izledim bilmiyorum!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Gol anında bütün kafe ayağa kalktı, herkese arkadaşım dedim!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Maçın adamı olmuşsun, helal olsun!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Bu hafta herkes senden bahsediyor kanka!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Kötü gün herkesin başına gelir, sonrakini alırsınız.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Moralini bozma, haftaya kazanırsınız!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Sakatlığı duydum, çabuk iyileş kanka!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Evde canın sıkılırsa uğrarım, oyun oynarız.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
 ],
 "(Asist)": [
 "lang-ar.js",
@@ -172117,6 +172301,127 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"PARKTA BİSİKLET SÜRELİM Mİ?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YENİ BİR KAFE AÇILMIŞ, BİR ARA GİDELİM.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HAFTA SONU BOŞ MUSUN?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"FREE THIS WEEKEND?": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BİZİMKİLER MANGAL YAPIYOR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"WE'RE HAVING A BARBECUE.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"O GOLÜ KAÇ KERE İZLEDİM BİLMİYORUM!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MAÇIN ADAMI OLMUŞSUN, HELAL OLSUN!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BU HAFTA HERKES SENDEN BAHSEDİYOR KANKA!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MORALİNİ BOZMA, HAFTAYA KAZANIRSINIZ!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SAKATLIĞI DUYDUM, ÇABUK İYİLEŞ KANKA!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -227355,6 +227660,42 @@
 "Nächste Saison kannst du dich erneut bewerben.": [
 "lang-de.js"
 ],
+"Fahren wir im Park Fahrrad?": [
+"lang-de.js"
+],
+"Ein neues Café hat aufgemacht, lass uns mal hingehen.": [
+"lang-de.js"
+],
+"Hast du am Wochenende Zeit? Wir grillen.": [
+"lang-de.js"
+],
+"Hab unser altes Mannschaftsfoto gefunden, wir waren so klein!": [
+"lang-de.js"
+],
+"Ich hab das Tor schon unzählige Male gesehen!": [
+"lang-de.js"
+],
+"Beim Tor ist das ganze Café aufgesprungen, ich hab allen gesagt, dass du mein Kumpel bist!": [
+"lang-de.js"
+],
+"Spieler des Spiels! Verdient!": [
+"lang-de.js"
+],
+"Diese Woche reden alle von dir, Kumpel!": [
+"lang-de.js"
+],
+"Schlechte Tage hat jeder, das nächste gewinnt ihr.": [
+"lang-de.js"
+],
+"Kopf hoch, nächste Woche gewinnt ihr!": [
+"lang-de.js"
+],
+"Hab von der Verletzung gehört, gute Besserung!": [
+"lang-de.js"
+],
+"Wenn dir zu Hause langweilig ist, komm ich vorbei und wir zocken.": [
+"lang-de.js"
+],
 "– wir haben uns qualifiziert!": [
 "lang-de.js"
 ],
@@ -242007,6 +242348,27 @@
 "lang-de.js"
 ],
 "NÄCHSTE SAISON KANNST DU DICH ERNEUT BEWERBEN.": [
+"lang-de.js"
+],
+"FAHREN WIR IM PARK FAHRRAD?": [
+"lang-de.js"
+],
+"EIN NEUES CAFÉ HAT AUFGEMACHT, LASS UNS MAL HINGEHEN.": [
+"lang-de.js"
+],
+"ICH HAB DAS TOR SCHON UNZÄHLIGE MALE GESEHEN!": [
+"lang-de.js"
+],
+"SPIELER DES SPIELS! VERDIENT!": [
+"lang-de.js"
+],
+"DIESE WOCHE REDEN ALLE VON DIR, KUMPEL!": [
+"lang-de.js"
+],
+"KOPF HOCH, NÄCHSTE WOCHE GEWINNT IHR!": [
+"lang-de.js"
+],
+"HAB VON DER VERLETZUNG GEHÖRT, GUTE BESSERUNG!": [
 "lang-de.js"
 ],
 "– WIR HABEN UNS QUALIFIZIERT!": [
@@ -262687,6 +263049,42 @@
 "You can apply again next season.": [
 "lang-en.js"
 ],
+"Want to ride bikes in the park?": [
+"lang-en.js"
+],
+"A new café just opened, let's go sometime.": [
+"lang-en.js"
+],
+"Free this weekend? We're having a barbecue.": [
+"lang-en.js"
+],
+"Found our old team photo, we were so little!": [
+"lang-en.js"
+],
+"I've lost count of how many times I watched that goal!": [
+"lang-en.js"
+],
+"The whole café stood up when you scored, I told everyone you're my friend!": [
+"lang-en.js"
+],
+"Man of the match! Well deserved!": [
+"lang-en.js"
+],
+"Everyone's talking about you this week, mate!": [
+"lang-en.js"
+],
+"Everyone has bad days, you'll win the next one.": [
+"lang-en.js"
+],
+"Keep your chin up, you'll win next week!": [
+"lang-en.js"
+],
+"Heard about the injury, get well soon mate!": [
+"lang-en.js"
+],
+"If you get bored at home I'll come by and we'll play games.": [
+"lang-en.js"
+],
 "— we qualified!": [
 "lang-en.js"
 ],
@@ -276558,6 +276956,27 @@
 "lang-en.js"
 ],
 "YOU CAN APPLY AGAIN NEXT SEASON.": [
+"lang-en.js"
+],
+"WANT TO RIDE BIKES IN THE PARK?": [
+"lang-en.js"
+],
+"A NEW CAFÉ JUST OPENED, LET'S GO SOMETIME.": [
+"lang-en.js"
+],
+"I'VE LOST COUNT OF HOW MANY TIMES I WATCHED THAT GOAL!": [
+"lang-en.js"
+],
+"MAN OF THE MATCH! WELL DESERVED!": [
+"lang-en.js"
+],
+"EVERYONE'S TALKING ABOUT YOU THIS WEEK, MATE!": [
+"lang-en.js"
+],
+"KEEP YOUR CHIN UP, YOU'LL WIN NEXT WEEK!": [
+"lang-en.js"
+],
+"HEARD ABOUT THE INJURY, GET WELL SOON MATE!": [
 "lang-en.js"
 ],
 "— WE QUALIFIED!": [
@@ -297359,6 +297778,42 @@
 "Podrás postularte de nuevo la próxima temporada.": [
 "lang-es.js"
 ],
+"¿Vamos en bici al parque?": [
+"lang-es.js"
+],
+"Han abierto una cafetería nueva, vamos un día.": [
+"lang-es.js"
+],
+"¿Estás libre el finde? Hacemos una barbacoa.": [
+"lang-es.js"
+],
+"Encontré nuestra foto del equipo de antes, ¡qué pequeños éramos!": [
+"lang-es.js"
+],
+"¡No sé cuántas veces he visto ese gol!": [
+"lang-es.js"
+],
+"¡Con tu gol se levantó toda la cafetería y le dije a todos que eres mi amigo!": [
+"lang-es.js"
+],
+"¡Jugador del partido! ¡Bien merecido!": [
+"lang-es.js"
+],
+"¡Esta semana todos hablan de ti, tío!": [
+"lang-es.js"
+],
+"Todos tienen días malos, ganaréis el siguiente.": [
+"lang-es.js"
+],
+"¡Ánimo, la semana que viene ganáis!": [
+"lang-es.js"
+],
+"Me enteré de la lesión, ¡recupérate pronto!": [
+"lang-es.js"
+],
+"Si te aburres en casa, me paso y jugamos a la consola.": [
+"lang-es.js"
+],
 "— ¡nos hemos clasificado!": [
 "lang-es.js"
 ],
@@ -311366,6 +311821,27 @@
 "lang-es.js"
 ],
 "PODRÁS POSTULARTE DE NUEVO LA PRÓXIMA TEMPORADA.": [
+"lang-es.js"
+],
+"¿VAMOS EN BICI AL PARQUE?": [
+"lang-es.js"
+],
+"HAN ABIERTO UNA CAFETERÍA NUEVA, VAMOS UN DÍA.": [
+"lang-es.js"
+],
+"¡NO SÉ CUÁNTAS VECES HE VISTO ESE GOL!": [
+"lang-es.js"
+],
+"¡JUGADOR DEL PARTIDO! ¡BIEN MERECIDO!": [
+"lang-es.js"
+],
+"¡ESTA SEMANA TODOS HABLAN DE TI, TÍO!": [
+"lang-es.js"
+],
+"¡ÁNIMO, LA SEMANA QUE VIENE GANÁIS!": [
+"lang-es.js"
+],
+"ME ENTERÉ DE LA LESIÓN, ¡RECUPÉRATE PRONTO!": [
 "lang-es.js"
 ],
 "— ¡NOS HEMOS CLASIFICADO!": [
@@ -331826,6 +332302,42 @@
 "Tu pourras repostuler la saison prochaine.": [
 "lang-fr.js"
 ],
+"On fait du vélo au parc ?": [
+"lang-fr.js"
+],
+"Un nouveau café vient d'ouvrir, allons-y un de ces jours.": [
+"lang-fr.js"
+],
+"Tu es libre ce week-end ? On fait un barbecue.": [
+"lang-fr.js"
+],
+"J'ai retrouvé notre vieille photo d'équipe, on était si petits !": [
+"lang-fr.js"
+],
+"Je ne sais plus combien de fois j'ai revu ce but !": [
+"lang-fr.js"
+],
+"Tout le café s'est levé sur ton but, j'ai dit à tout le monde que tu es mon pote !": [
+"lang-fr.js"
+],
+"Homme du match, bravo !": [
+"lang-fr.js"
+],
+"Cette semaine, tout le monde parle de toi !": [
+"lang-fr.js"
+],
+"Tout le monde a de mauvais jours, vous gagnerez le prochain.": [
+"lang-fr.js"
+],
+"Garde le moral, vous gagnerez la semaine prochaine !": [
+"lang-fr.js"
+],
+"J'ai appris pour ta blessure, rétablis-toi vite !": [
+"lang-fr.js"
+],
+"Si tu t'ennuies chez toi, je passe et on joue aux jeux vidéo.": [
+"lang-fr.js"
+],
 "— on est qualifiés !": [
 "lang-fr.js"
 ],
@@ -345330,6 +345842,27 @@
 "lang-fr.js"
 ],
 "TU POURRAS REPOSTULER LA SAISON PROCHAINE.": [
+"lang-fr.js"
+],
+"ON FAIT DU VÉLO AU PARC ?": [
+"lang-fr.js"
+],
+"UN NOUVEAU CAFÉ VIENT D'OUVRIR, ALLONS-Y UN DE CES JOURS.": [
+"lang-fr.js"
+],
+"JE NE SAIS PLUS COMBIEN DE FOIS J'AI REVU CE BUT !": [
+"lang-fr.js"
+],
+"HOMME DU MATCH, BRAVO !": [
+"lang-fr.js"
+],
+"CETTE SEMAINE, TOUT LE MONDE PARLE DE TOI !": [
+"lang-fr.js"
+],
+"GARDE LE MORAL, VOUS GAGNEREZ LA SEMAINE PROCHAINE !": [
+"lang-fr.js"
+],
+"J'AI APPRIS POUR TA BLESSURE, RÉTABLIS-TOI VITE !": [
 "lang-fr.js"
 ],
 "— ON EST QUALIFIÉS !": [
@@ -365317,6 +365850,42 @@
 "Kamu bisa melamar lagi musim depan.": [
 "lang-id.js"
 ],
+"Main sepeda di taman, yuk?": [
+"lang-id.js"
+],
+"Ada kafe baru buka, kapan-kapan ke sana yuk.": [
+"lang-id.js"
+],
+"Akhir pekan kosong? Kami mau bakar-bakar.": [
+"lang-id.js"
+],
+"Nemu foto tim lama kita, kita kecil banget dulu!": [
+"lang-id.js"
+],
+"Entah berapa kali aku nonton gol itu!": [
+"lang-id.js"
+],
+"Seisi kafe berdiri saat golmu, aku bilang ke semua kalau kamu temanku!": [
+"lang-id.js"
+],
+"Pemain terbaik laga, mantap!": [
+"lang-id.js"
+],
+"Minggu ini semua orang membicarakanmu, bro!": [
+"lang-id.js"
+],
+"Hari buruk bisa terjadi pada siapa saja, laga berikutnya pasti menang.": [
+"lang-id.js"
+],
+"Jangan patah semangat, minggu depan kalian menang!": [
+"lang-id.js"
+],
+"Dengar kamu cedera, cepat sembuh ya bro!": [
+"lang-id.js"
+],
+"Kalau bosan di rumah, aku mampir, kita main gim.": [
+"lang-id.js"
+],
 "— kita lolos!": [
 "lang-id.js"
 ],
@@ -378594,6 +379163,27 @@
 "lang-id.js"
 ],
 "KAMU BISA MELAMAR LAGI MUSIM DEPAN.": [
+"lang-id.js"
+],
+"MAIN SEPEDA DI TAMAN, YUK?": [
+"lang-id.js"
+],
+"ADA KAFE BARU BUKA, KAPAN-KAPAN KE SANA YUK.": [
+"lang-id.js"
+],
+"ENTAH BERAPA KALI AKU NONTON GOL ITU!": [
+"lang-id.js"
+],
+"PEMAIN TERBAIK LAGA, MANTAP!": [
+"lang-id.js"
+],
+"MINGGU INI SEMUA ORANG MEMBICARAKANMU, BRO!": [
+"lang-id.js"
+],
+"JANGAN PATAH SEMANGAT, MINGGU DEPAN KALIAN MENANG!": [
+"lang-id.js"
+],
+"DENGAR KAMU CEDERA, CEPAT SEMBUH YA BRO!": [
 "lang-id.js"
 ],
 "— KITA LOLOS!": [
@@ -398576,6 +399166,42 @@
 "Potrai ricandidarti la prossima stagione.": [
 "lang-it.js"
 ],
+"Andiamo in bici al parco?": [
+"lang-it.js"
+],
+"Hanno aperto un nuovo bar, andiamoci una volta.": [
+"lang-it.js"
+],
+"Sei libero nel weekend? Facciamo una grigliata.": [
+"lang-it.js"
+],
+"Ho trovato la nostra vecchia foto di squadra, eravamo piccolissimi!": [
+"lang-it.js"
+],
+"Non so più quante volte ho rivisto quel gol!": [
+"lang-it.js"
+],
+"Al gol tutto il bar si è alzato, ho detto a tutti che sei mio amico!": [
+"lang-it.js"
+],
+"Migliore in campo, complimenti!": [
+"lang-it.js"
+],
+"Questa settimana parlano tutti di te!": [
+"lang-it.js"
+],
+"Le giornate storte capitano a tutti, vincerete la prossima.": [
+"lang-it.js"
+],
+"Su il morale, la prossima settimana vincete!": [
+"lang-it.js"
+],
+"Ho saputo dell'infortunio, guarisci presto!": [
+"lang-it.js"
+],
+"Se ti annoi a casa passo da te e giochiamo alla console.": [
+"lang-it.js"
+],
 "— ci siamo qualificati!": [
 "lang-it.js"
 ],
@@ -411849,6 +412475,27 @@
 "lang-it.js"
 ],
 "POTRAI RICANDIDARTI LA PROSSIMA STAGIONE.": [
+"lang-it.js"
+],
+"ANDIAMO IN BICI AL PARCO?": [
+"lang-it.js"
+],
+"HANNO APERTO UN NUOVO BAR, ANDIAMOCI UNA VOLTA.": [
+"lang-it.js"
+],
+"NON SO PIÙ QUANTE VOLTE HO RIVISTO QUEL GOL!": [
+"lang-it.js"
+],
+"MIGLIORE IN CAMPO, COMPLIMENTI!": [
+"lang-it.js"
+],
+"QUESTA SETTIMANA PARLANO TUTTI DI TE!": [
+"lang-it.js"
+],
+"SU IL MORALE, LA PROSSIMA SETTIMANA VINCETE!": [
+"lang-it.js"
+],
+"HO SAPUTO DELL'INFORTUNIO, GUARISCI PRESTO!": [
 "lang-it.js"
 ],
 "— CI SIAMO QUALIFICATI!": [
@@ -432650,6 +433297,42 @@
 "Você pode se candidatar de novo na próxima temporada.": [
 "lang-pt.js"
 ],
+"Bora andar de bicicleta no parque?": [
+"lang-pt.js"
+],
+"Abriu um café novo, vamos lá um dia.": [
+"lang-pt.js"
+],
+"Tá livre no fim de semana? Vai ter churrasco.": [
+"lang-pt.js"
+],
+"Achei nossa foto antiga do time, como a gente era pequeno!": [
+"lang-pt.js"
+],
+"Nem sei quantas vezes vi aquele gol!": [
+"lang-pt.js"
+],
+"O café inteiro levantou no gol, falei pra todo mundo que você é meu amigo!": [
+"lang-pt.js"
+],
+"Melhor em campo! Mereceu!": [
+"lang-pt.js"
+],
+"Essa semana todo mundo tá falando de você, mano!": [
+"lang-pt.js"
+],
+"Todo mundo tem dia ruim, vocês ganham o próximo.": [
+"lang-pt.js"
+],
+"Não desanima, semana que vem vocês ganham!": [
+"lang-pt.js"
+],
+"Soube da lesão, melhora logo, mano!": [
+"lang-pt.js"
+],
+"Se ficar entediado em casa, passo aí e a gente joga videogame.": [
+"lang-pt.js"
+],
 "— nos classificamos!": [
 "lang-pt.js"
 ],
@@ -445644,6 +446327,27 @@
 "lang-pt.js"
 ],
 "VOCÊ PODE SE CANDIDATAR DE NOVO NA PRÓXIMA TEMPORADA.": [
+"lang-pt.js"
+],
+"BORA ANDAR DE BICICLETA NO PARQUE?": [
+"lang-pt.js"
+],
+"ABRIU UM CAFÉ NOVO, VAMOS LÁ UM DIA.": [
+"lang-pt.js"
+],
+"NEM SEI QUANTAS VEZES VI AQUELE GOL!": [
+"lang-pt.js"
+],
+"MELHOR EM CAMPO! MERECEU!": [
+"lang-pt.js"
+],
+"ESSA SEMANA TODO MUNDO TÁ FALANDO DE VOCÊ, MANO!": [
+"lang-pt.js"
+],
+"NÃO DESANIMA, SEMANA QUE VEM VOCÊS GANHAM!": [
+"lang-pt.js"
+],
+"SOUBE DA LESÃO, MELHORA LOGO, MANO!": [
 "lang-pt.js"
 ],
 "— NOS CLASSIFICAMOS!": [
@@ -470023,42 +470727,6 @@
 "linear-gradient(135deg,#c792ff,#7b3fe4)": [
 "phone.js"
 ],
-"Parkta bisiklet sürelim mi?": [
-"phone.js"
-],
-"Yeni bir kafe açılmış, bir ara gidelim.": [
-"phone.js"
-],
-"Hafta sonu boş musun? Bizimkiler mangal yapıyor.": [
-"phone.js"
-],
-"Eski takım fotoğrafımızı buldum, ne kadar küçükmüşüz!": [
-"phone.js"
-],
-"O golü kaç kere izledim bilmiyorum!": [
-"phone.js"
-],
-"Gol anında bütün kafe ayağa kalktı, herkese arkadaşım dedim!": [
-"phone.js"
-],
-"Maçın adamı olmuşsun, helal olsun!": [
-"phone.js"
-],
-"Bu hafta herkes senden bahsediyor kanka!": [
-"phone.js"
-],
-"Kötü gün herkesin başına gelir, sonrakini alırsınız.": [
-"phone.js"
-],
-"Moralini bozma, haftaya kazanırsınız!": [
-"phone.js"
-],
-"Sakatlığı duydum, çabuk iyileş kanka!": [
-"phone.js"
-],
-"Evde canın sıkılırsa uğrarım, oyun oynarız.": [
-"phone.js"
-],
 "linear-gradient(135deg,#ffb36b,#e0672b)": [
 "phone.js"
 ],
@@ -470393,6 +471061,42 @@
 "star.js"
 ],
 "{} Lüks Yaşam Vitrini": [
+"star.js"
+],
+"Vitrin: 3.500+ ürün": [
+"star.js"
+],
+"Telefondaki yeni alışveriş uygulaması: 30 kurgusal marka, Ekonomik’ten Lüks’e 4 kademe, her sezon yeni koleksiyon.": [
+"star.js"
+],
+"Sezon sonu tatilini planla, hafta sonu kaçamaklarına çık.": [
+"star.js"
+],
+"Hakkındaki manşetler, gala ve ödül gecesi davetleri, ünlü aşklar.": [
+"star.js"
+],
+"Yatırım ve Ek İş": [
+"star.js"
+],
+"Kafe, restoran, giyim markası... Haftalık gelirini bankadaki hesap hareketlerinde gör.": [
+"star.js"
+],
+"Heykel, emekli forma numarası, otobiyografi ve TV yorumculuğu. Efsaneler Salonu’nda emekli kariyerlerinin Starpedia sayfası.": [
+"star.js"
+],
+"Garajım ve yeni görseller": [
+"star.js"
+],
+"Arabalar ve evler yepyeni görsellerle; tüm araçların garajında sergilenir.": [
+"star.js"
+],
+"Altyapıda transfer isteği": [
+"star.js"
+],
+"İstediğin kulübün altyapısına başvur; 14 yaşından sonra yurt dışı akademilere seçmelerle gir.": [
+"star.js"
+],
+"Haftalık aksiyonlar için otomatik plan. Güçlü bir kulübe geçince teklif gelmemesi düzeltildi.": [
 "star.js"
 ],
 "Moral {}{}": [

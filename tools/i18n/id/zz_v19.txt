@@ -2964,3 +2964,15 @@
 10041|Jangan patah semangat, minggu depan kalian menang!
 10042|Dengar kamu cedera, cepat sembuh ya bro!
 10043|Kalau bosan di rumah, aku mampir, kita main gim.
+10044|Showcase: 3.500+ barang
+10045|Aplikasi belanja baru di ponselmu: 30 merek fiktif, 4 tingkat dari Ekonomis sampai Mewah, koleksi baru setiap musim.
+10046|Rencanakan liburan akhir musim dan pergi liburan akhir pekan.
+10047|Berita utama tentangmu, undangan gala dan malam penghargaan, kisah cinta selebriti.
+10048|Investasi dan Kerja Sampingan
+10049|Kafe, restoran, merek pakaian... Lihat pendapatan mingguanmu di transaksi bank.
+10052|Patung, nomor punggung dipensiunkan, autobiografi, dan pandit TV. Halaman Starpedia karier yang sudah pensiun di Hall Legenda.
+10055|Garasiku dan gambar baru
+10056|Mobil dan rumah dengan gambar baru; semua kendaraanmu dipajang di garasi.
+10057|Permintaan pindah akademi
+10058|Lamar ke akademi klub pilihanmu; mulai usia 14, masuk akademi luar negeri lewat seleksi.
+10059|Rencana otomatis untuk aksi mingguan. Diperbaiki: tidak ada tawaran setelah pindah ke klub yang lebih kuat.

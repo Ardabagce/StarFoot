@@ -2964,3 +2964,15 @@
 10041|Não desanima, semana que vem vocês ganham!
 10042|Soube da lesão, melhora logo, mano!
 10043|Se ficar entediado em casa, passo aí e a gente joga videogame.
+10044|Showcase: mais de 3.500 produtos
+10045|O novo app de compras do seu celular: 30 marcas fictícias, 4 faixas de Econômico a Luxo e uma coleção nova a cada temporada.
+10046|Planeje as férias de fim de temporada e faça escapadas de fim de semana.
+10047|Manchetes sobre você, convites para galas e premiações e romances famosos.
+10048|Investimentos e bicos
+10049|Café, restaurante, marca de roupas... Veja sua renda semanal nas movimentações do banco.
+10052|Estátua, número aposentado, autobiografia e comentarista de TV. Páginas da Starpedia das carreiras encerradas no Hall das Lendas.
+10055|Minha garagem e novas imagens
+10056|Carros e casas com imagens novas; todos os seus veículos ficam expostos na garagem.
+10057|Pedidos de transferência na base
+10058|Candidate-se à base do clube que quiser; a partir dos 14, entre em bases no exterior por testes.
+10059|Plano automático para as ações semanais. Corrigido: não chegavam propostas depois de ir para um clube mais forte.

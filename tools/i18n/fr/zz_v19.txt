@@ -2964,3 +2964,15 @@
 10041|Garde le moral, vous gagnerez la semaine prochaine !
 10042|J'ai appris pour ta blessure, rétablis-toi vite !
 10043|Si tu t'ennuies chez toi, je passe et on joue aux jeux vidéo.
+10044|Showcase : plus de 3 500 articles
+10045|La nouvelle appli shopping de ton téléphone : 30 marques fictives, 4 gammes de Éco à Luxe, une nouvelle collection chaque saison.
+10046|Planifie tes vacances de fin de saison et pars en escapade le week-end.
+10047|Les gros titres sur toi, des invitations aux galas et cérémonies, des romances people.
+10048|Investissements et petits boulots
+10049|Café, restaurant, marque de vêtements... Vois tes revenus hebdomadaires dans les mouvements bancaires.
+10052|Statue, numéro retiré, autobiographie et consultant TV. Les pages Starpedia de tes carrières terminées au Panthéon.
+10055|Mon garage et nouveaux visuels
+10056|Voitures et maisons avec de nouveaux visuels ; tous tes véhicules sont exposés dans ton garage.
+10057|Demandes de transfert en formation
+10058|Postule au centre de formation du club de ton choix ; dès 14 ans, intègre une académie à l'étranger via des essais.
+10059|Un plan automatique pour les actions hebdomadaires. Corrigé : plus aucune offre après avoir rejoint un club plus fort.

@@ -614,7 +614,7 @@ document.addEventListener('click', (e) => {
 // ---------- Güncelleme duyurusu (her sürümde bir kez) ----------
 const APP_VER = '1.0.25';
 // Duyuru içeriğinin sürümü: yeni duyuru yazılınca güncellenir (yalnız sürüm atlamak tekrar göstermez)
-const WN_VER = '1.0.24';
+const WN_VER = '1.0.25';
 const WhatsNew = {
   KEY: 'starfoot_whatsnew',
   // Hub'a girişte bir kez gösterir; gösterdiyse true döner. done(): pencere kapanınca çalışır.
@@ -632,6 +632,16 @@ const WhatsNew = {
   // Duyuruyu gösterir (Ayarlar'dan yeniden açılabilir): bu ve bir önceki güncelleme, geçmiş gibi
   show(done) {
     const it = (ic, t, d) => `<li><i data-emo>${ic}</i><span><b>${t}</b><small>${d}</small></span></li>`;
+    const v25 = [
+      it('🛍️', 'Vitrin: 3.500+ ürün', 'Telefondaki yeni alışveriş uygulaması: 30 kurgusal marka, Ekonomik’ten Lüks’e 4 kademe, her sezon yeni koleksiyon.'),
+      it('✈️', 'Seyahat', 'Sezon sonu tatilini planla, hafta sonu kaçamaklarına çık.'),
+      it('📰', 'Magazin', 'Hakkındaki manşetler, gala ve ödül gecesi davetleri, ünlü aşklar.'),
+      it('📈', 'Yatırım ve Ek İş', 'Kafe, restoran, giyim markası... Haftalık gelirini bankadaki hesap hareketlerinde gör.'),
+      it('🏛️', 'Miras', 'Heykel, emekli forma numarası, otobiyografi ve TV yorumculuğu. Efsaneler Salonu’nda emekli kariyerlerinin Starpedia sayfası.'),
+      it('🚗', 'Garajım ve yeni görseller', 'Arabalar ve evler yepyeni görsellerle; tüm araçların garajında sergilenir.'),
+      it('🎓', 'Altyapıda transfer isteği', 'İstediğin kulübün altyapısına başvur; 14 yaşından sonra yurt dışı akademilere seçmelerle gir.'),
+      it('🎽', 'Teknik Direktör', 'Haftalık aksiyonlar için otomatik plan. Güçlü bir kulübe geçince teklif gelmemesi düzeltildi.'),
+    ].join('');
     const v24 = [
       it('📱', 'Yeni: Telefonun', 'Alt menüdeki Telefon: Mesajlar, Takvim, StarFeed, Banka, Menajer ve daha fazlası.'),
       it('❤️', 'Yaşam sekmesi artık telefonda', 'Hayatım, Okul, Spor Mağazası ve Alışveriş telefonda birer uygulama.'),
@@ -646,12 +656,6 @@ const WhatsNew = {
       it('📊', 'Teknik Direktör: zorluk seviyeleri', 'Kolay, Orta ya da Zor: oluştururken veya Ayarlar’dan seç.'),
       it('🔧', 'Düzeltmeler', 'Maç ekranı ve meydan okumalarda iyileştirmeler, daha akıcı oyun.'),
     ].join('');
-    const v21 = [
-      it('🎯', 'Teknik Direktör meydan okumaları', '0-2 geriden dönüş, 10 kişi, kurtarma operasyonu, şampiyonluk yarışı... Yıldızları topla. İlk görev herkese ücretsiz.'),
-      it('💎', 'Diamond’a yeni içerik', '6 özel gol sevinci, HD kariyer posteri, Teknik Direktör temaları ve 6 kariyer yuvası.'),
-      it('🧪', 'Erken erişim', 'Yeni özellikler herkese açılmadan önce Diamond’da. İlki: Haftanın Meydan Okuması.'),
-      it('◆', 'Kurucu Destekçi', 'Çıkış döneminde Diamond alanlara özel, kalıcı rozet. Oyunu destekleyen herkese teşekkürler!'),
-    ].join('');
     const has = typeof Star !== 'undefined' && Star.has && Star.has();
     const end = () => { if (done) setTimeout(done, 300); };
     const btns = [{ t: 'Tamam', cls: 'btn-ghost', fn: end }];
@@ -659,11 +663,11 @@ const WhatsNew = {
     Game.modal(`<div class="wn"><div class="ev-tag">Güncelleme geçmişi</div>
       <h2>Yenilikler 🚀</h2>
       <div class="wn-v"><b>${WN_VER}</b><small>Bu güncelleme</small></div>
-      <ul class="wn-l">${v24}</ul>
-      <div class="wn-v old"><b>1.0.22</b><small>Önceki güncelleme</small></div>
+      <ul class="wn-l">${v25}</ul>
+      <div class="wn-v old"><b>1.0.24</b><small>Önceki güncelleme</small></div>
+      <ul class="wn-l old">${v24}</ul>
+      <div class="wn-v old"><b>1.0.22</b></div>
       <ul class="wn-l old">${v22}</ul>
-      <div class="wn-v old"><b>1.0.21</b></div>
-      <ul class="wn-l old">${v21}</ul>
       <p class="wn-note ok">Diamond’a eklenenlerin hiçbiri maçta güç vermez; ücretsiz oyunda hiçbir şey değişmedi.</p>
       <p class="wn-note">Teknik Direktör modu yepyeni bir fikir ve her güncellemede gelişmeye devam edecek. Fikirlerini bekliyoruz!</p></div>`, btns, { wide: true });
     if (typeof Premium !== 'undefined') Premium.track('whatsnew_view', { ver: WN_VER, premium: has ? 1 : 0 });
