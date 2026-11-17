@@ -795,6 +795,7 @@
 "legacy.js",
 "life.js",
 "lpath.js",
+"mall.js",
 "plusx.js",
 "star.js",
 "value.js",
@@ -2011,6 +2012,7 @@
 "tr-TR": [
 "celebrate.js",
 "cloud.js",
+"mall.js",
 "util.js"
 ],
 "{} TARAFTAR": [
@@ -7822,6 +7824,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"mall.js",
 "match.js"
 ],
 "Orta: dengeli, standart deneyim.": [
@@ -10295,6 +10298,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"mall.js",
 "phone.js",
 "school.js",
 "wc.js"
@@ -11864,7 +11868,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"mall.js"
 ],
 "Kravatlı, şık ve otoriter": [
 "coachx.js",
@@ -18690,7 +18695,8 @@
 "namefix.js"
 ],
 "BLU": [
-"data.js"
+"data.js",
+"lang-it.js"
 ],
 "Bolu Zirvesi": [
 "data.js",
@@ -21936,7 +21942,16 @@
 "namefix.js"
 ],
 "MOR": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Moreira Meteorları": [
 "data.js",
@@ -22339,7 +22354,8 @@
 "namefix.js"
 ],
 "CAP": [
-"data.js"
+"data.js",
+"lang-en.js"
 ],
 "Kuritiba Işıkları": [
 "data.js",
@@ -27108,13 +27124,15 @@
 "data.js"
 ],
 "White": [
-"data.js"
+"data.js",
+"lang-en.js"
 ],
 "Roberts": [
 "data.js"
 ],
 "Green": [
-"data.js"
+"data.js",
+"lang-en.js"
 ],
 "Hall": [
 "data.js"
@@ -27912,7 +27930,8 @@
 "data.js"
 ],
 "Marques": [
-"data.js"
+"data.js",
+"lang-fr.js"
 ],
 "Pinto": [
 "data.js"
@@ -30173,7 +30192,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"mall.js"
 ],
 "Gitar": [
 "data.js",
@@ -30185,7 +30205,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"mall.js"
 ],
 "Kablosuz Kulaklık": [
 "data.js",
@@ -31865,6 +31886,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"mall.js",
 "sprites.js"
 ],
 "Elmas": [
@@ -31914,7 +31936,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"mall.js"
 ],
 "+3 kariyer yuvası": [
 "diamond2.js",
@@ -35841,7 +35864,8 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"life.js"
+"life.js",
+"mall.js"
 ],
 "{} ×{} çantana eklendi ({}/{})": [
 "extras.js",
@@ -42182,6 +42206,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"mall.js",
 "phone.js"
 ],
 "MVP": [
@@ -44245,7 +44270,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"mall.js"
 ],
 "Genç": [
 "game.js",
@@ -44437,7 +44463,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"mall.js"
 ],
 "Bakım": [
 "game.js",
@@ -44647,6 +44674,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"mall.js",
 "phone.js"
 ],
 "Eşyaların": [
@@ -45473,7 +45501,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"mall.js"
 ],
 "{} kullanmak için ehliyet gerekiyor. Sınav 3 sorudan oluşuyor.": [
 "game.js",
@@ -45499,6 +45528,7 @@
 "lang-ja.js",
 "lang-pt.js",
 "lifex.js",
+"mall.js",
 "phone.js",
 "school.js"
 ],
@@ -46710,7 +46740,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"mall.js"
 ],
 "Mahalle maçından Dünya Şampiyonası finaline. Hikâyeni yaz, scoutların gözüne gir, efsane ol.": [
 "game.js",
@@ -80314,6 +80345,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"mall.js",
 "wc.js"
 ],
 "Küba": [
@@ -88366,6 +88398,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"mall.js",
 "phone.js"
 ],
 "Gece": [
@@ -90237,6 +90270,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"mall.js",
 "phone.js"
 ],
 "Satılık evler": [
@@ -90272,7 +90306,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"mall.js"
 ],
 "GARAJINDA": [
 "lang-ar.js",
@@ -90284,6 +90319,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"mall.js",
 "phone.js"
 ],
 "Şu an satışta araç yok.": [
@@ -90707,6 +90743,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"mall.js",
 "phone.js"
 ],
 "Motor gücü": [
@@ -90719,6 +90756,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"mall.js",
 "phone.js"
 ],
 "Hayatım": [
@@ -90755,6 +90793,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"mall.js",
 "phone.js"
 ],
 "Sahaya hazır ol": [
@@ -96443,17 +96482,6 @@
 "lang-pt.js",
 "phone.js"
 ],
-"If you rush it, you'll be out longer.": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "Ceza sahasında daha soğukkanlı ol, gol gelir.": [
 "lang-ar.js",
 "lang-de.js",
@@ -99814,6 +99842,1652 @@
 "lang-pt.js",
 "phone.js"
 ],
+"Kol saati": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Spor ayakkabı": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Güneş gözlüğü": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Kulaklık": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Dizüstü bilgisayar": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Parfüm": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Mont": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Kapüşonlu sweatshirt": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Şapka": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Klasik ayakkabı": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Yüzük": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Kolye": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Dolma kalem": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Cüzdan": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Sırt çantası": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Valiz": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Televizyon": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Oyun konsolu": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Fotoğraf makinesi": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Drone": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Tablet": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Akıllı saat": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Hoparlör": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Satranç takımı": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Koltuk": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Tablo": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Abajur": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Kahve makinesi": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Oyuncu koltuğu": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Uzaktan kumandalı araba": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Peluş ayı": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Giyim": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Ayakkabı": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Aksesuar": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Mücevher": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Elektronik": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Kozmetik": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Ev ve dekor": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Hobi ve spor": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Ekonomik": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Beyaz": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Lacivert": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Bej": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Taba": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Haki": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Gri": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Bordo": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Mavi": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Pembe": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Yeşil": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Krem": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Turuncu": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Mor": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Antrasit": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Hatchback": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Sedan": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"SUV": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Coupe": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Süper spor": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Cabrio": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Pickup": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Daire": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Loft": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Sahil evi": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Dağ evi": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Modern villa": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Çatı katı": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Malikâne": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Özel ada": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Bodrum": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Alpler": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Kapadokya": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Aspen": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Dubai": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Marbella": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Los Angeles": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"New York": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Karayipler": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Miami": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Sahil": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Tepe": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Marina": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Park": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js",
+"wc.js"
+],
+"Bahçeli": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Bu ürün için yaşın yetmiyor.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Araba kullanmak için ehliyet gerekiyor. Sınav 3 sorudan oluşuyor.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Araba kullanmak için ehliyet gerekiyor.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"You need a licence to drive a car.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Tapun hazır, yeni evin hayırlı olsun!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Araban teslim edildi, iyi yolculuklar!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Siparişin yolda!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Özel teslimat": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Yarın kapında": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Aradığın kriterde ürün bulunamadı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Tümünü gör ›": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Dolabım": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"ürün": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Günün fırsatları": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Bütçene uygun": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Markalar": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Outlet": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Geçen sezonun koleksiyonu %35'e varan indirimle": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Ev ve hobi": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Önerilen": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Fiyat: artan": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Fiyat: azalan": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Daha fazlası için aramayı daralt.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Dolabında": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"yaşında açılır": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Bakiyen yetersiz": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Onayla": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Hemen al": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Ün etkisi yok": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Lüks markalar daha çok moral ve biraz ün verir.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Premium ürünler biraz ün verir.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Günlük kullanım: moral verir.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Aynı hafta çok alışveriş yapınca etkisi azalır.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Butikten özel teslimat": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Ücretsiz kargo · yarın kapında": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Bu markadan": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"değerlendirme": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Henüz bir şey almadın. Fırsatlara göz at!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Henüz bir şey almadın.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"You haven't bought anything yet.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Fırsatlara göz at!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Check out the deals!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Toplam harcama": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Garajında": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Tüm modelleri görmek için bir kademe seç.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Galeri": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Yeni ilanlar": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Yeni koleksiyon": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Tüm ürünler": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Özel portföy": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"Garaj klasikleri": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"phone.js"
+],
+"YENİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
+"Marka, ürün ya da renk ara": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Vitrin": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
 "(Asist)": [
 "lang-ar.js",
 "lang-de.js",
@@ -102069,7 +103743,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"mall.js"
 ],
 "Kırmızı kart": [
 "lang-ar.js",
@@ -102175,6 +103850,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"mall.js",
 "socialart.js"
 ],
 "Londra": [
@@ -102187,6 +103863,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"mall.js",
 "socialart.js"
 ],
 "LİGUE 1": [
@@ -102356,6 +104033,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"mall.js",
 "socialart.js"
 ],
 "Milli Takım Kampı": [
@@ -102417,6 +104095,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"mall.js",
 "socialart.js"
 ],
 "MİLLİ MAÇ": [
@@ -103004,7 +104683,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"mall.js"
 ],
 "Soyunma odasında toparlan": [
 "lang-ar.js",
@@ -105372,6 +107052,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"mall.js",
 "socialart.js"
 ],
 "İtalya Ligi": [
@@ -115252,17 +116933,6 @@
 "lang-pt.js"
 ],
 "KARİYER MODU": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"YENİ": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -157580,17 +159250,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"IF YOU RUSH IT, YOU'LL BE OUT LONGER.": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "MİLLİ FORMAYLA KAZANDIN, GURURLANDIM!": [
 "lang-ar.js",
 "lang-de.js",
@@ -160518,6 +162177,1414 @@
 "lang-pt.js"
 ],
 "TAMAM BABA.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KOL SAATİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SPOR AYAKKABI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GÜNEŞ GÖZLÜĞÜ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KULAKLIK": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DİZÜSTÜ BİLGİSAYAR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"PARFÜM": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MONT": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KAPÜŞONLU SWEATSHİRT": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ŞAPKA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KLASİK AYAKKABI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YÜZÜK": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KOLYE": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DOLMA KALEM": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"CÜZDAN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SIRT ÇANTASI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"VALİZ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TELEVİZYON": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"OYUN KONSOLU": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"FOTOĞRAF MAKİNESİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DRONE": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TABLET": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"AKILLI SAAT": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HOPARLÖR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SATRANÇ TAKIMI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KOLTUK": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TABLO": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ABAJUR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KAHVE MAKİNESİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"OYUNCU KOLTUĞU": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"UZAKTAN KUMANDALI ARABA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"PELUŞ AYI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GİYİM": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"AYAKKABI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"AKSESUAR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MÜCEVHER": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ELEKTRONİK": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KOZMETİK": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"EV VE DEKOR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HOBİ VE SPOR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"EKONOMİK": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BEYAZ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"LACİVERT": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BEJ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TABA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HAKİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GRİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BORDO": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MAVİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"PEMBE": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KREM": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TURUNCU": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ANTRASİT": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HATCHBACK": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SEDAN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"COUPE": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SÜPER SPOR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"CABRİO": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"PİCKUP": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DAİRE": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"LOFT": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SAHİL EVİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DAĞ EVİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MODERN VİLLA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ÇATI KATI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MALİKÂNE": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ÖZEL ADA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BODRUM": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ALPLER": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KAPADOKYA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ASPEN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DUBAİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MARBELLA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"LOS ANGELES": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"NEW YORK": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KARAYİPLER": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MİAMİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SAHİL": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TEPE": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MARİNA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"PARK": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BAHÇELİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BU ÜRÜN İÇİN YAŞIN YETMİYOR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ARABA KULLANMAK İÇİN EHLİYET GEREKİYOR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YOU NEED A LICENCE TO DRIVE A CAR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TAPUN HAZIR, YENİ EVİN HAYIRLI OLSUN!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ARABAN TESLİM EDİLDİ, İYİ YOLCULUKLAR!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SİPARİŞİN YOLDA!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ÖZEL TESLİMAT": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YARIN KAPINDA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ARADIĞIN KRİTERDE ÜRÜN BULUNAMADI.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TÜMÜNÜ GÖR ›": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DOLABIM": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ÜRÜN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GÜNÜN FIRSATLARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BÜTÇENE UYGUN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MARKALAR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"OUTLET": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"EV VE HOBİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ÖNERİLEN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"FİYAT: ARTAN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"FİYAT: AZALAN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DAHA FAZLASI İÇİN ARAMAYI DARALT.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DOLABINDA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YAŞINDA AÇILIR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BAKİYEN YETERSİZ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ONAYLA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HEMEN AL": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ÜN ETKİSİ YOK": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"PREMİUM ÜRÜNLER BİRAZ ÜN VERİR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GÜNLÜK KULLANIM: MORAL VERİR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BUTİKTEN ÖZEL TESLİMAT": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ÜCRETSİZ KARGO · YARIN KAPINDA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BU MARKADAN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DEĞERLENDİRME": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HENÜZ BİR ŞEY ALMADIN.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YOU HAVEN'T BOUGHT ANYTHING YET.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"FIRSATLARA GÖZ AT!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"CHECK OUT THE DEALS!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TOPLAM HARCAMA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GALERİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YENİ İLANLAR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YENİ KOLEKSİYON": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TÜM ÜRÜNLER": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ÖZEL PORTFÖY": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GARAJ KLASİKLERİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MARKA, ÜRÜN YA DA RENK ARA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KOLEKSİYONU": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"VİTRİN": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -166581,17 +169648,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"OYUN KONSOLU": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "OYUNA GİRİYORSUN! HOCA SANA GÜVENİYOR.": [
 "lang-ar.js",
 "lang-de.js",
@@ -170628,17 +173684,6 @@
 "lang-pt.js"
 ],
 "ÖNCE OKUL VE FUTBOL!": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"ÖZEL ADA": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -192483,6 +195528,18 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Yeni evimin anahtarlarını aldım. {}!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
 "{} müthiş bir vuruşla ağları sarstı!": [
 "lang-ar.js",
 "lang-de.js",
@@ -196968,6 +200025,18 @@
 "lang-pt.js",
 "v24.js"
 ],
+"Yeni {} parçam geldi.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
+],
 "/hafta · {} yıl kaldı": [
 "lang-ar.js",
 "lang-de.js",
@@ -198730,6 +201799,18 @@
 "lang-ja.js",
 "lang-pt.js",
 "phone.js"
+],
+"Yeni araba: {} {}.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"mall.js"
 ],
 "Sakat · {} hafta": [
 "lang-ar.js",
@@ -201451,6 +204532,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"mall.js",
 "phone.js"
 ],
 "Sen · {}": [
@@ -203273,7 +206355,8 @@
 "Sprint": [
 "lang-de.js",
 "lang-en.js",
-"lang-fr.js"
+"lang-fr.js",
+"mall.js"
 ],
 "Spielanleitung": [
 "lang-de.js"
@@ -212803,6 +215886,9 @@
 "Ich weiß. Wenn du es überstürzt, fällst du länger aus.": [
 "lang-de.js"
 ],
+"Wenn du es überstürzt, fällst du länger aus.": [
+"lang-de.js"
+],
 "Bleib im Strafraum cooler, dann kommen die Tore.": [
 "lang-de.js"
 ],
@@ -213548,6 +216634,393 @@
 "lang-de.js"
 ],
 "Okay, Papa.": [
+"lang-de.js"
+],
+"Armbanduhr": [
+"lang-de.js"
+],
+"Sneaker": [
+"lang-de.js"
+],
+"Sonnenbrille": [
+"lang-de.js"
+],
+"Kopfhörer": [
+"lang-de.js"
+],
+"Laptop": [
+"lang-de.js",
+"lang-en.js",
+"lang-id.js"
+],
+"Parfum": [
+"lang-de.js",
+"lang-fr.js",
+"lang-id.js"
+],
+"Jacke": [
+"lang-de.js"
+],
+"Hoodie": [
+"lang-de.js",
+"lang-en.js",
+"lang-id.js"
+],
+"Kappe": [
+"lang-de.js"
+],
+"Business-Schuhe": [
+"lang-de.js"
+],
+"Ring": [
+"lang-de.js",
+"lang-en.js"
+],
+"Halskette": [
+"lang-de.js"
+],
+"Füllfederhalter": [
+"lang-de.js"
+],
+"Geldbörse": [
+"lang-de.js"
+],
+"Rucksack": [
+"lang-de.js"
+],
+"Koffer": [
+"lang-de.js"
+],
+"Fernseher": [
+"lang-de.js"
+],
+"Spielkonsole": [
+"lang-de.js"
+],
+"Drohne": [
+"lang-de.js"
+],
+"Smartwatch": [
+"lang-de.js",
+"lang-en.js",
+"lang-it.js",
+"lang-pt.js"
+],
+"Lautsprecher": [
+"lang-de.js"
+],
+"Schachspiel": [
+"lang-de.js"
+],
+"Sofa": [
+"lang-de.js",
+"lang-en.js",
+"lang-id.js"
+],
+"Gemälde": [
+"lang-de.js"
+],
+"Lampe": [
+"lang-de.js",
+"lang-fr.js"
+],
+"Kaffeemaschine": [
+"lang-de.js"
+],
+"Gaming-Stuhl": [
+"lang-de.js"
+],
+"Ferngesteuertes Auto": [
+"lang-de.js"
+],
+"Teddybär": [
+"lang-de.js"
+],
+"Kleidung": [
+"lang-de.js"
+],
+"Accessoires": [
+"lang-de.js",
+"lang-fr.js"
+],
+"Schmuck": [
+"lang-de.js"
+],
+"Kosmetik": [
+"lang-de.js"
+],
+"Wohnen & Deko": [
+"lang-de.js"
+],
+"Hobby & Sport": [
+"lang-de.js"
+],
+"Weiß": [
+"lang-de.js"
+],
+"Marineblau": [
+"lang-de.js"
+],
+"Beige": [
+"lang-de.js",
+"lang-en.js",
+"lang-fr.js",
+"lang-it.js"
+],
+"Cognac": [
+"lang-de.js"
+],
+"Khaki": [
+"lang-de.js",
+"lang-en.js",
+"lang-id.js"
+],
+"Grau": [
+"lang-de.js"
+],
+"Bordeaux": [
+"lang-de.js",
+"lang-fr.js",
+"lang-it.js"
+],
+"Blau": [
+"lang-de.js"
+],
+"Rosa": [
+"lang-de.js",
+"lang-es.js",
+"lang-it.js",
+"lang-pt.js"
+],
+"Grün": [
+"lang-de.js"
+],
+"Creme": [
+"lang-de.js",
+"lang-pt.js"
+],
+"Orange": [
+"lang-de.js",
+"lang-en.js",
+"lang-fr.js"
+],
+"Lila": [
+"lang-de.js"
+],
+"Anthrazit": [
+"lang-de.js"
+],
+"Kompaktwagen": [
+"lang-de.js"
+],
+"Limousine": [
+"lang-de.js"
+],
+"Coupé": [
+"lang-de.js",
+"lang-en.js",
+"lang-fr.js",
+"lang-it.js",
+"mall.js"
+],
+"Supersportwagen": [
+"lang-de.js"
+],
+"Pick-up": [
+"lang-de.js",
+"lang-fr.js",
+"lang-it.js"
+],
+"Wohnung": [
+"lang-de.js"
+],
+"Strandhaus": [
+"lang-de.js"
+],
+"Berghütte": [
+"lang-de.js"
+],
+"Moderne Villa": [
+"lang-de.js"
+],
+"Penthouse": [
+"lang-de.js",
+"lang-en.js",
+"lang-fr.js",
+"lang-id.js"
+],
+"Herrenhaus": [
+"lang-de.js"
+],
+"Privatinsel": [
+"lang-de.js"
+],
+"Alpen": [
+"lang-de.js"
+],
+"Kappadokien": [
+"lang-de.js"
+],
+"Karibik": [
+"lang-de.js"
+],
+"Strandpromenade": [
+"lang-de.js"
+],
+"Hanglage": [
+"lang-de.js"
+],
+"Jachthafen": [
+"lang-de.js"
+],
+"Am Park": [
+"lang-de.js"
+],
+"Mit Garten": [
+"lang-de.js"
+],
+"Für diesen Artikel bist du noch nicht alt genug.": [
+"lang-de.js"
+],
+"Zum Autofahren brauchst du einen Führerschein. Die Prüfung hat 3 Fragen.": [
+"lang-de.js"
+],
+"Die Urkunde ist fertig, viel Freude im neuen Zuhause!": [
+"lang-de.js"
+],
+"Dein Auto ist da, gute Fahrt!": [
+"lang-de.js"
+],
+"Deine Bestellung ist unterwegs!": [
+"lang-de.js"
+],
+"Exklusive Lieferung": [
+"lang-de.js"
+],
+"Morgen bei dir": [
+"lang-de.js"
+],
+"Keine passenden Artikel gefunden.": [
+"lang-de.js"
+],
+"Alle ansehen ›": [
+"lang-de.js"
+],
+"Mein Schrank": [
+"lang-de.js"
+],
+"Angebote des Tages": [
+"lang-de.js"
+],
+"Passend zu deinem Budget": [
+"lang-de.js"
+],
+"Marken": [
+"lang-de.js"
+],
+"Kollektion der letzten Saison bis zu 35 % günstiger": [
+"lang-de.js"
+],
+"Wohnen und Hobby": [
+"lang-de.js"
+],
+"Empfohlen": [
+"lang-de.js"
+],
+"Preis: aufsteigend": [
+"lang-de.js"
+],
+"Preis: absteigend": [
+"lang-de.js"
+],
+"Grenze die Suche ein, um mehr zu sehen.": [
+"lang-de.js"
+],
+"In deinem Schrank": [
+"lang-de.js"
+],
+"ab diesem Alter": [
+"lang-de.js"
+],
+"Guthaben reicht nicht": [
+"lang-de.js"
+],
+"Bestätigen": [
+"lang-de.js"
+],
+"Jetzt kaufen": [
+"lang-de.js"
+],
+"Kein Ruhmeffekt": [
+"lang-de.js"
+],
+"Luxusmarken geben mehr Moral und etwas Ruhm.": [
+"lang-de.js"
+],
+"Premiumartikel geben etwas Ruhm.": [
+"lang-de.js"
+],
+"Alltagsartikel: gibt Moral.": [
+"lang-de.js"
+],
+"Wer in einer Woche viel kauft, bekommt weniger Wirkung.": [
+"lang-de.js"
+],
+"Exklusive Lieferung aus der Boutique": [
+"lang-de.js"
+],
+"Kostenloser Versand · morgen bei dir": [
+"lang-de.js"
+],
+"Von dieser Marke": [
+"lang-de.js"
+],
+"Bewertungen": [
+"lang-de.js"
+],
+"Du hast noch nichts gekauft. Schau dir die Angebote an!": [
+"lang-de.js"
+],
+"Ausgaben gesamt": [
+"lang-de.js"
+],
+"In deiner Garage": [
+"lang-de.js"
+],
+"Wähle eine Stufe, um alle Modelle zu sehen.": [
+"lang-de.js"
+],
+"Showroom": [
+"lang-de.js",
+"lang-en.js",
+"lang-fr.js",
+"lang-id.js"
+],
+"Neue Angebote": [
+"lang-de.js"
+],
+"Neue Kollektion": [
+"lang-de.js"
+],
+"Alle Artikel": [
+"lang-de.js"
+],
+"Exklusives Portfolio": [
+"lang-de.js"
+],
+"Garagenklassiker": [
+"lang-de.js"
+],
+"NEU": [
+"lang-de.js"
+],
+"Marke, Artikel oder Farbe suchen": [
+"lang-de.js"
+],
+"Kollektion": [
+"lang-de.js"
+],
+"Schaufenster": [
 "lang-de.js"
 ],
 "– wir haben uns qualifiziert!": [
@@ -214484,7 +217957,8 @@
 "lang-de.js"
 ],
 "E-Bike": [
-"lang-de.js"
+"lang-de.js",
+"mall.js"
 ],
 "E-Scooter": [
 "lang-de.js"
@@ -214889,10 +218363,6 @@
 ],
 "Khakigrünes Tarnmuster": [
 "lang-de.js"
-],
-"Ring": [
-"lang-de.js",
-"lang-en.js"
 ],
 "Was für eine Nacht! Deine Bindung zu den Mitspielern ist stärker geworden.": [
 "lang-de.js"
@@ -215468,7 +218938,8 @@
 "lang-de.js"
 ],
 "Meister": [
-"lang-de.js"
+"lang-de.js",
+"mall.js"
 ],
 "Du wurdest zum Spieler der Saison der Liga gewählt": [
 "lang-de.js"
@@ -215561,15 +219032,6 @@
 ],
 "Die Marke hat den Richtigen gewählt": [
 "lang-de.js"
-],
-"Miami": [
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-pt.js"
 ],
 "Spiel": [
 "lang-de.js"
@@ -215792,9 +219254,6 @@
 "lang-de.js"
 ],
 "Spielen": [
-"lang-de.js"
-],
-"Spielkonsole": [
 "lang-de.js"
 ],
 "Du wirst eingewechselt! Der Trainer vertraut dir.": [
@@ -216106,7 +219565,8 @@
 ],
 "Fit": [
 "lang-de.js",
-"lang-en.js"
+"lang-en.js",
+"mall.js"
 ],
 "Gesundheit": [
 "lang-de.js"
@@ -216882,6 +220342,7 @@
 ],
 "Star": [
 "lang-de.js",
+"mall.js",
 "socialart.js",
 "value.js"
 ],
@@ -217249,9 +220710,6 @@
 "lang-de.js"
 ],
 "Zuerst Schule und Fußball!": [
-"lang-de.js"
-],
-"Privatinsel": [
 "lang-de.js"
 ],
 "Besondere Tore": [
@@ -218722,9 +222180,6 @@
 "lang-de.js"
 ],
 "KARRIEREMODUS": [
-"lang-de.js"
-],
-"NEU": [
 "lang-de.js"
 ],
 "KARRIERE": [
@@ -226559,6 +230014,9 @@
 "MIR IST LANGWEILIG, PAPA, ICH WILL SPIELEN": [
 "lang-de.js"
 ],
+"WENN DU ES ÜBERSTÜRZT, FÄLLST DU LÄNGER AUS.": [
+"lang-de.js"
+],
 "DU HAST IM NATIONALTRIKOT GEWONNEN, ICH BIN SO STOLZ!": [
 "lang-de.js"
 ],
@@ -227256,6 +230714,389 @@
 "lang-de.js"
 ],
 "OKAY, PAPA.": [
+"lang-de.js"
+],
+"ARMBANDUHR": [
+"lang-de.js"
+],
+"SNEAKER": [
+"lang-de.js"
+],
+"SONNENBRILLE": [
+"lang-de.js"
+],
+"KOPFHÖRER": [
+"lang-de.js"
+],
+"LAPTOP": [
+"lang-de.js",
+"lang-en.js",
+"lang-id.js"
+],
+"PARFUM": [
+"lang-de.js",
+"lang-fr.js",
+"lang-id.js"
+],
+"JACKE": [
+"lang-de.js"
+],
+"HOODIE": [
+"lang-de.js",
+"lang-en.js",
+"lang-id.js"
+],
+"KAPPE": [
+"lang-de.js"
+],
+"BUSINESS-SCHUHE": [
+"lang-de.js"
+],
+"RING": [
+"lang-de.js",
+"lang-en.js"
+],
+"HALSKETTE": [
+"lang-de.js"
+],
+"FÜLLFEDERHALTER": [
+"lang-de.js"
+],
+"GELDBÖRSE": [
+"lang-de.js"
+],
+"RUCKSACK": [
+"lang-de.js"
+],
+"KOFFER": [
+"lang-de.js"
+],
+"FERNSEHER": [
+"lang-de.js"
+],
+"SPIELKONSOLE": [
+"lang-de.js"
+],
+"DROHNE": [
+"lang-de.js"
+],
+"SMARTWATCH": [
+"lang-de.js",
+"lang-en.js",
+"lang-it.js",
+"lang-pt.js"
+],
+"LAUTSPRECHER": [
+"lang-de.js"
+],
+"SCHACHSPIEL": [
+"lang-de.js"
+],
+"SOFA": [
+"lang-de.js",
+"lang-en.js",
+"lang-id.js"
+],
+"GEMÄLDE": [
+"lang-de.js"
+],
+"LAMPE": [
+"lang-de.js",
+"lang-fr.js"
+],
+"KAFFEEMASCHINE": [
+"lang-de.js"
+],
+"GAMING-STUHL": [
+"lang-de.js"
+],
+"FERNGESTEUERTES AUTO": [
+"lang-de.js"
+],
+"TEDDYBÄR": [
+"lang-de.js"
+],
+"KLEIDUNG": [
+"lang-de.js"
+],
+"ACCESSOIRES": [
+"lang-de.js",
+"lang-fr.js"
+],
+"SCHMUCK": [
+"lang-de.js"
+],
+"ELEKTRONIK": [
+"lang-de.js",
+"lang-id.js"
+],
+"KOSMETIK": [
+"lang-de.js"
+],
+"WOHNEN & DEKO": [
+"lang-de.js"
+],
+"HOBBY & SPORT": [
+"lang-de.js"
+],
+"WEISS": [
+"lang-de.js"
+],
+"MARINEBLAU": [
+"lang-de.js"
+],
+"BEIGE": [
+"lang-de.js",
+"lang-en.js",
+"lang-fr.js",
+"lang-it.js"
+],
+"COGNAC": [
+"lang-de.js"
+],
+"KHAKI": [
+"lang-de.js",
+"lang-en.js",
+"lang-id.js"
+],
+"GRAU": [
+"lang-de.js"
+],
+"BORDEAUX": [
+"lang-de.js",
+"lang-fr.js",
+"lang-it.js"
+],
+"BLAU": [
+"lang-de.js"
+],
+"ROSA": [
+"lang-de.js",
+"lang-es.js",
+"lang-it.js",
+"lang-pt.js"
+],
+"CREME": [
+"lang-de.js",
+"lang-pt.js"
+],
+"ORANGE": [
+"lang-de.js",
+"lang-en.js",
+"lang-fr.js"
+],
+"LILA": [
+"lang-de.js"
+],
+"ANTHRAZIT": [
+"lang-de.js"
+],
+"KOMPAKTWAGEN": [
+"lang-de.js"
+],
+"LIMOUSINE": [
+"lang-de.js"
+],
+"COUPÉ": [
+"lang-de.js",
+"lang-en.js",
+"lang-fr.js",
+"lang-it.js"
+],
+"SUPERSPORTWAGEN": [
+"lang-de.js"
+],
+"CABRIO": [
+"lang-de.js",
+"lang-it.js"
+],
+"PICK-UP": [
+"lang-de.js",
+"lang-fr.js",
+"lang-it.js"
+],
+"WOHNUNG": [
+"lang-de.js"
+],
+"STRANDHAUS": [
+"lang-de.js"
+],
+"BERGHÜTTE": [
+"lang-de.js"
+],
+"MODERNE VILLA": [
+"lang-de.js"
+],
+"PENTHOUSE": [
+"lang-de.js",
+"lang-en.js",
+"lang-fr.js",
+"lang-id.js"
+],
+"HERRENHAUS": [
+"lang-de.js"
+],
+"PRIVATINSEL": [
+"lang-de.js"
+],
+"ALPEN": [
+"lang-de.js"
+],
+"KAPPADOKIEN": [
+"lang-de.js"
+],
+"DUBAI": [
+"lang-de.js",
+"lang-en.js",
+"lang-id.js",
+"lang-it.js",
+"lang-pt.js"
+],
+"KARIBIK": [
+"lang-de.js"
+],
+"MIAMI": [
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-pt.js"
+],
+"STRANDPROMENADE": [
+"lang-de.js"
+],
+"HANGLAGE": [
+"lang-de.js"
+],
+"JACHTHAFEN": [
+"lang-de.js"
+],
+"AM PARK": [
+"lang-de.js"
+],
+"MIT GARTEN": [
+"lang-de.js"
+],
+"FÜR DIESEN ARTIKEL BIST DU NOCH NICHT ALT GENUG.": [
+"lang-de.js"
+],
+"DIE URKUNDE IST FERTIG, VIEL FREUDE IM NEUEN ZUHAUSE!": [
+"lang-de.js"
+],
+"DEIN AUTO IST DA, GUTE FAHRT!": [
+"lang-de.js"
+],
+"DEINE BESTELLUNG IST UNTERWEGS!": [
+"lang-de.js"
+],
+"EXKLUSIVE LIEFERUNG": [
+"lang-de.js"
+],
+"MORGEN BEI DIR": [
+"lang-de.js"
+],
+"KEINE PASSENDEN ARTIKEL GEFUNDEN.": [
+"lang-de.js"
+],
+"ALLE ANSEHEN ›": [
+"lang-de.js"
+],
+"MEIN SCHRANK": [
+"lang-de.js"
+],
+"ANGEBOTE DES TAGES": [
+"lang-de.js"
+],
+"PASSEND ZU DEINEM BUDGET": [
+"lang-de.js"
+],
+"MARKEN": [
+"lang-de.js"
+],
+"WOHNEN UND HOBBY": [
+"lang-de.js"
+],
+"EMPFOHLEN": [
+"lang-de.js"
+],
+"PREIS: AUFSTEIGEND": [
+"lang-de.js"
+],
+"PREIS: ABSTEIGEND": [
+"lang-de.js"
+],
+"GRENZE DIE SUCHE EIN, UM MEHR ZU SEHEN.": [
+"lang-de.js"
+],
+"IN DEINEM SCHRANK": [
+"lang-de.js"
+],
+"AB DIESEM ALTER": [
+"lang-de.js"
+],
+"GUTHABEN REICHT NICHT": [
+"lang-de.js"
+],
+"BESTÄTIGEN": [
+"lang-de.js"
+],
+"JETZT KAUFEN": [
+"lang-de.js"
+],
+"KEIN RUHMEFFEKT": [
+"lang-de.js"
+],
+"PREMIUMARTIKEL GEBEN ETWAS RUHM.": [
+"lang-de.js"
+],
+"ALLTAGSARTIKEL: GIBT MORAL.": [
+"lang-de.js"
+],
+"EXKLUSIVE LIEFERUNG AUS DER BOUTIQUE": [
+"lang-de.js"
+],
+"KOSTENLOSER VERSAND · MORGEN BEI DIR": [
+"lang-de.js"
+],
+"VON DIESER MARKE": [
+"lang-de.js"
+],
+"BEWERTUNGEN": [
+"lang-de.js"
+],
+"AUSGABEN GESAMT": [
+"lang-de.js"
+],
+"SHOWROOM": [
+"lang-de.js",
+"lang-en.js",
+"lang-fr.js",
+"lang-id.js"
+],
+"NEUE ANGEBOTE": [
+"lang-de.js"
+],
+"NEUE KOLLEKTION": [
+"lang-de.js"
+],
+"ALLE ARTIKEL": [
+"lang-de.js"
+],
+"EXKLUSIVES PORTFOLIO": [
+"lang-de.js"
+],
+"GARAGENKLASSIKER": [
+"lang-de.js"
+],
+"MARKE, ARTIKEL ODER FARBE SUCHEN": [
+"lang-de.js"
+],
+"KOLLEKTION": [
+"lang-de.js"
+],
+"SCHAUFENSTER": [
 "lang-de.js"
 ],
 "– WIR HABEN UNS QUALIFIZIERT!": [
@@ -228252,10 +232093,6 @@
 "KHAKIGRÜNES TARNMUSTER": [
 "lang-de.js"
 ],
-"RING": [
-"lang-de.js",
-"lang-en.js"
-],
 "ERINNERUNGSFOTO MACHEN": [
 "lang-de.js"
 ],
@@ -228701,15 +232538,6 @@
 "DIE MARKE HAT DEN RICHTIGEN GEWÄHLT": [
 "lang-de.js"
 ],
-"MIAMI": [
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-pt.js"
-],
 "SPIELLEISTUNG": [
 "lang-de.js"
 ],
@@ -228878,9 +232706,6 @@
 "lang-de.js"
 ],
 "SPIELEN": [
-"lang-de.js"
-],
-"SPIELKONSOLE": [
 "lang-de.js"
 ],
 "DU WIRST EINGEWECHSELT! DER TRAINER VERTRAUT DIR.": [
@@ -229950,9 +233775,6 @@
 "lang-de.js"
 ],
 "ZUERST SCHULE UND FUSSBALL!": [
-"lang-de.js"
-],
-"PRIVATINSEL": [
 "lang-de.js"
 ],
 "BESONDERE TORE": [
@@ -232649,6 +236471,9 @@
 "🟥 {} sieht Rot. Du bist zu zehnt.": [
 "lang-de.js"
 ],
+"Die Schlüssel für mein neues Zuhause sind da. {0}!": [
+"lang-de.js"
+],
 "Du hast diese Woche noch {} Aktionen.": [
 "lang-de.js"
 ],
@@ -233740,6 +237565,9 @@
 "Ein schöner Tag mit {0}.": [
 "lang-de.js"
 ],
+"Mein neues Teil von {0} ist da.": [
+"lang-de.js"
+],
 "/Woche · noch {} Jahre": [
 "lang-de.js"
 ],
@@ -234182,6 +238010,9 @@
 "lang-de.js"
 ],
 "{0} aktive Sponsoren": [
+"lang-de.js"
+],
+"Neues Auto: {0} {1}.": [
 "lang-de.js"
 ],
 "{} Wochenplan": [
@@ -236640,7 +240471,8 @@
 "lang-en.js"
 ],
 "High": [
-"lang-en.js"
+"lang-en.js",
+"mall.js"
 ],
 "You save energy for the next match, but fewer chances come your way.": [
 "lang-en.js"
@@ -238949,7 +242781,8 @@
 ],
 "Home": [
 "lang-en.js",
-"lang-it.js"
+"lang-it.js",
+"mall.js"
 ],
 "Away": [
 "lang-en.js"
@@ -244419,7 +248252,8 @@
 "lang-en.js"
 ],
 "Dad": [
-"lang-en.js"
+"lang-en.js",
+"mall.js"
 ],
 "I watched your match, son. I'm so proud of you.": [
 "lang-en.js"
@@ -244824,7 +248658,8 @@
 "lang-en.js"
 ],
 "Geometry": [
-"lang-en.js"
+"lang-en.js",
+"mall.js"
 ],
 "Logic": [
 "lang-en.js"
@@ -245868,6 +249703,9 @@
 "I know. If you rush it, you'll be out longer.": [
 "lang-en.js"
 ],
+"If you rush it, you'll be out longer.": [
+"lang-en.js"
+],
 "Stay calmer in the box and the goals will come.": [
 "lang-en.js"
 ],
@@ -246613,6 +250451,310 @@
 "lang-en.js"
 ],
 "Okay, Dad.": [
+"lang-en.js"
+],
+"Wristwatch": [
+"lang-en.js"
+],
+"Sneakers": [
+"lang-en.js",
+"lang-it.js"
+],
+"Sunglasses": [
+"lang-en.js"
+],
+"Headphones": [
+"lang-en.js"
+],
+"Perfume": [
+"lang-en.js",
+"lang-es.js",
+"lang-pt.js"
+],
+"Jacket": [
+"lang-en.js"
+],
+"Cap": [
+"lang-en.js"
+],
+"Dress shoes": [
+"lang-en.js"
+],
+"Necklace": [
+"lang-en.js"
+],
+"Fountain pen": [
+"lang-en.js"
+],
+"Wallet": [
+"lang-en.js"
+],
+"Backpack": [
+"lang-en.js"
+],
+"Suitcase": [
+"lang-en.js"
+],
+"TV": [
+"lang-en.js",
+"lang-pt.js"
+],
+"Games console": [
+"lang-en.js"
+],
+"Speaker": [
+"lang-en.js",
+"lang-id.js"
+],
+"Chess set": [
+"lang-en.js"
+],
+"Painting": [
+"lang-en.js"
+],
+"Lamp": [
+"lang-en.js"
+],
+"Coffee machine": [
+"lang-en.js"
+],
+"Gaming chair": [
+"lang-en.js"
+],
+"Remote control car": [
+"lang-en.js"
+],
+"Teddy bear": [
+"lang-en.js"
+],
+"Clothing": [
+"lang-en.js"
+],
+"Shoes": [
+"lang-en.js"
+],
+"Accessories": [
+"lang-en.js"
+],
+"Jewellery": [
+"lang-en.js"
+],
+"Electronics": [
+"lang-en.js"
+],
+"Beauty": [
+"lang-en.js"
+],
+"Home & decor": [
+"lang-en.js"
+],
+"Hobbies & sport": [
+"lang-en.js"
+],
+"Navy": [
+"lang-en.js"
+],
+"Tan": [
+"lang-en.js",
+"wc.js"
+],
+"Grey": [
+"lang-en.js"
+],
+"Burgundy": [
+"lang-en.js"
+],
+"Blue": [
+"lang-en.js"
+],
+"Pink": [
+"lang-en.js"
+],
+"Cream": [
+"lang-en.js"
+],
+"Purple": [
+"lang-en.js"
+],
+"Anthracite": [
+"lang-en.js",
+"lang-fr.js"
+],
+"Saloon": [
+"lang-en.js"
+],
+"Supercar": [
+"lang-en.js",
+"lang-fr.js",
+"lang-it.js"
+],
+"Convertible": [
+"lang-en.js"
+],
+"Pickup truck": [
+"lang-en.js"
+],
+"Flat": [
+"lang-en.js"
+],
+"Beach house": [
+"lang-en.js"
+],
+"Mountain chalet": [
+"lang-en.js"
+],
+"Mansion": [
+"lang-en.js"
+],
+"Private island": [
+"lang-en.js"
+],
+"The Alps": [
+"lang-en.js"
+],
+"Cappadocia": [
+"lang-en.js",
+"lang-it.js"
+],
+"The Caribbean": [
+"lang-en.js"
+],
+"Seafront": [
+"lang-en.js"
+],
+"Hillside": [
+"lang-en.js"
+],
+"Parkside": [
+"lang-en.js"
+],
+"With garden": [
+"lang-en.js"
+],
+"You're not old enough for this item.": [
+"lang-en.js"
+],
+"You need a licence to drive a car. The test has 3 questions.": [
+"lang-en.js"
+],
+"The deed is yours, enjoy your new home!": [
+"lang-en.js"
+],
+"Your car has been delivered, safe travels!": [
+"lang-en.js"
+],
+"Your order is on its way!": [
+"lang-en.js"
+],
+"Private delivery": [
+"lang-en.js"
+],
+"At your door tomorrow": [
+"lang-en.js"
+],
+"No items match your search.": [
+"lang-en.js"
+],
+"See all ›": [
+"lang-en.js"
+],
+"My wardrobe": [
+"lang-en.js"
+],
+"Deals of the day": [
+"lang-en.js"
+],
+"Within your budget": [
+"lang-en.js"
+],
+"Brands": [
+"lang-en.js"
+],
+"Last season's collection with up to 35% off": [
+"lang-en.js"
+],
+"Home and hobbies": [
+"lang-en.js"
+],
+"Recommended": [
+"lang-en.js"
+],
+"Price: low to high": [
+"lang-en.js"
+],
+"Price: high to low": [
+"lang-en.js"
+],
+"Narrow your search to see more.": [
+"lang-en.js"
+],
+"In your wardrobe": [
+"lang-en.js"
+],
+"Not enough money": [
+"lang-en.js"
+],
+"Confirm": [
+"lang-en.js"
+],
+"Buy now": [
+"lang-en.js"
+],
+"No fame effect": [
+"lang-en.js"
+],
+"Luxury brands give more morale and a little fame.": [
+"lang-en.js"
+],
+"Premium items give a little fame.": [
+"lang-en.js"
+],
+"Everyday item: gives morale.": [
+"lang-en.js"
+],
+"The effect drops if you shop a lot in the same week.": [
+"lang-en.js"
+],
+"Private delivery from the boutique": [
+"lang-en.js"
+],
+"Free delivery · at your door tomorrow": [
+"lang-en.js"
+],
+"From this brand": [
+"lang-en.js"
+],
+"You haven't bought anything yet. Check out the deals!": [
+"lang-en.js"
+],
+"Total spent": [
+"lang-en.js"
+],
+"In your garage": [
+"lang-en.js"
+],
+"Pick a tier to see every model.": [
+"lang-en.js"
+],
+"New listings": [
+"lang-en.js"
+],
+"New collection": [
+"lang-en.js"
+],
+"All items": [
+"lang-en.js"
+],
+"Exclusive portfolio": [
+"lang-en.js"
+],
+"Garage classics": [
+"lang-en.js"
+],
+"Search brand, item or colour": [
+"lang-en.js"
+],
+"Showcase": [
 "lang-en.js"
 ],
 "— we qualified!": [
@@ -248153,7 +252295,8 @@
 "lang-en.js"
 ],
 "Heart": [
-"lang-en.js"
+"lang-en.js",
+"mall.js"
 ],
 "Caught on camera! The fans are disappointed.": [
 "lang-en.js"
@@ -248234,7 +252377,8 @@
 "lang-en.js"
 ],
 "Classic": [
-"lang-en.js"
+"lang-en.js",
+"mall.js"
 ],
 "Classic Collector's Car": [
 "lang-en.js"
@@ -248309,7 +252453,8 @@
 "lang-en.js",
 "lang-es.js",
 "lang-fr.js",
-"lang-it.js"
+"lang-it.js",
+"mall.js"
 ],
 "Club Boots": [
 "lang-en.js"
@@ -250006,7 +254151,8 @@
 ],
 "Double": [
 "lang-en.js",
-"lang-fr.js"
+"lang-fr.js",
+"mall.js"
 ],
 "Boot League 2": [
 "lang-en.js"
@@ -250353,7 +254499,8 @@
 ],
 "Go": [
 "lang-en.js",
-"lang-fr.js"
+"lang-fr.js",
+"mall.js"
 ],
 "❌ Decline": [
 "lang-en.js"
@@ -250473,7 +254620,8 @@
 "lang-en.js"
 ],
 "Study": [
-"lang-en.js"
+"lang-en.js",
+"mall.js"
 ],
 "🔥 I'll show myself": [
 "lang-en.js"
@@ -258908,6 +263056,9 @@
 "I'M GETTING RESTLESS DAD, I WANT TO PLAY": [
 "lang-en.js"
 ],
+"IF YOU RUSH IT, YOU'LL BE OUT LONGER.": [
+"lang-en.js"
+],
 "YOU WON IN THE NATIONAL SHIRT, I'M SO PROUD!": [
 "lang-en.js"
 ],
@@ -259605,6 +263756,307 @@
 "lang-en.js"
 ],
 "OKAY, DAD.": [
+"lang-en.js"
+],
+"WRISTWATCH": [
+"lang-en.js"
+],
+"SNEAKERS": [
+"lang-en.js",
+"lang-it.js"
+],
+"SUNGLASSES": [
+"lang-en.js"
+],
+"HEADPHONES": [
+"lang-en.js"
+],
+"PERFUME": [
+"lang-en.js",
+"lang-es.js",
+"lang-pt.js"
+],
+"JACKET": [
+"lang-en.js"
+],
+"DRESS SHOES": [
+"lang-en.js"
+],
+"NECKLACE": [
+"lang-en.js"
+],
+"FOUNTAIN PEN": [
+"lang-en.js"
+],
+"WALLET": [
+"lang-en.js"
+],
+"BACKPACK": [
+"lang-en.js"
+],
+"SUITCASE": [
+"lang-en.js"
+],
+"GAMES CONSOLE": [
+"lang-en.js"
+],
+"SPEAKER": [
+"lang-en.js",
+"lang-id.js"
+],
+"CHESS SET": [
+"lang-en.js"
+],
+"PAINTING": [
+"lang-en.js"
+],
+"LAMP": [
+"lang-en.js"
+],
+"COFFEE MACHINE": [
+"lang-en.js"
+],
+"GAMING CHAIR": [
+"lang-en.js"
+],
+"REMOTE CONTROL CAR": [
+"lang-en.js"
+],
+"TEDDY BEAR": [
+"lang-en.js"
+],
+"CLOTHING": [
+"lang-en.js"
+],
+"SHOES": [
+"lang-en.js"
+],
+"ACCESSORIES": [
+"lang-en.js"
+],
+"JEWELLERY": [
+"lang-en.js"
+],
+"ELECTRONICS": [
+"lang-en.js"
+],
+"BEAUTY": [
+"lang-en.js"
+],
+"HOME & DECOR": [
+"lang-en.js"
+],
+"HOBBIES & SPORT": [
+"lang-en.js"
+],
+"WHITE": [
+"lang-en.js"
+],
+"NAVY": [
+"lang-en.js"
+],
+"TAN": [
+"lang-en.js",
+"wc.js"
+],
+"GREY": [
+"lang-en.js"
+],
+"BURGUNDY": [
+"lang-en.js"
+],
+"BLUE": [
+"lang-en.js"
+],
+"PINK": [
+"lang-en.js"
+],
+"CREAM": [
+"lang-en.js"
+],
+"PURPLE": [
+"lang-en.js"
+],
+"ANTHRACITE": [
+"lang-en.js",
+"lang-fr.js"
+],
+"SALOON": [
+"lang-en.js"
+],
+"SUPERCAR": [
+"lang-en.js",
+"lang-fr.js",
+"lang-it.js"
+],
+"CONVERTIBLE": [
+"lang-en.js"
+],
+"PICKUP TRUCK": [
+"lang-en.js"
+],
+"FLAT": [
+"lang-en.js"
+],
+"BEACH HOUSE": [
+"lang-en.js"
+],
+"MOUNTAIN CHALET": [
+"lang-en.js"
+],
+"MODERN VILLA": [
+"lang-en.js"
+],
+"MANSION": [
+"lang-en.js"
+],
+"PRIVATE ISLAND": [
+"lang-en.js"
+],
+"THE ALPS": [
+"lang-en.js"
+],
+"CAPPADOCIA": [
+"lang-en.js",
+"lang-it.js"
+],
+"THE CARIBBEAN": [
+"lang-en.js"
+],
+"SEAFRONT": [
+"lang-en.js"
+],
+"HILLSIDE": [
+"lang-en.js"
+],
+"MARINA": [
+"lang-en.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-pt.js"
+],
+"PARKSIDE": [
+"lang-en.js"
+],
+"WITH GARDEN": [
+"lang-en.js"
+],
+"YOU'RE NOT OLD ENOUGH FOR THIS ITEM.": [
+"lang-en.js"
+],
+"THE DEED IS YOURS, ENJOY YOUR NEW HOME!": [
+"lang-en.js"
+],
+"YOUR CAR HAS BEEN DELIVERED, SAFE TRAVELS!": [
+"lang-en.js"
+],
+"YOUR ORDER IS ON ITS WAY!": [
+"lang-en.js"
+],
+"PRIVATE DELIVERY": [
+"lang-en.js"
+],
+"AT YOUR DOOR TOMORROW": [
+"lang-en.js"
+],
+"NO ITEMS MATCH YOUR SEARCH.": [
+"lang-en.js"
+],
+"SEE ALL ›": [
+"lang-en.js"
+],
+"MY WARDROBE": [
+"lang-en.js"
+],
+"ITEMS": [
+"lang-en.js"
+],
+"DEALS OF THE DAY": [
+"lang-en.js"
+],
+"WITHIN YOUR BUDGET": [
+"lang-en.js"
+],
+"BRANDS": [
+"lang-en.js"
+],
+"HOME AND HOBBIES": [
+"lang-en.js"
+],
+"RECOMMENDED": [
+"lang-en.js"
+],
+"PRICE: LOW TO HIGH": [
+"lang-en.js"
+],
+"PRICE: HIGH TO LOW": [
+"lang-en.js"
+],
+"NARROW YOUR SEARCH TO SEE MORE.": [
+"lang-en.js"
+],
+"IN YOUR WARDROBE": [
+"lang-en.js"
+],
+"UNLOCKS AT THAT AGE": [
+"lang-en.js"
+],
+"NOT ENOUGH MONEY": [
+"lang-en.js"
+],
+"CONFIRM": [
+"lang-en.js"
+],
+"BUY NOW": [
+"lang-en.js"
+],
+"NO FAME EFFECT": [
+"lang-en.js"
+],
+"PREMIUM ITEMS GIVE A LITTLE FAME.": [
+"lang-en.js"
+],
+"EVERYDAY ITEM: GIVES MORALE.": [
+"lang-en.js"
+],
+"PRIVATE DELIVERY FROM THE BOUTIQUE": [
+"lang-en.js"
+],
+"FREE DELIVERY · AT YOUR DOOR TOMORROW": [
+"lang-en.js"
+],
+"FROM THIS BRAND": [
+"lang-en.js"
+],
+"REVIEWS": [
+"lang-en.js"
+],
+"TOTAL SPENT": [
+"lang-en.js"
+],
+"NEW LISTINGS": [
+"lang-en.js"
+],
+"NEW COLLECTION": [
+"lang-en.js"
+],
+"ALL ITEMS": [
+"lang-en.js"
+],
+"EXCLUSIVE PORTFOLIO": [
+"lang-en.js"
+],
+"GARAGE CLASSICS": [
+"lang-en.js"
+],
+"SEARCH BRAND, ITEM OR COLOUR": [
+"lang-en.js"
+],
+"COLLECTION": [
+"lang-en.js",
+"lang-fr.js"
+],
+"SHOWCASE": [
 "lang-en.js"
 ],
 "— WE QUALIFIED!": [
@@ -261209,9 +265661,6 @@
 "PLAY": [
 "lang-en.js"
 ],
-"GAME CONSOLE": [
-"lang-en.js"
-],
 "YOU'RE COMING ON! THE COACH TRUSTS YOU.": [
 "lang-en.js"
 ],
@@ -261987,9 +266436,6 @@
 "STARS OF THE ERA": [
 "lang-en.js"
 ],
-"ITEMS": [
-"lang-en.js"
-],
 "YOUR FIXTURES": [
 "lang-en.js"
 ],
@@ -262251,9 +266697,6 @@
 "lang-en.js"
 ],
 "SCHOOL AND FOOTBALL FIRST!": [
-"lang-en.js"
-],
-"PRIVATE ISLAND": [
 "lang-en.js"
 ],
 "SPECIAL GOALS": [
@@ -264944,6 +269387,9 @@
 "🟥 {} is sent off. You’re down to 10.": [
 "lang-en.js"
 ],
+"Got the keys to my new home. {0}!": [
+"lang-en.js"
+],
 "You have {} more actions this week.": [
 "lang-en.js"
 ],
@@ -266035,6 +270481,9 @@
 "A lovely day with {0}.": [
 "lang-en.js"
 ],
+"My new {0} piece has arrived.": [
+"lang-en.js"
+],
 "/week · {} years left": [
 "lang-en.js"
 ],
@@ -266485,6 +270934,9 @@
 "lang-en.js"
 ],
 "{0} active sponsors": [
+"lang-en.js"
+],
+"New car: {0} {1}.": [
 "lang-en.js"
 ],
 "{} Weekly Plan": [
@@ -278264,6 +282716,9 @@
 "Lo sé. Si te precipitas, estarás más tiempo fuera.": [
 "lang-es.js"
 ],
+"Si te precipitas, estarás más tiempo fuera.": [
+"lang-es.js"
+],
 "Mantén la calma en el área y llegarán los goles.": [
 "lang-es.js"
 ],
@@ -279007,6 +283462,379 @@
 "lang-es.js"
 ],
 "Vale, papá.": [
+"lang-es.js"
+],
+"Reloj de pulsera": [
+"lang-es.js"
+],
+"Zapatillas": [
+"lang-es.js"
+],
+"Gafas de sol": [
+"lang-es.js"
+],
+"Auriculares": [
+"lang-es.js"
+],
+"Portátil": [
+"lang-es.js"
+],
+"Chaqueta": [
+"lang-es.js"
+],
+"Sudadera con capucha": [
+"lang-es.js"
+],
+"Gorra": [
+"lang-es.js"
+],
+"Zapatos de vestir": [
+"lang-es.js"
+],
+"Anillo": [
+"lang-es.js"
+],
+"Collar": [
+"lang-es.js"
+],
+"Pluma estilográfica": [
+"lang-es.js"
+],
+"Cartera": [
+"lang-es.js"
+],
+"Mochila": [
+"lang-es.js",
+"lang-pt.js"
+],
+"Maleta": [
+"lang-es.js"
+],
+"Televisor": [
+"lang-es.js"
+],
+"Videoconsola": [
+"lang-es.js"
+],
+"Dron": [
+"lang-es.js"
+],
+"Tableta": [
+"lang-es.js"
+],
+"Reloj inteligente": [
+"lang-es.js"
+],
+"Altavoz": [
+"lang-es.js"
+],
+"Juego de ajedrez": [
+"lang-es.js"
+],
+"Sofá": [
+"lang-es.js",
+"lang-pt.js"
+],
+"Cuadro": [
+"lang-es.js"
+],
+"Lámpara": [
+"lang-es.js"
+],
+"Cafetera": [
+"lang-es.js"
+],
+"Silla gaming": [
+"lang-es.js"
+],
+"Coche teledirigido": [
+"lang-es.js"
+],
+"Osito de peluche": [
+"lang-es.js"
+],
+"Ropa": [
+"lang-es.js"
+],
+"Calzado": [
+"lang-es.js"
+],
+"Accesorios": [
+"lang-es.js"
+],
+"Joyería": [
+"lang-es.js"
+],
+"Electrónica": [
+"lang-es.js"
+],
+"Belleza": [
+"lang-es.js"
+],
+"Hogar y decoración": [
+"lang-es.js"
+],
+"Ocio y deporte": [
+"lang-es.js"
+],
+"Blanco": [
+"lang-es.js"
+],
+"Azul marino": [
+"lang-es.js"
+],
+"Beis": [
+"lang-es.js"
+],
+"Tostado": [
+"lang-es.js"
+],
+"Caqui": [
+"lang-es.js"
+],
+"Gris": [
+"lang-es.js",
+"lang-fr.js"
+],
+"Burdeos": [
+"lang-es.js"
+],
+"Azul": [
+"lang-es.js",
+"lang-pt.js"
+],
+"Verde": [
+"lang-es.js",
+"lang-it.js",
+"lang-pt.js"
+],
+"Crema": [
+"lang-es.js",
+"lang-it.js"
+],
+"Naranja": [
+"lang-es.js"
+],
+"Morado": [
+"lang-es.js"
+],
+"Antracita": [
+"lang-es.js"
+],
+"Compacto": [
+"lang-es.js"
+],
+"Berlina": [
+"lang-es.js",
+"lang-it.js",
+"mall.js"
+],
+"Cupé": [
+"lang-es.js"
+],
+"Superdeportivo": [
+"lang-es.js"
+],
+"Descapotable": [
+"lang-es.js"
+],
+"Piso": [
+"lang-es.js"
+],
+"Casa de playa": [
+"lang-es.js"
+],
+"Chalet de montaña": [
+"lang-es.js"
+],
+"Villa moderna": [
+"lang-es.js",
+"lang-it.js"
+],
+"Ático": [
+"lang-es.js"
+],
+"Mansión": [
+"lang-es.js"
+],
+"Isla privada": [
+"lang-es.js"
+],
+"Los Alpes": [
+"lang-es.js"
+],
+"Capadocia": [
+"lang-es.js"
+],
+"Dubái": [
+"lang-es.js"
+],
+"Los Ángeles": [
+"lang-es.js"
+],
+"Nueva York": [
+"lang-es.js"
+],
+"El Caribe": [
+"lang-es.js"
+],
+"Primera línea": [
+"lang-es.js"
+],
+"Colina": [
+"lang-es.js",
+"lang-pt.js"
+],
+"Puerto deportivo": [
+"lang-es.js"
+],
+"Junto al parque": [
+"lang-es.js"
+],
+"Con jardín": [
+"lang-es.js"
+],
+"No tienes edad para este producto.": [
+"lang-es.js"
+],
+"Para conducir necesitas el carné. El examen tiene 3 preguntas.": [
+"lang-es.js"
+],
+"¡Escritura lista, disfruta tu nueva casa!": [
+"lang-es.js"
+],
+"¡Tu coche ha llegado, buen viaje!": [
+"lang-es.js"
+],
+"¡Tu pedido está en camino!": [
+"lang-es.js"
+],
+"Entrega exclusiva": [
+"lang-es.js",
+"lang-pt.js"
+],
+"Mañana en tu puerta": [
+"lang-es.js"
+],
+"No hay productos que coincidan.": [
+"lang-es.js"
+],
+"Ver todo ›": [
+"lang-es.js"
+],
+"Mi armario": [
+"lang-es.js"
+],
+"Ofertas del día": [
+"lang-es.js"
+],
+"Para tu presupuesto": [
+"lang-es.js"
+],
+"Marcas": [
+"lang-es.js",
+"lang-pt.js"
+],
+"La colección de la temporada pasada con hasta un 35 % de descuento": [
+"lang-es.js"
+],
+"Hogar y ocio": [
+"lang-es.js"
+],
+"Recomendado": [
+"lang-es.js",
+"lang-pt.js"
+],
+"Precio: de menor a mayor": [
+"lang-es.js"
+],
+"Precio: de mayor a menor": [
+"lang-es.js"
+],
+"Afina la búsqueda para ver más.": [
+"lang-es.js"
+],
+"En tu armario": [
+"lang-es.js"
+],
+"Saldo insuficiente": [
+"lang-es.js",
+"lang-pt.js"
+],
+"Confirmar": [
+"lang-es.js",
+"lang-pt.js"
+],
+"Comprar ya": [
+"lang-es.js"
+],
+"Sin efecto en la fama": [
+"lang-es.js"
+],
+"Las marcas de lujo dan más moral y algo de fama.": [
+"lang-es.js"
+],
+"Los productos premium dan algo de fama.": [
+"lang-es.js"
+],
+"Uso diario: da moral.": [
+"lang-es.js"
+],
+"El efecto baja si compras mucho la misma semana.": [
+"lang-es.js"
+],
+"Entrega exclusiva desde la boutique": [
+"lang-es.js"
+],
+"Envío gratis · mañana en tu puerta": [
+"lang-es.js"
+],
+"De esta marca": [
+"lang-es.js"
+],
+"reseñas": [
+"lang-es.js"
+],
+"Aún no has comprado nada. ¡Mira las ofertas!": [
+"lang-es.js"
+],
+"Gasto total": [
+"lang-es.js"
+],
+"En tu garaje": [
+"lang-es.js"
+],
+"Elige una gama para ver todos los modelos.": [
+"lang-es.js"
+],
+"Concesionario": [
+"lang-es.js"
+],
+"Nuevos anuncios": [
+"lang-es.js"
+],
+"Nueva colección": [
+"lang-es.js"
+],
+"Todos los productos": [
+"lang-es.js"
+],
+"Cartera exclusiva": [
+"lang-es.js"
+],
+"Clásicos del garaje": [
+"lang-es.js"
+],
+"NUEVO": [
+"lang-es.js"
+],
+"Busca marca, producto o color": [
+"lang-es.js"
+],
+"colección": [
+"lang-es.js"
+],
+"Escaparate": [
 "lang-es.js"
 ],
 "— ¡nos hemos clasificado!": [
@@ -280256,9 +285084,6 @@
 "Camuflaje verde caqui": [
 "lang-es.js"
 ],
-"Anillo": [
-"lang-es.js"
-],
 "¡Qué noche! Tu vínculo con los compañeros se hizo más fuerte.": [
 "lang-es.js"
 ],
@@ -281092,9 +285917,6 @@
 "lang-es.js"
 ],
 "Jugar": [
-"lang-es.js"
-],
-"Videoconsola": [
 "lang-es.js"
 ],
 "¡Entras al campo! El entrenador confía en ti.": [
@@ -282419,9 +287241,6 @@
 "lang-es.js"
 ],
 "¡Primero el colegio y el fútbol!": [
-"lang-es.js"
-],
-"Isla privada": [
 "lang-es.js"
 ],
 "Goles especiales": [
@@ -283863,9 +288682,6 @@
 "lang-es.js"
 ],
 "MODO CARRERA": [
-"lang-es.js"
-],
-"NUEVA": [
 "lang-es.js"
 ],
 "CARRERA": [
@@ -291406,6 +296222,9 @@
 "ME ABURRO PAPÁ, QUIERO JUGAR": [
 "lang-es.js"
 ],
+"SI TE PRECIPITAS, ESTARÁS MÁS TIEMPO FUERA.": [
+"lang-es.js"
+],
 "¡GANASTE CON LA SELECCIÓN, QUÉ ORGULLO!": [
 "lang-es.js"
 ],
@@ -292101,6 +296920,358 @@
 "lang-es.js"
 ],
 "VALE, PAPÁ.": [
+"lang-es.js"
+],
+"RELOJ DE PULSERA": [
+"lang-es.js"
+],
+"ZAPATILLAS": [
+"lang-es.js"
+],
+"GAFAS DE SOL": [
+"lang-es.js"
+],
+"AURICULARES": [
+"lang-es.js"
+],
+"PORTÁTIL": [
+"lang-es.js"
+],
+"CHAQUETA": [
+"lang-es.js"
+],
+"SUDADERA CON CAPUCHA": [
+"lang-es.js"
+],
+"GORRA": [
+"lang-es.js"
+],
+"ZAPATOS DE VESTIR": [
+"lang-es.js"
+],
+"ANILLO": [
+"lang-es.js"
+],
+"COLLAR": [
+"lang-es.js"
+],
+"PLUMA ESTILOGRÁFICA": [
+"lang-es.js"
+],
+"CARTERA": [
+"lang-es.js"
+],
+"MOCHILA": [
+"lang-es.js",
+"lang-pt.js"
+],
+"MALETA": [
+"lang-es.js"
+],
+"TELEVISOR": [
+"lang-es.js"
+],
+"VIDEOCONSOLA": [
+"lang-es.js"
+],
+"DRON": [
+"lang-es.js"
+],
+"TABLETA": [
+"lang-es.js"
+],
+"RELOJ INTELIGENTE": [
+"lang-es.js"
+],
+"ALTAVOZ": [
+"lang-es.js"
+],
+"JUEGO DE AJEDREZ": [
+"lang-es.js"
+],
+"SOFÁ": [
+"lang-es.js",
+"lang-pt.js"
+],
+"CUADRO": [
+"lang-es.js"
+],
+"LÁMPARA": [
+"lang-es.js"
+],
+"CAFETERA": [
+"lang-es.js"
+],
+"SILLA GAMING": [
+"lang-es.js"
+],
+"COCHE TELEDIRIGIDO": [
+"lang-es.js"
+],
+"OSITO DE PELUCHE": [
+"lang-es.js"
+],
+"ROPA": [
+"lang-es.js"
+],
+"CALZADO": [
+"lang-es.js"
+],
+"ACCESORIOS": [
+"lang-es.js"
+],
+"JOYERÍA": [
+"lang-es.js"
+],
+"ELECTRÓNICA": [
+"lang-es.js"
+],
+"BELLEZA": [
+"lang-es.js"
+],
+"HOGAR Y DECORACIÓN": [
+"lang-es.js"
+],
+"OCIO Y DEPORTE": [
+"lang-es.js"
+],
+"BLANCO": [
+"lang-es.js"
+],
+"AZUL MARINO": [
+"lang-es.js"
+],
+"BEIS": [
+"lang-es.js"
+],
+"TOSTADO": [
+"lang-es.js"
+],
+"CAQUI": [
+"lang-es.js"
+],
+"GRIS": [
+"lang-es.js",
+"lang-fr.js"
+],
+"BURDEOS": [
+"lang-es.js"
+],
+"AZUL": [
+"lang-es.js",
+"lang-pt.js"
+],
+"CREMA": [
+"lang-es.js",
+"lang-it.js"
+],
+"NARANJA": [
+"lang-es.js"
+],
+"MORADO": [
+"lang-es.js"
+],
+"ANTRACITA": [
+"lang-es.js"
+],
+"COMPACTO": [
+"lang-es.js"
+],
+"BERLINA": [
+"lang-es.js",
+"lang-it.js"
+],
+"CUPÉ": [
+"lang-es.js"
+],
+"SUPERDEPORTIVO": [
+"lang-es.js"
+],
+"DESCAPOTABLE": [
+"lang-es.js"
+],
+"PICKUP": [
+"lang-es.js"
+],
+"PISO": [
+"lang-es.js"
+],
+"CASA DE PLAYA": [
+"lang-es.js"
+],
+"CHALET DE MONTAÑA": [
+"lang-es.js"
+],
+"VILLA MODERNA": [
+"lang-es.js",
+"lang-it.js"
+],
+"ÁTICO": [
+"lang-es.js"
+],
+"MANSIÓN": [
+"lang-es.js"
+],
+"ISLA PRIVADA": [
+"lang-es.js"
+],
+"LOS ALPES": [
+"lang-es.js"
+],
+"CAPADOCIA": [
+"lang-es.js"
+],
+"DUBÁI": [
+"lang-es.js"
+],
+"LOS ÁNGELES": [
+"lang-es.js"
+],
+"NUEVA YORK": [
+"lang-es.js"
+],
+"EL CARIBE": [
+"lang-es.js"
+],
+"PRIMERA LÍNEA": [
+"lang-es.js"
+],
+"COLINA": [
+"lang-es.js",
+"lang-pt.js"
+],
+"PUERTO DEPORTIVO": [
+"lang-es.js"
+],
+"JUNTO AL PARQUE": [
+"lang-es.js"
+],
+"CON JARDÍN": [
+"lang-es.js"
+],
+"NO TIENES EDAD PARA ESTE PRODUCTO.": [
+"lang-es.js"
+],
+"¡ESCRITURA LISTA, DISFRUTA TU NUEVA CASA!": [
+"lang-es.js"
+],
+"¡TU COCHE HA LLEGADO, BUEN VIAJE!": [
+"lang-es.js"
+],
+"¡TU PEDIDO ESTÁ EN CAMINO!": [
+"lang-es.js"
+],
+"ENTREGA EXCLUSIVA": [
+"lang-es.js",
+"lang-pt.js"
+],
+"MAÑANA EN TU PUERTA": [
+"lang-es.js"
+],
+"NO HAY PRODUCTOS QUE COINCIDAN.": [
+"lang-es.js"
+],
+"VER TODO ›": [
+"lang-es.js"
+],
+"MI ARMARIO": [
+"lang-es.js"
+],
+"PRODUCTOS": [
+"lang-es.js"
+],
+"OFERTAS DEL DÍA": [
+"lang-es.js"
+],
+"PARA TU PRESUPUESTO": [
+"lang-es.js"
+],
+"MARCAS": [
+"lang-es.js",
+"lang-pt.js"
+],
+"HOGAR Y OCIO": [
+"lang-es.js"
+],
+"RECOMENDADO": [
+"lang-es.js",
+"lang-pt.js"
+],
+"PRECIO: DE MENOR A MAYOR": [
+"lang-es.js"
+],
+"PRECIO: DE MAYOR A MENOR": [
+"lang-es.js"
+],
+"AFINA LA BÚSQUEDA PARA VER MÁS.": [
+"lang-es.js"
+],
+"EN TU ARMARIO": [
+"lang-es.js"
+],
+"SE DESBLOQUEA A ESA EDAD": [
+"lang-es.js"
+],
+"SALDO INSUFICIENTE": [
+"lang-es.js",
+"lang-pt.js"
+],
+"CONFIRMAR": [
+"lang-es.js",
+"lang-pt.js"
+],
+"COMPRAR YA": [
+"lang-es.js"
+],
+"SIN EFECTO EN LA FAMA": [
+"lang-es.js"
+],
+"LOS PRODUCTOS PREMIUM DAN ALGO DE FAMA.": [
+"lang-es.js"
+],
+"USO DIARIO: DA MORAL.": [
+"lang-es.js"
+],
+"ENTREGA EXCLUSIVA DESDE LA BOUTIQUE": [
+"lang-es.js"
+],
+"ENVÍO GRATIS · MAÑANA EN TU PUERTA": [
+"lang-es.js"
+],
+"DE ESTA MARCA": [
+"lang-es.js"
+],
+"RESEÑAS": [
+"lang-es.js"
+],
+"GASTO TOTAL": [
+"lang-es.js"
+],
+"CONCESIONARIO": [
+"lang-es.js"
+],
+"NUEVOS ANUNCIOS": [
+"lang-es.js"
+],
+"NUEVA COLECCIÓN": [
+"lang-es.js"
+],
+"TODOS LOS PRODUCTOS": [
+"lang-es.js"
+],
+"CARTERA EXCLUSIVA": [
+"lang-es.js"
+],
+"CLÁSICOS DEL GARAJE": [
+"lang-es.js"
+],
+"BUSCA MARCA, PRODUCTO O COLOR": [
+"lang-es.js"
+],
+"COLECCIÓN": [
+"lang-es.js"
+],
+"ESCAPARATE": [
 "lang-es.js"
 ],
 "— ¡NOS HEMOS CLASIFICADO!": [
@@ -293067,9 +298238,6 @@
 "CAMUFLAJE VERDE CAQUI": [
 "lang-es.js"
 ],
-"ANILLO": [
-"lang-es.js"
-],
 "HACERSE UNA FOTO DE RECUERDO": [
 "lang-es.js"
 ],
@@ -293679,9 +298847,6 @@
 "lang-es.js"
 ],
 "JUGAR": [
-"lang-es.js"
-],
-"VIDEOCONSOLA": [
 "lang-es.js"
 ],
 "¡ENTRAS AL CAMPO! EL ENTRENADOR CONFÍA EN TI.": [
@@ -294738,9 +299903,6 @@
 "lang-es.js"
 ],
 "¡PRIMERO EL COLEGIO Y EL FÚTBOL!": [
-"lang-es.js"
-],
-"ISLA PRIVADA": [
 "lang-es.js"
 ],
 "GOLES ESPECIALES": [
@@ -297444,6 +302606,9 @@
 "🟥 {} ve la roja. Juegas con 10.": [
 "lang-es.js"
 ],
+"Ya tengo las llaves de mi nueva casa. ¡{0}!": [
+"lang-es.js"
+],
 "Te quedan {} acciones más esta semana.": [
 "lang-es.js"
 ],
@@ -298541,6 +303706,9 @@
 "Un día precioso con {0}.": [
 "lang-es.js"
 ],
+"Ha llegado mi nueva pieza de {0}.": [
+"lang-es.js"
+],
 "/semana · quedan {} años": [
 "lang-es.js"
 ],
@@ -298995,6 +304163,9 @@
 "lang-es.js"
 ],
 "{0} patrocinadores activos": [
+"lang-es.js"
+],
+"Coche nuevo: {0} {1}.": [
 "lang-es.js"
 ],
 "{} Plan semanal": [
@@ -302495,7 +307666,8 @@
 "lang-fr.js"
 ],
 "Court": [
-"lang-fr.js"
+"lang-fr.js",
+"mall.js"
 ],
 "Ras": [
 "lang-fr.js"
@@ -310496,6 +315668,9 @@
 "Je sais. Si tu te précipites, tu seras absent plus longtemps.": [
 "lang-fr.js"
 ],
+"Si tu te précipites, tu seras absent plus longtemps.": [
+"lang-fr.js"
+],
 "Sois plus calme dans la surface, les buts viendront.": [
 "lang-fr.js"
 ],
@@ -311239,6 +316414,312 @@
 ],
 "D'accord, papa.": [
 "lang-fr.js"
+],
+"Montre": [
+"lang-fr.js"
+],
+"Baskets": [
+"lang-fr.js"
+],
+"Lunettes de soleil": [
+"lang-fr.js"
+],
+"Casque audio": [
+"lang-fr.js"
+],
+"Ordinateur portable": [
+"lang-fr.js"
+],
+"Veste": [
+"lang-fr.js"
+],
+"Sweat à capuche": [
+"lang-fr.js"
+],
+"Casquette": [
+"lang-fr.js"
+],
+"Chaussures habillées": [
+"lang-fr.js"
+],
+"Bague": [
+"lang-fr.js"
+],
+"Collier": [
+"lang-fr.js"
+],
+"Stylo plume": [
+"lang-fr.js"
+],
+"Portefeuille": [
+"lang-fr.js"
+],
+"Sac à dos": [
+"lang-fr.js"
+],
+"Valise": [
+"lang-fr.js"
+],
+"Téléviseur": [
+"lang-fr.js"
+],
+"Console de jeux": [
+"lang-fr.js"
+],
+"Tablette": [
+"lang-fr.js"
+],
+"Montre connectée": [
+"lang-fr.js"
+],
+"Enceinte": [
+"lang-fr.js"
+],
+"Jeu d'échecs": [
+"lang-fr.js"
+],
+"Canapé": [
+"lang-fr.js"
+],
+"Tableau": [
+"lang-fr.js"
+],
+"Machine à café": [
+"lang-fr.js"
+],
+"Fauteuil gamer": [
+"lang-fr.js"
+],
+"Voiture télécommandée": [
+"lang-fr.js"
+],
+"Ours en peluche": [
+"lang-fr.js"
+],
+"Vêtements": [
+"lang-fr.js"
+],
+"Chaussures": [
+"lang-fr.js"
+],
+"Bijoux": [
+"lang-fr.js"
+],
+"Électronique": [
+"lang-fr.js"
+],
+"Beauté": [
+"lang-fr.js"
+],
+"Maison et déco": [
+"lang-fr.js"
+],
+"Loisirs et sport": [
+"lang-fr.js"
+],
+"Blanc": [
+"lang-fr.js"
+],
+"Bleu marine": [
+"lang-fr.js"
+],
+"Camel": [
+"lang-fr.js"
+],
+"Kaki": [
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js"
+],
+"Bleu": [
+"lang-fr.js"
+],
+"Rose": [
+"lang-fr.js"
+],
+"Vert": [
+"lang-fr.js"
+],
+"Crème": [
+"lang-fr.js"
+],
+"Violet": [
+"lang-fr.js"
+],
+"Citadine": [
+"lang-fr.js"
+],
+"Berline": [
+"lang-fr.js"
+],
+"Cabriolet": [
+"lang-fr.js"
+],
+"Appartement": [
+"lang-fr.js"
+],
+"Maison de plage": [
+"lang-fr.js"
+],
+"Chalet de montagne": [
+"lang-fr.js"
+],
+"Villa moderne": [
+"lang-fr.js"
+],
+"Manoir": [
+"lang-fr.js"
+],
+"Île privée": [
+"lang-fr.js"
+],
+"Les Alpes": [
+"lang-fr.js"
+],
+"Cappadoce": [
+"lang-fr.js"
+],
+"Dubaï": [
+"lang-fr.js"
+],
+"Les Caraïbes": [
+"lang-fr.js"
+],
+"Front de mer": [
+"lang-fr.js"
+],
+"Colline": [
+"lang-fr.js"
+],
+"Côté parc": [
+"lang-fr.js"
+],
+"Avec jardin": [
+"lang-fr.js"
+],
+"Tu n'as pas l'âge pour cet article.": [
+"lang-fr.js"
+],
+"Il faut le permis pour conduire. L'examen comporte 3 questions.": [
+"lang-fr.js"
+],
+"L'acte est prêt, profite de ta nouvelle maison !": [
+"lang-fr.js"
+],
+"Ta voiture est livrée, bonne route !": [
+"lang-fr.js"
+],
+"Ta commande est en route !": [
+"lang-fr.js"
+],
+"Livraison privée": [
+"lang-fr.js"
+],
+"Chez toi demain": [
+"lang-fr.js"
+],
+"Aucun article ne correspond.": [
+"lang-fr.js"
+],
+"Tout voir ›": [
+"lang-fr.js"
+],
+"Ma garde-robe": [
+"lang-fr.js"
+],
+"Bons plans du jour": [
+"lang-fr.js"
+],
+"Dans ton budget": [
+"lang-fr.js"
+],
+"La collection de la saison dernière jusqu'à -35 %": [
+"lang-fr.js"
+],
+"Maison et loisirs": [
+"lang-fr.js"
+],
+"Recommandé": [
+"lang-fr.js"
+],
+"Prix croissant": [
+"lang-fr.js"
+],
+"Prix décroissant": [
+"lang-fr.js"
+],
+"Affine ta recherche pour en voir plus.": [
+"lang-fr.js"
+],
+"Dans ta garde-robe": [
+"lang-fr.js"
+],
+"Solde insuffisant": [
+"lang-fr.js"
+],
+"Confirmer": [
+"lang-fr.js"
+],
+"Pas d'effet sur la célébrité": [
+"lang-fr.js"
+],
+"Les marques de luxe donnent plus de moral et un peu de célébrité.": [
+"lang-fr.js"
+],
+"Les articles premium donnent un peu de célébrité.": [
+"lang-fr.js"
+],
+"Usage quotidien : donne du moral.": [
+"lang-fr.js"
+],
+"L'effet diminue si tu achètes beaucoup la même semaine.": [
+"lang-fr.js"
+],
+"Livraison privée depuis la boutique": [
+"lang-fr.js"
+],
+"Livraison gratuite · chez toi demain": [
+"lang-fr.js"
+],
+"De cette marque": [
+"lang-fr.js"
+],
+"Tu n'as encore rien acheté. Jette un œil aux bons plans !": [
+"lang-fr.js"
+],
+"Total dépensé": [
+"lang-fr.js"
+],
+"Dans ton garage": [
+"lang-fr.js"
+],
+"Choisis une gamme pour voir tous les modèles.": [
+"lang-fr.js"
+],
+"Nouvelles annonces": [
+"lang-fr.js"
+],
+"Nouvelle collection": [
+"lang-fr.js"
+],
+"Tous les articles": [
+"lang-fr.js"
+],
+"Portefeuille exclusif": [
+"lang-fr.js"
+],
+"Classiques du garage": [
+"lang-fr.js"
+],
+"NOUVEAU": [
+"lang-fr.js"
+],
+"Rechercher une marque, un article ou une couleur": [
+"lang-fr.js"
+],
+"Vitrine": [
+"lang-fr.js",
+"lang-pt.js"
 ],
 "— on est qualifiés !": [
 "lang-fr.js"
@@ -312453,9 +317934,6 @@
 "Camouflage vert kaki": [
 "lang-fr.js"
 ],
-"Bague": [
-"lang-fr.js"
-],
 "Quelle soirée ! Ton lien avec tes coéquipiers s'est renforcé.": [
 "lang-fr.js"
 ],
@@ -313248,9 +318726,6 @@
 "lang-fr.js"
 ],
 "Jouer": [
-"lang-fr.js"
-],
-"Console de jeux": [
 "lang-fr.js"
 ],
 "Tu entres en jeu ! Le coach te fait confiance.": [
@@ -314546,9 +320021,6 @@
 "lang-fr.js"
 ],
 "L'école et le foot d'abord !": [
-"lang-fr.js"
-],
-"Île privée": [
 "lang-fr.js"
 ],
 "Buts spéciaux": [
@@ -315950,9 +321422,6 @@
 "lang-fr.js"
 ],
 "MODE CARRIÈRE": [
-"lang-fr.js"
-],
-"NOUVELLE": [
 "lang-fr.js"
 ],
 "CARRIÈRE": [
@@ -323206,6 +328675,9 @@
 "JE M'ENNUIE PAPA, JE VEUX JOUER": [
 "lang-fr.js"
 ],
+"SI TU TE PRÉCIPITES, TU SERAS ABSENT PLUS LONGTEMPS.": [
+"lang-fr.js"
+],
 "TU AS GAGNÉ AVEC LE MAILLOT NATIONAL, JE SUIS FIER !": [
 "lang-fr.js"
 ],
@@ -323901,6 +329373,297 @@
 ],
 "D'ACCORD, PAPA.": [
 "lang-fr.js"
+],
+"MONTRE": [
+"lang-fr.js"
+],
+"BASKETS": [
+"lang-fr.js"
+],
+"LUNETTES DE SOLEIL": [
+"lang-fr.js"
+],
+"CASQUE AUDIO": [
+"lang-fr.js"
+],
+"ORDINATEUR PORTABLE": [
+"lang-fr.js"
+],
+"VESTE": [
+"lang-fr.js"
+],
+"SWEAT À CAPUCHE": [
+"lang-fr.js"
+],
+"CASQUETTE": [
+"lang-fr.js"
+],
+"CHAUSSURES HABILLÉES": [
+"lang-fr.js"
+],
+"BAGUE": [
+"lang-fr.js"
+],
+"COLLIER": [
+"lang-fr.js"
+],
+"STYLO PLUME": [
+"lang-fr.js"
+],
+"PORTEFEUILLE": [
+"lang-fr.js"
+],
+"SAC À DOS": [
+"lang-fr.js"
+],
+"VALISE": [
+"lang-fr.js"
+],
+"TÉLÉVISEUR": [
+"lang-fr.js"
+],
+"CONSOLE DE JEUX": [
+"lang-fr.js"
+],
+"TABLETTE": [
+"lang-fr.js"
+],
+"MONTRE CONNECTÉE": [
+"lang-fr.js"
+],
+"ENCEINTE": [
+"lang-fr.js"
+],
+"JEU D'ÉCHECS": [
+"lang-fr.js"
+],
+"CANAPÉ": [
+"lang-fr.js"
+],
+"TABLEAU": [
+"lang-fr.js"
+],
+"MACHINE À CAFÉ": [
+"lang-fr.js"
+],
+"FAUTEUIL GAMER": [
+"lang-fr.js"
+],
+"VOITURE TÉLÉCOMMANDÉE": [
+"lang-fr.js"
+],
+"OURS EN PELUCHE": [
+"lang-fr.js"
+],
+"VÊTEMENTS": [
+"lang-fr.js"
+],
+"CHAUSSURES": [
+"lang-fr.js"
+],
+"BIJOUX": [
+"lang-fr.js"
+],
+"ÉLECTRONIQUE": [
+"lang-fr.js"
+],
+"BEAUTÉ": [
+"lang-fr.js"
+],
+"MAISON ET DÉCO": [
+"lang-fr.js"
+],
+"LOISIRS ET SPORT": [
+"lang-fr.js"
+],
+"BLANC": [
+"lang-fr.js"
+],
+"BLEU MARINE": [
+"lang-fr.js"
+],
+"CAMEL": [
+"lang-fr.js"
+],
+"KAKI": [
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js"
+],
+"BLEU": [
+"lang-fr.js"
+],
+"ROSE": [
+"lang-fr.js"
+],
+"CRÈME": [
+"lang-fr.js"
+],
+"VIOLET": [
+"lang-fr.js"
+],
+"CITADINE": [
+"lang-fr.js"
+],
+"BERLINE": [
+"lang-fr.js"
+],
+"CABRIOLET": [
+"lang-fr.js"
+],
+"APPARTEMENT": [
+"lang-fr.js"
+],
+"MAISON DE PLAGE": [
+"lang-fr.js"
+],
+"CHALET DE MONTAGNE": [
+"lang-fr.js"
+],
+"VILLA MODERNE": [
+"lang-fr.js"
+],
+"MANOIR": [
+"lang-fr.js"
+],
+"ÎLE PRIVÉE": [
+"lang-fr.js"
+],
+"LES ALPES": [
+"lang-fr.js"
+],
+"CAPPADOCE": [
+"lang-fr.js"
+],
+"DUBAÏ": [
+"lang-fr.js"
+],
+"LES CARAÏBES": [
+"lang-fr.js"
+],
+"FRONT DE MER": [
+"lang-fr.js"
+],
+"COLLINE": [
+"lang-fr.js"
+],
+"CÔTÉ PARC": [
+"lang-fr.js"
+],
+"AVEC JARDIN": [
+"lang-fr.js"
+],
+"TU N'AS PAS L'ÂGE POUR CET ARTICLE.": [
+"lang-fr.js"
+],
+"L'ACTE EST PRÊT, PROFITE DE TA NOUVELLE MAISON !": [
+"lang-fr.js"
+],
+"TA VOITURE EST LIVRÉE, BONNE ROUTE !": [
+"lang-fr.js"
+],
+"TA COMMANDE EST EN ROUTE !": [
+"lang-fr.js"
+],
+"LIVRAISON PRIVÉE": [
+"lang-fr.js"
+],
+"CHEZ TOI DEMAIN": [
+"lang-fr.js"
+],
+"AUCUN ARTICLE NE CORRESPOND.": [
+"lang-fr.js"
+],
+"TOUT VOIR ›": [
+"lang-fr.js"
+],
+"MA GARDE-ROBE": [
+"lang-fr.js"
+],
+"ARTICLES": [
+"lang-fr.js"
+],
+"BONS PLANS DU JOUR": [
+"lang-fr.js"
+],
+"DANS TON BUDGET": [
+"lang-fr.js"
+],
+"MARQUES": [
+"lang-fr.js"
+],
+"MAISON ET LOISIRS": [
+"lang-fr.js"
+],
+"RECOMMANDÉ": [
+"lang-fr.js"
+],
+"PRIX CROISSANT": [
+"lang-fr.js"
+],
+"PRIX DÉCROISSANT": [
+"lang-fr.js"
+],
+"AFFINE TA RECHERCHE POUR EN VOIR PLUS.": [
+"lang-fr.js"
+],
+"DANS TA GARDE-ROBE": [
+"lang-fr.js"
+],
+"DÉBLOQUÉ À CET ÂGE": [
+"lang-fr.js"
+],
+"SOLDE INSUFFISANT": [
+"lang-fr.js"
+],
+"CONFIRMER": [
+"lang-fr.js"
+],
+"PAS D'EFFET SUR LA CÉLÉBRITÉ": [
+"lang-fr.js"
+],
+"LES ARTICLES PREMIUM DONNENT UN PEU DE CÉLÉBRITÉ.": [
+"lang-fr.js"
+],
+"USAGE QUOTIDIEN : DONNE DU MORAL.": [
+"lang-fr.js"
+],
+"LIVRAISON PRIVÉE DEPUIS LA BOUTIQUE": [
+"lang-fr.js"
+],
+"LIVRAISON GRATUITE · CHEZ TOI DEMAIN": [
+"lang-fr.js"
+],
+"DE CETTE MARQUE": [
+"lang-fr.js"
+],
+"AVIS": [
+"lang-fr.js"
+],
+"TOTAL DÉPENSÉ": [
+"lang-fr.js"
+],
+"NOUVELLES ANNONCES": [
+"lang-fr.js"
+],
+"NOUVELLE COLLECTION": [
+"lang-fr.js"
+],
+"TOUS LES ARTICLES": [
+"lang-fr.js"
+],
+"PORTEFEUILLE EXCLUSIF": [
+"lang-fr.js"
+],
+"CLASSIQUES DU GARAGE": [
+"lang-fr.js"
+],
+"RECHERCHER UNE MARQUE, UN ARTICLE OU UNE COULEUR": [
+"lang-fr.js"
+],
+"VITRINE": [
+"lang-fr.js",
+"lang-pt.js"
 ],
 "— ON EST QUALIFIÉS !": [
 "lang-fr.js"
@@ -324839,9 +330602,6 @@
 "CAMOUFLAGE VERT KAKI": [
 "lang-fr.js"
 ],
-"BAGUE": [
-"lang-fr.js"
-],
 "PRENDRE UNE PHOTO SOUVENIR": [
 "lang-fr.js"
 ],
@@ -325424,9 +331184,6 @@
 "lang-fr.js"
 ],
 "JOUER": [
-"lang-fr.js"
-],
-"CONSOLE DE JEUX": [
 "lang-fr.js"
 ],
 "TU ENTRES EN JEU ! LE COACH TE FAIT CONFIANCE.": [
@@ -326440,9 +332197,6 @@
 "lang-fr.js"
 ],
 "L'ÉCOLE ET LE FOOT D'ABORD !": [
-"lang-fr.js"
-],
-"ÎLE PRIVÉE": [
 "lang-fr.js"
 ],
 "BUTS SPÉCIAUX": [
@@ -329109,6 +334863,9 @@
 "🟥 {} est exclu. Tu es à 10.": [
 "lang-fr.js"
 ],
+"J'ai les clés de ma nouvelle maison. {0} !": [
+"lang-fr.js"
+],
 "Il te reste {} actions cette semaine.": [
 "lang-fr.js"
 ],
@@ -330198,6 +335955,9 @@
 "Une belle journée avec {0}.": [
 "lang-fr.js"
 ],
+"Ma nouvelle pièce {0} est arrivée.": [
+"lang-fr.js"
+],
 "/semaine · encore {} ans": [
 "lang-fr.js"
 ],
@@ -330634,6 +336394,9 @@
 "lang-fr.js"
 ],
 "{0} sponsors actifs": [
+"lang-fr.js"
+],
+"Nouvelle voiture : {0} {1}.": [
 "lang-fr.js"
 ],
 "{} Programme de la semaine": [
@@ -331850,7 +337613,8 @@
 "lang-id.js"
 ],
 "GT": [
-"lang-id.js"
+"lang-id.js",
+"mall.js"
 ],
 "Seri": [
 "lang-id.js"
@@ -333559,9 +339323,6 @@
 "lang-id.js"
 ],
 "Posisi": [
-"lang-id.js"
-],
-"Kaki": [
 "lang-id.js"
 ],
 "Gabung ke kamp": [
@@ -341834,6 +347595,9 @@
 "Ayah tahu. Kalau terburu-buru, kamu akan absen lebih lama.": [
 "lang-id.js"
 ],
+"Kalau terburu-buru, kamu akan absen lebih lama.": [
+"lang-id.js"
+],
 "Lebih tenang di kotak penalti, gol akan datang.": [
 "lang-id.js"
 ],
@@ -342576,6 +348340,300 @@
 "lang-id.js"
 ],
 "Oke, Ayah.": [
+"lang-id.js"
+],
+"Jam tangan": [
+"lang-id.js"
+],
+"Sepatu kets": [
+"lang-id.js"
+],
+"Kacamata hitam": [
+"lang-id.js"
+],
+"Headphone": [
+"lang-id.js"
+],
+"Jaket": [
+"lang-id.js"
+],
+"Topi": [
+"lang-id.js"
+],
+"Sepatu formal": [
+"lang-id.js"
+],
+"Cincin": [
+"lang-id.js"
+],
+"Kalung": [
+"lang-id.js"
+],
+"Pena tinta": [
+"lang-id.js"
+],
+"Dompet": [
+"lang-id.js"
+],
+"Ransel": [
+"lang-id.js"
+],
+"Koper": [
+"lang-id.js"
+],
+"Televisi": [
+"lang-id.js"
+],
+"Konsol game": [
+"lang-id.js"
+],
+"Jam pintar": [
+"lang-id.js"
+],
+"Set catur": [
+"lang-id.js"
+],
+"Lukisan": [
+"lang-id.js"
+],
+"Lampu": [
+"lang-id.js"
+],
+"Mesin kopi": [
+"lang-id.js"
+],
+"Kursi gaming": [
+"lang-id.js"
+],
+"Mobil remote control": [
+"lang-id.js"
+],
+"Boneka beruang": [
+"lang-id.js"
+],
+"Aksesori": [
+"lang-id.js"
+],
+"Perhiasan": [
+"lang-id.js"
+],
+"Kecantikan": [
+"lang-id.js"
+],
+"Rumah & dekorasi": [
+"lang-id.js"
+],
+"Hobi & olahraga": [
+"lang-id.js"
+],
+"Putih": [
+"lang-id.js"
+],
+"Biru dongker": [
+"lang-id.js"
+],
+"Krem tua": [
+"lang-id.js"
+],
+"Cokelat muda": [
+"lang-id.js"
+],
+"Abu-abu": [
+"lang-id.js"
+],
+"Merah marun": [
+"lang-id.js"
+],
+"Biru": [
+"lang-id.js"
+],
+"Merah muda": [
+"lang-id.js"
+],
+"Hijau": [
+"lang-id.js"
+],
+"Oranye": [
+"lang-id.js"
+],
+"Ungu": [
+"lang-id.js"
+],
+"Mobil super": [
+"lang-id.js"
+],
+"Kabriolet": [
+"lang-id.js"
+],
+"Pikap": [
+"lang-id.js"
+],
+"Apartemen": [
+"lang-id.js"
+],
+"Rumah pantai": [
+"lang-id.js"
+],
+"Pondok gunung": [
+"lang-id.js"
+],
+"Vila modern": [
+"lang-id.js"
+],
+"Rumah besar": [
+"lang-id.js"
+],
+"Pulau pribadi": [
+"lang-id.js"
+],
+"Pegunungan Alpen": [
+"lang-id.js"
+],
+"Kapadokia": [
+"lang-id.js"
+],
+"Karibia": [
+"lang-id.js"
+],
+"Tepi pantai": [
+"lang-id.js"
+],
+"Bukit": [
+"lang-id.js"
+],
+"Dekat taman": [
+"lang-id.js"
+],
+"Dengan taman": [
+"lang-id.js"
+],
+"Usiamu belum cukup untuk barang ini.": [
+"lang-id.js"
+],
+"Kamu perlu SIM untuk mengemudi. Ujiannya 3 soal.": [
+"lang-id.js"
+],
+"Sertifikat siap, selamat menikmati rumah baru!": [
+"lang-id.js"
+],
+"Mobilmu sudah diantar, selamat jalan!": [
+"lang-id.js"
+],
+"Pesananmu sedang dikirim!": [
+"lang-id.js"
+],
+"Pengiriman eksklusif": [
+"lang-id.js"
+],
+"Besok sampai": [
+"lang-id.js"
+],
+"Tidak ada barang yang cocok.": [
+"lang-id.js"
+],
+"Lihat semua ›": [
+"lang-id.js"
+],
+"Lemariku": [
+"lang-id.js"
+],
+"Promo hari ini": [
+"lang-id.js"
+],
+"Sesuai anggaranmu": [
+"lang-id.js"
+],
+"Merek": [
+"lang-id.js"
+],
+"Koleksi musim lalu diskon hingga 35%": [
+"lang-id.js"
+],
+"Rumah dan hobi": [
+"lang-id.js"
+],
+"Rekomendasi": [
+"lang-id.js"
+],
+"Harga: termurah": [
+"lang-id.js"
+],
+"Harga: termahal": [
+"lang-id.js"
+],
+"Persempit pencarian untuk melihat lebih banyak.": [
+"lang-id.js"
+],
+"Di lemarimu": [
+"lang-id.js"
+],
+"Saldo tidak cukup": [
+"lang-id.js"
+],
+"Konfirmasi": [
+"lang-id.js"
+],
+"Beli sekarang": [
+"lang-id.js"
+],
+"Tanpa efek ketenaran": [
+"lang-id.js"
+],
+"Merek mewah memberi lebih banyak moral dan sedikit ketenaran.": [
+"lang-id.js"
+],
+"Barang premium memberi sedikit ketenaran.": [
+"lang-id.js"
+],
+"Pemakaian sehari-hari: memberi moral.": [
+"lang-id.js"
+],
+"Efeknya berkurang jika belanja banyak di minggu yang sama.": [
+"lang-id.js"
+],
+"Pengiriman eksklusif dari butik": [
+"lang-id.js"
+],
+"Gratis ongkir · besok sampai": [
+"lang-id.js"
+],
+"Dari merek ini": [
+"lang-id.js"
+],
+"Kamu belum membeli apa pun. Lihat promonya!": [
+"lang-id.js"
+],
+"Total belanja": [
+"lang-id.js"
+],
+"Di garasimu": [
+"lang-id.js"
+],
+"Pilih tingkat untuk melihat semua model.": [
+"lang-id.js"
+],
+"Iklan baru": [
+"lang-id.js"
+],
+"Koleksi baru": [
+"lang-id.js"
+],
+"Semua barang": [
+"lang-id.js"
+],
+"Portofolio eksklusif": [
+"lang-id.js"
+],
+"Koleksi garasi": [
+"lang-id.js"
+],
+"BARU": [
+"lang-id.js"
+],
+"Cari merek, barang, atau warna": [
+"lang-id.js"
+],
+"Etalase": [
 "lang-id.js"
 ],
 "— kita lolos!": [
@@ -343779,9 +349837,6 @@
 "lang-id.js"
 ],
 "Kamuflase hijau khaki": [
-"lang-id.js"
-],
-"Cincin": [
 "lang-id.js"
 ],
 "Malam yang luar biasa! Ikatanmu dengan rekan setim makin kuat.": [
@@ -347261,9 +353316,6 @@
 "MODE KARIER": [
 "lang-id.js"
 ],
-"BARU": [
-"lang-id.js"
-],
 "KARIER": [
 "lang-id.js"
 ],
@@ -348594,9 +354646,6 @@
 "lang-id.js"
 ],
 "POSISI": [
-"lang-id.js"
-],
-"KAKI": [
 "lang-id.js"
 ],
 "GABUNG KE KAMP": [
@@ -354327,6 +360376,9 @@
 "AKU BOSAN YAH, AKU INGIN MAIN": [
 "lang-id.js"
 ],
+"KALAU TERBURU-BURU, KAMU AKAN ABSEN LEBIH LAMA.": [
+"lang-id.js"
+],
 "KAMU MENANG DENGAN SERAGAM TIMNAS, AYAH BANGGA!": [
 "lang-id.js"
 ],
@@ -355021,6 +361073,285 @@
 "lang-id.js"
 ],
 "OKE, AYAH.": [
+"lang-id.js"
+],
+"JAM TANGAN": [
+"lang-id.js"
+],
+"SEPATU KETS": [
+"lang-id.js"
+],
+"KACAMATA HITAM": [
+"lang-id.js"
+],
+"HEADPHONE": [
+"lang-id.js"
+],
+"JAKET": [
+"lang-id.js"
+],
+"TOPI": [
+"lang-id.js"
+],
+"SEPATU FORMAL": [
+"lang-id.js"
+],
+"CINCIN": [
+"lang-id.js"
+],
+"KALUNG": [
+"lang-id.js"
+],
+"PENA TINTA": [
+"lang-id.js"
+],
+"DOMPET": [
+"lang-id.js"
+],
+"RANSEL": [
+"lang-id.js"
+],
+"KOPER": [
+"lang-id.js"
+],
+"TELEVISI": [
+"lang-id.js"
+],
+"KONSOL GAME": [
+"lang-id.js"
+],
+"JAM PINTAR": [
+"lang-id.js"
+],
+"SET CATUR": [
+"lang-id.js"
+],
+"LUKISAN": [
+"lang-id.js"
+],
+"LAMPU": [
+"lang-id.js"
+],
+"MESIN KOPI": [
+"lang-id.js"
+],
+"KURSI GAMING": [
+"lang-id.js"
+],
+"MOBIL REMOTE CONTROL": [
+"lang-id.js"
+],
+"BONEKA BERUANG": [
+"lang-id.js"
+],
+"AKSESORI": [
+"lang-id.js"
+],
+"PERHIASAN": [
+"lang-id.js"
+],
+"KECANTIKAN": [
+"lang-id.js"
+],
+"RUMAH & DEKORASI": [
+"lang-id.js"
+],
+"HOBI & OLAHRAGA": [
+"lang-id.js"
+],
+"PUTIH": [
+"lang-id.js"
+],
+"BIRU DONGKER": [
+"lang-id.js"
+],
+"KREM TUA": [
+"lang-id.js"
+],
+"COKELAT MUDA": [
+"lang-id.js"
+],
+"ABU-ABU": [
+"lang-id.js"
+],
+"MERAH MARUN": [
+"lang-id.js"
+],
+"BIRU": [
+"lang-id.js"
+],
+"MERAH MUDA": [
+"lang-id.js"
+],
+"ORANYE": [
+"lang-id.js"
+],
+"UNGU": [
+"lang-id.js"
+],
+"ANTRASIT": [
+"lang-id.js"
+],
+"MOBIL SUPER": [
+"lang-id.js"
+],
+"KABRIOLET": [
+"lang-id.js"
+],
+"PIKAP": [
+"lang-id.js"
+],
+"APARTEMEN": [
+"lang-id.js"
+],
+"RUMAH PANTAI": [
+"lang-id.js"
+],
+"PONDOK GUNUNG": [
+"lang-id.js"
+],
+"VILA MODERN": [
+"lang-id.js"
+],
+"RUMAH BESAR": [
+"lang-id.js"
+],
+"PULAU PRIBADI": [
+"lang-id.js"
+],
+"PEGUNUNGAN ALPEN": [
+"lang-id.js"
+],
+"KAPADOKIA": [
+"lang-id.js"
+],
+"KARIBIA": [
+"lang-id.js"
+],
+"TEPI PANTAI": [
+"lang-id.js"
+],
+"BUKIT": [
+"lang-id.js"
+],
+"DEKAT TAMAN": [
+"lang-id.js"
+],
+"DENGAN TAMAN": [
+"lang-id.js"
+],
+"USIAMU BELUM CUKUP UNTUK BARANG INI.": [
+"lang-id.js"
+],
+"SERTIFIKAT SIAP, SELAMAT MENIKMATI RUMAH BARU!": [
+"lang-id.js"
+],
+"MOBILMU SUDAH DIANTAR, SELAMAT JALAN!": [
+"lang-id.js"
+],
+"PESANANMU SEDANG DIKIRIM!": [
+"lang-id.js"
+],
+"PENGIRIMAN EKSKLUSIF": [
+"lang-id.js"
+],
+"BESOK SAMPAI": [
+"lang-id.js"
+],
+"TIDAK ADA BARANG YANG COCOK.": [
+"lang-id.js"
+],
+"LIHAT SEMUA ›": [
+"lang-id.js"
+],
+"LEMARIKU": [
+"lang-id.js"
+],
+"BARANG": [
+"lang-id.js"
+],
+"PROMO HARI INI": [
+"lang-id.js"
+],
+"SESUAI ANGGARANMU": [
+"lang-id.js"
+],
+"RUMAH DAN HOBI": [
+"lang-id.js"
+],
+"REKOMENDASI": [
+"lang-id.js"
+],
+"HARGA: TERMURAH": [
+"lang-id.js"
+],
+"HARGA: TERMAHAL": [
+"lang-id.js"
+],
+"PERSEMPIT PENCARIAN UNTUK MELIHAT LEBIH BANYAK.": [
+"lang-id.js"
+],
+"DI LEMARIMU": [
+"lang-id.js"
+],
+"TERBUKA DI USIA ITU": [
+"lang-id.js"
+],
+"SALDO TIDAK CUKUP": [
+"lang-id.js"
+],
+"KONFIRMASI": [
+"lang-id.js"
+],
+"BELI SEKARANG": [
+"lang-id.js"
+],
+"TANPA EFEK KETENARAN": [
+"lang-id.js"
+],
+"BARANG PREMIUM MEMBERI SEDIKIT KETENARAN.": [
+"lang-id.js"
+],
+"PEMAKAIAN SEHARI-HARI: MEMBERI MORAL.": [
+"lang-id.js"
+],
+"PENGIRIMAN EKSKLUSIF DARI BUTIK": [
+"lang-id.js"
+],
+"GRATIS ONGKIR · BESOK SAMPAI": [
+"lang-id.js"
+],
+"DARI MEREK INI": [
+"lang-id.js"
+],
+"ULASAN": [
+"lang-id.js"
+],
+"TOTAL BELANJA": [
+"lang-id.js"
+],
+"IKLAN BARU": [
+"lang-id.js"
+],
+"KOLEKSI BARU": [
+"lang-id.js"
+],
+"SEMUA BARANG": [
+"lang-id.js"
+],
+"PORTOFOLIO EKSKLUSIF": [
+"lang-id.js"
+],
+"KOLEKSI GARASI": [
+"lang-id.js"
+],
+"CARI MEREK, BARANG, ATAU WARNA": [
+"lang-id.js"
+],
+"KOLEKSI": [
+"lang-id.js"
+],
+"ETALASE": [
 "lang-id.js"
 ],
 "— KITA LOLOS!": [
@@ -355941,9 +362272,6 @@
 "KAMUFLASE HIJAU KHAKI": [
 "lang-id.js"
 ],
-"CINCIN": [
-"lang-id.js"
-],
 "AMBIL FOTO KENANGAN": [
 "lang-id.js"
 ],
@@ -356531,9 +362859,6 @@
 "lang-id.js"
 ],
 "MAIN": [
-"lang-id.js"
-],
-"KONSOL GAME": [
 "lang-id.js"
 ],
 "KAMU MASUK! PELATIH PERCAYA PADAMU.": [
@@ -357280,9 +363605,6 @@
 "BINTANG ERA INI": [
 "lang-id.js"
 ],
-"BARANG": [
-"lang-id.js"
-],
 "JADWALMU": [
 "lang-id.js"
 ],
@@ -357539,9 +363861,6 @@
 "lang-id.js"
 ],
 "SEKOLAH DAN SEPAK BOLA DULU!": [
-"lang-id.js"
-],
-"PULAU PRIBADI": [
 "lang-id.js"
 ],
 "GOL SPESIAL": [
@@ -360214,6 +366533,9 @@
 "🟥 {} dikartu merah. Kamu tinggal 10 orang.": [
 "lang-id.js"
 ],
+"Kunci rumah baruku sudah di tangan. {0}!": [
+"lang-id.js"
+],
 "Kamu masih punya {} aksi minggu ini.": [
 "lang-id.js"
 ],
@@ -361297,6 +367619,9 @@
 "Hari yang indah bersama {0}.": [
 "lang-id.js"
 ],
+"Barang baruku dari {0} sudah tiba.": [
+"lang-id.js"
+],
 "/minggu · tersisa {} tahun": [
 "lang-id.js"
 ],
@@ -361734,6 +368059,9 @@
 "lang-id.js"
 ],
 "{0} sponsor aktif": [
+"lang-id.js"
+],
+"Mobil baru: {0} {1}.": [
 "lang-id.js"
 ],
 "{} Rencana Mingguan": [
@@ -364048,7 +370376,8 @@
 "lang-it.js"
 ],
 "Avanti": [
-"lang-it.js"
+"lang-it.js",
+"mall.js"
 ],
 "Inizia a giocare": [
 "lang-it.js"
@@ -365684,7 +372013,8 @@
 "lang-it.js"
 ],
 "Bomber": [
-"lang-it.js"
+"lang-it.js",
+"mall.js"
 ],
 "Segna 5 gol in un torneo": [
 "lang-it.js"
@@ -372952,6 +379282,9 @@
 "Lo so. Se hai fretta, starai fuori più a lungo.": [
 "lang-it.js"
 ],
+"Se hai fretta, starai fuori più a lungo.": [
+"lang-it.js"
+],
 "Stai più calmo in area, i gol arriveranno.": [
 "lang-it.js"
 ],
@@ -373694,6 +380027,304 @@
 "lang-it.js"
 ],
 "Va bene, papà.": [
+"lang-it.js"
+],
+"Orologio da polso": [
+"lang-it.js"
+],
+"Occhiali da sole": [
+"lang-it.js"
+],
+"Cuffie": [
+"lang-it.js"
+],
+"Portatile": [
+"lang-it.js"
+],
+"Profumo": [
+"lang-it.js"
+],
+"Giacca": [
+"lang-it.js"
+],
+"Felpa con cappuccio": [
+"lang-it.js"
+],
+"Cappellino": [
+"lang-it.js"
+],
+"Scarpe eleganti": [
+"lang-it.js"
+],
+"Anello": [
+"lang-it.js"
+],
+"Collana": [
+"lang-it.js"
+],
+"Penna stilografica": [
+"lang-it.js"
+],
+"Portafoglio": [
+"lang-it.js"
+],
+"Zaino": [
+"lang-it.js"
+],
+"Valigia": [
+"lang-it.js"
+],
+"Televisore": [
+"lang-it.js"
+],
+"Console": [
+"lang-it.js"
+],
+"Scacchiera": [
+"lang-it.js"
+],
+"Divano": [
+"lang-it.js"
+],
+"Quadro": [
+"lang-it.js",
+"lang-pt.js"
+],
+"Lampada": [
+"lang-it.js"
+],
+"Macchina del caffè": [
+"lang-it.js"
+],
+"Sedia da gaming": [
+"lang-it.js"
+],
+"Auto radiocomandata": [
+"lang-it.js"
+],
+"Orsacchiotto": [
+"lang-it.js"
+],
+"Scarpe": [
+"lang-it.js"
+],
+"Accessori": [
+"lang-it.js"
+],
+"Gioielli": [
+"lang-it.js"
+],
+"Elettronica": [
+"lang-it.js"
+],
+"Bellezza": [
+"lang-it.js"
+],
+"Casa e arredo": [
+"lang-it.js"
+],
+"Hobby e sport": [
+"lang-it.js"
+],
+"Bianco": [
+"lang-it.js"
+],
+"Blu navy": [
+"lang-it.js"
+],
+"Cuoio": [
+"lang-it.js"
+],
+"Grigio": [
+"lang-it.js"
+],
+"Blu": [
+"lang-it.js"
+],
+"Arancione": [
+"lang-it.js"
+],
+"Viola": [
+"lang-it.js"
+],
+"Antracite": [
+"lang-it.js"
+],
+"Berlina compatta": [
+"lang-it.js"
+],
+"Appartamento": [
+"lang-it.js"
+],
+"Casa sulla spiaggia": [
+"lang-it.js"
+],
+"Chalet di montagna": [
+"lang-it.js"
+],
+"Attico": [
+"lang-it.js"
+],
+"Villa padronale": [
+"lang-it.js"
+],
+"Isola privata": [
+"lang-it.js"
+],
+"Alpi": [
+"lang-it.js"
+],
+"Caraibi": [
+"lang-it.js"
+],
+"Lungomare": [
+"lang-it.js"
+],
+"Collina": [
+"lang-it.js"
+],
+"Porto turistico": [
+"lang-it.js"
+],
+"Vicino al parco": [
+"lang-it.js"
+],
+"Con giardino": [
+"lang-it.js"
+],
+"Non hai l'età per questo articolo.": [
+"lang-it.js"
+],
+"Per guidare serve la patente. L'esame ha 3 domande.": [
+"lang-it.js"
+],
+"Il rogito è pronto, goditi la nuova casa!": [
+"lang-it.js"
+],
+"La tua auto è stata consegnata, buon viaggio!": [
+"lang-it.js"
+],
+"Il tuo ordine è in arrivo!": [
+"lang-it.js"
+],
+"Consegna riservata": [
+"lang-it.js"
+],
+"Domani a casa tua": [
+"lang-it.js"
+],
+"Nessun articolo trovato.": [
+"lang-it.js"
+],
+"Vedi tutto ›": [
+"lang-it.js"
+],
+"Il mio armadio": [
+"lang-it.js"
+],
+"Offerte del giorno": [
+"lang-it.js"
+],
+"Nel tuo budget": [
+"lang-it.js"
+],
+"Marchi": [
+"lang-it.js"
+],
+"Collezione della scorsa stagione fino al 35% di sconto": [
+"lang-it.js"
+],
+"Casa e hobby": [
+"lang-it.js"
+],
+"Consigliati": [
+"lang-it.js"
+],
+"Prezzo crescente": [
+"lang-it.js"
+],
+"Prezzo decrescente": [
+"lang-it.js"
+],
+"Restringi la ricerca per vederne altri.": [
+"lang-it.js"
+],
+"Nel tuo armadio": [
+"lang-it.js"
+],
+"si sblocca a quell'età": [
+"lang-it.js"
+],
+"Saldo insufficiente": [
+"lang-it.js"
+],
+"Conferma": [
+"lang-it.js"
+],
+"Compra ora": [
+"lang-it.js"
+],
+"Nessun effetto sulla fama": [
+"lang-it.js"
+],
+"I marchi di lusso danno più morale e un po' di fama.": [
+"lang-it.js"
+],
+"Gli articoli premium danno un po' di fama.": [
+"lang-it.js"
+],
+"Uso quotidiano: dà morale.": [
+"lang-it.js"
+],
+"L'effetto cala se compri molto nella stessa settimana.": [
+"lang-it.js"
+],
+"Consegna riservata dalla boutique": [
+"lang-it.js"
+],
+"Spedizione gratuita · domani a casa tua": [
+"lang-it.js"
+],
+"Di questo marchio": [
+"lang-it.js"
+],
+"Non hai ancora comprato nulla. Guarda le offerte!": [
+"lang-it.js"
+],
+"Spesa totale": [
+"lang-it.js"
+],
+"Nel tuo garage": [
+"lang-it.js"
+],
+"Scegli una fascia per vedere tutti i modelli.": [
+"lang-it.js"
+],
+"Concessionaria": [
+"lang-it.js"
+],
+"Nuovi annunci": [
+"lang-it.js"
+],
+"Nuova collezione": [
+"lang-it.js"
+],
+"Tutti gli articoli": [
+"lang-it.js"
+],
+"Portafoglio esclusivo": [
+"lang-it.js"
+],
+"Classici del garage": [
+"lang-it.js"
+],
+"NUOVO": [
+"lang-it.js"
+],
+"Cerca marchio, articolo o colore": [
+"lang-it.js"
+],
+"Vetrina": [
 "lang-it.js"
 ],
 "— ci siamo qualificati!": [
@@ -374689,7 +381320,8 @@
 "lang-it.js"
 ],
 "Tempesta": [
-"lang-it.js"
+"lang-it.js",
+"mall.js"
 ],
 "VITTORIA": [
 "lang-it.js"
@@ -374884,9 +381516,6 @@
 "lang-it.js"
 ],
 "Mimetico verde cachi": [
-"lang-it.js"
-],
-"Anello": [
 "lang-it.js"
 ],
 "Che serata! Il legame con i tuoi compagni si è rafforzato.": [
@@ -375094,9 +381723,6 @@
 "lang-it.js"
 ],
 "Cuffie wireless": [
-"lang-it.js"
-],
-"Rosa": [
 "lang-it.js"
 ],
 "Fuori dai convocati": [
@@ -375676,9 +382302,6 @@
 "lang-it.js"
 ],
 "Gioca": [
-"lang-it.js"
-],
-"Console": [
 "lang-it.js"
 ],
 "Entri in campo! L'allenatore si fida di te.": [
@@ -376946,9 +383569,6 @@
 "lang-it.js"
 ],
 "Prima la scuola e il calcio!": [
-"lang-it.js"
-],
-"Isola privata": [
 "lang-it.js"
 ],
 "Gol speciali": [
@@ -378356,9 +384976,6 @@
 "lang-it.js"
 ],
 "MODALITÀ CARRIERA": [
-"lang-it.js"
-],
-"NUOVA": [
 "lang-it.js"
 ],
 "CARRIERA": [
@@ -385443,6 +392060,9 @@
 "MI ANNOIO PAPÀ, VOGLIO GIOCARE": [
 "lang-it.js"
 ],
+"SE HAI FRETTA, STARAI FUORI PIÙ A LUNGO.": [
+"lang-it.js"
+],
 "HAI VINTO CON LA MAGLIA DELLA NAZIONALE, SONO ORGOGLIOSO!": [
 "lang-it.js"
 ],
@@ -386137,6 +392757,286 @@
 "lang-it.js"
 ],
 "VA BENE, PAPÀ.": [
+"lang-it.js"
+],
+"OROLOGIO DA POLSO": [
+"lang-it.js"
+],
+"OCCHIALI DA SOLE": [
+"lang-it.js"
+],
+"CUFFIE": [
+"lang-it.js"
+],
+"PORTATILE": [
+"lang-it.js"
+],
+"PROFUMO": [
+"lang-it.js"
+],
+"GIACCA": [
+"lang-it.js"
+],
+"FELPA CON CAPPUCCIO": [
+"lang-it.js"
+],
+"CAPPELLINO": [
+"lang-it.js"
+],
+"SCARPE ELEGANTI": [
+"lang-it.js"
+],
+"ANELLO": [
+"lang-it.js"
+],
+"COLLANA": [
+"lang-it.js"
+],
+"PENNA STILOGRAFICA": [
+"lang-it.js"
+],
+"PORTAFOGLIO": [
+"lang-it.js"
+],
+"ZAINO": [
+"lang-it.js"
+],
+"VALIGIA": [
+"lang-it.js"
+],
+"TELEVISORE": [
+"lang-it.js"
+],
+"CONSOLE": [
+"lang-it.js"
+],
+"SCACCHIERA": [
+"lang-it.js"
+],
+"DIVANO": [
+"lang-it.js"
+],
+"QUADRO": [
+"lang-it.js",
+"lang-pt.js"
+],
+"LAMPADA": [
+"lang-it.js"
+],
+"MACCHINA DEL CAFFÈ": [
+"lang-it.js"
+],
+"SEDIA DA GAMING": [
+"lang-it.js"
+],
+"AUTO RADIOCOMANDATA": [
+"lang-it.js"
+],
+"ORSACCHIOTTO": [
+"lang-it.js"
+],
+"SCARPE": [
+"lang-it.js"
+],
+"ACCESSORI": [
+"lang-it.js"
+],
+"GIOIELLI": [
+"lang-it.js"
+],
+"ELETTRONICA": [
+"lang-it.js"
+],
+"BELLEZZA": [
+"lang-it.js"
+],
+"CASA E ARREDO": [
+"lang-it.js"
+],
+"HOBBY E SPORT": [
+"lang-it.js"
+],
+"BIANCO": [
+"lang-it.js"
+],
+"BLU NAVY": [
+"lang-it.js"
+],
+"CUOIO": [
+"lang-it.js"
+],
+"GRIGIO": [
+"lang-it.js"
+],
+"ARANCIONE": [
+"lang-it.js"
+],
+"VIOLA": [
+"lang-it.js"
+],
+"ANTRACITE": [
+"lang-it.js"
+],
+"BERLINA COMPATTA": [
+"lang-it.js"
+],
+"APPARTAMENTO": [
+"lang-it.js"
+],
+"CASA SULLA SPIAGGIA": [
+"lang-it.js"
+],
+"CHALET DI MONTAGNA": [
+"lang-it.js"
+],
+"ATTICO": [
+"lang-it.js"
+],
+"VILLA PADRONALE": [
+"lang-it.js"
+],
+"ISOLA PRIVATA": [
+"lang-it.js"
+],
+"ALPI": [
+"lang-it.js"
+],
+"CARAIBI": [
+"lang-it.js"
+],
+"LUNGOMARE": [
+"lang-it.js"
+],
+"COLLINA": [
+"lang-it.js"
+],
+"PORTO TURISTICO": [
+"lang-it.js"
+],
+"VICINO AL PARCO": [
+"lang-it.js"
+],
+"CON GIARDINO": [
+"lang-it.js"
+],
+"NON HAI L'ETÀ PER QUESTO ARTICOLO.": [
+"lang-it.js"
+],
+"IL ROGITO È PRONTO, GODITI LA NUOVA CASA!": [
+"lang-it.js"
+],
+"LA TUA AUTO È STATA CONSEGNATA, BUON VIAGGIO!": [
+"lang-it.js"
+],
+"IL TUO ORDINE È IN ARRIVO!": [
+"lang-it.js"
+],
+"CONSEGNA RISERVATA": [
+"lang-it.js"
+],
+"DOMANI A CASA TUA": [
+"lang-it.js"
+],
+"NESSUN ARTICOLO TROVATO.": [
+"lang-it.js"
+],
+"VEDI TUTTO ›": [
+"lang-it.js"
+],
+"IL MIO ARMADIO": [
+"lang-it.js"
+],
+"ARTICOLI": [
+"lang-it.js"
+],
+"OFFERTE DEL GIORNO": [
+"lang-it.js"
+],
+"NEL TUO BUDGET": [
+"lang-it.js"
+],
+"MARCHI": [
+"lang-it.js"
+],
+"CASA E HOBBY": [
+"lang-it.js"
+],
+"CONSIGLIATI": [
+"lang-it.js"
+],
+"PREZZO CRESCENTE": [
+"lang-it.js"
+],
+"PREZZO DECRESCENTE": [
+"lang-it.js"
+],
+"RESTRINGI LA RICERCA PER VEDERNE ALTRI.": [
+"lang-it.js"
+],
+"NEL TUO ARMADIO": [
+"lang-it.js"
+],
+"SI SBLOCCA A QUELL'ETÀ": [
+"lang-it.js"
+],
+"SALDO INSUFFICIENTE": [
+"lang-it.js"
+],
+"CONFERMA": [
+"lang-it.js"
+],
+"COMPRA ORA": [
+"lang-it.js"
+],
+"NESSUN EFFETTO SULLA FAMA": [
+"lang-it.js"
+],
+"GLI ARTICOLI PREMIUM DANNO UN PO' DI FAMA.": [
+"lang-it.js"
+],
+"USO QUOTIDIANO: DÀ MORALE.": [
+"lang-it.js"
+],
+"CONSEGNA RISERVATA DALLA BOUTIQUE": [
+"lang-it.js"
+],
+"SPEDIZIONE GRATUITA · DOMANI A CASA TUA": [
+"lang-it.js"
+],
+"DI QUESTO MARCHIO": [
+"lang-it.js"
+],
+"RECENSIONI": [
+"lang-it.js"
+],
+"SPESA TOTALE": [
+"lang-it.js"
+],
+"CONCESSIONARIA": [
+"lang-it.js"
+],
+"NUOVI ANNUNCI": [
+"lang-it.js"
+],
+"NUOVA COLLEZIONE": [
+"lang-it.js"
+],
+"TUTTI GLI ARTICOLI": [
+"lang-it.js"
+],
+"PORTAFOGLIO ESCLUSIVO": [
+"lang-it.js"
+],
+"CLASSICI DEL GARAGE": [
+"lang-it.js"
+],
+"CERCA MARCHIO, ARTICOLO O COLORE": [
+"lang-it.js"
+],
+"COLLEZIONE": [
+"lang-it.js"
+],
+"VETRINA": [
 "lang-it.js"
 ],
 "— CI SIAMO QUALIFICATI!": [
@@ -387062,9 +393962,6 @@
 "MIMETICO VERDE CACHI": [
 "lang-it.js"
 ],
-"ANELLO": [
-"lang-it.js"
-],
 "SCATTA UNA FOTO RICORDO": [
 "lang-it.js"
 ],
@@ -387204,9 +394101,6 @@
 "lang-it.js"
 ],
 "CUFFIE WIRELESS": [
-"lang-it.js"
-],
-"ROSA": [
 "lang-it.js"
 ],
 "FUORI DAI CONVOCATI": [
@@ -387630,9 +394524,6 @@
 "lang-it.js"
 ],
 "GIOCA": [
-"lang-it.js"
-],
-"CONSOLE": [
 "lang-it.js"
 ],
 "ENTRI IN CAMPO! L'ALLENATORE SI FIDA DI TE.": [
@@ -388654,9 +395545,6 @@
 "lang-it.js"
 ],
 "PRIMA LA SCUOLA E IL CALCIO!": [
-"lang-it.js"
-],
-"ISOLA PRIVATA": [
 "lang-it.js"
 ],
 "GOL SPECIALI": [
@@ -391326,6 +398214,9 @@
 "🟥 {} espulso. Sei in 10.": [
 "lang-it.js"
 ],
+"Ho le chiavi della mia nuova casa. {0}!": [
+"lang-it.js"
+],
 "Ti restano {} azioni questa settimana.": [
 "lang-it.js"
 ],
@@ -392409,6 +399300,9 @@
 "Una bella giornata con {0}.": [
 "lang-it.js"
 ],
+"È arrivato il mio nuovo pezzo {0}.": [
+"lang-it.js"
+],
 "/settimana · ancora {} anni": [
 "lang-it.js"
 ],
@@ -392848,6 +399742,9 @@
 "lang-it.js"
 ],
 "{0} sponsor attivi": [
+"lang-it.js"
+],
+"Nuova auto: {0} {1}.": [
 "lang-it.js"
 ],
 "{} Programma settimanale": [
@@ -396184,7 +403081,8 @@
 "lang-pt.js"
 ],
 "Volta": [
-"lang-pt.js"
+"lang-pt.js",
+"mall.js"
 ],
 "Esforço": [
 "lang-pt.js"
@@ -404896,6 +411794,9 @@
 "Eu sei. Se apressar, vai ficar mais tempo fora.": [
 "lang-pt.js"
 ],
+"Se apressar, vai ficar mais tempo fora.": [
+"lang-pt.js"
+],
 "Tenha mais calma na área, os gols vão sair.": [
 "lang-pt.js"
 ],
@@ -405635,6 +412536,304 @@
 "lang-pt.js"
 ],
 "Tá bom, pai.": [
+"lang-pt.js"
+],
+"Relógio de pulso": [
+"lang-pt.js"
+],
+"Tênis": [
+"lang-pt.js"
+],
+"Óculos de sol": [
+"lang-pt.js"
+],
+"Fone de ouvido": [
+"lang-pt.js"
+],
+"Notebook": [
+"lang-pt.js"
+],
+"Jaqueta": [
+"lang-pt.js"
+],
+"Moletom com capuz": [
+"lang-pt.js"
+],
+"Boné": [
+"lang-pt.js"
+],
+"Sapato social": [
+"lang-pt.js"
+],
+"Anel": [
+"lang-pt.js"
+],
+"Colar": [
+"lang-pt.js"
+],
+"Caneta-tinteiro": [
+"lang-pt.js"
+],
+"Carteira": [
+"lang-pt.js"
+],
+"Mala": [
+"lang-pt.js"
+],
+"Console de videogame": [
+"lang-pt.js"
+],
+"Caixa de som": [
+"lang-pt.js"
+],
+"Jogo de xadrez": [
+"lang-pt.js"
+],
+"Cafeteira": [
+"lang-pt.js"
+],
+"Cadeira gamer": [
+"lang-pt.js"
+],
+"Carrinho de controle remoto": [
+"lang-pt.js"
+],
+"Ursinho de pelúcia": [
+"lang-pt.js"
+],
+"Roupas": [
+"lang-pt.js"
+],
+"Calçados": [
+"lang-pt.js"
+],
+"Acessórios": [
+"lang-pt.js"
+],
+"Joias": [
+"lang-pt.js"
+],
+"Eletrônicos": [
+"lang-pt.js"
+],
+"Beleza": [
+"lang-pt.js"
+],
+"Casa e decoração": [
+"lang-pt.js"
+],
+"Hobbies e esporte": [
+"lang-pt.js"
+],
+"Branco": [
+"lang-pt.js"
+],
+"Azul-marinho": [
+"lang-pt.js"
+],
+"Bege": [
+"lang-pt.js"
+],
+"Caramelo": [
+"lang-pt.js"
+],
+"Cáqui": [
+"lang-pt.js"
+],
+"Cinza": [
+"lang-pt.js"
+],
+"Bordô": [
+"lang-pt.js"
+],
+"Laranja": [
+"lang-pt.js"
+],
+"Roxo": [
+"lang-pt.js"
+],
+"Grafite": [
+"lang-pt.js"
+],
+"Hatch": [
+"lang-pt.js",
+"mall.js"
+],
+"Sedã": [
+"lang-pt.js"
+],
+"Cupê": [
+"lang-pt.js"
+],
+"Superesportivo": [
+"lang-pt.js"
+],
+"Conversível": [
+"lang-pt.js"
+],
+"Picape": [
+"lang-pt.js"
+],
+"Apartamento": [
+"lang-pt.js"
+],
+"Casa de praia": [
+"lang-pt.js"
+],
+"Chalé na montanha": [
+"lang-pt.js"
+],
+"Mansão moderna": [
+"lang-pt.js"
+],
+"Cobertura": [
+"lang-pt.js"
+],
+"Mansão": [
+"lang-pt.js"
+],
+"Ilha particular": [
+"lang-pt.js"
+],
+"Alpes": [
+"lang-pt.js"
+],
+"Capadócia": [
+"lang-pt.js"
+],
+"Nova York": [
+"lang-pt.js"
+],
+"Caribe": [
+"lang-pt.js"
+],
+"Orla": [
+"lang-pt.js"
+],
+"Perto do parque": [
+"lang-pt.js"
+],
+"Com jardim": [
+"lang-pt.js"
+],
+"Você ainda não tem idade para este item.": [
+"lang-pt.js"
+],
+"Você precisa de carteira para dirigir. A prova tem 3 perguntas.": [
+"lang-pt.js"
+],
+"A escritura está pronta, aproveite a casa nova!": [
+"lang-pt.js"
+],
+"Seu carro foi entregue, boa viagem!": [
+"lang-pt.js"
+],
+"Seu pedido está a caminho!": [
+"lang-pt.js"
+],
+"Amanhã na sua porta": [
+"lang-pt.js"
+],
+"Nenhum item encontrado.": [
+"lang-pt.js"
+],
+"Ver tudo ›": [
+"lang-pt.js"
+],
+"Meu armário": [
+"lang-pt.js"
+],
+"Ofertas do dia": [
+"lang-pt.js"
+],
+"Cabe no seu bolso": [
+"lang-pt.js"
+],
+"Coleção da temporada passada com até 35% de desconto": [
+"lang-pt.js"
+],
+"Casa e hobbies": [
+"lang-pt.js"
+],
+"Preço: menor para maior": [
+"lang-pt.js"
+],
+"Preço: maior para menor": [
+"lang-pt.js"
+],
+"Refine a busca para ver mais.": [
+"lang-pt.js"
+],
+"No seu armário": [
+"lang-pt.js"
+],
+"Comprar agora": [
+"lang-pt.js"
+],
+"Sem efeito na fama": [
+"lang-pt.js"
+],
+"Marcas de luxo dão mais moral e um pouco de fama.": [
+"lang-pt.js"
+],
+"Itens premium dão um pouco de fama.": [
+"lang-pt.js"
+],
+"Uso diário: dá moral.": [
+"lang-pt.js"
+],
+"O efeito diminui se você comprar muito na mesma semana.": [
+"lang-pt.js"
+],
+"Entrega exclusiva da butique": [
+"lang-pt.js"
+],
+"Frete grátis · amanhã na sua porta": [
+"lang-pt.js"
+],
+"Desta marca": [
+"lang-pt.js"
+],
+"avaliações": [
+"lang-pt.js"
+],
+"Você ainda não comprou nada. Confira as ofertas!": [
+"lang-pt.js"
+],
+"Total gasto": [
+"lang-pt.js"
+],
+"Na sua garagem": [
+"lang-pt.js"
+],
+"Escolha uma faixa para ver todos os modelos.": [
+"lang-pt.js"
+],
+"Concessionária": [
+"lang-pt.js"
+],
+"Novos anúncios": [
+"lang-pt.js"
+],
+"Nova coleção": [
+"lang-pt.js"
+],
+"Todos os itens": [
+"lang-pt.js"
+],
+"Portfólio exclusivo": [
+"lang-pt.js"
+],
+"Clássicos da garagem": [
+"lang-pt.js"
+],
+"NOVO": [
+"lang-pt.js"
+],
+"Busque marca, item ou cor": [
+"lang-pt.js"
+],
+"coleção": [
 "lang-pt.js"
 ],
 "— nos classificamos!": [
@@ -406778,9 +413977,6 @@
 "lang-pt.js"
 ],
 "Camuflado verde-cáqui": [
-"lang-pt.js"
-],
-"Anel": [
 "lang-pt.js"
 ],
 "Que noite! Seu vínculo com os companheiros ficou mais forte.": [
@@ -408820,9 +416016,6 @@
 "Primeiro a escola e o futebol!": [
 "lang-pt.js"
 ],
-"Ilha particular": [
-"lang-pt.js"
-],
 "Gols especiais": [
 "lang-pt.js"
 ],
@@ -410192,9 +417385,6 @@
 "lang-pt.js"
 ],
 "MODO CARREIRA": [
-"lang-pt.js"
-],
-"NOVA": [
 "lang-pt.js"
 ],
 "CARREIRA": [
@@ -417130,6 +424320,9 @@
 "ESTOU ENTEDIADO PAI, QUERO JOGAR": [
 "lang-pt.js"
 ],
+"SE APRESSAR, VAI FICAR MAIS TEMPO FORA.": [
+"lang-pt.js"
+],
 "VOCÊ VENCEU COM A CAMISA DA SELEÇÃO, QUE ORGULHO!": [
 "lang-pt.js"
 ],
@@ -417821,6 +425014,285 @@
 "lang-pt.js"
 ],
 "TÁ BOM, PAI.": [
+"lang-pt.js"
+],
+"RELÓGIO DE PULSO": [
+"lang-pt.js"
+],
+"TÊNIS": [
+"lang-pt.js"
+],
+"ÓCULOS DE SOL": [
+"lang-pt.js"
+],
+"FONE DE OUVIDO": [
+"lang-pt.js"
+],
+"NOTEBOOK": [
+"lang-pt.js"
+],
+"JAQUETA": [
+"lang-pt.js"
+],
+"MOLETOM COM CAPUZ": [
+"lang-pt.js"
+],
+"BONÉ": [
+"lang-pt.js"
+],
+"SAPATO SOCIAL": [
+"lang-pt.js"
+],
+"ANEL": [
+"lang-pt.js"
+],
+"COLAR": [
+"lang-pt.js"
+],
+"CANETA-TINTEIRO": [
+"lang-pt.js"
+],
+"CARTEIRA": [
+"lang-pt.js"
+],
+"MALA": [
+"lang-pt.js"
+],
+"CONSOLE DE VIDEOGAME": [
+"lang-pt.js"
+],
+"CAIXA DE SOM": [
+"lang-pt.js"
+],
+"JOGO DE XADREZ": [
+"lang-pt.js"
+],
+"CAFETEIRA": [
+"lang-pt.js"
+],
+"CADEIRA GAMER": [
+"lang-pt.js"
+],
+"CARRINHO DE CONTROLE REMOTO": [
+"lang-pt.js"
+],
+"URSINHO DE PELÚCIA": [
+"lang-pt.js"
+],
+"ROUPAS": [
+"lang-pt.js"
+],
+"CALÇADOS": [
+"lang-pt.js"
+],
+"ACESSÓRIOS": [
+"lang-pt.js"
+],
+"JOIAS": [
+"lang-pt.js"
+],
+"ELETRÔNICOS": [
+"lang-pt.js"
+],
+"BELEZA": [
+"lang-pt.js"
+],
+"CASA E DECORAÇÃO": [
+"lang-pt.js"
+],
+"HOBBIES E ESPORTE": [
+"lang-pt.js"
+],
+"BRANCO": [
+"lang-pt.js"
+],
+"AZUL-MARINHO": [
+"lang-pt.js"
+],
+"BEGE": [
+"lang-pt.js"
+],
+"CARAMELO": [
+"lang-pt.js"
+],
+"CÁQUI": [
+"lang-pt.js"
+],
+"CINZA": [
+"lang-pt.js"
+],
+"BORDÔ": [
+"lang-pt.js"
+],
+"LARANJA": [
+"lang-pt.js"
+],
+"ROXO": [
+"lang-pt.js"
+],
+"GRAFITE": [
+"lang-pt.js"
+],
+"HATCH": [
+"lang-pt.js"
+],
+"SEDÃ": [
+"lang-pt.js"
+],
+"CUPÊ": [
+"lang-pt.js"
+],
+"SUPERESPORTIVO": [
+"lang-pt.js"
+],
+"CONVERSÍVEL": [
+"lang-pt.js"
+],
+"PICAPE": [
+"lang-pt.js"
+],
+"APARTAMENTO": [
+"lang-pt.js"
+],
+"CASA DE PRAIA": [
+"lang-pt.js"
+],
+"CHALÉ NA MONTANHA": [
+"lang-pt.js"
+],
+"MANSÃO MODERNA": [
+"lang-pt.js"
+],
+"COBERTURA": [
+"lang-pt.js"
+],
+"MANSÃO": [
+"lang-pt.js"
+],
+"ILHA PARTICULAR": [
+"lang-pt.js"
+],
+"ALPES": [
+"lang-pt.js"
+],
+"CAPADÓCIA": [
+"lang-pt.js"
+],
+"NOVA YORK": [
+"lang-pt.js"
+],
+"CARIBE": [
+"lang-pt.js"
+],
+"ORLA": [
+"lang-pt.js"
+],
+"PERTO DO PARQUE": [
+"lang-pt.js"
+],
+"COM JARDIM": [
+"lang-pt.js"
+],
+"VOCÊ AINDA NÃO TEM IDADE PARA ESTE ITEM.": [
+"lang-pt.js"
+],
+"A ESCRITURA ESTÁ PRONTA, APROVEITE A CASA NOVA!": [
+"lang-pt.js"
+],
+"SEU CARRO FOI ENTREGUE, BOA VIAGEM!": [
+"lang-pt.js"
+],
+"SEU PEDIDO ESTÁ A CAMINHO!": [
+"lang-pt.js"
+],
+"AMANHÃ NA SUA PORTA": [
+"lang-pt.js"
+],
+"NENHUM ITEM ENCONTRADO.": [
+"lang-pt.js"
+],
+"VER TUDO ›": [
+"lang-pt.js"
+],
+"MEU ARMÁRIO": [
+"lang-pt.js"
+],
+"ITENS": [
+"lang-pt.js"
+],
+"OFERTAS DO DIA": [
+"lang-pt.js"
+],
+"CABE NO SEU BOLSO": [
+"lang-pt.js"
+],
+"CASA E HOBBIES": [
+"lang-pt.js"
+],
+"PREÇO: MENOR PARA MAIOR": [
+"lang-pt.js"
+],
+"PREÇO: MAIOR PARA MENOR": [
+"lang-pt.js"
+],
+"REFINE A BUSCA PARA VER MAIS.": [
+"lang-pt.js"
+],
+"NO SEU ARMÁRIO": [
+"lang-pt.js"
+],
+"LIBERA NESSA IDADE": [
+"lang-pt.js"
+],
+"COMPRAR AGORA": [
+"lang-pt.js"
+],
+"SEM EFEITO NA FAMA": [
+"lang-pt.js"
+],
+"ITENS PREMIUM DÃO UM POUCO DE FAMA.": [
+"lang-pt.js"
+],
+"USO DIÁRIO: DÁ MORAL.": [
+"lang-pt.js"
+],
+"ENTREGA EXCLUSIVA DA BUTIQUE": [
+"lang-pt.js"
+],
+"FRETE GRÁTIS · AMANHÃ NA SUA PORTA": [
+"lang-pt.js"
+],
+"DESTA MARCA": [
+"lang-pt.js"
+],
+"AVALIAÇÕES": [
+"lang-pt.js"
+],
+"TOTAL GASTO": [
+"lang-pt.js"
+],
+"CONCESSIONÁRIA": [
+"lang-pt.js"
+],
+"NOVOS ANÚNCIOS": [
+"lang-pt.js"
+],
+"NOVA COLEÇÃO": [
+"lang-pt.js"
+],
+"TODOS OS ITENS": [
+"lang-pt.js"
+],
+"PORTFÓLIO EXCLUSIVO": [
+"lang-pt.js"
+],
+"CLÁSSICOS DA GARAGEM": [
+"lang-pt.js"
+],
+"BUSQUE MARCA, ITEM OU COR": [
+"lang-pt.js"
+],
+"COLEÇÃO": [
 "lang-pt.js"
 ],
 "— NOS CLASSIFICAMOS!": [
@@ -418696,9 +426168,6 @@
 "CAMUFLADO VERDE-CÁQUI": [
 "lang-pt.js"
 ],
-"ANEL": [
-"lang-pt.js"
-],
 "TIRAR UMA FOTO DE LEMBRANÇA": [
 "lang-pt.js"
 ],
@@ -419264,9 +426733,6 @@
 "lang-pt.js"
 ],
 "JOGAR": [
-"lang-pt.js"
-],
-"VIDEOGAME": [
 "lang-pt.js"
 ],
 "VOCÊ VAI ENTRAR! O TÉCNICO CONFIA EM VOCÊ.": [
@@ -419992,9 +427458,6 @@
 "ESTRELAS DA ÉPOCA": [
 "lang-pt.js"
 ],
-"ITENS": [
-"lang-pt.js"
-],
 "SEUS JOGOS": [
 "lang-pt.js"
 ],
@@ -420254,9 +427717,6 @@
 "lang-pt.js"
 ],
 "PRIMEIRO A ESCOLA E O FUTEBOL!": [
-"lang-pt.js"
-],
-"ILHA PARTICULAR": [
 "lang-pt.js"
 ],
 "GOLS ESPECIAIS": [
@@ -422905,6 +430365,9 @@
 "🟥 {} foi expulso. Você está com 10.": [
 "lang-pt.js"
 ],
+"Peguei as chaves da minha casa nova. {0}!": [
+"lang-pt.js"
+],
 "Você tem mais {} ações esta semana.": [
 "lang-pt.js"
 ],
@@ -423970,6 +431433,9 @@
 "Um dia lindo com {0}.": [
 "lang-pt.js"
 ],
+"Minha nova peça da {0} chegou.": [
+"lang-pt.js"
+],
 "/semana · faltam {} anos": [
 "lang-pt.js"
 ],
@@ -424391,6 +431857,9 @@
 "lang-pt.js"
 ],
 "{0} patrocinadores ativos": [
+"lang-pt.js"
+],
+"Carro novo: {0} {1}.": [
 "lang-pt.js"
 ],
 "{} Plano semanal": [
@@ -426497,6 +433966,706 @@
 "LZString": [
 "lz-string.min.js"
 ],
+"Premium": [
+"mall.js",
+"phone.js",
+"star.js"
+],
+"Meridian": [
+"mall.js"
+],
+"Chrono": [
+"mall.js"
+],
+"Aqua": [
+"mall.js"
+],
+"Heritage": [
+"mall.js"
+],
+"Polaris": [
+"mall.js"
+],
+"Equinox": [
+"mall.js"
+],
+"Street": [
+"mall.js"
+],
+"Glide": [
+"mall.js"
+],
+"Retro 88": [
+"mall.js"
+],
+"Tote": [
+"mall.js"
+],
+"Flap": [
+"mall.js"
+],
+"Bucket": [
+"mall.js"
+],
+"Shopper": [
+"mall.js"
+],
+"Saddle": [
+"mall.js"
+],
+"Mini": [
+"mall.js"
+],
+"Pilot": [
+"mall.js"
+],
+"Round": [
+"mall.js"
+],
+"Shield": [
+"mall.js"
+],
+"Cat-Eye": [
+"mall.js"
+],
+"Sport": [
+"mall.js"
+],
+"Studio": [
+"mall.js"
+],
+"Pulse": [
+"mall.js"
+],
+"Noise Zero": [
+"mall.js"
+],
+"Tour": [
+"mall.js"
+],
+"Bass": [
+"mall.js"
+],
+"Pro": [
+"mall.js"
+],
+"Book 13": [
+"mall.js"
+],
+"Slim 14": [
+"mall.js"
+],
+"Creator 16": [
+"mall.js"
+],
+"Ultra 15": [
+"mall.js"
+],
+"Neo 14": [
+"mall.js"
+],
+"Gamer X": [
+"mall.js"
+],
+"Oud Noir": [
+"mall.js"
+],
+"Blue Hour": [
+"mall.js"
+],
+"Amber": [
+"mall.js"
+],
+"Citrus": [
+"mall.js"
+],
+"Velvet Rose": [
+"mall.js"
+],
+"Cedar": [
+"mall.js"
+],
+"Puffer": [
+"mall.js"
+],
+"Blazer": [
+"mall.js"
+],
+"Alpine": [
+"mall.js"
+],
+"Flight": [
+"mall.js"
+],
+"Tailored": [
+"mall.js"
+],
+"Slim": [
+"mall.js"
+],
+"Gala": [
+"mall.js"
+],
+"Tuxedo": [
+"mall.js"
+],
+"Essential": [
+"mall.js"
+],
+"Oversize": [
+"mall.js"
+],
+"Tech": [
+"mall.js"
+],
+"College": [
+"mall.js"
+],
+"Zip": [
+"mall.js"
+],
+"Logo": [
+"mall.js"
+],
+"Trucker": [
+"mall.js"
+],
+"Snapback": [
+"mall.js"
+],
+"Wool": [
+"mall.js"
+],
+"Oxford": [
+"mall.js"
+],
+"Loafer": [
+"mall.js"
+],
+"Derby": [
+"mall.js"
+],
+"Brogue": [
+"mall.js"
+],
+"Monk": [
+"mall.js"
+],
+"Chelsea": [
+"mall.js"
+],
+"Solitaire": [
+"mall.js"
+],
+"Halo": [
+"mall.js"
+],
+"Eternity": [
+"mall.js"
+],
+"Signet": [
+"mall.js"
+],
+"Vintage": [
+"mall.js"
+],
+"Royal": [
+"mall.js"
+],
+"Drop": [
+"mall.js"
+],
+"Pendant": [
+"mall.js"
+],
+"Riviera": [
+"mall.js"
+],
+"Lumière": [
+"mall.js"
+],
+"Signature": [
+"mall.js"
+],
+"Executive": [
+"mall.js"
+],
+"Bifold": [
+"mall.js"
+],
+"Card": [
+"mall.js"
+],
+"Travel": [
+"mall.js"
+],
+"Daypack": [
+"mall.js"
+],
+"Urban": [
+"mall.js"
+],
+"Trek": [
+"mall.js"
+],
+"Campus": [
+"mall.js"
+],
+"City": [
+"mall.js"
+],
+"Roll-top": [
+"mall.js"
+],
+"Cabin": [
+"mall.js"
+],
+"Check-in": [
+"mall.js"
+],
+"Trunk": [
+"mall.js"
+],
+"Voyager": [
+"mall.js"
+],
+"Globe": [
+"mall.js"
+],
+"Aero": [
+"mall.js"
+],
+"85\" OLED": [
+"mall.js"
+],
+"Frame": [
+"mall.js"
+],
+"Cinema": [
+"mall.js"
+],
+"Elite": [
+"mall.js"
+],
+"Edition": [
+"mall.js"
+],
+"Alpha": [
+"mall.js"
+],
+"Classic M": [
+"mall.js"
+],
+"Vlog": [
+"mall.js"
+],
+"Pro X": [
+"mall.js"
+],
+"Air": [
+"mall.js"
+],
+"Cine": [
+"mall.js"
+],
+"FPV": [
+"mall.js"
+],
+"Explorer": [
+"mall.js"
+],
+"Tab 10": [
+"mall.js"
+],
+"Tab 11": [
+"mall.js"
+],
+"Pro 12": [
+"mall.js"
+],
+"Active": [
+"mall.js"
+],
+"Ultra": [
+"mall.js"
+],
+"Boom": [
+"mall.js"
+],
+"Party": [
+"mall.js"
+],
+"Tower": [
+"mall.js"
+],
+"Road": [
+"mall.js"
+],
+"Gravel": [
+"mall.js"
+],
+"Carbon": [
+"mall.js"
+],
+"Acoustic": [
+"mall.js"
+],
+"Electric": [
+"mall.js"
+],
+"Jumbo": [
+"mall.js"
+],
+"Custom": [
+"mall.js"
+],
+"Tournament": [
+"mall.js"
+],
+"Walnut": [
+"mall.js"
+],
+"Marble": [
+"mall.js"
+],
+"Chester": [
+"mall.js"
+],
+"Nordic": [
+"mall.js"
+],
+"Lounge": [
+"mall.js"
+],
+"Modular": [
+"mall.js"
+],
+"Velvet": [
+"mall.js"
+],
+"Abstract": [
+"mall.js"
+],
+"Landscape": [
+"mall.js"
+],
+"Horizon": [
+"mall.js"
+],
+"Color Field": [
+"mall.js"
+],
+"Arc": [
+"mall.js"
+],
+"Bell": [
+"mall.js"
+],
+"Deco": [
+"mall.js"
+],
+"Atelier": [
+"mall.js"
+],
+"Glow": [
+"mall.js"
+],
+"Barista": [
+"mall.js"
+],
+"Espresso": [
+"mall.js"
+],
+"Duo": [
+"mall.js"
+],
+"Bar": [
+"mall.js"
+],
+"Café": [
+"mall.js"
+],
+"Racer": [
+"mall.js"
+],
+"Titan": [
+"mall.js",
+"phone.js"
+],
+"Ergo": [
+"mall.js"
+],
+"Stream": [
+"mall.js"
+],
+"Rally": [
+"mall.js"
+],
+"Monster": [
+"mall.js"
+],
+"Drift": [
+"mall.js"
+],
+"Turbo": [
+"mall.js"
+],
+"Speed": [
+"mall.js"
+],
+"Cuddle": [
+"mall.js"
+],
+"Teddy": [
+"mall.js"
+],
+"Kumo": [
+"mall.js"
+],
+"Basico": [
+"mall.js"
+],
+"Trendo": [
+"mall.js"
+],
+"Pratik": [
+"mall.js"
+],
+"Nordline": [
+"mall.js"
+],
+"Urbanika": [
+"mall.js"
+],
+"Pulsar": [
+"mall.js"
+],
+"Tempora": [
+"mall.js"
+],
+"Ardent Studio": [
+"mall.js"
+],
+"Vektor": [
+"mall.js"
+],
+"Halden & Co": [
+"mall.js"
+],
+"Lumen Paris": [
+"mall.js"
+],
+"Marchetti": [
+"mall.js"
+],
+"Valmonte": [
+"mall.js"
+],
+"Maison Ardelle": [
+"mall.js"
+],
+"MA": [
+"mall.js"
+],
+"Aurelio Castelli": [
+"mall.js"
+],
+"AC": [
+"mall.js"
+],
+"Kronberg": [
+"mall.js"
+],
+"Solenne": [
+"mall.js"
+],
+"Yuva Home": [
+"mall.js"
+],
+"Minik": [
+"mall.js"
+],
+"Casalino": [
+"mall.js"
+],
+"Ritmo": [
+"mall.js"
+],
+"Oyunbaz": [
+"mall.js"
+],
+"Velocita": [
+"mall.js"
+],
+"Nordhaus": [
+"mall.js"
+],
+"Orion Optics": [
+"mall.js"
+],
+"Lumo Kids": [
+"mall.js"
+],
+"Bellacourt": [
+"mall.js"
+],
+"Domus Aurea": [
+"mall.js"
+],
+"DA": [
+"mall.js",
+"match.js"
+],
+"Aeronyx": [
+"mall.js"
+],
+"Neo": [
+"mall.js"
+],
+"Cross": [
+"mall.js"
+],
+"Work": [
+"mall.js"
+],
+"Kestrel Motors": [
+"mall.js"
+],
+"Terra": [
+"mall.js"
+],
+"Ranger": [
+"mall.js"
+],
+"Uno": [
+"mall.js"
+],
+"Spyder": [
+"mall.js"
+],
+"Brennar": [
+"mall.js"
+],
+"Roadster": [
+"mall.js"
+],
+"Halcyon": [
+"mall.js"
+],
+"Electra": [
+"mall.js"
+],
+"Volt": [
+"mall.js"
+],
+"Apex": [
+"mall.js"
+],
+"Sterlingham": [
+"mall.js"
+],
+"Regent": [
+"mall.js"
+],
+"Monarch": [
+"mall.js"
+],
+"Belvedere": [
+"mall.js"
+],
+"Ascot": [
+"mall.js"
+],
+"Vallardi": [
+"mall.js"
+],
+"Furia": [
+"mall.js"
+],
+"Aperta": [
+"mall.js"
+],
+"GT Lusso": [
+"mall.js"
+],
+"Orsini Classic": [
+"mall.js"
+],
+"Spider 58": [
+"mall.js"
+],
+"Berlinetta": [
+"mall.js"
+],
+"Madrid": [
+"mall.js",
+"socialart.js"
+],
+"Amsterdam": [
+"mall.js",
+"socialart.js"
+],
+"Rio de Janeiro": [
+"mall.js",
+"socialart.js"
+],
+"Paris": [
+"mall.js",
+"socialart.js"
+],
+"home|{}|{}|{}|{}": [
+"mall.js"
+],
+"Monako": [
+"mall.js"
+],
+"{}|deal|{}": [
+"mall.js"
+],
+"· Ün +{}": [
+"mall.js"
+],
+"Moral +{}{}": [
+"mall.js"
+],
+"Tapun hazır, yeni evin hayırlı olsun! {}": [
+"mall.js"
+],
+"Araban teslim edildi, iyi yolculuklar! {}": [
+"mall.js"
+],
+"Siparişin yolda! {}": [
+"mall.js"
+],
+"en-US": [
+"mall.js",
+"util.js"
+],
+"{} Aynı hafta çok alışveriş yapınca etkisi azalır.": [
+"mall.js"
+],
+"Enter": [
+"mall.js",
+"minigame.js"
+],
+"fx=\"{}\" fy=\"{}\"": [
+"mallart.js"
+],
+"fill=\"none\"/>": [
+"mallart.js"
+],
+"skyY": [
+"mallart.js"
+],
+"skyJ": [
+"mallart.js"
+],
+"skyH": [
+"mallart.js"
+],
+"data:image/svg+xml;charset=utf-8,": [
+"mallart.js"
+],
 "whistleLong": [
 "match.js",
 "sfx.js"
@@ -426508,9 +434677,6 @@
 "match.js"
 ],
 "{} {} · Tekrar dene": [
-"match.js"
-],
-"DA": [
 "match.js"
 ],
 "SON DAKİKALAR! Skoru değiştirecek son şans {}'de...": [
@@ -426646,9 +434812,6 @@
 "minigame.js"
 ],
 "700 {}px \"Barlow Semi Condensed\", sans-serif": [
-"minigame.js"
-],
-"Enter": [
 "minigame.js"
 ],
 "ArrowLeft": [
@@ -441276,9 +449439,6 @@
 "linear-gradient(180deg, #ff8a5b 0%, #c2416b 42%, #3a1f5d 75%, #120b2a 100%)": [
 "phone.js"
 ],
-"Titan": [
-"phone.js"
-],
 "radial-gradient(90% 60% at 30% 20%, #6a7385, transparent 60%), linear-gradient(160deg, #23272f, #0d0f14)": [
 "phone.js"
 ],
@@ -441427,10 +449587,6 @@
 "Diamond\\'u incele": [
 "phone.js"
 ],
-"Premium": [
-"phone.js",
-"star.js"
-],
 "{} MP": [
 "phone.js"
 ],
@@ -441566,18 +449722,6 @@
 ],
 "snd/menu.mp3": [
 "sfx.js"
-],
-"Madrid": [
-"socialart.js"
-],
-"Paris": [
-"socialart.js"
-],
-"Amsterdam": [
-"socialart.js"
-],
-"Rio de Janeiro": [
-"socialart.js"
 ],
 "Buenos Aires": [
 "socialart.js"
@@ -441763,9 +449907,6 @@
 "util.js"
 ],
 "EL": [
-"util.js"
-],
-"en-US": [
 "util.js"
 ],
 "&amp;": [
@@ -442269,9 +450410,6 @@
 "wc.js"
 ],
 "Cheikhou Camara": [
-"wc.js"
-],
-"TAN": [
 "wc.js"
 ],
 "EA": [
@@ -443058,9 +451196,6 @@
 "wc.js"
 ],
 "Lok": [
-"wc.js"
-],
-"Tan": [
 "wc.js"
 ],
 "Yusof": [
@@ -444063,9 +452198,6 @@
 "wc.js"
 ],
 "Lee": [
-"wc.js"
-],
-"Park": [
 "wc.js"
 ],
 "Hwang": [

@@ -2460,3 +2460,136 @@
 9443|Malam ini Ayah pulang telat, besok janji
 9444|Oke, Ayah.
 9180|Kalau terburu-buru, kamu akan absen lebih lama.
+9451|Jam tangan
+9452|Sepatu kets
+9453|Kacamata hitam
+9454|Headphone
+9455|Laptop
+9456|Parfum
+9457|Jaket
+9458|Hoodie
+9459|Topi
+9460|Sepatu formal
+9461|Kalung
+9462|Pena tinta
+9463|Dompet
+9464|Ransel
+9465|Koper
+9466|Televisi
+9467|Konsol game
+9468|Drone
+9469|Tablet
+9470|Jam pintar
+9471|Speaker
+9472|Set catur
+9473|Sofa
+9474|Lukisan
+9475|Lampu
+9476|Mesin kopi
+9477|Kursi gaming
+9478|Mobil remote control
+9479|Boneka beruang
+9480|Pakaian
+9481|Sepatu
+9482|Aksesori
+9483|Perhiasan
+9484|Elektronik
+9485|Kecantikan
+9486|Rumah & dekorasi
+9487|Hobi & olahraga
+9488|Putih
+9489|Biru dongker
+9490|Krem tua
+9491|Cokelat muda
+9492|Khaki
+9493|Abu-abu
+9494|Merah marun
+9495|Biru
+9496|Merah muda
+9497|Hijau
+9498|Krem
+9499|Oranye
+9500|Ungu
+9501|Antrasit
+9502|Hatchback
+9503|Sedan
+9504|SUV
+9505|Coupe
+9506|Mobil super
+9507|Kabriolet
+9508|Pikap
+9509|Apartemen
+9510|Loft
+9511|Rumah pantai
+9512|Pondok gunung
+9513|Vila modern
+9514|Penthouse
+9515|Rumah besar
+9516|Pulau pribadi
+9517|Bodrum
+9518|Pegunungan Alpen
+9519|Kapadokia
+9520|Aspen
+9521|Dubai
+9522|Marbella
+9523|Los Angeles
+9524|New York
+9525|Karibia
+9526|Tepi pantai
+9527|Bukit
+9528|Marina
+9529|Dekat taman
+9530|Dengan taman
+9531|Usiamu belum cukup untuk barang ini.
+9532|Kamu perlu SIM untuk mengemudi. Ujiannya 3 soal.
+9585|Mobil baru: {0} {1}.
+9583|Kunci rumah baruku sudah di tangan. {0}!
+9584|Barang baruku dari {0} sudah tiba.
+9534|Sertifikat siap, selamat menikmati rumah baru!
+9535|Mobilmu sudah diantar, selamat jalan!
+9536|Pesananmu sedang dikirim!
+9537|Pengiriman eksklusif
+9538|Besok sampai
+9539|Tidak ada barang yang cocok.
+9540|Lihat semua ›
+9541|Lemariku
+9542|barang
+9543|Promo hari ini
+9544|Sesuai anggaranmu
+9545|Merek
+9546|Outlet
+9547|Koleksi musim lalu diskon hingga 35%
+9548|Rumah dan hobi
+9549|Rekomendasi
+9550|Harga: termurah
+9551|Harga: termahal
+9552|Persempit pencarian untuk melihat lebih banyak.
+9553|Di lemarimu
+9554|terbuka di usia itu
+9555|Saldo tidak cukup
+9556|Konfirmasi
+9557|Beli sekarang
+9558|Tanpa efek ketenaran
+9559|Merek mewah memberi lebih banyak moral dan sedikit ketenaran.
+9560|Barang premium memberi sedikit ketenaran.
+9561|Pemakaian sehari-hari: memberi moral.
+9562|Efeknya berkurang jika belanja banyak di minggu yang sama.
+9563|Pengiriman eksklusif dari butik
+9564|Gratis ongkir · besok sampai
+9565|Dari merek ini
+9566|ulasan
+9567|Kamu belum membeli apa pun. Lihat promonya!
+9570|Total belanja
+9571|Di garasimu
+9572|Pilih tingkat untuk melihat semua model.
+9573|Showroom
+9574|Iklan baru
+9575|Koleksi baru
+9576|Semua barang
+9577|Portofolio eksklusif
+9578|Koleksi garasi
+9579|BARU
+9580|Cari merek, barang, atau warna
+9581|koleksi
+9582|Etalase
+9586|Hemat

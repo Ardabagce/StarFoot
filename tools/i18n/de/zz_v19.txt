@@ -2460,3 +2460,136 @@
 9443|Heute komme ich spät, morgen versprochen
 9444|Okay, Papa.
 9180|Wenn du es überstürzt, fällst du länger aus.
+9451|Armbanduhr
+9452|Sneaker
+9453|Sonnenbrille
+9454|Kopfhörer
+9455|Laptop
+9456|Parfum
+9457|Jacke
+9458|Hoodie
+9459|Kappe
+9460|Business-Schuhe
+9461|Halskette
+9462|Füllfederhalter
+9463|Geldbörse
+9464|Rucksack
+9465|Koffer
+9466|Fernseher
+9467|Spielkonsole
+9468|Drohne
+9469|Tablet
+9470|Smartwatch
+9471|Lautsprecher
+9472|Schachspiel
+9473|Sofa
+9474|Gemälde
+9475|Lampe
+9476|Kaffeemaschine
+9477|Gaming-Stuhl
+9478|Ferngesteuertes Auto
+9479|Teddybär
+9480|Kleidung
+9481|Schuhe
+9482|Accessoires
+9483|Schmuck
+9484|Elektronik
+9485|Kosmetik
+9486|Wohnen & Deko
+9487|Hobby & Sport
+9488|Weiß
+9489|Marineblau
+9490|Beige
+9491|Cognac
+9492|Khaki
+9493|Grau
+9494|Bordeaux
+9495|Blau
+9496|Rosa
+9497|Grün
+9498|Creme
+9499|Orange
+9500|Lila
+9501|Anthrazit
+9502|Kompaktwagen
+9503|Limousine
+9504|SUV
+9505|Coupé
+9506|Supersportwagen
+9507|Cabrio
+9508|Pick-up
+9509|Wohnung
+9510|Loft
+9511|Strandhaus
+9512|Berghütte
+9513|Moderne Villa
+9514|Penthouse
+9515|Herrenhaus
+9516|Privatinsel
+9517|Bodrum
+9518|Alpen
+9519|Kappadokien
+9520|Aspen
+9521|Dubai
+9522|Marbella
+9523|Los Angeles
+9524|New York
+9525|Karibik
+9526|Strandpromenade
+9527|Hanglage
+9528|Jachthafen
+9529|Am Park
+9530|Mit Garten
+9531|Für diesen Artikel bist du noch nicht alt genug.
+9532|Zum Autofahren brauchst du einen Führerschein. Die Prüfung hat 3 Fragen.
+9585|Neues Auto: {0} {1}.
+9583|Die Schlüssel für mein neues Zuhause sind da. {0}!
+9584|Mein neues Teil von {0} ist da.
+9534|Die Urkunde ist fertig, viel Freude im neuen Zuhause!
+9535|Dein Auto ist da, gute Fahrt!
+9536|Deine Bestellung ist unterwegs!
+9537|Exklusive Lieferung
+9538|Morgen bei dir
+9539|Keine passenden Artikel gefunden.
+9540|Alle ansehen ›
+9541|Mein Schrank
+9542|Artikel
+9543|Angebote des Tages
+9544|Passend zu deinem Budget
+9545|Marken
+9546|Outlet
+9547|Kollektion der letzten Saison bis zu 35 % günstiger
+9548|Wohnen und Hobby
+9549|Empfohlen
+9550|Preis: aufsteigend
+9551|Preis: absteigend
+9552|Grenze die Suche ein, um mehr zu sehen.
+9553|In deinem Schrank
+9554|ab diesem Alter
+9555|Guthaben reicht nicht
+9556|Bestätigen
+9557|Jetzt kaufen
+9558|Kein Ruhmeffekt
+9559|Luxusmarken geben mehr Moral und etwas Ruhm.
+9560|Premiumartikel geben etwas Ruhm.
+9561|Alltagsartikel: gibt Moral.
+9562|Wer in einer Woche viel kauft, bekommt weniger Wirkung.
+9563|Exklusive Lieferung aus der Boutique
+9564|Kostenloser Versand · morgen bei dir
+9565|Von dieser Marke
+9566|Bewertungen
+9567|Du hast noch nichts gekauft. Schau dir die Angebote an!
+9570|Ausgaben gesamt
+9571|In deiner Garage
+9572|Wähle eine Stufe, um alle Modelle zu sehen.
+9573|Showroom
+9574|Neue Angebote
+9575|Neue Kollektion
+9576|Alle Artikel
+9577|Exklusives Portfolio
+9578|Garagenklassiker
+9579|NEU
+9580|Marke, Artikel oder Farbe suchen
+9581|Kollektion
+9582|Schaufenster
+9586|Günstig

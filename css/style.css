@@ -4007,3 +4007,16 @@ html.ph-open #toasts { top: auto; bottom: calc(80px + env(safe-area-inset-bottom
 .vt-stats span { font: 500 11.5px var(--body); color: #6b6f7d; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .vt-stats b { font: 800 16px var(--body); color: #151a26; }
 .vt-legacy .sh-sec { background: #0b1430; border-radius: 14px; padding: 8px; }
+/* araç ve ev görselleri (Vitrin stili) */
+.vt-car, .vt-home { display: block; width: 100%; height: 100%; object-fit: cover; }
+.ph-car .stage .vt-car { position: absolute; inset: 0; object-position: 50% 74%; }
+.ph-car .stage .vt-car.k-moto { object-position: 50% 62%; }
+.ph-car .stage .vt-car.k-scooter, .ph-car .stage .vt-car.k-bike { object-fit: contain; background: #15171b; }
+.ph-listing .pic:has(.vt-home) { aspect-ratio: 4 / 3; }
+.ph-listing .pic .vt-home { position: absolute; inset: 0; object-position: 50% 85%; }
+.ph-car .gar.new { background: #5b2bbf; color: #fff; }
+.vt-cs { display: block; color: #8fa0cc; font: 500 12.5px var(--body); margin: -4px 0 6px; }
+.vt-sort.dark button { background: rgba(255, 255, 255, .06); border-color: rgba(255, 255, 255, .14); color: #dfe6ff; }
+.vt-sort.dark button.on { background: #ffcf3f; border-color: #ffcf3f; color: #1b1240; }
+.ph-buy.conf { background: #1f9d5c !important; color: #fff !important; }
+.ph-buy.lock, .ph-buy.own { opacity: .85; }

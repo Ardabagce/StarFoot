@@ -2460,3 +2460,136 @@
 9443|Hoje vou chegar tarde, amanhã prometo
 9444|Tá bom, pai.
 9180|Se apressar, vai ficar mais tempo fora.
+9451|Relógio de pulso
+9452|Tênis
+9453|Óculos de sol
+9454|Fone de ouvido
+9455|Notebook
+9456|Perfume
+9457|Jaqueta
+9458|Moletom com capuz
+9459|Boné
+9460|Sapato social
+9461|Colar
+9462|Caneta-tinteiro
+9463|Carteira
+9464|Mochila
+9465|Mala
+9466|TV
+9467|Console de videogame
+9468|Drone
+9469|Tablet
+9470|Smartwatch
+9471|Caixa de som
+9472|Jogo de xadrez
+9473|Sofá
+9474|Quadro
+9475|Abajur
+9476|Cafeteira
+9477|Cadeira gamer
+9478|Carrinho de controle remoto
+9479|Ursinho de pelúcia
+9480|Roupas
+9481|Calçados
+9482|Acessórios
+9483|Joias
+9484|Eletrônicos
+9485|Beleza
+9486|Casa e decoração
+9487|Hobbies e esporte
+9488|Branco
+9489|Azul-marinho
+9490|Bege
+9491|Caramelo
+9492|Cáqui
+9493|Cinza
+9494|Bordô
+9495|Azul
+9496|Rosa
+9497|Verde
+9498|Creme
+9499|Laranja
+9500|Roxo
+9501|Grafite
+9502|Hatch
+9503|Sedã
+9504|SUV
+9505|Cupê
+9506|Superesportivo
+9507|Conversível
+9508|Picape
+9509|Apartamento
+9510|Loft
+9511|Casa de praia
+9512|Chalé na montanha
+9513|Mansão moderna
+9514|Cobertura
+9515|Mansão
+9516|Ilha particular
+9517|Bodrum
+9518|Alpes
+9519|Capadócia
+9520|Aspen
+9521|Dubai
+9522|Marbella
+9523|Los Angeles
+9524|Nova York
+9525|Caribe
+9526|Orla
+9527|Colina
+9528|Marina
+9529|Perto do parque
+9530|Com jardim
+9531|Você ainda não tem idade para este item.
+9532|Você precisa de carteira para dirigir. A prova tem 3 perguntas.
+9585|Carro novo: {0} {1}.
+9583|Peguei as chaves da minha casa nova. {0}!
+9584|Minha nova peça da {0} chegou.
+9534|A escritura está pronta, aproveite a casa nova!
+9535|Seu carro foi entregue, boa viagem!
+9536|Seu pedido está a caminho!
+9537|Entrega exclusiva
+9538|Amanhã na sua porta
+9539|Nenhum item encontrado.
+9540|Ver tudo ›
+9541|Meu armário
+9542|itens
+9543|Ofertas do dia
+9544|Cabe no seu bolso
+9545|Marcas
+9546|Outlet
+9547|Coleção da temporada passada com até 35% de desconto
+9548|Casa e hobbies
+9549|Recomendado
+9550|Preço: menor para maior
+9551|Preço: maior para menor
+9552|Refine a busca para ver mais.
+9553|No seu armário
+9554|libera nessa idade
+9555|Saldo insuficiente
+9556|Confirmar
+9557|Comprar agora
+9558|Sem efeito na fama
+9559|Marcas de luxo dão mais moral e um pouco de fama.
+9560|Itens premium dão um pouco de fama.
+9561|Uso diário: dá moral.
+9562|O efeito diminui se você comprar muito na mesma semana.
+9563|Entrega exclusiva da butique
+9564|Frete grátis · amanhã na sua porta
+9565|Desta marca
+9566|avaliações
+9567|Você ainda não comprou nada. Confira as ofertas!
+9570|Total gasto
+9571|Na sua garagem
+9572|Escolha uma faixa para ver todos os modelos.
+9573|Concessionária
+9574|Novos anúncios
+9575|Nova coleção
+9576|Todos os itens
+9577|Portfólio exclusivo
+9578|Clássicos da garagem
+9579|NOVO
+9580|Busque marca, item ou cor
+9581|coleção
+9582|Vitrine
+9586|Econômico

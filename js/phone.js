@@ -556,7 +556,11 @@
   }
 
   // ---------------- çizimler ----------------
+  // 1.0.25: görseller Vitrin stilinde (MallArt) çizilir
+  const HV = { flat: 0, penthouse: 1, villa: 2, island: 6 }, CV = { hatch: 0, suv: 2, sport: 4, classic: 5 };
+  const ARTI = (o) => `<img class="vt-${o.t === 'house' ? 'home' : 'car'} k-${o.t}" alt="" loading="lazy" src="${MallArt.url(o)}">`;
   function houseSvg(kind) {
+    if (typeof MallArt !== 'undefined') return ARTI({ t: 'house', v: HV[kind] != null ? HV[kind] : 0, c: kind === 'flat' ? '#d9cdb9' : '#efe4cf', c2: '#2e3a4a' });
     const sky = { flat: ['#9ec9ff', '#e8f3ff'], penthouse: ['#0d1b3d', '#36507f'], villa: ['#ffb36b', '#ffe3b5'], island: ['#5ec8ff', '#d6f3ff'] }[kind] || ['#9ec9ff', '#e8f3ff'];
     const win = (x, y, w, h, n, m, lit) => { let s = ''; for (let i = 0; i < n; i++) for (let j = 0; j < m; j++) s += `<rect x="${x + i * (w + 6)}" y="${y + j * (h + 8)}" width="${w}" height="${h}" rx="1.5" fill="${lit && (i + j) % 3 ? '#ffd76a' : '#bcd7f0'}"/>`; return s; };
     const B = {
@@ -570,10 +574,12 @@
   const HOUSE_KIND = { penthouse: 'penthouse', life5: 'villa', island: 'island' };
   const CAR_KIND = { hatch: 'hatch', suv: 'suv', life4: 'sport', classic: 'classic' };
   const CAR_COL = { hatch: '#e8e8ec', suv: '#2b2f3a', sport: '#ffcf3f', classic: '#9b1c1c' };
+  const ART2 = { moto: { t: 'moto', c: '#c8102e', metal: 'silver' }, scooter: { t: 'scooter', c: '#2a2d33' }, ebike: { t: 'bike', c: '#1f6e4a', metal: 'silver', v: 5, show: 1 }, life6: { t: 'yacht' }, jet: { t: 'jet' } };
   // araç özellikleri: [hız, 0-100 (sn), güç, birim] — birimler çevrilebilir kalıplarla yazılır
   const CAR_SPEC = { hatch: [185, '9,8', 110, 'bg'], suv: [250, '5,4', 420, 'bg'], life4: [330, '2,9', 720, 'bg'], classic: [240, '6,2', 350, 'bg'], moto: [245, '3,1', 160, 'bg'], scooter: [25, '', 1, 'kW'], ebike: [25, '', 250, 'W'], life6: [0, '', 3600, 'bg', 38], jet: [950, '', 12, 'kişi'] };
   const specTxt = (id) => { const x = CAR_SPEC[id]; if (!x) return ['—', '—', '—']; const pw = x[3] === 'bg' ? `${x[2]} bg` : x[3] === 'kişi' ? `${x[2]} kişi` : `${x[2]} ${x[3]}`; return [x[4] ? `${x[4]} knot` : `${x[0]} km/sa`, x[1] ? `${x[1]} sn` : '—', pw]; };
   function carSvg(kind, col) {
+    if (typeof MallArt !== 'undefined') return ARTI({ t: 'car', v: CV[kind] != null ? CV[kind] : 0, c: col, metal: kind === 'sport' || kind === 'classic' ? 'gold' : 'silver' });
     const wheel = (x) => `<circle cx="${x}" cy="128" r="20" fill="#111"/><circle cx="${x}" cy="128" r="11" fill="#9aa0ab"/><circle cx="${x}" cy="128" r="3" fill="#333"/>`;
     const glass = '#9fc8e8';
     const sh = {
@@ -715,20 +721,24 @@
   }
   function emlakView() {
     const list = ITEMS.filter((it) => HOUSE_KIND[it.id] && (owns(it.id) || Phone.p().age + 6 >= it.minAge)).sort((a, b) => a.price - b.price);
-    const live = list.filter((it) => owns(it.id)).sort((a, b) => b.price - a.price)[0];
+    const live0 = list.filter((it) => owns(it.id)).sort((a, b) => b.price - a.price)[0];
+    const nh = typeof Mall !== 'undefined' ? Mall.homeOf() : null;
+    const live = nh && (!live0 || nh.price > live0.price) ? null : live0;
+    const liveNew = nh && !live ? nh : null;
     return `<div class="ph-appv ph-emlak">${top('Evim Emlak')}<div class="ph-body">
       <div class="ph-search">${IC.search}<span>Satılık evler</span></div>
-      <div class="ph-listing cur"><div class="pic">${houseSvg('flat')}${live ? '' : '<span class="own3">Şu an yaşadığın</span>'}</div><div class="inf">${Phone.p().age < 18 ? `<div class="pr3">${live ? 'Eski evin' : 'Ailenle yaşıyorsun'}</div><div class="tt">Aile evi</div><div class="mt">3+1 · 120 m² · Mahalle</div>` : `<div class="pr3">${live ? 'Eski evin' : 'Kiradasın'}</div><div class="tt">Kiralık daire</div><div class="mt">2+1 · 95 m² · Şehir merkezi</div>`}</div></div>
+      ${liveNew ? `<div class="ph-listing cur"><div class="pic">${ARTI(liveNew.art)}<span class="own3">Burada yaşıyorsun</span></div><div class="inf"><div class="pr3">${money(liveNew.price)}</div><div class="tt"><span>${esc(liveNew.tn)}</span> · <span>${esc(liveNew.bn)}</span></div></div></div>` : ''}<div class="ph-listing cur"><div class="pic">${houseSvg('flat')}${live || liveNew ? '' : '<span class="own3">Şu an yaşadığın</span>'}</div><div class="inf">${Phone.p().age < 18 ? `<div class="pr3">${live || liveNew ? 'Eski evin' : 'Ailenle yaşıyorsun'}</div><div class="tt">Aile evi</div><div class="mt">3+1 · 120 m² · Mahalle</div>` : `<div class="pr3">${live || liveNew ? 'Eski evin' : 'Kiradasın'}</div><div class="tt">Kiralık daire</div><div class="mt">2+1 · 95 m² · Şehir merkezi</div>`}</div></div>
+      ${typeof Mall !== 'undefined' ? Mall.homesHtml() : ''}<div class="ph-secl">Özel portföy</div>
       ${list.map((it) => `<div class="ph-listing"><div class="pic">${houseSvg(HOUSE_KIND[it.id])}${live === it ? '<span class="own3">Burada yaşıyorsun</span>' : owns(it.id) ? '<span class="own3">Senin</span>' : ''}</div><div class="inf"><div class="row"><div><div class="pr3">${money(it.price)}</div><div class="tt">${esc(it.name)}</div></div>${buyBtn(it, 'ph-buy em')}</div><div class="fx3">${esc(it.desc)}</div></div></div>`).join('')}
     </div></div>`;
   }
   function carsView() {
     const list = ITEMS.filter((it) => it.cat === 'ride' && visible(it)).sort((a, b) => a.price - b.price);
     const locked = ITEMS.filter((it) => it.cat === 'ride' && !visible(it)).sort((a, b) => a.minAge - b.minAge).slice(0, 2);
-    const card = (it) => { const k = CAR_KIND[it.id], sp = specTxt(it.id); return `<div class="ph-car"><div class="stage">${k ? carSvg(k, CAR_COL[k]) : `<span class="art">${itemArt(it)}</span>`}${owns(it.id) ? '<span class="gar">GARAJINDA</span>' : ''}</div><div class="inf"><h4>${esc(it.name)}</h4>
+    const card = (it) => { const k = CAR_KIND[it.id], sp = specTxt(it.id); return `<div class="ph-car"><div class="stage">${k ? carSvg(k, CAR_COL[k]) : typeof MallArt !== 'undefined' && ART2[it.id] ? ARTI(ART2[it.id]) : `<span class="art">${itemArt(it)}</span>`}${owns(it.id) ? '<span class="gar">GARAJINDA</span>' : ''}</div><div class="inf"><h4>${esc(it.name)}</h4>
         <div class="spec"><div><span>Azami hız</span><b>${sp[0]}</b></div><div><span>0-100</span><b>${sp[1]}</b></div><div><span>Motor gücü</span><b>${sp[2]}</b></div></div>
         <div class="ds">${esc(it.desc)}</div><div class="row">${buyBtn(it, 'ph-buy red')}</div></div></div>`; };
-    return `<div class="ph-appv ph-cars">${top('<span class="r">Arabalar</span>')}<div class="ph-body">${list.map(card).join('')}${locked.map(card).join('')}${!list.length && !locked.length ? '<p class="ph-note">Şu an satışta araç yok.</p>' : ''}<p class="ph-note">Araba ve motor için ehliyet gerekir.</p></div></div>`;
+    return `<div class="ph-appv ph-cars">${top('<span class="r">Arabalar</span>')}<div class="ph-body">${list.map(card).join('')}${locked.map(card).join('')}${typeof Mall !== 'undefined' ? '<div class="ph-secl">Garaj klasikleri</div>' : ''}${!list.length && !locked.length ? '<p class="ph-note">Şu an satışta araç yok.</p>' : ''}<p class="ph-note">Araba ve motor için ehliyet gerekir.</p>${typeof Mall !== 'undefined' ? Mall.carsHtml() : ''}</div></div>`;
   }
   // evler Evim Emlak'ta, telefonlar TeknoPazar'da, araçlar Arabalar'da satılır; alışveriş'te hobi, eğlence ve stil kalır
   const shopExcl = () => Object.keys(HOUSE_KIND).concat(TIERS.map((t) => t.item).filter(Boolean));
