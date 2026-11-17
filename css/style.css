@@ -4117,3 +4117,4 @@ html.ph-open #toasts { top: auto; bottom: calc(80px + env(safe-area-inset-bottom
 .ph-inc.sl-inc { grid-template-columns: 1fr; margin-bottom: 8px; }
 .sl-card > .sl-img { aspect-ratio: 2 / 1; }
 .sl-bzl { display: flex; flex-wrap: wrap; gap: 4px 10px; } .sl-bzl span + span::before { content: "· "; opacity: .6; }
+@media (max-width: 560px), (max-height: 760px) { .vt-top { padding-top: 12px; } }

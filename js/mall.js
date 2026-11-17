@@ -190,7 +190,10 @@ const Mall = (() => {
       const it = all[hs(`${w}|deal|${i}`) % all.length];
       if (out.some((x) => x.id === it.id) || it.tag === 'old' || it.cat === 'auto' || it.cat === 'estate') continue;
       if (it.price > Math.max(2000, p.money * 3) && i < 40) continue;
-      out.push(Object.assign({}, it, { was: it.price, price: priceIn(it.price * U.CUR.USD.rate * (0.6 + (hs(`${w}|d${i}`) % 26) / 100)), deal: true }));
+      const np = priceIn(it.price * U.CUR.USD.rate * (0.6 + (hs(`${w}|d${i}`) % 26) / 100));
+      // yuvarlama sonrası gerçek indirim kalmadıysa fırsat sayılmaz (ör. 9,00 € yerine 9,00 €)
+      if (!(np <= it.price * 0.92) || U.money(np) === U.money(it.price)) continue;
+      out.push(Object.assign({}, it, { was: it.price, price: np, deal: true }));
     }
     DEALS = out; DEALK = k;
     return out;
