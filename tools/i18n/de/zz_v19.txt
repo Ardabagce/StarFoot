@@ -2844,3 +2844,111 @@
 9886|Deine Autobiografie: {0}
 9827|Jetzt bist du TV-Experte
 9828|Investitionserträge (letzte Woche)
+9894|Du wählst deine Aktionen jede Woche selbst.
+9895|Ruhe bei wenig Energie, Gespräche bei schwachen Beziehungen, sonst Training.
+9896|Spielvorbereitung
+9897|Vor allem Training; Ruhe, wenn die Energie sinkt.
+9898|Das Schwächste aus Fans, Spielern, Vorstand und Chemie wird gestärkt.
+10022|🤖 Automatische Aktionen: {0}
+9899|Automatische Aktionen
+9900|Starpedia-Seiten deiner Karrieren in der Ruhmeshalle gibt es mit Premium.
+9901|Die Starpedia-Seite dieser Karriere wurde nicht gefunden.
+9902|Starpedia
+9903|Meine Garage
+9904|Deine Garage ist leer. Such dir dein erstes Auto im Showroom aus.
+9907|Fahrzeuge
+9908|Urlaubsbuchung
+9909|Erstattung der Buchung
+9910|Ausgaben für Events
+9911|Werbegage
+9912|Verkauf eines Unternehmens
+9913|Buchvorschuss
+9914|Prämien und sonstige Einnahmen
+9915|Sonstige Ausgaben
+9916|Kontobewegungen
+9917|Autokauf
+9918|Hauskauf
+9919|Investitionserträge
+9920|Taschengeld
+9921|Nebenjob
+9922|Nebenjobs
+9923|Mit dem Hund des Nachbarn Gassi gehen
+9924|Eine Stunde spazieren, die Nachbarin ist begeistert.
+9925|Regale im Laden einräumen
+9926|Hilfe im Laden um die Ecke, Taschengeld verdient.
+9927|Autos in der Nachbarschaft waschen
+9928|Eimer, Schwamm und viel Schaum. Drei Autos sauber.
+9931|Balljunge auf dem Kleinfeld
+9932|Balljunge bei den Abendspielen.
+9933|Turnier-Maskottchen sein
+9934|Im Maskottchenkostüm hast du beim Wochenendturnier die Ränge angeheizt.
+9935|Helfer im Sommercamp
+9936|Du hast den Kleinen das Dribbeln gezeigt.
+9937|Kellnern im Café
+9938|Eine stressige Wochenendschicht.
+9939|Pakete austragen
+9940|Du hast mit dem Fahrrad Straße für Straße Pakete ausgeliefert.
+9941|Fußballstunde für Kinder
+9942|Du hast mit den Kleinen Pässe und Schüsse geübt.
+9943|Verkäufer im Sportladen
+9944|Viele Kunden wollten Fußballschuhe anprobieren.
+9945|Co-Trainer in einer Fußballschule
+9946|Den ganzen Tag Training, Übungen und ein Spiel.
+9947|Statist in einem Werbespot
+9948|Ein langer Drehtag, am Ende standest du vor der Kamera.
+9949|Autogrammstunde
+9950|Zwei Stunden Autogramme und Fotos in einem Einkaufszentrum.
+9951|Gesponserter Beitrag
+9952|Du hast ein kurzes Video mit dem Produkt einer Marke gedreht.
+9953|Gasttrainer in einer Fußballschule
+9954|Du warst einen Tag bei den Kindern, alle wollten ein Autogramm.
+9955|Videospiel-Präsentation
+9956|Du hast bei der Präsentation eines neuen Fußballspiels gespielt.
+9957|Vortrag bei einem Firmenevent
+9958|Du hast den Mitarbeitern einer Firma deine Erfolgsgeschichte erzählt.
+9959|Doku-Sprecher
+9960|Du warst Sprecher einer Sportdoku.
+9961|Verletzt kannst du keinen Nebenjob machen.
+9962|Du hast diese Woche schon gejobbt. Nächste Woche gibt es neue Jobs.
+9965|Für diesen Job reicht deine Energie nicht.
+10017|Für diesen Job brauchst du {0} Aktionen.
+9966|Die Werbung wurde nicht beendet. Du kannst dort weitermachen, wo du aufgehört hast.
+9969|Werbung
+9970|Verdienst
+9971|⭐ Premium: keine Werbung, Jobs kosten Aktionen.
+9973|Du kannst einen Nebenjob pro Woche machen. Größere Jobs brauchen mehr Werbung, bringen aber mehr.
+9976|Jobs dieser Woche
+9977|Jede Woche neu
+9978|Probetraining möglich
+9979|Du hast dich diese Saison schon bei einer Akademie beworben.
+9980|Akademien im Ausland sichten bei einem internationalen Jugendturnier.
+9981|Ab 14 kannst du dich bei Akademien im Ausland bewerben.
+10019|{0} In welcher Akademie willst du ausgebildet werden?
+9982|Deine Akademie
+10015|📨 Du hast dich bei der Akademie von {0} beworben. Antwort nächste Woche.
+10009|✈️ {0} lädt dich zum Probetraining bei einem internationalen Jugendturnier ein!
+10007|📩 {0}: "Du bist noch nicht auf unserem Niveau. Wir behalten dich im Auge."
+10004|🎉 Die Akademie von {0} nimmt dich auf! Nach der Saison bist du dabei.
+10018|📋 {0} lädt dich zum Probetraining ein.
+9983|Für das Probetraining reicht deine Energie nicht.
+10012|🎉 Probetraining bestanden! Die Akademie von {0} erwartet dich nach der Saison.
+9984|🎉 Probetraining bestanden!
+9986|– die Akademie will dich. Der Wechsel erfolgt nach der Saison.
+10006|😔 Beim Probetraining von {0} bist du nicht genug aufgefallen. Versuch es nächste Saison wieder!
+9989|😔 Probetraining nicht bestanden
+9991|hat dich diesmal nicht genommen. Entwickle dich weiter, nächste Saison kannst du dich erneut bewerben.
+9994|Du kannst dich bei der Akademie deines Wunschvereins bewerben. Eine Bewerbung pro Saison.
+9997|Bewerbung wird geprüft
+9998|Erfolgschance
+9999|Zum Probetraining
+10000|Energie −15
+10001|Wechsel nach der Saison
+10002|Bewerbung abgelehnt
+10003|Nächste Saison kannst du dich erneut bewerben.
+10021|{0} Wechselwunsch Akademie
+10014|Die Akademie von {0} erwartet dich. Wähle das Angebot, um zu wechseln.
+
+10025|{0} Aktionen
+10026|Werbung {0}/{1}
+10024|{0} Werbespots ansehen
+10027|{0} Jobs

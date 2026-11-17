@@ -2844,3 +2844,111 @@
 9886|Sua autobiografia: {0}
 9827|Agora você é comentarista na TV
 9828|Renda de investimentos (semana passada)
+9894|Você escolhe suas ações toda semana.
+9895|Descanso com pouca energia, conversas para relações fracas e, no resto, treino.
+9896|Preparação para o jogo
+9897|Mais treino; descanso quando a energia cai.
+9898|O ponto mais fraco entre torcida, jogadores, diretoria e química é reforçado.
+10022|🤖 Ações automáticas: {0}
+9899|Ações automáticas
+9900|As páginas da Starpedia das suas carreiras no Hall das Lendas abrem com o Premium.
+9901|A página da Starpedia desta carreira não foi encontrada.
+9902|Starpedia
+9903|Minha garagem
+9904|Sua garagem está vazia. Escolha seu primeiro carro na galeria.
+9907|Veículos
+9908|Reserva de férias
+9909|Reembolso da reserva
+9910|Gastos do evento
+9911|Cachê de publicidade
+9912|Venda de negócio
+9913|Adiantamento do livro
+9914|Bônus e outras receitas
+9915|Outros gastos
+9916|Movimentações
+9917|Compra de carro
+9918|Compra de imóvel
+9919|Renda de investimentos
+9920|Mesada
+9921|Bico
+9922|Bicos
+9923|Passear com o cachorro do vizinho
+9924|Uma hora de passeio, a vizinha adorou.
+9925|Arrumar prateleiras na mercearia
+9926|Ajudou na mercearia do bairro e garantiu a mesada.
+9927|Lavar carros no bairro
+9928|Balde, esponja e muita espuma. Três carros limpos.
+9931|Gandula no society
+9932|Gandula nos jogos da noite.
+9933|Ser o mascote do torneio
+9934|Vestido de mascote, você animou a arquibancada no torneio de fim de semana.
+9935|Ajudante no acampamento de férias
+9936|Você ensinou os pequenos a driblar.
+9937|Garçom num café
+9938|Um turno corrido no fim de semana.
+9939|Entrega de encomendas
+9940|Você entregou encomendas de bicicleta pelo bairro.
+9941|Aula de futebol para crianças
+9942|Você treinou passes e chutes com os pequenos.
+9943|Vendedor numa loja de esportes
+9944|Muitos clientes queriam provar chuteiras.
+9945|Auxiliar técnico numa escolinha
+9946|Treino, exercícios e jogo o dia inteiro.
+9947|Figurante num comercial
+9948|Um longo dia de gravação; no fim você apareceu na câmera.
+9949|Sessão de autógrafos
+9950|Duas horas de autógrafos e fotos num shopping.
+9951|Post patrocinado
+9952|Você gravou um vídeo curto com o produto de uma marca.
+9953|Técnico convidado numa escolinha
+9954|Você passou um dia com as crianças e todas pediram autógrafo.
+9955|Lançamento de videogame
+9956|Você jogou no lançamento de um novo jogo de futebol.
+9957|Palestra em evento corporativo
+9958|Você contou sua história de sucesso aos funcionários de uma empresa.
+9959|Narração de documentário
+9960|Você narrou um documentário esportivo.
+9961|Você não pode fazer bicos machucado.
+9962|Você já fez seu bico desta semana. Semana que vem tem novos.
+9965|Você não tem energia suficiente para este trabalho.
+10017|Este trabalho exige {0} ações.
+9966|O anúncio não terminou. Você pode continuar de onde parou.
+9969|Anúncio
+9970|Ganho
+9971|⭐ Premium: sem anúncios, os trabalhos usam ações.
+9973|Você pode fazer um bico por semana. Os maiores pedem mais anúncios, mas pagam mais.
+9976|Trabalhos da semana
+9977|Renovados toda semana
+9978|Pode ser chamado para testes
+9979|Você já se candidatou a uma base nesta temporada.
+9980|As bases no exterior recrutam com testes num torneio juvenil internacional.
+9981|Você pode se candidatar a bases no exterior a partir dos 14 anos.
+10019|{0} Em qual base você quer se formar?
+9982|Sua base
+10015|📨 Você se candidatou à base do {0}. A resposta vem semana que vem.
+10009|✈️ {0} te convidou para testes num torneio juvenil internacional!
+10007|📩 {0}: "Você ainda não está no nível que buscamos. Vamos acompanhar sua evolução."
+10004|🎉 A base do {0} aceitou você! Você pode chegar no fim da temporada.
+10018|📋 {0} te chamou para um treino de teste.
+9983|Você não tem energia suficiente para os testes.
+10012|🎉 Você passou nos testes! A base do {0} te espera no fim da temporada.
+9984|🎉 Você passou nos testes!
+9986|– a base te quer. A mudança acontece no fim da temporada.
+10006|😔 Você não se destacou o bastante nos testes do {0}. Tente de novo na próxima temporada!
+9989|😔 Você não passou nos testes
+9991|não te escolheu desta vez. Continue evoluindo; você pode se candidatar de novo na próxima temporada.
+9994|Você pode se candidatar à base do clube que quiser. Uma candidatura por temporada.
+9997|Candidatura em análise
+9998|Chance de passar
+9999|Ir aos testes
+10000|Energia −15
+10001|Mudança no fim da temporada
+10002|Candidatura recusada
+10003|Você pode se candidatar de novo na próxima temporada.
+10021|{0} Pedido de transferência de base
+10014|A base do {0} te espera. Escolha a proposta para se transferir.
+
+10025|{0} ações
+10026|Anúncio {0}/{1}
+10024|Assistir {0} anúncios
+10027|{0} trabalhos

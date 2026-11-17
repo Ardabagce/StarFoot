@@ -2844,3 +2844,111 @@
 9886|Tu autobiografía: {0}
 9827|Ahora eres comentarista en la tele
 9828|Ingresos por inversiones (semana pasada)
+9894|Eliges tus acciones cada semana.
+9895|Descanso si hay poca energía, reuniones para relaciones débiles y, si no, entrenamiento.
+9896|Preparación del partido
+9897|Sobre todo entrenamiento; descanso cuando baja la energía.
+9898|Se refuerza lo más débil entre afición, jugadores, directiva y química.
+10022|🤖 Acciones automáticas: {0}
+9899|Acciones automáticas
+9900|Las páginas de Starpedia de tus carreras del Salón de Leyendas se desbloquean con Premium.
+9901|No se encontró la página de Starpedia de esta carrera.
+9902|Starpedia
+9903|Mi garaje
+9904|Tu garaje está vacío. Elige tu primer coche en la exposición.
+9907|Vehículos
+9908|Reserva de vacaciones
+9909|Reembolso de la reserva
+9910|Gastos del evento
+9911|Pago publicitario
+9912|Venta de negocio
+9913|Anticipo del libro
+9914|Primas y otros ingresos
+9915|Otros gastos
+9916|Movimientos
+9917|Compra de coche
+9918|Compra de vivienda
+9919|Ingresos por inversiones
+9920|Paga
+9921|Trabajo extra
+9922|Trabajos extra
+9923|Pasear al perro del vecino
+9924|Un paseo de una hora; la vecina está encantada.
+9925|Ordenar estantes en la tienda
+9926|Ayudaste en la tienda del barrio y ganaste la paga.
+9927|Lavar coches en el barrio
+9928|Cubo, esponja y mucha espuma. Tres coches limpios.
+9931|Recogepelotas en el fútbol sala
+9932|Recogiendo balones en los partidos de la tarde.
+9933|Ser la mascota del torneo
+9934|Animaste las gradas disfrazado de mascota en el torneo del fin de semana.
+9935|Ayudante en el campamento de verano
+9936|Enseñaste a regatear a los más pequeños.
+9937|Camarero en una cafetería
+9938|Un turno de fin de semana muy ajetreado.
+9939|Reparto de paquetes
+9940|Repartiste paquetes en bici, barrio a barrio.
+9941|Clases de fútbol para niños
+9942|Practicaste pases y tiros con los pequeños.
+9943|Dependiente en una tienda de deportes
+9944|Muchos clientes querían probarse botas.
+9945|Entrenador asistente en una escuela de fútbol
+9946|Entrenamiento, ejercicios y partido todo el día.
+9947|Extra en un anuncio
+9948|Un largo día de rodaje; al final saliste ante la cámara.
+9949|Firma de autógrafos
+9950|Dos horas de firmas y fotos en un centro comercial.
+9951|Publicación patrocinada
+9952|Grabaste un vídeo corto con el producto de una marca.
+9953|Entrenador invitado en una escuela de fútbol
+9954|Pasaste un día con los niños y todos te pidieron autógrafos.
+9955|Presentación de un videojuego
+9956|Jugaste en la presentación de un nuevo juego de fútbol.
+9957|Charla en un evento corporativo
+9958|Contaste tu historia de éxito a los empleados de una empresa.
+9959|Narración de un documental
+9960|Fuiste el narrador de un documental deportivo.
+9961|No puedes hacer trabajos extra lesionado.
+9962|Ya hiciste tu trabajo extra esta semana. La próxima habrá nuevos.
+9965|No tienes energía suficiente para este trabajo.
+10017|Este trabajo requiere {0} acciones.
+9966|El anuncio no terminó. Puedes continuar donde lo dejaste.
+9969|Anuncio
+9970|Ganancia
+9971|⭐ Premium: sin anuncios, los trabajos usan acciones.
+9973|Puedes hacer un trabajo extra por semana. Los grandes piden más anuncios, pero pagan más.
+9976|Trabajos de esta semana
+9977|Se renuevan cada semana
+9978|Podrías ser convocado a pruebas
+9979|Ya te postulaste a una cantera esta temporada.
+9980|Las canteras extranjeras reclutan con pruebas en un torneo juvenil internacional.
+9981|Puedes postularte a canteras extranjeras desde los 14 años.
+10019|{0} ¿En qué cantera quieres formarte?
+9982|Tu cantera
+10015|📨 Te postulaste a la cantera de {0}. La respuesta llega la próxima semana.
+10009|✈️ ¡{0} te invitó a pruebas en un torneo juvenil internacional!
+10007|📩 {0}: "Ahora mismo no tienes el nivel que buscamos. Seguiremos tu progreso."
+10004|🎉 ¡La cantera de {0} te aceptó! Podrás unirte al final de la temporada.
+10018|📋 {0} te convocó a un entrenamiento de prueba.
+9983|No tienes energía suficiente para las pruebas.
+10012|🎉 ¡Superaste las pruebas! La cantera de {0} te espera al final de la temporada.
+9984|🎉 ¡Superaste las pruebas!
+9986|– su cantera te quiere. El traspaso será al final de la temporada.
+10006|😔 No destacaste lo suficiente en las pruebas de {0}. ¡Vuelve a intentarlo la próxima temporada!
+9989|😔 No superaste las pruebas
+9991|no te eligió esta vez. Sigue mejorando; podrás postularte de nuevo la próxima temporada.
+9994|Puedes postularte a la cantera del club que quieras. Tienes una solicitud por temporada.
+9997|Solicitud en revisión
+9998|Probabilidad de pasar
+9999|Ir a las pruebas
+10000|Energía −15
+10001|Traspaso al final de la temporada
+10002|Solicitud rechazada
+10003|Podrás postularte de nuevo la próxima temporada.
+10021|{0} Solicitud de traspaso de cantera
+10014|La cantera de {0} te espera. Elige la oferta para cambiarte.
+
+10025|{0} acciones
+10026|Anuncio {0}/{1}
+10024|Ver {0} anuncios
+10027|{0} trabajos

@@ -2844,3 +2844,111 @@
 9886|Ton autobiographie : {0}
 9827|Te voilà consultant à la télé
 9828|Revenus d'investissement (semaine dernière)
+9894|Tu choisis tes actions chaque semaine.
+9895|Repos si l'énergie est basse, réunions pour les relations faibles, sinon entraînement.
+9896|Préparation du match
+9897|Surtout de l'entraînement ; repos quand l'énergie baisse.
+9898|Le point le plus faible entre fans, joueurs, direction et cohésion est renforcé.
+10022|🤖 Actions automatiques : {0}
+9899|Actions automatiques
+9900|Les pages Starpedia de tes carrières du Panthéon se débloquent avec Premium.
+9901|La page Starpedia de cette carrière est introuvable.
+9902|Starpedia
+9903|Mon garage
+9904|Ton garage est vide. Choisis ta première voiture dans la galerie.
+9907|Véhicules
+9908|Réservation de vacances
+9909|Remboursement de réservation
+9910|Frais d'événement
+9911|Cachet publicitaire
+9912|Vente d'entreprise
+9913|Avance sur le livre
+9914|Primes et autres revenus
+9915|Autres dépenses
+9916|Mouvements du compte
+9917|Achat de voiture
+9918|Achat immobilier
+9919|Revenus d'investissement
+9920|Argent de poche
+9921|Petit boulot
+9922|Petits boulots
+9923|Promener le chien du voisin
+9924|Une heure de balade, la voisine est ravie.
+9925|Ranger les rayons de l'épicerie
+9926|Un coup de main à l'épicerie, argent de poche en poche.
+9927|Laver des voitures dans le quartier
+9928|Seau, éponge et beaucoup de mousse. Trois voitures lavées.
+9931|Ramasseur de balles au foot à cinq
+9932|Ramasser les ballons lors des matchs du soir.
+9933|Être la mascotte du tournoi
+9934|En costume de mascotte, tu as enflammé les tribunes au tournoi du week-end.
+9935|Aide au camp d'été
+9936|Tu as appris aux petits à dribbler.
+9937|Serveur dans un café
+9938|Un service chargé le week-end.
+9939|Livraison de colis
+9940|Tu as livré des colis à vélo, rue après rue.
+9941|Cours de foot pour enfants
+9942|Tu as fait travailler passes et tirs aux petits.
+9943|Vendeur dans un magasin de sport
+9944|Beaucoup de clients voulaient essayer des crampons.
+9945|Entraîneur adjoint dans une école de foot
+9946|Entraînement, exercices et match toute la journée.
+9947|Figurant dans une pub
+9948|Une longue journée de tournage, et enfin devant la caméra.
+9949|Séance de dédicaces
+9950|Deux heures de dédicaces et de photos dans un centre commercial.
+9951|Publication sponsorisée
+9952|Tu as tourné une courte vidéo avec le produit d'une marque.
+9953|Entraîneur invité dans une école de foot
+9954|Tu as passé la journée avec les enfants, tous voulaient un autographe.
+9955|Lancement d'un jeu vidéo
+9956|Tu as joué au lancement d'un nouveau jeu de foot.
+9957|Discours lors d'un événement d'entreprise
+9958|Tu as raconté ton parcours aux salariés d'une entreprise.
+9959|Voix off d'un documentaire
+9960|Tu as été le narrateur d'un documentaire sportif.
+9961|Tu ne peux pas faire de petit boulot en étant blessé.
+9962|Tu as fait ton petit boulot cette semaine. De nouveaux arrivent la semaine prochaine.
+9965|Tu n'as pas assez d'énergie pour ce travail.
+10017|Ce travail demande {0} actions.
+9966|La pub n'a pas été terminée. Tu peux reprendre là où tu t'es arrêté.
+9969|Pub
+9970|Gain
+9971|⭐ Premium : pas de pub, les boulots utilisent des actions.
+9973|Tu peux faire un petit boulot par semaine. Les plus gros demandent plus de pubs mais rapportent plus.
+9976|Boulots de la semaine
+9977|Renouvelés chaque semaine
+9978|Tu pourrais être invité aux essais
+9979|Tu as déjà postulé dans un centre de formation cette saison.
+9980|Les centres de formation étrangers recrutent via des essais lors d'un tournoi international de jeunes.
+9981|Tu peux postuler à l'étranger à partir de 14 ans.
+10019|{0} Dans quel centre de formation veux-tu grandir ?
+9982|Ton centre de formation
+10015|📨 Tu as postulé au centre de formation de {0}. Réponse la semaine prochaine.
+10009|✈️ {0} t'invite aux essais lors d'un tournoi international de jeunes !
+10007|📩 {0} : "Tu n'as pas encore le niveau recherché. Nous suivrons ta progression."
+10004|🎉 Le centre de formation de {0} t'accepte ! Tu pourras le rejoindre en fin de saison.
+10018|📋 {0} t'invite à un entraînement d'essai.
+9983|Tu n'as pas assez d'énergie pour les essais.
+10012|🎉 Essais réussis ! Le centre de formation de {0} t'attend en fin de saison.
+9984|🎉 Essais réussis !
+9986|– son centre de formation te veut. Le transfert aura lieu en fin de saison.
+10006|😔 Tu ne t'es pas assez distingué aux essais de {0}. Réessaie la saison prochaine !
+9989|😔 Essais ratés
+9991|ne t'a pas retenu cette fois. Continue de progresser, tu pourras repostuler la saison prochaine.
+9994|Tu peux postuler au centre de formation du club de ton choix. Une candidature par saison.
+9997|Candidature à l'étude
+9998|Chance de réussite
+9999|Aller aux essais
+10000|Énergie −15
+10001|Transfert en fin de saison
+10002|Candidature refusée
+10003|Tu pourras repostuler la saison prochaine.
+10021|{0} Demande de transfert en formation
+10014|Le centre de formation de {0} t'attend. Choisis l'offre pour rejoindre le club.
+
+10025|{0} actions
+10026|Pub {0}/{1}
+10024|Regarder {0} pubs
+10027|{0} boulots

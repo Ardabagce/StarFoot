@@ -2844,3 +2844,111 @@
 9886|Autobiografimu: {0}
 9827|Kini kamu pandit pertandingan di TV
 9828|Pendapatan investasi (minggu lalu)
+9894|Kamu memilih aksi sendiri setiap minggu.
+9895|Istirahat saat energi rendah, pertemuan untuk hubungan lemah, sisanya latihan.
+9896|Persiapan laga
+9897|Didominasi latihan; istirahat saat energi turun.
+9898|Yang paling lemah di antara suporter, pemain, manajemen, dan chemistry diperkuat.
+10022|🤖 Aksi otomatis: {0}
+9899|Aksi otomatis
+9900|Halaman Starpedia kariermu di Hall Legenda terbuka dengan Premium.
+9901|Halaman Starpedia karier ini tidak ditemukan.
+9902|Starpedia
+9903|Garasiku
+9904|Garasimu kosong. Pilih mobil pertamamu di galeri.
+9907|Kendaraan
+9908|Pemesanan liburan
+9909|Pengembalian pemesanan
+9910|Biaya acara
+9911|Bayaran iklan
+9912|Penjualan bisnis
+9913|Uang muka buku
+9914|Bonus dan pemasukan lain
+9915|Pengeluaran lain
+9916|Transaksi
+9917|Pembelian mobil
+9918|Pembelian rumah
+9919|Pendapatan investasi
+9920|Uang saku
+9921|Kerja sampingan
+9922|Kerja Sampingan
+9923|Ajak jalan anjing tetangga
+9924|Jalan-jalan sejam, ibu tetangga sangat senang.
+9925|Rapikan rak di warung
+9926|Membantu warung dekat rumah, uang saku didapat.
+9927|Cuci mobil di lingkungan
+9928|Ember, spons, dan banyak busa. Tiga mobil bersih.
+9931|Jadi pemungut bola di lapangan mini
+9932|Memungut bola di laga malam hari.
+9933|Jadi maskot turnamen
+9934|Dengan kostum maskot, kamu memeriahkan tribun di turnamen akhir pekan.
+9935|Asisten di kemah musim panas
+9936|Kamu mengajari anak-anak kecil cara menggiring bola.
+9937|Pelayan di kafe
+9938|Shift akhir pekan yang sibuk.
+9939|Antar paket
+9940|Kamu mengantar paket dengan sepeda dari gang ke gang.
+9941|Les sepak bola untuk anak-anak
+9942|Kamu melatih operan dan tendangan untuk anak-anak.
+9943|Pramuniaga di toko olahraga
+9944|Banyak pelanggan ingin mencoba sepatu bola.
+9945|Asisten pelatih di sekolah sepak bola
+9946|Seharian latihan, drill, dan pertandingan.
+9947|Figuran iklan
+9948|Hari syuting yang panjang, akhirnya kamu tampil di depan kamera.
+9949|Sesi tanda tangan
+9950|Dua jam tanda tangan dan foto di pusat perbelanjaan.
+9951|Unggahan bersponsor
+9952|Kamu membuat video pendek dengan produk sebuah merek.
+9953|Pelatih tamu di sekolah sepak bola
+9954|Kamu menghabiskan sehari bersama anak-anak, semuanya minta tanda tangan.
+9955|Peluncuran gim video
+9956|Kamu bermain di peluncuran gim sepak bola baru.
+9957|Bicara di acara perusahaan
+9958|Kamu menceritakan kisah suksesmu kepada karyawan sebuah perusahaan.
+9959|Narator dokumenter
+9960|Kamu menjadi narator dokumenter olahraga.
+9961|Kamu tidak bisa kerja sampingan saat cedera.
+9962|Kamu sudah kerja sampingan minggu ini. Pekerjaan baru datang minggu depan.
+9965|Energimu tidak cukup untuk pekerjaan ini.
+10017|Pekerjaan ini butuh {0} aksi.
+9966|Iklan tidak selesai. Kamu bisa lanjut dari titik terakhir.
+9969|Iklan
+9970|Penghasilan
+9971|⭐ Premium: tanpa iklan, pekerjaan memakai aksi.
+9973|Kamu bisa kerja sampingan sekali seminggu. Pekerjaan besar butuh lebih banyak iklan tapi bayarannya lebih besar.
+9976|Pekerjaan minggu ini
+9977|Diperbarui setiap minggu
+9978|Bisa dipanggil seleksi
+9979|Kamu sudah melamar ke akademi musim ini.
+9980|Akademi luar negeri merekrut lewat seleksi di turnamen remaja internasional.
+9981|Kamu bisa melamar ke akademi luar negeri mulai usia 14.
+10019|{0} Di akademi mana kamu ingin berkembang?
+9982|Akademimu
+10015|📨 Kamu melamar ke akademi {0}. Jawaban datang minggu depan.
+10009|✈️ {0} mengundangmu seleksi di turnamen remaja internasional!
+10007|📩 {0}: "Saat ini kamu belum di level yang kami cari. Kami akan memantau perkembanganmu."
+10004|🎉 Akademi {0} menerimamu! Kamu bisa bergabung di akhir musim.
+10018|📋 {0} memanggilmu untuk latihan percobaan.
+9983|Energimu tidak cukup untuk seleksi.
+10012|🎉 Kamu lolos seleksi! Akademi {0} menunggumu di akhir musim.
+9984|🎉 Kamu lolos seleksi!
+9986|– akademinya menginginkanmu. Kepindahanmu di akhir musim.
+10006|😔 Kamu kurang menonjol di seleksi {0}. Coba lagi musim depan!
+9989|😔 Kamu tidak lolos seleksi
+9991|belum menerimamu kali ini. Terus berkembang, kamu bisa melamar lagi musim depan.
+9994|Kamu bisa melamar ke akademi klub mana pun. Satu lamaran per musim.
+9997|Lamaran sedang ditinjau
+9998|Peluang lolos
+9999|Ikuti seleksi
+10000|Energi −15
+10001|Pindah di akhir musim
+10002|Lamaran ditolak
+10003|Kamu bisa melamar lagi musim depan.
+10021|{0} Permintaan pindah akademi
+10014|Akademi {0} menunggumu. Pilih tawaran untuk pindah.
+
+10025|{0} aksi
+10026|Iklan {0}/{1}
+10024|Tonton {0} iklan
+10027|{0} pekerjaan

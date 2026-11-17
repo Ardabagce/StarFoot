@@ -482,15 +482,15 @@ const StarLife = (() => {
     if (!has('lg') && !has('bz') && !(P().history || []).length) return '';
     const p = P(), out = [];
     const st = bestFor('statue'), nb = bestFor('number');
-    if (st && GOALS.statue.ok(st.c)) out.push(`<li><b>🗿</b><span>${esc(st.c.club)} stadının önüne heykelin dikilecek</span></li>`);
-    if (nb && GOALS.number.ok(nb.c)) out.push(`<li><b>👕</b><span>${p.shirt || 10} numaralı forma ${esc(nb.c.club)} kulübünde emekliye ayrıldı</span></li>`);
-    if (testimonialOk()) out.push('<li><b>🏟️</b><span>Jübile maçı: dolu tribünler önünde son kez sahadaydın</span></li>');
+    if (st && GOALS.statue.ok(st.c)) out.push(`<li><b data-emo>🗿</b><span>${esc(st.c.club)} stadının önüne heykelin dikilecek</span></li>`);
+    if (nb && GOALS.number.ok(nb.c)) out.push(`<li><b data-emo>👕</b><span>${p.shirt || 10} numaralı forma ${esc(nb.c.club)} kulübünde emekliye ayrıldı</span></li>`);
+    if (testimonialOk()) out.push('<li><b data-emo>🏟️</b><span>Jübile maçı: dolu tribünler önünde son kez sahadaydın</span></li>');
     const lg = (p.sl && p.sl.lg) || {};
-    if (lg.book && BOOK[lg.book.t]) out.push(`<li><b>📖</b><span>Otobiyografin: ${BOOK[lg.book.t].title}</span></li>`);
-    if (lg.tv) out.push('<li><b>🎙️</b><span>Artık ekranlarda maç yorumcususun</span></li>');
+    if (lg.book && BOOK[lg.book.t]) out.push(`<li><b data-emo>📖</b><span>Otobiyografin: ${BOOK[lg.book.t].title}</span></li>`);
+    if (lg.tv) out.push('<li><b data-emo>🎙️</b><span>Artık ekranlarda maç yorumcususun</span></li>');
     const own = (p.sl && p.sl.bz && p.sl.bz.own) || {};
     const ks = Object.keys(own);
-    if (ks.length) out.push(`<li><b>💼</b><span class="sl-bzl">${ks.map((k) => (BIZ.find((b) => b.k === k) || {}).n).filter(Boolean).map((n) => `<span>${n}</span>`).join('')}</span></li>`);
+    if (ks.length) out.push(`<li><b data-emo>💼</b><span class="sl-bzl">${ks.map((k) => (BIZ.find((b) => b.k === k) || {}).n).filter(Boolean).map((n) => `<span>${n}</span>`).join('')}</span></li>`);
     if (!out.length) return '';
     return `<div class="sl-end"><h3>Miras</h3><ul>${out.join('')}</ul></div>`;
   }
@@ -575,7 +575,7 @@ const StarLife = (() => {
     p.money += x.pay;
     ledger('Ek iş', x.pay, x.n);
     Player.addEnergy(p, -x.en);
-    Game.toast(`${x.ic} ${x.n} · +${money(x.pay)} · Enerji -${x.en}`, 'good');
+    Game.toast(`${x.n} · +${money(x.pay)} · Enerji -${x.en}`, 'good');
     if (s) Game.save();
     if (typeof Phone !== 'undefined' && Phone.open) Phone.render();
   }
@@ -612,13 +612,13 @@ const StarLife = (() => {
     const p = P(), prem = isPrem(), s = Game.state, blk = jobBlock(), pr = jobProg(), j = has('jb') ? P().sl.jb : {};
     const card = (x) => {
       const prog = !prem && pr && pr.k === x.k ? pr.n : 0;
-      const cost = prem ? `<span>${APN[x.t]}</span> <span>aksiyon</span>` : prog ? `<span>Reklam</span> <span>${prog}/${ADS[x.t]}</span>` : `<span>${ADS[x.t]}</span> <span>reklam izle</span>`;
+      const cost = prem ? `${APN[x.t]} aksiyon` : prog ? `Reklam ${prog}/${ADS[x.t]}` : `${ADS[x.t]} reklam izle`;
       const dis = blk || p.energy < x.en || (prem && s.ap < APN[x.t]) || (!prem && pr && pr.k !== x.k && pr.n > 0);
-      return `<div class="sl-job t${x.t}"><span class="ic">${x.ic}</span><div class="sl-cb"><b>${x.n}</b><small>${x.d}</small><div class="sl-chips"><span class="sl-chip pos"><i>Kazanç</i> <b>${money(x.pay)}</b></span><span class="sl-chip neg"><i>Enerji</i> <b>-${x.en}</b></span></div>
+      return `<div class="sl-job t${x.t}"><span class="ic" data-emo>${x.ic}</span><div class="sl-cb"><b>${x.n}</b><small>${x.d}</small><div class="sl-chips"><span class="sl-chip pos"><i>Kazanç</i> <b>${money(x.pay)}</b></span><span class="sl-chip neg"><i>Enerji</i> <b>-${x.en}</b></span></div>
         <div class="sl-pr"><span></span><button class="sl-btn" data-sl="job:${x.k}" type="button" ${dis ? 'disabled' : ''}>${prem ? '⭐ ' : '▶ '}${cost}</button></div></div></div>`;
     };
     return `<div class="ph-appv sl sl-jb">${Phone.ui.top('Ek İş')}<div class="ph-body">
-      <div class="sl-port jb"><small>Ek iş</small><b>${money(j.tot || 0)}</b><span><span>Toplam kazanç</span> · <span>${j.cnt || 0}</span> <span>iş</span></span></div>
+      <div class="sl-port jb"><small>Ek iş</small><b>${money(j.tot || 0)}</b><span><span>Toplam kazanç</span> · <span>${j.cnt || 0} iş</span></span></div>
       <div class="sl-note">${prem ? '⭐ Premium: reklam yok, işler aksiyon hakkıyla yapılır.' : 'Haftada bir ek iş yapabilirsin. Büyük işler daha çok reklam ister ama daha çok kazandırır.'}</div>
       ${blk ? `<div class="sl-empty">${blk}</div>` : ''}
       ${sec('Bu haftanın işleri', 'Her hafta yenilenir')}${jobList().map(card).join('')}

@@ -2844,3 +2844,111 @@
 9886|La tua autobiografia: {0}
 9827|Ora sei opinionista in TV
 9828|Rendita investimenti (settimana scorsa)
+9894|Scegli tu le azioni ogni settimana.
+9895|Riposo se l'energia è bassa, incontri per i rapporti deboli, altrimenti allenamento.
+9896|Preparazione partita
+9897|Soprattutto allenamento; riposo quando l'energia cala.
+9898|Si rafforza il punto più debole tra tifosi, giocatori, società e intesa.
+10022|🤖 Azioni automatiche: {0}
+9899|Azioni automatiche
+9900|Le pagine Starpedia delle tue carriere nella Hall delle Leggende si sbloccano con Premium.
+9901|La pagina Starpedia di questa carriera non è stata trovata.
+9902|Starpedia
+9903|Il mio garage
+9904|Il tuo garage è vuoto. Scegli la tua prima auto nel salone.
+9907|Veicoli
+9908|Prenotazione vacanza
+9909|Rimborso prenotazione
+9910|Spese per l'evento
+9911|Compenso pubblicitario
+9912|Vendita attività
+9913|Anticipo del libro
+9914|Premi e altre entrate
+9915|Altre spese
+9916|Movimenti
+9917|Acquisto auto
+9918|Acquisto casa
+9919|Rendita investimenti
+9920|Paghetta
+9921|Lavoretto
+9922|Lavoretti
+9923|Portare a spasso il cane del vicino
+9924|Un'ora di passeggiata, la vicina è contentissima.
+9925|Sistemare gli scaffali al negozio
+9926|Un aiuto al negozio di quartiere, paghetta guadagnata.
+9927|Lavare auto nel quartiere
+9928|Secchio, spugna e tanta schiuma. Tre auto pulite.
+9931|Raccattapalle al campetto
+9932|Raccattapalle nelle partite serali.
+9933|Fare la mascotte del torneo
+9934|In costume da mascotte hai acceso gli spalti al torneo del weekend.
+9935|Aiuto al campo estivo
+9936|Hai insegnato il dribbling ai più piccoli.
+9937|Cameriere in un bar
+9938|Un turno intenso nel weekend.
+9939|Consegna pacchi
+9940|Hai consegnato pacchi in bici, via dopo via.
+9941|Lezioni di calcio per bambini
+9942|Hai fatto esercitare i piccoli su passaggi e tiri.
+9943|Commesso in un negozio sportivo
+9944|Tanti clienti volevano provare le scarpe.
+9945|Allenatore in seconda in una scuola calcio
+9946|Allenamento, esercizi e partita tutto il giorno.
+9947|Comparsa in uno spot
+9948|Una lunga giornata di riprese, alla fine eri davanti alla telecamera.
+9949|Firmacopie
+9950|Due ore di autografi e foto in un centro commerciale.
+9951|Post sponsorizzato
+9952|Hai girato un breve video con il prodotto di un marchio.
+9953|Allenatore ospite in una scuola calcio
+9954|Hai passato una giornata con i bambini, tutti volevano un autografo.
+9955|Presentazione di un videogioco
+9956|Hai giocato alla presentazione di un nuovo gioco di calcio.
+9957|Discorso a un evento aziendale
+9958|Hai raccontato la tua storia di successo ai dipendenti di un'azienda.
+9959|Voce narrante di un documentario
+9960|Sei stato il narratore di un documentario sportivo.
+9961|Non puoi fare lavoretti da infortunato.
+9962|Hai già fatto il lavoretto di questa settimana. La prossima ne arrivano di nuovi.
+9965|Non hai abbastanza energia per questo lavoro.
+10017|Questo lavoro richiede {0} azioni.
+9966|La pubblicità non è finita. Puoi riprendere da dove avevi lasciato.
+9969|Pubblicità
+9970|Guadagno
+9971|⭐ Premium: niente pubblicità, i lavori usano azioni.
+9973|Puoi fare un lavoretto a settimana. Quelli più grandi richiedono più pubblicità ma rendono di più.
+9976|Lavori della settimana
+9977|Si rinnovano ogni settimana
+9978|Potresti essere chiamato a un provino
+9979|Hai già fatto domanda a un settore giovanile in questa stagione.
+9980|I vivai esteri reclutano tramite provini in un torneo giovanile internazionale.
+9981|Puoi candidarti ai vivai esteri dai 14 anni.
+10019|{0} In quale vivaio vuoi crescere?
+9982|Il tuo vivaio
+10015|📨 Hai fatto domanda al vivaio del {0}. Risposta la prossima settimana.
+10009|✈️ {0} ti ha invitato ai provini in un torneo giovanile internazionale!
+10007|📩 {0}: "Al momento non sei al livello che cerchiamo. Seguiremo i tuoi progressi."
+10004|🎉 Il vivaio del {0} ti ha accettato! Potrai unirti a fine stagione.
+10018|📋 {0} ti ha chiamato per un allenamento di prova.
+9983|Non hai abbastanza energia per i provini.
+10012|🎉 Provino superato! Il vivaio del {0} ti aspetta a fine stagione.
+9984|🎉 Provino superato!
+9986|– il vivaio ti vuole. Il passaggio avverrà a fine stagione.
+10006|😔 Non ti sei messo abbastanza in mostra al provino del {0}. Riprova la prossima stagione!
+9989|😔 Provino non superato
+9991|stavolta non ti ha preso. Continua a migliorare, potrai ricandidarti la prossima stagione.
+9994|Puoi candidarti al vivaio del club che vuoi. Una candidatura a stagione.
+9997|Candidatura in valutazione
+9998|Probabilità di passare
+9999|Vai al provino
+10000|Energia −15
+10001|Passaggio a fine stagione
+10002|Candidatura respinta
+10003|Potrai ricandidarti la prossima stagione.
+10021|{0} Richiesta di trasferimento giovanile
+10014|Il vivaio del {0} ti aspetta. Scegli l'offerta per trasferirti.
+
+10025|{0} azioni
+10026|Pubblicità {0}/{1}
+10024|Guarda {0} pubblicità
+10027|{0} lavori

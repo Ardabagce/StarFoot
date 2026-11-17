@@ -34,7 +34,7 @@ const HofWiki = (() => {
     } catch (e) { /* yok */ }
   }
   function open(at) {
-    if (typeof Star !== 'undefined' && !Star.has() && Star.on()) return Star.pitch('Starpedia sayfası', 'hof_wiki', 'Efsaneler Salonu\'ndaki kariyerlerinin Starpedia sayfaları Premium ile açılır.');
+    if (typeof Star !== 'undefined' && !Star.has() && Star.on()) return Star.pitch('Starpedia sayfası', 'hof_wiki', "Efsaneler Salonu'ndaki kariyerlerinin Starpedia sayfaları Premium ile açılır.");
     let html = null;
     try { const raw = localStorage.getItem(key(at)); html = raw && LZString.decompressFromUTF16(raw); } catch (e) { html = null; }
     if (!html) return Game.toast('Bu kariyerin Starpedia sayfası bulunamadı.', 'bad');
