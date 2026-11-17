@@ -674,7 +674,7 @@
     return `<div class="ph-appv ph-bank">${top('Banka')}<div class="ph-body">
       <div class="ph-bal"><span>Vadesiz hesap</span><b>${money(p.money)}</b><small>${esc(Player.fullName(p))}</small></div>
       ${Phone.bankExtra ? Phone.bankExtra() : ''}<div class="ph-inc"><div><span>Haftalık maaş</span><b class="pos">${money(inc)}</b></div><div><span>Sponsor geliri</span><b class="pos">${money(sp)}</b></div><div><span>Menajer payı</span><b class="${cut ? 'neg' : ''}">${cut ? '-' + money(cut) : '—'}</b></div><div><span>Haftalık net</span><b class="pos">${money(inc + sp - cut)}</b></div></div>
-      <div class="ph-secl">Varlıkların</div>
+      ${Phone.bankTx ? Phone.bankTx() : ''}<div class="ph-secl">Varlıkların</div>
       ${assets.length ? assets.map((it) => `<div class="ph-tx"><span class="ph-ti">${itemArt(it)}</span><span>${esc(it.name)}<small>${esc(it.desc)}</small></span><b>${money(it.price)}</b></div>`).join('') + `<div class="ph-tx tot"><span></span><span>Toplam değer</span><b>${money(worth)}</b></div>` : '<p class="ph-note">Henüz ev, araba ya da lüks bir eşyan yok. Evim Emlak ve Arabalar uygulamalarına göz at.</p>'}
     </div></div>`;
   }
@@ -732,13 +732,32 @@
       ${list.map((it) => `<div class="ph-listing"><div class="pic">${houseSvg(HOUSE_KIND[it.id])}${live === it ? '<span class="own3">Burada yaşıyorsun</span>' : owns(it.id) ? '<span class="own3">Senin</span>' : ''}</div><div class="inf"><div class="row"><div><div class="pr3">${money(it.price)}</div><div class="tt">${esc(it.name)}</div></div>${buyBtn(it, 'ph-buy em')}</div><div class="fx3">${esc(it.desc)}</div></div></div>`).join('')}
     </div></div>`;
   }
+  // Garajım: sahip olunan tüm araçlar (eski ürünler, Vitrin galerisi ve lüks koleksiyon) sergilenir
+  const LUXCAR = { suv: { t: 'car', v: 2, c: '#14161b' }, sport: { t: 'car', v: 4, c: '#c8102e' }, hyper: { t: 'car', v: 6, c: '#f2b632' }, yacht: { t: 'yacht' }, jet: { t: 'jet' } };
+  function garageList() {
+    const p = Phone.p(), out = [];
+    ITEMS.filter((it) => it.cat === 'ride' && owns(it.id)).forEach((it) => { const k = CAR_KIND[it.id]; out.push({ n: it.name, html: k ? carSvg(k, CAR_COL[k]) : typeof MallArt !== 'undefined' && ART2[it.id] ? ARTI(ART2[it.id]) : `<span class="art">${itemArt(it)}</span>`, v: it.price, sp: specTxt(it.id) }); });
+    if (typeof LUX !== 'undefined') (p.lux || []).forEach((id) => { const x = LUX.find((q) => q.id === id); if (x && LUXCAR[id] && typeof MallArt !== 'undefined') out.push({ n: x.n, html: ARTI(LUXCAR[id]), v: x.price }); });
+    if (p.mall && p.mall.own) Object.values(p.mall.own).forEach((x) => { if (x && typeof x === 'object' && x.cat === 'auto' && x.art && typeof MallArt !== 'undefined') out.push({ n: `${x.bn} ${x.md}`, sub: x.col, html: `<img class="vt-car k-car" alt="" loading="lazy" src="${MallArt.url(x.art)}">`, v: x.price || 0, sp: x.spec ? [`${x.spec.top} km/sa`, `${String(x.spec.acc).replace('.', ',')} sn`, `${x.spec.hp} bg`] : null }); });
+    return out.sort((a, b) => b.v - a.v);
+  }
+  Phone.garageCount = () => { try { return garageList().length; } catch (e) { return 0; } };
+  function garageView() {
+    const l = garageList(), tot = l.reduce((t, x) => t + (x.v || 0), 0);
+    return `<div class="ph-appv ph-cars ph-garage">${top('<span class="r">Garajım</span>')}<div class="ph-body">
+      <div class="ph-garh"><div><span>Araç</span><b>${l.length}</b></div><div><span>Toplam değer</span><b>${money(tot)}</b></div></div>
+      ${l.length ? `<div class="ph-garg">${l.map((x) => `<div class="ph-gcar"><div class="stage">${x.html}</div><b>${esc(x.n)}</b>${x.sub ? `<small>${esc(x.sub)}</small>` : ''}${x.sp ? `<div class="gsp"><span>${x.sp[0]}</span><span>${x.sp[2]}</span></div>` : ''}</div>`).join('')}</div>` : '<p class="ph-note">Garajın boş. Galeriden ilk aracını seç.</p>'}
+    </div></div>`;
+  }
   function carsView() {
+    if (Phone.sub === 'garage') return garageView();
     const list = ITEMS.filter((it) => it.cat === 'ride' && visible(it)).sort((a, b) => a.price - b.price);
     const locked = ITEMS.filter((it) => it.cat === 'ride' && !visible(it)).sort((a, b) => a.minAge - b.minAge).slice(0, 2);
     const card = (it) => { const k = CAR_KIND[it.id], sp = specTxt(it.id); return `<div class="ph-car"><div class="stage">${k ? carSvg(k, CAR_COL[k]) : typeof MallArt !== 'undefined' && ART2[it.id] ? ARTI(ART2[it.id]) : `<span class="art">${itemArt(it)}</span>`}${owns(it.id) ? '<span class="gar">GARAJINDA</span>' : ''}</div><div class="inf"><h4>${esc(it.name)}</h4>
         <div class="spec"><div><span>Azami hız</span><b>${sp[0]}</b></div><div><span>0-100</span><b>${sp[1]}</b></div><div><span>Motor gücü</span><b>${sp[2]}</b></div></div>
         <div class="ds">${esc(it.desc)}</div><div class="row">${buyBtn(it, 'ph-buy red')}</div></div></div>`; };
-    return `<div class="ph-appv ph-cars">${top('<span class="r">Arabalar</span>')}<div class="ph-body">${list.map(card).join('')}${locked.map(card).join('')}${typeof Mall !== 'undefined' ? '<div class="ph-secl">Garaj klasikleri</div>' : ''}${!list.length && !locked.length ? '<p class="ph-note">Şu an satışta araç yok.</p>' : ''}<p class="ph-note">Araba ve motor için ehliyet gerekir.</p>${typeof Mall !== 'undefined' ? Mall.carsHtml() : ''}</div></div>`;
+    const gn = Phone.garageCount();
+    return `<div class="ph-appv ph-cars">${top('<span class="r">Arabalar</span>', '', `<button class="ph-garb" data-ph-th="garage" type="button"><span>Garajım</span><b>${gn}</b></button>`)}<div class="ph-body">${list.map(card).join('')}${locked.map(card).join('')}${typeof Mall !== 'undefined' ? '<div class="ph-secl">Garaj klasikleri</div>' : ''}${!list.length && !locked.length ? '<p class="ph-note">Şu an satışta araç yok.</p>' : ''}<p class="ph-note">Araba ve motor için ehliyet gerekir.</p>${typeof Mall !== 'undefined' ? Mall.carsHtml() : ''}</div></div>`;
   }
   // evler Evim Emlak'ta, telefonlar TeknoPazar'da, araçlar Arabalar'da satılır; alışveriş'te hobi, eğlence ve stil kalır
   const shopExcl = () => Object.keys(HOUSE_KIND).concat(TIERS.map((t) => t.item).filter(Boolean));

@@ -626,6 +626,24 @@ const Coach = {
     return U.shuffle(pool.slice()).slice(0, n).map((c) => c[0]).sort((a, b) => Coach.base(b).rating - Coach.base(a).rating);
   },
 
+  // Sezon sonu teklifleri: önce kulüp gücüne ve itibara uygun havuz seçilir, sonra içinden 2-3 kulüp.
+  // (Eskiden önce rastgele 2 kulüp seçilip sonra eleniyordu; güçlü bir kulübe geçen hocaya hiç teklif kalmıyordu.)
+  seOffers(c, x, fired) {
+    const s = Coach.s, lvl = 46 + s.rep * 0.36, cur = c.rating, good = x.pos <= x.target;
+    const all = CLUB_LIST.filter((k) => k[0] !== s.clubId && LEAGUES.some((l) => l.id === k[3])).map((k) => ({ id: k[0], r: Coach.base(k[0]).rating }));
+    if (fired) {
+      const lo = Math.min(cur, lvl) - 12, hi = Math.min(cur, lvl) + 2;
+      const p = all.filter((k) => k.r >= lo && k.r <= hi);
+      return U.shuffle(p.length ? p : all.slice().sort((a, b) => Math.abs(a.r - lvl) - Math.abs(b.r - lvl)).slice(0, 8)).slice(0, 2).map((k) => k.id).sort((a, b) => Coach.base(b).rating - Coach.base(a).rating);
+    }
+    // başarı ve itibar ne kadar yüksekse o kadar büyük kulüpler ilgilenir
+    const hi = Math.max(cur + (x.champ ? 7 : good ? 4 : 2), lvl + 4);
+    let pool = all.filter((k) => k.r >= cur - 1 && k.r <= hi);
+    if (!pool.length) pool = all.filter((k) => k.r >= cur - 1).sort((a, b) => a.r - b.r).slice(0, 4);
+    const n = good ? 3 : 2;
+    return U.shuffle(pool).slice(0, n).map((k) => k.id).sort((a, b) => Coach.base(b).rating - Coach.base(a).rating);
+  },
+
   // ---------- sezon sonu ----------
   seasonEnd() {
     const s = Coach.s, pos = Coach.myPos(), n = s.lg.ids.length, c = Coach.my(), L = Coach.lgInfo(c.league);

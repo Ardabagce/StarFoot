@@ -397,9 +397,8 @@ Object.assign(Coach, {
     Coach._seShown = x.year;
     const c = Coach.club(x.club);
     const good = x.pos <= x.target;
-    let offers = Coach.jobOffers(s.rep, s.clubId, 2).filter((id) => Coach.base(id).rating > c.rating - 2);
     const fired = s.conf < 25 && x.pos > x.target + 2;
-    if (fired && !offers.length) offers = Coach.jobOffers(Math.max(5, s.rep - 10), s.clubId, 2);
+    let offers = Coach.seOffers(c, x, fired);
     const msg = x.champ ? 'Şampiyonluk! Taraftarlar adını tezahürat yapıyor.' : good ? 'Yönetim hedefin tutturulmasından çok memnun.' : fired ? 'Yönetim hedefin çok uzağında kaldığın için sözleşmeni uzatmıyor.' : 'Hedefin gerisinde kaldın. Yönetim gelecek sezon daha iyisini bekliyor.';
     const aw = [x.top ? `⚽ Gol kralımız: ${U.esc(x.top[0])} (${x.top[1]})` : '', x.best ? `⭐ Sezonun oyuncusu: ${U.esc(x.best[0])} (${x.best[1]})` : '', x.young ? `🌱 Sezonun genci: ${U.esc(x.young)}` : ''].filter(Boolean);
     const html = `<div class="ev-tag">${x.year} sezonu bitti</div><h2>${U.esc(c.name)}</h2>

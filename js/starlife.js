@@ -88,6 +88,7 @@ const StarLife = (() => {
     const c = destCost(x);
     if (p.money < c) return Game.toast('Yeterli paran yok.', 'bad');
     p.money -= c;
+    ledger('Tatil rezervasyonu', -c, x.n);
     t.b = { y: s.season.year, k, c };
     Game.toast(`${x.n}: rezervasyonun tamam. Sezon bitince yola çıkıyorsun!`, 'good');
     rerender();
@@ -97,6 +98,7 @@ const StarLife = (() => {
     if (!t.b || t.b.y !== s.season.year) return;
     const back = Math.round(t.b.c * 0.8);
     p.money += back;
+    ledger('Rezervasyon iadesi', back);
     t.b = null;
     Game.toast(`Rezervasyon iptal edildi. İade: ${money(back)}`, 'info');
     rerender();
@@ -109,6 +111,7 @@ const StarLife = (() => {
     if (p.money < c) return Game.toast('Yeterli paran yok.', 'bad');
     if (!useAp()) return;
     p.money -= c;
+    ledger('Hafta sonu kaçamağı', -c, x.n);
     t.gw = t.gw && t.gw.y === s.season.year ? t.gw : { y: s.season.year, n: 0 };
     t.gw.n++;
     const r = fx(x.fx);
@@ -201,9 +204,10 @@ const StarLife = (() => {
     if (p.money < c) return Game.toast('Yeterli paran yok.', 'bad');
     if (!useAp()) return;
     p.money -= c;
+    if (c) ledger('Davet masrafı', -c, x.n);
     m.went = key;
     let res = fx(x.fx);
-    if (x.pay) { const a = adPay(); p.money += a; res += ` · +${money(a)}`; }
+    if (x.pay) { const a = adPay(); p.money += a; ledger('Reklam ücreti', a); res += ` · +${money(a)}`; }
     if (x.scandal && U.chance(x.scandal)) {
       Player.addRel(p, 'coach', -8); Player.addRel(p, 'fans', -4);
       headline(`${fullName()} partiden sabaha karşı çıkarken görüntülendi. Hoca memnun değil.`, 'bad');
@@ -327,6 +331,7 @@ const StarLife = (() => {
     const c = price(x.usd);
     if (p.money < c) return Game.toast('Yeterli paran yok.', 'bad');
     p.money -= c;
+    ledger('Yatırım', -c, x.n);
     d.own[k] = { v: usdOf(c), since: s.season.year, last: 0, tot: 0 };
     bizLog(`${x.n}: satın aldın`, -c);
     headline(k === 'academy' ? `${fullName()} memleketinde çocuklar için futbol akademisi açtı` : k === 'brand' ? `${fullName()} kendi giyim markasını kurdu` : k === 'boots' ? `${fullName()} için imza krampon serisi geliyor` : k === 'stake' ? `${fullName()} çocukluk kulübüne ortak oldu` : `${fullName()} iş dünyasında: ${x.n}`, 'good');
@@ -343,7 +348,7 @@ const StarLife = (() => {
       { t: 'Vazgeç', cls: 'btn-ghost' },
       { t: 'Sat', cls: 'btn-big', fn: () => {
         if (!d.own[k]) return;
-        p.money += amt; delete d.own[k];
+        p.money += amt; delete d.own[k]; ledger('İşletme satışı', amt, x.n);
         bizLog(`${x.n}: sattın`, amt);
         Game.toast(`${x.n} satıldı: +${money(amt)}`, 'good');
         rerender();
@@ -434,6 +439,7 @@ const StarLife = (() => {
     if (!useAp()) return;
     const a = bookAdv(t);
     p.money += a;
+    ledger('Kitap avansı', a);
     lg.book = { t, y: Game.state.season.year };
     const r = fx(b.fx);
     headline(`Otobiyografi raflarda: ${fullName()}, "${b.title}"`, t === 'bold' ? 'bad' : 'good');
@@ -490,6 +496,136 @@ const StarLife = (() => {
   }
 
   // =====================================================================
+  // 5) BANKA HAREKETLERİ: maaş, sponsor, menajer payı, yatırım, ek iş, alışveriş; açıklanamayan fark "Prim ve diğer gelirler" / "Diğer harcamalar"
+  // =====================================================================
+  const BK = () => { const p = P(); p.sl = p.sl || {}; return (p.sl.bk = p.sl.bk || { log: [], bal: null }); };
+  function ledger(t, a, sub) {
+    try {
+      if (!Game.state || !Game.p || !a) return;
+      const b = BK(), s = Game.state;
+      a = Math.round(a);
+      // ilk kayıtta bakiye, bu hareketten önceki duruma göre başlatılır (para zaten değişti)
+      if (b.bal == null) b.bal = P().money - a;
+      b.log.unshift({ y: s.season.year, r: s.season.round, t, a, s: sub || undefined });
+      if (b.log.length > 40) b.log.length = 40;
+      b.bal += a;
+    } catch (e) { /* yok */ }
+  }
+  // kayıt dışı kalan para hareketlerini tek satırda topla
+  function reconcile() {
+    const p = P(), b = BK();
+    if (b.bal == null) { b.bal = p.money; return; }
+    const d = Math.round(p.money - b.bal);
+    if (Math.abs(d) >= 1) { ledger(d > 0 ? 'Prim ve diğer gelirler' : 'Diğer harcamalar', d); }
+    b.bal = p.money;
+  }
+  function bankTx() {
+    if (!has('bk')) return '';
+    const l = P().sl.bk.log;
+    if (!l.length) return '';
+    return `<div class="ph-secl">Hesap hareketleri</div><div class="sl-tx">${l.slice(0, 25).map((x) => `<div><span class="d"><span>${x.y}</span> · <span>${x.r + 1}. hafta</span></span><span class="t"><b>${esc(x.t)}</b>${x.s ? `<small>${esc(x.s)}</small>` : ''}</span><em class="${x.a >= 0 ? 'pos' : 'neg'}">${x.a >= 0 ? '+' : ''}${money(x.a)}</em></div>`).join('')}</div>`;
+  }
+
+  // =====================================================================
+  // 6) EK İŞ: yaşa göre küçük işler; ücretsiz oyuncu haftada bir kez 1/3/5 reklamla, Premium 1/2/3 aksiyonla
+  // =====================================================================
+  const JOBS = {
+    kid: [
+      [['dog', '🐕', 'Komşunun köpeğini gezdir', 'Bir saatlik yürüyüş, komşu teyze çok memnun.'], ['shelf', '🛒', 'Bakkalda raf düzenle', 'Mahalle bakkalına yardım, harçlık cepte.']],
+      [['wash', '🧽', 'Mahallede araba yıka', 'Kova, sünger ve bol köpük. Üç araba temizlendi.'], ['ballboy', '⚽', 'Halı sahada top topla', 'Akşam maçlarında top toplayıcılık.']],
+      [['mascot', '🦁', 'Turnuvada maskot ol', 'Hafta sonu turnuvasında maskot kostümüyle tribünleri coşturdun.'], ['campkid', '⛺', 'Yaz kampında yardımcılık', 'Küçük çocuklara top sürmeyi gösterdin.']],
+    ],
+    teen: [
+      [['cafe', '☕', 'Kafede garsonluk', 'Hafta sonu yoğun bir vardiya.'], ['cargo', '📦', 'Kargo dağıtımı', 'Bisikletle mahalle mahalle paket dağıttın.']],
+      [['lesson', '👟', 'Çocuklara futbol dersi', 'Küçüklere pas ve şut çalıştırdın.'], ['shop', '🏷️', 'Spor mağazasında tezgâhtarlık', 'Krampon denemek isteyen çok müşteri vardı.']],
+      [['assist', '📋', 'Futbol okulunda yardımcı antrenör', 'Bütün gün antrenman, ödevler ve maç.'], ['extra', '🎬', 'Reklam filminde figüranlık', 'Uzun bir çekim günü, sonunda kamera karşısındaydın.']],
+    ],
+    pro: [
+      [['sign', '✍️', 'İmza günü', 'Bir alışveriş merkezinde iki saat imza ve fotoğraf.'], ['post', '📱', 'Sponsorlu paylaşım', 'Bir markanın ürünüyle kısa bir video çektin.']],
+      [['guest', '🧢', 'Futbol okulunda konuk antrenör', 'Çocuklarla bir gün geçirdin, hepsi imza istedi.'], ['game', '🎮', 'Video oyunu tanıtımı', 'Yeni bir futbol oyununun tanıtımında oynadın.']],
+      [['talk', '🎤', 'Kurumsal etkinlikte konuşma', 'Bir şirketin çalışanlarına başarı hikâyeni anlattın.'], ['voice', '🎙️', 'Belgesel seslendirmesi', 'Bir spor belgeselinin anlatıcısı oldun.']],
+    ],
+  };
+  const ADS = [1, 3, 5], APN = [1, 2, 3], EN = [6, 12, 18];
+  const isPrem = () => typeof Premium !== 'undefined' && !!Premium.active;
+  const ageGrp = () => { const a = P().age; return a <= 12 ? 'kid' : a <= 17 ? 'teen' : 'pro'; };
+  function jobPay(t) {
+    const g = ageGrp(), usd = { kid: [12, 35, 70], teen: [30, 80, 160], pro: [120, 300, 550] }[g][t];
+    let v = price(usd);
+    if (g === 'pro') { try { const w = Game.weeklyIncome() || 0; v = Math.max(v, Math.round(w * [0.06, 0.15, 0.27][t])); } catch (e) { /* yok */ } }
+    return v;
+  }
+  function jobList() {
+    const g = ageGrp(), h = seedOf(wkKey() + '|job|' + (P().name || ''));
+    return JOBS[g].map((pair, t) => { const j = pair[(h >>> (t * 3)) % 2]; return { k: j[0], ic: j[1], n: j[2], d: j[3], t, pay: jobPay(t), en: EN[t] }; });
+  }
+  const JD = () => { const d = D(); d.jb = d.jb || {}; return d.jb; };
+  const jobDone = () => { const j = has('jb') && P().sl.jb; return !!(j && j.wk === wkKey() && j.n > 0); };
+  const jobProg = () => { const j = has('jb') && P().sl.jb; return j && j.pr && j.pr.wk === wkKey() ? j.pr : null; };
+  function jobBlock() {
+    const p = P();
+    if (p.injuryWeeks > 0) return 'Sakatken ek işe gidemezsin.';
+    if (!isPrem() && jobDone()) return 'Bu hafta ek işini yaptın. Gelecek hafta yeni işler gelir.';
+    return '';
+  }
+  function finishJob(x) {
+    const p = P(), j = JD(), s = Game.state;
+    j.n = (j.wk === wkKey() ? (j.n || 0) : 0) + 1; j.wk = wkKey(); j.pr = null;
+    j.tot = (j.tot || 0) + x.pay; j.cnt = (j.cnt || 0) + 1;
+    p.money += x.pay;
+    ledger('Ek iş', x.pay, x.n);
+    Player.addEnergy(p, -x.en);
+    Game.toast(`${x.ic} ${x.n} · +${money(x.pay)} · Enerji -${x.en}`, 'good');
+    if (s) Game.save();
+    if (typeof Phone !== 'undefined' && Phone.open) Phone.render();
+  }
+  let adBusy = false;
+  async function doJob(k) {
+    const x = jobList().find((q) => q.k === k), p = P();
+    if (!x || adBusy) return;
+    const blk = jobBlock();
+    if (blk) return Game.toast(blk, 'bad');
+    if (p.energy < x.en) return Game.toast('Bu iş için enerjin yetmiyor.', 'bad');
+    if (isPrem()) {
+      const s = Game.state;
+      if (s.ap < APN[x.t]) return Game.toast(`Bu iş için ${APN[x.t]} aksiyon hakkı gerekiyor.`, 'bad');
+      s.ap -= APN[x.t];
+      return finishJob(x);
+    }
+    // ücretsiz oyuncu: reklamları sırayla izler; yarıda kalırsa kaldığı yerden devam eder
+    const j = JD(), need = ADS[x.t];
+    let pr = jobProg();
+    if (!pr || pr.k !== k) pr = j.pr = { wk: wkKey(), k, n: 0 };
+    adBusy = true;
+    try {
+      while (pr.n < need) {
+        const ok = await Ads.show();
+        if (!ok) { Game.toast('Reklam tamamlanmadı. Kaldığın yerden devam edebilirsin.', 'bad'); break; }
+        pr.n++;
+        Game.save();
+        if (typeof Phone !== 'undefined' && Phone.open && Phone.app === 'jobs') Phone.render();
+      }
+    } finally { adBusy = false; }
+    if (pr.n >= need) finishJob(x);
+  }
+  function jobsView() {
+    const p = P(), prem = isPrem(), s = Game.state, blk = jobBlock(), pr = jobProg(), j = has('jb') ? P().sl.jb : {};
+    const card = (x) => {
+      const prog = !prem && pr && pr.k === x.k ? pr.n : 0;
+      const cost = prem ? `<span>${APN[x.t]}</span> <span>aksiyon</span>` : prog ? `<span>Reklam</span> <span>${prog}/${ADS[x.t]}</span>` : `<span>${ADS[x.t]}</span> <span>reklam izle</span>`;
+      const dis = blk || p.energy < x.en || (prem && s.ap < APN[x.t]) || (!prem && pr && pr.k !== x.k && pr.n > 0);
+      return `<div class="sl-job t${x.t}"><span class="ic">${x.ic}</span><div class="sl-cb"><b>${x.n}</b><small>${x.d}</small><div class="sl-chips"><span class="sl-chip pos"><i>Kazanç</i> <b>${money(x.pay)}</b></span><span class="sl-chip neg"><i>Enerji</i> <b>-${x.en}</b></span></div>
+        <div class="sl-pr"><span></span><button class="sl-btn" data-sl="job:${x.k}" type="button" ${dis ? 'disabled' : ''}>${prem ? '⭐ ' : '▶ '}${cost}</button></div></div></div>`;
+    };
+    return `<div class="ph-appv sl sl-jb">${Phone.ui.top('Ek İş')}<div class="ph-body">
+      <div class="sl-port jb"><small>Ek iş</small><b>${money(j.tot || 0)}</b><span><span>Toplam kazanç</span> · <span>${j.cnt || 0}</span> <span>iş</span></span></div>
+      <div class="sl-note">${prem ? '⭐ Premium: reklam yok, işler aksiyon hakkıyla yapılır.' : 'Haftada bir ek iş yapabilirsin. Büyük işler daha çok reklam ister ama daha çok kazandırır.'}</div>
+      ${blk ? `<div class="sl-empty">${blk}</div>` : ''}
+      ${sec('Bu haftanın işleri', 'Her hafta yenilenir')}${jobList().map(card).join('')}
+      </div></div>`;
+  }
+
+  // =====================================================================
   // telefon bağlantıları
   // =====================================================================
   const svg = (inner) => `<svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${inner}</svg>`;
@@ -497,6 +633,7 @@ const StarLife = (() => {
     { k: 'travel', n: 'Seyahat', bg: 'linear-gradient(135deg,#27c4e8,#0a6fb5)', ic: svg('<path d="M3 15l18-7-4 10-5-3-3 4v-5"/><path d="M12 15l9-7"/>'), on, view: travelView },
     { k: 'mag', n: 'Magazin', bg: 'linear-gradient(135deg,#ff4f7b,#b0124a)', ic: svg('<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/><circle cx="16" cy="16" r="1.4" fill="#fff"/>'), on: () => on() && P().fame >= 10, badge: () => { const m = has('mg') && P().sl.mg; return (m && m.unread ? Math.min(9, m.unread) : 0) + (m && m.cr ? 1 : 0); }, view: magView },
     { k: 'biz', n: 'Yatırım', bg: 'linear-gradient(135deg,#2bc48a,#0b6b49)', ic: svg('<path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/><path d="M4 9l6-4 6 7 5-5"/>'), on, view: bizView },
+    { k: 'jobs', n: 'Ek İş', bg: 'linear-gradient(135deg,#ffb347,#e2611a)', ic: svg('<rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2M3 13h18M11 13v2h2v-2"/>'), on: () => { try { return !!(Game.state && Game.state.player && Game.state.contract); } catch (e) { return false; } }, badge: () => (jobDone() || jobBlock() ? 0 : 1), view: jobsView },
     { k: 'legacy', n: 'Miras', bg: 'linear-gradient(135deg,#d9b25a,#7a5416)', ic: svg('<path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19l1-5.8L3.5 9.2l5.9-.9z"/>'), on: () => on() && P().age >= 21, view: legView },
   ];
   function install() {
@@ -508,10 +645,11 @@ const StarLife = (() => {
     Phone.extClick = (b) => {
       const v = b.dataset.sl || '';
       const [c, arg] = v.split(':');
-      const map = { tr: () => book(arg), trx: cancelTrip, gw: () => getaway(arg), inv: () => attend(arg), cr: () => crisisAct(arg), bb: () => bizBuy(arg), bs: () => bizSell(arg), bk: () => writeBook(arg), tv: signPundit };
+      const map = { tr: () => book(arg), trx: cancelTrip, gw: () => getaway(arg), inv: () => attend(arg), cr: () => crisisAct(arg), bb: () => bizBuy(arg), bs: () => bizSell(arg), bk: () => writeBook(arg), tv: signPundit, job: () => doJob(arg) };
       if (map[c]) return map[c]();
       if (prevClick) return prevClick(b);
     };
+    Phone.bankTx = () => { try { return bankTx(); } catch (e) { return ''; } };
     const prevBank = Phone.bankExtra;
     Phone.bankExtra = () => {
       let h = prevBank ? prevBank() : '';
@@ -523,8 +661,24 @@ const StarLife = (() => {
     // haftalık: işletmeler her hafta; manşetler lig haftalarında
     const aw = Game.advanceWeek;
     Game.advanceWeek = function (intl) {
-      try { if (on()) { bizWeek(); if (!intl && P().fame >= 10) magWeek(); } } catch (e) { console.error(e); }
-      return aw.apply(this, arguments);
+      let pay = null;
+      try {
+        if (Game.state && Game.p) {
+          reconcile();
+          const p = P(), inc = Game.weeklyIncome();
+          pay = { inc, sp: !intl && typeof Life !== 'undefined' ? Life.sponsorIncome(p) : 0, cut: !intl && typeof Life !== 'undefined' ? Life.managerCut(p) : 0 };
+        }
+        if (on()) { const m0 = P().money; bizWeek(); const d = P().money - m0; if (d) ledger('Yatırım geliri', d); if (!intl && P().fame >= 10) magWeek(); }
+      } catch (e) { console.error(e); }
+      const r = aw.apply(this, arguments);
+      try {
+        if (pay && Game.state && Game.p) {
+          if (pay.inc) ledger(Game.isYouth() ? 'Harçlık' : 'Maaş', pay.inc);
+          if (pay.sp) ledger('Sponsor geliri', pay.sp);
+          if (pay.cut) ledger('Menajer payı', -pay.cut);
+        }
+      } catch (e) { console.error(e); }
+      return r;
     };
     // sezon arası tatil
     const sns = Game.startNewSeason;
@@ -546,5 +700,5 @@ const StarLife = (() => {
     };
   }
   install();
-  return { DEST, GETAWAY, INV, BIZ, BOOK, invites, tripApply, bizWeek, magWeek, retireBlock, clubStats, price, on };
+  return { ledger, reconcile, jobList, doJob, JOBS, DEST, GETAWAY, INV, BIZ, BOOK, invites, tripApply, bizWeek, magWeek, retireBlock, clubStats, price, on };
 })();

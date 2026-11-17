@@ -2355,6 +2355,7 @@ ${UI.paper()}`;
       // araba ve motor için önce ehliyet (1.0.19)
       if (typeof LifeX !== 'undefined' && LifeX.needLicense(it)) return Game.modal(`<h3>🚗 Önce ehliyet almalısın</h3><p>${U.esc(it.name)} kullanmak için ehliyet gerekiyor. Sınav 3 sorudan oluşuyor.</p>`, [{ t: 'Vazgeç', cls: 'btn-ghost' }, { t: 'Sınava gir', cls: 'btn-big', fn: () => LifeX.licenseExam((ok) => { if (ok) b.click(); else Game.render(); }) }]);
       p.money -= it.price;
+      if (typeof StarLife !== 'undefined') StarLife.ledger('Alışveriş', -it.price, it.name);
       p.items.push(it.id);
       if (it.cat === 'boots') { p.wear = p.wear || {}; p.wear[it.id] = U.randi(30, 40); }
       if (it.skin) p.ballSkin = it.skin;

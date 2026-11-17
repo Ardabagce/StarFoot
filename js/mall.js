@@ -229,6 +229,7 @@ const Mall = (() => {
     }
     const ef = effect(it);
     p.money -= it.price;
+    if (typeof StarLife !== 'undefined') StarLife.ledger(it.t === 'car' ? 'Araç alımı' : it.t === 'house' ? 'Ev alımı' : 'Vitrin', -it.price, `${it.bn} ${it.md}`);
     const m = D();
     // kalıcı katalog ürünleri yalnız yıl saklar; sezonluk ürünler, araçlar ve evler kısa özetle saklanır (kayıt küçük kalır)
     m.own[id] = it.tag || it.cat === 'auto' || it.cat === 'estate' ? { y: s.season.year, b: it.b, bn: it.bn, seg: it.seg, t: it.t, tn: it.tn, cat: it.cat, md: it.md, col: it.col, art: it.art, price: it.price, spec: it.spec } : s.season.year;
