@@ -11,10 +11,16 @@ const Sfx = {
   loadSamples() {
     if (Sfx._loading || !Sfx.ctx || location.protocol === 'file:') return;
     Sfx._loading = true;
-    ['crowd', 'goal', 'cheer'].forEach((k) => {
-      fetch(`snd/${k}.mp3`).then((r) => r.arrayBuffer()).then((a) => new Promise((ok, no) => Sfx.ctx.decodeAudioData(a, ok, no)))
-        .then((b) => { Sfx.buf[k] = b; if (k === 'crowd' && Sfx._cr && Sfx._cr.synth) Sfx.crowd(true, Sfx._cr.quiet); }).catch(() => {});
+    // Safari decodeAudioData hem geri çağırma alır hem promise döndürür: çözme başarısız olunca dönen promise de
+    // reddedilir. O da yakalanmazsa "Decoding failed" yakalanmamış hata olarak düşer. İkisi de burada yakalanır;
+    // başarısız olursa bir kez daha denenir, olmazsa sentez sesler kullanılır.
+    const decode = (a) => new Promise((ok, no) => {
+      try { const p = Sfx.ctx.decodeAudioData(a, ok, no); if (p && typeof p.then === 'function') p.then(ok, no); } catch (e) { no(e); }
     });
+    const load = (k, left) => fetch(`snd/${k}.mp3`).then((r) => (r.ok ? r.arrayBuffer() : Promise.reject(new Error('http ' + r.status)))).then(decode)
+      .then((b) => { Sfx.buf[k] = b; if (k === 'crowd' && Sfx._cr && Sfx._cr.synth) Sfx.crowd(true, Sfx._cr.quiet); })
+      .catch(() => { if (left > 0) setTimeout(() => { load(k, left - 1).catch(() => {}); }, 4000); });
+    ['crowd', 'goal', 'cheer'].forEach((k) => { load(k, 1).catch(() => {}); });
   },
   // tribün yoğunluğu: oyuncunun yıldızlığına ve maçın önemine göre (0 boş, 1 dolu stadyum)
   lvl() { return typeof Sprites !== 'undefined' && Sprites.atmo ? U.clamp(Sprites.atmo.lvl, 0, 1) : 0.6; },

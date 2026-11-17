@@ -268,7 +268,12 @@ const ScreenGuard = {
   },
   init() {
     window.addEventListener('error', (e) => { ScreenGuard.report(e.message, e.filename, e.lineno, e.error); setTimeout(ScreenGuard.heal, 60); });
-    window.addEventListener('unhandledrejection', (e) => { const r = e.reason; ScreenGuard.report(r && (r.message || r), 'promise', 0, r); setTimeout(ScreenGuard.heal, 60); });
+    window.addEventListener('unhandledrejection', (e) => {
+      const r = e.reason, msg = String((r && (r.message || r.name)) || r || '');
+      // ses çözme/çalma reddi zararsızdır (yedek sentez ses var): ekran onarımı ve hata kaydı gerekmez
+      if (/decod|EncodingError|NotAllowedError|NotSupportedError|AbortError|play\(\) request|interrupted/i.test(msg) || (r && /^(EncodingError|NotAllowedError|NotSupportedError|AbortError)$/.test(r.name || ''))) { try { e.preventDefault(); } catch (x) { /* yok */ } return; }
+      ScreenGuard.report(r && (r.message || r), 'promise', 0, r); setTimeout(ScreenGuard.heal, 60);
+    });
     document.addEventListener('visibilitychange', () => { if (!document.hidden) ScreenGuard.repaint(); });
     // iOS'ta çizim alanlarının (canvas) toplam bellek sınırı var; sayfadan kaldırılan canvas'lar hemen boşalmıyor
     // ve sınır dolunca getContext null dönüyor. Sayfadan çıkan canvas'ın belleği sıfırlanır.
