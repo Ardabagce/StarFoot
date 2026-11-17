@@ -186,6 +186,31 @@ def datasafety(a):
     print('TAMAM: Veri güvenliği formu güncellendi')
 
 
+def vitals(a):
+    # ANR ve kilitlenme kümeleri + örnek yığın izleri (Play Developer Reporting API)
+    raw = os.environ.get('PLAY_SERVICE_ACCOUNT_JSON', '').strip()
+    cred = service_account.Credentials.from_service_account_info(
+        json.loads(raw), scopes=['https://www.googleapis.com/auth/playdeveloperreporting'])
+    cred.refresh(Request())
+    s = requests.Session()
+    s.headers['Authorization'] = 'Bearer ' + cred.token
+    R = f'https://playdeveloperreporting.googleapis.com/v1beta1/apps/{PKG}'
+    for t in ('APPLICATION_NOT_RESPONDING', 'CRASH'):
+        r = s.get(f'{R}/errorIssues:search', params={'filter': f'errorIssueType = {t}', 'pageSize': 15,
+                  'interval.startTime.year': 2026, 'interval.startTime.month': 10, 'interval.startTime.day': 20})
+        if not r.ok:
+            print('HATA', t, r.status_code, r.text[:800]); continue
+        for i in r.json().get('errorIssues', []):
+            print('==', t, i.get('errorReportCount'), i.get('distinctUsers'), i.get('cause'), '|', i.get('location'), i.get('lastAppVersion', {}))
+    r = s.get(f'{R}/errorReports:search', params={'filter': 'errorIssueType = APPLICATION_NOT_RESPONDING', 'pageSize': 6,
+              'interval.startTime.year': 2026, 'interval.startTime.month': 10, 'interval.startTime.day': 20})
+    if not r.ok:
+        print('HATA raporlar', r.status_code, r.text[:800]); return
+    for x in r.json().get('errorReports', []):
+        print('#### rapor', x.get('appVersion'), x.get('deviceModel', {}).get('marketingName'), x.get('osVersion'))
+        print('\n'.join(x.get('reportText', '').splitlines()[:70]))
+
+
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest='cmd', required=True)
@@ -199,5 +224,6 @@ if __name__ == '__main__':
     sub.add_parser('check')
     sub.add_parser('listing')
     sub.add_parser('datasafety')
+    sub.add_parser('vitals')
     a = ap.parse_args()
-    {'upload': upload, 'products': products, 'check': check, 'listing': listing, 'datasafety': datasafety}[a.cmd](a)
+    {'upload': upload, 'products': products, 'check': check, 'listing': listing, 'datasafety': datasafety, 'vitals': vitals}[a.cmd](a)
