@@ -101,7 +101,8 @@ const SaveBak = {
     if (!SaveBak.ok(key) || !SaveBak.fs()) return;
     if (val != null) SaveBak.vals[key] = val; else delete SaveBak.vals[key];
     clearTimeout(SaveBak.timers[key]);
-    SaveBak.timers[key] = setTimeout(() => SaveBak.write(key), 4000);
+    // Durable kalıcı kaydı da aynı kariyeri yazıyor; bu ikinci kopya daha seyrek yazılır (arka plana geçerken hemen yazılır)
+    SaveBak.timers[key] = setTimeout(() => SaveBak.write(key), 15000);
   },
   async write(key) {
     const F = SaveBak.fs(); if (!F) return;
@@ -166,7 +167,8 @@ const Durable = {
     if (k.startsWith(Durable.T)) return;
     Durable.dirty[k] = 1;
     clearTimeout(Durable.timer);
-    Durable.timer = setTimeout(() => Durable.save(), 1500);
+    // dosya yazımı köprü üzerinden gider; sık yazım zayıf Android cihazlarda ANR'ye yol açabiliyor (arka plana geçerken zaten hemen yazılır)
+    Durable.timer = setTimeout(() => Durable.save(), 4000);
   },
   ls() { const o = {}; try { for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); if (k && !k.startsWith(Durable.T)) o[k] = localStorage.getItem(k); } } catch (e) { /* yok */ } return o; },
   async readJSON(path) {
