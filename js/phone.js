@@ -618,6 +618,7 @@
     );
     if (typeof Star !== 'undefined' && !Game.inStreet() && (hasStar() || sellable())) out.push({ k: 'lux', n: 'Lüks', bg: 'linear-gradient(150deg,#2b2213,#0d0a05)' });
     if (typeof Diamond !== 'undefined' && Diamond.enabled() && (hasDia() || sellable())) out.push({ k: 'dia', n: 'Diamond', bg: 'linear-gradient(150deg,#123a6b,#061833)' });
+    (Phone.ext || []).forEach((a) => { try { if (!a.on || a.on()) out.push(a); } catch (e) { /* yok */ } });
     out.push({ k: 'prem', n: 'StarFoot+', bg: 'linear-gradient(140deg,#fff1b8,#ffcf3f 45%,#c98a06)' }, { k: 'set', n: 'Ayarlar', bg: 'linear-gradient(135deg,#8a93a6,#4b5363)' });
     return out;
   }
@@ -629,10 +630,11 @@
   ];
   function appIcon(a) {
     const L = Phone.p().life || {};
-    const badge = a.k === 'msg' ? unread() : a.k === 'agent' ? (L.offers || []).length : a.k === 'life' ? (L.babyNew ? 1 : 0) : 0;
+    let badge = a.k === 'msg' ? unread() : a.k === 'agent' ? (L.offers || []).length : a.k === 'life' ? (L.babyNew ? 1 : 0) : 0;
+    if (a.badge) try { badge = a.badge() || 0; } catch (e) { badge = 0; }
     const lk = LOCK[a.k] && LOCK[a.k]();
     const td = today();
-    const ic = a.k === 'cal' ? calIcon(td.getDate(), WD[mon(td)].toUpperCase()) : IC[a.k];
+    const ic = a.k === 'cal' ? calIcon(td.getDate(), WD[mon(td)].toUpperCase()) : a.ic || IC[a.k];
     return `<button class="ph-app" data-ph-open="${a.k}" type="button" aria-label="${a.n}"><span class="ph-ic" style="background:${a.bg}">${ic}${badge ? `<span class="ph-badge">${badge}</span>` : ''}${lk ? `<span class="ph-lk">${IC.lock}</span>` : ''}</span><span class="ph-an">${a.n}</span></button>`;
   }
   function homeView() {
@@ -665,7 +667,7 @@
     const worth = assets.reduce((t, x) => t + x.price, 0);
     return `<div class="ph-appv ph-bank">${top('Banka')}<div class="ph-body">
       <div class="ph-bal"><span>Vadesiz hesap</span><b>${money(p.money)}</b><small>${esc(Player.fullName(p))}</small></div>
-      <div class="ph-inc"><div><span>Haftalık maaş</span><b class="pos">${money(inc)}</b></div><div><span>Sponsor geliri</span><b class="pos">${money(sp)}</b></div><div><span>Menajer payı</span><b class="${cut ? 'neg' : ''}">${cut ? '-' + money(cut) : '—'}</b></div><div><span>Haftalık net</span><b class="pos">${money(inc + sp - cut)}</b></div></div>
+      ${Phone.bankExtra ? Phone.bankExtra() : ''}<div class="ph-inc"><div><span>Haftalık maaş</span><b class="pos">${money(inc)}</b></div><div><span>Sponsor geliri</span><b class="pos">${money(sp)}</b></div><div><span>Menajer payı</span><b class="${cut ? 'neg' : ''}">${cut ? '-' + money(cut) : '—'}</b></div><div><span>Haftalık net</span><b class="pos">${money(inc + sp - cut)}</b></div></div>
       <div class="ph-secl">Varlıkların</div>
       ${assets.length ? assets.map((it) => `<div class="ph-tx"><span class="ph-ti">${itemArt(it)}</span><span>${esc(it.name)}<small>${esc(it.desc)}</small></span><b>${money(it.price)}</b></div>`).join('') + `<div class="ph-tx tot"><span></span><span>Toplam değer</span><b>${money(worth)}</b></div>` : '<p class="ph-note">Henüz ev, araba ya da lüks bir eşyan yok. Evim Emlak ve Arabalar uygulamalarına göz at.</p>'}
     </div></div>`;
@@ -730,7 +732,9 @@
   }
   // evler Evim Emlak'ta, telefonlar TeknoPazar'da, araçlar Arabalar'da satılır; alışveriş'te hobi, eğlence ve stil kalır
   const shopExcl = () => Object.keys(HOUSE_KIND).concat(TIERS.map((t) => t.item).filter(Boolean));
+  Phone.shopExcl = () => shopExcl();
   function shopView() {
+    if (typeof Mall !== 'undefined') return Mall.view();
     return `<div class="ph-appv ph-shop">${top('Alışveriş')}<div class="ph-body"><div class="ph-promo"><b>Yıldız indirimi</b><small>Hobi, eğlence, stil ve lüks ürünler</small></div>${UI.shop({ tabs: ['lux'], luxCats: ['life', 'style'], excl: shopExcl(), title: 'Yaşam Tarzı' })}</div></div>`;
   }
   function sportView() {
@@ -1002,7 +1006,7 @@
     </div></div>`;
   }
   const VIEWS = { feed: feedView, wiki: wikiView, bank: bankView, cal: calView, agent: agentView, emlak: emlakView, cars: carsView, shop: shopView, sport: sportView, life: lifeView, stat: statView, school: schoolView, lux: luxView, dia: diaView, store: storeView, prem: premView, set: setView };
-  const LIGHT = ['wiki', 'cal', 'store', 'shop', 'school'];
+  const LIGHT = ['wiki', 'cal', 'store', 'school'];
 
   // ---------------- çizim ve olaylar ----------------
   Phone.render = function () {
@@ -1019,7 +1023,7 @@
     try {
       if (!Phone.app) html = homeView();
       else if (Phone.app === 'msg') html = Phone.sub ? chatView(Phone.sub) : msgList();
-      else html = (VIEWS[Phone.app] || homeView)();
+      else html = (VIEWS[Phone.app] || (Phone.views && Phone.views[Phone.app]) || homeView)();
     } catch (e) { console.error(e); Phone.app = null; Phone.sub = null; html = homeView(); }
     const v = scr.querySelector('.ph-view');
     v.innerHTML = statusBar(LIGHT.includes(Phone.app)) + html;
@@ -1037,7 +1041,7 @@
   };
   function bind(v) {
     const on = (sel, fn) => v.querySelectorAll(sel).forEach((b) => (b.onclick = (e) => fn(b, e)));
-    on('[data-ph-open]', (b) => { Phone.app = b.dataset.phOpen; Phone.sub = null; Phone.day = null; Phone.month = null; Phone.story = null; Phone.render(); });
+    on('[data-ph-open]', (b) => { if (b.dataset.phOpen === 'shop' && typeof Mall !== 'undefined') Mall.reset(); Phone.app = b.dataset.phOpen; Phone.sub = null; Phone.day = null; Phone.month = null; Phone.story = null; Phone.render(); });
     on('[data-ph-back]', () => { Phone.story = null; if (Phone.sub) Phone.sub = null; else Phone.app = null; Phone.render(); });
     on('[data-ph-th]', (b) => { Phone.sub = b.dataset.phTh; Phone.render(); });
     on('[data-ph-chat]', (b) => { Phone.app = 'msg'; Phone.sub = b.dataset.phChat; Phone.render(); });
@@ -1054,6 +1058,7 @@
       Game.save(); Phone.render();
     });
     on('[data-ph-rep]', (b) => reply(+b.dataset.phRep));
+    on('[data-sl]', (b) => { try { if (Phone.extClick) Phone.extClick(b); } catch (e) { console.error(e); } });
     on('[data-ph-ibtn]', (b) => { const [id, i] = b.dataset.phIbtn.split(':'); Inbox.resolve(id, +i); });
     on('[data-ph-day]', (b) => { Phone.day = b.dataset.phDay; Phone.render(); });
     on('[data-ph-mon]', (b) => {
@@ -1187,6 +1192,7 @@
     },
   };
   Phone.inbox = Inbox;
+  Phone.ui = { top: (t, c, r) => top(t, c, r), esc: (x) => esc(x), money: (n) => money(n), nextMatch: () => nextMatch() };
   Phone.contacts = () => contacts(); Phone.writes = (c) => writes(c);
   const midFn = () => { if (typeof School !== 'undefined') School.exam('mid').then(() => { Game.save(); Game.render(); }); };
   // zincir: yakalama sırasında oyunun "sıradaki bekleyen" çağrısı ertelenir, olay kaydedilince devam eder

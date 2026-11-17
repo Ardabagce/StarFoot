@@ -2359,7 +2359,7 @@ ${UI.paper()}`;
       if (it.cat === 'boots') { p.wear = p.wear || {}; p.wear[it.id] = U.randi(30, 40); }
       if (it.skin) p.ballSkin = it.skin;
       if (['life', 'ride', 'style'].includes(it.cat) && it.price >= 1000) Social.post('life', `Kendime küçük bir hediye: ${it.name}.`, 1.2);
-      if (it.fame) Player.addFame(p, it.fame);
+      if (it.fame) Player.addFame(p, typeof Mall !== 'undefined' ? Mall.fameFor(it.fame) : it.fame);
       Ach.check();
       Game.toast(`${it.name} satın alındı`, 'good');
       Game.save();
