@@ -53,6 +53,10 @@ on:
         description: 'Game Center: başarımlar ve liderlik tabloları (store/asc/gamecenter.json)'
         type: boolean
         default: false
+      sales:
+        description: 'Satış raporu: vendor numarası (Ödemeler ve Finansal Raporlar sayfasının sol üstünde); son 30 gün'
+        required: false
+        default: ''
       remove_locales:
         description: 'Düzenlenen sürümden silinecek diller (ör. it,id,ar-SA)'
         required: false
@@ -91,5 +95,6 @@ jobs:
           [ "${{ inputs.iap }}" = "submit" ] && ARGS="$ARGS --submit-packs"
           [ "${{ inputs.iap }}" = "resubmit" ] && ARGS="$ARGS --iap-resubmit"
           [ "${{ inputs.iap }}" = "unsubmit" ] && ARGS="$ARGS --unsubmit-packs"
+          [ -n "${{ inputs.sales }}" ] && ARGS="$ARGS --sales ${{ inputs.sales }}"
           [ -n "${{ inputs.remove_locales }}" ] && ARGS="$ARGS --remove-locales ${{ inputs.remove_locales }}"
           python -u tools/asc/asc.py $ARGS

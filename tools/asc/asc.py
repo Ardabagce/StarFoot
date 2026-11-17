@@ -1000,6 +1000,61 @@ def gamecenter_setup(asc, app_id, cfg):
         sys.exit('Sorun çıkanlar: ' + ', '.join(fails))
 
 
+def sales(asc, vendor, days=30):
+    """Son N günün günlük satış özeti (SALES/SUMMARY): indirme, satın alma adedi ve geliri (yaklaşık USD)."""
+    import gzip, csv, io, datetime
+    rates = {'USD': 1.0}
+    try:
+        rates.update({k: 1 / v for k, v in requests.get('https://api.frankfurter.app/latest?from=USD', timeout=30).json()['rates'].items()})
+    except Exception as e:
+        print('kur alınamadı, yalnız USD toplanır:', e)
+    today = datetime.date.today()
+    rows_out, prod, ctry, miss = [], {}, {}, []
+    for i in range(days, 0, -1):
+        d = today - datetime.timedelta(days=i)
+        try:
+            r = requests.get(API + '/v1/salesReports', timeout=120, headers={'Authorization': 'Bearer ' + asc.token(), 'Accept': 'application/a-gzip'},
+                             params={'filter[frequency]': 'DAILY', 'filter[reportType]': 'SALES', 'filter[reportSubType]': 'SUMMARY',
+                                     'filter[vendorNumber]': vendor, 'filter[reportDate]': d.isoformat(), 'filter[version]': '1_1'})
+        except Exception as e:
+            miss.append(f'{d} {e.__class__.__name__}'); continue
+        if r.status_code == 404:
+            miss.append(f'{d} rapor yok'); continue
+        if r.status_code >= 400:
+            print('HATA', d, r.status_code, r.text[:600]);
+            if r.status_code in (401, 403): return
+            continue
+        txt = gzip.decompress(r.content).decode('utf-8')
+        dl = upd = iap = 0; usd = 0.0
+        for x in csv.DictReader(io.StringIO(txt), delimiter='\t'):
+            pt = x.get('Product Type Identifier', ''); u = int(float(x.get('Units') or 0))
+            cur = x.get('Currency of Proceeds') or 'USD'; pr = float(x.get('Developer Proceeds') or 0) * u
+            v = pr * rates.get(cur, 0)
+            if pt in ('1', '1F', '1T', 'F1'): dl += u
+            elif pt in ('7', '7F', '7T', 'F7'): upd += u
+            elif pt.startswith('IA') or pt.startswith('FI'):
+                iap += u; usd += v
+                k = x.get('SKU') or x.get('Title'); a = prod.setdefault(k, [0, 0.0]); a[0] += u; a[1] += v
+                c = ctry.setdefault(x.get('Country Code', '?'), [0, 0.0]); c[0] += u; c[1] += v
+            else:
+                usd += v
+        rows_out.append((d, dl, upd, iap, usd))
+    print('\nTarih       İndirme  Güncelleme  Satın alma  Gelir(USD, Apple payı düşülmüş)')
+    for d, dl, upd, iap, usd in rows_out:
+        print(f'{d}  {dl:7d}  {upd:10d}  {iap:10d}  {usd:10.2f}  ' + '#' * int(usd / 5))
+    if rows_out:
+        n = len(rows_out); h = n // 2
+        a1 = sum(x[4] for x in rows_out[:h]) / max(1, h); a2 = sum(x[4] for x in rows_out[h:]) / max(1, n - h)
+        d1 = sum(x[1] for x in rows_out[:h]) / max(1, h); d2 = sum(x[1] for x in rows_out[h:]) / max(1, n - h)
+        print(f'\nİlk yarı ort.: {a1:.2f} USD/gün, {d1:.0f} indirme/gün | Son yarı ort.: {a2:.2f} USD/gün, {d2:.0f} indirme/gün')
+        print(f'Toplam: {sum(x[4] for x in rows_out):.2f} USD, {sum(x[1] for x in rows_out)} indirme, {sum(x[3] for x in rows_out)} satın alma')
+    print('\nÜrünler (adet, USD):')
+    for k, (u, v) in sorted(prod.items(), key=lambda z: -z[1][1]): print(f'  {k:28s} {u:5d}  {v:9.2f}')
+    print('\nÜlkeler (satın alma, USD):')
+    for k, (u, v) in sorted(ctry.items(), key=lambda z: -z[1][1])[:15]: print(f'  {k:4s} {u:5d}  {v:9.2f}')
+    if miss: print('\nEksik günler:', ', '.join(miss[-5:]))
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--metadata', default=str(ROOT / 'store/asc/metadata.json'))
@@ -1022,6 +1077,8 @@ def main():
     ap.add_argument('--release', default='')
     ap.add_argument('--prepare-only', action='store_true')
     ap.add_argument('--previews', action='store_true')
+    ap.add_argument('--sales', default='')
+    ap.add_argument('--days', type=int, default=30)
     a = ap.parse_args()
     meta = json.load(open(a.metadata, encoding='utf-8'))
     asc = ASC(a.dry_run)
@@ -1031,6 +1088,8 @@ def main():
         sys.exit(f'{BUNDLE} paket kimlikli uygulama bulunamadı')
     app = apps[0]
     print(f"Uygulama: {app['attributes']['name']} ({app['id']}), ana dil: {app['attributes'].get('primaryLocale')}")
+    if a.sales:
+        return sales(asc, a.sales, a.days)
     if a.diagnose:
         return diagnose(asc, app['id'])
     if a.audit:
