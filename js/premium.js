@@ -79,9 +79,13 @@ const RCStore = {
     await RCStore.ready();
     if (!RCStore.prods[productIdentifier]) await RCStore.getProducts({ productIdentifiers: [productIdentifier] }).catch(() => {});
     // bağlantı zayıfsa ya da ürün mağazaya yeni yayıldıysa ilk sorgu boş dönebilir: kısa bekleyip bir kez daha sor
-    if (!RCStore.prods[productIdentifier]) { await new Promise((r) => setTimeout(r, 1500)); await RCStore.getProducts({ productIdentifiers: [productIdentifier] }).catch(() => {}); }
+    for (const ms of [1500, 3500]) {
+      if (RCStore.prods[productIdentifier]) break;
+      await new Promise((r) => setTimeout(r, ms));
+      await RCStore.getProducts({ productIdentifiers: [productIdentifier] }).catch(() => {});
+    }
     const product = RCStore.prods[productIdentifier];
-    if (!product) throw new Error('product not found');
+    if (!product) throw new Error('product not found: ' + productIdentifier);
     try {
       const r = await RCStore.rc().purchaseStoreProduct({ product });
       RCStore.info = r && r.customerInfo;
