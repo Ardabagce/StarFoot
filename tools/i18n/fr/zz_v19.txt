@@ -2593,3 +2593,254 @@
 9581|collection
 9582|Vitrine
 9586|Petit prix
+9587|La saison est terminée. Attends la nouvelle saison.
+9588|Visite au pays natal
+9589|Des vacances calmes avec ta famille, tes vieux amis et les rues de ton enfance.
+9590|Montgolfière en Cappadoce
+9591|Montgolfière au lever du soleil et deux nuits dans un hôtel troglodyte.
+9592|Criques de l'Égée
+9593|Croisière bleue de crique en crique et poisson le soir.
+9594|Paris et la fashion week
+9595|Hôtel de charme, défilés et galeries.
+9596|Stage d'entraînement privé
+9597|Deux semaines en montagne avec coach et kiné. Pas des vacances, de la préparation.
+9600|Ski dans les Alpes
+9601|Vacances au chalet. Les clubs n'aiment pas le risque de blessure.
+9604|Ville de luxe dans le désert
+9605|Suite dans un gratte-ciel, safari dans le désert et shopping.
+9606|Île de la fête
+9607|Une semaine pleine de stars. Les photos circulent partout.
+9610|Tour de la Méditerranée sur ton yacht
+9611|L'équipage est prêt, l'itinéraire est à toi. Carburant et ports compris.
+9614|Îles des Caraïbes
+9615|Sable blanc, palmiers, deux semaines sans téléphone.
+9616|Villa sur pilotis
+9617|Villa privée sur un lagon turquoise, chef et plongée.
+9618|Escapade en ville
+9619|Une nuit à l'hôtel, un concert ou le théâtre.
+9620|Thermes et spa
+9621|Massage, sauna et une longue nuit.
+9622|Maison dans les vignes
+9623|Un week-end calme dans la nature, en famille.
+9624|Tu as déjà prévu des vacances cette saison.
+9625|Il te faut ton propre yacht pour ce tour.
+9837|{0} : réservation faite. Départ à la fin de la saison !
+9863|Réservation annulée. Remboursement : {0}
+9626|Tu as épuisé tes escapades du week-end cette saison.
+9627|Une petite pause pour recharger les batteries.
+9628|Escapade du week-end. Lundi, retour à l'entraînement !
+9631|Un peu de repos fait du bien à tout le monde.
+9632|Endurance et puissance +1.
+9633|au ski
+9844|{0} s'est blessé au ski ! Le club est furieux.
+9838|Les photos de vacances font scandale : {0} a fait la fête jusqu'à l'aube !
+9829|People : {0} fait parler de lui avec ses images sur l'île de la fête. Le club attend des explications.
+9887|{0} et {1} en vacances : {2}
+9892|{0} en vacances : {1}
+9634|Rien ne vaut le pays.
+9635|En montgolfière au lever du soleil. Magnifique !
+9637|De crique en crique en bateau. La mer est superbe !
+9640|Soirées parisiennes.
+9641|Pas de vacances, préparation pour la nouvelle saison !
+9642|Plaisir de la neige en montagne.
+9643|Désert et gratte-ciel.
+9644|Une semaine inoubliable !
+9645|Tour de la Méditerranée en yacht. Pas d'itinéraire fixe !
+9648|La vie d'île. On recharge les batteries.
+9651|La vie d'île, lagon turquoise.
+9877|🧳 Vacances d'intersaison : {0}. {1}{2}
+9652|Réservé
+9653|Yacht requis
+9654|Réserver
+9655|Risque de blessure
+9656|Risque de scandale
+9657|Puissance et endurance
+9658|Y aller · 1 action
+9659|Tes vacances passées
+9660|Voyages
+9661|Tes vacances de fin de saison
+9662|Départ à la fin de la saison.
+9663|Annuler (80 % remboursés)
+9664|Vacances de fin de saison
+9665|Où pars-tu ?
+9666|Réserve maintenant, pars à la fin de la saison.
+9667|✈️ Tu as un jet privé : pas de frais de vol à l'étranger (30 % de réduction).
+9669|Une fois par saison
+9670|Escapade du week-end
+9883|Restant cette saison : {0}
+9671|Avant-première
+9672|Tapis rouge, flashs et invités célèbres.
+9673|Fashion week, premier rang
+9674|Un créateur t'invite au premier rang. La tenue est à tes frais.
+9677|Gala de charité
+9678|Une soirée pour un hôpital pour enfants. On attend un don de ta part.
+9681|Soirée people
+9682|Tout le monde sera là. Les photographes aussi.
+9685|Invité d'un talk-show
+9686|Discussion en direct et un petit numéro.
+9687|Soirée des trophées du sport
+9688|Les sportifs de l'année réunis. Sors ton costume.
+9691|Podcast populaire
+9692|Tu parleras de ta carrière, ta famille et tes rêves.
+9693|Tournage publicitaire
+9694|Une journée de tournage, un bon cachet.
+9695|Tu es déjà allé à un événement cette semaine.
+9831|{0} aperçu en sortant d'une fête à l'aube. Le coach n'est pas content.
+9830|{0} a taquiné ses coéquipiers en direct, le vestiaire est en ébullition !
+9868|{0} sur le tapis rouge d'une avant-première
+9870|{0} au premier rang de la fashion week
+9847|{0} a fait un don pour les enfants lors d'un gala
+9880|{0} à une soirée people
+9843|{0} en talk-show : son numéro a été applaudi
+9851|{0} a ébloui à la soirée des trophées du sport
+9871|{0} a raconté sa carrière dans un podcast
+9878|{0} est le nouveau visage d'une pub
+9696|Tu as rencontré une célébrité
+9836|({0}) est venu te parler en fin de soirée. Le courant est passé.
+9697|Partir poliment
+9881|{0} · c'était une belle soirée.
+9698|Prendre son numéro
+9865|Nouvelle romance ? {0} et {1} {2} à la même table !
+9860|Tu as rencontré {0} ! Célébrité +0.4 · Moral +6
+9835|{0} aurait dit à propos de {1} : "C'est moi qui porte l'équipe"
+9841|Tension à l'entraînement : vive dispute entre {0} et {1}
+9833|Froid sur les réseaux : {0} ne suit plus {1}
+9866|{0} et {1} se réconcilient : "Nous sommes une famille"
+9854|{0} s'explique : "Mes propos ont été déformés"
+9848|{0} garde le silence, la glace avec {1} n'est pas brisée
+9858|{0} est inarrêtable : {1} buts en une semaine !
+9852|Coup de cœur : {0} et {1} aperçus main dans la main
+9875|Le mariage de l'année : {0} et {1} se sont mariés !
+9869|Rupture : {0} et {1} se séparent
+9849|{0} ne s'arrête plus : {1} dépensés en une semaine
+9864|{0} fait sensation avec sa nouvelle coupe
+9834|{0} a posé avec chaque fan après l'entraînement
+9845|{0} en dîner familial dans son restaurant préféré
+9872|{0} aperçu pendant son footing matinal
+9855|{0} a fait une surprise à un fan pour son anniversaire
+9853|{0} a distribué des maillots aux enfants de son quartier
+9839|{0} a-t-il un nouveau tatouage ? Les réseaux s'emballent
+9856|{0} vu dans le restaurant d'un chef célèbre
+9699|Cachet
+9700|Déjà fait cette semaine
+9701|Y aller · 1 action
+9702|Les invitations arrivent quand ta célébrité dépasse 15.
+9703|Crise
+9704|Une histoire entre toi et un coéquipier fait la une. Que vas-tu faire ?
+9706|Appeler et parler
+9707|Faire une déclaration
+9708|Paparazzi
+9709|Aucun article sur toi pour l'instant.
+9861|💫 Ta relation avec {0} est la préférée des magazines people.
+9710|Invitations de la semaine
+9711|Un événement par semaine
+9712|Gros titres
+9882|Le monde des stars · {0}
+9713|PEOPLE
+9714|Café
+9715|Un petit café chic dans ton quartier. Les revenus varient selon la météo et la saison.
+9718|Restaurant
+9719|Un restaurant du soir en centre-ville. Beaux profits les bonnes semaines, pertes les mauvaises.
+9722|Appartements en location
+9723|Un immeuble de six appartements. Des loyers réguliers et sûrs.
+9726|Ta marque de vêtements
+9727|Une ligne de vêtements à ton nom. Les ventes suivent ta célébrité.
+9730|Tes crampons signature
+9731|Ta propre gamme de crampons avec une marque de sport. Réservé aux joueurs très célèbres.
+9734|Projet immobilier
+9735|Une part dans un grand projet immobilier. Gros rendement, gros risque.
+9738|Académie de foot au pays
+9739|Une académie gratuite pour les enfants du pays. Elle ne rapporte pas d'argent, mais des cœurs.
+9742|Parts dans le club de ton enfance
+9743|Deviens actionnaire du club de tes débuts. Tes parts prennent de la valeur avec lui.
+9857|Cet investissement demande au moins {0} de célébrité.
+9888|{0} : acheté
+9842|{0} ouvre une académie de foot pour les enfants de son pays
+9874|{0} lance sa propre marque de vêtements
+9862|Une gamme de crampons signature arrive pour {0}
+9873|{0} devient actionnaire du club de son enfance
+9884|{0} dans les affaires : {1}
+9746|Notre académie pour les enfants de mon pays est ouverte. Poursuivez vos rêves !
+9749|Je reviens au club de mes débuts, cette fois comme actionnaire.
+9750|Ma marque est lancée. La première collection est pour vous !
+9753|Mes crampons signature sont prêts. Rendez-vous sur le terrain !
+9889|Vendre {0} ?
+9756|Offre de l'acheteur :
+9893|{0} : vendu
+9890|{0} vendu : +{1}
+9757|Ton café a fait le buzz, la file déborde dans la rue
+9758|La machine à café est en panne, frais de réparation
+9759|Ton restaurant a reçu la note maximale d'un critique célèbre
+9760|Incendie en cuisine : restaurant fermé une semaine
+9761|Nouveau locataire dans un appartement, loyer en hausse
+9762|Le toit de l'immeuble a été réparé
+9763|La nouvelle collection de ta marque est épuisée
+9764|Problème à l'entrepôt de ta marque, les retours augmentent
+9765|Tes crampons signature sont les préférés des jeunes
+9766|Défaut de fabrication sur les crampons, rappel
+9767|Les ventes du projet immobilier explosent
+9768|Le chantier du projet immobilier est arrêté, surcoûts
+9769|Un enfant de ton académie a signé pro !
+9770|Nouveau terrain et nouveau vestiaire à l'académie
+9771|Le club de ton enfance est promu, tes parts prennent de la valeur
+9772|Le club augmente son capital pour éponger ses dettes
+9850|Premier pro issu de l'académie : {0} est fier
+9773|La semaine dernière
+9774|Gain total
+9775|Héritage
+9776|Amour des fans
+9777|Grandit avec la célébrité
+9778|Risque élevé
+9779|Risque faible
+9891|{0} de célébrité requis
+9780|Mouvements
+9781|Investissements
+9782|Tes entreprises
+9783|Opportunités d'investissement
+9784|Les revenus arrivent chaque semaine sur ton compte
+9785|Valeur du portefeuille
+9786|Statue au club
+9787|Au moins 7 saisons, 220 matchs et 90 buts+passes dans un club
+9788|Numéro retiré
+9789|Au moins 9 saisons et 280 matchs dans un club
+9790|Sincère
+9791|Au-delà du terrain
+9792|Les moments durs, ta famille et tes vrais sentiments.
+9793|Explosif
+9794|Je ne me tairai pas
+9795|Secrets de vestiaire, anciens coachs, disputes. Ça se vend bien et ça fâche.
+9798|Du quartier au sommet
+9799|Merci aux coéquipiers et conseils aux jeunes.
+9876|Autobiographie en librairie : {0}, "{1}"
+9840|Mon livre "{0}" sort aujourd'hui. Il y a un peu de moi à chaque page.
+9832|{0} passera à la télé après sa retraite : signé comme consultant
+9800|🎙️ Contrat signé : tu seras consultant TV à ta retraite.
+9802|Pas encore de match.
+9803|Mérité : ce sera fait à ta retraite
+9885|Ton autobiographie · {0}
+9804|En librairie
+9805|Avance
+9806|Écrire · 1 action
+9807|Autobiographie
+9808|Les éditeurs veulent ton histoire. Choisis le ton du livre.
+9811|Les éditeurs frappent à ta porte après 29 ans et 45 de célébrité.
+9812|Consultant TV
+9813|À ta retraite, tu seras à l'écran.
+9814|Signé
+9815|Offre de consultant TV
+9816|Une chaîne sportive veut faire de toi son consultant à ta retraite.
+9817|Les chaînes font des offres après 32 ans et 40 de célébrité.
+9818|Héritage au club
+9819|Se réalise à ta retraite
+9820|Mérité
+9821|Après ta carrière
+9822|Les traces que tu laisses
+9823|Score de légende
+9824|Jubilé
+9825|400 matchs, ou 60 de célébrité à 33 ans : un jubilé devant des tribunes pleines.
+9859|Une statue de toi sera érigée devant le stade de {0}
+9846|Le numéro {0} a été retiré par {1}
+9826|Jubilé : une dernière fois sur le terrain devant des tribunes pleines
+9886|Ton autobiographie : {0}
+9827|Te voilà consultant à la télé
+9828|Revenus d'investissement (semaine dernière)

@@ -798,6 +798,7 @@
 "mall.js",
 "plusx.js",
 "star.js",
+"starlife.js",
 "value.js",
 "wc.js"
 ],
@@ -3176,7 +3177,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"starlife.js"
 ],
 "(pen. {}-{})": [
 "coach.js",
@@ -5384,6 +5386,7 @@
 "lang-ja.js",
 "lang-pt.js",
 "phone.js",
+"starlife.js",
 "wc.js"
 ],
 "Kimya": [
@@ -5426,7 +5429,8 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"phone.js"
+"phone.js",
+"starlife.js"
 ],
 "Yönetim": [
 "coach3.js",
@@ -5509,6 +5513,7 @@
 "lang-pt.js",
 "phone.js",
 "star.js",
+"starlife.js",
 "wc.js"
 ],
 "İlişkiler": [
@@ -10301,6 +10306,7 @@
 "mall.js",
 "phone.js",
 "school.js",
+"starlife.js",
 "wc.js"
 ],
 "Kiralıktakiler": [
@@ -10526,6 +10532,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
+"starlife.js",
 "value.js"
 ],
 "Maaş": [
@@ -10660,7 +10667,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"starlife.js"
 ],
 "Şu anki maaşı {}/hafta · Maaş bütçesi: {} / {}": [
 "coachui.js"
@@ -11198,7 +11206,8 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"phone.js"
+"phone.js",
+"starlife.js"
 ],
 "{} Tesisler": [
 "coachui.js"
@@ -13839,7 +13848,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"starlife.js"
 ],
 "En golcü sezon": [
 "cstats.js",
@@ -26849,6 +26859,7 @@
 ],
 "Deniz": [
 "data.js",
+"starlife.js",
 "v24.js"
 ],
 "Ozan": [
@@ -35865,7 +35876,8 @@
 "lang-ja.js",
 "lang-pt.js",
 "life.js",
-"mall.js"
+"mall.js",
+"starlife.js"
 ],
 "{} ×{} çantana eklendi ({}/{})": [
 "extras.js",
@@ -38495,7 +38507,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"starlife.js"
 ],
 "Teşekkürler futbol. Her şey için minnettarım. Şimdi yeni bir sayfa.": [
 "extras.js",
@@ -40487,6 +40500,7 @@
 "lang-pt.js",
 "life.js",
 "phone.js",
+"starlife.js",
 "v24.js"
 ],
 "Sakatken antrenman yapamazsın.": [
@@ -42180,7 +42194,8 @@
 "lang-ja.js",
 "lang-pt.js",
 "phone.js",
-"school.js"
+"school.js",
+"starlife.js"
 ],
 "Takipçi": [
 "game.js",
@@ -42207,7 +42222,8 @@
 "lang-ja.js",
 "lang-pt.js",
 "mall.js",
-"phone.js"
+"phone.js",
+"starlife.js"
 ],
 "MVP": [
 "game.js",
@@ -42288,7 +42304,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"starlife.js"
 ],
 "Dünya": [
 "game.js",
@@ -48261,7 +48278,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"starlife.js"
 ],
 "Kendinden emin": [
 "interview.js",
@@ -58408,7 +58426,8 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"star.js"
+"star.js",
+"starlife.js"
 ],
 "Tek seferlik satın alma. Reklam yok, tüm cihazlarında geri yükleyebilirsin.": [
 "lang-ar.js",
@@ -101738,7 +101757,8 @@
 "lang-pt.js",
 "life.js",
 "phone.js",
-"school.js"
+"school.js",
+"starlife.js"
 ],
 "Aile ilişkisi ve moral artar": [
 "lang-ar.js",
@@ -105447,7 +105467,8 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"life.js"
+"life.js",
+"starlife.js"
 ],
 "otomobil markası": [
 "lang-ar.js",
@@ -106991,7 +107012,8 @@
 "lang-ja.js",
 "lang-pt.js",
 "life.js",
-"phone.js"
+"phone.js",
+"starlife.js"
 ],
 "İlişki güçlenir, moral artar": [
 "lang-ar.js",
@@ -107161,7 +107183,8 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"life.js"
+"life.js",
+"starlife.js"
 ],
 "• Maçın adamı": [
 "lang-ar.js",
@@ -168908,7 +168931,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"starlife.js"
 ],
 "MAHALLE KRAMPONU": [
 "lang-ar.js",
@@ -194656,7 +194680,8 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"life.js"
+"life.js",
+"starlife.js"
 ],
 "{}'den güzel pas, {} vurdu ama gol olmadı.": [
 "lang-ar.js",
@@ -202047,7 +202072,8 @@
 "lang-id.js",
 "lang-it.js",
 "lang-ja.js",
-"lang-pt.js"
+"lang-pt.js",
+"starlife.js"
 ],
 "{} is yours!": [
 "lang-ar.js",
@@ -216755,6 +216781,9 @@
 "Hobby & Sport": [
 "lang-de.js"
 ],
+"Günstig": [
+"lang-de.js"
+],
 "Weiß": [
 "lang-de.js"
 ],
@@ -230837,6 +230866,9 @@
 "lang-de.js"
 ],
 "HOBBY & SPORT": [
+"lang-de.js"
+],
+"GÜNSTIG": [
 "lang-de.js"
 ],
 "WEISS": [
@@ -250551,6 +250583,9 @@
 "Hobbies & sport": [
 "lang-en.js"
 ],
+"Economy": [
+"lang-en.js"
+],
 "Navy": [
 "lang-en.js"
 ],
@@ -263847,6 +263882,9 @@
 "lang-en.js"
 ],
 "HOBBIES & SPORT": [
+"lang-en.js"
+],
+"ECONOMY": [
 "lang-en.js"
 ],
 "WHITE": [
@@ -283577,6 +283615,9 @@
 "Ocio y deporte": [
 "lang-es.js"
 ],
+"Económico": [
+"lang-es.js"
+],
 "Blanco": [
 "lang-es.js"
 ],
@@ -297033,6 +297074,9 @@
 "lang-es.js"
 ],
 "OCIO Y DEPORTE": [
+"lang-es.js"
+],
+"ECONÓMICO": [
 "lang-es.js"
 ],
 "BLANCO": [
@@ -316517,6 +316561,9 @@
 "Loisirs et sport": [
 "lang-fr.js"
 ],
+"Petit prix": [
+"lang-fr.js"
+],
 "Blanc": [
 "lang-fr.js"
 ],
@@ -329474,6 +329521,9 @@
 "lang-fr.js"
 ],
 "LOISIRS ET SPORT": [
+"lang-fr.js"
+],
+"PETIT PRIX": [
 "lang-fr.js"
 ],
 "BLANC": [
@@ -348426,6 +348476,9 @@
 "Hobi & olahraga": [
 "lang-id.js"
 ],
+"Hemat": [
+"lang-id.js"
+],
 "Putih": [
 "lang-id.js"
 ],
@@ -361157,6 +361210,9 @@
 "lang-id.js"
 ],
 "HOBI & OLAHRAGA": [
+"lang-id.js"
+],
+"HEMAT": [
 "lang-id.js"
 ],
 "PUTIH": [
@@ -380126,6 +380182,9 @@
 "Hobby e sport": [
 "lang-it.js"
 ],
+"Economico": [
+"lang-it.js"
+],
 "Bianco": [
 "lang-it.js"
 ],
@@ -392854,6 +392913,9 @@
 "lang-it.js"
 ],
 "HOBBY E SPORT": [
+"lang-it.js"
+],
+"ECONOMICO": [
 "lang-it.js"
 ],
 "BIANCO": [
@@ -412625,6 +412687,9 @@
 "Hobbies e esporte": [
 "lang-pt.js"
 ],
+"Econômico": [
+"lang-pt.js"
+],
 "Branco": [
 "lang-pt.js"
 ],
@@ -425103,6 +425168,9 @@
 "HOBBIES E ESPORTE": [
 "lang-pt.js"
 ],
+"ECONÔMICO": [
+"lang-pt.js"
+],
 "BRANCO": [
 "lang-pt.js"
 ],
@@ -434664,7 +434732,8 @@
 "mallart.js"
 ],
 "data:image/svg+xml;charset=utf-8,": [
-"mallart.js"
+"mallart.js",
+"slart.js"
 ],
 "whistleLong": [
 "match.js",
@@ -449723,6 +449792,15 @@
 "snd/menu.mp3": [
 "sfx.js"
 ],
+"<circle opacity=\".9\"": [
+"slart.js"
+],
+"ON": [
+"slart.js"
+],
+"ATELIER": [
+"slart.js"
+],
 "Buenos Aires": [
 "socialart.js"
 ],
@@ -449826,6 +449904,804 @@
 ],
 "{} Lüks Yaşam Vitrini": [
 "star.js"
+],
+"Sezon bitti, yeni sezonu bekle.": [
+"starlife.js"
+],
+"Moral {}{}": [
+"starlife.js"
+],
+"Enerji {}{}": [
+"starlife.js"
+],
+"Aile {}{}": [
+"starlife.js"
+],
+"Hoca {}{}": [
+"starlife.js"
+],
+"Takım {}{}": [
+"starlife.js"
+],
+"Taraftar {}{}": [
+"starlife.js"
+],
+"İlişki {}{}": [
+"starlife.js"
+],
+"Ün {}{}": [
+"starlife.js"
+],
+"Memleket ziyareti": [
+"starlife.js"
+],
+"Ailenle, eski arkadaşlarınla ve çocukluk sokaklarında sakin bir tatil.": [
+"starlife.js"
+],
+"Kapadokya balon turu": [
+"starlife.js"
+],
+"Gün doğumunda balon, mağara otelde iki gece.": [
+"starlife.js"
+],
+"Ege koyları": [
+"starlife.js"
+],
+"Mavi yolculuk, koy koy deniz ve akşam balık.": [
+"starlife.js"
+],
+"Paris ve moda haftası": [
+"starlife.js"
+],
+"Butik otel, defileler ve galeri gezileri.": [
+"starlife.js"
+],
+"Özel antrenman kampı": [
+"starlife.js"
+],
+"Kişisel antrenör ve fizyoterapistle yaylada 2 hafta. Tatil değil, hazırlık.": [
+"starlife.js"
+],
+"Alplerde kayak": [
+"starlife.js"
+],
+"Dağ evinde kar tatili. Kulüpler sakatlık riskinden hoşlanmaz.": [
+"starlife.js"
+],
+"Çölde lüks şehir": [
+"starlife.js"
+],
+"Gökdelende süit, çöl safarisi ve alışveriş.": [
+"starlife.js"
+],
+"Parti adası": [
+"starlife.js"
+],
+"Ünlülerle dolu bir hafta. Fotoğraflar her yere düşer.": [
+"starlife.js"
+],
+"Kendi yatınla Akdeniz turu": [
+"starlife.js"
+],
+"Mürettebat hazır, rota senin. Yakıt ve liman giderleri dahil.": [
+"starlife.js"
+],
+"Karayip adaları": [
+"starlife.js"
+],
+"Beyaz kum, palmiyeler, iki hafta telefonsuz.": [
+"starlife.js"
+],
+"Su üstü villa": [
+"starlife.js"
+],
+"Turkuaz lagünde özel villa, şef ve dalış.": [
+"starlife.js"
+],
+"Şehir kaçamağı": [
+"starlife.js"
+],
+"Bir gece otel, konser ya da tiyatro.": [
+"starlife.js"
+],
+"Termal ve spa": [
+"starlife.js"
+],
+"Masaj, sauna ve uzun bir uyku.": [
+"starlife.js"
+],
+"Bağ evi": [
+"starlife.js"
+],
+"Doğada sakin bir hafta sonu, ailece.": [
+"starlife.js"
+],
+"Bu sezon için zaten bir tatil planın var.": [
+"starlife.js"
+],
+"Bu tur için kendi yatın olmalı.": [
+"starlife.js"
+],
+"{}: rezervasyonun tamam. Sezon bitince yola çıkıyorsun!": [
+"starlife.js"
+],
+"Rezervasyon iptal edildi. İade: {}": [
+"starlife.js"
+],
+"Bu sezon hafta sonu kaçamağı hakkın doldu.": [
+"starlife.js"
+],
+"Kısa bir mola, şarj olduk.": [
+"starlife.js"
+],
+"Hafta sonu kaçamağı. Pazartesi antrenmandayız!": [
+"starlife.js"
+],
+"Biraz dinlenmek herkese iyi gelir.": [
+"starlife.js"
+],
+"Dayanıklılık ve güç +1.": [
+"starlife.js"
+],
+"Kayakta": [
+"starlife.js"
+],
+"{} kayak tatilinde sakatlandı! Kulüp çok kızgın.": [
+"starlife.js"
+],
+"Tatil fotoğrafları olay oldu: {} sabaha kadar partide!": [
+"starlife.js"
+],
+"Magazin: {} parti adasındaki görüntüleriyle gündemde. Kulüp açıklama bekliyor.": [
+"starlife.js"
+],
+"· Hoca -10 · Taraftar -6": [
+"starlife.js"
+],
+"{} ve {} tatilde: {}": [
+"starlife.js"
+],
+"Memlekette olmak gibisi yok.": [
+"starlife.js"
+],
+"Gün doğumunda balonla. Muhteşem!": [
+"starlife.js"
+],
+"Koy koy tekne turu. Deniz harika!": [
+"starlife.js"
+],
+"Paris akşamları.": [
+"starlife.js"
+],
+"Tatil yok, yeni sezona hazırlık!": [
+"starlife.js"
+],
+"Dağlarda kar keyfi.": [
+"starlife.js"
+],
+"Çöl ve gökdelenler.": [
+"starlife.js"
+],
+"Unutulmaz bir hafta!": [
+"starlife.js"
+],
+"Yatla Akdeniz turu. Rota belli değil!": [
+"starlife.js"
+],
+"Ada hayatı. Şarj oluyoruz.": [
+"starlife.js"
+],
+"Ada hayatı, turkuaz lagün.": [
+"starlife.js"
+],
+"🧳 Sezon arası tatil: {}. {}{}": [
+"starlife.js"
+],
+"Rezerve": [
+"starlife.js"
+],
+"Yat gerekli": [
+"starlife.js"
+],
+"Rezervasyon": [
+"starlife.js"
+],
+"Sakatlık riski": [
+"starlife.js"
+],
+"Skandal riski": [
+"starlife.js"
+],
+"Güç ve dayanıklılık": [
+"starlife.js"
+],
+"Git · 1 aksiyon": [
+"starlife.js"
+],
+"Geçmiş tatillerin": [
+"starlife.js"
+],
+"Seyahat": [
+"starlife.js"
+],
+"Sezon sonu tatilin": [
+"starlife.js"
+],
+"Sezon bitince yola çıkıyorsun.": [
+"starlife.js"
+],
+"İptal et (%80 iade)": [
+"starlife.js"
+],
+"Sezon sonu tatili": [
+"starlife.js"
+],
+"Nereye gidiyorsun?": [
+"starlife.js"
+],
+"Şimdi rezervasyon yap, sezon bitince tatile çık.": [
+"starlife.js"
+],
+"✈️ Özel jetin var: yurt dışı tatillerde uçuş masrafı yok (%30 indirim).": [
+"starlife.js"
+],
+"Sezonda bir kez": [
+"starlife.js"
+],
+"Hafta sonu kaçamağı": [
+"starlife.js"
+],
+"Bu sezon kalan: {}": [
+"starlife.js"
+],
+"Film galası": [
+"starlife.js"
+],
+"Kırmızı halı, flaşlar ve ünlü konuklar.": [
+"starlife.js"
+],
+"Moda haftası, ön sıra": [
+"starlife.js"
+],
+"Tasarımcı seni ön sıraya davet etti. Kıyafet masrafı senden.": [
+"starlife.js"
+],
+"Hayır gecesi": [
+"starlife.js"
+],
+"Çocuk hastanesi yararına gece. Bağış yapman bekleniyor.": [
+"starlife.js"
+],
+"Ünlülerin partisi": [
+"starlife.js"
+],
+"Herkes orada olacak. Fotoğrafçılar da.": [
+"starlife.js"
+],
+"Akşam şovu konuğu": [
+"starlife.js"
+],
+"Canlı yayında sohbet ve küçük bir yetenek gösterisi.": [
+"starlife.js"
+],
+"Spor ödülleri gecesi": [
+"starlife.js"
+],
+"Yılın sporcuları bir arada. Takım elbiseni hazırla.": [
+"starlife.js"
+],
+"Popüler podcast": [
+"starlife.js"
+],
+"Kariyerini, aileni ve hayallerini anlatacaksın.": [
+"starlife.js"
+],
+"Reklam çekimi": [
+"starlife.js"
+],
+"Bir günlük çekim, iyi bir ücret.": [
+"starlife.js"
+],
+"Bu hafta zaten bir davete katıldın.": [
+"starlife.js"
+],
+"{} partiden sabaha karşı çıkarken görüntülendi. Hoca memnun değil.": [
+"starlife.js"
+],
+"· Hoca -8 · Taraftar -4": [
+"starlife.js"
+],
+"{} canlı yayında takım arkadaşlarına takıldı, soyunma odası karıştı!": [
+"starlife.js"
+],
+"· Takım -5": [
+"starlife.js"
+],
+"{} film galasında kırmızı halıda": [
+"starlife.js"
+],
+"{} moda haftasında ön sıradaydı": [
+"starlife.js"
+],
+"{} hayır gecesinde çocuklar için bağış yaptı": [
+"starlife.js"
+],
+"{} ünlülerin partisinde": [
+"starlife.js"
+],
+"{} akşam şovunda: yetenek gösterisi alkış topladı": [
+"starlife.js"
+],
+"{} spor ödülleri gecesinde göz kamaştırdı": [
+"starlife.js"
+],
+"{} podcastte kariyerini anlattı": [
+"starlife.js"
+],
+"{} yeni reklam yüzü oldu": [
+"starlife.js"
+],
+"Bir ünlüyle tanıştın": [
+"starlife.js"
+],
+"({}) gecenin sonunda yanına geldi. Sohbet çok iyi gitti.": [
+"starlife.js"
+],
+"Kibarca ayrıl": [
+"starlife.js"
+],
+"{} · güzel bir geceydi.": [
+"starlife.js"
+],
+"Numarasını al": [
+"starlife.js"
+],
+"Yeni aşk mı? {} ve {} {} aynı masada!": [
+"starlife.js"
+],
+"{} ile tanıştın! Ün +0.4 · Moral +6": [
+"starlife.js"
+],
+"{}, {} hakkında \"takımın yükünü ben çekiyorum\" dedi iddiası": [
+"starlife.js"
+],
+"Antrenmanda gerginlik: {} ile {} arasında sert tartışma": [
+"starlife.js"
+],
+"Sosyal medyada soğuk rüzgârlar: {}, {} hesabını takipten çıktı": [
+"starlife.js"
+],
+"{} ve {} barıştı: \"Biz bir aileyiz\"": [
+"starlife.js"
+],
+"{} açıklama yaptı: \"Sözlerim çarpıtıldı\"": [
+"starlife.js"
+],
+"{} sessizliğini koruyor, {} ile buzlar erimedi": [
+"starlife.js"
+],
+"{} durdurulamıyor: bir haftada {} gol!": [
+"starlife.js"
+],
+"Kalbi çalındı: {} ve {} el ele görüntülendi": [
+"starlife.js"
+],
+"Yılın düğünü: {} ve {} evlendi!": [
+"starlife.js"
+],
+"Ayrılık: {} ve {} yollarını ayırdı": [
+"starlife.js"
+],
+"{} alışverişe doymuyor: bir haftada {} harcadı": [
+"starlife.js"
+],
+"{} yeni saç modeliyle dikkat çekti": [
+"starlife.js"
+],
+"{} antrenman çıkışı hayranlarıyla tek tek fotoğraf çektirdi": [
+"starlife.js"
+],
+"{} sevdiği restoranda ailesiyle akşam yemeğinde": [
+"starlife.js"
+],
+"{} sabah koşusunda görüntülendi": [
+"starlife.js"
+],
+"{} hayranının doğum gününe sürpriz yaptı": [
+"starlife.js"
+],
+"{} mahallesindeki çocuklara forma dağıttı": [
+"starlife.js"
+],
+"{} yeni dövme mi yaptırdı? Sosyal medya bunu konuşuyor": [
+"starlife.js"
+],
+"{} ünlü bir şefin restoranında görüldü": [
+"starlife.js"
+],
+"Ücret": [
+"starlife.js"
+],
+"Bu hafta katıldın": [
+"starlife.js"
+],
+"Katıl · 1 aksiyon": [
+"starlife.js"
+],
+"Davetler ünün 15'i geçince gelmeye başlar.": [
+"starlife.js"
+],
+"Kriz": [
+"starlife.js"
+],
+"Takım arkadaşınla aranızdaki haber manşetlerde. Ne yapacaksın?": [
+"starlife.js"
+],
+"Arayıp konuş": [
+"starlife.js"
+],
+"Açıklama yap": [
+"starlife.js"
+],
+"Yorum yapma": [
+"starlife.js"
+],
+"Paparazzi": [
+"starlife.js"
+],
+"Henüz hakkında çıkan bir haber yok.": [
+"starlife.js"
+],
+"💫 {} ile ilişkin magazinin gözdesi.": [
+"starlife.js"
+],
+"Bu haftanın davetleri": [
+"starlife.js"
+],
+"Haftada bir davete katılabilirsin": [
+"starlife.js"
+],
+"Manşetler": [
+"starlife.js"
+],
+"Ünlülerin dünyası · {}": [
+"starlife.js"
+],
+"Kahve dükkânı": [
+"starlife.js"
+],
+"Mahallende küçük ve şık bir kafe. Gelir hava durumuna, sezona göre oynar.": [
+"starlife.js"
+],
+"Restoran": [
+"starlife.js"
+],
+"Şehir merkezinde akşam restoranı. İyi haftada çok kazandırır, kötü haftada zarar.": [
+"starlife.js"
+],
+"Kiralık daireler": [
+"starlife.js"
+],
+"Altı daireli bir apartman. Düzenli ve güvenli kira geliri.": [
+"starlife.js"
+],
+"Giyim markan": [
+"starlife.js"
+],
+"Adını taşıyan bir giyim serisi. Satışlar ününle birlikte artar.": [
+"starlife.js"
+],
+"İmza kramponun": [
+"starlife.js"
+],
+"Bir spor markasıyla kendi krampon serin. Ancak çok ünlü oyunculara teklif edilir.": [
+"starlife.js"
+],
+"Rezidans projesi": [
+"starlife.js"
+],
+"Büyük bir konut projesine ortaklık. Yüksek getiri, yüksek risk.": [
+"starlife.js"
+],
+"Memleket futbol akademisi": [
+"starlife.js"
+],
+"Memleketinde çocuklar için ücretsiz akademi. Para kazandırmaz, gönül kazandırır.": [
+"starlife.js"
+],
+"Çocukluk kulübünde hisse": [
+"starlife.js"
+],
+"Futbola başladığın kulübün hissedarı ol. Kulüp büyüdükçe hissen değerlenir.": [
+"starlife.js"
+],
+"Bu yatırım için en az {} ün gerekiyor.": [
+"starlife.js"
+],
+"{}: satın aldın": [
+"starlife.js"
+],
+"{} memleketinde çocuklar için futbol akademisi açtı": [
+"starlife.js"
+],
+"{} kendi giyim markasını kurdu": [
+"starlife.js"
+],
+"{} için imza krampon serisi geliyor": [
+"starlife.js"
+],
+"{} çocukluk kulübüne ortak oldu": [
+"starlife.js"
+],
+"{} iş dünyasında: {}": [
+"starlife.js"
+],
+"Memleketimdeki çocuklar için akademimiz açıldı. Hayallerin peşinden koşun!": [
+"starlife.js"
+],
+"Futbola başladığım kulübe geri dönüyorum, bu kez ortak olarak.": [
+"starlife.js"
+],
+"Kendi markam yayında. İlk koleksiyon sizinle!": [
+"starlife.js"
+],
+"İmza kramponum hazır. Sahalarda görüşürüz!": [
+"starlife.js"
+],
+"{} satılsın mı?": [
+"starlife.js"
+],
+"Alıcı teklifi:": [
+"starlife.js"
+],
+"{}: sattın": [
+"starlife.js"
+],
+"{} satıldı: +{}": [
+"starlife.js"
+],
+"Kafen sosyal medyada viral oldu, kuyruk kapıya dayandı": [
+"starlife.js"
+],
+"Kafenin kahve makinesi bozuldu, tamir masrafı": [
+"starlife.js"
+],
+"Restoranın ünlü bir yemek eleştirmeninden tam puan aldı": [
+"starlife.js"
+],
+"Restoranında mutfak yangını: bir hafta kapalı": [
+"starlife.js"
+],
+"Dairelerden birinde kiracı değişti, kira artışı": [
+"starlife.js"
+],
+"Apartmanın çatısı onarıldı": [
+"starlife.js"
+],
+"Markanın yeni koleksiyonu tükendi": [
+"starlife.js"
+],
+"Markanın kargo deposunda sorun, iadeler arttı": [
+"starlife.js"
+],
+"İmza kramponun gençlerin favorisi oldu": [
+"starlife.js"
+],
+"Krampon serisinde üretim hatası, geri çağırma": [
+"starlife.js"
+],
+"Rezidans projesinde satışlar patladı": [
+"starlife.js"
+],
+"Rezidans projesinde inşaat durdu, ek maliyet": [
+"starlife.js"
+],
+"Akademinden bir çocuk profesyonel sözleşme imzaladı!": [
+"starlife.js"
+],
+"Akademiye yeni saha ve soyunma odası yapıldı": [
+"starlife.js"
+],
+"Çocukluk kulübün bir üst lige yükseldi, hissen değerlendi": [
+"starlife.js"
+],
+"Kulüp borçlarını kapatmak için sermaye artırdı": [
+"starlife.js"
+],
+"Akademiden ilk profesyonel çıktı: {} gururlu": [
+"starlife.js"
+],
+"Geçen hafta": [
+"starlife.js"
+],
+"Toplam kazanç": [
+"starlife.js"
+],
+"Miras": [
+"starlife.js"
+],
+"Taraftar sevgisi": [
+"starlife.js"
+],
+"Ünle büyür": [
+"starlife.js"
+],
+"Yüksek risk": [
+"starlife.js"
+],
+"Düşük risk": [
+"starlife.js"
+],
+"{} ün gerekli": [
+"starlife.js"
+],
+"Hareketler": [
+"starlife.js"
+],
+"Yatırım": [
+"starlife.js"
+],
+"İşletmelerin": [
+"starlife.js"
+],
+"Yatırım fırsatları": [
+"starlife.js"
+],
+"Gelir her hafta hesabına geçer": [
+"starlife.js"
+],
+"Portföy değeri": [
+"starlife.js"
+],
+"Kulüp heykeli": [
+"starlife.js"
+],
+"Bir kulüpte en az 7 sezon, 220 maç ve 90 gol+asist": [
+"starlife.js"
+],
+"Emekli forma numarası": [
+"starlife.js"
+],
+"Bir kulüpte en az 9 sezon ve 280 maç": [
+"starlife.js"
+],
+"Samimi": [
+"starlife.js"
+],
+"Sahadan Öte": [
+"starlife.js"
+],
+"Zor günler, ailen ve gerçek duyguların.": [
+"starlife.js"
+],
+"Sert ve olaylı": [
+"starlife.js"
+],
+"Susmayacağım": [
+"starlife.js"
+],
+"Soyunma odası sırları, eski hocalar, kavgalar. Çok satar, çok kızdırır.": [
+"starlife.js"
+],
+"Mahalleden Zirveye": [
+"starlife.js"
+],
+"Takım arkadaşlarına teşekkür, gençlere öğütler.": [
+"starlife.js"
+],
+"Otobiyografi raflarda: {}, \"{}\"": [
+"starlife.js"
+],
+"Kitabım \"{}\" bugün raflarda. Her sayfasında ben varım.": [
+"starlife.js"
+],
+"{} emekli olunca ekranlara geliyor: TV yorumculuğu için anlaştı": [
+"starlife.js"
+],
+"🎙️ Anlaşma imzalandı: emekli olunca TV yorumcusu olacaksın.": [
+"starlife.js"
+],
+"Henüz maç yok.": [
+"starlife.js"
+],
+"Hak ettin, emeklilikte gerçekleşir": [
+"starlife.js"
+],
+"Otobiyografin · {}": [
+"starlife.js"
+],
+"Raflarda": [
+"starlife.js"
+],
+"Avans": [
+"starlife.js"
+],
+"Yaz · 1 aksiyon": [
+"starlife.js"
+],
+"Otobiyografi": [
+"starlife.js"
+],
+"Yayınevleri hikâyeni istiyor. Kitabın tonunu sen seç.": [
+"starlife.js"
+],
+"29 yaşından sonra ve ünün 45'i geçince yayınevleri kapını çalar.": [
+"starlife.js"
+],
+"TV yorumculuğu": [
+"starlife.js"
+],
+"Emekli olunca ekranlardasın.": [
+"starlife.js"
+],
+"İmzalandı": [
+"starlife.js"
+],
+"TV yorumculuğu teklifi": [
+"starlife.js"
+],
+"Bir spor kanalı, emekli olunca seni maç yorumcusu yapmak istiyor.": [
+"starlife.js"
+],
+"İmzala": [
+"starlife.js"
+],
+"32 yaşından sonra ve ünün 40'ı geçince kanallar teklif getirir.": [
+"starlife.js"
+],
+"Kulüp mirası": [
+"starlife.js"
+],
+"Emekli olduğunda gerçekleşir": [
+"starlife.js"
+],
+"Hak ettin": [
+"starlife.js"
+],
+"Kariyer sonrası": [
+"starlife.js"
+],
+"Bıraktığın izler": [
+"starlife.js"
+],
+"Efsane puanı": [
+"starlife.js"
+],
+"Jübile maçı": [
+"starlife.js"
+],
+"400 maç ya da 33 yaşında 60 ün: dolu tribünler önünde veda maçı.": [
+"starlife.js"
+],
+"{} stadının önüne heykelin dikilecek": [
+"starlife.js"
+],
+"{} numaralı forma {} kulübünde emekliye ayrıldı": [
+"starlife.js"
+],
+"Jübile maçı: dolu tribünler önünde son kez sahadaydın": [
+"starlife.js"
+],
+"Otobiyografin: {}": [
+"starlife.js"
+],
+"Artık ekranlarda maç yorumcususun": [
+"starlife.js"
+],
+"linear-gradient(135deg,#27c4e8,#0a6fb5)": [
+"starlife.js"
+],
+"linear-gradient(135deg,#ff4f7b,#b0124a)": [
+"starlife.js"
+],
+"linear-gradient(135deg,#2bc48a,#0b6b49)": [
+"starlife.js"
+],
+"linear-gradient(135deg,#d9b25a,#7a5416)": [
+"starlife.js"
+],
+"Yatırım geliri (geçen hafta)": [
+"starlife.js"
 ],
 "LZ1:": [
 "store.js"

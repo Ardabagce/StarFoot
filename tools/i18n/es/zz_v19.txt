@@ -2593,3 +2593,254 @@
 9581|colección
 9582|Escaparate
 9586|Económico
+9587|La temporada ha terminado. Espera a la nueva.
+9588|Visita a tu pueblo
+9589|Unas vacaciones tranquilas con tu familia, viejos amigos y las calles de tu infancia.
+9590|Viaje en globo por Capadocia
+9591|Globo al amanecer y dos noches en un hotel cueva.
+9592|Calas del Egeo
+9593|Crucero azul de cala en cala y pescado por la noche.
+9594|París y la semana de la moda
+9595|Hotel boutique, desfiles y galerías.
+9596|Campamento privado de entrenamiento
+9597|Dos semanas en la montaña con entrenador personal y fisio. No son vacaciones, es preparación.
+9600|Esquí en los Alpes
+9601|Vacaciones de nieve en un chalet. A los clubes no les gusta el riesgo de lesión.
+9604|Ciudad de lujo en el desierto
+9605|Suite en un rascacielos, safari en el desierto y compras.
+9606|Isla de fiesta
+9607|Una semana llena de famosos. Las fotos acaban en todas partes.
+9610|Ruta por el Mediterráneo en tu propio yate
+9611|La tripulación está lista, la ruta es tuya. Combustible y puertos incluidos.
+9614|Islas del Caribe
+9615|Arena blanca, palmeras y dos semanas sin móvil.
+9616|Villa sobre el agua
+9617|Villa privada en una laguna turquesa, chef y buceo.
+9618|Escapada urbana
+9619|Una noche de hotel, concierto o teatro.
+9620|Termas y spa
+9621|Masaje, sauna y un buen sueño.
+9622|Casa en el viñedo
+9623|Un fin de semana tranquilo en la naturaleza, en familia.
+9624|Ya tienes unas vacaciones planeadas esta temporada.
+9625|Necesitas tu propio yate para esta ruta.
+9837|{0}: reserva hecha. ¡Te vas al terminar la temporada!
+9863|Reserva cancelada. Reembolso: {0}
+9626|Ya no te quedan escapadas de fin de semana esta temporada.
+9627|Una pausa corta para recargar pilas.
+9628|Escapada de fin de semana. ¡El lunes, a entrenar!
+9631|Descansar un poco le sienta bien a todos.
+9632|Resistencia y fuerza +1.
+9633|esquiando
+9844|¡{0} se lesionó esquiando! El club está furioso.
+9838|Las fotos de las vacaciones arden: ¡{0}, de fiesta hasta el amanecer!
+9829|Prensa rosa: {0}, en boca de todos por sus fotos en la isla de fiesta. El club pide explicaciones.
+9887|{0} y {1}, de vacaciones: {2}
+9892|{0}, de vacaciones: {1}
+9634|No hay nada como estar en casa.
+9635|En globo al amanecer. ¡Increíble!
+9637|De cala en cala en barco. ¡El mar está genial!
+9640|Noches de París.
+9641|¡Nada de vacaciones, a prepararse para la nueva temporada!
+9642|Disfrutando de la nieve en la montaña.
+9643|Desierto y rascacielos.
+9644|¡Una semana inolvidable!
+9645|Recorriendo el Mediterráneo en yate. ¡Sin rumbo fijo!
+9648|Vida de isla. Recargando pilas.
+9651|Vida de isla, laguna turquesa.
+9877|🧳 Vacaciones de pretemporada: {0}. {1}{2}
+9652|Reservado
+9653|Requiere yate
+9654|Reservar
+9655|Riesgo de lesión
+9656|Riesgo de escándalo
+9657|Fuerza y resistencia
+9658|Ir · 1 acción
+9659|Tus vacaciones anteriores
+9660|Viajes
+9661|Tus vacaciones de fin de temporada
+9662|Te vas al terminar la temporada.
+9663|Cancelar (80 % de reembolso)
+9664|Vacaciones de fin de temporada
+9665|¿A dónde vas?
+9666|Reserva ahora y vete de vacaciones al acabar la temporada.
+9667|✈️ Tienes jet privado: sin gastos de vuelo en viajes al extranjero (30 % menos).
+9669|Una vez por temporada
+9670|Escapada de fin de semana
+9883|Quedan esta temporada: {0}
+9671|Estreno de cine
+9672|Alfombra roja, flashes e invitados famosos.
+9673|Semana de la moda, primera fila
+9674|Un diseñador te invitó a primera fila. El atuendo corre de tu cuenta.
+9677|Gala benéfica
+9678|Una noche a beneficio de un hospital infantil. Se espera que dones.
+9681|Fiesta de famosos
+9682|Estará todo el mundo. Los fotógrafos también.
+9685|Invitado en un programa nocturno
+9686|Charla en directo y un pequeño número.
+9687|Gala de premios deportivos
+9688|Los deportistas del año reunidos. Prepara tu traje.
+9691|Pódcast popular
+9692|Hablarás de tu carrera, tu familia y tus sueños.
+9693|Rodaje publicitario
+9694|Un día de rodaje y buena paga.
+9695|Ya fuiste a un evento esta semana.
+9831|{0}, cazado saliendo de una fiesta al amanecer. El entrenador no está contento.
+9830|¡{0} se burló de sus compañeros en directo y el vestuario está revuelto!
+9868|{0}, en la alfombra roja de un estreno
+9870|{0}, en primera fila de la semana de la moda
+9847|{0} donó para niños en una gala benéfica
+9880|{0}, en una fiesta de famosos
+9843|{0}, en un programa nocturno: su número se llevó los aplausos
+9851|{0} deslumbró en la gala de premios deportivos
+9871|{0} habló de su carrera en un pódcast
+9878|{0}, nueva imagen publicitaria
+9696|Conociste a una celebridad
+9836|({0}) se te acercó al final de la noche. La charla fue genial.
+9697|Despedirte con educación
+9881|{0} · fue una noche estupenda.
+9698|Pedir su número
+9865|¿Nuevo amor? ¡{0} y {1} {2} en la misma mesa!
+9860|¡Conociste a {0}! Fama +0.4 · Moral +6
+9835|{0} habría dicho de {1}: "Yo cargo con el equipo"
+9841|Tensión en el entrenamiento: fuerte discusión entre {0} y {1}
+9833|Frío en redes: {0} dejó de seguir a {1}
+9866|{0} y {1} hacen las paces: "Somos una familia"
+9854|{0} hizo un comunicado: "Tergiversaron mis palabras"
+9848|{0} guarda silencio y sigue el hielo con {1}
+9858|¡{0} es imparable: {1} goles en una semana!
+9852|Flechazo: {0} y {1}, vistos de la mano
+9875|¡La boda del año: {0} y {1} se casan!
+9869|Ruptura: {0} y {1} se separan
+9849|{0} no para de comprar: gastó {1} en una semana
+9864|{0} llama la atención con su nuevo peinado
+9834|{0} se fotografió con cada fan tras el entrenamiento
+9845|{0}, cenando en familia en su restaurante favorito
+9872|{0}, visto corriendo por la mañana
+9855|{0} sorprendió a un fan en su cumpleaños
+9853|{0} repartió camisetas a los niños de su barrio
+9839|¿Nuevo tatuaje para {0}? Las redes no hablan de otra cosa
+9856|{0}, visto en el restaurante de un chef famoso
+9699|Pago
+9700|Ya fuiste esta semana
+9701|Asistir · 1 acción
+9702|Las invitaciones llegan cuando tu fama supera 15.
+9703|Crisis
+9704|Una noticia sobre ti y un compañero está en los titulares. ¿Qué harás?
+9706|Llamar y hablar
+9707|Hacer un comunicado
+9708|Paparazzi
+9709|Aún no hay noticias sobre ti.
+9861|💫 Tu relación con {0} es la favorita de la prensa rosa.
+9710|Invitaciones de esta semana
+9711|Puedes ir a un evento por semana
+9712|Titulares
+9882|El mundo de los famosos · {0}
+9713|PRENSA ROSA
+9714|Cafetería
+9715|Una cafetería pequeña y elegante en tu barrio. Los ingresos varían con el tiempo y la temporada.
+9718|Restaurante
+9719|Restaurante de cenas en el centro. Gana mucho en una buena semana y pierde en una mala.
+9722|Pisos de alquiler
+9723|Un edificio de seis pisos. Alquiler fijo y seguro.
+9726|Tu marca de ropa
+9727|Una línea de ropa con tu nombre. Las ventas crecen con tu fama.
+9730|Tus botas de firma
+9731|Tu propia línea de botas con una marca deportiva. Solo para jugadores muy famosos.
+9734|Proyecto residencial
+9735|Participación en un gran proyecto de viviendas. Alta rentabilidad, alto riesgo.
+9738|Academia de fútbol en tu pueblo
+9739|Una academia gratuita para niños de tu pueblo. No da dinero, da cariño.
+9742|Acciones en el club de tu infancia
+9743|Hazte accionista del club donde empezaste. Tus acciones suben si el club crece.
+9857|Esta inversión requiere al menos {0} de fama.
+9888|{0}: comprado
+9842|{0} abrió una academia de fútbol para niños en su pueblo
+9874|{0} lanzó su propia marca de ropa
+9862|Llega una línea de botas con la firma de {0}
+9873|{0} se hizo accionista del club de su infancia
+9884|{0}, empresario: {1}
+9746|Abrimos la academia para los niños de mi pueblo. ¡Perseguid vuestros sueños!
+9749|Vuelvo al club donde empecé, esta vez como accionista.
+9750|Mi marca ya está aquí. ¡La primera colección es para vosotros!
+9753|Mis botas de firma están listas. ¡Nos vemos en el campo!
+9889|¿Vender {0}?
+9756|Oferta del comprador:
+9893|{0}: vendido
+9890|{0} vendido: +{1}
+9757|Tu cafetería se hizo viral y hay cola hasta la calle
+9758|Se rompió la cafetera del local, gastos de reparación
+9759|Tu restaurante recibió la nota máxima de un crítico famoso
+9760|Incendio en la cocina del restaurante: una semana cerrado
+9761|Nuevo inquilino en uno de los pisos, sube el alquiler
+9762|Se reparó el tejado del edificio
+9763|La nueva colección de tu marca se agotó
+9764|Problemas en el almacén de tu marca, más devoluciones
+9765|Tus botas son las favoritas de los jóvenes
+9766|Defecto de fabricación en las botas, retirada
+9767|Las ventas del proyecto residencial se disparan
+9768|Las obras del proyecto residencial se paran, sobrecostes
+9769|¡Un chico de tu academia firmó un contrato profesional!
+9770|Nuevo campo y vestuario en la academia
+9771|El club de tu infancia ascendió y tus acciones subieron
+9772|El club amplió capital para pagar deudas
+9850|Primer profesional de la academia: {0}, orgulloso
+9773|La semana pasada
+9774|Ganancia total
+9775|Legado
+9776|Cariño de la afición
+9777|Crece con la fama
+9778|Riesgo alto
+9779|Riesgo bajo
+9891|Requiere {0} de fama
+9780|Movimientos
+9781|Inversiones
+9782|Tus negocios
+9783|Oportunidades de inversión
+9784|Los ingresos llegan a tu cuenta cada semana
+9785|Valor de la cartera
+9786|Estatua en el club
+9787|Al menos 7 temporadas, 220 partidos y 90 goles+asistencias en un club
+9788|Dorsal retirado
+9789|Al menos 9 temporadas y 280 partidos en un club
+9790|Sincero
+9791|Más allá del campo
+9792|Los días difíciles, tu familia y tus verdaderos sentimientos.
+9793|Explosivo
+9794|No me callaré
+9795|Secretos de vestuario, viejos entrenadores, peleas. Vende mucho y enfada mucho.
+9798|Del barrio a la cima
+9799|Gracias a los compañeros y consejos para los jóvenes.
+9876|Autobiografía a la venta: {0}, "{1}"
+9840|Mi libro "{0}" sale hoy. Estoy en cada página.
+9832|{0} irá a la tele tras retirarse: firmó como comentarista
+9800|🎙️ Acuerdo firmado: serás comentarista de TV cuando te retires.
+9802|Aún sin partidos.
+9803|Conseguido: llegará al retirarte
+9885|Tu autobiografía · {0}
+9804|A la venta
+9805|Anticipo
+9806|Escribir · 1 acción
+9807|Autobiografía
+9808|Las editoriales quieren tu historia. Tú eliges el tono.
+9811|Las editoriales llamarán a partir de los 29 años y con más de 45 de fama.
+9812|Comentarista de TV
+9813|Cuando te retires estarás en la tele.
+9814|Firmado
+9815|Oferta de comentarista de TV
+9816|Un canal deportivo te quiere como comentarista cuando te retires.
+9817|Los canales harán ofertas a partir de los 32 y con más de 40 de fama.
+9818|Legado en el club
+9819|Ocurre al retirarte
+9820|Conseguido
+9821|Después de tu carrera
+9822|Las huellas que dejas
+9823|Puntos de leyenda
+9824|Partido homenaje
+9825|400 partidos o 60 de fama con 33 años: despedida ante las gradas llenas.
+9859|Habrá una estatua tuya frente al estadio de {0}
+9846|{1} retiró el dorsal {0}
+9826|Partido homenaje: una última vez en el campo ante las gradas llenas
+9886|Tu autobiografía: {0}
+9827|Ahora eres comentarista en la tele
+9828|Ingresos por inversiones (semana pasada)

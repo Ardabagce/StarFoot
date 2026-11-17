@@ -2593,3 +2593,254 @@
 9581|koleksi
 9582|Etalase
 9586|Hemat
+9587|Musim sudah selesai. Tunggu musim baru.
+9588|Pulang kampung
+9589|Liburan tenang bersama keluarga, teman lama, dan jalanan masa kecilmu.
+9590|Tur balon udara di Kapadokia
+9591|Naik balon saat matahari terbit dan dua malam di hotel gua.
+9592|Teluk-teluk Aegea
+9593|Pelayaran biru dari teluk ke teluk dan ikan segar di malam hari.
+9594|Paris dan pekan mode
+9595|Hotel butik, peragaan busana, dan galeri.
+9596|Kamp latihan pribadi
+9597|Dua minggu di pegunungan dengan pelatih pribadi dan fisioterapis. Bukan liburan, tapi persiapan.
+9600|Bermain ski di Pegunungan Alpen
+9601|Liburan salju di kabin gunung. Klub tidak suka risiko cedera.
+9604|Kota mewah di gurun
+9605|Suite di gedung pencakar langit, safari gurun, dan belanja.
+9606|Pulau pesta
+9607|Seminggu penuh selebriti. Fotonya tersebar ke mana-mana.
+9610|Tur Mediterania dengan yacht sendiri
+9611|Kru siap, rute terserah kamu. Termasuk bahan bakar dan biaya pelabuhan.
+9614|Kepulauan Karibia
+9615|Pasir putih, pohon palem, dua minggu tanpa ponsel.
+9616|Vila di atas air
+9617|Vila pribadi di laguna biru toska, koki, dan menyelam.
+9618|Liburan singkat ke kota
+9619|Semalam di hotel, konser, atau teater.
+9620|Pemandian air panas dan spa
+9621|Pijat, sauna, dan tidur panjang.
+9622|Rumah kebun anggur
+9623|Akhir pekan tenang di alam bersama keluarga.
+9624|Kamu sudah punya rencana liburan musim ini.
+9625|Kamu harus punya yacht sendiri untuk tur ini.
+9837|{0}: pemesanan beres. Kamu berangkat setelah musim usai!
+9863|Pemesanan dibatalkan. Pengembalian: {0}
+9626|Jatah liburan akhir pekanmu musim ini sudah habis.
+9627|Istirahat sebentar, isi ulang tenaga.
+9628|Liburan akhir pekan. Senin kembali latihan!
+9631|Sedikit istirahat baik untuk semua orang.
+9632|Stamina dan kekuatan +1.
+9633|saat bermain ski
+9844|{0} cedera saat liburan ski! Klub sangat marah.
+9838|Foto liburan bikin heboh: {0} berpesta sampai pagi!
+9829|Gosip: {0} jadi sorotan karena foto di pulau pesta. Klub menunggu penjelasan.
+9887|{0} dan {1} berlibur: {2}
+9892|{0} berlibur: {1}
+9634|Tak ada yang mengalahkan kampung halaman.
+9635|Naik balon saat matahari terbit. Luar biasa!
+9637|Naik perahu dari teluk ke teluk. Lautnya indah!
+9640|Malam di Paris.
+9641|Tanpa liburan, persiapan musim baru!
+9642|Menikmati salju di pegunungan.
+9643|Gurun dan gedung pencakar langit.
+9644|Minggu yang tak terlupakan!
+9645|Keliling Mediterania dengan yacht. Rute bebas!
+9648|Hidup di pulau. Mengisi ulang tenaga.
+9651|Hidup di pulau, laguna biru toska.
+9877|🧳 Liburan jeda musim: {0}. {1}{2}
+9652|Dipesan
+9653|Perlu yacht
+9654|Pesan
+9655|Risiko cedera
+9656|Risiko skandal
+9657|Kekuatan dan stamina
+9658|Pergi · 1 aksi
+9659|Liburanmu sebelumnya
+9660|Perjalanan
+9661|Liburan akhir musimmu
+9662|Kamu berangkat setelah musim usai.
+9663|Batalkan (pengembalian 80%)
+9664|Liburan akhir musim
+9665|Mau ke mana?
+9666|Pesan sekarang, berangkat liburan setelah musim usai.
+9667|✈️ Kamu punya jet pribadi: tanpa biaya terbang ke luar negeri (diskon 30%).
+9669|Sekali per musim
+9670|Liburan akhir pekan
+9883|Sisa musim ini: {0}
+9671|Pemutaran perdana film
+9672|Karpet merah, kilatan kamera, dan tamu terkenal.
+9673|Pekan mode, barisan depan
+9674|Desainer mengundangmu ke barisan depan. Biaya pakaian ditanggung sendiri.
+9677|Malam amal
+9678|Malam untuk rumah sakit anak. Kamu diharapkan berdonasi.
+9681|Pesta selebriti
+9682|Semua orang akan datang. Fotografer juga.
+9685|Bintang tamu acara malam
+9686|Obrolan langsung dan sedikit unjuk bakat.
+9687|Malam penghargaan olahraga
+9688|Atlet terbaik tahun ini berkumpul. Siapkan jasmu.
+9691|Podcast populer
+9692|Kamu akan bercerita tentang karier, keluarga, dan mimpimu.
+9693|Syuting iklan
+9694|Syuting sehari, bayaran bagus.
+9695|Kamu sudah menghadiri satu acara minggu ini.
+9831|{0} terlihat keluar dari pesta menjelang pagi. Pelatih tidak senang.
+9830|{0} meledek rekan setim saat siaran langsung, ruang ganti pun gaduh!
+9868|{0} di karpet merah pemutaran perdana film
+9870|{0} duduk di barisan depan pekan mode
+9847|{0} berdonasi untuk anak-anak di malam amal
+9880|{0} di pesta selebriti
+9843|{0} di acara malam: aksi bakatnya disambut tepuk tangan
+9851|{0} memukau di malam penghargaan olahraga
+9871|{0} bercerita tentang kariernya di podcast
+9878|{0} jadi wajah baru sebuah iklan
+9696|Kamu bertemu selebriti
+9836|({0}) menghampirimu di akhir malam. Obrolan kalian sangat cocok.
+9697|Pamit dengan sopan
+9881|{0} · malam yang menyenangkan.
+9698|Minta nomornya
+9865|Cinta baru? {0} dan {1} {2} satu meja!
+9860|Kamu bertemu {0}! Ketenaran +0.4 · Moral +6
+9835|{0} disebut berkata tentang {1}: "Aku yang memikul tim ini"
+9841|Tegang saat latihan: adu mulut sengit antara {0} dan {1}
+9833|Hubungan dingin di media sosial: {0} berhenti mengikuti {1}
+9866|{0} dan {1} berdamai: "Kami adalah keluarga"
+9854|{0} memberi pernyataan: "Kata-kataku diputarbalikkan"
+9848|{0} tetap diam, hubungan dengan {1} masih dingin
+9858|{0} tak terbendung: {1} gol dalam seminggu!
+9852|Jatuh cinta: {0} dan {1} terlihat bergandengan tangan
+9875|Pernikahan tahun ini: {0} dan {1} menikah!
+9869|Putus: {0} dan {1} berpisah
+9849|{0} tak berhenti belanja: menghabiskan {1} dalam seminggu
+9864|{0} mencuri perhatian dengan gaya rambut baru
+9834|{0} berfoto dengan setiap penggemar usai latihan
+9845|{0} makan malam bersama keluarga di restoran favorit
+9872|{0} terlihat lari pagi
+9855|{0} memberi kejutan ulang tahun untuk penggemar
+9853|{0} membagikan jersey kepada anak-anak di lingkungannya
+9839|{0} punya tato baru? Media sosial ramai membicarakannya
+9856|{0} terlihat di restoran koki terkenal
+9699|Bayaran
+9700|Sudah hadir minggu ini
+9701|Hadiri · 1 aksi
+9702|Undangan mulai datang saat ketenaranmu di atas 15.
+9703|Krisis
+9704|Berita tentangmu dan rekan setim jadi berita utama. Apa yang akan kamu lakukan?
+9706|Telepon dan bicara
+9707|Buat pernyataan
+9708|Paparazi
+9709|Belum ada berita tentangmu.
+9861|💫 Hubunganmu dengan {0} jadi favorit media gosip.
+9710|Undangan minggu ini
+9711|Kamu bisa hadiri satu acara per minggu
+9712|Berita utama
+9882|Dunia selebriti · {0}
+9713|GOSIP
+9714|Kedai kopi
+9715|Kafe kecil yang apik di lingkunganmu. Pendapatan naik turun sesuai cuaca dan musim.
+9718|Restoran
+9719|Restoran malam di pusat kota. Untung besar di minggu bagus, rugi di minggu buruk.
+9722|Apartemen sewaan
+9723|Gedung dengan enam unit. Pendapatan sewa yang stabil dan aman.
+9726|Merek pakaianmu
+9727|Lini pakaian dengan namamu. Penjualan naik seiring ketenaranmu.
+9730|Sepatu bola khasmu
+9731|Lini sepatu bola sendiri dengan merek olahraga. Hanya untuk pemain sangat terkenal.
+9734|Proyek hunian
+9735|Saham di proyek perumahan besar. Untung tinggi, risiko tinggi.
+9738|Akademi sepak bola di kampung halaman
+9739|Akademi gratis untuk anak-anak di kampungmu. Tidak menghasilkan uang, tapi memenangkan hati.
+9742|Saham di klub masa kecil
+9743|Jadi pemegang saham klub tempatmu memulai. Sahammu naik seiring klub berkembang.
+9857|Investasi ini butuh ketenaran minimal {0}.
+9888|{0}: dibeli
+9842|{0} membuka akademi sepak bola untuk anak-anak di kampungnya
+9874|{0} meluncurkan merek pakaiannya sendiri
+9862|Lini sepatu khas {0} segera hadir
+9873|{0} jadi pemegang saham klub masa kecilnya
+9884|{0} di dunia bisnis: {1}
+9746|Akademi untuk anak-anak di kampungku sudah dibuka. Kejar mimpimu!
+9749|Kembali ke klub tempatku memulai, kali ini sebagai pemegang saham.
+9750|Merekku sudah rilis. Koleksi pertama untuk kalian!
+9753|Sepatu khasku sudah siap. Sampai jumpa di lapangan!
+9889|Jual {0}?
+9756|Tawaran pembeli:
+9893|{0}: dijual
+9890|{0} terjual: +{1}
+9757|Kafemu viral, antrean sampai ke luar
+9758|Mesin kopi kafe rusak, biaya perbaikan
+9759|Restoranmu dapat nilai sempurna dari kritikus terkenal
+9760|Kebakaran dapur di restoranmu: tutup seminggu
+9761|Penyewa baru di salah satu unit, sewa naik
+9762|Atap gedung diperbaiki
+9763|Koleksi baru merekmu ludes terjual
+9764|Masalah di gudang merekmu, retur meningkat
+9765|Sepatu khasmu jadi favorit anak muda
+9766|Cacat produksi di lini sepatu, penarikan produk
+9767|Penjualan proyek hunian melonjak
+9768|Pembangunan proyek hunian terhenti, biaya tambahan
+9769|Seorang anak dari akademimu menandatangani kontrak profesional!
+9770|Lapangan dan ruang ganti baru dibangun di akademi
+9771|Klub masa kecilmu promosi, nilai sahammu naik
+9772|Klub menambah modal untuk melunasi utang
+9850|Pemain pro pertama dari akademi: {0} bangga
+9773|Minggu lalu
+9774|Total pendapatan
+9775|Warisan
+9776|Cinta suporter
+9777|Tumbuh bersama ketenaran
+9778|Risiko tinggi
+9779|Risiko rendah
+9891|Perlu ketenaran {0}
+9780|Aktivitas
+9781|Investasi
+9782|Bisnismu
+9783|Peluang investasi
+9784|Pendapatan masuk ke rekeningmu setiap minggu
+9785|Nilai portofolio
+9786|Patung klub
+9787|Minimal 7 musim, 220 laga, dan 90 gol+asis di satu klub
+9788|Nomor punggung dipensiunkan
+9789|Minimal 9 musim dan 280 laga di satu klub
+9790|Tulus
+9791|Lebih dari Lapangan
+9792|Masa sulit, keluargamu, dan perasaan sejatimu.
+9793|Blak-blakan
+9794|Aku Tak Akan Diam
+9795|Rahasia ruang ganti, mantan pelatih, pertengkaran. Laris, tapi bikin marah.
+9798|Dari Gang ke Puncak
+9799|Terima kasih untuk rekan setim dan nasihat bagi pemain muda.
+9876|Autobiografi terbit: {0}, "{1}"
+9840|Bukuku "{0}" terbit hari ini. Ada diriku di setiap halaman.
+9832|{0} akan tampil di TV setelah pensiun: teken kontrak sebagai pandit
+9800|🎙️ Kontrak diteken: kamu akan jadi pandit TV setelah pensiun.
+9802|Belum ada laga.
+9803|Layak: terwujud saat kamu pensiun
+9885|Autobiografimu · {0}
+9804|Sudah terbit
+9805|Uang muka
+9806|Tulis · 1 aksi
+9807|Autobiografi
+9808|Penerbit menginginkan kisahmu. Kamu pilih gaya bukunya.
+9811|Penerbit datang setelah usia 29 dan ketenaranmu di atas 45.
+9812|Pandit TV
+9813|Setelah pensiun kamu tampil di TV.
+9814|Diteken
+9815|Tawaran pandit TV
+9816|Saluran olahraga ingin kamu jadi pandit pertandingan setelah pensiun.
+9817|Saluran TV menawarkan setelah usia 32 dan ketenaranmu di atas 40.
+9818|Warisan di klub
+9819|Terwujud saat pensiun
+9820|Layak
+9821|Setelah karier
+9822|Jejak yang kamu tinggalkan
+9823|Skor legenda
+9824|Laga testimonial
+9825|400 laga atau ketenaran 60 di usia 33: laga perpisahan di depan tribun penuh.
+9859|Patungmu akan berdiri di depan stadion {0}
+9846|Nomor {0} dipensiunkan di {1}
+9826|Laga testimonial: terakhir kali di lapangan di depan tribun penuh
+9886|Autobiografimu: {0}
+9827|Kini kamu pandit pertandingan di TV
+9828|Pendapatan investasi (minggu lalu)
