@@ -2111,3 +2111,352 @@
 9075|Hijos en tu carrera
 9076|Después de casarte puedes tener hijos. Pasa tiempo con ellos según su edad.
 9077|Alineación con arrastrar y soltar, estilos de jugador y planes de desarrollo.
+9079|Esta noche llego temprano, cenemos juntos
+9080|Vale mamá, no te preocupes
+9081|Te lo prometo mamá, me cuido
+9082|Hijo mío, cuídate mucho.
+9083|Ya terminé los deberes, mamá
+9084|¡Bien hecho! Los estudios importan tanto como el fútbol.
+9086|Esta noche estudio, te lo prometo
+9087|¡Lo prometiste, lo voy a comprobar!
+9088|Vale mamá, voy
+9089|Esta semana estoy muy liado mamá, iré más adelante
+9090|Vale hijo, pero te echamos mucho de menos.
+9091|Jaja, salúdalos de mi parte
+9092|Mamá, no exageréis
+9093|Se lo diré, todos te quieren mucho.
+9094|¡No exageramos, estamos orgullosos!
+9095|Claro, firmo una camiseta y la llevo
+9096|¡Tu tía se va a poner muy contenta!
+9097|Ahora es complicado mamá, luego lo miro
+9098|Vale, yo se lo digo.
+9099|Gracias mamá, juego por vosotros
+9100|Gracias mamá, es gracias a vuestras oraciones
+9101|Hijo mío, estoy muy orgullosa.
+9102|Celebrémoslo juntos esta noche, mamá
+9103|Esta noche voy y lo celebramos juntos
+9104|Estoy haciendo una tarta, ¡ven rápido!
+9105|Gracias mamá, nos recuperaremos
+9106|Lo sé, eres fuerte.
+9107|Esta noche me siento un rato contigo, mamá
+9108|Esta noche voy a casa, necesito despejarme
+9109|Ven hijo, he hecho sopa caliente.
+9110|Estoy mejor mamá, no te preocupes
+9111|Recupérate pronto, rezo por ti.
+9112|Hoy estoy en casa, quédate conmigo
+9113|Esta semana me quedo un poco con vosotros
+9114|Ven, yo te cuido.
+9115|El entrenador eligió a otro, sigo trabajando
+9116|Tú trabaja, cuando llegue tu momento jugarás.
+9117|No sé mamá, estoy un poco bajo de ánimo
+9118|No estés triste, para nosotros siempre eres el número uno.
+9119|Mi niño querido.
+9120|Hace mucho calor, bebe mucha agua, hijo.
+9121|¡Los vecinos siempre preguntan por ti, siguen tus partidos!
+9448|He visto el partido, ¡ganasteis {0}! ¡El barrio está de fiesta!
+9122|¡Dos goles! Los vecinos han venido a casa, bien hecho hijo.
+9125|¡Tres goles! ¡Tu padre y yo saltábamos frente a la tele!
+9128|¡Portería a cero! Bien hecho hijo.
+9445|El partido acabó {0}, no te desanimes hijo. El próximo lo ganáis.
+9130|Apuntado, papá
+9131|Bien. Yo fui tu primer entrenador, no lo olvides.
+9132|Lo sé papá, estoy trabajando en ello
+9133|El que trabaja gana, hijo.
+9134|Yo también echo de menos esos días
+9135|Ya entonces eras distinto.
+9136|Ven esta noche y los vemos juntos
+9137|¡Pongo el té!
+9138|¿En serio? Qué bonito
+9141|Todo el mundo habla de ti.
+9142|Vamos a dar un paseo esta noche, papá
+9143|El fin de semana me paso por el barrio
+9144|¡Se lo digo a todos!
+9145|Ven papá, te haré sentir orgulloso
+9146|Ven papá, te buscaré en la grada
+9147|¡Seré el que más grite en la grada!
+9148|Te conseguí entrada papá, tu nombre está en la puerta
+9149|¡Eres el mejor, hijo!
+9150|Apuntado, gracias papá
+9151|Venga, demuestra lo que vales.
+9152|Nuestro entrenador dijo lo mismo
+9153|¡Entonces yo también podría ser entrenador!
+9154|Ya lo cambié, papá
+9155|Bien, no descuides el mantenimiento.
+9156|Se me olvidó, lo hago esta semana
+9157|No te olvides, que luego se quema el motor.
+9158|Al menos 15, te lo prometo papá
+9159|Al menos 8, te lo prometo papá
+9160|¡Te tomo la palabra, voy a contarlos!
+9161|Lo de menos son los goles, que gane el equipo
+9162|Al menos 10 partidos, te lo prometo papá
+9163|Que gane el equipo, lo demás da igual
+9164|¡Bien hecho papá, sigue así!
+9165|No como tú, pero me defiendo.
+9166|Mañana salimos a correr juntos
+9167|¡A las 7 estoy en tu puerta!
+9168|Gracias papá, es gracias a ti
+9169|Yo solo te compré el balón, lo demás es mérito tuyo.
+9170|Ven el fin de semana y vemos el resumen juntos
+9171|¡Ya grabé el resumen!
+9172|Tienes razón papá, cabeza alta
+9173|Ven esta noche papá, hablemos un rato
+9174|Voy, pon el té.
+9175|Voy todos los días, papá
+9176|Bien, paciencia.
+9177|Me aburro papá, quiero jugar
+9178|Lo sé. Si te precipitas, estarás más tiempo fuera.
+9181|Mantén la calma en el área y llegarán los goles.
+9182|No retengas tanto el balón, acelera el juego.
+9183|Mantén bien la línea del fuera de juego, no te quedes atrás.
+9184|Sé más decidido en las salidas, la portería es tu casa.
+9185|¡Ganaste con la selección, qué orgullo!
+9186|¡Una ronda más en la copa! Bien hecho.
+9188|Vale papá, yo llevo el balón
+9189|¡Trato hecho, a las 9 en el parque!
+9190|Esta semana estoy cansado papá, otro día
+9191|Vale hijo, descansa.
+9192|¿Vemos un partido juntos el fin de semana?
+9193|Vale papá, tú compras las pipas
+9194|Esta semana estoy liado papá, otro día
+9195|Vale hijo, como veas.
+9196|¿Vamos a pescar esta semana?
+9197|Vale papá, vamos
+9198|Esta semana no papá, hay partido
+9199|Vale, iremos en el parón.
+9450|¡Voy a la grada para el partido contra {0}!
+9447|He visto los partidos de {0}, su defensa es lenta. Juega rápido.
+9200|¿Cuántas porterías a cero vas a dejar esta temporada?
+9201|Quedarse en el banquillo también enseña. Demuéstrale al entrenador en los entrenamientos.
+9204|Esta semana estoy liado, te lo compensaré
+9205|Vale... pero lo has prometido.
+9206|Yo también pienso en ti
+9207|Qué mono eres.
+9208|Entonces quedamos esta noche
+9209|¡Vale, te espero!
+9210|Tienes razón, esta noche me acuesto pronto
+9211|Bien, que descanses.
+9212|Ven, descansemos juntos
+9213|Voy, ponemos una peli.
+9214|Gracias, pensé en ti en el campo
+9215|Qué mono. ¿Lo celebramos?
+9217|¿Lo celebramos esta noche?
+9218|¡Me estoy arreglando!
+9219|Contigo a mi lado no estoy triste
+9220|Siempre estoy aquí.
+9221|¿Vienes esta noche?
+9222|Voy ahora mismo.
+9223|Qué haría yo sin ti
+9224|No exageres, ¡tómate la sopa!
+9225|Ven, veamos una peli juntos
+9226|Voy, la manta la llevo yo.
+9227|¿Cenamos fuera esta noche?
+9228|Vale, a las 8 lista
+9229|¡Genial, me arreglo!
+9230|Estoy libre, te recojo a las 8
+9231|¡Estaré lista!
+9232|Vamos, yo hago la reserva
+9233|¡Genial, qué ganas!
+9234|Escapémonos, vamos a la playa
+9235|¡Hago la maleta!
+9236|Esta noche voy, las palomitas las llevo yo
+9237|Trato hecho, preparo la manta.
+9238|Ya la escuché, es preciosa
+9239|Entonces que sea nuestra canción.
+9240|La escucharé después del entrenamiento
+9241|¡Pero no te olvides!
+9242|Mi madre te quiere mucho
+9243|Yo también la quiero mucho.
+9244|Vamos juntos
+9245|¡Vale, yo hago el postre!
+9246|Claro que te vi, te reconocí enseguida
+9247|Mentiroso, pero qué mono.
+9248|En el partido no te vi, no te enfades
+9249|No me enfado, ¡pero la próxima vez mira!
+9250|Vale míster
+9251|Ya veremos.
+9252|Allí estaré, míster
+9253|Bien. Estudia bien al rival.
+9255|¿Puedo hablar con usted antes de la reunión?
+9256|Ven, tengo 15 minutos.
+9257|Gracias míster, aún puedo dar más
+9258|Es lo que espero.
+9259|Es gracias al equipo, míster
+9260|Me gusta tu humildad.
+9261|Tiene razón míster, lo corregiré
+9262|Demuéstralo en el entrenamiento.
+9263|Míster, ¿podemos hablarlo en persona?
+9264|Ven a mi despacho mañana por la mañana.
+9265|Estoy listo míster, espero mi oportunidad
+9266|Veámoslo en el entrenamiento.
+9267|Quiero hablar de por qué no jugué, míster
+9268|Ven, hablemos claro.
+9269|Gracias míster, trabajo con paciencia
+9270|Así se hace.
+9271|Quiero volver cuanto antes, míster
+9272|No descuides la rehabilitación, el equipo te espera.
+9273|El fisio me da buenas noticias, ten paciencia.
+9274|Afina más tus saques largos.
+9275|En el balón parado, organiza tú la defensa.
+9446|Esta semana el rival es {0}. Reunión táctica el jueves a las 10:00.
+9276|Analizaremos todos esta derrota. Mañana hay sesión de vídeo.
+9278|Eso es, chicos
+9279|¡Jaja, eso es!
+9280|A las 9 en la cafetería.
+9281|Jajaja, ¿otra vez?
+9282|¡Cada semana la misma historia!
+9283|Por suerte la mía está bien
+9284|¡Qué suerte!
+9285|¡Yo! Ya tengo la lista preparada
+9288|Otra vez esas canciones...
+9289|Que elija el capitán
+9290|¡El capitán siempre pone la misma canción!
+9291|¡Guardadme un trozo!
+9292|¡Corre, que se acaba!
+9293|¡Feliz cumpleaños, capitán!
+9294|Capitán: ¡Gracias, chicos!
+9295|¡Me apunto, me llevo el trofeo!
+9296|¡Eso ya lo veremos!
+9297|Esta vez miro
+9298|¿Tienes miedo o qué?
+9299|¡Bienvenido, hermano!
+9300|Nuevo jugador: ¡Gracias, tío!
+9301|Llevémoslo a cenar esta noche
+9302|Buena idea, yo lo organizo.
+9303|Yo llego pronto, pagáis vosotros
+9304|¡Mañana lo veremos!
+9305|Ay, yo suelo llegar el último
+9306|¡Prepara la cartera!
+9307|¡Yo también voy!
+9308|¡Ya tenemos mesa reservada!
+9309|Eso es, nos levantaremos juntos
+9310|¡Así se habla!
+9311|Trabajemos más en los entrenamientos
+9312|¡Estamos!
+9313|¡Golazo, hermano!
+9314|Ganamos como equipo, chicos
+9315|¡La estrella humilde!
+9316|¡Esta noche la cena la pago yo!
+9317|¡Ya lo habéis oído, chicos!
+9318|¡Fuiste un muro en la portería, hermano!
+9319|Es gracias a la defensa, chicos
+9320|Recupérate, hermano, te esperamos.
+9321|Gracias chicos, vuelvo pronto
+9322|¡Vuelve pronto!
+9323|Os veré en el partido
+9324|¡Ganaremos por ti!
+9325|Avísame si viene un club grande
+9326|Serás el primero en saberlo.
+9327|Genial, daré lo mejor de mí
+9328|Juega tranquilo, no te presiones.
+9329|¿Qué club?
+9330|Aún no puedo decirlo, pero es un club grande.
+9331|De momento prefiero centrarme en los partidos
+9332|Lo entiendo, lo rechazaré con educación.
+9333|Vale, pon una fecha
+9334|Vale, te aviso cuando esté cerrado.
+9335|Tú mantén el teléfono encendido
+9336|¡Si nunca lo apago!
+9337|Primero en el campo, luego a negociar
+9338|Piensas bien.
+9339|Luego lo miro
+9340|Vale, las dejo en espera.
+9341|Vale, si el club lo permite
+9342|Trato hecho, escribo a tu agente.
+9343|Entre amigos no hay entrevistas, nos tomamos un café
+9344|¡Jaja, tienes razón!
+9345|¿Por qué no? Lo hablamos
+9346|¡Te tomo la palabra!
+9347|De momento estoy contento con mi agente
+9348|Lo entiendo, mi puerta está abierta.
+9349|Bien, ganamos
+9350|El nuestro también fue duro, perdimos
+9351|Empatamos, no está mal
+9352|La temporada es larga, ¡adelante!
+9353|Vi vuestro partido, luchasteis bien
+9354|¡Gracias, tío!
+9355|Gracias doctor, me cuido
+9356|¡No te saltes el calentamiento!
+9357|Si pasa algo, eres el primero al que llamo
+9220|Siempre estoy aquí.
+9358|¡Esta semana voy!
+9359|¡Tu mesa estará lista!
+9360|Salúdalos de mi parte
+9361|¡Se van a poner muy contentos!
+9362|Un día voy al colegio a conocerlos
+9363|¿En serio? ¡Les va a encantar!
+9365|Cuídalos bien, míster
+9366|Tranquilo, saldrán como tú.
+9367|Me llena de orgullo, gracias
+9368|Te lo mereces.
+9369|¡Enhorabuena! Celebrémoslo esta semana
+9372|¡El sitio lo elijo yo!
+9373|Enhorabuena tío, me alegro mucho
+9374|Hoy tengo entrenamiento, jugamos mañana
+9375|¡Vale, mañana!
+9376|Es una época liada, tío, quedamos en el parón
+9377|Esta semana no puedo, tío, hay partido
+9378|¡Vale, pero no te olvides!
+9379|Entendido, ya hablamos.
+9380|¡Vale, yo llevo el balón!
+9381|Quedemos esta semana
+9382|Echo mucho de menos esos días
+9383|Yo también, tío, qué tiempos.
+9384|Quedemos esta semana y hablamos de los viejos tiempos
+9385|¡Genial, llamo también a la vieja pandilla!
+9386|Vale, te consigo una
+9387|¡Eres un crack! Le va a encantar.
+9390|Preguntaré al club, pero no prometo nada
+9391|Vale tío, no pasa nada.
+9392|¡Gracias, tío!
+9393|¡Siempre estamos contigo!
+9394|¡Queremos más goles!
+9395|Celebrémoslo esta noche
+9396|Gracias tío, nos recuperaremos
+9397|Lo sé, lo conseguirás.
+9398|Salgamos esta noche, necesito despejarme
+9399|Vale, te recojo a las 8.
+9400|Gracias tío, estoy bien
+9401|Si necesitas algo, llámame.
+9402|Ven a tomar un café, estoy en casa
+9403|Voy, y llevo postre.
+9404|¡Genial, grita para que te oiga!
+9405|¡Hasta quedarme afónico!
+9406|Quedemos después del partido
+9407|Trato hecho, te espero fuera del estadio.
+9408|Sí, te lo enseño en el recreo
+9409|¡Eres el mejor!
+9410|Yo tampoco los he hecho aún
+9411|¡Ay, la profe se va a enfadar!
+9412|Voy, pero ¡id suave!
+9413|Reglas especiales para ti, ¡prometido!
+9414|El club no me deja, tío, riesgo de lesión
+9415|Tienes razón, te veremos desde la grada.
+9449|¡Ya tengo mi entrada para el partido contra {0}, estaré en la grada!
+9416|Recupérate, tío, si necesitas algo dímelo.
+9417|Hoy estoy cansado, jugamos mañana
+9418|¿Me lo prometes, papá?
+9419|¡Salúdalos a todos!
+9420|¡Se lo digo, papá!
+9421|El fin de semana miramos juntos
+9422|¡Bien! ¿Me lo prometes?
+9423|Las viejas aún están nuevas, úsalas un poco más
+9424|Pero papá...
+9425|¡Ahora mismo lo pongo en la nevera!
+9426|¡Jiji! Voy a dibujar otro.
+9429|Creo que vas a ser pintor
+9430|¡No, voy a ser futbolista!
+9431|¡Un día tú también marcarás, campeón!
+9432|¡Te lo prometo, papá!
+9433|¡Enséñame a mí también!
+9434|Gracias cariño, eres mi mayor fan
+9435|¡Siempre lo seré!
+9436|¡Genial, nos vemos esta noche!
+9437|Estoy orgulloso de ti
+9438|Gracias, papá.
+9439|Muchas gracias, papá.
+9440|Llámame cuando quieras
+9441|Lo sé, papá.
+9442|Papá, ¿puedes volver pronto esta noche?
+9443|Esta noche llego tarde, mañana te lo prometo
+9444|Vale, papá.
+9180|Si te precipitas, estarás más tiempo fuera.

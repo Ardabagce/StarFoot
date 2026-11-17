@@ -2111,3 +2111,352 @@
 9075|Anak dalam kariermu
 9076|Setelah menikah kamu bisa punya anak. Habiskan waktu bersama mereka sesuai usianya.
 9077|Susunan pemain seret-dan-lepas, gaya pemain, dan rencana pengembangan.
+9079|Malam ini aku pulang cepat, kita makan bareng ya
+9080|Oke Bu, jangan khawatir
+9081|Janji Bu, aku hati-hati
+9082|Anakku sayang, jaga dirimu.
+9083|PR-ku sudah selesai, Bu
+9084|Bagus! Sekolah sama pentingnya dengan sepak bola.
+9086|Malam ini aku belajar, janji
+9087|Kamu sudah janji, nanti Ibu cek!
+9088|Oke Bu, aku datang
+9089|Minggu ini aku sibuk sekali Bu, nanti aku datang
+9090|Baiklah Nak, tapi kami kangen sekali.
+9091|Haha, titip salam buat mereka
+9092|Ah Ibu, jangan berlebihan
+9093|Nanti Ibu sampaikan, mereka semua sayang kamu.
+9094|Kami tidak berlebihan, kami bangga!
+9095|Oke, aku tanda tangani satu jersey dan kubawa
+9096|Bibimu pasti senang sekali!
+9097|Sekarang agak susah Bu, nanti kulihat
+9098|Baiklah, nanti Ibu bilang padanya.
+9099|Makasih Bu, aku main untuk kalian
+9100|Makasih Bu, berkat doa kalian
+9101|Anakku sayang, Ibu bangga sekali.
+9102|Malam ini kita rayakan bareng, Bu
+9103|Malam ini aku mampir, kita rayakan bareng
+9104|Ibu bikin kue, cepat datang!
+9105|Makasih Bu, kami akan bangkit
+9106|Ibu tahu, kamu kuat.
+9107|Malam ini aku temani Ibu sebentar
+9108|Malam ini aku ke rumah, biar pikiranku tenang
+9109|Datanglah Nak, Ibu bikin sup hangat.
+9110|Aku sudah lebih baik Bu, jangan khawatir
+9111|Cepat sembuh, Ibu mendoakanmu.
+9112|Hari ini aku di rumah, temani aku saja
+9113|Minggu ini aku tinggal sebentar di rumah
+9114|Datanglah, Ibu yang merawatmu.
+9115|Pelatih memilih yang lain, aku terus berlatih
+9116|Terus berlatih, nanti waktunya kamu main.
+9117|Entahlah Bu, aku agak sedih
+9118|Jangan sedih, bagi kami kamu selalu nomor satu.
+9119|Anakku sayang.
+9120|Cuacanya panas sekali, banyak minum air ya Nak.
+9121|Tetangga selalu menanyakanmu, mereka mengikuti pertandinganmu!
+9448|Ibu nonton pertandingannya, kalian menang {0}! Satu kampung merayakan!
+9122|Dua gol! Tetangga sampai datang ke rumah, hebat Nak.
+9125|Tiga gol! Ibu dan Ayah sampai lompat-lompat di depan TV!
+9128|Gawangmu tidak kebobolan! Hebat Nak.
+9445|Pertandingan berakhir {0}, jangan sedih Nak. Kalian menang di laga berikutnya.
+9130|Dicatat, Yah
+9131|Bagus. Ayah pelatih pertamamu, jangan lupa.
+9132|Aku tahu Yah, aku sedang berlatih
+9133|Yang bekerja keras akan menang, Nak.
+9134|Aku juga rindu masa itu
+9135|Kamu sudah istimewa sejak dulu.
+9136|Malam ini datang, kita nonton bareng
+9137|Ayah seduh tehnya!
+9138|Serius? Keren sekali
+9141|Semua orang membicarakanmu.
+9142|Malam ini kita jalan-jalan yuk, Yah
+9143|Akhir pekan aku mampir ke kampung
+9144|Ayah kabari semua orang!
+9145|Datang ya Yah, aku akan membuatmu bangga
+9146|Datang ya Yah, aku akan mencarimu di tribun
+9147|Ayah yang paling keras teriak di tribun!
+9148|Sudah kuurus tiketnya Yah, namamu ada di pintu masuk
+9149|Kamu memang hebat, Nak!
+9150|Dicatat, makasih Yah
+9151|Ayo, tunjukkan kemampuanmu.
+9152|Pelatih kami juga bilang begitu
+9153|Berarti Ayah juga bisa jadi pelatih!
+9154|Sudah kuganti, Yah
+9155|Bagus, jangan abaikan perawatannya.
+9156|Lupa, minggu ini kuurus
+9157|Jangan lupa, nanti mesinnya rusak.
+9158|Paling sedikit 15, janji Yah
+9159|Paling sedikit 8, janji Yah
+9160|Ayah pegang janjimu, Ayah hitung!
+9161|Bukan soal gol, asal tim menang
+9162|Paling sedikit 10 laga, janji Yah
+9163|Asal tim menang, yang lain tidak penting
+9164|Hebat Yah, lanjutkan!
+9165|Tidak seperti kamu, tapi lumayan!
+9166|Besok kita lari bareng
+9167|Jam 7 pagi Ayah sudah di depan pintu!
+9168|Makasih Yah, berkat Ayah
+9169|Ayah cuma membelikan bola, sisanya karena kamu.
+9170|Akhir pekan datang, kita nonton cuplikannya bareng
+9171|Ayah sudah merekam cuplikannya!
+9172|Ayah benar, kepalaku tetap tegak
+9173|Malam ini datang Yah, kita ngobrol sebentar
+9174|Ayah datang, siapkan tehnya.
+9175|Aku pergi setiap hari, Yah
+9176|Bagus, sabar ya.
+9177|Aku bosan Yah, aku ingin main
+9178|Ayah tahu. Kalau terburu-buru, kamu akan absen lebih lama.
+9181|Lebih tenang di kotak penalti, gol akan datang.
+9182|Jangan terlalu lama pegang bola, percepat permainan.
+9183|Jaga garis offside dengan baik, jangan tertinggal satu langkah.
+9184|Lebih tegas saat keluar dari gawang, gawang itu rumahmu.
+9185|Kamu menang dengan seragam timnas, Ayah bangga!
+9186|Satu babak lagi di piala! Hebat.
+9188|Oke Yah, aku yang bawa bola
+9189|Sepakat, jam 9 pagi di taman!
+9190|Minggu ini aku capek Yah, lain kali
+9191|Oke Nak, istirahatlah.
+9192|Akhir pekan nonton pertandingan bareng yuk?
+9193|Oke Yah, Ayah yang beli camilan
+9194|Minggu ini aku sibuk Yah, lain kali
+9195|Oke Nak, terserah kamu.
+9196|Minggu ini kita mancing yuk?
+9197|Oke Yah, ayo
+9198|Minggu ini tidak bisa Yah, ada pertandingan
+9199|Baiklah, kita pergi saat jeda musim.
+9450|Ayah datang ke tribun untuk laga melawan {0}!
+9447|Ayah nonton laga {0}, pertahanan mereka lambat. Main cepat.
+9200|Berapa clean sheet targetmu musim ini?
+9201|Duduk di bangku cadangan juga mengajarkan sesuatu. Tunjukkan dirimu pada pelatih saat latihan.
+9204|Minggu ini aku sibuk, nanti kuganti
+9205|Baiklah... tapi kamu sudah janji.
+9206|Aku juga memikirkanmu
+9207|Kamu manis.
+9208|Kalau begitu kita ketemu malam ini
+9209|Oke, aku tunggu!
+9210|Kamu benar, malam ini aku tidur cepat
+9211|Bagus, tidur yang nyenyak.
+9212|Ke sini, kita santai bareng
+9213|Aku datang, kita nonton film.
+9214|Makasih, aku memikirkanmu di lapangan
+9215|Kamu manis. Mau merayakan?
+9217|Malam ini kita rayakan?
+9218|Aku siap-siap!
+9219|Selama ada kamu, aku tidak sedih
+9220|Aku selalu di sini.
+9221|Malam ini mau ke tempatku?
+9222|Aku segera datang.
+9223|Apa jadinya aku tanpamu
+9224|Jangan berlebihan, makan supmu!
+9225|Ke sini, kita nonton film bareng
+9226|Aku datang, selimut biar aku yang bawa.
+9227|Malam ini makan di luar yuk?
+9228|Oke, jam 8 siap ya
+9229|Asyik, aku siap-siap!
+9230|Aku kosong, kujemput jam 8
+9231|Aku akan siap!
+9232|Ayo, aku yang pesan meja
+9233|Asyik, aku tidak sabar!
+9234|Ayo kabur, kita ke pantai
+9235|Aku siapkan koper!
+9236|Malam ini aku datang, popcorn dariku
+9237|Sepakat, aku siapkan selimut.
+9238|Sudah kudengar, bagus sekali
+9239|Kalau begitu, jadikan itu lagu kita.
+9240|Nanti kudengar setelah latihan
+9241|Tapi jangan lupa ya!
+9242|Ibuku sayang sekali padamu
+9243|Aku juga sayang beliau.
+9244|Ayo kita pergi bareng
+9245|Oke, aku yang buat pencuci mulut!
+9246|Tentu aku lihat, aku langsung mengenalimu
+9247|Bohong, tapi kamu manis.
+9248|Aku tidak melihatmu saat pertandingan, jangan marah
+9249|Aku tidak marah, tapi lain kali lihat ya!
+9250|Siap coach
+9251|Kita lihat nanti.
+9252|Aku akan hadir, coach
+9253|Bagus. Pelajari lawan dengan baik.
+9255|Boleh bicara dengan Anda sebelum rapat?
+9256|Datanglah, saya punya 15 menit.
+9257|Terima kasih coach, yang lebih baik akan datang
+9258|Itu yang saya harapkan.
+9259|Berkat tim, coach
+9260|Saya suka kerendahan hatimu.
+9261|Anda benar coach, akan saya perbaiki
+9262|Buktikan saat latihan.
+9263|Coach, bisakah kita bicarakan ini langsung?
+9264|Datang ke kantor saya besok pagi.
+9265|Saya siap coach, menunggu kesempatan
+9266|Kita lihat saat latihan.
+9267|Saya ingin membahas kenapa saya tidak main, coach
+9268|Datanglah, kita bicara terus terang.
+9269|Terima kasih coach, saya berlatih dengan sabar
+9270|Itu yang benar.
+9271|Saya ingin segera kembali, coach
+9272|Jangan lewatkan program rehabilitasi, tim menunggumu.
+9273|Saya dengar kabar baik dari fisioterapis, bersabarlah.
+9274|Tendangan gawang jauhmu harus lebih akurat.
+9275|Saat bola mati, kamu yang mengatur pertahanan.
+9446|Minggu ini lawan kita {0}. Rapat taktik hari Kamis pukul 10:00.
+9276|Kita semua akan menganalisis kekalahan ini. Besok ada sesi video.
+9278|Betul, bro
+9279|Haha, betul!
+9280|Jam 9 di kafe.
+9281|Hahaha, lagi?
+9282|Tiap minggu ceritanya sama!
+9283|Untungnya punyaku benar
+9284|Beruntung kamu!
+9285|Aku! Daftar lagunya sudah siap
+9288|Lagu-lagu itu lagi...
+9289|Biar kapten yang pilih
+9290|Kapten juga selalu putar lagu yang sama!
+9291|Sisakan sepotong buatku!
+9292|Cepat, hampir habis!
+9293|Selamat ulang tahun, kapten!
+9294|Kapten: Makasih, bro!
+9295|Aku ikut, pialanya punyaku!
+9296|Kita lihat saja!
+9297|Kali ini aku nonton saja
+9298|Takut ya?
+9299|Selamat datang, bro!
+9300|Pemain baru: Makasih, bang!
+9301|Malam ini kita ajak dia makan
+9302|Ide bagus, aku yang atur.
+9303|Aku selalu datang awal, kalian yang bayar
+9304|Kita lihat besok!
+9305|Waduh, aku biasanya datang paling akhir
+9306|Siapkan dompetmu!
+9307|Aku juga datang!
+9308|Meja sudah dipesan!
+9309|Betul, kita bangkit bersama
+9310|Begitu dong!
+9311|Ayo latihan lebih keras
+9312|Kami siap!
+9313|Golmu keren sekali, bro!
+9314|Kita menang sebagai tim, bro
+9315|Bintang yang rendah hati!
+9316|Malam ini makan aku yang traktir!
+9317|Kalian dengar, bro!
+9318|Kamu jadi tembok di bawah mistar, bro!
+9319|Berkat pertahanan, bro
+9320|Semoga cepat sembuh, bro, kami menunggumu.
+9321|Makasih bro, aku segera kembali
+9322|Cepat kembali!
+9323|Aku akan menonton kalian di pertandingan
+9324|Kami akan menang untukmu!
+9325|Kabari aku kalau ada klub besar
+9326|Kamu yang pertama tahu.
+9327|Mantap, akan kuberikan yang terbaik
+9328|Main santai, jangan tekan dirimu.
+9329|Klub mana?
+9330|Belum bisa kusebut, tapi klub besar.
+9331|Untuk sekarang aku fokus ke pertandingan dulu
+9332|Mengerti, akan kutolak dengan sopan.
+9333|Oke, atur tanggalnya
+9334|Oke, kukabari setelah diatur.
+9335|Kamu jaga ponselmu tetap aktif
+9336|Memang tidak pernah kumatikan!
+9337|Lapangan dulu, negosiasi belakangan
+9338|Pemikiranmu tepat.
+9339|Nanti kulihat
+9340|Oke, kutahan dulu.
+9341|Boleh, kalau klub mengizinkan
+9342|Sepakat, aku hubungi agenmu.
+9343|Antar teman tidak ada wawancara, kita ngopi saja
+9344|Haha, kamu benar!
+9345|Kenapa tidak, nanti kita bicarakan
+9346|Aku pegang janjimu!
+9347|Untuk sekarang aku puas dengan agenku
+9348|Mengerti, pintuku selalu terbuka.
+9349|Lancar, kami menang
+9350|Punya kami juga berat, kami kalah
+9351|Imbang, lumayan
+9352|Musim masih panjang, lanjut!
+9353|Aku nonton laga kalian, kalian berjuang dengan baik
+9354|Makasih, bro!
+9355|Makasih dok, aku hati-hati
+9356|Jangan lewatkan pemanasan!
+9357|Kalau ada apa-apa, kamu yang pertama kutelepon
+9220|Aku selalu ada.
+9358|Minggu ini aku datang!
+9359|Mejamu akan siap!
+9360|Titip salam buat mereka
+9361|Mereka pasti senang sekali!
+9362|Suatu hari aku datang ke sekolah menemui mereka
+9363|Serius? Mereka pasti senang sekali!
+9365|Jaga mereka baik-baik, coach
+9366|Tenang, mereka akan tumbuh sepertimu.
+9367|Aku sangat tersanjung, terima kasih
+9368|Kamu pantas mendapatkannya.
+9369|Selamat! Kita rayakan minggu ini
+9372|Tempatnya aku yang pilih!
+9373|Selamat bro, aku ikut senang
+9374|Hari ini aku latihan, besok kita main
+9375|Oke, besok!
+9376|Lagi sibuk bro, kita ketemu saat jeda musim
+9377|Minggu ini tidak bisa bro, minggu pertandingan
+9378|Oke, tapi jangan lupa!
+9379|Oke, kita kabar-kabaran.
+9380|Oke, aku yang bawa bola!
+9381|Minggu ini kita ketemu
+9382|Aku sangat rindu masa itu
+9383|Aku juga bro, masa yang indah.
+9384|Minggu ini kita ketemu, ngobrolin masa lalu
+9385|Mantap, aku ajak geng lama juga!
+9386|Oke, kuurus satu
+9387|Kamu luar biasa! Dia pasti suka.
+9390|Aku tanya klub dulu, tapi tidak janji
+9391|Oke bro, tidak masalah.
+9392|Makasih, bro!
+9393|Kami selalu mendukungmu!
+9394|Kami tunggu gol-gol lainnya!
+9395|Malam ini kita rayakan
+9396|Makasih bro, kami akan bangkit
+9397|Aku tahu, kamu pasti bisa.
+9398|Malam ini kita keluar, biar pikiranku tenang
+9399|Oke, kujemput jam 8.
+9400|Makasih bro, aku baik-baik saja
+9401|Kalau butuh sesuatu, telepon aku.
+9402|Mampir ngopi, aku di rumah
+9403|Aku datang, sekalian bawa kue.
+9404|Mantap, teriak yang keras biar kudengar!
+9405|Sampai suaraku habis!
+9406|Kita ketemu setelah pertandingan
+9407|Sepakat, aku tunggu di depan stadion.
+9408|Sudah, nanti kutunjukkan waktu istirahat
+9409|Kamu yang terbaik!
+9410|Aku juga belum
+9411|Waduh, guru pasti marah!
+9412|Aku datang, tapi mainnya pelan-pelan ya!
+9413|Aturan khusus untukmu, janji!
+9414|Klub tidak mengizinkan bro, risiko cedera
+9415|Kamu benar, kami nonton kamu dari tribun saja.
+9449|Aku sudah beli tiket laga melawan {0}, aku di tribun!
+9416|Semoga cepat sembuh bro, bilang kalau butuh apa-apa.
+9417|Hari ini Ayah capek, besok kita main
+9418|Janji ya, Ayah?
+9419|Salam buat semuanya!
+9420|Pasti, Ayah!
+9421|Akhir pekan kita lihat bareng
+9422|Hore! Janji?
+9423|Yang lama masih baru, pakai sedikit lebih lama
+9424|Tapi Ayah...
+9425|Langsung Ayah tempel di kulkas!
+9426|Hihi! Aku gambar satu lagi.
+9429|Sepertinya kamu akan jadi pelukis
+9430|Tidak, aku mau jadi pemain sepak bola!
+9431|Suatu hari kamu juga akan mencetak gol, jagoan!
+9432|Janji, Ayah!
+9433|Ajari aku juga!
+9434|Makasih sayang, kamu penggemar terbesarku
+9435|Selamanya!
+9436|Asyik, sampai jumpa nanti malam!
+9437|Ayah bangga padamu
+9438|Makasih, Ayah.
+9439|Terima kasih, Ayah.
+9440|Telepon kapan pun kamu mau
+9441|Aku tahu, Ayah.
+9442|Ayah, malam ini bisa pulang cepat?
+9443|Malam ini Ayah pulang telat, besok janji
+9444|Oke, Ayah.
+9180|Kalau terburu-buru, kamu akan absen lebih lama.

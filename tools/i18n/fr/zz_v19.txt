@@ -2111,3 +2111,352 @@
 9075|Des enfants dans ta carrière
 9076|Après le mariage, tu peux avoir des enfants. Passe du temps avec eux selon leur âge.
 9077|Composition par glisser-déposer, styles de joueur et plans de progression.
+9079|Je rentre tôt ce soir, on dîne ensemble
+9080|D'accord maman, ne t'inquiète pas
+9081|Promis maman, je fais attention
+9082|Mon fils chéri, prends soin de toi.
+9083|J'ai fini mes devoirs, maman
+9084|Bravo ! L'école compte autant que le foot.
+9086|Je révise ce soir, promis
+9087|Tu as promis, je vérifierai !
+9088|D'accord maman, j'arrive
+9089|Je suis très pris cette semaine maman, je passerai plus tard
+9090|D'accord mon fils, mais tu nous manques beaucoup.
+9091|Haha, passe-leur le bonjour
+9092|Maman, n'exagérez pas
+9093|Je leur dirai, ils t'adorent tous.
+9094|On n'exagère pas, on est fiers !
+9095|D'accord, je signe un maillot et je l'apporte
+9096|Ta tante va être ravie !
+9097|C'est compliqué en ce moment maman, je verrai plus tard
+9098|D'accord, je lui dirai.
+9099|Merci maman, je joue pour vous
+9100|Merci maman, c'est grâce à vos prières
+9101|Mon fils chéri, je suis si fière.
+9102|On fête ça ensemble ce soir, maman
+9103|Je passe ce soir et on fête ça ensemble
+9104|Je fais un gâteau, viens vite !
+9105|Merci maman, on va se relever
+9106|Je sais, tu es fort.
+9107|Ce soir je reste un peu avec toi, maman
+9108|Je passe ce soir, j'ai besoin de me changer les idées
+9109|Viens mon fils, j'ai fait une soupe chaude.
+9110|Ça va mieux maman, ne t'inquiète pas
+9111|Guéris vite, je prie pour toi.
+9112|Je suis à la maison aujourd'hui, reste juste avec moi
+9113|Je reste un peu chez vous cette semaine
+9114|Viens, je m'occupe de toi.
+9115|Le coach a fait un autre choix, je continue à bosser
+9116|Continue à travailler, ton heure viendra.
+9117|Je ne sais pas maman, j'ai un peu le moral à zéro
+9118|Ne sois pas triste, pour nous tu es toujours le numéro un.
+9119|Mon garçon chéri.
+9120|Il fait très chaud, bois beaucoup d'eau, mon fils.
+9121|Les voisins demandent toujours de tes nouvelles, ils suivent tes matchs !
+9448|J'ai vu le match, vous avez gagné {0} ! Tout le quartier fait la fête !
+9122|Deux buts ! Les voisins sont à la porte, bravo mon fils.
+9125|Trois buts ! Ton père et moi sautions devant la télé !
+9128|Pas un but encaissé ! Bravo mon fils.
+9445|Le match s'est terminé {0}, ne te laisse pas abattre. Vous gagnerez le prochain.
+9130|C'est noté, papa
+9131|Bien. J'ai été ton premier entraîneur, ne l'oublie pas.
+9132|Je sais papa, j'y travaille
+9133|Le travail paie, mon fils.
+9134|Ces jours-là me manquent aussi
+9135|Tu étais déjà différent à l'époque.
+9136|Viens ce soir, on les regarde ensemble
+9137|Je prépare le thé !
+9138|Sérieux ? C'est génial
+9141|Tout le monde parle de toi.
+9142|Allons marcher ce soir, papa
+9143|Je passerai au quartier ce week-end
+9144|Je préviens tout le monde !
+9145|Viens papa, je vais te rendre fier
+9146|Viens papa, je te chercherai en tribune
+9147|Je crierai plus fort que tout le monde en tribune !
+9148|Je t'ai pris une place papa, ton nom est à l'entrée
+9149|T'es le meilleur, mon fils !
+9150|C'est noté, merci papa
+9151|Allez, montre ce que tu vaux.
+9152|Notre coach a dit la même chose
+9153|Alors moi aussi je pourrais être entraîneur !
+9154|Je l'ai changée, papa
+9155|Bien, ne néglige pas l'entretien.
+9156|J'ai oublié, je le fais cette semaine
+9157|N'oublie pas, sinon le moteur va lâcher.
+9158|Au moins 15, promis papa
+9159|Au moins 8, promis papa
+9160|Je te prends au mot, je compte !
+9161|Peu importe les buts, tant que l'équipe gagne
+9162|Au moins 10 matchs, promis papa
+9163|Tant que l'équipe gagne, le reste importe peu
+9164|Bravo papa, continue !
+9165|Pas comme toi, mais ça va !
+9166|Allons courir ensemble demain
+9167|Je suis devant ta porte à 7 h !
+9168|Merci papa, c'est grâce à toi
+9169|Je t'ai juste acheté le ballon, le reste, c'est toi.
+9170|Passe ce week-end, on regarde le résumé ensemble
+9171|J'ai déjà enregistré le résumé !
+9172|Tu as raison papa, la tête haute
+9173|Viens ce soir papa, on discute un peu
+9174|J'arrive, prépare le thé.
+9175|J'y vais tous les jours, papa
+9176|Bien, sois patient.
+9177|Je m'ennuie papa, je veux jouer
+9178|Je sais. Si tu te précipites, tu seras absent plus longtemps.
+9181|Sois plus calme dans la surface, les buts viendront.
+9182|Ne garde pas trop le ballon, accélère le jeu.
+9183|Tiens bien la ligne du hors-jeu, ne reste pas un pas derrière.
+9184|Sois plus décidé dans tes sorties, le but, c'est chez toi.
+9185|Tu as gagné avec le maillot national, je suis fier !
+9186|Un tour de plus en coupe ! Bravo.
+9188|D'accord papa, j'apporte le ballon
+9189|Marché conclu, au parc à 9 h !
+9190|Je suis fatigué cette semaine papa, une autre fois
+9191|D'accord mon fils, repose-toi.
+9192|On regarde un match ensemble ce week-end ?
+9193|D'accord papa, tu t'occupes des grignotages
+9194|Je suis pris cette semaine papa, une autre fois
+9195|D'accord mon fils, comme tu veux.
+9196|On va pêcher cette semaine ?
+9197|D'accord papa, on y va
+9198|Pas cette semaine papa, il y a match
+9199|D'accord, on ira pendant l'intersaison.
+9450|Je viens en tribune pour le match contre {0} !
+9447|J'ai regardé les matchs de {0}, leur défense est lente. Joue vite.
+9200|Combien de clean sheets vises-tu cette saison ?
+9201|Le banc aussi, ça apprend. Montre-toi au coach à l'entraînement.
+9204|Je suis pris cette semaine, je me rattraperai
+9205|D'accord... mais tu as promis.
+9206|Je pense à toi aussi
+9207|T'es trop mignon.
+9208|Alors on se voit ce soir
+9209|D'accord, je t'attends !
+9210|Tu as raison, je me couche tôt ce soir
+9211|Bien, dors bien.
+9212|Viens, on se repose ensemble
+9213|J'arrive, on mettra un film.
+9214|Merci, je pensais à toi sur le terrain
+9215|T'es mignon. On fête ça ?
+9217|On fête ça ce soir ?
+9218|Je me prépare !
+9219|Avec toi, je ne suis pas triste
+9220|Je suis toujours là.
+9221|Tu viens me voir ce soir ?
+9222|J'arrive tout de suite.
+9223|Qu'est-ce que je ferais sans toi
+9224|N'exagère pas, mange ta soupe !
+9225|Viens, on regarde un film ensemble
+9226|J'arrive, j'apporte le plaid.
+9227|On dîne dehors ce soir ?
+9228|D'accord, sois prête à 20 h
+9229|Super, je me prépare !
+9230|Je suis libre, je passe te prendre à 20 h
+9231|Je serai prête !
+9232|Allons-y, je réserve
+9233|Super, j'ai hâte !
+9234|Évadons-nous, allons à la mer
+9235|Je fais ma valise !
+9236|Je viens ce soir, j'apporte le pop-corn
+9237|Marché conclu, je prépare le plaid.
+9238|Je l'ai écoutée, elle est trop belle
+9239|Alors ce sera notre chanson.
+9240|Je l'écouterai après l'entraînement
+9241|N'oublie pas, hein !
+9242|Ma mère t'adore
+9243|Je l'adore aussi.
+9244|Allons-y ensemble
+9245|D'accord, je fais le dessert !
+9246|Bien sûr que je t'ai vue, je t'ai repérée tout de suite
+9247|Menteur, mais t'es mignon.
+9248|Je ne t'ai pas vue pendant le match, ne m'en veux pas
+9249|Je ne t'en veux pas, mais regarde la prochaine fois !
+9250|D'accord coach
+9251|On verra.
+9252|J'y serai, coach
+9253|Bien. Étudie bien l'adversaire.
+9255|Je peux vous parler avant la réunion ?
+9256|Viens, j'ai 15 minutes.
+9257|Merci coach, le meilleur reste à venir
+9258|C'est ce que j'attends.
+9259|C'est grâce à l'équipe, coach
+9260|J'aime ton humilité.
+9261|Vous avez raison coach, je vais corriger ça
+9262|Montre-le à l'entraînement.
+9263|Coach, on peut en parler en face à face ?
+9264|Viens dans mon bureau demain matin.
+9265|Je suis prêt coach, j'attends ma chance
+9266|Voyons ça à l'entraînement.
+9267|Je veux parler de pourquoi je n'ai pas joué, coach
+9268|Viens, parlons franchement.
+9269|Merci coach, je travaille patiemment
+9270|C'est la bonne attitude.
+9271|Je veux revenir au plus vite, coach
+9272|Ne néglige pas ta rééducation, l'équipe t'attend.
+9273|Le kiné me donne de bonnes nouvelles, sois patient.
+9274|Sois plus précis sur tes longs dégagements.
+9275|Sur coups de pied arrêtés, c'est toi qui organises la défense.
+9446|Cette semaine, on affronte {0}. Réunion tactique jeudi à 10 h.
+9276|On va tous analyser cette défaite. Séance vidéo demain.
+9278|Carrément, les gars
+9279|Haha, carrément !
+9280|À 9 h au café.
+9281|Hahaha, encore ?
+9282|Chaque semaine la même histoire !
+9283|La mienne est bonne, heureusement
+9284|T'as de la chance !
+9285|Moi ! J'ai préparé la playlist
+9288|Encore ces chansons...
+9289|Que le capitaine choisisse
+9290|Le capitaine met toujours la même chanson !
+9291|Gardez-moi une part !
+9292|Dépêche-toi, il n'en reste presque plus !
+9293|Joyeux anniversaire, capitaine !
+9294|Capitaine : Merci les gars !
+9295|Je suis partant, je gagne la coupe !
+9296|On verra bien !
+9297|Cette fois je regarde
+9298|T'as peur ou quoi ?
+9299|Bienvenue, frérot !
+9300|Nouveau joueur : Merci, mec !
+9301|Emmenons-le dîner ce soir
+9302|Super idée, je m'en occupe.
+9303|Je suis toujours en avance, c'est pour vous
+9304|On verra demain !
+9305|Aïe, j'arrive souvent en dernier
+9306|Prépare ton portefeuille !
+9307|Je viens aussi !
+9308|On a réservé une table !
+9309|Exactement, on va se relever ensemble
+9310|C'est ça qu'on veut entendre !
+9311|Bossons plus dur à l'entraînement
+9312|On est partants !
+9313|Superbe but, frérot !
+9314|On a gagné en équipe, les gars
+9315|La star humble !
+9316|Ce soir, le dîner est pour moi !
+9317|Vous avez entendu, les gars !
+9318|T'étais un mur dans les cages, frérot !
+9319|C'est grâce à la défense, les gars
+9320|Bon rétablissement, frérot, on t'attend.
+9321|Merci les gars, je reviens bientôt
+9322|Reviens vite !
+9323|Je vous regarderai au match
+9324|On va gagner pour toi !
+9325|Préviens-moi si un grand club se manifeste
+9326|Tu seras le premier au courant.
+9327|Super, je vais tout donner
+9328|Joue détendu, ne te mets pas la pression.
+9329|Quel club ?
+9330|Je ne peux pas encore le dire, mais c'est un grand club.
+9331|Je préfère me concentrer sur les matchs pour l'instant
+9332|Je comprends, je déclinerai poliment.
+9333|D'accord, fixe une date
+9334|D'accord, je te préviens quand c'est calé.
+9335|Garde ton téléphone allumé
+9336|Je ne l'éteins jamais de toute façon !
+9337|D'abord le terrain, ensuite les négociations
+9338|Tu as raison.
+9339|Je regarderai plus tard
+9340|D'accord, je les garde en attente.
+9341|D'accord, si le club est d'accord
+9342|Marché conclu, j'écris à ton agent.
+9343|Pas d'interview entre potes, on prend un café
+9344|Haha, t'as raison !
+9345|Pourquoi pas, on en parle
+9346|Je te prends au mot !
+9347|Pour l'instant je suis content de mon agent
+9348|Je comprends, ma porte est ouverte.
+9349|Ça s'est bien passé, on a gagné
+9350|Le nôtre aussi était dur, on a perdu
+9351|Match nul, ça peut aller
+9352|La saison est longue, on continue !
+9353|J'ai vu votre match, vous vous êtes bien battus
+9354|Merci, mon pote !
+9355|Merci doc, je fais attention
+9356|Ne zappe pas l'échauffement !
+9357|S'il se passe quoi que ce soit, je t'appelle en premier
+9220|Je suis toujours là.
+9358|Je passe cette semaine !
+9359|Ta table sera prête !
+9360|Passe-leur le bonjour
+9361|Ils vont être ravis !
+9362|Un jour je viendrai à l'école les rencontrer
+9363|Sérieux ? Ils vont adorer !
+9365|Prends bien soin d'eux, coach
+9366|T'inquiète, ils deviendront comme toi.
+9367|Ça me touche beaucoup, merci
+9368|Tu le mérites.
+9369|Félicitations ! On fête ça cette semaine
+9372|C'est moi qui choisis l'endroit !
+9373|Félicitations mon pote, je suis trop content pour toi
+9374|J'ai entraînement aujourd'hui, on joue demain
+9375|D'accord, demain !
+9376|C'est une période chargée, on se voit à l'intersaison
+9377|Pas cette semaine mon pote, c'est semaine de match
+9378|D'accord, mais n'oublie pas !
+9379|Compris, on se tient au courant.
+9380|D'accord, j'apporte le ballon !
+9381|On se voit cette semaine
+9382|Ces jours-là me manquent beaucoup
+9383|Moi aussi mon pote, c'était le bon temps.
+9384|On se voit cette semaine pour parler du bon vieux temps
+9385|Super, j'appelle aussi l'ancienne bande !
+9386|D'accord, je t'en trouve un
+9387|T'es le meilleur ! Il va adorer.
+9390|Je demande au club, mais je ne promets rien
+9391|Pas de souci mon pote.
+9392|Merci, mon pote !
+9393|On est toujours derrière toi !
+9394|On veut plus de buts !
+9395|On fête ça ce soir
+9396|Merci mon pote, on va se relever
+9397|Je sais, tu vas y arriver.
+9398|Sortons ce soir, j'ai besoin de me changer les idées
+9399|D'accord, je passe te prendre à 20 h.
+9400|Merci mon pote, ça va
+9401|Si tu as besoin de quoi que ce soit, appelle-moi.
+9402|Passe prendre un café, je suis chez moi
+9403|J'arrive, et j'apporte le dessert.
+9404|Super, crie fort que je t'entende !
+9405|Jusqu'à en perdre la voix !
+9406|On se retrouve après le match
+9407|Marché conclu, je t'attends devant le stade.
+9408|Je l'ai fait, je te montre à la récré
+9409|T'es le meilleur !
+9410|Je ne l'ai pas encore fait non plus
+9411|Aïe, la maîtresse va être fâchée !
+9412|Je viens, mais allez-y doucement !
+9413|Des règles spéciales rien que pour toi, promis !
+9414|Le club ne me laissera pas, mon pote, risque de blessure
+9415|T'as raison, on te regardera depuis les tribunes.
+9449|J'ai mon billet pour le match contre {0}, je serai en tribune !
+9416|Bon rétablissement mon pote, dis-moi si tu as besoin de quoi que ce soit.
+9417|Je suis fatigué aujourd'hui, on joue demain
+9418|Promis, papa ?
+9419|Dis bonjour à tout le monde !
+9420|D'accord papa !
+9421|On regarde ensemble ce week-end
+9422|Youpi ! Promis ?
+9423|Les anciennes sont encore neuves, porte-les encore un peu
+9424|Mais papa...
+9425|Je l'accroche tout de suite sur le frigo !
+9426|Hihi ! Je vais en dessiner un autre.
+9429|On dirait que tu vas devenir peintre
+9430|Non, je vais être footballeur !
+9431|Un jour tu marqueras aussi, champion !
+9432|Promis, papa !
+9433|Apprends-moi aussi !
+9434|Merci mon cœur, tu es mon plus grand fan
+9435|Je le serai toujours !
+9436|Super, à ce soir !
+9437|Je suis fier de toi
+9438|Merci, papa.
+9439|Merci beaucoup, papa.
+9440|Appelle-moi quand tu veux
+9441|Je sais, papa.
+9442|Papa, tu peux rentrer tôt ce soir ?
+9443|Je rentre tard ce soir, demain promis
+9444|D'accord, papa.
+9180|Si tu te précipites, tu seras absent plus longtemps.

@@ -177,27 +177,42 @@
   }
 
   // ---------------- kişiler ve haftalık mesajlar ----------------
-  // her kişi her hafta farklı bir mesaj atar: haftaya ve kişiye göre karışık seçim, son maça / sakatlığa / yaşa göre bağlam
+  // Her mesajın bir türü var (davet, tebrik, teselli, soru, istek...). Cevap seçenekleri o mesaja göre gelir:
+  // tebrik edene "teşekkürler", davet edene "geliyorum / bu sefer olmaz", soru sorana cevap.
+  // Maça, gole, sakatlığa, kadroda olmamaya, mevkiye, üne, yaşa ve sıradaki rakibe göre seçilir; aynı mesaj üst üste gelmez.
   const hstr = (t) => { let h = 2166136261; for (let i = 0; i < t.length; i++) { h ^= t.charCodeAt(i); h = Math.imul(h, 16777619); } return h >>> 0; };
   function ctxNow() {
     const s = Game.state, p = s.player, r = s.lastReport;
     const f = !!(r && r.w && String(r.w).indexOf(String(s.season.year)) === 0 && s.season.round > 0);
-    return { win: f && r.res === 'W', loss: f && r.res === 'L', draw: f && r.res === 'D', goals: f && r.goals > 0, star: f && r.rating != null && r.rating >= 7.5, poor: f && r.rating != null && r.rating < 6, bench: f && r.rating == null && !p.injuryWeeks, inj: p.injuryWeeks > 0, young: p.age <= 17, kid: p.age <= 12 };
+    const pl = f && r.rating != null;
+    let nx = null; try { nx = nextMatch(); } catch (e) { /* yok */ }
+    const street = Game.inStreet();
+    let comp = 'league'; try { comp = Phone.data().lastComp || 'league'; } catch (e) { /* yok */ }
+    let mo = 8; try { mo = Phone.monthOf(s.season.round); } catch (e) { /* yok */ }
+    return {
+      f, played: pl, win: f && r.res === 'W', loss: f && r.res === 'L', draw: f && r.res === 'D', sc: f ? `${r.gf}-${r.ga}` : '', opp: f ? r.opp || '' : '', comp,
+      goals: pl && r.goals > 0, nG: pl ? r.goals || 0 : 0, ast: pl && r.assists > 0, cs: pl && r.ga === 0, star: pl && r.rating >= 7.5, poor: pl && r.rating < 6, motm: pl && !!r.motm,
+      bench: f && !pl && !p.injuryWeeks, inj: p.injuryWeeks > 0, injLong: p.injuryWeeks >= 3,
+      young: p.age <= 17, kid: p.age <= 12, gk: p.position === 'GK', pos: p.position, fame: p.fame || 0, street, youth: Game.isYouth(),
+      nx, nxL: !!(nx && nx.k === 'match' && !street), nxHome: !!(nx && nx.k === 'match' && nx.home && !street), winter: [10, 11, 0, 1, 2].includes(mo), summer: [5, 6, 7].includes(mo),
+    };
   }
-  // bağlamlı mesaj varsa çoğunlukla onu seçer; yoksa genel havuzdan
-  // son 3 haftalık mesajını tekrar etmez (bu haftanınki hariç: hafta içinde mesaj sabit kalır)
   const recent = (id) => { try { const w = Phone.week(), l = (Phone.data().log || {})[String(id).replace(/^fr(?=\d)/, 'f')] || []; return l.filter((e) => e.wk && e.w !== w).slice(-3).map((e) => e.t); } catch (e) { return []; } };
-  function say(id, gen, ctxList) {
-    const h = hstr(`${id}|${Phone.week()}`), rc = recent(id);
-    const fresh = (arr) => { const f = arr.filter((x) => !rc.includes(x)); return f.length ? f : arr; };
-    const c = fresh((ctxList || []).filter(Boolean));
-    if (c.length && h % 10 < 7) return c[(h >>> 4) % c.length];
-    const g = fresh(gen);
-    return g[(h >>> 8) % g.length];
-  }
-  const when = (cond, txt) => (cond ? txt : null);
-  function msg(id, gen, ctxList) { return { m: say(id, gen, ctxList), ctx: (ctxList || []).filter(Boolean).length > 0 }; }
   const pickW = (id, arr) => arr[hstr(`${id}|${Phone.week()}|r`) % arr.length];
+  // E(tür, metin, koşul, bağlamlı mı, özel cevaplar): koşul yanlışsa mesaj havuza girmez
+  const E = (k, t, c = true, x = false, r = null) => (c && t ? { k, t, x, r } : null);
+  // bağlamlı (maça/duruma bağlı) mesaj varsa çoğunlukla onu seçer; son 3 haftanın mesajını tekrar etmez
+  function pickMsg(id, list) {
+    const all = list.filter(Boolean), h = hstr(`${id}|${Phone.week()}`), rc = recent(id);
+    const fresh = (arr) => { const f = arr.filter((e) => !rc.includes(e.t)); return f.length ? f : arr; };
+    const c = fresh(all.filter((e) => e.x)), g = fresh(all.filter((e) => !e.x));
+    if (c.length && (h % 10 < 8 || !g.length)) return c[(h >>> 4) % c.length];
+    return g.length ? g[(h >>> 8) % g.length] : { k: 'def', t: '👋', x: false };
+  }
+  // kişinin bu haftaki mesajı + o mesaja uygun cevaplar
+  function conv(id, list, R) { const e = pickMsg(id, list); return { m: e.t, mk: e.k, ctx: !!e.x, R, r: e.r || R[e.k] || R.def }; }
+  const T = (t, ok) => ({ t, ok });
+  const A = (t, ok, act, more) => Object.assign({ t, ok, act, ap: 1 }, more || {});
   // arkadaşla buluşma: 1 aksiyon hakkı, arkadaşlık ve moral artar
   function friendMeet(f) {
     const s = Game.state, p = s.player;
@@ -208,48 +223,243 @@
   }
   function contacts() {
     const s = Game.state, p = s.player, L = Life.ensure(p), out = [], X = ctxNow();
-    const gfName = L.gf ? L.gf.name : null;
+    const fam = () => Life.act('family'), date = () => Life.act('date'), talk = () => Game.act('talk'), team = () => Game.act('team');
+    const once = () => !Game.state.week || !Game.state.week.coachTalk;
+    const W = (id, arr) => pickW(id, arr);
+    const pos = X.pos, out11 = pos !== 'GK';
+    const car = (p.items || []).some((id) => { const it = ITEMS.find((q) => q.id === id); return it && it.art === 'car'; });
+    // ---- Annem ----
+    const home = X.young ? W('mh', ['Bu akşam evdeyim anne, beraber oturalım', 'Akşam erken geleceğim, beraber yemek yiyelim']) : W('mh', ['Bu akşam size geliyorum', 'Hafta sonu kahvaltıya geliyorum', 'Akşam yemeğe uğrarım']);
+    const homeOk = W('mho', ['Oh çok sevindim! Hemen sofrayı kuruyorum.', 'Yaşasın! En sevdiğin yemeği yapıyorum.', 'Gözüm yollarda olacak!']);
+    const momR = {
+      care: [A(home, homeOk, fam), T(W('mc', ['Tamam anne, merak etme', 'Söz anne, dikkat ediyorum']), W('mco', ['Aferin benim oğluma.', 'Canım oğlum, kendine iyi bak.']))],
+      school: [T('Ödevlerimi bitirdim anne', 'Aferin! Ders de en az futbol kadar önemli.'), T('Bu akşam çalışacağım, söz', 'Söz verdin bak, kontrol edeceğim!')],
+      invite: [A('Tamam anne, geliyorum', homeOk, fam), T('Bu hafta çok yoğunum anne, sonra gelirim', 'Peki oğlum, ama çok özledik.')],
+      proud: [T(W('mp', ['Haha, onlara selam söyle', 'Abartmayın anne ya']), W('mpo', ['Söylerim, hepsi seni çok seviyor.', 'Abartmıyoruz, gurur duyuyoruz!'])), A(home, homeOk, fam)],
+      ask: [T('Tamam, bir forma imzalayıp getiririm', 'Teyzen çok sevinecek!'), T('Bu ara zor anne, sonra bakarım', 'Peki, ben ona söylerim.')],
+      congrats: [T(W('mg', ['Sağ ol anne, sizin için oynuyorum', 'Sağ ol anne, dualarınız sayesinde']), 'Canım oğlum, gurur duyuyorum.'), A(X.young ? 'Akşam beraber kutlayalım anne' : 'Bu akşam gelip beraber kutlayalım', 'Pasta yapıyorum, çabuk gel!', fam)],
+      console: [T('Sağ ol anne, toparlanacağız', 'Biliyorum, sen güçlüsün.'), A(X.young ? 'Akşam biraz seninle oturayım anne' : 'Bu akşam size geleyim, kafam dağılsın', 'Gel oğlum, sıcak çorba yaptım.', fam)],
+      inj: [T('Daha iyiyim anne, merak etme', 'Çabuk iyileş, dua ediyorum.'), A(X.young ? 'Bugün evdeyim, yanımda ol yeter' : 'Bu hafta biraz yanınızda kalayım', 'Gel, sana ben bakarım.', fam)],
+      bench: [T('Hoca başka tercih yaptı, çalışmaya devam', 'Sen çalış, zamanı gelince oynarsın.'), T('Bilmiyorum anne, moralim biraz bozuk', 'Üzülme, sen bizim için hep birincisin.')],
+      love: [T('Ben de seni seviyorum anne', 'Canım oğlum benim.'), A(home, homeOk, fam)],
+    };
+    momR.def = momR.love;
     out.push({ id: 'mom', n: 'Annem', role: 'Aile', c: 'linear-gradient(135deg,#46e08f,#1f9d5c)', i: 'A',
-      ...msg('mom', X.young
-        ? ['Akşam yemeği 7\'de, geç kalma!', 'Ödevlerini bitirdin mi?', 'Kramponlarını kapının önüne bırakma!', 'Antrenmandan sonra doğru eve.', 'Çantanı hazırladım, su şişeni unutma.', 'Sınavın ne zaman? Biraz ders çalış.', 'Yemek yiyor musun düzgün? Kendine iyi bak.', 'Komşular hep seni soruyor, çok ünlü oldun!', 'Uyku düzenine dikkat et oğlum.', 'Bu hafta soğuk olacakmış, kalın giyin.']
-        : ['Oğlum maçı izledim, seninle gurur duyuyorum.', 'Yemek yiyor musun düzgün? Kendine iyi bak.', 'Pazar yemeğe gel, en sevdiğin yemeği yapıyorum.', 'Komşular hep seni soruyor, çok ünlü oldun!', 'Babanla seni konuşuyorduk, seni çok özledik.', 'Bugün televizyonda senden bahsettiler, ağladım valla.', 'Teyzen aradı, imzalı forma istiyor.', 'Uyku düzenine dikkat et oğlum.', 'Fotoğrafını gazetede gördüm, çerçeveletiyorum!', 'Bu hafta soğuk olacakmış, kalın giyin.', 'Dua ediyorum hep senin için.'],
-        [when(X.win, 'Maçı izledim, kazandınız! Mahallede bayram var!'), when(X.goals, 'Golünü izlerken sesim kısıldı! Aferin oğlum.'), when(X.loss, 'Moralini bozma oğlum, bir dahaki maçı kazanırsınız.'), when(X.inj, 'Sakatlığın nasıl? İlaçlarını aksatma, merak ediyorum.'), when(X.bench, 'Bu hafta neden oynamadın? Hoca seni neden almadı?')]),
-      r: [{ t: X.young ? pickW('mom', ['Bu akşam erken geleceğim, beraber yemek yiyelim', 'Bu akşam evdeyim anne, beraber oturalım']) : pickW('mom', ['Bu akşam size geliyorum', 'Hafta sonu kahvaltıya geliyorum', 'Akşam yemeğe uğrarım']), act: () => Life.act('family'), ap: 1, ok: pickW('mom2', ['Oh çok sevindim! Hemen sofrayı kuruyorum.', 'Yaşasın! En sevdiğin yemeği yapıyorum.', 'Gözüm yollarda olacak!']) }, { t: pickW('mom3', ['Ben de seni seviyorum anne', 'Merak etme anne, iyiyim', 'Sağ ol anne, sen de kendine iyi bak']), ok: pickW('mom4', ['Canım oğlum. Kendine dikkat et.', 'Seni çok seviyorum.', 'Aferin benim oğluma.']) }] });
+      ...conv('mom', [
+        E('care', 'Uyku düzenine dikkat et oğlum.'),
+        E('care', 'Bu hafta soğuk olacakmış, kalın giyin.', X.winter), E('care', 'Hava çok sıcak, bol su iç oğlum.', X.summer),
+        E('care', 'Akşam yemeği 7\'de, geç kalma!', X.young), E('care', 'Kramponlarını kapının önüne bırakma!', X.young), E('care', 'Antrenmandan sonra doğru eve.', X.young), E('care', 'Çantanı hazırladım, su şişeni unutma.', X.young),
+        E('school', 'Ödevlerini bitirdin mi?', X.young && typeof School !== 'undefined' && School.on()), E('school', 'Sınavın ne zaman? Biraz ders çalış.', X.young && typeof School !== 'undefined' && School.on()),
+        E('care', 'Yemek yiyor musun düzgün? Kendine iyi bak.', !X.young),
+        E('invite', 'Pazar yemeğe gel, en sevdiğin yemeği yapıyorum.', !X.young), E('love', 'Babanla seni konuşuyorduk, seni çok özledik.', !X.young), E('love', 'Dua ediyorum hep senin için.'),
+        E('proud', 'Komşular hep seni soruyor, maçlarını takip ediyorlar!', X.fame >= 5 && X.fame < 25), E('proud', 'Fotoğrafını gazetede gördüm, çerçeveletiyorum!', X.fame >= 15), E('proud', 'Bugün televizyonda senden bahsettiler, ağladım valla.', X.fame >= 25),
+        E('ask', 'Teyzen aradı, imzalı forma istiyor.', !X.street && !X.youth),
+        E('congrats', `Maçı izledim, ${X.sc} kazandınız! Mahallede bayram var!`, X.win && X.played && !X.goals, true),
+        E('congrats', 'Golünü izlerken sesim kısıldı! Aferin oğlum.', X.nG === 1, true), E('congrats', 'İki gol! Komşular kapıya dayandı, aferin oğlum.', X.nG === 2, true), E('congrats', 'Üç gol! Babanla televizyonun başında zıpladık!', X.nG >= 3, true),
+        E('congrats', 'Kalene gol yedirmedin! Aferin oğlum.', X.gk && X.cs, true),
+        E('console', `Maç ${X.sc} bitti, moralini bozma oğlum. Bir dahakini kazanırsınız.`, X.loss && !X.inj, true),
+        E('inj', 'Sakatlığın nasıl? İlaçlarını aksatma, merak ediyorum.', X.inj, true),
+        E('bench', 'Bu hafta neden oynamadın? Hoca seni neden almadı?', X.bench, true),
+      ], momR) });
+    // ---- Babam ----
+    const dadR = {
+      advice: [T(W('da', ['Haklısın baba', 'Not aldım baba']), W('dao', ['Aferin. Ben senin ilk hocanım, unutma.', 'Bildiğin gibi devam et.'])), T('Biliyorum baba, çalışıyorum', 'Çalışan kazanır oğlum.')],
+      nost: [T('O günleri ben de özledim', 'Sen o zaman da farklıydın.'), A('Bu akşam gel beraber izleyelim', 'Çayı demliyorum!', fam)],
+      proud: [T('Ciddi mi? Çok güzel', 'Herkes seni konuşuyor.'), A(X.young ? 'Akşam beraber yürüyüşe çıkalım baba' : 'Hafta sonu mahalleye gelirim', 'Herkese haber veriyorum!', fam)],
+      cheer: [T(W('dch', ['Gel baba, seni gururlandıracağım', 'Gel baba, tribünde seni arayacağım']), 'Tribünde en çok ben bağıracağım!'), T('Bilet ayarlattım baba, kapıda adın yazılı', 'Kralsın oğlum!')],
+      scout: [T('Not aldım baba, sağ ol', 'Hadi bakalım, göster kendini.'), T('Hocamız da aynısını söyledi', 'Demek ki ben de hoca olabilirmişim!')],
+      car: [T('Değiştirdim baba', 'Aferin, bakımı ihmal etme.'), T('Unuttum, bu hafta yaptırırım', 'Unutma, motor yanar sonra.')],
+      goalQ: [T(pos === 'FW' ? 'En az 15, söz baba' : 'En az 8, söz baba', 'Tuttum seni, sayıyorum!'), T('Gol değil, takım kazansın yeter', 'İşte benim oğlum.')],
+      gkQ: [T('En az 10 maç, söz baba', 'Tuttum seni, sayıyorum!'), T('Takım kazansın, gerisi önemli değil', 'İşte benim oğlum.')],
+      run: [T('Aferin baba, devam!', 'Senin gibi değil ama idare ediyor!'), A('Yarın beraber koşalım', 'Sabah 7\'de kapıdayım!', fam)],
+      congrats: [T('Sağ ol baba, senin sayende', 'Ben sadece topu aldım, gerisi sende.'), A('Hafta sonu gel, maçın özetini beraber izleyelim', 'Özetini kaydettim bile!', fam)],
+      console: [T('Haklısın baba, kafam yukarıda', 'İşte benim oğlum.'), A('Akşam gel baba, biraz konuşalım', 'Geliyorum, çayı koy.', fam)],
+      inj: [T('Her gün gidiyorum baba', 'Aferin, sabır.'), T('Canım sıkılıyor baba, oynamak istiyorum', 'Biliyorum. Acele edersen daha uzun kalırsın.')],
+    };
+    dadR.def = dadR.advice;
+    const inv = (t, acc, ok, decl, dok, act) => E('invite', t, true, false, [A(acc, ok, act || fam), T(decl, dok)]);
+    const posTip = { FW: 'Ceza sahasında daha soğukkanlı ol, gol gelir.', MF: 'Topu ayağında fazla tutma, oyunu hızlandır.', DF: 'Ofsayt çizgisini iyi tut, bir adım geride kalma.', GK: 'Çıkışlarında daha kararlı ol, kale senin evin.' }[pos];
+    const winTxt = X.comp === 'intl' ? 'Milli formayla kazandın, gururlandım!' : X.comp === 'cup' ? 'Kupada bir tur daha! Aferin.' : '3 puan! Böyle devam.';
     out.push({ id: 'dad', n: 'Babam', role: 'Aile', c: 'linear-gradient(135deg,#34c4b0,#147a6c)', i: 'B',
-      ...msg('dad', (X.young ? ['Hafta sonu parka gidip şut çalışalım mı?', 'Kramponlarını temizledim, parlıyor!'] : ['Eski takımın maçına gittim, seni andılar.'].concat((p.items || []).some((id) => { const it = ITEMS.find((q) => q.id === id); return it && it.art === 'car'; }) ? ['Arabanın yağını değiştirdin mi?'] : []))
-        .concat(['Dünkü maçta kanatta çok yalnız kaldın, dikkat et.', 'Antrenmanlarını aksatma, yetenek tek başına yetmez.', 'Eski maçlarını izledim, ne günlerdi!', 'Bir gün seni tribünden izlemeye geleceğim.', 'Mahalledekiler senin formanı giyiyor, haberin olsun.', 'Bu sezon kaç gol hedefliyorsun?', 'Rakip takımı izledim, sol bekleri yavaş.', 'Sabah koşusuna çıktım, senden ilham aldım!']),
-        [when(X.win, '3 puan! Böyle devam.'), when(X.goals, 'O golü ben de atardım gençken... Şaka şaka, harikaydın!'), when(X.loss, 'Yenilgi de oyunun parçası. Kafanı kaldır.'), when(X.star, 'Maçın en iyisi sendin, gurur duydum.'), when(X.inj, 'Fizyoterapiste düzenli git, acele etme.')]),
-      r: [{ t: pickW('dad', ['Hafta sonu beraber maç izleyelim', 'Bu akşam balığa gidelim mi baba?', 'Gel beraber yürüyüşe çıkalım']), act: () => Life.act('family'), ap: 1, ok: pickW('dad2', ['Çekirdekler benden!', 'Anlaştık, oltaları hazırlıyorum!', 'Tamam, sabah erkenden çıkarız.']) }, { t: pickW('dad3', ['Haklısın baba', 'Tavsiyen için sağ ol', 'Merak etme baba, çalışıyorum']), ok: pickW('dad4', ['Aferin oğlum. Ben senin ilk hocanım, unutma.', 'Seninle gurur duyuyorum.', 'Bildiğin gibi devam et.']) }] });
-    if (gfName) out.push({ id: 'gf', n: gfName, role: L.gf.married ? 'Eşin' : 'Sevgilin', c: 'linear-gradient(135deg,#ff6f8a,#c2416b)', i: gfName[0], heart: true,
-      ...msg('gf', ['Bu akşam boş musun? Seni özledim.', 'Maçtaki sevincin çok tatlıydı.', 'Hafta sonu bir yerlere kaçalım mı?', 'Yeni bir restoran açılmış, gidelim mi?', 'Bugün aklım hep sendeydi.', 'Sana bir şarkı gönderdim, dinle!', 'Bu hafta çok yorgun görünüyorsun, biraz dinlen.', 'Yeni bir dizi başladım, beraber izleyelim mi?', 'Tribünden sana el salladım, gördün mü?', 'Annen beni yemeğe çağırdı, çok tatlı.'],
-        [when(X.win, 'Kazandınız! Seninle gurur duyuyorum.'), when(X.goals, 'Gol attığında çığlık attım!'), when(X.loss, 'Üzülme, ben hep yanındayım.'), when(X.inj, 'Sana çorba yaptım, iyileşene kadar sana ben bakarım.')]),
-      r: [{ t: pickW('gf', ['Bu akşam buluşalım', 'Akşam yemeğine çıkalım mı?', 'Hafta sonu sana sürprizim var']), act: () => Life.act('date'), ap: 1, ok: pickW('gf2', ['Harika! Hazır olurum.', 'Çok sevindim, bekliyorum!', 'Sabırsızlanıyorum!']) }, { t: pickW('gf3', ['Seni seviyorum', 'Seni çok özledim', 'Aklım hep sende']), ok: pickW('gf4', ['Ben de seni seviyorum.', 'Ben de seni özledim.', 'Benim de aklım sende.']) }] });
-    if (!Game.inStreet()) out.push({ id: 'coach', n: 'Hoca', role: `Teknik direktör · ${Game.teamName()}`, c: 'linear-gradient(135deg,#9aa6c4,#4b5878)', i: 'H',
-      ...msg('coach', ['Antrenmanda daha fazla çalışmanı istiyorum.', 'Bu hafta seni izliyorum, hazır ol.', 'Takım savunmasına daha çok yardım et.', 'Formun iyi, böyle devam.', 'Maçtan önce taktik toplantısını kaçırma.', 'Yarın video analizi var, 10\'da odadayız.', 'Pres yaparken daha agresif ol.', 'İlk dokunuşun çok önemli, üzerinde çalış.', 'Dinlenmeyi ihmal etme, fikstür yoğun.', 'Topu kaybettikten sonraki 5 saniye çok önemli.'],
-        [when(X.win && X.goals, 'İyi oyundu, golün takımı rahatlattı.'), when(X.loss, 'Bu yenilgiyi hepimiz analiz edeceğiz.'), when(X.poor, 'Son maçta beklentimin altındaydın.'), when(X.star, 'Son maçta harikaydın, devam.'), when(X.bench, 'Bu hafta antrenmanda kendini göster, şansın gelecek.'), when(X.inj, 'Sağlık ekibiyle konuştum, acele etmiyoruz.')]),
-      r: [{ t: 'Ofisinize geleyim hocam, konuşalım', act: () => Game.act('talk'), ap: 1, ok: 'Gel bakalım, kapım açık.', once: () => !Game.state.week || !Game.state.week.coachTalk }, { t: 'Anlaşıldı hocam', ok: 'Güzel. Sahada görelim.' }] });
-    if (!Game.inStreet()) out.push({ id: 'team', n: 'Takım Grubu', role: Game.teamName(), c: 'linear-gradient(135deg,#7fb2ff,#1e5bd8)', i: 'T',
-      ...msg('team', ['Akşam hep beraber yemeğe çıkıyoruz, geliyor musun?', 'Yarın antrenmandan önce kahve?', 'Yeni gelen çocuğa hoş geldin diyelim.', 'Kim konsol turnuvasına katılıyor?', 'Malzemeci yine forma numaralarını karıştırmış.', 'Antrenmana en geç gelen kahveleri ısmarlıyor!', 'Soyunma odasında müzik sırası kimde?', 'Kaptan doğum günü pastası getirdi!'],
-        [when(X.win, 'Kazandık! Akşam kutlama var!'), when(X.loss, 'Kafalar dik, hafta sonu telafi ederiz.'), when(X.goals, 'Golcümüz şov yaptı!')]),
-      r: [{ t: 'Geliyorum!', act: () => Game.act('team'), ap: 1, ok: 'Süper, masa ayırtıyoruz.' }, { t: 'Bu sefer pas, dinleneceğim', ok: 'Tamam, kendine iyi bak.' }] });
-    if (L.manager) out.push({ id: 'agent', n: L.manager.name, role: 'Menajer', c: 'linear-gradient(135deg,#ffcf3f,#e08d0c)', i: L.manager.name[0],
-      ...(L.offers && L.offers.length ? { m: `${L.offers.length} sponsor teklifi seni bekliyor. Menajer uygulamasına koydum.`, force: true } : msg('agent', ['Transfer dönemi yaklaşıyor, kulaklarımız açık.', 'Bir marka seninle çalışmak istiyor olabilir, takipteyim.', 'Performansın değerini artırıyor, böyle devam.', 'Bir kulübün scout\'u seni izlemeye geldi.', 'Sözleşme maddelerini tekrar gözden geçirdim.', 'Bir televizyon programı seni konuk etmek istiyor.'],
-        [when(X.goals, 'Gol attıkça telefonum susmuyor!'), when(X.star, 'Son performansın değerini yükseltti.')])),
-      r: [{ t: 'Teklifleri göster', open: 'agent', ok: 'Hepsini uygulamaya koydum.' }, { t: 'Teşekkürler, sen bilirsin', ok: 'Merak etme, işimi biliyorum.' }] });
-    const FJ = { journalist: 'Seninle kısa bir röportaj yapabilir miyim?', agent: 'Menajerlik işleri iyi gidiyor, bir gün beraber çalışalım.', pro: 'Bu hafta bizim maç zor geçti, seninki nasıldı?', doctor: 'Kendine dikkat et, sakatlık şakaya gelmez!', chef: 'Restorana gel, sana özel bir menü hazırlarım.', teacher: 'Öğrencilerim senin posterini duvara astı!', coach: 'Altyapıda çocuklara seni örnek gösteriyorum.', other: 'Yeni bir iş buldum, kutlayalım!' };
-    (typeof Friends !== 'undefined' && Friends.on && Friends.on() ? Friends.list() : []).forEach((f, i) => out.push({ id: 'f' + (f.id != null ? f.id : i), n: f.n, role: f.job && typeof FR_JOB !== 'undefined' ? FR_JOB[f.job] : 'Arkadaşın', c: 'linear-gradient(135deg,#c792ff,#7b3fe4)', i: (f.n.trim()[0] || '?'),
-      ...msg('fr' + (f.id || i), (X.kid ? ['Teneffüste top oynayalım mı?', 'Yarın okula yeni topumu getiriyorum!', 'Ödevi yaptın mı? Bana da gösterir misin?'] : ['Hafta sonu eski mahalle ekibiyle halı saha var, haberin olsun.', 'Eski okulun önünden geçtim, seni andım.', 'Biletimi aldım, maçına geliyorum!'])
-        .concat(['Kanka maçını izledim, efsaneydin!', 'Ne zaman görüşüyoruz? Çok oldu!', 'İmzalı forma lazım, kuzenim deli hayranın.', 'Hâlâ o eski topunu saklıyor musun?', 'Kanka bana da bir forma ayarla!']),
-        [when(f.job && FJ[f.job], FJ[f.job]), when(X.goals, 'Golünü izledim, ekrana sarıldım!'), when(X.loss, 'Kanka kafana takma, bir maç sadece.')]),
-      r: [{ t: pickW('fm' + f.id, X.kid ? ['Teneffüste görüşürüz!', 'Okuldan sonra top oynayalım'] : ['Hafta sonu buluşalım', 'Akşam bir kahve içelim', 'Halı sahaya ben de gelirim']), act: () => friendMeet(f), ap: 1, ok: pickW('fo' + f.id, ['Söz mü? Bekliyorum!', 'Süper, görüşürüz!', 'Harika, çok özledim!']) }, { t: pickW('fn' + f.id, ['Sağ ol kanka', 'Haha, aynen', 'Kesin, haberleşiriz']), ok: pickW('fk' + f.id, ['Her zaman!', 'Görüşürüz kanka!', 'Kendine iyi bak!']) }] }));
+      ...conv('dad', [
+        X.young ? inv('Hafta sonu parka gidip şut çalışalım mı?', 'Olur baba, topu ben getiririm', 'Anlaştık, sabah 9\'da parktayız!', 'Bu hafta yorgunum baba, sonra', 'Tamam oğlum, dinlen.') : inv('Hafta sonu beraber maç izleyelim mi?', 'Olur baba, çekirdekleri sen al', 'Çekirdekler benden!', 'Bu hafta yoğunum baba, sonra', 'Tamam oğlum, sen bilirsin.'),
+        !X.young ? inv('Bu hafta balığa gidelim mi?', 'Olur baba, gidelim', 'Anlaştık, oltaları hazırlıyorum!', 'Bu hafta olmaz baba, maç var', 'Peki, sezon arası gideriz.') : null,
+        E('advice', 'Antrenmanlarını aksatma, yetenek tek başına yetmez.', !X.inj), E('advice', posTip, !X.inj),
+        E('nost', 'Eski maçlarını izledim, ne günlerdi!', !X.young),
+        E('proud', 'Mahalledekiler senin formanı giyiyor, haberin olsun.', X.fame >= 10),
+        E('cheer', `${X.nx ? X.nx.t : ''} maçına tribüne geliyorum!`, X.nxHome && !X.inj),
+        E('scout', `${X.nx ? X.nx.t : ''} maçlarını izledim, savunmaları yavaş. Hızlı oyna.`, X.nxL && out11 && !X.inj),
+        E('car', 'Arabanın yağını değiştirdin mi?', car),
+        E('goalQ', 'Bu sezon kaç gol hedefliyorsun?', pos === 'FW' || pos === 'MF'), E('gkQ', 'Bu sezon kaç maçta kalende gol görmeyeceksin?', X.gk),
+        E('run', 'Sabah koşusuna çıktım, senden ilham aldım!'),
+        E('congrats', winTxt, X.win && X.played, true), E('congrats', 'O golü ben de atardım gençken... Şaka şaka, harikaydın!', X.goals, true), E('congrats', 'Maçın en iyisi sendin, gurur duydum.', X.star || X.motm, true),
+        E('console', 'Yenilgi de oyunun parçası. Kafanı kaldır.', X.loss, true),
+        E('inj', 'Fizyoterapiste düzenli git, acele etme.', X.inj, true),
+        E('advice', 'Kenarda kalmak da öğretir. Antrenmanda hocaya kendini göster.', X.bench, true),
+      ], dadR) });
+    // ---- Sevgili / eş ----
+    if (L.gf) {
+      const gfName = L.gf.name, mar = !!L.gf.married;
+      const no = T('Bu hafta yoğunum, telafi edeceğim', 'Peki... ama söz verdin.');
+      const ginv = (t, acc, ok) => E('invite', t, true, false, [A(acc, ok, date), no]);
+      const gfR = {
+        love: [T('Benim de aklım sende', 'Tatlısın.'), A('Akşam buluşalım o zaman', 'Tamam, bekliyorum!', date)],
+        care: [T('Haklısın, bu akşam erken yatacağım', 'Aferin, iyi uykular.'), A('Gel beraber dinlenelim', 'Geliyorum, film açarız.', date)],
+        congrats: [T('Sağ ol, sahada seni düşündüm', 'Tatlısın. Kutlayalım mı?'), A('Akşam kutlayalım mı?', 'Hazırlanıyorum!', date)],
+        console: [T('Sen varken üzülmem', 'Ben hep buradayım.'), A('Bu akşam yanıma gelir misin?', 'Hemen geliyorum.', date)],
+        inj: [T('Sen olmasan ne yapardım', 'Abartma, iç çorbanı!'), A('Gel, beraber film izleyelim', 'Geliyorum, battaniye bende.', date)],
+      };
+      gfR.def = gfR.love;
+      out.push({ id: 'gf', n: gfName, role: mar ? 'Eşin' : 'Sevgilin', c: 'linear-gradient(135deg,#ff6f8a,#c2416b)', i: gfName[0], heart: true,
+        ...conv('gf', [
+          mar ? ginv('Bu akşam dışarıda yemek yiyelim mi?', 'Olur, 8\'de hazır ol', 'Harika, hazırlanıyorum!') : ginv('Bu akşam boş musun? Seni özledim.', 'Boşum, 8\'de alırım seni', 'Hazır olurum!'),
+          ginv('Yeni bir restoran açılmış, gidelim mi?', 'Gidelim, rezervasyonu ben yapıyorum', 'Harika, sabırsızlanıyorum!'),
+          ginv('Hafta sonu bir yerlere kaçalım mı?', 'Kaçalım, sahile gidelim', 'Bavulumu hazırlıyorum!'),
+          ginv('Yeni bir dizi başladım, beraber izleyelim mi?', 'Akşam geliyorum, patlamışlar benden', 'Anlaştık, battaniyeyi hazırlıyorum.'),
+          E('love', 'Bugün aklım hep sendeydi.'),
+          E('song', 'Sana bir şarkı gönderdim, dinle!', true, false, [T('Dinledim, çok güzelmiş', 'Bizim şarkımız olsun o zaman.'), T('Antrenmandan sonra dinleyeceğim', 'Unutma ama!')]),
+          E('mom', 'Annen beni yemeğe çağırdı, çok tatlı.', !mar, false, [T('Annem seni çok seviyor', 'Ben de onu çok seviyorum.'), A('Hadi beraber gidelim', 'Tamam, tatlıyı ben yaparım!', fam)]),
+          E('care', 'Bu hafta çok yorgun görünüyorsun, biraz dinlen.'),
+          E('congrats', 'Kazandınız! Seninle gurur duyuyorum.', X.win && X.played && !X.goals, true), E('congrats', 'Gol attığında çığlık attım!', X.goals, true),
+          E('wave', 'Tribünden sana el salladım, gördün mü?', X.played && !X.inj, true, [T('Gördüm tabii, seni hemen fark ettim', 'Yalancı, ama tatlısın.'), T('Maçta göremedim, kızma', 'Kızmadım ama bir dahaki sefere bak!')]),
+          E('console', 'Üzülme, ben hep yanındayım.', X.loss, true),
+          E('inj', 'Sana çorba yaptım, iyileşene kadar sana ben bakarım.', X.inj, true),
+        ], gfR) });
+    }
+    // ---- Hoca ----
+    if (!X.street) {
+      const meet = (t, ok) => A(t, ok, talk, { once });
+      const coachR = {
+        instr: [T(W('ci', ['Anlaşıldı hocam', 'Tamam hocam']), W('cio', ['Güzel. Sahada görelim.', 'Göreceğiz.'])), meet('Ofisinize geleyim hocam, konuşalım', 'Gel bakalım, kapım açık.')],
+        info: [T('Orada olacağım hocam', 'İyi. Rakibi iyi çalış.'), meet('Toplantıdan önce sizinle konuşabilir miyim?', 'Gel, 15 dakikam var.')],
+        praise: [T('Teşekkürler hocam, daha iyisi gelecek', 'Ben de bunu bekliyorum.'), T('Takım sayesinde hocam', 'Alçakgönüllülüğün hoşuma gidiyor.')],
+        crit: [T('Haklısınız hocam, düzelteceğim', 'Antrenmanda göster.'), meet('Hocam, bunu yüz yüze konuşabilir miyiz?', 'Yarın sabah ofisime gel.')],
+        bench: [T('Hazırım hocam, fırsat bekliyorum', 'Antrenmanda görelim.'), meet('Neden oynamadığımı konuşmak istiyorum hocam', 'Gel, açık konuşalım.')],
+        inj: [T('Teşekkürler hocam, sabırla çalışıyorum', 'Doğrusu bu.'), T('Bir an önce dönmek istiyorum hocam', 'Acele edersen daha uzun kalırsın.')],
+      };
+      coachR.def = coachR.instr;
+      out.push({ id: 'coach', n: 'Hoca', role: `Teknik direktör · ${Game.teamName()}`, c: 'linear-gradient(135deg,#9aa6c4,#4b5878)', i: 'H',
+        ...conv('coach', [
+          ...(X.inj ? [E('inj', 'Rehabilitasyon programını aksatma, takım seni bekliyor.'), E('inj', 'Fizyoterapistten iyi haberler alıyorum, sabırlı ol.')] : [
+            E('instr', 'Antrenmanda daha fazla çalışmanı istiyorum.'), E('instr', 'Bu hafta seni izliyorum, hazır ol.'), E('instr', 'Dinlenmeyi ihmal etme, fikstür yoğun.'),
+            E('instr', 'Takım savunmasına daha çok yardım et.', pos === 'FW' || pos === 'MF'), E('instr', 'Pres yaparken daha agresif ol.', out11), E('instr', 'İlk dokunuşun çok önemli, üzerinde çalış.', out11),
+            E('instr', 'Topu kaybettikten sonraki 5 saniye çok önemli.', out11), E('instr', 'Uzun degajlarını daha isabetli at.', X.gk), E('instr', 'Duran toplarda savunmayı sen yönet.', X.gk || pos === 'DF'),
+            E('info', `Bu hafta rakip ${X.nx ? X.nx.t : ''}. Perşembe 10:00'da taktik toplantısı var.`, X.nxL)]),
+          E('praise', 'Formun iyi, böyle devam.', X.played && !X.poor && !X.loss),
+          E('praise', 'İyi oyundu, golün takımı rahatlattı.', X.win && X.goals, true), E('praise', 'Son maçta harikaydın, devam.', X.star || X.motm, true),
+          E('instr', 'Bu yenilgiyi hepimiz analiz edeceğiz. Yarın video toplantısı var.', X.loss && !X.poor, true),
+          E('crit', 'Son maçta beklentimin altındaydın.', X.poor, true),
+          E('bench', 'Bu hafta antrenmanda kendini göster, şansın gelecek.', X.bench, true),
+          E('inj', 'Sağlık ekibiyle konuştum, acele etmiyoruz.', X.inj, true),
+        ], coachR) });
+    }
+    // ---- Takım grubu ----
+    if (!X.street) {
+      const tinv = (t, acc, ok, c = true, x = false) => E('invite', t, c, x, [A(acc, ok, team), T('Bu sefer pas, dinleneceğim', 'Tamam, kendine iyi bak.')]);
+      const teamR = { def: [T('Aynen beyler', 'Haha, aynen!')] };
+      out.push({ id: 'team', n: 'Takım Grubu', role: Game.teamName(), c: 'linear-gradient(135deg,#7fb2ff,#1e5bd8)', i: 'T',
+        ...conv('team', [
+          tinv('Akşam hep beraber yemeğe çıkıyoruz, geliyor musun?', 'Geliyorum!', 'Süper, masa ayırtıyoruz.'),
+          tinv('Yarın antrenmandan önce kahve?', 'Ben varım!', 'Saat 9\'da kafede.'),
+          E('chat', 'Malzemeci yine forma numaralarını karıştırmış.', true, false, [T('Hahaha, yine mi?', 'Her hafta aynı hikâye!'), T('Benimki doğru geldi neyse ki', 'Şanslısın!')]),
+          E('chat', 'Soyunma odasında müzik sırası kimde?', true, false, [T('Bende! Listeyi hazırladım', 'Yine mi o şarkılar...'), T('Kaptan seçsin', 'Kaptan da hep aynı şarkıyı açıyor!')]),
+          E('chat', 'Kaptan doğum günü pastası getirdi!', true, false, [T('Bana bir dilim ayırın!', 'Çabuk gel, bitiyor!'), T('İyi ki doğdun kaptan!', 'Kaptan: Sağ olun beyler!')]),
+          E('chat', 'Kim konsol turnuvasına katılıyor?', true, false, [A('Ben varım, kupayı alırım!', 'Görürüz bakalım!', team), T('Bu sefer izleyeceğim', 'Korktun mu yoksa?')]),
+          E('chat', 'Yeni gelen çocuğa hoş geldin diyelim.', true, false, [T('Hoş geldin kardeşim!', 'Yeni oyuncu: Teşekkürler abi!'), A('Akşam onu yemeğe götürelim', 'Süper fikir, ben ayarlıyorum.', team)]),
+          E('chat', 'Antrenmana en geç gelen kahveleri ısmarlıyor!', true, false, [T('Ben erkenciyim, sizden bilirim', 'Göreceğiz yarın!'), T('Eyvah, ben genelde son gelirim', 'Cüzdanı hazırla!')]),
+          tinv('Kazandık! Akşam kutlama var!', 'Ben de geliyorum!', 'Masa ayırttık!', X.win, true),
+          E('console', 'Kafalar dik, hafta sonu telafi ederiz.', X.loss, true, [T('Aynen, hep beraber kalkacağız', 'Böyle konuş işte!'), T('Antrenmanda daha çok çalışalım', 'Varız!')]),
+          E('star', X.nG >= 2 ? 'Golcümüz şov yaptı!' : 'Golün çok güzeldi kardeşim!', X.goals, true, [T('Takım olarak kazandık beyler', 'Alçakgönüllü yıldız!'), A('Bu akşam yemekler benden!', 'Duydunuz beyler!', team)]),
+          E('star', 'Kalede duvar ördün kardeşim!', X.gk && X.cs, true, [T('Savunma sayesinde beyler', 'Hep beraber!'), A('Bu akşam yemekler benden!', 'Duydunuz beyler!', team)]),
+          E('inj', 'Geçmiş olsun kardeşim, seni bekliyoruz.', X.inj, true, [T('Sağ olun beyler, yakında dönüyorum', 'Çabuk dön!'), T('Maçta sizi izleyeceğim', 'Senin için kazanacağız!')]),
+        ], teamR) });
+    }
+    // ---- Menajer ----
+    if (L.manager) {
+      const agR = {
+        info: [T('Teşekkürler, sen bilirsin', 'Merak etme, işimi biliyorum.'), T('Büyük kulüp gelirse haber ver', 'İlk sen duyarsın.')],
+        scout: [T('Harika, elimden geleni yapacağım', 'Rahat oyna, baskı yapma kendine.'), T('Hangi kulüp?', 'Şimdilik söyleyemem, ama büyük bir kulüp.')],
+        tv: [T('Şimdilik maçlara odaklanayım', 'Anlıyorum, nazikçe reddederim.'), T('Olur, tarih ayarla', 'Tamam, ayarlayınca haber veririm.')],
+        hot: [T('Sen telefonu açık tut', 'Hiç kapatmıyorum zaten!'), T('Önce sahada, sonra pazarlık', 'Doğru düşünüyorsun.')],
+      };
+      agR.def = agR.info;
+      out.push({ id: 'agent', n: L.manager.name, role: 'Menajer', c: 'linear-gradient(135deg,#ffcf3f,#e08d0c)', i: L.manager.name[0],
+        ...(L.offers && L.offers.length ? { m: `${L.offers.length} sponsor teklifi seni bekliyor. Menajer uygulamasına koydum.`, mk: 'offers', force: true, r: [{ t: 'Teklifleri göster', open: 'agent', ok: 'Hepsini uygulamaya koydum.' }, T('Sonra bakarım', 'Tamam, beklemede tutuyorum.')] }
+          : conv('agent', [
+            E('info', 'Transfer dönemi yaklaşıyor, kulaklarımız açık.'), E('info', 'Sözleşme maddelerini tekrar gözden geçirdim.'), E('info', 'Performansın değerini artırıyor, böyle devam.', X.played && !X.poor),
+            E('info', 'Bir marka seninle çalışmak istiyor olabilir, takipteyim.', X.fame >= 10),
+            E('scout', 'Bir kulübün scout\'u seni izlemeye geldi.'), E('tv', 'Bir televizyon programı seni konuk etmek istiyor.', X.fame >= 25),
+            E('hot', 'Gol attıkça telefonum susmuyor!', X.goals, true), E('hot', 'Son performansın değerini yükseltti.', X.star || X.motm, true),
+          ], agR)) });
+    }
+    // ---- Arkadaşlar ----
+    const FJ = (meet, busy) => ({
+      journalist: E('job', 'Seninle kısa bir röportaj yapabilir miyim?', true, false, [T('Olur, ama kulüp izin verirse', 'Anlaştık, menajerine yazarım.'), T('Arkadaşa röportaj olmaz, kahve içeriz', 'Haha, haklısın!')]),
+      agent: E('job', 'Menajerlik işleri iyi gidiyor, bir gün beraber çalışalım.', true, false, [T('Neden olmasın, konuşuruz', 'Sözünü tutacağım!'), T('Şimdilik menajerimden memnunum', 'Anlıyorum, kapım açık.')]),
+      pro: E('job', 'Bu hafta bizim maç zor geçti, seninki nasıldı?', X.f, false, [T(X.win ? 'İyi geçti, kazandık' : X.loss ? 'Bizimki de zor geçti, kaybettik' : 'Berabere bitti, idare eder', 'Sezon uzun, devam!'), T('Sizin maçı izledim, iyi mücadele ettiniz', 'Sağ ol kanka!')]),
+      doctor: E('job', 'Kendine dikkat et, sakatlık şakaya gelmez!', true, false, [T('Sağ ol doktor, dikkat ediyorum', 'Isınmayı ihmal etme!'), T('Bir şey olursa ilk seni ararım', 'Her zaman buradayım.')]),
+      chef: E('job', 'Restorana gel, sana özel bir menü hazırlarım.', true, false, [meet('Bu hafta gelirim!', 'Masan hazır olacak!'), busy]),
+      teacher: E('job', 'Öğrencilerim senin posterini duvara astı!', true, false, [T('Onlara selamımı söyle', 'Çok sevinecekler!'), T('Bir gün okula gelip onlarla tanışayım', 'Ciddi mi? Bayılacaklar!')]),
+      coach: E('job', 'Altyapıda çocuklara seni örnek gösteriyorum.', true, false, [T('Onlara iyi bak hocam', 'Merak etme, senin gibi yetişecekler.'), T('Çok gurur duydum, sağ ol', 'Hak ediyorsun.')]),
+      other: E('job', 'Yeni bir iş buldum, kutlayalım!', true, false, [meet('Tebrikler! Bu hafta kutlayalım', 'Yeri ben seçiyorum!'), T('Tebrikler kanka, çok sevindim', 'Sağ ol kanka!')]),
+    });
+    (typeof Friends !== 'undefined' && Friends.on && Friends.on() ? Friends.list() : []).forEach((f, i) => {
+      const fid = 'f' + (f.id != null ? f.id : i), key = 'fr' + (f.id || i);
+      const meet = (t, ok) => A(t, ok, () => friendMeet(f));
+      const busy = X.kid ? T('Bugün antrenmanım var, yarın oynarız', 'Tamam, yarın!') : T(W(key + 'b', ['Yoğun dönem kanka, sezon arası buluşalım', 'Bu hafta olmaz kanka, maç haftası']), W(key + 'bo', ['Tamam ama unutma!', 'Anlaşıldı, haberleşiriz.']));
+      const job = f.job ? FJ(meet, busy)[f.job] || null : null;
+      const frR = {
+        invite: [meet(X.kid ? 'Olur, topu ben getiririm!' : W(key + 'm', ['Bu hafta buluşalım', 'Akşam bir kahve içelim']), W(key + 'mo', ['Söz mü? Bekliyorum!', 'Süper, görüşürüz!', 'Harika, çok özledim!'])), busy],
+        nost: [T('O günleri çok özledim', 'Ben de kanka, ne günlerdi.'), meet('Bu hafta buluşalım, eski günleri konuşuruz', 'Süper, eski ekibi de çağırırım!')],
+        ask: [T('Tamam, bir tane ayarlarım', 'Kralsın! Bayılacak.'), T('Kulüpten sorayım, söz vermeyeyim', 'Tamam kanka, sorun değil.')],
+        congrats: [T(W(key + 'c', ['Sağ ol kanka!', 'Eyvallah kanka!']), W(key + 'co', ['Hep arkandayız!', 'Daha çok gol bekliyoruz!'])), meet('Bu akşam kutlayalım', 'Yeri ben seçiyorum!')],
+        console: [T('Sağ ol kanka, toparlanacağız', 'Biliyorum, sen yaparsın.'), meet('Bu akşam çıkalım, kafam dağılsın', 'Tamam, 8\'de seni alıyorum.')],
+        inj: [T('Sağ ol kanka, iyiyim', 'Bir şey lazım olursa ara.'), meet('Gel bir kahve iç, evdeyim', 'Geliyorum, tatlı da getiriyorum.')],
+        ticket: [T('Süper, bağır da duyayım!', 'Sesim kısılana kadar!'), meet('Maçtan sonra buluşalım', 'Anlaştık, stadın önünde beklerim.')],
+        hw: [T('Yaptım, teneffüste gösteririm', 'Sen bir tanesin!'), T('Ben de yapmadım daha', 'Eyvah, öğretmen kızacak!')],
+      };
+      frR.def = frR.invite;
+      out.push({ id: fid, n: f.n, role: f.job && typeof FR_JOB !== 'undefined' ? FR_JOB[f.job] : 'Arkadaşın', c: 'linear-gradient(135deg,#c792ff,#7b3fe4)', i: (f.n.trim()[0] || '?'),
+        ...conv(key, [
+          E('invite', 'Teneffüste top oynayalım mı?', X.kid), E('hw', 'Ödevi yaptın mı? Bana da gösterir misin?', X.kid), E('invite', 'Yarın okula yeni topumu getiriyorum!', X.kid),
+          E('invite', 'Ne zaman görüşüyoruz? Çok oldu!', !X.kid),
+          E('invite', 'Hafta sonu eski mahalle ekibiyle halı saha var, haberin olsun.', !X.kid && !X.inj, false, [meet('Gelirim, ama yavaş oynayın!', 'Sana özel kurallar, söz!'), T('Kulüp izin vermez kanka, sakatlanma riski', 'Haklısın, biz de seni tribünden izleriz.')]),
+          E('nost', 'Eski okulun önünden geçtim, seni andım.', !X.kid), E('nost', 'Hâlâ o eski topunu saklıyor musun?'),
+          E('ask', 'İmzalı forma lazım, kuzenim deli hayranın.', !X.street && !X.youth), E('ask', 'Kanka bana da bir forma ayarla!', !X.street),
+          job,
+          E('ticket', `${X.nx ? X.nx.t : ''} maçına biletimi aldım, tribündeyim!`, X.nxHome && !X.kid && !X.inj),
+          E('congrats', 'Kanka maçını izledim, efsaneydin!', X.star || X.motm, true), E('congrats', 'Golünü izledim, ekrana sarıldım!', X.goals, true),
+          E('console', 'Kanka kafana takma, bir maç sadece.', X.loss, true),
+          E('inj', 'Geçmiş olsun kanka, bir şey lazımsa söyle.', X.inj, true),
+        ], frR) });
+    });
+    // ---- Çocuklar ----
     (L.kids || []).forEach((k, i) => {
       const a = Math.max(0, s.season.year - k.by);
       if (a < 7 || typeof Life.kidActs !== 'function') return;
-      const acts = Life.kidActs(a); const ak = acts && acts[0];
+      const acts = Life.kidActs(a) || [], byKey = (key) => acts.find((x) => x[0] === key) || acts[0];
+      const ka = (key, ok) => { const ak = byKey(key); return ak ? A(ak[1], ok, () => Life.kidAct(i, ak[0])) : T('Seni seviyorum', 'Ben de seni!'); };
+      const kidR = {
+        play: [ka('ball', 'Yaşasın!'), T('Bugün yorgunum, yarın oynarız', 'Söz mü baba?')],
+        school: [T('Hepsine selam söyle!', 'Söylerim baba!'), ka(a <= 12 ? 'match' : 'talk', 'Yaşasın!')],
+        ask: [T('Hafta sonu beraber bakarız', 'Yaşasın! Söz mü?'), T('Eskileri daha yeni, biraz daha giy', 'Ama baba...')],
+        art: [T('Hemen buzdolabına asıyorum!', 'Hihi! Bir tane daha çizeceğim.'), T('Ressam olacaksın galiba', 'Hayır, futbolcu olacağım!')],
+        congrats: [T('Bir gün sen de atacaksın şampiyon!', 'Söz baba!'), ka('ball', 'Bana da öğret!')],
+        console: [T('Sağ ol canım, sen benim en büyük taraftarımsın', 'Hep öyle olacağım!'), ka(a <= 12 ? 'ball' : 'talk', 'Yaşasın!')],
+        adult: [ka('dinner', 'Harika, akşam görüşürüz!'), T('Gurur duyuyorum seninle', 'Sağ ol baba.')],
+        love: [T('Seni seviyorum', 'Ben de seni!'), ka(acts[0] ? acts[0][0] : 'ball', 'Yaşasın!')],
+      };
+      kidR.def = kidR.love;
       out.push({ id: 'kid' + i, n: k.n, role: `${a} yaş`, c: 'linear-gradient(135deg,#ffb36b,#e0672b)', i: k.n[0],
-        ...msg('kid' + i, a >= 18 ? ['Baba bu hafta yemeğe gelebilir miyim?', 'İşte her şey yolunda, merak etme.', 'Senin eski maçlarını arkadaşlarıma izlettim!', 'Baba bir tavsiyene ihtiyacım var.'] : ['Baba bugün top oynayalım mı?', 'Okulda herkes senin maçını konuştu!', 'Bana yeni krampon alır mısın?', 'Baba okulda resim yaptım, seni çizdim!', 'Arkadaşlarım imzanı istiyor!', 'Baba bana şut çekmeyi öğretir misin?'],
-          [when(X.goals, 'Baba golünü gördüm! Ben de senin gibi olacağım!'), when(X.loss, 'Üzülme baba, sen yine de en iyisisin.')]),
-        r: ak ? [{ t: ak[1], act: () => Life.kidAct(i, ak[0]), ap: 1, ok: 'Yaşasın!' }, { t: 'Seni seviyorum', ok: 'Ben de seni!' }] : [{ t: 'Seni seviyorum', ok: 'Ben de seni!' }] });
+        ...conv('kid' + i, a >= 18 ? [
+          E('adult', 'Baba bu hafta yemeğe gelebilir miyim?'), E('love', 'İşte her şey yolunda, merak etme.'), E('love', 'Senin eski maçlarını arkadaşlarıma izlettim!'), E('adult', 'Baba bir tavsiyene ihtiyacım var.', true, false, [ka('talk', 'Teşekkürler baba.'), T('Ne zaman istersen ara', 'Biliyorum baba.')]),
+        ] : [
+          E('play', 'Baba bugün top oynayalım mı?', a <= 12), E('play', 'Baba bana şut çekmeyi öğretir misin?', a <= 12),
+          E('school', 'Okulda herkes senin maçını konuştu!', X.f), E('ask', 'Bana yeni krampon alır mısın?'), E('art', 'Baba okulda resim yaptım, seni çizdim!', a <= 12), E('school', 'Arkadaşlarım imzanı istiyor!'),
+          E('love', 'Baba bu akşam erken gelir misin?', a > 12, false, [ka('talk', 'Yaşasın!'), T('Bu akşam geç kalacağım, yarın söz', 'Tamam baba.')]),
+          E('congrats', 'Baba golünü gördüm! Ben de senin gibi olacağım!', X.goals, true),
+          E('console', 'Üzülme baba, sen yine de en iyisisin.', X.loss, true),
+        ], kidR) });
     });
     // herkes her hafta yazmaz: kişiye göre olasılık (bağlamlı bir sebep varsa daha olası)
     const PR = { mom: 0.5, dad: 0.35, gf: 0.6, coach: 0.3, team: 0.35, agent: 0.35 };
@@ -278,7 +488,13 @@
   // bu hafta yazan kişilerin mesajı geçmişe bir kez eklenir
   function syncWeek(cs) {
     const w = Phone.week();
-    cs.forEach((c) => { if (writes(c) && !logOf(c.id).some((e) => e.w === w && e.wk)) pushLog(c.id, { d: 'in', t: c.m, wk: 1 }); });
+    cs.forEach((c) => { if (writes(c) && !logOf(c.id).some((e) => e.w === w && e.wk)) pushLog(c.id, { d: 'in', t: c.m, wk: 1, mk: c.mk }); });
+  }
+  // bu haftaki mesaja uygun cevaplar (kayıttaki mesaj bugünkü seçimden farklıysa türüne göre)
+  function repliesOf(info, k) {
+    const w = Phone.week(), e = logOf(k).filter((x) => x.w === w && x.wk).pop();
+    if (!e || e.t === info.m || !e.mk || !info.R) return info.r || [];
+    return info.R[e.mk] || info.R.def || info.r || [];
   }
   const pending = (k) => Inbox.list().filter((it) => it.key === k);
   function isNew(k) {
@@ -329,10 +545,11 @@
       else parts.push(`<div class="ph-bub ${e.d === 'out' ? 'out' : 'in'}">${esc(e.t)}</div>`);
     });
     const it = its[0];
-    const weekly = info.r && info.r.length && logOf(k).some((e) => e.w === w && e.wk) && d.rep[k] !== w;
+    const RR = repliesOf(info, k);
+    const weekly = RR.length && logOf(k).some((e) => e.w === w && e.wk) && d.rep[k] !== w;
     let foot;
     if (it) foot = `<div class="ph-replies"><span class="ph-lbl2">Cevabın</span>${it.btns.map((t, i) => `<button class="ph-rep" data-ph-ibtn="${esc(it.id)}:${i}" type="button"><span>${esc(t)}</span></button>`).join('')}</div>`;
-    else if (weekly) foot = `<div class="ph-replies"><span class="ph-lbl2">Cevabın</span>${info.r.map((r, i) => { const dis = (r.ap && ap < r.ap) || (r.once && !r.once()); return `<button class="ph-rep" data-ph-rep="${i}" type="button" ${dis ? 'disabled' : ''}><span>${esc(r.t)}</span>${r.ap ? `<em>${r.ap} aksiyon</em>` : r.open ? '<em>uygulamayı aç</em>' : ''}</button>`; }).join('')}</div>`;
+    else if (weekly) foot = `<div class="ph-replies"><span class="ph-lbl2">Cevabın</span>${RR.map((r, i) => { const dis = (r.ap && ap < r.ap) || (r.once && !r.once()); return `<button class="ph-rep" data-ph-rep="${i}" type="button" ${dis ? 'disabled' : ''}><span>${esc(r.t)}</span>${r.ap ? `<em>${r.ap} aksiyon</em>` : r.open ? '<em>uygulamayı aç</em>' : ''}</button>`; }).join('')}</div>`;
     else foot = '<div class="ph-replies"><span class="ph-lbl2">Yeni mesaj gelince burada görünür.</span></div>';
     return `<div class="ph-appv">${top(`<span class="ph-ct"><span class="ph-av sm" style="background:${info.c}">${esc(info.i)}</span><span><span class="ph-ctn">${esc(info.n)}</span><small>${esc(info.role)}</small></span></span>`)}
       <div class="ph-body" id="ph-chat"><div class="ph-chat" data-emo>${parts.join('')}${it ? `<div class="ph-bub in ph-ev">${it.html}</div>` : ''}</div></div>${foot}</div>`;
@@ -558,7 +775,7 @@
       } else if (X.win || X.loss || X.draw) {
         out.push({ id: 'res', who: cn, club: true, h: hrs('res', 14, 40), kind: 'score', a: cn, b: r.opp, ga: r.gf, gb: r.ga, res: r.res, scorer: r.goals > 0 ? me : '', txt: r.res === 'W' ? 'Galibiyet! Desteğiniz için teşekkürler.' : r.res === 'L' ? 'Bugün olmadı. Toparlanıp geri döneceğiz.' : 'Bir puanla dönüyoruz.', likes: n('res', 500, 1500) * big, cm: comments('res', X.win ? 'win' : X.loss ? 'loss' : 'draw'), nc: n('resc', 40, 400) });
         if (X.goals && !intlRes) out.push({ id: 'goal', who: cn, club: true, h: hrs('goal', 16, 30), kind: 'goal', name: me, num: p.shirt, txt: `GOL! ${me}`, likes: n('goal', 600, 1800) * big, cm: comments('goal', 'me'), nc: n('goalc', 30, 300) });
-        if (X.goals || X.star) out.push({ id: 'fan', who: 'Tribün Sesi', h: hrs('fan', 10, 22), kind: 'quote', txt: `${me} bugün sahanın en iyisiydi!`, likes: n('fan', 200, 3000), cm: comments('fan', 'me'), nc: n('fanc', 10, 120) });
+        if (X.star || X.motm || X.nG >= 2) out.push({ id: 'fan', who: 'Tribün Sesi', h: hrs('fan', 10, 22), kind: 'quote', txt: `${me} bugün sahanın en iyisiydi!`, likes: n('fan', 200, 3000), cm: comments('fan', 'me'), nc: n('fanc', 10, 120) });
       }
       const ro = (Game.teamRoster(s.clubId) || []).filter((x) => x && x.n && x.n !== me);
       const TP = [['gym', 'Bugün ağırlık günüydü. Yarın daha güçlü!'], ['train', 'Topla geçen bir gün daha.'], ['locker', 'Soyunma odasında moraller yüksek.'], ['plane', 'Deplasman yolundayız!'], ['food', 'Maç öncesi beslenme her şey.'], ['run', 'Sabah koşusu tamam. Hedef büyük.'], ['stadium', 'Hafta sonu için hazırız.']];
@@ -861,7 +1078,7 @@
   function reply(i) {
     const k = Phone.sub, c = contacts().find((x) => x.id === k);
     if (!c) return;
-    const r = c.r[i], d = Phone.data(), w = Phone.week(), s = Game.state;
+    const r = repliesOf(c, k)[i], d = Phone.data(), w = Phone.week(), s = Game.state;
     if (!r || d.rep[k] === w) return;
     if (r.open) { d.rep[k] = w; pushLog(k, { d: 'out', t: r.t }); pushLog(k, { d: 'in', t: r.ok }); Game.save(); Phone.app = r.open; Phone.sub = null; return Phone.render(); }
     let note = null;
