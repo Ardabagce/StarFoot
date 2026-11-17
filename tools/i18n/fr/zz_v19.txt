@@ -2952,3 +2952,15 @@
 10026|Pub {0}/{1}
 10024|Regarder {0} pubs
 10027|{0} boulots
+10030|On fait du vélo au parc ?
+10031|Un nouveau café vient d'ouvrir, allons-y un de ces jours.
+10032|Tu es libre ce week-end ? On fait un barbecue.
+10035|J'ai retrouvé notre vieille photo d'équipe, on était si petits !
+10036|Je ne sais plus combien de fois j'ai revu ce but !
+10037|Tout le café s'est levé sur ton but, j'ai dit à tout le monde que tu es mon pote !
+10038|Homme du match, bravo !
+10039|Cette semaine, tout le monde parle de toi !
+10040|Tout le monde a de mauvais jours, vous gagnerez le prochain.
+10041|Garde le moral, vous gagnerez la semaine prochaine !
+10042|J'ai appris pour ta blessure, rétablis-toi vite !
+10043|Si tu t'ennuies chez toi, je passe et on joue aux jeux vidéo.

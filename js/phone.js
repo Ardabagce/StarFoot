@@ -202,15 +202,18 @@
   // E(tür, metin, koşul, bağlamlı mı, özel cevaplar): koşul yanlışsa mesaj havuza girmez
   const E = (k, t, c = true, x = false, r = null) => (c && t ? { k, t, x, r } : null);
   // bağlamlı (maça/duruma bağlı) mesaj varsa çoğunlukla onu seçer; son 3 haftanın mesajını tekrar etmez
-  function pickMsg(id, list) {
-    const all = list.filter(Boolean), h = hstr(`${id}|${Phone.week()}`), rc = recent(id);
+  // avoid: aynı hafta başka bir kişinin (ör. diğer arkadaşların) seçtiği mesajlar tekrar seçilmez
+  function pickMsg(id, list, avoid) {
+    let all = list.filter(Boolean);
+    if (avoid && avoid.size) { const a2 = all.filter((e) => !avoid.has(e.t)); if (a2.length) all = a2; }
+    const h = hstr(`${id}|${Phone.week()}`), rc = recent(id);
     const fresh = (arr) => { const f = arr.filter((e) => !rc.includes(e.t)); return f.length ? f : arr; };
     const c = fresh(all.filter((e) => e.x)), g = fresh(all.filter((e) => !e.x));
     if (c.length && (h % 10 < 8 || !g.length)) return c[(h >>> 4) % c.length];
     return g.length ? g[(h >>> 8) % g.length] : { k: 'def', t: '👋', x: false };
   }
   // kişinin bu haftaki mesajı + o mesaja uygun cevaplar
-  function conv(id, list, R) { const e = pickMsg(id, list); return { m: e.t, mk: e.k, ctx: !!e.x, R, r: e.r || R[e.k] || R.def }; }
+  function conv(id, list, R, avoid) { const e = pickMsg(id, list, avoid); if (avoid) avoid.add(e.t); return { m: e.t, mk: e.k, ctx: !!e.x, R, r: e.r || R[e.k] || R.def }; }
   const T = (t, ok) => ({ t, ok });
   const A = (t, ok, act, more) => Object.assign({ t, ok, act, ap: 1 }, more || {});
   // arkadaşla buluşma: 1 aksiyon hakkı, arkadaşlık ve moral artar
@@ -403,6 +406,7 @@
       coach: E('job', 'Altyapıda çocuklara seni örnek gösteriyorum.', true, false, [T('Onlara iyi bak hocam', 'Merak etme, senin gibi yetişecekler.'), T('Çok gurur duydum, sağ ol', 'Hak ediyorsun.')]),
       other: E('job', 'Yeni bir iş buldum, kutlayalım!', true, false, [meet('Tebrikler! Bu hafta kutlayalım', 'Yeri ben seçiyorum!'), T('Tebrikler kanka, çok sevindim', 'Sağ ol kanka!')]),
     });
+    const frUsed = new Set();
     (typeof Friends !== 'undefined' && Friends.on && Friends.on() ? Friends.list() : []).forEach((f, i) => {
       const fid = 'f' + (f.id != null ? f.id : i), key = 'fr' + (f.id || i);
       const meet = (t, ok) => A(t, ok, () => friendMeet(f));
@@ -422,16 +426,23 @@
       out.push({ id: fid, n: f.n, role: f.job && typeof FR_JOB !== 'undefined' ? FR_JOB[f.job] : 'Arkadaşın', c: 'linear-gradient(135deg,#c792ff,#7b3fe4)', i: (f.n.trim()[0] || '?'),
         ...conv(key, [
           E('invite', 'Teneffüste top oynayalım mı?', X.kid), E('hw', 'Ödevi yaptın mı? Bana da gösterir misin?', X.kid), E('invite', 'Yarın okula yeni topumu getiriyorum!', X.kid),
-          E('invite', 'Ne zaman görüşüyoruz? Çok oldu!', !X.kid),
+          E('invite', 'Parkta bisiklet sürelim mi?', X.kid),
+          E('invite', 'Ne zaman görüşüyoruz? Çok oldu!', !X.kid), E('invite', 'Yeni bir kafe açılmış, bir ara gidelim.', !X.kid && !X.young),
+          E('invite', 'Hafta sonu boş musun? Bizimkiler mangal yapıyor.', !X.kid && !X.young),
+          E('nost', 'Eski takım fotoğrafımızı buldum, ne kadar küçükmüşüz!', !X.kid),
           E('invite', 'Hafta sonu eski mahalle ekibiyle halı saha var, haberin olsun.', !X.kid && !X.inj, false, [meet('Gelirim, ama yavaş oynayın!', 'Sana özel kurallar, söz!'), T('Kulüp izin vermez kanka, sakatlanma riski', 'Haklısın, biz de seni tribünden izleriz.')]),
           E('nost', 'Eski okulun önünden geçtim, seni andım.', !X.kid), E('nost', 'Hâlâ o eski topunu saklıyor musun?'),
           E('ask', 'İmzalı forma lazım, kuzenim deli hayranın.', !X.street && !X.youth), E('ask', 'Kanka bana da bir forma ayarla!', !X.street),
           job,
           E('ticket', `${X.nx ? X.nx.t : ''} maçına biletimi aldım, tribündeyim!`, X.nxHome && !X.kid && !X.inj),
           E('congrats', 'Kanka maçını izledim, efsaneydin!', X.star || X.motm, true), E('congrats', 'Golünü izledim, ekrana sarıldım!', X.goals, true),
-          E('console', 'Kanka kafana takma, bir maç sadece.', X.loss, true),
-          E('inj', 'Geçmiş olsun kanka, bir şey lazımsa söyle.', X.inj, true),
-        ], frR) });
+          E('congrats', 'O golü kaç kere izledim bilmiyorum!', X.goals, true), E('congrats', 'Gol anında bütün kafe ayağa kalktı, herkese arkadaşım dedim!', X.goals && !X.kid, true),
+          E('congrats', 'Maçın adamı olmuşsun, helal olsun!', X.motm, true), E('congrats', 'Bu hafta herkes senden bahsediyor kanka!', X.star || X.motm, true),
+          E('console', 'Kanka kafana takma, bir maç sadece.', X.loss, true), E('console', 'Kötü gün herkesin başına gelir, sonrakini alırsınız.', X.loss, true),
+          E('console', 'Moralini bozma, haftaya kazanırsınız!', X.loss, true),
+          E('inj', 'Geçmiş olsun kanka, bir şey lazımsa söyle.', X.inj, true), E('inj', 'Sakatlığı duydum, çabuk iyileş kanka!', X.inj, true),
+          E('inj', 'Evde canın sıkılırsa uğrarım, oyun oynarız.', X.inj, true),
+        ], frR, frUsed) });
     });
     // ---- Çocuklar ----
     (L.kids || []).forEach((k, i) => {

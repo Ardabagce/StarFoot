@@ -212017,6 +212017,18 @@
 "lang-pt.js",
 "phone.js"
 ],
+"{} reklam izle": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"starlife.js"
+],
 "Battın ({}). -{}": [
 "lang-ar.js",
 "lang-de.js",
@@ -213374,6 +213386,29 @@
 "lang-pt.js",
 "starlife.js"
 ],
+"{} aksiyon": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Reklam {}/{}": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"starlife.js"
+],
 "/{}. HAFTA": [
 "lang-ar.js",
 "lang-de.js",
@@ -214288,6 +214323,18 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
+],
+"{} iş": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"starlife.js"
 ],
 "Datenschutzerklärung": [
 "lang-de.js"
@@ -249779,6 +249826,12 @@
 "{0}: verkauft": [
 "lang-de.js"
 ],
+"{0} Aktionen": [
+"lang-de.js"
+],
+"Werbung {0}/{1}": [
+"lang-de.js"
+],
 "/{}. WOCHE": [
 "lang-de.js"
 ],
@@ -284278,6 +284331,13 @@
 "lang-en.js"
 ],
 "{0}: sold": [
+"lang-en.js"
+],
+"{0} actions": [
+"lang-en.js",
+"lang-fr.js"
+],
+"Ad {0}/{1}": [
 "lang-en.js"
 ],
 "/{}. WEEK": [
@@ -319121,6 +319181,12 @@
 "lang-es.js",
 "lang-pt.js"
 ],
+"{0} acciones": [
+"lang-es.js"
+],
+"Anuncio {0}/{1}": [
+"lang-es.js"
+],
 "/{}. SEMANA": [
 "lang-es.js",
 "lang-pt.js"
@@ -352853,6 +352919,9 @@
 "{0} : vendu": [
 "lang-fr.js"
 ],
+"Pub {0}/{1}": [
+"lang-fr.js"
+],
 "/{}. SEMAINE": [
 "lang-fr.js"
 ],
@@ -386093,6 +386162,12 @@
 "lang-id.js"
 ],
 "{0}: dijual": [
+"lang-id.js"
+],
+"{0} aksi": [
+"lang-id.js"
+],
+"Iklan {0}/{1}": [
 "lang-id.js"
 ],
 "/{}. MINGGU": [
@@ -419342,6 +419417,12 @@
 "lang-it.js"
 ],
 "{0}: venduto": [
+"lang-it.js"
+],
+"{0} azioni": [
+"lang-it.js"
+],
+"Pubblicità {0}/{1}": [
 "lang-it.js"
 ],
 "/{}. SETTIMANA": [
@@ -452903,6 +452984,12 @@
 "{0} anos": [
 "lang-pt.js"
 ],
+"{0} ações": [
+"lang-pt.js"
+],
+"Anúncio {0}/{1}": [
+"lang-pt.js"
+],
 "ESTAÇÃO {}/3": [
 "lang-pt.js"
 ],
@@ -469936,6 +470023,42 @@
 "linear-gradient(135deg,#c792ff,#7b3fe4)": [
 "phone.js"
 ],
+"Parkta bisiklet sürelim mi?": [
+"phone.js"
+],
+"Yeni bir kafe açılmış, bir ara gidelim.": [
+"phone.js"
+],
+"Hafta sonu boş musun? Bizimkiler mangal yapıyor.": [
+"phone.js"
+],
+"Eski takım fotoğrafımızı buldum, ne kadar küçükmüşüz!": [
+"phone.js"
+],
+"O golü kaç kere izledim bilmiyorum!": [
+"phone.js"
+],
+"Gol anında bütün kafe ayağa kalktı, herkese arkadaşım dedim!": [
+"phone.js"
+],
+"Maçın adamı olmuşsun, helal olsun!": [
+"phone.js"
+],
+"Bu hafta herkes senden bahsediyor kanka!": [
+"phone.js"
+],
+"Kötü gün herkesin başına gelir, sonrakini alırsınız.": [
+"phone.js"
+],
+"Moralini bozma, haftaya kazanırsınız!": [
+"phone.js"
+],
+"Sakatlığı duydum, çabuk iyileş kanka!": [
+"phone.js"
+],
+"Evde canın sıkılırsa uğrarım, oyun oynarız.": [
+"phone.js"
+],
 "linear-gradient(135deg,#ffb36b,#e0672b)": [
 "phone.js"
 ],
@@ -470345,15 +470468,6 @@
 "starlife.js"
 ],
 "{} · +{} · Enerji -{}": [
-"starlife.js"
-],
-"Reklam {}/{}": [
-"starlife.js"
-],
-"{} reklam izle": [
-"starlife.js"
-],
-"{} iş": [
 "starlife.js"
 ],
 "linear-gradient(135deg,#27c4e8,#0a6fb5)": [

@@ -2952,3 +2952,15 @@
 10026|Anúncio {0}/{1}
 10024|Assistir {0} anúncios
 10027|{0} trabalhos
+10030|Bora andar de bicicleta no parque?
+10031|Abriu um café novo, vamos lá um dia.
+10032|Tá livre no fim de semana? Vai ter churrasco.
+10035|Achei nossa foto antiga do time, como a gente era pequeno!
+10036|Nem sei quantas vezes vi aquele gol!
+10037|O café inteiro levantou no gol, falei pra todo mundo que você é meu amigo!
+10038|Melhor em campo! Mereceu!
+10039|Essa semana todo mundo tá falando de você, mano!
+10040|Todo mundo tem dia ruim, vocês ganham o próximo.
+10041|Não desanima, semana que vem vocês ganham!
+10042|Soube da lesão, melhora logo, mano!
+10043|Se ficar entediado em casa, passo aí e a gente joga videogame.

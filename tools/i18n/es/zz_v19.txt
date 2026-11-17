@@ -2952,3 +2952,15 @@
 10026|Anuncio {0}/{1}
 10024|Ver {0} anuncios
 10027|{0} trabajos
+10030|¿Vamos en bici al parque?
+10031|Han abierto una cafetería nueva, vamos un día.
+10032|¿Estás libre el finde? Hacemos una barbacoa.
+10035|Encontré nuestra foto del equipo de antes, ¡qué pequeños éramos!
+10036|¡No sé cuántas veces he visto ese gol!
+10037|¡Con tu gol se levantó toda la cafetería y le dije a todos que eres mi amigo!
+10038|¡Jugador del partido! ¡Bien merecido!
+10039|¡Esta semana todos hablan de ti, tío!
+10040|Todos tienen días malos, ganaréis el siguiente.
+10041|¡Ánimo, la semana que viene ganáis!
+10042|Me enteré de la lesión, ¡recupérate pronto!
+10043|Si te aburres en casa, me paso y jugamos a la consola.

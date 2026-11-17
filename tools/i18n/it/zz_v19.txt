@@ -2952,3 +2952,15 @@
 10026|Pubblicità {0}/{1}
 10024|Guarda {0} pubblicità
 10027|{0} lavori
+10030|Andiamo in bici al parco?
+10031|Hanno aperto un nuovo bar, andiamoci una volta.
+10032|Sei libero nel weekend? Facciamo una grigliata.
+10035|Ho trovato la nostra vecchia foto di squadra, eravamo piccolissimi!
+10036|Non so più quante volte ho rivisto quel gol!
+10037|Al gol tutto il bar si è alzato, ho detto a tutti che sei mio amico!
+10038|Migliore in campo, complimenti!
+10039|Questa settimana parlano tutti di te!
+10040|Le giornate storte capitano a tutti, vincerete la prossima.
+10041|Su il morale, la prossima settimana vincete!
+10042|Ho saputo dell'infortunio, guarisci presto!
+10043|Se ti annoi a casa passo da te e giochiamo alla console.

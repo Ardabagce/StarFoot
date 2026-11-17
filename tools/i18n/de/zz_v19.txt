@@ -2952,3 +2952,15 @@
 10026|Werbung {0}/{1}
 10024|{0} Werbespots ansehen
 10027|{0} Jobs
+10030|Fahren wir im Park Fahrrad?
+10031|Ein neues Café hat aufgemacht, lass uns mal hingehen.
+10032|Hast du am Wochenende Zeit? Wir grillen.
+10035|Hab unser altes Mannschaftsfoto gefunden, wir waren so klein!
+10036|Ich hab das Tor schon unzählige Male gesehen!
+10037|Beim Tor ist das ganze Café aufgesprungen, ich hab allen gesagt, dass du mein Kumpel bist!
+10038|Spieler des Spiels! Verdient!
+10039|Diese Woche reden alle von dir, Kumpel!
+10040|Schlechte Tage hat jeder, das nächste gewinnt ihr.
+10041|Kopf hoch, nächste Woche gewinnt ihr!
+10042|Hab von der Verletzung gehört, gute Besserung!
+10043|Wenn dir zu Hause langweilig ist, komm ich vorbei und wir zocken.

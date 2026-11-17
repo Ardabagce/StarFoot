@@ -2952,3 +2952,15 @@
 10026|Iklan {0}/{1}
 10024|Tonton {0} iklan
 10027|{0} pekerjaan
+10030|Main sepeda di taman, yuk?
+10031|Ada kafe baru buka, kapan-kapan ke sana yuk.
+10032|Akhir pekan kosong? Kami mau bakar-bakar.
+10035|Nemu foto tim lama kita, kita kecil banget dulu!
+10036|Entah berapa kali aku nonton gol itu!
+10037|Seisi kafe berdiri saat golmu, aku bilang ke semua kalau kamu temanku!
+10038|Pemain terbaik laga, mantap!
+10039|Minggu ini semua orang membicarakanmu, bro!
+10040|Hari buruk bisa terjadi pada siapa saja, laga berikutnya pasti menang.
+10041|Jangan patah semangat, minggu depan kalian menang!
+10042|Dengar kamu cedera, cepat sembuh ya bro!
+10043|Kalau bosan di rumah, aku mampir, kita main gim.
