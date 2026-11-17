@@ -1729,7 +1729,7 @@ const UI = {
         </section>
       </div>
       ${typeof Life !== 'undefined' ? Life.homeCard() : ''}
-      ${typeof TReq !== 'undefined' ? TReq.card() : ''}
+      ${typeof TReq !== 'undefined' ? TReq.card() : ''}${typeof YReq !== 'undefined' ? YReq.card() : ''}
       ${s.offers.length ? `
       <section class="card">
         <div class="card-h"><span>${Icon('mail')} Transfer Teklifleri</span>${Game.tWindow(s.season.round) ? `<span class="tw-tag">${Game.tWindow(s.season.round).name} · ${Game.tWindow(s.season.round).to - s.season.round + 1} hafta kaldı</span>` : ''}</div>
