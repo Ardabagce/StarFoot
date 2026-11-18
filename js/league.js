@@ -225,11 +225,12 @@ const World = {
       const tbl = World.sortedTable(world.leagues[l.id]);
       tbl.forEach((row, i) => {
         const c = world.clubs[row.id];
-        const drift = (tbl.length / 2 - i) * 0.25 + U.rand(-1.5, 1.5);
+        // başarı küçük bir güç artışı getirir; şampiyon her yıl kaçıp gitmesin (tavan 88)
+        const drift = (tbl.length / 2 - i) * 0.13 + U.rand(-1.5, 1.5);
         if (!c) return; // tabloda olup kulüp listesinde olmayan kayıt (eski kayıt): atla
         const ent = CLUB_LIST.find((x) => x[0] === c.id);
         const base = ent ? ent[4] : c.rating; // listede yoksa kendi gücünü taban al
-        c.rating = Math.round(U.clamp(c.rating + drift + (base - c.rating) * 0.3, 42, 90));
+        c.rating = Math.round(U.clamp(c.rating + drift + (base - c.rating) * 0.3, 42, Math.max(88, base)));
         // kadroyu tazele
         c.roster.forEach((pl) => {
           pl.age++;

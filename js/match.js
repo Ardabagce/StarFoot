@@ -280,8 +280,10 @@ const Match = {
     feed(`🏟️ ${U.esc(ctx.home.name)} - ${U.esc(ctx.away.name)} maçı başladı!`);
     if (weather.note) feed(`🌦️ Hava: ${U.esc(Weather.label(weather))}. ${weather.note}`, 'info');
 
-    const homeR = () => ctx.home.rating + (isHome ? M.teamBoost : 0) + (isHome && onPitch() ? (ovr - ctx.home.rating) * 0.08 : 0);
-    const awayR = () => ctx.away.rating + (!isHome ? M.teamBoost : 0) + (!isHome && onPitch() ? (ovr - ctx.away.rating) * 0.08 : 0);
+    // yıldız oyuncu takımını taşır: takımdan güçlüysen etkin belirgin (fark × 0,4), zayıfsan az (× 0,08)
+    const lift = (r) => { const d = ovr - r; return d > 0 ? d * 0.4 : d * 0.08; };
+    const homeR = () => ctx.home.rating + (isHome ? M.teamBoost : 0) + (isHome && onPitch() ? lift(ctx.home.rating) : 0);
+    const awayR = () => ctx.away.rating + (!isHome ? M.teamBoost : 0) + (!isHome && onPitch() ? lift(ctx.away.rating) : 0);
 
     const pickOwn = () => World.pickScorer(own.roster);
     const pickOpp = () => World.pickScorer(opp.roster);

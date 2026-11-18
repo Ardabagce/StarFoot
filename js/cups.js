@@ -412,7 +412,15 @@ const Cups = {
       const gf = ctx.side === 'home' ? sum.hs : sum.as, ga = ctx.side === 'home' ? sum.as : sum.hs;
       const rank = Cups.swissTable(cup).findIndex((r) => r.id === s.clubId) + 1;
       Game.news(`${cup.name} ${stageName}: ${gf}-${ga} ${gf > ga ? 'galibiyet' : gf < ga ? 'mağlubiyet' : 'beraberlik'}. Lig aşamasında ${rank}. sıradayız.`, gf > ga ? 'good' : gf < ga ? 'bad' : '');
-    } else if (pens) Game.news(`${cup.name} ${stageName} maçı penaltılara gitti: ${weWon ? 'penaltılarla tur atladık!' : 'penaltılarla elendik.'}`, weWon ? 'good' : 'bad');
+    } else if (pens) {
+      // penaltı atışları açıkça gösterilir (berabere bitip elenmek kafa karıştırmasın)
+      const ws = U.randi(3, 5), ls = Math.max(1, ws - U.randi(1, 2)), my = weWon ? ws : ls, th = weWon ? ls : ws;
+      const gf = ctx.side === 'home' ? sum.hs : sum.as, ga = ctx.side === 'home' ? sum.as : sum.hs;
+      Game.news(`${cup.name} ${stageName}: maç ${gf}-${ga} bitti, penaltılarda ${my}-${th} ${weWon ? 'kazandık, tur atladık!' : 'kaybettik, elendik.'}`, weWon ? 'good' : 'bad');
+      if (!(typeof FF !== 'undefined' && FF.on)) await new Promise((res) => Game.modal(`<div class="ev-tag">${U.esc(cup.name)} · ${U.esc(stageName)}</div><h2>${weWon ? '✅ Penaltılarla tur atladık!' : '❌ Penaltılarla elendik'}</h2>
+        <p>Maç <b>${gf}-${ga}</b> berabere bitti. Tek maçlık turda eşitlik penaltılarla bozulur.</p>
+        <div class="pso"><span>Penaltılar</span><b>${my} - ${th}</b></div>`, [{ t: 'Devam', fn: res }]));
+    }
     else Game.news(`${cup.name} ${stageName}: ${weWon ? 'tur atladık!' : 'kupaya veda ettik.'}`, weWon ? 'good' : 'bad');
     if (cup.winner === s.clubId) {
       p.trophies.push(`${s.season.year}: 🏆 ${cup.name} Şampiyonu`);

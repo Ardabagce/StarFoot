@@ -287,27 +287,40 @@ const Rival = {
     if (s.rival) {
       // eski kayıtlar: başka ülkedeki rakip senin ligine taşınır
       if (!s.rival.v2) { const c = Rival.pickClub(); if (c) s.rival.club = c.id; s.rival.v2 = true; s.rival.form = 1; }
+      // lig değiştirdiysen: rakip seviyesi yetiyorsa yeni ligine gelir, yetmiyorsa rekabet biter (yeni rakip seçilir)
+      if (!Game.isYouth() && Rival.relocate() === 'end') return Rival.ensure();
       return s.rival;
     }
     const p = s.player, club = Rival.pickClub();
     if (!club) return null;
     const [nat, pool] = U.chance(0.5) ? [p.nation, (RIVAL_NATS.find(([n]) => n === p.nation) || [0, World.natPool(p.nation)])[1]] : U.pick(RIVAL_NATS.filter(([n]) => n !== p.nation));
     const ovr = Math.round(Player.overall(p) + U.randi(-1, 3));
-    s.rival = { name: NAME_POOLS[pool] ? World.genName(pool) : World.genName('XX'), nat, pos: p.position, age: p.age, ovr, club: club.id, look: U.randi(20, 900), season: { g: 0, a: 0, apps: 0 }, totals: { g: 0, a: 0, apps: 0, titles: 0, ballon: 0 }, passed: false, v2: true, form: U.rand(0.9, 1.1) };
+    s.rival = { name: NAME_POOLS[pool] ? World.genName(pool) : World.genName('XX'), nat, pos: p.position, age: Math.max(17, p.age + U.randi(-1, 1)), ovr, club: club.id, look: U.randi(20, 900), season: { g: 0, a: 0, apps: 0 }, totals: { g: 0, a: 0, apps: 0, titles: 0, ballon: 0 }, passed: false, v2: true, form: U.rand(0.9, 1.1), base: { g: p.totals.goals, a: p.totals.assists, ga: p.totals.goals + p.totals.assists } };
     const der = Big.derby(club.id, s.clubId);
     Game.news(`👀 ${der ? `${der} rakibi ${club.name}'da` : `Ligdeki rakip ${club.name}'da`} senin yaşında, senin mevkinde bir yıldız adayı var: ${s.rival.name}. Basın ikinizi şimdiden kıyaslıyor. Ezeli rakibin bu!`, 'me');
     return s.rival;
   },
   club() { const s = Game.state, r = s.rival; return r && s.world.clubs[r.club]; },
+  // sen başka bir lige geçtiysen rakip yalnız seviyesi yetiyorsa senin ligine transfer olur; yoksa rekabet biter
+  relocate() {
+    const s = Game.state, r = s.rival, c = r && s.world.clubs[r.club], me = Game.club();
+    if (!r || !c || !me || c.league === me.league) return 'same';
+    const to = Rival.pickClub();
+    if (to && r.ovr >= to.rating - 2) { r.club = to.id; Game.news(`✈️ Ezeli rakibin ${r.name} de ${to.name}'a transfer oldu. Rekabet yeni ligde sürüyor!`, 'world'); return 'moved'; }
+    Game.news(`🗞️ ${r.name} eski liginde kaldı. Yeni liginde basın seni başka rakiplerle kıyaslayacak.`, 'world');
+    s.rival = null;
+    return 'end';
+  },
   // her hafta rakibin maçı: üretimi senin sezon performansına yakın tutulur, yarış hep çekişmeli kalır
   week() {
     const s = Game.state, r = Rival.ensure();
     if (!r) return;
     const ss = s.season.stats;
     const base = { FW: [0.42, 0.18], MF: [0.18, 0.27], DF: [0.06, 0.08] }[r.pos] || [0.3, 0.2];
-    const k = U.clamp(1 + (r.ovr - Player.overall(s.player)) / 20, 0.75, 1.25) * (r.form || 1);
-    const myG = ss.apps >= 3 ? ss.goals / ss.apps : base[0], myA = ss.apps >= 3 ? ss.assists / ss.apps : base[1];
-    const lamG = U.clamp((0.3 * base[0] + 0.75 * myG) * k, 0.03, 1.6), lamA = U.clamp((0.3 * base[1] + 0.75 * myA) * k, 0.03, 1.1);
+    // üretim rakibin kendi gücüne ve kulübüne bağlı (senin golüne bağlanmaz): zayıf ligde kalan rakip geride kalır
+    const rc = Rival.club(), RL = rc && LEAGUES.find((l) => l.id === rc.league);
+    const k = U.clamp(1 + (r.ovr - (rc ? rc.rating : r.ovr)) / 18, 0.6, 1.6) * U.clamp(RL ? 0.75 + RL.fame * 0.2 : 1, 0.75, 1.1) * (r.form || 1);
+    const lamG = U.clamp(base[0] * k * 1.35, 0.03, 1.2), lamA = U.clamp(base[1] * k * 1.25, 0.03, 0.9);
     const pois = (l) => { let n = 0, t = Math.exp(-l), pp = 1; do { n++; pp *= Math.random(); } while (pp > t); return n - 1; };
     const g = pois(lamG), a = pois(lamA);
     r.season.apps++; r.season.g += g; r.season.a += a;
@@ -330,11 +343,17 @@ const Rival = {
     r.ovr = U.clamp(Math.round(r.ovr + (myO - r.ovr) * 0.5 + U.randi(-1, 2)), 30, 94);
     r.form = U.rand(0.9, 1.12);
     const c = Rival.club(), me = Game.club();
-    // sen başka bir lige geçtiysen rakip de peşinden gelir
-    if (c && me && c.league !== me.league) {
-      const to = Rival.pickClub();
-      if (to) { r.club = to.id; Game.news(`✈️ Ezeli rakibin ${r.name} de senin ligine geldi: ${to.name}!`, 'world'); }
-    } else if (c && r.ovr > c.rating + 5) {
+    // rekabetin anlamı kalmadıysa (sen çok daha üst seviyedesin) basın yeni bir rakip bulur
+    const ML = me && LEAGUES.find((l) => l.id === me.league), CL = c && LEAGUES.find((l) => l.id === c.league);
+    const myTot = s.player.totals.goals + s.player.totals.assists - ((r.base && r.base.ga) || 0), hisTot = r.totals.g + r.totals.a;
+    const gap = (ML && CL && (ML.fame - CL.fame >= 0.35 || CL.level > ML.level)) || (myO - r.ovr >= 6) || (myTot > 30 && myTot > hisTot * 1.8);
+    if (gap) {
+      Game.news(`🗞️ ${r.name} artık seninle aynı seviyede değil. Basın seni ${me ? me.name : 'yeni takımın'} formasıyla yeni rakiplerle kıyaslıyor.`, 'world');
+      s.rival = null;
+      return;
+    }
+    if (Rival.relocate() === 'end') return;
+    if (c && me && c.league !== me.league) { /* relocate taşıdı */ } else if (c && r.ovr > c.rating + 5) {
       const big = Object.values(s.world.clubs).filter((x) => x.league === c.league && x.rating > c.rating && x.id !== s.clubId).sort((a, b) => b.rating - a.rating);
       const to = big[Math.min(big.length - 1, U.randi(0, 2))];
       if (to) { r.club = to.id; Game.news(`✈️ Ezeli rakibin ${r.name}, ${to.name}'a transfer oldu!`, 'world'); }
@@ -357,7 +376,7 @@ const Rival = {
       </div>
       <div class="rv-row"><span>${ss.goals}</span><label>Sezon golü</label><span>${r.season.g}</span></div>${bar(ss.goals, r.season.g)}
       <div class="rv-row"><span>${ss.assists}</span><label>Sezon asisti</label><span>${r.season.a}</span></div>${bar(ss.assists, r.season.a)}
-      <div class="rv-row"><span>${p.totals.goals}</span><label>Kariyer golü</label><span>${r.totals.g}</span></div>${bar(p.totals.goals, r.totals.g)}
+      ${(() => { const mg = p.totals.goals - ((r.base && r.base.g) || 0); return `<div class="rv-row"><span>${mg}</span><label>${r.base ? 'Rekabetteki golün' : 'Kariyer golü'}</label><span>${r.totals.g}</span></div>${bar(mg, r.totals.g)}`; })()}
     </section>`;
   },
 };
