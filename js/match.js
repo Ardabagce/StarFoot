@@ -1,8 +1,8 @@
 // Maç motoru: dakika dakika simülasyon + oyuncunun kritik anları
 
 const MOMENT_WEIGHTS = {
-  FW: { open: 40, dribble: 18, header: 12, freekick: 7, penalty: 5, tackle: 5, sprint: 9, onetwo: 7 },
-  MF: { open: 30, dribble: 13, deep: 15, tackle: 17, freekick: 9, header: 4, onetwo: 12, sprint: 5 },
+  FW: { open: 40, dribble: 18, header: 12, freekick: 7, penalty: 5, tackle: 5, sprint: 9, onetwo: 7, corner: 4 },
+  MF: { open: 30, dribble: 13, deep: 15, tackle: 17, freekick: 9, header: 4, onetwo: 12, sprint: 5, corner: 9 },
   DF: { tackle: 46, deep: 23, header: 14, open: 4, freekick: 4, sprint: 9 },
   GK: { gk_save: 42, gk_1v1: 20, gk_cross: 22, gk_reflex: 16 },
 };
@@ -16,6 +16,7 @@ const MOMENT_TITLES = {
   dribble: '💨 Çalım Fırsatı',
   tackle: '🛡️ Rakip Atakta!',
   header: '🤾 Korner - Hava Topu',
+  corner: '🚩 Korner Vuruşu',
   sprint: 'Kontra Atak!',
   onetwo: 'Verkaç Fırsatı',
   gk_save: '🧤 Şut Geliyor!',
@@ -35,6 +36,7 @@ const MOMENT_DESC = {
   dribble: 'Rakip üstüne geliyor! Bir tarafa hamle yaptığı an topu ters tarafa çek (ekranın sol/sağına dokun ya da kaydır).',
   tackle: 'Rakip forvet topla geliyor. Halka yeşile girince dokun; sarı bölge faul demek.',
   header: 'Korner! Top kafana gelirken kalede vurmak istediğin yere dokun: zamanlama ve yön senin elinde.',
+  corner: 'Korneri sen kullanıyorsun! Önce BOŞ olan arkadaşına dokun, sonra çubuk yeşile gelince tekrar dokunarak ortayı gönder.',
   sprint: 'Top boşta! Hızlı hızlı dokunarak rakibinden önce topa ulaş.',
   onetwo: 'Kısa paslarla savunmayı aç: parlayan arkadaşına süre dolmadan dokun.',
   gk_save: 'Forvet şut çekiyor! Bakışını oku, top ayaktan çıkınca doğru köşeye uç (sol, orta ya da sağa dokun).',
@@ -703,6 +705,18 @@ const Match = {
           feed(`💥 <b>${M.min}'</b> Rakip ${U.esc(pname)}'i geçti ve tehlikeli bölgeye girdi!`);
           if (U.chance(0.28 + skill * 0.15)) { rate(-0.25); oppGoal(); } else feed(`😮‍💨 <b>${M.min}'</b> Neyse ki şut isabetsiz.`);
         }
+      } else if (type === 'corner') {
+        M.statsUsed.add('passing');
+        const viaGame = !M.instant;
+        const r = await playMini('corner', 'corner', 'pass', 0.05, { passing: st.passing });
+        const mate = U.pick(mateNames);
+        // oyunda başarı gol demek; otomatikte olasılıkla
+        if (r === 'success' && (viaGame && !autoUsed() ? true : U.chance(0.4))) {
+          M.assists++; M.keyPasses++; rate(0.75);
+          ownGoal(mate, pname, `${U.esc(pname)}'in kornerinde ${U.esc(mate)} kafayla ağları buldu! <i>(Asist)</i>`);
+        } else if (r === 'success' || r === 'partial') {
+          M.keyPasses++; rate(0.15); feed(`🚩 <b>${M.min}'</b> ${U.esc(pname)}'in ortasında ${U.esc(mate)} kafayı vurdu, kaleci son anda çıkardı.`);
+        } else { rate(-0.1); feed(`🚩 <b>${M.min}'</b> ${U.esc(pname)}'in kornerini rakip savunma uzaklaştırdı.`); }
       } else if (type === 'header') {
         M.statsUsed.add('heading');
         const viaGame = !M.instant;

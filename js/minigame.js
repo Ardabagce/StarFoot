@@ -2079,6 +2079,192 @@ Object.assign(MiniGame, {
     });
   },
 
+  // Korner vuruşu (geniş yayın açısı, perspektif): önce hedef bölgeyi seç (yakın direk / penaltı noktası / arka direk;
+  // biri boşta), sonra gücü zamanla. Top falsoyla havadan ceza sahasına gider, takım arkadaşın kafayı vurur.
+  // Dünya koordinatı (metre): x kale ortasından sağa +, y kale çizgisinden sahaya doğru +, h yükseklik.
+  corner(host, o) {
+    return new Promise((resolve) => {
+      const g = MiniGame._canvas(host, '<b>Önce boştaki arkadaşına dokun</b>, sonra çubuk yeşile gelince tekrar dokun · <kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> · <kbd>Boşluk</kbd>');
+      const { ctx } = g;
+      const pass = o.passing || 50;
+      // hedef bölgeler: 0 yakın direk, 1 penaltı noktası, 2 arka direk (korner sağ köşeden)
+      const Z = [{ x: 3.2, y: 5.8, n: 'YAKIN DİREK' }, { x: -0.5, y: 11.5, n: 'PENALTI NOKTASI' }, { x: -4.2, y: 6.4, n: 'ARKA DİREK' }];
+      const free = U.randi(0, 2);
+      const green = U.clamp(0.1 + pass / 700 - o.skill * 0.04, 0.07, 0.2);
+      const gc = U.rand(0.35, 0.75);
+      // ceza sahasındaki diğer oyuncular (sabit dizilim + hafif kıpırdanma)
+      const extraOwn = [{ x: 0.5, y: 15.2 }, { x: 8, y: 12.5 }, { x: -8.5, y: 11.8 }];
+      const extraDef = [{ x: 0.6, y: 3.6 }, { x: -1.9, y: 3.9 }, { x: 0.8, y: 9.2 }, { x: 6.6, y: 10.6 }, { x: 3.6, y: 0.6 }];
+      let phase = 'aim', t = 0, pt = 0, pick = null, q = null, ft = 0, out = null, done = false, raf = 0, last = performance.now(), msg = '', msgCol = '#fff';
+      const lookMe = Sprites.me(), lookDef = Sprites.look(29), lookGk = Sprites.look(3);
+      const looksO = [41, 57, 73, 88, 102, 117].map((k) => Sprites.look(k)), looksD = [12, 23, 35, 47, 61, 79, 95].map((k) => Sprites.look(k));
+      const finish = (res, text, col) => { done = true; msg = text; msgCol = col; setTimeout(() => { cleanup(); resolve({ result: res }); }, 1400); };
+      // perspektif: kale çizgisi üstte (uzak), saha aşağıda (yakın)
+      const cam = () => {
+        const { W, H } = g;
+        // gerçek izdüşüm: yüksek yayın (taktik) kamerası (y = 45 m, h = 70 m), kaleye bakar; hafif perspektif
+        const Yc = 45, Hc = 70, f = W * 0.75, cx = W * 0.37;
+        const hz = H * 0.28 - f * Hc / Yc; // kale çizgisi ekranın %28'inde
+        const P = (x, y, h = 0) => { const d = Math.max(3, Yc - y), k = f / d; return { x: cx + x * k, y: hz + (Hc - h) * k, k }; };
+        return { W, H, top: H * 0.28, ppm: 1, P };
+      };
+      const choose = (i) => { if (phase !== 'aim' || done) return; pick = i; phase = 'power'; pt = 0; };
+      const meter = () => (Math.sin(pt * (2.4 + o.skill * 1.6)) + 1) / 2;
+      const strike = () => {
+        if (phase !== 'power' || done) return;
+        const m = meter(), err = Math.abs(m - gc);
+        q = err < green / 2 ? 'perfect' : err < green * 1.4 ? 'good' : 'miss';
+        phase = 'flight'; ft = 0;
+        const isFree = pick === free;
+        if (q === 'miss') out = 'clear';
+        else {
+          const pg = (isFree ? (q === 'perfect' ? 0.72 : 0.42) : (q === 'perfect' ? 0.3 : 0.12)) * (1 - o.skill * 0.25);
+          out = U.chance(pg) ? 'goal' : U.chance(isFree ? 0.7 : 0.45) ? 'saved' : 'clear';
+        }
+      };
+      const tap = (x, y) => {
+        if (done) return;
+        if (phase === 'aim') {
+          const C = cam();
+          let best = -1, bd = 1e9;
+          Z.forEach((z, i) => { const a = C.P(z.x, z.y, 1); const d = Math.hypot(a.x - x, a.y - y); if (d < bd) { bd = d; best = i; } });
+          if (best >= 0 && bd < C.H * 0.16) choose(best);
+        } else if (phase === 'power') strike();
+      };
+      const line = (C, pts, w = 2) => { ctx.beginPath(); pts.forEach(([x, y], i) => { const a = C.P(x, y); if (i) ctx.lineTo(a.x, a.y); else ctx.moveTo(a.x, a.y); }); ctx.lineWidth = w * g.dpr; ctx.stroke(); };
+      const fig = (C, x, y, kit, look, extra = {}) => { const a = C.P(x, y); const fh = 1.85 * a.k * 2; Sprites.figure(ctx, a.x, a.y - (extra.jump || 0) * C.ppm * a.k, fh, Object.assign({ kit, look, t }, extra)); return { a, fh }; };
+      const draw = () => {
+        const C = cam(), { W, H, top, P } = C, dpr = g.dpr;
+        g.grass();
+        // tribün ve reklam panoları (kale çizgisinin arkası)
+        const bh = P(0, -2.2).k * 0.9;
+        const gl = P(-40, 0), gr = P(40, 0);
+        const sg = ctx.createLinearGradient(0, 0, 0, top);
+        sg.addColorStop(0, '#0b1224'); sg.addColorStop(1, '#1b2640');
+        ctx.fillStyle = sg; ctx.fillRect(0, 0, W, P(0, -2.2).y - bh);
+        for (let r = 0; r < 7; r++) for (let c2 = 0; c2 < 46; c2++) {
+          const x = (c2 + (r % 2) * 0.5) / 46 * W, y = (r + 0.5) / 7 * (P(0, -2.2).y - bh * 1.2);
+          ctx.fillStyle = ['#c8102e', '#ffffff', '#7a8aa8', '#f2c94c', '#1e5bd8'][(r * 7 + c2 * 3) % 5];
+          ctx.globalAlpha = 0.35 + ((r + c2) % 3) * 0.15; ctx.fillRect(x, y + Math.sin(t * 3 + c2) * dpr, 3 * dpr, 4 * dpr);
+        }
+        ctx.globalAlpha = 1;
+        const ads = ['STARFOOT', 'SF SPORT', 'STARFEED', 'VİTRİN', 'STARFOOT', 'SF SPORT'];
+        for (let i = 0; i < 6; i++) {
+          const a = P(-44 + i * 16, -2.2), b = P(-28 + i * 16, -2.2);
+          ctx.fillStyle = i % 2 ? '#0d1f4f' : '#c8102e'; ctx.fillRect(a.x, a.y - bh, b.x - a.x, bh);
+          ctx.fillStyle = '#fff'; ctx.font = `italic 800 ${Math.round(bh * 0.62)}px "Saira Condensed", sans-serif`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+          ctx.fillText(ads[i], (a.x + b.x) / 2, a.y - bh / 2);
+        }
+        ctx.textBaseline = 'alphabetic';
+        // saha çizgileri: kale çizgisi, ceza sahası (40,3 x 16,5), kale alanı (18,3 x 5,5), penaltı noktası ve yay, korner yayı
+        ctx.strokeStyle = 'rgba(255,255,255,0.88)';
+        line(C, [[-40, 0], [40, 0]]);
+        line(C, [[-20.15, 0], [-20.15, 16.5], [20.15, 16.5], [20.15, 0]]);
+        line(C, [[-9.15, 0], [-9.15, 5.5], [9.15, 5.5], [9.15, 0]]);
+        { const ps = P(0, 11); ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.ellipse(ps.x, ps.y, 2.5 * dpr, 1.4 * dpr, 0, 0, Math.PI * 2); ctx.fill(); }
+        { const arc = []; for (let a2 = -53; a2 <= 53; a2 += 6) { const r = 9.15, x = Math.sin(a2 * Math.PI / 180) * r, y = 11 + Math.cos(a2 * Math.PI / 180) * r; if (y >= 16.5) arc.push([x, y]); } if (arc.length > 1) line(C, arc); }
+        { const arc = []; for (let a2 = 90; a2 <= 180; a2 += 10) arc.push([34 + Math.cos(a2 * Math.PI / 180), Math.sin(a2 * Math.PI / 180)]); line(C, arc); }
+        line(C, [[34, 0], [34, 32]]);
+        // kale (7,32 x 2,44 m) ve file
+        const g0 = P(-3.66, 0), g1 = P(3.66, 0), gh = 2.44 * C.ppm * g0.k, dep = 1.6 * C.ppm * g0.k;
+        ctx.fillStyle = 'rgba(255,255,255,0.10)'; ctx.fillRect(g0.x + dep * 0.25, g0.y - gh - dep * 0.35, g1.x - g0.x - dep * 0.5, gh + dep * 0.35);
+        ctx.strokeStyle = 'rgba(255,255,255,0.3)'; ctx.lineWidth = dpr;
+        for (let i = 0; i <= 16; i++) { const x = g0.x + (g1.x - g0.x) * i / 16; ctx.beginPath(); ctx.moveTo(x, g0.y - gh); ctx.lineTo(x, g0.y); ctx.stroke(); }
+        for (let j = 0; j <= 5; j++) { const y = g0.y - gh + gh * j / 5; ctx.beginPath(); ctx.moveTo(g0.x, y); ctx.lineTo(g1.x, y); ctx.stroke(); }
+        const pw = Math.max(3, 0.12 * C.ppm * g0.k * 1.4);
+        ctx.fillStyle = '#eef1f6'; ctx.fillRect(g0.x - pw / 2, g0.y - gh, pw, gh); ctx.fillRect(g1.x - pw / 2, g1.y - gh, pw, gh); ctx.fillRect(g0.x - pw / 2, g0.y - gh - pw / 2, g1.x - g0.x + pw, pw);
+        // korner bayrağı
+        const cf = P(34, 0), ch = 1.5 * C.ppm * cf.k;
+        ctx.strokeStyle = '#e8e8e8'; ctx.lineWidth = 2 * dpr; ctx.beginPath(); ctx.moveTo(cf.x, cf.y); ctx.lineTo(cf.x, cf.y - ch); ctx.stroke();
+        ctx.fillStyle = '#ffcf3f'; ctx.beginPath(); ctx.moveTo(cf.x, cf.y - ch); ctx.lineTo(cf.x - ch * 0.45, cf.y - ch * 0.82); ctx.lineTo(cf.x, cf.y - ch * 0.66); ctx.fill();
+        // çizim sırası: uzaktan yakına (y küçükten büyüğe)
+        const ents = [];
+        const gkx = phase === 'flight' && pick != null ? Z[pick].x * 0.35 * U.clamp(ft, 0, 1) : Math.sin(t * 1.8) * 0.4;
+        ents.push({ y: 0.9, f: () => fig(C, gkx, 0.9, o.kits.gk, lookGk, { facing: 'down', gloves: true, number: 1 }) });
+        extraDef.forEach((d, i) => ents.push({ y: d.y, f: () => fig(C, d.x + Math.sin(t * 1.3 + i) * 0.15, d.y, o.kits.opp, looksD[i], { facing: 'up', number: 3 + i }) }));
+        extraOwn.forEach((d, i) => ents.push({ y: d.y, f: () => fig(C, d.x + Math.sin(t * 1.1 + i) * 0.2, d.y, o.kits.own, looksO[3 + i], { facing: 'up', number: 14 + i }) }));
+        Z.forEach((z, i) => {
+          const isFree = i === free, sel = pick === i;
+          if (!isFree) ents.push({ y: z.y + 0.6, f: () => fig(C, z.x + 0.7, z.y + 0.6, o.kits.opp, lookDef, { facing: 'up', number: 5 + i * 2, run: t * 2, speed: 0.12 }) });
+          ents.push({ y: z.y, f: () => {
+            const jump = phase === 'flight' && sel && ft > 0.95 ? Math.sin(U.clamp((ft - 0.95) / 0.5, 0, 1) * Math.PI) * 0.7 : 0;
+            const r = fig(C, z.x, z.y, o.kits.own, looksO[i], { facing: 'up', number: 7 + i * 2, jump });
+            if (phase === 'aim') {
+              ctx.save(); ctx.globalAlpha = 0.55 + 0.3 * Math.sin(t * 5 + i);
+              ctx.strokeStyle = isFree ? '#7cf0a0' : '#ff8a8a'; ctx.lineWidth = 3 * dpr; ctx.setLineDash([6 * dpr, 5 * dpr]);
+              ctx.beginPath(); ctx.ellipse(r.a.x, r.a.y, r.fh * 0.55, r.fh * 0.18, 0, 0, Math.PI * 2); ctx.stroke(); ctx.restore();
+            }
+            const lab = `${i + 1} · ${isFree ? 'BOŞ' : 'MARKAJDA'}`;
+            ctx.font = `800 ${Math.round(10.5 * dpr)}px "Barlow Semi Condensed", sans-serif`; ctx.textAlign = 'center';
+            const tw = ctx.measureText(lab).width + 12 * dpr, ly = r.a.y - r.fh * 1.12 - (i === 0 ? 14 * dpr : 0), lx = r.a.x + (i === 0 ? tw * 0.35 : i === 2 ? -tw * 0.35 : 0);
+            ctx.fillStyle = isFree ? 'rgba(20,140,70,0.92)' : 'rgba(170,30,40,0.88)';
+            ctx.beginPath(); if (ctx.roundRect) ctx.roundRect(lx - tw / 2, ly - 9 * dpr, tw, 16 * dpr, 8 * dpr); else ctx.rect(lx - tw / 2, ly - 9 * dpr, tw, 16 * dpr); ctx.fill();
+            ctx.fillStyle = '#fff'; ctx.fillText(lab, lx, ly + 3 * dpr);
+          } });
+        });
+        // sen: korner bayrağının yanında
+        const kick = phase === 'flight' ? U.clamp(ft / 0.25, 0, 1) : 0;
+        ents.push({ y: 0.7, f: () => fig(C, 34.2, 0.7, o.kits.own, lookMe, { facing: 'left', number: o.number, label: 'SEN', labelScale: dpr, labelColor: 'rgba(214,40,57,0.92)', kick }) });
+        ents.sort((a, b) => a.y - b.y).forEach((e) => e.f());
+        // top: köşeden falsolu yay (yükseklik metre cinsinden)
+        let bx = 33.6, by = 0.5, bh2 = 0.11;
+        if (phase === 'flight' && pick != null) {
+          const z = Z[pick], k = U.clamp((ft - 0.2) / 1.0, 0, 1);
+          const tx = q === 'miss' ? z.x + 6 : z.x, ty = q === 'miss' ? z.y + 7 : z.y;
+          if (k < 1) {
+            // falso: düz çizgiden kaleye doğru bükülür
+            const lx = bx + (tx - bx) * k, ly = by + (ty - by) * k;
+            const curl = Math.sin(k * Math.PI) * (q === 'miss' ? 1 : 3.2);
+            bx = lx; by = ly - curl; bh2 = Math.sin(k * Math.PI) * 7.5 + k * 2.1;
+          } else {
+            const k2 = U.clamp((ft - 1.2) / 0.5, 0, 1);
+            const ex = out === 'goal' ? U.clamp(z.x * 0.8, -3.2, 3.2) : out === 'saved' ? gkx + 0.6 : tx + 8, ey = out === 'clear' ? ty + 14 : 0.2;
+            bx = tx + (ex - tx) * k2; by = ty + (ey - ty) * k2; bh2 = out === 'clear' ? 2.1 + Math.sin(k2 * Math.PI) * 5 : 2.1 + (1.4 - 2.1) * k2;
+            if (k2 >= 1 && !done) {
+              if (out === 'goal') finish('success', 'GOL! ASİST SENDEN', '#7cf0a0');
+              else if (out === 'saved') finish('partial', 'KALECİ KURTARDI', '#ffcf3f');
+              else finish('fail', q === 'miss' ? 'KÖTÜ ORTA, SAVUNMA UZAKLAŞTIRDI' : 'SAVUNMA UZAKLAŞTIRDI', '#ff6b6b');
+            }
+          }
+        }
+        const sh = P(bx, by), ba = P(bx, by, bh2);
+        ctx.fillStyle = 'rgba(0,0,0,0.28)'; ctx.beginPath(); ctx.ellipse(sh.x, sh.y, 0.32 * sh.k, 0.12 * sh.k, 0, 0, Math.PI * 2); ctx.fill();
+        Sprites.ball(ctx, ba.x, ba.y, Math.max(4.5 * dpr, 0.34 * ba.k), t * 6);
+        // güç çubuğu
+        if (phase === 'power') {
+          const bw = W * 0.72, bhh = 16 * dpr, x0 = W / 2 - bw / 2, y0 = H * 0.9;
+          ctx.fillStyle = 'rgba(5,11,29,0.75)'; ctx.fillRect(x0 - 3 * dpr, y0 - 3 * dpr, bw + 6 * dpr, bhh + 6 * dpr);
+          ctx.fillStyle = 'rgba(255,255,255,0.18)'; ctx.fillRect(x0, y0, bw, bhh);
+          ctx.fillStyle = 'rgba(255,207,63,0.75)'; ctx.fillRect(x0 + bw * (gc - green * 1.4), y0, bw * green * 2.8, bhh);
+          ctx.fillStyle = '#22c55e'; ctx.fillRect(x0 + bw * (gc - green / 2), y0, bw * green, bhh);
+          ctx.fillStyle = '#fff'; ctx.fillRect(x0 + bw * meter() - 2 * dpr, y0 - 6 * dpr, 4 * dpr, bhh + 12 * dpr);
+          g.text('YEŞİLDE DOKUN!', y0 - 14 * dpr, 20);
+        }
+        if (done) g.text(msg, H * 0.5, 30, msgCol);
+        else if (phase === 'aim') g.text(t < 1.2 ? 'KORNER!' : 'BOŞTAKİ ARKADAŞINA DOKUN', H * 0.92, t < 1.2 ? 34 : 22);
+      };
+      const loop = (now) => {
+        const dt = Math.min(0.05, (now - last) / 1000);
+        last = now; t += dt;
+        if (phase === 'power') pt += dt;
+        if (phase === 'flight') ft += dt;
+        if (phase === 'aim' && t > 7 && !done) choose(U.randi(0, 2));
+        if (phase === 'power' && pt > 5 && !done) { q = 'miss'; phase = 'flight'; ft = 0; out = 'clear'; }
+        draw();
+        raf = requestAnimationFrame(loop);
+      };
+      const key = (e) => {
+        if (['Digit1', 'Digit2', 'Digit3'].includes(e.code)) { e.preventDefault(); choose(+e.code.slice(-1) - 1); }
+        else if (e.code === 'Space' || e.code === 'Enter') { e.preventDefault(); if (phase === 'aim') choose(free); else strike(); }
+      };
+      const cleanup = () => { cancelAnimationFrame(raf); document.removeEventListener('keydown', key); window.removeEventListener('resize', g.layout); };
+      g.box.addEventListener('pointerdown', (e) => { e.preventDefault(); const r = g.cv.getBoundingClientRect(); tap((e.clientX - r.left) * g.dpr, (e.clientY - r.top) * g.dpr); });
+      document.addEventListener('keydown', key);
+      raf = requestAnimationFrame(loop);
+      MiniGame._abort = () => { if (done) return; done = true; cleanup(); resolve({ result: 'auto' }); };
+    });
+  },
+
   // Tempo koşusu (dayanıklılık): basılı tutunca hızlanırsın; hız ibresini hareket eden yeşil bantta tut
   tempo(host, o) {
     return new Promise((resolve) => {
