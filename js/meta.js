@@ -417,6 +417,22 @@ const Ballon = {
   // Puan = gol×3 + asist×2 + lig seviyesi (0-5) + takım gücü (0-3) [+ maç reytingi, yalnız sen ve rakip için ölçülür]
   // Lig/takım etkisi bir golden azdır: daha çok gol atan neredeyse her zaman öndedir
   extra(c, L) { return U.clamp((L ? L.fame : 1) * 3, 0, 5) + U.clamp((c.rating - 65) * 0.15, 0, 3); },
+  // takım başarısı: lig sırası (şampiyon +7, 2. +3,5, 3. +2), kıta kupası şampiyonu +9 (yarı finale kalan +2,5), ulusal kupa +3
+  team(id) {
+    const s = Game.state, c = s.world.clubs[id];
+    if (!c) return 0;
+    let v = 0;
+    try {
+      const lg = s.world.leagues[c.league];
+      if (lg && lg.table) { const t = World.sortedTable(lg), pos = t.findIndex((r) => r.id === id) + 1, row = t[pos - 1] || {}, pl = row.p != null ? row.p : (row.w || 0) + (row.d || 0) + (row.l || 0); if (pl >= 10) v += pos === 1 ? 7 : pos === 2 ? 3.5 : pos === 3 ? 2 : 0; }
+      Object.values(s.cups || {}).forEach((cup) => {
+        if (!cup || cup.youth) return;
+        if (cup.winner === id) v += cup.dom ? 3 : 9;
+        else if (!cup.winner && !cup.dom && cup.alive && cup.alive.length <= 4 && cup.alive.includes(id)) v += 2.5;
+      });
+    } catch (e) { /* yok */ }
+    return v;
+  },
   ranking() {
     const s = Game.state;
     if (!s || Game.inStreet()) return [];
@@ -430,19 +446,22 @@ const Ballon = {
       World.topScorers(lg, 6).forEach((x) => {
         const c = s.world.clubs[x.club];
         if (!c || x.name === Player.fullName(s.player)) return;
-        const pts = x.g * 3 + (as[x.name + '|' + x.club] || 0) * 2 + Ballon.extra(c, L);
+        const pts = x.g * 3 + (as[x.name + '|' + x.club] || 0) * 2 + Ballon.extra(c, L) + Ballon.team(x.club);
         list.push({ n: x.name, club: x.club, g: x.g, a: as[x.name + '|' + x.club] || 0, pts });
       });
     });
     const p = s.player, ss = s.season.stats, L = LEAGUES.find((l) => l.id === Game.club().league) || { fame: 1 };
     if (!Game.isYouth()) {
       const avg = ss.apps ? ss.ratingSum / ss.apps : 6;
-      list.push({ n: Player.fullName(p), club: s.clubId, g: ss.goals, a: ss.assists, me: true, pts: ss.goals * 3 + ss.assists * 2 + Ballon.extra(Game.club(), L) + U.clamp((avg - 7) * 4, -3, 4) + (p.position === 'DF' ? ss.apps * 0.4 : 0) });
+      // reyting yüksek ve yeterince maç oynamış olmak şart: az maçla ya da ortalama reytingle kazanmak zor
+      let pts = ss.goals * 3 + ss.assists * 2 + Ballon.extra(Game.club(), L) + Ballon.team(s.clubId) + U.clamp((avg - 7.4) * 4, -4, 3) + (p.position === 'DF' ? ss.apps * 0.4 : 0);
+      if (ss.apps < 15) pts *= 0.7;
+      list.push({ n: Player.fullName(p), club: s.clubId, g: ss.goals, a: ss.assists, me: true, pts });
     }
     const r = s.rival;
     if (r && r.age >= 17) {
       const c = s.world.clubs[r.club], RL = c && LEAGUES.find((l) => l.id === c.league);
-      if (c) list.push({ n: r.name, club: r.club, g: r.season.g, a: r.season.a, rival: true, pts: r.season.g * 3 + r.season.a * 2 + Ballon.extra(c, RL) });
+      if (c) list.push({ n: r.name, club: r.club, g: r.season.g, a: r.season.a, rival: true, pts: r.season.g * 3 + r.season.a * 2 + Ballon.extra(c, RL) + Ballon.team(r.club) });
     }
     return list.sort((a, b) => b.pts - a.pts || b.g - a.g).slice(0, 30);
   },
@@ -488,6 +507,51 @@ const Ballon = {
         <ol class="bal-top">${top.slice(0, 3).map((x) => `<li class="${x.me ? 'me' : ''}">${U.esc(x.n)}<small>${U.esc((s.world.clubs[x.club] || {}).name || '')}</small></li>`).join('')}</ol>
         <p>${mi < 3 ? `Kürsüdesin: <b>${mi + 1}.</b> oldun!` : `Bu yıl <b>${mi + 1}.</b> oldun. Hedef zirve!`}</p>`, [{ t: 'Devam', fn: res }]));
     }
+  },
+};
+
+// ---------- Avrupa Altın Ayakkabı: Avrupa liglerinin gol kralı (lig katsayılı puan) ----------
+// Puan = gol × katsayı: en güçlü 5 lig 2, diğer Avrupa birinci ligleri 1,5, ikinci ligler 1
+const BOOT_EU = ['TR', 'ENG', 'ESP', 'GER', 'ITA', 'FRA', 'NED', 'POR', 'BEL', 'SCO', 'AUT', 'SUI', 'GRE', 'DEN', 'CRO', 'CZE', 'POL', 'UKR'];
+const Boot = {
+  coef(L) { return L.level > 1 ? 1 : ['ENG', 'ESP', 'GER', 'ITA', 'FRA'].includes(L.id) ? 2 : 1.5; },
+  ranking() {
+    const s = Game.state;
+    if (!s || !s.world) return [];
+    if (s.bootFinal) return s.bootFinal;
+    const out = [], me = Player.fullName(s.player);
+    LEAGUES.forEach((L) => {
+      if (!BOOT_EU.includes(LEAGUE_CC[L.id])) return;
+      const lg = s.world.leagues[L.id];
+      if (!lg) return;
+      const k = Boot.coef(L);
+      World.topScorers(lg, 4).forEach((x) => { if (x.name !== me) out.push({ n: x.name, club: x.club, g: x.g, k, pts: x.g * k }); });
+    });
+    if (!Game.isYouth() && !Game.inStreet()) {
+      const L = LEAGUES.find((l) => l.id === Game.club().league);
+      if (L && BOOT_EU.includes(LEAGUE_CC[L.id])) { const g = s.season.stats.goals || 0, k = Boot.coef(L); out.push({ n: me, club: s.clubId, g, k, pts: g * k, me: true }); }
+    }
+    return out.sort((a, b) => b.pts - a.pts || b.g - a.g).slice(0, 10);
+  },
+  async ceremony() {
+    const s = Game.state, p = s.player;
+    if (!s || Game.isYouth() || Game.inStreet()) return;
+    const top = Boot.ranking();
+    if (!top.length || !top[0].g) return;
+    const win = top[0], mi = top.findIndex((x) => x.me);
+    s.bootHist = s.bootHist || [];
+    s.bootHist.unshift({ y: s.season.year, w: win.n, g: win.g, me: mi + 1 });
+    if (win.me) {
+      p.trophies.push(`${s.season.year}: 👟 Avrupa Altın Ayakkabı`);
+      p.boots = (p.boots || 0) + 1;
+      Player.addFame(p, 5);
+      Social.post('trophy', `Avrupa Altın Ayakkabı benim! ${win.g} gol. Bu ödül pas veren her takım arkadaşımın.`, 4);
+      Game.news(`👟 ${s.season.year} Avrupa Altın Ayakkabı ${Player.fullName(p)}'in! ${win.g} golle Avrupa'nın gol kralı oldun.`, 'good');
+      const c = Game.club();
+      if (typeof Celebrate !== 'undefined') await Celebrate.trophy({ big: 'ALTIN AYAKKABI!', title: `${s.season.year} Avrupa Altın Ayakkabı`, sub: `${win.g} gol · Avrupa'nın gol kralı`, c1: c.c1, c2: c.c2, short: c.short, kit: Sprites.kit(c, false), number: p.shirt, year: Player.fullName(p) });
+      return;
+    }
+    Game.news(`👟 ${s.season.year} Avrupa Altın Ayakkabı: ${win.n} (${win.g} gol). ${mi >= 0 ? `Sen ${mi + 1}. oldun.` : ''}`, 'world');
   },
 };
 

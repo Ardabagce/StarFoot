@@ -59,6 +59,7 @@ const ACHIEVEMENTS = (() => {
     { id: 'young', cat: 'trophy', tier: 'silver', name: 'Yılın Genci', desc: 'Yılın genç oyuncusu seçildin', check: (p) => tr(/Genç Oyuncu/)(p) >= 1 },
     { id: 'ybest', cat: 'trophy', tier: 'bronze', name: 'Altyapı Yıldızı', desc: 'Altyapı liginin en iyi oyuncusu oldun', check: (p) => tr(/En İyi Oyuncu/)(p) >= 1 },
     { id: 'ballon', cat: 'trophy', tier: 'gold', name: 'Altın Yıldız', desc: 'Yılın futbolcusu seçildin', check: (p) => tr(/Altın Yıldız/)(p) >= 1 },
+    { id: 'goldboot', cat: 'trophy', tier: 'gold', name: 'Avrupa Altın Ayakkabı', desc: 'Avrupa liglerinin gol kralı oldun', check: (p) => tr(/Altın Ayakkabı/)(p) >= 1 },
     { id: 'ballon3', cat: 'trophy', tier: 'gold', name: 'Efsane', desc: '3 kez Altın Yıldız kazandın', check: (p) => tr(/Altın Yıldız/)(p) >= 3 },
   );
   ladder('intl', 'cap', [1, 10, 25, 50, 100], (v) => (v === 1 ? 'Milli Forma' : v === 50 ? 'Milli Takım Efsanesi' : `${v} Milli Maç`), (v) => (v === 1 ? 'Milli takımda forma giydin' : `${v} milli maça çıktın`), (p) => p.intl.caps, { 1: 'cap1', 50: 'cap50' });
@@ -106,7 +107,7 @@ const Ach = {
 const Trophy = {
   kind(text) {
     if (/Altın Yıldız/.test(text)) return 'ball';
-    if (/Gol Kralı|Asist Kralı/.test(text)) return 'boot';
+    if (/Gol Kralı|Asist Kralı|Altın Ayakkabı/.test(text)) return 'boot';
     if (/Şampiyon/.test(text)) return 'cup';
     if (/Genç/.test(text)) return 'young';
     return 'star';
@@ -619,8 +620,10 @@ const Social = {
     const tgt = Social.target(p);
     // ünün altındaysan hızla yetişir; üstündeysen çok yavaş erir (maç kazanımları kalıcı olsun)
     const f = so.followers;
-    const drift = f < tgt ? (tgt - f) * 0.08 : -(f - tgt) * 0.05;
-    so.followers = U.clamp(Math.round(f + drift + f * U.rand(-0.002, 0.003)), 10, Social.cap(p));
+    let drift = f < tgt ? (tgt - f) * 0.08 : -(f - tgt) * 0.05;
+    // iyi oynanan haftada ilgi erimez (oyuncu iyi maçtan sonra takipçi kaybı görmesin)
+    if (so.good) { drift = Math.max(0, drift); so.good = false; }
+    so.followers = U.clamp(Math.round(f + drift + f * U.rand(drift >= 0 ? 0 : -0.002, 0.003)), 10, Social.cap(p));
   },
   post(kind, text, boost = 1, opts = {}) {
     const p = Game.p, so = Social.ensure(p), s = Game.state;

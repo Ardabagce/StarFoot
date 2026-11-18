@@ -695,6 +695,7 @@ const Game = {
     const before = { coach: p.rel.coach, team: p.rel.team, fans: p.rel.fans, fol: so0.followers, fame: p.fame, morale: p.morale, money: p.money };
     let matchBonus = 0;
     const why = [];
+    let folWhy = '';
     if (sum.played) {
       if (comp === 'intl' && ctx.intlCat) {
         p.intlY = p.intlY || {};
@@ -750,8 +751,11 @@ const Game = {
       else if (sum.yellow) why.push('Sarı kart');
       // takipçi: maçtaki performans sosyal medyaya yansır
       const perf = (youth ? 0.002 : 0.004) + sum.goals * 0.012 + sum.assists * 0.005 + (sum.motm ? 0.018 : 0) + (r >= 8 ? 0.01 : r < 6 ? -0.006 : 0);
-      const folGain = Math.round(so0.followers * perf * (perf > 0 ? Social.room(p) : 1));
+      // iyi maç her zaman takipçi getirir (tavana yakınken de az da olsa); o hafta ilgi kaybı (erime) uygulanmaz
+      const folGain = Math.round(so0.followers * perf * (perf > 0 ? Math.max(0.15, Social.room(p)) : 1));
       so0.followers = U.clamp(so0.followers + folGain, 10, Social.cap(p));
+      so0.good = perf > 0.005;
+      folWhy = sum.motm ? 'Maçın adamı seçildin, herkes seni konuşuyor' : sum.goals >= 2 ? `${sum.goals} golün sosyal medyada patladı` : sum.goals ? 'Golün paylaşıldı, yeni takipçiler geldi' : r >= 8 ? 'Yüksek reytingin dikkat çekti' : sum.assists ? 'Asistin öne çıktı' : r < 6 ? 'Zayıf maç: bazı takipçiler ilgisini kaybetti' : sum.red ? 'Kırmızı kart tepki çekti' : 'Sakin bir maç, takipçi değişimi küçük';
       Loot.roll(comp === 'intl' ? null : r);
       Gift.roll(comp === 'intl' ? null : r);
       const fameGain = (sum.goals * 0.45 + sum.assists * 0.25 + (r >= 8 ? 0.5 : 0) + (sum.motm ? 0.5 : 0)) * fameMult;
@@ -819,6 +823,7 @@ const Game = {
       fol0: before.fol,
       d: { coach: p.rel.coach - before.coach, team: p.rel.team - before.team, fans: p.rel.fans - before.fans, fol: so1.followers - before.fol, fame: p.fame - before.fame, morale: p.morale - before.morale, money: p.money - before.money },
       why,
+      folWhy: sum.played ? folWhy : '',
     };
     if (comp === 'intl' && sum.played) Game.news(`🇹🇷 Milli formayla ${p.intl.caps}. maçına çıktın!`, 'good');
   },
@@ -866,7 +871,7 @@ const Game = {
     if (!s.pendingEvent && U.chance(0.2)) Events.roll();
     Social.week();
     // maç raporundaki takipçi farkı, haftalık değişim dahil gerçek farkı göstersin
-    if (s.lastReport && s.lastReport.fol0 != null && !s.lastReport.folDone) { s.lastReport.d.fol = Social.ensure(p).followers - s.lastReport.fol0; s.lastReport.folDone = true; }
+    if (s.lastReport && s.lastReport.fol0 != null && !s.lastReport.folDone) { s.lastReport.d.fol = Social.ensure(p).followers - s.lastReport.fol0; s.lastReport.folDone = true; if (s.lastReport.d.fol < 0 && s.lastReport.folWhy && !/Zayıf|Kırmızı/.test(s.lastReport.folWhy)) s.lastReport.folWhy = 'Takipçin ününün üstünde: ilgi zamanla dengeleniyor. Gol ve maçın adamı ödülleri yeniden artırır'; }
     if (!intl && U.chance(0.7)) WorldNews.roll();
     if (!intl && !Game.inStreet()) WorldNews.starStory();
     Ach.check();
@@ -1130,6 +1135,7 @@ const Game = {
     const prevLeague = Game.club().league;
     // Altın Yıldız sıralaması lig istatistikleri sıfırlanmadan önce dondurulur
     if (typeof Ballon !== 'undefined') { s.ballonFinal = null; s.ballonFinal = Ballon.ranking(); }
+    if (typeof Boot !== 'undefined') { s.bootFinal = null; s.bootFinal = Boot.ranking(); }
     const rel = World.endSeason(s.world, s.season.year + 1);
     // dönem yıldızları: yaşlanma, emeklilik, yeni yetenekler, transferler
     const lnews = Legends.season(s.world, s.season.year + 1);
@@ -1186,13 +1192,13 @@ const Game = {
     Game.save();
     // lig şampiyonluğunda önce kupa kaldırma töreni
     // sezon sonu sırası: şampiyonluk töreni → Altın Yıldız → ezeli rakip özeti → sezon sonu ekranı
-    const after = () => (typeof Ballon !== 'undefined' ? Ballon.ceremony() : Promise.resolve()).catch(() => {}).then(() => (typeof Scenario !== 'undefined' ? Scenario.result() : null)).catch(() => {}).then(() => { if (typeof Rival !== 'undefined') Rival.season(); Game.save(); }).then(() => (typeof School !== 'undefined' ? School.yearEnd() : null)).catch(() => {}).then(() => (typeof LifeX !== 'undefined' ? LifeX.uniYear() : null)).catch(() => {}).then(() => { Game.save(); SeasonEnd.show(); });
+    const after = () => (typeof Ballon !== 'undefined' ? Ballon.ceremony() : Promise.resolve()).catch(() => {}).then(() => (typeof Boot !== 'undefined' ? Boot.ceremony() : null)).catch(() => {}).then(() => (typeof Scenario !== 'undefined' ? Scenario.result() : null)).catch(() => {}).then(() => { if (typeof Rival !== 'undefined') Rival.season(); Game.save(); }).then(() => (typeof School !== 'undefined' ? School.yearEnd() : null)).catch(() => {}).then(() => (typeof LifeX !== 'undefined' ? LifeX.uniYear() : null)).catch(() => {}).then(() => { Game.save(); SeasonEnd.show(); });
     if (pos === 1 && typeof Celebrate !== 'undefined') Celebrate.champion(`${compName} Şampiyonu`, Game.teamName()).then(after);
     else after();
   },
 
   startNewSeason(choice) {
-    if (Game.state) Game.state.ballonFinal = null;
+    if (Game.state) { Game.state.ballonFinal = null; Game.state.bootFinal = null; }
     const s = Game.state, p = s.player;
     const se = s.seasonEnd;
     let welcome = null;
@@ -1371,6 +1377,7 @@ const UI = {
         ${r.rating != null ? `<span class="rp-rt ${r.rating >= 7.5 ? 'hi' : r.rating < 6 ? 'lo' : 'mid'}"><b>${r.rating.toFixed(1)}</b>${r.motm ? '<i>MVP</i>' : ''}</span>` : ''}
       </div>
       ${chips ? `<div class="rpm-chips">${chips}</div>` : ''}
+      ${r.folWhy && Math.abs(r.d.fol) > 0.05 ? `<p class="rpm-fol ${r.d.fol > 0 ? 'up' : 'down'}"><b>${r.d.fol > 0 ? '▲' : '▼'} ${Social.fmt(Math.abs(Math.round(r.d.fol)))} takipçi</b> <span>${U.esc(r.folWhy)}</span></p>` : ''}
       ${r.bonus > 0 && !r.bonusX2 ? `<button class="btn btn-play rpm-x2" data-bonusx2>${Icon('play')} ${typeof Premium !== 'undefined' ? Premium.lbl() : 'Reklam izle'} · Primi 2 katına çıkar <b>+${U.money(r.bonus)}</b></button>` : ''}
     </section>`;
   },

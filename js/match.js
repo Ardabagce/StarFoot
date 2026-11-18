@@ -148,6 +148,8 @@ const Match = {
       feed: [], speed: 1, instant: typeof FF !== 'undefined' && FF.on, statsUsed: new Set(), shots: 0, keyPasses: 0, tackles: 0,
       ownScorers: [], oppScorers: [], teamBoost: 0, energySave: 0, gt: {}, saves: 0, penSaves: 0,
       energy: p.energy, e0: p.energy, tiredWarn: false,
+      // maç sonu istatistikleri: takım şutları [şut, isabetli], topla oynama toplamı, gol dakikaları
+      tst: { o: [0, 0], x: [0, 0] }, poss: 0, possN: 0, ev: [],
     };
     const drain = (v) => { M.energy = Math.max(0, M.energy - v * EF().drain); cond = calcCond(); };
     const isHome = ctx.side === 'home';
@@ -289,6 +291,7 @@ const Match = {
     const ownGoal = (scorerName, assistName, txt) => {
       addOwn();
       M.ownScorers.push(scorerName);
+      M.tst.o[0]++; M.tst.o[1]++; M.ev.push({ m: M.min, o: 1, n: scorerName });
       if (scorerName === pname) (M.gmin = M.gmin || []).push(M.min);
       if (!M.instant && typeof Sfx !== 'undefined') { Sfx.play(street ? 'cheer' : 'roar'); Sfx.buzz('heavy'); }
       feed(`⚽ <b>${M.min}'</b> GOL! ${txt || `${U.esc(scorerName)} golü attı.`} <span class="sc">${M.hs}-${M.as}</span>`, 'goal own');
@@ -298,6 +301,7 @@ const Match = {
       const sc = pickOpp();
       addOpp();
       M.oppScorers.push(sc.n);
+      M.tst.x[0]++; M.tst.x[1]++; M.ev.push({ m: M.min, o: 0, n: sc.n });
       if (!M.instant && typeof Sfx !== 'undefined') { Sfx.play('groan'); Sfx.buzz('warning'); }
       feed(`🥅 <b>${M.min}'</b> Gol ${U.esc(opp.name)}'dan. ${txt || `Golü ${U.esc(sc.n)} attı.`} <span class="sc">${M.hs}-${M.as}</span>`, 'goal opp');
       if (radar) radar.goal(oppSide);
@@ -748,6 +752,12 @@ const Match = {
       if (radar) { radar.speed = M.speed; radar.minute(homeR(), awayR(), onPitch()); if (!M.instant && U.chance(0.05)) radar.chance(U.chance(0.5 + (homeR() - awayR()) / 80) ? 'H' : 'A'); }
       // arka plan golleri
       const [lh, la] = World.lambdas(homeR(), awayR());
+      // istatistik: gol olmayan şutlar (gol başına ~8 şut, üçte biri isabetli) ve topla oynama
+      { const lo = isHome ? lh : la, lx = isHome ? la : lh;
+        if (U.chance(Math.min(0.45, lo / 90 * 4.5))) { M.tst.o[0]++; if (U.chance(0.3)) M.tst.o[1]++; }
+        if (U.chance(Math.min(0.45, lx / 90 * 4.5))) { M.tst.x[0]++; if (U.chance(0.3)) M.tst.x[1]++; }
+        const d = (isHome ? homeR() - awayR() : awayR() - homeR());
+        M.poss += U.clamp(50 + d * 0.9 + U.rand(-6, 6), 28, 72); M.possN++; }
       const gk = p.position === 'GK';
       const ownL = (isHome ? lh : la) / 90 * (onPitch() && !gk ? 0.72 : 1);
       // kaleci sahadaysa: rakip gollerinin bir kısmı anlarda oynanır, gücüne göre bazılarını kendiliğinden kurtarır
@@ -813,9 +823,24 @@ const Match = {
       const summary = {
         gf, ga, res, hs: M.hs, as: M.as, played, energySave: 0, energyStart: M.e0, energyEnd: M.energy, moments: M.momPlayed || 0, effort: EF().l, minutes: Math.max(0, minutes), rating: played ? rating : null,
         goals: M.goals, assists: M.assists, yellow: M.yellow, red: M.red, motm, lateGoal: !!M.lateGoal, dribbles: M.dribbles || 0,
-        ownScorers: M.ownScorers, oppScorers: M.oppScorers, statsUsed: [...M.statsUsed], goalTypes: M.gt, goalMins: M.gmin || [], saves: M.saves, penSaves: M.penSaves, ga: isHome ? M.as : M.hs, shots: M.shots, keyPasses: M.keyPasses, tackles: M.tackles,
+        ownScorers: M.ownScorers, oppScorers: M.oppScorers, goalEv: M.ev.slice(), statsUsed: [...M.statsUsed], goalTypes: M.gt, goalMins: M.gmin || [], saves: M.saves, penSaves: M.penSaves, ga: isHome ? M.as : M.hs, shots: M.shots, keyPasses: M.keyPasses, tackles: M.tackles,
       };
       const resTxt = { W: 'GALİBİYET', D: 'BERABERLİK', L: 'MAĞLUBİYET' }[res];
+      // maç istatistikleri (ev sahibi solda)
+      const extra = Math.max(0, (M.shots || 0) - (M.goals || 0));
+      const oS = M.tst.o[0] + extra, oT = M.tst.o[1] + Math.round(extra * 0.4);
+      const xS = M.tst.x[0], xT = M.tst.x[1];
+      const op = M.possN ? Math.round(M.poss / M.possN) : 50;
+      const H = isHome ? { s: oS, t: oT, p: op } : { s: xS, t: xT, p: 100 - op }, A = isHome ? { s: xS, t: xT, p: 100 - op } : { s: oS, t: oT, p: op };
+      summary.teamStats = { home: H, away: A };
+      const bar = (l, a, b, pct) => { const t = (a + b) || 1, w = pct ? a : Math.round(a / t * 100); return `<div class="msx-r"><b>${a}${pct ? '%' : ''}</b><div class="msx-l"><span>${l}</span><div class="msx-b"><i style="width:${w}%"></i></div></div><b>${b}${pct ? '%' : ''}</b></div>`; };
+      const evH = M.ev.filter((e) => (e.o === 1) === isHome), evA = M.ev.filter((e) => (e.o === 1) !== isHome);
+      const gl = (list) => list.map((e) => `<li><em>${e.m}'</em> <span class="${e.n === pname ? 'me' : ''}">${U.esc(e.n)}</span></li>`).join('');
+      const statsHtml = `<div class="msx">
+        <div class="msx-h"><span>${U.esc(ctx.home.name)}</span><small>Maç istatistikleri</small><span>${U.esc(ctx.away.name)}</span></div>
+        ${M.ev.length ? `<div class="msx-g"><ul>${gl(evH)}</ul><i>${Icon('ball')}</i><ul class="r">${gl(evA)}</ul></div>` : ''}
+        ${bar('Topla oynama', H.p, A.p, true)}${bar('Şut', H.s, A.s)}${bar('İsabetli şut', H.t, A.t)}
+      </div>`;
       $('mt-moment').classList.remove('hidden');
       $('mm-sb').innerHTML = '';
       $('mm-min').textContent = 'MS';
@@ -859,6 +884,7 @@ const Match = {
           </div>
 
           ` : '<div class="ms-none">Bu maçta forma giymedin.</div>'}
+          ${statsHtml}
           <button class="btn btn-big" id="ms-done">Devam</button>
         </div>`;
       UI.strip($('mm-host'));

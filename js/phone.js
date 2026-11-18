@@ -1072,6 +1072,7 @@
     const body = v.querySelector('.ph-body');
     if (body) { if (same) { body.scrollTop = keep; v.querySelector('.ph-appv').classList.add('still'); } else if (Phone.app === 'msg' && Phone.sub) body.scrollTop = body.scrollHeight; }
     Phone.el.querySelector('.ph-homebar').classList.toggle('dark', LIGHT.includes(Phone.app));
+    { const gh = Phone.el.querySelector('.ph-gohome'); if (gh) { gh.classList.toggle('on', !!Phone.app); gh.classList.toggle('dark', LIGHT.includes(Phone.app)); } }
     try { UI.strip(v); } catch (e) { /* yok */ }
     // oyunun kendi bağlayıcıları: satın alma, menajer/sponsor, StarFeed gönderileri, mağaza sekmeleri
     try { UI.bind(v); } catch (e) { console.error(e); }
@@ -1327,10 +1328,12 @@
     if (!Phone.el) {
       Phone.el = document.createElement('div');
       Phone.el.className = 'ph-ov';
-      Phone.el.innerHTML = '<div class="ph-dev t0"><div class="ph-screen"><div class="ph-wall"></div><div class="ph-cam"></div><div class="ph-view"></div><button class="ph-homebar" type="button" aria-label="Ana ekran"></button></div></div>';
+      Phone.el.innerHTML = '<div class="ph-dev t0"><div class="ph-screen"><div class="ph-wall"></div><div class="ph-cam"></div><div class="ph-view"></div><button class="ph-homebar" type="button" aria-label="Ana ekran"></button><button class="ph-gohome" type="button" aria-label="Ana ekran"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1.5"/><rect x="14" y="4" width="6" height="6" rx="1.5"/><rect x="4" y="14" width="6" height="6" rx="1.5"/><rect x="14" y="14" width="6" height="6" rx="1.5"/></svg></button></div></div>';
       document.body.appendChild(Phone.el);
       Phone.el.addEventListener('click', (e) => { if (e.target === Phone.el) Phone.close(); });
       Phone.el.querySelector('.ph-homebar').onclick = () => { if (!Phone.app) return Phone.close(); Phone.app = null; Phone.sub = null; Phone.render(); };
+      // her uygulamadan tek dokunuşla telefon ana ekranına (sağ alt köşede, içeriği kapatmayan küçük düğme)
+      Phone.el.querySelector('.ph-gohome').onclick = () => { Phone.app = null; Phone.sub = null; Phone.story = null; Phone.day = null; Phone.month = null; Phone.render(); };
     }
     Phone.open = true; Phone.app = app || null; Phone.sub = null; Phone.day = null; Phone.month = null; Phone.story = null; Phone._last = null;
     Phone.el.classList.add('on');
