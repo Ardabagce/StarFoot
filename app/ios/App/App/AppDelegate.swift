@@ -3,6 +3,7 @@ import Capacitor
 import AppTrackingTransparency
 import StoreKit
 import GameKit
+import FacebookCore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -10,7 +11,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Meta SDK: yükleme, açılış ve satın alma olayları (kimlik derlemede Info.plist'e yazılır; yoksa başlatılmaz)
+        if let id = Bundle.main.object(forInfoDictionaryKey: "FacebookAppID") as? String, !id.isEmpty {
+            ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        }
         return true
     }
 

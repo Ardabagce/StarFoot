@@ -48,6 +48,22 @@ jobs:
           node copy-web.js
           npx cap sync ios
           node spm-extras.js
+      # Meta SDK kimlikleri: sırlar varsa Info.plist'e yazılır (yoksa SDK başlatılmaz)
+      - name: Meta SDK (varsa)
+        env:
+          META_APP_ID: ${{ secrets.META_APP_ID }}
+          META_CLIENT_TOKEN: ${{ secrets.META_CLIENT_TOKEN }}
+        if: env.META_APP_ID != '' && env.META_CLIENT_TOKEN != ''
+        working-directory: app/ios/App/App
+        run: |
+          PB=/usr/libexec/PlistBuddy
+          put() { $PB -c "Delete :$1" Info.plist 2>/dev/null || true; $PB -c "Add :$1 $2 $3" Info.plist; }
+          put FacebookAppID string "$META_APP_ID"
+          put FacebookClientToken string "$META_CLIENT_TOKEN"
+          put FacebookDisplayName string StarFoot
+          put FacebookAutoLogAppEventsEnabled bool true
+          put FacebookAdvertiserIDCollectionEnabled bool true
+          echo "Meta SDK açık"
       - name: Derlenebilirlik kontrolü (imzasız, simülatör)
         if: env.P8 == '' || env.TEAM_ID == ''
         working-directory: app/ios/App

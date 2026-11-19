@@ -5,6 +5,11 @@ def keystorePropsFile = rootProject.file("keystore.properties")
 def keystoreProps = new Properties()
 if (keystorePropsFile.exists()) keystoreProps.load(new FileInputStream(keystorePropsFile))
 
+// Meta (Facebook) SDK: reklamlardan gelen yüklemeleri ve satın almaları ölçer.
+// Kimlikler derlemede GitHub sırlarından (META_APP_ID, META_CLIENT_TOKEN) gelir; yoksa SDK eklenmez.
+def metaAppId = System.getenv("META_APP_ID") ?: ""
+def metaClientToken = System.getenv("META_CLIENT_TOKEN") ?: ""
+
 android {
     namespace = "com.ardabagce.starfoot"
     compileSdk = rootProject.ext.compileSdkVersion
@@ -14,7 +19,9 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         // Sürüm kodu her derlemede artar: GitHub Actions'ta 100 + çalışma numarası
         versionCode((System.getenv("VERSION_CODE") ?: "100").toInteger())
-        versionName "1.0.25"
+        versionName "1.0.26"
+        resValue "string", "facebook_app_id", metaAppId
+        resValue "string", "facebook_client_token", metaClientToken
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
@@ -61,6 +68,8 @@ dependencies {
     // Sürümler AdMob eklentisinin kullandığı Google Mobile Ads 25.4 ile uyumlu seçildi (iOS'ta da aynı ağlar var).
     implementation 'com.google.ads.mediation:unity:4.20.1.0'
     implementation 'com.google.ads.mediation:vungle:7.7.8.0'
+    // Meta SDK yalnız yükleme/açılış/satın alma olayları için (giriş ve paylaşım yok)
+    if (metaAppId) implementation 'com.facebook.android:facebook-core:18.3.0'
 }
 
 apply from: 'capacitor.build.gradle'

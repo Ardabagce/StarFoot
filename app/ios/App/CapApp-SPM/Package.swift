@@ -20,7 +20,8 @@ let package = Package(
         .package(name: "CapacitorShare", path: "../../../node_modules/@capacitor/share"),
         .package(name: "RevenuecatPurchasesCapacitor", path: "../../../node_modules/@revenuecat/purchases-capacitor"),
         .package(url: "https://github.com/googleads/googleads-mobile-ios-mediation-liftoffmonetize.git", exact: "7.7.800"),
-        .package(url: "https://github.com/googleads/googleads-mobile-ios-mediation-unity.git", exact: "4.21.000")
+        .package(url: "https://github.com/googleads/googleads-mobile-ios-mediation-unity.git", exact: "4.21.000"),
+        .package(url: "https://github.com/facebook/facebook-ios-sdk.git", exact: "18.1.1")
     ],
     targets: [
         .target(
@@ -36,7 +37,8 @@ let package = Package(
                 .product(name: "CapacitorShare", package: "CapacitorShare"),
                 .product(name: "RevenuecatPurchasesCapacitor", package: "RevenuecatPurchasesCapacitor"),
                 .product(name: "LiftoffMonetizeAdapterTarget", package: "googleads-mobile-ios-mediation-liftoffmonetize"),
-                .product(name: "UnityAdapterTarget", package: "googleads-mobile-ios-mediation-unity")
+                .product(name: "UnityAdapterTarget", package: "googleads-mobile-ios-mediation-unity"),
+                .product(name: "FacebookCore", package: "facebook-ios-sdk")
             ]
         )
     ]

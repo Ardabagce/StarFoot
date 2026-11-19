@@ -72,6 +72,9 @@ jobs:
         working-directory: app/android
         env:
           VERSION_CODE: ${{ github.run_number }}
+          # Meta SDK kimlikleri (yoksa SDK eklenmez)
+          META_APP_ID: ${{ secrets.META_APP_ID }}
+          META_CLIENT_TOKEN: ${{ secrets.META_CLIENT_TOKEN }}
         run: |
           export VERSION_CODE=$((100 + VERSION_CODE))
           echo "Sürüm kodu: $VERSION_CODE"

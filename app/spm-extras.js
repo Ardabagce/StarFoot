@@ -1,6 +1,6 @@
 // Adds packages that are not Capacitor plugins to CapApp-SPM/Package.swift.
 // `npx cap sync ios` rewrites that file, so run this right after every sync.
-// Currently: Liftoff Monetize (Vungle) and Unity Ads adapters for AdMob mediation.
+// Currently: Liftoff Monetize (Vungle) and Unity Ads adapters for AdMob mediation, and the Meta SDK (FacebookCore) for install/purchase measurement.
 const fs = require('fs');
 const path = require('path');
 
@@ -13,6 +13,10 @@ const EXTRAS = [
   {
     pkg: '.package(url: "https://github.com/googleads/googleads-mobile-ios-mediation-unity.git", exact: "4.21.000")',
     product: '.product(name: "UnityAdapterTarget", package: "googleads-mobile-ios-mediation-unity")',
+  },
+  {
+    pkg: '.package(url: "https://github.com/facebook/facebook-ios-sdk.git", exact: "18.1.1")',
+    product: '.product(name: "FacebookCore", package: "facebook-ios-sdk")',
   },
 ];
 
