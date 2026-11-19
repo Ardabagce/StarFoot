@@ -8,6 +8,43 @@ const CStats = {
     const s = Game.state;
     return (p.cs = p.cs || { since: s ? s.season.year : 0, m: 0, w: 0, d: 0, l: 0, min: 0, sh: 0, kp: 0, tk: 0, y: 0, r: 0, hat: 0, brace: 0, home: [0, 0], away: [0, 0], gm: [0, 0, 0, 0, 0, 0], vs: {}, comp: {} });
   },
+  // Altyapı (sokak + altyapı takımı) ve profesyonel istatistikler ayrı: p.ytot altyapı toplamıdır, profesyonel = toplam - altyapı.
+  // Eski kayıtlarda p.ytot yoksa sezon geçmişindeki altyapı sezonlarından (lig adı U15/U17/U19 ile biter) bir kez çıkarılır.
+  YRX: /\sU\d{2}$/,
+  yEnsure(p) {
+    if (p.ytot) return p.ytot;
+    const y = { apps: 0, goals: 0, assists: 0, ratingSum: 0 };
+    (p.history || []).forEach((h) => {
+      if (!(h.yth || CStats.YRX.test(String(h.league || '')) || CStats.YRX.test(String(h.club || '')))) return;
+      y.apps += h.apps || 0; y.goals += h.goals || 0; y.assists += h.assists || 0; y.ratingSum += (h.avg || 0) * (h.apps || 0);
+    });
+    try {
+      if (typeof Game !== 'undefined' && Game.state && Game.state.player === p && Game.isYouth() && !Game.inStreet()) {
+        const ss = Game.state.season.stats;
+        y.apps += ss.apps || 0; y.goals += ss.goals || 0; y.assists += ss.assists || 0; y.ratingSum += ss.ratingSum || 0;
+      }
+    } catch (e) { /* yok */ }
+    const t = p.totals || {};
+    ['apps', 'goals', 'assists', 'ratingSum'].forEach((k) => { y[k] = Math.max(0, Math.min(y[k], t[k] || 0)); });
+    return (p.ytot = y);
+  },
+  yAdd(p, sum) {
+    const y = CStats.yEnsure(p);
+    y.apps++; y.goals += sum.goals || 0; y.assists += sum.assists || 0; y.ratingSum += sum.rating || 0;
+  },
+  split(p) {
+    const t = p.totals || { apps: 0, goals: 0, assists: 0, ratingSum: 0 }, y = CStats.yEnsure(p);
+    const pro = { apps: Math.max(0, t.apps - y.apps), goals: Math.max(0, t.goals - y.goals), assists: Math.max(0, t.assists - y.assists), ratingSum: Math.max(0, t.ratingSum - y.ratingSum) };
+    return { y, pro };
+  },
+  avg(o) { return o.apps ? (o.ratingSum / o.apps).toFixed(2) : '-'; },
+  // Kariyer özeti için iki satırlık tablo
+  splitHtml(p) {
+    const { y, pro } = CStats.split(p);
+    if (!y.apps) return '';
+    const row = (l, o) => `<tr><th>${l}</th><td>${o.apps}</td><td>${o.goals}</td><td>${o.assists}</td><td>${CStats.avg(o)}</td></tr>`;
+    return `<table class="cs-split"><tr><th></th><th>Maç</th><th>Gol</th><th>Asist</th><th>Ort.</th></tr>${row('Profesyonel', pro)}${row('Altyapı', y)}</table>`;
+  },
   record(p, sum, ctx, comp) {
     try {
       const c = CStats.ensure(p);
@@ -57,6 +94,7 @@ const CStats = {
     const best = (p.history || []).filter((h) => h.apps).slice().sort((a, b) => b.goals - a.goals)[0];
     return `<div class="cstats">
       <h2>${Icon('table')} Kariyer İstatistikleri</h2>
+      ${CStats.splitHtml(p)}
       <div class="ms-grid big">
         ${box('Maç', t.apps)}${box('Gol', t.goals)}${box('Asist', t.assists)}
         ${box('Maç başına gol', f2(t.goals / Math.max(1, t.apps)))}${box('Gol + asist / maç', f2((t.goals + t.assists) / Math.max(1, t.apps)))}${box('Maçın adamı', t.motm)}

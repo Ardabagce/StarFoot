@@ -187,6 +187,9 @@ const MiniGame = {
   seen: 0,
   // Vuruş tarzı (Ayarlar): 'swipe' = StarFoot (geri çek ve bırak, varsayılan), 'aim' = Hedef (kaleye dokun, gücü durdur)
   style() { try { return localStorage.getItem('starfoot_shot') === 'aim' ? 'aim' : 'swipe'; } catch (e) { return 'swipe'; } },
+  // Gol tekrarı (ağır çekim, 0.75x): ayarlardan kapatılabilir
+  replayOn() { try { return localStorage.getItem('starfoot_replay') !== 'off'; } catch (e) { return true; } },
+  setReplay(on) { try { localStorage.setItem('starfoot_replay', on ? 'on' : 'off'); } catch (e) { /* yok */ } },
   setStyle(v) {
     try { localStorage.setItem('starfoot_shot', v === 'aim' ? 'aim' : 'swipe'); } catch (e) { /* yok */ }
     try {
@@ -273,6 +276,9 @@ const MiniGame = {
       let trail = [], camShake = 0, camZoom = 0, zoomAt = null, netHitX = null, netBall = false, netHit = false;
       let last = performance.now(), raf = 0;
       const showHint = MiniGame.seen++ < 3;
+      // gol tekrarı: vuruştan golün biraz sonrasına kadar her kare kaydedilir
+      const REC = MiniGame.replayOn() && !(typeof Game !== 'undefined' && Game.ff) ? [] : null;
+      let replaying = false;
 
       // ---- kamera: ekran oranına göre top, kale ve oyuncuları kapsar ----
       let W = 0, H = 0, PX = 1, dpr = 1, view = null, bg = null;
@@ -882,7 +888,7 @@ const MiniGame = {
         if (camShake > 0) ctx.translate(Math.sin(t * 61) * 7 * dpr * camShake, Math.cos(t * 47) * 5 * dpr * camShake);
         if (camZoom > 0 && zoomAt) { const z = 1 + 0.07 * Math.sin(Math.min(1, camZoom) * Math.PI / 2); ctx.translate(zoomAt[0], zoomAt[1]); ctx.scale(z, z); ctx.translate(-zoomAt[0], -zoomAt[1]); }
         ctx.drawImage(bg, 0, 0);
-        Sprites.standsFx(ctx, t, result && result.outcome === 'goal' ? Math.min(1, (t - endT) * 3) : 0);
+        Sprites.standsFx(ctx, t, result && result.outcome === 'goal' ? U.clamp((t - endT) * 3, 0, 1) : 0);
         // file: top arka fileye çarpınca geriye doğru cep yapar ve yavaşça sönümlenir
         const sh = netShake > 0 ? (netHit ? -(0.6 + 0.4 * Math.cos(t * 16)) * 11 * dpr * netShake : Math.sin(t * 50) * 4 * dpr * netShake) : 0;
         Sprites.net(ctx, tx, ty, PX, sh, netHitX);
@@ -1047,12 +1053,60 @@ const MiniGame = {
         } else if (trail.length) trail.shift();
         flash = Math.max(0, flash - rdt * 3);
         draw(rdt);
+        if (REC && kickT > -9 && REC.length < 900 && (phase !== 'done' || t - endT < 0.9)) REC.push(snap());
         if (phase === 'done' && t - endT > (result.outcome === 'goal' || result.mateGoal ? 2.0 : 1.5)) {
+          if (REC && result.outcome === 'goal' && REC.length > 8) return startReplay();
           cleanup();
           resolve(result);
           return;
         }
         raf = requestAnimationFrame(loop);
+      }
+      const ents = () => [ball, keeper, shooter, ...defs, ...mates];
+      function snap() {
+        return {
+          t, phase, netShake, netHitX, netBall, netHit, camShake, camZoom, zoomAt, flash, slowmo,
+          trail: trail.map((x) => x.slice()), ms: mateShot ? Object.assign({}, mateShot) : null,
+          e: ents().map((x) => Object.assign({}, x)),
+        };
+      }
+      function restore(f) {
+        ({ t, phase, netShake, netHitX, netBall, netHit, camShake, camZoom, zoomAt, flash, slowmo } = f);
+        trail = f.trail.map((x) => x.slice());
+        mateShot = f.ms ? Object.assign({}, f.ms) : null;
+        ents().forEach((x, i) => Object.assign(x, f.e[i]));
+      }
+      // Ağır çekim tekrar (0.75x): "Geç" ile atlanır, sonunda sonuç normal şekilde döner
+      function startReplay() {
+        replaying = true; particles = [];
+        const lb = host.querySelector('.mg-lift'); if (lb) lb.style.visibility = 'hidden';
+        const t0 = REC[0].t, span = REC[REC.length - 1].t - t0;
+        const skip = document.createElement('button');
+        skip.type = 'button'; skip.className = 'mg-skip'; skip.textContent = 'Geç ▶▶';
+        stage.appendChild(skip);
+        const badge = document.createElement('div');
+        badge.className = 'mg-replay'; badge.innerHTML = '<i></i>TEKRAR · 0.75x';
+        stage.appendChild(badge);
+        let pt = 0, prev = performance.now(), i = 0, over = false;
+        const end = () => {
+          if (over) return; over = true;
+          cancelAnimationFrame(raf); skip.remove(); badge.remove();
+          cleanup(); resolve(result);
+        };
+        skip.onclick = end;
+        MiniGame._abort = end;
+        const rl = (now) => {
+          if (over) return;
+          pt += Math.min(0.05, (now - prev) / 1000) * 0.75; prev = now;
+          while (i < REC.length - 1 && REC[i + 1].t - t0 <= pt) i++;
+          restore(REC[i]);
+          draw(0);
+          // tekrar karesi: kenarlarda hafif karartma
+          ctx.fillStyle = 'rgba(0,0,0,0.12)'; ctx.fillRect(0, 0, W, H);
+          if (pt >= span + 0.35) return end();
+          raf = requestAnimationFrame(rl);
+        };
+        raf = requestAnimationFrame(rl);
       }
       raf = requestAnimationFrame(loop);
 

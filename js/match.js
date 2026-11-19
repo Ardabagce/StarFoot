@@ -1,8 +1,8 @@
 // Maç motoru: dakika dakika simülasyon + oyuncunun kritik anları
 
 const MOMENT_WEIGHTS = {
-  FW: { open: 40, dribble: 18, header: 12, freekick: 7, penalty: 5, tackle: 5, sprint: 9, onetwo: 7, corner: 4 },
-  MF: { open: 30, dribble: 13, deep: 15, tackle: 17, freekick: 9, header: 4, onetwo: 12, sprint: 5, corner: 9 },
+  FW: { open: 40, dribble: 18, header: 12, freekick: 7, penalty: 5, tackle: 5, sprint: 9, onetwo: 7 },
+  MF: { open: 30, dribble: 13, deep: 15, tackle: 17, freekick: 9, header: 4, onetwo: 12, sprint: 5 },
   DF: { tackle: 46, deep: 23, header: 14, open: 4, freekick: 4, sprint: 9 },
   GK: { gk_save: 42, gk_1v1: 20, gk_cross: 22, gk_reflex: 16 },
 };
@@ -71,7 +71,7 @@ const Match = {
     let skill = U.clamp((ctx.levelBase != null ? ctx.levelBase : 0.4) + (opp.rating - ovr) / 70, 0.03, 0.88);
     const street = ctx.lg === 'street';
     // Mahalle maçı: kum saha, herkes kendi kıyafetiyle
-    const kits = street ? Sprites.streetKits() : Sprites.kits(own, opp);
+    const kits = street ? Sprites.streetKits() : Sprites.kits(own, opp, ctx.side === 'away');
     Sprites.surface = street ? 'sand' : null;
     // Atmosfer: tribün doluluğu, fotoğrafçılar ve pankart oyuncunun ününe, takımına ve maçın önemine göre
     {
@@ -179,7 +179,7 @@ const Match = {
           <div class="mt-time"><span id="mt-min">0'</span><div class="mt-prog"><div id="mt-bar"></div></div></div>
         </div>
         <div class="mt-body">
-          <div class="mt-main"><div class="mt-radar"><canvas id="mt-rad"></canvas></div><div class="mt-feed" id="mt-feed"></div></div>
+          <div class="mt-main"><div class="mt-radar"><canvas id="mt-rad"></canvas></div><div class="mt-feed" id="mt-feed"></div><div class="mt-hold" id="mt-hold" role="button">⏸ Okuma modu: maç bekliyor · devam etmek için dokun</div></div>
           <div class="mt-side">
             <div class="mt-me">
               <div class="me-id">
@@ -201,8 +201,9 @@ const Match = {
             </div>
             <div class="mt-ctrl">
               <div class="seg" id="mt-speed">
-                <button data-s="1" class="on">1x</button><button data-s="2">2x</button><button data-s="4">4x</button>
+                <button data-s="0.5">0.5x</button><button data-s="1" class="on">1x</button><button data-s="2">2x</button><button data-s="4">4x</button>
               </div>
+              <button class="btn btn-ghost" id="mt-pause" type="button">⏸ Duraklat</button>
               <button class="btn btn-ghost" id="mt-sim">${Icon('fast')} Maçı Simüle Et</button>
             </div>
           </div>
@@ -237,7 +238,10 @@ const Match = {
       d.innerHTML = (tag ? `<em class="ft">${tag}</em>` : '') + U.plain(txt);
       const f = $('mt-feed');
       if (!f) return;
+      // okurken yeni satırlar yazıyı kaydırmasın
+      const keep = f.scrollTop > 4;
       f.prepend(d);
+      if (keep) f.scrollTop += d.offsetHeight + 4;
     };
     // seviyeye göre maç sonu tahmini enerji: kalan dakikalar × dakika başı tüketim + kritik anların ortalama payı
     const effortEnd = (k) => {
@@ -274,7 +278,16 @@ const Match = {
       U.$$('#mt-speed button').forEach((x) => x.classList.toggle('on', x === b));
     }));
     U.$$('#mt-eff [data-e]').forEach((b) => (b.onclick = () => setEffort(b.dataset.e)));
-    $('mt-sim').onclick = () => { M.instant = true; if (MiniGame._abort) MiniGame._abort(); if (M.htSkip) M.htSkip(); };
+    $('mt-sim').onclick = () => { M.instant = true; M.paused = false; M.hold = false; if (MiniGame._abort) MiniGame._abort(); if (M.htSkip) M.htSkip(); };
+    // duraklat / okuma modu: anlatım akışı rahatça okunsun
+    const pauseUi = () => {
+      const b = $('mt-pause'), h = $('mt-hold');
+      if (b) b.textContent = M.paused ? '▶ Devam' : '⏸ Duraklat';
+      if (h) h.classList.toggle('on', !!(M.paused || M.hold) && !M.instant);
+    };
+    $('mt-pause').onclick = () => { M.paused = !M.paused; pauseUi(); };
+    $('mt-hold').onclick = () => { M.paused = false; M.hold = false; const f = $('mt-feed'); if (f) f.scrollTop = 0; pauseUi(); };
+    $('mt-feed').addEventListener('scroll', () => { const f = $('mt-feed'); const h = f.scrollTop > 40; if (h !== !!M.hold) { M.hold = h; pauseUi(); } }, { passive: true });
 
     if (ctx.role === 'starter') feed(`📋 İlk 11'desin! Formanın sırtında ${p.shirt} numara.`, 'info');
     else if (ctx.role === 'bench') feed('📋 Bugün yedek kulübesinde başlıyorsun.', 'info');
@@ -740,7 +753,7 @@ const Match = {
     };
 
     // ---- Ana döngü ----
-    const tickDelay = () => (M.instant ? 0 : [0, 240, 120, 45, 30][M.speed]);
+    const tickDelay = () => (M.instant ? 0 : ({ 0.5: 480, 1: 240, 2: 120, 4: 30 })[M.speed] || 240);
     let stoppage = U.randi(1, 5);
     let busy = false;
 
@@ -770,8 +783,10 @@ const Match = {
       const [lh, la] = World.lambdas(homeR(), awayR());
       // istatistik: gol olmayan şutlar (gol başına ~8 şut, üçte biri isabetli) ve topla oynama
       { const lo = isHome ? lh : la, lx = isHome ? la : lh;
-        if (U.chance(Math.min(0.45, lo / 90 * 4.5))) { M.tst.o[0]++; if (U.chance(0.3)) M.tst.o[1]++; }
-        if (U.chance(Math.min(0.45, lx / 90 * 4.5))) { M.tst.x[0]++; if (U.chance(0.3)) M.tst.x[1]++; }
+        const talk = !M.instant && typeof Comm !== 'undefined';
+        if (U.chance(Math.min(0.45, lo / 90 * 4.5))) { M.tst.o[0]++; const on = U.chance(0.3); if (on) M.tst.o[1]++; if (talk && U.chance(0.5)) feed(Comm.shot(own, opp, on, M.min)); }
+        if (U.chance(Math.min(0.45, lx / 90 * 4.5))) { M.tst.x[0]++; const on = U.chance(0.3); if (on) M.tst.x[1]++; if (talk && U.chance(0.5)) feed(Comm.shot(opp, own, on, M.min)); }
+        if (talk && U.chance(0.12)) feed(Comm.flow({ home: ctx.home, away: ctx.away, hs: M.hs, as: M.as, min: M.min, homeR: homeR(), awayR: awayR(), crowd: !street && U.chance(0.15) }), 'fl');
         const d = (isHome ? homeR() - awayR() : awayR() - homeR());
         M.poss += U.clamp(50 + d * 0.9 + U.rand(-6, 6), 28, 72); M.possN++; }
       const gk = p.position === 'GK';
@@ -814,6 +829,7 @@ const Match = {
       schedule();
     };
     const schedule = () => {
+      if ((M.paused || M.hold) && !M.instant) return setTimeout(schedule, 150);
       const d = tickDelay();
       if (d === 0) tick(); else setTimeout(tick, d);
     };
@@ -837,7 +853,7 @@ const Match = {
       if (radar) setTimeout(() => radar.stop(), 3000);
       refresh();
       const summary = {
-        gf, ga, res, hs: M.hs, as: M.as, played, energySave: 0, energyStart: M.e0, energyEnd: M.energy, moments: M.momPlayed || 0, effort: EF().l, minutes: Math.max(0, minutes), rating: played ? rating : null,
+        gf, ga, res, hs: M.hs, as: M.as, played, onEnd: played && !M.red && !leaveMin, energySave: 0, energyStart: M.e0, energyEnd: M.energy, moments: M.momPlayed || 0, effort: EF().l, minutes: Math.max(0, minutes), rating: played ? rating : null,
         goals: M.goals, assists: M.assists, yellow: M.yellow, red: M.red, motm, lateGoal: !!M.lateGoal, dribbles: M.dribbles || 0,
         ownScorers: M.ownScorers, oppScorers: M.oppScorers, goalEv: M.ev.slice(), statsUsed: [...M.statsUsed], goalTypes: M.gt, goalMins: M.gmin || [], saves: M.saves, penSaves: M.penSaves, ga: isHome ? M.as : M.hs, shots: M.shots, keyPasses: M.keyPasses, tackles: M.tackles,
       };

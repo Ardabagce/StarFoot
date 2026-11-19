@@ -2976,3 +2976,181 @@
 10057|Permintaan pindah akademi
 10058|Lamar ke akademi klub pilihanmu; mulai usia 14, masuk akademi luar negeri lewat seleksi.
 10059|Rencana otomatis untuk aksi mingguan. Diperbaiki: tidak ada tawaran setelah pindah ke klub yang lebih kuat.
+10175|{} · {} tahun
+10177|· {} gol
+10172|{} Tampilan
+10154|{} menendang keras, {} menepisnya di pojok!
+10149|{} menyundul, {} menggagalkan gol.
+10125|{} menyerang cepat, {} menembak, {} menangkap bola di percobaan kedua.
+10120|{} mencoba dari luar kotak, {} menepisnya ke tendangan sudut!
+10136|{} menempatkan bola, {} menyelamatkan dengan kakinya di detik terakhir!
+10122|{} mencoba peruntungan dari luar kotak, bola melambung.
+10124|{} meleset tipis dari tiang! Peluang besar untuk {}.
+10128|{} melakukan serangan balik, {} kehilangan keseimbangan saat menembak.
+10137|{} gagal mengarahkan sundulannya ke gawang.
+10152|{} mencoba tendangan voli, bola melayang ke tribun.
+10129|{} menguasai bola dan membangun serangan dengan sabar.
+10133|{} mengirim umpan silang dari kanan, {} menyundulnya keluar.
+10123|{} melewati lawan di kiri, tetapi umpan silangnya diblok.
+10145|{} memotong di detik terakhir dan menghentikan bahaya.
+10157|{} dengan tenang mengamankan bola panjang.
+10130|{} terjebak offside, hakim garis mengangkat bendera.
+10071|Duel keras di lini tengah, wasit memberikan pelanggaran.
+10151|{} mundur, {} meningkatkan tekanan.
+10143|{} dan {} mencoba umpan satu-dua, umpan terakhir terlalu panjang.
+10138|{} mendapat tendangan bebas, bola memantul dari pagar betis.
+10144|🟨 {} melakukan pelanggaran taktis dan mendapat kartu kuning.
+10074|Kedua tim memulai dengan hati-hati, permainan lebih banyak di tengah.
+10131|{} ingin menguasai permainan sejak awal.
+10076|Tempo meningkat menjelang akhir babak pertama.
+10077|Ada pergerakan di pinggir lapangan, pergantian mungkin terjadi.
+10139|Pelatih {} memberi instruksi dari pinggir lapangan.
+10134|{} berusaha mempertahankan skor dan memperlambat permainan.
+10147|{} mengerahkan segalanya ke depan.
+10080|Skor imbang, kedua tim mencari gol kemenangan.
+10081|Memasuki menit-menit akhir, tribun menahan napas.
+10082|Wasit berbicara dengan ofisial keempat soal waktu tambahan.
+10162|Tribun bersatu mendukung {}!
+10083|Suporter berdiri, stadion bergemuruh.
+10084|, setelah perpanjangan waktu
+10161|kami lolos lewat adu penalti{}!
+10164|kami tersingkir lewat adu penalti{}.
+10165|{} {}: agregat {}-{}{}, {}
+10158|{} {}: agregat {}-{} setelah perpanjangan waktu, {}
+10085|menang, kami lolos!
+10086|kalah, kami tersingkir.
+10140|{} {}: {}-{} setelah perpanjangan waktu, {}-{} dalam adu penalti, {}
+10166|{} {}: {}-{} di perpanjangan waktu! {}
+10087|✅ Kami menang di perpanjangan waktu!
+10089|❌ Kami kalah di perpanjangan waktu
+10091|Waktu normal berakhir imbang. Setelah perpanjangan waktu skornya
+10171|{} · {} tim{}
+10094|Sepatu Emas Eropa
+10095|Kamu menjadi pencetak gol terbanyak liga-liga Eropa
+10096|Kamu terpilih sebagai pemain terbaik, semua orang membicarakanmu
+10160|{} golmu meledak di media sosial
+10097|Golmu dibagikan, pengikut baru berdatangan
+10098|Rating tinggimu menarik perhatian
+10099|Assist-mu menonjol
+10100|Pertandingan buruk: sebagian pengikut kehilangan minat
+10101|Kartu merah menuai kritik
+10102|Pertandingan tenang, perubahan pengikut kecil
+10103|Pengikutmu melebihi ketenaranmu: minat menyeimbang seiring waktu. Gol dan penghargaan pemain terbaik akan menaikkannya lagi
+10106|Tayangan ulang gol
+10107|Tonton lagi golmu dalam gerak lambat (0.75x). Kamu bisa melewati tayangan ulang dengan "Lewati".
+10178|{} Umum
+10174|{} Karier
+10110|Tayangan ulang gol aktif
+10111|Tayangan ulang gol nonaktif
+10112|ADU PENALTI
+10113|KAMI MENANG!
+10114|⏸ Mode baca: pertandingan dijeda · ketuk untuk lanjut
+10116|⏸ Jeda
+10118|▶ Lanjut
+10119|Statistik pertandingan
+10283|✈️ Rival abadimu {} juga pindah ke {}. Persaingan berlanjut di liga baru!
+10279|🗞️ {} tetap di liga lamamu. Di liga baru, media akan membandingkanmu dengan rival lain.
+10183|tim barumu
+10275|🗞️ {} tidak lagi selevel denganmu. Media kini membandingkanmu, dengan seragam {}, dengan rival baru.
+10185|Golmu dalam persaingan
+10327|{} · {} tahun
+10313|{}: 👟 Sepatu Emas Eropa
+10282|Sepatu Emas Eropa milikku! {} gol. Penghargaan ini untuk setiap rekan yang mengoper bola padaku.
+10284|👟 Sepatu Emas Eropa {} milik {}! Kamu pencetak gol terbanyak Eropa dengan {} gol.
+10189|SEPATU EMAS!
+10318|{} Sepatu Emas Eropa
+10310|{} gol · pencetak gol terbanyak Eropa
+10298|👟 Sepatu Emas Eropa {}: {} ({} gol). {}
+10191|Lewati ▶▶
+10192|TAYANGAN ULANG · 0.75x
+10193|Kerja bagus. Tanda tangani, sisanya biar aku urus.
+10196|Kalian sepakat. Dengan agen, mungkin kamu bisa dapat sedikit lebih.
+10199|Aku tidak tahu persis anggaran klub. Sebaiknya jangan terlalu menekan.
+10202|Kamu tidak punya agen, kamu bernegosiasi sendiri. Sulit menebak batas klub.
+10205|Masih ada ruang di gaji, kita bisa minta sedikit lagi.
+10206|Gaji sudah dekat batas. Jika perlu, kita tekan di bonus tanda tangan.
+10209|Mereka sulit menjanjikan tempat utama. Jika klausul ini dihapus, kesepakatan lebih mudah.
+10212|Klausul pelepasan membuat mereka tidak nyaman.
+10213|Tawaran ini sudah di batas klub. Meminta lebih bisa membahayakan kesepakatan.
+10216|Agenmu
+10217|Tanpa agen
+10218|Suara hatimu
+10219|Tawaran awal
+10220|Janji pemain utama berlaku untuk musim pertama
+10221|Persaingan
+10222|Janji pemain utama
+10223|Klausul pelepasan
+10224|Lebih mudah pergi jika klub besar datang
+10225|Sertakan
+10226|Tinggalkan meja
+10227|Ajukan tawaran
+10228|Tanda tangani kontrak
+10229|Tanda tangani nanti
+10230|Negosiasi transfer
+10231|Direktur olahraga
+10232|Kesabaran
+10233|Baik, kita sepakat. Selamat datang di klub kami!
+10236|Syarat ini cocok untuk kami. Mari berjabat tangan.
+10239|Negosiasinya alot, tapi kita sepakat.
+10240|, tanpa janji pemain utama
+10287|Kami tidak bisa memberi sebanyak itu. Tawaran terakhir: {} per minggu, bonus tanda tangan {}{}.
+10242|Angka ini terlalu tinggi bagi kami.
+10243|Ini melebihi anggaran kami, pikirkan lagi.
+10244|Aku tidak bisa membawa tawaran seperti itu ke manajemen.
+10245|Kurasa negosiasi ini tidak akan menghasilkan apa-apa. Selamat siang.
+10289|🚪 {} mundur dari negosiasi dan menarik tawarannya.
+10249|· janji pemain utama
+10250|· klausul pelepasan
+10319|Kesepakatan tercapai: {}/minggu{}{}
+10314|{} Duduk bernegosiasi bersama agenmu
+10280|{}, kami ingin kamu di skuad kami. Tawaran kami sudah di meja, aku mendengarkan syaratmu.
+10323|{} Pengaturan Profil
+10254|Kamu bisa mengubah nama depan, nama belakang, dan tampilan dasar kapan saja.
+10308|{} Ubah nama dan tampilan
+10278|{} Gaya rambut baru, ikat kepala, baju dalam, dan warna sepatu ada di Studio Tampilan.
+10257|Nama depan dan belakang tidak boleh kosong.
+10311|Sekarang kamu dikenal sebagai {}.
+10312|Giliranmu: {} maju ke bola
+10295|{} menendang, kamu yang jaga gawang
+10321|{} menendang...
+10260|GAGAL!
+10261|KAMI KALAH
+10262|Tendangan penalti
+10263|Baca kiper, pilih sudut, dan tembak!
+10264|Penalti: kamu yang jaga gawang
+10265|Baca arah pandang penyerang dan melompat ke sudut saat ia menendang!
+10322|{} Studio Tampilan
+10326|Suporter {}{}
+10330|{} tahun{}
+10266|Posisimu
+10267|Rekor kariermu
+10268|Paling berharga di dunia
+10324|{} · paling berharga
+10270|Skuad paling berharga di liga
+10317|Kontrakmu tersisa {} tahun.
+10271|Tawaran resmi
+10291|{} memasukkanmu ke daftar untuk bursa berikutnya.
+10307|{} StarValue terbuka dengan Premium
+10274|Grafik karier, peringkat dunia, nilai skuad, rumor, dan perbandingan dengan legenda.
+10325|{} Ringkasan karier
+10331|Negosiasi transfer bersama agen
+10332|Duduk bersama direktur olahraga: gaji, durasi, bonus tanda tangan, janji pemain utama, dan klausul pelepasan. Minta terlalu banyak dan ia bisa pergi.
+10335|Tonton lagi golmu dalam gerak lambat. Lewati dengan "Lewati" atau matikan di Pengaturan.
+10338|Perpanjangan waktu dan adu penalti
+10339|Di piala, hasil imbang berlanjut ke perpanjangan waktu lalu adu penalti. Kamu menendang sendiri; jika kiper, kamu yang jaga gawang.
+10342|Komentar pertandingan lebih hidup
+10343|Tembakan, penyelamatan, pelanggaran, dan tribun. Jeda pertandingan atau tonton 0.5x; gulir komentar dan pertandingan menunggumu.
+10346|Statistik akhir pertandingan
+10347|Penguasaan bola, tembakan, tembakan tepat sasaran, dan menit gol. Alasan pengikutmu naik atau turun ada di kartu pertandingan.
+10350|Seragam tandang
+10351|Setiap tim punya seragam kedua; saat tandang kamu memakai seragam berbeda.
+10352|Ubah nama dan tampilanmu
+10353|Ubah nama depan, nama belakang, kulit, rambut, dan jenggot gratis dari Profil.
+10354|Statistik akademi dan profesional
+10355|Di ringkasan karier, laga, gol, dan assist akademi serta profesional ditampilkan terpisah.
+10356|StarValue di ponsel
+10357|Nilai pasar, peringkat dunia, nilai skuad, dan rumor di aplikasi baru.
+10358|Penghargaan baru untuk pencetak gol terbanyak Eropa. Bintang Emas kini juga menghitung prestasi tim.
+10361|Bintang yang lebih kuat dari timnya kini mengubah perebutan gelar. Rival abadimu kini bermain di levelnya sendiri.
+10367|Tendangan sudut untuk {}. Sundulan melambung.
+10366|{} menembak, bola membentur bek dan keluar untuk tendangan sudut.

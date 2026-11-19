@@ -2976,3 +2976,181 @@
 10057|Demandes de transfert en formation
 10058|Postule au centre de formation du club de ton choix ; dès 14 ans, intègre une académie à l'étranger via des essais.
 10059|Un plan automatique pour les actions hebdomadaires. Corrigé : plus aucune offre après avoir rejoint un club plus fort.
+10175|{} · {} ans
+10177|· {} buts
+10172|{} Apparence
+10154|{} frappe fort, {} la sort dans le coin !
+10149|{} reprend de la tête, {} empêche le but.
+10125|{} part vite, {} frappe, {} capte en deux temps.
+10120|{} tente de loin, {} la détourne du bout des doigts en corner !
+10136|{} place son tir, {} sauve du pied au dernier moment !
+10122|{} tente sa chance de loin, le ballon passe au-dessus.
+10124|{} manque de peu à côté du poteau ! Grosse occasion pour {}.
+10128|{} part en contre, {} perd l'équilibre au moment de frapper.
+10137|{} ne cadre pas sa tête.
+10152|{} tente une volée, le ballon finit dans les tribunes.
+10129|{} garde le ballon et construit patiemment.
+10133|{} centre de la droite, {} dégage de la tête.
+10123|{} élimine son vis-à-vis à gauche, mais son centre est contré.
+10145|{} intervient au dernier moment et écarte le danger.
+10157|{} capte sans souci le long ballon.
+10130|{} est signalé hors-jeu, le juge de touche lève son drapeau.
+10071|Duel musclé au milieu, l'arbitre siffle faute.
+10151|{} recule, {} accentue la pression.
+10143|{} et {} tentent un une-deux, la dernière passe est trop longue.
+10138|{} obtient un coup franc, le ballon revient du mur.
+10144|🟨 {} commet une faute tactique et prend un jaune.
+10074|Les deux équipes démarrent prudemment, le jeu se concentre au milieu.
+10131|{} veut prendre le contrôle d'entrée.
+10076|Le rythme s'accélère en fin de première mi-temps.
+10077|Ça bouge sur le banc, un changement se prépare.
+10139|L'entraîneur de {} donne des consignes depuis le bord du terrain.
+10134|{} cherche à préserver le score et ralentit le jeu.
+10147|{} jette toutes ses forces vers l'avant.
+10080|Égalité, les deux équipes cherchent le but de la victoire.
+10081|Dernières minutes, les tribunes retiennent leur souffle.
+10082|L'arbitre parle au quatrième arbitre du temps additionnel.
+10162|Les tribunes ne font qu'une voix pour {} !
+10083|Les supporters sont debout, le stade gronde.
+10084|, après prolongation
+10161|nous passons aux tirs au but{} !
+10164|nous sommes éliminés aux tirs au but{}.
+10165|{} {}: score cumulé {}-{}{}, {}
+10158|{} {}: {}-{} au cumulé après prolongation, {}
+10085|victoire, nous sommes qualifiés !
+10086|défaite, nous sommes éliminés.
+10140|{} {}: {}-{} après prolongation, {}-{} aux tirs au but, {}
+10166|{} {}: {}-{} après prolongation ! {}
+10087|✅ Victoire en prolongation !
+10089|❌ Défaite en prolongation
+10091|Le temps réglementaire s'est terminé sur un nul. Après prolongation, le score était de
+10171|{} · {} équipes{}
+10094|Soulier d'or européen
+10095|Tu as été le meilleur buteur des championnats européens
+10096|Tu as été élu homme du match, tout le monde parle de toi
+10160|Tes {} buts ont fait un carton sur les réseaux sociaux
+10097|Ton but a été partagé, de nouveaux abonnés sont arrivés
+10098|Ta note élevée a attiré l'attention
+10099|Ta passe décisive a été remarquée
+10100|Match faible : certains abonnés ont décroché
+10101|Le carton rouge a suscité des critiques
+10102|Un match calme, peu de changement côté abonnés
+10103|Tes abonnés dépassent ta notoriété : l'intérêt se stabilise avec le temps. Les buts et les titres d'homme du match le relanceront
+10106|Ralenti du but
+10107|Revois ton but au ralenti (0.75x). Tu peux passer le ralenti avec « Passer ».
+10178|{} Général
+10174|{} Carrière
+10110|Ralenti du but activé
+10111|Ralenti du but désactivé
+10112|TIRS AU BUT
+10113|VICTOIRE !
+10114|⏸ Mode lecture : match en pause · touche pour continuer
+10116|⏸ Pause
+10118|▶ Reprendre
+10119|Statistiques du match
+10283|✈️ Ton grand rival {} a lui aussi signé à {}. La rivalité continue dans le nouveau championnat !
+10279|🗞️ {} est resté dans ton ancien championnat. Dans le nouveau, la presse te comparera à d'autres rivaux.
+10183|ta nouvelle équipe
+10275|🗞️ {} n'est plus à ton niveau. La presse te compare désormais, sous le maillot de {}, à de nouveaux rivaux.
+10185|Tes buts dans la rivalité
+10327|{} · {} ans
+10313|{}: 👟 Soulier d'or européen
+10282|Le Soulier d'or européen est à moi ! {} buts. Ce prix appartient à chaque coéquipier qui m'a servi.
+10284|👟 Le Soulier d'or européen {} revient à {} ! Tu es le meilleur buteur d'Europe avec {} buts.
+10189|SOULIER D'OR !
+10318|{} Soulier d'or européen
+10310|{} buts · meilleur buteur d'Europe
+10298|👟 Soulier d'or européen {} : {} ({} buts). {}
+10191|Passer ▶▶
+10192|RALENTI · 0.75x
+10193|Beau travail. Signe, je m'occupe du reste.
+10196|Accord conclu. Avec un agent, tu aurais peut-être obtenu un peu plus.
+10199|Je ne connais pas précisément le budget du club. Ne forçons pas trop.
+10202|Tu n'as pas d'agent, tu négocies toi-même. Difficile de deviner la limite du club.
+10205|Il reste de la marge sur le salaire, on peut demander un peu plus.
+10206|Le salaire est proche de la limite. Si besoin, misons sur la prime à la signature.
+10209|Ils ont du mal à promettre une place de titulaire. Sans cette clause, l'accord sera plus facile.
+10212|La clause libératoire les dérange.
+10213|Cette offre est à la limite du club. Demander plus met l'accord en danger.
+10216|Ton agent
+10217|Pas d'agent
+10218|Ta voix intérieure
+10219|Offre initiale
+10220|La promesse de titularisation vaut pour la première saison
+10221|Concurrence
+10222|Promesse de titularisation
+10223|Clause libératoire
+10224|Plus facile de partir si un grand club se présente
+10225|Inclure
+10226|Quitter la table
+10227|Faire l'offre
+10228|Signer le contrat
+10229|Signer plus tard
+10230|Négociation du transfert
+10231|Directeur sportif
+10232|Patience
+10233|D'accord, marché conclu. Bienvenue au club !
+10236|Ces conditions nous conviennent. Topons là.
+10239|La négociation a été rude, mais nous avons un accord.
+10240|, sans promesse de titularisation
+10287|Nous ne pouvons pas donner autant. Notre dernière offre : {} par semaine, prime à la signature {}{}.
+10242|Ces chiffres sont trop élevés pour nous.
+10243|Cela dépasse notre budget, réfléchissez encore.
+10244|Je ne peux pas présenter une telle offre à la direction.
+10245|Je ne pense pas que cette discussion aboutisse. Bonne journée.
+10289|🚪 {} a quitté la négociation et retiré son offre.
+10249|· promesse de titularisation
+10250|· clause libératoire
+10319|Accord conclu : {}/semaine{}{}
+10314|{} Négocie avec ton agent
+10280|{}, nous te voulons dans notre effectif. Notre offre est sur la table, j'écoute tes conditions.
+10323|{} Paramètres du profil
+10254|Tu peux changer ton prénom, ton nom et ton apparence de base à tout moment.
+10308|{} Modifier ton nom et ton apparence
+10278|{} Nouvelles coiffures, bandeaux, sous-maillots et couleurs de crampons dans le Studio look.
+10257|Le prénom et le nom ne peuvent pas être vides.
+10311|Tu es désormais connu sous le nom de {}.
+10312|À toi : {} s'avance
+10295|{} tire, tu es dans les buts
+10321|{} tire...
+10260|RATÉ !
+10261|DÉFAITE
+10262|Tir au but
+10263|Lis le gardien, choisis ton coin et tire !
+10264|Tir au but : tu es dans les buts
+10265|Lis le regard de l'attaquant et plonge dans un coin au moment de la frappe !
+10322|{} Studio look
+10326|Supporters {}{}
+10330|{} ans{}
+10266|Ta place
+10267|Tes records de carrière
+10268|Les plus chers du monde
+10324|{} · les plus chers
+10270|Les effectifs les plus chers du championnat
+10317|Il reste {} ans à ton contrat.
+10271|Offre officielle
+10291|{} t'a inscrit sur sa liste pour le prochain mercato.
+10307|{} StarValeur se débloque avec Premium
+10274|Courbe de carrière, classements mondiaux, valeurs des effectifs, rumeurs et comparaisons avec les légendes.
+10325|{} Résumé de carrière
+10331|Négociations avec ton agent
+10332|Négocie avec le directeur sportif : salaire, durée, prime à la signature, promesse de titularisation et clause libératoire. Si tu en demandes trop, il peut partir.
+10335|Revois ton but au ralenti. Passe-le avec « Passer » ou désactive-le dans les Paramètres.
+10338|Prolongations et tirs au but
+10339|En coupe, une égalité mène aux prolongations puis aux tirs au but. Tu tires toi-même ; si tu es gardien, tu es dans les buts.
+10342|Commentaires plus vivants
+10343|Tirs, arrêts, fautes et tribunes. Mets le match en pause ou regarde en 0.5x ; fais défiler les commentaires et le match t'attend.
+10346|Statistiques d'après-match
+10347|Possession, tirs, tirs cadrés et minutes des buts. La fiche du match explique pourquoi tes abonnés montent ou baissent.
+10350|Maillots extérieur
+10351|Chaque équipe a un second maillot ; à l'extérieur, tu portes une autre tenue.
+10352|Change ton nom et ton apparence
+10353|Change gratuitement prénom, nom, teint, cheveux et barbe depuis ton Profil.
+10354|Statistiques formation et pro
+10355|Dans le résumé de carrière, matchs, buts et passes décisives en formation et en pro sont séparés.
+10356|StarValeur sur ton téléphone
+10357|Ta valeur marchande, ton classement mondial, les valeurs des effectifs et les rumeurs dans une nouvelle app.
+10358|Un nouveau prix pour le meilleur buteur d'Europe. L'Étoile d'or tient désormais compte des succès de l'équipe.
+10361|Une star plus forte que son équipe change la course au titre. Ton grand rival joue désormais à son propre niveau.
+10367|Corner pour {}. La tête passe au-dessus.
+10366|{} frappe, le ballon est dévié en corner par un défenseur.

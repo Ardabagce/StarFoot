@@ -102,12 +102,35 @@ const Sprites = {
     };
   },
 
-  // Ev sahibi ile çakışıyorsa deplasman formasını seç
-  kits(own, opp) {
-    const a = Sprites.kit(own, false);
-    let b = Sprites.kit(opp, false);
-    if (Sprites.colorDist(a.shirt, b.shirt) < 110) b = Sprites.kit(opp, true);
-    if (Sprites.colorDist(a.shirt, b.shirt) < 110) b = { shirt: '#f4f4f4', alt: '#1d2433', pattern: 'plain', shorts: '#1d2433', socks: '#f4f4f4' };
+  // İkincil (deplasman) forma: her takıma sabit; beyaz, ikinci renk ya da koyu zemin, kulüp rengiyle şerit/bant
+  awayKit(team) {
+    const id = String(team.id || team.short || team.name || 'X');
+    let h = 0; for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) >>> 0;
+    const c1 = team.c1 || '#1d2433', c2 = team.c2 || '#ffffff';
+    const far = (x) => Sprites.colorDist(x, c1) > 120;
+    const opts = [far(c2) && Sprites.colorDist(c2, '#ffffff') > 60 ? c2 : null, '#f4f4f4', '#151b2b'].filter((x) => x && far(x));
+    const shirt = opts[h % opts.length] || (Sprites.colorDist(c1, '#ffffff') > 200 ? '#f4f4f4' : '#151b2b');
+    const pattern = ['plain', 'band', 'plain', 'hoops'][(h >> 3) % 4];
+    const darkSh = Sprites.colorDist(shirt, '#ffffff') < 60;
+    return { shirt, alt: c1, pattern, shorts: darkSh ? c1 : shirt, socks: shirt, away: true };
+  },
+  // ownAway: oyuncunun takımı deplasmanda → ikincil formayı giyer, ev sahibi asıl formasıyla çıkar
+  kits(own, opp, ownAway) {
+    const WHITE = { shirt: '#f4f4f4', alt: '#1d2433', pattern: 'plain', shorts: '#1d2433', socks: '#f4f4f4' };
+    const DARK = { shirt: '#151b2b', alt: '#f4f4f4', pattern: 'plain', shorts: '#151b2b', socks: '#151b2b' };
+    const ok = (x, y) => Sprites.colorDist(x.shirt, y.shirt) >= 110;
+    let a, b;
+    if (ownAway) {
+      b = Sprites.kit(opp, false);
+      a = Sprites.awayKit(own);
+      if (!ok(a, b)) a = Sprites.kit(own, false);
+      if (!ok(a, b)) a = ok(WHITE, b) ? WHITE : DARK;
+    } else {
+      a = Sprites.kit(own, false);
+      b = Sprites.awayKit(opp);
+      if (!ok(a, b)) b = Sprites.kit(opp, false);
+      if (!ok(a, b)) b = ok(WHITE, a) ? WHITE : DARK;
+    }
     const gk = GK_KITS.find((k) => Sprites.colorDist(k.shirt, a.shirt) > 120 && Sprites.colorDist(k.shirt, b.shirt) > 120) || GK_KITS[0];
     return { own: a, opp: b, gk };
   },

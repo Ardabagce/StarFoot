@@ -281,7 +281,7 @@ const Cups = {
         const f = (cup.first && cup.first[i]) || { hs: 0, as: 0 };
         const gB = hs + f.as, gW = as + f.hs;
         let win = gB > gW ? B : gW > gB ? W : null;
-        if (!win) { e.pens = true; win = U.chance(U.sigmoid((rt(B) - rt(W)) / 12 + 0.1)) ? B : W; }
+        if (!win) { e.pens = true; win = isMine && mine.r.pw ? mine.r.pw : U.chance(U.sigmoid((rt(B) - rt(W)) / 12 + 0.1)) ? B : W; if (isMine && mine.r.pso) e.pso = [mine.r.pso.hs, mine.r.pso.as]; }
         e.w = win; e.agg = [gB, gW];
         next.push(win);
         lines.push(`${w.clubs[B].name} ${gB}-${gW} ${w.clubs[W].name}${e.pens ? ' (pen.)' : ''}`);
@@ -390,14 +390,31 @@ const Cups = {
     ctx.subChance = 0.6;
     if (typeof Big !== 'undefined' && !cup.youth) await Big.prepare(ctx, leaguePhase ? null : (op.base || stageName));
     const sum = await Match.run(ctx, s);
-    let win = sum.hs > sum.as ? 0 : sum.as > sum.hs ? 1 : null, pens = null;
-    if (win === null && !leaguePhase && !two) {
+    let win = sum.hs > sum.as ? 0 : sum.as > sum.hs ? 1 : null, pens = null, et = null, pso = null;
+    // Eşitlik: uzatma (2x15), sonra penaltı atışları (oyuncu sahadaysa kendisi atar ya da kalede durur)
+    const tie = async () => {
+      et = typeof Shootout !== 'undefined' ? Shootout.extra(ctx) : { h: 0, a: 0 };
+      sum.hs += et.h; sum.as += et.a;
+      if (et.h !== et.a) return et.h > et.a ? 0 : 1;
       pens = true;
-      win = U.chance(0.5 + (ctx.side === 'home' ? 1 : -1) * (ctx.home.rating - ctx.away.rating) / 80) ? 0 : 1;
+      if (typeof Shootout === 'undefined') return U.chance(0.5 + (ctx.side === 'home' ? 1 : -1) * (ctx.home.rating - ctx.away.rating) / 80) ? 0 : 1;
+      pso = await Shootout.run(ctx, sum, s);
+      return pso.homeWon ? 0 : 1;
+    };
+    if (win === null && !leaguePhase && !two) win = await tie();
+    let pw = null;
+    if (two && leg === 2 && op.first) {
+      const gH = sum.hs + op.first.as, gA = sum.as + op.first.hs;
+      if (gH === gA) { const w2 = await tie(); if (pens) pw = w2 === 0 ? h : a; }
+    }
+    if (et) {
+      const gf = ctx.side === 'home' ? sum.hs : sum.as, ga = ctx.side === 'home' ? sum.as : sum.hs;
+      sum.res = gf > ga ? 'W' : gf < ga ? 'L' : 'D';
+      sum.gf = gf; sum.ga = ga; sum.aet = true;
     }
     Game.applyMatch(sum, ctx, 'cup');
     let weWon = (win === 0) === (ctx.side === 'home');
-    Cups.advance(s, cup, { h, a, sum, r: { a: sum.hs, b: sum.as, win, pens } });
+    Cups.advance(s, cup, { h, a, sum, r: { a: sum.hs, b: sum.as, win, pens, pw, pso } });
     if (two) {
       const gf = ctx.side === 'home' ? sum.hs : sum.as, ga = ctx.side === 'home' ? sum.as : sum.hs;
       const e = cup.log.slice().reverse().find((m) => m.h === h && m.a === a && m.leg === leg) || {};
@@ -405,7 +422,9 @@ const Cups = {
       else {
         weWon = e.w === s.clubId;
         const ag = e.h === s.clubId ? e.agg : [e.agg[1], e.agg[0]];
-        if (e.pens) Game.news(`${cup.name} ${op.base}: toplam skor ${ag[0]}-${ag[1]}, ${weWon ? 'penaltılarla tur atladık!' : 'penaltılarla elendik.'}`, weWon ? 'good' : 'bad');
+        const psTxt = e.pso ? ` (${ctx.side === 'home' ? e.pso[0] : e.pso[1]}-${ctx.side === 'home' ? e.pso[1] : e.pso[0]})` : '';
+        if (e.pens) Game.news(`${cup.name} ${op.base}: toplam skor ${ag[0]}-${ag[1]}${et ? ', uzatmalardan sonra' : ''}, ${weWon ? `penaltılarla${psTxt} tur atladık!` : `penaltılarla${psTxt} elendik.`}`, weWon ? 'good' : 'bad');
+        else if (et && (et.h || et.a)) Game.news(`${cup.name} ${op.base}: uzatmalarda toplamda ${ag[0]}-${ag[1]} ile ${weWon ? 'tur atladık!' : 'kupaya veda ettik.'}`, weWon ? 'good' : 'bad');
         else Game.news(`${cup.name} ${op.base}: toplamda ${ag[0]}-${ag[1]} ile ${weWon ? 'tur atladık!' : 'kupaya veda ettik.'}`, weWon ? 'good' : 'bad');
       }
     } else if (leaguePhase) {
@@ -413,13 +432,15 @@ const Cups = {
       const rank = Cups.swissTable(cup).findIndex((r) => r.id === s.clubId) + 1;
       Game.news(`${cup.name} ${stageName}: ${gf}-${ga} ${gf > ga ? 'galibiyet' : gf < ga ? 'mağlubiyet' : 'beraberlik'}. Lig aşamasında ${rank}. sıradayız.`, gf > ga ? 'good' : gf < ga ? 'bad' : '');
     } else if (pens) {
-      // penaltı atışları açıkça gösterilir (berabere bitip elenmek kafa karıştırmasın)
-      const ws = U.randi(3, 5), ls = Math.max(1, ws - U.randi(1, 2)), my = weWon ? ws : ls, th = weWon ? ls : ws;
+      // penaltı atışları: seri oyunda oynandı (hızlı ilerlemede yalnız haber)
       const gf = ctx.side === 'home' ? sum.hs : sum.as, ga = ctx.side === 'home' ? sum.as : sum.hs;
-      Game.news(`${cup.name} ${stageName}: maç ${gf}-${ga} bitti, penaltılarda ${my}-${th} ${weWon ? 'kazandık, tur atladık!' : 'kaybettik, elendik.'}`, weWon ? 'good' : 'bad');
-      if (!(typeof FF !== 'undefined' && FF.on)) await new Promise((res) => Game.modal(`<div class="ev-tag">${U.esc(cup.name)} · ${U.esc(stageName)}</div><h2>${weWon ? '✅ Penaltılarla tur atladık!' : '❌ Penaltılarla elendik'}</h2>
-        <p>Maç <b>${gf}-${ga}</b> berabere bitti. Tek maçlık turda eşitlik penaltılarla bozulur.</p>
-        <div class="pso"><span>Penaltılar</span><b>${my} - ${th}</b></div>`, [{ t: 'Devam', fn: res }]));
+      const my = pso ? (ctx.side === 'home' ? pso.hs : pso.as) : (weWon ? 4 : 3), th = pso ? (ctx.side === 'home' ? pso.as : pso.hs) : (weWon ? 3 : 4);
+      Game.news(`${cup.name} ${stageName}: maç uzatmalarla ${gf}-${ga} bitti, penaltılarda ${my}-${th} ${weWon ? 'kazandık, tur atladık!' : 'kaybettik, elendik.'}`, weWon ? 'good' : 'bad');
+    } else if (et && (et.h || et.a)) {
+      const gf = ctx.side === 'home' ? sum.hs : sum.as, ga = ctx.side === 'home' ? sum.as : sum.hs;
+      Game.news(`${cup.name} ${stageName}: uzatmalarda ${gf}-${ga}! ${weWon ? 'Tur atladık!' : 'Kupaya veda ettik.'}`, weWon ? 'good' : 'bad');
+      if (!(typeof FF !== 'undefined' && FF.on)) await new Promise((res) => Game.modal(`<div class="ev-tag">${U.esc(cup.name)} · ${U.esc(stageName)}</div><h2>${weWon ? '✅ Uzatmalarda kazandık!' : '❌ Uzatmalarda kaybettik'}</h2>
+        <p>Normal süre berabere bitti. Uzatmalarda skor <b>${gf}-${ga}</b> oldu.</p>`, [{ t: 'Devam', fn: res }]));
     }
     else Game.news(`${cup.name} ${stageName}: ${weWon ? 'tur atladık!' : 'kupaya veda ettik.'}`, weWon ? 'good' : 'bad');
     if (cup.winner === s.clubId) {

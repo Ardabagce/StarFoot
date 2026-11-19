@@ -214,7 +214,7 @@ const Live = {
       let fin = false;
       const done = (r) => { if (fin) return; fin = true; Game.state = prev; el.remove(); MiniGame._abort = null; res(r); };
       try {
-        const kits = Sprites.kits(L.me, L.oc);
+        const kits = Sprites.kits(L.me, L.oc, !L.match.home);
         const mates = Live.onField().filter((x) => x !== p && x.pos !== 'GK').slice(0, 3).map((x) => x.n.split(' ').slice(-1)[0]);
         const scene = Scenes.make(type, { skill, mates, position: p.pos === 'GK' ? 'MF' : p.pos, pace: st.pace, narrow: window.innerWidth / window.innerHeight < 0.9 });
         MiniGame.play(el.querySelector('.dr-host'), scene, { stats: st, skill, cond: 1.25 - 0.35 * (p.fit / 100), kits, number: 9, mateChance: () => 0.5 })
@@ -339,7 +339,7 @@ const Live = {
       };
       UI.strip(el);
       // küçük saha
-      const kits = Sprites.kits(L.me, L.oc);
+      const kits = Sprites.kits(L.me, L.oc, !L.match.home);
       const hk = L.match.home ? kits.own : kits.opp, ak = L.match.home ? kits.opp : kits.own;
       // küçük sahada renkler karışmasın
       let ac = ak.shirt;

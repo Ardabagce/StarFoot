@@ -612,9 +612,9 @@ document.addEventListener('click', (e) => {
 });
 
 // ---------- Güncelleme duyurusu (her sürümde bir kez) ----------
-const APP_VER = '1.0.25';
+const APP_VER = '1.0.26';
 // Duyuru içeriğinin sürümü: yeni duyuru yazılınca güncellenir (yalnız sürüm atlamak tekrar göstermez)
-const WN_VER = '1.0.25';
+const WN_VER = '1.0.26';
 const WhatsNew = {
   KEY: 'starfoot_whatsnew',
   // Hub'a girişte bir kez gösterir; gösterdiyse true döner. done(): pencere kapanınca çalışır.
@@ -632,6 +632,19 @@ const WhatsNew = {
   // Duyuruyu gösterir (Ayarlar'dan yeniden açılabilir): bu ve bir önceki güncelleme, geçmiş gibi
   show(done) {
     const it = (ic, t, d) => `<li><i data-emo>${ic}</i><span><b>${t}</b><small>${d}</small></span></li>`;
+    const v26 = [
+      it('🤝', 'Menajerinle transfer görüşmesi', 'Sportif direktörle masaya otur: maaş, süre, imza parası, ilk 11 sözü ve serbest kalma maddesi. Fazla istersen masadan kalkabilir.'),
+      it('🎥', 'Gol tekrarı', 'Attığın golü ağır çekimde yeniden izle. "Geç" ile atla ya da Ayarlar’dan kapat.'),
+      it('⚽', 'Uzatma ve penaltı atışları', 'Kupada eşitlik uzatmayla, sonra penaltılarla bozulur. Atışını sen kullanırsın; kaleciysen kalede sen durursun.'),
+      it('🎙️', 'Daha canlı maç anlatımı', 'Şutlar, kurtarışlar, fauller ve tribün. Maçı duraklat, 0.5x hızla izle; anlatımı kaydırınca maç seni bekler.'),
+      it('📊', 'Maç sonu istatistikleri', 'Topla oynama, şut, isabetli şut ve gol dakikaları. Takipçinin neden arttığı ya da düştüğü maç kartında.'),
+      it('👕', 'Deplasman formaları', 'Her takımın ikinci forması var; deplasmanda farklı formayla çıkarsın.'),
+      it('✏️', 'Adını ve görünümünü değiştir', 'Profil’den ad, soyad, ten, saç ve sakalını ücretsiz değiştir.'),
+      it('📋', 'Altyapı ve profesyonel istatistikler', 'Kariyer özetinde altyapı ve profesyonel maç, gol ve asistlerin ayrı.'),
+      it('📈', 'StarDeğer telefonda', 'Piyasa değerin, dünya sıran, kadro değerleri ve söylentiler yeni bir uygulamada.'),
+      it('👟', 'Avrupa Altın Ayakkabı', 'Avrupa’nın gol kralına yeni ödül. Altın Yıldız artık takım başarısını da sayıyor.'),
+      it('⚖️', 'Denge', 'Takımından güçlü bir yıldız şampiyonluk yarışını değiştirir. Ezeli rakip artık kendi seviyesinde oynar.'),
+    ].join('');
     const v25 = [
       it('🛍️', 'Vitrin: 3.500+ ürün', 'Telefondaki yeni alışveriş uygulaması: 30 kurgusal marka, Ekonomik’ten Lüks’e 4 kademe, her sezon yeni koleksiyon.'),
       it('✈️', 'Seyahat', 'Sezon sonu tatilini planla, hafta sonu kaçamaklarına çık.'),
@@ -663,11 +676,11 @@ const WhatsNew = {
     Game.modal(`<div class="wn"><div class="ev-tag">Güncelleme geçmişi</div>
       <h2>Yenilikler 🚀</h2>
       <div class="wn-v"><b>${WN_VER}</b><small>Bu güncelleme</small></div>
-      <ul class="wn-l">${v25}</ul>
-      <div class="wn-v old"><b>1.0.24</b><small>Önceki güncelleme</small></div>
+      <ul class="wn-l">${v26}</ul>
+      <div class="wn-v old"><b>1.0.25</b><small>Önceki güncelleme</small></div>
+      <ul class="wn-l old">${v25}</ul>
+      <div class="wn-v old"><b>1.0.24</b></div>
       <ul class="wn-l old">${v24}</ul>
-      <div class="wn-v old"><b>1.0.22</b></div>
-      <ul class="wn-l old">${v22}</ul>
       <p class="wn-note ok">Diamond’a eklenenlerin hiçbiri maçta güç vermez; ücretsiz oyunda hiçbir şey değişmedi.</p>
       <p class="wn-note">Teknik Direktör modu yepyeni bir fikir ve her güncellemede gelişmeye devam edecek. Fikirlerini bekliyoruz!</p></div>`, btns, { wide: true });
     if (typeof Premium !== 'undefined') Premium.track('whatsnew_view', { ver: WN_VER, premium: has ? 1 : 0 });

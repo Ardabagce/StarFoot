@@ -2976,3 +2976,181 @@
 10057|Richieste di trasferimento nelle giovanili
 10058|Candidati al vivaio del club che vuoi; dai 14 anni entra nei vivai esteri tramite provini.
 10059|Un piano automatico per le azioni settimanali. Corretto: nessuna offerta dopo il passaggio a un club più forte.
+10175|{} · {} anni
+10177|· {} gol
+10172|{} Aspetto
+10154|{} calcia forte, {} la toglie dall'angolo!
+10149|{} colpisce di testa, {} nega il gol.
+10125|{} riparte veloce, {} tira, {} blocca in due tempi.
+10120|{} ci prova da fuori, {} la devia in angolo con la punta delle dita!
+10136|{} piazza il tiro, {} salva con la gamba all'ultimo!
+10122|{} tenta la sorte da fuori, palla alta.
+10124|{} sfiora il palo! Grande occasione per {}.
+10128|{} riparte in contropiede, {} perde l'equilibrio al tiro.
+10137|{} non inquadra il colpo di testa.
+10152|{} prova il tiro al volo, palla in tribuna.
+10129|{} tiene palla e costruisce con pazienza.
+10133|{} crossa da destra, {} allontana di testa.
+10123|{} salta l'uomo a sinistra, ma il cross viene respinto.
+10145|{} si inserisce all'ultimo e sventa il pericolo.
+10157|{} controlla senza problemi il lancio lungo.
+10130|{} è in fuorigioco, l'assistente alza la bandierina.
+10071|Duro contrasto a centrocampo, l'arbitro fischia fallo.
+10151|{} arretra, {} alza la pressione.
+10143|{} e {} tentano l'uno-due, l'ultimo passaggio è lungo.
+10138|{} ottiene una punizione, la palla rimbalza sulla barriera.
+10144|🟨 {} commette un fallo tattico e viene ammonito.
+10074|Entrambe le squadre partono caute, si gioca soprattutto a centrocampo.
+10131|{} vuole prendere subito il controllo.
+10076|Il ritmo sale verso la fine del primo tempo.
+10077|C'è movimento in panchina, potrebbe arrivare un cambio.
+10139|L'allenatore del {} dà indicazioni dalla panchina.
+10134|{} cerca di difendere il risultato e rallenta il gioco.
+10147|{} si riversa tutto in avanti.
+10080|Parità, entrambe cercano il gol vittoria.
+10081|Si entra negli ultimi minuti, gli spalti trattengono il fiato.
+10082|L'arbitro parla con il quarto uomo per il recupero.
+10162|Gli spalti spingono {} a una sola voce!
+10083|I tifosi sono in piedi, lo stadio ruggisce.
+10084|, dopo i supplementari
+10161|passiamo il turno ai rigori{}!
+10164|siamo eliminati ai rigori{}.
+10165|{} {}: risultato complessivo {}-{}{}, {}
+10158|{} {}: {}-{} complessivo dopo i supplementari, {}
+10085|vinto, siamo passati!
+10086|abbiamo perso, siamo fuori.
+10140|{} {}: {}-{} dopo i supplementari, {}-{} ai rigori, {}
+10166|{} {}: {}-{} ai supplementari! {}
+10087|✅ Vinto ai supplementari!
+10089|❌ Persa ai supplementari
+10091|I tempi regolamentari sono finiti in parità. Ai supplementari il risultato è stato
+10171|{} · {} squadre{}
+10094|Scarpa d'Oro Europea
+10095|Sei stato il capocannoniere dei campionati europei
+10096|Sei stato eletto migliore in campo, tutti parlano di te
+10160|I tuoi {} gol sono esplosi sui social
+10097|Il tuo gol è stato condiviso, sono arrivati nuovi follower
+10098|Il tuo voto alto ha attirato l'attenzione
+10099|Il tuo assist è stato notato
+10100|Partita debole: alcuni follower hanno perso interesse
+10101|Il cartellino rosso ha suscitato critiche
+10102|Partita tranquilla, pochi cambiamenti nei follower
+10103|I tuoi follower superano la tua fama: l'interesse si stabilizza col tempo. Gol e premi di migliore in campo lo faranno crescere di nuovo
+10106|Replay del gol
+10107|Rivedi il tuo gol al rallentatore (0.75x). Puoi saltare il replay con "Salta".
+10178|{} Generale
+10174|{} Carriera
+10110|Replay del gol attivo
+10111|Replay del gol disattivato
+10112|CALCI DI RIGORE
+10113|ABBIAMO VINTO!
+10114|⏸ Modalità lettura: partita in pausa · tocca per continuare
+10116|⏸ Pausa
+10118|▶ Riprendi
+10119|Statistiche della partita
+10283|✈️ Anche il tuo eterno rivale {} si è trasferito al {}. La rivalità continua nel nuovo campionato!
+10279|🗞️ {} è rimasto nel tuo vecchio campionato. Nel nuovo la stampa ti confronterà con altri rivali.
+10183|la tua nuova squadra
+10275|🗞️ {} non è più al tuo livello. La stampa ti confronta, con la maglia del {}, con nuovi rivali.
+10185|I tuoi gol nella rivalità
+10327|{} · {} anni
+10313|{}: 👟 Scarpa d'Oro Europea
+10282|La Scarpa d'Oro Europea è mia! {} gol. Questo premio è di ogni compagno che mi ha servito.
+10284|👟 La Scarpa d'Oro Europea {} va a {}! Sei il capocannoniere d'Europa con {} gol.
+10189|SCARPA D'ORO!
+10318|{} Scarpa d'Oro Europea
+10310|{} gol · capocannoniere d'Europa
+10298|👟 Scarpa d'Oro Europea {}: {} ({} gol). {}
+10191|Salta ▶▶
+10192|REPLAY · 0.75x
+10193|Ottimo lavoro. Firma, al resto penso io.
+10196|Accordo raggiunto. Con un procuratore forse avresti ottenuto un po' di più.
+10199|Non conosco bene il budget del club. Non forzerei troppo.
+10202|Non hai un procuratore, tratti da solo. È difficile indovinare il limite del club.
+10205|C'è ancora margine sullo stipendio, possiamo chiedere un po' di più.
+10206|Lo stipendio è vicino al limite. Se serve, puntiamo sul bonus alla firma.
+10209|Fanno fatica a promettere il posto da titolare. Senza questa clausola l'accordo è più facile.
+10212|La clausola rescissoria li infastidisce.
+10213|Questa offerta è al limite del club. Chiedere di più mette a rischio l'accordo.
+10216|Il tuo procuratore
+10217|Nessun procuratore
+10218|La tua voce interiore
+10219|Offerta iniziale
+10220|La promessa del posto da titolare vale per la prima stagione
+10221|Concorrenza
+10222|Promessa del posto da titolare
+10223|Clausola rescissoria
+10224|Più facile partire se arriva un grande club
+10225|Includi
+10226|Alzati dal tavolo
+10227|Fai l'offerta
+10228|Firma il contratto
+10229|Firma più tardi
+10230|Trattativa di mercato
+10231|Direttore sportivo
+10232|Pazienza
+10233|Va bene, accordo fatto. Benvenuto nel nostro club!
+10236|Queste condizioni ci vanno bene. Stringiamoci la mano.
+10239|È stata una trattativa dura, ma abbiamo un accordo.
+10240|, senza promessa del posto da titolare
+10287|Non possiamo dare tanto. La nostra ultima offerta: {} a settimana, bonus alla firma {}{}.
+10242|Queste cifre sono troppo alte per noi.
+10243|Supera il nostro budget, ripensateci.
+10244|Non posso portare un'offerta del genere alla dirigenza.
+10245|Non credo che questa trattativa porterà a qualcosa. Buona giornata.
+10289|🚪 {} ha abbandonato la trattativa e ritirato l'offerta.
+10249|· promessa del posto da titolare
+10250|· clausola rescissoria
+10319|Accordo raggiunto: {}/settimana{}{}
+10314|{} Siediti al tavolo con il tuo procuratore
+10280|{}, ti vogliamo nella nostra rosa. La nostra offerta è sul tavolo, ascolto le tue condizioni.
+10323|{} Impostazioni profilo
+10254|Puoi cambiare nome, cognome e aspetto di base quando vuoi.
+10308|{} Modifica nome e aspetto
+10278|{} Nuove acconciature, fasce, maglie termiche e colori degli scarpini sono nello Studio look.
+10257|Nome e cognome non possono essere vuoti.
+10311|Ora sei conosciuto come {}.
+10312|Tocca a te: {} va sul dischetto
+10295|{} calcia, in porta ci sei tu
+10321|{} calcia...
+10260|SBAGLIATO!
+10261|ABBIAMO PERSO
+10262|Calcio di rigore
+10263|Leggi il portiere, scegli l'angolo e tira!
+10264|Rigore: in porta ci sei tu
+10265|Leggi lo sguardo dell'attaccante e tuffati in un angolo al momento del tiro!
+10322|{} Studio look
+10326|Tifosi {}{}
+10330|{} anni{}
+10266|La tua posizione
+10267|I tuoi record in carriera
+10268|I più preziosi al mondo
+10324|{} · i più preziosi
+10270|Le rose più preziose del campionato
+10317|Al tuo contratto restano {} anni.
+10271|Offerta ufficiale
+10291|{} ti ha messo in lista per la prossima sessione di mercato.
+10307|{} StarValore si sblocca con Premium
+10274|Grafico della carriera, classifiche mondiali, valori delle rose, voci e confronti con le leggende.
+10325|{} Riepilogo carriera
+10331|Trattativa con il tuo procuratore
+10332|Siediti con il direttore sportivo: stipendio, durata, bonus alla firma, promessa del posto da titolare e clausola rescissoria. Se chiedi troppo, può alzarsi dal tavolo.
+10335|Rivedi il tuo gol al rallentatore. Saltalo con "Salta" o disattivalo nelle Impostazioni.
+10338|Supplementari e calci di rigore
+10339|In coppa il pareggio porta ai supplementari e poi ai rigori. Calci tu il tuo rigore; se sei portiere, in porta ci sei tu.
+10342|Telecronaca più viva
+10343|Tiri, parate, falli e tifo. Metti in pausa o guarda a 0.5x; scorri la telecronaca e la partita ti aspetta.
+10346|Statistiche di fine partita
+10347|Possesso, tiri, tiri in porta e minuti dei gol. Perché i tuoi follower salgono o scendono è nella scheda partita.
+10350|Maglie da trasferta
+10351|Ogni squadra ha una seconda maglia; in trasferta indossi una divisa diversa.
+10352|Cambia nome e aspetto
+10353|Cambia gratis nome, cognome, carnagione, capelli e barba dal Profilo.
+10354|Statistiche giovanili e da professionista
+10355|Nel riepilogo carriera presenze, gol e assist giovanili e da professionista sono separati.
+10356|StarValore sul telefono
+10357|Valore di mercato, classifica mondiale, valori delle rose e indiscrezioni in una nuova app.
+10358|Un nuovo premio per il capocannoniere d'Europa. La Stella d'Oro ora considera anche i successi di squadra.
+10361|Una stella più forte della sua squadra cambia la corsa al titolo. Il tuo eterno rivale ora gioca al suo livello.
+10367|Calcio d'angolo per il {}. Il colpo di testa va alto.
+10366|{} tira, la palla viene deviata in angolo da un difensore.

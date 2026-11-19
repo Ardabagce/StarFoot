@@ -2976,3 +2976,181 @@
 10057|Wechselwunsch in der Jugend
 10058|Bewirb dich bei der Akademie deines Wunschvereins; ab 14 kommst du über Probetrainings in Akademien im Ausland.
 10059|Ein automatischer Plan für die wöchentlichen Aktionen. Behoben: keine Angebote mehr nach dem Wechsel zu einem stärkeren Klub.
+10175|{} · {} Jahre
+10177|· {} Tore
+10172|{} Aussehen
+10154|{} zieht hart ab, {} pariert im Eck!
+10149|{} köpft, {} verhindert das Tor.
+10125|{} kontert schnell, {} schießt, {} hat ihn im Nachfassen.
+10120|{} versucht es aus der Distanz, {} lenkt ihn mit den Fingerspitzen zur Ecke!
+10136|{} schiebt ihn ein, {} rettet in letzter Sekunde mit dem Bein!
+10122|{} versucht sein Glück aus der Distanz, der Ball fliegt drüber.
+10124|{} knapp am Pfosten vorbei! Eine Riesenchance für {}.
+10128|{} kontert, {} verliert beim Abschluss das Gleichgewicht.
+10137|{} bringt den Kopfball nicht aufs Tor.
+10152|{} versucht es per Volley, der Ball landet auf der Tribüne.
+10129|{} hält den Ball und baut geduldig auf.
+10133|{} flankt von rechts, {} köpft weg.
+10123|{} setzt sich links durch, doch seine Flanke bleibt hängen.
+10145|{} grätscht in letzter Sekunde dazwischen.
+10157|{} pflückt den langen Ball sicher herunter.
+10130|{} steht im Abseits, der Linienrichter hebt die Fahne.
+10071|Harter Zweikampf im Mittelfeld, der Schiedsrichter pfeift Foul.
+10151|{} zieht sich zurück, {} erhöht den Druck.
+10143|{} und {} versuchen einen Doppelpass, der letzte Ball ist zu lang.
+10138|{} bekommt einen Freistoß, der Ball prallt von der Mauer ab.
+10144|🟨 {} begeht ein taktisches Foul und sieht Gelb.
+10074|Beide Teams beginnen vorsichtig, das Spiel findet im Mittelfeld statt.
+10131|{} will früh die Kontrolle übernehmen.
+10076|Gegen Ende der ersten Halbzeit zieht das Tempo an.
+10077|An der Seitenlinie tut sich was, ein Wechsel steht bevor.
+10139|Der Trainer von {} gibt Anweisungen von der Seitenlinie.
+10134|{} will das Ergebnis halten und verlangsamt das Spiel.
+10147|{} wirft alles nach vorne.
+10080|Es steht unentschieden, beide Teams suchen den Siegtreffer.
+10081|Die Schlussminuten laufen, auf den Rängen hält man den Atem an.
+10082|Der Schiedsrichter bespricht die Nachspielzeit mit dem vierten Offiziellen.
+10162|Die Ränge stehen geschlossen hinter {}!
+10083|Die Fans stehen, das Stadion bebt.
+10084|, nach Verlängerung
+10161|wir sind im Elfmeterschießen{} weiter!
+10164|wir sind im Elfmeterschießen{} ausgeschieden.
+10165|{} {}: Gesamtergebnis {}-{}{}, {}
+10158|{} {}: nach Verlängerung insgesamt {}-{}, {}
+10085|gewonnen, wir sind weiter!
+10086|verloren, wir sind raus.
+10140|{} {}: {}-{} nach Verlängerung, {}-{} im Elfmeterschießen, {}
+10166|{} {}: {}-{} nach Verlängerung! {}
+10087|✅ Sieg in der Verlängerung!
+10089|❌ Niederlage in der Verlängerung
+10091|Die reguläre Spielzeit endete unentschieden. Nach der Verlängerung stand es
+10171|{} · {} Teams{}
+10094|Europäischer Goldener Schuh
+10095|Du warst der beste Torschütze der europäischen Ligen
+10096|Du wurdest zum Spieler des Spiels gewählt, alle reden über dich
+10160|Deine {} Tore gehen in den sozialen Medien viral
+10097|Dein Tor wurde geteilt, neue Follower kamen dazu
+10098|Deine hohe Bewertung fiel auf
+10099|Deine Vorlage stach heraus
+10100|Schwaches Spiel: einige Follower haben das Interesse verloren
+10101|Die Rote Karte sorgte für Kritik
+10102|Ein ruhiges Spiel, kaum Veränderung bei den Followern
+10103|Deine Follower liegen über deinem Ruhm: Das Interesse pendelt sich ein. Tore und Auszeichnungen als Spieler des Spiels lassen es wieder wachsen
+10106|Tor-Wiederholung
+10107|Sieh dein Tor in Zeitlupe (0.75x) noch einmal. Mit „Überspringen“ kannst du die Wiederholung abbrechen.
+10178|{} Allgemein
+10174|{} Karriere
+10110|Tor-Wiederholung an
+10111|Tor-Wiederholung aus
+10112|ELFMETERSCHIESSEN
+10113|GEWONNEN!
+10114|⏸ Lesemodus: Spiel pausiert · zum Fortsetzen tippen
+10116|⏸ Pause
+10118|▶ Weiter
+10119|Spielstatistik
+10283|✈️ Auch dein Erzrivale {} wechselt zu {}. Die Rivalität geht in der neuen Liga weiter!
+10279|🗞️ {} bleibt in deiner alten Liga. In der neuen Liga vergleicht dich die Presse mit anderen Rivalen.
+10183|dein neues Team
+10275|🗞️ {} ist nicht mehr auf deinem Niveau. Die Presse vergleicht dich im Trikot von {} mit neuen Rivalen.
+10185|Deine Tore in der Rivalität
+10327|{} · {} Jahre
+10313|{}: 👟 Europäischer Goldener Schuh
+10282|Der Europäische Goldene Schuh gehört mir! {} Tore. Dieser Preis gehört jedem Mitspieler, der mir den Ball gab.
+10284|👟 Der Europäische Goldene Schuh {} geht an {}! Mit {} Toren bist du Europas Torschützenkönig.
+10189|GOLDENER SCHUH!
+10318|{} Europäischer Goldener Schuh
+10310|{} Tore · Europas Torschützenkönig
+10298|👟 Europäischer Goldener Schuh {}: {} ({} Tore). {}
+10191|Überspringen ▶▶
+10192|WIEDERHOLUNG · 0.75x
+10193|Gute Arbeit. Unterschreib, den Rest erledige ich.
+10196|Ihr seid euch einig. Mit einem Berater hättest du vielleicht etwas mehr bekommen.
+10199|Ich kenne das Budget des Vereins nicht genau. Lass uns nicht zu sehr drängen.
+10202|Du hast keinen Berater und verhandelst selbst. Die Grenze des Vereins ist schwer einzuschätzen.
+10205|Beim Gehalt ist noch Luft, wir können etwas mehr verlangen.
+10206|Das Gehalt ist nahe am Limit. Notfalls setzen wir beim Handgeld an.
+10209|Eine Stammplatzgarantie fällt ihnen schwer. Ohne diese Klausel wird es einfacher.
+10212|Die Ausstiegsklausel stört sie.
+10213|Dieses Angebot ist am Limit des Vereins. Mehr gefährdet den Deal.
+10216|Dein Berater
+10217|Kein Berater
+10218|Deine innere Stimme
+10219|Erstes Angebot
+10220|Die Stammplatzgarantie gilt für die erste Saison
+10221|Konkurrenz
+10222|Stammplatzgarantie
+10223|Ausstiegsklausel
+10224|Wechsel leichter, wenn ein großer Verein kommt
+10225|Ja
+10226|Vom Tisch aufstehen
+10227|Angebot machen
+10228|Vertrag unterschreiben
+10229|Später unterschreiben
+10230|Transfergespräch
+10231|Sportdirektor
+10232|Geduld
+10233|Gut, wir sind uns einig. Willkommen in unserem Verein!
+10236|Diese Bedingungen passen uns. Schlagen wir ein.
+10239|Es war eine harte Verhandlung, aber wir sind uns einig.
+10240|, ohne Stammplatzgarantie
+10287|So viel können wir nicht geben. Unser letztes Angebot: {} pro Woche, Handgeld {}{}.
+10242|Diese Zahlen sind zu hoch für uns.
+10243|Das übersteigt unser Budget, denkt noch einmal nach.
+10244|Mit so einem Angebot kann ich nicht zum Vorstand gehen.
+10245|Ich glaube nicht, dass dieses Gespräch etwas bringt. Schönen Tag noch.
+10289|🚪 {} bricht die Gespräche ab und zieht das Angebot zurück.
+10249|· Stammplatzgarantie
+10250|· Ausstiegsklausel
+10319|Einigung erzielt: {}/Woche{}{}
+10314|{} Mit deinem Berater verhandeln
+10280|{}, wir wollen dich in unserem Kader. Unser Angebot liegt auf dem Tisch, ich höre mir deine Bedingungen an.
+10323|{} Profileinstellungen
+10254|Du kannst Vorname, Nachname und dein Grundaussehen jederzeit ändern.
+10308|{} Name und Aussehen bearbeiten
+10278|{} Neue Frisuren, Stirnbänder, Unterziehshirts und Schuhfarben gibt es im Look-Studio.
+10257|Vor- und Nachname dürfen nicht leer sein.
+10311|Du bist jetzt als {} bekannt.
+10312|Du bist dran: {} tritt an
+10295|{} schießt, du stehst im Tor
+10321|{} schießt...
+10260|VERSCHOSSEN!
+10261|VERLOREN
+10262|Elfmeter
+10263|Lies den Torwart, wähl die Ecke und schieß!
+10264|Elfmeter: Du stehst im Tor
+10265|Lies den Blick des Schützen und flieg im Moment des Schusses in eine Ecke!
+10322|{} Look-Studio
+10326|Fans {}{}
+10330|{} Jahre{}
+10266|Dein Platz
+10267|Deine Karriererekorde
+10268|Die wertvollsten der Welt
+10324|{} · die Wertvollsten
+10270|Die wertvollsten Kader der Liga
+10317|Dein Vertrag läuft noch {} Jahre.
+10271|Offizielles Angebot
+10291|{} hat dich für die nächste Transferperiode auf die Liste gesetzt.
+10307|{} StarWert wird mit Premium freigeschaltet
+10274|Karrierekurve, Weltranglisten, Kaderwerte, Gerüchte und Vergleiche mit Legenden.
+10325|{} Karriereübersicht
+10331|Transfergespräche mit deinem Berater
+10332|Verhandle mit dem Sportdirektor: Gehalt, Laufzeit, Handgeld, Stammplatzgarantie und Ausstiegsklausel. Verlangst du zu viel, steht er auf.
+10335|Sieh dein Tor in Zeitlupe noch einmal. Mit „Überspringen“ abbrechen oder in den Einstellungen ausschalten.
+10338|Verlängerung und Elfmeterschießen
+10339|Im Pokal geht es bei Gleichstand in die Verlängerung, dann ins Elfmeterschießen. Du schießt selbst; als Torwart stehst du im Tor.
+10342|Lebendigerer Spielkommentar
+10343|Schüsse, Paraden, Fouls und Fans. Pausiere das Spiel oder schau mit 0.5x; scrollst du im Kommentar, wartet das Spiel auf dich.
+10346|Statistiken nach dem Spiel
+10347|Ballbesitz, Schüsse, Schüsse aufs Tor und Torminuten. Warum deine Follower steigen oder fallen, steht auf der Spielkarte.
+10350|Auswärtstrikots
+10351|Jedes Team hat ein zweites Trikot; auswärts läufst du in einem anderen Trikot auf.
+10352|Name und Aussehen ändern
+10353|Ändere im Profil kostenlos Vorname, Nachname, Hautton, Frisur und Bart.
+10354|Jugend- und Profistatistik
+10355|In der Karriereübersicht stehen Jugend- und Profispiele, Tore und Vorlagen getrennt.
+10356|StarWert auf dem Handy
+10357|Marktwert, Weltrangliste, Kaderwerte und Gerüchte in einer neuen App.
+10358|Ein neuer Preis für Europas besten Torschützen. Der Goldene Stern zählt jetzt auch Teamerfolge.
+10361|Ein Star, der stärker als sein Team ist, verändert jetzt das Titelrennen. Dein Erzrivale spielt nun auf seinem eigenen Niveau.
+10367|Ecke für {}. Der Kopfball geht drüber.
+10366|{} schießt, der Ball wird von einem Verteidiger zur Ecke abgefälscht.

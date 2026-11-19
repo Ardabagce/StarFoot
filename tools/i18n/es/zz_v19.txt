@@ -2976,3 +2976,181 @@
 10057|Solicitudes de traspaso en la cantera
 10058|Postúlate a la cantera del club que quieras; desde los 14, entra en canteras extranjeras mediante pruebas.
 10059|Plan automático para las acciones semanales. Corregido: no llegaban ofertas tras fichar por un club más fuerte.
+10175|{} · {} años
+10177|· {} goles
+10172|{} Aspecto
+10154|{} le pegó fuerte, ¡{} la sacó en la esquina!
+10149|{} conectó de cabeza, {} evitó el gol.
+10125|{} salió rápido, {} disparó y {} atrapó el balón en dos tiempos.
+10120|{} probó desde fuera del área, ¡{} la desvió a córner con la punta de los dedos!
+10136|{} colocó el disparo, ¡{} salvó con la pierna en el último momento!
+10122|{} probó suerte desde fuera del área, el balón se fue por encima.
+10124|¡{} la mandó junto al poste! Gran ocasión para {}.
+10128|{} salió al contragolpe, {} perdió el equilibrio en el remate.
+10137|{} no pudo dirigir su cabezazo a puerta.
+10152|{} probó una volea, el balón acabó en la grada.
+10129|{} tiene el balón y elabora con paciencia.
+10133|{} centró desde la derecha, {} despejó de cabeza.
+10123|{} superó a su par por la izquierda, pero su centro chocó con la defensa.
+10145|{} se interpuso en el último momento y evitó el peligro.
+10157|{} controló sin problemas el balón largo.
+10130|{} cayó en fuera de juego, el juez de línea levantó la bandera.
+10071|Duro choque en el centro del campo, el árbitro señaló falta.
+10151|{} se replegó, {} aumenta la presión.
+10143|{} y {} intentaron una pared, el último pase fue largo.
+10138|{} ganó una falta, el balón rebotó en la barrera.
+10144|🟨 {} cometió una falta táctica y vio la amarilla.
+10074|Ambos equipos empezaron con cautela, el juego está en el centro del campo.
+10131|{} quiere tomar el control en los primeros minutos.
+10076|El ritmo subió hacia el final de la primera parte.
+10077|Hay movimiento en la banda, puede haber un cambio.
+10139|El entrenador de {} da instrucciones desde la banda.
+10134|{} intenta conservar el resultado y frena el juego.
+10147|{} lo da todo y se vuelca al ataque.
+10080|Empate, ambos equipos buscan el gol de la victoria.
+10081|Entramos en los minutos finales, la grada contiene la respiración.
+10082|El árbitro habla con el cuarto árbitro sobre el descuento.
+10162|¡La grada, a una sola voz con {}!
+10083|La afición está de pie, el estadio ruge.
+10084|, tras la prórroga
+10161|¡pasamos de ronda en los penaltis{}!
+10164|quedamos eliminados en los penaltis{}.
+10165|{} {}: global {}-{}{}, {}
+10158|{} {}: {}-{} en el global tras la prórroga, {}
+10085|¡ganamos y pasamos de ronda!
+10086|perdimos y quedamos eliminados.
+10140|{} {}: {}-{} tras la prórroga, {}-{} en los penaltis, {}
+10166|{} {}: ¡{}-{} en la prórroga! {}
+10087|✅ ¡Ganamos en la prórroga!
+10089|❌ Perdimos en la prórroga
+10091|El tiempo reglamentario terminó en empate. En la prórroga el marcador fue
+10171|{} · {} equipos{}
+10094|Bota de Oro Europea
+10095|Fuiste el máximo goleador de las ligas europeas
+10096|Fuiste elegido mejor jugador del partido, todos hablan de ti
+10160|Tus {} goles explotaron en las redes sociales
+10097|Tu gol se compartió y llegaron nuevos seguidores
+10098|Tu alta valoración llamó la atención
+10099|Tu asistencia destacó
+10100|Partido flojo: algunos seguidores perdieron el interés
+10101|La tarjeta roja generó críticas
+10102|Partido tranquilo, pocos cambios en seguidores
+10103|Tus seguidores superan tu fama: el interés se equilibra con el tiempo. Los goles y los premios al mejor jugador lo harán crecer de nuevo
+10106|Repetición del gol
+10107|Vuelve a ver tu gol a cámara lenta (0.75x). Puedes saltar la repetición con "Saltar".
+10178|{} General
+10174|{} Carrera
+10110|Repetición del gol activada
+10111|Repetición del gol desactivada
+10112|TANDA DE PENALTIS
+10113|¡GANAMOS!
+10114|⏸ Modo lectura: partido en pausa · toca para continuar
+10116|⏸ Pausa
+10118|▶ Continuar
+10119|Estadísticas del partido
+10283|✈️ Tu eterno rival {} también fichó por {}. ¡La rivalidad sigue en la nueva liga!
+10279|🗞️ {} se quedó en tu antigua liga. En tu nueva liga la prensa te comparará con otros rivales.
+10183|tu nuevo equipo
+10275|🗞️ {} ya no está a tu nivel. La prensa te compara, con la camiseta de {}, con nuevos rivales.
+10185|Tus goles en la rivalidad
+10327|{} · {} años
+10313|{}: 👟 Bota de Oro Europea
+10282|¡La Bota de Oro Europea es mía! {} goles. Este premio es de cada compañero que me la pasó.
+10284|👟 ¡La Bota de Oro Europea {} es para {}! Fuiste el máximo goleador de Europa con {} goles.
+10189|¡BOTA DE ORO!
+10318|{} Bota de Oro Europea
+10310|{} goles · máximo goleador de Europa
+10298|👟 Bota de Oro Europea {}: {} ({} goles). {}
+10191|Saltar ▶▶
+10192|REPETICIÓN · 0.75x
+10193|Buen trabajo. Firma, yo me encargo del resto.
+10196|Hay acuerdo. Con un agente quizá habrías sacado algo más.
+10199|No conozco bien el presupuesto del club. Yo no presionaría demasiado.
+10202|No tienes agente, negocias tú mismo. Es difícil adivinar el límite del club.
+10205|Aún hay margen en el sueldo, podemos pedir algo más.
+10206|El sueldo está cerca del límite. Si hace falta, apretemos con la prima de fichaje.
+10209|Les cuesta prometer la titularidad. Si quitamos esta cláusula, el acuerdo será más fácil.
+10212|La cláusula de rescisión les molesta.
+10213|Esta oferta está en el límite del club. Pedir más pone en riesgo el acuerdo.
+10216|Tu agente
+10217|Sin agente
+10218|Tu voz interior
+10219|Oferta inicial
+10220|La promesa de titularidad vale para la primera temporada
+10221|Competencia
+10222|Promesa de titularidad
+10223|Cláusula de rescisión
+10224|Más fácil salir si llega un club grande
+10225|Incluir
+10226|Levantarse de la mesa
+10227|Presentar la oferta
+10228|Firmar el contrato
+10229|Firmar más tarde
+10230|Negociación del traspaso
+10231|Director deportivo
+10232|Paciencia
+10233|Bien, hay acuerdo. ¡Bienvenido a nuestro club!
+10236|Estas condiciones nos convienen. Démonos la mano.
+10239|Fue una negociación dura, pero hay acuerdo.
+10240|, sin promesa de titularidad
+10287|No podemos dar tanto. Nuestra última oferta: {} a la semana, prima de fichaje {}{}.
+10242|Estas cifras son demasiado altas para nosotros.
+10243|Supera nuestro presupuesto, piénsenlo de nuevo.
+10244|No puedo llevar una oferta así a la directiva.
+10245|Creo que de esta negociación no saldrá nada. Buenos días.
+10289|🚪 {} abandonó la negociación y retiró su oferta.
+10249|· promesa de titularidad
+10250|· cláusula de rescisión
+10319|Acuerdo cerrado: {}/semana{}{}
+10314|{} Siéntate a negociar con tu agente
+10280|{}, queremos tenerte en la plantilla. Nuestra oferta está sobre la mesa, escucho tus condiciones.
+10323|{} Ajustes de perfil
+10254|Puedes cambiar tu nombre, apellido y aspecto básico cuando quieras.
+10308|{} Editar nombre y aspecto
+10278|{} Los nuevos peinados, cintas, camisetas interiores y colores de botas están en el Estudio de aspecto.
+10257|El nombre y el apellido no pueden estar vacíos.
+10311|Ahora te conocen como {}.
+10312|Te toca: {} se acerca al balón
+10295|{} lanza, tú estás en la portería
+10321|{} lanza...
+10260|¡FALLÓ!
+10261|PERDIMOS
+10262|Penalti
+10263|¡Lee al portero, elige la esquina y dispara!
+10264|Penalti: estás en la portería
+10265|¡Lee la mirada del delantero y lánzate a una esquina al golpeo!
+10322|{} Estudio de aspecto
+10326|Afición {}{}
+10330|{} años{}
+10266|Tu posición
+10267|Tus récords de carrera
+10268|Los más valiosos del mundo
+10324|{} · los más valiosos
+10270|Las plantillas más valiosas de la liga
+10317|A tu contrato le quedan {} años.
+10271|Oferta oficial
+10291|{} te apuntó en su lista para el próximo mercado.
+10307|{} StarValor se desbloquea con Premium
+10274|Gráfico de carrera, rankings mundiales, valores de plantilla, rumores y comparaciones con leyendas.
+10325|{} Resumen de carrera
+10331|Negociación con tu agente
+10332|Siéntate con el director deportivo: sueldo, duración, prima de fichaje, promesa de titularidad y cláusula de rescisión. Si pides demasiado, puede levantarse.
+10335|Vuelve a ver tu gol a cámara lenta. Sáltalo con "Saltar" o desactívalo en Ajustes.
+10338|Prórroga y tandas de penaltis
+10339|En copa, el empate va a la prórroga y luego a los penaltis. Tú lanzas tu penalti; si eres portero, estás bajo los palos.
+10342|Narración más viva
+10343|Disparos, paradas, faltas y la grada. Pausa el partido o míralo a 0.5x; si desplazas la narración, el partido te espera.
+10346|Estadísticas de final de partido
+10347|Posesión, disparos, disparos a puerta y minutos de los goles. En la ficha del partido verás por qué subieron o bajaron tus seguidores.
+10350|Equipaciones de visitante
+10351|Cada equipo tiene una segunda equipación; fuera de casa juegas con otra camiseta.
+10352|Cambia tu nombre y tu aspecto
+10353|Cambia gratis tu nombre, apellido, piel, pelo y barba desde el Perfil.
+10354|Estadísticas de cantera y profesionales
+10355|En el resumen de carrera, partidos, goles y asistencias de cantera y profesionales aparecen por separado.
+10356|StarValor en el móvil
+10357|Tu valor de mercado, ranking mundial, valores de plantilla y rumores en una nueva app.
+10358|Un nuevo premio para el máximo goleador de Europa. La Estrella de Oro ahora también cuenta el éxito del equipo.
+10361|Una estrella más fuerte que su equipo cambia la lucha por el título. Tu eterno rival ahora juega a su propio nivel.
+10367|Córner para {}. El cabezazo se va por encima.
+10366|{} disparó, el balón tocó en un defensa y se fue a córner.

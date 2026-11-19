@@ -697,6 +697,7 @@ const Game = {
     const why = [];
     let folWhy = '';
     if (sum.played) {
+      if (typeof CStats !== 'undefined') CStats.yEnsure(p);
       if (comp === 'intl' && ctx.intlCat) {
         p.intlY = p.intlY || {};
         const y = (p.intlY[ctx.intlCat] = p.intlY[ctx.intlCat] || { caps: 0, goals: 0 });
@@ -709,6 +710,7 @@ const Game = {
         if (sum.motm) ss.motm++;
       }
       p.totals.apps++; p.totals.goals += sum.goals; p.totals.assists += sum.assists; p.totals.ratingSum += sum.rating;
+      if ((youth || Game.inStreet()) && typeof CStats !== 'undefined') CStats.yAdd(p, sum);
       if (typeof Market !== 'undefined' && comp !== 'intl' && !ctx.intlCat) Market.track(sum);
       if (sum.motm) p.totals.motm++;
       const wb = Player.wearBoot(p);
@@ -1128,7 +1130,7 @@ const Game = {
     p.history.push({
       year: s.season.year, age: p.age, club: Game.teamName(), league: compName, pos,
       apps: ss.apps, goals: ss.goals, assists: ss.assists, avg: Math.round(avg * 100) / 100, motm: ss.motm, ovr,
-      europe: europe ? europe.name : null,
+      europe: europe ? europe.name : null, yth: youth || undefined,
     });
 
     // dünya
@@ -1274,6 +1276,7 @@ const Game = {
     Game.wipe();
     const t = p.totals;
     const avg = t.apps ? (t.ratingSum / t.apps).toFixed(2) : '-';
+    const endSplit = typeof CStats !== 'undefined' ? CStats.splitHtml(p) : '';
     const legend = hasL ? Legacy.score(p) : Math.round(t.goals * 1 + t.assists * 0.6 + p.trophies.length * 8 + p.intl.caps * 1.5 + p.fame * 2);
     const title = legend > 900 ? 'Efsane' : legend > 500 ? 'Süperstar' : legend > 250 ? 'Saygın Profesyonel' : legend > 100 ? 'Emektar Futbolcu' : 'Sıradan Bir Kariyer';
     const el = document.getElementById('end');
@@ -1292,6 +1295,7 @@ const Game = {
           <div><span>Servet</span><b>${U.money(p.money)}</b></div>
           <div><span>Efsane Puanı</span><b>${legend}</b></div>
         </div>
+        ${endSplit}
         <h3>Kupalar ve Ödüller</h3>
         <ul class="trophies">${p.trophies.map((x) => `<li>${U.esc(x)}</li>`).join('') || '<li>Ödül yok</li>'}</ul>
         ${typeof LPath !== 'undefined' ? LPath.endHtml(s) : ''}
@@ -1527,7 +1531,7 @@ const UI = {
       <div class="st-cell st-ap"><div><span>Hafta hakkı</span><i class="ap">${Array.from({ length: 3 }, (_, i) => `<i class="${i < s.ap ? 'on' : ''}"></i>`).join('')}</i></div><b>${s.ap}/3</b></div>`;
   },
 
-  player() { return UI.playerCard() + (typeof Star !== 'undefined' ? Star.hubCard() : '') + UI.celebCard() + Social.render(true); },
+  player() { return UI.playerCard() + (typeof ProfEdit !== 'undefined' ? ProfEdit.card() : '') + (typeof Star !== 'undefined' ? Star.hubCard() : '') + UI.celebCard() + Social.render(true); },
 
   // Profil: oyuncu kartı, sosyal medya ve kariyer tek sekmede
   profile() {
@@ -2151,7 +2155,10 @@ ${UI.paper()}`;
   },
 
   career() {
-    const p = Game.p, t = p.totals;
+    const p = Game.p, t0 = p.totals;
+    // özet: profesyonel kariyer başladıysa profesyonel sayılar, altyapı ayrı tabloda
+    const sp = typeof CStats !== 'undefined' ? CStats.split(p) : null;
+    const t = sp && sp.y.apps && sp.pro.apps ? Object.assign({}, t0, sp.pro) : t0;
     const hist = p.history.slice().reverse();
     return `${typeof CStats !== 'undefined' ? CStats.card() : ''}${typeof Pers !== 'undefined' ? Pers.card() : ''}${typeof Traits !== 'undefined' ? Rival.card() + Peers.card() + Traits.card() + Records.card() : ''}
       <div class="card">
@@ -2161,11 +2168,12 @@ ${UI.paper()}`;
           <div><span>Gol</span><b>${t.goals}</b></div>
           <div><span>Asist</span><b>${t.assists}</b></div>
           <div><span>Ort. Reyting</span><b>${t.apps ? (t.ratingSum / t.apps).toFixed(2) : '-'}</b></div>
-          <div><span>Maçın Adamı</span><b>${t.motm}</b></div>
+          <div><span>Maçın Adamı</span><b>${t0.motm}</b></div>
           <div><span>Milli Maç</span><b>${p.intl.caps} (${p.intl.goals} gol)</b></div>${['U21', 'U19'].filter((c) => p.intlY && p.intlY[c]).map((c) => `<div><span>${c} Milli Maç</span><b>${p.intlY[c].caps} (${p.intlY[c].goals} gol)</b></div>`).join('')}
           ${Game.inStreet() ? '' : `<div${typeof Market !== 'undefined' ? ' class="mv-tap" data-mvopen role="button"' : ''}><span>Piyasa Değeri</span><b>${U.money(Game.marketValue(p))}</b></div>`}
           ${p.best && p.best.fee ? `<div><span>Rekor Bonservis</span><b>${U.money(p.best.fee)}</b></div>` : ''}
         </div>
+        ${sp ? CStats.splitHtml(p) : ''}
       </div>
       <div class="card">
         <div class="card-h"><span>${Icon('table')} Sezonlar</span></div>
@@ -2246,6 +2254,7 @@ ${UI.paper()}`;
       </section>
       <section class="card settings">
         <div class="card-h"><span>${Icon('train')} Oynanış</span></div>
+        ${typeof MiniGame !== 'undefined' && MiniGame.replayOn ? row('Gol tekrarı', 'Attığın golü ağır çekimde (0.75x) yeniden izle. Tekrarı "Geç" ile atlayabilirsin.', `<div class="seg">${[['on', 'Açık'], ['off', 'Kapalı']].map(([k, l]) => `<button data-replay="${k}" class="${(MiniGame.replayOn() ? 'on' : 'off') === k ? 'on' : ''}">${l}</button>`).join('')}</div>`) : ''}
         ${typeof MiniGame !== 'undefined' && MiniGame.style ? row('Vuruş tarzı', MiniGame.style() === 'aim' ? 'Dokunuş: geri çekip nişan al, sonra topun bir noktasına dokun. Yanlar falso, alt kısım aşırtma verir.' : 'StarFoot: geri çek ve bırak; çizginin yönü falsoyu belirler.', `<div class="seg">${[['swipe', 'StarFoot'], ['aim', 'Dokunuş']].map(([k, l]) => `<button data-shot="${k}" class="${MiniGame.style() === k ? 'on' : ''}">${l}</button>`).join('')}</div>`) : ''}
         ${typeof Perf !== 'undefined' ? (() => { const pf = Perf.pref(), cur = pf === '1' ? 'lite' : pf === '0' ? 'high' : 'auto';
           const d = cur === 'lite' ? 'Hafif: daha düşük çözünürlük ve az efekt. Eski telefonlarda akıcı oyun.' : cur === 'high' ? 'Yüksek: tam çözünürlük ve tüm efektler.' : (Perf.low ? 'Otomatik: telefonun için hafif mod açık.' : 'Otomatik: telefon yavaşsa grafikler kendiliğinden hafifler.');
@@ -2451,6 +2460,7 @@ ${UI.paper()}`;
     U.$$('[data-setcur]', root).forEach((b) => (b.onclick = () => { try { if (b.dataset.setcur) localStorage.setItem('starfoot_cur', b.dataset.setcur); else localStorage.removeItem('starfoot_cur'); } catch (e) { /* yok */ } Game.render(); }));
     U.$$('select[data-setlang]', root).forEach((b) => (b.onchange = () => { if (b.value !== I18N.lang) { Game.save(); I18N.set(b.value); } }));
     U.$$('[data-perf]', root).forEach((b) => (b.onclick = () => { const k = b.dataset.perf; Perf.set(k === 'auto' ? null : k === 'lite'); Game.toast(k === 'lite' ? 'Performans: Hafif' : k === 'high' ? 'Performans: Yüksek' : 'Performans: Otomatik', 'good'); Game.render(); }));
+    U.$$('[data-replay]', root).forEach((b) => (b.onclick = () => { MiniGame.setReplay(b.dataset.replay === 'on'); Game.toast(b.dataset.replay === 'on' ? 'Gol tekrarı açık' : 'Gol tekrarı kapalı', 'good'); Game.render(); }));
     U.$$('[data-shot]', root).forEach((b) => (b.onclick = () => { if (MiniGame.style() === b.dataset.shot) return; MiniGame.setStyle(b.dataset.shot); Game.toast(b.dataset.shot === 'aim' ? 'Vuruş tarzı: Dokunuş' : 'Vuruş tarzı: StarFoot', 'good'); Game.render(); }));
     U.$$('[data-sys]', root).forEach((b) => (b.onclick = () => {
       const k = b.dataset.sys;

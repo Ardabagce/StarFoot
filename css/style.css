@@ -4300,3 +4300,47 @@ body.lite .ph-gohome { -webkit-backdrop-filter: none; backdrop-filter: none; }
 .sv-lock { padding: 16px; border-radius: 18px; background: rgba(255, 244, 214, .04); border: 1px dashed rgba(232, 195, 106, .35); text-align: center; }
 .sv-lock b { display: flex; justify-content: center; gap: 6px; color: #f1d58a; font-size: 14.5px; }
 .sv-lock small { display: block; margin: 6px 0 12px; color: #a89670; font-size: 12px; line-height: 1.4; }
+/* altyapı / profesyonel istatistik tablosu */
+.cs-split{width:100%;border-collapse:collapse;margin:10px 0 2px;font-size:14px}
+.cs-split th,.cs-split td{padding:7px 6px;text-align:center;border-bottom:1px solid rgba(255,255,255,.08)}
+.cs-split tr:first-child th{font-size:11px;letter-spacing:.6px;text-transform:uppercase;color:var(--muted,#9fb0d8);font-weight:700}
+.cs-split th:first-child{text-align:left;font-weight:700}
+.cs-split td{font-weight:700;font-variant-numeric:tabular-nums}
+/* gol tekrarı */
+.mg-skip{position:absolute;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:5;border:0;border-radius:999px;padding:10px 16px;background:rgba(5,11,29,.82);color:#fff;font:800 15px "Barlow Semi Condensed",system-ui,sans-serif;letter-spacing:.4px;border:1px solid rgba(255,255,255,.25);cursor:pointer}
+.mg-replay{position:absolute;left:12px;top:12px;z-index:5;display:flex;align-items:center;gap:7px;padding:6px 11px;border-radius:8px;background:rgba(5,11,29,.82);color:#fff;font:800 13px "Barlow Semi Condensed",system-ui,sans-serif;letter-spacing:1px;pointer-events:none}
+.mg-replay i{width:9px;height:9px;border-radius:50%;background:#e1283e;animation:mgRec 1s infinite}
+@keyframes mgRec{50%{opacity:.25}}
+/* profil ayarları */
+.pe-card .pe-sub{margin:2px 0 10px;font-size:14px}
+.pe-names{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:6px 0 12px}
+.pe-names input{width:100%;box-sizing:border-box}
+.pe-note{font-size:13px;margin-top:12px}
+@media (max-width:420px){.pe-names{grid-template-columns:1fr}}
+/* penaltı atışları */
+.pso-ov{position:fixed;inset:0;z-index:1200;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(3,7,20,.82);backdrop-filter:blur(3px)}
+.pso-card{width:min(440px,100%);background:linear-gradient(160deg,#15275a,#0a1530);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:18px 16px;box-shadow:0 20px 60px rgba(0,0,0,.5);text-align:center}
+.pso-tag{font:800 italic 20px "Saira Condensed","Arial Narrow",sans-serif;letter-spacing:1px;color:#ffcf3f;margin-bottom:12px}
+.pso-rows{display:grid;gap:10px}
+.pso-r{display:grid;grid-template-columns:64px 1fr 32px;align-items:center;gap:10px}
+.pso-r b{font:800 18px "Saira Condensed","Arial Narrow",sans-serif;text-align:left;letter-spacing:.5px}
+.pso-r b.me{color:#ffcf3f}
+.pso-r em{font:800 26px "Saira Condensed","Arial Narrow",sans-serif;font-style:normal}
+.pso-dots{display:flex;gap:7px;flex-wrap:wrap}
+.pso-dots i{width:22px;height:22px;border-radius:50%;border:2px solid rgba(255,255,255,.3);box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center}
+.pso-dots i.g{background:#2fbf71;border-color:#2fbf71}
+.pso-dots i.x{background:#e1283e;border-color:#e1283e}
+.pso-dots i.me{box-shadow:0 0 0 3px rgba(255,207,63,.8)}
+.pso-say{min-height:26px;margin:14px 0 4px;font:700 17px "Barlow Semi Condensed",system-ui,sans-serif}
+.pso-btns{margin-top:10px}
+.pso-btns .btn{width:100%}
+.pso-ov.won .pso-say{color:#7cf0a0}
+.pso-ov.lost .pso-say{color:#ff7a7a}
+.pso-mg{z-index:1210}
+.pso-mg .mm-auto{min-height:38px;padding:6px 12px;font-size:15px}
+/* maç anlatımı: okuma modu */
+.mt-main{position:relative}
+.mt-hold{display:none;position:absolute;left:50%;bottom:10px;transform:translateX(-50%);z-index:3;padding:8px 14px;border-radius:999px;background:rgba(255,207,63,.96);color:#0a1530;font:700 13px "Barlow Semi Condensed",system-ui,sans-serif;white-space:nowrap;box-shadow:0 6px 18px rgba(0,0,0,.35);cursor:pointer;max-width:calc(100% - 20px);overflow:hidden;text-overflow:ellipsis}
+.mt-hold.on{display:block}
+.fd.fl{color:#cdd7f4}
+#mt-pause{width:100%}
