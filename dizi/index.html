@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>StarFoot · Futbol Kariyer Oyunu</title>
+<meta property="og:title" content="StarFoot · Futbol Kariyer Oyunu">
+<meta property="og:description" content="Sokaktan dünya yıldızlığına. iPhone ve Android'de ücretsiz.">
+<meta property="og:image" content="https://starfoot.bagce.dev/site/tr-1-moment.jpg">
+<link rel="icon" href="/icons/icon-192.png">
+<style>
+:root{--bg:#0b1530;--fg:#fff;--mut:#b9c3dd}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;text-align:center}
+main{max-width:480px;margin:0 auto;padding:48px 16px}
+img{width:96px;height:96px;border-radius:22px}
+h1{font-size:26px;margin:16px 0 22px}
+a{display:block;background:#000;color:#fff;text-decoration:none;border:1px solid #ffffff40;border-radius:14px;padding:14px;margin:10px auto;max-width:280px;font-weight:600}
+p{color:var(--mut);font-size:14px}
+</style>
+</head>
+<body>
+<main>
+  <img src="/icons/icon-192.png" alt="StarFoot">
+  <h1>StarFoot · Futbol Kariyer Oyunu</h1>
+  <a id="ios" href="https://apps.apple.com/tr/app/id6819292902">App Store'dan indir</a>
+  <a id="play" href="https://play.google.com/store/apps/details?id=app.vercel.starfoot.twa&amp;referrer=utm_source%3Dinstagram%26utm_medium%3Dinfluencer%26utm_campaign%3Ddizi">Google Play'den indir</a>
+  <p>Ücretsiz · İnternetsiz oynanır</p>
+</main>
+<script>
+// Instagram iş birliği linki: telefona göre doğrudan mağazaya yönlendirir.
+(function () {
+  var ua = navigator.userAgent || '';
+  var to = /android/i.test(ua) ? document.getElementById('play').href
+    : /iphone|ipad|ipod/i.test(ua) || (/macintosh/i.test(ua) && 'ontouchend' in document) ? document.getElementById('ios').href : '';
+  if (to) setTimeout(function () { location.replace(to); }, 250);
+})();
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
