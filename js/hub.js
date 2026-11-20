@@ -77,7 +77,7 @@ const Hub = {
   },
   tiles(tab, list) {
     if (!list.length) return '';
-    return `<div class="hub-tiles">${list.map((x) => `<button type="button" class="hub-tile${x.hot ? ' hot' : ''}" data-hubopen="${tab}" data-hubkey="${U.esc(x.key)}">
+    return `<div class="hub-tiles${list.length > 4 ? ' many' : ''}">${list.map((x) => `<button type="button" class="hub-tile${x.hot ? ' hot' : ''}" data-hubopen="${tab}" data-hubkey="${U.esc(x.key)}">
       <span class="ht-ic">${x.icon}</span><span class="ht-t"><b>${U.esc(x.title)}</b>${x.sub ? `<small>${U.esc(x.sub)}</small>` : ''}</span></button>`).join('')}</div>`;
   },
 
@@ -324,4 +324,22 @@ const Hub = {
   // menüye dönüş, yeni kariyer vb.
   const tm = Game.toMenu;
   if (tm) Game.toMenu = function () { Hub.close(); return tm.apply(this, arguments); };
+})();
+
+// Ekranı doldur: özet ve kutucuklar alttaki sekme çubuğuna kadar uzanır (telefon düzeni)
+(() => {
+  const fit = () => {
+    const hub = document.querySelector('#main > .hub');
+    if (!hub) return;
+    const tabs = document.getElementById('tabs');
+    const fixed = tabs && getComputedStyle(tabs).position === 'fixed';
+    if (!fixed) { hub.style.minHeight = ''; return; }
+    const bottom = tabs.getBoundingClientRect().top;
+    const h = Math.floor(bottom - hub.getBoundingClientRect().top - window.scrollY * 0 - 12);
+    hub.style.minHeight = h > 300 ? h + 'px' : '';
+  };
+  Hub.fit = fit;
+  const r1 = Game.render;
+  Game.render = function () { const out = r1.apply(this, arguments); try { fit(); requestAnimationFrame(fit); } catch (e) { /* yok */ } return out; };
+  window.addEventListener('resize', () => { try { fit(); } catch (e) { /* yok */ } });
 })();
