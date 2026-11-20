@@ -3154,3 +3154,9 @@
 10361|Um astro mais forte que o time muda a briga pelo título. Seu arquirrival agora joga no próprio nível.
 10367|Escanteio para o {}. A cabeçada vai por cima.
 10366|{} chutou, a bola desviou na defesa e foi para escanteio.
+10373|({}-{} após a prorrogação, pênaltis{})
+10374|({}-{} na prorrogação)
+10369|Jogos sem sofrer gols
+10370|Pênaltis defendidos
+10371|JSG
+10372|Def.

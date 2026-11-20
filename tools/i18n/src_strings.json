@@ -13929,7 +13929,16 @@
 "lang-pt.js"
 ],
 "{} vurdu, top savunmaya çarpıp kornere gitti.": [
-"comm.js"
+"comm.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "{} vole denedi, top tribünlere gitti.": [
 "comm.js",
@@ -14004,7 +14013,16 @@
 "lang-pt.js"
 ],
 "Korner {} için. Kafa vuruşu üstten auta.": [
-"comm.js"
+"comm.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "{} ofsayta yakalandı, yan hakem bayrağını kaldırdı.": [
 "comm.js",
@@ -14508,6 +14526,7 @@
 ],
 "Kurtarış": [
 "cstats.js",
+"game.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -16366,17 +16385,11 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"(penaltılar)": [
-"cups.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
+"(uzatmalarla {}-{}, penaltılarda{})": [
+"cups.js"
+],
+"(uzatmalarda {}-{})": [
+"cups.js"
 ],
 "{} şampiyonu: {}!": [
 "cups.js",
@@ -45620,6 +45633,12 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Gol Yemeden Biten Maç": [
+"game.js"
+],
+"Penaltı Kurtarışı": [
+"game.js"
+],
 "class=\"mv-tap\" data-mvopen role=\"button\"": [
 "game.js"
 ],
@@ -45659,6 +45678,12 @@
 "lang-ja.js",
 "lang-pt.js",
 "meta.js"
+],
+"GY": [
+"game.js"
+],
+"Kurt.": [
+"game.js"
 ],
 "Vitrin şimdilik boş. İlk kupan burada parlayacak.": [
 "game.js",
@@ -110532,6 +110557,50 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Kafa vuruşu üstten auta.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"The header goes over.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"vurdu, top savunmaya çarpıp kornere gitti.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"shot, the ball deflected off a defender for a corner.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "(Asist)": [
 "lang-ar.js",
 "lang-de.js",
@@ -110543,6 +110612,17 @@
 "lang-ja.js",
 "lang-pt.js",
 "match.js"
+],
+"(penaltılar)": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 ", bırak: yavaşla · ibreyi yeşil bantta tut ·": [
 "lang-ar.js",
@@ -178206,6 +178286,28 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"KAFA VURUŞU ÜSTTEN AUTA.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"THE HEADER GOES OVER.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -218862,6 +218964,28 @@
 "lang-pt.js",
 "starlife.js"
 ],
+"Korner {} için.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Corner for {}.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "ile {} ayrıldı.": [
 "lang-ar.js",
 "lang-de.js",
@@ -254978,6 +255102,9 @@
 "🚪 {} bricht die Gespräche ab und zieht das Angebot zurück.": [
 "lang-de.js"
 ],
+"{} schießt, der Ball wird von einem Verteidiger zur Ecke abgefälscht.": [
+"lang-de.js"
+],
 "{} ist geschlossen. Offene Angebote sind verfallen.": [
 "lang-de.js"
 ],
@@ -255267,6 +255394,9 @@
 "lang-de.js"
 ],
 "{0} überraschte einen Fan zum Geburtstag": [
+"lang-de.js"
+],
+"Ecke für {}. Der Kopfball geht drüber.": [
 "lang-de.js"
 ],
 "Klatsch: {} zusammen mit {} {} gesichtet!": [
@@ -290280,6 +290410,9 @@
 "🚪 {} walked out of the talks and withdrew the offer.": [
 "lang-en.js"
 ],
+"{} shot, the ball deflected off a defender for a corner.": [
+"lang-en.js"
+],
 "{} has closed. Pending offers expired.": [
 "lang-en.js"
 ],
@@ -290569,6 +290702,9 @@
 "lang-en.js"
 ],
 "{0} surprised a fan on their birthday": [
+"lang-en.js"
+],
+"Corner for {}. The header goes over.": [
 "lang-en.js"
 ],
 "Gossip: {} spotted together with {} {}!": [
@@ -325892,6 +326028,9 @@
 "🚪 {} abandonó la negociación y retiró su oferta.": [
 "lang-es.js"
 ],
+"{} disparó, el balón tocó en un defensa y se fue a córner.": [
+"lang-es.js"
+],
 "{} se ha cerrado. Las ofertas pendientes caducaron.": [
 "lang-es.js"
 ],
@@ -326181,6 +326320,9 @@
 "lang-es.js"
 ],
 "{0} sorprendió a un fan en su cumpleaños": [
+"lang-es.js"
+],
+"Córner para {}. El cabezazo se va por encima.": [
 "lang-es.js"
 ],
 "Cotilleo: ¡{} visto junto a {} {}!": [
@@ -360493,6 +360635,9 @@
 "🚪 {} a quitté la négociation et retiré son offre.": [
 "lang-fr.js"
 ],
+"{} frappe, le ballon est dévié en corner par un défenseur.": [
+"lang-fr.js"
+],
 "{} est fermé. Les offres en attente ont expiré.": [
 "lang-fr.js"
 ],
@@ -360782,6 +360927,9 @@
 "lang-fr.js"
 ],
 "{0} a fait une surprise à un fan pour son anniversaire": [
+"lang-fr.js"
+],
+"Corner pour {}. La tête passe au-dessus.": [
 "lang-fr.js"
 ],
 "Rumeur : {} aperçu avec {} {} !": [
@@ -394505,6 +394653,9 @@
 "🚪 {} mundur dari negosiasi dan menarik tawarannya.": [
 "lang-id.js"
 ],
+"{} menembak, bola membentur bek dan keluar untuk tendangan sudut.": [
+"lang-id.js"
+],
 "{} ditutup. Tawaran yang tertunda sudah kedaluwarsa.": [
 "lang-id.js"
 ],
@@ -394794,6 +394945,9 @@
 "lang-id.js"
 ],
 "{0} memberi kejutan ulang tahun untuk penggemar": [
+"lang-id.js"
+],
+"Tendangan sudut untuk {}. Sundulan melambung.": [
 "lang-id.js"
 ],
 "Gosip: {} terlihat bersama {} {}!": [
@@ -428524,6 +428678,9 @@
 "🚪 {} ha abbandonato la trattativa e ritirato l'offerta.": [
 "lang-it.js"
 ],
+"{} tira, la palla viene deviata in angolo da un difensore.": [
+"lang-it.js"
+],
 "{} è chiuso. Le offerte in sospeso sono scadute.": [
 "lang-it.js"
 ],
@@ -428813,6 +428970,9 @@
 "lang-it.js"
 ],
 "{0} ha fatto una sorpresa a un tifoso per il compleanno": [
+"lang-it.js"
+],
+"Calcio d'angolo per il {}. Il colpo di testa va alto.": [
 "lang-it.js"
 ],
 "Gossip: {} avvistato insieme a {} {}!": [
@@ -432632,6 +432792,9 @@
 "lang-ja.js"
 ],
 "{} {}：延長戦で{}-{}、PK戦{}-{}、{}": [
+"lang-ja.js"
+],
+"{}のシュートはDFに当たってコーナーへ。": [
 "lang-ja.js"
 ],
 "{}が落ち着いてPKを決めた！": [
@@ -463016,6 +463179,9 @@
 "🚪 {} abandonou a negociação e retirou a proposta.": [
 "lang-pt.js"
 ],
+"{} chutou, a bola desviou na defesa e foi para escanteio.": [
+"lang-pt.js"
+],
 "{} fechou. As ofertas pendentes expiraram.": [
 "lang-pt.js"
 ],
@@ -463305,6 +463471,9 @@
 "lang-pt.js"
 ],
 "{0} fez surpresa no aniversário de um fã": [
+"lang-pt.js"
+],
+"Escanteio para o {}. A cabeçada vai por cima.": [
 "lang-pt.js"
 ],
 "Fofoca: {} visto junto com {} {}!": [

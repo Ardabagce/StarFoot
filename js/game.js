@@ -708,6 +708,7 @@ const Game = {
         const ss = s.season.stats;
         ss.apps++; ss.goals += sum.goals; ss.assists += sum.assists; ss.ratingSum += sum.rating; ss.minutes += sum.minutes;
         if (sum.motm) ss.motm++;
+        if (p.position === 'GK') ss.sv = (ss.sv || 0) + (sum.saves || 0); // gol yemeden biten maç (ss.cs) value.js'te sayılır
       }
       p.totals.apps++; p.totals.goals += sum.goals; p.totals.assists += sum.assists; p.totals.ratingSum += sum.rating;
       if ((youth || Game.inStreet()) && typeof CStats !== 'undefined') CStats.yAdd(p, sum);
@@ -1131,6 +1132,7 @@ const Game = {
       year: s.season.year, age: p.age, club: Game.teamName(), league: compName, pos,
       apps: ss.apps, goals: ss.goals, assists: ss.assists, avg: Math.round(avg * 100) / 100, motm: ss.motm, ovr,
       europe: europe ? europe.name : null, yth: youth || undefined,
+      cs: p.position === 'GK' ? ss.cs || 0 : undefined, sv: p.position === 'GK' ? ss.sv || 0 : undefined,
     });
 
     // dünya
@@ -1363,7 +1365,7 @@ const UI = {
     const ss = s.season.stats;
     const lg = Game.league();
     const pos = lg ? World.sortedTable(lg).findIndex((r) => r.id === s.clubId) + 1 : 0;
-    return { live: true, year: s.season.year, age: p.age, club: Game.teamName(), league: Game.leagueName(), pos, apps: ss.apps, goals: ss.goals, assists: ss.assists, avg: ss.apps ? ss.ratingSum / ss.apps : 0, ovr: Player.overall(p) };
+    return { live: true, year: s.season.year, age: p.age, club: Game.teamName(), league: Game.leagueName(), pos, apps: ss.apps, goals: ss.goals, assists: ss.assists, avg: ss.apps ? ss.ratingSum / ss.apps : 0, ovr: Player.overall(p), cs: p.position === 'GK' ? ss.cs || 0 : undefined, sv: p.position === 'GK' ? ss.sv || 0 : undefined };
   },
 
   // Son maçın raporu: ilişkiler, takipçi ve ün değişimi
@@ -2169,6 +2171,7 @@ ${UI.paper()}`;
           <div><span>Asist</span><b>${t.assists}</b></div>
           <div><span>Ort. Reyting</span><b>${t.apps ? (t.ratingSum / t.apps).toFixed(2) : '-'}</b></div>
           <div><span>Maçın Adamı</span><b>${t0.motm}</b></div>
+          ${p.position === 'GK' && typeof CStats !== 'undefined' ? (() => { const c = CStats.ensure(p); return `<div><span>Gol Yemeden Biten Maç</span><b>${c.cs || 0}</b></div><div><span>Kurtarış</span><b>${c.sv || 0}</b></div><div><span>Penaltı Kurtarışı</span><b>${c.ps || 0}</b></div>`; })() : ''}
           <div><span>Milli Maç</span><b>${p.intl.caps} (${p.intl.goals} gol)</b></div>${['U21', 'U19'].filter((c) => p.intlY && p.intlY[c]).map((c) => `<div><span>${c} Milli Maç</span><b>${p.intlY[c].caps} (${p.intlY[c].goals} gol)</b></div>`).join('')}
           ${Game.inStreet() ? '' : `<div${typeof Market !== 'undefined' ? ' class="mv-tap" data-mvopen role="button"' : ''}><span>Piyasa Değeri</span><b>${U.money(Game.marketValue(p))}</b></div>`}
           ${p.best && p.best.fee ? `<div><span>Rekor Bonservis</span><b>${U.money(p.best.fee)}</b></div>` : ''}
@@ -2183,7 +2186,7 @@ ${UI.paper()}`;
           return `<div class="sn ${h.live ? 'live' : ''}">
             <div class="sn-y"><b>${h.year}</b><small>${h.age} yaş</small>${h.live ? '<small class="live-dot">canlı</small>' : ''}</div>
             <div class="sn-c"><b>${U.esc(h.club)}</b><small>${U.esc(h.league)}${h.pos ? ` · <em>${h.pos}.</em>` : ''}</small></div>
-            <div class="sn-st"><span><b>${h.apps}</b><small>Maç</small></span><span><b>${h.goals}</b><small>Gol</small></span><span><b>${h.assists}</b><small>Asist</small></span><span><b>${h.avg ? h.avg.toFixed(1) : '-'}</b><small>Ort.</small></span><span class="ovr"><b>${h.ovr}</b><small>Güç</small></span></div>
+            <div class="sn-st"><span><b>${h.apps}</b><small>Maç</small></span>${h.cs != null ? `<span><b>${h.cs}</b><small>GY</small></span><span><b>${h.sv}</b><small>Kurt.</small></span>` : `<span><b>${h.goals}</b><small>Gol</small></span><span><b>${h.assists}</b><small>Asist</small></span>`}<span><b>${h.avg ? h.avg.toFixed(1) : '-'}</b><small>Ort.</small></span><span class="ovr"><b>${h.ovr}</b><small>Güç</small></span></div>
             ${tro.length || h.europe || tr.length ? `<div class="hist-tro">${tro.map((t) => `<span>${U.esc(t)}</span>`).join('')}${h.europe ? `<span class="eu">${U.esc(h.europe)} bileti</span>` : ''}${tr.map((x) => `<span class="tf">${U.esc(x.to)} · ${x.fee ? U.money(x.fee) : 'bonservissiz'}</span>`).join('')}</div>` : ''}
           </div>`;
         }).join('')}</div>

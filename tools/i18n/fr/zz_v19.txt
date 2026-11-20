@@ -3154,3 +3154,9 @@
 10361|Une star plus forte que son équipe change la course au titre. Ton grand rival joue désormais à son propre niveau.
 10367|Corner pour {}. La tête passe au-dessus.
 10366|{} frappe, le ballon est dévié en corner par un défenseur.
+10373|({}-{} après prolongation, tirs au but{})
+10374|({}-{} après prolongation)
+10369|Clean sheets
+10370|Penaltys arrêtés
+10371|CS
+10372|Arr.

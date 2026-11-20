@@ -3154,3 +3154,9 @@
 10361|Bintang yang lebih kuat dari timnya kini mengubah perebutan gelar. Rival abadimu kini bermain di levelnya sendiri.
 10367|Tendangan sudut untuk {}. Sundulan melambung.
 10366|{} menembak, bola membentur bek dan keluar untuk tendangan sudut.
+10373|({}-{} setelah perpanjangan waktu, adu penalti{})
+10374|({}-{} di perpanjangan waktu)
+10369|Nirbobol
+10370|Penalti diselamatkan
+10371|NB
+10372|Pen.

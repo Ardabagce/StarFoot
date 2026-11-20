@@ -3154,3 +3154,9 @@
 10361|Una stella più forte della sua squadra cambia la corsa al titolo. Il tuo eterno rivale ora gioca al suo livello.
 10367|Calcio d'angolo per il {}. Il colpo di testa va alto.
 10366|{} tira, la palla viene deviata in angolo da un difensore.
+10373|({}-{} dopo i supplementari, rigori{})
+10374|({}-{} ai supplementari)
+10369|Porta inviolata
+10370|Rigori parati
+10371|PI
+10372|Par.

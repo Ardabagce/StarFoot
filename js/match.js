@@ -785,7 +785,7 @@ const Match = {
       { const lo = isHome ? lh : la, lx = isHome ? la : lh;
         const talk = !M.instant && typeof Comm !== 'undefined';
         if (U.chance(Math.min(0.45, lo / 90 * 4.5))) { M.tst.o[0]++; const on = U.chance(0.3); if (on) M.tst.o[1]++; if (talk && U.chance(0.5)) feed(Comm.shot(own, opp, on, M.min)); }
-        if (U.chance(Math.min(0.45, lx / 90 * 4.5))) { M.tst.x[0]++; const on = U.chance(0.3); if (on) M.tst.x[1]++; if (talk && U.chance(0.5)) feed(Comm.shot(opp, own, on, M.min)); }
+        if (U.chance(Math.min(0.45, lx / 90 * 4.5))) { M.tst.x[0]++; const on = U.chance(0.3); if (on) M.tst.x[1]++; if (on && p.position === 'GK' && onPitch()) M.saves++; if (talk && U.chance(0.5)) feed(Comm.shot(opp, own, on, M.min)); }
         if (talk && U.chance(0.12)) feed(Comm.flow({ home: ctx.home, away: ctx.away, hs: M.hs, as: M.as, min: M.min, homeR: homeR(), awayR: awayR(), crowd: !street && U.chance(0.15) }), 'fl');
         const d = (isHome ? homeR() - awayR() : awayR() - homeR());
         M.poss += U.clamp(50 + d * 0.9 + U.rand(-6, 6), 28, 72); M.possN++; }

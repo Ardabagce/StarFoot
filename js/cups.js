@@ -545,13 +545,27 @@ const Cups = {
         ctx.subChance = 0.7;
         const sum = await Match.run(ctx, s);
         if (s.tournament !== t) return; // maç sırasında başka kayıt yüklendiyse eski turnuvayı sürdürme
+        let win = sum.hs > sum.as ? 0 : sum.as > sum.hs ? 1 : null, pens = null, et = null, pso = null;
+        if (win === null) {
+          // eşitlik: uzatma, sonra penaltı atışları (oyuncu sahadaysa kendi atışını kullanır, kaleciyse kalede durur)
+          et = typeof Shootout !== 'undefined' ? Shootout.extra(ctx) : { h: 0, a: 0 };
+          sum.hs += et.h; sum.as += et.a;
+          if (et.h !== et.a) win = et.h > et.a ? 0 : 1;
+          else {
+            pens = true;
+            if (typeof Shootout !== 'undefined') { pso = await Shootout.run(ctx, sum, s); win = pso.homeWon ? 0 : 1; }
+            else win = U.chance(0.5) ? 0 : 1;
+          }
+          const gf = ctx.side === 'home' ? sum.hs : sum.as, ga = ctx.side === 'home' ? sum.as : sum.hs;
+          sum.gf = gf; sum.ga = ga; sum.res = gf > ga ? 'W' : gf < ga ? 'L' : 'D'; sum.aet = true;
+        }
         Game.applyMatch(sum, ctx, 'intl');
         t.myGoals += sum.goals;
-        let win = sum.hs > sum.as ? 0 : sum.as > sum.hs ? 1 : null, pens = null;
-        if (win === null) { pens = true; win = U.chance(0.5) ? 0 : 1; }
         const res = Cups.simTourStage(s, { h, a, r: { a: sum.hs, b: sum.as, win, pens } });
         const weWon = t.alive.includes(nat.code);
-        Game.news(`${t.name} ${res.stageName}: ${nat.name} ${weWon ? 'tur atladı' : 'elendi'}${pens ? ' (penaltılar)' : ''}.`, weWon ? 'good' : 'bad');
+        const gf2 = ctx.side === 'home' ? sum.hs : sum.as, ga2 = ctx.side === 'home' ? sum.as : sum.hs;
+        const pTxt = pso ? ` ${ctx.side === 'home' ? pso.hs : pso.as}-${ctx.side === 'home' ? pso.as : pso.hs}` : '';
+        Game.news(`${t.name} ${res.stageName}: ${nat.name} ${weWon ? 'tur atladı' : 'elendi'}${pens ? ` (uzatmalarla ${gf2}-${ga2}, penaltılarda${pTxt})` : et ? ` (uzatmalarda ${gf2}-${ga2})` : ''}.`, weWon ? 'good' : 'bad');
       } else {
         const res = Cups.simTourStage(s, null);
         Game.news(`${t.name} ${res.stageName}: ${res.lines.slice(0, 4).join(' · ')}`, 'world');

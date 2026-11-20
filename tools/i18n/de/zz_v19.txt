@@ -3154,3 +3154,9 @@
 10361|Ein Star, der stärker als sein Team ist, verändert jetzt das Titelrennen. Dein Erzrivale spielt nun auf seinem eigenen Niveau.
 10367|Ecke für {}. Der Kopfball geht drüber.
 10366|{} schießt, der Ball wird von einem Verteidiger zur Ecke abgefälscht.
+10373|({}-{} nach Verlängerung, Elfmeterschießen{})
+10374|({}-{} nach Verlängerung)
+10369|Zu-null-Spiele
+10370|Gehaltene Elfmeter
+10371|ZN
+10372|Par.

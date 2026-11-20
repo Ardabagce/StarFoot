@@ -46,6 +46,7 @@ const Shootout = {
         me = true;
         if (ui) ui.say(`${U.esc(opp.name)} atışı kullanıyor, kalede sen varsın`);
         goal = !(await Shootout.mySave(ctx, s, own, opp));
+        if (!goal && typeof CStats !== 'undefined') { try { const c = CStats.ensure(p); c.sv = (c.sv || 0) + 1; c.ps = (c.ps || 0) + 1; } catch (e) { /* yok */ } }
       } else {
         if (ui) { ui.say(`${U.esc((side === 'h' ? ctx.home : ctx.away).name)} atışı kullanıyor...`); await Shootout.wait(750); }
         goal = U.chance(Shootout.pGoal(rt[side], rt[other]));

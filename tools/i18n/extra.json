@@ -5333,5 +5333,11 @@
 "Avrupa’nın gol kralına yeni ödül. Altın Yıldız artık takım başarısını da sayıyor.": "A new award for Europe's top scorer. The Golden Star now also counts team success.",
 "Takımından güçlü bir yıldız şampiyonluk yarışını değiştirir. Ezeli rakip artık kendi seviyesinde oynar.": "A star stronger than his team now changes the title race. Your arch-rival now plays at his own level.",
 "Korner {} için. Kafa vuruşu üstten auta.": "Corner for {}. The header goes over.",
-"{} vurdu, top savunmaya çarpıp kornere gitti.": "{} shot, the ball deflected off a defender for a corner."
+"{} vurdu, top savunmaya çarpıp kornere gitti.": "{} shot, the ball deflected off a defender for a corner.",
+"(uzatmalarla {}-{}, penaltılarda{})": "({}-{} after extra time, penalties{})",
+"(uzatmalarda {}-{})": "({}-{} after extra time)",
+"Gol Yemeden Biten Maç": "Clean Sheets",
+"Penaltı Kurtarışı": "Penalty Saves",
+"GY": "CS",
+"Kurt.": "Sav."
 }

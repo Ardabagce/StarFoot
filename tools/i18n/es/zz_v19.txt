@@ -3154,3 +3154,9 @@
 10361|Una estrella más fuerte que su equipo cambia la lucha por el título. Tu eterno rival ahora juega a su propio nivel.
 10367|Córner para {}. El cabezazo se va por encima.
 10366|{} disparó, el balón tocó en un defensa y se fue a córner.
+10373|({}-{} tras la prórroga, penaltis{})
+10374|({}-{} en la prórroga)
+10369|Porterías a cero
+10370|Penaltis parados
+10371|PC
+10372|Par.
