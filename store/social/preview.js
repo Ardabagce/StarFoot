@@ -60,7 +60,7 @@ img{width:330px;height:330px;border-radius:74px;box-shadow:0 30px 90px rgba(255,
     ['ig', 0, 90, 5],
     ['wiki', 0, 80, 6],
     ['airport', 0, 90, 7],
-    ['ballon', 0, 100, 8],
+    ['ballon', 0, 100, -1],
   ];
   const parts = [];
   const enc = '-c:v libx264 -preset medium -crf 17 -pix_fmt yuv420p -r 30 -an';

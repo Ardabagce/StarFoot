@@ -52,19 +52,19 @@ async function career(pg, pos) {
       so.followers = 1204; Game.tab = 'profile'; Game.render();
     }, lang === 'en');
     if (!ONLY || ONLY === 'ig') {
-      // Instagram bölümüne kay, takipçi sayısı hızla artar
-      const y = await pg.evaluate(() => { const e = document.querySelector('.ig-tabs') || document.querySelector('.ig-grid'); const h = e && e.closest('section'); return h ? h.getBoundingClientRect().top + window.scrollY - 10 : 0; });
+      // telefondaki StarFeed profili: takipçi sayısı hızla artar
+      await pg.evaluate(() => { Phone.show('feed'); Phone.sub = 'me'; Phone.render(); });
+      await pg.clock.runFor(400);
       const acts = {};
-      for (let i = 0; i < 105; i++) acts[i] = () => pg.evaluate(([i, y]) => {
-        window.scrollTo(0, Math.round(y * Math.min(1, i / 20)));
-        const so = Game.p.social, k = Math.min(1, Math.max(0, (i - 25) / 60));
+      for (let i = 0; i < 105; i++) acts[i] = () => pg.evaluate((i) => {
+        const so = Game.p.social, k = Math.min(1, Math.max(0, (i - 15) / 60));
         so.followers = Math.round(1204 * Math.pow(10400000 / 1204, k * k * (3 - 2 * k)));
-        if (i % 3 === 0) { const sy = window.scrollY; Game.render(); window.scrollTo(0, sy); }
-      }, [i, y]);
+        if (i % 3 === 0) Phone.render();
+      }, i);
       await record(pg, path.join(OUT, 'ig'), 3.5, acts);
     }
     if (!ONLY || ONLY === 'wiki') {
-      await pg.evaluate(() => { window.scrollTo(0, 0); const p = Game.p; p.totals.goals = 612; p.totals.assists = 248; p.ballon = 5; Star.wiki(); });
+      await pg.evaluate(() => { if (Phone.open) Phone.close(); window.scrollTo(0, 0); const p = Game.p; p.totals.goals = 612; p.totals.assists = 248; p.ballon = 5; Star.wiki(); });
       await pg.clock.runFor(400);
       const acts = {};
       for (let i = 0; i < 105; i++) acts[i] = () => pg.evaluate((i) => { const m = document.querySelector('#modal .modal-card, #modal .card, #modal > div'); const el = document.querySelector('#modal'); const sc = [...document.querySelectorAll('#modal *')].find((e) => e.scrollHeight > e.clientHeight + 40) || el; sc.scrollTop = Math.max(0, i - 20) * 9; }, i);
