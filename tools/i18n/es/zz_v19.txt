@@ -3160,3 +3160,55 @@
 10370|Penaltis parados
 10371|PC
 10372|Par.
+10375|Último partido
+10376|Periódico
+10377|Salir con el equipo
+10378|Hablar con el entrenador
+10379|Estás lesionado. Descansar recupera tu energía y tu moral.
+10382|Tienes poca energía. Descansar esta semana te ayudará en el partido.
+10384|La relación con el entrenador está fría. Hablar aumenta tus opciones de ser titular.
+10428|Entrena {} y sigue mejorando.
+10387|Hecho
+10388|Elegir acción
+10439|Te quedan {} acciones
+10390|Sin acciones · listo para el partido
+10391|Aplicar
+10392|Consejo del entrenador
+10435|{} · Partido {} · Nivel rival {}
+10446|A {} pts del líder
+10437|Líder · {} pts de ventaja
+10393|Líder
+10394|Siguiente:
+10438|{} pts · {} PJ · {}G {}E {}P
+10395|Atributos
+10449|{} · {} · {} AÑOS
+10396|Grupo
+10447|Clasificación {} {}
+10420|Sorteo de {}: {} cae en el grupo con {}. Los 2 primeros van al torneo.
+10441|y tiene billete para {} {}!
+10427|{} terminada: {} acabó {}º del grupo{}
+10421|¡Tenemos billete para {} {}! Orgulloso de ser parte de este camino.
+10400|Clasificado para el torneo
+10401|Eliminado
+10448|Jornada {}/3
+10419|Se juega en las semanas de selecciones. Los 2 primeros se clasifican para {} {}.
+10403|Eliminado en la clasificación
+10443|{}º en el grupo de clasificación
+10423|{} ¡CONVOCADO POR LA SELECCIÓN! {}: te espera el partido {} {}.
+10425|{} ¡Convocado para un partido de clasificación!
+10444|{} · Partido {} • {} - {}
+10406|Campeonato Sudamericano
+10407|Copa de Naciones de Asia
+10408|Copa de Naciones de África
+10409|Campeonato de Norte y Centroamérica
+10410|Copa de Naciones de Oceanía
+10411|Campeón continental
+10412|Ganaste el campeonato de selecciones de tu continente
+10413|Billete asegurado
+10414|Te clasificaste a un torneo con tu selección
+10415|COPA DE ASIA
+10416|COPA DE ÁFRICA
+10417|OCEANÍA
+10434|{} países, campeonato continental
+10454|{} terminada: {} acabó {}º del grupo y tiene billete para {} {}!
+10452|{} terminada: {} acabó {}º del grupo y se perderá el torneo.

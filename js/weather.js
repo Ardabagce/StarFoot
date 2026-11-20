@@ -15,7 +15,7 @@ const Weather = {
     const winter = round >= 12 && round <= 26;
     const lg = ctx.lg || '';
     const north = ['ENG', 'ENG2', 'GER', 'GER2', 'TR1', 'TR2', 'NED', 'BEL', 'SCO', 'AUT', 'SUI', 'DEN', 'CZE', 'POL', 'UKR', 'youth', 'ucl', 'uel', 'uecl'].includes(lg);
-    const summer = ['wc', 'euro', 'intl', 'street', 'BRA', 'ARG', 'csa', 'KSA', 'MEX', 'ccc', 'acl'].includes(lg);
+    const summer = ['wc', 'euro', 'sacup', 'asiacup', 'afcup', 'nacup', 'occup', 'intl', 'street', 'BRA', 'ARG', 'csa', 'KSA', 'MEX', 'ccc', 'acl'].includes(lg);
     const w = {
       clear: summer ? 70 : 50,
       rain: (lg === 'ENG' ? 28 : 18) + (winter ? 6 : 0),
@@ -132,6 +132,11 @@ const COMP_THEMES = {
   wc: { c1: '#2e0812', c2: '#7a1a2e', a: '#ffcf3f', fx: 'gold', l: 'Dünya Şampiyonası' },
   euro: { c1: '#071a4a', c2: '#1d4ed8', a: '#93c5fd', fx: 'rays', l: 'Avrupa Milletler Şampiyonası' },
   nl: { c1: '#04201d', c2: '#0f766e', a: '#5eead4', fx: 'rays', l: 'Milletler Ligi Finalleri' },
+  sacup: { c1: '#0a1f4a', c2: '#1e40af', a: '#fde047', fx: 'gold', l: 'Güney Amerika Şampiyonası' },
+  asiacup: { c1: '#06261f', c2: '#0f766e', a: '#fda4af', fx: 'rays', l: 'Asya Uluslar Kupası' },
+  afcup: { c1: '#08240f', c2: '#15803d', a: '#fde047', fx: 'rays', l: 'Afrika Uluslar Kupası' },
+  nacup: { c1: '#081a33', c2: '#0e7490', a: '#67e8f9', fx: 'rays', l: 'Kuzey ve Orta Amerika Şampiyonası' },
+  occup: { c1: '#071c33', c2: '#0369a1', a: '#bae6fd', fx: 'rays', l: 'Okyanusya Uluslar Kupası' },
 };
 const CompTheme = {
   // milli maçta ülke renkleri kullanılır
@@ -187,6 +192,11 @@ const SCOREBOARDS = {
   uel: { tag: 'FEDERASYON', c1: '#f36f21', c2: '#1b1d22' },
   wc: { tag: 'DÜNYA ŞAMPİYONASI', c1: '#7a1a2e', c2: '#ffcf3f' },
   euro: { tag: 'EURO', c1: '#1d4ed8', c2: '#ffffff' },
+  sacup: { tag: 'GÜNEY AMERİKA', c1: '#1e40af', c2: '#fde047' },
+  asiacup: { tag: 'ASYA KUPASI', c1: '#0f766e', c2: '#ffffff' },
+  afcup: { tag: 'AFRİKA KUPASI', c1: '#15803d', c2: '#fde047' },
+  nacup: { tag: 'KUZEY AMERİKA', c1: '#0e7490', c2: '#ffffff' },
+  occup: { tag: 'OKYANUSYA', c1: '#0369a1', c2: '#ffffff' },
   intl: { tag: 'MİLLİ MAÇ', c1: '#c8102e', c2: '#ffffff' },
   youth: { tag: 'ALTYAPI', c1: '#16a34a', c2: '#ffffff' },
   street: { tag: 'MAHALLE', c1: '#6b7280', c2: '#ffffff' },

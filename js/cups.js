@@ -9,6 +9,16 @@ const NAT_COLORS = {
 const EURO_NATIONS = ['TUR', 'FRA', 'ESP', 'ENG', 'POR', 'GER', 'NED', 'ITA', 'BEL', 'CRO', 'NOR', 'POL', 'GEO', 'AZE', 'SCO', 'AUT', 'SUI', 'GRE', 'DEN', 'CZE', 'UKR',
   'SRB', 'SWE', 'WAL', 'HUN', 'ROU', 'SVK', 'IRL', 'SVN', 'ALB', 'BIH', 'ISL', 'FIN', 'NIR', 'MNE', 'BUL', 'MKD', 'KAZ', 'ARM', 'LUX', 'BLR', 'LTU', 'LVA', 'EST',
   'RUS', 'ISR', 'KVX', 'CYP', 'FRO', 'MDA', 'MLT', 'AND', 'GIB', 'LIE', 'SMR'];
+// Kıta konfederasyonları (milli turnuvalar ve elemeler için)
+const CONFEDS = {
+  CONMEBOL: ['ARG', 'BRA', 'URU', 'COL', 'ECU', 'PAR', 'CHI', 'PER', 'VEN', 'BOL'],
+  CONCACAF: ['USA', 'MEX', 'CAN', 'PAN', 'CRC', 'JAM', 'HAI', 'CUW', 'HON', 'GUA', 'SLV', 'TRI', 'NCA', 'SUR', 'DOM', 'GUY', 'PUR', 'CUB', 'BER', 'GRN', 'BLZ'],
+  CAF: ['EGY', 'MAR', 'TUN', 'ALG', 'GHA', 'SEN', 'CIV', 'NGA', 'CMR', 'RSA', 'CPV', 'MLI', 'COD', 'BFA', 'GUI', 'GAB', 'ANG', 'ZAM', 'BEN', 'UGA', 'KEN', 'EQG', 'MOZ', 'MAD', 'TAN', 'COM', 'LBY', 'MTN', 'SLE', 'NAM', 'SDN', 'CGO', 'ZIM', 'TOG', 'GAM', 'GNB', 'NIG', 'MWI', 'RWA', 'CTA', 'BOT', 'BDI', 'ETH', 'SWZ', 'LBR', 'LES', 'SSD'],
+  AFC: ['JPN', 'KSA', 'IRN', 'KOR', 'AUS', 'QAT', 'UZB', 'JOR', 'IRQ', 'UAE', 'OMA', 'IDN', 'CHN', 'BHR', 'SYR', 'THA', 'VIE', 'KGZ', 'LBN', 'IND', 'TJK', 'PLE', 'PRK', 'MAS', 'KUW', 'TKM', 'PHI', 'HKG', 'YEM', 'SIN', 'MYA', 'AFG', 'MDV', 'NEP', 'BAN', 'CAM', 'MNG', 'LAO', 'PAK', 'SRI', 'BRU', 'BHU', 'TLS'],
+  OFC: ['NZL', 'NCL', 'SOL', 'TAH', 'FIJ', 'PNG', 'VAN'],
+};
+// kıta şampiyonası türü (Avrupa = 'euro', mevcut kayıtlarla uyumlu)
+const CONTI_TYPE = { UEFA: 'euro', CONMEBOL: 'sacup', AFC: 'asiacup', CAF: 'afcup', CONCACAF: 'nacup', OFC: 'occup' };
 const STAGE_NAMES = { 32: 'Son 32', 16: 'Son 16', 8: 'Çeyrek Final', 4: 'Yarı Final', 2: 'Final' };
 // Ülke kupaları: Avrupa kupası haftalarıyla çakışmayan takvim
 const DOM_CUPS = [
@@ -462,6 +472,31 @@ const Cups = {
     return null;
   },
 
+  confed(code) {
+    if (EURO_NATIONS.includes(code)) return 'UEFA';
+    return Object.keys(CONFEDS).find((k) => CONFEDS[k].includes(code)) || 'UEFA';
+  },
+  isConti(t) { return Object.values(CONTI_TYPE).includes(t); },
+  // oyuncunun milli takımına göre o yılın turnuvası: Dünya Şampiyonası herkes için, kıta şampiyonası kendi kıtası,
+  // Milletler Ligi yalnız Avrupa
+  tourTypeFor(year, code) {
+    const t = Cups.tourType(year);
+    if (t === 'wc' || !t) return t;
+    const st = Game.state;
+    const nc = code || (st && st.player && st.player.nation) || 'TUR';
+    const cf = Cups.confed(nc);
+    if (t === 'nl') return cf === 'UEFA' ? 'nl' : null;
+    return CONTI_TYPE[cf] || 'euro';
+  },
+  // kıta şampiyonası katılımcı havuzu (Güney Amerika'ya Kuzey Amerika'dan davetliler katılır)
+  contiPool(type) {
+    const cf = Object.keys(CONTI_TYPE).find((k) => CONTI_TYPE[k] === type) || 'UEFA';
+    const list = cf === 'UEFA' ? EURO_NATIONS : CONFEDS[cf];
+    let pool = Game.nations().filter((n) => list.includes(n.code));
+    if (type === 'sacup') pool = pool.concat(Game.nations().filter((n) => CONFEDS.CONCACAF.includes(n.code)).sort((a, b) => b.rating - a.rating).slice(0, 6));
+    return pool;
+  },
+
   natTeam(code) {
     const n = Game.nat(code);
     const col = NAT_COLORS[code] || ['#1d3c8f', '#ffffff'];
@@ -472,9 +507,9 @@ const Cups = {
   },
 
   startTournament(s) {
-    const type = Cups.tourType(s.season.year);
+    const type = Cups.tourTypeFor(s.season.year);
     const name = `${s.season.year} ${Cups.tourName(type)}`;
-    let pool = type === 'wc' ? Game.nations() : Game.nations().filter((n) => EURO_NATIONS.includes(n.code));
+    let pool = type === 'wc' ? Game.nations() : type === 'nl' ? Game.nations().filter((n) => EURO_NATIONS.includes(n.code)) : Cups.contiPool(type);
     let size = Cups.tourSize(type, pool.length);
     while (size > pool.length) size /= 2;
     if (type === 'nl') {
@@ -632,7 +667,7 @@ const Cups = {
     });
     if (stages.length) body += stages.map(([t, ms]) => `<div class="lbl">${t}</div><div class="cup-ko">${ms.map(res).join('')}</div>`).join('');
     else if (sel.fmt !== 'swiss') body += `<div class="lbl">Eşleşmeler</div><div class="cup-ko">${Array.from({ length: sel.alive.length / 2 }, (_, i) => `<div class="cm2 next ${sel.alive[i * 2] === s.clubId || sel.alive[i * 2 + 1] === s.clubId ? 'me' : ''}"><span class="t h"><em>${U.esc(nm(sel.alive[i * 2]))}</em>${shirt(sel.alive[i * 2])}</span><b>vs</b><span class="t a">${shirt(sel.alive[i * 2 + 1])}<em>${U.esc(nm(sel.alive[i * 2 + 1]))}</em></span></div>`).join('')}</div>`;
-    const tourNext = [0, 1, 2, 3].map((k) => s.season.year + k).find((y) => Cups.tourType(y));
+    const tourNext = [0, 1, 2, 3].map((k) => s.season.year + k).find((y) => Cups.tourTypeFor(y));
     const hist = (s.cupHistory || []).slice(0, 8);
     return `<section class="card cupscr">
       <div class="cup-sel">${list.map((c) => `<button class="${c === sel ? 'on' : ''} ${Cups.everIn(s, c) ? 'mine' : ''}" data-cupsel="${c.id}">${U.esc(c.name.replace('Avrupa ', ''))}</button>`).join('')}</div>
@@ -642,7 +677,7 @@ const Cups = {
     ${sel.scorers && Object.keys(sel.scorers).length ? UI.kings(sel, nm, (id) => w.clubs[id] || Game.club(), sel.name) : ''}
     <section class="card">
       ${hist.length ? `<div class="lbl">Geçmiş şampiyonlar</div><div class="cup-hist">${hist.map((h) => `<div><small>${h.year}</small><span>${U.esc(h.comp)}</span><b>${U.esc(h.winner)}</b></div>`).join('')}</div>` : ''}
-      ${tourNext ? `<p class="muted">Sıradaki milli turnuva: ${tourNext} ${Cups.tourName(Cups.tourType(tourNext))}</p>` : ''}
+      ${tourNext ? `<p class="muted">Sıradaki milli turnuva: ${tourNext} ${Cups.tourName(Cups.tourTypeFor(tourNext))}</p>` : ''}
     </section>`;
   },
 
@@ -651,8 +686,8 @@ const Cups = {
   },
 
   // takım sayısı: ülke listesi büyüdüğü için DŞ 32, Avrupa 16 takımlı (eski kayıtlarda/erken yıllarda daha az)
-  tourSize(type, n) { return type === 'nl' ? 4 : type === 'wc' ? (n >= 48 ? 32 : 16) : (n >= 24 ? 16 : 8); },
-  tourName(t) { return { wc: 'Dünya Şampiyonası', euro: 'Avrupa Milletler Şampiyonası', nl: 'Milletler Ligi Finalleri' }[t] || ''; },
+  tourSize(type, n) { return type === 'nl' ? 4 : type === 'wc' ? (n >= 48 ? 32 : 16) : type === 'euro' ? (n >= 24 ? 16 : 8) : (n >= 16 ? 16 : n >= 8 ? 8 : 4); },
+  tourName(t) { return { wc: 'Dünya Şampiyonası', euro: 'Avrupa Milletler Şampiyonası', nl: 'Milletler Ligi Finalleri', sacup: 'Güney Amerika Şampiyonası', asiacup: 'Asya Uluslar Kupası', afcup: 'Afrika Uluslar Kupası', nacup: 'Kuzey ve Orta Amerika Şampiyonası', occup: 'Okyanusya Uluslar Kupası' }[t] || ''; },
 };
 
 // Milli takım sıralaması: güç + turnuva başarısı + milli maç sonuçları (puanlar yavaşça güce döner)
@@ -668,7 +703,7 @@ const Nations = {
   },
   add(s, code, v) { const pts = Nations.ensure(s); pts[code] = (pts[code] || 0) + v; },
   afterTournament(s, t, champ) {
-    const bonus = { wc: [130, 80, 50, 25, 10], euro: [100, 60, 35, 18, 8], nl: [60, 35, 20, 10, 5] }[t.type] || [50, 30, 15, 8, 4];
+    const bonus = { wc: [130, 80, 50, 25, 10], euro: [100, 60, 35, 18, 8], nl: [60, 35, 20, 10, 5], sacup: [100, 60, 35, 18, 8], asiacup: [80, 50, 30, 15, 6], afcup: [80, 50, 30, 15, 6], nacup: [70, 40, 25, 12, 5], occup: [40, 25, 12, 6, 3] }[t.type] || [50, 30, 15, 8, 4];
     (t.teams || []).forEach((c) => {
       const el = (t.elim || {})[c];
       const v = c === champ ? bonus[0] : el === 2 ? bonus[1] : el === 4 ? bonus[2] : el === 8 ? bonus[3] : bonus[4];
@@ -686,8 +721,8 @@ const Nations = {
     const rk = Nations.ranking(s);
     const prev = s.natPrevRank || {};
     const me = s.player.nation;
-    const ty = [0, 1, 2, 3, 4].map((k) => s.season.year + k).map((y) => ({ y, t: Cups.tourType(y) })).filter((x) => x.t);
-    const hist = (s.cupHistory || []).filter((h) => /Dünya Şampiyonası|Avrupa Milletler Şampiyonası|Milletler Ligi/.test(h.comp)).slice(0, 10);
+    const ty = [0, 1, 2, 3, 4].map((k) => s.season.year + k).map((y) => ({ y, t: Cups.tourTypeFor(y) })).filter((x) => x.t);
+    const hist = (s.cupHistory || []).filter((h) => /Dünya Şampiyonası|Avrupa Milletler Şampiyonası|Milletler Ligi|Güney Amerika Şampiyonası|Asya Uluslar Kupası|Afrika Uluslar Kupası|Kuzey ve Orta Amerika Şampiyonası|Okyanusya Uluslar Kupası/.test(h.comp)).slice(0, 10);
     const p = s.player;
     return `<section class="card nat-rank">
       <div class="card-h"><span>${Icon('shield')} Milli Takım Sıralaması</span><small class="muted">${s.season.year}</small></div>
@@ -703,7 +738,7 @@ const Nations = {
     <div class="grid2">
       <section class="card">
         <div class="card-h"><span>${Icon('career')} Turnuva Takvimi</span></div>
-        <div class="tour-cal">${ty.map((x) => `<div class="tc ${x.t}"><b>${x.y}</b><span>${Cups.tourName(x.t)}</span><small>${x.t === 'nl' ? 'Sıralamadaki en iyi 4 Avrupa takımı' : x.t === 'wc' ? `${Cups.tourSize('wc', Game.nations().length)} ülke, eleme` : `${Cups.tourSize('euro', Game.nations().filter((n) => EURO_NATIONS.includes(n.code)).length)} Avrupa ülkesi, eleme`}</small></div>`).join('')}</div>
+        <div class="tour-cal">${ty.map((x) => `<div class="tc ${x.t}"><b>${x.y}</b><span>${Cups.tourName(x.t)}</span><small>${x.t === 'nl' ? 'Sıralamadaki en iyi 4 Avrupa takımı' : x.t === 'wc' ? `${Cups.tourSize('wc', Game.nations().length)} ülke, eleme` : x.t === 'euro' ? `${Cups.tourSize('euro', Game.nations().filter((n) => EURO_NATIONS.includes(n.code)).length)} Avrupa ülkesi, eleme` : `${Cups.tourSize(x.t, Cups.contiPool(x.t).length)} ülke, kıta şampiyonası`}</small></div>`).join('')}</div>
         <div class="lbl">Senin milli kariyerin</div>
         <div class="ms-stats"><div class="mst"><i>${Icon('shield')}</i><b>${p.intl.caps}</b><span>Maç</span></div><div class="mst"><i>${Icon('ball')}</i><b>${p.intl.goals}</b><span>Gol</span></div><div class="mst"><i>${Icon('table')}</i><b>${rk.findIndex((r) => r.code === me) + 1 || '-'}</b><span>Ülke sırası</span></div></div>
       </section>

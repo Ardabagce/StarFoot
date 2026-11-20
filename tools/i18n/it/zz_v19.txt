@@ -3160,3 +3160,55 @@
 10370|Rigori parati
 10371|PI
 10372|Par.
+10375|Ultima partita
+10376|Giornale
+10377|Uscire con la squadra
+10378|Parla con l’allenatore
+10379|Sei infortunato. Riposare ti restituisce energia e morale.
+10382|Hai poca energia. Riposare questa settimana ti aiuterà in partita.
+10384|Il rapporto con l’allenatore è freddo. Parlarci aumenta le chance da titolare.
+10428|Allena {} e continua a crescere.
+10387|Fatto
+10388|Scegli azione
+10439|Ti restano {} azioni
+10390|Azioni finite · pronto per la partita
+10391|Applica
+10392|Consiglio dell’allenatore
+10435|{} · Partita {} · Forza avversario {}
+10446|A {} punti dalla vetta
+10437|In vetta · {} punti di vantaggio
+10393|In vetta
+10394|Prossima:
+10438|{} punti · {} partite · {}V {}N {}P
+10395|Attributi
+10449|{} · {} · {} ANNI
+10396|Girone
+10447|Qualificazioni {} {}
+10420|Sorteggio {}: {} nel girone con {}. Le prime 2 vanno al torneo.
+10441|e conquista il biglietto per {} {}!
+10427|{} concluse: {} chiude {}ª nel girone{}
+10421|Abbiamo il biglietto per {} {}! Orgoglioso di far parte di questo viaggio.
+10400|Qualificata al torneo
+10401|Eliminata
+10448|Giornata {}/3
+10419|Si gioca nelle settimane delle nazionali. Le prime 2 si qualificano per {} {}.
+10403|Fuori nelle qualificazioni
+10443|{}ª nel girone di qualificazione
+10423|{} SEI STATO CONVOCATO! {}: ti aspetta la partita {} {}.
+10425|{} Convocato per una gara di qualificazione!
+10444|{} · Partita {} • {} - {}
+10406|Campionato Sudamericano
+10407|Coppa delle Nazioni Asiatiche
+10408|Coppa delle Nazioni Africane
+10409|Campionato del Nord e Centro America
+10410|Coppa delle Nazioni dell’Oceania
+10411|Campione continentale
+10412|Hai vinto il campionato per nazionali del tuo continente
+10413|Biglietto staccato
+10414|Ti sei qualificato a un torneo con la tua nazionale
+10415|COPPA D’ASIA
+10416|COPPA D’AFRICA
+10417|OCEANIA
+10434|{} nazioni, campionato continentale
+10454|{} concluse: {} chiude {}ª nel girone e conquista il biglietto per {} {}!
+10452|{} concluse: {} chiude {}ª nel girone e salterà il torneo.

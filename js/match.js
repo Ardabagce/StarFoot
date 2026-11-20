@@ -76,7 +76,7 @@ const Match = {
     // Atmosfer: tribün doluluğu, fotoğrafçılar ve pankart oyuncunun ününe, takımına ve maçın önemine göre
     {
       const youthM = state.contract && state.contract.type === 'youth' || /\bU(1\d|2[01])\b/.test(ctx.compName || '');
-      const big = ['ucl', 'uel', 'uecl', 'wc', 'euro', 'intl', 'csa', 'acl', 'ccc'].includes(ctx.lg) ? 0.12 : 0;
+      const big = ['ucl', 'uel', 'uecl', 'wc', 'euro', 'sacup', 'asiacup', 'afcup', 'nacup', 'occup', 'intl', 'csa', 'acl', 'ccc'].includes(ctx.lg) ? 0.12 : 0;
       const fame = p.fame || 0;
       let lvl = street ? 0 : youthM ? 0.12 + (ctx.final ? 0.12 : 0) : U.clamp(0.3 + (own.rating - 55) / 60 + big + (ctx.derby ? 0.15 : 0) + (ctx.final ? 0.2 : 0) + fame / 400, 0.25, 1);
       const star = !street && !youthM && fame >= 40;

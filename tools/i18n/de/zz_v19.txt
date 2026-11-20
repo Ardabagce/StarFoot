@@ -3160,3 +3160,55 @@
 10370|Gehaltene Elfmeter
 10371|ZN
 10372|Par.
+10375|Letztes Spiel
+10376|Zeitung
+10377|Zeit mit dem Team
+10378|Mit dem Trainer reden
+10379|Du bist verletzt. Ruhe stellt deine Energie und Moral wieder her.
+10382|Deine Energie ist niedrig. Ruhe hilft dir diese Woche im Spiel.
+10384|Das Verhältnis zum Trainer ist kühl. Ein Gespräch erhöht deine Startelf-Chancen.
+10428|Trainiere {} und entwickle dich weiter.
+10387|Erledigt
+10388|Aktion wählen
+10439|Noch {} Aktionen
+10390|Keine Aktionen mehr · bereit fürs Spiel
+10391|Anwenden
+10392|Tipp des Trainers
+10435|{} · Spiel {} · Gegnerstärke {}
+10446|{} Pkt. hinter dem Spitzenreiter
+10437|Tabellenführer · {} Pkt. Vorsprung
+10393|Tabellenführer
+10394|Als Nächstes:
+10438|{} Pkt. · {} Spiele · {}S {}U {}N
+10395|Attribute
+10449|{} · {} · {} JAHRE
+10396|Gruppe
+10447|{} {} Qualifikation
+10420|{} ausgelost: {} trifft auf {}. Die ersten 2 fahren zum Turnier.
+10441|und hat das Ticket für {} {} gelöst!
+10427|{} beendet: {} wurde Gruppen-{}.{}
+10421|Wir haben das Ticket für {} {}! Stolz, Teil dieser Reise zu sein.
+10400|Für das Turnier qualifiziert
+10401|Ausgeschieden
+10448|Spieltag {}/3
+10419|Wird in Länderspielwochen gespielt. Die ersten 2 qualifizieren sich für {} {}.
+10403|In der Quali gescheitert
+10443|Platz {} in der Quali-Gruppe
+10423|{} DU WURDEST NOMINIERT! {}: Das Spiel {} {} wartet.
+10425|{} Für ein Qualifikationsspiel nominiert!
+10444|{} · Spiel {} • {} - {}
+10406|Südamerikameisterschaft
+10407|Asiatischer Nationenpokal
+10408|Afrikanischer Nationenpokal
+10409|Nord- und Mittelamerikameisterschaft
+10410|Ozeanischer Nationenpokal
+10411|Kontinentalmeister
+10412|Du hast die Nationenmeisterschaft deines Kontinents gewonnen
+10413|Ticket gelöst
+10414|Du hast dich mit deiner Nationalmannschaft für ein Turnier qualifiziert
+10415|ASIENPOKAL
+10416|AFRIKAPOKAL
+10417|OZEANIEN
+10434|{} Länder, Kontinentalmeisterschaft
+10454|{} beendet: {} wurde Gruppen-{}. und hat das Ticket für {} {} gelöst!
+10452|{} beendet: {} wurde Gruppen-{}. und verpasst das Turnier.

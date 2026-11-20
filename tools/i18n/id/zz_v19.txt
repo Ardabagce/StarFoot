@@ -3160,3 +3160,55 @@
 10370|Penalti diselamatkan
 10371|NB
 10372|Pen.
+10375|Laga Terakhir
+10376|Koran
+10377|Nongkrong bareng tim
+10378|Bicara dengan pelatih
+10379|Kamu cedera. Istirahat akan memulihkan energi dan moralmu.
+10382|Energimu rendah. Istirahat minggu ini akan membantumu di laga.
+10384|Hubunganmu dengan pelatih dingin. Bicara akan menaikkan peluang jadi starter.
+10428|Latih {} dan terus berkembang.
+10387|Selesai
+10388|Pilih aksi
+10439|Sisa {} aksi
+10390|Aksi habis · siap bertanding
+10391|Terapkan
+10392|Saran pelatih
+10435|{} · Laga {} · Kekuatan lawan {}
+10446|{} poin di belakang pemuncak
+10437|Di puncak · unggul {} poin
+10393|Di puncak
+10394|Berikutnya:
+10438|{} poin · {} laga · {}M {}S {}K
+10395|Atribut
+10449|{} · {} · {} TAHUN
+10396|Grup
+10447|Kualifikasi {} {}
+10420|Undian {}: {} satu grup dengan {}. 2 teratas lolos ke turnamen.
+10441|dan lolos ke {} {}!
+10427|{} selesai: {} finis ke-{} di grup{}
+10421|Kami lolos ke {} {}! Bangga jadi bagian perjalanan ini.
+10400|Lolos ke turnamen
+10401|Tersingkir
+10448|Matchday {}/3
+10419|Dimainkan di pekan internasional. 2 teratas lolos ke {} {}.
+10403|Gugur di kualifikasi
+10443|Peringkat {} di grup kualifikasi
+10423|{} KAMU DIPANGGIL TIMNAS! {}: laga {} {} menantimu.
+10425|{} Dipanggil untuk laga kualifikasi!
+10444|{} · Laga {} • {} - {}
+10406|Kejuaraan Amerika Selatan
+10407|Piala Bangsa-Bangsa Asia
+10408|Piala Bangsa-Bangsa Afrika
+10409|Kejuaraan Amerika Utara & Tengah
+10410|Piala Bangsa-Bangsa Oseania
+10411|Juara Benua
+10412|Kamu menjuarai kejuaraan timnas di benuamu
+10413|Tiket di Tangan
+10414|Kamu lolos ke turnamen bersama timnasmu
+10415|PIALA ASIA
+10416|PIALA AFRIKA
+10417|OSEANIA
+10434|{} negara, kejuaraan benua
+10454|{} selesai: {} finis ke-{} di grup dan lolos ke {} {}!
+10452|{} selesai: {} finis ke-{} di grup dan tidak ikut turnamen.

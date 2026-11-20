@@ -53,6 +53,8 @@ const ACHIEVEMENTS = (() => {
     { id: 'wc', cat: 'trophy', tier: 'gold', name: 'Dünya Şampiyonu', desc: 'Dünya Şampiyonası\'nı kazandın', check: (p) => p.trophies.some((t) => /Dünya Şampiyonası Şampiyonu/.test(t)) },
     { id: 'nl', cat: 'trophy', tier: 'silver', name: 'Milletler Ligi', desc: 'Milletler Ligi Finalleri\'ni kazandın', check: (p) => p.trophies.some((t) => /Milletler Ligi/.test(t)) },
     { id: 'euro', cat: 'trophy', tier: 'gold', name: 'Avrupa Şampiyonu', desc: 'Avrupa Milletler Şampiyonası\'nı kazandın', check: (p) => p.trophies.some((t) => /Avrupa Milletler Şampiyonası Şampiyonu/.test(t)) },
+    { id: 'conti', cat: 'trophy', tier: 'gold', name: 'Kıta Şampiyonu', desc: 'Kendi kıtanın milli şampiyonasını kazandın', check: (p) => p.trophies.some((t) => /(Güney Amerika Şampiyonası|Asya Uluslar Kupası|Afrika Uluslar Kupası|Kuzey ve Orta Amerika Şampiyonası|Okyanusya Uluslar Kupası) Şampiyonu/.test(t)) },
+    { id: 'qual', cat: 'trophy', tier: 'silver', name: 'Biletini Aldın', desc: 'Milli takımınla eleme grubundan turnuvaya katıldın', check: (p) => !!p.qualOk },
     { id: 'boot', cat: 'trophy', tier: 'silver', name: 'Gol Kralı', desc: 'Bir sezon gol krallığını kazandın', check: (p) => tr(/Gol Kralı/)(p) >= 1 },
     { id: 'boot3', cat: 'trophy', tier: 'gold', name: 'Seri Gol Kralı', desc: '3 kez gol kralı oldun', check: (p) => tr(/Gol Kralı/)(p) >= 3 },
     { id: 'poty', cat: 'trophy', tier: 'silver', name: 'Sezonun Oyuncusu', desc: 'Ligde sezonun oyuncusu seçildin', check: (p) => tr(/Sezonun Oyuncusu/)(p) >= 1 },

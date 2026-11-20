@@ -3160,3 +3160,55 @@
 10370|Penaltys arrêtés
 10371|CS
 10372|Arr.
+10375|Dernier match
+10376|Journal
+10377|Sortir avec l’équipe
+10378|Parler au coach
+10379|Tu es blessé. Te reposer rétablira ton énergie et ton moral.
+10382|Ton énergie est basse. Te reposer cette semaine t’aidera pour le match.
+10384|La relation avec le coach est froide. Lui parler augmente tes chances d’être titulaire.
+10428|Travaille ton {} et continue de progresser.
+10387|Fait
+10388|Choisir une action
+10439|Il te reste {} actions
+10390|Plus d’actions · prêt pour le match
+10391|Appliquer
+10392|Conseil du coach
+10435|{} · Match {} · Force adverse {}
+10446|À {} pts du leader
+10437|En tête · {} pts d’avance
+10393|En tête
+10394|Prochain :
+10438|{} pts · {} matchs · {}V {}N {}D
+10395|Attributs
+10449|{} · {} · {} ANS
+10396|Groupe
+10447|Qualifications {} {}
+10420|Tirage {} : {} est dans le groupe de {}. Les 2 premiers vont au tournoi.
+10441|et décroche son billet pour {} {} !
+10427|{} terminées : {} finit {}e du groupe{}
+10421|Billet en poche pour {} {} ! Fier de faire partie de cette aventure.
+10400|Qualifié pour le tournoi
+10401|Éliminé
+10448|Journée {}/3
+10419|Se joue lors des semaines internationales. Les 2 premiers se qualifient pour {} {}.
+10403|Éliminé en qualifications
+10443|{}e du groupe de qualification
+10423|{} TU ES SÉLECTIONNÉ ! {} : le match {} {} t’attend.
+10425|{} Sélectionné pour un match de qualification !
+10444|{} · Match {} • {} - {}
+10406|Championnat d’Amérique du Sud
+10407|Coupe des nations d’Asie
+10408|Coupe des nations d’Afrique
+10409|Championnat d’Amérique du Nord et centrale
+10410|Coupe des nations d’Océanie
+10411|Champion continental
+10412|Tu as remporté le championnat des nations de ton continent
+10413|Billet en poche
+10414|Tu t’es qualifié pour un tournoi avec ta sélection
+10415|COUPE D’ASIE
+10416|COUPE D’AFRIQUE
+10417|OCÉANIE
+10434|{} pays, championnat continental
+10454|{} terminées : {} finit {}e du groupe et décroche son billet pour {} {} !
+10452|{} terminées : {} finit {}e du groupe et manquera le tournoi.

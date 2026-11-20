@@ -40,6 +40,11 @@ const BALL_STYLES = {
   uel: { name: 'Federasyon Kupası', base: '#fbfbfb', panel: '#f97316', pattern: 'star' },
   wc: { name: 'Dünya Şampiyonası', base: '#fbfbfb', panel: '#c8a227', accent: '#1b1d22', pattern: 'swirl' },
   euro: { name: 'Avrupa Milletler Şampiyonası', base: '#fbfbfb', panel: '#1d4ed8', accent: '#e11d48', pattern: 'swirl' },
+  sacup: { name: 'Güney Amerika Şampiyonası', base: '#fbfbfb', panel: '#0f3b82', accent: '#facc15', pattern: 'swirl' },
+  asiacup: { name: 'Asya Uluslar Kupası', base: '#fbfbfb', panel: '#0f766e', accent: '#e11d48', pattern: 'swirl' },
+  afcup: { name: 'Afrika Uluslar Kupası', base: '#fbfbfb', panel: '#15803d', accent: '#facc15', pattern: 'swirl' },
+  nacup: { name: 'Kuzey ve Orta Amerika Şampiyonası', base: '#fbfbfb', panel: '#0e7490', accent: '#1b1d22', pattern: 'swirl' },
+  occup: { name: 'Okyanusya Uluslar Kupası', base: '#fbfbfb', panel: '#0369a1', accent: '#f8fafc', pattern: 'swirl' },
   // mağaza kozmetikleri
   neon: { name: 'Neon Top', base: '#e6ff3a', panel: '#111111', pattern: 'classic' },
   gold: { name: 'Yaldızlı Top', base: '#ffe27a', base2: '#b8860b', panel: '#fff7d6', pattern: 'star' },

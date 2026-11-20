@@ -828,7 +828,7 @@ const Game = {
       why,
       folWhy: sum.played ? folWhy : '',
     };
-    if (comp === 'intl' && sum.played) Game.news(`🇹🇷 Milli formayla ${p.intl.caps}. maçına çıktın!`, 'good');
+    if (comp === 'intl' && sum.played) Game.news(`${(Game.nation() || {}).flag || '🏳️'} Milli formayla ${p.intl.caps}. maçına çıktın!`, 'good');
   },
 
   advanceWeek(intl = false) {
@@ -1078,7 +1078,7 @@ const Game = {
   endSeason() {
     const s = Game.state, p = s.player;
     // Gerçek takvimle milli turnuva (Dünya Şampiyonası / Avrupa Milletler Şampiyonası) sezon sonunda oynanır
-    if (Cups.tourType(s.season.year) && !(s.tournament && s.tournament.done && s.tournament.year === s.season.year)) {
+    if (Cups.tourTypeFor(s.season.year) && !(s.tournament && s.tournament.done && s.tournament.year === s.season.year)) {
       Cups.startTournament(s);
       s.tournament.year = s.season.year;
       Game.render();

@@ -824,6 +824,7 @@
 "Güç {}": [
 "career2.js",
 "coach4.js",
+"hub.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -4092,6 +4093,7 @@
 "coach3.js",
 "coachauto.js",
 "game.js",
+"hub.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -5422,6 +5424,7 @@
 "Enerji": [
 "coach3.js",
 "game.js",
+"hub.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -5548,6 +5551,7 @@
 "cups.js",
 "edit.js",
 "game.js",
+"hub.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -9842,6 +9846,7 @@
 "coachui.js",
 "extras.js",
 "game.js",
+"hub.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -9945,6 +9950,7 @@
 "İç saha": [
 "coachui.js",
 "cstats.js",
+"hub.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -9960,6 +9966,7 @@
 "Deplasman": [
 "coachui.js",
 "cstats.js",
+"hub.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -10443,6 +10450,7 @@
 "Moral": [
 "coachui.js",
 "game.js",
+"hub.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -14376,6 +14384,7 @@
 ],
 "Diğer": [
 "cstats.js",
+"hub.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -15231,6 +15240,722 @@
 "data.js",
 "wc.js"
 ],
+"ARG": [
+"cups.js",
+"data.js",
+"game.js",
+"league.js",
+"legends.js",
+"lpath.js",
+"meta.js",
+"squads.js",
+"wcx.js",
+"weather.js"
+],
+"BRA": [
+"cups.js",
+"data.js",
+"game.js",
+"i18n.js",
+"league.js",
+"legends.js",
+"lpath.js",
+"meta.js",
+"squads.js",
+"wcx.js",
+"weather.js"
+],
+"URU": [
+"cups.js",
+"data.js",
+"legends.js",
+"squads.js",
+"wc.js"
+],
+"COL": [
+"cups.js",
+"data.js",
+"squads.js",
+"wc.js"
+],
+"ECU": [
+"cups.js",
+"data.js",
+"squads.js",
+"wc.js"
+],
+"PAR": [
+"cups.js",
+"data.js",
+"lang-es.js",
+"lang-pt.js",
+"squads.js",
+"wc.js"
+],
+"CHI": [
+"cups.js",
+"squads.js",
+"wc.js"
+],
+"PER": [
+"cups.js",
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"squads.js",
+"wc.js"
+],
+"VEN": [
+"cups.js",
+"data.js",
+"lang-fr.js",
+"lang-it.js",
+"wc.js"
+],
+"BOL": [
+"cups.js",
+"data.js",
+"wc.js"
+],
+"USA": [
+"cups.js",
+"data.js",
+"game.js",
+"lang-de.js",
+"lang-en.js",
+"lang-fr.js",
+"lang-it.js",
+"league.js",
+"meta.js",
+"squads.js",
+"wc.js",
+"wcx.js"
+],
+"MEX": [
+"cups.js",
+"data.js",
+"game.js",
+"league.js",
+"legends.js",
+"squads.js",
+"wc.js",
+"wcx.js",
+"weather.js"
+],
+"CAN": [
+"cups.js",
+"data.js",
+"squads.js",
+"wc.js",
+"wcx.js"
+],
+"PAN": [
+"cups.js",
+"squads.js",
+"wc.js"
+],
+"CRC": [
+"cups.js",
+"squads.js",
+"wc.js"
+],
+"JAM": [
+"cups.js",
+"wc.js"
+],
+"HAI": [
+"cups.js",
+"wc.js"
+],
+"CUW": [
+"cups.js",
+"squads.js",
+"wc.js"
+],
+"HON": [
+"cups.js",
+"wc.js"
+],
+"GUA": [
+"cups.js",
+"data.js",
+"wc.js"
+],
+"SLV": [
+"cups.js",
+"wc.js"
+],
+"TRI": [
+"cups.js",
+"wc.js"
+],
+"NCA": [
+"cups.js",
+"wc.js"
+],
+"SUR": [
+"cups.js",
+"wc.js"
+],
+"DOM": [
+"cups.js",
+"lang-es.js",
+"lang-it.js",
+"lang-pt.js",
+"wc.js"
+],
+"GUY": [
+"cups.js",
+"wc.js"
+],
+"PUR": [
+"cups.js",
+"wc.js"
+],
+"CUB": [
+"cups.js",
+"wc.js"
+],
+"BER": [
+"cups.js",
+"data.js",
+"wc.js"
+],
+"GRN": [
+"cups.js",
+"wc.js"
+],
+"BLZ": [
+"cups.js",
+"wc.js"
+],
+"EGY": [
+"cups.js",
+"data.js",
+"legends.js",
+"lifex.js",
+"squads.js"
+],
+"MAR": [
+"cups.js",
+"data.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-it.js",
+"lifex.js",
+"squads.js",
+"wc.js",
+"wcx.js"
+],
+"TUN": [
+"cups.js",
+"data.js",
+"lifex.js",
+"squads.js",
+"wc.js"
+],
+"ALG": [
+"cups.js",
+"legends.js",
+"lifex.js",
+"squads.js",
+"wc.js"
+],
+"GHA": [
+"cups.js",
+"league.js",
+"squads.js",
+"wc.js"
+],
+"SEN": [
+"cups.js",
+"data.js",
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"league.js",
+"legends.js",
+"lifex.js",
+"minigame.js",
+"squads.js",
+"wc.js"
+],
+"CIV": [
+"cups.js",
+"legends.js",
+"squads.js",
+"wc.js"
+],
+"NGA": [
+"cups.js",
+"data.js",
+"legends.js",
+"squads.js",
+"wc.js"
+],
+"CMR": [
+"cups.js",
+"data.js",
+"legends.js",
+"squads.js",
+"wc.js"
+],
+"RSA": [
+"cups.js",
+"data.js",
+"squads.js",
+"wc.js"
+],
+"CPV": [
+"cups.js",
+"squads.js",
+"wc.js"
+],
+"MLI": [
+"cups.js",
+"lifex.js",
+"wc.js"
+],
+"COD": [
+"cups.js",
+"wc.js"
+],
+"BFA": [
+"cups.js",
+"lifex.js",
+"wc.js"
+],
+"GUI": [
+"cups.js",
+"data.js",
+"lifex.js",
+"wc.js"
+],
+"GAB": [
+"cups.js",
+"data.js",
+"wc.js"
+],
+"ANG": [
+"cups.js",
+"data.js",
+"wc.js"
+],
+"ZAM": [
+"cups.js",
+"wc.js"
+],
+"BEN": [
+"cups.js",
+"data.js",
+"legends.js",
+"meta.js",
+"wc.js"
+],
+"UGA": [
+"cups.js",
+"wc.js"
+],
+"KEN": [
+"cups.js",
+"data.js",
+"wc.js"
+],
+"EQG": [
+"cups.js",
+"wc.js"
+],
+"MOZ": [
+"cups.js",
+"wc.js"
+],
+"MAD": [
+"cups.js",
+"data.js",
+"wc.js"
+],
+"TAN": [
+"cups.js",
+"lang-en.js",
+"wc.js"
+],
+"COM": [
+"cups.js",
+"data.js",
+"lifex.js",
+"wc.js"
+],
+"LBY": [
+"cups.js",
+"lifex.js",
+"wc.js"
+],
+"MTN": [
+"cups.js",
+"lifex.js",
+"wc.js"
+],
+"SLE": [
+"cups.js",
+"lifex.js",
+"wc.js"
+],
+"NAM": [
+"cups.js",
+"wc.js"
+],
+"SDN": [
+"cups.js",
+"lifex.js",
+"wc.js"
+],
+"CGO": [
+"cups.js",
+"wc.js"
+],
+"ZIM": [
+"cups.js",
+"wc.js"
+],
+"TOG": [
+"cups.js",
+"wc.js"
+],
+"GAM": [
+"cups.js",
+"lifex.js",
+"wc.js"
+],
+"GNB": [
+"cups.js",
+"wc.js"
+],
+"NIG": [
+"cups.js",
+"lifex.js",
+"wc.js"
+],
+"MWI": [
+"cups.js",
+"wc.js"
+],
+"RWA": [
+"cups.js",
+"wc.js"
+],
+"CTA": [
+"cups.js",
+"wc.js"
+],
+"BOT": [
+"cups.js",
+"data.js",
+"wc.js"
+],
+"BDI": [
+"cups.js",
+"wc.js"
+],
+"ETH": [
+"cups.js",
+"wc.js"
+],
+"SWZ": [
+"cups.js",
+"wc.js"
+],
+"LBR": [
+"cups.js",
+"wc.js"
+],
+"LES": [
+"cups.js",
+"wc.js"
+],
+"SSD": [
+"cups.js",
+"wc.js"
+],
+"JPN": [
+"cups.js",
+"data.js",
+"game.js",
+"i18n.js",
+"league.js",
+"squads.js",
+"wcx.js"
+],
+"KSA": [
+"cups.js",
+"data.js",
+"game.js",
+"i18n.js",
+"league.js",
+"lifex.js",
+"meta.js",
+"wcx.js",
+"weather.js"
+],
+"IRN": [
+"cups.js",
+"league.js",
+"lifex.js",
+"squads.js",
+"wc.js"
+],
+"KOR": [
+"cups.js",
+"data.js",
+"league.js",
+"squads.js",
+"wc.js",
+"wcx.js"
+],
+"AUS": [
+"cups.js",
+"data.js",
+"lang-de.js",
+"squads.js",
+"wc.js",
+"wcx.js"
+],
+"QAT": [
+"cups.js",
+"lifex.js",
+"wc.js"
+],
+"UZB": [
+"cups.js",
+"league.js",
+"lifex.js",
+"wc.js"
+],
+"JOR": [
+"cups.js",
+"lifex.js",
+"wc.js"
+],
+"IRQ": [
+"cups.js",
+"lifex.js",
+"wc.js"
+],
+"UAE": [
+"cups.js",
+"lang-en.js",
+"lang-ja.js",
+"lifex.js",
+"wc.js"
+],
+"OMA": [
+"cups.js",
+"lifex.js",
+"wc.js"
+],
+"IDN": [
+"cups.js",
+"i18n.js",
+"lifex.js",
+"wc.js"
+],
+"CHN": [
+"cups.js",
+"wc.js"
+],
+"BHR": [
+"cups.js",
+"lifex.js",
+"wc.js"
+],
+"SYR": [
+"cups.js",
+"lifex.js",
+"wc.js"
+],
+"THA": [
+"cups.js",
+"wc.js"
+],
+"VIE": [
+"cups.js",
+"lang-es.js",
+"lang-fr.js",
+"wc.js"
+],
+"KGZ": [
+"cups.js",
+"lifex.js",
+"wc.js"
+],
+"LBN": [
+"cups.js",
+"lifex.js",
+"wc.js"
+],
+"IND": [
+"cups.js",
+"data.js",
+"wc.js"
+],
+"TJK": [
+"cups.js",
+"lifex.js",
+"wc.js"
+],
+"PLE": [
+"cups.js",
+"lifex.js",
+"wc.js"
+],
+"PRK": [
+"cups.js",
+"wc.js"
+],
+"MAS": [
+"cups.js",
+"lifex.js",
+"wc.js"
+],
+"KUW": [
+"cups.js",
+"lifex.js",
+"wc.js"
+],
+"TKM": [
+"cups.js",
+"lifex.js",
+"wc.js"
+],
+"PHI": [
+"cups.js",
+"data.js",
+"wc.js"
+],
+"HKG": [
+"cups.js",
+"wc.js"
+],
+"YEM": [
+"cups.js",
+"lifex.js",
+"wc.js"
+],
+"SIN": [
+"cups.js",
+"wc.js"
+],
+"MYA": [
+"cups.js",
+"wc.js"
+],
+"AFG": [
+"cups.js",
+"lifex.js",
+"wc.js"
+],
+"MDV": [
+"cups.js",
+"lifex.js",
+"wc.js"
+],
+"NEP": [
+"cups.js",
+"wc.js"
+],
+"BAN": [
+"cups.js",
+"data.js",
+"lifex.js",
+"wc.js"
+],
+"CAM": [
+"cups.js",
+"data.js",
+"wc.js"
+],
+"MNG": [
+"cups.js",
+"wc.js"
+],
+"LAO": [
+"cups.js",
+"wc.js"
+],
+"PAK": [
+"cups.js",
+"lifex.js",
+"wc.js"
+],
+"SRI": [
+"cups.js",
+"wc.js"
+],
+"BRU": [
+"cups.js",
+"lifex.js",
+"wc.js"
+],
+"BHU": [
+"cups.js",
+"wc.js"
+],
+"TLS": [
+"cups.js",
+"wc.js"
+],
+"NZL": [
+"cups.js",
+"wc.js",
+"wcx.js"
+],
+"NCL": [
+"cups.js",
+"wc.js"
+],
+"SOL": [
+"cups.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"wc.js"
+],
+"TAH": [
+"cups.js",
+"wc.js"
+],
+"FIJ": [
+"cups.js",
+"wc.js"
+],
+"PNG": [
+"cups.js",
+"wc.js"
+],
+"VAN": [
+"cups.js",
+"data.js",
+"wc.js"
+],
 "Son 32": [
 "cups.js",
 "lang-ar.js",
@@ -15417,19 +16142,6 @@
 "cupBRA": [
 "cups.js"
 ],
-"BRA": [
-"cups.js",
-"data.js",
-"game.js",
-"i18n.js",
-"league.js",
-"legends.js",
-"lpath.js",
-"meta.js",
-"squads.js",
-"wcx.js",
-"weather.js"
-],
 "Brezilya Kupası": [
 "cups.js",
 "lang-ar.js",
@@ -15444,18 +16156,6 @@
 ],
 "cupARG": [
 "cups.js"
-],
-"ARG": [
-"cups.js",
-"data.js",
-"game.js",
-"league.js",
-"legends.js",
-"lpath.js",
-"meta.js",
-"squads.js",
-"wcx.js",
-"weather.js"
 ],
 "Arjantin Kupası": [
 "cups.js",
@@ -15622,20 +16322,6 @@
 "cupUSA": [
 "cups.js"
 ],
-"USA": [
-"cups.js",
-"data.js",
-"game.js",
-"lang-de.js",
-"lang-en.js",
-"lang-fr.js",
-"lang-it.js",
-"league.js",
-"meta.js",
-"squads.js",
-"wc.js",
-"wcx.js"
-],
 "ABD Açık Kupası": [
 "cups.js",
 "lang-ar.js",
@@ -15650,17 +16336,6 @@
 ],
 "cupMEX": [
 "cups.js"
-],
-"MEX": [
-"cups.js",
-"data.js",
-"game.js",
-"league.js",
-"legends.js",
-"squads.js",
-"wc.js",
-"wcx.js",
-"weather.js"
 ],
 "Meksika Kupası": [
 "cups.js",
@@ -15677,17 +16352,6 @@
 "cupKSA": [
 "cups.js"
 ],
-"KSA": [
-"cups.js",
-"data.js",
-"game.js",
-"i18n.js",
-"league.js",
-"lifex.js",
-"meta.js",
-"wcx.js",
-"weather.js"
-],
 "Suudi Kral Kupası": [
 "cups.js",
 "lang-ar.js",
@@ -15702,15 +16366,6 @@
 ],
 "cupJPN": [
 "cups.js"
-],
-"JPN": [
-"cups.js",
-"data.js",
-"game.js",
-"i18n.js",
-"league.js",
-"squads.js",
-"wcx.js"
 ],
 "İmparator Kupası": [
 "cups.js",
@@ -16234,6 +16889,10 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"UEFA": [
+"cups.js",
+"quals.js"
+],
 "{} milli takımını seçtin: turnuva kadrosundasın!": [
 "cups.js",
 "lang-ar.js",
@@ -16386,10 +17045,28 @@
 "lang-pt.js"
 ],
 "(uzatmalarla {}-{}, penaltılarda{})": [
-"cups.js"
+"cups.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "(uzatmalarda {}-{})": [
-"cups.js"
+"cups.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "{} şampiyonu: {}!": [
 "cups.js",
@@ -16544,6 +17221,7 @@
 "AV": [
 "cups.js",
 "game.js",
+"quals.js",
 "wc.js"
 ],
 "{}. maç": [
@@ -16610,6 +17288,76 @@
 "Sıradaki milli turnuva: {} {}": [
 "cups.js"
 ],
+"Güney Amerika Şampiyonası": [
+"cups.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"sprites.js",
+"weather.js"
+],
+"Asya Uluslar Kupası": [
+"cups.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"sprites.js",
+"weather.js"
+],
+"Afrika Uluslar Kupası": [
+"cups.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"sprites.js",
+"weather.js"
+],
+"Kuzey ve Orta Amerika Şampiyonası": [
+"cups.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"sprites.js",
+"weather.js"
+],
+"Okyanusya Uluslar Kupası": [
+"cups.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"sprites.js",
+"weather.js"
+],
 "Sıralamadaki en iyi 4 Avrupa takımı": [
 "cups.js",
 "lang-ar.js",
@@ -16635,6 +17383,18 @@
 "lang-pt.js"
 ],
 "{} Avrupa ülkesi, eleme": [
+"cups.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{} ülke, kıta şampiyonası": [
 "cups.js",
 "lang-ar.js",
 "lang-de.js",
@@ -17144,12 +17904,6 @@
 "Martin Aaseby": [
 "data.js",
 "namefix.js"
-],
-"EGY": [
-"data.js",
-"legends.js",
-"lifex.js",
-"squads.js"
 ],
 "Mısır": [
 "data.js",
@@ -18297,10 +19051,6 @@
 "lang-pt.js",
 "namefix.js"
 ],
-"KEN": [
-"data.js",
-"wc.js"
-],
 "MUN": [
 "data.js",
 "legends.js",
@@ -18438,10 +19188,6 @@
 "lang-ja.js",
 "lang-pt.js",
 "namefix.js"
-],
-"MAD": [
-"data.js",
-"wc.js"
 ],
 "ES": [
 "data.js",
@@ -18930,10 +19676,6 @@
 "lang-pt.js",
 "namefix.js"
 ],
-"BER": [
-"data.js",
-"wc.js"
-],
 "ROM": [
 "data.js",
 "legends.js",
@@ -18990,10 +19732,6 @@
 "FLO": [
 "data.js"
 ],
-"BOL": [
-"data.js",
-"wc.js"
-],
 "Bolonya Kayaları": [
 "data.js",
 "lang-ar.js",
@@ -19047,13 +19785,6 @@
 "lang-pt.js",
 "namefix.js"
 ],
-"PAR": [
-"data.js",
-"lang-es.js",
-"lang-pt.js",
-"squads.js",
-"wc.js"
-],
 "FR": [
 "data.js",
 "lang-de.js",
@@ -19079,16 +19810,6 @@
 "lang-ja.js",
 "lang-pt.js",
 "namefix.js"
-],
-"MAR": [
-"data.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-it.js",
-"lifex.js",
-"squads.js",
-"wc.js",
-"wcx.js"
 ],
 "ASM": [
 "data.js",
@@ -19526,10 +20247,6 @@
 "lang-pt.js",
 "namefix.js"
 ],
-"VAN": [
-"data.js",
-"wc.js"
-],
 "Van Gücü": [
 "data.js",
 "lang-ar.js",
@@ -19879,13 +20596,6 @@
 "lang-pt.js",
 "namefix.js"
 ],
-"KOR": [
-"data.js",
-"league.js",
-"squads.js",
-"wc.js",
-"wcx.js"
-],
 "LEV2": [
 "data.js"
 ],
@@ -20118,11 +20828,6 @@
 ],
 "KİE": [
 "data.js"
-],
-"COM": [
-"data.js",
-"lifex.js",
-"wc.js"
 ],
 "Komo Rüzgarı": [
 "data.js",
@@ -21000,11 +21705,6 @@
 "lang-pt.js",
 "namefix.js"
 ],
-"RSA": [
-"data.js",
-"squads.js",
-"wc.js"
-],
 "Santander Kıvılcımları": [
 "data.js",
 "lang-ar.js",
@@ -21542,12 +22242,6 @@
 "lang-pt.js",
 "namefix.js"
 ],
-"VEN": [
-"data.js",
-"lang-fr.js",
-"lang-it.js",
-"wc.js"
-],
 "Venedik Kıvılcımları": [
 "data.js",
 "lang-ar.js",
@@ -21845,11 +22539,6 @@
 "lang-ja.js",
 "lang-pt.js",
 "namefix.js"
-],
-"GUI": [
-"data.js",
-"lifex.js",
-"wc.js"
 ],
 "Gengam Kayaları": [
 "data.js",
@@ -22513,12 +23202,6 @@
 "KRA": [
 "data.js"
 ],
-"BEN": [
-"data.js",
-"legends.js",
-"meta.js",
-"wc.js"
-],
 "Lizbon Yıldızları": [
 "data.js",
 "lang-ar.js",
@@ -22981,10 +23664,6 @@
 "LAR": [
 "data.js"
 ],
-"BOT": [
-"data.js",
-"wc.js"
-],
 "Rio Yolcuları": [
 "data.js",
 "lang-ar.js",
@@ -23030,14 +23709,6 @@
 "lang-ja.js",
 "lang-pt.js",
 "namefix.js"
-],
-"GUA": [
-"data.js",
-"wc.js"
-],
-"CAM": [
-"data.js",
-"wc.js"
 ],
 "Belo Horizonte Kayaları": [
 "data.js",
@@ -23286,10 +23957,6 @@
 "AVE": [
 "data.js"
 ],
-"IND": [
-"data.js",
-"wc.js"
-],
 "Gerli Akıncıları": [
 "data.js",
 "lang-ar.js",
@@ -23505,11 +24172,6 @@
 ],
 "MEN": [
 "data.js"
-],
-"BAN": [
-"data.js",
-"lifex.js",
-"wc.js"
 ],
 "Banfield Ateşi": [
 "data.js",
@@ -23824,25 +24486,6 @@
 "lang-ja.js",
 "lang-pt.js",
 "namefix.js"
-],
-"SEN": [
-"data.js",
-"game.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"league.js",
-"legends.js",
-"lifex.js",
-"minigame.js",
-"squads.js",
-"wc.js"
 ],
 "DND": [
 "data.js"
@@ -24239,10 +24882,6 @@
 ],
 "CİN": [
 "data.js"
-],
-"PHI": [
-"data.js",
-"wc.js"
 ],
 "Filadelfiya Yıldırımı": [
 "data.js",
@@ -25279,10 +25918,6 @@
 "FUK": [
 "data.js"
 ],
-"ANG": [
-"data.js",
-"wc.js"
-],
 "Niigata Esintisi": [
 "data.js",
 "lang-ar.js",
@@ -25406,13 +26041,6 @@
 "lang-ja.js",
 "lang-pt.js",
 "namefix.js"
-],
-"AUS": [
-"data.js",
-"lang-de.js",
-"squads.js",
-"wc.js",
-"wcx.js"
 ],
 "STG": [
 "data.js"
@@ -25773,12 +26401,6 @@
 "lang-pt.js",
 "namefix.js"
 ],
-"TUN": [
-"data.js",
-"lifex.js",
-"squads.js",
-"wc.js"
-],
 "OLY": [
 "data.js"
 ],
@@ -25884,20 +26506,6 @@
 "lang-ja.js",
 "lang-pt.js",
 "namefix.js"
-],
-"PER": [
-"data.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"squads.js",
-"wc.js"
 ],
 "OFI": [
 "data.js"
@@ -27137,12 +27745,6 @@
 "namefix.js",
 "wc.js"
 ],
-"NGA": [
-"data.js",
-"legends.js",
-"squads.js",
-"wc.js"
-],
 "Mauro Sanez": [
 "data.js",
 "legends.js",
@@ -27162,12 +27764,6 @@
 "data.js",
 "namefix.js"
 ],
-"URU": [
-"data.js",
-"legends.js",
-"squads.js",
-"wc.js"
-],
 "Gabriel Cales": [
 "data.js",
 "namefix.js"
@@ -27175,11 +27771,6 @@
 "Davinson Corón": [
 "data.js",
 "namefix.js"
-],
-"COL": [
-"data.js",
-"squads.js",
-"wc.js"
 ],
 "Abdülkerim Taşdemir": [
 "data.js",
@@ -27297,11 +27888,6 @@
 "data.js",
 "namefix.js"
 ],
-"ECU": [
-"data.js",
-"squads.js",
-"wc.js"
-],
 "Joao Ares": [
 "data.js",
 "namefix.js"
@@ -27309,12 +27895,6 @@
 "Bryan Adaba": [
 "data.js",
 "namefix.js",
-"wc.js"
-],
-"CMR": [
-"data.js",
-"legends.js",
-"squads.js",
 "wc.js"
 ],
 "Matheus Silota": [
@@ -27407,12 +27987,6 @@
 "Alfonso Chaleton": [
 "data.js",
 "namefix.js"
-],
-"CAN": [
-"data.js",
-"squads.js",
-"wc.js",
-"wcx.js"
 ],
 "Piero Galón": [
 "data.js",
@@ -27520,10 +28094,6 @@
 "Pierre-Emerik Ekeridu": [
 "data.js",
 "namefix.js"
-],
-"GAB": [
-"data.js",
-"wc.js"
 ],
 "Ansu Barera": [
 "data.js",
@@ -34009,6 +34579,7 @@
 "Kupalar": [
 "diamond2.js",
 "game.js",
+"hub.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -35094,6 +35665,7 @@
 ],
 "Milli Takım": [
 "extras.js",
+"hub.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -35919,6 +36491,54 @@
 ],
 "Avrupa Milletler Şampiyonası\\'nı kazandın": [
 "extras.js"
+],
+"Kıta Şampiyonu": [
+"extras.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Kendi kıtanın milli şampiyonasını kazandın": [
+"extras.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Biletini Aldın": [
+"extras.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Milli takımınla eleme grubundan turnuvaya katıldın": [
+"extras.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Gol Kralı": [
 "extras.js",
@@ -41316,6 +41936,7 @@
 ],
 "Yoğun antrenman": [
 "game.js",
+"hub.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -41365,6 +41986,7 @@
 ],
 "Özel hoca": [
 "game.js",
+"hub.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -43096,6 +43718,7 @@
 ],
 "Ün": [
 "game.js",
+"hub.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -43197,6 +43820,7 @@
 ],
 "Dünya": [
 "game.js",
+"hub.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -44082,6 +44706,7 @@
 ],
 "Dinlen": [
 "game.js",
+"hub.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -44192,6 +44817,7 @@
 ],
 "Sosyal Medya": [
 "game.js",
+"hub.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -44585,6 +45211,7 @@
 ],
 "Fikstür": [
 "game.js",
+"hub.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -44950,6 +45577,7 @@
 ],
 "Gol Krallığı": [
 "game.js",
+"hub.js",
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -45634,10 +46262,28 @@
 "lang-pt.js"
 ],
 "Gol Yemeden Biten Maç": [
-"game.js"
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Penaltı Kurtarışı": [
-"game.js"
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "class=\"mv-tap\" data-mvopen role=\"button\"": [
 "game.js"
@@ -45680,10 +46326,28 @@
 "meta.js"
 ],
 "GY": [
-"game.js"
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Kurt.": [
-"game.js"
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Vitrin şimdilik boş. İlk kupan burada parlayacak.": [
 "game.js",
@@ -48172,6 +48836,396 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"DIV": [
+"hub.js"
+],
+"Son Maç": [
+"hub.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Gazete": [
+"hub.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+".ig-top, .ig-prof, .ig-grid": [
+"hub.js"
+],
+":scope > span": [
+"hub.js"
+],
+"small, .tag, em, button, .muted, .badge, .armband": [
+"hub.js"
+],
+".card-h svg": [
+"hub.js"
+],
+".rpm-s b": [
+"hub.js"
+],
+".rpm-s small": [
+"hub.js"
+],
+".ig-top b": [
+"hub.js"
+],
+".ig-top small": [
+"hub.js"
+],
+".offers > *": [
+"hub.js"
+],
+".card-h small, .card-h .tag, .card-h em": [
+"hub.js"
+],
+"misc|": [
+"hub.js"
+],
+".offers > *, .ms-claim, [data-claim], .badge": [
+"hub.js"
+],
+"@card": [
+"hub.js"
+],
+"@career": [
+"hub.js"
+],
+"@plan": [
+"hub.js"
+],
+"Takımla takıl": [
+"hub.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Hocayla konuş": [
+"hub.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Sosyal medya": [
+"hub.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Sakatsın. Dinlenirsen enerjin ve moralin toparlanır.": [
+"hub.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Enerjin düşük. Bu hafta dinlenmen maçta işine yarar.": [
+"hub.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Hocayla aran soğuk. Konuşmak ilk 11 şansını artırır.": [
+"hub.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{} antrenmanı yap, gelişimini sürdür.": [
+"hub.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Yapıldı": [
+"hub.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Aksiyon seç": [
+"hub.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{} aksiyon hakkın var": [
+"hub.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Haklar bitti · maça hazırsın": [
+"hub.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Uygula": [
+"hub.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Hocanın önerisi": [
+"hub.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Bu Hafta": [
+"hub.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+".btn-play, .ff-btn, .undo-btn": [
+"hub.js"
+],
+"{} · {}. maç · Rakip gücü {}": [
+"hub.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Puan Durumu": [
+"hub.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Lidere {} puan": [
+"hub.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Zirvede · {} puan önde": [
+"hub.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Zirvede": [
+"hub.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Sıradaki:": [
+"hub.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SIRA": [
+"hub.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{} puan · {} maç · {}G {}B {}M": [
+"hub.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Özellikler": [
+"hub.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{} · {} · {} YAŞ": [
+"hub.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GÜÇ": [
+"hub.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Haftalık Plan": [
+"hub.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Escape": [
+"hub.js"
+],
 "Türkçe": [
 "i18n.js",
 "lang-ar.js",
@@ -48232,11 +49286,6 @@
 ],
 "Pratama": [
 "i18n.js",
-"wc.js"
-],
-"IDN": [
-"i18n.js",
-"lifex.js",
 "wc.js"
 ],
 "script,style,textarea,[contenteditable],[data-noi18n]": [
@@ -82872,17 +83921,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Sosyal medya": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "Arkayı kapatın, skoru koruyalım": [
 "lang-ar.js",
 "lang-de.js",
@@ -110601,6 +111639,376 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Sakatsın.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"You are injured.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Dinlenirsen enerjin ve moralin toparlanır.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Resting will restore your energy and morale.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Enerjin düşük.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Bu hafta dinlenmen maçta işine yarar.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Resting this week will help you in the match.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Hocayla aran soğuk.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Things are cold with the coach.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Konuşmak ilk 11 şansını artırır.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"A talk will boost your starting XI chances.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"aksiyon hakkın var": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Grup": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"quals.js"
+],
+"İlk 2 turnuvaya gider.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"The top 2 reach the tournament.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+", turnuvaya katılamayacak.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"and will miss the tournament.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Bu yolculuğun parçası olmak gurur verici.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Proud to be part of this journey.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Turnuvaya katılıyor": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"quals.js"
+],
+"Elendi": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"quals.js"
+],
+"Milli maç haftalarında oynanır.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Played in international weeks.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Elemelerde kaldı": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"quals.js"
+],
+"MİLLİ TAKIMA ÇAĞRILDIN!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YOU HAVE BEEN CALLED UP!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Eleme maçı için milli takıma çağrıldın!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Called up for a qualifier!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ASYA KUPASI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"weather.js"
+],
+"AFRİKA KUPASI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"weather.js"
+],
+"OKYANUSYA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"weather.js"
+],
+"ülke, kıta şampiyonası": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"nations, continental championship": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "(Asist)": [
 "lang-ar.js",
 "lang-de.js",
@@ -114793,17 +116201,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Bu Hafta": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "Dönemin Yıldızları": [
 "lang-ar.js",
 "lang-de.js",
@@ -114882,17 +116279,6 @@
 "lang-pt.js"
 ],
 "HAFTA ÖNCE": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"Haftalık Plan": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -115036,17 +116422,6 @@
 "lang-pt.js"
 ],
 "Muhtemel İlk 11": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"Puan Durumu": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -118898,29 +120273,7 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"Enerjin düşük.": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "Performansın düşer, sakatlık riski artar.": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"MİLLİ TAKIMA ÇAĞRILDIN!": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -126269,18 +127622,6 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
-],
-"SOL": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"wc.js"
 ],
 "SAĞ": [
 "lang-ar.js",
@@ -178308,6 +179649,490 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"KURT.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GAZETE": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TAKIMLA TAKIL": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HOCAYLA KONUŞ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SAKATSIN.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YOU ARE INJURED.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ENERJİN DÜŞÜK.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BU HAFTA DİNLENMEN MAÇTA İŞİNE YARAR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"RESTING THIS WEEK WILL HELP YOU IN THE MATCH.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HOCAYLA ARAN SOĞUK.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"THINGS ARE COLD WITH THE COACH.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KONUŞMAK İLK 11 ŞANSINI ARTIRIR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"A TALK WILL BOOST YOUR STARTING XI CHANCES.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YAPILDI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"AKSİYON SEÇ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"AKSİYON HAKKIN VAR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ACTIONS LEFT": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HAKLAR BİTTİ · MAÇA HAZIRSIN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"UYGULA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HOCANIN ÖNERİSİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ZİRVEDE": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SIRADAKİ:": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ÖZELLİKLER": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GRUP": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"İLK 2 TURNUVAYA GİDER.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"THE TOP 2 REACH THE TOURNAMENT.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+", TURNUVAYA KATILAMAYACAK.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"AND WILL MISS THE TOURNAMENT.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TURNUVAYA KATILIYOR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ELENDİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MİLLİ MAÇ HAFTALARINDA OYNANIR.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"PLAYED IN INTERNATIONAL WEEKS.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ELEMELERDE KALDI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ELEME MAÇI İÇİN MİLLİ TAKIMA ÇAĞRILDIN!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"CALLED UP FOR A QUALIFIER!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GÜNEY AMERİKA ŞAMPİYONASI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ASYA ULUSLAR KUPASI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"AFRİKA ULUSLAR KUPASI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KUZEY VE ORTA AMERİKA ŞAMPİYONASI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"OKYANUSYA ULUSLAR KUPASI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KITA ŞAMPİYONU": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BİLETİNİ ALDIN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ÜLKE, KITA ŞAMPİYONASI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"NATIONS, CONTINENTAL CHAMPIONSHIP": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -181742,17 +183567,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"GÜÇ": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "GÜÇ +2, SAVUNMA +1": [
 "lang-ar.js",
 "lang-de.js",
@@ -182326,17 +184140,6 @@
 "lang-pt.js"
 ],
 "HOCA İLİŞKİSİ ARTAR": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"HOCAYLA KONUŞ": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -185533,17 +187336,6 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"SIRA": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
 "SIRADAKİ RAKİP:": [
 "lang-ar.js",
 "lang-de.js",
@@ -185666,17 +187458,6 @@
 "lang-pt.js"
 ],
 "TAKIM KAPTANI SEÇİLDİN": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"TAKIMLA TAKIL": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -191565,17 +193346,6 @@
 "lang-pt.js"
 ],
 "YAŞAM SEKMESİNDEN İNCELEYEBİLİRSİN.": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"ENERJİN DÜŞÜK.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -205625,6 +207395,18 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Milli maç haftalarında oynanır. İlk 2 takım {} {} için bilet alır.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"quals.js"
+],
 "{} numara için sahada kendini kanıtlayıp talepte bulunabilirsin.": [
 "lang-ar.js",
 "lang-de.js",
@@ -205936,6 +207718,30 @@
 "lang-pt.js",
 "youthx.js"
 ],
+"{} kurası çekildi: {}, {} ile aynı grupta. İlk 2 turnuvaya gider.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"quals.js"
+],
+"{} {} biletini aldık! Bu yolculuğun parçası olmak gurur verici.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"quals.js"
+],
 "👀 Aynı yaşta, aynı mevkide bir yıldız adayı daha var: {} ({}).": [
 "lang-ar.js",
 "lang-de.js",
@@ -206024,6 +207830,28 @@
 "lang-ja.js",
 "lang-pt.js",
 "starlife.js"
+],
+"kurası çekildi: {}, {} ile aynı grupta. İlk 2 turnuvaya gider.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"draw made: {} are grouped with {}. The top 2 reach the tournament.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "Ama paparazziler seni yakaladı; {} haberi görünce çok kızdı.": [
 "lang-ar.js",
@@ -207720,6 +209548,18 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"{} MİLLİ TAKIMA ÇAĞRILDIN! {}: {} {} maçı seni bekliyor.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"quals.js"
+],
 "Tehlikeli bölgede serbest vuruş. {} topun başında.": [
 "lang-ar.js",
 "lang-de.js",
@@ -207933,6 +209773,28 @@
 "lang-ja.js",
 "lang-pt.js",
 "starlife.js"
+],
+"MİLLİ TAKIMA ÇAĞRILDIN! {}: {} {} maçı seni bekliyor.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"YOU HAVE BEEN CALLED UP! {}: the {} {} match awaits.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "{} yorulmaya başladı. Vuruşların isabeti düşüyor.": [
 "lang-ar.js",
@@ -209628,6 +211490,18 @@
 "lang-pt.js",
 "phone.js"
 ],
+"{} Eleme maçı için milli takıma çağrıldın!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"quals.js"
+],
 "{} \\\"Biraz daha zamana ihtiyacım var\\\" dedi.": [
 "lang-ar.js",
 "lang-de.js",
@@ -210840,6 +212714,28 @@
 "lang-pt.js",
 "shootout.js"
 ],
+"{} kurası çekildi: {}, {} ile aynı grupta.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{} draw made: {} are grouped with {}.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "{}: toplamda {}-{} ile kupaya veda ettik.": [
 "lang-ar.js",
 "lang-de.js",
@@ -211174,6 +213070,28 @@
 "lang-pt.js"
 ],
 "{}, we want you in our squad.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"kurası çekildi: {}, {} ile aynı grupta.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"draw made: {} are grouped with {}.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -212812,6 +214730,28 @@
 "lang-ja.js",
 "lang-pt.js",
 "starlife.js"
+],
+"İlk 2 takım {} {} için bilet alır.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"The top 2 qualify for the {} {}.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "{} frikikten nefis bir gol attı!": [
 "lang-ar.js",
@@ -214605,6 +216545,28 @@
 "lang-pt.js",
 "nego2.js"
 ],
+"{} MİLLİ TAKIMA ÇAĞRILDIN!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{} YOU HAVE BEEN CALLED UP!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "Annen çok duygulandı. ({})": [
 "lang-ar.js",
 "lang-de.js",
@@ -214676,17 +216638,6 @@
 "lang-pt.js"
 ],
 "Topun başına {} geçiyor...": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
-],
-"{} MİLLİ TAKIMA ÇAĞRILDIN!": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -215008,6 +216959,28 @@
 "lang-ja.js",
 "lang-pt.js",
 "valueapp.js"
+],
+"{}: {} {} maçı seni bekliyor.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{}: the {} {} match awaits.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "{} ile yollarını ayırdın.": [
 "lang-ar.js",
@@ -215926,6 +217899,28 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"· {}. maç · Rakip gücü {}": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"· Match {} · Opponent rating {}": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "{} sektirme, fena değil": [
 "lang-ar.js",
 "lang-de.js",
@@ -216618,6 +218613,39 @@
 "lang-pt.js",
 "mall.js"
 ],
+"puan · {} maç · {}G {}B {}M": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"pts · {} played · {}W {}D {}L": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ve {} {} biletini aldı!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "/hafta · {} yıl kaldı": [
 "lang-ar.js",
 "lang-de.js",
@@ -217274,6 +219302,28 @@
 "lang-pt.js",
 "star.js"
 ],
+"{} {} biletini aldık!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"We booked our ticket to the {} {}!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "Kazandın! {} - {} · +{}": [
 "lang-ar.js",
 "lang-de.js",
@@ -217664,6 +219714,18 @@
 "lang-ja.js",
 "lang-pt.js",
 "valueapp.js"
+],
+"Eleme grubunda {}.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"quals.js"
 ],
 "{} Reklam İzle · x{}": [
 "lang-ar.js",
@@ -218498,6 +220560,18 @@
 "lang-pt.js",
 "wcx.js"
 ],
+"{} · {}. maç • {} - {}": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"quals.js"
+],
 "Sakat · {} hafta": [
 "lang-ar.js",
 "lang-de.js",
@@ -218976,6 +221050,28 @@
 "lang-pt.js"
 ],
 "Corner for {}.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"· {}. maç • {} - {}": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"· Match {} • {} - {}": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -219659,6 +221755,30 @@
 "lang-pt.js",
 "starlife.js"
 ],
+"{} {} Elemeleri": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"quals.js"
+],
+"{}/3 maç günü": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"quals.js"
+],
 "Golü {} attı.": [
 "lang-ar.js",
 "lang-de.js",
@@ -220009,6 +222129,28 @@
 "lang-pt.js",
 "phone.js"
 ],
+"{} Elemeleri": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"{} Qualifiers": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
 "Gol {}'dan. {}": [
 "lang-ar.js",
 "lang-de.js",
@@ -220354,6 +222496,28 @@
 "lang-ja.js",
 "lang-pt.js",
 "starlife.js"
+],
+"· {} · {} YAŞ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"· {} · AGE {}": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "{} / {} RAKİP": [
 "lang-ar.js",
@@ -235178,6 +237342,104 @@
 "Ein Star, der stärker als sein Team ist, verändert jetzt das Titelrennen. Dein Erzrivale spielt nun auf seinem eigenen Niveau.": [
 "lang-de.js"
 ],
+"ZN": [
+"lang-de.js"
+],
+"Par.": [
+"lang-de.js",
+"lang-es.js",
+"lang-it.js"
+],
+"Zeitung": [
+"lang-de.js"
+],
+"Zeit mit dem Team": [
+"lang-de.js"
+],
+"Mit dem Trainer reden": [
+"lang-de.js"
+],
+"Du bist verletzt. Ruhe stellt deine Energie und Moral wieder her.": [
+"lang-de.js"
+],
+"Deine Energie ist niedrig. Ruhe hilft dir diese Woche im Spiel.": [
+"lang-de.js"
+],
+"Deine Energie ist niedrig.": [
+"lang-de.js"
+],
+"Das Verhältnis zum Trainer ist kühl. Ein Gespräch erhöht deine Startelf-Chancen.": [
+"lang-de.js"
+],
+"Erledigt": [
+"lang-de.js"
+],
+"Aktion wählen": [
+"lang-de.js"
+],
+"Keine Aktionen mehr · bereit fürs Spiel": [
+"lang-de.js"
+],
+"Anwenden": [
+"lang-de.js"
+],
+"Tipp des Trainers": [
+"lang-de.js"
+],
+"Tabellenführer": [
+"lang-de.js"
+],
+"Als Nächstes:": [
+"lang-de.js"
+],
+"Attribute": [
+"lang-de.js"
+],
+"Gruppe": [
+"lang-de.js"
+],
+"Für das Turnier qualifiziert": [
+"lang-de.js"
+],
+"In der Quali gescheitert": [
+"lang-de.js"
+],
+"Südamerikameisterschaft": [
+"lang-de.js"
+],
+"Asiatischer Nationenpokal": [
+"lang-de.js"
+],
+"Afrikanischer Nationenpokal": [
+"lang-de.js"
+],
+"Nord- und Mittelamerikameisterschaft": [
+"lang-de.js"
+],
+"Ozeanischer Nationenpokal": [
+"lang-de.js"
+],
+"Kontinentalmeister": [
+"lang-de.js"
+],
+"Du hast die Nationenmeisterschaft deines Kontinents gewonnen": [
+"lang-de.js"
+],
+"Ticket gelöst": [
+"lang-de.js"
+],
+"Du hast dich mit deiner Nationalmannschaft für ein Turnier qualifiziert": [
+"lang-de.js"
+],
+"ASIENPOKAL": [
+"lang-de.js"
+],
+"AFRIKAPOKAL": [
+"lang-de.js"
+],
+"OZEANIEN": [
+"lang-de.js"
+],
 "– wir haben uns qualifiziert!": [
 "lang-de.js"
 ],
@@ -236640,9 +238902,6 @@
 "lang-de.js"
 ],
 "Dem Trainer gefiel dein Aufwärmen, du kommst in der zweiten Halbzeit rein!": [
-"lang-de.js"
-],
-"Mit dem Trainer reden": [
 "lang-de.js"
 ],
 "Mit guter Bindung zum Trainer spielst du von Beginn an. Wenig Energie schadet deiner Leistung.": [
@@ -239926,13 +242185,7 @@
 "Schau im Tab „Leben“ nach.": [
 "lang-de.js"
 ],
-"Deine Energie ist niedrig.": [
-"lang-de.js"
-],
 "Deine Leistung sinkt und das Verletzungsrisiko steigt.": [
-"lang-de.js"
-],
-"DU WURDEST IN DIE NATIONALMANNSCHAFT BERUFEN!": [
 "lang-de.js"
 ],
 "Die U19 spielt diese Saison in der Europäischen Entwicklungsliga!": [
@@ -250048,6 +252301,77 @@
 "STARWERT AUF DEM HANDY": [
 "lang-de.js"
 ],
+"PAR.": [
+"lang-de.js",
+"lang-es.js",
+"lang-it.js"
+],
+"ZEITUNG": [
+"lang-de.js"
+],
+"ZEIT MIT DEM TEAM": [
+"lang-de.js"
+],
+"MIT DEM TRAINER REDEN": [
+"lang-de.js"
+],
+"DEINE ENERGIE IST NIEDRIG.": [
+"lang-de.js"
+],
+"ERLEDIGT": [
+"lang-de.js"
+],
+"AKTION WÄHLEN": [
+"lang-de.js"
+],
+"KEINE AKTIONEN MEHR · BEREIT FÜRS SPIEL": [
+"lang-de.js"
+],
+"ANWENDEN": [
+"lang-de.js"
+],
+"TIPP DES TRAINERS": [
+"lang-de.js"
+],
+"TABELLENFÜHRER": [
+"lang-de.js"
+],
+"ALS NÄCHSTES:": [
+"lang-de.js"
+],
+"ATTRIBUTE": [
+"lang-de.js"
+],
+"GRUPPE": [
+"lang-de.js"
+],
+"FÜR DAS TURNIER QUALIFIZIERT": [
+"lang-de.js"
+],
+"IN DER QUALI GESCHEITERT": [
+"lang-de.js"
+],
+"SÜDAMERIKAMEISTERSCHAFT": [
+"lang-de.js"
+],
+"ASIATISCHER NATIONENPOKAL": [
+"lang-de.js"
+],
+"AFRIKANISCHER NATIONENPOKAL": [
+"lang-de.js"
+],
+"NORD- UND MITTELAMERIKAMEISTERSCHAFT": [
+"lang-de.js"
+],
+"OZEANISCHER NATIONENPOKAL": [
+"lang-de.js"
+],
+"KONTINENTALMEISTER": [
+"lang-de.js"
+],
+"TICKET GELÖST": [
+"lang-de.js"
+],
 "– WIR HABEN UNS QUALIFIZIERT!": [
 "lang-de.js"
 ],
@@ -251135,9 +253459,6 @@
 "BINDUNG ZUM TRAINER STEIGT": [
 "lang-de.js"
 ],
-"MIT DEM TRAINER REDEN": [
-"lang-de.js"
-],
 "MIT DEM TRAINER ÜBER TAKTIK SPRECHEN": [
 "lang-de.js"
 ],
@@ -252024,9 +254345,6 @@
 "lang-de.js"
 ],
 "DU WURDEST ZUM MANNSCHAFTSKAPITÄN ERNANNT": [
-"lang-de.js"
-],
-"MIT DEM TEAM ABHÄNGEN": [
 "lang-de.js"
 ],
 "DAS TEAM ANFEUERN": [
@@ -253574,9 +255892,6 @@
 "SCHAU IM TAB „LEBEN“ NACH.": [
 "lang-de.js"
 ],
-"DEINE ENERGIE IST NIEDRIG.": [
-"lang-de.js"
-],
 "GAB DIR EINE PRIVATSTUNDE IN DER AKADEMIE.": [
 "lang-de.js"
 ],
@@ -254325,6 +256640,9 @@
 "{} versucht es aus der Distanz, {} lenkt ihn mit den Fingerspitzen zur Ecke!": [
 "lang-de.js"
 ],
+"Wird in Länderspielwochen gespielt. Die ersten 2 qualifizieren sich für {} {}.": [
+"lang-de.js"
+],
 "{} wieder in Topform! {} setzte sich gegen {} {}-{} durch; das Siegtor kam von ihm.": [
 "lang-de.js"
 ],
@@ -254443,6 +256761,12 @@
 "lang-de.js"
 ],
 "🎉 Probetraining bestanden! Die Akademie von {0} erwartet dich nach der Saison.": [
+"lang-de.js"
+],
+"{} ausgelost: {} trifft auf {}. Die ersten 2 fahren zum Turnier.": [
+"lang-de.js"
+],
+"Wir haben das Ticket für {} {}! Stolz, Teil dieser Reise zu sein.": [
 "lang-de.js"
 ],
 "👀 Es gibt ein weiteres Talent in deinem Alter auf deiner Position: {} ({}).": [
@@ -254845,6 +257169,9 @@
 "lang-de.js"
 ],
 "Ich habe das Spiel gesehen, ihr habt {0} gewonnen! Die ganze Nachbarschaft feiert!": [
+"lang-de.js"
+],
+"{} DU WURDEST NOMINIERT! {}: Das Spiel {} {} wartet.": [
 "lang-de.js"
 ],
 "{} Tore im Straßenspiel! An der Seitenlinie stand ein Scout...": [
@@ -255258,6 +257585,9 @@
 "🟨 {} begeht ein taktisches Foul und sieht Gelb.": [
 "lang-de.js"
 ],
+"{} Für ein Qualifikationsspiel nominiert!": [
+"lang-de.js"
+],
 "Der Trainer bewunderte deine Entschlossenheit. Ausdauer +{}": [
 "lang-de.js"
 ],
@@ -255550,6 +257880,9 @@
 "lang-de.js"
 ],
 "{} versucht es per Volley, der Ball landet auf der Tribüne.": [
+"lang-de.js"
+],
+"Trainiere {} und entwickle dich weiter.": [
 "lang-de.js"
 ],
 "Dein Sponsorenvertrag mit {} ist ausgelaufen.": [
@@ -255969,6 +258302,9 @@
 "{} StarWert wird mit Premium freigeschaltet": [
 "lang-de.js"
 ],
+"({}-{} nach Verlängerung, Elfmeterschießen{})": [
+"lang-de.js"
+],
 "Verbandssperre: {} Wochen": [
 "lang-de.js"
 ],
@@ -256359,9 +258695,6 @@
 "{} tritt an...": [
 "lang-de.js"
 ],
-"{} DU WURDEST IN DIE NATIONALMANNSCHAFT BERUFEN!": [
-"lang-de.js"
-],
 "{} sprach mit dem Trainer über Taktik.": [
 "lang-de.js"
 ],
@@ -256420,6 +258753,9 @@
 "lang-de.js"
 ],
 "{} Pokale und Nationalteam": [
+"lang-de.js"
+],
+"{} Länder, Kontinentalmeisterschaft": [
 "lang-de.js"
 ],
 "{} Nationalmannschafts-Rangliste": [
@@ -256521,6 +258857,9 @@
 "lang-de.js"
 ],
 "{} Europäischer Goldener Schuh": [
+"lang-de.js"
+],
+"{} · Spiel {} · Gegnerstärke {}": [
 "lang-de.js"
 ],
 "Moral +10 und {} Taschengeld!": [
@@ -256700,6 +259039,12 @@
 "{} schießt...": [
 "lang-de.js"
 ],
+"Tabellenführer · {} Pkt. Vorsprung": [
+"lang-de.js"
+],
+"{} Pkt. · {} Spiele · {}S {}U {}N": [
+"lang-de.js"
+],
 "Du hast {} Freistoßtore erzielt": [
 "lang-de.js"
 ],
@@ -256827,6 +259172,12 @@
 "lang-de.js"
 ],
 "Mein neues Teil von {0} ist da.": [
+"lang-de.js"
+],
+"Noch {} Aktionen": [
+"lang-de.js"
+],
+"und hat das Ticket für {} {} gelöst!": [
 "lang-de.js"
 ],
 "/Woche · noch {} Jahre": [
@@ -257081,6 +259432,9 @@
 "{} · die Wertvollsten": [
 "lang-de.js"
 ],
+"Platz {} in der Quali-Gruppe": [
+"lang-de.js"
+],
 "{} Voraussichtliche Aufstellung": [
 "lang-de.js"
 ],
@@ -257166,6 +259520,9 @@
 "lang-de.js"
 ],
 "🌍 Meister der {}: {}.": [
+"lang-de.js"
+],
+"({}-{} nach Verlängerung)": [
 "lang-de.js"
 ],
 "Familienbindung +{}": [
@@ -257289,6 +259646,9 @@
 "lang-de.js"
 ],
 "{} Karriereübersicht": [
+"lang-de.js"
+],
+"{} · Spiel {} • {} - {}": [
 "lang-de.js"
 ],
 "{} Wochenplan": [
@@ -257551,6 +259911,9 @@
 "{0} neue Angebote": [
 "lang-de.js"
 ],
+"{} Pkt. hinter dem Spitzenreiter": [
+"lang-de.js"
+],
 "Überkauft ({}). -{}": [
 "lang-de.js"
 ],
@@ -257648,6 +260011,12 @@
 "lang-de.js"
 ],
 "{0} Ruhm nötig": [
+"lang-de.js"
+],
+"{} {} Qualifikation": [
+"lang-de.js"
+],
+"Spieltag {}/3": [
 "lang-de.js"
 ],
 "{} hat getroffen.": [
@@ -257761,6 +260130,9 @@
 "lang-de.js"
 ],
 "{0}-Länderspiel": [
+"lang-de.js"
+],
+"{} · {} · {} JAHRE": [
 "lang-de.js"
 ],
 "({}. Platz)": [
@@ -263883,12 +266255,6 @@
 ],
 "North Macedonia": [
 "lang-en.js"
-],
-"UAE": [
-"lang-en.js",
-"lang-ja.js",
-"lifex.js",
-"wc.js"
 ],
 "Zambia": [
 "lang-en.js",
@@ -271303,6 +273669,118 @@
 "A star stronger than his team now changes the title race. Your arch-rival now plays at his own level.": [
 "lang-en.js"
 ],
+"Clean Sheets": [
+"lang-en.js"
+],
+"Penalty Saves": [
+"lang-en.js"
+],
+"CS": [
+"lang-en.js",
+"lang-fr.js",
+"lang-ja.js"
+],
+"Sav.": [
+"lang-en.js"
+],
+"Last Match": [
+"lang-en.js"
+],
+"Newspaper": [
+"lang-en.js"
+],
+"Hang out with the team": [
+"lang-en.js"
+],
+"Talk to the coach": [
+"lang-en.js"
+],
+"You are injured. Resting will restore your energy and morale.": [
+"lang-en.js"
+],
+"Your energy is low. Resting this week will help you in the match.": [
+"lang-en.js"
+],
+"Your energy is low.": [
+"lang-en.js"
+],
+"Things are cold with the coach. A talk will boost your starting XI chances.": [
+"lang-en.js"
+],
+"Done": [
+"lang-en.js"
+],
+"Pick action": [
+"lang-en.js"
+],
+"No actions left · ready for the match": [
+"lang-en.js"
+],
+"Apply": [
+"lang-en.js"
+],
+"Coach’s advice": [
+"lang-en.js"
+],
+"Top of the table": [
+"lang-en.js"
+],
+"Next:": [
+"lang-en.js"
+],
+"Attributes": [
+"lang-en.js"
+],
+"Group": [
+"lang-en.js"
+],
+"Qualified for the tournament": [
+"lang-en.js"
+],
+"Eliminated": [
+"lang-en.js"
+],
+"Out in qualifying": [
+"lang-en.js"
+],
+"South American Championship": [
+"lang-en.js"
+],
+"Asian Nations Cup": [
+"lang-en.js"
+],
+"African Nations Cup": [
+"lang-en.js"
+],
+"North & Central American Championship": [
+"lang-en.js"
+],
+"Oceania Nations Cup": [
+"lang-en.js"
+],
+"Continental Champion": [
+"lang-en.js"
+],
+"You won your continent’s national-team championship": [
+"lang-en.js"
+],
+"Ticket Booked": [
+"lang-en.js"
+],
+"You qualified for a tournament with your national team": [
+"lang-en.js"
+],
+"ASIAN CUP": [
+"lang-en.js"
+],
+"AFRICAN CUP": [
+"lang-en.js"
+],
+"OCEANIA": [
+"lang-en.js",
+"lang-it.js",
+"lang-pt.js"
+],
 "— we qualified!": [
 "lang-en.js"
 ],
@@ -275825,13 +278303,7 @@
 "Check it in the Life tab.": [
 "lang-en.js"
 ],
-"Your energy is low.": [
-"lang-en.js"
-],
 "Your performance drops and injury risk rises.": [
-"lang-en.js"
-],
-"YOU'VE BEEN CALLED UP TO THE NATIONAL TEAM!": [
 "lang-en.js"
 ],
 "U19 are in the European Development League this season!": [
@@ -284395,10 +286867,6 @@
 "NAVY": [
 "lang-en.js"
 ],
-"TAN": [
-"lang-en.js",
-"wc.js"
-],
 "GREY": [
 "lang-en.js"
 ],
@@ -285399,6 +287867,78 @@
 "lang-en.js"
 ],
 "STARVALUE ON YOUR PHONE": [
+"lang-en.js"
+],
+"SAV.": [
+"lang-en.js"
+],
+"NEWSPAPER": [
+"lang-en.js"
+],
+"HANG OUT WITH THE TEAM": [
+"lang-en.js"
+],
+"TALK TO THE COACH": [
+"lang-en.js"
+],
+"YOUR ENERGY IS LOW.": [
+"lang-en.js"
+],
+"DONE": [
+"lang-en.js"
+],
+"PICK ACTION": [
+"lang-en.js"
+],
+"NO ACTIONS LEFT · READY FOR THE MATCH": [
+"lang-en.js"
+],
+"APPLY": [
+"lang-en.js"
+],
+"COACH’S ADVICE": [
+"lang-en.js"
+],
+"TOP OF THE TABLE": [
+"lang-en.js"
+],
+"NEXT:": [
+"lang-en.js"
+],
+"ATTRIBUTES": [
+"lang-en.js"
+],
+"GROUP": [
+"lang-en.js"
+],
+"QUALIFIED FOR THE TOURNAMENT": [
+"lang-en.js"
+],
+"ELIMINATED": [
+"lang-en.js"
+],
+"OUT IN QUALIFYING": [
+"lang-en.js"
+],
+"SOUTH AMERICAN CHAMPIONSHIP": [
+"lang-en.js"
+],
+"ASIAN NATIONS CUP": [
+"lang-en.js"
+],
+"AFRICAN NATIONS CUP": [
+"lang-en.js"
+],
+"NORTH & CENTRAL AMERICAN CHAMPIONSHIP": [
+"lang-en.js"
+],
+"OCEANIA NATIONS CUP": [
+"lang-en.js"
+],
+"CONTINENTAL CHAMPION": [
+"lang-en.js"
+],
+"TICKET BOOKED": [
 "lang-en.js"
 ],
 "— WE QUALIFIED!": [
@@ -286477,9 +289017,6 @@
 "COACH BOND GOES UP": [
 "lang-en.js"
 ],
-"TALK TO COACH": [
-"lang-en.js"
-],
 "TALK TACTICS WITH THE COACH": [
 "lang-en.js"
 ],
@@ -287341,9 +289878,6 @@
 "lang-en.js"
 ],
 "YOU WERE NAMED TEAM CAPTAIN": [
-"lang-en.js"
-],
-"HANG OUT WITH TEAM": [
 "lang-en.js"
 ],
 "FIRE UP THE TEAM": [
@@ -288882,9 +291416,6 @@
 "CHECK IT IN THE LIFE TAB.": [
 "lang-en.js"
 ],
-"YOUR ENERGY IS LOW.": [
-"lang-en.js"
-],
 "GAVE YOU A PRIVATE LESSON AT THE ACADEMY.": [
 "lang-en.js"
 ],
@@ -289633,6 +292164,9 @@
 "{} tried from outside the box, {} tipped it over for a corner!": [
 "lang-en.js"
 ],
+"Played in international weeks. The top 2 qualify for the {} {}.": [
+"lang-en.js"
+],
 "{} on song again! {} got past {} {}-{}; the winner came from him.": [
 "lang-en.js"
 ],
@@ -289751,6 +292285,12 @@
 "lang-en.js"
 ],
 "🎉 You passed the trials! {0}'s academy is expecting you at the end of the season.": [
+"lang-en.js"
+],
+"{} draw made: {} are grouped with {}. The top 2 reach the tournament.": [
+"lang-en.js"
+],
+"We booked our ticket to the {} {}! Proud to be part of this journey.": [
 "lang-en.js"
 ],
 "👀 There's another prospect your age in your position: {} ({}).": [
@@ -290153,6 +292693,9 @@
 "lang-en.js"
 ],
 "I watched the match, you won {0}! The whole neighbourhood is celebrating!": [
+"lang-en.js"
+],
+"{} YOU HAVE BEEN CALLED UP! {}: the {} {} match awaits.": [
 "lang-en.js"
 ],
 "{} goals in the street match! There was a scout on the sideline...": [
@@ -290566,6 +293109,9 @@
 "🟨 {} made a tactical foul and was booked.": [
 "lang-en.js"
 ],
+"{} Called up for a qualifier!": [
+"lang-en.js"
+],
 "The coach admired your determination. Stamina +{}": [
 "lang-en.js"
 ],
@@ -290858,6 +293404,9 @@
 "lang-en.js"
 ],
 "{} tried a volley, the ball flew into the stands.": [
+"lang-en.js"
+],
+"Do {} training and keep improving.": [
 "lang-en.js"
 ],
 "Your sponsorship deal with {} has ended.": [
@@ -291277,6 +293826,9 @@
 "{} StarValue unlocks with Premium": [
 "lang-en.js"
 ],
+"({}-{} after extra time, penalties{})": [
+"lang-en.js"
+],
 "Federation ban: {} weeks": [
 "lang-en.js"
 ],
@@ -291667,9 +294219,6 @@
 "{} steps up...": [
 "lang-en.js"
 ],
-"{} YOU'VE BEEN CALLED UP TO THE NATIONAL TEAM!": [
-"lang-en.js"
-],
 "{} talked tactics with the coach.": [
 "lang-en.js"
 ],
@@ -291731,6 +294280,9 @@
 "lang-en.js"
 ],
 "Your contract has {} years left.": [
+"lang-en.js"
+],
+"{} nations, continental championship": [
 "lang-en.js"
 ],
 "{} National Team Ranking": [
@@ -291830,6 +294382,9 @@
 "lang-en.js"
 ],
 "{} European Golden Boot": [
+"lang-en.js"
+],
+"{} · Match {} · Opponent rating {}": [
 "lang-en.js"
 ],
 "Morale +10 and {} pocket money!": [
@@ -292009,6 +294564,12 @@
 "{} are taking their kick...": [
 "lang-en.js"
 ],
+"Top of the table · {} pts clear": [
+"lang-en.js"
+],
+"{} pts · {} played · {}W {}D {}L": [
+"lang-en.js"
+],
 "You scored {} free-kick goals": [
 "lang-en.js"
 ],
@@ -292138,6 +294699,12 @@
 "lang-en.js"
 ],
 "My new {0} piece has arrived.": [
+"lang-en.js"
+],
+"{} actions left": [
+"lang-en.js"
+],
+"and booked a ticket to the {} {}!": [
 "lang-en.js"
 ],
 "/week · {} years left": [
@@ -292399,6 +294966,9 @@
 "{} · most valuable": [
 "lang-en.js"
 ],
+"{} in the qualifying group": [
+"lang-en.js"
+],
 "{} Probable XI": [
 "lang-en.js"
 ],
@@ -292485,6 +295055,9 @@
 "lang-en.js"
 ],
 "🌍 {} champions: {}.": [
+"lang-en.js"
+],
+"({}-{} after extra time)": [
 "lang-en.js"
 ],
 "Family bond +{}": [
@@ -292609,6 +295182,10 @@
 ],
 "{} Career summary": [
 "lang-en.js"
+],
+"{} · Match {} • {} - {}": [
+"lang-en.js",
+"lang-fr.js"
 ],
 "{} Weekly Plan": [
 "lang-en.js"
@@ -292879,6 +295456,9 @@
 "{0} new offers": [
 "lang-en.js"
 ],
+"{} pts behind the leader": [
+"lang-en.js"
+],
 "Bust ({}). -{}": [
 "lang-en.js"
 ],
@@ -292983,6 +295563,13 @@
 ],
 "{0} fame needed": [
 "lang-en.js"
+],
+"{} {} Qualifiers": [
+"lang-en.js"
+],
+"Matchday {}/3": [
+"lang-en.js",
+"lang-id.js"
 ],
 "{} scored.": [
 "lang-en.js"
@@ -293091,6 +295678,9 @@
 "lang-en.js"
 ],
 "{0} international": [
+"lang-en.js"
+],
+"{} · {} · AGE {}": [
 "lang-en.js"
 ],
 "({}th place)": [
@@ -306782,6 +309372,103 @@
 "Una estrella más fuerte que su equipo cambia la lucha por el título. Tu eterno rival ahora juega a su propio nivel.": [
 "lang-es.js"
 ],
+"PC": [
+"lang-es.js"
+],
+"Periódico": [
+"lang-es.js"
+],
+"Salir con el equipo": [
+"lang-es.js"
+],
+"Hablar con el entrenador": [
+"lang-es.js"
+],
+"Estás lesionado. Descansar recupera tu energía y tu moral.": [
+"lang-es.js"
+],
+"Tienes poca energía. Descansar esta semana te ayudará en el partido.": [
+"lang-es.js"
+],
+"Tienes poca energía.": [
+"lang-es.js"
+],
+"La relación con el entrenador está fría. Hablar aumenta tus opciones de ser titular.": [
+"lang-es.js"
+],
+"Hecho": [
+"lang-es.js"
+],
+"Elegir acción": [
+"lang-es.js"
+],
+"Sin acciones · listo para el partido": [
+"lang-es.js"
+],
+"Aplicar": [
+"lang-es.js",
+"lang-pt.js"
+],
+"Consejo del entrenador": [
+"lang-es.js"
+],
+"Siguiente:": [
+"lang-es.js"
+],
+"Atributos": [
+"lang-es.js",
+"lang-pt.js"
+],
+"Grupo": [
+"lang-es.js",
+"lang-pt.js"
+],
+"Clasificado para el torneo": [
+"lang-es.js"
+],
+"Eliminado": [
+"lang-es.js",
+"lang-pt.js"
+],
+"Eliminado en la clasificación": [
+"lang-es.js"
+],
+"Campeonato Sudamericano": [
+"lang-es.js"
+],
+"Copa de Naciones de Asia": [
+"lang-es.js"
+],
+"Copa de Naciones de África": [
+"lang-es.js"
+],
+"Campeonato de Norte y Centroamérica": [
+"lang-es.js"
+],
+"Copa de Naciones de Oceanía": [
+"lang-es.js"
+],
+"Campeón continental": [
+"lang-es.js"
+],
+"Ganaste el campeonato de selecciones de tu continente": [
+"lang-es.js"
+],
+"Billete asegurado": [
+"lang-es.js"
+],
+"Te clasificaste a un torneo con tu selección": [
+"lang-es.js"
+],
+"COPA DE ASIA": [
+"lang-es.js"
+],
+"COPA DE ÁFRICA": [
+"lang-es.js"
+],
+"OCEANÍA": [
+"lang-es.js"
+],
 "— ¡nos hemos clasificado!": [
 "lang-es.js"
 ],
@@ -308149,9 +310836,6 @@
 "Al entrenador le gustó tu calentamiento, ¡entras en la segunda parte!": [
 "lang-es.js"
 ],
-"Hablar con el entrenador": [
-"lang-es.js"
-],
 "Con un buen vínculo con el entrenador eres titular. Con poca energía rindes peor.": [
 "lang-es.js"
 ],
@@ -309359,9 +312043,6 @@
 "lang-es.js"
 ],
 "Al entrenador le gustaron tus palabras pensando en el equipo.": [
-"lang-es.js"
-],
-"Salir con el equipo": [
 "lang-es.js"
 ],
 "Motivar al equipo": [
@@ -311245,13 +313926,7 @@
 "Míralo en la pestaña Vida.": [
 "lang-es.js"
 ],
-"Tienes poca energía.": [
-"lang-es.js"
-],
 "Tu rendimiento baja y aumenta el riesgo de lesión.": [
-"lang-es.js"
-],
-"¡TE HAN CONVOCADO CON LA SELECCIÓN!": [
 "lang-es.js"
 ],
 "¡El sub-19 juega la Liga Europea de Desarrollo esta temporada!": [
@@ -317937,17 +320612,6 @@
 "JUE": [
 "lang-es.js"
 ],
-"VIE": [
-"lang-es.js",
-"lang-fr.js",
-"wc.js"
-],
-"DOM": [
-"lang-es.js",
-"lang-it.js",
-"lang-pt.js",
-"wc.js"
-],
 "LUNES": [
 "lang-es.js"
 ],
@@ -321014,6 +323678,76 @@
 "STARVALOR EN EL MÓVIL": [
 "lang-es.js"
 ],
+"PERIÓDICO": [
+"lang-es.js"
+],
+"SALIR CON EL EQUIPO": [
+"lang-es.js"
+],
+"HABLAR CON EL ENTRENADOR": [
+"lang-es.js"
+],
+"TIENES POCA ENERGÍA.": [
+"lang-es.js"
+],
+"HECHO": [
+"lang-es.js"
+],
+"ELEGIR ACCIÓN": [
+"lang-es.js"
+],
+"SIN ACCIONES · LISTO PARA EL PARTIDO": [
+"lang-es.js"
+],
+"APLICAR": [
+"lang-es.js",
+"lang-pt.js"
+],
+"CONSEJO DEL ENTRENADOR": [
+"lang-es.js"
+],
+"SIGUIENTE:": [
+"lang-es.js"
+],
+"ATRIBUTOS": [
+"lang-es.js",
+"lang-pt.js"
+],
+"GRUPO": [
+"lang-es.js",
+"lang-pt.js"
+],
+"CLASIFICADO PARA EL TORNEO": [
+"lang-es.js"
+],
+"ELIMINADO": [
+"lang-es.js",
+"lang-pt.js"
+],
+"ELIMINADO EN LA CLASIFICACIÓN": [
+"lang-es.js"
+],
+"CAMPEONATO SUDAMERICANO": [
+"lang-es.js"
+],
+"COPA DE NACIONES DE ASIA": [
+"lang-es.js"
+],
+"COPA DE NACIONES DE ÁFRICA": [
+"lang-es.js"
+],
+"CAMPEONATO DE NORTE Y CENTROAMÉRICA": [
+"lang-es.js"
+],
+"COPA DE NACIONES DE OCEANÍA": [
+"lang-es.js"
+],
+"CAMPEÓN CONTINENTAL": [
+"lang-es.js"
+],
+"BILLETE ASEGURADO": [
+"lang-es.js"
+],
 "— ¡NOS HEMOS CLASIFICADO!": [
 "lang-es.js"
 ],
@@ -322071,9 +324805,6 @@
 "SUBE EL VÍNCULO CON EL ENTRENADOR": [
 "lang-es.js"
 ],
-"HABLAR CON EL ENTRENADOR": [
-"lang-es.js"
-],
 "HABLAR DE TÁCTICA CON EL ENTRENADOR": [
 "lang-es.js"
 ],
@@ -322933,9 +325664,6 @@
 "lang-es.js"
 ],
 "TE NOMBRARON CAPITÁN DEL EQUIPO": [
-"lang-es.js"
-],
-"SALIR CON EL EQUIPO": [
 "lang-es.js"
 ],
 "MOTIVAR AL EQUIPO": [
@@ -324501,9 +327229,6 @@
 "MÍRALO EN LA PESTAÑA VIDA.": [
 "lang-es.js"
 ],
-"TIENES POCA ENERGÍA.": [
-"lang-es.js"
-],
 "TE DIO UNA CLASE PARTICULAR EN LA CANTERA.": [
 "lang-es.js"
 ],
@@ -325251,6 +327976,9 @@
 "{} probó desde fuera del área, ¡{} la desvió a córner con la punta de los dedos!": [
 "lang-es.js"
 ],
+"Se juega en las semanas de selecciones. Los 2 primeros se clasifican para {} {}.": [
+"lang-es.js"
+],
 "¡{} otra vez a tope! {} superó a {} {}-{}; el gol de la victoria fue suyo.": [
 "lang-es.js"
 ],
@@ -325369,6 +328097,12 @@
 "lang-es.js"
 ],
 "🎉 ¡Superaste las pruebas! La cantera de {0} te espera al final de la temporada.": [
+"lang-es.js"
+],
+"Sorteo de {}: {} cae en el grupo con {}. Los 2 primeros van al torneo.": [
+"lang-es.js"
+],
+"¡Tenemos billete para {} {}! Orgulloso de ser parte de este camino.": [
 "lang-es.js"
 ],
 "👀 Hay otra promesa de tu edad en tu posición: {} ({}).": [
@@ -325771,6 +328505,9 @@
 "lang-es.js"
 ],
 "He visto el partido, ¡ganasteis {0}! ¡El barrio está de fiesta!": [
+"lang-es.js"
+],
+"{} ¡CONVOCADO POR LA SELECCIÓN! {}: te espera el partido {} {}.": [
 "lang-es.js"
 ],
 "¡{} goles en el partido de la calle! Había un ojeador en la banda...": [
@@ -326184,6 +328921,9 @@
 "🟨 {} cometió una falta táctica y vio la amarilla.": [
 "lang-es.js"
 ],
+"{} ¡Convocado para un partido de clasificación!": [
+"lang-es.js"
+],
 "El entrenador admiró tu determinación. Resistencia +{}": [
 "lang-es.js"
 ],
@@ -326476,6 +329216,9 @@
 "lang-es.js"
 ],
 "{} probó una volea, el balón acabó en la grada.": [
+"lang-es.js"
+],
+"Entrena {} y sigue mejorando.": [
 "lang-es.js"
 ],
 "Tu patrocinio con {} ha terminado.": [
@@ -326895,6 +329638,9 @@
 "{} StarValor se desbloquea con Premium": [
 "lang-es.js"
 ],
+"({}-{} tras la prórroga, penaltis{})": [
+"lang-es.js"
+],
 "Sanción de la federación: {} semanas": [
 "lang-es.js"
 ],
@@ -327285,9 +330031,6 @@
 "{} se prepara...": [
 "lang-es.js"
 ],
-"{} ¡TE HAN CONVOCADO CON LA SELECCIÓN!": [
-"lang-es.js"
-],
 "{} habló de táctica con el entrenador.": [
 "lang-es.js"
 ],
@@ -327350,6 +330093,10 @@
 ],
 "A tu contrato le quedan {} años.": [
 "lang-es.js"
+],
+"{} países, campeonato continental": [
+"lang-es.js",
+"lang-pt.js"
 ],
 "Ranking de selecciones {}": [
 "lang-es.js"
@@ -327448,6 +330195,9 @@
 "lang-es.js"
 ],
 "{} Bota de Oro Europea": [
+"lang-es.js"
+],
+"{} · Partido {} · Nivel rival {}": [
 "lang-es.js"
 ],
 "¡Moral +10 y {} de paga!": [
@@ -327630,6 +330380,12 @@
 "{} lanza...": [
 "lang-es.js"
 ],
+"Líder · {} pts de ventaja": [
+"lang-es.js"
+],
+"{} pts · {} PJ · {}G {}E {}P": [
+"lang-es.js"
+],
 "Marcaste {} goles de falta directa": [
 "lang-es.js"
 ],
@@ -327762,6 +330518,12 @@
 "lang-es.js"
 ],
 "Ha llegado mi nueva pieza de {0}.": [
+"lang-es.js"
+],
+"Te quedan {} acciones": [
+"lang-es.js"
+],
+"y tiene billete para {} {}!": [
 "lang-es.js"
 ],
 "/semana · quedan {} años": [
@@ -328023,6 +330785,9 @@
 "{} · los más valiosos": [
 "lang-es.js"
 ],
+"{}º en el grupo de clasificación": [
+"lang-es.js"
+],
 "{} Once probable": [
 "lang-es.js"
 ],
@@ -328111,6 +330876,9 @@
 "lang-es.js"
 ],
 "🌍 Campeón de la {}: {}.": [
+"lang-es.js"
+],
+"({}-{} en la prórroga)": [
 "lang-es.js"
 ],
 "Vínculo familiar +{}": [
@@ -328236,6 +331004,9 @@
 "lang-es.js"
 ],
 "{} Resumen de carrera": [
+"lang-es.js"
+],
+"{} · Partido {} • {} - {}": [
 "lang-es.js"
 ],
 "{} Plan semanal": [
@@ -328514,6 +331285,9 @@
 "{0} ofertas nuevas": [
 "lang-es.js"
 ],
+"A {} pts del líder": [
+"lang-es.js"
+],
 "Te pasaste ({}). -{}": [
 "lang-es.js"
 ],
@@ -328615,6 +331389,12 @@
 "lang-es.js"
 ],
 "Requiere {0} de fama": [
+"lang-es.js"
+],
+"Clasificación {} {}": [
+"lang-es.js"
+],
+"Jornada {}/3": [
 "lang-es.js"
 ],
 "{} marcó.": [
@@ -328730,6 +331510,9 @@
 "lang-es.js"
 ],
 "Partido internacional {0}": [
+"lang-es.js"
+],
+"{} · {} · {} AÑOS": [
 "lang-es.js"
 ],
 "({}.º puesto)": [
@@ -342033,6 +344816,102 @@
 "Une star plus forte que son équipe change la course au titre. Ton grand rival joue désormais à son propre niveau.": [
 "lang-fr.js"
 ],
+"Arr.": [
+"lang-fr.js"
+],
+"Journal": [
+"lang-fr.js"
+],
+"Sortir avec l’équipe": [
+"lang-fr.js"
+],
+"Parler au coach": [
+"lang-fr.js"
+],
+"Tu es blessé. Te reposer rétablira ton énergie et ton moral.": [
+"lang-fr.js"
+],
+"Ton énergie est basse. Te reposer cette semaine t’aidera pour le match.": [
+"lang-fr.js"
+],
+"Ton énergie est basse.": [
+"lang-fr.js"
+],
+"La relation avec le coach est froide. Lui parler augmente tes chances d’être titulaire.": [
+"lang-fr.js"
+],
+"Fait": [
+"lang-fr.js"
+],
+"Choisir une action": [
+"lang-fr.js"
+],
+"Plus d’actions · prêt pour le match": [
+"lang-fr.js"
+],
+"Appliquer": [
+"lang-fr.js"
+],
+"Conseil du coach": [
+"lang-fr.js"
+],
+"En tête": [
+"lang-fr.js"
+],
+"Prochain :": [
+"lang-fr.js"
+],
+"Attributs": [
+"lang-fr.js"
+],
+"Groupe": [
+"lang-fr.js"
+],
+"Qualifié pour le tournoi": [
+"lang-fr.js"
+],
+"Éliminé": [
+"lang-fr.js"
+],
+"Éliminé en qualifications": [
+"lang-fr.js"
+],
+"Championnat d’Amérique du Sud": [
+"lang-fr.js"
+],
+"Coupe des nations d’Asie": [
+"lang-fr.js"
+],
+"Coupe des nations d’Afrique": [
+"lang-fr.js"
+],
+"Championnat d’Amérique du Nord et centrale": [
+"lang-fr.js"
+],
+"Coupe des nations d’Océanie": [
+"lang-fr.js"
+],
+"Champion continental": [
+"lang-fr.js"
+],
+"Tu as remporté le championnat des nations de ton continent": [
+"lang-fr.js"
+],
+"Billet en poche": [
+"lang-fr.js"
+],
+"Tu t’es qualifié pour un tournoi avec ta sélection": [
+"lang-fr.js"
+],
+"COUPE D’ASIE": [
+"lang-fr.js"
+],
+"COUPE D’AFRIQUE": [
+"lang-fr.js"
+],
+"OCÉANIE": [
+"lang-fr.js"
+],
 "— on est qualifiés !": [
 "lang-fr.js"
 ],
@@ -343364,9 +346243,6 @@
 "lang-fr.js"
 ],
 "Le coach a aimé ton échauffement, tu entres en seconde période !": [
-"lang-fr.js"
-],
-"Parler au coach": [
 "lang-fr.js"
 ],
 "Avec un bon lien avec le coach, tu es titulaire. Une énergie faible nuit à ta performance.": [
@@ -346349,13 +349225,7 @@
 "Consulte l'onglet Vie.": [
 "lang-fr.js"
 ],
-"Ton énergie est basse.": [
-"lang-fr.js"
-],
 "Ta performance baisse et le risque de blessure augmente.": [
-"lang-fr.js"
-],
-"TU AS ÉTÉ CONVOQUÉ EN ÉQUIPE NATIONALE !": [
 "lang-fr.js"
 ],
 "Les U19 jouent la Ligue européenne de développement cette saison !": [
@@ -355755,6 +358625,78 @@
 "STARVALEUR SUR TON TÉLÉPHONE": [
 "lang-fr.js"
 ],
+"ARR.": [
+"lang-fr.js"
+],
+"JOURNAL": [
+"lang-fr.js"
+],
+"SORTIR AVEC L’ÉQUIPE": [
+"lang-fr.js"
+],
+"PARLER AU COACH": [
+"lang-fr.js"
+],
+"TON ÉNERGIE EST BASSE.": [
+"lang-fr.js"
+],
+"FAIT": [
+"lang-fr.js"
+],
+"CHOISIR UNE ACTION": [
+"lang-fr.js"
+],
+"PLUS D’ACTIONS · PRÊT POUR LE MATCH": [
+"lang-fr.js"
+],
+"APPLIQUER": [
+"lang-fr.js"
+],
+"CONSEIL DU COACH": [
+"lang-fr.js"
+],
+"EN TÊTE": [
+"lang-fr.js"
+],
+"PROCHAIN :": [
+"lang-fr.js"
+],
+"ATTRIBUTS": [
+"lang-fr.js"
+],
+"GROUPE": [
+"lang-fr.js"
+],
+"QUALIFIÉ POUR LE TOURNOI": [
+"lang-fr.js"
+],
+"ÉLIMINÉ": [
+"lang-fr.js"
+],
+"ÉLIMINÉ EN QUALIFICATIONS": [
+"lang-fr.js"
+],
+"CHAMPIONNAT D’AMÉRIQUE DU SUD": [
+"lang-fr.js"
+],
+"COUPE DES NATIONS D’ASIE": [
+"lang-fr.js"
+],
+"COUPE DES NATIONS D’AFRIQUE": [
+"lang-fr.js"
+],
+"CHAMPIONNAT D’AMÉRIQUE DU NORD ET CENTRALE": [
+"lang-fr.js"
+],
+"COUPE DES NATIONS D’OCÉANIE": [
+"lang-fr.js"
+],
+"CHAMPION CONTINENTAL": [
+"lang-fr.js"
+],
+"BILLET EN POCHE": [
+"lang-fr.js"
+],
 "— ON EST QUALIFIÉS !": [
 "lang-fr.js"
 ],
@@ -356785,9 +359727,6 @@
 "LE LIEN AVEC LE COACH AUGMENTE": [
 "lang-fr.js"
 ],
-"PARLER AU COACH": [
-"lang-fr.js"
-],
 "PARLER TACTIQUE AVEC LE COACH": [
 "lang-fr.js"
 ],
@@ -357608,9 +360547,6 @@
 "lang-fr.js"
 ],
 "TU AS ÉTÉ NOMMÉ CAPITAINE DE L'ÉQUIPE": [
-"lang-fr.js"
-],
-"SORTIR AVEC L'ÉQUIPE": [
 "lang-fr.js"
 ],
 "MOTIVER L'ÉQUIPE": [
@@ -359108,9 +362044,6 @@
 "CONSULTE L'ONGLET VIE.": [
 "lang-fr.js"
 ],
-"TON ÉNERGIE EST BASSE.": [
-"lang-fr.js"
-],
 "T'A DONNÉ UN COURS PARTICULIER AU CENTRE DE FORMATION.": [
 "lang-fr.js"
 ],
@@ -359858,6 +362791,9 @@
 "{} tente de loin, {} la détourne du bout des doigts en corner !": [
 "lang-fr.js"
 ],
+"Se joue lors des semaines internationales. Les 2 premiers se qualifient pour {} {}.": [
+"lang-fr.js"
+],
 "{} de nouveau en feu ! {} a dominé {} {}-{} ; le but de la victoire est venu de lui.": [
 "lang-fr.js"
 ],
@@ -359976,6 +362912,12 @@
 "lang-fr.js"
 ],
 "🎉 Essais réussis ! Le centre de formation de {0} t'attend en fin de saison.": [
+"lang-fr.js"
+],
+"Tirage {} : {} est dans le groupe de {}. Les 2 premiers vont au tournoi.": [
+"lang-fr.js"
+],
+"Billet en poche pour {} {} ! Fier de faire partie de cette aventure.": [
 "lang-fr.js"
 ],
 "👀 Il y a un autre espoir de ton âge à ton poste : {} ({}).": [
@@ -360378,6 +363320,9 @@
 "lang-fr.js"
 ],
 "J'ai vu le match, vous avez gagné {0} ! Tout le quartier fait la fête !": [
+"lang-fr.js"
+],
+"{} TU ES SÉLECTIONNÉ ! {} : le match {} {} t’attend.": [
 "lang-fr.js"
 ],
 "{} buts dans le match de rue ! Il y avait un recruteur au bord du terrain...": [
@@ -360791,6 +363736,9 @@
 "🟨 {} commet une faute tactique et prend un jaune.": [
 "lang-fr.js"
 ],
+"{} Sélectionné pour un match de qualification !": [
+"lang-fr.js"
+],
 "Le coach a admiré ta détermination. Endurance +{}": [
 "lang-fr.js"
 ],
@@ -361083,6 +364031,9 @@
 "lang-fr.js"
 ],
 "{} tente une volée, le ballon finit dans les tribunes.": [
+"lang-fr.js"
+],
+"Travaille ton {} et continue de progresser.": [
 "lang-fr.js"
 ],
 "Ton contrat de sponsoring avec {} a pris fin.": [
@@ -361502,6 +364453,9 @@
 "{} StarValeur se débloque avec Premium": [
 "lang-fr.js"
 ],
+"({}-{} après prolongation, tirs au but{})": [
+"lang-fr.js"
+],
 "Suspension fédérale : {} semaines": [
 "lang-fr.js"
 ],
@@ -361892,9 +364846,6 @@
 "{} s'élance...": [
 "lang-fr.js"
 ],
-"{} TU AS ÉTÉ CONVOQUÉ EN ÉQUIPE NATIONALE !": [
-"lang-fr.js"
-],
 "{} a parlé tactique avec le coach.": [
 "lang-fr.js"
 ],
@@ -361956,6 +364907,9 @@
 "lang-fr.js"
 ],
 "Il reste {} ans à ton contrat.": [
+"lang-fr.js"
+],
+"{} pays, championnat continental": [
 "lang-fr.js"
 ],
 "Classement des équipes nationales {}": [
@@ -362055,6 +365009,9 @@
 "lang-fr.js"
 ],
 "{} Soulier d'or européen": [
+"lang-fr.js"
+],
+"{} · Match {} · Force adverse {}": [
 "lang-fr.js"
 ],
 "Moral +10 et {} d'argent de poche !": [
@@ -362234,6 +365191,12 @@
 "{} tire...": [
 "lang-fr.js"
 ],
+"En tête · {} pts d’avance": [
+"lang-fr.js"
+],
+"{} pts · {} matchs · {}V {}N {}D": [
+"lang-fr.js"
+],
 "Tu as marqué {} buts sur coup franc": [
 "lang-fr.js"
 ],
@@ -362361,6 +365324,12 @@
 "lang-fr.js"
 ],
 "Ma nouvelle pièce {0} est arrivée.": [
+"lang-fr.js"
+],
+"Il te reste {} actions": [
+"lang-fr.js"
+],
+"et décroche son billet pour {} {} !": [
 "lang-fr.js"
 ],
 "/semaine · encore {} ans": [
@@ -362613,6 +365582,9 @@
 "{} · les plus chers": [
 "lang-fr.js"
 ],
+"{}e du groupe de qualification": [
+"lang-fr.js"
+],
 "{} Onze probable": [
 "lang-fr.js"
 ],
@@ -362695,6 +365667,9 @@
 "lang-fr.js"
 ],
 "🌍 Champion de la {} : {}.": [
+"lang-fr.js"
+],
+"({}-{} après prolongation)": [
 "lang-fr.js"
 ],
 "Lien familial +{}": [
@@ -363075,6 +366050,9 @@
 "{0} nouvelles offres": [
 "lang-fr.js"
 ],
+"À {} pts du leader": [
+"lang-fr.js"
+],
 "Dépassé ({}). -{}": [
 "lang-fr.js"
 ],
@@ -363172,6 +366150,12 @@
 "lang-fr.js"
 ],
 "{0} de célébrité requis": [
+"lang-fr.js"
+],
+"Qualifications {} {}": [
+"lang-fr.js"
+],
+"Journée {}/3": [
 "lang-fr.js"
 ],
 "{} a marqué.": [
@@ -363277,6 +366261,9 @@
 "lang-fr.js"
 ],
 "Match international {0}": [
+"lang-fr.js"
+],
+"{} · {} · {} ANS": [
 "lang-fr.js"
 ],
 "({}e place)": [
@@ -365678,9 +368665,6 @@
 "lang-id.js"
 ],
 "Hari ini": [
-"lang-id.js"
-],
-"Grup": [
 "lang-id.js"
 ],
 "Gugur": [
@@ -376300,6 +379284,105 @@
 "Bintang yang lebih kuat dari timnya kini mengubah perebutan gelar. Rival abadimu kini bermain di levelnya sendiri.": [
 "lang-id.js"
 ],
+"Nirbobol": [
+"lang-id.js"
+],
+"Penalti diselamatkan": [
+"lang-id.js"
+],
+"NB": [
+"lang-id.js"
+],
+"Pen.": [
+"lang-id.js"
+],
+"Laga Terakhir": [
+"lang-id.js"
+],
+"Koran": [
+"lang-id.js"
+],
+"Nongkrong bareng tim": [
+"lang-id.js"
+],
+"Bicara dengan pelatih": [
+"lang-id.js"
+],
+"Kamu cedera. Istirahat akan memulihkan energi dan moralmu.": [
+"lang-id.js"
+],
+"Energimu rendah. Istirahat minggu ini akan membantumu di laga.": [
+"lang-id.js"
+],
+"Energimu rendah.": [
+"lang-id.js"
+],
+"Hubunganmu dengan pelatih dingin. Bicara akan menaikkan peluang jadi starter.": [
+"lang-id.js"
+],
+"Pilih aksi": [
+"lang-id.js"
+],
+"Aksi habis · siap bertanding": [
+"lang-id.js"
+],
+"Terapkan": [
+"lang-id.js"
+],
+"Saran pelatih": [
+"lang-id.js"
+],
+"Di puncak": [
+"lang-id.js"
+],
+"Berikutnya:": [
+"lang-id.js"
+],
+"Atribut": [
+"lang-id.js"
+],
+"Lolos ke turnamen": [
+"lang-id.js"
+],
+"Gugur di kualifikasi": [
+"lang-id.js"
+],
+"Kejuaraan Amerika Selatan": [
+"lang-id.js"
+],
+"Piala Bangsa-Bangsa Asia": [
+"lang-id.js"
+],
+"Piala Bangsa-Bangsa Afrika": [
+"lang-id.js"
+],
+"Kejuaraan Amerika Utara & Tengah": [
+"lang-id.js"
+],
+"Piala Bangsa-Bangsa Oseania": [
+"lang-id.js"
+],
+"Juara Benua": [
+"lang-id.js"
+],
+"Kamu menjuarai kejuaraan timnas di benuamu": [
+"lang-id.js"
+],
+"Tiket di Tangan": [
+"lang-id.js"
+],
+"Kamu lolos ke turnamen bersama timnasmu": [
+"lang-id.js"
+],
+"PIALA ASIA": [
+"lang-id.js"
+],
+"PIALA AFRIKA": [
+"lang-id.js"
+],
+"OSEANIA": [
+"lang-id.js"
+],
 "— kita lolos!": [
 "lang-id.js"
 ],
@@ -380608,13 +383691,7 @@
 "Cek di tab Kehidupan.": [
 "lang-id.js"
 ],
-"Energimu rendah.": [
-"lang-id.js"
-],
 "Performamu turun dan risiko cedera meningkat.": [
-"lang-id.js"
-],
-"KAMU DIPANGGIL KE TIMNAS!": [
 "lang-id.js"
 ],
 "U19 bermain di Liga Pengembangan Eropa musim ini!": [
@@ -382223,9 +385300,6 @@
 "lang-id.js"
 ],
 "HARI INI": [
-"lang-id.js"
-],
-"GRUP": [
 "lang-id.js"
 ],
 "GUGUR": [
@@ -389792,6 +392866,69 @@
 "STARVALUE DI PONSEL": [
 "lang-id.js"
 ],
+"PEN.": [
+"lang-id.js"
+],
+"KORAN": [
+"lang-id.js"
+],
+"NONGKRONG BARENG TIM": [
+"lang-id.js"
+],
+"BICARA DENGAN PELATIH": [
+"lang-id.js"
+],
+"ENERGIMU RENDAH.": [
+"lang-id.js"
+],
+"PILIH AKSI": [
+"lang-id.js"
+],
+"AKSI HABIS · SIAP BERTANDING": [
+"lang-id.js"
+],
+"TERAPKAN": [
+"lang-id.js"
+],
+"SARAN PELATIH": [
+"lang-id.js"
+],
+"DI PUNCAK": [
+"lang-id.js"
+],
+"BERIKUTNYA:": [
+"lang-id.js"
+],
+"ATRIBUT": [
+"lang-id.js"
+],
+"LOLOS KE TURNAMEN": [
+"lang-id.js"
+],
+"GUGUR DI KUALIFIKASI": [
+"lang-id.js"
+],
+"KEJUARAAN AMERIKA SELATAN": [
+"lang-id.js"
+],
+"PIALA BANGSA-BANGSA ASIA": [
+"lang-id.js"
+],
+"PIALA BANGSA-BANGSA AFRIKA": [
+"lang-id.js"
+],
+"KEJUARAAN AMERIKA UTARA & TENGAH": [
+"lang-id.js"
+],
+"PIALA BANGSA-BANGSA OSEANIA": [
+"lang-id.js"
+],
+"JUARA BENUA": [
+"lang-id.js"
+],
+"TIKET DI TANGAN": [
+"lang-id.js"
+],
 "— KITA LOLOS!": [
 "lang-id.js"
 ],
@@ -390803,9 +393940,6 @@
 "IKATAN DENGAN PELATIH NAIK": [
 "lang-id.js"
 ],
-"BICARA DENGAN PELATIH": [
-"lang-id.js"
-],
 "DISKUSI TAKTIK DENGAN PELATIH": [
 "lang-id.js"
 ],
@@ -391618,9 +394752,6 @@
 "lang-id.js"
 ],
 "KAMU DITUNJUK SEBAGAI KAPTEN TIM": [
-"lang-id.js"
-],
-"NONGKRONG DENGAN TIM": [
 "lang-id.js"
 ],
 "BAKAR SEMANGAT TIM": [
@@ -393126,9 +396257,6 @@
 "CEK DI TAB KEHIDUPAN.": [
 "lang-id.js"
 ],
-"ENERGIMU RENDAH.": [
-"lang-id.js"
-],
 "MEMBERIMU LES PRIVAT DI AKADEMI.": [
 "lang-id.js"
 ],
@@ -393876,6 +397004,9 @@
 "{} mencoba dari luar kotak, {} menepisnya ke tendangan sudut!": [
 "lang-id.js"
 ],
+"Dimainkan di pekan internasional. 2 teratas lolos ke {} {}.": [
+"lang-id.js"
+],
 "{} kembali bersinar! {} menyingkirkan {} {}-{}; gol kemenangan datang darinya.": [
 "lang-id.js"
 ],
@@ -393994,6 +397125,12 @@
 "lang-id.js"
 ],
 "🎉 Kamu lolos seleksi! Akademi {0} menunggumu di akhir musim.": [
+"lang-id.js"
+],
+"Undian {}: {} satu grup dengan {}. 2 teratas lolos ke turnamen.": [
+"lang-id.js"
+],
+"Kami lolos ke {} {}! Bangga jadi bagian perjalanan ini.": [
 "lang-id.js"
 ],
 "👀 Ada pemain muda lain seusiamu di posisimu: {} ({}).": [
@@ -394396,6 +397533,9 @@
 "lang-id.js"
 ],
 "Ibu nonton pertandingannya, kalian menang {0}! Satu kampung merayakan!": [
+"lang-id.js"
+],
+"{} KAMU DIPANGGIL TIMNAS! {}: laga {} {} menantimu.": [
 "lang-id.js"
 ],
 "{} gol di pertandingan jalanan! Ada pencari bakat di pinggir lapangan...": [
@@ -394809,6 +397949,9 @@
 "🟨 {} melakukan pelanggaran taktis dan mendapat kartu kuning.": [
 "lang-id.js"
 ],
+"{} Dipanggil untuk laga kualifikasi!": [
+"lang-id.js"
+],
 "Pelatih mengagumi tekadmu. Stamina +{}": [
 "lang-id.js"
 ],
@@ -395101,6 +398244,9 @@
 "lang-id.js"
 ],
 "{} mencoba tendangan voli, bola melayang ke tribun.": [
+"lang-id.js"
+],
+"Latih {} dan terus berkembang.": [
 "lang-id.js"
 ],
 "Kontrak sponsormu dengan {} telah berakhir.": [
@@ -395520,6 +398666,9 @@
 "{} StarValue terbuka dengan Premium": [
 "lang-id.js"
 ],
+"({}-{} setelah perpanjangan waktu, adu penalti{})": [
+"lang-id.js"
+],
 "Larangan federasi: {} minggu": [
 "lang-id.js"
 ],
@@ -395910,9 +399059,6 @@
 "{} maju...": [
 "lang-id.js"
 ],
-"{} KAMU DIPANGGIL KE TIMNAS!": [
-"lang-id.js"
-],
 "{} berdiskusi taktik dengan pelatih.": [
 "lang-id.js"
 ],
@@ -395971,6 +399117,9 @@
 "lang-id.js"
 ],
 "{} Piala dan timnas": [
+"lang-id.js"
+],
+"{} negara, kejuaraan benua": [
 "lang-id.js"
 ],
 "Peringkat Timnas {}": [
@@ -396067,6 +399216,9 @@
 "lang-id.js"
 ],
 "{} Sepatu Emas Eropa": [
+"lang-id.js"
+],
+"{} · Laga {} · Kekuatan lawan {}": [
 "lang-id.js"
 ],
 "Moral +10 dan uang saku {}!": [
@@ -396246,6 +399398,12 @@
 "{} menendang...": [
 "lang-id.js"
 ],
+"Di puncak · unggul {} poin": [
+"lang-id.js"
+],
+"{} poin · {} laga · {}M {}S {}K": [
+"lang-id.js"
+],
 "Kamu mencetak {} gol tendangan bebas": [
 "lang-id.js"
 ],
@@ -396370,6 +399528,12 @@
 "lang-id.js"
 ],
 "Barang baruku dari {0} sudah tiba.": [
+"lang-id.js"
+],
+"Sisa {} aksi": [
+"lang-id.js"
+],
+"dan lolos ke {} {}!": [
 "lang-id.js"
 ],
 "/minggu · tersisa {} tahun": [
@@ -396621,6 +399785,9 @@
 "{} · paling berharga": [
 "lang-id.js"
 ],
+"Peringkat {} di grup kualifikasi": [
+"lang-id.js"
+],
 "{} Perkiraan Susunan Pemain": [
 "lang-id.js"
 ],
@@ -396704,6 +399871,9 @@
 "lang-id.js"
 ],
 "🌍 Juara {}: {}.": [
+"lang-id.js"
+],
+"({}-{} di perpanjangan waktu)": [
 "lang-id.js"
 ],
 "Ikatan keluarga +{}": [
@@ -396827,6 +399997,9 @@
 "lang-id.js"
 ],
 "{} Ringkasan karier": [
+"lang-id.js"
+],
+"{} · Laga {} • {} - {}": [
 "lang-id.js"
 ],
 "{} Rencana Mingguan": [
@@ -397094,6 +400267,9 @@
 "{0} tawaran baru": [
 "lang-id.js"
 ],
+"{} poin di belakang pemuncak": [
+"lang-id.js"
+],
 "Lewat ({}). -{}": [
 "lang-id.js"
 ],
@@ -397189,6 +400365,9 @@
 "lang-id.js"
 ],
 "Perlu ketenaran {0}": [
+"lang-id.js"
+],
+"Kualifikasi {} {}": [
 "lang-id.js"
 ],
 "{} mencetak gol.": [
@@ -397291,6 +400470,9 @@
 "lang-id.js"
 ],
 "Laga timnas {0}": [
+"lang-id.js"
+],
+"{} · {} · {} TAHUN": [
 "lang-id.js"
 ],
 "(peringkat {})": [
@@ -410336,6 +413518,99 @@
 "Una stella più forte della sua squadra cambia la corsa al titolo. Il tuo eterno rivale ora gioca al suo livello.": [
 "lang-it.js"
 ],
+"PI": [
+"lang-it.js"
+],
+"Giornale": [
+"lang-it.js"
+],
+"Uscire con la squadra": [
+"lang-it.js"
+],
+"Parla con l’allenatore": [
+"lang-it.js"
+],
+"Sei infortunato. Riposare ti restituisce energia e morale.": [
+"lang-it.js"
+],
+"Hai poca energia. Riposare questa settimana ti aiuterà in partita.": [
+"lang-it.js"
+],
+"La tua energia è bassa.": [
+"lang-it.js"
+],
+"Il rapporto con l’allenatore è freddo. Parlarci aumenta le chance da titolare.": [
+"lang-it.js"
+],
+"Fatto": [
+"lang-it.js"
+],
+"Scegli azione": [
+"lang-it.js"
+],
+"Azioni finite · pronto per la partita": [
+"lang-it.js"
+],
+"Applica": [
+"lang-it.js"
+],
+"Consiglio dell’allenatore": [
+"lang-it.js"
+],
+"In vetta": [
+"lang-it.js"
+],
+"Prossima:": [
+"lang-it.js"
+],
+"Attributi": [
+"lang-it.js"
+],
+"Girone": [
+"lang-it.js"
+],
+"Qualificata al torneo": [
+"lang-it.js"
+],
+"Eliminata": [
+"lang-it.js"
+],
+"Fuori nelle qualificazioni": [
+"lang-it.js"
+],
+"Campionato Sudamericano": [
+"lang-it.js"
+],
+"Coppa delle Nazioni Asiatiche": [
+"lang-it.js"
+],
+"Coppa delle Nazioni Africane": [
+"lang-it.js"
+],
+"Campionato del Nord e Centro America": [
+"lang-it.js"
+],
+"Coppa delle Nazioni dell’Oceania": [
+"lang-it.js"
+],
+"Campione continentale": [
+"lang-it.js"
+],
+"Hai vinto il campionato per nazionali del tuo continente": [
+"lang-it.js"
+],
+"Biglietto staccato": [
+"lang-it.js"
+],
+"Ti sei qualificato a un torneo con la tua nazionale": [
+"lang-it.js"
+],
+"COPPA D’ASIA": [
+"lang-it.js"
+],
+"COPPA D’AFRICA": [
+"lang-it.js"
+],
 "— ci siamo qualificati!": [
 "lang-it.js"
 ],
@@ -414600,13 +417875,7 @@
 "Controlla nella scheda Vita.": [
 "lang-it.js"
 ],
-"La tua energia è bassa.": [
-"lang-it.js"
-],
 "La prestazione cala e il rischio infortuni aumenta.": [
-"lang-it.js"
-],
-"SEI STATO CONVOCATO IN NAZIONALE!": [
 "lang-it.js"
 ],
 "L'U19 gioca la Lega Europea di Sviluppo in questa stagione!": [
@@ -423821,6 +427090,75 @@
 "STARVALORE SUL TELEFONO": [
 "lang-it.js"
 ],
+"GIORNALE": [
+"lang-it.js"
+],
+"USCIRE CON LA SQUADRA": [
+"lang-it.js"
+],
+"PARLA CON L’ALLENATORE": [
+"lang-it.js"
+],
+"LA TUA ENERGIA È BASSA.": [
+"lang-it.js"
+],
+"FATTO": [
+"lang-it.js"
+],
+"SCEGLI AZIONE": [
+"lang-it.js"
+],
+"AZIONI FINITE · PRONTO PER LA PARTITA": [
+"lang-it.js"
+],
+"APPLICA": [
+"lang-it.js"
+],
+"CONSIGLIO DELL’ALLENATORE": [
+"lang-it.js"
+],
+"IN VETTA": [
+"lang-it.js"
+],
+"PROSSIMA:": [
+"lang-it.js"
+],
+"ATTRIBUTI": [
+"lang-it.js"
+],
+"GIRONE": [
+"lang-it.js"
+],
+"QUALIFICATA AL TORNEO": [
+"lang-it.js"
+],
+"ELIMINATA": [
+"lang-it.js"
+],
+"FUORI NELLE QUALIFICAZIONI": [
+"lang-it.js"
+],
+"CAMPIONATO SUDAMERICANO": [
+"lang-it.js"
+],
+"COPPA DELLE NAZIONI ASIATICHE": [
+"lang-it.js"
+],
+"COPPA DELLE NAZIONI AFRICANE": [
+"lang-it.js"
+],
+"CAMPIONATO DEL NORD E CENTRO AMERICA": [
+"lang-it.js"
+],
+"COPPA DELLE NAZIONI DELL’OCEANIA": [
+"lang-it.js"
+],
+"CAMPIONE CONTINENTALE": [
+"lang-it.js"
+],
+"BIGLIETTO STACCATO": [
+"lang-it.js"
+],
 "— CI SIAMO QUALIFICATI!": [
 "lang-it.js"
 ],
@@ -424837,9 +428175,6 @@
 "IL LEGAME CON L'ALLENATORE SALE": [
 "lang-it.js"
 ],
-"PARLA CON L'ALLENATORE": [
-"lang-it.js"
-],
 "PARLA DI TATTICA CON L'ALLENATORE": [
 "lang-it.js"
 ],
@@ -425634,9 +428969,6 @@
 "lang-it.js"
 ],
 "SEI STATO NOMINATO CAPITANO DELLA SQUADRA": [
-"lang-it.js"
-],
-"ESCI CON LA SQUADRA": [
 "lang-it.js"
 ],
 "CARICA LA SQUADRA": [
@@ -427151,9 +430483,6 @@
 "CONTROLLA NELLA SCHEDA VITA.": [
 "lang-it.js"
 ],
-"LA TUA ENERGIA È BASSA.": [
-"lang-it.js"
-],
 "TI HA DATO UNA LEZIONE PRIVATA IN ACCADEMIA.": [
 "lang-it.js"
 ],
@@ -427901,6 +431230,9 @@
 "{} ci prova da fuori, {} la devia in angolo con la punta delle dita!": [
 "lang-it.js"
 ],
+"Si gioca nelle settimane delle nazionali. Le prime 2 si qualificano per {} {}.": [
+"lang-it.js"
+],
 "{} di nuovo in forma! Il {} ha superato il {} {}-{}; il gol vittoria è arrivato da lui.": [
 "lang-it.js"
 ],
@@ -428019,6 +431351,12 @@
 "lang-it.js"
 ],
 "🎉 Provino superato! Il vivaio del {0} ti aspetta a fine stagione.": [
+"lang-it.js"
+],
+"Sorteggio {}: {} nel girone con {}. Le prime 2 vanno al torneo.": [
+"lang-it.js"
+],
+"Abbiamo il biglietto per {} {}! Orgoglioso di far parte di questo viaggio.": [
 "lang-it.js"
 ],
 "👀 C'è un altro talento della tua età nel tuo ruolo: {} ({}).": [
@@ -428421,6 +431759,9 @@
 "lang-it.js"
 ],
 "Ho visto la partita, avete vinto {0}! Il quartiere è in festa!": [
+"lang-it.js"
+],
+"{} SEI STATO CONVOCATO! {}: ti aspetta la partita {} {}.": [
 "lang-it.js"
 ],
 "{} gol nella partita di strada! C'era un osservatore a bordo campo...": [
@@ -428834,6 +432175,9 @@
 "🟨 {} commette un fallo tattico e viene ammonito.": [
 "lang-it.js"
 ],
+"{} Convocato per una gara di qualificazione!": [
+"lang-it.js"
+],
 "Il mister ha ammirato la tua determinazione. Resistenza +{}": [
 "lang-it.js"
 ],
@@ -429126,6 +432470,9 @@
 "lang-it.js"
 ],
 "{} prova il tiro al volo, palla in tribuna.": [
+"lang-it.js"
+],
+"Allena {} e continua a crescere.": [
 "lang-it.js"
 ],
 "La tua sponsorizzazione con {} è terminata.": [
@@ -429545,6 +432892,9 @@
 "{} StarValore si sblocca con Premium": [
 "lang-it.js"
 ],
+"({}-{} dopo i supplementari, rigori{})": [
+"lang-it.js"
+],
 "Squalifica federale: {} settimane": [
 "lang-it.js"
 ],
@@ -429935,9 +433285,6 @@
 "{} si presenta sul dischetto...": [
 "lang-it.js"
 ],
-"{} SEI STATO CONVOCATO IN NAZIONALE!": [
-"lang-it.js"
-],
 "{} ha parlato di tattica con il mister.": [
 "lang-it.js"
 ],
@@ -429999,6 +433346,9 @@
 "lang-it.js"
 ],
 "Al tuo contratto restano {} anni.": [
+"lang-it.js"
+],
+"{} nazioni, campionato continentale": [
 "lang-it.js"
 ],
 "Ranking delle nazionali {}": [
@@ -430095,6 +433445,9 @@
 "lang-it.js"
 ],
 "{} Scarpa d'Oro Europea": [
+"lang-it.js"
+],
+"{} · Partita {} · Forza avversario {}": [
 "lang-it.js"
 ],
 "Morale +10 e {} di paghetta!": [
@@ -430274,6 +433627,12 @@
 "{} calcia...": [
 "lang-it.js"
 ],
+"In vetta · {} punti di vantaggio": [
+"lang-it.js"
+],
+"{} punti · {} partite · {}V {}N {}P": [
+"lang-it.js"
+],
 "Hai segnato {} gol su punizione": [
 "lang-it.js"
 ],
@@ -430398,6 +433757,12 @@
 "lang-it.js"
 ],
 "È arrivato il mio nuovo pezzo {0}.": [
+"lang-it.js"
+],
+"Ti restano {} azioni": [
+"lang-it.js"
+],
+"e conquista il biglietto per {} {}!": [
 "lang-it.js"
 ],
 "/settimana · ancora {} anni": [
@@ -430649,6 +434014,9 @@
 "{} · i più preziosi": [
 "lang-it.js"
 ],
+"{}ª nel girone di qualificazione": [
+"lang-it.js"
+],
 "{} Probabile formazione": [
 "lang-it.js"
 ],
@@ -430731,6 +434099,9 @@
 "lang-it.js"
 ],
 "🌍 Campione della {}: {}.": [
+"lang-it.js"
+],
+"({}-{} ai supplementari)": [
 "lang-it.js"
 ],
 "Legame familiare +{}": [
@@ -430854,6 +434225,9 @@
 "lang-it.js"
 ],
 "{} Riepilogo carriera": [
+"lang-it.js"
+],
+"{} · Partita {} • {} - {}": [
 "lang-it.js"
 ],
 "{} Programma settimanale": [
@@ -431112,6 +434486,9 @@
 "{0} nuove offerte": [
 "lang-it.js"
 ],
+"A {} punti dalla vetta": [
+"lang-it.js"
+],
 "Sballato ({}). -{}": [
 "lang-it.js"
 ],
@@ -431203,6 +434580,12 @@
 "lang-it.js"
 ],
 "Serve {0} di fama": [
+"lang-it.js"
+],
+"Qualificazioni {} {}": [
+"lang-it.js"
+],
+"Giornata {}/3": [
 "lang-it.js"
 ],
 "{} ha segnato.": [
@@ -431303,6 +434686,9 @@
 "lang-it.js"
 ],
 "Partita della nazionale {0}": [
+"lang-it.js"
+],
+"{} · {} · {} ANNI": [
 "lang-it.js"
 ],
 "({}° posto)": [
@@ -432455,6 +435841,9 @@
 "StarValueがスマホに": [
 "lang-ja.js"
 ],
+"行動終了 · 試合の準備OK": [
+"lang-ja.js"
+],
 "（PK戦）": [
 "lang-ja.js"
 ],
@@ -432840,6 +436229,9 @@
 "lang-ja.js"
 ],
 "{} StarValueはPremiumで解放": [
+"lang-ja.js"
+],
+"（延長戦{}-{}、PK戦{}）": [
 "lang-ja.js"
 ],
 "{}がFWを倒してイエローカード。": [
@@ -445224,6 +448616,90 @@
 "Um astro mais forte que o time muda a briga pelo título. Seu arquirrival agora joga no próprio nível.": [
 "lang-pt.js"
 ],
+"Jogos sem sofrer gols": [
+"lang-pt.js"
+],
+"JSG": [
+"lang-pt.js"
+],
+"Def.": [
+"lang-pt.js"
+],
+"Jornal": [
+"lang-pt.js"
+],
+"Sair com o time": [
+"lang-pt.js"
+],
+"Falar com o técnico": [
+"lang-pt.js"
+],
+"Você está lesionado. Descansar recupera sua energia e seu moral.": [
+"lang-pt.js"
+],
+"Sua energia está baixa. Descansar esta semana vai ajudar no jogo.": [
+"lang-pt.js"
+],
+"Sua energia está baixa.": [
+"lang-pt.js"
+],
+"A relação com o técnico está fria. Conversar aumenta suas chances de ser titular.": [
+"lang-pt.js"
+],
+"Feito": [
+"lang-pt.js"
+],
+"Escolher ação": [
+"lang-pt.js"
+],
+"Sem ações · pronto para o jogo": [
+"lang-pt.js"
+],
+"Dica do técnico": [
+"lang-pt.js"
+],
+"Próximo:": [
+"lang-pt.js"
+],
+"Classificado para o torneio": [
+"lang-pt.js"
+],
+"Eliminado nas eliminatórias": [
+"lang-pt.js"
+],
+"Campeonato Sul-Americano": [
+"lang-pt.js"
+],
+"Copa das Nações da Ásia": [
+"lang-pt.js"
+],
+"Copa das Nações da África": [
+"lang-pt.js"
+],
+"Campeonato da América do Norte e Central": [
+"lang-pt.js"
+],
+"Copa das Nações da Oceania": [
+"lang-pt.js"
+],
+"Campeão continental": [
+"lang-pt.js"
+],
+"Você venceu o campeonato de seleções do seu continente": [
+"lang-pt.js"
+],
+"Vaga garantida": [
+"lang-pt.js"
+],
+"Você se classificou para um torneio com sua seleção": [
+"lang-pt.js"
+],
+"COPA DA ÁSIA": [
+"lang-pt.js"
+],
+"COPA DA ÁFRICA": [
+"lang-pt.js"
+],
 "— nos classificamos!": [
 "lang-pt.js"
 ],
@@ -446493,9 +449969,6 @@
 "O técnico gostou do seu aquecimento, você entra no segundo tempo!": [
 "lang-pt.js"
 ],
-"Falar com o técnico": [
-"lang-pt.js"
-],
 "Com um bom vínculo com o técnico você é titular. Pouca energia piora seu desempenho.": [
 "lang-pt.js"
 ],
@@ -447607,9 +451080,6 @@
 "lang-pt.js"
 ],
 "O técnico gostou das suas palavras pensando no time.": [
-"lang-pt.js"
-],
-"Sair com o time": [
 "lang-pt.js"
 ],
 "Motivar o time": [
@@ -449409,13 +452879,7 @@
 "Veja na aba Vida.": [
 "lang-pt.js"
 ],
-"Sua energia está baixa.": [
-"lang-pt.js"
-],
 "Seu desempenho cai e o risco de lesão aumenta.": [
-"lang-pt.js"
-],
-"VOCÊ FOI CONVOCADO PARA A SELEÇÃO!": [
 "lang-pt.js"
 ],
 "O sub-19 está na Liga Europeia de Desenvolvimento nesta temporada!": [
@@ -458430,6 +461894,63 @@
 "STARVALOR NO CELULAR": [
 "lang-pt.js"
 ],
+"DEF.": [
+"lang-pt.js"
+],
+"JORNAL": [
+"lang-pt.js"
+],
+"SAIR COM O TIME": [
+"lang-pt.js"
+],
+"FALAR COM O TÉCNICO": [
+"lang-pt.js"
+],
+"SUA ENERGIA ESTÁ BAIXA.": [
+"lang-pt.js"
+],
+"FEITO": [
+"lang-pt.js"
+],
+"ESCOLHER AÇÃO": [
+"lang-pt.js"
+],
+"SEM AÇÕES · PRONTO PARA O JOGO": [
+"lang-pt.js"
+],
+"DICA DO TÉCNICO": [
+"lang-pt.js"
+],
+"PRÓXIMO:": [
+"lang-pt.js"
+],
+"CLASSIFICADO PARA O TORNEIO": [
+"lang-pt.js"
+],
+"ELIMINADO NAS ELIMINATÓRIAS": [
+"lang-pt.js"
+],
+"CAMPEONATO SUL-AMERICANO": [
+"lang-pt.js"
+],
+"COPA DAS NAÇÕES DA ÁSIA": [
+"lang-pt.js"
+],
+"COPA DAS NAÇÕES DA ÁFRICA": [
+"lang-pt.js"
+],
+"CAMPEONATO DA AMÉRICA DO NORTE E CENTRAL": [
+"lang-pt.js"
+],
+"COPA DAS NAÇÕES DA OCEANIA": [
+"lang-pt.js"
+],
+"CAMPEÃO CONTINENTAL": [
+"lang-pt.js"
+],
+"VAGA GARANTIDA": [
+"lang-pt.js"
+],
 "— NOS CLASSIFICAMOS!": [
 "lang-pt.js"
 ],
@@ -459399,9 +462920,6 @@
 "O VÍNCULO COM O TÉCNICO SOBE": [
 "lang-pt.js"
 ],
-"FALAR COM O TÉCNICO": [
-"lang-pt.js"
-],
 "CONVERSAR SOBRE TÁTICA COM O TÉCNICO": [
 "lang-pt.js"
 ],
@@ -460186,9 +463704,6 @@
 "lang-pt.js"
 ],
 "VOCÊ FOI NOMEADO CAPITÃO DO TIME": [
-"lang-pt.js"
-],
-"SAIR COM O TIME": [
 "lang-pt.js"
 ],
 "MOTIVAR O TIME": [
@@ -461652,9 +465167,6 @@
 "VEJA NA ABA VIDA.": [
 "lang-pt.js"
 ],
-"SUA ENERGIA ESTÁ BAIXA.": [
-"lang-pt.js"
-],
 "TE DEU UMA AULA PARTICULAR NA BASE.": [
 "lang-pt.js"
 ],
@@ -462402,6 +465914,9 @@
 "{} arriscou de fora da área, {} espalmou para escanteio com a ponta dos dedos!": [
 "lang-pt.js"
 ],
+"Disputadas nas datas FIFA. Os 2 primeiros se classificam para {} {}.": [
+"lang-pt.js"
+],
 "{} voltou a brilhar! {} passou por {} por {}-{}; o gol da vitória foi dele.": [
 "lang-pt.js"
 ],
@@ -462520,6 +466035,12 @@
 "lang-pt.js"
 ],
 "🎉 Você passou nos testes! A base do {0} te espera no fim da temporada.": [
+"lang-pt.js"
+],
+"Sorteio das {}: {} no grupo com {}. Os 2 primeiros vão ao torneio.": [
+"lang-pt.js"
+],
+"Garantimos vaga em {} {}! Orgulho de fazer parte dessa jornada.": [
 "lang-pt.js"
 ],
 "👀 Tem outra promessa da sua idade na sua posição: {} ({}).": [
@@ -462922,6 +466443,9 @@
 "lang-pt.js"
 ],
 "Vi o jogo, vocês ganharam por {0}! O bairro está em festa!": [
+"lang-pt.js"
+],
+"{} VOCÊ FOI CONVOCADO! {}: o jogo {} {} te espera.": [
 "lang-pt.js"
 ],
 "{} gols no jogo de rua! Tinha um olheiro na lateral...": [
@@ -463335,6 +466859,9 @@
 "🟨 {} fez falta tática e levou amarelo.": [
 "lang-pt.js"
 ],
+"{} Convocado para um jogo das eliminatórias!": [
+"lang-pt.js"
+],
 "O técnico admirou sua determinação. Resistência +{}": [
 "lang-pt.js"
 ],
@@ -463627,6 +467154,9 @@
 "lang-pt.js"
 ],
 "{} tentou um voleio, a bola foi para a arquibancada.": [
+"lang-pt.js"
+],
+"Treine {} e continue evoluindo.": [
 "lang-pt.js"
 ],
 "Seu patrocínio com {} terminou.": [
@@ -464046,6 +467576,9 @@
 "{} StarValor é liberado com Premium": [
 "lang-pt.js"
 ],
+"({}-{} após a prorrogação, pênaltis{})": [
+"lang-pt.js"
+],
 "Suspensão da federação: {} semanas": [
 "lang-pt.js"
 ],
@@ -464436,9 +467969,6 @@
 "{} vai para a cobrança...": [
 "lang-pt.js"
 ],
-"{} VOCÊ FOI CONVOCADO PARA A SELEÇÃO!": [
-"lang-pt.js"
-],
 "{} conversou sobre tática com o técnico.": [
 "lang-pt.js"
 ],
@@ -464599,6 +468129,9 @@
 "lang-pt.js"
 ],
 "{} Chuteira de Ouro Europeia": [
+"lang-pt.js"
+],
+"{} · Jogo {} · Força do rival {}": [
 "lang-pt.js"
 ],
 "Moral +10 e {} de mesada!": [
@@ -464769,6 +468302,12 @@
 "{} vai bater...": [
 "lang-pt.js"
 ],
+"Líder · {} pts à frente": [
+"lang-pt.js"
+],
+"{} pts · {} jogos · {}V {}E {}D": [
+"lang-pt.js"
+],
 "Você marcou {} gols de falta": [
 "lang-pt.js"
 ],
@@ -464881,6 +468420,12 @@
 "lang-pt.js"
 ],
 "Minha nova peça da {0} chegou.": [
+"lang-pt.js"
+],
+"Restam {} ações": [
+"lang-pt.js"
+],
+"e garantiu vaga em {} {}!": [
 "lang-pt.js"
 ],
 "/semana · faltam {} anos": [
@@ -465129,6 +468674,9 @@
 "{} · os mais valiosos": [
 "lang-pt.js"
 ],
+"{}º no grupo das eliminatórias": [
+"lang-pt.js"
+],
 "{} Provável escalação": [
 "lang-pt.js"
 ],
@@ -465205,6 +468753,9 @@
 "lang-pt.js"
 ],
 "🌍 Campeão da {}: {}.": [
+"lang-pt.js"
+],
+"({}-{} na prorrogação)": [
 "lang-pt.js"
 ],
 "{} jogos por este clube": [
@@ -465322,6 +468873,9 @@
 "lang-pt.js"
 ],
 "{} Resumo da carreira": [
+"lang-pt.js"
+],
+"{} · Jogo {} • {} - {}": [
 "lang-pt.js"
 ],
 "{} Plano semanal": [
@@ -465549,6 +469103,9 @@
 "{0} novas propostas": [
 "lang-pt.js"
 ],
+"A {} pts do líder": [
+"lang-pt.js"
+],
 "Estourou ({}). -{}": [
 "lang-pt.js"
 ],
@@ -465636,6 +469193,12 @@
 "Requer {0} de fama": [
 "lang-pt.js"
 ],
+"Eliminatórias {} {}": [
+"lang-pt.js"
+],
+"Rodada {}/3": [
+"lang-pt.js"
+],
 "{} marcou.": [
 "lang-pt.js"
 ],
@@ -465721,6 +469284,9 @@
 "lang-pt.js"
 ],
 "Jogo internacional {0}": [
+"lang-pt.js"
+],
+"{} · {} · {} ANOS": [
 "lang-pt.js"
 ],
 "({}º lugar)": [
@@ -466176,22 +469742,6 @@
 "FORÇA{}": [
 "lang-pt.js"
 ],
-"IRN": [
-"league.js",
-"lifex.js",
-"squads.js",
-"wc.js"
-],
-"UZB": [
-"league.js",
-"lifex.js",
-"wc.js"
-],
-"GHA": [
-"league.js",
-"squads.js",
-"wc.js"
-],
 "AF": [
 "league.js",
 "wc.js"
@@ -466520,11 +470070,6 @@
 "legends.js",
 "namefix.js"
 ],
-"CIV": [
-"legends.js",
-"squads.js",
-"wc.js"
-],
 "Alessio Galucci": [
 "legends.js",
 "namefix.js"
@@ -466852,12 +470397,6 @@
 "Karim Belkacem": [
 "legends.js",
 "namefix.js"
-],
-"ALG": [
-"legends.js",
-"lifex.js",
-"squads.js",
-"wc.js"
 ],
 "Dirk Smitema": [
 "legends.js",
@@ -467236,110 +470775,6 @@
 ],
 "fireMgr": [
 "life.js"
-],
-"PLE": [
-"lifex.js",
-"wc.js"
-],
-"LBY": [
-"lifex.js",
-"wc.js"
-],
-"MTN": [
-"lifex.js",
-"wc.js"
-],
-"SDN": [
-"lifex.js",
-"wc.js"
-],
-"KUW": [
-"lifex.js",
-"wc.js"
-],
-"TKM": [
-"lifex.js",
-"wc.js"
-],
-"YEM": [
-"lifex.js",
-"wc.js"
-],
-"AFG": [
-"lifex.js",
-"wc.js"
-],
-"MDV": [
-"lifex.js",
-"wc.js"
-],
-"PAK": [
-"lifex.js",
-"wc.js"
-],
-"MAS": [
-"lifex.js",
-"wc.js"
-],
-"BRU": [
-"lifex.js",
-"wc.js"
-],
-"NIG": [
-"lifex.js",
-"wc.js"
-],
-"GAM": [
-"lifex.js",
-"wc.js"
-],
-"SLE": [
-"lifex.js",
-"wc.js"
-],
-"QAT": [
-"lifex.js",
-"wc.js"
-],
-"JOR": [
-"lifex.js",
-"wc.js"
-],
-"IRQ": [
-"lifex.js",
-"wc.js"
-],
-"OMA": [
-"lifex.js",
-"wc.js"
-],
-"BHR": [
-"lifex.js",
-"wc.js"
-],
-"SYR": [
-"lifex.js",
-"wc.js"
-],
-"LBN": [
-"lifex.js",
-"wc.js"
-],
-"MLI": [
-"lifex.js",
-"wc.js"
-],
-"KGZ": [
-"lifex.js",
-"wc.js"
-],
-"TJK": [
-"lifex.js",
-"wc.js"
-],
-"BFA": [
-"lifex.js",
-"wc.js"
 ],
 "Yıllık harç: {}": [
 "lifex.js"
@@ -483269,6 +486704,12 @@
 "💎 Diamond\\'da var": [
 "premium.js"
 ],
+"{} tamamlandı: {} grubu {}. sırada bitirdi ve {} {} biletini aldı!": [
+"quals.js"
+],
+"{} tamamlandı: {} grubu {}. sırada bitirdi ve turnuvaya katılamayacak.": [
+"quals.js"
+],
 "700 9px \"Barlow Semi Condensed\", sans-serif": [
 "radar.js"
 ],
@@ -483344,28 +486785,8 @@
 "Giovanni Roré": [
 "squads.js"
 ],
-"CHI": [
-"squads.js",
-"wc.js"
-],
 "Aras Barão": [
 "squads.js"
-],
-"PAN": [
-"squads.js",
-"wc.js"
-],
-"CPV": [
-"squads.js",
-"wc.js"
-],
-"CUW": [
-"squads.js",
-"wc.js"
-],
-"CRC": [
-"squads.js",
-"wc.js"
 ],
 "{} Yıldız gibi yaşa": [
 "star.js"
@@ -483699,16 +487120,6 @@
 "UZ": [
 "wc.js"
 ],
-"NZL": [
-"wc.js",
-"wcx.js"
-],
-"JAM": [
-"wc.js"
-],
-"HAI": [
-"wc.js"
-],
 "Yves Bissoké": [
 "wc.js"
 ],
@@ -483716,9 +487127,6 @@
 "wc.js"
 ],
 "Kamory Domba": [
-"wc.js"
-],
-"COD": [
 "wc.js"
 ],
 "Chancel Bembala": [
@@ -483805,9 +487213,6 @@
 "Denis Bouanda": [
 "wc.js"
 ],
-"HON": [
-"wc.js"
-],
 "Alberth Elisardo": [
 "wc.js"
 ],
@@ -483824,9 +487229,6 @@
 "wc.js"
 ],
 "Fredy Ribeira": [
-"wc.js"
-],
-"ZAM": [
 "wc.js"
 ],
 "Patson Dakala": [
@@ -483874,9 +487276,6 @@
 "Jay Idzesa": [
 "wc.js"
 ],
-"CHN": [
-"wc.js"
-],
 "CN": [
 "wc.js"
 ],
@@ -483904,9 +487303,6 @@
 "Tigran Barseghan": [
 "wc.js"
 ],
-"UGA": [
-"wc.js"
-],
 "Emmanuel Okwira": [
 "wc.js"
 ],
@@ -483923,9 +487319,6 @@
 "wc.js"
 ],
 "Danel Sinarić": [
-"wc.js"
-],
-"THA": [
 "wc.js"
 ],
 "TH": [
@@ -483946,16 +487339,10 @@
 "Nguyen Tien Lam": [
 "wc.js"
 ],
-"SLV": [
-"wc.js"
-],
 "Brayan Gileo": [
 "wc.js"
 ],
 "Jairo Henrado": [
-"wc.js"
-],
-"TRI": [
 "wc.js"
 ],
 "Levi Garwell": [
@@ -484051,9 +487438,6 @@
 "Vedat Kelmendi": [
 "wc.js"
 ],
-"EQG": [
-"wc.js"
-],
 "Krépin Fofana": [
 "wc.js"
 ],
@@ -484064,9 +487448,6 @@
 "wc.js"
 ],
 "Mohammed Al-Subaie": [
-"wc.js"
-],
-"MOZ": [
 "wc.js"
 ],
 "Duarte Silva": [
@@ -484111,9 +487492,6 @@
 "Chidi Asante": [
 "wc.js"
 ],
-"NAM": [
-"wc.js"
-],
 "ZA": [
 "wc.js"
 ],
@@ -484129,16 +487507,10 @@
 "Fahad Al-Anazi": [
 "wc.js"
 ],
-"CGO": [
-"wc.js"
-],
 "Habib Koné": [
 "wc.js"
 ],
 "Seko Fofana": [
-"wc.js"
-],
-"PRK": [
 "wc.js"
 ],
 "Hyun-woo Lee": [
@@ -484147,13 +487519,7 @@
 "Jin-woo Oh": [
 "wc.js"
 ],
-"ZIM": [
-"wc.js"
-],
 "Tendai Mhango": [
-"wc.js"
-],
-"TOG": [
 "wc.js"
 ],
 "Ibrahima Diallo": [
@@ -484166,9 +487532,6 @@
 "wc.js"
 ],
 "Idrissa Diatta": [
-"wc.js"
-],
-"GNB": [
 "wc.js"
 ],
 "Ricardo Pereira": [
@@ -484198,16 +487561,10 @@
 "Konstantinos Michailidis": [
 "wc.js"
 ],
-"MWI": [
-"wc.js"
-],
 "Themba Dube": [
 "wc.js"
 ],
 "Sipho Phiri": [
-"wc.js"
-],
-"RWA": [
 "wc.js"
 ],
 "Abebe Kagere": [
@@ -484216,25 +487573,16 @@
 "Haruna Niyonzima": [
 "wc.js"
 ],
-"CTA": [
-"wc.js"
-],
 "Lamine Mendy": [
 "wc.js"
 ],
 "Seko Sarr": [
 "wc.js"
 ],
-"NCA": [
-"wc.js"
-],
 "Jorge Cruz": [
 "wc.js"
 ],
 "Óscar Flores": [
-"wc.js"
-],
-"SUR": [
 "wc.js"
 ],
 "Jesse Meijer": [
@@ -484276,9 +487624,6 @@
 "Tatenda Dube": [
 "wc.js"
 ],
-"BDI": [
-"wc.js"
-],
 "Djihad Bizimana": [
 "wc.js"
 ],
@@ -484288,16 +487633,10 @@
 "Andrés Díaz": [
 "wc.js"
 ],
-"ETH": [
-"wc.js"
-],
 "Getaneh Samatta": [
 "wc.js"
 ],
 "Getaneh Kebede": [
-"wc.js"
-],
-"HKG": [
 "wc.js"
 ],
 "Tao Sun": [
@@ -484306,25 +487645,16 @@
 "Lei Wang": [
 "wc.js"
 ],
-"SWZ": [
-"wc.js"
-],
 "Tendai Moyo": [
 "wc.js"
 ],
 "Gabadinho Hlongwane": [
 "wc.js"
 ],
-"LBR": [
-"wc.js"
-],
 "Ibrahim Danso": [
 "wc.js"
 ],
 "Tariq Nwosu": [
-"wc.js"
-],
-"LES": [
 "wc.js"
 ],
 "Tendai Hlongwane": [
@@ -484337,9 +487667,6 @@
 "wc.js"
 ],
 "Abdullah Al-Ghamdi": [
-"wc.js"
-],
-"NCL": [
 "wc.js"
 ],
 "OC": [
@@ -484363,16 +487690,10 @@
 "Alexandru Lungu": [
 "wc.js"
 ],
-"SIN": [
-"wc.js"
-],
 "Darren Yusof": [
 "wc.js"
 ],
 "Wei Jie Hamid": [
-"wc.js"
-],
-"MYA": [
 "wc.js"
 ],
 "MM": [
@@ -484390,16 +487711,10 @@
 "Morteza Hashemi": [
 "wc.js"
 ],
-"GUY": [
-"wc.js"
-],
 "Joe Walker": [
 "wc.js"
 ],
 "Callum Roberts": [
-"wc.js"
-],
-"PUR": [
 "wc.js"
 ],
 "Óscar González": [
@@ -484408,25 +487723,16 @@
 "Javier Gutiérrez": [
 "wc.js"
 ],
-"TAH": [
-"wc.js"
-],
 "Roy Krishna": [
 "wc.js"
 ],
 "Teaonui Kaltak": [
 "wc.js"
 ],
-"FIJ": [
-"wc.js"
-],
 "Teaonui Tehau": [
 "wc.js"
 ],
 "Michel Tiama": [
-"wc.js"
-],
-"SSD": [
 "wc.js"
 ],
 "Meddie Mwamba": [
@@ -484444,9 +487750,6 @@
 "Ali Jayasuriya": [
 "wc.js"
 ],
-"CUB": [
-"wc.js"
-],
 "José Martínez": [
 "wc.js"
 ],
@@ -484459,9 +487762,6 @@
 "Reece Taylor": [
 "wc.js"
 ],
-"PNG": [
-"wc.js"
-],
 "Kalo Tehau": [
 "wc.js"
 ],
@@ -484469,9 +487769,6 @@
 "wc.js"
 ],
 "Marco Conti": [
-"wc.js"
-],
-"GRN": [
 "wc.js"
 ],
 "George Thompson": [
@@ -484490,9 +487787,6 @@
 "wc.js"
 ],
 "Rubén Muñoz": [
-"wc.js"
-],
-"NEP": [
 "wc.js"
 ],
 "Liston Singh": [
@@ -484516,25 +487810,16 @@
 "Sopheap Khiev": [
 "wc.js"
 ],
-"MNG": [
-"wc.js"
-],
 "Tsend Ochir": [
 "wc.js"
 ],
 "Erdene Batbold": [
 "wc.js"
 ],
-"LAO": [
-"wc.js"
-],
 "Vathanaka Sokha": [
 "wc.js"
 ],
 "Sieng Phommasane": [
-"wc.js"
-],
-"BLZ": [
 "wc.js"
 ],
 "Emilio Ramírez": [
@@ -484547,9 +487832,6 @@
 "wc.js"
 ],
 "Hassan Islam": [
-"wc.js"
-],
-"SRI": [
 "wc.js"
 ],
 "Mohamed Gunaratne": [
@@ -484582,16 +487864,10 @@
 "Arif Yusof": [
 "wc.js"
 ],
-"BHU": [
-"wc.js"
-],
 "Rohit Thapa": [
 "wc.js"
 ],
 "Akash Gupta": [
-"wc.js"
-],
-"TLS": [
 "wc.js"
 ],
 "Ricky Pratama": [

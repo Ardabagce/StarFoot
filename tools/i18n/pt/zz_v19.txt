@@ -3160,3 +3160,55 @@
 10370|Pênaltis defendidos
 10371|JSG
 10372|Def.
+10375|Último jogo
+10376|Jornal
+10377|Sair com o time
+10378|Falar com o técnico
+10379|Você está lesionado. Descansar recupera sua energia e seu moral.
+10382|Sua energia está baixa. Descansar esta semana vai ajudar no jogo.
+10384|A relação com o técnico está fria. Conversar aumenta suas chances de ser titular.
+10428|Treine {} e continue evoluindo.
+10387|Feito
+10388|Escolher ação
+10439|Restam {} ações
+10390|Sem ações · pronto para o jogo
+10391|Aplicar
+10392|Dica do técnico
+10435|{} · Jogo {} · Força do rival {}
+10446|A {} pts do líder
+10437|Líder · {} pts à frente
+10393|Líder
+10394|Próximo:
+10438|{} pts · {} jogos · {}V {}E {}D
+10395|Atributos
+10449|{} · {} · {} ANOS
+10396|Grupo
+10447|Eliminatórias {} {}
+10420|Sorteio das {}: {} no grupo com {}. Os 2 primeiros vão ao torneio.
+10441|e garantiu vaga em {} {}!
+10427|{} encerradas: {} terminou em {}º no grupo{}
+10421|Garantimos vaga em {} {}! Orgulho de fazer parte dessa jornada.
+10400|Classificado para o torneio
+10401|Eliminado
+10448|Rodada {}/3
+10419|Disputadas nas datas FIFA. Os 2 primeiros se classificam para {} {}.
+10403|Eliminado nas eliminatórias
+10443|{}º no grupo das eliminatórias
+10423|{} VOCÊ FOI CONVOCADO! {}: o jogo {} {} te espera.
+10425|{} Convocado para um jogo das eliminatórias!
+10444|{} · Jogo {} • {} - {}
+10406|Campeonato Sul-Americano
+10407|Copa das Nações da Ásia
+10408|Copa das Nações da África
+10409|Campeonato da América do Norte e Central
+10410|Copa das Nações da Oceania
+10411|Campeão continental
+10412|Você venceu o campeonato de seleções do seu continente
+10413|Vaga garantida
+10414|Você se classificou para um torneio com sua seleção
+10415|COPA DA ÁSIA
+10416|COPA DA ÁFRICA
+10417|OCEANIA
+10434|{} países, campeonato continental
+10454|{} encerradas: {} terminou em {}º no grupo e garantiu vaga em {} {}!
+10452|{} encerradas: {} terminou em {}º no grupo e vai ficar fora do torneio.

@@ -75,9 +75,22 @@ const Hub = {
     });
     return list;
   },
+  // kutucuk renkleri: aynı palet, konuya göre farklı ton
+  PAL: { gold: '#ffcf3f', sky: '#4fb3ff', grass: '#34d27f', violet: '#b394ff', coral: '#ff8a5b', teal: '#2dd4bf', pink: '#f472b6', red: '#ff5a6a' },
+  COL: { table: 'sky', fix: 'grass', kings: 'coral', cups: 'gold', nat: 'red', world: 'teal', '@card': 'gold', '@career': 'violet', '@plan': 'grass' },
+  color(key, i) {
+    const k = String(key);
+    let c = Hub.COL[k];
+    if (!c) {
+      const m = [[/report|Son Maç/, 'sky'], [/offer|Teklif/i, 'gold'], [/görev|mission|ms-/i, 'grass'], [/sosyal|social|StarFeed|sf/i, 'pink'], [/paper|Gazete/, 'teal'], [/inbox|Bildirim/, 'violet'],
+        [/cap-|Kaptan/, 'gold'], [/num-|Forma/, 'coral'], [/İlk 11/, 'grass'], [/Yedek/, 'sky'], [/pe-card|Profil/, 'teal'], [/celeb|Sevin/, 'coral'], [/Yıldız|star/i, 'violet']].find(([r]) => r.test(k));
+      c = m ? m[1] : ['sky', 'grass', 'coral', 'violet', 'teal', 'pink', 'gold'][i % 7];
+    }
+    return Hub.PAL[c] || Hub.PAL.gold;
+  },
   tiles(tab, list) {
     if (!list.length) return '';
-    return `<div class="hub-tiles${list.length > 4 ? ' many' : ''}">${list.map((x) => `<button type="button" class="hub-tile${x.hot ? ' hot' : ''}" data-hubopen="${tab}" data-hubkey="${U.esc(x.key)}">
+    return `<div class="hub-tiles${list.length > 4 ? ' many' : ''}">${list.map((x, i) => `<button type="button" class="hub-tile${x.hot ? ' hot' : ''}" style="--tc:${Hub.color(x.key, i)}" data-hubopen="${tab}" data-hubkey="${U.esc(x.key)}">
       <span class="ht-ic">${x.icon}</span><span class="ht-t"><b>${U.esc(x.title)}</b>${x.sub ? `<small>${U.esc(x.sub)}</small>` : ''}</span></button>`).join('')}</div>`;
   },
 
@@ -127,6 +140,11 @@ const Hub = {
       cta.className = 'hub-cta';
       next.querySelectorAll('.btn-play, .ff-btn, .undo-btn').forEach((b) => cta.appendChild(b));
       const hint = next.querySelector('.hint'); if (hint) hint.remove();
+      // eleme maçı: kartta eleme adı
+      const s = Game.state, qm = s.qualMatch, q = s.quals;
+      if (qm && q && s.pendingIntl === qm.opp && !s.pendingIntlCat && typeof Quals !== 'undefined') {
+        const m = next.querySelector('.nm-meta'); if (m) m.textContent = `${Quals.label(q)} · ${qm.md + 1}. maç · Rakip gücü ${Game.nat(qm.opp).rating}`;
+      }
       next.appendChild(cta);
       nextH = next.outerHTML;
     }
@@ -134,7 +152,7 @@ const Hub = {
   },
 
   // ---------- Lig ----------
-  LG: [['table', 'table', 'Puan Durumu'], ['fix', 'whistle', 'Fikstür'], ['kings', 'ball', 'Gol Krallığı'], ['cups', 'career', 'Kupalar'], ['world', 'globe', 'Dünya']],
+  LG: [['table', 'table', 'Puan Durumu'], ['fix', 'whistle', 'Fikstür'], ['kings', 'ball', 'Gol Krallığı'], ['cups', 'career', 'Kupalar'], ['nat', 'shield', 'Milli Takım'], ['world', 'globe', 'Dünya']],
   league() {
     const s = Game.state;
     if (Game.inStreet()) return Hub.orig.league();
@@ -160,7 +178,7 @@ const Hub = {
           <div class="hl-row hl-hd"><i>#</i><span>Takım</span><em>O</em><b>P</b></div>${rows}</button>
         ${nx ? `<div class="hl-next">${Icon('whistle')}<span>Sıradaki: <b>${nx}</b></span></div>` : ''}
       </section>
-      ${Hub.tiles('league', Hub.LG.map(([k, ic, t]) => ({ key: k, title: t, icon: Icon(ic), sub: '' })))}
+      ${Hub.tiles('league', Hub.LG.map(([k, ic, t]) => ({ key: k, title: t, icon: Icon(ic), sub: k === 'nat' && typeof Quals !== 'undefined' ? Quals.status(s) : '', hot: k === 'nat' && !!(s.quals && !s.quals.done && s.quals.y === s.season.year) })))}
     </div>`;
   },
 
@@ -195,6 +213,7 @@ const Hub = {
 
   // ---------- Panel ----------
   content(tab, key) {
+    if (tab === 'league' && key === 'nat') return (typeof Quals !== 'undefined' ? Quals.card(Game.state) : '') + Nations.screen(Game.state);
     if (tab === 'league') {
       UI.lgView = key;
       const t = document.createElement('template'); t.innerHTML = Hub.orig.league();
