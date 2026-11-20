@@ -69,13 +69,16 @@
       st.canAds = true; // onay hizmetine ulaşılamadı: SDK kendi kurallarıyla devam eder
     }
     st.ready = true;
-    prepRewarded(); prepInter();
+    // reklamlar sırayla yüklenir (ikisi aynı anda ana iş parçacığını yormasın)
+    prepRewarded();
+    setTimeout(prepInter, ios ? 0 : 6000);
   };
 
   window.StarfootAds = {
     native: true,
     // Ödüllü reklam: izlenip ödül kazanılırsa true döner
     async show() {
+      start();
       if (!st.ready) await withTimeout(new Promise((r) => { const iv = setInterval(() => { if (st.ready) { clearInterval(iv); r(true); } }, 200); }), 6000);
       if (!st.canAds) return false;
       if (!st.rw) await withTimeout(prepRewarded(), 8000);
@@ -116,5 +119,10 @@
     privacyRequired: () => st.privacy,
     privacyOptions: () => AdMob.showPrivacyOptionsForm().catch(() => {}),
   };
-  if (document.readyState === 'complete') init(); else window.addEventListener('load', init);
+  // Android ANR: reklam SDK'sı ve arabuluculuk adaptörleri açılışta ana iş parçacığını meşgul etmesin.
+  // Oyun açıldıktan ~8 sn sonra başlatılır; daha önce reklam istenirse hemen başlar.
+  let started = false;
+  function start() { if (started) return; started = true; init(); }
+  const go = () => (ios ? start() : setTimeout(start, 8000));
+  if (document.readyState === 'complete') go(); else window.addEventListener('load', go);
 })();
