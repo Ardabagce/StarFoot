@@ -25,12 +25,12 @@ async function career(pg) {
   const b = await chromium.launch();
 
   if (process.argv[4] !== 'moment') {
-  // Altın Top töreni (kısa videolar için). "node clips.js tr <klasör> ballon" yalnız bunu kaydeder.
+  // Altın Yıldız töreni (kısa videolar için). "node clips.js tr <klasör> ballon" yalnız bunu kaydeder.
   {
     const pg = await open(b, lang);
     await career(pg);
     await pg.evaluate(hideFoot);
-    await record(pg, path.join(OUT, 'ballon'), 3.6, { 0: () => pg.evaluate((en) => { const c = Game.club(); Celebrate.trophy({ big: en ? 'BALLON D\'OR!' : 'ALTIN TOP!', title: '', sub: '', c1: '#b8860b', c2: '#ffe08a', short: c.short, kit: Sprites.kit(c, false), number: 10 }); }, lang === 'en') });
+    await record(pg, path.join(OUT, 'ballon'), 3.6, { 0: () => pg.evaluate((en) => { const c = Game.club(); Celebrate.trophy({ big: en ? 'GOLDEN STAR!' : 'ALTIN YILDIZ!', title: '', sub: '', c1: '#b8860b', c2: '#ffe08a', short: c.short, kit: Sprites.kit(c, false), number: 10 }); }, lang === 'en') });
     await pg.close();
     if (process.argv[4] === 'ballon') { await b.close(); return; }
   }
@@ -56,7 +56,7 @@ async function career(pg) {
     acts[14] = async () => { await pg.mouse.move(x0, y0); await pg.mouse.down(); };
     for (let k = 1; k <= 12; k++) acts[14 + k] = async () => { await pg.mouse.move(x0 + dx * k / 12, y0 + dy * k / 12); };
     acts[30] = async () => { await pg.mouse.up(); };
-    await record(pg, path.join(OUT, 'moment'), 6.5, acts);
+    await record(pg, path.join(OUT, 'moment'), +(process.env.DUR || 6.5), acts);
     console.log('moment', await pg.evaluate(() => (document.getElementById('mt-hs') || {}).innerText + '-' + (document.getElementById('mt-as') || {}).innerText), pg.errs);
     await pg.close();
     if (process.argv[4] === 'moment') { await b.close(); return; }

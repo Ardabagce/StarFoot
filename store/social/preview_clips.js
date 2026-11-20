@@ -46,7 +46,7 @@ async function career(pg, pos) {
     await career(pg, 'FW');
     await pg.evaluate((en) => {
       const p = Game.p; const so = Social.ensure(p); so.followers = 1204;
-      const T = en ? ['Hat-trick in the derby!', 'New chapter. New shirt.', 'CHAMPIONS!', 'Matchday.', 'Thank you fans!', 'Golden Ball night.', 'Training hard.', 'Captain.', 'Back home.'] : ['Derbide hat-trick!', 'Yeni sayfa, yeni forma.', 'ŞAMPİYON!', 'Maç günü.', 'Teşekkürler taraftar!', 'Altın Top gecesi.', 'Antrenman.', 'Kaptan.', 'Memleket.'];
+      const T = en ? ['Hat-trick in the derby!', 'New chapter. New shirt.', 'CHAMPIONS!', 'Matchday.', 'Thank you fans!', 'Golden Star night.', 'Training hard.', 'Captain.', 'Back home.'] : ['Derbide hat-trick!', 'Yeni sayfa, yeni forma.', 'ŞAMPİYON!', 'Maç günü.', 'Teşekkürler taraftar!', 'Altın Yıldız gecesi.', 'Antrenman.', 'Kaptan.', 'Memleket.'];
       const K = ['goal', 'transfer', 'trophy', 'daily', 'goal', 'trophy', 'daily', 'goal', 'daily'];
       for (let i = 8; i >= 0; i--) Social.post(K[i], T[i], 3);
       so.followers = 1204; Game.tab = 'profile'; Game.render();
