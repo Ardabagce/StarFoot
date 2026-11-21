@@ -1055,6 +1055,77 @@ def sales(asc, vendor, days=30):
     if miss: print('\nEksik günler:', ', '.join(miss[-5:]))
 
 
+def iap_sale(asc, app_id, spec):
+    # Süreli indirim: "30:2027-01-01:urun1,urun2" -> indirimli fiyat hemen başlar, verilen tarihte eski fiyat geri gelir.
+    # Fiyat çizelgesinde elle fiyatı olan her ülkeye ayrı uygulanır; diğer ülkeler ana ülkeden eşdeğer hesaplanır.
+    pct, back, ids = spec.split(':', 2)
+    pct = float(pct); ids = [x.strip() for x in ids.split(',') if x.strip()]
+    items = [x for x in _all(asc, f'/v1/apps/{app_id}/inAppPurchasesV2') if x['attributes'].get('productId') in ids]
+    print(f'İndirim %{pct:g}, eski fiyat {back} tarihinde geri gelir. Ürünler: {[x["attributes"]["productId"] for x in items]}')
+    def points(iid, terr):
+        pts, nxt, params = [], f'/v2/inAppPurchases/{iid}/pricePoints', {'filter[territory]': terr, 'limit': 200}
+        while nxt:
+            r = asc.get(nxt, **params)
+            pts += r['data']
+            nl = (r.get('links') or {}).get('next')
+            nxt, params = (nl.replace(API, ''), {}) if nl else (None, {})
+        return pts
+    for it in items:
+        iid, pid = it['id'], it['attributes']['productId']
+        print(f'• {pid}')
+        sch = asc.get(f'/v2/inAppPurchases/{iid}/iapPriceSchedule').get('data')
+        if not sch:
+            print('   ! fiyat çizelgesi yok, atlandı'); continue
+        base = (asc.get(f"/v1/inAppPurchasePriceSchedules/{sch['id']}/baseTerritory").get('data') or {}).get('id') or 'USA'
+        rows, nxt, params, inc = [], f"/v1/inAppPurchasePriceSchedules/{sch['id']}/manualPrices", {'limit': 200, 'include': 'inAppPurchasePricePoint,territory'}, {}
+        while nxt:
+            r = asc.get(nxt, **params)
+            rows += r.get('data', [])
+            inc.update({x['id']: x for x in r.get('included', []) if x['type'] == 'inAppPurchasePricePoints'})
+            nl = (r.get('links') or {}).get('next')
+            nxt, params = (nl.replace(API, ''), {}) if nl else (None, {})
+        cur = {}
+        for row in rows:
+            rel, at = row.get('relationships', {}), row.get('attributes', {})
+            t = ((rel.get('territory') or {}).get('data') or {}).get('id')
+            ppid = ((rel.get('inAppPurchasePricePoint') or {}).get('data') or {}).get('id')
+            print(f"   elle fiyat: {t} {inc.get(ppid, {}).get('attributes', {}).get('customerPrice')} başlangıç {at.get('startDate')} bitiş {at.get('endDate')}")
+            # şu an geçerli olan (başlangıcı boş ya da geçmiş, bitişi yok ya da gelecekte) fiyat
+            if t and ppid and not at.get('endDate') and (not at.get('startDate') or at['startDate'] <= time.strftime('%Y-%m-%d')):
+                if t not in cur or (at.get('startDate') or '') >= (cur[t][2] or ''):
+                    cur[t] = (ppid, float(inc[ppid]['attributes']['customerPrice']) if ppid in inc else None, at.get('startDate'))
+        if base not in cur:
+            print(f'   ! ana ülke ({base}) için geçerli fiyat bulunamadı, atlandı'); continue
+        print(f'   ana ülke: {base}, elle fiyatlı ülkeler: {sorted(cur)}')
+        included, refs, n = [], [], 0
+        ok = True
+        for t, (ppid, price, _) in sorted(cur.items()):
+            if price is None:
+                print(f'   ! {t}: mevcut fiyat okunamadı'); ok = False; break
+            want = price * (1 - pct / 100)
+            pts = points(iid, t)
+            cand = sorted((float(x['attributes']['customerPrice']), x['id']) for x in pts if float(x['attributes']['customerPrice']) > 0)
+            below = [c for c in cand if c[0] <= want + 1e-9]
+            sale = below[-1] if below else cand[0]
+            print(f'   {t}: {price:g} -> {sale[0]:g} (%{round((1 - sale[0] / price) * 100)} indirim), {back} tarihinde tekrar {price:g}')
+            for start, pp in ((None, sale[1]), (back, ppid)):
+                n += 1
+                ref = '${p%d}' % n
+                refs.append({'type': 'inAppPurchasePrices', 'id': ref})
+                included.append({'type': 'inAppPurchasePrices', 'id': ref, 'attributes': {'startDate': start},
+                                 'relationships': {'inAppPurchaseV2': {'data': {'type': 'inAppPurchases', 'id': iid}},
+                                                   'inAppPurchasePricePoint': {'data': {'type': 'inAppPurchasePricePoints', 'id': pp}}}})
+        if not ok:
+            continue
+        asc.req('POST', '/v1/inAppPurchasePriceSchedules', write=True, body={
+            'data': {'type': 'inAppPurchasePriceSchedules', 'relationships': {
+                'inAppPurchase': {'data': {'type': 'inAppPurchases', 'id': iid}},
+                'baseTerritory': {'data': {'type': 'territories', 'id': base}},
+                'manualPrices': {'data': refs}}},
+            'included': included})
+        print('   indirim kaydedildi' if not asc.dry else '   (deneme: kaydedilmedi)')
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--metadata', default=str(ROOT / 'store/asc/metadata.json'))
@@ -1078,6 +1149,7 @@ def main():
     ap.add_argument('--prepare-only', action='store_true')
     ap.add_argument('--previews', action='store_true')
     ap.add_argument('--sales', default='')
+    ap.add_argument('--iap-sale', default='')
     ap.add_argument('--days', type=int, default=30)
     a = ap.parse_args()
     meta = json.load(open(a.metadata, encoding='utf-8'))
@@ -1094,6 +1166,8 @@ def main():
         return diagnose(asc, app['id'])
     if a.audit:
         return audit(asc, app['id'], meta)
+    if a.iap_sale:
+        return iap_sale(asc, app['id'], a.iap_sale)
     if a.iap_setup:
         iap_setup(asc, app['id'], meta.get('premium') or {})
         return iap_report(asc, app['id'])

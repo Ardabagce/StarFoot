@@ -38,7 +38,7 @@ on:
         type: boolean
         default: false
       iap:
-        description: 'Satın alma ürünleri: read = yalnız oku, setup = Premium dilleri ve notu, packs = içerik paketlerini oluştur/tamamla, submit = paketleri incelemeye gönder, unsubmit = paketleri reddedilen başvurudan çıkarıp güncelle'
+        description: 'Satın alma ürünleri: read = yalnız oku, setup = Premium dilleri ve notu, packs = içerik paketlerini oluştur/tamamla, submit = paketleri incelemeye gönder, unsubmit = paketleri reddedilen başvurudan çıkarıp güncelle, sale:30:2027-01-01:urun1,urun2 = süreli indirim (dry_run ile önce dene)'
         required: false
         default: ''
       events:
@@ -90,6 +90,7 @@ jobs:
           [ -n "${{ inputs.nominate }}" ] && ARGS="$ARGS --events --events-file ${{ inputs.nominate }}"
           [ "${{ inputs.gamecenter }}" = "true" ] && ARGS="$ARGS --gamecenter"
           [ "${{ inputs.iap }}" = "read" ] && ARGS="$ARGS --iap"
+          case "${{ inputs.iap }}" in sale:*) V2="${{ inputs.iap }}"; ARGS="$ARGS --iap-sale ${V2#sale:}";; esac
           [ "${{ inputs.iap }}" = "setup" ] && ARGS="$ARGS --iap-setup"
           [ "${{ inputs.iap }}" = "packs" ] && ARGS="$ARGS --packs"
           [ "${{ inputs.iap }}" = "submit" ] && ARGS="$ARGS --submit-packs"
