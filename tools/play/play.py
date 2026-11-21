@@ -177,6 +177,11 @@ def check(a):
     s.delete(f'{API}/{PKG}/edits/{e}')
     r = s.get(f'{API}/{PKG}/oneTimeProducts')
     print('ürünler:', [p['productId'] for p in r.json().get('oneTimeProducts', [])] if r.ok else r.text[:500])
+    if r.ok:
+        # her ürünün satın alma seçenekleri: durum ve eski sürümlerle uyumluluk (RevenueCat/Billing bunları görür)
+        for p in r.json().get('oneTimeProducts', []):
+            opts = [(o.get('purchaseOptionId'), o.get('state'), (o.get('buyOption') or {}).get('legacyCompatible'), len(o.get('regionalPricingAndAvailabilityConfigs') or [])) for o in p.get('purchaseOptions', [])]
+            print(' ', p['productId'], opts)
 
 
 def datasafety(a):
