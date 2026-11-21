@@ -161,6 +161,19 @@ ${chips}
 </body></html>`;
 };
 
+// SET=story: A/B testi için hikaye sırası (mahalle → gol → kupa), üstte adım etiketi; ayrı klasöre yazar
+const STORY = process.env.SET === 'story';
+if (STORY) {
+  const ORDER = ['street', 'goal', 'trophy', 'life', 'coach', 'match', 'wc', 'medals'];
+  POSTERS.sort((a, b) => ORDER.indexOf(a.id) - ORDER.indexOf(b.id));
+  const STEP = {
+    street: { tr: '1 / 3 · SOKAKTA BAŞLA', en: '1 / 3 · START ON THE STREET', es: '1 / 3 · EMPIEZA EN LA CALLE' },
+    goal: { tr: '2 / 3 · BÜYÜK MAÇLARDA PARLA', en: '2 / 3 · SHINE IN BIG MATCHES', es: '2 / 3 · BRILLA EN LOS GRANDES PARTIDOS' },
+    trophy: { tr: '3 / 3 · EFSANE OL', en: '3 / 3 · BECOME A LEGEND', es: '3 / 3 · CONVIÉRTETE EN LEYENDA' },
+  };
+  POSTERS.forEach((p) => { const st = STEP[p.id]; if (st) Object.keys(st).forEach((l) => { if (p[l]) p[l] = Object.assign({}, p[l], { tag: st[l] }); }); });
+}
+
 (async () => {
   const b = await chromium.launch();
   const fs = require('fs');
@@ -168,7 +181,7 @@ ${chips}
   const IPAD = process.argv[2] === 'ipad';
   const FORMATS = IPAD
     ? [{ dir: 'ipad', raw: 'raw2-ipad', W: 2064, H: 2752, F: { H: 1440, pw: 600, top: 640, shift: 0, cs: 0.5, tablet: true, subW: 940 } }]
-    : [{ dir: 'ios', raw: 'raw2', W: 1290, H: 2796, F: { H: 2341, pw: 720, top: 700, shift: 230 }, also: { dir: 'ios-1206x2622', W: 1206, H: 2622 } }];
+    : [{ dir: STORY ? 'ios-story' : 'ios', raw: 'raw2', W: 1290, H: 2796, F: { H: 2341, pw: 720, top: 700, shift: 230 }, also: { dir: STORY ? 'ios-story-1206x2622' : 'ios-1206x2622', W: 1206, H: 2622 } }];
   const LANGS = (process.env.LANGS || 'tr,en,es,pt,de,fr,it,id,ar,ja').split(',');
   for (const fm of FORMATS) {
     const pg = await b.newPage({ viewport: { width: 1080, height: fm.F.H }, deviceScaleFactor: fm.W / 1080 });
