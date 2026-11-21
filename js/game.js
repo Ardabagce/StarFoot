@@ -1675,7 +1675,7 @@ const UI = {
       const star = !Game.isYouth() && (oppC.roster.find((x) => x.star) || null);
       next = `<div class="nm-vs">${crest(Game.teamName(fx.home), Game.club(fx.home))}<span class="vs">VS</span>${crest(Game.teamName(fx.away), Game.club(fx.away))}</div>
         <div class="nm-meta">${U.esc(Game.leagueName())} · ${s.season.round + 1}. HAFTA · ${fx.home === s.clubId ? 'İÇ SAHA' : 'DEPLASMAN'}</div>
-        <div class="nm-meta">Rakip ${oppPos}. sırada · Güç ${Game.teamRating(opp)} / Senin takımın ${Game.teamRating(s.clubId)}${star ? ` · Yıldızı: ${U.esc(star.n)}` : ''}</div>`;
+        <div class="nm-meta"><span>Rakip ${oppPos}. sırada</span> · <span>Güç ${Game.teamRating(opp)} / Senin takımın ${Game.teamRating(s.clubId)}</span>${star ? ` · <span>Yıldızı: ${U.esc(star.n)}</span>` : ''}</div>`;
     }
     let nTheme = null;
     if (s.pendingIntl && !(s.pendingCup && s.cups && s.cups[s.pendingCup])) { nTheme = CompTheme.get('intl', p.nation); if (Game.intlCat() && nTheme) nTheme = Object.assign({}, nTheme, { l: `${nTheme.l} ${Game.intlCat()}` }); }

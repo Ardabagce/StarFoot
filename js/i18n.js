@@ -110,6 +110,8 @@ const I18N = {
     let core = m[2];
     let r = core ? I18N.tr(core.replace(/\s+/g, ' '), 0) : null;
     let out = r == null ? s : m[1] + I18N.ord(r) + m[3];
+    // Türkçe kısa takım kodları ("BİR", "ŞK"): diğer dillerde noktalı İ/Ş/Ğ görünmesin
+    if (r == null && /^[A-ZÇĞİŞÖÜ0-9]{2,5}$/.test(core) && /[İŞĞ]/.test(core)) out = s.replace(/İ/g, 'I').replace(/Ş/g, 'S').replace(/Ğ/g, 'G');
     // sağdan sola: baştaki +/− işaretleri sayının sağına kaymasın (soldan sağa işaretiyle sabitle)
     if (I18N.rtl() && out !== s) out = out.replace(/(^|[\s(·])([+\-−±])(?=\d)/g, '$1\u200e$2');
     if (I18N.memo.size > 20000) { I18N.memo.clear(); I18N.outs.clear(); }
