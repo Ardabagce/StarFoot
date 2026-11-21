@@ -57,6 +57,10 @@ on:
         description: 'Satış raporu: vendor numarası (Ödemeler ve Finansal Raporlar sayfasının sol üstünde); son 30 gün'
         required: false
         default: ''
+      ppo:
+        description: 'Ürün sayfası A/B testi: list = mevcut testler, shots = hikaye sırası ekran görüntüleri, icons = alternatif ikonlar (dry_run ile önce dene)'
+        required: false
+        default: ''
       remove_locales:
         description: 'Düzenlenen sürümden silinecek diller (ör. it,id,ar-SA)'
         required: false
@@ -97,5 +101,6 @@ jobs:
           [ "${{ inputs.iap }}" = "resubmit" ] && ARGS="$ARGS --iap-resubmit"
           [ "${{ inputs.iap }}" = "unsubmit" ] && ARGS="$ARGS --unsubmit-packs"
           [ -n "${{ inputs.sales }}" ] && ARGS="$ARGS --sales ${{ inputs.sales }}"
+          [ -n "${{ inputs.ppo }}" ] && ARGS="$ARGS --ppo ${{ inputs.ppo }}"
           [ -n "${{ inputs.remove_locales }}" ] && ARGS="$ARGS --remove-locales ${{ inputs.remove_locales }}"
           python -u tools/asc/asc.py $ARGS

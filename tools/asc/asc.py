@@ -343,6 +343,83 @@ def upload_shots(asc, vloc_id, loc, replace):
         print(f'      {dtype}: {len(files)} görsel yüklendi ({files[0].name[:3]}…)')
 
 
+def _upload_files(asc, set_id, files):
+    for f in files:
+        blob = f.read_bytes()
+        d = asc.req('POST', '/v1/appScreenshots', write=True, body={'data': {
+            'type': 'appScreenshots', 'attributes': {'fileName': f.name, 'fileSize': len(blob)},
+            'relationships': {'appScreenshotSet': {'data': {'type': 'appScreenshotSets', 'id': set_id}}}}})['data']
+        if asc.dry:
+            continue
+        for op in d['attributes']['uploadOperations']:
+            part = blob[op['offset']:op['offset'] + op['length']]
+            r = requests.request(op['method'], op['url'], data=part, timeout=120,
+                                 headers={h['name']: h['value'] for h in op.get('requestHeaders', [])})
+            r.raise_for_status()
+        asc.req('PATCH', f"/v1/appScreenshots/{d['id']}", write=True, body={'data': {
+            'type': 'appScreenshots', 'id': d['id'],
+            'attributes': {'uploaded': True, 'sourceFileChecksum': hashlib.md5(blob).hexdigest()}}})
+
+
+# Ürün sayfası A/B testi (Product Page Optimization)
+# list = mevcut testleri göster; shots = hikaye sırası ekran görüntüleri (store/premium/ios-story); icons = alternatif ikonlar (derlemede olmalı)
+PPO_SHOTS = {'APP_IPHONE_67': 'store/premium/ios-story', 'APP_IPHONE_61': 'store/premium/ios-story-1206x2622'}
+PPO_LOCALES = {'tr': 'tr', 'en-US': 'en', 'en-GB': 'en'}
+PPO_ICONS = [('Kupali oyuncu', 'AppIcon-Hero'), ('Altin Yildiz', 'AppIcon-Star')]
+
+
+def ppo(asc, app_id, kind):
+    def safe(path, **params):
+        try:
+            return asc.get(path, **params)
+        except RuntimeError as err:
+            print(f'   ! {str(err)[:300]}')
+            return {'data': []}
+    exps = safe(f'/v1/apps/{app_id}/appStoreVersionExperimentsV2', limit=20).get('data', [])
+    print(f'Mevcut A/B testleri: {len(exps)}')
+    for e in exps:
+        at = e['attributes']
+        print(f"• {at.get('name')} | durum {at.get('state')} | trafik %{at.get('trafficProportion')} | başlangıç {at.get('startDate')} | bitiş {at.get('endDate')}")
+        for t in safe(f"/v2/appStoreVersionExperiments/{e['id']}/appStoreVersionExperimentTreatments", limit=10).get('data', []):
+            print(f"   - {t['attributes'].get('name')} ikon={t['attributes'].get('appIconName')}")
+    if kind == 'list':
+        return
+    open_states = {'PREPARE_FOR_SUBMISSION', 'READY_FOR_REVIEW', 'WAITING_FOR_REVIEW', 'IN_REVIEW', 'ACCEPTED', 'APPROVED', 'IN_PROGRESS'}
+    if any(e['attributes'].get('state') in open_states for e in exps):
+        print('Açık bir test zaten var; yenisi oluşturulmadı (Apple aynı anda tek test çalıştırır).')
+        return
+    name = {'shots': 'Ekran goruntusu: hikaye sirasi', 'icons': 'Ikon testi'}[kind]
+    exp = asc.req('POST', '/v2/appStoreVersionExperiments', write=True, body={'data': {
+        'type': 'appStoreVersionExperiments', 'attributes': {'name': name, 'platform': 'IOS', 'trafficProportion': 50 if kind == 'shots' else 66},
+        'relationships': {'app': {'data': {'type': 'apps', 'id': app_id}}}}})['data']['id']
+    print(f'Test oluşturuldu: {name} ({exp})')
+    treatments = [('Hikaye', None)] if kind == 'shots' else PPO_ICONS
+    for tname, icon in treatments:
+        attrs = {'name': tname}
+        if icon:
+            attrs['appIconName'] = icon
+        tid = asc.req('POST', '/v1/appStoreVersionExperimentTreatments', write=True, body={'data': {
+            'type': 'appStoreVersionExperimentTreatments', 'attributes': attrs,
+            'relationships': {'appStoreVersionExperimentV2': {'data': {'type': 'appStoreVersionExperiments', 'id': exp}}}}})['data']['id']
+        print(f'   varyant: {tname}')
+        if kind != 'shots':
+            continue
+        for loc, pre in PPO_LOCALES.items():
+            lid = asc.req('POST', '/v1/appStoreVersionExperimentTreatmentLocalizations', write=True, body={'data': {
+                'type': 'appStoreVersionExperimentTreatmentLocalizations', 'attributes': {'locale': loc},
+                'relationships': {'appStoreVersionExperimentTreatment': {'data': {'type': 'appStoreVersionExperimentTreatments', 'id': tid}}}}})['data']['id']
+            for dtype, folder in PPO_SHOTS.items():
+                files = sorted((ROOT / folder).glob(f'{pre}-*.png'))
+                if not files:
+                    continue
+                set_id = asc.req('POST', '/v1/appScreenshotSets', write=True, body={'data': {
+                    'type': 'appScreenshotSets', 'attributes': {'screenshotDisplayType': dtype},
+                    'relationships': {'appStoreVersionExperimentTreatmentLocalization': {'data': {'type': 'appStoreVersionExperimentTreatmentLocalizations', 'id': lid}}}}})['data']['id']
+                _upload_files(asc, set_id, files)
+                print(f'      {loc} {dtype}: {len(files)} görsel')
+    print('Test hazır (taslak). Apple incelemesine bir sonraki sürümle ya da App Store Connect > Ürün Sayfası Optimizasyonu ekranından gönderilir.')
+
+
 def upload_preview(asc, vloc_id, loc):
     # App Store tanıtım videosu (iPhone 6.9"/6.7", 886x1920): tr dili Türkçe, diğer diller İngilizce video
     f = ROOT / 'store/asc/preview' / ('preview-tr.mp4' if loc == 'tr' else 'preview-en.mp4')
@@ -1151,6 +1228,7 @@ def main():
     ap.add_argument('--sales', default='')
     ap.add_argument('--iap-sale', default='')
     ap.add_argument('--days', type=int, default=30)
+    ap.add_argument('--ppo', default='', choices=['', 'list', 'shots', 'icons'])
     a = ap.parse_args()
     meta = json.load(open(a.metadata, encoding='utf-8'))
     asc = ASC(a.dry_run)
@@ -1162,6 +1240,8 @@ def main():
     print(f"Uygulama: {app['attributes']['name']} ({app['id']}), ana dil: {app['attributes'].get('primaryLocale')}")
     if a.sales:
         return sales(asc, a.sales, a.days)
+    if a.ppo:
+        return ppo(asc, app['id'], a.ppo)
     if a.diagnose:
         return diagnose(asc, app['id'])
     if a.audit:
