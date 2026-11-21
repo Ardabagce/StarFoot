@@ -385,36 +385,53 @@ def ppo(asc, app_id, kind):
     if kind == 'list':
         return
     open_states = {'PREPARE_FOR_SUBMISSION', 'READY_FOR_REVIEW', 'WAITING_FOR_REVIEW', 'IN_REVIEW', 'ACCEPTED', 'APPROVED', 'IN_PROGRESS'}
-    if any(e['attributes'].get('state') in open_states for e in exps):
+    name = {'shots': 'Ekran goruntusu: hikaye sirasi', 'icons': 'Ikon testi'}[kind]
+    # Yarım kalan taslak (aynı adlı, henüz gönderilmemiş) varsa onu tamamla; başka açık test varsa dokunma
+    mine = [e for e in exps if e['attributes'].get('name') == name and e['attributes'].get('state') == 'PREPARE_FOR_SUBMISSION']
+    if mine:
+        exp = mine[0]['id']
+        print(f'Taslak test sürdürülüyor: {name} ({exp})')
+    elif any(e['attributes'].get('state') in open_states for e in exps):
         print('Açık bir test zaten var; yenisi oluşturulmadı (Apple aynı anda tek test çalıştırır).')
         return
-    name = {'shots': 'Ekran goruntusu: hikaye sirasi', 'icons': 'Ikon testi'}[kind]
-    exp = asc.req('POST', '/v2/appStoreVersionExperiments', write=True, body={'data': {
-        'type': 'appStoreVersionExperiments', 'attributes': {'name': name, 'platform': 'IOS', 'trafficProportion': 50 if kind == 'shots' else 66},
-        'relationships': {'app': {'data': {'type': 'apps', 'id': app_id}}}}})['data']['id']
-    print(f'Test oluşturuldu: {name} ({exp})')
+    else:
+        exp = asc.req('POST', '/v2/appStoreVersionExperiments', write=True, body={'data': {
+            'type': 'appStoreVersionExperiments', 'attributes': {'name': name, 'platform': 'IOS', 'trafficProportion': 50 if kind == 'shots' else 66},
+            'relationships': {'app': {'data': {'type': 'apps', 'id': app_id}}}}})['data']['id']
+        print(f'Test oluşturuldu: {name} ({exp})')
+    have_t = {t['attributes'].get('name'): t['id'] for t in safe(f'/v2/appStoreVersionExperiments/{exp}/appStoreVersionExperimentTreatments', limit=10).get('data', [])} if exp != 'DRY' else {}
     treatments = [('Hikaye', None)] if kind == 'shots' else PPO_ICONS
     for tname, icon in treatments:
-        attrs = {'name': tname}
-        if icon:
-            attrs['appIconName'] = icon
-        tid = asc.req('POST', '/v1/appStoreVersionExperimentTreatments', write=True, body={'data': {
-            'type': 'appStoreVersionExperimentTreatments', 'attributes': attrs,
-            'relationships': {'appStoreVersionExperimentV2': {'data': {'type': 'appStoreVersionExperiments', 'id': exp}}}}})['data']['id']
+        tid = have_t.get(tname)
+        if not tid:
+            attrs = {'name': tname}
+            if icon:
+                attrs['appIconName'] = icon
+            tid = asc.req('POST', '/v1/appStoreVersionExperimentTreatments', write=True, body={'data': {
+                'type': 'appStoreVersionExperimentTreatments', 'attributes': attrs,
+                'relationships': {'appStoreVersionExperimentV2': {'data': {'type': 'appStoreVersionExperiments', 'id': exp}}}}})['data']['id']
         print(f'   varyant: {tname}')
         if kind != 'shots':
             continue
+        have_l = {l['attributes'].get('locale'): l['id'] for l in safe(f'/v1/appStoreVersionExperimentTreatments/{tid}/appStoreVersionExperimentTreatmentLocalizations', limit=50).get('data', [])} if tid != 'DRY' else {}
         for loc, pre in PPO_LOCALES.items():
-            lid = asc.req('POST', '/v1/appStoreVersionExperimentTreatmentLocalizations', write=True, body={'data': {
+            lid = have_l.get(loc) or asc.req('POST', '/v1/appStoreVersionExperimentTreatmentLocalizations', write=True, body={'data': {
                 'type': 'appStoreVersionExperimentTreatmentLocalizations', 'attributes': {'locale': loc},
                 'relationships': {'appStoreVersionExperimentTreatment': {'data': {'type': 'appStoreVersionExperimentTreatments', 'id': tid}}}}})['data']['id']
+            # Apple yeni varyant diline mevcut görselleri kopyalıyor: o set varsa içini boşaltıp yeni sırayı yükle
+            sets = {x['attributes']['screenshotDisplayType']: x['id'] for x in safe(f'/v1/appStoreVersionExperimentTreatmentLocalizations/{lid}/appScreenshotSets', limit=50).get('data', [])} if lid != 'DRY' else {}
             for dtype, folder in PPO_SHOTS.items():
                 files = sorted((ROOT / folder).glob(f'{pre}-*.png'))
                 if not files:
                     continue
-                set_id = asc.req('POST', '/v1/appScreenshotSets', write=True, body={'data': {
-                    'type': 'appScreenshotSets', 'attributes': {'screenshotDisplayType': dtype},
-                    'relationships': {'appStoreVersionExperimentTreatmentLocalization': {'data': {'type': 'appStoreVersionExperimentTreatmentLocalizations', 'id': lid}}}}})['data']['id']
+                set_id = sets.get(dtype)
+                if set_id:
+                    for c in safe(f'/v1/appScreenshotSets/{set_id}/appScreenshots', limit=20).get('data', []):
+                        asc.req('DELETE', f"/v1/appScreenshots/{c['id']}", write=True)
+                else:
+                    set_id = asc.req('POST', '/v1/appScreenshotSets', write=True, body={'data': {
+                        'type': 'appScreenshotSets', 'attributes': {'screenshotDisplayType': dtype},
+                        'relationships': {'appStoreVersionExperimentTreatmentLocalization': {'data': {'type': 'appStoreVersionExperimentTreatmentLocalizations', 'id': lid}}}}})['data']['id']
                 _upload_files(asc, set_id, files)
                 print(f'      {loc} {dtype}: {len(files)} görsel')
     print('Test hazır (taslak). Apple incelemesine bir sonraki sürümle ya da App Store Connect > Ürün Sayfası Optimizasyonu ekranından gönderilir.')
