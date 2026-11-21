@@ -425,15 +425,32 @@ def ppo(asc, app_id, kind):
                 if not files:
                     continue
                 set_id = sets.get(dtype)
-                if set_id:
-                    for c in safe(f'/v1/appScreenshotSets/{set_id}/appScreenshots', limit=20).get('data', []):
+                if not set_id:
+                    try:
+                        set_id = asc.req('POST', '/v1/appScreenshotSets', write=True, body={'data': {
+                            'type': 'appScreenshotSets', 'attributes': {'screenshotDisplayType': dtype},
+                            'relationships': {'appStoreVersionExperimentTreatmentLocalization': {'data': {'type': 'appStoreVersionExperimentTreatmentLocalizations', 'id': lid}}}}})['data']['id']
+                    except RuntimeError as err:
+                        m = re.search(r'already exists[^:]*: ([0-9a-f-]{36})', str(err))
+                        if not m:
+                            raise
+                        set_id = m.group(1)
+                if set_id == 'DRY':
+                    print(f'      {loc} {dtype}: {len(files)} görsel (deneme)')
+                    continue
+                # Apple'ın kopyaladığı eski görseller arka planda gelebiliyor: set boş ve sabit kalana kadar temizle
+                empty = 0
+                for _ in range(20):
+                    old = safe(f'/v1/appScreenshotSets/{set_id}/appScreenshots', limit=20).get('data', [])
+                    for c in old:
                         asc.req('DELETE', f"/v1/appScreenshots/{c['id']}", write=True)
-                else:
-                    set_id = asc.req('POST', '/v1/appScreenshotSets', write=True, body={'data': {
-                        'type': 'appScreenshotSets', 'attributes': {'screenshotDisplayType': dtype},
-                        'relationships': {'appStoreVersionExperimentTreatmentLocalization': {'data': {'type': 'appStoreVersionExperimentTreatmentLocalizations', 'id': lid}}}}})['data']['id']
+                    empty = empty + 1 if not old else 0
+                    if empty >= 2:
+                        break
+                    time.sleep(3)
                 _upload_files(asc, set_id, files)
-                print(f'      {loc} {dtype}: {len(files)} görsel')
+                ids = [c['id'] for c in safe(f'/v1/appScreenshotSets/{set_id}/appScreenshots', limit=20).get('data', [])]
+                print(f'      {loc} {dtype}: {len(files)} görsel yüklendi, sette {len(ids)} görsel var')
     print('Test hazır (taslak). Apple incelemesine bir sonraki sürümle ya da App Store Connect > Ürün Sayfası Optimizasyonu ekranından gönderilir.')
 
 
