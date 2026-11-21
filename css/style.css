@@ -15,6 +15,9 @@
 html[lang=ar] *{letter-spacing:0!important}
 /* Japonca: harfler iOS'un Hiragino yazı tipinden gelir; Latin harfler oyunun yazı tiplerinde kalır */
 html[lang=ja] *{letter-spacing:0!important;word-break:normal;line-break:strict}
+/* Basitleştirilmiş Çince: Çince harfler iOS'un PingFang SC yazı tipinden (Japonca Hiragino'dan önce) */
+html[lang=zh]{--display:"Saira Condensed","Arial Narrow","Roboto Condensed","PingFang SC","Noto Sans SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif;--body:"Barlow Semi Condensed","Segoe UI","Roboto","PingFang SC","Noto Sans SC","Microsoft YaHei","Noto Sans CJK SC",sans-serif}
+html[lang=zh] *{letter-spacing:0!important;word-break:normal;line-break:strict}
 /* sağdan sola: dakika (13') ve skor gibi sayılar kendi içinde soldan sağa kalsın */
 [dir=rtl] #mt-min, [dir=rtl] #mm-min, [dir=rtl] .sb-m, [dir=rtl] .sc, [dir=rtl] #mt-feed b{direction:ltr;unicode-bidi:isolate;display:inline-block}
 /* StarFoot — gece maçı / TV yayını görünümü
