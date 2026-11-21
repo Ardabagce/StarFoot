@@ -101,6 +101,11 @@ const Ach = {
       Game.news(`Yeni madalya: <b>${a.name}</b> · ${a.desc}`, 'good');
       Game.toast(`Yeni madalya: ${a.name}`, 'good');
     });
+    // değer anı: ilk gol ya da ilk profesyonel sözleşme sonrası (günde en fazla bir tanıtım, Premium sahiplerine hiç)
+    if (typeof Nudge !== 'undefined') {
+      if (got.some((a) => a.id === 'goal1')) Nudge.later('goal1', 'İlk golün geldi! Premium ile geçiş reklamları kalkar, ödüller reklamsız ve anında gelir; Starpedia sayfan ve kariyer belgeselin açılır.');
+      else if (got.some((a) => a.id === 'pro')) Nudge.later('pro', 'Artık profesyonelsin! Premium ile geçiş reklamları kalkar, ödüller reklamsız ve anında gelir; altın onay rozetin ve Starpedia sayfan açılır.');
+    }
     return got;
   },
 };

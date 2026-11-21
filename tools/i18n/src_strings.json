@@ -368,6 +368,7 @@
 "diamond2.js",
 "drills.js",
 "game.js",
+"i18n.js",
 "interview.js",
 "lang-en.js",
 "lang-ja.js",
@@ -17560,7 +17561,17 @@
 "data.js"
 ],
 "Çin Kupası": [
-"cups.js"
+"cups.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "Avrupa Şampiyonlar Kupası": [
 "cups.js",
@@ -19941,7 +19952,17 @@
 "lang-zh.js"
 ],
 "Ejder Ligi": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "Çin": [
 "data.js",
@@ -19959,7 +19980,17 @@
 "wc.js"
 ],
 "Ejder 2. Ligi": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "GAL": [
 "data.js",
@@ -27770,7 +27801,17 @@
 "data.js"
 ],
 "Şanghay Ejderleri": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "CN": [
 "data.js",
@@ -27780,13 +27821,33 @@
 "data.js"
 ],
 "Şanghay Yıldızları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "BJG": [
 "data.js"
 ],
 "Pekin Muhafızları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "PEK": [
 "data.js"
@@ -27795,7 +27856,17 @@
 "data.js"
 ],
 "Jinan Zirvesi": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "JIN": [
 "data.js"
@@ -27804,13 +27875,33 @@
 "data.js"
 ],
 "Chengdu Pandaları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "ZZF": [
 "data.js"
 ],
 "Zhengzhou Kalesi": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "ZHE": [
 "data.js"
@@ -27819,7 +27910,17 @@
 "data.js"
 ],
 "Hangzhou Dalgaları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "HAN": [
 "data.js"
@@ -27828,7 +27929,17 @@
 "data.js"
 ],
 "Wuhan Fırtınası": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "WUH": [
 "data.js"
@@ -27837,7 +27948,17 @@
 "data.js"
 ],
 "Tianjin Martıları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "TIA": [
 "data.js"
@@ -27846,7 +27967,17 @@
 "data.js"
 ],
 "Shenzhen Kanatları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "SHE": [
 "data.js"
@@ -27855,13 +27986,33 @@
 "data.js"
 ],
 "Changchun Kurtları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "QDM": [
 "data.js"
 ],
 "Qingdao Denizcileri": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "QIN": [
 "data.js"
@@ -27870,7 +28021,17 @@
 "data.js"
 ],
 "Meizhou Işıkları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "MEI": [
 "data.js",
@@ -27880,7 +28041,17 @@
 "data.js"
 ],
 "Dalian Yelkenleri": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "DAL": [
 "data.js"
@@ -27889,13 +28060,33 @@
 "data.js"
 ],
 "Cangzhou Kometleri": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "KMS": [
 "data.js"
 ],
 "Kunming Baharı": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "KUN": [
 "data.js"
@@ -27904,19 +28095,49 @@
 "data.js"
 ],
 "Guangzhou Kıvılcımları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "NJW": [
 "data.js"
 ],
 "Nanjing Surları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "XAW": [
 "data.js"
 ],
 "Xian Savaşçıları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "XIA": [
 "data.js"
@@ -27925,7 +28146,17 @@
 "data.js"
 ],
 "Chongqing Dağları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "CHO": [
 "data.js"
@@ -27934,7 +28165,17 @@
 "data.js"
 ],
 "Shenyang Kartalları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "SHY": [
 "data.js"
@@ -27943,13 +28184,33 @@
 "data.js"
 ],
 "Harbin Ayıları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "XMC": [
 "data.js"
 ],
 "Xiamen Sahili": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "XIM": [
 "data.js"
@@ -27958,7 +28219,17 @@
 "data.js"
 ],
 "Suzhou Kanalları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "SUZ": [
 "data.js"
@@ -27967,7 +28238,17 @@
 "data.js"
 ],
 "Shijiazhuang Atları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "SJZ": [
 "data.js"
@@ -27976,7 +28257,17 @@
 "data.js"
 ],
 "Nanchang Alevi": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "NCH": [
 "data.js"
@@ -27985,7 +28276,17 @@
 "data.js"
 ],
 "Hefei Meteorları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "HEF": [
 "data.js"
@@ -27994,7 +28295,17 @@
 "data.js"
 ],
 "Taiyuan Kayaları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "TAI": [
 "data.js"
@@ -28003,13 +28314,33 @@
 "data.js"
 ],
 "Lanzhou Rüzgarı": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "NNG": [
 "data.js"
 ],
 "Nanning Yeşilleri": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "SLZ": [
 "data.js"
@@ -40030,6 +40361,12 @@
 "Yeni madalya: {}": [
 "extras.js"
 ],
+"İlk golün geldi! Premium ile geçiş reklamları kalkar, ödüller reklamsız ve anında gelir; Starpedia sayfan ve kariyer belgeselin açılır.": [
+"extras.js"
+],
+"Artık profesyonelsin! Premium ile geçiş reklamları kalkar, ödüller reklamsız ve anında gelir; altın onay rozetin ve Starpedia sayfan açılır.": [
+"extras.js"
+],
 "Çantan dolu (en fazla {}).": [
 "extras.js",
 "lang-ar.js",
@@ -48987,7 +49324,8 @@
 "game.js"
 ],
 "GA": [
-"game.js"
+"game.js",
+"i18n.js"
 ],
 "KA": [
 "game.js"
@@ -53047,6 +53385,98 @@
 ],
 "script,style,textarea,[contenteditable],[data-noi18n]": [
 "i18n.js"
+],
+"TH": [
+"i18n.js",
+"wc.js"
+],
+"MP": [
+"i18n.js"
+],
+"GF": [
+"i18n.js"
+],
+"GD": [
+"i18n.js"
+],
+"Pts": [
+"i18n.js"
+],
+"PJ": [
+"i18n.js"
+],
+"PG": [
+"i18n.js"
+],
+"PE": [
+"i18n.js"
+],
+"PP": [
+"i18n.js"
+],
+"GC": [
+"i18n.js"
+],
+"DG": [
+"i18n.js"
+],
+"GP": [
+"i18n.js"
+],
+"SG": [
+"i18n.js"
+],
+"Sp": [
+"i18n.js"
+],
+"GT": [
+"i18n.js",
+"lang-id.js",
+"mall.js"
+],
+"TD": [
+"i18n.js"
+],
+"Pkt": [
+"i18n.js"
+],
+"BP": [
+"i18n.js"
+],
+"BC": [
+"i18n.js"
+],
+"Diff": [
+"i18n.js"
+],
+"Gi": [
+"i18n.js"
+],
+"Pe": [
+"i18n.js"
+],
+"GS": [
+"i18n.js"
+],
+"DR": [
+"i18n.js"
+],
+"Pt": [
+"i18n.js"
+],
+"Main": [
+"i18n.js",
+"lang-id.js"
+],
+"Men": [
+"i18n.js"
+],
+"GM": [
+"i18n.js"
+],
+"Poin": [
+"i18n.js",
+"lang-id.js"
 ],
 "characterData": [
 "i18n.js"
@@ -120375,6 +120805,45 @@
 "lang-zh.js",
 "star.js"
 ],
+"EJDER LİGİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"weather.js"
+],
+"EJDER 2": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"weather.js"
+],
+"Şanghay": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"socialart.js"
+],
 "(Asist)": [
 "lang-ar.js",
 "lang-de.js",
@@ -136605,6 +137074,336 @@
 "lang-ja.js",
 "lang-pt.js",
 "lang-zh.js"
+],
+"Shanghai Dragons": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Shanghai Stars": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Beijing Guardians": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Jinan Summit": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Chengdu Pandas": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Zhengzhou Fortress": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Hangzhou Waves": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Wuhan Storm": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Tianjin Gulls": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Shenzhen Wings": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Changchun Wolves": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Qingdao Mariners": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Meizhou Lights": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Dalian Sails": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Cangzhou Comets": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Kunming Spring": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Guangzhou Sparks": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Nanjing Walls": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Xi'an Warriors": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Chongqing Mountains": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Shenyang Eagles": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Harbin Bears": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Xiamen Coast": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Suzhou Canals": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Shijiazhuang Horses": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Nanchang Flame": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Hefei Meteors": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Taiyuan Rocks": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Lanzhou Wind": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Nanning Greens": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "GİZLİLİK POLİTİKASI": [
 "lang-ar.js",
@@ -193973,6 +194772,42 @@
 "lang-pt.js",
 "lang-zh.js"
 ],
+"EJDER 2. LİGİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"ÇİN KUPASI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"ŞANGHAY": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -221620,6 +222455,696 @@
 "lang-ja.js",
 "lang-pt.js",
 "lang-zh.js"
+],
+"ŞANGHAY EJDERLERİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"SHANGHAI DRAGONS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ŞANGHAY YILDIZLARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"SHANGHAI STARS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"PEKİN MUHAFIZLARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"BEIJING GUARDIANS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"JİNAN ZİRVESİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"JINAN SUMMIT": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"CHENGDU PANDALARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"CHENGDU PANDAS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ZHENGZHOU KALESİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"ZHENGZHOU FORTRESS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HANGZHOU DALGALARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"HANGZHOU WAVES": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"WUHAN FIRTINASI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"WUHAN STORM": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TİANJİN MARTILARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"TIANJIN GULLS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SHENZHEN KANATLARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"SHENZHEN WINGS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"CHANGCHUN KURTLARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"CHANGCHUN WOLVES": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"QİNGDAO DENİZCİLERİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"QINGDAO MARINERS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MEİZHOU IŞIKLARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"MEIZHOU LIGHTS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DALİAN YELKENLERİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"DALIAN SAILS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"CANGZHOU KOMETLERİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"CANGZHOU COMETS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KUNMİNG BAHARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"KUNMING SPRING": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GUANGZHOU KIVILCIMLARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"GUANGZHOU SPARKS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"NANJİNG SURLARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"NANJING WALLS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"XİAN SAVAŞÇILARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"XI'AN WARRIORS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"CHONGQİNG DAĞLARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"CHONGQING MOUNTAINS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SHENYANG KARTALLARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"SHENYANG EAGLES": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HARBİN AYILARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"HARBIN BEARS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"XİAMEN SAHİLİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"XIAMEN COAST": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SUZHOU KANALLARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"SUZHOU CANALS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SHİJİAZHUANG ATLARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"SHIJIAZHUANG HORSES": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"NANCHANG ALEVİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"NANCHANG FLAME": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HEFEİ METEORLARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"HEFEI METEORS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"TAİYUAN KAYALARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"TAIYUAN ROCKS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"LANZHOU RÜZGARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"LANZHOU WIND": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"NANNİNG YEŞİLLERİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"NANNING GREENS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "👀 Ligdeki rakip {}'da senin yaşında, senin mevkinde bir yıldız adayı var: {}. Basın ikinizi şimdiden kıyaslıyor. Ezeli rakibin bu!": [
 "lang-ar.js",
@@ -254963,6 +256488,28 @@
 "Die Länderspielmeldung zeigt jetzt die Flagge deines Landes.": [
 "lang-de.js"
 ],
+"Drachen-Liga": [
+"lang-de.js"
+],
+"Drachen-Liga 2": [
+"lang-de.js"
+],
+"DRACHEN-LIGA": [
+"lang-de.js"
+],
+"DRACHEN 2": [
+"lang-de.js"
+],
+"China-Pokal": [
+"lang-de.js"
+],
+"Shanghai": [
+"lang-de.js",
+"lang-en.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js"
+],
 "– wir haben uns qualifiziert!": [
 "lang-de.js"
 ],
@@ -269905,6 +271452,19 @@
 ],
 "QUALIFIKATIONSGRUPPEN": [
 "lang-de.js"
+],
+"DRACHEN-LIGA 2": [
+"lang-de.js"
+],
+"CHINA-POKAL": [
+"lang-de.js"
+],
+"SHANGHAI": [
+"lang-de.js",
+"lang-en.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js"
 ],
 "– WIR HABEN UNS QUALIFIZIERT!": [
 "lang-de.js"
@@ -291336,6 +292896,22 @@
 "The national team match news now shows your own country’s flag.": [
 "lang-en.js"
 ],
+"Dragon League": [
+"lang-en.js"
+],
+"Dragon League 2": [
+"lang-en.js"
+],
+"DRAGON LEAGUE": [
+"lang-en.js"
+],
+"DRAGON 2": [
+"lang-en.js",
+"lang-fr.js"
+],
+"China Cup": [
+"lang-en.js"
+],
 "— we qualified!": [
 "lang-en.js"
 ],
@@ -305505,6 +307081,12 @@
 "lang-en.js"
 ],
 "QUALIFYING GROUPS": [
+"lang-en.js"
+],
+"DRAGON LEAGUE 2": [
+"lang-en.js"
+],
+"CHINA CUP": [
 "lang-en.js"
 ],
 "— WE QUALIFIED!": [
@@ -327062,6 +328644,24 @@
 "La noticia del partido de la selección muestra ahora la bandera de tu país.": [
 "lang-es.js"
 ],
+"Liga Dragón": [
+"lang-es.js"
+],
+"Liga Dragón 2": [
+"lang-es.js"
+],
+"LIGA DRAGÓN": [
+"lang-es.js"
+],
+"DRAGÓN 2": [
+"lang-es.js"
+],
+"Copa de China": [
+"lang-es.js"
+],
+"Shanghái": [
+"lang-es.js"
+],
 "— ¡nos hemos clasificado!": [
 "lang-es.js"
 ],
@@ -341348,6 +342948,15 @@
 "lang-es.js"
 ],
 "GRUPOS DE CLASIFICACIÓN": [
+"lang-es.js"
+],
+"LIGA DRAGÓN 2": [
+"lang-es.js"
+],
+"COPA DE CHINA": [
+"lang-es.js"
+],
+"SHANGHÁI": [
 "lang-es.js"
 ],
 "— ¡NOS HEMOS CLASIFICADO!": [
@@ -362541,6 +364150,18 @@
 "L’actu du match en sélection affiche désormais le drapeau de ton pays.": [
 "lang-fr.js"
 ],
+"Ligue Dragon": [
+"lang-fr.js"
+],
+"Ligue Dragon 2": [
+"lang-fr.js"
+],
+"LIGUE DRAGON": [
+"lang-fr.js"
+],
+"Coupe de Chine": [
+"lang-fr.js"
+],
 "— on est qualifiés !": [
 "lang-fr.js"
 ],
@@ -376335,6 +377956,12 @@
 "GROUPES DE QUALIFICATION": [
 "lang-fr.js"
 ],
+"LIGUE DRAGON 2": [
+"lang-fr.js"
+],
+"COUPE DE CHINE": [
+"lang-fr.js"
+],
 "— ON EST QUALIFIÉS !": [
 "lang-fr.js"
 ],
@@ -384696,10 +386323,6 @@
 ],
 "PD": [
 "lang-id.js"
-],
-"GT": [
-"lang-id.js",
-"mall.js"
 ],
 "Seri": [
 "lang-id.js"
@@ -397048,6 +398671,21 @@
 "Berita laga timnas kini menampilkan bendera negaramu.": [
 "lang-id.js"
 ],
+"Liga Naga": [
+"lang-id.js"
+],
+"Liga Naga 2": [
+"lang-id.js"
+],
+"LIGA NAGA": [
+"lang-id.js"
+],
+"NAGA 2": [
+"lang-id.js"
+],
+"Piala China": [
+"lang-id.js"
+],
 "— kita lolos!": [
 "lang-id.js"
 ],
@@ -398851,9 +400489,6 @@
 "Energi penuh di setiap hari pertandingan!": [
 "lang-id.js"
 ],
-"Main": [
-"lang-id.js"
-],
 "Pergi ke pertandingan?": [
 "lang-id.js"
 ],
@@ -399158,9 +400793,6 @@
 "lang-id.js"
 ],
 "Ikuti rencana": [
-"lang-id.js"
-],
-"Poin": [
 "lang-id.js"
 ],
 "Bermain untuk poin liga": [
@@ -410598,6 +412230,12 @@
 "lang-id.js"
 ],
 "GRUP KUALIFIKASI": [
+"lang-id.js"
+],
+"LIGA NAGA 2": [
+"lang-id.js"
+],
+"PIALA CHINA": [
 "lang-id.js"
 ],
 "— KITA LOLOS!": [
@@ -431309,6 +432947,21 @@
 "La notizia della partita in nazionale ora mostra la bandiera del tuo paese.": [
 "lang-it.js"
 ],
+"Lega del Drago": [
+"lang-it.js"
+],
+"Lega del Drago 2": [
+"lang-it.js"
+],
+"LEGA DEL DRAGO": [
+"lang-it.js"
+],
+"DRAGO 2": [
+"lang-it.js"
+],
+"Coppa di Cina": [
+"lang-it.js"
+],
 "— ci siamo qualificati!": [
 "lang-it.js"
 ],
@@ -444864,6 +446517,12 @@
 "lang-it.js"
 ],
 "GIRONI DI QUALIFICAZIONE": [
+"lang-it.js"
+],
+"LEGA DEL DRAGO 2": [
+"lang-it.js"
+],
+"COPPA DI CINA": [
 "lang-it.js"
 ],
 "— CI SIAMO QUALIFICATI!": [
@@ -466435,6 +468094,24 @@
 "A notícia do jogo da seleção agora mostra a bandeira do seu país.": [
 "lang-pt.js"
 ],
+"Liga Dragão": [
+"lang-pt.js"
+],
+"Liga Dragão 2": [
+"lang-pt.js"
+],
+"LIGA DRAGÃO": [
+"lang-pt.js"
+],
+"DRAGÃO 2": [
+"lang-pt.js"
+],
+"Taça da China": [
+"lang-pt.js"
+],
+"Xangai": [
+"lang-pt.js"
+],
 "— nos classificamos!": [
 "lang-pt.js"
 ],
@@ -479693,6 +481370,15 @@
 "lang-pt.js"
 ],
 "GRUPOS DAS ELIMINATÓRIAS": [
+"lang-pt.js"
+],
+"LIGA DRAGÃO 2": [
+"lang-pt.js"
+],
+"TAÇA DA CHINA": [
+"lang-pt.js"
+],
+"XANGAI": [
 "lang-pt.js"
 ],
 "— NOS CLASSIFICAMOS!": [
@@ -505546,9 +507232,6 @@
 "Kiev": [
 "socialart.js"
 ],
-"Şanghay": [
-"socialart.js"
-],
 "blur({}px)": [
 "socialart.js"
 ],
@@ -506089,9 +507772,6 @@
 "wc.js"
 ],
 "Danel Sinarić": [
-"wc.js"
-],
-"TH": [
 "wc.js"
 ],
 "Suphanat Muangsri": [
@@ -508391,12 +510071,6 @@
 "wcx.js"
 ],
 "--ct1:{};--ct2:{};--cta:{}": [
-"weather.js"
-],
-"EJDER LİGİ": [
-"weather.js"
-],
-"EJDER 2": [
 "weather.js"
 ],
 "EURO": [
