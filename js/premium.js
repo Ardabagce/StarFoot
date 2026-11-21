@@ -86,6 +86,10 @@ const RCStore = {
     }
     const product = RCStore.prods[productIdentifier];
     if (!product) throw new Error('product not found: ' + productIdentifier);
+    // satın almadan önceki işlemler: hata sonrası "ödeme aslında geçti mi" kontrolünde yeni işlemi ayırt etmek için
+    const txIds = (info) => new Set(((info && info.nonSubscriptionTransactions) || []).map((t) => t && t.transactionIdentifier).filter(Boolean));
+    if (!RCStore.info) { try { const ci = await RCStore.rc().getCustomerInfo(); RCStore.info = ci && ci.customerInfo; } catch (e) { /* yok */ } }
+    const before = RCStore.info ? txIds(RCStore.info) : null;
     try {
       const r = await RCStore.rc().purchaseStoreProduct({ product });
       RCStore.info = r && r.customerInfo;
@@ -93,7 +97,26 @@ const RCStore = {
       return { productIdentifier, transactionId: t && t.transactionIdentifier };
     } catch (e) {
       if (e && (e.userCancelled || (e.data && e.data.userCancelled) || String(e.code) === '1' || /cancel/i.test(String(e.message || '')))) throw new Error('cancelled');
-      throw e;
+      // Ödeme mağazada geçmiş ama RevenueCat'e bildirilememiş olabilir (ör. "Error performing request."):
+      // kısa aralıklarla müşteri bilgisini yenile; bu ürün için yeni bir işlem görünürse satın alma başarılıdır
+      if (before) {
+        for (const ms of [1500, 3000, 5000]) {
+          await new Promise((r) => setTimeout(r, ms));
+          try {
+            const ci = await RCStore.rc().getCustomerInfo();
+            const info = ci && ci.customerInfo;
+            if (info) RCStore.info = info;
+            const nt = ((info && info.nonSubscriptionTransactions) || []).find((t) => t && t.productIdentifier === productIdentifier && t.transactionIdentifier && !before.has(t.transactionIdentifier));
+            if (nt) { try { Premium.track('purchase_recovered', { item_id: productIdentifier }); } catch (e3) { /* yok */ } return { productIdentifier, transactionId: nt.transactionIdentifier, recovered: true }; }
+          } catch (e2) { /* bir sonraki denemede */ }
+        }
+      }
+      // teşhis için hata kodunu ve alttaki mağaza mesajını ekle (ör. NETWORK_ERROR, STORE_PROBLEM)
+      const d = (e && e.data) || {};
+      const code = d.readableErrorCode || d.readable_error_code || (e && e.code) || '';
+      const under = d.underlyingErrorMessage || d.underlying_error_message || '';
+      const base = String((e && e.message) || e);
+      throw new Error(`${base}${code ? ' [' + code + ']' : ''}${under ? ' ' + String(under).slice(0, 60) : ''}`);
     }
   },
   async restorePurchases() {
