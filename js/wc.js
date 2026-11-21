@@ -263,7 +263,7 @@ const WC = {
   poolOf(code) {
     const x = WC_NATIONS.find((n) => n.code === code);
     if (x) return x.pool;
-    return { TUR: 'TR', ENG: 'EN', SCO: 'EN', USA: 'US', ESP: 'ES', ARG: 'ES', MEX: 'MX', BRA: 'BR', POR: 'PT', GER: 'DE', AUT: 'DE', SUI: 'DE', ITA: 'IT', FRA: 'FR', BEL: 'BE', NED: 'NL', KSA: 'SA', EGY: 'SA', JPN: 'JP', GRE: 'GR', DEN: 'DK', NOR: 'DK', CRO: 'HR', CZE: 'CZ', POL: 'PL', UKR: 'UA' }[code] || 'XX';
+    return { TUR: 'TR', ENG: 'EN', SCO: 'EN', USA: 'US', ESP: 'ES', ARG: 'ES', MEX: 'MX', BRA: 'BR', POR: 'PT', GER: 'DE', AUT: 'DE', SUI: 'DE', ITA: 'IT', FRA: 'FR', BEL: 'BE', NED: 'NL', KSA: 'SA', EGY: 'SA', JPN: 'JP', GRE: 'GR', DEN: 'DK', NOR: 'DK', CRO: 'HR', CZE: 'CZ', POL: 'PL', UKR: 'UA', CHN: 'CN' }[code] || 'XX';
   },
   // içinde bulunulan turnuvanın yılı (kariyer modunda 2026, 2030, 2034, 2038)
   yr() { const s = Game.state; return (s && s.mode === 'wc' && s.wc && s.wc.year) || WC.YEAR; },

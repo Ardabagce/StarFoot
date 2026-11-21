@@ -90,15 +90,17 @@ const LEAGUES = [
   { id: 'CZE', name: 'Bohemya Ligi', country: 'Çekya', flag: '🇨🇿', level: 1, fame: 0.75 },
   { id: 'POL', name: 'Vistül Ligi', country: 'Polonya', flag: '🇵🇱', level: 1, fame: 0.75 },
   { id: 'UKR', name: 'Bozkır Ligi', country: 'Ukrayna', flag: '🇺🇦', level: 1, fame: 0.75 },
+  { id: 'CHN', name: 'Ejder Ligi', country: 'Çin', flag: '🇨🇳', level: 1, fame: 0.8 },
+  { id: 'CHN2', name: 'Ejder 2. Ligi', country: 'Çin', flag: '🇨🇳', level: 2, fame: 0.45 },
 ];
 // Ülke kodu (kupalar ve scoutlar için) ve küme düşme eşleşmeleri
-const LEAGUE_CC = { TR1: 'TR', TR2: 'TR', ENG: 'ENG', ENG2: 'ENG', ESP: 'ESP', ESP2: 'ESP', GER: 'GER', GER2: 'GER', ITA: 'ITA', ITA2: 'ITA', FRA: 'FRA', FRA2: 'FRA', NED: 'NED', POR: 'POR', BRA: 'BRA', ARG: 'ARG', BEL: 'BEL', SCO: 'SCO', USA: 'USA', MEX: 'MEX', KSA: 'KSA', JPN: 'JPN', AUT: 'AUT', SUI: 'SUI', GRE: 'GRE', DEN: 'DEN', CRO: 'CRO', CZE: 'CZE', POL: 'POL', UKR: 'UKR' };
-const LEAGUE_DOWN = { TR1: 'TR2', ENG: 'ENG2', ESP: 'ESP2', GER: 'GER2', ITA: 'ITA2', FRA: 'FRA2' };
+const LEAGUE_CC = { TR1: 'TR', TR2: 'TR', ENG: 'ENG', ENG2: 'ENG', ESP: 'ESP', ESP2: 'ESP', GER: 'GER', GER2: 'GER', ITA: 'ITA', ITA2: 'ITA', FRA: 'FRA', FRA2: 'FRA', NED: 'NED', POR: 'POR', BRA: 'BRA', ARG: 'ARG', BEL: 'BEL', SCO: 'SCO', USA: 'USA', MEX: 'MEX', KSA: 'KSA', JPN: 'JPN', AUT: 'AUT', SUI: 'SUI', GRE: 'GRE', DEN: 'DEN', CRO: 'CRO', CZE: 'CZE', POL: 'POL', UKR: 'UKR', CHN: 'CHN', CHN2: 'CHN' };
+const LEAGUE_DOWN = { TR1: 'TR2', ENG: 'ENG2', ESP: 'ESP2', GER: 'GER2', ITA: 'ITA2', FRA: 'FRA2', CHN: 'CHN2' };
 const LEAGUE_UP = Object.fromEntries(Object.entries(LEAGUE_DOWN).map(([a, b]) => [b, a]));
 // Mini oyun zorluğu (lig seviyesi)
-const LEAGUE_DIFF = { TR2: 0.38, ENG2: 0.42, ESP2: 0.41, GER2: 0.41, ITA2: 0.4, FRA2: 0.39, TR1: 0.45, NED: 0.48, POR: 0.48, ARG: 0.48, BRA: 0.5, BEL: 0.46, SCO: 0.44, USA: 0.45, MEX: 0.46, KSA: 0.46, JPN: 0.44, AUT: 0.44, SUI: 0.44, GRE: 0.45, DEN: 0.44, CRO: 0.44, CZE: 0.44, POL: 0.43, UKR: 0.44 };
+const LEAGUE_DIFF = { TR2: 0.38, ENG2: 0.42, ESP2: 0.41, GER2: 0.41, ITA2: 0.4, FRA2: 0.39, TR1: 0.45, NED: 0.48, POR: 0.48, ARG: 0.48, BRA: 0.5, BEL: 0.46, SCO: 0.44, USA: 0.45, MEX: 0.46, KSA: 0.46, JPN: 0.44, AUT: 0.44, SUI: 0.44, GRE: 0.45, DEN: 0.44, CRO: 0.44, CZE: 0.44, POL: 0.43, UKR: 0.44, CHN: 0.43, CHN2: 0.37 };
 // Maaş çarpanı (Suudi ve ABD daha çok öder)
-const LEAGUE_PAY = { KSA: 2.4, USA: 1.4, MEX: 0.9, JPN: 0.8, BEL: 0.8, SCO: 0.7, AUT: 0.7, SUI: 0.8, GRE: 0.65, DEN: 0.7, CRO: 0.55, CZE: 0.55, POL: 0.55, UKR: 0.55 };
+const LEAGUE_PAY = { KSA: 2.4, USA: 1.4, MEX: 0.9, JPN: 0.8, BEL: 0.8, SCO: 0.7, AUT: 0.7, SUI: 0.8, GRE: 0.65, DEN: 0.7, CRO: 0.55, CZE: 0.55, POL: 0.55, UKR: 0.55, CHN: 1.1, CHN2: 0.45 };
 
 // [id, isim, kısa, lig, güç, renk1, renk2, ülke kodu (isim havuzu)]
 const CLUB_LIST = [
@@ -539,6 +541,37 @@ const CLUB_LIST = [
   ['KSG', 'Kyoto Yıldırımı', 'KYO', 'JPN', 63, '#5b2c83', '#ffffff', 'JP'],
   ['SHN', 'Şonan Yolcuları', 'ŞON', 'JPN', 61, '#007a33', '#005ca9', 'JP'],
   ['MCZ', 'Matsumoto Işıkları', 'MAT', 'JPN', 60, '#007a33', '#ffffff', 'JP'],
+  // Çin (kurgusal kulüpler)
+  ['SHA', 'Şanghay Ejderleri', 'SHA', 'CHN', 70, '#c8102e', '#ffffff', 'CN'],
+  ['SHS', 'Şanghay Yıldızları', 'SHS', 'CHN', 68, '#0b3d91', '#ffffff', 'CN'],
+  ['BJG', 'Pekin Muhafızları', 'PEK', 'CHN', 69, '#007a33', '#ffffff', 'CN'],
+  ['JNZ', 'Jinan Zirvesi', 'JIN', 'CHN', 67, '#f78f1e', '#ffffff', 'CN'],
+  ['CDP', 'Chengdu Pandaları', 'CHE', 'CHN', 67, '#b0102f', '#ffd200', 'CN'],
+  ['ZZF', 'Zhengzhou Kalesi', 'ZHE', 'CHN', 63, '#c8102e', '#ffd200', 'CN'],
+  ['HZW', 'Hangzhou Dalgaları', 'HAN', 'CHN', 65, '#007a33', '#ffffff', 'CN'],
+  ['WHF', 'Wuhan Fırtınası', 'WUH', 'CHN', 64, '#0b3d91', '#c8102e', 'CN'],
+  ['TJG', 'Tianjin Martıları', 'TIA', 'CHN', 64, '#005ca9', '#ffffff', 'CN'],
+  ['SZW', 'Shenzhen Kanatları', 'SHE', 'CHN', 63, '#1b1d22', '#c8102e', 'CN'],
+  ['CCW', 'Changchun Kurtları', 'CHA', 'CHN', 62, '#ffd200', '#0b3d91', 'CN'],
+  ['QDM', 'Qingdao Denizcileri', 'QIN', 'CHN', 62, '#ff6a00', '#ffffff', 'CN'],
+  ['MZL', 'Meizhou Işıkları', 'MEI', 'CHN', 61, '#ffffff', '#c8102e', 'CN'],
+  ['DLS', 'Dalian Yelkenleri', 'DAL', 'CHN', 61, '#005ca9', '#ffffff', 'CN'],
+  ['CZC', 'Cangzhou Kometleri', 'CAN', 'CHN', 60, '#5b2c83', '#ffffff', 'CN'],
+  ['KMS', 'Kunming Baharı', 'KUN', 'CHN', 60, '#00a19a', '#ffffff', 'CN'],
+  ['GZS', 'Guangzhou Kıvılcımları', 'GUA', 'CHN2', 58, '#c8102e', '#1b1d22', 'CN'],
+  ['NJW', 'Nanjing Surları', 'NAN', 'CHN2', 56, '#5b2c83', '#ffd200', 'CN'],
+  ['XAW', 'Xian Savaşçıları', 'XIA', 'CHN2', 56, '#7a0026', '#ffffff', 'CN'],
+  ['CQM', 'Chongqing Dağları', 'CHO', 'CHN2', 55, '#f78f1e', '#1b1d22', 'CN'],
+  ['SYE', 'Shenyang Kartalları', 'SHY', 'CHN2', 55, '#0b3d91', '#ffd200', 'CN'],
+  ['HBB', 'Harbin Ayıları', 'HAR', 'CHN2', 54, '#ffffff', '#0b3d91', 'CN'],
+  ['XMC', 'Xiamen Sahili', 'XIM', 'CHN2', 54, '#00a19a', '#ffffff', 'CN'],
+  ['SZC', 'Suzhou Kanalları', 'SUZ', 'CHN2', 54, '#005ca9', '#c8102e', 'CN'],
+  ['SJH', 'Shijiazhuang Atları', 'SJZ', 'CHN2', 53, '#c8102e', '#ffffff', 'CN'],
+  ['NCF', 'Nanchang Alevi', 'NCH', 'CHN2', 53, '#ff6a00', '#0b3d91', 'CN'],
+  ['HFM', 'Hefei Meteorları', 'HEF', 'CHN2', 53, '#1b1d22', '#ffd200', 'CN'],
+  ['TYR', 'Taiyuan Kayaları', 'TAI', 'CHN2', 52, '#7a7a7a', '#ffffff', 'CN'],
+  ['LZW', 'Lanzhou Rüzgarı', 'LAN', 'CHN2', 52, '#005ca9', '#ffd200', 'CN'],
+  ['NNG', 'Nanning Yeşilleri', 'NNG', 'CHN2', 52, '#007a33', '#ffd200', 'CN'],
   ['SLZ', 'Salzburg Zirvesi', 'SAL', 'AUT', 73, '#c8102e', '#ffffff', 'DE'],
   ['RPW', 'Viyana Kanatları', 'RAP', 'AUT', 68, '#007a33', '#ffffff', 'DE'],
   ['AWI', 'Favoriten Ateşi', 'AUS', 'AUT', 67, '#5b2c83', '#ffffff', 'DE'],
@@ -730,6 +763,10 @@ const NAME_POOLS = {
   MX: {
     f: ['Juan', 'José', 'Luis', 'Carlos', 'Jorge', 'Miguel', 'Alejandro', 'Fernando', 'Ricardo', 'Eduardo', 'Andrés', 'Javier', 'Óscar', 'Sergio', 'Adrián', 'Arturo', 'Emilio', 'Iván', 'Manuel', 'Rafael'],
     l: ['Hernández', 'García', 'Martínez', 'López', 'González', 'Pérez', 'Sánchez', 'Ramírez', 'Torres', 'Flores', 'Rivera', 'Gómez', 'Díaz', 'Cruz', 'Morales', 'Reyes', 'Gutiérrez', 'Ortiz', 'Castillo', 'Mendoza'],
+  },
+  CN: {
+    f: ['Wei', 'Lei', 'Hao', 'Jun', 'Yang', 'Xin', 'Bin', 'Peng', 'Tao', 'Long', 'Jie', 'Ming', 'Chen', 'Yu', 'Zhen', 'Kai', 'Bo', 'Rui', 'Feng', 'Qiang'],
+    l: ['Wang', 'Li', 'Zhang', 'Liu', 'Chen', 'Zhao', 'Huang', 'Zhou', 'Wu', 'Sun', 'Xu', 'Ma', 'Hu', 'Guo', 'He', 'Lin', 'Gao', 'Luo', 'Zheng', 'Tang'],
   },
   JP: {
     f: ['Haruto', 'Sota', 'Yuto', 'Ren', 'Hayato', 'Kaito', 'Riku', 'Shota', 'Daiki', 'Kenta', 'Ryo', 'Yuma', 'Takuya', 'Sho', 'Naoki', 'Kazuki', 'Tatsuya', 'Yusuke', 'Ryota', 'Kenji'],

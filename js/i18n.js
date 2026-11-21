@@ -220,8 +220,26 @@ const I18N = {
       if (I18N.rtl() && !v.includes('\u200e') && (/^\s*[+\-−±]\s?\d/.test(v) || /\d\s*['’%]\s*$/.test(v))) n.nodeValue = '\u200e' + v;
       return;
     }
+    // Puan tablosu başlıkları (O, G, B, M, A, Y, AV, P): tek harfler sözlükte belirsiz, dile özel kısaltma kullan
+    // (çıktılar Türkçe anahtarlarla çakışmaz; gözlemci ikinci kez çevirmez)
+    if (p.tagName === 'TH') {
+      const TH = I18N.TH[I18N.lang], k = v.trim();
+      if (TH && TH[k]) { if (TH[k] !== k) { I18N.rev.set(TH[k], k); n.nodeValue = v.replace(k, TH[k]); } return; }
+    }
     const t = I18N.t(v);
     if (t !== v) n.nodeValue = t;
+  },
+  TH: {
+    en: { O: 'MP', G: 'W', B: 'D', M: 'L', A: 'GF', Y: 'GA', AV: 'GD', Av: 'GD', P: 'Pts' },
+    es: { O: 'PJ', G: 'PG', B: 'PE', M: 'PP', A: 'GF', Y: 'GC', AV: 'DG', Av: 'DG', P: 'Pts' },
+    pt: { O: 'J', G: 'V', B: 'E', M: 'D', A: 'GP', Y: 'GC', AV: 'SG', Av: 'SG', P: 'Pts' },
+    de: { O: 'Sp', G: 'S', B: 'U', M: 'N', A: 'T', Y: 'GT', AV: 'TD', Av: 'TD', P: 'Pkt' },
+    fr: { O: 'J', B: 'N', M: 'D', A: 'BP', Y: 'BC', AV: 'Diff', Av: 'Diff', P: 'Pts' },
+    it: { O: 'Gi', G: 'V', B: 'N', M: 'Pe', A: 'GF', Y: 'GS', AV: 'DR', Av: 'DR', P: 'Pt' },
+    id: { O: 'Main', G: 'Men', B: 'S', M: 'K', A: 'GM', Y: 'GK', AV: 'SG', Av: 'SG', P: 'Poin' },
+    ar: { O: 'لعب', G: 'ف', B: 'ت', M: 'خ', A: 'له', Y: 'عليه', AV: 'فارق', Av: 'فارق', P: 'نقاط' },
+    ja: { O: '試合', G: '勝', B: '分', M: '敗', A: '得点', Y: '失点', AV: '差', Av: '差', P: '勝点' },
+    zh: { O: '赛', G: '胜', B: '平', M: '负', A: '进', Y: '失', AV: '净', Av: '净', P: '分' },
   },
   attrs(el) {
     if (I18N.skip(el)) return;
