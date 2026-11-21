@@ -1108,11 +1108,11 @@ def iap_sale(asc, app_id, spec):
             below = [c for c in cand if c[0] <= want + 1e-9]
             sale = below[-1] if below else cand[0]
             print(f'   {t}: {price:g} -> {sale[0]:g} (%{round((1 - sale[0] / price) * 100)} indirim), {back} tarihinde tekrar {price:g}')
-            for start, pp in ((None, sale[1]), (back, ppid)):
+            for start, end, pp in ((None, back, sale[1]), (back, None, ppid)):
                 n += 1
                 ref = '${p%d}' % n
                 refs.append({'type': 'inAppPurchasePrices', 'id': ref})
-                included.append({'type': 'inAppPurchasePrices', 'id': ref, 'attributes': {'startDate': start},
+                included.append({'type': 'inAppPurchasePrices', 'id': ref, 'attributes': {'startDate': start, 'endDate': end},
                                  'relationships': {'inAppPurchaseV2': {'data': {'type': 'inAppPurchases', 'id': iid}},
                                                    'inAppPurchasePricePoint': {'data': {'type': 'inAppPurchasePricePoints', 'id': pp}}}})
         if not ok:
