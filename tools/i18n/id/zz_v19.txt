@@ -3212,3 +3212,10 @@
 10434|{} negara, kejuaraan benua
 10454|{} selesai: {} finis ke-{} di grup dan lolos ke {} {}!
 10452|{} selesai: {} finis ke-{} di grup dan tidak ikut turnamen.
+10456|Layar utama dan menu baru
+10457|Beranda, Liga, Skuad, dan Profil muat dalam satu layar. 3 aksi mingguan di kotak, saran pelatih cukup sekali ketuk. Bagian terbuka di panel dari bawah.
+10461|Kejuaraan benua
+10462|Piala Bangsa-Bangsa Asia dan Afrika, Kejuaraan Amerika Selatan serta Amerika Utara & Tengah, dan Piala Bangsa-Bangsa Oseania. Kamu bermain sesuai benua negaramu.
+10465|Grup kualifikasi
+10466|Grup kualifikasi 4 tim setahun sebelum Kejuaraan Dunia dan kejuaraan benua. 2 teratas lolos; ikuti grupmu di Liga > Timnas.
+10469|Berita laga timnas kini menampilkan bendera negaramu.

@@ -42746,17 +42746,8 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
-"🇹🇷 Milli formayla {}. maçına çıktın!": [
-"game.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js"
+"{} Milli formayla {}. maçına çıktın!": [
+"game.js"
 ],
 "💪 Sakatlığın geçti, tekrar sahalara dönebilirsin!": [
 "game.js",
@@ -207193,6 +207184,18 @@
 "lang-pt.js",
 "meta.js"
 ],
+"{} tamamlandı: {} grubu {}. sırada bitirdi ve turnuvaya katılamayacak.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"quals.js"
+],
 "{} hocayla taktik konuştu. İkinci yarıda daha çok topla buluşacak.": [
 "lang-ar.js",
 "lang-de.js",
@@ -207305,6 +207308,28 @@
 "lang-pt.js"
 ],
 "Your arch-rival {} has also moved to {}. The rivalry continues in the new league!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"tamamlandı: {} grubu {}. sırada bitirdi ve turnuvaya katılamayacak.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"complete: {} finished {} in the group and will miss the tournament.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -208164,6 +208189,18 @@
 "{} التحدي الأول متاح للجميع. والبقية مع StarFoot Diamond.": [
 "lang-ar.js"
 ],
+"{} tamamlandı: {} grubu {}. sırada bitirdi ve {} {} biletini aldı!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"quals.js"
+],
 "Magazin: {} kumarhanede görüntülendi. Taraftarlar tepkili.": [
 "lang-ar.js",
 "lang-de.js",
@@ -208320,6 +208357,28 @@
 "lang-pt.js"
 ],
 "{}, {} hakkında \\\"takımın yükünü ben çekiyorum\\\" dedi iddiası": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"tamamlandı: {} grubu {}. sırada bitirdi ve {} {} biletini aldı!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"complete: {} finished {} in the group and booked a ticket to the {} {}!": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -213480,6 +213539,17 @@
 "lang-ja.js",
 "lang-pt.js",
 "match.js"
+],
+"🇹🇷 Milli formayla {}. maçına çıktın!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
 ],
 "{} ({}) sana sponsorluk teklif ediyor!": [
 "lang-ar.js",
@@ -256604,6 +256674,9 @@
 "👟 Der Europäische Goldene Schuh {} geht an {}! Mit {} Toren bist du Europas Torschützenkönig.": [
 "lang-de.js"
 ],
+"{} beendet: {} wurde Gruppen-{}. und verpasst das Turnier.": [
+"lang-de.js"
+],
 "Hattrick! Eine unvergessliche Nacht im Trikot von {}. Den Ball nehme ich mit nach Hause.": [
 "lang-de.js"
 ],
@@ -256866,6 +256939,9 @@
 "lang-de.js"
 ],
 "{} Die erste Aufgabe ist für alle offen. Die übrigen gibt es mit StarFoot Diamond.": [
+"lang-de.js"
+],
+"{} beendet: {} wurde Gruppen-{}. und hat das Ticket für {} {} gelöst!": [
 "lang-de.js"
 ],
 "Klatsch: {} im Casino gesichtet. Die Fans sind nicht zufrieden.": [
@@ -292128,6 +292204,9 @@
 "👟 The {} European Golden Boot goes to {}! You were Europe's top scorer with {} goals.": [
 "lang-en.js"
 ],
+"{} complete: {} finished {} in the group and will miss the tournament.": [
+"lang-en.js"
+],
 "Hat-trick! An unforgettable night in the {} shirt. Taking the ball home.": [
 "lang-en.js"
 ],
@@ -292390,6 +292469,9 @@
 "lang-en.js"
 ],
 "{} The first challenge is open to everyone. The rest come with StarFoot Diamond.": [
+"lang-en.js"
+],
+"{} complete: {} finished {} in the group and booked a ticket to the {} {}!": [
 "lang-en.js"
 ],
 "Gossip: {} spotted at a casino. Fans are not happy.": [
@@ -327940,6 +328022,9 @@
 "👟 ¡La Bota de Oro Europea {} es para {}! Fuiste el máximo goleador de Europa con {} goles.": [
 "lang-es.js"
 ],
+"{} terminada: {} acabó {}º del grupo y se perderá el torneo.": [
+"lang-es.js"
+],
 "¡Hat-trick! Una noche inolvidable con la camiseta del {}. Me llevo el balón a casa.": [
 "lang-es.js"
 ],
@@ -328202,6 +328287,9 @@
 "lang-es.js"
 ],
 "{} El primer desafío es para todos. El resto, con StarFoot Diamond.": [
+"lang-es.js"
+],
+"{} terminada: {} acabó {}º del grupo y tiene billete para {} {}!": [
 "lang-es.js"
 ],
 "Cotilleo: {} visto en un casino. La afición no está contenta.": [
@@ -362755,6 +362843,9 @@
 "👟 Le Soulier d'or européen {} revient à {} ! Tu es le meilleur buteur d'Europe avec {} buts.": [
 "lang-fr.js"
 ],
+"{} terminées : {} finit {}e du groupe et manquera le tournoi.": [
+"lang-fr.js"
+],
 "Triplé ! Une nuit inoubliable sous le maillot de {}. Je ramène le ballon à la maison.": [
 "lang-fr.js"
 ],
@@ -363017,6 +363108,9 @@
 "lang-fr.js"
 ],
 "{} Le premier défi est ouvert à tous. Les autres avec StarFoot Diamond.": [
+"lang-fr.js"
+],
+"{} terminées : {} finit {}e du groupe et décroche son billet pour {} {} !": [
 "lang-fr.js"
 ],
 "Rumeur : {} aperçu au casino. Les fans ne sont pas contents.": [
@@ -396968,6 +397062,9 @@
 "👟 Sepatu Emas Eropa {} milik {}! Kamu pencetak gol terbanyak Eropa dengan {} gol.": [
 "lang-id.js"
 ],
+"{} selesai: {} finis ke-{} di grup dan tidak ikut turnamen.": [
+"lang-id.js"
+],
 "Hat-trick! Malam tak terlupakan dengan jersey {}. Bolanya aku bawa pulang.": [
 "lang-id.js"
 ],
@@ -397230,6 +397327,9 @@
 "lang-id.js"
 ],
 "{} Tantangan pertama terbuka untuk semua. Sisanya dengan StarFoot Diamond.": [
+"lang-id.js"
+],
+"{} selesai: {} finis ke-{} di grup dan lolos ke {} {}!": [
 "lang-id.js"
 ],
 "Gosip: {} terlihat di kasino. Para suporter tidak senang.": [
@@ -431194,6 +431294,9 @@
 "👟 La Scarpa d'Oro Europea {} va a {}! Sei il capocannoniere d'Europa con {} gol.": [
 "lang-it.js"
 ],
+"{} concluse: {} chiude {}ª nel girone e salterà il torneo.": [
+"lang-it.js"
+],
 "Tripletta! Una notte indimenticabile con la maglia del {}. Il pallone me lo porto a casa.": [
 "lang-it.js"
 ],
@@ -431456,6 +431559,9 @@
 "lang-it.js"
 ],
 "{} La prima sfida è aperta a tutti. Le altre con StarFoot Diamond.": [
+"lang-it.js"
+],
+"{} concluse: {} chiude {}ª nel girone e conquista il biglietto per {} {}!": [
 "lang-it.js"
 ],
 "Gossip: {} avvistato al casinò. I tifosi non sono contenti.": [
@@ -465878,6 +465984,9 @@
 "👟 A Chuteira de Ouro Europeia {} é de {}! Você foi o artilheiro da Europa com {} gols.": [
 "lang-pt.js"
 ],
+"{} encerradas: {} terminou em {}º no grupo e vai ficar fora do torneio.": [
+"lang-pt.js"
+],
 "Hat-trick! Uma noite inesquecível com a camisa do {}. Vou levar a bola para casa.": [
 "lang-pt.js"
 ],
@@ -466140,6 +466249,9 @@
 "lang-pt.js"
 ],
 "{} O primeiro desafio é aberto a todos. Os demais, com o StarFoot Diamond.": [
+"lang-pt.js"
+],
+"{} encerradas: {} terminou em {}º no grupo e garantiu vaga em {} {}!": [
 "lang-pt.js"
 ],
 "Fofoca: {} visto num cassino. A torcida não está feliz.": [
@@ -486704,12 +486816,6 @@
 "💎 Diamond\\'da var": [
 "premium.js"
 ],
-"{} tamamlandı: {} grubu {}. sırada bitirdi ve {} {} biletini aldı!": [
-"quals.js"
-],
-"{} tamamlandı: {} grubu {}. sırada bitirdi ve turnuvaya katılamayacak.": [
-"quals.js"
-],
 "700 9px \"Barlow Semi Condensed\", sans-serif": [
 "radar.js"
 ],
@@ -486825,6 +486931,27 @@
 "star.js"
 ],
 "{} Lüks Yaşam Vitrini": [
+"star.js"
+],
+"Yeni ana ekran ve menüler": [
+"star.js"
+],
+"Merkez, Lig, Kadro ve Profil tek ekrana sığar. Haftanın 3 hakkı kutularda, hocanın önerisi tek dokunuşta. Bölümler alttan açılan panellerde.": [
+"star.js"
+],
+"Kıta şampiyonaları": [
+"star.js"
+],
+"Asya ve Afrika Uluslar Kupası, Güney Amerika, Kuzey ve Orta Amerika Şampiyonası ve Okyanusya Uluslar Kupası. Ülkenin kıtasına göre oynarsın.": [
+"star.js"
+],
+"Eleme grupları": [
+"star.js"
+],
+"Dünya Şampiyonası ve kıta şampiyonalarından önceki yıl 4 takımlı eleme grubu. İlk 2 bilet alır; grubu Lig > Milli Takım panelinde izle.": [
+"star.js"
+],
+"Milli maç haberinde kendi ülkenin bayrağı görünür.": [
 "star.js"
 ],
 "Attığın golü ağır çekimde yeniden izle. \"Geç\" ile atla ya da Ayarlar’dan kapat.": [

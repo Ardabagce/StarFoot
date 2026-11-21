@@ -5392,5 +5392,12 @@
 "OKYANUSYA": "OCEANIA",
 "{} ülke, kıta şampiyonası": "{} nations, continental championship",
 "{} tamamlandı: {} grubu {}. sırada bitirdi ve {} {} biletini aldı!": "{} complete: {} finished {} in the group and booked a ticket to the {} {}!",
-"{} tamamlandı: {} grubu {}. sırada bitirdi ve turnuvaya katılamayacak.": "{} complete: {} finished {} in the group and will miss the tournament."
+"{} tamamlandı: {} grubu {}. sırada bitirdi ve turnuvaya katılamayacak.": "{} complete: {} finished {} in the group and will miss the tournament.",
+"Yeni ana ekran ve menüler": "New home screen and menus",
+"Merkez, Lig, Kadro ve Profil tek ekrana sığar. Haftanın 3 hakkı kutularda, hocanın önerisi tek dokunuşta. Bölümler alttan açılan panellerde.": "Home, League, Squad and Profile fit on one screen. Your 3 weekly actions sit in slots and the coach’s advice is one tap away. Sections open in panels from the bottom.",
+"Kıta şampiyonaları": "Continental championships",
+"Asya ve Afrika Uluslar Kupası, Güney Amerika, Kuzey ve Orta Amerika Şampiyonası ve Okyanusya Uluslar Kupası. Ülkenin kıtasına göre oynarsın.": "Asian and African Nations Cups, the South American and North & Central American Championships and the Oceania Nations Cup. You play the one for your country’s continent.",
+"Eleme grupları": "Qualifying groups",
+"Dünya Şampiyonası ve kıta şampiyonalarından önceki yıl 4 takımlı eleme grubu. İlk 2 bilet alır; grubu Lig > Milli Takım panelinde izle.": "A 4-team qualifying group the year before the World Championship and continental championships. The top 2 qualify; follow your group in League > National Team.",
+"Milli maç haberinde kendi ülkenin bayrağı görünür.": "The national team match news now shows your own country’s flag."
 }

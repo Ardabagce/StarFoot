@@ -19,7 +19,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         // Sürüm kodu her derlemede artar: GitHub Actions'ta 100 + çalışma numarası
         versionCode((System.getenv("VERSION_CODE") ?: "100").toInteger())
-        versionName "1.0.26"
+        versionName "1.0.27"
         resValue "string", "facebook_app_id", metaAppId
         resValue "string", "facebook_client_token", metaClientToken
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"

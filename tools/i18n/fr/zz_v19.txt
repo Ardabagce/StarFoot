@@ -3212,3 +3212,10 @@
 10434|{} pays, championnat continental
 10454|{} terminées : {} finit {}e du groupe et décroche son billet pour {} {} !
 10452|{} terminées : {} finit {}e du groupe et manquera le tournoi.
+10456|Nouvel écran d’accueil et menus
+10457|Accueil, Ligue, Effectif et Profil tiennent sur un écran. Tes 3 actions de la semaine dans des cases, le conseil du coach en un geste. Les sections s’ouvrent dans des panneaux depuis le bas.
+10461|Championnats continentaux
+10462|Coupes des nations d’Asie et d’Afrique, championnats d’Amérique du Sud et d’Amérique du Nord et centrale, Coupe des nations d’Océanie. Tu joues celle de ton continent.
+10465|Groupes de qualification
+10466|Un groupe de qualification à 4 l’année précédant le Mondial et les championnats continentaux. Les 2 premiers se qualifient ; suis ton groupe dans Ligue > Sélection.
+10469|L’actu du match en sélection affiche désormais le drapeau de ton pays.

@@ -612,9 +612,9 @@ document.addEventListener('click', (e) => {
 });
 
 // ---------- Güncelleme duyurusu (her sürümde bir kez) ----------
-const APP_VER = '1.0.26';
+const APP_VER = '1.0.27';
 // Duyuru içeriğinin sürümü: yeni duyuru yazılınca güncellenir (yalnız sürüm atlamak tekrar göstermez)
-const WN_VER = '1.0.26';
+const WN_VER = '1.0.27';
 const WhatsNew = {
   KEY: 'starfoot_whatsnew',
   // Hub'a girişte bir kez gösterir; gösterdiyse true döner. done(): pencere kapanınca çalışır.
@@ -632,6 +632,12 @@ const WhatsNew = {
   // Duyuruyu gösterir (Ayarlar'dan yeniden açılabilir): bu ve bir önceki güncelleme, geçmiş gibi
   show(done) {
     const it = (ic, t, d) => `<li><i data-emo>${ic}</i><span><b>${t}</b><small>${d}</small></span></li>`;
+    const v27 = [
+      it('📱', 'Yeni ana ekran ve menüler', 'Merkez, Lig, Kadro ve Profil tek ekrana sığar. Haftanın 3 hakkı kutularda, hocanın önerisi tek dokunuşta. Bölümler alttan açılan panellerde.'),
+      it('🌍', 'Kıta şampiyonaları', 'Asya ve Afrika Uluslar Kupası, Güney Amerika, Kuzey ve Orta Amerika Şampiyonası ve Okyanusya Uluslar Kupası. Ülkenin kıtasına göre oynarsın.'),
+      it('🎟️', 'Eleme grupları', 'Dünya Şampiyonası ve kıta şampiyonalarından önceki yıl 4 takımlı eleme grubu. İlk 2 bilet alır; grubu Lig > Milli Takım panelinde izle.'),
+      it('🔧', 'Düzeltmeler', 'Milli maç haberinde kendi ülkenin bayrağı görünür.'),
+    ].join('');
     const v26 = [
       it('🤝', 'Menajerinle transfer görüşmesi', 'Sportif direktörle masaya otur: maaş, süre, imza parası, ilk 11 sözü ve serbest kalma maddesi. Fazla istersen masadan kalkabilir.'),
       it('🎥', 'Gol tekrarı', 'Attığın golü ağır çekimde yeniden izle. "Geç" ile atla ya da Ayarlar’dan kapat.'),
@@ -676,11 +682,11 @@ const WhatsNew = {
     Game.modal(`<div class="wn"><div class="ev-tag">Güncelleme geçmişi</div>
       <h2>Yenilikler 🚀</h2>
       <div class="wn-v"><b>${WN_VER}</b><small>Bu güncelleme</small></div>
-      <ul class="wn-l">${v26}</ul>
-      <div class="wn-v old"><b>1.0.25</b><small>Önceki güncelleme</small></div>
+      <ul class="wn-l">${v27}</ul>
+      <div class="wn-v old"><b>1.0.26</b><small>Önceki güncelleme</small></div>
+      <ul class="wn-l old">${v26}</ul>
+      <div class="wn-v old"><b>1.0.25</b></div>
       <ul class="wn-l old">${v25}</ul>
-      <div class="wn-v old"><b>1.0.24</b></div>
-      <ul class="wn-l old">${v24}</ul>
       <p class="wn-note ok">Diamond’a eklenenlerin hiçbiri maçta güç vermez; ücretsiz oyunda hiçbir şey değişmedi.</p>
       <p class="wn-note">Teknik Direktör modu yepyeni bir fikir ve her güncellemede gelişmeye devam edecek. Fikirlerini bekliyoruz!</p></div>`, btns, { wide: true });
     if (typeof Premium !== 'undefined') Premium.track('whatsnew_view', { ver: WN_VER, premium: has ? 1 : 0 });

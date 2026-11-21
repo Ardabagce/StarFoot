@@ -3212,3 +3212,10 @@
 10434|{} países, campeonato continental
 10454|{} encerradas: {} terminou em {}º no grupo e garantiu vaga em {} {}!
 10452|{} encerradas: {} terminou em {}º no grupo e vai ficar fora do torneio.
+10456|Nova tela inicial e menus
+10457|Início, Liga, Elenco e Perfil cabem em uma tela. Suas 3 ações da semana ficam em espaços e a dica do técnico está a um toque. As seções abrem em painéis de baixo.
+10461|Campeonatos continentais
+10462|Copas das Nações da Ásia e da África, Campeonatos Sul-Americano e da América do Norte e Central e Copa das Nações da Oceania. Você joga a do continente do seu país.
+10465|Grupos das eliminatórias
+10466|Um grupo de 4 seleções nas eliminatórias no ano anterior ao Mundial e aos campeonatos continentais. Os 2 primeiros se classificam; acompanhe em Liga > Seleção.
+10469|A notícia do jogo da seleção agora mostra a bandeira do seu país.

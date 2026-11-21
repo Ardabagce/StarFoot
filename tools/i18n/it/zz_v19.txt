@@ -3212,3 +3212,10 @@
 10434|{} nazioni, campionato continentale
 10454|{} concluse: {} chiude {}ª nel girone e conquista il biglietto per {} {}!
 10452|{} concluse: {} chiude {}ª nel girone e salterà il torneo.
+10456|Nuova schermata principale e menu
+10457|Home, Campionato, Rosa e Profilo stanno in una schermata. Le 3 azioni settimanali in caselle e il consiglio dell’allenatore a un tocco. Le sezioni si aprono in pannelli dal basso.
+10461|Campionati continentali
+10462|Coppe delle Nazioni di Asia e Africa, Campionati Sudamericano e del Nord e Centro America e Coppa delle Nazioni dell’Oceania. Giochi quella del tuo continente.
+10465|Gironi di qualificazione
+10466|Un girone di qualificazione a 4 l’anno prima del Mondiale e dei campionati continentali. Le prime 2 si qualificano; segui il girone in Campionato > Nazionale.
+10469|La notizia della partita in nazionale ora mostra la bandiera del tuo paese.

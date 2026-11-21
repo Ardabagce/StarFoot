@@ -3212,3 +3212,10 @@
 10434|{} Länder, Kontinentalmeisterschaft
 10454|{} beendet: {} wurde Gruppen-{}. und hat das Ticket für {} {} gelöst!
 10452|{} beendet: {} wurde Gruppen-{}. und verpasst das Turnier.
+10456|Neuer Startbildschirm und Menüs
+10457|Zentrale, Liga, Kader und Profil passen auf einen Bildschirm. Deine 3 Wochenaktionen stehen in Feldern, der Tipp des Trainers ist einen Tipp entfernt. Bereiche öffnen sich in Panels von unten.
+10461|Kontinentalmeisterschaften
+10462|Asiatischer und Afrikanischer Nationenpokal, Süd- sowie Nord- und Mittelamerikameisterschaft und Ozeanischer Nationenpokal. Du spielst die deines Kontinents.
+10465|Qualifikationsgruppen
+10466|Eine Vierergruppe in der Qualifikation im Jahr vor der Weltmeisterschaft und den Kontinentalmeisterschaften. Die ersten 2 qualifizieren sich; verfolge die Gruppe unter Liga > Nationalteam.
+10469|Die Länderspielmeldung zeigt jetzt die Flagge deines Landes.
