@@ -116,6 +116,13 @@ const Premium = {
   // Firebase Analytics'e olay gönderir (Realtime ekranında anında görünür). Hata oyunu etkilemez.
   track(name, params = {}) {
     try {
+      // satın alma hatalarında teşhis bilgisi: platform ve mağazadan alınabilen ürün sayısı (0 = mağazaya hiç ulaşılamadı)
+      if (name === 'premium_fail') {
+        params = Object.assign({}, params);
+        try { params.plat = (window.Capacitor && window.Capacitor.getPlatform && window.Capacitor.getPlatform()) || 'web'; } catch (e) { /* yok */ }
+        try { params.np = Object.keys((typeof RCStore !== 'undefined' && RCStore.prods) || {}).length; } catch (e) { /* yok */ }
+        try { params.online = navigator.onLine ? 1 : 0; } catch (e) { /* yok */ }
+      }
       const F = window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.FirebaseAnalytics;
       if (F && F.logEvent) F.logEvent({ name, params }).catch(() => {});
     } catch (e) { /* analytics yok */ }
