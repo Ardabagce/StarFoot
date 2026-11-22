@@ -21,9 +21,9 @@ eval(rd('js/lang-en.js') + ';global.__EN = LANG_EN;');
 eval(rd('js/lang-zh.js') + ';global.__ZH = LANG_ZH;');
 const DICT = { en: global.__EN.exact, zh: global.__ZH.exact };
 const FIX = {
-  en: [['pill(`GÜÇ ', 'pill(`POWER '], [' RAKİP`', ' BEATEN`'],
+  en: [['pill(`GÜÇ ', 'pill(`POWER '], [' RAKİP`', ' BEATEN`'], ["'<i></i>TEKRAR · 0.75x'", "'<i></i>REPLAY · 0.75x'"],
     ["'Rakip hamle yapınca <b>topu ters tarafa çek</b> · ekranın sol/sağına dokun ya da kaydır · <kbd>←</kbd> <kbd>→</kbd>'", "'When the defender commits, <b>pull the ball the other way</b> · tap or swipe left / right'"]],
-  zh: [['pill(`GÜÇ ', 'pill(`力量 '], [' RAKİP`', ' 已过人`'],
+  zh: [['pill(`GÜÇ ', 'pill(`力量 '], [' RAKİP`', ' 已过人`'], ["'<i></i>TEKRAR · 0.75x'", "'<i></i>回放 · 0.75x'"],
     ["'Rakip hamle yapınca <b>topu ters tarafa çek</b> · ekranın sol/sağına dokun ya da kaydır · <kbd>←</kbd> <kbd>→</kbd>'", "'对手出脚时，<b>把球拨向另一侧</b> · 点击或滑动屏幕左/右侧'"]],
 };
 // oyun kodundaki Türkçe metinleri oyunun kendi sözlüğüyle çevirir
