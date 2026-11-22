@@ -4,9 +4,13 @@ on:
   workflow_dispatch:
     inputs:
       action:
-        description: 'check / products / listing / datasafety / release'
+        description: 'check / products / sale / listing / datasafety / release'
         required: true
         default: check
+      sale:
+        description: "sale: yüzde:ürünler (ör. 30:starfoot_premium,starfoot_plus2,starfoot_diamond); normal fiyata dönmek için action=products"
+        required: false
+        default: ''
       run_id:
         description: "release: AAB'nin alınacağı Android çalışmasının kimliği"
         required: false
@@ -37,6 +41,7 @@ jobs:
           github-token: ${{ github.token }}
       - env:
           PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+          SALE: ${{ inputs.sale }}
           PLAY_ALLOW_PROD: ${{ inputs.track == 'production' && '1' || '0' }}
         run: |
           if [ "${{ inputs.action }}" = release ]; then

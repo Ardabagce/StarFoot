@@ -4,6 +4,7 @@
 Kimlik: PLAY_SERVICE_ACCOUNT_JSON ortam değişkeni (servis hesabı JSON anahtarının içeriği).
 
   play.py upload --aab X.aab --track internal [--status completed|draft] [--version 1.0.17]
+  play.py sale                # SALE='30:sku1,sku2' ile süreli indirim (geri almak: products)
   play.py products            # store/play/products.json'daki tek seferlik ürünleri oluşturur/günceller
   play.py check               # erişimi ve izi listeler
   play.py datasafety          # store/play/data_safety.csv'yi Veri güvenliği formuna yazar
@@ -97,12 +98,22 @@ def money(m):
     return {k: m[k] for k in ('currencyCode', 'units', 'nanos') if k in m}
 
 
-def products(a):
-    """Yeni tek seferlik ürün API'si (monetization.onetimeproducts)."""
+def products(a, sale=None):
+    """Yeni tek seferlik ürün API'si (monetization.onetimeproducts).
+    sale = (yüzde, [sku]) verilirse yalnız o ürünler indirimli fiyatla güncellenir; 'products' tekrar çalışınca
+    products.json'daki normal fiyatlar geri gelir."""
     s = session()
     base = f'{API}/{PKG}/oneTimeProducts'
     for p in CFG['products']:
-        u, c = p['price'].split('.')
+        price = p['price']
+        if sale:
+            pct, skus = sale
+            if p['sku'] not in skus:
+                continue
+            v = float(price) * (1 - pct / 100)
+            price = f'{max(0.49, int(v * 10) / 10 + 0.09):.2f}'  # 1.99 -> 1.39, 3.99 -> 2.79, 7.99 -> 5.59
+            print(f"{p['sku']}: {p['price']} -> {price} USD (%{pct:g} indirim)")
+        u, c = price.split('.')
         usd = {'currencyCode': 'USD', 'units': u, 'nanos': int(c.ljust(9, '0'))}
         conv = ok(s.post(f'{API}/{PKG}/pricing:convertRegionPrices', json={'price': usd}), 'fiyat çevirme')
         regions = [{'regionCode': rc, 'price': money(v['price']), 'availability': 'AVAILABLE'}
@@ -127,7 +138,7 @@ def products(a):
         r2 = s.post(f'{base}/{p["sku"]}/purchaseOptions:batchUpdateStates', json={'requests': [
             {'activatePurchaseOptionRequest': {'packageName': PKG, 'productId': p['sku'], 'purchaseOptionId': 'buy'}}]})
         st = 'etkin' if r2.status_code < 300 else f'etkinleştirilemedi {r2.status_code} {r2.text[:400]}'
-        print(f'{p["sku"]} hazır ({p["price"]} USD, {len(regions)} ülke) — {st}')
+        print(f'{p["sku"]} hazır ({price} USD, {len(regions)} ülke) — {st}')
 
 
 def listing(a):
@@ -166,6 +177,13 @@ def listing(a):
         r = s.post(f'{API}/{PKG}/edits/{e}:commit?changesNotSentForReview=true')
     ok(r, 'commit')
     print('TAMAM: mağaza sayfası güncellendi')
+
+
+def sale(a):
+    """SALE='30:sku1,sku2' -> o ürünlerin fiyatını yüzde kadar indirir (normal fiyata dönüş: products)."""
+    spec = os.environ.get('SALE', '').strip()
+    pct, skus = spec.split(':', 1)
+    products(a, (float(pct), [x.strip() for x in skus.split(',') if x.strip()]))
 
 
 def check(a):
@@ -226,9 +244,10 @@ if __name__ == '__main__':
     u.add_argument('--fraction', type=float, default=0.2)
     u.add_argument('--version', default='')
     sub.add_parser('products')
+    sub.add_parser('sale')
     sub.add_parser('check')
     sub.add_parser('listing')
     sub.add_parser('datasafety')
     sub.add_parser('vitals')
     a = ap.parse_args()
-    {'upload': upload, 'products': products, 'check': check, 'listing': listing, 'datasafety': datasafety, 'vitals': vitals}[a.cmd](a)
+    {'upload': upload, 'products': products, 'sale': sale, 'check': check, 'listing': listing, 'datasafety': datasafety, 'vitals': vitals}[a.cmd](a)
