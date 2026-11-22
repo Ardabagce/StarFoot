@@ -13,38 +13,56 @@ const perfEnd = util.findIndex((l) => l.startsWith('Perf.init();'));
 const UTIL = util.slice(0, perfEnd + 1).join('\n');
 const SPRITES = rd('js/sprites.js').replace("im.src = 'img/grass.jpg'", () => "im.src = 'data:image/jpeg;base64," + b64('img/grass.jpg') + "'");
 const MG = [UTIL, rd('js/sfx.js'), SPRITES, 'const Weather = { draw() {} };', rd('js/minigame.js')].join('\n;\n');
-const SHOP = (l) => [UTIL, `const I18N = { lang: '${l}' }; const Game = { state: null, p: null };`, rd('js/sfx.js'), rd('js/mallart.js'), rd('js/mall.js')].join('\n;\n');
+const SHOP = (l) => [UTIL, `const I18N = { lang: '${l === 'zh' ? 'en' : l}' }; const Game = { state: null, p: null };`, rd('js/sfx.js'), rd('js/mallart.js'), rd('js/mall.js')].join('\n;\n');
 
 // İngilizce: oyunun sözlüğünden metinler
 global.window = global;
-eval(rd('js/lang-en.js') + ';global.__L = LANG_EN;');
-const EX = global.__L.exact;
-const toEn = (src) => src.replace('pill(`GÜÇ ', 'pill(`POWER ').replace(' RAKİP`', ' BEATEN`')
-  .replace("'Rakip hamle yapınca <b>topu ters tarafa çek</b> · ekranın sol/sağına dokun ya da kaydır · <kbd>←</kbd> <kbd>→</kbd>'", "'When the defender commits, <b>pull the ball the other way</b> · tap or swipe left / right'")
-  .replace(/'((?:[^'\\\n]|\\.)*)'/g, (m, s) => {
+eval(rd('js/lang-en.js') + ';global.__EN = LANG_EN;');
+eval(rd('js/lang-zh.js') + ';global.__ZH = LANG_ZH;');
+const DICT = { en: global.__EN.exact, zh: global.__ZH.exact };
+const FIX = {
+  en: [['pill(`GÜÇ ', 'pill(`POWER '], [' RAKİP`', ' BEATEN`'],
+    ["'Rakip hamle yapınca <b>topu ters tarafa çek</b> · ekranın sol/sağına dokun ya da kaydır · <kbd>←</kbd> <kbd>→</kbd>'", "'When the defender commits, <b>pull the ball the other way</b> · tap or swipe left / right'"]],
+  zh: [['pill(`GÜÇ ', 'pill(`力量 '], [' RAKİP`', ' 已过人`'],
+    ["'Rakip hamle yapınca <b>topu ters tarafa çek</b> · ekranın sol/sağına dokun ya da kaydır · <kbd>←</kbd> <kbd>→</kbd>'", "'对手出脚时，<b>把球拨向另一侧</b> · 点击或滑动屏幕左/右侧'"]],
+};
+// oyun kodundaki Türkçe metinleri oyunun kendi sözlüğüyle çevirir
+const toLang = (l, src) => {
+  if (!DICT[l]) return src;
+  const EX = DICT[l];
+  FIX[l].forEach(([a, b]) => { src = src.replace(a, () => b); });
+  return src.replace(/'((?:[^'\\\n]|\\.)*)'/g, (m, s) => {
     if (!/[A-ZÇĞİÖŞÜçğıöşü ]/.test(s) || !EX[s] || /^[a-z0-9_.-]+$/.test(s)) return m;
     return "'" + EX[s].replace(/\\/g, '\\\\').replace(/'/g, "\\'") + "'";
   });
+};
 
 const END = {
   en: { endSub: 'Start as a kid in street football, get scouted, turn pro and become a legend.', c1: 'Your whole career', c2: 'Transfers & trophies', c3: 'Manager mode', cta: 'PLAY FREE', free: 'Free · iOS & Android', install: 'Install', again1: 'One more chance!', again2: 'Last chance!' },
   tr: { endSub: 'Sokakta çocukken başla, scout seni keşfetsin, profesyonel ol ve efsane ol.', c1: 'Bütün kariyerin', c2: 'Transfer ve kupalar', c3: 'Teknik direktör modu', cta: 'ÜCRETSİZ OYNA', free: 'Ücretsiz · iOS ve Android', install: 'İndir', again1: 'Bir şansın daha var!', again2: 'Son şans!' },
+  zh: { endSub: '从街头踢球的孩子开始，被球探发掘，成为职业球员，最终成为传奇。', c1: '完整职业生涯', c2: '转会与奖杯', c3: '主教练模式', cta: '免费开玩', free: '免费 · iOS 和 Android', install: '下载', again1: '再来一次！', again2: '最后一次机会！' },
 };
 const SCORE = `<span class="mn">90+4'</span><span>STR</span><b id="score">1 - 1</b><span>BCK</span>`;
 const SC = {
   penalty: { code: 'sc-penalty.js', game: 'mg', bar: SCORE,
     en: { final: 'CUP FINAL · LAST MINUTE', h1: 'SCORE THE', h2: 'WINNER!', sub: 'Pull back and release to shoot.', winH1: 'CHAMPIONS!', winH2: 'THIS IS JUST THE START', loseH1: 'SO CLOSE!', loseH2: 'YOUR CAREER AWAITS' },
+    zh: { final: '杯赛决赛 · 最后一分钟', h1: '罚进这个球', h2: '赢得冠军！', sub: '向后拉再松开：射门', winH1: '冠军！', winH2: '这只是开始', loseH1: '差一点！', loseH2: '你的职业生涯在等你' },
     tr: { final: 'KUPA FİNALİ · SON DAKİKA', h1: 'ŞAMPİYONLUK', h2: 'GOLÜNÜ AT!', sub: 'Geri çek ve bırak: şut!', winH1: 'ŞAMPİYONSUN!', winH2: 'BU DAHA BAŞLANGIÇ', loseH1: 'ÇOK YAKLAŞTIN!', loseH2: 'KARİYERİN SENİ BEKLİYOR' } },
   freekick: { code: 'sc-penalty.js', game: 'mg', bar: SCORE,
     en: { final: 'DERBY · LAST MINUTE FREE KICK', h1: 'CURL IT OVER', h2: 'THE WALL!', sub: 'Pull back and release. Swipe sideways to curl.', winH1: 'WHAT A FREE KICK!', winH2: 'THIS IS JUST THE START', loseH1: 'SO CLOSE!', loseH2: 'YOUR CAREER AWAITS' },
+    zh: { final: '德比大战 · 最后一分钟任意球', h1: '绕过人墙', h2: '直挂死角！', sub: '向后拉再松开，侧向滑动可打出弧线', winH1: '神级任意球！', winH2: '这只是开始', loseH1: '差一点！', loseH2: '你的职业生涯在等你' },
     tr: { final: 'DERBİ · SON DAKİKA FRİKİĞİ', h1: 'BARAJIN ÜSTÜNDEN', h2: 'GOLÜ AT!', sub: 'Geri çek ve bırak. Falso için yana kaydır.', winH1: 'MÜTHİŞ FRİKİK!', winH2: 'BU DAHA BAŞLANGIÇ', loseH1: 'ÇOK YAKLAŞTIN!', loseH2: 'KARİYERİN SENİ BEKLİYOR' } },
   dribble: { code: 'sc-dribble.js', game: 'mg', bar: SCORE, hand: ['30%', '55%', 'tapside'],
     en: { final: 'LAST MINUTE · SOLO RUN', h1: 'BEAT ALL', h2: '3 DEFENDERS!', sub: 'When a defender lunges, tap the other side.', winH1: 'YOU BEAT THEM ALL!', winH2: 'THIS IS JUST THE START', loseH1: 'SO CLOSE!', loseH2: 'YOUR CAREER AWAITS' },
+    zh: { final: '最后一分钟 · 单刀突破', h1: '连过', h2: '三名后卫！', sub: '对手出脚时，点击另一侧', winH1: '你过掉了所有人！', winH2: '这只是开始', loseH1: '差一点！', loseH2: '你的职业生涯在等你' },
     tr: { final: 'SON DAKİKA · SOLO AKIN', h1: '3 RAKİBİ DE', h2: 'ÇALIMLA GEÇ!', sub: 'Rakip hamle yapınca diğer tarafa dokun.', winH1: 'HEPSİNİ GEÇTİN!', winH2: 'BU DAHA BAŞLANGIÇ', loseH1: 'ÇOK YAKLAŞTIN!', loseH2: 'KARİYERİN SENİ BEKLİYOR' } },
   shop: { code: 'sc-shop.js', game: 'shop', bar: '', hand: ['28%', '42%', 'tap'],
     en: { final: 'FIRST PRO CONTRACT SIGNED ✍️', h1: 'SPEND YOUR', h2: 'SIGNING BONUS!', sub: 'Pick 3 items from the shop.', winH1: 'LIVE THE', winH2: 'STAR LIFE', loseH1: 'YOUR STAR LIFE', loseH2: 'IS WAITING',
       app: 'Showcase', balance: 'Balance', bonus: 'Signing bonus received! Buy any 3 items.', buy: 'Buy', bought: 'Yours', bag: 'My items', more2: 'Nice! 2 more to go', more1: 'Last one!', done: 'All yours! 😎',
       endSub: 'Win trophies on the pitch. Off it: shopping, cars, houses and holidays.', c1: '3,500+ items', c2: 'Cars & houses', c3: 'Your whole career' },
+    zh: { final: '签下第一份职业合同 ✍️', h1: '花掉你的', h2: '签字费！', sub: '从商店里挑选 3 件商品', winH1: '像巨星一样', winH2: '生活', loseH1: '巨星生活', loseH2: '在等你',
+      app: '精品橱窗', balance: '余额', bonus: '签字费已到账！任选 3 件商品。', buy: '购买', bought: '已拥有', bag: '我的物品', more2: '太棒了！还差 2 件', more1: '最后一件！', done: '全都是你的！😎',
+      endSub: '在球场上赢得奖杯，在场外购物、买车、买房、去度假。', c1: '3500+ 件商品', c2: '豪车与豪宅', c3: '完整职业生涯' },
     tr: { final: 'İLK PROFESYONEL SÖZLEŞME ✍️', h1: 'İMZA PARANI', h2: 'HARCA!', sub: 'Mağazadan 3 ürün seç.', winH1: 'YILDIZ GİBİ', winH2: 'YAŞA', loseH1: 'YILDIZ HAYATI', loseH2: 'SENİ BEKLİYOR',
       app: 'Vitrin', balance: 'Bakiye', bonus: 'İmza paran yattı! İstediğin 3 ürünü al.', buy: 'Satın al', bought: 'Senin', bag: 'Eşyalarım', more2: 'Harika! 2 tane daha', more1: 'Son bir tane!', done: 'Hepsi senin! 😎',
       endSub: 'Sahada kupalar kazan; saha dışında alışveriş, arabalar, evler ve tatiller.', c1: '3.500+ ürün', c2: 'Araba ve evler', c3: 'Bütün kariyerin' } },
@@ -85,11 +103,11 @@ const common = fs.readFileSync(path.join(D, 'common.js'), 'utf8');
 const out = path.join(D, 'dist');
 fs.rmSync(out, { recursive: true, force: true });
 const only = process.argv[2];
-for (const [sc, cfg] of Object.entries(SC)) for (const net of Object.keys(NET_HEAD)) for (const l of ['en', 'tr']) {
+for (const [sc, cfg] of Object.entries(SC)) for (const net of Object.keys(NET_HEAD)) for (const l of ['en', 'tr', 'zh']) {
   if (only && only !== sc) continue;
   const t = Object.assign({}, END[l], cfg[l]);
   let game = cfg.game === 'shop' ? SHOP(l) : MG;
-  if (l === 'en') game = toEn(game);
+  game = toLang(l, game);
   const html = shell
     .replace('__LANG__', l).replace('__NETWORK_HEAD__', NET_HEAD[net]).replace('__FONTS__', () => FONTS).replace('__CSS__', () => (cfg.game === 'shop' ? SHOP_CSS : '')).replace('__ICON__', ICON)
     .replace('__BAR__', () => cfg.bar)
