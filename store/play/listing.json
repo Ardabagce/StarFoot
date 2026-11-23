@@ -1,16 +1,61 @@
 {
  "_not": "Play mağaza sayfası: başlık ve tam açıklama store/asc/metadata.json'dan (asc yerel kodu), kısa açıklama burada. shots/feature: store/play içindeki dil öneki.",
  "listings": {
-  "tr-TR": {"asc": "tr", "img": "tr", "short": "Mahalleden Altın Top'a! Kritik anları sen oyna, futbol kariyerini sen yaz."},
-  "en-US": {"asc": "en-US", "img": "en", "short": "From street football to the Golden Ball. Play the key moments of your career."},
-  "en-GB": {"asc": "en-GB", "img": "en", "short": "From street football to the Golden Ball. Play the key moments of your career."},
-  "es-ES": {"asc": "es-ES", "img": "es", "short": "Del barrio al Balón de Oro. Juega los momentos clave de tu carrera futbolística."},
-  "es-419": {"asc": "es-MX", "img": "es", "short": "Del barrio al Balón de Oro. Juega los momentos clave de tu carrera futbolística."},
-  "pt-BR": {"asc": "pt-BR", "img": "en", "short": "Da rua à Bola de Ouro. Jogue os lances decisivos da sua carreira no futebol."},
-  "pt-PT": {"asc": "pt-PT", "img": "en", "short": "Da rua à Bola de Ouro. Joga os lances decisivos da tua carreira no futebol."},
-  "de-DE": {"asc": "de-DE", "img": "en", "short": "Vom Bolzplatz zum Goldenen Ball. Spiele die entscheidenden Szenen selbst."},
-  "fr-FR": {"asc": "fr-FR", "img": "en", "short": "De la rue au Ballon d'Or. Joue toi-même les moments clés de ta carrière."},
-  "ja-JP": {"asc": "ja", "img": "en", "short": "ストリートからゴールデンボールへ。決定的な瞬間を自分でプレーしよう。"}
+  "tr-TR": {
+   "asc": "tr",
+   "img": "tr",
+   "short": "Mahalleden dünya yıldızlığına! Kritik anları sen oyna, kariyerini sen yaz."
+  },
+  "en-US": {
+   "asc": "en-US",
+   "img": "en",
+   "short": "From street football to world stardom. Play the key moments of your career."
+  },
+  "en-GB": {
+   "asc": "en-GB",
+   "img": "en",
+   "short": "From street football to world stardom. Play the key moments of your career."
+  },
+  "es-ES": {
+   "asc": "es-ES",
+   "img": "es",
+   "short": "Del barrio a la élite mundial. Juega los momentos clave de tu carrera."
+  },
+  "es-419": {
+   "asc": "es-MX",
+   "img": "es",
+   "short": "Del barrio a la élite mundial. Juega los momentos clave de tu carrera."
+  },
+  "pt-BR": {
+   "asc": "pt-BR",
+   "img": "en",
+   "short": "Da rua ao estrelato mundial. Jogue os lances decisivos da sua carreira."
+  },
+  "pt-PT": {
+   "asc": "pt-PT",
+   "img": "en",
+   "short": "Da rua ao estrelato mundial. Joga os lances decisivos da tua carreira."
+  },
+  "de-DE": {
+   "asc": "de-DE",
+   "img": "en",
+   "short": "Vom Bolzplatz zum Weltstar. Spiele die entscheidenden Szenen selbst."
+  },
+  "fr-FR": {
+   "asc": "fr-FR",
+   "img": "en",
+   "short": "De la rue à la gloire mondiale. Joue toi-même les moments clés de ta carrière."
+  },
+  "ja-JP": {
+   "asc": "ja",
+   "img": "en",
+   "short": "ストリートからワールドスターへ。決定的な瞬間を自分でプレーしよう。"
+  },
+  "zh-CN": {
+   "asc": "zh-Hans",
+   "img": "en",
+   "short": "从街头少年到足球传奇，亲自踢出生涯中的每个关键时刻。"
+  }
  },
  "other_img": "en"
 }

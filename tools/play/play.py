@@ -23,7 +23,8 @@ CFG = json.load(open(os.path.join(ROOT, 'store/play/products.json')))
 PKG = CFG['package']
 # App Store yerel kodu -> Play dil kodu
 LOC = {'tr': 'tr-TR', 'en-US': 'en-US', 'de-DE': 'de-DE', 'es-ES': 'es-ES', 'fr-FR': 'fr-FR',
-       'pt-BR': 'pt-BR', 'it': 'it-IT', 'id': 'id', 'ja': 'ja-JP'}
+       'pt-BR': 'pt-BR', 'it': 'it-IT', 'id': 'id', 'ja': 'ja-JP',
+       'en-GB': 'en-GB', 'es-MX': 'es-419', 'pt-PT': 'pt-PT', 'zh-Hans': 'zh-CN'}
 
 
 def session():
