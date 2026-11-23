@@ -218,7 +218,8 @@ def datasafety(a):
 
 
 def vitals(a):
-    # ANR ve kilitlenme kümeleri + örnek yığın izleri (Play Developer Reporting API)
+    """Sürüme göre ANR ve çökme oranı (son 28 gün) + ANR/çökme kümeleri ve örnek yığın izleri (Play Developer Reporting API)."""
+    import datetime as dt
     raw = os.environ.get('PLAY_SERVICE_ACCOUNT_JSON', '').strip()
     cred = service_account.Credentials.from_service_account_info(
         json.loads(raw), scopes=['https://www.googleapis.com/auth/playdeveloperreporting'])
@@ -226,21 +227,54 @@ def vitals(a):
     s = requests.Session()
     s.headers['Authorization'] = 'Bearer ' + cred.token
     R = f'https://playdeveloperreporting.googleapis.com/v1beta1/apps/{PKG}'
+    ymd = lambda d: {'year': d.year, 'month': d.month, 'day': d.day}
+    LA = {'id': 'America/Los_Angeles'}
+    # oranlar: Play'in "kötü davranış eşiği" ANR %0.47, çökme %1.09 (kullanıcının algıladığı)
+    for name, mets in (('anrRateMetricSet', ['anrRate', 'userPerceivedAnrRate', 'distinctUsers']),
+                       ('crashRateMetricSet', ['crashRate', 'userPerceivedCrashRate', 'distinctUsers'])):
+        info = s.get(f'{R}/{name}')
+        if not info.ok:
+            print('HATA', name, info.status_code, info.text[:500]); continue
+        end = None
+        for f in info.json().get('freshnessInfo', {}).get('freshnesses', []):
+            if f.get('aggregationPeriod') == 'DAILY':
+                e = f['latestEndTime']; end = dt.date(e['year'], e['month'], e['day'])
+        end = end or (dt.date.today() - dt.timedelta(days=2))
+        body = {'timelineSpec': {'aggregationPeriod': 'DAILY', 'startTime': {**ymd(end - dt.timedelta(days=28)), 'timeZone': LA},
+                                 'endTime': {**ymd(end), 'timeZone': LA}},
+                'dimensions': ['versionCode'], 'metrics': mets, 'pageSize': 1000}
+        r = s.post(f'{R}/{name}:query', json=body)
+        if not r.ok:
+            print('HATA', name, r.status_code, r.text[:500]); continue
+        agg = {}
+        for row in r.json().get('rows', []):
+            v = next((d.get('stringValue') or d.get('int64Value') for d in row.get('dimensions', [])), '?')
+            m = {x['metric']: float(x.get('decimalValue', {}).get('value', 0) or 0) for x in row.get('metrics', [])}
+            g = agg.setdefault(v, {'u': 0, 'w': {}})
+            u = m.get('distinctUsers', 0); g['u'] += u
+            for k in mets[:2]:
+                g['w'][k] = g['w'].get(k, 0) + m.get(k, 0) * u
+        print(f'== {name} ({end - dt.timedelta(days=28)} .. {end})')
+        for v in sorted(agg, key=lambda x: int(x) if str(x).isdigit() else 0):
+            g = agg[v]
+            rates = ', '.join(f'{k}={g["w"][k] / g["u"] * 100:.2f}%' for k in mets[:2]) if g['u'] else '-'
+            print(f'   versionCode {v}: kullanıcı-gün {int(g["u"])}, {rates}')
+    today = dt.datetime.utcnow().date()
+    iv = {'interval.startTime.year': (today - dt.timedelta(days=30)).year, 'interval.startTime.month': (today - dt.timedelta(days=30)).month,
+          'interval.startTime.day': (today - dt.timedelta(days=30)).day,
+          'interval.endTime.year': today.year, 'interval.endTime.month': today.month, 'interval.endTime.day': today.day}
     for t in ('APPLICATION_NOT_RESPONDING', 'CRASH'):
-        r = s.get(f'{R}/errorIssues:search', params={'filter': f'errorIssueType = {t}', 'pageSize': 15,
-                  'interval.startTime.year': 2026, 'interval.startTime.month': 10, 'interval.startTime.day': 20})
+        r = s.get(f'{R}/errorIssues:search', params={'filter': f'errorIssueType = {t}', 'pageSize': 15, **iv})
         if not r.ok:
             print('HATA', t, r.status_code, r.text[:800]); continue
         for i in r.json().get('errorIssues', []):
             print('==', t, i.get('errorReportCount'), i.get('distinctUsers'), i.get('cause'), '|', i.get('location'), i.get('lastAppVersion', {}))
-    r = s.get(f'{R}/errorReports:search', params={'filter': 'errorIssueType = APPLICATION_NOT_RESPONDING', 'pageSize': 6,
-              'interval.startTime.year': 2026, 'interval.startTime.month': 10, 'interval.startTime.day': 20})
+    r = s.get(f'{R}/errorReports:search', params={'filter': 'errorIssueType = APPLICATION_NOT_RESPONDING', 'pageSize': 6, **iv})
     if not r.ok:
         print('HATA raporlar', r.status_code, r.text[:800]); return
     for x in r.json().get('errorReports', []):
         print('#### rapor', x.get('appVersion'), x.get('deviceModel', {}).get('marketingName'), x.get('osVersion'))
         print('\n'.join(x.get('reportText', '').splitlines()[:70]))
-
 
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
