@@ -187,6 +187,13 @@ def sale(a):
 
 
 def check(a):
+    # hangi servis hesabıyla girildiğini göster (e-posta gizli değildir; anahtarın kendisi yazdırılmaz)
+    try:
+        info = json.loads(os.environ.get('PLAY_SERVICE_ACCOUNT_JSON', '{}'))
+        em = info.get('client_email', '?')
+        print('Servis hesabı:', em.replace('@', ' [at] '), '| proje:', info.get('project_id', '?'))
+    except Exception as e:
+        print('Anahtar okunamadı (JSON değil):', type(e).__name__)
     s = session()
     e = ok(s.post(f'{API}/{PKG}/edits'), 'edit')['id']
     for t in ok(s.get(f'{API}/{PKG}/edits/{e}/tracks'), 'tracks').get('tracks', []):
