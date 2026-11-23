@@ -4363,6 +4363,10 @@ body.lite .ph-gohome { -webkit-backdrop-filter: none; backdrop-filter: none; }
 .hub-cta .btn-play { flex: 1; width: auto; margin: 0; min-height: 50px; }
 .hub-cta .ff-btn, .hub-cta .undo-btn { width: auto; margin: 0; flex: 0 0 auto; max-width: 42%; padding: 6px 10px; font-size: 13px; line-height: 1.15; white-space: normal; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; }
 .hub-cta .ff-btn small, .hub-cta .undo-btn small { font-size: 10px; }
+/* üç düğme: maça çık tam satır, hızlı ilerle ve geri al altta yan yana */
+.hub-cta.n3 { flex-wrap: wrap; }
+.hub-cta.n3 .btn-play { flex: 1 1 100%; }
+.hub-cta.n3 .ff-btn, .hub-cta.n3 .undo-btn { flex: 1 1 0; max-width: none; min-width: 0; min-height: 44px; }
 
 .hub-week { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 10px 12px 12px; display: flex; flex-direction: column; gap: 10px; }
 .hw-h { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }

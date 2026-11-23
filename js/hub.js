@@ -119,7 +119,8 @@ const Hub = {
       } else slots.push(`<button type="button" class="hw-slot empty" data-hubopen="home" data-hubkey="@plan"><span class="hw-plus">+</span><b>Aksiyon seç</b></button>`);
     }
     const r = Hub.rec();
-    const ad = s.ap <= 0 ? (UI.adAp() + UI.adEnergy()) : '';
+    // enerji reklamı hak durumundan bağımsız (maç sonrası enerji düşükken); +1 hak reklamı adAp içinde yalnız haklar bitince
+    const ad = UI.adAp() + UI.adEnergy();
     return `<section class="hub-week">
       <div class="hw-h"><b>Bu Hafta</b><span>${s.ap > 0 ? `${s.ap} aksiyon hakkın var` : 'Haklar bitti · maça hazırsın'}</span></div>
       ${n ? `<div class="hw-slots" style="--n:${n}">${slots.join('')}</div>` : ''}
@@ -139,6 +140,7 @@ const Hub = {
       const cta = document.createElement('div');
       cta.className = 'hub-cta';
       next.querySelectorAll('.btn-play, .ff-btn, .undo-btn').forEach((b) => cta.appendChild(b));
+      cta.classList.add(`n${cta.children.length}`);
       const hint = next.querySelector('.hint'); if (hint) hint.remove();
       // eleme maçı: kartta eleme adı
       const s = Game.state, qm = s.qualMatch, q = s.quals;
