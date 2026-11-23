@@ -259,17 +259,17 @@ def vitals(a):
             g = agg[v]
             rates = ', '.join(f'{k}={g["w"][k] / g["u"] * 100:.2f}%' for k in mets[:2]) if g['u'] else '-'
             print(f'   versionCode {v}: kullanıcı-gün {int(g["u"])}, {rates}')
-    today = dt.datetime.utcnow().date()
+    today = dt.datetime.now(dt.timezone.utc).date()
     iv = {'interval.startTime.year': (today - dt.timedelta(days=30)).year, 'interval.startTime.month': (today - dt.timedelta(days=30)).month,
           'interval.startTime.day': (today - dt.timedelta(days=30)).day,
           'interval.endTime.year': today.year, 'interval.endTime.month': today.month, 'interval.endTime.day': today.day}
-    for t in ('APPLICATION_NOT_RESPONDING', 'CRASH'):
+    for t in ('ANR', 'CRASH'):
         r = s.get(f'{R}/errorIssues:search', params={'filter': f'errorIssueType = {t}', 'pageSize': 15, **iv})
         if not r.ok:
             print('HATA', t, r.status_code, r.text[:800]); continue
         for i in r.json().get('errorIssues', []):
             print('==', t, i.get('errorReportCount'), i.get('distinctUsers'), i.get('cause'), '|', i.get('location'), i.get('lastAppVersion', {}))
-    r = s.get(f'{R}/errorReports:search', params={'filter': 'errorIssueType = APPLICATION_NOT_RESPONDING', 'pageSize': 6, **iv})
+    r = s.get(f'{R}/errorReports:search', params={'filter': 'errorIssueType = ANR', 'pageSize': 6, **iv})
     if not r.ok:
         print('HATA raporlar', r.status_code, r.text[:800]); return
     for x in r.json().get('errorReports', []):
