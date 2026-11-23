@@ -6,3 +6,11 @@
 10475|Shanghai
 10506|Gol pertamamu! Dengan Premium, iklan interstisial hilang, hadiah langsung didapat tanpa iklan, dan halaman Starpedia serta dokumenter kariermu terbuka.
 10509|Sekarang kamu pemain profesional! Dengan Premium, iklan interstisial hilang, hadiah langsung didapat tanpa iklan, dan lencana emas serta halaman Starpedia-mu terbuka.
+10514|Bahasa Mandarin
+10515|StarFoot kini bisa dimainkan dalam bahasa Mandarin Sederhana; gim tersedia dalam 11 bahasa.
+10516|Liga Tiongkok
+10517|Di Tiongkok: Liga Naga 16 tim, Liga Naga 2 dengan 14 tim, dan Piala Tiongkok. 4 teratas lolos ke Piala Champions Asia.
+10518|Pembelian lebih aman
+10519|Jika koneksi terputus tetapi pembayaran berhasil, item tetap terbuka; jika toko tidak bisa dijangkau, kamu diberi tahu apa yang harus dilakukan.
+10520|Perbaikan terjemahan
+10521|Judul tabel klasemen, singkatan, kartu pertandingan, dan jenis tendangan diperbaiki di semua bahasa.

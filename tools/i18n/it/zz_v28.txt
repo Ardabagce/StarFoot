@@ -6,3 +6,11 @@
 10475|Shanghai
 10506|Il tuo primo gol! Con Premium spariscono gli annunci interstitial, i premi arrivano subito senza annunci e si sbloccano la tua pagina Starpedia e il documentario.
 10509|Ora sei un professionista! Con Premium spariscono gli annunci interstitial, i premi arrivano subito senza annunci e si sbloccano il badge dorato e la tua pagina Starpedia.
+10514|Cinese
+10515|StarFoot ora si può giocare anche in cinese semplificato; il gioco è disponibile in 11 lingue.
+10516|Campionati cinesi
+10517|In Cina: la Lega Drago a 16 squadre, la Lega Drago 2 a 14 squadre e la Coppa di Cina. Le prime 4 vanno alla Coppa dei Campioni d’Asia.
+10518|Acquisti più sicuri
+10519|Se la connessione cade ma il pagamento è andato a buon fine, l’articolo si sblocca comunque; se lo store non è raggiungibile, ti diciamo cosa fare.
+10520|Correzioni di traduzione
+10521|Intestazioni della classifica, abbreviazioni, scheda partita e tipi di tiro sono stati corretti in tutte le lingue.

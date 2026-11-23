@@ -612,9 +612,9 @@ document.addEventListener('click', (e) => {
 });
 
 // ---------- Güncelleme duyurusu (her sürümde bir kez) ----------
-const APP_VER = '1.0.27';
+const APP_VER = '1.0.28';
 // Duyuru içeriğinin sürümü: yeni duyuru yazılınca güncellenir (yalnız sürüm atlamak tekrar göstermez)
-const WN_VER = '1.0.27';
+const WN_VER = '1.0.28';
 const WhatsNew = {
   KEY: 'starfoot_whatsnew',
   // Hub'a girişte bir kez gösterir; gösterdiyse true döner. done(): pencere kapanınca çalışır.
@@ -632,6 +632,12 @@ const WhatsNew = {
   // Duyuruyu gösterir (Ayarlar'dan yeniden açılabilir): bu ve bir önceki güncelleme, geçmiş gibi
   show(done) {
     const it = (ic, t, d) => `<li><i data-emo>${ic}</i><span><b>${t}</b><small>${d}</small></span></li>`;
+    const v28 = [
+      it('🇨🇳', 'Çince', 'StarFoot artık Basitleştirilmiş Çince de oynanabiliyor; oyun 11 dilde.'),
+      it('🐉', 'Çin ligleri', 'Çin’de 16 takımlı Ejder Ligi, 14 takımlı Ejder 2. Ligi ve Çin Kupası. İlk 4, Asya Şampiyonlar Kupası’na gider.'),
+      it('🛒', 'Daha güvenli satın alma', 'Bağlantı koptuğunda ödemen geçtiyse ürünün yine açılır; mağazaya ulaşılamazsa ne yapacağın söylenir.'),
+      it('🌐', 'Çeviri düzeltmeleri', 'Puan tablosu başlıkları, kısaltmalar, maç kartı ve şut tipleri tüm dillerde düzeltildi.'),
+    ].join('');
     const v27 = [
       it('📱', 'Yeni ana ekran ve menüler', 'Merkez, Lig, Kadro ve Profil tek ekrana sığar. Haftanın 3 hakkı kutularda, hocanın önerisi tek dokunuşta. Bölümler alttan açılan panellerde.'),
       it('🌍', 'Kıta şampiyonaları', 'Asya ve Afrika Uluslar Kupası, Güney Amerika, Kuzey ve Orta Amerika Şampiyonası ve Okyanusya Uluslar Kupası. Ülkenin kıtasına göre oynarsın.'),
@@ -650,16 +656,6 @@ const WhatsNew = {
       it('📈', 'StarDeğer telefonda', 'Piyasa değerin, dünya sıran, kadro değerleri ve söylentiler yeni bir uygulamada.'),
       it('👟', 'Avrupa Altın Ayakkabı', 'Avrupa’nın gol kralına yeni ödül. Altın Yıldız artık takım başarısını da sayıyor.'),
       it('⚖️', 'Denge', 'Takımından güçlü bir yıldız şampiyonluk yarışını değiştirir. Ezeli rakip artık kendi seviyesinde oynar.'),
-    ].join('');
-    const v25 = [
-      it('🛍️', 'Vitrin: 3.500+ ürün', 'Telefondaki yeni alışveriş uygulaması: 30 kurgusal marka, Ekonomik’ten Lüks’e 4 kademe, her sezon yeni koleksiyon.'),
-      it('✈️', 'Seyahat', 'Sezon sonu tatilini planla, hafta sonu kaçamaklarına çık.'),
-      it('📰', 'Magazin', 'Hakkındaki manşetler, gala ve ödül gecesi davetleri, ünlü aşklar.'),
-      it('📈', 'Yatırım ve Ek İş', 'Kafe, restoran, giyim markası... Haftalık gelirini bankadaki hesap hareketlerinde gör.'),
-      it('🏛️', 'Miras', 'Heykel, emekli forma numarası, otobiyografi ve TV yorumculuğu. Efsaneler Salonu’nda emekli kariyerlerinin Starpedia sayfası.'),
-      it('🚗', 'Garajım ve yeni görseller', 'Arabalar ve evler yepyeni görsellerle; tüm araçların garajında sergilenir.'),
-      it('🎓', 'Altyapıda transfer isteği', 'İstediğin kulübün altyapısına başvur; 14 yaşından sonra yurt dışı akademilere seçmelerle gir.'),
-      it('🎽', 'Teknik Direktör', 'Haftalık aksiyonlar için otomatik plan. Güçlü bir kulübe geçince teklif gelmemesi düzeltildi.'),
     ].join('');
     const v24 = [
       it('📱', 'Yeni: Telefonun', 'Alt menüdeki Telefon: Mesajlar, Takvim, StarFeed, Banka, Menajer ve daha fazlası.'),
@@ -682,11 +678,11 @@ const WhatsNew = {
     Game.modal(`<div class="wn"><div class="ev-tag">Güncelleme geçmişi</div>
       <h2>Yenilikler 🚀</h2>
       <div class="wn-v"><b>${WN_VER}</b><small>Bu güncelleme</small></div>
-      <ul class="wn-l">${v27}</ul>
-      <div class="wn-v old"><b>1.0.26</b><small>Önceki güncelleme</small></div>
+      <ul class="wn-l">${v28}</ul>
+      <div class="wn-v old"><b>1.0.27</b><small>Önceki güncelleme</small></div>
+      <ul class="wn-l old">${v27}</ul>
+      <div class="wn-v old"><b>1.0.26</b></div>
       <ul class="wn-l old">${v26}</ul>
-      <div class="wn-v old"><b>1.0.25</b></div>
-      <ul class="wn-l old">${v25}</ul>
       <p class="wn-note ok">Diamond’a eklenenlerin hiçbiri maçta güç vermez; ücretsiz oyunda hiçbir şey değişmedi.</p>
       <p class="wn-note">Teknik Direktör modu yepyeni bir fikir ve her güncellemede gelişmeye devam edecek. Fikirlerini bekliyoruz!</p></div>`, btns, { wide: true });
     if (typeof Premium !== 'undefined') Premium.track('whatsnew_view', { ver: WN_VER, premium: has ? 1 : 0 });

@@ -6,3 +6,11 @@
 10475|Shanghai
 10506|Dein erstes Tor! Mit Premium verschwinden Zwischenwerbungen, Belohnungen kommen sofort ohne Werbung, und deine Starpedia-Seite und deine Karriere-Doku werden freigeschaltet.
 10509|Jetzt bist du Profi! Mit Premium verschwinden Zwischenwerbungen, Belohnungen kommen sofort ohne Werbung, und dein goldenes Verifizierungsabzeichen und deine Starpedia-Seite werden freigeschaltet.
+10514|Chinesisch
+10515|StarFoot gibt es jetzt auch auf vereinfachtem Chinesisch; das Spiel ist in 11 Sprachen verfügbar.
+10516|Chinesische Ligen
+10517|In China: die Drachenliga mit 16 Teams, die 2. Drachenliga mit 14 Teams und der China-Pokal. Die besten 4 spielen im Asiatischen Meisterpokal.
+10518|Sicherere Käufe
+10519|Bricht die Verbindung ab, nachdem die Zahlung durchging, wird dein Artikel trotzdem freigeschaltet; ist der Store nicht erreichbar, erfährst du, was zu tun ist.
+10520|Übersetzungskorrekturen
+10521|Tabellenköpfe, Abkürzungen, die Spielkarte und Schussarten wurden in allen Sprachen korrigiert.

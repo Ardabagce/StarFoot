@@ -40362,10 +40362,30 @@
 "extras.js"
 ],
 "İlk golün geldi! Premium ile geçiş reklamları kalkar, ödüller reklamsız ve anında gelir; Starpedia sayfan ve kariyer belgeselin açılır.": [
-"extras.js"
+"extras.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "Artık profesyonelsin! Premium ile geçiş reklamları kalkar, ödüller reklamsız ve anında gelir; altın onay rozetin ve Starpedia sayfan açılır.": [
-"extras.js"
+"extras.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "Çantan dolu (en fazla {}).": [
 "extras.js",
@@ -47467,7 +47487,6 @@
 "lang-ja.js",
 "lang-pt.js",
 "lang-zh.js",
-"star.js",
 "starlife.js"
 ],
 "Dünya": [
@@ -112630,7 +112649,6 @@
 "lang-ja.js",
 "lang-pt.js",
 "lang-zh.js",
-"star.js",
 "starlife.js"
 ],
 "Sezon sonu tatilin": [
@@ -114471,7 +114489,6 @@
 "lang-ja.js",
 "lang-pt.js",
 "lang-zh.js",
-"star.js",
 "starlife.js"
 ],
 "Taraftar sevgisi": [
@@ -116941,8 +116958,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"lang-zh.js",
-"star.js"
+"lang-zh.js"
 ],
 "Showcase: أكثر من 3500 منتج": [
 "lang-ar.js"
@@ -116957,8 +116973,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"lang-zh.js",
-"star.js"
+"lang-zh.js"
 ],
 "Sezon sonu tatilini planla, hafta sonu kaçamaklarına çık.": [
 "lang-ar.js",
@@ -116970,8 +116985,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"lang-zh.js",
-"star.js"
+"lang-zh.js"
 ],
 "Hakkındaki manşetler, gala ve ödül gecesi davetleri, ünlü aşklar.": [
 "lang-ar.js",
@@ -116983,8 +116997,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"lang-zh.js",
-"star.js"
+"lang-zh.js"
 ],
 "Yatırım ve Ek İş": [
 "lang-ar.js",
@@ -116996,8 +117009,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"lang-zh.js",
-"star.js"
+"lang-zh.js"
 ],
 "Kafe, restoran, giyim markası... Haftalık gelirini bankadaki hesap hareketlerinde gör.": [
 "lang-ar.js",
@@ -117009,8 +117021,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"lang-zh.js",
-"star.js"
+"lang-zh.js"
 ],
 "Kafe, restoran, giyim markası...": [
 "lang-ar.js",
@@ -117068,8 +117079,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"lang-zh.js",
-"star.js"
+"lang-zh.js"
 ],
 "Heykel, emekli forma numarası, otobiyografi ve TV yorumculuğu.": [
 "lang-ar.js",
@@ -117127,8 +117137,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"lang-zh.js",
-"star.js"
+"lang-zh.js"
 ],
 "Arabalar ve evler yepyeni görsellerle; tüm araçların garajında sergilenir.": [
 "lang-ar.js",
@@ -117140,8 +117149,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"lang-zh.js",
-"star.js"
+"lang-zh.js"
 ],
 "Altyapıda transfer isteği": [
 "lang-ar.js",
@@ -117153,8 +117161,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"lang-zh.js",
-"star.js"
+"lang-zh.js"
 ],
 "İstediğin kulübün altyapısına başvur; 14 yaşından sonra yurt dışı akademilere seçmelerle gir.": [
 "lang-ar.js",
@@ -117166,8 +117173,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"lang-zh.js",
-"star.js"
+"lang-zh.js"
 ],
 "Haftalık aksiyonlar için otomatik plan. Güçlü bir kulübe geçince teklif gelmemesi düzeltildi.": [
 "lang-ar.js",
@@ -117179,8 +117185,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"lang-zh.js",
-"star.js"
+"lang-zh.js"
 ],
 "Haftalık aksiyonlar için otomatik plan.": [
 "lang-ar.js",
@@ -120843,6 +120848,108 @@
 "lang-pt.js",
 "lang-zh.js",
 "socialart.js"
+],
+"هدفك الأول! مع Premium تختفي الإعلانات البينية وتصلك المكافآت فورًا دون إعلانات، وتُفتح صفحتك في Starpedia وفيلم مسيرتك.": [
+"lang-ar.js"
+],
+"İlk golün geldi!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"Your first goal!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"Premium ile geçiş reklamları kalkar, ödüller reklamsız ve anında gelir; Starpedia sayfan ve kariyer belgeselin açılır.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"With Premium, interstitial ads disappear, rewards come instantly without ads, and your Starpedia page and career documentary unlock.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"أصبحت محترفًا الآن! مع Premium تختفي الإعلانات البينية وتصلك المكافآت فورًا دون إعلانات، وتُفتح شارة التوثيق الذهبية وصفحتك في Starpedia.": [
+"lang-ar.js"
+],
+"Artık profesyonelsin!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"You're a pro now!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"Premium ile geçiş reklamları kalkar, ödüller reklamsız ve anında gelir; altın onay rozetin ve Starpedia sayfan açılır.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"With Premium, interstitial ads disappear, rewards come instantly without ads, and your gold verified badge and Starpedia page unlock.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "(Asist)": [
 "lang-ar.js",
@@ -194808,6 +194915,54 @@
 "lang-pt.js",
 "lang-zh.js"
 ],
+"İLK GOLÜN GELDİ!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"YOUR FIRST GOAL!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"ARTIK PROFESYONELSİN!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"YOU'RE A PRO NOW!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -242269,6 +242424,18 @@
 "meta.js",
 "phone.js"
 ],
+"{} oyuncu": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
 "{} Enerji": [
 "lang-ar.js",
 "lang-de.js",
@@ -256509,6 +256676,12 @@
 "lang-fr.js",
 "lang-id.js",
 "lang-it.js"
+],
+"Dein erstes Tor! Mit Premium verschwinden Zwischenwerbungen, Belohnungen kommen sofort ohne Werbung, und deine Starpedia-Seite und deine Karriere-Doku werden freigeschaltet.": [
+"lang-de.js"
+],
+"Jetzt bist du Profi! Mit Premium verschwinden Zwischenwerbungen, Belohnungen kommen sofort ohne Werbung, und dein goldenes Verifizierungsabzeichen und deine Starpedia-Seite werden freigeschaltet.": [
+"lang-de.js"
 ],
 "– wir haben uns qualifiziert!": [
 "lang-de.js"
@@ -279618,6 +279791,9 @@
 "{} · {} Jahre": [
 "lang-de.js"
 ],
+"{} Spieler": [
+"lang-de.js"
+],
 "{} ({} Tore)": [
 "lang-de.js"
 ],
@@ -292910,6 +293086,12 @@
 "lang-fr.js"
 ],
 "China Cup": [
+"lang-en.js"
+],
+"Your first goal! With Premium, interstitial ads disappear, rewards come instantly without ads, and your Starpedia page and career documentary unlock.": [
+"lang-en.js"
+],
+"You're a pro now! With Premium, interstitial ads disappear, rewards come instantly without ads, and your gold verified badge and Starpedia page unlock.": [
 "lang-en.js"
 ],
 "— we qualified!": [
@@ -315196,6 +315378,9 @@
 "{} · age {}": [
 "lang-en.js"
 ],
+"{} squad players": [
+"lang-en.js"
+],
 "{} ({} goals)": [
 "lang-en.js"
 ],
@@ -328660,6 +328845,12 @@
 "lang-es.js"
 ],
 "Shanghái": [
+"lang-es.js"
+],
+"¡Tu primer gol! Con Premium desaparecen los anuncios intersticiales, las recompensas llegan al instante sin anuncios y se desbloquean tu página de Starpedia y tu documental.": [
+"lang-es.js"
+],
+"¡Ya eres profesional! Con Premium desaparecen los anuncios intersticiales, las recompensas llegan al instante sin anuncios y se desbloquean tu insignia dorada y tu página de Starpedia.": [
 "lang-es.js"
 ],
 "— ¡nos hemos clasificado!": [
@@ -351106,6 +351297,9 @@
 "{} · {} años": [
 "lang-es.js"
 ],
+"{} jugadores": [
+"lang-es.js"
+],
 "{} ({} goles)": [
 "lang-es.js"
 ],
@@ -364160,6 +364354,12 @@
 "lang-fr.js"
 ],
 "Coupe de Chine": [
+"lang-fr.js"
+],
+"Ton premier but ! Avec Premium, les pubs interstitielles disparaissent, les récompenses arrivent tout de suite sans pub, et ta page Starpedia et ton documentaire se débloquent.": [
+"lang-fr.js"
+],
+"Te voilà pro ! Avec Premium, les pubs interstitielles disparaissent, les récompenses arrivent tout de suite sans pub, et ton badge doré et ta page Starpedia se débloquent.": [
 "lang-fr.js"
 ],
 "— on est qualifiés !": [
@@ -385853,6 +386053,9 @@
 "{} · {} ans": [
 "lang-fr.js"
 ],
+"{} joueurs": [
+"lang-fr.js"
+],
 "{} ({} buts)": [
 "lang-fr.js"
 ],
@@ -398684,6 +398887,12 @@
 "lang-id.js"
 ],
 "Piala China": [
+"lang-id.js"
+],
+"Gol pertamamu! Dengan Premium, iklan interstisial hilang, hadiah langsung didapat tanpa iklan, dan halaman Starpedia serta dokumenter kariermu terbuka.": [
+"lang-id.js"
+],
+"Sekarang kamu pemain profesional! Dengan Premium, iklan interstisial hilang, hadiah langsung didapat tanpa iklan, dan lencana emas serta halaman Starpedia-mu terbuka.": [
 "lang-id.js"
 ],
 "— kita lolos!": [
@@ -420116,6 +420325,9 @@
 "{} · {} tahun": [
 "lang-id.js"
 ],
+"{} pemain": [
+"lang-id.js"
+],
 "{} Energi": [
 "lang-id.js"
 ],
@@ -432960,6 +433172,12 @@
 "lang-it.js"
 ],
 "Coppa di Cina": [
+"lang-it.js"
+],
+"Il tuo primo gol! Con Premium spariscono gli annunci interstitial, i premi arrivano subito senza annunci e si sbloccano la tua pagina Starpedia e il documentario.": [
+"lang-it.js"
+],
+"Ora sei un professionista! Con Premium spariscono gli annunci interstitial, i premi arrivano subito senza annunci e si sbloccano il badge dorato e la tua pagina Starpedia.": [
 "lang-it.js"
 ],
 "— ci siamo qualificati!": [
@@ -454387,6 +454605,9 @@
 "{} · {} anni": [
 "lang-it.js"
 ],
+"{} giocatori": [
+"lang-it.js"
+],
 "{} Energia": [
 "lang-it.js",
 "lang-pt.js"
@@ -455214,6 +455435,12 @@
 "lang-ja.js"
 ],
 "行動終了 · 試合の準備OK": [
+"lang-ja.js"
+],
+"初ゴール！Premiumならインタースティシャル広告が消え、報酬は広告なしですぐにもらえ、Starpediaページとキャリアドキュメンタリーも解放されます。": [
+"lang-ja.js"
+],
+"ついにプロ契約！Premiumならインタースティシャル広告が消え、報酬は広告なしですぐにもらえ、金色の認証バッジとStarpediaページも解放されます。": [
 "lang-ja.js"
 ],
 "（PK戦）": [
@@ -468110,6 +468337,12 @@
 "lang-pt.js"
 ],
 "Xangai": [
+"lang-pt.js"
+],
+"Seu primeiro gol! Com o Premium, os anúncios intersticiais somem, as recompensas chegam na hora sem anúncios e sua página da Starpedia e seu documentário são liberados.": [
+"lang-pt.js"
+],
+"Agora você é profissional! Com o Premium, os anúncios intersticiais somem, as recompensas chegam na hora sem anúncios e seu selo dourado e sua página da Starpedia são liberados.": [
 "lang-pt.js"
 ],
 "— nos classificamos!": [
@@ -489007,6 +489240,9 @@
 "{} · {} anos": [
 "lang-pt.js"
 ],
+"{} jogadores": [
+"lang-pt.js"
+],
 "{} ({} gols)": [
 "lang-pt.js"
 ],
@@ -489803,6 +490039,12 @@
 "lang-zh.js"
 ],
 "手机上的 StarValue": [
+"lang-zh.js"
+],
+"你的第一个进球！拥有 Premium，插页广告会消失，奖励无需看广告即时到账，你的 Starpedia 页面和生涯纪录片也会解锁。": [
+"lang-zh.js"
+],
+"你现在是职业球员了！拥有 Premium，插页广告会消失，奖励无需看广告即时到账，你的金色认证徽章和 Starpedia 页面也会解锁。": [
 "lang-zh.js"
 ],
 "这孩子会成为下一个 Mezzi": [
@@ -491236,7 +491478,8 @@
 "life.js"
 ],
 "Çince": [
-"lifex.js"
+"lifex.js",
+"star.js"
 ],
 "Yıllık harç: {}": [
 "lifex.js"
@@ -507281,6 +507524,27 @@
 "star.js"
 ],
 "{} Lüks Yaşam Vitrini": [
+"star.js"
+],
+"StarFoot artık Basitleştirilmiş Çince de oynanabiliyor; oyun 11 dilde.": [
+"star.js"
+],
+"Çin ligleri": [
+"star.js"
+],
+"Çin’de 16 takımlı Ejder Ligi, 14 takımlı Ejder 2. Ligi ve Çin Kupası. İlk 4, Asya Şampiyonlar Kupası’na gider.": [
+"star.js"
+],
+"Daha güvenli satın alma": [
+"star.js"
+],
+"Bağlantı koptuğunda ödemen geçtiyse ürünün yine açılır; mağazaya ulaşılamazsa ne yapacağın söylenir.": [
+"star.js"
+],
+"Çeviri düzeltmeleri": [
+"star.js"
+],
+"Puan tablosu başlıkları, kısaltmalar, maç kartı ve şut tipleri tüm dillerde düzeltildi.": [
 "star.js"
 ],
 "Attığın golü ağır çekimde yeniden izle. \"Geç\" ile atla ya da Ayarlar’dan kapat.": [

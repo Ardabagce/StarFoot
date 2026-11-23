@@ -6,3 +6,11 @@
 10475|Xangai
 10506|Seu primeiro gol! Com o Premium, os anúncios intersticiais somem, as recompensas chegam na hora sem anúncios e sua página da Starpedia e seu documentário são liberados.
 10509|Agora você é profissional! Com o Premium, os anúncios intersticiais somem, as recompensas chegam na hora sem anúncios e seu selo dourado e sua página da Starpedia são liberados.
+10514|Chinês
+10515|StarFoot agora pode ser jogado em chinês simplificado; o jogo está disponível em 11 idiomas.
+10516|Ligas chinesas
+10517|Na China: a Liga Dragão com 16 times, a Liga Dragão 2 com 14 times e a Copa da China. Os 4 primeiros vão para a Copa dos Campeões da Ásia.
+10518|Compras mais seguras
+10519|Se a conexão cair mas o pagamento tiver sido concluído, seu item é liberado mesmo assim; se a loja não responder, você vê o que fazer.
+10520|Correções de tradução
+10521|Cabeçalhos da tabela, abreviações, o cartão da partida e os tipos de chute foram corrigidos em todos os idiomas.
