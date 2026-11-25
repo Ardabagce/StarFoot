@@ -14,6 +14,10 @@ on:
         description: 'completed (yayınla) / draft (taslak) / inProgress (kademeli)'
         required: false
         default: completed
+      confirm_review_reset:
+        description: "Play'e yükleme bekleyen incelemeyi İPTAL eder. Bekleyen inceleme yoksa 'yes' yaz"
+        required: false
+        default: 'no'
   push:
     paths:
       - 'app/**'
@@ -111,6 +115,7 @@ jobs:
         env:
           PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
           PLAY_ALLOW_PROD: ${{ inputs.play_track == 'production' && '1' || '0' }}
+          PLAY_CONFIRM: ${{ inputs.confirm_review_reset }}
         run: |
           pip install -q google-auth requests
           VER=$(grep -oP 'versionName "\K[^"]+' app/android/app/build.gradle)

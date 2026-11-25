@@ -23,6 +23,10 @@ on:
         description: 'release: completed / draft / inProgress'
         required: false
         default: completed
+      confirm_review_reset:
+        description: "release/listing/datasafety: bekleyen Play incelemesini İPTAL eder. Bekleyen inceleme yoksa 'yes' yaz"
+        required: false
+        default: 'no'
 permissions:
   contents: read
   actions: read
@@ -42,6 +46,7 @@ jobs:
       - env:
           PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
           SALE: ${{ inputs.sale }}
+          PLAY_CONFIRM: ${{ inputs.confirm_review_reset }}
           PLAY_ALLOW_PROD: ${{ inputs.track == 'production' && '1' || '0' }}
         run: |
           if [ "${{ inputs.action }}" = release ]; then

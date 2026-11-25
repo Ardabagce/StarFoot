@@ -60,7 +60,18 @@ def notes(version):
     return out
 
 
+
+def guard(what):
+    """Play'de bekleyen bir inceleme varken yeni gönderim o incelemeyi iptal eder.
+    Bu yüzden inceleme açan her işlem PLAY_CONFIRM=yes olmadan çalışmaz."""
+    if os.environ.get('PLAY_CONFIRM', '').strip().lower() != 'yes':
+        print(f'DURDURULDU: "{what}" Play\'de yeni bir inceleme açar ve bekleyen incelemeyi iptal eder.')
+        print('Bekleyen inceleme olmadığından eminsen confirm_review_reset=yes ile yeniden çalıştır.')
+        sys.exit(2)
+
+
 def upload(a):
+    guard('sürüm yükleme')
     s = session()
     if a.track == 'production' and os.environ.get('PLAY_ALLOW_PROD') != '1':
         sys.exit('Üretim izi için PLAY_ALLOW_PROD=1 gerekir (sahibinin onayı).')
@@ -152,6 +163,7 @@ def products(a, sale=None):
 
 
 def listing(a):
+    guard('mağaza sayfası')
     """Mağaza sayfası: başlık, kısa/tam açıklama, simge, öne çıkan görsel, telefon ekran görüntüleri."""
     s = session()
     cfg = json.load(open(os.path.join(ROOT, 'store/play/listing.json')))
@@ -220,6 +232,7 @@ def check(a):
 
 
 def datasafety(a):
+    guard('veri güvenliği formu')
     s = session()
     csv = open(os.path.join(ROOT, 'store/play/data_safety.csv'), encoding='utf-8').read()
     ok(s.post(f'{API}/{PKG}/dataSafety', json={'safetyLabels': csv}), 'veri güvenliği')
