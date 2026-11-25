@@ -676,8 +676,7 @@ const WhatsNew = {
     ].join('');
     const has = typeof Star !== 'undefined' && Star.has && Star.has();
     const end = () => { if (done) setTimeout(done, 300); };
-    const btns = [{ t: 'Tamam', cls: 'btn-ghost', fn: end }];
-    if (typeof Coach !== 'undefined' && Coach.enabled && Coach.enabled()) btns.push({ t: '🎯 Meydan okumalar', cls: 'btn-big', fn: () => { end(); setTimeout(() => (typeof TDCh !== 'undefined' ? TDCh.menu() : Coach.menu()), 120); } });
+    const btns = [{ t: 'Tamam', cls: 'btn-big', fn: end }];
     Game.modal(`<div class="wn"><div class="ev-tag">Güncelleme geçmişi</div>
       <h2>Yenilikler 🚀</h2>
       <div class="wn-v"><b>${WN_VER}</b><small>Bu güncelleme</small></div>

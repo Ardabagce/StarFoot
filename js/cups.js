@@ -63,7 +63,7 @@ const Cups = {
     // Diğer kıtalar: 16 takımlı lig aşaması (6 maç) → ilk 8 çeyrek finale
     { id: 'csa', name: 'Güney Amerika Kupası', fame: 1.4, region: 'sa', swiss: true, quota: { BRA: 8, ARG: 8 } },
     { id: 'ccc', name: 'Kuzey Amerika Kupası', fame: 1.1, region: 'na', swiss: true, quota: { USA: 8, MEX: 8 } },
-    { id: 'acl', name: 'Asya Şampiyonlar Kupası', fame: 1.2, region: 'as', swiss: true, quota: { KSA: 6, JPN: 5, CHN: 3, IND: 2 } },
+    { id: 'acl', name: 'Asya Şampiyonlar Kupası', fame: 1.2, region: 'as', swiss: true, quota: { KSA: 5, JPN: 5, CHN: 4, IND: 2 } },
   ],
   // Kulübün lig sırasına göre gelecek sezon hangi kupaya gideceği
   qualifies(lid, pos) {
