@@ -27,10 +27,12 @@ const Star = {
     const btns = [{ t: 'Kapat', cls: 'btn-ghost' }];
     if (can && typeof Plus !== 'undefined') btns.push({ t: `Premium+ · her şey dahil${Plus.priceOf('full') ? ` · ${U.esc(Plus.priceOf('full'))}` : ''}`, cls: 'btn-ghost', fn: () => Plus.pitch(null, src + '_plus') });
     if (can) btns.push({ t: `${Icon('star')} Premium al${Premium.price ? ` · ${U.esc(Premium.price)}` : ''}`, cls: 'btn-big', fn: () => { Premium.src = src; Premium.buy(); } });
-    Game.modal(`<div class="ev-tag">Premium ayrıcalığı</div><h2>${Icon('star')} Yıldız gibi yaşa</h2>
+    const pm = Game.modal(`<div class="ev-tag">Premium ayrıcalığı</div><h2>${Icon('star')} Yıldız gibi yaşa</h2>
       ${after ? `<p>${after}</p>` : feat ? `<p><b>${U.esc(feat)}</b> StarFoot Premium'a özel.</p>` : ''}
       ${Star.perksHtml()}
-      <p class="muted">${can ? 'Tek seferlik satın alma, tüm kariyerlerinde geçerli.' : 'StarFoot Premium App Store uygulamasında satın alınabilir.'}</p>`, btns, { wide: true });
+      <p class="muted">${can ? 'Tek seferlik satın alma, tüm kariyerlerinde geçerli.' : 'StarFoot Premium App Store uygulamasında satın alınabilir.'}</p>
+      ${typeof Diamond !== 'undefined' && Diamond.upsell ? Diamond.upsell(src) : ''}`, btns, { wide: true });
+    if (typeof Diamond !== 'undefined' && Diamond.bindUp) Diamond.bindUp(pm);
   },
 
   // Tadımlık: Premium olmayan oyuncu Starpedia'yı ve belgeseli bir kez tam açabilir
@@ -307,7 +309,9 @@ const Star = {
 
   wiki(p, s) {
     // Star._snap: emeklilikte Efsaneler Salonu için sayfanın kopyası (ekranda açılmaz, öğe döner)
-    const mode = Star._snap ? 'full' : document.getElementById('spedia') ? (Star.has() ? 'full' : 'taste') : Star.gate('wiki', 'Starpedia sayfası');
+    // tadımlık bittiyse sayfa yine açılır: üst kısmı görünür, devamı bulanık (önizleme) ve Premium çağrısı
+    const mode = Star._snap ? 'full' : document.getElementById('spedia') ? (Star.has() ? 'full' : Star.free('wiki') ? 'taste' : 'peek') : Star.has() ? 'full' : Star.free('wiki') ? Star.gate('wiki', 'Starpedia sayfası') : 'peek';
+    if (mode === 'peek' && typeof Premium !== 'undefined') Premium.track('premium_view', { source: 'wiki_peek' });
     if (!mode) return;
     const d = Star.data(p, s);
     p = d.p; s = d.s;
@@ -345,6 +349,7 @@ const Star = {
     el.id = 'spedia';
     el.className = 'sp';
     if (mode === 'taste') el.dataset.taste = '1';
+    if (mode === 'peek') el.classList.add('sp-peek');
     el.innerHTML = `
       <div class="sp-bar"><button class="sp-x" data-star="wiki-close" aria-label="Kapat">${Icon('close')}</button>
         <div class="sp-logo"><b>STARPEDIA</b><small>Özgür futbol ansiklopedisi</small></div>
@@ -382,6 +387,12 @@ const Star = {
         <div class="sp-cats"><b>Kategoriler:</b> ${cats.map((c) => `<a>${U.esc(c)}</a>`).join(' | ')}</div>
         <div class="sp-foot">Bu sayfa en son ${d.year} sezonunda, ${s.season.round + 1}. haftada değiştirildi. İçerik StarFoot evreninde geçer; tüm kişi ve kulüpler kurgusaldır.</div>
       </article>`;
+    if (mode === 'peek') {
+      const pk = document.createElement('div');
+      pk.className = 'sp-peek-cta';
+      pk.innerHTML = `<b>${Icon('star')} Kariyerinin tam hikâyesi Premium'da</b><small>Starpedia sayfan her zaman açık, her sezon kendiliğinden güncellenir ve bölümlerini sen yazarsın.</small><button class="btn btn-big" data-star="pitch" data-src="wiki_peek">${Icon('star')} Premium'a bak</button>`;
+      el.appendChild(pk);
+    }
     if (mode === 'taste') {
       const tb = document.createElement('div');
       tb.className = 'sp-taste';
@@ -634,6 +645,8 @@ const WhatsNew = {
     const it = (ic, t, d) => `<li><i data-emo>${ic}</i><span><b>${t}</b><small>${d}</small></span></li>`;
     const v29 = [
       it('🇮🇳', 'Hindistan ligleri', 'Hindistan’da 16 takımlı Kaplan Ligi, 14 takımlı Kaplan 2. Ligi ve Hindistan Kupası. İlk 2, Asya Şampiyonlar Kupası’na gider.'),
+      it('⏩', '10 ücretsiz hızlı ilerleme', 'Herkese 10 ücretsiz hızlı ilerleme hakkı. Hakların bitince günde bir kez reklam izleyerek 1 hak daha kazan.'),
+      it('📖', 'Starpedia önizlemesi', 'Starpedia sayfanın üst kısmını her zaman görebilirsin; tamamı Premium ile açılır.'),
     ].join('');
     const v28 = [
       it('🇨🇳', 'Çince', 'StarFoot artık Basitleştirilmiş Çince de oynanabiliyor; oyun 11 dilde.'),

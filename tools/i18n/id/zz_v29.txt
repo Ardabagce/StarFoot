@@ -6,3 +6,42 @@
 10527|Mumbai
 10558|Liga India
 10559|Di India: Liga Harimau dengan 16 tim, Liga Harimau 2 dengan 14 tim, dan Piala India. 2 teratas lolos ke Piala Champions Asia.
+10560|· 1 lagi
+10561|Semua dalam satu:
+10562|Kamu mengangkat trofi! Dengan Premium momen ini masuk ke halaman Starpedia dan dokumenter kariermu; iklan interstisial hilang dan hadiah langsung didapat.
+10563|Kamu mengangkat trofi!
+10564|Dengan Premium momen ini masuk ke halaman Starpedia dan dokumenter kariermu; iklan interstisial hilang dan hadiah langsung didapat.
+10565|Penampilan pertamamu untuk timnas! Premium membuka lencana verifikasi emas dan halaman Starpedia-mu; iklan interstisial hilang dan hadiah langsung didapat.
+10566|Penampilan pertamamu untuk timnas!
+10567|Premium membuka lencana verifikasi emas dan halaman Starpedia-mu; iklan interstisial hilang dan hadiah langsung didapat.
+10568|Jatah percepat gratismu sudah habis. Premium+ memberi percepat tanpa batas, batalkan pertandingan buruk, dan banyak lagi. Besok kamu bisa menonton iklan untuk 1 lagi.
+10569|Jatah percepat gratismu sudah habis.
+10570|Premium+ memberi percepat tanpa batas, batalkan pertandingan buruk, dan banyak lagi.
+10571|Besok kamu bisa menonton iklan untuk 1 lagi.
+10572|⏩ Jatah percepat gratis habis
+10573|Jatah percepat gratis habis
+10574|Kamu sudah memakai 10 jatah percepat gratis. Tonton iklan sekali sehari untuk 1 lagi, atau tanpa batas dengan Premium+.
+10575|Kamu sudah memakai 10 jatah percepat gratis.
+10576|Tonton iklan sekali sehari untuk 1 lagi, atau tanpa batas dengan Premium+.
+10577|Tonton iklan · 1 lagi
+10578|+1 percepat
+10579|Premium+ · tanpa batas
+10580|Sisa gratis:
+10581|Dari iklan:
+10582|· tanpa batas dengan Premium+
+10583|Kisah lengkap kariermu ada di Premium
+10584|Halaman Starpedia-mu selalu terbuka, diperbarui tiap musim, dan kamu yang menulis bagiannya.
+10585|10 percepat gratis
+10586|Semua pemain mendapat 10 percepat gratis. Jika habis, tonton iklan sekali sehari untuk 1 lagi.
+10587|Semua pemain mendapat 10 percepat gratis.
+10588|Jika habis, tonton iklan sekali sehari untuk 1 lagi.
+10589|Pratinjau Starpedia
+10590|Bagian atas halaman Starpedia-mu selalu terlihat; halaman lengkap terbuka dengan Premium.
+10591|Premium, Premium+, Pelatih, dan semua mode dalam sekali beli{}
+10592|{} Kisah lengkap kariermu ada di Premium
+10593|{} · tanpa batas dengan Premium+
+10594|{} Tonton iklan · 1 lagi
+10595|{} Premium+ · tanpa batas
+10596|{} Lihat Premium
+10597|Gratis {}/{}
+10598|Percepat terbuka saat pertandingan liga dimulai.

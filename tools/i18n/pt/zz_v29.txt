@@ -6,3 +6,42 @@
 10527|Mumbai
 10558|Ligas da Índia
 10559|Na Índia: a Liga Tigre com 16 equipes, a Liga Tigre 2 com 14 equipes e a Taça da Índia. Os 2 primeiros vão à Copa dos Campeões da Ásia.
+10560|· 1 a mais
+10561|Tudo em um:
+10562|Você levantou a taça! Com Premium este momento entra na sua página da Starpedia e no seu documentário; os anúncios intersticiais somem e as recompensas chegam na hora.
+10563|Você levantou a taça!
+10564|Com Premium este momento entra na sua página da Starpedia e no seu documentário; os anúncios intersticiais somem e as recompensas chegam na hora.
+10565|Seu primeiro jogo pela seleção! O Premium libera seu selo dourado de verificação e sua página da Starpedia; os anúncios intersticiais somem e as recompensas chegam na hora.
+10566|Seu primeiro jogo pela seleção!
+10567|O Premium libera seu selo dourado de verificação e sua página da Starpedia; os anúncios intersticiais somem e as recompensas chegam na hora.
+10568|Seus avanços rápidos grátis acabaram. O Premium+ dá avanço rápido ilimitado, desfazer um jogo ruim e muito mais. Amanhã você pode ver um anúncio para ganhar mais 1.
+10569|Seus avanços rápidos grátis acabaram.
+10570|O Premium+ dá avanço rápido ilimitado, desfazer um jogo ruim e muito mais.
+10571|Amanhã você pode ver um anúncio para ganhar mais 1.
+10572|⏩ Avanços rápidos grátis acabaram
+10573|Avanços rápidos grátis acabaram
+10574|Você usou seus 10 avanços rápidos grátis. Veja um anúncio uma vez por dia para ganhar mais 1 ou jogue sem limites com o Premium+.
+10575|Você usou seus 10 avanços rápidos grátis.
+10576|Veja um anúncio uma vez por dia para ganhar mais 1 ou jogue sem limites com o Premium+.
+10577|Ver anúncio · mais 1
+10578|+1 avanço rápido
+10579|Premium+ · ilimitado
+10580|Grátis restantes:
+10581|Ganhos com anúncios:
+10582|· ilimitado com Premium+
+10583|A história completa da sua carreira está no Premium
+10584|Sua página da Starpedia fica sempre aberta, se atualiza a cada temporada e você escreve as seções.
+10585|10 avanços rápidos grátis
+10586|Todos ganham 10 avanços rápidos grátis. Quando acabarem, veja um anúncio uma vez por dia para ganhar mais 1.
+10587|Todos ganham 10 avanços rápidos grátis.
+10588|Quando acabarem, veja um anúncio uma vez por dia para ganhar mais 1.
+10589|Prévia da Starpedia
+10590|Você sempre vê o topo da sua página da Starpedia; a página completa abre com o Premium.
+10591|Premium, Premium+, Técnico e todos os modos em uma só compra{}
+10592|{} A história completa da sua carreira está no Premium
+10593|{} · ilimitado com Premium+
+10594|{} Ver anúncio · mais 1
+10595|{} Premium+ · ilimitado
+10596|{} Ver Premium
+10597|Grátis {}/{}
+10598|O avanço rápido abre quando começam os jogos da liga.

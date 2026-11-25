@@ -136,6 +136,16 @@ const Diamond = {
       }
     });
   },
+  // Premium / Premium+ pencerelerinin altında küçük "hepsi bir arada" kartı (Diamond yoksa)
+  upsell(src) {
+    if (Diamond.active || !Premium.available()) return '';
+    const pr = Diamond.priceOf ? Diamond.priceOf() : '';
+    return `<button type="button" class="dia-up" data-diaup="${U.esc(src || 'up')}">${Diamond.gem(30)}<span><b>Hepsi bir arada: <span lang="en">Diamond</span></b><small>Premium, Premium+, Teknik Direktör ve tüm modlar tek seferde${pr ? ` · ${U.esc(pr)}` : ''}</small></span></button>`;
+  },
+  bindUp(m) {
+    if (!m) return;
+    m.querySelectorAll('[data-diaup]').forEach((b) => (b.onclick = () => { const s = b.dataset.diaup; m.classList.add('hidden'); m.innerHTML = ''; setTimeout(() => Diamond.pitch(s + '_dia'), 80); }));
+  },
   // tanıtım penceresi
   pitch(src) {
     const can = Premium.available();

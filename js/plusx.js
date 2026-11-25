@@ -58,6 +58,43 @@ document.addEventListener('click', (e) => { if (e.target.closest && e.target.clo
 // ---------- Hızlı ilerleme ----------
 // Seçilen hedefe kadar maçlar simüle edilir; aksiyon hakları seçilen plana göre kullanılır.
 // Karar gerektiren bir pencere, yeni transfer teklifi ya da sezon sonu gelince durur.
+// Ücretsiz hızlı ilerleme: Premium+ olmayanlara tüm kariyerler boyunca 10 hak (cihaz başına),
+// hakları bitince günde bir kez reklam izleyerek 1 hak daha
+const FFree = {
+  MAX: 10, KU: 'starfoot_ff_used', KA: 'starfoot_ff_ad', KB: 'starfoot_ff_bonus',
+  g(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  s(k, v) { try { localStorage.setItem(k, String(v)); } catch (e) { /* yok */ } },
+  used() { return Math.max(0, parseInt(FFree.g(FFree.KU), 10) || 0); },
+  left() { return Math.max(0, FFree.MAX - FFree.used()); },
+  bonus() { return Math.max(0, parseInt(FFree.g(FFree.KB), 10) || 0); },
+  today() { const d = new Date(); return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`; },
+  adToday() { return FFree.g(FFree.KA) === FFree.today(); },
+  can() { return FFree.left() > 0 || FFree.bonus() > 0; },
+  consume() {
+    if (FFree.left() > 0) FFree.s(FFree.KU, FFree.used() + 1);
+    else if (FFree.bonus() > 0) FFree.s(FFree.KB, FFree.bonus() - 1);
+    if (typeof Premium !== 'undefined') Premium.track('ff_free_use', { left: FFree.left(), bonus: FFree.bonus() });
+  },
+  // hakları bitince: günde bir reklamla 1 hak ya da Premium+
+  out() {
+    const canAd = typeof Ads !== 'undefined' && !FFree.adToday();
+    if (!canAd) return Plus.pitch('Hızlı ilerleme', 'ff_out', 'Ücretsiz hızlı ilerleme hakların bitti. Premium+ ile sınırsız hızlı ilerle, kötü giden maçı geri al ve çok daha fazlası. Yarın reklam izleyerek 1 hak daha kazanabilirsin.');
+    if (typeof Premium !== 'undefined') Premium.track('ff_out_view', { source: 'ff_out' });
+    const m = Game.modal(`<div class="ev-tag">Hızlı ilerleme</div><h2>⏩ Ücretsiz hakların bitti</h2>
+      <p>10 ücretsiz hızlı ilerleme hakkını kullandın. Günde bir kez reklam izleyerek 1 hak kazanabilir ya da Premium+ ile sınırsız ilerleyebilirsin.</p>`, [
+      { t: 'Kapat', cls: 'btn-ghost' },
+      { t: `${Icon('play')} Reklam izle · 1 hak`, cls: 'btn-ghost', fn: () => {
+        Ads.show().then((ok) => {
+          if (ok) { FFree.s(FFree.KA, FFree.today()); FFree.s(FFree.KB, FFree.bonus() + 1); if (typeof Premium !== 'undefined') Premium.track('ff_ad_reward', {}); Game.toast('+1 hızlı ilerleme hakkı', 'good'); }
+          Game.render();
+        });
+      } },
+      { t: `${Icon('star')} Premium+ · sınırsız`, cls: 'btn-big', fn: () => setTimeout(() => Plus.pitch('Hızlı ilerleme', 'ff_out'), 80) },
+    ], { wide: true });
+    return m;
+  },
+};
+
 const FF = {
   on: false, stop: false,
   PLANS: [
@@ -70,7 +107,12 @@ const FF = {
   button() {
     const s = Game.state;
     if (!s || s.mode === 'wc' || Game.inStreet() || typeof Plus === 'undefined' || !Plus.on()) return '';
-    return `<button class="btn btn-ghost ff-btn ${Plus.has() ? '' : 'locked'}" data-ff>⏩ Hızlı ilerle${Plus.has() ? '' : ' <small>Premium+</small>'}</button>`;
+    // lig fikstürü yokken (ör. seçme kampı) hızlı ilerleme gösterilmez
+    let lg = null; try { lg = Game.league(); } catch (e) { lg = null; }
+    if (!lg || !lg.fixtures || !lg.table) return '';
+    if (Plus.has()) return '<button class="btn btn-ghost ff-btn" data-ff>⏩ Hızlı ilerle</button>';
+    const tag = FFree.left() > 0 ? `Ücretsiz ${FFree.left()}/${FFree.MAX}` : FFree.bonus() > 0 ? `${FFree.bonus()} hak` : 'Premium+';
+    return `<button class="btn btn-ghost ff-btn ${FFree.can() ? '' : 'locked'}" data-ff>⏩ Hızlı ilerle <small>${tag}</small></button>`;
   },
   // kalan lig maçları (bu haftaki maç hariç: o zaten sıradaki maç)
   fixtures() {
@@ -87,7 +129,9 @@ const FF = {
     return out;
   },
   open() {
-    if (!Plus.has()) return Plus.pitch('Hızlı ilerleme', 'ff', 'Fikstürden bir maç seç, oraya kadar olan haftalar simüle edilsin; o maçı sen oyna. Atlanan haftalarda aksiyon haklarını nasıl kullanacağını da sen seçersin.');
+    let lg0 = null; try { lg0 = Game.league(); } catch (e) { lg0 = null; }
+    if (!lg0 || !lg0.fixtures || !lg0.table) return Game.toast('Hızlı ilerleme lig maçları başlayınca açılır.', 'info');
+    if (!Plus.has() && !FFree.can()) return FFree.out();
     const s = Game.state;
     const fx = FF.fixtures();
     if (!fx.length) return Game.toast('Bu sezon atlanacak maç kalmadı.', 'info');
@@ -104,6 +148,7 @@ const FF = {
     const m = Game.modal(`<div class="ffx">
       <h2>Hızlı ilerle</h2>
       <p class="muted ffx-sub">Seçtiğin maça kadar haftalar simüle edilir, o maçı sen oynarsın.</p>
+      ${Plus.has() ? '' : `<p class="ffx-free">${FFree.left() > 0 ? `Ücretsiz hakkın: <b>${FFree.left()}/${FFree.MAX}</b>` : `Reklamla kazandığın hak: <b>${FFree.bonus()}</b>`} · Premium+ ile sınırsız</p>`}
       <div class="ffx-lbl">Hangi maça kadar?</div>
       <div class="ffx-list">${rows}</div>
       <div class="ffx-lbl">Aradaki haftalarda aksiyon hakların <small>Odak: ${U.esc(focusL)}</small></div>
@@ -120,6 +165,7 @@ const FF = {
         const pl = (m.querySelector('input[name="ffp"]:checked') || {}).value || 'bal';
         const cup = m.querySelector('#ff-cup').checked, off = m.querySelector('#ff-off').checked;
         FF.last = { r, p: pl, cup, off };
+        if (!Plus.has()) FFree.consume();
         m.classList.add('hidden'); m.innerHTML = '';
         FF.run({ r, cup, off }, pl);
       } },

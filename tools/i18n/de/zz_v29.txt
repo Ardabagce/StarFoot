@@ -6,3 +6,42 @@
 10527|Mumbai
 10558|Indische Ligen
 10559|In Indien: die Tiger-Liga mit 16 Teams, die Tiger-Liga 2 mit 14 Teams und der Indien-Pokal. Die besten 2 qualifizieren sich für den Asien-Champions-Pokal.
+10560|· 1 Aktion
+10561|Alles in einem:
+10562|Du hast den Pokal gestemmt! Mit Premium kommt dieser Moment auf deine Starpedia-Seite und in deine Karriere-Doku; Zwischenwerbung verschwindet und Belohnungen kommen sofort.
+10563|Du hast den Pokal gestemmt!
+10564|Mit Premium kommt dieser Moment auf deine Starpedia-Seite und in deine Karriere-Doku; Zwischenwerbung verschwindet und Belohnungen kommen sofort.
+10565|Dein erstes Länderspiel! Premium schaltet dein goldenes Verifizierungsabzeichen und deine Starpedia-Seite frei; Zwischenwerbung verschwindet und Belohnungen kommen sofort.
+10566|Dein erstes Länderspiel!
+10567|Premium schaltet dein goldenes Verifizierungsabzeichen und deine Starpedia-Seite frei; Zwischenwerbung verschwindet und Belohnungen kommen sofort.
+10568|Deine kostenlosen Schnellvorläufe sind aufgebraucht. Premium+ bietet unbegrenzten Schnellvorlauf, Rückgängig für ein schlechtes Spiel und vieles mehr. Morgen kannst du per Werbung 1 weiteren bekommen.
+10569|Deine kostenlosen Schnellvorläufe sind aufgebraucht.
+10570|Premium+ bietet unbegrenzten Schnellvorlauf, Rückgängig für ein schlechtes Spiel und vieles mehr.
+10571|Morgen kannst du per Werbung 1 weiteren bekommen.
+10572|⏩ Kostenlose Schnellvorläufe aufgebraucht
+10573|Kostenlose Schnellvorläufe aufgebraucht
+10574|Du hast deine 10 kostenlosen Schnellvorläufe genutzt. Sieh dir einmal am Tag eine Werbung an für 1 weiteren oder spiele mit Premium+ unbegrenzt.
+10575|Du hast deine 10 kostenlosen Schnellvorläufe genutzt.
+10576|Sieh dir einmal am Tag eine Werbung an für 1 weiteren oder spiele mit Premium+ unbegrenzt.
+10577|Werbung ansehen · 1 mehr
+10578|+1 Schnellvorlauf
+10579|Premium+ · unbegrenzt
+10580|Kostenlos übrig:
+10581|Durch Werbung verdient:
+10582|· unbegrenzt mit Premium+
+10583|Deine ganze Karrieregeschichte gibt es mit Premium
+10584|Deine Starpedia-Seite ist immer offen, aktualisiert sich jede Saison und du schreibst ihre Abschnitte.
+10585|10 kostenlose Schnellvorläufe
+10586|Alle bekommen 10 kostenlose Schnellvorläufe. Sind sie aufgebraucht, sieh dir einmal am Tag eine Werbung an für 1 weiteren.
+10587|Alle bekommen 10 kostenlose Schnellvorläufe.
+10588|Sind sie aufgebraucht, sieh dir einmal am Tag eine Werbung an für 1 weiteren.
+10589|Starpedia-Vorschau
+10590|Den oberen Teil deiner Starpedia-Seite siehst du immer; die ganze Seite öffnet Premium.
+10591|Premium, Premium+, Trainer und alle Modi mit einem Kauf{}
+10592|{} Deine ganze Karrieregeschichte gibt es mit Premium
+10593|{} · unbegrenzt mit Premium+
+10594|{} Werbung ansehen · 1 mehr
+10595|{} Premium+ · unbegrenzt
+10596|{} Premium ansehen
+10597|Kostenlos {}/{}
+10598|Der Schnellvorlauf öffnet sich, sobald die Ligaspiele beginnen.

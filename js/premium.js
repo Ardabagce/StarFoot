@@ -146,6 +146,9 @@ const Premium = {
         try { params.np = Object.keys((typeof RCStore !== 'undefined' && RCStore.prods) || {}).length; } catch (e) { /* yok */ }
         try { params.online = navigator.onLine ? 1 : 0; } catch (e) { /* yok */ }
       }
+      // hangi ekrandan satın alındı: son açılan satın alma penceresinin kaynağı satın alma olaylarına da yazılır
+      if (/_view$/.test(name) && params.source) Premium.lastSrc = String(params.source);
+      if ((name === 'purchase' || /_purchase$/.test(name)) && !params.source) params = Object.assign({}, params, { source: Premium.lastSrc || 'unknown' });
       const F = window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.FirebaseAnalytics;
       if (F && F.logEvent) F.logEvent({ name, params }).catch(() => {});
     } catch (e) { /* analytics yok */ }
@@ -376,10 +379,12 @@ const Plus = {
       if (!up) btns.push({ t: `${Icon('star')} Premium al${Premium.price ? ` · ${U.esc(Premium.price)}` : ''}`, cls: 'btn-big', fn: () => Premium.buy() });
       else btns.push({ t: 'Premium+ çok yakında', cls: 'btn-ghost', fn: () => {} });
     } else if (can) btns.push({ t: `${Icon('star')} ${up ? 'Yükselt' : 'Premium+ al'}${pr ? ` · ${U.esc(pr)}` : ''}`, cls: 'btn-big', fn: () => Plus.buy(src) });
-    Game.modal(`<div class="ev-tag">Premium+</div><h2>${Icon('star')} Premium+</h2>
+    const pmod = Game.modal(`<div class="ev-tag">Premium+</div><h2>${Icon('star')} Premium+</h2>
       ${after ? `<p>${after}</p>` : feat ? `<p><b>${U.esc(feat)}</b> Premium+'a özel.</p>` : ''}
       ${Plus.perksHtml(!up)}
-      <p class="muted">${!can ? 'Premium+ App Store uygulamasında satın alınabilir.' : up ? 'Premium sahibi olduğun için yükseltme fiyatı uygulanır. Tek seferlik.' : 'Tek seferlik satın alma, tüm kariyerlerinde geçerli.'}</p>`, btns, { wide: true });
+      <p class="muted">${!can ? 'Premium+ App Store uygulamasında satın alınabilir.' : up ? 'Premium sahibi olduğun için yükseltme fiyatı uygulanır. Tek seferlik.' : 'Tek seferlik satın alma, tüm kariyerlerinde geçerli.'}</p>
+      ${typeof Diamond !== 'undefined' && Diamond.upsell ? Diamond.upsell(src) : ''}`, btns, { wide: true });
+    if (typeof Diamond !== 'undefined' && Diamond.bindUp) Diamond.bindUp(pmod);;
   },
   // Premium+ özelliği kapısı: varsa true, yoksa tanıtımı açar
   gate(feat, src) {
@@ -453,6 +458,7 @@ const Packs = {
   // Paket tanıtımı ve satın alma penceresi
   offer(k) {
     const x = PACKS[k];
+    Premium.track('pack_view', { source: 'pack_' + k });
     const can = Premium.available();
     const pr = Packs.price[k];
     const btns = [{ t: 'Kapat', cls: 'btn-ghost' }];

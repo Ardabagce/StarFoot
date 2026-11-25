@@ -104,7 +104,9 @@ const Ach = {
     // değer anı: ilk gol ya da ilk profesyonel sözleşme sonrası (günde en fazla bir tanıtım, Premium sahiplerine hiç)
     if (typeof Nudge !== 'undefined') {
       if (got.some((a) => a.id === 'goal1')) Nudge.later('goal1', 'İlk golün geldi! Premium ile geçiş reklamları kalkar, ödüller reklamsız ve anında gelir; Starpedia sayfan ve kariyer belgeselin açılır.');
-      else if (got.some((a) => a.id === 'pro')) Nudge.later('pro', 'Artık profesyonelsin! Premium ile geçiş reklamları kalkar, ödüller reklamsız ve anında gelir; altın onay rozetin ve Starpedia sayfan açılır.');
+      else if (got.some((a) => a.cat === 'trophy' && a.id !== 'youthcup')) Nudge.later('trophy', 'Kupayı kaldırdın! Premium ile bu başarı Starpedia sayfanda ve kariyer belgeselinde yerini alır; geçiş reklamları kalkar, ödüller anında gelir.');
+      else if (got.some((a) => a.id === 'cap1')) Nudge.later('cap1', 'İlk milli maçına çıktın! Premium ile altın onay rozetin ve Starpedia sayfan açılır; geçiş reklamları kalkar, ödüller anında gelir.');
+      else if (got.some((a) => a.id === 'pro')) Nudge.later('pro','Artık profesyonelsin! Premium ile geçiş reklamları kalkar, ödüller reklamsız ve anında gelir; altın onay rozetin ve Starpedia sayfan açılır.');
     }
     return got;
   },

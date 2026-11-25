@@ -6,3 +6,42 @@
 10527|Bombay
 10558|Ligues indiennes
 10559|En Inde : la Ligue des Tigres à 16 équipes, la Ligue des Tigres 2 à 14 équipes et la Coupe d’Inde. Les 2 premiers se qualifient pour la Coupe des champions d’Asie.
+10560|· 1 de plus
+10561|Tout-en-un :
+10562|Tu as soulevé le trophée ! Avec Premium, ce moment rejoint ta page Starpedia et ton documentaire ; les pubs interstitielles disparaissent et les récompenses arrivent tout de suite.
+10563|Tu as soulevé le trophée !
+10564|Avec Premium, ce moment rejoint ta page Starpedia et ton documentaire ; les pubs interstitielles disparaissent et les récompenses arrivent tout de suite.
+10565|Ta première sélection ! Premium débloque ton badge doré certifié et ta page Starpedia ; les pubs interstitielles disparaissent et les récompenses arrivent tout de suite.
+10566|Ta première sélection !
+10567|Premium débloque ton badge doré certifié et ta page Starpedia ; les pubs interstitielles disparaissent et les récompenses arrivent tout de suite.
+10568|Tes avances rapides gratuites sont épuisées. Premium+ offre l’avance rapide illimitée, l’annulation d’un mauvais match et bien plus. Demain, tu pourras regarder une pub pour en gagner 1 de plus.
+10569|Tes avances rapides gratuites sont épuisées.
+10570|Premium+ offre l’avance rapide illimitée, l’annulation d’un mauvais match et bien plus.
+10571|Demain, tu pourras regarder une pub pour en gagner 1 de plus.
+10572|⏩ Avances rapides gratuites épuisées
+10573|Avances rapides gratuites épuisées
+10574|Tu as utilisé tes 10 avances rapides gratuites. Regarde une pub une fois par jour pour en gagner 1 ou passe en illimité avec Premium+.
+10575|Tu as utilisé tes 10 avances rapides gratuites.
+10576|Regarde une pub une fois par jour pour en gagner 1 ou passe en illimité avec Premium+.
+10577|Regarder une pub · 1 de plus
+10578|+1 avance rapide
+10579|Premium+ · illimité
+10580|Gratuites restantes :
+10581|Gagnées avec des pubs :
+10582|· illimité avec Premium+
+10583|Toute l’histoire de ta carrière est dans Premium
+10584|Ta page Starpedia est toujours ouverte, se met à jour chaque saison et c’est toi qui écris ses sections.
+10585|10 avances rapides gratuites
+10586|Tout le monde reçoit 10 avances rapides gratuites. Une fois épuisées, regarde une pub une fois par jour pour en gagner 1 de plus.
+10587|Tout le monde reçoit 10 avances rapides gratuites.
+10588|Une fois épuisées, regarde une pub une fois par jour pour en gagner 1 de plus.
+10589|Aperçu de Starpedia
+10590|Tu vois toujours le haut de ta page Starpedia ; la page complète s’ouvre avec Premium.
+10591|Premium, Premium+, Entraîneur et tous les modes en un seul achat{}
+10592|{} Toute l’histoire de ta carrière est dans Premium
+10593|{} · illimité avec Premium+
+10594|{} Regarder une pub · 1 de plus
+10595|{} Premium+ · illimité
+10596|{} Voir Premium
+10597|Gratuit {}/{}
+10598|L’avance rapide s’ouvre dès le début des matchs de championnat.

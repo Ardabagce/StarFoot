@@ -735,7 +735,17 @@
 "career2.js"
 ],
 "· 1 hak": [
-"career2.js"
+"career2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "· hakkın bitti": [
 "career2.js"
@@ -4171,6 +4181,7 @@
 "legacy.js",
 "lpath.js",
 "nego2.js",
+"plusx.js",
 "premium.js",
 "star.js",
 "value.js",
@@ -36636,6 +36647,46 @@
 "lang-pt.js",
 "lang-zh.js"
 ],
+"Hepsi bir arada:": [
+"diamond.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"Diamond": [
+"diamond.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"phone.js"
+],
+"Premium, Premium+, Teknik Direktör ve tüm modlar tek seferde{}": [
+"diamond.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
 "Diamond sende! Her şey açık.": [
 "diamond.js",
 "lang-ar.js",
@@ -37471,8 +37522,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"lang-zh.js",
-"star.js"
+"lang-zh.js"
 ],
 "Hazır bir durumu devral, hedefi tuttur, yıldızları topla. Kariyer yuvalarını etkilemez.": [
 "diamond2.js",
@@ -41096,6 +41146,32 @@
 "extras.js"
 ],
 "İlk golün geldi! Premium ile geçiş reklamları kalkar, ödüller reklamsız ve anında gelir; Starpedia sayfan ve kariyer belgeselin açılır.": [
+"extras.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"Kupayı kaldırdın! Premium ile bu başarı Starpedia sayfanda ve kariyer belgeselinde yerini alır; geçiş reklamları kalkar, ödüller anında gelir.": [
+"extras.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"İlk milli maçına çıktın! Premium ile altın onay rozetin ve Starpedia sayfan açılır; geçiş reklamları kalkar, ödüller anında gelir.": [
 "extras.js",
 "lang-ar.js",
 "lang-de.js",
@@ -77071,8 +77147,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"lang-zh.js",
-"plusx.js"
+"lang-zh.js"
 ],
 "Fikstürden bir maç seç, oraya kadar olan haftalar simüle edilsin; o maçı sen oyna.": [
 "lang-ar.js",
@@ -94724,19 +94799,6 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
-],
-"Diamond": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"lang-zh.js",
-"phone.js"
 ],
 "6 خانات مع Diamond": [
 "lang-ar.js"
@@ -121818,6 +121880,379 @@
 "lang-pt.js",
 "lang-zh.js",
 "socialart.js"
+],
+"Hindistan ligleri": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"star.js"
+],
+"Hindistan’da 16 takımlı Kaplan Ligi, 14 takımlı Kaplan 2. Ligi ve Hindistan Kupası. İlk 2, Asya Şampiyonlar Kupası’na gider.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"star.js"
+],
+"Kupayı kaldırdın!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"Premium ile bu başarı Starpedia sayfanda ve kariyer belgeselinde yerini alır; geçiş reklamları kalkar, ödüller anında gelir.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"İlk milli maçına çıktın!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"Premium ile altın onay rozetin ve Starpedia sayfan açılır; geçiş reklamları kalkar, ödüller anında gelir.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"Ücretsiz hızlı ilerleme hakların bitti. Premium+ ile sınırsız hızlı ilerle, kötü giden maçı geri al ve çok daha fazlası. Yarın reklam izleyerek 1 hak daha kazanabilirsin.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"plusx.js"
+],
+"Ücretsiz hızlı ilerleme hakların bitti.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"Premium+ ile sınırsız hızlı ilerle, kötü giden maçı geri al ve çok daha fazlası.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"Yarın reklam izleyerek 1 hak daha kazanabilirsin.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"⏩ Ücretsiz hakların bitti": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"plusx.js"
+],
+"Ücretsiz hakların bitti": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"10 ücretsiz hızlı ilerleme hakkını kullandın. Günde bir kez reklam izleyerek 1 hak kazanabilir ya da Premium+ ile sınırsız ilerleyebilirsin.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"plusx.js"
+],
+"10 ücretsiz hızlı ilerleme hakkını kullandın.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"Günde bir kez reklam izleyerek 1 hak kazanabilir ya da Premium+ ile sınırsız ilerleyebilirsin.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"Reklam izle · 1 hak": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"+1 hızlı ilerleme hakkı": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"plusx.js"
+],
+"Premium+ · sınırsız": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"Ücretsiz hakkın:": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"plusx.js"
+],
+"Reklamla kazandığın hak:": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"plusx.js"
+],
+"· Premium+ ile sınırsız": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"Kariyerinin tam hikâyesi Premium'da": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"Starpedia sayfan her zaman açık, her sezon kendiliğinden güncellenir ve bölümlerini sen yazarsın.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"star.js"
+],
+"Premium'a bak": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"10 ücretsiz hızlı ilerleme": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"star.js"
+],
+"Herkese 10 ücretsiz hızlı ilerleme hakkı. Hakların bitince günde bir kez reklam izleyerek 1 hak daha kazan.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"star.js"
+],
+"Herkese 10 ücretsiz hızlı ilerleme hakkı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"Hakların bitince günde bir kez reklam izleyerek 1 hak daha kazan.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"Starpedia önizlemesi": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"star.js"
+],
+"Starpedia sayfanın üst kısmını her zaman görebilirsin; tamamı Premium ile açılır.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"star.js"
 ],
 "(Asist)": [
 "lang-ar.js",
@@ -196245,6 +196680,222 @@
 "lang-pt.js",
 "lang-zh.js"
 ],
+"HİNDİSTAN LİGLERİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"· 1 HAK": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"HEPSİ BİR ARADA:": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"KUPAYI KALDIRDIN!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"İLK MİLLİ MAÇINA ÇIKTIN!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"ÜCRETSİZ HIZLI İLERLEME HAKLARIN BİTTİ.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"⏩ ÜCRETSİZ HAKLARIN BİTTİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"ÜCRETSİZ HAKLARIN BİTTİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"REKLAM İZLE · 1 HAK": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"+1 HIZLI İLERLEME HAKKI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"PREMİUM+ · SINIRSIZ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"ÜCRETSİZ HAKKIN:": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"REKLAMLA KAZANDIĞIN HAK:": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"· PREMİUM+ İLE SINIRSIZ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"KARİYERİNİN TAM HİKÂYESİ PREMİUM'DA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"PREMİUM'A BAK": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"10 ÜCRETSİZ HIZLI İLERLEME": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"STARPEDİA ÖNİZLEMESİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -233111,6 +233762,19 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"{} Kariyerinin tam hikâyesi Premium'da": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"star.js"
+],
 "{}: toplamda {}-{} ile kupaya veda ettik.": [
 "lang-ar.js",
 "lang-de.js",
@@ -237202,6 +237866,19 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"{} · Premium+ ile sınırsız": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"plusx.js"
+],
 "Annen çok duygulandı. ({})": [
 "lang-ar.js",
 "lang-de.js",
@@ -238984,6 +239661,32 @@
 "lang-pt.js",
 "lang-zh.js",
 "shootout.js"
+],
+"{} Reklam izle · 1 hak": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"plusx.js"
+],
+"{} Premium+ · sınırsız": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"plusx.js"
 ],
 "Harika bir tatil! ({})": [
 "lang-ar.js",
@@ -241241,8 +241944,7 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"lang-zh.js",
-"plusx.js"
+"lang-zh.js"
 ],
 "{} en değerliler": [
 "lang-ar.js",
@@ -241459,6 +242161,19 @@
 "lang-pt.js",
 "lang-zh.js",
 "quals.js"
+],
+"{} Premium'a bak": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"star.js"
 ],
 "Sakat · {} hafta": [
 "lang-ar.js",
@@ -243160,6 +243875,19 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
+],
+"Ücretsiz {}/{}": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"plusx.js"
 ],
 "Gol {}'dan. {}": [
 "lang-ar.js",
@@ -258692,6 +259420,105 @@
 "Indien-Pokal": [
 "lang-de.js"
 ],
+"Indische Ligen": [
+"lang-de.js"
+],
+"In Indien: die Tiger-Liga mit 16 Teams, die Tiger-Liga 2 mit 14 Teams und der Indien-Pokal. Die besten 2 qualifizieren sich für den Asien-Champions-Pokal.": [
+"lang-de.js"
+],
+"· 1 Aktion": [
+"lang-de.js"
+],
+"Alles in einem:": [
+"lang-de.js"
+],
+"Du hast den Pokal gestemmt! Mit Premium kommt dieser Moment auf deine Starpedia-Seite und in deine Karriere-Doku; Zwischenwerbung verschwindet und Belohnungen kommen sofort.": [
+"lang-de.js"
+],
+"Du hast den Pokal gestemmt!": [
+"lang-de.js"
+],
+"Mit Premium kommt dieser Moment auf deine Starpedia-Seite und in deine Karriere-Doku; Zwischenwerbung verschwindet und Belohnungen kommen sofort.": [
+"lang-de.js"
+],
+"Dein erstes Länderspiel! Premium schaltet dein goldenes Verifizierungsabzeichen und deine Starpedia-Seite frei; Zwischenwerbung verschwindet und Belohnungen kommen sofort.": [
+"lang-de.js"
+],
+"Dein erstes Länderspiel!": [
+"lang-de.js"
+],
+"Premium schaltet dein goldenes Verifizierungsabzeichen und deine Starpedia-Seite frei; Zwischenwerbung verschwindet und Belohnungen kommen sofort.": [
+"lang-de.js"
+],
+"Deine kostenlosen Schnellvorläufe sind aufgebraucht. Premium+ bietet unbegrenzten Schnellvorlauf, Rückgängig für ein schlechtes Spiel und vieles mehr. Morgen kannst du per Werbung 1 weiteren bekommen.": [
+"lang-de.js"
+],
+"Deine kostenlosen Schnellvorläufe sind aufgebraucht.": [
+"lang-de.js"
+],
+"Premium+ bietet unbegrenzten Schnellvorlauf, Rückgängig für ein schlechtes Spiel und vieles mehr.": [
+"lang-de.js"
+],
+"Morgen kannst du per Werbung 1 weiteren bekommen.": [
+"lang-de.js"
+],
+"⏩ Kostenlose Schnellvorläufe aufgebraucht": [
+"lang-de.js"
+],
+"Kostenlose Schnellvorläufe aufgebraucht": [
+"lang-de.js"
+],
+"Du hast deine 10 kostenlosen Schnellvorläufe genutzt. Sieh dir einmal am Tag eine Werbung an für 1 weiteren oder spiele mit Premium+ unbegrenzt.": [
+"lang-de.js"
+],
+"Du hast deine 10 kostenlosen Schnellvorläufe genutzt.": [
+"lang-de.js"
+],
+"Sieh dir einmal am Tag eine Werbung an für 1 weiteren oder spiele mit Premium+ unbegrenzt.": [
+"lang-de.js"
+],
+"Werbung ansehen · 1 mehr": [
+"lang-de.js"
+],
+"+1 Schnellvorlauf": [
+"lang-de.js"
+],
+"Premium+ · unbegrenzt": [
+"lang-de.js"
+],
+"Kostenlos übrig:": [
+"lang-de.js"
+],
+"Durch Werbung verdient:": [
+"lang-de.js"
+],
+"· unbegrenzt mit Premium+": [
+"lang-de.js"
+],
+"Deine ganze Karrieregeschichte gibt es mit Premium": [
+"lang-de.js"
+],
+"Deine Starpedia-Seite ist immer offen, aktualisiert sich jede Saison und du schreibst ihre Abschnitte.": [
+"lang-de.js"
+],
+"10 kostenlose Schnellvorläufe": [
+"lang-de.js"
+],
+"Alle bekommen 10 kostenlose Schnellvorläufe. Sind sie aufgebraucht, sieh dir einmal am Tag eine Werbung an für 1 weiteren.": [
+"lang-de.js"
+],
+"Alle bekommen 10 kostenlose Schnellvorläufe.": [
+"lang-de.js"
+],
+"Sind sie aufgebraucht, sieh dir einmal am Tag eine Werbung an für 1 weiteren.": [
+"lang-de.js"
+],
+"Starpedia-Vorschau": [
+"lang-de.js"
+],
+"Den oberen Teil deiner Starpedia-Seite siehst du immer; die ganze Seite öffnet Premium.": [
+"lang-de.js"
+],
 "– wir haben uns qualifiziert!": [
 "lang-de.js"
 ],
@@ -273673,6 +274500,57 @@
 "lang-it.js",
 "lang-pt.js"
 ],
+"INDISCHE LIGEN": [
+"lang-de.js"
+],
+"· 1 AKTION": [
+"lang-de.js"
+],
+"ALLES IN EINEM:": [
+"lang-de.js"
+],
+"DU HAST DEN POKAL GESTEMMT!": [
+"lang-de.js"
+],
+"DEIN ERSTES LÄNDERSPIEL!": [
+"lang-de.js"
+],
+"DEINE KOSTENLOSEN SCHNELLVORLÄUFE SIND AUFGEBRAUCHT.": [
+"lang-de.js"
+],
+"⏩ KOSTENLOSE SCHNELLVORLÄUFE AUFGEBRAUCHT": [
+"lang-de.js"
+],
+"KOSTENLOSE SCHNELLVORLÄUFE AUFGEBRAUCHT": [
+"lang-de.js"
+],
+"WERBUNG ANSEHEN · 1 MEHR": [
+"lang-de.js"
+],
+"+1 SCHNELLVORLAUF": [
+"lang-de.js"
+],
+"PREMIUM+ · UNBEGRENZT": [
+"lang-de.js"
+],
+"KOSTENLOS ÜBRIG:": [
+"lang-de.js"
+],
+"DURCH WERBUNG VERDIENT:": [
+"lang-de.js"
+],
+"· UNBEGRENZT MIT PREMIUM+": [
+"lang-de.js"
+],
+"DEINE GANZE KARRIEREGESCHICHTE GIBT ES MIT PREMIUM": [
+"lang-de.js"
+],
+"10 KOSTENLOSE SCHNELLVORLÄUFE": [
+"lang-de.js"
+],
+"STARPEDIA-VORSCHAU": [
+"lang-de.js"
+],
 "– WIR HABEN UNS QUALIFIZIERT!": [
 "lang-de.js"
 ],
@@ -278028,6 +278906,9 @@
 "{} versucht sein Glück aus der Distanz, der Ball fliegt drüber.": [
 "lang-de.js"
 ],
+"Premium, Premium+, Trainer und alle Modi mit einem Kauf{}": [
+"lang-de.js"
+],
 "{} ist geöffnet. Noch keine Angebote; spiel gut, dann klopft vielleicht jemand an.": [
 "lang-de.js"
 ],
@@ -279159,6 +280040,9 @@
 "{} schießt, du stehst im Tor": [
 "lang-de.js"
 ],
+"{} Deine ganze Karrieregeschichte gibt es mit Premium": [
+"lang-de.js"
+],
 "{} Vorlagen: Deine Mitspieler sind dankbar": [
 "lang-de.js"
 ],
@@ -279972,6 +280856,9 @@
 "{} Mit deinem Berater verhandeln": [
 "lang-de.js"
 ],
+"{} · unbegrenzt mit Premium+": [
+"lang-de.js"
+],
 "Deine Mutter war gerührt. ({})": [
 "lang-de.js"
 ],
@@ -280350,6 +281237,12 @@
 "lang-de.js"
 ],
 "{} Pkt. · {} Spiele · {}S {}U {}N": [
+"lang-de.js"
+],
+"{} Werbung ansehen · 1 mehr": [
+"lang-de.js"
+],
+"{} Premium+ · unbegrenzt": [
 "lang-de.js"
 ],
 "Du hast {} Freistoßtore erzielt": [
@@ -280958,6 +281851,9 @@
 "{} · Spiel {} • {} - {}": [
 "lang-de.js"
 ],
+"{} Premium ansehen": [
+"lang-de.js"
+],
 "{} Wochenplan": [
 "lang-de.js"
 ],
@@ -281440,6 +282336,9 @@
 "lang-de.js"
 ],
 "{} · {} · {} JAHRE": [
+"lang-de.js"
+],
+"Kostenlos {}/{}": [
 "lang-de.js"
 ],
 "({}. Platz)": [
@@ -295162,6 +296061,102 @@
 "lang-en.js"
 ],
 "India Cup": [
+"lang-en.js"
+],
+"Indian leagues": [
+"lang-en.js"
+],
+"In India: the 16-team Tiger League, the 14-team Tiger League 2 and the India Cup. The top 2 qualify for the Asian Champions Cup.": [
+"lang-en.js"
+],
+"· 1 point": [
+"lang-en.js"
+],
+"All in one:": [
+"lang-en.js"
+],
+"You lifted the trophy! With Premium this moment joins your Starpedia page and career documentary; interstitial ads go away and rewards arrive instantly.": [
+"lang-en.js"
+],
+"You lifted the trophy!": [
+"lang-en.js"
+],
+"With Premium this moment joins your Starpedia page and career documentary; interstitial ads go away and rewards arrive instantly.": [
+"lang-en.js"
+],
+"Your first cap for your country! Premium unlocks your gold verified badge and Starpedia page; interstitial ads go away and rewards arrive instantly.": [
+"lang-en.js"
+],
+"Your first cap for your country!": [
+"lang-en.js"
+],
+"Premium unlocks your gold verified badge and Starpedia page; interstitial ads go away and rewards arrive instantly.": [
+"lang-en.js"
+],
+"Your free fast-forwards are used up. Premium+ gives unlimited fast-forward, undo for a bad match and much more. Tomorrow you can watch an ad for 1 more.": [
+"lang-en.js"
+],
+"Your free fast-forwards are used up.": [
+"lang-en.js"
+],
+"Premium+ gives unlimited fast-forward, undo for a bad match and much more.": [
+"lang-en.js"
+],
+"Tomorrow you can watch an ad for 1 more.": [
+"lang-en.js"
+],
+"⏩ Free fast-forwards used up": [
+"lang-en.js"
+],
+"Free fast-forwards used up": [
+"lang-en.js"
+],
+"You have used your 10 free fast-forwards. Watch an ad once a day for 1 more, or go unlimited with Premium+.": [
+"lang-en.js"
+],
+"You have used your 10 free fast-forwards.": [
+"lang-en.js"
+],
+"Watch an ad once a day for 1 more, or go unlimited with Premium+.": [
+"lang-en.js"
+],
+"Watch an ad · 1 more": [
+"lang-en.js"
+],
+"+1 fast-forward": [
+"lang-en.js"
+],
+"Premium+ · unlimited": [
+"lang-en.js"
+],
+"Free fast-forwards left:": [
+"lang-en.js"
+],
+"Earned from ads:": [
+"lang-en.js"
+],
+"· unlimited with Premium+": [
+"lang-en.js"
+],
+"Your full career story is in Premium": [
+"lang-en.js"
+],
+"Your Starpedia page is always open, updates itself every season and you write its sections.": [
+"lang-en.js"
+],
+"Everyone gets 10 free fast-forwards. When they run out, watch an ad once a day for 1 more.": [
+"lang-en.js"
+],
+"Everyone gets 10 free fast-forwards.": [
+"lang-en.js"
+],
+"When they run out, watch an ad once a day for 1 more.": [
+"lang-en.js"
+],
+"Starpedia preview": [
+"lang-en.js"
+],
+"You can always see the top of your Starpedia page; the full page opens with Premium.": [
 "lang-en.js"
 ],
 "— we qualified!": [
@@ -309359,6 +310354,57 @@
 "INDIA CUP": [
 "lang-en.js"
 ],
+"INDIAN LEAGUES": [
+"lang-en.js"
+],
+"· 1 POINT": [
+"lang-en.js"
+],
+"ALL IN ONE:": [
+"lang-en.js"
+],
+"YOU LIFTED THE TROPHY!": [
+"lang-en.js"
+],
+"YOUR FIRST CAP FOR YOUR COUNTRY!": [
+"lang-en.js"
+],
+"YOUR FREE FAST-FORWARDS ARE USED UP.": [
+"lang-en.js"
+],
+"⏩ FREE FAST-FORWARDS USED UP": [
+"lang-en.js"
+],
+"FREE FAST-FORWARDS USED UP": [
+"lang-en.js"
+],
+"WATCH AN AD · 1 MORE": [
+"lang-en.js"
+],
+"+1 FAST-FORWARD": [
+"lang-en.js"
+],
+"PREMIUM+ · UNLIMITED": [
+"lang-en.js"
+],
+"FREE FAST-FORWARDS LEFT:": [
+"lang-en.js"
+],
+"EARNED FROM ADS:": [
+"lang-en.js"
+],
+"· UNLIMITED WITH PREMIUM+": [
+"lang-en.js"
+],
+"YOUR FULL CAREER STORY IS IN PREMIUM": [
+"lang-en.js"
+],
+"10 FREE FAST-FORWARDS": [
+"lang-en.js"
+],
+"STARPEDIA PREVIEW": [
+"lang-en.js"
+],
 "— WE QUALIFIED!": [
 "lang-en.js"
 ],
@@ -313669,6 +314715,9 @@
 "{} tried his luck from outside the box, the ball went over.": [
 "lang-en.js"
 ],
+"Premium, Premium+, Manager and every mode in one purchase{}": [
+"lang-en.js"
+],
 "{} is open. No offers yet; play well and someone may knock.": [
 "lang-en.js"
 ],
@@ -314800,6 +315849,9 @@
 "{} are taking their kick, you're in goal": [
 "lang-en.js"
 ],
+"{} Your full career story is in Premium": [
+"lang-en.js"
+],
 "{} assists: your teammates are grateful": [
 "lang-en.js"
 ],
@@ -315613,6 +316665,9 @@
 "{} Sit down with your agent": [
 "lang-en.js"
 ],
+"{} · unlimited with Premium+": [
+"lang-en.js"
+],
 "Your mum was moved. ({})": [
 "lang-en.js"
 ],
@@ -315992,6 +317047,12 @@
 "lang-en.js"
 ],
 "{} pts · {} played · {}W {}D {}L": [
+"lang-en.js"
+],
+"{} Watch an ad · 1 more": [
+"lang-en.js"
+],
+"{} Premium+ · unlimited": [
 "lang-en.js"
 ],
 "You scored {} free-kick goals": [
@@ -316611,6 +317672,9 @@
 "lang-en.js",
 "lang-fr.js"
 ],
+"{} See Premium": [
+"lang-en.js"
+],
 "{} Weekly Plan": [
 "lang-en.js"
 ],
@@ -317105,6 +318169,9 @@
 "lang-en.js"
 ],
 "{} · {} · AGE {}": [
+"lang-en.js"
+],
+"Free {}/{}": [
 "lang-en.js"
 ],
 "({}th place)": [
@@ -330988,6 +332055,100 @@
 "Bombay": [
 "lang-es.js",
 "lang-fr.js"
+],
+"Ligas de la India": [
+"lang-es.js"
+],
+"En la India: la Liga Tigre de 16 equipos, la Liga Tigre 2 de 14 equipos y la Copa de la India. Los 2 primeros van a la Copa de Campeones de Asia.": [
+"lang-es.js"
+],
+"Todo en uno:": [
+"lang-es.js"
+],
+"¡Levantaste el trofeo! Con Premium este momento entra en tu página de Starpedia y en tu documental; desaparecen los anuncios intersticiales y las recompensas llegan al instante.": [
+"lang-es.js"
+],
+"¡Levantaste el trofeo!": [
+"lang-es.js"
+],
+"Con Premium este momento entra en tu página de Starpedia y en tu documental; desaparecen los anuncios intersticiales y las recompensas llegan al instante.": [
+"lang-es.js"
+],
+"¡Tu primer partido con la selección! Premium desbloquea tu insignia dorada de verificación y tu página de Starpedia; desaparecen los anuncios intersticiales y las recompensas llegan al instante.": [
+"lang-es.js"
+],
+"¡Tu primer partido con la selección!": [
+"lang-es.js"
+],
+"Premium desbloquea tu insignia dorada de verificación y tu página de Starpedia; desaparecen los anuncios intersticiales y las recompensas llegan al instante.": [
+"lang-es.js"
+],
+"Se acabaron tus avances rápidos gratis. Premium+ te da avance rápido ilimitado, deshacer un mal partido y mucho más. Mañana puedes ver un anuncio para conseguir 1 más.": [
+"lang-es.js"
+],
+"Se acabaron tus avances rápidos gratis.": [
+"lang-es.js"
+],
+"Premium+ te da avance rápido ilimitado, deshacer un mal partido y mucho más.": [
+"lang-es.js"
+],
+"Mañana puedes ver un anuncio para conseguir 1 más.": [
+"lang-es.js"
+],
+"⏩ Se acabaron los avances rápidos gratis": [
+"lang-es.js"
+],
+"Se acabaron los avances rápidos gratis": [
+"lang-es.js"
+],
+"Usaste tus 10 avances rápidos gratis. Mira un anuncio una vez al día para 1 más o juega sin límites con Premium+.": [
+"lang-es.js"
+],
+"Usaste tus 10 avances rápidos gratis.": [
+"lang-es.js"
+],
+"Mira un anuncio una vez al día para 1 más o juega sin límites con Premium+.": [
+"lang-es.js"
+],
+"Ver anuncio · 1 más": [
+"lang-es.js"
+],
+"+1 avance rápido": [
+"lang-es.js"
+],
+"Premium+ · ilimitado": [
+"lang-es.js",
+"lang-pt.js"
+],
+"Gratis restantes:": [
+"lang-es.js"
+],
+"Ganados con anuncios:": [
+"lang-es.js"
+],
+"· ilimitado con Premium+": [
+"lang-es.js"
+],
+"La historia completa de tu carrera está en Premium": [
+"lang-es.js"
+],
+"Tu página de Starpedia siempre está abierta, se actualiza cada temporada y tú escribes sus secciones.": [
+"lang-es.js"
+],
+"Todos reciben 10 avances rápidos gratis. Cuando se acaben, mira un anuncio una vez al día para 1 más.": [
+"lang-es.js"
+],
+"Todos reciben 10 avances rápidos gratis.": [
+"lang-es.js"
+],
+"Cuando se acaben, mira un anuncio una vez al día para 1 más.": [
+"lang-es.js"
+],
+"Vista previa de Starpedia": [
+"lang-es.js"
+],
+"Siempre puedes ver la parte superior de tu página de Starpedia; la página completa se abre con Premium.": [
+"lang-es.js"
 ],
 "— ¡nos hemos clasificado!": [
 "lang-es.js"
@@ -345309,6 +346470,55 @@
 "lang-es.js",
 "lang-fr.js"
 ],
+"LIGAS DE LA INDIA": [
+"lang-es.js"
+],
+"TODO EN UNO:": [
+"lang-es.js"
+],
+"¡LEVANTASTE EL TROFEO!": [
+"lang-es.js"
+],
+"¡TU PRIMER PARTIDO CON LA SELECCIÓN!": [
+"lang-es.js"
+],
+"SE ACABARON TUS AVANCES RÁPIDOS GRATIS.": [
+"lang-es.js"
+],
+"⏩ SE ACABARON LOS AVANCES RÁPIDOS GRATIS": [
+"lang-es.js"
+],
+"SE ACABARON LOS AVANCES RÁPIDOS GRATIS": [
+"lang-es.js"
+],
+"VER ANUNCIO · 1 MÁS": [
+"lang-es.js"
+],
+"+1 AVANCE RÁPIDO": [
+"lang-es.js"
+],
+"PREMIUM+ · ILIMITADO": [
+"lang-es.js",
+"lang-pt.js"
+],
+"GRATIS RESTANTES:": [
+"lang-es.js"
+],
+"GANADOS CON ANUNCIOS:": [
+"lang-es.js"
+],
+"· ILIMITADO CON PREMIUM+": [
+"lang-es.js"
+],
+"LA HISTORIA COMPLETA DE TU CARRERA ESTÁ EN PREMIUM": [
+"lang-es.js"
+],
+"10 AVANCES RÁPIDOS GRATIS": [
+"lang-es.js"
+],
+"VISTA PREVIA DE STARPEDIA": [
+"lang-es.js"
+],
 "— ¡NOS HEMOS CLASIFICADO!": [
 "lang-es.js"
 ],
@@ -349624,6 +350834,9 @@
 "{} probó suerte desde fuera del área, el balón se fue por encima.": [
 "lang-es.js"
 ],
+"Premium, Premium+, Entrenador y todos los modos en una sola compra{}": [
+"lang-es.js"
+],
 "{} está abierto. Aún no hay ofertas; juega bien y alguien llamará a tu puerta.": [
 "lang-es.js"
 ],
@@ -350755,6 +351968,9 @@
 "{} lanza, tú estás en la portería": [
 "lang-es.js"
 ],
+"{} La historia completa de tu carrera está en Premium": [
+"lang-es.js"
+],
 "{} asistencias: tus compañeros te lo agradecen": [
 "lang-es.js"
 ],
@@ -351568,6 +352784,9 @@
 "{} Siéntate a negociar con tu agente": [
 "lang-es.js"
 ],
+"{} · ilimitado con Premium+": [
+"lang-es.js"
+],
 "Tu madre se emocionó. ({})": [
 "lang-es.js"
 ],
@@ -351952,6 +353171,13 @@
 ],
 "{} pts · {} PJ · {}G {}E {}P": [
 "lang-es.js"
+],
+"{} Ver anuncio · 1 más": [
+"lang-es.js"
+],
+"{} Premium+ · ilimitado": [
+"lang-es.js",
+"lang-pt.js"
 ],
 "Marcaste {} goles de falta directa": [
 "lang-es.js"
@@ -352576,6 +353802,10 @@
 "{} · Partido {} • {} - {}": [
 "lang-es.js"
 ],
+"{} Ver Premium": [
+"lang-es.js",
+"lang-pt.js"
+],
 "{} Plan semanal": [
 "lang-es.js"
 ],
@@ -353081,6 +354311,11 @@
 ],
 "{} · {} · {} AÑOS": [
 "lang-es.js"
+],
+"Gratis {}/{}": [
+"lang-es.js",
+"lang-id.js",
+"lang-it.js"
 ],
 "({}.º puesto)": [
 "lang-es.js"
@@ -366558,6 +367793,102 @@
 "lang-fr.js"
 ],
 "Coupe d’Inde": [
+"lang-fr.js"
+],
+"Ligues indiennes": [
+"lang-fr.js"
+],
+"En Inde : la Ligue des Tigres à 16 équipes, la Ligue des Tigres 2 à 14 équipes et la Coupe d’Inde. Les 2 premiers se qualifient pour la Coupe des champions d’Asie.": [
+"lang-fr.js"
+],
+"· 1 de plus": [
+"lang-fr.js"
+],
+"Tout-en-un :": [
+"lang-fr.js"
+],
+"Tu as soulevé le trophée ! Avec Premium, ce moment rejoint ta page Starpedia et ton documentaire ; les pubs interstitielles disparaissent et les récompenses arrivent tout de suite.": [
+"lang-fr.js"
+],
+"Tu as soulevé le trophée !": [
+"lang-fr.js"
+],
+"Avec Premium, ce moment rejoint ta page Starpedia et ton documentaire ; les pubs interstitielles disparaissent et les récompenses arrivent tout de suite.": [
+"lang-fr.js"
+],
+"Ta première sélection ! Premium débloque ton badge doré certifié et ta page Starpedia ; les pubs interstitielles disparaissent et les récompenses arrivent tout de suite.": [
+"lang-fr.js"
+],
+"Ta première sélection !": [
+"lang-fr.js"
+],
+"Premium débloque ton badge doré certifié et ta page Starpedia ; les pubs interstitielles disparaissent et les récompenses arrivent tout de suite.": [
+"lang-fr.js"
+],
+"Tes avances rapides gratuites sont épuisées. Premium+ offre l’avance rapide illimitée, l’annulation d’un mauvais match et bien plus. Demain, tu pourras regarder une pub pour en gagner 1 de plus.": [
+"lang-fr.js"
+],
+"Tes avances rapides gratuites sont épuisées.": [
+"lang-fr.js"
+],
+"Premium+ offre l’avance rapide illimitée, l’annulation d’un mauvais match et bien plus.": [
+"lang-fr.js"
+],
+"Demain, tu pourras regarder une pub pour en gagner 1 de plus.": [
+"lang-fr.js"
+],
+"⏩ Avances rapides gratuites épuisées": [
+"lang-fr.js"
+],
+"Avances rapides gratuites épuisées": [
+"lang-fr.js"
+],
+"Tu as utilisé tes 10 avances rapides gratuites. Regarde une pub une fois par jour pour en gagner 1 ou passe en illimité avec Premium+.": [
+"lang-fr.js"
+],
+"Tu as utilisé tes 10 avances rapides gratuites.": [
+"lang-fr.js"
+],
+"Regarde une pub une fois par jour pour en gagner 1 ou passe en illimité avec Premium+.": [
+"lang-fr.js"
+],
+"Regarder une pub · 1 de plus": [
+"lang-fr.js"
+],
+"+1 avance rapide": [
+"lang-fr.js"
+],
+"Premium+ · illimité": [
+"lang-fr.js"
+],
+"Gratuites restantes :": [
+"lang-fr.js"
+],
+"Gagnées avec des pubs :": [
+"lang-fr.js"
+],
+"· illimité avec Premium+": [
+"lang-fr.js"
+],
+"Toute l’histoire de ta carrière est dans Premium": [
+"lang-fr.js"
+],
+"Ta page Starpedia est toujours ouverte, se met à jour chaque saison et c’est toi qui écris ses sections.": [
+"lang-fr.js"
+],
+"Tout le monde reçoit 10 avances rapides gratuites. Une fois épuisées, regarde une pub une fois par jour pour en gagner 1 de plus.": [
+"lang-fr.js"
+],
+"Tout le monde reçoit 10 avances rapides gratuites.": [
+"lang-fr.js"
+],
+"Une fois épuisées, regarde une pub une fois par jour pour en gagner 1 de plus.": [
+"lang-fr.js"
+],
+"Aperçu de Starpedia": [
+"lang-fr.js"
+],
+"Tu vois toujours le haut de ta page Starpedia ; la page complète s’ouvre avec Premium.": [
 "lang-fr.js"
 ],
 "— on est qualifiés !": [
@@ -380378,6 +381709,57 @@
 "COUPE D’INDE": [
 "lang-fr.js"
 ],
+"LIGUES INDIENNES": [
+"lang-fr.js"
+],
+"· 1 DE PLUS": [
+"lang-fr.js"
+],
+"TOUT-EN-UN :": [
+"lang-fr.js"
+],
+"TU AS SOULEVÉ LE TROPHÉE !": [
+"lang-fr.js"
+],
+"TA PREMIÈRE SÉLECTION !": [
+"lang-fr.js"
+],
+"TES AVANCES RAPIDES GRATUITES SONT ÉPUISÉES.": [
+"lang-fr.js"
+],
+"⏩ AVANCES RAPIDES GRATUITES ÉPUISÉES": [
+"lang-fr.js"
+],
+"AVANCES RAPIDES GRATUITES ÉPUISÉES": [
+"lang-fr.js"
+],
+"REGARDER UNE PUB · 1 DE PLUS": [
+"lang-fr.js"
+],
+"+1 AVANCE RAPIDE": [
+"lang-fr.js"
+],
+"PREMIUM+ · ILLIMITÉ": [
+"lang-fr.js"
+],
+"GRATUITES RESTANTES :": [
+"lang-fr.js"
+],
+"GAGNÉES AVEC DES PUBS :": [
+"lang-fr.js"
+],
+"· ILLIMITÉ AVEC PREMIUM+": [
+"lang-fr.js"
+],
+"TOUTE L’HISTOIRE DE TA CARRIÈRE EST DANS PREMIUM": [
+"lang-fr.js"
+],
+"10 AVANCES RAPIDES GRATUITES": [
+"lang-fr.js"
+],
+"APERÇU DE STARPEDIA": [
+"lang-fr.js"
+],
 "— ON EST QUALIFIÉS !": [
 "lang-fr.js"
 ],
@@ -384559,6 +385941,9 @@
 "{} tente sa chance de loin, le ballon passe au-dessus.": [
 "lang-fr.js"
 ],
+"Premium, Premium+, Entraîneur et tous les modes en un seul achat{}": [
+"lang-fr.js"
+],
 "{} est ouvert. Pas encore d'offres ; joue bien et quelqu'un frappera peut-être à la porte.": [
 "lang-fr.js"
 ],
@@ -385690,6 +387075,9 @@
 "{} tire, tu es dans les buts": [
 "lang-fr.js"
 ],
+"{} Toute l’histoire de ta carrière est dans Premium": [
+"lang-fr.js"
+],
 "{} passes décisives : tes coéquipiers te remercient": [
 "lang-fr.js"
 ],
@@ -386503,6 +387891,9 @@
 "{} Négocie avec ton agent": [
 "lang-fr.js"
 ],
+"{} · illimité avec Premium+": [
+"lang-fr.js"
+],
 "Ta mère était émue. ({})": [
 "lang-fr.js"
 ],
@@ -386882,6 +388273,12 @@
 "lang-fr.js"
 ],
 "{} pts · {} matchs · {}V {}N {}D": [
+"lang-fr.js"
+],
+"{} Regarder une pub · 1 de plus": [
+"lang-fr.js"
+],
+"{} Premium+ · illimité": [
 "lang-fr.js"
 ],
 "Tu as marqué {} buts sur coup franc": [
@@ -387482,6 +388879,9 @@
 "{} Résumé de carrière": [
 "lang-fr.js"
 ],
+"{} Voir Premium": [
+"lang-fr.js"
+],
 "{} Programme de la semaine": [
 "lang-fr.js"
 ],
@@ -387951,6 +389351,9 @@
 "lang-fr.js"
 ],
 "{} · {} · {} ANS": [
+"lang-fr.js"
+],
+"Gratuit {}/{}": [
 "lang-fr.js"
 ],
 "({}e place)": [
@@ -401148,6 +402551,102 @@
 "lang-id.js"
 ],
 "Piala India": [
+"lang-id.js"
+],
+"Liga India": [
+"lang-id.js"
+],
+"Di India: Liga Harimau dengan 16 tim, Liga Harimau 2 dengan 14 tim, dan Piala India. 2 teratas lolos ke Piala Champions Asia.": [
+"lang-id.js"
+],
+"· 1 lagi": [
+"lang-id.js"
+],
+"Semua dalam satu:": [
+"lang-id.js"
+],
+"Kamu mengangkat trofi! Dengan Premium momen ini masuk ke halaman Starpedia dan dokumenter kariermu; iklan interstisial hilang dan hadiah langsung didapat.": [
+"lang-id.js"
+],
+"Kamu mengangkat trofi!": [
+"lang-id.js"
+],
+"Dengan Premium momen ini masuk ke halaman Starpedia dan dokumenter kariermu; iklan interstisial hilang dan hadiah langsung didapat.": [
+"lang-id.js"
+],
+"Penampilan pertamamu untuk timnas! Premium membuka lencana verifikasi emas dan halaman Starpedia-mu; iklan interstisial hilang dan hadiah langsung didapat.": [
+"lang-id.js"
+],
+"Penampilan pertamamu untuk timnas!": [
+"lang-id.js"
+],
+"Premium membuka lencana verifikasi emas dan halaman Starpedia-mu; iklan interstisial hilang dan hadiah langsung didapat.": [
+"lang-id.js"
+],
+"Jatah percepat gratismu sudah habis. Premium+ memberi percepat tanpa batas, batalkan pertandingan buruk, dan banyak lagi. Besok kamu bisa menonton iklan untuk 1 lagi.": [
+"lang-id.js"
+],
+"Jatah percepat gratismu sudah habis.": [
+"lang-id.js"
+],
+"Premium+ memberi percepat tanpa batas, batalkan pertandingan buruk, dan banyak lagi.": [
+"lang-id.js"
+],
+"Besok kamu bisa menonton iklan untuk 1 lagi.": [
+"lang-id.js"
+],
+"⏩ Jatah percepat gratis habis": [
+"lang-id.js"
+],
+"Jatah percepat gratis habis": [
+"lang-id.js"
+],
+"Kamu sudah memakai 10 jatah percepat gratis. Tonton iklan sekali sehari untuk 1 lagi, atau tanpa batas dengan Premium+.": [
+"lang-id.js"
+],
+"Kamu sudah memakai 10 jatah percepat gratis.": [
+"lang-id.js"
+],
+"Tonton iklan sekali sehari untuk 1 lagi, atau tanpa batas dengan Premium+.": [
+"lang-id.js"
+],
+"Tonton iklan · 1 lagi": [
+"lang-id.js"
+],
+"+1 percepat": [
+"lang-id.js"
+],
+"Premium+ · tanpa batas": [
+"lang-id.js"
+],
+"Sisa gratis:": [
+"lang-id.js"
+],
+"Dari iklan:": [
+"lang-id.js"
+],
+"· tanpa batas dengan Premium+": [
+"lang-id.js"
+],
+"Kisah lengkap kariermu ada di Premium": [
+"lang-id.js"
+],
+"Halaman Starpedia-mu selalu terbuka, diperbarui tiap musim, dan kamu yang menulis bagiannya.": [
+"lang-id.js"
+],
+"Semua pemain mendapat 10 percepat gratis. Jika habis, tonton iklan sekali sehari untuk 1 lagi.": [
+"lang-id.js"
+],
+"Semua pemain mendapat 10 percepat gratis.": [
+"lang-id.js"
+],
+"Jika habis, tonton iklan sekali sehari untuk 1 lagi.": [
+"lang-id.js"
+],
+"Pratinjau Starpedia": [
+"lang-id.js"
+],
+"Bagian atas halaman Starpedia-mu selalu terlihat; halaman lengkap terbuka dengan Premium.": [
 "lang-id.js"
 ],
 "— kita lolos!": [
@@ -414720,6 +416219,57 @@
 "PIALA INDIA": [
 "lang-id.js"
 ],
+"LIGA INDIA": [
+"lang-id.js"
+],
+"· 1 LAGI": [
+"lang-id.js"
+],
+"SEMUA DALAM SATU:": [
+"lang-id.js"
+],
+"KAMU MENGANGKAT TROFI!": [
+"lang-id.js"
+],
+"PENAMPILAN PERTAMAMU UNTUK TIMNAS!": [
+"lang-id.js"
+],
+"JATAH PERCEPAT GRATISMU SUDAH HABIS.": [
+"lang-id.js"
+],
+"⏩ JATAH PERCEPAT GRATIS HABIS": [
+"lang-id.js"
+],
+"JATAH PERCEPAT GRATIS HABIS": [
+"lang-id.js"
+],
+"TONTON IKLAN · 1 LAGI": [
+"lang-id.js"
+],
+"+1 PERCEPAT": [
+"lang-id.js"
+],
+"PREMIUM+ · TANPA BATAS": [
+"lang-id.js"
+],
+"SISA GRATIS:": [
+"lang-id.js"
+],
+"DARI IKLAN:": [
+"lang-id.js"
+],
+"· TANPA BATAS DENGAN PREMIUM+": [
+"lang-id.js"
+],
+"KISAH LENGKAP KARIERMU ADA DI PREMIUM": [
+"lang-id.js"
+],
+"10 PERCEPAT GRATIS": [
+"lang-id.js"
+],
+"PRATINJAU STARPEDIA": [
+"lang-id.js"
+],
 "— KITA LOLOS!": [
 "lang-id.js"
 ],
@@ -418882,6 +420432,9 @@
 "{} mencoba peruntungan dari luar kotak, bola melambung.": [
 "lang-id.js"
 ],
+"Premium, Premium+, Pelatih, dan semua mode dalam sekali beli{}": [
+"lang-id.js"
+],
 "{} dibuka. Belum ada tawaran; bermainlah bagus dan mungkin ada yang mengetuk pintu.": [
 "lang-id.js"
 ],
@@ -420013,6 +421566,9 @@
 "{} menendang, kamu yang jaga gawang": [
 "lang-id.js"
 ],
+"{} Kisah lengkap kariermu ada di Premium": [
+"lang-id.js"
+],
 "{} assist: rekan setimmu berterima kasih": [
 "lang-id.js"
 ],
@@ -420826,6 +422382,9 @@
 "{} Duduk bernegosiasi bersama agenmu": [
 "lang-id.js"
 ],
+"{} · tanpa batas dengan Premium+": [
+"lang-id.js"
+],
 "Ibumu terharu. ({})": [
 "lang-id.js"
 ],
@@ -421199,6 +422758,12 @@
 "lang-id.js"
 ],
 "{} poin · {} laga · {}M {}S {}K": [
+"lang-id.js"
+],
+"{} Tonton iklan · 1 lagi": [
+"lang-id.js"
+],
+"{} Premium+ · tanpa batas": [
 "lang-id.js"
 ],
 "Kamu mencetak {} gol tendangan bebas": [
@@ -421797,6 +423362,9 @@
 "lang-id.js"
 ],
 "{} · Laga {} • {} - {}": [
+"lang-id.js"
+],
+"{} Lihat Premium": [
 "lang-id.js"
 ],
 "{} Rencana Mingguan": [
@@ -435489,6 +437057,102 @@
 "Coppa d’India": [
 "lang-it.js"
 ],
+"Campionati indiani": [
+"lang-it.js"
+],
+"In India: la Lega Tigre a 16 squadre, la Lega Tigre 2 a 14 squadre e la Coppa d’India. Le prime 2 vanno alla Coppa dei Campioni d’Asia.": [
+"lang-it.js"
+],
+"· 1 in più": [
+"lang-it.js"
+],
+"Tutto in uno:": [
+"lang-it.js"
+],
+"Hai alzato il trofeo! Con Premium questo momento entra nella tua pagina Starpedia e nel tuo documentario; spariscono le pubblicità interstitial e i premi arrivano subito.": [
+"lang-it.js"
+],
+"Hai alzato il trofeo!": [
+"lang-it.js"
+],
+"Con Premium questo momento entra nella tua pagina Starpedia e nel tuo documentario; spariscono le pubblicità interstitial e i premi arrivano subito.": [
+"lang-it.js"
+],
+"La tua prima presenza in nazionale! Premium sblocca il badge dorato verificato e la tua pagina Starpedia; spariscono le pubblicità interstitial e i premi arrivano subito.": [
+"lang-it.js"
+],
+"La tua prima presenza in nazionale!": [
+"lang-it.js"
+],
+"Premium sblocca il badge dorato verificato e la tua pagina Starpedia; spariscono le pubblicità interstitial e i premi arrivano subito.": [
+"lang-it.js"
+],
+"Gli avanzamenti rapidi gratuiti sono finiti. Premium+ offre avanzamento rapido illimitato, annulla una brutta partita e molto altro. Domani puoi guardare una pubblicità per averne 1 in più.": [
+"lang-it.js"
+],
+"Gli avanzamenti rapidi gratuiti sono finiti.": [
+"lang-it.js"
+],
+"Premium+ offre avanzamento rapido illimitato, annulla una brutta partita e molto altro.": [
+"lang-it.js"
+],
+"Domani puoi guardare una pubblicità per averne 1 in più.": [
+"lang-it.js"
+],
+"⏩ Avanzamenti rapidi gratuiti finiti": [
+"lang-it.js"
+],
+"Avanzamenti rapidi gratuiti finiti": [
+"lang-it.js"
+],
+"Hai usato i tuoi 10 avanzamenti rapidi gratuiti. Guarda una pubblicità una volta al giorno per averne 1 in più o vai senza limiti con Premium+.": [
+"lang-it.js"
+],
+"Hai usato i tuoi 10 avanzamenti rapidi gratuiti.": [
+"lang-it.js"
+],
+"Guarda una pubblicità una volta al giorno per averne 1 in più o vai senza limiti con Premium+.": [
+"lang-it.js"
+],
+"Guarda pubblicità · 1 in più": [
+"lang-it.js"
+],
+"+1 avanzamento rapido": [
+"lang-it.js"
+],
+"Premium+ · illimitato": [
+"lang-it.js"
+],
+"Gratuiti rimasti:": [
+"lang-it.js"
+],
+"Guadagnati con pubblicità:": [
+"lang-it.js"
+],
+"· illimitato con Premium+": [
+"lang-it.js"
+],
+"Tutta la storia della tua carriera è in Premium": [
+"lang-it.js"
+],
+"La tua pagina Starpedia è sempre aperta, si aggiorna ogni stagione e le sezioni le scrivi tu.": [
+"lang-it.js"
+],
+"Tutti ricevono 10 avanzamenti rapidi gratuiti. Quando finiscono, guarda una pubblicità una volta al giorno per averne 1 in più.": [
+"lang-it.js"
+],
+"Tutti ricevono 10 avanzamenti rapidi gratuiti.": [
+"lang-it.js"
+],
+"Quando finiscono, guarda una pubblicità una volta al giorno per averne 1 in più.": [
+"lang-it.js"
+],
+"Anteprima Starpedia": [
+"lang-it.js"
+],
+"Vedi sempre la parte alta della tua pagina Starpedia; la pagina completa si apre con Premium.": [
+"lang-it.js"
+],
 "— ci siamo qualificati!": [
 "lang-it.js"
 ],
@@ -449070,6 +450734,57 @@
 "COPPA D’INDIA": [
 "lang-it.js"
 ],
+"CAMPIONATI INDIANI": [
+"lang-it.js"
+],
+"· 1 IN PIÙ": [
+"lang-it.js"
+],
+"TUTTO IN UNO:": [
+"lang-it.js"
+],
+"HAI ALZATO IL TROFEO!": [
+"lang-it.js"
+],
+"LA TUA PRIMA PRESENZA IN NAZIONALE!": [
+"lang-it.js"
+],
+"GLI AVANZAMENTI RAPIDI GRATUITI SONO FINITI.": [
+"lang-it.js"
+],
+"⏩ AVANZAMENTI RAPIDI GRATUITI FINITI": [
+"lang-it.js"
+],
+"AVANZAMENTI RAPIDI GRATUITI FINITI": [
+"lang-it.js"
+],
+"GUARDA PUBBLICITÀ · 1 IN PIÙ": [
+"lang-it.js"
+],
+"+1 AVANZAMENTO RAPIDO": [
+"lang-it.js"
+],
+"PREMIUM+ · ILLIMITATO": [
+"lang-it.js"
+],
+"GRATUITI RIMASTI:": [
+"lang-it.js"
+],
+"GUADAGNATI CON PUBBLICITÀ:": [
+"lang-it.js"
+],
+"· ILLIMITATO CON PREMIUM+": [
+"lang-it.js"
+],
+"TUTTA LA STORIA DELLA TUA CARRIERA È IN PREMIUM": [
+"lang-it.js"
+],
+"10 AVANZAMENTI RAPIDI GRATUITI": [
+"lang-it.js"
+],
+"ANTEPRIMA STARPEDIA": [
+"lang-it.js"
+],
 "— CI SIAMO QUALIFICATI!": [
 "lang-it.js"
 ],
@@ -453228,6 +454943,9 @@
 "{} tenta la sorte da fuori, palla alta.": [
 "lang-it.js"
 ],
+"Premium, Premium+, Allenatore e tutte le modalità in un solo acquisto{}": [
+"lang-it.js"
+],
 "{} è aperto. Ancora nessuna offerta; gioca bene e qualcuno potrebbe bussare.": [
 "lang-it.js"
 ],
@@ -454359,6 +456077,9 @@
 "{} calcia, in porta ci sei tu": [
 "lang-it.js"
 ],
+"{} Tutta la storia della tua carriera è in Premium": [
+"lang-it.js"
+],
 "{} assist: i tuoi compagni ti ringraziano": [
 "lang-it.js"
 ],
@@ -455172,6 +456893,9 @@
 "{} Siediti al tavolo con il tuo procuratore": [
 "lang-it.js"
 ],
+"{} · illimitato con Premium+": [
+"lang-it.js"
+],
 "Tua madre si è commossa. ({})": [
 "lang-it.js"
 ],
@@ -455548,6 +457272,12 @@
 "lang-it.js"
 ],
 "{} punti · {} partite · {}V {}N {}P": [
+"lang-it.js"
+],
+"{} Guarda pubblicità · 1 in più": [
+"lang-it.js"
+],
+"{} Premium+ · illimitato": [
 "lang-it.js"
 ],
 "Hai segnato {} gol su punizione": [
@@ -456145,6 +457875,9 @@
 "lang-it.js"
 ],
 "{} · Partita {} • {} - {}": [
+"lang-it.js"
+],
+"{} Scopri Premium": [
 "lang-it.js"
 ],
 "{} Programma settimanale": [
@@ -457773,6 +459506,27 @@
 "StarFootが簡体字中国語に対応しました。ゲームは11言語で遊べます。": [
 "lang-ja.js"
 ],
+"トロフィーを掲げた！プレミアムならこの瞬間がStarpediaページとキャリアドキュメンタリーに残り、インタースティシャル広告が消え、報酬もすぐ届きます。": [
+"lang-ja.js"
+],
+"プレミアムならこの瞬間がStarpediaページとキャリアドキュメンタリーに残り、インタースティシャル広告が消え、報酬もすぐ届きます。": [
+"lang-ja.js"
+],
+"代表デビュー！プレミアムで金の認証バッジとStarpediaページが開放され、インタースティシャル広告が消え、報酬もすぐ届きます。": [
+"lang-ja.js"
+],
+"プレミアムで金の認証バッジとStarpediaページが開放され、インタースティシャル広告が消え、報酬もすぐ届きます。": [
+"lang-ja.js"
+],
+"Starpediaページはいつでも開けて、毎シーズン自動で更新され、各セクションは自分で書けます。": [
+"lang-ja.js"
+],
+"Starpediaプレビュー": [
+"lang-ja.js"
+],
+"Starpediaページの上部はいつでも見られます。全ページはプレミアムで開放。": [
+"lang-ja.js"
+],
 "（PK戦）": [
 "lang-ja.js"
 ],
@@ -458036,6 +459790,9 @@
 "lang-ja.js"
 ],
 "STARVALUEがスマホに": [
+"lang-ja.js"
+],
+"STARPEDIAプレビュー": [
 "lang-ja.js"
 ],
 "STARFOOT ワールドサービス": [
@@ -470700,6 +472457,102 @@
 "lang-pt.js"
 ],
 "Taça da Índia": [
+"lang-pt.js"
+],
+"Ligas da Índia": [
+"lang-pt.js"
+],
+"Na Índia: a Liga Tigre com 16 equipes, a Liga Tigre 2 com 14 equipes e a Taça da Índia. Os 2 primeiros vão à Copa dos Campeões da Ásia.": [
+"lang-pt.js"
+],
+"· 1 a mais": [
+"lang-pt.js"
+],
+"Tudo em um:": [
+"lang-pt.js"
+],
+"Você levantou a taça! Com Premium este momento entra na sua página da Starpedia e no seu documentário; os anúncios intersticiais somem e as recompensas chegam na hora.": [
+"lang-pt.js"
+],
+"Você levantou a taça!": [
+"lang-pt.js"
+],
+"Com Premium este momento entra na sua página da Starpedia e no seu documentário; os anúncios intersticiais somem e as recompensas chegam na hora.": [
+"lang-pt.js"
+],
+"Seu primeiro jogo pela seleção! O Premium libera seu selo dourado de verificação e sua página da Starpedia; os anúncios intersticiais somem e as recompensas chegam na hora.": [
+"lang-pt.js"
+],
+"Seu primeiro jogo pela seleção!": [
+"lang-pt.js"
+],
+"O Premium libera seu selo dourado de verificação e sua página da Starpedia; os anúncios intersticiais somem e as recompensas chegam na hora.": [
+"lang-pt.js"
+],
+"Seus avanços rápidos grátis acabaram. O Premium+ dá avanço rápido ilimitado, desfazer um jogo ruim e muito mais. Amanhã você pode ver um anúncio para ganhar mais 1.": [
+"lang-pt.js"
+],
+"Seus avanços rápidos grátis acabaram.": [
+"lang-pt.js"
+],
+"O Premium+ dá avanço rápido ilimitado, desfazer um jogo ruim e muito mais.": [
+"lang-pt.js"
+],
+"Amanhã você pode ver um anúncio para ganhar mais 1.": [
+"lang-pt.js"
+],
+"⏩ Avanços rápidos grátis acabaram": [
+"lang-pt.js"
+],
+"Avanços rápidos grátis acabaram": [
+"lang-pt.js"
+],
+"Você usou seus 10 avanços rápidos grátis. Veja um anúncio uma vez por dia para ganhar mais 1 ou jogue sem limites com o Premium+.": [
+"lang-pt.js"
+],
+"Você usou seus 10 avanços rápidos grátis.": [
+"lang-pt.js"
+],
+"Veja um anúncio uma vez por dia para ganhar mais 1 ou jogue sem limites com o Premium+.": [
+"lang-pt.js"
+],
+"Ver anúncio · mais 1": [
+"lang-pt.js"
+],
+"+1 avanço rápido": [
+"lang-pt.js"
+],
+"Grátis restantes:": [
+"lang-pt.js"
+],
+"Ganhos com anúncios:": [
+"lang-pt.js"
+],
+"· ilimitado com Premium+": [
+"lang-pt.js"
+],
+"A história completa da sua carreira está no Premium": [
+"lang-pt.js"
+],
+"Sua página da Starpedia fica sempre aberta, se atualiza a cada temporada e você escreve as seções.": [
+"lang-pt.js"
+],
+"10 avanços rápidos grátis": [
+"lang-pt.js"
+],
+"Todos ganham 10 avanços rápidos grátis. Quando acabarem, veja um anúncio uma vez por dia para ganhar mais 1.": [
+"lang-pt.js"
+],
+"Todos ganham 10 avanços rápidos grátis.": [
+"lang-pt.js"
+],
+"Quando acabarem, veja um anúncio uma vez por dia para ganhar mais 1.": [
+"lang-pt.js"
+],
+"Prévia da Starpedia": [
+"lang-pt.js"
+],
+"Você sempre vê o topo da sua página da Starpedia; a página completa abre com o Premium.": [
 "lang-pt.js"
 ],
 "— nos classificamos!": [
@@ -483986,6 +485839,54 @@
 "TAÇA DA ÍNDIA": [
 "lang-pt.js"
 ],
+"LIGAS DA ÍNDIA": [
+"lang-pt.js"
+],
+"· 1 A MAIS": [
+"lang-pt.js"
+],
+"TUDO EM UM:": [
+"lang-pt.js"
+],
+"VOCÊ LEVANTOU A TAÇA!": [
+"lang-pt.js"
+],
+"SEU PRIMEIRO JOGO PELA SELEÇÃO!": [
+"lang-pt.js"
+],
+"SEUS AVANÇOS RÁPIDOS GRÁTIS ACABARAM.": [
+"lang-pt.js"
+],
+"⏩ AVANÇOS RÁPIDOS GRÁTIS ACABARAM": [
+"lang-pt.js"
+],
+"AVANÇOS RÁPIDOS GRÁTIS ACABARAM": [
+"lang-pt.js"
+],
+"VER ANÚNCIO · MAIS 1": [
+"lang-pt.js"
+],
+"+1 AVANÇO RÁPIDO": [
+"lang-pt.js"
+],
+"GRÁTIS RESTANTES:": [
+"lang-pt.js"
+],
+"GANHOS COM ANÚNCIOS:": [
+"lang-pt.js"
+],
+"· ILIMITADO COM PREMIUM+": [
+"lang-pt.js"
+],
+"A HISTÓRIA COMPLETA DA SUA CARREIRA ESTÁ NO PREMIUM": [
+"lang-pt.js"
+],
+"10 AVANÇOS RÁPIDOS GRÁTIS": [
+"lang-pt.js"
+],
+"PRÉVIA DA STARPEDIA": [
+"lang-pt.js"
+],
 "— NOS CLASSIFICAMOS!": [
 "lang-pt.js"
 ],
@@ -488036,6 +489937,9 @@
 "{} arriscou de fora da área, a bola foi por cima.": [
 "lang-pt.js"
 ],
+"Premium, Premium+, Técnico e todos os modos em uma só compra{}": [
+"lang-pt.js"
+],
 "{} está aberta. Ainda sem ofertas; jogue bem e alguém pode bater na porta.": [
 "lang-pt.js"
 ],
@@ -489167,6 +491071,9 @@
 "{} vai bater, você está no gol": [
 "lang-pt.js"
 ],
+"{} A história completa da sua carreira está no Premium": [
+"lang-pt.js"
+],
 "{} assistências: seus companheiros agradecem": [
 "lang-pt.js"
 ],
@@ -489980,6 +491887,9 @@
 "{} Sente-se à mesa com seu empresário": [
 "lang-pt.js"
 ],
+"{} · ilimitado com Premium+": [
+"lang-pt.js"
+],
 "Sua mãe ficou emocionada. ({})": [
 "lang-pt.js"
 ],
@@ -490347,6 +492257,9 @@
 "lang-pt.js"
 ],
 "{} pts · {} jogos · {}V {}E {}D": [
+"lang-pt.js"
+],
+"{} Ver anúncio · mais 1": [
 "lang-pt.js"
 ],
 "Você marcou {} gols de falta": [
@@ -491328,6 +493241,9 @@
 "lang-pt.js"
 ],
 "{} · {} · {} ANOS": [
+"lang-pt.js"
+],
+"Grátis {}/{}": [
 "lang-pt.js"
 ],
 "({}º lugar)": [
@@ -492422,6 +494338,27 @@
 "StarFoot 现已支持简体中文，游戏共支持 11 种语言。": [
 "lang-zh.js"
 ],
+"你捧起了奖杯！有了高级版，这一刻会写进你的 Starpedia 页面和职业纪录片；插屏广告消失，奖励即时到账。": [
+"lang-zh.js"
+],
+"有了高级版，这一刻会写进你的 Starpedia 页面和职业纪录片；插屏广告消失，奖励即时到账。": [
+"lang-zh.js"
+],
+"你的国家队首秀！高级版解锁金色认证徽章和 Starpedia 页面；插屏广告消失，奖励即时到账。": [
+"lang-zh.js"
+],
+"高级版解锁金色认证徽章和 Starpedia 页面；插屏广告消失，奖励即时到账。": [
+"lang-zh.js"
+],
+"你的 Starpedia 页面始终开放，每赛季自动更新，各部分由你书写。": [
+"lang-zh.js"
+],
+"Starpedia 预览": [
+"lang-zh.js"
+],
+"你始终可以查看 Starpedia 页面的顶部；完整页面需高级版。": [
+"lang-zh.js"
+],
 "这孩子会成为下一个 Mezzi": [
 "lang-zh.js"
 ],
@@ -492741,6 +494678,9 @@
 "lang-zh.js"
 ],
 "手机上的 STARVALUE": [
+"lang-zh.js"
+],
+"STARPEDIA 预览": [
 "lang-zh.js"
 ],
 "这孩子会成为下一个 MEZZI": [
@@ -509707,6 +511647,12 @@
 "{}maçtan sonra olan her şey silinir; maç öncesine dönersin. Bu sezon için tek hakkın.": [
 "plusx.js"
 ],
+"⏩ Hızlı ilerle": [
+"plusx.js"
+],
+"Hızlı ilerleme lig maçları başlayınca açılır.": [
+"plusx.js"
+],
 "Odak: {}": [
 "plusx.js"
 ],
@@ -509895,12 +511841,6 @@
 "star.js"
 ],
 "{} Lüks Yaşam Vitrini": [
-"star.js"
-],
-"Hindistan ligleri": [
-"star.js"
-],
-"Hindistan’da 16 takımlı Kaplan Ligi, 14 takımlı Kaplan 2. Ligi ve Hindistan Kupası. İlk 2, Asya Şampiyonlar Kupası’na gider.": [
 "star.js"
 ],
 "Attığın golü ağır çekimde yeniden izle. \"Geç\" ile atla ya da Ayarlar’dan kapat.": [
