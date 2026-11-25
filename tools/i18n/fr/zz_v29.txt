@@ -4,3 +4,5 @@
 10525|TIGRES 2
 10526|Coupe d’Inde
 10527|Bombay
+10558|Ligues indiennes
+10559|En Inde : la Ligue des Tigres à 16 équipes, la Ligue des Tigres 2 à 14 équipes et la Coupe d’Inde. Les 2 premiers se qualifient pour la Coupe des champions d’Asie.

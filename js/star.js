@@ -612,9 +612,9 @@ document.addEventListener('click', (e) => {
 });
 
 // ---------- Güncelleme duyurusu (her sürümde bir kez) ----------
-const APP_VER = '1.0.28';
+const APP_VER = '1.0.29';
 // Duyuru içeriğinin sürümü: yeni duyuru yazılınca güncellenir (yalnız sürüm atlamak tekrar göstermez)
-const WN_VER = '1.0.28';
+const WN_VER = '1.0.29';
 const WhatsNew = {
   KEY: 'starfoot_whatsnew',
   // Hub'a girişte bir kez gösterir; gösterdiyse true döner. done(): pencere kapanınca çalışır.
@@ -632,6 +632,9 @@ const WhatsNew = {
   // Duyuruyu gösterir (Ayarlar'dan yeniden açılabilir): bu ve bir önceki güncelleme, geçmiş gibi
   show(done) {
     const it = (ic, t, d) => `<li><i data-emo>${ic}</i><span><b>${t}</b><small>${d}</small></span></li>`;
+    const v29 = [
+      it('🇮🇳', 'Hindistan ligleri', 'Hindistan’da 16 takımlı Kaplan Ligi, 14 takımlı Kaplan 2. Ligi ve Hindistan Kupası. İlk 2, Asya Şampiyonlar Kupası’na gider.'),
+    ].join('');
     const v28 = [
       it('🇨🇳', 'Çince', 'StarFoot artık Basitleştirilmiş Çince de oynanabiliyor; oyun 11 dilde.'),
       it('🐉', 'Çin ligleri', 'Çin’de 16 takımlı Ejder Ligi, 14 takımlı Ejder 2. Ligi ve Çin Kupası. İlk 4, Asya Şampiyonlar Kupası’na gider.'),
@@ -678,11 +681,11 @@ const WhatsNew = {
     Game.modal(`<div class="wn"><div class="ev-tag">Güncelleme geçmişi</div>
       <h2>Yenilikler 🚀</h2>
       <div class="wn-v"><b>${WN_VER}</b><small>Bu güncelleme</small></div>
-      <ul class="wn-l">${v28}</ul>
-      <div class="wn-v old"><b>1.0.27</b><small>Önceki güncelleme</small></div>
+      <ul class="wn-l">${v29}</ul>
+      <div class="wn-v old"><b>1.0.28</b><small>Önceki güncelleme</small></div>
+      <ul class="wn-l old">${v28}</ul>
+      <div class="wn-v old"><b>1.0.27</b></div>
       <ul class="wn-l old">${v27}</ul>
-      <div class="wn-v old"><b>1.0.26</b></div>
-      <ul class="wn-l old">${v26}</ul>
       <p class="wn-note ok">Diamond’a eklenenlerin hiçbiri maçta güç vermez; ücretsiz oyunda hiçbir şey değişmedi.</p>
       <p class="wn-note">Teknik Direktör modu yepyeni bir fikir ve her güncellemede gelişmeye devam edecek. Fikirlerini bekliyoruz!</p></div>`, btns, { wide: true });
     if (typeof Premium !== 'undefined') Premium.track('whatsnew_view', { ver: WN_VER, premium: has ? 1 : 0 });

@@ -17589,7 +17589,17 @@
 "data.js"
 ],
 "Hindistan Kupası": [
-"cups.js"
+"cups.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "Avrupa Şampiyonlar Kupası": [
 "cups.js",
@@ -20011,7 +20021,17 @@
 "lang-zh.js"
 ],
 "Kaplan Ligi": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "Hindistan": [
 "data.js",
@@ -20028,7 +20048,17 @@
 "wc.js"
 ],
 "Kaplan 2. Ligi": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "GAL": [
 "data.js",
@@ -28384,7 +28414,17 @@
 "data.js"
 ],
 "Mumbai Kaplanları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "MUM": [
 "data.js"
@@ -28397,25 +28437,65 @@
 "data.js"
 ],
 "Kalküta Kartalları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "BGB": [
 "data.js"
 ],
 "Bengaluru Mavileri": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "GOA": [
 "data.js"
 ],
 "Goa Dalgaları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "KRB": [
 "data.js"
 ],
 "Kerala Filleri": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "KER": [
 "data.js"
@@ -28424,13 +28504,33 @@
 "data.js"
 ],
 "Haydarabad İncileri": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "CNK": [
 "data.js"
 ],
 "Chennai Kaplanları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "MAA": [
 "data.js"
@@ -28439,7 +28539,17 @@
 "data.js"
 ],
 "Delhi Muhafızları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "DEL": [
 "data.js"
@@ -28448,13 +28558,33 @@
 "data.js"
 ],
 "Jamshedpur Demircileri": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "OIL": [
 "data.js"
 ],
 "Odisha Yıldızları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "ODI": [
 "data.js"
@@ -28463,7 +28593,17 @@
 "data.js"
 ],
 "Kuzeydoğu Gergedanları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "NEU": [
 "data.js",
@@ -28473,13 +28613,33 @@
 "data.js"
 ],
 "Pencap Aslanları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "MMB": [
 "data.js"
 ],
 "Mohun Yeşil-Bordo": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "MOH": [
 "data.js"
@@ -28488,7 +28648,17 @@
 "data.js"
 ],
 "Doğu Bengal Meşalesi": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "EBE": [
 "data.js"
@@ -28497,7 +28667,17 @@
 "data.js"
 ],
 "Şillong Bulutları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "SHI": [
 "data.js"
@@ -28506,7 +28686,17 @@
 "data.js"
 ],
 "Aizawl Dağlıları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "AIZ": [
 "data.js"
@@ -28515,19 +28705,49 @@
 "data.js"
 ],
 "Pune Şehri": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "AHM": [
 "data.js"
 ],
 "Ahmedabad Güneşi": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "JPR": [
 "data.js"
 ],
 "Jaipur Pembeleri": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "JAI": [
 "data.js"
@@ -28536,7 +28756,17 @@
 "data.js"
 ],
 "Lucknow Nawabları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "LUC": [
 "data.js"
@@ -28545,13 +28775,33 @@
 "data.js"
 ],
 "İmfal Savaşçıları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "KZK": [
 "data.js"
 ],
 "Kozhikode Gemicileri": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "KOZ": [
 "data.js"
@@ -28560,19 +28810,49 @@
 "data.js"
 ],
 "Madurai Tapınağı": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "NGP": [
 "data.js"
 ],
 "Nagpur Portakalları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "BHP": [
 "data.js"
 ],
 "Bhopal Gölleri": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "BHO": [
 "data.js"
@@ -28581,7 +28861,17 @@
 "data.js"
 ],
 "Visakhapatnam Limanı": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "VIZ": [
 "data.js"
@@ -28590,13 +28880,33 @@
 "data.js"
 ],
 "Surat Elmasları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "GTK": [
 "data.js"
 ],
 "Gangtok Zirvesi": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "GAN": [
 "data.js"
@@ -28605,13 +28915,33 @@
 "data.js"
 ],
 "Ranchi Ormanları": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "CDG": [
 "data.js"
 ],
 "Chandigarh Bahçeleri": [
-"data.js"
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "SLZ": [
 "data.js"
@@ -121450,6 +121780,45 @@
 "lang-zh.js",
 "star.js"
 ],
+"KAPLAN LİGİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"weather.js"
+],
+"KAPLAN 2": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"weather.js"
+],
+"Mumbai": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"socialart.js"
+],
 "(Asist)": [
 "lang-ar.js",
 "lang-de.js",
@@ -138001,6 +138370,336 @@
 "lang-pt.js"
 ],
 "Nanning Greens": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Mumbai Tigers": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Kolkata Eagles": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Bengaluru Blues": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Goa Waves": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Kerala Elephants": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Hyderabad Pearls": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Chennai Tigers": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Delhi Guardians": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Jamshedpur Ironmen": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Odisha Stars": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Northeast Rhinos": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Punjab Lions": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Mohun Green-Maroons": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"East Bengal Torch": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Shillong Clouds": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Aizawl Highlanders": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Pune City": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Ahmedabad Suns": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Jaipur Pinks": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Lucknow Nawabs": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Imphal Warriors": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Kozhikode Sailors": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Madurai Temple": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Nagpur Oranges": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Bhopal Lakes": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Visakhapatnam Harbour": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Surat Diamonds": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Gangtok Summit": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Ranchi Forests": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"Chandigarh Gardens": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -195510,6 +196209,42 @@
 "lang-pt.js",
 "lang-zh.js"
 ],
+"KAPLAN 2. LİGİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"HİNDİSTAN KUPASI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"MUMBAİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -223838,6 +224573,696 @@
 "lang-zh.js"
 ],
 "NANNING GREENS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MUMBAİ KAPLANLARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"MUMBAI TIGERS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KALKÜTA KARTALLARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"KOLKATA EAGLES": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BENGALURU MAVİLERİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"BENGALURU BLUES": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GOA DALGALARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"GOA WAVES": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KERALA FİLLERİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"KERALA ELEPHANTS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"HAYDARABAD İNCİLERİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"HYDERABAD PEARLS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"CHENNAİ KAPLANLARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"CHENNAI TIGERS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DELHİ MUHAFIZLARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"DELHI GUARDIANS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"JAMSHEDPUR DEMİRCİLERİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"JAMSHEDPUR IRONMEN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ODİSHA YILDIZLARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"ODISHA STARS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KUZEYDOĞU GERGEDANLARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"NORTHEAST RHINOS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"PENCAP ASLANLARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"PUNJAB LIONS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MOHUN YEŞİL-BORDO": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"MOHUN GREEN-MAROONS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"DOĞU BENGAL MEŞALESİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"EAST BENGAL TORCH": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"ŞİLLONG BULUTLARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"SHILLONG CLOUDS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"AİZAWL DAĞLILARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"AIZAWL HIGHLANDERS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"PUNE ŞEHRİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"PUNE CITY": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"AHMEDABAD GÜNEŞİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"AHMEDABAD SUNS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"JAİPUR PEMBELERİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"JAIPUR PINKS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"LUCKNOW NAWABLARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"LUCKNOW NAWABS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"İMFAL SAVAŞÇILARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"IMPHAL WARRIORS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"KOZHİKODE GEMİCİLERİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"KOZHIKODE SAILORS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"MADURAİ TAPINAĞI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"MADURAI TEMPLE": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"NAGPUR PORTAKALLARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"NAGPUR ORANGES": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"BHOPAL GÖLLERİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"BHOPAL LAKES": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"VİSAKHAPATNAM LİMANI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"VISAKHAPATNAM HARBOUR": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"SURAT ELMASLARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"SURAT DIAMONDS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"GANGTOK ZİRVESİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"GANGTOK SUMMIT": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"RANCHİ ORMANLARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"RANCHI FORESTS": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js"
+],
+"CHANDİGARH BAHÇELERİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"CHANDIGARH GARDENS": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -257251,6 +258676,22 @@
 "Tabellenköpfe, Abkürzungen, die Spielkarte und Schussarten wurden in allen Sprachen korrigiert.": [
 "lang-de.js"
 ],
+"Tiger-Liga": [
+"lang-de.js"
+],
+"Tiger-Liga 2": [
+"lang-de.js"
+],
+"TIGER-LIGA": [
+"lang-de.js"
+],
+"TIGER 2": [
+"lang-de.js",
+"lang-en.js"
+],
+"Indien-Pokal": [
+"lang-de.js"
+],
 "– wir haben uns qualifiziert!": [
 "lang-de.js"
 ],
@@ -272218,6 +273659,19 @@
 ],
 "ÜBERSETZUNGSKORREKTUREN": [
 "lang-de.js"
+],
+"TIGER-LIGA 2": [
+"lang-de.js"
+],
+"INDIEN-POKAL": [
+"lang-de.js"
+],
+"MUMBAI": [
+"lang-de.js",
+"lang-en.js",
+"lang-id.js",
+"lang-it.js",
+"lang-pt.js"
 ],
 "– WIR HABEN UNS QUALIFIZIERT!": [
 "lang-de.js"
@@ -293698,6 +295152,18 @@
 "Table headers, abbreviations, the match card and shot types are fixed in every language.": [
 "lang-en.js"
 ],
+"Tiger League": [
+"lang-en.js"
+],
+"Tiger League 2": [
+"lang-en.js"
+],
+"TIGER LEAGUE": [
+"lang-en.js"
+],
+"India Cup": [
+"lang-en.js"
+],
 "— we qualified!": [
 "lang-en.js"
 ],
@@ -307885,6 +309351,12 @@
 "lang-en.js"
 ],
 "TRANSLATION FIXES": [
+"lang-en.js"
+],
+"TIGER LEAGUE 2": [
+"lang-en.js"
+],
+"INDIA CUP": [
 "lang-en.js"
 ],
 "— WE QUALIFIED!": [
@@ -329493,6 +330965,30 @@
 "Se corrigieron en todos los idiomas los encabezados de la tabla, las abreviaturas, la ficha del partido y los tipos de disparo.": [
 "lang-es.js"
 ],
+"Liga Tigre": [
+"lang-es.js",
+"lang-pt.js"
+],
+"Liga Tigre 2": [
+"lang-es.js",
+"lang-pt.js"
+],
+"LIGA TIGRE": [
+"lang-es.js",
+"lang-pt.js"
+],
+"TIGRE 2": [
+"lang-es.js",
+"lang-it.js",
+"lang-pt.js"
+],
+"Copa de la India": [
+"lang-es.js"
+],
+"Bombay": [
+"lang-es.js",
+"lang-fr.js"
+],
 "— ¡nos hemos clasificado!": [
 "lang-es.js"
 ],
@@ -343801,6 +345297,17 @@
 ],
 "CORRECCIONES DE TRADUCCIÓN": [
 "lang-es.js"
+],
+"LIGA TIGRE 2": [
+"lang-es.js",
+"lang-pt.js"
+],
+"COPA DE LA INDIA": [
+"lang-es.js"
+],
+"BOMBAY": [
+"lang-es.js",
+"lang-fr.js"
 ],
 "— ¡NOS HEMOS CLASIFICADO!": [
 "lang-es.js"
@@ -365038,6 +366545,21 @@
 "Les en-têtes du classement, les abréviations, la fiche du match et les types de tir sont corrigés dans toutes les langues.": [
 "lang-fr.js"
 ],
+"Ligue des Tigres": [
+"lang-fr.js"
+],
+"Ligue des Tigres 2": [
+"lang-fr.js"
+],
+"LIGUE DES TIGRES": [
+"lang-fr.js"
+],
+"TIGRES 2": [
+"lang-fr.js"
+],
+"Coupe d’Inde": [
+"lang-fr.js"
+],
 "— on est qualifiés !": [
 "lang-fr.js"
 ],
@@ -378848,6 +380370,12 @@
 "lang-fr.js"
 ],
 "CORRECTIONS DE TRADUCTION": [
+"lang-fr.js"
+],
+"LIGUE DES TIGRES 2": [
+"lang-fr.js"
+],
+"COUPE D’INDE": [
 "lang-fr.js"
 ],
 "— ON EST QUALIFIÉS !": [
@@ -399607,6 +401135,21 @@
 "Judul tabel klasemen, singkatan, kartu pertandingan, dan jenis tendangan diperbaiki di semua bahasa.": [
 "lang-id.js"
 ],
+"Liga Harimau": [
+"lang-id.js"
+],
+"Liga Harimau 2": [
+"lang-id.js"
+],
+"LIGA HARIMAU": [
+"lang-id.js"
+],
+"HARIMAU 2": [
+"lang-id.js"
+],
+"Piala India": [
+"lang-id.js"
+],
 "— kita lolos!": [
 "lang-id.js"
 ],
@@ -413169,6 +414712,12 @@
 "lang-id.js"
 ],
 "PERBAIKAN TERJEMAHAN": [
+"lang-id.js"
+],
+"LIGA HARIMAU 2": [
+"lang-id.js"
+],
+"PIALA INDIA": [
 "lang-id.js"
 ],
 "— KITA LOLOS!": [
@@ -433928,6 +435477,18 @@
 "Intestazioni della classifica, abbreviazioni, scheda partita e tipi di tiro sono stati corretti in tutte le lingue.": [
 "lang-it.js"
 ],
+"Lega Tigre": [
+"lang-it.js"
+],
+"Lega Tigre 2": [
+"lang-it.js"
+],
+"LEGA TIGRE": [
+"lang-it.js"
+],
+"Coppa d’India": [
+"lang-it.js"
+],
 "— ci siamo qualificati!": [
 "lang-it.js"
 ],
@@ -447501,6 +449062,12 @@
 "lang-it.js"
 ],
 "CORREZIONI DI TRADUZIONE": [
+"lang-it.js"
+],
+"LEGA TIGRE 2": [
+"lang-it.js"
+],
+"COPPA D’INDIA": [
 "lang-it.js"
 ],
 "— CI SIAMO QUALIFICATI!": [
@@ -469132,6 +470699,9 @@
 "Cabeçalhos da tabela, abreviações, o cartão da partida e os tipos de chute foram corrigidos em todos os idiomas.": [
 "lang-pt.js"
 ],
+"Taça da Índia": [
+"lang-pt.js"
+],
 "— nos classificamos!": [
 "lang-pt.js"
 ],
@@ -482411,6 +483981,9 @@
 "lang-pt.js"
 ],
 "CORREÇÕES DE TRADUÇÃO": [
+"lang-pt.js"
+],
+"TAÇA DA ÍNDIA": [
 "lang-pt.js"
 ],
 "— NOS CLASSIFICAMOS!": [
@@ -508273,9 +509846,6 @@
 "Kiev": [
 "socialart.js"
 ],
-"Mumbai": [
-"socialart.js"
-],
 "blur({}px)": [
 "socialart.js"
 ],
@@ -508325,6 +509895,12 @@
 "star.js"
 ],
 "{} Lüks Yaşam Vitrini": [
+"star.js"
+],
+"Hindistan ligleri": [
+"star.js"
+],
+"Hindistan’da 16 takımlı Kaplan Ligi, 14 takımlı Kaplan 2. Ligi ve Hindistan Kupası. İlk 2, Asya Şampiyonlar Kupası’na gider.": [
 "star.js"
 ],
 "Attığın golü ağır çekimde yeniden izle. \"Geç\" ile atla ya da Ayarlar’dan kapat.": [
@@ -511055,12 +512631,6 @@
 "wcx.js"
 ],
 "--ct1:{};--ct2:{};--cta:{}": [
-"weather.js"
-],
-"KAPLAN LİGİ": [
-"weather.js"
-],
-"KAPLAN 2": [
 "weather.js"
 ],
 "EURO": [

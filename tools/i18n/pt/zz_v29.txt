@@ -4,3 +4,5 @@
 10525|TIGRE 2
 10526|Taça da Índia
 10527|Mumbai
+10558|Ligas da Índia
+10559|Na Índia: a Liga Tigre com 16 equipes, a Liga Tigre 2 com 14 equipes e a Taça da Índia. Os 2 primeiros vão à Copa dos Campeões da Ásia.

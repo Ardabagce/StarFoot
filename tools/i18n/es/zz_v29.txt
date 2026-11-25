@@ -4,3 +4,5 @@
 10525|TIGRE 2
 10526|Copa de la India
 10527|Bombay
+10558|Ligas de la India
+10559|En la India: la Liga Tigre de 16 equipos, la Liga Tigre 2 de 14 equipos y la Copa de la India. Los 2 primeros van a la Copa de Campeones de Asia.

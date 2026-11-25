@@ -4,3 +4,5 @@
 10525|TIGER 2
 10526|Indien-Pokal
 10527|Mumbai
+10558|Indische Ligen
+10559|In Indien: die Tiger-Liga mit 16 Teams, die Tiger-Liga 2 mit 14 Teams und der Indien-Pokal. Die besten 2 qualifizieren sich für den Asien-Champions-Pokal.
