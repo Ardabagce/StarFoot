@@ -55,6 +55,16 @@
    "asc": "zh-Hans",
    "img": "en",
    "short": "从街头少年到足球传奇，亲自踢出生涯中的每个关键时刻。"
+  },
+  "en-IN": {
+   "asc": "en-GB",
+   "img": "en",
+   "short": "Football career game: from street kid to world star. Play every big moment."
+  },
+  "hi-IN": {
+   "asc": "en-GB",
+   "img": "en",
+   "short": "गली फुटबॉल से वर्ल्ड स्टार तक। अपने करियर के हर बड़े पल को खुद खेलें।"
   }
  },
  "other_img": "en"

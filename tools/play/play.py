@@ -119,6 +119,15 @@ def products(a, sale=None):
         conv = ok(s.post(f'{API}/{PKG}/pricing:convertRegionPrices', json={'price': usd}), 'fiyat çevirme')
         regions = [{'regionCode': rc, 'price': money(v['price']), 'availability': 'AVAILABLE'}
                    for rc, v in conv.get('convertedRegionPrices', {}).items()]
+        # Hindistan: kur çevrimi yerine yerel fiyat basamakları (₹49/99/199...); indirimde de ...9 ile biter
+        if p.get('inr'):
+            inr = p['inr']
+            if sale:
+                inr = max(19, int(inr * (1 - sale[0] / 100) / 10) * 10 + 9)
+            for r in regions:
+                if r['regionCode'] == 'IN':
+                    r['price'] = {'currencyCode': 'INR', 'units': str(inr), 'nanos': 0}
+                    print(f"  {p['sku']} Hindistan: ₹{inr}")
         body = {
             'packageName': PKG, 'productId': p['sku'],
             'listings': [{'languageCode': lang, 'title': v['title'][:55],

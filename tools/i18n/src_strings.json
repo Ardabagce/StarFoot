@@ -16511,6 +16511,7 @@
 ],
 "JAM": [
 "cups.js",
+"data.js",
 "wc.js"
 ],
 "HAI": [
@@ -16545,6 +16546,7 @@
 ],
 "SUR": [
 "cups.js",
+"data.js",
 "wc.js"
 ],
 "DOM": [
@@ -16957,6 +16959,7 @@
 "IND": [
 "cups.js",
 "data.js",
+"league.js",
 "wc.js"
 ],
 "TJK": [
@@ -17572,6 +17575,21 @@
 "lang-ja.js",
 "lang-pt.js",
 "lang-zh.js"
+],
+"cupIND": [
+"cups.js"
+],
+"INL": [
+"cups.js",
+"data.js",
+"game.js"
+],
+"INL2": [
+"cups.js",
+"data.js"
+],
+"Hindistan Kupası": [
+"cups.js"
 ],
 "Avrupa Şampiyonlar Kupası": [
 "cups.js",
@@ -19991,6 +20009,26 @@
 "lang-ja.js",
 "lang-pt.js",
 "lang-zh.js"
+],
+"Kaplan Ligi": [
+"data.js"
+],
+"Hindistan": [
+"data.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"wc.js"
+],
+"Kaplan 2. Ligi": [
+"data.js"
 ],
 "GAL": [
 "data.js",
@@ -28342,6 +28380,239 @@
 "lang-pt.js",
 "lang-zh.js"
 ],
+"MBT": [
+"data.js"
+],
+"Mumbai Kaplanları": [
+"data.js"
+],
+"MUM": [
+"data.js"
+],
+"IN": [
+"data.js",
+"wc.js"
+],
+"KLK": [
+"data.js"
+],
+"Kalküta Kartalları": [
+"data.js"
+],
+"BGB": [
+"data.js"
+],
+"Bengaluru Mavileri": [
+"data.js"
+],
+"GOA": [
+"data.js"
+],
+"Goa Dalgaları": [
+"data.js"
+],
+"KRB": [
+"data.js"
+],
+"Kerala Filleri": [
+"data.js"
+],
+"KER": [
+"data.js"
+],
+"HYD": [
+"data.js"
+],
+"Haydarabad İncileri": [
+"data.js"
+],
+"CNK": [
+"data.js"
+],
+"Chennai Kaplanları": [
+"data.js"
+],
+"MAA": [
+"data.js"
+],
+"DLH": [
+"data.js"
+],
+"Delhi Muhafızları": [
+"data.js"
+],
+"DEL": [
+"data.js"
+],
+"JSF": [
+"data.js"
+],
+"Jamshedpur Demircileri": [
+"data.js"
+],
+"OIL": [
+"data.js"
+],
+"Odisha Yıldızları": [
+"data.js"
+],
+"ODI": [
+"data.js"
+],
+"NEK": [
+"data.js"
+],
+"Kuzeydoğu Gergedanları": [
+"data.js"
+],
+"NEU": [
+"data.js",
+"lang-de.js"
+],
+"PUN": [
+"data.js"
+],
+"Pencap Aslanları": [
+"data.js"
+],
+"MMB": [
+"data.js"
+],
+"Mohun Yeşil-Bordo": [
+"data.js"
+],
+"MOH": [
+"data.js"
+],
+"EBK": [
+"data.js"
+],
+"Doğu Bengal Meşalesi": [
+"data.js"
+],
+"EBE": [
+"data.js"
+],
+"SHL": [
+"data.js"
+],
+"Şillong Bulutları": [
+"data.js"
+],
+"SHI": [
+"data.js"
+],
+"ARA": [
+"data.js"
+],
+"Aizawl Dağlıları": [
+"data.js"
+],
+"AIZ": [
+"data.js"
+],
+"PNC": [
+"data.js"
+],
+"Pune Şehri": [
+"data.js"
+],
+"AHM": [
+"data.js"
+],
+"Ahmedabad Güneşi": [
+"data.js"
+],
+"JPR": [
+"data.js"
+],
+"Jaipur Pembeleri": [
+"data.js"
+],
+"JAI": [
+"data.js"
+],
+"LKO": [
+"data.js"
+],
+"Lucknow Nawabları": [
+"data.js"
+],
+"LUC": [
+"data.js"
+],
+"IMP": [
+"data.js"
+],
+"İmfal Savaşçıları": [
+"data.js"
+],
+"KZK": [
+"data.js"
+],
+"Kozhikode Gemicileri": [
+"data.js"
+],
+"KOZ": [
+"data.js"
+],
+"MDR": [
+"data.js"
+],
+"Madurai Tapınağı": [
+"data.js"
+],
+"NGP": [
+"data.js"
+],
+"Nagpur Portakalları": [
+"data.js"
+],
+"BHP": [
+"data.js"
+],
+"Bhopal Gölleri": [
+"data.js"
+],
+"BHO": [
+"data.js"
+],
+"VZG": [
+"data.js"
+],
+"Visakhapatnam Limanı": [
+"data.js"
+],
+"VIZ": [
+"data.js"
+],
+"SRT": [
+"data.js"
+],
+"Surat Elmasları": [
+"data.js"
+],
+"GTK": [
+"data.js"
+],
+"Gangtok Zirvesi": [
+"data.js"
+],
+"GAN": [
+"data.js"
+],
+"RNC": [
+"data.js"
+],
+"Ranchi Ormanları": [
+"data.js"
+],
+"CDG": [
+"data.js"
+],
+"Chandigarh Bahçeleri": [
+"data.js"
+],
 "SLZ": [
 "data.js"
 ],
@@ -32191,6 +32462,139 @@
 "Mendoza": [
 "data.js",
 "wc.js"
+],
+"Arjun": [
+"data.js",
+"wc.js"
+],
+"Rahul": [
+"data.js",
+"wc.js"
+],
+"Sandesh": [
+"data.js",
+"wc.js"
+],
+"Anirudh": [
+"data.js",
+"wc.js"
+],
+"Liston": [
+"data.js",
+"wc.js"
+],
+"Manvir": [
+"data.js",
+"wc.js"
+],
+"Sahal": [
+"data.js",
+"wc.js"
+],
+"Akash": [
+"data.js",
+"wc.js"
+],
+"Vikram": [
+"data.js",
+"wc.js"
+],
+"Rohit": [
+"data.js",
+"wc.js"
+],
+"Sunil": [
+"data.js"
+],
+"Lallian": [
+"data.js"
+],
+"Jeakson": [
+"data.js"
+],
+"Ashique": [
+"data.js"
+],
+"Udanta": [
+"data.js"
+],
+"Nikhil": [
+"data.js"
+],
+"Amey": [
+"data.js"
+],
+"Gurpreet": [
+"data.js"
+],
+"Subhasish": [
+"data.js"
+],
+"Singh": [
+"data.js",
+"wc.js"
+],
+"Kumar": [
+"data.js",
+"wc.js"
+],
+"Sharma": [
+"data.js",
+"wc.js"
+],
+"Thapa": [
+"data.js",
+"wc.js"
+],
+"Das": [
+"data.js",
+"wc.js"
+],
+"Nair": [
+"data.js",
+"wc.js"
+],
+"Menon": [
+"data.js",
+"wc.js"
+],
+"Gupta": [
+"data.js",
+"wc.js"
+],
+"Bose": [
+"data.js",
+"wc.js"
+],
+"Rao": [
+"data.js"
+],
+"Pillai": [
+"data.js"
+],
+"Chhetri": [
+"data.js"
+],
+"Dutta": [
+"data.js"
+],
+"Iyer": [
+"data.js"
+],
+"Reddy": [
+"data.js"
+],
+"Mishra": [
+"data.js"
+],
+"Bhatt": [
+"data.js"
+],
+"Kapoor": [
+"data.js"
+],
+"Joshi": [
+"data.js"
 ],
 "Wei": [
 "data.js",
@@ -81205,19 +81609,6 @@
 "lang-zh.js",
 "wc.js"
 ],
-"Hindistan": [
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"lang-zh.js",
-"wc.js"
-],
 "Tacikistan": [
 "lang-ar.js",
 "lang-de.js",
@@ -120950,6 +121341,114 @@
 "lang-ja.js",
 "lang-pt.js",
 "lang-zh.js"
+],
+"Çince": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"lifex.js",
+"star.js"
+],
+"StarFoot artık Basitleştirilmiş Çince de oynanabiliyor; oyun 11 dilde.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"star.js"
+],
+"يمكن الآن لعب StarFoot باللغة الصينية المبسطة؛ اللعبة متاحة بـ 11 لغة.": [
+"lang-ar.js"
+],
+"Çin ligleri": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"star.js"
+],
+"Çin’de 16 takımlı Ejder Ligi, 14 takımlı Ejder 2. Ligi ve Çin Kupası. İlk 4, Asya Şampiyonlar Kupası’na gider.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"star.js"
+],
+"Daha güvenli satın alma": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"star.js"
+],
+"Bağlantı koptuğunda ödemen geçtiyse ürünün yine açılır; mağazaya ulaşılamazsa ne yapacağın söylenir.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"star.js"
+],
+"Çeviri düzeltmeleri": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"star.js"
+],
+"Puan tablosu başlıkları, kısaltmalar, maç kartı ve şut tipleri tüm dillerde düzeltildi.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"star.js"
 ],
 "(Asist)": [
 "lang-ar.js",
@@ -194963,6 +195462,54 @@
 "lang-pt.js",
 "lang-zh.js"
 ],
+"ÇİNCE": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"ÇİN LİGLERİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"DAHA GÜVENLİ SATIN ALMA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"ÇEVİRİ DÜZELTMELERİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -255300,9 +255847,6 @@
 "Garagenklassiker": [
 "lang-de.js"
 ],
-"NEU": [
-"lang-de.js"
-],
 "Marke, Artikel oder Farbe suchen": [
 "lang-de.js"
 ],
@@ -256681,6 +257225,30 @@
 "lang-de.js"
 ],
 "Jetzt bist du Profi! Mit Premium verschwinden Zwischenwerbungen, Belohnungen kommen sofort ohne Werbung, und dein goldenes Verifizierungsabzeichen und deine Starpedia-Seite werden freigeschaltet.": [
+"lang-de.js"
+],
+"Chinesisch": [
+"lang-de.js"
+],
+"StarFoot gibt es jetzt auch auf vereinfachtem Chinesisch; das Spiel ist in 11 Sprachen verfügbar.": [
+"lang-de.js"
+],
+"Chinesische Ligen": [
+"lang-de.js"
+],
+"In China: die Drachenliga mit 16 Teams, die 2. Drachenliga mit 14 Teams und der China-Pokal. Die besten 4 spielen im Asiatischen Meisterpokal.": [
+"lang-de.js"
+],
+"Sicherere Käufe": [
+"lang-de.js"
+],
+"Bricht die Verbindung ab, nachdem die Zahlung durchging, wird dein Artikel trotzdem freigeschaltet; ist der Store nicht erreichbar, erfährst du, was zu tun ist.": [
+"lang-de.js"
+],
+"Übersetzungskorrekturen": [
+"lang-de.js"
+],
+"Tabellenköpfe, Abkürzungen, die Spielkarte und Schussarten wurden in allen Sprachen korrigiert.": [
 "lang-de.js"
 ],
 "– wir haben uns qualifiziert!": [
@@ -271638,6 +272206,18 @@
 "lang-fr.js",
 "lang-id.js",
 "lang-it.js"
+],
+"CHINESISCH": [
+"lang-de.js"
+],
+"CHINESISCHE LIGEN": [
+"lang-de.js"
+],
+"SICHERERE KÄUFE": [
+"lang-de.js"
+],
+"ÜBERSETZUNGSKORREKTUREN": [
+"lang-de.js"
 ],
 "– WIR HABEN UNS QUALIFIZIERT!": [
 "lang-de.js"
@@ -293094,6 +293674,30 @@
 "You're a pro now! With Premium, interstitial ads disappear, rewards come instantly without ads, and your gold verified badge and Starpedia page unlock.": [
 "lang-en.js"
 ],
+"Chinese": [
+"lang-en.js"
+],
+"StarFoot can now be played in Simplified Chinese; the game is available in 11 languages.": [
+"lang-en.js"
+],
+"Chinese leagues": [
+"lang-en.js"
+],
+"In China: the 16-team Dragon League, the 14-team Dragon League 2 and the China Cup. The top 4 qualify for the Asian Champions Cup.": [
+"lang-en.js"
+],
+"Safer purchases": [
+"lang-en.js"
+],
+"If your connection drops but the payment went through, your item still unlocks; if the store can't be reached, you're told what to do.": [
+"lang-en.js"
+],
+"Translation fixes": [
+"lang-en.js"
+],
+"Table headers, abbreviations, the match card and shot types are fixed in every language.": [
+"lang-en.js"
+],
 "— we qualified!": [
 "lang-en.js"
 ],
@@ -307269,6 +307873,18 @@
 "lang-en.js"
 ],
 "CHINA CUP": [
+"lang-en.js"
+],
+"CHINESE": [
+"lang-en.js"
+],
+"CHINESE LEAGUES": [
+"lang-en.js"
+],
+"SAFER PURCHASES": [
+"lang-en.js"
+],
+"TRANSLATION FIXES": [
 "lang-en.js"
 ],
 "— WE QUALIFIED!": [
@@ -328853,6 +329469,30 @@
 "¡Ya eres profesional! Con Premium desaparecen los anuncios intersticiales, las recompensas llegan al instante sin anuncios y se desbloquean tu insignia dorada y tu página de Starpedia.": [
 "lang-es.js"
 ],
+"Chino": [
+"lang-es.js"
+],
+"StarFoot ya se puede jugar en chino simplificado; el juego está disponible en 11 idiomas.": [
+"lang-es.js"
+],
+"Ligas chinas": [
+"lang-es.js"
+],
+"En China: la Liga Dragón de 16 equipos, la Liga Dragón 2 de 14 equipos y la Copa de China. Los 4 primeros van a la Copa de Campeones de Asia.": [
+"lang-es.js"
+],
+"Compras más seguras": [
+"lang-es.js"
+],
+"Si se corta la conexión pero el pago se completó, tu artículo se desbloquea igualmente; si no se puede conectar con la tienda, te decimos qué hacer.": [
+"lang-es.js"
+],
+"Correcciones de traducción": [
+"lang-es.js"
+],
+"Se corrigieron en todos los idiomas los encabezados de la tabla, las abreviaturas, la ficha del partido y los tipos de disparo.": [
+"lang-es.js"
+],
 "— ¡nos hemos clasificado!": [
 "lang-es.js"
 ],
@@ -343148,6 +343788,18 @@
 "lang-es.js"
 ],
 "SHANGHÁI": [
+"lang-es.js"
+],
+"CHINO": [
+"lang-es.js"
+],
+"LIGAS CHINAS": [
+"lang-es.js"
+],
+"COMPRAS MÁS SEGURAS": [
+"lang-es.js"
+],
+"CORRECCIONES DE TRADUCCIÓN": [
 "lang-es.js"
 ],
 "— ¡NOS HEMOS CLASIFICADO!": [
@@ -364362,6 +365014,30 @@
 "Te voilà pro ! Avec Premium, les pubs interstitielles disparaissent, les récompenses arrivent tout de suite sans pub, et ton badge doré et ta page Starpedia se débloquent.": [
 "lang-fr.js"
 ],
+"Chinois": [
+"lang-fr.js"
+],
+"StarFoot est désormais jouable en chinois simplifié ; le jeu est disponible en 11 langues.": [
+"lang-fr.js"
+],
+"Championnats chinois": [
+"lang-fr.js"
+],
+"En Chine : la Ligue Dragon à 16 équipes, la Ligue Dragon 2 à 14 équipes et la Coupe de Chine. Les 4 premiers vont en Coupe des Champions d’Asie.": [
+"lang-fr.js"
+],
+"Achats plus sûrs": [
+"lang-fr.js"
+],
+"Si la connexion coupe alors que le paiement est passé, ton article se débloque quand même ; si la boutique est injoignable, on t’indique quoi faire.": [
+"lang-fr.js"
+],
+"Corrections de traduction": [
+"lang-fr.js"
+],
+"Les en-têtes du classement, les abréviations, la fiche du match et les types de tir sont corrigés dans toutes les langues.": [
+"lang-fr.js"
+],
 "— on est qualifiés !": [
 "lang-fr.js"
 ],
@@ -378160,6 +378836,18 @@
 "lang-fr.js"
 ],
 "COUPE DE CHINE": [
+"lang-fr.js"
+],
+"CHINOIS": [
+"lang-fr.js"
+],
+"CHAMPIONNATS CHINOIS": [
+"lang-fr.js"
+],
+"ACHATS PLUS SÛRS": [
+"lang-fr.js"
+],
+"CORRECTIONS DE TRADUCTION": [
 "lang-fr.js"
 ],
 "— ON EST QUALIFIÉS !": [
@@ -398895,6 +399583,30 @@
 "Sekarang kamu pemain profesional! Dengan Premium, iklan interstisial hilang, hadiah langsung didapat tanpa iklan, dan lencana emas serta halaman Starpedia-mu terbuka.": [
 "lang-id.js"
 ],
+"Bahasa Mandarin": [
+"lang-id.js"
+],
+"StarFoot kini bisa dimainkan dalam bahasa Mandarin Sederhana; gim tersedia dalam 11 bahasa.": [
+"lang-id.js"
+],
+"Liga Tiongkok": [
+"lang-id.js"
+],
+"Di Tiongkok: Liga Naga 16 tim, Liga Naga 2 dengan 14 tim, dan Piala Tiongkok. 4 teratas lolos ke Piala Champions Asia.": [
+"lang-id.js"
+],
+"Pembelian lebih aman": [
+"lang-id.js"
+],
+"Jika koneksi terputus tetapi pembayaran berhasil, item tetap terbuka; jika toko tidak bisa dijangkau, kamu diberi tahu apa yang harus dilakukan.": [
+"lang-id.js"
+],
+"Perbaikan terjemahan": [
+"lang-id.js"
+],
+"Judul tabel klasemen, singkatan, kartu pertandingan, dan jenis tendangan diperbaiki di semua bahasa.": [
+"lang-id.js"
+],
 "— kita lolos!": [
 "lang-id.js"
 ],
@@ -412445,6 +413157,18 @@
 "lang-id.js"
 ],
 "PIALA CHINA": [
+"lang-id.js"
+],
+"BAHASA MANDARIN": [
+"lang-id.js"
+],
+"LIGA TIONGKOK": [
+"lang-id.js"
+],
+"PEMBELIAN LEBIH AMAN": [
+"lang-id.js"
+],
+"PERBAIKAN TERJEMAHAN": [
 "lang-id.js"
 ],
 "— KITA LOLOS!": [
@@ -433180,6 +433904,30 @@
 "Ora sei un professionista! Con Premium spariscono gli annunci interstitial, i premi arrivano subito senza annunci e si sbloccano il badge dorato e la tua pagina Starpedia.": [
 "lang-it.js"
 ],
+"Cinese": [
+"lang-it.js"
+],
+"StarFoot ora si può giocare anche in cinese semplificato; il gioco è disponibile in 11 lingue.": [
+"lang-it.js"
+],
+"Campionati cinesi": [
+"lang-it.js"
+],
+"In Cina: la Lega Drago a 16 squadre, la Lega Drago 2 a 14 squadre e la Coppa di Cina. Le prime 4 vanno alla Coppa dei Campioni d’Asia.": [
+"lang-it.js"
+],
+"Acquisti più sicuri": [
+"lang-it.js"
+],
+"Se la connessione cade ma il pagamento è andato a buon fine, l’articolo si sblocca comunque; se lo store non è raggiungibile, ti diciamo cosa fare.": [
+"lang-it.js"
+],
+"Correzioni di traduzione": [
+"lang-it.js"
+],
+"Intestazioni della classifica, abbreviazioni, scheda partita e tipi di tiro sono stati corretti in tutte le lingue.": [
+"lang-it.js"
+],
 "— ci siamo qualificati!": [
 "lang-it.js"
 ],
@@ -446743,6 +447491,18 @@
 "COPPA DI CINA": [
 "lang-it.js"
 ],
+"CINESE": [
+"lang-it.js"
+],
+"CAMPIONATI CINESI": [
+"lang-it.js"
+],
+"ACQUISTI PIÙ SICURI": [
+"lang-it.js"
+],
+"CORREZIONI DI TRADUZIONE": [
+"lang-it.js"
+],
 "— CI SIAMO QUALIFICATI!": [
 "lang-it.js"
 ],
@@ -455441,6 +456201,9 @@
 "lang-ja.js"
 ],
 "ついにプロ契約！Premiumならインタースティシャル広告が消え、報酬は広告なしですぐにもらえ、金色の認証バッジとStarpediaページも解放されます。": [
+"lang-ja.js"
+],
+"StarFootが簡体字中国語に対応しました。ゲームは11言語で遊べます。": [
 "lang-ja.js"
 ],
 "（PK戦）": [
@@ -468343,6 +469106,30 @@
 "lang-pt.js"
 ],
 "Agora você é profissional! Com o Premium, os anúncios intersticiais somem, as recompensas chegam na hora sem anúncios e seu selo dourado e sua página da Starpedia são liberados.": [
+"lang-pt.js"
+],
+"Chinês": [
+"lang-pt.js"
+],
+"StarFoot agora pode ser jogado em chinês simplificado; o jogo está disponível em 11 idiomas.": [
+"lang-pt.js"
+],
+"Ligas chinesas": [
+"lang-pt.js"
+],
+"Na China: a Liga Dragão com 16 times, a Liga Dragão 2 com 14 times e a Copa da China. Os 4 primeiros vão para a Copa dos Campeões da Ásia.": [
+"lang-pt.js"
+],
+"Compras mais seguras": [
+"lang-pt.js"
+],
+"Se a conexão cair mas o pagamento tiver sido concluído, seu item é liberado mesmo assim; se a loja não responder, você vê o que fazer.": [
+"lang-pt.js"
+],
+"Correções de tradução": [
+"lang-pt.js"
+],
+"Cabeçalhos da tabela, abreviações, o cartão da partida e os tipos de chute foram corrigidos em todos os idiomas.": [
 "lang-pt.js"
 ],
 "— nos classificamos!": [
@@ -481614,6 +482401,18 @@
 "XANGAI": [
 "lang-pt.js"
 ],
+"CHINÊS": [
+"lang-pt.js"
+],
+"LIGAS CHINESAS": [
+"lang-pt.js"
+],
+"COMPRAS MAIS SEGURAS": [
+"lang-pt.js"
+],
+"CORREÇÕES DE TRADUÇÃO": [
+"lang-pt.js"
+],
 "— NOS CLASSIFICAMOS!": [
 "lang-pt.js"
 ],
@@ -490047,6 +490846,9 @@
 "你现在是职业球员了！拥有 Premium，插页广告会消失，奖励无需看广告即时到账，你的金色认证徽章和 Starpedia 页面也会解锁。": [
 "lang-zh.js"
 ],
+"StarFoot 现已支持简体中文，游戏共支持 11 种语言。": [
+"lang-zh.js"
+],
 "这孩子会成为下一个 Mezzi": [
 "lang-zh.js"
 ],
@@ -491476,10 +492278,6 @@
 ],
 "fireMgr": [
 "life.js"
-],
-"Çince": [
-"lifex.js",
-"star.js"
 ],
 "Yıllık harç: {}": [
 "lifex.js"
@@ -507475,6 +508273,9 @@
 "Kiev": [
 "socialart.js"
 ],
+"Mumbai": [
+"socialart.js"
+],
 "blur({}px)": [
 "socialart.js"
 ],
@@ -507524,27 +508325,6 @@
 "star.js"
 ],
 "{} Lüks Yaşam Vitrini": [
-"star.js"
-],
-"StarFoot artık Basitleştirilmiş Çince de oynanabiliyor; oyun 11 dilde.": [
-"star.js"
-],
-"Çin ligleri": [
-"star.js"
-],
-"Çin’de 16 takımlı Ejder Ligi, 14 takımlı Ejder 2. Ligi ve Çin Kupası. İlk 4, Asya Şampiyonlar Kupası’na gider.": [
-"star.js"
-],
-"Daha güvenli satın alma": [
-"star.js"
-],
-"Bağlantı koptuğunda ödemen geçtiyse ürünün yine açılır; mağazaya ulaşılamazsa ne yapacağın söylenir.": [
-"star.js"
-],
-"Çeviri düzeltmeleri": [
-"star.js"
-],
-"Puan tablosu başlıkları, kısaltmalar, maç kartı ve şut tipleri tüm dillerde düzeltildi.": [
 "star.js"
 ],
 "Attığın golü ağır çekimde yeniden izle. \"Geç\" ile atla ya da Ayarlar’dan kapat.": [
@@ -508108,9 +508888,6 @@
 "wc.js"
 ],
 "Bassel Jarawi": [
-"wc.js"
-],
-"IN": [
 "wc.js"
 ],
 "Arjun Mehrani": [
@@ -509544,64 +510321,7 @@
 "Mägi": [
 "wc.js"
 ],
-"Arjun": [
-"wc.js"
-],
-"Rahul": [
-"wc.js"
-],
-"Sandesh": [
-"wc.js"
-],
-"Anirudh": [
-"wc.js"
-],
-"Liston": [
-"wc.js"
-],
-"Manvir": [
-"wc.js"
-],
-"Sahal": [
-"wc.js"
-],
-"Akash": [
-"wc.js"
-],
-"Vikram": [
-"wc.js"
-],
-"Rohit": [
-"wc.js"
-],
-"Singh": [
-"wc.js"
-],
-"Kumar": [
-"wc.js"
-],
-"Sharma": [
-"wc.js"
-],
-"Thapa": [
-"wc.js"
-],
 "Bheke": [
-"wc.js"
-],
-"Das": [
-"wc.js"
-],
-"Nair": [
-"wc.js"
-],
-"Menon": [
-"wc.js"
-],
-"Gupta": [
-"wc.js"
-],
-"Bose": [
 "wc.js"
 ],
 "Teerasil": [
@@ -510335,6 +511055,12 @@
 "wcx.js"
 ],
 "--ct1:{};--ct2:{};--cta:{}": [
+"weather.js"
+],
+"KAPLAN LİGİ": [
+"weather.js"
+],
+"KAPLAN 2": [
 "weather.js"
 ],
 "EURO": [

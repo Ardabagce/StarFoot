@@ -103,7 +103,7 @@ const Balls = {
     const lg = ctx.lg || '';
     if (lg === 'street') return BALL_STYLES.street;
     if (year < 1993 && !['ucl', 'uel', 'wc', 'euro'].includes(lg)) return year < 1986 ? BALL_STYLES.retro : BALL_STYLES.classic;
-    const map = { TR1: 'tr', TR2: 'tr', ENG: 'eng', ENG2: 'eng', ESP: 'esp', ESP2: 'esp', GER: 'ger', GER2: 'ger', ITA: 'ita', ITA2: 'ita', FRA: 'fra', FRA2: 'fra', NED: 'ned', POR: 'por', BRA: 'bra', ARG: 'arg', BEL: 'ned', SCO: 'eng', USA: 'eng', MEX: 'arg', KSA: 'wc', JPN: 'ita', CHN: 'wc', CHN2: 'wc', ccc: 'csa', acl: 'wc', ucl: 'ucl', uel: 'uel', uecl: 'uecl', csa: 'csa', wc: 'wc', euro: 'euro', youth: 'classic', intl: 'classic' };
+    const map = { TR1: 'tr', TR2: 'tr', ENG: 'eng', ENG2: 'eng', ESP: 'esp', ESP2: 'esp', GER: 'ger', GER2: 'ger', ITA: 'ita', ITA2: 'ita', FRA: 'fra', FRA2: 'fra', NED: 'ned', POR: 'por', BRA: 'bra', ARG: 'arg', BEL: 'ned', SCO: 'eng', USA: 'eng', MEX: 'arg', KSA: 'wc', JPN: 'ita', CHN: 'wc', CHN2: 'wc', INL: 'wc', INL2: 'wc', ccc: 'csa', acl: 'wc', ucl: 'ucl', uel: 'uel', uecl: 'uecl', csa: 'csa', wc: 'wc', euro: 'euro', youth: 'classic', intl: 'classic' };
     return BALL_STYLES[map[lg] || 'classic'];
   },
   forTraining() {
@@ -185,6 +185,8 @@ const SCOREBOARDS = {
   JPN: { tag: 'GÜNEŞ LİGİ', c1: '#ffffff', c2: '#bc002d' },
   CHN: { tag: 'EJDER LİGİ', c1: '#de2910', c2: '#ffde00' },
   CHN2: { tag: 'EJDER 2', c1: '#7a0a0a', c2: '#ffde00' },
+  INL: { tag: 'KAPLAN LİGİ', c1: '#ff9933', c2: '#138808' },
+  INL2: { tag: 'KAPLAN 2', c1: '#b35900', c2: '#138808' },
   ENG: { tag: 'BRİTANYA', c1: '#3d0a5b', c2: '#00ff85' },
   ESP: { tag: 'LA LİGA', c1: '#ff4b1f', c2: '#ffffff' },
   GER: { tag: 'BUNDESLİGA', c1: '#d20515', c2: '#ffffff' },

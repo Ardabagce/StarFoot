@@ -47,9 +47,10 @@ const DOM_CUPS = [
   { id: 'cupKSA', country: 'KSA', leagues: ['KSA'], name: 'Suudi Kral Kupası', size: 16, fame: 1.0 },
   { id: 'cupJPN', country: 'JPN', leagues: ['JPN'], name: 'İmparator Kupası', size: 16, fame: 0.8 },
   { id: 'cupCHN', country: 'CHN', leagues: ['CHN', 'CHN2'], name: 'Çin Kupası', size: 16, fame: 0.75 },
+  { id: 'cupIND', country: 'IND', leagues: ['INL', 'INL2'], name: 'Hindistan Kupası', size: 16, fame: 0.55 },
 ];
 const countryOf = (lid) => LEAGUE_CC[lid] || lid;
-const regionOf = (lid) => ({ BRA: 'sa', ARG: 'sa', USA: 'na', MEX: 'na', KSA: 'as', JPN: 'as', CHN: 'as' }[countryOf(lid)] || 'eu');
+const regionOf = (lid) => ({ BRA: 'sa', ARG: 'sa', USA: 'na', MEX: 'na', KSA: 'as', JPN: 'as', CHN: 'as', IND: 'as' }[countryOf(lid)] || 'eu');
 
 const Cups = {
   // ---------- Avrupa kulüp kupaları ----------
@@ -62,7 +63,7 @@ const Cups = {
     // Diğer kıtalar: 16 takımlı lig aşaması (6 maç) → ilk 8 çeyrek finale
     { id: 'csa', name: 'Güney Amerika Kupası', fame: 1.4, region: 'sa', swiss: true, quota: { BRA: 8, ARG: 8 } },
     { id: 'ccc', name: 'Kuzey Amerika Kupası', fame: 1.1, region: 'na', swiss: true, quota: { USA: 8, MEX: 8 } },
-    { id: 'acl', name: 'Asya Şampiyonlar Kupası', fame: 1.2, region: 'as', swiss: true, quota: { KSA: 6, JPN: 6, CHN: 4 } },
+    { id: 'acl', name: 'Asya Şampiyonlar Kupası', fame: 1.2, region: 'as', swiss: true, quota: { KSA: 6, JPN: 5, CHN: 3, IND: 2 } },
   ],
   // Kulübün lig sırasına göre gelecek sezon hangi kupaya gideceği
   qualifies(lid, pos) {

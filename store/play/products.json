@@ -41,7 +41,8 @@
      "title": "StarFoot プレミアム",
      "description": "金バッジ、Starpedia、ラグジュアリー、広告なし"
     }
-   }
+   },
+   "inr": 99
   },
   {
    "sku": "starfoot_wc",
@@ -84,7 +85,8 @@
      "title": "世界選手権の夢",
      "description": "代表チームで挑む世界選手権モード"
     }
-   }
+   },
+   "inr": 99
   },
   {
    "sku": "starfoot_legends",
@@ -127,7 +129,8 @@
      "title": "レジェンドの軌跡",
      "description": "伝説の選手に着想を得た6つの架空キャリア"
     }
-   }
+   },
+   "inr": 99
   },
   {
    "sku": "starfoot_plus2",
@@ -170,7 +173,8 @@
      "title": "Premium+",
      "description": "Premium＋10枠・GK・2つのモード"
     }
-   }
+   },
+   "inr": 199
   },
   {
    "sku": "starfoot_plus2_upg",
@@ -213,7 +217,8 @@
      "title": "Premium+アップグレード",
      "description": "PremiumからPremium+へ"
     }
-   }
+   },
+   "inr": 99
   },
   {
    "sku": "starfoot_sup_100",
@@ -256,7 +261,8 @@
      "title": "サポート +100",
      "description": "StarFootの開発者を応援 (+100)"
     }
-   }
+   },
+   "inr": 49
   },
   {
    "sku": "starfoot_sup_550",
@@ -299,7 +305,8 @@
      "title": "サポート +550",
      "description": "StarFootの開発者を応援 (+550)"
     }
-   }
+   },
+   "inr": 249
   },
   {
    "sku": "starfoot_sup_2400",
@@ -342,7 +349,8 @@
      "title": "サポート +2400",
      "description": "StarFootの開発者を応援 (+2400)"
     }
-   }
+   },
+   "inr": 899
   },
   {
    "sku": "starfoot_coach",
@@ -385,7 +393,8 @@
      "title": "監督",
      "description": "クラブを率いて試合をライブ指揮"
     }
-   }
+   },
+   "inr": 199
   },
   {
    "sku": "starfoot_diamond",
@@ -428,7 +437,8 @@
      "title": "StarFoot Diamond",
      "description": "全部入り：Premium+と全モード"
     }
-   }
+   },
+   "inr": 399
   },
   {
    "sku": "starfoot_diamond_upg",
@@ -471,7 +481,8 @@
      "title": "Diamondへアップグレード",
      "description": "全部入り：Premium+と全モード"
     }
-   }
+   },
+   "inr": 199
   },
   {
    "sku": "starfoot_diamond_u599",
@@ -514,7 +525,8 @@
      "title": "Diamondへアップグレード",
      "description": "全部入り：Premium+と全モード"
     }
-   }
+   },
+   "inr": 299
   },
   {
    "sku": "starfoot_diamond_u199",
@@ -557,7 +569,8 @@
      "title": "Diamondへアップグレード",
      "description": "全部入り：Premium+と全モード"
     }
-   }
+   },
+   "inr": 99
   },
   {
    "sku": "starfoot_diamond_u099",
@@ -600,7 +613,8 @@
      "title": "Diamondへアップグレード",
      "description": "全部入り：Premium+と全モード"
     }
-   }
+   },
+   "inr": 49
   }
  ]
 }

@@ -346,7 +346,7 @@ const Game = {
   scoutOffers(perf, r) {
     const s = Game.state, p = s.player;
     const trials = s.street.trials;
-    const natLg = { TUR: 'TR', ENG: 'ENG', ESP: 'ESP', GER: 'GER', ITA: 'ITA', FRA: 'FRA', NED: 'NED', POR: 'POR', BRA: 'BRA', ARG: 'ARG', BEL: 'BEL', SCO: 'SCO', USA: 'USA', MEX: 'MEX', KSA: 'KSA', JPN: 'JPN', AUT: 'AUT', SUI: 'SUI', GRE: 'GRE', DEN: 'DEN', CRO: 'CRO', CZE: 'CZE', POL: 'POL', UKR: 'UKR', CHN: 'CHN' }[p.nation] || 'TR';
+    const natLg = { TUR: 'TR', ENG: 'ENG', ESP: 'ESP', GER: 'GER', ITA: 'ITA', FRA: 'FRA', NED: 'NED', POR: 'POR', BRA: 'BRA', ARG: 'ARG', BEL: 'BEL', SCO: 'SCO', USA: 'USA', MEX: 'MEX', KSA: 'KSA', JPN: 'JPN', AUT: 'AUT', SUI: 'SUI', GRE: 'GRE', DEN: 'DEN', CRO: 'CRO', CZE: 'CZE', POL: 'POL', UKR: 'UKR', CHN: 'CHN', IND: 'INL' }[p.nation] || 'TR';
     const clubs = Object.values(s.world.clubs).filter((c) => c.league !== 'NONE' && c.league.startsWith(natLg));
     const sorted = clubs.sort((a, b) => b.rating - a.rating);
     const who = trials ? 'Scoutlar' : 'Scout';

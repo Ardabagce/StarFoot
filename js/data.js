@@ -92,15 +92,17 @@ const LEAGUES = [
   { id: 'UKR', name: 'Bozkır Ligi', country: 'Ukrayna', flag: '🇺🇦', level: 1, fame: 0.75 },
   { id: 'CHN', name: 'Ejder Ligi', country: 'Çin', flag: '🇨🇳', level: 1, fame: 0.8 },
   { id: 'CHN2', name: 'Ejder 2. Ligi', country: 'Çin', flag: '🇨🇳', level: 2, fame: 0.45 },
+  { id: 'INL', name: 'Kaplan Ligi', country: 'Hindistan', flag: '🇮🇳', level: 1, fame: 0.55 },
+  { id: 'INL2', name: 'Kaplan 2. Ligi', country: 'Hindistan', flag: '🇮🇳', level: 2, fame: 0.3 },
 ];
 // Ülke kodu (kupalar ve scoutlar için) ve küme düşme eşleşmeleri
-const LEAGUE_CC = { TR1: 'TR', TR2: 'TR', ENG: 'ENG', ENG2: 'ENG', ESP: 'ESP', ESP2: 'ESP', GER: 'GER', GER2: 'GER', ITA: 'ITA', ITA2: 'ITA', FRA: 'FRA', FRA2: 'FRA', NED: 'NED', POR: 'POR', BRA: 'BRA', ARG: 'ARG', BEL: 'BEL', SCO: 'SCO', USA: 'USA', MEX: 'MEX', KSA: 'KSA', JPN: 'JPN', AUT: 'AUT', SUI: 'SUI', GRE: 'GRE', DEN: 'DEN', CRO: 'CRO', CZE: 'CZE', POL: 'POL', UKR: 'UKR', CHN: 'CHN', CHN2: 'CHN' };
-const LEAGUE_DOWN = { TR1: 'TR2', ENG: 'ENG2', ESP: 'ESP2', GER: 'GER2', ITA: 'ITA2', FRA: 'FRA2', CHN: 'CHN2' };
+const LEAGUE_CC = { TR1: 'TR', TR2: 'TR', ENG: 'ENG', ENG2: 'ENG', ESP: 'ESP', ESP2: 'ESP', GER: 'GER', GER2: 'GER', ITA: 'ITA', ITA2: 'ITA', FRA: 'FRA', FRA2: 'FRA', NED: 'NED', POR: 'POR', BRA: 'BRA', ARG: 'ARG', BEL: 'BEL', SCO: 'SCO', USA: 'USA', MEX: 'MEX', KSA: 'KSA', JPN: 'JPN', AUT: 'AUT', SUI: 'SUI', GRE: 'GRE', DEN: 'DEN', CRO: 'CRO', CZE: 'CZE', POL: 'POL', UKR: 'UKR', CHN: 'CHN', CHN2: 'CHN', INL: 'IND', INL2: 'IND' };
+const LEAGUE_DOWN = { TR1: 'TR2', ENG: 'ENG2', ESP: 'ESP2', GER: 'GER2', ITA: 'ITA2', FRA: 'FRA2', CHN: 'CHN2', INL: 'INL2' };
 const LEAGUE_UP = Object.fromEntries(Object.entries(LEAGUE_DOWN).map(([a, b]) => [b, a]));
 // Mini oyun zorluğu (lig seviyesi)
-const LEAGUE_DIFF = { TR2: 0.38, ENG2: 0.42, ESP2: 0.41, GER2: 0.41, ITA2: 0.4, FRA2: 0.39, TR1: 0.45, NED: 0.48, POR: 0.48, ARG: 0.48, BRA: 0.5, BEL: 0.46, SCO: 0.44, USA: 0.45, MEX: 0.46, KSA: 0.46, JPN: 0.44, AUT: 0.44, SUI: 0.44, GRE: 0.45, DEN: 0.44, CRO: 0.44, CZE: 0.44, POL: 0.43, UKR: 0.44, CHN: 0.43, CHN2: 0.37 };
+const LEAGUE_DIFF = { TR2: 0.38, ENG2: 0.42, ESP2: 0.41, GER2: 0.41, ITA2: 0.4, FRA2: 0.39, TR1: 0.45, NED: 0.48, POR: 0.48, ARG: 0.48, BRA: 0.5, BEL: 0.46, SCO: 0.44, USA: 0.45, MEX: 0.46, KSA: 0.46, JPN: 0.44, AUT: 0.44, SUI: 0.44, GRE: 0.45, DEN: 0.44, CRO: 0.44, CZE: 0.44, POL: 0.43, UKR: 0.44, CHN: 0.43, CHN2: 0.37, INL: 0.39, INL2: 0.34 };
 // Maaş çarpanı (Suudi ve ABD daha çok öder)
-const LEAGUE_PAY = { KSA: 2.4, USA: 1.4, MEX: 0.9, JPN: 0.8, BEL: 0.8, SCO: 0.7, AUT: 0.7, SUI: 0.8, GRE: 0.65, DEN: 0.7, CRO: 0.55, CZE: 0.55, POL: 0.55, UKR: 0.55, CHN: 1.1, CHN2: 0.45 };
+const LEAGUE_PAY = { KSA: 2.4, USA: 1.4, MEX: 0.9, JPN: 0.8, BEL: 0.8, SCO: 0.7, AUT: 0.7, SUI: 0.8, GRE: 0.65, DEN: 0.7, CRO: 0.55, CZE: 0.55, POL: 0.55, UKR: 0.55, CHN: 1.1, CHN2: 0.45, INL: 0.5, INL2: 0.25 };
 
 // [id, isim, kısa, lig, güç, renk1, renk2, ülke kodu (isim havuzu)]
 const CLUB_LIST = [
@@ -572,6 +574,37 @@ const CLUB_LIST = [
   ['TYR', 'Taiyuan Kayaları', 'TAI', 'CHN2', 52, '#7a7a7a', '#ffffff', 'CN'],
   ['LZW', 'Lanzhou Rüzgarı', 'LAN', 'CHN2', 52, '#005ca9', '#ffd200', 'CN'],
   ['NNG', 'Nanning Yeşilleri', 'NNG', 'CHN2', 52, '#007a33', '#ffd200', 'CN'],
+  // Hindistan (kurgusal kulüpler)
+  ['MBT', 'Mumbai Kaplanları', 'MUM', 'INL', 64, '#0b3d91', '#ff9933', 'IN'],
+  ['KLK', 'Kalküta Kartalları', 'KLK', 'INL', 65, '#7a0026', '#ffd200', 'IN'],
+  ['BGB', 'Bengaluru Mavileri', 'BEN', 'INL', 64, '#005ca9', '#ffffff', 'IN'],
+  ['GOA', 'Goa Dalgaları', 'GOA', 'INL', 63, '#ff6a00', '#0b3d91', 'IN'],
+  ['KRB', 'Kerala Filleri', 'KER', 'INL', 63, '#ffd200', '#0b3d91', 'IN'],
+  ['HYD', 'Haydarabad İncileri', 'HYD', 'INL', 61, '#1b1d22', '#ffd200', 'IN'],
+  ['CNK', 'Chennai Kaplanları', 'MAA', 'INL', 61, '#ffd200', '#005ca9', 'IN'],
+  ['DLH', 'Delhi Muhafızları', 'DEL', 'INL', 60, '#c8102e', '#ffffff', 'IN'],
+  ['JSF', 'Jamshedpur Demircileri', 'JAM', 'INL', 60, '#c8102e', '#1b1d22', 'IN'],
+  ['OIL', 'Odisha Yıldızları', 'ODI', 'INL', 59, '#5b2c83', '#ffffff', 'IN'],
+  ['NEK', 'Kuzeydoğu Gergedanları', 'NEU', 'INL', 59, '#c8102e', '#ffd200', 'IN'],
+  ['PUN', 'Pencap Aslanları', 'PUN', 'INL', 58, '#c8102e', '#ffffff', 'IN'],
+  ['MMB', 'Mohun Yeşil-Bordo', 'MOH', 'INL', 62, '#007a33', '#7a0026', 'IN'],
+  ['EBK', 'Doğu Bengal Meşalesi', 'EBE', 'INL', 60, '#c8102e', '#ffd200', 'IN'],
+  ['SHL', 'Şillong Bulutları', 'SHI', 'INL', 57, '#005ca9', '#ffd200', 'IN'],
+  ['ARA', 'Aizawl Dağlıları', 'AIZ', 'INL', 57, '#c8102e', '#ffffff', 'IN'],
+  ['PNC', 'Pune Şehri', 'PNE', 'INL2', 53, '#ff6a00', '#ffffff', 'IN'],
+  ['AHM', 'Ahmedabad Güneşi', 'AHM', 'INL2', 52, '#ffd200', '#c8102e', 'IN'],
+  ['JPR', 'Jaipur Pembeleri', 'JAI', 'INL2', 52, '#e75480', '#ffffff', 'IN'],
+  ['LKO', 'Lucknow Nawabları', 'LUC', 'INL2', 51, '#00a19a', '#ffffff', 'IN'],
+  ['IMP', 'İmfal Savaşçıları', 'IMP', 'INL2', 52, '#1b1d22', '#ff9933', 'IN'],
+  ['KZK', 'Kozhikode Gemicileri', 'KOZ', 'INL2', 51, '#005ca9', '#ffd200', 'IN'],
+  ['MDR', 'Madurai Tapınağı', 'MAD', 'INL2', 50, '#7a0026', '#ffd200', 'IN'],
+  ['NGP', 'Nagpur Portakalları', 'NAG', 'INL2', 50, '#ff6a00', '#007a33', 'IN'],
+  ['BHP', 'Bhopal Gölleri', 'BHO', 'INL2', 50, '#005ca9', '#ffffff', 'IN'],
+  ['VZG', 'Visakhapatnam Limanı', 'VIZ', 'INL2', 49, '#0b3d91', '#ffffff', 'IN'],
+  ['SRT', 'Surat Elmasları', 'SUR', 'INL2', 49, '#ffffff', '#5b2c83', 'IN'],
+  ['GTK', 'Gangtok Zirvesi', 'GAN', 'INL2', 49, '#007a33', '#ffffff', 'IN'],
+  ['RNC', 'Ranchi Ormanları', 'RAN', 'INL2', 48, '#007a33', '#ffd200', 'IN'],
+  ['CDG', 'Chandigarh Bahçeleri', 'CDG', 'INL2', 48, '#00a19a', '#ff9933', 'IN'],
   ['SLZ', 'Salzburg Zirvesi', 'SAL', 'AUT', 73, '#c8102e', '#ffffff', 'DE'],
   ['RPW', 'Viyana Kanatları', 'RAP', 'AUT', 68, '#007a33', '#ffffff', 'DE'],
   ['AWI', 'Favoriten Ateşi', 'AUS', 'AUT', 67, '#5b2c83', '#ffffff', 'DE'],
@@ -763,6 +796,10 @@ const NAME_POOLS = {
   MX: {
     f: ['Juan', 'José', 'Luis', 'Carlos', 'Jorge', 'Miguel', 'Alejandro', 'Fernando', 'Ricardo', 'Eduardo', 'Andrés', 'Javier', 'Óscar', 'Sergio', 'Adrián', 'Arturo', 'Emilio', 'Iván', 'Manuel', 'Rafael'],
     l: ['Hernández', 'García', 'Martínez', 'López', 'González', 'Pérez', 'Sánchez', 'Ramírez', 'Torres', 'Flores', 'Rivera', 'Gómez', 'Díaz', 'Cruz', 'Morales', 'Reyes', 'Gutiérrez', 'Ortiz', 'Castillo', 'Mendoza'],
+  },
+  IN: {
+    f: ['Arjun', 'Rahul', 'Sandesh', 'Anirudh', 'Liston', 'Manvir', 'Sahal', 'Akash', 'Vikram', 'Rohit', 'Sunil', 'Lallian', 'Jeakson', 'Brandon', 'Ashique', 'Udanta', 'Nikhil', 'Amey', 'Gurpreet', 'Subhasish'],
+    l: ['Singh', 'Kumar', 'Sharma', 'Thapa', 'Das', 'Nair', 'Menon', 'Gupta', 'Bose', 'Fernandes', 'Rao', 'Pillai', 'Chhetri', 'Dutta', 'Iyer', 'Reddy', 'Mishra', 'Bhatt', 'Kapoor', 'Joshi'],
   },
   CN: {
     f: ['Wei', 'Lei', 'Hao', 'Jun', 'Yang', 'Xin', 'Bin', 'Peng', 'Tao', 'Long', 'Jie', 'Ming', 'Chen', 'Yu', 'Zhen', 'Kai', 'Bo', 'Rui', 'Feng', 'Qiang'],

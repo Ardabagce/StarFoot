@@ -39,7 +39,7 @@ const Squads = {
 };
 
 // isim havuzu → ülke kodu (yabancı oyuncuların uyruğu)
-const POOL_NAT = { TR: 'TUR', EN: 'ENG', ES: 'ESP', DE: 'GER', IT: 'ITA', FR: 'FRA', BR: 'BRA', NL: 'NED', PT: 'POR', AR: 'ARG', BE: 'BEL', US: 'USA', SA: 'KSA', MX: 'MEX', JP: 'JPN', GR: 'GRE', DK: 'DEN', HR: 'CRO', CZ: 'CZE', PL: 'POL', UA: 'UKR', CN: 'CHN', KR: 'KOR', IR: 'IRN', UZ: 'UZB', HU: 'HUN', RO: 'ROU', AF: 'GHA', SN: 'SEN' };
+const POOL_NAT = { TR: 'TUR', EN: 'ENG', ES: 'ESP', DE: 'GER', IT: 'ITA', FR: 'FRA', BR: 'BRA', NL: 'NED', PT: 'POR', AR: 'ARG', BE: 'BEL', US: 'USA', SA: 'KSA', MX: 'MEX', JP: 'JPN', GR: 'GRE', DK: 'DEN', HR: 'CRO', CZ: 'CZE', PL: 'POL', UA: 'UKR', CN: 'CHN', IN: 'IND', KR: 'KOR', IR: 'IRN', UZ: 'UZB', HU: 'HUN', RO: 'ROU', AF: 'GHA', SN: 'SEN' };
 // ülke kodu → isim havuzu (havuzu olmayan ülkeler en yakın dil/bölge havuzunu kullanır)
 const NAT_POOL = Object.assign(Object.fromEntries(Object.entries(POOL_NAT).map(([p, n]) => [n, p])), {
   URU: 'AR', COL: 'MX', ECU: 'MX', PAR: 'AR', PER: 'MX', CHI: 'AR', PAN: 'MX', CRC: 'MX', CAN: 'US', AUS: 'EN', NZL: 'EN', IRL: 'EN', SCO: 'EN', WAL: 'EN', JAM: 'EN',
