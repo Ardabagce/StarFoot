@@ -231,6 +231,17 @@ def check(a):
             print(' ', p['productId'], opts)
 
 
+def products_read(a):
+    """Yalnız okur: ürünlerin durumu ve satın alma seçenekleri (taslak açmaz, inceleme başlatmaz)."""
+    s = session()
+    r = s.get(f'{API}/{PKG}/oneTimeProducts')
+    if not r.ok:
+        sys.exit(r.text[:500])
+    for p in r.json().get('oneTimeProducts', []):
+        opts = [(o.get('purchaseOptionId'), o.get('state'), (o.get('buyOption') or {}).get('legacyCompatible'), len(o.get('regionalPricingAndAvailabilityConfigs') or [])) for o in p.get('purchaseOptions', [])]
+        print(p['productId'], opts)
+
+
 def datasafety(a):
     guard('veri güvenliği formu')
     s = session()
@@ -313,5 +324,6 @@ if __name__ == '__main__':
     sub.add_parser('listing')
     sub.add_parser('datasafety')
     sub.add_parser('vitals')
+    sub.add_parser('products_read')
     a = ap.parse_args()
-    {'upload': upload, 'products': products, 'sale': sale, 'check': check, 'listing': listing, 'datasafety': datasafety, 'vitals': vitals}[a.cmd](a)
+    {'upload': upload, 'products': products, 'sale': sale, 'check': check, 'listing': listing, 'datasafety': datasafety, 'vitals': vitals, 'products_read': products_read}[a.cmd](a)

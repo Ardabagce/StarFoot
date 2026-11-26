@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       action:
-        description: 'check / products / sale / listing / datasafety / release'
+        description: 'check / products_read / products / sale / listing / datasafety / release'
         required: true
         default: check
       sale:
