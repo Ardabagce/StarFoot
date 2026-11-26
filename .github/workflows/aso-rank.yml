@@ -1,0 +1,22 @@
+# Her gün App Store anahtar kelime sıralarını ölçer ve store/aso/ranks.json'a ekler (mağazaya hiçbir şey göndermez).
+name: ASO sıra takibi
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 4 * * *'
+permissions:
+  contents: write
+concurrency: aso-rank
+jobs:
+  rank:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/aso/rank.py
+      - run: |
+          git config user.name "aso-bot"
+          git config user.email "aso-bot@users.noreply.github.com"
+          git add store/aso/ranks.json
+          git diff --cached --quiet && exit 0
+          git commit -m "ASO sıraları $(date -u +%F) [skip ci]"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
