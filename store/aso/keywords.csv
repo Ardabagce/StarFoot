@@ -1,0 +1,210 @@
+date,country,keyword,rank,results
+2026-11-26,tr,futbol oyunu,49,193
+2026-11-26,tr,futbol kariyer,21,188
+2026-11-26,tr,futbol kariyer oyunu,3,173
+2026-11-26,tr,futbolcu ol,6,180
+2026-11-26,tr,futbolcu oyunu,23,124
+2026-11-26,tr,futbolcu olma oyunu,15,31
+2026-11-26,tr,kariyer oyunu,11,191
+2026-11-26,tr,hayat simülasyonu,38,189
+2026-11-26,tr,futbol simülasyonu,60,176
+2026-11-26,tr,futbol menajer,,178
+2026-11-26,tr,menajer oyunu,1,174
+2026-11-26,tr,teknik direktör,,176
+2026-11-26,tr,teknik direktör oyunu,16,47
+2026-11-26,tr,kaleci oyunu,14,55
+2026-11-26,tr,penaltı oyunu,65,154
+2026-11-26,tr,altyapı,39,170
+2026-11-26,tr,efsane futbolcu,2,36
+2026-11-26,tr,transfer,,191
+2026-11-26,tr,yaşam simülatörü,45,194
+2026-11-26,tr,futbol,92,194
+2026-11-26,tr,internetsiz oyunlar,,178
+2026-11-26,tr,internetsiz futbol,30,188
+2026-11-26,tr,yıldız futbolcu,,21
+2026-11-26,tr,milli takım,,74
+2026-11-26,tr,starfoot,1,34
+2026-11-26,us,soccer game,84,183
+2026-11-26,us,football game,,186
+2026-11-26,us,soccer career,10,190
+2026-11-26,us,football career,11,195
+2026-11-26,us,soccer career sim,38,164
+2026-11-26,us,soccer manager,67,167
+2026-11-26,us,football manager,167,176
+2026-11-26,us,soccer simulator,,179
+2026-11-26,us,life simulator,,191
+2026-11-26,us,pro soccer,,176
+2026-11-26,us,soccer life,65,156
+2026-11-26,us,soccer star,29,174
+2026-11-26,us,football legend,,170
+2026-11-26,us,soccer rpg,75,157
+2026-11-26,us,offline soccer,,155
+2026-11-26,us,penalty,,149
+2026-11-26,us,goalkeeper game,,155
+2026-11-26,us,soccer superstar,89,170
+2026-11-26,us,starfoot,1,25
+2026-11-26,de,fußball,104,189
+2026-11-26,de,fussball,,185
+2026-11-26,de,fußballspiel,,162
+2026-11-26,de,fußball karriere,13,172
+2026-11-26,de,fußball manager,,170
+2026-11-26,de,fussball manager,,152
+2026-11-26,de,fußball simulator,60,149
+2026-11-26,de,fußball trainer,62,174
+2026-11-26,de,fußballprofi,,7
+2026-11-26,de,fussball spiele offline,41,147
+2026-11-26,de,torwart spiel,,121
+2026-11-26,de,elfmeter,52,138
+2026-11-26,de,lebenssimulation,,64
+2026-11-26,de,fußball star,25,143
+2026-11-26,de,fußball legende,17,95
+2026-11-26,de,starfoot,1,29
+2026-11-26,in,football game,,188
+2026-11-26,in,soccer game,,189
+2026-11-26,in,football career,52,190
+2026-11-26,in,football manager,,183
+2026-11-26,in,soccer career,10,194
+2026-11-26,in,football simulator,112,189
+2026-11-26,in,life simulator,,189
+2026-11-26,in,football star,22,184
+2026-11-26,in,football legend,63,186
+2026-11-26,in,offline football,161,191
+2026-11-26,in,penalty,97,182
+2026-11-26,in,goalkeeper,,153
+2026-11-26,in,indian football,,32
+2026-11-26,in,starfoot,1,1
+2026-11-26,fr,jeu de foot,,166
+2026-11-26,fr,foot,,185
+2026-11-26,fr,football,,179
+2026-11-26,fr,carrière foot,9,129
+2026-11-26,fr,manager foot,,181
+2026-11-26,fr,simulateur foot,120,169
+2026-11-26,fr,jeu de football,,170
+2026-11-26,fr,star du foot,3,194
+2026-11-26,fr,gardien de but,,153
+2026-11-26,fr,penalty,,139
+2026-11-26,fr,jeu foot hors ligne,,170
+2026-11-26,fr,starfoot,1,1
+2026-11-26,nl,voetbal,62,176
+2026-11-26,nl,voetbalspel,56,136
+2026-11-26,nl,voetbal carrière,10,66
+2026-11-26,nl,voetbal manager,63,132
+2026-11-26,nl,voetbal simulator,28,137
+2026-11-26,nl,voetballer,7,160
+2026-11-26,nl,keeper spel,,88
+2026-11-26,nl,penalty,92,151
+2026-11-26,nl,starfoot,1,1
+2026-11-26,be,voetbal,113,172
+2026-11-26,be,voetbalspel,84,155
+2026-11-26,be,voetbal carrière,2,66
+2026-11-26,be,voetbal manager,77,136
+2026-11-26,be,voetbal simulator,36,132
+2026-11-26,be,voetballer,22,43
+2026-11-26,be,keeper spel,,88
+2026-11-26,be,penalty,93,157
+2026-11-26,be,jeu de foot,,182
+2026-11-26,be,foot,91,189
+2026-11-26,be,football,66,186
+2026-11-26,be,carrière foot,5,128
+2026-11-26,be,manager foot,,189
+2026-11-26,be,simulateur foot,94,156
+2026-11-26,be,jeu de football,,165
+2026-11-26,be,star du foot,4,190
+2026-11-26,be,gardien de but,,135
+2026-11-26,be,jeu foot hors ligne,,58
+2026-11-26,be,starfoot,1,1
+2026-11-26,at,fußball,,196
+2026-11-26,at,fussball,107,192
+2026-11-26,at,fußballspiel,132,170
+2026-11-26,at,fußball karriere,20,195
+2026-11-26,at,fußball manager,153,186
+2026-11-26,at,fussball manager,,143
+2026-11-26,at,fußball simulator,70,160
+2026-11-26,at,fußball trainer,72,174
+2026-11-26,at,fußballprofi,,7
+2026-11-26,at,fussball spiele offline,39,146
+2026-11-26,at,torwart spiel,,115
+2026-11-26,at,elfmeter,37,136
+2026-11-26,at,lebenssimulation,,64
+2026-11-26,at,fußball star,22,140
+2026-11-26,at,fußball legende,15,94
+2026-11-26,at,starfoot,1,1
+2026-11-26,ca,soccer game,,191
+2026-11-26,ca,football game,,195
+2026-11-26,ca,soccer career,28,191
+2026-11-26,ca,football career,6,187
+2026-11-26,ca,soccer manager,151,179
+2026-11-26,ca,football manager,,188
+2026-11-26,ca,soccer simulator,,184
+2026-11-26,ca,life simulator,,193
+2026-11-26,ca,soccer star,147,173
+2026-11-26,ca,football legend,95,177
+2026-11-26,ca,offline football,178,188
+2026-11-26,ca,goalkeeper game,,156
+2026-11-26,ca,starfoot,1,1
+2026-11-26,au,soccer game,,189
+2026-11-26,au,football game,,190
+2026-11-26,au,soccer career,,189
+2026-11-26,au,football career,57,191
+2026-11-26,au,soccer manager,133,177
+2026-11-26,au,football manager,,176
+2026-11-26,au,soccer simulator,,188
+2026-11-26,au,life simulator,,196
+2026-11-26,au,soccer star,170,170
+2026-11-26,au,football legend,,188
+2026-11-26,au,offline football,,187
+2026-11-26,au,goalkeeper game,,150
+2026-11-26,au,starfoot,1,1
+2026-11-26,ng,soccer game,,195
+2026-11-26,ng,football game,,195
+2026-11-26,ng,soccer career,16,196
+2026-11-26,ng,football career,19,189
+2026-11-26,ng,soccer manager,109,184
+2026-11-26,ng,football manager,,192
+2026-11-26,ng,soccer simulator,,188
+2026-11-26,ng,life simulator,,189
+2026-11-26,ng,soccer star,,177
+2026-11-26,ng,football legend,,200
+2026-11-26,ng,offline football,,196
+2026-11-26,ng,goalkeeper game,,154
+2026-11-26,ng,starfoot,1,1
+2026-11-26,cy,futbol oyunu,92,194
+2026-11-26,cy,futbol kariyer oyunu,3,96
+2026-11-26,cy,futbolcu ol,2,10
+2026-11-26,cy,menajer oyunu,1,131
+2026-11-26,cy,efsane futbolcu,4,30
+2026-11-26,cy,teknik direktör oyunu,13,45
+2026-11-26,cy,kaleci oyunu,7,47
+2026-11-26,cy,soccer game,,188
+2026-11-26,cy,football game,,193
+2026-11-26,cy,soccer career,13,193
+2026-11-26,cy,football career,17,195
+2026-11-26,cy,soccer manager,78,181
+2026-11-26,cy,football manager,,176
+2026-11-26,cy,soccer simulator,,182
+2026-11-26,cy,life simulator,,185
+2026-11-26,cy,soccer star,87,177
+2026-11-26,cy,football legend,51,196
+2026-11-26,cy,offline football,81,197
+2026-11-26,cy,goalkeeper game,,142
+2026-11-26,cy,starfoot,1,29
+2026-11-26,az,futbol oyunu,,195
+2026-11-26,az,futbol kariyer oyunu,15,50
+2026-11-26,az,futbolcu ol,1,3
+2026-11-26,az,menajer oyunu,1,36
+2026-11-26,az,efsane futbolcu,1,8
+2026-11-26,az,teknik direktör oyunu,10,22
+2026-11-26,az,kaleci oyunu,1,21
+2026-11-26,az,soccer game,88,196
+2026-11-26,az,football game,,197
+2026-11-26,az,soccer career,13,196
+2026-11-26,az,football career,6,194
+2026-11-26,az,soccer manager,74,182
+2026-11-26,az,football manager,,192
+2026-11-26,az,soccer simulator,,184
+2026-11-26,az,life simulator,,185
+2026-11-26,az,soccer star,89,180
+2026-11-26,az,football legend,49,197
+2026-11-26,az,offline football,98,196
+2026-11-26,az,goalkeeper game,,167
+2026-11-26,az,starfoot,1,1
