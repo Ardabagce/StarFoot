@@ -133,10 +133,10 @@ const I18N = {
       if (!mm || mm.slice(1).some((x) => x.includes(' · '))) continue;
       const g = mm.slice(1).map((x) => { const y = I18N.tr(x, d + 1); return y == null ? x : y; });
       let i = 0;
-      return p.v.replace(/\{(\d*)\}/g, (_, n) => (n === '' ? (g[i++] ?? '') : (g[+n] ?? '')));
+      return p.v.replace(/\{(\d*)\}/g, (_, n) => (n === '' ? NZ(g[i++], '') : NZ(g[+n], '')));
     }
     // Emojisiz hali
-    const pl = s.replace(/[\p{Extended_Pictographic}\u{1F1E6}-\u{1F1FF}\u{FE0F}\u{200D}]/gu, '').replace(/\s{2,}/g, ' ').trim();
+    const pl = s.replace(emojiRe('\\u{FE0F}\\u{200D}', 'g'), '').replace(/\s{2,}/g, ' ').trim();
     if (pl !== s && pl) { const y = I18N.tr(pl, d + 1); if (y != null) return y; }
     // Ayraçlarla bölünmüş metin
     for (const sep of [' · ', ' — ', ' | ', ' • ', ' – ']) {
@@ -175,13 +175,13 @@ const I18N = {
     const c = s.match(/^([^:]{2,40}):\s+(.+)$/);
     if (c) {
       const a = I18N.tr(c[1], d + 1), b = I18N.tr(c[2], d + 1);
-      if (a != null || b != null) return (a ?? c[1]) + ': ' + (b ?? c[2]);
+      if (a != null || b != null) return NZ(a, c[1]) + ': ' + NZ(b, c[2]);
     }
     // Skor satırı: "Takım A 2-1 Takım B (pen.)"
     const sc = s.match(/^(.+?) (\d+ ?- ?\d+) (.+?)( \(pen\.\))?$/);
     if (sc) {
       const a = I18N.tr(sc[1], d + 1), b = I18N.tr(sc[3], d + 1);
-      if (a != null || b != null) return (a ?? sc[1]) + ' ' + sc[2] + ' ' + (b ?? sc[3]) + (sc[4] || '');
+      if (a != null || b != null) return NZ(a, sc[1]) + ' ' + sc[2] + ' ' + NZ(b, sc[3]) + (sc[4] || '');
     }
     // İki bilinen parçadan oluşan kısa metin ("Avrupa Kupası" + "Son 16")
     const ws = s.split(' ');
@@ -189,7 +189,7 @@ const I18N = {
       for (let i = ws.length - 1; i >= 1; i--) {
         const L = ws.slice(0, i).join(' '), R = ws.slice(i).join(' ');
         const a = I18N.exact.get(L), b = I18N.exact.get(R);
-        if (a !== undefined && (b !== undefined || !/[A-Za-zÇĞİŞÖÜçğışöü]/.test(R))) return a + ' ' + (b ?? R);
+        if (a !== undefined && (b !== undefined || !/[A-Za-zÇĞİŞÖÜçğışöü]/.test(R))) return a + ' ' + NZ(b, R);
         if (b !== undefined && !/[A-Za-zÇĞİŞÖÜçğışöü]/.test(L)) return L + ' ' + b;
       }
     }

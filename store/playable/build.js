@@ -10,7 +10,7 @@ const b64 = (p) => fs.readFileSync(path.join(R, p)).toString('base64');
 // oyunun kendi kodu: util (U, Perf), ses, çizimler, mini oyun / vitrin
 const util = rd('js/util.js').split('\n');
 const perfEnd = util.findIndex((l) => l.startsWith('Perf.init();'));
-const UTIL = util.slice(0, perfEnd + 1).join('\n');
+const UTIL = rd('js/compat.js') + '\n' + util.slice(0, perfEnd + 1).join('\n');
 const SPRITES = rd('js/sprites.js').replace("im.src = 'img/grass.jpg'", () => "im.src = 'data:image/jpeg;base64," + b64('img/grass.jpg') + "'");
 const MG = [UTIL, rd('js/sfx.js'), SPRITES, 'const Weather = { draw() {} };', rd('js/minigame.js')].join('\n;\n');
 const SHOP = (l) => [UTIL, `const I18N = { lang: '${l === 'zh' ? 'en' : l}' }; const Game = { state: null, p: null };`, rd('js/sfx.js'), rd('js/mallart.js'), rd('js/mall.js')].join('\n;\n');

@@ -89,10 +89,10 @@ const Drill = {
           speed: (0.75 + 0.6 * skill) * Math.sqrt(cond / 0.8), kits, number: p.shirt,
         }, D.cfg);
         const r = await MiniGame.timing(hostEl, cfg);
-        if (r.result === 'auto') auto = true; else q = score[r.result] ?? 0.3;
+        if (r.result === 'auto') auto = true; else q = NZ(score[r.result], 0.3);
       } else {
         const r = await MiniGame[D.fn](hostEl, Object.assign({ skill, kits, number: p.shirt, pace: st.pace, passing: st.passing, technique: st.technique, physical: st.physical, heading: st.heading, stamina: st.stamina, dribbling: st.dribbling, rounds: D.rounds, mates, cond }, D.o ? D.o(st) : {}));
-        if (r.result === 'auto') auto = true; else q = score[r.result] ?? 0.3;
+        if (r.result === 'auto') auto = true; else q = NZ(score[r.result], 0.3);
       }
     } catch (e) {
       console.error(e);

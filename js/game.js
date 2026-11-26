@@ -1484,7 +1484,7 @@ const UI = {
     const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
     const nodes = [];
     while (w.nextNode()) nodes.push(w.currentNode);
-    const emo = /[\p{Extended_Pictographic}\u{1F1E6}-\u{1F1FF}]/u;
+    const emo = emojiRe('');
     nodes.forEach((n) => { if (emo.test(n.nodeValue) && !(n.parentElement && n.parentElement.closest('[data-emo]'))) n.nodeValue = U.plain(n.nodeValue); });
   },
 

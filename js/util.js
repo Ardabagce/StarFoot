@@ -105,7 +105,7 @@ const U = {
   // Emojileri ve bayrakları metinden ayıklar (arayüz kendi ikonlarını kullanır)
   plain(s) {
     return String(s)
-      .replace(/[\p{Extended_Pictographic}\u{1F1E6}-\u{1F1FF}\u{FE0F}\u{200D}\u{1F3FB}-\u{1F3FF}\u{E0020}-\u{E007F}\u{20E3}]/gu, '')
+      .replace(emojiRe('\\u{FE0F}\\u{200D}\\u{1F3FB}-\\u{1F3FF}\\u{E0020}-\\u{E007F}\\u{20E3}', 'g'), '')
       .replace(/^\s+/, '')
       .replace(/\s{2,}/g, ' ');
   },

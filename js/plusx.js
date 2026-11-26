@@ -161,7 +161,7 @@ const FF = {
     </div>`, [
       { t: 'Vazgeç', cls: 'btn-ghost' },
       { t: '⏩ Başlat', cls: 'btn-big', keep: true, fn: () => {
-        const r = +((m.querySelector('input[name="ffr"]:checked') || {}).value ?? def.r);
+        const r = +(NZ((m.querySelector('input[name="ffr"]:checked') || {}).value, def.r));
         const pl = (m.querySelector('input[name="ffp"]:checked') || {}).value || 'bal';
         const cup = m.querySelector('#ff-cup').checked, off = m.querySelector('#ff-off').checked;
         FF.last = { r, p: pl, cup, off };

@@ -1839,7 +1839,7 @@ Object.assign(MiniGame, {
         down: (e) => { const r = g.cv.getBoundingClientRect(); target = ((e.clientX - r.left) / r.width - 0.5) * (g.W / Math.min(g.W * 0.86, g.H * 0.9)); },
         move: (e) => { if (target == null) return; const r = g.cv.getBoundingClientRect(); target = U.clamp(((e.clientX - r.left) / r.width - 0.5) * (g.W / Math.min(g.W * 0.86, g.H * 0.9)), -0.5, 0.5); },
         up: () => release(),
-        key: (e) => { if (e.code === 'ArrowLeft') target = U.clamp((target ?? kx) - 0.12, -0.5, 0.5); if (e.code === 'ArrowRight') target = U.clamp((target ?? kx) + 0.12, -0.5, 0.5); if (e.code === 'Space') { e.preventDefault(); release(); } },
+        key: (e) => { if (e.code === 'ArrowLeft') target = U.clamp(NZ(target, kx) - 0.12, -0.5, 0.5); if (e.code === 'ArrowRight') target = U.clamp(NZ(target, kx) + 0.12, -0.5, 0.5); if (e.code === 'Space') { e.preventDefault(); release(); } },
       }, resolve, { title: 'ORTA GELİYOR', lines: ['Parmağını basılı tut, kaleciyi gölgeye götür.', 'Topun etrafında yeşil halka çıkınca bırak.', 'Doğru anda bırakırsan topu yakalarsın.'] });
     });
   },
