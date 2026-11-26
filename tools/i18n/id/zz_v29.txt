@@ -45,3 +45,29 @@
 10596|{} Lihat Premium
 10597|Gratis {}/{}
 10598|Percepat terbuka saat pertandingan liga dimulai.
+10599|Kualifikasi Piala Dunia
+10600|kualifikasi
+10601|Play-off: tiket terakhir
+10602|mencapai babak akhir kualifikasi. Untuk ke turnamen, kalian harus menang melawan
+10603|mencapai babak akhir kualifikasi.
+10604|Untuk ke turnamen, kalian harus menang melawan
+10605|— wajib menang!
+10606|Kita berhasil!
+10607|Ganti nama liga, klub, dan pemain sesukamu. Perubahan muncul di karier baru dan yang tersimpan.
+10608|Ganti nama liga, klub, dan pemain sesukamu.
+10609|Ganti nama liga, klub, dan pemain, bagikan file edit.
+10610|Nama liga
+10611|Saat ini {} liga, {} klub, dan {} pemain diganti namanya. Bagikan editanmu ke teman atau impor file orang lain.
+10612|{} liga, {} klub, dan {} pemain dimuat. Ketuk Simpan untuk menerapkan.
+10613|liga, {} klub, dan {} pemain dimuat. Ketuk Simpan untuk menerapkan.
+10614|{} tersingkir oleh {} di play-off dan gagal ke {}.
+10615|{} menyingkirkan {} di play-off. Tiket didapat: {}!
+10616|Saat ini {} liga, {} klub, dan {} pemain diganti namanya.
+10617|Kita berhasil! Kita ke {}!
+10618|{} liga, {} klub, dan {} pemain dimuat.
+10619|liga, {} klub, dan {} pemain dimuat.
+10620|{} menyingkirkan {} di play-off.
+10621|Tiket didapat: {}!
+10622|Kita ke {}!
+10623|{} · Play-off
+10624|Kualifikasi {}

@@ -15348,6 +15348,27 @@
 "lang-pt.js",
 "lang-zh.js"
 ],
+"flatMap": [
+"compat.js"
+],
+"replaceAll": [
+"compat.js"
+],
+"matchAll": [
+"compat.js"
+],
+"trimStart": [
+"compat.js"
+],
+"trimEnd": [
+"compat.js"
+],
+"[\\\\p{Extended_Pictographic}\\\\u{1F1E6}-\\\\u{1F1FF}": [
+"compat.js"
+],
+"(?:[\\\\uD83C-\\\\uDBFF][\\\\uDC00-\\\\uDFFF]|[\\\\u2600-\\\\u27BF\\\\u2B00-\\\\u2BFF\\\\u2300-\\\\u23FF\\\\uFE0F\\\\u200D\\\\u20E3])": [
+"compat.js"
+],
 "Kafa": [
 "cstats.js",
 "lang-ar.js",
@@ -18179,6 +18200,44 @@
 "lang-pt.js",
 "lang-zh.js"
 ],
+"Dünya Kupası elemeleri": [
+"cups.js"
+],
+"Play-off: son bilet": [
+"cups.js"
+],
+"elemelerde son tura kaldı. Turnuvaya gitmek için": [
+"cups.js"
+],
+"karşısında kazanmak zorundasınız!": [
+"cups.js"
+],
+"Maça Çık": [
+"cups.js",
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"{} · Play-off": [
+"cups.js"
+],
+"{}, play-off'ta {} engelini aştı. Turnuva bileti alındı: {}!": [
+"cups.js"
+],
+"Başardık! {} için biletimizi aldık!": [
+"cups.js"
+],
+"{}, play-off'ta {} karşısında elendi. Turnuvaya katılamadı: {}.": [
+"cups.js"
+],
 "{} kadrosundasın.": [
 "cups.js",
 "lang-ar.js",
@@ -18301,20 +18360,6 @@
 ],
 "{}Enerjin:": [
 "cups.js"
-],
-"Maça Çık": [
-"cups.js",
-"game.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"lang-zh.js"
 ],
 "tur atladı": [
 "cups.js",
@@ -39244,18 +39289,8 @@
 "lang-pt.js",
 "lang-zh.js"
 ],
-"Kulüp ve oyuncu isimlerini istediğin gibi değiştirebilirsin. Değişiklikler yeni ve kayıtlı kariyerlerinde görünür.": [
-"edit.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"lang-zh.js"
+"Lig, kulüp ve oyuncu isimlerini istediğin gibi değiştirebilirsin. Değişiklikler yeni ve kayıtlı kariyerlerinde görünür.": [
+"edit.js"
 ],
 "Sonuç yok.": [
 "edit.js",
@@ -39309,18 +39344,8 @@
 "lang-pt.js",
 "lang-zh.js"
 ],
-"Şu an {} kulüp ve {} oyuncu değiştirilmiş. Düzenlemeni arkadaşlarınla paylaşabilir ya da başkasının dosyasını içe aktarabilirsin.": [
-"edit.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"lang-zh.js"
+"Şu an {} lig, {} kulüp ve {} oyuncu değiştirilmiş. Düzenlemeni arkadaşlarınla paylaşabilir ya da başkasının dosyasını içe aktarabilirsin.": [
+"edit.js"
 ],
 "Paylaş / kopyala": [
 "edit.js",
@@ -39390,18 +39415,8 @@
 "lang-pt.js",
 "lang-zh.js"
 ],
-"{} kulüp ve {} oyuncu yüklendi. Uygulamak için Kaydet'e dokun.": [
-"edit.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"lang-zh.js"
+"{} lig, {} kulüp ve {} oyuncu yüklendi. Uygulamak için Kaydet'e dokun.": [
+"edit.js"
 ],
 "Tüm isimler varsayılana döndü. Uygulamak için Kaydet\\'e dokun.": [
 "edit.js"
@@ -51405,18 +51420,8 @@
 "lang-pt.js",
 "lang-zh.js"
 ],
-"Kulüp ve oyuncu isimlerini değiştir, düzenleme dosyası paylaş.": [
-"game.js",
-"lang-ar.js",
-"lang-de.js",
-"lang-en.js",
-"lang-es.js",
-"lang-fr.js",
-"lang-id.js",
-"lang-it.js",
-"lang-ja.js",
-"lang-pt.js",
-"lang-zh.js"
+"Lig, kulüp ve oyuncu isimlerini değiştir, düzenleme dosyası paylaş.": [
+"game.js"
 ],
 "{} Aç": [
 "game.js",
@@ -54211,6 +54216,9 @@
 "Pratama": [
 "i18n.js",
 "wc.js"
+],
+"\\\\u{FE0F}\\\\u{200D}": [
+"i18n.js"
 ],
 "script,style,textarea,[contenteditable],[data-noi18n]": [
 "i18n.js"
@@ -74344,7 +74352,31 @@
 "lang-zh.js",
 "meta.js"
 ],
+"Kulüp ve oyuncu isimlerini değiştir, düzenleme dosyası paylaş.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
 "Aç": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"Kulüp ve oyuncu isimlerini istediğin gibi değiştirebilirsin. Değişiklikler yeni ve kayıtlı kariyerlerinde görünür.": [
 "lang-ar.js",
 "lang-de.js",
 "lang-en.js",
@@ -122253,6 +122285,19 @@
 "lang-pt.js",
 "lang-zh.js",
 "star.js"
+],
+"Hızlı ilerleme lig maçları başlayınca açılır.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"plusx.js"
 ],
 "(Asist)": [
 "lang-ar.js",
@@ -225936,6 +225981,18 @@
 "lang-pt.js",
 "lang-zh.js"
 ],
+"Şu an {} kulüp ve {} oyuncu değiştirilmiş. Düzenlemeni arkadaşlarınla paylaşabilir ya da başkasının dosyasını içe aktarabilirsin.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
 "Ligdeki rakip {}'da senin yaşında, senin mevkinde bir yıldız adayı var: {}. Basın ikinizi şimdiden kıyaslıyor. Ezeli rakibin bu!": [
 "lang-ar.js",
 "lang-de.js",
@@ -228425,6 +228482,18 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
+],
+"{} kulüp ve {} oyuncu yüklendi. Uygulamak için Kaydet'e dokun.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "· {} yaş · Güç {} · Kalan sözleşme {} yıl · Şu anki maaşı {}/hafta": [
 "lang-ar.js",
@@ -259517,6 +259586,9 @@
 "lang-de.js"
 ],
 "Den oberen Teil deiner Starpedia-Seite siehst du immer; die ganze Seite öffnet Premium.": [
+"lang-de.js"
+],
+"Der Schnellvorlauf öffnet sich, sobald die Ligaspiele beginnen.": [
 "lang-de.js"
 ],
 "– wir haben uns qualifiziert!": [
@@ -296159,6 +296231,9 @@
 "You can always see the top of your Starpedia page; the full page opens with Premium.": [
 "lang-en.js"
 ],
+"Fast-forward opens once league matches begin.": [
+"lang-en.js"
+],
 "— we qualified!": [
 "lang-en.js"
 ],
@@ -332150,6 +332225,9 @@
 "Siempre puedes ver la parte superior de tu página de Starpedia; la página completa se abre con Premium.": [
 "lang-es.js"
 ],
+"El avance rápido se abre cuando empiezan los partidos de liga.": [
+"lang-es.js"
+],
 "— ¡nos hemos clasificado!": [
 "lang-es.js"
 ],
@@ -367891,6 +367969,9 @@
 "Tu vois toujours le haut de ta page Starpedia ; la page complète s’ouvre avec Premium.": [
 "lang-fr.js"
 ],
+"L’avance rapide s’ouvre dès le début des matchs de championnat.": [
+"lang-fr.js"
+],
 "— on est qualifiés !": [
 "lang-fr.js"
 ],
@@ -402649,6 +402730,9 @@
 "Bagian atas halaman Starpedia-mu selalu terlihat; halaman lengkap terbuka dengan Premium.": [
 "lang-id.js"
 ],
+"Percepat terbuka saat pertandingan liga dimulai.": [
+"lang-id.js"
+],
 "— kita lolos!": [
 "lang-id.js"
 ],
@@ -437151,6 +437235,9 @@
 "lang-it.js"
 ],
 "Vedi sempre la parte alta della tua pagina Starpedia; la pagina completa si apre con Premium.": [
+"lang-it.js"
+],
+"L’avanzamento rapido si apre quando iniziano le partite di campionato.": [
 "lang-it.js"
 ],
 "— ci siamo qualificati!": [
@@ -472553,6 +472640,9 @@
 "lang-pt.js"
 ],
 "Você sempre vê o topo da sua página da Starpedia; a página completa abre com o Premium.": [
+"lang-pt.js"
+],
+"O avanço rápido abre quando começam os jogos da liga.": [
 "lang-pt.js"
 ],
 "— nos classificamos!": [
@@ -511650,9 +511740,6 @@
 "⏩ Hızlı ilerle": [
 "plusx.js"
 ],
-"Hızlı ilerleme lig maçları başlayınca açılır.": [
-"plusx.js"
-],
 "Odak: {}": [
 "plusx.js"
 ],
@@ -512013,6 +512100,9 @@
 "util.js"
 ],
 "EL": [
+"util.js"
+],
+"\\\\u{FE0F}\\\\u{200D}\\\\u{1F3FB}-\\\\u{1F3FF}\\\\u{E0020}-\\\\u{E007F}\\\\u{20E3}": [
 "util.js"
 ],
 "&amp;": [

@@ -45,3 +45,29 @@
 10596|{} Ver Premium
 10597|Gratis {}/{}
 10598|El avance rápido se abre cuando empiezan los partidos de liga.
+10599|Clasificación mundialista
+10600|clasificación
+10601|Play-off: el último billete
+10602|llegó a la ronda final de la clasificación. Para ir al torneo tienes que ganar a
+10603|llegó a la ronda final de la clasificación.
+10604|Para ir al torneo tienes que ganar a
+10605|¡solo vale ganar!
+10606|¡Lo logramos!
+10607|Cambia el nombre de ligas, clubes y jugadores como quieras. Los cambios aparecen en carreras nuevas y guardadas.
+10608|Cambia el nombre de ligas, clubes y jugadores como quieras.
+10609|Renombra ligas, clubes y jugadores, comparte un archivo de edición.
+10610|Nombre de la liga
+10611|Ahora hay {} ligas, {} clubes y {} jugadores renombrados. Comparte tus cambios con amigos o importa el archivo de otra persona.
+10612|{} ligas, {} clubes y {} jugadores cargados. Toca Guardar para aplicarlos.
+10613|ligas, {} clubes y {} jugadores cargados. Toca Guardar para aplicarlos.
+10614|{} cayó ante {} en el play-off y se pierde: {}.
+10615|{} superó a {} en el play-off. Billete asegurado: {}!
+10616|Ahora hay {} ligas, {} clubes y {} jugadores renombrados.
+10617|¡Lo logramos! ¡Vamos a la {}!
+10618|{} ligas, {} clubes y {} jugadores cargados.
+10619|ligas, {} clubes y {} jugadores cargados.
+10620|{} superó a {} en el play-off.
+10621|¡Billete asegurado: {}!
+10622|¡Vamos a la {}!
+10623|{} · Play-off
+10624|Clasificación: {}

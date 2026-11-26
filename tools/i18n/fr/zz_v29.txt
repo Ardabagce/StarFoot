@@ -45,3 +45,29 @@
 10596|{} Voir Premium
 10597|Gratuit {}/{}
 10598|L’avance rapide s’ouvre dès le début des matchs de championnat.
+10599|Qualifications pour la Coupe du monde
+10600|qualifications
+10601|Barrage : le dernier billet
+10602|a atteint le dernier tour des qualifications. Pour aller au tournoi, il faut battre
+10603|a atteint le dernier tour des qualifications.
+10604|Pour aller au tournoi, il faut battre
+10605|— la victoire est obligatoire !
+10606|On l’a fait !
+10607|Renomme ligues, clubs et joueurs comme tu veux. Les changements apparaissent dans les carrières nouvelles et sauvegardées.
+10608|Renomme ligues, clubs et joueurs comme tu veux.
+10609|Renommer ligues, clubs et joueurs, partager un fichier d’édition.
+10610|Nom de la ligue
+10611|Actuellement {} ligues, {} clubs et {} joueurs sont renommés. Partage tes modifications avec tes amis ou importe le fichier de quelqu’un d’autre.
+10612|{} ligues, {} clubs et {} joueurs chargés. Touche Enregistrer pour appliquer.
+10613|ligues, {} clubs et {} joueurs chargés. Touche Enregistrer pour appliquer.
+10614|{} est éliminé par {} en barrage et manque : {}.
+10615|{} a passé l’obstacle {} en barrage. Billet en poche : {} !
+10616|Actuellement {} ligues, {} clubs et {} joueurs sont renommés.
+10617|On l’a fait ! On va à : {} !
+10618|{} ligues, {} clubs et {} joueurs chargés.
+10619|ligues, {} clubs et {} joueurs chargés.
+10620|{} a passé l’obstacle {} en barrage.
+10621|Billet en poche : {} !
+10622|On va à : {} !
+10623|{} · Barrage
+10624|Qualifications : {}

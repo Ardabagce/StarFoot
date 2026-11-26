@@ -45,3 +45,29 @@
 10596|{} Scopri Premium
 10597|Gratis {}/{}
 10598|L’avanzamento rapido si apre quando iniziano le partite di campionato.
+10599|Qualificazioni mondiali
+10600|qualificazioni
+10601|Play-off: l'ultimo biglietto
+10602|è arrivata all'ultimo turno di qualificazione. Per andare al torneo devi battere
+10603|è arrivata all'ultimo turno di qualificazione.
+10604|Per andare al torneo devi battere
+10605|— serve solo vincere!
+10606|Ce l'abbiamo fatta!
+10607|Rinomina campionati, club e giocatori come vuoi. Le modifiche compaiono nelle carriere nuove e salvate.
+10608|Rinomina campionati, club e giocatori come vuoi.
+10609|Rinomina campionati, club e giocatori, condividi un file di modifica.
+10610|Nome del campionato
+10611|Al momento {} campionati, {} club e {} giocatori sono rinominati. Condividi le tue modifiche con gli amici o importa il file di qualcun altro.
+10612|{} campionati, {} club e {} giocatori caricati. Tocca Salva per applicare.
+10613|campionati, {} club e {} giocatori caricati. Tocca Salva per applicare.
+10614|{} eliminata da {} ai play-off: niente {}.
+10615|{} supera {} ai play-off. Biglietto staccato: {}!
+10616|Al momento {} campionati, {} club e {} giocatori sono rinominati.
+10617|Ce l'abbiamo fatta! Andiamo a: {}!
+10618|{} campionati, {} club e {} giocatori caricati.
+10619|campionati, {} club e {} giocatori caricati.
+10620|{} supera {} ai play-off.
+10621|Biglietto staccato: {}!
+10622|Andiamo a: {}!
+10623|{} · Play-off
+10624|Qualificazioni: {}

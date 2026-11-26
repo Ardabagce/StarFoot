@@ -45,3 +45,29 @@
 10596|{} Premium ansehen
 10597|Kostenlos {}/{}
 10598|Der Schnellvorlauf öffnet sich, sobald die Ligaspiele beginnen.
+10599|WM-Qualifikation
+10600|Qualifikation
+10601|Play-off: das letzte Ticket
+10602|hat die letzte Qualifikationsrunde erreicht. Für das Turnier musst du gewinnen gegen
+10603|hat die letzte Qualifikationsrunde erreicht.
+10604|Für das Turnier musst du gewinnen gegen
+10605|– ein Sieg ist Pflicht!
+10606|Wir haben es geschafft!
+10607|Benenne Ligen, Vereine und Spieler nach Belieben um. Änderungen erscheinen in neuen und gespeicherten Karrieren.
+10608|Benenne Ligen, Vereine und Spieler nach Belieben um.
+10609|Ligen, Vereine und Spieler umbenennen, Bearbeitungsdatei teilen.
+10610|Liganame
+10611|Aktuell sind {} Ligen, {} Vereine und {} Spieler umbenannt. Teile deine Änderungen mit Freunden oder importiere die Datei eines anderen.
+10612|{} Ligen, {} Vereine und {} Spieler geladen. Tippe auf Speichern, um sie anzuwenden.
+10613|Ligen, {} Vereine und {} Spieler geladen. Tippe auf Speichern, um sie anzuwenden.
+10614|{} scheitert im Play-off an {} und verpasst: {}.
+10615|{} setzt sich im Play-off gegen {} durch. Ticket gelöst: {}!
+10616|Aktuell sind {} Ligen, {} Vereine und {} Spieler umbenannt.
+10617|Wir haben es geschafft! Wir fahren zur {}!
+10618|{} Ligen, {} Vereine und {} Spieler geladen.
+10619|Ligen, {} Vereine und {} Spieler geladen.
+10620|{} setzt sich im Play-off gegen {} durch.
+10621|Ticket gelöst: {}!
+10622|Wir fahren zur {}!
+10623|{} · Play-off
+10624|{} – Qualifikation

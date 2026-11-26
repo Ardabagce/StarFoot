@@ -552,10 +552,60 @@ const Cups = {
   },
 
   // Turnuvayı oynatır; oyuncu kadrodaysa maçlarını kendisi oynar
+  // Oyuncunun milli takımı turnuvaya güçle giremediyse elemelerin son turu: oyuncunun oynadığı tek maçlık play-off.
+  // Kazanırsa turnuvaya giren en zayıf takımın yerini alır.
+  async qualPlayoff(s) {
+    const t = s.tournament;
+    if (!t || t.inPool || t.poDone || t.type === 'nl') return;
+    const nat = Game.nation();
+    const p = s.player;
+    if (!nat) return;
+    const base = t.type === 'wc' ? Game.nations() : Cups.contiPool(t.type);
+    if (!base.some((n) => n.code === nat.code)) return;
+    const fit = p.age >= 17 && p.injuryWeeks === 0 && !Life.banned() && Player.overall(p, true) >= nat.rating - 7 - (p.fame > 40 ? 2 : 0);
+    if (!fit || !t.teams || t.teams.length < 2) return;
+    t.poDone = true;
+    const oppCode = t.teams.slice().sort((x, y) => Game.nat(x).rating - Game.nat(y).rating)[0];
+    const opp = Game.nat(oppCode);
+    const elim = t.type === 'wc' ? 'Dünya Kupası elemeleri' : `${Cups.tourName(t.type)} elemeleri`;
+    await Cups.ask(`<div class="ev-tag">${elim}</div><h2>Play-off: son bilet</h2><p><b>${nat.name}</b> elemelerde son tura kaldı. Turnuvaya gitmek için <b>${opp.name}</b> karşısında kazanmak zorundasınız!</p>`, 'Maça Çık');
+    const h = nat.code, a = oppCode;
+    const ctx = { home: Cups.natTeam(h), away: Cups.natTeam(a), side: 'home', compName: `${elim} · Play-off`, levelBase: Game.levelBase(true) + 0.03, lg: t.type, theme: t.type };
+    ctx.role = Game.roleFor(Player.overall(p, true), nat.rating, false);
+    if (ctx.role === 'out') ctx.role = 'bench';
+    ctx.subChance = 0.7;
+    p.energy = Math.max(p.energy, 85);
+    const sum = await Match.run(ctx, s);
+    if (s.tournament !== t) return;
+    let won = sum.hs > sum.as ? true : sum.hs < sum.as ? false : null;
+    if (won === null) {
+      const et = typeof Shootout !== 'undefined' ? Shootout.extra(ctx) : { h: 0, a: 0 };
+      sum.hs += et.h; sum.as += et.a;
+      if (et.h !== et.a) won = et.h > et.a;
+      else if (typeof Shootout !== 'undefined') won = !!(await Shootout.run(ctx, sum, s)).homeWon;
+      else won = U.chance(0.5);
+      sum.gf = sum.hs; sum.ga = sum.as; sum.res = sum.hs > sum.as ? 'W' : sum.hs < sum.as ? 'L' : 'D'; sum.aet = true;
+    }
+    Game.applyMatch(sum, ctx, 'intl');
+    if (s.tournament !== t) return;
+    if (won) {
+      const swap = (arr) => { const i = arr.indexOf(oppCode); if (i >= 0) arr[i] = nat.code; };
+      swap(t.teams); swap(t.alive);
+      t.inPool = true; t.called = true;
+      Game.news(`${nat.name}, play-off'ta ${opp.name} engelini aştı. Turnuva bileti alındı: ${t.name}!`, 'good');
+      Social.post('daily', `Başardık! ${t.name} için biletimizi aldık!`, 2, Social.natOpts());
+    } else {
+      Game.news(`${nat.name}, play-off'ta ${opp.name} karşısında elendi. Turnuvaya katılamadı: ${t.name}.`, 'bad');
+    }
+    Game.save();
+  },
+
   async runTournament(s) {
     const t = s.tournament;
     const nat = Game.nation();
     const p = s.player;
+    await Cups.qualPlayoff(s);
+    if (s.tournament !== t) return;
     Game.news(`${t.name} başladı! ${t.called ? `${nat.name} kadrosundasın.` : t.inPool ? `${nat.name} turnuvada ama kadroya çağrılmadın.` : `${nat.name} turnuvaya katılamadı.`}`, t.called ? 'good' : '');
     if (t.called) {
       Social.post('daily', `${t.name} için milli takım kampındayım. Ay-yıldızlı forma için her şeyimi vereceğim!`, 1.6, Social.natOpts());

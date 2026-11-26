@@ -2398,6 +2398,8 @@ div.doc { position: fixed; inset: 0; z-index: 49; background: #000; display: fle
 .ed-row small { flex-basis: 100%; color: var(--muted, #8fa0c8); font-size: 11.5px; padding-left: 2px; }
 .ed-in { flex: 1; min-width: 0; height: 38px; padding: 0 10px; border-radius: 8px; border: 1px solid var(--line); background: rgba(0, 0, 0, .25); color: var(--chalk, #fff); font: inherit; font-size: 15px; }
 .ed-in.ed-sh { flex: 0 0 64px; text-transform: uppercase; text-align: center; }
+.ed-row.ed-lgn { flex-wrap: nowrap; width: 100%; box-sizing: border-box; margin: 0 0 8px; }
+.ed-row.ed-lgn .ed-in { flex: 1 1 auto; }
 .ed-q { flex: none; width: 100%; }
 .ed-rs { flex: 0 0 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line); background: rgba(255, 255, 255, .05); color: var(--chalk, #fff); cursor: pointer; }
 .ed-ta { width: 100%; box-sizing: border-box; min-height: 90px; padding: 10px; border-radius: 10px; border: 1px solid var(--line); background: rgba(0, 0, 0, .25); color: var(--chalk, #fff); font: 12px/1.4 ui-monospace, monospace; resize: vertical; }

@@ -2263,7 +2263,7 @@ ${UI.paper()}`;
           const d = cur === 'lite' ? 'Hafif: daha düşük çözünürlük ve az efekt. Eski telefonlarda akıcı oyun.' : cur === 'high' ? 'Yüksek: tam çözünürlük ve tüm efektler.' : (Perf.low ? 'Otomatik: telefonun için hafif mod açık.' : 'Otomatik: telefon yavaşsa grafikler kendiliğinden hafifler.');
           return row('Performans', d, `<div class="seg">${[['auto', 'Otomatik'], ['lite', 'Hafif'], ['high', 'Yüksek']].map(([k, l]) => `<button data-perf="${k}" class="${cur === k ? 'on' : ''}">${l}</button>`).join('')}</div>`); })() : ''}
         <label class="drill-tg"><input type="checkbox" id="drill-tg" ${s.drills !== false ? 'checked' : ''}><span><b>Antrenman mini oyunları</b><small>Odak statına göre çalışma oynanır. İyi oynarsan gelişim ×1,5'e kadar çıkar.</small></span></label>
-        ${typeof Edit !== 'undefined' ? row('Editör', 'Kulüp ve oyuncu isimlerini değiştir, düzenleme dosyası paylaş.', `<button class="btn btn-ghost" data-edopen>${Icon('pen')} Aç</button>`) : ''}
+        ${typeof Edit !== 'undefined' ? row('Editör', 'Lig, kulüp ve oyuncu isimlerini değiştir, düzenleme dosyası paylaş.', `<button class="btn btn-ghost" data-edopen>${Icon('pen')} Aç</button>`) : ''}
         ${typeof GKHelp !== 'undefined' && p && p.position === 'GK' ? `<label class="drill-tg"><input type="checkbox" id="gkhelp-tg" ${GKHelp.on() ? 'checked' : ''}><span><b>Kaleci ipuçları</b><small>Kaleci anlarında ne yapacağını anlatan yazılar. İlk 3 maçta açıktır.</small></span></label>` : ''}
         ${typeof Support !== 'undefined' ? Support.row() : ''}
         ${typeof WhatsNew !== 'undefined' ? row('Yenilikler', `${WN_VER} güncelleme notları`, '<button class="btn btn-ghost" data-wnopen>Göster</button>') : ''}

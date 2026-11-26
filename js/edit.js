@@ -44,8 +44,8 @@ const NameFix = {
 const Edit = {
   KEY: 'starfoot_edit',
   base: null, // { clubs: {id: [name, short]}, players: [[isim, uyruk, güç, kulüp]] }
-  get() { try { const d = JSON.parse(localStorage.getItem(Edit.KEY) || '{}'); return { c: d.c || {}, p: d.p || {} }; } catch (e) { return { c: {}, p: {} }; } },
-  set(d) { try { localStorage.setItem(Edit.KEY, JSON.stringify({ c: d.c, p: d.p })); } catch (e) { /* yok */ } },
+  get() { try { const d = JSON.parse(localStorage.getItem(Edit.KEY) || '{}'); return { c: d.c || {}, p: d.p || {}, l: d.l || {} }; } catch (e) { return { c: {}, p: {}, l: {} }; } },
+  set(d) { try { localStorage.setItem(Edit.KEY, JSON.stringify({ c: d.c, p: d.p, l: d.l || {} })); } catch (e) { /* yok */ } },
   clean(s, max) { return String(s || '').replace(/[<>"`\\]/g, '').replace(/\s+/g, ' ').trim().slice(0, max); },
 
   // veri listelerinin düzenlenmemiş halini sakla, sonra düzenlemeleri uygula (oyun açılışında bir kez)
@@ -61,7 +61,9 @@ const Edit = {
     if (typeof NATIONS !== 'undefined') NATIONS.forEach((x) => (x.stars || []).forEach((n, i) => add(n, x.code, x.rating - i, '', i < 2 ? 'FW' : '')));
     if (typeof WC_NATIONS !== 'undefined') WC_NATIONS.forEach((x) => (x.stars || []).forEach((n, i) => add(n, x.code, x.rating - i, '', i < 2 ? 'FW' : '')));
     if (typeof SQUADS !== 'undefined') Object.entries(SQUADS).forEach(([club, a]) => a.forEach(([n, pos, , , nat, r]) => add(n, nat, r, club, pos)));
-    Edit.base = { clubs, players: [...players.values()].sort((a, b) => b[2] - a[2]) };
+    const leagues = {};
+    LEAGUES.forEach((l) => (leagues[l.id] = l.name));
+    Edit.base = { clubs, leagues, players: [...players.values()].sort((a, b) => b[2] - a[2]) };
     Edit.applyData(Edit.get());
   },
   pn(d, n) { return (d.p && d.p[n]) || n; },
@@ -71,12 +73,14 @@ const Edit = {
     const d = Edit.get(), m = {};
     Object.entries(d.p).forEach(([b, n]) => { if (n && n !== b && b !== skip) m[b] = n; });
     Object.entries(d.c).forEach(([id, v]) => { const b = Edit.base.clubs[id]; if (b && v[0] && v[0] !== b[0]) m[b[0]] = v[0]; });
+    Object.entries(d.l || {}).forEach(([id, v]) => { const b = Edit.base.leagues[id]; if (b && v && v !== b) m[b] = v; });
     const keys = Object.keys(m);
     return keys.length ? NameRx.run(text, NameRx.build(keys), m) : text;
   },
   applyData(d) {
     const B = Edit.base;
     CLUB_LIST.forEach((c) => { const e = d.c[c[0]], b = B.clubs[c[0]]; c[1] = (e && e[0]) || b[0]; c[2] = (e && e[1]) || b[1]; });
+    LEAGUES.forEach((l) => { if (B.leagues[l.id]) l.name = (d.l && d.l[l.id]) || B.leagues[l.id]; });
     // oyuncu listeleri her zaman temel isimden yeniden kurulur
     if (!Edit.orig) {
       Edit.orig = {
@@ -150,6 +154,9 @@ const Edit = {
       if (o[0] !== n[0]) map[o[0]] = n[0];
       if (o[0] !== n[0] || o[1] !== n[1]) clubFix[id] = [n[0], n[1]];
     });
+    nd.l = nd.l || {};
+    Object.keys(B.leagues).forEach((id) => { const o = (od.l && od.l[id]) || B.leagues[id], n = nd.l[id] || B.leagues[id]; if (o !== n) map[o] = n; });
+    Object.keys(nd.l).forEach((id) => { if (!B.leagues[id] || !nd.l[id] || nd.l[id] === B.leagues[id]) delete nd.l[id]; });
     new Set([...Object.keys(od.p), ...Object.keys(nd.p)]).forEach((b) => { const o = Edit.pn(od, b), n = Edit.pn(nd, b); if (o !== n) map[o] = n; });
     // temel isimle aynı olanları tutma
     Object.keys(nd.c).forEach((id) => { const b = B.clubs[id]; if (b && nd.c[id][0] === b[0] && nd.c[id][1] === b[1]) delete nd.c[id]; });
@@ -160,17 +167,18 @@ const Edit = {
   },
 
   // ---------- Paylaşım dosyası ----------
-  exportText() { const d = Edit.get(); return JSON.stringify({ starfoot_edit: 1, c: d.c, p: d.p }); },
+  exportText() { const d = Edit.get(); return JSON.stringify({ starfoot_edit: 1, c: d.c, p: d.p, l: d.l }); },
   parse(text) {
     let j;
     try { j = JSON.parse(String(text || '').trim()); } catch (e) { return null; }
     if (!j || j.starfoot_edit !== 1) return null;
-    const B = Edit.base, out = { c: {}, p: {} }, known = new Set(B.players.map((x) => x[0]));
+    const B = Edit.base, out = { c: {}, p: {}, l: {} }, known = new Set(B.players.map((x) => x[0]));
     Object.entries(j.c || {}).slice(0, 2000).forEach(([id, v]) => {
       if (!B.clubs[id] || !Array.isArray(v)) return;
       const n = Edit.clean(v[0], 28), s = Edit.clean(v[1], 4).toUpperCase();
       if (n.length >= 2) out.c[id] = [n, s.length >= 2 ? s : B.clubs[id][1]];
     });
+    Object.entries(j.l || {}).slice(0, 200).forEach(([id, v]) => { const n = Edit.clean(v, 28); if (B.leagues[id] && n.length >= 2) out.l[id] = n; });
     Object.entries(j.p || {}).slice(0, 20000).forEach(([b, v]) => { const n = Edit.clean(v, 32); if (known.has(b) && n.length >= 2) out.p[b] = n; });
     return out;
   },
@@ -215,7 +223,7 @@ const Edit = {
     const body = document.getElementById('ed-body');
     if (!body) return;
     const t = (k, l) => `<button class="${Edit.tab === k ? 'on' : ''}" data-edtab="${k}">${l}</button>`;
-    let h = `<p class="muted ed-note">Kulüp ve oyuncu isimlerini istediğin gibi değiştirebilirsin. Değişiklikler yeni ve kayıtlı kariyerlerinde görünür.</p>
+    let h = `<p class="muted ed-note">Lig, kulüp ve oyuncu isimlerini istediğin gibi değiştirebilirsin. Değişiklikler yeni ve kayıtlı kariyerlerinde görünür.</p>
       <div class="seg ed-tabs">${t('clubs', 'Kulüpler')}${t('players', 'Oyuncular')}${t('file', 'Paylaş')}</div>`;
     if (Edit.tab === 'clubs') h += Edit.clubsView();
     else if (Edit.tab === 'players') h += Edit.playersView();
@@ -229,7 +237,9 @@ const Edit = {
       const id = c[0], v = D.c[id] || B.clubs[id], ch = !!D.c[id];
       return `<div class="ed-row${ch ? ' ch' : ''}"><input class="ed-in" data-cn="${id}" value="${U.esc(v[0])}" maxlength="28" data-noi18n aria-label="Kulüp adı"><input class="ed-in ed-sh" data-cs="${id}" value="${U.esc(v[1])}" maxlength="4" data-noi18n aria-label="Kısaltma">${ch ? `<button class="ed-rs" data-crs="${id}" aria-label="Varsayılana dön">↺</button>` : ''}</div>`;
     }).join('');
-    return `<div class="set-row"><span><b>Lig</b></span><select class="lang-sel" id="ed-lg">${LEAGUES.map((l) => `<option value="${l.id}"${l.id === Edit.league ? ' selected' : ''}>${U.esc(l.name)}</option>`).join('')}</select></div>
+    const ln = (D.l && D.l[Edit.league]) || B.leagues[Edit.league] || '', lch = !!(D.l && D.l[Edit.league]);
+    return `<div class="set-row"><span><b>Lig</b></span><select class="lang-sel" id="ed-lg">${LEAGUES.map((l) => `<option value="${l.id}"${l.id === Edit.league ? ' selected' : ''}>${U.esc((D.l && D.l[l.id]) || B.leagues[l.id] || l.name)}</option>`).join('')}</select></div>
+      <div class="ed-row ed-lgn${lch ? ' ch' : ''}"><input class="ed-in" id="ed-ln" value="${U.esc(ln)}" maxlength="28" data-noi18n aria-label="Lig adı">${lch ? '<button class="ed-rs" id="ed-lrs" aria-label="Varsayılana dön">↺</button>' : ''}</div>
       <div class="ed-list">${rows}</div>`;
   },
   playersView() {
@@ -254,9 +264,9 @@ const Edit = {
       ${all.length > list.length ? `<button class="btn btn-ghost" id="ed-more">Daha fazla göster (${all.length - list.length})</button>` : ''}`;
   },
   fileView() {
-    const d = Edit.draft, nc = Object.keys(d.c).length, np = Object.keys(d.p).length;
+    const d = Edit.draft, nl = Object.keys(d.l || {}).length, nc = Object.keys(d.c).length, np = Object.keys(d.p).length;
     return `<section class="card settings"><div class="card-h"><span>Düzenleme dosyası</span></div>
-      <p class="muted">Şu an ${nc} kulüp ve ${np} oyuncu değiştirilmiş. Düzenlemeni arkadaşlarınla paylaşabilir ya da başkasının dosyasını içe aktarabilirsin.</p>
+      <p class="muted">Şu an ${nl} lig, ${nc} kulüp ve ${np} oyuncu değiştirilmiş. Düzenlemeni arkadaşlarınla paylaşabilir ya da başkasının dosyasını içe aktarabilirsin.</p>
       <div class="row-btns"><button class="btn btn-ghost" id="ed-exp">Paylaş / kopyala</button><button class="btn btn-ghost" id="ed-imp">İçe aktar</button></div>
       <textarea class="ed-ta" id="ed-ta" rows="5" placeholder="Düzenleme dosyasını buraya yapıştır" data-noi18n></textarea>
       <div class="row-btns"><button class="btn btn-danger" id="ed-reset">Tümünü varsayılana döndür</button></div></section>`;
@@ -265,6 +275,9 @@ const Edit = {
     U.$$('[data-edtab]', body).forEach((b) => (b.onclick = () => { Edit.tab = b.dataset.edtab; Edit.fill(); }));
     const D = Edit.draft, B = Edit.base;
     const lg = body.querySelector('#ed-lg'); if (lg) lg.onchange = () => { Edit.league = lg.value; Edit.fill(); };
+    const lnIn = body.querySelector('#ed-ln');
+    if (lnIn) lnIn.onchange = () => { D.l = D.l || {}; const n = Edit.clean(lnIn.value, 28); if (n.length >= 2 && n !== B.leagues[Edit.league]) D.l[Edit.league] = n; else delete D.l[Edit.league]; Edit.fill(); };
+    const lrs = body.querySelector('#ed-lrs'); if (lrs) lrs.onclick = () => { if (D.l) delete D.l[Edit.league]; Edit.fill(); };
     const tm = body.querySelector('#ed-tm'); if (tm) tm.onchange = () => { Edit.team = tm.value; Edit.shown = 40; Edit.fill(); };
     const setC = (id) => {
       const n = Edit.clean(body.querySelector(`[data-cn="${id}"]`).value, 28), s = Edit.clean(body.querySelector(`[data-cs="${id}"]`).value, 4).toUpperCase();
@@ -281,7 +294,7 @@ const Edit = {
     const ta = body.querySelector('#ed-ta');
     const exp = body.querySelector('#ed-exp');
     if (exp) exp.onclick = async () => {
-      const txt = JSON.stringify({ starfoot_edit: 1, c: D.c, p: D.p });
+      const txt = JSON.stringify({ starfoot_edit: 1, c: D.c, p: D.p, l: D.l || {} });
       ta.value = txt;
       try { if (navigator.share && window.Capacitor) { await navigator.share({ title: 'StarFoot düzenleme dosyası', text: txt }); return; } } catch (e) { /* kopyala */ }
       try { await navigator.clipboard.writeText(txt); Game.toast('Düzenleme dosyası kopyalandı.', 'good'); } catch (e) { ta.select(); }
@@ -291,11 +304,11 @@ const Edit = {
       const d = Edit.parse(ta.value);
       if (!d) return Game.toast('Dosya okunamadı. Metnin tamamını yapıştırdığından emin ol.', 'bad');
       Edit.draft = d;
-      Game.toast(`${Object.keys(d.c).length} kulüp ve ${Object.keys(d.p).length} oyuncu yüklendi. Uygulamak için Kaydet'e dokun.`, 'good');
+      Game.toast(`${Object.keys(d.l).length} lig, ${Object.keys(d.c).length} kulüp ve ${Object.keys(d.p).length} oyuncu yüklendi. Uygulamak için Kaydet'e dokun.`, 'good');
       Edit.fill();
     };
     const rs = body.querySelector('#ed-reset');
-    if (rs) rs.onclick = () => { Edit.draft = { c: {}, p: {} }; Game.toast('Tüm isimler varsayılana döndü. Uygulamak için Kaydet\'e dokun.'); Edit.fill(); };
+    if (rs) rs.onclick = () => { Edit.draft = { c: {}, p: {}, l: {} }; Game.toast('Tüm isimler varsayılana döndü. Uygulamak için Kaydet\'e dokun.'); Edit.fill(); };
   },
 };
 

@@ -45,3 +45,29 @@
 10596|{} Ver Premium
 10597|Grátis {}/{}
 10598|O avanço rápido abre quando começam os jogos da liga.
+10599|Eliminatórias da Copa
+10600|eliminatórias
+10601|Play-off: o último bilhete
+10602|chegou à rodada final das eliminatórias. Para ir ao torneio, você precisa vencer
+10603|chegou à rodada final das eliminatórias.
+10604|Para ir ao torneio, você precisa vencer
+10605|— só a vitória serve!
+10606|Conseguimos!
+10607|Renomeie ligas, clubes e jogadores como quiser. As mudanças aparecem em carreiras novas e salvas.
+10608|Renomeie ligas, clubes e jogadores como quiser.
+10609|Renomeie ligas, clubes e jogadores, compartilhe um arquivo de edição.
+10610|Nome da liga
+10611|Agora há {} ligas, {} clubes e {} jogadores renomeados. Compartilhe suas edições com amigos ou importe o arquivo de outra pessoa.
+10612|{} ligas, {} clubes e {} jogadores carregados. Toque em Salvar para aplicar.
+10613|ligas, {} clubes e {} jogadores carregados. Toque em Salvar para aplicar.
+10614|{} caiu diante de {} no play-off e fica fora: {}.
+10615|{} passou por {} no play-off. Vaga garantida: {}!
+10616|Agora há {} ligas, {} clubes e {} jogadores renomeados.
+10617|Conseguimos! Vamos para a {}!
+10618|{} ligas, {} clubes e {} jogadores carregados.
+10619|ligas, {} clubes e {} jogadores carregados.
+10620|{} passou por {} no play-off.
+10621|Vaga garantida: {}!
+10622|Vamos para a {}!
+10623|{} · Play-off
+10624|Eliminatórias: {}
