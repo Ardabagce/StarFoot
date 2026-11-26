@@ -26,7 +26,12 @@
    "internetsiz futbol",
    "yıldız futbolcu",
    "milli takım",
-   "starfoot"
+   "starfoot",
+   "menejer",
+   "menejer oyunu",
+   "futbol menejer",
+   "menajer",
+   "futbol menajerlik"
   ],
   "us": [
    "soccer game",
@@ -213,7 +218,12 @@
    "football legend",
    "offline football",
    "goalkeeper game",
-   "starfoot"
+   "starfoot",
+   "menejer",
+   "menejer oyunu",
+   "futbol menejer",
+   "menajer",
+   "futbol menajerlik"
   ],
   "az": [
    "futbol oyunu",
@@ -235,7 +245,12 @@
    "football legend",
    "offline football",
    "goalkeeper game",
-   "starfoot"
+   "starfoot",
+   "menejer",
+   "menejer oyunu",
+   "futbol menejer",
+   "menajer",
+   "futbol menajerlik"
   ]
  },
  "chart_countries": [
