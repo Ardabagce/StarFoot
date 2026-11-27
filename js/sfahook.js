@@ -7,8 +7,12 @@
   SFA.hooks.tick = snd('tick');
   SFA.hooks.pop = snd('tick');
   SFA.hooks.success = snd('coin');
-  // düşük performans modunda (Perf.low) sonsuz efektler kapalı
-  const lite = () => { try { if (typeof Perf !== 'undefined' && document.body) document.body.classList.toggle('lite', !!Perf.low); } catch (e) { /* yok */ } };
+  // Android'de ve düşük performans modunda (Perf.low) hafif mod: sürekli dönen efektler yok, parçacıklar az
+  const ANDROID = (() => { try { return window.Capacitor && window.Capacitor.getPlatform && window.Capacitor.getPlatform() === 'android'; } catch (e) { return false; } })();
+  const lite = () => { try { if (document.body) document.body.classList.toggle('lite', ANDROID || !!(typeof Perf !== 'undefined' && Perf.low)); } catch (e) { /* yok */ } };
+  // açılışta ilk ekranlar animasyonsuz gelir (uygulama yüklenirken takılmasın)
+  const T0 = performance.now();
+  const booting = () => performance.now() - T0 < 2500;
   try { SFA.press(document); } catch (e) { /* yok */ }
 
   let lastTab = null, lastKey = '';
@@ -17,9 +21,11 @@
     const nav = document.getElementById('tabs');
     if (!s || !s.player) { lastTab = null; return; }
     lite();
-    if (nav) { if (!nav._sfa) nav._sfa = SFA.tabs(nav); else nav._sfa.place(); }
     const main = document.getElementById('main');
     const key = `${Game.tab}|${Game.slot}`;
+    if (nav && !nav._sfa) nav._sfa = SFA.tabs(nav);
+    else if (nav && key !== lastKey) nav._sfa.place();
+    if (main && key !== lastKey && booting()) { lastKey = key; lastTab = Game.tab; }
     if (main && key !== lastKey) {
       let dir = 0;
       if (nav && lastTab) {
@@ -32,7 +38,7 @@
       lastKey = key; lastTab = Game.tab;
     }
     const card = main && main.querySelector('.hub-next');
-    if (card) { if (!card._sfa) { card._sfa = 1; SFA.matchCard(card, { ap: s.ap }); } else SFA.chip(card, s.ap); }
+    if (card) { if (!card._sfa) { card._sfa = 1; if (booting()) SFA.chip(card, s.ap); else SFA.matchCard(card, { ap: s.ap }); } else SFA.chip(card, s.ap); }
   };
   const r0 = Game.render;
   Game.render = function () {

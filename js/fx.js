@@ -3,6 +3,8 @@
 // "Hareketi azalt" açık cihazlarda sarsıntı, yakınlaşma ve konfeti kapalıdır.
 const FX = {
   calm() { try { return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) { return false; } },
+  // Android ve düşük performans: daha az parçacık, kısa iz (ANR/takılma riskini düşürür)
+  lite() { try { return (window.Capacitor && window.Capacitor.getPlatform && window.Capacitor.getPlatform() === 'android') || !!(typeof Perf !== 'undefined' && Perf.low); } catch (e) { return false; } },
 
   // Kısa beyaz/renkli parlama
   flash(host, color) {
@@ -32,14 +34,15 @@ const FX = {
     if (!r.width || !r.height) return;
     const cv = document.createElement('canvas');
     cv.className = 'fx-conf';
-    const dpr = Math.min(2, window.devicePixelRatio || 1);
+    const dpr = FX.lite() ? 1 : Math.min(2, window.devicePixelRatio || 1);
     cv.width = Math.round(r.width * dpr); cv.height = Math.round(r.height * dpr);
     Object.assign(cv.style, { left: r.left + 'px', top: r.top + 'px', width: r.width + 'px', height: r.height + 'px' });
     document.body.appendChild(cv);
     const c = cv.getContext('2d');
     const C = cols || ['#ffcf3f', '#ffffff', '#3ddc84', '#4aa3ff', '#ff5a5f'];
     const P = [];
-    for (let i = 0; i < (n || 110); i++) {
+    const cnt = Math.round((n || 110) * (FX.lite() ? 0.35 : 1));
+    for (let i = 0; i < cnt; i++) {
       P.push({ x: cv.width * (0.2 + Math.random() * 0.6), y: cv.height * (0.35 + Math.random() * 0.2), vx: (Math.random() - 0.5) * 900 * dpr, vy: -(300 + Math.random() * 700) * dpr, w: (4 + Math.random() * 5) * dpr, h: (6 + Math.random() * 8) * dpr, rot: Math.random() * 6, vr: (Math.random() - 0.5) * 14, c: C[i % C.length], life: 1.4 + Math.random() * 1.1 });
     }
     let last = performance.now(), t0 = last;
@@ -77,7 +80,7 @@ const FX = {
     if (!e || now - e.t > 90) { m[key] = { x, y, t: now, h: [] }; return; }
     const d = Math.hypot(x - e.x, y - e.y);
     if (d > r * 30) { e.h = []; }
-    else if (d > r * 0.7) { e.h.push([e.x, e.y]); if (e.h.length > 7) e.h.shift(); }
+    else if (d > r * 0.7) { e.h.push([e.x, e.y]); if (e.h.length > (FX.lite() ? 4 : 7)) e.h.shift(); }
     else if (e.h.length) e.h.shift();
     e.x = x; e.y = y; e.t = now;
     const n = e.h.length;

@@ -86,12 +86,11 @@
       });
       visit(root);
       root.classList.add('sfa-clipx'); // yatay kayma sayfayı genişletmesin (mobil viewport zoom)
-      items.forEach(([el, c]) => {
-        el.style.setProperty('--sfa-i', String(i++));
-        c.split(' ').forEach((k) => el.classList.remove(k));
-        void el.offsetWidth; // tek seferlik reflow (giriş başında), karelerde yok
-        c.split(' ').forEach((k) => el.classList.add(k));
-      });
+      // ilk 12 öğe sırayla gelir, gerisi animasyonsuz (uzun listelerde takılmasın)
+      items.splice(12).forEach(() => {});
+      items.forEach(([el, c]) => { el.style.setProperty('--sfa-i', String(i++)); c.split(' ').forEach((k) => el.classList.remove(k)); });
+      void root.offsetWidth; // tek seferlik reflow
+      items.forEach(([el, c]) => c.split(' ').forEach((k) => el.classList.add(k)));
       const max = i * 55 + 700;
       SFA.later(() => { root.classList.remove('sfa-clipx'); items.forEach(([el, c]) => c.split(' ').forEach((k) => el.classList.remove(k))); }, max);
     },
