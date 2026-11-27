@@ -78,3 +78,7 @@
 10629|↩️ Kamu menarik permintaan transfer ke {}.
 10630|↩ Kamu menarik permintaan transfer ke {}.
 10631|Rating {} ·
+10632|Laga dalam
+10633|Waktunya laga!
+10634|Animasi menu
+10635|Transisi tab, kartu masuk, efek tombol.

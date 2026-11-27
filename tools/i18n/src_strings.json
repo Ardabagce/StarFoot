@@ -69,6 +69,38 @@
 "STARFOOT   ·   ANADOLU ENERJİ   ·   BOSFOR BANK   ·": [
 "app.js"
 ],
+"GK": [
+"aprops.js",
+"captain.js",
+"coach.js",
+"coachlive.js",
+"coachlive2.js",
+"coachui.js",
+"coachx.js",
+"comm.js",
+"cstats.js",
+"data.js",
+"diamond2.js",
+"drills.js",
+"game.js",
+"i18n.js",
+"interview.js",
+"lang-en.js",
+"lang-ja.js",
+"league.js",
+"legends.js",
+"match.js",
+"meta.js",
+"phone.js",
+"player.js",
+"shootout.js",
+"sprites.js",
+"squads.js",
+"v24.js",
+"value.js",
+"wc.js",
+"wcx.js"
+],
 "Bu takımda {} maç": [
 "captain.js",
 "lang-ar.js",
@@ -354,37 +386,6 @@
 "lang-ja.js",
 "lang-pt.js",
 "lang-zh.js"
-],
-"GK": [
-"captain.js",
-"coach.js",
-"coachlive.js",
-"coachlive2.js",
-"coachui.js",
-"coachx.js",
-"comm.js",
-"cstats.js",
-"data.js",
-"diamond2.js",
-"drills.js",
-"game.js",
-"i18n.js",
-"interview.js",
-"lang-en.js",
-"lang-ja.js",
-"league.js",
-"legends.js",
-"match.js",
-"meta.js",
-"phone.js",
-"player.js",
-"shootout.js",
-"sprites.js",
-"squads.js",
-"v24.js",
-"value.js",
-"wc.js",
-"wcx.js"
 ],
 "Teknik direktör": [
 "captain.js",
@@ -689,13 +690,43 @@
 "lang-zh.js"
 ],
 "İptal": [
-"career2.js"
+"career2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "Talep gönder": [
-"career2.js"
+"career2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "Güç {} ·": [
-"career2.js"
+"career2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "Güç {} olursa (şu an {})": [
 "career2.js",
@@ -741,7 +772,17 @@
 "lang-zh.js"
 ],
 "Seninle ilgilenen kulüpler": [
-"career2.js"
+"career2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "· Premium: sınırsız": [
 "career2.js"
@@ -949,7 +990,17 @@
 "lang-zh.js"
 ],
 "↩️ {} kulübüne gönderdiğin transfer talebini geri çektin.": [
-"career2.js"
+"career2.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "✅ {} transfer talebini kabul etti! Teklif masanda, transfer dönemi bitene kadar geçerli.": [
 "career2.js",
@@ -2145,7 +2196,8 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"lang-zh.js"
+"lang-zh.js",
+"sfa.js"
 ],
 ".ct-foot b": [
 "celebrate.js"
@@ -2202,6 +2254,7 @@
 "celebrate.js",
 "cloud.js",
 "mall.js",
+"sfa.js",
 "util.js"
 ],
 "{} TARAFTAR": [
@@ -39009,6 +39062,7 @@
 ],
 "gkReflex": [
 "drills.js",
+"fx.js",
 "match.js"
 ],
 "Uçuş Çalışması": [
@@ -39091,6 +39145,7 @@
 ],
 "gkCross": [
 "drills.js",
+"fx.js",
 "match.js"
 ],
 "Bire Bir Çalışması": [
@@ -39121,6 +39176,7 @@
 ],
 "gkOne": [
 "drills.js",
+"fx.js",
 "match.js"
 ],
 "Pozisyon Alma": [
@@ -39179,6 +39235,7 @@
 ],
 "gkDist": [
 "drills.js",
+"fx.js",
 "match.js"
 ],
 "Degaj Çalışması": [
@@ -45443,6 +45500,10 @@
 "{} Arkadaşların": [
 "friends.js"
 ],
+"(prefers-reduced-motion: reduce)": [
+"fx.js",
+"sfa.js"
+],
 "Kaleciler ve savunma daha zayıf, nişan yardımı güçlü, antrenmanda daha hızlı gelişirsin.": [
 "game.js",
 "lang-ar.js",
@@ -51350,9 +51411,35 @@
 "lang-zh.js"
 ],
 "Klasik ana ekran": [
-"game.js"
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "Eski ana ekranı kullan: bütün bölümler tek sayfada, aşağı kaydırarak.": [
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"Menü animasyonları": [
+"game.js"
+],
+"Sekme geçişleri, kartların girişi, düğme efektleri.": [
 "game.js"
 ],
 "Gol tekrarı": [
@@ -125207,7 +125294,8 @@
 "lang-ja.js",
 "lang-pt.js",
 "lang-zh.js",
-"match.js"
+"match.js",
+"sfa.js"
 ],
 "Menajer payı": [
 "lang-ar.js",
@@ -197238,6 +197326,54 @@
 "lang-pt.js",
 "lang-zh.js"
 ],
+"İPTAL": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"TALEP GÖNDER": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"SENİNLE İLGİLENEN KULÜPLER": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"KLASİK ANA EKRAN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -229563,6 +229699,18 @@
 "lang-zh.js",
 "starlife.js"
 ],
+"↩ {} kulübüne gönderdiğin transfer talebini geri çektin.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
 "{} müthiş bir geri koşuyla rakibe yetişti ve topu kaptı!": [
 "lang-ar.js",
 "lang-de.js",
@@ -260020,6 +260168,18 @@
 "Liganame": [
 "lang-de.js"
 ],
+"Anfrage senden": [
+"lang-de.js"
+],
+"Vereine, die dich wollen": [
+"lang-de.js"
+],
+"Klassischer Startbildschirm": [
+"lang-de.js"
+],
+"Alten Startbildschirm nutzen: alle Bereiche auf einer Seite, nach unten scrollen.": [
+"lang-de.js"
+],
 "– wir haben uns qualifiziert!": [
 "lang-de.js"
 ],
@@ -275076,6 +275236,15 @@
 "LIGANAME": [
 "lang-de.js"
 ],
+"ANFRAGE SENDEN": [
+"lang-de.js"
+],
+"VEREINE, DIE DICH WOLLEN": [
+"lang-de.js"
+],
+"KLASSISCHER STARTBILDSCHIRM": [
+"lang-de.js"
+],
 "– WIR HABEN UNS QUALIFIZIERT!": [
 "lang-de.js"
 ],
@@ -279620,6 +279789,9 @@
 "{0} soll über {1} gesagt haben: \\\"Ich trage dieses Team\\\"": [
 "lang-de.js"
 ],
+"↩️ Du hast deine Transferanfrage an {} zurückgezogen.": [
+"lang-de.js"
+],
 "{} ist geöffnet! {} Vereine wollen dich. Angebote gelten {} Wochen.": [
 "lang-de.js"
 ],
@@ -279648,6 +279820,9 @@
 "lang-de.js"
 ],
 "{} setzt sich im Play-off gegen {} durch. Ticket gelöst: {}!": [
+"lang-de.js"
+],
+"↩ Du hast deine Transferanfrage an {} zurückgezogen.": [
 "lang-de.js"
 ],
 "Angeblich beobachtet ein Scout von {} deine Spiele!": [
@@ -283395,6 +283570,9 @@
 "lang-de.js"
 ],
 "{} Allgemein": [
+"lang-de.js"
+],
+"Stärke {} ·": [
 "lang-de.js"
 ],
 "Du ({})": [
@@ -296757,6 +296935,18 @@
 "lang-en.js"
 ],
 "League name": [
+"lang-en.js"
+],
+"Send request": [
+"lang-en.js"
+],
+"Clubs interested in you": [
+"lang-en.js"
+],
+"Classic home screen": [
+"lang-en.js"
+],
+"Use the old home screen: every section on one page, scroll down.": [
 "lang-en.js"
 ],
 "— we qualified!": [
@@ -311029,6 +311219,15 @@
 "LEAGUE NAME": [
 "lang-en.js"
 ],
+"SEND REQUEST": [
+"lang-en.js"
+],
+"CLUBS INTERESTED IN YOU": [
+"lang-en.js"
+],
+"CLASSIC HOME SCREEN": [
+"lang-en.js"
+],
 "— WE QUALIFIED!": [
 "lang-en.js"
 ],
@@ -315528,6 +315727,9 @@
 "{0} allegedly said \\\"I carry this team\\\" about {1}": [
 "lang-en.js"
 ],
+"↩️ You withdrew your transfer request to {}.": [
+"lang-en.js"
+],
 "{} is open! {} clubs want you. Offers are valid for {} weeks.": [
 "lang-en.js"
 ],
@@ -315556,6 +315758,9 @@
 "lang-en.js"
 ],
 "{} got past {} in the play-off. Ticket booked: {}!": [
+"lang-en.js"
+],
+"↩ You withdrew your transfer request to {}.": [
 "lang-en.js"
 ],
 "Word is a scout is watching your matches for {}!": [
@@ -319297,6 +319502,10 @@
 "{} General": [
 "lang-en.js",
 "lang-es.js"
+],
+"Rating {} ·": [
+"lang-en.js",
+"lang-id.js"
 ],
 "You ({})": [
 "lang-en.js"
@@ -332850,6 +333059,18 @@
 "lang-es.js"
 ],
 "Nombre de la liga": [
+"lang-es.js"
+],
+"Enviar solicitud": [
+"lang-es.js"
+],
+"Clubes interesados en ti": [
+"lang-es.js"
+],
+"Pantalla de inicio clásica": [
+"lang-es.js"
+],
+"Usa la pantalla de inicio antigua: todas las secciones en una página, desplazándote hacia abajo.": [
 "lang-es.js"
 ],
 "— ¡nos hemos clasificado!": [
@@ -347242,6 +347463,15 @@
 "NOMBRE DE LA LIGA": [
 "lang-es.js"
 ],
+"ENVIAR SOLICITUD": [
+"lang-es.js"
+],
+"CLUBES INTERESADOS EN TI": [
+"lang-es.js"
+],
+"PANTALLA DE INICIO CLÁSICA": [
+"lang-es.js"
+],
 "— ¡NOS HEMOS CLASIFICADO!": [
 "lang-es.js"
 ],
@@ -351746,6 +351976,9 @@
 "{0} habría dicho de {1}: \\\"Yo cargo con el equipo\\\"": [
 "lang-es.js"
 ],
+"↩️ Retiraste tu solicitud de traspaso a {}.": [
+"lang-es.js"
+],
 "¡{} está abierto! {} clubes te quieren. Las ofertas son válidas durante {} semanas.": [
 "lang-es.js"
 ],
@@ -351774,6 +352007,9 @@
 "lang-es.js"
 ],
 "{} superó a {} en el play-off. Billete asegurado: {}!": [
+"lang-es.js"
+],
+"↩ Retiraste tu solicitud de traspaso a {}.": [
 "lang-es.js"
 ],
 "¡Se dice que un ojeador sigue tus partidos para el {}!": [
@@ -355550,6 +355786,9 @@
 "lang-pt.js"
 ],
 "· {} goles": [
+"lang-es.js"
+],
+"Media {} ·": [
 "lang-es.js"
 ],
 "({} goles)": [
@@ -368684,6 +368923,18 @@
 "lang-fr.js"
 ],
 "Nom de la ligue": [
+"lang-fr.js"
+],
+"Envoyer la demande": [
+"lang-fr.js"
+],
+"Clubs intéressés par toi": [
+"lang-fr.js"
+],
+"Écran d’accueil classique": [
+"lang-fr.js"
+],
+"Utilise l’ancien écran d’accueil : toutes les sections sur une page, en faisant défiler.": [
 "lang-fr.js"
 ],
 "— on est qualifiés !": [
@@ -382579,6 +382830,15 @@
 "NOM DE LA LIGUE": [
 "lang-fr.js"
 ],
+"ENVOYER LA DEMANDE": [
+"lang-fr.js"
+],
+"CLUBS INTÉRESSÉS PAR TOI": [
+"lang-fr.js"
+],
+"ÉCRAN D’ACCUEIL CLASSIQUE": [
+"lang-fr.js"
+],
 "— ON EST QUALIFIÉS !": [
 "lang-fr.js"
 ],
@@ -386949,6 +387209,9 @@
 "{0} aurait dit à propos de {1} : \\\"C'est moi qui porte l'équipe\\\"": [
 "lang-fr.js"
 ],
+"↩️ Tu as retiré ta demande de transfert à {}.": [
+"lang-fr.js"
+],
 "{} est ouvert ! {} clubs te veulent. Les offres sont valables {} semaines.": [
 "lang-fr.js"
 ],
@@ -386977,6 +387240,9 @@
 "lang-fr.js"
 ],
 "{} a passé l’obstacle {} en barrage. Billet en poche : {} !": [
+"lang-fr.js"
+],
+"↩ Tu as retiré ta demande de transfert à {}.": [
 "lang-fr.js"
 ],
 "On dit qu'un recruteur suit tes matchs pour {} !": [
@@ -390615,6 +390881,9 @@
 "lang-fr.js"
 ],
 "{} Général": [
+"lang-fr.js"
+],
+"Note {} ·": [
 "lang-fr.js"
 ],
 "Toi ({})": [
@@ -403541,6 +403810,18 @@
 "lang-id.js"
 ],
 "Nama liga": [
+"lang-id.js"
+],
+"Kirim permintaan": [
+"lang-id.js"
+],
+"Klub yang tertarik padamu": [
+"lang-id.js"
+],
+"Layar utama klasik": [
+"lang-id.js"
+],
+"Pakai layar utama lama: semua bagian di satu halaman, gulir ke bawah.": [
 "lang-id.js"
 ],
 "— kita lolos!": [
@@ -417188,6 +417469,15 @@
 "NAMA LIGA": [
 "lang-id.js"
 ],
+"KIRIM PERMINTAAN": [
+"lang-id.js"
+],
+"KLUB YANG TERTARIK PADAMU": [
+"lang-id.js"
+],
+"LAYAR UTAMA KLASIK": [
+"lang-id.js"
+],
 "— KITA LOLOS!": [
 "lang-id.js"
 ],
@@ -421539,6 +421829,9 @@
 "{0} disebut berkata tentang {1}: \\\"Aku yang memikul tim ini\\\"": [
 "lang-id.js"
 ],
+"↩️ Kamu menarik permintaan transfer ke {}.": [
+"lang-id.js"
+],
 "{} dibuka! {} klub menginginkanmu. Tawaran berlaku {} minggu.": [
 "lang-id.js"
 ],
@@ -421567,6 +421860,9 @@
 "lang-id.js"
 ],
 "{} menyingkirkan {} di play-off. Tiket didapat: {}!": [
+"lang-id.js"
+],
+"↩ Kamu menarik permintaan transfer ke {}.": [
 "lang-id.js"
 ],
 "Kabarnya ada pencari bakat yang menonton pertandinganmu untuk {}!": [
@@ -438146,6 +438442,18 @@
 "Nome del campionato": [
 "lang-it.js"
 ],
+"Invia richiesta": [
+"lang-it.js"
+],
+"Club interessati a te": [
+"lang-it.js"
+],
+"Schermata iniziale classica": [
+"lang-it.js"
+],
+"Usa la vecchia schermata iniziale: tutte le sezioni in una pagina, scorrendo in basso.": [
+"lang-it.js"
+],
 "— ci siamo qualificati!": [
 "lang-it.js"
 ],
@@ -451802,6 +452110,15 @@
 "NOME DEL CAMPIONATO": [
 "lang-it.js"
 ],
+"INVIA RICHIESTA": [
+"lang-it.js"
+],
+"CLUB INTERESSATI A TE": [
+"lang-it.js"
+],
+"SCHERMATA INIZIALE CLASSICA": [
+"lang-it.js"
+],
 "— CI SIAMO QUALIFICATI!": [
 "lang-it.js"
 ],
@@ -456149,6 +456466,9 @@
 "{0} avrebbe detto di {1}: \\\"La squadra la porto io\\\"": [
 "lang-it.js"
 ],
+"↩️ Hai ritirato la richiesta di trasferimento a {}.": [
+"lang-it.js"
+],
 "{} è aperto! {} club ti vogliono. Le offerte valgono {} settimane.": [
 "lang-it.js"
 ],
@@ -456177,6 +456497,9 @@
 "lang-it.js"
 ],
 "{} supera {} ai play-off. Biglietto staccato: {}!": [
+"lang-it.js"
+],
+"↩ Hai ritirato la richiesta di trasferimento a {}.": [
 "lang-it.js"
 ],
 "Si dice che un osservatore del {} segua le tue partite!": [
@@ -459795,6 +460118,9 @@
 "lang-it.js"
 ],
 "{} Generale": [
+"lang-it.js"
+],
+"Valutazione {} ·": [
 "lang-it.js"
 ],
 "Tu ({})": [
@@ -473647,6 +473973,18 @@
 "Nome da liga": [
 "lang-pt.js"
 ],
+"Enviar pedido": [
+"lang-pt.js"
+],
+"Clubes interessados em você": [
+"lang-pt.js"
+],
+"Tela inicial clássica": [
+"lang-pt.js"
+],
+"Use a tela inicial antiga: todas as seções em uma página, rolando para baixo.": [
+"lang-pt.js"
+],
 "— nos classificamos!": [
 "lang-pt.js"
 ],
@@ -487003,6 +487341,15 @@
 "NOME DA LIGA": [
 "lang-pt.js"
 ],
+"ENVIAR PEDIDO": [
+"lang-pt.js"
+],
+"CLUBES INTERESSADOS EM VOCÊ": [
+"lang-pt.js"
+],
+"TELA INICIAL CLÁSSICA": [
+"lang-pt.js"
+],
 "— NOS CLASSIFICAMOS!": [
 "lang-pt.js"
 ],
@@ -491242,6 +491589,9 @@
 "{0} teria dito sobre {1}: \\\"Eu carrego o time\\\"": [
 "lang-pt.js"
 ],
+"↩️ Você retirou seu pedido de transferência para {}.": [
+"lang-pt.js"
+],
 "{} está aberta! {} clubes te querem. As ofertas valem por {} semanas.": [
 "lang-pt.js"
 ],
@@ -491270,6 +491620,9 @@
 "lang-pt.js"
 ],
 "{} passou por {} no play-off. Vaga garantida: {}!": [
+"lang-pt.js"
+],
+"↩ Você retirou seu pedido de transferência para {}.": [
 "lang-pt.js"
 ],
 "Dizem que um olheiro está assistindo seus jogos para o {}!": [
@@ -494746,6 +495099,9 @@
 "{} Geral": [
 "lang-pt.js"
 ],
+"Força {} ·": [
+"lang-pt.js"
+],
 "Você ({})": [
 "lang-pt.js"
 ],
@@ -495994,7 +496350,8 @@
 "legacy.js"
 ],
 "image/png": [
-"legacy.js"
+"legacy.js",
+"sfa.js"
 ],
 "CACHE": [
 "legacy.js"
@@ -512892,6 +513249,135 @@
 ],
 "Katıldığın dersler: {}/{}": [
 "school.js"
+],
+"IntersectionObserver": [
+"sfa.js"
+],
+".hub, .grid2": [
+"sfa.js"
+],
+".hub-tiles, .hw-slots": [
+"sfa.js"
+],
+".hw-slot, .hw-rec": [
+"sfa.js"
+],
+"Maça": [
+"sfa.js"
+],
+"aksiyon kaldı": [
+"sfa.js"
+],
+"Maç zamanı!": [
+"sfa.js"
+],
+".sfa-roll span": [
+"sfa.js"
+],
+"button.on:not(.ph-off), button.tab-phone.on": [
+"sfa.js"
+],
+".btn, .hw-go, .hw-slot, .hub-tile, .chip, .act, .ph-app, .ph-wg, .hs-x, .hs-back, .notif-btn, [data-sfa-press]": [
+"sfa.js"
+],
+"scale({},{})": [
+"sfa.js"
+],
+".ph-app, .hs-x, .hs-back, .notif-btn": [
+"sfa.js"
+],
+":scope > .sfa-ripc": [
+"sfa.js"
+],
+"width:{}px;height:{}px;left:{}px;top:{}px": [
+"sfa.js"
+],
+":scope > .sfa-lbl": [
+"sfa.js"
+],
+"scaleX({})": [
+"sfa.js"
+],
+"scaleX(1)": [
+"sfa.js"
+],
+"cubic-bezier(.3,.7,.3,1)": [
+"sfa.js"
+],
+"{} yıldız": [
+"sfa.js"
+],
+"Maç sonu ödülü": [
+"sfa.js"
+],
+"Kim olacak?": [
+"sfa.js"
+],
+"cubic-bezier(.2,.8,.2,1)": [
+"sfa.js"
+],
+"rotateY({}deg)": [
+"sfa.js"
+],
+"cubic-bezier(.3,1.35,.45,1)": [
+"sfa.js"
+],
+"scale(.85)": [
+"sfa.js"
+],
+"cubic-bezier(.2,1.3,.4,1)": [
+"sfa.js"
+],
+".mse-bar .now": [
+"sfa.js"
+],
+".mse-bar .was": [
+"sfa.js"
+],
+".msx-b i": [
+"sfa.js"
+],
+"rotateX({}deg) rotateY({}deg)": [
+"sfa.js"
+],
+"&nbsp;": [
+"sfa.js"
+],
+"style=\"background-image:url({})\"": [
+"sfa.js"
+],
+"width:{}px;height:{}px": [
+"sfa.js"
+],
+"cubic-bezier(.2,.9,.25,1)": [
+"sfa.js"
+],
+"{}px / {}px": [
+"sfa.js"
+],
+"scale(1.14)": [
+"sfa.js"
+],
+"cubic-bezier(.3,.6,.3,1)": [
+"sfa.js"
+],
+"scale(.97)": [
+"sfa.js"
+],
+"cubic-bezier(.3,.8,.25,1.08)": [
+"sfa.js"
+],
+"cubic-bezier(.2,.9,.3,1)": [
+"sfa.js"
+],
+"scale(.92)": [
+"sfa.js"
+],
+"cubic-bezier(.2,1.4,.4,1)": [
+"sfa.js"
+],
+".ph-wg, .ph-app": [
+"sfa.js"
 ],
 "snd/{}.mp3": [
 "sfx.js"

@@ -78,3 +78,7 @@
 10629|↩️ Retiraste tu solicitud de traspaso a {}.
 10630|↩ Retiraste tu solicitud de traspaso a {}.
 10631|Media {} ·
+10632|Partido en
+10633|¡Hora del partido!
+10634|Animaciones del menú
+10635|Transiciones de pestañas, entrada de tarjetas, efectos de botones.

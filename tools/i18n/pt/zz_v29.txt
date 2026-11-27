@@ -78,3 +78,7 @@
 10629|↩️ Você retirou seu pedido de transferência para {}.
 10630|↩ Você retirou seu pedido de transferência para {}.
 10631|Força {} ·
+10632|Jogo em
+10633|Hora do jogo!
+10634|Animações do menu
+10635|Transições de abas, entrada de cartões, efeitos de botões.

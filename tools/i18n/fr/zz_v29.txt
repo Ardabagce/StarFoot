@@ -78,3 +78,7 @@
 10629|↩️ Tu as retiré ta demande de transfert à {}.
 10630|↩ Tu as retiré ta demande de transfert à {}.
 10631|Note {} ·
+10632|Match dans
+10633|C’est l’heure du match !
+10634|Animations du menu
+10635|Transitions d’onglets, apparition des cartes, effets des boutons.

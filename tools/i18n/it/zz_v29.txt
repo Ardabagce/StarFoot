@@ -78,3 +78,7 @@
 10629|↩️ Hai ritirato la richiesta di trasferimento a {}.
 10630|↩ Hai ritirato la richiesta di trasferimento a {}.
 10631|Valutazione {} ·
+10632|Partita tra
+10633|Ora della partita!
+10634|Animazioni del menu
+10635|Transizioni delle schede, ingresso delle card, effetti dei pulsanti.

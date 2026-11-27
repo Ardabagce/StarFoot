@@ -78,3 +78,7 @@
 10629|↩️ Du hast deine Transferanfrage an {} zurückgezogen.
 10630|↩ Du hast deine Transferanfrage an {} zurückgezogen.
 10631|Stärke {} ·
+10632|Bis zum Spiel
+10633|Spielzeit!
+10634|Menü-Animationen
+10635|Tab-Wechsel, Karten-Einblendungen, Button-Effekte.

@@ -1,0 +1,291 @@
+/* =====================================================================
+   StarFoot · SFA (StarFoot Anim) — canlı menü animasyonları
+   Bağımlılık yok. Yalnız transform / opacity anime edilir; backdrop-filter,
+   büyük blur ve layout tetikleyen özellikler (width/height/top/left) yok.
+   Temel kural: başlangıçta gizli durum YALNIZ keyframe "from" içinde durur,
+   böylece animasyon kapalıyken (reduced-motion / sfa-off / lite) her şey
+   son haliyle görünür.
+   ===================================================================== */
+:root {
+  --sfa-spring: cubic-bezier(.22, 1.3, .36, 1);
+  --sfa-spring-soft: cubic-bezier(.25, 1.12, .4, 1);
+  --sfa-out: cubic-bezier(.2, .8, .2, 1);
+  --sfa-gold: #ffcf3f;
+}
+/* linear() destekleyen WebView'larda gerçek yay eğrisi (Chrome 113+); desteklemeyen cubic-bezier'de kalır */
+@supports (animation-timing-function: linear(0, 1)) {
+  :root {
+    --sfa-spring: linear(0, 0.071, 0.238, 0.445, 0.65, 0.827, 0.963, 1.055, 1.107, 1.126, 1.121, 1.103, 1.077, 1.051, 1.027, 1.009, 0.996, 0.988, 0.984, 0.984, 0.986, 0.989, 0.993, 0.996, 0.998, 1, 1.001, 1.002, 1.002, 1.002, 1.001, 1.001, 1.001);
+    --sfa-spring-soft: linear(0, 0.072, 0.232, 0.416, 0.591, 0.736, 0.848, 0.927, 0.979, 1.009, 1.023, 1.028, 1.027, 1.023, 1.018, 1.013, 1.008, 1.005, 1.002, 1.001, 1, 0.999, 0.999, 0.999, 0.999, 0.999, 1);
+  }
+}
+
+/* ---------- Genel kapatma: Ayarlar > "Animasyonlar" kapalı ve sistem "hareketi azalt" ---------- */
+html.sfa-off *, html.sfa-off *::before, html.sfa-off *::after {
+  animation-duration: 0s !important; animation-delay: 0s !important; animation-iteration-count: 1 !important;
+  transition-duration: 0s !important; transition-delay: 0s !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  [class*="sfa-"], [class*="sfa-"]::before, [class*="sfa-"]::after { animation-duration: 0s !important; animation-delay: 0s !important; animation-iteration-count: 1 !important; transition-duration: 0s !important; }
+}
+/* Hafif mod (body.lite, zayıf Android): sonsuz/idle animasyonlar durur, tek seferlikler kalır */
+body.lite .sfa-idle, body.lite .sfa-idle::before, body.lite .sfa-idle::after,
+body.lite .sfa-idle *, .sfa-paused .sfa-idle, .sfa-paused .sfa-idle::before, .sfa-paused .sfa-idle::after, .sfa-paused .sfa-idle * { animation-play-state: paused !important; }
+body.lite .sfa-sweep::after, body.lite .sfa-shine::after, body.lite .sfa-holo { display: none; }
+
+/* =====================================================================
+   1. Ana ekran girişi
+   ===================================================================== */
+.sfa-rise { animation: sfa-rise .56s var(--sfa-spring-soft) both; animation-delay: calc(var(--sfa-i, 0) * 55ms + 30ms); }
+.sfa-rise-r { animation-name: sfa-rise-r; }
+.sfa-rise-l { animation-name: sfa-rise-l; }
+.sfa-pop { animation: sfa-pop .5s var(--sfa-spring) both; animation-delay: calc(var(--sfa-i, 0) * 55ms + 30ms); }
+@keyframes sfa-rise { from { opacity: 0; transform: translate3d(0, 18px, 0) scale(.97); } 45% { opacity: 1; } to { opacity: 1; transform: none; } }
+@keyframes sfa-rise-r { from { opacity: 0; transform: translate3d(34px, 0, 0); } 45% { opacity: 1; } to { opacity: 1; transform: none; } }
+@keyframes sfa-rise-l { from { opacity: 0; transform: translate3d(-34px, 0, 0); } 45% { opacity: 1; } to { opacity: 1; transform: none; } }
+@keyframes sfa-pop { from { opacity: 0; transform: scale(.82); } 40% { opacity: 1; } to { opacity: 1; transform: none; } }
+
+/* giriş sırasında yatay taşmayı kırp (overflow: clip kaydırma kabı oluşturmaz) */
+.sfa-clipx { overflow-x: clip; }
+
+/* Maç günü kartı: ışık süpürmesi (tek pseudo, yalnız transform) */
+.sfa-sweep { position: relative; isolation: isolate; overflow: hidden; }
+.sfa-sweep::after {
+  content: ""; position: absolute; top: -10%; bottom: -10%; left: 0; width: 42%; z-index: -1; pointer-events: none;
+  background: linear-gradient(100deg, transparent 0%, rgba(255, 236, 180, 0) 18%, rgba(255, 236, 180, .09) 42%, rgba(255, 255, 255, .17) 50%, rgba(255, 236, 180, .09) 58%, transparent 82%);
+  transform: translate3d(-130%, 0, 0) skewX(-14deg); will-change: transform;
+  animation: sfa-sweep 6s cubic-bezier(.45, 0, .25, 1) 1.1s infinite;
+}
+@keyframes sfa-sweep { 0% { transform: translate3d(-130%, 0, 0) skewX(-14deg); } 30%, 100% { transform: translate3d(340%, 0, 0) skewX(-14deg); } }
+
+/* Formalar rüzgârda hafifçe sallanır */
+.sfa-sway .nm-team .shirt { transform-origin: 50% 6%; animation: sfa-sway 3.4s ease-in-out infinite alternate; }
+.sfa-sway .nm-team:last-child .shirt { animation-delay: -1.7s; animation-duration: 3.1s; }
+@keyframes sfa-sway { 0% { transform: rotate(-4deg) scale(1, .985); } 50% { transform: rotate(.5deg) scale(1.01, 1); } 100% { transform: rotate(4deg) scale(1, .99); } }
+/* giriş anında formalar yukarıdan düşer */
+.sfa-kitdrop .nm-team .shirt { animation: sfa-kitdrop .7s var(--sfa-spring) both, sfa-sway 3.4s ease-in-out .7s infinite alternate; }
+.sfa-kitdrop .nm-team:last-child .shirt { animation-delay: .12s, -1s; }
+@keyframes sfa-kitdrop { from { opacity: 0; transform: translate3d(0, -26px, 0) rotate(-14deg) scale(.8); } 50% { opacity: 1; } to { opacity: 1; transform: rotate(-4deg); } }
+
+/* VS rozeti nabzı */
+.sfa-vs { position: relative; display: inline-grid; place-items: center; animation: sfa-vs 2.4s ease-in-out infinite; }
+.sfa-vs::before { content: ""; position: absolute; left: 50%; top: 50%; width: 46px; height: 46px; margin: -23px 0 0 -23px; border-radius: 50%; border: 2px solid var(--sfa-gold); opacity: 0; pointer-events: none; animation: sfa-ring 2.4s ease-out infinite; }
+@keyframes sfa-vs { 0%, 70%, 100% { transform: scale(1); } 80% { transform: scale(1.16) rotate(-3deg); } 90% { transform: scale(.98); } }
+@keyframes sfa-ring { 0%, 70% { transform: scale(.5); opacity: 0; } 76% { opacity: .75; } 100% { transform: scale(1.7); opacity: 0; } }
+
+/* Geri sayım çipi */
+.sfa-cd { align-self: center; display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px 3px 4px; border-radius: 999px; background: rgba(255, 207, 63, .12); border: 1px solid rgba(255, 207, 63, .38); color: var(--chalk, #f3f1ea); font: 600 12px/1.2 var(--body); letter-spacing: .02em; }
+.sfa-cd b { color: var(--sfa-gold); font-family: var(--display); font-size: 15px; font-weight: 800; }
+.sfa-cd .sfa-cd-ic { width: 20px; height: 20px; display: grid; place-items: center; border-radius: 50%; background: var(--sfa-gold); color: #1a1400; }
+.sfa-cd .sfa-cd-ic svg { width: 14px; height: 14px; }
+.sfa-cd .sfa-hand { transform-origin: 12px 13px; animation: sfa-spin 2s steps(8) infinite; }
+.sfa-cd.zero { background: rgba(47, 191, 113, .16); border-color: rgba(47, 191, 113, .55); }
+.sfa-cd.zero b { color: #46e08f; }
+@keyframes sfa-spin { to { transform: rotate(360deg); } }
+/* rakam yuvarlama */
+.sfa-roll { display: inline-grid; overflow: hidden; vertical-align: bottom; height: 1.15em; line-height: 1.15em; }
+.sfa-roll > span { grid-area: 1 / 1; }
+.sfa-roll > .out { animation: sfa-roll-out .36s var(--sfa-out) both; }
+.sfa-roll > .in { animation: sfa-roll-in .42s var(--sfa-spring) both; }
+@keyframes sfa-roll-out { to { transform: translate3d(0, -110%, 0); opacity: 0; } }
+@keyframes sfa-roll-in { from { transform: translate3d(0, 110%, 0); opacity: 0; } }
+
+/* Hafta kutusu dolunca */
+.sfa-slotfill { animation: sfa-slotfill .55s var(--sfa-spring) both; }
+@keyframes sfa-slotfill { from { transform: scale(.7) rotate(-4deg); opacity: .2; } to { transform: none; opacity: 1; } }
+
+/* =====================================================================
+   2. Sekmeler ve alttan açılan paneller
+   ===================================================================== */
+.sfa-tabs button.on, .sfa-tabs button { border-top-color: transparent !important; border-bottom-color: transparent !important; }
+.sfa-tabbar { position: absolute; top: 0; left: 0; height: 3px; width: 20%; border-radius: 0 0 3px 3px; background: var(--sfa-gold); box-shadow: 0 0 12px rgba(255, 207, 63, .55); transform-origin: 0 0; transition: transform .5s var(--sfa-spring); will-change: transform; pointer-events: none; }
+.sfa-tabs button .ic, .sfa-tabs button .tab-av { transition: transform .35s var(--sfa-spring); }
+.sfa-tabs button.on .ic, .sfa-tabs button.on .tab-av { transform: translateY(-2px) scale(1.12); }
+.sfa-tabs button.sfa-tap .ic, .sfa-tabs button.sfa-tap .tab-av { animation: sfa-tabtap .45s var(--sfa-spring); }
+@keyframes sfa-tabtap { 0% { transform: scale(1); } 30% { transform: translateY(1px) scale(.82, .9); } 100% { transform: translateY(-2px) scale(1.12); } }
+
+/* panel: yay fiziği JS'te; CSS geçişi devre dışı */
+.sfa-sheet .hs-panel { transition: none !important; will-change: transform; }
+.sfa-sheet .hs-bg { transition: none !important; will-change: opacity; }
+/* yay yukarı taşınca altta boşluk görünmesin */
+.sfa-sheet .hs-panel::after { content: ""; position: absolute; left: -1px; right: -1px; top: calc(100% - 1px); height: 90px; background: var(--bg, #0a1530); border-inline: 1px solid var(--line); }
+.sfa-sheet .hs-h { touch-action: none; cursor: grab; user-select: none; -webkit-user-select: none; }
+.sfa-sheet.sfa-drag .hs-h { cursor: grabbing; }
+.sfa-sheet .hs-body > * { animation: sfa-rise .5s var(--sfa-spring-soft) both; animation-delay: calc(var(--sfa-i, 0) * 50ms + 90ms); }
+
+/* =====================================================================
+   3. Butonlar
+   ===================================================================== */
+.sfa-boing { animation: sfa-boing .46s var(--sfa-spring) !important; }
+@keyframes sfa-boing { 0% { transform: scale(var(--sfa-sx, .97), var(--sfa-sy, .9)); } 100% { transform: none; } }
+.sfa-ripc { position: absolute; inset: 0; border-radius: inherit; overflow: hidden; pointer-events: none; z-index: 0; }
+.sfa-rip { position: absolute; border-radius: 50%; background: currentColor; opacity: 0; transform: scale(0); pointer-events: none; animation: sfa-rip .6s var(--sfa-out) forwards; }
+@keyframes sfa-rip { 0% { transform: scale(.05); opacity: .28; } 100% { transform: scale(1); opacity: 0; } }
+
+/* "Maça Çık" boşta parıltı + ok dürtmesi */
+.sfa-shine { position: relative; isolation: isolate; overflow: hidden; }
+.sfa-shine::after {
+  content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 34%; z-index: 1; pointer-events: none;
+  background: linear-gradient(105deg, transparent 10%, rgba(255, 255, 255, .55) 46%, rgba(255, 255, 255, .0) 60%);
+  transform: translate3d(-140%, 0, 0) skewX(-16deg); will-change: transform;
+  animation: sfa-shine 3.8s cubic-bezier(.5, 0, .3, 1) 1.4s infinite;
+}
+@keyframes sfa-shine { 0% { transform: translate3d(-140%, 0, 0) skewX(-16deg); } 26%, 100% { transform: translate3d(420%, 0, 0) skewX(-16deg); } }
+.sfa-shine .ic { animation: sfa-nudge 3.8s ease-in-out 1.4s infinite; }
+@keyframes sfa-nudge { 0%, 18%, 100% { transform: none; } 6% { transform: translateX(4px); } 12% { transform: translateX(-1px); } }
+.sfa-glowpulse { animation: sfa-glowpulse 2.6s ease-in-out infinite; }
+/* gölge yerine alttaki sahte ışık katmanı: yalnız opacity */
+.sfa-halo { position: relative; }
+.sfa-halo::before { content: ""; position: absolute; inset: 6px 8px -10px; z-index: -1; border-radius: 12px; background: radial-gradient(60% 70% at 50% 100%, rgba(255, 207, 63, .55), transparent 70%); opacity: .35; animation: sfa-halo 2.6s ease-in-out infinite; pointer-events: none; }
+@keyframes sfa-halo { 50% { opacity: .9; } }
+
+/* başarı: etiket → onay işareti */
+.sfa-okb { position: relative; }
+.sfa-okb > .sfa-lbl { display: inline-flex; align-items: center; gap: inherit; transition: opacity .15s, transform .2s; }
+.sfa-okb.sfa-busy > .sfa-lbl, .sfa-okb.sfa-ok > .sfa-lbl { opacity: 0; transform: translateY(-8px) scale(.9); }
+.sfa-okb > .sfa-chk { position: absolute; inset: 0; display: grid; place-items: center; pointer-events: none; opacity: 0; }
+.sfa-okb > .sfa-chk svg { width: 26px; height: 26px; overflow: visible; }
+.sfa-okb.sfa-busy > .sfa-chk, .sfa-okb.sfa-ok > .sfa-chk { opacity: 1; }
+.sfa-chk circle { stroke-dasharray: 64; stroke-dashoffset: 64; transform-origin: 12px 12px; }
+.sfa-chk path { stroke-dasharray: 20; stroke-dashoffset: 20; }
+.sfa-okb.sfa-busy .sfa-chk circle { stroke-dashoffset: 46; animation: sfa-spin .7s linear infinite; }
+.sfa-okb.sfa-ok .sfa-chk circle { stroke-dashoffset: 0; transition: stroke-dashoffset .3s var(--sfa-out); }
+.sfa-okb.sfa-ok .sfa-chk path { stroke-dashoffset: 0; transition: stroke-dashoffset .32s .18s var(--sfa-out); }
+.sfa-okb.sfa-ok { background: #2fbf71 !important; color: #052313 !important; animation: sfa-okpop .5s var(--sfa-spring); }
+@keyframes sfa-okpop { 0% { transform: scale(.9); } 100% { transform: none; } }
+
+/* =====================================================================
+   4. Sayılar
+   ===================================================================== */
+.sfa-num { font-variant-numeric: tabular-nums; }
+.sfa-bump { animation: sfa-bump .5s var(--sfa-spring); }
+@keyframes sfa-bump { 0% { transform: scale(1); } 30% { transform: scale(1.28); } 100% { transform: none; } }
+.sfa-bar { transform-origin: 0 50%; will-change: transform; }
+.sfa-float { position: fixed; z-index: 9999; pointer-events: none; left: 0; top: 0; padding: 3px 9px; border-radius: 999px; font: 800 italic 14px/1.1 var(--display); letter-spacing: .03em; text-transform: uppercase; white-space: nowrap; color: #052313; background: #46e08f; box-shadow: 0 4px 14px rgba(0, 0, 0, .35); animation: sfa-float 1.25s var(--sfa-out) forwards; }
+.sfa-float.gold { background: var(--sfa-gold); color: #1a1400; }
+.sfa-float.bad { background: #ff5a4f; color: #fff; }
+.sfa-float.sky { background: #4fb3ff; color: #04122b; }
+@keyframes sfa-float { 0% { opacity: 0; transform: translate3d(var(--x), calc(var(--y) + 6px), 0) scale(.6); } 18% { opacity: 1; transform: translate3d(var(--x), calc(var(--y) - 8px), 0) scale(1.08); } 70% { opacity: 1; } 100% { opacity: 0; transform: translate3d(var(--x), calc(var(--y) - 46px), 0) scale(1); } }
+.sfa-lvl { position: relative; }
+.sfa-lvl::after { content: ""; position: absolute; inset: -6px; border-radius: 14px; border: 2px solid var(--sfa-gold); opacity: 0; animation: sfa-lvl .8s var(--sfa-out); pointer-events: none; }
+@keyframes sfa-lvl { 0% { opacity: .9; transform: scale(.8); } 100% { opacity: 0; transform: scale(1.35); } }
+
+/* =====================================================================
+   5. Maç sonu
+   ===================================================================== */
+.sfa-ms-head { animation: sfa-drop .5s var(--sfa-spring-soft) both; }
+@keyframes sfa-drop { from { transform: translate3d(0, -100%, 0); opacity: 0; } }
+.sfa-slam { display: inline-block; animation: sfa-slam .62s cubic-bezier(.3, 0, .2, 1) both; animation-delay: var(--sfa-d, 0s); }
+@keyframes sfa-slam { 0% { opacity: 0; transform: scale(2.8) rotate(-6deg); } 55% { opacity: 1; transform: scale(.9) rotate(0); } 72% { transform: scale(1.06); } 100% { opacity: 1; transform: none; } }
+.sfa-shock { position: absolute; left: 50%; top: 50%; width: 120px; height: 120px; margin: -60px 0 0 -60px; border-radius: 50%; border: 3px solid rgba(255, 207, 63, .9); pointer-events: none; animation: sfa-shock .6s var(--sfa-out) forwards; }
+@keyframes sfa-shock { from { opacity: 1; transform: scale(.2); } to { opacity: 0; transform: scale(1.8); } }
+.sfa-stars { display: flex; align-self: flex-start; gap: 3px; margin: 4px 0 2px; }
+.sfa-star { display: block; position: relative; width: 18px; height: 18px; }
+.sfa-star svg { position: absolute; inset: 0; width: 18px; height: 18px; }
+.sfa-star .bg { fill: rgba(255, 255, 255, .14); }
+.sfa-star .fg { fill: var(--sfa-gold); }
+.sfa-star .clip { display: block; position: absolute; inset: 0; overflow: hidden; }
+.sfa-star.on { animation: sfa-starpop .5s var(--sfa-spring) both; animation-delay: var(--sfa-d, 0s); }
+.sfa-star.on .clip { animation: sfa-fade .2s both; animation-delay: var(--sfa-d, 0s); }
+@keyframes sfa-starpop { 0% { transform: scale(.4) rotate(-40deg); } 100% { transform: none; } }
+@keyframes sfa-fade { from { opacity: 0; } }
+
+/* Maçın Oyuncusu kartı: çevirme */
+.sfa-flipw { position: relative; perspective: 1100px; margin: 14px 0; }
+.sfa-flipw > .motm-card { margin: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; animation: none; }
+.sfa-flipw > .sfa-back { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; display: grid; place-items: center; align-content: center; gap: 8px; text-align: center; border: 1px solid rgba(255, 215, 110, .7);
+  background: repeating-linear-gradient(45deg, rgba(255, 207, 63, .09) 0 10px, transparent 10px 20px), radial-gradient(ellipse at 50% 40%, #3a2a07, #0d1330 70%); overflow: hidden; }
+.sfa-back b { font: 800 italic 30px/1 var(--display); color: var(--sfa-gold); text-transform: uppercase; letter-spacing: .02em; }
+.sfa-back small { color: #d8c9a8; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; }
+.sfa-back .q { width: 92px; height: 92px; border-radius: 50%; display: grid; place-items: center; font: 800 italic 56px/1 var(--display); color: #1a1400; background: radial-gradient(circle at 35% 30%, #fff3c4, #ffcf3f 45%, #b98410); box-shadow: 0 0 0 6px rgba(255, 207, 63, .18); animation: sfa-qpulse 1s ease-in-out infinite; }
+@keyframes sfa-qpulse { 50% { transform: scale(1.08); } }
+/* holografik parıltı: ucuz çok duraklı gradyan, filtre/blend yok */
+.sfa-holo { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 3; }
+.sfa-holo::before { content: ""; position: absolute; top: -20%; bottom: -20%; left: -100%; width: 300%;
+  background: linear-gradient(115deg, transparent 30%, rgba(255, 120, 200, .10) 38%, rgba(120, 220, 255, .16) 42%, rgba(255, 255, 255, .26) 45%, rgba(255, 236, 140, .16) 48%, rgba(140, 255, 190, .10) 52%, transparent 60%);
+  transform: translate3d(calc(var(--sfa-hx, 0) * 1%), 0, 0); will-change: transform; }
+.sfa-holo.auto::before { animation: sfa-holo 4.2s ease-in-out infinite; }
+@keyframes sfa-holo { 0% { transform: translate3d(-30%, 0, 0); } 50% { transform: translate3d(30%, 0, 0); } 100% { transform: translate3d(-30%, 0, 0); } }
+.sfa-tilt { transition: transform .25s var(--sfa-out); will-change: transform; }
+
+/* =====================================================================
+   6. Kupa töreni
+   ===================================================================== */
+.sfa-cer { position: absolute; inset: 0; overflow: hidden; background: #02040b; }
+.sfa-cer-bg { position: absolute; inset: 0; background-size: cover; background-position: 50% 30%; opacity: .55; animation: sfa-fade .8s both; }
+.sfa-cer-dim { position: absolute; inset: 0; background: radial-gradient(120% 70% at 50% 42%, rgba(2, 4, 11, 0) 0%, rgba(2, 4, 11, .55) 55%, rgba(2, 4, 11, .95) 100%); }
+.sfa-cer-rays { position: absolute; left: 50%; top: 40%; width: 900px; height: 900px; margin: -450px 0 0 -450px; background-size: 100% 100%; opacity: 0; will-change: transform, opacity; animation: sfa-raysin 1s ease-out .55s forwards, sfa-rot 30s linear .55s infinite; }
+@keyframes sfa-raysin { to { opacity: .9; } }
+@keyframes sfa-rot { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+.sfa-cer-glow { position: absolute; left: 50%; top: 40%; width: 360px; height: 360px; margin: -180px 0 0 -180px; border-radius: 50%; background: radial-gradient(closest-side, rgba(255, 226, 140, .75), rgba(255, 190, 60, .25) 45%, transparent 100%); opacity: 0; animation: sfa-glowin .9s ease-out .5s forwards, sfa-breath 2.8s ease-in-out 1.4s infinite; }
+@keyframes sfa-glowin { from { opacity: 0; transform: scale(.4); } to { opacity: 1; transform: none; } }
+@keyframes sfa-breath { 50% { opacity: .7; transform: scale(1.06); } }
+.sfa-cer-cup { position: absolute; left: 50%; top: 40%; width: 204px; height: 252px; margin: -140px 0 0 -102px; animation: sfa-cuprise 1.25s var(--sfa-spring-soft) .25s both; will-change: transform; }
+.sfa-cer-cup > svg { width: 100%; height: 100%; overflow: visible; animation: sfa-cupfloat 3.2s ease-in-out 1.6s infinite; }
+@keyframes sfa-cuprise { from { opacity: 0; transform: translate3d(0, 260px, 0) scale(.6); } 30% { opacity: 1; } to { opacity: 1; transform: none; } }
+@keyframes sfa-cupfloat { 50% { transform: translateY(-7px); } }
+.sfa-gleam { animation: sfa-gleam 3.4s ease-in-out 1.5s infinite; }
+@keyframes sfa-gleam { 0% { transform: translateX(-150px) skewX(-18deg); } 35%, 100% { transform: translateX(190px) skewX(-18deg); } }
+.sfa-cer-sparks i { position: absolute; left: 50%; top: 40%; width: 6px; height: 6px; margin: -3px; border-radius: 50%; background: #fff6cf; opacity: 0; animation: sfa-spark 1.1s var(--sfa-out) both; animation-delay: calc(1.05s + var(--d, 0s)); }
+@keyframes sfa-spark { 0% { opacity: 1; transform: rotate(var(--a)) translateX(10px) scale(1); } 100% { opacity: 0; transform: rotate(var(--a)) translateX(150px) scale(.3); } }
+.sfa-cer-title { position: absolute; left: 0; right: 0; top: 9%; text-align: center; font: 800 italic 62px/1 var(--display); color: var(--sfa-gold); letter-spacing: -.01em; text-shadow: 0 4px 0 #8a5a00, 0 10px 24px rgba(0, 0, 0, .6); white-space: nowrap; }
+.sfa-cer-title span { display: inline-block; animation: sfa-letter .6s var(--sfa-spring) both; animation-delay: calc(1.15s + var(--i) * 60ms); }
+@keyframes sfa-letter { from { opacity: 0; transform: translate3d(0, -60px, 0) scale(1.8) rotate(-12deg); } 40% { opacity: 1; } }
+.sfa-cer-year { position: absolute; left: 0; right: 0; top: calc(9% + 70px); text-align: center; color: #fff; font: 700 16px/1 var(--body); letter-spacing: .3em; animation: sfa-fade .6s 1.9s both; }
+.sfa-cer-foot { animation: sfa-footup .6s var(--sfa-spring-soft) 2s both; }
+@keyframes sfa-footup { from { opacity: 0; transform: translate3d(0, 60px, 0); } }
+
+/* CSS konfeti (yedek; canvas yoksa ya da DOM katmanında) */
+.sfa-conf { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 5; }
+.sfa-conf i { position: absolute; top: -20px; left: var(--x); width: var(--w, 8px); height: calc(var(--w, 8px) * .45); background: var(--c); opacity: 0; will-change: transform; animation: sfa-fall var(--t, 3s) linear var(--d, 0s) var(--n, 2) both; }
+.sfa-conf i:nth-child(3n) { border-radius: 50%; height: var(--w, 8px); width: var(--w, 8px); }
+@keyframes sfa-fall {
+  0% { opacity: 1; transform: translate3d(0, 0, 0) rotate(0deg) rotateX(0deg); }
+  25% { transform: translate3d(calc(var(--dx) * .5), 28vh, 0) rotate(calc(var(--r) * .25)) rotateX(180deg); }
+  50% { transform: translate3d(calc(var(--dx) * -.2), 55vh, 0) rotate(calc(var(--r) * .5)) rotateX(360deg); }
+  75% { transform: translate3d(var(--dx), 82vh, 0) rotate(calc(var(--r) * .75)) rotateX(540deg); }
+  92% { opacity: 1; }
+  100% { opacity: 0; transform: translate3d(calc(var(--dx) * .6), 108vh, 0) rotate(var(--r)) rotateX(720deg); }
+}
+
+/* =====================================================================
+   7. Transfer imzası
+   ===================================================================== */
+.sfa-sign { position: absolute; inset: 0; overflow: hidden; display: grid; place-items: center; padding: 16px; }
+.sfa-contract { width: min(360px, 100%); position: relative; animation: sfa-cardin .8s var(--sfa-spring-soft) both; transform-origin: 50% 100%; }
+@keyframes sfa-cardin { from { opacity: 0; transform: translate3d(0, 120%, 0) rotate(8deg); } 40% { opacity: 1; } }
+.sfa-contract.out { animation: sfa-cardout .55s cubic-bezier(.5, 0, .7, .4) forwards; }
+@keyframes sfa-cardout { to { opacity: 0; transform: translate3d(-30%, -120%, 0) rotate(-14deg) scale(.85); } }
+.sfa-ct-row { animation: sfa-rise-l .5s var(--sfa-out) both; animation-delay: calc(.45s + var(--i) * 70ms); }
+.sfa-sigbox { position: relative; height: 84px; margin: 10px 0 12px; border-bottom: 2px dashed rgba(160, 185, 255, .45); }
+.sfa-sigbox > small { position: absolute; left: 0; bottom: -20px; font-size: 11px; color: var(--muted); letter-spacing: .12em; text-transform: uppercase; }
+.sfa-sigbox svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.sfa-sigbox path { fill: none; stroke: #e8f0ff; stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+.sfa-pen { position: absolute; left: 0; top: 0; width: 26px; height: 26px; margin: -24px 0 0 -2px; opacity: 0; pointer-events: none; transition: opacity .2s; }
+.sfa-pen.on { opacity: 1; }
+.sfa-stamp { position: absolute; right: 10px; top: 52px; padding: 6px 12px; border: 3px solid #ff5a4f; color: #ff5a4f; font: 800 italic 22px/1 var(--display); letter-spacing: .06em; transform: rotate(-12deg); border-radius: 6px; pointer-events: none; animation: sfa-stamp .45s cubic-bezier(.3, 0, .2, 1) both; }
+@keyframes sfa-stamp { 0% { opacity: 0; transform: rotate(-12deg) scale(2.6); } 60% { opacity: 1; transform: rotate(-12deg) scale(.92); } 100% { opacity: 1; transform: rotate(-12deg); } }
+.sfa-reveal { position: absolute; inset: 0; display: grid; place-items: center; align-content: center; gap: 10px; text-align: center; pointer-events: none; }
+.sfa-reveal.on { pointer-events: auto; }
+.sfa-reveal .sfa-cer-rays { top: 38%; animation-delay: .1s, .1s; }
+.sfa-reveal:not(.on) .sfa-cer-rays { animation: none; opacity: 0; }
+.sfa-reveal::before { content: ""; position: absolute; inset: 0; background: radial-gradient(90% 60% at 50% 45%, rgba(3, 8, 20, .2), rgba(3, 8, 20, .9) 70%); opacity: 0; transition: opacity .5s; }
+.sfa-reveal.on::before { opacity: 1; }
+.sfa-jersey { position: relative; width: 210px; height: 210px; transform-style: flat; opacity: 0; }
+.sfa-reveal.on .sfa-jersey { animation: sfa-jersey 1s var(--sfa-spring-soft) .1s both; }
+@keyframes sfa-jersey { from { opacity: 0; transform: perspective(700px) rotateY(-100deg) scale(.6); } 30% { opacity: 1; } to { opacity: 1; transform: none; } }
+.sfa-jersey svg { width: 100%; height: 100%; overflow: visible; }
+.sfa-reveal .sfa-w { opacity: 0; }
+.sfa-reveal.on .sfa-w { animation: sfa-rise .6s var(--sfa-spring-soft) both; animation-delay: calc(.6s + var(--i, 0) * 120ms); }
+
+/* =====================================================================
+   8. Telefon: ikondan büyüyerek açılış
+   ===================================================================== */
+.sfa-zoom { position: absolute; left: 0; top: 0; z-index: 30; overflow: hidden; transform-origin: 0 0; will-change: transform; contain: strict; }
+.sfa-zoom > .sfa-zc { position: absolute; inset: 0; }
+.sfa-zoom > .sfa-zi { position: absolute; inset: 0; display: grid; place-items: center; }
+.sfa-home-out { transition: transform .38s var(--sfa-out), opacity .3s ease; transform: scale(1.12); opacity: 0; }
+.sfa-home-in { transition: transform .42s var(--sfa-spring-soft), opacity .3s ease; }
+.sfa-apps-in .ph-app, .sfa-apps-in .ph-wg { animation: sfa-pop .5s var(--sfa-spring) both; animation-delay: calc(var(--sfa-i, 0) * 22ms + 60ms); }
+.sfa-dev-in { animation: sfa-devin .55s var(--sfa-spring-soft) both !important; }
+@keyframes sfa-devin { from { transform: translate3d(0, 70px, 0) scale(.94); opacity: 0; } 40% { opacity: 1; } }
