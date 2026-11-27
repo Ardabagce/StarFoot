@@ -169,7 +169,8 @@ const Player = {
   growthFactor(p, val) {
     const soft = Math.min(p.potential + 4, expectedAtAge(p.age) + 16 + (p.potential - 80) * 0.6);
     const softF = U.clamp((soft - val) / 18, 0.03, 1);
-    const capF = U.clamp((p.potential + 4 - val) / 40, 0.02, 1);
+    // 1.0.29: üst seviyelerde gelişim daha az sert yavaşlar (kullanıcı geri bildirimi)
+    const capF = U.clamp((p.potential + 4 - val) / 30, 0.04, 1);
     return Math.min(softF, capF);
   },
 

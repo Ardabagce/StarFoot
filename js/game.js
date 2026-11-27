@@ -2254,6 +2254,7 @@ ${UI.paper()}`;
         ${row('Para birimi', `Otomatik: telefonun bölgesine göre (${U.CUR[U.curAuto()].sym})`, `<div class="seg" data-noi18n>${[['', 'Oto'], ['TRY', '₺'], ['USD', '$'], ['EUR', '€'], ['GBP', '£']].map(([k, l]) => { let cur = ''; try { cur = localStorage.getItem('starfoot_cur') || ''; } catch (e) { /* yok */ } return `<button data-setcur="${k}" class="${cur === k ? 'on' : ''}">${l}</button>`; }).join('')}</div>`)}
         ${row('Dil / Language', '', `<select class="lang-sel" data-setlang data-noi18n>${Object.entries(I18N.LANGS).map(([k, n]) => `<option value="${k}"${k === I18N.lang ? ' selected' : ''}>${n}</option>`).join('')}</select>`)}
         ${row('Zorluk', DIFFS[s.difficulty || 'normal'].d, `<div class="seg">${Object.entries(DIFFS).map(([k, v]) => `<button data-setdiff="${k}" class="${k === (s.difficulty || 'normal') ? 'on' : ''}">${v.l}</button>`).join('')}</div>`)}
+        ${typeof Hub !== 'undefined' ? `<label class="drill-tg"><input type="checkbox" id="hub-tg" ${Hub.classic() ? 'checked' : ''}><span><b>Klasik ana ekran</b><small>Eski ana ekranı kullan: bütün bölümler tek sayfada, aşağı kaydırarak.</small></span></label>` : ''}
       </section>
       <section class="card settings">
         <div class="card-h"><span>${Icon('train')} Oynanış</span></div>
@@ -2352,6 +2353,8 @@ ${UI.paper()}`;
     if (htg) htg.onchange = () => { Sfx.setHap(htg.checked); if (htg.checked) Sfx.buzz('medium'); };
     const mtg = root.querySelector('#mus-tg');
     if (mtg) mtg.onchange = () => Sfx.setMusic(mtg.checked);
+    const hbt = root.querySelector('#hub-tg');
+    if (hbt) hbt.onchange = () => { Hub.setClassic(hbt.checked); if (typeof SetSheet !== 'undefined' && SetSheet.close) SetSheet.close(); Game.render(); };
     U.$$('[data-go=match]', root).forEach((b) => (b.onclick = () => {
       const s = Game.state;
       if (s.ap > 0) {

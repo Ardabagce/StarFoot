@@ -2955,6 +2955,10 @@ div.doc { position: fixed; inset: 0; z-index: 49; background: #000; display: fle
 .tq-row { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-top: 1px solid rgba(255,255,255,.06); }
 .tq-row b { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .tq-row small { color: var(--muted); font-size: 12px; text-align: right; }
+.tq-row .tq-x { flex: none; padding: 6px 10px; min-height: 0; font-size: 12px; }
+.tq-sub { margin: 10px 0 0; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+.tq-h { font-style: normal; font-weight: 600; }
+.tq-h.hi { color: #3ddc84; } .tq-h.mid { color: #ffcf3f; } .tq-h.lo { color: #ff7a6b; }
 .tq-acts { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .tq-acts .btn { margin-top: 4px; }
 .tq-lgs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; max-height: 60vh; overflow: auto; }

@@ -71,3 +71,10 @@
 10622|¡Vamos a la {}!
 10623|{} · Play-off
 10624|Clasificación: {}
+10625|Enviar solicitud
+10626|Clubes interesados en ti
+10627|Pantalla de inicio clásica
+10628|Usa la pantalla de inicio antigua: todas las secciones en una página, desplazándote hacia abajo.
+10629|↩️ Retiraste tu solicitud de traspaso a {}.
+10630|↩ Retiraste tu solicitud de traspaso a {}.
+10631|Media {} ·

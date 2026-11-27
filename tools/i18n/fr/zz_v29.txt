@@ -71,3 +71,10 @@
 10622|On va à : {} !
 10623|{} · Barrage
 10624|Qualifications : {}
+10625|Envoyer la demande
+10626|Clubs intéressés par toi
+10627|Écran d’accueil classique
+10628|Utilise l’ancien écran d’accueil : toutes les sections sur une page, en faisant défiler.
+10629|↩️ Tu as retiré ta demande de transfert à {}.
+10630|↩ Tu as retiré ta demande de transfert à {}.
+10631|Note {} ·

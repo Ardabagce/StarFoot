@@ -71,3 +71,10 @@
 10622|Vamos para a {}!
 10623|{} · Play-off
 10624|Eliminatórias: {}
+10625|Enviar pedido
+10626|Clubes interessados em você
+10627|Tela inicial clássica
+10628|Use a tela inicial antiga: todas as seções em uma página, rolando para baixo.
+10629|↩️ Você retirou seu pedido de transferência para {}.
+10630|↩ Você retirou seu pedido de transferência para {}.
+10631|Força {} ·

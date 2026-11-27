@@ -71,3 +71,10 @@
 10622|Wir fahren zur {}!
 10623|{} · Play-off
 10624|{} – Qualifikation
+10625|Anfrage senden
+10626|Vereine, die dich wollen
+10627|Klassischer Startbildschirm
+10628|Alten Startbildschirm nutzen: alle Bereiche auf einer Seite, nach unten scrollen.
+10629|↩️ Du hast deine Transferanfrage an {} zurückgezogen.
+10630|↩ Du hast deine Transferanfrage an {} zurückgezogen.
+10631|Stärke {} ·

@@ -5461,5 +5461,12 @@
  "Şu an {} lig, {} kulüp ve {} oyuncu değiştirilmiş. Düzenlemeni arkadaşlarınla paylaşabilir ya da başkasının dosyasını içe aktarabilirsin.": "Currently {} leagues, {} clubs and {} players are renamed. Share your edits with friends or import someone else's file.",
  "{} lig, {} kulüp ve {} oyuncu yüklendi. Uygulamak için Kaydet'e dokun.": "{} leagues, {} clubs and {} players loaded. Tap Save to apply.",
  "Lig, kulüp ve oyuncu isimlerini değiştir, düzenleme dosyası paylaş.": "Rename leagues, clubs and players, share an edit file.",
- "Lig adı": "League name"
+ "Lig adı": "League name",
+ "İptal": "Cancel",
+ "Talep gönder": "Send request",
+ "Güç {} ·": "Rating {} ·",
+ "Seninle ilgilenen kulüpler": "Clubs interested in you",
+ "↩️ {} kulübüne gönderdiğin transfer talebini geri çektin.": "↩️ You withdrew your transfer request to {}.",
+ "Klasik ana ekran": "Classic home screen",
+ "Eski ana ekranı kullan: bütün bölümler tek sayfada, aşağı kaydırarak.": "Use the old home screen: every section on one page, scroll down."
 }

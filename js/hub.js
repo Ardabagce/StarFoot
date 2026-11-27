@@ -7,7 +7,10 @@ const Hub = {
   el: null,
   pend: null, // son denenen aksiyon (hafta kutularına yazmak için)
 
-  on() { const s = Game.state; return !!(s && s.player && s.mode !== 'wc'); },
+  on() { const s = Game.state; return !!(s && s.player && s.mode !== 'wc') && !Hub.classic(); },
+  // Ayarlar: eski (kaydırmalı) ana ekranı tercih edenler için
+  classic() { try { return localStorage.getItem('starfoot_classic_hub') === '1'; } catch (e) { return false; } },
+  setClassic(v) { try { localStorage.setItem('starfoot_classic_hub', v ? '1' : '0'); } catch (e) { /* yok */ } if (typeof Premium !== 'undefined' && Premium.track) Premium.track('classic_hub', { on: v ? 1 : 0 }); },
   wk() { const s = Game.state; return `${s.season.year}-${s.season.round}`; },
 
   // HTML'yi üst düzey bölümlere ayırır (grid2 gibi sarmalayıcılar açılır)

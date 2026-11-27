@@ -688,6 +688,15 @@
 "lang-pt.js",
 "lang-zh.js"
 ],
+"İptal": [
+"career2.js"
+],
+"Talep gönder": [
+"career2.js"
+],
+"Güç {} ·": [
+"career2.js"
+],
 "Güç {} olursa (şu an {})": [
 "career2.js",
 "lang-ar.js",
@@ -730,6 +739,9 @@
 "lang-ja.js",
 "lang-pt.js",
 "lang-zh.js"
+],
+"Seninle ilgilenen kulüpler": [
+"career2.js"
 ],
 "· Premium: sınırsız": [
 "career2.js"
@@ -935,6 +947,9 @@
 "lang-ja.js",
 "lang-pt.js",
 "lang-zh.js"
+],
+"↩️ {} kulübüne gönderdiğin transfer talebini geri çektin.": [
+"career2.js"
 ],
 "✅ {} transfer talebini kabul etti! Teklif masanda, transfer dönemi bitene kadar geçerli.": [
 "career2.js",
@@ -18201,16 +18216,56 @@
 "lang-zh.js"
 ],
 "Dünya Kupası elemeleri": [
-"cups.js"
+"cups.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "Play-off: son bilet": [
-"cups.js"
+"cups.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "elemelerde son tura kaldı. Turnuvaya gitmek için": [
-"cups.js"
+"cups.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "karşısında kazanmak zorundasınız!": [
-"cups.js"
+"cups.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "Maça Çık": [
 "cups.js",
@@ -18227,16 +18282,56 @@
 "lang-zh.js"
 ],
 "{} · Play-off": [
-"cups.js"
+"cups.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "{}, play-off'ta {} engelini aştı. Turnuva bileti alındı: {}!": [
-"cups.js"
+"cups.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "Başardık! {} için biletimizi aldık!": [
-"cups.js"
+"cups.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "{}, play-off'ta {} karşısında elendi. Turnuvaya katılamadı: {}.": [
-"cups.js"
+"cups.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "{} kadrosundasın.": [
 "cups.js",
@@ -39290,7 +39385,17 @@
 "lang-zh.js"
 ],
 "Lig, kulüp ve oyuncu isimlerini istediğin gibi değiştirebilirsin. Değişiklikler yeni ve kayıtlı kariyerlerinde görünür.": [
-"edit.js"
+"edit.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "Sonuç yok.": [
 "edit.js",
@@ -39345,7 +39450,17 @@
 "lang-zh.js"
 ],
 "Şu an {} lig, {} kulüp ve {} oyuncu değiştirilmiş. Düzenlemeni arkadaşlarınla paylaşabilir ya da başkasının dosyasını içe aktarabilirsin.": [
-"edit.js"
+"edit.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "Paylaş / kopyala": [
 "edit.js",
@@ -39416,7 +39531,17 @@
 "lang-zh.js"
 ],
 "{} lig, {} kulüp ve {} oyuncu yüklendi. Uygulamak için Kaydet'e dokun.": [
-"edit.js"
+"edit.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "Tüm isimler varsayılana döndü. Uygulamak için Kaydet\\'e dokun.": [
 "edit.js"
@@ -51224,6 +51349,12 @@
 "lang-pt.js",
 "lang-zh.js"
 ],
+"Klasik ana ekran": [
+"game.js"
+],
+"Eski ana ekranı kullan: bütün bölümler tek sayfada, aşağı kaydırarak.": [
+"game.js"
+],
 "Gol tekrarı": [
 "game.js",
 "lang-ar.js",
@@ -51421,7 +51552,17 @@
 "lang-zh.js"
 ],
 "Lig, kulüp ve oyuncu isimlerini değiştir, düzenleme dosyası paylaş.": [
-"game.js"
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "{} Aç": [
 "game.js",
@@ -122298,6 +122439,66 @@
 "lang-pt.js",
 "lang-zh.js",
 "plusx.js"
+],
+"elemelerde son tura kaldı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"Turnuvaya gitmek için": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"Başardık!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"Lig, kulüp ve oyuncu isimlerini istediğin gibi değiştirebilirsin.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"Lig adı": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "(Asist)": [
 "lang-ar.js",
@@ -196941,6 +197142,102 @@
 "lang-pt.js",
 "lang-zh.js"
 ],
+"DÜNYA KUPASI ELEMELERİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"ELEMELERİ": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"PLAY-OFF: SON BİLET": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"ELEMELERDE SON TURA KALDI.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"TURNUVAYA GİTMEK İÇİN": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"KARŞISINDA KAZANMAK ZORUNDASINIZ!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"BAŞARDIK!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"LİG ADI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -227987,6 +228284,18 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"lig, {} kulüp ve {} oyuncu yüklendi. Uygulamak için Kaydet'e dokun.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
 "ile {} arasında sosyal medyada \\\"kim daha hızlı\\\" tartışması çıktı.": [
 "lang-ar.js",
 "lang-de.js",
@@ -231474,6 +231783,18 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"Şu an {} lig, {} kulüp ve {} oyuncu değiştirilmiş.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
 "{} milli ara için bir tatil planlamak istiyor.": [
 "lang-ar.js",
 "lang-de.js",
@@ -234904,6 +235225,18 @@
 "lang-ja.js",
 "lang-pt.js"
 ],
+"{} lig, {} kulüp ve {} oyuncu yüklendi.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
 "Penaltı! Topun başına {} geçiyor...": [
 "lang-ar.js",
 "lang-de.js",
@@ -235235,6 +235568,18 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
+],
+"lig, {} kulüp ve {} oyuncu yüklendi.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "Berabere ({}). Bahsin iade edildi.": [
 "lang-ar.js",
@@ -236331,6 +236676,18 @@
 ],
 "{} StarValue يُفتح مع Premium": [
 "lang-ar.js"
+],
+"{}, play-off'ta {} engelini aştı.": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "Federasyon men cezası: {} hafta": [
 "lang-ar.js",
@@ -237948,6 +238305,18 @@
 "lang-zh.js",
 "plusx.js"
 ],
+"Turnuva bileti alındı: {}!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
 "Annen çok duygulandı. ({})": [
 "lang-ar.js",
 "lang-de.js",
@@ -238391,6 +238760,18 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js"
+],
+"{} için biletimizi aldık!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "{} ile yollarını ayırdın.": [
 "lang-ar.js",
@@ -243957,6 +244338,18 @@
 "lang-pt.js",
 "lang-zh.js",
 "plusx.js"
+],
+"{} elemeleri": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "Gol {}'dan. {}": [
 "lang-ar.js",
@@ -259591,6 +259984,42 @@
 "Der Schnellvorlauf öffnet sich, sobald die Ligaspiele beginnen.": [
 "lang-de.js"
 ],
+"WM-Qualifikation": [
+"lang-de.js"
+],
+"Qualifikation": [
+"lang-de.js"
+],
+"Play-off: das letzte Ticket": [
+"lang-de.js"
+],
+"hat die letzte Qualifikationsrunde erreicht. Für das Turnier musst du gewinnen gegen": [
+"lang-de.js"
+],
+"hat die letzte Qualifikationsrunde erreicht.": [
+"lang-de.js"
+],
+"Für das Turnier musst du gewinnen gegen": [
+"lang-de.js"
+],
+"– ein Sieg ist Pflicht!": [
+"lang-de.js"
+],
+"Wir haben es geschafft!": [
+"lang-de.js"
+],
+"Benenne Ligen, Vereine und Spieler nach Belieben um. Änderungen erscheinen in neuen und gespeicherten Karrieren.": [
+"lang-de.js"
+],
+"Benenne Ligen, Vereine und Spieler nach Belieben um.": [
+"lang-de.js"
+],
+"Ligen, Vereine und Spieler umbenennen, Bearbeitungsdatei teilen.": [
+"lang-de.js"
+],
+"Liganame": [
+"lang-de.js"
+],
 "– wir haben uns qualifiziert!": [
 "lang-de.js"
 ],
@@ -274623,6 +275052,30 @@
 "STARPEDIA-VORSCHAU": [
 "lang-de.js"
 ],
+"WM-QUALIFIKATION": [
+"lang-de.js"
+],
+"QUALIFIKATION": [
+"lang-de.js"
+],
+"PLAY-OFF: DAS LETZTE TICKET": [
+"lang-de.js"
+],
+"HAT DIE LETZTE QUALIFIKATIONSRUNDE ERREICHT.": [
+"lang-de.js"
+],
+"FÜR DAS TURNIER MUSST DU GEWINNEN GEGEN": [
+"lang-de.js"
+],
+"– EIN SIEG IST PFLICHT!": [
+"lang-de.js"
+],
+"WIR HABEN ES GESCHAFFT!": [
+"lang-de.js"
+],
+"LIGANAME": [
+"lang-de.js"
+],
 "– WIR HABEN UNS QUALIFIZIERT!": [
 "lang-de.js"
 ],
@@ -278339,6 +278792,9 @@
 "Eine Saison im Trikot von {}. Gleiches Gehalt, danach zurück. Spielst du gut, ziehen sie vielleicht die Kaufoption.": [
 "lang-de.js"
 ],
+"Aktuell sind {} Ligen, {} Vereine und {} Spieler umbenannt. Teile deine Änderungen mit Freunden oder importiere die Datei eines anderen.": [
+"lang-de.js"
+],
 "👀 Ligarivale {} haben ein Talent in deinem Alter auf deiner Position: {}. Die Presse vergleicht euch schon. Lerne deinen Rivalen kennen!": [
 "lang-de.js"
 ],
@@ -278858,6 +279314,9 @@
 "{} beendet: {} wurde Gruppen-{}. und verpasst das Turnier.": [
 "lang-de.js"
 ],
+"{} Ligen, {} Vereine und {} Spieler geladen. Tippe auf Speichern, um sie anzuwenden.": [
+"lang-de.js"
+],
 "Hattrick! Eine unvergessliche Nacht im Trikot von {}. Den Ball nehme ich mit nach Hause.": [
 "lang-de.js"
 ],
@@ -278871,6 +279330,9 @@
 "lang-de.js"
 ],
 "Mit {} Paraden hast du dein Team im Spiel gehalten. Welche war die schwerste?": [
+"lang-de.js"
+],
+"Ligen, {} Vereine und {} Spieler geladen. Tippe auf Speichern, um sie anzuwenden.": [
 "lang-de.js"
 ],
 "Überraschung der Woche in {}: {} schlug den Favoriten {} {}-{}.": [
@@ -279080,6 +279542,9 @@
 "{} setzt sich links durch, doch seine Flanke bleibt hängen.": [
 "lang-de.js"
 ],
+"{} scheitert im Play-off an {} und verpasst: {}.": [
+"lang-de.js"
+],
 "{} Deine Energie ist niedrig. Deine Leistung sinkt und das Verletzungsrisiko steigt.": [
 "lang-de.js"
 ],
@@ -279180,6 +279645,9 @@
 "lang-de.js"
 ],
 "{} knapp am Pfosten vorbei! Eine Riesenchance für {}.": [
+"lang-de.js"
+],
+"{} setzt sich im Play-off gegen {} durch. Ticket gelöst: {}!": [
 "lang-de.js"
 ],
 "Angeblich beobachtet ein Scout von {} deine Spiele!": [
@@ -279621,6 +280089,9 @@
 "lang-de.js"
 ],
 "😠 {} hat die Vertragsgespräche für diese Saison abgebrochen.": [
+"lang-de.js"
+],
+"Aktuell sind {} Ligen, {} Vereine und {} Spieler umbenannt.": [
 "lang-de.js"
 ],
 "{} nächste Saison! Diese Fans haben es verdient.": [
@@ -280310,6 +280781,12 @@
 "Für {0} kommt eine eigene Schuhlinie": [
 "lang-de.js"
 ],
+"Wir haben es geschafft! Wir fahren zur {}!": [
+"lang-de.js"
+],
+"{} Ligen, {} Vereine und {} Spieler geladen.": [
+"lang-de.js"
+],
 "Elfmeter! {} tritt an...": [
 "lang-de.js"
 ],
@@ -280374,6 +280851,9 @@
 "lang-de.js"
 ],
 "{} pflückt den langen Ball sicher herunter.": [
+"lang-de.js"
+],
+"Ligen, {} Vereine und {} Spieler geladen.": [
 "lang-de.js"
 ],
 "Unentschieden ({}). Dein Einsatz wurde zurückerstattet.": [
@@ -280566,6 +281046,9 @@
 "lang-de.js"
 ],
 "({}-{} nach Verlängerung, Elfmeterschießen{})": [
+"lang-de.js"
+],
+"{} setzt sich im Play-off gegen {} durch.": [
 "lang-de.js"
 ],
 "Verbandssperre: {} Wochen": [
@@ -280931,6 +281414,9 @@
 "{} · unbegrenzt mit Premium+": [
 "lang-de.js"
 ],
+"Ticket gelöst: {}!": [
+"lang-de.js"
+],
 "Deine Mutter war gerührt. ({})": [
 "lang-de.js"
 ],
@@ -281022,6 +281508,9 @@
 "lang-de.js"
 ],
 "{} Länder, Kontinentalmeisterschaft": [
+"lang-de.js"
+],
+"Wir fahren zur {}!": [
 "lang-de.js"
 ],
 "{} Nationalmannschafts-Rangliste": [
@@ -282411,6 +282900,9 @@
 "lang-de.js"
 ],
 "Kostenlos {}/{}": [
+"lang-de.js"
+],
+"{} – Qualifikation": [
 "lang-de.js"
 ],
 "({}. Platz)": [
@@ -296232,6 +296724,39 @@
 "lang-en.js"
 ],
 "Fast-forward opens once league matches begin.": [
+"lang-en.js"
+],
+"World Cup qualifiers": [
+"lang-en.js"
+],
+"Play-off: the last ticket": [
+"lang-en.js"
+],
+"reached the final round of qualifying. To go to the tournament you must beat": [
+"lang-en.js"
+],
+"reached the final round of qualifying.": [
+"lang-en.js"
+],
+"To go to the tournament you must beat": [
+"lang-en.js"
+],
+"— a win is a must!": [
+"lang-en.js"
+],
+"We did it!": [
+"lang-en.js"
+],
+"Rename leagues, clubs and players however you like. Changes show up in new and saved careers.": [
+"lang-en.js"
+],
+"Rename leagues, clubs and players however you like.": [
+"lang-en.js"
+],
+"Rename leagues, clubs and players, share an edit file.": [
+"lang-en.js"
+],
+"League name": [
 "lang-en.js"
 ],
 "— we qualified!": [
@@ -310480,6 +311005,30 @@
 "STARPEDIA PREVIEW": [
 "lang-en.js"
 ],
+"WORLD CUP QUALIFIERS": [
+"lang-en.js"
+],
+"QUALIFIERS": [
+"lang-en.js"
+],
+"PLAY-OFF: THE LAST TICKET": [
+"lang-en.js"
+],
+"REACHED THE FINAL ROUND OF QUALIFYING.": [
+"lang-en.js"
+],
+"TO GO TO THE TOURNAMENT YOU MUST BEAT": [
+"lang-en.js"
+],
+"— A WIN IS A MUST!": [
+"lang-en.js"
+],
+"WE DID IT!": [
+"lang-en.js"
+],
+"LEAGUE NAME": [
+"lang-en.js"
+],
 "— WE QUALIFIED!": [
 "lang-en.js"
 ],
@@ -314151,6 +314700,9 @@
 "You'd wear the {} shirt for a season. Same wage, back to your club at season's end. Play well and they may trigger the buy option.": [
 "lang-en.js"
 ],
+"Currently {} leagues, {} clubs and {} players are renamed. Share your edits with friends or import someone else's file.": [
+"lang-en.js"
+],
 "👀 League rivals {} have a prospect your age, in your position: {}. The press is already comparing you. Meet your rival!": [
 "lang-en.js"
 ],
@@ -314670,6 +315222,9 @@
 "{} complete: {} finished {} in the group and will miss the tournament.": [
 "lang-en.js"
 ],
+"{} leagues, {} clubs and {} players loaded. Tap Save to apply.": [
+"lang-en.js"
+],
 "Hat-trick! An unforgettable night in the {} shirt. Taking the ball home.": [
 "lang-en.js"
 ],
@@ -314683,6 +315238,9 @@
 "lang-en.js"
 ],
 "You kept your team alive with {} saves. Which was the hardest?": [
+"lang-en.js"
+],
+"leagues, {} clubs and {} players loaded. Tap Save to apply.": [
 "lang-en.js"
 ],
 "Shock of the week in {}: {} beat favourites {} {}-{}.": [
@@ -314892,6 +315450,9 @@
 "{} beat his man on the left, but his cross hit the defence.": [
 "lang-en.js"
 ],
+"{} were knocked out by {} in the play-off and miss the {}.": [
+"lang-en.js"
+],
 "{} Your energy is low. Your performance drops and injury risk rises.": [
 "lang-en.js"
 ],
@@ -314992,6 +315553,9 @@
 "lang-en.js"
 ],
 "{} missed just wide of the post! A big chance for {}.": [
+"lang-en.js"
+],
+"{} got past {} in the play-off. Ticket booked: {}!": [
 "lang-en.js"
 ],
 "Word is a scout is watching your matches for {}!": [
@@ -315433,6 +315997,9 @@
 "lang-en.js"
 ],
 "😠 {} has broken off contract talks for this season.": [
+"lang-en.js"
+],
+"Currently {} leagues, {} clubs and {} players are renamed.": [
 "lang-en.js"
 ],
 "{} next season! These fans deserve it.": [
@@ -316122,6 +316689,12 @@
 "A signature boot line is coming for {0}": [
 "lang-en.js"
 ],
+"We did it! We're going to the {}!": [
+"lang-en.js"
+],
+"{} leagues, {} clubs and {} players loaded.": [
+"lang-en.js"
+],
 "Penalty! {} steps up...": [
 "lang-en.js"
 ],
@@ -316186,6 +316759,9 @@
 "lang-en.js"
 ],
 "{} comfortably gathered the long ball.": [
+"lang-en.js"
+],
+"leagues, {} clubs and {} players loaded.": [
 "lang-en.js"
 ],
 "Push ({}). Your stake was returned.": [
@@ -316378,6 +316954,9 @@
 "lang-en.js"
 ],
 "({}-{} after extra time, penalties{})": [
+"lang-en.js"
+],
+"{} got past {} in the play-off.": [
 "lang-en.js"
 ],
 "Federation ban: {} weeks": [
@@ -316743,6 +317322,9 @@
 "{} · unlimited with Premium+": [
 "lang-en.js"
 ],
+"Ticket booked: {}!": [
+"lang-en.js"
+],
 "Your mum was moved. ({})": [
 "lang-en.js"
 ],
@@ -316837,6 +317419,9 @@
 "lang-en.js"
 ],
 "{} nations, continental championship": [
+"lang-en.js"
+],
+"We're going to the {}!": [
 "lang-en.js"
 ],
 "{} National Team Ranking": [
@@ -318247,6 +318832,9 @@
 "lang-en.js"
 ],
 "Free {}/{}": [
+"lang-en.js"
+],
+"{} qualifiers": [
 "lang-en.js"
 ],
 "({}th place)": [
@@ -332226,6 +332814,42 @@
 "lang-es.js"
 ],
 "El avance rápido se abre cuando empiezan los partidos de liga.": [
+"lang-es.js"
+],
+"Clasificación mundialista": [
+"lang-es.js"
+],
+"clasificación": [
+"lang-es.js"
+],
+"Play-off: el último billete": [
+"lang-es.js"
+],
+"llegó a la ronda final de la clasificación. Para ir al torneo tienes que ganar a": [
+"lang-es.js"
+],
+"llegó a la ronda final de la clasificación.": [
+"lang-es.js"
+],
+"Para ir al torneo tienes que ganar a": [
+"lang-es.js"
+],
+"¡solo vale ganar!": [
+"lang-es.js"
+],
+"¡Lo logramos!": [
+"lang-es.js"
+],
+"Cambia el nombre de ligas, clubes y jugadores como quieras. Los cambios aparecen en carreras nuevas y guardadas.": [
+"lang-es.js"
+],
+"Cambia el nombre de ligas, clubes y jugadores como quieras.": [
+"lang-es.js"
+],
+"Renombra ligas, clubes y jugadores, comparte un archivo de edición.": [
+"lang-es.js"
+],
+"Nombre de la liga": [
 "lang-es.js"
 ],
 "— ¡nos hemos clasificado!": [
@@ -346597,6 +347221,27 @@
 "VISTA PREVIA DE STARPEDIA": [
 "lang-es.js"
 ],
+"CLASIFICACIÓN MUNDIALISTA": [
+"lang-es.js"
+],
+"PLAY-OFF: EL ÚLTIMO BILLETE": [
+"lang-es.js"
+],
+"LLEGÓ A LA RONDA FINAL DE LA CLASIFICACIÓN.": [
+"lang-es.js"
+],
+"PARA IR AL TORNEO TIENES QUE GANAR A": [
+"lang-es.js"
+],
+"¡SOLO VALE GANAR!": [
+"lang-es.js"
+],
+"¡LO LOGRAMOS!": [
+"lang-es.js"
+],
+"NOMBRE DE LA LIGA": [
+"lang-es.js"
+],
 "— ¡NOS HEMOS CLASIFICADO!": [
 "lang-es.js"
 ],
@@ -350273,6 +350918,9 @@
 "Vestirías la camiseta del {} una temporada. Mismo sueldo y vuelves al final. Si juegas bien, pueden ejercer la opción de compra.": [
 "lang-es.js"
 ],
+"Ahora hay {} ligas, {} clubes y {} jugadores renombrados. Comparte tus cambios con amigos o importa el archivo de otra persona.": [
+"lang-es.js"
+],
 "👀 El rival de liga {} tiene una promesa de tu edad y en tu posición: {}. La prensa ya os compara. ¡Conoce a tu rival!": [
 "lang-es.js"
 ],
@@ -350792,6 +351440,9 @@
 "{} terminada: {} acabó {}º del grupo y se perderá el torneo.": [
 "lang-es.js"
 ],
+"{} ligas, {} clubes y {} jugadores cargados. Toca Guardar para aplicarlos.": [
+"lang-es.js"
+],
 "¡Hat-trick! Una noche inolvidable con la camiseta del {}. Me llevo el balón a casa.": [
 "lang-es.js"
 ],
@@ -350805,6 +351456,9 @@
 "lang-es.js"
 ],
 "Sostuviste al equipo con {} paradas. ¿Cuál fue la más difícil?": [
+"lang-es.js"
+],
+"ligas, {} clubes y {} jugadores cargados. Toca Guardar para aplicarlos.": [
 "lang-es.js"
 ],
 "Sorpresa de la semana en {}: {} venció al favorito {} {}-{}.": [
@@ -351014,6 +351668,9 @@
 "{} superó a su par por la izquierda, pero su centro chocó con la defensa.": [
 "lang-es.js"
 ],
+"{} cayó ante {} en el play-off y se pierde: {}.": [
+"lang-es.js"
+],
 "{} Tienes poca energía. Tu rendimiento baja y aumenta el riesgo de lesión.": [
 "lang-es.js"
 ],
@@ -351114,6 +351771,9 @@
 "lang-es.js"
 ],
 "¡{} la mandó junto al poste! Gran ocasión para {}.": [
+"lang-es.js"
+],
+"{} superó a {} en el play-off. Billete asegurado: {}!": [
 "lang-es.js"
 ],
 "¡Se dice que un ojeador sigue tus partidos para el {}!": [
@@ -351555,6 +352215,9 @@
 "lang-es.js"
 ],
 "😠 {} rompió las negociaciones esta temporada.": [
+"lang-es.js"
+],
+"Ahora hay {} ligas, {} clubes y {} jugadores renombrados.": [
 "lang-es.js"
 ],
 "¡{} la próxima temporada! Esta afición se lo merece.": [
@@ -352244,6 +352907,12 @@
 "Llega una línea de botas con la firma de {0}": [
 "lang-es.js"
 ],
+"¡Lo logramos! ¡Vamos a la {}!": [
+"lang-es.js"
+],
+"{} ligas, {} clubes y {} jugadores cargados.": [
+"lang-es.js"
+],
 "¡Penalti! {} se prepara...": [
 "lang-es.js"
 ],
@@ -352308,6 +352977,9 @@
 "lang-es.js"
 ],
 "{} controló sin problemas el balón largo.": [
+"lang-es.js"
+],
+"ligas, {} clubes y {} jugadores cargados.": [
 "lang-es.js"
 ],
 "Empate ({}). Te devolvieron la apuesta.": [
@@ -352500,6 +353172,9 @@
 "lang-es.js"
 ],
 "({}-{} tras la prórroga, penaltis{})": [
+"lang-es.js"
+],
+"{} superó a {} en el play-off.": [
 "lang-es.js"
 ],
 "Sanción de la federación: {} semanas": [
@@ -352865,6 +353540,9 @@
 "{} · ilimitado con Premium+": [
 "lang-es.js"
 ],
+"¡Billete asegurado: {}!": [
+"lang-es.js"
+],
 "Tu madre se emocionó. ({})": [
 "lang-es.js"
 ],
@@ -352961,6 +353639,9 @@
 "{} países, campeonato continental": [
 "lang-es.js",
 "lang-pt.js"
+],
+"¡Vamos a la {}!": [
+"lang-es.js"
 ],
 "Ranking de selecciones {}": [
 "lang-es.js"
@@ -367972,6 +368653,39 @@
 "L’avance rapide s’ouvre dès le début des matchs de championnat.": [
 "lang-fr.js"
 ],
+"Qualifications pour la Coupe du monde": [
+"lang-fr.js"
+],
+"Barrage : le dernier billet": [
+"lang-fr.js"
+],
+"a atteint le dernier tour des qualifications. Pour aller au tournoi, il faut battre": [
+"lang-fr.js"
+],
+"a atteint le dernier tour des qualifications.": [
+"lang-fr.js"
+],
+"Pour aller au tournoi, il faut battre": [
+"lang-fr.js"
+],
+"— la victoire est obligatoire !": [
+"lang-fr.js"
+],
+"On l’a fait !": [
+"lang-fr.js"
+],
+"Renomme ligues, clubs et joueurs comme tu veux. Les changements apparaissent dans les carrières nouvelles et sauvegardées.": [
+"lang-fr.js"
+],
+"Renomme ligues, clubs et joueurs comme tu veux.": [
+"lang-fr.js"
+],
+"Renommer ligues, clubs et joueurs, partager un fichier d’édition.": [
+"lang-fr.js"
+],
+"Nom de la ligue": [
+"lang-fr.js"
+],
 "— on est qualifiés !": [
 "lang-fr.js"
 ],
@@ -381841,6 +382555,30 @@
 "APERÇU DE STARPEDIA": [
 "lang-fr.js"
 ],
+"QUALIFICATIONS POUR LA COUPE DU MONDE": [
+"lang-fr.js"
+],
+"QUALIFICATIONS": [
+"lang-fr.js"
+],
+"BARRAGE : LE DERNIER BILLET": [
+"lang-fr.js"
+],
+"A ATTEINT LE DERNIER TOUR DES QUALIFICATIONS.": [
+"lang-fr.js"
+],
+"POUR ALLER AU TOURNOI, IL FAUT BATTRE": [
+"lang-fr.js"
+],
+"— LA VICTOIRE EST OBLIGATOIRE !": [
+"lang-fr.js"
+],
+"ON L’A FAIT !": [
+"lang-fr.js"
+],
+"NOM DE LA LIGUE": [
+"lang-fr.js"
+],
 "— ON EST QUALIFIÉS !": [
 "lang-fr.js"
 ],
@@ -385383,6 +386121,9 @@
 "Tu porterais le maillot de {} une saison. Même salaire, retour en fin de saison. Si tu brilles, ils peuvent lever l'option d'achat.": [
 "lang-fr.js"
 ],
+"Actuellement {} ligues, {} clubs et {} joueurs sont renommés. Partage tes modifications avec tes amis ou importe le fichier de quelqu’un d’autre.": [
+"lang-fr.js"
+],
 "👀 Le rival de championnat {} a un espoir de ton âge, à ton poste : {}. La presse vous compare déjà. Découvre ton rival !": [
 "lang-fr.js"
 ],
@@ -385902,6 +386643,9 @@
 "{} terminées : {} finit {}e du groupe et manquera le tournoi.": [
 "lang-fr.js"
 ],
+"{} ligues, {} clubs et {} joueurs chargés. Touche Enregistrer pour appliquer.": [
+"lang-fr.js"
+],
 "Triplé ! Une nuit inoubliable sous le maillot de {}. Je ramène le ballon à la maison.": [
 "lang-fr.js"
 ],
@@ -385915,6 +386659,9 @@
 "lang-fr.js"
 ],
 "Tu as maintenu ton équipe avec {} arrêts. Lequel était le plus dur ?": [
+"lang-fr.js"
+],
+"ligues, {} clubs et {} joueurs chargés. Touche Enregistrer pour appliquer.": [
 "lang-fr.js"
 ],
 "Surprise de la semaine en {} : {} a battu le favori {} {}-{}.": [
@@ -386124,6 +386871,9 @@
 "{} élimine son vis-à-vis à gauche, mais son centre est contré.": [
 "lang-fr.js"
 ],
+"{} est éliminé par {} en barrage et manque : {}.": [
+"lang-fr.js"
+],
 "{} Ton énergie est basse. Ta performance baisse et le risque de blessure augmente.": [
 "lang-fr.js"
 ],
@@ -386224,6 +386974,9 @@
 "lang-fr.js"
 ],
 "{} manque de peu à côté du poteau ! Grosse occasion pour {}.": [
+"lang-fr.js"
+],
+"{} a passé l’obstacle {} en barrage. Billet en poche : {} !": [
 "lang-fr.js"
 ],
 "On dit qu'un recruteur suit tes matchs pour {} !": [
@@ -386665,6 +387418,9 @@
 "lang-fr.js"
 ],
 "😠 {} a rompu les négociations pour cette saison.": [
+"lang-fr.js"
+],
+"Actuellement {} ligues, {} clubs et {} joueurs sont renommés.": [
 "lang-fr.js"
 ],
 "{} la saison prochaine ! Ces fans le méritent.": [
@@ -387354,6 +388110,12 @@
 "Une gamme de crampons signature arrive pour {0}": [
 "lang-fr.js"
 ],
+"On l’a fait ! On va à : {} !": [
+"lang-fr.js"
+],
+"{} ligues, {} clubs et {} joueurs chargés.": [
+"lang-fr.js"
+],
 "Penalty ! {} s'élance...": [
 "lang-fr.js"
 ],
@@ -387418,6 +388180,9 @@
 "lang-fr.js"
 ],
 "{} capte sans souci le long ballon.": [
+"lang-fr.js"
+],
+"ligues, {} clubs et {} joueurs chargés.": [
 "lang-fr.js"
 ],
 "Égalité ({}). Ta mise t'a été rendue.": [
@@ -387610,6 +388375,9 @@
 "lang-fr.js"
 ],
 "({}-{} après prolongation, tirs au but{})": [
+"lang-fr.js"
+],
+"{} a passé l’obstacle {} en barrage.": [
 "lang-fr.js"
 ],
 "Suspension fédérale : {} semaines": [
@@ -387975,6 +388743,9 @@
 "{} · illimité avec Premium+": [
 "lang-fr.js"
 ],
+"Billet en poche : {} !": [
+"lang-fr.js"
+],
 "Ta mère était émue. ({})": [
 "lang-fr.js"
 ],
@@ -388069,6 +388840,9 @@
 "lang-fr.js"
 ],
 "{} pays, championnat continental": [
+"lang-fr.js"
+],
+"On va à : {} !": [
 "lang-fr.js"
 ],
 "Classement des équipes nationales {}": [
@@ -389324,6 +390098,9 @@
 "lang-fr.js"
 ],
 "Journée {}/3": [
+"lang-fr.js"
+],
+"{} · Barrage": [
 "lang-fr.js"
 ],
 "{} a marqué.": [
@@ -402731,6 +403508,39 @@
 "lang-id.js"
 ],
 "Percepat terbuka saat pertandingan liga dimulai.": [
+"lang-id.js"
+],
+"Kualifikasi Piala Dunia": [
+"lang-id.js"
+],
+"Play-off: tiket terakhir": [
+"lang-id.js"
+],
+"mencapai babak akhir kualifikasi. Untuk ke turnamen, kalian harus menang melawan": [
+"lang-id.js"
+],
+"mencapai babak akhir kualifikasi.": [
+"lang-id.js"
+],
+"Untuk ke turnamen, kalian harus menang melawan": [
+"lang-id.js"
+],
+"— wajib menang!": [
+"lang-id.js"
+],
+"Kita berhasil!": [
+"lang-id.js"
+],
+"Ganti nama liga, klub, dan pemain sesukamu. Perubahan muncul di karier baru dan yang tersimpan.": [
+"lang-id.js"
+],
+"Ganti nama liga, klub, dan pemain sesukamu.": [
+"lang-id.js"
+],
+"Ganti nama liga, klub, dan pemain, bagikan file edit.": [
+"lang-id.js"
+],
+"Nama liga": [
 "lang-id.js"
 ],
 "— kita lolos!": [
@@ -416354,6 +417164,30 @@
 "PRATINJAU STARPEDIA": [
 "lang-id.js"
 ],
+"KUALIFIKASI PIALA DUNIA": [
+"lang-id.js"
+],
+"KUALIFIKASI": [
+"lang-id.js"
+],
+"PLAY-OFF: TIKET TERAKHIR": [
+"lang-id.js"
+],
+"MENCAPAI BABAK AKHIR KUALIFIKASI.": [
+"lang-id.js"
+],
+"UNTUK KE TURNAMEN, KALIAN HARUS MENANG MELAWAN": [
+"lang-id.js"
+],
+"— WAJIB MENANG!": [
+"lang-id.js"
+],
+"KITA BERHASIL!": [
+"lang-id.js"
+],
+"NAMA LIGA": [
+"lang-id.js"
+],
 "— KITA LOLOS!": [
 "lang-id.js"
 ],
@@ -419877,6 +420711,9 @@
 "Kamu memakai jersey {} semusim. Gaji sama, kembali di akhir musim. Main bagus, mereka bisa menebusmu.": [
 "lang-id.js"
 ],
+"Saat ini {} liga, {} klub, dan {} pemain diganti namanya. Bagikan editanmu ke teman atau impor file orang lain.": [
+"lang-id.js"
+],
 "👀 Rival liga {} punya pemain muda seusiamu di posisimu: {}. Media sudah membandingkan kalian. Kenali rivalmu!": [
 "lang-id.js"
 ],
@@ -420396,6 +421233,9 @@
 "{} selesai: {} finis ke-{} di grup dan tidak ikut turnamen.": [
 "lang-id.js"
 ],
+"{} liga, {} klub, dan {} pemain dimuat. Ketuk Simpan untuk menerapkan.": [
+"lang-id.js"
+],
 "Hat-trick! Malam tak terlupakan dengan jersey {}. Bolanya aku bawa pulang.": [
 "lang-id.js"
 ],
@@ -420409,6 +421249,9 @@
 "lang-id.js"
 ],
 "Kamu menyelamatkan tim dengan {} penyelamatan. Mana yang tersulit?": [
+"lang-id.js"
+],
+"liga, {} klub, dan {} pemain dimuat. Ketuk Simpan untuk menerapkan.": [
 "lang-id.js"
 ],
 "Kejutan minggu ini di {}: {} mengalahkan favorit {} {}-{}.": [
@@ -420618,6 +421461,9 @@
 "{} melewati lawan di kiri, tetapi umpan silangnya diblok.": [
 "lang-id.js"
 ],
+"{} tersingkir oleh {} di play-off dan gagal ke {}.": [
+"lang-id.js"
+],
 "{} Energimu rendah. Performamu turun dan risiko cedera meningkat.": [
 "lang-id.js"
 ],
@@ -420718,6 +421564,9 @@
 "lang-id.js"
 ],
 "{} meleset tipis dari tiang! Peluang besar untuk {}.": [
+"lang-id.js"
+],
+"{} menyingkirkan {} di play-off. Tiket didapat: {}!": [
 "lang-id.js"
 ],
 "Kabarnya ada pencari bakat yang menonton pertandinganmu untuk {}!": [
@@ -421159,6 +422008,9 @@
 "lang-id.js"
 ],
 "😠 {} menghentikan negosiasi kontrak musim ini.": [
+"lang-id.js"
+],
+"Saat ini {} liga, {} klub, dan {} pemain diganti namanya.": [
 "lang-id.js"
 ],
 "{} musim depan! Para suporter ini pantas mendapatkannya.": [
@@ -421848,6 +422700,12 @@
 "Lini sepatu khas {0} segera hadir": [
 "lang-id.js"
 ],
+"Kita berhasil! Kita ke {}!": [
+"lang-id.js"
+],
+"{} liga, {} klub, dan {} pemain dimuat.": [
+"lang-id.js"
+],
 "Penalti! {} maju...": [
 "lang-id.js"
 ],
@@ -421912,6 +422770,9 @@
 "lang-id.js"
 ],
 "{} dengan tenang mengamankan bola panjang.": [
+"lang-id.js"
+],
+"liga, {} klub, dan {} pemain dimuat.": [
 "lang-id.js"
 ],
 "Seri ({}). Taruhanmu dikembalikan.": [
@@ -422104,6 +422965,9 @@
 "lang-id.js"
 ],
 "({}-{} setelah perpanjangan waktu, adu penalti{})": [
+"lang-id.js"
+],
+"{} menyingkirkan {} di play-off.": [
 "lang-id.js"
 ],
 "Larangan federasi: {} minggu": [
@@ -422469,6 +423333,9 @@
 "{} · tanpa batas dengan Premium+": [
 "lang-id.js"
 ],
+"Tiket didapat: {}!": [
+"lang-id.js"
+],
 "Ibumu terharu. ({})": [
 "lang-id.js"
 ],
@@ -422560,6 +423427,9 @@
 "lang-id.js"
 ],
 "{} negara, kejuaraan benua": [
+"lang-id.js"
+],
+"Kita ke {}!": [
 "lang-id.js"
 ],
 "Peringkat Timnas {}": [
@@ -423922,6 +424792,9 @@
 "lang-id.js"
 ],
 "{} · {} · {} TAHUN": [
+"lang-id.js"
+],
+"Kualifikasi {}": [
 "lang-id.js"
 ],
 "(peringkat {})": [
@@ -437238,6 +438111,39 @@
 "lang-it.js"
 ],
 "L’avanzamento rapido si apre quando iniziano le partite di campionato.": [
+"lang-it.js"
+],
+"Qualificazioni mondiali": [
+"lang-it.js"
+],
+"Play-off: l'ultimo biglietto": [
+"lang-it.js"
+],
+"è arrivata all'ultimo turno di qualificazione. Per andare al torneo devi battere": [
+"lang-it.js"
+],
+"è arrivata all'ultimo turno di qualificazione.": [
+"lang-it.js"
+],
+"Per andare al torneo devi battere": [
+"lang-it.js"
+],
+"— serve solo vincere!": [
+"lang-it.js"
+],
+"Ce l'abbiamo fatta!": [
+"lang-it.js"
+],
+"Rinomina campionati, club e giocatori come vuoi. Le modifiche compaiono nelle carriere nuove e salvate.": [
+"lang-it.js"
+],
+"Rinomina campionati, club e giocatori come vuoi.": [
+"lang-it.js"
+],
+"Rinomina campionati, club e giocatori, condividi un file di modifica.": [
+"lang-it.js"
+],
+"Nome del campionato": [
 "lang-it.js"
 ],
 "— ci siamo qualificati!": [
@@ -450872,6 +451778,30 @@
 "ANTEPRIMA STARPEDIA": [
 "lang-it.js"
 ],
+"QUALIFICAZIONI MONDIALI": [
+"lang-it.js"
+],
+"QUALIFICAZIONI": [
+"lang-it.js"
+],
+"PLAY-OFF: L'ULTIMO BIGLIETTO": [
+"lang-it.js"
+],
+"È ARRIVATA ALL'ULTIMO TURNO DI QUALIFICAZIONE.": [
+"lang-it.js"
+],
+"PER ANDARE AL TORNEO DEVI BATTERE": [
+"lang-it.js"
+],
+"— SERVE SOLO VINCERE!": [
+"lang-it.js"
+],
+"CE L'ABBIAMO FATTA!": [
+"lang-it.js"
+],
+"NOME DEL CAMPIONATO": [
+"lang-it.js"
+],
 "— CI SIAMO QUALIFICATI!": [
 "lang-it.js"
 ],
@@ -454391,6 +455321,9 @@
 "Indosseresti la maglia del {} per una stagione. Stesso stipendio, poi torni. Se giochi bene potrebbero riscattarti.": [
 "lang-it.js"
 ],
+"Al momento {} campionati, {} club e {} giocatori sono rinominati. Condividi le tue modifiche con gli amici o importa il file di qualcun altro.": [
+"lang-it.js"
+],
 "👀 La rivale di campionato {} ha un talento della tua età, nel tuo ruolo: {}. La stampa vi sta già confrontando. Conosci il tuo rivale!": [
 "lang-it.js"
 ],
@@ -454910,6 +455843,9 @@
 "{} concluse: {} chiude {}ª nel girone e salterà il torneo.": [
 "lang-it.js"
 ],
+"{} campionati, {} club e {} giocatori caricati. Tocca Salva per applicare.": [
+"lang-it.js"
+],
 "Tripletta! Una notte indimenticabile con la maglia del {}. Il pallone me lo porto a casa.": [
 "lang-it.js"
 ],
@@ -454923,6 +455859,9 @@
 "lang-it.js"
 ],
 "Hai tenuto in piedi la squadra con {} parate. Qual è stata la più difficile?": [
+"lang-it.js"
+],
+"campionati, {} club e {} giocatori caricati. Tocca Salva per applicare.": [
 "lang-it.js"
 ],
 "Sorpresa della settimana in {}: il {} ha battuto i favoriti del {} {}-{}.": [
@@ -455132,6 +456071,9 @@
 "{} salta l'uomo a sinistra, ma il cross viene respinto.": [
 "lang-it.js"
 ],
+"{} eliminata da {} ai play-off: niente {}.": [
+"lang-it.js"
+],
 "{} La tua energia è bassa. La prestazione cala e il rischio infortuni aumenta.": [
 "lang-it.js"
 ],
@@ -455232,6 +456174,9 @@
 "lang-it.js"
 ],
 "{} sfiora il palo! Grande occasione per {}.": [
+"lang-it.js"
+],
+"{} supera {} ai play-off. Biglietto staccato: {}!": [
 "lang-it.js"
 ],
 "Si dice che un osservatore del {} segua le tue partite!": [
@@ -455673,6 +456618,9 @@
 "lang-it.js"
 ],
 "😠 {} ha interrotto le trattative per questa stagione.": [
+"lang-it.js"
+],
+"Al momento {} campionati, {} club e {} giocatori sono rinominati.": [
 "lang-it.js"
 ],
 "{} la prossima stagione! Questi tifosi se lo meritano.": [
@@ -456362,6 +457310,12 @@
 "In arrivo una linea di scarpe firmata {0}": [
 "lang-it.js"
 ],
+"Ce l'abbiamo fatta! Andiamo a: {}!": [
+"lang-it.js"
+],
+"{} campionati, {} club e {} giocatori caricati.": [
+"lang-it.js"
+],
 "Rigore! {} si presenta sul dischetto...": [
 "lang-it.js"
 ],
@@ -456426,6 +457380,9 @@
 "lang-it.js"
 ],
 "{} controlla senza problemi il lancio lungo.": [
+"lang-it.js"
+],
+"campionati, {} club e {} giocatori caricati.": [
 "lang-it.js"
 ],
 "Pareggio ({}). La tua puntata è stata restituita.": [
@@ -456618,6 +457575,9 @@
 "lang-it.js"
 ],
 "({}-{} dopo i supplementari, rigori{})": [
+"lang-it.js"
+],
+"{} supera {} ai play-off.": [
 "lang-it.js"
 ],
 "Squalifica federale: {} settimane": [
@@ -456983,6 +457943,9 @@
 "{} · illimitato con Premium+": [
 "lang-it.js"
 ],
+"Biglietto staccato: {}!": [
+"lang-it.js"
+],
 "Tua madre si è commossa. ({})": [
 "lang-it.js"
 ],
@@ -457077,6 +458040,9 @@
 "lang-it.js"
 ],
 "{} nazioni, campionato continentale": [
+"lang-it.js"
+],
+"Andiamo a: {}!": [
 "lang-it.js"
 ],
 "Ranking delle nazionali {}": [
@@ -472645,6 +473611,42 @@
 "O avanço rápido abre quando começam os jogos da liga.": [
 "lang-pt.js"
 ],
+"Eliminatórias da Copa": [
+"lang-pt.js"
+],
+"eliminatórias": [
+"lang-pt.js"
+],
+"Play-off: o último bilhete": [
+"lang-pt.js"
+],
+"chegou à rodada final das eliminatórias. Para ir ao torneio, você precisa vencer": [
+"lang-pt.js"
+],
+"chegou à rodada final das eliminatórias.": [
+"lang-pt.js"
+],
+"Para ir ao torneio, você precisa vencer": [
+"lang-pt.js"
+],
+"— só a vitória serve!": [
+"lang-pt.js"
+],
+"Conseguimos!": [
+"lang-pt.js"
+],
+"Renomeie ligas, clubes e jogadores como quiser. As mudanças aparecem em carreiras novas e salvas.": [
+"lang-pt.js"
+],
+"Renomeie ligas, clubes e jogadores como quiser.": [
+"lang-pt.js"
+],
+"Renomeie ligas, clubes e jogadores, compartilhe um arquivo de edição.": [
+"lang-pt.js"
+],
+"Nome da liga": [
+"lang-pt.js"
+],
 "— nos classificamos!": [
 "lang-pt.js"
 ],
@@ -485977,6 +486979,30 @@
 "PRÉVIA DA STARPEDIA": [
 "lang-pt.js"
 ],
+"ELIMINATÓRIAS DA COPA": [
+"lang-pt.js"
+],
+"ELIMINATÓRIAS": [
+"lang-pt.js"
+],
+"PLAY-OFF: O ÚLTIMO BILHETE": [
+"lang-pt.js"
+],
+"CHEGOU À RODADA FINAL DAS ELIMINATÓRIAS.": [
+"lang-pt.js"
+],
+"PARA IR AO TORNEIO, VOCÊ PRECISA VENCER": [
+"lang-pt.js"
+],
+"— SÓ A VITÓRIA SERVE!": [
+"lang-pt.js"
+],
+"CONSEGUIMOS!": [
+"lang-pt.js"
+],
+"NOME DA LIGA": [
+"lang-pt.js"
+],
 "— NOS CLASSIFICAMOS!": [
 "lang-pt.js"
 ],
@@ -489388,6 +490414,9 @@
 "Você vestiria a camisa do {} por uma temporada. Mesmo salário, volta no fim. Se jogar bem, podem exercer a opção de compra.": [
 "lang-pt.js"
 ],
+"Agora há {} ligas, {} clubes e {} jogadores renomeados. Compartilhe suas edições com amigos ou importe o arquivo de outra pessoa.": [
+"lang-pt.js"
+],
 "👀 O rival de liga {} tem uma promessa da sua idade e na sua posição: {}. A imprensa já está comparando vocês. Conheça seu rival!": [
 "lang-pt.js"
 ],
@@ -489907,6 +490936,9 @@
 "{} encerradas: {} terminou em {}º no grupo e vai ficar fora do torneio.": [
 "lang-pt.js"
 ],
+"{} ligas, {} clubes e {} jogadores carregados. Toque em Salvar para aplicar.": [
+"lang-pt.js"
+],
 "Hat-trick! Uma noite inesquecível com a camisa do {}. Vou levar a bola para casa.": [
 "lang-pt.js"
 ],
@@ -489920,6 +490952,9 @@
 "lang-pt.js"
 ],
 "Você segurou o time com {} defesas. Qual foi a mais difícil?": [
+"lang-pt.js"
+],
+"ligas, {} clubes e {} jogadores carregados. Toque em Salvar para aplicar.": [
 "lang-pt.js"
 ],
 "Zebra da semana em {}: {} venceu o favorito {} por {}-{}.": [
@@ -490129,6 +491164,9 @@
 "{} passou pelo marcador na esquerda, mas o cruzamento parou na defesa.": [
 "lang-pt.js"
 ],
+"{} caiu diante de {} no play-off e fica fora: {}.": [
+"lang-pt.js"
+],
 "{} Sua energia está baixa. Seu desempenho cai e o risco de lesão aumenta.": [
 "lang-pt.js"
 ],
@@ -490229,6 +491267,9 @@
 "lang-pt.js"
 ],
 "{} mandou rente à trave! Grande chance para {}.": [
+"lang-pt.js"
+],
+"{} passou por {} no play-off. Vaga garantida: {}!": [
 "lang-pt.js"
 ],
 "Dizem que um olheiro está assistindo seus jogos para o {}!": [
@@ -490670,6 +491711,9 @@
 "lang-pt.js"
 ],
 "😠 {} encerrou as negociações nesta temporada.": [
+"lang-pt.js"
+],
+"Agora há {} ligas, {} clubes e {} jogadores renomeados.": [
 "lang-pt.js"
 ],
 "{} na próxima temporada! Essa torcida merece.": [
@@ -491359,6 +492403,12 @@
 "Vem aí a linha de chuteiras assinada por {0}": [
 "lang-pt.js"
 ],
+"Conseguimos! Vamos para a {}!": [
+"lang-pt.js"
+],
+"{} ligas, {} clubes e {} jogadores carregados.": [
+"lang-pt.js"
+],
 "Pênalti! {} vai para a cobrança...": [
 "lang-pt.js"
 ],
@@ -491423,6 +492473,9 @@
 "lang-pt.js"
 ],
 "{} controlou a bola longa com tranquilidade.": [
+"lang-pt.js"
+],
+"ligas, {} clubes e {} jogadores carregados.": [
 "lang-pt.js"
 ],
 "Empate ({}). Sua aposta foi devolvida.": [
@@ -491615,6 +492668,9 @@
 "lang-pt.js"
 ],
 "({}-{} após a prorrogação, pênaltis{})": [
+"lang-pt.js"
+],
+"{} passou por {} no play-off.": [
 "lang-pt.js"
 ],
 "Suspensão da federação: {} semanas": [
@@ -491980,6 +493036,9 @@
 "{} · ilimitado com Premium+": [
 "lang-pt.js"
 ],
+"Vaga garantida: {}!": [
+"lang-pt.js"
+],
 "Sua mãe ficou emocionada. ({})": [
 "lang-pt.js"
 ],
@@ -492071,6 +493130,9 @@
 "lang-pt.js"
 ],
 "Restam {} anos no seu contrato.": [
+"lang-pt.js"
+],
+"Vamos para a {}!": [
 "lang-pt.js"
 ],
 "Ranking de seleções {}": [
