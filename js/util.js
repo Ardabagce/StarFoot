@@ -233,8 +233,17 @@ const ScreenGuard = {
     if (ScreenGuard.errs++ > 8) return;
     try {
       const F = window.Capacitor && window.Capacitor.Plugins && window.Capacitor.Plugins.FirebaseAnalytics;
-      if (F && F.logEvent) F.logEvent({ name: 'js_error', params: { m: String(msg || '').slice(0, 95), s: String(src || '').split('/').pop().slice(0, 30), l: line || 0, scr: ScreenGuard.where(), f: ScreenGuard.stack(err), v: typeof APP_VER !== 'undefined' ? APP_VER : '', t: ScreenGuard.tester() ? 1 : 0 } }).catch(() => {});
+      if (F && F.logEvent) F.logEvent({ name: 'js_error', params: { error_message: String(msg || '').slice(0, 95), error_file: String(src || '').split('/').pop().slice(0, 30), error_line: line || 0, error_screen: ScreenGuard.where(), error_stack: ScreenGuard.stack(err), app_version: typeof APP_VER !== 'undefined' ? APP_VER : '', webview: ScreenGuard.engine(), tester: ScreenGuard.tester() ? 1 : 0 } }).catch(() => {});
     } catch (e) { /* yok */ }
+  },
+  // tarayıcı motoru ve sürümü (ör. "chrome 69", "safari 17"): eski WebView hatalarını ayırmak için
+  engine() {
+    try {
+      const ua = navigator.userAgent || '';
+      const c = /Chrome\/(\d+)/.exec(ua); if (c) return 'chrome ' + c[1];
+      const v = /Version\/(\d+)/.exec(ua) || /OS (\d+)_/.exec(ua); if (v) return 'safari ' + v[1];
+      return ua.slice(0, 30);
+    } catch (e) { return ''; }
   },
   // hatanın olduğu ekran (ör. hub:life, match, drill, title)
   where() {

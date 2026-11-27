@@ -142,8 +142,8 @@ const Premium = {
       // satın alma hatalarında teşhis bilgisi: platform ve mağazadan alınabilen ürün sayısı (0 = mağazaya hiç ulaşılamadı)
       if (name === 'premium_fail') {
         params = Object.assign({}, params);
-        try { params.plat = (window.Capacitor && window.Capacitor.getPlatform && window.Capacitor.getPlatform()) || 'web'; } catch (e) { /* yok */ }
-        try { params.np = Object.keys((typeof RCStore !== 'undefined' && RCStore.prods) || {}).length; } catch (e) { /* yok */ }
+        try { params.platform = (window.Capacitor && window.Capacitor.getPlatform && window.Capacitor.getPlatform()) || 'web'; } catch (e) { /* yok */ }
+        try { params.store_products = Object.keys((typeof RCStore !== 'undefined' && RCStore.prods) || {}).length; } catch (e) { /* yok */ }
         try { params.online = navigator.onLine ? 1 : 0; } catch (e) { /* yok */ }
       }
       // hangi ekrandan satın alındı: son açılan satın alma penceresinin kaynağı satın alma olaylarına da yazılır
