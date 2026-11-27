@@ -51421,7 +51421,8 @@
 "lang-it.js",
 "lang-ja.js",
 "lang-pt.js",
-"lang-zh.js"
+"lang-zh.js",
+"star.js"
 ],
 "Eski ana ekranı kullan: bütün bölümler tek sayfada, aşağı kaydırarak.": [
 "game.js",
@@ -51437,10 +51438,30 @@
 "lang-zh.js"
 ],
 "Menü animasyonları": [
-"game.js"
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "Sekme geçişleri, kartların girişi, düğme efektleri.": [
-"game.js"
+"game.js",
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
 ],
 "Gol tekrarı": [
 "game.js",
@@ -122586,6 +122607,45 @@
 "lang-ja.js",
 "lang-pt.js",
 "lang-zh.js"
+],
+"Maça": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"sfa.js"
+],
+"aksiyon kaldı": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"sfa.js"
+],
+"Maç zamanı!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js",
+"sfa.js"
 ],
 "(Asist)": [
 "lang-ar.js",
@@ -197374,6 +197434,54 @@
 "lang-pt.js",
 "lang-zh.js"
 ],
+"MAÇA": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"AKSİYON KALDI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"MAÇ ZAMANI!": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
+"MENÜ ANİMASYONLARI": [
+"lang-ar.js",
+"lang-de.js",
+"lang-en.js",
+"lang-es.js",
+"lang-fr.js",
+"lang-id.js",
+"lang-it.js",
+"lang-ja.js",
+"lang-pt.js",
+"lang-zh.js"
+],
 "'NA KATILMA HAKKI KAZANDIK!": [
 "lang-ar.js",
 "lang-de.js",
@@ -260180,6 +260288,18 @@
 "Alten Startbildschirm nutzen: alle Bereiche auf einer Seite, nach unten scrollen.": [
 "lang-de.js"
 ],
+"Bis zum Spiel": [
+"lang-de.js"
+],
+"Spielzeit!": [
+"lang-de.js"
+],
+"Menü-Animationen": [
+"lang-de.js"
+],
+"Tab-Wechsel, Karten-Einblendungen, Button-Effekte.": [
+"lang-de.js"
+],
 "– wir haben uns qualifiziert!": [
 "lang-de.js"
 ],
@@ -275243,6 +275363,15 @@
 "lang-de.js"
 ],
 "KLASSISCHER STARTBILDSCHIRM": [
+"lang-de.js"
+],
+"BIS ZUM SPIEL": [
+"lang-de.js"
+],
+"SPIELZEIT!": [
+"lang-de.js"
+],
+"MENÜ-ANIMATIONEN": [
 "lang-de.js"
 ],
 "– WIR HABEN UNS QUALIFIZIERT!": [
@@ -296949,6 +297078,18 @@
 "Use the old home screen: every section on one page, scroll down.": [
 "lang-en.js"
 ],
+"Match in": [
+"lang-en.js"
+],
+"Match time!": [
+"lang-en.js"
+],
+"Menu animations": [
+"lang-en.js"
+],
+"Tab transitions, card entrances, button effects.": [
+"lang-en.js"
+],
 "— we qualified!": [
 "lang-en.js"
 ],
@@ -311226,6 +311367,15 @@
 "lang-en.js"
 ],
 "CLASSIC HOME SCREEN": [
+"lang-en.js"
+],
+"MATCH IN": [
+"lang-en.js"
+],
+"MATCH TIME!": [
+"lang-en.js"
+],
+"MENU ANIMATIONS": [
 "lang-en.js"
 ],
 "— WE QUALIFIED!": [
@@ -333073,6 +333223,18 @@
 "Usa la pantalla de inicio antigua: todas las secciones en una página, desplazándote hacia abajo.": [
 "lang-es.js"
 ],
+"Partido en": [
+"lang-es.js"
+],
+"¡Hora del partido!": [
+"lang-es.js"
+],
+"Animaciones del menú": [
+"lang-es.js"
+],
+"Transiciones de pestañas, entrada de tarjetas, efectos de botones.": [
+"lang-es.js"
+],
 "— ¡nos hemos clasificado!": [
 "lang-es.js"
 ],
@@ -347470,6 +347632,15 @@
 "lang-es.js"
 ],
 "PANTALLA DE INICIO CLÁSICA": [
+"lang-es.js"
+],
+"PARTIDO EN": [
+"lang-es.js"
+],
+"¡HORA DEL PARTIDO!": [
+"lang-es.js"
+],
+"ANIMACIONES DEL MENÚ": [
 "lang-es.js"
 ],
 "— ¡NOS HEMOS CLASIFICADO!": [
@@ -368937,6 +369108,18 @@
 "Utilise l’ancien écran d’accueil : toutes les sections sur une page, en faisant défiler.": [
 "lang-fr.js"
 ],
+"Match dans": [
+"lang-fr.js"
+],
+"C’est l’heure du match !": [
+"lang-fr.js"
+],
+"Animations du menu": [
+"lang-fr.js"
+],
+"Transitions d’onglets, apparition des cartes, effets des boutons.": [
+"lang-fr.js"
+],
 "— on est qualifiés !": [
 "lang-fr.js"
 ],
@@ -382837,6 +383020,15 @@
 "lang-fr.js"
 ],
 "ÉCRAN D’ACCUEIL CLASSIQUE": [
+"lang-fr.js"
+],
+"MATCH DANS": [
+"lang-fr.js"
+],
+"C’EST L’HEURE DU MATCH !": [
+"lang-fr.js"
+],
+"ANIMATIONS DU MENU": [
 "lang-fr.js"
 ],
 "— ON EST QUALIFIÉS !": [
@@ -403824,6 +404016,18 @@
 "Pakai layar utama lama: semua bagian di satu halaman, gulir ke bawah.": [
 "lang-id.js"
 ],
+"Laga dalam": [
+"lang-id.js"
+],
+"Waktunya laga!": [
+"lang-id.js"
+],
+"Animasi menu": [
+"lang-id.js"
+],
+"Transisi tab, kartu masuk, efek tombol.": [
+"lang-id.js"
+],
 "— kita lolos!": [
 "lang-id.js"
 ],
@@ -417476,6 +417680,15 @@
 "lang-id.js"
 ],
 "LAYAR UTAMA KLASIK": [
+"lang-id.js"
+],
+"LAGA DALAM": [
+"lang-id.js"
+],
+"WAKTUNYA LAGA!": [
+"lang-id.js"
+],
+"ANIMASI MENU": [
 "lang-id.js"
 ],
 "— KITA LOLOS!": [
@@ -438454,6 +438667,18 @@
 "Usa la vecchia schermata iniziale: tutte le sezioni in una pagina, scorrendo in basso.": [
 "lang-it.js"
 ],
+"Partita tra": [
+"lang-it.js"
+],
+"Ora della partita!": [
+"lang-it.js"
+],
+"Animazioni del menu": [
+"lang-it.js"
+],
+"Transizioni delle schede, ingresso delle card, effetti dei pulsanti.": [
+"lang-it.js"
+],
 "— ci siamo qualificati!": [
 "lang-it.js"
 ],
@@ -452117,6 +452342,15 @@
 "lang-it.js"
 ],
 "SCHERMATA INIZIALE CLASSICA": [
+"lang-it.js"
+],
+"PARTITA TRA": [
+"lang-it.js"
+],
+"ORA DELLA PARTITA!": [
+"lang-it.js"
+],
+"ANIMAZIONI DEL MENU": [
 "lang-it.js"
 ],
 "— CI SIAMO QUALIFICATI!": [
@@ -473985,6 +474219,18 @@
 "Use a tela inicial antiga: todas as seções em uma página, rolando para baixo.": [
 "lang-pt.js"
 ],
+"Jogo em": [
+"lang-pt.js"
+],
+"Hora do jogo!": [
+"lang-pt.js"
+],
+"Animações do menu": [
+"lang-pt.js"
+],
+"Transições de abas, entrada de cartões, efeitos de botões.": [
+"lang-pt.js"
+],
 "— nos classificamos!": [
 "lang-pt.js"
 ],
@@ -487348,6 +487594,15 @@
 "lang-pt.js"
 ],
 "TELA INICIAL CLÁSSICA": [
+"lang-pt.js"
+],
+"JOGO EM": [
+"lang-pt.js"
+],
+"HORA DO JOGO!": [
+"lang-pt.js"
+],
+"ANIMAÇÕES DO MENU": [
 "lang-pt.js"
 ],
 "— NOS CLASSIFICAMOS!": [
@@ -513262,15 +513517,6 @@
 ".hw-slot, .hw-rec": [
 "sfa.js"
 ],
-"Maça": [
-"sfa.js"
-],
-"aksiyon kaldı": [
-"sfa.js"
-],
-"Maç zamanı!": [
-"sfa.js"
-],
 ".sfa-roll span": [
 "sfa.js"
 ],
@@ -513476,6 +513722,39 @@
 "star.js"
 ],
 "{} Lüks Yaşam Vitrini": [
+"star.js"
+],
+"Yeni animasyonlar ve efektler": [
+"star.js"
+],
+"Menülerde akıcı geçişler, maç kartında geri sayım; şutta top izi, golde flaş ve konfeti. Ayarlar’dan kapatabilirsin.": [
+"star.js"
+],
+"Eski ana ekranı mı seviyorsun? Ayarlar > Genel > Klasik ana ekran.": [
+"star.js"
+],
+"Milli takım play-off’u": [
+"star.js"
+],
+"Milli takımın turnuvaya giremezse son bileti play-off maçında sen kazanırsın.": [
+"star.js"
+],
+"Transfer talebi iptali": [
+"star.js"
+],
+"Bekleyen talebini geri çek; dönemde seninle ilgilenen kulüpleri gör ve tek dokunuşla talep gönder.": [
+"star.js"
+],
+"Lig adlarını değiştir": [
+"star.js"
+],
+"Editör’de kulüp ve oyuncuların yanında artık lig adları da değişiyor.": [
+"star.js"
+],
+"Daha dengeli gelişim": [
+"star.js"
+],
+"Oyuncun geliştikçe antrenman artışları eskisi kadar sert düşmüyor.": [
 "star.js"
 ],
 "Attığın golü ağır çekimde yeniden izle. \"Geç\" ile atla ya da Ayarlar’dan kapat.": [

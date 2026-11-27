@@ -82,3 +82,21 @@
 10633|Waktunya laga!
 10634|Animasi menu
 10635|Transisi tab, kartu masuk, efek tombol.
+10636|Animasi dan efek baru
+10637|Transisi menu yang mulus dan hitung mundur di kartu laga; jejak bola saat menembak, kilatan dan konfeti saat gol. Bisa dimatikan di Pengaturan.
+10638|Transisi menu yang mulus dan hitung mundur di kartu laga; jejak bola saat menembak, kilatan dan konfeti saat gol.
+10639|Bisa dimatikan di Pengaturan.
+10640|Lebih suka layar utama lama? Pengaturan > Umum > Layar utama klasik.
+10641|Lebih suka layar utama lama?
+10642|Pengaturan > Umum > Layar utama klasik.
+10643|Play-off timnas
+10644|Jika timnasmu gagal ke turnamen, kamu memperebutkan tiket terakhir di laga play-off.
+10645|Batalkan permintaan transfer
+10646|Tarik permintaan yang tertunda, lihat klub yang tertarik padamu di bursa transfer, dan kirim permintaan dengan sekali ketuk.
+10647|Ganti nama liga
+10648|Editor kini juga mengganti nama liga, selain klub dan pemain.
+10649|Perkembangan lebih seimbang
+10650|Kenaikan dari latihan tidak lagi turun drastis saat pemainmu makin hebat.
+10651|Laga pertamamu adalah
+10652|Sekarang tahun {}. Kamu berusia {} dan belum punya klub. Laga pertamamu adalah
+10653|Sekarang tahun {}. Kamu berusia {} dan belum punya klub.

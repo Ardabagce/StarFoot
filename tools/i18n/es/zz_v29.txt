@@ -82,3 +82,21 @@
 10633|¡Hora del partido!
 10634|Animaciones del menú
 10635|Transiciones de pestañas, entrada de tarjetas, efectos de botones.
+10636|Nuevas animaciones y efectos
+10637|Transiciones fluidas en los menús y cuenta atrás en la tarjeta del partido; estela del balón en los tiros, destello y confeti en los goles. Puedes desactivarlos en Ajustes.
+10638|Transiciones fluidas en los menús y cuenta atrás en la tarjeta del partido; estela del balón en los tiros, destello y confeti en los goles.
+10639|Puedes desactivarlos en Ajustes.
+10640|¿Prefieres la pantalla de inicio antigua? Ajustes > General > Pantalla de inicio clásica.
+10641|¿Prefieres la pantalla de inicio antigua?
+10642|Ajustes > General > Pantalla de inicio clásica.
+10643|Repesca de la selección
+10644|Si tu selección no entra al torneo, luchas por el último billete en una repesca.
+10645|Cancelar solicitudes de traspaso
+10646|Retira una solicitud pendiente, mira los clubes interesados en ti durante el mercado y envía una solicitud con un toque.
+10647|Renombrar ligas
+10648|El Editor ahora también renombra ligas, además de clubes y jugadores.
+10649|Progresión más equilibrada
+10650|Las mejoras del entrenamiento ya no caen tanto a medida que tu jugador mejora.
+10651|Tu primer partido es un
+10652|Estamos en {}. Tienes {} años y aún no tienes club. Tu primer partido es un
+10653|Estamos en {}. Tienes {} años y aún no tienes club.

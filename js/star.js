@@ -625,7 +625,7 @@ document.addEventListener('click', (e) => {
 // ---------- Güncelleme duyurusu (her sürümde bir kez) ----------
 const APP_VER = '1.0.30';
 // Duyuru içeriğinin sürümü: yeni duyuru yazılınca güncellenir (yalnız sürüm atlamak tekrar göstermez)
-const WN_VER = '1.0.29';
+const WN_VER = '1.0.30';
 const WhatsNew = {
   KEY: 'starfoot_whatsnew',
   // Hub'a girişte bir kez gösterir; gösterdiyse true döner. done(): pencere kapanınca çalışır.
@@ -643,6 +643,14 @@ const WhatsNew = {
   // Duyuruyu gösterir (Ayarlar'dan yeniden açılabilir): bu ve bir önceki güncelleme, geçmiş gibi
   show(done) {
     const it = (ic, t, d) => `<li><i data-emo>${ic}</i><span><b>${t}</b><small>${d}</small></span></li>`;
+    const v30 = [
+      it('✨', 'Yeni animasyonlar ve efektler', 'Menülerde akıcı geçişler, maç kartında geri sayım; şutta top izi, golde flaş ve konfeti. Ayarlar’dan kapatabilirsin.'),
+      it('🏠', 'Klasik ana ekran', 'Eski ana ekranı mı seviyorsun? Ayarlar > Genel > Klasik ana ekran.'),
+      it('🎟️', 'Milli takım play-off’u', 'Milli takımın turnuvaya giremezse son bileti play-off maçında sen kazanırsın.'),
+      it('🔁', 'Transfer talebi iptali', 'Bekleyen talebini geri çek; dönemde seninle ilgilenen kulüpleri gör ve tek dokunuşla talep gönder.'),
+      it('✏️', 'Lig adlarını değiştir', 'Editör’de kulüp ve oyuncuların yanında artık lig adları da değişiyor.'),
+      it('📈', 'Daha dengeli gelişim', 'Oyuncun geliştikçe antrenman artışları eskisi kadar sert düşmüyor.'),
+    ].join('');
     const v29 = [
       it('🇮🇳', 'Hindistan ligleri', 'Hindistan’da 16 takımlı Kaplan Ligi, 14 takımlı Kaplan 2. Ligi ve Hindistan Kupası. İlk 2, Asya Şampiyonlar Kupası’na gider.'),
       it('⏩', '10 ücretsiz hızlı ilerleme', 'Herkese 10 ücretsiz hızlı ilerleme hakkı. Hakların bitince günde bir kez reklam izleyerek 1 hak daha kazan.'),
@@ -693,11 +701,11 @@ const WhatsNew = {
     Game.modal(`<div class="wn"><div class="ev-tag">Güncelleme geçmişi</div>
       <h2>Yenilikler 🚀</h2>
       <div class="wn-v"><b>${WN_VER}</b><small>Bu güncelleme</small></div>
-      <ul class="wn-l">${v29}</ul>
-      <div class="wn-v old"><b>1.0.28</b><small>Önceki güncelleme</small></div>
+      <ul class="wn-l">${v30}</ul>
+      <div class="wn-v old"><b>1.0.29</b><small>Önceki güncelleme</small></div>
+      <ul class="wn-l old">${v29}</ul>
+      <div class="wn-v old"><b>1.0.28</b></div>
       <ul class="wn-l old">${v28}</ul>
-      <div class="wn-v old"><b>1.0.27</b></div>
-      <ul class="wn-l old">${v27}</ul>
       <p class="wn-note ok">Diamond’a eklenenlerin hiçbiri maçta güç vermez; ücretsiz oyunda hiçbir şey değişmedi.</p>
       <p class="wn-note">Teknik Direktör modu yepyeni bir fikir ve her güncellemede gelişmeye devam edecek. Fikirlerini bekliyoruz!</p></div>`, btns, { wide: true });
     if (typeof Premium !== 'undefined') Premium.track('whatsnew_view', { ver: WN_VER, premium: has ? 1 : 0 });

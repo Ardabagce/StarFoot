@@ -5473,5 +5473,18 @@
  "aksiyon kaldı": "actions left",
  "Maç zamanı!": "Match time!",
  "Menü animasyonları": "Menu animations",
- "Sekme geçişleri, kartların girişi, düğme efektleri.": "Tab transitions, card entrances, button effects."
+ "Sekme geçişleri, kartların girişi, düğme efektleri.": "Tab transitions, card entrances, button effects.",
+ "Yeni animasyonlar ve efektler": "New animations and effects",
+ "Menülerde akıcı geçişler, maç kartında geri sayım; şutta top izi, golde flaş ve konfeti. Ayarlar’dan kapatabilirsin.": "Smooth menu transitions and a countdown on the match card; a ball trail on shots, a flash and confetti on goals. You can turn them off in Settings.",
+ "Eski ana ekranı mı seviyorsun? Ayarlar > Genel > Klasik ana ekran.": "Prefer the old home screen? Settings > General > Classic home screen.",
+ "Milli takım play-off’u": "National team play-off",
+ "Milli takımın turnuvaya giremezse son bileti play-off maçında sen kazanırsın.": "If your national team misses the tournament, you fight for the last ticket in a play-off match.",
+ "Transfer talebi iptali": "Cancel transfer requests",
+ "Bekleyen talebini geri çek; dönemde seninle ilgilenen kulüpleri gör ve tek dokunuşla talep gönder.": "Withdraw a pending request, see the clubs interested in you during the window and send a request with one tap.",
+ "Lig adlarını değiştir": "Rename leagues",
+ "Editör’de kulüp ve oyuncuların yanında artık lig adları da değişiyor.": "The Editor now renames leagues too, along with clubs and players.",
+ "Daha dengeli gelişim": "Smoother progression",
+ "Oyuncun geliştikçe antrenman artışları eskisi kadar sert düşmüyor.": "Training gains no longer drop as sharply as your player improves.",
+ "{} yılındayız. {} yaşındasın ve henüz bir kulübün yok. İlk maçın": "It's {}. You're {} and don't have a club yet. Your first match is a",
+ "{} yılındayız. {} yaşındasın ve henüz bir kulübün yok.": "It's {}. You're {} and don't have a club yet."
 }

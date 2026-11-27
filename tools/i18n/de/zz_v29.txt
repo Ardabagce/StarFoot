@@ -82,3 +82,21 @@
 10633|Spielzeit!
 10634|Menü-Animationen
 10635|Tab-Wechsel, Karten-Einblendungen, Button-Effekte.
+10636|Neue Animationen und Effekte
+10637|Flüssige Menüübergänge und ein Countdown auf der Spielkarte; Ballspur beim Schuss, Blitz und Konfetti beim Tor. In den Einstellungen abschaltbar.
+10638|Flüssige Menüübergänge und ein Countdown auf der Spielkarte; Ballspur beim Schuss, Blitz und Konfetti beim Tor.
+10639|In den Einstellungen abschaltbar.
+10640|Lieber der alte Startbildschirm? Einstellungen > Allgemein > Klassischer Startbildschirm.
+10641|Lieber der alte Startbildschirm?
+10642|Einstellungen > Allgemein > Klassischer Startbildschirm.
+10643|Nationalteam-Play-off
+10644|Verpasst dein Nationalteam das Turnier, kämpfst du im Play-off um das letzte Ticket.
+10645|Transferanfragen zurückziehen
+10646|Ziehe eine offene Anfrage zurück, sieh im Transferfenster interessierte Vereine und sende eine Anfrage mit einem Tipp.
+10647|Ligen umbenennen
+10648|Der Editor benennt jetzt neben Vereinen und Spielern auch Ligen um.
+10649|Ausgewogenere Entwicklung
+10650|Trainingsgewinne sinken nicht mehr so stark, wenn dein Spieler besser wird.
+10651|Dein erstes Spiel ist ein
+10652|Wir haben {}. Du bist {} und hast noch keinen Verein. Dein erstes Spiel ist ein
+10653|Wir haben {}. Du bist {} und hast noch keinen Verein.

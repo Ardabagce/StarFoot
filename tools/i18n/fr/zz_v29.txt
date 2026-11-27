@@ -82,3 +82,21 @@
 10633|C’est l’heure du match !
 10634|Animations du menu
 10635|Transitions d’onglets, apparition des cartes, effets des boutons.
+10636|Nouvelles animations et effets
+10637|Transitions fluides dans les menus et compte à rebours sur la carte du match ; traînée du ballon sur les tirs, flash et confettis sur les buts. Désactivables dans Réglages.
+10638|Transitions fluides dans les menus et compte à rebours sur la carte du match ; traînée du ballon sur les tirs, flash et confettis sur les buts.
+10639|Désactivables dans Réglages.
+10640|Tu préfères l’ancien écran d’accueil ? Réglages > Général > Écran d’accueil classique.
+10641|Tu préfères l’ancien écran d’accueil ?
+10642|Réglages > Général > Écran d’accueil classique.
+10643|Barrage de la sélection
+10644|Si ta sélection rate le tournoi, tu joues le dernier billet en barrage.
+10645|Annuler les demandes de transfert
+10646|Retire une demande en attente, vois les clubs intéressés pendant le mercato et envoie une demande d’un geste.
+10647|Renommer les ligues
+10648|L’Éditeur renomme maintenant aussi les ligues, en plus des clubs et des joueurs.
+10649|Progression plus équilibrée
+10650|Les gains d’entraînement baissent moins fort à mesure que ton joueur progresse.
+10651|Ton premier match est un
+10652|Nous sommes en {}. Tu as {} ans et pas encore de club. Ton premier match est un
+10653|Nous sommes en {}. Tu as {} ans et pas encore de club.

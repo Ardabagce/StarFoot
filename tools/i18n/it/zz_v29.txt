@@ -82,3 +82,21 @@
 10633|Ora della partita!
 10634|Animazioni del menu
 10635|Transizioni delle schede, ingresso delle card, effetti dei pulsanti.
+10636|Nuove animazioni ed effetti
+10637|Transizioni fluide nei menu e conto alla rovescia sulla card della partita; scia del pallone nei tiri, flash e coriandoli sui gol. Puoi disattivarli nelle Impostazioni.
+10638|Transizioni fluide nei menu e conto alla rovescia sulla card della partita; scia del pallone nei tiri, flash e coriandoli sui gol.
+10639|Puoi disattivarli nelle Impostazioni.
+10640|Preferisci la vecchia schermata iniziale? Impostazioni > Generale > Schermata iniziale classica.
+10641|Preferisci la vecchia schermata iniziale?
+10642|Impostazioni > Generale > Schermata iniziale classica.
+10643|Spareggio della nazionale
+10644|Se la tua nazionale manca il torneo, ti giochi l’ultimo biglietto in uno spareggio.
+10645|Annulla richieste di trasferimento
+10646|Ritira una richiesta in sospeso, vedi i club interessati durante il mercato e invia una richiesta con un tocco.
+10647|Rinomina i campionati
+10648|L’Editor ora rinomina anche i campionati, oltre a club e giocatori.
+10649|Crescita più equilibrata
+10650|I guadagni dell’allenamento non calano più così tanto man mano che il giocatore migliora.
+10651|La tua prima partita è una
+10652|Siamo nel {}. Hai {} anni e ancora nessuna squadra. La tua prima partita è una
+10653|Siamo nel {}. Hai {} anni e ancora nessuna squadra.
